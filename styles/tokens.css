@@ -1,0 +1,99 @@
+/* ═══════════════════════════════════════════════════════
+   BIRDSPOT LIBRARY — Design Tokens
+   Birdspot Library · App 003 · v1.0
+   Palet: diep bosgroen + hemelsblauw accent + warm ivoor
+   ═══════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Merk ─────────────────────────────────────────── */
+  --brand:        #1A3A2A;   /* diep woudgroen */
+  --brand-mid:    #2D6A4F;   /* middengroen */
+  --brand-light:  #52B788;   /* helder groen */
+  --brand-pale:   #B7E4C7;   /* zacht groen */
+
+  /* ── Accent (lucht / water) ───────────────────────── */
+  --accent:       #4895EF;   /* hemelsblauw */
+  --accent-soft:  #D6EAFF;   /* lichtblauw tint */
+  --accent-ink:   #1A4D8A;   /* donkerblauw tekst op licht */
+
+  /* ── Neutraal ─────────────────────────────────────── */
+  --bg:           #F7FAF8;   /* licht ivoor-groen */
+  --surface:      #FFFFFF;
+  --surface-2:    #EEF4F0;
+  --line:         #D9E8DC;
+  --on-brand:     #FFFFFF;
+
+  /* ── Tekst ────────────────────────────────────────── */
+  --ink:          #172820;
+  --ink-2:        #3D5245;
+  --muted:        #7A9A82;
+
+  /* ── Status ───────────────────────────────────────── */
+  --warn:         #F4A261;
+  --warn-soft:    #FFF0E0;
+  --danger:       #E76F51;
+  --positive:     #52B788;
+
+  /* ── Op media ─────────────────────────────────────── */
+  --on-media:     #FFFFFF;
+  --media-veil:   linear-gradient(to top, rgba(0,0,0,.65) 0%, transparent 55%);
+
+  /* ── Typografie ───────────────────────────────────── */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'Inter', system-ui, -apple-system, sans-serif;
+
+  --fs-display:   clamp(30px, 8vw, 40px);
+  --fs-title:     22px;
+  --fs-head:      16px;
+  --fs-body:      15px;
+  --fs-meta:      12.5px;
+  --fs-label:     11px;
+
+  /* ── Ruimte ───────────────────────────────────────── */
+  --space-4:  4px;
+  --space-8:  8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+
+  /* ── Radius ───────────────────────────────────────── */
+  --r-sm:    10px;
+  --r-card:  18px;
+  --r-sheet: 24px;
+  --r-pill:  100px;
+
+  /* ── Schaduw ──────────────────────────────────────── */
+  --shadow-card:  0 1px 4px rgba(26,58,42,.06), 0 2px 12px rgba(26,58,42,.07);
+  --shadow-float: 0 4px 24px rgba(26,58,42,.18);
+  --shadow-sheet: 0 -4px 32px rgba(26,58,42,.12);
+
+  /* ── Navigatie hoogte ─────────────────────────────── */
+  --nav-h: 64px;
+}
+
+/* ── Donker thema ─────────────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg:        #0C1E13;
+    --surface:   #142219;
+    --surface-2: #1C3024;
+    --line:      #2A4535;
+    --ink:       #E6F2E9;
+    --ink-2:     #A8C9AF;
+    --muted:     #5E8C6A;
+    --accent-soft: #1A3560;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg:        #0C1E13;
+  --surface:   #142219;
+  --surface-2: #1C3024;
+  --line:      #2A4535;
+  --ink:       #E6F2E9;
+  --ink-2:     #A8C9AF;
+  --muted:     #5E8C6A;
+  --accent-soft: #1A3560;
+  color-scheme: dark;
+}
