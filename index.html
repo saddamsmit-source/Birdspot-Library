@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#1A3A2A">
+  <title>Birdspot Library</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+
+  <!-- Tokens -->
+  <link rel="stylesheet" href="styles/tokens.css">
+  <!-- Shell styles -->
+  <link rel="stylesheet" href="styles/shell.css">
+  <!-- Dashboard styles -->
+  <link rel="stylesheet" href="styles/dashboard.css">
+  <!-- Species styles (Stap 3/4) -->
+  <link rel="stylesheet" href="styles/species.css">
+  <!-- Sightings styles (Stap 5) -->
+  <link rel="stylesheet" href="styles/sightings.css">
+  <!-- Map styles (Stap 6) -->
+  <link rel="stylesheet" href="styles/map.css">
+
+  <!-- SunCalc (offline-capable sunrise/sunset/golden hour) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/suncalc/1.9.0/suncalc.min.js"></script>
+
+  <!-- Module bootstrap (defer = non-blocking) -->
+  <script type="module" src="src/app.js"></script>
+</head>
+<body>
+
+  <!-- ══ APP ROOT ════════════════════════════════════════ -->
+  <div id="app">
+
+    <!-- Schermen worden hier ingeladen door de router -->
+    <main id="main-view" role="main" aria-live="polite">
+      <!-- placeholder terwijl JS laadt -->
+      <div id="boot-screen">
+        <div class="boot-logo">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <!-- gestileerde vogel silhouet -->
+            <path d="M8 32 Q16 20 24 22 Q30 18 40 14 Q36 24 28 26 Q22 28 18 36Z"
+                  fill="var(--brand-light)" opacity=".9"/>
+            <path d="M24 22 Q28 24 32 20 Q30 26 24 28Z"
+                  fill="var(--brand-mid)"/>
+          </svg>
+          <span>Birdspot Library</span>
+        </div>
+      </div>
+    </main>
+
+    <!-- Onderste navigatie -->
+    <nav id="app-nav" class="app-nav" role="navigation" aria-label="Hoofdnavigatie">
+      <button class="nav-item active" data-route="home" aria-label="Home" aria-current="page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        <span>Home</span>
+      </button>
+
+      <button class="nav-item" data-route="species" aria-label="Soorten">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <!-- vogel silhouet icoon -->
+          <path d="M4 20 Q8 12 14 13 Q18 10 22 7 Q20 15 14 16 Q10 17 8 22Z"/>
+        </svg>
+        <span>Soorten</span>
+      </button>
+
+      <button class="nav-item" data-route="sightings" aria-label="Waarnemingen">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+          <circle cx="12" cy="12" r="3"/>
+        </svg>
+        <span>Waarnm.</span>
+      </button>
+
+      <button class="nav-item" data-route="map" aria-label="Kaart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/>
+          <line x1="8" y1="2" x2="8" y2="18"/>
+          <line x1="16" y1="6" x2="16" y2="22"/>
+        </svg>
+        <span>Kaart</span>
+      </button>
+
+      <button class="nav-item" data-route="profile" aria-label="Profiel">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+          <circle cx="12" cy="7" r="4"/>
+        </svg>
+        <span>Profiel</span>
+      </button>
+    </nav>
+
+    <!-- Zwevende actieknop (verborgen op profiel) -->
+    <button id="fab" class="fab" aria-label="Waarneming toevoegen">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+        <line x1="12" y1="5" x2="12" y2="19"/>
+        <line x1="5" y1="12" x2="19" y2="12"/>
+      </svg>
+    </button>
+
+  </div><!-- /app -->
+
+</body>
+</html>

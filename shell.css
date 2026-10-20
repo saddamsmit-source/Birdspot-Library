@@ -1,0 +1,314 @@
+/* ═══════════════════════════════════════════════════════
+   BIRDSPOT LIBRARY — Shell styles
+   Reset, layout, navigatie, FAB, boot-screen, headers
+   ═══════════════════════════════════════════════════════ */
+
+/* ── Reset ────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  background: var(--bg);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overscroll-behavior: none;
+}
+
+img { max-width: 100%; display: block; }
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ── App root ─────────────────────────────────────────── */
+#app {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+/* ── Safe-area top band (under status bar) ────────────── */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0 0 auto;
+  height: env(safe-area-inset-top, 0px);
+  background: var(--brand);
+  z-index: 200;
+}
+
+/* ── Hoofdinhoud ──────────────────────────────────────── */
+#main-view {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: contain;
+  padding-bottom: calc(var(--nav-h) + env(safe-area-inset-bottom, 0px) + 16px);
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+/* ── Schermen ─────────────────────────────────────────── */
+.screen { display: none; }
+.screen.active { display: block; }
+
+/* ── Paginaheader ─────────────────────────────────────── */
+.page-header {
+  background: var(--brand);
+  color: var(--on-brand);
+  padding: var(--space-16)
+           max(var(--space-16), env(safe-area-inset-right, 0px))
+           var(--space-16)
+           max(var(--space-16), env(safe-area-inset-left, 0px));
+}
+
+.page-header__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-title);
+  font-weight: 900;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.page-header__sub {
+  font-size: var(--fs-meta);
+  opacity: .72;
+  margin-top: 2px;
+}
+
+/* ── Navigatie onderaan ───────────────────────────────── */
+.app-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: calc(var(--nav-h) + env(safe-area-inset-bottom, 0px));
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  background: var(--brand);
+  display: flex;
+  align-items: stretch;
+  z-index: 100;
+  box-shadow: 0 -1px 0 rgba(255,255,255,.06);
+}
+
+.nav-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: var(--space-8) var(--space-4);
+  color: var(--on-brand);
+  opacity: .5;
+  transition: opacity .15s ease;
+  min-height: 44px;
+}
+
+.nav-item svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.nav-item span {
+  font-size: var(--fs-label);
+  font-weight: 600;
+  letter-spacing: .3px;
+}
+
+.nav-item.active {
+  opacity: 1;
+}
+
+.nav-item:focus-visible {
+  outline: 2px solid var(--brand-light);
+  outline-offset: -2px;
+  border-radius: 8px;
+}
+
+/* ── FAB ──────────────────────────────────────────────── */
+.fab {
+  position: fixed;
+  bottom: calc(var(--nav-h) + env(safe-area-inset-bottom, 0px) + 14px);
+  right: max(var(--space-16), env(safe-area-inset-right, 0px));
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--brand-light);
+  color: var(--brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 90;
+  box-shadow: var(--shadow-float);
+  transition: transform .15s ease, opacity .15s;
+}
+
+.fab svg { width: 24px; height: 24px; }
+
+.fab:active { transform: scale(.93); }
+
+.fab:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.fab[hidden] { display: none !important; }
+
+/* ── Sectielabel ──────────────────────────────────────── */
+.section-label {
+  font-size: var(--fs-label);
+  font-weight: 700;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: var(--space-20, 20px) max(var(--space-16), env(safe-area-inset-left, 0px)) var(--space-8);
+}
+
+/* ── Kaart (gedeeld component) ────────────────────────── */
+.card {
+  background: var(--surface);
+  border-radius: var(--r-card);
+  box-shadow: var(--shadow-card);
+}
+
+/* ── Bottom sheet ─────────────────────────────────────── */
+.sheet-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.45);
+  z-index: 150;
+  display: flex;
+  align-items: flex-end;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease;
+}
+
+.sheet-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.sheet {
+  background: var(--surface);
+  border-radius: var(--r-sheet) var(--r-sheet) 0 0;
+  width: 100%;
+  max-height: 88vh;
+  overflow-y: auto;
+  padding-bottom: calc(var(--space-32) + env(safe-area-inset-bottom, 0px));
+  box-shadow: var(--shadow-sheet);
+  transform: translateY(8px);
+  transition: transform .2s ease;
+  overscroll-behavior: contain;
+}
+
+.sheet-overlay.open .sheet {
+  transform: translateY(0);
+}
+
+.sheet-handle {
+  width: 36px;
+  height: 4px;
+  background: var(--line);
+  border-radius: 2px;
+  margin: var(--space-12) auto var(--space-16);
+}
+
+/* ── Toast ────────────────────────────────────────────── */
+.toast {
+  position: fixed;
+  top: calc(env(safe-area-inset-top, 0px) + 12px);
+  left: max(16px, env(safe-area-inset-left, 0px));
+  right: max(16px, env(safe-area-inset-right, 0px));
+  background: var(--ink);
+  color: var(--bg);
+  padding: var(--space-12) var(--space-16);
+  border-radius: var(--r-card);
+  font-size: var(--fs-meta);
+  font-weight: 600;
+  z-index: 300;
+  box-shadow: var(--shadow-float);
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity .2s, transform .2s;
+  pointer-events: none;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Boot screen ──────────────────────────────────────── */
+#boot-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 100svh;
+}
+
+.boot-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-12);
+  color: var(--brand-mid);
+}
+
+.boot-logo span {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--brand);
+}
+
+/* ── Lege staat ───────────────────────────────────────── */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-32) var(--space-16);
+  gap: var(--space-8);
+  text-align: center;
+  color: var(--muted);
+}
+
+.empty-state svg {
+  width: 48px;
+  height: 48px;
+  opacity: .4;
+}
+
+.empty-state p { font-size: var(--fs-meta); }
+
+/* ── Utility ──────────────────────────────────────────── */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+/* ── Reduced motion ───────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}

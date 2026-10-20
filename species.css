@@ -1,0 +1,359 @@
+/* ═══════════════════════════════════════════════════════
+   BIRDSPOT LIBRARY — Species styles
+   Toolbar · Lijst · Detail sheet
+   ═══════════════════════════════════════════════════════ */
+
+/* ── Toolbar ─────────────────────────────────────────────── */
+.species-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bg);
+  padding: var(--space-8) 0 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.species-search-wrap {
+  position: relative;
+  margin: 0 max(var(--space-12), env(safe-area-inset-left, 0px))
+            var(--space-8)
+            max(var(--space-12), env(safe-area-inset-right, 0px));
+}
+
+.species-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  color: var(--muted);
+  pointer-events: none;
+}
+
+.species-search {
+  width: 100%;
+  height: 40px;
+  padding: 0 var(--space-12) 0 36px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: var(--r-pill);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  color: var(--ink);
+  outline: none;
+  transition: border-color .15s;
+}
+
+.species-search::placeholder { color: var(--muted); }
+.species-search:focus { border-color: var(--brand-light); }
+
+/* ── Filter chips ───────────────────────────────────────── */
+.species-filters {
+  display: flex;
+  gap: var(--space-8);
+  overflow-x: auto;
+  padding: 0 max(var(--space-12), env(safe-area-inset-left, 0px))
+              var(--space-8)
+              max(var(--space-12), env(safe-area-inset-right, 0px));
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.species-filters::-webkit-scrollbar { display: none; }
+
+.filter-chip {
+  flex-shrink: 0;
+  padding: 5px var(--space-12);
+  border-radius: var(--r-pill);
+  border: 1.5px solid var(--line);
+  background: var(--surface);
+  color: var(--ink-2);
+  font-family: var(--font-body);
+  font-size: var(--fs-meta);
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background .15s, border-color .15s, color .15s;
+}
+
+.filter-chip.active {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: var(--on-brand);
+}
+
+/* Gebied-chips rij */
+.species-filters--gebied {
+  padding-top: 0;
+  border-top: 1px solid var(--line);
+  padding-bottom: var(--space-8);
+  margin-top: 0;
+  align-items: center;
+}
+
+.filter-label {
+  flex-shrink: 0;
+  font-size: var(--fs-label);
+  font-weight: 700;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-right: var(--space-4);
+}
+
+.filter-chip--gebied {
+  border-color: var(--brand-light);
+  color: var(--brand-mid);
+}
+
+.filter-chip--gebied.active {
+  background: var(--brand-light);
+  border-color: var(--brand-light);
+  color: var(--on-brand);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .filter-chip--gebied {
+    border-color: var(--brand-mid);
+    color: var(--brand-light);
+  }
+}
+:root[data-theme="dark"] .filter-chip--gebied {
+  border-color: var(--brand-mid);
+  color: var(--brand-light);
+}
+
+/* ── Soortenllijst ──────────────────────────────────────── */
+.species-list {
+  padding-bottom: var(--space-16);
+}
+
+.species-group__label {
+  font-size: var(--fs-label);
+  font-weight: 700;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: var(--space-12) max(var(--space-12), env(safe-area-inset-left, 0px))
+                           var(--space-4);
+}
+
+.species-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  padding: var(--space-10, 10px) max(var(--space-12), env(safe-area-inset-right, 0px))
+                                  var(--space-10, 10px)
+                                  max(var(--space-12), env(safe-area-inset-left, 0px));
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+  cursor: pointer;
+  transition: background .1s;
+  min-height: 56px;
+}
+
+.species-row:active { background: var(--surface-2); }
+
+.species-row__icon {
+  font-size: 22px;
+  flex-shrink: 0;
+  width: 32px;
+  text-align: center;
+}
+
+.species-row__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.species-row__name {
+  font-size: var(--fs-head);
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.species-row.seen .species-row__name {
+  color: var(--brand-mid);
+}
+
+.species-row__sci {
+  font-size: var(--fs-meta);
+  color: var(--muted);
+  font-style: italic;
+  margin-top: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Gezien-toggle (rij) ────────────────────────────────── */
+.seen-toggle {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  border: 1.5px solid var(--line);
+  transition: background .15s, border-color .15s, color .15s;
+}
+
+.seen-toggle svg { width: 18px; height: 18px; }
+.seen-toggle.seen {
+  background: var(--brand-light);
+  border-color: var(--brand-light);
+  color: var(--brand);
+}
+.seen-toggle:active { transform: scale(.9); }
+
+/* ── Detail sheet ───────────────────────────────────────── */
+.detail-hero {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-12);
+  padding-bottom: var(--space-16);
+  border-bottom: 1px solid var(--line);
+  margin-bottom: var(--space-12);
+}
+
+.detail-icon {
+  font-size: 36px;
+  line-height: 1;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+.detail-names {
+  flex: 1;
+  min-width: 0;
+}
+
+.detail-name {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--ink);
+  line-height: 1.1;
+}
+
+.detail-sci {
+  font-size: var(--fs-meta);
+  color: var(--muted);
+  font-style: italic;
+  margin-top: 3px;
+}
+
+.detail-en {
+  font-size: var(--fs-meta);
+  color: var(--ink-2);
+  margin-top: 1px;
+}
+
+/* ── Gezien-toggle (detail) ─────────────────────────────── */
+.seen-toggle-large {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  padding: var(--space-8) var(--space-12);
+  border-radius: var(--r-sm);
+  border: 1.5px solid var(--line);
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .3px;
+  transition: background .15s, border-color .15s, color .15s;
+}
+
+.seen-toggle-large svg { width: 22px; height: 22px; }
+.seen-toggle-large.seen {
+  background: var(--brand-light);
+  border-color: var(--brand-light);
+  color: var(--brand);
+}
+.seen-toggle-large:active { transform: scale(.95); }
+
+/* ── Detail meta ────────────────────────────────────────── */
+.detail-meta {
+  display: flex;
+  gap: var(--space-16);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-12);
+  padding-bottom: var(--space-12);
+  border-bottom: 1px solid var(--line);
+}
+
+.detail-meta__item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: var(--fs-meta);
+  color: var(--ink-2);
+}
+
+.detail-meta__label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ── Detail sectie ──────────────────────────────────────── */
+.detail-section {
+  margin-bottom: var(--space-16);
+}
+
+.detail-section__label {
+  font-size: var(--fs-label);
+  font-weight: 700;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: var(--space-8);
+}
+
+.detail-fieldmarks {
+  font-size: var(--fs-body);
+  color: var(--ink-2);
+  line-height: 1.6;
+  background: var(--surface-2);
+  border-radius: var(--r-sm);
+  padding: var(--space-12);
+}
+
+/* Leefgebied tags in detail sheet */
+.detail-regions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+  margin-top: var(--space-4);
+}
+
+.region-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: var(--r-pill);
+  background: color-mix(in srgb, var(--brand-light) 15%, transparent);
+  border: 1px solid color-mix(in srgb, var(--brand-light) 40%, transparent);
+  color: var(--brand-mid);
+  font-size: var(--fs-meta);
+  font-weight: 600;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .region-tag {
+    background: color-mix(in srgb, var(--brand-light) 12%, transparent);
+    color: var(--brand-light);
+  }
+}
+:root[data-theme="dark"] .region-tag {
+  background: color-mix(in srgb, var(--brand-light) 12%, transparent);
+  color: var(--brand-light);
+}
