@@ -22,9 +22,10 @@ import threading
 import time
 import json
 import sys
+from pathlib import Path
 from playwright.sync_api import sync_playwright
 
-REPO     = "/home/claude/birdspot-library"
+REPO     = str(Path(__file__).resolve().parent.parent)   # <repo-root>, geen hardcoded pad
 PORT     = 8801
 BASE_URL = f"http://127.0.0.1:{PORT}/"
 ISO_NOW  = time.strftime("%Y-%m")

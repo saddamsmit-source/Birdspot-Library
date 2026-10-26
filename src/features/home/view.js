@@ -46,8 +46,9 @@ export function renderHome(el) {
       clearInterval(_slideshowTimer);
       _slideshowTimer = null;
     }
-    // Geef alle openstaande slideshow blob-URL's vrij
+    // Geef alle openstaande blob-URL's vrij (slideshow + recent-thumbnails)
     _revokeSlideshowUrls();
+    _revokeRecentThumbUrls();
   };
 }
 
@@ -181,6 +182,16 @@ let _slideshowUrls  = [];
 function _revokeSlideshowUrls() {
   _slideshowUrls.forEach(revokePhotoUrl);
   _slideshowUrls = [];
+}
+
+// ── Recente waarnemingen thumbnail-URLs ─────────────────────
+// Bijhouden zodat cleanup() ze kan vrijgeven ook als load/error
+// event al gevuurd was vóór de listener werd gekoppeld.
+let _recentThumbUrls = [];
+
+function _revokeRecentThumbUrls() {
+  _recentThumbUrls.forEach(revokePhotoUrl);
+  _recentThumbUrls = [];
 }
 
 async function initSlideshow(el, ctx) {
@@ -446,6 +457,9 @@ async function loadRecentSightings(el, ctx) {
   const listEl = el.querySelector('#recentList');
   if (!listEl) return;
 
+  // Wis vorige thumbnail-URLs (bij hergebruik van dezelfde module-instantie)
+  _revokeRecentThumbUrls();
+
   try {
     const all = await getSightings();
     if (ctx.destroyed) return;
@@ -465,8 +479,7 @@ async function loadRecentSightings(el, ctx) {
       return;
     }
 
-    // Haal thumbnails asynchroon op per sighting; URLs worden NIET ingetrokken
-    // vóór DOM-plaatsing — dat doet loadRecentSightings zelf via event listeners.
+    // Haal thumbnails asynchroon op per sighting
     const results = await Promise.all(recent.map(s => buildRecentItem(s)));
     if (ctx.destroyed) {
       // Geef alle gegenereerde blob-URLs vrij: we gaan ze niet in de DOM zetten
@@ -477,12 +490,26 @@ async function loadRecentSightings(el, ctx) {
     }
     listEl.innerHTML = results.map(r => r.html).join('');
 
-    // Koppel deferred revoke aan elk img-element ná DOM-plaatsing
+    // Registreer blob-URLs in de module-level tracker zodat cleanup() ze
+    // altijd kan vrijgeven, ook als load/error al gevuurd was vóór koppeling.
+    results.forEach(r => {
+      if (r.blobUrl) _recentThumbUrls.push(r.blobUrl);
+    });
+
+    // Koppel deferred revoke aan elk img-element ná DOM-plaatsing.
+    // Als load/error al gevuurd was (img reeds gecached), wordt de URL
+    // toch vrijgegeven via _revokeRecentThumbUrls() in cleanup().
     listEl.querySelectorAll('.recent-item__thumb img').forEach(img => {
       const url = img.src;
       if (!url || !url.startsWith('blob:')) return;
-      img.addEventListener('load',  () => revokePhotoUrl(url), { once: true });
-      img.addEventListener('error', () => revokePhotoUrl(url), { once: true });
+      const revoke = () => {
+        // Verwijder uit tracker zodat cleanup() hem niet dubbel intrekt
+        const idx = _recentThumbUrls.indexOf(url);
+        if (idx !== -1) _recentThumbUrls.splice(idx, 1);
+        revokePhotoUrl(url);
+      };
+      img.addEventListener('load',  revoke, { once: true });
+      img.addEventListener('error', revoke, { once: true });
     });
 
   } catch (_) {
