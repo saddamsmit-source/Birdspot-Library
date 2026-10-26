@@ -19,15 +19,36 @@ const FALLBACK_LAT = 52.3676;
 const FALLBACK_LON = 4.9041;
 
 // ── Hoofd-render ───────────────────────────────────────────
-export async function renderHome(el) {
+/**
+ * renderHome retourneert een cleanup-functie.
+ * app.js roept cleanup() aan vóór elke routewissel zodat:
+ *   1. De slideshow-timer stopt.
+ *   2. Alle openstaande blob-URL's worden vrijgegeven.
+ *   3. Async-callbacks die nog lopen een stale-flag checken en stil stoppen.
+ */
+export function renderHome(el) {
+  // Gedeelde destroyed-vlag: alle async functies checken deze vóór DOM-mutaties.
+  const ctx = { destroyed: false };
+
   el.innerHTML = buildSkeleton();
-  initSlideshow(el);
-  loadStats(el);
-  loadSunInfo(el);
-  loadWeather(el);
-  loadRecentSightings(el);
-  loadMonthlyChart(el);
-  loadHotspotsMap(el);
+  initSlideshow(el, ctx);
+  loadStats(el, ctx);
+  loadSunInfo(el, ctx);
+  loadWeather(el, ctx);
+  loadRecentSightings(el, ctx);
+  loadMonthlyChart(el, ctx);
+  loadHotspotsMap(el, ctx);
+
+  return function cleanup() {
+    ctx.destroyed = true;
+    // Stop timer
+    if (_slideshowTimer !== null) {
+      clearInterval(_slideshowTimer);
+      _slideshowTimer = null;
+    }
+    // Geef alle openstaande slideshow blob-URL's vrij
+    _revokeSlideshowUrls();
+  };
 }
 
 // ── Skeleton ───────────────────────────────────────────────
@@ -162,7 +183,7 @@ function _revokeSlideshowUrls() {
   _slideshowUrls = [];
 }
 
-async function initSlideshow(el) {
+async function initSlideshow(el, ctx) {
   // Ruim vorige URL's op vóór een nieuwe initialisatie
   _revokeSlideshowUrls();
 
@@ -174,6 +195,9 @@ async function initSlideshow(el) {
   } catch (_) {
     _slides = [];
   }
+
+  // Guard: scherm al verlaten vóórdat IDB terugkwam
+  if (ctx.destroyed) { _revokeSlideshowUrls(); return; }
 
   const inner = el.querySelector('#slideshowInner');
   const dots  = el.querySelector('#slideshowDots');
@@ -212,12 +236,19 @@ async function initSlideshow(el) {
     const dot = document.createElement('button');
     dot.className = 'slideshow__dot' + (i === 0 ? ' active' : '');
     dot.setAttribute('aria-label', `Foto ${i + 1}`);
-    dot.addEventListener('click', () => goToSlide(i, inner, dots));
+    dot.addEventListener('click', () => {
+      if (!ctx.destroyed) goToSlide(i, inner, dots);
+    });
     dots.appendChild(dot);
   });
 
   clearInterval(_slideshowTimer);
   _slideshowTimer = setInterval(() => {
+    if (ctx.destroyed) {
+      clearInterval(_slideshowTimer);
+      _slideshowTimer = null;
+      return;
+    }
     _slideIndex = (_slideIndex + 1) % _slides.length;
     goToSlide(_slideIndex, inner, dots);
   }, SLIDESHOW_INTERVAL);
@@ -237,9 +268,10 @@ function goToSlide(idx, inner, dots) {
 // ══════════════════════════════════════════════════════════
 // STATISTIEKEN
 // ══════════════════════════════════════════════════════════
-async function loadStats(el) {
+async function loadStats(el, ctx) {
   try {
     const sightings  = await getSightings();
+    if (ctx.destroyed) return;
     const speciesSet = new Set(sightings.map(s => s.speciesId));
     const photoCount = sightings.reduce((n, s) => n + (s.photoIds?.length || 0), 0);
     const locSet     = new Set(sightings.map(s => s.locationName).filter(Boolean));
@@ -249,6 +281,7 @@ async function loadStats(el) {
     setStatVal(el, 'stat-photos',  photoCount);
     setStatVal(el, 'stat-hotspot', locSet.size);
   } catch (_) {
+    if (ctx.destroyed) return;
     ['stat-species','stat-total','stat-photos','stat-hotspot']
       .forEach(id => setStatVal(el, id, '—'));
   }
@@ -262,11 +295,12 @@ function setStatVal(el, id, val) {
 // ══════════════════════════════════════════════════════════
 // ZON / GOLDEN HOUR  (SunCalc.js)
 // ══════════════════════════════════════════════════════════
-async function loadSunInfo(el) {
+async function loadSunInfo(el, ctx) {
   const section = el.querySelector('#sunSection');
   if (!section) return;
 
   const { lat, lon } = await getLocation();
+  if (ctx.destroyed) return;
   const now  = new Date();
   const SC   = window.SunCalc;
 
@@ -346,7 +380,7 @@ const WMO_ICON = {
   95:'⛈', 96:'⛈', 99:'⛈',
 };
 
-async function loadWeather(el) {
+async function loadWeather(el, ctx) {
   const section = el.querySelector('#weatherSection');
   if (!section) return;
 
@@ -354,12 +388,14 @@ async function loadWeather(el) {
 
   try {
     const { lat, lon } = await getLocation();
+    if (ctx.destroyed) return;
     const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}` +
       `&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m,relative_humidity_2m` +
       `&wind_speed_unit=ms&timezone=auto`;
 
     const res  = await fetch(url);
     const data = await res.json();
+    if (ctx.destroyed) return;
     const c    = data.current;
     const code = c.weather_code;
     const icon = WMO_ICON[code]  || '🌡';
@@ -385,6 +421,7 @@ async function loadWeather(el) {
       `;
     }
   } catch (_) {
+    if (ctx.destroyed) return;
     if (loader) loader.outerHTML = `<div class="dash-section__error">Weer niet beschikbaar</div>`;
   }
 }
@@ -405,12 +442,13 @@ function weatherBirdTip(code, wind) {
 // ══════════════════════════════════════════════════════════
 // RECENTE WAARNEMINGEN — met foto-thumbnail + badge
 // ══════════════════════════════════════════════════════════
-async function loadRecentSightings(el) {
+async function loadRecentSightings(el, ctx) {
   const listEl = el.querySelector('#recentList');
   if (!listEl) return;
 
   try {
     const all = await getSightings();
+    if (ctx.destroyed) return;
     const recent = [...all]
       .sort((a, b) => new Date(b.date) - new Date(a.date))
       .slice(0, 6);
@@ -430,6 +468,13 @@ async function loadRecentSightings(el) {
     // Haal thumbnails asynchroon op per sighting; URLs worden NIET ingetrokken
     // vóór DOM-plaatsing — dat doet loadRecentSightings zelf via event listeners.
     const results = await Promise.all(recent.map(s => buildRecentItem(s)));
+    if (ctx.destroyed) {
+      // Geef alle gegenereerde blob-URLs vrij: we gaan ze niet in de DOM zetten
+      results.forEach(r => {
+        if (r.blobUrl) revokePhotoUrl(r.blobUrl);
+      });
+      return;
+    }
     listEl.innerHTML = results.map(r => r.html).join('');
 
     // Koppel deferred revoke aan elk img-element ná DOM-plaatsing
@@ -447,6 +492,7 @@ async function loadRecentSightings(el) {
 
 async function buildRecentItem(s) {
   let thumbHtml = '';
+  let blobUrl   = null; // bijhouden zodat caller het kan vrijgeven bij destroyed
 
   // Probeer eerste foto-thumbnail te laden
   // URL wordt NIET hier ingetrokken — dat doet de caller via DOM event listeners
@@ -457,6 +503,7 @@ async function buildRecentItem(s) {
       const photo = await txGet(tx.objectStore('photos'), s.photoIds[0]);
       const url = getPhotoUrl(photo);
       if (url) {
+        blobUrl   = url;
         thumbHtml = `<img src="${url}" alt="${s.speciesName || ''}" loading="lazy">`;
       }
     } catch (_) {}
@@ -485,7 +532,7 @@ async function buildRecentItem(s) {
     </div>
   `;
 
-  return { html };
+  return { html, blobUrl };
 }
 
 function certBadge(certainty) {
@@ -508,13 +555,14 @@ function certBadge(certainty) {
 // ══════════════════════════════════════════════════════════
 // MAANDGRAFIEK  (native SVG, geen Chart.js)
 // ══════════════════════════════════════════════════════════
-async function loadMonthlyChart(el) {
+async function loadMonthlyChart(el, ctx) {
   const section = el.querySelector('#monthlySection');
   if (!section) return;
   const loader = section.querySelector('.dash-section__loading');
 
   try {
     const sightings = await getSightings();
+    if (ctx.destroyed) return;
 
     // Bouw bucket: laatste 12 maanden
     const now    = new Date();
@@ -592,9 +640,11 @@ async function loadMonthlyChart(el) {
       </svg>
     `;
 
+    if (ctx.destroyed) return;
     if (loader) loader.outerHTML = `<div class="chart-wrap">${svg}</div>`;
 
   } catch (_) {
+    if (ctx.destroyed) return;
     if (loader) loader.outerHTML = `<div class="dash-section__error">Grafiek niet beschikbaar</div>`;
   }
 }
@@ -602,13 +652,14 @@ async function loadMonthlyChart(el) {
 // ══════════════════════════════════════════════════════════
 // HOTSPOTS MINIMAP  (native SVG, alleen werkelijke GPS-data)
 // ══════════════════════════════════════════════════════════
-async function loadHotspotsMap(el) {
+async function loadHotspotsMap(el, ctx) {
   const section = el.querySelector('#hotspotsSection');
   if (!section) return;
   const loader = section.querySelector('.dash-section__loading');
 
   try {
     const sightings = await getSightings();
+    if (ctx.destroyed) return;
 
     // Alleen waarnemingen met werkelijke GPS-coördinaten
     const withGps = sightings.filter(s =>
@@ -685,9 +736,11 @@ async function loadHotspotsMap(el) {
       <div class="hotspot-meta">${totalLocations} locatie${totalLocations !== 1 ? 's' : ''} · ${totalSightings} waarneming${totalSightings !== 1 ? 'en' : ''} met GPS</div>
     `;
 
+    if (ctx.destroyed) return;
     if (loader) loader.outerHTML = `<div class="hotspot-wrap">${svg}</div>`;
 
   } catch (_) {
+    if (ctx.destroyed) return;
     if (loader) loader.outerHTML = `<div class="dash-section__error">Kaart niet beschikbaar</div>`;
   }
 }
