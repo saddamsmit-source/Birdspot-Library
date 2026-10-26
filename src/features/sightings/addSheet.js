@@ -15,9 +15,9 @@
  *   - onSaved(sighting) callback
  */
 
-import { SPECIES, toggleSeen } from '../../data/species.js';
-import { addSighting }         from '../../data/sightings.js';
-import { savePhoto }           from '../../data/db.js';
+import { SPECIES, toggleSeen }      from '../../data/species.js';
+import { addSighting }              from '../../data/sightings.js';
+import { savePhoto, getPhoto }      from '../../data/db.js';
 import { openSpeciesPicker }   from './speciesPicker.js';
 import { escHtml }             from '../../utils/html.js';
 import { showToast }           from '../../app.js';
@@ -287,8 +287,14 @@ async function submitForm(ov, close, onSaved) {
 
     // 3. Koppel sightingId terug aan opgeslagen foto's
     for (const id of photoIds) {
-      // Geen apart patch-endpoint nodig — foto's zijn al gelabeld met speciesId.
-      // sightingId-patch is nice-to-have; doen we bij editflow.
+      try {
+        const existing = await getPhoto(id);
+        if (existing) {
+          await savePhoto({ ...existing, sightingId: sighting.id });
+        }
+      } catch (patchErr) {
+        console.warn('[addSheet] sightingId patch mislukt voor foto', id, patchErr);
+      }
     }
 
     // 4. Soort als gezien markeren

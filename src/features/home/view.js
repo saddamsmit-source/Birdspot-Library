@@ -9,8 +9,9 @@
  *   - Open-Meteo REST API (geen key)
  */
 
-import { getDB }        from '../../data/db.js';
-import { getSightings } from '../../data/sightings.js';
+import { getDB }                          from '../../data/db.js';
+import { getSightings }                   from '../../data/sightings.js';
+import { getPhotoUrl, revokePhotoUrl }    from '../../utils/photoUrl.js';
 
 // ── Constanten ─────────────────────────────────────────────
 const SLIDESHOW_INTERVAL = 3500;
@@ -131,8 +132,18 @@ function buildSkeleton() {
 let _slideshowTimer = null;
 let _slideIndex     = 0;
 let _slides         = [];
+// Bijhouden van blob-URL's zodat ze ingetrokken worden bij re-render
+let _slideshowUrls  = [];
+
+function _revokeSlideshowUrls() {
+  _slideshowUrls.forEach(revokePhotoUrl);
+  _slideshowUrls = [];
+}
 
 async function initSlideshow(el) {
+  // Ruim vorige URL's op vóór een nieuwe initialisatie
+  _revokeSlideshowUrls();
+
   try {
     const db = await getDB();
     const tx = db.transaction('photos', 'readonly');
@@ -152,9 +163,13 @@ async function initSlideshow(el) {
   _slideIndex = 0;
 
   _slides.forEach((photo, i) => {
+    const url = getPhotoUrl(photo);
+    if (!url) return; // sla over als geen bruikbare blob
+    _slideshowUrls.push(url);
+
     const slide = document.createElement('div');
     slide.className = 'slideshow__slide' + (i === 0 ? ' active' : '');
-    slide.style.backgroundImage = `url(${photo.dataUrl})`;
+    slide.style.backgroundImage = `url(${url})`;
     slide.setAttribute('aria-hidden', i !== 0 ? 'true' : 'false');
 
     const caption = document.createElement('div');
@@ -169,6 +184,9 @@ async function initSlideshow(el) {
     dot.addEventListener('click', () => goToSlide(i, inner, dots));
     dots.appendChild(dot);
   });
+
+  // Als na filtering geen slides met blob overbleven: toon lege state
+  if (inner.querySelectorAll('.slideshow__slide').length === 0) return;
 
   clearInterval(_slideshowTimer);
   _slideshowTimer = setInterval(() => {
@@ -392,6 +410,7 @@ async function loadRecentSightings(el) {
 
 async function buildRecentItem(s) {
   let thumbHtml = '';
+  let thumbUrl  = null;
 
   // Probeer eerste foto-thumbnail te laden
   if (s.photoIds?.length) {
@@ -399,8 +418,9 @@ async function buildRecentItem(s) {
       const db = await getDB();
       const tx = db.transaction('photos', 'readonly');
       const photo = await txGet(tx.objectStore('photos'), s.photoIds[0]);
-      if (photo?.dataUrl) {
-        thumbHtml = `<img src="${photo.dataUrl}" alt="${s.speciesName || ''}" loading="lazy">`;
+      thumbUrl = getPhotoUrl(photo);
+      if (thumbUrl) {
+        thumbHtml = `<img src="${thumbUrl}" alt="${s.speciesName || ''}" loading="lazy">`;
       }
     } catch (_) {}
   }
@@ -415,7 +435,7 @@ async function buildRecentItem(s) {
 
   const badge = certBadge(s.certainty);
 
-  return `
+  const html = `
     <div class="recent-item">
       <div class="${thumbClass}">${thumbContent}</div>
       <div class="recent-item__body">
@@ -427,6 +447,11 @@ async function buildRecentItem(s) {
       ${badge ? `<div class="recent-item__badge">${badge}</div>` : ''}
     </div>
   `;
+
+  // Intrekken na gebruik — de <img> heeft de data al geladen via src
+  if (thumbUrl) revokePhotoUrl(thumbUrl);
+
+  return html;
 }
 
 function certBadge(certainty) {
