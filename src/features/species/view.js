@@ -5,7 +5,9 @@
  */
 
 import { SPECIES, CATEGORY_LABELS, REGIONS, getSeenIds, toggleSeen, searchSpecies } from '../../data/species.js';
-import { getDB } from '../../data/db.js';
+import { getDB, getPhotosBySpecies }    from '../../data/db.js';
+import { getSightings }                 from '../../data/sightings.js';
+import { getPhotoUrl, revokePhotoUrl }  from '../../utils/photoUrl.js';
 
 let _currentCategory = 'standvogel';
 let _searchQuery     = '';
@@ -45,16 +47,18 @@ function txGet(store, key) {
   });
 }
 
-// Laad de eerste foto-blob voor een soort-id uit waarnemingen
+// Laad de eerste foto-blob voor een soort-id uit waarnemingen.
+// Geeft een objectURL string terug (of null). De AANROEPER is verantwoordelijk
+// voor het intrekken van de URL via revokePhotoUrl() na gebruik.
 async function loadSpeciesThumb(speciesId) {
   try {
-    const sightings = JSON.parse(localStorage.getItem('birdspot_sightings') || '[]');
+    const sightings = JSON.parse(localStorage.getItem('birdspot-sightings') || '[]');
     const match = sightings.find(s => s.speciesId === speciesId && s.photoIds?.length);
     if (!match) return null;
     const db = await getDB();
     const tx = db.transaction('photos', 'readonly');
     const photo = await txGet(tx.objectStore('photos'), match.photoIds[0]);
-    return photo?.dataUrl || null;
+    return getPhotoUrl(photo);
   } catch {
     return null;
   }
@@ -63,7 +67,7 @@ async function loadSpeciesThumb(speciesId) {
 // ── "Recent bekeken" — soorten met recente waarneming ─────────
 function getRecentSpeciesIds(limit = 8) {
   try {
-    const sightings = JSON.parse(localStorage.getItem('birdspot_sightings') || '[]');
+    const sightings = JSON.parse(localStorage.getItem('birdspot-sightings') || '[]');
     const seen = new Map();
     // sorteer nieuwste eerst
     [...sightings]
@@ -147,10 +151,17 @@ export function renderSpecies(el) {
   // Laad async thumbnails voor "Recent bekeken"
   if (recentIds.length > 0) {
     recentIds.forEach(async id => {
-      const dataUrl = await loadSpeciesThumb(id);
-      if (!dataUrl) return;
+      const url = await loadSpeciesThumb(id);
+      if (!url) return;
       const thumb = el.querySelector(`#rthumb-${id}`);
-      if (thumb) thumb.innerHTML = `<img src="${dataUrl}" alt="" loading="lazy">`;
+      if (thumb) {
+        thumb.innerHTML = `<img src="${url}" alt="" loading="lazy">`;
+        // Intrekken nadat de browser de img-bron heeft geladen
+        thumb.querySelector('img')?.addEventListener('load',  () => revokePhotoUrl(url), { once: true });
+        thumb.querySelector('img')?.addEventListener('error', () => revokePhotoUrl(url), { once: true });
+      } else {
+        revokePhotoUrl(url);
+      }
     });
   }
 }
@@ -197,10 +208,16 @@ function renderList(el, seenIds) {
 
   // Laad async thumbnails per rij
   results.forEach(async s => {
-    const dataUrl = await loadSpeciesThumb(s.id);
-    if (!dataUrl) return;
+    const url = await loadSpeciesThumb(s.id);
+    if (!url) return;
     const thumb = list.querySelector(`.species-row[data-id="${s.id}"] .species-row__thumb`);
-    if (thumb) thumb.innerHTML = `<img src="${dataUrl}" alt="" loading="lazy">`;
+    if (thumb) {
+      thumb.innerHTML = `<img src="${url}" alt="" loading="lazy">`;
+      thumb.querySelector('img')?.addEventListener('load',  () => revokePhotoUrl(url), { once: true });
+      thumb.querySelector('img')?.addEventListener('error', () => revokePhotoUrl(url), { once: true });
+    } else {
+      revokePhotoUrl(url);
+    }
   });
 }
 
@@ -357,19 +374,19 @@ function openDetail(speciesId, screenEl) {
 
         <div class="detail-section">
           <div class="detail-section__label">Eigen foto's</div>
-          <div class="detail-photos-empty empty-state" style="padding:var(--space-16) 0">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" style="width:32px;height:32px">
-              <rect x="3" y="3" width="18" height="18" rx="3"/>
-              <circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>
-            </svg>
-            <p>Foto's koppelen aan soorten komt in Stap 4</p>
+          <div id="detailPhotos-${s.id}" class="detail-photos-grid">
+            <div class="detail-photos-loading">
+              <span class="spinner" aria-hidden="true"></span>
+            </div>
           </div>
         </div>
 
         <div class="detail-section">
           <div class="detail-section__label">Waarnemingen</div>
-          <div class="empty-state" style="padding:var(--space-16) 0">
-            <p style="font-size:var(--fs-meta)">Koppelen aan waarnemingen komt in Stap 5</p>
+          <div id="detailSightings-${s.id}" class="detail-sightings-list">
+            <div class="detail-photos-loading">
+              <span class="spinner" aria-hidden="true"></span>
+            </div>
           </div>
         </div>
       </div>
@@ -378,11 +395,78 @@ function openDetail(speciesId, screenEl) {
   document.body.appendChild(sheet);
   requestAnimationFrame(() => sheet.querySelector('.sheet').classList.add('open'));
 
+  // Laad eigen foto's async
+  getPhotosBySpecies(speciesId).then(photos => {
+    const container = sheet.querySelector(`#detailPhotos-${speciesId}`);
+    if (!container) return;
+    if (!photos || photos.length === 0) {
+      container.innerHTML = `
+        <div class="empty-state" style="padding:var(--space-16) 0">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" style="width:32px;height:32px">
+            <rect x="3" y="3" width="18" height="18" rx="3"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>
+          </svg>
+          <p>Nog geen foto's voor deze soort</p>
+        </div>`;
+      return;
+    }
+    const urls = [];
+    const thumbs = photos.slice(0, 9).map(photo => {
+      const url = getPhotoUrl(photo);
+      if (url) urls.push(url);
+      return url
+        ? `<div class="detail-photo-thumb"><img src="${url}" alt="" loading="lazy"></div>`
+        : '';
+    }).join('');
+    container.innerHTML = `<div class="detail-photos-grid-inner">${thumbs}</div>`;
+    // Intrekken na laden
+    container.querySelectorAll('img').forEach((img, i) => {
+      img.addEventListener('load',  () => revokePhotoUrl(urls[i]), { once: true });
+      img.addEventListener('error', () => revokePhotoUrl(urls[i]), { once: true });
+    });
+  }).catch(() => {
+    const container = sheet.querySelector(`#detailPhotos-${speciesId}`);
+    if (container) container.innerHTML = `<p class="detail-error">Foto's niet beschikbaar</p>`;
+  });
+
+  // Laad waarnemingen async
+  getSightings().then(all => {
+    const container = sheet.querySelector(`#detailSightings-${speciesId}`);
+    if (!container) return;
+    const matches = all
+      .filter(s => s.speciesId === speciesId)
+      .sort((a, b) => new Date(b.date) - new Date(a.date))
+      .slice(0, 10);
+    if (matches.length === 0) {
+      container.innerHTML = `
+        <div class="empty-state" style="padding:var(--space-12) 0">
+          <p style="font-size:var(--fs-meta)">Nog geen waarnemingen voor deze soort</p>
+        </div>`;
+      return;
+    }
+    container.innerHTML = matches.map(s => `
+      <div class="detail-sighting-row">
+        <div class="detail-sighting-row__date">${fmtDate(s.date)}</div>
+        <div class="detail-sighting-row__loc">${escHtml(s.locationName || '—')}</div>
+        ${s.notes ? `<div class="detail-sighting-row__notes">${escHtml(s.notes)}</div>` : ''}
+        ${s.photoIds?.length ? `<div class="detail-sighting-row__media">📷 ${s.photoIds.length}</div>` : ''}
+      </div>`).join('');
+  }).catch(() => {
+    const container = sheet.querySelector(`#detailSightings-${speciesId}`);
+    if (container) container.innerHTML = `<p class="detail-error">Waarnemingen niet beschikbaar</p>`;
+  });
+
   // Laad detail-thumb async
-  loadSpeciesThumb(speciesId).then(dataUrl => {
-    if (!dataUrl) return;
+  loadSpeciesThumb(speciesId).then(url => {
+    if (!url) return;
     const dt = sheet.querySelector(`#detailThumb-${speciesId}`);
-    if (dt) dt.innerHTML = `<img src="${dataUrl}" alt="">`;
+    if (dt) {
+      dt.innerHTML = `<img src="${url}" alt="">`;
+      dt.querySelector('img')?.addEventListener('load',  () => revokePhotoUrl(url), { once: true });
+      dt.querySelector('img')?.addEventListener('error', () => revokePhotoUrl(url), { once: true });
+    } else {
+      revokePhotoUrl(url);
+    }
   });
 
   // Sluit bij klik op overlay of handle
@@ -429,6 +513,13 @@ function circleIcon() {
 }
 function escHtml(s) {
   return String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function fmtDate(dateStr) {
+  if (!dateStr) return '';
+  try {
+    return new Date(dateStr).toLocaleDateString('nl-NL', { day: 'numeric', month: 'short', year: 'numeric' });
+  } catch { return dateStr; }
 }
 
 const REGION_TAG_LABELS = {

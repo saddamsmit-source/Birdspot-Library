@@ -25,13 +25,22 @@ const ROUTES = {
   profile:   { render: renderProfile,   fab: false },
 };
 
-let currentRoute = null;
+let currentRoute  = null;
+let currentCleanup = null; // cleanup-functie van het huidige scherm (bijv. renderHome)
 
 // ── Navigeer naar een route (force=true herlaadt ook het huidige scherm) ──────
 export function navigate(route, { force = false } = {}) {
   if (!ROUTES[route]) return;
   if (route === currentRoute && !force) return;
   currentRoute = route;
+
+  // Roep cleanup van het vorige scherm aan vóór we de DOM wissen.
+  // Dit stopt timers, geeft blob-URL's vrij en zet destroyed=true zodat
+  // lopende async-callbacks stil stoppen zonder het nieuwe scherm te raken.
+  if (currentCleanup) {
+    currentCleanup();
+    currentCleanup = null;
+  }
 
   // Scherm wisselen
   const main = document.getElementById('main-view');
@@ -40,7 +49,9 @@ export function navigate(route, { force = false } = {}) {
   screen.className = 'screen active';
   screen.id = `screen-${route}`;
   main.appendChild(screen);
-  ROUTES[route].render(screen);
+  const result = ROUTES[route].render(screen);
+  // Sla cleanup-functie op als de render er één retourneert (bijv. renderHome)
+  if (typeof result === 'function') currentCleanup = result;
 
   // Navigatie-state
   document.querySelectorAll('.nav-item').forEach(btn => {

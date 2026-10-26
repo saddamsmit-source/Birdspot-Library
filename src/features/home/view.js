@@ -9,8 +9,9 @@
  *   - Open-Meteo REST API (geen key)
  */
 
-import { getDB }        from '../../data/db.js';
-import { getSightings } from '../../data/sightings.js';
+import { getDB }                          from '../../data/db.js';
+import { getSightings }                   from '../../data/sightings.js';
+import { getPhotoUrl, revokePhotoUrl }    from '../../utils/photoUrl.js';
 
 // ── Constanten ─────────────────────────────────────────────
 const SLIDESHOW_INTERVAL = 3500;
@@ -18,13 +19,37 @@ const FALLBACK_LAT = 52.3676;
 const FALLBACK_LON = 4.9041;
 
 // ── Hoofd-render ───────────────────────────────────────────
-export async function renderHome(el) {
+/**
+ * renderHome retourneert een cleanup-functie.
+ * app.js roept cleanup() aan vóór elke routewissel zodat:
+ *   1. De slideshow-timer stopt.
+ *   2. Alle openstaande blob-URL's worden vrijgegeven.
+ *   3. Async-callbacks die nog lopen een stale-flag checken en stil stoppen.
+ */
+export function renderHome(el) {
+  // Gedeelde destroyed-vlag: alle async functies checken deze vóór DOM-mutaties.
+  const ctx = { destroyed: false };
+
   el.innerHTML = buildSkeleton();
-  initSlideshow(el);
-  loadStats(el);
-  loadSunInfo(el);
-  loadWeather(el);
-  loadRecentSightings(el);
+  initSlideshow(el, ctx);
+  loadStats(el, ctx);
+  loadSunInfo(el, ctx);
+  loadWeather(el, ctx);
+  loadRecentSightings(el, ctx);
+  loadMonthlyChart(el, ctx);
+  loadHotspotsMap(el, ctx);
+
+  return function cleanup() {
+    ctx.destroyed = true;
+    // Stop timer
+    if (_slideshowTimer !== null) {
+      clearInterval(_slideshowTimer);
+      _slideshowTimer = null;
+    }
+    // Geef alle openstaande blob-URL's vrij (slideshow + recent-thumbnails)
+    _revokeSlideshowUrls();
+    _revokeRecentThumbUrls();
+  };
 }
 
 // ── Skeleton ───────────────────────────────────────────────
@@ -114,12 +139,32 @@ function buildSkeleton() {
     </section>
 
     <!-- Weer -->
-    <section class="dash-section" id="weatherSection" style="padding-bottom:var(--space-16)">
+    <section class="dash-section" id="weatherSection">
       <div class="section-head">
         <span class="section-head__title">Weercondities</span>
       </div>
       <div class="dash-section__loading">
         <span class="spinner" aria-hidden="true"></span> Weer laden…
+      </div>
+    </section>
+
+    <!-- Maandgrafiek -->
+    <section class="dash-section" id="monthlySection">
+      <div class="section-head">
+        <span class="section-head__title">Waarnemingen per maand</span>
+      </div>
+      <div class="dash-section__loading">
+        <span class="spinner" aria-hidden="true"></span>
+      </div>
+    </section>
+
+    <!-- Hotspots minimap -->
+    <section class="dash-section" id="hotspotsSection" style="padding-bottom:var(--space-16)">
+      <div class="section-head">
+        <span class="section-head__title">Mijn hotspots</span>
+      </div>
+      <div class="dash-section__loading">
+        <span class="spinner" aria-hidden="true"></span>
       </div>
     </section>
   `;
@@ -131,8 +176,28 @@ function buildSkeleton() {
 let _slideshowTimer = null;
 let _slideIndex     = 0;
 let _slides         = [];
+// Bijhouden van blob-URL's zodat ze ingetrokken worden bij re-render
+let _slideshowUrls  = [];
 
-async function initSlideshow(el) {
+function _revokeSlideshowUrls() {
+  _slideshowUrls.forEach(revokePhotoUrl);
+  _slideshowUrls = [];
+}
+
+// ── Recente waarnemingen thumbnail-URLs ─────────────────────
+// Bijhouden zodat cleanup() ze kan vrijgeven ook als load/error
+// event al gevuurd was vóór de listener werd gekoppeld.
+let _recentThumbUrls = [];
+
+function _revokeRecentThumbUrls() {
+  _recentThumbUrls.forEach(revokePhotoUrl);
+  _recentThumbUrls = [];
+}
+
+async function initSlideshow(el, ctx) {
+  // Ruim vorige URL's op vóór een nieuwe initialisatie
+  _revokeSlideshowUrls();
+
   try {
     const db = await getDB();
     const tx = db.transaction('photos', 'readonly');
@@ -142,19 +207,35 @@ async function initSlideshow(el) {
     _slides = [];
   }
 
+  // Guard: scherm al verlaten vóórdat IDB terugkwam
+  if (ctx.destroyed) { _revokeSlideshowUrls(); return; }
+
   const inner = el.querySelector('#slideshowInner');
   const dots  = el.querySelector('#slideshowDots');
   if (!inner) return;
   if (_slides.length === 0) return;
 
+  // Pre-filter: genereer URL's en behoud alleen records met bruikbare blob.
+  // Zo lopen slide-index, slide-elementen en dots altijd 1:1 synchroon.
+  const validSlides = [];
+  for (const photo of _slides) {
+    const url = getPhotoUrl(photo);
+    if (url) validSlides.push({ photo, url });
+  }
+
+  if (validSlides.length === 0) return; // geen bruikbare blobs
+
+  _slides = validSlides.map(vs => vs.photo); // update module-state
+  validSlides.forEach(vs => _slideshowUrls.push(vs.url));
+
   inner.innerHTML = '';
   dots.innerHTML  = '';
   _slideIndex = 0;
 
-  _slides.forEach((photo, i) => {
+  validSlides.forEach(({ photo, url }, i) => {
     const slide = document.createElement('div');
     slide.className = 'slideshow__slide' + (i === 0 ? ' active' : '');
-    slide.style.backgroundImage = `url(${photo.dataUrl})`;
+    slide.style.backgroundImage = `url(${url})`;
     slide.setAttribute('aria-hidden', i !== 0 ? 'true' : 'false');
 
     const caption = document.createElement('div');
@@ -166,12 +247,19 @@ async function initSlideshow(el) {
     const dot = document.createElement('button');
     dot.className = 'slideshow__dot' + (i === 0 ? ' active' : '');
     dot.setAttribute('aria-label', `Foto ${i + 1}`);
-    dot.addEventListener('click', () => goToSlide(i, inner, dots));
+    dot.addEventListener('click', () => {
+      if (!ctx.destroyed) goToSlide(i, inner, dots);
+    });
     dots.appendChild(dot);
   });
 
   clearInterval(_slideshowTimer);
   _slideshowTimer = setInterval(() => {
+    if (ctx.destroyed) {
+      clearInterval(_slideshowTimer);
+      _slideshowTimer = null;
+      return;
+    }
     _slideIndex = (_slideIndex + 1) % _slides.length;
     goToSlide(_slideIndex, inner, dots);
   }, SLIDESHOW_INTERVAL);
@@ -191,9 +279,10 @@ function goToSlide(idx, inner, dots) {
 // ══════════════════════════════════════════════════════════
 // STATISTIEKEN
 // ══════════════════════════════════════════════════════════
-async function loadStats(el) {
+async function loadStats(el, ctx) {
   try {
     const sightings  = await getSightings();
+    if (ctx.destroyed) return;
     const speciesSet = new Set(sightings.map(s => s.speciesId));
     const photoCount = sightings.reduce((n, s) => n + (s.photoIds?.length || 0), 0);
     const locSet     = new Set(sightings.map(s => s.locationName).filter(Boolean));
@@ -203,6 +292,7 @@ async function loadStats(el) {
     setStatVal(el, 'stat-photos',  photoCount);
     setStatVal(el, 'stat-hotspot', locSet.size);
   } catch (_) {
+    if (ctx.destroyed) return;
     ['stat-species','stat-total','stat-photos','stat-hotspot']
       .forEach(id => setStatVal(el, id, '—'));
   }
@@ -216,11 +306,12 @@ function setStatVal(el, id, val) {
 // ══════════════════════════════════════════════════════════
 // ZON / GOLDEN HOUR  (SunCalc.js)
 // ══════════════════════════════════════════════════════════
-async function loadSunInfo(el) {
+async function loadSunInfo(el, ctx) {
   const section = el.querySelector('#sunSection');
   if (!section) return;
 
   const { lat, lon } = await getLocation();
+  if (ctx.destroyed) return;
   const now  = new Date();
   const SC   = window.SunCalc;
 
@@ -300,7 +391,7 @@ const WMO_ICON = {
   95:'⛈', 96:'⛈', 99:'⛈',
 };
 
-async function loadWeather(el) {
+async function loadWeather(el, ctx) {
   const section = el.querySelector('#weatherSection');
   if (!section) return;
 
@@ -308,12 +399,14 @@ async function loadWeather(el) {
 
   try {
     const { lat, lon } = await getLocation();
+    if (ctx.destroyed) return;
     const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}` +
       `&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m,relative_humidity_2m` +
       `&wind_speed_unit=ms&timezone=auto`;
 
     const res  = await fetch(url);
     const data = await res.json();
+    if (ctx.destroyed) return;
     const c    = data.current;
     const code = c.weather_code;
     const icon = WMO_ICON[code]  || '🌡';
@@ -339,6 +432,7 @@ async function loadWeather(el) {
       `;
     }
   } catch (_) {
+    if (ctx.destroyed) return;
     if (loader) loader.outerHTML = `<div class="dash-section__error">Weer niet beschikbaar</div>`;
   }
 }
@@ -359,12 +453,16 @@ function weatherBirdTip(code, wind) {
 // ══════════════════════════════════════════════════════════
 // RECENTE WAARNEMINGEN — met foto-thumbnail + badge
 // ══════════════════════════════════════════════════════════
-async function loadRecentSightings(el) {
+async function loadRecentSightings(el, ctx) {
   const listEl = el.querySelector('#recentList');
   if (!listEl) return;
 
+  // Wis vorige thumbnail-URLs (bij hergebruik van dezelfde module-instantie)
+  _revokeRecentThumbUrls();
+
   try {
     const all = await getSightings();
+    if (ctx.destroyed) return;
     const recent = [...all]
       .sort((a, b) => new Date(b.date) - new Date(a.date))
       .slice(0, 6);
@@ -382,8 +480,37 @@ async function loadRecentSightings(el) {
     }
 
     // Haal thumbnails asynchroon op per sighting
-    const items = await Promise.all(recent.map(s => buildRecentItem(s)));
-    listEl.innerHTML = items.join('');
+    const results = await Promise.all(recent.map(s => buildRecentItem(s)));
+    if (ctx.destroyed) {
+      // Geef alle gegenereerde blob-URLs vrij: we gaan ze niet in de DOM zetten
+      results.forEach(r => {
+        if (r.blobUrl) revokePhotoUrl(r.blobUrl);
+      });
+      return;
+    }
+    listEl.innerHTML = results.map(r => r.html).join('');
+
+    // Registreer blob-URLs in de module-level tracker zodat cleanup() ze
+    // altijd kan vrijgeven, ook als load/error al gevuurd was vóór koppeling.
+    results.forEach(r => {
+      if (r.blobUrl) _recentThumbUrls.push(r.blobUrl);
+    });
+
+    // Koppel deferred revoke aan elk img-element ná DOM-plaatsing.
+    // Als load/error al gevuurd was (img reeds gecached), wordt de URL
+    // toch vrijgegeven via _revokeRecentThumbUrls() in cleanup().
+    listEl.querySelectorAll('.recent-item__thumb img').forEach(img => {
+      const url = img.src;
+      if (!url || !url.startsWith('blob:')) return;
+      const revoke = () => {
+        // Verwijder uit tracker zodat cleanup() hem niet dubbel intrekt
+        const idx = _recentThumbUrls.indexOf(url);
+        if (idx !== -1) _recentThumbUrls.splice(idx, 1);
+        revokePhotoUrl(url);
+      };
+      img.addEventListener('load',  revoke, { once: true });
+      img.addEventListener('error', revoke, { once: true });
+    });
 
   } catch (_) {
     listEl.innerHTML = `<div class="dash-section__error" style="padding:var(--space-12);background:var(--surface);border-radius:var(--r-card)">Waarnemingen niet beschikbaar</div>`;
@@ -392,15 +519,19 @@ async function loadRecentSightings(el) {
 
 async function buildRecentItem(s) {
   let thumbHtml = '';
+  let blobUrl   = null; // bijhouden zodat caller het kan vrijgeven bij destroyed
 
   // Probeer eerste foto-thumbnail te laden
+  // URL wordt NIET hier ingetrokken — dat doet de caller via DOM event listeners
   if (s.photoIds?.length) {
     try {
       const db = await getDB();
       const tx = db.transaction('photos', 'readonly');
       const photo = await txGet(tx.objectStore('photos'), s.photoIds[0]);
-      if (photo?.dataUrl) {
-        thumbHtml = `<img src="${photo.dataUrl}" alt="${s.speciesName || ''}" loading="lazy">`;
+      const url = getPhotoUrl(photo);
+      if (url) {
+        blobUrl   = url;
+        thumbHtml = `<img src="${url}" alt="${s.speciesName || ''}" loading="lazy">`;
       }
     } catch (_) {}
   }
@@ -415,7 +546,7 @@ async function buildRecentItem(s) {
 
   const badge = certBadge(s.certainty);
 
-  return `
+  const html = `
     <div class="recent-item">
       <div class="${thumbClass}">${thumbContent}</div>
       <div class="recent-item__body">
@@ -427,6 +558,8 @@ async function buildRecentItem(s) {
       ${badge ? `<div class="recent-item__badge">${badge}</div>` : ''}
     </div>
   `;
+
+  return { html, blobUrl };
 }
 
 function certBadge(certainty) {
@@ -444,6 +577,199 @@ function certBadge(certainty) {
 
   const icon = entry.cls === 'certain' ? checkIcon : warnIcon;
   return `<span class="certainty-badge certainty-badge--${entry.cls}">${icon}${entry.label}</span>`;
+}
+
+// ══════════════════════════════════════════════════════════
+// MAANDGRAFIEK  (native SVG, geen Chart.js)
+// ══════════════════════════════════════════════════════════
+async function loadMonthlyChart(el, ctx) {
+  const section = el.querySelector('#monthlySection');
+  if (!section) return;
+  const loader = section.querySelector('.dash-section__loading');
+
+  try {
+    const sightings = await getSightings();
+    if (ctx.destroyed) return;
+
+    // Bouw bucket: laatste 12 maanden
+    const now    = new Date();
+    const months = [];
+    for (let i = 11; i >= 0; i--) {
+      const d = new Date(now.getFullYear(), now.getMonth() - i, 1);
+      months.push({
+        key:   `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`,
+        label: d.toLocaleDateString('nl-NL', { month: 'short' }),
+        count: 0,
+      });
+    }
+
+    for (const s of sightings) {
+      if (!s.date) continue;
+      const key = s.date.slice(0, 7); // "YYYY-MM"
+      const bucket = months.find(m => m.key === key);
+      if (bucket) bucket.count++;
+    }
+
+    const maxCount = Math.max(...months.map(m => m.count));
+
+    // Lege staat: geen sightings überhaupt, of alle buiten het 12-maands venster
+    if (maxCount === 0) {
+      const msg = sightings.length === 0
+        ? 'Nog geen waarnemingen om te tonen'
+        : 'Geen waarnemingen in de afgelopen 12 maanden';
+      if (loader) loader.outerHTML = `<div class="chart-empty">${msg}</div>`;
+      return;
+    }
+
+    // SVG-afmetingen — PAD_T = 14 geeft ruimte voor count-labels boven hoogste balk
+    const W = 320, H = 130, PAD_L = 26, PAD_B = 20, PAD_T = 14, PAD_R = 8;
+    const chartW = W - PAD_L - PAD_R;
+    const chartH = H - PAD_B - PAD_T;
+    const barW   = Math.floor(chartW / months.length);
+    const barGap = Math.max(2, Math.floor(barW * 0.18));
+    const barNet = barW - barGap;
+
+    // Y-rasterlijnen (max 4)
+    const gridSteps = Math.min(maxCount, 4);
+    const gridLines = [];
+    for (let g = 1; g <= gridSteps; g++) {
+      const val = Math.round((maxCount / gridSteps) * g);
+      const y   = PAD_T + chartH - Math.round((val / maxCount) * chartH);
+      gridLines.push({ y, val });
+    }
+
+    const gridSvg = gridLines.map(gl =>
+      `<line x1="${PAD_L}" y1="${gl.y}" x2="${W - PAD_R}" y2="${gl.y}" class="chart-grid"/>
+       <text x="${PAD_L - 3}" y="${gl.y + 4}" class="chart-axis-y">${gl.val}</text>`
+    ).join('');
+
+    const barsSvg = months.map((m, i) => {
+      const x      = PAD_L + i * barW;
+      const barH   = m.count === 0 ? 2 : Math.max(3, Math.round((m.count / maxCount) * chartH));
+      const y      = PAD_T + chartH - barH;
+      const isLast = i === months.length - 1;
+      const labelX = x + barW / 2;
+      return `
+        <rect x="${x + barGap / 2}" y="${y}" width="${barNet}" height="${barH}"
+              rx="2" class="chart-bar${m.count === 0 ? ' chart-bar--zero' : ''}"/>
+        ${(i % 2 === 0 || isLast) ? `<text x="${labelX}" y="${H - 4}" class="chart-axis-x">${m.label}</text>` : ''}
+        ${m.count > 0 ? `<text x="${labelX}" y="${y - 3}" class="chart-value">${m.count}</text>` : ''}
+      `;
+    }).join('');
+
+    const svg = `
+      <svg class="monthly-chart" viewBox="0 0 ${W} ${H}"
+           role="img" aria-label="Waarnemingen per maand">
+        ${gridSvg}
+        <line x1="${PAD_L}" y1="${PAD_T}" x2="${PAD_L}" y2="${PAD_T + chartH}" class="chart-axis-line"/>
+        <line x1="${PAD_L}" y1="${PAD_T + chartH}" x2="${W - PAD_R}" y2="${PAD_T + chartH}" class="chart-axis-line"/>
+        ${barsSvg}
+      </svg>
+    `;
+
+    if (ctx.destroyed) return;
+    if (loader) loader.outerHTML = `<div class="chart-wrap">${svg}</div>`;
+
+  } catch (_) {
+    if (ctx.destroyed) return;
+    if (loader) loader.outerHTML = `<div class="dash-section__error">Grafiek niet beschikbaar</div>`;
+  }
+}
+
+// ══════════════════════════════════════════════════════════
+// HOTSPOTS MINIMAP  (native SVG, alleen werkelijke GPS-data)
+// ══════════════════════════════════════════════════════════
+async function loadHotspotsMap(el, ctx) {
+  const section = el.querySelector('#hotspotsSection');
+  if (!section) return;
+  const loader = section.querySelector('.dash-section__loading');
+
+  try {
+    const sightings = await getSightings();
+    if (ctx.destroyed) return;
+
+    // Alleen waarnemingen met werkelijke GPS-coördinaten
+    const withGps = sightings.filter(s =>
+      typeof s.lat === 'number' && typeof s.lon === 'number' &&
+      !isNaN(s.lat) && !isNaN(s.lon)
+    );
+
+    if (withGps.length === 0) {
+      if (loader) loader.outerHTML = `
+        <div class="hotspot-empty">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" style="width:32px;height:32px;opacity:.35">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <p>Nog geen GPS-locaties — voeg coördinaten toe aan waarnemingen</p>
+        </div>
+      `;
+      return;
+    }
+
+    // Groepeer op locatie (afronden op 3 decimalen ≈ ~100m)
+    const clusters = {};
+    for (const s of withGps) {
+      const key = `${s.lat.toFixed(3)},${s.lon.toFixed(3)}`;
+      if (!clusters[key]) clusters[key] = { lat: s.lat, lon: s.lon, count: 0, species: new Set() };
+      clusters[key].count++;
+      if (s.speciesId) clusters[key].species.add(s.speciesId);
+    }
+    const points = Object.values(clusters);
+
+    // Bounding box
+    const lats = points.map(p => p.lat);
+    const lons = points.map(p => p.lon);
+    let minLat = Math.min(...lats), maxLat = Math.max(...lats);
+    let minLon = Math.min(...lons), maxLon = Math.max(...lons);
+
+    // Voeg padding toe aan bounding box (5%)
+    const latPad = Math.max((maxLat - minLat) * 0.2, 0.005);
+    const lonPad = Math.max((maxLon - minLon) * 0.2, 0.005);
+    minLat -= latPad; maxLat += latPad;
+    minLon -= lonPad; maxLon += lonPad;
+
+    const W = 320, H = 180;
+    const maxCount = Math.max(...points.map(p => p.count));
+
+    // Project lat/lon → SVG-coördinaten (Mercator-benadering)
+    const project = (lat, lon) => {
+      const x = ((lon - minLon) / (maxLon - minLon)) * (W - 20) + 10;
+      // Latituderichting omgekeerd (noord = boven)
+      const y = ((maxLat - lat) / (maxLat - minLat)) * (H - 20) + 10;
+      return { x, y };
+    };
+
+    const dotsSvg = points.map(p => {
+      const { x, y } = project(p.lat, p.lon);
+      const r     = Math.max(5, Math.min(14, 5 + (p.count / maxCount) * 9));
+      const label = p.count > 1 ? p.count : '';
+      return `
+        <circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r.toFixed(1)}"
+                class="hotspot-dot" style="--r:${r.toFixed(1)}px"/>
+        ${label ? `<text x="${x.toFixed(1)}" y="${(y + 4.5).toFixed(1)}" class="hotspot-label">${label}</text>` : ''}
+      `;
+    }).join('');
+
+    const totalLocations = points.length;
+    const totalSightings = withGps.length;
+
+    const svg = `
+      <svg class="hotspot-map" viewBox="0 0 ${W} ${H}"
+           role="img" aria-label="Kaart van waarnemingslocaties">
+        <rect width="${W}" height="${H}" class="hotspot-bg"/>
+        ${dotsSvg}
+      </svg>
+      <div class="hotspot-meta">${totalLocations} locatie${totalLocations !== 1 ? 's' : ''} · ${totalSightings} waarneming${totalSightings !== 1 ? 'en' : ''} met GPS</div>
+    `;
+
+    if (ctx.destroyed) return;
+    if (loader) loader.outerHTML = `<div class="hotspot-wrap">${svg}</div>`;
+
+  } catch (_) {
+    if (ctx.destroyed) return;
+    if (loader) loader.outerHTML = `<div class="dash-section__error">Kaart niet beschikbaar</div>`;
+  }
 }
 
 // ══════════════════════════════════════════════════════════
