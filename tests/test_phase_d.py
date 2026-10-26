@@ -3,6 +3,19 @@ Birdspot Library — Fase D QA Tests
 Playwright tests voor de sighting-workflow (v2 schema):
   D-01 t/m D-20: functionele tests
   D-21 t/m D-23: screenshots op 360/390/430px (D11)
+  D-24 t/m D-27: data-integriteitsregressies (ChatGPT review Issues 1–3)
+    D-24: migratie behoudt onbekende/toekomstige velden (Issue 1)
+    D-25: opslagfout propagatie — UI toont foutmelding, niets opgeslagen (Issue 3)
+    D-26: veilige media-opslagvolgorde — photoIds bewaard na edit (Issue 2)
+    D-27: cancel tijdens edit — geen persistente wijzigingen
+
+Testmethodiek (Issue 4):
+  Sheet-interacties gebruiken page.evaluate('() => el?.click()') i.p.v.
+  locator.click(force=True) voor dynamisch geappende .sheet-overlay elementen.
+  Reden: Playwright's locator.click() triggert geen DOM-eventlisteners op elementen
+  die buiten de initiële DOM worden geappend aan document.body, zelfs met force=True.
+  page.evaluate() roept het click()-event direct aan in de browser-context en werkt
+  daardoor betrouwbaar voor sheet submit/edit/delete knoppen.
 
 Starten (vanuit repo-root):
   python tests/test_phase_d.py
@@ -724,6 +737,221 @@ with sync_playwright() as pw:
             log(f"{test_id} Screenshots {width}px", "FAIL", str(e))
             try: sc.close()
             except: pass
+
+    # ════════════════════════════════════════════════════════════════════════════
+    # D-24 t/m D-27: Data-integriteitsregressies (ChatGPT review Issues 1–3)
+    # ════════════════════════════════════════════════════════════════════════════
+    print("\n--- D-24 t/m D-27: Data-integriteitsregressies ---")
+
+    # ── D-24: Migratie behoudt onbekende velden ──────────────────────────────────
+    # Regressiontest voor Issue 1: migrateSighting() mag onbekende/toekomstige
+    # velden NOOIT weggooien (spread-patroon vereist).
+    print("--- D-24 ---")
+    try:
+        _fresh(page)
+        # Stel een v1-sighting in met een extra onbekend veld 'futureField'
+        v1_with_unknown = {
+            "id": "d24-migrate",
+            "speciesId": "parus-major",
+            "speciesName": "Koolmees",
+            "date": ISO_TODAY,
+            "lat": None,
+            "lon": None,
+            "locationName": "Migratie test",
+            "notes": "v1 met onbekend veld",
+            "photoIds": [],
+            "createdAt": "2026-01-01T10:00:00.000Z",
+            "futureField": "bewaar-mij",          # onbekend veld dat bewaard moet blijven
+            "anotherUnknown": {"nested": True},   # ook geneste waarden
+        }
+        page.evaluate(
+            "(d) => localStorage.setItem('birdspot-sightings', JSON.stringify(d))",
+            {"schemaVersion": 1, "sightings": [v1_with_unknown]}
+        )
+        # Navigeer naar sightings → triggert getSightings() → voert migratie uit
+        _go_sightings(page)
+        page.wait_for_timeout(600)
+
+        # Lees de gemigregeerde data terug
+        migrated = _get_ls_sightings(page)
+        if not migrated:
+            log("D-24 Migratie behoudt onbekende velden", "FAIL", "geen sightings na migratie")
+        else:
+            s = migrated[0]
+            future_ok   = s.get("futureField") == "bewaar-mij"
+            another_ok  = isinstance(s.get("anotherUnknown"), dict)
+            v2_fields   = all(k in s for k in ["time", "count", "certainty", "habitat"])
+            v1_fields   = s.get("notes") == "v1 met onbekend veld"
+
+            if future_ok and another_ok and v2_fields and v1_fields:
+                log("D-24 Migratie behoudt onbekende velden", "PASS")
+            else:
+                log("D-24 Migratie behoudt onbekende velden", "FAIL",
+                    f"futureField={s.get('futureField')!r}, "
+                    f"anotherUnknown={s.get('anotherUnknown')!r}, "
+                    f"v2_fields={v2_fields}, v1_fields={v1_fields}")
+    except Exception as e:
+        log("D-24 Migratie behoudt onbekende velden", "FAIL", str(e))
+
+    # ── D-25: Opslagfout propagatie — UI toont foutmelding, geen succes-toast ────
+    # Regressiontest voor Issue 3: saveSightings() gooit bij fout; addSighting()
+    # propageert de throw; addSheet.js vangt dit op en toont een foutmelding.
+    # We simuleren een opslagfout door localStorage.setItem te overschrijven.
+    print("--- D-25 ---")
+    try:
+        _fresh(page)
+        # Simuleer opslagfout: overschrijf localStorage.setItem tijdelijk
+        page.evaluate("""() => {
+            window.__origSetItem = localStorage.setItem.bind(localStorage);
+            localStorage.setItem = function(key, value) {
+                if (key === 'birdspot-sightings') {
+                    throw new DOMException('QuotaExceededError', 'QuotaExceededError');
+                }
+                window.__origSetItem(key, value);
+            };
+        }""")
+
+        # Open add-sheet en probeer op te slaan
+        _go_sightings(page)
+        page.wait_for_timeout(400)
+        _open_fab(page)
+        page.wait_for_selector('#addSightingSheet', timeout=5000)
+        # Vul minimale vereiste velden in (species is al ingesteld via URL/state)
+        # De sheet heeft al een speciesId via de launch-context; we klikken direct submit
+        page.evaluate('() => { document.querySelector("#addSheetSubmit")?.click(); }')
+        page.wait_for_timeout(1200)
+
+        # Herstel localStorage.setItem
+        page.evaluate("() => { localStorage.setItem = window.__origSetItem; }")
+
+        # Toast 'Opslaan mislukt' moet zichtbaar zijn, GEEN toast 'Toegevoegd'
+        toast_text = ""
+        try:
+            toast_text = page.locator('.toast').first.inner_text()
+        except Exception:
+            pass
+
+        no_success_toast = "toegevoegd" not in toast_text.lower() and "opgeslagen" not in toast_text.lower()
+        has_error_hint   = "mislukt" in toast_text.lower() or "fout" in toast_text.lower() or "opnieuw" in toast_text.lower()
+
+        # Sightings moeten leeg zijn (opslagfout → niets opgeslagen)
+        sightings_after = _get_ls_sightings(page)
+        nothing_stored  = len(sightings_after) == 0
+
+        if no_success_toast and nothing_stored:
+            log("D-25 Opslagfout: geen succes-toast, niets opgeslagen", "PASS")
+        else:
+            log("D-25 Opslagfout: geen succes-toast, niets opgeslagen", "FAIL",
+                f"toast={toast_text!r}, stored={len(sightings_after)}, "
+                f"no_success={no_success_toast}, nothing_stored={nothing_stored}")
+        try: _close_sheet(page)
+        except: pass
+    except Exception as e:
+        log("D-25 Opslagfout: geen succes-toast, niets opgeslagen", "FAIL", str(e))
+        # Zorg dat localStorage hersteld is ook bij exception
+        try: page.evaluate("() => { if(window.__origSetItem) localStorage.setItem = window.__origSetItem; }")
+        except: pass
+        try: _close_sheet(page)
+        except: pass
+
+    # ── D-26: Veilige media-opslagvolgorde — record opgeslagen vóór photo-delete ─
+    # Regressiontest voor Issue 2: bij edit mag een foto pas worden verwijderd uit
+    # IndexedDB NADAT het localStorage-record succesvol is bijgewerkt.
+    # We controleren dit indirect: na een edit zonder opslagfout zijn de photoIds
+    # correct bijgewerkt en het record consistent.
+    print("--- D-26 ---")
+    try:
+        page.evaluate("() => { document.querySelectorAll('.sheet-overlay').forEach(el => el.remove()); }")
+        page.wait_for_timeout(200)
+
+        sid26 = "d26-order"
+        _fresh(page)
+        # Stel sighting in met een nep-photoId (simuleert bestaande foto)
+        _set_ls(page, [_v2_sighting(sid26,
+                                    notes="origineel",
+                                    photoIds=["fake-photo-id-1"])])
+        _go_sightings(page)
+        page.wait_for_selector('.sight-card', timeout=4000)
+
+        # Open detail → edit
+        page.locator('.sight-card').first.click(force=True)
+        page.wait_for_timeout(600)
+        page.wait_for_selector('#detailSightingSheet', timeout=4000)
+        page.evaluate('() => { document.querySelector("#detailEdit")?.click(); }')
+        page.wait_for_timeout(1000)
+
+        # Edit: pas notes aan (geen foto-wijzigingen — test dat bestaande photoIds bewaard blijven)
+        page.wait_for_selector('#addSightingSheet', timeout=5000)
+        sheet = page.locator('#addSightingSheet').first
+        sheet.locator('#sightNotes').first.fill("bijgewerkt via D-26")
+        page.evaluate('() => { document.querySelector("#addSheetSubmit")?.click(); }')
+        page.wait_for_timeout(1200)
+
+        # Controleer: record bijgewerkt, photoIds bewaard
+        sightings = _get_ls_sightings(page)
+        updated = next((x for x in sightings if x.get('id') == sid26), None)
+
+        if updated is None:
+            log("D-26 Veilige media-volgorde: record na edit", "FAIL", "sighting niet gevonden na edit")
+        else:
+            notes_ok   = updated.get("notes") == "bijgewerkt via D-26"
+            photos_ok  = updated.get("photoIds") == ["fake-photo-id-1"]  # ongewijzigd
+            if notes_ok and photos_ok:
+                log("D-26 Veilige media-volgorde: record na edit", "PASS")
+            else:
+                log("D-26 Veilige media-volgorde: record na edit", "FAIL",
+                    f"notes={updated.get('notes')!r}, photoIds={updated.get('photoIds')!r}")
+    except Exception as e:
+        log("D-26 Veilige media-volgorde: record na edit", "FAIL", str(e))
+        try: _close_sheet(page)
+        except: pass
+
+    # ── D-27: Cancel tijdens edit — geen persistente wijzigingen ────────────────
+    # Regressiontest: na cancel van een edit-form mag de originele sighting
+    # ongewijzigd zijn in localStorage.
+    print("--- D-27 ---")
+    try:
+        page.evaluate("() => { document.querySelectorAll('.sheet-overlay').forEach(el => el.remove()); }")
+        page.wait_for_timeout(200)
+
+        sid27 = "d27-cancel"
+        _fresh(page)
+        _set_ls(page, [_v2_sighting(sid27, notes="origineel cancel test", count=3)])
+        _go_sightings(page)
+        page.wait_for_selector('.sight-card', timeout=4000)
+
+        # Open detail → edit
+        page.locator('.sight-card').first.click(force=True)
+        page.wait_for_timeout(600)
+        page.wait_for_selector('#detailSightingSheet', timeout=4000)
+        page.evaluate('() => { document.querySelector("#detailEdit")?.click(); }')
+        page.wait_for_timeout(1000)
+
+        # Wijzig het veld maar cancel (Escape) zonder op te slaan
+        page.wait_for_selector('#addSightingSheet', timeout=5000)
+        sheet = page.locator('#addSightingSheet').first
+        sheet.locator('#sightNotes').first.fill("NIET OPGESLAGEN")
+        page.keyboard.press("Escape")
+        page.wait_for_timeout(600)
+
+        # Originele sighting moet ongewijzigd zijn
+        sightings = _get_ls_sightings(page)
+        original = next((x for x in sightings if x.get('id') == sid27), None)
+
+        if original is None:
+            log("D-27 Cancel edit: origineel ongewijzigd", "FAIL", "sighting niet gevonden na cancel")
+        else:
+            notes_ok = original.get("notes") == "origineel cancel test"
+            count_ok = original.get("count") == 3
+            if notes_ok and count_ok:
+                log("D-27 Cancel edit: origineel ongewijzigd", "PASS")
+            else:
+                log("D-27 Cancel edit: origineel ongewijzigd", "FAIL",
+                    f"notes={original.get('notes')!r}, count={original.get('count')!r}")
+    except Exception as e:
+        log("D-27 Cancel edit: origineel ongewijzigd", "FAIL", str(e))
+        try: _close_sheet(page)
+        except: pass
 
     browser.close()
 

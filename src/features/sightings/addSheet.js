@@ -486,14 +486,15 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
   btn.textContent = 'Opslaan…';
 
   try {
-    // 1. Verwijder gemarkeerde IDB-foto's (alleen bij edit)
-    if (isEdit && _state.deletedPhotoIds.length > 0) {
-      for (const id of _state.deletedPhotoIds) {
-        try { await deletePhoto(id); } catch (_) {}
-      }
-    }
+    // VEILIGE OPSLAGVOLGORDE (data-integriteit):
+    // 1. Nieuwe media naar IDB (omkeerbaar: orphan IDs — kunnen later worden opgeruimd)
+    // 2. Record naar localStorage (gooit bij fout → stap 3 wordt NIET uitgevoerd)
+    // 3. PAS NA bevestigde opslag: verwijder orphaned IDB-foto's
+    //
+    // Dit voorkomt onherstelbaar dataverlies waarbij foto's weg zijn maar
+    // het record ze nog refereert (was het geval bij de oude volgorde).
 
-    // 2. Nieuwe media opslaan in IndexedDB
+    // 1. Nieuwe media opslaan in IndexedDB
     const newPhotoIds = [];
     for (const m of _state.mediaFiles) {
       if (ctx.destroyed) return;
@@ -515,10 +516,11 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
 
     if (ctx.destroyed) return;
 
-    // 3. Stel alle photoIds samen
+    // 2. Stel alle photoIds samen en sla record op in localStorage
+    //    saveSightings() gooit nu bij fout (QuotaExceededError e.d.) →
+    //    catch-blok onderaan handelt af, stap 3 wordt NIET bereikt.
     const allPhotoIds = [..._state.existingPhotoIds, ...newPhotoIds];
 
-    // 4a. Maak nieuw sighting-object (add) of patch bestaand (edit)
     const now = new Date().toISOString();
     let savedSighting;
 
@@ -553,7 +555,7 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
 
     if (ctx.destroyed) return;
 
-    // 4b. Patch sightingId terug in nieuwe IDB-foto's
+    // 2b. Patch sightingId terug in nieuwe IDB-foto's
     for (const id of newPhotoIds) {
       try {
         const existing = await getPhoto(id);
@@ -561,10 +563,18 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
       } catch (_) {}
     }
 
-    // 5. Soort als gezien markeren (idempotent)
+    // 3. Record is bevestigd opgeslagen → verwijder nu orphaned IDB-foto's (alleen bij edit)
+    //    Pas NA succesvolle localStorage-write om onherstelbaar verlies te voorkomen.
+    if (isEdit && _state.deletedPhotoIds.length > 0) {
+      for (const id of _state.deletedPhotoIds) {
+        try { await deletePhoto(id); } catch (_) {}
+      }
+    }
+
+    // 4. Soort als gezien markeren (idempotent)
     toggleSeen(_state.speciesId);
 
-    // 6. Afsluiten
+    // 5. Afsluiten
     close();
     const label = isEdit ? 'Waarneming bijgewerkt' : `${savedSighting.speciesName} opgeslagen`;
     showToast(label);

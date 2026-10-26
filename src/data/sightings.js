@@ -38,24 +38,23 @@ const SCHEMA_VERSION = 2;
 // ── Migratie ────────────────────────────────────────────────
 /**
  * Migreert één waarneming naar het huidige schema.
- * Additief: voegt ontbrekende velden toe met defaults.
+ * Additief: spreidt ALLE bestaande velden (inclusief toekomstige onbekende),
+ * en vult ontbrekende velden aan met defaults.
  * Bestaande velden worden NOOIT overschreven.
  */
 function migrateSighting(s) {
   return {
-    // v1-velden (ongewijzigd doorgegeven)
-    id:           s.id,
-    speciesId:    s.speciesId,
-    speciesName:  s.speciesName,
-    date:         s.date,
+    // Behoud ALLE bestaande velden — inclusief toekomstige/onbekende properties.
+    // Defaults hieronder overschrijven NIET: ze worden uitsluitend gezet
+    // als het veld ontbreekt (undefined) of null is voor verplichte types.
+    ...s,
+    // v1-velden: zorg voor null als afwezig (niet undefined)
     lat:          s.lat          ?? null,
     lon:          s.lon          ?? null,
     locationName: s.locationName ?? null,
     notes:        s.notes        ?? null,
     photoIds:     Array.isArray(s.photoIds) ? s.photoIds : [],
-    createdAt:    s.createdAt,
-    updatedAt:    s.updatedAt,
-    // v2-velden (default als ontbrekend)
+    // v2-velden: voeg defaults toe als het veld ontbreekt
     time:         s.time         !== undefined ? s.time         : null,
     count:        s.count        !== undefined ? s.count        : 1,
     certainty:    s.certainty    !== undefined ? s.certainty    : 'certain',
@@ -100,40 +99,53 @@ export function getSightings() {
 }
 
 // ── Sla alle waarnemingen op ───────────────────────────────
+/**
+ * Schrijft alle waarnemingen naar localStorage.
+ * Gooit bij een fout (bijv. QuotaExceededError) — callers beslissen
+ * over foutafhandeling en UI-feedback. NEVER stil slikken.
+ * @throws {DOMException|Error} bij opslagfout
+ */
 function saveSightings(sightings) {
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify({
-      schemaVersion: SCHEMA_VERSION,
-      exportedAt:    new Date().toISOString(),
-      sightings,
-    }));
-  } catch (e) {
-    console.error('[sightings] save error', e);
-  }
+  // Geen try/catch: fout propageren naar caller
+  localStorage.setItem(STORAGE_KEY, JSON.stringify({
+    schemaVersion: SCHEMA_VERSION,
+    exportedAt:    new Date().toISOString(),
+    sightings,
+  }));
 }
 
 // ── Voeg toe ───────────────────────────────────────────────
+/**
+ * @throws {DOMException|Error} bij opslagfout (caller toont foutmelding)
+ */
 export async function addSighting(sighting) {
   const all = await getSightings();
   all.push(sighting);
-  saveSightings(all);
+  saveSightings(all);   // gooit bij fout — addSheet.js vangt dit op
   return sighting;
 }
 
 // ── Update ─────────────────────────────────────────────────
+/**
+ * @throws {Error} als sighting niet gevonden
+ * @throws {DOMException|Error} bij opslagfout (caller toont foutmelding)
+ */
 export async function updateSighting(id, patch) {
   const all = await getSightings();
   const idx = all.findIndex(s => s.id === id);
   if (idx === -1) throw new Error(`Sighting ${id} not found`);
   all[idx] = { ...all[idx], ...patch, updatedAt: new Date().toISOString() };
-  saveSightings(all);
+  saveSightings(all);   // gooit bij fout — addSheet.js vangt dit op
   return all[idx];
 }
 
 // ── Verwijder ──────────────────────────────────────────────
+/**
+ * @throws {DOMException|Error} bij opslagfout (caller toont foutmelding)
+ */
 export async function deleteSighting(id) {
   const all = await getSightings();
-  saveSightings(all.filter(s => s.id !== id));
+  saveSightings(all.filter(s => s.id !== id));   // gooit bij fout
 }
 
 // ── Export (JSON) ──────────────────────────────────────────
