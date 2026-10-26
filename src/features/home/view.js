@@ -180,15 +180,24 @@ async function initSlideshow(el) {
   if (!inner) return;
   if (_slides.length === 0) return;
 
+  // Pre-filter: genereer URL's en behoud alleen records met bruikbare blob.
+  // Zo lopen slide-index, slide-elementen en dots altijd 1:1 synchroon.
+  const validSlides = [];
+  for (const photo of _slides) {
+    const url = getPhotoUrl(photo);
+    if (url) validSlides.push({ photo, url });
+  }
+
+  if (validSlides.length === 0) return; // geen bruikbare blobs
+
+  _slides = validSlides.map(vs => vs.photo); // update module-state
+  validSlides.forEach(vs => _slideshowUrls.push(vs.url));
+
   inner.innerHTML = '';
   dots.innerHTML  = '';
   _slideIndex = 0;
 
-  _slides.forEach((photo, i) => {
-    const url = getPhotoUrl(photo);
-    if (!url) return; // sla over als geen bruikbare blob
-    _slideshowUrls.push(url);
-
+  validSlides.forEach(({ photo, url }, i) => {
     const slide = document.createElement('div');
     slide.className = 'slideshow__slide' + (i === 0 ? ' active' : '');
     slide.style.backgroundImage = `url(${url})`;
@@ -206,9 +215,6 @@ async function initSlideshow(el) {
     dot.addEventListener('click', () => goToSlide(i, inner, dots));
     dots.appendChild(dot);
   });
-
-  // Als na filtering geen slides met blob overbleven: toon lege state
-  if (inner.querySelectorAll('.slideshow__slide').length === 0) return;
 
   clearInterval(_slideshowTimer);
   _slideshowTimer = setInterval(() => {
@@ -421,9 +427,18 @@ async function loadRecentSightings(el) {
       return;
     }
 
-    // Haal thumbnails asynchroon op per sighting
-    const items = await Promise.all(recent.map(s => buildRecentItem(s)));
-    listEl.innerHTML = items.join('');
+    // Haal thumbnails asynchroon op per sighting; URLs worden NIET ingetrokken
+    // vóór DOM-plaatsing — dat doet loadRecentSightings zelf via event listeners.
+    const results = await Promise.all(recent.map(s => buildRecentItem(s)));
+    listEl.innerHTML = results.map(r => r.html).join('');
+
+    // Koppel deferred revoke aan elk img-element ná DOM-plaatsing
+    listEl.querySelectorAll('.recent-item__thumb img').forEach(img => {
+      const url = img.src;
+      if (!url || !url.startsWith('blob:')) return;
+      img.addEventListener('load',  () => revokePhotoUrl(url), { once: true });
+      img.addEventListener('error', () => revokePhotoUrl(url), { once: true });
+    });
 
   } catch (_) {
     listEl.innerHTML = `<div class="dash-section__error" style="padding:var(--space-12);background:var(--surface);border-radius:var(--r-card)">Waarnemingen niet beschikbaar</div>`;
@@ -432,17 +447,17 @@ async function loadRecentSightings(el) {
 
 async function buildRecentItem(s) {
   let thumbHtml = '';
-  let thumbUrl  = null;
 
   // Probeer eerste foto-thumbnail te laden
+  // URL wordt NIET hier ingetrokken — dat doet de caller via DOM event listeners
   if (s.photoIds?.length) {
     try {
       const db = await getDB();
       const tx = db.transaction('photos', 'readonly');
       const photo = await txGet(tx.objectStore('photos'), s.photoIds[0]);
-      thumbUrl = getPhotoUrl(photo);
-      if (thumbUrl) {
-        thumbHtml = `<img src="${thumbUrl}" alt="${s.speciesName || ''}" loading="lazy">`;
+      const url = getPhotoUrl(photo);
+      if (url) {
+        thumbHtml = `<img src="${url}" alt="${s.speciesName || ''}" loading="lazy">`;
       }
     } catch (_) {}
   }
@@ -470,10 +485,7 @@ async function buildRecentItem(s) {
     </div>
   `;
 
-  // Intrekken na gebruik — de <img> heeft de data al geladen via src
-  if (thumbUrl) revokePhotoUrl(thumbUrl);
-
-  return html;
+  return { html };
 }
 
 function certBadge(certainty) {
@@ -523,15 +535,19 @@ async function loadMonthlyChart(el) {
       if (bucket) bucket.count++;
     }
 
-    const maxCount = Math.max(...months.map(m => m.count), 1);
+    const maxCount = Math.max(...months.map(m => m.count));
 
-    if (maxCount === 0 && sightings.length === 0) {
-      if (loader) loader.outerHTML = `<div class="chart-empty">Nog geen waarnemingen om te tonen</div>`;
+    // Lege staat: geen sightings überhaupt, of alle buiten het 12-maands venster
+    if (maxCount === 0) {
+      const msg = sightings.length === 0
+        ? 'Nog geen waarnemingen om te tonen'
+        : 'Geen waarnemingen in de afgelopen 12 maanden';
+      if (loader) loader.outerHTML = `<div class="chart-empty">${msg}</div>`;
       return;
     }
 
-    // SVG-afmetingen
-    const W = 320, H = 120, PAD_L = 24, PAD_B = 20, PAD_T = 8, PAD_R = 8;
+    // SVG-afmetingen — PAD_T = 14 geeft ruimte voor count-labels boven hoogste balk
+    const W = 320, H = 130, PAD_L = 26, PAD_B = 20, PAD_T = 14, PAD_R = 8;
     const chartW = W - PAD_L - PAD_R;
     const chartH = H - PAD_B - PAD_T;
     const barW   = Math.floor(chartW / months.length);

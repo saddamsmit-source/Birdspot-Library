@@ -455,21 +455,21 @@
 }
 
 .chart-axis-x {
-  font-size: 8px;
+  font-size: 9px;
   fill: var(--muted);
   text-anchor: middle;
   font-family: var(--font-body, Inter, sans-serif);
 }
 
 .chart-axis-y {
-  font-size: 8px;
+  font-size: 9px;
   fill: var(--muted);
   text-anchor: end;
   font-family: var(--font-body, Inter, sans-serif);
 }
 
 .chart-value {
-  font-size: 8px;
+  font-size: 9px;
   fill: var(--brand-mid);
   text-anchor: middle;
   font-weight: 600;
@@ -530,8 +530,8 @@
 }
 
 .hotspot-label {
-  font-size: 9px;
-  fill: var(--brand);
+  font-size: 10px;
+  fill: white;
   text-anchor: middle;
   font-weight: 700;
   font-family: var(--font-body, Inter, sans-serif);
