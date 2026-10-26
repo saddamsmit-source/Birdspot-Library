@@ -5,17 +5,30 @@ Playwright tests voor de sighting-workflow (v2 schema):
   D-21 t/m D-23: screenshots op 360/390/430px (D11)
   D-24 t/m D-27: data-integriteitsregressies (ChatGPT review Issues 1–3)
     D-24: migratie behoudt onbekende/toekomstige velden (Issue 1)
-    D-25: opslagfout propagatie — UI toont foutmelding, niets opgeslagen (Issue 3)
-    D-26: veilige media-opslagvolgorde — photoIds bewaard na edit (Issue 2)
+    D-25: opslagfout propagatie — UI toont foutmelding, formulier niet gesloten (Issue 3)
+    D-26: veilige media-opslagvolgorde — foto pas verwijderd NA record-opslag (Issue 2)
     D-27: cancel tijdens edit — geen persistente wijzigingen
 
-Testmethodiek (Issue 4):
-  Sheet-interacties gebruiken page.evaluate('() => el?.click()') i.p.v.
-  locator.click(force=True) voor dynamisch geappende .sheet-overlay elementen.
-  Reden: Playwright's locator.click() triggert geen DOM-eventlisteners op elementen
-  die buiten de initiële DOM worden geappend aan document.body, zelfs met force=True.
-  page.evaluate() roept het click()-event direct aan in de browser-context en werkt
-  daardoor betrouwbaar voor sheet submit/edit/delete knoppen.
+Testmethodiek (Issue 4) — herziene documentatie na onderzoek:
+  Playwright's locator.click() werkt normaal ook op elementen die NA het laden van
+  de pagina dynamisch worden toegevoegd; het framework auto-waits tot het element
+  zichtbaar en interacteerbaar is.
+
+  Geconstateerd in de praktijk (addSheet-workflow):
+    - Wanneer het .sheet-overlay element aanwezig is én zichtbaar, werkt
+      locator.click(force=True) betrouwbaar.
+    - page.evaluate('() => el?.click()') werkt als alternatief en omzeilt
+      mogelijke CSS-zichtbaarheids/pointer-events-checks.
+    - De oorzaak van eerdere instabiliteit was timing: de sheet-overlay wordt
+      asynchroon aan document.body toegevoegd. Een korte wait_for_timeout of
+      wait_for_selector stabiliseert locator-gebaseerde clicks.
+
+  Conclusie: page.evaluate() is NIET inherent noodzakelijk voor dynamisch
+  toegevoegde overlays; het is een werkende alternatieve aanpak. In deze tests
+  wordt page.evaluate() gebruikt bij submit/edit/delete knoppen in sheets als
+  extra verdediging tegen timing-races en CSS-geblokkeerde pointer-events.
+  Bij nieuwe tests wordt wait_for_selector + locator.click(force=True) eerst
+  overwogen, met page.evaluate() als fallback bij gebleken technische reden.
 
 Starten (vanuit repo-root):
   python tests/test_phase_d.py
@@ -793,116 +806,459 @@ with sync_playwright() as pw:
     except Exception as e:
         log("D-24 Migratie behoudt onbekende velden", "FAIL", str(e))
 
-    # ── D-25: Opslagfout propagatie — UI toont foutmelding, geen succes-toast ────
-    # Regressiontest voor Issue 3: saveSightings() gooit bij fout; addSighting()
-    # propageert de throw; addSheet.js vangt dit op en toont een foutmelding.
-    # We simuleren een opslagfout door localStorage.setItem te overschrijven.
+    # ── D-25: Opslagfout propagatie — volledige data-integriteitstest ──────────────
+    # Regressiontest voor Issue 3: saveSightings() gooit bij fout (geen try/catch);
+    # addSighting() propagates de throw; addSheet.js vangt dit op in de catch-blok
+    # en toont een foutmelding. Het formulier blijft open, niets wordt opgeslagen.
+    #
+    # Vereisten (ChatGPT review round 2):
+    #   1. Formulier aantoonbaar geldig vóór submit
+    #   2. Foutinjectie aantoonbaar geactiveerd (niet alleen ingesteld)
+    #   3. UI toont relevante foutmelding (toast)
+    #   4. Formulier is NIET gesloten als succes
+    #   5. Originele opslagdata ongewijzigd na mislukte opslag
+    #   6. Test ontvangt GEEN PASS als injectie nooit werd uitgevoerd
     print("--- D-25 ---")
     try:
         _fresh(page)
-        # Simuleer opslagfout: overschrijf localStorage.setItem tijdelijk
-        page.evaluate("""() => {
-            window.__origSetItem = localStorage.setItem.bind(localStorage);
-            localStorage.setItem = function(key, value) {
-                if (key === 'birdspot-sightings') {
-                    throw new DOMException('QuotaExceededError', 'QuotaExceededError');
-                }
-                window.__origSetItem(key, value);
-            };
-        }""")
 
-        # Open add-sheet en probeer op te slaan
+        # Stap 0: Zet een bekende sighting in localStorage als "originele data"
+        # die na de mislukte opslag intact moet zijn.
+        sid25_orig = "d25-original"
+        _set_ls(page, [_v2_sighting(sid25_orig, notes="origineel d25")])
+
+        # Stap 1: Open add-sheet en vul verplichte velden in om geldig formulier te maken
         _go_sightings(page)
         page.wait_for_timeout(400)
         _open_fab(page)
         page.wait_for_selector('#addSightingSheet', timeout=5000)
-        # Vul minimale vereiste velden in (species is al ingesteld via URL/state)
-        # De sheet heeft al een speciesId via de launch-context; we klikken direct submit
+        page.wait_for_timeout(300)
+
+        sheet = page.locator('#addSightingSheet').first
+
+        # Selecteer een soort (verplicht — zonder soort blokkeert de submit zelf).
+        # De echte picker-knop heet #speciesPickerBtn; klikken opent speciesPicker-sheet.
+        # Na opening klikken we het eerste .species-row element (via data-id attribuut).
+        page.evaluate("() => { document.querySelector('#speciesPickerBtn')?.click(); }")
+        # Wacht op de picker-sheet list
+        page.wait_for_selector('#spPickerList .species-row', timeout=5000)
+        page.wait_for_timeout(200)
+        # Klik het eerste soort-rij item
+        page.evaluate("""() => {
+            const row = document.querySelector('#spPickerList .species-row');
+            if (row) row.click();
+        }""")
+        # Wacht tot picker gesloten is en formulier ververst is (speciesId ingesteld in _state)
+        page.wait_for_timeout(800)
+
+        # Vul datum in (verplicht veld — gebruik today, trigger change event)
+        page.evaluate(f"() => {{ const d = document.querySelector('#sightDate'); if(d) {{ d.value = '{ISO_TODAY}'; d.dispatchEvent(new Event('change', {{bubbles:true}})); }} }}")
+        page.wait_for_timeout(200)
+
+        # Verifieer dat soort daadwerkelijk geselecteerd is (placeholder mag niet meer zichtbaar zijn)
+        species_selected = page.evaluate("""() => {
+            const placeholder = document.querySelector('.species-picker-btn__placeholder');
+            const name_el     = document.querySelector('.species-picker-btn__name');
+            return !placeholder && !!name_el && name_el.textContent.trim().length > 0;
+        }""")
+        if not species_selected:
+            log("D-25 Opslagfout: foutinjectie geactiveerd", "FAIL",
+                "Soort kon niet worden geselecteerd via speciesPicker UI — formulier blijft ongeldig")
+            try: _close_sheet(page)
+            except: pass
+            raise Exception("species not selected")
+
+        # Stap 2: Installeer foutinjectie MET activatie-teller
+        page.evaluate("""() => {
+            window.__injectionCount  = 0;
+            window.__origSetItem     = localStorage.setItem.bind(localStorage);
+            localStorage.setItem = function(key, value) {
+                if (key === 'birdspot-sightings') {
+                    window.__injectionCount++;          // bewijs dat injectie geraakt werd
+                    const err = new DOMException('Simulated QuotaExceededError', 'QuotaExceededError');
+                    err.name = 'QuotaExceededError';
+                    throw err;
+                }
+                window.__origSetItem(key, value);       // overige sleutels normaal
+            };
+        }""")
+
+        # Stap 3: Submit het formulier
         page.evaluate('() => { document.querySelector("#addSheetSubmit")?.click(); }')
-        page.wait_for_timeout(1200)
+        page.wait_for_timeout(1500)  # geef async catch-blok tijd
 
-        # Herstel localStorage.setItem
-        page.evaluate("() => { localStorage.setItem = window.__origSetItem; }")
+        # Stap 4: Lees injectie-activatie bewijs
+        injection_count = page.evaluate("() => window.__injectionCount || 0")
 
-        # Toast 'Opslaan mislukt' moet zichtbaar zijn, GEEN toast 'Toegevoegd'
-        toast_text = ""
-        try:
-            toast_text = page.locator('.toast').first.inner_text()
-        except Exception:
-            pass
+        # Herstel localStorage altijd vóór verdere assertions
+        page.evaluate("() => { if(window.__origSetItem) localStorage.setItem = window.__origSetItem; }")
 
-        no_success_toast = "toegevoegd" not in toast_text.lower() and "opgeslagen" not in toast_text.lower()
-        has_error_hint   = "mislukt" in toast_text.lower() or "fout" in toast_text.lower() or "opnieuw" in toast_text.lower()
-
-        # Sightings moeten leeg zijn (opslagfout → niets opgeslagen)
-        sightings_after = _get_ls_sightings(page)
-        nothing_stored  = len(sightings_after) == 0
-
-        if no_success_toast and nothing_stored:
-            log("D-25 Opslagfout: geen succes-toast, niets opgeslagen", "PASS")
+        # Als injectie_count == 0: de submit bereikte de opslaan-route nooit
+        # (formulier was waarschijnlijk ongeldig — dat is een andere fout, geen PASS)
+        if injection_count == 0:
+            # Lees toast om te zien welke guard sloeg
+            toast_text_guard = ""
+            try:
+                toast_text_guard = page.locator('.toast').first.inner_text()
+            except Exception:
+                pass
+            log("D-25 Opslagfout: foutinjectie geactiveerd", "FAIL",
+                f"injection_count=0 — injectie werd nooit geraakt; "
+                f"toast={toast_text_guard!r} (formulier waarschijnlijk ongeldig of submit niet bereikt)")
+            try: _close_sheet(page)
+            except: pass
         else:
-            log("D-25 Opslagfout: geen succes-toast, niets opgeslagen", "FAIL",
-                f"toast={toast_text!r}, stored={len(sightings_after)}, "
-                f"no_success={no_success_toast}, nothing_stored={nothing_stored}")
-        try: _close_sheet(page)
-        except: pass
+            # Stap 5: Injectie was actief — nu de volledige assertions
+            toast_text = ""
+            try:
+                toast_text = page.locator('.toast').first.inner_text()
+            except Exception:
+                pass
+
+            # 5a: UI toont relevante foutmelding
+            has_error_msg = (
+                "mislukt" in toast_text.lower() or
+                "fout"    in toast_text.lower() or
+                "opnieuw" in toast_text.lower() or
+                "error"   in toast_text.lower()
+            )
+
+            # 5b: Geen succes-toast
+            no_success_toast = (
+                "toegevoegd" not in toast_text.lower() and
+                "opgeslagen" not in toast_text.lower() and
+                "bijgewerkt" not in toast_text.lower()
+            )
+
+            # 5c: Formulier is NIET als succes gesloten — sheet moet nog zichtbaar zijn
+            sheet_still_open = page.locator('#addSightingSheet').count() > 0
+
+            # 5d: Originele data intact — exact één sighting (de originele), geen nieuwe
+            sightings_after = _get_ls_sightings(page)
+            orig_intact = any(x.get("id") == sid25_orig for x in sightings_after)
+            no_new_stored = not any(x.get("id") != sid25_orig for x in sightings_after)
+
+            all_pass = (
+                has_error_msg and
+                no_success_toast and
+                sheet_still_open and
+                orig_intact and
+                no_new_stored
+            )
+
+            if all_pass:
+                log("D-25 Opslagfout: foutmelding, formulier open, data intact", "PASS",
+                    f"injection_count={injection_count}, toast={toast_text!r}")
+            else:
+                log("D-25 Opslagfout: foutmelding, formulier open, data intact", "FAIL",
+                    f"injection_count={injection_count}, "
+                    f"has_error_msg={has_error_msg}, "
+                    f"no_success_toast={no_success_toast}, "
+                    f"sheet_still_open={sheet_still_open}, "
+                    f"orig_intact={orig_intact}, "
+                    f"no_new_stored={no_new_stored}, "
+                    f"toast={toast_text!r}, "
+                    f"sightings_after_count={len(sightings_after)}")
+
+            try: _close_sheet(page)
+            except: pass
+
     except Exception as e:
-        log("D-25 Opslagfout: geen succes-toast, niets opgeslagen", "FAIL", str(e))
+        log("D-25 Opslagfout: foutmelding, formulier open, data intact", "FAIL", str(e))
         # Zorg dat localStorage hersteld is ook bij exception
         try: page.evaluate("() => { if(window.__origSetItem) localStorage.setItem = window.__origSetItem; }")
         except: pass
         try: _close_sheet(page)
         except: pass
 
-    # ── D-26: Veilige media-opslagvolgorde — record opgeslagen vóór photo-delete ─
-    # Regressiontest voor Issue 2: bij edit mag een foto pas worden verwijderd uit
+    # ── D-26: Delete-before-save regressie — echte IDB Blob, failure + success path ─
+    # Regressiontest voor Issue 2: bij edit MAG een foto pas worden verwijderd uit
     # IndexedDB NADAT het localStorage-record succesvol is bijgewerkt.
-    # We controleren dit indirect: na een edit zonder opslagfout zijn de photoIds
-    # correct bijgewerkt en het record consistent.
+    #
+    # Vereisten (ChatGPT review round 2):
+    #   A. Maak een echte Blob in IndexedDB gekoppeld aan een bestaande sighting
+    #   B. Open sighting in editmodus
+    #   C. Markeer die foto voor verwijdering in de UI
+    #   D. FAILURE PATH: forceer opslagfout tijdens save van gewijzigd record
+    #      → origineel sighting-record ongewijzigd
+    #      → originele Blob aanwezig en leesbaar in IDB
+    #   E. SUCCESS PATH: sla succesvol op
+    #      → foto pas verwijderd NA bevestigde record-opslag
+    #      → photoIds correct bijgewerkt (foto verwijderd uit lijst)
+    #      → bewijs via operationele volgorde-log
     print("--- D-26 ---")
     try:
         page.evaluate("() => { document.querySelectorAll('.sheet-overlay').forEach(el => el.remove()); }")
         page.wait_for_timeout(200)
 
-        sid26 = "d26-order"
+        sid26    = "d26-order"
+        photo_id = "d26-real-photo-blob"
+
         _fresh(page)
-        # Stel sighting in met een nep-photoId (simuleert bestaande foto)
-        _set_ls(page, [_v2_sighting(sid26,
-                                    notes="origineel",
-                                    photoIds=["fake-photo-id-1"])])
-        _go_sightings(page)
-        page.wait_for_selector('.sight-card', timeout=4000)
 
-        # Open detail → edit
-        page.locator('.sight-card').first.click(force=True)
-        page.wait_for_timeout(600)
-        page.wait_for_selector('#detailSightingSheet', timeout=4000)
-        page.evaluate('() => { document.querySelector("#detailEdit")?.click(); }')
-        page.wait_for_timeout(1000)
+        # A. Maak een echte Blob in IndexedDB gekoppeld aan de sighting
+        # We gebruiken de bestaande db.js API via page.evaluate
+        page.evaluate(f"""async () => {{
+            const {{ savePhoto }} = await import('/src/data/db.js');
+            // Maak een kleine PNG-achtige Blob (1x1 pixel GIF als testdata)
+            const gifData = new Uint8Array([
+                71,73,70,56,57,97,1,0,1,0,128,0,0,255,0,0,0,0,0,33,249,4,0,0,0,0,0,44,
+                0,0,0,0,1,0,1,0,0,2,2,68,1,0,59
+            ]);
+            const blob = new Blob([gifData], {{ type: 'image/gif' }});
+            await savePhoto({{
+                id:         '{photo_id}',
+                blob:       blob,
+                type:       'image/gif',
+                filename:   'test-d26.gif',
+                speciesId:  'parus-major',
+                sightingId: '{sid26}',
+                addedAt:    new Date().toISOString(),
+            }});
+        }}""")
+        page.wait_for_timeout(400)
 
-        # Edit: pas notes aan (geen foto-wijzigingen — test dat bestaande photoIds bewaard blijven)
-        page.wait_for_selector('#addSightingSheet', timeout=5000)
-        sheet = page.locator('#addSightingSheet').first
-        sheet.locator('#sightNotes').first.fill("bijgewerkt via D-26")
-        page.evaluate('() => { document.querySelector("#addSheetSubmit")?.click(); }')
-        page.wait_for_timeout(1200)
-
-        # Controleer: record bijgewerkt, photoIds bewaard
-        sightings = _get_ls_sightings(page)
-        updated = next((x for x in sightings if x.get('id') == sid26), None)
-
-        if updated is None:
-            log("D-26 Veilige media-volgorde: record na edit", "FAIL", "sighting niet gevonden na edit")
+        # Controleer dat de Blob daadwerkelijk in IDB staat
+        blob_stored = page.evaluate(f"""async () => {{
+            const {{ getPhoto }} = await import('/src/data/db.js');
+            const rec = await getPhoto('{photo_id}');
+            return rec !== null && rec.blob instanceof Blob && rec.blob.size > 0;
+        }}""")
+        if not blob_stored:
+            log("D-26 Delete-before-save: setup IDB Blob", "FAIL",
+                "Blob kon niet worden opgeslagen in IDB — test setup mislukt")
         else:
-            notes_ok   = updated.get("notes") == "bijgewerkt via D-26"
-            photos_ok  = updated.get("photoIds") == ["fake-photo-id-1"]  # ongewijzigd
-            if notes_ok and photos_ok:
-                log("D-26 Veilige media-volgorde: record na edit", "PASS")
+            # Stel sighting in met de echte photo_id
+            _set_ls(page, [_v2_sighting(sid26,
+                                        notes="origineel d26",
+                                        photoIds=[photo_id])])
+            _go_sightings(page)
+            page.wait_for_selector('.sight-card', timeout=4000)
+
+            # ── D-26 DEEL D: FAILURE PATH ────────────────────────────────────────
+            # Open detail → edit → markeer foto voor verwijdering → forceer opslagfout
+            page.locator('.sight-card').first.click(force=True)
+            page.wait_for_timeout(600)
+            page.wait_for_selector('#detailSightingSheet', timeout=4000)
+            page.evaluate('() => { document.querySelector("#detailEdit")?.click(); }')
+            page.wait_for_timeout(1000)
+            page.wait_for_selector('#addSightingSheet', timeout=5000)
+            page.wait_for_timeout(400)
+
+            # C. Markeer de foto voor verwijdering via de delete-knop in de sheet
+            # De knop heeft data-photoid attribuut
+            photo_del_clicked = page.evaluate(f"""() => {{
+                const btn = document.querySelector('.media-thumb__del[data-photoid="{photo_id}"]');
+                if (btn) {{ btn.click(); return true; }}
+                return false;
+            }}""")
+            page.wait_for_timeout(500)
+
+            if not photo_del_clicked:
+                log("D-26 Delete-before-save: foto markeren failure path", "FAIL",
+                    f"Verwijderknop voor photo_id={photo_id!r} niet gevonden in edit-sheet")
             else:
-                log("D-26 Veilige media-volgorde: record na edit", "FAIL",
-                    f"notes={updated.get('notes')!r}, photoIds={updated.get('photoIds')!r}")
+                # Installeer foutinjectie MET activatie-teller EN volgorde-log
+                page.evaluate("""() => {
+                    window.__d26_ops = [];
+                    window.__injectionCount26 = 0;
+                    window.__origSetItem26 = localStorage.setItem.bind(localStorage);
+                    localStorage.setItem = function(key, value) {
+                        if (key === 'birdspot-sightings') {
+                            window.__injectionCount26++;
+                            window.__d26_ops.push('localStorage.setItem→THROW');
+                            const err = new DOMException('Simulated QuotaExceededError', 'QuotaExceededError');
+                            err.name = 'QuotaExceededError';
+                            throw err;
+                        }
+                        window.__origSetItem26(key, value);
+                    };
+
+                    // Instrumenteer deletePhoto om volgorde bij te houden
+                    const origModule = window.__d26_deletePatched;
+                    if (!origModule) {
+                        window.__d26_deletePatched = true;
+                        // Patch via Proxy op het IDB object — alternatief: we lezen de ops-log achteraf
+                    }
+                }""")
+
+                # Submit (de save zal falen door de injectie)
+                page.evaluate('() => { document.querySelector("#addSheetSubmit")?.click(); }')
+                page.wait_for_timeout(1500)
+
+                injection_count26 = page.evaluate("() => window.__injectionCount26 || 0")
+                # Herstel localStorage
+                page.evaluate("() => { if(window.__origSetItem26) localStorage.setItem = window.__origSetItem26; }")
+
+                if injection_count26 == 0:
+                    log("D-26 Delete-before-save: failure path injectie geactiveerd", "FAIL",
+                        "injection_count=0 — injectie bereikte de opslaanroute niet")
+                else:
+                    # D. Controleer failure path: record ongewijzigd + Blob leesbaar
+                    sightings_after_fail = _get_ls_sightings(page)
+                    orig_record = next((x for x in sightings_after_fail if x.get('id') == sid26), None)
+
+                    record_unchanged = (
+                        orig_record is not None and
+                        orig_record.get('notes') == 'origineel d26' and
+                        photo_id in (orig_record.get('photoIds') or [])
+                    )
+
+                    blob_still_readable = page.evaluate(f"""async () => {{
+                        const {{ getPhoto }} = await import('/src/data/db.js');
+                        const rec = await getPhoto('{photo_id}');
+                        if (!rec) return false;
+                        try {{
+                            const blob = rec.blob instanceof Blob ? rec.blob : new Blob([rec.blob], {{type: rec.type}});
+                            return blob.size > 0;
+                        }} catch(e) {{ return false; }}
+                    }}""")
+
+                    if record_unchanged and blob_still_readable:
+                        log("D-26 Delete-before-save: failure path OK (record+blob intact)", "PASS",
+                            f"injection_count={injection_count26}, "
+                            f"record.notes={orig_record.get('notes')!r}, "
+                            f"photoIds={orig_record.get('photoIds')!r}, "
+                            f"blob_still_readable={blob_still_readable}")
+                    else:
+                        log("D-26 Delete-before-save: failure path OK (record+blob intact)", "FAIL",
+                            f"injection_count={injection_count26}, "
+                            f"record_unchanged={record_unchanged}, "
+                            f"blob_still_readable={blob_still_readable}, "
+                            f"record={orig_record!r}")
+
+                    try: _close_sheet(page)
+                    except: pass
+
+                    # ── D-26 DEEL E: SUCCESS PATH ─────────────────────────────────
+                    # Heropen edit, markeer foto voor verwijdering, sla succesvol op
+                    # en controleer volgorde: foto verwijderd NADAT record is opgeslagen
+                    page.evaluate("() => { document.querySelectorAll('.sheet-overlay').forEach(el => el.remove()); }")
+                    page.wait_for_timeout(200)
+
+                    # Vernieuw pagina — reset alles (localStorage is ongewijzigd door de gefaalde save)
+                    page.reload(wait_until="networkidle")
+                    page.wait_for_timeout(800)
+                    _go_sightings(page)
+                    page.wait_for_selector('.sight-card', timeout=4000)
+
+                    # Installeer VOLGORDE-INSTRUMENTATIE (geen injectie — laat save slagen)
+                    page.evaluate(f"""async () => {{
+                        window.__d26_success_ops = [];
+
+                        // Patch localStorage.setItem om succes-save te loggen
+                        const origSet = localStorage.setItem.bind(localStorage);
+                        localStorage.setItem = function(key, value) {{
+                            if (key === 'birdspot-sightings') {{
+                                window.__d26_success_ops.push('localStorage.save');
+                            }}
+                            return origSet(key, value);
+                        }};
+
+                        // Patch db.deletePhoto om delete-moment te loggen
+                        const dbMod = await import('/src/data/db.js');
+                        const origDelete = dbMod.deletePhoto;
+                        // We kunnen de geëxporteerde functie niet direct patchen (ES modules zijn read-only)
+                        // In plaats daarvan monitoren we de IndexedDB transacties via het IDB object
+                        const origOpen = indexedDB.open.bind(indexedDB);
+                        // Alternatieve aanpak: patch de objectStore.delete methode
+                        const proto = IDBObjectStore.prototype;
+                        const origObjDelete = proto.delete;
+                        proto.delete = function(key) {{
+                            if (this.name === 'photos') {{
+                                window.__d26_success_ops.push('IDB.photos.delete:' + key);
+                            }}
+                            return origObjDelete.call(this, key);
+                        }};
+                    }}""")
+                    page.wait_for_timeout(300)
+
+                    # Open detail → edit
+                    page.locator('.sight-card').first.click(force=True)
+                    page.wait_for_timeout(600)
+                    page.wait_for_selector('#detailSightingSheet', timeout=4000)
+                    page.evaluate('() => { document.querySelector("#detailEdit")?.click(); }')
+                    page.wait_for_timeout(1000)
+                    page.wait_for_selector('#addSightingSheet', timeout=5000)
+                    page.wait_for_timeout(400)
+
+                    # Markeer foto voor verwijdering
+                    photo_del_clicked2 = page.evaluate(f"""() => {{
+                        const btn = document.querySelector('.media-thumb__del[data-photoid="{photo_id}"]');
+                        if (btn) {{ btn.click(); return true; }}
+                        return false;
+                    }}""")
+                    page.wait_for_timeout(500)
+
+                    if not photo_del_clicked2:
+                        log("D-26 Delete-before-save: success path volgorde", "FAIL",
+                            f"Verwijderknop niet gevonden bij success path (photo_id={photo_id!r})")
+                    else:
+                        # Submit — laat save slagen
+                        page.evaluate('() => { document.querySelector("#addSheetSubmit")?.click(); }')
+                        page.wait_for_timeout(1800)  # geef async IDB-delete tijd
+
+                        # Herstel IDBObjectStore.prototype.delete patch
+                        page.evaluate("""() => {
+                            // Patch was alleen voor logging; restore is niet strict noodzakelijk
+                            // maar we ruimen op voor testizolatie
+                            if (window.__origSetItem26b) localStorage.setItem = window.__origSetItem26b;
+                        }""")
+
+                        # Lees volgorde-log
+                        ops_log = page.evaluate("() => window.__d26_success_ops || []")
+
+                        # E. Controleer success path
+                        sightings_after_ok = _get_ls_sightings(page)
+                        updated_rec = next((x for x in sightings_after_ok if x.get('id') == sid26), None)
+
+                        # foto verwijderd uit photoIds na succesvolle save
+                        photo_removed_from_record = (
+                            updated_rec is not None and
+                            photo_id not in (updated_rec.get('photoIds') or [])
+                        )
+
+                        # Blob verwijderd uit IDB na succesvolle save
+                        blob_deleted_from_idb = page.evaluate(f"""async () => {{
+                            const {{ getPhoto }} = await import('/src/data/db.js');
+                            const rec = await getPhoto('{photo_id}');
+                            return rec === null;
+                        }}""")
+
+                        # Volgorde: localStorage.save moet VOOR IDB.photos.delete komen
+                        save_idx   = next((i for i, op in enumerate(ops_log) if op == 'localStorage.save'), None)
+                        delete_idx = next((i for i, op in enumerate(ops_log) if 'IDB.photos.delete' in op), None)
+
+                        correct_order = (
+                            save_idx   is not None and
+                            delete_idx is not None and
+                            save_idx < delete_idx
+                        )
+
+                        all_success = (
+                            photo_removed_from_record and
+                            blob_deleted_from_idb and
+                            correct_order
+                        )
+
+                        if all_success:
+                            log("D-26 Delete-before-save: success path volgorde correct", "PASS",
+                                f"ops_log={ops_log}, "
+                                f"save_idx={save_idx}, delete_idx={delete_idx}, "
+                                f"photoIds={updated_rec.get('photoIds')!r}")
+                        else:
+                            log("D-26 Delete-before-save: success path volgorde correct", "FAIL",
+                                f"photo_removed_from_record={photo_removed_from_record}, "
+                                f"blob_deleted_from_idb={blob_deleted_from_idb}, "
+                                f"correct_order={correct_order}, "
+                                f"ops_log={ops_log}, "
+                                f"save_idx={save_idx}, delete_idx={delete_idx}, "
+                                f"updated_rec={updated_rec!r}")
+
     except Exception as e:
-        log("D-26 Veilige media-volgorde: record na edit", "FAIL", str(e))
+        log("D-26 Delete-before-save regressie", "FAIL", str(e))
+        try: page.evaluate("() => { if(window.__origSetItem26) localStorage.setItem = window.__origSetItem26; }")
+        except: pass
         try: _close_sheet(page)
         except: pass
 
