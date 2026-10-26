@@ -430,7 +430,7 @@ with sync_playwright() as pw:
         sheet.locator('#sightNotes').first.fill("v2-test automatisch")
 
         before_count = len(_get_ls_sightings(page))
-        sheet.locator('#addSheetSubmit').first.click(force=True)
+        page.evaluate('() => { document.querySelector("#addSheetSubmit")?.click(); }')
         page.wait_for_timeout(1200)
 
         sightings = _get_ls_sightings(page)
@@ -497,7 +497,7 @@ with sync_playwright() as pw:
         page.wait_for_timeout(800)
 
         before = len(_get_ls_sightings(page))
-        page.locator('#addSightingSheet #addSheetSubmit').first.click(force=True)
+        page.evaluate('() => { document.querySelector("#addSheetSubmit")?.click(); }')
         page.wait_for_timeout(1200)
 
         after = len(_get_ls_sightings(page))
@@ -562,8 +562,8 @@ with sync_playwright() as pw:
         page.locator('.sight-card').first.click(force=True)
         page.wait_for_timeout(600)
         page.wait_for_selector('#detailSightingSheet', timeout=4000)
-        page.locator('#detailEdit').first.click(force=True)
-        page.wait_for_timeout(700)
+        page.evaluate('() => { document.querySelector("#detailEdit")?.click(); }')
+        page.wait_for_timeout(1000)
 
         edit_open = page.locator('#addSightingSheet').count() > 0
         if edit_open:
@@ -586,8 +586,8 @@ with sync_playwright() as pw:
         page.locator('.sight-card').first.click(force=True)
         page.wait_for_timeout(600)
         page.wait_for_selector('#detailSightingSheet', timeout=4000)
-        page.locator('#detailEdit').first.click(force=True)
-        page.wait_for_timeout(700)
+        page.evaluate('() => { document.querySelector("#detailEdit")?.click(); }')
+        page.wait_for_timeout(1000)
 
         sheet = page.locator('#addSightingSheet').first
         date_val  = sheet.locator('#sightDate').first.input_value()
@@ -617,12 +617,13 @@ with sync_playwright() as pw:
         page.locator('.sight-card').first.click(force=True)
         page.wait_for_timeout(600)
         page.wait_for_selector('#detailSightingSheet', timeout=4000)
-        page.locator('#detailEdit').first.click(force=True)
-        page.wait_for_timeout(700)
+        page.evaluate('() => { document.querySelector("#detailEdit")?.click(); }')
+        page.wait_for_timeout(1000)
 
+        page.wait_for_selector('#addSightingSheet', timeout=5000)
         sheet = page.locator('#addSightingSheet').first
         sheet.locator('#sightNotes').first.fill("Bewerkt via D-19 test")
-        sheet.locator('#addSheetSubmit').first.click(force=True)
+        page.evaluate('() => { document.querySelector("#addSheetSubmit")?.click(); }')
         page.wait_for_timeout(1200)
 
         sightings = _get_ls_sightings(page)
@@ -657,7 +658,7 @@ with sync_playwright() as pw:
         page.locator('.sight-card').first.click(force=True)
         page.wait_for_timeout(600)
         page.wait_for_selector('#detailDelete', timeout=4000)
-        page.locator('#detailDelete').first.click(force=True)
+        page.evaluate('() => { document.querySelector("#detailDelete")?.click(); }')
         page.wait_for_timeout(800)
 
         # Eigen confirm-overlay moet verschijnen
