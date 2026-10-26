@@ -26,6 +26,8 @@ export async function renderHome(el) {
   loadSunInfo(el);
   loadWeather(el);
   loadRecentSightings(el);
+  loadMonthlyChart(el);
+  loadHotspotsMap(el);
 }
 
 // ── Skeleton ───────────────────────────────────────────────
@@ -115,12 +117,32 @@ function buildSkeleton() {
     </section>
 
     <!-- Weer -->
-    <section class="dash-section" id="weatherSection" style="padding-bottom:var(--space-16)">
+    <section class="dash-section" id="weatherSection">
       <div class="section-head">
         <span class="section-head__title">Weercondities</span>
       </div>
       <div class="dash-section__loading">
         <span class="spinner" aria-hidden="true"></span> Weer laden…
+      </div>
+    </section>
+
+    <!-- Maandgrafiek -->
+    <section class="dash-section" id="monthlySection">
+      <div class="section-head">
+        <span class="section-head__title">Waarnemingen per maand</span>
+      </div>
+      <div class="dash-section__loading">
+        <span class="spinner" aria-hidden="true"></span>
+      </div>
+    </section>
+
+    <!-- Hotspots minimap -->
+    <section class="dash-section" id="hotspotsSection" style="padding-bottom:var(--space-16)">
+      <div class="section-head">
+        <span class="section-head__title">Mijn hotspots</span>
+      </div>
+      <div class="dash-section__loading">
+        <span class="spinner" aria-hidden="true"></span>
       </div>
     </section>
   `;
@@ -469,6 +491,189 @@ function certBadge(certainty) {
 
   const icon = entry.cls === 'certain' ? checkIcon : warnIcon;
   return `<span class="certainty-badge certainty-badge--${entry.cls}">${icon}${entry.label}</span>`;
+}
+
+// ══════════════════════════════════════════════════════════
+// MAANDGRAFIEK  (native SVG, geen Chart.js)
+// ══════════════════════════════════════════════════════════
+async function loadMonthlyChart(el) {
+  const section = el.querySelector('#monthlySection');
+  if (!section) return;
+  const loader = section.querySelector('.dash-section__loading');
+
+  try {
+    const sightings = await getSightings();
+
+    // Bouw bucket: laatste 12 maanden
+    const now    = new Date();
+    const months = [];
+    for (let i = 11; i >= 0; i--) {
+      const d = new Date(now.getFullYear(), now.getMonth() - i, 1);
+      months.push({
+        key:   `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`,
+        label: d.toLocaleDateString('nl-NL', { month: 'short' }),
+        count: 0,
+      });
+    }
+
+    for (const s of sightings) {
+      if (!s.date) continue;
+      const key = s.date.slice(0, 7); // "YYYY-MM"
+      const bucket = months.find(m => m.key === key);
+      if (bucket) bucket.count++;
+    }
+
+    const maxCount = Math.max(...months.map(m => m.count), 1);
+
+    if (maxCount === 0 && sightings.length === 0) {
+      if (loader) loader.outerHTML = `<div class="chart-empty">Nog geen waarnemingen om te tonen</div>`;
+      return;
+    }
+
+    // SVG-afmetingen
+    const W = 320, H = 120, PAD_L = 24, PAD_B = 20, PAD_T = 8, PAD_R = 8;
+    const chartW = W - PAD_L - PAD_R;
+    const chartH = H - PAD_B - PAD_T;
+    const barW   = Math.floor(chartW / months.length);
+    const barGap = Math.max(2, Math.floor(barW * 0.18));
+    const barNet = barW - barGap;
+
+    // Y-rasterlijnen (max 4)
+    const gridSteps = Math.min(maxCount, 4);
+    const gridLines = [];
+    for (let g = 1; g <= gridSteps; g++) {
+      const val = Math.round((maxCount / gridSteps) * g);
+      const y   = PAD_T + chartH - Math.round((val / maxCount) * chartH);
+      gridLines.push({ y, val });
+    }
+
+    const gridSvg = gridLines.map(gl =>
+      `<line x1="${PAD_L}" y1="${gl.y}" x2="${W - PAD_R}" y2="${gl.y}" class="chart-grid"/>
+       <text x="${PAD_L - 3}" y="${gl.y + 4}" class="chart-axis-y">${gl.val}</text>`
+    ).join('');
+
+    const barsSvg = months.map((m, i) => {
+      const x      = PAD_L + i * barW;
+      const barH   = m.count === 0 ? 2 : Math.max(3, Math.round((m.count / maxCount) * chartH));
+      const y      = PAD_T + chartH - barH;
+      const isLast = i === months.length - 1;
+      const labelX = x + barW / 2;
+      return `
+        <rect x="${x + barGap / 2}" y="${y}" width="${barNet}" height="${barH}"
+              rx="2" class="chart-bar${m.count === 0 ? ' chart-bar--zero' : ''}"/>
+        ${(i % 2 === 0 || isLast) ? `<text x="${labelX}" y="${H - 4}" class="chart-axis-x">${m.label}</text>` : ''}
+        ${m.count > 0 ? `<text x="${labelX}" y="${y - 3}" class="chart-value">${m.count}</text>` : ''}
+      `;
+    }).join('');
+
+    const svg = `
+      <svg class="monthly-chart" viewBox="0 0 ${W} ${H}"
+           role="img" aria-label="Waarnemingen per maand">
+        ${gridSvg}
+        <line x1="${PAD_L}" y1="${PAD_T}" x2="${PAD_L}" y2="${PAD_T + chartH}" class="chart-axis-line"/>
+        <line x1="${PAD_L}" y1="${PAD_T + chartH}" x2="${W - PAD_R}" y2="${PAD_T + chartH}" class="chart-axis-line"/>
+        ${barsSvg}
+      </svg>
+    `;
+
+    if (loader) loader.outerHTML = `<div class="chart-wrap">${svg}</div>`;
+
+  } catch (_) {
+    if (loader) loader.outerHTML = `<div class="dash-section__error">Grafiek niet beschikbaar</div>`;
+  }
+}
+
+// ══════════════════════════════════════════════════════════
+// HOTSPOTS MINIMAP  (native SVG, alleen werkelijke GPS-data)
+// ══════════════════════════════════════════════════════════
+async function loadHotspotsMap(el) {
+  const section = el.querySelector('#hotspotsSection');
+  if (!section) return;
+  const loader = section.querySelector('.dash-section__loading');
+
+  try {
+    const sightings = await getSightings();
+
+    // Alleen waarnemingen met werkelijke GPS-coördinaten
+    const withGps = sightings.filter(s =>
+      typeof s.lat === 'number' && typeof s.lon === 'number' &&
+      !isNaN(s.lat) && !isNaN(s.lon)
+    );
+
+    if (withGps.length === 0) {
+      if (loader) loader.outerHTML = `
+        <div class="hotspot-empty">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" style="width:32px;height:32px;opacity:.35">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <p>Nog geen GPS-locaties — voeg coördinaten toe aan waarnemingen</p>
+        </div>
+      `;
+      return;
+    }
+
+    // Groepeer op locatie (afronden op 3 decimalen ≈ ~100m)
+    const clusters = {};
+    for (const s of withGps) {
+      const key = `${s.lat.toFixed(3)},${s.lon.toFixed(3)}`;
+      if (!clusters[key]) clusters[key] = { lat: s.lat, lon: s.lon, count: 0, species: new Set() };
+      clusters[key].count++;
+      if (s.speciesId) clusters[key].species.add(s.speciesId);
+    }
+    const points = Object.values(clusters);
+
+    // Bounding box
+    const lats = points.map(p => p.lat);
+    const lons = points.map(p => p.lon);
+    let minLat = Math.min(...lats), maxLat = Math.max(...lats);
+    let minLon = Math.min(...lons), maxLon = Math.max(...lons);
+
+    // Voeg padding toe aan bounding box (5%)
+    const latPad = Math.max((maxLat - minLat) * 0.2, 0.005);
+    const lonPad = Math.max((maxLon - minLon) * 0.2, 0.005);
+    minLat -= latPad; maxLat += latPad;
+    minLon -= lonPad; maxLon += lonPad;
+
+    const W = 320, H = 180;
+    const maxCount = Math.max(...points.map(p => p.count));
+
+    // Project lat/lon → SVG-coördinaten (Mercator-benadering)
+    const project = (lat, lon) => {
+      const x = ((lon - minLon) / (maxLon - minLon)) * (W - 20) + 10;
+      // Latituderichting omgekeerd (noord = boven)
+      const y = ((maxLat - lat) / (maxLat - minLat)) * (H - 20) + 10;
+      return { x, y };
+    };
+
+    const dotsSvg = points.map(p => {
+      const { x, y } = project(p.lat, p.lon);
+      const r     = Math.max(5, Math.min(14, 5 + (p.count / maxCount) * 9));
+      const label = p.count > 1 ? p.count : '';
+      return `
+        <circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r.toFixed(1)}"
+                class="hotspot-dot" style="--r:${r.toFixed(1)}px"/>
+        ${label ? `<text x="${x.toFixed(1)}" y="${(y + 4.5).toFixed(1)}" class="hotspot-label">${label}</text>` : ''}
+      `;
+    }).join('');
+
+    const totalLocations = points.length;
+    const totalSightings = withGps.length;
+
+    const svg = `
+      <svg class="hotspot-map" viewBox="0 0 ${W} ${H}"
+           role="img" aria-label="Kaart van waarnemingslocaties">
+        <rect width="${W}" height="${H}" class="hotspot-bg"/>
+        ${dotsSvg}
+      </svg>
+      <div class="hotspot-meta">${totalLocations} locatie${totalLocations !== 1 ? 's' : ''} · ${totalSightings} waarneming${totalSightings !== 1 ? 'en' : ''} met GPS</div>
+    `;
+
+    if (loader) loader.outerHTML = `<div class="hotspot-wrap">${svg}</div>`;
+
+  } catch (_) {
+    if (loader) loader.outerHTML = `<div class="dash-section__error">Kaart niet beschikbaar</div>`;
+  }
 }
 
 // ══════════════════════════════════════════════════════════
