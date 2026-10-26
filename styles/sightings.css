@@ -445,3 +445,265 @@
   align-items: center;
   justify-content: center;
 }
+
+/* ── Fase D: Formulier — twee velden naast elkaar ───────── */
+.form-row--fields {
+  display: flex;
+  gap:     var(--space-8);
+  align-items: flex-end;
+}
+
+.form-field--half {
+  flex: 1;
+  min-width: 0;
+  margin-top: var(--space-16);
+}
+
+.form-input--time,
+.form-input--count {
+  /* Erft .form-input, extra aanpassingen */
+  padding-right: var(--space-8);
+}
+
+.form-hint-inline {
+  font-size:  11px;
+  color:      var(--muted);
+  margin-top: 3px;
+}
+
+/* ── Fase D: Zekerheid (radio-stijl knoppen) ────────────── */
+.certainty-group {
+  display: flex;
+  gap:     var(--space-8);
+  flex-wrap: wrap;
+  margin-top: var(--space-6, 6px);
+}
+
+.certainty-option {
+  flex:          1;
+  min-width:     80px;
+  padding:       8px var(--space-8);
+  border-radius: var(--r-sm);
+  border:        1.5px solid var(--line);
+  background:    var(--surface-2);
+  font-family:   var(--font-body);
+  font-size:     var(--fs-meta);
+  font-weight:   600;
+  color:         var(--ink-2);
+  text-align:    center;
+  cursor:        pointer;
+  transition:    border-color .15s, background .15s, color .15s;
+  user-select:   none;
+  min-height:    var(--hit, 44px);
+  display:       flex;
+  align-items:   center;
+  justify-content: center;
+}
+
+.certainty-option:hover {
+  border-color: var(--brand-light);
+  color:        var(--brand);
+}
+
+.certainty-option--active {
+  border-color: var(--brand);
+  background:   var(--brand-light, rgba(56,142,60,.12));
+  color:        var(--brand);
+}
+
+/* ── Fase D: Chips (habitat / gedrag / weer) ────────────── */
+.chip-row {
+  display:   flex;
+  gap:       var(--space-8);
+  flex-wrap: wrap;
+  margin-top: var(--space-6, 6px);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.chip-row::-webkit-scrollbar { display: none; }
+
+.chip {
+  padding:       6px 12px;
+  border-radius: var(--r-pill);
+  border:        1.5px solid var(--line);
+  background:    var(--surface-2);
+  font-family:   var(--font-body);
+  font-size:     var(--fs-meta);
+  font-weight:   500;
+  color:         var(--ink-2);
+  white-space:   nowrap;
+  cursor:        pointer;
+  transition:    border-color .15s, background .15s, color .15s;
+  user-select:   none;
+  min-height:    var(--hit, 44px);
+  display:       inline-flex;
+  align-items:   center;
+}
+
+.chip:hover {
+  border-color: var(--brand-light);
+  color:        var(--brand);
+}
+
+.chip--active {
+  border-color: var(--brand);
+  background:   var(--brand-light, rgba(56,142,60,.12));
+  color:        var(--brand);
+}
+
+/* ── Fase D: Detail-velden naast elkaar ─────────────────── */
+.detail-field--row {
+  display: flex;
+  gap:     var(--space-12);
+}
+
+.detail-field--half {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ── Fase D: Zekerheid badge in detail ──────────────────── */
+.certainty-badge {
+  display:       inline-block;
+  padding:       3px 10px;
+  border-radius: var(--r-pill);
+  font-size:     var(--fs-meta);
+  font-weight:   600;
+}
+
+.certainty-badge--certain {
+  background: rgba(56,142,60,.14);
+  color:      var(--brand);
+}
+
+.certainty-badge--probable {
+  background: rgba(245,124,0,.12);
+  color:      #c26000;
+}
+
+.certainty-badge--possible {
+  background: var(--surface-2);
+  color:      var(--ink-2);
+  border:     1px solid var(--line);
+}
+
+/* ── Fase D: Context-chips in detail ────────────────────── */
+.detail-chip-row {
+  display:   flex;
+  gap:       var(--space-6, 6px);
+  flex-wrap: wrap;
+}
+
+.detail-chip {
+  padding:       4px 10px;
+  border-radius: var(--r-pill);
+  font-size:     var(--fs-meta);
+  font-weight:   500;
+  background:    var(--surface-2);
+  color:         var(--ink-2);
+  border:        1px solid var(--line);
+}
+
+.detail-chip--habitat  { border-color: rgba(56,142,60,.4);  color: var(--brand); }
+.detail-chip--behavior { border-color: rgba(25,118,210,.4); color: #1565c0; }
+.detail-chip--weather  { border-color: rgba(245,124,0,.4);  color: #c26000; }
+
+/* ── Fase D: Detail-header acties (bewerken + sluiten) ──── */
+.detail-header-actions {
+  display:     flex;
+  align-items: center;
+  gap:         var(--space-8);
+}
+
+.detail-edit-btn {
+  padding:       7px 14px;
+  border-radius: var(--r-pill);
+  border:        1.5px solid var(--brand-light, rgba(56,142,60,.35));
+  font-family:   var(--font-body);
+  font-size:     var(--fs-meta);
+  font-weight:   600;
+  color:         var(--brand);
+  background:    transparent;
+  cursor:        pointer;
+  transition:    background .15s, border-color .15s;
+  min-height:    var(--hit, 44px);
+  display:       flex;
+  align-items:   center;
+}
+
+.detail-edit-btn:hover {
+  background: var(--brand-light, rgba(56,142,60,.10));
+}
+
+/* ── Fase D: Detail footer ──────────────────────────────── */
+.detail-footer {
+  display:         flex;
+  justify-content: flex-end;
+  padding-top:     var(--space-12);
+  border-top:      1px solid var(--line);
+  margin-top:      var(--space-16);
+}
+
+/* ── Fase D: Bevestigingsdialoog ────────────────────────── */
+.confirm-overlay {
+  position: fixed;
+  inset:    0;
+  background: rgba(0,0,0,.55);
+  z-index:  var(--layer-confirm, 1080);
+  display:  flex;
+  align-items: center;
+  justify-content: center;
+  padding:  var(--space-16);
+}
+
+.confirm-dialog {
+  background:    var(--surface);
+  border-radius: var(--r-lg);
+  padding:       var(--space-24);
+  max-width:     340px;
+  width:         100%;
+  box-shadow:    var(--shadow-float);
+}
+
+.confirm-dialog__title {
+  font-size:   var(--fs-head);
+  font-weight: 700;
+  color:       var(--ink);
+  margin-bottom: var(--space-8);
+}
+
+.confirm-dialog__body {
+  font-size:   var(--fs-body);
+  color:       var(--ink-2);
+  line-height: 1.5;
+  margin-bottom: var(--space-16);
+}
+
+.confirm-dialog__actions {
+  display:         flex;
+  justify-content: flex-end;
+  gap:             var(--space-8);
+}
+
+/* ── Fase D: Secundaire knop (bewerken / annuleer) ──────── */
+.btn-secondary {
+  padding:       7px 14px;
+  border-radius: var(--r-pill);
+  border:        1.5px solid var(--line);
+  font-family:   var(--font-body);
+  font-size:     var(--fs-meta);
+  font-weight:   600;
+  color:         var(--ink-2);
+  background:    var(--surface-2);
+  cursor:        pointer;
+  transition:    border-color .15s;
+  min-height:    var(--hit, 44px);
+  display:       inline-flex;
+  align-items:   center;
+}
+
+.btn-secondary:hover {
+  border-color: var(--brand-light);
+  color:        var(--ink);
+}

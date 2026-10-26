@@ -79,8 +79,13 @@ document.getElementById('app-nav').addEventListener('click', e => {
 document.getElementById('fab').addEventListener('click', () => {
   openAddSheet({
     onSaved: () => {
-      // Herlaad de sightings-view (force=true zodat het ook werkt als we er al zijn)
-      navigate('sightings', { force: true });
+      // Als we op home staan: herlaad home zodat recentSightings bijgewerkt is.
+      // Als we op sightings staan (of ergens anders): navigeer naar sightings.
+      if (currentRoute === 'home') {
+        navigate('home', { force: true });
+      } else {
+        navigate('sightings', { force: true });
+      }
     },
   });
 });
