@@ -1,25 +1,95 @@
 /**
- * Soortenoverzicht — Stap 3
+ * Soortenoverzicht — Stap 3 (UI-redesign)
  * Zoek + filter op categorie + gebied, gezien-toggle, soortdetail
+ * Nieuw: foto-thumbnails, zeldzaamheid-badges, "Recent bekeken" scroll
  */
 
 import { SPECIES, CATEGORY_LABELS, REGIONS, getSeenIds, toggleSeen, searchSpecies } from '../../data/species.js';
+import { getDB } from '../../data/db.js';
 
 let _currentCategory = 'standvogel';
 let _searchQuery     = '';
 let _currentRegion   = null;
 let _detailSpeciesId = null;
 
+// ── Zeldzaamheid mapping (id-prefix → rarity) ─────────────────
+// Zonder dedicated veld in data: categoriseer op basis van species-id ranges
+// Dit is een tijdelijke heuristiek totdat rarity aan species.js wordt toegevoegd
+const RARITY_MAP = {
+  algemeen:      { cls: 'rarity--algemeen',     label: 'Algemeen'     },
+  'vrij-algemeen':{ cls: 'rarity--vrij-algemeen',label: 'Vrij algemeen'},
+  zeldzaam:      { cls: 'rarity--zeldzaam',     label: 'Zeldzaam'     },
+  schaars:       { cls: 'rarity--schaars',      label: 'Schaars'      },
+  toevallig:     { cls: 'rarity--toevallig',    label: 'Toevallig'    },
+};
+
+// Standvogels zijn doorgaans algemeen; trek/winter schaarsder; dwaalgasten toevallig
+function getRarity(species) {
+  if (species.rarity) return species.rarity; // gebruik veld als aanwezig
+  switch (species.category) {
+    case 'standvogel':  return 'algemeen';
+    case 'zomervogel':  return 'vrij-algemeen';
+    case 'wintergast':  return 'schaars';
+    case 'doortrekker': return 'vrij-algemeen';
+    case 'dwaalgast':   return 'toevallig';
+    default:            return 'algemeen';
+  }
+}
+
+// ── IndexedDB helper ───────────────────────────────────────────
+function txGet(store, key) {
+  return new Promise((resolve, reject) => {
+    const req = store.get(key);
+    req.onsuccess = () => resolve(req.result);
+    req.onerror   = () => reject(req.error);
+  });
+}
+
+// Laad de eerste foto-blob voor een soort-id uit waarnemingen
+async function loadSpeciesThumb(speciesId) {
+  try {
+    const sightings = JSON.parse(localStorage.getItem('birdspot_sightings') || '[]');
+    const match = sightings.find(s => s.speciesId === speciesId && s.photoIds?.length);
+    if (!match) return null;
+    const db = await getDB();
+    const tx = db.transaction('photos', 'readonly');
+    const photo = await txGet(tx.objectStore('photos'), match.photoIds[0]);
+    return photo?.dataUrl || null;
+  } catch {
+    return null;
+  }
+}
+
+// ── "Recent bekeken" — soorten met recente waarneming ─────────
+function getRecentSpeciesIds(limit = 8) {
+  try {
+    const sightings = JSON.parse(localStorage.getItem('birdspot_sightings') || '[]');
+    const seen = new Map();
+    // sorteer nieuwste eerst
+    [...sightings]
+      .sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0))
+      .forEach(s => {
+        if (s.speciesId && !seen.has(s.speciesId)) seen.set(s.speciesId, s);
+      });
+    return [...seen.keys()].slice(0, limit);
+  } catch {
+    return [];
+  }
+}
+
+// ── Render entrypoint ──────────────────────────────────────────
 export function renderSpecies(el) {
   const seenIds = getSeenIds();
   const total   = SPECIES.filter(s => s.category === 'standvogel').length;
   const seen    = SPECIES.filter(s => s.category === 'standvogel' && seenIds.has(s.id)).length;
 
+  const recentIds = getRecentSpeciesIds();
+
   el.innerHTML = `
-    <div class="page-header">
-      <div class="page-header__title">Soorten</div>
-      <div class="page-header__sub">Benelux · ${seen}/${total} standvogels gezien</div>
-    </div>
+    <header class="species-header">
+      <div class="species-header__title">Soorten</div>
+      <div class="species-header__sub" id="speciesSub">Benelux · ${seen}/${total} standvogels gezien</div>
+    </header>
 
     <div class="species-toolbar">
       <div class="species-search-wrap">
@@ -49,14 +119,43 @@ export function renderSpecies(el) {
       </div>
     </div>
 
+    ${recentIds.length > 0 ? `
+    <div class="species-recent-section" id="recentSection">
+      <div class="section-head" style="padding-top:var(--space-12)">
+        <span class="section-head__title">Recent bekeken</span>
+      </div>
+      <div class="species-recent-scroll" id="recentScroll">
+        ${recentIds.map(id => {
+          const s = SPECIES.find(x => x.id === id);
+          if (!s) return '';
+          return `<div class="species-recent-chip" data-id="${s.id}">
+            <div class="species-recent-chip__thumb" id="rthumb-${s.id}">
+              <span aria-hidden="true">${s.icon}</span>
+            </div>
+            <div class="species-recent-chip__name">${escHtml(s.nameNL)}</div>
+          </div>`;
+        }).join('')}
+      </div>
+    </div>` : ''}
+
     <div id="speciesList" class="species-list" role="list"></div>
   `;
 
   renderList(el, seenIds);
   bindEvents(el);
+
+  // Laad async thumbnails voor "Recent bekeken"
+  if (recentIds.length > 0) {
+    recentIds.forEach(async id => {
+      const dataUrl = await loadSpeciesThumb(id);
+      if (!dataUrl) return;
+      const thumb = el.querySelector(`#rthumb-${id}`);
+      if (thumb) thumb.innerHTML = `<img src="${dataUrl}" alt="" loading="lazy">`;
+    });
+  }
 }
 
-// ── Render lijst ──────────────────────────────────────────
+// ── Render lijst ───────────────────────────────────────────────
 function renderList(el, seenIds) {
   seenIds = seenIds || getSeenIds();
   const results = searchSpecies(_searchQuery, _currentCategory, _currentRegion);
@@ -66,7 +165,7 @@ function renderList(el, seenIds) {
   // Update sub-header teller
   const total = SPECIES.filter(s => s.category === _currentCategory).length;
   const seen  = SPECIES.filter(s => s.category === _currentCategory && seenIds.has(s.id)).length;
-  const sub   = el.querySelector('.page-header__sub');
+  const sub   = el.querySelector('#speciesSub');
   if (sub) sub.textContent = `Benelux · ${seen}/${total} ${CATEGORY_LABELS[_currentCategory]?.toLowerCase() || ''} gezien`;
 
   if (results.length === 0) {
@@ -95,17 +194,31 @@ function renderList(el, seenIds) {
       <div class="species-group__label">${escHtml(family)}</div>
       ${birds.map(s => speciesRow(s, seenIds)).join('')}
     </div>`).join('');
+
+  // Laad async thumbnails per rij
+  results.forEach(async s => {
+    const dataUrl = await loadSpeciesThumb(s.id);
+    if (!dataUrl) return;
+    const thumb = list.querySelector(`.species-row[data-id="${s.id}"] .species-row__thumb`);
+    if (thumb) thumb.innerHTML = `<img src="${dataUrl}" alt="" loading="lazy">`;
+  });
 }
 
 function speciesRow(s, seenIds) {
-  const seen = seenIds.has(s.id);
+  const seen   = seenIds.has(s.id);
+  const rarity = getRarity(s);
+  const rm     = RARITY_MAP[rarity] || RARITY_MAP.algemeen;
+
   return `
     <div class="species-row${seen ? ' seen' : ''}" data-id="${s.id}" role="listitem">
-      <div class="species-row__icon" aria-hidden="true">${s.icon}</div>
+      <div class="species-row__thumb" aria-hidden="true">
+        <span>${s.icon}</span>
+      </div>
       <div class="species-row__body">
         <div class="species-row__name">${escHtml(s.nameNL)}</div>
         <div class="species-row__sci">${escHtml(s.nameSci)}</div>
       </div>
+      <span class="species-row__rarity ${rm.cls}">${rm.label}</span>
       <button class="seen-toggle${seen ? ' seen' : ''}"
         data-id="${s.id}" aria-label="${seen ? 'Markeer als niet gezien' : 'Markeer als gezien'}"
         aria-pressed="${seen}">
@@ -114,7 +227,7 @@ function speciesRow(s, seenIds) {
     </div>`;
 }
 
-// ── Events ────────────────────────────────────────────────
+// ── Events ─────────────────────────────────────────────────────
 function bindEvents(el) {
   // Zoekbalk
   el.querySelector('#speciesSearch')?.addEventListener('input', e => {
@@ -147,15 +260,20 @@ function bindEvents(el) {
     renderList(el);
   });
 
+  // Recent bekeken chips → open detail
+  el.querySelector('#recentScroll')?.addEventListener('click', e => {
+    const chip = e.target.closest('.species-recent-chip');
+    if (chip) openDetail(chip.dataset.id, el);
+  });
+
   // Lijst — delegate voor rij-klik (detail) en gezien-toggle
   el.querySelector('#speciesList')?.addEventListener('click', e => {
     const toggleBtn = e.target.closest('.seen-toggle');
     if (toggleBtn) {
       e.stopPropagation();
-      const id   = toggleBtn.dataset.id;
-      const now  = toggleSeen(id);
-      // Update rij en knop inline
-      const row  = el.querySelector(`.species-row[data-id="${id}"]`);
+      const id  = toggleBtn.dataset.id;
+      const now = toggleSeen(id);
+      const row = el.querySelector(`.species-row[data-id="${id}"]`);
       if (row) {
         row.classList.toggle('seen', now);
         toggleBtn.classList.toggle('seen', now);
@@ -163,12 +281,7 @@ function bindEvents(el) {
         toggleBtn.setAttribute('aria-pressed', now);
         toggleBtn.setAttribute('aria-label', now ? 'Markeer als niet gezien' : 'Markeer als gezien');
       }
-      // Update teller
-      const seenIds = getSeenIds();
-      const total   = SPECIES.filter(s => s.category === _currentCategory).length;
-      const seen    = SPECIES.filter(s => s.category === _currentCategory && seenIds.has(s.id)).length;
-      const sub     = el.querySelector('.page-header__sub');
-      if (sub) sub.textContent = `Benelux · ${seen}/${total} ${CATEGORY_LABELS[_currentCategory]?.toLowerCase() || ''} gezien`;
+      updateCounter(el);
       return;
     }
 
@@ -177,13 +290,24 @@ function bindEvents(el) {
   });
 }
 
-// ── Detail sheet ──────────────────────────────────────────
+function updateCounter(el) {
+  const seenIds = getSeenIds();
+  const total   = SPECIES.filter(s => s.category === _currentCategory).length;
+  const seen    = SPECIES.filter(s => s.category === _currentCategory && seenIds.has(s.id)).length;
+  const sub     = el.querySelector('#speciesSub');
+  if (sub) sub.textContent = `Benelux · ${seen}/${total} ${CATEGORY_LABELS[_currentCategory]?.toLowerCase() || ''} gezien`;
+}
+
+// ── Detail sheet ───────────────────────────────────────────────
 function openDetail(speciesId, screenEl) {
-  const s     = SPECIES.find(x => x.id === speciesId);
+  const s = SPECIES.find(x => x.id === speciesId);
   if (!s) return;
   _detailSpeciesId = speciesId;
 
-  const seen  = getSeenIds().has(speciesId);
+  const seen   = getSeenIds().has(speciesId);
+  const rarity = getRarity(s);
+  const rm     = RARITY_MAP[rarity] || RARITY_MAP.algemeen;
+
   const sheet = document.createElement('div');
   sheet.className = 'sheet-overlay';
   sheet.innerHTML = `
@@ -191,11 +315,14 @@ function openDetail(speciesId, screenEl) {
       <div class="sheet__handle" role="button" aria-label="Sluiten" tabindex="0"></div>
       <div class="sheet__content">
         <div class="detail-hero">
-          <div class="detail-icon">${s.icon}</div>
+          <div class="detail-thumb" id="detailThumb-${s.id}" aria-hidden="true">
+            <span>${s.icon}</span>
+          </div>
           <div class="detail-names">
             <div class="detail-name">${escHtml(s.nameNL)}</div>
             <div class="detail-sci">${escHtml(s.nameSci)}</div>
             <div class="detail-en">${escHtml(s.nameEN)}</div>
+            <span class="species-row__rarity ${rm.cls}" style="margin-top:6px;display:inline-flex">${rm.label}</span>
           </div>
           <button class="seen-toggle-large${seen ? ' seen' : ''}" data-id="${s.id}"
             aria-label="${seen ? 'Markeer als niet gezien' : 'Markeer als gezien'}"
@@ -251,14 +378,19 @@ function openDetail(speciesId, screenEl) {
   document.body.appendChild(sheet);
   requestAnimationFrame(() => sheet.querySelector('.sheet').classList.add('open'));
 
+  // Laad detail-thumb async
+  loadSpeciesThumb(speciesId).then(dataUrl => {
+    if (!dataUrl) return;
+    const dt = sheet.querySelector(`#detailThumb-${speciesId}`);
+    if (dt) dt.innerHTML = `<img src="${dataUrl}" alt="">`;
+  });
+
   // Sluit bij klik op overlay of handle
   const close = () => {
     sheet.querySelector('.sheet').classList.remove('open');
     setTimeout(() => sheet.remove(), 300);
   };
-  sheet.addEventListener('click', e => {
-    if (e.target === sheet) close();
-  });
+  sheet.addEventListener('click', e => { if (e.target === sheet) close(); });
   sheet.querySelector('.sheet__handle').addEventListener('click', close);
   sheet.querySelector('.sheet__handle').addEventListener('keydown', e => {
     if (e.key === 'Enter' || e.key === ' ') close();
@@ -280,16 +412,11 @@ function openDetail(speciesId, screenEl) {
       rowBtn.innerHTML = now ? checkIcon() : circleIcon();
       rowBtn.setAttribute('aria-pressed', now);
     }
-    // Update teller
-    const seenIds = getSeenIds();
-    const total   = SPECIES.filter(s => s.category === _currentCategory).length;
-    const seen    = SPECIES.filter(s => s.category === _currentCategory && seenIds.has(s.id)).length;
-    const sub     = screenEl.querySelector('.page-header__sub');
-    if (sub) sub.textContent = `Benelux · ${seen}/${total} ${CATEGORY_LABELS[_currentCategory]?.toLowerCase() || ''} gezien`;
+    updateCounter(screenEl);
   });
 }
 
-// ── Iconen ────────────────────────────────────────────────
+// ── Iconen ─────────────────────────────────────────────────────
 function checkIcon() {
   return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
     <path d="M20 6L9 17l-5-5"/>
@@ -304,7 +431,6 @@ function escHtml(s) {
   return String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
-// Mensleesbare labels voor individuele regio-tags
 const REGION_TAG_LABELS = {
   stedelijk:'Stedelijk', agrarisch:'Agrarisch', bos:'Bos',
   heide:'Heide', duinen:'Duinen', kust:'Kust', wad:'Wad',
