@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════════════
    BIRDSPOT LIBRARY — Shell styles
-   Reset, layout, navigatie, FAB, boot-screen, headers
+   Reset, layout, navigatie, FAB-nav, boot-screen, headers
    ═══════════════════════════════════════════════════════ */
 
 /* ── Reset ────────────────────────────────────────────── */
@@ -86,6 +86,102 @@ body::before {
   margin-top: 2px;
 }
 
+/* ── App-header (Home branding balk) ──────────────────── */
+.app-header {
+  background: var(--brand);
+  color: var(--on-brand);
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  padding: var(--space-12)
+           max(var(--space-16), env(safe-area-inset-right, 0px))
+           var(--space-12)
+           max(var(--space-16), env(safe-area-inset-left, 0px));
+  min-height: 56px;
+}
+
+.app-header__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.app-header__logo-icon {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+}
+
+.app-header__title {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 900;
+  color: var(--on-brand);
+  line-height: 1;
+}
+
+.app-header__avatar {
+  margin-left: auto;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--brand-mid);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  border: 2px solid rgba(255,255,255,.25);
+}
+
+.app-header__avatar svg {
+  width: 20px;
+  height: 20px;
+  color: rgba(255,255,255,.7);
+}
+
+/* Zoekbalk in header */
+.app-header__search {
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+}
+
+.app-header__search-input {
+  width: 100%;
+  height: 38px;
+  padding: 0 var(--space-12) 0 38px;
+  background: rgba(255,255,255,.12);
+  border: 1.5px solid rgba(255,255,255,.18);
+  border-radius: var(--r-pill);
+  font-family: var(--font-body);
+  font-size: var(--fs-meta);
+  color: var(--on-brand);
+  outline: none;
+  transition: background .15s, border-color .15s;
+}
+
+.app-header__search-input::placeholder {
+  color: rgba(255,255,255,.55);
+}
+
+.app-header__search-input:focus {
+  background: rgba(255,255,255,.2);
+  border-color: rgba(255,255,255,.4);
+}
+
+.app-header__search-icon {
+  position: absolute;
+  left: 11px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  color: rgba(255,255,255,.6);
+  pointer-events: none;
+}
+
 /* ── Navigatie onderaan ───────────────────────────────── */
 .app-nav {
   position: fixed;
@@ -137,11 +233,19 @@ body::before {
   border-radius: 8px;
 }
 
-/* ── FAB ──────────────────────────────────────────────── */
-.fab {
-  position: fixed;
-  bottom: calc(var(--nav-h) + env(safe-area-inset-bottom, 0px) + 14px);
-  right: max(var(--space-16), env(safe-area-inset-right, 0px));
+/* ── Centrale FAB-slot in nav ─────────────────────────── */
+.nav-fab-slot {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding-bottom: 2px;
+  position: relative;
+}
+
+.fab-nav {
   width: 52px;
   height: 52px;
   border-radius: 50%;
@@ -150,21 +254,33 @@ body::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 90;
-  box-shadow: var(--shadow-float);
-  transition: transform .15s ease, opacity .15s;
+  box-shadow: 0 2px 12px rgba(82,183,136,.45);
+  transition: transform .15s ease, box-shadow .15s;
+  margin-top: -18px;
 }
 
-.fab svg { width: 24px; height: 24px; }
+.fab-nav svg {
+  width: 26px;
+  height: 26px;
+}
 
-.fab:active { transform: scale(.93); }
+.fab-nav:active {
+  transform: scale(.92);
+  box-shadow: 0 1px 6px rgba(82,183,136,.3);
+}
 
-.fab:focus-visible {
+.fab-nav:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
 
-.fab[hidden] { display: none !important; }
+.nav-fab-label {
+  font-size: var(--fs-label);
+  font-weight: 600;
+  letter-spacing: .3px;
+  color: rgba(255,255,255,.55);
+  margin-top: 2px;
+}
 
 /* ── Sectielabel ──────────────────────────────────────── */
 .section-label {
@@ -173,7 +289,37 @@ body::before {
   letter-spacing: .8px;
   text-transform: uppercase;
   color: var(--muted);
-  padding: var(--space-20, 20px) max(var(--space-16), env(safe-area-inset-left, 0px)) var(--space-8);
+  padding: 20px max(var(--space-16), env(safe-area-inset-left, 0px)) var(--space-8);
+}
+
+/* ── Sectie-header met "Alles bekijken" link ──────────── */
+.section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px max(var(--space-16), env(safe-area-inset-right, 0px))
+                 var(--space-8)
+                 max(var(--space-16), env(safe-area-inset-left, 0px));
+}
+
+.section-head__title {
+  font-size: var(--fs-head);
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.section-head__link {
+  font-size: var(--fs-meta);
+  font-weight: 600;
+  color: var(--brand-mid);
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.section-head__link svg {
+  width: 13px;
+  height: 13px;
 }
 
 /* ── Kaart (gedeeld component) ────────────────────────── */
@@ -182,6 +328,49 @@ body::before {
   border-radius: var(--r-card);
   box-shadow: var(--shadow-card);
 }
+
+/* ── Zekerheids-badges ────────────────────────────────── */
+.certainty-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: var(--r-pill);
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.certainty-badge--certain {
+  background: color-mix(in srgb, var(--positive) 18%, transparent);
+  color: var(--brand-mid);
+  border: 1px solid color-mix(in srgb, var(--positive) 35%, transparent);
+}
+
+.certainty-badge--probable {
+  background: color-mix(in srgb, var(--warn) 15%, transparent);
+  color: #8A5A00;
+  border: 1px solid color-mix(in srgb, var(--warn) 35%, transparent);
+}
+
+.certainty-badge--uncertain {
+  background: var(--surface-2);
+  color: var(--muted);
+  border: 1px solid var(--line);
+}
+
+.certainty-badge svg {
+  width: 11px;
+  height: 11px;
+  flex-shrink: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .certainty-badge--probable {
+    color: var(--warn);
+  }
+}
+:root[data-theme="dark"] .certainty-badge--probable { color: var(--warn); }
 
 /* ── Bottom sheet ─────────────────────────────────────── */
 .sheet-overlay {
@@ -205,7 +394,7 @@ body::before {
   background: var(--surface);
   border-radius: var(--r-sheet) var(--r-sheet) 0 0;
   width: 100%;
-  max-height: 88vh;
+  max-height: 92vh;
   overflow-y: auto;
   padding-bottom: calc(var(--space-32) + env(safe-area-inset-bottom, 0px));
   box-shadow: var(--shadow-sheet);

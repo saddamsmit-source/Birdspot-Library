@@ -18,17 +18,17 @@
   <link rel="stylesheet" href="styles/shell.css">
   <!-- Dashboard styles -->
   <link rel="stylesheet" href="styles/dashboard.css">
-  <!-- Species styles (Stap 3/4) -->
+  <!-- Species styles -->
   <link rel="stylesheet" href="styles/species.css">
-  <!-- Sightings styles (Stap 5) -->
+  <!-- Sightings styles -->
   <link rel="stylesheet" href="styles/sightings.css">
-  <!-- Map styles (Stap 6) -->
+  <!-- Map styles -->
   <link rel="stylesheet" href="styles/map.css">
 
   <!-- SunCalc (offline-capable sunrise/sunset/golden hour) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/suncalc/1.9.0/suncalc.min.js"></script>
 
-  <!-- Module bootstrap (defer = non-blocking) -->
+  <!-- Module bootstrap -->
   <script type="module" src="src/app.js"></script>
 </head>
 <body>
@@ -41,20 +41,21 @@
       <!-- placeholder terwijl JS laadt -->
       <div id="boot-screen">
         <div class="boot-logo">
-          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-            <!-- gestileerde vogel silhouet -->
-            <path d="M8 32 Q16 20 24 22 Q30 18 40 14 Q36 24 28 26 Q22 28 18 36Z"
-                  fill="var(--brand-light)" opacity=".9"/>
-            <path d="M24 22 Q28 24 32 20 Q30 26 24 28Z"
-                  fill="var(--brand-mid)"/>
+          <svg width="52" height="52" viewBox="0 0 52 52" fill="none" aria-hidden="true">
+            <circle cx="26" cy="26" r="26" fill="#1A3A2A"/>
+            <path d="M10 34 Q18 22 26 24 Q32 20 42 16 Q38 26 30 28 Q24 30 20 38Z"
+                  fill="#52B788" opacity=".95"/>
+            <path d="M26 24 Q30 26 34 22 Q32 28 26 30Z"
+                  fill="#2D6A4F"/>
           </svg>
           <span>Birdspot Library</span>
         </div>
       </div>
     </main>
 
-    <!-- Onderste navigatie -->
+    <!-- Onderste navigatie — 5 items met centrale FAB -->
     <nav id="app-nav" class="app-nav" role="navigation" aria-label="Hoofdnavigatie">
+
       <button class="nav-item active" data-route="home" aria-label="Home" aria-current="page">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
           <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
@@ -65,19 +66,21 @@
 
       <button class="nav-item" data-route="species" aria-label="Soorten">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <!-- vogel silhouet icoon -->
           <path d="M4 20 Q8 12 14 13 Q18 10 22 7 Q20 15 14 16 Q10 17 8 22Z"/>
         </svg>
         <span>Soorten</span>
       </button>
 
-      <button class="nav-item" data-route="sightings" aria-label="Waarnemingen">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-          <circle cx="12" cy="12" r="3"/>
-        </svg>
-        <span>Waarnm.</span>
-      </button>
+      <!-- Centrale FAB-knop in de nav -->
+      <div class="nav-fab-slot">
+        <button id="fab" class="fab-nav" aria-label="Waarneming toevoegen">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+            <line x1="12" y1="5" x2="12" y2="19"/>
+            <line x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+        </button>
+        <span class="nav-fab-label">Waarnemen</span>
+      </div>
 
       <button class="nav-item" data-route="map" aria-label="Kaart">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -95,15 +98,8 @@
         </svg>
         <span>Profiel</span>
       </button>
-    </nav>
 
-    <!-- Zwevende actieknop (verborgen op profiel) -->
-    <button id="fab" class="fab" aria-label="Waarneming toevoegen">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
-        <line x1="12" y1="5" x2="12" y2="19"/>
-        <line x1="5" y1="12" x2="19" y2="12"/>
-      </svg>
-    </button>
+    </nav>
 
   </div><!-- /app -->
 
