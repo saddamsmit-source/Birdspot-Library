@@ -1,0 +1,330 @@
+/* ═══════════════════════════════════════════════════════
+   BIRDSPOT LIBRARY — Profiel & Back-up styles (Stap 7 / Fase F)
+   ═══════════════════════════════════════════════════════ */
+
+/* ── Scherm-wrapper ─────────────────────────────────────── */
+.profile-screen {
+  display:        flex;
+  flex-direction: column;
+  gap:            var(--space-24);
+  padding:        var(--space-16)
+                  max(var(--space-16), env(safe-area-inset-right,  0px))
+                  calc(var(--space-32) + env(safe-area-inset-bottom, 0px))
+                  max(var(--space-16), env(safe-area-inset-left,   0px));
+}
+
+/* ── Profiel-header ─────────────────────────────────────── */
+.profile-header {
+  display:     flex;
+  align-items: center;
+  gap:         var(--space-16);
+  padding:     var(--space-24) 0 var(--space-8);
+}
+
+.profile-header__icon {
+  width:            56px;
+  height:           56px;
+  flex-shrink:      0;
+  border-radius:    50%;
+  background:       var(--surface-2);
+  display:          flex;
+  align-items:      center;
+  justify-content:  center;
+  color:            var(--brand-mid);
+}
+
+.profile-header__icon svg {
+  width:  28px;
+  height: 28px;
+}
+
+.profile-header__title {
+  font-family: var(--font-display);
+  font-size:   var(--fs-title);
+  font-weight: 700;
+  color:       var(--ink);
+  margin:      0;
+  line-height: 1.2;
+}
+
+.profile-header__sub {
+  font-size:   var(--fs-meta);
+  color:       var(--muted);
+  margin:      2px 0 0;
+}
+
+/* ── Secties ────────────────────────────────────────────── */
+.profile-section {
+  display:        flex;
+  flex-direction: column;
+  gap:            var(--space-8);
+}
+
+.profile-section__title {
+  font-size:      var(--fs-label);
+  font-weight:    700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color:          var(--muted);
+  margin:         0 0 var(--space-4);
+}
+
+/* ── Kaarten ────────────────────────────────────────────── */
+.profile-card {
+  display:         flex;
+  align-items:     center;
+  gap:             var(--space-12);
+  padding:         var(--space-16);
+  background:      var(--surface);
+  border-radius:   var(--r-card);
+  box-shadow:      var(--shadow-card);
+}
+
+.profile-card--warn {
+  background: var(--warn-soft);
+  border:     1px solid var(--warn);
+}
+
+.profile-card--info {
+  background: var(--surface-2);
+  box-shadow: none;
+}
+
+.profile-card--hidden {
+  display: none;
+}
+
+.profile-card__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.profile-card__label {
+  font-size:   var(--fs-body);
+  font-weight: 600;
+  color:       var(--ink);
+  line-height: 1.3;
+}
+
+.profile-card--warn .profile-card__label {
+  color: #7A3F10;
+}
+
+.profile-card__desc {
+  font-size:   var(--fs-meta);
+  color:       var(--muted);
+  margin-top:  2px;
+  line-height: 1.4;
+}
+
+.profile-card--warn .profile-card__desc {
+  color: #A0541E;
+}
+
+/* ── Knoppen ────────────────────────────────────────────── */
+.btn {
+  display:         inline-flex;
+  align-items:     center;
+  gap:             6px;
+  padding:         0 var(--space-16);
+  height:          44px;
+  border:          none;
+  border-radius:   var(--r-pill);
+  font-family:     var(--font-body);
+  font-size:       var(--fs-meta);
+  font-weight:     600;
+  cursor:          pointer;
+  white-space:     nowrap;
+  flex-shrink:     0;
+  transition:      background .15s, opacity .15s;
+}
+
+.btn svg {
+  width:  16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.btn:disabled {
+  opacity: .45;
+  cursor:  not-allowed;
+}
+
+.btn--primary {
+  background: var(--brand-mid);
+  color:      var(--on-brand);
+}
+.btn--primary:not(:disabled):active {
+  background: var(--brand);
+}
+
+.btn--secondary {
+  background: var(--surface-2);
+  color:      var(--ink-2);
+  border:     1px solid var(--line);
+}
+.btn--secondary:not(:disabled):active {
+  background: var(--line);
+}
+
+.btn--danger {
+  background: var(--danger);
+  color:      #fff;
+}
+.btn--danger:not(:disabled):active {
+  background: #c0503b;
+}
+
+/* ── Back-up status ─────────────────────────────────────── */
+.backup-status {
+  border-radius: var(--r-card);
+  overflow:      hidden;
+}
+
+.backup-status__none {
+  font-size:   var(--fs-meta);
+  color:       var(--muted);
+  margin:      0;
+  padding:     var(--space-8) 0;
+}
+
+.backup-status__row {
+  display:        flex;
+  align-items:    flex-start;
+  gap:            var(--space-10);
+  padding:        var(--space-12) var(--space-16);
+  background:     var(--surface);
+  border-radius:  var(--r-card);
+  box-shadow:     var(--shadow-card);
+}
+
+.backup-status__icon {
+  width:      20px;
+  height:     20px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.backup-status__icon--ok {
+  color: var(--positive);
+}
+
+.backup-status__label {
+  font-size:   var(--fs-label);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color:       var(--muted);
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.backup-status__value {
+  font-size:   var(--fs-meta);
+  color:       var(--ink);
+  font-weight: 500;
+}
+
+/* ── Bevestig-dialoog ───────────────────────────────────── */
+.confirm-overlay {
+  position:   fixed;
+  inset:      0;
+  z-index:    var(--layer-confirm, 1080);
+  display:    flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding:    max(var(--space-16), env(safe-area-inset-left, 0px))
+              max(var(--space-16), env(safe-area-inset-right, 0px))
+              max(var(--space-24), env(safe-area-inset-bottom, 0px));
+  background: rgba(0, 0, 0, .5);
+  backdrop-filter: blur(4px);
+}
+
+.confirm-dialog {
+  width:            100%;
+  max-width:        480px;
+  background:       var(--surface);
+  border-radius:    var(--r-sheet) var(--r-sheet) var(--r-card) var(--r-card);
+  box-shadow:       var(--shadow-float);
+  padding:          var(--space-24);
+  display:          flex;
+  flex-direction:   column;
+  gap:              var(--space-16);
+}
+
+.confirm-dialog__title {
+  font-family: var(--font-display);
+  font-size:   var(--fs-head);
+  font-weight: 700;
+  color:       var(--ink);
+  margin:      0;
+}
+
+.confirm-dialog__body {
+  font-size:   var(--fs-body);
+  color:       var(--ink-2);
+  line-height: 1.6;
+}
+
+.confirm-dialog__body strong {
+  color:       var(--ink);
+  font-weight: 700;
+}
+
+.confirm-dialog__actions {
+  display:         flex;
+  justify-content: flex-end;
+  gap:             var(--space-8);
+  margin-top:      var(--space-8);
+}
+
+/* ── Toegankelijkheidshelper ────────────────────────────── */
+.visually-hidden {
+  position:    absolute;
+  width:       1px;
+  height:      1px;
+  padding:     0;
+  margin:      -1px;
+  overflow:    hidden;
+  clip:        rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border:      0;
+}
+
+/* ── Fallback toast (profiel-specifiek) ─────────────────── */
+.profile-toast {
+  position:      fixed;
+  bottom:        calc(var(--nav-h) + var(--space-16) + env(safe-area-inset-bottom, 0px));
+  left:          50%;
+  transform:     translateX(-50%);
+  z-index:       var(--layer-toast, 1100);
+  max-width:     calc(100vw - var(--space-32));
+  padding:       var(--space-10) var(--space-16);
+  border-radius: var(--r-pill);
+  font-size:     var(--fs-meta);
+  font-weight:   600;
+  white-space:   nowrap;
+  pointer-events: none;
+  box-shadow:    var(--shadow-float);
+}
+
+.profile-toast--success {
+  background: var(--brand);
+  color:      var(--on-brand);
+}
+
+.profile-toast--error {
+  background: var(--danger);
+  color:      #fff;
+}
+
+/* ── Over de app-kaart ──────────────────────────────────── */
+.profile-card--info .profile-card__label {
+  color:       var(--ink-2);
+  font-weight: 500;
+}
+
+.profile-card--info .profile-card__desc {
+  font-size:   var(--fs-label);
+  color:       var(--muted);
+}
