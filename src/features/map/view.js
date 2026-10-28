@@ -60,10 +60,18 @@ export async function renderMap(el) {
       </div>
     </div>`;
 
-  await ensureLeaflet();
+  // Leaflet is CDN-only; als het CDN niet bereikbaar is, tonen we toch
+  // de teller, lege state en de locate-knop (zonder kaart).
+  let leafletOk = false;
+  try {
+    await ensureLeaflet();
+    leafletOk = true;
+  } catch (_) {
+    // CDN niet bereikbaar — graceful degradation
+  }
 
   const sightings = await getSightings();
-  initMap(el, sightings);
+  initMap(el, sightings, leafletOk);
 }
 
 // ── Leaflet lazy loader ────────────────────────────────────────
@@ -114,7 +122,7 @@ function ensureLeaflet() {
 }
 
 // ── Kaart initialiseren ────────────────────────────────────────
-function initMap(screenEl, sightings) {
+function initMap(screenEl, sightings, leafletOk = true) {
   const mapEl = screenEl.querySelector('#leafletMap');
   if (!mapEl) return;
 
@@ -125,8 +133,38 @@ function initMap(screenEl, sightings) {
     _clusterLayer = null;
   }
 
-  // Bepaal beginpositie: gemiddelde van waarnemingen met GPS, anders NL centrum
   const geoSightings = sightings.filter(s => s.lat != null && s.lon != null);
+
+  // Teller bijwerken — altijd, ook zonder Leaflet
+  const countEl = screenEl.querySelector('#mapCount');
+  if (countEl) {
+    const n     = geoSightings.length;
+    const total = sightings.length;
+    countEl.textContent = n === total
+      ? `${n} ${n === 1 ? 'pin' : 'pins'}`
+      : `${n} van ${total} pins`;
+  }
+
+  // Lege state — altijd tonen als er geen GPS-waarnemingen zijn
+  if (!geoSightings.length) showNoGpsState(screenEl);
+
+  // Locatie-knop — ook zonder kaart tonen
+  const locBtn = screenEl.querySelector('#mapLocateBtn');
+  if (locBtn && leafletOk) {
+    // handler wordt gekoppeld nadat map aangemaakt is (zie hieronder)
+  }
+
+  // Zonder Leaflet: geen kaart, wel teller + lege state + knop
+  if (!leafletOk) {
+    mapEl.style.background = 'var(--surface-2, #f2f4f6)';
+    const notice = document.createElement('div');
+    notice.className = 'map-offline-notice';
+    notice.textContent = 'Kaart niet beschikbaar (offline)';
+    mapEl.appendChild(notice);
+    return;
+  }
+
+  // Bepaal beginpositie: gemiddelde van waarnemingen met GPS, anders NL centrum
   const center = geoSightings.length
     ? averageCenter(geoSightings)
     : [52.15, 5.30];
@@ -161,8 +199,7 @@ function initMap(screenEl, sightings) {
   });
 
   // Markers toevoegen
-  const withGps = geoSightings;
-  withGps.forEach(s => {
+  geoSightings.forEach(s => {
     const sp   = SPECIES.find(x => x.id === s.speciesId);
     const icon = sp?.icon || '🐦';
     const marker = window.L.marker([s.lat, s.lon], {
@@ -175,21 +212,7 @@ function initMap(screenEl, sightings) {
 
   map.addLayer(_clusterLayer);
 
-  // Teller bijwerken
-  const countEl = screenEl.querySelector('#mapCount');
-  if (countEl) {
-    const n = withGps.length;
-    const total = sightings.length;
-    countEl.textContent = n === total
-      ? `${n} ${n === 1 ? 'pin' : 'pins'}`
-      : `${n} van ${total} pins`;
-  }
-
-  // Lege state
-  if (!withGps.length) showNoGpsState(screenEl);
-
-  // Locatie-knop
-  const locBtn = screenEl.querySelector('#mapLocateBtn');
+  // Locatie-knop koppelen
   if (locBtn) {
     locBtn.addEventListener('click', () => centerOnUser(map, locBtn));
   }
