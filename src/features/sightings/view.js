@@ -79,6 +79,11 @@ async function renderList(screenEl, sightings) {
         const updated = await getSightings();
         await renderList(screenEl, updated);
       },
+      onUpdated: async () => {
+        // Herlaad de lijst na een edit (nieuwste data, vernieuwde kaartjes)
+        const updated = await getSightings();
+        await renderList(screenEl, updated);
+      },
     });
   });
 }
