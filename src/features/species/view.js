@@ -436,7 +436,7 @@ function openDetail(speciesId, screenEl) {
 
   document.body.appendChild(sheet);
   const panel = sheet.querySelector('.sheet');
-  requestAnimationFrame(() => { if (!closed) panel.classList.add('open'); });
+  requestAnimationFrame(() => { if (!closed) sheet.classList.add('open'); });
   const seenBtn = sheet.querySelector('#speciesDetailSeen');
   const favBtn = sheet.querySelector('#speciesDetailFavorite');
 
@@ -459,7 +459,7 @@ function openDetail(speciesId, screenEl) {
     closed = true;
     closeViewer();
     document.removeEventListener('keydown',keyHandler);
-    panel.classList.remove('open');
+    sheet.classList.remove('open');
     const cleanup = () => {
       sheet.remove();
       for (const url of photosUrls) revokePhotoUrl(url);
