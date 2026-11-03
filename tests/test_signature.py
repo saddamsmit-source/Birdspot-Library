@@ -69,6 +69,8 @@ def main():
             page.locator("#explorerSightingsBtn").wait_for(timeout=10000)
             assert "Bird Explorer Map" in page.locator(".signature-explorer-strip").inner_text()
             page.screenshot(path=str(SHOTS / "signature_map_390.png"), full_page=True)
+            rect = page.locator("#explorerSightingsBtn").bounding_box()
+            assert rect is not None and rect["y"] >= 0 and rect["y"] + rect["height"] < 844 - 64, f"Explorer CTA outside viewport: {rect}"
             page.locator("#explorerSightingsBtn").click()
             page.locator("#sightingsList").wait_for(timeout=10000)
             page.locator('.nav-item[data-route="home"]').click()

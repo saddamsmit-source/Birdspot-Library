@@ -251,3 +251,11 @@
     transition:none!important;
   }
 }
+
+/* Map route renders into a content-height wrapper. Explicit viewport space is
+   required: percentage height otherwise collapses and its Explorer CTA sits
+   outside the visible area, as discovered by browser QA. */
+.map-screen {
+  height: calc(100dvh - var(--nav-h) - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
+  min-height: 380px;
+}
