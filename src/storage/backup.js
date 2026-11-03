@@ -17,6 +17,7 @@
 
 import { getSightings }                    from '../data/sightings.js';
 import { getDB }                            from '../data/db.js';
+import { exportCollections, mergeCollections, restoreCollections } from './collections.js';
 
 const STORAGE_KEY    = 'birdspot-sightings';
 const SCHEMA_VERSION = 2;
@@ -197,6 +198,7 @@ function saveSafetyCopy() {
     localStorage.setItem(SAFETY_KEY, JSON.stringify({
       savedAt:   new Date().toISOString(),
       sightings,
+      collections: exportCollections(),
     }));
   } catch (_) { /* quota: veiligheidskopie mislukt stille */ }
 }
@@ -233,6 +235,7 @@ export async function exportBackup() {
     exportedAt:    new Date().toISOString(),
     sightings,
     photoIds: photos.map(p => p.id),
+    collections: exportCollections(),
   };
   const gegevensBytes = encoder.encode(JSON.stringify(gegevens, null, 2));
 
@@ -407,7 +410,11 @@ export async function importBackup(file) {
     await saveAllPhotos(newPhotos).catch(() => {}); // foto's zijn best-effort
   }
 
-  // 7. Status bijwerken
+  // 7. Favorieten en filmselectie additief samenvoegen met oude back-ups.
+  //    Oude ZIPs zonder collections blijven volledig compatibel.
+  mergeCollections(data.collections);
+
+  // 8. Status bijwerken
   setBackupStatus(prev => ({
     ...(getBackupStatus() || {}),
     lastRestore:   new Date().toISOString(),
@@ -434,6 +441,9 @@ export async function restoreFromSafetyCopy() {
     exportedAt:    copy.savedAt,
     sightings:     copy.sightings,
   }));
+
+  // De persoonlijke collecties horen bij dezelfde veiligheidssnapshot.
+  restoreCollections(copy.collections);
 
   // Veiligheidskopie verwijderen (terugzetten is klaar)
   localStorage.removeItem(SAFETY_KEY);

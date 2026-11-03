@@ -1,0 +1,216 @@
+/* BIRDSPOT / WILDLIFE EXPEDITION — SPECIES & MEDIA EXPERIENCE · Fase 2
+ * A layered extension on top of signature.css.
+ * Own-sighting photos remain the only bird images inside the field guide/media gallery.
+ */
+.signature-species-hero {
+  overflow:hidden;position:relative;isolation:isolate;
+  padding:30px 20px 27px;
+  background:
+    radial-gradient(ellipse at 87% 21%,rgba(105,207,169,.24),transparent 43%),
+    radial-gradient(ellipse at 15% 92%,rgba(143,119,64,.22),transparent 50%),
+    linear-gradient(124deg,#091c1b,#1b4436 67%,#0e302c);
+  color:#f3eddf;
+  border-bottom:1px solid rgba(217,183,126,.35);
+}
+.signature-species-hero::before {
+  content:"";pointer-events:none;position:absolute;top:-45%;right:-75px;width:240px;height:240px;
+  border:1px solid rgba(220,192,146,.25);border-radius:50%;
+  box-shadow:0 0 0 30px rgba(220,192,146,.055),0 0 0 75px rgba(220,192,146,.03);
+  animation:signature-drift 12s ease-in-out infinite;
+}
+.signature-species-hero::after {
+  content:"";position:absolute;pointer-events:none;bottom:0;right:0;
+  width:42%;height:58%;background:linear-gradient(145deg,transparent,rgba(46,141,125,.13));
+  transform:skewX(-16deg);
+}
+.signature-species-hero .signature-kicker {color:#e5c696;font-size:10px;}
+.signature-species-hero h1 {
+  position:relative;font-family:var(--font-display);
+  font-size:clamp(30px,8vw,43px);font-weight:700;line-height:1.1;
+  max-width:340px;margin:12px 0 13px;letter-spacing:-.025em;
+}
+.signature-species-hero p {max-width:330px;color:#c6d8cd;line-height:1.62;font-size:13px;}
+.signature-species-hero-actions {display:flex;align-items:center;flex-wrap:wrap;gap:15px;margin-top:21px;}
+.signature-species-hero-actions button {
+  background:linear-gradient(135deg,#ddc693,#b9975f);
+  color:#10291f;border:1px solid rgba(255,239,195,.3);
+  padding:11px 14px;border-radius:12px;font-size:12px;font-weight:800;
+  box-shadow:0 6px 20px rgba(5,24,18,.22);transition:transform .2s ease;
+}
+.signature-species-hero-actions button:active {transform:scale(.97);}
+.signature-species-hero-actions span {color:#e2c896;font-size:12px;font-weight:650;}
+.species-header {padding:11px 20px 12px;background:#09211b;}
+.species-header__title {font-size:18px;}
+.species-header__sub {color:#d9e1d8;font-size:12px;}
+.signature-species-favorites-filter {padding:5px 12px 10px;}
+.signature-species-favorites-filter button {
+  padding:10px 15px;border-radius:50px;background:var(--surface);
+  color:#a77b40;border:1px solid rgba(181,138,80,.34);font-size:12px;
+  font-weight:750;transition:background .2s,border-color .2s,color .2s;
+}
+.signature-species-favorites-filter button.is-selected {
+  background:linear-gradient(115deg,#ad864d,#d1aa70);color:#17271d;border-color:transparent;
+}
+.species-row {
+  border:1px solid var(--line);
+  border-radius:17px;
+  margin:8px 12px;
+  background:var(--surface);
+  box-shadow:0 8px 24px rgba(9,34,23,.06);
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.species-row:hover {box-shadow:0 11px 27px rgba(9,34,23,.1);}
+.species-row__thumb {
+  background:linear-gradient(145deg,#d0e0d2,#e5dfce);
+  border-radius:12px;overflow:hidden;
+}
+.species-row__thumb img {object-fit:cover;width:100%;height:100%;}
+.species-row__name {font-weight:750;}
+.species-row__rarity.signature-species-category {
+  font-size:10px;background:rgba(45,114,88,.12);color:var(--ink-2);
+  white-space:nowrap;border-radius:999px;padding:5px 8px;
+}
+.signature-species-star {
+  margin-right:4px;min-width:36px;min-height:40px;display:grid;place-items:center;
+  color:#ab8b64;font-size:24px;border-radius:10px;
+  transition:transform .16s,background .16s;
+}
+.signature-species-star.is-on {color:#cfaa67;text-shadow:0 0 14px rgba(222,192,122,.35);}
+.signature-species-star:hover {background:rgba(204,175,122,.1);transform:scale(1.04);}
+.signature-species-star:focus-visible,.signature-species-favorites-filter button:focus-visible{
+  outline:2px solid #e0b778;outline-offset:2px;
+}
+.signature-species-detail-overlay .sheet {
+  background:var(--surface);border-radius:26px 26px 0 0;
+  max-width:min(100%,700px);margin:auto;overflow-y:auto;
+}
+.signature-species-detail-top {
+  position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;
+  z-index:5;padding:14px 17px 11px;
+  background:linear-gradient(115deg,#102c23,#1d4839);
+  border-bottom:1px solid rgba(217,183,126,.27);
+}
+.signature-species-detail-top .signature-kicker {color:#e3c38a;}
+.signature-species-detail-close {
+  width:38px;height:38px;color:#f9eed9;font-size:28px;border-radius:50%;
+  background:rgba(247,255,236,.1);
+}
+.signature-species-detail-sheet .sheet__content {padding:0 16px 30px;}
+.signature-species-detail-hero {margin:0 -16px;position:relative;}
+.signature-species-detail-image {
+  display:grid;place-items:center;width:100%;height:205px;
+  background:
+    radial-gradient(circle at 27% 32%,rgba(124,193,152,.36),transparent 38%),
+    radial-gradient(circle at 76% 72%,rgba(96,171,153,.24),transparent 42%),
+    linear-gradient(130deg,#183c32,#102621);
+  overflow:hidden;color:#d9b681;
+}
+.signature-species-detail-image>span {font-size:66px;opacity:.75;}
+.signature-species-detail-image img {width:100%;height:100%;object-fit:cover;}
+.signature-species-detail-intro {
+  margin:-44px 16px 0;position:relative;padding:22px 19px 20px;
+  background:var(--surface);border:1px solid var(--line);
+  border-radius:20px;box-shadow:0 10px 24px rgba(6,25,20,.10);
+}
+.signature-species-detail-intro .signature-eyebrow {color:#b6955d;font-size:10px;}
+.signature-species-detail-intro h2 {
+  font-family:var(--font-display);font-size:28px;line-height:1.1;
+  color:var(--ink);margin:10px 0 8px;
+}
+.signature-species-detail-intro p {font-size:12px;color:var(--muted);line-height:1.55;}
+.signature-species-detail-actions {display:flex;gap:9px;margin:16px 1px 22px;}
+.signature-species-detail-actions button {
+  flex:1;padding:13px 10px;border-radius:13px;
+  border:1px solid rgba(183,159,98,.33);font-size:13px;font-weight:750;
+  background:var(--surface-2);color:var(--ink);transition:background .2s ease;
+}
+.signature-species-fav.is-on {background:#453921;color:#ffdfab;}
+.signature-species-photo-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;}
+.signature-species-photo-tile {
+  aspect-ratio:1/1.05;border-radius:12px;overflow:hidden;
+  background:#1d3c31;border:1px solid rgba(212,192,144,.25);
+}
+.signature-species-photo-tile img {width:100%;height:100%;object-fit:cover;transition:transform .24s ease;}
+.signature-species-photo-tile:hover img {transform:scale(1.06);}
+.signature-species-empty-photo {color:var(--muted);font-size:13px;line-height:1.55;padding:13px 0;}
+.signature-species-media-link {
+  display:block;margin-top:14px;padding:11px 0;color:var(--brand-mid);
+  font-size:12px;text-align:left;font-weight:800;
+}
+.signature-species-sighting {
+  display:flex;width:100%;align-items:center;justify-content:space-between;
+  padding:14px 8px;border-bottom:1px solid var(--line);color:var(--ink);
+  text-align:left;
+}
+.signature-species-sighting span:first-child {display:grid;gap:3px;}
+.signature-species-sighting strong {font-size:13px;}
+.signature-species-sighting small {font-size:12px;color:var(--muted);}
+.signature-species-sighting span:last-child {font-size:18px;color:#b29264;}
+/* Media Studio v2: functional, layered and photo-first */
+.signature-media-summary {
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;
+  margin:-47px 0 25px;position:relative;z-index:2;
+}
+.signature-media-summary>div {
+  background:var(--surface);border:1px solid var(--line);
+  border-radius:16px;box-shadow:0 9px 24px rgba(7,29,24,.12);
+  padding:17px 7px 14px;text-align:center;
+}
+.signature-media-summary strong {
+  display:block;font-family:var(--font-display);font-size:27px;
+  color:var(--brand-mid);font-weight:700;
+}
+.signature-media-summary span {display:block;margin-top:4px;font-size:11px;color:var(--muted);}
+.signature-media-tools {display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:13px;}
+.signature-media-tools label {display:grid;gap:6px;min-width:0;font-size:11px;color:var(--muted);font-weight:700;}
+.signature-media-tools input,.signature-media-tools select {
+  height:43px;width:100%;border-radius:11px;background:var(--surface);
+  border:1px solid var(--line);color:var(--ink);font-size:12px;
+  padding:0 11px;min-width:0;
+}
+.signature-media-tools input:focus,.signature-media-tools select:focus {
+  outline:2px solid var(--signature-teal);outline-offset:1px;
+}
+.signature-media-feedback:not(:empty) {margin-bottom:14px;padding:10px 13px;
+  background:var(--surface-2);border-left:3px solid #a88b5b;
+  color:var(--ink);border-radius:7px;font-size:12px;}
+.signature-dup-note:not([hidden]) {margin:6px 0 16px;padding:12px 13px;
+  border:1px solid rgba(205,173,109,.25);border-radius:12px;
+  font-size:11px;line-height:1.5;color:var(--ink-2);background:rgba(205,173,109,.07);}
+.signature-media-tile--v2 {border-radius:20px;}
+.signature-media-tile--v2 .signature-media-meta {padding-bottom:10px;}
+.signature-media-actions {
+  display:grid;grid-template-columns:1fr 1fr;gap:5px;
+  padding:0 9px 10px;
+}
+.signature-media-actions button {
+  min-height:37px;border-radius:9px;background:var(--surface-2);
+  border:1px solid var(--line);color:var(--ink-2);
+  font-size:11px;font-weight:700;padding:7px 4px;
+}
+.signature-media-actions button.is-on {
+  border-color:rgba(194,162,91,.5);background:rgba(204,168,94,.15);
+  color:var(--ink);
+}
+.signature-media-actions button span {font-size:13px;color:#b99259;}
+.signature-possible-duplicate {
+  position:absolute;bottom:9px;left:8px;right:8px;
+  background:rgba(21,50,43,.84);color:#f1ddab;
+  padding:6px;border-radius:9px;font-size:9px;line-height:1.2;
+  text-align:center;pointer-events:none;
+}
+.signature-future small {display:block;font-size:11px;color:#b3d2c1;margin-top:10px;line-height:1.5;}
+@media(min-width:760px) {
+  .signature-species-hero {padding:46px 35px;}
+  .signature-media-tools {max-width:650px;}
+  .signature-species-photo-grid {grid-template-columns:repeat(4,minmax(0,1fr));}
+}
+@media(max-width:359px) {
+  .signature-media-tools {grid-template-columns:1fr;}
+  .signature-media-actions {grid-template-columns:1fr;}
+  .signature-species-hero {padding:22px 15px;}
+}
+@media(prefers-reduced-motion: reduce) {
+  .signature-species-hero::before {animation:none!important;}
+  .signature-species-star,.signature-species-photo-tile img {transition:none!important;}
+}
