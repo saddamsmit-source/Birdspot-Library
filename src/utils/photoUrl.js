@@ -30,7 +30,8 @@ export function getPhotoUrl(photo) {
  * @param {string|null} url
  */
 export function revokePhotoUrl(url) {
-  if (url && url.startsWith('blob:')) {
+  if (typeof url === 'string' && url.startsWith('blob:') &&
+      typeof URL.revokeObjectURL === 'function') {
     URL.revokeObjectURL(url);
   }
 }

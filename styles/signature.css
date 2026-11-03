@@ -1,0 +1,303 @@
+/* Birdspot Wildlife Expedition — Signature Edition
+   Scoped premium presentation layer. Existing storage, routes and controls remain canonical.
+   All decorative movement honors prefers-reduced-motion. */
+:root {
+  --signature-night: #0d1915;
+  --signature-forest: #153a2d;
+  --signature-teal: #41c6b4;
+  --signature-gold: #d9b77e;
+  --signature-cream: #f3eee3;
+  --signature-ink: #132a23;
+  --signature-radius: 24px;
+  --signature-motion: 420ms;
+}
+#app {
+  background: radial-gradient(ellipse at 30% -15%, rgba(65,198,180,.11), transparent 58%), var(--bg);
+}
+#main-view { scroll-behavior: smooth; }
+.screen.active { animation: signature-enter var(--signature-motion) cubic-bezier(.18,.65,.25,1) both; }
+@keyframes signature-enter {
+  from { opacity: .55; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes signature-drift { 0%,100% {transform:translate3d(0,0,0) scale(1)} 50% {transform:translate3d(-9px,8px,0) scale(1.05)} }
+@keyframes signature-shimmer { to {transform:translateX(120%)} }
+@keyframes signature-breathe { 50% { opacity:.65; transform:scale(1.08) } }
+.app-nav {
+  background: linear-gradient(108deg,#0a1914,#163729 60%,#102820);
+  border-top: 1px solid rgba(225,200,147,.18);
+  box-shadow: 0 -8px 36px rgba(4,24,18,.24);
+}
+.nav-item.active { color: #ebcf99; text-shadow:0 0 16px rgba(217,183,126,.2); }
+.nav-item.active svg {filter: drop-shadow(0 0 5px rgba(217,183,126,.35));}
+.fab-nav {
+  background: linear-gradient(145deg,#ddc18b,#bb9962);
+  color: #102a20;
+  box-shadow: 0 4px 18px rgba(207,167,98,.42),inset 0 1px 0 rgba(255,255,255,.55);
+}
+.fab-nav:active {transform:scale(.95)}
+.page-header {
+  background: linear-gradient(123deg,#0d261c,#184232);
+  box-shadow: inset 0 -1px rgba(223,190,133,.13);
+}
+.app-header {
+  background: linear-gradient(105deg,#10261e,#1b4434);
+  box-shadow: inset 0 -1px rgba(217,183,126,.13);
+}
+.app-header__title { letter-spacing:.01em; }
+.slideshow {
+  min-height: 212px;
+  aspect-ratio: 15/10;
+  background:radial-gradient(ellipse at 75% 20%,rgba(64,140,117,.45),transparent 52%),
+    linear-gradient(135deg,#142f28,#0b1a15 70%);
+  isolation:isolate;
+}
+.slideshow::before {
+  content:"";
+  position:absolute; inset:0; z-index:1; pointer-events:none;
+  background:linear-gradient(180deg,rgba(6,18,13,.12),transparent 35%,rgba(6,18,13,.55));
+}
+.slideshow::after {
+  content:"BIRDSPOT  /  EXPEDITION";
+  position:absolute; left:20px; top:18px; z-index:2;
+  color:rgba(255,238,202,.83);font-size:9px;letter-spacing:.21em;font-weight:750;
+  pointer-events:none;
+}
+.slideshow__empty {
+  color:#f0e7d8; z-index:2;
+  background:
+    radial-gradient(circle at 35% 32%,rgba(93,170,132,.21),transparent 40%),
+    radial-gradient(circle at 70% 68%,rgba(49,143,143,.18),transparent 44%);
+}
+.slideshow__empty::after {
+  content:"";position:absolute;top:10%;right:-10%;width:200px;height:200px;
+  border:1px solid rgba(218,187,129,.22);border-radius:50%;
+  box-shadow:0 0 0 36px rgba(218,187,129,.055),0 0 0 70px rgba(218,187,129,.035);
+  animation:signature-drift 11s ease-in-out infinite;pointer-events:none;
+}
+.slideshow__empty p { font-size:14px;max-width:280px;line-height:1.55;z-index:1;color:#e6e5d9; }
+.slideshow__slide { transition:opacity 900ms ease; }
+.slideshow__slide.active { animation: signature-kenburns 16s linear both; }
+@keyframes signature-kenburns { from{background-size:auto 110%} to{background-size:auto 123%} }
+.slideshow__caption {
+  z-index:2; padding:20px 22px 28px; font-family:var(--font-display);font-size:21px;
+  background:linear-gradient(transparent,rgba(5,17,12,.8));
+}
+.slideshow__dots {z-index:3;bottom:10px}
+.slideshow__dot.active { background:var(--signature-gold); box-shadow:0 0 9px rgba(217,183,126,.6); }
+.signature-home-intro {
+  position:relative;overflow:hidden;padding:22px 20px 19px;
+  background:linear-gradient(122deg,#0d241b,#1c4a39);
+  color:#f6f1e8;border-bottom:1px solid rgba(218,187,129,.18);
+}
+.signature-home-intro::before {
+  content:"";position:absolute;right:-25px;top:-60px;width:190px;height:190px;
+  background:radial-gradient(circle,rgba(77,211,190,.19),transparent 70%);
+  animation:signature-breathe 7s ease-in-out infinite;pointer-events:none;
+}
+.signature-home-intro h1 {
+  font-family:var(--font-display); font-size:clamp(25px,7vw,36px); line-height:1.13;
+  letter-spacing:-.025em;font-weight:700;max-width:370px;margin:6px 0 10px;
+}
+.signature-home-intro p { font-size:13px; line-height:1.55;color:#c4d7cb;max-width:345px; }
+.signature-kicker,.signature-eyebrow {
+  display:block;font-size:10px;font-weight:760;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--signature-gold);
+}
+.signature-home-links {display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px;}
+.signature-home-link {
+  position:relative;display:flex;gap:10px;align-items:center;justify-content:space-between;
+  padding:13px 14px;border:1px solid rgba(221,199,153,.25);border-radius:17px;
+  background:rgba(238,245,228,.075);color:#f2e8d4;text-align:left;font-weight:650;font-size:12px;
+  transition:transform .18s,background .18s,border-color .18s;
+  backdrop-filter:blur(8px);
+}
+.signature-home-link:hover,.signature-home-link:focus-visible {
+  background:rgba(238,245,228,.16);border-color:rgba(221,199,153,.55);transform:translateY(-2px);
+}
+.signature-home-link span:last-child {color:#d9b77e;font-size:17px}
+.stats-row {padding-top:12px;}
+.stat-tile {border:1px solid rgba(129,178,144,.19);background:var(--surface);
+  box-shadow:0 6px 24px rgba(12,31,23,.08);transition:transform .2s,box-shadow .2s;}
+.stat-tile:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(12,31,23,.12);}
+.dash-section {position:relative;}
+.section-head__title {letter-spacing:-.01em}
+.recent-item,.species-row,.sight-card {
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.recent-item:hover,.species-row:hover,.sight-card:hover {transform:translateY(-2px);}
+.signature-screen {min-height:100%;background:var(--bg);}
+.signature-page-hero {
+  position:relative;isolation:isolate;overflow:hidden;padding:38px 22px 50px;
+  min-height:248px;background:linear-gradient(128deg,#0a211c,#225041 66%,#143329);color:#f7f0e1;
+}
+.signature-page-hero::before {
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:radial-gradient(ellipse at 75% 30%,rgba(61,207,184,.24),transparent 52%),
+    linear-gradient(135deg,transparent,rgba(2,12,11,.45));
+}
+.signature-page-hero--media {
+  background:linear-gradient(130deg,#102b29,#214e46 58%,#101c21);
+}
+.signature-page-hero--journal {
+  background:linear-gradient(130deg,#2c3424,#314b35 60%,#152722);
+}
+.signature-orbit {
+  position:absolute;right:-45px;top:-60px;width:215px;height:215px;border-radius:50%;
+  border:1px solid rgba(239,209,160,.3);
+  box-shadow:0 0 0 28px rgba(239,209,160,.06),0 0 0 56px rgba(239,209,160,.035);
+  animation:signature-drift 12s ease-in-out infinite;pointer-events:none;
+}
+.signature-page-hero h1 {font-family:var(--font-display);font-size:clamp(31px,9vw,44px);line-height:1.1;
+  max-width:350px;margin:14px 0 14px;position:relative;z-index:1;}
+.signature-page-hero p {max-width:330px;font-size:14px;line-height:1.6;color:#d7ded2;position:relative;z-index:1;}
+.signature-content {padding:24px 18px 40px;max-width:920px;margin:auto;}
+.signature-section-head {display:flex;align-items:end;justify-content:space-between;gap:10px;margin:0 0 18px;}
+.signature-section-head h2 {font-family:var(--font-display);font-size:24px;line-height:1.12;margin-top:5px;}
+.signature-section-head .signature-eyebrow {color:#b58a55;}
+.signature-count {font-size:12px;color:var(--muted);white-space:nowrap;}
+.signature-filterbar {display:flex;gap:8px;overflow-x:auto;margin-bottom:18px;padding-bottom:3px;}
+.signature-filter {padding:10px 16px;border-radius:999px;background:var(--surface);
+  border:1px solid var(--line);color:var(--ink-2);font-size:12px;font-weight:700;transition:all .2s;}
+.signature-filter.is-selected{background:#183a2c;color:#fff;border-color:#183a2c;}
+.signature-media-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+.signature-media-tile {background:var(--surface);border-radius:19px;overflow:hidden;
+  border:1px solid var(--line);box-shadow:0 7px 20px rgba(9,30,20,.07);}
+.signature-media-frame {position:relative;aspect-ratio:4/5;overflow:hidden;background:#18392f;}
+.signature-media-frame img,.signature-media-frame video {width:100%;height:100%;object-fit:cover;}
+.signature-media-open {width:100%;height:100%;display:block;}
+.signature-media-frame img {transition:transform .55s ease;}
+.signature-media-open:hover img {transform:scale(1.045);}
+.signature-media-type {position:absolute;pointer-events:none;top:10px;left:10px;
+  background:rgba(9,26,21,.7);backdrop-filter:blur(8px);padding:5px 8px;color:#f1d4a2;
+  font-weight:700;letter-spacing:.12em;font-size:9px;border-radius:99px;}
+.signature-media-meta {padding:12px 12px 14px;display:grid;gap:5px;}
+.signature-media-meta strong {font-size:13px;line-height:1.25;color:var(--ink);}
+.signature-media-meta span {font-size:11px;line-height:1.4;color:var(--muted);}
+.signature-empty {grid-column:1/-1;background:var(--surface);border:1px dashed var(--line);
+  padding:42px 26px;border-radius:22px;text-align:center;color:var(--muted);line-height:1.6;}
+.signature-empty>span {display:block;color:#ba9463;font-size:36px;margin-bottom:6px;}
+.signature-empty h3 {color:var(--ink);font-family:var(--font-display);font-size:22px;margin-bottom:10px;}
+.signature-more {display:block;margin:24px auto 0;padding:12px 22px;border-radius:99px;
+  border:1px solid var(--line);background:var(--surface);font-weight:700;color:var(--ink);}
+.signature-more[hidden] {display:none;}
+.signature-future {margin:30px 0 0;padding:26px 24px;border-radius:23px;color:#f9f0dc;
+  background:linear-gradient(130deg,#14382e,#0f2427);border:1px solid rgba(217,183,126,.28);}
+.signature-future h3 {font-family:var(--font-display);font-size:24px;margin:12px 0;}
+.signature-future p {font-size:13px;color:#cadbd1;line-height:1.65;}
+.signature-lightbox {position:fixed;inset:0;z-index:1500;display:grid;place-items:center;
+  background:rgba(4,12,11,.95);padding:58px 14px 26px;}
+.signature-lightbox img {max-width:100%;max-height:100%;object-fit:contain;border-radius:8px;}
+.signature-lightbox-close {position:absolute;top:14px;right:18px;color:#fff;font-size:38px;width:50px;height:50px;}
+.signature-milestones {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0 0 30px;}
+.signature-milestone {border:1px solid var(--line);padding:16px 8px 14px;text-align:center;
+  border-radius:17px;background:var(--surface);box-shadow:0 5px 18px rgba(13,34,21,.07);}
+.signature-milestone strong {display:block;font-family:var(--font-display);font-size:27px;color:var(--brand-mid);}
+.signature-milestone span {display:block;font-size:10px;color:var(--muted);margin-top:6px;line-height:1.3;}
+.signature-year-label {font-size:11px;color:var(--muted);display:flex;align-items:center;gap:6px;}
+.signature-year-label select {border:1px solid var(--line);border-radius:9px;padding:8px;
+  background:var(--surface);color:var(--ink);max-width:120px;}
+.signature-timeline {position:relative;padding-left:17px;}
+.signature-timeline::before {content:"";position:absolute;left:2px;top:12px;bottom:14px;width:1px;
+  background:linear-gradient(#d7b679,rgba(215,182,121,.15));}
+.signature-journal-day {position:relative;margin-bottom:28px;}
+.signature-journal-day::before {content:"";position:absolute;left:-20px;top:8px;width:10px;height:10px;
+  border-radius:50%;background:#caad77;box-shadow:0 0 0 5px rgba(202,173,119,.18);}
+.signature-journal-date {font-family:var(--font-display);font-size:20px;color:var(--ink);margin:0 0 12px;}
+.signature-journal-entry {display:flex;align-items:center;width:100%;gap:12px;text-align:left;
+  border-radius:16px;background:var(--surface);padding:15px;margin-bottom:8px;color:var(--ink);
+  border:1px solid var(--line);box-shadow:0 5px 16px rgba(11,32,25,.05);}
+.signature-journal-entry:hover{border-color:#cfaf75;}
+.signature-journal-mark {font-size:19px;color:#c19a60;}
+.signature-journal-copy {display:grid;gap:4px;flex:1;min-width:0;}
+.signature-journal-copy strong {font-size:14px;}
+.signature-journal-copy small,.signature-journal-copy em {font-size:12px;color:var(--muted);font-style:normal;line-height:1.4;}
+.signature-journal-arrow{font-size:18px;color:#b38c58;}
+/* Explorer overlays are outside Leaflet's managed tiles and never cover its controls. */
+.signature-explorer-strip {position:absolute;z-index:380;left:14px;right:14px;bottom:16px;
+  padding:16px 17px;border-radius:20px;background:linear-gradient(126deg,rgba(10,37,29,.94),rgba(18,68,55,.91));
+  color:#f5eedc;backdrop-filter:blur(14px);border:1px solid rgba(219,189,136,.31);
+  box-shadow:0 12px 35px rgba(8,25,20,.3);pointer-events:auto;}
+.signature-explorer-strip .signature-kicker {font-size:9px;}
+.signature-explorer-strip h2 {font-family:var(--font-display);font-size:22px;margin:6px 0;}
+.signature-explorer-strip p {font-size:12px;line-height:1.5;color:#d3dfd0;max-width:310px;}
+.signature-explorer-open {display:inline-flex;align-items:center;gap:6px;color:#f3d7a4;
+  font-weight:700;font-size:12px;margin-top:12px;padding:7px 0;}
+.map-toolbar {background:linear-gradient(180deg,rgba(10,29,22,.94),rgba(10,29,22,.10));
+  border-radius:0 0 15px 15px;padding-top:16px;}
+.map-toolbar__title {color:#f7f2e3;font-family:var(--font-display);font-size:23px;}
+.map-toolbar__count {background:rgba(10,30,22,.72);color:#f4dfb3;border-color:rgba(219,189,136,.3);}
+:root[data-theme="dark"] .map-toolbar {background:linear-gradient(180deg,rgba(10,29,22,.94),rgba(10,29,22,.10));}
+@media(prefers-color-scheme:dark) {
+  :root:not([data-theme="light"]) .map-toolbar {background:linear-gradient(180deg,rgba(10,29,22,.94),rgba(10,29,22,.10));}
+}
+.map-screen .bird-pin{box-shadow:0 0 0 3px rgba(215,181,123,.18);}
+@media(min-width:700px) {
+  .signature-content{padding:32px;}
+  .signature-media-grid {grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;}
+  .signature-explorer-strip {left:26px;right:auto;width:340px;bottom:28px;}
+}
+@media(max-width:359px) {
+  .signature-home-links{grid-template-columns:1fr;}
+  .signature-home-intro{padding:20px 15px;}
+  .signature-page-hero {padding-left:17px;}
+}
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after{scroll-behavior:auto!important;}
+  .screen.active,.slideshow__slide.active,.signature-orbit,.signature-home-intro::before,.slideshow__empty::after{
+    animation:none!important;
+  }
+  .signature-media-frame img,.recent-item,.species-row,.sight-card,.stat-tile,.signature-home-link{
+    transition:none!important;
+  }
+}
+
+/* Map route renders into a content-height wrapper. Explicit viewport space is
+   required: percentage height otherwise collapses and its Explorer CTA sits
+   outside the visible area, as discovered by browser QA. */
+.map-screen {
+  height: calc(100dvh - var(--nav-h) - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
+  min-height: 380px;
+}
+
+/* Explorer map must remain a designed surface while network tiles load. These
+   abstract contours are decorative, NOT geographic location claims. */
+.map-screen {
+  overflow: hidden; /* Closed bottom sheet must not appear above the nav */
+  background: #102b24;
+}
+#leafletMap {
+  position: relative;
+  background:
+    radial-gradient(ellipse at 72% 33%, rgba(53,144,119,.44), transparent 43%),
+    radial-gradient(ellipse at 25% 72%, rgba(33,105,95,.35), transparent 55%),
+    repeating-radial-gradient(ellipse at 72% 38%,
+      transparent 0, transparent 28px,
+      rgba(183,208,168,.14) 29px, transparent 31px, transparent 60px),
+    linear-gradient(145deg,#163d35,#0a2220 76%);
+}
+.map-screen.signature-map-loading #leafletMap::after {
+  content: "KAARTLAAG WORDT GELADEN";
+  position:absolute;left:50%;top:29%;transform:translateX(-50%);
+  z-index:2;white-space:nowrap;border-radius:999px;
+  padding:10px 14px;border:1px solid rgba(218,184,122,.22);
+  color:#eadab9;background:rgba(13,40,32,.72);font-size:10px;font-weight:750;
+  letter-spacing:.12em;pointer-events:none;
+}
+.map-screen .map-no-gps {
+  inset: 9% 0 24%;
+  color:rgba(232,230,207,.8);
+}
+.map-screen .map-no-gps p {
+  background:rgba(13,37,31,.68);
+  border:1px solid rgba(207,182,126,.2);
+  padding:15px 20px;border-radius:17px;
+  color:#e9eadb;
+  max-width:280px;
+}
+.map-screen .map-offline-notice {
+  position:absolute;left:50%;top:18%;transform:translateX(-50%);
+  z-index:3;width:max-content;max-width:85%;padding:10px 14px;
+  border-radius:12px;background:rgba(10,35,28,.8);color:#f1dfbb;
+  text-align:center;font-size:12px;
+}

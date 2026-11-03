@@ -171,8 +171,7 @@ function _renderDetailBody(s, photos) {
             ? `<video src="${escHtml(url)}" class="detail-media__img" muted playsinline></video>
                <div class="detail-media__badge">▶</div>`
             : `<img src="${escHtml(url)}" class="detail-media__img"
-                 alt="${escHtml(p.filename || '')}"
-                 onload="URL.revokeObjectURL(this.src)">`}
+                 alt="${escHtml(p.filename || '')}">`}
         </div>`;
       }).join('')}
     </div>` : ''}`;

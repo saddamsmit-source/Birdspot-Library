@@ -11,6 +11,7 @@
 import { getSightings }     from '../../data/sightings.js';
 import { SPECIES }          from '../../data/species.js';
 import { getPhoto }         from '../../data/db.js';
+import { getPhotoUrl, revokePhotoUrl } from '../../utils/photoUrl.js';
 import { openDetailSheet }  from './detailSheet.js';
 import { escHtml }          from '../../utils/html.js';
 
@@ -130,11 +131,20 @@ async function loadThumbnails(listEl, sightings) {
     try {
       const photo = await getPhoto(s.photoIds[0]);
       if (!photo?.blob) continue;
-      const url    = URL.createObjectURL(photo.blob);
-      const thumbEl = listEl.querySelector(`.sight-card__thumb[data-thumb="${s.id}"]`);
-      if (!thumbEl) { URL.revokeObjectURL(url); continue; }
-      thumbEl.innerHTML = `<img src="${escHtml(url)}" alt=""
-        onload="URL.revokeObjectURL(this.src)">`;
+      const url = getPhotoUrl(photo);
+      if (!url) continue;
+      const thumbEl = listEl.isConnected
+        ? listEl.querySelector(`.sight-card__thumb[data-thumb="${s.id}"]`)
+        : null;
+      if (!thumbEl) { revokePhotoUrl(url); continue; }
+      // Attach events before assigning src; no fragile inline onload handler.
+      const img = document.createElement('img');
+      img.alt = '';
+      const release = () => revokePhotoUrl(url);
+      img.addEventListener('load', release, { once: true });
+      img.addEventListener('error', release, { once: true });
+      img.src = url;
+      thumbEl.replaceChildren(img);
     } catch (_) {}
   }
 }
