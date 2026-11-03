@@ -24,3 +24,10 @@ jobs:
           python -m playwright install --with-deps chromium
       - name: Phase 2 browser regressions
         run: python tests/test_signature_phase2.py
+      - name: Upload Species and Media screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase2-species-media-screenshots
+          path: tests/screenshots/phase2_*.png
+          if-no-files-found: ignore

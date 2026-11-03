@@ -1,11 +1,17 @@
 """Birdspot Phase 2 smoke checks: independent browser profile."""
 import http.server
+import tempfile
+import zipfile
+import json
+import base64
 import socketserver
 import threading
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parents[1]
+SHOTS = ROOT / "tests" / "screenshots"
+SHOTS.mkdir(parents=True,exist_ok=True)
 
 class Handler(http.server.SimpleHTTPRequestHandler):
     def __init__(self,*args,**kwargs):
@@ -53,6 +59,7 @@ def main():
             p.locator(".signature-species-detail-overlay").wait_for()
             p.locator(".signature-species-photo-tile").first.wait_for(timeout=8000)
             assert "Stadsduif" in p.locator(".signature-species-detail-intro").inner_text()
+            p.screenshot(path=str(SHOTS/"phase2_species_detail_390.png"),full_page=True,animations="disabled")
             p.locator(".signature-species-detail-close").click()
             p.locator('.nav-item[data-route="home"]').click()
             p.locator('[data-signature-route="media"]').click()
@@ -62,9 +69,40 @@ def main():
             p.locator('[data-media-film="test-media-1"]').click()
             assert p.evaluate("() => JSON.parse(localStorage.getItem('birdspot-favorite-media')).includes('test-media-1')")
             assert p.evaluate("() => JSON.parse(localStorage.getItem('birdspot-film-selection')).includes('test-media-1')")
+            p.screenshot(path=str(SHOTS/"phase2_media_390.png"),full_page=True,animations="disabled")
             assert p.locator("#mediaSearch").count()==1
             assert p.locator('[data-media-filter="favorites"]').count()==1
             assert p.locator('[data-media-filter="film"]').count()==1
+            with tempfile.TemporaryDirectory() as work:
+                with p.expect_download(timeout=18000) as out:
+                    p.evaluate("""async () => {
+                        const b=await import('/src/storage/backup.js');
+                        await b.exportBackup();
+                    }""")
+                path=Path(work)/"birdspot.zip"
+                out.value.save_as(str(path))
+                with zipfile.ZipFile(path) as package:
+                    payload=json.loads(package.read("gegevens.json"))
+                assert "sp001" in payload["collections"]["species"]
+                assert "test-media-1" in payload["collections"]["media"]
+                assert "test-media-1" in payload["collections"]["film"]
+                assert payload["sightings"][0]["id"]=="test-sighting-1"
+                p.evaluate("""() => {
+                    localStorage.removeItem('birdspot-favorite-species');
+                    localStorage.removeItem('birdspot-favorite-media');
+                    localStorage.removeItem('birdspot-film-selection');
+                }""")
+                encoded=base64.b64encode(path.read_bytes()).decode("ascii")
+                p.evaluate("""async encoded => {
+                    const bytes=Uint8Array.from(atob(encoded),c=>c.charCodeAt(0));
+                    const file=new File([bytes],'birdspot.zip',{type:'application/zip'});
+                    const b=await import('/src/storage/backup.js');
+                    await b.importBackup(file);
+                }""",encoded)
+                for key,item in [('birdspot-favorite-species','sp001'),
+                                 ('birdspot-favorite-media','test-media-1'),
+                                 ('birdspot-film-selection','test-media-1')]:
+                    assert p.evaluate("(pair)=>JSON.parse(localStorage.getItem(pair[0])||'[]').includes(pair[1])",[key,item]),key
             for width in (360,390,430):
                 p.set_viewport_size({"width":width,"height":844})
                 assert p.locator(".signature-media-v2").is_visible()
