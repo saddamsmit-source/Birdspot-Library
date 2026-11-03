@@ -259,3 +259,45 @@
   height: calc(100dvh - var(--nav-h) - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
   min-height: 380px;
 }
+
+/* Explorer map must remain a designed surface while network tiles load. These
+   abstract contours are decorative, NOT geographic location claims. */
+.map-screen {
+  overflow: hidden; /* Closed bottom sheet must not appear above the nav */
+  background: #102b24;
+}
+#leafletMap {
+  position: relative;
+  background:
+    radial-gradient(ellipse at 72% 33%, rgba(53,144,119,.44), transparent 43%),
+    radial-gradient(ellipse at 25% 72%, rgba(33,105,95,.35), transparent 55%),
+    repeating-radial-gradient(ellipse at 72% 38%,
+      transparent 0, transparent 28px,
+      rgba(183,208,168,.14) 29px, transparent 31px, transparent 60px),
+    linear-gradient(145deg,#163d35,#0a2220 76%);
+}
+.map-screen.signature-map-loading #leafletMap::after {
+  content: "KAARTLAAG WORDT GELADEN";
+  position:absolute;left:50%;top:29%;transform:translateX(-50%);
+  z-index:2;white-space:nowrap;border-radius:999px;
+  padding:10px 14px;border:1px solid rgba(218,184,122,.22);
+  color:#eadab9;background:rgba(13,40,32,.72);font-size:10px;font-weight:750;
+  letter-spacing:.12em;pointer-events:none;
+}
+.map-screen .map-no-gps {
+  inset: 9% 0 24%;
+  color:rgba(232,230,207,.8);
+}
+.map-screen .map-no-gps p {
+  background:rgba(13,37,31,.68);
+  border:1px solid rgba(207,182,126,.2);
+  padding:15px 20px;border-radius:17px;
+  color:#e9eadb;
+  max-width:280px;
+}
+.map-screen .map-offline-notice {
+  position:absolute;left:50%;top:18%;transform:translateX(-50%);
+  z-index:3;width:max-content;max-width:85%;padding:10px 14px;
+  border-radius:12px;background:rgba(10,35,28,.8);color:#f1dfbb;
+  text-align:center;font-size:12px;
+}

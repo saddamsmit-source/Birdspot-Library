@@ -25,9 +25,9 @@ let _mapInstance  = null;   // L.map referentie (hergebruikt bij terugkeren)
 let _clusterLayer = null;   // MarkerCluster laag
 
 // ── Entry point ────────────────────────────────────────────────
-export async function renderMap(el) {
+export function renderMap(el) {
   el.innerHTML = `
-    <div class="map-screen" id="mapScreen">
+    <div class="map-screen signature-map-loading" id="mapScreen">
       <div id="leafletMap"></div>
 
       <div class="map-toolbar">
@@ -72,18 +72,49 @@ export async function renderMap(el) {
     import("../../app.js").then(({ navigate }) => navigate("sightings"));
   });
 
-  // Leaflet is CDN-only; als het CDN niet bereikbaar is, tonen we toch
-  // de teller, lege state en de locate-knop (zonder kaart).
-  let leafletOk = false;
-  try {
-    await ensureLeaflet();
-    leafletOk = true;
-  } catch (_) {
-    // CDN niet bereikbaar — graceful degradation
-  }
+  // De kaart blijft functioneel bij traag/offline CDN; geen oneindige spinner.
+  // Synchronisch cleanup-contract voor de bestaande router.
+  let destroyed = false;
+  const load = async () => {
+    let leafletOk = false;
+    try {
+      await Promise.race([
+        ensureLeaflet(),
+        new Promise((_, reject) => setTimeout(() => reject(new Error('Map CDN timeout')), 6500)),
+      ]);
+      leafletOk = true;
+    } catch (_) {
+      // Graceful degradation: eigen locaties/empty states blijven toegankelijk.
+    }
+    if (destroyed || !el.isConnected) return;
+    try {
+      const sightings = await getSightings();
+      if (destroyed || !el.isConnected) return;
+      initMap(el, sightings, leafletOk);
+    } finally {
+      if (!destroyed && el.isConnected) {
+        el.querySelector('#mapScreen')?.classList.remove('signature-map-loading');
+      }
+    }
+  };
+  load().catch(() => {
+    if (!destroyed && el.isConnected) {
+      el.querySelector('#mapScreen')?.classList.remove('signature-map-loading');
+      const notice = document.createElement('p');
+      notice.className = 'map-offline-notice';
+      notice.textContent = 'Kaartgegevens konden niet geladen worden';
+      el.querySelector('#leafletMap')?.appendChild(notice);
+    }
+  });
 
-  const sightings = await getSightings();
-  initMap(el, sightings, leafletOk);
+  return () => {
+    destroyed = true;
+    if (_mapInstance) {
+      _mapInstance.remove();
+      _mapInstance = null;
+      _clusterLayer = null;
+    }
+  };
 }
 
 // ── Leaflet lazy loader ────────────────────────────────────────
@@ -168,7 +199,7 @@ function initMap(screenEl, sightings, leafletOk = true) {
 
   // Zonder Leaflet: geen kaart, wel teller + lege state + knop
   if (!leafletOk) {
-    mapEl.style.background = 'var(--surface-2, #f2f4f6)';
+    mapEl.classList.add('signature-map-offline');
     const notice = document.createElement('div');
     notice.className = 'map-offline-notice';
     notice.textContent = 'Kaart niet beschikbaar (offline)';
