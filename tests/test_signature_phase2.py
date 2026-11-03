@@ -55,6 +55,8 @@ def main():
             assert p.evaluate("() => JSON.parse(localStorage.getItem('birdspot-favorite-species')).includes('sp001')")
             p.locator("#speciesOnlyFavorites").click()
             assert p.locator(".species-row").count()==1
+            p.evaluate("() => document.getElementById('main-view').scrollTo(0,0)")
+            p.screenshot(path=str(SHOTS/"phase2_species_overview_390.png"),full_page=True,animations="disabled")
             p.locator(".species-row[data-id='sp001'] .species-row__body").click()
             p.locator(".signature-species-detail-overlay").wait_for()
             p.locator(".signature-species-photo-tile").first.wait_for(timeout=8000)
@@ -69,6 +71,7 @@ def main():
             p.locator('[data-media-film="test-media-1"]').click()
             assert p.evaluate("() => JSON.parse(localStorage.getItem('birdspot-favorite-media')).includes('test-media-1')")
             assert p.evaluate("() => JSON.parse(localStorage.getItem('birdspot-film-selection')).includes('test-media-1')")
+            p.evaluate("() => document.getElementById('main-view').scrollTo(0,0)")
             p.screenshot(path=str(SHOTS/"phase2_media_390.png"),full_page=True,animations="disabled")
             assert p.locator("#mediaSearch").count()==1
             assert p.locator('[data-media-filter="favorites"]').count()==1
