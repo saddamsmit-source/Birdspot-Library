@@ -31,6 +31,13 @@ export function renderHome(el) {
   const ctx = { destroyed: false };
 
   el.innerHTML = buildSkeleton();
+  // New signature shortcuts use existing router; no parallel navigation state.
+  const onSignatureClick = e => {
+    const button = e.target.closest('[data-signature-route]');
+    if (!button) return;
+    import('../../app.js').then(({ navigate }) => navigate(button.dataset.signatureRoute));
+  };
+  el.addEventListener('click', onSignatureClick);
   initSlideshow(el, ctx);
   loadStats(el, ctx);
   loadSunInfo(el, ctx);
@@ -41,6 +48,7 @@ export function renderHome(el) {
 
   return function cleanup() {
     ctx.destroyed = true;
+    el.removeEventListener('click', onSignatureClick);
     // Stop timer
     if (_slideshowTimer !== null) {
       clearInterval(_slideshowTimer);
@@ -101,6 +109,18 @@ function buildSkeleton() {
       </div>
       <div class="slideshow__dots" id="slideshowDots"></div>
     </div>
+
+    <section class="signature-home-intro" aria-label="Expedition dashboard">
+      <span class="signature-kicker">BIRDSPOT / SIGNATURE EXPEDITION</span>
+      <h1>Elke vogel vertelt een verhaal.</h1>
+      <p>Jouw waarnemingen, favoriete momenten en bijzondere plekken — verzameld in één persoonlijke ontdekkingstocht.</p>
+      <div class="signature-home-links">
+        <button data-signature-route="map" class="signature-home-link" type="button">⌖ &nbsp; Explorer Map <span aria-hidden="true">↗</span></button>
+        <button data-signature-route="media" class="signature-home-link" type="button">▣ &nbsp; Media Studio <span aria-hidden="true">↗</span></button>
+        <button data-signature-route="journal" class="signature-home-link" type="button">✦ &nbsp; Birding Journal <span aria-hidden="true">↗</span></button>
+        <button data-signature-route="species" class="signature-home-link" type="button">◈ &nbsp; Soorten ontdekken <span aria-hidden="true">↗</span></button>
+      </div>
+    </section>
 
     <!-- Stat tiles — 4 kolommen -->
     <div class="stats-row" id="statsRow">

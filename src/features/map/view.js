@@ -42,6 +42,14 @@ export async function renderMap(el) {
         </svg>
       </button>
 
+      <!-- Signature Explorer card: deliberately separate from Leaflet controls -->
+      <aside class="signature-explorer-strip" aria-label="Bird Explorer overzicht">
+        <span class="signature-kicker">EXPEDITION / DISCOVER</span>
+        <h2>Bird Explorer Map</h2>
+        <p>Ontdek jouw eigen vogelplekken. Tik op een marker voor een waarneming of open je volledige logboek.</p>
+        <button class="signature-explorer-open" id="explorerSightingsBtn" type="button">Mijn waarnemingen bekijken <span aria-hidden="true">↗</span></button>
+      </aside>
+
       <div class="sheet-overlay" id="mapOverlay"></div>
 
       <div class="bottom-sheet" id="mapDetailSheet">
@@ -59,6 +67,10 @@ export async function renderMap(el) {
         </div>
       </div>
     </div>`;
+
+  el.querySelector("#explorerSightingsBtn")?.addEventListener("click", () => {
+    import("../../app.js").then(({ navigate }) => navigate("sightings"));
+  });
 
   // Leaflet is CDN-only; als het CDN niet bereikbaar is, tonen we toch
   // de teller, lege state en de locate-knop (zonder kaart).

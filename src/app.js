@@ -14,6 +14,8 @@ import { renderSpecies }    from './features/species/view.js';
 import { renderSightings }  from './features/sightings/view.js';
 import { renderMap }        from './features/map/view.js';
 import { renderProfile }    from './features/profile/view.js';
+import { renderMedia }      from './features/media/view.js';
+import { renderJournal }    from './features/journal/view.js';
 import { openAddSheet }     from './features/sightings/addSheet.js';
 
 // ── Routes ────────────────────────────────────────────────
@@ -23,6 +25,8 @@ const ROUTES = {
   sightings: { render: renderSightings, fab: true  },
   map:       { render: renderMap,       fab: true  },
   profile:   { render: renderProfile,   fab: false },
+  media:     { render: renderMedia,     fab: true  },
+  journal:   { render: renderJournal,   fab: true  },
 };
 
 let currentRoute  = null;
