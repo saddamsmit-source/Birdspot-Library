@@ -65,6 +65,40 @@ def main():
               localStorage.getItem('birdspot-sightings')).sightings[0].id
             """) == "signature-qa-1"
 
+            # IndexedDB media test: one real Blob linked to canonical sighting.
+            page.evaluate("""async () => {
+              const db = await new Promise((resolve,reject) => {
+                const req = indexedDB.open('birdspot-library',1);
+                req.onsuccess = () => resolve(req.result);
+                req.onerror = () => reject(req.error);
+              });
+              const picture = '<svg xmlns="http://www.w3.org/2000/svg" width="100" height="80"><rect width="100" height="80" fill="green"/></svg>';
+              const blob = new Blob([picture], {type:'image/svg+xml'});
+              await new Promise((resolve,reject) => {
+                const tx = db.transaction('photos','readwrite');
+                tx.objectStore('photos').put({
+                  id:'signature-photo-1',sightingId:'signature-qa-1',
+                  speciesId:'parus-major',type:'image/svg+xml',blob,
+                  filename:'test.svg'
+                });
+                tx.oncomplete = resolve; tx.onerror = () => reject(tx.error);
+              });
+              db.close();
+              const store = JSON.parse(localStorage.getItem('birdspot-sightings'));
+              store.sightings[0].photoIds = ['signature-photo-1'];
+              localStorage.setItem('birdspot-sightings', JSON.stringify(store));
+            }""")
+            page.locator('.nav-item[data-route="home"]').click()
+            page.locator('[data-signature-route="media"]').click()
+            page.locator(".signature-media-frame img").first.wait_for(timeout=10000)
+            assert page.locator(".signature-media-tile").count() == 1
+            page.wait_for_function("""() => {
+              const im = document.querySelector('.signature-media-frame img');
+              return !!im && im.complete && im.naturalWidth > 0;
+            }""", timeout=10000)
+            assert page.locator("#mediaCount").inner_text() == "1 bestand"
+            page.screenshot(path=str(SHOTS / "signature_media_with_blob_390.png"), full_page=True)
+
             page.locator('.nav-item[data-route="map"]').click()
             page.locator("#explorerSightingsBtn").wait_for(timeout=10000)
             assert "Bird Explorer Map" in page.locator(".signature-explorer-strip").inner_text()
