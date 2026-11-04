@@ -54,6 +54,16 @@ def main():
         };
       }""")
       assert current=={"total":16,"themes":9,"current":"wielewaal","future":"nachtegaal","cycle":"wielewaal","delay":57000},current
+      # Wikimedia photos are third-party: report actual network availability
+      # separately from the deterministic slideshow timing/metadata checks.
+      try:
+        p.wait_for_function("""() => {
+          const img=document.getElementById('featuredBirdImage');
+          return !!img&&img.complete&&img.naturalWidth>0;
+        }""",timeout=10000)
+        print("PHOTO_NETWORK_CHECK: image loaded")
+      except Exception:
+        print("PHOTO_NETWORK_CHECK: external image not available in CI, CSS fallback shown")
       capture(p,'mobile_editorial_390.png')
 
       # Ambient visual should be local CSS, pausable and absent of autoplay media.
