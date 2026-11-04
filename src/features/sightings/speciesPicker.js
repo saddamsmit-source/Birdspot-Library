@@ -13,7 +13,9 @@ import { escHtml } from '../../utils/html.js';
 export function openSpeciesPicker(onSelect) {
   const ov = document.createElement('div');
   ov.className = 'sheet-overlay';
-  ov.style.zIndex = '300';
+  // Always above the sighting form and its sticky header in mobile stacking contexts.
+  ov.style.zIndex = '2500';
+  ov.id = 'speciesPickerOverlay';
   ov.innerHTML = `
     <div class="sheet" role="dialog" aria-modal="true" aria-label="Kies soort">
       <div class="sheet__handle"></div>
@@ -39,7 +41,7 @@ export function openSpeciesPicker(onSelect) {
     </div>`;
 
   document.body.appendChild(ov);
-  requestAnimationFrame(() => { if (ov.isConnected) ov.classList.add('open'); });
+  ov.classList.add('open');
 
   renderOpts(ov, '');
 
