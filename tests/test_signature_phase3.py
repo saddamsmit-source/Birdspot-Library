@@ -103,6 +103,10 @@ def main():
             assert "Stadsduif" in page.locator(".phase3-top-species").inner_text()
             assert "Bos" in page.locator(".phase3-habitat-legend").inner_text()
             shot(page,"phase3_insights_2026_390.png")
+            page.locator("#main-view").evaluate("(el) => el.scrollTop=540")
+            page.screenshot(path=str(SHOTS/"phase3_insights_chart_390.png"),animations="disabled")
+            page.locator("#main-view").evaluate("(el) => el.scrollTop=1160")
+            page.screenshot(path=str(SHOTS/"phase3_insights_habitat_390.png"),animations="disabled")
             page.locator('[data-chart-mode="species"]').click()
             assert page.locator('[data-chart-mode="species"]').get_attribute("aria-pressed")=="true"
             assert "Cumulatief" in page.locator(".phase3-panel-sub").first.inner_text()
@@ -117,7 +121,13 @@ def main():
             assert page.locator("[data-journal-id='p3-invalid']").count()==1
             assert page.locator(".phase3-journal-feature").is_visible()
             page.locator(".phase3-journal-photo img").first.wait_for(timeout=10000)
+            page.wait_for_function("""() => {
+              const img=document.querySelector(".phase3-journal-photo img");
+              return !!img && img.complete && img.naturalWidth>0;
+            }""",timeout=10000)
             shot(page,"phase3_journal_390.png")
+            page.locator("#main-view").evaluate("(el) => el.scrollTop=640")
+            page.screenshot(path=str(SHOTS/"phase3_journal_timeline_390.png"),animations="disabled")
             page.locator("#journalYear").select_option("2025")
             assert page.locator("#journalResultsCount").inner_text()=="1 resultaat"
             assert page.locator("#journalTimeline [data-journal-id='p3-old']").count()==1
