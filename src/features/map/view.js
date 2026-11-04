@@ -57,11 +57,16 @@ export function renderMap(el) {
         <input type="search" id="mapSpeciesSearch" list="mapSpeciesSuggestions"
           placeholder="Bijv. Koolmees" autocomplete="off" aria-describedby="mapFilterFeedback">
         <datalist id="mapSpeciesSuggestions"></datalist>
-        <div class="bird-map-filter-scroll" role="group" aria-label="Waarnemingswijze">
-          <button type="button" class="is-active" data-map-status="all" aria-pressed="true">Alle <span id="mapStatusAllCount"></span></button>
-          ${MAP_ORDER.map(key=>`<button type="button" data-map-status="${key}" aria-pressed="false">
-            <span class="bird-map-filter-dot bird-map-dot--${key}" aria-hidden="true"></span>
-            ${MAP_STATUS[key].label}<span data-map-status-count="${key}"></span></button>`).join('')}
+        <label class="bird-map-dropdown-label" for="mapStatusSelect">Filter waarnemingen</label>
+        <div class="bird-map-dropdown-wrap">
+          <span id="mapStatusIndicator" class="bird-map-dropdown-dot bird-map-dot--all" aria-hidden="true"></span>
+          <select id="mapStatusSelect" class="bird-map-dropdown"
+            aria-label="Filter op gezien, gehoord of Merlin Sound ID"
+            aria-describedby="mapFilterFeedback">
+            <option value="all">Alle waarnemingen (0)</option>
+            ${MAP_ORDER.map(key=>`<option value="${key}">${MAP_STATUS[key].label} (0)</option>`).join('')}
+          </select>
+          <span class="bird-map-dropdown-chevron" aria-hidden="true">⌄</span>
         </div>
         <p class="bird-map-filter-feedback" id="mapFilterFeedback" role="status" aria-live="polite">Alle waarnemingen met een pin</p>
       </section>
@@ -230,15 +235,18 @@ function initMap(screenEl, sightings, leafletOk = true) {
     const filtered=(filterState.status!=='all'||!!filterState.speciesSearch);
     screenEl.querySelector('#mapScreen')?.classList.toggle('has-active-filters',filtered);
     clearFilters.hidden=!filtered;
-    screenEl.querySelectorAll('[data-map-status]').forEach(button=>{
-      const selected=button.dataset.mapStatus===filterState.status;
-      button.classList.toggle('is-active',selected);
-      button.setAttribute('aria-pressed',String(selected));
-    });
-    screenEl.querySelector('#mapStatusAllCount').textContent='('+speciesMatches.length+')';
+    // One native dropdown avoids horizontal overflow on narrow phones.
+    // Counts are recalculated from the currently searched species, not from
+    // unrelated observations or records without pins.
+    const select=screenEl.querySelector('#mapStatusSelect');
+    const dot=screenEl.querySelector('#mapStatusIndicator');
+    select.value=filterState.status;
+    dot.className='bird-map-dropdown-dot bird-map-dot--'+filterState.status;
+    select.querySelector('option[value="all"]').textContent='Alle waarnemingen ('+speciesMatches.length+')';
+    const optionSymbols={seen:'●',merlin:'♫',both:'◉',heard:'♪',unknown:'?'};
     for(const key of MAP_ORDER){
-      const node=screenEl.querySelector('[data-map-status-count="'+key+'"]');
-      if(node)node.textContent='('+counts[key]+')';
+      const option=select.querySelector('option[value="'+key+'"]');
+      if(option)option.textContent=optionSymbols[key]+' '+MAP_STATUS[key].label+' ('+counts[key]+')';
     }
     const number=matches.length,total=geoSightings.length;
     if(countEl)countEl.textContent=filtered
@@ -254,10 +262,9 @@ function initMap(screenEl, sightings, leafletOk = true) {
   speciesSearch.addEventListener('input',e=>{
     filterState.speciesSearch=e.target.value.trim();applyFilters();
   });
-  screenEl.querySelector('.bird-map-filter-scroll').addEventListener('click',e=>{
-    const button=e.target.closest('[data-map-status]');
-    if(!button)return;
-    filterState.status=button.dataset.mapStatus;applyFilters();
+  screenEl.querySelector('#mapStatusSelect').addEventListener('change',e=>{
+    filterState.status=e.target.value;
+    applyFilters();
   });
   clearFilters.addEventListener('click',()=>{
     filterState.speciesSearch='';filterState.status='all';speciesSearch.value='';

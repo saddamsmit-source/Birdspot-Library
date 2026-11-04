@@ -147,6 +147,11 @@ def main():
 
       p.locator('.nav-item[data-route="map"]').click()
       p.locator("#mapSpeciesSearch").wait_for(timeout=10000)
+      assert p.locator("#mapStatusSelect").count()==1
+      assert p.locator(".bird-map-filter-scroll").count()==0
+      assert p.locator("#mapStatusSelect").input_value()=="all"
+      assert p.locator("#mapStatusSelect option").count()==6
+      assert p.locator("#mapStatusIndicator").evaluate("(e)=>e.classList.contains('bird-map-dot--all')")
       p.wait_for_function("() => window.__birdspotMapTest.renderCount>0",timeout=8000)
       assert p.locator("#mapCount").inner_text()=="6 van 7 pins"
       assert p.locator(".mock-bird-cluster .bird-cluster-core strong").inner_text()=="6"
@@ -156,26 +161,27 @@ def main():
       p.screenshot(path=str(SHOTS/"bird_map_mixed_cluster_390.png"),animations="disabled")
 
       p.locator("#mapSpeciesSearch").fill("Koolmees")
-      assert p.locator("#mapCount").inner_text()=="5 van 6 pins" or p.locator("#mapCount").inner_text()=="5 van 6 pins"
+      assert p.locator("#mapCount").inner_text()=="5 van 6 pins"
       assert p.locator(".mock-bird-cluster strong").inner_text()=="5"
-      assert p.locator('[data-map-status-count="merlin"]').inner_text()=="(1)"
-      assert p.locator("#mapStatusAllCount").inner_text()=="(5)"
+      assert "(1)" in p.locator('#mapStatusSelect option[value="merlin"]').inner_text()
+      assert "(5)" in p.locator('#mapStatusSelect option[value="all"]').inner_text()
       p.screenshot(path=str(SHOTS/"bird_map_koolmees_cluster_390.png"),animations="disabled")
 
       # Merlin only => purple, one pin, no cluster.
-      p.locator('[data-map-status="merlin"]').click()
+      p.locator('#mapStatusSelect').select_option("merlin")
       assert p.locator("#mapCount").inner_text()=="1 van 6 pins"
       assert p.locator(".bird-pin--status-merlin").count()==1
       assert p.locator(".bird-cluster-ring").count()==0
-      assert p.locator('[data-map-status="merlin"]').get_attribute("aria-pressed")=="true"
+      assert p.locator('#mapStatusSelect').input_value()=="merlin"
+      assert p.locator("#mapStatusIndicator").evaluate("(e)=>e.classList.contains('bird-map-dot--merlin')")
       # Both is gold; heard on own observation is blue.
-      p.locator('[data-map-status="both"]').click()
+      p.locator('#mapStatusSelect').select_option("both")
       assert p.locator(".bird-pin--status-both").count()==1
-      p.locator('[data-map-status="heard"]').click()
+      p.locator('#mapStatusSelect').select_option("heard")
       assert p.locator(".bird-pin--status-heard").count()==1
-      p.locator('[data-map-status="unknown"]').click()
+      p.locator('#mapStatusSelect').select_option("unknown")
       assert p.locator(".bird-pin--status-unknown").count()==1
-      p.locator('[data-map-status="all"]').click()
+      p.locator('#mapStatusSelect').select_option("all")
       # Simulate the expected Leaflet.zoom behavior in isolation:
       # low zoom cluster, high zoom individual dots, low zoom cluster again.
       p.evaluate("() => window.__birdspotMapTest.map.setZoom(15)")
@@ -192,12 +198,20 @@ def main():
       # Reset works, no record mutation or newly invented pins.
       p.locator("#mapClearFilters").click()
       assert p.locator("#mapSpeciesSearch").input_value()==""
+      assert p.locator("#mapStatusSelect").input_value()=="all"
+      assert p.locator("#mapStatusIndicator").evaluate("(e)=>e.classList.contains('bird-map-dot--all')")
       assert p.locator("#mapCount").inner_text()=="6 van 7 pins"
       assert p.locator(".bird-cluster-core strong").inner_text()=="6"
       assert p.evaluate("() => JSON.parse(localStorage.getItem('birdspot-sightings')).sightings.length")==7
       for width in (360,390,430):
         p.set_viewport_size({"width":width,"height":844})
         assert p.locator("#mapSpeciesSearch").is_visible()
+        assert p.locator("#mapStatusSelect").is_visible()
+        assert p.evaluate("""() => {
+          const panel=document.querySelector('.bird-map-filters').getBoundingClientRect();
+          const select=document.querySelector('#mapStatusSelect').getBoundingClientRect();
+          return select.left>=panel.left && select.right<=panel.right+1;
+        }""")
         assert p.locator("#mapAddPinBtn").is_visible()
         p.screenshot(path=str(SHOTS/f"bird_map_{width}.png"),animations="disabled")
       assert not errors,errors
