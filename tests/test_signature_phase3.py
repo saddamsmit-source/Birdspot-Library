@@ -142,6 +142,8 @@ def main():
                 assert page.locator(".phase3-journal-hero").is_visible()
                 shot(page,"phase3_journal_"+str(width)+".png")
             page.locator("#journalToInsights").click()
+            page.locator("#insightsYear").wait_for(timeout=10000)
+            page.locator(".phase3-chart-svg").wait_for(timeout=10000)
             for width in (360,390,430):
                 page.set_viewport_size({"width":width,"height":844})
                 assert page.locator("#insightsYear").is_visible()
