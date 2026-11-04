@@ -12,7 +12,7 @@
  *   birdspot-media           — foto's/IDB-exports (permanent)
  */
 
-const APP_VERSION = '1.2.0-signature-species-media';
+const APP_VERSION = '1.3.0-signature-journal-insights';
 const APP_CACHE   = `birdspot-app-v${APP_VERSION}`;
 const MEDIA_CACHE = 'birdspot-media';
 
@@ -34,6 +34,7 @@ const PRECACHE_URLS = [
   '/styles/profile.css',
   '/styles/signature.css',
   '/styles/signature-phase2.css',
+  '/styles/signature-phase3.css',
 
   // JS — app root
   '/src/app.js',
@@ -49,6 +50,8 @@ const PRECACHE_URLS = [
   '/src/features/profile/view.js',
   '/src/features/media/view.js',
   '/src/features/journal/view.js',
+  '/src/features/insights/view.js',
+  '/src/features/insights/analytics.js',
 
   // JS — data
   '/src/data/sightings.js',
