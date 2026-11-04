@@ -514,7 +514,12 @@ function _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx })
     }
     refresh();
   };
-  fileInput.addEventListener('change', onFileChange, { once: true });
+  // Bind once per form lifecycle. Re-rendering evidence/pin fields must not
+  // attach another file handler and duplicate photo/video IDs.
+  if (!ctx.fileInputBound) {
+    ctx.fileInputBound = true;
+    fileInput.addEventListener('change', onFileChange);
+  }
 
   // Media: verwijder nieuw bestand
   el.querySelector('#mediaAttachRow')?.addEventListener('click', e => {

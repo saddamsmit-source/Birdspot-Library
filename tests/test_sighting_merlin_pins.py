@@ -57,6 +57,11 @@ def seed_media_files(page):
       input.dispatchEvent(new Event('change',{bubbles:true}));
     }""")
     page.locator("#mediaAttachRow .media-thumb").first.wait_for(timeout=8000)
+    inputs=page.evaluate("""() => ({
+      fileCount:document.getElementById('sightingMediaInput').files.length,
+      visibleThumbs:document.querySelectorAll('#mediaAttachRow .media-thumb').length
+    })""")
+    assert inputs=={"fileCount":2,"visibleThumbs":2},inputs
 
 def main():
     with Server(("127.0.0.1",0),Handler) as server:
@@ -86,7 +91,7 @@ def main():
             assert heard["merlinVerification"]=="suggested" and heard["certainty"]=="possible"
             assert heard["locationName"]=="Brabant testpark"
             assert abs(heard["lat"]-51.59)<0.0001 and abs(heard["lon"]-5.09)<0.0001
-            assert len(heard["photoIds"])==2
+            assert len(heard["photoIds"])==2,heard
             assert not page.evaluate("""() => JSON.parse(localStorage.getItem('birdspot-seen-species')||'[]').includes('sp001')""")
             files=page.evaluate("""async ids=>{
               const {getPhoto}=await import('/src/data/db.js');
