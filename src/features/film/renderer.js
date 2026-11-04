@@ -140,10 +140,19 @@ async function mediaVideo(blob,signal) {
       new Promise((_,reject)=>setTimeout(()=>reject(new Error('Videobestand kan niet worden geladen')),15000)),
     ]);
     guard(signal);
-    await Promise.race([
-      video.play(),
-      new Promise((_,reject)=>setTimeout(()=>reject(new Error("Afspelen van videobron duurt te lang")),10000)),
-    ]);
+    try {
+      await Promise.race([
+        video.play(),
+        new Promise((_,reject)=>setTimeout(()=>reject(new Error("Afspelen van videobron duurt te lang")),10000)),
+      ]);
+    } catch (err) {
+      // Very short locally captured clips can reach "ended" before Chromium
+      // settles play(). A decoded final frame is still valid for the export.
+      const endedDuringStart = err?.name === 'AbortError' &&
+        video.readyState >= 2 &&
+        (video.ended || /end of playback/i.test(String(err.message)));
+      if (!endedDuringStart) throw err;
+    }
     return {video,url};
   } catch(err) {
     video.pause();video.removeAttribute('src');video.load();
