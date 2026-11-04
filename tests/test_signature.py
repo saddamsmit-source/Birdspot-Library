@@ -59,7 +59,7 @@ def main():
             }))""")
             page.locator('.nav-item[data-route="home"]').click()
             page.locator('[data-signature-route="journal"]').click()
-            page.locator("[data-journal-id='signature-qa-1']").wait_for(timeout=10000)
+            page.locator("#journalTimeline [data-journal-id='signature-qa-1']").wait_for(timeout=10000)
             assert "Koolmees" in page.locator("#journalTimeline").inner_text()
             assert page.evaluate("""() => JSON.parse(
               localStorage.getItem('birdspot-sightings')).sightings[0].id
