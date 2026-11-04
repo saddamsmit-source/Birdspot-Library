@@ -94,7 +94,7 @@ const extras=SPECIES.filter(species=>ids.has(species.id) &&
   return Object.freeze({
     id:'species-'+species.id,theme:'catalog',nl:species.nameNL,
     latin:species.nameSci,
-    where:'Herkenningstip: '+(species.fieldmarks||'Let op kleur, formaat en vluchtbeeld.')+
+    where:'Herkenning: '+(species.fieldmarks||'Let op kleur, formaat en vluchtbeeld.')+
       place,
     image:null,source:null,author:null,license:null,dynamicPhoto:true,
   });
