@@ -5,14 +5,17 @@
  */
 
 import { SPECIES, CATEGORY_LABELS, REGIONS, getSeenIds, toggleSeen, searchSpecies } from '../../data/species.js';
-import { getDB, getPhotosBySpecies }    from '../../data/db.js';
+import { getDB, getPhotosBySpecies, getPhoto } from '../../data/db.js';
 import { getSightings }                 from '../../data/sightings.js';
 import { getPhotoUrl, revokePhotoUrl }  from '../../utils/photoUrl.js';
+import { getCollectionIds, toggleCollectionItem } from '../../storage/collections.js';
 
 let _currentCategory = 'standvogel';
 let _searchQuery     = '';
 let _currentRegion   = null;
 let _detailSpeciesId = null;
+let _onlyFavorites = false;
+let _speciesCtx = null;
 
 // ── Zeldzaamheid mapping (id-prefix → rarity) ─────────────────
 // Zonder dedicated veld in data: categoriseer op basis van species-id ranges
@@ -27,15 +30,9 @@ const RARITY_MAP = {
 
 // Standvogels zijn doorgaans algemeen; trek/winter schaarsder; dwaalgasten toevallig
 function getRarity(species) {
-  if (species.rarity) return species.rarity; // gebruik veld als aanwezig
-  switch (species.category) {
-    case 'standvogel':  return 'algemeen';
-    case 'zomervogel':  return 'vrij-algemeen';
-    case 'wintergast':  return 'schaars';
-    case 'doortrekker': return 'vrij-algemeen';
-    case 'dwaalgast':   return 'toevallig';
-    default:            return 'algemeen';
-  }
+  // Migratory category is not scientific evidence of rarity.
+  // When there is no explicit rarity field, show the real category instead.
+  return species.rarity && RARITY_MAP[species.rarity] ? species.rarity : null;
 }
 
 // ── IndexedDB helper ───────────────────────────────────────────
@@ -52,22 +49,42 @@ function txGet(store, key) {
 // voor het intrekken van de URL via revokePhotoUrl() na gebruik.
 async function loadSpeciesThumb(speciesId) {
   try {
-    const sightings = JSON.parse(localStorage.getItem('birdspot-sightings') || '[]');
-    const match = sightings.find(s => s.speciesId === speciesId && s.photoIds?.length);
-    if (!match) return null;
-    const db = await getDB();
-    const tx = db.transaction('photos', 'readonly');
-    const photo = await txGet(tx.objectStore('photos'), match.photoIds[0]);
-    return getPhotoUrl(photo);
-  } catch {
-    return null;
-  }
+    // The species IDB index covers recent records.
+    const photos = await getPhotosBySpecies(speciesId);
+    let photo = photos.find(p => p?.blob instanceof Blob && (p.blob.type || p.type || '').startsWith('image/'));
+    if (photo) return getPhotoUrl(photo);
+    // Legacy records may have only photoIds on sightings, without by_species.
+    const sightings = await getSightings();
+    for (const sighting of sightings) {
+      if (sighting.speciesId !== speciesId) continue;
+      for (const id of (sighting.photoIds || [])) {
+        photo = await getPhoto(id);
+        if (photo?.blob instanceof Blob && (photo.blob.type || photo.type || '').startsWith('image/')) return getPhotoUrl(photo);
+      }
+    }
+  } catch (_) {}
+  return null;
+}
+/** Bind listeners before src to avoid the load-event race. */
+function mountSpeciesThumb(container, url, ctx) {
+  if (!url) return;
+  if (!container?.isConnected || ctx?.destroyed) { revokePhotoUrl(url); return; }
+  const img = document.createElement('img');
+  img.alt = '';
+  img.loading = 'lazy';
+  ctx?.urls?.add(url);
+  const release = () => { revokePhotoUrl(url); ctx?.urls?.delete(url); };
+  img.addEventListener('load',release,{once:true});
+  img.addEventListener('error',release,{once:true});
+  img.src = url;
+  container.replaceChildren(img);
 }
 
 // ── "Recent bekeken" — soorten met recente waarneming ─────────
 function getRecentSpeciesIds(limit = 8) {
   try {
-    const sightings = JSON.parse(localStorage.getItem('birdspot-sightings') || '[]');
+    const payload = JSON.parse(localStorage.getItem('birdspot-sightings') || '{"sightings":[]}');
+    const sightings = Array.isArray(payload) ? payload : (Array.isArray(payload?.sightings) ? payload.sightings : []);
     const seen = new Map();
     // sorteer nieuwste eerst
     [...sightings]
@@ -83,6 +100,9 @@ function getRecentSpeciesIds(limit = 8) {
 
 // ── Render entrypoint ──────────────────────────────────────────
 export function renderSpecies(el) {
+  if (_speciesCtx?.cleanup) _speciesCtx.cleanup();
+  const ctx = { destroyed:false, urls:new Set(), detailCleanup:null, listGeneration:0, cleanup:null };
+  _speciesCtx = ctx;
   const seenIds = getSeenIds();
   const total   = SPECIES.filter(s => s.category === 'standvogel').length;
   const seen    = SPECIES.filter(s => s.category === 'standvogel' && seenIds.has(s.id)).length;
@@ -94,6 +114,15 @@ export function renderSpecies(el) {
       <div class="species-header__title">Soorten</div>
       <div class="species-header__sub" id="speciesSub">Benelux · ${seen}/${total} standvogels gezien</div>
     </header>
+    <section class="signature-species-hero" aria-label="Soortenbibliotheek">
+      <span class="signature-kicker">BIRDSPOT / SPECIES COLLECTION</span>
+      <h1>Ontdek elke vogel opnieuw.</h1>
+      <p>Herken vogelsoorten, bewaar je favorieten en herbeleef je eigen fotomomenten.</p>
+      <div class="signature-species-hero-actions">
+        <button id="speciesOpenMedia" type="button">Mijn fotocollectie <span aria-hidden="true">↗</span></button>
+        <span id="speciesFavoriteCount">★ ${getCollectionIds("species").size} favorieten</span>
+      </div>
+    </section>
 
     <div class="species-toolbar">
       <div class="species-search-wrap">
@@ -112,6 +141,9 @@ export function renderSpecies(el) {
             ${lbl}
           </button>`).join('')}
       </div>
+      <div class="signature-species-favorites-filter">
+        <button id="speciesOnlyFavorites" type="button" aria-pressed="${_onlyFavorites}" class="${_onlyFavorites ? "is-selected" : ""}">★ Alleen mijn favorieten</button>
+      </div>
       <div class="species-filters species-filters--gebied" id="gebiedFilters" role="group" aria-label="Filter op gebied">
         <span class="filter-label">Gebied</span>
         ${Object.entries(REGIONS).map(([key, r]) => `
@@ -126,7 +158,7 @@ export function renderSpecies(el) {
     ${recentIds.length > 0 ? `
     <div class="species-recent-section" id="recentSection">
       <div class="section-head" style="padding-top:var(--space-12)">
-        <span class="section-head__title">Recent bekeken</span>
+        <span class="section-head__title">Recent waargenomen</span>
       </div>
       <div class="species-recent-scroll" id="recentScroll">
         ${recentIds.map(id => {
@@ -145,31 +177,35 @@ export function renderSpecies(el) {
     <div id="speciesList" class="species-list" role="list"></div>
   `;
 
-  renderList(el, seenIds);
-  bindEvents(el);
+  renderList(el, seenIds, ctx);
+  bindEvents(el, ctx);
 
   // Laad async thumbnails voor "Recent bekeken"
   if (recentIds.length > 0) {
     recentIds.forEach(async id => {
       const url = await loadSpeciesThumb(id);
       if (!url) return;
-      const thumb = el.querySelector(`#rthumb-${id}`);
-      if (thumb) {
-        thumb.innerHTML = `<img src="${url}" alt="" loading="lazy">`;
-        // Intrekken nadat de browser de img-bron heeft geladen
-        thumb.querySelector('img')?.addEventListener('load',  () => revokePhotoUrl(url), { once: true });
-        thumb.querySelector('img')?.addEventListener('error', () => revokePhotoUrl(url), { once: true });
-      } else {
-        revokePhotoUrl(url);
-      }
+      mountSpeciesThumb(el.querySelector(`#rthumb-${id}`),url,ctx);
     });
   }
+  ctx.cleanup = () => {
+    if (ctx.destroyed) return;
+    ctx.destroyed = true;
+    ctx.detailCleanup?.(false);
+    ctx.urls.forEach(revokePhotoUrl);
+    ctx.urls.clear();
+    if (_speciesCtx === ctx) _speciesCtx = null;
+  };
+  return ctx.cleanup;
 }
 
 // ── Render lijst ───────────────────────────────────────────────
-function renderList(el, seenIds) {
+function renderList(el, seenIds, ctx = _speciesCtx) {
   seenIds = seenIds || getSeenIds();
-  const results = searchSpecies(_searchQuery, _currentCategory, _currentRegion);
+  const favorites = getCollectionIds("species");
+  const results = searchSpecies(_searchQuery, _currentCategory, _currentRegion)
+    .filter(species => !_onlyFavorites || favorites.has(species.id));
+  const generation = ctx ? ++ctx.listGeneration : 0;
   const list    = el.querySelector('#speciesList');
   if (!list) return;
 
@@ -180,7 +216,9 @@ function renderList(el, seenIds) {
   if (sub) sub.textContent = `Benelux · ${seen}/${total} ${CATEGORY_LABELS[_currentCategory]?.toLowerCase() || ''} gezien`;
 
   if (results.length === 0) {
-    const emptyMsg = _currentRegion
+    const emptyMsg = _onlyFavorites && !_searchQuery && !_currentRegion
+      ? 'Nog geen favorieten in deze categorie. Gebruik de ster naast een vogelsoort.'
+      : _currentRegion
       ? `Geen soorten gevonden in <strong>${escHtml(REGIONS[_currentRegion]?.label)}</strong>${_searchQuery ? ` voor "${escHtml(_searchQuery)}"` : ''}`
       : `Geen soorten gevonden voor "<strong>${escHtml(_searchQuery)}</strong>"`;
     list.innerHTML = `
@@ -203,28 +241,23 @@ function renderList(el, seenIds) {
   list.innerHTML = Object.entries(byFamily).map(([family, birds]) => `
     <div class="species-group">
       <div class="species-group__label">${escHtml(family)}</div>
-      ${birds.map(s => speciesRow(s, seenIds)).join('')}
+      ${birds.map(s => speciesRow(s, seenIds, favorites)).join('')}
     </div>`).join('');
 
   // Laad async thumbnails per rij
   results.forEach(async s => {
     const url = await loadSpeciesThumb(s.id);
     if (!url) return;
+    if (ctx?.destroyed || (ctx && generation !== ctx.listGeneration)) { revokePhotoUrl(url); return; }
     const thumb = list.querySelector(`.species-row[data-id="${s.id}"] .species-row__thumb`);
-    if (thumb) {
-      thumb.innerHTML = `<img src="${url}" alt="" loading="lazy">`;
-      thumb.querySelector('img')?.addEventListener('load',  () => revokePhotoUrl(url), { once: true });
-      thumb.querySelector('img')?.addEventListener('error', () => revokePhotoUrl(url), { once: true });
-    } else {
-      revokePhotoUrl(url);
-    }
+    mountSpeciesThumb(thumb,url,ctx);
   });
 }
 
-function speciesRow(s, seenIds) {
+function speciesRow(s, seenIds, favorites = getCollectionIds("species")) {
   const seen   = seenIds.has(s.id);
   const rarity = getRarity(s);
-  const rm     = RARITY_MAP[rarity] || RARITY_MAP.algemeen;
+  const rm     = rarity ? RARITY_MAP[rarity] : null;
 
   return `
     <div class="species-row${seen ? ' seen' : ''}" data-id="${s.id}" role="listitem">
@@ -235,7 +268,12 @@ function speciesRow(s, seenIds) {
         <div class="species-row__name">${escHtml(s.nameNL)}</div>
         <div class="species-row__sci">${escHtml(s.nameSci)}</div>
       </div>
-      <span class="species-row__rarity ${rm.cls}">${rm.label}</span>
+      <span class="species-row__rarity ${rm?.cls || "signature-species-category"}">${rm?.label || CATEGORY_LABELS[s.category] || "Soort"}</span>
+      <button class="signature-species-star ${favorites.has(s.id) ? "is-on" : ""}"
+        type="button" data-species-fav="${s.id}" aria-pressed="${favorites.has(s.id)}"
+        aria-label="${favorites.has(s.id) ? "Verwijder uit favorieten" : "Voeg toe aan favorieten"}: ${escHtml(s.nameNL)}">
+        ${favorites.has(s.id) ? "★" : "☆"}
+      </button>
       <button class="seen-toggle${seen ? ' seen' : ''}"
         data-id="${s.id}" aria-label="${seen ? 'Markeer als niet gezien' : 'Markeer als gezien'}"
         aria-pressed="${seen}">
@@ -245,7 +283,16 @@ function speciesRow(s, seenIds) {
 }
 
 // ── Events ─────────────────────────────────────────────────────
-function bindEvents(el) {
+function bindEvents(el, ctx = _speciesCtx) {
+  el.querySelector('#speciesOpenMedia')?.addEventListener('click', () => {
+    import('../../app.js').then(({navigate}) => navigate('media'));
+  });
+  el.querySelector('#speciesOnlyFavorites')?.addEventListener('click', e => {
+    _onlyFavorites = !_onlyFavorites;
+    e.currentTarget.classList.toggle("is-selected",_onlyFavorites);
+    e.currentTarget.setAttribute("aria-pressed",String(_onlyFavorites));
+    renderList(el,undefined,ctx);
+  });
   // Zoekbalk
   el.querySelector('#speciesSearch')?.addEventListener('input', e => {
     _searchQuery = e.target.value;
@@ -283,8 +330,23 @@ function bindEvents(el) {
     if (chip) openDetail(chip.dataset.id, el);
   });
 
-  // Lijst — delegate voor rij-klik (detail) en gezien-toggle
+  // Lijst — favorieten, gezienstatus en detail zijn gescheiden acties.
   el.querySelector('#speciesList')?.addEventListener('click', e => {
+    const favoriteBtn = e.target.closest('[data-species-fav]');
+    if (favoriteBtn) {
+      e.stopPropagation();
+      try {
+        toggleCollectionItem('species',favoriteBtn.dataset.speciesFav);
+        const totalFavorites = getCollectionIds('species').size;
+        const label = el.querySelector('#speciesFavoriteCount');
+        if (label) label.textContent = '★ ' + totalFavorites + ' favorieten';
+        renderList(el,undefined,ctx);
+      } catch (_) {
+        const label = el.querySelector('#speciesFavoriteCount');
+        if (label) label.textContent = 'Favoriet opslaan mislukt';
+      }
+      return;
+    }
     const toggleBtn = e.target.closest('.seen-toggle');
     if (toggleBtn) {
       e.stopPropagation();
@@ -319,185 +381,240 @@ function updateCounter(el) {
 function openDetail(speciesId, screenEl) {
   const s = SPECIES.find(x => x.id === speciesId);
   if (!s) return;
+  const ctx = _speciesCtx;
+  if (ctx?.destroyed) return;
+  ctx?.detailCleanup?.();
   _detailSpeciesId = speciesId;
 
-  const seen   = getSeenIds().has(speciesId);
-  const rarity = getRarity(s);
-  const rm     = RARITY_MAP[rarity] || RARITY_MAP.algemeen;
+  const photosUrls = new Set();
+  const photoList = [];
+  let closed = false;
+  let viewer = null;
+  let previousFocus = document.activeElement;
 
   const sheet = document.createElement('div');
-  sheet.className = 'sheet-overlay';
-  sheet.innerHTML = `
-    <div class="sheet" role="dialog" aria-modal="true" aria-label="${escHtml(s.nameNL)}">
-      <div class="sheet__handle" role="button" aria-label="Sluiten" tabindex="0"></div>
-      <div class="sheet__content">
-        <div class="detail-hero">
-          <div class="detail-thumb" id="detailThumb-${s.id}" aria-hidden="true">
-            <span>${s.icon}</span>
-          </div>
-          <div class="detail-names">
-            <div class="detail-name">${escHtml(s.nameNL)}</div>
-            <div class="detail-sci">${escHtml(s.nameSci)}</div>
-            <div class="detail-en">${escHtml(s.nameEN)}</div>
-            <span class="species-row__rarity ${rm.cls}" style="margin-top:6px;display:inline-flex">${rm.label}</span>
-          </div>
-          <button class="seen-toggle-large${seen ? ' seen' : ''}" data-id="${s.id}"
-            aria-label="${seen ? 'Markeer als niet gezien' : 'Markeer als gezien'}"
-            aria-pressed="${seen}">
-            ${seen ? checkIcon() : circleIcon()}
-            <span>${seen ? 'Gezien' : 'Markeer'}</span>
-          </button>
-        </div>
-
-        <div class="detail-meta">
-          <div class="detail-meta__item">
-            <span class="detail-meta__label">Familie</span>
-            <span>${escHtml(s.family)}</span>
-          </div>
-          <div class="detail-meta__item">
-            <span class="detail-meta__label">Categorie</span>
-            <span>${CATEGORY_LABELS[s.category] || s.category}</span>
-          </div>
-        </div>
-
-        <div class="detail-section">
-          <div class="detail-section__label">Leefgebied</div>
-          <div class="detail-regions">
-            ${(s.regions || []).map(r => `<span class="region-tag">${escHtml(regionTagLabel(r))}</span>`).join('')}
-          </div>
-        </div>
-
-        <div class="detail-section">
-          <div class="detail-section__label">Veldkenmerken</div>
-          <p class="detail-fieldmarks">${escHtml(s.fieldmarks)}</p>
-        </div>
-
-        <div class="detail-section">
-          <div class="detail-section__label">Eigen foto's</div>
-          <div id="detailPhotos-${s.id}" class="detail-photos-grid">
-            <div class="detail-photos-loading">
-              <span class="spinner" aria-hidden="true"></span>
-            </div>
-          </div>
-        </div>
-
-        <div class="detail-section">
-          <div class="detail-section__label">Waarnemingen</div>
-          <div id="detailSightings-${s.id}" class="detail-sightings-list">
-            <div class="detail-photos-loading">
-              <span class="spinner" aria-hidden="true"></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>`;
+  sheet.className = 'sheet-overlay signature-species-detail-overlay';
+  sheet.innerHTML =
+    '<div class="sheet signature-species-detail-sheet" role="dialog" aria-modal="true" aria-label="' + escHtml(s.nameNL) + '">' +
+      '<div class="sheet__handle" aria-hidden="true"></div>' +
+      '<div class="signature-species-detail-top">' +
+        '<span class="signature-kicker">BIRDSPOT / FIELD GUIDE</span>' +
+        '<button type="button" class="signature-species-detail-close" aria-label="Sluit soortdetail">×</button>' +
+      '</div>' +
+      '<div class="sheet__content">' +
+        '<div class="signature-species-detail-hero">' +
+          '<div id="detailThumb-' + escHtml(s.id) + '" class="signature-species-detail-image">' +
+            '<span aria-hidden="true">' + escHtml(s.icon) + '</span></div>' +
+          '<div class="signature-species-detail-intro"><span class="signature-eyebrow">' + escHtml(s.family) + '</span>' +
+            '<h2>' + escHtml(s.nameNL) + '</h2>' +
+            '<p><em>' + escHtml(s.nameSci) + '</em></p>' +
+            '<p>' + escHtml(s.nameEN || '') + '</p></div>' +
+        '</div>' +
+        '<div class="signature-species-detail-actions">' +
+          '<button type="button" class="signature-species-seen" id="speciesDetailSeen"></button>' +
+          '<button type="button" class="signature-species-fav" id="speciesDetailFavorite"></button>' +
+        '</div>' +
+        '<div class="detail-meta">' +
+          '<div class="detail-meta__item"><span class="detail-meta__label">Familie</span><span>' + escHtml(s.family) + '</span></div>' +
+          '<div class="detail-meta__item"><span class="detail-meta__label">Categorie</span><span>' +
+            escHtml(CATEGORY_LABELS[s.category] || s.category) + '</span></div>' +
+        '</div>' +
+        '<div class="detail-section"><div class="detail-section__label">Leefgebieden</div>' +
+          '<div class="detail-regions">' + (s.regions || []).map(r =>
+            '<span class="region-tag">' + escHtml(regionTagLabel(r)) + '</span>').join('') + '</div></div>' +
+        '<div class="detail-section"><div class="detail-section__label">Herkenning</div>' +
+          '<p class="detail-fieldmarks">' + escHtml(s.fieldmarks || 'Geen veldkenmerken beschikbaar.') + '</p></div>' +
+        '<div class="detail-section"><div class="detail-section__label">Eigen vogelfoto’s</div>' +
+          '<div class="signature-species-photo-grid" id="speciesDetailPhotos">' +
+            '<div class="detail-photos-loading"><span class="spinner" aria-hidden="true"></span></div></div>' +
+          '<button type="button" class="signature-species-media-link" id="speciesDetailMedia">Open Media Studio ↗</button>' +
+        '</div>' +
+        '<div class="detail-section"><div class="detail-section__label">Jouw waarnemingen</div>' +
+          '<div id="speciesDetailSightings" class="detail-sightings-list">' +
+            '<div class="detail-photos-loading"><span class="spinner" aria-hidden="true"></span></div></div></div>' +
+      '</div></div>';
 
   document.body.appendChild(sheet);
-  requestAnimationFrame(() => sheet.querySelector('.sheet').classList.add('open'));
+  const panel = sheet.querySelector('.sheet');
+  requestAnimationFrame(() => { if (!closed) sheet.classList.add('open'); });
+  const seenBtn = sheet.querySelector('#speciesDetailSeen');
+  const favBtn = sheet.querySelector('#speciesDetailFavorite');
 
-  // Laad eigen foto's async
-  getPhotosBySpecies(speciesId).then(photos => {
-    const container = sheet.querySelector(`#detailPhotos-${speciesId}`);
-    if (!container) return;
-    if (!photos || photos.length === 0) {
-      container.innerHTML = `
-        <div class="empty-state" style="padding:var(--space-16) 0">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" style="width:32px;height:32px">
-            <rect x="3" y="3" width="18" height="18" rx="3"/>
-            <circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>
-          </svg>
-          <p>Nog geen foto's voor deze soort</p>
-        </div>`;
-      return;
+  function updateActions() {
+    const seen = getSeenIds().has(speciesId);
+    const favorite = getCollectionIds('species').has(speciesId);
+    seenBtn.textContent = seen ? '✓ Gezien' : '○ Markeer als gezien';
+    seenBtn.setAttribute('aria-pressed',String(seen));
+    favBtn.textContent = favorite ? '★ Favoriet' : '☆ Favoriet';
+    favBtn.setAttribute('aria-pressed',String(favorite));
+    favBtn.classList.toggle('is-on',favorite);
+  }
+  updateActions();
+
+  function closeViewer() {
+    if (viewer) { viewer.remove(); viewer = null; }
+  }
+  function close(animate = true) {
+    if (closed) return;
+    closed = true;
+    closeViewer();
+    document.removeEventListener('keydown',keyHandler);
+    sheet.classList.remove('open');
+    const cleanup = () => {
+      sheet.remove();
+      for (const url of photosUrls) revokePhotoUrl(url);
+      photosUrls.clear();
+      if (ctx?.detailCleanup === close) ctx.detailCleanup = null;
+      previousFocus?.focus?.();
+    };
+    if (animate && sheet.isConnected) setTimeout(cleanup,250);
+    else cleanup();
+  }
+  if (ctx) ctx.detailCleanup = close;
+
+  function keyHandler(e) {
+    if (e.key === 'Escape') {
+      if (viewer) closeViewer(); else close();
     }
-    const urls = [];
-    const thumbs = photos.slice(0, 9).map(photo => {
-      const url = getPhotoUrl(photo);
-      if (url) urls.push(url);
-      return url
-        ? `<div class="detail-photo-thumb"><img src="${url}" alt="" loading="lazy"></div>`
-        : '';
-    }).join('');
-    container.innerHTML = `<div class="detail-photos-grid-inner">${thumbs}</div>`;
-    // Intrekken na laden
-    container.querySelectorAll('img').forEach((img, i) => {
-      img.addEventListener('load',  () => revokePhotoUrl(urls[i]), { once: true });
-      img.addEventListener('error', () => revokePhotoUrl(urls[i]), { once: true });
+  }
+  document.addEventListener('keydown',keyHandler);
+  sheet.addEventListener('click',e => {
+    if (e.target===sheet || e.target.closest('.signature-species-detail-close')) close();
+  });
+
+  seenBtn.addEventListener('click',() => {
+    try {
+      toggleSeen(speciesId);
+      updateActions();
+      const row = screenEl.querySelector('.species-row[data-id="' + speciesId + '"]');
+      const btn = row?.querySelector('.seen-toggle');
+      if (row) row.classList.toggle('seen',getSeenIds().has(speciesId));
+      if (btn) {
+        const now = getSeenIds().has(speciesId);
+        btn.classList.toggle('seen',now);
+        btn.setAttribute('aria-pressed',String(now));
+        btn.setAttribute('aria-label',now?'Markeer als niet gezien':'Markeer als gezien');
+        btn.innerHTML=now?checkIcon():circleIcon();
+      }
+      updateCounter(screenEl);
+    } catch (_) { seenBtn.textContent = 'Opslaan niet gelukt'; }
+  });
+  favBtn.addEventListener('click',() => {
+    try {
+      toggleCollectionItem('species',speciesId);
+      updateActions();
+      const count = screenEl.querySelector('#speciesFavoriteCount');
+      if (count) count.textContent = '★ ' + getCollectionIds('species').size + ' favorieten';
+      // Only re-render when a removed item must disappear from favorite-only filter.
+      if (_onlyFavorites) renderList(screenEl,undefined,ctx);
+      else {
+        const rowBtn = screenEl.querySelector('.species-row[data-id="' + speciesId + '"] [data-species-fav]');
+        if (rowBtn) {
+          const selected = getCollectionIds('species').has(speciesId);
+          rowBtn.classList.toggle('is-on',selected);
+          rowBtn.setAttribute('aria-pressed',String(selected));
+          rowBtn.textContent=selected?'★':'☆';
+        }
+      }
+    } catch (_) { favBtn.textContent = 'Favoriet opslaan mislukt'; }
+  });
+  sheet.querySelector('#speciesDetailMedia').addEventListener('click',() => {
+    close(false);
+    import('../../app.js').then(({navigate}) => navigate('media'));
+  });
+
+  sheet.querySelector('#speciesDetailPhotos').addEventListener('click',e => {
+    const button=e.target.closest('[data-photo-index]');
+    if (!button) return;
+    const index=Number(button.dataset.photoIndex);
+    const item=photoList[index];
+    if (!item) return;
+    closeViewer();
+    viewer=document.createElement('div');
+    viewer.className='signature-lightbox';
+    viewer.setAttribute('role','dialog');
+    viewer.setAttribute('aria-modal','true');
+    viewer.setAttribute('aria-label','Vogelfoto bekijken');
+    viewer.innerHTML='<button type="button" class="signature-lightbox-close" aria-label="Sluit foto">×</button>'+
+      '<img src="'+item.url+'" alt="'+escHtml(s.nameNL)+'">';
+    document.body.appendChild(viewer);
+    viewer.querySelector('button').focus();
+    viewer.addEventListener('click',event=>{
+      if(event.target===viewer||event.target.closest('button')) closeViewer();
     });
-  }).catch(() => {
-    const container = sheet.querySelector(`#detailPhotos-${speciesId}`);
-    if (container) container.innerHTML = `<p class="detail-error">Foto's niet beschikbaar</p>`;
   });
 
-  // Laad waarnemingen async
-  getSightings().then(all => {
-    const container = sheet.querySelector(`#detailSightings-${speciesId}`);
-    if (!container) return;
-    const matches = all
-      .filter(s => s.speciesId === speciesId)
-      .sort((a, b) => new Date(b.date) - new Date(a.date))
-      .slice(0, 10);
-    if (matches.length === 0) {
-      container.innerHTML = `
-        <div class="empty-state" style="padding:var(--space-12) 0">
-          <p style="font-size:var(--fs-meta)">Nog geen waarnemingen voor deze soort</p>
-        </div>`;
-      return;
+  (async()=>{
+    try {
+      const [indexed, sightings] = await Promise.all([getPhotosBySpecies(speciesId),getSightings()]);
+      if (closed || ctx?.destroyed) return;
+      const matches = sightings.filter(item=>item.speciesId===speciesId)
+        .sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+      const photosById = new Map(indexed.map(p=>[p.id,p]));
+      // Legacy sightings may only contain photoIds, no by_species index.
+      const ids = [...new Set(matches.flatMap(item=>item.photoIds||[]))];
+      for(const id of ids) {
+        if (photosById.has(id)) continue;
+        const photo = await getPhoto(id);
+        if (closed || ctx?.destroyed) return;
+        if (photo) photosById.set(photo.id,photo);
+      }
+      const imagePhotos = [...photosById.values()].filter(p=>p.blob instanceof Blob &&
+        (p.blob.type||p.type||'').startsWith('image/'));
+      const gallery=sheet.querySelector('#speciesDetailPhotos');
+      if(!imagePhotos.length) {
+        gallery.innerHTML='<div class="signature-species-empty-photo">Nog geen eigen foto’s van deze soort. Voeg bij een waarneming een foto toe.</div>';
+      } else {
+        imagePhotos.slice(0,12).forEach(photo=>{
+          const url=getPhotoUrl(photo);
+          if(!url) return;
+          photosUrls.add(url);
+          const index=photoList.push({photo,url})-1;
+          const button=document.createElement('button');
+          button.type='button';
+          button.className='signature-species-photo-tile';
+          button.dataset.photoIndex=String(index);
+          button.setAttribute('aria-label','Bekijk foto ' + (index+1) + ' van ' + s.nameNL);
+          const img=document.createElement('img');
+          img.alt=s.nameNL;
+          img.loading='lazy';
+          img.src=url;
+          button.appendChild(img);
+          gallery.appendChild(button);
+        });
+        gallery.querySelector('.detail-photos-loading')?.remove();
+        const hero=sheet.querySelector('#detailThumb-'+speciesId);
+        if(hero && photoList[0]) {
+          const img=document.createElement('img');
+          img.alt='';
+          img.src=photoList[0].url;
+          hero.replaceChildren(img);
+        }
+      }
+      const rows=sheet.querySelector('#speciesDetailSightings');
+      if(!matches.length) rows.innerHTML='<div class="signature-species-empty-photo">Nog geen waarnemingen vastgelegd voor deze soort.</div>';
+      else {
+        rows.innerHTML=matches.slice(0,12).map(item=>
+          '<button type="button" class="signature-species-sighting" data-sighting-id="'+escHtml(item.id)+'">' +
+          '<span><strong>'+escHtml(fmtDate(item.date))+'</strong><small>'+escHtml(item.locationName||'Locatie niet vastgelegd')+'</small></span>' +
+          '<span aria-hidden="true">↗</span></button>').join('');
+        rows.addEventListener('click',e=>{
+          const btn=e.target.closest('[data-sighting-id]');
+          const record=matches.find(item=>item.id===btn?.dataset.sightingId);
+          if (!record) return;
+          close(false);
+          import('../sightings/detailSheet.js').then(({openDetailSheet})=>openDetailSheet(record));
+        });
+      }
+    } catch (_) {
+      if(closed) return;
+      const gallery=sheet.querySelector('#speciesDetailPhotos');
+      if(gallery) gallery.innerHTML='<div class="signature-species-empty-photo">De eigen foto’s konden niet worden geladen.</div>';
+      const rows=sheet.querySelector('#speciesDetailSightings');
+      if(rows) rows.innerHTML='<div class="signature-species-empty-photo">Waarnemingen tijdelijk niet beschikbaar.</div>';
     }
-    container.innerHTML = matches.map(s => `
-      <div class="detail-sighting-row">
-        <div class="detail-sighting-row__date">${fmtDate(s.date)}</div>
-        <div class="detail-sighting-row__loc">${escHtml(s.locationName || '—')}</div>
-        ${s.notes ? `<div class="detail-sighting-row__notes">${escHtml(s.notes)}</div>` : ''}
-        ${s.photoIds?.length ? `<div class="detail-sighting-row__media">📷 ${s.photoIds.length}</div>` : ''}
-      </div>`).join('');
-  }).catch(() => {
-    const container = sheet.querySelector(`#detailSightings-${speciesId}`);
-    if (container) container.innerHTML = `<p class="detail-error">Waarnemingen niet beschikbaar</p>`;
-  });
-
-  // Laad detail-thumb async
-  loadSpeciesThumb(speciesId).then(url => {
-    if (!url) return;
-    const dt = sheet.querySelector(`#detailThumb-${speciesId}`);
-    if (dt) {
-      dt.innerHTML = `<img src="${url}" alt="">`;
-      dt.querySelector('img')?.addEventListener('load',  () => revokePhotoUrl(url), { once: true });
-      dt.querySelector('img')?.addEventListener('error', () => revokePhotoUrl(url), { once: true });
-    } else {
-      revokePhotoUrl(url);
-    }
-  });
-
-  // Sluit bij klik op overlay of handle
-  const close = () => {
-    sheet.querySelector('.sheet').classList.remove('open');
-    setTimeout(() => sheet.remove(), 300);
-  };
-  sheet.addEventListener('click', e => { if (e.target === sheet) close(); });
-  sheet.querySelector('.sheet__handle').addEventListener('click', close);
-  sheet.querySelector('.sheet__handle').addEventListener('keydown', e => {
-    if (e.key === 'Enter' || e.key === ' ') close();
-  });
-
-  // Gezien-toggle in sheet
-  sheet.querySelector('.seen-toggle-large')?.addEventListener('click', e => {
-    const id  = e.currentTarget.dataset.id;
-    const now = toggleSeen(id);
-    e.currentTarget.classList.toggle('seen', now);
-    e.currentTarget.innerHTML = (now ? checkIcon() : circleIcon()) + `<span>${now ? 'Gezien' : 'Markeer'}</span>`;
-    e.currentTarget.setAttribute('aria-pressed', now);
-    // Sync rij in lijst
-    const row    = screenEl.querySelector(`.species-row[data-id="${id}"]`);
-    const rowBtn = screenEl.querySelector(`.seen-toggle[data-id="${id}"]`);
-    if (row) row.classList.toggle('seen', now);
-    if (rowBtn) {
-      rowBtn.classList.toggle('seen', now);
-      rowBtn.innerHTML = now ? checkIcon() : circleIcon();
-      rowBtn.setAttribute('aria-pressed', now);
-    }
-    updateCounter(screenEl);
-  });
+  })();
+  sheet.querySelector('.signature-species-detail-close').focus();
 }
 
 // ── Iconen ─────────────────────────────────────────────────────

@@ -1,0 +1,33 @@
+name: Birdspot Signature Phase 2 QA
+
+on:
+  pull_request:
+    paths:
+      - "src/**"
+      - "styles/**"
+      - "index.html"
+      - "sw.js"
+      - "tests/test_signature_phase2.py"
+      - ".github/workflows/signature-phase2-qa.yml"
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install browser dependencies
+        run: |
+          python -m pip install -r tests/requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: Phase 2 browser regressions
+        run: python tests/test_signature_phase2.py
+      - name: Upload Species and Media screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase2-species-media-screenshots
+          path: tests/screenshots/phase2_*.png
+          if-no-files-found: ignore
