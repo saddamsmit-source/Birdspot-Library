@@ -86,7 +86,19 @@ function freshState(override = {}) {
  */
 export function openAddSheet({ onSaved, initial = {} } = {}) {
   const hasPin = validPin(initial.lat,initial.lon);
+  const species = typeof initial.speciesId === 'string'
+    ? SPECIES.find(x=>x.id===initial.speciesId) : null;
+  const selectedMethod = ['seen','heard','both'].includes(initial.observationMethod)
+    ? initial.observationMethod : 'seen';
+  const source = initial.identificationSource==='merlin' && selectedMethod!=='seen'
+    ? 'merlin' : 'self';
   _openSightingForm('add', freshState({
+    speciesId: species?.id ?? null,
+    speciesName: species?.nameNL ?? '',
+    observationMethod:selectedMethod,
+    identificationSource:source,
+    merlinVerification:source==='merlin'?'suggested':null,
+    certainty:source==='merlin'?'possible':'certain',
     lat: hasPin ? Number(initial.lat) : null,
     lon: hasPin ? Number(initial.lon) : null,
     locationName: typeof initial.locationName === 'string' ? initial.locationName : '',

@@ -414,6 +414,16 @@ function openDetail(speciesId, screenEl) {
           '<button type="button" class="signature-species-seen" id="speciesDetailSeen"></button>' +
           '<button type="button" class="signature-species-fav" id="speciesDetailFavorite"></button>' +
         '</div>' +
+        '<section class="signature-species-log" aria-label="Nieuwe waarneming van deze vogel vastleggen">' +
+          '<strong>Leg je ontmoeting vast</strong>' +
+          '<p>Kies hoe je deze soort hebt waargenomen. Je kunt daarna een eigen pin, notitie, foto of video toevoegen.</p>' +
+          '<div class="signature-species-methods">' +
+            '<button type="button" data-species-observe="seen">◉ Gezien</button>' +
+            '<button type="button" data-species-observe="heard">♪ Alleen gehoord</button>' +
+            '<button type="button" data-species-observe="both">◉♪ Gezien én gehoord</button>' +
+            '<button type="button" data-species-observe="merlin">♫ Merlin Sound ID</button>' +
+          '</div>' +
+        '</section>' +
         '<div class="detail-meta">' +
           '<div class="detail-meta__item"><span class="detail-meta__label">Familie</span><span>' + escHtml(s.family) + '</span></div>' +
           '<div class="detail-meta__item"><span class="detail-meta__label">Categorie</span><span>' +
@@ -480,6 +490,27 @@ function openDetail(speciesId, screenEl) {
   document.addEventListener('keydown',keyHandler);
   sheet.addEventListener('click',e => {
     if (e.target===sheet || e.target.closest('.signature-species-detail-close')) close();
+  });
+
+  // Species detail shares the same fully featured observation form as the FAB.
+  // A quick action records a new sighting, not an unsupported "seen" assertion.
+  sheet.querySelector('.signature-species-methods')?.addEventListener('click',event=>{
+    const button=event.target.closest('[data-species-observe]');
+    if(!button)return;
+    const choice=button.dataset.speciesObserve;
+    const initial={
+      speciesId:s.id,
+      speciesName:s.nameNL,
+      observationMethod:choice==='merlin'?'heard':choice,
+      identificationSource:choice==='merlin'?'merlin':'self',
+    };
+    close(false);
+    import('../sightings/addSheet.js').then(({openAddSheet})=>{
+      openAddSheet({
+        initial,
+        onSaved:()=>import('../../app.js').then(({navigate})=>navigate('species',{force:true})),
+      });
+    });
   });
 
   seenBtn.addEventListener('click',() => {

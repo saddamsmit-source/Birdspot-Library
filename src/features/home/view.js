@@ -12,6 +12,7 @@
 import { getDB }                          from '../../data/db.js';
 import { getSightings }                   from '../../data/sightings.js';
 import { getPhotoUrl, revokePhotoUrl }    from '../../utils/photoUrl.js';
+import { initFeaturedCarousel } from './featuredCarousel.js';
 
 // ── Constanten ─────────────────────────────────────────────
 const SLIDESHOW_INTERVAL = 3500;
@@ -38,7 +39,8 @@ export function renderHome(el) {
     import('../../app.js').then(({ navigate }) => navigate(button.dataset.signatureRoute));
   };
   el.addEventListener('click', onSignatureClick);
-  initSlideshow(el, ctx);
+  const disposeFeatured = initFeaturedCarousel(el,ctx);
+  const disposeHabitat = initHabitatMotion(el,ctx);
   loadStats(el, ctx);
   loadSunInfo(el, ctx);
   loadWeather(el, ctx);
@@ -49,6 +51,8 @@ export function renderHome(el) {
   return function cleanup() {
     ctx.destroyed = true;
     el.removeEventListener('click', onSignatureClick);
+    disposeFeatured();
+    disposeHabitat();
     // Stop timer
     if (_slideshowTimer !== null) {
       clearInterval(_slideshowTimer);
@@ -95,20 +99,37 @@ function buildSkeleton() {
       </button>
     </header>
 
-    <!-- Diashow -->
-    <div class="slideshow" id="slideshow" aria-label="Fotodiashow">
-      <div class="slideshow__inner" id="slideshowInner">
-        <div class="slideshow__empty">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
-            <rect x="3" y="3" width="18" height="18" rx="3"/>
-            <circle cx="8.5" cy="8.5" r="1.5"/>
-            <polyline points="21 15 16 10 5 21"/>
-          </svg>
-          <p>Voeg waarnemingen toe om foto's te zien</p>
+    <!-- Redactionele vogelspotlight — bijzondere vogels per vogelgroep -->
+    <section class="slideshow featured-birds" id="slideshow" aria-label="Bijzondere vogels in beeld">
+      <div class="featured-birds__media">
+        <div class="featured-birds__fallback" id="featuredBirdFallback" aria-hidden="true">
+          <span>✦</span>
         </div>
+        <img id="featuredBirdImage" class="featured-birds__photo" alt=""
+          decoding="async" fetchpriority="low">
       </div>
-      <div class="slideshow__dots" id="slideshowDots"></div>
-    </div>
+      <div class="featured-birds__shade" aria-hidden="true"></div>
+      <div class="featured-birds__top">
+        <span class="featured-birds__eyebrow">BIRDSPOT / BIJZONDERE VOGELS</span>
+        <label for="featuredBirdTheme">Vogelgroep</label>
+        <select id="featuredBirdTheme" aria-label="Kies vogelgroep"></select>
+      </div>
+      <div class="featured-birds__caption">
+        <span id="featuredBirdCategory" class="featured-birds__category"></span>
+        <h2 id="featuredBirdName"></h2>
+        <em id="featuredBirdLatin"></em>
+        <p id="featuredBirdWhere"></p>
+        <a id="featuredBirdCredit" class="featured-birds__credit" rel="noopener noreferrer"
+          target="_blank" href="https://commons.wikimedia.org/">Bron en fotocredits</a>
+      </div>
+      <div class="featured-birds__bottom">
+        <button id="featuredPrev" type="button" aria-label="Vorige bijzondere vogel">‹</button>
+        <span id="featuredBirdPosition">—</span>
+        <button id="featuredNext" type="button" aria-label="Volgende bijzondere vogel">›</button>
+        <span class="featured-birds__timer-label">Wisselt elke minuut</span>
+      </div>
+      <div id="featuredBirdProgress" class="featured-birds__progress" aria-hidden="true"></div>
+    </section>
 
     <section class="signature-home-intro" aria-label="Expedition dashboard">
       <span class="signature-kicker">BIRDSPOT / SIGNATURE EXPEDITION</span>
@@ -160,6 +181,33 @@ function buildSkeleton() {
       </div>
     </section>
 
+    <!-- Living Habitat: subtiele bewegende natuurvisual bij het gouden uur -->
+    <section class="living-habitat-section" id="habitatMotionSection" aria-label="Bewegend natuurmoment">
+      <div class="living-habitat" id="livingHabitat">
+        <div class="living-habitat__aurora" aria-hidden="true"></div>
+        <div class="living-habitat__moon" aria-hidden="true"></div>
+        <svg class="living-habitat__bird living-habitat__bird--one" aria-hidden="true"
+          viewBox="0 0 120 42" fill="none">
+          <path d="M3 27Q32 0 57 19Q86 1 117 27Q83 12 57 30Q30 13 3 27Z"
+            fill="#dfd4ac" fill-opacity=".57"/>
+        </svg>
+        <svg class="living-habitat__bird living-habitat__bird--two" aria-hidden="true"
+          viewBox="0 0 120 42" fill="none">
+          <path d="M3 27Q32 0 57 19Q86 1 117 27Q83 12 57 30Q30 13 3 27Z"
+            fill="#dfd4ac" fill-opacity=".4"/>
+        </svg>
+        <div class="living-habitat__reeds" aria-hidden="true"></div>
+        <div class="living-habitat__content">
+          <span class="signature-kicker">THE LIVING WILDLIFE EXPERIENCE</span>
+          <h2>De natuur staat nooit stil.</h2>
+          <p>Een rustig bewegend rietlandschap — geïnspireerd op vroege vogelmomenten.</p>
+          <span class="living-habitat__art-label">Sfeervisual · geen echte waarneming</span>
+        </div>
+        <button id="habitatMotionToggle" type="button" class="living-habitat__toggle"
+          aria-pressed="false" aria-label="Zet de bewegende natuurvisual stil">Ⅱ</button>
+      </div>
+    </section>
+
     <!-- Weer -->
     <section class="dash-section" id="weatherSection">
       <div class="section-head">
@@ -190,6 +238,47 @@ function buildSkeleton() {
       </div>
     </section>
   `;
+}
+
+
+/**
+ * The habitat is animated CSS (no downloaded video required).
+ * Pause if hidden or outside viewport to protect battery on mobile.
+ */
+function initHabitatMotion(el,ctx){
+  const landscape=el.querySelector('#livingHabitat');
+  const toggle=el.querySelector('#habitatMotionToggle');
+  if(!landscape||!toggle)return()=>{};
+  const motion=window.matchMedia?.('(prefers-reduced-motion: reduce)');
+  let userPaused=false,inView=false;
+  function update(){
+    if(ctx.destroyed)return;
+    const paused=userPaused||document.hidden||!inView||!!motion?.matches;
+    landscape.classList.toggle('is-paused',paused);
+    toggle.setAttribute('aria-pressed',String(userPaused));
+    toggle.setAttribute('aria-label',userPaused?'Hervat de bewegende natuurvisual':'Zet de bewegende natuurvisual stil');
+    toggle.textContent=userPaused?'▶':'Ⅱ';
+  }
+  const onToggle=()=>{userPaused=!userPaused;update()};
+  const onVisibility=()=>update();
+  toggle.addEventListener('click',onToggle);
+  document.addEventListener('visibilitychange',onVisibility);
+  motion?.addEventListener?.('change',onVisibility);
+  let observer=null;
+  if(typeof IntersectionObserver!=='undefined'){
+    observer=new IntersectionObserver(entries=>{
+      inView=entries[0]?.isIntersecting===true;
+      update();
+    },{threshold:.05});
+    observer.observe(landscape);
+  }else inView=true;
+  update();
+  return()=>{
+    observer?.disconnect();
+    toggle.removeEventListener('click',onToggle);
+    document.removeEventListener('visibilitychange',onVisibility);
+    motion?.removeEventListener?.('change',onVisibility);
+  };
 }
 
 // ══════════════════════════════════════════════════════════
