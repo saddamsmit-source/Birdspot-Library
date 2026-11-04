@@ -120,7 +120,7 @@ def main():
             shot(page,"phase3_journal_390.png")
             page.locator("#journalYear").select_option("2025")
             assert page.locator("#journalResultsCount").inner_text()=="1 resultaat"
-            assert page.locator("[data-journal-id='p3-old']").count()==1
+            assert page.locator("#journalTimeline [data-journal-id='p3-old']").count()==1
             page.locator("#journalYear").select_option("all")
             page.locator("#journalSearch").fill("Stadsduif")
             assert page.locator("#journalResultsCount").inner_text()=="2 resultaten"
