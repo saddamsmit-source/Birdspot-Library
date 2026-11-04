@@ -99,7 +99,12 @@ def main():
 
             # Export must produce real encoded video and a working download action.
             p.locator("#filmExport").click()
-            p.locator("#filmResult").wait_for(state="visible",timeout=60000)
+            p.wait_for_function("""() => {
+              const result=document.getElementById('filmResult');
+              const text=document.getElementById('filmMessage')?.textContent||'';
+              return (!!result&&!result.hidden)||/mislukt|geannuleerd|niet ondersteund/i.test(text);
+            }""",timeout=35000)
+            assert p.locator("#filmResult").is_visible(), p.locator("#filmMessage").inner_text()
             result=p.evaluate("""async () => {
               const link=document.getElementById('filmDownload');
               const res=await fetch(link.href);

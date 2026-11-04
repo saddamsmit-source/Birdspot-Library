@@ -140,7 +140,10 @@ async function mediaVideo(blob,signal) {
       new Promise((_,reject)=>setTimeout(()=>reject(new Error('Videobestand kan niet worden geladen')),15000)),
     ]);
     guard(signal);
-    await video.play();
+    await Promise.race([
+      video.play(),
+      new Promise((_,reject)=>setTimeout(()=>reject(new Error("Afspelen van videobron duurt te lang")),10000)),
+    ]);
     return {video,url};
   } catch(err) {
     video.pause();video.removeAttribute('src');video.load();
@@ -208,7 +211,10 @@ export async function renderFilm({clips,options={},signal,onProgress=()=>{}}) {
     await sleepFrame((_,p)=>titleScreen(ctx,w,h,'BIRDSPOT','Your wildlife. Your discoveries.',p),1500,signal);
     guard(signal);
     rec.stop();
-    await stopped;
+    await Promise.race([
+      stopped,
+      new Promise((_,reject)=>setTimeout(()=>reject(new Error("Videocodering kon niet worden afgerond")),12000)),
+    ]);
     guard(signal);
     const type=rec.mimeType||mime;
     const file=new Blob(parts,{type:type.split(';')[0]});
