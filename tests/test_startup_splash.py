@@ -32,6 +32,11 @@ def main():
     assert len(original)==21449, f"Unexpected optimized image size: {len(original)}"
     assert hashlib.sha256(original).hexdigest()=="78a7930e4f4101e03461f9429426555294327b207281a8673374032712ad335a"
     assert b"ftypavif" in original[:80]
+    # Offline PWA must store the real binary asset and startup controller.
+    sw=(ROOT/"sw.js").read_text(encoding="utf-8")
+    assert "/assets/birdspot-ijsvogel-splash.avif" in sw
+    assert "/src/services/startup-splash.js" in sw
+    assert "/styles/startup-splash.css" in sw
 
     with Server(("127.0.0.1",0),Quiet) as server:
         threading.Thread(target=server.serve_forever,daemon=True).start()
