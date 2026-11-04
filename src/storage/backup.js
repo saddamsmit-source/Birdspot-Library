@@ -216,6 +216,25 @@ export function hasSafetyCopy() {
   return !!getSafetyCopy();
 }
 
+// Supported original media formats for lossless ZIP roundtrip.
+const MEDIA_EXT_MIME = Object.freeze({
+  jpg:'image/jpeg',jpeg:'image/jpeg',png:'image/png',webp:'image/webp',
+  gif:'image/gif',svg:'image/svg+xml',mp4:'video/mp4',webm:'video/webm',
+  mov:'video/quicktime',m4v:'video/x-m4v',
+});
+const MIME_EXT = Object.freeze({
+  'image/jpeg':'jpg','image/png':'png','image/webp':'webp',
+  'image/gif':'gif','image/svg+xml':'svg','video/mp4':'mp4',
+  'video/webm':'webm','video/quicktime':'mov','video/x-m4v':'m4v',
+});
+function zipMediaExtension(photo) {
+  const mime=String(photo.type||photo.blob?.type||'').toLowerCase();
+  if(MIME_EXT[mime])return MIME_EXT[mime];
+  const ext=String(photo.filename||'').split('.').pop().toLowerCase();
+  if(MEDIA_EXT_MIME[ext])return ext;
+  throw new Error('Back-up kan dit mediaformaat niet bewaren: '+mime);
+}
+
 // ── Export / back-up ──────────────────────────────────────────────────────
 
 /**
@@ -246,7 +265,7 @@ export async function exportBackup() {
     const buf = photo.blob instanceof Blob
       ? new Uint8Array(await photo.blob.arrayBuffer())
       : new Uint8Array(photo.blob);
-    const ext  = (photo.type || 'image/jpeg').split('/')[1] || 'jpg';
+    const ext  = zipMediaExtension(photo);
     zipFiles.push({ name: `photos/${photo.id}.${ext}`, data: buf });
   }
 
@@ -374,10 +393,10 @@ export async function importBackup(file) {
   for (const photoId of (data.photoIds || [])) {
     if (existingIds.has(photoId)) continue;
     // Zoek het fotobestand in de ZIP (probeert meerdere extensies)
-    for (const ext of ['jpg', 'jpeg', 'png', 'webp', 'mp4', 'gif']) {
+    for (const ext of Object.keys(MEDIA_EXT_MIME)) {
       const photoBytes = extractFromZip(bytes, `photos/${photoId}.${ext}`);
       if (photoBytes) {
-        const mimeType = ext === 'mp4' ? 'video/mp4' : `image/${ext}`;
+        const mimeType = MEDIA_EXT_MIME[ext];
         const blob     = new Blob([photoBytes], { type: mimeType });
         // Zoek bijbehorende sighting
         const sighting = merged.find(s => (s.photoIds || []).includes(photoId));
@@ -407,7 +426,8 @@ export async function importBackup(file) {
   }
 
   if (newPhotos.length > 0) {
-    await saveAllPhotos(newPhotos).catch(() => {}); // foto's zijn best-effort
+    // Write failures must propagate; never report a successful restore with missing media.
+    await saveAllPhotos(newPhotos);
   }
 
   // 7. Favorieten en filmselectie additief samenvoegen met oude back-ups.
