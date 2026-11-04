@@ -130,7 +130,8 @@ def main():
                 date:'2026-10-20',locationName:'Oude invoer',photoIds:[]});
               localStorage.setItem('birdspot-sightings',JSON.stringify(s));
             }""")
-            page.locator('.nav-item[data-route="sightings"]').click()
+            page.locator('.nav-item[data-route="map"]').click()
+            page.locator("#explorerSightingsBtn").click()
             page.locator("#sightingCards").wait_for(timeout=11000)
             assert page.locator('.sight-card[data-id="'+heard["id"]+'"] .sighting-merlin-pill').count()==1
             assert page.locator('.sight-card[data-id="'+heard["id"]+'"] .sighting-observed-pill').count()==1
