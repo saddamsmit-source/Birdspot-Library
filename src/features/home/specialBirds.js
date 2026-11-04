@@ -66,14 +66,18 @@ export const FEATURED_BIRDS=Object.freeze([
     'European bee eater - Bijeneter - Merops apiaster.jpg','Bouke ten Cate','CC BY-SA 4.0'),
 ]);
 export function birdsForTheme(theme='all'){
-  return FEATURED_BIRDS.filter(b=>theme==='all'||b.theme===theme);
+  // The golden oriole is both a songbird and a colourful, unusual visitor.
+  return FEATURED_BIRDS.filter(b=>theme==='all'||b.theme===theme||
+    (theme==='kleur'&&b.id==='wielewaal'));
 }
-export function birdAtTime(theme='all',time=Date.now()){
+export function birdAtTime(theme='all',time=Date.now(),origin=0){
   const list=birdsForTheme(theme);
   if(!list.length)return null;
-  const ms=Number.isFinite(Number(time))?Math.max(0,Number(time)):0;
-  return list[Math.floor(ms/SHOWCASE_INTERVAL_MS)%list.length];
+  const elapsed=Number.isFinite(Number(time))?
+    Math.max(0,Number(time)-Number(origin||0)):0;
+  return list[Math.floor(elapsed/SHOWCASE_INTERVAL_MS)%list.length];
 }
-export function nextSlideDelay(time=Date.now()){
-  return SHOWCASE_INTERVAL_MS-((Number(time)%SHOWCASE_INTERVAL_MS+SHOWCASE_INTERVAL_MS)%SHOWCASE_INTERVAL_MS);
+export function nextSlideDelay(time=Date.now(),origin=0){
+  const elapsed=Math.max(0,Number(time)-Number(origin||0));
+  return SHOWCASE_INTERVAL_MS-((elapsed%SHOWCASE_INTERVAL_MS+SHOWCASE_INTERVAL_MS)%SHOWCASE_INTERVAL_MS);
 }

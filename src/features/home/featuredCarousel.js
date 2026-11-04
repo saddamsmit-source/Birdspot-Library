@@ -23,13 +23,22 @@ export function initFeaturedCarousel(el,ctx){
   const prev=stage.querySelector('#featuredPrev');
   const next=stage.querySelector('#featuredNext');
   const progress=stage.querySelector('#featuredBirdProgress');
-  let theme='all',manual=null,timer=null,activeId=null,slot=Math.floor(Date.now()/SHOWCASE_INTERVAL_MS),destroyed=false;
+  let theme='all',manual=null,timer=null,activeId=null,destroyed=false;
   const storageKey='birdspot-showcase-theme';
+  const clockKey='birdspot-showcase-epoch';
+  let startEpoch=Date.now();
 
   try{
     const saved=localStorage.getItem(storageKey);
     if(BIRD_THEMES.some(([key])=>key===saved))theme=saved;
   }catch(_){/* Storage not needed for slide functionality */}
+  // Persist the first-ever start time. A full minute elapses before the first
+  // automatic change; reopening later derives the virtual current frame.
+  try {
+    const epoch=Number(localStorage.getItem(clockKey));
+    if(epoch>0&&epoch<=Date.now())startEpoch=epoch;
+    else localStorage.setItem(clockKey,String(startEpoch));
+  } catch(_) {/* No storage permission: clock still works in the current visit. */}
   select.innerHTML='';
   for(const [key,label] of BIRD_THEMES){
     const option=document.createElement('option');
@@ -44,7 +53,8 @@ export function initFeaturedCarousel(el,ctx){
   function current(){
     const group=birdsForTheme(theme);
     if(!group.length)return {bird:null,index:0,group};
-    const index=manual===null?Math.floor(Date.now()/SHOWCASE_INTERVAL_MS)%group.length:
+    const elapsed=Math.max(0,Date.now()-startEpoch);
+    const index=manual===null?Math.floor(elapsed/SHOWCASE_INTERVAL_MS)%group.length:
       (manual+group.length)%group.length;
     return {bird:group[index],index,group};
   }
@@ -68,7 +78,7 @@ export function initFeaturedCarousel(el,ctx){
       window.setTimeout(()=>{if(!destroyed)stage.classList.remove('is-changing')},450);
     }
     order.textContent=(index+1)+' / '+group.length;
-    const millis=Date.now()%SHOWCASE_INTERVAL_MS;
+    const millis=(Date.now()-startEpoch)%SHOWCASE_INTERVAL_MS;
     progress.style.setProperty('--slide-progress',(millis/SHOWCASE_INTERVAL_MS*100).toFixed(2)+'%');
   }
   function schedule(){
@@ -76,14 +86,15 @@ export function initFeaturedCarousel(el,ctx){
     if(document.hidden||destroyed)return;
     timer=window.setTimeout(()=>{
       if(destroyed||ctx.destroyed)return;
-      slot=Math.floor(Date.now()/SHOWCASE_INTERVAL_MS);
       manual=null;
       render();
       schedule();
-    },Math.max(80,nextSlideDelay(Date.now())+25));
+    },Math.max(80,nextSlideDelay(Date.now(),startEpoch)+25));
   }
   function changeTheme(e){
     theme=e.target.value;
+    startEpoch=Date.now();
+    try{localStorage.setItem(clockKey,String(startEpoch))}catch(_){}
     manual=null;
     try{localStorage.setItem(storageKey,theme)}catch(_){}
     activeId=null;

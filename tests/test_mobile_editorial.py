@@ -36,8 +36,8 @@ def main():
       assert "Wisselt elke minuut" in p.locator(".featured-birds").inner_text()
       assert p.locator('#featuredBirdTheme option').count()==9
       p.locator('#featuredBirdTheme').select_option('kleur')
-      assert p.locator('#featuredBirdName').inner_text() in ('Scharrelaar','Bijeneter')
-      assert p.locator('#featuredBirdLatin').inner_text() in ('Coracias garrulus','Merops apiaster')
+      assert p.locator('#featuredBirdName').inner_text() in ('Wielewaal','Scharrelaar','Bijeneter')
+      assert p.locator('#featuredBirdLatin').inner_text() in ('Oriolus oriolus','Coracias garrulus','Merops apiaster')
       assert len(p.locator('#featuredBirdWhere').inner_text())>25
       before=p.locator('#featuredBirdName').inner_text()
       p.locator('#featuredNext').click()
@@ -54,6 +54,18 @@ def main():
         };
       }""")
       assert current=={"total":16,"themes":9,"current":"wielewaal","future":"nachtegaal","cycle":"wielewaal","delay":57000},current
+      wallclock=p.evaluate("""async()=>{
+        const m=await import('/src/features/home/specialBirds.js');
+        const start=105123;
+        return {first:m.birdAtTime('zang',start,start).id,
+          stillFirst:m.birdAtTime('zang',start+59999,start).id,
+          next:m.birdAtTime('zang',start+60000,start).id,
+          delay:m.nextSlideDelay(start+14000,start),
+          colourful:m.birdsForTheme('kleur').map(x=>x.nl)};
+      }""")
+      assert wallclock["first"]==wallclock["stillFirst"]=="wielewaal"
+      assert wallclock["next"]=="nachtegaal" and wallclock["delay"]==46000
+      assert wallclock["colourful"]==["Wielewaal","Scharrelaar","Bijeneter"]
       # Wikimedia photos are third-party: report actual network availability
       # separately from the deterministic slideshow timing/metadata checks.
       try:
