@@ -33,7 +33,7 @@ def main():
             assert p.locator("#filmEditor").is_hidden()
             assert "Kies mijn beelden" in p.locator("#filmEmptyState").inner_text()
             capture(p,"phase4_empty_390.png")
-            p.locator('[data-film-route="media"]').click()
+            p.locator('#filmEmptyState [data-film-route="media"]').click()
             p.locator(".signature-media-v2").wait_for(timeout=10000)
 
             # Put one real picture and one playable synthetic video into canonical IDB.
