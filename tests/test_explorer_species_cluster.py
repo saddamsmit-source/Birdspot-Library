@@ -30,14 +30,27 @@ LEAFLET_STUB=r"""(() => {
       const icon=layer.options.iconCreateFunction(cluster);
       const wrap=document.createElement('div');
       wrap.className='mock-bird-marker mock-bird-cluster';
+      // Synthetic test placement: never claims to be a real geographic projection.
+      wrap.style.position='absolute';
+      wrap.style.left='50%';wrap.style.top='54%';
+      wrap.style.transform='translate(-50%,-50%)';wrap.style.zIndex='350';
+      wrap.style.width=icon.iconSize[0]+'px';wrap.style.height=icon.iconSize[1]+'px';
       wrap.innerHTML=icon.html;
       map.el.appendChild(wrap);
       runtime.rendered=[icon.html];
     } else {
       runtime.rendered=[];
-      for(const marker of layer.markers){
+      const positions=[[21,45],[51,47],[78,42],[33,63],[70,65],[52,57]];
+      for(const [i,marker] of layer.markers.entries()){
         const wrap=document.createElement('div');
         wrap.className='mock-bird-marker';
+        // Only for QA screenshots. Actual pin position is owned by Leaflet.
+        const [left,top]=positions[i%positions.length];
+        wrap.style.position='absolute';wrap.style.zIndex='350';
+        wrap.style.left=left+'%';wrap.style.top=top+'%';
+        wrap.style.transform='translate(-50%,-50%)';
+        wrap.style.width=marker.options.icon.iconSize[0]+'px';
+        wrap.style.height=marker.options.icon.iconSize[1]+'px';
         wrap.innerHTML=marker.options.icon.html;
         map.el.appendChild(wrap);
         runtime.rendered.push(marker.options.icon.html);

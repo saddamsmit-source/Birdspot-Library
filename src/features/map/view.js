@@ -141,50 +141,58 @@ export function renderMap(el) {
 }
 
 // ── Leaflet lazy loader ────────────────────────────────────────
+let _leafletLoadPromise = null;
+// One shared loader for Explorer Map and the manual pin picker.
+// A bare window.L is insufficient; MarkerCluster must also be present.
 export function ensureLeaflet() {
-  if (_leafletReady) return Promise.resolve();
+  if(window.L?.markerClusterGroup) {
+    _leafletReady=true;
+    return Promise.resolve();
+  }
+  if(_leafletLoadPromise) return _leafletLoadPromise;
 
-  return new Promise((resolve, reject) => {
-    // Leaflet CSS
-    if (!document.getElementById('leaflet-css')) {
-      const link = document.createElement('link');
-      link.id   = 'leaflet-css';
-      link.rel  = 'stylesheet';
-      link.href = `https://cdnjs.cloudflare.com/ajax/libs/leaflet/${LEAFLET_VERSION}/leaflet.min.css`;
-      document.head.appendChild(link);
-    }
-    // MarkerCluster CSS
-    if (!document.getElementById('cluster-css')) {
-      const link = document.createElement('link');
-      link.id   = 'cluster-css';
-      link.rel  = 'stylesheet';
-      link.href = `https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/${CLUSTER_VERSION}/MarkerCluster.Default.css`;
-      document.head.appendChild(link);
-    }
-
-    // Leaflet JS
-    if (window.L) {
-      _leafletReady = true;
-      resolve();
-      return;
-    }
-
-    const leafletScript = document.createElement('script');
-    leafletScript.src = `https://cdnjs.cloudflare.com/ajax/libs/leaflet/${LEAFLET_VERSION}/leaflet.min.js`;
-    leafletScript.onload = () => {
-      // MarkerCluster JS na Leaflet
-      const clusterScript = document.createElement('script');
-      clusterScript.src = `https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/${CLUSTER_VERSION}/leaflet.markercluster.min.js`;
-      clusterScript.onload = () => {
-        _leafletReady = true;
+  function styleOnce(id,url) {
+    if(document.getElementById(id)) return;
+    const link=document.createElement('link');
+    link.id=id;link.rel='stylesheet';link.href=url;
+    document.head.appendChild(link);
+  }
+  function scriptOnce(id,url) {
+    return new Promise((resolve,reject)=>{
+      const existing=document.getElementById(id);
+      if(existing?.dataset.loaded==='true') return resolve();
+      const script=existing||document.createElement('script');
+      function loaded() {
+        script.dataset.loaded='true';
         resolve();
-      };
-      clusterScript.onerror = reject;
-      document.head.appendChild(clusterScript);
-    };
-    leafletScript.onerror = reject;
-    document.head.appendChild(leafletScript);
+      }
+      function failed() {
+        script.remove();
+        reject(new Error('Kaartbibliotheek kon niet worden geladen'));
+      }
+      script.addEventListener('load',loaded,{once:true});
+      script.addEventListener('error',failed,{once:true});
+      if(!existing) {
+        script.id=id;script.src=url;document.head.appendChild(script);
+      }
+    });
+  }
+  styleOnce('leaflet-css','https://cdnjs.cloudflare.com/ajax/libs/leaflet/'+LEAFLET_VERSION+'/leaflet.min.css');
+  styleOnce('cluster-css','https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/'+CLUSTER_VERSION+'/MarkerCluster.Default.css');
+  _leafletLoadPromise=(async()=>{
+    if(!window.L)await scriptOnce('birdspot-leaflet-js',
+      'https://cdnjs.cloudflare.com/ajax/libs/leaflet/'+LEAFLET_VERSION+'/leaflet.min.js');
+    if(!window.L)throw new Error('Leaflet niet beschikbaar');
+    if(!window.L.markerClusterGroup)await scriptOnce('birdspot-cluster-js',
+      'https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/'+CLUSTER_VERSION+'/leaflet.markercluster.min.js');
+    if(!window.L.markerClusterGroup)throw new Error('MarkerCluster niet beschikbaar');
+    _leafletReady=true;
+  })().catch(error=>{
+    _leafletReady=false;
+    _leafletLoadPromise=null;
+    throw error;
   });
+  return _leafletLoadPromise;
 }
 
 // ── Kaart initialiseren ────────────────────────────────────────
@@ -509,8 +517,6 @@ function makeClusterIcon(cluster) {
   const n=children.length;
   const label=escHtml(n+' waarnemingen: '+statusCountLabel(counts));
   const size=n<5?46:n<20?54:62;
-  const summary=MAP_ORDER.filter(key=>counts[key]>0)
-    .map(key=>'<span class="bird-cluster-count bird-cluster-count--'+key+'">'+counts[key]+'</span>').join('');
   return window.L.divIcon({
     html:'<div class="bird-cluster-ring" role="img" aria-label="'+label+'" title="'+label+'"'+
       ' style="background:'+clusterGradient(counts)+'">'+
