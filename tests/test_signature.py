@@ -46,7 +46,7 @@ def main():
             page.locator('[data-signature-route="journal"]').click()
             page.locator(".signature-journal h1").wait_for()
             page.locator(".signature-milestone").first.wait_for(timeout=8000)
-            assert page.locator(".signature-milestone").count() == 3
+            assert page.locator(".signature-milestone").count() == 4
             page.screenshot(path=str(SHOTS / "signature_journal_390.png"), full_page=True)
 
             # Journal must read canonical user data, not invent a separate store.
@@ -59,7 +59,7 @@ def main():
             }))""")
             page.locator('.nav-item[data-route="home"]').click()
             page.locator('[data-signature-route="journal"]').click()
-            page.locator("[data-journal-id='signature-qa-1']").wait_for(timeout=10000)
+            page.locator("#journalTimeline [data-journal-id='signature-qa-1']").wait_for(timeout=10000)
             assert "Koolmees" in page.locator("#journalTimeline").inner_text()
             assert page.evaluate("""() => JSON.parse(
               localStorage.getItem('birdspot-sightings')).sightings[0].id

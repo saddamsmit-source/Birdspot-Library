@@ -16,6 +16,7 @@ import { renderMap }        from './features/map/view.js';
 import { renderProfile }    from './features/profile/view.js';
 import { renderMedia }      from './features/media/view.js';
 import { renderJournal }    from './features/journal/view.js';
+import { renderInsights }   from './features/insights/view.js';
 import { openAddSheet }     from './features/sightings/addSheet.js';
 
 // ── Routes ────────────────────────────────────────────────
@@ -27,6 +28,7 @@ const ROUTES = {
   profile:   { render: renderProfile,   fab: false },
   media:     { render: renderMedia,     fab: true  },
   journal:   { render: renderJournal,   fab: true  },
+  insights:  { render: renderInsights,  fab: true  },
 };
 
 let currentRoute  = null;

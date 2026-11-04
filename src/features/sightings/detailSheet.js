@@ -51,13 +51,23 @@ export async function openDetailSheet(sighting, { onDeleted, onUpdated } = {}) {
       </div>
     </div>`;
 
+  const previousFocus = document.activeElement;
+  let closed = false;
   document.body.appendChild(ov);
-  requestAnimationFrame(() => ov.querySelector('.sheet').classList.add('open'));
+  requestAnimationFrame(() => { if (!closed) ov.classList.add('open'); });
 
-  const close = () => {
-    ov.querySelector('.sheet').classList.remove('open');
-    setTimeout(() => { ov.remove(); _releaseUrls(); }, 300);
+  const onKey = e => {
+    if (e.key === 'Escape' && !document.querySelector('.confirm-overlay, .lightbox')) close();
   };
+  const close = () => {
+    if (closed) return;
+    closed = true;
+    ov.classList.remove('open');
+    document.removeEventListener('keydown',onKey);
+    setTimeout(() => { ov.remove(); _releaseUrls(); previousFocus?.focus?.(); }, 300);
+  };
+  document.addEventListener('keydown',onKey);
+  ov.querySelector('#detailClose')?.focus();
 
   ov.addEventListener('click', e => { if (e.target === ov) close(); });
   ov.querySelector('.sheet__handle').addEventListener('click', close);
@@ -82,10 +92,17 @@ export async function openDetailSheet(sighting, { onDeleted, onUpdated } = {}) {
     );
     if (!confirmed) return;
 
+    // Eerst het persistente record bijwerken. Bij opslagfout blijven foto's intact.
+    try {
+      await deleteSighting(sighting.id);
+    } catch (_) {
+      showToast('Verwijderen mislukt. De waarneming en foto’s zijn behouden.');
+      return;
+    }
+    // Pas na succesvolle recordopslag verwijderbare media opruimen.
     for (const id of (sighting.photoIds || [])) {
       await deletePhoto(id).catch(() => {});
     }
-    await deleteSighting(sighting.id);
     close();
     showToast('Waarneming verwijderd');
     onDeleted?.(sighting);

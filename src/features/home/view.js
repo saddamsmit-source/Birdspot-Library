@@ -119,6 +119,7 @@ function buildSkeleton() {
         <button data-signature-route="media" class="signature-home-link" type="button">▣ &nbsp; Media Studio <span aria-hidden="true">↗</span></button>
         <button data-signature-route="journal" class="signature-home-link" type="button">✦ &nbsp; Birding Journal <span aria-hidden="true">↗</span></button>
         <button data-signature-route="species" class="signature-home-link" type="button">◈ &nbsp; Soorten ontdekken <span aria-hidden="true">↗</span></button>
+        <button data-signature-route="insights" class="signature-home-link" type="button">▥ &nbsp; Mijn Inzichten <span aria-hidden="true">↗</span></button>
       </div>
     </section>
 

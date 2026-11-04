@@ -1,0 +1,32 @@
+name: Birdspot Signature Phase 3 QA
+on:
+  pull_request:
+    paths:
+      - "src/**"
+      - "styles/**"
+      - "index.html"
+      - "sw.js"
+      - "tests/test_signature_phase3.py"
+      - ".github/workflows/signature-phase3-qa.yml"
+jobs:
+  insights-journal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install browser test tools
+        run: |
+          python -m pip install -r tests/requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: Verify journal and insights against known synthetic sightings
+        run: python tests/test_signature_phase3.py
+      - name: Upload journal and insights screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: signature-phase3-screenshots
+          path: tests/screenshots/phase3_*.png
+          if-no-files-found: ignore
