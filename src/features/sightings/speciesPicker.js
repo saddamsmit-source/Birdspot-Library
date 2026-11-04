@@ -39,12 +39,12 @@ export function openSpeciesPicker(onSelect) {
     </div>`;
 
   document.body.appendChild(ov);
-  requestAnimationFrame(() => ov.querySelector('.sheet').classList.add('open'));
+  requestAnimationFrame(() => { if (ov.isConnected) ov.classList.add('open'); });
 
   renderOpts(ov, '');
 
   const close = () => {
-    ov.querySelector('.sheet').classList.remove('open');
+    ov.classList.remove('open');
     setTimeout(() => ov.remove(), 300);
   };
 

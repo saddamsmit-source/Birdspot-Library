@@ -12,7 +12,7 @@
  *   birdspot-media           — foto's/IDB-exports (permanent)
  */
 
-const APP_VERSION = '1.3.0-signature-journal-insights';
+const APP_VERSION = '1.3.1-bird-sight-sound-pin';
 const APP_CACHE   = `birdspot-app-v${APP_VERSION}`;
 const MEDIA_CACHE = 'birdspot-media';
 
@@ -35,6 +35,7 @@ const PRECACHE_URLS = [
   '/styles/signature.css',
   '/styles/signature-phase2.css',
   '/styles/signature-phase3.css',
+  '/styles/observations-evidence.css',
 
   // JS — app root
   '/src/app.js',
@@ -44,6 +45,8 @@ const PRECACHE_URLS = [
   '/src/features/species/view.js',
   '/src/features/sightings/view.js',
   '/src/features/sightings/addSheet.js',
+  '/src/features/sightings/evidence.js',
+  '/src/features/sightings/pinPicker.js',
   '/src/features/sightings/editSheet.js',
   '/src/features/sightings/detailSheet.js',
   '/src/features/map/view.js',

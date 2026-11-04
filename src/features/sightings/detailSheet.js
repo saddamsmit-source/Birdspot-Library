@@ -9,7 +9,8 @@
  */
 
 import { deleteSighting }                   from '../../data/sightings.js';
-import { getPhotosBySighting, deletePhoto } from '../../data/db.js';
+import { getPhotosBySighting, getPhoto, deletePhoto } from '../../data/db.js';
+import { methodLabel, sourceLabel } from './evidence.js';
 import { escHtml }                          from '../../utils/html.js';
 import { showToast }                        from '../../app.js';
 import { openEditSheet }                    from './addSheet.js';
@@ -23,6 +24,13 @@ const CERTAINTY_NL = {
 export async function openDetailSheet(sighting, { onDeleted, onUpdated } = {}) {
   // Laad media uit IndexedDB
   const photos = await getPhotosBySighting(sighting.id).catch(() => []);
+  // Fallback for legacy photos linked through sighting.photoIds only.
+  const ids = new Set(photos.map(p=>p.id));
+  for (const id of (sighting.photoIds || [])) {
+    if(ids.has(id))continue;
+    const photo = await getPhoto(id).catch(()=>null);
+    if(photo){photos.push(photo);ids.add(id);}
+  }
 
   const ov = document.createElement('div');
   ov.className = 'sheet-overlay';
@@ -141,13 +149,24 @@ function _renderDetailBody(s, photos) {
         </div>
       </div>
 
+      <!-- Waarnemingswijze en identificatiebron -->
+      <div class="detail-field">
+        <div class="detail-field__label">Waargenomen via</div>
+        <div class="detail-field__value"><span class="sighting-evidence-detail">${escHtml(methodLabel(s))}</span></div>
+      </div>
+      ${s.identificationSource === 'merlin' ? `
+        <div class="detail-field"><div class="detail-field__label">Herkenning</div>
+          <div class="detail-field__value"><span class="sighting-merlin-detail">${escHtml(sourceLabel(s))}</span></div>
+          ${s.merlinVerification !== 'checked' ? '<p class="detail-field__hint">Dit is een Merlin-suggestie; eigen controle is nog niet vastgelegd.</p>' : ''}
+        </div>` : ''}
+
       <!-- Locatie -->
-      ${s.locationName || s.lat ? `
+      ${s.locationName || (s.lat != null && s.lon != null) ? `
       <div class="detail-field">
         <div class="detail-field__label">Locatie</div>
         <div class="detail-field__value">
           ${s.locationName ? escHtml(s.locationName) : ''}
-          ${s.lat ? `<div class="detail-field__hint">📍 ${s.lat.toFixed(5)}, ${s.lon.toFixed(5)}</div>` : ''}
+          ${s.lat != null && s.lon != null ? `<div class="detail-field__hint">📍 ${Number(s.lat).toFixed(5)}, ${Number(s.lon).toFixed(5)}</div>` : ''}
         </div>
       </div>` : ''}
 

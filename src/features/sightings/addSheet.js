@@ -29,7 +29,9 @@
  *   - Stale-context guard: ctx.destroyed check na elke await
  */
 
-import { SPECIES, toggleSeen }   from '../../data/species.js';
+import { SPECIES, toggleSeen, getSeenIds } from '../../data/species.js';
+import { openPinPicker } from './pinPicker.js';
+import { normalizeEvidence, observedVisually, validPin, OBSERVATION_METHODS } from './evidence.js';
 import { addSighting, updateSighting } from '../../data/sightings.js';
 import { savePhoto, getPhoto, deletePhoto } from '../../data/db.js';
 import { openSpeciesPicker }     from './speciesPicker.js';
@@ -58,6 +60,9 @@ function freshState(override = {}) {
     time:         '',
     count:        1,
     certainty:    'certain',
+    observationMethod:'seen',
+    identificationSource:'self',
+    merlinVerification:null,
     locationName: '',
     lat:          null,
     lon:          null,
@@ -79,8 +84,13 @@ function freshState(override = {}) {
 /**
  * @param {{ onSaved?: function(sighting): void }} options
  */
-export function openAddSheet({ onSaved } = {}) {
-  _openSightingForm('add', freshState(), { onSaved });
+export function openAddSheet({ onSaved, initial = {} } = {}) {
+  const hasPin = validPin(initial.lat,initial.lon);
+  _openSightingForm('add', freshState({
+    lat: hasPin ? Number(initial.lat) : null,
+    lon: hasPin ? Number(initial.lon) : null,
+    locationName: typeof initial.locationName === 'string' ? initial.locationName : '',
+  }), { onSaved });
 }
 
 /**
@@ -95,6 +105,9 @@ export function openEditSheet(sighting, { onSaved } = {}) {
     time:             sighting.time         || '',
     count:            sighting.count        ?? 1,
     certainty:        sighting.certainty    || 'certain',
+    observationMethod: sighting.observationMethod || null,
+    identificationSource: sighting.identificationSource || null,
+    merlinVerification: sighting.merlinVerification || null,
     locationName:     sighting.locationName || '',
     lat:              sighting.lat          ?? null,
     lon:              sighting.lon          ?? null,
@@ -143,13 +156,15 @@ function _openSightingForm(mode, initialState, { onSaved, editId } = {}) {
   document.body.appendChild(fileInput);
 
   document.body.appendChild(ov);
-  requestAnimationFrame(() => ov.querySelector('.sheet').classList.add('open'));
+  requestAnimationFrame(() => { if (ov.isConnected) ov.classList.add('open'); });
 
-  const ctx = { destroyed: false };
+  const ctx = { destroyed: false, cancelPinPicker:null };
 
   const close = () => {
+    if (ctx.destroyed) return;
     ctx.destroyed = true;
-    ov.querySelector('.sheet').classList.remove('open');
+    ctx.cancelPinPicker?.();
+    ov.classList.remove('open');
     setTimeout(() => { ov.remove(); fileInput.remove(); }, 300);
     _releaseObjectUrls();
   };
@@ -181,6 +196,40 @@ function _renderFormBody() {
       </button>
     </div>
 
+    <!-- Manier van waarnemen -->
+    <section class="form-field sighting-evidence-field" aria-label="Hoe heb je de vogel waargenomen?">
+      <div class="form-label">Hoe waargenomen?</div>
+      <div class="sighting-method-options" id="sightMethodGroup" role="group" aria-label="Gezien of gehoord">
+        ${Object.entries(OBSERVATION_METHODS).map(([value,label]) =>
+          `<label class="sighting-method-choice${_state.observationMethod === value ? ' is-selected' : ''}">
+            <input type="radio" name="observationMethod" value="${value}" ${_state.observationMethod === value ? 'checked' : ''}>
+            <span>${value === 'heard' ? '♪' : (value === 'both' ? '◉' : '◈')}</span><strong>${label}</strong>
+          </label>`).join('')}
+      </div>
+      ${!_state.observationMethod ? '<p class="form-hint">Bij deze oudere waarneming is de manier van waarnemen niet vastgelegd. Selecteer die als je hem weet.</p>' : ''}
+    </section>
+
+    <!-- Bron van herkenning -->
+    <section class="form-field sighting-source-field" aria-label="Hoe heb je de soort herkend?">
+      <div class="form-label">Herkenning</div>
+      <div class="sighting-source-options" id="sightSourceGroup" role="group" aria-label="Herkenningsbron">
+        <label class="sighting-source-choice${_state.identificationSource === 'self' ? ' is-selected' : ''}">
+          <input type="radio" name="identificationSource" value="self" ${_state.identificationSource === 'self' ? 'checked' : ''}>
+          Eigen herkenning</label>
+        <label class="sighting-source-choice${_state.identificationSource === 'merlin' ? ' is-selected' : ''}">
+          <input type="radio" name="identificationSource" value="merlin" ${_state.identificationSource === 'merlin' ? 'checked' : ''}>
+          Merlin Sound ID</label>
+      </div>
+      ${_state.identificationSource === 'merlin' ? `
+        <div class="sighting-merlin-panel">
+          <strong>♪ Merlin Sound ID</strong>
+          <p>Een suggestie van Merlin is niet automatisch een bevestigde soort. Controleer de vogel zelf via het geluid, de omgeving of de soortbeschrijving.</p>
+          <label class="sighting-merlin-reviewed">
+            <input id="sightMerlinChecked" type="checkbox" ${_state.merlinVerification === 'checked' ? 'checked' : ''}>
+            Ik heb de soort zelf gecontroleerd
+          </label>
+        </div>` : ''}
+    </section>
     <!-- Datum + Tijd -->
     <div class="form-field">
       <label class="form-label">Datum &amp; tijd <span class="form-required">*</span></label>
@@ -203,13 +252,17 @@ function _renderFormBody() {
         <input type="text" id="sightLocation" class="form-input"
           placeholder="bijv. Nationaal Park De Hoge Veluwe"
           value="${escHtml(_state.locationName)}">
-        <button class="form-btn-secondary gps-btn${_state.lat ? ' gps-btn--active' : ''}"
+        <button class="form-btn-secondary gps-btn${validPin(_state.lat,_state.lon) ? ' gps-btn--active' : ''}"
           id="sightGpsBtn" type="button">
           ${_svgGps()}GPS
         </button>
       </div>
+      <div class="form-row sighting-pin-actions">
+        <button class="form-btn-secondary sighting-pin-btn" id="sightPinBtn" type="button">⌖ Kies pin op kaart</button>
+        ${validPin(_state.lat,_state.lon) ? '<button class="form-btn-secondary" id="sightClearPin" type="button">Verwijder pin</button>' : ''}
+      </div>
       <div class="form-hint" id="coordsHint">
-        ${_state.lat ? `📍 ${_state.lat.toFixed(5)}, ${_state.lon.toFixed(5)}` : ''}
+        ${validPin(_state.lat,_state.lon) ? `📍 ${Number(_state.lat).toFixed(5)}, ${Number(_state.lon).toFixed(5)}` : 'Nog geen pin gekozen. Alleen een plaatsnaam opslaan mag ook.'}
       </div>
     </div>
 
@@ -342,6 +395,29 @@ function _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx })
     });
   });
 
+  // Seen / heard / both and optional Merlin Sound ID evidence.
+  el.querySelector('#sightMethodGroup')?.addEventListener('change', e => {
+    if(e.target.name!=='observationMethod')return;
+    _state.observationMethod=e.target.value;
+    // Merlin Sound ID only makes sense for an audible encounter.
+    if(_state.identificationSource==='merlin'&&e.target.value==='seen'){
+      _state.identificationSource='self';_state.merlinVerification=null;
+    }
+    refresh();
+  });
+  el.querySelector('#sightSourceGroup')?.addEventListener('change', e => {
+    if(e.target.name!=='identificationSource')return;
+    _state.identificationSource=e.target.value;
+    if(e.target.value==='merlin'){
+      if(_state.observationMethod==='seen'||!_state.observationMethod)_state.observationMethod='heard';
+      _state.merlinVerification='suggested';
+      if(_state.certainty==='certain')_state.certainty='possible';
+    } else _state.merlinVerification=null;
+    refresh();
+  });
+  el.querySelector('#sightMerlinChecked')?.addEventListener('change',e => {
+    _state.merlinVerification=e.target.checked?'checked':'suggested';
+  });
   // Datum
   el.querySelector('#sightDate')?.addEventListener('change', e => {
     _state.date = e.target.value;
@@ -362,8 +438,23 @@ function _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx })
     _state.locationName = e.target.value;
   });
 
+  // Pin on map, or enter coordinates offline in the map picker.
+  el.querySelector('#sightPinBtn')?.addEventListener('click',()=>{
+    ctx.cancelPinPicker?.();
+    ctx.cancelPinPicker=openPinPicker({
+      lat:_state.lat,lon:_state.lon,
+      onConfirm:coords=>{
+        if(ctx.destroyed)return;
+        _state.lat=coords.lat;_state.lon=coords.lon;
+        ctx.cancelPinPicker=null;refresh();
+      },
+    });
+  });
+  el.querySelector('#sightClearPin')?.addEventListener('click',()=>{
+    _state.lat=null;_state.lon=null;refresh();
+  });
   // GPS
-  el.querySelector('#sightGpsBtn')?.addEventListener('click', () => _requestGPS(ov));
+  el.querySelector('#sightGpsBtn')?.addEventListener('click', () => _requestGPS(ov,ctx));
 
   // Aantal
   el.querySelector('#sightCount')?.addEventListener('input', e => {
@@ -479,6 +570,15 @@ async function _loadExistingThumbs(containerEl) {
 async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
   if (!_state.speciesId) { showToast('Kies eerst een soort'); return; }
   if (!_state.date)      { showToast('Vul een datum in');    return; }
+  let evidence;
+  try { evidence=normalizeEvidence(_state); }
+  catch(err){ showToast(err.message); return; }
+  if ((_state.lat !== null || _state.lon !== null) && !validPin(_state.lat,_state.lon)) {
+    showToast('Kies een geldige pin, of verwijder de coördinaten');return;
+  }
+  if(evidence.identificationSource==='merlin' && evidence.merlinVerification!=='checked' && _state.certainty==='certain') {
+    showToast('Een Merlin-suggestie is niet automatisch zeker. Kies Mogelijk/Waarschijnlijk of controleer de soort zelf.');return;
+  }
 
   const btn = ov.querySelector('#addSheetSubmit');
   if (!btn || btn.disabled) return;   // guard: voorkomt dubbele submit
@@ -539,6 +639,7 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
       weather:      _state.weather      || null,
       notes:        _state.notes        || null,
       photoIds:     allPhotoIds,
+      ...evidence,
     };
 
     if (isEdit) {
@@ -571,8 +672,11 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
       }
     }
 
-    // 4. Soort als gezien markeren (idempotent)
-    toggleSeen(_state.speciesId);
+    // 4. Alleen visueel waargenomen soorten als GEZIEN markeren.
+    // Een tweede waarneming mag een bestaand gezien-vinkje niet UIT zetten.
+    if (observedVisually(evidence) && !getSeenIds().has(_state.speciesId)) {
+      toggleSeen(_state.speciesId);
+    }
 
     // 5. Afsluiten
     close();
@@ -591,7 +695,7 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
 }
 
 // ── GPS ────────────────────────────────────────────────────
-function _requestGPS(ov) {
+function _requestGPS(ov,ctx) {
   if (!navigator.geolocation) { showToast('GPS niet beschikbaar'); return; }
   const btn  = ov.querySelector('#sightGpsBtn');
   const hint = ov.querySelector('#coordsHint');
@@ -601,6 +705,7 @@ function _requestGPS(ov) {
 
   navigator.geolocation.getCurrentPosition(
     pos => {
+      if(ctx.destroyed) return;
       _state.lat = pos.coords.latitude;
       _state.lon = pos.coords.longitude;
       btn.classList.remove('gps-btn--loading');
@@ -609,6 +714,7 @@ function _requestGPS(ov) {
       if (hint) hint.textContent = `📍 ${_state.lat.toFixed(5)}, ${_state.lon.toFixed(5)}`;
     },
     () => {
+      if(ctx.destroyed) return;
       btn.classList.remove('gps-btn--loading');
       btn.innerHTML = _svgGps() + ' GPS';
       showToast('GPS niet beschikbaar — vul locatie handmatig in');

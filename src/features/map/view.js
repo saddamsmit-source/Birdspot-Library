@@ -12,6 +12,9 @@
 import { getSightings }    from '../../data/sightings.js';
 import { SPECIES }         from '../../data/species.js';
 import { openDetailSheet } from '../sightings/detailSheet.js';
+import { openAddSheet } from '../sightings/addSheet.js';
+import { openPinPicker } from '../sightings/pinPicker.js';
+import { methodLabel, sourceLabel, validPin } from '../sightings/evidence.js';
 
 // Leaflet + MarkerCluster worden lazy geladen via <script> tags die we
 // eenmalig in de <head> injecteren zodra de kaart-view voor het eerst
@@ -42,6 +45,8 @@ export function renderMap(el) {
         </svg>
       </button>
 
+      <button class="map-add-pin-btn" id="mapAddPinBtn" type="button" aria-pressed="false">+ Pin waarneming</button>
+      <div class="map-pin-instruction" id="mapPinInstruction" hidden>⌖ Tik op een vrije plek op de kaart om een waarneming vast te leggen.</div>
       <!-- Signature Explorer card: deliberately separate from Leaflet controls -->
       <aside class="signature-explorer-strip" aria-label="Bird Explorer overzicht">
         <span class="signature-kicker">EXPEDITION / DISCOVER</span>
@@ -118,7 +123,7 @@ export function renderMap(el) {
 }
 
 // ── Leaflet lazy loader ────────────────────────────────────────
-function ensureLeaflet() {
+export function ensureLeaflet() {
   if (_leafletReady) return Promise.resolve();
 
   return new Promise((resolve, reject) => {
@@ -176,7 +181,7 @@ function initMap(screenEl, sightings, leafletOk = true) {
     _clusterLayer = null;
   }
 
-  const geoSightings = sightings.filter(s => s.lat != null && s.lon != null);
+  const geoSightings = sightings.filter(s => validPin(s.lat,s.lon));
 
   // Teller bijwerken — altijd, ook zonder Leaflet
   const countEl = screenEl.querySelector('#mapCount');
@@ -204,6 +209,10 @@ function initMap(screenEl, sightings, leafletOk = true) {
     notice.className = 'map-offline-notice';
     notice.textContent = 'Kaart niet beschikbaar (offline)';
     mapEl.appendChild(notice);
+    screenEl.querySelector('#mapAddPinBtn')?.addEventListener('click',()=>{
+      openPinPicker({onConfirm:coords=>openAddSheet({initial:coords,
+        onSaved:()=>import('../../app.js').then(({navigate})=>navigate('map',{force:true}))})});
+    });
     return;
   }
 
@@ -245,9 +254,9 @@ function initMap(screenEl, sightings, leafletOk = true) {
   geoSightings.forEach(s => {
     const sp   = SPECIES.find(x => x.id === s.speciesId);
     const icon = sp?.icon || '🐦';
-    const marker = window.L.marker([s.lat, s.lon], {
-      icon: makeBirdIcon(icon),
-      title: s.speciesName,
+    const marker = window.L.marker([Number(s.lat), Number(s.lon)], {
+      icon: makeBirdIcon(icon,s.observationMethod),
+      title: s.speciesName + (s.observationMethod === 'heard' ? ' (gehoord)' : ''),
     });
     marker.on('click', () => openSightingSheet(screenEl, s, map));
     _clusterLayer.addLayer(marker);
@@ -255,6 +264,39 @@ function initMap(screenEl, sightings, leafletOk = true) {
 
   map.addLayer(_clusterLayer);
 
+  // Explicit map-pin mode: do not create accidental sightings on normal taps.
+  const addPinBtn = screenEl.querySelector('#mapAddPinBtn');
+  const pinInstruction = screenEl.querySelector('#mapPinInstruction');
+  let placing = false;
+  const stopPlacing = () => {
+    placing=false;
+    addPinBtn?.setAttribute('aria-pressed','false');
+    addPinBtn?.classList.remove('is-active');
+    if(addPinBtn)addPinBtn.textContent="+ Pin waarneming";
+    if(pinInstruction)pinInstruction.hidden=true;
+    mapEl.classList.remove("is-pinning");
+  };
+  const startObservation = (lat,lon) => {
+    if(!validPin(lat,lon))return;
+    stopPlacing();
+    openAddSheet({initial:{lat:Number(lat),lon:Number(lon)},
+      onSaved:()=>import("../../app.js").then(({navigate})=>navigate("map",{force:true}))});
+  };
+  addPinBtn?.addEventListener("click",()=>{
+    if(!leafletOk || !map){
+      openPinPicker({onConfirm:coords=>startObservation(coords.lat,coords.lon)});
+      return;
+    }
+    placing=!placing;
+    addPinBtn.setAttribute('aria-pressed',String(placing));
+    addPinBtn.classList.toggle('is-active',placing);
+    addPinBtn.textContent=placing?"Annuleer pin": "+ Pin waarneming";
+    pinInstruction.hidden=!placing;
+    mapEl.classList.toggle("is-pinning",placing);
+  });
+  if(map)map.on("click",event=>{
+    if(placing)startObservation(event.latlng.lat,event.latlng.lng);
+  });
   // Locatie-knop koppelen
   if (locBtn) {
     locBtn.addEventListener('click', () => centerOnUser(map, locBtn));
@@ -277,6 +319,12 @@ function openSightingSheet(screenEl, sighting, map) {
   const body = screenEl.querySelector('#mapSheetBody');
   body.innerHTML = '';
 
+  // Registration evidence: visually seen, heard and Merlin suggestions stay distinct.
+  const evidence=document.createElement('p');
+  evidence.className='map-sheet-evidence';
+  evidence.textContent=methodLabel(sighting)+(sighting.identificationSource==='merlin'?' · '+sourceLabel(sighting):'');
+  body.appendChild(evidence);
+
   // Notitie
   if (sighting.notes) {
     const p = document.createElement('p');
@@ -286,11 +334,11 @@ function openSightingSheet(screenEl, sighting, map) {
   }
 
   // GPS-coördinaten
-  if (sighting.lat != null) {
+  if (validPin(sighting.lat,sighting.lon)) {
     const coords = document.createElement('p');
     coords.className = 'map-sheet-coords';
     coords.textContent =
-      `${sighting.lat.toFixed(4)}° N, ${sighting.lon.toFixed(4)}° O`;
+      `${Number(sighting.lat).toFixed(4)}°, ${Number(sighting.lon).toFixed(4)}°`;
     body.appendChild(coords);
   }
 
@@ -350,7 +398,7 @@ function showNoGpsState(screenEl) {
       <circle cx="12" cy="10" r="3"/>
     </svg>
     <p>Geen waarnemingen met GPS gevonden.<br>
-    Voeg GPS toe bij het toevoegen van een waarneming.</p>`;
+    Tik op + Pin waarneming of kies een pin in het invoerformulier.</p>`;
   mapEl.appendChild(notice);
 }
 
@@ -368,9 +416,10 @@ function fmtDate(iso) {
   });
 }
 
-function makeBirdIcon(emoji) {
+function makeBirdIcon(emoji,method) {
+  const heard=method==='heard';
   return window.L.divIcon({
-    html:       `<div class="bird-pin">${emoji}</div>`,
+    html:       `<div class="bird-pin${heard ? ' bird-pin--heard' : ''}">${emoji}${heard ? '<span class="bird-pin-sound">♪</span>' : ''}</div>`,
     className:  '',
     iconSize:   [36, 36],
     iconAnchor: [18, 18],
