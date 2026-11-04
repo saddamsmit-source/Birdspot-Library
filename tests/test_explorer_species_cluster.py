@@ -1,0 +1,194 @@
+"""Birdspot Map: species search, color-coded statuses and mixed zoom-dependent clusters.
+This test uses a controlled Leaflet API stub to verify actual map UI event paths
+without depending on external tile/CDN availability. It cannot replace real
+Leaflet MarkerCluster or physical-phone testing.
+"""
+from __future__ import annotations
+import http.server, socketserver, threading
+from pathlib import Path
+from playwright.sync_api import sync_playwright
+
+ROOT=Path(__file__).resolve().parents[1]
+SHOTS=ROOT/"tests"/"screenshots"
+SHOTS.mkdir(parents=True,exist_ok=True)
+class Quiet(http.server.SimpleHTTPRequestHandler):
+    def __init__(self,*a,**kw):super().__init__(*a,directory=str(ROOT),**kw)
+    def log_message(self,*a):pass
+class Server(socketserver.TCPServer):allow_reuse_address=True
+
+LEAFLET_STUB=r"""(() => {
+  const runtime={map:null,markers:[],rendered:[],renderCount:0};
+  window.__birdspotMapTest=runtime;
+  function redraw(layer){
+    const map=layer._map;
+    if(!map)return;
+    for(const node of [...map.el.querySelectorAll('.mock-bird-marker')])node.remove();
+    runtime.markers=[...layer.markers];
+    runtime.renderCount++;
+    if(layer.markers.length>=2 && map.zoom<13){
+      const cluster={getAllChildMarkers:()=>layer.markers,getChildCount:()=>layer.markers.length};
+      const icon=layer.options.iconCreateFunction(cluster);
+      const wrap=document.createElement('div');
+      wrap.className='mock-bird-marker mock-bird-cluster';
+      wrap.innerHTML=icon.html;
+      map.el.appendChild(wrap);
+      runtime.rendered=[icon.html];
+    } else {
+      runtime.rendered=[];
+      for(const marker of layer.markers){
+        const wrap=document.createElement('div');
+        wrap.className='mock-bird-marker';
+        wrap.innerHTML=marker.options.icon.html;
+        map.el.appendChild(wrap);
+        runtime.rendered.push(marker.options.icon.html);
+      }
+    }
+  }
+  window.L={
+    map:(el,opts)=>{
+      const map={el,zoom:opts.zoom,options:opts,events:{},layer:null,
+        remove(){for(const node of el.querySelectorAll('.mock-bird-marker'))node.remove();runtime.map=null},
+        addLayer(layer){this.layer=layer;layer._map=this;redraw(layer);return this},
+        on(type,cb){this.events[type]=cb;return this},
+        panTo(){return this},flyTo(){return this},
+        invalidateSize(){return this},setZoom(z){this.zoom=z;redraw(this.layer);return this}
+      };
+      runtime.map=map;
+      return map;
+    },
+    tileLayer:()=>({addTo(){return this}}),
+    control:{
+      attribution:()=>({addTo(){return this}}),
+      zoom:()=>({addTo(){return this}})
+    },
+    marker:(coords,options)=>({coords,options,events:{},on(type,cb){this.events[type]=cb;return this}}),
+    divIcon:options=>options,
+    markerClusterGroup:options=>({
+      options,markers:[],_map:null,
+      clearLayers(){this.markers=[];redraw(this);return this},
+      addLayers(xs){this.markers.push(...xs);redraw(this);return this},
+      addLayer(x){this.markers.push(x);redraw(this);return this}
+    })
+  };
+})();"""
+
+def main():
+  with Server(("127.0.0.1",0),Quiet) as server:
+    threading.Thread(target=server.serve_forever,daemon=True).start()
+    with sync_playwright() as pw:
+      browser=pw.chromium.launch(headless=True)
+      context=browser.new_context(viewport={"width":390,"height":844},
+                                  reduced_motion="reduce",service_workers="block")
+      context.add_init_script(LEAFLET_STUB)
+      p=context.new_page()
+      errors=[]
+      p.on("pageerror",lambda e:errors.append(str(e)))
+      p.goto(f"http://127.0.0.1:{server.server_address[1]}/",wait_until="domcontentloaded")
+      p.locator(".signature-home-intro").wait_for(timeout=12000)
+      # Six pinned sightings in two Dutch provinces, and a seventh without GPS.
+      p.evaluate("""() => {
+        const rows=[
+          {id:'k1',speciesId:'sp100',speciesName:'Koolmees',observationMethod:'seen',
+           lat:51.57,lon:5.09,locationName:'Brabant'},
+          {id:'k2',speciesId:'sp100',speciesName:'Koolmees',observationMethod:'heard',
+           identificationSource:'merlin',merlinVerification:'suggested',
+           lat:50.95,lon:5.82,locationName:'Limburg'},
+          {id:'k3',speciesId:'sp100',speciesName:'Koolmees',observationMethod:'both',
+           lat:51.58,lon:5.10,locationName:'Brabant'},
+          {id:'k4',speciesId:'sp100',speciesName:'Koolmees',observationMethod:'heard',
+           identificationSource:'self',lat:50.93,lon:5.83,locationName:'Limburg'},
+          {id:'k5',speciesId:'sp100',speciesName:'Koolmees',
+           lat:51.55,lon:5.11,locationName:'Brabant'},
+          {id:'r1',speciesId:'sp101',speciesName:'Roodborst',observationMethod:'seen',
+           lat:52.08,lon:5.16,locationName:'Utrecht'},
+          {id:'k-unpinned',speciesId:'sp100',speciesName:'Koolmees',
+           locationName:'Alleen tekst, geen GPS'}
+        ];
+        localStorage.setItem('birdspot-sightings',JSON.stringify({
+          schemaVersion:2,sightings:rows.map((r,i)=>({
+            ...r,date:'2026-10-0'+((i%7)+1),count:1,photoIds:[]
+          }))
+        }));
+      }""")
+      # Model/format assertions, including unknown legacy records and exact cluster shares.
+      values=p.evaluate("""async () => {
+        const m=await import('/src/features/map/visualization.js');
+        const items=JSON.parse(localStorage.getItem('birdspot-sightings')).sightings;
+        const onlyKoolmees=m.filteredSightings(items,{speciesSearch:'KooLMees',status:'all'});
+        const counts=m.statusCounts(onlyKoolmees.filter(x=>x.lat!=null));
+        return {
+          keys:items.map(x=>m.statusForSighting(x)),
+          counts,
+          selected:onlyKoolmees.length,
+          combined:m.clusterGradient(counts),
+          merlin:m.filteredSightings(items,{speciesSearch:'koolmees',status:'merlin'}).map(x=>x.id),
+          accent:m.normalizedSearch('Kóólmees')
+        };
+      }""")
+      assert values["keys"]==["seen","merlin","both","heard","unknown","seen","unknown"],values
+      assert values["counts"]=={"seen":1,"merlin":1,"both":1,"heard":1,"unknown":1},values
+      assert values["selected"]==6,values
+      assert "conic-gradient" in values["combined"] and "20.0000%" in values["combined"]
+      assert values["merlin"]==["k2"]
+      assert values["accent"]=="koolmees"
+
+      p.locator('.nav-item[data-route="map"]').click()
+      p.locator("#mapSpeciesSearch").wait_for(timeout=10000)
+      p.wait_for_function("() => window.__birdspotMapTest.renderCount>0",timeout=8000)
+      assert p.locator("#mapCount").inner_text()=="6 van 7 pins"
+      assert p.locator(".mock-bird-cluster .bird-cluster-core strong").inner_text()=="6"
+      assert all(color in p.locator(".bird-cluster-ring").get_attribute("style")
+                 for color in ["#2EBE96","#A784E9","#DCAF63","#57A9D5","#88939B"])
+      assert "waarnemingen" in p.locator(".bird-cluster-ring").get_attribute("aria-label")
+      p.screenshot(path=str(SHOTS/"bird_map_mixed_cluster_390.png"),animations="disabled")
+
+      p.locator("#mapSpeciesSearch").fill("Koolmees")
+      assert p.locator("#mapCount").inner_text()=="5 van 6 pins" or p.locator("#mapCount").inner_text()=="5 van 6 pins"
+      assert p.locator(".mock-bird-cluster strong").inner_text()=="5"
+      assert p.locator('[data-map-status-count="merlin"]').inner_text()=="(1)"
+      assert p.locator("#mapStatusAllCount").inner_text()=="(5)"
+      p.screenshot(path=str(SHOTS/"bird_map_koolmees_cluster_390.png"),animations="disabled")
+
+      # Merlin only => purple, one pin, no cluster.
+      p.locator('[data-map-status="merlin"]').click()
+      assert p.locator("#mapCount").inner_text()=="1 van 6 pins"
+      assert p.locator(".bird-pin--status-merlin").count()==1
+      assert p.locator(".bird-cluster-ring").count()==0
+      assert p.locator('[data-map-status="merlin"]').get_attribute("aria-pressed")=="true"
+      # Both is gold; heard on own observation is blue.
+      p.locator('[data-map-status="both"]').click()
+      assert p.locator(".bird-pin--status-both").count()==1
+      p.locator('[data-map-status="heard"]').click()
+      assert p.locator(".bird-pin--status-heard").count()==1
+      p.locator('[data-map-status="unknown"]').click()
+      assert p.locator(".bird-pin--status-unknown").count()==1
+      p.locator('[data-map-status="all"]').click()
+      # Simulate the expected Leaflet.zoom behavior in isolation:
+      # low zoom cluster, high zoom individual dots, low zoom cluster again.
+      p.evaluate("() => window.__birdspotMapTest.map.setZoom(15)")
+      assert p.locator(".bird-cluster-ring").count()==0
+      assert p.locator(".mock-bird-marker .bird-pin").count()==5
+      assert p.locator(".bird-pin--status-seen").count()==1
+      assert p.locator(".bird-pin--status-merlin").count()==1
+      assert p.locator(".bird-pin--status-both").count()==1
+      assert p.locator(".bird-pin--status-heard").count()==1
+      assert p.locator(".bird-pin--status-unknown").count()==1
+      p.screenshot(path=str(SHOTS/"bird_map_koolmees_individual_390.png"),animations="disabled")
+      p.evaluate("() => window.__birdspotMapTest.map.setZoom(7)")
+      assert p.locator(".bird-cluster-core strong").inner_text()=="5"
+      # Reset works, no record mutation or newly invented pins.
+      p.locator("#mapClearFilters").click()
+      assert p.locator("#mapSpeciesSearch").input_value()==""
+      assert p.locator("#mapCount").inner_text()=="6 van 7 pins"
+      assert p.locator(".bird-cluster-core strong").inner_text()=="6"
+      assert p.evaluate("() => JSON.parse(localStorage.getItem('birdspot-sightings')).sightings.length")==7
+      for width in (360,390,430):
+        p.set_viewport_size({"width":width,"height":844})
+        assert p.locator("#mapSpeciesSearch").is_visible()
+        assert p.locator("#mapAddPinBtn").is_visible()
+        p.screenshot(path=str(SHOTS/f"bird_map_{width}.png"),animations="disabled")
+      assert not errors,errors
+      print("PASS: species+status filters, mixed cluster colors, zoom details, legacy, responsive")
+      context.close();browser.close()
+    server.shutdown()
+if __name__=="__main__":main()

@@ -15,6 +15,8 @@ import { openDetailSheet } from '../sightings/detailSheet.js';
 import { openAddSheet } from '../sightings/addSheet.js';
 import { openPinPicker } from '../sightings/pinPicker.js';
 import { methodLabel, sourceLabel, validPin } from '../sightings/evidence.js';
+import { MAP_STATUS, MAP_ORDER, statusForSighting, filteredSightings, statusCounts, statusCountLabel, clusterGradient } from './visualization.js';
+import { escHtml } from '../../utils/html.js';
 
 // Leaflet + MarkerCluster worden lazy geladen via <script> tags die we
 // eenmalig in de <head> injecteren zodra de kaart-view voor het eerst
@@ -47,6 +49,22 @@ export function renderMap(el) {
 
       <button class="map-add-pin-btn" id="mapAddPinBtn" type="button" aria-pressed="false">+ Pin waarneming</button>
       <div class="map-pin-instruction" id="mapPinInstruction" hidden>⌖ Tik op een vrije plek op de kaart om een waarneming vast te leggen.</div>
+      <section class="bird-map-filters" aria-label="Zoek en filter vogelwaarnemingen">
+        <div class="bird-map-filter-head">
+          <label for="mapSpeciesSearch">Zoek vogelsoort</label>
+          <button type="button" id="mapClearFilters" hidden>Wis filters</button>
+        </div>
+        <input type="search" id="mapSpeciesSearch" list="mapSpeciesSuggestions"
+          placeholder="Bijv. Koolmees" autocomplete="off" aria-describedby="mapFilterFeedback">
+        <datalist id="mapSpeciesSuggestions"></datalist>
+        <div class="bird-map-filter-scroll" role="group" aria-label="Waarnemingswijze">
+          <button type="button" class="is-active" data-map-status="all" aria-pressed="true">Alle <span id="mapStatusAllCount"></span></button>
+          ${MAP_ORDER.map(key=>`<button type="button" data-map-status="${key}" aria-pressed="false">
+            <span class="bird-map-filter-dot bird-map-dot--${key}" aria-hidden="true"></span>
+            ${MAP_STATUS[key].label}<span data-map-status-count="${key}"></span></button>`).join('')}
+        </div>
+        <p class="bird-map-filter-feedback" id="mapFilterFeedback" role="status" aria-live="polite">Alle waarnemingen met een pin</p>
+      </section>
       <!-- Signature Explorer card: deliberately separate from Leaflet controls -->
       <aside class="signature-explorer-strip" aria-label="Bird Explorer overzicht">
         <span class="signature-kicker">EXPEDITION / DISCOVER</span>
@@ -182,16 +200,62 @@ function initMap(screenEl, sightings, leafletOk = true) {
   }
 
   const geoSightings = sightings.filter(s => validPin(s.lat,s.lon));
-
-  // Teller bijwerken — altijd, ook zonder Leaflet
+  const speciesSearch = screenEl.querySelector('#mapSpeciesSearch');
+  const clearFilters = screenEl.querySelector('#mapClearFilters');
+  const feedback = screenEl.querySelector('#mapFilterFeedback');
   const countEl = screenEl.querySelector('#mapCount');
-  if (countEl) {
-    const n     = geoSightings.length;
-    const total = sightings.length;
-    countEl.textContent = n === total
-      ? `${n} ${n === 1 ? 'pin' : 'pins'}`
-      : `${n} van ${total} pins`;
+  const filterState = {speciesSearch:'',status:'all'};
+  let updateMapMarkers=()=>{};
+
+  // Only species with an actual geolocated observation appear as suggestions.
+  const suggestions = screenEl.querySelector('#mapSpeciesSuggestions');
+  const names=[...new Set(geoSightings.map(s=>s.speciesName).filter(n=>typeof n==='string'&&n.trim()))]
+    .sort((a,b)=>a.localeCompare(b,'nl'));
+  for(const name of names) {
+    const option=document.createElement('option');option.value=name;suggestions.appendChild(option);
   }
+
+  function applyFilters(){
+    const matches=filteredSightings(geoSightings,filterState,SPECIES);
+    const speciesMatches=filteredSightings(geoSightings,{speciesSearch:filterState.speciesSearch},SPECIES);
+    const counts=statusCounts(speciesMatches);
+    const filtered=(filterState.status!=='all'||!!filterState.speciesSearch);
+    screenEl.querySelector('#mapScreen')?.classList.toggle('has-active-filters',filtered);
+    clearFilters.hidden=!filtered;
+    screenEl.querySelectorAll('[data-map-status]').forEach(button=>{
+      const selected=button.dataset.mapStatus===filterState.status;
+      button.classList.toggle('is-active',selected);
+      button.setAttribute('aria-pressed',String(selected));
+    });
+    screenEl.querySelector('#mapStatusAllCount').textContent='('+speciesMatches.length+')';
+    for(const key of MAP_ORDER){
+      const node=screenEl.querySelector('[data-map-status-count="'+key+'"]');
+      if(node)node.textContent='('+counts[key]+')';
+    }
+    const number=matches.length,total=geoSightings.length;
+    if(countEl)countEl.textContent=filtered
+      ? number+' van '+total+' pins'
+      : (total===sightings.length?total+' '+(total===1?'pin':'pins'):total+' van '+sightings.length+' pins');
+    feedback.textContent=filtered
+      ? (number===0?'Geen waarnemingen met pin voor deze filters':
+         number+' '+(number===1?'waarneming':'waarnemingen')+' op de kaart')+
+        (filterState.speciesSearch?' · '+filterState.speciesSearch:'')
+      : total+' '+(total===1?'waarneming met pin':'waarnemingen met pin');
+    updateMapMarkers(matches);
+  }
+  speciesSearch.addEventListener('input',e=>{
+    filterState.speciesSearch=e.target.value.trim();applyFilters();
+  });
+  screenEl.querySelector('.bird-map-filter-scroll').addEventListener('click',e=>{
+    const button=e.target.closest('[data-map-status]');
+    if(!button)return;
+    filterState.status=button.dataset.mapStatus;applyFilters();
+  });
+  clearFilters.addEventListener('click',()=>{
+    filterState.speciesSearch='';filterState.status='all';speciesSearch.value='';
+    applyFilters();speciesSearch.focus();
+  });
+  applyFilters();
 
   // Lege state — altijd tonen als er geen GPS-waarnemingen zijn
   if (!geoSightings.length) showNoGpsState(screenEl);
@@ -245,24 +309,34 @@ function initMap(screenEl, sightings, leafletOk = true) {
 
   // Cluster laag
   _clusterLayer = window.L.markerClusterGroup({
+    maxClusterRadius: zoom => zoom < 8 ? 75 : zoom < 12 ? 52 : zoom < 16 ? 34 : 23,
+    spiderfyOnMaxZoom: true,
+    zoomToBoundsOnClick: true,
     showCoverageOnHover: false,
-    maxClusterRadius:    60,
     iconCreateFunction:  makeClusterIcon,
   });
 
-  // Markers toevoegen
-  geoSightings.forEach(s => {
+  // Build one marker per saved observation; never aggregate or modify records.
+  const markers=geoSightings.map(s => {
     const sp   = SPECIES.find(x => x.id === s.speciesId);
     const icon = sp?.icon || '🐦';
+    const status=statusForSighting(s);
     const marker = window.L.marker([Number(s.lat), Number(s.lon)], {
-      icon: makeBirdIcon(icon,s.observationMethod),
-      title: s.speciesName + (s.observationMethod === 'heard' ? ' (gehoord)' : ''),
+      icon: makeBirdIcon(icon,status,s.speciesName),
+      title: s.speciesName + ' · ' + MAP_STATUS[status].label,
     });
+    marker.birdspotRecord=s;
     marker.on('click', () => openSightingSheet(screenEl, s, map));
-    _clusterLayer.addLayer(marker);
+    return marker;
   });
 
   map.addLayer(_clusterLayer);
+  updateMapMarkers=(matches)=>{
+    const selectedIds=new Set(matches.map(s=>s.id));
+    _clusterLayer.clearLayers();
+    _clusterLayer.addLayers(markers.filter(marker=>selectedIds.has(marker.birdspotRecord.id)));
+  };
+  applyFilters();
 
   // Explicit map-pin mode: do not create accidental sightings on normal taps.
   const addPinBtn = screenEl.querySelector('#mapAddPinBtn');
@@ -416,23 +490,33 @@ function fmtDate(iso) {
   });
 }
 
-function makeBirdIcon(emoji,method) {
-  const heard=method==='heard';
+function makeBirdIcon(emoji,status,speciesName) {
+  const style=MAP_STATUS[status]||MAP_STATUS.unknown;
+  const description=escHtml((speciesName||'Vogelwaarneming')+' · '+style.label);
   return window.L.divIcon({
-    html:       `<div class="bird-pin${heard ? ' bird-pin--heard' : ''}">${emoji}${heard ? '<span class="bird-pin-sound">♪</span>' : ''}</div>`,
-    className:  '',
-    iconSize:   [36, 36],
-    iconAnchor: [18, 18],
+    html:'<div class="bird-pin bird-pin--status-'+status+'" role="img" aria-label="'+description+'">'+
+      '<span class="bird-pin-icon" aria-hidden="true">'+emoji+'</span>'+
+      '<span class="bird-pin-method" aria-hidden="true">'+style.symbol+'</span></div>',
+    className:'',
+    iconSize:[42,42],
+    iconAnchor:[21,21],
   });
 }
 
 function makeClusterIcon(cluster) {
-  const n   = cluster.getChildCount();
-  const cls = n < 5 ? 'sm' : n < 20 ? 'md' : 'lg';
+  const children=cluster.getAllChildMarkers();
+  const counts=statusCounts(children.map(m=>m.birdspotRecord).filter(Boolean));
+  const n=children.length;
+  const label=escHtml(n+' waarnemingen: '+statusCountLabel(counts));
+  const size=n<5?46:n<20?54:62;
+  const summary=MAP_ORDER.filter(key=>counts[key]>0)
+    .map(key=>'<span class="bird-cluster-count bird-cluster-count--'+key+'">'+counts[key]+'</span>').join('');
   return window.L.divIcon({
-    html:      `<div class="bird-cluster bird-cluster--${cls}"><span>${n}</span></div>`,
-    className: '',
-    iconSize:  [42, 42],
-    iconAnchor:[21, 21],
+    html:'<div class="bird-cluster-ring" role="img" aria-label="'+label+'" title="'+label+'"'+
+      ' style="background:'+clusterGradient(counts)+'">'+
+      '<div class="bird-cluster-core"><strong>'+n+'</strong></div></div>',
+    className:'bird-cluster-wrapper',
+    iconSize:[size,size],
+    iconAnchor:[size/2,size/2],
   });
 }

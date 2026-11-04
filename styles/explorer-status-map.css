@@ -1,0 +1,141 @@
+/* BIRDSPOT Explorer Map — Species × evidence, premium Signature edition
+ * Color + distinct glyph per mode. Colors do not replace labels for accessibility.
+ * Cluster rings reflect only currently visible observations.
+ */
+.bird-map-filters {
+  position:absolute;z-index:445;
+  top:131px;left:13px;
+  width:min(355px,calc(100% - 26px));
+  padding:12px 12px 9px;border-radius:19px;
+  color:#f3ede0;
+  background:linear-gradient(140deg,rgba(10,38,33,.95),rgba(19,66,56,.94));
+  box-shadow:0 12px 34px rgba(4,24,21,.29);
+  border:1px solid rgba(224,190,135,.36);
+  backdrop-filter:blur(14px);
+}
+.bird-map-filter-head {
+  display:flex;align-items:center;justify-content:space-between;gap:8px;
+  margin-bottom:7px;
+}
+.bird-map-filter-head label {
+  color:#ead3a5;font-size:10px;letter-spacing:.12em;
+  text-transform:uppercase;font-weight:800;
+}
+#mapClearFilters {
+  color:#f1d6a4;text-decoration:underline;text-underline-offset:3px;
+  font-size:11px;font-weight:700;
+}
+#mapSpeciesSearch {
+  display:block;box-sizing:border-box;width:100%;
+  height:42px;padding:9px 13px;border-radius:12px;
+  background:rgba(240,248,237,.10);
+  color:#fff8e8;border:1px solid rgba(230,234,219,.28);
+  font:600 13px var(--font-body,system-ui);
+}
+#mapSpeciesSearch::placeholder {color:#b9cfc4;opacity:1;}
+#mapSpeciesSearch:focus-visible {outline:2px solid #e4c38d;outline-offset:2px;}
+.bird-map-filter-scroll {
+  display:flex;align-items:center;gap:6px;
+  max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain;
+  padding:10px 1px 5px;scrollbar-width:thin;
+  -webkit-overflow-scrolling:touch;
+}
+.bird-map-filter-scroll button {
+  flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;
+  min-height:35px;padding:8px 10px;
+  border:1px solid rgba(217,231,213,.24);
+  border-radius:999px;color:#e7efdf;background:rgba(236,246,233,.08);
+  font-size:11px;font-weight:800;white-space:nowrap;
+}
+.bird-map-filter-scroll button.is-active {
+  background:rgba(228,203,153,.24);
+  border-color:#dfc48d;color:#fff6e7;
+}
+.bird-map-filter-scroll button:focus-visible {
+  outline:2px solid #f2d49a;outline-offset:2px;
+}
+.bird-map-filter-scroll span[data-map-status-count],
+#mapStatusAllCount {color:#e5d2ac;opacity:.93;font-size:10px;}
+.bird-map-filter-dot {
+  display:inline-block;width:10px;height:10px;min-width:10px;
+  border-radius:50%;border:1px solid rgba(255,255,255,.64);
+}
+.bird-map-dot--seen {background:#2ebe96;}
+.bird-map-dot--merlin {background:#a784e9;}
+.bird-map-dot--both {background:#dcaf63;}
+.bird-map-dot--heard {background:#57a9d5;}
+.bird-map-dot--unknown {background:#88939b;}
+.bird-map-filter-feedback {
+  padding:7px 2px 2px;font-size:11px;line-height:1.45;
+  color:#d7e3d8;
+}
+.map-screen .bird-pin {
+  position:relative;display:grid;place-items:center;
+  width:42px;height:42px;border:3px solid #f8f0df;
+  background:#88939b;border-radius:50%;
+  box-shadow:0 4px 13px rgba(1,20,18,.34),
+    0 0 0 3px rgba(219,185,123,.22);
+  font-size:17px;
+}
+.map-screen .bird-pin--status-seen {background:#2ebe96;}
+.map-screen .bird-pin--status-merlin {background:#a784e9;}
+.map-screen .bird-pin--status-both {background:#dcaf63;}
+.map-screen .bird-pin--status-heard {background:#57a9d5;}
+.map-screen .bird-pin--status-unknown {background:#88939b;}
+.map-screen .bird-pin .bird-pin-icon {font-size:17px;line-height:1;}
+.map-screen .bird-pin .bird-pin-method {
+  display:grid;place-items:center;position:absolute;
+  right:-8px;top:-8px;min-width:23px;height:23px;padding:0 2px;
+  background:#0d2c27;color:#fff6df;
+  border-radius:999px;border:2px solid #f5e9cc;
+  font-size:12px;font-weight:900;line-height:1;
+  box-shadow:0 2px 6px rgba(0,0,0,.23);
+}
+.map-screen .bird-pin--status-both .bird-pin-method {font-size:10px;min-width:27px;}
+.map-screen .bird-pin:hover {transform:scale(1.10);}
+.map-screen .bird-cluster-wrapper {
+  background:transparent;border:0;
+}
+.map-screen .bird-cluster-ring {
+  display:grid;place-items:center;
+  width:100%;height:100%;border-radius:50%;
+  border:3px solid rgba(255,248,226,.93);
+  box-sizing:border-box;
+  box-shadow:0 4px 17px rgba(4,24,20,.43),0 0 0 3px rgba(217,186,129,.19);
+  transition:transform .18s ease;
+}
+.map-screen .bird-cluster-ring:hover {transform:scale(1.06);}
+.map-screen .bird-cluster-core {
+  display:grid;place-items:center;width:69%;height:69%;
+  border-radius:50%;border:1px solid rgba(219,183,113,.65);
+  background:#102e29;color:#fff6e6;
+  box-shadow:inset 0 0 15px rgba(4,29,21,.46);
+}
+.map-screen .bird-cluster-core strong {
+  font-family:var(--font-display,Georgia);font-size:16px;font-weight:800;
+  font-variant-numeric:tabular-nums;
+}
+.map-screen .bird-cluster-wrapper[title] {cursor:pointer;}
+.map-screen .map-pin-instruction:not([hidden]) {top:130px;}
+.map-screen .map-pin-instruction:not([hidden]) ~ .bird-map-filters {
+  opacity:.20;pointer-events:none;
+}
+/* When searching, keep all map coordinates visible — not a full-height drawer. */
+.map-screen.has-active-filters .signature-explorer-strip {
+  opacity:.75;
+  transition:opacity .2s;
+}
+@media(min-width:650px) {
+  .bird-map-filters {top:137px;left:24px;width:348px;padding:13px;}
+}
+@media(max-width:380px) {
+  .bird-map-filters {top:123px;left:9px;width:calc(100% - 18px);padding:10px 10px 8px;border-radius:15px;}
+  .bird-map-filter-scroll {gap:5px;}
+  .bird-map-filter-scroll button {min-height:33px;padding:7px 9px;font-size:10px;}
+  .map-add-pin-btn {top:69px;left:9px;}
+  .map-screen .map-pin-instruction:not([hidden]){top:122px;}
+}
+@media(prefers-reduced-motion:reduce){
+  .map-screen .bird-pin,.map-screen .bird-cluster-ring{transition:none!important;}
+  .map-screen.has-active-filters .signature-explorer-strip{transition:none!important;}
+}

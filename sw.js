@@ -12,7 +12,7 @@
  *   birdspot-media           — foto's/IDB-exports (permanent)
  */
 
-const APP_VERSION = '1.4.1-film-merlin-pins';
+const APP_VERSION = '1.4.2-explorer-species-status';
 const APP_CACHE   = `birdspot-app-v${APP_VERSION}`;
 const MEDIA_CACHE = 'birdspot-media';
 
@@ -37,6 +37,7 @@ const PRECACHE_URLS = [
   '/styles/signature-phase3.css',
   '/styles/signature-phase4.css',
   '/styles/observations-evidence.css',
+  '/styles/explorer-status-map.css',
 
   // JS — app root
   '/src/app.js',
@@ -51,6 +52,7 @@ const PRECACHE_URLS = [
   '/src/features/sightings/editSheet.js',
   '/src/features/sightings/detailSheet.js',
   '/src/features/map/view.js',
+  '/src/features/map/visualization.js',
   '/src/features/profile/view.js',
   '/src/features/media/view.js',
   '/src/features/journal/view.js',
