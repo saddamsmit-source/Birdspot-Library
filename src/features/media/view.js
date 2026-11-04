@@ -81,7 +81,8 @@ export function renderMedia(el) {
         '<span class="signature-eyebrow">JOUW FILMSELECTIE</span>' +
         '<h3>Jouw mooiste vogelmomenten, één verhaal.</h3>' +
         '<p id="mediaFilmInfo">Kies je favoriete foto’s en video’s met de filmknop bij elk bestand.</p>' +
-        '<small>De selectie wordt lokaal opgeslagen. Filmproductie en export volgen in een aparte ontwikkelfase.</small>' +
+        '<small>Jouw filmselectie wordt op dit apparaat bewaard en blijft ook in de ZIP-back-up staan.</small>' +
+        '<button type="button" class="film-studio-media-launch" id="mediaOpenFilmStudio">✦ Open Wildlife Film Studio ↗</button>' +
       '</section>' +
     '</div>';
 
@@ -130,7 +131,7 @@ export function renderMedia(el) {
     el.querySelector('#mediaFilmCount').textContent = state.items.filter(x=>film.has(x.photo.id)).length;
     const selected = state.items.filter(x=>film.has(x.photo.id)).length;
     el.querySelector('#mediaFilmInfo').textContent = selected
-      ? selected + (selected===1?' beeld geselecteerd voor je toekomstige wildlifevideo.':' beelden geselecteerd voor je toekomstige wildlifevideo.')
+      ? selected + (selected===1?' beeld klaar voor jouw wildlifevideo.':' beelden klaar voor jouw wildlifevideo.')
       : 'Kies je favoriete foto’s en video’s met de filmknop bij elk bestand.';
   }
 
@@ -214,6 +215,9 @@ export function renderMedia(el) {
         b.setAttribute('aria-pressed',String(active));
       });
       draw(); return;
+    }
+    if (event.target.closest('#mediaOpenFilmStudio')) {
+      import('../../app.js').then(({navigate})=>navigate('film')); return;
     }
     if (event.target.closest('#mediaMore')) { state.visible+=BATCH_SIZE; draw(); return; }
     const fav=event.target.closest('[data-media-fav]');

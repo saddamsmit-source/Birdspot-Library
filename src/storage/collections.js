@@ -35,6 +35,21 @@ export function setCollectionItem(kind, id, selected) {
   window.dispatchEvent(new CustomEvent('birdspot:collection-change', {detail:{kind,id,selected}}));
   return selected;
 }
+/**
+ * Reorder the existing film shortlist without adding or silently deleting IDs.
+ * This sidecar key is already included in the unified ZIP backup.
+ */
+export function saveFilmOrder(ids) {
+  if (!Array.isArray(ids) || ids.some(x => typeof x !== 'string'))
+    throw new TypeError('Filmvolgorde ongeldig');
+  const existing = getCollectionIds('film');
+  const incoming = new Set(ids);
+  if (incoming.size !== ids.length || incoming.size !== existing.size ||
+      ids.some(id => !existing.has(id)))
+    throw new Error('Filmselectie is gewijzigd; vernieuw de Studio voordat je sorteert');
+  localStorage.setItem(KEYS.film, JSON.stringify(ids));
+  window.dispatchEvent(new CustomEvent('birdspot:collection-change', {detail:{kind:'film',reordered:true}}));
+}
 export function toggleCollectionItem(kind, id) {
   return setCollectionItem(kind, id, !hasCollectionItem(kind, id));
 }
