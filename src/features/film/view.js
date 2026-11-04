@@ -269,9 +269,9 @@ export function renderFilmStudio(el) {
       inform('De film is klaar. Gebruik “Bewaar mijn film” om het bestand te downloaden.');
       byId('filmResult').scrollIntoView({behavior:'smooth',block:'nearest'});
     } catch(err) {
-      if(!destroyed)inform(err?.name==='AbortError'
+      if(!destroyed)inform(abort?.signal?.aborted
         ?'Export geannuleerd. De selectie en originele mediabestanden zijn behouden.'
-        :'Filmexport mislukt: '+String(err?.message||'Onbekende fout'));
+        :'Filmexport mislukt ('+String(err?.name||'fout')+'): '+String(err?.message||'Onbekende fout'));
     } finally {
       busy=false;abort=null;
       if(!destroyed){

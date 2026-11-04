@@ -104,7 +104,7 @@ def main():
               const text=document.getElementById('filmMessage')?.textContent||'';
               return (!!result&&!result.hidden)||/mislukt|geannuleerd|niet ondersteund/i.test(text);
             }""",timeout=35000)
-            assert p.locator("#filmResult").is_visible(), p.locator("#filmMessage").inner_text()
+            assert p.locator("#filmResult").is_visible(), (p.locator("#filmMessage").inner_text()+" | Stap: "+p.locator("#filmProgressLabel").inner_text())
             result=p.evaluate("""async () => {
               const link=document.getElementById('filmDownload');
               const res=await fetch(link.href);
