@@ -1,4 +1,4 @@
-"""Birdspot mobile field QA + editorial species + living habitat.
+"""Birdspot mobile field QA + autonomous bird spotlight + cinematic wetland.
 Synthetic isolated browser state. All observations created through the real form.
 No personal photos, locations or credentials are accessed.
 """
@@ -30,81 +30,82 @@ def main():
       p.on("pageerror",lambda e:errors.append(str(e)))
       p.goto("http://127.0.0.1:"+str(srv.server_address[1])+"/",wait_until="domcontentloaded")
       p.locator('#birdspotSplashSkip').click()
-      p.locator('.featured-birds h2').wait_for(timeout=14000)
-      assert p.locator('.featured-birds__photo').count()==1
-      assert p.locator('#featuredBirdCredit').get_attribute('href').startswith("https://commons.wikimedia.org/wiki/File:")
-      assert "Wisselt elke minuut" in p.locator(".featured-birds").inner_text()
-      assert p.locator('#featuredBirdTheme option').count()==9
-      p.locator('#featuredBirdTheme').select_option('kleur')
-      assert p.locator('#featuredBirdName').inner_text() in ('Wielewaal','Scharrelaar','Bijeneter')
-      assert p.locator('#featuredBirdLatin').inner_text() in ('Oriolus oriolus','Coracias garrulus','Merops apiaster')
-      assert len(p.locator('#featuredBirdWhere').inner_text())>25
-      before=p.locator('#featuredBirdName').inner_text()
-      p.locator('#featuredNext').click()
-      assert p.locator('#featuredBirdName').inner_text()!=before
+      p.locator('#featuredBirdName').wait_for(timeout=14000)
+      assert p.locator("#featuredBirdName").inner_text().strip()
+      assert p.locator("#featuredBirdLatin").inner_text().strip()
+      assert "Herkenning:" in p.locator("#featuredBirdWhere").inner_text()
+      assert p.locator("#featuredBirdTheme").count()==0
+      assert p.locator("#featuredPrev").count()==0
+      assert p.locator("#featuredNext").count()==0
+      assert p.locator("#featuredBirdPosition").count()==0
+      assert "Wisselt elke minuut" not in p.locator("#slideshow").inner_text()
+      assert p.locator(".featured-birds__caption").is_visible()
+
+      # Curated references and 50+ database-derived additions, in a stable
+      # randomized mixed sequence. No browsing UI is exposed to visitors.
       current=p.evaluate("""async()=> {
         const m=await import('/src/features/home/specialBirds.js');
+        const x=m.shuffledBirds(123456),y=m.shuffledBirds(123456);
         return {
           total:m.FEATURED_BIRDS.length,
+          unique:new Set(m.FEATURED_BIRDS.map(b=>b.latin)).size,
           themes:m.BIRD_THEMES.length,
-          current:m.birdAtTime('zang',0).id,
-          future:m.birdAtTime('zang',60_000).id,
-          cycle:m.birdAtTime('zang',120_000).id,
+          sameOrder:x.map(b=>b.id).join('|')===y.map(b=>b.id).join('|'),
+          variedOrder:x.some((b,i)=>b.id!==m.FEATURED_BIRDS[i].id),
+          song0:m.birdAtTime('zang',0).id,
+          song1:m.birdAtTime('zang',60000).id,
           delay:m.nextSlideDelay(63000)
         };
       }""")
-      assert current=={"total":16,"themes":9,"current":"wielewaal","future":"nachtegaal","cycle":"wielewaal","delay":57000},current
+      assert current["total"]>=50,current
+      assert current["unique"]==current["total"],current
+      assert current["sameOrder"] and current["variedOrder"],current
+      assert current["song0"]=="wielewaal" and current["song1"]=="nachtegaal",current
+      assert current["delay"]==57000
       wallclock=p.evaluate("""async()=>{
         const m=await import('/src/features/home/specialBirds.js');
-        const start=105123;
-        return {first:m.birdAtTime('zang',start,start).id,
-          stillFirst:m.birdAtTime('zang',start+59999,start).id,
-          next:m.birdAtTime('zang',start+60000,start).id,
-          delay:m.nextSlideDelay(start+14000,start),
-          colourful:m.birdsForTheme('kleur').map(x=>x.nl)};
+        const origin=105123;
+        return {
+          first:m.birdAtTime('zang',origin,origin).id,
+          stillFirst:m.birdAtTime('zang',origin+59999,origin).id,
+          next:m.birdAtTime('zang',origin+60000,origin).id,
+          delay:m.nextSlideDelay(origin+14000,origin)
+        };
       }""")
       assert wallclock["first"]==wallclock["stillFirst"]=="wielewaal"
       assert wallclock["next"]=="nachtegaal" and wallclock["delay"]==46000
-      assert wallclock["colourful"]==["Wielewaal","Scharrelaar","Bijeneter"]
-      # Wikimedia photos are third-party: report actual network availability
-      # separately from the deterministic slideshow timing/metadata checks.
-      try:
-        p.wait_for_function("""() => {
-          const img=document.getElementById('featuredBirdImage');
-          return !!img&&img.complete&&img.naturalWidth>0;
-        }""",timeout=10000)
-        print("PHOTO_NETWORK_CHECK: image loaded")
-      except Exception:
-        print("PHOTO_NETWORK_CHECK: external image not available in CI, CSS fallback shown")
+
+      # This checks all fixed Commons source files, not the additional lazy
+      # API candidates (which do not have a hardcoded guess at a file name).
       photo_catalog=p.evaluate("""async () => {
         const {FEATURED_BIRDS}=await import('/src/features/home/specialBirds.js');
-        return Promise.all(FEATURED_BIRDS.map(b => new Promise(resolve => {
-          const image=new Image();
-          let settled=false;
-          const finish=(ok,reason) => {
-            if(settled)return;
-            settled=true;
-            clearTimeout(timeout);
-            resolve({id:b.id,ok,reason});
-          };
-          const timeout=setTimeout(()=>finish(false,'timeout'),9000);
-          image.onload=()=>finish(image.naturalWidth>0,'loaded');
-          image.onerror=()=>finish(false,'network/error');
-          image.src=b.image;
+        return Promise.all(FEATURED_BIRDS.filter(b=>!!b.image).map(b=>new Promise(resolve=>{
+          const img=new Image();let done=false;
+          const finish=(ok)=>{if(done)return;done=true;clearTimeout(timer);resolve({id:b.id,ok})};
+          const timer=setTimeout(()=>finish(false),8500);
+          img.onload=()=>finish(img.naturalWidth>0);
+          img.onerror=()=>finish(false);
+          img.src=b.image;
         })));
       }""")
-      failed=[a for a in photo_catalog if not a["ok"]]
-      print("PHOTO_CATALOGUE_CHECK:",photo_catalog,flush=True)
-      print("PHOTO_CATALOGUE_FAILED:",failed,flush=True)
+      print("CURATED_IMAGE_CHECK:",photo_catalog,flush=True)
       capture(p,'mobile_editorial_390.png')
 
-      # Ambient visual should be local CSS, pausable and absent of autoplay media.
-      p.locator('#livingHabitat').scroll_into_view_if_needed()
-      p.locator('#habitatMotionToggle').click()
-      assert p.locator('#livingHabitat').evaluate("(e)=>e.classList.contains('is-paused')")
-      assert p.locator('#habitatMotionToggle').get_attribute("aria-pressed")=="true"
-      assert p.locator('#livingHabitat video').count()==0
-      capture(p,'mobile_living_habitat_390.png')
+      # Lower dashboard uses one immersive moving 9:16 plate instead of a
+      # separate Living Habitat card. Stats and text remain their own layer.
+      assert p.locator("#livingHabitat").count()==0
+      assert p.locator("#habitatMotionSection").count()==0
+      assert p.locator("#ambientWetland").count()==1
+      assert p.locator("#ambientWetlandVideo").count()==1
+      assert p.locator("#ambientWetland .dash-section").count()==4
+      assert p.locator("#statsRow button.stat-tile").count()==4
+      p.locator("#ambientWetland").scroll_into_view_if_needed()
+      assert p.locator("#ambientWetland .ambient-wetland__illustration").count()==1
+      p.locator("#ambientWetlandToggle").click()
+      assert p.locator("#ambientWetland").evaluate("(el)=>el.classList.contains('is-paused')")
+      assert p.locator("#ambientWetlandToggle").get_attribute("aria-pressed")=="true"
+      assert p.locator("#ambientWetland video").get_attribute("muted") is not None
+      capture(p,'mobile_cinematic_wetland_390.png')
 
       # New sheet: navigation and actions must remain within the viewport.
       p.locator('#fab').click()

@@ -4,6 +4,7 @@
  * These are reference images, NEVER personal sightings or verified Dutch locations.
  * External files can be unavailable offline; preserve an elegant local fallback.
  */
+import { SPECIES } from '../../data/species.js';
 export const SHOWCASE_INTERVAL_MS=60_000;
 export const BIRD_THEMES=Object.freeze([
   ['all','Alle categorieën'],['zang','Zangvogels'],['riet','Rietvogels'],
@@ -15,7 +16,7 @@ const source=(file)=>'https://commons.wikimedia.org/wiki/File:'+encodeURICompone
 const item=(id,theme,nl,latin,where,file,author,license)=>Object.freeze({
   id,theme,nl,latin,where,image:photo(file),source:source(file),author,license
 });
-export const FEATURED_BIRDS=Object.freeze([
+const CURATED_BIRDS=Object.freeze([
   item('wielewaal','zang','Wielewaal','Oriolus oriolus',
     'Loofbossen en populierenbossen; in Nederland vooral in het voorjaar en de zomer.',
     'Eurasian Golden Oriole Oriolus oriolus.jpg','Иван Везенковић','CC BY-SA 4.0'),
@@ -65,6 +66,54 @@ export const FEATURED_BIRDS=Object.freeze([
     'Insectrijke, warme open gebieden met zandwanden; lokaal een zeldzame zomergast.',
     'European bee eater - Bijeneter - Merops apiaster.jpg','Bouke ten Cate','CC BY-SA 4.0'),
 ]);
+// Additional entries come directly from Birdspot's existing species library:
+// known Dutch names, scientific names, actual fieldmarks and habitat tags.
+// Photos/credits are resolved lazily from their Wikimedia Commons file metadata.
+const EXTRA_IDS = (
+  'sp005 sp006 sp007 sp008 sp009 sp011 sp013 sp014 sp015 '+
+  'sp016 sp017 sp018 sp019 sp020 sp028 sp029 sp030 sp031 sp032 sp033 sp034 '+
+  'sp035 sp036 sp037 sp038 sp039 sp040 sp041 sp042 sp045 sp046 sp047 sp048 '+
+  'sp050 sp051 sp052 sp053 sp055 sp056 sp057 sp058 sp059 sp060 sp063 sp064 '+
+  'sp065 sp066 sp068 sp069 sp070 sp071 sp073 sp075 sp076 sp077 sp080 '+
+  'sp081 sp082 sp083 sp085 sp089 sp091 sp092 sp093 sp094 sp095 sp096 sp097 '+
+  'sp098 sp099 sp100 sp101 sp102 sp103 sp104 sp108 sp109 sp111 sp114 sp115 sp117 sp118'
+).split(' ');
+
+const REGIONS={
+  bos:'bossen en bosranden',stedelijk:'parken en steden',agrarisch:'open akker- en weidegebied',
+  heide:'heidevelden',duinen:'duingebieden',kust:'de kust',wad:'het wad',
+  polder:'polders',rivierengebied:'rivieren en oevers',moeras:'moerassen',
+  rietland:'rietvelden',zee:'open zee',struweel:'struwelen',
+};
+const curatedNames=new Set(CURATED_BIRDS.map(b=>b.latin.toLowerCase()));
+const ids=new Set(EXTRA_IDS);
+const extras=SPECIES.filter(species=>ids.has(species.id) &&
+  !curatedNames.has(species.nameSci.toLowerCase())).map(species=>{
+  const habitats=(species.regions||[]).slice(0,2).map(x=>REGIONS[x]||x);
+  const place=habitats.length?' Kijk bijvoorbeeld in '+habitats.join(' of ')+'.':'';
+  return Object.freeze({
+    id:'species-'+species.id,theme:'catalog',nl:species.nameNL,
+    latin:species.nameSci,
+    where:'Herkenningstip: '+(species.fieldmarks||'Let op kleur, formaat en vluchtbeeld.')+
+      place,
+    image:null,source:null,author:null,license:null,dynamicPhoto:true,
+  });
+});
+export const FEATURED_BIRDS=Object.freeze([...CURATED_BIRDS,...extras]);
+
+/** Deterministic Fisher-Yates. Used once for a persistent, mixed-category
+ * personal slideshow order; does not reorder observations or stored species. */
+export function shuffledBirds(seed=1){
+  const result=[...FEATURED_BIRDS];
+  let n=Number(seed)>>>0;
+  for(let i=result.length-1;i>0;i--){
+    n^=n<<13;n^=n>>>17;n^=n<<5;
+    const j=(n>>>0)%(i+1);
+    [result[i],result[j]]=[result[j],result[i]];
+  }
+  return result;
+}
+
 export function birdsForTheme(theme='all'){
   // The golden oriole is both a songbird and a colourful, unusual visitor.
   return FEATURED_BIRDS.filter(b=>theme==='all'||b.theme===theme||

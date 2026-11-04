@@ -32,7 +32,8 @@ def main():
             page.on("pageerror",lambda err:errors.append(str(err)))
             page.goto("http://127.0.0.1:"+str(server.server_address[1])+"/",wait_until="domcontentloaded")
             page.locator(".signature-home-intro").wait_for(timeout=13000)
-            page.locator('[data-signature-route="insights"]').click()
+            page.locator("#homeMoreFeatures summary").click()
+            page.locator('#homeMoreFeatures [data-signature-route="insights"]').click()
             page.locator(".phase3-insights-empty").wait_for(timeout=9000)
             assert "Jouw ontdekkingen beginnen" in page.locator(".phase3-insights-empty").inner_text()
             shot(page,"phase3_insights_empty_390.png")
@@ -94,7 +95,8 @@ def main():
 
             # View data is freshly fetched on navigation; previously opened screen is stale.
             page.locator('.nav-item[data-route="home"]').click()
-            page.locator('[data-signature-route="insights"]').click()
+            page.locator("#homeMoreFeatures summary").click()
+            page.locator('#homeMoreFeatures [data-signature-route="insights"]').click()
             page.locator(".phase3-kpi").first.wait_for(timeout=10000)
             assert page.locator("#insightsYear").input_value()=="2026"
             assert page.locator(".phase3-kpi").count()==4

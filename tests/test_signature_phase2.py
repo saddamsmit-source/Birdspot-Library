@@ -64,7 +64,7 @@ def main():
             p.screenshot(path=str(SHOTS/"phase2_species_detail_390.png"),full_page=True,animations="disabled")
             p.locator(".signature-species-detail-close").click()
             p.locator('.nav-item[data-route="home"]').click()
-            p.locator('[data-signature-route="media"]').click()
+            p.locator("#stat-photos").click()
             p.locator(".signature-media-v2").wait_for()
             p.locator(".signature-media-tile").first.wait_for(timeout=8000)
             p.locator('[data-media-fav="test-media-1"]').click()

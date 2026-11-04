@@ -13,6 +13,7 @@ import { getDB }                          from '../../data/db.js';
 import { getSightings }                   from '../../data/sightings.js';
 import { getPhotoUrl, revokePhotoUrl }    from '../../utils/photoUrl.js';
 import { initFeaturedCarousel } from './featuredCarousel.js';
+import { buildAmbientBackdrop,initAmbientBackdrop } from './ambientBackdrop.js';
 
 // ── Constanten ─────────────────────────────────────────────
 const SLIDESHOW_INTERVAL = 3500;
@@ -40,7 +41,7 @@ export function renderHome(el) {
   };
   el.addEventListener('click', onSignatureClick);
   const disposeFeatured = initFeaturedCarousel(el,ctx);
-  const disposeHabitat = initHabitatMotion(el,ctx);
+  const disposeHabitat = initAmbientBackdrop(el,ctx);
   loadStats(el, ctx);
   loadSunInfo(el, ctx);
   loadWeather(el, ctx);
@@ -99,49 +100,20 @@ function buildSkeleton() {
       </button>
     </header>
 
-    <!-- Redactionele vogelspotlight — bijzondere vogels per vogelgroep -->
-    <section class="slideshow featured-birds" id="slideshow" aria-label="Bijzondere vogels in beeld">
+    <!-- Automatic 60-second bird gallery; no browsing controls or category menu. -->
+    <section class="slideshow featured-birds" id="slideshow" aria-label="Bijzondere vogel in beeld">
       <div class="featured-birds__media">
-        <div class="featured-birds__fallback" id="featuredBirdFallback" aria-hidden="true">
-          <span>✦</span>
-        </div>
+        <div class="featured-birds__fallback" id="featuredBirdFallback" aria-hidden="true"><span>✦</span></div>
         <img id="featuredBirdImage" class="featured-birds__photo" alt=""
           decoding="async" fetchpriority="low">
       </div>
       <div class="featured-birds__shade" aria-hidden="true"></div>
-      <div class="featured-birds__top">
-        <span class="featured-birds__eyebrow">BIRDSPOT / BIJZONDERE VOGELS</span>
-        <label for="featuredBirdTheme">Vogelgroep</label>
-        <select id="featuredBirdTheme" aria-label="Kies vogelgroep"></select>
-      </div>
       <div class="featured-birds__caption">
-        <span id="featuredBirdCategory" class="featured-birds__category"></span>
         <h2 id="featuredBirdName"></h2>
         <em id="featuredBirdLatin"></em>
         <p id="featuredBirdWhere"></p>
-        <a id="featuredBirdCredit" class="featured-birds__credit" rel="noopener noreferrer"
-          target="_blank" href="https://commons.wikimedia.org/">Bron en fotocredits</a>
-      </div>
-      <div class="featured-birds__bottom">
-        <button id="featuredPrev" type="button" aria-label="Vorige bijzondere vogel">‹</button>
-        <span id="featuredBirdPosition">—</span>
-        <button id="featuredNext" type="button" aria-label="Volgende bijzondere vogel">›</button>
-        <span class="featured-birds__timer-label">Wisselt elke minuut</span>
-      </div>
-      <div id="featuredBirdProgress" class="featured-birds__progress" aria-hidden="true"></div>
-    </section>
-
-    <section class="signature-home-intro" aria-label="Expedition dashboard">
-      <span class="signature-kicker">BIRDSPOT / SIGNATURE EXPEDITION</span>
-      <h1>Elke vogel vertelt een verhaal.</h1>
-      <p>Jouw waarnemingen, favoriete momenten en bijzondere plekken — verzameld in één persoonlijke ontdekkingstocht.</p>
-      <div class="signature-home-links">
-        <button data-signature-route="map" class="signature-home-link" type="button">⌖ &nbsp; Explorer Map <span aria-hidden="true">↗</span></button>
-        <button data-signature-route="media" class="signature-home-link" type="button">▣ &nbsp; Media Studio <span aria-hidden="true">↗</span></button>
-        <button data-signature-route="journal" class="signature-home-link" type="button">✦ &nbsp; Birding Journal <span aria-hidden="true">↗</span></button>
-        <button data-signature-route="species" class="signature-home-link" type="button">◈ &nbsp; Soorten ontdekken <span aria-hidden="true">↗</span></button>
-        <button data-signature-route="insights" class="signature-home-link" type="button">▥ &nbsp; Mijn Inzichten <span aria-hidden="true">↗</span></button>
-        <button data-signature-route="film" class="signature-home-link signature-home-link--film" type="button">✦ &nbsp; Wildlife Film Studio <span aria-hidden="true">↗</span></button>
+        <a id="featuredBirdCredit" class="featured-birds__credit"
+          rel="noopener noreferrer" target="_blank" href="https://commons.wikimedia.org/">Fotobron</a>
       </div>
     </section>
 
@@ -171,40 +143,32 @@ function buildSkeleton() {
       </div>
     </section>
 
-    <!-- Zon & golden hour -->
-    <section class="dash-section" id="sunSection">
+    <!-- Accessible secondary features: stays collapsed beneath the primary KPI row. -->
+    <details class="signature-home-intro signature-quick-access" id="homeMoreFeatures">
+      <summary class="signature-quick-access__summary">
+        <span class="signature-quick-access__icon" aria-hidden="true">✦</span>
+        <span>Meer ontdekken</span>
+        <span class="signature-quick-access__chevron" aria-hidden="true">⌄</span>
+      </summary>
+      <div class="signature-home-links signature-quick-access__links">
+        <button data-signature-route="journal" class="signature-home-link" type="button">✦ &nbsp; Birding Journal <span aria-hidden="true">↗</span></button>
+        <button data-signature-route="insights" class="signature-home-link" type="button">▥ &nbsp; Mijn Inzichten <span aria-hidden="true">↗</span></button>
+        <button data-signature-route="film" class="signature-home-link signature-home-link--film" type="button">✦ &nbsp; Wildlife Film Studio <span aria-hidden="true">↗</span></button>
+        <button data-signature-route="map" class="signature-home-link" type="button">⌖ &nbsp; Explorer Map <span aria-hidden="true">↗</span></button>
+      </div>
+    </details>
+
+    <!-- 9:16 cinematic marsh, full lower dashboard background -->
+    <section class="ambient-wetland" id="ambientWetland" aria-label="Rustige bewegende natuurachtergrond">
+      ${buildAmbientBackdrop()}
+      <div class="ambient-wetland__content">
+        <!-- Zon & golden hour -->
+        <section class="dash-section" id="sunSection">
       <div class="section-head">
         <span class="section-head__title">Gouden uur</span>
       </div>
       <div class="dash-section__loading">
         <span class="spinner" aria-hidden="true"></span> Zonsinformatie laden…
-      </div>
-    </section>
-
-    <!-- Living Habitat: subtiele bewegende natuurvisual bij het gouden uur -->
-    <section class="living-habitat-section" id="habitatMotionSection" aria-label="Bewegend natuurmoment">
-      <div class="living-habitat" id="livingHabitat">
-        <div class="living-habitat__aurora" aria-hidden="true"></div>
-        <div class="living-habitat__moon" aria-hidden="true"></div>
-        <svg class="living-habitat__bird living-habitat__bird--one" aria-hidden="true"
-          viewBox="0 0 120 42" fill="none">
-          <path d="M3 27Q32 0 57 19Q86 1 117 27Q83 12 57 30Q30 13 3 27Z"
-            fill="#dfd4ac" fill-opacity=".57"/>
-        </svg>
-        <svg class="living-habitat__bird living-habitat__bird--two" aria-hidden="true"
-          viewBox="0 0 120 42" fill="none">
-          <path d="M3 27Q32 0 57 19Q86 1 117 27Q83 12 57 30Q30 13 3 27Z"
-            fill="#dfd4ac" fill-opacity=".4"/>
-        </svg>
-        <div class="living-habitat__reeds" aria-hidden="true"></div>
-        <div class="living-habitat__content">
-          <span class="signature-kicker">THE LIVING WILDLIFE EXPERIENCE</span>
-          <h2>De natuur staat nooit stil.</h2>
-          <p>Een rustig bewegend rietlandschap — geïnspireerd op vroege vogelmomenten.</p>
-          <span class="living-habitat__art-label">Sfeervisual · geen echte waarneming</span>
-        </div>
-        <button id="habitatMotionToggle" type="button" class="living-habitat__toggle"
-          aria-pressed="false" aria-label="Zet de bewegende natuurvisual stil">Ⅱ</button>
       </div>
     </section>
 
@@ -237,49 +201,14 @@ function buildSkeleton() {
         <span class="spinner" aria-hidden="true"></span>
       </div>
     </section>
+      </div>
+      <button class="ambient-wetland__motion-toggle" id="ambientWetlandToggle"
+        type="button" aria-pressed="false"
+        aria-label="Pauzeer bewegende natuurachtergrond">Ⅱ</button>
+    </section>
   `;
 }
 
-
-/**
- * The habitat is animated CSS (no downloaded video required).
- * Pause if hidden or outside viewport to protect battery on mobile.
- */
-function initHabitatMotion(el,ctx){
-  const landscape=el.querySelector('#livingHabitat');
-  const toggle=el.querySelector('#habitatMotionToggle');
-  if(!landscape||!toggle)return()=>{};
-  const motion=window.matchMedia?.('(prefers-reduced-motion: reduce)');
-  let userPaused=false,inView=false;
-  function update(){
-    if(ctx.destroyed)return;
-    const paused=userPaused||document.hidden||!inView||!!motion?.matches;
-    landscape.classList.toggle('is-paused',paused);
-    toggle.setAttribute('aria-pressed',String(userPaused));
-    toggle.setAttribute('aria-label',userPaused?'Hervat de bewegende natuurvisual':'Zet de bewegende natuurvisual stil');
-    toggle.textContent=userPaused?'▶':'Ⅱ';
-  }
-  const onToggle=()=>{userPaused=!userPaused;update()};
-  const onVisibility=()=>update();
-  toggle.addEventListener('click',onToggle);
-  document.addEventListener('visibilitychange',onVisibility);
-  motion?.addEventListener?.('change',onVisibility);
-  let observer=null;
-  if(typeof IntersectionObserver!=='undefined'){
-    observer=new IntersectionObserver(entries=>{
-      inView=entries[0]?.isIntersecting===true;
-      update();
-    },{threshold:.05});
-    observer.observe(landscape);
-  }else inView=true;
-  update();
-  return()=>{
-    observer?.disconnect();
-    toggle.removeEventListener('click',onToggle);
-    document.removeEventListener('visibilitychange',onVisibility);
-    motion?.removeEventListener?.('change',onVisibility);
-  };
-}
 
 // ══════════════════════════════════════════════════════════
 // DIASHOW
@@ -950,11 +879,14 @@ function iconMap() {
 
 // ── HTML helper ────────────────────────────────────────────
 function statTile(id, value, label, iconSvg) {
+  const route = { 'stat-species':'species','stat-total':'sightings',
+    'stat-photos':'media','stat-hotspot':'map' }[id] || 'home';
   return `
-    <div class="stat-tile" id="${id}">
+    <button class="stat-tile" id="${id}" type="button" data-signature-route="${route}"
+      aria-label="Open ${label}">
       <div class="stat-tile__icon">${iconSvg}</div>
       <div class="stat-tile__value">${value}</div>
       <div class="stat-tile__label">${label}</div>
-    </div>
+    </button>
   `;
 }
