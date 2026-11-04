@@ -12,7 +12,7 @@
  *   birdspot-media           — foto's/IDB-exports (permanent)
  */
 
-const APP_VERSION = '1.4.3-explorer-dropdown';
+const APP_VERSION = '1.4.4-kingfisher-splash';
 const APP_CACHE   = `birdspot-app-v${APP_VERSION}`;
 const MEDIA_CACHE = 'birdspot-media';
 
@@ -38,9 +38,12 @@ const PRECACHE_URLS = [
   '/styles/signature-phase4.css',
   '/styles/observations-evidence.css',
   '/styles/explorer-status-map.css',
+  '/styles/startup-splash.css',
+  '/assets/birdspot-ijsvogel-splash.avif',
 
   // JS — app root
   '/src/app.js',
+  '/src/services/startup-splash.js',
 
   // JS — features
   '/src/features/home/view.js',

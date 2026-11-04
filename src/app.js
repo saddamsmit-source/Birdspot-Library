@@ -117,3 +117,6 @@ export function showToast(msg, duration = 2800) {
 
 // ── Start ─────────────────────────────────────────────────
 navigate('home');
+// Splash waits until the application home route is actually initialized.
+window.dispatchEvent(new Event('birdspot:ready'));
+
