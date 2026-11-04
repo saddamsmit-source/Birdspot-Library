@@ -76,6 +76,26 @@ def main():
         print("PHOTO_NETWORK_CHECK: image loaded")
       except Exception:
         print("PHOTO_NETWORK_CHECK: external image not available in CI, CSS fallback shown")
+      photo_catalog=p.evaluate("""async () => {
+        const {FEATURED_BIRDS}=await import('/src/features/home/specialBirds.js');
+        return Promise.all(FEATURED_BIRDS.map(b => new Promise(resolve => {
+          const image=new Image();
+          let settled=false;
+          const finish=(ok,reason) => {
+            if(settled)return;
+            settled=true;
+            clearTimeout(timeout);
+            resolve({id:b.id,ok,reason});
+          };
+          const timeout=setTimeout(()=>finish(false,'timeout'),9000);
+          image.onload=()=>finish(image.naturalWidth>0,'loaded');
+          image.onerror=()=>finish(false,'network/error');
+          image.src=b.image;
+        })));
+      }""")
+      failed=[a for a in photo_catalog if not a["ok"]]
+      print("PHOTO_CATALOGUE_CHECK:",photo_catalog,flush=True)
+      print("PHOTO_CATALOGUE_FAILED:",failed,flush=True)
       capture(p,'mobile_editorial_390.png')
 
       # Ambient visual should be local CSS, pausable and absent of autoplay media.
