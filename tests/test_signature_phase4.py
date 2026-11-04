@@ -32,6 +32,7 @@ def main():
             p.locator(".film-studio-empty").wait_for(timeout=10000)
             assert p.locator("#filmEditor").is_hidden()
             assert "Kies mijn beelden" in p.locator("#filmEmptyState").inner_text()
+            assert p.locator("#filmEstimate").inner_text()=="—"
             capture(p,"phase4_empty_390.png")
             p.locator('#filmEmptyState [data-film-route="media"]').click()
             p.locator(".signature-media-v2").wait_for(timeout=10000)
@@ -116,6 +117,12 @@ def main():
             assert result["mime"] in ("video/webm","video/mp4"),result
             assert result["name"].endswith((".webm",".mp4")),result
             assert result["selected"]==["p4-video","p4-photo"]
+            p.wait_for_function("""() => {
+              const video=document.getElementById('filmResultVideo');
+              return !!video && video.readyState>=1 && video.videoWidth>0 && video.videoHeight>0;
+            }""",timeout=15000)
+            p.locator("#filmResult").scroll_into_view_if_needed()
+            p.screenshot(path=str(SHOTS/"phase4_result_visible_390.png"),animations="disabled")
             capture(p,"phase4_export_ready_390.png")
             with tempfile.TemporaryDirectory() as d:
                 with p.expect_download(timeout=15000) as dl:

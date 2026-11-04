@@ -168,7 +168,7 @@ export function renderFilmStudio(el) {
     byId('filmSelectedCount').textContent=items.length;
     const estimate=movieEstimate(items,state);
     const min=Math.floor(estimate.seconds/60),sec=estimate.seconds%60;
-    byId('filmEstimate').textContent=min?min+'m '+String(sec).padStart(2,'0')+'s':estimate.seconds+' sec';
+    byId('filmEstimate').textContent=!items.length?'—':(min?min+'m '+String(sec).padStart(2,'0')+'s':estimate.seconds+' sec');
     const fmt=chooseMovieFormat();
     byId('filmFormat').textContent=fmt?(fmt.includes('mp4')?'MP4':'WebM'):'Niet beschikbaar';
     byId('filmEmptyState').hidden=items.length>0;
