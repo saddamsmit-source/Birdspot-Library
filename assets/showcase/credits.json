@@ -31,6 +31,14 @@
   "width": 1600,
   "height": 1200
  },
+ "sp042": {
+  "file": "Carpodacus erythrinus 303190528.jpg",
+  "author": "Поляков Александр",
+  "license": "CC BY 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Carpodacus_erythrinus_303190528.jpg",
+  "width": 1600,
+  "height": 1068
+ },
  "sp075": {
   "file": "Common Kingfisher Alcedo atthis.jpg",
   "author": "Andreas Trepte",
@@ -46,6 +54,14 @@
   "source": "https://commons.wikimedia.org/wiki/File:Purple_heron_in_Zimbabwe.jpg",
   "width": 1600,
   "height": 1067
+ },
+ "sp085": {
+  "file": "Nycticorax nycticorax 5.jpg",
+  "author": "Mike & Chris",
+  "license": "CC BY-SA 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Nycticorax_nycticorax_5.jpg",
+  "width": 1600,
+  "height": 1598
  },
  "sp101": {
   "file": "Limosa limosa (calling).jpg",
@@ -71,6 +87,14 @@
   "width": 1600,
   "height": 1200
  },
+ "sp142": {
+  "file": "Common crane grus grus.jpg",
+  "author": "Andreas Trepte",
+  "license": "CC BY-SA 2.5",
+  "source": "https://commons.wikimedia.org/wiki/File:Common_crane_grus_grus.jpg",
+  "width": 1600,
+  "height": 1600
+ },
  "sp143": {
   "file": "Avocette élégante060 Thyna.jpg",
   "author": "El Golli Mohamed",
@@ -95,6 +119,70 @@
   "width": 1600,
   "height": 1067
  },
+ "sp186": {
+  "file": "Branta ruficollis 94321119.jpg",
+  "author": "Christoph Moning",
+  "license": "CC BY 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Branta_ruficollis_94321119.jpg",
+  "width": 1600,
+  "height": 1068
+ },
+ "sp189": {
+  "file": "Ferruginous Pochard Aythya nyroca Male by Dr. Raju Kasambe DSCN2746 (12).jpg",
+  "author": "Dr. Raju Kasambe",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Ferruginous_Pochard_Aythya_nyroca_Male_by_Dr._Raju_Kasambe_DSCN2746_(12).jpg",
+  "width": 1600,
+  "height": 1282
+ },
+ "sp192": {
+  "file": "Gallo forcello.jpg",
+  "author": "Scosse",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Gallo_forcello.jpg",
+  "width": 1600,
+  "height": 1067
+ },
+ "sp200": {
+  "file": "Crex crex, Beachy Head 1.jpg",
+  "author": "Ron Knight from Seaford, East Sussex, United Kingdom",
+  "license": "CC BY 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Crex_crex,_Beachy_Head_1.jpg",
+  "width": 1600,
+  "height": 1067
+ },
+ "sp205": {
+  "file": "Stelzenläufer (Himantopus himantopus).jpg",
+  "author": "Andreas Trepte",
+  "license": "CC BY-SA 2.5",
+  "source": "https://commons.wikimedia.org/wiki/File:Stelzenl%C3%A4ufer_(Himantopus_himantopus).jpg",
+  "width": 1600,
+  "height": 1067
+ },
+ "sp208": {
+  "file": "Male Ruff (Calidris pugnax) in Finnmark.jpg",
+  "author": "Lucwrte",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Male_Ruff_(Calidris_pugnax)_in_Finnmark.jpg",
+  "width": 1600,
+  "height": 1067
+ },
+ "sp218": {
+  "file": "Great Skua (cropped).jpg",
+  "author": "Noel Reynolds",
+  "license": "CC BY 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Great_Skua_(cropped).jpg",
+  "width": 1600,
+  "height": 934
+ },
+ "sp223": {
+  "file": "Puffin (Fratercula arctica) with lesser sand eels (Ammodytes tobianus).jpg",
+  "author": "Charles J. Sharp",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Puffin_(Fratercula_arctica)_with_lesser_sand_eels_(Ammodytes_tobianus).jpg",
+  "width": 1600,
+  "height": 1067
+ },
  "sp225": {
   "file": "Ichthyaetus melanocephalus, Ferrara, Ravenna, Italy 1.jpg",
   "author": "christoph_moning",
@@ -102,6 +190,30 @@
   "source": "https://commons.wikimedia.org/wiki/File:Ichthyaetus_melanocephalus,_Ferrara,_Ravenna,_Italy_1.jpg",
   "width": 1600,
   "height": 1000
+ },
+ "sp232": {
+  "file": "Caspian tern flying with fish in its beak against blue sky.jpg",
+  "author": "Pseudopanax at English Wikipedia",
+  "license": "Public domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Caspian_tern_flying_with_fish_in_its_beak_against_blue_sky.jpg",
+  "width": 1600,
+  "height": 1000
+ },
+ "sp233": {
+  "file": "Black tern flying (7402339080).jpg",
+  "author": "U. S. Fish and Wildlife Service - Northeast Region",
+  "license": "Public domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Black_tern_flying_(7402339080).jpg",
+  "width": 1600,
+  "height": 1067
+ },
+ "sp241": {
+  "file": "Black stork (Ciconia nigra).jpg",
+  "author": "מינוזיג - MinoZig",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Black_stork_(Ciconia_nigra).jpg",
+  "width": 1600,
+  "height": 1067
  },
  "sp243": {
   "file": "2015-10-19 Botaurus stellaris, Gosforth Park 5.jpg",
@@ -111,6 +223,14 @@
   "width": 1600,
   "height": 1200
  },
+ "sp244": {
+  "file": "Little Bittern 2025 06 14 02.jpg",
+  "author": "Alexis Lours",
+  "license": "CC BY 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Little_Bittern_2025_06_14_02.jpg",
+  "width": 1600,
+  "height": 1067
+ },
  "sp247": {
   "file": "Pandion haliaetus (in flight).JPG",
   "author": "Alpsdake",
@@ -118,6 +238,22 @@
   "source": "https://commons.wikimedia.org/wiki/File:Pandion_haliaetus_(in_flight).JPG",
   "width": 1600,
   "height": 1600
+ },
+ "sp249": {
+  "file": "Hen Harrier - Male.jpg",
+  "author": "caroline legg",
+  "license": "CC BY 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Hen_Harrier_-_Male.jpg",
+  "width": 1600,
+  "height": 1068
+ },
+ "sp251": {
+  "file": "Beautiful Montagu's Harrier in Flight (51042548717).jpg",
+  "author": "Hari K Patibanda",
+  "license": "CC BY 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Beautiful_Montagu%27s_Harrier_in_Flight_(51042548717).jpg",
+  "width": 1600,
+  "height": 1067
  },
  "sp252": {
   "file": "White-tailed eagle (Haliaeetus albicilla) in flight 2.jpg",
@@ -143,6 +279,14 @@
   "width": 1600,
   "height": 1067
  },
+ "sp256": {
+  "file": "Upupa epops 2019.jpg",
+  "author": "Dûrzan Cîrano",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Upupa_epops_2019.jpg",
+  "width": 1600,
+  "height": 1010
+ },
  "sp257": {
   "file": "Guépier d'Europe ichkeul (Merops apiaster) European Bee-eater.jpg",
   "author": "El Golli Mohamed",
@@ -150,6 +294,14 @@
   "source": "https://commons.wikimedia.org/wiki/File:Gu%C3%A9pier_d%27Europe_ichkeul_(Merops_apiaster)_European_Bee-eater.jpg",
   "width": 1600,
   "height": 1118
+ },
+ "sp258": {
+  "file": "Jynx torquilla (34536504885).jpg",
+  "author": "Donald Hobern from Copenhagen, Denmark",
+  "license": "CC BY 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Jynx_torquilla_(34536504885).jpg",
+  "width": 1600,
+  "height": 1123
  },
  "sp261": {
   "file": "Ógea (Falco subbuteo).jpg",
@@ -174,5 +326,61 @@
   "source": "https://commons.wikimedia.org/wiki/File:Bearded_reedling_(Panurus_biarmicus).jpg",
   "width": 1600,
   "height": 1067
+ },
+ "sp274": {
+  "file": "Savi's Warbler (Locustella luscinioides), Vogelfreistätte Glender Wiesen, Coburg, Germany.jpg",
+  "author": "Christian Lindner",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Savi%27s_Warbler_(Locustella_luscinioides),_Vogelfreist%C3%A4tte_Glender_Wiesen,_Coburg,_Germany.jpg",
+  "width": 1600,
+  "height": 1600
+ },
+ "sp279": {
+  "file": "37-090505-cettis-warbler-at-Kalloni-east-river.jpg",
+  "author": "Mark S Jobling",
+  "license": "CC BY 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:37-090505-cettis-warbler-at-Kalloni-east-river.jpg",
+  "width": 1600,
+  "height": 1068
+ },
+ "sp282": {
+  "file": "An Adult Rosy Starling Looking for food (50620492117).jpg",
+  "author": "Hari K Patibanda",
+  "license": "CC BY 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:An_Adult_Rosy_Starling_Looking_for_food_(50620492117).jpg",
+  "width": 1600,
+  "height": 1067
+ },
+ "sp462": {
+  "file": "Buitre negro 1.jpg",
+  "author": "Juan Lacruz",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Buitre_negro_1.jpg",
+  "width": 1600,
+  "height": 900
+ },
+ "sp463": {
+  "file": "Gyps fulvus in flight.jpg",
+  "author": "Stefan Krause, Germany",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Gyps_fulvus_in_flight.jpg",
+  "width": 1600,
+  "height": 1067
+ },
+ "sp464": {
+  "file": "Short-toed snake eagle (Circaetus gallicus), Potokaki Wetland.jpg",
+  "author": "Hobbyfotowiki",
+  "license": "CC0",
+  "source": "https://commons.wikimedia.org/wiki/File:Short-toed_snake_eagle_(Circaetus_gallicus),_Potokaki_Wetland.jpg",
+  "width": 1067,
+  "height": 1600
+ },
+ "sp481": {
+  "file": "Coracias garrulus - European roller 02.jpg",
+  "author": "Zeynel Cebeci",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Coracias_garrulus_-_European_roller_02.jpg",
+  "width": 1600,
+  "height": 1059
  }
 }
