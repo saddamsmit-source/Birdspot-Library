@@ -141,7 +141,8 @@ def main():
             tab("mijn")
             tiles = p.eval_on_selector_all('#sdMineStats .sd-tile', 'els => els.map(e => e.innerText.replace(/\\s+/g," ").trim())')
             assert tiles[0].endswith("3") and tiles[1].endswith("2"), tiles
-            assert "20 okt 2025" in tiles[2] and "2 mei 2026" in tiles[3], tiles
+            assert any("20 okt 2025" in t for t in tiles) and any("2 mei 2026" in t for t in tiles), tiles
+            assert any("Wijze onbekend" in t and t.endswith("3") for t in tiles), tiles
             print("H2-06 OK — eigen waarnemingen:", tiles)
             p.screenshot(path=str(SHOTS / "species_h2_waarnemingen_390.png"))
 

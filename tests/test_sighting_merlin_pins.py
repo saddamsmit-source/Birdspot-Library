@@ -114,14 +114,14 @@ def main():
             assert seen["observationMethod"]=="seen" and seen["identificationSource"]=="self"
             assert seen["lat"]!=heard["lat"] and seen["lon"]!=heard["lon"]
             assert seen["locationName"]=="Limburg testbos" and seen["photoIds"]==[]
-            assert page.evaluate("""() => JSON.parse(localStorage.getItem('birdspot-seen-species')||'[]').includes('sp001')""")
+            assert page.evaluate("""() => JSON.parse(localStorage.getItem('birdspot-sightings')).sightings.some(s=>s.speciesId==='sp001' && ['seen','both'].includes(s.observationMethod))""")
 
-            # Third sighting must not toggle the seen species OFF.
+            # Third sighting preserves the earlier visual evidence.
             page.locator("#fab").click()
             select_species(page)
             third=save(page)
             assert len(third)==3
-            assert page.evaluate("""() => JSON.parse(localStorage.getItem('birdspot-seen-species')||'[]').includes('sp001')""")
+            assert page.evaluate("""() => JSON.parse(localStorage.getItem('birdspot-sightings')).sightings.some(s=>s.speciesId==='sp001' && ['seen','both'].includes(s.observationMethod))""")
 
             # Old records without an observationMethod remain unlabeled, not falsely "seen".
             page.evaluate("""() => {
@@ -165,6 +165,26 @@ def main():
                 page.locator("#addSightingSheet").wait_for(timeout=11000)
                 assert "📍" in page.locator("#coordsHint").inner_text()
                 page.locator("#addSheetCancel").click()
+
+            # Guide reads the same records as map, including legacy unknown evidence.
+            page.evaluate("() => localStorage.setItem('birdspot-seen-species',JSON.stringify(['sp002']))")
+            page.locator('.nav-item[data-route="species"]').click()
+            assert page.locator('.species-saved #speciesOnlyFavorites').count()==1
+            assert page.locator('.species-toolbar #speciesOnlyFavorites').count()==0
+            assert page.locator('.species-row[data-id="sp002"] .species-observation-status').inner_text()==''
+            assert page.locator('.species-row[data-id="sp001"] .species-observation-status').inner_text()=='Waargenomen'
+            page.locator('.species-row[data-id="sp001"] .species-row__body').click()
+            page.locator('[data-sd-tab="mijn"]').click()
+            page.locator('.signature-species-sighting').first.wait_for()
+            assert page.locator('[data-species-observe]').count()==0
+            assert page.locator('.signature-species-sighting').count()==4
+            assert page.locator('.signature-species-photo-tile').count()==1
+            stats=page.locator('#sdMineStats').inner_text()
+            assert 'Gezien' in stats and 'Gehoord' in stats and 'Wijze onbekend' in stats,stats
+            row=page.locator('[data-sighting-id="'+heard['id']+'"]')
+            assert 'Brabant testpark' in row.inner_text() and 'Gehoord' in row.inner_text(),row.inner_text()
+            page.screenshot(path=str(SHOTS/'sighting_information_guide_390.png'),animations='disabled')
+            page.locator('.signature-species-detail-close').click()
 
             # Existing ZIP backup must retain evidence and separate media links.
             with tempfile.TemporaryDirectory() as folder:

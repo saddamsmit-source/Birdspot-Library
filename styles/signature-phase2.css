@@ -223,3 +223,9 @@
 .has-guide-photo .signature-species-detail-intro {margin:12px 16px 0;}
 .species-guide-credit {margin:0;padding:9px 16px;background:#102b23;color:#e8e4d5;font-size:11px;line-height:1.5;}
 .species-guide-credit a {color:inherit;text-decoration:underline;}
+
+/* Saved reading list sits outside the biological filters. */
+.species-saved {display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:14px 16px;background:var(--surface);border-bottom:1px solid var(--line);}
+.species-saved>span {font-size:12px;font-weight:700;color:var(--muted);}
+.species-saved .signature-species-favorites-filter {padding:0;border:0;}
+.species-observation-status {font-size:10px;color:var(--muted);max-width:78px;}

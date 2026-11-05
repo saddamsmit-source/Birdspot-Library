@@ -5,6 +5,7 @@
  * Tabs: Herkenning · Leefwijze (seizoen, status, broeden, voedsel, gedrag, trek) · Waar · Mijn waarnemingen
  * Lege onderdelen worden niet getoond (Handbook D11); ontbrekende inhoud is zichtbaar ontbrekend.
  */
+import { observedVisually, observedBySound, validPin } from '../sightings/evidence.js';
 import { CATEGORY_BADGES } from '../../data/species.js';
 import { monthSet, MONTH_NAMES } from '../../data/seasons.js';
 
@@ -204,7 +205,7 @@ export function sightingStats(sightings, placeList = []) {
   const byPlace = new Map();
   for (const x of sightings) {
     const place = known.get(x.placeId);
-    const name = place ? place.name : (x.locationName || '').trim();
+    const name = place ? place.name : ((x.locationName || '').trim() || (validPin(x.lat,x.lon)? Number(x.lat).toFixed(5)+', '+Number(x.lon).toFixed(5):''));
     if (!name) continue;
     const key = place ? 'p:' + place.id : 'n:' + name;
     const cur = byPlace.get(key) || { name, count: 0, placeId: place ? place.id : null };
@@ -213,6 +214,9 @@ export function sightingStats(sightings, placeList = []) {
   }
   return {
     count: sightings.length,
+    seen: sightings.filter(observedVisually).length,
+    heard: sightings.filter(observedBySound).length,
+    unknown: sightings.filter(x=>!observedVisually(x)&&!observedBySound(x)).length,
     first: dates[0] || null,
     last: dates[dates.length - 1] || null,
     places: [...byPlace.values()].sort((a, b) => b.count - a.count || a.name.localeCompare(b.name)),
@@ -225,6 +229,9 @@ export function minePanel(stats, fmtDate) {
   return '<div class="sd-tiles sd-tiles--2">' +
     tile('count', 'Waarnemingen', String(stats.count)) +
     tile('pin', 'Plekken', String(stats.places.length)) +
+    tile('eye', 'Gezien', String(stats.seen || 0)) +
+    tile('note', 'Gehoord', String(stats.heard || 0)) +
+    (stats.unknown ? tile('info', 'Wijze onbekend', String(stats.unknown)) : '') +
     (stats.first ? tile('first', 'Eerste', esc(fmtDate(stats.first))) : '') +
     (stats.last ? tile('last', 'Laatste', esc(fmtDate(stats.last))) : '') + '</div>';
 }
