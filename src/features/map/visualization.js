@@ -64,3 +64,19 @@ export function clusterGradient(counts) {
   }
   return 'conic-gradient('+stops.join(', ')+')';
 }
+
+/**
+ * K4: één kleur voor een plek met meerdere waarnemingen.
+ * Gezien én gehoord op dezelfde plek (of een 'beide') = oranje; alleen gezien = blauw;
+ * alleen gehoord = geel (Merlin-icoon als alles Merlin is); alleen onbekend = grijs.
+ */
+export function placeStatus(records) {
+  const keys = new Set((records || []).map(statusForSighting));
+  keys.delete('unknown');
+  if (!keys.size) return 'unknown';
+  const seen = keys.has('seen') || keys.has('both');
+  const heard = keys.has('heard') || keys.has('merlin') || keys.has('both');
+  if (seen && heard) return 'both';
+  if (seen) return 'seen';
+  return keys.size === 1 && keys.has('merlin') ? 'merlin' : 'heard';
+}

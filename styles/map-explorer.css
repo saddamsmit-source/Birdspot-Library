@@ -149,3 +149,60 @@
   .map-screen .map-topbar { right: auto; width: 520px; }
   .map-pin-panel { left: 50%; right: auto; width: 420px; transform: translateX(-50%); }
 }
+
+/* ── K4: plekken ────────────────────────────────────────── */
+.map-screen .bird-pin .bird-pin-count {
+  position: absolute; right: -9px; top: -7px; min-width: 20px; height: 20px; padding: 0 5px;
+  display: grid; place-items: center; border-radius: 999px;
+  background: #0d2c27; color: #fff6df; border: 2px solid #fff;
+  font: 800 11px/1 var(--font-body, system-ui); font-variant-numeric: tabular-nums;
+}
+.map-screen .bottom-sheet { max-height: 78%; display: flex; flex-direction: column; }
+.map-screen .bottom-sheet .sheet-body { overflow-y: auto; min-height: 0; }
+.place-sheet__pin { width: 24px; height: 24px; fill: none; stroke: var(--brand-mid); stroke-width: 1.8; }
+.place-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-bottom: 12px; }
+.place-stat { display: grid; gap: 2px; padding: 10px; border-radius: var(--r-sm, 10px); background: var(--surface-2); }
+.place-stat strong { font: 700 20px/1.1 var(--font-display, Georgia); color: var(--ink); font-variant-numeric: tabular-nums; }
+.place-stat span { font-size: 12px; color: var(--muted); }
+.place-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+.place-action {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; border-radius: 12px;
+  border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+  font: 700 13px var(--font-body, system-ui); cursor: pointer;
+}
+.place-action--primary { background: linear-gradient(115deg, #e7c995, #cca774); color: #15372b; border: 0; }
+.place-action--quiet { color: var(--muted); }
+.place-rename { display: flex; gap: 8px; margin-bottom: 8px; }
+.place-rename input { flex: 1; min-width: 0; height: 44px; padding: 0 12px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); font-size: 15px; }
+.place-rename button { min-height: 44px; padding: 0 14px; border-radius: 12px; background: var(--brand-mid); color: #fff; font-weight: 700; }
+.place-h { margin: 14px 0 6px; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.place-sightings { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.place-sightings button {
+  width: 100%; min-height: 48px; display: flex; align-items: center; gap: 10px; padding: 6px 10px;
+  border-radius: 12px; background: var(--surface-2); color: var(--ink); text-align: left;
+}
+.place-sightings span { flex: 1; min-width: 0; display: grid; }
+.place-sightings b { font-size: 14px; }
+.place-sightings small { font-size: 12px; color: var(--muted); }
+.place-sightings em { font-style: normal; color: var(--muted); font-size: 18px; }
+.place-media { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+.place-media__thumb { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 10px; background: var(--surface-2); }
+.place-media__audio { grid-column: 1 / -1; margin: 0; padding: 8px 10px; border-radius: 12px; background: var(--surface-2); }
+.place-media__audio figcaption { font-size: 12px; color: var(--muted); margin-bottom: 4px; overflow-wrap: anywhere; }
+.place-media__audio audio { width: 100%; }
+.place-empty { grid-column: 1 / -1; margin: 0; font-size: 13px; color: var(--muted); }
+
+.place-prompt { position: fixed; inset: 0; z-index: 1900; display: grid; place-items: end center; padding: 16px; }
+.place-prompt__backdrop { position: absolute; inset: 0; background: rgba(3, 17, 15, .6); }
+.place-prompt__card {
+  position: relative; width: min(440px, 100%); padding: 20px; border-radius: 22px;
+  background: var(--surface); color: var(--ink); box-shadow: 0 16px 40px rgba(0, 0, 0, .35);
+  margin-bottom: env(safe-area-inset-bottom, 0px);
+}
+.place-prompt__icon { width: 30px; height: 30px; fill: none; stroke: var(--brand-mid); stroke-width: 1.8; }
+.place-prompt__card h3 { margin: 6px 0 6px; font: 700 20px/1.2 var(--font-display, Georgia); }
+.place-prompt__card p { margin: 0 0 16px; font-size: 14px; line-height: 1.45; color: var(--ink-2); }
+.place-prompt__actions { display: grid; grid-template-columns: 1fr 1.4fr; gap: 10px; }
+.place-prompt__actions button { min-height: 48px; border-radius: 14px; font-weight: 800; font-size: 14px; }
+.place-prompt__new { background: var(--surface-2); color: var(--ink); }
+.place-prompt__use { background: linear-gradient(115deg, #e7c995, #cca774); color: #15372b; }

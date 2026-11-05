@@ -3,7 +3,8 @@
  * Beheert de database-verbinding en schema-migraties.
  *
  * Stores:
- *   photos     { id, blob (Blob), type, filename, speciesId, sightingId, addedAt }
+ *   photos     { id, blob (Blob), type, filename, speciesId, sightingId, placeId?, addedAt }
+ *              (K4: placeId = media bij een plek: foto, video of geluidsopname)
  *   (sightings zitten in localStorage via sightings.js)
  */
 
@@ -83,6 +84,16 @@ export async function getPhotosBySighting(sightingId) {
     const idx   = tx.objectStore('photos').index('by_sighting');
     const req   = idx.getAll(sightingId);
     req.onsuccess = () => resolve(req.result);
+    req.onerror   = () => reject(req.error);
+  });
+}
+
+/** K4: alle media (foto, video, geluid) die aan een plek hangen. */
+export async function getMediaByPlace(placeId) {
+  const db = await getDB();
+  return new Promise((resolve, reject) => {
+    const req = db.transaction('photos', 'readonly').objectStore('photos').getAll();
+    req.onsuccess = () => resolve((req.result || []).filter(p => p.placeId === placeId));
     req.onerror   = () => reject(req.error);
   });
 }
