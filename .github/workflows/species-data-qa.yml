@@ -1,0 +1,37 @@
+name: Birdspot Species Data QA
+on:
+  pull_request:
+    paths:
+      - "src/data/species.js"
+      - "src/features/species/**"
+      - "docs/data/**"
+      - "tools/species/**"
+      - "tests/test_species_data.py"
+      - "tests/fixtures/species_ids_*.json"
+      - ".github/workflows/species-data-qa.yml"
+jobs:
+  species-data:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Chromium
+        run: |
+          python -m pip install -r tests/requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: Status-script is idempotent (species.js matches source)
+        run: |
+          python tools/species/apply_status.py
+          git diff --exit-code src/data/species.js
+      - name: Species data and list QA
+        run: python tests/test_species_data.py
+      - name: Upload screenshot evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: birdspot-species-data-screenshots
+          path: tests/screenshots/species_i1_*.png
+          if-no-files-found: ignore

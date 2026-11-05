@@ -4,7 +4,7 @@
  * Nieuw: foto-thumbnails, zeldzaamheid-badges, "Recent bekeken" scroll
  */
 
-import { SPECIES, CATEGORY_LABELS, REGIONS, getSeenIds, toggleSeen, searchSpecies } from '../../data/species.js';
+import { SPECIES, CATEGORY_LABELS, REGIONS, getSeenIds, toggleSeen, searchSpecies, activeCategories } from '../../data/species.js';
 import { getDB, getPhotosBySpecies, getPhoto } from '../../data/db.js';
 import { getSightings }                 from '../../data/sightings.js';
 import { getPhotoUrl, revokePhotoUrl }  from '../../utils/photoUrl.js';
@@ -134,7 +134,7 @@ export function renderSpecies(el) {
           value="${escHtml(_searchQuery)}">
       </div>
       <div class="species-filters" id="speciesFilters" role="tablist">
-        ${Object.entries(CATEGORY_LABELS).map(([key, lbl]) => `
+        ${activeCategories().map(key => [key, CATEGORY_LABELS[key]]).map(([key, lbl]) => `
           <button class="filter-chip${_currentCategory === key ? ' active' : ''}"
             data-cat="${key}" role="tab"
             aria-selected="${_currentCategory === key}">

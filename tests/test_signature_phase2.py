@@ -39,28 +39,28 @@ def main():
               await new Promise((resolve,reject)=>{
                 const tx=db.transaction('photos','readwrite');
                 tx.objectStore('photos').put({id:'test-media-1',
-                  speciesId:'sp001',sightingId:'test-sighting-1',blob,
+                  speciesId:'sp002',sightingId:'test-sighting-1',blob,
                   type:'image/svg+xml',filename:'test.svg'});
                 tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);
               });
               localStorage.setItem('birdspot-sightings',JSON.stringify({schemaVersion:2,
-                sightings:[{id:'test-sighting-1',speciesId:'sp001',
-                  speciesName:'Stadsduif',date:'2026-10-28',
+                sightings:[{id:'test-sighting-1',speciesId:'sp002',
+                  speciesName:'Houtduif',date:'2026-10-28',
                   locationName:'Testpark',photoIds:['test-media-1'],count:1}]}));
             }""")
             p.locator('.nav-item[data-route="species"]').click()
             p.locator(".signature-species-hero").wait_for()
             assert p.locator(".species-row").count()>0
-            p.locator(".species-row[data-id='sp001'] [data-species-fav]").click()
-            assert p.evaluate("() => JSON.parse(localStorage.getItem('birdspot-favorite-species')).includes('sp001')")
+            p.locator(".species-row[data-id='sp002'] [data-species-fav]").click()
+            assert p.evaluate("() => JSON.parse(localStorage.getItem('birdspot-favorite-species')).includes('sp002')")
             p.locator("#speciesOnlyFavorites").click()
             assert p.locator(".species-row").count()==1
             p.evaluate("() => document.getElementById('main-view').scrollTo(0,0)")
             p.screenshot(path=str(SHOTS/"phase2_species_overview_390.png"),full_page=True,animations="disabled")
-            p.locator(".species-row[data-id='sp001'] .species-row__body").click()
+            p.locator(".species-row[data-id='sp002'] .species-row__body").click()
             p.locator(".signature-species-detail-overlay").wait_for()
             p.locator(".signature-species-photo-tile").first.wait_for(timeout=8000)
-            assert "Stadsduif" in p.locator(".signature-species-detail-intro").inner_text()
+            assert "Houtduif" in p.locator(".signature-species-detail-intro").inner_text()
             p.screenshot(path=str(SHOTS/"phase2_species_detail_390.png"),full_page=True,animations="disabled")
             p.locator(".signature-species-detail-close").click()
             p.locator('.nav-item[data-route="home"]').click()
@@ -86,7 +86,7 @@ def main():
                 out.value.save_as(str(path))
                 with zipfile.ZipFile(path) as package:
                     payload=json.loads(package.read("gegevens.json"))
-                assert "sp001" in payload["collections"]["species"]
+                assert "sp002" in payload["collections"]["species"]
                 assert "test-media-1" in payload["collections"]["media"]
                 assert "test-media-1" in payload["collections"]["film"]
                 assert payload["sightings"][0]["id"]=="test-sighting-1"
@@ -102,7 +102,7 @@ def main():
                     const b=await import('/src/storage/backup.js');
                     await b.importBackup(file);
                 }""",encoded)
-                for key,item in [('birdspot-favorite-species','sp001'),
+                for key,item in [('birdspot-favorite-species','sp002'),
                                  ('birdspot-favorite-media','test-media-1'),
                                  ('birdspot-film-selection','test-media-1')]:
                     assert p.evaluate("(pair)=>JSON.parse(localStorage.getItem(pair[0])||'[]').includes(pair[1])",[key,item]),key

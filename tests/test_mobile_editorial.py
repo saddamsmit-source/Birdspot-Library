@@ -136,13 +136,13 @@ def main():
       # Species detail now offers the exact observation methods, not merely
       # a legacy seen toggle. A quick click preselects species + method.
       p.locator('.nav-item[data-route="species"]').click()
-      p.locator('.species-row[data-id="sp001"] .species-row__body').first.click()
+      p.locator('.species-row[data-id="sp002"] .species-row__body').first.click()
       p.locator('.signature-species-methods').wait_for(timeout=9000)
       assert p.locator('.signature-species-methods button').count()==4
       capture(p,'mobile_species_methods_390.png')
       p.locator('[data-species-observe="merlin"]').click()
       p.locator('#addSightingSheet.open').wait_for(timeout=9000)
-      assert "Stadsduif" in p.locator('#speciesPickerBtn').inner_text()
+      assert "Houtduif" in p.locator('#speciesPickerBtn').inner_text()
       assert p.locator('#sightMethodGroup input[value="heard"]').is_checked()
       assert p.locator('#sightSourceGroup input[value="merlin"]').is_checked()
       assert p.locator('#certaintyGroup input[value="possible"]').is_checked()
@@ -151,7 +151,7 @@ def main():
       p.locator('#addSheetSubmit').click()
       p.locator('#addSightingSheet').wait_for(state='detached',timeout=12000)
       rows=p.evaluate("() => JSON.parse(localStorage.getItem('birdspot-sightings')).sightings")
-      assert len(rows)==1 and rows[0]['speciesId']=='sp001',rows
+      assert len(rows)==1 and rows[0]['speciesId']=='sp002',rows
       assert rows[0]['observationMethod']=='heard' and rows[0]['identificationSource']=='merlin',rows
       assert rows[0]['merlinVerification']=='suggested',rows
       assert rows[0]['lat'] is None and rows[0]['lon'] is None,rows
