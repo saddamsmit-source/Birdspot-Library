@@ -596,18 +596,18 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "source": "https://commons.wikimedia.org/wiki/File:An_Adult_Rosy_Starling_Looking_for_food_(50620492117).jpg"
  },
  {
-  "id": "sp279",
+  "id": "sp273",
   "group": "riet",
   "groupLabel": "Rietvogels",
-  "nl": "Cetti's Zanger",
-  "latin": "Cettia cetti",
+  "nl": "Krekelzanger",
+  "latin": "Locustella fluviatilis",
   "pose": "tak",
-  "image": "/assets/showcase/sp279.webp",
+  "image": "/assets/showcase/sp273.webp",
   "width": 1600,
-  "height": 1068,
-  "author": "Mark S Jobling",
-  "license": "CC BY 3.0",
-  "source": "https://commons.wikimedia.org/wiki/File:37-090505-cettis-warbler-at-Kalloni-east-river.jpg"
+  "height": 1066,
+  "author": "Сергей Неклюдов",
+  "license": "CC BY 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Locustella_fluviatilis_123791068.jpg"
  },
  {
   "id": "sp249",
