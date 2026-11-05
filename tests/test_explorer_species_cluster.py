@@ -68,6 +68,7 @@ LEAFLET_STUB=r"""(() => {
         fire(type){for(const f of (this.events[type]||[]))f({});return this},
         getCenter(){return {...this.center}},getZoom(){return this.zoom},
         setView(ll,z){this.center={lat:ll[0],lng:ll[1]};if(z!==undefined)this.zoom=z;if(this.layer)redraw(this.layer);this.fire('move');this.fire('zoomend');return this},
+        fitBounds(pts){if(pts&&pts.length){const la=pts.reduce((s,p)=>s+p[0],0)/pts.length,lo=pts.reduce((s,p)=>s+p[1],0)/pts.length;this.center={lat:la,lng:lo};runtime.fitted=pts;}this.fire('move');return this},
         panTo(ll){if(Array.isArray(ll))this.center={lat:ll[0],lng:ll[1]};this.fire('move');return this},
         flyTo(ll,z){return this.setView(ll,z)},
         invalidateSize(){return this},setZoom(z){this.zoom=z;if(this.layer)redraw(this.layer);this.fire('move');this.fire('zoomend');return this}

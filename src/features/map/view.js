@@ -43,7 +43,8 @@ export function renderMap(el) {
         <label class="map-search" for="mapSpeciesSearch">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
           <input type="search" id="mapSpeciesSearch" list="mapSpeciesSuggestions"
-            placeholder="Zoek soort op de kaart" autocomplete="off" aria-describedby="mapFilterFeedback">
+            placeholder="Zoek vogel of plek" autocomplete="off" aria-describedby="mapFilterFeedback"
+            aria-controls="mapSearchResults">
         </label>
         <datalist id="mapSpeciesSuggestions"></datalist>
         <button type="button" class="map-icon-btn" id="mapFilterBtn" aria-label="Filters" aria-expanded="false" aria-controls="mapFilterPanel">
@@ -62,6 +63,8 @@ export function renderMap(el) {
           <span><i class="map-legend__dot map-legend__dot--both"></i>Beide</span>
         </div>
       </div>
+
+      <section class="map-search-results" id="mapSearchResults" aria-label="Plekken bij je zoekopdracht" hidden></section>
 
       <section class="bird-map-filters" id="mapFilterPanel" aria-label="Filter vogelwaarnemingen" hidden>
         <div class="bird-map-filter-head">
@@ -247,18 +250,21 @@ function initMap(screenEl, sightings, leafletOk = true) {
   const countEl = screenEl.querySelector('#mapCount');
   const filterState = {speciesSearch:'',status:'all'};
   let updateMapMarkers=()=>{};
+  let showSearchResults=()=>{};
+  // K5: plekken zijn doorzoekbaar op naam
+  const placeNames=new Map(loadPlaces().map(p=>[p.id,p.name]));
 
   // Only species with an actual geolocated observation appear as suggestions.
   const suggestions = screenEl.querySelector('#mapSpeciesSuggestions');
-  const names=[...new Set(geoSightings.map(s=>s.speciesName).filter(n=>typeof n==='string'&&n.trim()))]
+  const names=[...new Set([...geoSightings.map(s=>s.speciesName),...placeNames.values()].filter(n=>typeof n==='string'&&n.trim()))]
     .sort((a,b)=>a.localeCompare(b,'nl'));
   for(const name of names) {
     const option=document.createElement('option');option.value=name;suggestions.appendChild(option);
   }
 
   function applyFilters(){
-    const matches=filteredSightings(geoSightings,filterState,SPECIES);
-    const speciesMatches=filteredSightings(geoSightings,{speciesSearch:filterState.speciesSearch},SPECIES);
+    const matches=filteredSightings(geoSightings,filterState,SPECIES,placeNames);
+    const speciesMatches=filteredSightings(geoSightings,{speciesSearch:filterState.speciesSearch},SPECIES,placeNames);
     const counts=statusCounts(speciesMatches);
     const filtered=(filterState.status!=='all'||!!filterState.speciesSearch);
     screenEl.querySelector('#mapScreen')?.classList.toggle('has-active-filters',filtered);
@@ -288,6 +294,7 @@ function initMap(screenEl, sightings, leafletOk = true) {
         (filterState.speciesSearch?' · '+filterState.speciesSearch:'')
       : total+' '+(total===1?'waarneming met pin':'waarnemingen met pin');
     updateMapMarkers(matches);
+    showSearchResults(matches);
   }
   // Voorinvulling vanuit soortdetail ("Toon op de kaart"); eenmalig.
   try {
@@ -310,7 +317,10 @@ function initMap(screenEl, sightings, leafletOk = true) {
   // Filterpaneel opent onder de balk en sluit bij tik op de kaart
   const filterBtn=screenEl.querySelector('#mapFilterBtn');
   const filterPanel=screenEl.querySelector('#mapFilterPanel');
-  const setFilterOpen=open=>{filterPanel.hidden=!open;filterBtn.setAttribute('aria-expanded',String(open));};
+  const setFilterOpen=open=>{
+    filterPanel.hidden=!open;filterBtn.setAttribute('aria-expanded',String(open));
+    if(open)screenEl.querySelector('#mapSearchResults').hidden=true;  // één paneel tegelijk
+  };
   filterBtn.addEventListener('click',()=>setFilterOpen(filterPanel.hidden));
   mapEl.addEventListener('pointerdown',()=>setFilterOpen(false));
 
@@ -402,7 +412,52 @@ function initMap(screenEl, sightings, leafletOk = true) {
     _clusterLayer.clearLayers();
     _clusterLayer.addLayers(groupByPlace(matches).map(markerFor));
   };
+
+  // K5: bij zoeken komen alle plekken met die vogel (of met die naam) naar voren
+  const resultsEl=screenEl.querySelector('#mapSearchResults');
+  const focusPlace=(place,records)=>{
+    map.setView([Number(place.lat),Number(place.lon)],Math.max(map.getZoom(),16));
+    openPlaceSheet(screenEl,place,records,map);
+  };
+  showSearchResults=(matches)=>{
+    if(!filterState.speciesSearch){resultsEl.hidden=true;resultsEl.innerHTML='';return;}
+    const groups=groupByPlace(matches).sort((a,b)=>b.records.length-a.records.length||a.place.name.localeCompare(b.place.name,'nl'));
+    if(!groups.length){
+      resultsEl.innerHTML='<p class="map-search-results__empty">Geen plekken gevonden voor “'+escHtml(filterState.speciesSearch)+'”.</p>';
+      resultsEl.hidden=!screenEl.querySelector('#mapFilterPanel').hidden;return;
+    }
+    resultsEl.innerHTML='<h3>'+groups.length+' '+(groups.length===1?'plek':'plekken')+'</h3><ul>'+groups.slice(0,8).map(g=>{
+      const species=[...new Set(g.records.map(r=>r.speciesName).filter(Boolean))];
+      return '<li><button type="button" data-place="'+escHtml(g.place.id)+'">'+
+        '<i class="map-legend__dot map-legend__dot--'+(placeStatus(g.records)==='merlin'?'heard':placeStatus(g.records))+'"></i>'+
+        '<span><b>'+escHtml(g.place.name)+'</b><small>'+escHtml(species.slice(0,3).join(', ')+(species.length>3?' +'+(species.length-3):''))+'</small></span>'+
+        '<em>'+g.records.length+'×</em></button></li>';
+    }).join('')+'</ul>';
+    resultsEl.hidden=!screenEl.querySelector('#mapFilterPanel').hidden;
+    resultsEl.querySelectorAll('[data-place]').forEach(btn=>btn.addEventListener('click',()=>{
+      const g=groups.find(x=>x.place.id===btn.dataset.place);
+      if(!g)return;
+      resultsEl.hidden=true;
+      focusPlace(g.place,g.records);
+    }));
+    // Kaart toont alle gevonden plekken
+    const pts=groups.map(g=>[Number(g.place.lat),Number(g.place.lon)]);
+    if(pts.length===1)map.setView(pts[0],Math.max(map.getZoom(),14));
+    else if(map.fitBounds)map.fitBounds(pts,{padding:[60,60],maxZoom:15});
+  };
+  mapEl.addEventListener('pointerdown',()=>{resultsEl.hidden=true;});
+  speciesSearch.addEventListener('focus',()=>{if(filterState.speciesSearch)applyFilters();});
   applyFilters();
+
+  // K5: van een soort of lijst direct naar een plek
+  try{
+    const wanted=sessionStorage.getItem('birdspot-map-place');
+    if(wanted){
+      sessionStorage.removeItem('birdspot-map-place');
+      const g=groupByPlace(geoSightings).find(x=>x.place.id===wanted);
+      if(g){resultsEl.hidden=true;focusPlace(g.place,g.records);}
+    }
+  }catch(_){}
 
   // K2: pin plaatsen met een vaste pin in het midden. Een gewone tik maakt nooit een waarneming.
   const addPinBtn = screenEl.querySelector('#mapAddPinBtn');
@@ -483,6 +538,8 @@ function openPlaceSheet(screenEl, place, visibleRecords, map) {
         '<button type="button" class="place-action place-action--quiet" id="placeRename">Naam wijzigen</button></div>'+
         '<div class="place-rename" id="placeRenameRow" hidden><input type="text" id="placeRenameInput" maxlength="80" value="'+escHtml(place.name)+'" aria-label="Naam van de plek">'+
         '<button type="button" id="placeRenameSave">Bewaar</button></div>')+
+      (st&&st.species.length?'<h4 class="place-h">Soorten hier</h4><div class="place-species">'+st.species.map(sp=>
+        '<button type="button" class="place-species__chip" data-species="'+escHtml(sp.speciesId||'')+'">'+escHtml(sp.name)+' <b>'+sp.count+'×</b></button>').join('')+'</div>':'')+
       '<h4 class="place-h">Waarnemingen</h4><ul class="place-sightings">'+sorted.map(s=>{
         const status=statusForSighting(s);
         return '<li><button type="button" data-sighting="'+escHtml(s.id)+'">'+
@@ -492,6 +549,12 @@ function openPlaceSheet(screenEl, place, visibleRecords, map) {
       }).join('')+'</ul>'+
       (place.loose?'':'<h4 class="place-h">Media bij deze plek</h4><div class="place-media" id="placeMedia"><p class="place-empty">Nog geen foto\'s, video\'s of geluid.</p></div>');
 
+    body.querySelectorAll('[data-species]').forEach(btn=>btn.addEventListener('click',()=>{
+      if(!btn.dataset.species)return;
+      try{sessionStorage.setItem('birdspot-open-species',btn.dataset.species);}catch(_){}
+      closeSheet();
+      import('../../app.js').then(({navigate})=>navigate('species'));
+    }));
     body.querySelectorAll('[data-sighting]').forEach(btn=>btn.addEventListener('click',()=>{
       const s=rows.find(x=>x.id===btn.dataset.sighting);
       if(!s)return;

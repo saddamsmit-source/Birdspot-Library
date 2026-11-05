@@ -9,6 +9,7 @@ import { tabBar, recognitionPanel, statusPanel, wherePanel, minePanel, sightingS
 import { SEASONS, SEASON_ORDER, toggleSeason, seasonPeriod, presentIn, periodMonthsText, isYearRound } from '../../data/seasons.js';
 import { getDB, getPhotosBySpecies, getPhoto } from '../../data/db.js';
 import { getSightings }                 from '../../data/sightings.js';
+import { loadPlaces }                   from '../../data/places.js';
 import { getPhotoUrl, revokePhotoUrl }  from '../../utils/photoUrl.js';
 import { getCollectionIds, toggleCollectionItem } from '../../storage/collections.js';
 
@@ -197,6 +198,11 @@ export function renderSpecies(el) {
 
   renderList(el, seenIds, ctx);
   bindEvents(el, ctx);
+  // K5: vanaf de kaart direct een soort openen
+  try {
+    const open = sessionStorage.getItem('birdspot-open-species');
+    if (open) { sessionStorage.removeItem('birdspot-open-species'); if (SPECIES.some(x => x.id === open)) openDetail(open, el); }
+  } catch (_) {}
 
   // Laad async thumbnails voor "Recent bekeken"
   if (recentIds.length > 0) {
@@ -704,10 +710,15 @@ function openDetail(speciesId, screenEl) {
           hero.replaceChildren(img);
         }
       }
-      const stats=sightingStats(matches);
+      const stats=sightingStats(matches, loadPlaces());
       sheet.querySelector('#sdMineStats').innerHTML=minePanel(stats,fmtDate);
       const where=sheet.querySelector('#sdPanel-waar');
       where.innerHTML=wherePanel(s,stats.places);
+      where.querySelectorAll('[data-place-id]').forEach(btn=>btn.addEventListener('click',()=>{
+        try { sessionStorage.setItem('birdspot-map-place', btn.dataset.placeId); } catch (_) {}
+        close(false);
+        import('../../app.js').then(({navigate})=>navigate('map'));
+      }));
       where.querySelector('#sdShowOnMap')?.addEventListener('click',()=>{
         try { sessionStorage.setItem('birdspot-map-species', s.nameNL); } catch (_) {}
         close(false);

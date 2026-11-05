@@ -186,8 +186,9 @@ export function wherePanel(s, places = []) {
   if (s.distribution) out.push(`<div class="sd-callout">${icon('map')}<p>${esc(s.distribution)}</p></div>`);
   out.push('<h3 class="sd-h">Jouw plekken</h3>');
   if (places.length) {
-    out.push('<ul class="sd-places">' + places.map(p =>
-      `<li>${icon('pin')}<span>${esc(p.name)}</span><b>${p.count}×</b></li>`).join('') + '</ul>');
+    out.push('<ul class="sd-places">' + places.map(p => p.placeId
+      ? `<li><button type="button" class="sd-place-link" data-place-id="${esc(p.placeId)}">${icon('pin')}<span>${esc(p.name)}</span><b>${p.count}×</b></button></li>`
+      : `<li>${icon('pin')}<span>${esc(p.name)}</span><b>${p.count}×</b></li>`).join('') + '</ul>');
     out.push(`<button type="button" class="sd-action" id="sdShowOnMap">${icon('map')}Toon op de kaart</button>`);
   } else {
     out.push('<p class="sd-empty">Nog geen eigen waarnemingen met een plek.</p>');
@@ -195,20 +196,26 @@ export function wherePanel(s, places = []) {
   return out.join('');
 }
 
-/** Samenvatting van eigen waarnemingen (pure functie, testbaar). */
-export function sightingStats(sightings) {
+/** Samenvatting van eigen waarnemingen (pure functie, testbaar).
+ *  K5: plekken komen uit de vaste plekken (placeId); zonder plek telt de ingevulde locatienaam. */
+export function sightingStats(sightings, placeList = []) {
   const dates = sightings.map(x => x.date).filter(Boolean).sort();
+  const known = new Map(placeList.map(p => [p.id, p]));
   const byPlace = new Map();
   for (const x of sightings) {
-    const name = (x.locationName || '').trim();
-    if (name) byPlace.set(name, (byPlace.get(name) || 0) + 1);
+    const place = known.get(x.placeId);
+    const name = place ? place.name : (x.locationName || '').trim();
+    if (!name) continue;
+    const key = place ? 'p:' + place.id : 'n:' + name;
+    const cur = byPlace.get(key) || { name, count: 0, placeId: place ? place.id : null };
+    cur.count++;
+    byPlace.set(key, cur);
   }
   return {
     count: sightings.length,
     first: dates[0] || null,
     last: dates[dates.length - 1] || null,
-    places: [...byPlace.entries()].map(([name, count]) => ({ name, count }))
-      .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name)),
+    places: [...byPlace.values()].sort((a, b) => b.count - a.count || a.name.localeCompare(b.name)),
   };
 }
 
