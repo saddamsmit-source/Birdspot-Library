@@ -61,10 +61,10 @@
   pointer-events:none;z-index:1;
 }
 .bird-map-dot--all {background:#d9b77e;}
-.bird-map-dot--seen {background:#2ebe96;}
-.bird-map-dot--merlin {background:#a784e9;}
-.bird-map-dot--both {background:#dcaf63;}
-.bird-map-dot--heard {background:#57a9d5;}
+.bird-map-dot--seen {background:#2f7de1;}
+.bird-map-dot--merlin {background:#f2c230;}
+.bird-map-dot--both {background:#f07a26;}
+.bird-map-dot--heard {background:#f2c230;}
 .bird-map-dot--unknown {background:#88939b;}
 .bird-map-dropdown {
   appearance:none;-webkit-appearance:none;
@@ -87,29 +87,28 @@
   color:#d7e3d8;
 }
 .map-screen .bird-pin {
-  position:relative;display:grid;place-items:center;
-  width:42px;height:42px;border:3px solid #f8f0df;
-  background:#88939b;border-radius:50%;
-  box-shadow:0 4px 13px rgba(1,20,18,.34),
-    0 0 0 3px rgba(219,185,123,.22);
-  font-size:17px;
+  /* K3: druppelpin; de punt onderaan is de exacte plek */
+  position:relative;width:30px;height:40px;color:#88939b;
+  display:block;background:none;border:0;border-radius:0;box-shadow:none;
+  filter:drop-shadow(0 3px 5px rgba(1,20,18,.4));
+  transition:transform .12s;transform-origin:50% 100%;
 }
-.map-screen .bird-pin--status-seen {background:#2ebe96;}
-.map-screen .bird-pin--status-merlin {background:#a784e9;}
-.map-screen .bird-pin--status-both {background:#dcaf63;}
-.map-screen .bird-pin--status-heard {background:#57a9d5;}
-.map-screen .bird-pin--status-unknown {background:#88939b;}
-.map-screen .bird-pin .bird-pin-icon {font-size:17px;line-height:1;}
-.map-screen .bird-pin .bird-pin-method {
-  display:grid;place-items:center;position:absolute;
-  right:-8px;top:-8px;min-width:23px;height:23px;padding:0 2px;
-  background:#0d2c27;color:#fff6df;
-  border-radius:999px;border:2px solid #f5e9cc;
-  font-size:12px;font-weight:900;line-height:1;
-  box-shadow:0 2px 6px rgba(0,0,0,.23);
+.map-screen .bird-pin svg.bird-pin-shape {position:absolute;inset:0;width:30px;height:40px;}
+.map-screen .bird-pin svg.bird-pin-shape path {fill:currentColor;stroke:#fff;stroke-width:2;}
+.map-screen .bird-pin--status-seen {color:#2f7de1;}
+.map-screen .bird-pin--status-merlin {color:#f2c230;}
+.map-screen .bird-pin--status-both {color:#f07a26;}
+.map-screen .bird-pin--status-heard {color:#f2c230;}
+.map-screen .bird-pin--status-unknown {color:#88939b;}
+.map-screen .bird-pin .bird-pin-glyph {
+  position:absolute;left:5px;top:5px;width:20px;height:20px;
+  display:grid;place-items:center;color:#fff;
 }
-.map-screen .bird-pin--status-both .bird-pin-method {font-size:10px;min-width:27px;}
-.map-screen .bird-pin:hover {transform:scale(1.10);}
+.map-screen .bird-pin--status-heard .bird-pin-glyph,
+.map-screen .bird-pin--status-merlin .bird-pin-glyph {color:#2b2208;}
+.map-screen .bird-pin .bird-pin-glyph svg {width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;}
+.map-screen .bird-pin .bird-pin-glyph b {font:900 12px/1 var(--font-body,system-ui);}
+.map-screen .bird-pin:hover {transform:scale(1.12);}
 .map-screen .bird-cluster-wrapper {
   background:transparent;border:0;
 }

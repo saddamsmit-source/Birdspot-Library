@@ -52,7 +52,14 @@ export function renderMap(el) {
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="18" r="1"/></svg>
         </button>
       </header>
-      <span class="map-toolbar__count" id="mapCount">laden…</span>
+      <div class="map-meta">
+        <span class="map-toolbar__count" id="mapCount">laden…</span>
+        <div class="map-legend" aria-label="Legenda: kleur per waarneming">
+          <span><i class="map-legend__dot map-legend__dot--seen"></i>Gezien</span>
+          <span><i class="map-legend__dot map-legend__dot--heard"></i>Gehoord</span>
+          <span><i class="map-legend__dot map-legend__dot--both"></i>Beide</span>
+        </div>
+      </div>
 
       <section class="bird-map-filters" id="mapFilterPanel" aria-label="Filter vogelwaarnemingen" hidden>
         <div class="bird-map-filter-head">
@@ -547,16 +554,24 @@ function fmtDate(iso) {
   });
 }
 
-function makeBirdIcon(emoji,status,speciesName) {
+// K3: druppelpin in de kleur van gezien/gehoord/beide met een lijnicoon; punt = exacte plek.
+const PIN_GLYPH={
+  seen:'<svg viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="2.6"/></svg>',
+  heard:'<svg viewBox="0 0 24 24"><path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></svg>',
+  merlin:'<svg viewBox="0 0 24 24"><path d="M4 12h2l2-5 3 10 3-12 3 9 2-2h1"/></svg>',
+  both:'<svg viewBox="0 0 24 24"><path d="M1.5 12s3-5 7.5-5 7.5 5 7.5 5-3 5-7.5 5-7.5-5-7.5-5z"/><circle cx="9" cy="12" r="1.8"/><path d="M19 5v9"/><circle cx="20.5" cy="15.5" r="1.6"/></svg>',
+  unknown:'<b>?</b>',
+};
+function makeBirdIcon(_emoji,status,speciesName) {
   const style=MAP_STATUS[status]||MAP_STATUS.unknown;
   const description=escHtml((speciesName||'Vogelwaarneming')+' · '+style.label);
   return window.L.divIcon({
     html:'<div class="bird-pin bird-pin--status-'+status+'" role="img" aria-label="'+description+'">'+
-      '<span class="bird-pin-icon" aria-hidden="true">'+emoji+'</span>'+
-      '<span class="bird-pin-method" aria-hidden="true">'+style.symbol+'</span></div>',
+      '<svg class="bird-pin-shape" viewBox="0 0 30 40" aria-hidden="true"><path d="M15 1.5C7.5 1.5 1.5 7.4 1.5 14.7 1.5 24.6 15 38.5 15 38.5S28.5 24.6 28.5 14.7C28.5 7.4 22.5 1.5 15 1.5z"/></svg>'+
+      '<span class="bird-pin-glyph" aria-hidden="true">'+(PIN_GLYPH[status]||PIN_GLYPH.unknown)+'</span></div>',
     className:'',
-    iconSize:[42,42],
-    iconAnchor:[21,21],
+    iconSize:[30,40],
+    iconAnchor:[15,39],
   });
 }
 

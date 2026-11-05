@@ -215,7 +215,6 @@
 .signature-journal-arrow{font-size:18px;color:#b38c58;}
 /* Explorer overlays are outside Leaflet's managed tiles and never cover its controls. */
 .map-toolbar__count {background:rgba(10,30,22,.72);color:#f4dfb3;border-color:rgba(219,189,136,.3);}
-.map-screen .bird-pin{box-shadow:0 0 0 3px rgba(215,181,123,.18);}
 @media(min-width:700px) {
   .signature-content{padding:32px;}
   .signature-media-grid {grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;}

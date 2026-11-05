@@ -49,13 +49,25 @@
   border-radius: 50%; background: var(--map-gold); box-shadow: 0 0 0 2px #0a2620;
 }
 
-.map-screen .map-toolbar__count {
-  position: absolute; z-index: 455; top: 64px; left: 12px;
-  font-size: 11px; padding: 4px 10px; pointer-events: none;
+.map-screen .map-meta {
+  position: absolute; z-index: 455; top: 64px; left: 12px; right: 12px;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px; pointer-events: none;
 }
+.map-screen .map-toolbar__count { font-size: 11px; padding: 4px 10px; }
+/* K3: legenda — kleur én woord, nooit alleen kleur */
+.map-screen .map-legend {
+  display: flex; gap: 10px; padding: 4px 10px; border-radius: 999px;
+  background: rgba(10, 30, 22, .72); border: 1px solid rgba(219, 189, 136, .3);
+  color: #f4ead6; font: 700 11px var(--font-body, system-ui);
+}
+.map-screen .map-legend span { display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; }
+.map-legend__dot { width: 10px; height: 10px; border-radius: 50%; border: 1.5px solid #fff; }
+.map-legend__dot--seen { background: #2f7de1; }
+.map-legend__dot--heard { background: #f2c230; }
+.map-legend__dot--both { background: #f07a26; }
 
 /* Filterpaneel klapt uit onder de balk; de teller staat dan in het paneel */
-.map-screen:has(#mapFilterPanel:not([hidden])) #mapCount { display: none; }
+.map-screen:has(#mapFilterPanel:not([hidden])) .map-meta { display: none; }
 .map-screen .bird-map-filters {
   top: 64px; left: auto; right: 10px; width: min(330px, calc(100% - 20px));
   padding: 12px 12px 10px; border-radius: 17px;
@@ -98,7 +110,7 @@
 }
 
 .map-screen.is-pinning .map-topbar,
-.map-screen.is-pinning .map-toolbar__count,
+.map-screen.is-pinning .map-meta,
 .map-screen.is-pinning .bird-map-filters { display: none; }
 .map-screen.is-pinning .map-side-controls { bottom: 172px; }
 

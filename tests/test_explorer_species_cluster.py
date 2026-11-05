@@ -166,7 +166,7 @@ def main():
       assert p.locator("#mapCount").inner_text()=="6 van 7 pins"
       assert p.locator(".mock-bird-cluster .bird-cluster-core strong").inner_text()=="6"
       assert all(color in p.locator(".bird-cluster-ring").get_attribute("style")
-                 for color in ["#2EBE96","#A784E9","#DCAF63","#57A9D5","#88939B"])
+                 for color in ["#2F7DE1","#F2C230","#F07A26","#88939B"])
       assert "waarnemingen" in p.locator(".bird-cluster-ring").get_attribute("aria-label")
       p.screenshot(path=str(SHOTS/"bird_map_mixed_cluster_390.png"),animations="disabled")
 

@@ -69,7 +69,7 @@ def main():
             open_map()
             mp = rect(p, "#leafletMap")
             covered = 0
-            for sel in (".map-topbar", "#mapCount", ".map-side-controls", "#mapAddPinBtn"):
+            for sel in (".map-topbar", ".map-meta .map-toolbar__count", ".map-meta .map-legend", ".map-side-controls", "#mapAddPinBtn"):
                 r = rect(p, sel)
                 covered += r["w"] * r["h"]
             share = covered / (mp["w"] * mp["h"])
