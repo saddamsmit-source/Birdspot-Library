@@ -8,6 +8,7 @@ Birdspot Library — Fase I1: soortdata en status
   I1-06  geen paginafouten; screenshots 390 px
   I2-01  alle algemene en vrij algemene regelmatige soorten uit de bron staan in de app
   I3-01  alle schaarse regelmatige soorten en schaarse gasten uit de bron staan in de app
+  I4-01  alle exoten en ontsnapte vogels uit de bron staan in de app
   I2-02  elke soort heeft herkenning, maten, verenkleed, verspreiding en familie
 
 Starten (vanuit repo-root):  python tests/test_species_data.py
@@ -89,6 +90,9 @@ def check_data(species, labels, active):
               or r["status"] == "Schaarse gast"]
     absent = [r["nl"] for r in scarce if r["sci"] not in have]
     assert not absent, f"I3-01 ontbrekende schaarse soorten: {absent}"
+    # I4-01: elke exoot en elke ontsnapte/verwilderde vogel uit de bron staat in de app
+    absent = [r["nl"] for r in SOURCE if r["status"] in ("Exoot", "Ontsnapt") and r["sci"] not in have]
+    assert not absent, f"I4-01 ontbrekende exoten/ontsnapte vogels: {absent}"
     # I2-02: elke soort heeft een volledige basisbeschrijving
     for s in species:
         for key in ("fieldmarks", "distribution", "family"):
@@ -123,7 +127,7 @@ def main():
               return { species: m.SPECIES, labels: Object.keys(m.CATEGORY_LABELS), active: m.activeCategories() };
             }""")
             counts = check_data(data["species"], data["labels"], data["active"])
-            print("I1-01..04, I2-01..02, I3-01 OK —", len(data["species"]), "soorten", counts)
+            print("I1-01..04, I2-01..02, I3-01, I4-01 OK —", len(data["species"]), "soorten", counts)
 
             p.locator('.nav-item[data-route="species"]').click()
             p.locator("#speciesFilters .filter-chip").first.wait_for(timeout=10000)
@@ -138,14 +142,14 @@ def main():
                     arg=ids, timeout=8000)
                 rows = p.eval_on_selector_all("#speciesList .species-row", "els => els.map(e => e.dataset.id)")
                 assert rows and set(rows) <= set(ids), f"I1-05 tab {cat} toont verkeerde soorten"
-                if cat in ("standvogel", "zomergast", "exoot"):
+                if cat in ("standvogel", "zomergast", "exoot", "ontsnapt"):
                     p.screenshot(path=str(SHOTS / f"species_i1_{cat}_390.png"))
             print("I1-05 OK — tabs:", tabs)
 
             assert not errors, f"I1-06 paginafouten: {errors}"
             print("I1-06 OK — geen paginafouten")
             browser.close()
-    print("Fase I1–I3: alle controles geslaagd")
+    print("Fase I1–I4: alle controles geslaagd")
 
 
 if __name__ == "__main__":

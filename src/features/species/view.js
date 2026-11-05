@@ -4,7 +4,7 @@
  * Nieuw: foto-thumbnails, zeldzaamheid-badges, "Recent bekeken" scroll
  */
 
-import { SPECIES, CATEGORY_LABELS, REGIONS, getSeenIds, toggleSeen, searchSpecies, activeCategories } from '../../data/species.js';
+import { SPECIES, CATEGORY_LABELS, REGIONS, getSeenIds, toggleSeen, searchSpecies, activeCategories, CATEGORY_BADGES } from '../../data/species.js';
 import { getDB, getPhotosBySpecies, getPhoto } from '../../data/db.js';
 import { getSightings }                 from '../../data/sightings.js';
 import { getPhotoUrl, revokePhotoUrl }  from '../../utils/photoUrl.js';
@@ -268,7 +268,7 @@ function speciesRow(s, seenIds, favorites = getCollectionIds("species")) {
         <div class="species-row__name">${escHtml(s.nameNL)}</div>
         <div class="species-row__sci">${escHtml(s.nameSci)}</div>
       </div>
-      <span class="species-row__rarity ${rm?.cls || "signature-species-category"}">${rm?.label || CATEGORY_LABELS[s.category] || "Soort"}</span>
+      <span class="species-row__rarity ${rm?.cls || "signature-species-category"}">${rm?.label || CATEGORY_BADGES[s.category] || "Soort"}</span>
       <button class="signature-species-star ${favorites.has(s.id) ? "is-on" : ""}"
         type="button" data-species-fav="${s.id}" aria-pressed="${favorites.has(s.id)}"
         aria-label="${favorites.has(s.id) ? "Verwijder uit favorieten" : "Voeg toe aan favorieten"}: ${escHtml(s.nameNL)}">
@@ -427,7 +427,7 @@ function openDetail(speciesId, screenEl) {
         '<div class="detail-meta">' +
           '<div class="detail-meta__item"><span class="detail-meta__label">Familie</span><span>' + escHtml(s.family) + '</span></div>' +
           '<div class="detail-meta__item"><span class="detail-meta__label">Categorie</span><span>' +
-            escHtml(CATEGORY_LABELS[s.category] || s.category) + '</span></div>' +
+            escHtml(CATEGORY_BADGES[s.category] || s.category) + '</span></div>' +
         '</div>' +
         '<div class="detail-section"><div class="detail-section__label">Leefgebieden</div>' +
           '<div class="detail-regions">' + (s.regions || []).map(r =>
