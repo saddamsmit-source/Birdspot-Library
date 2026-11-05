@@ -30,3 +30,10 @@ statusvelden worden nooit met de hand in `species.js` aangepast.
 - Maanden en frequentie zijn ingedeeld op basis van Sovon-gegevens en veldkennis, niet per soort gemeten.
 - Broedparen per soort ontbreken; de recente Sovon-tabellen waren niet bereikbaar.
 - Status `Onbevestigd` = alleen op Wikipedia, niet op de CSNA-lijst. Deze soorten gaan niet de app in.
+
+## Verenkleed (H2)
+
+`plumage` heeft per soort één schema: `adult_m`, `adult_f`, `juv`, `jaarling`, `breeding` (broedkleed, voorjaar en zomer),
+`winter` (winterkleed) en `eclipse` (eclipskleed van eenden in de zomerrui). Seizoenskleed staat in
+`tools/species/seasonal_plumage.json` en wordt toegepast met `python tools/species/apply_plumage.py` (idempotent).
+Bron: veldgidskennis; teksten zijn kort en bedoeld voor herkenning in het veld.

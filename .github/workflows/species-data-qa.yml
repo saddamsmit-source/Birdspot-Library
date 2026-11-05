@@ -9,6 +9,8 @@ on:
       - "tests/test_species_data.py"
       - "tests/test_season_filter.py"
       - "src/data/seasons.js"
+      - "src/features/map/**"
+      - "tests/test_species_detail.py"
       - "styles/species.css"
       - "tests/fixtures/species_ids_*.json"
       - ".github/workflows/species-data-qa.yml"
@@ -33,6 +35,12 @@ jobs:
         run: python tests/test_species_data.py
       - name: Season filter and 'Alle' tab QA
         run: python tests/test_season_filter.py
+      - name: Plumage script is idempotent
+        run: |
+          python tools/species/apply_plumage.py
+          git diff --exit-code src/data/species.js
+      - name: Species detail tabs QA
+        run: python tests/test_species_detail.py
       - name: Upload screenshot evidence
         if: always()
         uses: actions/upload-artifact@v4

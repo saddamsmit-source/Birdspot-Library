@@ -12,7 +12,7 @@
  *   birdspot-media           — foto's/IDB-exports (permanent)
  */
 
-const APP_VERSION = '1.7.0-species-seasons';
+const APP_VERSION = '1.8.0-species-detail';
 const APP_CACHE   = `birdspot-app-v${APP_VERSION}`;
 const MEDIA_CACHE = 'birdspot-media';
 
@@ -54,6 +54,7 @@ const PRECACHE_URLS = [
   '/src/features/home/ambientBackdrop.js',
   '/src/features/home/specialBirds.js',
   '/src/features/species/view.js',
+  '/src/features/species/detailSections.js',
   '/src/features/sightings/view.js',
   '/src/features/sightings/addSheet.js',
   '/src/features/sightings/evidence.js',

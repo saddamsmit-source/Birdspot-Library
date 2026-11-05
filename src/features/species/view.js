@@ -5,6 +5,7 @@
  */
 
 import { SPECIES, CATEGORY_LABELS, REGIONS, getSeenIds, toggleSeen, searchSpecies, activeCategories, CATEGORY_BADGES } from '../../data/species.js';
+import { tabBar, recognitionPanel, statusPanel, wherePanel, minePanel, sightingStats } from './detailSections.js';
 import { SEASONS, SEASON_ORDER, toggleSeason, seasonPeriod, presentIn, periodMonthsText, isYearRound } from '../../data/seasons.js';
 import { getDB, getPhotosBySpecies, getPhoto } from '../../data/db.js';
 import { getSightings }                 from '../../data/sightings.js';
@@ -493,30 +494,36 @@ function openDetail(speciesId, screenEl) {
             '<button type="button" data-species-observe="merlin">♫ Merlin Sound ID</button>' +
           '</div>' +
         '</section>' +
-        '<div class="detail-meta">' +
-          '<div class="detail-meta__item"><span class="detail-meta__label">Familie</span><span>' + escHtml(s.family) + '</span></div>' +
-          '<div class="detail-meta__item"><span class="detail-meta__label">Categorie</span><span>' +
-            escHtml(CATEGORY_BADGES[s.category] || s.category) + '</span></div>' +
-        '</div>' +
-        '<div class="detail-section"><div class="detail-section__label">Leefgebieden</div>' +
-          '<div class="detail-regions">' + (s.regions || []).map(r =>
-            '<span class="region-tag">' + escHtml(regionTagLabel(r)) + '</span>').join('') + '</div></div>' +
-        '<div class="detail-section"><div class="detail-section__label">Herkenning</div>' +
-          '<p class="detail-fieldmarks">' + escHtml(s.fieldmarks || 'Geen veldkenmerken beschikbaar.') + '</p></div>' +
-        '<div class="detail-section"><div class="detail-section__label">Eigen vogelfoto’s</div>' +
+        '<div class="detail-section sd-photos"><div class="detail-section__label">Eigen vogelfoto’s</div>' +
           '<div class="signature-species-photo-grid" id="speciesDetailPhotos">' +
             '<div class="detail-photos-loading"><span class="spinner" aria-hidden="true"></span></div></div>' +
           '<button type="button" class="signature-species-media-link" id="speciesDetailMedia">Open Media Studio ↗</button>' +
         '</div>' +
-        '<div class="detail-section"><div class="detail-section__label">Jouw waarnemingen</div>' +
+        tabBar('herkenning') +
+        '<div class="sd-panel" id="sdPanel-herkenning" role="tabpanel" aria-labelledby="sdTab-herkenning">' + recognitionPanel(s) + '</div>' +
+        '<div class="sd-panel" id="sdPanel-status" role="tabpanel" aria-labelledby="sdTab-status" hidden>' + statusPanel(s) + '</div>' +
+        '<div class="sd-panel" id="sdPanel-waar" role="tabpanel" aria-labelledby="sdTab-waar" hidden>' + wherePanel(s, []) + '</div>' +
+        '<div class="sd-panel" id="sdPanel-mijn" role="tabpanel" aria-labelledby="sdTab-mijn" hidden>' +
+          '<div id="sdMineStats"></div>' +
           '<div id="speciesDetailSightings" class="detail-sightings-list">' +
-            '<div class="detail-photos-loading"><span class="spinner" aria-hidden="true"></span></div></div></div>' +
+            '<div class="detail-photos-loading"><span class="spinner" aria-hidden="true"></span></div></div>' +
+        '</div>' +
       '</div></div>';
 
   document.body.appendChild(sheet);
   const panel = sheet.querySelector('.sheet');
   requestAnimationFrame(() => { if (!closed) sheet.classList.add('open'); });
   const seenBtn = sheet.querySelector('#speciesDetailSeen');
+  sheet.querySelector('.sd-tabs')?.addEventListener('click', e => {
+    const tab = e.target.closest('[data-sd-tab]');
+    if (!tab) return;
+    sheet.querySelectorAll('[data-sd-tab]').forEach(b => {
+      const on = b === tab;
+      b.classList.toggle('is-active', on);
+      b.setAttribute('aria-selected', String(on));
+      sheet.querySelector('#sdPanel-' + b.dataset.sdTab).hidden = !on;
+    });
+  });
   const favBtn = sheet.querySelector('#speciesDetailFavorite');
 
   function updateActions() {
@@ -691,6 +698,15 @@ function openDetail(speciesId, screenEl) {
           hero.replaceChildren(img);
         }
       }
+      const stats=sightingStats(matches);
+      sheet.querySelector('#sdMineStats').innerHTML=minePanel(stats,fmtDate);
+      const where=sheet.querySelector('#sdPanel-waar');
+      where.innerHTML=wherePanel(s,stats.places);
+      where.querySelector('#sdShowOnMap')?.addEventListener('click',()=>{
+        try { sessionStorage.setItem('birdspot-map-species', s.nameNL); } catch (_) {}
+        close(false);
+        import('../../app.js').then(({navigate})=>navigate('map'));
+      });
       const rows=sheet.querySelector('#speciesDetailSightings');
       if(!matches.length) rows.innerHTML='<div class="signature-species-empty-photo">Nog geen waarnemingen vastgelegd voor deze soort.</div>';
       else {

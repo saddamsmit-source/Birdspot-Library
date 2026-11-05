@@ -259,6 +259,11 @@ function initMap(screenEl, sightings, leafletOk = true) {
       : total+' '+(total===1?'waarneming met pin':'waarnemingen met pin');
     updateMapMarkers(matches);
   }
+  // Voorinvulling vanuit soortdetail ("Toon op de kaart"); eenmalig.
+  try {
+    const preset=sessionStorage.getItem('birdspot-map-species');
+    if(preset){ sessionStorage.removeItem('birdspot-map-species'); speciesSearch.value=preset; filterState.speciesSearch=preset; }
+  } catch(_) {}
   speciesSearch.addEventListener('input',e=>{
     filterState.speciesSearch=e.target.value.trim();applyFilters();
   });
