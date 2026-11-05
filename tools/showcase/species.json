@@ -117,12 +117,16 @@
      "latin": "Falco vespertinus",
      "pose": "vlucht",
      "queries": [
-      "\"Falco vespertinus\" male flight",
-      "\"Red-footed falcon\" flight"
+      "Rotfußfalke Männchen",
+      "\"Falco vespertinus\" male",
+      "Faucon kobez mâle",
+      "\"Red-footed falcon\" male"
      ],
      "aliases": [
       "Red-footed falcon",
-      "Red-footed Falcon"
+      "Red-footed Falcon",
+      "Rotfußfalke",
+      "Faucon kobez"
      ]
     }
    ]
@@ -248,13 +252,17 @@
      "latin": "Pernis apivorus",
      "pose": "vlucht",
      "queries": [
-      "\"Pernis apivorus\" flight",
+      "Wespenbussard Flug",
+      "\"Pernis apivorus\" adult flight",
+      "Bondrée apivore vol",
       "\"European honey buzzard\" flight"
      ],
      "aliases": [
       "European honey buzzard",
       "Honey buzzard",
-      "European Honey Buzzard"
+      "European Honey Buzzard",
+      "Wespenbussard",
+      "Bondrée apivore"
      ]
     }
    ]
