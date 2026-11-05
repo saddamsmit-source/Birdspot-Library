@@ -80,19 +80,35 @@
      ]
     },
     {
-     "id": "sp272",
-     "nl": "Waterrietzanger",
-     "latin": "Acrocephalus paludicola",
+     "id": "sp273",
+     "nl": "Krekelzanger",
+     "latin": "Locustella fluviatilis",
      "pose": "tak",
      "queries": [
-      "\"Acrocephalus paludicola\"",
-      "\"Aquatic warbler\"",
-      "Seggenrohrsänger"
+      "\"Locustella fluviatilis\" singing",
+      "\"River warbler\"",
+      "Schlagschwirl"
      ],
      "aliases": [
-      "Aquatic warbler",
-      "Aquatic Warbler",
-      "Seggenrohrsänger"
+      "River warbler",
+      "River Warbler",
+      "Schlagschwirl"
+     ]
+    },
+    {
+     "id": "sp201",
+     "nl": "Porseleinhoen",
+     "latin": "Porzana porzana",
+     "pose": "natuurlijk",
+     "queries": [
+      "\"Porzana porzana\"",
+      "\"Spotted crake\"",
+      "Tüpfelsumpfhuhn"
+     ],
+     "aliases": [
+      "Spotted crake",
+      "Spotted Crake",
+      "Tüpfelsumpfhuhn"
      ]
     }
    ]
