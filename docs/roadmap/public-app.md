@@ -3,7 +3,7 @@
 Status: voorstel / gedeeltelijk voorbereid, 2026-11-05. Eigenaar vraagt gefaseerde uitvoering en preview na iedere wijziging. Kaart blijft bij Claude (PR #34). Basis: main 5bf67043.
 
 ## Geleverde wijziging
-CAP-BIRD-007: alleen videofilter verlaagd van brightness(.76) naar brightness(.62). Tekst en kaarten blijven op eigen lagen. Geen nieuw Artlist-bestand of credits nodig. Motivatie: achtergrond te dominant volgens eigenaar. Hergebruik: dim het media-element, niet de complete container met bediening. Bronvideo blijft extern; dit maakt video niet offline.
+Historie: CAP-BIRD-007 werd verlaagd van brightness(.76) naar brightness(.62), maar eigenaar wees dit af als te donker. Actuele preview: filter verwijderd, overlay sterk verminderd; zie docs/GARDEN_PHOTO_VIDEO_REVIEW.md. Tekst en kaarten blijven op eigen lagen. Geen nieuw Artlist-bestand of credits nodig. Motivatie: achtergrond te dominant volgens eigenaar. Hergebruik: dim het media-element, niet de complete container met bediening. Bronvideo blijft extern; dit maakt video niet offline.
 
 ## Geplande functies (nog niet gebouwd)
 1. CAP-BIRD-045: eigen waarneming publiceren naar waarneming.nl. Officiële API-documentatie https://waarneming.nl/api/docs/ gaf bij deze controle 403; contract en clienttoegang niet geverifieerd. PR #34 beschrijft benodigde goedkeuring. Communityclient is geen toestemming of officieel contract. Eerst toegang, auth-flow/scopes en testomgeving bevestigen. Daarna soort-ID-mapping, expliciete verzendactie, media, validatie, retry zonder duplicaten, ontvangst-ID/link, ontkoppelen. Geen wachtwoorden of client secrets in frontend. Offline lokaal bewaren, later expliciet verzenden. CSV is geen bewezen importintegratie.
@@ -18,3 +18,6 @@ Video-preview → fotobatch met soortlijst → profiel/feedback en backendkeuze 
 
 ## Bewijsgrenzen
 CSS-diff gecontroleerd; browsercontrole en CI worden in de PR vastgelegd. Document is geen app-PASS. Toesteltest blijft bij eigenaar. Overige genoemde functies zijn gepland, geen gebouwde capabilities.
+
+## Eigenaarupdate 05-11-2026
+Eerste batch van tien tuin-/zangvogels toegevoegd; zes nieuwe lokale foto’s en vier showcasebeelden hergebruikt. Waarneming.nl-aanvraag voorbereid in docs/research/waarneming-access-request.md. Push en openbare publicatie expliciet uitgesteld.

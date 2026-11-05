@@ -13,6 +13,8 @@ import { loadPlaces }                   from '../../data/places.js';
 import { getPhotoUrl, revokePhotoUrl }  from '../../utils/photoUrl.js';
 import { getCollectionIds, toggleCollectionItem } from '../../storage/collections.js';
 
+import { GUIDE_PHOTOS } from './guidePhotos.js';
+
 let _currentCategory = 'standvogel';
 let _seasons = [];
 let _hideYearRound = false;  // optie bij seizoensfilter: (bijna) jaarrondvogels verbergen            // max. twee aangrenzende seizoenen (zie data/seasons.js)
@@ -54,6 +56,7 @@ function txGet(store, key) {
 // Geeft een objectURL string terug (of null). De AANROEPER is verantwoordelijk
 // voor het intrekken van de URL via revokePhotoUrl() na gebruik.
 async function loadSpeciesThumb(speciesId) {
+  if (GUIDE_PHOTOS[speciesId]) return GUIDE_PHOTOS[speciesId].image;
   try {
     // The species IDB index covers recent records.
     const photos = await getPhotosBySpecies(speciesId);
@@ -78,10 +81,14 @@ function mountSpeciesThumb(container, url, ctx) {
   const img = document.createElement('img');
   img.alt = '';
   img.loading = 'lazy';
+  if (url.startsWith('/assets/')) {
+    container.classList.add('species-guide-thumb');
+    img.classList.add('species-guide-photo');
+  }
   ctx?.urls?.add(url);
   const release = () => { revokePhotoUrl(url); ctx?.urls?.delete(url); };
   img.addEventListener('load',release,{once:true});
-  img.addEventListener('error',release,{once:true});
+  img.addEventListener('error',()=>{ release(); img.remove(); container.textContent='Foto niet beschikbaar'; },{once:true});
   img.src = url;
   container.replaceChildren(img);
 }
@@ -462,6 +469,7 @@ function openDetail(speciesId, screenEl) {
   ctx?.detailCleanup?.();
   _detailSpeciesId = speciesId;
 
+  const guidePhoto = GUIDE_PHOTOS[speciesId];
   const photosUrls = new Set();
   const photoList = [];
   let closed = false;
@@ -478,9 +486,10 @@ function openDetail(speciesId, screenEl) {
         '<button type="button" class="signature-species-detail-close" aria-label="Sluit soortdetail">×</button>' +
       '</div>' +
       '<div class="sheet__content">' +
-        '<div class="signature-species-detail-hero">' +
+        '<div class="signature-species-detail-hero' + (guidePhoto ? ' has-guide-photo' : '') + '">' +
           '<div id="detailThumb-' + escHtml(s.id) + '" class="signature-species-detail-image">' +
-            '<span aria-hidden="true">' + escHtml(s.icon) + '</span></div>' +
+            (guidePhoto ? '<img class="species-guide-photo" data-src="' + escHtml(guidePhoto.image) + '" alt="' + escHtml(guidePhoto.alt) + '">' : '<span aria-hidden="true">' + escHtml(s.icon) + '</span>') + '</div>' +
+          (guidePhoto ? '<p class="species-guide-credit">Gidsfoto · ' + escHtml(guidePhoto.author) + ' · <a href="' + escHtml(guidePhoto.licenseUrl) + '" target="_blank" rel="noopener noreferrer">' + escHtml(guidePhoto.license) + '</a> · <a href="' + escHtml(guidePhoto.source) + '" target="_blank" rel="noopener noreferrer">Bronvermelding</a><br>Verkleind; ongewijzigde uitsnede.</p>' : '') +
           '<div class="signature-species-detail-intro"><span class="signature-eyebrow">' + escHtml(s.family) + '</span>' +
             '<h2>' + escHtml(s.nameNL) + '</h2>' +
             '<p><em>' + escHtml(s.nameSci) + '</em></p>' +
@@ -516,6 +525,13 @@ function openDetail(speciesId, screenEl) {
         '</div>' +
       '</div></div>';
 
+  const guideImage = sheet.querySelector('img.species-guide-photo');
+  if (guideImage) {
+    guideImage.addEventListener('error', () => {
+      guideImage.parentElement.textContent = 'Gidsfoto niet beschikbaar';
+    }, {once:true});
+    guideImage.src = guideImage.dataset.src;
+  }
   document.body.appendChild(sheet);
   const panel = sheet.querySelector('.sheet');
   requestAnimationFrame(() => { if (!closed) sheet.classList.add('open'); });
@@ -703,7 +719,7 @@ function openDetail(speciesId, screenEl) {
         });
         gallery.querySelector('.detail-photos-loading')?.remove();
         const hero=sheet.querySelector('#detailThumb-'+speciesId);
-        if(hero && photoList[0]) {
+        if(hero && photoList[0] && !guidePhoto) {
           const img=document.createElement('img');
           img.alt='';
           img.src=photoList[0].url;

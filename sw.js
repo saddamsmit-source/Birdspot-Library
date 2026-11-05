@@ -55,6 +55,7 @@ const PRECACHE_URLS = [
   '/src/features/home/specialBirds.js',
   '/src/features/home/showcaseData.js',
   '/src/features/species/view.js',
+  '/src/features/species/guidePhotos.js',
   '/src/features/species/detailSections.js',
   '/src/features/sightings/view.js',
   '/src/features/sightings/addSheet.js',
@@ -108,6 +109,7 @@ self.addEventListener('install', event => {
       );
       // Diashowfoto's (F): eenmalig in de media-cache, die releases overleeft (L-052)
       await precacheShowcase();
+      await precacheGuidePhotos();
       const failed = results.filter(r => r.status === 'rejected');
       if (failed.length) {
         console.warn(`[SW] ${failed.length} precache-verzoeken overgeslagen`);
@@ -117,6 +119,16 @@ self.addEventListener('install', event => {
   // Activeer direct (geen wachten op bestaande clients)
   self.skipWaiting();
 });
+
+async function precacheGuidePhotos() {
+  try {
+    const media = await caches.open(MEDIA_CACHE);
+    const credits = await (await fetch('/assets/species/credits.json', {cache:'no-cache'})).json();
+    await Promise.allSettled(Object.values(credits).map(async photo => {
+      if (!(await media.match(photo.image))) await media.add(photo.image);
+    }));
+  } catch (err) { console.warn('[SW] gidsfoto’s niet vooraf geladen', err?.message); }
+}
 
 async function precacheShowcase() {
   try {
