@@ -1,14 +1,14 @@
 {
  "_uitleg": "Diashow-selectie: 11 groepen x 2 bijzondere Nederlandse soorten. pose stuurt de fotokeuze: vlucht (grote vogels/roofvogels), tak (kleine vogels), natuurlijk (reigers, steltlopers in hun leefgebied).",
  "groups": [
-  ["zang", "Zangvogels", [["sp113","Wielewaal","Oriolus oriolus","tak"], ["sp262","Grauwe Klauwier","Lanius collurio","tak"]]],
+  ["zang", "Zangvogels", [["sp113","Wielewaal","Oriolus oriolus","tak",["\"Oriolus oriolus\" male","\"Eurasian golden oriole\" male","Pirol Männchen"]], ["sp262","Grauwe Klauwier","Lanius collurio","tak"]]],
   ["riet", "Rietvogels", [["sp268","Baardman","Panurus biarmicus","tak"], ["sp108","Grote Karekiet","Acrocephalus arundinaceus","tak"]]],
   ["valk", "Valken", [["sp009","Slechtvalk","Falco peregrinus","vlucht"], ["sp261","Boomvalk","Falco subbuteo","vlucht"]]],
   ["arend", "Arenden", [["sp252","Zeearend","Haliaeetus albicilla","vlucht"], ["sp247","Visarend","Pandion haliaetus","vlucht"]]],
   ["reiger", "Reigers", [["sp084","Purperreiger","Ardea purpurea","natuurlijk"], ["sp243","Roerdomp","Botaurus stellaris","natuurlijk"]]],
   ["stelt", "Steltlopers", [["sp143","Kluut","Recurvirostra avosetta","natuurlijk"], ["sp101","Grutto","Limosa limosa","natuurlijk"]]],
   ["meeuw", "Meeuwen en sterns", [["sp225","Zwartkopmeeuw","Ichthyaetus melanocephalus","vlucht"], ["sp163","Dwergmeeuw","Hydrocoloeus minutus","vlucht"]]],
-  ["uil", "Uilen", [["sp255","Velduil","Asio flammeus","vlucht"], ["sp254","Oehoe","Bubo bubo","natuurlijk"]]],
+  ["uil", "Uilen", [["sp255","Velduil","Asio flammeus","vlucht"], ["sp254","Oehoe","Bubo bubo","natuurlijk",["\"Bubo bubo\" wild","\"Eurasian eagle-owl\" wild","Uhu Bubo bubo Felsen"]]]],
   ["specht", "Spechten", [["sp018","Zwarte Specht","Dryocopus martius","tak"], ["sp020","Middelste Bonte Specht","Dendrocoptes medius","tak"]]],
   ["kiekendief", "Kiekendieven en wouwen", [["sp010","Rode Wouw","Milvus milvus","vlucht"], ["sp173","Bruine Kiekendief","Circus aeruginosus","vlucht"]]],
   ["kleur", "Kleurrijke gasten", [["sp075","IJsvogel","Alcedo atthis","tak"], ["sp257","Bijeneter","Merops apiaster","tak"]]]
