@@ -1,0 +1,14 @@
+name: tile-check
+on:
+  push:
+    branches: ['feat/k1-map-layout']
+    paths: ['.github/workflows/tile-check.yml']
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          for u in "Actueel_orthoHR/EPSG:3857/7/66/42" "Actueel_orthoHR/EPSG:3857/07/66/42" "Actueel_orthoHR/EPSG:3857/19/269000/172000" "Actueel_ortho25/EPSG:3857/7/66/42" "Actueel_orthoHR/EPSG:3857/21/1076000/688000"; do
+            r=$(curl -s -o /tmp/t -w "%{http_code} %{content_type} %{size_download}" "https://service.pdok.nl/hwh/luchtfotorgb/wmts/v1_0/$u.jpeg")
+            echo "::notice title=tile::$u -> $r"
+          done
