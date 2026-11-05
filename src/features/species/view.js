@@ -5,14 +5,15 @@
  */
 
 import { SPECIES, CATEGORY_LABELS, REGIONS, getSeenIds, toggleSeen, searchSpecies, activeCategories, CATEGORY_BADGES } from '../../data/species.js';
-import { SEASONS, SEASON_ORDER, toggleSeason, seasonPeriod, presentIn, periodMonthsText } from '../../data/seasons.js';
+import { SEASONS, SEASON_ORDER, toggleSeason, seasonPeriod, presentIn, periodMonthsText, isYearRound } from '../../data/seasons.js';
 import { getDB, getPhotosBySpecies, getPhoto } from '../../data/db.js';
 import { getSightings }                 from '../../data/sightings.js';
 import { getPhotoUrl, revokePhotoUrl }  from '../../utils/photoUrl.js';
 import { getCollectionIds, toggleCollectionItem } from '../../storage/collections.js';
 
 let _currentCategory = 'standvogel';
-let _seasons = [];            // max. twee aangrenzende seizoenen (zie data/seasons.js)
+let _seasons = [];
+let _hideYearRound = false;  // optie bij seizoensfilter: (bijna) jaarrondvogels verbergen            // max. twee aangrenzende seizoenen (zie data/seasons.js)
 const ALL = 'alle';           // categorie-tab voor alle soorten
 let _searchQuery     = '';
 let _currentRegion   = null;
@@ -163,6 +164,10 @@ export function renderSpecies(el) {
             data-season="${key}" aria-pressed="${_seasons.includes(key)}">
             ${SEASONS[key].label}
           </button>`).join('')}
+        <button class="filter-chip filter-chip--seizoen filter-chip--jaarrond${_hideYearRound ? ' active' : ''}"
+          id="seasonHideYearRound" aria-pressed="${_hideYearRound}" ${_seasons.length ? '' : 'hidden'}>
+          Zonder jaarrondvogels
+        </button>
       </div>
       <p class="species-season-hint" id="seasonHint" aria-live="polite"></p>
     </div>
@@ -224,11 +229,12 @@ function renderList(el, seenIds, ctx = _speciesCtx) {
   const period = seasonPeriod(_seasons);
   const results = searchSpecies(_searchQuery, _currentCategory === ALL ? null : _currentCategory, _currentRegion)
     .filter(species => !_onlyFavorites || favorites.has(species.id))
-    .filter(species => presentIn(species, period));
+    .filter(species => presentIn(species, period))
+    .filter(species => !(period && _hideYearRound && isYearRound(species)));
   const generation = ctx ? ++ctx.listGeneration : 0;
   const list    = el.querySelector('#speciesList');
   if (!list) return;
-  const key = [_currentCategory, _searchQuery, _currentRegion, _onlyFavorites, _seasons.join('+')].join('|');
+  const key = [_currentCategory, _searchQuery, _currentRegion, _onlyFavorites, _seasons.join('+'), _hideYearRound].join('|');
   if (key !== _listKey) { _listKey = key; _listLimit = LIST_PAGE; }
 
   // Update sub-header teller
@@ -239,6 +245,7 @@ function renderList(el, seenIds, ctx = _speciesCtx) {
     hint.hidden = !period;
     hint.textContent = period
       ? `${period.label}: ${periodMonthsText(period)} · ${results.length} ${results.length === 1 ? 'soort' : 'soorten'}`
+        + (_hideYearRound ? ' · zonder jaarrondvogels' : '')
         + (_seasons.length === 1 ? ' · tik een buurseizoen aan voor de overgang' : '')
       : '';
   }
@@ -364,8 +371,17 @@ function bindEvents(el, ctx = _speciesCtx) {
   el.querySelector('#seizoenFilters')?.addEventListener('click', e => {
     const btn = e.target.closest('.filter-chip--seizoen');
     if (!btn) return;
+    if (btn.id === 'seasonHideYearRound') {
+      _hideYearRound = !_hideYearRound;
+      btn.classList.toggle('active', _hideYearRound);
+      btn.setAttribute('aria-pressed', String(_hideYearRound));
+      renderList(el);
+      return;
+    }
     _seasons = toggleSeason(_seasons, btn.dataset.season);
-    el.querySelectorAll('.filter-chip--seizoen').forEach(b => {
+    const yr = el.querySelector('#seasonHideYearRound');
+    if (yr) yr.hidden = _seasons.length === 0;
+    el.querySelectorAll('.filter-chip--seizoen[data-season]').forEach(b => {
       const on = _seasons.includes(b.dataset.season);
       b.classList.toggle('active', on);
       b.setAttribute('aria-pressed', String(on));

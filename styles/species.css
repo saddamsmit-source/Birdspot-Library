@@ -630,3 +630,5 @@
   font-size: var(--fs-meta);
   color: var(--ink-2);
 }
+.filter-chip--jaarrond { border-style: dashed; }
+.filter-chip--jaarrond.active { border-style: solid; }

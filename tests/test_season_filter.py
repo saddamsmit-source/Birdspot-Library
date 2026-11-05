@@ -5,6 +5,7 @@ Birdspot Library — Fase I6: tab 'Alle' en seizoensfilter
   I6-03  overgangsperiodes: winter–lente = feb+mrt, herfst–winter = nov+dec
   I6-04  UI: tab 'Alle' + seizoen(en) tonen precies de soorten die in die periode voorkomen
          (onafhankelijk nagerekend in Python), teller en uitleg kloppen
+  I6-06  optie 'Zonder jaarrondvogels' (>= 10 maanden) verbergt die soorten en is weer uit te zetten
   I6-05  geen paginafouten; screenshot 390 px
 
 Starten (vanuit repo-root):  python tests/test_season_filter.py
@@ -99,6 +100,7 @@ def main():
             assert tabs[0] == "alle", f"I6-04 eerste tab {tabs[0]}"
             assert p.locator('#speciesFilters .filter-chip.active').get_attribute("data-cat") == "standvogel"
             p.locator('#speciesFilters .filter-chip[data-cat="alle"]').click()
+            assert p.locator("#seasonHideYearRound").is_hidden(), "I6-06 optie zichtbaar zonder seizoen"
             assert f"/{len(species)} soorten gezien" in p.locator("#speciesSub").inner_text()
 
             def check(clicks, months, label):
@@ -115,6 +117,20 @@ def main():
                 print(f"I6-04 OK — {label.rstrip(':')} {len(exp)} soorten")
 
             check(["winter"], SEASON["winter"], "Winter:")
+            # I6-06: optie "Zonder jaarrondvogels" (>= 10 maanden aanwezig) aan en weer uit
+            winter = expected(SEASON["winter"])
+            yearround = {s["id"] for s in species if len(months_of(s["months"])) >= 10}
+            p.locator("#seasonHideYearRound").click()
+            p.wait_for_function("() => document.querySelector('#seasonHint').textContent.includes('zonder jaarrondvogels')", timeout=8000)
+            if p.locator("#speciesShowAll").count():
+                p.locator("#speciesShowAll").click()
+            rows = set(p.eval_on_selector_all("#speciesList .species-row", "els => els.map(e => e.dataset.id)"))
+            assert rows == winter - yearround and rows, f"I6-06 {len(rows)} vs {len(winter - yearround)}"
+            assert f"· {len(winter - yearround)} soorten" in p.locator("#seasonHint").inner_text()
+            p.screenshot(path=str(SHOTS / "species_i6_no_yearround_390.png"))
+            p.locator("#seasonHideYearRound").click()
+            p.wait_for_function("(n) => document.querySelector('#seasonHint').textContent.includes('· ' + n + ' soorten')", arg=len(winter), timeout=8000)
+            print(f"I6-06 OK — winter zonder jaarrondvogels: {len(winter - yearround)} van {len(winter)}, optie weer uit")
             check(["lente"], [1, 2], "Winter–lente:")
             p.screenshot(path=str(SHOTS / "species_i6_season_390.png"))
             check(["zomer"], SEASON["zomer"], "Zomer:")

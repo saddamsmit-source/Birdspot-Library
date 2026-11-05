@@ -81,3 +81,9 @@ export function periodMonthsText(period) {
   const names = period.months.map(m => MONTH_NAMES[m]);
   return names.length > 1 ? names.slice(0, -1).join(', ') + ' en ' + names[names.length - 1] : names[0];
 }
+
+/** (Bijna) jaarrond aanwezig: minstens 10 van de 12 maanden. Voor de optie "Zonder jaarrondvogels". */
+export const YEAR_ROUND_MIN_MONTHS = 10;
+export function isYearRound(species) {
+  return monthSet(species.months).size >= YEAR_ROUND_MIN_MONTHS;
+}
