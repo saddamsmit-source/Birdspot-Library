@@ -22,44 +22,6 @@
   height: 100%;
 }
 
-/* ── Toolbar (zweeft bovenop kaart) ─────────────────────── */
-.map-toolbar {
-  position:      absolute;
-  top:           0;
-  left:          0;
-  right:         0;
-  z-index:       400;
-  display:       flex;
-  align-items:   center;
-  justify-content: space-between;
-  padding:       var(--space-12) var(--space-16);
-  background:    linear-gradient(to bottom,
-                   rgba(247,250,248,.97) 60%,
-                   rgba(247,250,248,0));
-  pointer-events: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .map-toolbar {
-    background: linear-gradient(to bottom,
-                  rgba(12,30,19,.97) 60%,
-                  rgba(12,30,19,0));
-  }
-}
-:root[data-theme="dark"] .map-toolbar {
-  background: linear-gradient(to bottom,
-                rgba(12,30,19,.97) 60%,
-                rgba(12,30,19,0));
-}
-
-.map-toolbar__title {
-  font-family: var(--font-display);
-  font-size:   20px;
-  font-weight: 700;
-  color:       var(--ink);
-  pointer-events: auto;
-}
-
 .map-toolbar__count {
   font-size:    var(--fs-meta);
   font-weight:  600;

@@ -104,7 +104,7 @@ def main():
 
             page.locator('.nav-item[data-route="map"]').click()
             page.locator("#explorerSightingsBtn").wait_for(timeout=10000)
-            assert "Bird Explorer Map" in page.locator(".signature-explorer-strip").inner_text()
+            assert page.locator(".map-topbar #explorerSightingsBtn").count() == 1  # K1: lijstknop in de kaartbalk
             page.screenshot(path=str(SHOTS / "signature_map_390.png"), full_page=True)
             rect = page.locator("#explorerSightingsBtn").bounding_box()
             assert rect is not None and rect["y"] >= 0 and rect["y"] + rect["height"] < 844 - 64, f"Explorer CTA outside viewport: {rect}"

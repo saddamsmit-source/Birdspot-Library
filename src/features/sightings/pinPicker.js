@@ -1,12 +1,14 @@
 /**
- * Personal pin picker: tap the map or enter numeric coordinates.
- * Offline fallback works without Leaflet. Never requests GPS permission.
+ * Pinkiezer (K2): vaste pin in het midden; schuif en zoom de kaart eronder.
+ * Coördinaten handmatig invullen blijft mogelijk (ook offline, zonder Leaflet).
+ * Vraagt nooit zelf om GPS.
  */
 import { ensureLeaflet } from '../map/view.js';
+import { centerPinMarkup, attachBaseLayers, pinAccuracyM, accuracyLabel, MAX_PIN_ACCURACY_M, LAYERS } from '../map/centerPin.js';
 
 const valid=(a,b)=>Number.isFinite(a)&&a>=-90&&a<=90&&Number.isFinite(b)&&b>=-180&&b<=180;
 export function openPinPicker({lat=null,lon=null,onConfirm=()=>{}}={}) {
-  let destroyed=false,map=null,marker=null;
+  let destroyed=false,map=null,accuracyM=null,typed=false;
   let chosenLat=lat===null?null:Number(lat),chosenLon=lon===null?null:Number(lon);
   const previousFocus=document.activeElement;
   const host=document.createElement('div');
@@ -16,9 +18,11 @@ export function openPinPicker({lat=null,lon=null,onConfirm=()=>{}}={}) {
     '<div class="manual-pin-sheet" role="dialog" aria-modal="true" aria-label="Pin een vogelwaarneming">'+
       '<header class="manual-pin-header"><div><span class="signature-kicker">BIRDSPOT / BIRD EXPLORER</span>'+
         '<h2>Pin je waarneming</h2>'+
-        '<p>Tik op de kaart of vul coördinaten in. GPS is niet verplicht.</p></div>'+
+        '<p>Schuif en zoom de kaart tot de pin goed staat, of vul coördinaten in.</p></div>'+
         '<button id="pinCancel" type="button" aria-label="Sluit kaartkiezer">×</button></header>'+
-      '<div id="pinLocationMap" class="manual-pin-map" aria-label="Interactieve kaart waarop je een vogelwaarneming kunt pinnen"></div>'+
+      '<div class="manual-pin-mapwrap"><div id="pinLocationMap" class="manual-pin-map" aria-label="Kaart; de pin in het midden is de gekozen plek"></div>'+
+        centerPinMarkup('pinCenterPin')+
+        '<button type="button" class="map-icon-btn map-layer-btn manual-pin-layer" id="pinLayerBtn" aria-pressed="false"><span id="pinLayerLabel">Luchtfoto</span></button></div>'+
       '<p id="pinMapStatus" class="manual-pin-status" role="status">Kaart wordt geladen…</p>'+
       '<div class="manual-pin-coords">'+
         '<label>Breedtegraad<input id="pinLat" type="number" step="any" min="-90" max="90" inputmode="decimal" placeholder="bijv. 51.59"></label>'+
@@ -33,14 +37,20 @@ export function openPinPicker({lat=null,lon=null,onConfirm=()=>{}}={}) {
   function place(a,b,fromMap=false){
     const ok=valid(a,b);
     chosenLat=ok?a:null;chosenLon=ok?b:null;
-    confirm.disabled=!ok;
     if(fromMap&&ok){inputLat.value=String(a.toFixed(6));inputLon.value=String(b.toFixed(6));}
-    if(ok&&map&&window.L){
-      if(!marker){
-        marker=window.L.marker([a,b],{draggable:true}).addTo(map);
-        marker.on('dragend',()=>{const p=marker.getLatLng();place(p.lat,p.lng,true);});
-      }else marker.setLatLng([a,b]);
-    }else if(!ok&&marker){marker.remove();marker=null;}
+    const precise=!map||accuracyM===null||accuracyM<=MAX_PIN_ACCURACY_M;
+    confirm.disabled=!(ok&&precise);
+  }
+  // Kaart beweegt → pinpunt (kaartmidden) wordt de gekozen plek
+  function fromCenter(){
+    if(!map)return;
+    const c=map.getCenter();
+    accuracyM=pinAccuracyM(c.lat,map.getZoom());
+    typed=false;
+    place(c.lat,c.lng,true);
+    status.textContent=accuracyM<=MAX_PIN_ACCURACY_M
+      ? 'Pin op '+accuracyLabel(accuracyM)+'. Schuif tot hij precies goed staat.'
+      : 'Zoom verder in om nauwkeurig te pinnen ('+accuracyLabel(accuracyM)+').';
   }
   const initialValid=valid(chosenLat,chosenLon);
   if(initialValid){inputLat.value=String(chosenLat);inputLon.value=String(chosenLon);}
@@ -48,8 +58,10 @@ export function openPinPicker({lat=null,lon=null,onConfirm=()=>{}}={}) {
   const onInputs=()=>{
     const a=inputLat.value.trim()===''?NaN:Number(inputLat.value);
     const b=inputLon.value.trim()===''?NaN:Number(inputLon.value);
+    typed=true;accuracyM=null;
     place(a,b);
-    status.textContent=valid(a,b)?'Pin gereed':'Vul geldige coördinaten in, of tik op de kaart.';
+    if(valid(a,b)&&map){map.off('move',fromCenter);map.setView([a,b],Math.max(map.getZoom(),16));map.on('move',fromCenter);}
+    status.textContent=valid(a,b)?'Pin gereed':'Vul geldige coördinaten in, of schuif de kaart onder de pin.';
   };
   inputLat.addEventListener('input',onInputs);inputLon.addEventListener('input',onInputs);
   const onKey=e=>{if(e.key==='Escape')close();};
@@ -58,7 +70,7 @@ export function openPinPicker({lat=null,lon=null,onConfirm=()=>{}}={}) {
     destroyed=true;
     document.removeEventListener('keydown',onKey);
     try{map?.remove();}catch(_){}
-    map=null;marker=null;host.remove();previousFocus?.focus?.();
+    map=null;host.remove();previousFocus?.focus?.();
   }
   document.addEventListener('keydown',onKey);
   host.querySelector('.manual-pin-backdrop').addEventListener('click',close);
@@ -69,7 +81,7 @@ export function openPinPicker({lat=null,lon=null,onConfirm=()=>{}}={}) {
   });
   confirm.addEventListener('click',()=>{
     if(!valid(chosenLat,chosenLon))return;
-    const coords={lat:chosenLat,lon:chosenLon};
+    const coords={lat:chosenLat,lon:chosenLon,accuracyM:typed?null:accuracyM};
     close();onConfirm(coords);
   });
   (async()=>{
@@ -80,13 +92,17 @@ export function openPinPicker({lat=null,lon=null,onConfirm=()=>{}}={}) {
       ]);
       if(destroyed)return;
       const center=initialValid?[chosenLat,chosenLon]:[51.85,5.25];
-      map=window.L.map(host.querySelector('#pinLocationMap'),{center,zoom:initialValid?13:8});
-      window.L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
-        maxZoom:19,attribution:'© OpenStreetMap'
-      }).addTo(map);
-      map.on('click',e=>{place(e.latlng.lat,e.latlng.lng,true);status.textContent='Pin geselecteerd. Controleer de plek en bevestig.';});
-      if(initialValid)place(chosenLat,chosenLon);
-      status.textContent='Tik op de plek waar je de vogel hebt gezien of gehoord.';
+      map=window.L.map(host.querySelector('#pinLocationMap'),{center,zoom:initialValid?17:8,maxZoom:21,zoomControl:false});
+      const layerBtn=host.querySelector('#pinLayerBtn');
+      const toggle=attachBaseLayers(map,window.L,current=>{
+        layerBtn.setAttribute('aria-pressed',String(current==='luchtfoto'));
+        host.querySelector('#pinLayerLabel').textContent=current==='luchtfoto'?LAYERS.kaart.label:LAYERS.luchtfoto.label;
+      });
+      layerBtn.addEventListener('click',()=>toggle());
+      host.querySelector('#pinCenterPin').hidden=false;
+      map.on('move',fromCenter);map.on('zoomend',fromCenter);
+      if(!initialValid){accuracyM=pinAccuracyM(center[0],8);place(NaN,NaN);status.textContent='Zoom in en schuif de kaart tot de pin op de plek van de vogel staat.';}
+      else fromCenter();
       setTimeout(()=>{if(!destroyed)map?.invalidateSize();},100);
     }catch(_){
       if(!destroyed)status.textContent='Kaart niet beschikbaar. Coördinaten handmatig invullen werkt ook offline.';

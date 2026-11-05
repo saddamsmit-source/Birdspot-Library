@@ -133,25 +133,9 @@
   font-variant-numeric:tabular-nums;
 }
 .map-screen .bird-cluster-wrapper[title] {cursor:pointer;}
-.map-screen .map-pin-instruction:not([hidden]) {top:130px;}
-.map-screen .map-pin-instruction:not([hidden]) ~ .bird-map-filters {
-  opacity:.20;pointer-events:none;
-}
-/* When searching, keep all map coordinates visible — not a full-height drawer. */
-.map-screen.has-active-filters .signature-explorer-strip {
-  opacity:.75;
-  transition:opacity .2s;
-}
-@media(min-width:650px) {
-  .bird-map-filters {top:137px;left:24px;width:348px;padding:13px;}
-}
 @media(max-width:380px) {
-  .bird-map-filters {top:123px;left:9px;width:calc(100% - 18px);padding:10px 10px 8px;border-radius:15px;}
   .bird-map-dropdown {font-size:12px;}
-  .map-add-pin-btn {top:69px;left:9px;}
-  .map-screen .map-pin-instruction:not([hidden]){top:122px;}
 }
 @media(prefers-reduced-motion:reduce){
   .map-screen .bird-pin,.map-screen .bird-cluster-ring{transition:none!important;}
-  .map-screen.has-active-filters .signature-explorer-strip{transition:none!important;}
 }

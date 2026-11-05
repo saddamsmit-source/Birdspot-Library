@@ -17,6 +17,7 @@ import { openPinPicker } from '../sightings/pinPicker.js';
 import { methodLabel, sourceLabel, validPin } from '../sightings/evidence.js';
 import { MAP_STATUS, MAP_ORDER, statusForSighting, filteredSightings, statusCounts, statusCountLabel, clusterGradient } from './visualization.js';
 import { escHtml } from '../../utils/html.js';
+import { centerPinMarkup, attachBaseLayers, pinAccuracyM, accuracyLabel, coordLabel, MAX_PIN_ACCURACY_M, LAYERS } from './centerPin.js';
 
 // Leaflet + MarkerCluster worden lazy geladen via <script> tags die we
 // eenmalig in de <head> injecteren zodra de kaart-view voor het eerst
@@ -35,29 +36,29 @@ export function renderMap(el) {
     <div class="map-screen signature-map-loading" id="mapScreen">
       <div id="leafletMap"></div>
 
-      <div class="map-toolbar">
-        <span class="map-toolbar__title">Kaart</span>
-        <span class="map-toolbar__count" id="mapCount">laden…</span>
-      </div>
+      <!-- K1: één smalle balk; de kaart krijgt de rest van het scherm -->
+      <header class="map-topbar">
+        <label class="map-search" for="mapSpeciesSearch">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+          <input type="search" id="mapSpeciesSearch" list="mapSpeciesSuggestions"
+            placeholder="Zoek soort op de kaart" autocomplete="off" aria-describedby="mapFilterFeedback">
+        </label>
+        <datalist id="mapSpeciesSuggestions"></datalist>
+        <button type="button" class="map-icon-btn" id="mapFilterBtn" aria-label="Filters" aria-expanded="false" aria-controls="mapFilterPanel">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg>
+          <span class="map-filter-dot" id="mapFilterDot" hidden></span>
+        </button>
+        <button type="button" class="map-icon-btn" id="explorerSightingsBtn" aria-label="Mijn waarnemingen als lijst">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="18" r="1"/></svg>
+        </button>
+      </header>
+      <span class="map-toolbar__count" id="mapCount">laden…</span>
 
-      <button class="map-locate-btn" id="mapLocateBtn" aria-label="Centreer op mijn locatie">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <circle cx="12" cy="12" r="3"/>
-          <path d="M12 2v3M12 19v3M2 12h3M19 12h3"/>
-        </svg>
-      </button>
-
-      <button class="map-add-pin-btn" id="mapAddPinBtn" type="button" aria-pressed="false">+ Pin waarneming</button>
-      <div class="map-pin-instruction" id="mapPinInstruction" hidden>⌖ Tik op een vrije plek op de kaart om een waarneming vast te leggen.</div>
-      <section class="bird-map-filters" aria-label="Zoek en filter vogelwaarnemingen">
+      <section class="bird-map-filters" id="mapFilterPanel" aria-label="Filter vogelwaarnemingen" hidden>
         <div class="bird-map-filter-head">
-          <label for="mapSpeciesSearch">Zoek vogelsoort</label>
+          <label class="bird-map-dropdown-label" for="mapStatusSelect">Gezien of gehoord</label>
           <button type="button" id="mapClearFilters" hidden>Wis filters</button>
         </div>
-        <input type="search" id="mapSpeciesSearch" list="mapSpeciesSuggestions"
-          placeholder="Bijv. Koolmees" autocomplete="off" aria-describedby="mapFilterFeedback">
-        <datalist id="mapSpeciesSuggestions"></datalist>
-        <label class="bird-map-dropdown-label" for="mapStatusSelect">Filter waarnemingen</label>
         <div class="bird-map-dropdown-wrap">
           <span id="mapStatusIndicator" class="bird-map-dropdown-dot bird-map-dot--all" aria-hidden="true"></span>
           <select id="mapStatusSelect" class="bird-map-dropdown"
@@ -70,13 +71,29 @@ export function renderMap(el) {
         </div>
         <p class="bird-map-filter-feedback" id="mapFilterFeedback" role="status" aria-live="polite">Alle waarnemingen met een pin</p>
       </section>
-      <!-- Signature Explorer card: deliberately separate from Leaflet controls -->
-      <aside class="signature-explorer-strip" aria-label="Bird Explorer overzicht">
-        <span class="signature-kicker">EXPEDITION / DISCOVER</span>
-        <h2>Bird Explorer Map</h2>
-        <p>Ontdek jouw eigen vogelplekken. Tik op een marker voor een waarneming of open je volledige logboek.</p>
-        <button class="signature-explorer-open" id="explorerSightingsBtn" type="button">Mijn waarnemingen bekijken <span aria-hidden="true">↗</span></button>
-      </aside>
+
+      <div class="map-side-controls">
+        <button type="button" class="map-icon-btn map-layer-btn" id="mapLayerBtn" aria-label="Wissel kaart en luchtfoto" aria-pressed="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></svg>
+          <span id="mapLayerLabel">Luchtfoto</span>
+        </button>
+        <button type="button" class="map-icon-btn map-locate-btn" id="mapLocateBtn" aria-label="Centreer op mijn locatie">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>
+        </button>
+      </div>
+
+      <button class="map-add-pin-btn" id="mapAddPinBtn" type="button" aria-pressed="false">+ Pin waarneming</button>
+
+      <!-- K2: vaste pin in het midden; schuif en zoom de kaart eronder -->
+      ${centerPinMarkup()}
+      <div class="map-pin-panel" id="mapPinPanel" role="region" aria-label="Pin plaatsen" hidden>
+        <p class="map-pin-panel__hint" id="mapPinHint">Schuif en zoom de kaart tot de pin op de juiste plek staat.</p>
+        <p class="map-pin-panel__coords"><span id="mapPinCoords">—</span> <b id="mapPinAccuracy"></b></p>
+        <div class="map-pin-panel__actions">
+          <button type="button" class="map-pin-cancel" id="mapPinCancel">Annuleer</button>
+          <button type="button" class="map-pin-confirm" id="mapPinConfirm" disabled>Plaats hier</button>
+        </div>
+      </div>
 
       <div class="sheet-overlay" id="mapOverlay"></div>
 
@@ -235,6 +252,8 @@ function initMap(screenEl, sightings, leafletOk = true) {
     const filtered=(filterState.status!=='all'||!!filterState.speciesSearch);
     screenEl.querySelector('#mapScreen')?.classList.toggle('has-active-filters',filtered);
     clearFilters.hidden=!filtered;
+    const dotEl=screenEl.querySelector('#mapFilterDot');
+    if(dotEl)dotEl.hidden=filterState.status==='all';
     // One native dropdown avoids horizontal overflow on narrow phones.
     // Counts are recalculated from the currently searched species, not from
     // unrelated observations or records without pins.
@@ -277,6 +296,13 @@ function initMap(screenEl, sightings, leafletOk = true) {
   });
   applyFilters();
 
+  // Filterpaneel opent onder de balk en sluit bij tik op de kaart
+  const filterBtn=screenEl.querySelector('#mapFilterBtn');
+  const filterPanel=screenEl.querySelector('#mapFilterPanel');
+  const setFilterOpen=open=>{filterPanel.hidden=!open;filterBtn.setAttribute('aria-expanded',String(open));};
+  filterBtn.addEventListener('click',()=>setFilterOpen(filterPanel.hidden));
+  mapEl.addEventListener('pointerdown',()=>setFilterOpen(false));
+
   // Lege state — altijd tonen als er geen GPS-waarnemingen zijn
   if (!geoSightings.length) showNoGpsState(screenEl);
 
@@ -309,23 +335,24 @@ function initMap(screenEl, sightings, leafletOk = true) {
   const map = window.L.map(mapEl, {
     center,
     zoom,
-    zoomControl:        false,
+    maxZoom:            21,
+    zoomControl:        false,   // knijpen/scrollen; geen knoppen die de kaart bedekken (K1)
     attributionControl: false,
   });
   _mapInstance = map;
 
-  // Tiles
-  window.L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom:     19,
-    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-  }).addTo(map);
+  // Kaart of luchtfoto (PDOK), keuze wordt onthouden
+  const layerBtn = screenEl.querySelector('#mapLayerBtn');
+  const toggleLayer = attachBaseLayers(map, window.L, current => {
+    layerBtn?.setAttribute('aria-pressed', String(current === 'luchtfoto'));
+    const label = screenEl.querySelector('#mapLayerLabel');
+    if (label) label.textContent = current === 'luchtfoto' ? LAYERS.kaart.label : LAYERS.luchtfoto.label;
+  });
+  layerBtn?.addEventListener('click', () => toggleLayer());
 
   // Attributie rechtsonder (compact)
   window.L.control.attribution({ position: 'bottomright', prefix: false })
     .addTo(map);
-
-  // Zoom-knoppen rechtsboven
-  window.L.control.zoom({ position: 'topright' }).addTo(map);
 
   // Cluster laag
   _clusterLayer = window.L.markerClusterGroup({
@@ -358,38 +385,48 @@ function initMap(screenEl, sightings, leafletOk = true) {
   };
   applyFilters();
 
-  // Explicit map-pin mode: do not create accidental sightings on normal taps.
+  // K2: pin plaatsen met een vaste pin in het midden. Een gewone tik maakt nooit een waarneming.
   const addPinBtn = screenEl.querySelector('#mapAddPinBtn');
-  const pinInstruction = screenEl.querySelector('#mapPinInstruction');
+  const pinPanel = screenEl.querySelector('#mapPinPanel');
+  const centerPin = screenEl.querySelector('#mapCenterPin');
+  const pinCoords = screenEl.querySelector('#mapPinCoords');
+  const pinAcc = screenEl.querySelector('#mapPinAccuracy');
+  const pinHint = screenEl.querySelector('#mapPinHint');
+  const pinConfirm = screenEl.querySelector('#mapPinConfirm');
   let placing = false;
-  const stopPlacing = () => {
-    placing=false;
-    addPinBtn?.setAttribute('aria-pressed','false');
-    addPinBtn?.classList.remove('is-active');
-    if(addPinBtn)addPinBtn.textContent="+ Pin waarneming";
-    if(pinInstruction)pinInstruction.hidden=true;
-    mapEl.classList.remove("is-pinning");
+  const updatePin = () => {
+    if (!placing) return;
+    const c = map.getCenter();
+    const acc = pinAccuracyM(c.lat, map.getZoom());
+    const ok = acc <= MAX_PIN_ACCURACY_M;
+    pinCoords.textContent = coordLabel(c.lat, c.lng);
+    pinAcc.textContent = accuracyLabel(acc);
+    pinAcc.classList.toggle('is-ok', ok);
+    pinConfirm.disabled = !ok;
+    pinHint.textContent = ok
+      ? 'Schuif en zoom tot de pin precies goed staat.'
+      : 'Zoom verder in om nauwkeurig te pinnen.';
   };
-  const startObservation = (lat,lon) => {
-    if(!validPin(lat,lon))return;
-    stopPlacing();
-    openAddSheet({initial:{lat:Number(lat),lon:Number(lon)},
-      onSaved:()=>import("../../app.js").then(({navigate})=>navigate("map",{force:true}))});
+  const setPlacing = on => {
+    placing = on;
+    screenEl.querySelector('#mapScreen')?.classList.toggle('is-pinning', on);
+    centerPin.hidden = !on;
+    pinPanel.hidden = !on;
+    addPinBtn.hidden = on;
+    addPinBtn.setAttribute('aria-pressed', String(on));
+    if (on) { screenEl.querySelector('#mapFilterPanel').hidden = true; updatePin(); }
   };
-  addPinBtn?.addEventListener("click",()=>{
-    if(!leafletOk || !map){
-      openPinPicker({onConfirm:coords=>startObservation(coords.lat,coords.lon)});
-      return;
-    }
-    placing=!placing;
-    addPinBtn.setAttribute('aria-pressed',String(placing));
-    addPinBtn.classList.toggle('is-active',placing);
-    addPinBtn.textContent=placing?"Annuleer pin": "+ Pin waarneming";
-    pinInstruction.hidden=!placing;
-    mapEl.classList.toggle("is-pinning",placing);
-  });
-  if(map)map.on("click",event=>{
-    if(placing)startObservation(event.latlng.lat,event.latlng.lng);
+  map.on('move', updatePin);
+  map.on('zoomend', updatePin);
+  addPinBtn?.addEventListener('click', () => setPlacing(true));
+  screenEl.querySelector('#mapPinCancel')?.addEventListener('click', () => setPlacing(false));
+  pinConfirm?.addEventListener('click', () => {
+    const c = map.getCenter();
+    const acc = pinAccuracyM(c.lat, map.getZoom());
+    if (!validPin(c.lat, c.lng) || acc > MAX_PIN_ACCURACY_M) return;
+    setPlacing(false);
+    openAddSheet({ initial: { lat: c.lat, lon: c.lng, pinAccuracyM: acc },
+      onSaved: () => import('../../app.js').then(({ navigate }) => navigate('map', { force: true })) });
   });
   // Locatie-knop koppelen
   if (locBtn) {
@@ -473,7 +510,7 @@ function centerOnUser(map, btn) {
   navigator.geolocation.getCurrentPosition(
     pos => {
       btn.classList.remove('map-locate-btn--loading');
-      map.flyTo([pos.coords.latitude, pos.coords.longitude], 12, { duration: 1 });
+      map.flyTo([pos.coords.latitude, pos.coords.longitude], 17, { duration: 1 });
     },
     () => btn.classList.remove('map-locate-btn--loading'),
     { timeout: 10000, maximumAge: 60000 },
@@ -491,8 +528,8 @@ function showNoGpsState(screenEl) {
       <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
       <circle cx="12" cy="10" r="3"/>
     </svg>
-    <p>Geen waarnemingen met GPS gevonden.<br>
-    Tik op + Pin waarneming of kies een pin in het invoerformulier.</p>`;
+    <p>Nog geen waarnemingen met een pin.<br>
+    Tik op <b>+ Pin waarneming</b> en schuif de kaart onder de pin.</p>`;
   mapEl.appendChild(notice);
 }
 

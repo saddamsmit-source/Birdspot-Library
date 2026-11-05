@@ -12,7 +12,7 @@
  *   birdspot-media           — foto's/IDB-exports (permanent)
  */
 
-const APP_VERSION = '1.10.1-showcase-50';
+const APP_VERSION = '1.11.0-map-k1k2';
 const APP_CACHE   = `birdspot-app-v${APP_VERSION}`;
 const MEDIA_CACHE = 'birdspot-media';
 
@@ -41,6 +41,7 @@ const PRECACHE_URLS = [
   '/styles/startup-splash.css',
   '/styles/mobile-field-editorial.css',
   '/styles/cinematic-wetland.css',
+  '/styles/map-explorer.css',
   '/assets/birdspot-ijsvogel-splash.avif',
 
   // JS — app root
@@ -62,6 +63,7 @@ const PRECACHE_URLS = [
   '/src/features/sightings/editSheet.js',
   '/src/features/sightings/detailSheet.js',
   '/src/features/map/view.js',
+  '/src/features/map/centerPin.js',
   '/src/features/map/visualization.js',
   '/src/features/profile/view.js',
   '/src/features/media/view.js',

@@ -214,28 +214,11 @@
 .signature-journal-copy small,.signature-journal-copy em {font-size:12px;color:var(--muted);font-style:normal;line-height:1.4;}
 .signature-journal-arrow{font-size:18px;color:#b38c58;}
 /* Explorer overlays are outside Leaflet's managed tiles and never cover its controls. */
-.signature-explorer-strip {position:absolute;z-index:380;left:14px;right:14px;bottom:16px;
-  padding:16px 17px;border-radius:20px;background:linear-gradient(126deg,rgba(10,37,29,.94),rgba(18,68,55,.91));
-  color:#f5eedc;backdrop-filter:blur(14px);border:1px solid rgba(219,189,136,.31);
-  box-shadow:0 12px 35px rgba(8,25,20,.3);pointer-events:auto;}
-.signature-explorer-strip .signature-kicker {font-size:9px;}
-.signature-explorer-strip h2 {font-family:var(--font-display);font-size:22px;margin:6px 0;}
-.signature-explorer-strip p {font-size:12px;line-height:1.5;color:#d3dfd0;max-width:310px;}
-.signature-explorer-open {display:inline-flex;align-items:center;gap:6px;color:#f3d7a4;
-  font-weight:700;font-size:12px;margin-top:12px;padding:7px 0;}
-.map-toolbar {background:linear-gradient(180deg,rgba(10,29,22,.94),rgba(10,29,22,.10));
-  border-radius:0 0 15px 15px;padding-top:16px;}
-.map-toolbar__title {color:#f7f2e3;font-family:var(--font-display);font-size:23px;}
 .map-toolbar__count {background:rgba(10,30,22,.72);color:#f4dfb3;border-color:rgba(219,189,136,.3);}
-:root[data-theme="dark"] .map-toolbar {background:linear-gradient(180deg,rgba(10,29,22,.94),rgba(10,29,22,.10));}
-@media(prefers-color-scheme:dark) {
-  :root:not([data-theme="light"]) .map-toolbar {background:linear-gradient(180deg,rgba(10,29,22,.94),rgba(10,29,22,.10));}
-}
 .map-screen .bird-pin{box-shadow:0 0 0 3px rgba(215,181,123,.18);}
 @media(min-width:700px) {
   .signature-content{padding:32px;}
   .signature-media-grid {grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;}
-  .signature-explorer-strip {left:26px;right:auto;width:340px;bottom:28px;}
 }
 @media(max-width:359px) {
   .signature-home-links{grid-template-columns:1fr;}

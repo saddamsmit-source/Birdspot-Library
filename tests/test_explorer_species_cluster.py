@@ -59,22 +59,28 @@ LEAFLET_STUB=r"""(() => {
   }
   window.L={
     map:(el,opts)=>{
-      const map={el,zoom:opts.zoom,options:opts,events:{},layer:null,
+      const c=opts.center||[52,5];
+      const map={el,zoom:opts.zoom,options:opts,events:{},layer:null,center:{lat:c[0],lng:c[1]},
         remove(){for(const node of el.querySelectorAll('.mock-bird-marker'))node.remove();runtime.map=null},
         addLayer(layer){this.layer=layer;layer._map=this;redraw(layer);return this},
-        on(type,cb){this.events[type]=cb;return this},
-        panTo(){return this},flyTo(){return this},
-        invalidateSize(){return this},setZoom(z){this.zoom=z;redraw(this.layer);return this}
+        on(type,cb){(this.events[type]=this.events[type]||[]).push(cb);return this},
+        off(type,cb){this.events[type]=(this.events[type]||[]).filter(f=>f!==cb);return this},
+        fire(type){for(const f of (this.events[type]||[]))f({});return this},
+        getCenter(){return {...this.center}},getZoom(){return this.zoom},
+        setView(ll,z){this.center={lat:ll[0],lng:ll[1]};if(z!==undefined)this.zoom=z;if(this.layer)redraw(this.layer);this.fire('move');this.fire('zoomend');return this},
+        panTo(ll){if(Array.isArray(ll))this.center={lat:ll[0],lng:ll[1]};this.fire('move');return this},
+        flyTo(ll,z){return this.setView(ll,z)},
+        invalidateSize(){return this},setZoom(z){this.zoom=z;if(this.layer)redraw(this.layer);this.fire('move');this.fire('zoomend');return this}
       };
       runtime.map=map;
       return map;
     },
-    tileLayer:()=>({addTo(){return this}}),
+    tileLayer:(url)=>({url,addTo(){(runtime.tiles=runtime.tiles||[]).push(url);return this},remove(){runtime.tiles=(runtime.tiles||[]).filter(u=>u!==url);return this}}),
     control:{
       attribution:()=>({addTo(){return this}}),
       zoom:()=>({addTo(){return this}})
     },
-    marker:(coords,options)=>({coords,options,events:{},on(type,cb){this.events[type]=cb;return this}}),
+    marker:(coords,options)=>({coords,options,events:{},on(type,cb){this.events[type]=cb;return this},addTo(){return this},remove(){return this}}),
     divIcon:options=>options,
     markerClusterGroup:options=>({
       options,markers:[],_map:null,
@@ -147,6 +153,10 @@ def main():
 
       p.locator('.nav-item[data-route="map"]').click()
       p.locator("#mapSpeciesSearch").wait_for(timeout=10000)
+      # K1: filters zitten in een uitklappaneel achter de filterknop
+      assert p.locator("#mapFilterPanel").is_hidden()
+      p.locator("#mapFilterBtn").click()
+      assert p.locator("#mapFilterPanel").is_visible()
       assert p.locator("#mapStatusSelect").count()==1
       assert p.locator(".bird-map-filter-scroll").count()==0
       assert p.locator("#mapStatusSelect").input_value()=="all"
@@ -205,6 +215,7 @@ def main():
       assert p.evaluate("() => JSON.parse(localStorage.getItem('birdspot-sightings')).sightings.length")==7
       for width in (360,390,430):
         p.set_viewport_size({"width":width,"height":844})
+        if p.locator("#mapFilterPanel").is_hidden(): p.locator("#mapFilterBtn").click()
         assert p.locator("#mapSpeciesSearch").is_visible()
         assert p.locator("#mapStatusSelect").is_visible()
         assert p.evaluate("""() => {

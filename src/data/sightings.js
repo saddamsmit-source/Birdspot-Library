@@ -21,6 +21,7 @@
  *   certainty:    'certain' | 'probable' | 'possible'  (default 'certain')
  *   lat:          number | null
  *   lon:          number | null
+ *   pinAccuracyM: number | null  (K2, optioneel: nauwkeurigheid van de pin in meters; ontbreekt = onbekend)
  *   locationName: string | null
  *   habitat:      string | null  (bijv. 'forest', 'wetland', …)
  *   behavior:     string | null  (bijv. 'feeding', 'singing', …)

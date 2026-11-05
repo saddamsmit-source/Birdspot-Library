@@ -51,6 +51,8 @@ jobs:
           git diff --exit-code src/features/home/showcaseData.js
       - name: Showcase slideshow QA
         run: python tests/test_showcase.py
+      - name: Map K1/K2 QA (layout, center pin)
+        run: python tests/test_map_k1k2.py
       - name: Profile and backup QA
         run: python tests/test_profile_backup.py
       - name: Upload screenshot evidence
