@@ -114,6 +114,12 @@ def main():
         p.set_viewport_size({"width":width,"height":844})
         dialog=p.locator('#addSightingSheet .sheet')
         assert dialog.is_visible()
+        # Wait until the open/resize transition has settled before measuring.
+        p.wait_for_function("""() => new Promise(r => {
+          const el=document.querySelector('#addSightingSheet .sheet'); let last=null, same=0;
+          const tick=()=>{const b=el.getBoundingClientRect(); const k=b.top+'|'+b.height;
+            same = k===last ? same+1 : 0; last=k; same>=3 ? r(true) : requestAnimationFrame(tick);};
+          tick(); })""", timeout=5000)
         bounds=dialog.bounding_box()
         assert bounds['x']>=-1 and bounds['x']+bounds['width']<=width+1,(width,bounds)
         assert bounds['y']>=-1 and bounds['y']+bounds['height']<=845,(width,bounds)

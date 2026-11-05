@@ -200,6 +200,12 @@ export function renderSpecies(el) {
 }
 
 // ── Render lijst ───────────────────────────────────────────────
+// Lange lijsten (bijv. 243 dwaalgasten) bouwen eerst LIST_PAGE rijen op;
+// de rest pas na "Toon alle" (render wat nodig is, Handbook §3.9 / L-053).
+const LIST_PAGE = 60;
+let _listLimit = LIST_PAGE;
+let _listKey = '';
+
 function renderList(el, seenIds, ctx = _speciesCtx) {
   seenIds = seenIds || getSeenIds();
   const favorites = getCollectionIds("species");
@@ -208,6 +214,8 @@ function renderList(el, seenIds, ctx = _speciesCtx) {
   const generation = ctx ? ++ctx.listGeneration : 0;
   const list    = el.querySelector('#speciesList');
   if (!list) return;
+  const key = [_currentCategory, _searchQuery, _currentRegion, _onlyFavorites].join('|');
+  if (key !== _listKey) { _listKey = key; _listLimit = LIST_PAGE; }
 
   // Update sub-header teller
   const total = SPECIES.filter(s => s.category === _currentCategory).length;
@@ -232,8 +240,10 @@ function renderList(el, seenIds, ctx = _speciesCtx) {
   }
 
   // Groepeer op familie
+  const shown = results.slice(0, _listLimit);
+  const hidden = results.length - shown.length;
   const byFamily = {};
-  results.forEach(s => {
+  shown.forEach(s => {
     if (!byFamily[s.family]) byFamily[s.family] = [];
     byFamily[s.family].push(s);
   });
@@ -242,10 +252,14 @@ function renderList(el, seenIds, ctx = _speciesCtx) {
     <div class="species-group">
       <div class="species-group__label">${escHtml(family)}</div>
       ${birds.map(s => speciesRow(s, seenIds, favorites)).join('')}
-    </div>`).join('');
+    </div>`).join('') + (hidden > 0 ? `
+    <button type="button" class="species-show-all" id="speciesShowAll">Toon alle ${results.length} soorten (+${hidden})</button>` : '');
 
-  // Laad async thumbnails per rij
-  results.forEach(async s => {
+  const more = list.querySelector('#speciesShowAll');
+  if (more) more.addEventListener('click', () => { _listLimit = Infinity; renderList(el, seenIds, ctx); });
+
+  // Laad async thumbnails per zichtbare rij
+  shown.forEach(async s => {
     const url = await loadSpeciesThumb(s.id);
     if (!url) return;
     if (ctx?.destroyed || (ctx && generation !== ctx.listGeneration)) { revokePhotoUrl(url); return; }

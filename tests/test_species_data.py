@@ -9,7 +9,11 @@ Birdspot Library — Fase I1: soortdata en status
   I2-01  alle algemene en vrij algemene regelmatige soorten uit de bron staan in de app
   I3-01  alle schaarse regelmatige soorten en schaarse gasten uit de bron staan in de app
   I4-01  alle exoten en ontsnapte vogels uit de bron staan in de app
-  I2-02  elke soort heeft herkenning, maten, verenkleed, verspreiding en familie
+  I5-01  alle dwaalgasten en historische soorten uit de bron staan in de app (compact)
+  I5-02  onbevestigde soorten staan niet in de app
+  I5-04  lange lijsten tonen eerst een deel en de rest na 'Toon alle'
+  I5-03  compacte records alleen voor dwaalgasten/historisch, met kerntekst
+  I2-02  elke (niet-compacte) soort heeft herkenning, maten, verenkleed, verspreiding en familie
 
 Starten (vanuit repo-root):  python tests/test_species_data.py
 """
@@ -93,8 +97,18 @@ def check_data(species, labels, active):
     # I4-01: elke exoot en elke ontsnapte/verwilderde vogel uit de bron staat in de app
     absent = [r["nl"] for r in SOURCE if r["status"] in ("Exoot", "Ontsnapt") and r["sci"] not in have]
     assert not absent, f"I4-01 ontbrekende exoten/ontsnapte vogels: {absent}"
+    # I5-01: elke dwaalgast en historische soort staat in de app (compact record)
+    absent = [r["nl"] for r in SOURCE if r["status"] in ("Dwaalgast", "Historisch") and r["sci"] not in have]
+    assert not absent, f"I5-01 ontbrekende dwaalgasten/historische soorten: {absent}"
+    # I5-02: onbevestigde soorten (niet op de CSNA-lijst) staan NIET in de app
+    wrong = [r["nl"] for r in SOURCE if r["status"] == "Onbevestigd" and r["sci"] in have]
+    assert not wrong, f"I5-02 onbevestigde soorten in de app: {wrong}"
     # I2-02: elke soort heeft een volledige basisbeschrijving
     for s in species:
+        if s.get("compact"):
+            assert s["category"] in ("dwaalgast", "historisch"), f"I5-03 compact record buiten dwaalgasten: {s['nameNL']}"
+            assert s.get("fieldmarks") and s.get("distribution") and s.get("family"), f"I5-03 {s['nameNL']} onvolledig"
+            continue
         for key in ("fieldmarks", "distribution", "family"):
             assert s.get(key), f"I2-02 {s['nameNL']} mist {key}"
         assert all(s["size"].get(k) for k in ("length", "wingspan", "weight")), f"I2-02 {s['nameNL']} maten"
@@ -127,7 +141,7 @@ def main():
               return { species: m.SPECIES, labels: Object.keys(m.CATEGORY_LABELS), active: m.activeCategories() };
             }""")
             counts = check_data(data["species"], data["labels"], data["active"])
-            print("I1-01..04, I2-01..02, I3-01, I4-01 OK —", len(data["species"]), "soorten", counts)
+            print("I1-01..04, I2-01..02, I3-01, I4-01, I5-01..03 OK —", len(data["species"]), "soorten", counts)
 
             p.locator('.nav-item[data-route="species"]').click()
             p.locator("#speciesFilters .filter-chip").first.wait_for(timeout=10000)
@@ -142,14 +156,27 @@ def main():
                     arg=ids, timeout=8000)
                 rows = p.eval_on_selector_all("#speciesList .species-row", "els => els.map(e => e.dataset.id)")
                 assert rows and set(rows) <= set(ids), f"I1-05 tab {cat} toont verkeerde soorten"
-                if cat in ("standvogel", "zomergast", "exoot", "ontsnapt"):
+                if cat in ("standvogel", "zomergast", "exoot", "ontsnapt", "dwaalgast"):
                     p.screenshot(path=str(SHOTS / f"species_i1_{cat}_390.png"))
             print("I1-05 OK — tabs:", tabs)
+
+            # I5-04: lange lijst bouwt eerst een deel op, de rest na "Toon alle"
+            big = max(counts, key=counts.get)
+            p.locator(f'#speciesFilters .filter-chip[data-cat="{big}"]').click()
+            p.locator("#speciesShowAll").wait_for(timeout=8000)
+            first = p.eval_on_selector_all("#speciesList .species-row", "els => els.length")
+            assert first < counts[big], f"I5-04 {big}: alle {first} rijen direct opgebouwd"
+            assert str(counts[big]) in p.locator("#speciesShowAll").inner_text()
+            p.locator("#speciesShowAll").click()
+            p.wait_for_function("(n) => document.querySelectorAll('#speciesList .species-row').length === n",
+                                arg=counts[big], timeout=8000)
+            assert p.locator("#speciesShowAll").count() == 0
+            print(f"I5-04 OK — {big}: {first} rijen eerst, {counts[big]} na 'Toon alle'")
 
             assert not errors, f"I1-06 paginafouten: {errors}"
             print("I1-06 OK — geen paginafouten")
             browser.close()
-    print("Fase I1–I4: alle controles geslaagd")
+    print("Fase I1–I5: alle controles geslaagd")
 
 
 if __name__ == "__main__":
