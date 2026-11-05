@@ -43,5 +43,6 @@ Bron: veldgidskennis; teksten zijn kort en bedoeld voor herkenning in het veld.
 `src/data/speciesLife.js` wordt gegenereerd uit `tools/species/species_life.json` met
 `python tools/species/build_life.py` (idempotent; CI controleert dit). Per soort: broedperiode, nestplaats, aantal eieren,
 broedduur, duur tot uitvliegen, broedsels per jaar, voedsel, gedrag, trek en een beschrijving van zang en roep.
-Bron: veldgidskennis; waarden zijn gangbare bandbreedtes, geen metingen in Nederland. Gedekt: alle standvogels en
-zomergasten (163). Soorten zonder leefwijze tonen de melding dat deze nog volgt; er worden geen waarden ingevuld.
+Bron: veldgidskennis; waarden zijn gangbare bandbreedtes, geen metingen in Nederland. Gedekt: alle uitgewerkte inheemse soorten
+(standvogels, zomergasten, wintergasten, trekvogels en schaarse gasten: 301). Het broedblok staat alleen bij soorten
+die in Nederland (soms) broeden; exoten, ontsnapte vogels en compacte dwaalgasten volgen nog. Soorten zonder leefwijze tonen de melding dat deze nog volgt; er worden geen waarden ingevuld.

@@ -116,6 +116,34 @@ export const LIFE = Object.freeze({
   "migration": "Standvogel; in de winter extra vogels uit Scandinavië langs de kust",
   "voice": "Rauw \"kek-kek-kek\" bij verstoring"
  },
+ "sp010": {
+  "breeding": {
+   "period": "apr–jul",
+   "nest": "Takkennest hoog in een boom, aangekleed met plastic en lappen",
+   "eggs": "1–3",
+   "incubation": "31–32 dagen",
+   "fledging": "48–60 dagen",
+   "broods": "1"
+  },
+  "diet": "Aas, muizen, jonge vogels en regenwormen",
+  "behaviour": "Zweeft laag en stuurt voortdurend met de diep gevorkte staart",
+  "migration": "Doortrekker (mrt–apr, sep–okt); kleine maar groeiende broedpopulatie in het oosten",
+  "voice": "Hoog, jammerend \"wie-oe-ie-oe-ie\""
+ },
+ "sp011": {
+  "breeding": {
+   "period": "apr–jul",
+   "nest": "Takkennest in een boom, vaak bij water",
+   "eggs": "2–3",
+   "incubation": "31–33 dagen",
+   "fledging": "42–45 dagen",
+   "broods": "1"
+  },
+  "diet": "Dode vis, aas, muizen en afval",
+  "behaviour": "Zweeft boven rivieren en meren; ondiep gevorkte staart",
+  "migration": "Doortrekker (apr–mei, aug–sep); zeldzame broedvogel; overwintert in Afrika",
+  "voice": "Hinnikend, trillend \"pie-ie-ie-ie\""
+ },
  "sp012": {
   "breeding": {
    "period": "feb–okt",
@@ -270,6 +298,20 @@ export const LIFE = Object.freeze({
   "migration": "Standvogel",
   "voice": "Rauw \"kraa-kraa-kraa\""
  },
+ "sp023": {
+  "breeding": {
+   "period": "apr–jun",
+   "nest": "Takkennest in een boom",
+   "eggs": "4–6",
+   "incubation": "18–20 dagen",
+   "fledging": "28–35 dagen",
+   "broods": "1"
+  },
+  "diet": "Alleseter: aas, afval, schelpdieren en eieren",
+  "behaviour": "Langs de kust; vormt soms gemengde paren met de Zwarte Kraai",
+  "migration": "Wintergast uit Scandinavië en Oost-Europa (okt–mrt); zeer zelden broedvogel",
+  "voice": "Rauw \"kraa\", als de Zwarte Kraai"
+ },
  "sp024": {
   "breeding": {
    "period": "mrt–mei",
@@ -325,6 +367,13 @@ export const LIFE = Object.freeze({
   "behaviour": "Paart voor het leven; spectaculaire vliegspelen met rugvlucht",
   "migration": "Standvogel; teruggekeerd na uitzetting, vooral op de Veluwe en in Drenthe",
   "voice": "Diep resonerend \"kroonk-kroonk\""
+ },
+ "sp028": {
+  "breeding": null,
+  "diet": "Hazelnoten, pijnboompitten en insecten",
+  "behaviour": "Weinig schuw in invasiejaren; verstopt noten als voorraad",
+  "migration": "Schaarse gast in invasiejaren (aug–nov) uit Siberië",
+  "voice": "Rauw, langgerekt \"kraaa\""
  },
  "sp029": {
   "breeding": {
@@ -452,6 +501,20 @@ export const LIFE = Object.freeze({
   "migration": "Standvogel; deels trekvogel naar het zuidwesten",
   "voice": "Vrolijk tjilpend \"stiglit\""
  },
+ "sp038": {
+  "breeding": {
+   "period": "apr–jul",
+   "nest": "Klein komnest hoog in een spar of den",
+   "eggs": "3–5",
+   "incubation": "11–14 dagen",
+   "fledging": "13–15 dagen",
+   "broods": "1–2"
+  },
+  "diet": "Zaden van els, berk en sparren",
+  "behaviour": "In de winter acrobatisch in groepen in elzen langs het water",
+  "migration": "Wintergast (okt–apr), in wisselende aantallen; kleine broedpopulatie in naaldbos",
+  "voice": "Klagend \"tsie-uu\" en snel, piepend gekwetter"
+ },
  "sp039": {
   "breeding": {
    "period": "apr–aug",
@@ -563,6 +626,34 @@ export const LIFE = Object.freeze({
   "behaviour": "Gebruikt een vaste \"smidse\" om slakkenhuisjes te breken",
   "migration": "Standvogel en trekvogel; veel doortrek in oktober",
   "voice": "Luide zang met elke frase twee of drie keer herhaald"
+ },
+ "sp047": {
+  "breeding": {
+   "period": "apr–jun",
+   "nest": "Stevig komnest in een boom, vaak in een losse kolonie",
+   "eggs": "5–6",
+   "incubation": "11–14 dagen",
+   "fledging": "12–15 dagen",
+   "broods": "1–2"
+  },
+  "diet": "Regenwormen en insecten; in de winter bessen en afgevallen fruit",
+  "behaviour": "In de winter in luidruchtige groepen op weilanden en in bessenstruiken",
+  "migration": "Wintergast uit Scandinavië en Oost-Europa (okt–apr); zeer zelden broedvogel",
+  "voice": "Schor \"tsjak-tsjak-tsjak\""
+ },
+ "sp048": {
+  "breeding": {
+   "period": "mei–jul",
+   "nest": "Komnest laag in een boom of struik",
+   "eggs": "4–6",
+   "incubation": "12–13 dagen",
+   "fledging": "12–14 dagen",
+   "broods": "1–2"
+  },
+  "diet": "Regenwormen, insecten en bessen",
+  "behaviour": "In de winter in groepen met Kramsvogels op weilanden",
+  "migration": "Wintergast (okt–apr); trekt 's nachts in grote aantallen over; zeer zelden broedvogel",
+  "voice": "Ijl, langgerekt \"tsiiep\", vooral 's nachts in oktober"
  },
  "sp049": {
   "breeding": {
@@ -914,6 +1005,13 @@ export const LIFE = Object.freeze({
   "migration": "Zomergast (apr–sep); overwintert in Afrika",
   "voice": "Krachtige zang eindigend op \"sja-sja-sja\"; roep schor \"spiez\""
  },
+ "sp074": {
+  "breeding": null,
+  "diet": "Insecten en kleine slakjes langs waterkanten",
+  "behaviour": "Loopt op slikkige oevers en natte graslanden; schuw",
+  "migration": "Wintergast uit de Alpen en Midden-Europa (okt–apr)",
+  "voice": "Schel \"fiesp\", vaak enkelvoudig"
+ },
  "sp075": {
   "breeding": {
    "period": "apr–aug",
@@ -1109,6 +1207,20 @@ export const LIFE = Object.freeze({
   "behaviour": "Zwemt met de snavel door het wateroppervlak; draait in groepen rondjes",
   "migration": "Standvogel en trekvogel; veel vogels overwinteren zuidelijker",
   "voice": "Man hol \"tuk-tuk\"; vrouw zacht kwakend"
+ },
+ "sp091": {
+  "breeding": {
+   "period": "apr–jul",
+   "nest": "Goed verstopt komnest met dons in heide of moeras",
+   "eggs": "8–11",
+   "incubation": "21–23 dagen",
+   "fledging": "25–30 dagen",
+   "broods": "1"
+  },
+  "diet": "Kleine zaden en waterdiertjes, gefilterd uit modder",
+  "behaviour": "Kleinste eend van Nederland; snelle, wendbare vlucht in groepjes",
+  "migration": "Wintergast in grote aantallen (aug–apr); kleine broedpopulatie in hoogveen en duinen",
+  "voice": "Man helder fluitend \"kriek-kriek\""
  },
  "sp092": {
   "breeding": {
@@ -1502,6 +1614,55 @@ export const LIFE = Object.freeze({
   "migration": "Zomergast (apr–aug); overwintert in West-Afrika",
   "voice": "Krachtige, gevarieerde zang met fluitende crescendo's en klokkende tonen"
  },
+ "sp121": {
+  "breeding": {
+   "period": "mei–jul",
+   "nest": "Komnest met dons op de grond",
+   "eggs": "4–6",
+   "incubation": "26–28 dagen",
+   "fledging": "40–45 dagen",
+   "broods": "1"
+  },
+  "diet": "Gras, oogstresten en wintergraan",
+  "behaviour": "In de winter in tienduizenden op graslanden in het rivierengebied en Friesland",
+  "migration": "Wintergast uit Arctisch Rusland (okt–mrt); enkele honderden paren broeden hier",
+  "voice": "Hoog, lachend \"kowjow-kowjow\""
+ },
+ "sp122": {
+  "breeding": null,
+  "diet": "Gras, oogstresten en wortels",
+  "behaviour": "In groepen op akkers en graslanden, vaak met Kolganzen",
+  "migration": "Wintergast uit Noord-Rusland (okt–mrt)",
+  "voice": "Laag, nasaal \"ang-ang\""
+ },
+ "sp123": {
+  "breeding": null,
+  "diet": "Gras en oogstresten",
+  "behaviour": "In grote groepen in Friesland en Groningen",
+  "migration": "Wintergast uit Spitsbergen (okt–apr), via Denemarken",
+  "voice": "Hoog \"wink-wink\" en kort \"ang\""
+ },
+ "sp124": {
+  "breeding": null,
+  "diet": "Zeegras, zeesla en kweldergras",
+  "behaviour": "Grote groepen op het wad en kwelders; graast ook op weilanden aan de kust",
+  "migration": "Wintergast uit Arctisch Siberië (okt–mei)",
+  "voice": "Zacht, rollend \"rrronk\""
+ },
+ "sp125": {
+  "breeding": {
+   "period": "apr–jul",
+   "nest": "Komnest met dons op een eilandje of in een kolonie op een dijk",
+   "eggs": "4–5",
+   "incubation": "24–25 dagen",
+   "fledging": "40–45 dagen",
+   "broods": "1"
+  },
+  "diet": "Gras en kweldervegetatie",
+  "behaviour": "Grote, luidruchtige groepen op graslanden langs de kust",
+  "migration": "Wintergast uit Arctisch Rusland en standvogel; snel gegroeide broedpopulatie",
+  "voice": "Kort, keffend \"kak-kak\", als blaffende hondjes"
+ },
  "sp126": {
   "breeding": {
    "period": "mrt–jun",
@@ -1515,6 +1676,13 @@ export const LIFE = Object.freeze({
   "behaviour": "Verdedigt het nest met opgezette vleugels en blazen",
   "migration": "Standvogel; in de winter ook vogels uit Oost-Europa",
   "voice": "Meestal stil; blaast en sist; vleugels zingen in vlucht"
+ },
+ "sp127": {
+  "breeding": null,
+  "diet": "Waterplanten, gras en oogstresten",
+  "behaviour": "In families op natte graslanden; lijkt op een kleine Wilde Zwaan",
+  "migration": "Wintergast uit Arctisch Rusland (nov–mrt); sterk afgenomen",
+  "voice": "Zacht, blaffend \"hoe-hoe\""
  },
  "sp128": {
   "breeding": {
@@ -1544,6 +1712,55 @@ export const LIFE = Object.freeze({
   "migration": "Standvogel; in de winter ook vogels uit het oosten",
   "voice": "Man laag \"rèp\"; vrouw kwakend als Wilde Eend"
  },
+ "sp130": {
+  "breeding": {
+   "period": "mei–jul",
+   "nest": "Komnest met dons in hoge vegetatie",
+   "eggs": "7–9",
+   "incubation": "24–25 dagen",
+   "fledging": "40–45 dagen",
+   "broods": "1"
+  },
+  "diet": "Gras, kroos en waterplanten",
+  "behaviour": "In de winter in grote, grazende groepen op natte graslanden",
+  "migration": "Wintergast uit Rusland en Scandinavië (sep–apr); zeer kleine broedpopulatie",
+  "voice": "Man helder fluitend \"wie-oe\""
+ },
+ "sp131": {
+  "breeding": {
+   "period": "apr–jun",
+   "nest": "Komnest met dons in kort gras of op een eilandje",
+   "eggs": "7–10",
+   "incubation": "22–24 dagen",
+   "fledging": "40–45 dagen",
+   "broods": "1"
+  },
+  "diet": "Zaden, waterplanten en kleine waterdieren",
+  "behaviour": "Grondelt met de lange hals diep onder water",
+  "migration": "Wintergast en doortrekker (sep–apr); zeer zeldzame broedvogel",
+  "voice": "Man zacht fluitend \"proep\"; vrouw kwakend"
+ },
+ "sp132": {
+  "breeding": {
+   "period": "mei–jul",
+   "nest": "Komnest met dons in oevervegetatie",
+   "eggs": "8–10",
+   "incubation": "24–26 dagen",
+   "fledging": "50–55 dagen",
+   "broods": "1"
+  },
+  "diet": "Waterplanten, zaden en waterdiertjes",
+  "behaviour": "Duikeend; rust overdag in groepen op open water",
+  "migration": "Wintergast (okt–mrt) en kleine broedpopulatie",
+  "voice": "Meestal stil; man zacht fluitend in de balts"
+ },
+ "sp133": {
+  "breeding": null,
+  "diet": "Mosselen en kokkels",
+  "behaviour": "In grote groepen op het IJsselmeer en de Waddenzee",
+  "migration": "Wintergast uit Scandinavië en Rusland (okt–apr)",
+  "voice": "Meestal stil"
+ },
  "sp134": {
   "breeding": {
    "period": "apr–jul",
@@ -1557,6 +1774,69 @@ export const LIFE = Object.freeze({
   "behaviour": "In grote groepen op zee; jongen in crèches",
   "migration": "Standvogel; vooral op de Wadden",
   "voice": "Man zacht kirrend \"ah-oooh\""
+ },
+ "sp135": {
+  "breeding": null,
+  "diet": "Schelpdieren, vooral Amerikaanse zwaardschede",
+  "behaviour": "Grote groepen op zee voor de kust, vaak ver weg",
+  "migration": "Wintergast (okt–apr); niet-broedende vogels blijven ook in de zomer",
+  "voice": "Man fluitend \"pieuw\""
+ },
+ "sp136": {
+  "breeding": {
+   "period": "apr–jul",
+   "nest": "In een boomholte of nestkast bij water",
+   "eggs": "8–11",
+   "incubation": "28–30 dagen",
+   "fledging": "50–60 dagen",
+   "broods": "1"
+  },
+  "diet": "Waterinsecten, mosselen en kreeftjes",
+  "behaviour": "Duikt veel; man gooit de kop achterover in de balts",
+  "migration": "Wintergast (okt–apr) op grote meren; incidentele broedvogel in nestkasten",
+  "voice": "Man piepend \"bie-iek\" in de balts; vleugels fluiten in vlucht"
+ },
+ "sp137": {
+  "breeding": {
+   "period": "mei–jul",
+   "nest": "In een boomholte of nestkast",
+   "eggs": "6–9",
+   "incubation": "26–28 dagen",
+   "fledging": "60–70 dagen",
+   "broods": "1"
+  },
+  "diet": "Kleine vissen en waterinsecten",
+  "behaviour": "Duikt in groepjes; voorkeur voor ondiepe, rustige plassen",
+  "migration": "Wintergast uit Noord-Rusland (nov–mrt); zeer zelden broedvogel",
+  "voice": "Meestal stil"
+ },
+ "sp138": {
+  "breeding": {
+   "period": "apr–jul",
+   "nest": "In een boomholte of nestkast bij water",
+   "eggs": "8–12",
+   "incubation": "30–32 dagen",
+   "fledging": "60–70 dagen",
+   "broods": "1"
+  },
+  "diet": "Vis, die duikend gevangen wordt",
+  "behaviour": "Jaagt in groepjes; jongen springen kort na het uitkomen uit de holte",
+  "migration": "Wintergast (nov–mrt), vooral in koude winters; incidentele broedvogel",
+  "voice": "Meestal stil; vrouw rauw \"karr\""
+ },
+ "sp139": {
+  "breeding": {
+   "period": "mei–jul",
+   "nest": "Komnest met dons op de grond onder dichte vegetatie",
+   "eggs": "8–10",
+   "incubation": "29–32 dagen",
+   "fledging": "60–65 dagen",
+   "broods": "1"
+  },
+  "diet": "Kleine vis",
+  "behaviour": "Jaagt duikend in zout en zoet water; ruige kuif",
+  "migration": "Wintergast langs de kust en in Zeeland (okt–apr); kleine broedpopulatie",
+  "voice": "Meestal stil"
  },
  "sp140": {
   "breeding": {
@@ -1586,6 +1866,20 @@ export const LIFE = Object.freeze({
   "migration": "Zomergast (mei–aug); een van de kortst aanwezige zomergasten; overwintert in zuidelijk Afrika",
   "voice": "Schel gierend \"srieee\", in groepen om huizen"
  },
+ "sp142": {
+  "breeding": {
+   "period": "apr–jun",
+   "nest": "Groot nest van plantenresten in een moeras",
+   "eggs": "2",
+   "incubation": "29–31 dagen",
+   "fledging": "65–70 dagen",
+   "broods": "1"
+  },
+  "diet": "Wortels, oogstresten, zaden, insecten en kleine dieren",
+  "behaviour": "Dansende balts; trekt in V-formaties met luid roepen",
+  "migration": "Doortrekker in grote aantallen (feb–apr, okt–nov); sinds 2001 kleine broedpopulatie",
+  "voice": "Ver dragend trompetterend \"krruu-krruu\""
+ },
  "sp143": {
   "breeding": {
    "period": "apr–jul",
@@ -1599,6 +1893,20 @@ export const LIFE = Object.freeze({
   "behaviour": "Maaiende zijwaartse bewegingen met de opgewipte snavel door ondiep water",
   "migration": "Zomergast (mrt–okt); overwintert in Frankrijk, Iberië en West-Afrika",
   "voice": "Helder, fluitend \"kluut-kluut\""
+ },
+ "sp144": {
+  "breeding": null,
+  "diet": "Wadpieren, slakjes en kreeftjes",
+  "behaviour": "Staat stil en rent dan naar een prooi; zwarte oksels in vlucht",
+  "migration": "Wintergast en doortrekker uit Arctisch Siberië (jul–mei)",
+  "voice": "Klagend, driedelig \"tlie-oe-ie\""
+ },
+ "sp145": {
+  "breeding": null,
+  "diet": "Regenwormen en insecten van graslanden",
+  "behaviour": "Grote groepen op weilanden, vaak met Kieviten",
+  "migration": "Wintergast en doortrekker (sep–apr); vroeger broedvogel in Drenthe",
+  "voice": "Zacht, klagend \"tluu\""
  },
  "sp146": {
   "breeding": {
@@ -1627,6 +1935,160 @@ export const LIFE = Object.freeze({
   "behaviour": "Broedt op kale terreinen, ook op bouwplaatsen en daken",
   "migration": "Zomergast (mrt–sep); overwintert in West-Afrika",
   "voice": "Aflopend \"pieu\"; ratelende baltsvlucht"
+ },
+ "sp148": {
+  "breeding": null,
+  "diet": "Krabbetjes, wormen en insecten",
+  "behaviour": "Kleiner dan de Wulp met kopstrepen",
+  "migration": "Doortrekker (apr–mei, jul–sep)",
+  "voice": "Snelle reeks van zeven fluittonen \"bibibibibibibi\""
+ },
+ "sp149": {
+  "breeding": null,
+  "diet": "Wadpieren en schelpdiertjes",
+  "behaviour": "Foerageert langs de waterlijn op het wad",
+  "migration": "Wintergast en doortrekker uit Arctisch Siberië (jul–mei)",
+  "voice": "Nasaal \"kè-kè\""
+ },
+ "sp150": {
+  "breeding": null,
+  "diet": "Kreeftjes, schelpdiertjes en aas tussen stenen",
+  "behaviour": "Draait stenen en wier om op dijken en pieren",
+  "migration": "Wintergast en doortrekker (jul–mei)",
+  "voice": "Snel, staccato \"tuk-a-tuk\""
+ },
+ "sp151": {
+  "breeding": null,
+  "diet": "Kleine schelpdieren, vooral nonnetjes",
+  "behaviour": "In dichte zwermen op het wad",
+  "migration": "Wintergast en doortrekker uit Groenland en Siberië (jul–mei)",
+  "voice": "Laag \"wut-wut\""
+ },
+ "sp152": {
+  "breeding": null,
+  "diet": "Kleine kreeftjes en insecten van het strand",
+  "behaviour": "Rent als een windopwindertje heen en weer langs de branding",
+  "migration": "Wintergast en doortrekker (jul–mei)",
+  "voice": "Kort \"twik\""
+ },
+ "sp153": {
+  "breeding": {
+   "period": "mei–jul",
+   "nest": "Kuiltje in een graspol op een kwelder",
+   "eggs": "4",
+   "incubation": "21–22 dagen",
+   "fledging": "19–21 dagen",
+   "broods": "1"
+  },
+  "diet": "Wadpieren, slakjes en kreeftjes",
+  "behaviour": "In de winter in enorme, wendbare zwermen op het wad",
+  "migration": "Wintergast (aug–mei); de schaarse broedvogels horen bij de zuidelijke vorm",
+  "voice": "Rasperig \"trrriep\" in vlucht"
+ },
+ "sp154": {
+  "breeding": {
+   "period": "apr–jul",
+   "nest": "Kuiltje in een natte graspol",
+   "eggs": "4",
+   "incubation": "18–20 dagen",
+   "fledging": "19–20 dagen",
+   "broods": "1"
+  },
+  "diet": "Wormen en insectenlarven uit de natte bodem",
+  "behaviour": "Zigzaggende vlucht bij opstijgen; mekkerende baltsvlucht",
+  "migration": "Wintergast en doortrekker (aug–apr); kleine broedpopulatie",
+  "voice": "Schor \"kètsj\" bij opvliegen; \"tikka-tikka\" in de broedtijd"
+ },
+ "sp155": {
+  "breeding": {
+   "period": "mei–jul",
+   "nest": "Kuiltje op de grond onder vegetatie langs een oever",
+   "eggs": "4",
+   "incubation": "21–22 dagen",
+   "fledging": "22–28 dagen",
+   "broods": "1"
+  },
+  "diet": "Insecten en kleine kreeftjes langs de oever",
+  "behaviour": "Wipt voortdurend met het achterlijf; vliegt met trillende vleugelslagen laag over het water",
+  "migration": "Doortrekker (apr–mei, jul–sep); zeldzame broedvogel langs rivieren",
+  "voice": "Hoog, dalend \"hie-die-die\""
+ },
+ "sp156": {
+  "breeding": null,
+  "diet": "Waterinsecten, larven en kleine visjes",
+  "behaviour": "Schuw; foerageert aan de randen van poelen en sloten",
+  "migration": "Doortrekker (mrt–mei, jun–okt); enkele overwinteren",
+  "voice": "Driedelig \"tluie-tluie-tluie\""
+ },
+ "sp157": {
+  "breeding": null,
+  "diet": "Kleine vis, kreeftjes en larven",
+  "behaviour": "Waadt tot de buik in het water; zwart broedkleed",
+  "migration": "Doortrekker (apr–mei, jun–okt)",
+  "voice": "Scherp, tweelettergrepig \"tjuu-iet\""
+ },
+ "sp158": {
+  "breeding": null,
+  "diet": "Kleine vis, garnalen en insectenlarven",
+  "behaviour": "Rent met gebogen kop door ondiep water",
+  "migration": "Doortrekker (apr–mei, jul–okt); enkele overwinteren in Zeeland",
+  "voice": "Fluitend, drieledig \"tjuu-tjuu-tjuu\""
+ },
+ "sp159": {
+  "breeding": {
+   "period": "mei–jul",
+   "nest": "Geen nest: in een oud lijsternest of op de grond",
+   "eggs": "4",
+   "incubation": "22–23 dagen",
+   "fledging": "28–30 dagen",
+   "broods": "1"
+  },
+  "diet": "Waterinsecten, larven en kleine kreeftjes",
+  "behaviour": "Foerageert langs ondiepe plassen; vliegt vaak in losse groepjes",
+  "migration": "Doortrekker (apr–mei, jul–sep); zeer zelden broedvogel",
+  "voice": "Hoog, drieledig \"djiep-djiep-djiep\""
+ },
+ "sp160": {
+  "breeding": null,
+  "diet": "Vis, vooral haring, sprot en zandspiering",
+  "behaviour": "Duikt diep vanaf het zeeoppervlak",
+  "migration": "Wintergast op de Noordzee (sep–mrt)",
+  "voice": "Meestal stil op zee"
+ },
+ "sp161": {
+  "breeding": null,
+  "diet": "Vis",
+  "behaviour": "Duikt op open zee; korte, dikke snavel",
+  "migration": "Wintergast op de Noordzee (okt–mrt)",
+  "voice": "Meestal stil op zee"
+ },
+ "sp162": {
+  "breeding": {
+   "period": "mei–jul",
+   "nest": "Nest van wier en modder op een richel of platform",
+   "eggs": "2",
+   "incubation": "25–27 dagen",
+   "fledging": "35–45 dagen",
+   "broods": "1"
+  },
+  "diet": "Kleine vis en plankton van open zee",
+  "behaviour": "Vliegt elegant boven zee; broedt in kolonies op havenconstructies",
+  "migration": "Wintergast op zee (okt–mrt); kleine broedkolonie op platforms in de Noordzee en IJmuiden",
+  "voice": "Nasaal \"kitti-wèèk\" bij de kolonie"
+ },
+ "sp163": {
+  "breeding": {
+   "period": "mei–jul",
+   "nest": "Kuiltje in vegetatie, vaak tussen sterns",
+   "eggs": "2–3",
+   "incubation": "23–25 dagen",
+   "fledging": "21–24 dagen",
+   "broods": "1"
+  },
+  "diet": "Insecten, vooral van het wateroppervlak, en kleine vis",
+  "behaviour": "Sternachtige vlucht; plukt insecten van het water",
+  "migration": "Doortrekker in het voorjaar (apr–mei) in grote aantallen op het IJsselmeer; zeer zelden broedvogel",
+  "voice": "Kort, nasaal \"kek-kek\""
  },
  "sp164": {
   "breeding": {
@@ -1684,6 +2146,20 @@ export const LIFE = Object.freeze({
   "migration": "Zomergast (mrt–sep); overwintert langs de West-Afrikaanse kust",
   "voice": "Luid, raspend \"kier-rik\""
  },
+ "sp168": {
+  "breeding": null,
+  "diet": "Vis",
+  "behaviour": "Ligt laag in het water; snavel iets omhoog gericht",
+  "migration": "Wintergast langs de kust en op zee (okt–apr)",
+  "voice": "Meestal stil; kakelend in vlucht"
+ },
+ "sp169": {
+  "breeding": null,
+  "diet": "Plankton, vis en visafval",
+  "behaviour": "Glijdt met stijve vleugels laag over de golven",
+  "migration": "Doortrekker op zee, vooral bij westerstorm",
+  "voice": "Meestal stil"
+ },
  "sp170": {
   "breeding": {
    "period": "mrt–jul",
@@ -1697,6 +2173,13 @@ export const LIFE = Object.freeze({
   "behaviour": "Loopt in weilanden achter maaimachines; zweeft op thermiek",
   "migration": "Zomergast (feb–sep); veel vogels uit uitzetprojecten blijven hier",
   "voice": "Stil; klepperen met de snavel bij het nest"
+ },
+ "sp171": {
+  "breeding": null,
+  "diet": "Haring, makreel en andere vis",
+  "behaviour": "Duikt vanaf 10–30 meter hoogte loodrecht het water in",
+  "migration": "Doortrekker langs de kust (aug–nov); ook in de zomer voor de kust",
+  "voice": "Meestal stil op zee"
  },
  "sp172": {
   "breeding": {
@@ -1796,6 +2279,90 @@ export const LIFE = Object.freeze({
   "migration": "Zomergast (apr–sep); overwintert in de Sahel",
   "voice": "Kort, weemoedig liedje beginnend met \"hie-tu-tu\""
  },
+ "sp179": {
+  "breeding": {
+   "period": "apr–jul",
+   "nest": "In een konijnenhol of onder stenen",
+   "eggs": "5–6",
+   "incubation": "13–14 dagen",
+   "fledging": "15 dagen",
+   "broods": "1–2"
+  },
+  "diet": "Kevers, mieren en andere insecten",
+  "behaviour": "Rechtop op een steen of paaltje; witte stuit valt op bij opvliegen",
+  "migration": "Doortrekker (mrt–mei, aug–okt); zeldzame broedvogel in duinen en op stuifzand",
+  "voice": "Hard \"tsjak-tsjak\" en \"wiet\""
+ },
+ "sp180": {
+  "breeding": null,
+  "diet": "Insecten",
+  "behaviour": "Zit vaak bij water en vee; hoort bij de Gele Kwikstaart (noordelijke vorm)",
+  "migration": "Doortrekker (apr–jun) uit Scandinavië",
+  "voice": "Scherp \"psie-ep\""
+ },
+ "sp181": {
+  "breeding": {
+   "period": "mei–jul",
+   "nest": "Komnest in een berk of den",
+   "eggs": "5–7",
+   "incubation": "11–12 dagen",
+   "fledging": "13–14 dagen",
+   "broods": "1"
+  },
+  "diet": "Beukennootjes, zaden en in de zomer insecten",
+  "behaviour": "In de winter in groepen onder beuken, vaak met Vinken",
+  "migration": "Wintergast (okt–apr), aantal afhankelijk van beukennootjes; zeer zelden broedvogel",
+  "voice": "Nasaal \"tsjèèp\"; zang een zoemend \"dzwèèè\""
+ },
+ "sp182": {
+  "breeding": null,
+  "diet": "Gras en oogstresten",
+  "behaviour": "Tussen Kolganzen; gele oogring",
+  "migration": "Schaarse wintergast (nov–mrt); zeer bedreigd",
+  "voice": "Hoog \"kie-kie\""
+ },
+ "sp183": {
+  "breeding": null,
+  "diet": "Gras, oogstresten en wortels",
+  "behaviour": "Langere hals en snavel dan de Toendrarietgans",
+  "migration": "Wintergast uit Scandinavië (nov–mrt); vooral in Friesland",
+  "voice": "Laag \"ang-ang\""
+ },
+ "sp184": {
+  "breeding": null,
+  "diet": "Zeegras en kweldergras",
+  "behaviour": "Vaak tussen gewone Rotganzen op het wad",
+  "migration": "Wintergast uit Spitsbergen en Groenland (okt–apr)",
+  "voice": "Zacht \"rrronk\""
+ },
+ "sp185": {
+  "breeding": null,
+  "diet": "Zeegras en kweldergras",
+  "behaviour": "Tussen Rotganzen; contrastrijker, met grote witte halsband",
+  "migration": "Schaarse wintergast uit Arctisch Amerika en Siberië",
+  "voice": "Zacht \"rrronk\""
+ },
+ "sp186": {
+  "breeding": null,
+  "diet": "Gras, oogstresten en wintergraan",
+  "behaviour": "Tussen Rotganzen en Brandganzen; opvallend rood-zwart-wit",
+  "migration": "Schaarse wintergast uit Siberië (nov–mrt)",
+  "voice": "Hoog, tweelettergrepig \"kie-kwie\""
+ },
+ "sp187": {
+  "breeding": {
+   "period": "mei–jul",
+   "nest": "Grote hoop plantenresten op een eilandje",
+   "eggs": "4–6",
+   "incubation": "31–36 dagen",
+   "fledging": "85–90 dagen",
+   "broods": "1"
+  },
+  "diet": "Waterplanten, gras en oogstresten",
+  "behaviour": "In de winter in families op akkers en graslanden in Noord-Nederland",
+  "migration": "Wintergast uit IJsland en Scandinavië (nov–mrt); zeer zelden broedvogel",
+  "voice": "Trompetterend \"whoop-whoop\""
+ },
  "sp188": {
   "breeding": {
    "period": "mei–jul",
@@ -1810,6 +2377,34 @@ export const LIFE = Object.freeze({
   "migration": "Zomergast (mrt–sep); overwintert in de Sahel",
   "voice": "Man een droog ratelend \"knerrr\""
  },
+ "sp189": {
+  "breeding": {
+   "period": "mei–jul",
+   "nest": "Komnest in dichte oevervegetatie",
+   "eggs": "7–10",
+   "incubation": "25–27 dagen",
+   "fledging": "55–60 dagen",
+   "broods": "1"
+  },
+  "diet": "Waterplanten en zaden",
+  "behaviour": "Schuw; in rietkragen van grote plassen",
+  "migration": "Schaarse gast uit Oost-Europa; zeer zeldzame broedvogel",
+  "voice": "Meestal stil; zacht \"tsjèk\""
+ },
+ "sp190": {
+  "breeding": null,
+  "diet": "Schelpdieren en zee-egels",
+  "behaviour": "Duikt op zee; witte vleugelspiegel in vlucht",
+  "migration": "Wintergast op zee (okt–apr)",
+  "voice": "Meestal stil"
+ },
+ "sp191": {
+  "breeding": null,
+  "diet": "Schelpdieren en kreeftjes",
+  "behaviour": "Duikt op zee; man met lange staartpennen",
+  "migration": "Wintergast uit Arctisch Noord-Europa (nov–mrt)",
+  "voice": "Man jodelend \"a-ow-a-li\""
+ },
  "sp192": {
   "breeding": {
    "period": "apr–jun",
@@ -1823,6 +2418,34 @@ export const LIFE = Object.freeze({
   "behaviour": "Mannen baltsen in groepen op een vaste baltsplaats (lek)",
   "migration": "Standvogel; vrijwel uitgestorven in Nederland, nog op de Sallandse Heuvelrug met bijplaatsing",
   "voice": "Borrelend koeren in de balts en een sissend \"tsjoe-ie\""
+ },
+ "sp193": {
+  "breeding": null,
+  "diet": "Kleine kreeftjes en algen uit het water gefilterd",
+  "behaviour": "Staat in ondiep water; filtert met de kop ondersteboven",
+  "migration": "Schaarse gast; groepje in de Zwillbrocker Venn net over de grens",
+  "voice": "Gakkend als een gans"
+ },
+ "sp194": {
+  "breeding": null,
+  "diet": "Kleine vis en kreeftjes",
+  "behaviour": "Duikt in havens en langs de kust",
+  "migration": "Wintergast (okt–mrt)",
+  "voice": "Meestal stil"
+ },
+ "sp195": {
+  "breeding": {
+   "period": "apr–jul",
+   "nest": "Drijvend nest van waterplanten",
+   "eggs": "3–5",
+   "incubation": "21–25 dagen",
+   "fledging": "45–55 dagen",
+   "broods": "1"
+  },
+  "diet": "Waterinsecten, kikkervisjes en kleine vis",
+  "behaviour": "Kleiner en gedrongener dan de Fuut",
+  "migration": "Wintergast op zee en grote meren (okt–mrt); zeer zeldzame broedvogel",
+  "voice": "Klagend, hinnikend \"ooeeh-uh\" in de broedtijd"
  },
  "sp196": {
   "breeding": {
@@ -1865,6 +2488,13 @@ export const LIFE = Object.freeze({
   "behaviour": "Nachtactief; zit overdag in de lengte op een tak",
   "migration": "Zomergast (mei–sep); overwintert in Afrika",
   "voice": "Langgerekt mechanisch snorren in de nacht en vleugelklappen"
+ },
+ "sp199": {
+  "breeding": null,
+  "diet": "Vliegende insecten",
+  "behaviour": "Grote gierzwaluw met witte buik",
+  "migration": "Schaarse gast uit Zuid-Europa (apr–okt)",
+  "voice": "Schel triller \"tri-ti-ti-ti\""
  },
  "sp200": {
   "breeding": {
@@ -1922,6 +2552,13 @@ export const LIFE = Object.freeze({
   "migration": "Zomergast; zeldzame broedvogel in natte jaren",
   "voice": "Kikkerachtig ratelen \"trrrr\""
  },
+ "sp204": {
+  "breeding": null,
+  "diet": "Kevers en andere grote insecten, wormen",
+  "behaviour": "Nachtactief; grote gele ogen; loopt op kale akkers",
+  "migration": "Schaarse doortrekker; verdwenen als broedvogel",
+  "voice": "Schel, fluitend \"kur-lie\""
+ },
  "sp205": {
   "breeding": {
    "period": "mei–jul",
@@ -1950,6 +2587,139 @@ export const LIFE = Object.freeze({
   "migration": "Zomergast (mrt–sep); overwintert in Zuid-Europa en West-Afrika",
   "voice": "Zacht \"pruit\" en rollend \"pirr\""
  },
+ "sp207": {
+  "breeding": null,
+  "diet": "Insecten",
+  "behaviour": "Weinig schuw; rust in groepjes (dotterels) op kale akkers",
+  "migration": "Doortrekker (apr–mei, aug–sep) uit Scandinavië",
+  "voice": "Zacht \"pjurr\""
+ },
+ "sp208": {
+  "breeding": {
+   "period": "mei–jun",
+   "nest": "Kuiltje in een graspol op een vochtig weiland",
+   "eggs": "4",
+   "incubation": "20–23 dagen",
+   "fledging": "25–28 dagen",
+   "broods": "1"
+  },
+  "diet": "Insecten, larven en wormen",
+  "behaviour": "Mannen baltsen in groepen (lek) met kragen in allerlei kleuren",
+  "migration": "Doortrekker in grote aantallen (mrt–mei, jul–okt); vrijwel verdwenen als broedvogel",
+  "voice": "Meestal stil; zacht \"kuk\""
+ },
+ "sp209": {
+  "breeding": null,
+  "diet": "Wormpjes en kreeftjes",
+  "behaviour": "Lange, gebogen snavel; witte stuit in vlucht",
+  "migration": "Doortrekker (jul–sep) uit Arctisch Siberië",
+  "voice": "Zacht \"tsjirrup\""
+ },
+ "sp210": {
+  "breeding": null,
+  "diet": "Kleine insecten en larven",
+  "behaviour": "Schuw en gedrongen; vliegt hoog op als hij schrikt",
+  "migration": "Doortrekker (mei, jul–sep)",
+  "voice": "Snelle, droge triller \"tirrrr\""
+ },
+ "sp211": {
+  "breeding": null,
+  "diet": "Kreeftjes en slakjes op golfbrekers",
+  "behaviour": "Klautert over begroeide stenen en pieren",
+  "migration": "Wintergast (okt–apr) uit Noord-Europa",
+  "voice": "Kort \"wiet\""
+ },
+ "sp212": {
+  "breeding": null,
+  "diet": "Kleine insecten en kreeftjes",
+  "behaviour": "Kleinste strandloper; snel en actief",
+  "migration": "Doortrekker (mei, jul–okt) uit Arctisch Rusland",
+  "voice": "Kort \"tit\""
+ },
+ "sp213": {
+  "breeding": null,
+  "diet": "Insecten en wormen",
+  "behaviour": "Lijkt op een grote Kleine Strandloper met scherp afgezette borst",
+  "migration": "Schaarse gast uit Noord-Amerika en Siberië (aug–okt)",
+  "voice": "Rasperig \"krrrt\""
+ },
+ "sp214": {
+  "breeding": null,
+  "diet": "Wormen en insectenlarven",
+  "behaviour": "Zit tot het laatst stil voor het opvliegt; knikt met het lichaam",
+  "migration": "Wintergast (okt–apr)",
+  "voice": "Meestal stil"
+ },
+ "sp215": {
+  "breeding": null,
+  "diet": "Plankton en insecten, van het wateroppervlak gepikt",
+  "behaviour": "Zwemt in rondjes om voedsel naar boven te draaien; weinig schuw",
+  "migration": "Schaarse doortrekker (mei, aug–okt)",
+  "voice": "Kort \"kit\""
+ },
+ "sp216": {
+  "breeding": null,
+  "diet": "Plankton van het zeeoppervlak",
+  "behaviour": "Zwemt op zee; vaak na een herfststorm aan de kust",
+  "migration": "Schaarse doortrekker (okt–dec)",
+  "voice": "Kort \"pik\""
+ },
+ "sp217": {
+  "breeding": null,
+  "diet": "Insecten en larven",
+  "behaviour": "Elegant; lange dunne snavel en lange groene poten",
+  "migration": "Schaarse doortrekker (apr–mei, jul–sep)",
+  "voice": "Herhaald \"kju\""
+ },
+ "sp218": {
+  "breeding": null,
+  "diet": "Vis, die het van andere zeevogels afpakt; ook zeevogels",
+  "behaviour": "Krachtig en zwaar; achtervolgt Jan-van-genten",
+  "migration": "Doortrekker op zee (aug–nov)",
+  "voice": "Meestal stil op zee"
+ },
+ "sp219": {
+  "breeding": null,
+  "diet": "Vis, die het van meeuwen en sterns afpakt",
+  "behaviour": "Middelste staartpennen als lepels",
+  "migration": "Doortrekker op zee (apr–mei, sep–nov)",
+  "voice": "Meestal stil op zee"
+ },
+ "sp220": {
+  "breeding": null,
+  "diet": "Vis, die het van sterns en meeuwen afpakt",
+  "behaviour": "Achtervolgt sterns in wendbare vlucht",
+  "migration": "Doortrekker langs de kust (apr–mei, aug–okt)",
+  "voice": "Meestal stil op zee"
+ },
+ "sp221": {
+  "breeding": null,
+  "diet": "Vis, die het van sterns afpakt; ook insecten en lemmingen",
+  "behaviour": "Slank met lange staartpunten",
+  "migration": "Schaarse doortrekker op zee (mei, aug–okt)",
+  "voice": "Meestal stil op zee"
+ },
+ "sp222": {
+  "breeding": null,
+  "diet": "Plankton en kleine kreeftjes",
+  "behaviour": "Klein en gedrongen; vooral na noordwesterstorm voor de kust",
+  "migration": "Wintergast op zee (nov–feb), onregelmatig",
+  "voice": "Meestal stil"
+ },
+ "sp223": {
+  "breeding": null,
+  "diet": "Kleine vis, vooral zandspiering",
+  "behaviour": "Kleurige snavel in de zomer; duikt op open zee",
+  "migration": "Schaarse wintergast op zee; soms na storm verzwakt aan de kust",
+  "voice": "Meestal stil op zee"
+ },
+ "sp224": {
+  "breeding": null,
+  "diet": "Plankton en kleine vis van het zeeoppervlak",
+  "behaviour": "Gevorkte staart en driekleurige vleugel",
+  "migration": "Schaarse doortrekker langs de kust na westerstorm (sep–okt)",
+  "voice": "Raspend \"kirr\""
+ },
  "sp225": {
   "breeding": {
    "period": "mei–jul",
@@ -1963,6 +2733,48 @@ export const LIFE = Object.freeze({
   "behaviour": "Broedt in kolonies in Zeeland en langs de kust",
   "migration": "Zomergast (mrt–sep); overwintert langs Atlantische kusten",
   "voice": "Nasaal \"kjau-oh\""
+ },
+ "sp226": {
+  "breeding": {
+   "period": "apr–jul",
+   "nest": "Kuil op de grond of op een dak, tussen Zilvermeeuwen",
+   "eggs": "2–3",
+   "incubation": "28–30 dagen",
+   "fledging": "35–40 dagen",
+   "broods": "1"
+  },
+  "diet": "Vis, afval, schelpdieren en insecten",
+  "behaviour": "Lijkt sterk op de Zilvermeeuw; gele poten",
+  "migration": "Vooral zomer- en najaarsgast; kleine broedpopulatie",
+  "voice": "Lager en nasaler \"kjauw\" dan de Zilvermeeuw"
+ },
+ "sp227": {
+  "breeding": {
+   "period": "apr–jul",
+   "nest": "Kuil op de grond in een meeuwenkolonie",
+   "eggs": "2–3",
+   "incubation": "27–30 dagen",
+   "fledging": "35–45 dagen",
+   "broods": "1"
+  },
+  "diet": "Vis, afval en kleine dieren",
+  "behaviour": "Lange snavel, kleine ogen; houding iets langhalsig",
+  "migration": "Wintergast uit Oost-Europa (aug–apr); zeer zeldzame broedvogel",
+  "voice": "Schel, nasaal lachend \"ha-ha-ha\""
+ },
+ "sp228": {
+  "breeding": null,
+  "diet": "Vis, aas en afval",
+  "behaviour": "Grote, bleke meeuw zonder zwart in de vleugel",
+  "migration": "Wintergast uit het hoge noorden (nov–mrt), schaars",
+  "voice": "Als de Zilvermeeuw"
+ },
+ "sp229": {
+  "breeding": null,
+  "diet": "Vis, aas en afval",
+  "behaviour": "Kleinere, ronde kop dan de Kleine Burgemeester; lange vleugelpunten",
+  "migration": "Wintergast (nov–mrt), schaars",
+  "voice": "Hoger dan de Zilvermeeuw"
  },
  "sp230": {
   "breeding": {
@@ -1978,6 +2790,20 @@ export const LIFE = Object.freeze({
   "migration": "Zomergast (apr–sep); overwintert langs de West-Afrikaanse kust",
   "voice": "Scherp, gehaast \"kri-ik\""
  },
+ "sp231": {
+  "breeding": null,
+  "diet": "Grote insecten, muizen en hagedissen",
+  "behaviour": "Jaagt boven droog land, niet boven water",
+  "migration": "Schaarse doortrekker; verdwenen als broedvogel",
+  "voice": "Nasaal \"kè-wèk\""
+ },
+ "sp232": {
+  "breeding": null,
+  "diet": "Vis",
+  "behaviour": "Grootste stern; zware rode snavel",
+  "migration": "Schaarse doortrekker (apr–sep)",
+  "voice": "Rauw, reigerachtig \"kraa-ap\""
+ },
  "sp233": {
   "breeding": {
    "period": "mei–jul",
@@ -1991,6 +2817,90 @@ export const LIFE = Object.freeze({
   "behaviour": "Plukt insecten van het wateroppervlak; broedt in kleine kolonies",
   "migration": "Zomergast (apr–sep); overwintert langs de West-Afrikaanse kust",
   "voice": "Kort, krassend \"kjè\""
+ },
+ "sp234": {
+  "breeding": {
+   "period": "mei–jul",
+   "nest": "Drijvend nestje op waterplanten",
+   "eggs": "2–3",
+   "incubation": "18–22 dagen",
+   "fledging": "20–25 dagen",
+   "broods": "1"
+  },
+  "diet": "Libellen en andere insecten",
+  "behaviour": "Plukt insecten van het water; in kolonies met Zwarte Sterns",
+  "migration": "Schaarse doortrekker; incidentele broedvogel in natte jaren",
+  "voice": "Rauw \"krèt\""
+ },
+ "sp235": {
+  "breeding": {
+   "period": "mei–jul",
+   "nest": "Drijvend nest van waterplanten",
+   "eggs": "2–3",
+   "incubation": "18–20 dagen",
+   "fledging": "20–25 dagen",
+   "broods": "1"
+  },
+  "diet": "Insecten, kikkervisjes en kleine vis",
+  "behaviour": "Broedt in kolonies op moerassen met drijvende planten",
+  "migration": "Schaarse doortrekker; incidentele broedvogel",
+  "voice": "Schor, rauw \"kèèrk\""
+ },
+ "sp236": {
+  "breeding": null,
+  "diet": "Vis",
+  "behaviour": "Ligt laag in het water; duikt lang",
+  "migration": "Wintergast op zee en grote meren (nov–mrt)",
+  "voice": "Meestal stil"
+ },
+ "sp237": {
+  "breeding": null,
+  "diet": "Vis en kreeftjes",
+  "behaviour": "Grootste duiker; zware snavel",
+  "migration": "Wintergast op zee (nov–apr), schaars",
+  "voice": "Meestal stil"
+ },
+ "sp238": {
+  "breeding": null,
+  "diet": "Plankton en visafval van het zeeoppervlak",
+  "behaviour": "Fladdert vlak boven het water en tikt met de poten op de golven",
+  "migration": "Schaarse doortrekker op zee na storm (sep–nov)",
+  "voice": "Meestal stil op zee"
+ },
+ "sp239": {
+  "breeding": null,
+  "diet": "Vis en inktvis",
+  "behaviour": "Glijdt over de golven; zwarte vogel met lichte vleugelonderkant",
+  "migration": "Doortrekker op zee (aug–okt), vanaf de kust te zien bij harde wind",
+  "voice": "Meestal stil op zee"
+ },
+ "sp240": {
+  "breeding": null,
+  "diet": "Kleine vis",
+  "behaviour": "Snelle, laag over de golven glijdende vlucht",
+  "migration": "Doortrekker op zee (jul–okt)",
+  "voice": "Meestal stil op zee"
+ },
+ "sp241": {
+  "breeding": {
+   "period": "apr–jul",
+   "nest": "Takkennest hoog in een oude boom in een rustig bos",
+   "eggs": "3–5",
+   "incubation": "35–36 dagen",
+   "fledging": "63–71 dagen",
+   "broods": "1"
+  },
+  "diet": "Vis, kikkers en waterinsecten uit beken en poelen",
+  "behaviour": "Schuw; foerageert langs bosbeken",
+  "migration": "Doortrekker (apr–mei, aug–sep); zeer zeldzame broedvogel; overwintert in Afrika",
+  "voice": "Meestal stil"
+ },
+ "sp242": {
+  "breeding": null,
+  "diet": "Vis",
+  "behaviour": "Duikt in havens en bij pieren; kleiner dan de Aalscholver",
+  "migration": "Wintergast langs de kust (okt–apr), schaars",
+  "voice": "Meestal stil"
  },
  "sp243": {
   "breeding": {
@@ -2048,6 +2958,20 @@ export const LIFE = Object.freeze({
   "migration": "Standvogel; recente, kleine broedpopulatie",
   "voice": "Meestal stil; laag knorren bij het nest"
  },
+ "sp247": {
+  "breeding": {
+   "period": "apr–jul",
+   "nest": "Groot takkennest op een hoge boom of mast",
+   "eggs": "2–3",
+   "incubation": "35–40 dagen",
+   "fledging": "50–55 dagen",
+   "broods": "1"
+  },
+  "diet": "Vis, die met de poten vooruit uit het water wordt gegrepen",
+  "behaviour": "Bidt boven het water en stort zich dan omlaag",
+  "migration": "Doortrekker (apr–mei, aug–okt); sinds 2016 broedvogel in de Biesbosch; overwintert in West-Afrika",
+  "voice": "Kort fluitend \"pjiep-pjiep\""
+ },
  "sp248": {
   "breeding": {
    "period": "mei–aug",
@@ -2061,6 +2985,27 @@ export const LIFE = Object.freeze({
   "behaviour": "Klappende baltsvlucht boven het bos",
   "migration": "Zomergast (mei–sep); overwintert in West- en Centraal-Afrika",
   "voice": "Klagend \"pie-luu\""
+ },
+ "sp249": {
+  "breeding": {
+   "period": "apr–jul",
+   "nest": "Nest van riet en takjes op de grond in duinen, heide of kwelder",
+   "eggs": "4–6",
+   "incubation": "29–31 dagen",
+   "fledging": "32–42 dagen",
+   "broods": "1"
+  },
+  "diet": "Muizen en kleine vogels",
+  "behaviour": "Jaagt laag boven open land; slaapt in de winter in groepen in riet",
+  "migration": "Wintergast (okt–apr); kleine, afnemende broedpopulatie op de Wadden",
+  "voice": "Snel \"kek-kek-kek\" bij het nest"
+ },
+ "sp250": {
+  "breeding": null,
+  "diet": "Muizen en kleine vogels",
+  "behaviour": "Slanker dan de Blauwe Kiekendief; man zeer licht",
+  "migration": "Schaarse doortrekker (apr–mei, aug–okt)",
+  "voice": "Meestal stil buiten de broedtijd"
  },
  "sp251": {
   "breeding": {
@@ -2090,6 +3035,13 @@ export const LIFE = Object.freeze({
   "migration": "Standvogel; sinds 2006 broedvogel, in de winter extra vogels uit het noordoosten",
   "voice": "Hoog, keffend \"kli-kli-kli\""
  },
+ "sp253": {
+  "breeding": null,
+  "diet": "Muizen en woelmuizen",
+  "behaviour": "Bidt boven open land; witte staart met zwarte eindband",
+  "migration": "Wintergast uit Scandinavië (okt–apr), in wisselende aantallen",
+  "voice": "Klagend \"pie-uu\", lager dan de Buizerd"
+ },
  "sp254": {
   "breeding": {
    "period": "feb–jul",
@@ -2103,6 +3055,69 @@ export const LIFE = Object.freeze({
   "behaviour": "Grootste uil van Europa; nachtactief en zeer plaatstrouw",
   "migration": "Standvogel; kleine broedpopulatie, vooral in Limburg",
   "voice": "Diep, ver dragend \"oe-hoe\""
+ },
+ "sp255": {
+  "breeding": {
+   "period": "apr–jul",
+   "nest": "Kuiltje op de grond in duinen of moeras",
+   "eggs": "4–8",
+   "incubation": "24–28 dagen",
+   "fledging": "24–35 dagen (vliegvlug)",
+   "broods": "1"
+  },
+  "diet": "Veldmuizen",
+  "behaviour": "Jaagt ook overdag laag boven open land; slaapt in de winter in groepen",
+  "migration": "Wintergast (okt–apr); zeldzame broedvogel, aantal afhankelijk van muizenjaren",
+  "voice": "Laag \"boe-boe-boe\" en vleugelklappen in de balts"
+ },
+ "sp256": {
+  "breeding": null,
+  "diet": "Insectenlarven en kevers uit de bodem",
+  "behaviour": "Zet de kuif op bij landen; golvende vlucht",
+  "migration": "Schaarse doortrekker (apr–mei); verdwenen als broedvogel",
+  "voice": "Zacht, drieledig \"hoe-poe-poe\""
+ },
+ "sp257": {
+  "breeding": {
+   "period": "mei–aug",
+   "nest": "Zelf gegraven gang in een steile zandwand",
+   "eggs": "4–7",
+   "incubation": "20–22 dagen",
+   "fledging": "30–31 dagen",
+   "broods": "1"
+  },
+  "diet": "Bijen, wespen en libellen, gevangen in de vlucht",
+  "behaviour": "Slaat angels eraf tegen een tak; broedt in losse kolonies",
+  "migration": "Schaarse doortrekker (mei–sep); incidentele broedvogel in zandgroeven",
+  "voice": "Rollend, ver dragend \"prruut\""
+ },
+ "sp258": {
+  "breeding": {
+   "period": "mei–jul",
+   "nest": "In een bestaande boomholte of nestkast",
+   "eggs": "7–10",
+   "incubation": "12–14 dagen",
+   "fledging": "19–21 dagen",
+   "broods": "1"
+  },
+  "diet": "Mieren en hun larven",
+  "behaviour": "Draait de nek bij gevaar als een slang; foerageert op de grond",
+  "migration": "Doortrekker (apr–mei, aug–sep); zeer zeldzame broedvogel; overwintert in Afrika",
+  "voice": "Klagend, herhaald \"kjie-kjie-kjie\""
+ },
+ "sp259": {
+  "breeding": null,
+  "diet": "Grote insecten, vooral libellen",
+  "behaviour": "Jaagt in groepjes, biddend en in vlucht etend",
+  "migration": "Schaarse gast in het voorjaar (mei–jun) uit Oost-Europa",
+  "voice": "Hoog \"kie-kie-kie\""
+ },
+ "sp260": {
+  "breeding": null,
+  "diet": "Kleine vogels zoals piepers en leeuweriken",
+  "behaviour": "Kleinste valk; snelle achtervolging laag over het land",
+  "migration": "Wintergast en doortrekker (sep–apr)",
+  "voice": "Snel \"kie-kie-kie\""
  },
  "sp261": {
   "breeding": {
@@ -2132,6 +3147,20 @@ export const LIFE = Object.freeze({
   "migration": "Zomergast (mei–sep); overwintert in zuidelijk Afrika",
   "voice": "Rauw \"tsjek\"; zachte, krassende zang met imitaties"
  },
+ "sp263": {
+  "breeding": null,
+  "diet": "Muizen, kleine vogels en grote insecten",
+  "behaviour": "Zit hoog op een boomtop of paal; spietst prooi op doorns",
+  "migration": "Wintergast (okt–apr) op heide en in hoogveen; verdwenen als broedvogel",
+  "voice": "Hees \"tsjèk\""
+ },
+ "sp264": {
+  "breeding": null,
+  "diet": "Grote insecten",
+  "behaviour": "Zit op een uitkijkpost in halfopen landschap",
+  "migration": "Schaarse doortrekker (mei, aug–sep); verdwenen als broedvogel",
+  "voice": "Krassend \"kèwtsj\""
+ },
  "sp265": {
   "breeding": {
    "period": "mei–jul",
@@ -2145,6 +3174,27 @@ export const LIFE = Object.freeze({
   "behaviour": "Bouwt het opvallendste nest van Nederland; zeldzame broedvogel",
   "migration": "Zomergast; overwintert in Zuid-Europa",
   "voice": "Ijl, langgerekt \"tsiiuu\""
+ },
+ "sp266": {
+  "breeding": null,
+  "diet": "Zaden en kleine insecten",
+  "behaviour": "In groepjes op kwelders en het strand, vaak met Sneeuwgorzen",
+  "migration": "Wintergast (okt–mrt), schaars",
+  "voice": "Ijl \"tsie-ie\""
+ },
+ "sp267": {
+  "breeding": {
+   "period": "apr–jul",
+   "nest": "Komnest op de grond, ook op kale stadsterreinen",
+   "eggs": "3–5",
+   "incubation": "11–13 dagen",
+   "fledging": "9–12 dagen",
+   "broods": "2"
+  },
+  "diet": "Zaden en insecten",
+  "behaviour": "Loopt op kale grond; puntige kuif",
+  "migration": "Zeer zeldzame standvogel; vrijwel verdwenen als broedvogel",
+  "voice": "Zacht fluitend \"tie-tie-tuu-ie\""
  },
  "sp268": {
   "breeding": {
@@ -2174,6 +3224,20 @@ export const LIFE = Object.freeze({
   "migration": "Standvogel; nieuwe broedvogel uit het zuiden, gevoelig voor koude winters",
   "voice": "Ritmisch herhaald \"tsip… tsip… tsip\" in elke vlucht"
  },
+ "sp270": {
+  "breeding": {
+   "period": "mei–jul",
+   "nest": "Komnest in een struik",
+   "eggs": "4–5",
+   "incubation": "12–13 dagen",
+   "fledging": "11–13 dagen",
+   "broods": "1"
+  },
+  "diet": "Insecten",
+  "behaviour": "Zingt vanaf een struik in ruige, warme terreinen",
+  "migration": "Zomergast in het zuiden (mei–aug); zeer zeldzame broedvogel",
+  "voice": "Snelle, babbelende zang met imitaties"
+ },
  "sp271": {
   "breeding": {
    "period": "mei–jul",
@@ -2187,6 +3251,27 @@ export const LIFE = Object.freeze({
   "behaviour": "Zingt vanaf een tak in struwelen en bosranden",
   "migration": "Zomergast (mei–sep); laat aankomend; overwintert in Afrika",
   "voice": "Lange, snelle zang vol imitaties en nasale tonen"
+ },
+ "sp272": {
+  "breeding": null,
+  "diet": "Insecten en spinnen",
+  "behaviour": "Bedreigde soort van zeggemoerassen; geel gestreepte kruin",
+  "migration": "Schaarse doortrekker (aug–sep) uit Oost-Europa",
+  "voice": "Kort \"tsjek\""
+ },
+ "sp273": {
+  "breeding": {
+   "period": "mei–jul",
+   "nest": "Komnest laag in riet of ruigte",
+   "eggs": "4–5",
+   "incubation": "12–14 dagen",
+   "fledging": "12–14 dagen",
+   "broods": "1–2"
+  },
+  "diet": "Kleine insecten en spinnen",
+  "behaviour": "Zingt in de schemering vanaf rietstengels",
+  "migration": "Zomergast (apr–sep); zeer zeldzame broedvogel in grote moerassen",
+  "voice": "Insectachtig, snel snorren"
  },
  "sp274": {
   "breeding": {
@@ -2202,6 +3287,34 @@ export const LIFE = Object.freeze({
   "migration": "Zomergast (apr–sep); overwintert in West-Afrika",
   "voice": "Snel, laag snorren, lager dan de Sprinkhaanzanger"
  },
+ "sp275": {
+  "breeding": null,
+  "diet": "Vliegende insecten",
+  "behaviour": "Lijkt op de Boerenzwaluw met roodbruine stuit",
+  "migration": "Schaarse gast uit Zuid-Europa (apr–jun)",
+  "voice": "Kort \"tsjirp\""
+ },
+ "sp276": {
+  "breeding": null,
+  "diet": "Kleine insecten",
+  "behaviour": "Klein boszangertje met dubbele vleugelstreep; zeer actief",
+  "migration": "Schaarse najaarsgast uit Siberië (sep–okt), vaak op de Wadden",
+  "voice": "Hoog, tweelettergrepig \"tsuu-iet\""
+ },
+ "sp277": {
+  "breeding": null,
+  "diet": "Kleine insecten",
+  "behaviour": "Bidt bij de takken; citroengele stuit en kruinstreep",
+  "migration": "Schaarse najaarsgast uit Siberië (okt–nov)",
+  "voice": "Zacht, opgaand \"tjuu-ie\""
+ },
+ "sp278": {
+  "breeding": null,
+  "diet": "Kleine insecten",
+  "behaviour": "Grijzige tjiftjaf zonder geel",
+  "migration": "Schaarse gast uit Siberië (okt–apr)",
+  "voice": "Klagend, ijl \"ieeh\""
+ },
  "sp279": {
   "breeding": {
    "period": "apr–jul",
@@ -2215,6 +3328,83 @@ export const LIFE = Object.freeze({
   "behaviour": "Zeer verborgen; plotseling uitbarstende zang",
   "migration": "Standvogel; nieuwe broedvogel uit het zuiden, gevoelig voor koude winters",
   "voice": "Explosief, luid \"tsjiet-tsjieteweet-tsjieteweet\""
+ },
+ "sp280": {
+  "breeding": null,
+  "diet": "Insecten en bessen",
+  "behaviour": "Grote grasmus met gele ogen; jongen in het najaar onopvallend grijs",
+  "migration": "Schaarse najaarsgast (aug–okt), vooral op de Wadden",
+  "voice": "Ratelend \"tsjek-tsjek-tsjerrr\""
+ },
+ "sp281": {
+  "breeding": {
+   "period": "mrt–jun",
+   "nest": "Bolvormig mosnest achter een waterval of onder een brug",
+   "eggs": "4–5",
+   "incubation": "16–17 dagen",
+   "fledging": "20–24 dagen",
+   "broods": "1–2"
+  },
+  "diet": "Waterinsecten en larven, onder water gezocht",
+  "behaviour": "Loopt onder water over de bodem van snelstromende beken",
+  "migration": "Schaarse wintergast; incidentele broedvogel in Zuid-Limburg",
+  "voice": "Schel \"zit\"; kabbelende zang"
+ },
+ "sp282": {
+  "breeding": null,
+  "diet": "Insecten (sprinkhanen) en bessen",
+  "behaviour": "Vaak tussen Spreeuwen; volwassen vogel roze met zwarte kop",
+  "migration": "Schaarse gast uit Oost-Europa en Azië (jun–okt)",
+  "voice": "Spreeuwachtig, schor gekwetter"
+ },
+ "sp283": {
+  "breeding": null,
+  "diet": "Insecten, wormen en bessen",
+  "behaviour": "Witte borstband; schuw",
+  "migration": "Doortrekker (apr–mei, sep–okt) uit Scandinavië en de bergen",
+  "voice": "Hard \"tak-tak-tak\""
+ },
+ "sp284": {
+  "breeding": {
+   "period": "mei–jul",
+   "nest": "Komnest op de grond in dichte struwelen",
+   "eggs": "4–5",
+   "incubation": "13–14 dagen",
+   "fledging": "10–11 dagen",
+   "broods": "1"
+  },
+  "diet": "Insecten, wormen en bessen",
+  "behaviour": "Zeer verborgen in vochtige struwelen",
+  "migration": "Schaarse doortrekker (mei, aug–sep); zeer zeldzame broedvogel",
+  "voice": "Krachtige zang, lager en ratelender dan de Nachtegaal"
+ },
+ "sp285": {
+  "breeding": null,
+  "diet": "Kleine insecten",
+  "behaviour": "Klein, wipt met de staart met witte zijkanten",
+  "migration": "Schaarse najaarsgast (sep–okt) uit Oost-Europa",
+  "voice": "Droog ratelend \"zrrrt\""
+ },
+ "sp286": {
+  "breeding": {
+   "period": "mei–jul",
+   "nest": "Komnest verstopt in een graspol",
+   "eggs": "5–6",
+   "incubation": "12–14 dagen",
+   "fledging": "12–14 dagen",
+   "broods": "1"
+  },
+  "diet": "Insecten en spinnen",
+  "behaviour": "Zit op een hoge stengel of paaltje in bloemrijk grasland",
+  "migration": "Doortrekker (apr–mei, aug–sep); bijna verdwenen als broedvogel",
+  "voice": "Kort \"tjuu-tek-tek\""
+ },
+ "sp287": {
+  "breeding": null,
+  "diet": "Bessen van lijsterbes, meidoorn en sierstruiken",
+  "behaviour": "Weinig schuw; in groepen in bessenstruiken in steden",
+  "migration": "Wintergast uit Scandinavië en Rusland in invasiejaren (nov–mrt)",
+  "voice": "Hoog, zilverachtig trillend \"sirrr\""
  },
  "sp288": {
   "breeding": {
@@ -2244,6 +3434,62 @@ export const LIFE = Object.freeze({
   "migration": "Zomergast (apr–sep); overwintert in West-Afrika",
   "voice": "Scherp \"psie-ep\", als de Gele Kwikstaart"
  },
+ "sp290": {
+  "breeding": {
+   "period": "apr–jul",
+   "nest": "In een holte in een muur of steenhoop",
+   "eggs": "5–6",
+   "incubation": "12–14 dagen",
+   "fledging": "13–16 dagen",
+   "broods": "2"
+  },
+  "diet": "Insecten",
+  "behaviour": "Britse vorm van de Witte Kwikstaart; donkere rug",
+  "migration": "Schaarse doortrekker (mrt–apr, sep–okt); incidentele broedvogel langs de kust",
+  "voice": "\"Tsli-wiet\", als de Witte Kwikstaart"
+ },
+ "sp291": {
+  "breeding": null,
+  "diet": "Grote insecten",
+  "behaviour": "Grote pieper met lange poten; rechtop",
+  "migration": "Schaarse najaarsgast uit Siberië (sep–nov)",
+  "voice": "Schor \"schrièp\""
+ },
+ "sp292": {
+  "breeding": null,
+  "diet": "Insecten",
+  "behaviour": "Lijkt op een bleke kwikstaart op kaal zand",
+  "migration": "Doortrekker (apr–mei, aug–sep); verdwenen als broedvogel",
+  "voice": "\"Tsjilp\" als een mus; zang \"tsierli\""
+ },
+ "sp293": {
+  "breeding": null,
+  "diet": "Insecten",
+  "behaviour": "Gestreepte stuit; volwassen vogel met roestrode keel",
+  "migration": "Schaarse doortrekker (mei, sep–okt)",
+  "voice": "Ijl, lang \"piiieh\""
+ },
+ "sp294": {
+  "breeding": null,
+  "diet": "Insecten, kleine slakjes en kreeftjes",
+  "behaviour": "Foerageert langs de vloedlijn en op dijken",
+  "migration": "Wintergast uit Scandinavië (okt–apr)",
+  "voice": "Schel \"fiest\""
+ },
+ "sp295": {
+  "breeding": null,
+  "diet": "Zaden van kweldervegetatie",
+  "behaviour": "In groepen op kwelders en ruigtes langs de kust",
+  "migration": "Wintergast uit Noorwegen (okt–mrt)",
+  "voice": "Nasaal \"tsjèè-ie\""
+ },
+ "sp296": {
+  "breeding": null,
+  "diet": "Zaden van berk en els",
+  "behaviour": "In groepjes in berken, ook tussen andere barmsijzen",
+  "migration": "Wintergast uit Scandinavië (okt–mrt), onregelmatig",
+  "voice": "Droog \"tsjet-tsjet-tsjet\""
+ },
  "sp297": {
   "breeding": {
    "period": "mei–aug",
@@ -2257,6 +3503,20 @@ export const LIFE = Object.freeze({
   "behaviour": "Acrobatisch in berken en elzen; vaak in groepjes",
   "migration": "Standvogel; in de winter ook vogels uit het noorden",
   "voice": "Droog, metaalachtig \"tsjet-tsjet-tsjet\" in vlucht"
+ },
+ "sp298": {
+  "breeding": {
+   "period": "feb–jun",
+   "nest": "Komnest hoog in een den",
+   "eggs": "3–4",
+   "incubation": "14–16 dagen",
+   "fledging": "20–25 dagen",
+   "broods": "1"
+  },
+  "diet": "Zaden van dennenkegels",
+  "behaviour": "Zware snavel; opent harde dennenkegels",
+  "migration": "Schaarse gast in invasiejaren; incidentele broedvogel",
+  "voice": "Diep, krachtig \"kup-kup\""
  },
  "sp299": {
   "breeding": {
@@ -2285,5 +3545,40 @@ export const LIFE = Object.freeze({
   "behaviour": "Zingt in een vlinderachtige zangvlucht; in parken en op begraafplaatsen",
   "migration": "Zomergast; zeldzame broedvogel in het zuiden",
   "voice": "Snel, schel rinkelend gekwetter"
+ },
+ "sp301": {
+  "breeding": null,
+  "diet": "Zaden",
+  "behaviour": "In groepjes op kwelders en stoppelvelden",
+  "migration": "Wintergast (okt–mrt), schaars",
+  "voice": "Droog ratelend \"tirrrr\" en \"tjuu\""
+ },
+ "sp302": {
+  "breeding": null,
+  "diet": "Zaden van kweldervegetatie en strandplanten",
+  "behaviour": "Groepen op het strand en kwelders; witte vleugels in vlucht",
+  "migration": "Wintergast uit het hoge noorden (okt–mrt)",
+  "voice": "Rollend \"tirrrr\" en zacht \"tjuu\""
+ },
+ "sp303": {
+  "breeding": null,
+  "diet": "Zaden en insecten",
+  "behaviour": "Schuw; rust op akkers tijdens de trek",
+  "migration": "Doortrekker (apr–mei, aug–sep), zeer schaars; verdwenen als broedvogel",
+  "voice": "Zacht \"plet\"; zang \"dzie-dzie-dzie-dzuu\""
+ },
+ "sp304": {
+  "breeding": null,
+  "diet": "Zaden",
+  "behaviour": "Kleine gors met roodbruine wang",
+  "migration": "Schaarse najaarsgast uit Siberië (sep–nov)",
+  "voice": "Kort, scherp \"tik\""
+ },
+ "sp305": {
+  "breeding": null,
+  "diet": "Zaden",
+  "behaviour": "Gors met witte buik en kuifje",
+  "migration": "Schaarse najaarsgast uit Siberië (sep–nov)",
+  "voice": "Scherp \"tsit\""
  }
 });

@@ -9,9 +9,11 @@ Birdspot Library — H2–H4: soortdetail met tabbladen
   H2-06  Waarnemingen: aantal, plekken, eerste en laatste datum kloppen met de opgeslagen waarnemingen
   H2-07  compacte dwaalgast: melding 'beschrijving volgt', geen verenkleed
   H2-08  geen paginafouten; screenshots 390 px per tab
-  H3-01  data: elke standvogel en zomergast heeft leefwijze; velden gevuld; JS gelijk aan tools/species/species_life.json
+  H3-01  data: elke uitgewerkte inheemse soort (stand-, zomer-, winter-, trekvogel, schaarse gast) heeft leefwijze;
+         broedblok precies bij soorten die in NL (soms) broeden; JS gelijk aan tools/species/species_life.json
   H3-02  tab heet 'Leefwijze'; broedtegels, nest, voedsel/gedrag/trek en zang en roep staan gelijk aan de bron (Merel)
-  H3-03  soort zonder leefwijze (wintergast) toont de melding 'volgen nog' en geen broedblok
+  H3-03  soort zonder leefwijze (exoot/ontsnapt) toont 'volgen nog'; niet-broedende wintergast (Rotgans) toont
+         voedsel/gedrag/trek en zang maar geen broedblok
 
 Starten (vanuit repo-root):  python tests/test_species_detail.py
 """
@@ -188,16 +190,21 @@ def main():
 
             # H3 — leefwijze
             life = p.evaluate("async () => (await import('/src/data/speciesLife.js')).LIFE")
-            targets = [s["id"] for s in species if s["category"] in ("standvogel", "zomergast")]
-            missing = [i for i in targets if i not in life]
+            native = ("standvogel", "zomergast", "wintergast", "trekvogel", "schaarsegast")
+            targets = [s for s in species if s["category"] in native and not s.get("compact")]
+            missing = [s["id"] for s in targets if s["id"] not in life]
             assert not missing, f"H3-01 zonder leefwijze: {missing}"
-            for sid, e in life.items():
-                src = LIFE_SRC[sid]
+            for s in targets:
+                sid, e, src = s["id"], life[s["id"]], LIFE_SRC[s["id"]]
                 for k in ("diet", "behaviour", "migration", "voice"):
                     assert e[k] and e[k] == src[k], f"H3-01 {sid} {k}"
                 b = e["breeding"]
-                assert b and all(b[k] and b[k] == src[k] for k in ("period", "nest", "eggs", "incubation", "fledging", "broods")), f"H3-01 {sid} broeden"
-            print(f"H3-01 OK — leefwijze voor {len(targets)} standvogels en zomergasten")
+                if s["breeding"] in ("ja", "incidenteel"):
+                    assert b and all(b[k] and b[k] == src[k] for k in ("period", "nest", "eggs", "incubation", "fledging", "broods")), f"H3-01 {sid} broeden"
+                else:
+                    assert b is None, f"H3-01 {sid} broedblok bij niet-broedvogel"
+            assert set(life) == {s["id"] for s in targets}, "H3-01 leefwijze voor onbekende soort"
+            print(f"H3-01 OK — leefwijze voor {len(targets)} inheemse soorten")
 
             me = next(s for s in species if s["nameNL"] == "Merel")
             ml = life[me["id"]]
@@ -218,14 +225,25 @@ def main():
             close_detail()
             print("H3-02 OK — Leefwijze-tab en zang en roep (Merel)")
 
-            wg = next(s for s in species if s["category"] == "wintergast" and s["id"] not in life and not s.get("compact"))
-            open_species(wg["nameNL"], wg["id"])
+            ex = next(s for s in species if s["category"] in ("exoot", "ontsnapt") and s["id"] not in life and not s.get("compact"))
+            open_species(ex["nameNL"], ex["id"])
             tab("status")
             assert p.locator('#sdPanel-status .sd-note').count() == 1
             assert p.locator('#sdPanel-status .sd-breed').count() == 0
             assert p.locator('#sdPanel-herkenning .sd-voice').count() == 0
             close_detail()
-            print("H3-03 OK — zonder leefwijze:", wg["nameNL"])
+            rg = next(s for s in species if s["nameNL"] == "Rotgans")
+            assert rg["breeding"] == "nee", "testdata: Rotgans broedt niet in NL"
+            open_species("Rotgans", rg["id"])
+            p.locator('#sdPanel-herkenning .sd-voice').wait_for(timeout=5000)
+            tab("status")
+            assert p.locator('#sdPanel-status .sd-breed').count() == 0
+            assert p.locator('#sdPanel-status .sd-fact').count() == 3
+            assert p.locator('#sdPanel-status .sd-note').count() == 0
+            p.locator('#sdPanel-status .sd-facts').scroll_into_view_if_needed()
+            p.screenshot(path=str(SHOTS / "species_h3_rotgans_390.png"))
+            close_detail()
+            print("H3-03 OK — zonder leefwijze:", ex["nameNL"], "· niet-broedvogel Rotgans zonder broedblok")
 
             assert not errors, f"H2-08 paginafouten: {errors}"
             print("H2-08 OK — geen paginafouten")
