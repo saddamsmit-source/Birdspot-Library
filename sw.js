@@ -12,7 +12,7 @@
  *   birdspot-media           — foto's/IDB-exports (permanent)
  */
 
-const APP_VERSION = '1.14.0-map-k5-links';
+const APP_VERSION = '1.15.0-map-k6-seasons';
 const APP_CACHE   = `birdspot-app-v${APP_VERSION}`;
 const MEDIA_CACHE = 'birdspot-media';
 
@@ -65,6 +65,7 @@ const PRECACHE_URLS = [
   '/src/features/map/view.js',
   '/src/features/map/centerPin.js',
   '/src/features/map/placePrompt.js',
+  '/src/features/map/insights.js',
   '/src/data/places.js',
   '/src/features/map/visualization.js',
   '/src/features/profile/view.js',

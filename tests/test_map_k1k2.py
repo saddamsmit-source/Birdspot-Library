@@ -1,6 +1,6 @@
 """
 Birdspot Library — Kaart K1/K2
-  K1-01  kaart over (bijna) het hele scherm: knoppen bedekken samen ≤ 15% van de kaart
+  K1-01  kaart over (bijna) het hele scherm: knoppen bedekken samen ≤ 20% van de kaart (K6: incl. seizoenslegenda)
   K1-02  filters in een uitklappaneel: standaard dicht, open via filterknop, punt bij actief filter, tik op kaart sluit
   K1-03  luchtfoto (PDOK) aan/uit; keuze blijft na herladen bewaard
   K2-01  nauwkeurigheid: ±47 m op zoom 13, ±3 m op zoom 17, grens 50 m
@@ -69,11 +69,11 @@ def main():
             open_map()
             mp = rect(p, "#leafletMap")
             covered = 0
-            for sel in (".map-topbar", ".map-meta .map-toolbar__count", ".map-meta .map-legend", ".map-side-controls", "#mapAddPinBtn"):
+            for sel in (".map-topbar", ".map-meta .map-toolbar__count", ".map-meta .map-legend", ".map-meta .map-legend--seasons", ".map-side-controls", "#mapAddPinBtn"):
                 r = rect(p, sel)
                 covered += r["w"] * r["h"]
             share = covered / (mp["w"] * mp["h"])
-            assert share <= 0.15, f"K1-01 knoppen bedekken {share:.0%} van de kaart"
+            assert share <= 0.20, f"K1-01 knoppen bedekken {share:.0%} van de kaart"
             assert rect(p, ".map-topbar")["h"] <= 50
             p.screenshot(path=str(SHOTS / "map_k1_390.png"))
             print(f"K1-01 OK — knoppen bedekken {share:.0%} van de kaart")
