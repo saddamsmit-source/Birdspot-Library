@@ -12,7 +12,7 @@
  *   birdspot-media           — foto's/IDB-exports (permanent)
  */
 
-const APP_VERSION = '1.19.17-guide-source-audit-github-only';
+const APP_VERSION = '1.19.18-map-k6-seasons';
 const APP_CACHE   = `birdspot-app-v${APP_VERSION}`;
 const MEDIA_CACHE = 'birdspot-media';
 
@@ -75,6 +75,7 @@ const PRECACHE_URLS = [
   '/src/features/map/view.js',
   '/src/features/map/centerPin.js',
   '/src/features/map/placePrompt.js',
+  '/src/features/map/insights.js',
   '/src/data/places.js',
   '/src/features/map/visualization.js',
   '/src/features/profile/view.js',

@@ -19,9 +19,10 @@ import { placeStatus, MAP_STATUS, MAP_ORDER, statusForSighting, filteredSighting
 import { escHtml } from '../../utils/html.js';
 import { openPhotoViewer } from '../../utils/photoViewer.js';
 import { ensurePlaces, loadPlaces, placeStats, renamePlace } from '../../data/places.js';
-import { changePhotos, getMediaByPlace } from '../../data/db.js';
+import { changePhotos, savePhoto, getMediaByPlace } from '../../data/db.js';
 import { openMediaPreview } from '../../utils/validateMedia.js';
 import { showToast } from '../../app.js';
+import { SEASON_COLORS, SEASON_ORDER, seasonCounts, monthHistogram, bestMonths, monthLabel, isNotable, cloudRadiusPx, applyLegendFilters } from './insights.js';
 import { centerPinMarkup, attachBaseLayers, pinAccuracyM, accuracyLabel, coordLabel, MAX_PIN_ACCURACY_M, LAYERS } from './centerPin.js';
 
 // Leaflet + MarkerCluster worden lazy geladen via <script> tags die we
@@ -60,10 +61,13 @@ export function renderMap(el, target = {}) {
       </header>
       <div class="map-meta">
         <span class="map-toolbar__count" id="mapCount">laden…</span>
-        <div class="map-legend" aria-label="Legenda: kleur per waarneming">
-          <span><i class="map-legend__dot map-legend__dot--seen"></i>Gezien</span>
-          <span><i class="map-legend__dot map-legend__dot--heard"></i>Gehoord</span>
-          <span><i class="map-legend__dot map-legend__dot--both"></i>Beide</span>
+        <div class="map-legend" role="group" aria-label="Legenda en filter: kleur per waarneming">
+          <button type="button" data-legend="seen" aria-pressed="false"><i class="map-legend__dot map-legend__dot--seen"></i>Gezien</button>
+          <button type="button" data-legend="heard" aria-pressed="false"><i class="map-legend__dot map-legend__dot--heard"></i>Gehoord</button>
+          <button type="button" data-legend="both" aria-pressed="false"><i class="map-legend__dot map-legend__dot--both"></i>Beide</button>
+        </div>
+        <div class="map-legend map-legend--seasons" role="group" aria-label="Legenda en filter: seizoen (wolken)">
+          ${SEASON_ORDER.map(k=>`<button type="button" data-season="${k}" aria-pressed="false"><i class="map-legend__cloud" style="background:${SEASON_COLORS[k]}"></i>${k[0].toUpperCase()+k.slice(1)}</button>`).join('')}
         </div>
       </div>
 
@@ -83,6 +87,13 @@ export function renderMap(el, target = {}) {
             ${MAP_ORDER.map(key=>`<option value="${key}">${MAP_STATUS[key].label} (0)</option>`).join('')}
           </select>
           <span class="bird-map-dropdown-chevron" aria-hidden="true">⌄</span>
+        </div>
+        <div class="map-extra-filters">
+          <label class="map-switch"><input type="checkbox" id="mapCloudsToggle" checked> Seizoenswolken tonen</label>
+          <label class="map-switch"><input type="checkbox" id="mapNotableToggle"> <span>★ Alleen bijzondere waarnemingen</span></label>
+          <label class="map-period">Periode
+            <select id="mapPeriodSelect"><option value="all">Alles</option><option value="year">Dit jaar</option><option value="12m">Afgelopen 12 maanden</option></select>
+          </label>
         </div>
         <p class="bird-map-filter-feedback" id="mapFilterFeedback" role="status" aria-live="polite">Alle waarnemingen met een pin</p>
       </section>
@@ -265,8 +276,10 @@ function initMap(screenEl, sightings, leafletOk, { placeId, sightingId, section,
   const clearFilters = screenEl.querySelector('#mapClearFilters');
   const feedback = screenEl.querySelector('#mapFilterFeedback');
   const countEl = screenEl.querySelector('#mapCount');
-  const filterState = {speciesSearch: mapView?.search || '', status: mapView?.status || 'all'};
+  const filterState = {speciesSearch: mapView?.search || '', status: mapView?.status || 'all', legend:null,seasons:new Set(),notableOnly:false,period:'all',clouds:true};
   speciesSearch.value = filterState.speciesSearch;
+  const speciesById=new Map(SPECIES.map(x=>[x.id,x]));
+  const extraActive=()=>!!filterState.legend||filterState.seasons.size>0||filterState.notableOnly||filterState.period!=='all';
   let updateMapMarkers=()=>{};
   let showSearchResults=()=>{};
   // K5: plekken zijn doorzoekbaar op naam
@@ -282,14 +295,18 @@ function initMap(screenEl, sightings, leafletOk, { placeId, sightingId, section,
   }
 
   function applyFilters(){
-    const matches=filteredSightings(geoSightings,filterState,SPECIES,placeNames);
+    // K6: legenda (kleur/seizoen), bijzonder en periode bovenop zoeken en statusfilter
+    const matches=applyLegendFilters(filteredSightings(geoSightings,filterState,SPECIES,placeNames),filterState,speciesById);
     const speciesMatches=filteredSightings(geoSightings,{speciesSearch:filterState.speciesSearch},SPECIES,placeNames);
     const counts=statusCounts(speciesMatches);
-    const filtered=(filterState.status!=='all'||!!filterState.speciesSearch);
+    const filtered=(filterState.status!=='all'||!!filterState.speciesSearch||extraActive());
     screenEl.querySelector('#mapScreen')?.classList.toggle('has-active-filters',filtered);
     clearFilters.hidden=!filtered;
     const dotEl=screenEl.querySelector('#mapFilterDot');
-    if(dotEl)dotEl.hidden=filterState.status==='all';
+    if(dotEl)dotEl.hidden=filterState.status==='all'&&!extraActive();
+    screenEl.querySelectorAll('[data-legend]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.legend===filterState.legend)));
+    screenEl.querySelectorAll('[data-season]').forEach(b=>b.setAttribute('aria-pressed',String(filterState.seasons.has(b.dataset.season))));
+    screenEl.querySelector('.map-legend--seasons')?.toggleAttribute('hidden',!filterState.clouds);
     // One native dropdown avoids horizontal overflow on narrow phones.
     // Counts are recalculated from the currently searched species, not from
     // unrelated observations or records without pins.
@@ -327,7 +344,21 @@ function initMap(screenEl, sightings, leafletOk, { placeId, sightingId, section,
     filterState.status=e.target.value;
     applyFilters();
   });
+  // K6: klikbare legenda = filter (nogmaals tikken zet het filter uit)
+  screenEl.querySelectorAll('[data-legend]').forEach(b=>b.addEventListener('click',()=>{
+    filterState.legend=filterState.legend===b.dataset.legend?null:b.dataset.legend;applyFilters();
+  }));
+  screenEl.querySelectorAll('[data-season]').forEach(b=>b.addEventListener('click',()=>{
+    const k=b.dataset.season;
+    if(filterState.seasons.has(k))filterState.seasons.delete(k);else filterState.seasons.add(k);
+    applyFilters();
+  }));
+  screenEl.querySelector('#mapCloudsToggle').addEventListener('change',e=>{filterState.clouds=e.target.checked;applyFilters();});
+  screenEl.querySelector('#mapNotableToggle').addEventListener('change',e=>{filterState.notableOnly=e.target.checked;applyFilters();});
+  screenEl.querySelector('#mapPeriodSelect').addEventListener('change',e=>{filterState.period=e.target.value;applyFilters();});
   clearFilters.addEventListener('click',()=>{
+    filterState.legend=null;filterState.seasons.clear();filterState.notableOnly=false;filterState.period='all';
+    screenEl.querySelector('#mapNotableToggle').checked=false;screenEl.querySelector('#mapPeriodSelect').value='all';
     filterState.speciesSearch='';filterState.status='all';speciesSearch.value='';
     applyFilters();speciesSearch.focus();
   });
@@ -472,7 +503,7 @@ function initMap(screenEl, sightings, leafletOk, { placeId, sightingId, section,
     const status=placeStatus(records);
     const label=records.length===1?records[0].speciesName:place.name+' · '+records.length+' waarnemingen';
     const marker=window.L.marker([Number(place.lat),Number(place.lon)],{
-      icon:makeBirdIcon(null,status,label,records.length),
+      icon:makeBirdIcon(null,status,label,records.length,records.some(r=>isNotable(r,speciesById))),
       title:label+' · '+MAP_STATUS[status].label,
       autoPanOnFocus: false,
     });
@@ -482,9 +513,26 @@ function initMap(screenEl, sightings, leafletOk, { placeId, sightingId, section,
   }
 
   map.addLayer(_clusterLayer);
+  // K6: seizoenswolken — per plek een zachte vlek per seizoen, groter bij meer waarnemingen
+  let cloudLayer=window.L.layerGroup?window.L.layerGroup().addTo(map):null;
+  const drawClouds=(groups)=>{
+    if(!cloudLayer)return;
+    cloudLayer.clearLayers();
+    if(!filterState.clouds||!window.L.circleMarker)return;
+    for(const {place,records} of groups){
+      const counts=seasonCounts(records);
+      for(const k of SEASON_ORDER){
+        if(!counts[k]||(filterState.seasons.size&&!filterState.seasons.has(k)))continue;
+        window.L.circleMarker([Number(place.lat),Number(place.lon)],{radius:cloudRadiusPx(counts[k]),stroke:false,
+          fillColor:SEASON_COLORS[k],fillOpacity:.38,interactive:false,className:'season-cloud season-cloud--'+k}).addTo(cloudLayer);
+      }
+    }
+  };
   updateMapMarkers=(matches)=>{
+    const groups=groupByPlace(matches);
     _clusterLayer.clearLayers();
-    _clusterLayer.addLayers(groupByPlace(matches).map(markerFor));
+    _clusterLayer.addLayers(groups.map(markerFor));
+    drawClouds(groups);
   };
 
   applyFilters();
@@ -587,6 +635,13 @@ function openPlaceSheet(screenEl, place, visibleRecords, map, mediaId, trigger =
         '<button type="button" id="placeRenameSave">Bewaar</button></div>')+
       (st&&st.species.length?'<h4 class="place-h">Soorten hier</h4><div class="place-species">'+st.species.map(sp=>
         '<button type="button" class="place-species__chip" data-species="'+escHtml(sp.speciesId||'')+'">'+escHtml(sp.name)+' <b>'+sp.count+'×</b></button>').join('')+'</div>':'')+
+      (()=>{
+        const hist=monthHistogram(rows),best=bestMonths(hist),max=Math.max(1,...hist);
+        if(!best.length)return '';
+        return '<h4 class="place-h">Beste maanden</h4><div class="place-months" role="img" aria-label="Beste maanden: '+best.map(monthLabel).join(', ')+'">'+
+          hist.map((n,i)=>'<span class="place-month'+(best.includes(i)?' is-best':'')+'" title="'+monthLabel(i)+': '+n+'"><i style="height:'+Math.round(8+40*n/max)+'px"></i><b>'+monthLabel(i)[0].toUpperCase()+'</b></span>').join('')+
+          '</div><p class="place-months__caption">Beste maanden: '+best.map(monthLabel).join(', ')+'</p>';
+      })()+
       '<h4 class="place-h">Waarnemingen</h4><ul class="place-sightings">'+sorted.map(s=>{
         const status=statusForSighting(s);
         return '<li><button type="button" data-sighting="'+escHtml(s.id)+'">'+
@@ -790,14 +845,15 @@ const PIN_GLYPH={
   both:'<svg viewBox="0 0 24 24"><path d="M1.5 12s3-5 7.5-5 7.5 5 7.5 5-3 5-7.5 5-7.5-5-7.5-5z"/><circle cx="9" cy="12" r="1.8"/><path d="M19 5v9"/><circle cx="20.5" cy="15.5" r="1.6"/></svg>',
   unknown:'<b>?</b>',
 };
-function makeBirdIcon(_emoji,status,speciesName,count=1) {
+function makeBirdIcon(_emoji,status,speciesName,count=1,notable=false) {
   const style=MAP_STATUS[status]||MAP_STATUS.unknown;
-  const description=escHtml((speciesName||'Vogelwaarneming')+' · '+style.label);
+  const description=escHtml((speciesName||'Vogelwaarneming')+' · '+style.label+(notable?' · bijzondere waarneming':''));
   return window.L.divIcon({
-    html:'<div class="bird-pin bird-pin--status-'+status+'" role="img" aria-label="'+description+'">'+
+    html:'<div class="bird-pin bird-pin--status-'+status+(notable?' bird-pin--notable':'')+'" role="img" aria-label="'+description+'">'+
       '<svg class="bird-pin-shape" viewBox="0 0 30 40" aria-hidden="true"><path d="M15 1.5C7.5 1.5 1.5 7.4 1.5 14.7 1.5 24.6 15 38.5 15 38.5S28.5 24.6 28.5 14.7C28.5 7.4 22.5 1.5 15 1.5z"/></svg>'+
       '<span class="bird-pin-glyph" aria-hidden="true">'+(PIN_GLYPH[status]||PIN_GLYPH.unknown)+'</span>'+
-      (count>1?'<span class="bird-pin-count" aria-hidden="true">'+count+'</span>':'')+'</div>',
+      (count>1?'<span class="bird-pin-count" aria-hidden="true">'+count+'</span>':'')+
+      (notable?'<span class="bird-pin-star" aria-hidden="true">★</span>':'')+'</div>',
     className:'',
     iconSize:[30,40],
     iconAnchor:[15,39],
