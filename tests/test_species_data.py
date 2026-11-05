@@ -7,6 +7,7 @@ Birdspot Library — Fase I1: soortdata en status
   I1-05  soortenlijst toont alleen categorieën met soorten; elke tab rendert zijn soorten
   I1-06  geen paginafouten; screenshots 390 px
   I2-01  alle algemene en vrij algemene regelmatige soorten uit de bron staan in de app
+  I3-01  alle schaarse regelmatige soorten en schaarse gasten uit de bron staan in de app
   I2-02  elke soort heeft herkenning, maten, verenkleed, verspreiding en familie
 
 Starten (vanuit repo-root):  python tests/test_species_data.py
@@ -83,6 +84,11 @@ def check_data(species, labels, active):
     have = {s["nameSci"] for s in species}
     absent = [r["nl"] for r in common if r["sci"] not in have]
     assert not absent, f"I2-01 ontbrekende algemene soorten: {absent}"
+    # I3-01: elke schaarse regelmatige soort en elke schaarse gast uit de bron staat in de app
+    scarce = [r for r in SOURCE if (r["status"] in regular and r["frequentie"] not in ("Algemeen", "Vrij algemeen"))
+              or r["status"] == "Schaarse gast"]
+    absent = [r["nl"] for r in scarce if r["sci"] not in have]
+    assert not absent, f"I3-01 ontbrekende schaarse soorten: {absent}"
     # I2-02: elke soort heeft een volledige basisbeschrijving
     for s in species:
         for key in ("fieldmarks", "distribution", "family"):
@@ -117,7 +123,7 @@ def main():
               return { species: m.SPECIES, labels: Object.keys(m.CATEGORY_LABELS), active: m.activeCategories() };
             }""")
             counts = check_data(data["species"], data["labels"], data["active"])
-            print("I1-01..04, I2-01..02 OK —", len(data["species"]), "soorten", counts)
+            print("I1-01..04, I2-01..02, I3-01 OK —", len(data["species"]), "soorten", counts)
 
             p.locator('.nav-item[data-route="species"]').click()
             p.locator("#speciesFilters .filter-chip").first.wait_for(timeout=10000)
@@ -139,7 +145,7 @@ def main():
             assert not errors, f"I1-06 paginafouten: {errors}"
             print("I1-06 OK — geen paginafouten")
             browser.close()
-    print("Fase I1+I2: alle controles geslaagd")
+    print("Fase I1–I3: alle controles geslaagd")
 
 
 if __name__ == "__main__":
