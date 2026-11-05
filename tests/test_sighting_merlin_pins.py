@@ -172,6 +172,8 @@ def main():
             assert page.locator('.species-saved #speciesOnlyFavorites').count()==1
             assert page.locator('.species-toolbar #speciesOnlyFavorites').count()==0
             assert page.locator('.species-row[data-id="sp002"] .species-observation-status').inner_text()==''
+            page.locator('#speciesFilters [data-cat="alle"]').click()
+            page.locator('#speciesSearch').fill('Stadsduif')
             assert page.locator('.species-row[data-id="sp001"] .species-observation-status').inner_text()=='Waargenomen'
             page.locator('.species-row[data-id="sp001"] .species-row__body').click()
             page.locator('[data-sd-tab="mijn"]').click()
