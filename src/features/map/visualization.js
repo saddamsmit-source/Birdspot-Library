@@ -6,11 +6,13 @@
  * Old sightings without observationMethod stay unknown (not silently "seen").
  * These helpers do not read/write storage or geocode location strings.
  */
+// K3: vaste kleurafspraak van de eigenaar — gezien blauw, gehoord geel, beide oranje.
+// Merlin Sound ID is een gehoorde waarneming: zelfde geel, eigen symbool.
 export const MAP_STATUS=Object.freeze({
-  seen:   Object.freeze({label:'Gezien',color:'#2EBE96',symbol:'◉'}),
-  merlin: Object.freeze({label:'Merlin Sound ID',color:'#A784E9',symbol:'♫'}),
-  both:   Object.freeze({label:'Gezien én gehoord',color:'#DCAF63',symbol:'◉♫'}),
-  heard:  Object.freeze({label:'Alleen gehoord',color:'#57A9D5',symbol:'♪'}),
+  seen:   Object.freeze({label:'Gezien',color:'#2F7DE1',symbol:'◉'}),
+  merlin: Object.freeze({label:'Merlin Sound ID',color:'#F2C230',symbol:'♫'}),
+  both:   Object.freeze({label:'Gezien én gehoord',color:'#F07A26',symbol:'◉♫'}),
+  heard:  Object.freeze({label:'Alleen gehoord',color:'#F2C230',symbol:'♪'}),
   unknown:Object.freeze({label:'Niet vastgelegd',color:'#88939B',symbol:'?'}),
 });
 export const MAP_ORDER=Object.freeze(['seen','merlin','both','heard','unknown']);

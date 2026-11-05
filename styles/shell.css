@@ -5,6 +5,8 @@
 
 /* ── Reset ────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* hidden wint altijd van display-regels in componenten (bv. .confirm-overlay{display:flex}) */
+[hidden] { display: none !important; }
 
 html, body {
   height: 100%;

@@ -1,0 +1,651 @@
+{
+ "_uitleg": "Diashow: 50 bijzondere Nederlandse vogels in 15 groepen. pose stuurt de fotokeuze: vlucht (roofvogels, gieren, sterns, jagers), tak (kleine vogels), natuurlijk (reigers, steltlopers, hoenders, ganzen in hun leefgebied). queries = extra zoektermen, aliases = andere namen in Commons-titels, info = herkenningstekst als de soortendatabase nog geen beschrijving heeft.",
+ "groups": [
+  [
+   "zang",
+   "Zangvogels",
+   [
+    {
+     "id": "sp113",
+     "nl": "Wielewaal",
+     "latin": "Oriolus oriolus",
+     "pose": "tak",
+     "queries": [
+      "\"Oriolus oriolus\" male",
+      "\"Eurasian golden oriole\" male",
+      "Pirol Männchen"
+     ]
+    },
+    {
+     "id": "sp262",
+     "nl": "Grauwe Klauwier",
+     "latin": "Lanius collurio",
+     "pose": "tak"
+    },
+    {
+     "id": "sp042",
+     "nl": "Roodmus",
+     "latin": "Carpodacus erythrinus",
+     "pose": "tak",
+     "queries": [
+      "\"Carpodacus erythrinus\" male"
+     ]
+    },
+    {
+     "id": "sp282",
+     "nl": "Roze Spreeuw",
+     "latin": "Pastor roseus",
+     "pose": "tak",
+     "queries": [
+      "\"Pastor roseus\" adult",
+      "\"Sturnus roseus\"",
+      "\"Rosy starling\""
+     ],
+     "aliases": [
+      "Sturnus roseus",
+      "Rosy starling",
+      "Rosy Starling"
+     ]
+    }
+   ]
+  ],
+  [
+   "riet",
+   "Rietvogels",
+   [
+    {
+     "id": "sp268",
+     "nl": "Baardman",
+     "latin": "Panurus biarmicus",
+     "pose": "tak"
+    },
+    {
+     "id": "sp108",
+     "nl": "Grote Karekiet",
+     "latin": "Acrocephalus arundinaceus",
+     "pose": "tak"
+    },
+    {
+     "id": "sp274",
+     "nl": "Snor",
+     "latin": "Locustella luscinioides",
+     "pose": "tak",
+     "queries": [
+      "\"Locustella luscinioides\" singing",
+      "\"Savi's warbler\""
+     ],
+     "aliases": [
+      "Savi's warbler",
+      "Savi's Warbler"
+     ]
+    },
+    {
+     "id": "sp273",
+     "nl": "Krekelzanger",
+     "latin": "Locustella fluviatilis",
+     "pose": "tak",
+     "queries": [
+      "\"Locustella fluviatilis\" singing",
+      "\"River warbler\"",
+      "Schlagschwirl"
+     ],
+     "aliases": [
+      "River warbler",
+      "River Warbler",
+      "Schlagschwirl"
+     ]
+    }
+   ]
+  ],
+  [
+   "valk",
+   "Valken",
+   [
+    {
+     "id": "sp009",
+     "nl": "Slechtvalk",
+     "latin": "Falco peregrinus",
+     "pose": "vlucht"
+    },
+    {
+     "id": "sp261",
+     "nl": "Boomvalk",
+     "latin": "Falco subbuteo",
+     "pose": "vlucht"
+    },
+    {
+     "id": "sp259",
+     "nl": "Roodpootvalk",
+     "latin": "Falco vespertinus",
+     "pose": "vlucht",
+     "queries": [
+      "Rotfußfalke Männchen",
+      "\"Falco vespertinus\" male",
+      "Faucon kobez mâle",
+      "\"Red-footed falcon\" male"
+     ],
+     "aliases": [
+      "Red-footed falcon",
+      "Red-footed Falcon",
+      "Rotfußfalke",
+      "Faucon kobez"
+     ]
+    }
+   ]
+  ],
+  [
+   "arend",
+   "Arenden",
+   [
+    {
+     "id": "sp252",
+     "nl": "Zeearend",
+     "latin": "Haliaeetus albicilla",
+     "pose": "vlucht"
+    },
+    {
+     "id": "sp247",
+     "nl": "Visarend",
+     "latin": "Pandion haliaetus",
+     "pose": "vlucht"
+    },
+    {
+     "id": "sp464",
+     "nl": "Slangenarend",
+     "latin": "Circaetus gallicus",
+     "pose": "vlucht",
+     "queries": [
+      "\"Circaetus gallicus\" flight",
+      "\"Short-toed snake eagle\" flight"
+     ],
+     "aliases": [
+      "Short-toed snake eagle",
+      "Short-toed Snake Eagle",
+      "Short-toed eagle"
+     ],
+     "info": "Grote lichte arend met ronde, uilachtige kop en gele ogen; bidt boven open land en vangt slangen en hagedissen."
+    }
+   ]
+  ],
+  [
+   "gier",
+   "Gieren",
+   [
+    {
+     "id": "sp463",
+     "nl": "Vale Gier",
+     "latin": "Gyps fulvus",
+     "pose": "vlucht",
+     "queries": [
+      "\"Gyps fulvus\" flight",
+      "\"Griffon vulture\" flight"
+     ],
+     "aliases": [
+      "Griffon vulture",
+      "Griffon Vulture"
+     ],
+     "info": "Enorme zandbruine gier met lichte kale kop en witte kraag; zweeft op brede vleugels met lange 'vingers', soms in groepen."
+    },
+    {
+     "id": "sp462",
+     "nl": "Monniksgier",
+     "latin": "Aegypius monachus",
+     "pose": "vlucht",
+     "queries": [
+      "\"Aegypius monachus\" flight",
+      "\"Cinereous vulture\" flight"
+     ],
+     "aliases": [
+      "Cinereous vulture",
+      "Cinereous Vulture",
+      "Black vulture"
+     ],
+     "info": "Grootste roofvogel van Europa: egaal donkerbruin met plankvormige vleugels en een kale, blauwgrijze kop."
+    }
+   ]
+  ],
+  [
+   "kiekendief",
+   "Kiekendieven en andere roofvogels",
+   [
+    {
+     "id": "sp010",
+     "nl": "Rode Wouw",
+     "latin": "Milvus milvus",
+     "pose": "vlucht"
+    },
+    {
+     "id": "sp173",
+     "nl": "Bruine Kiekendief",
+     "latin": "Circus aeruginosus",
+     "pose": "vlucht"
+    },
+    {
+     "id": "sp251",
+     "nl": "Grauwe Kiekendief",
+     "latin": "Circus pygargus",
+     "pose": "vlucht",
+     "queries": [
+      "\"Circus pygargus\" male flight",
+      "\"Montagu's harrier\" flight"
+     ],
+     "aliases": [
+      "Montagu's harrier",
+      "Montagu's Harrier"
+     ]
+    },
+    {
+     "id": "sp249",
+     "nl": "Blauwe Kiekendief",
+     "latin": "Circus cyaneus",
+     "pose": "vlucht",
+     "queries": [
+      "\"Circus cyaneus\" male flight",
+      "\"Hen harrier\" flight"
+     ],
+     "aliases": [
+      "Hen harrier",
+      "Hen Harrier"
+     ]
+    },
+    {
+     "id": "sp248",
+     "nl": "Wespendief",
+     "latin": "Pernis apivorus",
+     "pose": "vlucht",
+     "queries": [
+      "Wespenbussard Flug",
+      "\"Pernis apivorus\" adult flight",
+      "Bondrée apivore vol",
+      "\"European honey buzzard\" flight"
+     ],
+     "aliases": [
+      "European honey buzzard",
+      "Honey buzzard",
+      "European Honey Buzzard",
+      "Wespenbussard",
+      "Bondrée apivore"
+     ]
+    }
+   ]
+  ],
+  [
+   "reiger",
+   "Reigers en ooievaars",
+   [
+    {
+     "id": "sp084",
+     "nl": "Purperreiger",
+     "latin": "Ardea purpurea",
+     "pose": "natuurlijk"
+    },
+    {
+     "id": "sp243",
+     "nl": "Roerdomp",
+     "latin": "Botaurus stellaris",
+     "pose": "natuurlijk"
+    },
+    {
+     "id": "sp244",
+     "nl": "Woudaap",
+     "latin": "Ixobrychus minutus",
+     "pose": "natuurlijk",
+     "queries": [
+      "\"Ixobrychus minutus\" male",
+      "\"Little bittern\""
+     ],
+     "aliases": [
+      "Little bittern",
+      "Little Bittern"
+     ]
+    },
+    {
+     "id": "sp085",
+     "nl": "Kwak",
+     "latin": "Nycticorax nycticorax",
+     "pose": "natuurlijk",
+     "queries": [
+      "\"Nycticorax nycticorax\" adult",
+      "\"Black-crowned night heron\""
+     ],
+     "aliases": [
+      "Black-crowned night heron",
+      "Black-crowned Night Heron"
+     ]
+    },
+    {
+     "id": "sp241",
+     "nl": "Zwarte Ooievaar",
+     "latin": "Ciconia nigra",
+     "pose": "natuurlijk",
+     "queries": [
+      "\"Ciconia nigra\"",
+      "\"Black stork\""
+     ],
+     "aliases": [
+      "Black stork",
+      "Black Stork"
+     ]
+    }
+   ]
+  ],
+  [
+   "stelt",
+   "Steltlopers",
+   [
+    {
+     "id": "sp143",
+     "nl": "Kluut",
+     "latin": "Recurvirostra avosetta",
+     "pose": "natuurlijk"
+    },
+    {
+     "id": "sp101",
+     "nl": "Grutto",
+     "latin": "Limosa limosa",
+     "pose": "natuurlijk"
+    },
+    {
+     "id": "sp208",
+     "nl": "Kemphaan",
+     "latin": "Calidris pugnax",
+     "pose": "natuurlijk",
+     "queries": [
+      "\"Philomachus pugnax\" male breeding",
+      "\"Calidris pugnax\" male",
+      "\"Ruff\" lek"
+     ],
+     "aliases": [
+      "Philomachus pugnax",
+      "Ruff"
+     ]
+    },
+    {
+     "id": "sp205",
+     "nl": "Steltkluut",
+     "latin": "Himantopus himantopus",
+     "pose": "natuurlijk",
+     "queries": [
+      "\"Himantopus himantopus\"",
+      "\"Black-winged stilt\""
+     ],
+     "aliases": [
+      "Black-winged stilt",
+      "Black-winged Stilt"
+     ]
+    }
+   ]
+  ],
+  [
+   "meeuw",
+   "Meeuwen en sterns",
+   [
+    {
+     "id": "sp225",
+     "nl": "Zwartkopmeeuw",
+     "latin": "Ichthyaetus melanocephalus",
+     "pose": "vlucht"
+    },
+    {
+     "id": "sp163",
+     "nl": "Dwergmeeuw",
+     "latin": "Hydrocoloeus minutus",
+     "pose": "vlucht"
+    },
+    {
+     "id": "sp233",
+     "nl": "Zwarte Stern",
+     "latin": "Chlidonias niger",
+     "pose": "vlucht",
+     "queries": [
+      "\"Chlidonias niger\" flight",
+      "\"Black tern\" flight"
+     ],
+     "aliases": [
+      "Black tern",
+      "Black Tern"
+     ]
+    },
+    {
+     "id": "sp232",
+     "nl": "Reuzenstern",
+     "latin": "Hydroprogne caspia",
+     "pose": "vlucht",
+     "queries": [
+      "\"Hydroprogne caspia\" flight",
+      "\"Caspian tern\" flight"
+     ],
+     "aliases": [
+      "Caspian tern",
+      "Caspian Tern",
+      "Sterna caspia"
+     ]
+    }
+   ]
+  ],
+  [
+   "uil",
+   "Uilen",
+   [
+    {
+     "id": "sp255",
+     "nl": "Velduil",
+     "latin": "Asio flammeus",
+     "pose": "vlucht"
+    },
+    {
+     "id": "sp254",
+     "nl": "Oehoe",
+     "latin": "Bubo bubo",
+     "pose": "natuurlijk",
+     "queries": [
+      "\"Bubo bubo\" wild",
+      "\"Eurasian eagle-owl\" wild",
+      "Uhu Bubo bubo Felsen"
+     ]
+    }
+   ]
+  ],
+  [
+   "specht",
+   "Spechten",
+   [
+    {
+     "id": "sp018",
+     "nl": "Zwarte Specht",
+     "latin": "Dryocopus martius",
+     "pose": "tak"
+    },
+    {
+     "id": "sp020",
+     "nl": "Middelste Bonte Specht",
+     "latin": "Dendrocoptes medius",
+     "pose": "tak"
+    },
+    {
+     "id": "sp258",
+     "nl": "Draaihals",
+     "latin": "Jynx torquilla",
+     "pose": "tak",
+     "queries": [
+      "\"Jynx torquilla\"",
+      "\"Eurasian wryneck\""
+     ],
+     "aliases": [
+      "Eurasian wryneck",
+      "Wryneck",
+      "Eurasian Wryneck"
+     ]
+    }
+   ]
+  ],
+  [
+   "kleur",
+   "Kleurrijke gasten",
+   [
+    {
+     "id": "sp075",
+     "nl": "IJsvogel",
+     "latin": "Alcedo atthis",
+     "pose": "tak"
+    },
+    {
+     "id": "sp257",
+     "nl": "Bijeneter",
+     "latin": "Merops apiaster",
+     "pose": "tak"
+    },
+    {
+     "id": "sp256",
+     "nl": "Hop",
+     "latin": "Upupa epops",
+     "pose": "natuurlijk",
+     "queries": [
+      "\"Upupa epops\"",
+      "\"Eurasian hoopoe\""
+     ],
+     "aliases": [
+      "Eurasian hoopoe",
+      "Hoopoe",
+      "Eurasian Hoopoe"
+     ]
+    },
+    {
+     "id": "sp481",
+     "nl": "Scharrelaar",
+     "latin": "Coracias garrulus",
+     "pose": "tak",
+     "queries": [
+      "\"Coracias garrulus\"",
+      "\"European roller\""
+     ],
+     "aliases": [
+      "European roller",
+      "European Roller"
+     ],
+     "info": "Turkooisblauwe vogel met roodbruine rug en zwarte vleugelpunten; zit op draden en dode takken en duikt op grote insecten."
+    }
+   ]
+  ],
+  [
+   "hoen",
+   "Kraanvogels, hoenders en rallen",
+   [
+    {
+     "id": "sp142",
+     "nl": "Kraanvogel",
+     "latin": "Grus grus",
+     "pose": "natuurlijk",
+     "queries": [
+      "\"Grus grus\" dance",
+      "\"Common crane\""
+     ],
+     "aliases": [
+      "Common crane",
+      "Common Crane"
+     ]
+    },
+    {
+     "id": "sp192",
+     "nl": "Korhoen",
+     "latin": "Lyrurus tetrix",
+     "pose": "natuurlijk",
+     "queries": [
+      "\"Lyrurus tetrix\" male",
+      "\"Tetrao tetrix\" male",
+      "\"Black grouse\" lek"
+     ],
+     "aliases": [
+      "Tetrao tetrix",
+      "Black grouse",
+      "Black Grouse"
+     ]
+    },
+    {
+     "id": "sp200",
+     "nl": "Kwartelkoning",
+     "latin": "Crex crex",
+     "pose": "natuurlijk",
+     "queries": [
+      "\"Crex crex\"",
+      "\"Corn crake\""
+     ],
+     "aliases": [
+      "Corn crake",
+      "Corncrake",
+      "Corn Crake"
+     ]
+    }
+   ]
+  ],
+  [
+   "zee",
+   "Zeevogels",
+   [
+    {
+     "id": "sp223",
+     "nl": "Papegaaiduiker",
+     "latin": "Fratercula arctica",
+     "pose": "natuurlijk",
+     "queries": [
+      "\"Fratercula arctica\"",
+      "\"Atlantic puffin\""
+     ],
+     "aliases": [
+      "Atlantic puffin",
+      "Atlantic Puffin"
+     ]
+    },
+    {
+     "id": "sp218",
+     "nl": "Grote Jager",
+     "latin": "Stercorarius skua",
+     "pose": "vlucht",
+     "queries": [
+      "\"Stercorarius skua\" flight",
+      "\"Great skua\" flight"
+     ],
+     "aliases": [
+      "Great skua",
+      "Great Skua",
+      "Catharacta skua"
+     ]
+    }
+   ]
+  ],
+  [
+   "gans",
+   "Ganzen en eenden",
+   [
+    {
+     "id": "sp186",
+     "nl": "Roodhalsgans",
+     "latin": "Branta ruficollis",
+     "pose": "natuurlijk",
+     "queries": [
+      "\"Branta ruficollis\"",
+      "\"Red-breasted goose\""
+     ],
+     "aliases": [
+      "Red-breasted goose",
+      "Red-breasted Goose"
+     ]
+    },
+    {
+     "id": "sp189",
+     "nl": "Witoogeend",
+     "latin": "Aythya nyroca",
+     "pose": "natuurlijk",
+     "queries": [
+      "\"Aythya nyroca\" male",
+      "\"Ferruginous duck\""
+     ],
+     "aliases": [
+      "Ferruginous duck",
+      "Ferruginous Duck"
+     ]
+    }
+   ]
+  ]
+ ]
+}

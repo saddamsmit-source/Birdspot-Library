@@ -34,65 +34,81 @@
 }
 #mapSpeciesSearch::placeholder {color:#b9cfc4;opacity:1;}
 #mapSpeciesSearch:focus-visible {outline:2px solid #e4c38d;outline-offset:2px;}
-.bird-map-filter-scroll {
-  display:flex;align-items:center;gap:6px;
-  max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain;
-  padding:10px 1px 5px;scrollbar-width:thin;
-  -webkit-overflow-scrolling:touch;
+/* Compact single-select replaces horizontal scrolling chips.
+   Native <select> uses the phone's familiar accessible picker. */
+.bird-map-dropdown-label {
+  display:block;margin:11px 0 7px;
+  color:#ead3a5;font-size:10px;font-weight:800;
+  letter-spacing:.12em;text-transform:uppercase;
 }
-.bird-map-filter-scroll button {
-  flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;
-  min-height:35px;padding:8px 10px;
-  border:1px solid rgba(217,231,213,.24);
-  border-radius:999px;color:#e7efdf;background:rgba(236,246,233,.08);
-  font-size:11px;font-weight:800;white-space:nowrap;
+.bird-map-dropdown-wrap {
+  position:relative;display:flex;align-items:center;
+  min-height:46px;border-radius:13px;
+  border:1px solid rgba(219,196,145,.42);
+  background:rgba(231,245,233,.09);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.05);
+  transition:background .15s ease,border-color .15s ease;
 }
-.bird-map-filter-scroll button.is-active {
-  background:rgba(228,203,153,.24);
-  border-color:#dfc48d;color:#fff6e7;
+.bird-map-dropdown-wrap:focus-within {
+  border-color:#edcb90;outline:2px solid #e5c590;outline-offset:2px;
+  background:rgba(231,245,233,.16);
 }
-.bird-map-filter-scroll button:focus-visible {
-  outline:2px solid #f2d49a;outline-offset:2px;
+.bird-map-dropdown-dot {
+  position:absolute;left:14px;top:50%;transform:translateY(-50%);
+  display:block;width:12px;height:12px;
+  border-radius:50%;border:1.5px solid rgba(255,255,255,.76);
+  box-shadow:0 0 0 3px rgba(241,224,177,.06);
+  pointer-events:none;z-index:1;
 }
-.bird-map-filter-scroll span[data-map-status-count],
-#mapStatusAllCount {color:#e5d2ac;opacity:.93;font-size:10px;}
-.bird-map-filter-dot {
-  display:inline-block;width:10px;height:10px;min-width:10px;
-  border-radius:50%;border:1px solid rgba(255,255,255,.64);
-}
-.bird-map-dot--seen {background:#2ebe96;}
-.bird-map-dot--merlin {background:#a784e9;}
-.bird-map-dot--both {background:#dcaf63;}
-.bird-map-dot--heard {background:#57a9d5;}
+.bird-map-dot--all {background:#d9b77e;}
+.bird-map-dot--seen {background:#2f7de1;}
+.bird-map-dot--merlin {background:#f2c230;}
+.bird-map-dot--both {background:#f07a26;}
+.bird-map-dot--heard {background:#f2c230;}
 .bird-map-dot--unknown {background:#88939b;}
+.bird-map-dropdown {
+  appearance:none;-webkit-appearance:none;
+  display:block;box-sizing:border-box;width:100%;
+  padding:12px 39px 12px 37px;border:0;border-radius:inherit;
+  background:transparent;color:#fff5df;
+  font:750 13px var(--font-body,system-ui);
+  line-height:1.3;cursor:pointer;
+  min-height:46px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.bird-map-dropdown:focus {outline:none;}
+.bird-map-dropdown option {color:#152c26;background:#fcf7eb;}
+.bird-map-dropdown-chevron {
+  position:absolute;right:14px;top:50%;transform:translateY(-55%);
+  pointer-events:none;color:#edd2a3;font-size:22px;font-weight:600;
+}
 .bird-map-filter-feedback {
   padding:7px 2px 2px;font-size:11px;line-height:1.45;
   color:#d7e3d8;
 }
 .map-screen .bird-pin {
-  position:relative;display:grid;place-items:center;
-  width:42px;height:42px;border:3px solid #f8f0df;
-  background:#88939b;border-radius:50%;
-  box-shadow:0 4px 13px rgba(1,20,18,.34),
-    0 0 0 3px rgba(219,185,123,.22);
-  font-size:17px;
+  /* K3: druppelpin; de punt onderaan is de exacte plek */
+  position:relative;width:30px;height:40px;color:#88939b;
+  display:block;background:none;border:0;border-radius:0;box-shadow:none;
+  filter:drop-shadow(0 3px 5px rgba(1,20,18,.4));
+  transition:transform .12s;transform-origin:50% 100%;
 }
-.map-screen .bird-pin--status-seen {background:#2ebe96;}
-.map-screen .bird-pin--status-merlin {background:#a784e9;}
-.map-screen .bird-pin--status-both {background:#dcaf63;}
-.map-screen .bird-pin--status-heard {background:#57a9d5;}
-.map-screen .bird-pin--status-unknown {background:#88939b;}
-.map-screen .bird-pin .bird-pin-icon {font-size:17px;line-height:1;}
-.map-screen .bird-pin .bird-pin-method {
-  display:grid;place-items:center;position:absolute;
-  right:-8px;top:-8px;min-width:23px;height:23px;padding:0 2px;
-  background:#0d2c27;color:#fff6df;
-  border-radius:999px;border:2px solid #f5e9cc;
-  font-size:12px;font-weight:900;line-height:1;
-  box-shadow:0 2px 6px rgba(0,0,0,.23);
+.map-screen .bird-pin svg.bird-pin-shape {position:absolute;inset:0;width:30px;height:40px;}
+.map-screen .bird-pin svg.bird-pin-shape path {fill:currentColor;stroke:#fff;stroke-width:2;}
+.map-screen .bird-pin--status-seen {color:#2f7de1;}
+.map-screen .bird-pin--status-merlin {color:#f2c230;}
+.map-screen .bird-pin--status-both {color:#f07a26;}
+.map-screen .bird-pin--status-heard {color:#f2c230;}
+.map-screen .bird-pin--status-unknown {color:#88939b;}
+.map-screen .bird-pin .bird-pin-glyph {
+  position:absolute;left:5px;top:5px;width:20px;height:20px;
+  display:grid;place-items:center;color:#fff;
 }
-.map-screen .bird-pin--status-both .bird-pin-method {font-size:10px;min-width:27px;}
-.map-screen .bird-pin:hover {transform:scale(1.10);}
+.map-screen .bird-pin--status-heard .bird-pin-glyph,
+.map-screen .bird-pin--status-merlin .bird-pin-glyph {color:#2b2208;}
+.map-screen .bird-pin .bird-pin-glyph svg {width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;}
+.map-screen .bird-pin .bird-pin-glyph b {font:900 12px/1 var(--font-body,system-ui);}
+.map-screen .bird-pin:hover {transform:scale(1.12);}
 .map-screen .bird-cluster-wrapper {
   background:transparent;border:0;
 }
@@ -116,26 +132,9 @@
   font-variant-numeric:tabular-nums;
 }
 .map-screen .bird-cluster-wrapper[title] {cursor:pointer;}
-.map-screen .map-pin-instruction:not([hidden]) {top:130px;}
-.map-screen .map-pin-instruction:not([hidden]) ~ .bird-map-filters {
-  opacity:.20;pointer-events:none;
-}
-/* When searching, keep all map coordinates visible — not a full-height drawer. */
-.map-screen.has-active-filters .signature-explorer-strip {
-  opacity:.75;
-  transition:opacity .2s;
-}
-@media(min-width:650px) {
-  .bird-map-filters {top:137px;left:24px;width:348px;padding:13px;}
-}
 @media(max-width:380px) {
-  .bird-map-filters {top:123px;left:9px;width:calc(100% - 18px);padding:10px 10px 8px;border-radius:15px;}
-  .bird-map-filter-scroll {gap:5px;}
-  .bird-map-filter-scroll button {min-height:33px;padding:7px 9px;font-size:10px;}
-  .map-add-pin-btn {top:69px;left:9px;}
-  .map-screen .map-pin-instruction:not([hidden]){top:122px;}
+  .bird-map-dropdown {font-size:12px;}
 }
 @media(prefers-reduced-motion:reduce){
   .map-screen .bird-pin,.map-screen .bird-cluster-ring{transition:none!important;}
-  .map-screen.has-active-filters .signature-explorer-strip{transition:none!important;}
 }

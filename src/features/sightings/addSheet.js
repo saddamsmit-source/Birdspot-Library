@@ -66,6 +66,7 @@ function freshState(override = {}) {
     locationName: '',
     lat:          null,
     lon:          null,
+    pinAccuracyM: null,   // K2: nauwkeurigheid van de pin in meters (kaartzoom of GPS); null = onbekend
     habitat:      null,
     behavior:     null,
     weather:      null,
@@ -86,9 +87,22 @@ function freshState(override = {}) {
  */
 export function openAddSheet({ onSaved, initial = {} } = {}) {
   const hasPin = validPin(initial.lat,initial.lon);
+  const species = typeof initial.speciesId === 'string'
+    ? SPECIES.find(x=>x.id===initial.speciesId) : null;
+  const selectedMethod = ['seen','heard','both'].includes(initial.observationMethod)
+    ? initial.observationMethod : 'seen';
+  const source = initial.identificationSource==='merlin' && selectedMethod!=='seen'
+    ? 'merlin' : 'self';
   _openSightingForm('add', freshState({
+    speciesId: species?.id ?? null,
+    speciesName: species?.nameNL ?? '',
+    observationMethod:selectedMethod,
+    identificationSource:source,
+    merlinVerification:source==='merlin'?'suggested':null,
+    certainty:source==='merlin'?'possible':'certain',
     lat: hasPin ? Number(initial.lat) : null,
     lon: hasPin ? Number(initial.lon) : null,
+    pinAccuracyM: hasPin && Number.isFinite(initial.pinAccuracyM) ? Number(initial.pinAccuracyM) : null,
     locationName: typeof initial.locationName === 'string' ? initial.locationName : '',
   }), { onSaved });
 }
@@ -111,6 +125,7 @@ export function openEditSheet(sighting, { onSaved } = {}) {
     locationName:     sighting.locationName || '',
     lat:              sighting.lat          ?? null,
     lon:              sighting.lon          ?? null,
+    pinAccuracyM:     Number.isFinite(sighting.pinAccuracyM) ? sighting.pinAccuracyM : null,
     habitat:          sighting.habitat      || null,
     behavior:         sighting.behavior     || null,
     weather:          sighting.weather      || null,
@@ -262,7 +277,7 @@ function _renderFormBody() {
         ${validPin(_state.lat,_state.lon) ? '<button class="form-btn-secondary" id="sightClearPin" type="button">Verwijder pin</button>' : ''}
       </div>
       <div class="form-hint" id="coordsHint">
-        ${validPin(_state.lat,_state.lon) ? `📍 ${Number(_state.lat).toFixed(5)}, ${Number(_state.lon).toFixed(5)}` : 'Nog geen pin gekozen. Alleen een plaatsnaam opslaan mag ook.'}
+        ${validPin(_state.lat,_state.lon) ? `📍 ${Number(_state.lat).toFixed(5)}, ${Number(_state.lon).toFixed(5)}${Number.isFinite(_state.pinAccuracyM) ? ` · ±${_state.pinAccuracyM} m` : ''}` : 'Nog geen pin gekozen. Alleen een plaatsnaam opslaan mag ook.'}
       </div>
     </div>
 
@@ -446,12 +461,13 @@ function _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx })
       onConfirm:coords=>{
         if(ctx.destroyed)return;
         _state.lat=coords.lat;_state.lon=coords.lon;
+        _state.pinAccuracyM=Number.isFinite(coords.accuracyM)?coords.accuracyM:null;
         ctx.cancelPinPicker=null;refresh();
       },
     });
   });
   el.querySelector('#sightClearPin')?.addEventListener('click',()=>{
-    _state.lat=null;_state.lon=null;refresh();
+    _state.lat=null;_state.lon=null;_state.pinAccuracyM=null;refresh();
   });
   // GPS
   el.querySelector('#sightGpsBtn')?.addEventListener('click', () => _requestGPS(ov,ctx));
@@ -638,6 +654,7 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
       certainty:    _state.certainty || 'certain',
       lat:          _state.lat,
       lon:          _state.lon,
+      pinAccuracyM: validPin(_state.lat,_state.lon) && Number.isFinite(_state.pinAccuracyM) ? _state.pinAccuracyM : null,
       locationName: _state.locationName || null,
       habitat:      _state.habitat      || null,
       behavior:     _state.behavior     || null,
@@ -713,6 +730,7 @@ function _requestGPS(ov,ctx) {
       if(ctx.destroyed) return;
       _state.lat = pos.coords.latitude;
       _state.lon = pos.coords.longitude;
+      _state.pinAccuracyM = Number.isFinite(pos.coords.accuracy) ? Math.round(pos.coords.accuracy) : null;
       btn.classList.remove('gps-btn--loading');
       btn.classList.add('gps-btn--active');
       btn.innerHTML = _svgGps() + ' GPS';

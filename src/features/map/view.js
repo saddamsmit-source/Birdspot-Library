@@ -17,6 +17,7 @@ import { openPinPicker } from '../sightings/pinPicker.js';
 import { methodLabel, sourceLabel, validPin } from '../sightings/evidence.js';
 import { MAP_STATUS, MAP_ORDER, statusForSighting, filteredSightings, statusCounts, statusCountLabel, clusterGradient } from './visualization.js';
 import { escHtml } from '../../utils/html.js';
+import { centerPinMarkup, attachBaseLayers, pinAccuracyM, accuracyLabel, coordLabel, MAX_PIN_ACCURACY_M, LAYERS } from './centerPin.js';
 
 // Leaflet + MarkerCluster worden lazy geladen via <script> tags die we
 // eenmalig in de <head> injecteren zodra de kaart-view voor het eerst
@@ -35,43 +36,71 @@ export function renderMap(el) {
     <div class="map-screen signature-map-loading" id="mapScreen">
       <div id="leafletMap"></div>
 
-      <div class="map-toolbar">
-        <span class="map-toolbar__title">Kaart</span>
+      <!-- K1: één smalle balk; de kaart krijgt de rest van het scherm -->
+      <header class="map-topbar">
+        <label class="map-search" for="mapSpeciesSearch">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+          <input type="search" id="mapSpeciesSearch" list="mapSpeciesSuggestions"
+            placeholder="Zoek soort op de kaart" autocomplete="off" aria-describedby="mapFilterFeedback">
+        </label>
+        <datalist id="mapSpeciesSuggestions"></datalist>
+        <button type="button" class="map-icon-btn" id="mapFilterBtn" aria-label="Filters" aria-expanded="false" aria-controls="mapFilterPanel">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg>
+          <span class="map-filter-dot" id="mapFilterDot" hidden></span>
+        </button>
+        <button type="button" class="map-icon-btn" id="explorerSightingsBtn" aria-label="Mijn waarnemingen als lijst">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="18" r="1"/></svg>
+        </button>
+      </header>
+      <div class="map-meta">
         <span class="map-toolbar__count" id="mapCount">laden…</span>
+        <div class="map-legend" aria-label="Legenda: kleur per waarneming">
+          <span><i class="map-legend__dot map-legend__dot--seen"></i>Gezien</span>
+          <span><i class="map-legend__dot map-legend__dot--heard"></i>Gehoord</span>
+          <span><i class="map-legend__dot map-legend__dot--both"></i>Beide</span>
+        </div>
       </div>
 
-      <button class="map-locate-btn" id="mapLocateBtn" aria-label="Centreer op mijn locatie">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <circle cx="12" cy="12" r="3"/>
-          <path d="M12 2v3M12 19v3M2 12h3M19 12h3"/>
-        </svg>
-      </button>
-
-      <button class="map-add-pin-btn" id="mapAddPinBtn" type="button" aria-pressed="false">+ Pin waarneming</button>
-      <div class="map-pin-instruction" id="mapPinInstruction" hidden>⌖ Tik op een vrije plek op de kaart om een waarneming vast te leggen.</div>
-      <section class="bird-map-filters" aria-label="Zoek en filter vogelwaarnemingen">
+      <section class="bird-map-filters" id="mapFilterPanel" aria-label="Filter vogelwaarnemingen" hidden>
         <div class="bird-map-filter-head">
-          <label for="mapSpeciesSearch">Zoek vogelsoort</label>
+          <label class="bird-map-dropdown-label" for="mapStatusSelect">Gezien of gehoord</label>
           <button type="button" id="mapClearFilters" hidden>Wis filters</button>
         </div>
-        <input type="search" id="mapSpeciesSearch" list="mapSpeciesSuggestions"
-          placeholder="Bijv. Koolmees" autocomplete="off" aria-describedby="mapFilterFeedback">
-        <datalist id="mapSpeciesSuggestions"></datalist>
-        <div class="bird-map-filter-scroll" role="group" aria-label="Waarnemingswijze">
-          <button type="button" class="is-active" data-map-status="all" aria-pressed="true">Alle <span id="mapStatusAllCount"></span></button>
-          ${MAP_ORDER.map(key=>`<button type="button" data-map-status="${key}" aria-pressed="false">
-            <span class="bird-map-filter-dot bird-map-dot--${key}" aria-hidden="true"></span>
-            ${MAP_STATUS[key].label}<span data-map-status-count="${key}"></span></button>`).join('')}
+        <div class="bird-map-dropdown-wrap">
+          <span id="mapStatusIndicator" class="bird-map-dropdown-dot bird-map-dot--all" aria-hidden="true"></span>
+          <select id="mapStatusSelect" class="bird-map-dropdown"
+            aria-label="Filter op gezien, gehoord of Merlin Sound ID"
+            aria-describedby="mapFilterFeedback">
+            <option value="all">Alle waarnemingen (0)</option>
+            ${MAP_ORDER.map(key=>`<option value="${key}">${MAP_STATUS[key].label} (0)</option>`).join('')}
+          </select>
+          <span class="bird-map-dropdown-chevron" aria-hidden="true">⌄</span>
         </div>
         <p class="bird-map-filter-feedback" id="mapFilterFeedback" role="status" aria-live="polite">Alle waarnemingen met een pin</p>
       </section>
-      <!-- Signature Explorer card: deliberately separate from Leaflet controls -->
-      <aside class="signature-explorer-strip" aria-label="Bird Explorer overzicht">
-        <span class="signature-kicker">EXPEDITION / DISCOVER</span>
-        <h2>Bird Explorer Map</h2>
-        <p>Ontdek jouw eigen vogelplekken. Tik op een marker voor een waarneming of open je volledige logboek.</p>
-        <button class="signature-explorer-open" id="explorerSightingsBtn" type="button">Mijn waarnemingen bekijken <span aria-hidden="true">↗</span></button>
-      </aside>
+
+      <div class="map-side-controls">
+        <button type="button" class="map-icon-btn map-layer-btn" id="mapLayerBtn" aria-label="Wissel kaart en luchtfoto" aria-pressed="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></svg>
+          <span id="mapLayerLabel">Luchtfoto</span>
+        </button>
+        <button type="button" class="map-icon-btn map-locate-btn" id="mapLocateBtn" aria-label="Centreer op mijn locatie">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>
+        </button>
+      </div>
+
+      <button class="map-add-pin-btn" id="mapAddPinBtn" type="button" aria-pressed="false">+ Pin waarneming</button>
+
+      <!-- K2: vaste pin in het midden; schuif en zoom de kaart eronder -->
+      ${centerPinMarkup()}
+      <div class="map-pin-panel" id="mapPinPanel" role="region" aria-label="Pin plaatsen" hidden>
+        <p class="map-pin-panel__hint" id="mapPinHint">Schuif en zoom de kaart tot de pin op de juiste plek staat.</p>
+        <p class="map-pin-panel__coords"><span id="mapPinCoords">—</span> <b id="mapPinAccuracy"></b></p>
+        <div class="map-pin-panel__actions">
+          <button type="button" class="map-pin-cancel" id="mapPinCancel">Annuleer</button>
+          <button type="button" class="map-pin-confirm" id="mapPinConfirm" disabled>Plaats hier</button>
+        </div>
+      </div>
 
       <div class="sheet-overlay" id="mapOverlay"></div>
 
@@ -230,15 +259,20 @@ function initMap(screenEl, sightings, leafletOk = true) {
     const filtered=(filterState.status!=='all'||!!filterState.speciesSearch);
     screenEl.querySelector('#mapScreen')?.classList.toggle('has-active-filters',filtered);
     clearFilters.hidden=!filtered;
-    screenEl.querySelectorAll('[data-map-status]').forEach(button=>{
-      const selected=button.dataset.mapStatus===filterState.status;
-      button.classList.toggle('is-active',selected);
-      button.setAttribute('aria-pressed',String(selected));
-    });
-    screenEl.querySelector('#mapStatusAllCount').textContent='('+speciesMatches.length+')';
+    const dotEl=screenEl.querySelector('#mapFilterDot');
+    if(dotEl)dotEl.hidden=filterState.status==='all';
+    // One native dropdown avoids horizontal overflow on narrow phones.
+    // Counts are recalculated from the currently searched species, not from
+    // unrelated observations or records without pins.
+    const select=screenEl.querySelector('#mapStatusSelect');
+    const dot=screenEl.querySelector('#mapStatusIndicator');
+    select.value=filterState.status;
+    dot.className='bird-map-dropdown-dot bird-map-dot--'+filterState.status;
+    select.querySelector('option[value="all"]').textContent='Alle waarnemingen ('+speciesMatches.length+')';
+    const optionSymbols={seen:'●',merlin:'♫',both:'◉',heard:'♪',unknown:'?'};
     for(const key of MAP_ORDER){
-      const node=screenEl.querySelector('[data-map-status-count="'+key+'"]');
-      if(node)node.textContent='('+counts[key]+')';
+      const option=select.querySelector('option[value="'+key+'"]');
+      if(option)option.textContent=optionSymbols[key]+' '+MAP_STATUS[key].label+' ('+counts[key]+')';
     }
     const number=matches.length,total=geoSightings.length;
     if(countEl)countEl.textContent=filtered
@@ -251,19 +285,30 @@ function initMap(screenEl, sightings, leafletOk = true) {
       : total+' '+(total===1?'waarneming met pin':'waarnemingen met pin');
     updateMapMarkers(matches);
   }
+  // Voorinvulling vanuit soortdetail ("Toon op de kaart"); eenmalig.
+  try {
+    const preset=sessionStorage.getItem('birdspot-map-species');
+    if(preset){ sessionStorage.removeItem('birdspot-map-species'); speciesSearch.value=preset; filterState.speciesSearch=preset; }
+  } catch(_) {}
   speciesSearch.addEventListener('input',e=>{
     filterState.speciesSearch=e.target.value.trim();applyFilters();
   });
-  screenEl.querySelector('.bird-map-filter-scroll').addEventListener('click',e=>{
-    const button=e.target.closest('[data-map-status]');
-    if(!button)return;
-    filterState.status=button.dataset.mapStatus;applyFilters();
+  screenEl.querySelector('#mapStatusSelect').addEventListener('change',e=>{
+    filterState.status=e.target.value;
+    applyFilters();
   });
   clearFilters.addEventListener('click',()=>{
     filterState.speciesSearch='';filterState.status='all';speciesSearch.value='';
     applyFilters();speciesSearch.focus();
   });
   applyFilters();
+
+  // Filterpaneel opent onder de balk en sluit bij tik op de kaart
+  const filterBtn=screenEl.querySelector('#mapFilterBtn');
+  const filterPanel=screenEl.querySelector('#mapFilterPanel');
+  const setFilterOpen=open=>{filterPanel.hidden=!open;filterBtn.setAttribute('aria-expanded',String(open));};
+  filterBtn.addEventListener('click',()=>setFilterOpen(filterPanel.hidden));
+  mapEl.addEventListener('pointerdown',()=>setFilterOpen(false));
 
   // Lege state — altijd tonen als er geen GPS-waarnemingen zijn
   if (!geoSightings.length) showNoGpsState(screenEl);
@@ -297,23 +342,24 @@ function initMap(screenEl, sightings, leafletOk = true) {
   const map = window.L.map(mapEl, {
     center,
     zoom,
-    zoomControl:        false,
+    maxZoom:            21,
+    zoomControl:        false,   // knijpen/scrollen; geen knoppen die de kaart bedekken (K1)
     attributionControl: false,
   });
   _mapInstance = map;
 
-  // Tiles
-  window.L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom:     19,
-    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-  }).addTo(map);
+  // Kaart of luchtfoto (PDOK), keuze wordt onthouden
+  const layerBtn = screenEl.querySelector('#mapLayerBtn');
+  const toggleLayer = attachBaseLayers(map, window.L, current => {
+    layerBtn?.setAttribute('aria-pressed', String(current === 'luchtfoto'));
+    const label = screenEl.querySelector('#mapLayerLabel');
+    if (label) label.textContent = current === 'luchtfoto' ? LAYERS.kaart.label : LAYERS.luchtfoto.label;
+  });
+  layerBtn?.addEventListener('click', () => toggleLayer());
 
   // Attributie rechtsonder (compact)
   window.L.control.attribution({ position: 'bottomright', prefix: false })
     .addTo(map);
-
-  // Zoom-knoppen rechtsboven
-  window.L.control.zoom({ position: 'topright' }).addTo(map);
 
   // Cluster laag
   _clusterLayer = window.L.markerClusterGroup({
@@ -346,38 +392,48 @@ function initMap(screenEl, sightings, leafletOk = true) {
   };
   applyFilters();
 
-  // Explicit map-pin mode: do not create accidental sightings on normal taps.
+  // K2: pin plaatsen met een vaste pin in het midden. Een gewone tik maakt nooit een waarneming.
   const addPinBtn = screenEl.querySelector('#mapAddPinBtn');
-  const pinInstruction = screenEl.querySelector('#mapPinInstruction');
+  const pinPanel = screenEl.querySelector('#mapPinPanel');
+  const centerPin = screenEl.querySelector('#mapCenterPin');
+  const pinCoords = screenEl.querySelector('#mapPinCoords');
+  const pinAcc = screenEl.querySelector('#mapPinAccuracy');
+  const pinHint = screenEl.querySelector('#mapPinHint');
+  const pinConfirm = screenEl.querySelector('#mapPinConfirm');
   let placing = false;
-  const stopPlacing = () => {
-    placing=false;
-    addPinBtn?.setAttribute('aria-pressed','false');
-    addPinBtn?.classList.remove('is-active');
-    if(addPinBtn)addPinBtn.textContent="+ Pin waarneming";
-    if(pinInstruction)pinInstruction.hidden=true;
-    mapEl.classList.remove("is-pinning");
+  const updatePin = () => {
+    if (!placing) return;
+    const c = map.getCenter();
+    const acc = pinAccuracyM(c.lat, map.getZoom());
+    const ok = acc <= MAX_PIN_ACCURACY_M;
+    pinCoords.textContent = coordLabel(c.lat, c.lng);
+    pinAcc.textContent = accuracyLabel(acc);
+    pinAcc.classList.toggle('is-ok', ok);
+    pinConfirm.disabled = !ok;
+    pinHint.textContent = ok
+      ? 'Schuif en zoom tot de pin precies goed staat.'
+      : 'Zoom verder in om nauwkeurig te pinnen.';
   };
-  const startObservation = (lat,lon) => {
-    if(!validPin(lat,lon))return;
-    stopPlacing();
-    openAddSheet({initial:{lat:Number(lat),lon:Number(lon)},
-      onSaved:()=>import("../../app.js").then(({navigate})=>navigate("map",{force:true}))});
+  const setPlacing = on => {
+    placing = on;
+    screenEl.querySelector('#mapScreen')?.classList.toggle('is-pinning', on);
+    centerPin.hidden = !on;
+    pinPanel.hidden = !on;
+    addPinBtn.hidden = on;
+    addPinBtn.setAttribute('aria-pressed', String(on));
+    if (on) { screenEl.querySelector('#mapFilterPanel').hidden = true; updatePin(); }
   };
-  addPinBtn?.addEventListener("click",()=>{
-    if(!leafletOk || !map){
-      openPinPicker({onConfirm:coords=>startObservation(coords.lat,coords.lon)});
-      return;
-    }
-    placing=!placing;
-    addPinBtn.setAttribute('aria-pressed',String(placing));
-    addPinBtn.classList.toggle('is-active',placing);
-    addPinBtn.textContent=placing?"Annuleer pin": "+ Pin waarneming";
-    pinInstruction.hidden=!placing;
-    mapEl.classList.toggle("is-pinning",placing);
-  });
-  if(map)map.on("click",event=>{
-    if(placing)startObservation(event.latlng.lat,event.latlng.lng);
+  map.on('move', updatePin);
+  map.on('zoomend', updatePin);
+  addPinBtn?.addEventListener('click', () => setPlacing(true));
+  screenEl.querySelector('#mapPinCancel')?.addEventListener('click', () => setPlacing(false));
+  pinConfirm?.addEventListener('click', () => {
+    const c = map.getCenter();
+    const acc = pinAccuracyM(c.lat, map.getZoom());
+    if (!validPin(c.lat, c.lng) || acc > MAX_PIN_ACCURACY_M) return;
+    setPlacing(false);
+    openAddSheet({ initial: { lat: c.lat, lon: c.lng, pinAccuracyM: acc },
+      onSaved: () => import('../../app.js').then(({ navigate }) => navigate('map', { force: true })) });
   });
   // Locatie-knop koppelen
   if (locBtn) {
@@ -461,7 +517,7 @@ function centerOnUser(map, btn) {
   navigator.geolocation.getCurrentPosition(
     pos => {
       btn.classList.remove('map-locate-btn--loading');
-      map.flyTo([pos.coords.latitude, pos.coords.longitude], 12, { duration: 1 });
+      map.flyTo([pos.coords.latitude, pos.coords.longitude], 17, { duration: 1 });
     },
     () => btn.classList.remove('map-locate-btn--loading'),
     { timeout: 10000, maximumAge: 60000 },
@@ -479,8 +535,8 @@ function showNoGpsState(screenEl) {
       <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
       <circle cx="12" cy="10" r="3"/>
     </svg>
-    <p>Geen waarnemingen met GPS gevonden.<br>
-    Tik op + Pin waarneming of kies een pin in het invoerformulier.</p>`;
+    <p>Nog geen waarnemingen met een pin.<br>
+    Tik op <b>+ Pin waarneming</b> en schuif de kaart onder de pin.</p>`;
   mapEl.appendChild(notice);
 }
 
@@ -498,16 +554,24 @@ function fmtDate(iso) {
   });
 }
 
-function makeBirdIcon(emoji,status,speciesName) {
+// K3: druppelpin in de kleur van gezien/gehoord/beide met een lijnicoon; punt = exacte plek.
+const PIN_GLYPH={
+  seen:'<svg viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="2.6"/></svg>',
+  heard:'<svg viewBox="0 0 24 24"><path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></svg>',
+  merlin:'<svg viewBox="0 0 24 24"><path d="M4 12h2l2-5 3 10 3-12 3 9 2-2h1"/></svg>',
+  both:'<svg viewBox="0 0 24 24"><path d="M1.5 12s3-5 7.5-5 7.5 5 7.5 5-3 5-7.5 5-7.5-5-7.5-5z"/><circle cx="9" cy="12" r="1.8"/><path d="M19 5v9"/><circle cx="20.5" cy="15.5" r="1.6"/></svg>',
+  unknown:'<b>?</b>',
+};
+function makeBirdIcon(_emoji,status,speciesName) {
   const style=MAP_STATUS[status]||MAP_STATUS.unknown;
   const description=escHtml((speciesName||'Vogelwaarneming')+' · '+style.label);
   return window.L.divIcon({
     html:'<div class="bird-pin bird-pin--status-'+status+'" role="img" aria-label="'+description+'">'+
-      '<span class="bird-pin-icon" aria-hidden="true">'+emoji+'</span>'+
-      '<span class="bird-pin-method" aria-hidden="true">'+style.symbol+'</span></div>',
+      '<svg class="bird-pin-shape" viewBox="0 0 30 40" aria-hidden="true"><path d="M15 1.5C7.5 1.5 1.5 7.4 1.5 14.7 1.5 24.6 15 38.5 15 38.5S28.5 24.6 28.5 14.7C28.5 7.4 22.5 1.5 15 1.5z"/></svg>'+
+      '<span class="bird-pin-glyph" aria-hidden="true">'+(PIN_GLYPH[status]||PIN_GLYPH.unknown)+'</span></div>',
     className:'',
-    iconSize:[42,42],
-    iconAnchor:[21,21],
+    iconSize:[30,40],
+    iconAnchor:[15,39],
   });
 }
 

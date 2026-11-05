@@ -26,7 +26,7 @@ const ROUTES = {
   species:   { render: renderSpecies,   fab: true  },
   sightings: { render: renderSightings, fab: true  },
   map:       { render: renderMap,       fab: true  },
-  profile:   { render: renderProfile,   fab: false },
+  profile:   { render: renderProfile,   fab: true  },
   media:     { render: renderMedia,     fab: true  },
   journal:   { render: renderJournal,   fab: true  },
   insights:  { render: renderInsights,  fab: true  },
@@ -117,3 +117,6 @@ export function showToast(msg, duration = 2800) {
 
 // ── Start ─────────────────────────────────────────────────
 navigate('home');
+// Splash waits until the application home route is actually initialized.
+window.dispatchEvent(new Event('birdspot:ready'));
+

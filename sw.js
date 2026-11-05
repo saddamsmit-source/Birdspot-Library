@@ -12,7 +12,7 @@
  *   birdspot-media           — foto's/IDB-exports (permanent)
  */
 
-const APP_VERSION = '1.4.2-explorer-species-status';
+const APP_VERSION = '1.12.0-map-k3';
 const APP_CACHE   = `birdspot-app-v${APP_VERSION}`;
 const MEDIA_CACHE = 'birdspot-media';
 
@@ -38,13 +38,24 @@ const PRECACHE_URLS = [
   '/styles/signature-phase4.css',
   '/styles/observations-evidence.css',
   '/styles/explorer-status-map.css',
+  '/styles/startup-splash.css',
+  '/styles/mobile-field-editorial.css',
+  '/styles/cinematic-wetland.css',
+  '/styles/map-explorer.css',
+  '/assets/birdspot-ijsvogel-splash.avif',
 
   // JS — app root
   '/src/app.js',
+  '/src/services/startup-splash.js',
 
   // JS — features
   '/src/features/home/view.js',
+  '/src/features/home/featuredCarousel.js',
+  '/src/features/home/ambientBackdrop.js',
+  '/src/features/home/specialBirds.js',
+  '/src/features/home/showcaseData.js',
   '/src/features/species/view.js',
+  '/src/features/species/detailSections.js',
   '/src/features/sightings/view.js',
   '/src/features/sightings/addSheet.js',
   '/src/features/sightings/evidence.js',
@@ -52,6 +63,7 @@ const PRECACHE_URLS = [
   '/src/features/sightings/editSheet.js',
   '/src/features/sightings/detailSheet.js',
   '/src/features/map/view.js',
+  '/src/features/map/centerPin.js',
   '/src/features/map/visualization.js',
   '/src/features/profile/view.js',
   '/src/features/media/view.js',
@@ -64,6 +76,8 @@ const PRECACHE_URLS = [
   // JS — data
   '/src/data/sightings.js',
   '/src/data/species.js',
+  '/src/data/speciesLife.js',
+  '/src/data/seasons.js',
 
   // JS — storage
   '/src/storage/backup.js',
@@ -90,6 +104,8 @@ self.addEventListener('install', event => {
           })
         )
       );
+      // Diashowfoto's (F): eenmalig in de media-cache, die releases overleeft (L-052)
+      await precacheShowcase();
       const failed = results.filter(r => r.status === 'rejected');
       if (failed.length) {
         console.warn(`[SW] ${failed.length} precache-verzoeken overgeslagen`);
@@ -99,6 +115,19 @@ self.addEventListener('install', event => {
   // Activeer direct (geen wachten op bestaande clients)
   self.skipWaiting();
 });
+
+async function precacheShowcase() {
+  try {
+    const media = await caches.open(MEDIA_CACHE);
+    const credits = await (await fetch('/assets/showcase/credits.json', { cache: 'no-cache' })).json();
+    await Promise.allSettled(Object.keys(credits).map(async id => {
+      const url = `/assets/showcase/${id}.webp`;
+      if (!(await media.match(url))) await media.add(url);
+    }));
+  } catch (err) {
+    console.warn('[SW] diashowfoto\'s niet vooraf geladen', err?.message);
+  }
+}
 
 // ── Activate: verwijder verouderde code-caches ─────────────────────────────
 self.addEventListener('activate', event => {
@@ -122,6 +151,13 @@ self.addEventListener('activate', event => {
       client.postMessage({ type: 'new-version', version: APP_VERSION });
     });
   });
+});
+
+// ── Versie opvragen (profielpagina) ────────────────────────────────────────
+self.addEventListener('message', event => {
+  if (event.data?.type === 'get-version') {
+    event.ports?.[0]?.postMessage({ type: 'version', version: APP_VERSION });
+  }
 });
 
 // ── Fetch: network-first voor app-shell, media-first voor media ────────────

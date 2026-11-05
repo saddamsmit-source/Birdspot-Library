@@ -34,6 +34,12 @@
   <link rel="stylesheet" href="styles/signature-phase4.css">
   <link rel="stylesheet" href="styles/observations-evidence.css">
   <link rel="stylesheet" href="styles/explorer-status-map.css">
+  <link rel="stylesheet" href="styles/startup-splash.css">
+  <link rel="stylesheet" href="styles/mobile-field-editorial.css">
+  <link rel="stylesheet" href="styles/cinematic-wetland.css">
+  <!-- Kaart K1/K2: volledig scherm en vaste pin; als laatste geladen -->
+  <link rel="stylesheet" href="styles/map-explorer.css">
+  <link rel="preload" as="image" type="image/avif" href="assets/birdspot-ijsvogel-splash.avif" fetchpriority="high">
 
   <!-- SunCalc (offline-capable sunrise/sunset/golden hour) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/suncalc/1.9.0/suncalc.min.js"></script>
@@ -45,6 +51,21 @@
   <script type="module" src="src/services/sw-register.js"></script>
 </head>
 <body>
+
+  <!-- Premium 9:16 opening visual, image already contains its own brand identity. -->
+  <div id="birdspotSplash" class="birdspot-splash" role="dialog" aria-modal="true"
+       aria-label="Birdspot Library wordt geopend">
+    <img class="birdspot-splash__art" src="assets/birdspot-ijsvogel-splash.avif"
+         alt="Birdspot Library, ijsvogel in een groen bos"
+         fetchpriority="high" decoding="async">
+    <div class="birdspot-splash__fallback" hidden aria-hidden="true">
+      <div><strong>Birdspot Library</strong><span>ONTDEK · REGISTREER · BELEEF</span></div>
+    </div>
+    <button type="button" id="birdspotSplashSkip" class="birdspot-splash__skip"
+            aria-label="Sla het openingsscherm over">Overslaan</button>
+    <p class="birdspot-splash__loading-note" role="status"></p>
+  </div>
+  <script src="src/services/startup-splash.js"></script>
 
   <!-- ══ APP ROOT ════════════════════════════════════════ -->
   <div id="app">

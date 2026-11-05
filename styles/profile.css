@@ -328,3 +328,17 @@
   font-size:   var(--fs-label);
   color:       var(--muted);
 }
+
+/* ── Overzicht (B) ──────────────────────────────────────── */
+.profile-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-8); }
+.profile-stat {
+  display: flex; flex-direction: column; gap: 2px; padding: var(--space-16);
+  background: var(--surface); border-radius: var(--r-card); box-shadow: var(--shadow-card);
+}
+.profile-stat strong { font-family: var(--font-display); font-size: var(--fs-title); color: var(--ink); font-variant-numeric: tabular-nums; line-height: 1.1; }
+.profile-stat span { font-size: var(--fs-meta); color: var(--muted); }
+.profile-empty { margin: 0; padding: var(--space-16); border-radius: var(--r-card); background: var(--surface-2); color: var(--ink-2); line-height: 1.45; }
+.backup-status__warn {
+  margin: var(--space-8) 0 0; padding: var(--space-12); border-radius: var(--r-sm);
+  background: var(--warn-soft); color: var(--warn-ink, var(--ink)); font-size: var(--fs-meta); line-height: 1.4;
+}

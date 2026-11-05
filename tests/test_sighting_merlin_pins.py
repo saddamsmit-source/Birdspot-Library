@@ -152,8 +152,16 @@ def main():
                 assert "51.48" in page.locator("#coordsHint").inner_text()
                 page.locator("#addSheetCancel").click()
             else:
-                # Leaflet mode: click map to start a brand-new pre-pinned record.
-                page.locator("#leafletMap").click(position={"x":180,"y":170})
+                # Leaflet mode (K2): vaste pin in het midden; inzoomen en bevestigen.
+                page.locator("#mapPinPanel").wait_for(timeout=11000)
+                # Echte Leaflet: dubbeltik zoomt in tot de pin nauwkeurig genoeg is.
+                for _ in range(14):
+                    if page.locator("#mapPinConfirm").is_enabled():
+                        break
+                    page.locator("#leafletMap").dblclick(position={"x":195,"y":300})
+                    page.wait_for_timeout(450)
+                assert page.locator("#mapPinConfirm").is_enabled()
+                page.locator("#mapPinConfirm").click()
                 page.locator("#addSightingSheet").wait_for(timeout=11000)
                 assert "📍" in page.locator("#coordsHint").inner_text()
                 page.locator("#addSheetCancel").click()

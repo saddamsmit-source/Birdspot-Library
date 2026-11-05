@@ -59,22 +59,28 @@ LEAFLET_STUB=r"""(() => {
   }
   window.L={
     map:(el,opts)=>{
-      const map={el,zoom:opts.zoom,options:opts,events:{},layer:null,
+      const c=opts.center||[52,5];
+      const map={el,zoom:opts.zoom,options:opts,events:{},layer:null,center:{lat:c[0],lng:c[1]},
         remove(){for(const node of el.querySelectorAll('.mock-bird-marker'))node.remove();runtime.map=null},
         addLayer(layer){this.layer=layer;layer._map=this;redraw(layer);return this},
-        on(type,cb){this.events[type]=cb;return this},
-        panTo(){return this},flyTo(){return this},
-        invalidateSize(){return this},setZoom(z){this.zoom=z;redraw(this.layer);return this}
+        on(type,cb){(this.events[type]=this.events[type]||[]).push(cb);return this},
+        off(type,cb){this.events[type]=(this.events[type]||[]).filter(f=>f!==cb);return this},
+        fire(type){for(const f of (this.events[type]||[]))f({});return this},
+        getCenter(){return {...this.center}},getZoom(){return this.zoom},
+        setView(ll,z){this.center={lat:ll[0],lng:ll[1]};if(z!==undefined)this.zoom=z;if(this.layer)redraw(this.layer);this.fire('move');this.fire('zoomend');return this},
+        panTo(ll){if(Array.isArray(ll))this.center={lat:ll[0],lng:ll[1]};this.fire('move');return this},
+        flyTo(ll,z){return this.setView(ll,z)},
+        invalidateSize(){return this},setZoom(z){this.zoom=z;if(this.layer)redraw(this.layer);this.fire('move');this.fire('zoomend');return this}
       };
       runtime.map=map;
       return map;
     },
-    tileLayer:()=>({addTo(){return this}}),
+    tileLayer:(url)=>({url,addTo(){(runtime.tiles=runtime.tiles||[]).push(url);return this},remove(){runtime.tiles=(runtime.tiles||[]).filter(u=>u!==url);return this}}),
     control:{
       attribution:()=>({addTo(){return this}}),
       zoom:()=>({addTo(){return this}})
     },
-    marker:(coords,options)=>({coords,options,events:{},on(type,cb){this.events[type]=cb;return this}}),
+    marker:(coords,options)=>({coords,options,events:{},on(type,cb){this.events[type]=cb;return this},addTo(){return this},remove(){return this}}),
     divIcon:options=>options,
     markerClusterGroup:options=>({
       options,markers:[],_map:null,
@@ -147,35 +153,45 @@ def main():
 
       p.locator('.nav-item[data-route="map"]').click()
       p.locator("#mapSpeciesSearch").wait_for(timeout=10000)
+      # K1: filters zitten in een uitklappaneel achter de filterknop
+      assert p.locator("#mapFilterPanel").is_hidden()
+      p.locator("#mapFilterBtn").click()
+      assert p.locator("#mapFilterPanel").is_visible()
+      assert p.locator("#mapStatusSelect").count()==1
+      assert p.locator(".bird-map-filter-scroll").count()==0
+      assert p.locator("#mapStatusSelect").input_value()=="all"
+      assert p.locator("#mapStatusSelect option").count()==6
+      assert p.locator("#mapStatusIndicator").evaluate("(e)=>e.classList.contains('bird-map-dot--all')")
       p.wait_for_function("() => window.__birdspotMapTest.renderCount>0",timeout=8000)
       assert p.locator("#mapCount").inner_text()=="6 van 7 pins"
       assert p.locator(".mock-bird-cluster .bird-cluster-core strong").inner_text()=="6"
       assert all(color in p.locator(".bird-cluster-ring").get_attribute("style")
-                 for color in ["#2EBE96","#A784E9","#DCAF63","#57A9D5","#88939B"])
+                 for color in ["#2F7DE1","#F2C230","#F07A26","#88939B"])
       assert "waarnemingen" in p.locator(".bird-cluster-ring").get_attribute("aria-label")
       p.screenshot(path=str(SHOTS/"bird_map_mixed_cluster_390.png"),animations="disabled")
 
       p.locator("#mapSpeciesSearch").fill("Koolmees")
-      assert p.locator("#mapCount").inner_text()=="5 van 6 pins" or p.locator("#mapCount").inner_text()=="5 van 6 pins"
+      assert p.locator("#mapCount").inner_text()=="5 van 6 pins"
       assert p.locator(".mock-bird-cluster strong").inner_text()=="5"
-      assert p.locator('[data-map-status-count="merlin"]').inner_text()=="(1)"
-      assert p.locator("#mapStatusAllCount").inner_text()=="(5)"
+      assert "(1)" in p.locator('#mapStatusSelect option[value="merlin"]').inner_text()
+      assert "(5)" in p.locator('#mapStatusSelect option[value="all"]').inner_text()
       p.screenshot(path=str(SHOTS/"bird_map_koolmees_cluster_390.png"),animations="disabled")
 
       # Merlin only => purple, one pin, no cluster.
-      p.locator('[data-map-status="merlin"]').click()
+      p.locator('#mapStatusSelect').select_option("merlin")
       assert p.locator("#mapCount").inner_text()=="1 van 6 pins"
       assert p.locator(".bird-pin--status-merlin").count()==1
       assert p.locator(".bird-cluster-ring").count()==0
-      assert p.locator('[data-map-status="merlin"]').get_attribute("aria-pressed")=="true"
+      assert p.locator('#mapStatusSelect').input_value()=="merlin"
+      assert p.locator("#mapStatusIndicator").evaluate("(e)=>e.classList.contains('bird-map-dot--merlin')")
       # Both is gold; heard on own observation is blue.
-      p.locator('[data-map-status="both"]').click()
+      p.locator('#mapStatusSelect').select_option("both")
       assert p.locator(".bird-pin--status-both").count()==1
-      p.locator('[data-map-status="heard"]').click()
+      p.locator('#mapStatusSelect').select_option("heard")
       assert p.locator(".bird-pin--status-heard").count()==1
-      p.locator('[data-map-status="unknown"]').click()
+      p.locator('#mapStatusSelect').select_option("unknown")
       assert p.locator(".bird-pin--status-unknown").count()==1
-      p.locator('[data-map-status="all"]').click()
+      p.locator('#mapStatusSelect').select_option("all")
       # Simulate the expected Leaflet.zoom behavior in isolation:
       # low zoom cluster, high zoom individual dots, low zoom cluster again.
       p.evaluate("() => window.__birdspotMapTest.map.setZoom(15)")
@@ -192,12 +208,21 @@ def main():
       # Reset works, no record mutation or newly invented pins.
       p.locator("#mapClearFilters").click()
       assert p.locator("#mapSpeciesSearch").input_value()==""
+      assert p.locator("#mapStatusSelect").input_value()=="all"
+      assert p.locator("#mapStatusIndicator").evaluate("(e)=>e.classList.contains('bird-map-dot--all')")
       assert p.locator("#mapCount").inner_text()=="6 van 7 pins"
       assert p.locator(".bird-cluster-core strong").inner_text()=="6"
       assert p.evaluate("() => JSON.parse(localStorage.getItem('birdspot-sightings')).sightings.length")==7
       for width in (360,390,430):
         p.set_viewport_size({"width":width,"height":844})
+        if p.locator("#mapFilterPanel").is_hidden(): p.locator("#mapFilterBtn").click()
         assert p.locator("#mapSpeciesSearch").is_visible()
+        assert p.locator("#mapStatusSelect").is_visible()
+        assert p.evaluate("""() => {
+          const panel=document.querySelector('.bird-map-filters').getBoundingClientRect();
+          const select=document.querySelector('#mapStatusSelect').getBoundingClientRect();
+          return select.left>=panel.left && select.right<=panel.right+1;
+        }""")
         assert p.locator("#mapAddPinBtn").is_visible()
         p.screenshot(path=str(SHOTS/f"bird_map_{width}.png"),animations="disabled")
       assert not errors,errors

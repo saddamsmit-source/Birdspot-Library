@@ -32,18 +32,20 @@ def main():
             page.on("pageerror", lambda e: errors.append(str(e)))
             page.goto(f"http://127.0.0.1:{server.server_address[1]}/",
                       wait_until="domcontentloaded")
-            page.locator(".signature-home-intro h1").wait_for(timeout=12000)
-            assert "Elke vogel" in page.locator(".signature-home-intro h1").inner_text()
+            page.locator("#featuredBirdName").wait_for(timeout=12000)
+            assert page.locator("#featuredBirdName").inner_text().strip() != ""
+            assert page.locator("#statsRow .stat-tile").count()==4
             page.screenshot(path=str(SHOTS / "signature_home_390.png"), full_page=True)
 
-            page.locator('[data-signature-route="media"]').click()
+            page.locator("#stat-photos").click()
             page.locator(".signature-media h1").wait_for()
             page.locator('[data-media-filter="video"]').click()
             assert page.locator('[data-media-filter="video"]').get_attribute("aria-pressed") == "true"
             page.screenshot(path=str(SHOTS / "signature_media_390.png"), full_page=True)
 
             page.locator('.nav-item[data-route="home"]').click()
-            page.locator('[data-signature-route="journal"]').click()
+            page.locator("#homeMoreFeatures summary").click()
+            page.locator('#homeMoreFeatures [data-signature-route="journal"]').click()
             page.locator(".signature-journal h1").wait_for()
             page.locator(".signature-milestone").first.wait_for(timeout=8000)
             assert page.locator(".signature-milestone").count() == 4
@@ -58,7 +60,8 @@ def main():
               }]
             }))""")
             page.locator('.nav-item[data-route="home"]').click()
-            page.locator('[data-signature-route="journal"]').click()
+            page.locator("#homeMoreFeatures summary").click()
+            page.locator('#homeMoreFeatures [data-signature-route="journal"]').click()
             page.locator("#journalTimeline [data-journal-id='signature-qa-1']").wait_for(timeout=10000)
             assert "Koolmees" in page.locator("#journalTimeline").inner_text()
             assert page.evaluate("""() => JSON.parse(
@@ -89,7 +92,7 @@ def main():
               localStorage.setItem('birdspot-sightings', JSON.stringify(store));
             }""")
             page.locator('.nav-item[data-route="home"]').click()
-            page.locator('[data-signature-route="media"]').click()
+            page.locator("#stat-photos").click()
             page.locator(".signature-media-frame img").first.wait_for(timeout=10000)
             assert page.locator(".signature-media-tile").count() == 1
             page.wait_for_function("""() => {
@@ -101,7 +104,7 @@ def main():
 
             page.locator('.nav-item[data-route="map"]').click()
             page.locator("#explorerSightingsBtn").wait_for(timeout=10000)
-            assert "Bird Explorer Map" in page.locator(".signature-explorer-strip").inner_text()
+            assert page.locator(".map-topbar #explorerSightingsBtn").count() == 1  # K1: lijstknop in de kaartbalk
             page.screenshot(path=str(SHOTS / "signature_map_390.png"), full_page=True)
             rect = page.locator("#explorerSightingsBtn").bounding_box()
             assert rect is not None and rect["y"] >= 0 and rect["y"] + rect["height"] < 844 - 64, f"Explorer CTA outside viewport: {rect}"

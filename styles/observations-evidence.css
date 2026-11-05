@@ -82,13 +82,7 @@
   box-shadow:0 7px 22px rgba(6,34,24,.25);
 }
 .map-add-pin-btn.is-active {background:#163c32;color:#fff0d3;border:1px solid rgba(224,192,129,.45);}
-.map-pin-instruction:not([hidden]) {
-  position:absolute;top:134px;left:14px;right:14px;z-index:465;
-  background:rgba(8,36,29,.92);border:1px solid rgba(217,179,113,.4);
-  color:#f2e5cb;border-radius:12px;padding:12px 14px;
-  font-size:12px;line-height:1.55;pointer-events:none;
-}
-#leafletMap.is-pinning {cursor:crosshair;}
+
 .bird-pin--heard {position:relative;background:#b38b53;}
 .bird-pin-sound {
   position:absolute;right:-7px;top:-7px;

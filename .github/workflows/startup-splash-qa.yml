@@ -1,0 +1,34 @@
+name: Birdspot Premium Startup Splash QA
+on:
+  pull_request:
+    paths:
+      - "assets/birdspot-ijsvogel-splash.avif"
+      - "src/services/startup-splash.js"
+      - "styles/startup-splash.css"
+      - "src/app.js"
+      - "index.html"
+      - "sw.js"
+      - "tests/test_startup_splash.py"
+      - ".github/workflows/startup-splash-qa.yml"
+jobs:
+  splash:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Chromium
+        run: |
+          python -m pip install -r tests/requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: Verify exact splash image, timing and user data safety
+        run: python tests/test_startup_splash.py
+      - name: Upload screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: birdspot-premium-startup
+          path: tests/screenshots/birdspot_startup_splash_*.png
+          if-no-files-found: ignore

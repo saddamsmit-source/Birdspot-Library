@@ -1,0 +1,66 @@
+name: Birdspot Species Data QA
+on:
+  pull_request:
+    paths:
+      - "src/data/species.js"
+      - "src/features/species/**"
+      - "docs/data/**"
+      - "tools/species/**"
+      - "tests/test_species_data.py"
+      - "tests/test_season_filter.py"
+      - "src/data/seasons.js"
+      - "src/features/map/**"
+      - "tests/test_species_detail.py"
+      - "styles/species.css"
+      - "tests/fixtures/species_ids_*.json"
+      - ".github/workflows/species-data-qa.yml"
+jobs:
+  species-data:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Chromium
+        run: |
+          python -m pip install -r tests/requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: Status-script is idempotent (species.js matches source)
+        run: |
+          python tools/species/apply_status.py
+          git diff --exit-code src/data/species.js
+      - name: Species data and list QA
+        run: python tests/test_species_data.py
+      - name: Season filter and 'Alle' tab QA
+        run: python tests/test_season_filter.py
+      - name: Plumage script is idempotent
+        run: |
+          python tools/species/apply_plumage.py
+          git diff --exit-code src/data/species.js
+      - name: Life data build is idempotent (speciesLife.js matches source)
+        run: |
+          python tools/species/build_life.py
+          git diff --exit-code src/data/speciesLife.js
+      - name: Species detail tabs QA
+        run: python tests/test_species_detail.py
+      - name: Showcase build is idempotent (showcaseData.js matches photos)
+        run: |
+          python tools/showcase/build.py
+          git diff --exit-code src/features/home/showcaseData.js
+      - name: Showcase slideshow QA
+        run: python tests/test_showcase.py
+      - name: Map K1/K2 QA (layout, center pin)
+        run: python tests/test_map_k1k2.py
+      - name: Map K3 QA (colors, clusters, legend)
+        run: python tests/test_map_k3.py
+      - name: Profile and backup QA
+        run: python tests/test_profile_backup.py
+      - name: Upload screenshot evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: birdspot-species-data-screenshots
+          path: tests/screenshots/species_i*.png
+          if-no-files-found: ignore

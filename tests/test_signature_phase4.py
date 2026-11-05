@@ -28,7 +28,8 @@ def main():
             p=ctx.new_page();errors=[]
             p.on("pageerror",lambda err:errors.append(str(err)))
             p.goto("http://127.0.0.1:"+str(srv.server_address[1])+"/",wait_until="domcontentloaded")
-            p.locator('[data-signature-route="film"]').click()
+            p.locator("#homeMoreFeatures summary").click()
+            p.locator('#homeMoreFeatures [data-signature-route="film"]').click()
             p.locator(".film-studio-empty").wait_for(timeout=10000)
             assert p.locator("#filmEditor").is_hidden()
             assert "Kies mijn beelden" in p.locator("#filmEmptyState").inner_text()
@@ -79,7 +80,8 @@ def main():
             assert fixture["imageBytes"]>100
             assert fixture["videoBytes"]>500,fixture
             p.locator('.nav-item[data-route="home"]').click()
-            p.locator('[data-signature-route="film"]').click()
+            p.locator("#homeMoreFeatures summary").click()
+            p.locator('#homeMoreFeatures [data-signature-route="film"]').click()
             p.locator(".film-studio-shot").first.wait_for(timeout=10000)
             assert p.locator(".film-studio-shot").count()==2
             assert p.locator("#filmSelectedCount").inner_text()=="2"
