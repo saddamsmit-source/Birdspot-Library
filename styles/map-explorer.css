@@ -232,3 +232,36 @@
   background: var(--surface); color: var(--ink); font: 600 13px var(--font-body, system-ui);
 }
 .place-species__chip b { color: var(--muted); font-weight: 700; }
+
+/* ── K6: klikbare legenda, seizoenswolken, bijzonder, beste maanden ─ */
+.map-screen .map-meta { pointer-events: none; }
+.map-screen .map-meta > * { pointer-events: auto; }
+.map-screen .map-legend { padding: 2px 4px; gap: 2px; }
+.map-screen .map-legend[hidden] { display: none; }
+.map-screen .map-legend button {
+  display: inline-flex; align-items: center; gap: 5px; min-height: 26px; padding: 0 7px;
+  border-radius: 999px; color: inherit; font: inherit; white-space: nowrap;
+}
+.map-screen .map-legend button[aria-pressed="true"] { background: rgba(245, 205, 136, .22); box-shadow: inset 0 0 0 1px var(--map-gold); }
+.map-legend__cloud { width: 12px; height: 12px; border-radius: 50%; filter: blur(1.2px); box-shadow: 0 0 6px currentColor; }
+.season-cloud { filter: blur(12px); pointer-events: none; }
+.map-screen .bird-pin .bird-pin-star {
+  position: absolute; left: -9px; top: -7px; width: 18px; height: 18px; display: grid; place-items: center;
+  border-radius: 50%; background: #f5cd88; color: #0d2c27; border: 2px solid #fff; font: 900 11px/1 var(--font-body, system-ui);
+}
+.map-extra-filters { display: grid; gap: 8px; margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(230, 234, 219, .18); }
+.map-switch { display: flex; align-items: center; gap: 8px; min-height: 36px; font-size: 13px; color: #eef2e8; }
+.map-switch input { width: 20px; height: 20px; accent-color: #e2bd7f; }
+.map-period { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 13px; color: #eef2e8; }
+.map-period select {
+  min-height: 40px; padding: 0 10px; border-radius: 10px; background: rgba(240, 248, 237, .1);
+  color: #fff8e8; border: 1px solid rgba(230, 234, 219, .28); font: 600 13px var(--font-body, system-ui);
+}
+.map-period select option { color: #152c26; background: #fcf7eb; }
+.place-months { display: grid; grid-template-columns: repeat(12, 1fr); gap: 3px; align-items: end; height: 70px; }
+.place-month { display: grid; justify-items: center; align-content: end; gap: 3px; height: 100%; }
+.place-month i { display: block; width: 100%; border-radius: 4px 4px 2px 2px; background: var(--line); }
+.place-month b { font-size: 10px; color: var(--muted); }
+.place-month.is-best i { background: var(--brand-mid); }
+.place-month.is-best b { color: var(--ink); }
+.place-months__caption { margin: 4px 0 0; font-size: 12px; color: var(--ink-2); }
