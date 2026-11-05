@@ -12,7 +12,7 @@
  *   birdspot-media           — foto's/IDB-exports (permanent)
  */
 
-const APP_VERSION = '1.6.0-cinematic-marsh';
+const APP_VERSION = '1.7.0-species-seasons';
 const APP_CACHE   = `birdspot-app-v${APP_VERSION}`;
 const MEDIA_CACHE = 'birdspot-media';
 
@@ -73,6 +73,7 @@ const PRECACHE_URLS = [
   // JS — data
   '/src/data/sightings.js',
   '/src/data/species.js',
+  '/src/data/seasons.js',
 
   // JS — storage
   '/src/storage/backup.js',

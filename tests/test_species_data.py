@@ -146,8 +146,8 @@ def main():
             p.locator('.nav-item[data-route="species"]').click()
             p.locator("#speciesFilters .filter-chip").first.wait_for(timeout=10000)
             tabs = p.eval_on_selector_all("#speciesFilters .filter-chip[data-cat]", "els => els.map(e => e.dataset.cat)")
-            assert tabs == data["active"], f"I1-05 tabs {tabs} != {data['active']}"
-            for cat in tabs:
+            assert tabs == ["alle"] + data["active"], f"I1-05 tabs {tabs} != alle + {data['active']}"
+            for cat in data["active"]:
                 p.locator(f'#speciesFilters .filter-chip[data-cat="{cat}"]').click()
                 ids = [s["id"] for s in data["species"] if s["category"] == cat]
                 p.wait_for_function(

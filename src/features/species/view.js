@@ -5,12 +5,15 @@
  */
 
 import { SPECIES, CATEGORY_LABELS, REGIONS, getSeenIds, toggleSeen, searchSpecies, activeCategories, CATEGORY_BADGES } from '../../data/species.js';
+import { SEASONS, SEASON_ORDER, toggleSeason, seasonPeriod, presentIn, periodMonthsText } from '../../data/seasons.js';
 import { getDB, getPhotosBySpecies, getPhoto } from '../../data/db.js';
 import { getSightings }                 from '../../data/sightings.js';
 import { getPhotoUrl, revokePhotoUrl }  from '../../utils/photoUrl.js';
 import { getCollectionIds, toggleCollectionItem } from '../../storage/collections.js';
 
 let _currentCategory = 'standvogel';
+let _seasons = [];            // max. twee aangrenzende seizoenen (zie data/seasons.js)
+const ALL = 'alle';           // categorie-tab voor alle soorten
 let _searchQuery     = '';
 let _currentRegion   = null;
 let _detailSpeciesId = null;
@@ -134,7 +137,7 @@ export function renderSpecies(el) {
           value="${escHtml(_searchQuery)}">
       </div>
       <div class="species-filters" id="speciesFilters" role="tablist">
-        ${activeCategories().map(key => [key, CATEGORY_LABELS[key]]).map(([key, lbl]) => `
+        ${[[ALL, 'Alle'], ...activeCategories().map(key => [key, CATEGORY_LABELS[key]])].map(([key, lbl]) => `
           <button class="filter-chip${_currentCategory === key ? ' active' : ''}"
             data-cat="${key}" role="tab"
             aria-selected="${_currentCategory === key}">
@@ -153,6 +156,15 @@ export function renderSpecies(el) {
             ${r.label}
           </button>`).join('')}
       </div>
+      <div class="species-filters species-filters--seizoen" id="seizoenFilters" role="group" aria-label="Filter op seizoen">
+        <span class="filter-label">Seizoen</span>
+        ${SEASON_ORDER.map(key => `
+          <button class="filter-chip filter-chip--seizoen${_seasons.includes(key) ? ' active' : ''}"
+            data-season="${key}" aria-pressed="${_seasons.includes(key)}">
+            ${SEASONS[key].label}
+          </button>`).join('')}
+      </div>
+      <p class="species-season-hint" id="seasonHint" aria-live="polite"></p>
     </div>
 
     ${recentIds.length > 0 ? `
@@ -209,23 +221,33 @@ let _listKey = '';
 function renderList(el, seenIds, ctx = _speciesCtx) {
   seenIds = seenIds || getSeenIds();
   const favorites = getCollectionIds("species");
-  const results = searchSpecies(_searchQuery, _currentCategory, _currentRegion)
-    .filter(species => !_onlyFavorites || favorites.has(species.id));
+  const period = seasonPeriod(_seasons);
+  const results = searchSpecies(_searchQuery, _currentCategory === ALL ? null : _currentCategory, _currentRegion)
+    .filter(species => !_onlyFavorites || favorites.has(species.id))
+    .filter(species => presentIn(species, period));
   const generation = ctx ? ++ctx.listGeneration : 0;
   const list    = el.querySelector('#speciesList');
   if (!list) return;
-  const key = [_currentCategory, _searchQuery, _currentRegion, _onlyFavorites].join('|');
+  const key = [_currentCategory, _searchQuery, _currentRegion, _onlyFavorites, _seasons.join('+')].join('|');
   if (key !== _listKey) { _listKey = key; _listLimit = LIST_PAGE; }
 
   // Update sub-header teller
-  const total = SPECIES.filter(s => s.category === _currentCategory).length;
-  const seen  = SPECIES.filter(s => s.category === _currentCategory && seenIds.has(s.id)).length;
   const sub   = el.querySelector('#speciesSub');
-  if (sub) sub.textContent = `Benelux · ${seen}/${total} ${CATEGORY_LABELS[_currentCategory]?.toLowerCase() || ''} gezien`;
+  if (sub) sub.textContent = counterText(seenIds);
+  const hint  = el.querySelector('#seasonHint');
+  if (hint) {
+    hint.hidden = !period;
+    hint.textContent = period
+      ? `${period.label}: ${periodMonthsText(period)} · ${results.length} ${results.length === 1 ? 'soort' : 'soorten'}`
+        + (_seasons.length === 1 ? ' · tik een buurseizoen aan voor de overgang' : '')
+      : '';
+  }
 
   if (results.length === 0) {
     const emptyMsg = _onlyFavorites && !_searchQuery && !_currentRegion
       ? 'Nog geen favorieten in deze categorie. Gebruik de ster naast een vogelsoort.'
+      : period && !_searchQuery
+      ? `Geen soorten in deze categorie in de periode <strong>${escHtml(period.label.toLowerCase())}</strong>. Dwaalgasten zonder vaste periode tellen niet mee.`
       : _currentRegion
       ? `Geen soorten gevonden in <strong>${escHtml(REGIONS[_currentRegion]?.label)}</strong>${_searchQuery ? ` voor "${escHtml(_searchQuery)}"` : ''}`
       : `Geen soorten gevonden voor "<strong>${escHtml(_searchQuery)}</strong>"`;
@@ -338,6 +360,19 @@ function bindEvents(el, ctx = _speciesCtx) {
     renderList(el);
   });
 
+  // Seizoen-chips: één seizoen, of twee aangrenzende voor de overgangsperiode
+  el.querySelector('#seizoenFilters')?.addEventListener('click', e => {
+    const btn = e.target.closest('.filter-chip--seizoen');
+    if (!btn) return;
+    _seasons = toggleSeason(_seasons, btn.dataset.season);
+    el.querySelectorAll('.filter-chip--seizoen').forEach(b => {
+      const on = _seasons.includes(b.dataset.season);
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-pressed', String(on));
+    });
+    renderList(el);
+  });
+
   // Recent bekeken chips → open detail
   el.querySelector('#recentScroll')?.addEventListener('click', e => {
     const chip = e.target.closest('.species-recent-chip');
@@ -383,12 +418,16 @@ function bindEvents(el, ctx = _speciesCtx) {
   });
 }
 
+function counterText(seenIds) {
+  const pool  = _currentCategory === ALL ? SPECIES : SPECIES.filter(s => s.category === _currentCategory);
+  const seen  = pool.filter(s => seenIds.has(s.id)).length;
+  const label = _currentCategory === ALL ? 'soorten' : (CATEGORY_LABELS[_currentCategory]?.toLowerCase() || '');
+  return `Benelux · ${seen}/${pool.length} ${label} gezien`;
+}
+
 function updateCounter(el) {
-  const seenIds = getSeenIds();
-  const total   = SPECIES.filter(s => s.category === _currentCategory).length;
-  const seen    = SPECIES.filter(s => s.category === _currentCategory && seenIds.has(s.id)).length;
-  const sub     = el.querySelector('#speciesSub');
-  if (sub) sub.textContent = `Benelux · ${seen}/${total} ${CATEGORY_LABELS[_currentCategory]?.toLowerCase() || ''} gezien`;
+  const sub = el.querySelector('#speciesSub');
+  if (sub) sub.textContent = counterText(getSeenIds());
 }
 
 // ── Detail sheet ───────────────────────────────────────────────

@@ -104,7 +104,8 @@
 }
 
 /* Gebied-chips rij */
-.species-filters--gebied {
+.species-filters--gebied,
+.species-filters--seizoen {
   padding-top: 0;
   border-top: 1px solid var(--line);
   padding-bottom: var(--space-8);
@@ -122,24 +123,28 @@
   margin-right: var(--space-4);
 }
 
-.filter-chip--gebied {
+.filter-chip--gebied,
+.filter-chip--seizoen {
   border-color: var(--brand-light);
   color: var(--brand-mid);
 }
 
-.filter-chip--gebied.active {
+.filter-chip--gebied.active,
+.filter-chip--seizoen.active {
   background: var(--brand-light);
   border-color: var(--brand-light);
   color: var(--on-brand);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .filter-chip--gebied {
+  :root:not([data-theme="light"]) .filter-chip--gebied,
+  :root:not([data-theme="light"]) .filter-chip--seizoen {
     border-color: var(--brand-mid);
     color: var(--brand-light);
   }
 }
-:root[data-theme="dark"] .filter-chip--gebied {
+:root[data-theme="dark"] .filter-chip--gebied,
+:root[data-theme="dark"] .filter-chip--seizoen {
   border-color: var(--brand-mid);
   color: var(--brand-light);
 }
@@ -615,3 +620,13 @@
   cursor: pointer;
 }
 .species-show-all:focus-visible { outline: 2px solid var(--brand-mid); outline-offset: 2px; }
+
+/* ── Fase I6: seizoensfilter ─────────────────────────────────── */
+.species-filters--seizoen { border-top: 0; }
+.species-season-hint {
+  margin: 0;
+  padding: 0 max(var(--space-12), env(safe-area-inset-right, 0px)) var(--space-8)
+           max(var(--space-12), env(safe-area-inset-left, 0px));
+  font-size: var(--fs-meta);
+  color: var(--ink-2);
+}

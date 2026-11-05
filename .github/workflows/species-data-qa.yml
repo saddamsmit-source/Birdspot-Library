@@ -7,6 +7,9 @@ on:
       - "docs/data/**"
       - "tools/species/**"
       - "tests/test_species_data.py"
+      - "tests/test_season_filter.py"
+      - "src/data/seasons.js"
+      - "styles/species.css"
       - "tests/fixtures/species_ids_*.json"
       - ".github/workflows/species-data-qa.yml"
 jobs:
@@ -28,10 +31,12 @@ jobs:
           git diff --exit-code src/data/species.js
       - name: Species data and list QA
         run: python tests/test_species_data.py
+      - name: Season filter and 'Alle' tab QA
+        run: python tests/test_season_filter.py
       - name: Upload screenshot evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: birdspot-species-data-screenshots
-          path: tests/screenshots/species_i1_*.png
+          path: tests/screenshots/species_i*.png
           if-no-files-found: ignore
