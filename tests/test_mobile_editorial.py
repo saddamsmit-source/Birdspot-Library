@@ -41,54 +41,15 @@ def main():
       assert "Wisselt elke minuut" not in p.locator("#slideshow").inner_text()
       assert p.locator(".featured-birds__caption").is_visible()
 
-      # Curated references and 50+ database-derived additions, in a stable
-      # randomized mixed sequence. No browsing UI is exposed to visitors.
-      current=p.evaluate("""async()=> {
+      # F: vaste lokale diashow (30 s, hervat waar hij was) — details in tests/test_showcase.py.
+      current=p.evaluate("""async()=>{
         const m=await import('/src/features/home/specialBirds.js');
-        const x=m.shuffledBirds(123456),y=m.shuffledBirds(123456);
-        return {
-          total:m.FEATURED_BIRDS.length,
-          unique:new Set(m.FEATURED_BIRDS.map(b=>b.latin)).size,
-          themes:m.BIRD_THEMES.length,
-          sameOrder:x.map(b=>b.id).join('|')===y.map(b=>b.id).join('|'),
-          variedOrder:x.some((b,i)=>b.id!==m.FEATURED_BIRDS[i].id),
-          song0:m.birdAtTime('zang',0).id,
-          song1:m.birdAtTime('zang',60000).id,
-          delay:m.nextSlideDelay(63000)
-        };
+        return {total:m.FEATURED_BIRDS.length,unique:new Set(m.FEATURED_BIRDS.map(b=>b.latin)).size,
+          local:m.FEATURED_BIRDS.every(b=>b.image.startsWith('/assets/showcase/')),interval:m.SHOWCASE_INTERVAL_MS};
       }""")
-      assert current["total"]>=50,current
-      assert current["unique"]==current["total"],current
-      assert current["sameOrder"] and current["variedOrder"],current
-      assert current["song0"]=="wielewaal" and current["song1"]=="nachtegaal",current
-      assert current["delay"]==57000
-      wallclock=p.evaluate("""async()=>{
-        const m=await import('/src/features/home/specialBirds.js');
-        const origin=105123;
-        return {
-          first:m.birdAtTime('zang',origin,origin).id,
-          stillFirst:m.birdAtTime('zang',origin+59999,origin).id,
-          next:m.birdAtTime('zang',origin+60000,origin).id,
-          delay:m.nextSlideDelay(origin+14000,origin)
-        };
-      }""")
-      assert wallclock["first"]==wallclock["stillFirst"]=="wielewaal"
-      assert wallclock["next"]=="nachtegaal" and wallclock["delay"]==46000
-
-      # This checks all fixed Commons source files, not the additional lazy
-      # API candidates (which do not have a hardcoded guess at a file name).
-      photo_catalog=p.evaluate("""async () => {
-        const {FEATURED_BIRDS}=await import('/src/features/home/specialBirds.js');
-        return Promise.all(FEATURED_BIRDS.filter(b=>!!b.image).map(b=>new Promise(resolve=>{
-          const img=new Image();let done=false;
-          const finish=(ok)=>{if(done)return;done=true;clearTimeout(timer);resolve({id:b.id,ok})};
-          const timer=setTimeout(()=>finish(false),8500);
-          img.onload=()=>finish(img.naturalWidth>0);
-          img.onerror=()=>finish(false);
-          img.src=b.image;
-        })));
-      }""")
-      print("CURATED_IMAGE_CHECK:",photo_catalog,flush=True)
+      assert current["total"]>=20 and current["unique"]==current["total"] and current["local"],current
+      assert current["interval"]==30000,current
+      p.wait_for_function("()=>document.querySelector('#featuredBirdImage').naturalWidth>0",timeout=8000)
       capture(p,'mobile_editorial_390.png')
 
       # Lower dashboard uses one immersive moving 9:16 plate instead of a
@@ -174,7 +135,7 @@ def main():
         assert p.locator('.signature-species-hero').is_visible()
         assert p.evaluate("() => document.documentElement.scrollWidth<=window.innerWidth+2"),width
       assert not errors,errors
-      print("PASS: 60-second categorized bird showcase, species quick modes, mobile form bounds, ambient pause")
+      print("PASS: 30-second local bird showcase, species quick modes, mobile form bounds, ambient pause")
       context.close();browser.close()
     srv.shutdown()
 if __name__=='__main__':main()

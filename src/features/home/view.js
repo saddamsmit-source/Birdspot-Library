@@ -100,18 +100,20 @@ function buildSkeleton() {
       </button>
     </header>
 
-    <!-- Automatic 60-second bird gallery; no browsing controls or category menu. -->
+    <!-- Diashow: elke 30 s een bijzondere Nederlandse vogel; hervat waar hij was. -->
     <section class="slideshow featured-birds" id="slideshow" aria-label="Bijzondere vogel in beeld">
       <div class="featured-birds__media">
         <div class="featured-birds__fallback" id="featuredBirdFallback" aria-hidden="true"><span>✦</span></div>
         <img id="featuredBirdImage" class="featured-birds__photo" alt=""
-          decoding="async" fetchpriority="low">
+          decoding="async">
       </div>
       <div class="featured-birds__shade" aria-hidden="true"></div>
       <div class="featured-birds__caption">
+        <span class="featured-birds__group" id="featuredBirdGroup"></span>
         <h2 id="featuredBirdName"></h2>
         <em id="featuredBirdLatin"></em>
         <p id="featuredBirdWhere"></p>
+        <p class="featured-birds__presence" id="featuredBirdPresence"></p>
         <a id="featuredBirdCredit" class="featured-birds__credit"
           rel="noopener noreferrer" target="_blank" href="https://commons.wikimedia.org/">Fotobron</a>
       </div>

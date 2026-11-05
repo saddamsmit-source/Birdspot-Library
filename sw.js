@@ -12,7 +12,7 @@
  *   birdspot-media           — foto's/IDB-exports (permanent)
  */
 
-const APP_VERSION = '1.9.2-profile';
+const APP_VERSION = '1.10.0-showcase';
 const APP_CACHE   = `birdspot-app-v${APP_VERSION}`;
 const MEDIA_CACHE = 'birdspot-media';
 
@@ -50,9 +50,9 @@ const PRECACHE_URLS = [
   // JS — features
   '/src/features/home/view.js',
   '/src/features/home/featuredCarousel.js',
-  '/src/features/home/commonsLookup.js',
   '/src/features/home/ambientBackdrop.js',
   '/src/features/home/specialBirds.js',
+  '/src/features/home/showcaseData.js',
   '/src/features/species/view.js',
   '/src/features/species/detailSections.js',
   '/src/features/sightings/view.js',
@@ -102,6 +102,8 @@ self.addEventListener('install', event => {
           })
         )
       );
+      // Diashowfoto's (F): eenmalig in de media-cache, die releases overleeft (L-052)
+      await precacheShowcase();
       const failed = results.filter(r => r.status === 'rejected');
       if (failed.length) {
         console.warn(`[SW] ${failed.length} precache-verzoeken overgeslagen`);
@@ -111,6 +113,19 @@ self.addEventListener('install', event => {
   // Activeer direct (geen wachten op bestaande clients)
   self.skipWaiting();
 });
+
+async function precacheShowcase() {
+  try {
+    const media = await caches.open(MEDIA_CACHE);
+    const credits = await (await fetch('/assets/showcase/credits.json', { cache: 'no-cache' })).json();
+    await Promise.allSettled(Object.keys(credits).map(async id => {
+      const url = `/assets/showcase/${id}.webp`;
+      if (!(await media.match(url))) await media.add(url);
+    }));
+  } catch (err) {
+    console.warn('[SW] diashowfoto\'s niet vooraf geladen', err?.message);
+  }
+}
 
 // ── Activate: verwijder verouderde code-caches ─────────────────────────────
 self.addEventListener('activate', event => {

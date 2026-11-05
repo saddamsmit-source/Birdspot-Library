@@ -45,6 +45,12 @@ jobs:
           git diff --exit-code src/data/speciesLife.js
       - name: Species detail tabs QA
         run: python tests/test_species_detail.py
+      - name: Showcase build is idempotent (showcaseData.js matches photos)
+        run: |
+          python tools/showcase/build.py
+          git diff --exit-code src/features/home/showcaseData.js
+      - name: Showcase slideshow QA
+        run: python tests/test_showcase.py
       - name: Profile and backup QA
         run: python tests/test_profile_backup.py
       - name: Upload screenshot evidence

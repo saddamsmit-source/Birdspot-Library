@@ -46,3 +46,13 @@ broedduur, duur tot uitvliegen, broedsels per jaar, voedsel, gedrag, trek en een
 Bron: veldgidskennis; waarden zijn gangbare bandbreedtes, geen metingen in Nederland. Gedekt: alle uitgewerkte inheemse soorten
 (standvogels, zomergasten, wintergasten, trekvogels en schaarse gasten: 301). Het broedblok staat alleen bij soorten
 die in Nederland (soms) broeden; exoten, ontsnapte vogels en compacte dwaalgasten volgen nog. Soorten zonder leefwijze tonen de melding dat deze nog volgt; er worden geen waarden ingevuld.
+
+## Diashow startpagina (F)
+
+`tools/showcase/species.json` bepaalt de diashow: 11 groepen × 2 bijzondere Nederlandse soorten (schaars, zeldzaam
+of bedreigd). Foto's komen van Wikimedia Commons (alleen CC0, publiek domein, CC BY of CC BY-SA) en staan lokaal in
+`assets/showcase/`, met maker, licentie en bron in `credits.json`. Omdat de ontwikkelomgeving Wikimedia niet kan
+bereiken, haalt de workflow `showcase-photos` kandidaten en gekozen foto's op (`tools/showcase/fetch.py`).
+Elke foto is beoordeeld op overzichtsvellen (`tools/showcase/candidates/`): juiste soort, vogel helemaal en scherp in
+beeld; roofvogels, meeuwen en Velduil in vlucht, kleine vogels op een tak, reigers en steltlopers in hun leefgebied.
+`python tools/showcase/build.py` maakt `src/features/home/showcaseData.js` (idempotent; CI controleert dit).
