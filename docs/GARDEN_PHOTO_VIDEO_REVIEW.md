@@ -28,3 +28,10 @@ Gebruik metadata + visuele verificatie + stabiele soort-ID, nooit zoekresultaatp
 
 ## Mobiele QA-correctie
 De nieuwe browsertest vond bij een staande foto (huismus) dat CSS-grid de afbeelding hoger maakte dan het vaste fotovak: 500 px beeld in 405 px vak. Hierdoor kon de onderkant alsnog worden afgesneden ondanks contain. Gereproduceerd in een 390 px browserframe. Opgelost door het gidsfotovak als block met begrensde beeldhoogte te renderen. De oorspronkelijke niet-overlappen-eis blijft behouden; test leest geometrie nu in één DOM-snapshot. Aanvullend bewijs bij L-016/L-019.
+
+## Batch 02 — zes aanvullende tuin-/zangvogels
+sp036 Groenling, sp046 Zanglijster, sp054 Heggenmus, sp055 Winterkoning, sp065 Boomklever en sp112 Spreeuw. Bronbeelden opnieuw via Commons API gecontroleerd op naam, auteur en passende licentie, lokaal opgeslagen als WebP; geen crop of externe image-src. Herkenningskenmerken vergeleken met zes Vogelbescherming-soortpagina's; URL en observatie per beeld in credits.json. Ongeveer 725 KiB extra beeldbestanden. Eén hoofdbeeld toont niet alle geslachten, leeftijden of seizoenskleden.
+
+L-019/L-016 uitbreiding: controleer zowel metadata als het zichtbare beeld. Voor boomklever viel de tuinornamentfoto af als minder natuurlijke context; gekozen rots met korstmos. Geen nestbeeld of vogel half achter gras gekozen. Winterkoning toont bronverschil in geslachtsnaam: Vogelbescherming Nannus, Commons/app Troglodytes; identiteit vastgelegd bij stabiele sp055, geen ongecontroleerde datamigratie. Betrouwbare inhoudsbron verleent geen fotorechten (colofon Vogelbescherming). Deze beelden zijn Commons-beelden, geen Vogelbescherming-beelden.
+
+Capabiltydelta: bestaande gidsfoto-capability en CAP-BIRD-015/040 uitgebreid, geen nieuw bedieningspatroon. Browser-/offline-test leest alle registerrecords dynamisch; geen vast aantal van tien als dekkingsbewijs.

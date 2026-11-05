@@ -39,6 +39,6 @@ def main():
    p.wait_for_function('()=>!!navigator.serviceWorker.controller')
    ctx.set_offline(True)
    results=p.evaluate('''async urls=>Promise.all(urls.map(u=>new Promise(resolve=>{const i=new Image();i.onload=()=>resolve(i.naturalWidth>0);i.onerror=()=>resolve(false);i.src=u})))''',[v['image'] for v in photos.values()])
-   assert all(results);print('PASS ten photos decode offline after precache',flush=True)
+   assert all(results);print(f'PASS {len(photos)} photos decode offline after precache',flush=True)
    browser.close()
 if __name__=='__main__':main()

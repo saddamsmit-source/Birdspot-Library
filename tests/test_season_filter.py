@@ -101,7 +101,7 @@ def main():
             assert p.locator('#speciesFilters .filter-chip.active').get_attribute("data-cat") == "standvogel"
             p.locator('#speciesFilters .filter-chip[data-cat="alle"]').click()
             assert p.locator("#seasonHideYearRound").is_hidden(), "I6-06 optie zichtbaar zonder seizoen"
-            assert f"/{len(species)} soorten gezien" in p.locator("#speciesSub").inner_text()
+            assert f"/{len(species)} soorten waargenomen" in p.locator("#speciesSub").inner_text()
 
             def check(clicks, months, label):
                 for c in clicks:
