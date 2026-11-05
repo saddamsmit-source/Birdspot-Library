@@ -1,0 +1,26 @@
+name: showcase-photos
+# Haalt diashowfoto's op van Wikimedia Commons (de ontwikkelomgeving heeft geen toegang) en commit ze terug.
+on:
+  push:
+    branches: ['feat/f-showcase*']
+    paths: ['tools/showcase/species.json', 'tools/showcase/selection.json', 'tools/showcase/fetch.py']
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install pillow
+      - run: python tools/showcase/fetch.py
+      - name: Commit results
+        run: |
+          git config user.name "birdspot-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tools/showcase/candidates assets/showcase
+          git diff --cached --quiet || git commit -m "chore(showcase): fotokandidaten/foto's opgehaald via CI"
+          git push
