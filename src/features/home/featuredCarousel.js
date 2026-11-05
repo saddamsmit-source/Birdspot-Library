@@ -14,10 +14,11 @@ const SAVE_EVERY_MS = 5_000;
 /** Tekst onder de naam: herkenning + wanneer in Nederland. Pure functie (testbaar). */
 export function birdInfo(bird) {
   const s = byId.get(bird.id);
-  const marks = s?.fieldmarks || 'Let op formaat, kleur en vluchtbeeld.';
+  // eigen tekst voor dwaalgasten waarvan de soortendatabase nog geen beschrijving heeft
+  const marks = bird.info || (!s?.compact && s?.fieldmarks) || 'Let op formaat, kleur en vluchtbeeld.';
   const when = !s?.months || s.months === '-' ? 'onregelmatig'
     : s.months === 'jan-dec' ? 'het hele jaar' : s.months.replaceAll('-', '–').replaceAll(',', ', ');
-  const badge = c => CATEGORY_BADGES[c] || c;
+  const badge = c => (c === 'schaarsegast' ? 'Schaarse gast' : CATEGORY_BADGES[c] || c);
   const status = s ? badge(s.category) + (s.statusExtra ? ', ook ' + badge(s.statusExtra).toLowerCase() : '') : '';
   return { recognition: 'Herkenning: ' + marks, presence: 'In Nederland: ' + [status, when].filter(Boolean).join(' · ') };
 }

@@ -49,8 +49,9 @@ die in Nederland (soms) broeden; exoten, ontsnapte vogels en compacte dwaalgaste
 
 ## Diashow startpagina (F)
 
-`tools/showcase/species.json` bepaalt de diashow: 11 groepen × 2 bijzondere Nederlandse soorten (schaars, zeldzaam
-of bedreigd). Foto's komen van Wikimedia Commons (alleen CC0, publiek domein, CC BY of CC BY-SA) en staan lokaal in
+`tools/showcase/species.json` bepaalt de diashow: 50 bijzondere Nederlandse soorten in 15 groepen (schaars, zeldzaam,
+bedreigd of dwaalgast, zoals Vale Gier en Monniksgier). Dwaalgasten zonder beschrijving in de soortendatabase krijgen
+een eigen herkenningstekst (`info`). Foto's komen van Wikimedia Commons (alleen CC0, publiek domein, CC BY of CC BY-SA) en staan lokaal in
 `assets/showcase/`, met maker, licentie en bron in `credits.json`. Omdat de ontwikkelomgeving Wikimedia niet kan
 bereiken, haalt de workflow `showcase-photos` kandidaten en gekozen foto's op (`tools/showcase/fetch.py`).
 Elke foto is beoordeeld op overzichtsvellen (`tools/showcase/candidates/`): juiste soort, vogel helemaal en scherp in

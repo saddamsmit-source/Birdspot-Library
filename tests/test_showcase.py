@@ -1,6 +1,6 @@
 """
 Birdspot Library — F: diashow op de startpagina
-  F-01  22 vogels: 11 groepen × 2 bijzondere soorten; elke foto lokaal aanwezig met maker, licentie en Commons-bron
+  F-01  50 vogels: 15 groepen bijzondere soorten; elke foto lokaal aanwezig met maker, licentie en Commons-bron
   F-02  opeenvolgende vogels komen uit een andere groep
   F-03  advance(): na 30 s de volgende vogel, rest-tijd blijft staan, loopt rond aan het eind
   F-04  hervatten: opgeslagen positie (vogel 6, 20 s) → na 10 s zichtbare tijd vogel 7;
@@ -59,21 +59,25 @@ def main():
 
             birds = p.evaluate("async () => (await import('/src/features/home/specialBirds.js')).FEATURED_BIRDS")
             groups = SPEC["groups"]
-            assert len(groups) == 11 and all(len(g[2]) == 2 for g in groups), "F-01 11 groepen × 2"
-            assert len(birds) == 22, f"F-01 {len(birds)} vogels met foto"
+            assert len(groups) == 15 and all(len(g[2]) >= 2 for g in groups), "F-01 15 groepen, elk minstens 2"
+            assert sum(len(g[2]) for g in groups) == 50 and len(birds) == 50, f"F-01 {len(birds)} vogels met foto"
+            assert len({b["id"] for b in birds}) == 50, "F-01 dubbele soort"
             for b in birds:
                 c = CREDITS[b["id"]]
                 assert (ROOT / b["image"].lstrip("/")).is_file(), b["image"]
                 assert b["author"] and b["author"] == c["author"] and LICENSE.match(b["license"]), b
                 assert b["source"].startswith("https://commons.wikimedia.org/wiki/File:"), b
-            print("F-01 OK — 22 lokale foto's met maker en licentie")
+            compact_ids = set(p.evaluate("async () => (await import('/src/data/species.js')).SPECIES.filter(s => s.compact).map(s => s.id)"))
+            for b in birds:
+                assert b["id"] not in compact_ids or b.get("info"), f"F-01 {b['nl']}: dwaalgast zonder herkenningstekst"
+            print("F-01 OK — 50 lokale foto's met maker, licentie en herkenning")
 
-            assert all(birds[i]["group"] != birds[i + 1]["group"] for i in range(len(birds) - 1)), "F-02"
+            assert all(birds[i]["group"] != birds[(i + 1) % len(birds)]["group"] for i in range(len(birds))), "F-02"
             print("F-02 OK — afwisselende groepen")
 
             adv = p.evaluate("""async () => { const m = await import('/src/features/home/specialBirds.js');
               return [m.advance({index:0,elapsed:0}, 29999), m.advance({index:0,elapsed:0}, 30000),
-                      m.advance({index:3,elapsed:25000}, 10000), m.advance({index:21,elapsed:0}, 30000, 22)]; }""")
+                      m.advance({index:3,elapsed:25000}, 10000), m.advance({index:49,elapsed:0}, 30000, 50)]; }""")
             assert adv == [{"index": 0, "elapsed": 29999}, {"index": 1, "elapsed": 0},
                            {"index": 4, "elapsed": 5000}, {"index": 0, "elapsed": 0}], adv
             print("F-03 OK — advance()")
@@ -113,7 +117,11 @@ def main():
             p.wait_for_function("() => document.querySelector('#featuredBirdImage').naturalWidth > 0", timeout=8000)
             assert cap.is_visible()
             p.screenshot(path=str(SHOTS / "showcase_f_390.png"))
-            print("F-05 OK — bijschrift en foto:", cur["nl"])
+            vg = p.evaluate("async () => { const m = await import('/src/features/home/featuredCarousel.js');"
+                            " const b = (await import('/src/features/home/specialBirds.js')).FEATURED_BIRDS.find(x => x.id === 'sp463');"
+                            " return m.birdInfo(b); }")
+            assert vg["recognition"].startswith("Herkenning: Enorme zandbruine gier"), vg
+            print("F-05 OK — bijschrift en foto:", cur["nl"], "· Vale Gier met eigen herkenningstekst")
 
             assert not external, f"F-06 externe verzoeken: {external[:3]}"
             assert not errors, f"F-06 paginafouten: {errors}"
