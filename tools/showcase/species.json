@@ -94,22 +94,6 @@
       "River Warbler",
       "Schlagschwirl"
      ]
-    },
-    {
-     "id": "sp201",
-     "nl": "Porseleinhoen",
-     "latin": "Porzana porzana",
-     "pose": "natuurlijk",
-     "queries": [
-      "\"Porzana porzana\"",
-      "\"Spotted crake\"",
-      "Tüpfelsumpfhuhn"
-     ],
-     "aliases": [
-      "Spotted crake",
-      "Spotted Crake",
-      "Tüpfelsumpfhuhn"
-     ]
     }
    ]
   ],
