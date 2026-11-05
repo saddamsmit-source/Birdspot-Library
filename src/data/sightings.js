@@ -21,6 +21,7 @@
  *   certainty:    'certain' | 'probable' | 'possible'  (default 'certain')
  *   lat:          number | null
  *   lon:          number | null
+ *   placeId:      string | null  (K4, optioneel: vaste plek uit places.js; eigen lat/lon blijven bewaard)
  *   pinAccuracyM: number | null  (K2, optioneel: nauwkeurigheid van de pin in meters; ontbreekt = onbekend)
  *   locationName: string | null
  *   habitat:      string | null  (bijv. 'forest', 'wetland', …)
@@ -113,6 +114,24 @@ function saveSightings(sightings) {
     exportedAt:    new Date().toISOString(),
     sightings,
   }));
+}
+
+// ── Plekken koppelen (K4) ──────────────────────────────────
+/**
+ * Zet placeId op waarnemingen die er nog geen hebben (additief; overschrijft nooit).
+ * @param {Map<string,string>} assign  sightingId → placeId
+ * @returns {Promise<number>} aantal gewijzigde waarnemingen
+ * @throws bij opslagfout
+ */
+export async function assignPlaceIds(assign) {
+  if (!assign?.size) return 0;
+  const all = await getSightings();
+  let n = 0;
+  for (const s of all) {
+    if (!s.placeId && assign.has(s.id)) { s.placeId = assign.get(s.id); n++; }
+  }
+  if (n) saveSightings(all);
+  return n;
 }
 
 // ── Voeg toe ───────────────────────────────────────────────

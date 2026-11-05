@@ -42,8 +42,9 @@ export function openPinPicker({lat=null,lon=null,onConfirm=()=>{}}={}) {
     confirm.disabled=!(ok&&precise);
   }
   // Kaart beweegt → pinpunt (kaartmidden) wordt de gekozen plek
+  let suppress=false;
   function fromCenter(){
-    if(!map)return;
+    if(!map||suppress)return;
     const c=map.getCenter();
     accuracyM=pinAccuracyM(c.lat,map.getZoom());
     typed=false;
@@ -60,7 +61,8 @@ export function openPinPicker({lat=null,lon=null,onConfirm=()=>{}}={}) {
     const b=inputLon.value.trim()===''?NaN:Number(inputLon.value);
     typed=true;accuracyM=null;
     place(a,b);
-    if(valid(a,b)&&map){map.off('move',fromCenter);map.setView([a,b],Math.max(map.getZoom(),16));map.on('move',fromCenter);}
+    // Ingetypte coördinaten zijn leidend: kaart volgt zonder animatie en zonder de pin te overschrijven
+    if(valid(a,b)&&map){suppress=true;map.setView([a,b],Math.max(map.getZoom(),16),{animate:false});setTimeout(()=>{suppress=false;},0);}
     status.textContent=valid(a,b)?'Pin gereed':'Vul geldige coördinaten in, of schuif de kaart onder de pin.';
   };
   inputLat.addEventListener('input',onInputs);inputLon.addEventListener('input',onInputs);
@@ -101,7 +103,11 @@ export function openPinPicker({lat=null,lon=null,onConfirm=()=>{}}={}) {
       layerBtn.addEventListener('click',()=>toggle());
       host.querySelector('#pinCenterPin').hidden=false;
       map.on('move',fromCenter);map.on('zoomend',fromCenter);
-      if(!initialValid){accuracyM=pinAccuracyM(center[0],8);place(NaN,NaN);status.textContent='Zoom in en schuif de kaart tot de pin op de plek van de vogel staat.';}
+      if(typed&&valid(chosenLat,chosenLon)){
+        // Coördinaten al ingetypt terwijl de kaart laadde: die blijven leidend
+        suppress=true;map.setView([chosenLat,chosenLon],17,{animate:false});setTimeout(()=>{suppress=false;},0);
+        place(chosenLat,chosenLon);
+      }else if(!initialValid){accuracyM=pinAccuracyM(center[0],8);place(NaN,NaN);status.textContent='Zoom in en schuif de kaart tot de pin op de plek van de vogel staat.';}
       else fromCenter();
       setTimeout(()=>{if(!destroyed)map?.invalidateSize();},100);
     }catch(_){

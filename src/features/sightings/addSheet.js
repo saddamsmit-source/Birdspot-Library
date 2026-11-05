@@ -33,6 +33,8 @@ import { SPECIES, toggleSeen, getSeenIds } from '../../data/species.js';
 import { openPinPicker } from './pinPicker.js';
 import { normalizeEvidence, observedVisually, validPin, OBSERVATION_METHODS } from './evidence.js';
 import { addSighting, updateSighting } from '../../data/sightings.js';
+import { loadPlaces, addPlace } from '../../data/places.js';
+import { askPlaceReuse } from '../map/placePrompt.js';
 import { savePhoto, getPhoto, deletePhoto } from '../../data/db.js';
 import { openSpeciesPicker }     from './speciesPicker.js';
 import { escHtml }               from '../../utils/html.js';
@@ -66,6 +68,7 @@ function freshState(override = {}) {
     locationName: '',
     lat:          null,
     lon:          null,
+    placeId:      null,   // K4: vaste plek; null = bij opslaan nieuwe plek als er een pin is
     pinAccuracyM: null,   // K2: nauwkeurigheid van de pin in meters (kaartzoom of GPS); null = onbekend
     habitat:      null,
     behavior:     null,
@@ -102,6 +105,7 @@ export function openAddSheet({ onSaved, initial = {} } = {}) {
     certainty:source==='merlin'?'possible':'certain',
     lat: hasPin ? Number(initial.lat) : null,
     lon: hasPin ? Number(initial.lon) : null,
+    placeId: hasPin && typeof initial.placeId === 'string' ? initial.placeId : null,
     pinAccuracyM: hasPin && Number.isFinite(initial.pinAccuracyM) ? Number(initial.pinAccuracyM) : null,
     locationName: typeof initial.locationName === 'string' ? initial.locationName : '',
   }), { onSaved });
@@ -125,6 +129,7 @@ export function openEditSheet(sighting, { onSaved } = {}) {
     locationName:     sighting.locationName || '',
     lat:              sighting.lat          ?? null,
     lon:              sighting.lon          ?? null,
+    placeId:          sighting.placeId      || null,
     pinAccuracyM:     Number.isFinite(sighting.pinAccuracyM) ? sighting.pinAccuracyM : null,
     habitat:          sighting.habitat      || null,
     behavior:         sighting.behavior     || null,
@@ -189,6 +194,7 @@ function _openSightingForm(mode, initialState, { onSaved, editId } = {}) {
   ov.querySelector('#addSheetCancel').addEventListener('click', close);
 
   _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx });
+  if (!isEdit) _offerPlace(ov, ctx);
 }
 
 // ── Form body HTML ─────────────────────────────────────────
@@ -277,7 +283,7 @@ function _renderFormBody() {
         ${validPin(_state.lat,_state.lon) ? '<button class="form-btn-secondary" id="sightClearPin" type="button">Verwijder pin</button>' : ''}
       </div>
       <div class="form-hint" id="coordsHint">
-        ${validPin(_state.lat,_state.lon) ? `📍 ${Number(_state.lat).toFixed(5)}, ${Number(_state.lon).toFixed(5)}${Number.isFinite(_state.pinAccuracyM) ? ` · ±${_state.pinAccuracyM} m` : ''}` : 'Nog geen pin gekozen. Alleen een plaatsnaam opslaan mag ook.'}
+        ${_coordsHintText()}
       </div>
     </div>
 
@@ -382,6 +388,28 @@ function _renderNewThumb(m) {
     </div>`;
 }
 
+function _coordsHintText() {
+  if (!validPin(_state.lat,_state.lon)) return 'Nog geen pin gekozen. Alleen een plaatsnaam opslaan mag ook.';
+  const acc = Number.isFinite(_state.pinAccuracyM) ? ` · ±${_state.pinAccuracyM} m` : '';
+  const place = _state.placeId ? loadPlaces().find(p => p.id === _state.placeId) : null;
+  return `📍 ${Number(_state.lat).toFixed(5)}, ${Number(_state.lon).toFixed(5)}${acc}` +
+    (place ? ` · Plek: ${escHtml(place.name)}` : ' · Nieuwe plek');
+}
+
+/** K4: na een nieuwe pin vragen of een bestaande plek binnen 50 m gebruikt wordt. */
+async function _offerPlace(ov, ctx) {
+  if (ctx.destroyed || !validPin(_state.lat,_state.lon) || _state.placeId) return;
+  const res = await askPlaceReuse(_state.lat, _state.lon);
+  if (ctx.destroyed || !res) return;
+  _state.placeId = res.placeId || null;
+  if (_state.placeId && !_state.locationName) {
+    const place = loadPlaces().find(p => p.id === _state.placeId);
+    if (place) { _state.locationName = place.name; const inp = ov.querySelector('#sightLocation'); if (inp) inp.value = place.name; }
+  }
+  const hint = ov.querySelector('#coordsHint');
+  if (hint) hint.innerHTML = _coordsHintText();
+}
+
 // ── Events ─────────────────────────────────────────────────
 function _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx }) {
   const content = () => ov.querySelector('#addSheetContent');
@@ -462,12 +490,13 @@ function _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx })
         if(ctx.destroyed)return;
         _state.lat=coords.lat;_state.lon=coords.lon;
         _state.pinAccuracyM=Number.isFinite(coords.accuracyM)?coords.accuracyM:null;
-        ctx.cancelPinPicker=null;refresh();
+        _state.placeId=null;
+        ctx.cancelPinPicker=null;refresh();_offerPlace(ov,ctx);
       },
     });
   });
   el.querySelector('#sightClearPin')?.addEventListener('click',()=>{
-    _state.lat=null;_state.lon=null;_state.pinAccuracyM=null;refresh();
+    _state.lat=null;_state.lon=null;_state.pinAccuracyM=null;_state.placeId=null;refresh();
   });
   // GPS
   el.querySelector('#sightGpsBtn')?.addEventListener('click', () => _requestGPS(ov,ctx));
@@ -645,6 +674,12 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
     const now = new Date().toISOString();
     let savedSighting;
 
+    // K4: elke pin hoort bij een plek; nieuwe plek alleen als de gebruiker geen bestaande koos
+    let placeId = validPin(_state.lat,_state.lon) ? _state.placeId : null;
+    if (validPin(_state.lat,_state.lon) && (!placeId || !loadPlaces().some(p => p.id === placeId))) {
+      placeId = addPlace({ name: _state.locationName, lat: _state.lat, lon: _state.lon }).id;
+    }
+
     const sightingData = {
       speciesId:    _state.speciesId,
       speciesName:  _state.speciesName,
@@ -655,6 +690,7 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
       lat:          _state.lat,
       lon:          _state.lon,
       pinAccuracyM: validPin(_state.lat,_state.lon) && Number.isFinite(_state.pinAccuracyM) ? _state.pinAccuracyM : null,
+      placeId,
       locationName: _state.locationName || null,
       habitat:      _state.habitat      || null,
       behavior:     _state.behavior     || null,
@@ -731,10 +767,12 @@ function _requestGPS(ov,ctx) {
       _state.lat = pos.coords.latitude;
       _state.lon = pos.coords.longitude;
       _state.pinAccuracyM = Number.isFinite(pos.coords.accuracy) ? Math.round(pos.coords.accuracy) : null;
+      _state.placeId = null;
       btn.classList.remove('gps-btn--loading');
       btn.classList.add('gps-btn--active');
       btn.innerHTML = _svgGps() + ' GPS';
-      if (hint) hint.textContent = `📍 ${_state.lat.toFixed(5)}, ${_state.lon.toFixed(5)}`;
+      if (hint) hint.innerHTML = _coordsHintText();
+      _offerPlace(ov, ctx);
     },
     () => {
       if(ctx.destroyed) return;

@@ -18,6 +18,7 @@
 import { getSightings }                    from '../data/sightings.js';
 import { getDB }                            from '../data/db.js';
 import { exportCollections, mergeCollections, restoreCollections } from './collections.js';
+import { loadPlaces, savePlaces, PLACES_KEY } from '../data/places.js';
 
 const STORAGE_KEY    = 'birdspot-sightings';
 const SCHEMA_VERSION = 2;
@@ -198,6 +199,7 @@ function saveSafetyCopy() {
     localStorage.setItem(SAFETY_KEY, JSON.stringify({
       savedAt:   new Date().toISOString(),
       sightings,
+      places: loadPlaces(),
       collections: exportCollections(),
     }));
   } catch (_) { /* quota: veiligheidskopie mislukt stille */ }
@@ -221,11 +223,15 @@ const MEDIA_EXT_MIME = Object.freeze({
   jpg:'image/jpeg',jpeg:'image/jpeg',png:'image/png',webp:'image/webp',
   gif:'image/gif',svg:'image/svg+xml',mp4:'video/mp4',webm:'video/webm',
   mov:'video/quicktime',m4v:'video/x-m4v',
+  // K4: geluidsopnamen bij een plek (o.a. Merlin-WAV)
+  wav:'audio/wav',mp3:'audio/mpeg',m4a:'audio/mp4',aac:'audio/aac',oga:'audio/ogg',
 });
 const MIME_EXT = Object.freeze({
   'image/jpeg':'jpg','image/png':'png','image/webp':'webp',
   'image/gif':'gif','image/svg+xml':'svg','video/mp4':'mp4',
   'video/webm':'webm','video/quicktime':'mov','video/x-m4v':'m4v',
+  'audio/wav':'wav','audio/x-wav':'wav','audio/wave':'wav','audio/mpeg':'mp3','audio/mp3':'mp3',
+  'audio/mp4':'m4a','audio/x-m4a':'m4a','audio/aac':'aac','audio/ogg':'oga',
 });
 function zipMediaExtension(photo) {
   const mime=String(photo.type||photo.blob?.type||'').toLowerCase();
@@ -253,7 +259,11 @@ export async function exportBackup() {
     schemaVersion: SCHEMA_VERSION,
     exportedAt:    new Date().toISOString(),
     sightings,
+    places: loadPlaces(),
     photoIds: photos.map(p => p.id),
+    // Metadata per bestand: plek-media (K4) houdt zo zijn plek en exacte type
+    mediaMeta: photos.map(p => ({ id: p.id, type: p.type || p.blob?.type || null, filename: p.filename || null,
+      speciesId: p.speciesId || null, sightingId: p.sightingId || null, placeId: p.placeId || null })),
     collections: exportCollections(),
   };
   const gegevensBytes = encoder.encode(JSON.stringify(gegevens, null, 2));
@@ -390,13 +400,15 @@ export async function importBackup(file) {
   const existingIds    = new Set(existingPhotos.map(p => p.id));
   const newPhotos      = [];
 
+  const metaById = new Map((Array.isArray(data.mediaMeta) ? data.mediaMeta : []).map(m => [m.id, m]));
   for (const photoId of (data.photoIds || [])) {
     if (existingIds.has(photoId)) continue;
+    const meta = metaById.get(photoId);
     // Zoek het fotobestand in de ZIP (probeert meerdere extensies)
     for (const ext of Object.keys(MEDIA_EXT_MIME)) {
       const photoBytes = extractFromZip(bytes, `photos/${photoId}.${ext}`);
       if (photoBytes) {
-        const mimeType = MEDIA_EXT_MIME[ext];
+        const mimeType = meta?.type || MEDIA_EXT_MIME[ext];
         const blob     = new Blob([photoBytes], { type: mimeType });
         // Zoek bijbehorende sighting
         const sighting = merged.find(s => (s.photoIds || []).includes(photoId));
@@ -404,9 +416,10 @@ export async function importBackup(file) {
           id:        photoId,
           blob,
           type:      mimeType,
-          filename:  `${photoId}.${ext}`,
-          speciesId: sighting?.speciesId || null,
-          sightingId: sighting?.id       || null,
+          filename:  meta?.filename || `${photoId}.${ext}`,
+          speciesId: sighting?.speciesId || meta?.speciesId || null,
+          sightingId: sighting?.id       || meta?.sightingId || null,
+          placeId:   meta?.placeId || null,
           addedAt:   new Date().toISOString(),
         });
         break;
@@ -414,8 +427,21 @@ export async function importBackup(file) {
     }
   }
 
+  // 5b. Plekken samenvoegen (op id; back-up wint bij verschil). Oude ZIPs zonder plekken: niets.
+  let mergedPlaces = null;
+  if (Array.isArray(data.places)) {
+    const placeById = new Map(loadPlaces().map(p => [p.id, p]));
+    for (const p of data.places) {
+      if (p && typeof p.id === 'string' && Number.isFinite(Number(p.lat)) && Number.isFinite(Number(p.lon))) {
+        placeById.set(p.id, { ...(placeById.get(p.id) || {}), ...p });
+      }
+    }
+    mergedPlaces = [...placeById.values()];
+  }
+
   // 6. Alles opslaan
   try {
+    if (mergedPlaces) savePlaces(mergedPlaces);
     localStorage.setItem(STORAGE_KEY, JSON.stringify({
       schemaVersion: SCHEMA_VERSION,
       exportedAt:    new Date().toISOString(),
@@ -462,8 +488,10 @@ export async function restoreFromSafetyCopy() {
     sightings:     copy.sightings,
   }));
 
-  // De persoonlijke collecties horen bij dezelfde veiligheidssnapshot.
+  // De persoonlijke collecties en plekken horen bij dezelfde veiligheidssnapshot.
   restoreCollections(copy.collections);
+  if (Array.isArray(copy.places)) savePlaces(copy.places);
+  else localStorage.removeItem(PLACES_KEY);
 
   // Veiligheidskopie verwijderen (terugzetten is klaar)
   localStorage.removeItem(SAFETY_KEY);

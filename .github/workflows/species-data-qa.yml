@@ -55,6 +55,8 @@ jobs:
         run: python tests/test_map_k1k2.py
       - name: Map K3 QA (colors, clusters, legend)
         run: python tests/test_map_k3.py
+      - name: Map K4 QA (places, reuse, media, backup)
+        run: python tests/test_map_k4.py
       - name: Profile and backup QA
         run: python tests/test_profile_backup.py
       - name: Upload screenshot evidence
