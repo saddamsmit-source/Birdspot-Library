@@ -6,6 +6,8 @@ Birdspot Library — Fase I1: soortdata en status
   I1-04  statusvelden per soort geldig en gelijk aan de bron docs/data/vogellijst-nederland.json
   I1-05  soortenlijst toont alleen categorieën met soorten; elke tab rendert zijn soorten
   I1-06  geen paginafouten; screenshots 390 px
+  I2-01  alle algemene en vrij algemene regelmatige soorten uit de bron staan in de app
+  I2-02  elke soort heeft herkenning, maten, verenkleed, verspreiding en familie
 
 Starten (vanuit repo-root):  python tests/test_species_data.py
 """
@@ -75,6 +77,19 @@ def check_data(species, labels, active):
         assert s["redList"] == (r["rode_lijst"] or None), f"I1-04 {s['nameNL']} redList"
         assert s["status"].startswith(r["status"]), f"I1-04 {s['nameNL']} status-tekst"
 
+    # I2-01: elke algemene/vrij algemene regelmatige soort uit de bron staat in de app
+    regular = {"Standvogel", "Zomergast", "Wintergast", "Doortrekker"}
+    common = [r for r in SOURCE if r["status"] in regular and r["frequentie"] in ("Algemeen", "Vrij algemeen")]
+    have = {s["nameSci"] for s in species}
+    absent = [r["nl"] for r in common if r["sci"] not in have]
+    assert not absent, f"I2-01 ontbrekende algemene soorten: {absent}"
+    # I2-02: elke soort heeft een volledige basisbeschrijving
+    for s in species:
+        for key in ("fieldmarks", "distribution", "family"):
+            assert s.get(key), f"I2-02 {s['nameNL']} mist {key}"
+        assert all(s["size"].get(k) for k in ("length", "wingspan", "weight")), f"I2-02 {s['nameNL']} maten"
+        assert s["plumage"].get("adult_m"), f"I2-02 {s['nameNL']} verenkleed"
+
     counts = {}
     for s in species:
         counts[s["category"]] = counts.get(s["category"], 0) + 1
@@ -102,7 +117,7 @@ def main():
               return { species: m.SPECIES, labels: Object.keys(m.CATEGORY_LABELS), active: m.activeCategories() };
             }""")
             counts = check_data(data["species"], data["labels"], data["active"])
-            print("I1-01..04 OK —", len(data["species"]), "soorten", counts)
+            print("I1-01..04, I2-01..02 OK —", len(data["species"]), "soorten", counts)
 
             p.locator('.nav-item[data-route="species"]').click()
             p.locator("#speciesFilters .filter-chip").first.wait_for(timeout=10000)
@@ -124,7 +139,7 @@ def main():
             assert not errors, f"I1-06 paginafouten: {errors}"
             print("I1-06 OK — geen paginafouten")
             browser.close()
-    print("Fase I1: alle controles geslaagd")
+    print("Fase I1+I2: alle controles geslaagd")
 
 
 if __name__ == "__main__":
