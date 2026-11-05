@@ -719,3 +719,11 @@
 }
 .sd-note, .sd-empty { margin: 0; display: flex; gap: var(--space-8); align-items: center; font-size: var(--fs-meta); color: var(--muted); }
 .sd-photos .signature-species-empty-photo { grid-column: 1 / -1; }
+/* K5: plek in 'Waar' opent de kaart op die plek */
+.sd-places li:has(.sd-place-link) { padding: 0; border: 0; background: none; }
+.sd-place-link {
+  width: 100%; min-height: 48px; display: flex; align-items: center; gap: var(--space-8);
+  padding: var(--space-8) var(--space-12); border: 1px solid var(--line); border-radius: var(--r-sm);
+  background: var(--surface); color: var(--ink); text-align: left; font: inherit;
+}
+.sd-place-link::after { content: "›"; color: var(--muted); font-size: 18px; }

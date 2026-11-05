@@ -29,14 +29,15 @@ export function normalizedSearch(value) {
   return String(value??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'')
     .toLocaleLowerCase('nl').trim();
 }
-export function filteredSightings(sightings,{speciesSearch='',status='all'}={},speciesCatalog=[]) {
+/** K5: zoekt op vogelnaam (NL, EN, Latijn) én op naam van de plek of locatie. */
+export function filteredSightings(sightings,{speciesSearch='',status='all'}={},speciesCatalog=[],placeNames=new Map()) {
   const search=normalizedSearch(speciesSearch);
   const catalog=new Map(speciesCatalog.map(x=>[x.id,x]));
   return (Array.isArray(sightings)?sightings:[]).filter(s=>{
     if(status!=='all'&&statusForSighting(s)!==status)return false;
     if(!search)return true;
     const item=catalog.get(s?.speciesId);
-    return [s?.speciesName,item?.nameNL,item?.nameEN,item?.nameSci]
+    return [s?.speciesName,item?.nameNL,item?.nameEN,item?.nameSci,placeNames.get(s?.placeId),s?.locationName]
       .filter(x=>typeof x==='string').some(n=>normalizedSearch(n).includes(search));
   });
 }
