@@ -25,3 +25,6 @@ Bronmetadata opgehaald via Wikimedia Commons imageinfo en vergeleken met wetensc
 
 ## Hergebruik en vervolg
 Gebruik metadata + visuele verificatie + stabiele soort-ID, nooit zoekresultaatpositie als bewijs. Behoud volledige uitsnede in thumbnails en hero. Volgende groep pas na previewfeedback. Feedback/eigenaarbeheer blijven voorbereiding, openbare release en push zijn uitgesteld. Eerdere roadmapkeuze 76→62% is vervangen door deze eigenaarcorrectie.
+
+## Mobiele QA-correctie
+De nieuwe browsertest vond bij een staande foto (huismus) dat CSS-grid de afbeelding hoger maakte dan het vaste fotovak: 500 px beeld in 405 px vak. Hierdoor kon de onderkant alsnog worden afgesneden ondanks contain. Gereproduceerd in een 390 px browserframe. Opgelost door het gidsfotovak als block met begrensde beeldhoogte te renderen. De oorspronkelijke niet-overlappen-eis blijft behouden; test leest geometrie nu in één DOM-snapshot. Aanvullend bewijs bij L-016/L-019.

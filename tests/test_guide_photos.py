@@ -24,7 +24,8 @@ def main():
      assert hero.evaluate('(i)=>getComputedStyle(i).objectFit')=='contain'
      assert p.locator('.species-guide-credit').is_visible()
      # The title must not obscure the photo.
-     assert p.locator('.signature-species-detail-intro').bounding_box()['y'] >= hero.bounding_box()['y']+hero.bounding_box()['height']
+     geometry=p.evaluate('''(id)=>{const i=document.querySelector('#detailThumb-'+id+' img').getBoundingClientRect();const t=document.querySelector('.signature-species-detail-intro').getBoundingClientRect();return {imageBottom:i.bottom,titleTop:t.top}}''',sid)
+     assert geometry['titleTop'] >= geometry['imageBottom'], (width,sid,geometry)
      p.get_by_role('button',name='Sluit soortdetail',exact=True).click()
      p.locator('.signature-species-detail-overlay').wait_for(state='detached')
     # Explicit broken-photo state, no unrelated external fallback image.
