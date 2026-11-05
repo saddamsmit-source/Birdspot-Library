@@ -80,17 +80,19 @@
      ]
     },
     {
-     "id": "sp279",
-     "nl": "Cetti's Zanger",
-     "latin": "Cettia cetti",
+     "id": "sp272",
+     "nl": "Waterrietzanger",
+     "latin": "Acrocephalus paludicola",
      "pose": "tak",
      "queries": [
-      "\"Cettia cetti\"",
-      "\"Cetti's warbler\""
+      "\"Acrocephalus paludicola\"",
+      "\"Aquatic warbler\"",
+      "Seggenrohrsänger"
      ],
      "aliases": [
-      "Cetti's warbler",
-      "Cetti's Warbler"
+      "Aquatic warbler",
+      "Aquatic Warbler",
+      "Seggenrohrsänger"
      ]
     }
    ]
