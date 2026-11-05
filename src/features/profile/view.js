@@ -34,9 +34,11 @@ export async function renderProfile(el) {
         </div>
         <div>
           <h1 class="profile-header__title">Bibliotheek</h1>
-          <p class="profile-header__sub">${sightings.length} ${sightings.length === 1 ? 'waarneming' : 'waarnemingen'}</p>
+          <p class="profile-header__sub">Jouw waarnemingen, foto's en back-up</p>
         </div>
       </div>
+
+      ${renderOverview(sightings)}
 
       <!-- Back-up sectie -->
       <section class="profile-section" aria-labelledby="backupHeading">
@@ -44,7 +46,7 @@ export async function renderProfile(el) {
 
         <!-- Status -->
         <div class="backup-status" id="backupStatus" aria-live="polite">
-          ${renderBackupStatus(backupStatus)}
+          ${renderBackupStatus(backupStatus, sightings.length)}
         </div>
 
         <!-- Alles bewaren -->
@@ -120,14 +122,12 @@ export async function renderProfile(el) {
     </div>
   `;
 
-  // Versie ophalen
-  try {
-    const sw = await navigator.serviceWorker?.getRegistration?.();
-    const v  = sw ? 'met service worker' : 'zonder service worker';
-    el.querySelector('#appVersion').textContent = `Birdspot Library · ${v}`;
-  } catch (_) {
-    el.querySelector('#appVersion').textContent = 'Birdspot Library';
-  }
+  // Versie ophalen bij de service worker (enige versiebron, L-027)
+  const versionEl = el.querySelector('#appVersion');
+  const version = await askVersion();
+  versionEl.textContent = version
+    ? `Versie ${version} · werkt offline`
+    : 'Versie onbekend · offline-modus nog niet actief';
 
   attachEvents(el);
 }
@@ -272,17 +272,70 @@ function showConfirm(el, html) {
   });
 }
 
+// ── Versie via MessageChannel; null als er (nog) geen service worker is ──────
+async function askVersion() {
+  try {
+    const reg = await navigator.serviceWorker?.getRegistration?.();
+    const sw = reg?.active;
+    if (!sw) return null;
+    return await new Promise(resolve => {
+      const ch = new MessageChannel();
+      const timer = setTimeout(() => resolve(null), 1500);
+      ch.port1.onmessage = e => { clearTimeout(timer); resolve(e.data?.version || null); };
+      sw.postMessage({ type: 'get-version' }, [ch.port2]);
+    });
+  } catch (_) { return null; }
+}
+
+// ── Overzicht: tegels met aantallen; 0-tegels krijgen uitleg (D11) ─────────
+export function overviewStats(sightings) {
+  const species = new Set(sightings.map(s => s.speciesId).filter(Boolean));
+  const places = new Set(sightings.map(s => (s.locationName || '').trim()).filter(Boolean));
+  const photos = sightings.reduce((n, s) => n + (Array.isArray(s.photoIds) ? s.photoIds.length : 0), 0);
+  return { sightings: sightings.length, species: species.size, places: places.size, photos };
+}
+
+function renderOverview(sightings) {
+  const st = overviewStats(sightings);
+  if (!st.sightings) {
+    return `<section class="profile-section" aria-labelledby="overviewHeading">
+      <h2 class="profile-section__title" id="overviewHeading">Overzicht</h2>
+      <p class="profile-empty">Nog geen waarnemingen. Tik op <b>+ Waarnemen</b> om je eerste vogel vast te leggen.</p>
+    </section>`;
+  }
+  const tile = (n, label) => `<div class="profile-stat"><strong>${n}</strong><span>${label}</span></div>`;
+  return `<section class="profile-section" aria-labelledby="overviewHeading">
+    <h2 class="profile-section__title" id="overviewHeading">Overzicht</h2>
+    <div class="profile-stats">
+      ${tile(st.sightings, st.sightings === 1 ? 'waarneming' : 'waarnemingen')}
+      ${tile(st.species, st.species === 1 ? 'soort' : 'soorten')}
+      ${st.places ? tile(st.places, st.places === 1 ? 'plek' : 'plekken') : ''}
+      ${st.photos ? tile(st.photos, st.photos === 1 ? 'foto' : "foto's") : ''}
+    </div>
+  </section>`;
+}
+
 // ── Back-upstatus bijwerken ────────────────────────────────────────────────
 
 function updateStatus(el, status) {
   const statusEl = el.querySelector('#backupStatus');
-  if (statusEl) statusEl.innerHTML = renderBackupStatus(status);
+  if (statusEl) statusEl.innerHTML = renderBackupStatus(status, status?.sightingCount ?? 0);
 }
 
-function renderBackupStatus(status) {
+const BACKUP_MAX_AGE_DAYS = 30;
+
+function renderBackupStatus(status, currentCount = 0) {
   if (!status?.lastBackup) {
-    return `<p class="backup-status__none">Nog geen back-up gemaakt.</p>`;
+    return currentCount
+      ? `<p class="backup-status__warn">Nog geen back-up. Bewaar je ${currentCount} ${currentCount === 1 ? 'waarneming' : 'waarnemingen'} met "Bewaren".</p>`
+      : `<p class="backup-status__none">Nog geen back-up nodig: er zijn nog geen waarnemingen.</p>`;
   }
+  const ageDays = Math.floor((Date.now() - new Date(status.lastBackup).getTime()) / 86400000);
+  const newSince = Math.max(0, currentCount - (status.sightingCount ?? currentCount));
+  const reminder = newSince
+    ? `<p class="backup-status__warn">${newSince} ${newSince === 1 ? 'nieuwe waarneming' : 'nieuwe waarnemingen'} sinds de laatste back-up.</p>`
+    : ageDays > BACKUP_MAX_AGE_DAYS
+      ? `<p class="backup-status__warn">Laatste back-up is ${ageDays} dagen oud.</p>` : '';
 
   const date = new Date(status.lastBackup).toLocaleString('nl-NL', {
     day: 'numeric', month: 'short', year: 'numeric',
@@ -299,7 +352,7 @@ function renderBackupStatus(status) {
         <div class="backup-status__label">Laatste back-up</div>
         <div class="backup-status__value">${date} · ${status.sightingCount ?? '?'} waarnemingen</div>
       </div>
-    </div>`;
+    </div>${reminder}`;
 }
 
 // ── Toast helper ───────────────────────────────────────────────────────────

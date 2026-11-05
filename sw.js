@@ -12,7 +12,7 @@
  *   birdspot-media           — foto's/IDB-exports (permanent)
  */
 
-const APP_VERSION = '1.9.1-species-life';
+const APP_VERSION = '1.9.2-profile';
 const APP_CACHE   = `birdspot-app-v${APP_VERSION}`;
 const MEDIA_CACHE = 'birdspot-media';
 
@@ -134,6 +134,13 @@ self.addEventListener('activate', event => {
       client.postMessage({ type: 'new-version', version: APP_VERSION });
     });
   });
+});
+
+// ── Versie opvragen (profielpagina) ────────────────────────────────────────
+self.addEventListener('message', event => {
+  if (event.data?.type === 'get-version') {
+    event.ports?.[0]?.postMessage({ type: 'version', version: APP_VERSION });
+  }
 });
 
 // ── Fetch: network-first voor app-shell, media-first voor media ────────────
