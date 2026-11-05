@@ -33,7 +33,7 @@
 .ambient-wetland.is-video-ready .ambient-wetland__illustration {opacity:0;}
 .ambient-wetland__video {
   opacity:0;transition:opacity 1.6s ease;
-  filter:saturate(.77) brightness(.76) contrast(1.03);
+  filter:saturate(.77) brightness(.62) contrast(1.03);
 }
 .ambient-wetland.is-video-ready .ambient-wetland__video {opacity:.95;}
 .ambient-wetland__darken {
