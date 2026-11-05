@@ -37,3 +37,11 @@ statusvelden worden nooit met de hand in `species.js` aangepast.
 `winter` (winterkleed) en `eclipse` (eclipskleed van eenden in de zomerrui). Seizoenskleed staat in
 `tools/species/seasonal_plumage.json` en wordt toegepast met `python tools/species/apply_plumage.py` (idempotent).
 Bron: veldgidskennis; teksten zijn kort en bedoeld voor herkenning in het veld.
+
+## Leefwijze (H3)
+
+`src/data/speciesLife.js` wordt gegenereerd uit `tools/species/species_life.json` met
+`python tools/species/build_life.py` (idempotent; CI controleert dit). Per soort: broedperiode, nestplaats, aantal eieren,
+broedduur, duur tot uitvliegen, broedsels per jaar, voedsel, gedrag, trek en een beschrijving van zang en roep.
+Bron: veldgidskennis; waarden zijn gangbare bandbreedtes, geen metingen in Nederland. Gedekt: alle standvogels en
+zomergasten (163). Soorten zonder leefwijze tonen de melding dat deze nog volgt; er worden geen waarden ingevuld.

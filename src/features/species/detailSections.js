@@ -2,7 +2,7 @@
  * Birdspot Library — soortdetail: tabbladen met iconen (H2–H4).
  * Pure render-functies (HTML-strings); geen DOM-toegang, geen opslag.
  *
- * Tabs: Herkenning · Seizoen & status · Waar · Mijn waarnemingen
+ * Tabs: Herkenning · Leefwijze (seizoen, status, broeden, voedsel, gedrag, trek) · Waar · Mijn waarnemingen
  * Lege onderdelen worden niet getoond (Handbook D11); ontbrekende inhoud is zichtbaar ontbrekend.
  */
 import { CATEGORY_BADGES } from '../../data/species.js';
@@ -46,6 +46,14 @@ const P = {
   bush:    '<circle cx="8" cy="13" r="4"/><circle cx="15" cy="12" r="5"/><path d="M4 21h16"/>',
   river:   '<path d="M6 3c4 4-4 8 0 12s-2 6 0 6M14 3c4 4-4 8 0 12s-2 6 0 6"/>',
   camera:  '<path d="M4 8h3l2-3h6l2 3h3v12H4z"/><circle cx="12" cy="13" r="3.5"/>',
+  leaf:    '<path d="M5 19C5 10 10 5 20 4c-1 10-6 15-15 15z"/><path d="M5 19 13 11"/>',
+  egg:     '<path d="M12 3c3.5 0 6 5.5 6 10a6 6 0 0 1-12 0c0-4.5 2.5-10 6-10z"/>',
+  timer:   '<circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6"/>',
+  repeat:  '<path d="M4 9a7 7 0 0 1 12-3l3 3"/><path d="M19 4v5h-5"/><path d="M20 15a7 7 0 0 1-12 3l-3-3"/><path d="M5 20v-5h5"/>',
+  food:    '<path d="M6 3v8M4 3v5a2 2 0 0 0 4 0V3M6 11v10"/><path d="M17 3c-2 0-3 3-3 7h3v11"/>',
+  behaviour:'<path d="M4 18c3-1 4-4 4-7a4 4 0 0 1 8 0c0 3 1 6 4 7"/><circle cx="12" cy="6" r="1"/><path d="M8 21h8"/>',
+  migrate: '<path d="M3 17c4-6 10-9 18-10"/><path d="m16 4 5 3-3 5"/><path d="M3 21h6"/>',
+  note:    '<path d="M9 18V5l11-2v13"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/>',
 };
 export function icon(name, cls = '') {
   return `<svg class="sd-icon ${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${P[name] || P.info}</svg>`;
@@ -62,7 +70,7 @@ const MONTH_LETTERS = ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D
 
 export const TABS = [
   ['herkenning', 'Herkenning', 'eye'],
-  ['status', 'Seizoen', 'calendar'],
+  ['status', 'Leefwijze', 'leaf'],
   ['waar', 'Waar', 'pin'],
   ['mijn', 'Waarnemingen', 'camera'],
 ];
@@ -81,8 +89,8 @@ function plumageCard(ic, title, text, badge = '') {
   return `<div class="sd-plumage">${icon(ic)}<div><strong>${esc(title)}${badge}</strong><p>${esc(text)}</p></div></div>`;
 }
 
-/** Tab 1 — Herkenning: maten, kenmerken, verenkleed (incl. broed-, winter- en eclipskleed). */
-export function recognitionPanel(s) {
+/** Tab 1 — Herkenning: maten, kenmerken, verenkleed (incl. broed-, winter- en eclipskleed), zang en roep. */
+export function recognitionPanel(s, life = null) {
   const out = [];
   if (s.size) {
     out.push('<div class="sd-tiles">' +
@@ -109,6 +117,9 @@ export function recognitionPanel(s) {
     if (p.jaarling) cards.push(plumageCard('chick', 'Jaarling', p.jaarling));
     if (cards.length) out.push('<h3 class="sd-h">Verenkleed</h3><div class="sd-plumage-list">' + cards.join('') + '</div>');
   }
+  if (life?.voice) {
+    out.push(`<h3 class="sd-h">Zang en roep</h3><div class="sd-callout sd-voice">${icon('note')}<p>${esc(life.voice)}</p></div>`);
+  }
   if (s.compact) {
     out.push(`<p class="sd-note">${icon('info')}Zeldzame dwaalgast: een uitgebreide beschrijving volgt nog.</p>`);
   }
@@ -127,8 +138,8 @@ export function monthBar(months, now = new Date()) {
   return `<div class="sd-months" role="img" aria-label="${esc(caption)}">${cells}</div><p class="sd-caption">${esc(caption)}</p>`;
 }
 
-/** Tab 2 — Seizoen & status. */
-export function statusPanel(s) {
+/** Tab 2 — Leefwijze: seizoen, status, broeden, voedsel, gedrag en trek. `life` uit speciesLife.js (of null). */
+export function statusPanel(s, life = null) {
   const out = ['<h3 class="sd-h">Wanneer in Nederland</h3>', monthBar(s.months)];
   const tiles = [];
   const extra = s.statusExtra ? `<small>ook ${esc((CATEGORY_BADGES[s.statusExtra] || s.statusExtra).toLowerCase())}</small>` : '';
@@ -141,7 +152,26 @@ export function statusPanel(s) {
   if (s.breeding) tiles.push(tile('nest', 'Broeden', esc(BREEDING[s.breeding] || s.breeding)));
   if (s.redList) tiles.push(tile('shield', 'Rode Lijst', esc(s.redList), '<small>broedvogels 2016</small>'));
   out.push('<div class="sd-tiles sd-tiles--2">' + tiles.join('') + '</div>');
-  out.push(`<p class="sd-note">${icon('info')}Broeden, voedsel en trek per soort volgen in de volgende stap.</p>`);
+  if (!life) {
+    out.push(`<p class="sd-note">${icon('info')}Broeden, voedsel en trek voor deze soort volgen nog.</p>`);
+    return out.join('');
+  }
+  const b = life.breeding;
+  if (b) {
+    out.push('<h3 class="sd-h">Broeden</h3><div class="sd-tiles sd-tiles--2 sd-breed">' +
+      tile('calendar', 'Broedtijd', esc(b.period)) +
+      tile('egg', 'Eieren', esc(b.eggs)) +
+      tile('timer', 'Broedduur', esc(b.incubation)) +
+      tile('chick', 'Jongen in nest', esc(b.fledging)) +
+      tile('repeat', 'Broedsels per jaar', esc(b.broods)) + '</div>' +
+      `<div class="sd-callout">${icon('nest')}<p>${esc(b.nest)}</p></div>`);
+  }
+  const rows = [['food', 'Voedsel', life.diet], ['behaviour', 'Gedrag', life.behaviour], ['migrate', 'Trek', life.migration]]
+    .filter(r => r[2]);
+  if (rows.length) {
+    out.push('<div class="sd-facts">' + rows.map(([ic, label, text]) =>
+      `<div class="sd-fact">${icon(ic)}<div><strong>${label}</strong><p>${esc(text)}</p></div></div>`).join('') + '</div>');
+  }
   return out.join('');
 }
 

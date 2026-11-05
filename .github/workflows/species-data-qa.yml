@@ -39,6 +39,10 @@ jobs:
         run: |
           python tools/species/apply_plumage.py
           git diff --exit-code src/data/species.js
+      - name: Life data build is idempotent (speciesLife.js matches source)
+        run: |
+          python tools/species/build_life.py
+          git diff --exit-code src/data/speciesLife.js
       - name: Species detail tabs QA
         run: python tests/test_species_detail.py
       - name: Upload screenshot evidence

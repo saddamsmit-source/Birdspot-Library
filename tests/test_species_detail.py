@@ -9,6 +9,9 @@ Birdspot Library — H2–H4: soortdetail met tabbladen
   H2-06  Waarnemingen: aantal, plekken, eerste en laatste datum kloppen met de opgeslagen waarnemingen
   H2-07  compacte dwaalgast: melding 'beschrijving volgt', geen verenkleed
   H2-08  geen paginafouten; screenshots 390 px per tab
+  H3-01  data: elke standvogel en zomergast heeft leefwijze; velden gevuld; JS gelijk aan tools/species/species_life.json
+  H3-02  tab heet 'Leefwijze'; broedtegels, nest, voedsel/gedrag/trek en zang en roep staan gelijk aan de bron (Merel)
+  H3-03  soort zonder leefwijze (wintergast) toont de melding 'volgen nog' en geen broedblok
 
 Starten (vanuit repo-root):  python tests/test_species_detail.py
 """
@@ -24,6 +27,7 @@ from test_explorer_species_cluster import LEAFLET_STUB  # offline Leaflet-stub, 
 ROOT = Path(__file__).resolve().parent.parent
 SHOTS = ROOT / "tests" / "screenshots"
 SHOTS.mkdir(parents=True, exist_ok=True)
+LIFE_SRC = json.loads((ROOT / "tools" / "species" / "species_life.json").read_text(encoding="utf-8"))
 SEASONAL = json.loads((ROOT / "tools" / "species" / "seasonal_plumage.json").read_text(encoding="utf-8"))
 MONTHS = ['jan', 'feb', 'mrt', 'apr', 'mei', 'jun', 'jul', 'aug', 'sep', 'okt', 'nov', 'dec']
 SIGHTINGS = [
@@ -181,6 +185,47 @@ def main():
             assert p.locator('#sdPanel-herkenning .sd-plumage').count() == 0
             close_detail()
             print("H2-07 OK — compacte dwaalgast:", dg["nameNL"])
+
+            # H3 — leefwijze
+            life = p.evaluate("async () => (await import('/src/data/speciesLife.js')).LIFE")
+            targets = [s["id"] for s in species if s["category"] in ("standvogel", "zomergast")]
+            missing = [i for i in targets if i not in life]
+            assert not missing, f"H3-01 zonder leefwijze: {missing}"
+            for sid, e in life.items():
+                src = LIFE_SRC[sid]
+                for k in ("diet", "behaviour", "migration", "voice"):
+                    assert e[k] and e[k] == src[k], f"H3-01 {sid} {k}"
+                b = e["breeding"]
+                assert b and all(b[k] and b[k] == src[k] for k in ("period", "nest", "eggs", "incubation", "fledging", "broods")), f"H3-01 {sid} broeden"
+            print(f"H3-01 OK — leefwijze voor {len(targets)} standvogels en zomergasten")
+
+            me = next(s for s in species if s["nameNL"] == "Merel")
+            ml = life[me["id"]]
+            open_species("Merel", me["id"])
+            assert p.locator('[data-sd-tab="status"]').inner_text().strip() == "Leefwijze"
+            p.locator('#sdPanel-herkenning .sd-voice').wait_for(timeout=5000)
+            assert p.locator('#sdPanel-herkenning .sd-voice p').inner_text() == ml["voice"]
+            tab("status")
+            vals = p.eval_on_selector_all('#sdPanel-status .sd-breed .sd-tile__value', 'els => els.map(e => e.innerText)')
+            b = ml["breeding"]
+            assert vals == [b["period"], b["eggs"], b["incubation"], b["fledging"], b["broods"]], vals
+            facts = p.eval_on_selector_all('#sdPanel-status .sd-fact p', 'els => els.map(e => e.innerText)')
+            assert facts == [ml["diet"], ml["behaviour"], ml["migration"]], facts
+            assert p.locator('#sdPanel-status .sd-note').count() == 0
+            p.screenshot(path=str(SHOTS / "species_h3_leefwijze_390.png"), full_page=False)
+            p.locator('#sdPanel-status .sd-facts').scroll_into_view_if_needed()
+            p.screenshot(path=str(SHOTS / "species_h3_leefwijze_feiten_390.png"))
+            close_detail()
+            print("H3-02 OK — Leefwijze-tab en zang en roep (Merel)")
+
+            wg = next(s for s in species if s["category"] == "wintergast" and s["id"] not in life and not s.get("compact"))
+            open_species(wg["nameNL"], wg["id"])
+            tab("status")
+            assert p.locator('#sdPanel-status .sd-note').count() == 1
+            assert p.locator('#sdPanel-status .sd-breed').count() == 0
+            assert p.locator('#sdPanel-herkenning .sd-voice').count() == 0
+            close_detail()
+            print("H3-03 OK — zonder leefwijze:", wg["nameNL"])
 
             assert not errors, f"H2-08 paginafouten: {errors}"
             print("H2-08 OK — geen paginafouten")

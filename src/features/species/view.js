@@ -524,6 +524,12 @@ function openDetail(speciesId, screenEl) {
       sheet.querySelector('#sdPanel-' + b.dataset.sdTab).hidden = !on;
     });
   });
+  import('../../data/speciesLife.js').then(({ LIFE }) => {
+    const life = LIFE[speciesId];
+    if (!life || closed) return;
+    sheet.querySelector('#sdPanel-herkenning').innerHTML = recognitionPanel(s, life);
+    sheet.querySelector('#sdPanel-status').innerHTML = statusPanel(s, life);
+  }).catch(() => {});
   const favBtn = sheet.querySelector('#speciesDetailFavorite');
 
   function updateActions() {
