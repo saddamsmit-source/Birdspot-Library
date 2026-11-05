@@ -68,6 +68,8 @@ def search(q, limit=20):
             continue
         if info.get("width", 0) < 1600:
             continue
+        if re.search(r"MHNT|\begg|eggs|museum|specimen|skull|stamp", p["title"], re.I):
+            continue  # eieren, museumstukken en postzegels zijn geen vogel in zijn natuurlijke gedrag
         out.append({"file": p["title"].removeprefix("File:"), "thumb": info["thumburl"], "width": info["width"],
                     "height": info["height"], "license": lic, "author": author(meta.get("Artist", {}).get("value")),
                     "source": info["descriptionurl"],
@@ -75,7 +77,7 @@ def search(q, limit=20):
     return out
 
 
-def candidates(latin, pose, extra=()):
+def candidates(latin, pose, extra=(), aliases=()):
     word = POSE_WORDS[pose]
     seen, out = set(), []
     queries = list(extra) + [f'"{latin}" {word} incategory:Featured_pictures_on_Wikimedia_Commons',
@@ -83,12 +85,13 @@ def candidates(latin, pose, extra=()):
                f'"{latin}" incategory:Quality_images', f'"{latin}" {word}']
     for q in queries:
         for c in search(q.replace("  ", " ")):
-            if c["file"] not in seen and latin.lower() in (c["file"] + " " + c["description"]).lower():
+            hay = (c["file"] + " " + c["description"]).lower()
+            if c["file"] not in seen and any(n.lower() in hay for n in (latin, *aliases)):
                 seen.add(c["file"])
                 out.append(c)
-        if len(out) >= 8:
+        if len(out) >= 12:
             break
-    return out[:8]
+    return out[:12]
 
 
 def sheet(sid, cands):
@@ -135,7 +138,8 @@ def main():
     credits_path = ASSETS / "credits.json"
     credits = json.loads(credits_path.read_text(encoding="utf-8")) if credits_path.exists() else {}
     for _key, _label, birds in spec["groups"]:
-        for sid, nl, latin, pose, *extra in birds:
+        for b in birds:
+            sid, nl, latin, pose = b["id"], b["nl"], b["latin"], b["pose"]
             chosen = selection.get(sid)
             if chosen:
                 if credits.get(sid, {}).get("file") != chosen or not (ASSETS / f"{sid}.webp").exists():
@@ -144,7 +148,7 @@ def main():
                 continue
             if (CAND / f"{sid}.json").exists():
                 continue
-            cands = candidates(latin, pose, extra[0] if extra else ())
+            cands = candidates(latin, pose, b.get("queries", ()), b.get("aliases", ()))
             (CAND / f"{sid}.json").write_text(json.dumps(cands, ensure_ascii=False, indent=1), encoding="utf-8")
             sheet(sid, cands)
             print("kandidaten", sid, nl, len(cands))

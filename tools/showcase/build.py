@@ -22,13 +22,15 @@ def main():
         for key, label, members in spec["groups"]:
             if round_ >= len(members):
                 continue
-            sid, nl, latin, pose, *_ = members[round_]
+            m = members[round_]
+            sid, nl, latin, pose = m["id"], m["nl"], m["latin"], m["pose"]
             c = credits.get(sid)
             if not c or not (ROOT / "assets" / "showcase" / f"{sid}.webp").exists():
                 continue
             birds.append({"id": sid, "group": key, "groupLabel": label, "nl": nl, "latin": latin, "pose": pose,
                           "image": f"/assets/showcase/{sid}.webp", "width": c["width"], "height": c["height"],
-                          "author": c["author"], "license": c["license"], "source": c["source"]})
+                          "author": c["author"], "license": c["license"], "source": c["source"],
+                          **({"info": m["info"]} if m.get("info") else {})})
     OUT.write_text(
         "/**\n * GEGENEREERD door tools/showcase/build.py — niet met de hand wijzigen.\n"
         " * Diashow: bijzondere Nederlandse soorten met lokale foto's (Wikimedia Commons, maker en licentie per foto).\n */\n"

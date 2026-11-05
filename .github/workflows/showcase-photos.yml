@@ -2,7 +2,7 @@ name: showcase-photos
 # Haalt diashowfoto's op van Wikimedia Commons (de ontwikkelomgeving heeft geen toegang) en commit ze terug.
 on:
   push:
-    branches: ['feat/f-showcase*']
+    branches: ['feat/f-showcase*', 'feat/f2-showcase*']
     paths: ['tools/showcase/species.json', 'tools/showcase/selection.json', 'tools/showcase/fetch.py']
 permissions:
   contents: write

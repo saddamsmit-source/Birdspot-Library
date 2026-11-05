@@ -2,7 +2,7 @@
  * GEGENEREERD door tools/showcase/build.py — niet met de hand wijzigen.
  * Diashow: bijzondere Nederlandse soorten met lokale foto's (Wikimedia Commons, maker en licentie per foto).
  */
-export const SHOWCASE_GROUPS = Object.freeze([["zang", "Zangvogels"], ["riet", "Rietvogels"], ["valk", "Valken"], ["arend", "Arenden"], ["reiger", "Reigers"], ["stelt", "Steltlopers"], ["meeuw", "Meeuwen en sterns"], ["uil", "Uilen"], ["specht", "Spechten"], ["kiekendief", "Kiekendieven en wouwen"], ["kleur", "Kleurrijke gasten"]]);
+export const SHOWCASE_GROUPS = Object.freeze([["zang", "Zangvogels"], ["riet", "Rietvogels"], ["valk", "Valken"], ["arend", "Arenden"], ["gier", "Gieren"], ["kiekendief", "Kiekendieven en andere roofvogels"], ["reiger", "Reigers en ooievaars"], ["stelt", "Steltlopers"], ["meeuw", "Meeuwen en sterns"], ["uil", "Uilen"], ["specht", "Spechten"], ["kleur", "Kleurrijke gasten"], ["hoen", "Kraanvogels, hoenders en rallen"], ["zee", "Zeevogels"], ["gans", "Ganzen en eenden"]]);
 export const SHOWCASE_BIRDS = Object.freeze([
  {
   "id": "sp113",
@@ -61,9 +61,23 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "source": "https://commons.wikimedia.org/wiki/File:White-tailed_eagle_(Haliaeetus_albicilla)_in_flight_2.jpg"
  },
  {
+  "id": "sp010",
+  "group": "kiekendief",
+  "groupLabel": "Kiekendieven en andere roofvogels",
+  "nl": "Rode Wouw",
+  "latin": "Milvus milvus",
+  "pose": "vlucht",
+  "image": "/assets/showcase/sp010.webp",
+  "width": 1600,
+  "height": 1143,
+  "author": "Hansueli Krapf",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Milvus_milvus_(2011-04-17_Switzerland_Kanton_Schaffhausen_Gennersbrunn_2).jpg"
+ },
+ {
   "id": "sp084",
   "group": "reiger",
-  "groupLabel": "Reigers",
+  "groupLabel": "Reigers en ooievaars",
   "nl": "Purperreiger",
   "latin": "Ardea purpurea",
   "pose": "natuurlijk",
@@ -129,20 +143,6 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "author": "xulescu_g",
   "license": "CC BY-SA 2.0",
   "source": "https://commons.wikimedia.org/wiki/File:Dryocopus_martius,_Perersberg,_Brasov,_Romania_0_(cropped).jpg"
- },
- {
-  "id": "sp010",
-  "group": "kiekendief",
-  "groupLabel": "Kiekendieven en wouwen",
-  "nl": "Rode Wouw",
-  "latin": "Milvus milvus",
-  "pose": "vlucht",
-  "image": "/assets/showcase/sp010.webp",
-  "width": 1600,
-  "height": 1143,
-  "author": "Hansueli Krapf",
-  "license": "CC BY-SA 3.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Milvus_milvus_(2011-04-17_Switzerland_Kanton_Schaffhausen_Gennersbrunn_2).jpg"
  },
  {
   "id": "sp075",
@@ -215,9 +215,23 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "source": "https://commons.wikimedia.org/wiki/File:Pandion_haliaetus_(in_flight).JPG"
  },
  {
+  "id": "sp173",
+  "group": "kiekendief",
+  "groupLabel": "Kiekendieven en andere roofvogels",
+  "nl": "Bruine Kiekendief",
+  "latin": "Circus aeruginosus",
+  "pose": "vlucht",
+  "image": "/assets/showcase/sp173.webp",
+  "width": 1600,
+  "height": 1067,
+  "author": "Stephan Sprinz",
+  "license": "CC BY 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:M%C3%A4nnliche_Rohrweihe_im_Flug_04.jpg"
+ },
+ {
   "id": "sp243",
   "group": "reiger",
-  "groupLabel": "Reigers",
+  "groupLabel": "Reigers en ooievaars",
   "nl": "Roerdomp",
   "latin": "Botaurus stellaris",
   "pose": "natuurlijk",
@@ -283,20 +297,6 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "author": "Hyppolyte de Saint-Rambert",
   "license": "CC BY 4.0",
   "source": "https://commons.wikimedia.org/wiki/File:Placey_(Doubs)_Pic_mar_hdsr_1DMkIII_2018_03_18_9999_27.jpg"
- },
- {
-  "id": "sp173",
-  "group": "kiekendief",
-  "groupLabel": "Kiekendieven en wouwen",
-  "nl": "Bruine Kiekendief",
-  "latin": "Circus aeruginosus",
-  "pose": "vlucht",
-  "image": "/assets/showcase/sp173.webp",
-  "width": 1600,
-  "height": 1067,
-  "author": "Stephan Sprinz",
-  "license": "CC BY 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:M%C3%A4nnliche_Rohrweihe_im_Flug_04.jpg"
  },
  {
   "id": "sp257",
