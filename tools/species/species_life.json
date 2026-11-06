@@ -328,7 +328,8 @@
   "diet": "Rupsen en kleine insecten, ook beukennootjes en zaden.",
   "behaviour": "Foerageert in bomen en bezoekt in de winter voedertafels.",
   "migration": "Nederlandse broedvogels blijven. In sommige winters komen noordelijke vogels erbij.",
-  "voice": "Ritmische zang met veel variaties; uiteenlopende roepen."
+  "voice": "Ritmische zang met veel variaties; uiteenlopende roepen.",
+  "months": "apr-jun"
  },
  "sp030": {
   "period": "mrt–jul",
@@ -520,7 +521,8 @@
   "diet": "Wormen, insecten, bessen en fruit.",
   "behaviour": "Zingt vaak vanaf een hoge post. Slaat luid alarm bij gevaar.",
   "migration": "De meeste Nederlandse merels blijven. Noordelijke vogels trekken door en overwinteren hier.",
-  "voice": "Rollende fluittonen; bij alarm scherpe, luide roepen."
+  "voice": "Rollende fluittonen; bij alarm scherpe, luide roepen.",
+  "months": "mrt-jul"
  },
  "sp046": {
   "period": "mrt–aug",
@@ -580,7 +582,8 @@
   "diet": "Kleine ongewervelden, aangevuld met bessen en zaden.",
   "behaviour": "Jaagt vaak vanaf een lage uitkijkpost. Verdedigt ook in de winter een territorium.",
   "migration": "Een deel trekt zuidwestwaarts. Vogels uit noordelijker en oostelijker gebieden overwinteren hier.",
-  "voice": "Snelle, heldere strofen met pauzes. Korte tikkende roep."
+  "voice": "Snelle, heldere strofen met pauzes. Korte tikkende roep.",
+  "months": "apr-jul"
  },
  "sp051": {
   "period": "apr–aug",
@@ -652,7 +655,8 @@
   "diet": "Insecten en larven, in het najaar ook bessen en zaden.",
   "behaviour": "Zoekt rusteloos tussen bladeren en beweegt geregeld zijn staart.",
   "migration": "Het merendeel trekt weg. In zachte winters blijft een kleine groep in Nederland.",
-  "voice": "Herhaald tjif-tjaf. De contactroep klinkt vaak stijgend."
+  "voice": "Herhaald tjif-tjaf. De contactroep klinkt vaak stijgend.",
+  "months": "apr-jun"
  },
  "sp057": {
   "period": "Vanaf eind april",
@@ -664,7 +668,8 @@
   "diet": "Vooral insecten, insecteneitjes en larven.",
   "behaviour": "Foerageert vaak laag in het struweel.",
   "migration": "Overwintert ten zuiden van de Sahara. Eerste aankomst eind maart, vooral in april.",
-  "voice": "Helder riedeltje dat in toon afloopt."
+  "voice": "Helder riedeltje dat in toon afloopt.",
+  "months": "apr-jun"
  },
  "sp058": {
   "period": "mei–jun",
@@ -1043,7 +1048,8 @@
   "behaviour": "Filtert voedsel aan het wateroppervlak en grondelt. Vormt in de winter groepen.",
   "migration": "Schaarse broedvogel die jaarrond voorkomt. In herfst en vroege winter veel meer vogels.",
   "voice": "Man fluit hoog bij de balts. Vrouw heeft een scherpe kwaak.",
-  "fledgingLabel": "Vliegvlug na"
+  "fledgingLabel": "Vliegvlug na",
+  "months": "apr-jul"
  },
  "sp092": {
   "period": "mei–aug",
@@ -1259,7 +1265,8 @@
   "diet": "Insecten, spinnen en kleine andere ongewervelden; soms zaden.",
   "behaviour": "Zingt in de vegetatie en tijdens een korte vlucht boven het riet.",
   "migration": "Vooral van april tot september. Overwintert ten zuiden van de Sahara.",
-  "voice": "Krassende, afwisselende zang met imitaties."
+  "voice": "Krassende, afwisselende zang met imitaties.",
+  "months": "apr-jun"
  },
  "sp111": {
   "period": "mei–jul",
@@ -1298,16 +1305,17 @@
   "voice": "Fluitend \"dudeljo\" en een krassend \"kwèèk\""
  },
  "sp114": {
-  "period": "apr–sep",
-  "nest": "Open nest van modder in een schuur of stal",
-  "eggs": "4–5",
-  "incubation": "14–16 dagen",
-  "fledging": "18–23 dagen",
-  "broods": "2–3",
+  "period": "Mei–augustus",
+  "nest": "Kleikom onder een overstek, brug of in een schuur of stal.",
+  "eggs": "Meestal 3–6",
+  "incubation": "12–16 dagen",
+  "fledging": "20–24 dagen",
+  "broods": "1–3",
   "diet": "Vliegende insecten, laag boven land en water",
   "behaviour": "Jaagt laag boven weilanden en water; in de nazomer in grote groepen op draden",
   "migration": "Zomergast (apr–okt); overwintert in zuidelijk Afrika",
-  "voice": "Kwetterende zang met een raspend eindje; roep \"wit-wit\""
+  "voice": "Kwetterende zang met een raspend eindje; roep \"wit-wit\"",
+  "months": "mei-aug"
  },
  "sp115": {
   "period": "mei–sep",
@@ -1356,7 +1364,8 @@
   "behaviour": "Knipt geregeld met de staart; de witte staartzijden vallen dan op.",
   "migration": "Een deel van de broedvogels trekt weg. Noordelijke vogels trekken door of overwinteren hier.",
   "voice": "Korte zang met enkele metaalachtige noten; dalende roep.",
-  "fledgingLabel": "Vliegvlug na"
+  "fledgingLabel": "Vliegvlug na",
+  "months": "apr-jul"
  },
  "sp119": {
   "period": "mei–aug",

@@ -138,21 +138,40 @@ export function recognitionPanel(s, life = null) {
   return out.join('');
 }
 
-/** 12 maanden als balk; huidige maand gemarkeerd. */
-export function monthBar(months, now = new Date()) {
+const MONTH_LEGEND = [
+  ['zomergast', 'Zomergast'], ['wintergast', 'Wintergast'], ['standvogel', 'Standvogel'],
+  ['trekvogel', 'Doortrekker'], ['zeldzaam', 'Schaarse gast / dwaalgast'], ['broed', 'Broedperiode'],
+];
+
+/** De hoofdcategorie kleurt aanwezigheid; gedocumenteerde broedmaanden hebben een eigen markering. */
+export function monthBar({months, category}, breedingMonths) {
   const set = monthSet(months);
-  const cur = now.getMonth();
-  const cells = MONTH_LETTERS.map((l, i) =>
-    `<span class="sd-month${set.has(i) ? ' is-on' : ''}${i === cur ? ' is-now' : ''}" title="${MONTH_NAMES[i]}${set.has(i) ? ': aanwezig' : ''}">${l}</span>`).join('');
+  const breeding = monthSet(breedingMonths);
+  const kind = ['schaarsegast', 'dwaalgast'].includes(category) ? 'zeldzaam'
+    : MONTH_LEGEND.some(([key]) => key === category) ? category : 'overig';
+  const label = CATEGORY_BADGES[category] || 'Overig';
+  const cells = MONTH_LETTERS.map((letter, i) => {
+    const on = set.has(i);
+    const breeds = breeding.has(i);
+    const title = [MONTH_NAMES[i], on && 'gebruikelijke aanwezigheid', breeds && 'broedperiode'].filter(Boolean).join(' · ');
+    return `<span class="sd-month${on ? ' is-on' : ''}${breeds ? ' is-breeding' : ''}" title="${title}">${letter}</span>`;
+  }).join('');
   const caption = months === 'jan-dec' ? 'Jaarrond in Nederland'
     : !set.size ? 'Geen vaste periode vastgesteld'
     : 'Gebruikelijke periode · ' + [...set].sort((a, b) => a - b).map(i => MONTH_NAMES[i]).join(', ');
-  return `<div class="sd-months" role="img" aria-label="${esc(caption)}">${cells}</div><p class="sd-caption">${esc(caption)}</p>`;
+  const breedingLabel = breeding.size
+    ? 'Broedperiode · ' + [...breeding].sort((a, b) => a - b).map(i => MONTH_NAMES[i]).join(', ') : '';
+  const legend = kind === 'overig' ? [...MONTH_LEGEND, [kind, label]] : MONTH_LEGEND;
+  return `<div class="sd-months" data-month-kind="${kind}" role="img" aria-label="${esc([label, caption, breedingLabel].filter(Boolean).join('. '))}">${cells}</div>
+    <p class="sd-caption">${esc(caption)}</p>
+    <ul class="sd-month-legend" aria-label="Kleuren maandbalk">
+      ${legend.map(([key, name]) => `<li data-month-kind="${key}"><span aria-hidden="true"></span>${esc(name)}</li>`).join('')}
+    </ul>`;
 }
 
 /** Tab 2 — Leefwijze: seizoen, status, broeden, voedsel, gedrag en trek. `life` uit speciesLife.js (of null). */
 export function statusPanel(s, life = null) {
-  const out = ['<h3 class="sd-h">Wanneer in Nederland</h3>', monthBar(s.months)];
+  const out = ['<h3 class="sd-h">Wanneer in Nederland</h3>', monthBar(s, life?.breeding?.months)];
   const tiles = [];
   const extra = s.statusExtra ? `<small>ook ${esc((CATEGORY_BADGES[s.statusExtra] || s.statusExtra).toLowerCase())}</small>` : '';
   tiles.push(tile('status', 'Status', esc(CATEGORY_BADGES[s.category] || s.category), extra));

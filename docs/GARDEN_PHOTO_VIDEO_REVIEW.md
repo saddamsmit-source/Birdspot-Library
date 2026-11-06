@@ -54,3 +54,34 @@ Commons-licentie, auteur en soortmetadata gecontroleerd. Zichtbare herkenningske
 - Technische audit vond vier appmodules die niet expliciet werden opgehaald bij installatie. Ze staan nu in de app-cache. Ook kan een app-afbeelding uit die cache worden gelezen als de mediacache het bestand nog niet heeft. De fototest controleert nu offline herstart, zoeken en openen van een gidsfoto. Dit staat los van externe kaarttegels en een onvoltooide installatie.
 
 CAP-BIRD-012/015/040. L-016/L-019: register, licentie en soortmatch per foto toetsen. L-022/L-052: check offline na een herstart, inclusief de benodigde appcode, en onderscheid app-cache van beeldcache. Onafhankelijke determinatie en fysiek toestel staan apart.
+
+## Maandbalk en legenda — 2026-11-06
+
+De rand rond november volgde de toestelmaand. Die automatische markering is verwijderd. De hoofdcategorie bepaalt de kleur van de bekende aanwezigheidsmaanden. Zomergast is oker, wintergast blauw, standvogel groen, doortrekker petrol en schaarse gast of dwaalgast paars. Andere statussen krijgen een eigen grijs label. Zonder maandvenster blijven de cellen neutraal. Een roze streep markeert gedocumenteerde broedmaanden zonder de kleur van de soortstatus te vervangen. De legenda en schermlezertekst beschrijven de codering. De balk stelt aanwezigheid en broedperiode voor, geen trefkans.
+
+De nieuwe optionele broedmaanden staan in tools/species/species_life.json. Negen soorten hebben een brononderbouwde periode. De maanden zijn op maandniveau afgerond en een soort kan slechts een deel van de maand broeden.
+
+| Soort | Markering | Bron |
+|---|---|---|
+| Koolmees | April–juni | [Sovon, eileg][koolmees-sovon] |
+| Merel | Maart–juli | [Vogelbescherming][merel-vbn] |
+| Roodborst | April–juli | [Vogelbescherming][roodborst-vbn] |
+| Tjiftjaf | April–juni | [Vogelbescherming][tjiftjaf-vbn] |
+| Fitis | April–juni | [Vogelbescherming, start eind april][fitis-vbn] en [Sovon, eileg mei–juni][fitis-sovon] |
+| Wintertaling | April–juli | [Vogelbescherming][wintertaling-vbn] |
+| Rietzanger | April–juni | [Vogelbescherming][rietzanger-vbn] |
+| Boerenzwaluw | Mei–augustus | [Vogelbescherming][boerenzwaluw-vbn] |
+| Rietgors | April–juli | [Vogelbescherming][rietgors-vbn] |
+
+Broedgegevens van Boerenzwaluw zijn bijgewerkt volgens dezelfde bron. Bij andere soorten verschijnt een broedstreep zodra hun maanden zijn nagekeken. CAP-BIRD-011/012 en L-019/L-040. Aanwezigheidsstatus en broedperiode als afzonderlijke gegevens bewaren.
+
+[koolmees-sovon]: https://stats.sovon.nl/stats/soort/14640
+[merel-vbn]: https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/merel
+[roodborst-vbn]: https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/roodborst
+[tjiftjaf-vbn]: https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/tjiftjaf
+[fitis-vbn]: https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/fitis
+[fitis-sovon]: https://stats.sovon.nl/stats/soort/13120
+[wintertaling-vbn]: https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wintertaling
+[rietzanger-vbn]: https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/rietzanger
+[boerenzwaluw-vbn]: https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/boerenzwaluw
+[rietgors-vbn]: https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/rietgors

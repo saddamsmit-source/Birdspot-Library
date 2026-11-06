@@ -129,6 +129,11 @@ def main():
             print("H2-02 OK — tabs en wisselen")
 
             assert p.locator('#sdPanel-status .sd-month.is-on').count() == month_count(rg["months"])
+            p.locator('#sdPanel-status .sd-month.is-breeding').first.wait_for(timeout=5000)
+            assert p.locator('#sdPanel-status .sd-month.is-breeding').count() == 4
+            assert p.locator('#sdPanel-status .sd-months').get_attribute('data-month-kind') == 'standvogel'
+            assert p.locator('#sdPanel-status .sd-month.is-now').count() == 0
+            assert "Broedperiode" in p.locator('#sdPanel-status .sd-month-legend').inner_text()
             assert p.locator('#sdPanel-status .sd-tile').filter(has_text="Rode Lijst").count() == (1 if rg["redList"] else 0)
             p.screenshot(path=str(SHOTS / "species_h2_seizoen_390.png"))
 
@@ -233,6 +238,17 @@ def main():
             close_detail()
             print("H3-02 OK — Leefwijze-tab en zang en roep (Merel)")
 
+            # Summer presence and a sourced breeding period remain separate.
+            open_species("Boerenzwaluw", "sp114")
+            tab("status")
+            p.locator('#sdPanel-status .sd-month.is-breeding').first.wait_for(timeout=5000)
+            bar = p.locator('#sdPanel-status .sd-months')
+            assert bar.get_attribute('data-month-kind') == 'zomergast'
+            assert bar.locator('.sd-month.is-on').count() == 8
+            assert bar.locator('.sd-month.is-breeding').count() == 4
+            assert bar.locator('.sd-month[title="november"]').get_attribute('class') == 'sd-month'
+            close_detail()
+
             ex = next(s for s in species if s["category"] in ("exoot", "ontsnapt") and s["id"] not in life and not s.get("compact"))
             open_species(ex["nameNL"], ex["id"])
             tab("status")
@@ -247,6 +263,8 @@ def main():
             tab("status")
             assert p.locator('#sdPanel-status .sd-breed').count() == 0
             assert p.locator('#sdPanel-status .sd-fact').count() == 3
+            assert p.locator('#sdPanel-status .sd-months').get_attribute('data-month-kind') == 'wintergast'
+            assert p.locator('#sdPanel-status .sd-month.is-breeding').count() == 0
             assert p.locator('#sdPanel-status .sd-note').count() == 0
             p.locator('#sdPanel-status .sd-facts').scroll_into_view_if_needed()
             p.screenshot(path=str(SHOTS / "species_h3_rotgans_390.png"))
