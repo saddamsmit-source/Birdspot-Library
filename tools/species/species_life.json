@@ -77,24 +77,25 @@
   "nest": "Geen eigen nest: nestkast, oud kraaiennest of gebouw",
   "eggs": "4–6",
   "incubation": "27–31 dagen",
-  "fledging": "27–32 dagen",
-  "broods": "1",
+  "fledging": "27–35 dagen; daarna nog weken gevoerd",
+  "broods": "1; zeer zelden 2",
   "diet": "Muizen en woelmuizen, soms kleine vogels en grote insecten",
-  "behaviour": "Bidt (stilhangen) boven bermen en graslanden",
-  "migration": "Standvogel; deel van de noordelijke vogels overwintert hier",
-  "voice": "Hoog \"kie-kie-kie-kie\""
+  "behaviour": "Jaagt vanaf een uitkijkpost of biddend boven open terrein; grijpt prooi op de grond.",
+  "migration": "Nederlandse broedvogels blijven meestal. In herfst en winter aangevuld met vogels uit noordelijker broedgebieden.",
+  "voice": "Hoge herhaalde kie-kie-kie-roepen; vooral hoorbaar tijdens balts en bij de nestomgeving."
  },
  "sp009": {
-  "period": "mrt–jun",
+  "period": "feb–apr",
   "nest": "Geen nest: nestkast op hoge gebouwen, schoorstenen en masten",
-  "eggs": "3–4",
+  "eggs": "2–4",
   "incubation": "29–32 dagen",
-  "fledging": "35–42 dagen",
+  "fledging": "35–42 dagen; daarna nog ongeveer twee maanden gevoerd",
   "broods": "1",
   "diet": "Vogels in de vlucht: duiven, spreeuwen, eenden en steltlopers",
-  "behaviour": "Snelste duikvlucht van alle vogels; zit op hoge gebouwen en kerktorens",
-  "migration": "Standvogel; in de winter extra vogels uit Scandinavië langs de kust",
-  "voice": "Rauw \"kek-kek-kek\" bij verstoring"
+  "behaviour": "Jaagt met snelle achtervolgingen en stootduiken. Rust ook langdurig op hoge uitkijkpunten of op de grond.",
+  "migration": "Nederlandse broedvogels blijven grotendeels; in de winter komen noordelijke vogels erbij. Jonge vogels zwerven meer.",
+  "voice": "Scherp, klagend gekrijs en herhaalde kek-kek-kek-roepen, vooral in de broedperiode.",
+  "months": "feb-apr"
  },
  "sp010": {
   "period": "apr–jul",

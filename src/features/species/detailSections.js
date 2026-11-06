@@ -11,7 +11,7 @@ import { monthSet, MONTH_NAMES } from '../../data/seasons.js';
 import { DISTRIBUTION, GBIF_YEARS, MAP_CELL, MAP_COLUMNS, MAP_PATHS, MAP_VIEW_BOX } from '../../data/speciesDistribution.js';
 import { GUIDE_COMPARISONS, comparisonSource } from './guideComparisons.js';
 import { GUIDE_PHOTOS } from './guidePhotos.js';
-import { GUIDE_AUDIO, GUIDE_PLUMAGE } from './guideMedia.js';
+import { GUIDE_AUDIO, GUIDE_PLUMAGE, GUIDE_POSES } from './guideMedia.js';
 
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
@@ -121,6 +121,15 @@ function plumageCard(ic, title, text, badge, photo) {
   return `<div class="sd-plumage">${icon(ic)}<div><strong>${esc(title)}${badge ? `<span class="sd-badge">${esc(badge)}</span>` : ''}</strong><p>${esc(text)}</p>${photo ? fieldPhoto(photo) : ''}</div></div>`;
 }
 
+function posesPanel(id) {
+  const photos = GUIDE_POSES[id] || [];
+  if (!photos.length) return '';
+  return '<section class="sd-poses" aria-label="Zittend en in vlucht"><h3 class="sd-h">Zittend en in vlucht</h3>' +
+    '<div class="sd-compare-grid">' + photos.map(photo =>
+      `<div class="sd-compare-card"><strong>${esc(photo.label)}</strong>${fieldPhoto(photo)}<p>${esc(photo.note)}</p></div>`
+    ).join('') + '</div></section>';
+}
+
 function comparisonsPanel(id) {
   const comparisons = GUIDE_COMPARISONS.filter(pair => pair.birds.some(bird => bird.id === id));
   if (!comparisons.length) return '';
@@ -180,6 +189,7 @@ export function recognitionPanel(s, life = null) {
   if (s.fieldmarks) {
     out.push(`<div class="sd-callout">${icon('eye')}<p>${esc(s.fieldmarks)}</p></div>`);
   }
+  out.push(posesPanel(s.id));
   out.push(`<div id="sdVoice" class="sd-voice-section">${voicePanel(s, life?.voice)}</div>`, comparisonsPanel(s.id));
   const p = s.plumage;
   if (p) {

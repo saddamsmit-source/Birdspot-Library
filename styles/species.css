@@ -749,6 +749,7 @@
 .sd-field-photo img { display: block; width: 100%; height: 160px; object-fit: contain; }
 .sd-compare-card .sd-field-photo { margin-top: 0; }
 .sd-compare-card .sd-field-photo img { height: 100px; }
+.sd-poses .sd-field-photo img { height: 160px; }
 .sd-media-credit { display: block; margin-top: 4px; color: var(--ink-2); font-size: var(--fs-meta); overflow-wrap: anywhere; }
 .sd-media-credit a { color: inherit; text-decoration: underline; }
 .sd-audio audio { display: block; width: 100%; height: 44px; }

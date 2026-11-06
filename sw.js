@@ -12,7 +12,7 @@
  *   birdspot-media           — foto's/IDB-exports (permanent)
  */
 
-const APP_VERSION = '1.17.11-field-guide-waders';
+const APP_VERSION = '1.17.11-falcons-recognition-1';
 const APP_CACHE   = `birdspot-app-v${APP_VERSION}`;
 const MEDIA_CACHE = 'birdspot-media';
 
@@ -144,7 +144,7 @@ async function precacheFieldGuideMedia() {
   try {
     const media = await caches.open(MEDIA_CACHE);
     const data = await (await fetch('/assets/species/field-guide-media.json', {cache:'no-cache'})).json();
-    const variants = Object.values(data.plumage).flatMap(cards => Object.values(cards));
+    const variants = [...Object.values(data.plumage).flatMap(cards => Object.values(cards)), ...Object.values(data.poses || {}).flat()];
     const urls = [...variants.map(photo => photo.image), ...Object.values(data.audio).flat().map(clip => clip.audio)];
     await Promise.allSettled(urls.filter(Boolean).map(async url => {
       if (!(await media.match(url))) await media.add(url);
