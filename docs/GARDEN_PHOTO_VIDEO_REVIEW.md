@@ -101,3 +101,11 @@ Per foto zijn de wetenschappelijke soortnaam, fotograaf en licentie gecontroleer
 CAP-BIRD-012/015/040 en L-016/L-019/L-022. De gids gebruikt dezelfde lokale fotopaden voor lijst en detail. De browsertest controleert nu ook de lokale bron en volledige uitsnede in de lijst. De app-cacheversie is verhoogd voor updates. De offline-test wacht op de mediacache en decodeert alle geregistreerde foto’s zonder netwerk. Fysiek toestel en onafhankelijke soortcontrole blijven afzonderlijke bewijsniveaus.
 
 Browserbewijs: alle 46 foto’s geopend vanuit de lijst op 390 en 1365 px, inclusief het foutscenario. Alle 46 foto’s decodeerden offline na precache. Na offline herstart zijn ook zoeken, de foto en de verspreidingskaart van Fitis gecontroleerd.
+
+## Batch 06 · Bos en park — 2026-11-06
+
+Zestien gidsfoto’s toegevoegd, met Holenduif, Kleine Bonte Specht, Zwarte Specht, Middelste Bonte Specht, Matkop, Glanskop, Kuifmees, Fluiter, Goudhaantje, Vuurgoudhaan, Boomkruiper, Taigaboomkruiper, Zwarte Mees, Grauwe Vliegenvanger, Bonte Vliegenvanger en Gekraagde Roodstaart. Dekking 62 van 597 soorten. De vijftien nieuwe WebP’s gebruiken 2,28 MiB. De Zwarte Specht hergebruikt het lokaal aanwezige showcasebeeld, waarvan bron en licentie opnieuw zijn gecontroleerd.
+
+CAP-BIRD-012/015/040 en L-016/L-019/L-022. Bij vergelijkbare soorten zijn afzonderlijke kandidaten gezocht die de zichtbare kenmerken goed tonen. Voor Glanskop viel een overzichtsbeeld van een voederplek af, voor Taigaboomkruiper een vogel in de hand. De soortnaam, fotograaf, licentie, kenmerken en inhoudsbron staan per beeld in `assets/species/credits.json`. Bij Matkop en Glanskop en bij de boomkruipers kan geluid helpen bij herkenning in het veld.
+
+Browserbewijs bij 390 en 1365 px: alle 62 gidsfoto’s gecontroleerd in lijst en soortdetail, inclusief foutweergave. Alle 62 beelden decodeerden offline na precache. Zoeken en het openen van een gidsfoto en kaart zijn ook na offline herstart gecontroleerd.
