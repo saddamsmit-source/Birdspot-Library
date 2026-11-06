@@ -25,6 +25,10 @@ def main():
    assert p.evaluate('localStorage.getItem("birdspot-sightings")')==raw
    p.go_back();p.locator('.signature-species-detail-overlay').wait_for(state='detached')
    assert p.locator('#screen-species').is_visible()
+   p.locator('#seizoenFiltersToggle').click()
+   p.locator('#seizoenFilters').wait_for()
+   p.go_back();p.locator('#seizoenFilters').wait_for(state='hidden')
+   assert p.locator('#speciesSearch').input_value()=='Winterkoning'
    # Nested picker Back closes only the top layer; form values survive.
    p.locator('#fab').click();p.locator('#sightLocation').fill('Terugtest')
    p.locator('#speciesPickerBtn').click();p.go_back()

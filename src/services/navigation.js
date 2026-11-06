@@ -15,6 +15,8 @@ function closeTopLayer() {
       document.dispatchEvent(new KeyboardEvent('keydown',{key:'Escape',bubbles:true})); return true;
     }
   }
+  const filter = document.querySelector('.species-filter[open] > summary');
+  if (visible(filter)) { filter.click(); filter.focus({preventScroll:true}); return true; }
   return false;
 }
 export function recordRoute(route, replace = false) {

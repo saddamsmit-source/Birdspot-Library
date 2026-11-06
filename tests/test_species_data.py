@@ -144,10 +144,12 @@ def main():
             print("I1-01..04, I2-01..02, I3-01, I4-01, I5-01..03 OK —", len(data["species"]), "soorten", counts)
 
             p.locator('.nav-item[data-route="species"]').click()
-            p.locator("#speciesFilters .filter-chip").first.wait_for(timeout=10000)
+            status_toggle = p.locator("#speciesFiltersToggle")
+            status_toggle.wait_for(timeout=10000)
             tabs = p.eval_on_selector_all("#speciesFilters .filter-chip[data-cat]", "els => els.map(e => e.dataset.cat)")
             assert tabs == ["alle"] + data["active"], f"I1-05 tabs {tabs} != alle + {data['active']}"
             for cat in data["active"]:
+                status_toggle.click()
                 p.locator(f'#speciesFilters .filter-chip[data-cat="{cat}"]').click()
                 ids = [s["id"] for s in data["species"] if s["category"] == cat]
                 p.wait_for_function(
@@ -162,6 +164,7 @@ def main():
 
             # I5-04: lange lijst bouwt eerst een deel op, de rest na "Toon alle"
             big = max(counts, key=counts.get)
+            status_toggle.click()
             p.locator(f'#speciesFilters .filter-chip[data-cat="{big}"]').click()
             p.locator("#speciesShowAll").wait_for(timeout=8000)
             first = p.eval_on_selector_all("#speciesList .species-row", "els => els.length")

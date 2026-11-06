@@ -102,6 +102,7 @@ def main():
 
             def open_species(name, sid):
                 p.locator('.nav-item[data-route="species"]').click()
+                p.locator('#speciesFiltersToggle').click()
                 p.locator('#speciesFilters .filter-chip[data-cat="alle"]').click()
                 p.locator('#speciesSearch').fill(name)
                 p.locator(f'.species-row[data-id="{sid}"] .species-row__body').click()

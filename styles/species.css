@@ -70,22 +70,75 @@
 .species-search::placeholder { color: var(--muted); }
 .species-search:focus { border-color: var(--brand-light); }
 
-/* ── Filter chips ───────────────────────────────────────── */
-.species-filters {
-  display: flex;
+/* ── Filters ───────────────────────────────────────────── */
+.species-filter-menus {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--space-8);
-  overflow-x: auto;
-  padding: 0 max(var(--space-12), env(safe-area-inset-left, 0px))
-              var(--space-8)
-              max(var(--space-12), env(safe-area-inset-right, 0px));
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  padding: 0 max(var(--space-12), env(safe-area-inset-right, 0px))
+           var(--space-8)
+           max(var(--space-12), env(safe-area-inset-left, 0px));
 }
-.species-filters::-webkit-scrollbar { display: none; }
+
+.species-filter__toggle {
+  position: relative;
+  display: grid;
+  align-content: center;
+  min-height: 44px;
+  padding: 4px 21px 4px var(--space-8);
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+  list-style: none;
+}
+.species-filter__toggle::-webkit-details-marker { display: none; }
+.species-filter__toggle span { font-size: var(--fs-label); color: var(--muted); }
+.species-filter__toggle strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: var(--fs-meta);
+}
+.species-filter__toggle::after {
+  content: '';
+  position: absolute;
+  right: 9px;
+  top: calc(50% - 4px);
+  width: 6px;
+  height: 6px;
+  border: solid var(--muted);
+  border-width: 0 1.5px 1.5px 0;
+  transform: rotate(45deg);
+}
+.species-filter[open] > .species-filter__toggle { border-color: var(--brand-mid); }
+.species-filter[open] > .species-filter__toggle::after { transform: rotate(225deg); }
+.species-filter__toggle:focus-visible { outline: 2px solid var(--brand-mid); outline-offset: 2px; }
+
+.species-filters {
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  inset-inline: var(--space-12);
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: var(--space-8);
+  max-height: min(50vh, 16rem);
+  overflow-y: auto;
+  padding: var(--space-8);
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  background: var(--surface);
+  box-shadow: 0 6px 18px rgb(0 0 0 / 18%);
+}
+.species-filter:not([open]) > .species-filters { display: none; }
 
 .filter-chip {
   flex-shrink: 0;
-  min-height: 34px;
+  min-height: 40px;
   padding: 5px var(--space-12);
   border-radius: var(--r-pill);
   border: 1.5px solid var(--line);
@@ -102,26 +155,6 @@
   background: var(--brand);
   border-color: var(--brand);
   color: var(--on-brand);
-}
-
-/* Gebied-chips rij */
-.species-filters--gebied,
-.species-filters--seizoen {
-  padding-top: 0;
-  border-top: 1px solid var(--line);
-  padding-bottom: var(--space-8);
-  margin-top: 0;
-  align-items: center;
-}
-
-.filter-label {
-  flex-shrink: 0;
-  font-size: var(--fs-label);
-  font-weight: 700;
-  letter-spacing: .6px;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-right: var(--space-4);
 }
 
 .filter-chip--gebied,
@@ -623,7 +656,6 @@
 .species-show-all:focus-visible { outline: 2px solid var(--brand-mid); outline-offset: 2px; }
 
 /* ── Fase I6: seizoensfilter ─────────────────────────────────── */
-.species-filters--seizoen { border-top: 0; }
 .species-season-hint {
   margin: 0;
   padding: 0 max(var(--space-12), env(safe-area-inset-right, 0px)) var(--space-8)

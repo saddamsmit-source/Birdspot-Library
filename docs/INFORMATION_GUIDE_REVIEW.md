@@ -34,3 +34,7 @@ CAP-BIRD-010 en CAP-BIRD-011. De eigenaar vond de filterknoppen te klein. Een ge
 Browsercontrole op 390 px. Trekvogels gaf 32 soorten. Bos beperkte dit tot drie. Lente en Zomer bleven tegelijk geselecteerd en de overgangsperiode toonde die drie soorten. Winter gaf een lege lijst. Na deselecteren van gebied en seizoen keerden de 32 trekvogels terug. Fysieke bediening is niet getest. De cacheversie is verhoogd om de aangepaste stijl ook voor geïnstalleerde exemplaren op te halen.
 
 Hergebruik volgens L-075 en L-077. Meet de hoogte en controleer de lijst na echte interacties voordat een compacte filterbediening wordt vervangen.
+
+De eigenaar koos vervolgens drie dropdowns naast elkaar. Versie 1.15.2 toont Status, Gebied en Seizoen met de actieve keuze in de knop. Status en Gebied sluiten bij selectie. Het seizoensmenu blijft open om twee aangrenzende seizoenen te kunnen kiezen en bevat de optie Zonder jaarrondvogels. Openen van een ander menu, buiten het menu klikken, Escape en browser-Terug sluiten het menu. De combinatieregels blijven in de bestaande filterfuncties.
+
+Browsercontrole op 360, 390 en 430 px. De rij met knoppen meet gesloten 52 px, tegenover 127 px voor de drie vergrote rijen. De knoppen zijn 44 px hoog. Trekvogels, Bos en Lente–zomer leveren samen drie soorten op. Keuzes blijven behouden na Escape. De eerste browser-Terug sluit het menu op Soorten en de volgende gaat terug naar Home. Geautomatiseerde tests volgen de nieuwe ingang en controleren ook de gecombineerde resultaten. Fysiek toestel vraagt aparte controle.

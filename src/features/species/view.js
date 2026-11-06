@@ -23,11 +23,31 @@ let _currentCategory = 'standvogel';
 let _seasons = [];
 let _hideYearRound = false;  // optie bij seizoensfilter: (bijna) jaarrondvogels verbergen            // max. twee aangrenzende seizoenen (zie data/seasons.js)
 const ALL = 'alle';           // categorie-tab voor alle soorten
+const FILTER_CATEGORIES = [[ALL, 'Alle'], ...activeCategories().map(key => [key, CATEGORY_LABELS[key]])];
 let _searchQuery     = '';
 let _currentRegion   = null;
 let _detailSpeciesId = null;
 let _onlyFavorites = false;
 let _speciesCtx = null;
+
+function filterLabel(id) {
+  if (id === 'speciesFilters') return CATEGORY_LABELS[_currentCategory] || 'Alle vogels';
+  if (id === 'gebiedFilters') return REGIONS[_currentRegion]?.label || 'Alle gebieden';
+  return seasonPeriod(_seasons)?.label || 'Alle seizoenen';
+}
+
+function filterMenu(id, label, options, variant = '') {
+  return `
+    <details class="species-filter">
+      <summary id="${id}Toggle" class="species-filter__toggle">
+        <span>${label}</span>
+        <strong>${escHtml(filterLabel(id))}</strong>
+      </summary>
+      <div class="species-filters ${variant}" id="${id}" role="group" aria-label="${label}">
+        ${options}
+      </div>
+    </details>`;
+}
 
 // ── Zeldzaamheid mapping (id-prefix → rarity) ─────────────────
 // Zonder dedicated veld in data: categoriseer op basis van species-id ranges
@@ -120,7 +140,7 @@ function getRecentSpeciesIds(limit = 8) {
 // ── Render entrypoint ──────────────────────────────────────────
 export function renderSpecies(el) {
   if (_speciesCtx?.cleanup) _speciesCtx.cleanup();
-  const ctx = { destroyed:false, urls:new Set(), detailCleanup:null, listGeneration:0, cleanup:null };
+  const ctx = { destroyed:false, urls:new Set(), detailCleanup:null, listGeneration:0, cleanup:null, filterEvents:new AbortController() };
   _speciesCtx = ctx;
   const seenIds = getObservedIds();
   const total   = SPECIES.filter(s => s.category === 'standvogel').length;
@@ -159,34 +179,28 @@ export function renderSpecies(el) {
           placeholder="Zoek soort, familie, gebied…" autocomplete="off"
           value="${escHtml(_searchQuery)}">
       </div>
-      <div class="species-filters" id="speciesFilters" role="tablist">
-        ${[[ALL, 'Alle'], ...activeCategories().map(key => [key, CATEGORY_LABELS[key]])].map(([key, lbl]) => `
-          <button class="filter-chip${_currentCategory === key ? ' active' : ''}"
-            data-cat="${key}" role="tab"
-            aria-selected="${_currentCategory === key}">
+      <div class="species-filter-menus">
+        ${filterMenu('speciesFilters', 'Status', FILTER_CATEGORIES.map(([key, lbl]) => `
+          <button type="button" class="filter-chip${_currentCategory === key ? ' active' : ''}"
+            data-cat="${key}" aria-pressed="${_currentCategory === key}">
             ${lbl}
-          </button>`).join('')}
-      </div>
-      <div class="species-filters species-filters--gebied" id="gebiedFilters" role="group" aria-label="Filter op gebied">
-        <span class="filter-label">Gebied</span>
-        ${Object.entries(REGIONS).map(([key, r]) => `
-          <button class="filter-chip filter-chip--gebied${_currentRegion === key ? ' active' : ''}"
-            data-region="${key}"
-            aria-pressed="${_currentRegion === key}">
+          </button>`).join(''))}
+        ${filterMenu('gebiedFilters', 'Gebied', Object.entries(REGIONS).map(([key, r]) => `
+          <button type="button" class="filter-chip filter-chip--gebied${_currentRegion === key ? ' active' : ''}"
+            data-region="${key}" aria-pressed="${_currentRegion === key}">
             ${r.label}
-          </button>`).join('')}
-      </div>
-      <div class="species-filters species-filters--seizoen" id="seizoenFilters" role="group" aria-label="Filter op seizoen">
-        <span class="filter-label">Seizoen</span>
-        ${SEASON_ORDER.map(key => `
-          <button class="filter-chip filter-chip--seizoen${_seasons.includes(key) ? ' active' : ''}"
-            data-season="${key}" aria-pressed="${_seasons.includes(key)}">
-            ${SEASONS[key].label}
-          </button>`).join('')}
-        <button class="filter-chip filter-chip--seizoen filter-chip--jaarrond${_hideYearRound ? ' active' : ''}"
-          id="seasonHideYearRound" aria-pressed="${_hideYearRound}" ${_seasons.length ? '' : 'hidden'}>
-          Zonder jaarrondvogels
-        </button>
+          </button>`).join(''), 'species-filters--gebied')}
+        ${filterMenu('seizoenFilters', 'Seizoen', `
+          ${SEASON_ORDER.map(key => `
+            <button type="button" class="filter-chip filter-chip--seizoen${_seasons.includes(key) ? ' active' : ''}"
+              data-season="${key}" aria-pressed="${_seasons.includes(key)}">
+              ${SEASONS[key].label}
+            </button>`).join('')}
+          <button type="button" class="filter-chip filter-chip--seizoen filter-chip--jaarrond${_hideYearRound ? ' active' : ''}"
+            id="seasonHideYearRound" aria-pressed="${_hideYearRound}" ${_seasons.length ? '' : 'hidden'}>
+            Zonder jaarrondvogels
+          </button>
+        `, 'species-filters--seizoen')}
       </div>
       <p class="species-season-hint" id="seasonHint" aria-live="polite"></p>
     </div>
@@ -232,6 +246,7 @@ export function renderSpecies(el) {
   ctx.cleanup = () => {
     if (ctx.destroyed) return;
     ctx.destroyed = true;
+    ctx.filterEvents.abort();
     ctx.detailCleanup?.(false);
     ctx.urls.forEach(revokePhotoUrl);
     ctx.urls.clear();
@@ -347,6 +362,33 @@ function speciesRow(s, seenIds, favorites = getCollectionIds("species")) {
 
 // ── Events ─────────────────────────────────────────────────────
 function bindEvents(el, ctx = _speciesCtx) {
+  const menus = el.querySelector('.species-filter-menus');
+  const signal = ctx.filterEvents.signal;
+  document.addEventListener('click', e => {
+    for (const menu of menus.querySelectorAll('.species-filter[open]')) {
+      if (!menu.contains(e.target)) menu.open = false;
+    }
+  }, {signal});
+  document.addEventListener('keydown', e => {
+    if (e.key !== 'Escape' || e.defaultPrevented) return;
+    const menu = menus.querySelector('.species-filter[open]');
+    if (menu) {
+      e.preventDefault();
+      menu.open = false;
+      menu.querySelector('summary').focus({preventScroll:true});
+    }
+  }, {signal});
+
+  function updateFilterMenu(panel, close = false) {
+    const menu = panel.closest('.species-filter');
+    const summary = menu.querySelector('summary');
+    summary.querySelector('strong').textContent = filterLabel(panel.id);
+    if (close) {
+      menu.open = false;
+      summary.focus({preventScroll:true});
+    }
+  }
+
   el.querySelector('#speciesOpenMedia')?.addEventListener('click', () => {
     import('../../app.js').then(({navigate}) => navigate('media'));
   });
@@ -369,8 +411,9 @@ function bindEvents(el, ctx = _speciesCtx) {
     _currentCategory = btn.dataset.cat;
     el.querySelectorAll('.filter-chip[data-cat]').forEach(b => {
       b.classList.toggle('active', b.dataset.cat === _currentCategory);
-      b.setAttribute('aria-selected', b.dataset.cat === _currentCategory);
+      b.setAttribute('aria-pressed', b.dataset.cat === _currentCategory);
     });
+    updateFilterMenu(e.currentTarget, true);
     renderList(el);
   });
 
@@ -384,6 +427,7 @@ function bindEvents(el, ctx = _speciesCtx) {
       b.classList.toggle('active', b.dataset.region === _currentRegion);
       b.setAttribute('aria-pressed', b.dataset.region === _currentRegion);
     });
+    updateFilterMenu(e.currentTarget, true);
     renderList(el);
   });
 
@@ -406,6 +450,7 @@ function bindEvents(el, ctx = _speciesCtx) {
       b.classList.toggle('active', on);
       b.setAttribute('aria-pressed', String(on));
     });
+    updateFilterMenu(e.currentTarget);
     renderList(el);
   });
 
