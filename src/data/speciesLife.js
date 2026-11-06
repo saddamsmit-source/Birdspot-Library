@@ -1463,18 +1463,19 @@ export const LIFE = Object.freeze({
  },
  "sp102": {
   "breeding": {
-   "period": "apr–jun",
-   "nest": "Kuiltje in een graspol, vaak overdekt",
-   "eggs": "4",
-   "incubation": "23–24 dagen",
-   "fledging": "25–35 dagen",
+   "period": "Eileg eind april tot begin juli, vooral eind april en in de eerste helft van mei",
+   "nest": "Grondnest, meestal goed verborgen in een graspol.",
+   "eggs": "Meestal 4–5",
+   "incubation": "22–24 dagen",
+   "fledging": "Nestvlieders, vliegvlug na 23–27 dagen",
    "broods": "1",
-   "months": "apr-jun"
+   "fledgingLabel": "Jongen vliegvlug",
+   "months": "apr-jul"
   },
-  "diet": "Wormen, slakjes, kreeftjes en insecten",
-  "behaviour": "Waarschuwt luid vanaf palen; lange rode poten",
-  "migration": "Standvogel en trekvogel",
-  "voice": "Melodieus \"tjuu-tjuu-tjuu\" en een alarmerend \"tjiet-tjiet\""
+  "diet": "Vooral wormen, insecten, kleine schelpdieren en kreeftachtigen, afhankelijk van het terrein.",
+  "behaviour": "Zoekt voedsel op slik of in ondiep water. In de broedtijd staat een waakzame vogel geregeld op een paal.",
+  "migration": "Jaarrond in Nederland. Veel Nederlandse broedvogels trekken weg. In het winterhalfjaar komen ook vogels uit noordelijker gebieden naar onze kust.",
+  "voice": "Melodieuze, heldere fluittonen in de balts en een kortere, scherpere roep bij onrust of in vlucht."
  },
  "sp103": {
   "breeding": {
@@ -2142,18 +2143,19 @@ export const LIFE = Object.freeze({
  },
  "sp155": {
   "breeding": {
-   "period": "mei–jul",
-   "nest": "Kuiltje op de grond onder vegetatie langs een oever",
-   "eggs": "4",
+   "period": "Eileg begin mei tot half juni",
+   "nest": "Grondnest op een wat hoger deel van de oever, verscholen tussen planten of aanspoelsel.",
+   "eggs": "Meestal 4",
    "incubation": "21–22 dagen",
-   "fledging": "22–28 dagen",
+   "fledging": "Nestvlieders. Vogelbescherming geeft 22–28 dagen tot vliegvlug, Sovon 35–40 dagen.",
    "broods": "1",
-   "months": "mei-jul"
+   "fledgingLabel": "Jongen vliegvlug",
+   "months": "mei-jun"
   },
-  "diet": "Insecten en kleine kreeftjes langs de oever",
-  "behaviour": "Wipt voortdurend met het achterlijf; vliegt met trillende vleugelslagen laag over het water",
-  "migration": "Doortrekker (apr–mei, jul–sep); zeldzame broedvogel langs rivieren",
-  "voice": "Hoog, dalend \"hie-die-die\""
+  "diet": "Vooral insecten en larven, aangevuld met andere kleine ongewervelden langs de oever.",
+  "behaviour": "Loopt vaak alleen langs de waterlijn en wipt regelmatig met het achterlijf. Vliegt laag boven water met korte, snelle vleugelslagen.",
+  "migration": "In Nederland vooral van april tot begin juni en van juli tot half oktober. De hoogste aantallen vallen eind april tot half mei en in juli en augustus.",
+  "voice": "Hoge, schrille contact- en vluchtroep. De baltszang is langer en ritmisch."
  },
  "sp156": {
   "breeding": null,
@@ -2164,17 +2166,17 @@ export const LIFE = Object.freeze({
  },
  "sp157": {
   "breeding": null,
-  "diet": "Kleine vis, kreeftjes en larven",
-  "behaviour": "Waadt tot de buik in het water; zwart broedkleed",
-  "migration": "Doortrekker (apr–mei, jun–okt)",
-  "voice": "Scherp, tweelettergrepig \"tjuu-iet\""
+  "diet": "Kleine vissen, kreeftachtigen en waterinsecten en hun larven.",
+  "behaviour": "Waadt soms tot aan de buik, zwemt geregeld en kan actief achter kleine vis aan jagen.",
+  "migration": "In Nederland vooral doortrekker in het voorjaar en na de broedtijd. De eerste terugtrekkers kunnen in juni verschijnen. Een klein aantal overwintert.",
+  "voice": "Scherpe, vaak tweeledige vluchtroep die omhoog buigt. Ook trekkende vogels in de nacht laten die horen."
  },
  "sp158": {
   "breeding": null,
-  "diet": "Kleine vis, garnalen en insectenlarven",
-  "behaviour": "Rent met gebogen kop door ondiep water",
-  "migration": "Doortrekker (apr–mei, jul–okt); enkele overwinteren in Zeeland",
-  "voice": "Fluitend, drieledig \"tjuu-tjuu-tjuu\""
+  "diet": "Kleine vis, garnalen, waterinsecten en andere kleine ongewervelden.",
+  "behaviour": "Kan snel door ondiep water rennen bij het jagen. Zoekt ook rustiger voedsel langs slikranden.",
+  "migration": "Vooral doortrekker in april en mei en van juli tot oktober. Een klein aantal kan in Nederland overwinteren.",
+  "voice": "Krachtige, heldere vluchtroep in enkele lettergrepen, vaak drie. Ook in de nacht hoorbaar tijdens trek."
  },
  "sp159": {
   "breeding": {
@@ -2842,10 +2844,10 @@ export const LIFE = Object.freeze({
  },
  "sp217": {
   "breeding": null,
-  "diet": "Insecten en larven",
-  "behaviour": "Elegant; lange dunne snavel en lange groene poten",
-  "migration": "Schaarse doortrekker (apr–mei, jul–sep)",
-  "voice": "Herhaald \"kju\""
+  "diet": "Waterinsecten, larven en andere kleine ongewervelden die hij uit ondiep water pikt.",
+  "behaviour": "Foerageert wadend in ondiep water en pikt snel naar kleine prooien.",
+  "migration": "Zeldzame gast in Nederland, hoofdzakelijk in het voorjaar en de nazomer. Broedt vooral oostelijk van Nederland en trekt grotendeels weg uit het broedgebied.",
+  "voice": "De roep lijkt op die van Groenpootruiter en klinkt meestal hoger en sneller. In het broedgebied heeft de soort ook een ritmische baltszang."
  },
  "sp218": {
   "breeding": null,

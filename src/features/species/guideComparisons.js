@@ -331,6 +331,70 @@ export const GUIDE_COMPARISONS = [
     ],
     tip: 'De rugvlekjes alleen geven weinig houvast. Combineer de bouw en koptekening met de ondervleugel of beluister de vluchtroepen.',
   },
+  {
+    label: 'Tureluur en Zwarte Ruiter · broedkleed',
+    birds: [
+      {id: 'sp102', source: 'tureluur', plumage: 'breeding', marks: 'Bruin met donkere tekening, roodoranje poten en een vrij rechte, kortere snavel.'},
+      {id: 'sp157', source: 'zwarte-ruiter', plumage: 'breeding', marks: 'Roetzwarte onderzijde, kleine lichte rugvlekjes en een langere, fijnere snavel.'},
+    ],
+    tip: 'In vlucht laat Tureluur een brede witte achterrand aan de vleugel zien. Bij beide soorten is een witte rugwig zichtbaar.',
+  },
+  {
+    label: 'Tureluur en Zwarte Ruiter · winterkleed',
+    birds: [
+      {id: 'sp102', source: 'tureluur', plumage: 'winter', marks: 'Bruiner en compacter, met een kortere snavel. Bij de snavelbasis kan boven én onder rood zichtbaar zijn.'},
+      {id: 'sp157', source: 'zwarte-ruiter', plumage: 'winter', marks: 'Lichter grijs, met een opvallende witte wenkbrauw vóór het oog. De lange fijne snavel heeft vaak rood aan de basis van de ondersnavel.'},
+    ],
+    tip: 'Begin met snavellengte, wenkbrauw en bouw. Beide soorten kunnen in de winter roodachtige poten hebben.',
+  },
+  {
+    label: 'Tureluur en Zwarte Ruiter · jonge vogels',
+    birds: [
+      {id: 'sp102', source: 'tureluur', plumage: 'juv', marks: 'Bruine bovenzijde met lichte veerranden en vaak gelige tot oranje poten. Kortere snavel.'},
+      {id: 'sp157', source: 'zwarte-ruiter', plumage: 'juv', marks: 'Dichte, fijne dwarsbandjes op borst en flanken. Slankere bouw en langere snavel.'},
+    ],
+    tip: 'Kijk in zijaanzicht naar de onderzijde én snavel. Bij een verre vogel kan de vleugelrand in vlucht uitsluitsel geven.',
+  },
+  {
+    label: 'Groenpootruiter en Poelruiter · broedkleed',
+    birds: [
+      {id: 'sp158', source: 'groenpootruiter', plumage: 'breeding', marks: 'Forse kop en borst, met een stevige, licht opgebogen snavel.'},
+      {id: 'sp217', source: 'poelruiter', plumage: 'breeding', marks: 'Kleine ronde kop, naalddunne rechte snavel en poten die in verhouding lang lijken.'},
+    ],
+    tip: 'Beide soorten hebben donkere tekening op de rug. Een goed zijaanzicht laat de snavelvorm en lichaamsverhoudingen zien.',
+  },
+  {
+    label: 'Groenpootruiter en Poelruiter · winterkleed',
+    birds: [
+      {id: 'sp158', source: 'groenpootruiter', plumage: 'winter', marks: 'Grijze rug, robuustere bouw en een snavel met een lichte opwaartse kromming.'},
+      {id: 'sp217', source: 'poelruiter', plumage: 'winter', marks: 'Opvallend licht gezicht onder de grijze kruin. Kleine ronde kop en een fijne rechte snavel.'},
+    ],
+    tip: 'Gebruik vooral de snavelvorm. Bij tegenlicht valt de kleur van de poten bij beide soorten lastig te beoordelen.',
+  },
+  {
+    label: 'Groenpootruiter en Poelruiter · jonge vogels',
+    birds: [
+      {id: 'sp158', source: 'groenpootruiter', plumage: 'juv', marks: 'Bruinere vleugeldekveren met lichte randjes. De snavel is stevig en licht opgebogen.'},
+      {id: 'sp217', source: 'poelruiter', plumage: 'juv', marks: 'Ook lichte veerranden, met een fijnere rechte snavel en opvallend slanke bouw.'},
+    ],
+    tip: 'Vergelijk vooral snavel en bouw. Jonge vogels kunnen al vroeg een deel van de bruine veren vervangen door grijzere winterveren.',
+  },
+  {
+    label: 'Oeverloper en Witgat · winterkleed',
+    birds: [
+      {id: 'sp155', source: 'oeverloper', plumage: 'winter', marks: 'Witte inkeping tussen borst en vleugelboeg. Korte poten. In vlucht een witte streep op de bovenvleugel.'},
+      {id: 'sp156', source: 'witgat', plumage: 'winter', marks: 'Donkere borst met een scherpe overgang naar de witte buik. In vlucht een witte stuit en donkere ondervleugels.'},
+    ],
+    tip: 'Kijk bij een staande vogel eerst naar de overgang tussen borst en vleugelboeg. In vlucht helpt de plaats van het wit.',
+  },
+  {
+    label: 'Oeverloper en Bosruiter · jonge vogels',
+    birds: [
+      {id: 'sp155', source: 'oeverloper', plumage: 'juv', marks: 'Laag op de poten, met een witte inkeping vóór de vleugelboeg. Wipt geregeld met het achterlijf.'},
+      {id: 'sp159', source: 'bosruiter', plumage: 'juv', marks: 'Langere geelgroene poten, een lichte wenkbrauw tot achter het oog en meer opvallende lichte rugvlekjes.'},
+    ],
+    tip: 'Bekijk de kop, borstzijde en pootlengte samen. Let bij een foeragerende vogel ook op de houding en beweging.',
+  },
 ];
 
 export function comparisonSource(bird) {

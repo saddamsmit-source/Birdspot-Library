@@ -659,6 +659,181 @@ export const GUIDE_AUDIO = Object.freeze({
       "source": "https://xeno-canto.org/1157158",
       "modifications": "Volledige opname omgezet naar MP3 (mono)"
     }
+  ],
+  "sp102": [
+    {
+      "file": "XC466470",
+      "audio": "/assets/species/audio/sp102-song.mp3",
+      "label": "Baltszang",
+      "note": "Opgenomen bij Lies op Terschelling.",
+      "author": "Pascal Christe",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://xeno-canto.org/466470",
+      "modifications": "Volledige opname omgezet naar MP3 (mono)"
+    },
+    {
+      "file": "XC780151",
+      "audio": "/assets/species/audio/sp102-alarm-call.mp3",
+      "label": "Alarm- en contactroep",
+      "note": "Roepen opgenomen bij Oye-Plage, Frankrijk.",
+      "author": "Camille Vacher",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://xeno-canto.org/780151",
+      "modifications": "Volledige opname omgezet naar MP3 (mono)"
+    },
+    {
+      "file": "XC991876",
+      "audio": "/assets/species/audio/sp102-flight-call.mp3",
+      "label": "Vluchtroep",
+      "note": "Opgenomen bij Cambron, Frankrijk.",
+      "author": "Noé Ferrari",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://xeno-canto.org/991876",
+      "modifications": "Volledige opname omgezet naar MP3 (mono)"
+    },
+    {
+      "file": "XC829335",
+      "audio": "/assets/species/audio/sp102-night-flight-call.mp3",
+      "label": "Nachtelijke vluchtroep",
+      "note": "Opgenomen in Bergschenhoek, Zuid-Holland.",
+      "author": "Jochem verweij",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://xeno-canto.org/829335",
+      "modifications": "Volledige opname omgezet naar MP3 (mono)"
+    }
+  ],
+  "sp155": [
+    {
+      "file": "XC901773",
+      "audio": "/assets/species/audio/sp155-song.mp3",
+      "label": "Baltszang",
+      "note": "Opgenomen op Öland, Zweden.",
+      "author": "Jochem verweij",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://xeno-canto.org/901773",
+      "modifications": "Volledige opname omgezet naar MP3 (mono)"
+    },
+    {
+      "file": "XC432214",
+      "audio": "/assets/species/audio/sp155-flight-call.mp3",
+      "label": "Vluchtroep",
+      "note": "Opgenomen bij Isla Mayor, Spanje.",
+      "author": "Joost van Bruggen",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://xeno-canto.org/432214",
+      "modifications": "Volledige opname omgezet naar MP3 (mono)"
+    },
+    {
+      "file": "XC1166974",
+      "audio": "/assets/species/audio/sp155-night-flight-call.mp3",
+      "label": "Nachtelijke vluchtroep",
+      "note": "Opgenomen boven Nijverdal, Overijssel.",
+      "author": "marc1981",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://xeno-canto.org/1166974",
+      "modifications": "Volledige opname omgezet naar MP3 (mono)"
+    }
+  ],
+  "sp157": [
+    {
+      "file": "XC947276",
+      "audio": "/assets/species/audio/sp157-flight-call.mp3",
+      "label": "Vluchtroep",
+      "note": "Opgenomen bij Antwerpen, België.",
+      "author": "Tim Vochten",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://xeno-canto.org/947276",
+      "modifications": "Volledige opname omgezet naar MP3 (mono)"
+    },
+    {
+      "file": "XC929268",
+      "audio": "/assets/species/audio/sp157-flight-call-alt.mp3",
+      "label": "Vluchtroep, tweede voorbeeld",
+      "note": "Opgenomen bij het Ögiymeer, Mongolië.",
+      "author": "Jochem Verweij",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://xeno-canto.org/929268",
+      "modifications": "Volledige opname omgezet naar MP3 (mono)"
+    },
+    {
+      "file": "XC1192286",
+      "audio": "/assets/species/audio/sp157-night-flight-call.mp3",
+      "label": "Nachtelijke vluchtroep",
+      "note": "Opgenomen bij Abbeville, Frankrijk.",
+      "author": "Noé Ferrari",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://xeno-canto.org/1192286",
+      "modifications": "Volledige opname omgezet naar MP3 (mono)"
+    }
+  ],
+  "sp158": [
+    {
+      "file": "XC826147",
+      "audio": "/assets/species/audio/sp158-flight-call.mp3",
+      "label": "Contact- en vluchtroep",
+      "note": "Opgenomen in Oostvoorne, Zuid-Holland.",
+      "author": "Jochem verweij",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://xeno-canto.org/826147",
+      "modifications": "Volledige opname omgezet naar MP3 (mono)"
+    },
+    {
+      "file": "XC991736",
+      "audio": "/assets/species/audio/sp158-song-and-call.mp3",
+      "label": "Zang en roep",
+      "note": "Opgenomen bij Yverdon-les-Bains, Zwitserland.",
+      "author": "Pascal Christe",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://xeno-canto.org/991736",
+      "modifications": "Volledige opname omgezet naar MP3 (mono)"
+    },
+    {
+      "file": "XC1180337",
+      "audio": "/assets/species/audio/sp158-night-flight-call.mp3",
+      "label": "Nachtelijke vluchtroep",
+      "note": "Opgenomen bij Abbeville, Frankrijk.",
+      "author": "Noé Ferrari",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://xeno-canto.org/1180337",
+      "modifications": "Volledige opname omgezet naar MP3 (mono)"
+    }
+  ],
+  "sp217": [
+    {
+      "file": "iNaturalist sound 1958314",
+      "audio": "/assets/species/audio/sp217-field-call.mp3",
+      "label": "Roep",
+      "note": "Veldopname bij Ishmetovo, Basjkortostan (Rusland).",
+      "author": "Рустам Сафаргалиев",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://www.inaturalist.org/observations/362457845",
+      "modifications": "Volledige opname omgezet naar MP3 (mono)"
+    },
+    {
+      "file": "iNaturalist sound 1766672",
+      "audio": "/assets/species/audio/sp217-field-call-alt.mp3",
+      "label": "Roep, tweede voorbeeld",
+      "note": "Veldopname uit Thailand, met andere geluiden op de achtergrond.",
+      "author": "Sam Hambly",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://www.inaturalist.org/observations/338563142",
+      "modifications": "Volledige opname omgezet naar MP3 (mono)"
+    }
   ]
 });
 export const GUIDE_PLUMAGE = Object.freeze({
@@ -1907,6 +2082,231 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "alt": "Jonge Bosruiter in augustus in Engeland. Lichte vlekjes op de bruine bovenzijde, lange wenkbrauwstreep en lange poten.",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
       "observation": "https://www.inaturalist.org/observations/307959225"
+    }
+  },
+  "sp102": {
+    "breeding": {
+      "file": "iNaturalist photo 508406832",
+      "author": "Clare Edwards",
+      "license": "CC BY 4.0",
+      "source": "https://www.inaturalist.org/photos/508406832",
+      "image": "/assets/species/plumage/sp102-breeding.webp",
+      "width": 1024,
+      "height": 768,
+      "modifications": "Omgezet naar WebP zonder uitsnede",
+      "nl": "Tureluur",
+      "latin": "Tringa totanus",
+      "batch": "waders-18",
+      "reviewed": "2026-11-06",
+      "verification": "Research-grade waarneming. Het afgebeelde kleed is visueel getoetst.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/tureluur",
+      "visualCheck": "Tureluur in mei in Engeland. Bruine rug met donkere tekening, roodoranje poten en een rode snavelbasis.",
+      "alt": "Tureluur in mei in Engeland. Bruine rug met donkere tekening, roodoranje poten en een rode snavelbasis.",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "observation": "https://www.inaturalist.org/observations/282961325"
+    },
+    "winter": {
+      "reuseGuidePhoto": true
+    },
+    "juv": {
+      "file": "iNaturalist photo 177943621",
+      "author": "Stefan Haag",
+      "license": "CC BY 4.0",
+      "source": "https://www.inaturalist.org/photos/177943621",
+      "image": "/assets/species/plumage/sp102-juv.webp",
+      "width": 558,
+      "height": 480,
+      "modifications": "Uitgesneden rond de vogel en omgezet naar WebP",
+      "nl": "Tureluur",
+      "latin": "Tringa totanus",
+      "batch": "waders-18",
+      "reviewed": "2026-11-06",
+      "verification": "Research-grade waarneming. De leeftijd is geannoteerd.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/tureluur",
+      "visualCheck": "Jonge Tureluur in augustus op IJsland. Beige veerranden en geelachtig oranje poten.",
+      "alt": "Jonge Tureluur in augustus op IJsland. Beige veerranden en geelachtig oranje poten.",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "observation": "https://www.inaturalist.org/observations/105980004"
+    }
+  },
+  "sp155": {
+    "breeding": {
+      "reuseGuidePhoto": true
+    },
+    "winter": {
+      "file": "iNaturalist photo 617218276",
+      "author": "rashidchan",
+      "license": "CC BY 4.0",
+      "source": "https://www.inaturalist.org/photos/617218276",
+      "image": "/assets/species/plumage/sp155-winter.webp",
+      "width": 768,
+      "height": 1024,
+      "modifications": "Omgezet naar WebP zonder uitsnede",
+      "nl": "Oeverloper",
+      "latin": "Actitis hypoleucos",
+      "batch": "waders-18",
+      "reviewed": "2026-11-06",
+      "verification": "Research-grade waarneming. Het afgebeelde kleed is visueel getoetst.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/oeverloper",
+      "visualCheck": "Oeverloper in februari in Sri Lanka. Vrij egale rug en een duidelijk wit veld vóór de vleugelboeg.",
+      "alt": "Oeverloper in februari in Sri Lanka. Vrij egale rug en een duidelijk wit veld vóór de vleugelboeg.",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "observation": "https://www.inaturalist.org/observations/339306085"
+    },
+    "juv": {
+      "file": "iNaturalist photo 85106472",
+      "author": "Дарья Орлова",
+      "license": "CC BY 4.0",
+      "source": "https://www.inaturalist.org/photos/85106472",
+      "image": "/assets/species/plumage/sp155-juv.webp",
+      "width": 500,
+      "height": 341,
+      "modifications": "Uitgesneden rond de vogel en omgezet naar WebP",
+      "nl": "Oeverloper",
+      "latin": "Actitis hypoleucos",
+      "batch": "waders-18",
+      "reviewed": "2026-11-06",
+      "verification": "Research-grade waarneming. De leeftijd is geannoteerd.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/oeverloper",
+      "visualCheck": "Jonge Oeverloper in juli in Rusland. Lichte randjes op de vleugeldekveren en een witte inkeping bij de borstzijde.",
+      "alt": "Jonge Oeverloper in juli in Rusland. Lichte randjes op de vleugeldekveren en een witte inkeping bij de borstzijde.",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "observation": "https://www.inaturalist.org/observations/53481960"
+    }
+  },
+  "sp157": {
+    "breeding": {
+      "reuseGuidePhoto": true
+    },
+    "winter": {
+      "file": "iNaturalist photo 603401014",
+      "author": "Cameron Findlay",
+      "license": "CC BY 4.0",
+      "source": "https://www.inaturalist.org/photos/603401014",
+      "image": "/assets/species/plumage/sp157-winter.webp",
+      "width": 1024,
+      "height": 768,
+      "modifications": "Omgezet naar WebP zonder uitsnede",
+      "nl": "Zwarte Ruiter",
+      "latin": "Tringa erythropus",
+      "batch": "waders-18",
+      "reviewed": "2026-11-06",
+      "verification": "Research-grade waarneming. Het afgebeelde kleed is visueel getoetst.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwarte-ruiter",
+      "visualCheck": "Zwarte Ruiter in december in Engeland. Bleke onderzijde, lange fijne snavel en lichte wenkbrauw.",
+      "alt": "Zwarte Ruiter in december in Engeland. Bleke onderzijde, lange fijne snavel en lichte wenkbrauw.",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "observation": "https://www.inaturalist.org/observations/332483167"
+    },
+    "juv": {
+      "file": "iNaturalist photo 722959312",
+      "author": "Phil James",
+      "license": "CC BY 4.0",
+      "source": "https://www.inaturalist.org/photos/722959312",
+      "image": "/assets/species/plumage/sp157-juv.webp",
+      "width": 1024,
+      "height": 768,
+      "modifications": "Omgezet naar WebP zonder uitsnede",
+      "nl": "Zwarte Ruiter",
+      "latin": "Tringa erythropus",
+      "batch": "waders-18",
+      "reviewed": "2026-11-06",
+      "verification": "Research-grade waarneming. De leeftijd is geannoteerd.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwarte-ruiter",
+      "visualCheck": "Jonge Zwarte Ruiter in augustus in Engeland. Dichte tekening op borst en flanken en een lange, fijne snavel.",
+      "alt": "Jonge Zwarte Ruiter in augustus in Engeland. Dichte tekening op borst en flanken en een lange, fijne snavel.",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "observation": "https://www.inaturalist.org/observations/394358144"
+    }
+  },
+  "sp158": {
+    "breeding": {
+      "reuseGuidePhoto": true
+    },
+    "winter": {
+      "file": "iNaturalist photo 475334386",
+      "author": "Joseph Morlan",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.inaturalist.org/photos/475334386",
+      "image": "/assets/species/plumage/sp158-winter.webp",
+      "width": 1024,
+      "height": 768,
+      "modifications": "Omgezet naar WebP zonder uitsnede",
+      "nl": "Groenpootruiter",
+      "latin": "Tringa nebularia",
+      "batch": "waders-18",
+      "reviewed": "2026-11-06",
+      "verification": "Research-grade waarneming. Het afgebeelde kleed is visueel getoetst.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/groenpootruiter",
+      "visualCheck": "Groenpootruiter in januari in Sri Lanka. Lichte kop en onderzijde, met een robuuste, licht opgebogen snavel.",
+      "alt": "Groenpootruiter in januari in Sri Lanka. Lichte kop en onderzijde, met een robuuste, licht opgebogen snavel.",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "observation": "https://www.inaturalist.org/observations/264704796"
+    },
+    "juv": {
+      "file": "iNaturalist photo 168627338",
+      "author": "Se Lena",
+      "license": "CC BY 4.0",
+      "source": "https://www.inaturalist.org/photos/168627338",
+      "image": "/assets/species/plumage/sp158-juv.webp",
+      "width": 727,
+      "height": 476,
+      "modifications": "Uitgesneden rond de vogel en omgezet naar WebP",
+      "nl": "Groenpootruiter",
+      "latin": "Tringa nebularia",
+      "batch": "waders-18",
+      "reviewed": "2026-11-06",
+      "verification": "Research-grade waarneming. De leeftijd is geannoteerd.Eerstejaars vogel in november met resterende juveniele vleugeldekveren.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/groenpootruiter",
+      "visualCheck": "Eerstejaars Groenpootruiter in november in Japan. Op de vleugel zijn nog bruine veren met lichte randen zichtbaar.",
+      "alt": "Eerstejaars Groenpootruiter in november in Japan. Op de vleugel zijn nog bruine veren met lichte randen zichtbaar.",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "observation": "https://www.inaturalist.org/observations/100997515"
+    }
+  },
+  "sp217": {
+    "breeding": {
+      "reuseGuidePhoto": true
+    },
+    "winter": {
+      "file": "iNaturalist photo 246809118",
+      "author": "Marian Read",
+      "license": "CC0",
+      "source": "https://www.inaturalist.org/photos/246809118",
+      "image": "/assets/species/plumage/sp217-winter.webp",
+      "width": 1024,
+      "height": 1024,
+      "modifications": "Omgezet naar WebP zonder uitsnede",
+      "nl": "Poelruiter",
+      "latin": "Tringa stagnatilis",
+      "batch": "waders-18",
+      "reviewed": "2026-11-06",
+      "verification": "Research-grade waarneming. Het afgebeelde kleed is visueel getoetst.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/poelruiter",
+      "visualCheck": "Poelruiter in december in Kenia. Licht gezicht en fijne, rechte snavel.",
+      "alt": "Poelruiter in december in Kenia. Licht gezicht en fijne, rechte snavel.",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "observation": "https://www.inaturalist.org/observations/143868114"
+    },
+    "juv": {
+      "file": "iNaturalist photo 28427341",
+      "author": "Вячеслав Юсупов",
+      "license": "CC BY 4.0",
+      "source": "https://www.inaturalist.org/photos/28427341",
+      "image": "/assets/species/plumage/sp217-juv.webp",
+      "width": 584,
+      "height": 508,
+      "modifications": "Uitgesneden rond de vogel en omgezet naar WebP",
+      "nl": "Poelruiter",
+      "latin": "Tringa stagnatilis",
+      "batch": "waders-18",
+      "reviewed": "2026-11-06",
+      "verification": "Research-grade waarneming. De leeftijd is geannoteerd.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/poelruiter",
+      "visualCheck": "Jonge Poelruiter in juli in Rusland. Lichtgerande bovenzijde en een fijn, recht snavelprofiel.",
+      "alt": "Jonge Poelruiter in juli in Rusland. Lichtgerande bovenzijde en een fijn, recht snavelprofiel.",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "observation": "https://www.inaturalist.org/observations/18578496"
     }
   }
 });
