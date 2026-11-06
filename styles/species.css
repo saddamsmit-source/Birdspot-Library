@@ -728,27 +728,29 @@
   background: var(--surface-2); color: var(--brand-mid);
 }
 .sd-months { display: grid; grid-template-columns: repeat(12, 1fr); gap: 3px; }
-[data-month-kind="zomergast"] { --sd-month-color: #8c500a; }
-[data-month-kind="wintergast"] { --sd-month-color: #235a94; }
-[data-month-kind="standvogel"] { --sd-month-color: #28654f; }
-[data-month-kind="trekvogel"] { --sd-month-color: #166675; }
-[data-month-kind="zeldzaam"] { --sd-month-color: #74427f; }
-[data-month-kind="overig"] { --sd-month-color: #555e70; }
-[data-month-kind="broed"] { --sd-month-color: #a33c65; }
+[data-month-kind="zomergast"] { --sd-month-color: var(--guide-month-summer); }
+[data-month-kind="wintergast"] { --sd-month-color: var(--guide-month-winter); }
+[data-month-kind="standvogel"] { --sd-month-color: var(--guide-month-resident); }
+[data-month-kind="trekvogel"] { --sd-month-color: var(--guide-month-passage); }
+[data-month-kind="zeldzaam"] { --sd-month-color: var(--guide-month-rare); }
+[data-month-kind="overig"] { --sd-month-color: var(--guide-month-other); }
+[data-month-kind="broed"] { --sd-month-color: var(--guide-month-breed); }
+[data-month-kind="zomergast"],
+[data-month-kind="zeldzaam"] { --sd-month-ink: var(--guide-month-dark-ink); }
 .sd-month {
   position: relative;
   display: grid; place-items: center; height: 30px; border-radius: 6px;
   background: var(--surface-2); color: var(--ink-2); font-size: 12px; font-weight: 600;
 }
-.sd-month.is-on { background: var(--sd-month-color); color: #fff; }
+.sd-month.is-on { background: var(--sd-month-color); color: var(--sd-month-ink, var(--on-brand)); }
 .sd-month.is-breeding::after {
   content: '';
   position: absolute;
   inset: auto 4px 3px;
   height: 4px;
   border-radius: 3px;
-  background: #e85b8c;
-  box-shadow: 0 0 0 1px #fff;
+  background: var(--guide-month-breed);
+  box-shadow: 0 0 0 1px var(--on-brand);
 }
 .sd-month-legend {
   display: flex;
@@ -761,8 +763,9 @@
   font-size: var(--fs-meta);
 }
 .sd-month-legend li { display: inline-flex; align-items: center; gap: 5px; }
-.sd-month-legend li span { width: 9px; height: 9px; border-radius: 3px; background: var(--sd-month-color); }
-.sd-month-legend [data-month-kind="broed"] span { height: 4px; background: #e85b8c; }
+.sd-month-legend li span { flex: 0 0 14px; height: 14px; border-radius: 3px; background: var(--sd-month-color); }
+.sd-month-legend [data-month-kind="broed"] span { height: 4px; }
+.sd-month-captions { display: grid; gap: 4px; }
 .sd-caption { margin: 0; font-size: var(--fs-meta); color: var(--ink-2); }
 .sd-meter { display: flex; gap: 3px; margin-top: 4px; }
 .sd-meter i { width: 14px; height: 6px; border-radius: 3px; background: var(--surface-2); }

@@ -85,3 +85,9 @@ Broedgegevens van Boerenzwaluw zijn bijgewerkt volgens dezelfde bron. Bij andere
 [rietzanger-vbn]: https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/rietzanger
 [boerenzwaluw-vbn]: https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/boerenzwaluw
 [rietgors-vbn]: https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/rietgors
+
+## Leesbaarheid maandlegenda
+
+De eigenaar vond de donkere kleuren te vergelijkbaar. Standvogel behoudt het bestaande groen en broedmaanden houden de roze streep. Zomergasten krijgen helder goudgeel, wintergasten kobaltblauw, doortrekkers terracotta en schaarse gasten en dwaalgasten lichtlila. De kleurvakjes in de legenda zijn vergroot van 9 naar 14 px. Donkere letters op goudgeel en lila en witte letters op de donkere kleuren geven minimaal 5,93:1 tekstcontrast.
+
+Bij bekende broedmaanden staat de periode ook in tekst direct onder de balk. Daardoor is de informatie ook zonder kleurherkenning leesbaar. De bronmaanden en de dekking van negen soorten blijven gelijk. CAP-BIRD-011/012 en L-019. Bij kleine kleurstaaltjes helpt verschil in helderheid naast verschil in tint.

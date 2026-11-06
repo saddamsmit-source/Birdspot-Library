@@ -34,6 +34,16 @@
   --danger:       #E76F51;
   --positive:     #52B788;
 
+  /* ── Soortgids: maandbalk ──────────────────────────── */
+  --guide-month-summer:   #FFD75C;
+  --guide-month-winter:   #225FC8;
+  --guide-month-resident: #28654F;
+  --guide-month-passage:  #A73C23;
+  --guide-month-rare:     #D4B8FF;
+  --guide-month-other:    #555E70;
+  --guide-month-dark-ink: #291B35;
+  --guide-month-breed:    #E85B8C;
+
   /* ── Op media ─────────────────────────────────────── */
   --on-media:     #FFFFFF;
   --media-veil:   linear-gradient(to top, rgba(0,0,0,.65) 0%, transparent 55%);

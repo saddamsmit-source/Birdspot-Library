@@ -163,7 +163,10 @@ export function monthBar({months, category}, breedingMonths) {
     ? 'Broedperiode · ' + [...breeding].sort((a, b) => a - b).map(i => MONTH_NAMES[i]).join(', ') : '';
   const legend = kind === 'overig' ? [...MONTH_LEGEND, [kind, label]] : MONTH_LEGEND;
   return `<div class="sd-months" data-month-kind="${kind}" role="img" aria-label="${esc([label, caption, breedingLabel].filter(Boolean).join('. '))}">${cells}</div>
-    <p class="sd-caption">${esc(caption)}</p>
+    <div class="sd-month-captions">
+      <p class="sd-caption">${esc(caption)}</p>
+      ${breedingLabel ? `<p class="sd-caption">${esc(breedingLabel)}</p>` : ''}
+    </div>
     <ul class="sd-month-legend" aria-label="Kleuren maandbalk">
       ${legend.map(([key, name]) => `<li data-month-kind="${key}"><span aria-hidden="true"></span>${esc(name)}</li>`).join('')}
     </ul>`;
