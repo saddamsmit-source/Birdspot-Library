@@ -109,3 +109,11 @@ Zestien gidsfoto’s toegevoegd, met Holenduif, Kleine Bonte Specht, Zwarte Spec
 CAP-BIRD-012/015/040 en L-016/L-019/L-022. Bij vergelijkbare soorten zijn afzonderlijke kandidaten gezocht die de zichtbare kenmerken goed tonen. Voor Glanskop viel een overzichtsbeeld van een voederplek af, voor Taigaboomkruiper een vogel in de hand. De soortnaam, fotograaf, licentie, kenmerken en inhoudsbron staan per beeld in `assets/species/credits.json`. Bij Matkop en Glanskop en bij de boomkruipers kan geluid helpen bij herkenning in het veld.
 
 Browserbewijs bij 390 en 1365 px: alle 62 gidsfoto’s gecontroleerd in lijst en soortdetail, inclusief foutweergave. Alle 62 beelden decodeerden offline na precache. Zoeken en het openen van een gidsfoto en kaart zijn ook na offline herstart gecontroleerd.
+
+## Batch 07 · Water en oever — 2026-11-06
+
+Zestien gidsfoto’s toegevoegd, met IJsvogel, Fuut, Meerkoet, Waterhoen, Blauwe Reiger, Kleine Zilverreiger, Grote Zilverreiger, Grauwe Gans, Wilde Eend, Slobeend, Kuifeend, Aalscholver, Knobbelzwaan, Krakeend, Smient en Tafeleend. Dekking 78 van 597 soorten. De vijftien nieuwe WebP’s gebruiken 2,73 MiB. De IJsvogel hergebruikt het bestaande lokale showcasebeeld na controle van soort, bron en licentie.
+
+CAP-BIRD-012/015/040 en L-016/L-019/L-022. Voor Meerkoet is een foto van een afwijkend gekleurde vogel afgewezen na controle van de Commons-beschrijving. De Kleine Zilverreiger toont de gele tenen in vlucht en de Grote Zilverreiger staat in rietwater. De foto van Wilde Eend toont beide geslachten. Bron, licentie, bewerking en zichtbare kenmerken staan per beeld in `assets/species/credits.json`.
+
+Browserbewijs bij 390 en 1365 px: alle 78 gidsfoto’s gecontroleerd in lijst en soortdetail, inclusief foutweergave. Alle 78 beelden decodeerden offline na precache. Na offline herstart werkten zoeken, de foto en de verspreidingskaart van Fitis.
