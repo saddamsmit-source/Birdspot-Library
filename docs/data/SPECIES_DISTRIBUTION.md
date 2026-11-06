@@ -21,7 +21,7 @@ Gebruik voor een nieuwe momentopname een lege cachemap. De generator koppelt op 
 
 ## Functiekaart en learning
 
-- CAP-BIRD-012. De maandbalk in **Leefwijze** toont aanwezigheid met de bestaande statuskleuren. De roze markering zit op een aparte uitgelijnde rij, doorlopend over aangrenzende maanden. Alleen expliciet gedocumenteerde broedmaanden kleuren roze. De eerdere markering zat als smalle lijn in ieder maandvak en viel weg tegen de statuskleur.
+- CAP-BIRD-012, L-019. De maandbalk in **Leefwijze** toont aanwezigheid met de bestaande statuskleuren. Vanaf 1.16.6 zit de rode broedlijn direct onder de maandletters en loopt hij door over aangrenzende broedmaanden. De eerdere roze lijn bleef bij 201 soorten weg doordat alleen het losse veld `months` werd gelezen. De generator gebruikt nu ook eenduidige bereiken uit de bestaande broedtekst. Hergebruik deze afleiding als één bron voor tekst en kalender. De soortdetailtest toetst Pimpelmees (afgeleid bereik), Boerenzwaluw (expliciet bereik) en Rotgans (geen broedlijn).
 - CAP-BIRD-012, relatie met CAP-BIRD-024 en CAP-BIRD-025. De soortkaart voegt landelijke broninformatie toe aan de gids. De private kaart behoudt de eigen navigatie, filters en pins. De lokale soortlaag is gecachet voor gebruik na offline herstart. Dit maakt de online achtergrondtegels van de persoonlijke kaart niet offline.
 - L-019, L-039, L-027. Hergebruik een brongecontroleerde, afgeleide laag voor vaste gidsinhoud, met eigen legenda en een expliciete lege staat. Houd die gegevens gescheiden van persoonlijke records en voeg de gebundelde module toe aan de versiegebonden appcache.
 

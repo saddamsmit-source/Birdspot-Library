@@ -150,7 +150,7 @@ function presenceColorKind(category) {
 }
 
 /** De hoofdcategorie kleurt aanwezigheid; gedocumenteerde broedmaanden hebben een eigen markering. */
-export function monthBar({months, category}, breedingMonths) {
+export function monthBar({months, category, breeding: breedingStatus}, breedingMonths) {
   const set = monthSet(months);
   const breeding = monthSet(breedingMonths);
   const kind = presenceColorKind(category);
@@ -166,8 +166,12 @@ export function monthBar({months, category}, breedingMonths) {
   const caption = months === 'jan-dec' ? 'Jaarrond in Nederland'
     : !set.size ? 'Geen vaste periode vastgesteld'
     : 'Gebruikelijke periode · ' + [...set].sort((a, b) => a - b).map(i => MONTH_NAMES[i]).join(', ');
-  const breedingLabel = breeding.size
-    ? 'Broedperiode · ' + [...breeding].sort((a, b) => a - b).map(i => MONTH_NAMES[i]).join(', ') : '';
+  let breedingLabel = '';
+  if (breeding.size) {
+    breedingLabel = 'Gebruikelijke broedperiode · ' + [...breeding].sort((a, b) => a - b).map(i => MONTH_NAMES[i]).join(', ');
+  } else if (breedingStatus === 'ja' || breedingStatus === 'incidenteel') {
+    breedingLabel = 'Broedmaanden volgen nog.';
+  }
   const legend = kind === 'overig' ? [...MONTH_LEGEND, [kind, label]] : MONTH_LEGEND;
   return `<div class="sd-month-calendar">
       <div class="sd-months" data-month-kind="${kind}" role="img" aria-label="${esc([label, caption, breedingLabel].filter(Boolean).join('. '))}">${cells}</div>

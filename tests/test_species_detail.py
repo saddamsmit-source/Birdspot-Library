@@ -14,6 +14,7 @@ Birdspot Library — H2–H4: soortdetail met tabbladen
   H3-02  tab heet 'Leefwijze'; broedtegels, nest, voedsel/gedrag/trek en zang en roep staan gelijk aan de bron (Merel)
   H3-03  soort zonder leefwijze (exoot/ontsnapt) toont 'volgen nog'; niet-broedende wintergast (Rotgans) toont
          voedsel/gedrag/trek en zang maar geen broedblok
+  H3-04  kalender neemt ook de broedtekst over (Pimpelmees); lijn onder de juiste maanden in beide thema's
 
 Starten (vanuit repo-root):  python tests/test_species_detail.py
 """
@@ -234,6 +235,11 @@ def main():
                 b = e["breeding"]
                 if s["breeding"] in ("ja", "incidenteel"):
                     assert b and all(b[k] and b[k] == src[k] for k in ("period", "nest", "eggs", "incubation", "fledging", "broods")), f"H3-01 {sid} broeden"
+                    start, _, end = src["period"].partition("–")
+                    expected_months = src.get("months")
+                    if not expected_months and start in MONTHS and end in MONTHS:
+                        expected_months = f"{start}-{end}"
+                    assert b.get("months") == expected_months, f"H3-04 {sid} kalenderbereik"
                 else:
                     assert b is None, f"H3-01 {sid} broedblok bij niet-broedvogel"
             assert set(life) == {s["id"] for s in targets}, "H3-01 leefwijze voor onbekende soort"
@@ -278,6 +284,33 @@ def main():
             tab("waar")
             assert_distribution_palette('zomergast', 'Zomergast')
             close_detail()
+
+            # The Pimpelmees used to have breeding text but no line in its year-round calendar.
+            open_species("Pimpelmees", "sp030")
+            tab("status")
+            strip = p.locator('#sdPanel-status .sd-month-breeding')
+            bar = p.locator('#sdPanel-status .sd-months')
+            strip.wait_for(timeout=5000)
+            assert bar.locator('.is-on').count() == 12
+            assert strip.locator('span').evaluate_all(
+                "els => els.flatMap((el, i) => el.classList.contains('is-breeding') ? [i] : [])"
+            ) == [2, 3, 4, 5, 6]
+            assert "maart, april, mei, juni, juli" in bar.get_attribute('aria-label')
+            first = strip.locator('.is-breeding').first
+            last = strip.locator('.is-breeding').last
+            march, july = [bar.locator('span').nth(i).bounding_box() for i in (2, 6)]
+            start, end = first.bounding_box(), last.bounding_box()
+            assert abs(start["x"] - march["x"]) < 1
+            assert abs(end["x"] + end["width"] - july["x"] - july["width"]) < 1
+            assert start["y"] - (march["y"] + march["height"]) == 2
+            legend_line = p.locator('#sdPanel-status .sd-month-legend [data-month-kind="broed"] span')
+            for theme, red in (("light", "rgb(201, 37, 45)"), ("dark", "rgb(255, 85, 72)")):
+                p.evaluate("(theme) => document.documentElement.dataset.theme = theme", theme)
+                assert first.evaluate("el => getComputedStyle(el).backgroundColor") == red
+                assert legend_line.evaluate("el => getComputedStyle(el).backgroundColor") == red
+            p.evaluate("delete document.documentElement.dataset.theme")
+            close_detail()
+            print("H3-04 OK — Pimpelmees maart–juli, rode lijn en legenda in beide thema's")
 
             ex = next(s for s in species if s["category"] in ("exoot", "ontsnapt") and s["id"] not in life and not s.get("compact"))
             open_species(ex["nameNL"], ex["id"])
