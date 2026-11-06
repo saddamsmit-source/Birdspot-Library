@@ -117,3 +117,11 @@ Zestien gidsfoto’s toegevoegd, met IJsvogel, Fuut, Meerkoet, Waterhoen, Blauwe
 CAP-BIRD-012/015/040 en L-016/L-019/L-022. Voor Meerkoet is een foto van een afwijkend gekleurde vogel afgewezen na controle van de Commons-beschrijving. De Kleine Zilverreiger toont de gele tenen in vlucht en de Grote Zilverreiger staat in rietwater. De foto van Wilde Eend toont beide geslachten. Bron, licentie, bewerking en zichtbare kenmerken staan per beeld in `assets/species/credits.json`.
 
 Browserbewijs bij 390 en 1365 px: alle 78 gidsfoto’s gecontroleerd in lijst en soortdetail, inclusief foutweergave. Alle 78 beelden decodeerden offline na precache. Na offline herstart werkten zoeken, de foto en de verspreidingskaart van Fitis.
+
+## Batch 08 · Open landschap en kust — 2026-11-06
+
+Vierentwintig lokale gidsfoto’s toegevoegd, met Buizerd, Torenvalk, Roodborsttapuit, Gele Kwikstaart, Veldleeuwerik, Graspieper, Fazant, Patrijs, Geelgors, Ooievaar, Zilvermeeuw, Kleine Mantelmeeuw, Stormmeeuw, Kokmeeuw, Scholekster, Kievit, Wulp, Grutto, Tureluur, Bergeend, Kluut, Bontbekplevier, Steenloper en Drieteenstrandloper. Dekking 102 van 597 soorten. De 23 nieuwe WebP’s gebruiken 2,84 MiB. De Kluut hergebruikt het bestaande lokale showcasebeeld na controle van soort, bron en licentie.
+
+CAP-BIRD-012/015/040 en L-016/L-019/L-022. Bij de meeuwen zijn volwassen vogels gekozen met zichtbare pootkleur en snavel. Bij Gele Kwikstaart is een foto van de nominaatvorm gekozen om verwarring met andere vormen te beperken. Voor Grutto is een nieuw beeld gekozen uit de Uitkerkse Polders waarop de lange poten beter zichtbaar zijn. De registervermelding bevat per foto de soort, bron, fotograaf, licentie, bewerking en zichtbare herkenningskenmerken.
+
+Browserbewijs bij 390 en 1365 px. Alle 102 foto’s zijn in de lijst en het soortdetail getest, inclusief de foutweergave. Alle foto’s decodeerden offline na precache. In de gecombineerde versie zijn de nieuwe Grutto-foto en de bijpassende soortkleur ook na offline herstart bevestigd, na een volledige online start en herlaadbeurt.

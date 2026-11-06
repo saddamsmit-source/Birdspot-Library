@@ -116,6 +116,16 @@ def main():
                 p.locator(f'[data-sd-tab="{key}"]').click()
                 p.locator(f'#sdPanel-{key}').wait_for(state="visible", timeout=4000)
 
+            def assert_distribution_palette(kind, label):
+                figure = p.locator('#sdPanel-waar .sd-distribution')
+                assert figure.get_attribute('data-month-kind') == kind
+                swatch = p.locator(f'.sd-month-legend [data-month-kind="{kind}"] span')
+                expected = swatch.evaluate('el => getComputedStyle(el).backgroundColor')
+                assert figure.locator('.sd-distribution-cloud').evaluate('el => getComputedStyle(el).fill') == expected
+                key = figure.locator('.sd-distribution-key')
+                assert label in key.inner_text()
+                assert key.locator('span').evaluate('el => getComputedStyle(el).backgroundColor') == expected
+
             # Rietgors: eigen waarnemingen
             rg = next(s for s in species if s["id"] == "sp118")
             open_species("Rietgors", "sp118")
@@ -144,6 +154,7 @@ def main():
             assert p.locator('#sdPanel-waar .sd-habitat').count() == len(rg["regions"])
             distribution = p.locator('#sdPanel-waar .sd-distribution')
             assert distribution.locator('.sd-distribution-cloud rect').count() >= 3
+            assert_distribution_palette('standvogel', 'Standvogel')
             assert "Rietgors" in distribution.locator('svg').get_attribute('aria-label')
             assert "2020–2025" in distribution.inner_text()
             assert distribution.get_by_role('link', name='eBird via GBIF').get_attribute('href') == "https://doi.org/10.15468/aomfnb"
@@ -264,6 +275,8 @@ def main():
             assert abs(first["x"] - may["x"]) < 1
             assert 0 < first["y"] - (may["y"] + may["height"]) <= 6
             assert bar.locator('.sd-month[title="november"]').get_attribute('class') == 'sd-month'
+            tab("waar")
+            assert_distribution_palette('zomergast', 'Zomergast')
             close_detail()
 
             ex = next(s for s in species if s["category"] in ("exoot", "ontsnapt") and s["id"] not in life and not s.get("compact"))

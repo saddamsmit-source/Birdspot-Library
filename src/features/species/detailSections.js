@@ -144,12 +144,16 @@ const MONTH_LEGEND = [
   ['trekvogel', 'Doortrekker'], ['zeldzaam', 'Schaarse gast / dwaalgast'], ['broed', 'Broedperiode'],
 ];
 
+function presenceColorKind(category) {
+  if (category === 'schaarsegast' || category === 'dwaalgast') return 'zeldzaam';
+  return MONTH_LEGEND.some(([key]) => key !== 'broed' && key === category) ? category : 'overig';
+}
+
 /** De hoofdcategorie kleurt aanwezigheid; gedocumenteerde broedmaanden hebben een eigen markering. */
 export function monthBar({months, category}, breedingMonths) {
   const set = monthSet(months);
   const breeding = monthSet(breedingMonths);
-  const kind = ['schaarsegast', 'dwaalgast'].includes(category) ? 'zeldzaam'
-    : MONTH_LEGEND.some(([key]) => key === category) ? category : 'overig';
+  const kind = presenceColorKind(category);
   const label = CATEGORY_BADGES[category] || 'Overig';
   const cells = MONTH_LETTERS.map((letter, i) => {
     const on = set.has(i);
@@ -220,16 +224,21 @@ function distributionMap(s) {
   const cells = DISTRIBUTION[s.id]?.[1];
   const title = '<h3 class="sd-h">Verspreiding in Nederland</h3>';
   if (!cells) return `${title}<p class="sd-empty">Voor deze soort is geen onderbouwde verspreidingskaart beschikbaar.</p>`;
+  const kind = presenceColorKind(s.category);
+  const status = CATEGORY_BADGES[s.category] || 'Overig';
   const backdrop = ['BEL', 'DEU', 'FRA', 'GBR'].map(key => `<path d="${MAP_PATHS[key]}"/>`).join('');
   const clouds = cells.map(cell => {
     const x = (cell % MAP_COLUMNS) * MAP_CELL;
     const y = Math.floor(cell / MAP_COLUMNS) * MAP_CELL;
     return `<rect x="${x - 3}" y="${y - 3}" width="${MAP_CELL + 6}" height="${MAP_CELL + 6}" rx="24"/>`;
   }).join('');
-  return `${title}<figure class="sd-distribution">
+  return `${title}<figure class="sd-distribution" data-month-kind="${kind}">
     <svg class="sd-distribution-map" viewBox="${MAP_VIEW_BOX}" role="img"
       aria-label="Kaart van Nederland met openbare waarnemingsgebieden voor ${esc(s.nameNL)}">
-      <defs><filter id="sdDistributionBlur"><feGaussianBlur stdDeviation="9"/></filter></defs>
+      <defs><filter id="sdDistributionBlur">
+        <feGaussianBlur stdDeviation="9"/>
+        <feDropShadow class="sd-distribution-edge" dx="0" dy="0" stdDeviation="6"/>
+      </filter></defs>
       <path class="sd-distribution-land" fill-rule="evenodd" d="${MAP_PATHS.NLD}"/>
       <path class="sd-distribution-water" d="${MAP_PATHS.water}"/>
       <g class="sd-distribution-cloud" filter="url(#sdDistributionBlur)">${clouds}</g>
@@ -243,8 +252,8 @@ function distributionMap(s) {
       </g>
     </svg>
     <figcaption>
-      <p class="sd-distribution-key"><span aria-hidden="true"></span> Gebieden met openbare waarnemingen</p>
-      <p class="sd-caption">Samengevoegd per gebied van ongeveer 24 km, ${GBIF_YEARS}. Ook buiten de wolk kan de soort voorkomen.</p>
+      <p class="sd-distribution-key"><span aria-hidden="true"></span> Gebieden met openbare waarnemingen · ${esc(status)}</p>
+      <p class="sd-caption">Alle seizoenen in ${GBIF_YEARS}, samengevoegd per gebied van ongeveer 24 km. Ook buiten de wolk kan de soort voorkomen.</p>
       <p class="sd-caption">Waarnemingen <a href="https://doi.org/10.15468/aomfnb" target="_blank" rel="noopener noreferrer">eBird via GBIF</a> (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>) · Kaart <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener noreferrer">Natural Earth</a></p>
     </figcaption>
   </figure>`;
