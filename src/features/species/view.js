@@ -622,6 +622,12 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
   }, true);
   sheet.addEventListener('error', e => {
     if (e.target.matches('.sd-audio audio')) e.target.nextElementSibling.hidden = false;
+    if (e.target.matches('.sd-field-photo img')) {
+      const fallback = document.createElement('small');
+      fallback.className = 'sd-media-credit';
+      fallback.textContent = 'Deze foto is nu niet beschikbaar.';
+      e.target.closest('button').replaceWith(fallback);
+    }
   }, true);
 
   sheet.querySelector('#speciesDetailMedia').addEventListener('click',() => {

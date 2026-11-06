@@ -97,5 +97,233 @@
       }
     ]
   },
-  "plumage": {}
+  "plumage": {
+    "sp035": {
+      "adult_f": {
+        "file": "Common chaffinch (Fringilla coelebs) female Drenthe.jpg",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Common_chaffinch_(Fringilla_coelebs)_female_Drenthe.jpg",
+        "image": "/assets/species/plumage/sp035-adult_f.webp",
+        "width": 1280,
+        "height": 853,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Vink",
+        "latin": "Fringilla coelebs",
+        "batch": "field-variants-09",
+        "reviewed": "2026-11-06",
+        "verification": "Commons metadata and visual check against the cited species account.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/vink",
+        "visualCheck": "Vrouwtje in Drenthe. Grijsbruine onderzijde, witte vleugelstrepen en witte buitenstaartveren.",
+        "alt": "Vink — Vrouwtje in Drenthe. Grijsbruine onderzijde, witte vleugelstrepen en witte buitenstaartveren.",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "adult_m": {
+        "reuseGuidePhoto": true
+      }
+    },
+    "sp043": {
+      "adult_m": {
+        "file": "House sparrow 2022 04 22.jpg",
+        "author": "Alexis Lours",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:House_sparrow_2022_04_22.jpg",
+        "image": "/assets/species/plumage/sp043-adult_m.webp",
+        "width": 1280,
+        "height": 853,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Huismus",
+        "latin": "Passer domesticus",
+        "batch": "field-variants-09",
+        "reviewed": "2026-11-06",
+        "verification": "Commons metadata and visual check against the cited species account.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/huismus",
+        "visualCheck": "Mannetje op een tak met grijze kruin, kastanjebruine nek en donkere bef.",
+        "alt": "Huismus — Mannetje op een tak met grijze kruin, kastanjebruine nek en donkere bef.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "adult_f": {
+        "reuseGuidePhoto": true
+      }
+    },
+    "sp016": {
+      "juv": {
+        "file": "Juvenile great spotted woodpecker (52200334398).jpg",
+        "author": "Andrey Gulivanov",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Juvenile_great_spotted_woodpecker_(52200334398).jpg",
+        "image": "/assets/species/plumage/sp016-juv.webp",
+        "width": 1280,
+        "height": 960,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Grote Bonte Specht",
+        "latin": "Dendrocopos major",
+        "batch": "field-variants-09",
+        "reviewed": "2026-11-06",
+        "verification": "Commons metadata and visual check against the cited species account.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-bonte-specht",
+        "visualCheck": "Jonge vogel op een berk. Rode kruin met zwarte rand, grote witte schoudervlek en donkere zijhals.",
+        "alt": "Grote Bonte Specht — Jonge vogel op een berk. Rode kruin met zwarte rand, grote witte schoudervlek en donkere zijhals.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+      },
+      "adult_f": {
+        "reuseGuidePhoto": true
+      }
+    },
+    "sp045": {
+      "adult_f": {
+        "file": "A female blackbird.jpg",
+        "author": "Rupdeb",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:A_female_blackbird.jpg",
+        "image": "/assets/species/plumage/sp045-adult_f.webp",
+        "width": 1280,
+        "height": 853,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Merel",
+        "latin": "Turdus merula",
+        "batch": "field-variants-09",
+        "reviewed": "2026-11-06",
+        "verification": "Commons metadata and visual check against the cited species account.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/merel",
+        "visualCheck": "Volwassen vrouwtje op een tak, donkerbruin met een lichter getekende borst.",
+        "alt": "Merel — Volwassen vrouwtje op een tak, donkerbruin met een lichter getekende borst.",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "juv": {
+        "file": "Blackbird (36889364072).jpg",
+        "author": "hedera.baltica from Wrocław, Poland",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Blackbird_(36889364072).jpg",
+        "image": "/assets/species/plumage/sp045-juv.webp",
+        "width": 1280,
+        "height": 1068,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Merel",
+        "latin": "Turdus merula",
+        "batch": "field-variants-09",
+        "reviewed": "2026-11-06",
+        "verification": "Commons metadata and visual check against the cited species account.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/merel",
+        "visualCheck": "Jonge Merel op een tak met lichte spikkels op de bruinige borst.",
+        "alt": "Merel — Jonge Merel op een tak met lichte spikkels op de bruinige borst.",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/"
+      },
+      "adult_m": {
+        "reuseGuidePhoto": true
+      }
+    },
+    "sp089": {
+      "adult_f": {
+        "file": "Female Mallard Swimming.jpg",
+        "author": "Roshan Kumar Ban",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Female_Mallard_Swimming.jpg",
+        "image": "/assets/species/plumage/sp089-adult_f.webp",
+        "width": 1280,
+        "height": 853,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Wilde Eend",
+        "latin": "Anas platyrhynchos",
+        "batch": "field-variants-09",
+        "reviewed": "2026-11-06",
+        "verification": "Commons metadata and visual check against the cited species account.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wilde-eend",
+        "visualCheck": "Zwemmend vrouwtje met gevlekt bruin verenkleed en oranje met donkere snavel.",
+        "alt": "Wilde Eend — Zwemmend vrouwtje met gevlekt bruin verenkleed en oranje met donkere snavel.",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "eclipse": {
+        "file": "Male eclipse Mallard on Lake Bled.jpg",
+        "author": "Mihael Grmek",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Male_eclipse_Mallard_on_Lake_Bled.jpg",
+        "image": "/assets/species/plumage/sp089-eclipse.webp",
+        "width": 1280,
+        "height": 1036,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Wilde Eend",
+        "latin": "Anas platyrhynchos",
+        "batch": "field-variants-09",
+        "reviewed": "2026-11-06",
+        "verification": "Commons metadata and visual check against the cited species account.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wilde-eend",
+        "visualCheck": "Mannetje in eclipskleed aan het water, met bruin verenkleed en een effen gele snavel.",
+        "alt": "Wilde Eend — Mannetje in eclipskleed aan het water, met bruin verenkleed en een effen gele snavel.",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    },
+    "sp129": {
+      "adult_f": {
+        "file": "Female gadwall (52294387865).jpg",
+        "author": "Andrey Gulivanov",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Female_gadwall_(52294387865).jpg",
+        "image": "/assets/species/plumage/sp129-adult_f.webp",
+        "width": 1280,
+        "height": 853,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Krakeend",
+        "latin": "Mareca strepera",
+        "batch": "field-variants-09",
+        "reviewed": "2026-11-06",
+        "verification": "Commons metadata and visual check against the cited species account.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/krakeend",
+        "visualCheck": "Vrouwtje bij het riet, met bruin verenkleed en oranje zijkanten van de snavel.",
+        "alt": "Krakeend — Vrouwtje bij het riet, met bruin verenkleed en oranje zijkanten van de snavel.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+      },
+      "adult_m": {
+        "reuseGuidePhoto": true
+      }
+    },
+    "sp097": {
+      "winter": {
+        "file": "Black-headed gull (winter plumage).JPG",
+        "author": "Bartosz MORĄG",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Black-headed_gull_(winter_plumage).JPG",
+        "image": "/assets/species/plumage/sp097-winter.webp",
+        "width": 1280,
+        "height": 964,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Kokmeeuw",
+        "latin": "Chroicocephalus ridibundus",
+        "batch": "field-variants-09",
+        "reviewed": "2026-11-06",
+        "verification": "Commons metadata and visual check against the cited species account.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kokmeeuw",
+        "visualCheck": "Volwassen vogel aan het water met witte kop, donkere oorvlek en rode poten.",
+        "alt": "Kokmeeuw — Volwassen vogel aan het water met witte kop, donkere oorvlek en rode poten.",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "breeding": {
+        "reuseGuidePhoto": true
+      }
+    },
+    "sp225": {
+      "breeding": {
+        "reuseGuidePhoto": true
+      },
+      "winter": {
+        "file": "2022-01-24 Ichthyaetus melanocephalus, Killingworth Lake, Northumberland 1.jpg",
+        "author": "MPF",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:2022-01-24_Ichthyaetus_melanocephalus,_Killingworth_Lake,_Northumberland_1.jpg",
+        "image": "/assets/species/plumage/sp225-winter.webp",
+        "width": 1280,
+        "height": 960,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Zwartkopmeeuw",
+        "latin": "Ichthyaetus melanocephalus",
+        "batch": "field-variants-09",
+        "reviewed": "2026-11-06",
+        "verification": "Commons metadata and visual check against the cited species account.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwartkopmeeuw",
+        "visualCheck": "Volwassen vogel aan de waterkant met donkere oogveeg, dikke rode snavel en witte vleugelpunten.",
+        "alt": "Zwartkopmeeuw — Volwassen vogel aan de waterkant met donkere oogveeg, dikke rode snavel en witte vleugelpunten.",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    }
+  }
 }

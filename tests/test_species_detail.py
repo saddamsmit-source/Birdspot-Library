@@ -16,6 +16,7 @@ Birdspot Library — H2–H4: soortdetail met tabbladen
          voedsel/gedrag/trek en zang maar geen broedblok
   H3-04  kalender neemt ook de broedtekst over (Pimpelmees); lijn onder de juiste maanden in beide thema's
   H4-01  soortvergelijking en lokale opnamen, inclusief openen foto en wisselen naar verwante soort
+  H4-02  vergelijking toont het juiste kleed en Verenkleed heeft lokale winter-, broed- en ruifoto's
 
 Starten (vanuit repo-root):  python tests/test_species_detail.py
 """
@@ -360,6 +361,27 @@ def main():
             assert cards.locator('strong').all_text_contents() == ["Tjiftjaf", "Fitis"]
             close_detail()
             print("H4-01 OK — Fitis/Tjiftjaf, foto vergroten, navigatie en afspelen van zang en roep")
+
+            open_species("Grote Bonte Specht", "sp016")
+            juvenile = p.locator('#sdPanel-herkenning .sd-compare-card').first
+            assert "Juveniel" in juvenile.inner_text()
+            assert juvenile.locator('img').get_attribute("src") == "/assets/species/plumage/sp016-juv.webp"
+            close_detail()
+            open_species("Kokmeeuw", "sp097")
+            pair = p.locator('#sdPanel-herkenning .sd-compare-card')
+            assert pair.locator('strong').all_text_contents() == ["Kokmeeuw", "Zwartkopmeeuw"]
+            for card in pair.all():
+                assert card.locator('.sd-badge').inner_text() == "Broedkleed"
+                card.locator('img').scroll_into_view_if_needed()
+                card.locator('img').evaluate("img => img.decode()")
+            winter = p.locator('.sd-plumage').filter(has_text="Winterkleed")
+            assert winter.locator('img').get_attribute("src") == "/assets/species/plumage/sp097-winter.webp"
+            close_detail()
+            open_species("Wilde Eend", "sp089")
+            eclipse = p.locator('.sd-plumage').filter(has_text="Eclipskleed")
+            assert eclipse.locator('img').get_attribute("src") == "/assets/species/plumage/sp089-eclipse.webp"
+            close_detail()
+            print("H4-02 OK — jonge specht, twee meeuwen in broedkleed en de Wilde Eend in eclipskleed")
 
             assert not errors, f"H2-08 paginafouten: {errors}"
             print("H2-08 OK — geen paginafouten")

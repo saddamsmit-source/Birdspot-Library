@@ -18,7 +18,7 @@ export const GUIDE_COMPARISONS = [
   },
   {
     birds: [
-      {id: 'sp043', source: 'huismus', marks: 'Mannetje heeft een grijze kruin en donkere bef. Vrouwtje heeft een lichte wenkbrauw.'},
+      {id: 'sp043', source: 'huismus', plumage: 'adult_m', marks: 'Mannetje heeft een grijze kruin en donkere bef. Een afzonderlijke zwarte wangvlek ontbreekt.'},
       {id: 'sp044', source: 'ringmus', marks: 'Bruine kruin, zwarte wangvlek en lichte nekrand bij mannetje én vrouwtje.'},
     ],
     tip: 'Kijk eerst naar de donkere vlek op de lichte wang van de Ringmus.',

@@ -5,6 +5,10 @@ from test_cinematic_wetland import Server,Quiet,ROOT
 
 def main():
  photos=json.loads((ROOT/'assets/species/credits.json').read_text())
+ guide_media=json.loads((ROOT/'assets/species/field-guide-media.json').read_text())
+ variants=[v['image'] for cards in guide_media['plumage'].values() for v in cards.values() if 'image' in v]
+ clips=[clip['audio'] for entries in guide_media['audio'].values() for clip in entries]
+ images=[v['image'] for v in photos.values()] + variants
  with Server(('127.0.0.1',0),Quiet) as server:
   threading.Thread(target=server.serve_forever,daemon=True).start()
   url=f'http://127.0.0.1:{server.server_address[1]}/'
@@ -40,11 +44,16 @@ def main():
     ctx.close();print('PASS guide display and failure',width,flush=True)
    ctx=browser.new_context();p=ctx.new_page();p.goto(url)
    # Wait for actual precached media, not merely SW registration.
-   p.wait_for_function('''async urls=>{const c=await caches.open('birdspot-media');return (await Promise.all(urls.map(u=>c.match(u)))).every(Boolean)}''',arg=[v['image'] for v in photos.values()],timeout=90000)
+   p.wait_for_function('''async urls=>{const c=await caches.open('birdspot-media');return (await Promise.all(urls.map(u=>c.match(u)))).every(Boolean)}''',arg=images+clips,timeout=90000)
    p.wait_for_function('()=>!!navigator.serviceWorker.controller')
    ctx.set_offline(True)
-   results=p.evaluate('''async urls=>Promise.all(urls.map(u=>new Promise(resolve=>{const i=new Image();i.onload=()=>resolve(i.naturalWidth>0);i.onerror=()=>resolve(false);i.src=u})))''',[v['image'] for v in photos.values()])
-   assert all(results);print(f'PASS {len(photos)} photos decode offline after precache',flush=True)
+   results=p.evaluate('''async urls=>Promise.all(urls.map(u=>new Promise(resolve=>{const i=new Image();i.onload=()=>resolve(i.naturalWidth>0);i.onerror=()=>resolve(false);i.src=u})))''',images)
+   assert all(results);print(f'PASS {len(images)} photos decode offline after precache',flush=True)
+   audio_results=p.evaluate('''async urls=>Promise.all(urls.map(async url=>{
+     const res=await fetch(url,{headers:{Range:'bytes=0-31'}});
+     return res.status===206 && (await res.arrayBuffer()).byteLength===32;
+   }))''',clips)
+   assert all(audio_results);print(f'PASS {len(clips)} field recordings respond to offline range requests',flush=True)
 
    # A first installation must also boot and open a guide photo after an offline reload.
    p.reload(wait_until='domcontentloaded')
@@ -57,9 +66,11 @@ def main():
    p.locator('#speciesSearch').fill(photo['nl'])
    p.locator(f'.species-row[data-id="{sid}"]').click()
    p.wait_for_function('(id)=>{const i=document.querySelector("#detailThumb-"+id+" img");return i&&i.complete&&i.naturalWidth>0}',arg=sid)
+   p.get_by_label('Zang van Fitis').evaluate('el => el.play()')
+   p.wait_for_function("document.querySelector('.sd-audio audio').currentTime > 0.15")
    p.get_by_role('tab',name='Waar',exact=True).click()
    p.locator('.sd-distribution-map').wait_for()
    assert p.locator('.sd-distribution-cloud rect').count() >= 3
-   print('PASS offline reload, species search, guide photo and distribution',sid,flush=True)
+   print('PASS offline reload, species search, guide photo, playback and distribution',sid,flush=True)
    browser.close()
 if __name__=='__main__':main()
