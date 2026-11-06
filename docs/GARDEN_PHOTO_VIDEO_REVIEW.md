@@ -91,3 +91,13 @@ Broedgegevens van Boerenzwaluw zijn bijgewerkt volgens dezelfde bron. Bij andere
 De eigenaar vond de donkere kleuren te vergelijkbaar. Standvogel behoudt het bestaande groen en broedmaanden houden de roze streep. Zomergasten krijgen helder goudgeel, wintergasten kobaltblauw, doortrekkers terracotta en schaarse gasten en dwaalgasten lichtlila. De kleurvakjes in de legenda zijn vergroot van 9 naar 14 px. Donkere letters op goudgeel en lila en witte letters op de donkere kleuren geven minimaal 5,93:1 tekstcontrast.
 
 Bij bekende broedmaanden staat de periode ook in tekst direct onder de balk. Daardoor is de informatie ook zonder kleurherkenning leesbaar. De bronmaanden en de dekking van negen soorten blijven gelijk. CAP-BIRD-011/012 en L-019. Bij kleine kleurstaaltjes helpt verschil in helderheid naast verschil in tint.
+
+## Batch 05 — 2026-11-06
+
+Vijftien lokale gidsfoto’s toegevoegd. De drie eerder nagekeken kaarten zijn nu ook voorzien van beeld: Wintertaling (sp091), Rietzanger (sp110) en Rietgors (sp118). Verder Groene Specht (sp019), Sijs (sp038), Kneu (sp039), Goudvink (sp040), Appelvink (sp041), Kramsvogel (sp047), Koperwiek (sp048), Grote Lijster (sp049), Tuinfluiter (sp060), Grasmus (sp061), Boerenzwaluw (sp114) en Huiszwaluw (sp115). Dekking 46 van 597 soorten. De batch voegt 2,21 MiB aan lokale WebP-bestanden toe.
+
+Per foto zijn de wetenschappelijke soortnaam, fotograaf en licentie gecontroleerd op Commons. De herkenningskenmerken zijn vergeleken met de gelinkte Vogelbescherming-pagina en de uiteindelijke WebP is visueel bekeken. De Boerenzwaluw toont de Europese vorm op een tak. Bij de Huiszwaluw viel een nestfoto af. De gekozen foto toont twee vogels die modder verzamelen. Bij Tuinfluiter is een foto van een vogel in de hand afgewezen. Wintertaling toont beide geslachten. Bron, bewerking en herkenningskenmerken staan per beeld in `assets/species/credits.json`.
+
+CAP-BIRD-012/015/040 en L-016/L-019/L-022. De gids gebruikt dezelfde lokale fotopaden voor lijst en detail. De browsertest controleert nu ook de lokale bron en volledige uitsnede in de lijst. De app-cacheversie is verhoogd voor updates. De offline-test wacht op de mediacache en decodeert alle geregistreerde foto’s zonder netwerk. Fysiek toestel en onafhankelijke soortcontrole blijven afzonderlijke bewijsniveaus.
+
+Browserbewijs: alle 46 foto’s geopend vanuit de lijst op 390 en 1365 px, inclusief het foutscenario. Alle 46 foto’s decodeerden offline na precache. Na offline herstart zijn ook zoeken, de foto en de verspreidingskaart van Fitis gecontroleerd.

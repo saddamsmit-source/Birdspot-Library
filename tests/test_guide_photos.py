@@ -18,7 +18,11 @@ def main():
     p.locator('#speciesFilters').get_by_role('button',name='Alle',exact=True).click()
     for sid,photo in photos.items():
      p.locator('#speciesSearch').fill(photo['nl'])
-     row=p.locator(f'.species-row[data-id="{sid}"]');row.wait_for();row.click()
+     row=p.locator(f'.species-row[data-id="{sid}"]');row.wait_for()
+     thumb=row.locator('.species-guide-thumb img')
+     assert thumb.get_attribute('src')==photo['image']
+     assert thumb.evaluate('(i)=>getComputedStyle(i).objectFit')=='contain'
+     row.click()
      hero=p.locator(f'#detailThumb-{sid} img')
      p.wait_for_function('(id)=>{const i=document.querySelector("#detailThumb-"+id+" img");return i&&i.complete&&i.naturalWidth>0}',arg=sid)
      assert hero.get_attribute('src')==photo['image']
