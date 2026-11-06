@@ -1,6 +1,6 @@
 """User regressions: retained record, repeated species, browser Back, page pinch scope."""
-import threading,json
-from playwright.sync_api import sync_playwright
+import threading,json,io,zipfile
+from playwright.sync_api import sync_playwright,expect
 from test_cinematic_wetland import Server,Quiet,ROOT
 from test_explorer_species_cluster import LEAFLET_STUB
 
@@ -36,8 +36,11 @@ def main():
    # Remove only our malformed fixture, not through application code; test valid navigation too.
    p.evaluate('''()=>{const s=JSON.parse(localStorage.getItem('birdspot-sightings'));s.sightings=s.sightings.filter(Boolean);localStorage.setItem('birdspot-sightings',JSON.stringify(s));}''')
    p.locator('[data-route="profile"]').click()
-   p.locator('#btnImport').wait_for()
-   p.locator('#importFile').set_input_files({'name':'cancel-check.json','mimeType':'application/json','buffer':json.dumps({'schemaVersion':2,'sightings':[]}).encode()})
+   expect(p.locator('#appVersion')).not_to_have_text('versie ophalen…')
+   backup=io.BytesIO()
+   with zipfile.ZipFile(backup,'w',compression=zipfile.ZIP_STORED) as z:
+    z.writestr('gegevens.json',json.dumps({'format':'birdspot-backup','schemaVersion':2,'sightings':[],'photoIds':[]}))
+   p.locator('#importFile').set_input_files({'name':'cancel-check.zip','mimeType':'application/zip','buffer':backup.getvalue()})
    p.locator('#confirmOverlay').wait_for()
    before=p.evaluate('localStorage.getItem("birdspot-sightings")')
    p.go_back();p.locator('#confirmOverlay').wait_for(state='hidden')
