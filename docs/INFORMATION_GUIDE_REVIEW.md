@@ -26,3 +26,11 @@ Deze delta staat in de repository; centrale projectdocumenten en projectinstelli
 
 ## QA-bewijs informatiewijziging
 3355400: gerichte CI Mobile Editorial, Observation Evidence & Pins (inclusief nieuwe gidsasserties, foto/video en ZIP-herstel), guide photos en bestaande afzonderlijke maptests geslaagd. Browser op 390 px: handmatig Houtduif gehoord ingevoerd via Waarnemen, daarna gids Gezien 0 / Gehoord 1 met dezelfde locatie. Species-data-suite vond achtergebleven tellertekstverwachting ‘soorten gezien’; testtekst volgt expliciet gewijzigd productcontract ‘waargenomen’. Volledige suite opnieuw controleren op definitieve commit. Geen fysiek toestel of onafhankelijke reviewer.
+
+## Mobiele filterbediening — 2026-11-06
+
+CAP-BIRD-010 en CAP-BIRD-011. De eigenaar vond de filterknoppen te klein. Een gedeelde minimumhoogte maakt ze 34 px hoog, tegenover 27 px op de vorige preview. De drie rijen gebruiken samen 21 px extra hoogte. De rijen passen bij viewportbreedtes 360, 390 en 430 px, met horizontaal scrollen binnen de rijen waar nodig. Daarom blijven de filters direct bedienbaar als knoppen.
+
+Browsercontrole op 390 px. Trekvogels gaf 32 soorten. Bos beperkte dit tot drie. Lente en Zomer bleven tegelijk geselecteerd en de overgangsperiode toonde die drie soorten. Winter gaf een lege lijst. Na deselecteren van gebied en seizoen keerden de 32 trekvogels terug. Fysieke bediening is niet getest. De cacheversie is verhoogd om de aangepaste stijl ook voor geïnstalleerde exemplaren op te halen.
+
+Hergebruik volgens L-075 en L-077. Meet de hoogte en controleer de lijst na echte interacties voordat een compacte filterbediening wordt vervangen.
