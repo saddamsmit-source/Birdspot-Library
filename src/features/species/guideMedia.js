@@ -497,6 +497,76 @@ export const GUIDE_AUDIO = Object.freeze({
       "source": "https://xeno-canto.org/817932",
       "modifications": "Volledige opname, volume verhoogd en omgezet naar MP3 (mono)"
     }
+  ],
+  "sp144": [
+    {
+      "file": "XC835257",
+      "audio": "/assets/species/audio/sp144-call-flight.mp3",
+      "label": "Roep en vluchtroep",
+      "note": "Avondopname uit Zevenhuizen, Zuid-Holland.",
+      "author": "Jochem verweij",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://xeno-canto.org/835257",
+      "modifications": "Volledige opname omgezet naar MP3 (mono)"
+    },
+    {
+      "file": "XC750704",
+      "audio": "/assets/species/audio/sp144-flight-call.mp3",
+      "label": "Vluchtroep",
+      "note": "Dagopname van een overvliegende vogel bij Bouvines in Noord-Frankrijk.",
+      "author": "Camille Vacher",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://xeno-canto.org/750704",
+      "modifications": "Volledige opname omgezet naar MP3 (mono)"
+    },
+    {
+      "file": "XC1169216",
+      "audio": "/assets/species/audio/sp144-night-flight-call.mp3",
+      "label": "Nachtelijke vluchtroep",
+      "note": "Vluchtroep tijdens de nacht boven Nijverdal, Overijssel.",
+      "author": "marc1981",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://xeno-canto.org/1169216",
+      "modifications": "Volledige opname omgezet naar MP3 (mono)"
+    }
+  ],
+  "sp145": [
+    {
+      "file": "XC132878",
+      "audio": "/assets/species/audio/sp145-call.mp3",
+      "label": "Roep",
+      "note": "Roep van een vogel die op rotsblokken op een berghelling in Noorwegen ging zitten.",
+      "author": "Bushman",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://xeno-canto.org/132878",
+      "modifications": "Eerste 25 seconden omgezet naar MP3 (mono)"
+    },
+    {
+      "file": "XC1157251",
+      "audio": "/assets/species/audio/sp145-song.mp3",
+      "label": "Zang",
+      "note": "Zang opgenomen bij Ekkerøy in Finnmark, Noorwegen.",
+      "author": "Teet Sirotkin",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://xeno-canto.org/1157251",
+      "modifications": "Eerste 25 seconden omgezet naar MP3 (mono)"
+    },
+    {
+      "file": "XC471077",
+      "audio": "/assets/species/audio/sp145-night-flight-call.mp3",
+      "label": "Nachtelijke vluchtroep",
+      "note": "Een korte roep tijdens nachtelijke trek in Finland.",
+      "author": "Mikko Heikkinen",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://xeno-canto.org/471077",
+      "modifications": "Volledige opname omgezet naar MP3 (mono)"
+    }
   ]
 });
 export const GUIDE_PLUMAGE = Object.freeze({
@@ -1565,6 +1635,96 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "alt": "Jonge Strandplevier in Bulgarije. Lichte randen aan de rugveren en een kleine bleke zijborstvlek.",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
       "observation": "https://www.inaturalist.org/observations/313289879"
+    }
+  },
+  "sp144": {
+    "breeding": {
+      "reuseGuidePhoto": true
+    },
+    "winter": {
+      "file": "iNaturalist photo 602569884",
+      "author": "Shane Austin",
+      "license": "CC BY 4.0",
+      "source": "https://www.inaturalist.org/photos/602569884",
+      "image": "/assets/species/plumage/sp144-winter.webp",
+      "width": 1024,
+      "height": 676,
+      "modifications": "Omgezet naar WebP zonder uitsnede",
+      "nl": "Zilverplevier",
+      "latin": "Pluvialis squatarola",
+      "batch": "large-plovers",
+      "reviewed": "2026-11-06",
+      "verification": "Research-grade waarneming. Het afgebeelde kleed is visueel getoetst.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zilverplevier",
+      "visualCheck": "Zilverplevier in januari in Engeland. Grijzige bovenzijde en lichte buik tussen de stenen.",
+      "alt": "Zilverplevier in januari in Engeland. Grijzige bovenzijde en lichte buik tussen de stenen.",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "observation": "https://www.inaturalist.org/observations/332079128"
+    },
+    "juv": {
+      "file": "iNaturalist photo 327282937",
+      "author": "Scott Harris",
+      "license": "CC BY 4.0",
+      "source": "https://www.inaturalist.org/photos/327282937",
+      "image": "/assets/species/plumage/sp144-juv.webp",
+      "width": 1024,
+      "height": 682,
+      "modifications": "Omgezet naar WebP zonder uitsnede",
+      "nl": "Zilverplevier",
+      "latin": "Pluvialis squatarola",
+      "batch": "large-plovers",
+      "reviewed": "2026-11-06",
+      "verification": "Research-grade waarneming. De leeftijd is geannoteerd en het kleed is visueel getoetst.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zilverplevier",
+      "visualCheck": "Jonge Zilverplevier in oktober aan de Amerikaanse oostkust. Kleine lichte vlekken op rug en vleugeldekveren, lichte buik en stevige snavel.",
+      "alt": "Jonge Zilverplevier in oktober aan de Amerikaanse oostkust. Kleine lichte vlekken op rug en vleugeldekveren, lichte buik en stevige snavel.",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "observation": "https://www.inaturalist.org/observations/187179542"
+    }
+  },
+  "sp145": {
+    "breeding": {
+      "reuseGuidePhoto": true
+    },
+    "winter": {
+      "file": "iNaturalist photo 189221283",
+      "author": "Jonas Kraft",
+      "license": "CC BY 4.0",
+      "source": "https://www.inaturalist.org/photos/189221283",
+      "image": "/assets/species/plumage/sp145-winter.webp",
+      "width": 1024,
+      "height": 768,
+      "modifications": "Omgezet naar WebP zonder uitsnede",
+      "nl": "Goudplevier",
+      "latin": "Pluvialis apricaria",
+      "batch": "large-plovers",
+      "reviewed": "2026-11-06",
+      "verification": "Research-grade waarneming. Het afgebeelde kleed is visueel getoetst.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/goudplevier",
+      "visualCheck": "Goudplevier in januari in Zwitserland. Warme goudbruine spikkels op de rug en lichte onderzijde.",
+      "alt": "Goudplevier in januari in Zwitserland. Warme goudbruine spikkels op de rug en lichte onderzijde.",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "observation": "https://www.inaturalist.org/observations/112043037"
+    },
+    "juv": {
+      "file": "iNaturalist photo 148325469",
+      "author": "Eva Uzdilova",
+      "license": "CC BY 4.0",
+      "source": "https://www.inaturalist.org/photos/148325469",
+      "image": "/assets/species/plumage/sp145-juv.webp",
+      "width": 1024,
+      "height": 768,
+      "modifications": "Omgezet naar WebP zonder uitsnede",
+      "nl": "Goudplevier",
+      "latin": "Pluvialis apricaria",
+      "batch": "large-plovers",
+      "reviewed": "2026-11-06",
+      "verification": "Research-grade waarneming. De leeftijd is geannoteerd en het kleed is visueel getoetst.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/goudplevier",
+      "visualCheck": "Jonge Goudplevier in juli in Tsjechië. Lichte spikkels op rug en vleugels, lichte onderzijde en korte snavel.",
+      "alt": "Jonge Goudplevier in juli in Tsjechië. Lichte spikkels op rug en vleugels, lichte onderzijde en korte snavel.",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "observation": "https://www.inaturalist.org/observations/89795942"
     }
   }
 });

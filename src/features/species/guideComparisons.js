@@ -283,6 +283,30 @@ export const GUIDE_COMPARISONS = [
     ],
     tip: 'Ook jonge vogels kunnen lichtgerande rugveren hebben. De borsttekening, bouw en poten helpen beter bij het onderscheid.',
   },
+  {
+    label: 'Goudplevier en Zilverplevier · broedkleed',
+    birds: [
+      {id: 'sp145', source: 'goudplevier', plumage: 'breeding', marks: 'Goudgele spikkels op de bovenzijde. De zwarte onderzijde is afgezet met een witte baan.'},
+      {id: 'sp144', source: 'zilverplevier', plumage: 'breeding', marks: 'Zilvergrijze, contrastrijke bovenzijde, stevige snavel en eveneens een zwarte onderzijde.'},
+    ],
+    tip: 'Beide soorten kunnen een zwarte buik hebben. Kijk naar het patroon op de rug en de stevigheid van de snavel.',
+  },
+  {
+    label: 'Goudplevier en Zilverplevier · winterkleed',
+    birds: [
+      {id: 'sp145', source: 'goudplevier', plumage: 'winter', marks: 'Warme goudbruine spikkels, kortere snavel en slankere bouw. In vlucht zijn de oksels wit.'},
+      {id: 'sp144', source: 'zilverplevier', plumage: 'winter', marks: 'Grijzer, forser en vaak met meer contrast tussen kruin en wenkbrauw. In vlucht vallen zwarte oksels op.'},
+    ],
+    tip: 'Kleuren kunnen door het licht veranderen. Kijk bij een overvliegende vogel naar de okselvlekken of luister naar de roep.',
+  },
+  {
+    label: 'Goudplevier en Zilverplevier · jonge vogels',
+    birds: [
+      {id: 'sp145', source: 'goudplevier', plumage: 'juv', marks: 'Lichtere tot goudgele spikkels, fijne borstvlekjes en relatief kleine snavel. In vlucht witte oksels.'},
+      {id: 'sp144', source: 'zilverplevier', plumage: 'juv', marks: 'Kan ook geelachtige spikkels hebben. Let op de forse kop, stevige snavel en zwarte oksels in vlucht.'},
+    ],
+    tip: 'Gele spikkels komen bij beide voor. Combineer bouw en snavel met de ondervleugel of roep. Laat de soort open als die kenmerken ontbreken.',
+  },
 ];
 
 export function comparisonSource(bird) {

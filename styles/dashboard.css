@@ -338,6 +338,23 @@
   line-height: 1.5;
 }
 
+.weather-tip strong {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-4);
+}
+
+.weather-tip svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+}
+
+.weather-tip ul {
+  margin: var(--space-4) 0 0;
+  padding-inline-start: 1.2em;
+}
+
 /* ── Recente waarnemingen ─────────────────────────────────── */
 .recent-list {
   display: flex;
