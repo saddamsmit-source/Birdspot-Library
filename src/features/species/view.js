@@ -504,7 +504,7 @@ function openDetail(speciesId, screenEl) {
   }
   document.body.appendChild(sheet);
   const panel = sheet.querySelector('.sheet');
-  requestAnimationFrame(() => { if (!closed) sheet.classList.add('open'); });
+  sheet.classList.add('open'); // Immediately interactive, also before the first animation frame.
   sheet.querySelector('.sd-tabs')?.addEventListener('click', e => {
     const tab = e.target.closest('[data-sd-tab]');
     if (!tab) return;
