@@ -56,6 +56,8 @@
   "Podiceps auritus": {"breeding": "Roestrode hals en flanken; goudgele kopveren als 'hoorns'", "winter": "Zwarte kruin scherp afgezet tegen witte wang"},
   "Podiceps grisegena": {"breeding": "Roestrode hals, lichtgrijze wangen en zwarte kap", "winter": "Grijzig met donkere kap; gele snavelbasis"},
   "Podiceps nigricollis": {"breeding": "Zwarte kop en hals met waaier van goudgele oorveren", "winter": "Grijs-wit met vage overgang"},
+  "Tringa ochropus": {"breeding": "Donkere rug met fijne witte spikkels. Kop, hals en borst zijn sterker gestreept dan in winterkleed.", "winter": "Donkere bovenzijde met weinig opvallende vlekjes. Gezicht, hals en borst zijn lichter dan in broedkleed."},
+  "Tringa glareola": {"breeding": "Donkerbruine bovenzijde met duidelijke lichte vlekken, gestreepte borst en een lange lichte wenkbrauwstreep.", "winter": "Bovenzijde grijzer met kleinere, minder opvallende vlekken. Borst en flanken zijn minder sterk getekend."},
   "Pluvialis squatarola": {"breeding": "Zwart gezicht, zwarte keel en buik, afgezet met een brede witte baan. Zilvergrijs en wit patroon op rug en vleugels. De hoeveelheid zwart kan variëren.", "winter": "Grijze, lichtgevlekte bovenzijde, vaag gestreepte borst en witte buik. Vaak een lichte wenkbrauw onder een donkerder kruin."},
   "Pluvialis apricaria": {"breeding": "Goudgespikkelde bovenzijde en een donkere tot zwarte onderzijde. Een brede witte baan loopt van de wenkbrauw naar de flanken. Hoeveelheid zwart varieert tussen vogels.", "winter": "Goudbruin gespikkeld van boven. De onderzijde is licht met fijne tekening op de borst. Mannetje en vrouwtje lijken sterk op elkaar."},
   "Limosa lapponica": {"breeding": "Mannetje diep roestrood van onderen", "winter": "Grijsbruin gestreept"},
