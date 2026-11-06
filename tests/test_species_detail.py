@@ -3,7 +3,7 @@ Birdspot Library — H2–H4: soortdetail met tabbladen
   H2-01  data: verenkleed heeft één schema; elk seizoenskleed uit tools/species/seasonal_plumage.json staat in de app
   H2-02  detail opent met 4 tabs; Herkenning zichtbaar, rest verborgen; wisselen werkt (aria-selected + hidden)
   H2-03  Herkenning: maten-tegels, broed- en winterkleed (Kokmeeuw), eclipskleed (Wilde Eend),
-         'man en vrouw gelijk' alleen zonder vrouwkleed
+         alleen bronvermelde overeenkomsten tussen man en vrouw
   H2-04  Seizoen: maandbalk gelijk aan de maanden van de soort; Rode Lijst-tegel alleen als de soort erop staat
   H2-05  Waar: leefgebieden + eigen plekken met aantallen; 'Toon op de kaart' opent de kaart gefilterd op de soort
   H2-06  Waarnemingen: aantal, plekken, eerste en laatste datum kloppen met de opgeslagen waarnemingen
@@ -153,12 +153,12 @@ def main():
             assert p.locator('#mapSpeciesSearch').input_value() == "Rietgors"
             print("H2-05 OK — plekken en 'Toon op de kaart'")
 
-            # Kokmeeuw: broed- en winterkleed, man en vrouw gelijk
+            # Kokmeeuw: broed- en winterkleed. Een leeg vrouwtjesveld bewijst geen gelijkheid.
             ko = next(s for s in species if s["nameNL"] == "Kokmeeuw")
             open_species("Kokmeeuw", ko["id"])
             cards = p.eval_on_selector_all('#sdPanel-herkenning .sd-plumage strong', 'els => els.map(e => e.innerText)')
             assert any(c.startswith("Broedkleed") for c in cards) and any(c.startswith("Winterkleed") for c in cards), cards
-            assert any("man en vrouw gelijk" in c for c in cards), cards
+            assert not any("Man en vrouw" in c for c in cards), cards
             assert p.locator('#sdPanel-herkenning .sd-tile').count() == 3
             p.screenshot(path=str(SHOTS / "species_h2_herkenning_390.png"))
             tab("status")
@@ -170,7 +170,13 @@ def main():
             open_species("Wilde Eend", we["id"])
             cards = p.eval_on_selector_all('#sdPanel-herkenning .sd-plumage strong', 'els => els.map(e => e.innerText)')
             assert any(c.startswith("Eclipskleed") for c in cards) and "Man" in cards and "Vrouw" in cards, cards
-            assert not any("man en vrouw gelijk" in c for c in cards), cards
+            assert not any("Man en vrouw" in c for c in cards), cards
+            close_detail()
+
+            open_species("Roodborst", "sp050")
+            assert p.locator('#sdPanel-herkenning .sd-badge').filter(has_text="Man en vrouw lijken op elkaar").count() == 1
+            assert p.locator('#sdPanel-herkenning .sd-source a').get_attribute("href").endswith("/roodborst")
+            assert p.locator('#sdPanel-herkenning .sd-tile').count() == 1
             close_detail()
 
             # Grutto: Rode Lijst-tegel

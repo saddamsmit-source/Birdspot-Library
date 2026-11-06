@@ -90,7 +90,7 @@ def main():
             assert r["p3"]["months"] == [5, 6, 7], r["p3"]
             print("I6-03 OK — overgangsperiodes")
 
-            species = p.evaluate("async () => (await import('/src/data/species.js')).SPECIES.map(({id, months, category, regions}) => ({id, months, category, regions}))")
+            species = p.evaluate("async () => (await import('/src/data/species.js')).SPECIES.map(({id, months, category, statusExtra, regions}) => ({id, months, category, statusExtra, regions}))")
 
             def expected(months):
                 return {s["id"] for s in species if months_of(s["months"]) & set(months)}
@@ -144,6 +144,7 @@ def main():
             check(["lente"], [1, 2], "Winter–lente:")
             p.screenshot(path=str(SHOTS / "species_i6_season_390.png"))
             check(["zomer"], SEASON["zomer"], "Zomer:")
+            assert p.locator('.species-row[data-id="sp091"]').count() == 1, "Wintertaling ook in de zomer"
             check(["herfst"], [7, 8], "Zomer–herfst:")
             pressed = p.eval_on_selector_all('.filter-chip--seizoen[aria-pressed="true"]', "els => els.map(e => e.dataset.season)")
             assert pressed == ["zomer", "herfst"], pressed
@@ -164,9 +165,9 @@ def main():
             p.keyboard.press("Escape")
             assert p.locator("#seizoenFilters").is_hidden()
             assert "Lente–zomer" in season_toggle.inner_text()
-            assert "Trekvogels" in p.locator("#speciesFiltersToggle").inner_text()
+            assert "Doortrekkers" in p.locator("#speciesFiltersToggle").inner_text()
             assert "Bos" in p.locator("#gebiedFiltersToggle").inner_text()
-            exp = expected([4, 5]) & {s["id"] for s in species if s["category"] == "trekvogel" and "bos" in s["regions"]}
+            exp = expected([4, 5]) & {s["id"] for s in species if "trekvogel" in (s["category"], s["statusExtra"]) and "bos" in s["regions"]}
             rows = set(p.eval_on_selector_all("#speciesList .species-row", "els => els.map(e => e.dataset.id)"))
             assert rows and rows == exp, f"Gecombineerde filters: {rows} vs {exp}"
             assert not errors, f"I6-05 paginafouten: {errors}"

@@ -63,7 +63,8 @@ export function icon(name, cls = '') {
 const HABITAT = {
   bos: ['tree', 'Bos'], stedelijk: ['city', 'Stad en dorp'], agrarisch: ['field', 'Boerenland'], polder: ['field', 'Polder'],
   heide: ['heath', 'Heide'], duinen: ['dune', 'Duinen'], kust: ['wave', 'Kust'], zee: ['wave', 'Zee'], wad: ['wave', 'Wad'],
-  moeras: ['water', 'Moeras'], rietland: ['reed', 'Rietland'], rivierengebied: ['river', 'Rivieren'], struweel: ['bush', 'Struweel'],
+  water: ['water', 'Open water en oevers'], moeras: ['water', 'Moeras'], rietland: ['reed', 'Rietland'],
+  rivierengebied: ['river', 'Rivieren'], struweel: ['bush', 'Struweel'],
 };
 const FREQ = { 'algemeen': [5, 'Algemeen'], 'vrij-algemeen': [4, 'Vrij algemeen'], 'schaars': [3, 'Schaars'], 'zeldzaam': [2, 'Zeldzaam'], 'zeer-zeldzaam': [1, 'Zeer zeldzaam'] };
 const BREEDING = { ja: 'Broedt hier', incidenteel: 'Broedt soms', verdwenen: 'Verdwenen als broedvogel', nee: 'Broedt niet in NL' };
@@ -90,14 +91,22 @@ function plumageCard(ic, title, text, badge = '') {
   return `<div class="sd-plumage">${icon(ic)}<div><strong>${esc(title)}${badge}</strong><p>${esc(text)}</p></div></div>`;
 }
 
+function guideSources(review) {
+  if (!review) return '<p class="sd-source">Broncontrole van deze gidskaart volgt.</p>';
+  const links = review.sources.map(source =>
+    `<a href="${esc(source.url)}" target="_blank" rel="noopener noreferrer">${esc(source.label)}</a>`);
+  return `<p class="sd-source">Gidsbronnen · ${links.join(' · ')}</p>`;
+}
+
 /** Tab 1 — Herkenning: maten, kenmerken, verenkleed (incl. broed-, winter- en eclipskleed), zang en roep. */
 export function recognitionPanel(s, life = null) {
   const out = [];
   if (s.size) {
-    out.push('<div class="sd-tiles">' +
-      tile('ruler', 'Lengte', esc(s.size.length)) +
-      tile('wings', 'Spanwijdte', esc(s.size.wingspan)) +
-      tile('scale', 'Gewicht', esc(s.size.weight)) + '</div>');
+    const dimensions = [['length', 'ruler', 'Lengte'], ['wingspan', 'wings', 'Spanwijdte'], ['weight', 'scale', 'Gewicht']]
+      .filter(([key]) => s.size[key] && (!s.guideReview || s.guideReview.dimensions.includes(key)));
+    if (dimensions.length) {
+      out.push('<div class="sd-tiles">' + dimensions.map(([key, ic, label]) => tile(ic, label, esc(s.size[key]))).join('') + '</div>');
+    }
   }
   if (s.fieldmarks) {
     out.push(`<div class="sd-callout">${icon('eye')}<p>${esc(s.fieldmarks)}</p></div>`);
@@ -109,7 +118,8 @@ export function recognitionPanel(s, life = null) {
       cards.push(plumageCard('male', 'Man', p.adult_m));
       cards.push(plumageCard('female', 'Vrouw', p.adult_f));
     } else if (p.adult_m) {
-      cards.push(plumageCard('equal', 'Volwassen', p.adult_m, '<span class="sd-badge">man en vrouw gelijk</span>'));
+      const badge = s.guideReview?.similarSexes ? '<span class="sd-badge">Man en vrouw lijken op elkaar</span>' : '';
+      cards.push(plumageCard('equal', 'Volwassen', p.adult_m, badge));
     }
     if (p.breeding) cards.push(plumageCard('sun', 'Broedkleed', p.breeding, '<span class="sd-badge">voorjaar en zomer</span>'));
     if (p.winter) cards.push(plumageCard('snow', 'Winterkleed', p.winter, '<span class="sd-badge">najaar en winter</span>'));
@@ -124,6 +134,7 @@ export function recognitionPanel(s, life = null) {
   if (s.compact) {
     out.push(`<p class="sd-note">${icon('info')}Zeldzame dwaalgast: een uitgebreide beschrijving volgt nog.</p>`);
   }
+  out.push(guideSources(s.guideReview));
   return out.join('');
 }
 
@@ -133,9 +144,9 @@ export function monthBar(months, now = new Date()) {
   const cur = now.getMonth();
   const cells = MONTH_LETTERS.map((l, i) =>
     `<span class="sd-month${set.has(i) ? ' is-on' : ''}${i === cur ? ' is-now' : ''}" title="${MONTH_NAMES[i]}${set.has(i) ? ': aanwezig' : ''}">${l}</span>`).join('');
-  const caption = months === 'jan-dec' ? 'Het hele jaar aanwezig'
-    : !set.size ? 'Onregelmatig, geen vaste periode'
-    : 'Aanwezig in ' + [...set].sort((a, b) => a - b).map(i => MONTH_NAMES[i]).join(', ');
+  const caption = months === 'jan-dec' ? 'Jaarrond in Nederland'
+    : !set.size ? 'Geen vaste periode vastgesteld'
+    : 'Gebruikelijke periode · ' + [...set].sort((a, b) => a - b).map(i => MONTH_NAMES[i]).join(', ');
   return `<div class="sd-months" role="img" aria-label="${esc(caption)}">${cells}</div><p class="sd-caption">${esc(caption)}</p>`;
 }
 
@@ -163,7 +174,7 @@ export function statusPanel(s, life = null) {
       tile('calendar', 'Broedtijd', esc(b.period)) +
       tile('egg', 'Eieren', esc(b.eggs)) +
       tile('timer', 'Broedduur', esc(b.incubation)) +
-      tile('chick', 'Jongen in nest', esc(b.fledging)) +
+      tile('chick', b.fledgingLabel || 'Jongen in nest', esc(b.fledging)) +
       tile('repeat', 'Broedsels per jaar', esc(b.broods)) + '</div>' +
       `<div class="sd-callout">${icon('nest')}<p>${esc(b.nest)}</p></div>`);
   }
@@ -173,6 +184,7 @@ export function statusPanel(s, life = null) {
     out.push('<div class="sd-facts">' + rows.map(([ic, label, text]) =>
       `<div class="sd-fact">${icon(ic)}<div><strong>${label}</strong><p>${esc(text)}</p></div></div>`).join('') + '</div>');
   }
+  if (s.guideReview) out.push(guideSources(s.guideReview));
   return out.join('');
 }
 

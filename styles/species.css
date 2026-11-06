@@ -668,6 +668,12 @@
 
 /* ── H2–H4: soortdetail met tabbladen en iconen ─────────────── */
 .sd-icon { width: 20px; height: 20px; flex: none; color: var(--brand-mid); }
+.sd-source {
+  margin: var(--space-12) 0 0;
+  color: var(--muted);
+  font-size: var(--fs-meta);
+}
+.sd-source a { color: inherit; text-decoration: underline; }
 .sd-tabs {
   position: sticky; top: 0; z-index: var(--layer-raised, 2);
   display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4);

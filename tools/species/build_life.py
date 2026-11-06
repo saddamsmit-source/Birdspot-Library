@@ -19,6 +19,8 @@ def main():
         if sid.startswith("_"):
             continue
         breeding = {k: e[k] for k in BREED} if e.get("period") else None
+        if breeding and e.get("fledgingLabel"):
+            breeding["fledgingLabel"] = e["fledgingLabel"]
         life[sid] = {"breeding": breeding, "diet": e["diet"], "behaviour": e["behaviour"],
                      "migration": e["migration"], "voice": e["voice"]}
     body = json.dumps(life, ensure_ascii=False, indent=1)

@@ -4,7 +4,7 @@
  * Nieuw: foto-thumbnails, zeldzaamheid-badges, "Recent bekeken" scroll
  */
 
-import { SPECIES, CATEGORY_LABELS, REGIONS, searchSpecies, activeCategories, CATEGORY_BADGES } from '../../data/species.js';
+import { SPECIES, CATEGORY_LABELS, REGIONS, searchSpecies, activeCategories, CATEGORY_BADGES, matchesSpeciesStatus } from '../../data/species.js';
 import { tabBar, recognitionPanel, statusPanel, wherePanel, minePanel, sightingStats } from './detailSections.js';
 import { SEASONS, SEASON_ORDER, toggleSeason, seasonPeriod, presentIn, periodMonthsText, isYearRound } from '../../data/seasons.js';
 import { getDB, getPhotosBySpecies, getPhoto } from '../../data/db.js';
@@ -143,15 +143,13 @@ export function renderSpecies(el) {
   const ctx = { destroyed:false, urls:new Set(), detailCleanup:null, listGeneration:0, cleanup:null, filterEvents:new AbortController() };
   _speciesCtx = ctx;
   const seenIds = getObservedIds();
-  const total   = SPECIES.filter(s => s.category === 'standvogel').length;
-  const seen    = SPECIES.filter(s => s.category === 'standvogel' && seenIds.has(s.id)).length;
 
   const recentIds = getRecentSpeciesIds();
 
   el.innerHTML = `
     <header class="species-header">
       <div class="species-header__title">Soorten</div>
-      <div class="species-header__sub" id="speciesSub">Benelux · ${seen}/${total} standvogels waargenomen</div>
+      <div class="species-header__sub" id="speciesSub">${counterText(seenIds)}</div>
     </header>
     <section class="signature-species-hero" aria-label="Soortenbibliotheek">
       <span class="signature-kicker">BIRDSPOT / SPECIES COLLECTION</span>
@@ -340,6 +338,9 @@ function speciesRow(s, seenIds, favorites = getCollectionIds("species")) {
   const seen   = seenIds.has(s.id);
   const rarity = getRarity(s);
   const rm     = rarity ? RARITY_MAP[rarity] : null;
+  const secondary = s.category !== _currentCategory && s.statusExtra === _currentCategory;
+  const badge = secondary ? `Ook ${CATEGORY_BADGES[s.statusExtra].toLowerCase()}`
+    : rm?.label || CATEGORY_BADGES[s.category] || 'Soort';
 
   return `
     <div class="species-row${seen ? ' seen' : ''}" data-id="${s.id}" role="listitem">
@@ -350,7 +351,7 @@ function speciesRow(s, seenIds, favorites = getCollectionIds("species")) {
         <div class="species-row__name">${escHtml(s.nameNL)}</div>
         <div class="species-row__sci">${escHtml(s.nameSci)}</div>
       </div>
-      <span class="species-row__rarity ${rm?.cls || "signature-species-category"}">${rm?.label || CATEGORY_BADGES[s.category] || "Soort"}</span>
+      <span class="species-row__rarity ${secondary ? 'signature-species-category' : rm?.cls || 'signature-species-category'}">${escHtml(badge)}</span>
       <button class="signature-species-star ${favorites.has(s.id) ? "is-on" : ""}"
         type="button" data-species-fav="${s.id}" aria-pressed="${favorites.has(s.id)}"
         aria-label="${favorites.has(s.id) ? "Verwijder uit favorieten" : "Voeg toe aan favorieten"}: ${escHtml(s.nameNL)}">
@@ -483,10 +484,10 @@ function bindEvents(el, ctx = _speciesCtx) {
 }
 
 function counterText(seenIds) {
-  const pool  = _currentCategory === ALL ? SPECIES : SPECIES.filter(s => s.category === _currentCategory);
+  const pool  = SPECIES.filter(s => matchesSpeciesStatus(s, _currentCategory === ALL ? null : _currentCategory));
   const seen  = pool.filter(s => seenIds.has(s.id)).length;
   const label = _currentCategory === ALL ? 'soorten' : (CATEGORY_LABELS[_currentCategory]?.toLowerCase() || '');
-  return `Benelux · ${seen}/${pool.length} ${label} waargenomen`;
+  return `Nederland · ${seen}/${pool.length} ${label} waargenomen`;
 }
 
 // ── Detail sheet ───────────────────────────────────────────────

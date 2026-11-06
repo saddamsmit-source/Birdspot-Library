@@ -377,17 +377,17 @@ export const LIFE = Object.freeze({
  },
  "sp029": {
   "breeding": {
-   "period": "mrt–jul",
-   "nest": "In boomholte of nestkast",
-   "eggs": "6–12",
-   "incubation": "13–14 dagen",
+   "period": "Vanaf eind april",
+   "nest": "Boomholte of nestkast, bekleed met mos en zacht materiaal.",
+   "eggs": "8–13",
+   "incubation": "13–15 dagen",
    "fledging": "18–21 dagen",
    "broods": "1–2"
   },
-  "diet": "Rupsen en insecten in de zomer; zaden en vetbollen in de winter",
-  "behaviour": "Talrijkste nestkastbewoner; luidruchtig en brutaal",
-  "migration": "Standvogel",
-  "voice": "Zeer gevarieerd; bekend tweetonig \"tie-tu tie-tu\" (\"fietspomp\")"
+  "diet": "Rupsen en kleine insecten, ook beukennootjes en zaden.",
+  "behaviour": "Foerageert in bomen en bezoekt in de winter voedertafels.",
+  "migration": "Nederlandse broedvogels blijven. In sommige winters komen noordelijke vogels erbij.",
+  "voice": "Ritmische zang met veel variaties; uiteenlopende roepen."
  },
  "sp030": {
   "breeding": {
@@ -601,17 +601,17 @@ export const LIFE = Object.freeze({
  },
  "sp045": {
   "breeding": {
-   "period": "mrt–aug",
-   "nest": "Stevig komnest met modder in struik, klimop of heg",
-   "eggs": "3–5",
-   "incubation": "12–14 dagen",
-   "fledging": "13–14 dagen",
-   "broods": "2–3"
+   "period": "Eind maart–juli",
+   "nest": "Komnest van gras en takjes, vaak in een struik of klimop.",
+   "eggs": "4–5",
+   "incubation": "11–15 dagen",
+   "fledging": "12–15 dagen",
+   "broods": "Meestal 2, soms 3"
   },
-  "diet": "Regenwormen, insecten, bessen en fruit",
-  "behaviour": "Foerageert op gazons; houdt de kop schuin om wormen te zoeken",
-  "migration": "Standvogel; in de winter veel Merels uit het noorden",
-  "voice": "Rijke, melodieuze fluitende zang vanaf hoge plekken; alarm \"tsjik-tsjik-tsjik\""
+  "diet": "Wormen, insecten, bessen en fruit.",
+  "behaviour": "Zingt vaak vanaf een hoge post. Slaat luid alarm bij gevaar.",
+  "migration": "De meeste Nederlandse merels blijven. Noordelijke vogels trekken door en overwinteren hier.",
+  "voice": "Rollende fluittonen; bij alarm scherpe, luide roepen."
  },
  "sp046": {
   "breeding": {
@@ -671,17 +671,17 @@ export const LIFE = Object.freeze({
  },
  "sp050": {
   "breeding": {
-   "period": "mrt–jul",
-   "nest": "Komnest laag in een holte, wal of klimop",
-   "eggs": "4–6",
-   "incubation": "13–14 dagen",
-   "fledging": "13–14 dagen",
+   "period": "April–juli",
+   "nest": "Nest van gras en bladeren, laag en goed verstopt.",
+   "eggs": "5–7",
+   "incubation": "12–15 dagen",
+   "fledging": "13–15 dagen",
    "broods": "2"
   },
-  "diet": "Insecten, wormen, spinnen en in de winter bessen en zaden",
-  "behaviour": "Volgt tuiniers op de voet; zingt ook in de winter",
-  "migration": "Standvogel en trekvogel; in de winter extra Roodborsten uit het noorden",
-  "voice": "Weemoedige, parelende zang; roep een scherp \"tik\""
+  "diet": "Kleine ongewervelden, aangevuld met bessen en zaden.",
+  "behaviour": "Jaagt vaak vanaf een lage uitkijkpost. Verdedigt ook in de winter een territorium.",
+  "migration": "Een deel trekt zuidwestwaarts. Vogels uit noordelijker en oostelijker gebieden overwinteren hier.",
+  "voice": "Snelle, heldere strofen met pauzes. Korte tikkende roep."
  },
  "sp051": {
   "breeding": {
@@ -755,31 +755,31 @@ export const LIFE = Object.freeze({
  },
  "sp056": {
   "breeding": {
-   "period": "apr–jul",
-   "nest": "Bolnest met zij-ingang dicht bij de grond",
+   "period": "Half april–eind juni",
+   "nest": "Bolvormig nest met zijingang, laag in dichte begroeiing.",
    "eggs": "5–6",
    "incubation": "13–15 dagen",
-   "fledging": "12–15 dagen",
-   "broods": "1–2"
+   "fledging": "14–16 dagen",
+   "broods": "2"
   },
-  "diet": "Kleine insecten, bladluizen en spinnen",
-  "behaviour": "Wipt voortdurend met de staart; zeer vroege zanger in maart",
-  "migration": "Zomergast (mrt–okt); een deel overwintert in Nederland",
-  "voice": "Eentonig \"tjif-tjaf-tjif-tjaf\""
+  "diet": "Insecten en larven, in het najaar ook bessen en zaden.",
+  "behaviour": "Zoekt rusteloos tussen bladeren en beweegt geregeld zijn staart.",
+  "migration": "Het merendeel trekt weg. In zachte winters blijft een kleine groep in Nederland.",
+  "voice": "Herhaald tjif-tjaf. De contactroep klinkt vaak stijgend."
  },
  "sp057": {
   "breeding": {
-   "period": "mei–jul",
-   "nest": "Bolnest met zij-ingang op de grond in ruigte",
+   "period": "Vanaf eind april",
+   "nest": "Nest op de grond, verscholen tussen de begroeiing.",
    "eggs": "4–8",
-   "incubation": "12–13 dagen",
-   "fledging": "13–16 dagen",
+   "incubation": "12–14 dagen",
+   "fledging": "12–16 dagen",
    "broods": "1"
   },
-  "diet": "Kleine insecten en spinnen",
-  "behaviour": "Leeft in jonge bossen, struwelen en berkenopslag",
-  "migration": "Zomergast (apr–sep); overwintert ten zuiden van de Sahara",
-  "voice": "Weemoedig, aflopend liedje"
+  "diet": "Vooral insecten, insecteneitjes en larven.",
+  "behaviour": "Foerageert vaak laag in het struweel.",
+  "migration": "Overwintert ten zuiden van de Sahara. Eerste aankomst eind maart, vooral in april.",
+  "voice": "Helder riedeltje dat in toon afloopt."
  },
  "sp058": {
   "breeding": {
@@ -1210,17 +1210,18 @@ export const LIFE = Object.freeze({
  },
  "sp091": {
   "breeding": {
-   "period": "apr–jul",
-   "nest": "Goed verstopt komnest met dons in heide of moeras",
-   "eggs": "8–11",
-   "incubation": "21–23 dagen",
+   "period": "Half april–juli",
+   "nest": "Grondnest, goed verborgen in vegetatie.",
+   "eggs": "Meestal 8–11",
+   "incubation": "25–30 dagen",
    "fledging": "25–30 dagen",
-   "broods": "1"
+   "broods": "Meestal 1",
+   "fledgingLabel": "Vliegvlug na"
   },
-  "diet": "Kleine zaden en waterdiertjes, gefilterd uit modder",
-  "behaviour": "Kleinste eend van Nederland; snelle, wendbare vlucht in groepjes",
-  "migration": "Wintergast in grote aantallen (aug–apr); kleine broedpopulatie in hoogveen en duinen",
-  "voice": "Man helder fluitend \"kriek-kriek\""
+  "diet": "Kleine waterdieren in de broedtijd. In de winter veel zaden.",
+  "behaviour": "Filtert voedsel aan het wateroppervlak en grondelt. Vormt in de winter groepen.",
+  "migration": "Schaarse broedvogel die jaarrond voorkomt. In herfst en vroege winter veel meer vogels.",
+  "voice": "Man fluit hoog bij de balts. Vrouw heeft een scherpe kwaak."
  },
  "sp092": {
   "breeding": {
@@ -1462,17 +1463,17 @@ export const LIFE = Object.freeze({
  },
  "sp110": {
   "breeding": {
-   "period": "mei–jul",
-   "nest": "Komnest laag in ruigte of oevervegetatie",
-   "eggs": "5–6",
-   "incubation": "13–14 dagen",
-   "fledging": "13–14 dagen",
-   "broods": "1–2"
+   "period": "Eind april–begin juni",
+   "nest": "Nest laag in het riet, kort boven de grond.",
+   "eggs": "4–7",
+   "incubation": "13–15 dagen",
+   "fledging": "10–13 dagen",
+   "broods": "Meestal 1, soms 2"
   },
-  "diet": "Insecten, vooral bladluizen in het riet",
-  "behaviour": "Korte zangvlucht omhoog uit de ruigte",
-  "migration": "Zomergast (apr–sep); overwintert in West-Afrika",
-  "voice": "Snelle, rommelige zang met krassende en fluitende stukjes"
+  "diet": "Insecten, spinnen en kleine andere ongewervelden; soms zaden.",
+  "behaviour": "Zingt in de vegetatie en tijdens een korte vlucht boven het riet.",
+  "migration": "Vooral van april tot september. Overwintert ten zuiden van de Sahara.",
+  "voice": "Krassende, afwisselende zang met imitaties."
  },
  "sp111": {
   "breeding": {
@@ -1574,17 +1575,18 @@ export const LIFE = Object.freeze({
  },
  "sp118": {
   "breeding": {
-   "period": "apr–jul",
-   "nest": "Komnest laag in riet, ruigte of graspol",
+   "period": "Eind april–eind juli",
+   "nest": "Laag nest op een pol of tussen stengels, van gras en riet.",
    "eggs": "4–5",
-   "incubation": "12–14 dagen",
-   "fledging": "10–13 dagen",
-   "broods": "2"
+   "incubation": "12–15 dagen",
+   "fledging": "9–12 dagen",
+   "broods": "1–2",
+   "fledgingLabel": "Vliegvlug na"
   },
-  "diet": "Zaden en in de broedtijd insecten",
-  "behaviour": "Zingt vanaf een rietpluim; wipt met de staart",
-  "migration": "Standvogel en trekvogel",
-  "voice": "Kort, hakkelend \"tsjik-tsjik-tsjiriri\""
+  "diet": "In broedtijd vooral ongewervelden; daarbuiten veel zaden.",
+  "behaviour": "Knipt geregeld met de staart; de witte staartzijden vallen dan op.",
+  "migration": "Een deel van de broedvogels trekt weg. Noordelijke vogels trekken door of overwinteren hier.",
+  "voice": "Korte zang met enkele metaalachtige noten; dalende roep."
  },
  "sp119": {
   "breeding": {

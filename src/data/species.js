@@ -6,7 +6,7 @@
  * Statusvelden (category, statusExtra, months, frequency, breeding, redList, status)
  * worden NIET met de hand aangepast: python tools/species/apply_status.py
  * Regio-tags: stedelijk | agrarisch | bos | heide | duinen | kust | wad |
- *             polder | rivierengebied | moeras | rietland | zee | struweel
+ *             polder | rivierengebied | water | moeras | rietland | zee | struweel
  */
 
 export const SPECIES = [
@@ -190,11 +190,12 @@ export const SPECIES = [
 
   // ── MEZEN ────────────────────────────────────────────────────
   { id:'sp029', nameNL:'Koolmees',            nameEN:'Great Tit',                 nameSci:'Parus major',                family:'Mezen',           category:'standvogel', icon:'🐦', regions:['bos','stedelijk','agrarisch'],
-    fieldmarks:'Geel met brede zwarte borststreep, zwart-wit hoofd.',
-    size:{ length:'13–15 cm', wingspan:'22–25 cm', weight:'14–22 g' },
-    plumage:{ adult_m:'Zwart hoofd met witte wangen; gele onderzijde met brede zwarte middenstreep tot vent', adult_f:'Bredere streep minder duidelijk; geler tint', juv:'Geelachtig; streep smaller', jaarling:null, breeding:null, winter:null, eclipse:null },
-    distribution:'Heel Nederland; loofbos, parken, tuinen en agrarisch land', status:'Standvogel · jaarrond',
-    statusExtra:null, months:'jan-dec', frequency:'algemeen', breeding:'ja', redList:null },
+    fieldmarks:'Gele buik met zwarte lengtestreep, zwarte kop en witte wangen.',
+    size:{ length:'13,5–15 cm', wingspan:'22–25 cm', weight:'14–22 g' },
+    plumage:{ adult_m:'Brede zwarte buikstreep. Groene rug en lichte vleugelstreep.', adult_f:'Dezelfde kleuren als het mannetje, met een smallere zwarte buikstreep.', juv:null, jaarling:null, breeding:null, winter:null, eclipse:null },
+    guideReview:{"date":"2026-11-06","dimensions":["length"],"sources":[{"label":"Vogelbescherming","url":"https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/koolmees"}]},
+    distribution:'Vooral loofbossen, parken en tuinen met bomen en nestholtes.', status:'Standvogel, ook wintergast · jaarrond',
+    statusExtra:'wintergast', months:'jan-dec', frequency:'algemeen', breeding:'ja', redList:null },
   { id:'sp030', nameNL:'Pimpelmees',          nameEN:'Eurasian Blue Tit',         nameSci:'Cyanistes caeruleus',        family:'Mezen',           category:'standvogel', icon:'🐦', regions:['bos','stedelijk'],
     fieldmarks:'Blauw-geel, witte wangen met blauw streepje door oog.',
     size:{ length:'11–12 cm', wingspan:'17–20 cm', weight:'9–12 g' },
@@ -292,10 +293,11 @@ export const SPECIES = [
 
   // ── LIJSTERS ─────────────────────────────────────────────────
   { id:'sp045', nameNL:'Merel',               nameEN:'Common Blackbird',          nameSci:'Turdus merula',              family:'Lijsters',        category:'standvogel', icon:'🐦', regions:['bos','stedelijk','agrarisch'],
-    fieldmarks:'Mannetje zwart met gele snavel; vrouwtje bruin.',
-    size:{ length:'24–25 cm', wingspan:'34–38 cm', weight:'80–125 g' },
-    plumage:{ adult_m:'Geheel gitzwart; gele oogring en snavel', adult_f:'Donkerbruin boven; gevlekte borst; geelachtige snavel', juv:'Roestbruin; sterk gevlekt', jaarling:null, breeding:null, winter:null, eclipse:null },
-    distribution:'Heel Nederland; bos, tuinen, parken en agrarisch land', status:'Standvogel, ook wintergast · jaarrond',
+    fieldmarks:'Man zwart met opvallend gele tot oranje snavel. Vrouw donkerbruin.',
+    size:{ length:'23,5–29 cm', wingspan:'34–38 cm', weight:'80–125 g' },
+    plumage:{ adult_m:'Zwart verenkleed, gele tot oranje snavel.', adult_f:'Donkerbruin, met een lichtere gestreepte borst. Snavel geelachtig tot bruin.', juv:'Lijkt op het vrouwtje, maar is vaak lichter en donziger.', jaarling:null, breeding:null, winter:null, eclipse:null },
+    guideReview:{"date":"2026-11-06","dimensions":["length","wingspan"],"sources":[{"label":"Vogelbescherming","url":"https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/merel"}]},
+    distribution:'Vooral groene woonwijken, tuinen en vochtige bossen met ondergroei.', status:'Standvogel, ook wintergast · jaarrond',
     statusExtra:'wintergast', months:'jan-dec', frequency:'algemeen', breeding:'ja', redList:null },
   { id:'sp046', nameNL:'Zanglijster',         nameEN:'Song Thrush',               nameSci:'Turdus philomelos',          family:'Lijsters',        category:'standvogel', icon:'🐦', regions:['bos','stedelijk'],
     fieldmarks:'Bruin met gevlekte borst, repeteert zangfrasen tweemaal.',
@@ -324,12 +326,13 @@ export const SPECIES = [
 
   // ── VLIEGENVANGERS & ROODSTAARTEN ────────────────────────────
   { id:'sp050', nameNL:'Roodborst',           nameEN:'European Robin',            nameSci:'Erithacus rubecula',         family:'Vliegenvangers',  category:'standvogel', icon:'🐦', regions:['bos','stedelijk','struweel'],
-    fieldmarks:'Felrode borst en gezicht, bruine bovenside, groot zwart oog.',
-    size:{ length:'12–14 cm', wingspan:'20–22 cm', weight:'14–21 g' },
-    plumage:{ adult_m:'Felrood-oranje borst en gezicht; bruine bovenside; witte buik', adult_f:null, juv:'Gespikkeld bruin-beige zonder rood', jaarling:null, breeding:null, winter:null, eclipse:null },
-    distribution:'Heel Nederland in bossen, tuinen en parken; overal aanwezig', status:'Standvogel, ook wintergast · jaarrond',
+    fieldmarks:'Oranjerood gezicht en borst. Bruine rug, lichte onderbuik.',
+    size:{ length:'12,5–14 cm', wingspan:'20–22 cm', weight:'14–21 g' },
+    plumage:{ adult_m:'Oranjerode borst en gezicht, met bruine bovenzijde.', adult_f:null, juv:'Bruin met lichte vlekjes, zonder oranje borst.', jaarling:null, breeding:null, winter:null, eclipse:null },
+    guideReview:{"date":"2026-11-06","dimensions":["length"],"sources":[{"label":"Vogelbescherming","url":"https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/roodborst"}],"similarSexes":true},
+    distribution:'Bossen met ondergroei, parken en tuinen. In de winter ook in stadstuinen.', status:'Standvogel, ook wintergast · jaarrond',
     statusExtra:'wintergast', months:'jan-dec', frequency:'algemeen', breeding:'ja', redList:null },
-  { id:'sp051', nameNL:'Zwarte Roodstaart',   nameEN:'Black Redstart',            nameSci:'Phoenicurus ochruros',       family:'Vliegenvangers',  category:'zomergast', icon:'🐦', regions:['stedelijk','kust','rotsen'],
+  { id:'sp051', nameNL:'Zwarte Roodstaart',   nameEN:'Black Redstart',            nameSci:'Phoenicurus ochruros',       family:'Vliegenvangers',  category:'zomergast', icon:'🐦', regions:['stedelijk','kust','agrarisch'],
     fieldmarks:'Mannetje donkergrijs met oranje flanken en staart.',
     size:{ length:'13–15 cm', wingspan:'23–26 cm', weight:'11–19 g' },
     plumage:{ adult_m:'Donkergrijs tot zwart; oranje-roest flanken en staart; witte vleugelstreep', adult_f:'Bruingrijs; roestoranje staart', juv:'Als vrouwtje', jaarling:null, breeding:null, winter:null, eclipse:null },
@@ -366,17 +369,19 @@ export const SPECIES = [
 
   // ── ZANGERS ──────────────────────────────────────────────────
   { id:'sp056', nameNL:'Tjiftjaf',            nameEN:'Common Chiffchaff',         nameSci:'Phylloscopus collybita',     family:'Boszangers',      category:'zomergast', icon:'🐦', regions:['bos','stedelijk','struweel'],
-    fieldmarks:'Olijfgroen, herkenbaar "tjif-tjaf" zang, steeds de staart dippend.',
-    size:{ length:'10–11 cm', wingspan:'15–21 cm', weight:'6–9 g' },
-    plumage:{ adult_m:'Olijfgroen-bruin boven; geelwit onder; vage supercilium; donkere poten', adult_f:null, juv:'Geelgroener', jaarling:null, breeding:null, winter:null, eclipse:null },
-    distribution:'Heel Nederland in bossen en tuinen; vroegste zangvogel in het voorjaar', status:'Zomergast, ook wintergast · maart–oktober',
-    statusExtra:'wintergast', months:'mrt-okt', frequency:'algemeen', breeding:'ja', redList:null },
-  { id:'sp057', nameNL:'Fitis',               nameEN:'Willow Warbler',            nameSci:'Phylloscopus trochilus',     family:'Boszangers',      category:'zomergast', icon:'🐦', regions:['bos','struweel','heide'],
-    fieldmarks:'Olijfgroen-geel, iets geler dan Tjiftjaf, aflopende zang.',
-    size:{ length:'11–12 cm', wingspan:'17–22 cm', weight:'6–10 g' },
-    plumage:{ adult_m:'Olijfgroen boven; geelwitte onderzijde; gele supercilium; lichte poten', adult_f:null, juv:'Meer geel onderzijde', jaarling:null, breeding:null, winter:null, eclipse:null },
-    distribution:'Heel Nederland; open bos, struweel en heide', status:'Zomergast · april–september',
-    statusExtra:null, months:'apr-sep', frequency:'algemeen', breeding:'ja', redList:null },
+    fieldmarks:'Kleine grijsgroene vogel, meestal donkere poten. De herhaalde zang is de beste aanwijzing.',
+    size:{ length:'11–12 cm', wingspan:'15–21 cm', weight:'6–9 g' },
+    plumage:{ adult_m:'Grijsgroen en kortvleugelig. Lijkt sterk op de fitis.', adult_f:null, juv:null, jaarling:null, breeding:null, winter:null, eclipse:null },
+    guideReview:{"date":"2026-11-06","dimensions":["length"],"sources":[{"label":"Vogelbescherming","url":"https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/tjiftjaf"},{"label":"Sovon","url":"https://stats.sovon.nl/stats/soort/13110"},{"label":"BTO","url":"https://www.bto.org/learn/about-birds/birdfacts/chiffchaff"}],"similarSexes":true},
+    distribution:'Bossen met dichte ondergroei, ook in parken en tuinen.', status:'Zomergast, ook wintergast · jaarrond',
+    statusExtra:'wintergast', months:'jan-dec', frequency:'algemeen', breeding:'ja', redList:null },
+  { id:'sp057', nameNL:'Fitis',               nameEN:'Willow Warbler',            nameSci:'Phylloscopus trochilus',     family:'Boszangers',      category:'zomergast', icon:'🐦', regions:['bos','struweel','heide','agrarisch','moeras'],
+    fieldmarks:'Lichte wenkbrauw, geelwitte borst, vaak bruinroze poten. Luister naar de aflopende zang.',
+    size:{ length:'11–12,5 cm', wingspan:'17–22 cm', weight:'6–10 g' },
+    plumage:{ adult_m:'Geelwitte keel en borst. Langere vleugels dan de tjiftjaf.', adult_f:null, juv:null, jaarling:null, breeding:null, winter:null, eclipse:null },
+    guideReview:{"date":"2026-11-06","dimensions":["length"],"sources":[{"label":"Vogelbescherming","url":"https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/fitis"},{"label":"Sovon","url":"https://stats.sovon.nl/stats/soort/13120"}]},
+    distribution:'Halfopen terrein met struiken, zoals heide, bosranden, moeras en boerenland.', status:'Zomergast, ook doortrekker · maart–september',
+    statusExtra:'trekvogel', months:'mrt-sep', frequency:'algemeen', breeding:'ja', redList:null },
   { id:'sp058', nameNL:'Fluiter',             nameEN:'Wood Warbler',              nameSci:'Phylloscopus sibilatrix',    family:'Boszangers',      category:'zomergast', icon:'🐦', regions:['bos'],
     fieldmarks:'Groen-geel, wit buik, trillende zang in hoog beukenbos.',
     size:{ length:'11–13 cm', wingspan:'19–24 cm', weight:'8–13 g' },
@@ -529,12 +534,12 @@ export const SPECIES = [
     statusExtra:'wintergast', months:'jan-dec', frequency:'schaars', breeding:'ja', redList:null },
 
   // ── REIGERS ──────────────────────────────────────────────────
-  { id:'sp081', nameNL:'Blauwe Reiger',       nameEN:'Grey Heron',                nameSci:'Ardea cinerea',              family:'Reigers',         category:'standvogel', icon:'🐦', regions:['moeras','polder','rivierengebied','kust'],
+  { id:'sp081', nameNL:'Blauwe Reiger',       nameEN:'Grey Heron',                nameSci:'Ardea cinerea',              family:'Reigers',         category:'standvogel', icon:'🐦', regions:['moeras','polder','rivierengebied','kust','stedelijk'],
     fieldmarks:'Groot grijs-wit, zwarte oogreep, gele snavel, trage vleugelslag.',
     size:{ length:'84–102 cm', wingspan:'155–175 cm', weight:'1000–2100 g' },
     plumage:{ adult_m:'Grijs; wit hoofd met zwarte oogreep en kuif; gele snavel; zwarte vlekken borst', adult_f:null, juv:'Grijzer; minder wit; geen kuif', jaarling:null, breeding:'Snavel en poten oranjeroze; lange zwarte kuifveren en sierveren op de borst', winter:null, eclipse:null },
-    distribution:'Heel NL langs water, meren, polders en kust', status:'Standvogel · jaarrond',
-    statusExtra:null, months:'jan-dec', frequency:'algemeen', breeding:'ja', redList:null },
+    distribution:'Heel NL langs water, meren, polders en kust', status:'Standvogel, ook wintergast · jaarrond',
+    statusExtra:'wintergast', months:'jan-dec', frequency:'algemeen', breeding:'ja', redList:null },
   { id:'sp082', nameNL:'Kleine Zilverreiger', nameEN:'Little Egret',              nameSci:'Egretta garzetta',           family:'Reigers',         category:'standvogel', icon:'🐦', regions:['kust','moeras','rivierengebied'],
     fieldmarks:'Spierwit, zwarte snavel en poten, gele voeten.',
     size:{ length:'55–65 cm', wingspan:'88–106 cm', weight:'300–550 g' },
@@ -591,12 +596,13 @@ export const SPECIES = [
     plumage:{ adult_m:'Groene kop; witte borst; roestoranje flanken; brede spatelvormige snavel; blauwe vleugeldekveren', adult_f:'Bruin gestreept; spatelvormige snavel', juv:'Als vrouwtje', jaarling:null, breeding:null, winter:null, eclipse:'Mannetje in de zomer bruin met roestige flanken; houdt geel oog' },
     distribution:'Heel NL in ondiepe waterrijke polders en moerassen', status:'Standvogel, ook wintergast · jaarrond',
     statusExtra:'wintergast', months:'jan-dec', frequency:'algemeen', breeding:'ja', redList:'Kwetsbaar' },
-  { id:'sp091', nameNL:'Wintertaling',        nameEN:'Eurasian Teal',             nameSci:'Anas crecca',                family:'Eenden',          category:'wintergast', icon:'🐦', regions:['moeras','polder','kust'],
-    fieldmarks:'Klein, mannetje kastanjebruin hoofd met groene oogstreep.',
-    size:{ length:'34–38 cm', wingspan:'53–59 cm', weight:'200–400 g' },
-    plumage:{ adult_m:'Kastanjebruin hoofd; groene oogstreep met gele rand; grijs lijf; groene spiegel', adult_f:'Bruin gestreept; groene spiegel', juv:'Als vrouwtje', jaarling:null, breeding:null, winter:null, eclipse:'Mannetje in de zomer bruin zoals vrouwtje' },
-    distribution:'Heel NL; kleine dabbling duck van ondiepe moerassen', status:'Wintergast, ook standvogel · augustus–april',
-    statusExtra:'standvogel', months:'aug-apr', frequency:'algemeen', breeding:'ja', redList:'Kwetsbaar' },
+  { id:'sp091', nameNL:'Wintertaling',        nameEN:'Eurasian Teal',             nameSci:'Anas crecca',                family:'Eenden',          category:'wintergast', icon:'🐦', regions:['moeras','polder','kust','water','rivierengebied'],
+    fieldmarks:'Kleine grondeleend. Beide geslachten hebben een groene vleugelspiegel.',
+    size:{ length:'34–38 cm', wingspan:'58–64 cm', weight:'200–400 g' },
+    plumage:{ adult_m:'Kastanjebruine kop met groene oogvlek. Grijs lichaam met een witte zijstreep.', adult_f:'Bruin verenkleed. De glanzend groene spiegel helpt bij onderscheid van de zomertaling.', juv:null, jaarling:null, breeding:null, winter:null, eclipse:'Mannetje in de zomer bruin zoals vrouwtje' },
+    guideReview:{"date":"2026-11-06","dimensions":["length","wingspan"],"sources":[{"label":"Vogelbescherming","url":"https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wintertaling"},{"label":"Sovon","url":"https://stats.sovon.nl/stats/soort/1840/?language=dutch"}]},
+    distribution:'Ondiep water met begroeide oevers. In de winter ook in kreken en estuaria.', status:'Wintergast, ook standvogel · jaarrond',
+    statusExtra:'standvogel', months:'jan-dec', frequency:'algemeen', breeding:'ja', redList:'Kwetsbaar' },
   { id:'sp092', nameNL:'Kuifeend',            nameEN:'Tufted Duck',               nameSci:'Aythya fuligula',            family:'Eenden',          category:'standvogel', icon:'🐦', regions:['moeras','polder','kust'],
     fieldmarks:'Mannetje zwart-wit met hangende kuif.',
     size:{ length:'40–47 cm', wingspan:'67–73 cm', weight:'450–1000 g' },
@@ -617,19 +623,19 @@ export const SPECIES = [
     plumage:{ adult_m:'Wit; lichtgrijs mantel; roze poten; gele snavel met rode punt; geel oog', adult_f:null, juv:'Bruin gevlekt; roze-zwarte snavel; 4 jaar naar adult', jaarling:'Grijzer; donkerder vlekken', breeding:'Spierwitte kop; gele snavel met rode vlek', winter:'Kop en nek bruin gestreept', eclipse:null },
     distribution:'Kust, Wadden en steden heel NL; meest algemene grote meeuw', status:'Standvogel, ook wintergast · jaarrond',
     statusExtra:'wintergast', months:'jan-dec', frequency:'algemeen', breeding:'ja', redList:null },
-  { id:'sp095', nameNL:'Kleine Mantelmeeuw',  nameEN:'Lesser Black-backed Gull',  nameSci:'Larus fuscus',               family:'Meeuwen',         category:'zomergast', icon:'🐦', regions:['kust','zee','polder','wad'],
+  { id:'sp095', nameNL:'Kleine Mantelmeeuw',  nameEN:'Lesser Black-backed Gull',  nameSci:'Larus fuscus',               family:'Meeuwen',         category:'zomergast', icon:'🐦', regions:['kust','zee','polder','wad','duinen','stedelijk','water'],
     fieldmarks:'Donkergrijze rug, gele poten.',
     size:{ length:'52–64 cm', wingspan:'117–134 cm', weight:'550–1100 g' },
     plumage:{ adult_m:'Donkergrijs mantel; witte kop en onderzijde; gele poten; gele snavel met rode punt', adult_f:null, juv:'Bruin gevlekt; donkerder mantel dan Zilvermeeuw; 4 jaar naar adult', jaarling:null, breeding:'Spierwitte kop', winter:'Kop fijn bruingrijs gestreept', eclipse:null },
     distribution:'Kust, Wadden en polders NL; overwintert in W-Afrika', status:'Zomergast, ook standvogel · jaarrond',
     statusExtra:'standvogel', months:'jan-dec', frequency:'algemeen', breeding:'ja', redList:null },
-  { id:'sp096', nameNL:'Stormmeeuw',          nameEN:'Common Gull',               nameSci:'Larus canus',                family:'Meeuwen',         category:'standvogel', icon:'🐦', regions:['kust','zee','agrarisch','polder'],
+  { id:'sp096', nameNL:'Stormmeeuw',          nameEN:'Common Gull',               nameSci:'Larus canus',                family:'Meeuwen',         category:'standvogel', icon:'🐦', regions:['kust','zee','agrarisch','polder','duinen','rivierengebied'],
     fieldmarks:'Middelgroot, groen-gele snavel zonder rode punt.',
     size:{ length:'38–44 cm', wingspan:'99–115 cm', weight:'290–550 g' },
     plumage:{ adult_m:'Wit; middengrijs mantel; groengele snavel; groengrijze poten; donkere oogring', adult_f:null, juv:'Bruin gevlekt; roze-zwarte snavel', jaarling:null, breeding:'Witte kop; gele snavel zonder band', winter:'Grijze vlekjes op kop en nek; vaak donker bandje op de snavel', eclipse:null },
     distribution:'Kust, polders en steden NL; broedvogel in N-NL en Wadden', status:'Standvogel, ook wintergast · jaarrond',
     statusExtra:'wintergast', months:'jan-dec', frequency:'algemeen', breeding:'ja', redList:null },
-  { id:'sp097', nameNL:'Kokmeeuw',            nameEN:'Black-headed Gull',         nameSci:'Chroicocephalus ridibundus', family:'Meeuwen',         category:'standvogel', icon:'🐦', regions:['kust','stedelijk','agrarisch','polder','wad'],
+  { id:'sp097', nameNL:'Kokmeeuw',            nameEN:'Black-headed Gull',         nameSci:'Chroicocephalus ridibundus', family:'Meeuwen',         category:'standvogel', icon:'🐦', regions:['kust','stedelijk','agrarisch','polder','wad','duinen','water','moeras'],
     fieldmarks:'Wit met chocoladebruin hoofd (broedkleed), rode snavel en poten.',
     size:{ length:'34–37 cm', wingspan:'86–99 cm', weight:'220–350 g' },
     plumage:{ adult_m:'Wit; lichtgrijs mantel; rode snavel en poten; witte voorkant vleugel', adult_f:null, juv:'Bruine vleugelband; roze-zwarte snavel', jaarling:null, breeding:'Chocoladebruine kap (niet zwart) met witte oogrand; donkerrode snavel', winter:'Witte kop met donkere oorvlek', eclipse:null },
@@ -655,7 +661,7 @@ export const SPECIES = [
     plumage:{ adult_m:'Gestreept bruin; lange sterk neergebogen snavel; blauwe ondersnavelbasis; geen wenkbrauwstreep', adult_f:'Groter; langere snavel', juv:'Kortere snavel; fijner gestreept', jaarling:null, breeding:null, winter:'Vrijwel als zomerkleed; iets grijzer', eclipse:null },
     distribution:'Wadden, kust en polders NL; herkenbaar door roep', status:'Standvogel, ook wintergast · jaarrond',
     statusExtra:'wintergast', months:'jan-dec', frequency:'algemeen', breeding:'ja', redList:'Kwetsbaar' },
-  { id:'sp101', nameNL:'Grutto',              nameEN:'Black-tailed Godwit',       nameSci:'Limosa limosa',              family:'Snippen',         category:'zomergast', icon:'🐦', regions:['agrarisch','polder','wad'],
+  { id:'sp101', nameNL:'Grutto',              nameEN:'Black-tailed Godwit',       nameSci:'Limosa limosa',              family:'Snippen',         category:'zomergast', icon:'🐦', regions:['agrarisch','polder','wad','water'],
     fieldmarks:'Lang, rechte snavel, oranje kop-hals (broedkleed), witte vleugelband.',
     size:{ length:'36–44 cm', wingspan:'62–70 cm', weight:'165–400 g' },
     plumage:{ adult_m:'Rechte lange snavel met roze basis; witte vleugelband; zwarte staartband', adult_f:'Groter; bleker', juv:'Oranje-buff borstkleur', jaarling:null, breeding:'Roestoranje kop, hals en borst; zwarte dwarsbandjes op de buik', winter:'Effen grijsbruin', eclipse:null },
@@ -715,12 +721,13 @@ export const SPECIES = [
     plumage:{ adult_m:'Rossig bruin boven; geelwit onderzijde; ongestreept; onduidelijke wenkbrauwstreep', adult_f:null, juv:'Warmer bruin', jaarling:null, breeding:null, winter:null, eclipse:null },
     distribution:'Rietkragen langs oevers heel NL; meest algemene rietvogel', status:'Zomergast · april–september',
     statusExtra:null, months:'apr-sep', frequency:'algemeen', breeding:'ja', redList:null },
-  { id:'sp110', nameNL:'Rietzanger',          nameEN:'Sedge Warbler',             nameSci:'Acrocephalus schoenobaenus',family:'Rietvogels',      category:'zomergast', icon:'🐦', regions:['rietland','moeras','struweel'],
-    fieldmarks:'Wit wenkbrauwstreep, gestreepte kruin, ongeordende zang.',
-    size:{ length:'11–13 cm', wingspan:'17–21 cm', weight:'9–15 g' },
-    plumage:{ adult_m:'Gestreept boven; opvallend wit wenkbrauwstreep; gestreepte kruin; roestbruin stuitje', adult_f:null, juv:'Geler tinten; minder contrastrijk', jaarling:null, breeding:null, winter:null, eclipse:null },
-    distribution:'Moerasranden en rietbermen heel NL; ook langs sloten', status:'Zomergast · april–september',
-    statusExtra:null, months:'apr-sep', frequency:'vrij-algemeen', breeding:'ja', redList:null },
+  { id:'sp110', nameNL:'Rietzanger',          nameEN:'Sedge Warbler',             nameSci:'Acrocephalus schoenobaenus',family:'Rietvogels',      category:'zomergast', icon:'🐦', regions:['rietland','moeras','struweel','duinen'],
+    fieldmarks:'Brede lichte wenkbrauwstreep en gestreepte kop en rug. De kleine karekiet is egaler.',
+    size:{ length:'13 cm', wingspan:'17–21 cm', weight:'9–15 g' },
+    plumage:{ adult_m:'Geelbruin met donkere strepen bovenop. Borst en flanken zonder strepen.', adult_f:null, juv:null, jaarling:null, breeding:null, winter:null, eclipse:null },
+    guideReview:{"date":"2026-11-06","dimensions":["length"],"sources":[{"label":"Vogelbescherming","url":"https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/rietzanger"}]},
+    distribution:'Rietmoeras, begroeide oevers en natte, ruige duinvalleien.', status:'Zomergast, ook doortrekker · april–september',
+    statusExtra:'trekvogel', months:'apr-sep', frequency:'vrij-algemeen', breeding:'ja', redList:null },
   { id:'sp111', nameNL:'Sprinkhaanzanger',    nameEN:'Common Grasshopper Warbler',nameSci:'Locustella naevia',         family:'Rietvogels',      category:'zomergast', icon:'🐦', regions:['rietland','struweel','heide'],
     fieldmarks:'Gestreept, surrend insectachtig geluid, ontzettend verborgen.',
     size:{ length:'12–13 cm', wingspan:'15–19 cm', weight:'9–16 g' },
@@ -749,8 +756,8 @@ export const SPECIES = [
     fieldmarks:'Staalblauwe rug, rood-roze keel, lange staartpennen.',
     size:{ length:'14–19 cm', wingspan:'32–35 cm', weight:'16–22 g' },
     plumage:{ adult_m:'Staalblauwe rug; roodbruine voorhoofd en keel; crème-witte buik; lange staartpennen', adult_f:'Kortere staartpennen', juv:'Korte staart; bleker keel', jaarling:null, breeding:null, winter:null, eclipse:null },
-    distribution:'Boerderijen en open land heel NL; broedt in gebouwen', status:'Zomergast · april–oktober',
-    statusExtra:null, months:'apr-okt', frequency:'algemeen', breeding:'ja', redList:'Gevoelig' },
+    distribution:'Boerderijen en open land heel NL; broedt in gebouwen', status:'Zomergast, ook doortrekker · maart–oktober',
+    statusExtra:'trekvogel', months:'mrt-okt', frequency:'algemeen', breeding:'ja', redList:'Gevoelig' },
   { id:'sp115', nameNL:'Huiszwaluw',          nameEN:'Common House Martin',       nameSci:'Delichon urbicum',           family:'Zwaluwen',        category:'zomergast', icon:'🐦', regions:['stedelijk','agrarisch'],
     fieldmarks:'Blauw-zwart, witte stuit, korte gevorkte staart.',
     size:{ length:'13–15 cm', wingspan:'26–29 cm', weight:'14–23 g' },
@@ -771,11 +778,12 @@ export const SPECIES = [
     plumage:{ adult_m:'Felgeel hoofd en borst; kastanjebruine gestreepte rug; roodbruine stuit', adult_f:'Minder geel; meer gestreept hoofd', juv:'Sterk gestreept; weinig geel', jaarling:null, breeding:null, winter:null, eclipse:null },
     distribution:'Struwelen, bosslinten en agrarisch land; oost en midden NL', status:'Standvogel · jaarrond',
     statusExtra:null, months:'jan-dec', frequency:'vrij-algemeen', breeding:'ja', redList:null },
-  { id:'sp118', nameNL:'Rietgors',            nameEN:'Reed Bunting',              nameSci:'Emberiza schoeniclus',       family:'Gorzen',          category:'standvogel', icon:'🐦', regions:['rietland','moeras','struweel'],
-    fieldmarks:'Mannetje zwarte kop-keel, witte snorstreep, in rietlanden.',
-    size:{ length:'13–15 cm', wingspan:'21–28 cm', weight:'14–25 g' },
-    plumage:{ adult_m:'Zwarte kop en keel; witte kraag en snorstreep; bruin gestreepte rug', adult_f:'Bruin gestreept hoofd; brede wenkbrauwstreep; witte snorstreep', juv:'Als hen', jaarling:null, breeding:'Mannetje met zwarte kop en keel en witte halsband', winter:'Zwarte kop grotendeels bedekt door bruine veerranden', eclipse:null },
-    distribution:'Rietlanden, moerassen en struwelen heel NL', status:'Standvogel, ook wintergast · jaarrond',
+  { id:'sp118', nameNL:'Rietgors',            nameEN:'Reed Bunting',              nameSci:'Emberiza schoeniclus',       family:'Gorzen',          category:'standvogel', icon:'🐦', regions:['rietland','moeras','struweel','heide','agrarisch','kust'],
+    fieldmarks:'Witte buitenste staartpennen vallen op in vlucht. Mannetje heeft in broedkleed een zwarte kop.',
+    size:{ length:'13,5–15,5 cm', wingspan:'21–28 cm', weight:'14–25 g' },
+    plumage:{ adult_m:'In broedtijd zwarte kop en keel, witte halsband en lichte baardstreep.', adult_f:'Bruine kop met lichte wenkbrauw en wangstreep. Borst vaag gestreept.', juv:'Bruine kop en lichte streep langs de wang.', jaarling:null, breeding:'Mannetje met zwarte kop en keel en witte halsband', winter:'Zwarte kop grotendeels bedekt door bruine veerranden', eclipse:null },
+    guideReview:{"date":"2026-11-06","dimensions":["length"],"sources":[{"label":"Vogelbescherming","url":"https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/rietgors"}]},
+    distribution:'Rietmoerassen, slootkanten, kwelders en plaatselijk natte heide.', status:'Standvogel, ook wintergast · jaarrond',
     statusExtra:'wintergast', months:'jan-dec', frequency:'vrij-algemeen', breeding:'ja', redList:null },
   { id:'sp119', nameNL:'Grauwe Gors',         nameEN:'Corn Bunting',              nameSci:'Emberiza calandra',          family:'Gorzen',          category:'standvogel', icon:'🐦', regions:['agrarisch','polder'],
     fieldmarks:'Groot, gestreept grijsbruin, geelbruin snavel, sleutelring-zang.',
@@ -816,7 +824,7 @@ export const SPECIES = [
     plumage:{ adult_m:'Zwarte kop, hals en borst; klein wit halsvlekje; donkergrijze buik; spierwitte onderstaart', adult_f:null, juv:'Zonder halsvlek; witte randen op de vleugeldekveren', jaarling:null, breeding:null, winter:null, eclipse:null },
     distribution:'Wintergast op het Wad, de eilanden en kustpolders; tot in mei aanwezig', status:'Wintergast · oktober–mei',
     statusExtra:null, months:'okt-mei', frequency:'algemeen', breeding:'nee', redList:null },
-  { id:'sp125', nameNL:'Brandgans', nameEN:'Barnacle Goose', nameSci:'Branta leucopsis', family:'Ganzen', category:'wintergast', icon:'🐦', regions:['polder','kust','wad','agrarisch'],
+  { id:'sp125', nameNL:'Brandgans', nameEN:'Barnacle Goose', nameSci:'Branta leucopsis', family:'Ganzen', category:'wintergast', icon:'🐦', regions:['polder','kust','wad','agrarisch','moeras','rivierengebied'],
     fieldmarks:'Wit gezicht, zwarte kop en borst, zilvergrijze rug met zwarte bandjes.',
     size:{ length:'58–70 cm', wingspan:'120–142 cm', weight:'1,3–2,2 kg' },
     plumage:{ adult_m:'Romig wit gezicht; zwarte kruin, hals en borst; zilvergrijze rug met zwart-witte bandering; witte buik', adult_f:null, juv:'Doffer; gezicht grijziger, bandering op rug minder scherp', jaarling:null, breeding:null, winter:null, eclipse:null },
@@ -834,7 +842,7 @@ export const SPECIES = [
     plumage:{ adult_m:'Wit; zwarte snavel met kleine, afgeronde gele basisvlek; korte rechte hals', adult_f:null, juv:'Grijs; roze snavel met donkere punt', jaarling:null, breeding:null, winter:null, eclipse:null },
     distribution:'Wintergast in graslanden en akkers, vooral Friesland, Noord-Holland en het rivierengebied; sterk afgenomen', status:'Wintergast · november–maart',
     statusExtra:null, months:'nov-mrt', frequency:'vrij-algemeen', breeding:'nee', redList:null },
-  { id:'sp128', nameNL:'Bergeend', nameEN:'Common Shelduck', nameSci:'Tadorna tadorna', family:'Eenden', category:'standvogel', icon:'🐦', regions:['wad','kust','polder'],
+  { id:'sp128', nameNL:'Bergeend', nameEN:'Common Shelduck', nameSci:'Tadorna tadorna', family:'Eenden', category:'standvogel', icon:'🐦', regions:['wad','kust','polder','duinen','rivierengebied','water'],
     fieldmarks:'Groot en bont: groenzwarte kop, rode snavel, witte romp met roestbruine borstband.',
     size:{ length:'55–65 cm', wingspan:'100–120 cm', weight:'0,8–1,5 kg' },
     plumage:{ adult_m:'Groenzwarte kop; rode snavel met knobbel; wit lichaam met brede roestbruine borstband; zwarte schouders', adult_f:'Als mannetje, zonder snavelknobbel en met smallere borstband', juv:'Grijsbruine rug, witte voorkant zonder borstband', jaarling:null, breeding:null, winter:null, eclipse:null },
@@ -924,7 +932,7 @@ export const SPECIES = [
     plumage:{ adult_m:'Grijs; zwart-witte kop en hals met rode kruinvlek; afhangende "pluim" van binnenste armpennen', adult_f:null, juv:'Bruinig grijs met effen bruine kop', jaarling:null, breeding:null, winter:null, eclipse:null },
     distribution:'Massale doortrek in maart en oktober–november, vooral oost en zuid NL; broedt sinds 2001 in o.a. Fochteloërveen en Drenthe', status:'Doortrekker, ook standvogel · jaarrond',
     statusExtra:'standvogel', months:'jan-dec', frequency:'vrij-algemeen', breeding:'ja', redList:'Gevoelig' },
-  { id:'sp143', nameNL:'Kluut', nameEN:'Pied Avocet', nameSci:'Recurvirostra avosetta', family:'Kluten', category:'zomergast', icon:'🐦', regions:['wad','kust','polder'],
+  { id:'sp143', nameNL:'Kluut', nameEN:'Pied Avocet', nameSci:'Recurvirostra avosetta', family:'Kluten', category:'zomergast', icon:'🐦', regions:['wad','kust','polder','water','agrarisch'],
     fieldmarks:'Zwart-wit met lange, dunne opgebogen snavel en blauwgrijze poten.',
     size:{ length:'42–45 cm', wingspan:'77–80 cm', weight:'225–400 g' },
     plumage:{ adult_m:'Wit met zwarte kap en zwarte vleugelbanden; opgewipte zwarte snavel; lange blauwgrijze poten', adult_f:null, juv:'Zwart vervangen door bruin; grijzig getint', jaarling:null, breeding:null, winter:null, eclipse:null },
@@ -1585,7 +1593,7 @@ export const SPECIES = [
     plumage:{ adult_m:'Bruin met lichtere kop; spierwitte wigvormige staart; zware gele snavel', adult_f:null, juv:'Donker gevlekt met donkere staart en snavel; pas na 5 jaar volwassen', jaarling:null, breeding:null, winter:null, eclipse:null },
     distribution:'Broedt sinds 2006 in o.a. de Oostvaardersplassen, Lauwersmeer en Biesbosch; in de winter verspreid', status:'Standvogel, ook wintergast · jaarrond',
     statusExtra:'wintergast', months:'jan-dec', frequency:'schaars', breeding:'ja', redList:'Gevoelig' },
-  { id:'sp253', nameNL:'Ruigpootbuizerd', nameEN:'Rough-legged Buzzard', nameSci:'Buteo lagopus', family:'Haviken', category:'wintergast', icon:'🦅', regions:['agrarisch','duinen','kust'],
+  { id:'sp253', nameNL:'Ruigpootbuizerd', nameEN:'Rough-legged Buzzard', nameSci:'Buteo lagopus', family:'Haviken', category:'wintergast', icon:'🦅', regions:['agrarisch','duinen','kust','heide'],
     fieldmarks:'Buizerd met witte staart met zwarte eindband en donkere buikvlek; bidt vaak.',
     size:{ length:'50–60 cm', wingspan:'120–150 cm', weight:'0,6–1,3 kg' },
     plumage:{ adult_m:'Lichte kop; donkere buikband; witte staart met brede zwarte eindband; donkere polsvlekken', adult_f:null, juv:'Effener donkere buikvlek; vagere staartband', jaarling:null, breeding:null, winter:null, eclipse:null },
@@ -1873,18 +1881,18 @@ export const SPECIES = [
     plumage:{ adult_m:'Felgeel voorhoofd en borst; gestreepte flanken; gele stuit; zeer korte snavel', adult_f:'Doffer en meer gestreept', juv:'Bruin gestreept zonder geel', jaarling:null, breeding:null, winter:null, eclipse:null },
     distribution:'Zeldzame broedvogel in parken en oude tuinen, vooral in Limburg en het oosten; Rode Lijst bedreigd', status:'Zomergast, ook doortrekker · maart–oktober',
     statusExtra:'trekvogel', months:'mrt-okt', frequency:'zeldzaam', breeding:'ja', redList:'Bedreigd' },
-  { id:'sp301', nameNL:'IJsgors', nameEN:'Lapland Longspur', nameSci:'Calcarius lapponicus', family:'Gorzen', category:'wintergast', icon:'🐦', regions:['kust','wad','agrarisch'],
+  { id:'sp301', nameNL:'IJsgors', nameEN:'Lapland Longspur', nameSci:'Calcarius lapponicus', family:'Gorzen', category:'wintergast', icon:'🐦', regions:['kust','wad','agrarisch','duinen'],
     fieldmarks:'Gors met roestbruine nekvlek en vleugelveld; ratelend "tikkitik-tjuu" in vlucht.',
     size:{ length:'14–16 cm', wingspan:'25–28 cm', weight:'20–30 g' },
     plumage:{ adult_m:'Lichte kopstreep; lange achterteen', adult_f:null, juv:'Als winterkleed', jaarling:null, breeding:'Mannetje met zwarte kop en borst, witte streep en kastanjebruine nek', winter:'Gestreept bruin met roestbruine nekvlek', eclipse:null },
     distribution:'Zeldzame wintergast op kwelders en akkers langs de Waddenkust', status:'Wintergast, ook doortrekker · september–april',
     statusExtra:'trekvogel', months:'sep-apr', frequency:'zeldzaam', breeding:'nee', redList:null },
-  { id:'sp302', nameNL:'Sneeuwgors', nameEN:'Snow Bunting', nameSci:'Plectrophenax nivalis', family:'Gorzen', category:'wintergast', icon:'🐦', regions:['kust','wad'],
+  { id:'sp302', nameNL:'Sneeuwgors', nameEN:'Snow Bunting', nameSci:'Plectrophenax nivalis', family:'Gorzen', category:'wintergast', icon:'🐦', regions:['kust','wad','duinen'],
     fieldmarks:'Witte gors met veel wit in de vleugels; groepen "sneeuwvlokken" langs het strand.',
     size:{ length:'15–18 cm', wingspan:'32–38 cm', weight:'30–45 g' },
     plumage:{ adult_m:'Zwarte vleugelpunten; grote witte vleugelvlakken', adult_f:'Minder wit in de vleugel', juv:'Als vrouwtje', jaarling:null, breeding:'Mannetje sneeuwwit met zwarte rug en zwarte snavel', winter:'Wit met warmbruine kop en borst; gele snavel', eclipse:null },
-    distribution:'Wintergast op stranden, kwelders en dijken langs de kust', status:'Wintergast · oktober–maart',
-    statusExtra:null, months:'okt-mrt', frequency:'schaars', breeding:'nee', redList:null },
+    distribution:'Wintergast op stranden, kwelders en dijken langs de kust', status:'Wintergast, ook doortrekker · oktober–maart',
+    statusExtra:'trekvogel', months:'okt-mrt', frequency:'schaars', breeding:'nee', redList:null },
   { id:'sp303', nameNL:'Ortolaan', nameEN:'Ortolan Bunting', nameSci:'Emberiza hortulana', family:'Gorzen', category:'trekvogel', icon:'🐦', regions:['agrarisch','heide'],
     fieldmarks:'Gors met groengrijze kop, gele keel en lichte oogring.',
     size:{ length:'15–16,5 cm', wingspan:'23–29 cm', weight:'20–28 g' },
@@ -3174,10 +3182,11 @@ export const REGIONS = {
   stedelijk:      { label:'Stedelijk',        tags:['stedelijk'] },
   agrarisch:      { label:'Agrarisch',        tags:['agrarisch','polder'] },
   bos:            { label:'Bos',              tags:['bos'] },
-  heide:          { label:'Heide',            tags:['heide','struweel'] },
-  duinen:         { label:'Duinen',           tags:['duinen','struweel','kust'] },
+  heide:          { label:'Heide',            tags:['heide'] },
+  duinen:         { label:'Duinen',           tags:['duinen'] },
+  struweel:       { label:'Struweel',         tags:['struweel'] },
   kust:           { label:'Kust & zee',       tags:['kust','zee','wad'] },
-  water:          { label:'Water & moeras',   tags:['moeras','rietland','rivierengebied','polder'] },
+  water:          { label:'Water & moeras',   tags:['water','moeras','rietland','rivierengebied'] },
 };
 
 export const REGION_KEYS = Object.keys(REGIONS);
@@ -3208,14 +3217,19 @@ export function getCategories() {
   return Object.keys(CATEGORY_LABELS);
 }
 
-/** Alleen categorieën waarin minstens één soort staat (geen lege filtertabs). */
+/** Een soort kan meerdere rollen hebben in Nederland. */
+export function matchesSpeciesStatus(species, status) {
+  return !status || species.category === status || species.statusExtra === status;
+}
+
+/** Alleen statussen waarin minstens één soort vindbaar is. */
 export function activeCategories() {
-  return getCategories().filter(key => SPECIES.some(s => s.category === key));
+  return getCategories().filter(key => SPECIES.some(s => matchesSpeciesStatus(s, key)));
 }
 
 export const CATEGORY_LABELS = {
   standvogel: 'Standvogels',
-  trekvogel:  'Trekvogels',
+  trekvogel:  'Doortrekkers',
   zomergast:  'Zomergasten',
   wintergast: 'Wintergasten',
   schaarsegast: 'Schaarse gasten',
@@ -3227,7 +3241,7 @@ export const CATEGORY_LABELS = {
 
 /** Korte enkelvoudige labels voor badges in lijstrijen (ruimte voor de soortnaam). */
 export const CATEGORY_BADGES = {
-  standvogel: 'Standvogel', trekvogel: 'Trekvogel', zomergast: 'Zomergast', wintergast: 'Wintergast',
+  standvogel: 'Standvogel', trekvogel: 'Doortrekker', zomergast: 'Zomergast', wintergast: 'Wintergast',
   schaarsegast: 'Schaars', dwaalgast: 'Dwaalgast', exoot: 'Exoot', ontsnapt: 'Ontsnapt', historisch: 'Historisch',
 };
 
@@ -3244,7 +3258,7 @@ export function searchSpecies(query, category = null, region = null) {
   const activeTags = region ? REGIONS[region]?.tags ?? [] : null;
 
   return SPECIES.filter(s => {
-    const matchCat    = !category || s.category === category;
+    const matchCat    = matchesSpeciesStatus(s, category);
     const matchRegion = !activeTags || s.regions?.some(r => activeTags.includes(r));
     if (!matchCat || !matchRegion) return false;
     if (!q) return true;
