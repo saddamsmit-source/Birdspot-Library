@@ -95,6 +95,32 @@
         "source": "https://commons.wikimedia.org/wiki/File:Fringilla_coelebs_-_Common_Chaffinch_XC465725.mp3",
         "modifications": "Fragment, omgezet naar MP3 (mono)"
       }
+    ],
+    "sp173": [
+      {
+        "file": "Call circus aeruginosus.ogg",
+        "audio": "/assets/species/audio/sp173-call.mp3",
+        "label": "Roep",
+        "note": "Voorbeeld van een roep van de Bruine Kiekendief. De bron specificeert geen leeftijd of geslacht.",
+        "author": "Sternanita2",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Call_circus_aeruginosus.ogg",
+        "modifications": "Omgezet naar MP3 (mono)"
+      }
+    ],
+    "sp249": [
+      {
+        "file": "Circus cyaneus - Hen Harrier XC558933.mp3",
+        "audio": "/assets/species/audio/sp249-female-call.mp3",
+        "label": "Bedelroep vrouwtje",
+        "note": "Vrouwtje roept tijdens de vlucht.",
+        "author": "Benoît Van Hecke",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Circus_cyaneus_-_Hen_Harrier_XC558933.mp3",
+        "modifications": "Fragment, omgezet naar MP3 (mono)"
+      }
     ]
   },
   "plumage": {
@@ -323,6 +349,180 @@
         "visualCheck": "Volwassen vogel aan de waterkant met donkere oogveeg, dikke rode snavel en witte vleugelpunten.",
         "alt": "Zwartkopmeeuw — Volwassen vogel aan de waterkant met donkere oogveeg, dikke rode snavel en witte vleugelpunten.",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    },
+    "sp173": {
+      "adult_m": {
+        "reuseGuidePhoto": true
+      },
+      "adult_f": {
+        "file": "Circus aeruginosus female Oulu Finland 2021-04-21.jpg",
+        "author": "Matti Virtala",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Circus_aeruginosus_female_Oulu_Finland_2021-04-21.jpg",
+        "image": "/assets/species/plumage/sp173-adult_f.webp",
+        "width": 1280,
+        "height": 885,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Bruine Kiekendief",
+        "latin": "Circus aeruginosus",
+        "batch": "raptors-10",
+        "reviewed": "2026-11-06",
+        "verification": "Bronmetadata en zichtbare kenmerken vergeleken met de gelinkte soortkaart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bruine-kiekendief",
+        "visualCheck": "Volwassen vrouwtje in frontale vlucht. Donkerbruin, met lichte kruin en voorrand van de vleugel.",
+        "alt": "Bruine Kiekendief — Volwassen vrouwtje in frontale vlucht. Donkerbruin, met lichte kruin en voorrand van de vleugel.",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "juv": {
+        "file": "iNaturalist photo 229518401",
+        "author": "Codrin Bucur",
+        "license": "CC BY 4.0",
+        "source": "https://www.inaturalist.org/photos/229518401",
+        "image": "/assets/species/plumage/sp173-juv.webp",
+        "width": 1024,
+        "height": 682,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Bruine Kiekendief",
+        "latin": "Circus aeruginosus",
+        "batch": "raptors-10",
+        "reviewed": "2026-11-06",
+        "verification": "Research-grade waarneming, leeftijd of geslacht geannoteerd en visueel gecontroleerd met de soortkaart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bruine-kiekendief",
+        "visualCheck": "Jonge vogel vlak boven riet, met donkerbruin kleed en lichte kruin.",
+        "alt": "Bruine Kiekendief — Jonge vogel vlak boven riet, met donkerbruin kleed en lichte kruin.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "observation": "https://www.inaturalist.org/observations/134634395"
+      }
+    },
+    "sp249": {
+      "adult_m": {
+        "reuseGuidePhoto": true
+      },
+      "adult_f": {
+        "file": "Blauwe kiekendief fem.jpg",
+        "author": "Maurice.dekens",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Blauwe_kiekendief_fem.jpg",
+        "image": "/assets/species/plumage/sp249-adult_f.webp",
+        "width": 1280,
+        "height": 853,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Blauwe Kiekendief",
+        "latin": "Circus cyaneus",
+        "batch": "raptors-10",
+        "reviewed": "2026-11-06",
+        "verification": "Bronmetadata en zichtbare kenmerken vergeleken met de gelinkte soortkaart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/blauwe-kiekendief",
+        "visualCheck": "Volwassen vrouwtje in vlucht van onderen, met duidelijke bandering op de vleugels en staart.",
+        "alt": "Blauwe Kiekendief — Volwassen vrouwtje in vlucht van onderen, met duidelijke bandering op de vleugels en staart.",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "juv": {
+        "file": "Blauwe Kiekendief.jpg",
+        "author": "Rob Zweers",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Blauwe_Kiekendief.jpg",
+        "image": "/assets/species/plumage/sp249-juv.webp",
+        "width": 1280,
+        "height": 720,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Blauwe Kiekendief",
+        "latin": "Circus cyaneus",
+        "batch": "raptors-10",
+        "reviewed": "2026-11-06",
+        "verification": "Bronmetadata en zichtbare kenmerken vergeleken met de gelinkte soortkaart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/blauwe-kiekendief",
+        "visualCheck": "Jong vrouwtje boven gras, met gebandeerde ondervleugels en een witte stuit.",
+        "alt": "Blauwe Kiekendief — Jong vrouwtje boven gras, met gebandeerde ondervleugels en een witte stuit.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+      }
+    },
+    "sp250": {
+      "adult_m": {
+        "reuseGuidePhoto": true
+      },
+      "adult_f": {
+        "file": "iNaturalist photo 626654808",
+        "author": "Tejas M",
+        "license": "CC BY 4.0",
+        "source": "https://www.inaturalist.org/photos/626654808",
+        "image": "/assets/species/plumage/sp250-adult_f.webp",
+        "width": 1024,
+        "height": 708,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Steppekiekendief",
+        "latin": "Circus macrourus",
+        "batch": "raptors-10",
+        "reviewed": "2026-11-06",
+        "verification": "Research-grade waarneming, leeftijd of geslacht geannoteerd en visueel gecontroleerd met de soortkaart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/steppekiekendief",
+        "visualCheck": "Volwassen vrouwtje in vlucht. Smalle vleugels, bandering op de ondervleugel en gestreepte onderzijde.",
+        "alt": "Steppekiekendief — Volwassen vrouwtje in vlucht. Smalle vleugels, bandering op de ondervleugel en gestreepte onderzijde.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "observation": "https://www.inaturalist.org/observations/343960250"
+      },
+      "juv": {
+        "file": "Лунь степовий Circus macrourus, на о. Джарилгач.jpg",
+        "author": "Bogomaz Mykhailo",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:%D0%9B%D1%83%D0%BD%D1%8C_%D1%81%D1%82%D0%B5%D0%BF%D0%BE%D0%B2%D0%B8%D0%B9_Circus_macrourus,_%D0%BD%D0%B0_%D0%BE._%D0%94%D0%B6%D0%B0%D1%80%D0%B8%D0%BB%D0%B3%D0%B0%D1%87.jpg",
+        "image": "/assets/species/plumage/sp250-juv.webp",
+        "width": 1280,
+        "height": 853,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Steppekiekendief",
+        "latin": "Circus macrourus",
+        "batch": "raptors-10",
+        "reviewed": "2026-11-06",
+        "verification": "Bronmetadata en zichtbare kenmerken vergeleken met de gelinkte soortkaart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/steppekiekendief",
+        "visualCheck": "Jonge vogel in vlucht met warme onderzijde, lichte halsring en donkere halsvlek.",
+        "alt": "Steppekiekendief — Jonge vogel in vlucht met warme onderzijde, lichte halsring en donkere halsvlek.",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    },
+    "sp251": {
+      "adult_m": {
+        "reuseGuidePhoto": true
+      },
+      "adult_f": {
+        "file": "A Montagu's Harrier Taking Flight (51621854680).jpg",
+        "author": "Hari K Patibanda",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:A_Montagu%27s_Harrier_Taking_Flight_(51621854680).jpg",
+        "image": "/assets/species/plumage/sp251-adult_f.webp",
+        "width": 1280,
+        "height": 720,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Grauwe Kiekendief",
+        "latin": "Circus pygargus",
+        "batch": "raptors-10",
+        "reviewed": "2026-11-06",
+        "verification": "Bronmetadata en zichtbare kenmerken vergeleken met de gelinkte soortkaart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grauwe-kiekendief",
+        "visualCheck": "Volwassen vrouwtje bij het opvliegen. Gestreepte onderzijde en duidelijke banden op de ondervleugel.",
+        "alt": "Grauwe Kiekendief — Volwassen vrouwtje bij het opvliegen. Gestreepte onderzijde en duidelijke banden op de ondervleugel.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+      },
+      "juv": {
+        "file": "Circus pygargus juvenile flight.jpg",
+        "author": "Rodrigo de Almeida from Marco de Canaveses, Portugal",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Circus_pygargus_juvenile_flight.jpg",
+        "image": "/assets/species/plumage/sp251-juv.webp",
+        "width": 972,
+        "height": 708,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Grauwe Kiekendief",
+        "latin": "Circus pygargus",
+        "batch": "raptors-10",
+        "reviewed": "2026-11-06",
+        "verification": "Bronmetadata en zichtbare kenmerken vergeleken met de gelinkte soortkaart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grauwe-kiekendief",
+        "visualCheck": "Jonge vogel in vlucht. Warmbruine onderzijde en gebandeerde vleugels en staart.",
+        "alt": "Grauwe Kiekendief — Jonge vogel in vlucht. Warmbruine onderzijde en gebandeerde vleugels en staart.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
       }
     }
   }

@@ -124,7 +124,7 @@ function plumageCard(ic, title, text, badge, photo) {
 function comparisonsPanel(id) {
   const comparisons = GUIDE_COMPARISONS.filter(pair => pair.birds.some(bird => bird.id === id));
   if (!comparisons.length) return '';
-  return '<h3 class="sd-h">Lijkt op</h3>' + comparisons.map(({birds, tip}) => {
+  return '<h3 class="sd-h">Lijkt op</h3>' + comparisons.map(({birds, tip, label}) => {
     const ordered = [...birds].sort((a, b) => Number(b.id === id) - Number(a.id === id));
     const cards = ordered.map(bird => {
       const name = speciesById.get(bird.id).nameNL;
@@ -138,7 +138,7 @@ function comparisonsPanel(id) {
         ${bird.id === id ? '' : `<button type="button" class="sd-compare-open" data-compare-species="${esc(bird.id)}">Open soortkaart<span class="visually-hidden"> ${esc(name)}</span></button>`}
       </div>`;
     });
-    return `<div class="sd-compare"><p>${esc(tip)}</p><div class="sd-compare-grid">${cards.join('')}</div></div>`;
+    return `<div class="sd-compare">${label ? `<h4 class="sd-compare-label">${esc(label)}</h4>` : ''}<p>${esc(tip)}</p><div class="sd-compare-grid">${cards.join('')}</div></div>`;
   }).join('');
 }
 
@@ -225,7 +225,9 @@ export function monthBar({months, category, breeding: breedingStatus}, breedingM
   let breedingLabel = '';
   if (breeding.size) {
     breedingLabel = 'Gebruikelijke broedperiode · ' + [...breeding].sort((a, b) => a - b).map(i => MONTH_NAMES[i]).join(', ');
-  } else if (breedingStatus === 'ja' || breedingStatus === 'incidenteel') {
+  } else if (breedingStatus === 'incidenteel') {
+    breedingLabel = 'Incidentele broedgevallen in Nederland.';
+  } else if (breedingStatus === 'ja') {
     breedingLabel = 'Broedmaanden volgen nog.';
   }
   const legend = kind === 'overig' ? [...MONTH_LEGEND, [kind, label]] : MONTH_LEGEND;

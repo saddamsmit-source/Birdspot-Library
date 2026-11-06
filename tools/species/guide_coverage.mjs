@@ -1,0 +1,72 @@
+import assert from 'node:assert/strict';
+import { existsSync } from 'node:fs';
+import { SPECIES } from '../../src/data/species.js';
+import { GUIDE_PHOTOS } from '../../src/features/species/guidePhotos.js';
+import { GUIDE_AUDIO, GUIDE_PLUMAGE } from '../../src/features/species/guideMedia.js';
+import { GUIDE_COMPARISONS } from '../../src/features/species/guideComparisons.js';
+
+const species = new Map(SPECIES.map(bird => [bird.id, bird]));
+
+function checkMedia(media, path) {
+  assert.ok(path?.startsWith('/assets/'), `Ontbrekend lokaal mediapad: ${path}`);
+  assert.ok(existsSync(new URL('../..' + path, import.meta.url)), `Ontbrekend bestand: ${path}`);
+  assert.ok(media.author && media.license && media.licenseUrl?.startsWith('https://') &&
+    media.source?.startsWith('https://'), `Onvolledige bronvermelding: ${path}`);
+}
+
+function checkPhoto(id, photo) {
+  assert.equal(photo?.latin, species.get(id)?.nameSci, `Verkeerde of ontbrekende foto: ${id}`);
+  checkMedia(photo, photo.image);
+}
+
+for (const [id, photo] of Object.entries(GUIDE_PHOTOS)) checkPhoto(id, photo);
+for (const [id, cards] of Object.entries(GUIDE_PLUMAGE)) {
+  for (const [plumage, photo] of Object.entries(cards)) {
+    assert.ok(species.get(id)?.plumage?.[plumage], `Kleedkaart ontbreekt: ${id} ${plumage}`);
+    checkPhoto(id, photo.reuseGuidePhoto ? GUIDE_PHOTOS[id] : photo);
+  }
+}
+for (const [id, clips] of Object.entries(GUIDE_AUDIO)) {
+  assert.ok(species.has(id), `Onbekende soort bij opname: ${id}`);
+  for (const clip of clips) checkMedia(clip, clip.audio);
+}
+for (const {birds, tip} of GUIDE_COMPARISONS) {
+  assert.ok(tip && birds.length === 2 && birds[0].id !== birds[1].id, 'Ongeldige vergelijking');
+  for (const bird of birds) {
+    const {id, plumage} = bird;
+    assert.ok(bird.source && bird.marks && species.has(id), `Ongeldige vergelijking: ${id}`);
+    const photo = GUIDE_PLUMAGE[id]?.[plumage];
+    checkPhoto(id, !plumage || photo?.reuseGuidePhoto ? GUIDE_PHOTOS[id] : photo);
+  }
+}
+
+const rows = SPECIES.map(bird => {
+  const plumagePhotos = Object.keys(GUIDE_PLUMAGE[bird.id] || {});
+  return {
+    id: bird.id,
+    name: bird.nameNL,
+    latin: bird.nameSci,
+    group: bird.family,
+    status: bird.category,
+    documentedReview: bird.guideReview?.date ?? null,
+    guidePhoto: Boolean(GUIDE_PHOTOS[bird.id]),
+    plumagePhotos,
+    plumageWithoutPhoto: Object.keys(bird.plumage || {}).filter(kind =>
+      bird.plumage[kind] && !plumagePhotos.includes(kind)),
+    recordings: (GUIDE_AUDIO[bird.id] || []).map(clip => clip.label),
+    comparisons: GUIDE_COMPARISONS.filter(pair => pair.birds.some(member => member.id === bird.id)).length,
+  };
+});
+
+const summary = {
+  species: rows.length,
+  documentedReviews: rows.filter(bird => bird.documentedReview).length,
+  guidePhotos: rows.filter(bird => bird.guidePhoto).length,
+  speciesWithPlumagePhotos: rows.filter(bird => bird.plumagePhotos.length).length,
+  plumagePhotos: rows.flatMap(bird => bird.plumagePhotos).length,
+  speciesWithRecordings: rows.filter(bird => bird.recordings.length).length,
+  recordings: rows.flatMap(bird => bird.recordings).length,
+  speciesWithComparisons: rows.filter(bird => bird.comparisons).length,
+  comparisons: GUIDE_COMPARISONS.length,
+};
+console.log(JSON.stringify(process.argv.includes('--summary') ? summary : {summary, species: rows}, null, 2));

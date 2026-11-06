@@ -58,6 +58,70 @@ export const GUIDE_COMPARISONS = [
     ],
     tip: 'Vergelijk de vrouwtjes. De spiegel is het duidelijkst in vlucht of bij een gestrekte vleugel.',
   },
+  {
+    label: 'Bruine en Blauwe · volwassen mannetjes',
+    birds: [
+      {id: 'sp173', source: 'bruine-kiekendief', plumage: 'adult_m', marks: 'Bruin lijf met grijze vleugelvelden en grijze staart. De vleugelpunten zijn zwart.'},
+      {id: 'sp249', source: 'blauwe-kiekendief', plumage: 'adult_m', marks: 'Licht blauwgrijs lijf, witte buik en witte stuit. De vleugelpunten zijn zwart.'},
+    ],
+    tip: 'Begin bij de kleur van het lijf. Kijk bij een draai in de vlucht ook naar de stuit, de plek net boven de staart.',
+  },
+  {
+    label: 'Bruine en Blauwe · volwassen vrouwtjes',
+    birds: [
+      {id: 'sp173', source: 'bruine-kiekendief', plumage: 'adult_f', marks: 'Donkerbruin met een lichte kruin en keel, vaak ook een lichte vleugelvoorrand. Geen brede witte stuit.'},
+      {id: 'sp249', source: 'blauwe-kiekendief', plumage: 'adult_f', marks: 'Bruin met brede witte stuit. Van onderen vallen donkere banden op de vleugels en staart op.'},
+    ],
+    tip: 'Van onderen zijn de vleugelbanden goed te vergelijken. De witte stuit zie je van boven of wanneer de vogel wegdraait.',
+  },
+  {
+    label: 'Bruine en Blauwe · jonge vogels',
+    birds: [
+      {id: 'sp173', source: 'bruine-kiekendief', plumage: 'juv', marks: 'Meestal vrijwel egaal donkerbruin, met een lichte kruin. Mist een brede witte stuit.'},
+      {id: 'sp249', source: 'blauwe-kiekendief', plumage: 'juv', marks: 'Bruin met witte stuit. De staart en ondervleugels zijn gebandeerd.'},
+    ],
+    tip: 'Beide zijn bruin. Gebruik de stuit samen met de bandering. Bij een kort silhouet kan de soort onzeker blijven.',
+  },
+  {
+    label: 'Blauwe en Grauwe · volwassen vrouwtjes',
+    birds: [
+      {id: 'sp249', source: 'blauwe-kiekendief', plumage: 'adult_f', marks: 'Forsere vleugels. Bij goed gespreide vleugelpunten zijn doorgaans vijf vingertoppen zichtbaar.'},
+      {id: 'sp251', source: 'grauwe-kiekendief', plumage: 'adult_f', marks: 'Slanker, met smallere vleugels. Doorgaans vier zichtbare vingertoppen bij goed gespreide vleugels.'},
+    ],
+    tip: 'Gebruik vleugelvorm én vlucht. Het aantal zichtbare vingers kan wisselen door houding, rui en kijkhoek.',
+  },
+  {
+    label: 'Blauwe en Steppe · volwassen mannetjes',
+    birds: [
+      {id: 'sp249', source: 'blauwe-kiekendief', plumage: 'adult_m', marks: 'Bredere vleugel, met een relatief groot zwart uiteinde en een donkere achterrand van de bovenvleugel.'},
+      {id: 'sp250', source: 'steppekiekendief', plumage: 'adult_m', marks: 'Bleker met smallere vleugels en een kleinere, wigvormige zwarte tekening op de handpennen.'},
+    ],
+    tip: 'Vergelijk de vorm van het zwart aan de vleugelpunt en de breedte van de vleugel samen.',
+  },
+  {
+    label: 'Grauwe en Steppe · volwassen mannetjes',
+    birds: [
+      {id: 'sp251', source: 'grauwe-kiekendief', plumage: 'adult_m', marks: 'Donkerder grijs, met zwarte vleugelpunten en donkere banden over de armvleugel.'},
+      {id: 'sp250', source: 'steppekiekendief', plumage: 'adult_m', marks: 'Bleker lijf en een smalle zwarte wig aan het uiteinde van de vleugel.'},
+    ],
+    tip: 'Kijk naar de armvleugel, het deel tussen het lijf en de handpennen. Bij de Grauwe vallen daar donkere banden op.',
+  },
+  {
+    label: 'Grauwe en Steppe · volwassen vrouwtjes',
+    birds: [
+      {id: 'sp251', source: 'grauwe-kiekendief', plumage: 'adult_f', marks: 'Meestal een grotere lichte zone rond het oog en duidelijkere lichte banden op de onderzijde van de armvleugel.'},
+      {id: 'sp250', source: 'steppekiekendief', plumage: 'adult_f', marks: 'Let op de lichte halsring, donkere oorstreek en smalle, vaak minder scherp begrensde banden op de ondervleugel.'},
+    ],
+    tip: 'Dit is een lastige vergelijking. Combineer koptekening en ondervleugel, liefst op meerdere scherpe vluchtfoto’s.',
+  },
+  {
+    label: 'Grauwe en Steppe · jonge vogels',
+    birds: [
+      {id: 'sp251', source: 'grauwe-kiekendief', plumage: 'juv', marks: 'Vaak egaal roestoranje onder. De donkere achterrand van de handpennen is van onderen meestal scherper begrensd.'},
+      {id: 'sp250', source: 'steppekiekendief', plumage: 'juv', marks: 'Eveneens roestoranje onder. Lichte halsring met donkere halsvlek en meestal minder scherp begrensde donkere achterrand op de handpennen.'},
+    ],
+    tip: 'Roestoranje onderzijde komt bij beide voor. Beoordeel kop én uitgespreide ondervleugel. Laat de determinatie open als de details ontbreken.',
+  },
 ];
 
 export function comparisonSource(bird) {

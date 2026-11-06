@@ -2344,18 +2344,18 @@ export const LIFE = Object.freeze({
  },
  "sp173": {
   "breeding": {
-   "period": "apr–jul",
-   "nest": "Nest van riet op de grond in dichte rietvelden",
-   "eggs": "4–5",
-   "incubation": "31–36 dagen",
+   "period": "apr–jun",
+   "nest": "Van plantenmateriaal, op de grond of boven water. Vaak in riet, soms in akkers.",
+   "eggs": "3–6",
+   "incubation": "31–38 dagen",
    "fledging": "35–40 dagen",
    "broods": "1",
-   "months": "apr-jul"
+   "months": "apr-jun"
   },
-  "diet": "Kleine vogels, jonge eenden, muizen en kikkers",
+  "diet": "Vooral kleine zoogdieren en jonge vogels. Ook eieren, kikkers en aas.",
   "behaviour": "Zweeft laag boven riet met vleugels in een ondiepe V; prooioverdracht in de lucht",
   "migration": "Zomergast (mrt–okt); een deel overwintert in Nederland",
-  "voice": "Hoog \"kie-oe\" in de balts"
+  "voice": "Het mannetje roept hoog tijdens de baltsvlucht. Het vrouwtje heeft een nog hogere roep."
  },
  "sp174": {
   "breeding": {
@@ -3172,40 +3172,47 @@ export const LIFE = Object.freeze({
  },
  "sp249": {
   "breeding": {
-   "period": "apr–jul",
-   "nest": "Nest van riet en takjes op de grond in duinen, heide of kwelder",
-   "eggs": "4–6",
-   "incubation": "29–31 dagen",
+   "period": "apr–jun",
+   "nest": "Op de grond in hoge vegetatie, bijvoorbeeld in duinen, rietland of graan.",
+   "eggs": "Meestal 3–6",
+   "incubation": "29–39 dagen",
    "fledging": "32–42 dagen",
    "broods": "1",
-   "months": "apr-jul"
+   "months": "apr-jun"
   },
-  "diet": "Muizen en kleine vogels",
-  "behaviour": "Jaagt laag boven open land; slaapt in de winter in groepen in riet",
-  "migration": "Wintergast (okt–apr); kleine, afnemende broedpopulatie op de Wadden",
-  "voice": "Snel \"kek-kek-kek\" bij het nest"
+  "diet": "Vooral kleine zoogdieren zoals woelmuizen. Ook zangvogels en jongen van grotere vogels.",
+  "behaviour": "Jaagt in lage zoekvlucht boven open terrein en onderbreekt die soms met kort bidden.",
+  "migration": "In Nederland vooral in de winter. Daarnaast een uiterst schaarse broedvogel.",
+  "voice": "In de broedtijd onder meer snelle kekkerende roepen en hoge fluitroepen. Ook in de winter zijn roepen te horen."
  },
  "sp250": {
-  "breeding": null,
-  "diet": "Muizen en kleine vogels",
-  "behaviour": "Slanker dan de Blauwe Kiekendief; man zeer licht",
-  "migration": "Schaarse doortrekker (apr–mei, aug–okt)",
-  "voice": "Meestal stil buiten de broedtijd"
+  "breeding": {
+   "period": "Incidentele broedgevallen in Nederland, onder meer in 2017 en 2019",
+   "nest": "Nest op de grond. In het normale broedgebied vaak in grassteppe. In Nederland zijn nesten in graanakkers vastgesteld.",
+   "eggs": "Meestal 4–5",
+   "incubation": "29–30 dagen",
+   "fledging": "35–45 dagen",
+   "broods": "1"
+  },
+  "diet": "Vooral kleine zoogdieren en vogels. Ook reptielen en insecten.",
+  "behaviour": "Zoekt laag boven open grasland en akkers naar prooi.",
+  "migration": "Schaarse doortrekker. Het belangrijkste overwinteringsgebied ligt in Afrika en Zuid-Azië.",
+  "voice": "Roept weinig. Het mannetje kan een langgerekte triller laten horen. Het vrouwtje antwoordt vaak met een aflopende fluitroep."
  },
  "sp251": {
   "breeding": {
-   "period": "mei–aug",
+   "period": "mei–jun",
    "nest": "Nest op de grond in graan of luzerne",
    "eggs": "3–5",
    "incubation": "28–29 dagen",
    "fledging": "28–35 dagen",
    "broods": "1",
-   "months": "mei-aug"
+   "months": "mei-jun"
   },
   "diet": "Veldmuizen, kleine vogels en grote insecten",
   "behaviour": "Zweeft laag boven akkers; zeer zeldzame broedvogel in Oost-Groningen",
   "migration": "Zomergast (apr–sep); overwintert in Afrika",
-  "voice": "Snel \"kek-kek-kek\" bij het nest"
+  "voice": "Vooral in de broedtijd korte kekkerende reeksen en soms scherpe fluitroepen."
  },
  "sp252": {
   "breeding": {

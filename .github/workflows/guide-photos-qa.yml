@@ -19,4 +19,8 @@ jobs:
           python-version: '3.12'
       - run: pip install -r tests/requirements.txt
       - run: python -m playwright install --with-deps chromium
+      - run: |
+          python tools/species/build.py
+          git diff --exit-code src/features/species/guidePhotos.js src/features/species/guideMedia.js
+          node tools/species/guide_coverage.mjs --summary
       - run: python tests/test_guide_photos.py

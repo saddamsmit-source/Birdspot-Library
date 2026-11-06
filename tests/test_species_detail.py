@@ -17,6 +17,7 @@ Birdspot Library — H2–H4: soortdetail met tabbladen
   H3-04  kalender neemt ook de broedtekst over (Pimpelmees); lijn onder de juiste maanden in beide thema's
   H4-01  soortvergelijking en lokale opnamen, inclusief openen foto en wisselen naar verwante soort
   H4-02  vergelijking toont het juiste kleed en Verenkleed heeft lokale winter-, broed- en ruifoto's
+  H4-03  kiekendieven vergelijken per kleed; incidentele Nederlandse broedgevallen krijgen geen vast maandbereik
 
 Starten (vanuit repo-root):  python tests/test_species_detail.py
 """
@@ -382,6 +383,30 @@ def main():
             assert eclipse.locator('img').get_attribute("src") == "/assets/species/plumage/sp089-eclipse.webp"
             close_detail()
             print("H4-02 OK — jonge specht, twee meeuwen in broedkleed en de Wilde Eend in eclipskleed")
+
+            open_species("Bruine Kiekendief", "sp173")
+            comparisons = p.locator('.sd-compare')
+            for label, key, blue_path in (
+                ("volwassen mannetjes", "Man", "/assets/species/sp249.webp"),
+                ("volwassen vrouwtjes", "Vrouw", "/assets/species/plumage/sp249-adult_f.webp"),
+                ("jonge vogels", "Juveniel", "/assets/species/plumage/sp249-juv.webp"),
+            ):
+                pair = comparisons.filter(has=p.get_by_role("heading", name=f"Bruine en Blauwe · {label}"))
+                assert pair.locator('.sd-badge').all_text_contents() == [key, key]
+                assert pair.locator('img').count() == 2
+                assert pair.locator('img').nth(1).get_attribute("src") == blue_path
+                for picture in pair.locator('img').all():
+                    picture.scroll_into_view_if_needed()
+                    picture.evaluate("img => img.decode()")
+            assert p.get_by_label("Roep van Bruine Kiekendief").count() == 1
+            close_detail()
+            open_species("Steppekiekendief", "sp250")
+            tab("status")
+            assert p.get_by_text("Incidentele broedgevallen in Nederland.", exact=True).is_visible()
+            p.get_by_text("Incidentele broedgevallen in Nederland, onder meer in 2017 en 2019", exact=True).wait_for()
+            assert p.locator('#sdPanel-status .sd-month-breeding').count() == 0
+            close_detail()
+            print("H4-03 OK — Bruine/Blauwe per kleed en Steppekiekendief zonder vaste broedmaanden")
 
             assert not errors, f"H2-08 paginafouten: {errors}"
             print("H2-08 OK — geen paginafouten")
