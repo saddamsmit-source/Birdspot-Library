@@ -106,6 +106,7 @@ def main():
             page.locator("#fab").click()
             select_species(page)
             page.locator("#sightLocation").fill("Limburg testbos")
+            page.locator('#behaviorChips [data-value="nestmateriaal dragen"]').click()
             choose_pin(page,50.95,5.83)
             page.screenshot(path=str(SHOTS/"sighting_manual_pin_390.png"),animations="disabled")
             all_records=save(page)
@@ -114,6 +115,7 @@ def main():
             assert seen["observationMethod"]=="seen" and seen["identificationSource"]=="self"
             assert seen["lat"]!=heard["lat"] and seen["lon"]!=heard["lon"]
             assert seen["locationName"]=="Limburg testbos" and seen["photoIds"]==[]
+            assert seen["behavior"] == "nestmateriaal dragen"
             assert page.evaluate("""() => JSON.parse(localStorage.getItem('birdspot-sightings')).sightings.some(s=>s.speciesId==='sp001' && ['seen','both'].includes(s.observationMethod))""")
 
             # Third sighting preserves the earlier visual evidence.
@@ -186,6 +188,7 @@ def main():
             assert 'Gezien' in stats and 'Gehoord' in stats and 'Wijze onbekend' in stats,stats
             row=page.locator('[data-sighting-id="'+heard['id']+'"]')
             assert 'Brabant testpark' in row.inner_text() and 'Gehoord' in row.inner_text(),row.inner_text()
+            assert page.locator('[data-sighting-id="'+seen['id']+'"] .sd-breeding-observation').inner_text().lower() == "nestmateriaal dragen"
             page.screenshot(path=str(SHOTS/'sighting_information_guide_390.png'),animations='disabled')
             page.locator('.signature-species-detail-close').click()
 
@@ -209,6 +212,7 @@ def main():
                 assert restored["identificationSource"]=="merlin"
                 assert restored["observationMethod"]=="heard"
                 assert len(restored["photoIds"])==2
+                assert next(x for x in data["sightings"] if x["id"]==seen["id"])["behavior"] == "nestmateriaal dragen"
                 # Remove both synthetic media from IDB and prove ZIP restore brings them back.
                 page.evaluate("""async ids=>{
                   const {getDB}=await import('/src/data/db.js');

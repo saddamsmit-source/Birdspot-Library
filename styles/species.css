@@ -723,6 +723,36 @@
 }
 .sd-plumage strong { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-8); color: var(--ink); }
 .sd-plumage p { margin: 2px 0 0; color: var(--ink-2); line-height: 1.45; }
+.sd-plumage > div { min-width: 0; flex: 1; }
+.sd-voice-section { display: grid; gap: var(--space-8); }
+.sd-voice-section:empty, .sd-voice-text:empty { display: none; }
+.sd-compare, .sd-audio {
+  padding: var(--space-12); border: 1px solid var(--line); border-radius: var(--r-sm); background: var(--surface);
+}
+.sd-compare-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-8); }
+.sd-compare-card {
+  display: grid; align-content: start; gap: var(--space-8); padding: var(--space-8);
+  border-radius: var(--r-sm); background: var(--surface-2);
+}
+.sd-compare-card .sd-badge { justify-self: start; padding-left: 0; }
+.sd-compare p, .sd-audio p { margin: 0 0 var(--space-8); color: var(--ink-2); line-height: 1.45; }
+.sd-compare-card p { margin: 0; font-size: var(--fs-meta); }
+.sd-compare-open {
+  min-height: 40px; border: 1px solid var(--line); border-radius: var(--r-sm);
+  background: var(--surface); color: var(--ink); font-size: var(--fs-meta); cursor: pointer;
+}
+.sd-field-photo {
+  display: block; width: 100%; margin-top: var(--space-8); padding: 0;
+  border: 0; border-radius: var(--r-sm); overflow: hidden; background: var(--bg); cursor: zoom-in;
+}
+.sd-field-photo img { display: block; width: 100%; height: 160px; object-fit: contain; }
+.sd-compare-card .sd-field-photo { margin-top: 0; }
+.sd-compare-card .sd-field-photo img { height: 100px; }
+.sd-media-credit { display: block; margin-top: 4px; color: var(--ink-2); font-size: var(--fs-meta); overflow-wrap: anywhere; }
+.sd-media-credit a { color: inherit; text-decoration: underline; }
+.sd-audio audio { display: block; width: 100%; height: 44px; }
+.sd-audio .sd-audio-error { margin-top: var(--space-8); }
+.sd-breeding-observation::first-letter { text-transform: uppercase; }
 .sd-badge {
   font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: var(--r-pill);
   background: var(--surface-2); color: var(--brand-mid);

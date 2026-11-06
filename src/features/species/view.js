@@ -5,7 +5,7 @@
  */
 
 import { SPECIES, CATEGORY_LABELS, REGIONS, searchSpecies, activeCategories, CATEGORY_BADGES, matchesSpeciesStatus } from '../../data/species.js';
-import { tabBar, recognitionPanel, statusPanel, wherePanel, wherePlaces, minePanel, sightingStats } from './detailSections.js';
+import { tabBar, recognitionPanel, voicePanel, voiceText, statusPanel, wherePanel, wherePlaces, minePanel, sightingStats } from './detailSections.js';
 import { SEASONS, SEASON_ORDER, toggleSeason, seasonPeriod, presentIn, periodMonthsText, isYearRound } from '../../data/seasons.js';
 import { getDB, getPhotosBySpecies, getPhoto } from '../../data/db.js';
 import { getSightings, getSightingsSnapshot }                 from '../../data/sightings.js';
@@ -15,7 +15,7 @@ import { getCollectionIds, toggleCollectionItem } from '../../storage/collection
 
 import { GUIDE_PHOTOS } from './guidePhotos.js';
 
-import { methodLabel, sourceLabel } from '../sightings/evidence.js';
+import { BREEDING_BEHAVIORS, methodLabel, sourceLabel } from '../sightings/evidence.js';
 function guideSightings() { return getSightingsSnapshot().filter(s=>s && typeof s === 'object' && typeof s.speciesId === 'string'); }
 function getObservedIds() { return new Set(guideSightings().map(s=>s.speciesId)); }
 
@@ -491,7 +491,7 @@ function counterText(seenIds) {
 }
 
 // ── Detail sheet ───────────────────────────────────────────────
-function openDetail(speciesId, screenEl) {
+function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
   const s = SPECIES.find(x => x.id === speciesId);
   if (!s) return;
   const ctx = _speciesCtx;
@@ -504,7 +504,7 @@ function openDetail(speciesId, screenEl) {
   const photoList = [];
   let closed = false;
   let viewer = null;
-  let previousFocus = document.activeElement;
+  let viewerFocus = null;
 
   const sheet = document.createElement('div');
   sheet.className = 'sheet-overlay signature-species-detail-overlay';
@@ -554,6 +554,7 @@ function openDetail(speciesId, screenEl) {
   sheet.querySelector('.sd-tabs')?.addEventListener('click', e => {
     const tab = e.target.closest('[data-sd-tab]');
     if (!tab) return;
+    if (tab.dataset.sdTab !== 'herkenning') sheet.querySelectorAll('.sd-audio audio').forEach(audio => audio.pause());
     sheet.querySelectorAll('[data-sd-tab]').forEach(b => {
       const on = b === tab;
       b.classList.toggle('is-active', on);
@@ -564,15 +565,26 @@ function openDetail(speciesId, screenEl) {
   import('../../data/speciesLife.js').then(({ LIFE }) => {
     const life = LIFE[speciesId];
     if (!life || closed) return;
-    sheet.querySelector('#sdPanel-herkenning').innerHTML = recognitionPanel(s, life);
+    const voice = sheet.querySelector('#sdVoice');
+    const description = voice.querySelector('.sd-voice-text');
+    if (description) {
+      if (life.voice) description.innerHTML = voiceText(life.voice);
+    } else {
+      voice.innerHTML = voicePanel(s, life.voice);
+    }
     sheet.querySelector('#sdPanel-status').innerHTML = statusPanel(s, life);
   }).catch(() => {});
   function closeViewer() {
-    if (viewer) { viewer.remove(); viewer = null; }
+    if (!viewer) return;
+    viewer.remove();
+    viewer = null;
+    if (!closed) viewerFocus?.focus();
+    viewerFocus = null;
   }
   function close(animate = true) {
     if (closed) return;
     closed = true;
+    sheet.querySelectorAll('.sd-audio audio').forEach(audio => audio.pause());
     closeViewer();
     document.removeEventListener('keydown',keyHandler);
     sheet.classList.remove('open');
@@ -581,7 +593,7 @@ function openDetail(speciesId, screenEl) {
       for (const url of photosUrls) revokePhotoUrl(url);
       photosUrls.clear();
       if (ctx?.detailCleanup === close) ctx.detailCleanup = null;
-      previousFocus?.focus?.();
+      returnFocus?.focus?.();
     };
     if (animate && sheet.isConnected) setTimeout(cleanup,250);
     else cleanup();
@@ -596,7 +608,21 @@ function openDetail(speciesId, screenEl) {
   document.addEventListener('keydown',keyHandler);
   sheet.addEventListener('click',e => {
     if (e.target===sheet || e.target.closest('.signature-species-detail-close')) close();
+    const photo = e.target.closest('[data-guide-image]');
+    if (photo) openViewer(photo.dataset.guideImage, photo.querySelector('img').alt, photo);
+    const compare = e.target.closest('[data-compare-species]');
+    if (compare) {
+      close(false);
+      openDetail(compare.dataset.compareSpecies, screenEl, returnFocus);
+    }
   });
+  sheet.addEventListener('play', e => {
+    if (!e.target.matches('.sd-audio audio')) return;
+    sheet.querySelectorAll('.sd-audio audio').forEach(audio => { if (audio !== e.target) audio.pause(); });
+  }, true);
+  sheet.addEventListener('error', e => {
+    if (e.target.matches('.sd-audio audio')) e.target.nextElementSibling.hidden = false;
+  }, true);
 
   sheet.querySelector('#speciesDetailMedia').addEventListener('click',() => {
     close(false);
@@ -609,20 +635,25 @@ function openDetail(speciesId, screenEl) {
     const index=Number(button.dataset.photoIndex);
     const item=photoList[index];
     if (!item) return;
+    openViewer(item.url, s.nameNL, button);
+  });
+
+  function openViewer(url, alt, trigger) {
     closeViewer();
+    viewerFocus=trigger;
     viewer=document.createElement('div');
     viewer.className='signature-lightbox';
     viewer.setAttribute('role','dialog');
     viewer.setAttribute('aria-modal','true');
     viewer.setAttribute('aria-label','Vogelfoto bekijken');
     viewer.innerHTML='<button type="button" class="signature-lightbox-close" aria-label="Sluit foto">×</button>'+
-      '<img src="'+item.url+'" alt="'+escHtml(s.nameNL)+'">';
+      '<img src="'+escHtml(url)+'" alt="'+escHtml(alt)+'">';
     document.body.appendChild(viewer);
     viewer.querySelector('button').focus();
     viewer.addEventListener('click',event=>{
       if(event.target===viewer||event.target.closest('button')) closeViewer();
     });
-  });
+  }
 
   (async()=>{
     try {
@@ -692,8 +723,9 @@ function openDetail(speciesId, screenEl) {
       else {
         rows.innerHTML=matches.map(item=>
           '<button type="button" class="signature-species-sighting" data-sighting-id="'+escHtml(item.id)+'">' +
-          '<span><strong>'+escHtml(fmtDate(item.date))+'</strong><small>'+escHtml(loadPlaces().find(p=>p.id===item.placeId)?.name || item.locationName || (Number.isFinite(item.lat)&&Number.isFinite(item.lon)?item.lat.toFixed(5)+', '+item.lon.toFixed(5):'Locatie niet vastgelegd'))+'</small><small>'+escHtml(methodLabel(item))+' · '+escHtml(sourceLabel(item))+'</small></span>' +
-          '<span aria-hidden="true">↗</span></button>').join('');
+          '<span><strong>'+escHtml(fmtDate(item.date))+'</strong><small>'+escHtml(loadPlaces().find(p=>p.id===item.placeId)?.name || item.locationName || (Number.isFinite(item.lat)&&Number.isFinite(item.lon)?item.lat.toFixed(5)+', '+item.lon.toFixed(5):'Locatie niet vastgelegd'))+'</small><small>'+escHtml(methodLabel(item))+' · '+escHtml(sourceLabel(item))+'</small>' +
+          (BREEDING_BEHAVIORS.includes(item.behavior) ? '<small class="sd-breeding-observation">'+escHtml(item.behavior)+'</small>' : '') +
+          '</span><span aria-hidden="true">↗</span></button>').join('');
         rows.addEventListener('click',e=>{
           const btn=e.target.closest('[data-sighting-id]');
           const record=matches.find(item=>item.id===btn?.dataset.sightingId);

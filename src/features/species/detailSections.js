@@ -6,9 +6,12 @@
  * Lege onderdelen worden niet getoond (Handbook D11); ontbrekende inhoud is zichtbaar ontbrekend.
  */
 import { observedVisually, observedBySound, validPin } from '../sightings/evidence.js';
-import { CATEGORY_BADGES } from '../../data/species.js';
+import { CATEGORY_BADGES, SPECIES } from '../../data/species.js';
 import { monthSet, MONTH_NAMES } from '../../data/seasons.js';
 import { DISTRIBUTION, GBIF_YEARS, MAP_CELL, MAP_COLUMNS, MAP_PATHS, MAP_VIEW_BOX } from '../../data/speciesDistribution.js';
+import { GUIDE_COMPARISONS, comparisonSource } from './guideComparisons.js';
+import { GUIDE_PHOTOS } from './guidePhotos.js';
+import { GUIDE_AUDIO, GUIDE_PLUMAGE } from './guideMedia.js';
 
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
@@ -88,8 +91,70 @@ function tile(ic, label, value, extra = '') {
   return `<div class="sd-tile">${icon(ic)}<span class="sd-tile__label">${esc(label)}</span><strong class="sd-tile__value">${value}</strong>${extra}</div>`;
 }
 
-function plumageCard(ic, title, text, badge = '') {
-  return `<div class="sd-plumage">${icon(ic)}<div><strong>${esc(title)}${badge}</strong><p>${esc(text)}</p></div></div>`;
+const PLUMAGE = [
+  ['adult_m', 'male', 'Man'], ['adult_f', 'female', 'Vrouw'],
+  ['breeding', 'sun', 'Broedkleed', 'voorjaar en zomer'],
+  ['winter', 'snow', 'Winterkleed', 'najaar en winter'],
+  ['eclipse', 'moon', 'Eclipskleed', 'zomerrui'],
+  ['juv', 'chick', 'Juveniel'], ['jaarling', 'chick', 'Jaarling'],
+];
+const speciesById = new Map(SPECIES.map(bird => [bird.id, bird]));
+
+function plumagePhoto(id, kind) {
+  if (!kind) return GUIDE_PHOTOS[id];
+  const photo = GUIDE_PLUMAGE[id]?.[kind];
+  return photo?.reuseGuidePhoto ? GUIDE_PHOTOS[id] : photo;
+}
+
+function mediaCredit(media) {
+  return `<small class="sd-media-credit">${esc(media.author)} · <a href="${esc(media.licenseUrl)}" target="_blank" rel="noopener noreferrer">${esc(media.license)}</a> · <a href="${esc(media.source)}" target="_blank" rel="noopener noreferrer">Bron</a> · ${esc(media.modifications)}</small>`;
+}
+
+function fieldPhoto(photo) {
+  return `<button type="button" class="sd-field-photo" data-guide-image="${esc(photo.image)}" aria-label="Vergroot foto: ${esc(photo.alt)}">
+    <img src="${esc(photo.image)}" alt="${esc(photo.alt)}" loading="lazy">
+  </button>${mediaCredit(photo)}`;
+}
+
+function plumageCard(ic, title, text, badge, photo) {
+  return `<div class="sd-plumage">${icon(ic)}<div><strong>${esc(title)}${badge ? `<span class="sd-badge">${esc(badge)}</span>` : ''}</strong><p>${esc(text)}</p>${photo ? fieldPhoto(photo) : ''}</div></div>`;
+}
+
+function comparisonsPanel(id) {
+  const comparisons = GUIDE_COMPARISONS.filter(pair => pair.birds.some(bird => bird.id === id));
+  if (!comparisons.length) return '';
+  return '<h3 class="sd-h">Lijkt op</h3>' + comparisons.map(({birds, tip}) => {
+    const ordered = [...birds].sort((a, b) => Number(b.id === id) - Number(a.id === id));
+    const cards = ordered.map(bird => {
+      const name = speciesById.get(bird.id).nameNL;
+      const kind = PLUMAGE.find(([key]) => key === bird.plumage)?.[2];
+      const photo = plumagePhoto(bird.id, bird.plumage);
+      return `<div class="sd-compare-card">
+        <strong>${esc(name)}</strong>${kind ? `<span class="sd-badge">${esc(kind)}</span>` : ''}
+        ${photo ? fieldPhoto(photo) : ''}
+        <p>${esc(bird.marks)}</p>
+        <a class="sd-media-credit" href="${esc(comparisonSource(bird))}" target="_blank" rel="noopener noreferrer">Vogelbescherming</a>
+        ${bird.id === id ? '' : `<button type="button" class="sd-compare-open" data-compare-species="${esc(bird.id)}">Open soortkaart<span class="visually-hidden"> ${esc(name)}</span></button>`}
+      </div>`;
+    });
+    return `<div class="sd-compare"><p>${esc(tip)}</p><div class="sd-compare-grid">${cards.join('')}</div></div>`;
+  }).join('');
+}
+
+export function voiceText(voice) {
+  return `<div class="sd-callout sd-voice">${icon('note')}<p>${esc(voice)}</p></div>`;
+}
+
+export function voicePanel(s, voice) {
+  const clips = GUIDE_AUDIO[s.id] || [];
+  if (!voice && !clips.length) return '';
+  const players = clips.map(clip => `<div class="sd-audio">
+    <strong>${esc(clip.label)}</strong><p>${esc(clip.note)}</p>
+    <audio controls preload="none" src="${esc(clip.audio)}" aria-label="${esc(clip.label)} van ${esc(s.nameNL)}"></audio>
+    <p class="sd-audio-error" hidden role="status">Deze opname is nu niet beschikbaar.</p>
+    ${mediaCredit(clip)}
+  </div>`);
+  return `<h3 class="sd-h">Zang en roep</h3><div class="sd-voice-text">${voice ? voiceText(voice) : ''}</div>${players.join('')}`;
 }
 
 function guideSources(review) {
@@ -112,25 +177,15 @@ export function recognitionPanel(s, life = null) {
   if (s.fieldmarks) {
     out.push(`<div class="sd-callout">${icon('eye')}<p>${esc(s.fieldmarks)}</p></div>`);
   }
+  out.push(`<div id="sdVoice" class="sd-voice-section">${voicePanel(s, life?.voice)}</div>`, comparisonsPanel(s.id));
   const p = s.plumage;
   if (p) {
-    const cards = [];
-    if (p.adult_m && p.adult_f) {
-      cards.push(plumageCard('male', 'Man', p.adult_m));
-      cards.push(plumageCard('female', 'Vrouw', p.adult_f));
-    } else if (p.adult_m) {
-      const badge = s.guideReview?.similarSexes ? '<span class="sd-badge">Man en vrouw lijken op elkaar</span>' : '';
-      cards.push(plumageCard('equal', 'Volwassen', p.adult_m, badge));
-    }
-    if (p.breeding) cards.push(plumageCard('sun', 'Broedkleed', p.breeding, '<span class="sd-badge">voorjaar en zomer</span>'));
-    if (p.winter) cards.push(plumageCard('snow', 'Winterkleed', p.winter, '<span class="sd-badge">najaar en winter</span>'));
-    if (p.eclipse) cards.push(plumageCard('moon', 'Eclipskleed', p.eclipse, '<span class="sd-badge">zomerrui</span>'));
-    if (p.juv) cards.push(plumageCard('chick', 'Juveniel', p.juv));
-    if (p.jaarling) cards.push(plumageCard('chick', 'Jaarling', p.jaarling));
+    const cards = PLUMAGE.filter(([key]) => p[key]).map(([key, ic, label, badge]) => {
+      const adult = key === 'adult_m' && !p.adult_f;
+      const note = adult && s.guideReview?.similarSexes ? 'Man en vrouw lijken op elkaar' : badge;
+      return plumageCard(adult ? 'equal' : ic, adult ? 'Volwassen' : label, p[key], note, plumagePhoto(s.id, key));
+    });
     if (cards.length) out.push('<h3 class="sd-h">Verenkleed</h3><div class="sd-plumage-list">' + cards.join('') + '</div>');
-  }
-  if (life?.voice) {
-    out.push(`<h3 class="sd-h">Zang en roep</h3><div class="sd-callout sd-voice">${icon('note')}<p>${esc(life.voice)}</p></div>`);
   }
   if (s.compact) {
     out.push(`<p class="sd-note">${icon('info')}Zeldzame dwaalgast: een uitgebreide beschrijving volgt nog.</p>`);

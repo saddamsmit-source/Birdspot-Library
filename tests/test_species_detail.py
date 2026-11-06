@@ -15,6 +15,7 @@ Birdspot Library — H2–H4: soortdetail met tabbladen
   H3-03  soort zonder leefwijze (exoot/ontsnapt) toont 'volgen nog'; niet-broedende wintergast (Rotgans) toont
          voedsel/gedrag/trek en zang maar geen broedblok
   H3-04  kalender neemt ook de broedtekst over (Pimpelmees); lijn onder de juiste maanden in beide thema's
+  H4-01  soortvergelijking en lokale opnamen, inclusief openen foto en wisselen naar verwante soort
 
 Starten (vanuit repo-root):  python tests/test_species_detail.py
 """
@@ -23,7 +24,7 @@ import json
 import threading
 from pathlib import Path
 
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import expect, sync_playwright
 
 from test_explorer_species_cluster import LEAFLET_STUB  # offline Leaflet-stub, net als de kaarttests
 
@@ -306,8 +307,8 @@ def main():
             legend_line = p.locator('#sdPanel-status .sd-month-legend [data-month-kind="broed"] span')
             for theme, red in (("light", "rgb(201, 37, 45)"), ("dark", "rgb(255, 85, 72)")):
                 p.evaluate("(theme) => document.documentElement.dataset.theme = theme", theme)
-                assert first.evaluate("el => getComputedStyle(el).backgroundColor") == red
-                assert legend_line.evaluate("el => getComputedStyle(el).backgroundColor") == red
+                expect(first).to_have_css("background-color", red)
+                expect(legend_line).to_have_css("background-color", red)
             p.evaluate("delete document.documentElement.dataset.theme")
             close_detail()
             print("H3-04 OK — Pimpelmees maart–juli, rode lijn en legenda in beide thema's")
@@ -333,6 +334,32 @@ def main():
             p.screenshot(path=str(SHOTS / "species_h3_rotgans_390.png"))
             close_detail()
             print("H3-03 OK — zonder leefwijze:", ex["nameNL"], "· niet-broedvogel Rotgans zonder broedblok")
+
+            open_species("Fitis", "sp057")
+            cards = p.locator('#sdPanel-herkenning .sd-compare-card')
+            assert cards.locator('strong').all_text_contents() == ["Fitis", "Tjiftjaf"]
+            assert cards.get_by_role("link", name="Vogelbescherming").count() == 2
+            photo = cards.first.get_by_role("button", name="Vergroot foto:", exact=False)
+            photo.scroll_into_view_if_needed()
+            photo.locator('img').evaluate("img => img.decode()")
+            photo.click()
+            p.locator('.signature-lightbox img').evaluate("img => img.decode()")
+            p.keyboard.press("Escape")
+            assert p.locator('.signature-lightbox').count() == 0
+            assert photo.evaluate("el => document.activeElement === el")
+            audio = p.get_by_label("Zang van Fitis")
+            audio.evaluate("el => el.play()")
+            p.wait_for_function("document.querySelector('.sd-audio audio').currentTime > 0.15")
+            p.get_by_label("Roep van Fitis").evaluate("el => el.play()")
+            assert audio.evaluate("el => el.paused")
+            tab("status")
+            assert p.get_by_label("Roep van Fitis").evaluate("el => el.paused")
+            tab("herkenning")
+            cards.last.get_by_role("button", name="Open soortkaart Tjiftjaf").click()
+            assert p.get_by_role("dialog", name="Tjiftjaf", exact=True).count() == 1
+            assert cards.locator('strong').all_text_contents() == ["Tjiftjaf", "Fitis"]
+            close_detail()
+            print("H4-01 OK — Fitis/Tjiftjaf, foto vergroten, navigatie en afspelen van zang en roep")
 
             assert not errors, f"H2-08 paginafouten: {errors}"
             print("H2-08 OK — geen paginafouten")
