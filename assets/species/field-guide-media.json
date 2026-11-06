@@ -1,0 +1,1571 @@
+{
+  "audio": {
+    "sp057": [
+      {
+        "file": "Phylloscopus rochilus.ogg",
+        "audio": "/assets/species/audio/sp057-song.mp3",
+        "label": "Zang",
+        "note": "Aflopend fluitriedeltje.",
+        "author": "Oona Räisänen ( Mysid )",
+        "license": "Public domain",
+        "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Phylloscopus_rochilus.ogg",
+        "modifications": "Omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "OsloPhylloscopus.ogg",
+        "audio": "/assets/species/audio/sp057-call.mp3",
+        "label": "Roep",
+        "note": "Korte contactroep.",
+        "author": "L. Shyamal",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:OsloPhylloscopus.ogg",
+        "modifications": "Omgezet naar MP3 (mono)"
+      }
+    ],
+    "sp056": [
+      {
+        "file": "Phylloscopus collybita 7029.ogg",
+        "audio": "/assets/species/audio/sp056-song.mp3",
+        "label": "Zang",
+        "note": "Herhalend tjif-tjaf.",
+        "author": "T.Voekler",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Phylloscopus_collybita_7029.ogg",
+        "modifications": "Fragment, omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "Phylloscopus collybita - Common Chiffchaff XC538928.mp3",
+        "audio": "/assets/species/audio/sp056-call.mp3",
+        "label": "Roep",
+        "note": "Losse roepen van een volwassen Tjiftjaf.",
+        "author": "Benoît Van Hecke",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Phylloscopus_collybita_-_Common_Chiffchaff_XC538928.mp3",
+        "modifications": "Fragment, omgezet naar MP3 (mono)"
+      }
+    ],
+    "sp045": [
+      {
+        "file": "Turdus merula - Common Blackbird XC26605.mp3",
+        "audio": "/assets/species/audio/sp045-song.mp3",
+        "label": "Zang",
+        "note": "Melodieuze fluittonen van een mannetje.",
+        "author": "Sander Pieterse",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Turdus_merula_-_Common_Blackbird_XC26605.mp3",
+        "modifications": "Fragment, omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "Blackbird (Turdus merula) alarm calls - Oslo, Norway 2020-11-13.mp3",
+        "audio": "/assets/species/audio/sp045-call.mp3",
+        "label": "Alarmroep",
+        "note": "Korte, herhaalde alarmroepen.",
+        "author": "Ryan Hodnett",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Blackbird_(Turdus_merula)_alarm_calls_-_Oslo,_Norway_2020-11-13.mp3",
+        "modifications": "Omgezet naar MP3 (mono)"
+      }
+    ],
+    "sp035": [
+      {
+        "file": "Fringilla coelebs short.ogg",
+        "audio": "/assets/species/audio/sp035-song.mp3",
+        "label": "Zang",
+        "note": "Een vinkenslag.",
+        "author": "Mysid",
+        "license": "Public domain",
+        "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Fringilla_coelebs_short.ogg",
+        "modifications": "Omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "Fringilla coelebs - Common Chaffinch XC465725.mp3",
+        "audio": "/assets/species/audio/sp035-call.mp3",
+        "label": "Roep",
+        "note": "Roep vanaf een tak.",
+        "author": "Marie-Lan Taÿ Pamart",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Fringilla_coelebs_-_Common_Chaffinch_XC465725.mp3",
+        "modifications": "Fragment, omgezet naar MP3 (mono)"
+      }
+    ],
+    "sp173": [
+      {
+        "file": "Call circus aeruginosus.ogg",
+        "audio": "/assets/species/audio/sp173-call.mp3",
+        "label": "Roep",
+        "note": "Voorbeeld van een roep van de Bruine Kiekendief. De bron specificeert geen leeftijd of geslacht.",
+        "author": "Sternanita2",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Call_circus_aeruginosus.ogg",
+        "modifications": "Omgezet naar MP3 (mono)"
+      }
+    ],
+    "sp249": [
+      {
+        "file": "Circus cyaneus - Hen Harrier XC558933.mp3",
+        "audio": "/assets/species/audio/sp249-female-call.mp3",
+        "label": "Bedelroep vrouwtje",
+        "note": "Vrouwtje roept tijdens de vlucht.",
+        "author": "Benoît Van Hecke",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Circus_cyaneus_-_Hen_Harrier_XC558933.mp3",
+        "modifications": "Fragment, omgezet naar MP3 (mono)"
+      }
+    ],
+    "sp006": [
+      {
+        "file": "Accipiter nisus - Eurasian Sparrowhawk XC467097.mp3",
+        "audio": "/assets/species/audio/sp006-nest-call.mp3",
+        "label": "Roep vrouwtje",
+        "note": "Een hoge roep gevolgd door korte kekkerende klanken bij het nest.",
+        "author": "Alvaro Ortiz Troncoso",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Accipiter_nisus_-_Eurasian_Sparrowhawk_XC467097.mp3",
+        "modifications": "Omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "Accipiter nisus - Eurasian Sparrowhawk XC234158.mp3",
+        "audio": "/assets/species/audio/sp006-begging.mp3",
+        "label": "Bedelroep jongen",
+        "note": "Bedelroep van jongen, door de maker op gehoor gedetermineerd.",
+        "author": "Steven Wilson",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Accipiter_nisus_-_Eurasian_Sparrowhawk_XC234158.mp3",
+        "modifications": "Fragment, omgezet naar MP3 (mono)"
+      }
+    ],
+    "sp007": [
+      {
+        "file": "Accipiter gentilis - Northern Goshawk XC396289.mp3",
+        "audio": "/assets/species/audio/sp007-female-call.mp3",
+        "label": "Roep vrouwtje",
+        "note": "Klagende roep van een vrouwtje in vlucht tussen bomen.",
+        "author": "Alvaro Ortiz Troncoso",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Accipiter_gentilis_-_Northern_Goshawk_XC396289.mp3",
+        "modifications": "Fragment, omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "Accipiter gentilis - Northern Goshawk XC396773.mp3",
+        "audio": "/assets/species/audio/sp007-alarm.mp3",
+        "label": "Alarmroep vrouwtje",
+        "note": "Alarmroep van een volwassen vrouwtje vanaf een boom.",
+        "author": "Alvaro Ortiz Troncoso",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Accipiter_gentilis_-_Northern_Goshawk_XC396773.mp3",
+        "modifications": "Omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "Accipiter gentilis - Northern Goshawk XC578067.mp3",
+        "audio": "/assets/species/audio/sp007-begging.mp3",
+        "label": "Bedelroep jong",
+        "note": "Bedelroep van een jonge vrouwelijke Havik.",
+        "author": "Alvaro Ortiz Troncoso",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Accipiter_gentilis_-_Northern_Goshawk_XC578067.mp3",
+        "modifications": "Fragment, omgezet naar MP3 (mono)"
+      }
+    ],
+    "sp005": [
+      {
+        "file": "Buteo buteo - Common Buzzard XC538277.mp3",
+        "audio": "/assets/species/audio/sp005-adult-call.mp3",
+        "label": "Roep",
+        "note": "Miauwende roep van een volwassen Buizerd.",
+        "author": "Benoît Van Hecke",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Buteo_buteo_-_Common_Buzzard_XC538277.mp3",
+        "modifications": "Fragment, omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "Buteo buteo warning the fledglings 7643.ogg",
+        "audio": "/assets/species/audio/sp005-alarm.mp3",
+        "label": "Alarmroep",
+        "note": "Korte roep bij uitgevlogen jongen.",
+        "author": "T.Voekler",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Buteo_buteo_warning_the_fledglings_7643.ogg",
+        "modifications": "Omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "XC1036868",
+        "audio": "/assets/species/audio/sp005-field-call.mp3",
+        "label": "Roep, tweede voorbeeld",
+        "note": "Miauwende roep, opgenomen in Duitsland.",
+        "author": "Fiete Nörenberg",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://xeno-canto.org/1036868",
+        "modifications": "Omgezet naar MP3 (mono)"
+      }
+    ],
+    "sp248": [
+      {
+        "file": "Pernis apivorus - European Honey Buzzard XC580934.mp3",
+        "audio": "/assets/species/audio/sp248-flight-call.mp3",
+        "label": "Vluchtroep",
+        "note": "Fluitende roep van een Wespendief in de vlucht.",
+        "author": "Benoît Van Hecke",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Pernis_apivorus_-_European_Honey_Buzzard_XC580934.mp3",
+        "modifications": "Fragment, omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "XC1175973",
+        "audio": "/assets/species/audio/sp248-coast-call.mp3",
+        "label": "Vluchtroep, tweede voorbeeld",
+        "note": "Vluchtroep aan de kust van Normandië.",
+        "author": "Sébastien Provost / Sonothèque ADVL",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source": "https://xeno-canto.org/1175973",
+        "modifications": "Fragment, omgezet naar MP3 (mono)"
+      }
+    ],
+    "sp082": [
+      {
+        "file": "XC705915",
+        "audio": "/assets/species/audio/sp082-flight-call.mp3",
+        "label": "Vluchtroep",
+        "note": "Korte roep in vlucht, opgenomen aan de Franse kust.",
+        "author": "Corentin Rivière / Sonothèque ADVL",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source": "https://xeno-canto.org/705915",
+        "modifications": "Volledige opname, niveau aangepast en omgezet naar MP3 (mono)"
+      }
+    ],
+    "sp083": [
+      {
+        "file": "XC705918",
+        "audio": "/assets/species/audio/sp083-flight-call.mp3",
+        "label": "Vluchtroep",
+        "note": "Schorre alarmroep in vlucht aan de Franse kust.",
+        "author": "Corentin Rivière / Sonothèque ADVL",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source": "https://xeno-canto.org/705918",
+        "modifications": "Volledige opname, niveau aangepast en omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "XC1180934",
+        "audio": "/assets/species/audio/sp083-alarm-call.mp3",
+        "label": "Alarmroep",
+        "note": "Alarmroep uit de Bourgogne.",
+        "author": "Lionel Triboulin",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source": "https://xeno-canto.org/1180934",
+        "modifications": "Volledige opname, niveau aangepast en omgezet naar MP3 (mono)"
+      }
+    ],
+    "sp245": [
+      {
+        "file": "XC1088515",
+        "audio": "/assets/species/audio/sp245-flight-call.mp3",
+        "label": "Vluchtroep",
+        "note": "Korte roepen van vliegende Koereigers in Bretagne.",
+        "author": "Sébastien Provost / Sonothèque ADVL",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source": "https://xeno-canto.org/1088515",
+        "modifications": "Volledige opname, niveau aangepast en omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "XC1088511",
+        "audio": "/assets/species/audio/sp245-colony-call.mp3",
+        "label": "Roepen bij de kolonie",
+        "note": "Alarm- en vluchtroepen bij een broedkolonie in Bretagne.",
+        "author": "Sébastien Provost / Sonothèque ADVL",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source": "https://xeno-canto.org/1088511",
+        "modifications": "Omgezet naar MP3 (mono), volledige opname"
+      },
+      {
+        "file": "XC1080059",
+        "audio": "/assets/species/audio/sp245-begging-call.mp3",
+        "label": "Bedelroep en andere roepen",
+        "note": "Bedelroep en andere roepen bij een kolonie in Bretagne.",
+        "author": "Sébastien Provost / Sonothèque ADVL",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source": "https://xeno-canto.org/1080059",
+        "modifications": "Volledige opname, niveau aangepast en omgezet naar MP3 (mono)"
+      }
+    ],
+    "sp091": [
+      {
+        "file": "Eurasian Teal (Anas crecca) (W1CDR0001378 BD3).ogg",
+        "audio": "/assets/species/audio/sp091-both-sexes.mp3",
+        "label": "Roepen van man en vrouw",
+        "note": "Opname van vrouwtjes en mannetjes op Brownsea Island, Engeland.",
+        "author": "Lawrence Shove / British Library",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Eurasian_Teal_(Anas_crecca)_(W1CDR0001378_BD3).ogg",
+        "modifications": "Volledige opname, omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "XC791789",
+        "audio": "/assets/species/audio/sp091-rotterdam-flight.mp3",
+        "label": "Vluchtroep bij Rotterdam",
+        "note": "Kort voorbeeld van een nachtelijke vluchtroep uit Rotterdam.",
+        "author": "Jochem Verweij",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://xeno-canto.org/791789",
+        "modifications": "Volledige opname, omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "XC630780",
+        "audio": "/assets/species/audio/sp091-night-flight.mp3",
+        "label": "Nachtelijke vluchtroepen",
+        "note": "Reeks roepen van minstens twee overvliegende vogels bij Dresden.",
+        "author": "Jens Loose",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://xeno-canto.org/630780",
+        "modifications": "Volledige opname, omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "XC1089314",
+        "audio": "/assets/species/audio/sp091-mixed-calls.mp3",
+        "label": "Roepen en vluchtroepen",
+        "note": "Mannetjes en vrouwtjes in de Somme. Ook Zanglijster en Fazant op de achtergrond.",
+        "author": "Noé Ferrari",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://xeno-canto.org/1089314",
+        "modifications": "Volledige opname, omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "XC710408",
+        "audio": "/assets/species/audio/sp091-short-call.mp3",
+        "label": "Korte roep",
+        "note": "Kort fragment uit Noord-Frankrijk, met achtergrondgeluid van andere vogels.",
+        "author": "Camille Vacher",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://xeno-canto.org/710408",
+        "modifications": "Volledige opname, omgezet naar MP3 (mono)"
+      }
+    ],
+    "sp188": [
+      {
+        "file": "XC903512",
+        "audio": "/assets/species/audio/sp188-male-rattle.mp3",
+        "label": "Ratel van het mannetje",
+        "note": "Kort voorbeeld van de kenmerkende droge ratel, opgenomen op Öland.",
+        "author": "Jochem Verweij",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://xeno-canto.org/903512",
+        "modifications": "Volledige opname, omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "XC786511",
+        "audio": "/assets/species/audio/sp188-rattle-switzerland.mp3",
+        "label": "Ratel uit Zwitserland",
+        "note": "Een tweede opname van de ratelende roep, uit Fanel. Ook andere watervogels zijn te horen.",
+        "author": "Pascal Christe",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://xeno-canto.org/786511",
+        "modifications": "Volledige opname, omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "XC903822",
+        "audio": "/assets/species/audio/sp188-male-sequence.mp3",
+        "label": "Langere reeks ratels",
+        "note": "Langere opname van een roepend mannetje op Öland, met andere vogels op de achtergrond.",
+        "author": "Jochem Verweij",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://xeno-canto.org/903822",
+        "modifications": "Volledige opname, omgezet naar MP3 (mono)"
+      }
+    ],
+    "sp146": [
+      {
+        "file": "XC1178346",
+        "audio": "/assets/species/audio/sp146-night-flight-call.mp3",
+        "label": "Nachtelijke vluchtroep",
+        "note": "Korte trekroep tijdens nachtelijke vlucht in Normandië.",
+        "author": "Lionel Triboulin",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source": "https://xeno-canto.org/1178346",
+        "modifications": "Volledige opname, volume verhoogd en omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "XC897533",
+        "audio": "/assets/species/audio/sp146-call-song.mp3",
+        "label": "Roep en zang",
+        "note": "In april opgenomen bij Ottenby op het Zweedse eiland Öland. De maker vermeldt zowel roep als zang.",
+        "author": "Jochem verweij",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://xeno-canto.org/897533",
+        "modifications": "Volledige opname, volume verhoogd en omgezet naar MP3 (mono)"
+      }
+    ],
+    "sp147": [
+      {
+        "file": "XC1143443",
+        "audio": "/assets/species/audio/sp147-flight-call.mp3",
+        "label": "Roep en vluchtroep",
+        "note": "Overdag opgenomen in Extremadura. De maker vermeldt gewone roepen en vluchtroepen.",
+        "author": "Tanguy Loïs",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://xeno-canto.org/1143443",
+        "modifications": "Volledige opname, volume verhoogd en omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "XC1107841",
+        "audio": "/assets/species/audio/sp147-flight-song.mp3",
+        "label": "Zang en vluchtroep",
+        "note": "Zang en vluchtroep in maart bij de baai van Mont-Saint-Michel.",
+        "author": "Sébastien Provost / Sonothèque ADVL",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source": "https://xeno-canto.org/1107841",
+        "modifications": "Volledige opname, volume verhoogd en omgezet naar MP3 (mono)"
+      }
+    ],
+    "sp206": [
+      {
+        "file": "XC730589",
+        "audio": "/assets/species/audio/sp206-call.mp3",
+        "label": "Roep",
+        "note": "Een reeks roepen aan de kust bij Genêts in Normandië.",
+        "author": "Sébastien Provost / Sonothèque ADVL",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source": "https://xeno-canto.org/730589",
+        "modifications": "Volledige opname, volume verhoogd en omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "XC820173",
+        "audio": "/assets/species/audio/sp206-flight-call.mp3",
+        "label": "Vluchtroep",
+        "note": "Een vluchtroep bij Dragey-Ronthon aan de kust van Normandië.",
+        "author": "Sébastien Provost / Sonothèque ADVL",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source": "https://xeno-canto.org/820173",
+        "modifications": "Volledige opname, volume verhoogd en omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "XC817939",
+        "audio": "/assets/species/audio/sp206-alarm-call.mp3",
+        "label": "Alarmroep",
+        "note": "Korte alarmroep bij Saint-Jean-le-Thomas in Normandië.",
+        "author": "Sébastien Provost / Sonothèque ADVL",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source": "https://xeno-canto.org/817939",
+        "modifications": "Volledige opname, volume verhoogd en omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "XC817932",
+        "audio": "/assets/species/audio/sp206-song.mp3",
+        "label": "Zang",
+        "note": "Korte zang bij Dragey-Ronthon in Normandië.",
+        "author": "Sébastien Provost / Sonothèque ADVL",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source": "https://xeno-canto.org/817932",
+        "modifications": "Volledige opname, volume verhoogd en omgezet naar MP3 (mono)"
+      }
+    ]
+  },
+  "plumage": {
+    "sp035": {
+      "adult_f": {
+        "file": "Common chaffinch (Fringilla coelebs) female Drenthe.jpg",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Common_chaffinch_(Fringilla_coelebs)_female_Drenthe.jpg",
+        "image": "/assets/species/plumage/sp035-adult_f.webp",
+        "width": 1280,
+        "height": 853,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Vink",
+        "latin": "Fringilla coelebs",
+        "batch": "field-variants-09",
+        "reviewed": "2026-11-06",
+        "verification": "Commons metadata and visual check against the cited species account.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/vink",
+        "visualCheck": "Vrouwtje in Drenthe. Grijsbruine onderzijde, witte vleugelstrepen en witte buitenstaartveren.",
+        "alt": "Vink — Vrouwtje in Drenthe. Grijsbruine onderzijde, witte vleugelstrepen en witte buitenstaartveren.",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "adult_m": {
+        "reuseGuidePhoto": true
+      }
+    },
+    "sp043": {
+      "adult_m": {
+        "file": "House sparrow 2022 04 22.jpg",
+        "author": "Alexis Lours",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:House_sparrow_2022_04_22.jpg",
+        "image": "/assets/species/plumage/sp043-adult_m.webp",
+        "width": 1280,
+        "height": 853,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Huismus",
+        "latin": "Passer domesticus",
+        "batch": "field-variants-09",
+        "reviewed": "2026-11-06",
+        "verification": "Commons metadata and visual check against the cited species account.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/huismus",
+        "visualCheck": "Mannetje op een tak met grijze kruin, kastanjebruine nek en donkere bef.",
+        "alt": "Huismus — Mannetje op een tak met grijze kruin, kastanjebruine nek en donkere bef.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "adult_f": {
+        "reuseGuidePhoto": true
+      }
+    },
+    "sp016": {
+      "juv": {
+        "file": "Juvenile great spotted woodpecker (52200334398).jpg",
+        "author": "Andrey Gulivanov",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Juvenile_great_spotted_woodpecker_(52200334398).jpg",
+        "image": "/assets/species/plumage/sp016-juv.webp",
+        "width": 1280,
+        "height": 960,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Grote Bonte Specht",
+        "latin": "Dendrocopos major",
+        "batch": "field-variants-09",
+        "reviewed": "2026-11-06",
+        "verification": "Commons metadata and visual check against the cited species account.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-bonte-specht",
+        "visualCheck": "Jonge vogel op een berk. Rode kruin met zwarte rand, grote witte schoudervlek en donkere zijhals.",
+        "alt": "Grote Bonte Specht — Jonge vogel op een berk. Rode kruin met zwarte rand, grote witte schoudervlek en donkere zijhals.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+      },
+      "adult_f": {
+        "reuseGuidePhoto": true
+      }
+    },
+    "sp045": {
+      "adult_f": {
+        "file": "A female blackbird.jpg",
+        "author": "Rupdeb",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:A_female_blackbird.jpg",
+        "image": "/assets/species/plumage/sp045-adult_f.webp",
+        "width": 1280,
+        "height": 853,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Merel",
+        "latin": "Turdus merula",
+        "batch": "field-variants-09",
+        "reviewed": "2026-11-06",
+        "verification": "Commons metadata and visual check against the cited species account.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/merel",
+        "visualCheck": "Volwassen vrouwtje op een tak, donkerbruin met een lichter getekende borst.",
+        "alt": "Merel — Volwassen vrouwtje op een tak, donkerbruin met een lichter getekende borst.",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "juv": {
+        "file": "Blackbird (36889364072).jpg",
+        "author": "hedera.baltica from Wrocław, Poland",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Blackbird_(36889364072).jpg",
+        "image": "/assets/species/plumage/sp045-juv.webp",
+        "width": 1280,
+        "height": 1068,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Merel",
+        "latin": "Turdus merula",
+        "batch": "field-variants-09",
+        "reviewed": "2026-11-06",
+        "verification": "Commons metadata and visual check against the cited species account.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/merel",
+        "visualCheck": "Jonge Merel op een tak met lichte spikkels op de bruinige borst.",
+        "alt": "Merel — Jonge Merel op een tak met lichte spikkels op de bruinige borst.",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/"
+      },
+      "adult_m": {
+        "reuseGuidePhoto": true
+      }
+    },
+    "sp089": {
+      "adult_f": {
+        "file": "Female Mallard Swimming.jpg",
+        "author": "Roshan Kumar Ban",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Female_Mallard_Swimming.jpg",
+        "image": "/assets/species/plumage/sp089-adult_f.webp",
+        "width": 1280,
+        "height": 853,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Wilde Eend",
+        "latin": "Anas platyrhynchos",
+        "batch": "field-variants-09",
+        "reviewed": "2026-11-06",
+        "verification": "Commons metadata and visual check against the cited species account.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wilde-eend",
+        "visualCheck": "Zwemmend vrouwtje met gevlekt bruin verenkleed en oranje met donkere snavel.",
+        "alt": "Wilde Eend — Zwemmend vrouwtje met gevlekt bruin verenkleed en oranje met donkere snavel.",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "eclipse": {
+        "file": "Male eclipse Mallard on Lake Bled.jpg",
+        "author": "Mihael Grmek",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Male_eclipse_Mallard_on_Lake_Bled.jpg",
+        "image": "/assets/species/plumage/sp089-eclipse.webp",
+        "width": 1280,
+        "height": 1036,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Wilde Eend",
+        "latin": "Anas platyrhynchos",
+        "batch": "field-variants-09",
+        "reviewed": "2026-11-06",
+        "verification": "Commons metadata and visual check against the cited species account.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wilde-eend",
+        "visualCheck": "Mannetje in eclipskleed aan het water, met bruin verenkleed en een effen gele snavel.",
+        "alt": "Wilde Eend — Mannetje in eclipskleed aan het water, met bruin verenkleed en een effen gele snavel.",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    },
+    "sp129": {
+      "adult_f": {
+        "file": "Female gadwall (52294387865).jpg",
+        "author": "Andrey Gulivanov",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Female_gadwall_(52294387865).jpg",
+        "image": "/assets/species/plumage/sp129-adult_f.webp",
+        "width": 1280,
+        "height": 853,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Krakeend",
+        "latin": "Mareca strepera",
+        "batch": "field-variants-09",
+        "reviewed": "2026-11-06",
+        "verification": "Commons metadata and visual check against the cited species account.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/krakeend",
+        "visualCheck": "Vrouwtje bij het riet, met bruin verenkleed en oranje zijkanten van de snavel.",
+        "alt": "Krakeend — Vrouwtje bij het riet, met bruin verenkleed en oranje zijkanten van de snavel.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+      },
+      "adult_m": {
+        "reuseGuidePhoto": true
+      }
+    },
+    "sp097": {
+      "winter": {
+        "file": "Black-headed gull (winter plumage).JPG",
+        "author": "Bartosz MORĄG",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Black-headed_gull_(winter_plumage).JPG",
+        "image": "/assets/species/plumage/sp097-winter.webp",
+        "width": 1280,
+        "height": 964,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Kokmeeuw",
+        "latin": "Chroicocephalus ridibundus",
+        "batch": "field-variants-09",
+        "reviewed": "2026-11-06",
+        "verification": "Commons metadata and visual check against the cited species account.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kokmeeuw",
+        "visualCheck": "Volwassen vogel aan het water met witte kop, donkere oorvlek en rode poten.",
+        "alt": "Kokmeeuw — Volwassen vogel aan het water met witte kop, donkere oorvlek en rode poten.",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "breeding": {
+        "reuseGuidePhoto": true
+      }
+    },
+    "sp225": {
+      "breeding": {
+        "reuseGuidePhoto": true
+      },
+      "winter": {
+        "file": "2022-01-24 Ichthyaetus melanocephalus, Killingworth Lake, Northumberland 1.jpg",
+        "author": "MPF",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:2022-01-24_Ichthyaetus_melanocephalus,_Killingworth_Lake,_Northumberland_1.jpg",
+        "image": "/assets/species/plumage/sp225-winter.webp",
+        "width": 1280,
+        "height": 960,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Zwartkopmeeuw",
+        "latin": "Ichthyaetus melanocephalus",
+        "batch": "field-variants-09",
+        "reviewed": "2026-11-06",
+        "verification": "Commons metadata and visual check against the cited species account.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwartkopmeeuw",
+        "visualCheck": "Volwassen vogel aan de waterkant met donkere oogveeg, dikke rode snavel en witte vleugelpunten.",
+        "alt": "Zwartkopmeeuw — Volwassen vogel aan de waterkant met donkere oogveeg, dikke rode snavel en witte vleugelpunten.",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    },
+    "sp173": {
+      "adult_m": {
+        "reuseGuidePhoto": true
+      },
+      "adult_f": {
+        "file": "Circus aeruginosus female Oulu Finland 2021-04-21.jpg",
+        "author": "Matti Virtala",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Circus_aeruginosus_female_Oulu_Finland_2021-04-21.jpg",
+        "image": "/assets/species/plumage/sp173-adult_f.webp",
+        "width": 1280,
+        "height": 885,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Bruine Kiekendief",
+        "latin": "Circus aeruginosus",
+        "batch": "raptors-10",
+        "reviewed": "2026-11-06",
+        "verification": "Bronmetadata en zichtbare kenmerken vergeleken met de gelinkte soortkaart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bruine-kiekendief",
+        "visualCheck": "Volwassen vrouwtje in frontale vlucht. Donkerbruin, met lichte kruin en voorrand van de vleugel.",
+        "alt": "Bruine Kiekendief — Volwassen vrouwtje in frontale vlucht. Donkerbruin, met lichte kruin en voorrand van de vleugel.",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "juv": {
+        "file": "iNaturalist photo 229518401",
+        "author": "Codrin Bucur",
+        "license": "CC BY 4.0",
+        "source": "https://www.inaturalist.org/photos/229518401",
+        "image": "/assets/species/plumage/sp173-juv.webp",
+        "width": 1024,
+        "height": 682,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Bruine Kiekendief",
+        "latin": "Circus aeruginosus",
+        "batch": "raptors-10",
+        "reviewed": "2026-11-06",
+        "verification": "Research-grade waarneming, leeftijd of geslacht geannoteerd en visueel gecontroleerd met de soortkaart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bruine-kiekendief",
+        "visualCheck": "Jonge vogel vlak boven riet, met donkerbruin kleed en lichte kruin.",
+        "alt": "Bruine Kiekendief — Jonge vogel vlak boven riet, met donkerbruin kleed en lichte kruin.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "observation": "https://www.inaturalist.org/observations/134634395"
+      }
+    },
+    "sp249": {
+      "adult_m": {
+        "reuseGuidePhoto": true
+      },
+      "adult_f": {
+        "file": "Blauwe kiekendief fem.jpg",
+        "author": "Maurice.dekens",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Blauwe_kiekendief_fem.jpg",
+        "image": "/assets/species/plumage/sp249-adult_f.webp",
+        "width": 1280,
+        "height": 853,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Blauwe Kiekendief",
+        "latin": "Circus cyaneus",
+        "batch": "raptors-10",
+        "reviewed": "2026-11-06",
+        "verification": "Bronmetadata en zichtbare kenmerken vergeleken met de gelinkte soortkaart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/blauwe-kiekendief",
+        "visualCheck": "Volwassen vrouwtje in vlucht van onderen, met duidelijke bandering op de vleugels en staart.",
+        "alt": "Blauwe Kiekendief — Volwassen vrouwtje in vlucht van onderen, met duidelijke bandering op de vleugels en staart.",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "juv": {
+        "file": "Blauwe Kiekendief.jpg",
+        "author": "Rob Zweers",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Blauwe_Kiekendief.jpg",
+        "image": "/assets/species/plumage/sp249-juv.webp",
+        "width": 1280,
+        "height": 720,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Blauwe Kiekendief",
+        "latin": "Circus cyaneus",
+        "batch": "raptors-10",
+        "reviewed": "2026-11-06",
+        "verification": "Bronmetadata en zichtbare kenmerken vergeleken met de gelinkte soortkaart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/blauwe-kiekendief",
+        "visualCheck": "Jong vrouwtje boven gras, met gebandeerde ondervleugels en een witte stuit.",
+        "alt": "Blauwe Kiekendief — Jong vrouwtje boven gras, met gebandeerde ondervleugels en een witte stuit.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+      }
+    },
+    "sp250": {
+      "adult_m": {
+        "reuseGuidePhoto": true
+      },
+      "adult_f": {
+        "file": "iNaturalist photo 626654808",
+        "author": "Tejas M",
+        "license": "CC BY 4.0",
+        "source": "https://www.inaturalist.org/photos/626654808",
+        "image": "/assets/species/plumage/sp250-adult_f.webp",
+        "width": 1024,
+        "height": 708,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Steppekiekendief",
+        "latin": "Circus macrourus",
+        "batch": "raptors-10",
+        "reviewed": "2026-11-06",
+        "verification": "Research-grade waarneming, leeftijd of geslacht geannoteerd en visueel gecontroleerd met de soortkaart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/steppekiekendief",
+        "visualCheck": "Volwassen vrouwtje in vlucht. Smalle vleugels, bandering op de ondervleugel en gestreepte onderzijde.",
+        "alt": "Steppekiekendief — Volwassen vrouwtje in vlucht. Smalle vleugels, bandering op de ondervleugel en gestreepte onderzijde.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "observation": "https://www.inaturalist.org/observations/343960250"
+      },
+      "juv": {
+        "file": "Лунь степовий Circus macrourus, на о. Джарилгач.jpg",
+        "author": "Bogomaz Mykhailo",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:%D0%9B%D1%83%D0%BD%D1%8C_%D1%81%D1%82%D0%B5%D0%BF%D0%BE%D0%B2%D0%B8%D0%B9_Circus_macrourus,_%D0%BD%D0%B0_%D0%BE._%D0%94%D0%B6%D0%B0%D1%80%D0%B8%D0%BB%D0%B3%D0%B0%D1%87.jpg",
+        "image": "/assets/species/plumage/sp250-juv.webp",
+        "width": 1280,
+        "height": 853,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Steppekiekendief",
+        "latin": "Circus macrourus",
+        "batch": "raptors-10",
+        "reviewed": "2026-11-06",
+        "verification": "Bronmetadata en zichtbare kenmerken vergeleken met de gelinkte soortkaart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/steppekiekendief",
+        "visualCheck": "Jonge vogel in vlucht met warme onderzijde, lichte halsring en donkere halsvlek.",
+        "alt": "Steppekiekendief — Jonge vogel in vlucht met warme onderzijde, lichte halsring en donkere halsvlek.",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    },
+    "sp251": {
+      "adult_m": {
+        "reuseGuidePhoto": true
+      },
+      "adult_f": {
+        "file": "A Montagu's Harrier Taking Flight (51621854680).jpg",
+        "author": "Hari K Patibanda",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:A_Montagu%27s_Harrier_Taking_Flight_(51621854680).jpg",
+        "image": "/assets/species/plumage/sp251-adult_f.webp",
+        "width": 1280,
+        "height": 720,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Grauwe Kiekendief",
+        "latin": "Circus pygargus",
+        "batch": "raptors-10",
+        "reviewed": "2026-11-06",
+        "verification": "Bronmetadata en zichtbare kenmerken vergeleken met de gelinkte soortkaart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grauwe-kiekendief",
+        "visualCheck": "Volwassen vrouwtje bij het opvliegen. Gestreepte onderzijde en duidelijke banden op de ondervleugel.",
+        "alt": "Grauwe Kiekendief — Volwassen vrouwtje bij het opvliegen. Gestreepte onderzijde en duidelijke banden op de ondervleugel.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+      },
+      "juv": {
+        "file": "Circus pygargus juvenile flight.jpg",
+        "author": "Rodrigo de Almeida from Marco de Canaveses, Portugal",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Circus_pygargus_juvenile_flight.jpg",
+        "image": "/assets/species/plumage/sp251-juv.webp",
+        "width": 972,
+        "height": 708,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Grauwe Kiekendief",
+        "latin": "Circus pygargus",
+        "batch": "raptors-10",
+        "reviewed": "2026-11-06",
+        "verification": "Bronmetadata en zichtbare kenmerken vergeleken met de gelinkte soortkaart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grauwe-kiekendief",
+        "visualCheck": "Jonge vogel in vlucht. Warmbruine onderzijde en gebandeerde vleugels en staart.",
+        "alt": "Grauwe Kiekendief — Jonge vogel in vlucht. Warmbruine onderzijde en gebandeerde vleugels en staart.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+      }
+    },
+    "sp006": {
+      "adult_m": {
+        "reuseGuidePhoto": true
+      },
+      "adult_f": {
+        "file": "Female Sparrowhawk (45968114392).jpg",
+        "author": "caroline legg",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Female_Sparrowhawk_(45968114392).jpg",
+        "image": "/assets/species/plumage/sp006-adult_f.webp",
+        "width": 1280,
+        "height": 853,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Sperwer",
+        "latin": "Accipiter nisus",
+        "batch": "raptors-11",
+        "reviewed": "2026-11-06",
+        "verification": "Bronmetadata en zichtbare kenmerken vergeleken met de gelinkte soortkaart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/sperwer",
+        "visualCheck": "Volwassen vrouwtje met uitgespreide vleugels, gebandeerde borst en dunne gele poten.",
+        "alt": "Sperwer — Volwassen vrouwtje met uitgespreide vleugels, gebandeerde borst en dunne gele poten.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+      },
+      "juv": {
+        "file": "Female Juvenile Sparrowhawk (36519885205).jpg",
+        "author": "caroline legg",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Female_Juvenile_Sparrowhawk_(36519885205).jpg",
+        "image": "/assets/species/plumage/sp006-juv.webp",
+        "width": 1280,
+        "height": 853,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Sperwer",
+        "latin": "Accipiter nisus",
+        "batch": "raptors-11",
+        "reviewed": "2026-11-06",
+        "verification": "Bronmetadata en zichtbare kenmerken vergeleken met de gelinkte soortkaart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/sperwer",
+        "visualCheck": "Jonge Sperwer op gras, met bruine bovenzijde en donkere dwarsbanden op borst en buik.",
+        "alt": "Sperwer — Jonge Sperwer op gras, met bruine bovenzijde en donkere dwarsbanden op borst en buik.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+      }
+    },
+    "sp007": {
+      "adult_m": {
+        "reuseGuidePhoto": true
+      },
+      "juv": {
+        "file": "Juvenile northern goshawk (52310658114).jpg",
+        "author": "Andrey Gulivanov",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Juvenile_northern_goshawk_(52310658114).jpg",
+        "image": "/assets/species/plumage/sp007-juv.webp",
+        "width": 1280,
+        "height": 853,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Havik",
+        "latin": "Accipiter gentilis",
+        "batch": "raptors-11",
+        "reviewed": "2026-11-06",
+        "verification": "Bronmetadata en zichtbare kenmerken vergeleken met de gelinkte soortkaart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/havik",
+        "visualCheck": "Jonge Havik in het bos, met donkere lengtestrepen op de lichte borst en buik.",
+        "alt": "Havik — Jonge Havik in het bos, met donkere lengtestrepen op de lichte borst en buik.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+      },
+      "adult_f": {
+        "file": "iNaturalist photo 478065886",
+        "author": "WATANABE Hitoshi 渡辺仁",
+        "license": "CC BY 4.0",
+        "source": "https://www.inaturalist.org/photos/478065886",
+        "image": "/assets/species/plumage/sp007-adult_f.webp",
+        "width": 683,
+        "height": 1024,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Havik",
+        "latin": "Accipiter gentilis",
+        "batch": "raptors-11",
+        "reviewed": "2026-11-06",
+        "verification": "Research-grade waarneming, leeftijd of geslacht geannoteerd en visueel gecontroleerd met de soortkaart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/havik",
+        "visualCheck": "Volwassen vrouwtje in vlucht in Japan. Uitstekende kop, gebandeerde onderzijde en een afgeronde staartpunt.",
+        "alt": "Havik — Volwassen vrouwtje in vlucht in Japan. Uitstekende kop, gebandeerde onderzijde en een afgeronde staartpunt.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "observation": "https://www.inaturalist.org/observations/266098077"
+      }
+    },
+    "sp005": {
+      "adult_m": {
+        "file": "iNaturalist photo 309645414",
+        "author": "Roy Lowry",
+        "license": "CC BY 4.0",
+        "source": "https://www.inaturalist.org/photos/309645414",
+        "image": "/assets/species/plumage/sp005-adult_m.webp",
+        "width": 1024,
+        "height": 683,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Buizerd",
+        "latin": "Buteo buteo",
+        "batch": "raptors-12",
+        "reviewed": "2026-11-06",
+        "verification": "Research-grade waarneming, leeftijd of geslacht geannoteerd en visueel gecontroleerd met de soortkaart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/buizerd",
+        "visualCheck": "Volwassen Buizerd van onderen. Brede vleugels, korte gespreide staart en fijne bandering op de staart.",
+        "alt": "Buizerd — Volwassen Buizerd van onderen. Brede vleugels, korte gespreide staart en fijne bandering op de staart.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "observation": "https://www.inaturalist.org/observations/177992598"
+      },
+      "juv": {
+        "file": "iNaturalist photo 147178882",
+        "author": "rober025",
+        "license": "CC BY 4.0",
+        "source": "https://www.inaturalist.org/photos/147178882",
+        "image": "/assets/species/plumage/sp005-juv.webp",
+        "width": 1024,
+        "height": 682,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Buizerd",
+        "latin": "Buteo buteo",
+        "batch": "raptors-12",
+        "reviewed": "2026-11-06",
+        "verification": "Research-grade waarneming, leeftijd of geslacht geannoteerd en visueel gecontroleerd met de soortkaart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/buizerd",
+        "visualCheck": "Jonge Buizerd in licht kleed. De buik is licht en de polsvlekken en bandering op de staart zijn zichtbaar.",
+        "alt": "Buizerd — Jonge Buizerd in licht kleed. De buik is licht en de polsvlekken en bandering op de staart zijn zichtbaar.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "observation": "https://www.inaturalist.org/observations/89145381"
+      }
+    },
+    "sp248": {
+      "adult_m": {
+        "reuseGuidePhoto": true
+      },
+      "adult_f": {
+        "file": "iNaturalist photo 678848182",
+        "author": "Donald Davesne",
+        "license": "CC BY 4.0",
+        "source": "https://www.inaturalist.org/photos/678848182",
+        "image": "/assets/species/plumage/sp248-adult_f.webp",
+        "width": 1024,
+        "height": 768,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Wespendief",
+        "latin": "Pernis apivorus",
+        "batch": "raptors-12",
+        "reviewed": "2026-11-06",
+        "verification": "Research-grade waarneming, leeftijd of geslacht geannoteerd en visueel gecontroleerd met de soortkaart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wespendief",
+        "visualCheck": "Volwassen vrouwtje met gespreide staart. Brede banden op de ondervleugels en de kenmerkende smalle, uitstekende kop.",
+        "alt": "Wespendief — Volwassen vrouwtje met gespreide staart. Brede banden op de ondervleugels en de kenmerkende smalle, uitstekende kop.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "observation": "https://www.inaturalist.org/observations/371545998"
+      },
+      "juv": {
+        "file": "Juvenile honey buzzard (52499563661).jpg",
+        "author": "Andrey Gulivanov",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Juvenile_honey_buzzard_(52499563661).jpg",
+        "image": "/assets/species/plumage/sp248-juv.webp",
+        "width": 1280,
+        "height": 853,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Wespendief",
+        "latin": "Pernis apivorus",
+        "batch": "raptors-12",
+        "reviewed": "2026-11-06",
+        "verification": "Bronmetadata en zichtbare kenmerken vergeleken met de gelinkte soortkaart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wespendief",
+        "visualCheck": "Jonge Wespendief in vlucht met langere staart en contrastrijke handpennen en armpennen.",
+        "alt": "Wespendief — Jonge Wespendief in vlucht met langere staart en contrastrijke handpennen en armpennen.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+      }
+    },
+    "sp253": {
+      "adult_f": {
+        "reuseGuidePhoto": true
+      },
+      "juv": {
+        "file": "iNaturalist photo 113794458",
+        "author": "Radek Ošlejšek",
+        "license": "CC BY 4.0",
+        "source": "https://www.inaturalist.org/photos/113794458",
+        "image": "/assets/species/plumage/sp253-juv.webp",
+        "width": 1024,
+        "height": 684,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Ruigpootbuizerd",
+        "latin": "Buteo lagopus",
+        "batch": "raptors-12",
+        "reviewed": "2026-11-06",
+        "verification": "Research-grade waarneming, leeftijd of geslacht geannoteerd en visueel gecontroleerd met de soortkaart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/Ruigpootbuizerd",
+        "visualCheck": "Jonge Ruigpootbuizerd in Tsjechië. Lichte borst, donkere buik en donkere polsvlekken.",
+        "alt": "Ruigpootbuizerd — Jonge Ruigpootbuizerd in Tsjechië. Lichte borst, donkere buik en donkere polsvlekken.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "observation": "https://www.inaturalist.org/observations/70044579"
+      }
+    },
+    "sp082": {
+      "breeding": {
+        "file": "iNaturalist photo 364893145",
+        "author": "Donald Davesne",
+        "license": "CC BY 4.0",
+        "source": "https://www.inaturalist.org/photos/364893145",
+        "image": "/assets/species/plumage/sp082-breeding.webp",
+        "width": 1024,
+        "height": 681,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Kleine Zilverreiger",
+        "latin": "Egretta garzetta",
+        "batch": "herons-13",
+        "reviewed": "2026-11-06",
+        "verification": "Research-grade waarneming. Seizoenskleed visueel getoetst aan de soortkaart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kleine-zilverreiger",
+        "visualCheck": "Kleine Zilverreiger in ondiep water in Frankrijk, met twee lange witte sierveren achter de kop.",
+        "alt": "Kleine Zilverreiger — Kleine Zilverreiger in ondiep water in Frankrijk, met twee lange witte sierveren achter de kop.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "observation": "https://www.inaturalist.org/observations/206314322"
+      },
+      "winter": {
+        "file": "iNaturalist photo 172413835",
+        "author": "Florin Feneru",
+        "license": "CC BY 4.0",
+        "source": "https://www.inaturalist.org/photos/172413835",
+        "image": "/assets/species/plumage/sp082-winter.webp",
+        "width": 1024,
+        "height": 659,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Kleine Zilverreiger",
+        "latin": "Egretta garzetta",
+        "batch": "herons-13",
+        "reviewed": "2026-11-06",
+        "verification": "Research-grade waarneming. Seizoenskleed visueel getoetst aan de soortkaart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kleine-zilverreiger",
+        "visualCheck": "Volwassen Kleine Zilverreiger buiten broedkleed op een natte oever in Engeland. De gele tenen steken af tegen donkere poten. De lange nekveren ontbreken.",
+        "alt": "Kleine Zilverreiger — Volwassen Kleine Zilverreiger buiten broedkleed op een natte oever in Engeland. De gele tenen steken af tegen donkere poten. De lange nekveren ontbreken.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "observation": "https://www.inaturalist.org/observations/103063658"
+      },
+      "juv": {
+        "file": "iNaturalist photo 92502660",
+        "author": "Paulo Martins",
+        "license": "CC BY-SA 4.0",
+        "source": "https://www.inaturalist.org/photos/92502660",
+        "image": "/assets/species/plumage/sp082-juv.webp",
+        "width": 1024,
+        "height": 609,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Kleine Zilverreiger",
+        "latin": "Egretta garzetta",
+        "batch": "herons-13",
+        "reviewed": "2026-11-06",
+        "verification": "Research-grade waarneming met geannoteerde leeftijd, visueel getoetst aan de soortkaart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kleine-zilverreiger",
+        "visualCheck": "Jonge Kleine Zilverreiger aan een ondiepe oever in Portugal, met een slanke snavel en zonder lange sierveren.",
+        "alt": "Kleine Zilverreiger — Jonge Kleine Zilverreiger aan een ondiepe oever in Portugal, met een slanke snavel en zonder lange sierveren.",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "observation": "https://www.inaturalist.org/observations/57964762"
+      }
+    },
+    "sp083": {
+      "breeding": {
+        "file": "iNaturalist photo 243252269",
+        "author": "Olivier Morel",
+        "license": "CC BY 4.0",
+        "source": "https://www.inaturalist.org/photos/243252269",
+        "image": "/assets/species/plumage/sp083-breeding.webp",
+        "width": 1024,
+        "height": 768,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Grote Zilverreiger",
+        "latin": "Ardea alba",
+        "batch": "herons-13",
+        "reviewed": "2026-11-06",
+        "verification": "Research-grade waarneming. Seizoenskleed visueel getoetst aan de soortkaart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-zilverreiger",
+        "visualCheck": "Grote Zilverreiger in broedkleed voor riet in Frankrijk. Lange hals, donkere snavel, groene teugel en lange rugsierveren.",
+        "alt": "Grote Zilverreiger — Grote Zilverreiger in broedkleed voor riet in Frankrijk. Lange hals, donkere snavel, groene teugel en lange rugsierveren.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "observation": "https://www.inaturalist.org/observations/141931939"
+      },
+      "juv": {
+        "file": "iNaturalist photo 388019872",
+        "author": "Annette Herz",
+        "license": "CC BY 4.0",
+        "source": "https://www.inaturalist.org/photos/388019872",
+        "image": "/assets/species/plumage/sp083-juv.webp",
+        "width": 1024,
+        "height": 683,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Grote Zilverreiger",
+        "latin": "Ardea alba",
+        "batch": "herons-13",
+        "reviewed": "2026-11-06",
+        "verification": "Research-grade waarneming met geannoteerde leeftijd, visueel getoetst aan de soortkaart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-zilverreiger",
+        "visualCheck": "Jonge Grote Zilverreigers bij hun nest in Californië. Hun witte verenkleed heeft nog geen lange sierveren.",
+        "alt": "Grote Zilverreiger — Jonge Grote Zilverreigers bij hun nest in Californië. Hun witte verenkleed heeft nog geen lange sierveren.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "observation": "https://www.inaturalist.org/observations/219231388"
+      },
+      "winter": {
+        "reuseGuidePhoto": true
+      }
+    },
+    "sp245": {
+      "adult_m": {
+        "reuseGuidePhoto": true
+      },
+      "breeding": {
+        "file": "Cattle egret (Bubulcus ibis) summer plumage Cyprus.jpg",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Cattle_egret_(Bubulcus_ibis)_summer_plumage_Cyprus.jpg",
+        "image": "/assets/species/plumage/sp245-breeding.webp",
+        "width": 853,
+        "height": 1280,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Koereiger",
+        "latin": "Bubulcus ibis",
+        "batch": "herons-13",
+        "reviewed": "2026-11-06",
+        "verification": "Bronmetadata en zichtbare kenmerken vergeleken met de gelinkte soortkaart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/koereiger",
+        "visualCheck": "Volwassen Koereiger in Cyprus, met oranjegele veren op de kruin en borst en een korte, oranje snavel.",
+        "alt": "Koereiger — Volwassen Koereiger in Cyprus, met oranjegele veren op de kruin en borst en een korte, oranje snavel.",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "winter": {
+        "file": "iNaturalist photo 116157768",
+        "author": "Andrea Mologni",
+        "license": "CC BY-SA 4.0",
+        "source": "https://www.inaturalist.org/photos/116157768",
+        "image": "/assets/species/plumage/sp245-winter.webp",
+        "width": 1024,
+        "height": 920,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Koereiger",
+        "latin": "Bubulcus ibis",
+        "batch": "herons-13",
+        "reviewed": "2026-11-06",
+        "verification": "Research-grade waarneming. Seizoenskleed visueel getoetst aan de soortkaart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/koereiger",
+        "visualCheck": "Koereiger in winterkleed in Italiaans grasland. Geheel wit, met een korte gele snavel en compact postuur.",
+        "alt": "Koereiger — Koereiger in winterkleed in Italiaans grasland. Geheel wit, met een korte gele snavel en compact postuur.",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "observation": "https://www.inaturalist.org/observations/71350962"
+      },
+      "juv": {
+        "file": "iNaturalist photo 113155242",
+        "author": "Zac Peterson",
+        "license": "CC BY 4.0",
+        "source": "https://www.inaturalist.org/photos/113155242",
+        "image": "/assets/species/plumage/sp245-juv.webp",
+        "width": 1024,
+        "height": 1024,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Koereiger",
+        "latin": "Bubulcus ibis",
+        "batch": "herons-13",
+        "reviewed": "2026-11-06",
+        "verification": "Research-grade waarneming met geannoteerde leeftijd, visueel getoetst aan de soortkaart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/koereiger",
+        "visualCheck": "Jonge Koereiger in grasland op Dominica. Korte, donkere snavel, donkere poten en een compacte bouw.",
+        "alt": "Koereiger — Jonge Koereiger in grasland op Dominica. Korte, donkere snavel, donkere poten en een compacte bouw.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "observation": "https://www.inaturalist.org/observations/69701226"
+      }
+    },
+    "sp091": {
+      "adult_m": {
+        "file": "Common Teal Male (8602525826).jpg",
+        "author": "Koshy Koshy from Faridabad, Haryana, India",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Common_Teal_Male_(8602525826).jpg",
+        "image": "/assets/species/plumage/sp091-adult_m.webp",
+        "width": 1024,
+        "height": 650,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Wintertaling",
+        "latin": "Anas crecca",
+        "batch": "teals-14",
+        "reviewed": "2026-11-06",
+        "verification": "Soort en kleed gecontroleerd aan de hand van Commons-broninformatie en zichtbare veldkenmerken.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wintertaling",
+        "visualCheck": "Volwassen mannetje in India. Kastanjebruine kop, groen oogveld, horizontale witte flankstreep en gele staartzijde.",
+        "alt": "Wintertaling — Volwassen mannetje in India. Kastanjebruine kop, groen oogveld, horizontale witte flankstreep en gele staartzijde.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      },
+      "adult_f": {
+        "file": "Female Eurasian Teal (Anas crecca), Parc du Rouge Cloître, Brussels (13353864095).jpg",
+        "author": "Frank Vassen from Brussels, Belgium",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Female_Eurasian_Teal_(Anas_crecca),_Parc_du_Rouge_Clo%C3%AEtre,_Brussels_(13353864095).jpg",
+        "image": "/assets/species/plumage/sp091-adult_f.webp",
+        "width": 1280,
+        "height": 905,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Wintertaling",
+        "latin": "Anas crecca",
+        "batch": "teals-14",
+        "reviewed": "2026-11-06",
+        "verification": "Soort en kleed gecontroleerd aan de hand van Commons-broninformatie en zichtbare veldkenmerken.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wintertaling",
+        "visualCheck": "Volwassen vrouwtje in Brussel. Bruin gevlekt lijf met relatief gelijkmatig getekende kop.",
+        "alt": "Wintertaling — Volwassen vrouwtje in Brussel. Bruin gevlekt lijf met relatief gelijkmatig getekende kop.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      },
+      "juv": {
+        "file": "iNaturalist photo 169592753",
+        "author": "Se Lena",
+        "license": "CC BY 4.0",
+        "source": "https://www.inaturalist.org/photos/169592753",
+        "image": "/assets/species/plumage/sp091-juv.webp",
+        "width": 500,
+        "height": 335,
+        "modifications": "Uitgesneden en omgezet naar WebP",
+        "nl": "Wintertaling",
+        "latin": "Anas crecca",
+        "batch": "teals-14",
+        "reviewed": "2026-11-06",
+        "verification": "Research-grade waarneming van Anas crecca crecca met leeftijdsannotatie van de fotograaf. Kleur en vleugeltekening visueel gecontroleerd.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wintertaling",
+        "visualCheck": "Jonge Wintertaling in Tokio. Bruine kop met donkere oogstreep en een zichtbare groene vleugelspiegel.",
+        "alt": "Wintertaling — Jonge Wintertaling in Tokio. Bruine kop met donkere oogstreep en een zichtbare groene vleugelspiegel.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "observation": "https://www.inaturalist.org/observations/101542967"
+      },
+      "eclipse": {
+        "file": "iNaturalist photo 76374524",
+        "author": "Roy Lowry",
+        "license": "CC BY 4.0",
+        "source": "https://www.inaturalist.org/photos/76374524",
+        "image": "/assets/species/plumage/sp091-eclipse.webp",
+        "width": 1024,
+        "height": 683,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Wintertaling",
+        "latin": "Anas crecca",
+        "batch": "teals-14",
+        "reviewed": "2026-11-06",
+        "verification": "Research-grade waarneming met eclipskleed genoemd door de fotograaf. Groene restveren ondersteunen welke vogel op de foto het mannetje is.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wintertaling",
+        "visualCheck": "Ruiend mannetje in Cheshire. Overwegend bruin lichaam met nog groene veren op de kop.",
+        "alt": "Wintertaling — Ruiend mannetje in Cheshire. Overwegend bruin lichaam met nog groene veren op de kop.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "observation": "https://www.inaturalist.org/observations/48145191"
+      }
+    },
+    "sp188": {
+      "adult_m": {
+        "reuseGuidePhoto": true
+      },
+      "adult_f": {
+        "file": "Garganey 04f (3225295980).jpg",
+        "author": "michael clarke stuff",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Garganey_04f_(3225295980).jpg",
+        "image": "/assets/species/plumage/sp188-adult_f.webp",
+        "width": 1063,
+        "height": 640,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Zomertaling",
+        "latin": "Spatula querquedula",
+        "batch": "teals-14",
+        "reviewed": "2026-11-06",
+        "verification": "Soort en kleed gecontroleerd aan de hand van Commons-broninformatie en zichtbare veldkenmerken.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zomertaling",
+        "visualCheck": "Volwassen vrouwtje in Frankrijk. Donkere oogstreep tussen lichte kopstrepen en een lichte keel.",
+        "alt": "Zomertaling — Volwassen vrouwtje in Frankrijk. Donkere oogstreep tussen lichte kopstrepen en een lichte keel.",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      },
+      "juv": {
+        "file": "Anas querquedula, Slottsskogen, Göteborg, Sweden 1.jpg",
+        "author": "Stefan Berndtsson",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Anas_querquedula,_Slottsskogen,_G%C3%B6teborg,_Sweden_1.jpg",
+        "image": "/assets/species/plumage/sp188-juv.webp",
+        "width": 1200,
+        "height": 741,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Zomertaling",
+        "latin": "Spatula querquedula",
+        "batch": "teals-14",
+        "reviewed": "2026-11-06",
+        "verification": "Soort en kleed gecontroleerd aan de hand van Commons-broninformatie en zichtbare veldkenmerken.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zomertaling",
+        "visualCheck": "Jonge Zomertaling in Zweden. Donkere oogstreep, lichte keel en bruine, lichtgerande veren.",
+        "alt": "Zomertaling — Jonge Zomertaling in Zweden. Donkere oogstreep, lichte keel en bruine, lichtgerande veren.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      },
+      "eclipse": {
+        "file": "Anas querquedula, Hong Kong 1.jpg",
+        "author": "Frankie Chu from Hong Kong香港",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Anas_querquedula,_Hong_Kong_1.jpg",
+        "image": "/assets/species/plumage/sp188-eclipse.webp",
+        "width": 1024,
+        "height": 768,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Zomertaling",
+        "latin": "Spatula querquedula",
+        "batch": "teals-14",
+        "reviewed": "2026-11-06",
+        "verification": "Soort en kleed gecontroleerd aan de hand van Commons-broninformatie en zichtbare veldkenmerken.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zomertaling",
+        "visualCheck": "Mannetje in eclipskleed in vlucht boven Hongkong. Bruine kop, lichte keel en opvallend blauwgrijze voorvleugel.",
+        "alt": "Zomertaling — Mannetje in eclipskleed in vlucht boven Hongkong. Bruine kop, lichte keel en opvallend blauwgrijze voorvleugel.",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      }
+    },
+    "sp146": {
+      "winter": {
+        "file": "iNaturalist photo 460492953",
+        "author": "Paulo Caseirito",
+        "license": "CC0",
+        "source": "https://www.inaturalist.org/photos/460492953",
+        "image": "/assets/species/plumage/sp146-winter.webp",
+        "width": 1024,
+        "height": 682,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Bontbekplevier",
+        "latin": "Charadrius hiaticula",
+        "batch": "small-plovers",
+        "reviewed": "2026-11-06",
+        "verification": "Research-grade waarneming als Charadrius hiaticula. Het afgebeelde kleed is visueel getoetst.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bontbekplevier",
+        "visualCheck": "Bontbekplevier in december in Portugal. Donkere snavel met een lichte basis en gedempte koptekening.",
+        "alt": "Bontbekplevier in december in Portugal. Donkere snavel met een lichte basis en gedempte koptekening.",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "observation": "https://www.inaturalist.org/observations/256791018"
+      },
+      "juv": {
+        "file": "iNaturalist photo 733881501",
+        "author": "Stephen M.",
+        "license": "CC BY-SA 4.0",
+        "source": "https://www.inaturalist.org/photos/733881501",
+        "image": "/assets/species/plumage/sp146-juv.webp",
+        "width": 1024,
+        "height": 736,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Bontbekplevier",
+        "latin": "Charadrius hiaticula",
+        "batch": "small-plovers",
+        "reviewed": "2026-11-06",
+        "verification": "Research-grade waarneming als Charadrius hiaticula. Het afgebeelde kleed is visueel getoetst.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bontbekplevier",
+        "visualCheck": "Jonge Bontbekplevier in Engeland. Bruine kop en borstband, met een lichte lijn achter het oog.",
+        "alt": "Jonge Bontbekplevier in Engeland. Bruine kop en borstband, met een lichte lijn achter het oog.",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "observation": "https://www.inaturalist.org/observations/399972778"
+      },
+      "breeding": {
+        "reuseGuidePhoto": true
+      }
+    },
+    "sp147": {
+      "breeding": {
+        "reuseGuidePhoto": true
+      },
+      "winter": {
+        "file": "iNaturalist photo 94775001",
+        "author": "Karim Haddad",
+        "license": "CC BY 4.0",
+        "source": "https://www.inaturalist.org/photos/94775001",
+        "image": "/assets/species/plumage/sp147-winter.webp",
+        "width": 1024,
+        "height": 769,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Kleine Plevier",
+        "latin": "Charadrius dubius",
+        "batch": "small-plovers",
+        "reviewed": "2026-11-06",
+        "verification": "Research-grade waarneming als Thinornis dubius. Het afgebeelde kleed is visueel getoetst.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kleine-plevier",
+        "visualCheck": "Kleine Plevier in januari in Algerije. De bruine koptekening en borstband zijn minder contrastrijk.",
+        "alt": "Kleine Plevier in januari in Algerije. De bruine koptekening en borstband zijn minder contrastrijk.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "observation": "https://www.inaturalist.org/observations/59320005"
+      },
+      "juv": {
+        "file": "iNaturalist photo 350059610",
+        "author": "Anthony McDonald",
+        "license": "CC BY 4.0",
+        "source": "https://www.inaturalist.org/photos/350059610",
+        "image": "/assets/species/plumage/sp147-juv.webp",
+        "width": 1024,
+        "height": 771,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Kleine Plevier",
+        "latin": "Charadrius dubius",
+        "batch": "small-plovers",
+        "reviewed": "2026-11-06",
+        "verification": "Research-grade waarneming als Thinornis dubius. Het afgebeelde kleed is visueel getoetst.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kleine-plevier",
+        "visualCheck": "Jonge Kleine Plevier in Engeland. Donkere snavel, bruine kop en weinig opvallende oogring.",
+        "alt": "Jonge Kleine Plevier in Engeland. Donkere snavel, bruine kop en weinig opvallende oogring.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "observation": "https://www.inaturalist.org/observations/198592387"
+      }
+    },
+    "sp206": {
+      "adult_m": {
+        "reuseGuidePhoto": true
+      },
+      "adult_f": {
+        "file": "iNaturalist photo 268541114",
+        "author": "Katerina Kalogerini",
+        "license": "CC BY 4.0",
+        "source": "https://www.inaturalist.org/photos/268541114",
+        "image": "/assets/species/plumage/sp206-adult_f.webp",
+        "width": 1024,
+        "height": 768,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Strandplevier",
+        "latin": "Charadrius alexandrinus",
+        "batch": "small-plovers",
+        "reviewed": "2026-11-06",
+        "verification": "Research-grade waarneming als Anarhynchus alexandrinus. Het afgebeelde kleed is visueel getoetst.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/strandplevier",
+        "visualCheck": "Vrouwtje Strandplevier in Griekenland. Bruine koptekening, met een donkere snavel en donkere poten.",
+        "alt": "Vrouwtje Strandplevier in Griekenland. Bruine koptekening, met een donkere snavel en donkere poten.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "observation": "https://www.inaturalist.org/observations/155359487"
+      },
+      "winter": {
+        "file": "iNaturalist photo 258130184",
+        "author": "Paulo Caseirito",
+        "license": "CC0",
+        "source": "https://www.inaturalist.org/photos/258130184",
+        "image": "/assets/species/plumage/sp206-winter.webp",
+        "width": 691,
+        "height": 691,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Strandplevier",
+        "latin": "Charadrius alexandrinus",
+        "batch": "small-plovers",
+        "reviewed": "2026-11-06",
+        "verification": "Research-grade waarneming als Anarhynchus alexandrinus. Het afgebeelde kleed is visueel getoetst.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/strandplevier",
+        "visualCheck": "Strandplevier in februari in Portugal. Bleke bovenzijde, donkere poten en een zijborstvlek.",
+        "alt": "Strandplevier in februari in Portugal. Bleke bovenzijde, donkere poten en een zijborstvlek.",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "observation": "https://www.inaturalist.org/observations/149773050"
+      },
+      "juv": {
+        "file": "iNaturalist photo 565748384",
+        "author": "SteveM4560",
+        "license": "CC BY 4.0",
+        "source": "https://www.inaturalist.org/photos/565748384",
+        "image": "/assets/species/plumage/sp206-juv.webp",
+        "width": 481,
+        "height": 361,
+        "modifications": "Uitsnede rond de hele vogel en omgezet naar WebP",
+        "nl": "Strandplevier",
+        "latin": "Charadrius alexandrinus",
+        "batch": "small-plovers",
+        "reviewed": "2026-11-06",
+        "verification": "Research-grade waarneming als Anarhynchus alexandrinus. Het afgebeelde kleed is visueel getoetst.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/strandplevier",
+        "visualCheck": "Jonge Strandplevier in Bulgarije. Lichte randen aan de rugveren en een kleine bleke zijborstvlek.",
+        "alt": "Jonge Strandplevier in Bulgarije. Lichte randen aan de rugveren en een kleine bleke zijborstvlek.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "observation": "https://www.inaturalist.org/observations/313289879"
+      }
+    }
+  }
+}

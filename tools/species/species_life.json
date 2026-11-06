@@ -37,11 +37,11 @@
   "voice": "Driedelig koeren \"koe-KOE-koe\" en een nasaal \"krèh\" bij het landen"
  },
  "sp005": {
-  "period": "mrt–jul",
+  "period": "apr–mei",
   "nest": "Groot takkennest hoog in een boom, aangekleed met groen",
   "eggs": "2–4",
-  "incubation": "33–35 dagen",
-  "fledging": "42–49 dagen",
+  "incubation": "33–38 dagen",
+  "fledging": "50–60 dagen",
   "broods": "1",
   "diet": "Muizen, woelmuizen, regenwormen, jonge konijnen, aas",
   "behaviour": "Zit vaak langs wegen op palen; cirkelt met vleugels in ondiepe V",
@@ -49,28 +49,28 @@
   "voice": "Miauwend \"pieuw\" in vlucht"
  },
  "sp006": {
-  "period": "apr–jul",
-  "nest": "Platte takkenkom in een jonge naaldboom",
+  "period": "apr–jun",
+  "nest": "Meestal dicht tegen de stam in dicht bos, vaak in een jonge naaldboom.",
   "eggs": "4–5",
-  "incubation": "33–35 dagen",
-  "fledging": "24–30 dagen",
+  "incubation": "32–34 dagen",
+  "fledging": "26–30 dagen",
   "broods": "1",
-  "diet": "Kleine zangvogels zoals mussen, mezen en vinken",
+  "diet": "Vooral kleine zangvogels. Vrouwtjes vangen ook grotere vogels, soms tot het formaat van een Turkse tortel.",
   "behaviour": "Verrassingsaanval laag langs heggen en tuinen; vlucht met snelle slagen en korte glijvluchten",
   "migration": "Standvogel; in najaar en winter ook doortrekkers uit het noorden",
-  "voice": "Snel \"kie-kie-kie\" bij het nest"
+  "voice": "Bij het nest een vrij hoog, snel gekekker. Daarnaast is een hoge, schrille roep te horen."
  },
  "sp007": {
-  "period": "mrt–jul",
-  "nest": "Groot takkennest hoog in een oude boom",
+  "period": "mrt–mei",
+  "nest": "Groot takkennest hoog in de boomkroon. Het kan jaren achtereen worden gebruikt.",
   "eggs": "3–4",
-  "incubation": "35–38 dagen",
-  "fledging": "35–42 dagen",
+  "incubation": "32–38 dagen",
+  "fledging": "34–41 dagen",
   "broods": "1",
-  "diet": "Duiven, kraaien, eksters, konijnen en eenden",
+  "diet": "Vooral vogels rond duifgrootte. Ook grotere en kleinere vogels en zoogdieren zoals konijn en eekhoorn.",
   "behaviour": "Jaagt verborgen vanuit bos; balts boven het bos in het vroege voorjaar",
   "migration": "Standvogel",
-  "voice": "Luid kakelend \"kjek-kjek-kjek\" bij het nest"
+  "voice": "Bij het nest een diep, meestal trager gekekker dan bij de Sperwer. Ook hoge, klagende roepen en bedelroepen van jongen."
  },
  "sp008": {
   "period": "apr–jul",
@@ -319,16 +319,17 @@
   "voice": "Rauw, langgerekt \"kraaa\""
  },
  "sp029": {
-  "period": "mrt–jul",
-  "nest": "In boomholte of nestkast",
-  "eggs": "6–12",
-  "incubation": "13–14 dagen",
+  "period": "Vanaf eind april",
+  "nest": "Boomholte of nestkast, bekleed met mos en zacht materiaal.",
+  "eggs": "8–13",
+  "incubation": "13–15 dagen",
   "fledging": "18–21 dagen",
   "broods": "1–2",
-  "diet": "Rupsen en insecten in de zomer; zaden en vetbollen in de winter",
-  "behaviour": "Talrijkste nestkastbewoner; luidruchtig en brutaal",
-  "migration": "Standvogel",
-  "voice": "Zeer gevarieerd; bekend tweetonig \"tie-tu tie-tu\" (\"fietspomp\")"
+  "diet": "Rupsen en kleine insecten, ook beukennootjes en zaden.",
+  "behaviour": "Foerageert in bomen en bezoekt in de winter voedertafels.",
+  "migration": "Nederlandse broedvogels blijven. In sommige winters komen noordelijke vogels erbij.",
+  "voice": "Ritmische zang met veel variaties; uiteenlopende roepen.",
+  "months": "apr-jun"
  },
  "sp030": {
   "period": "mrt–jul",
@@ -511,16 +512,17 @@
   "voice": "Hoger en droger \"tsjet\" dan de Huismus"
  },
  "sp045": {
-  "period": "mrt–aug",
-  "nest": "Stevig komnest met modder in struik, klimop of heg",
-  "eggs": "3–5",
-  "incubation": "12–14 dagen",
-  "fledging": "13–14 dagen",
-  "broods": "2–3",
-  "diet": "Regenwormen, insecten, bessen en fruit",
-  "behaviour": "Foerageert op gazons; houdt de kop schuin om wormen te zoeken",
-  "migration": "Standvogel; in de winter veel Merels uit het noorden",
-  "voice": "Rijke, melodieuze fluitende zang vanaf hoge plekken; alarm \"tsjik-tsjik-tsjik\""
+  "period": "Eind maart–juli",
+  "nest": "Komnest van gras en takjes, vaak in een struik of klimop.",
+  "eggs": "4–5",
+  "incubation": "11–15 dagen",
+  "fledging": "12–15 dagen",
+  "broods": "Meestal 2, soms 3",
+  "diet": "Wormen, insecten, bessen en fruit.",
+  "behaviour": "Zingt vaak vanaf een hoge post. Slaat luid alarm bij gevaar.",
+  "migration": "De meeste Nederlandse merels blijven. Noordelijke vogels trekken door en overwinteren hier.",
+  "voice": "Rollende fluittonen; bij alarm scherpe, luide roepen.",
+  "months": "mrt-jul"
  },
  "sp046": {
   "period": "mrt–aug",
@@ -571,16 +573,17 @@
   "voice": "Ratelend \"trrrr\"; zang als merel maar korter en weemoediger"
  },
  "sp050": {
-  "period": "mrt–jul",
-  "nest": "Komnest laag in een holte, wal of klimop",
-  "eggs": "4–6",
-  "incubation": "13–14 dagen",
-  "fledging": "13–14 dagen",
+  "period": "April–juli",
+  "nest": "Nest van gras en bladeren, laag en goed verstopt.",
+  "eggs": "5–7",
+  "incubation": "12–15 dagen",
+  "fledging": "13–15 dagen",
   "broods": "2",
-  "diet": "Insecten, wormen, spinnen en in de winter bessen en zaden",
-  "behaviour": "Volgt tuiniers op de voet; zingt ook in de winter",
-  "migration": "Standvogel en trekvogel; in de winter extra Roodborsten uit het noorden",
-  "voice": "Weemoedige, parelende zang; roep een scherp \"tik\""
+  "diet": "Kleine ongewervelden, aangevuld met bessen en zaden.",
+  "behaviour": "Jaagt vaak vanaf een lage uitkijkpost. Verdedigt ook in de winter een territorium.",
+  "migration": "Een deel trekt zuidwestwaarts. Vogels uit noordelijker en oostelijker gebieden overwinteren hier.",
+  "voice": "Snelle, heldere strofen met pauzes. Korte tikkende roep.",
+  "months": "apr-jul"
  },
  "sp051": {
   "period": "apr–aug",
@@ -643,28 +646,30 @@
   "voice": "Zeer luide, snelle zang met triller; roep \"tek-tek\""
  },
  "sp056": {
-  "period": "apr–jul",
-  "nest": "Bolnest met zij-ingang dicht bij de grond",
+  "period": "Half april–eind juni",
+  "nest": "Bolvormig nest met zijingang, laag in dichte begroeiing.",
   "eggs": "5–6",
   "incubation": "13–15 dagen",
-  "fledging": "12–15 dagen",
-  "broods": "1–2",
-  "diet": "Kleine insecten, bladluizen en spinnen",
-  "behaviour": "Wipt voortdurend met de staart; zeer vroege zanger in maart",
-  "migration": "Zomergast (mrt–okt); een deel overwintert in Nederland",
-  "voice": "Eentonig \"tjif-tjaf-tjif-tjaf\""
+  "fledging": "14–16 dagen",
+  "broods": "2",
+  "diet": "Insecten en larven, in het najaar ook bessen en zaden.",
+  "behaviour": "Zoekt rusteloos tussen bladeren en beweegt geregeld zijn staart.",
+  "migration": "Het merendeel trekt weg. In zachte winters blijft een kleine groep in Nederland.",
+  "voice": "Herhaald tjif-tjaf. De contactroep klinkt vaak stijgend.",
+  "months": "apr-jun"
  },
  "sp057": {
-  "period": "mei–jul",
-  "nest": "Bolnest met zij-ingang op de grond in ruigte",
+  "period": "Vanaf eind april",
+  "nest": "Nest op de grond, verscholen tussen de begroeiing.",
   "eggs": "4–8",
-  "incubation": "12–13 dagen",
-  "fledging": "13–16 dagen",
+  "incubation": "12–14 dagen",
+  "fledging": "12–16 dagen",
   "broods": "1",
-  "diet": "Kleine insecten en spinnen",
-  "behaviour": "Leeft in jonge bossen, struwelen en berkenopslag",
-  "migration": "Zomergast (apr–sep); overwintert ten zuiden van de Sahara",
-  "voice": "Weemoedig, aflopend liedje"
+  "diet": "Vooral insecten, insecteneitjes en larven.",
+  "behaviour": "Foerageert vaak laag in het struweel.",
+  "migration": "Overwintert ten zuiden van de Sahara. Eerste aankomst eind maart, vooral in april.",
+  "voice": "Helder riedeltje dat in toon afloopt.",
+  "months": "apr-jun"
  },
  "sp058": {
   "period": "mei–jun",
@@ -949,28 +954,30 @@
   "voice": "Rauw \"kraak\" in vlucht; kolonie vol geklepper"
  },
  "sp082": {
-  "period": "apr–jul",
-  "nest": "Takkennest in een gemengde reigerkolonie",
+  "period": "mei–jun",
+  "nest": "Takkennest in struik of boom, soms op de grond of in riet. Vaak in een gemengde kolonie.",
   "eggs": "3–5",
   "incubation": "21–25 dagen",
   "fledging": "40–45 dagen",
   "broods": "1",
-  "diet": "Kleine vissen, kreeftjes en insecten",
-  "behaviour": "Loopt actief en schudt met de gele voeten om prooi op te jagen",
-  "migration": "Standvogel en trekvogel; aantal sterk gegroeid",
-  "voice": "Krassend \"kark\" bij de kolonie"
+  "diet": "Vooral kleine vis. Ook amfibieën, waterinsecten en kleine kreeftachtigen.",
+  "behaviour": "Foerageert actief in ondiep water en rent soms achter een prooi aan. Beide ouders broeden.",
+  "migration": "Een deel van de Nederlandse vogels trekt weg. Andere blijven, vooral bij zacht winterweer. De meeste waarnemingen vallen in de nazomer en het vroege najaar.",
+  "voice": "Meestal stil. Geeft soms een schorre, meerlettergrepige roep of een scherpere kreet.",
+  "fledgingLabel": "Jongen vliegvlug na"
  },
  "sp083": {
-  "period": "apr–jul",
-  "nest": "Nest van riet in dichte rietvelden",
-  "eggs": "3–5",
+  "period": "apr–jun",
+  "nest": "Koloniebroeder. Nestelt in overjarig riet, soms in wilgen.",
+  "eggs": "3–4",
   "incubation": "25–26 dagen",
-  "fledging": "42–55 dagen",
+  "fledging": "40–60 dagen",
   "broods": "1",
-  "diet": "Vis, muizen, kikkers en grote insecten",
-  "behaviour": "Jaagt vaak op droge weilanden op muizen; staat rechtop en stil",
-  "migration": "Standvogel en wintergast; sterk toegenomen sinds de jaren 90",
-  "voice": "Laag \"kroa\"; meestal stil"
+  "diet": "Vooral vis, ook kikkers en kleine zoogdieren zoals muizen.",
+  "behaviour": "Jaagt in ondiep water en op grasland. Komt buiten de broedtijd met andere zilverreigers samen op slaapplaatsen.",
+  "migration": "Jaarrond in Nederland. Vogels uit andere delen van Europa komen hier overwinteren. Bij vorst kunnen ze verder zuidwaarts trekken.",
+  "voice": "Meestal stil. Vooral in de broedtijd klinkt een rollende, schorre roep.",
+  "fledgingLabel": "Jongen volgroeid na"
  },
  "sp084": {
   "period": "apr–jul",
@@ -1033,16 +1040,18 @@
   "voice": "Man hol \"tuk-tuk\"; vrouw zacht kwakend"
  },
  "sp091": {
-  "period": "apr–jul",
-  "nest": "Goed verstopt komnest met dons in heide of moeras",
-  "eggs": "8–11",
-  "incubation": "21–23 dagen",
+  "period": "Half april–juli",
+  "nest": "Grondnest, goed verborgen in vegetatie.",
+  "eggs": "Meestal 8–11",
+  "incubation": "21–23 dagen (BTO), 25–30 dagen (Sovon)",
   "fledging": "25–30 dagen",
-  "broods": "1",
-  "diet": "Kleine zaden en waterdiertjes, gefilterd uit modder",
-  "behaviour": "Kleinste eend van Nederland; snelle, wendbare vlucht in groepjes",
-  "migration": "Wintergast in grote aantallen (aug–apr); kleine broedpopulatie in hoogveen en duinen",
-  "voice": "Man helder fluitend \"kriek-kriek\""
+  "broods": "Meestal 1",
+  "diet": "Kleine waterdieren in de broedtijd. In de winter veel zaden.",
+  "behaviour": "Filtert voedsel aan het wateroppervlak en grondelt. Vormt in de winter groepen.",
+  "migration": "Schaarse broedvogel die jaarrond voorkomt. In herfst en vroege winter veel meer vogels.",
+  "voice": "Man fluit hoog bij de balts. Vrouw heeft een scherpe kwaak.",
+  "fledgingLabel": "Vliegvlug na",
+  "months": "apr-jul"
  },
  "sp092": {
   "period": "mei–aug",
@@ -1249,16 +1258,17 @@
   "voice": "Ritmisch, zeurend \"tret-tret-tret-tirri-tirri\""
  },
  "sp110": {
-  "period": "mei–jul",
-  "nest": "Komnest laag in ruigte of oevervegetatie",
-  "eggs": "5–6",
-  "incubation": "13–14 dagen",
-  "fledging": "13–14 dagen",
-  "broods": "1–2",
-  "diet": "Insecten, vooral bladluizen in het riet",
-  "behaviour": "Korte zangvlucht omhoog uit de ruigte",
-  "migration": "Zomergast (apr–sep); overwintert in West-Afrika",
-  "voice": "Snelle, rommelige zang met krassende en fluitende stukjes"
+  "period": "Eind april–begin juni",
+  "nest": "Nest laag in het riet, kort boven de grond.",
+  "eggs": "4–7",
+  "incubation": "13–15 dagen",
+  "fledging": "10–13 dagen",
+  "broods": "Meestal 1, soms 2",
+  "diet": "Insecten, spinnen en kleine andere ongewervelden; soms zaden.",
+  "behaviour": "Zingt in de vegetatie en tijdens een korte vlucht boven het riet.",
+  "migration": "Vooral van april tot september. Overwintert ten zuiden van de Sahara.",
+  "voice": "Krassende, afwisselende zang met imitaties.",
+  "months": "apr-jun"
  },
  "sp111": {
   "period": "mei–jul",
@@ -1297,16 +1307,17 @@
   "voice": "Fluitend \"dudeljo\" en een krassend \"kwèèk\""
  },
  "sp114": {
-  "period": "apr–sep",
-  "nest": "Open nest van modder in een schuur of stal",
-  "eggs": "4–5",
-  "incubation": "14–16 dagen",
-  "fledging": "18–23 dagen",
-  "broods": "2–3",
+  "period": "Mei–augustus",
+  "nest": "Kleikom onder een overstek, brug of in een schuur of stal.",
+  "eggs": "Meestal 3–6",
+  "incubation": "12–16 dagen",
+  "fledging": "20–24 dagen",
+  "broods": "1–3",
   "diet": "Vliegende insecten, laag boven land en water",
   "behaviour": "Jaagt laag boven weilanden en water; in de nazomer in grote groepen op draden",
   "migration": "Zomergast (apr–okt); overwintert in zuidelijk Afrika",
-  "voice": "Kwetterende zang met een raspend eindje; roep \"wit-wit\""
+  "voice": "Kwetterende zang met een raspend eindje; roep \"wit-wit\"",
+  "months": "mei-aug"
  },
  "sp115": {
   "period": "mei–sep",
@@ -1345,16 +1356,18 @@
   "voice": "\"Wat-ben-je-toch-mooi-mooi-mooiiii\" met een lange slottoon"
  },
  "sp118": {
-  "period": "apr–jul",
-  "nest": "Komnest laag in riet, ruigte of graspol",
+  "period": "Eind april–eind juli",
+  "nest": "Laag nest op een pol of tussen stengels, van gras en riet.",
   "eggs": "4–5",
-  "incubation": "12–14 dagen",
-  "fledging": "10–13 dagen",
-  "broods": "2",
-  "diet": "Zaden en in de broedtijd insecten",
-  "behaviour": "Zingt vanaf een rietpluim; wipt met de staart",
-  "migration": "Standvogel en trekvogel",
-  "voice": "Kort, hakkelend \"tsjik-tsjik-tsjiriri\""
+  "incubation": "12–15 dagen",
+  "fledging": "9–12 dagen",
+  "broods": "1–2",
+  "diet": "In broedtijd vooral ongewervelden; daarbuiten veel zaden.",
+  "behaviour": "Knipt geregeld met de staart; de witte staartzijden vallen dan op.",
+  "migration": "Een deel van de broedvogels trekt weg. Noordelijke vogels trekken door of overwinteren hier.",
+  "voice": "Korte zang met enkele metaalachtige noten; dalende roep.",
+  "fledgingLabel": "Vliegvlug na",
+  "months": "apr-jul"
  },
  "sp119": {
   "period": "mei–aug",
@@ -1633,28 +1646,32 @@
   "voice": "Zacht, klagend \"tluu\""
  },
  "sp146": {
-  "period": "apr–jul",
-  "nest": "Kuiltje in zand of schelpen op het strand",
-  "eggs": "4",
-  "incubation": "23–25 dagen",
-  "fledging": "24 dagen",
-  "broods": "1–2",
-  "diet": "Wormen, kreeftjes en insecten",
-  "behaviour": "Rennen, stoppen en pikken; gebroken-vleugeltruc bij het nest",
-  "migration": "Zomergast en doortrekker; overwintert in West-Afrika en West-Europa",
-  "voice": "Zacht oplopend \"tuu-ip\""
+  "period": "Eileg meestal half april–half juli, soms vanaf eind maart",
+  "months": "apr-jul",
+  "nest": "Ondiep kuiltje op kale zand-, schelp- of kiezelgrond. Soms liggen er steentjes, schelpjes of plantenresten in.",
+  "eggs": "Meestal 2–4",
+  "incubation": "21–27 dagen",
+  "fledging": "Nestvlieders, vliegvlug na ongeveer 24 dagen",
+  "broods": "1–2, soms 3",
+  "diet": "Kleine ongewervelden, waaronder wormen, wadslakjes, kreeftachtigen en insecten.",
+  "behaviour": "Zoekt voedsel op zicht. Loopt korte stukjes, staat stil en pikt een prooi van de bodem. Op het wad volgt de soort vaak het getij.",
+  "migration": "Jaarrond aanwezig in Nederland, met kleine aantallen in de winter. Veel eigen broedvogels trekken naar Zuidwest-Europa of Noord-Afrika. Arctische doortrekkers kunnen verder naar West-Afrika.",
+  "voice": "Zachte, tweetonige fluitroep die omhoog buigt. In de baltsvlucht klinkt een ritmisch herhaalde roep.",
+  "fledgingLabel": "Jongen vliegvlug"
  },
  "sp147": {
-  "period": "apr–jul",
-  "nest": "Kuiltje op kale grond, grind of bouwterrein",
-  "eggs": "4",
-  "incubation": "24–25 dagen",
-  "fledging": "24–29 dagen",
-  "broods": "1–2",
-  "diet": "Insecten en spinnen",
-  "behaviour": "Broedt op kale terreinen, ook op bouwplaatsen en daken",
-  "migration": "Zomergast (mrt–sep); overwintert in West-Afrika",
-  "voice": "Aflopend \"pieu\"; ratelende baltsvlucht"
+  "period": "Eileg begin april–begin juli, soms tot in augustus",
+  "months": "apr-jul",
+  "nest": "Ondiep kuiltje op kale grond, meestal met enkele steentjes.",
+  "eggs": "Meestal 3–4",
+  "incubation": "22–28 dagen",
+  "fledging": "Nestvlieders, vliegvlug na 24–29 dagen",
+  "broods": "1–2, volgens Vogelbescherming soms 3",
+  "diet": "Vooral insecten en hun larven, daarnaast spinnen en andere kleine ongewervelden.",
+  "behaviour": "Pionier op open zand- en grindgrond. Zoekt op zicht naar prooi en wisselt korte renstukjes af met stilstaan en pikken.",
+  "migration": "Trekt weg uit Nederland. Europese broedvogels overwinteren vooral in Afrika, onder meer ten zuiden van de Sahara.",
+  "voice": "De gewone roep is een korte, aflopende fluittoon. Tijdens balts of in vlucht kan een sneller herhaalde reeks te horen zijn.",
+  "fledgingLabel": "Jongen vliegvlug"
  },
  "sp148": {
   "diet": "Krabbetjes, wormen en insecten",
@@ -1879,16 +1896,16 @@
   "voice": "Meestal stil"
  },
  "sp173": {
-  "period": "apr–jul",
-  "nest": "Nest van riet op de grond in dichte rietvelden",
-  "eggs": "4–5",
-  "incubation": "31–36 dagen",
+  "period": "apr–jun",
+  "nest": "Van plantenmateriaal, op de grond of boven water. Vaak in riet, soms in akkers.",
+  "eggs": "3–6",
+  "incubation": "31–38 dagen",
   "fledging": "35–40 dagen",
   "broods": "1",
-  "diet": "Kleine vogels, jonge eenden, muizen en kikkers",
+  "diet": "Vooral kleine zoogdieren en jonge vogels. Ook eieren, kikkers en aas.",
   "behaviour": "Zweeft laag boven riet met vleugels in een ondiepe V; prooioverdracht in de lucht",
   "migration": "Zomergast (mrt–okt); een deel overwintert in Nederland",
-  "voice": "Hoog \"kie-oe\" in de balts"
+  "voice": "Het mannetje roept hoog tijdens de baltsvlucht. Het vrouwtje heeft een nog hogere roep."
  },
  "sp174": {
   "period": "apr–jul",
@@ -2023,16 +2040,18 @@
   "voice": "Trompetterend \"whoop-whoop\""
  },
  "sp188": {
-  "period": "mei–jul",
-  "nest": "Komnest met dons in hoog gras bij water",
-  "eggs": "8–11",
+  "period": "April–juli, begint meestal in april of mei",
+  "nest": "Grondnest in dichte vegetatie aan de oever of in een graspol.",
+  "eggs": "Meestal 8–11",
   "incubation": "21–23 dagen",
   "fledging": "35–40 dagen",
   "broods": "1",
-  "diet": "Waterinsecten, zaden en waterplanten",
-  "behaviour": "Schuw; verborgen in natte graslanden en moerassen",
-  "migration": "Zomergast (mrt–sep); overwintert in de Sahel",
-  "voice": "Man een droog ratelend \"knerrr\""
+  "diet": "Zoekt voedsel op of vlak onder het wateroppervlak. Eet zaden en waterplanten, en in de broedtijd ook insectenlarven en andere kleine waterdieren.",
+  "behaviour": "Houdt zich vaak op bij ondiep water met oeverplanten. Broedt in losse paren en verdedigt de nestomgeving.",
+  "migration": "Trekt in het voorjaar door vanaf maart en overwintert vooral ten zuiden van de Sahara, onder meer in de Sahel.",
+  "voice": "Mannetje maakt een korte, droge ratel. Vrouwtje kwaakt kort en hoog.",
+  "fledgingLabel": "Vliegvlug na",
+  "months": "apr-jul"
  },
  "sp189": {
   "period": "mei–jul",
@@ -2203,16 +2222,18 @@
   "voice": "Scherp \"kiek-kiek\""
  },
  "sp206": {
-  "period": "apr–jul",
-  "nest": "Kuiltje in zand of schelpen op een open strand",
-  "eggs": "3",
-  "incubation": "24–27 dagen",
-  "fledging": "27–31 dagen",
-  "broods": "1–2",
-  "diet": "Kleine kreeftjes, wormen en insecten",
-  "behaviour": "Broedt op rustige stranden; zeer gevoelig voor verstoring",
-  "migration": "Zomergast (mrt–sep); overwintert in Zuid-Europa en West-Afrika",
-  "voice": "Zacht \"pruit\" en rollend \"pirr\""
+  "period": "Eileg vooral in mei",
+  "months": "mei",
+  "nest": "Ondiep kuiltje in kale of schaars begroeide grond, vaak met schelpjes of steentjes.",
+  "eggs": "Meestal 3",
+  "incubation": "23–29 dagen",
+  "fledging": "Nestvlieders, vliegvlug na 27–31 dagen",
+  "broods": "Meestal 1",
+  "diet": "Pikt insecten, spinnen en slakjes op. Langs de kust ook kleine kreeftachtigen en wormen.",
+  "behaviour": "Rent korte stukken en pikt prooien op zicht. Zoekt langs het strand vaak voedsel tussen aangespoeld materiaal.",
+  "migration": "West-Europese broedvogels overwinteren vooral in Zuidwest-Europa, mogelijk ook in Noord- en West-Afrika. In Nederland zijn winterwaarnemingen uitzonderlijk.",
+  "voice": "Korte, zacht fluitende roep en een rollend rateltje. Een vluchtroep en de korte baltszang zijn apart te beluisteren.",
+  "fledgingLabel": "Jongen vliegvlug"
  },
  "sp207": {
   "diet": "Insecten",
@@ -2509,16 +2530,17 @@
   "voice": "Laag, herhaald blaffend \"woeg\""
  },
  "sp245": {
-  "period": "apr–jul",
-  "nest": "Takkennest in een gemengde reigerkolonie",
-  "eggs": "3–5",
+  "period": "apr–jun",
+  "nest": "In Nederland vooral in gemengde kolonies. De eileg begint vanaf eind april.",
+  "eggs": "Meestal 4–5",
   "incubation": "22–26 dagen",
-  "fledging": "40–45 dagen",
-  "broods": "1",
-  "diet": "Insecten opgejaagd door vee, kikkers en muizen",
-  "behaviour": "Loopt tussen koeien en paarden",
-  "migration": "Standvogel en trekvogel; recente broedvogel",
-  "voice": "Meestal stil; schor \"rik-rak\" bij de kolonie"
+  "fledging": "Ca. 30 dagen",
+  "broods": "Meestal 1",
+  "diet": "Vooral insecten zoals sprinkhanen en kevers. Ook wormen, kleine kikkers en soms muizen.",
+  "behaviour": "Volgt koeien, paarden of schapen en grijpt prooi die het vee opjaagt.",
+  "migration": "Jaarrond mogelijk in Nederland, met meer meldingen in april–juni en september–november.",
+  "voice": "Meestal stil. Geeft korte, krakende roepen bij de kolonie of slaapplaats.",
+  "fledgingLabel": "Eerste vlucht na"
  },
  "sp246": {
   "period": "mei–jul",
@@ -2545,37 +2567,43 @@
   "voice": "Kort fluitend \"pjiep-pjiep\""
  },
  "sp248": {
-  "period": "mei–aug",
-  "nest": "Takkennest hoog in een boom, aangekleed met groen blad",
+  "period": "jun–jul",
+  "nest": "Hoog in de kruin van een loof- of naaldboom. Gebruikt soms een opgeknapt oud nest.",
   "eggs": "2",
-  "incubation": "33–35 dagen",
-  "fledging": "40–45 dagen",
+  "incubation": "30–35 dagen",
+  "fledging": "40–44 dagen",
   "broods": "1",
-  "diet": "Larven en raten van wespen en hommels, die hij uitgraaft",
-  "behaviour": "Klappende baltsvlucht boven het bos",
-  "migration": "Zomergast (mei–sep); overwintert in West- en Centraal-Afrika",
-  "voice": "Klagend \"pie-luu\""
+  "diet": "Vooral wespenlarven en poppen. Graaft grondnesten uit en neemt raten mee. Eet ook andere kleine dieren.",
+  "behaviour": "Bij de balts slaat de vogel de vleugels hoog boven de rug tegen elkaar.",
+  "migration": "Zomergast. Overwintert in tropisch Afrika. Trekt vooral in het voorjaar en aan het einde van de zomer door.",
+  "voice": "Hoge, fluitende roep die kan overslaan."
  },
  "sp249": {
-  "period": "apr–jul",
-  "nest": "Nest van riet en takjes op de grond in duinen, heide of kwelder",
-  "eggs": "4–6",
-  "incubation": "29–31 dagen",
+  "period": "apr–jun",
+  "nest": "Op de grond in hoge vegetatie, bijvoorbeeld in duinen, rietland of graan.",
+  "eggs": "Meestal 3–6",
+  "incubation": "29–39 dagen",
   "fledging": "32–42 dagen",
   "broods": "1",
-  "diet": "Muizen en kleine vogels",
-  "behaviour": "Jaagt laag boven open land; slaapt in de winter in groepen in riet",
-  "migration": "Wintergast (okt–apr); kleine, afnemende broedpopulatie op de Wadden",
-  "voice": "Snel \"kek-kek-kek\" bij het nest"
+  "diet": "Vooral kleine zoogdieren zoals woelmuizen. Ook zangvogels en jongen van grotere vogels.",
+  "behaviour": "Jaagt in lage zoekvlucht boven open terrein en onderbreekt die soms met kort bidden.",
+  "migration": "In Nederland vooral in de winter. Daarnaast een uiterst schaarse broedvogel.",
+  "voice": "In de broedtijd onder meer snelle kekkerende roepen en hoge fluitroepen. Ook in de winter zijn roepen te horen."
  },
  "sp250": {
-  "diet": "Muizen en kleine vogels",
-  "behaviour": "Slanker dan de Blauwe Kiekendief; man zeer licht",
-  "migration": "Schaarse doortrekker (apr–mei, aug–okt)",
-  "voice": "Meestal stil buiten de broedtijd"
+  "period": "Incidentele broedgevallen in Nederland, onder meer in 2017 en 2019",
+  "nest": "Nest op de grond. In het normale broedgebied vaak in grassteppe. In Nederland zijn nesten in graanakkers vastgesteld.",
+  "eggs": "Meestal 4–5",
+  "incubation": "29–30 dagen",
+  "fledging": "35–45 dagen",
+  "broods": "1",
+  "diet": "Vooral kleine zoogdieren en vogels. Ook reptielen en insecten.",
+  "behaviour": "Zoekt laag boven open grasland en akkers naar prooi.",
+  "migration": "Schaarse doortrekker. Het belangrijkste overwinteringsgebied ligt in Afrika en Zuid-Azië.",
+  "voice": "Roept weinig. Het mannetje kan een langgerekte triller laten horen. Het vrouwtje antwoordt vaak met een aflopende fluitroep."
  },
  "sp251": {
-  "period": "mei–aug",
+  "period": "mei–jun",
   "nest": "Nest op de grond in graan of luzerne",
   "eggs": "3–5",
   "incubation": "28–29 dagen",
@@ -2584,7 +2612,7 @@
   "diet": "Veldmuizen, kleine vogels en grote insecten",
   "behaviour": "Zweeft laag boven akkers; zeer zeldzame broedvogel in Oost-Groningen",
   "migration": "Zomergast (apr–sep); overwintert in Afrika",
-  "voice": "Snel \"kek-kek-kek\" bij het nest"
+  "voice": "Vooral in de broedtijd korte kekkerende reeksen en soms scherpe fluitroepen."
  },
  "sp252": {
   "period": "feb–jul",
@@ -2599,10 +2627,10 @@
   "voice": "Hoog, keffend \"kli-kli-kli\""
  },
  "sp253": {
-  "diet": "Muizen en woelmuizen",
-  "behaviour": "Bidt boven open land; witte staart met zwarte eindband",
-  "migration": "Wintergast uit Scandinavië (okt–apr), in wisselende aantallen",
-  "voice": "Klagend \"pie-uu\", lager dan de Buizerd"
+  "diet": "Vooral woelmuizen en in het noordelijke broedgebied ook veel lemmingen.",
+  "behaviour": "Jaagt boven open land. Hangt daarbij geregeld op één plek in de lucht met slaande vleugels.",
+  "migration": "Zeldzame wintergast uit het noorden. In Nederland vooral van oktober tot april, in wisselende aantallen.",
+  "voice": "Miauwende, klagende roep die lager klinkt dan die van de Buizerd. Vooral hoorbaar in het broedgebied."
  },
  "sp254": {
   "period": "feb–jul",

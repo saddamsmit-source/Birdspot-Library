@@ -29,9 +29,9 @@
  *   - Stale-context guard: ctx.destroyed check na elke await
  */
 
-import { SPECIES, toggleSeen, getSeenIds } from '../../data/species.js';
+import { SPECIES } from '../../data/species.js';
 import { openPinPicker } from './pinPicker.js';
-import { normalizeEvidence, observedVisually, validPin, OBSERVATION_METHODS } from './evidence.js';
+import { normalizeEvidence, validPin, OBSERVATION_METHODS, BREEDING_BEHAVIORS } from './evidence.js';
 import { addSighting, updateSighting } from '../../data/sightings.js';
 import { loadPlaces, addPlace } from '../../data/places.js';
 import { askPlaceReuse } from '../map/placePrompt.js';
@@ -42,7 +42,7 @@ import { showToast }             from '../../app.js';
 
 // ── Constants ──────────────────────────────────────────────
 const HABITATS  = ['bos', 'water', 'wei', 'stad', 'kust', 'anders'];
-const BEHAVIORS = ['zingend', 'foeragerend', 'vliegend', 'rustend', 'anders'];
+const BEHAVIORS = ['zingend', 'foeragerend', 'vliegend', 'rustend', ...BREEDING_BEHAVIORS, 'anders'];
 const WEATHERS  = ['zonnig', 'bewolkt', 'regen', 'wind', 'mist'];
 
 const CERTAINTY_LABELS = {
@@ -321,7 +321,7 @@ function _renderFormBody() {
 
     <!-- Gedrag -->
     <div class="form-field">
-      <label class="form-label">Gedrag</label>
+      <label class="form-label">Gedrag <small>optioneel</small></label>
       <div class="chip-row" id="behaviorChips">
         ${BEHAVIORS.map(b => `
           <button type="button" class="chip${_state.behavior === b ? ' chip--active' : ''}"
@@ -732,10 +732,6 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
 
     // 4. Alleen visueel waargenomen soorten als GEZIEN markeren.
     // Een tweede waarneming mag een bestaand gezien-vinkje niet UIT zetten.
-    if (observedVisually(evidence) && !getSeenIds().has(_state.speciesId)) {
-      toggleSeen(_state.speciesId);
-    }
-
     // 5. Afsluiten
     close();
     const label = isEdit ? 'Waarneming bijgewerkt' : `${savedSighting.speciesName} opgeslagen`;

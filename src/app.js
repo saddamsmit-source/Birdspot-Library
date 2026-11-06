@@ -9,6 +9,9 @@
  * - Schermen lazy-laden
  */
 
+import { installNavigation, recordRoute } from './services/navigation.js';
+import './services/gestures.js';
+
 import { renderHome }       from './features/home/view.js';
 import { renderSpecies }    from './features/species/view.js';
 import { renderSightings }  from './features/sightings/view.js';
@@ -37,9 +40,10 @@ let currentRoute  = null;
 let currentCleanup = null; // cleanup-functie van het huidige scherm (bijv. renderHome)
 
 // ── Navigeer naar een route (force=true herlaadt ook het huidige scherm) ──────
-export function navigate(route, { force = false } = {}) {
+export function navigate(route, { force = false, history: addHistory = true } = {}) {
   if (!ROUTES[route]) return;
   if (route === currentRoute && !force) return;
+  const previousRoute = currentRoute;
   currentRoute = route;
 
   // Roep cleanup van het vorige scherm aan vóór we de DOM wissen.
@@ -57,7 +61,14 @@ export function navigate(route, { force = false } = {}) {
   screen.className = 'screen active';
   screen.id = `screen-${route}`;
   main.appendChild(screen);
-  const result = ROUTES[route].render(screen);
+  let result;
+  try { result = ROUTES[route].render(screen); }
+  catch (error) {
+    console.error('[Birdspot] Scherm openen mislukt:', route, error);
+    screen.innerHTML = '<section class="route-recovery"><h1>Dit scherm kon niet worden geopend</h1><p>Je gegevens zijn niet verwijderd. Probeer het scherm opnieuw te openen.</p><button type="button">Opnieuw proberen</button></section>';
+    screen.querySelector('button').addEventListener('click',()=>navigate(route,{force:true,history:false}));
+  }
+  if (addHistory && previousRoute && route !== previousRoute) recordRoute(route);
   // Sla cleanup-functie op als de render er één retourneert (bijv. renderHome)
   if (typeof result === 'function') currentCleanup = result;
 
@@ -116,7 +127,8 @@ export function showToast(msg, duration = 2800) {
 }
 
 // ── Start ─────────────────────────────────────────────────
-navigate('home');
+const initialRoute = installNavigation({navigate,current:()=>currentRoute,toast:showToast});
+navigate(ROUTES[initialRoute] ? initialRoute : 'home',{history:false});
 // Splash waits until the application home route is actually initialized.
 window.dispatchEvent(new Event('birdspot:ready'));
 

@@ -12,7 +12,7 @@
  *   birdspot-media           — foto's/IDB-exports (permanent)
  */
 
-const APP_VERSION = '1.14.0-map-k5-links';
+const APP_VERSION = '1.17.7-small-plovers';
 const APP_CACHE   = `birdspot-app-v${APP_VERSION}`;
 const MEDIA_CACHE = 'birdspot-media';
 
@@ -46,6 +46,8 @@ const PRECACHE_URLS = [
 
   // JS — app root
   '/src/app.js',
+  '/src/services/navigation.js',
+  '/src/services/gestures.js',
   '/src/services/startup-splash.js',
 
   // JS — features
@@ -55,9 +57,13 @@ const PRECACHE_URLS = [
   '/src/features/home/specialBirds.js',
   '/src/features/home/showcaseData.js',
   '/src/features/species/view.js',
+  '/src/features/species/guidePhotos.js',
+  '/src/features/species/guideComparisons.js',
+  '/src/features/species/guideMedia.js',
   '/src/features/species/detailSections.js',
   '/src/features/sightings/view.js',
   '/src/features/sightings/addSheet.js',
+  '/src/features/sightings/speciesPicker.js',
   '/src/features/sightings/evidence.js',
   '/src/features/sightings/pinPicker.js',
   '/src/features/sightings/editSheet.js',
@@ -77,8 +83,10 @@ const PRECACHE_URLS = [
 
   // JS — data
   '/src/data/sightings.js',
+  '/src/data/db.js',
   '/src/data/species.js',
   '/src/data/speciesLife.js',
+  '/src/data/speciesDistribution.js',
   '/src/data/seasons.js',
 
   // JS — storage
@@ -89,6 +97,8 @@ const PRECACHE_URLS = [
   '/src/services/sw-register.js',
 
   // JS — utils (voeg toe als ze bestaan)
+  '/src/utils/html.js',
+  '/src/utils/photoUrl.js',
   '/src/utils/date.js',
   '/src/utils/search.js',
 ];
@@ -108,6 +118,8 @@ self.addEventListener('install', event => {
       );
       // Diashowfoto's (F): eenmalig in de media-cache, die releases overleeft (L-052)
       await precacheShowcase();
+      await precacheGuidePhotos();
+      await precacheFieldGuideMedia();
       const failed = results.filter(r => r.status === 'rejected');
       if (failed.length) {
         console.warn(`[SW] ${failed.length} precache-verzoeken overgeslagen`);
@@ -117,6 +129,28 @@ self.addEventListener('install', event => {
   // Activeer direct (geen wachten op bestaande clients)
   self.skipWaiting();
 });
+
+async function precacheGuidePhotos() {
+  try {
+    const media = await caches.open(MEDIA_CACHE);
+    const credits = await (await fetch('/assets/species/credits.json', {cache:'no-cache'})).json();
+    await Promise.allSettled(Object.values(credits).map(async photo => {
+      if (!(await media.match(photo.image))) await media.add(photo.image);
+    }));
+  } catch (err) { console.warn('[SW] gidsfoto’s niet vooraf geladen', err?.message); }
+}
+
+async function precacheFieldGuideMedia() {
+  try {
+    const media = await caches.open(MEDIA_CACHE);
+    const data = await (await fetch('/assets/species/field-guide-media.json', {cache:'no-cache'})).json();
+    const variants = Object.values(data.plumage).flatMap(cards => Object.values(cards));
+    const urls = [...variants.map(photo => photo.image), ...Object.values(data.audio).flat().map(clip => clip.audio)];
+    await Promise.allSettled(urls.filter(Boolean).map(async url => {
+      if (!(await media.match(url))) await media.add(url);
+    }));
+  } catch (err) { console.warn('[SW] gidsmedia niet vooraf geladen', err?.message); }
+}
 
 async function precacheShowcase() {
   try {
@@ -170,6 +204,11 @@ self.addEventListener('fetch', event => {
   // Sla niet-GET en externe verzoeken over (bijv. Leaflet CDN, OpenStreetMap tiles)
   if (request.method !== 'GET') return;
   if (url.origin !== self.location.origin) return;
+
+  if (url.pathname.startsWith('/assets/species/audio/')) {
+    event.respondWith(guideAudioResponse(request));
+    return;
+  }
 
   // Media: afbeeldingen uit de app-eigen upload-flow → media-cache
   // (In deze app slaan we binaire foto's in IndexedDB op; blob-URLs
@@ -225,7 +264,7 @@ async function networkFirstWithTimeout(request, timeoutMs) {
 // ── Cache-first voor media ─────────────────────────────────────────────────
 async function cacheFirstMedia(request) {
   const cache  = await caches.open(MEDIA_CACHE);
-  const cached = await cache.match(request);
+  const cached = await cache.match(request) || await caches.match(request, {cacheName: APP_CACHE});
   if (cached) return cached;
 
   try {
@@ -238,4 +277,27 @@ async function cacheFirstMedia(request) {
       headers: { 'Content-Type': 'text/plain; charset=utf-8' },
     });
   }
+}
+
+async function guideAudioResponse(request) {
+  // Cache de hele korte opname, zodat zoeken in de clip ook offline werkt.
+  const response = await cacheFirstMedia(request.url);
+  const range = request.headers.get('Range');
+  if (!range || !response.ok) return response;
+  const blob = await response.blob();
+  const match = /^bytes=(\d*)-(\d*)$/.exec(range);
+  const start = match?.[1] ? Number(match[1]) : Math.max(0, blob.size - Number(match?.[2]));
+  const end = match?.[1] && match[2] ? Math.min(blob.size - 1, Number(match[2])) : blob.size - 1;
+  if (!match || start > end || start >= blob.size) {
+    return new Response(null, {status:416, headers:{'Content-Range':`bytes */${blob.size}`}});
+  }
+  return new Response(blob.slice(start, end + 1, blob.type), {
+    status:206,
+    headers:{
+      'Content-Type':blob.type,
+      'Accept-Ranges':'bytes',
+      'Content-Length':String(end - start + 1),
+      'Content-Range':`bytes ${start}-${end}/${blob.size}`,
+    },
+  });
 }

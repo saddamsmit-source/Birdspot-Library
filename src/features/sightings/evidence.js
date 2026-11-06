@@ -9,6 +9,9 @@ export const OBSERVATION_METHODS=Object.freeze({
 export const IDENTIFICATION_SOURCES=Object.freeze({
   self:'Eigen herkenning',merlin:'Merlin Sound ID',
 });
+export const BREEDING_BEHAVIORS = Object.freeze([
+  'nestmateriaal dragen', 'voedsel naar het nest brengen', 'uitgevlogen jongen gezien',
+]);
 export function methodLabel(sighting) {
   return OBSERVATION_METHODS[sighting?.observationMethod]||'Waarnemingswijze niet vastgelegd';
 }

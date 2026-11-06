@@ -100,16 +100,20 @@ def main():
       p.locator('#addSheetCancel').click()
       p.locator('#addSightingSheet').wait_for(state='detached',timeout=5000)
 
-      # Species detail now offers the exact observation methods, not merely
-      # a legacy seen toggle. A quick click preselects species + method.
+      # The guide is informational; creation belongs to the global observation form.
       p.locator('.nav-item[data-route="species"]').click()
+      assert p.locator('.species-toolbar #speciesOnlyFavorites').count()==0
       p.locator('.species-row[data-id="sp002"] .species-row__body').first.click()
-      p.locator('.signature-species-methods').wait_for(timeout=9000)
-      assert p.locator('.signature-species-methods button').count()==4
-      capture(p,'mobile_species_methods_390.png')
-      p.locator('[data-species-observe="merlin"]').click()
+      p.locator('.signature-species-detail-close').wait_for(timeout=9000)
+      assert p.locator('[data-species-observe]').count()==0
+      assert p.locator('.signature-species-detail-actions').count()==0
+      capture(p,'mobile_species_information_390.png')
+      p.locator('.signature-species-detail-close').click()
+      p.locator('#fab').click()
       p.locator('#addSightingSheet.open').wait_for(timeout=9000)
-      assert "Houtduif" in p.locator('#speciesPickerBtn').inner_text()
+      p.locator('#speciesPickerBtn').click()
+      p.locator('#spPickerList .species-row[data-id="sp002"]').click()
+      p.locator('#sightSourceGroup input[value="merlin"]').check()
       assert p.locator('#sightMethodGroup input[value="heard"]').is_checked()
       assert p.locator('#sightSourceGroup input[value="merlin"]').is_checked()
       assert p.locator('#certaintyGroup input[value="possible"]').is_checked()
@@ -129,13 +133,15 @@ def main():
       assert p.locator('#sightMethodGroup input[value="seen"]').is_checked()
       p.locator('#addSheetCancel').click()
 
+      p.locator('.nav-item[data-route="species"]').click()
+
       # Final page should not be wider than mobile viewport.
       for width in (320,360,390,430):
         p.set_viewport_size({"width":width,"height":844})
         assert p.locator('.signature-species-hero').is_visible()
         assert p.evaluate("() => document.documentElement.scrollWidth<=window.innerWidth+2"),width
       assert not errors,errors
-      print("PASS: 30-second local bird showcase, species quick modes, mobile form bounds, ambient pause")
+      print("PASS: 30-second local bird showcase, informational species guide, mobile form bounds, ambient pause")
       context.close();browser.close()
     srv.shutdown()
 if __name__=='__main__':main()

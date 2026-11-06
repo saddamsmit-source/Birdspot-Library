@@ -3,9 +3,9 @@ Birdspot Library — H2–H4: soortdetail met tabbladen
   H2-01  data: verenkleed heeft één schema; elk seizoenskleed uit tools/species/seasonal_plumage.json staat in de app
   H2-02  detail opent met 4 tabs; Herkenning zichtbaar, rest verborgen; wisselen werkt (aria-selected + hidden)
   H2-03  Herkenning: maten-tegels, broed- en winterkleed (Kokmeeuw), eclipskleed (Wilde Eend),
-         'man en vrouw gelijk' alleen zonder vrouwkleed
+         alleen bronvermelde overeenkomsten tussen man en vrouw
   H2-04  Seizoen: maandbalk gelijk aan de maanden van de soort; Rode Lijst-tegel alleen als de soort erop staat
-  H2-05  Waar: leefgebieden + eigen plekken met aantallen; 'Toon op de kaart' opent de kaart gefilterd op de soort
+  H2-05  Waar: lokale soortkaart en leefgebieden apart van eigen plekken; 'Toon op de kaart' filtert op de soort
   H2-06  Waarnemingen: aantal, plekken, eerste en laatste datum kloppen met de opgeslagen waarnemingen
   H2-07  compacte dwaalgast: melding 'beschrijving volgt', geen verenkleed
   H2-08  geen paginafouten; screenshots 390 px per tab
@@ -14,6 +14,15 @@ Birdspot Library — H2–H4: soortdetail met tabbladen
   H3-02  tab heet 'Leefwijze'; broedtegels, nest, voedsel/gedrag/trek en zang en roep staan gelijk aan de bron (Merel)
   H3-03  soort zonder leefwijze (exoot/ontsnapt) toont 'volgen nog'; niet-broedende wintergast (Rotgans) toont
          voedsel/gedrag/trek en zang maar geen broedblok
+  H3-04  kalender neemt ook de broedtekst over (Pimpelmees); lijn onder de juiste maanden in beide thema's
+  H4-01  soortvergelijking en lokale opnamen, inclusief openen foto en wisselen naar verwante soort
+  H4-02  vergelijking toont het juiste kleed en Verenkleed heeft lokale winter-, broed- en ruifoto's
+  H4-03  kiekendieven vergelijken per kleed; incidentele Nederlandse broedgevallen krijgen geen vast maandbereik
+  H4-04  jonge Sperwer en Havik tonen juiste borsttekening, kleedfoto en benoemde roepen
+  H4-05  Buizerd vergelijkt jonge en volwassen vogels zonder volwassen Buizerd een geslacht toe te kennen
+  H4-06  witte reigers vergelijken het juiste kleed, met eigen broedmaanden en veldopnamen
+  H4-07  talingen vergelijken man, vrouw, juveniel en eclipskleed, met lokale roepen
+  H4-08  kleine plevieren vergelijken broedkleed, winterkleed en juveniel; broedkalender volgt de eileg
 
 Starten (vanuit repo-root):  python tests/test_species_detail.py
 """
@@ -22,7 +31,7 @@ import json
 import threading
 from pathlib import Path
 
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import expect, sync_playwright
 
 from test_explorer_species_cluster import LEAFLET_STUB  # offline Leaflet-stub, net als de kaarttests
 
@@ -102,6 +111,7 @@ def main():
 
             def open_species(name, sid):
                 p.locator('.nav-item[data-route="species"]').click()
+                p.locator('#speciesFiltersToggle').click()
                 p.locator('#speciesFilters .filter-chip[data-cat="alle"]').click()
                 p.locator('#speciesSearch').fill(name)
                 p.locator(f'.species-row[data-id="{sid}"] .species-row__body').click()
@@ -114,6 +124,16 @@ def main():
             def tab(key):
                 p.locator(f'[data-sd-tab="{key}"]').click()
                 p.locator(f'#sdPanel-{key}').wait_for(state="visible", timeout=4000)
+
+            def assert_distribution_palette(kind, label):
+                figure = p.locator('#sdPanel-waar .sd-distribution')
+                assert figure.get_attribute('data-month-kind') == kind
+                swatch = p.locator(f'.sd-month-legend [data-month-kind="{kind}"] span')
+                expected = swatch.evaluate('el => getComputedStyle(el).backgroundColor')
+                assert figure.locator('.sd-distribution-cloud').evaluate('el => getComputedStyle(el).fill') == expected
+                key = figure.locator('.sd-distribution-key')
+                assert label in key.inner_text()
+                assert key.locator('span').evaluate('el => getComputedStyle(el).backgroundColor') == expected
 
             # Rietgors: eigen waarnemingen
             rg = next(s for s in species if s["id"] == "sp118")
@@ -128,6 +148,11 @@ def main():
             print("H2-02 OK — tabs en wisselen")
 
             assert p.locator('#sdPanel-status .sd-month.is-on').count() == month_count(rg["months"])
+            p.locator('#sdPanel-status .sd-month-breeding .is-breeding').first.wait_for(timeout=5000)
+            assert p.locator('#sdPanel-status .sd-month-breeding .is-breeding').count() == 4
+            assert p.locator('#sdPanel-status .sd-months').get_attribute('data-month-kind') == 'standvogel'
+            assert p.locator('#sdPanel-status .sd-month.is-now').count() == 0
+            assert "Broedperiode" in p.locator('#sdPanel-status .sd-month-legend').inner_text()
             assert p.locator('#sdPanel-status .sd-tile').filter(has_text="Rode Lijst").count() == (1 if rg["redList"] else 0)
             p.screenshot(path=str(SHOTS / "species_h2_seizoen_390.png"))
 
@@ -136,12 +161,20 @@ def main():
             places = p.eval_on_selector_all('#sdPanel-waar .sd-places li', 'els => els.map(e => e.innerText.replace(/\\s+/g," ").trim())')
             assert places == ["Oostvaardersplassen 2×", "Lauwersmeer 1×"], places
             assert p.locator('#sdPanel-waar .sd-habitat').count() == len(rg["regions"])
+            distribution = p.locator('#sdPanel-waar .sd-distribution')
+            assert distribution.locator('.sd-distribution-cloud rect').count() >= 3
+            assert_distribution_palette('standvogel', 'Standvogel')
+            assert "Rietgors" in distribution.locator('svg').get_attribute('aria-label')
+            assert "2020–2025" in distribution.inner_text()
+            assert distribution.get_by_role('link', name='eBird via GBIF').get_attribute('href') == "https://doi.org/10.15468/aomfnb"
+            assert distribution.locator('svg').bounding_box()["width"] <= 390
             p.screenshot(path=str(SHOTS / "species_h2_waar_390.png"))
 
             tab("mijn")
             tiles = p.eval_on_selector_all('#sdMineStats .sd-tile', 'els => els.map(e => e.innerText.replace(/\\s+/g," ").trim())')
             assert tiles[0].endswith("3") and tiles[1].endswith("2"), tiles
-            assert "20 okt 2025" in tiles[2] and "2 mei 2026" in tiles[3], tiles
+            assert any("20 okt 2025" in t for t in tiles) and any("2 mei 2026" in t for t in tiles), tiles
+            assert any("Wijze onbekend" in t and t.endswith("3") for t in tiles), tiles
             print("H2-06 OK — eigen waarnemingen:", tiles)
             p.screenshot(path=str(SHOTS / "species_h2_waarnemingen_390.png"))
 
@@ -151,12 +184,12 @@ def main():
             assert p.locator('#mapSpeciesSearch').input_value() == "Rietgors"
             print("H2-05 OK — plekken en 'Toon op de kaart'")
 
-            # Kokmeeuw: broed- en winterkleed, man en vrouw gelijk
+            # Kokmeeuw: broed- en winterkleed. Een leeg vrouwtjesveld bewijst geen gelijkheid.
             ko = next(s for s in species if s["nameNL"] == "Kokmeeuw")
             open_species("Kokmeeuw", ko["id"])
             cards = p.eval_on_selector_all('#sdPanel-herkenning .sd-plumage strong', 'els => els.map(e => e.innerText)')
             assert any(c.startswith("Broedkleed") for c in cards) and any(c.startswith("Winterkleed") for c in cards), cards
-            assert any("man en vrouw gelijk" in c for c in cards), cards
+            assert not any("Man en vrouw" in c for c in cards), cards
             assert p.locator('#sdPanel-herkenning .sd-tile').count() == 3
             p.screenshot(path=str(SHOTS / "species_h2_herkenning_390.png"))
             tab("status")
@@ -168,7 +201,13 @@ def main():
             open_species("Wilde Eend", we["id"])
             cards = p.eval_on_selector_all('#sdPanel-herkenning .sd-plumage strong', 'els => els.map(e => e.innerText)')
             assert any(c.startswith("Eclipskleed") for c in cards) and "Man" in cards and "Vrouw" in cards, cards
-            assert not any("man en vrouw gelijk" in c for c in cards), cards
+            assert not any("Man en vrouw" in c for c in cards), cards
+            close_detail()
+
+            open_species("Roodborst", "sp050")
+            assert p.locator('#sdPanel-herkenning .sd-badge').filter(has_text="Man en vrouw lijken op elkaar").count() == 1
+            assert p.locator('#sdPanel-herkenning .sd-source a').get_attribute("href").endswith("/roodborst")
+            assert p.locator('#sdPanel-herkenning .sd-tile').count() == 1
             close_detail()
 
             # Grutto: Rode Lijst-tegel
@@ -185,6 +224,9 @@ def main():
             open_species(dg["nameNL"], dg["id"])
             assert p.locator('#sdPanel-herkenning .sd-note').count() == 1
             assert p.locator('#sdPanel-herkenning .sd-plumage').count() == 0
+            tab("waar")
+            assert p.locator('#sdPanel-waar .sd-distribution-map').count() == 0
+            assert p.get_by_text("Voor deze soort is geen onderbouwde verspreidingskaart beschikbaar.").is_visible()
             close_detail()
             print("H2-07 OK — compacte dwaalgast:", dg["nameNL"])
 
@@ -201,6 +243,11 @@ def main():
                 b = e["breeding"]
                 if s["breeding"] in ("ja", "incidenteel"):
                     assert b and all(b[k] and b[k] == src[k] for k in ("period", "nest", "eggs", "incubation", "fledging", "broods")), f"H3-01 {sid} broeden"
+                    start, _, end = src["period"].partition("–")
+                    expected_months = src.get("months")
+                    if not expected_months and start in MONTHS and end in MONTHS:
+                        expected_months = f"{start}-{end}"
+                    assert b.get("months") == expected_months, f"H3-04 {sid} kalenderbereik"
                 else:
                     assert b is None, f"H3-01 {sid} broedblok bij niet-broedvogel"
             assert set(life) == {s["id"] for s in targets}, "H3-01 leefwijze voor onbekende soort"
@@ -225,6 +272,54 @@ def main():
             close_detail()
             print("H3-02 OK — Leefwijze-tab en zang en roep (Merel)")
 
+            # Summer presence and a sourced breeding period remain separate.
+            open_species("Boerenzwaluw", "sp114")
+            tab("status")
+            strip = p.locator('#sdPanel-status .sd-month-breeding')
+            strip.wait_for(timeout=5000)
+            bar = p.locator('#sdPanel-status .sd-months')
+            assert bar.get_attribute('data-month-kind') == 'zomergast'
+            assert bar.locator('.sd-month.is-on').count() == 8
+            assert strip.locator('span').count() == 12
+            assert strip.locator('span').evaluate_all(
+                "els => els.map((el, i) => el.classList.contains('is-breeding') ? i : -1).filter(i => i >= 0)"
+            ) == [4, 5, 6, 7]
+            first = strip.locator('span').nth(4).bounding_box()
+            may = bar.locator('span').nth(4).bounding_box()
+            assert abs(first["x"] - may["x"]) < 1
+            assert 0 < first["y"] - (may["y"] + may["height"]) <= 6
+            assert bar.locator('.sd-month[title="november"]').get_attribute('class') == 'sd-month'
+            tab("waar")
+            assert_distribution_palette('zomergast', 'Zomergast')
+            close_detail()
+
+            # The Pimpelmees used to have breeding text but no line in its year-round calendar.
+            open_species("Pimpelmees", "sp030")
+            tab("status")
+            strip = p.locator('#sdPanel-status .sd-month-breeding')
+            bar = p.locator('#sdPanel-status .sd-months')
+            strip.wait_for(timeout=5000)
+            assert bar.locator('.is-on').count() == 12
+            assert strip.locator('span').evaluate_all(
+                "els => els.flatMap((el, i) => el.classList.contains('is-breeding') ? [i] : [])"
+            ) == [2, 3, 4, 5, 6]
+            assert "maart, april, mei, juni, juli" in bar.get_attribute('aria-label')
+            first = strip.locator('.is-breeding').first
+            last = strip.locator('.is-breeding').last
+            march, july = [bar.locator('span').nth(i).bounding_box() for i in (2, 6)]
+            start, end = first.bounding_box(), last.bounding_box()
+            assert abs(start["x"] - march["x"]) < 1
+            assert abs(end["x"] + end["width"] - july["x"] - july["width"]) < 1
+            assert start["y"] - (march["y"] + march["height"]) == 2
+            legend_line = p.locator('#sdPanel-status .sd-month-legend [data-month-kind="broed"] span')
+            for theme, red in (("light", "rgb(201, 37, 45)"), ("dark", "rgb(255, 85, 72)")):
+                p.evaluate("(theme) => document.documentElement.dataset.theme = theme", theme)
+                expect(first).to_have_css("background-color", red)
+                expect(legend_line).to_have_css("background-color", red)
+            p.evaluate("delete document.documentElement.dataset.theme")
+            close_detail()
+            print("H3-04 OK — Pimpelmees maart–juli, rode lijn en legenda in beide thema's")
+
             ex = next(s for s in species if s["category"] in ("exoot", "ontsnapt") and s["id"] not in life and not s.get("compact"))
             open_species(ex["nameNL"], ex["id"])
             tab("status")
@@ -239,11 +334,213 @@ def main():
             tab("status")
             assert p.locator('#sdPanel-status .sd-breed').count() == 0
             assert p.locator('#sdPanel-status .sd-fact').count() == 3
+            assert p.locator('#sdPanel-status .sd-months').get_attribute('data-month-kind') == 'wintergast'
+            assert p.locator('#sdPanel-status .sd-month-breeding').count() == 0
             assert p.locator('#sdPanel-status .sd-note').count() == 0
             p.locator('#sdPanel-status .sd-facts').scroll_into_view_if_needed()
             p.screenshot(path=str(SHOTS / "species_h3_rotgans_390.png"))
             close_detail()
             print("H3-03 OK — zonder leefwijze:", ex["nameNL"], "· niet-broedvogel Rotgans zonder broedblok")
+
+            open_species("Fitis", "sp057")
+            cards = p.locator('#sdPanel-herkenning .sd-compare-card')
+            assert cards.locator('strong').all_text_contents() == ["Fitis", "Tjiftjaf"]
+            assert cards.get_by_role("link", name="Vogelbescherming").count() == 2
+            photo = cards.first.get_by_role("button", name="Vergroot foto:", exact=False)
+            photo.scroll_into_view_if_needed()
+            photo.locator('img').evaluate("img => img.decode()")
+            photo.click()
+            p.locator('.signature-lightbox img').evaluate("img => img.decode()")
+            p.keyboard.press("Escape")
+            assert p.locator('.signature-lightbox').count() == 0
+            assert photo.evaluate("el => document.activeElement === el")
+            audio = p.get_by_label("Zang van Fitis")
+            audio.evaluate("el => el.play()")
+            p.wait_for_function("document.querySelector('.sd-audio audio').currentTime > 0.15")
+            p.get_by_label("Roep van Fitis").evaluate("el => el.play()")
+            assert audio.evaluate("el => el.paused")
+            tab("status")
+            assert p.get_by_label("Roep van Fitis").evaluate("el => el.paused")
+            tab("herkenning")
+            cards.last.get_by_role("button", name="Open soortkaart Tjiftjaf").click()
+            assert p.get_by_role("dialog", name="Tjiftjaf", exact=True).count() == 1
+            assert cards.locator('strong').all_text_contents() == ["Tjiftjaf", "Fitis"]
+            close_detail()
+            print("H4-01 OK — Fitis/Tjiftjaf, foto vergroten, navigatie en afspelen van zang en roep")
+
+            open_species("Grote Bonte Specht", "sp016")
+            juvenile = p.locator('#sdPanel-herkenning .sd-compare-card').first
+            assert "Juveniel" in juvenile.inner_text()
+            assert juvenile.locator('img').get_attribute("src") == "/assets/species/plumage/sp016-juv.webp"
+            close_detail()
+            open_species("Kokmeeuw", "sp097")
+            pair = p.locator('#sdPanel-herkenning .sd-compare-card')
+            assert pair.locator('strong').all_text_contents() == ["Kokmeeuw", "Zwartkopmeeuw"]
+            for card in pair.all():
+                assert card.locator('.sd-badge').inner_text() == "Broedkleed"
+                card.locator('img').scroll_into_view_if_needed()
+                card.locator('img').evaluate("img => img.decode()")
+            winter = p.locator('.sd-plumage').filter(has_text="Winterkleed")
+            assert winter.locator('img').get_attribute("src") == "/assets/species/plumage/sp097-winter.webp"
+            close_detail()
+            open_species("Wilde Eend", "sp089")
+            eclipse = p.locator('.sd-plumage').filter(has_text="Eclipskleed")
+            assert eclipse.locator('img').get_attribute("src") == "/assets/species/plumage/sp089-eclipse.webp"
+            close_detail()
+            print("H4-02 OK — jonge specht, twee meeuwen in broedkleed en de Wilde Eend in eclipskleed")
+
+            open_species("Bruine Kiekendief", "sp173")
+            comparisons = p.locator('.sd-compare')
+            for label, key, blue_path in (
+                ("volwassen mannetjes", "Man", "/assets/species/sp249.webp"),
+                ("volwassen vrouwtjes", "Vrouw", "/assets/species/plumage/sp249-adult_f.webp"),
+                ("jonge vogels", "Juveniel", "/assets/species/plumage/sp249-juv.webp"),
+            ):
+                pair = comparisons.filter(has=p.get_by_role("heading", name=f"Bruine en Blauwe · {label}"))
+                assert pair.locator('.sd-badge').all_text_contents() == [key, key]
+                assert pair.locator('img').count() == 2
+                assert pair.locator('img').nth(1).get_attribute("src") == blue_path
+                for picture in pair.locator('img').all():
+                    picture.scroll_into_view_if_needed()
+                    picture.evaluate("img => img.decode()")
+            assert p.get_by_label("Roep van Bruine Kiekendief").count() == 1
+            close_detail()
+            open_species("Steppekiekendief", "sp250")
+            tab("status")
+            assert p.get_by_text("Incidentele broedgevallen in Nederland.", exact=True).is_visible()
+            p.get_by_text("Incidentele broedgevallen in Nederland, onder meer in 2017 en 2019", exact=True).wait_for()
+            assert p.locator('#sdPanel-status .sd-month-breeding').count() == 0
+            close_detail()
+            print("H4-03 OK — Bruine/Blauwe per kleed en Steppekiekendief zonder vaste broedmaanden")
+
+            open_species("Sperwer", "sp006")
+            young_hawks = p.locator('.sd-compare').filter(
+                has=p.get_by_role("heading", name="Sperwer en Havik · jonge vogels")
+            )
+            assert "dwarsbanden" in young_hawks.locator('.sd-compare-card').first.inner_text()
+            assert "lengtestrepen" in young_hawks.locator('.sd-compare-card').last.inner_text()
+            assert young_hawks.locator('img').evaluate_all("images => images.map(img => img.getAttribute('src'))") == [
+                "/assets/species/plumage/sp006-juv.webp", "/assets/species/plumage/sp007-juv.webp",
+            ]
+            assert p.get_by_label("Roep vrouwtje van Sperwer").count() == 1
+            young_hawks.get_by_role("button", name="Open soortkaart Havik").click()
+            assert p.get_by_role("dialog", name="Havik", exact=True).count() == 1
+            assert p.get_by_label("Alarmroep vrouwtje van Havik").count() == 1
+            assert p.get_by_label("Bedelroep jong van Havik").count() == 1
+            close_detail()
+            print("H4-04 OK — jonge Sperwer/Havik, juiste borsttekening en lokale roepen")
+
+            open_species("Buizerd", "sp005")
+            buzzard_comparisons = p.locator('.sd-compare')
+            assert buzzard_comparisons.count() == 4
+            adult = buzzard_comparisons.filter(
+                has=p.get_by_role("heading", name="Buizerd en Ruigpootbuizerd · volwassen in vlucht")
+            )
+            assert adult.locator('.sd-badge').all_text_contents() == ["Volwassen", "Vrouw"]
+            assert adult.locator('img').evaluate_all("images => images.map(img => img.getAttribute('src'))") == [
+                "/assets/species/plumage/sp005-adult_m.webp", "/assets/species/sp253.webp",
+            ]
+            juvenile = buzzard_comparisons.filter(
+                has=p.get_by_role("heading", name="Buizerd en Wespendief · jonge vogels")
+            )
+            assert juvenile.locator('.sd-badge').all_text_contents() == ["Juveniel", "Juveniel"]
+            for picture in juvenile.locator('img').all():
+                picture.scroll_into_view_if_needed()
+                picture.evaluate("img => img.decode()")
+            assert p.get_by_label("Alarmroep van Buizerd").count() == 1
+            juvenile.get_by_role("button", name="Open soortkaart Wespendief").click()
+            assert p.get_by_role("dialog", name="Wespendief", exact=True).count() == 1
+            assert p.get_by_label("Vluchtroep van Wespendief").count() == 1
+            close_detail()
+            print("H4-05 OK — volwassen en jonge Buizerd, Ruigpootbuizerd en Wespendief met bronfoto's")
+
+            open_species("Kleine Zilverreiger", "sp082")
+            herons = p.locator('.sd-compare')
+            assert herons.count() == 4
+            breeding = herons.filter(
+                has=p.get_by_role("heading", name="Kleine en Grote Zilverreiger · broedkleed")
+            )
+            assert breeding.locator('.sd-badge').all_text_contents() == ["Broedkleed", "Broedkleed"]
+            assert breeding.locator('img').evaluate_all("images => images.map(img => img.getAttribute('src'))") == [
+                "/assets/species/plumage/sp082-breeding.webp", "/assets/species/plumage/sp083-breeding.webp",
+            ]
+            young = herons.filter(
+                has=p.get_by_role("heading", name="Kleine Zilverreiger en Koereiger · jonge vogels")
+            )
+            for picture in young.locator('img').all():
+                picture.scroll_into_view_if_needed()
+                picture.evaluate("img => img.decode()")
+            assert p.get_by_label("Vluchtroep van Kleine Zilverreiger").count() == 1
+            p.get_by_role('tab', name='Leefwijze', exact=True).click()
+            assert p.locator('.sd-month-breeding .is-breeding').count() == 2
+            expect(p.get_by_text('Gebruikelijke broedperiode · mei, juni', exact=True)).to_be_visible()
+            p.get_by_role('tab', name='Herkenning', exact=True).click()
+            young.get_by_role("button", name="Open soortkaart Koereiger").click()
+            assert p.get_by_role("dialog", name="Koereiger", exact=True).count() == 1
+            assert p.get_by_label("Roepen bij de kolonie van Koereiger").count() == 1
+            p.get_by_role('tab', name='Leefwijze', exact=True).click()
+            expect(p.get_by_text('Gebruikelijke broedperiode · april, mei, juni', exact=True)).to_be_visible()
+            close_detail()
+            print("H4-06 OK — witte reigers per kleed, bronfoto's, roepen en broedmaanden")
+
+            open_species("Wintertaling", "sp091")
+            teal_comparisons = p.locator('.sd-compare')
+            assert teal_comparisons.count() == 4
+            for label, plumage in [('mannetjes in prachtkleed', 'adult_m'), ('volwassen vrouwtjes', 'adult_f'),
+                                   ('jonge vogels', 'juv'), ('mannetjes in eclipskleed', 'eclipse')]:
+                pair = teal_comparisons.filter(
+                    has=p.get_by_role('heading', name=f'Wintertaling en Zomertaling · {label}')
+                )
+                expected_garganey = '/assets/species/sp188.webp' if plumage == 'adult_m' else f'/assets/species/plumage/sp188-{plumage}.webp'
+                assert pair.locator('img').evaluate_all("images => images.map(img => img.getAttribute('src'))") == [
+                    f'/assets/species/plumage/sp091-{plumage}.webp', expected_garganey,
+                ]
+            assert p.get_by_label('Vluchtroep bij Rotterdam van Wintertaling').count() == 1
+            p.get_by_role('tab', name='Leefwijze', exact=True).click()
+            months = p.get_by_text('Gebruikelijke broedperiode · april, mei, juni, juli', exact=True)
+            expect(months).to_be_visible()
+            p.get_by_role('tab', name='Herkenning', exact=True).click()
+            teal_comparisons.first.get_by_role('button', name='Open soortkaart Zomertaling').click()
+            assert p.get_by_role('dialog', name='Zomertaling', exact=True).count() == 1
+            assert p.get_by_label('Ratel van het mannetje van Zomertaling').count() == 1
+            p.get_by_role('tab', name='Leefwijze', exact=True).click()
+            expect(months).to_be_visible()
+            close_detail()
+            print("H4-07 OK — talingen per kleed, lokale roepen en broedmaanden")
+
+            open_species("Bontbekplevier", "sp146")
+            expect(p.get_by_label("Nachtelijke vluchtroep van Bontbekplevier")).to_have_count(1)
+            young_plovers = p.locator('.sd-compare').filter(
+                has=p.get_by_role("heading", name="Bontbekplevier en Kleine Plevier · jonge vogels")
+            )
+            assert young_plovers.locator('.sd-badge').all_text_contents() == ["Juveniel", "Juveniel"]
+            assert young_plovers.locator('img').evaluate_all("images => images.map(img => img.getAttribute('src'))") == [
+                "/assets/species/plumage/sp146-juv.webp", "/assets/species/plumage/sp147-juv.webp",
+            ]
+            for picture in young_plovers.locator('img').all():
+                picture.scroll_into_view_if_needed()
+                picture.evaluate("img => img.decode()")
+            winter_plovers = p.locator('.sd-compare').filter(
+                has=p.get_by_role("heading", name="Bontbekplevier en Strandplevier · winterkleed")
+            )
+            assert winter_plovers.locator('.sd-badge').all_text_contents() == ["Winterkleed", "Winterkleed"]
+            assert winter_plovers.locator('img').evaluate_all("images => images.map(img => img.getAttribute('src'))") == [
+                "/assets/species/plumage/sp146-winter.webp", "/assets/species/plumage/sp206-winter.webp",
+            ]
+            young_plovers.get_by_role("button", name="Open soortkaart Kleine Plevier").click()
+            expect(p.get_by_label("Zang en vluchtroep van Kleine Plevier")).to_have_count(1)
+            breeding_plovers = p.locator('.sd-compare').filter(
+                has=p.get_by_role("heading", name="Kleine Plevier en Strandplevier · broedkleed")
+            )
+            breeding_plovers.get_by_role("button", name="Open soortkaart Strandplevier").click()
+            expect(p.get_by_label("Alarmroep van Strandplevier")).to_have_count(1)
+            expect(p.locator('.sd-plumage img[src$="sp206-adult_f.webp"]')).to_have_count(1)
+            tab("status")
+            expect(p.get_by_text('Gebruikelijke broedperiode · mei', exact=True)).to_be_visible()
+            expect(p.get_by_text('Jongen vliegvlug', exact=True)).to_be_visible()
+            assert p.locator('.sd-month-breeding .is-breeding').count() == 1
+            close_detail()
+            print("H4-08 OK — plevieren per kleed, bronfoto's, roepen en broedmaanden")
 
             assert not errors, f"H2-08 paginafouten: {errors}"
             print("H2-08 OK — geen paginafouten")

@@ -116,7 +116,8 @@ def check_data(species, labels, active):
 
     counts = {}
     for s in species:
-        counts[s["category"]] = counts.get(s["category"], 0) + 1
+        for status in {s["category"], s["statusExtra"]} - {None}:
+            counts[status] = counts.get(status, 0) + 1
     assert active == [k for k in labels if counts.get(k)], f"I1-05 actieve categorieën {active}"
     return counts
 
@@ -144,12 +145,14 @@ def main():
             print("I1-01..04, I2-01..02, I3-01, I4-01, I5-01..03 OK —", len(data["species"]), "soorten", counts)
 
             p.locator('.nav-item[data-route="species"]').click()
-            p.locator("#speciesFilters .filter-chip").first.wait_for(timeout=10000)
+            status_toggle = p.locator("#speciesFiltersToggle")
+            status_toggle.wait_for(timeout=10000)
             tabs = p.eval_on_selector_all("#speciesFilters .filter-chip[data-cat]", "els => els.map(e => e.dataset.cat)")
             assert tabs == ["alle"] + data["active"], f"I1-05 tabs {tabs} != alle + {data['active']}"
             for cat in data["active"]:
+                status_toggle.click()
                 p.locator(f'#speciesFilters .filter-chip[data-cat="{cat}"]').click()
-                ids = [s["id"] for s in data["species"] if s["category"] == cat]
+                ids = [s["id"] for s in data["species"] if cat in (s["category"], s["statusExtra"])]
                 p.wait_for_function(
                     """(ids) => { const rows=[...document.querySelectorAll('#speciesList .species-row')];
                        return rows.length > 0 && rows.every(r => ids.includes(r.dataset.id)); }""",
@@ -160,8 +163,29 @@ def main():
                     p.screenshot(path=str(SHOTS / f"species_i1_{cat}_390.png"))
             print("I1-05 OK — tabs:", tabs)
 
+            # A documented secondary status is discoverable and labelled as such.
+            status_toggle.click()
+            p.locator('#speciesFilters [data-cat="wintergast"]').click()
+            p.locator("#speciesSearch").fill("Merel")
+            assert p.locator('.species-row[data-id="sp045"] .species-row__rarity').inner_text() == "Ook wintergast"
+            p.locator("#speciesSearch").fill("")
+
+            # Habitat tags describe the site itself, so a polder alone does not imply water.
+            status_toggle.click()
+            p.locator('#speciesFilters [data-cat="alle"]').click()
+            for area, include, exclude in (("heide", "sp253", "sp034"), ("duinen", "sp110", "sp050"), ("water", "sp097", "sp005")):
+                p.locator("#gebiedFiltersToggle").click()
+                p.locator(f'#gebiedFilters [data-region="{area}"]').click()
+                if p.locator("#speciesShowAll").count():
+                    p.locator("#speciesShowAll").click()
+                assert p.locator(f'.species-row[data-id="{include}"]').count() == 1
+                assert p.locator(f'.species-row[data-id="{exclude}"]').count() == 0
+            p.locator("#gebiedFiltersToggle").click()
+            p.locator('#gebiedFilters [data-region="water"]').click()
+
             # I5-04: lange lijst bouwt eerst een deel op, de rest na "Toon alle"
             big = max(counts, key=counts.get)
+            status_toggle.click()
             p.locator(f'#speciesFilters .filter-chip[data-cat="{big}"]').click()
             p.locator("#speciesShowAll").wait_for(timeout=8000)
             first = p.eval_on_selector_all("#speciesList .species-row", "els => els.length")
