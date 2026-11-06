@@ -19,6 +19,7 @@ Birdspot Library — H2–H4: soortdetail met tabbladen
   H4-02  vergelijking toont het juiste kleed en Verenkleed heeft lokale winter-, broed- en ruifoto's
   H4-03  kiekendieven vergelijken per kleed; incidentele Nederlandse broedgevallen krijgen geen vast maandbereik
   H4-04  jonge Sperwer en Havik tonen juiste borsttekening, kleedfoto en benoemde roepen
+  H4-05  Buizerd vergelijkt jonge en volwassen vogels zonder volwassen Buizerd een geslacht toe te kennen
 
 Starten (vanuit repo-root):  python tests/test_species_detail.py
 """
@@ -425,6 +426,30 @@ def main():
             assert p.get_by_label("Bedelroep jong van Havik").count() == 1
             close_detail()
             print("H4-04 OK — jonge Sperwer/Havik, juiste borsttekening en lokale roepen")
+
+            open_species("Buizerd", "sp005")
+            buzzard_comparisons = p.locator('.sd-compare')
+            assert buzzard_comparisons.count() == 4
+            adult = buzzard_comparisons.filter(
+                has=p.get_by_role("heading", name="Buizerd en Ruigpootbuizerd · volwassen in vlucht")
+            )
+            assert adult.locator('.sd-badge').all_text_contents() == ["Volwassen", "Vrouw"]
+            assert adult.locator('img').evaluate_all("images => images.map(img => img.getAttribute('src'))") == [
+                "/assets/species/plumage/sp005-adult_m.webp", "/assets/species/sp253.webp",
+            ]
+            juvenile = buzzard_comparisons.filter(
+                has=p.get_by_role("heading", name="Buizerd en Wespendief · jonge vogels")
+            )
+            assert juvenile.locator('.sd-badge').all_text_contents() == ["Juveniel", "Juveniel"]
+            for picture in juvenile.locator('img').all():
+                picture.scroll_into_view_if_needed()
+                picture.evaluate("img => img.decode()")
+            assert p.get_by_label("Alarmroep van Buizerd").count() == 1
+            juvenile.get_by_role("button", name="Open soortkaart Wespendief").click()
+            assert p.get_by_role("dialog", name="Wespendief", exact=True).count() == 1
+            assert p.get_by_label("Vluchtroep van Wespendief").count() == 1
+            close_detail()
+            print("H4-05 OK — volwassen en jonge Buizerd, Ruigpootbuizerd en Wespendief met bronfoto's")
 
             assert not errors, f"H2-08 paginafouten: {errors}"
             print("H2-08 OK — geen paginafouten")

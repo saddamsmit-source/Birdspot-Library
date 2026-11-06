@@ -51,13 +51,13 @@ export const LIFE = Object.freeze({
  },
  "sp005": {
   "breeding": {
-   "period": "mrt–jul",
+   "period": "apr–mei",
    "nest": "Groot takkennest hoog in een boom, aangekleed met groen",
    "eggs": "2–4",
-   "incubation": "33–35 dagen",
-   "fledging": "42–49 dagen",
+   "incubation": "33–38 dagen",
+   "fledging": "50–60 dagen",
    "broods": "1",
-   "months": "mrt-jul"
+   "months": "apr-mei"
   },
   "diet": "Muizen, woelmuizen, regenwormen, jonge konijnen, aas",
   "behaviour": "Zit vaak langs wegen op palen; cirkelt met vleugels in ondiepe V",
@@ -3157,18 +3157,18 @@ export const LIFE = Object.freeze({
  },
  "sp248": {
   "breeding": {
-   "period": "mei–aug",
-   "nest": "Takkennest hoog in een boom, aangekleed met groen blad",
+   "period": "jun–jul",
+   "nest": "Hoog in de kruin van een loof- of naaldboom. Gebruikt soms een opgeknapt oud nest.",
    "eggs": "2",
-   "incubation": "33–35 dagen",
-   "fledging": "40–45 dagen",
+   "incubation": "30–35 dagen",
+   "fledging": "40–44 dagen",
    "broods": "1",
-   "months": "mei-aug"
+   "months": "jun-jul"
   },
-  "diet": "Larven en raten van wespen en hommels, die hij uitgraaft",
-  "behaviour": "Klappende baltsvlucht boven het bos",
-  "migration": "Zomergast (mei–sep); overwintert in West- en Centraal-Afrika",
-  "voice": "Klagend \"pie-luu\""
+  "diet": "Vooral wespenlarven en poppen. Graaft grondnesten uit en neemt raten mee. Eet ook andere kleine dieren.",
+  "behaviour": "Bij de balts slaat de vogel de vleugels hoog boven de rug tegen elkaar.",
+  "migration": "Zomergast. Overwintert in tropisch Afrika. Trekt vooral in het voorjaar en aan het einde van de zomer door.",
+  "voice": "Hoge, fluitende roep die kan overslaan."
  },
  "sp249": {
   "breeding": {
@@ -3231,10 +3231,10 @@ export const LIFE = Object.freeze({
  },
  "sp253": {
   "breeding": null,
-  "diet": "Muizen en woelmuizen",
-  "behaviour": "Bidt boven open land; witte staart met zwarte eindband",
-  "migration": "Wintergast uit Scandinavië (okt–apr), in wisselende aantallen",
-  "voice": "Klagend \"pie-uu\", lager dan de Buizerd"
+  "diet": "Vooral woelmuizen en in het noordelijke broedgebied ook veel lemmingen.",
+  "behaviour": "Jaagt boven open land. Hangt daarbij geregeld op één plek in de lucht met slaande vleugels.",
+  "migration": "Zeldzame wintergast uit het noorden. In Nederland vooral van oktober tot april, in wisselende aantallen.",
+  "voice": "Miauwende, klagende roep die lager klinkt dan die van de Buizerd. Vooral hoorbaar in het broedgebied."
  },
  "sp254": {
   "breeding": {

@@ -180,6 +180,65 @@ export const GUIDE_AUDIO = Object.freeze({
       "source": "https://commons.wikimedia.org/wiki/File:Accipiter_gentilis_-_Northern_Goshawk_XC578067.mp3",
       "modifications": "Fragment, omgezet naar MP3 (mono)"
     }
+  ],
+  "sp005": [
+    {
+      "file": "Buteo buteo - Common Buzzard XC538277.mp3",
+      "audio": "/assets/species/audio/sp005-adult-call.mp3",
+      "label": "Roep",
+      "note": "Miauwende roep van een volwassen Buizerd.",
+      "author": "Benoît Van Hecke",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Buteo_buteo_-_Common_Buzzard_XC538277.mp3",
+      "modifications": "Fragment, omgezet naar MP3 (mono)"
+    },
+    {
+      "file": "Buteo buteo warning the fledglings 7643.ogg",
+      "audio": "/assets/species/audio/sp005-alarm.mp3",
+      "label": "Alarmroep",
+      "note": "Korte roep bij uitgevlogen jongen.",
+      "author": "T.Voekler",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Buteo_buteo_warning_the_fledglings_7643.ogg",
+      "modifications": "Omgezet naar MP3 (mono)"
+    },
+    {
+      "file": "XC1036868",
+      "audio": "/assets/species/audio/sp005-field-call.mp3",
+      "label": "Roep, tweede voorbeeld",
+      "note": "Miauwende roep, opgenomen in Duitsland.",
+      "author": "Fiete Nörenberg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://xeno-canto.org/1036868",
+      "modifications": "Omgezet naar MP3 (mono)"
+    }
+  ],
+  "sp248": [
+    {
+      "file": "Pernis apivorus - European Honey Buzzard XC580934.mp3",
+      "audio": "/assets/species/audio/sp248-flight-call.mp3",
+      "label": "Vluchtroep",
+      "note": "Fluitende roep van een Wespendief in de vlucht.",
+      "author": "Benoît Van Hecke",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pernis_apivorus_-_European_Honey_Buzzard_XC580934.mp3",
+      "modifications": "Fragment, omgezet naar MP3 (mono)"
+    },
+    {
+      "file": "XC1175973",
+      "audio": "/assets/species/audio/sp248-coast-call.mp3",
+      "label": "Vluchtroep, tweede voorbeeld",
+      "note": "Vluchtroep aan de kust van Normandië.",
+      "author": "Sébastien Provost / Sonothèque ADVL",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://xeno-canto.org/1175973",
+      "modifications": "Fragment, omgezet naar MP3 (mono)"
+    }
   ]
 });
 export const GUIDE_PLUMAGE = Object.freeze({
@@ -669,6 +728,117 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "alt": "Havik — Volwassen vrouwtje in vlucht in Japan. Uitstekende kop, gebandeerde onderzijde en een afgeronde staartpunt.",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
       "observation": "https://www.inaturalist.org/observations/266098077"
+    }
+  },
+  "sp005": {
+    "adult_m": {
+      "file": "iNaturalist photo 309645414",
+      "author": "Roy Lowry",
+      "license": "CC BY 4.0",
+      "source": "https://www.inaturalist.org/photos/309645414",
+      "image": "/assets/species/plumage/sp005-adult_m.webp",
+      "width": 1024,
+      "height": 683,
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+      "nl": "Buizerd",
+      "latin": "Buteo buteo",
+      "batch": "raptors-12",
+      "reviewed": "2026-11-06",
+      "verification": "Research-grade waarneming, leeftijd of geslacht geannoteerd en visueel gecontroleerd met de soortkaart.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/buizerd",
+      "visualCheck": "Volwassen Buizerd van onderen. Brede vleugels, korte gespreide staart en fijne bandering op de staart.",
+      "alt": "Buizerd — Volwassen Buizerd van onderen. Brede vleugels, korte gespreide staart en fijne bandering op de staart.",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "observation": "https://www.inaturalist.org/observations/177992598"
+    },
+    "juv": {
+      "file": "iNaturalist photo 147178882",
+      "author": "rober025",
+      "license": "CC BY 4.0",
+      "source": "https://www.inaturalist.org/photos/147178882",
+      "image": "/assets/species/plumage/sp005-juv.webp",
+      "width": 1024,
+      "height": 682,
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+      "nl": "Buizerd",
+      "latin": "Buteo buteo",
+      "batch": "raptors-12",
+      "reviewed": "2026-11-06",
+      "verification": "Research-grade waarneming, leeftijd of geslacht geannoteerd en visueel gecontroleerd met de soortkaart.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/buizerd",
+      "visualCheck": "Jonge Buizerd in licht kleed. De buik is licht en de polsvlekken en bandering op de staart zijn zichtbaar.",
+      "alt": "Buizerd — Jonge Buizerd in licht kleed. De buik is licht en de polsvlekken en bandering op de staart zijn zichtbaar.",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "observation": "https://www.inaturalist.org/observations/89145381"
+    }
+  },
+  "sp248": {
+    "adult_m": {
+      "reuseGuidePhoto": true
+    },
+    "adult_f": {
+      "file": "iNaturalist photo 678848182",
+      "author": "Donald Davesne",
+      "license": "CC BY 4.0",
+      "source": "https://www.inaturalist.org/photos/678848182",
+      "image": "/assets/species/plumage/sp248-adult_f.webp",
+      "width": 1024,
+      "height": 768,
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+      "nl": "Wespendief",
+      "latin": "Pernis apivorus",
+      "batch": "raptors-12",
+      "reviewed": "2026-11-06",
+      "verification": "Research-grade waarneming, leeftijd of geslacht geannoteerd en visueel gecontroleerd met de soortkaart.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wespendief",
+      "visualCheck": "Volwassen vrouwtje met gespreide staart. Brede banden op de ondervleugels en de kenmerkende smalle, uitstekende kop.",
+      "alt": "Wespendief — Volwassen vrouwtje met gespreide staart. Brede banden op de ondervleugels en de kenmerkende smalle, uitstekende kop.",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "observation": "https://www.inaturalist.org/observations/371545998"
+    },
+    "juv": {
+      "file": "Juvenile honey buzzard (52499563661).jpg",
+      "author": "Andrey Gulivanov",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Juvenile_honey_buzzard_(52499563661).jpg",
+      "image": "/assets/species/plumage/sp248-juv.webp",
+      "width": 1280,
+      "height": 853,
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+      "nl": "Wespendief",
+      "latin": "Pernis apivorus",
+      "batch": "raptors-12",
+      "reviewed": "2026-11-06",
+      "verification": "Bronmetadata en zichtbare kenmerken vergeleken met de gelinkte soortkaart.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wespendief",
+      "visualCheck": "Jonge Wespendief in vlucht met langere staart en contrastrijke handpennen en armpennen.",
+      "alt": "Wespendief — Jonge Wespendief in vlucht met langere staart en contrastrijke handpennen en armpennen.",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+    }
+  },
+  "sp253": {
+    "adult_f": {
+      "reuseGuidePhoto": true
+    },
+    "juv": {
+      "file": "iNaturalist photo 113794458",
+      "author": "Radek Ošlejšek",
+      "license": "CC BY 4.0",
+      "source": "https://www.inaturalist.org/photos/113794458",
+      "image": "/assets/species/plumage/sp253-juv.webp",
+      "width": 1024,
+      "height": 684,
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+      "nl": "Ruigpootbuizerd",
+      "latin": "Buteo lagopus",
+      "batch": "raptors-12",
+      "reviewed": "2026-11-06",
+      "verification": "Research-grade waarneming, leeftijd of geslacht geannoteerd en visueel gecontroleerd met de soortkaart.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/Ruigpootbuizerd",
+      "visualCheck": "Jonge Ruigpootbuizerd in Tsjechië. Lichte borst, donkere buik en donkere polsvlekken.",
+      "alt": "Ruigpootbuizerd — Jonge Ruigpootbuizerd in Tsjechië. Lichte borst, donkere buik en donkere polsvlekken.",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "observation": "https://www.inaturalist.org/observations/70044579"
     }
   }
 });

@@ -127,8 +127,10 @@ function comparisonsPanel(id) {
   return '<h3 class="sd-h">Lijkt op</h3>' + comparisons.map(({birds, tip, label}) => {
     const ordered = [...birds].sort((a, b) => Number(b.id === id) - Number(a.id === id));
     const cards = ordered.map(bird => {
-      const name = speciesById.get(bird.id).nameNL;
-      const kind = PLUMAGE.find(([key]) => key === bird.plumage)?.[2];
+      const species = speciesById.get(bird.id);
+      const name = species.nameNL;
+      const adult = bird.plumage === 'adult_m' && !species.plumage?.adult_f;
+      const kind = adult ? 'Volwassen' : PLUMAGE.find(([key]) => key === bird.plumage)?.[2];
       const photo = plumagePhoto(bird.id, bird.plumage);
       return `<div class="sd-compare-card">
         <strong>${esc(name)}</strong>${kind ? `<span class="sd-badge">${esc(kind)}</span>` : ''}
