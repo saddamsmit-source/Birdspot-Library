@@ -311,6 +311,98 @@
         "source": "https://xeno-canto.org/1080059",
         "modifications": "Volledige opname, niveau aangepast en omgezet naar MP3 (mono)"
       }
+    ],
+    "sp091": [
+      {
+        "file": "Eurasian Teal (Anas crecca) (W1CDR0001378 BD3).ogg",
+        "audio": "/assets/species/audio/sp091-both-sexes.mp3",
+        "label": "Roepen van man en vrouw",
+        "note": "Opname van vrouwtjes en mannetjes op Brownsea Island, Engeland.",
+        "author": "Lawrence Shove / British Library",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Eurasian_Teal_(Anas_crecca)_(W1CDR0001378_BD3).ogg",
+        "modifications": "Volledige opname, omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "XC791789",
+        "audio": "/assets/species/audio/sp091-rotterdam-flight.mp3",
+        "label": "Vluchtroep bij Rotterdam",
+        "note": "Kort voorbeeld van een nachtelijke vluchtroep uit Rotterdam.",
+        "author": "Jochem Verweij",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://xeno-canto.org/791789",
+        "modifications": "Volledige opname, omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "XC630780",
+        "audio": "/assets/species/audio/sp091-night-flight.mp3",
+        "label": "Nachtelijke vluchtroepen",
+        "note": "Reeks roepen van minstens twee overvliegende vogels bij Dresden.",
+        "author": "Jens Loose",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://xeno-canto.org/630780",
+        "modifications": "Volledige opname, omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "XC1089314",
+        "audio": "/assets/species/audio/sp091-mixed-calls.mp3",
+        "label": "Roepen en vluchtroepen",
+        "note": "Mannetjes en vrouwtjes in de Somme. Ook Zanglijster en Fazant op de achtergrond.",
+        "author": "Noé Ferrari",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://xeno-canto.org/1089314",
+        "modifications": "Volledige opname, omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "XC710408",
+        "audio": "/assets/species/audio/sp091-short-call.mp3",
+        "label": "Korte roep",
+        "note": "Kort fragment uit Noord-Frankrijk, met achtergrondgeluid van andere vogels.",
+        "author": "Camille Vacher",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://xeno-canto.org/710408",
+        "modifications": "Volledige opname, omgezet naar MP3 (mono)"
+      }
+    ],
+    "sp188": [
+      {
+        "file": "XC903512",
+        "audio": "/assets/species/audio/sp188-male-rattle.mp3",
+        "label": "Ratel van het mannetje",
+        "note": "Kort voorbeeld van de kenmerkende droge ratel, opgenomen op Öland.",
+        "author": "Jochem Verweij",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://xeno-canto.org/903512",
+        "modifications": "Volledige opname, omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "XC786511",
+        "audio": "/assets/species/audio/sp188-rattle-switzerland.mp3",
+        "label": "Ratel uit Zwitserland",
+        "note": "Een tweede opname van de ratelende roep, uit Fanel. Ook andere watervogels zijn te horen.",
+        "author": "Pascal Christe",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://xeno-canto.org/786511",
+        "modifications": "Volledige opname, omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "XC903822",
+        "audio": "/assets/species/audio/sp188-male-sequence.mp3",
+        "label": "Langere reeks ratels",
+        "note": "Langere opname van een roepend mannetje op Öland, met andere vogels op de achtergrond.",
+        "author": "Jochem Verweij",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://xeno-canto.org/903822",
+        "modifications": "Volledige opname, omgezet naar MP3 (mono)"
+      }
     ]
   },
   "plumage": {
@@ -1082,6 +1174,148 @@
         "alt": "Koereiger — Jonge Koereiger in grasland op Dominica. Korte, donkere snavel, donkere poten en een compacte bouw.",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
         "observation": "https://www.inaturalist.org/observations/69701226"
+      }
+    },
+    "sp091": {
+      "adult_m": {
+        "file": "Common Teal Male (8602525826).jpg",
+        "author": "Koshy Koshy from Faridabad, Haryana, India",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Common_Teal_Male_(8602525826).jpg",
+        "image": "/assets/species/plumage/sp091-adult_m.webp",
+        "width": 1024,
+        "height": 650,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Wintertaling",
+        "latin": "Anas crecca",
+        "batch": "teals-14",
+        "reviewed": "2026-11-06",
+        "verification": "Soort en kleed gecontroleerd aan de hand van Commons-broninformatie en zichtbare veldkenmerken.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wintertaling",
+        "visualCheck": "Volwassen mannetje in India. Kastanjebruine kop, groen oogveld, horizontale witte flankstreep en gele staartzijde.",
+        "alt": "Wintertaling — Volwassen mannetje in India. Kastanjebruine kop, groen oogveld, horizontale witte flankstreep en gele staartzijde.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      },
+      "adult_f": {
+        "file": "Female Eurasian Teal (Anas crecca), Parc du Rouge Cloître, Brussels (13353864095).jpg",
+        "author": "Frank Vassen from Brussels, Belgium",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Female_Eurasian_Teal_(Anas_crecca),_Parc_du_Rouge_Clo%C3%AEtre,_Brussels_(13353864095).jpg",
+        "image": "/assets/species/plumage/sp091-adult_f.webp",
+        "width": 1280,
+        "height": 905,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Wintertaling",
+        "latin": "Anas crecca",
+        "batch": "teals-14",
+        "reviewed": "2026-11-06",
+        "verification": "Soort en kleed gecontroleerd aan de hand van Commons-broninformatie en zichtbare veldkenmerken.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wintertaling",
+        "visualCheck": "Volwassen vrouwtje in Brussel. Bruin gevlekt lijf met relatief gelijkmatig getekende kop.",
+        "alt": "Wintertaling — Volwassen vrouwtje in Brussel. Bruin gevlekt lijf met relatief gelijkmatig getekende kop.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      },
+      "juv": {
+        "file": "iNaturalist photo 169592753",
+        "author": "Se Lena",
+        "license": "CC BY 4.0",
+        "source": "https://www.inaturalist.org/photos/169592753",
+        "image": "/assets/species/plumage/sp091-juv.webp",
+        "width": 500,
+        "height": 335,
+        "modifications": "Uitgesneden en omgezet naar WebP",
+        "nl": "Wintertaling",
+        "latin": "Anas crecca",
+        "batch": "teals-14",
+        "reviewed": "2026-11-06",
+        "verification": "Research-grade waarneming van Anas crecca crecca met leeftijdsannotatie van de fotograaf. Kleur en vleugeltekening visueel gecontroleerd.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wintertaling",
+        "visualCheck": "Jonge Wintertaling in Tokio. Bruine kop met donkere oogstreep en een zichtbare groene vleugelspiegel.",
+        "alt": "Wintertaling — Jonge Wintertaling in Tokio. Bruine kop met donkere oogstreep en een zichtbare groene vleugelspiegel.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "observation": "https://www.inaturalist.org/observations/101542967"
+      },
+      "eclipse": {
+        "file": "iNaturalist photo 76374524",
+        "author": "Roy Lowry",
+        "license": "CC BY 4.0",
+        "source": "https://www.inaturalist.org/photos/76374524",
+        "image": "/assets/species/plumage/sp091-eclipse.webp",
+        "width": 1024,
+        "height": 683,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Wintertaling",
+        "latin": "Anas crecca",
+        "batch": "teals-14",
+        "reviewed": "2026-11-06",
+        "verification": "Research-grade waarneming met eclipskleed genoemd door de fotograaf. Groene restveren ondersteunen welke vogel op de foto het mannetje is.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wintertaling",
+        "visualCheck": "Ruiend mannetje in Cheshire. Overwegend bruin lichaam met nog groene veren op de kop.",
+        "alt": "Wintertaling — Ruiend mannetje in Cheshire. Overwegend bruin lichaam met nog groene veren op de kop.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "observation": "https://www.inaturalist.org/observations/48145191"
+      }
+    },
+    "sp188": {
+      "adult_m": {
+        "reuseGuidePhoto": true
+      },
+      "adult_f": {
+        "file": "Garganey 04f (3225295980).jpg",
+        "author": "michael clarke stuff",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Garganey_04f_(3225295980).jpg",
+        "image": "/assets/species/plumage/sp188-adult_f.webp",
+        "width": 1063,
+        "height": 640,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Zomertaling",
+        "latin": "Spatula querquedula",
+        "batch": "teals-14",
+        "reviewed": "2026-11-06",
+        "verification": "Soort en kleed gecontroleerd aan de hand van Commons-broninformatie en zichtbare veldkenmerken.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zomertaling",
+        "visualCheck": "Volwassen vrouwtje in Frankrijk. Donkere oogstreep tussen lichte kopstrepen en een lichte keel.",
+        "alt": "Zomertaling — Volwassen vrouwtje in Frankrijk. Donkere oogstreep tussen lichte kopstrepen en een lichte keel.",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      },
+      "juv": {
+        "file": "Anas querquedula, Slottsskogen, Göteborg, Sweden 1.jpg",
+        "author": "Stefan Berndtsson",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Anas_querquedula,_Slottsskogen,_G%C3%B6teborg,_Sweden_1.jpg",
+        "image": "/assets/species/plumage/sp188-juv.webp",
+        "width": 1200,
+        "height": 741,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Zomertaling",
+        "latin": "Spatula querquedula",
+        "batch": "teals-14",
+        "reviewed": "2026-11-06",
+        "verification": "Soort en kleed gecontroleerd aan de hand van Commons-broninformatie en zichtbare veldkenmerken.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zomertaling",
+        "visualCheck": "Jonge Zomertaling in Zweden. Donkere oogstreep, lichte keel en bruine, lichtgerande veren.",
+        "alt": "Zomertaling — Jonge Zomertaling in Zweden. Donkere oogstreep, lichte keel en bruine, lichtgerande veren.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      },
+      "eclipse": {
+        "file": "Anas querquedula, Hong Kong 1.jpg",
+        "author": "Frankie Chu from Hong Kong香港",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Anas_querquedula,_Hong_Kong_1.jpg",
+        "image": "/assets/species/plumage/sp188-eclipse.webp",
+        "width": 1024,
+        "height": 768,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Zomertaling",
+        "latin": "Spatula querquedula",
+        "batch": "teals-14",
+        "reviewed": "2026-11-06",
+        "verification": "Soort en kleed gecontroleerd aan de hand van Commons-broninformatie en zichtbare veldkenmerken.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zomertaling",
+        "visualCheck": "Mannetje in eclipskleed in vlucht boven Hongkong. Bruine kop, lichte keel en opvallend blauwgrijze voorvleugel.",
+        "alt": "Zomertaling — Mannetje in eclipskleed in vlucht boven Hongkong. Bruine kop, lichte keel en opvallend blauwgrijze voorvleugel.",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
       }
     }
   }

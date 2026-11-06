@@ -211,6 +211,38 @@ export const GUIDE_COMPARISONS = [
     ],
     tip: 'Jonge Wespendieven kunnen in vlucht extra veel op Buizerd lijken. Combineer de staarttekening met de verhoudingen en, als je die ziet, de koptekening.',
   },
+  {
+    label: 'Wintertaling en Zomertaling · mannetjes in prachtkleed',
+    birds: [
+      {id: 'sp091', source: 'wintertaling', plumage: 'adult_m', marks: 'Kastanjebruine kop met breed groen oogveld. Horizontale witte flankstreep en gele vlek naast de staart.'},
+      {id: 'sp188', source: 'zomertaling', plumage: 'adult_m', marks: 'Brede witte oogboog die doorloopt naar het achterhoofd. Bruine borst en lange, afhangende schouderveren.'},
+    ],
+    tip: 'Begin met de kop. De droge ratel van het mannetje Zomertaling klinkt anders dan het hoge fluitje van Wintertaling.',
+  },
+  {
+    label: 'Wintertaling en Zomertaling · volwassen vrouwtjes',
+    birds: [
+      {id: 'sp091', source: 'wintertaling', plumage: 'adult_f', marks: 'Vaak minder contrast rond het oog, met een lichte vlek aan de staartzijde. Bij een geopende vleugel kan de groene spiegel oplichten.'},
+      {id: 'sp188', source: 'zomertaling', plumage: 'adult_f', marks: 'Donkere oogstreep, lichte wenkbrauw en lichte keel. Vaak ook een licht vlekje aan de snavelbasis.'},
+    ],
+    tip: 'Vergelijk oogstreep, keel en staartzijde samen. Een glanzende spiegel kan door de kijkhoek donker lijken.',
+  },
+  {
+    label: 'Wintertaling en Zomertaling · jonge vogels',
+    birds: [
+      {id: 'sp091', source: 'wintertaling', plumage: 'juv', marks: 'Bruine vogel die sterk op een vrouwtje lijkt. Bij deze vogel is de groene vleugelspiegel zichtbaar.'},
+      {id: 'sp188', source: 'zomertaling', plumage: 'juv', marks: 'Lijkt ook sterk op het eigen vrouwtje. Let op het contrast tussen de donkere oogstreep en de lichte keel en wenkbrauw.'},
+    ],
+    tip: 'Kop- en vleugeltekening helpen om de soort te bepalen. Laat de leeftijd open als de details ontbreken.',
+  },
+  {
+    label: 'Wintertaling en Zomertaling · mannetjes in eclipskleed',
+    birds: [
+      {id: 'sp091', source: 'wintertaling', plumage: 'eclipse', marks: 'Het mannetje wordt overwegend bruin. Bij deze ruiende vogel zie je nog groen op de kop.'},
+      {id: 'sp188', source: 'zomertaling', plumage: 'eclipse', marks: 'Bruine kop met lichte keel. In vlucht valt de licht blauwgrijze voorvleugel op.'},
+    ],
+    tip: 'De foto’s laten verschillende houdingen zien. Beoordeel bij een bruine taling de koptekening op het water en de voorvleugel als de vogel opvliegt.',
+  },
 ];
 
 export function comparisonSource(bird) {

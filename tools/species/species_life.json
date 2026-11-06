@@ -1043,7 +1043,7 @@
   "period": "Half april–juli",
   "nest": "Grondnest, goed verborgen in vegetatie.",
   "eggs": "Meestal 8–11",
-  "incubation": "25–30 dagen",
+  "incubation": "21–23 dagen (BTO), 25–30 dagen (Sovon)",
   "fledging": "25–30 dagen",
   "broods": "Meestal 1",
   "diet": "Kleine waterdieren in de broedtijd. In de winter veel zaden.",
@@ -2036,16 +2036,18 @@
   "voice": "Trompetterend \"whoop-whoop\""
  },
  "sp188": {
-  "period": "mei–jul",
-  "nest": "Komnest met dons in hoog gras bij water",
-  "eggs": "8–11",
+  "period": "April–juli, begint meestal in april of mei",
+  "nest": "Grondnest in dichte vegetatie aan de oever of in een graspol.",
+  "eggs": "Meestal 8–11",
   "incubation": "21–23 dagen",
   "fledging": "35–40 dagen",
   "broods": "1",
-  "diet": "Waterinsecten, zaden en waterplanten",
-  "behaviour": "Schuw; verborgen in natte graslanden en moerassen",
-  "migration": "Zomergast (mrt–sep); overwintert in de Sahel",
-  "voice": "Man een droog ratelend \"knerrr\""
+  "diet": "Zoekt voedsel op of vlak onder het wateroppervlak. Eet zaden en waterplanten, en in de broedtijd ook insectenlarven en andere kleine waterdieren.",
+  "behaviour": "Houdt zich vaak op bij ondiep water met oeverplanten. Broedt in losse paren en verdedigt de nestomgeving.",
+  "migration": "Trekt in het voorjaar door vanaf maart en overwintert vooral ten zuiden van de Sahara, onder meer in de Sahel.",
+  "voice": "Mannetje maakt een korte, droge ratel. Vrouwtje kwaakt kort en hoog.",
+  "fledgingLabel": "Vliegvlug na",
+  "months": "apr-jul"
  },
  "sp189": {
   "period": "mei–jul",

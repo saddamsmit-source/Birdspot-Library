@@ -2216,5 +2216,24 @@ export const GUIDE_PHOTOS = Object.freeze({
     "visualCheck": "Koereigers foerageren dicht bij een grazende koe in een Spaans natuurgebied. De rechter vogel is volledig zichtbaar.",
     "alt": "Koereiger — Koereigers foerageren dicht bij een grazende koe in een Spaans natuurgebied. De rechter vogel is volledig zichtbaar.",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/"
+  },
+  "sp188": {
+    "file": "Garganey (Spatula querquedula) male.jpg",
+    "author": "Charles J. Sharp",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Garganey_(Spatula_querquedula)_male.jpg",
+    "image": "/assets/species/sp188.webp",
+    "width": 1280,
+    "height": 853,
+    "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+    "nl": "Zomertaling",
+    "latin": "Spatula querquedula",
+    "batch": "teals-14",
+    "reviewed": "2026-11-06",
+    "verification": "Soort en kleed gecontroleerd aan de hand van Commons-broninformatie en zichtbare veldkenmerken.",
+    "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zomertaling",
+    "visualCheck": "Volwassen mannetje in Spanje. Brede witte oogboog, bruine borst, fijne grijze flanktekening en verlengde schouderveren.",
+    "alt": "Zomertaling — Volwassen mannetje in Spanje. Brede witte oogboog, bruine borst, fijne grijze flanktekening en verlengde schouderveren.",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
   }
 });

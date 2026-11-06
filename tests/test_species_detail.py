@@ -481,6 +481,31 @@ def main():
             close_detail()
             print("H4-06 OK — witte reigers per kleed, bronfoto's, roepen en broedmaanden")
 
+            open_species("Wintertaling", "sp091")
+            teal_comparisons = p.locator('.sd-compare')
+            assert teal_comparisons.count() == 4
+            for label, plumage in [('mannetjes in prachtkleed', 'adult_m'), ('volwassen vrouwtjes', 'adult_f'),
+                                   ('jonge vogels', 'juv'), ('mannetjes in eclipskleed', 'eclipse')]:
+                pair = teal_comparisons.filter(
+                    has=p.get_by_role('heading', name=f'Wintertaling en Zomertaling · {label}')
+                )
+                expected_garganey = '/assets/species/sp188.webp' if plumage == 'adult_m' else f'/assets/species/plumage/sp188-{plumage}.webp'
+                assert pair.locator('img').evaluate_all("images => images.map(img => img.getAttribute('src'))") == [
+                    f'/assets/species/plumage/sp091-{plumage}.webp', expected_garganey,
+                ]
+            assert p.get_by_label('Vluchtroep bij Rotterdam van Wintertaling').count() == 1
+            p.get_by_role('tab', name='Leefwijze', exact=True).click()
+            months = p.get_by_text('Gebruikelijke broedperiode · april, mei, juni, juli', exact=True)
+            expect(months).to_be_visible()
+            p.get_by_role('tab', name='Herkenning', exact=True).click()
+            teal_comparisons.first.get_by_role('button', name='Open soortkaart Zomertaling').click()
+            assert p.get_by_role('dialog', name='Zomertaling', exact=True).count() == 1
+            assert p.get_by_label('Ratel van het mannetje van Zomertaling').count() == 1
+            p.get_by_role('tab', name='Leefwijze', exact=True).click()
+            expect(months).to_be_visible()
+            close_detail()
+            print("H4-07 OK — talingen per kleed, lokale roepen en broedmaanden")
+
             assert not errors, f"H2-08 paginafouten: {errors}"
             print("H2-08 OK — geen paginafouten")
             browser.close()
