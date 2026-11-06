@@ -122,6 +122,30 @@ export const GUIDE_COMPARISONS = [
     ],
     tip: 'Roestoranje onderzijde komt bij beide voor. Beoordeel kop én uitgespreide ondervleugel. Laat de determinatie open als de details ontbreken.',
   },
+  {
+    label: 'Sperwer en Havik · volwassen mannetjes',
+    birds: [
+      {id: 'sp006', source: 'sperwer', plumage: 'adult_m', marks: 'Rank, met roestkleurige wangen en flanken en een blauwgrijze rug.'},
+      {id: 'sp007', source: 'havik', plumage: 'adult_m', marks: 'Forse borst, duidelijke lichte wenkbrauw en fijne donkere banden op de lichte onderzijde.'},
+    ],
+    tip: 'De roestige wangen en onderzijde van een mannetje Sperwer vallen vooral op bij goed licht.',
+  },
+  {
+    label: 'Sperwer en Havik · volwassen vrouwtjes',
+    birds: [
+      {id: 'sp006', source: 'sperwer', plumage: 'adult_f', marks: 'Rankere bouw, dunnere poten en een lange staart met hoekige uiteinden.'},
+      {id: 'sp007', source: 'havik', plumage: 'adult_f', marks: 'Zware borst, stevige poten en een ver uitstekende kop. De staartpunt is in vlucht doorgaans ronder.'},
+    ],
+    tip: 'Beide zijn dwarsgebandeerd. Gebruik bouw en staartvorm samen, want grootte is op afstand lastig te schatten.',
+  },
+  {
+    label: 'Sperwer en Havik · jonge vogels',
+    birds: [
+      {id: 'sp006', source: 'sperwer', plumage: 'juv', marks: 'Donkere tekening loopt in dwarsbanden over de lichte borst en buik. De banden kunnen hoekig of V-vormig zijn.'},
+      {id: 'sp007', source: 'havik', plumage: 'juv', marks: 'Donkere lengtestrepen lopen van boven naar beneden over de lichte borst en buik.'},
+    ],
+    tip: 'Let bij een jonge vogel op de richting van de tekening op de borst. Beide soorten zijn bruin van boven.',
+  },
 ];
 
 export function comparisonSource(bird) {

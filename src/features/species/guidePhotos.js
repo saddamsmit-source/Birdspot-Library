@@ -2120,5 +2120,43 @@ export const GUIDE_PHOTOS = Object.freeze({
     "visualCheck": "Volwassen mannetje laag in vlucht, met grijze kop, zwarte vleugelpunten en donkere banden over de armvleugel.",
     "alt": "Grauwe Kiekendief — Volwassen mannetje laag in vlucht, met grijze kop, zwarte vleugelpunten en donkere banden over de armvleugel.",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "sp006": {
+    "file": "Male Sparrowhawk (46103963061).jpg",
+    "author": "caroline legg",
+    "license": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Male_Sparrowhawk_(46103963061).jpg",
+    "image": "/assets/species/sp006.webp",
+    "width": 1280,
+    "height": 853,
+    "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+    "nl": "Sperwer",
+    "latin": "Accipiter nisus",
+    "batch": "raptors-11",
+    "reviewed": "2026-11-06",
+    "verification": "Bronmetadata en zichtbare kenmerken vergeleken met de gelinkte soortkaart.",
+    "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/sperwer",
+    "visualCheck": "Volwassen mannetje op een met mos begroeide stronk, met blauwgrijze rug en roestkleurige wang en onderzijde.",
+    "alt": "Sperwer — Volwassen mannetje op een met mos begroeide stronk, met blauwgrijze rug en roestkleurige wang en onderzijde.",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "sp007": {
+    "file": "Male northern goshawk (49434582392).jpg",
+    "author": "Andrey Gulivanov",
+    "license": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Male_northern_goshawk_(49434582392).jpg",
+    "image": "/assets/species/sp007.webp",
+    "width": 1280,
+    "height": 960,
+    "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+    "nl": "Havik",
+    "latin": "Accipiter gentilis",
+    "batch": "raptors-11",
+    "reviewed": "2026-11-06",
+    "verification": "Bronmetadata en zichtbare kenmerken vergeleken met de gelinkte soortkaart.",
+    "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/havik",
+    "visualCheck": "Volwassen mannetje op een tak, met lichte wenkbrauw en fijn dwarsgebandeerde onderzijde.",
+    "alt": "Havik — Volwassen mannetje op een tak, met lichte wenkbrauw en fijn dwarsgebandeerde onderzijde.",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
   }
 });

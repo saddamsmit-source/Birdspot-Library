@@ -60,6 +60,11 @@ De fotoselectie combineert Commons-metadata en visuele herkenningspunten uit de 
 - Vogelbescherming is de bron voor maten, broedgegevens en algemene veldkenmerken. Vogelskijken en Naturalis vullen de vleugel- en kopdetails aan. De toepasselijke pagina’s staan op de soortkaarten. Sovon bevestigt incidentele Nederlandse broedgevallen van Steppekiekendief. Die status staat in de bronlijst en de gids toont geen vast Nederlands maandbereik bij deze soort.
 - CAP-BIRD-040. Bruine en Blauwe hebben elk een lokale roep met herkomst en licentie in het register. Het fragment van de Blauwe is een bevestigde bedelroep van een vrouwtje in vlucht. Voor Grauwe en Steppe leverden de gecontroleerde geluidsbronnen in deze ronde geen licentie op die bij de beoogde distributie past. Daarom blijft hun geluidsbeschrijving de beschikbare gidsinhoud.
 
+### Fotobatch 11 · Sperwer en Havik
+
+- CAP-BIRD-012 en CAP-BIRD-015. Voor beide soorten is het volwassen mannetje, volwassen vrouwtje en juveniel in beeld. De drie vergelijkingen tonen onder meer de dwarsbanden van een jonge Sperwer en de lengtestrepen van een jonge Havik. De tekst koppelt de tekening aan bouw, staartvorm en licht. Maten, broeden en geluid zijn bijgewerkt met de op de soortkaarten vermelde bronnen.
+- CAP-BIRD-040 en L-019. Sperwer heeft twee roepen, waaronder de bedelroep van jongen die de maker op gehoor determineerde. Havik heeft drie roepen. De bronnen van de Havikopnamen komen uit Europa. Bij oude bronlabels zoals `Accipiter gentilis` voorkomt controle van soort én opnamegebied dat Noord-Amerikaanse opnamen aan de Europese Havik worden gekoppeld.
+
 ### Gefaseerde dekking
 
 `node tools/species/guide_coverage.mjs` geeft voor elk van de 597 soort-ID’s de gedocumenteerde broncontrole, hoofd- en kleedfoto’s, opnamen en vergelijkingen. Voeg `--summary` toe voor de totalen. De controles koppelen vergelijkingsfoto’s aan het gevraagde kleed en toetsen lokale bestanden en credits. Een lege kolom geeft een open punt of een inhoudelijk niet-toepasselijk kleed aan. Een gedocumenteerde review is de afgebakende controle van de gelinkte velden en bronnen. Werk per soortgroep, geef eerst voorrang aan verwarringssoorten en houd ontbrekend of onvoldoende gelicentieerd materiaal zichtbaar in de dekking. Onderscheid bij verdere groei offline getest materiaal en nog te toetsen omvang van de download.

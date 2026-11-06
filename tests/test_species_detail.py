@@ -18,6 +18,7 @@ Birdspot Library — H2–H4: soortdetail met tabbladen
   H4-01  soortvergelijking en lokale opnamen, inclusief openen foto en wisselen naar verwante soort
   H4-02  vergelijking toont het juiste kleed en Verenkleed heeft lokale winter-, broed- en ruifoto's
   H4-03  kiekendieven vergelijken per kleed; incidentele Nederlandse broedgevallen krijgen geen vast maandbereik
+  H4-04  jonge Sperwer en Havik tonen juiste borsttekening, kleedfoto en benoemde roepen
 
 Starten (vanuit repo-root):  python tests/test_species_detail.py
 """
@@ -407,6 +408,23 @@ def main():
             assert p.locator('#sdPanel-status .sd-month-breeding').count() == 0
             close_detail()
             print("H4-03 OK — Bruine/Blauwe per kleed en Steppekiekendief zonder vaste broedmaanden")
+
+            open_species("Sperwer", "sp006")
+            young_hawks = p.locator('.sd-compare').filter(
+                has=p.get_by_role("heading", name="Sperwer en Havik · jonge vogels")
+            )
+            assert "dwarsbanden" in young_hawks.locator('.sd-compare-card').first.inner_text()
+            assert "lengtestrepen" in young_hawks.locator('.sd-compare-card').last.inner_text()
+            assert young_hawks.locator('img').evaluate_all("images => images.map(img => img.getAttribute('src'))") == [
+                "/assets/species/plumage/sp006-juv.webp", "/assets/species/plumage/sp007-juv.webp",
+            ]
+            assert p.get_by_label("Roep vrouwtje van Sperwer").count() == 1
+            young_hawks.get_by_role("button", name="Open soortkaart Havik").click()
+            assert p.get_by_role("dialog", name="Havik", exact=True).count() == 1
+            assert p.get_by_label("Alarmroep vrouwtje van Havik").count() == 1
+            assert p.get_by_label("Bedelroep jong van Havik").count() == 1
+            close_detail()
+            print("H4-04 OK — jonge Sperwer/Havik, juiste borsttekening en lokale roepen")
 
             assert not errors, f"H2-08 paginafouten: {errors}"
             print("H2-08 OK — geen paginafouten")

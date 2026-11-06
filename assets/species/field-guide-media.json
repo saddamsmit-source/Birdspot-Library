@@ -121,6 +121,65 @@
         "source": "https://commons.wikimedia.org/wiki/File:Circus_cyaneus_-_Hen_Harrier_XC558933.mp3",
         "modifications": "Fragment, omgezet naar MP3 (mono)"
       }
+    ],
+    "sp006": [
+      {
+        "file": "Accipiter nisus - Eurasian Sparrowhawk XC467097.mp3",
+        "audio": "/assets/species/audio/sp006-nest-call.mp3",
+        "label": "Roep vrouwtje",
+        "note": "Een hoge roep gevolgd door korte kekkerende klanken bij het nest.",
+        "author": "Alvaro Ortiz Troncoso",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Accipiter_nisus_-_Eurasian_Sparrowhawk_XC467097.mp3",
+        "modifications": "Omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "Accipiter nisus - Eurasian Sparrowhawk XC234158.mp3",
+        "audio": "/assets/species/audio/sp006-begging.mp3",
+        "label": "Bedelroep jongen",
+        "note": "Bedelroep van jongen, door de maker op gehoor gedetermineerd.",
+        "author": "Steven Wilson",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Accipiter_nisus_-_Eurasian_Sparrowhawk_XC234158.mp3",
+        "modifications": "Fragment, omgezet naar MP3 (mono)"
+      }
+    ],
+    "sp007": [
+      {
+        "file": "Accipiter gentilis - Northern Goshawk XC396289.mp3",
+        "audio": "/assets/species/audio/sp007-female-call.mp3",
+        "label": "Roep vrouwtje",
+        "note": "Klagende roep van een vrouwtje in vlucht tussen bomen.",
+        "author": "Alvaro Ortiz Troncoso",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Accipiter_gentilis_-_Northern_Goshawk_XC396289.mp3",
+        "modifications": "Fragment, omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "Accipiter gentilis - Northern Goshawk XC396773.mp3",
+        "audio": "/assets/species/audio/sp007-alarm.mp3",
+        "label": "Alarmroep vrouwtje",
+        "note": "Alarmroep van een volwassen vrouwtje vanaf een boom.",
+        "author": "Alvaro Ortiz Troncoso",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Accipiter_gentilis_-_Northern_Goshawk_XC396773.mp3",
+        "modifications": "Omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "Accipiter gentilis - Northern Goshawk XC578067.mp3",
+        "audio": "/assets/species/audio/sp007-begging.mp3",
+        "label": "Bedelroep jong",
+        "note": "Bedelroep van een jonge vrouwelijke Havik.",
+        "author": "Alvaro Ortiz Troncoso",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Accipiter_gentilis_-_Northern_Goshawk_XC578067.mp3",
+        "modifications": "Fragment, omgezet naar MP3 (mono)"
+      }
     ]
   },
   "plumage": {
@@ -523,6 +582,93 @@
         "visualCheck": "Jonge vogel in vlucht. Warmbruine onderzijde en gebandeerde vleugels en staart.",
         "alt": "Grauwe Kiekendief — Jonge vogel in vlucht. Warmbruine onderzijde en gebandeerde vleugels en staart.",
         "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+      }
+    },
+    "sp006": {
+      "adult_m": {
+        "reuseGuidePhoto": true
+      },
+      "adult_f": {
+        "file": "Female Sparrowhawk (45968114392).jpg",
+        "author": "caroline legg",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Female_Sparrowhawk_(45968114392).jpg",
+        "image": "/assets/species/plumage/sp006-adult_f.webp",
+        "width": 1280,
+        "height": 853,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Sperwer",
+        "latin": "Accipiter nisus",
+        "batch": "raptors-11",
+        "reviewed": "2026-11-06",
+        "verification": "Bronmetadata en zichtbare kenmerken vergeleken met de gelinkte soortkaart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/sperwer",
+        "visualCheck": "Volwassen vrouwtje met uitgespreide vleugels, gebandeerde borst en dunne gele poten.",
+        "alt": "Sperwer — Volwassen vrouwtje met uitgespreide vleugels, gebandeerde borst en dunne gele poten.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+      },
+      "juv": {
+        "file": "Female Juvenile Sparrowhawk (36519885205).jpg",
+        "author": "caroline legg",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Female_Juvenile_Sparrowhawk_(36519885205).jpg",
+        "image": "/assets/species/plumage/sp006-juv.webp",
+        "width": 1280,
+        "height": 853,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Sperwer",
+        "latin": "Accipiter nisus",
+        "batch": "raptors-11",
+        "reviewed": "2026-11-06",
+        "verification": "Bronmetadata en zichtbare kenmerken vergeleken met de gelinkte soortkaart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/sperwer",
+        "visualCheck": "Jonge Sperwer op gras, met bruine bovenzijde en donkere dwarsbanden op borst en buik.",
+        "alt": "Sperwer — Jonge Sperwer op gras, met bruine bovenzijde en donkere dwarsbanden op borst en buik.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+      }
+    },
+    "sp007": {
+      "adult_m": {
+        "reuseGuidePhoto": true
+      },
+      "juv": {
+        "file": "Juvenile northern goshawk (52310658114).jpg",
+        "author": "Andrey Gulivanov",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Juvenile_northern_goshawk_(52310658114).jpg",
+        "image": "/assets/species/plumage/sp007-juv.webp",
+        "width": 1280,
+        "height": 853,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Havik",
+        "latin": "Accipiter gentilis",
+        "batch": "raptors-11",
+        "reviewed": "2026-11-06",
+        "verification": "Bronmetadata en zichtbare kenmerken vergeleken met de gelinkte soortkaart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/havik",
+        "visualCheck": "Jonge Havik in het bos, met donkere lengtestrepen op de lichte borst en buik.",
+        "alt": "Havik — Jonge Havik in het bos, met donkere lengtestrepen op de lichte borst en buik.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+      },
+      "adult_f": {
+        "file": "iNaturalist photo 478065886",
+        "author": "WATANABE Hitoshi 渡辺仁",
+        "license": "CC BY 4.0",
+        "source": "https://www.inaturalist.org/photos/478065886",
+        "image": "/assets/species/plumage/sp007-adult_f.webp",
+        "width": 683,
+        "height": 1024,
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "nl": "Havik",
+        "latin": "Accipiter gentilis",
+        "batch": "raptors-11",
+        "reviewed": "2026-11-06",
+        "verification": "Research-grade waarneming, leeftijd of geslacht geannoteerd en visueel gecontroleerd met de soortkaart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/havik",
+        "visualCheck": "Volwassen vrouwtje in vlucht in Japan. Uitstekende kop, gebandeerde onderzijde en een afgeronde staartpunt.",
+        "alt": "Havik — Volwassen vrouwtje in vlucht in Japan. Uitstekende kop, gebandeerde onderzijde en een afgeronde staartpunt.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "observation": "https://www.inaturalist.org/observations/266098077"
       }
     }
   }

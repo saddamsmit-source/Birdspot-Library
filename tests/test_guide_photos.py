@@ -49,11 +49,18 @@ def main():
    ctx.set_offline(True)
    results=p.evaluate('''async urls=>Promise.all(urls.map(u=>new Promise(resolve=>{const i=new Image();i.onload=()=>resolve(i.naturalWidth>0);i.onerror=()=>resolve(false);i.src=u})))''',images)
    assert all(results);print(f'PASS {len(images)} photos decode offline after precache',flush=True)
-   audio_results=p.evaluate('''async urls=>Promise.all(urls.map(async url=>{
-     const res=await fetch(url,{headers:{Range:'bytes=0-31'}});
-     return res.status===206 && (await res.arrayBuffer()).byteLength===32;
-   }))''',clips)
-   assert all(audio_results);print(f'PASS {len(clips)} field recordings respond to offline range requests',flush=True)
+   audio_results=p.evaluate('''async urls=>{
+     const audio=new AudioContext();
+     const results=await Promise.all(urls.map(async url=>{
+       const res=await fetch(url,{headers:{Range:'bytes=0-31'}});
+       const full=await fetch(url);
+       const decoded=await audio.decodeAudioData(await full.arrayBuffer());
+       return res.status===206 && (await res.arrayBuffer()).byteLength===32 && decoded.duration>0;
+     }));
+     await audio.close();
+     return results;
+   }''',clips)
+   assert all(audio_results);print(f'PASS {len(clips)} field recordings decode and respond to offline range requests',flush=True)
 
    # A first installation must also boot and open a guide photo after an offline reload.
    p.reload(wait_until='domcontentloaded')

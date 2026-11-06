@@ -66,33 +66,33 @@ export const LIFE = Object.freeze({
  },
  "sp006": {
   "breeding": {
-   "period": "apr–jul",
-   "nest": "Platte takkenkom in een jonge naaldboom",
+   "period": "apr–jun",
+   "nest": "Meestal dicht tegen de stam in dicht bos, vaak in een jonge naaldboom.",
    "eggs": "4–5",
-   "incubation": "33–35 dagen",
-   "fledging": "24–30 dagen",
+   "incubation": "32–34 dagen",
+   "fledging": "26–30 dagen",
    "broods": "1",
-   "months": "apr-jul"
+   "months": "apr-jun"
   },
-  "diet": "Kleine zangvogels zoals mussen, mezen en vinken",
+  "diet": "Vooral kleine zangvogels. Vrouwtjes vangen ook grotere vogels, soms tot het formaat van een Turkse tortel.",
   "behaviour": "Verrassingsaanval laag langs heggen en tuinen; vlucht met snelle slagen en korte glijvluchten",
   "migration": "Standvogel; in najaar en winter ook doortrekkers uit het noorden",
-  "voice": "Snel \"kie-kie-kie\" bij het nest"
+  "voice": "Bij het nest een vrij hoog, snel gekekker. Daarnaast is een hoge, schrille roep te horen."
  },
  "sp007": {
   "breeding": {
-   "period": "mrt–jul",
-   "nest": "Groot takkennest hoog in een oude boom",
+   "period": "mrt–mei",
+   "nest": "Groot takkennest hoog in de boomkroon. Het kan jaren achtereen worden gebruikt.",
    "eggs": "3–4",
-   "incubation": "35–38 dagen",
-   "fledging": "35–42 dagen",
+   "incubation": "32–38 dagen",
+   "fledging": "34–41 dagen",
    "broods": "1",
-   "months": "mrt-jul"
+   "months": "mrt-mei"
   },
-  "diet": "Duiven, kraaien, eksters, konijnen en eenden",
+  "diet": "Vooral vogels rond duifgrootte. Ook grotere en kleinere vogels en zoogdieren zoals konijn en eekhoorn.",
   "behaviour": "Jaagt verborgen vanuit bos; balts boven het bos in het vroege voorjaar",
   "migration": "Standvogel",
-  "voice": "Luid kakelend \"kjek-kjek-kjek\" bij het nest"
+  "voice": "Bij het nest een diep, meestal trager gekekker dan bij de Sperwer. Ook hoge, klagende roepen en bedelroepen van jongen."
  },
  "sp008": {
   "breeding": {
