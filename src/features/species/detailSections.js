@@ -124,7 +124,8 @@ function plumageCard(ic, title, text, badge, photo) {
 function posesPanel(id) {
   const photos = GUIDE_POSES[id] || [];
   if (!photos.length) return '';
-  return '<section class="sd-poses" aria-label="Zittend en in vlucht"><h3 class="sd-h">Zittend en in vlucht</h3>' +
+  const title = photos.some(photo => /vlucht|biddend/i.test(photo.label)) ? 'Zittend en in vlucht' : 'Herkenning in beeld';
+  return `<section class="sd-poses" aria-label="${title}"><h3 class="sd-h">${title}</h3>` +
     '<div class="sd-compare-grid">' + photos.map(photo =>
       `<div class="sd-compare-card"><strong>${esc(photo.label)}</strong>${fieldPhoto(photo)}<p>${esc(photo.note)}</p></div>`
     ).join('') + '</div></section>';

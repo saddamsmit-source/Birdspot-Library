@@ -10,11 +10,19 @@ export const GUIDE_COMPARISONS = [
     tip: 'Luister eerst naar de zang. Gebruik pootkleur alleen als extra aanwijzing.',
   },
   {
-    birds: [
-      {id: 'sp031', source: 'matkop', marks: 'Vaak een lichte baan over de gevouwen vleugel. De kap oogt meestal dof.'},
-      {id: 'sp032', source: 'glanskop', marks: 'Egalere vleugel. Van dichtbij kan een licht vlekje bij de snavelbasis opvallen.'},
+    "birds": [
+      {
+        "id": "sp031",
+        "source": "matkop",
+        "marks": "Vaak een licht vleugelveld en een doorgaans geheel donkere bovensnavelbasis. Roep nasaal dèh-dèh; zang met langgerekte heldere tjii-tonen."
+      },
+      {
+        "id": "sp032",
+        "source": "glanskop",
+        "marks": "Lichte vlek aan de bovensnavelbasis; vleugel meestal egaler. Roep explosief pstie-toe; zang korter en metaalachtig tiu-tiu."
+      }
     ],
-    tip: 'Let op de vleugel en luister naar de roep. De glans van de kap is lastig te beoordelen.',
+    "tip": "Luister naar roep of zang en controleer meerdere details. Kapglans en grootte van de keelvlek zijn op zichzelf onbetrouwbaar; bij pas uitgevlogen vogels zijn sommige snavel- en kopkenmerken nog minder bruikbaar."
   },
   {
     birds: [
@@ -31,11 +39,21 @@ export const GUIDE_COMPARISONS = [
     tip: 'Vergelijk de vrouwtjes. Bekijk bij twijfel de gevouwen vleugel.',
   },
   {
-    birds: [
-      {id: 'sp016', source: 'grote-bonte-specht', plumage: 'juv', marks: 'Jonge vogel met rode kruin én een zwarte begrenzing van de kruin.'},
-      {id: 'sp020', source: 'middelste-bonte-specht', marks: 'Rode kruin, opener wit gezicht en meer streping op de flanken.'},
+    "label": "Grote of middelste bonte specht?",
+    "birds": [
+      {
+        "id": "sp016",
+        "source": "grote-bonte-specht",
+        "marks": "Grote: zwarte begrenzing onder rode jeugdkruin en duidelijke donkere tekening langs de kop; rode onderstaart.",
+        "plumage": "juv"
+      },
+      {
+        "id": "sp020",
+        "source": "middelste-bonte-specht",
+        "marks": "Middelste: lichte kop met oog vrij in wit, kruin zonder zwarte onderrand, gestreepte flanken en roze onderstaart."
+      }
     ],
-    tip: 'Een rood petje komt bij beide voor. Kijk naar het hele koppatroon.',
+    "tip": "Een rode kruin alleen is onvoldoende: ook jonge Grote Bonte Spechten hebben die."
   },
   {
     label: 'Kleine en Grote Zilverreiger · buiten broedkleed',
@@ -426,6 +444,132 @@ export const GUIDE_COMPARISONS = [
       {id: 'sp007', source: 'havik', plumage: 'juv', marks: 'Opvallende lichte wenkbrauw, stevige poten en een langere staart. Jonge vogels hebben eveneens lengtestrepen.'},
     ],
     tip: 'Lengtestrepen komen bij beide voor. Vergelijk de koptekening, staart en vleugels; formaat zonder referentie is lastig.',
+  },
+  {
+    "label": "Grote of kleine bonte specht?",
+    "birds": [
+      {
+        "id": "sp016",
+        "source": "grote-bonte-specht",
+        "marks": "Grote: grote witte schoudervlekken en rode onderstaart."
+      },
+      {
+        "id": "sp017",
+        "source": "kleine-bonte-specht",
+        "marks": "Kleine: dwarsgestreepte rug zonder grote witte schoudervlekken, bleke onderstaart en musformaat."
+      }
+    ],
+    "tip": "Gebruik rugpatroon en onderstaart naast formaat."
+  },
+  {
+    "label": "Kleine of middelste bonte specht?",
+    "birds": [
+      {
+        "id": "sp017",
+        "source": "kleine-bonte-specht",
+        "marks": "Kleine: gebandeerde rug en geen rode onderstaart; veel kleiner."
+      },
+      {
+        "id": "sp020",
+        "source": "middelste-bonte-specht",
+        "marks": "Middelste: witte schoudervlekken, roze onderstaart en licht gezicht."
+      }
+    ],
+    "tip": "Een rood petje komt bij beide voor; controleer schouder en onderstaart."
+  },
+  {
+    "label": "Zwarte of groene specht?",
+    "birds": [
+      {
+        "id": "sp018",
+        "source": "zwarte-specht",
+        "marks": "Zwarte: groot en vrijwel geheel zwart; rechte slagvlucht, kru-kru in vlucht en langgerekte roep in zit."
+      },
+      {
+        "id": "sp019",
+        "source": "groene-specht",
+        "marks": "Groene: groen met gele stuit; diep golvende vlucht en vaak foeragerend op gras."
+      }
+    ],
+    "tip": "Beide kunnen lachen. Combineer geluid met kleur en vlucht."
+  },
+  {
+    "birds": [
+      {
+        "id": "sp030",
+        "source": "pimpelmees",
+        "marks": "Blauw petje met smalle donkere oogstreep; witte wang. Jonge vogels hebben gelige wangen."
+      },
+      {
+        "id": "sp029",
+        "source": "koolmees",
+        "marks": "Grotere mees met zwarte kop, witte wang en een zwarte lengtestreep midden over de gele buik."
+      }
+    ],
+    "tip": "Kijk naar de hele koptekening. Een blauwe kruin met smalle oogstreep wijst op Pimpelmees; Koolmees heeft een veel groter zwart kopvlak."
+  },
+  {
+    "birds": [
+      {
+        "id": "sp033",
+        "source": "kuifmees",
+        "marks": "Zwart-witte spitse kuif en een gebogen zwarte lijn achter de wang."
+      },
+      {
+        "id": "sp031",
+        "source": "matkop",
+        "marks": "Zwarte gesloten kap zonder gespikkelde kuif; lichtere, minder getekende zijkop."
+      }
+    ],
+    "tip": "Bekijk de kop ook als de kuif platligt: de Kuifmees behoudt zijn zwart-witte kuifveren en sterke wangtekening."
+  },
+  {
+    "label": "Goudhaantje en Vuurgoudhaan · koptekening",
+    "birds": [
+      {
+        "id": "sp063",
+        "source": "goudhaan",
+        "marks": "Groot donker oog in een vrij egaal licht gezicht; geen brede witte wenkbrauw."
+      },
+      {
+        "id": "sp064",
+        "source": "vuurgoudhaan",
+        "marks": "Brede witte wenkbrauw boven een zwarte oogstreep; duidelijk contrastrijker gezicht."
+      }
+    ],
+    "tip": "Begin bij het gezicht, niet bij de kleur van de kruin. Beide soorten kunnen geel én oranje op de kruin tonen."
+  },
+  {
+    "label": "Boomklever en Boomkruiper · bouw en beweging",
+    "birds": [
+      {
+        "id": "sp065",
+        "source": "boomklever",
+        "marks": "Blauwgrijze rug, zwarte oogstreep, rechte snavel en korte staart. Beweegt ook kop omlaag langs de stam."
+      },
+      {
+        "id": "sp066",
+        "source": "boomkruiper",
+        "marks": "Bruin-licht gevlekte rug, dunne kromme snavel en lange stijve staart. Zoekt meestal omhoog klimmend naar voedsel."
+      }
+    ],
+    "tip": "Combineer kleur en bouw met de richting van klimmen. Een stilzittende vogel is ook zonder gedrag aan deze kenmerken te vergelijken."
+  },
+  {
+    "label": "Boomkruiper en Taigaboomkruiper · combineer beeld en geluid",
+    "birds": [
+      {
+        "id": "sp066",
+        "source": "boomkruiper",
+        "marks": "Vaak warmere flanken, minder opvallende wenkbrauw en een gelijkmatiger verloop van de lichte vleugelband."
+      },
+      {
+        "id": "sp067",
+        "source": "taigaboomkruiper",
+        "marks": "Vaak witter onderaan en achter het oog. Het precieze patroon van de lichte vleugelband helpt, maar vraagt een scherp zijaanzicht."
+      }
+    ],
+    "tip": "Luister naar volledige zangstrofen en vergelijk meerdere beelden. Kleur, snavellengte of één witte streep alleen is onvoldoende; ondersoorten en kijkhoek beïnvloeden het beeld."
   },
 ];
 

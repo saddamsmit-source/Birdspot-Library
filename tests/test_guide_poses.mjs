@@ -10,7 +10,8 @@ assert.deepEqual(GUIDE_POSES, registry.poses, 'Generated poses must match the so
 const species = new Map(SPECIES.map(s => [s.id, s]));
 for (const [id, poses] of Object.entries(GUIDE_POSES)) {
   const html = recognitionPanel(species.get(id));
-  assert.match(html, /aria-label="Zittend en in vlucht"/);
+  const heading = poses.some(p => /vlucht|biddend/i.test(p.label)) ? 'Zittend en in vlucht' : 'Herkenning in beeld';
+  assert.ok(html.includes(`aria-label="${heading}"`), 'The heading must describe the actual viewing angles');
   assert.ok(poses.length >= 1 && poses.length <= 2);
   for (const pose of poses) {
     assert.ok(existsSync(new URL('..' + pose.image, import.meta.url)), pose.image);

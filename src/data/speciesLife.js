@@ -216,78 +216,78 @@ export const LIFE = Object.freeze({
  },
  "sp016": {
   "breeding": {
-   "period": "apr–jun",
-   "nest": "Zelf uitgehakte holte in een boom",
-   "eggs": "4–7",
-   "incubation": "10–13 dagen",
-   "fledging": "20–24 dagen",
+   "period": "apr–jun; eileg vanaf begin april",
+   "nest": "Zelfgehakte holte, doorgaans jaarlijks nieuw en liefst in zachter hout.",
+   "eggs": "meestal 5–7",
+   "incubation": "10–12 dagen",
+   "fledging": "20–23 dagen",
    "broods": "1",
    "months": "apr-jun"
   },
-  "diet": "Insectenlarven uit hout, zaden van dennen en sparren, eieren en jongen van andere vogels",
-  "behaviour": "Roffelt in het voorjaar kort en krachtig op dood hout; vaak aan voedertafels",
-  "migration": "Standvogel; in sommige jaren invasies uit het noorden",
-  "voice": "Kort scherp \"kik\"; zeer korte roffel"
+  "diet": "Insecten en larven; ’s winters ook dennen- en sparrenzaden, plus noten.",
+  "behaviour": "Klimt langs stammen; golvende vlucht. Jongen krijgen na uitvliegen nog ongeveer tien dagen voedsel.",
+  "migration": "Nederlandse vogels blijven meestal; jonge vogels kunnen in het najaar zwerven.",
+  "voice": "Scherpe tsjik-roep. Korte, krachtige roffel; roffelen is instrumentaal geluid, geen zang."
  },
  "sp017": {
   "breeding": {
-   "period": "apr–jun",
-   "nest": "Zelf uitgehakte holte in zacht, dood hout",
-   "eggs": "4–6",
-   "incubation": "11–12 dagen",
-   "fledging": "18–21 dagen",
+   "period": "apr–mei",
+   "nest": "Holte in dode tak of zacht, rottend hout, vaak berk, wilg of populier.",
+   "eggs": "meestal 5–6",
+   "incubation": "10–11 dagen",
+   "fledging": "21–25 dagen",
    "broods": "1",
-   "months": "apr-jun"
+   "months": "apr-mei"
   },
-  "diet": "Kleine insecten en larven van dunne takken",
-  "behaviour": "Onopvallend in de kruinen van loofbos en oude boomgaarden",
-  "migration": "Standvogel",
-  "voice": "Reeks hoge \"kie-kie-kie\"; lange zwakke roffel"
+  "diet": "Insecten en larven op stammen en twijgen; in de winter ook vruchten.",
+  "behaviour": "Foerageert vaak hoog aan dunne takken. Ouders voeren uitgevlogen jongen nog 14–28 dagen.",
+  "migration": "Standvogel; buiten broedtijd een ruimer voedselgebied.",
+  "voice": "Hoge snelle reeks kie-roepen. Roffel langer en zachter dan bij Grote Bonte Specht, naaimachineachtig."
  },
  "sp018": {
   "breeding": {
-   "period": "mrt–jun",
-   "nest": "Grote ovale holte in een beuk of den",
-   "eggs": "3–5",
+   "period": "eileg mrt–mei",
+   "nest": "Grote, zelfgehakte holte in dikke boom, vaak beuk; opening meestal ovaal.",
+   "eggs": "meestal 3–5",
    "incubation": "12–14 dagen",
-   "fledging": "24–28 dagen",
+   "fledging": "24–31 dagen",
    "broods": "1",
-   "months": "mrt-jun"
+   "months": "mrt-mei"
   },
-  "diet": "Mieren en hun larven, houtborende kevers",
-  "behaviour": "Hakt grote rechthoekige gaten; golvende maar rechte vlucht",
-  "migration": "Standvogel",
-  "voice": "Luid \"krie-krie-krie\" in vlucht en klagend \"kliee\"; lange luide roffel"
+  "diet": "Vooral houtmieren en keverlarven uit hout.",
+  "behaviour": "Hakt grote gaten in stronken en liggend hout; heeft een groot territorium.",
+  "migration": "Standvogel; jongen zwerven op zoek naar een eigen territorium.",
+  "voice": "Vliegend herhaald kru-kru; zittend langgerekt kli-èèèhh. In voorjaar lachende roep; zware, lange roffel."
  },
  "sp019": {
   "breeding": {
-   "period": "apr–jun",
-   "nest": "Zelf uitgehakte holte in een boom",
-   "eggs": "5–7",
-   "incubation": "17–19 dagen",
+   "period": "mrt–jun",
+   "nest": "Zelfgehakte holte in een oude boom.",
+   "eggs": "4–6",
+   "incubation": "14–15 dagen",
    "fledging": "23–27 dagen",
    "broods": "1",
-   "months": "apr-jun"
+   "months": "mrt-jun"
   },
-  "diet": "Vooral mieren, die hij op de grond in graslanden zoekt",
-  "behaviour": "Foerageert veel op de grond; golvende vlucht",
-  "migration": "Standvogel",
-  "voice": "Luid lachend \"kluu-kluu-kluu\" (\"lachende specht\"); roffelt zelden"
+  "diet": "Vooral mieren, hun larven en poppen.",
+  "behaviour": "Zoekt veel voedsel op de grond. Het gezin blijft na uitvliegen nog drie tot zeven weken bijeen.",
+  "migration": "Standvogel.",
+  "voice": "Luide lachende of hinnikende roep, vaak in nawinter en voorjaar; korter bij opvliegen. Roffelt zelden en zwak."
  },
  "sp020": {
   "breeding": {
-   "period": "apr–jun",
-   "nest": "Holte in dood of rottend hout van oude eiken",
-   "eggs": "4–6",
+   "period": "eind apr–begin jun",
+   "nest": "Boomholte in hard of zacht hout; gebruikt soms een bestaande nestholte opnieuw.",
+   "eggs": "5–6",
    "incubation": "11–14 dagen",
-   "fledging": "20–24 dagen",
+   "fledging": "20–23 dagen",
    "broods": "1",
    "months": "apr-jun"
   },
-  "diet": "Insecten van ruwe schors, ook sap en noten",
-  "behaviour": "Leeft in oud loofbos met eiken; zoekt voedsel in de kruinen",
-  "migration": "Standvogel",
-  "voice": "Zeurend \"kwèh-kwèh-kwèh\" in het voorjaar; roffelt zelden"
+  "diet": "Insecten en rupsen; daarnaast bessen en noten.",
+  "behaviour": "Zoekt veel op horizontale en dunne takken.",
+  "migration": "Standvogel; jonge vogels zwerven.",
+  "voice": "Klagende territoriumroep, die aan gaai of havik kan doen denken. Roffelt weinig, met korte reeksen."
  },
  "sp021": {
   "breeding": {
@@ -418,78 +418,76 @@ export const LIFE = Object.freeze({
  },
  "sp030": {
   "breeding": {
-   "period": "mrt–jul",
-   "nest": "In boomholte of nestkast met kleine opening",
-   "eggs": "7–13",
+   "period": "eind mrt–jul",
+   "nest": "Boomholte of nestkast.",
+   "eggs": "gemiddeld 10",
    "incubation": "13–15 dagen",
-   "fledging": "16–22 dagen",
-   "broods": "1",
+   "fledging": "15–23 dagen; daarna nog 2–3 weken gevoerd",
+   "broods": "meestal 1, soms 2",
    "months": "mrt-jul"
   },
-  "diet": "Kleine insecten, rupsen en bladluizen; in de winter zaden en pinda's",
-  "behaviour": "Acrobatisch aan dunne takjes; vaak met staartmezen in gemengde groepen",
-  "migration": "Standvogel; in najaar ook doortrekkers",
-  "voice": "Helder \"tsie-tsie-tsurrr\""
+  "diet": "Vooral insecten, larven en spinnen; in de winter ook zaden en aangeboden voer.",
+  "behaviour": "Zoekt acrobatisch op dunne takken; peutert in de winter ook insecten uit rietstengels.",
+  "migration": "Meestal standvogel. Een deel zwerft weg; in het najaar komen ook vogels uit Noord- en Oost-Europa.",
+  "voice": "Zang: hoge, vaak aflopende triller; meerdere varianten."
  },
  "sp031": {
   "breeding": {
-   "period": "apr–jun",
-   "nest": "Zelf uitgehakte holte in zacht, rottend hout",
-   "eggs": "6–9",
+   "period": "vanaf begin apr",
+   "nest": "Zelf uitgehakte holte in zacht, vermolmd hout, ook in een rottende paal.",
+   "eggs": "7–9",
    "incubation": "13–15 dagen",
-   "fledging": "17–19 dagen",
-   "broods": "1",
-   "months": "apr-jun"
+   "fledging": "17–20 dagen; daarna nog enige tijd gevoerd",
+   "broods": "1"
   },
-  "diet": "Insecten, rupsen en zaden",
-  "behaviour": "Hakt zelf een nestholte; onopvallend in vochtig bos",
-  "migration": "Standvogel",
-  "voice": "Nasaal \"dèè-dèè-dèè\"; zang een fluitend \"tjuu-tjuu\""
+  "diet": "Insecten en andere ongewervelden; in de winter ook zaden en vruchten.",
+  "behaviour": "Blijft in de omgeving van het broedgebied; zoekt voedsel in bomen en struiken.",
+  "migration": "Standvogel; in de winter soms in lokale groepjes.",
+  "voice": "Roep: nasaal dèh-dèh, vaak na korte tsi-tsi. Zang: heldere, enigszins langgerekte tjii-tonen."
  },
  "sp032": {
   "breeding": {
-   "period": "apr–jun",
-   "nest": "In bestaande boomholte, vaak laag",
-   "eggs": "6–10",
-   "incubation": "13–15 dagen",
-   "fledging": "17–20 dagen",
-   "broods": "1",
-   "months": "apr-jun"
+   "period": "vanaf half apr",
+   "nest": "Holte in vermolmd hout; soms deels zelf uitgehakt, soms een nestkast.",
+   "eggs": "meestal 6–9 (uitersten 5–11)",
+   "incubation": "13–14 dagen",
+   "fledging": "18–19 dagen; daarna ongeveer 15 dagen gevoerd",
+   "broods": "meestal 1, soms 2"
   },
-  "diet": "Insecten, zaden en beukennootjes; legt wintervoorraden aan",
-  "behaviour": "Leeft in paren in oud loofbos",
-  "migration": "Standvogel",
-  "voice": "Scherp \"pitjoe\" of \"pistjuu\""
+  "diet": "In de zomer insecten en andere ongewervelden; in de winter veel zaden.",
+  "behaviour": "Legt voedselvoorraden aan en houdt zich graag op in ouder loofbos.",
+  "migration": "Standvogel; vooral jonge vogels zwerven na de broedtijd lokaal uit.",
+  "voice": "Roep: explosief, niezend pstie-toe. Zang: snel herhaalde, metaalachtige tiu-tonen; er bestaat ook een brabbelende variant."
  },
  "sp033": {
   "breeding": {
-   "period": "mrt–jun",
-   "nest": "Zelf uitgehakte holte in rottend naaldhout",
-   "eggs": "5–8",
-   "incubation": "13–16 dagen",
-   "fledging": "18–21 dagen",
-   "broods": "1",
-   "months": "mrt-jun"
+   "period": "half apr–jul",
+   "nest": "Holte in zacht dood hout, vaak een berk; doorgaans door het vrouwtje uitgehakt.",
+   "eggs": "meestal 4–8",
+   "incubation": "13–18 dagen",
+   "fledging": "16–22 dagen; daarna nog 23–25 dagen gevoerd",
+   "broods": "1–2",
+   "months": "apr-jul"
   },
-  "diet": "Insecten, spinnen en dennenzaad",
-  "behaviour": "Leeft in naaldbos; trekt in de winter mee met andere mezen",
-  "migration": "Standvogel",
-  "voice": "Rollend \"tsi-tsi-pirrr\""
+  "diet": "Insecten en andere kleine ongewervelden; in de winter ook zaden van naaldbomen en bessen.",
+  "behaviour": "Beweegt druk door takken en boomtoppen. Sluit zich in de winter ook bij andere mezen aan.",
+  "migration": "Standvogel; jonge vogels zwerven na het broeden in groepjes rond.",
+  "voice": "Kenmerkende trillende brr-dr-dr-roep, afgewisseld met hoge zi-tonen."
  },
  "sp034": {
   "breeding": {
-   "period": "mrt–jun",
-   "nest": "Bolvormig nest van mos, spinrag en korstmos met zijingang",
-   "eggs": "7–12",
-   "incubation": "13–17 dagen",
-   "fledging": "14–18 dagen",
+   "period": "eind mrt–mei",
+   "nest": "Gesloten bol van onder meer mos en korstmos, met een kleine ingang, tussen struiken of takken.",
+   "eggs": "8–12",
+   "incubation": "12–14 dagen",
+   "fledging": "18–19 dagen; daarna minstens 2 weken gevoerd",
    "broods": "1",
-   "months": "mrt-jun"
+   "months": "mrt-mei"
   },
-  "diet": "Kleine insecten, spinnen en hun eieren",
-  "behaviour": "In groepjes die achter elkaar door bomen en struiken trekken; slapen dicht tegen elkaar",
-  "migration": "Standvogel; Noordse witkopvorm soms in de winter",
-  "voice": "Hoog \"sri-sri-sri\" en ratelend \"tserr\""
+  "diet": "Kleine insecten en larven; in de winter ook zaden.",
+  "behaviour": "Zoekt op dunne takken naar voedsel; buiten het broedseizoen blijven groepjes via hoge roepjes in contact.",
+  "migration": "Standvogel; zwerft in de winter doorgaans slechts enkele kilometers.",
+  "voice": "Hoge, korte roepjes en scherpe tsjirpende trillertjes."
  },
  "sp035": {
   "breeding": {
@@ -913,78 +911,76 @@ export const LIFE = Object.freeze({
  },
  "sp063": {
   "breeding": {
-   "period": "apr–jul",
-   "nest": "Hangend bolnestje van mos en spinrag onder een naaldboomtak",
-   "eggs": "7–12",
-   "incubation": "15–17 dagen",
-   "fledging": "16–19 dagen",
+   "period": "apr–jun (broeden; jongen later in de zomer mogelijk)",
+   "nest": "Klein komnest tussen naaldboomtakken, gevoerd met haren en veren.",
+   "eggs": "7–13",
+   "incubation": "14–17 dagen",
+   "fledging": "17–22 dagen",
    "broods": "2",
-   "months": "apr-jul"
+   "months": "apr-jun"
   },
-  "diet": "Springstaarten, bladluizen en andere kleine insecten",
-  "behaviour": "Kleinste vogel van Europa; altijd in beweging in naaldbomen",
-  "migration": "Standvogel; in oktober veel doortrek uit het noorden",
-  "voice": "Zeer hoog \"sie-sie-sie\" en een ritmisch zangetje met afsluitende krul"
+  "diet": "Kleine insecten en andere geleedpotigen, waaronder bladluizen, springstaarten en spinnen.",
+  "behaviour": "Zoekt rusteloos voedsel in twijgen en bladeren; kan kort fladderend stilhangen. Buiten de broedtijd vaak in gemengde groepjes.",
+  "migration": "Veel vogels trekken: vooral september–november en maart–april, meestal ’s nachts. Noordelijke vogels komen hier overwinteren; jaarrond voorkomen betekent niet dat elke vogel blijft.",
+  "voice": "Zeer dunne, hoge roepjes. De zang herhaalt een op-en-neergaand motief en sluit vaak af met een korte triller."
  },
  "sp064": {
   "breeding": {
-   "period": "apr–jul",
-   "nest": "Hangend bolnestje aan het uiteinde van een tak",
-   "eggs": "7–12",
-   "incubation": "14–16 dagen",
-   "fledging": "16–20 dagen",
-   "broods": "2",
-   "months": "apr-jul"
+   "period": "vanaf half april; twee broedsels",
+   "nest": "Gelaagd nest van onder meer mos, twijgjes en veren, vaak in een conifeer; ook klimop of jeneverbes.",
+   "eggs": "7–11, soms 12",
+   "incubation": "14–15 dagen",
+   "fledging": "ongeveer 20 dagen",
+   "broods": "2"
   },
-  "diet": "Kleine insecten en spinnen",
-  "behaviour": "Ook in loofbos en klimop; minder gebonden aan naaldbomen dan het Goudhaantje",
-  "migration": "Standvogel en korte-afstandstrekker",
-  "voice": "Hoog, versnellend \"sie-sie-sie-sie\" zonder slotkrul"
+  "diet": "Kleine insecten en spinnen.",
+  "behaviour": "Speurt langs takken en bladeren en hangt soms fladderend stil. Kan ook voedsel uit spinnenwebben halen.",
+  "migration": "Korteafstandstrekker; najaarstrek vaak al eind augustus en september. In milde winters blijven meer vogels in Nederland. De herkomst van doortrekkers is niet goed bekend.",
+  "voice": "Zeer hoge zang die versnelt en sterker wordt, zonder het duidelijke herhaalde motief van Goudhaantje. Roep wat rauwer; vergelijk een volledige zangstrofe met Goudhaantje."
  },
  "sp065": {
   "breeding": {
-   "period": "apr–jun",
-   "nest": "In een boomholte; maakt de opening kleiner met modder",
-   "eggs": "6–8",
-   "incubation": "14–18 dagen",
-   "fledging": "22–25 dagen",
-   "broods": "1",
-   "months": "apr-jun"
+   "period": "vanaf april",
+   "nest": "Boomholte, oud spechtenhol of nestkast. Verkleint de ingang met modder; onderin liggen onder meer schorsschilfers en bladeren.",
+   "eggs": "meestal 6–9",
+   "incubation": "doorgaans 16–17 dagen",
+   "fledging": "ongeveer 24–25 dagen",
+   "broods": "meestal 1, soms 2"
   },
-  "diet": "Insecten in de zomer; noten en zaden in de winter",
-  "behaviour": "Loopt als enige vogel ook kopje-onder langs een stam naar beneden",
-  "migration": "Standvogel",
-  "voice": "Luid \"twiet-twiet\" en een snelle fluitreeks"
+  "diet": "Insecten, zaden en noten; klemt harde vruchten in schorsspleten om ze open te hakken.",
+  "behaviour": "Beweegt omhoog, zijwaarts én kop omlaag over stammen en takken. Gebruikt de staart daarbij niet als steun.",
+  "migration": "Sterk aan het territorium gebonden. Vooral jonge vogels zwerven voordat ze zich ergens vestigen.",
+  "voice": "Opvallend luide fluittonen, snelle trillers en stuiterende roepjes. Een roepende vogel is vaak eerder te horen dan te zien."
  },
  "sp066": {
   "breeding": {
-   "period": "apr–jul",
-   "nest": "Achter loszittende schors of in een spleet in een stam",
-   "eggs": "5–7",
-   "incubation": "13–15 dagen",
-   "fledging": "15–16 dagen",
-   "broods": "1–2",
-   "months": "apr-jul"
+   "period": "apr–jun (eileg)",
+   "nest": "Achter losse schors of in een smalle spleet; soms in een speciale nestkast.",
+   "eggs": "meestal 5–7",
+   "incubation": "Bronnen verschillen: 13–15 of 17–18 dagen",
+   "fledging": "ongeveer 15–18 dagen",
+   "broods": "meestal 2",
+   "months": "apr-jun"
   },
-  "diet": "Kleine insecten en spinnen uit schorsspleten",
-  "behaviour": "Klimt in spiralen langs een stam omhoog en vliegt dan naar de voet van de volgende boom",
-  "migration": "Standvogel",
-  "voice": "Hoog \"srie\" en een kort, aflopend liedje met een slotkrul"
+  "diet": "Insecten en spinnen uit schorsspleten.",
+  "behaviour": "Zoekt voedsel spiraalsgewijs omhoog tegen een stam; vliegt vervolgens naar de voet van een volgende boom. De stijve staart geeft steun.",
+  "migration": "Hoofdzakelijk standvogel; buiten de broedtijd ook zwervend en soms bij mezengroepen.",
+  "voice": "De krachtige herhaalde roep en het korte, oplopende zangmotief helpen bij het onderscheid met Taigaboomkruiper. Beluister liefst een volledige zangstrofe."
  },
  "sp067": {
   "breeding": {
-   "period": "apr–jul",
-   "nest": "Achter loszittende schors of in een spleet",
-   "eggs": "5–6",
+   "period": "apr–jun (eileg; Nederlandse broedvorm macrodactyla)",
+   "nest": "In een boomspleet of achter losse schors; Nederlandse broedvogels vooral in ouder loof- of gemengd bos.",
+   "eggs": "meestal 5–6",
    "incubation": "13–15 dagen",
-   "fledging": "14–16 dagen",
+   "fledging": "17–18 dagen",
    "broods": "1–2",
-   "months": "apr-jul"
+   "months": "apr-jun"
   },
-  "diet": "Kleine insecten en spinnen",
-  "behaviour": "Leeft vooral in naaldbos; uiterlijk bijna gelijk aan de Boomkruiper",
-  "migration": "Standvogel; zeldzaam in het oosten van het land",
-  "voice": "Hoog, zuiver \"srie\" en een gelijkmatig dalend liedje"
+  "diet": "Vooral insecten en spinnen uit spleten in hout en schors.",
+  "behaviour": "Kruipt voedselzoekend omhoog en vliegt naar het onderste deel van een volgende boom. Steunt met de puntstaart.",
+  "migration": "De Nederlandse broedvorm macrodactyla blijft meestal in de omgeving. Noordelijke familiaris kan vanaf half oktober langs de kust en op de Waddeneilanden verschijnen.",
+  "voice": "Een ijlere roep dan Boomkruiper. De zang heeft een andere melodie; luister naar een volledige strofe. Let bij vergelijking ook op mogelijke verschillen tussen ondersoorten."
  },
  "sp068": {
   "breeding": {
