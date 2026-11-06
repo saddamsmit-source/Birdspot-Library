@@ -23,6 +23,7 @@ Birdspot Library — H2–H4: soortdetail met tabbladen
   H4-06  witte reigers vergelijken het juiste kleed, met eigen broedmaanden en veldopnamen
   H4-07  talingen vergelijken man, vrouw, juveniel en eclipskleed, met lokale roepen
   H4-08  kleine plevieren vergelijken broedkleed, winterkleed en juveniel; broedkalender volgt de eileg
+  H4-09  Goudplevier en Zilverplevier vergelijken drie kleden; optionele fotografietip bij leefgebied
 
 Starten (vanuit repo-root):  python tests/test_species_detail.py
 """
@@ -541,6 +542,29 @@ def main():
             assert p.locator('.sd-month-breeding .is-breeding').count() == 1
             close_detail()
             print("H4-08 OK — plevieren per kleed, bronfoto's, roepen en broedmaanden")
+
+            open_species("Goudplevier", "sp145")
+            for label, suffix in [("broedkleed", ""), ("winterkleed", "-winter"), ("jonge vogels", "-juv")]:
+                comparison = p.locator('.sd-compare').filter(
+                    has=p.get_by_role("heading", name=f"Goudplevier en Zilverplevier · {label}")
+                )
+                for index, sid in enumerate(["sp145", "sp144"]):
+                    photo = comparison.locator("img").nth(index)
+                    assert photo.get_attribute("src").endswith(f"/{sid}{suffix}.webp")
+                    photo.evaluate("img => img.decode()")
+            comparison.get_by_role("button", name="Open soortkaart Zilverplevier").click()
+            expect(p.get_by_label("Nachtelijke vluchtroep van Zilverplevier")).to_have_count(1)
+            tab("waar")
+            expect(p.locator(".sd-photo-tip")).to_contain_text("1/2000 s")
+            expect(p.get_by_role("heading", name="Leefgebied")).to_be_visible()
+            tab("status")
+            expect(p.locator(".sd-month-breeding .is-breeding")).to_have_count(0)
+            close_detail()
+            open_species("Merel", "sp045")
+            tab("waar")
+            expect(p.locator(".sd-photo-tip")).to_have_count(0)
+            close_detail()
+            print("H4-09 OK — drie plevierkleden en fotografietip bij geselecteerde soorten")
 
             assert not errors, f"H2-08 paginafouten: {errors}"
             print("H2-08 OK — geen paginafouten")

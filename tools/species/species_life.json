@@ -1634,16 +1634,16 @@
   "voice": "Helder, fluitend \"kluut-kluut\""
  },
  "sp144": {
-  "diet": "Wadpieren, slakjes en kreeftjes",
-  "behaviour": "Staat stil en rent dan naar een prooi; zwarte oksels in vlucht",
-  "migration": "Wintergast en doortrekker uit Arctisch Siberië (jul–mei)",
-  "voice": "Klagend, driedelig \"tlie-oe-ie\""
+  "diet": "Wadpieren en andere wormen, kleine schelpdieren, slakken en kreeftachtigen.",
+  "behaviour": "Zoekt op droogvallend slik naar prooi. Loopt een stukje, staat stil om te kijken en pikt dan. Rust bij hoogwater vaak in groepen.",
+  "migration": "Broedt op de arctische toendra en trekt via de Nederlandse kust. De doortrek piekt in mei. Een deel overwintert hier.",
+  "voice": "Een klagende, vaak drieledige vluchtroep. De middelste toon ligt lager en de laatste buigt omhoog."
  },
  "sp145": {
-  "diet": "Regenwormen en insecten van graslanden",
-  "behaviour": "Grote groepen op weilanden, vaak met Kieviten",
-  "migration": "Wintergast en doortrekker (sep–apr); vroeger broedvogel in Drenthe",
-  "voice": "Zacht, klagend \"tluu\""
+  "diet": "Vooral regenwormen en andere ongewervelden, waaronder insecten en spinnen.",
+  "behaviour": "Rent korte stukjes en pauzeert om een prooi te vinden. Rust en foerageert vaak in groepen, geregeld samen met Kieviten.",
+  "migration": "Verdwenen als Nederlandse broedvogel. Vogels uit Noord-Europa trekken door Nederland of overwinteren hier. De doortrek piekt in november.",
+  "voice": "Een langgerekte, hoge, wat weemoedige fluittoon. Soms volgen meer fluittonen, ook bij opvliegen."
  },
  "sp146": {
   "period": "Eileg meestal half april–half juli, soms vanaf eind maart",

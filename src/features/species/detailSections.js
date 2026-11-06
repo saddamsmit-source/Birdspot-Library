@@ -332,6 +332,9 @@ export function wherePanel(s) {
       `<span class="sd-habitat">${icon(HABITAT[r][0])}${esc(HABITAT[r][1])}</span>`).join('') + '</div>');
   }
   if (s.distribution) out.push(`<div class="sd-callout">${icon('map')}<p>${esc(s.distribution)}</p></div>`);
+  if (s.photoTip) {
+    out.push(`<h3 class="sd-h">Fotografietip</h3><div class="sd-callout sd-photo-tip">${icon('camera')}<p>${esc(s.photoTip)}</p></div>`);
+  }
   out.push(`<div class="sd-places-panel" id="sdWherePlaces">${wherePlaces([])}</div>`);
   return out.join('');
 }
