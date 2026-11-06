@@ -2157,10 +2157,10 @@ export const LIFE = Object.freeze({
  },
  "sp156": {
   "breeding": null,
-  "diet": "Waterinsecten, larven en kleine visjes",
-  "behaviour": "Schuw; foerageert aan de randen van poelen en sloten",
-  "migration": "Doortrekker (mrt–mei, jun–okt); enkele overwinteren",
-  "voice": "Driedelig \"tluie-tluie-tluie\""
+  "diet": "Vooral waterinsecten en larven, daarnaast wormen, kleine kreeftachtigen en soms kleine vis.",
+  "behaviour": "Zoekt meestal alleen of in kleine aantallen voedsel langs ondiep water. In het buitenlandse broedgebied gebruikt de soort geregeld een oud boomnest van een andere vogel.",
+  "migration": "Jaarrond mogelijk in Nederland. De voorjaarstrek loopt grofweg van half maart tot half mei. De terugtrek begint in juni en piekt in juli en augustus. Een deel overwintert hier.",
+  "voice": "Hoge, schelle vluchtroep, vaak met een duidelijke eerste fluittoon en enkele kortere tonen erna."
  },
  "sp157": {
   "breeding": null,
@@ -2178,18 +2178,18 @@ export const LIFE = Object.freeze({
  },
  "sp159": {
   "breeding": {
-   "period": "mei–jul",
-   "nest": "Geen nest: in een oud lijsternest of op de grond",
-   "eggs": "4",
+   "period": "Doorgaans mei tot half juli in het reguliere broedgebied",
+   "nest": "Meestal een ondiep grondnest tussen vegetatie, soms in een laag struikje of een oud boomnest. In Nederland werd in 2005 een uitzonderlijk broedgeval vastgesteld.",
+   "eggs": "Meestal 4",
    "incubation": "22–23 dagen",
-   "fledging": "28–30 dagen",
+   "fledging": "Nestvlieders, vliegvlug na circa 28–30 dagen",
    "broods": "1",
-   "months": "mei-jul"
+   "fledgingLabel": "Jongen vliegvlug"
   },
-  "diet": "Waterinsecten, larven en kleine kreeftjes",
-  "behaviour": "Foerageert langs ondiepe plassen; vliegt vaak in losse groepjes",
-  "migration": "Doortrekker (apr–mei, jul–sep); zeer zelden broedvogel",
-  "voice": "Hoog, drieledig \"djiep-djiep-djiep\""
+  "diet": "Waterinsecten en larven, ook wormen, spinnen, kreeftachtigen en andere kleine waterdieren.",
+  "behaviour": "Waadt en pikt langs ondiep zoet water. Op doortrek ook in losse groepjes. Balts op doortrek komt voor.",
+  "migration": "Trekt in het voorjaar vooral van half april tot eind mei door Nederland, en na de broedtijd van half juli tot begin oktober. Overwintert vooral in Afrika ten zuiden van de Sahara.",
+  "voice": "Een snelle reeks hoge, korte tonen bij het opvliegen. De baltsroep klinkt melodieuzer en langer."
  },
  "sp160": {
   "breeding": null,

@@ -307,6 +307,30 @@ export const GUIDE_COMPARISONS = [
     ],
     tip: 'Gele spikkels komen bij beide voor. Combineer bouw en snavel met de ondervleugel of roep. Laat de soort open als die kenmerken ontbreken.',
   },
+  {
+    label: 'Witgat en Bosruiter · broedkleed',
+    birds: [
+      {id: 'sp156', source: 'witgat', plumage: 'breeding', marks: 'Donkere borst scherp begrensd tegen de witte buik. De lichte wenkbrauw valt vooral vóór het oog op.'},
+      {id: 'sp159', source: 'bosruiter', plumage: 'breeding', marks: 'Lichte wenkbrauw loopt door achter het oog. Rankere bouw, langere geelgroene poten en duidelijkere lichte rugvlekken.'},
+    ],
+    tip: 'Bekijk bij een staande vogel eerst de kop en borst. Van schuin opzij kun je ook de lengte van de poten en de bouw vergelijken.',
+  },
+  {
+    label: 'Witgat en Bosruiter · winterkleed',
+    birds: [
+      {id: 'sp156', source: 'witgat', plumage: 'winter', marks: 'Donkere, vrij effen rug met fijne stipjes. Vaak een opvallende lichte oogring en een korte wenkbrauw.'},
+      {id: 'sp159', source: 'bosruiter', plumage: 'winter', marks: 'Grijsbruine rug met kleinere vlekken dan in broedkleed. De lange wenkbrauwstreep blijft zichtbaar.'},
+    ],
+    tip: 'Bosruiter overwintert doorgaans buiten Nederland. In vlucht hebben beide een witte stuit. Witgat heeft donkere ondervleugels en Bosruiter lichte.',
+  },
+  {
+    label: 'Witgat en Bosruiter · jonge vogels',
+    birds: [
+      {id: 'sp156', source: 'witgat', plumage: 'juv', marks: 'Kleine beige vlekjes op een donkere rug. Compacte bouw en een wenkbrauw die vooral vóór het oog opvalt.'},
+      {id: 'sp159', source: 'bosruiter', plumage: 'juv', marks: 'Ook beige vlekjes op de rug, met een langere wenkbrauwstreep en slankere bouw.'},
+    ],
+    tip: 'De rugvlekjes alleen geven weinig houvast. Combineer de bouw en koptekening met de ondervleugel of beluister de vluchtroepen.',
+  },
 ];
 
 export function comparisonSource(bird) {

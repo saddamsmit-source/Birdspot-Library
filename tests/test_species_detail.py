@@ -24,6 +24,7 @@ Birdspot Library — H2–H4: soortdetail met tabbladen
   H4-07  talingen vergelijken man, vrouw, juveniel en eclipskleed, met lokale roepen
   H4-08  kleine plevieren vergelijken broedkleed, winterkleed en juveniel; broedkalender volgt de eileg
   H4-09  Goudplevier en Zilverplevier vergelijken drie kleden; optionele fotografietip bij leefgebied
+  H4-10  Witgat en Bosruiter vergelijken drie kleden; doortrek en incidenteel broeden blijven onderscheiden
 
 Starten (vanuit repo-root):  python tests/test_species_detail.py
 """
@@ -565,6 +566,31 @@ def main():
             expect(p.locator(".sd-photo-tip")).to_have_count(0)
             close_detail()
             print("H4-09 OK — drie plevierkleden en fotografietip bij geselecteerde soorten")
+
+            open_species("Witgat", "sp156")
+            for label, suffix in [("broedkleed", ""), ("winterkleed", "-winter"), ("jonge vogels", "-juv")]:
+                sandpipers = p.locator('.sd-compare').filter(
+                    has=p.get_by_role("heading", name=f"Witgat en Bosruiter · {label}")
+                )
+                for index, sid in enumerate(["sp156", "sp159"]):
+                    photo = sandpipers.locator("img").nth(index)
+                    assert photo.get_attribute("src").endswith(f"/{sid}{suffix}.webp")
+                    photo.evaluate("img => img.decode()")
+            expect(p.locator(".sd-audio audio")).to_have_count(4)
+            tab("status")
+            expect(p.get_by_text("Jaarrond in Nederland", exact=True)).to_be_visible()
+            expect(p.locator(".sd-month-breeding")).to_have_count(0)
+            tab("herkenning")
+            sandpipers.get_by_role("button", name="Open soortkaart Bosruiter").click()
+            expect(p.locator(".sd-audio audio")).to_have_count(4)
+            tab("status")
+            expect(p.get_by_text("Incidentele broedgevallen in Nederland.", exact=True)).to_be_visible()
+            expect(p.get_by_text("Doorgaans mei tot half juli in het reguliere broedgebied", exact=True)).to_be_visible()
+            expect(p.locator(".sd-month-breeding")).to_have_count(0)
+            tab("waar")
+            expect(p.locator(".sd-photo-tip")).to_contain_text("lange wenkbrauw")
+            close_detail()
+            print("H4-10 OK — ruiters per kleed, vier roepen per soort en afzonderlijke Nederlandse broedstatus")
 
             assert not errors, f"H2-08 paginafouten: {errors}"
             print("H2-08 OK — geen paginafouten")

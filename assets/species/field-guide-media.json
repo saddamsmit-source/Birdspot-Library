@@ -567,6 +567,98 @@
         "source": "https://xeno-canto.org/471077",
         "modifications": "Volledige opname omgezet naar MP3 (mono)"
       }
+    ],
+    "sp156": [
+      {
+        "file": "XC490350",
+        "audio": "/assets/species/audio/sp156-call.mp3",
+        "label": "Roep",
+        "note": "Korte roep opgenomen in Lüscherz, Zwitserland.",
+        "author": "Pascal Christe",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://xeno-canto.org/490350",
+        "modifications": "Volledige opname omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "XC951957",
+        "audio": "/assets/species/audio/sp156-flight-call.mp3",
+        "label": "Vluchtroep",
+        "note": "Roep tijdens vlucht in Galicië, Spanje.",
+        "author": "Amadeo A. Pombo Eirín",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://xeno-canto.org/951957",
+        "modifications": "Volledige opname omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "XC432903",
+        "audio": "/assets/species/audio/sp156-night-flight-call.mp3",
+        "label": "Nachtelijke vluchtroep",
+        "note": "Nachtelijke overvlieger bij Arnhem.",
+        "author": "Joost van Bruggen",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://xeno-canto.org/432903",
+        "modifications": "Volledige opname omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "XC791817",
+        "audio": "/assets/species/audio/sp156-alarm-call.mp3",
+        "label": "Alarmroep",
+        "note": "Alarmroep opgenomen bij Bergschenhoek, Zuid-Holland.",
+        "author": "Jochem verweij",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://xeno-canto.org/791817",
+        "modifications": "Volledige opname omgezet naar MP3 (mono)"
+      }
+    ],
+    "sp159": [
+      {
+        "file": "XC487833",
+        "audio": "/assets/species/audio/sp159-call.mp3",
+        "label": "Roep",
+        "note": "Roep opgenomen in Hagneck, Zwitserland.",
+        "author": "Pascal Christe",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://xeno-canto.org/487833",
+        "modifications": "Volledige opname omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "XC1175422",
+        "audio": "/assets/species/audio/sp159-flight-call.mp3",
+        "label": "Vluchtroep",
+        "note": "Vluchtroep opgenomen in County Galway, Ierland.",
+        "author": "Dermot Breen",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://xeno-canto.org/1175422",
+        "modifications": "Volledige opname omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "XC630022",
+        "audio": "/assets/species/audio/sp159-night-flight-call.mp3",
+        "label": "Nachtelijke vluchtroep",
+        "note": "Twee korte roepen tijdens de nacht boven Dresden.",
+        "author": "Jens Loose",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://xeno-canto.org/630022",
+        "modifications": "Volledige opname omgezet naar MP3 (mono)"
+      },
+      {
+        "file": "XC1157158",
+        "audio": "/assets/species/audio/sp159-alarm-call.mp3",
+        "label": "Alarmroep",
+        "note": "Korte alarmroep opgenomen in Fins Lapland.",
+        "author": "Teet Sirotkin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://xeno-canto.org/1157158",
+        "modifications": "Volledige opname omgezet naar MP3 (mono)"
+      }
     ]
   },
   "plumage": {
@@ -1725,6 +1817,96 @@
         "alt": "Jonge Goudplevier in juli in Tsjechië. Lichte spikkels op rug en vleugels, lichte onderzijde en korte snavel.",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
         "observation": "https://www.inaturalist.org/observations/89795942"
+      }
+    },
+    "sp156": {
+      "breeding": {
+        "reuseGuidePhoto": true
+      },
+      "winter": {
+        "file": "iNaturalist photo 604589887",
+        "author": "Paulo Caseirito",
+        "license": "CC0",
+        "source": "https://www.inaturalist.org/photos/604589887",
+        "image": "/assets/species/plumage/sp156-winter.webp",
+        "width": 1024,
+        "height": 1024,
+        "modifications": "Omgezet naar WebP zonder uitsnede",
+        "nl": "Witgat",
+        "latin": "Tringa ochropus",
+        "batch": "wood-green-sandpipers",
+        "reviewed": "2026-11-06",
+        "verification": "Research-grade waarneming. Het afgebeelde kleed is visueel getoetst.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/witgat",
+        "visualCheck": "Witgat in december in Portugal. Donkere, vrijwel effen rug, opvallende oogring en witte buik.",
+        "alt": "Witgat in december in Portugal. Donkere, vrijwel effen rug, opvallende oogring en witte buik.",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "observation": "https://www.inaturalist.org/observations/333061769"
+      },
+      "juv": {
+        "file": "iNaturalist photo 556521052",
+        "author": "Dominic Best",
+        "license": "CC0",
+        "source": "https://www.inaturalist.org/photos/556521052",
+        "image": "/assets/species/plumage/sp156-juv.webp",
+        "width": 371,
+        "height": 197,
+        "modifications": "Uitgesneden rond de vogel links en omgezet naar WebP",
+        "nl": "Witgat",
+        "latin": "Tringa ochropus",
+        "batch": "wood-green-sandpipers",
+        "reviewed": "2026-11-06",
+        "verification": "Research-grade waarneming. De leeftijd is geannoteerd.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/witgat",
+        "visualCheck": "Jong Witgat in augustus in Engeland. De compacte bouw en het contrast met de witte buik zijn zichtbaar. De fijne veervlekken zijn op dit beeld moeilijk te zien.",
+        "alt": "Jong Witgat in augustus in Engeland. De compacte bouw en het contrast met de witte buik zijn zichtbaar. De fijne veervlekken zijn op dit beeld moeilijk te zien.",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "observation": "https://www.inaturalist.org/observations/308473713"
+      }
+    },
+    "sp159": {
+      "breeding": {
+        "reuseGuidePhoto": true
+      },
+      "winter": {
+        "file": "iNaturalist photo 365421308",
+        "author": "Afsar Nayakkan",
+        "license": "CC BY 4.0",
+        "source": "https://www.inaturalist.org/photos/365421308",
+        "image": "/assets/species/plumage/sp159-winter.webp",
+        "width": 1024,
+        "height": 869,
+        "modifications": "Omgezet naar WebP zonder uitsnede",
+        "nl": "Bosruiter",
+        "latin": "Tringa glareola",
+        "batch": "wood-green-sandpipers",
+        "reviewed": "2026-11-06",
+        "verification": "Research-grade waarneming. Het afgebeelde kleed is visueel getoetst.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bosruiter",
+        "visualCheck": "Bosruiter in februari in India. De borst is vrij effen, met een lichte wenkbrauwstreep en kleine lichte rugvlekken.",
+        "alt": "Bosruiter in februari in India. De borst is vrij effen, met een lichte wenkbrauwstreep en kleine lichte rugvlekken.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "observation": "https://www.inaturalist.org/observations/206638733"
+      },
+      "juv": {
+        "file": "iNaturalist photo 555542627",
+        "author": "Ian Ballam",
+        "license": "CC BY 4.0",
+        "source": "https://www.inaturalist.org/photos/555542627",
+        "image": "/assets/species/plumage/sp159-juv.webp",
+        "width": 786,
+        "height": 600,
+        "modifications": "Omgezet naar WebP zonder uitsnede",
+        "nl": "Bosruiter",
+        "latin": "Tringa glareola",
+        "batch": "wood-green-sandpipers",
+        "reviewed": "2026-11-06",
+        "verification": "Research-grade waarneming. De leeftijd is geannoteerd.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bosruiter",
+        "visualCheck": "Jonge Bosruiter in augustus in Engeland. Lichte vlekjes op de bruine bovenzijde, lange wenkbrauwstreep en lange poten.",
+        "alt": "Jonge Bosruiter in augustus in Engeland. Lichte vlekjes op de bruine bovenzijde, lange wenkbrauwstreep en lange poten.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "observation": "https://www.inaturalist.org/observations/307959225"
       }
     }
   }
