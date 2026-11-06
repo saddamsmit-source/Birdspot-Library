@@ -503,3 +503,9 @@ body::before {
     transition-duration: .01ms !important;
   }
 }
+
+/* Avoid mobile focus zoom; map zoom remains handled by Leaflet. */
+@media (pointer:coarse) { input,select,textarea {font-size:max(16px,1em);} }
+.route-recovery {padding:28px 20px;}
+.route-recovery p {margin:16px 0;}
+.route-recovery button {padding:14px 20px;background:var(--brand);color:white;border-radius:12px;}

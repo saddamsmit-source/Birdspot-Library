@@ -16,7 +16,8 @@ import { getCollectionIds, toggleCollectionItem } from '../../storage/collection
 import { GUIDE_PHOTOS } from './guidePhotos.js';
 
 import { methodLabel, sourceLabel } from '../sightings/evidence.js';
-function getObservedIds() { return new Set(getSightingsSnapshot().map(s=>s.speciesId).filter(Boolean)); }
+function guideSightings() { return getSightingsSnapshot().filter(s=>s && typeof s === 'object' && typeof s.speciesId === 'string'); }
+function getObservedIds() { return new Set(guideSightings().map(s=>s.speciesId)); }
 
 let _currentCategory = 'standvogel';
 let _seasons = [];
@@ -62,7 +63,7 @@ async function loadSpeciesThumb(speciesId) {
   if (GUIDE_PHOTOS[speciesId]) return GUIDE_PHOTOS[speciesId].image;
   try {
     // The species IDB index covers recent records.
-    const sightings = (await getSightings()).filter(s => s.speciesId === speciesId);
+    const sightings = guideSightings().filter(s => s.speciesId === speciesId);
     const recordIds = new Set(sightings.map(s => s.id));
     const linkedIds = new Set(sightings.flatMap(s => s.photoIds || []));
     const photos = (await getPhotosBySpecies(speciesId)).filter(p => recordIds.has(p.sightingId) || linkedIds.has(p.id));
@@ -581,8 +582,8 @@ function openDetail(speciesId, screenEl) {
     try {
       const [indexed, sightings] = await Promise.all([getPhotosBySpecies(speciesId),getSightings()]);
       if (closed || ctx?.destroyed) return;
-      const matches = sightings.filter(item=>item.speciesId===speciesId)
-        .sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+      const matches = sightings.filter(item=>item && item.speciesId===speciesId)
+        .sort((a,b)=>String(b.date||'').localeCompare(String(a.date||'')));
       const recordIds = new Set(matches.map(item=>item.id));
       const linkedIds = new Set(matches.flatMap(item=>item.photoIds||[]));
       const photosById = new Map(indexed.filter(p=>recordIds.has(p.sightingId)||linkedIds.has(p.id)).map(p=>[p.id,p]));

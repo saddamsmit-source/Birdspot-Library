@@ -46,6 +46,8 @@ const PRECACHE_URLS = [
 
   // JS — app root
   '/src/app.js',
+  '/src/services/navigation.js',
+  '/src/services/gestures.js',
   '/src/services/startup-splash.js',
 
   // JS — features
