@@ -41,5 +41,17 @@ def main():
    ctx.set_offline(True)
    results=p.evaluate('''async urls=>Promise.all(urls.map(u=>new Promise(resolve=>{const i=new Image();i.onload=()=>resolve(i.naturalWidth>0);i.onerror=()=>resolve(false);i.src=u})))''',[v['image'] for v in photos.values()])
    assert all(results);print(f'PASS {len(photos)} photos decode offline after precache',flush=True)
+
+   # A first installation must also boot and open a guide photo after an offline reload.
+   p.reload(wait_until='domcontentloaded')
+   p.locator('#birdspotSplashSkip').click()
+   p.get_by_role('button',name='Soorten',exact=True).click()
+   p.locator('#speciesFiltersToggle').click()
+   p.locator('#speciesFilters').get_by_role('button',name='Alle',exact=True).click()
+   sid,photo=next(reversed(photos.items()))
+   p.locator('#speciesSearch').fill(photo['nl'])
+   p.locator(f'.species-row[data-id="{sid}"]').click()
+   p.wait_for_function('(id)=>{const i=document.querySelector("#detailThumb-"+id+" img");return i&&i.complete&&i.naturalWidth>0}',arg=sid)
+   print('PASS offline reload, species search and guide photo',sid,flush=True)
    browser.close()
 if __name__=='__main__':main()

@@ -38,3 +38,19 @@ Capabiltydelta: bestaande gidsfoto-capability en CAP-BIRD-015/040 uitgebreid, ge
 
 ## Batch 03 — 2026-11-06
 Vier aanvullende lokale gidsbeelden: sp034 Staartmees, sp037 Putter, sp044 Ringmus en sp051 Zwarte Roodstaart. Commons identiteit/licentie opgehaald en de zichtbare kenmerken vergeleken met de vier Vogelbescherming-soortpagina’s. Volledige uitsnede, 1600 px maximum, WebP. Register totaal twintig gidssoorten; geen vaste testdekking op aantal. Zwarte roodstaart toont expliciet vrouwtje op rots; ringmus met zwarte wangvlek in groene buitenomgeving op een rand, niet met voedsel uit een mensenhand. Bron/licentie en verificatie-URL per asset in credits.json. L-019/L-016: geslacht, ondersoort en broncontext controleren, niet alleen Nederlandse zoekterm.
+
+## Batch 04 — 2026-11-06
+
+Elf lokale gidsfoto’s toegevoegd. Houtduif (sp002), Turkse Tortel (sp004), Grote Bonte Specht (sp016), Ekster (sp021), Zwarte Kraai (sp022), Kauw (sp025), Gaai (sp026), Tjiftjaf (sp056), Fitis (sp057), Zwartkop (sp059) en Witte Kwikstaart (sp068). In totaal heeft de gids 31 soorten met een hoofdbeeld. De elf nieuwe WebP’s gebruiken samen ongeveer 1,61 MiB.
+
+Commons-licentie, auteur en soortmetadata gecontroleerd. Zichtbare herkenningskenmerken zijn per foto vergeleken met de gelinkte Vogelbescherming-pagina. Hoofdfoto’s hebben de volledige uitsnede van het bronbestand. Grote bonte specht toont een vrouwtje en Zwartkop een mannetje. Bij Fitis viel een ringfoto in de hand af. Bij Witte kwikstaart is een Europese vogel op Spiekeroog gekozen. Foto’s voor Tjiftjaf en Fitis tonen kenmerken die bij vergelijking helpen, maar een veldidentificatie kan ook zang of roep vereisen. Fotobewijs en credits staan per soort in assets/species/credits.json.
+
+## Ontbrekende onderdelen bij de ronde
+
+- Fotodekking is 31 van 597. Inhoudelijk nagekeken gidskaarten blijven acht. Wintertaling, Rietzanger en Rietgors zijn de resterende inhoudelijk nagekeken kaarten zonder foto en vormen een logische volgende groep.
+- Eén hoofdbeeld per soort geeft beperkte dekking voor man, vrouw, jonge vogels en seizoenskleden. Prioriteit hebben moeilijk te onderscheiden soorten en groepen waarbij het uiterlijk sterk wisselt.
+- Voor de 245 soorten zonder gebiedstag en de 264 zonder vaste maandreeks is vervolgcontrole per soort nodig. Onregelmatige gasten kunnen terecht buiten een filter vallen. De gewenste inhoudelijke nauwkeurigheid is nog niet breed gemeten.
+- Alle gidsbeelden worden nu bij installatie geladen. Bij uitbreiding tot honderden beelden zijn kleine lijstfoto’s en downloadbare offline groepen het onderzoeken waard. Foto’s lokaal houden blijft de afspraak.
+- Technische audit vond vier appmodules die niet expliciet werden opgehaald bij installatie. Ze staan nu in de app-cache. Ook kan een app-afbeelding uit die cache worden gelezen als de mediacache het bestand nog niet heeft. De fototest controleert nu offline herstart, zoeken en openen van een gidsfoto. Dit staat los van externe kaarttegels en een onvoltooide installatie.
+
+CAP-BIRD-012/015/040. L-016/L-019: register, licentie en soortmatch per foto toetsen. L-022/L-052: check offline na een herstart, inclusief de benodigde appcode, en onderscheid app-cache van beeldcache. Onafhankelijke determinatie en fysiek toestel staan apart.

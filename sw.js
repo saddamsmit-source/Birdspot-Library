@@ -12,7 +12,7 @@
  *   birdspot-media           — foto's/IDB-exports (permanent)
  */
 
-const APP_VERSION = '1.15.3-guide-review';
+const APP_VERSION = '1.15.4-garden-photos';
 const APP_CACHE   = `birdspot-app-v${APP_VERSION}`;
 const MEDIA_CACHE = 'birdspot-media';
 
@@ -61,6 +61,7 @@ const PRECACHE_URLS = [
   '/src/features/species/detailSections.js',
   '/src/features/sightings/view.js',
   '/src/features/sightings/addSheet.js',
+  '/src/features/sightings/speciesPicker.js',
   '/src/features/sightings/evidence.js',
   '/src/features/sightings/pinPicker.js',
   '/src/features/sightings/editSheet.js',
@@ -80,6 +81,7 @@ const PRECACHE_URLS = [
 
   // JS — data
   '/src/data/sightings.js',
+  '/src/data/db.js',
   '/src/data/species.js',
   '/src/data/speciesLife.js',
   '/src/data/seasons.js',
@@ -92,6 +94,8 @@ const PRECACHE_URLS = [
   '/src/services/sw-register.js',
 
   // JS — utils (voeg toe als ze bestaan)
+  '/src/utils/html.js',
+  '/src/utils/photoUrl.js',
   '/src/utils/date.js',
   '/src/utils/search.js',
 ];
@@ -239,7 +243,7 @@ async function networkFirstWithTimeout(request, timeoutMs) {
 // ── Cache-first voor media ─────────────────────────────────────────────────
 async function cacheFirstMedia(request) {
   const cache  = await caches.open(MEDIA_CACHE);
-  const cached = await cache.match(request);
+  const cached = await cache.match(request) || await caches.match(request, {cacheName: APP_CACHE});
   if (cached) return cached;
 
   try {
