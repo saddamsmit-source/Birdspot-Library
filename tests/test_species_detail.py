@@ -25,6 +25,7 @@ Birdspot Library — H2–H4: soortdetail met tabbladen
   H4-08  kleine plevieren vergelijken broedkleed, winterkleed en juveniel; broedkalender volgt de eileg
   H4-09  Goudplevier en Zilverplevier vergelijken drie kleden; optionele fotografietip bij leefgebied
   H4-10  Witgat en Bosruiter vergelijken drie kleden; doortrek en incidenteel broeden blijven onderscheiden
+  H4-11  Vijf steltlopers tonen acht vergelijkingen, fotografeertips en Nederlandse broedmaanden
 
 Starten (vanuit repo-root):  python tests/test_species_detail.py
 """
@@ -591,6 +592,39 @@ def main():
             expect(p.locator(".sd-photo-tip")).to_contain_text("lange wenkbrauw")
             close_detail()
             print("H4-10 OK — ruiters per kleed, vier roepen per soort en afzonderlijke Nederlandse broedstatus")
+
+            waders = [
+                ("Tureluur", "sp102", 4, 3, "april, mei, juni, juli"),
+                ("Zwarte Ruiter", "sp157", 3, 3, None),
+                ("Groenpootruiter", "sp158", 3, 3, None),
+                ("Poelruiter", "sp217", 2, 3, None),
+                ("Oeverloper", "sp155", 3, 2, "mei, juni"),
+            ]
+            for name, sid, recording_count, comparison_count, breeding_months in waders:
+                open_species(name, sid)
+                expect(p.locator(".sd-audio audio")).to_have_count(recording_count)
+                expect(p.locator(".sd-plumage img")).to_have_count(3)
+                expect(p.locator(".sd-compare")).to_have_count(comparison_count)
+                for comparison in p.locator(".sd-compare").all():
+                    for photo in comparison.locator("img").all():
+                        photo.evaluate("img => img.decode()")
+                if sid == "sp158":
+                    juvenile = p.locator(".sd-compare").filter(
+                        has=p.get_by_role("heading", name="Groenpootruiter en Poelruiter · jonge vogels")
+                    )
+                    assert juvenile.locator("img").evaluate_all("images => images.map(img => img.getAttribute('src'))") == [
+                        "/assets/species/plumage/sp158-juv.webp", "/assets/species/plumage/sp217-juv.webp",
+                    ]
+                tab("waar")
+                expect(p.locator(".sd-photo-tip")).to_be_visible()
+                tab("status")
+                if breeding_months:
+                    expect(p.get_by_text(f"Gebruikelijke broedperiode · {breeding_months}", exact=True)).to_be_visible()
+                    expect(p.locator(".sd-month-breeding .is-breeding")).to_have_count(len(breeding_months.split(", ")))
+                else:
+                    expect(p.locator(".sd-month-breeding")).to_have_count(0)
+                close_detail()
+            print("H4-11 OK — vijf steltlopers, vijftien kleedfoto’s en opnamen, acht vergelijkingen en twee broedlijnen")
 
             assert not errors, f"H2-08 paginafouten: {errors}"
             print("H2-08 OK — geen paginafouten")
