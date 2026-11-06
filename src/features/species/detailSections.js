@@ -8,6 +8,7 @@
 import { observedVisually, observedBySound, validPin } from '../sightings/evidence.js';
 import { CATEGORY_BADGES } from '../../data/species.js';
 import { monthSet, MONTH_NAMES } from '../../data/seasons.js';
+import { DISTRIBUTION, GBIF_YEARS, MAP_CELL, MAP_COLUMNS, MAP_PATHS, MAP_VIEW_BOX } from '../../data/speciesDistribution.js';
 
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
@@ -154,15 +155,20 @@ export function monthBar({months, category}, breedingMonths) {
     const on = set.has(i);
     const breeds = breeding.has(i);
     const title = [MONTH_NAMES[i], on && 'gebruikelijke aanwezigheid', breeds && 'broedperiode'].filter(Boolean).join(' · ');
-    return `<span class="sd-month${on ? ' is-on' : ''}${breeds ? ' is-breeding' : ''}" title="${title}">${letter}</span>`;
+    return `<span class="sd-month${on ? ' is-on' : ''}" title="${title}">${letter}</span>`;
   }).join('');
+  const breedingStrip = breeding.size ? MONTH_LETTERS.map((_, i) =>
+    `<span${breeding.has(i) ? ' class="is-breeding"' : ''}></span>`).join('') : '';
   const caption = months === 'jan-dec' ? 'Jaarrond in Nederland'
     : !set.size ? 'Geen vaste periode vastgesteld'
     : 'Gebruikelijke periode · ' + [...set].sort((a, b) => a - b).map(i => MONTH_NAMES[i]).join(', ');
   const breedingLabel = breeding.size
     ? 'Broedperiode · ' + [...breeding].sort((a, b) => a - b).map(i => MONTH_NAMES[i]).join(', ') : '';
   const legend = kind === 'overig' ? [...MONTH_LEGEND, [kind, label]] : MONTH_LEGEND;
-  return `<div class="sd-months" data-month-kind="${kind}" role="img" aria-label="${esc([label, caption, breedingLabel].filter(Boolean).join('. '))}">${cells}</div>
+  return `<div class="sd-month-calendar">
+      <div class="sd-months" data-month-kind="${kind}" role="img" aria-label="${esc([label, caption, breedingLabel].filter(Boolean).join('. '))}">${cells}</div>
+      ${breedingStrip ? `<div class="sd-month-breeding" aria-hidden="true">${breedingStrip}</div>` : ''}
+    </div>
     <div class="sd-month-captions">
       <p class="sd-caption">${esc(caption)}</p>
       ${breedingLabel ? `<p class="sd-caption">${esc(breedingLabel)}</p>` : ''}
@@ -210,15 +216,55 @@ export function statusPanel(s, life = null) {
   return out.join('');
 }
 
-/** Tab 3 — Waar te vinden: leefgebieden, verspreiding en jouw eigen plekken. */
-export function wherePanel(s, places = []) {
-  const out = [];
+function distributionMap(s) {
+  const cells = DISTRIBUTION[s.id]?.[1];
+  const title = '<h3 class="sd-h">Verspreiding in Nederland</h3>';
+  if (!cells) return `${title}<p class="sd-empty">Voor deze soort is geen onderbouwde verspreidingskaart beschikbaar.</p>`;
+  const backdrop = ['BEL', 'DEU', 'FRA', 'GBR'].map(key => `<path d="${MAP_PATHS[key]}"/>`).join('');
+  const clouds = cells.map(cell => {
+    const x = (cell % MAP_COLUMNS) * MAP_CELL;
+    const y = Math.floor(cell / MAP_COLUMNS) * MAP_CELL;
+    return `<rect x="${x - 3}" y="${y - 3}" width="${MAP_CELL + 6}" height="${MAP_CELL + 6}" rx="24"/>`;
+  }).join('');
+  return `${title}<figure class="sd-distribution">
+    <svg class="sd-distribution-map" viewBox="${MAP_VIEW_BOX}" role="img"
+      aria-label="Kaart van Nederland met openbare waarnemingsgebieden voor ${esc(s.nameNL)}">
+      <defs><filter id="sdDistributionBlur"><feGaussianBlur stdDeviation="9"/></filter></defs>
+      <path class="sd-distribution-land" fill-rule="evenodd" d="${MAP_PATHS.NLD}"/>
+      <path class="sd-distribution-water" d="${MAP_PATHS.water}"/>
+      <g class="sd-distribution-cloud" filter="url(#sdDistributionBlur)">${clouds}</g>
+      <g class="sd-distribution-neighbours">${backdrop}</g>
+      <path class="sd-distribution-outline" d="${MAP_PATHS.NLD}"/>
+      <g class="sd-distribution-labels" aria-hidden="true">
+        <text x="620" y="835">Noordzee</text>
+        <text x="1090" y="1110">Nederland</text>
+        <text x="1275" y="1250">Duitsland</text>
+        <text x="770" y="1460">België</text>
+      </g>
+    </svg>
+    <figcaption>
+      <p class="sd-distribution-key"><span aria-hidden="true"></span> Gebieden met openbare waarnemingen</p>
+      <p class="sd-caption">Samengevoegd per gebied van ongeveer 24 km, ${GBIF_YEARS}. Ook buiten de wolk kan de soort voorkomen.</p>
+      <p class="sd-caption">Waarnemingen <a href="https://doi.org/10.15468/aomfnb" target="_blank" rel="noopener noreferrer">eBird via GBIF</a> (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>) · Kaart <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener noreferrer">Natural Earth</a></p>
+    </figcaption>
+  </figure>`;
+}
+
+/** Tab 3 — vaste gidsinhoud, onafhankelijk van het laden van eigen waarnemingen. */
+export function wherePanel(s) {
+  const out = [distributionMap(s)];
   const habitats = (s.regions || []).filter(r => HABITAT[r]);
   if (habitats.length) {
     out.push('<h3 class="sd-h">Leefgebied</h3><div class="sd-habitats">' + habitats.map(r =>
       `<span class="sd-habitat">${icon(HABITAT[r][0])}${esc(HABITAT[r][1])}</span>`).join('') + '</div>');
   }
   if (s.distribution) out.push(`<div class="sd-callout">${icon('map')}<p>${esc(s.distribution)}</p></div>`);
+  out.push(`<div class="sd-places-panel" id="sdWherePlaces">${wherePlaces([])}</div>`);
+  return out.join('');
+}
+
+export function wherePlaces(places) {
+  const out = [];
   out.push('<h3 class="sd-h">Jouw plekken</h3>');
   if (places.length) {
     out.push('<ul class="sd-places">' + places.map(p => p.placeId

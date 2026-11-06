@@ -5,7 +5,7 @@
  */
 
 import { SPECIES, CATEGORY_LABELS, REGIONS, searchSpecies, activeCategories, CATEGORY_BADGES, matchesSpeciesStatus } from '../../data/species.js';
-import { tabBar, recognitionPanel, statusPanel, wherePanel, minePanel, sightingStats } from './detailSections.js';
+import { tabBar, recognitionPanel, statusPanel, wherePanel, wherePlaces, minePanel, sightingStats } from './detailSections.js';
 import { SEASONS, SEASON_ORDER, toggleSeason, seasonPeriod, presentIn, periodMonthsText, isYearRound } from '../../data/seasons.js';
 import { getDB, getPhotosBySpecies, getPhoto } from '../../data/db.js';
 import { getSightings, getSightingsSnapshot }                 from '../../data/sightings.js';
@@ -533,7 +533,7 @@ function openDetail(speciesId, screenEl) {
         tabBar('herkenning') +
         '<div class="sd-panel" id="sdPanel-herkenning" role="tabpanel" aria-labelledby="sdTab-herkenning">' + recognitionPanel(s) + '</div>' +
         '<div class="sd-panel" id="sdPanel-status" role="tabpanel" aria-labelledby="sdTab-status" hidden>' + statusPanel(s) + '</div>' +
-        '<div class="sd-panel" id="sdPanel-waar" role="tabpanel" aria-labelledby="sdTab-waar" hidden>' + wherePanel(s, []) + '</div>' +
+        '<div class="sd-panel" id="sdPanel-waar" role="tabpanel" aria-labelledby="sdTab-waar" hidden>' + wherePanel(s) + '</div>' +
         '<div class="sd-panel" id="sdPanel-mijn" role="tabpanel" aria-labelledby="sdTab-mijn" hidden>' +
           '<div id="sdMineStats"></div>' +
           '<div id="speciesDetailSightings" class="detail-sightings-list">' +
@@ -675,8 +675,8 @@ function openDetail(speciesId, screenEl) {
       }
       const stats=sightingStats(matches, loadPlaces());
       sheet.querySelector('#sdMineStats').innerHTML=minePanel(stats,fmtDate);
-      const where=sheet.querySelector('#sdPanel-waar');
-      where.innerHTML=wherePanel(s,stats.places);
+      const where=sheet.querySelector('#sdWherePlaces');
+      where.innerHTML=wherePlaces(stats.places);
       where.querySelectorAll('[data-place-id]').forEach(btn=>btn.addEventListener('click',()=>{
         try { sessionStorage.setItem('birdspot-map-place', btn.dataset.placeId); } catch (_) {}
         close(false);

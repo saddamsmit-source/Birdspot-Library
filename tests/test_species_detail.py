@@ -5,7 +5,7 @@ Birdspot Library — H2–H4: soortdetail met tabbladen
   H2-03  Herkenning: maten-tegels, broed- en winterkleed (Kokmeeuw), eclipskleed (Wilde Eend),
          alleen bronvermelde overeenkomsten tussen man en vrouw
   H2-04  Seizoen: maandbalk gelijk aan de maanden van de soort; Rode Lijst-tegel alleen als de soort erop staat
-  H2-05  Waar: leefgebieden + eigen plekken met aantallen; 'Toon op de kaart' opent de kaart gefilterd op de soort
+  H2-05  Waar: lokale soortkaart en leefgebieden apart van eigen plekken; 'Toon op de kaart' filtert op de soort
   H2-06  Waarnemingen: aantal, plekken, eerste en laatste datum kloppen met de opgeslagen waarnemingen
   H2-07  compacte dwaalgast: melding 'beschrijving volgt', geen verenkleed
   H2-08  geen paginafouten; screenshots 390 px per tab
@@ -129,8 +129,8 @@ def main():
             print("H2-02 OK — tabs en wisselen")
 
             assert p.locator('#sdPanel-status .sd-month.is-on').count() == month_count(rg["months"])
-            p.locator('#sdPanel-status .sd-month.is-breeding').first.wait_for(timeout=5000)
-            assert p.locator('#sdPanel-status .sd-month.is-breeding').count() == 4
+            p.locator('#sdPanel-status .sd-month-breeding .is-breeding').first.wait_for(timeout=5000)
+            assert p.locator('#sdPanel-status .sd-month-breeding .is-breeding').count() == 4
             assert p.locator('#sdPanel-status .sd-months').get_attribute('data-month-kind') == 'standvogel'
             assert p.locator('#sdPanel-status .sd-month.is-now').count() == 0
             assert "Broedperiode" in p.locator('#sdPanel-status .sd-month-legend').inner_text()
@@ -142,6 +142,12 @@ def main():
             places = p.eval_on_selector_all('#sdPanel-waar .sd-places li', 'els => els.map(e => e.innerText.replace(/\\s+/g," ").trim())')
             assert places == ["Oostvaardersplassen 2×", "Lauwersmeer 1×"], places
             assert p.locator('#sdPanel-waar .sd-habitat').count() == len(rg["regions"])
+            distribution = p.locator('#sdPanel-waar .sd-distribution')
+            assert distribution.locator('.sd-distribution-cloud rect').count() >= 3
+            assert "Rietgors" in distribution.locator('svg').get_attribute('aria-label')
+            assert "2020–2025" in distribution.inner_text()
+            assert distribution.get_by_role('link', name='eBird via GBIF').get_attribute('href') == "https://doi.org/10.15468/aomfnb"
+            assert distribution.locator('svg').bounding_box()["width"] <= 390
             p.screenshot(path=str(SHOTS / "species_h2_waar_390.png"))
 
             tab("mijn")
@@ -198,6 +204,9 @@ def main():
             open_species(dg["nameNL"], dg["id"])
             assert p.locator('#sdPanel-herkenning .sd-note').count() == 1
             assert p.locator('#sdPanel-herkenning .sd-plumage').count() == 0
+            tab("waar")
+            assert p.locator('#sdPanel-waar .sd-distribution-map').count() == 0
+            assert p.get_by_text("Voor deze soort is geen onderbouwde verspreidingskaart beschikbaar.").is_visible()
             close_detail()
             print("H2-07 OK — compacte dwaalgast:", dg["nameNL"])
 
@@ -241,11 +250,19 @@ def main():
             # Summer presence and a sourced breeding period remain separate.
             open_species("Boerenzwaluw", "sp114")
             tab("status")
-            p.locator('#sdPanel-status .sd-month.is-breeding').first.wait_for(timeout=5000)
+            strip = p.locator('#sdPanel-status .sd-month-breeding')
+            strip.wait_for(timeout=5000)
             bar = p.locator('#sdPanel-status .sd-months')
             assert bar.get_attribute('data-month-kind') == 'zomergast'
             assert bar.locator('.sd-month.is-on').count() == 8
-            assert bar.locator('.sd-month.is-breeding').count() == 4
+            assert strip.locator('span').count() == 12
+            assert strip.locator('span').evaluate_all(
+                "els => els.map((el, i) => el.classList.contains('is-breeding') ? i : -1).filter(i => i >= 0)"
+            ) == [4, 5, 6, 7]
+            first = strip.locator('span').nth(4).bounding_box()
+            may = bar.locator('span').nth(4).bounding_box()
+            assert abs(first["x"] - may["x"]) < 1
+            assert 0 < first["y"] - (may["y"] + may["height"]) <= 6
             assert bar.locator('.sd-month[title="november"]').get_attribute('class') == 'sd-month'
             close_detail()
 
@@ -264,7 +281,7 @@ def main():
             assert p.locator('#sdPanel-status .sd-breed').count() == 0
             assert p.locator('#sdPanel-status .sd-fact').count() == 3
             assert p.locator('#sdPanel-status .sd-months').get_attribute('data-month-kind') == 'wintergast'
-            assert p.locator('#sdPanel-status .sd-month.is-breeding').count() == 0
+            assert p.locator('#sdPanel-status .sd-month-breeding').count() == 0
             assert p.locator('#sdPanel-status .sd-note').count() == 0
             p.locator('#sdPanel-status .sd-facts').scroll_into_view_if_needed()
             p.screenshot(path=str(SHOTS / "species_h3_rotgans_390.png"))

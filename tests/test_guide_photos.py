@@ -48,10 +48,14 @@ def main():
    p.get_by_role('button',name='Soorten',exact=True).click()
    p.locator('#speciesFiltersToggle').click()
    p.locator('#speciesFilters').get_by_role('button',name='Alle',exact=True).click()
-   sid,photo=next(reversed(photos.items()))
+   sid='sp057'  # Fitis heeft zowel een lokale gidsfoto als een soortkaart.
+   photo=photos[sid]
    p.locator('#speciesSearch').fill(photo['nl'])
    p.locator(f'.species-row[data-id="{sid}"]').click()
    p.wait_for_function('(id)=>{const i=document.querySelector("#detailThumb-"+id+" img");return i&&i.complete&&i.naturalWidth>0}',arg=sid)
-   print('PASS offline reload, species search and guide photo',sid,flush=True)
+   p.get_by_role('tab',name='Waar',exact=True).click()
+   p.locator('.sd-distribution-map').wait_for()
+   assert p.locator('.sd-distribution-cloud rect').count() >= 3
+   print('PASS offline reload, species search, guide photo and distribution',sid,flush=True)
    browser.close()
 if __name__=='__main__':main()

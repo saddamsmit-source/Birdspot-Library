@@ -727,7 +727,8 @@
   font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: var(--r-pill);
   background: var(--surface-2); color: var(--brand-mid);
 }
-.sd-months { display: grid; grid-template-columns: repeat(12, 1fr); gap: 3px; }
+.sd-month-calendar { --sd-month-gap: 3px; display: grid; gap: 4px; }
+.sd-months, .sd-month-breeding { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--sd-month-gap); }
 [data-month-kind="zomergast"] { --sd-month-color: var(--guide-month-summer); }
 [data-month-kind="wintergast"] { --sd-month-color: var(--guide-month-winter); }
 [data-month-kind="standvogel"] { --sd-month-color: var(--guide-month-resident); }
@@ -738,20 +739,18 @@
 [data-month-kind="zomergast"],
 [data-month-kind="zeldzaam"] { --sd-month-ink: var(--guide-month-dark-ink); }
 .sd-month {
-  position: relative;
   display: grid; place-items: center; height: 30px; border-radius: 6px;
   background: var(--surface-2); color: var(--ink-2); font-size: 12px; font-weight: 600;
 }
 .sd-month.is-on { background: var(--sd-month-color); color: var(--sd-month-ink, var(--on-brand)); }
-.sd-month.is-breeding::after {
-  content: '';
-  position: absolute;
-  inset: auto 4px 3px;
-  height: 4px;
-  border-radius: 3px;
-  background: var(--guide-month-breed);
-  box-shadow: 0 0 0 1px var(--on-brand);
+.sd-month-breeding span { height: 7px; border-radius: 4px; background: var(--surface-2); }
+.sd-month-breeding .is-breeding { background: var(--guide-month-breed); }
+.sd-month-breeding .is-breeding:has(+ .is-breeding) {
+  margin-right: calc(-1 * var(--sd-month-gap));
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
+.sd-month-breeding .is-breeding + .is-breeding { border-top-left-radius: 0; border-bottom-left-radius: 0; }
 .sd-month-legend {
   display: flex;
   flex-wrap: wrap;
@@ -764,7 +763,7 @@
 }
 .sd-month-legend li { display: inline-flex; align-items: center; gap: 5px; }
 .sd-month-legend li span { flex: 0 0 14px; height: 14px; border-radius: 3px; background: var(--sd-month-color); }
-.sd-month-legend [data-month-kind="broed"] span { height: 4px; }
+.sd-month-legend [data-month-kind="broed"] span { height: 7px; }
 .sd-month-captions { display: grid; gap: 4px; }
 .sd-caption { margin: 0; font-size: var(--fs-meta); color: var(--ink-2); }
 .sd-meter { display: flex; gap: 3px; margin-top: 4px; }
@@ -776,6 +775,26 @@
   border: 1px solid var(--line); border-radius: var(--r-pill); background: var(--surface); color: var(--ink);
   font-size: var(--fs-meta);
 }
+.sd-distribution {
+  --sd-cloud: #168b7c;
+  margin: 0; overflow: hidden; border: 1px solid var(--line);
+  border-radius: var(--r-sm); background: var(--surface);
+}
+.sd-distribution-map { display: block; width: 100%; height: auto; max-height: 360px; background: var(--surface-2); }
+.sd-distribution-neighbours { fill: var(--surface-2); stroke: var(--muted); stroke-opacity: .3; stroke-width: 2; }
+.sd-distribution-land { fill: var(--surface); }
+.sd-distribution-water { fill: var(--surface-2); }
+.sd-distribution-cloud { fill: var(--sd-cloud); opacity: .47; }
+.sd-distribution-outline { fill: none; stroke: var(--ink-2); stroke-width: 2; stroke-opacity: .66; }
+.sd-distribution-labels {
+  fill: var(--ink-2); stroke: var(--surface); stroke-width: 6; stroke-linejoin: round;
+  paint-order: stroke; font-size: 30px; font-weight: 600; text-anchor: middle;
+}
+.sd-distribution figcaption { display: grid; gap: var(--space-4); padding: var(--space-12); }
+.sd-distribution-key { display: flex; align-items: center; gap: var(--space-8); margin: 0; color: var(--ink); font-size: var(--fs-meta); }
+.sd-distribution-key span { flex: 0 0 14px; height: 14px; border-radius: 50%; background: var(--sd-cloud); opacity: .47; }
+.sd-distribution figcaption a { color: inherit; }
+.sd-places-panel { display: flex; flex-direction: column; gap: var(--space-12); }
 .sd-places { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-4); }
 .sd-places li {
   display: flex; align-items: center; gap: var(--space-8); padding: var(--space-8) var(--space-12);
