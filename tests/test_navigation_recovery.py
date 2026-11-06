@@ -10,7 +10,8 @@ def main():
   with sync_playwright() as pw:
    browser=pw.chromium.launch()
    ctx=browser.new_context(viewport={'width':390,'height':844},is_mobile=True,has_touch=True,service_workers='block')
-   ctx.add_init_script(LEAFLET_STUB)
+   # Match the DOM class installed by real Leaflet, without simulating pinch itself.
+   ctx.add_init_script(LEAFLET_STUB.replace('map:(el,opts)=>{',"map:(el,opts)=>{el.classList.add('leaflet-container');"))
    p=ctx.new_page();errors=[];p.on('pageerror',lambda e:errors.append(str(e)))
    p.goto(f'http://127.0.0.1:{srv.server_address[1]}/');p.locator('#birdspotSplashSkip').click()
    # Existing data can include an incomplete entry. Merely opening the guide must not rewrite it.
