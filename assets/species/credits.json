@@ -2196,5 +2196,24 @@
     "visualCheck": "Volwassen vrouwtje in vlucht in Canada. Donker buikschild en grote polsvlekken bij een lichte staartbasis.",
     "alt": "Ruigpootbuizerd — Volwassen vrouwtje in vlucht in Canada. Donker buikschild en grote polsvlekken bij een lichte staartbasis.",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "sp245": {
+    "file": "Cattle Egrets (Bubulcus ibis) (26473504731).jpg",
+    "author": "Bernard DUPONT from FRANCE",
+    "license": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Cattle_Egrets_(Bubulcus_ibis)_(26473504731).jpg",
+    "image": "/assets/species/sp245.webp",
+    "width": 1280,
+    "height": 837,
+    "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+    "nl": "Koereiger",
+    "latin": "Bubulcus ibis",
+    "batch": "herons-13",
+    "reviewed": "2026-11-06",
+    "verification": "Bronmetadata en zichtbare kenmerken vergeleken met de gelinkte soortkaart.",
+    "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/koereiger",
+    "visualCheck": "Koereigers foerageren dicht bij een grazende koe in een Spaans natuurgebied. De rechter vogel is volledig zichtbaar.",
+    "alt": "Koereiger — Koereigers foerageren dicht bij een grazende koe in een Spaans natuurgebied. De rechter vogel is volledig zichtbaar.",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/"
   }
 }

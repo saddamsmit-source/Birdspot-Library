@@ -1190,33 +1190,35 @@ export const LIFE = Object.freeze({
  },
  "sp082": {
   "breeding": {
-   "period": "apr–jul",
-   "nest": "Takkennest in een gemengde reigerkolonie",
+   "period": "mei–jun",
+   "nest": "Takkennest in struik of boom, soms op de grond of in riet. Vaak in een gemengde kolonie.",
    "eggs": "3–5",
    "incubation": "21–25 dagen",
    "fledging": "40–45 dagen",
    "broods": "1",
-   "months": "apr-jul"
+   "fledgingLabel": "Jongen vliegvlug na",
+   "months": "mei-jun"
   },
-  "diet": "Kleine vissen, kreeftjes en insecten",
-  "behaviour": "Loopt actief en schudt met de gele voeten om prooi op te jagen",
-  "migration": "Standvogel en trekvogel; aantal sterk gegroeid",
-  "voice": "Krassend \"kark\" bij de kolonie"
+  "diet": "Vooral kleine vis. Ook amfibieën, waterinsecten en kleine kreeftachtigen.",
+  "behaviour": "Foerageert actief in ondiep water en rent soms achter een prooi aan. Beide ouders broeden.",
+  "migration": "Een deel van de Nederlandse vogels trekt weg. Andere blijven, vooral bij zacht winterweer. De meeste waarnemingen vallen in de nazomer en het vroege najaar.",
+  "voice": "Meestal stil. Geeft soms een schorre, meerlettergrepige roep of een scherpere kreet."
  },
  "sp083": {
   "breeding": {
-   "period": "apr–jul",
-   "nest": "Nest van riet in dichte rietvelden",
-   "eggs": "3–5",
+   "period": "apr–jun",
+   "nest": "Koloniebroeder. Nestelt in overjarig riet, soms in wilgen.",
+   "eggs": "3–4",
    "incubation": "25–26 dagen",
-   "fledging": "42–55 dagen",
+   "fledging": "40–60 dagen",
    "broods": "1",
-   "months": "apr-jul"
+   "fledgingLabel": "Jongen volgroeid na",
+   "months": "apr-jun"
   },
-  "diet": "Vis, muizen, kikkers en grote insecten",
-  "behaviour": "Jaagt vaak op droge weilanden op muizen; staat rechtop en stil",
-  "migration": "Standvogel en wintergast; sterk toegenomen sinds de jaren 90",
-  "voice": "Laag \"kroa\"; meestal stil"
+  "diet": "Vooral vis, ook kikkers en kleine zoogdieren zoals muizen.",
+  "behaviour": "Jaagt in ondiep water en op grasland. Komt buiten de broedtijd met andere zilverreigers samen op slaapplaatsen.",
+  "migration": "Jaarrond in Nederland. Vogels uit andere delen van Europa komen hier overwinteren. Bij vorst kunnen ze verder zuidwaarts trekken.",
+  "voice": "Meestal stil. Vooral in de broedtijd klinkt een rollende, schorre roep."
  },
  "sp084": {
   "breeding": {
@@ -3112,18 +3114,19 @@ export const LIFE = Object.freeze({
  },
  "sp245": {
   "breeding": {
-   "period": "apr–jul",
-   "nest": "Takkennest in een gemengde reigerkolonie",
-   "eggs": "3–5",
+   "period": "apr–jun",
+   "nest": "In Nederland vooral in gemengde kolonies. De eileg begint vanaf eind april.",
+   "eggs": "Meestal 4–5",
    "incubation": "22–26 dagen",
-   "fledging": "40–45 dagen",
-   "broods": "1",
-   "months": "apr-jul"
+   "fledging": "Ca. 30 dagen",
+   "broods": "Meestal 1",
+   "fledgingLabel": "Eerste vlucht na",
+   "months": "apr-jun"
   },
-  "diet": "Insecten opgejaagd door vee, kikkers en muizen",
-  "behaviour": "Loopt tussen koeien en paarden",
-  "migration": "Standvogel en trekvogel; recente broedvogel",
-  "voice": "Meestal stil; schor \"rik-rak\" bij de kolonie"
+  "diet": "Vooral insecten zoals sprinkhanen en kevers. Ook wormen, kleine kikkers en soms muizen.",
+  "behaviour": "Volgt koeien, paarden of schapen en grijpt prooi die het vee opjaagt.",
+  "migration": "Jaarrond mogelijk in Nederland, met meer meldingen in april–juni en september–november.",
+  "voice": "Meestal stil. Geeft korte, krakende roepen bij de kolonie of slaapplaats."
  },
  "sp246": {
   "breeding": {

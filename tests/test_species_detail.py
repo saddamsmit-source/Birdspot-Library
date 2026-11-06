@@ -20,6 +20,7 @@ Birdspot Library — H2–H4: soortdetail met tabbladen
   H4-03  kiekendieven vergelijken per kleed; incidentele Nederlandse broedgevallen krijgen geen vast maandbereik
   H4-04  jonge Sperwer en Havik tonen juiste borsttekening, kleedfoto en benoemde roepen
   H4-05  Buizerd vergelijkt jonge en volwassen vogels zonder volwassen Buizerd een geslacht toe te kennen
+  H4-06  witte reigers vergelijken het juiste kleed, met eigen broedmaanden en veldopnamen
 
 Starten (vanuit repo-root):  python tests/test_species_detail.py
 """
@@ -450,6 +451,35 @@ def main():
             assert p.get_by_label("Vluchtroep van Wespendief").count() == 1
             close_detail()
             print("H4-05 OK — volwassen en jonge Buizerd, Ruigpootbuizerd en Wespendief met bronfoto's")
+
+            open_species("Kleine Zilverreiger", "sp082")
+            herons = p.locator('.sd-compare')
+            assert herons.count() == 4
+            breeding = herons.filter(
+                has=p.get_by_role("heading", name="Kleine en Grote Zilverreiger · broedkleed")
+            )
+            assert breeding.locator('.sd-badge').all_text_contents() == ["Broedkleed", "Broedkleed"]
+            assert breeding.locator('img').evaluate_all("images => images.map(img => img.getAttribute('src'))") == [
+                "/assets/species/plumage/sp082-breeding.webp", "/assets/species/plumage/sp083-breeding.webp",
+            ]
+            young = herons.filter(
+                has=p.get_by_role("heading", name="Kleine Zilverreiger en Koereiger · jonge vogels")
+            )
+            for picture in young.locator('img').all():
+                picture.scroll_into_view_if_needed()
+                picture.evaluate("img => img.decode()")
+            assert p.get_by_label("Vluchtroep van Kleine Zilverreiger").count() == 1
+            p.get_by_role('tab', name='Leefwijze', exact=True).click()
+            assert p.locator('.sd-month-breeding .is-breeding').count() == 2
+            expect(p.get_by_text('Gebruikelijke broedperiode · mei, juni', exact=True)).to_be_visible()
+            p.get_by_role('tab', name='Herkenning', exact=True).click()
+            young.get_by_role("button", name="Open soortkaart Koereiger").click()
+            assert p.get_by_role("dialog", name="Koereiger", exact=True).count() == 1
+            assert p.get_by_label("Roepen bij de kolonie van Koereiger").count() == 1
+            p.get_by_role('tab', name='Leefwijze', exact=True).click()
+            expect(p.get_by_text('Gebruikelijke broedperiode · april, mei, juni', exact=True)).to_be_visible()
+            close_detail()
+            print("H4-06 OK — witte reigers per kleed, bronfoto's, roepen en broedmaanden")
 
             assert not errors, f"H2-08 paginafouten: {errors}"
             print("H2-08 OK — geen paginafouten")

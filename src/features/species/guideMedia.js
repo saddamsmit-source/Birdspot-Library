@@ -239,6 +239,78 @@ export const GUIDE_AUDIO = Object.freeze({
       "source": "https://xeno-canto.org/1175973",
       "modifications": "Fragment, omgezet naar MP3 (mono)"
     }
+  ],
+  "sp082": [
+    {
+      "file": "XC705915",
+      "audio": "/assets/species/audio/sp082-flight-call.mp3",
+      "label": "Vluchtroep",
+      "note": "Korte roep in vlucht, opgenomen aan de Franse kust.",
+      "author": "Corentin Rivière / Sonothèque ADVL",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://xeno-canto.org/705915",
+      "modifications": "Volledige opname, niveau aangepast en omgezet naar MP3 (mono)"
+    }
+  ],
+  "sp083": [
+    {
+      "file": "XC705918",
+      "audio": "/assets/species/audio/sp083-flight-call.mp3",
+      "label": "Vluchtroep",
+      "note": "Schorre alarmroep in vlucht aan de Franse kust.",
+      "author": "Corentin Rivière / Sonothèque ADVL",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://xeno-canto.org/705918",
+      "modifications": "Volledige opname, niveau aangepast en omgezet naar MP3 (mono)"
+    },
+    {
+      "file": "XC1180934",
+      "audio": "/assets/species/audio/sp083-alarm-call.mp3",
+      "label": "Alarmroep",
+      "note": "Alarmroep uit de Bourgogne.",
+      "author": "Lionel Triboulin",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://xeno-canto.org/1180934",
+      "modifications": "Volledige opname, niveau aangepast en omgezet naar MP3 (mono)"
+    }
+  ],
+  "sp245": [
+    {
+      "file": "XC1088515",
+      "audio": "/assets/species/audio/sp245-flight-call.mp3",
+      "label": "Vluchtroep",
+      "note": "Korte roepen van vliegende Koereigers in Bretagne.",
+      "author": "Sébastien Provost / Sonothèque ADVL",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://xeno-canto.org/1088515",
+      "modifications": "Volledige opname, niveau aangepast en omgezet naar MP3 (mono)"
+    },
+    {
+      "file": "XC1088511",
+      "audio": "/assets/species/audio/sp245-colony-call.mp3",
+      "label": "Roepen bij de kolonie",
+      "note": "Alarm- en vluchtroepen bij een broedkolonie in Bretagne.",
+      "author": "Sébastien Provost / Sonothèque ADVL",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://xeno-canto.org/1088511",
+      "modifications": "Omgezet naar MP3 (mono), volledige opname"
+    },
+    {
+      "file": "XC1080059",
+      "audio": "/assets/species/audio/sp245-begging-call.mp3",
+      "label": "Bedelroep en andere roepen",
+      "note": "Bedelroep en andere roepen bij een kolonie in Bretagne.",
+      "author": "Sébastien Provost / Sonothèque ADVL",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://xeno-canto.org/1080059",
+      "modifications": "Volledige opname, niveau aangepast en omgezet naar MP3 (mono)"
+    }
   ]
 });
 export const GUIDE_PLUMAGE = Object.freeze({
@@ -839,6 +911,177 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "alt": "Ruigpootbuizerd — Jonge Ruigpootbuizerd in Tsjechië. Lichte borst, donkere buik en donkere polsvlekken.",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
       "observation": "https://www.inaturalist.org/observations/70044579"
+    }
+  },
+  "sp082": {
+    "breeding": {
+      "file": "iNaturalist photo 364893145",
+      "author": "Donald Davesne",
+      "license": "CC BY 4.0",
+      "source": "https://www.inaturalist.org/photos/364893145",
+      "image": "/assets/species/plumage/sp082-breeding.webp",
+      "width": 1024,
+      "height": 681,
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+      "nl": "Kleine Zilverreiger",
+      "latin": "Egretta garzetta",
+      "batch": "herons-13",
+      "reviewed": "2026-11-06",
+      "verification": "Research-grade waarneming. Seizoenskleed visueel getoetst aan de soortkaart.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kleine-zilverreiger",
+      "visualCheck": "Kleine Zilverreiger in ondiep water in Frankrijk, met twee lange witte sierveren achter de kop.",
+      "alt": "Kleine Zilverreiger — Kleine Zilverreiger in ondiep water in Frankrijk, met twee lange witte sierveren achter de kop.",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "observation": "https://www.inaturalist.org/observations/206314322"
+    },
+    "winter": {
+      "file": "iNaturalist photo 172413835",
+      "author": "Florin Feneru",
+      "license": "CC BY 4.0",
+      "source": "https://www.inaturalist.org/photos/172413835",
+      "image": "/assets/species/plumage/sp082-winter.webp",
+      "width": 1024,
+      "height": 659,
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+      "nl": "Kleine Zilverreiger",
+      "latin": "Egretta garzetta",
+      "batch": "herons-13",
+      "reviewed": "2026-11-06",
+      "verification": "Research-grade waarneming. Seizoenskleed visueel getoetst aan de soortkaart.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kleine-zilverreiger",
+      "visualCheck": "Volwassen Kleine Zilverreiger buiten broedkleed op een natte oever in Engeland. De gele tenen steken af tegen donkere poten. De lange nekveren ontbreken.",
+      "alt": "Kleine Zilverreiger — Volwassen Kleine Zilverreiger buiten broedkleed op een natte oever in Engeland. De gele tenen steken af tegen donkere poten. De lange nekveren ontbreken.",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "observation": "https://www.inaturalist.org/observations/103063658"
+    },
+    "juv": {
+      "file": "iNaturalist photo 92502660",
+      "author": "Paulo Martins",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.inaturalist.org/photos/92502660",
+      "image": "/assets/species/plumage/sp082-juv.webp",
+      "width": 1024,
+      "height": 609,
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+      "nl": "Kleine Zilverreiger",
+      "latin": "Egretta garzetta",
+      "batch": "herons-13",
+      "reviewed": "2026-11-06",
+      "verification": "Research-grade waarneming met geannoteerde leeftijd, visueel getoetst aan de soortkaart.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kleine-zilverreiger",
+      "visualCheck": "Jonge Kleine Zilverreiger aan een ondiepe oever in Portugal, met een slanke snavel en zonder lange sierveren.",
+      "alt": "Kleine Zilverreiger — Jonge Kleine Zilverreiger aan een ondiepe oever in Portugal, met een slanke snavel en zonder lange sierveren.",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "observation": "https://www.inaturalist.org/observations/57964762"
+    }
+  },
+  "sp083": {
+    "breeding": {
+      "file": "iNaturalist photo 243252269",
+      "author": "Olivier Morel",
+      "license": "CC BY 4.0",
+      "source": "https://www.inaturalist.org/photos/243252269",
+      "image": "/assets/species/plumage/sp083-breeding.webp",
+      "width": 1024,
+      "height": 768,
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+      "nl": "Grote Zilverreiger",
+      "latin": "Ardea alba",
+      "batch": "herons-13",
+      "reviewed": "2026-11-06",
+      "verification": "Research-grade waarneming. Seizoenskleed visueel getoetst aan de soortkaart.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-zilverreiger",
+      "visualCheck": "Grote Zilverreiger in broedkleed voor riet in Frankrijk. Lange hals, donkere snavel, groene teugel en lange rugsierveren.",
+      "alt": "Grote Zilverreiger — Grote Zilverreiger in broedkleed voor riet in Frankrijk. Lange hals, donkere snavel, groene teugel en lange rugsierveren.",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "observation": "https://www.inaturalist.org/observations/141931939"
+    },
+    "juv": {
+      "file": "iNaturalist photo 388019872",
+      "author": "Annette Herz",
+      "license": "CC BY 4.0",
+      "source": "https://www.inaturalist.org/photos/388019872",
+      "image": "/assets/species/plumage/sp083-juv.webp",
+      "width": 1024,
+      "height": 683,
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+      "nl": "Grote Zilverreiger",
+      "latin": "Ardea alba",
+      "batch": "herons-13",
+      "reviewed": "2026-11-06",
+      "verification": "Research-grade waarneming met geannoteerde leeftijd, visueel getoetst aan de soortkaart.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-zilverreiger",
+      "visualCheck": "Jonge Grote Zilverreigers bij hun nest in Californië. Hun witte verenkleed heeft nog geen lange sierveren.",
+      "alt": "Grote Zilverreiger — Jonge Grote Zilverreigers bij hun nest in Californië. Hun witte verenkleed heeft nog geen lange sierveren.",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "observation": "https://www.inaturalist.org/observations/219231388"
+    },
+    "winter": {
+      "reuseGuidePhoto": true
+    }
+  },
+  "sp245": {
+    "adult_m": {
+      "reuseGuidePhoto": true
+    },
+    "breeding": {
+      "file": "Cattle egret (Bubulcus ibis) summer plumage Cyprus.jpg",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Cattle_egret_(Bubulcus_ibis)_summer_plumage_Cyprus.jpg",
+      "image": "/assets/species/plumage/sp245-breeding.webp",
+      "width": 853,
+      "height": 1280,
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+      "nl": "Koereiger",
+      "latin": "Bubulcus ibis",
+      "batch": "herons-13",
+      "reviewed": "2026-11-06",
+      "verification": "Bronmetadata en zichtbare kenmerken vergeleken met de gelinkte soortkaart.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/koereiger",
+      "visualCheck": "Volwassen Koereiger in Cyprus, met oranjegele veren op de kruin en borst en een korte, oranje snavel.",
+      "alt": "Koereiger — Volwassen Koereiger in Cyprus, met oranjegele veren op de kruin en borst en een korte, oranje snavel.",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    "winter": {
+      "file": "iNaturalist photo 116157768",
+      "author": "Andrea Mologni",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.inaturalist.org/photos/116157768",
+      "image": "/assets/species/plumage/sp245-winter.webp",
+      "width": 1024,
+      "height": 920,
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+      "nl": "Koereiger",
+      "latin": "Bubulcus ibis",
+      "batch": "herons-13",
+      "reviewed": "2026-11-06",
+      "verification": "Research-grade waarneming. Seizoenskleed visueel getoetst aan de soortkaart.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/koereiger",
+      "visualCheck": "Koereiger in winterkleed in Italiaans grasland. Geheel wit, met een korte gele snavel en compact postuur.",
+      "alt": "Koereiger — Koereiger in winterkleed in Italiaans grasland. Geheel wit, met een korte gele snavel en compact postuur.",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "observation": "https://www.inaturalist.org/observations/71350962"
+    },
+    "juv": {
+      "file": "iNaturalist photo 113155242",
+      "author": "Zac Peterson",
+      "license": "CC BY 4.0",
+      "source": "https://www.inaturalist.org/photos/113155242",
+      "image": "/assets/species/plumage/sp245-juv.webp",
+      "width": 1024,
+      "height": 1024,
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+      "nl": "Koereiger",
+      "latin": "Bubulcus ibis",
+      "batch": "herons-13",
+      "reviewed": "2026-11-06",
+      "verification": "Research-grade waarneming met geannoteerde leeftijd, visueel getoetst aan de soortkaart.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/koereiger",
+      "visualCheck": "Jonge Koereiger in grasland op Dominica. Korte, donkere snavel, donkere poten en een compacte bouw.",
+      "alt": "Koereiger — Jonge Koereiger in grasland op Dominica. Korte, donkere snavel, donkere poten en een compacte bouw.",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "observation": "https://www.inaturalist.org/observations/69701226"
     }
   }
 });

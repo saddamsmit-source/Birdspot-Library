@@ -38,11 +38,44 @@ export const GUIDE_COMPARISONS = [
     tip: 'Een rood petje komt bij beide voor. Kijk naar het hele koppatroon.',
   },
   {
+    label: 'Kleine en Grote Zilverreiger · buiten broedkleed',
     birds: [
-      {id: 'sp082', source: 'kleine-zilverreiger', marks: 'Kleiner, kortere hals en opvallend gele tenen. Snavel doorgaans donker.'},
-      {id: 'sp083', source: 'grote-zilverreiger', marks: 'Groter met lange hals. Snavel meestal geel, soms donker in de broedtijd.'},
+      {id: 'sp082', source: 'kleine-zilverreiger', plumage: 'winter', marks: 'Slank en klein met een donkere snavel. Bij volwassen vogels vallen de gele tenen op.'},
+      {id: 'sp083', source: 'grote-zilverreiger', plumage: 'winter', marks: 'Veel groter, met een langere hals, een lange gele snavel en donkere tenen.'},
     ],
-    tip: 'Als de voeten zichtbaar zijn, zijn de gele tenen een goed kenmerk voor de Kleine Zilverreiger.',
+    tip: 'Kijk naar de tenen als die zichtbaar zijn. Beoordeel ook de verhouding tussen hals en lichaam.',
+  },
+  {
+    label: 'Kleine en Grote Zilverreiger · broedkleed',
+    birds: [
+      {id: 'sp082', source: 'kleine-zilverreiger', plumage: 'breeding', marks: 'Twee lange sierveren in de nek, kleinere bouw en meestal gele tenen.'},
+      {id: 'sp083', source: 'grote-zilverreiger', plumage: 'breeding', marks: 'Zeer lange hals en sierveren op de rug. De snavel kan tijdelijk grotendeels zwart worden.'},
+    ],
+    tip: 'Een donkere snavel komt in dit kleed bij beide voor. Let ook op formaat, halslengte en nekveren.',
+  },
+  {
+    label: 'Kleine Zilverreiger en Koereiger · buiten broedkleed',
+    birds: [
+      {id: 'sp082', source: 'kleine-zilverreiger', plumage: 'winter', marks: 'Langere, dunnere donkere snavel en langere poten. De tenen zijn meestal geel.'},
+      {id: 'sp245', source: 'koereiger', plumage: 'winter', marks: 'Compact, met kortere poten en een korte, stevige gele snavel.'},
+    ],
+    tip: 'Vergelijk de bouw en snavelvorm. Vee in de buurt kan een extra aanwijzing zijn voor Koereiger.',
+  },
+  {
+    label: 'Kleine Zilverreiger en Koereiger · jonge vogels',
+    birds: [
+      {id: 'sp082', source: 'kleine-zilverreiger', plumage: 'juv', marks: 'Slanker en langer gepoot, met een langere, dunnere snavel. Tenen kunnen dof geelgroen zijn.'},
+      {id: 'sp245', source: 'koereiger', plumage: 'juv', marks: 'Compact, met korte poten en een kortere, dikkere snavel. De snavel is bij jonge vogels vaak donker.'},
+    ],
+    tip: 'Vergelijk de verhoudingen van de hele vogel. De snavel van jonge vogels kan bij beide donker zijn.',
+  },
+  {
+    label: 'Grote Zilverreiger en Koereiger · buiten broedkleed',
+    birds: [
+      {id: 'sp083', source: 'grote-zilverreiger', plumage: 'winter', marks: 'Groot met een lange, dunne hals, een lange dolkvormige snavel en lange poten.'},
+      {id: 'sp245', source: 'koereiger', plumage: 'winter', marks: 'Veel kleiner, met een korte hals, korte poten en een korte, stevige snavel.'},
+    ],
+    tip: 'Bij beide kan de snavel geel zijn. Vergelijk vooral de lengte van hals, snavel en poten.',
   },
   {
     birds: [
