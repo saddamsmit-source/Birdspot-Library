@@ -44,6 +44,10 @@
   --guide-month-dark-ink: #291B35;
   --guide-month-breed:    #E85B8C;
 
+  /* ── Soortgids: verspreidingskaart ─────────────────── */
+  --guide-distribution-cloud: #254FB8;
+  --guide-distribution-opacity: .68;
+
   /* ── Op media ─────────────────────────────────────── */
   --on-media:     #FFFFFF;
   --media-veil:   linear-gradient(to top, rgba(0,0,0,.65) 0%, transparent 55%);
@@ -94,6 +98,7 @@
     --ink-2:     #A8C9AF;
     --muted:     #5E8C6A;
     --accent-soft: #1A3560;
+    --guide-distribution-cloud: #9FB8F4;
     color-scheme: dark;
   }
 }
@@ -106,5 +111,6 @@
   --ink-2:     #A8C9AF;
   --muted:     #5E8C6A;
   --accent-soft: #1A3560;
+  --guide-distribution-cloud: #9FB8F4;
   color-scheme: dark;
 }

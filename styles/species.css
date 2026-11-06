@@ -776,7 +776,6 @@
   font-size: var(--fs-meta);
 }
 .sd-distribution {
-  --sd-cloud: #168b7c;
   margin: 0; overflow: hidden; border: 1px solid var(--line);
   border-radius: var(--r-sm); background: var(--surface);
 }
@@ -784,7 +783,7 @@
 .sd-distribution-neighbours { fill: var(--surface-2); stroke: var(--muted); stroke-opacity: .3; stroke-width: 2; }
 .sd-distribution-land { fill: var(--surface); }
 .sd-distribution-water { fill: var(--surface-2); }
-.sd-distribution-cloud { fill: var(--sd-cloud); opacity: .47; }
+.sd-distribution-cloud { fill: var(--guide-distribution-cloud); opacity: var(--guide-distribution-opacity); }
 .sd-distribution-outline { fill: none; stroke: var(--ink-2); stroke-width: 2; stroke-opacity: .66; }
 .sd-distribution-labels {
   fill: var(--ink-2); stroke: var(--surface); stroke-width: 6; stroke-linejoin: round;
@@ -792,7 +791,7 @@
 }
 .sd-distribution figcaption { display: grid; gap: var(--space-4); padding: var(--space-12); }
 .sd-distribution-key { display: flex; align-items: center; gap: var(--space-8); margin: 0; color: var(--ink); font-size: var(--fs-meta); }
-.sd-distribution-key span { flex: 0 0 14px; height: 14px; border-radius: 50%; background: var(--sd-cloud); opacity: .47; }
+.sd-distribution-key span { flex: 0 0 14px; height: 14px; border-radius: 50%; background: var(--guide-distribution-cloud); opacity: var(--guide-distribution-opacity); }
 .sd-distribution figcaption a { color: inherit; }
 .sd-places-panel { display: flex; flex-direction: column; gap: var(--space-12); }
 .sd-places { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-4); }
