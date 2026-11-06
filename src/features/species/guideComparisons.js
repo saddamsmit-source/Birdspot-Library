@@ -395,6 +395,38 @@ export const GUIDE_COMPARISONS = [
     ],
     tip: 'Bekijk de kop, borstzijde en pootlengte samen. Let bij een foeragerende vogel ook op de houding en beweging.',
   },
+  {
+    label: 'Torenvalk en Slechtvalk · volwassen',
+    birds: [
+      {id: 'sp008', source: 'torenvalk', plumage: 'adult_m', marks: 'Lange staart en roestbruine rug. Dit mannetje heeft een grijze kop en bovenstaart.'},
+      {id: 'sp009', source: 'slechtvalk', plumage: 'adult_m', marks: 'Zware borst, brede donkere baardstreep en relatief korte staart. Blauwgrijze bovenzijde.'},
+    ],
+    tip: 'Vergelijk de verhoudingen van kop, vleugels en staart. Gebruik kleur bij goed licht; de foto’s zijn niet op dezelfde schaal.',
+  },
+  {
+    label: 'Torenvalk en Slechtvalk · juveniel',
+    birds: [
+      {id: 'sp008', source: 'torenvalk', plumage: 'juv', marks: 'Warmer bruine, gebandeerde rug en lange staart. Lijkt sterk op een volwassen vrouwtje Torenvalk.'},
+      {id: 'sp009', source: 'slechtvalk', plumage: 'juv', marks: 'Donkerder bruine bovenzijde met lichte veerranden, zware bouw en een brede donkere baardstreep.'},
+    ],
+    tip: 'Beide jonge vogels hebben lengtestrepen: die alleen bepalen de soort niet. Combineer koptekening met lichaamsbouw en staartlengte.',
+  },
+  {
+    label: 'Torenvalk en Sperwer · juveniel',
+    birds: [
+      {id: 'sp008', source: 'torenvalk', plumage: 'juv', marks: 'Gestreepte borst en relatief puntige vleugels. Vaak jagend boven open terrein.'},
+      {id: 'sp006', source: 'sperwer', plumage: 'juv', marks: 'Ook als jonge vogel dwarsbanden op de onderzijde; korte brede vleugels en lange dunne poten.'},
+    ],
+    tip: 'Let op de richting van de borsttekening en de vleugelvorm. Alleen een lange staart is onvoldoende.',
+  },
+  {
+    label: 'Slechtvalk en Havik · juveniel',
+    birds: [
+      {id: 'sp009', source: 'slechtvalk', plumage: 'juv', marks: 'Brede donkere baardstreep. In vlucht spitser gevleugeld en korter gestaart dan Havik.'},
+      {id: 'sp007', source: 'havik', plumage: 'juv', marks: 'Opvallende lichte wenkbrauw, stevige poten en een langere staart. Jonge vogels hebben eveneens lengtestrepen.'},
+    ],
+    tip: 'Lengtestrepen komen bij beide voor. Vergelijk de koptekening, staart en vleugels; formaat zonder referentie is lastig.',
+  },
 ];
 
 export function comparisonSource(bird) {

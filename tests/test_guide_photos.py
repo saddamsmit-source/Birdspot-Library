@@ -8,7 +8,8 @@ def main():
  guide_media=json.loads((ROOT/'assets/species/field-guide-media.json').read_text())
  variants=[v['image'] for cards in guide_media['plumage'].values() for v in cards.values() if 'image' in v]
  clips=[clip['audio'] for entries in guide_media['audio'].values() for clip in entries]
- images=[v['image'] for v in photos.values()] + variants
+ poses=[v['image'] for cards in guide_media.get('poses', {}).values() for v in cards]
+ images=[v['image'] for v in photos.values()] + variants + poses
  with Server(('127.0.0.1',0),Quiet) as server:
   threading.Thread(target=server.serve_forever,daemon=True).start()
   url=f'http://127.0.0.1:{server.server_address[1]}/'

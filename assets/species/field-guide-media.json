@@ -834,6 +834,46 @@
         "source": "https://www.inaturalist.org/observations/338563142",
         "modifications": "Volledige opname omgezet naar MP3 (mono)"
       }
+    ],
+    "sp008": [
+      {
+        "file": "Falco tinnunculus - Common Kestrel XC463430.mp3",
+        "audio": "/assets/species/audio/sp008-pair.mp3",
+        "label": "Roep · man en vrouw",
+        "note": "De opnemer beschrijft een roepend mannetje dat door het vrouwtje wordt beantwoord. Sevilla, Spanje.",
+        "author": "Javier Herrera",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Falco_tinnunculus_-_Common_Kestrel_XC463430.mp3",
+        "modifications": "Volledige opname omgezet naar mono MP3.",
+        "reviewed": "2026-11-06"
+      },
+      {
+        "file": "Falco tinnunculus - Common Kestrel XC589714.mp3",
+        "audio": "/assets/species/audio/sp008-male-call.mp3",
+        "label": "Roep · volwassen man",
+        "note": "Korte roepopname van een volwassen mannetje bij Kandersteg, Zwitserland.",
+        "author": "Pascal Christe",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Falco_tinnunculus_-_Common_Kestrel_XC589714.mp3",
+        "modifications": "Volledige opname omgezet naar mono MP3.",
+        "reviewed": "2026-11-06"
+      }
+    ],
+    "sp009": [
+      {
+        "file": "Halcón peregrino.ogg",
+        "audio": "/assets/species/audio/sp009-call.mp3",
+        "label": "Roep",
+        "note": "Als Slechtvalk gepubliceerd geluidsvoorbeeld. De bron specificeert geen geslacht, leeftijd, locatie of preciezer roeptype.",
+        "author": "Sternanita3",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Halcón_peregrino.ogg",
+        "modifications": "Volledige opname omgezet naar mono MP3.",
+        "reviewed": "2026-11-06"
+      }
     ]
   },
   "plumage": {
@@ -2308,6 +2348,154 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
         "observation": "https://www.inaturalist.org/observations/18578496"
       }
+    },
+    "sp008": {
+      "adult_m": {
+        "reuseGuidePhoto": true
+      },
+      "adult_f": {
+        "file": "Common kestrel female France.jpg",
+        "image": "/assets/species/plumage/sp008-adult_f.webp",
+        "nl": "Torenvalk",
+        "latin": "Falco tinnunculus",
+        "author": "Alexis Lours",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Common_kestrel_female_France.jpg",
+        "alt": "Torenvalk vrouwtje op een tak: bruine kop, gevlekte borst en lange gebandeerde staart.",
+        "modifications": "Verkleind tot maximaal 1600 px en omgezet naar WebP; geen extra uitsnede.",
+        "reviewed": "2026-11-06",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/torenvalk",
+        "visualCheck": "Torenvalk vrouwtje op een tak: bruine kop, gevlekte borst en lange gebandeerde staart.",
+        "width": 1600,
+        "height": 1067
+      },
+      "juv": {
+        "file": "Kestrel - Falco tinnunculus - Juvenile.jpg",
+        "image": "/assets/species/plumage/sp008-juv.webp",
+        "nl": "Torenvalk",
+        "latin": "Falco tinnunculus",
+        "author": "caroline legg",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Kestrel_-_Falco_tinnunculus_-_Juvenile.jpg",
+        "alt": "Jonge Torenvalk op een tak; bruine kop en rug, gestreepte borst en gebandeerde staart. Bron benoemt juveniel.",
+        "modifications": "Verkleind tot maximaal 1600 px en omgezet naar WebP; geen extra uitsnede.",
+        "reviewed": "2026-11-06",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/torenvalk",
+        "visualCheck": "Jonge Torenvalk op een tak; bruine kop en rug, gestreepte borst en gebandeerde staart. Bron benoemt juveniel.",
+        "width": 1143,
+        "height": 1600
+      }
+    },
+    "sp009": {
+      "adult_m": {
+        "reuseGuidePhoto": true
+      },
+      "juv": {
+        "file": "PeregrineFalconperched.jpg",
+        "image": "/assets/species/plumage/sp009-juv.webp",
+        "nl": "Slechtvalk",
+        "latin": "Falco peregrinus",
+        "author": "Teddy Llovet",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:PeregrineFalconperched.jpg",
+        "alt": "Jonge Slechtvalk bij Morro Rock, Californië: bruine bovenzijde met lichte veerranden en lengtestrepen. Dezelfde soort, Noord-Amerikaanse herkomst.",
+        "modifications": "Verkleind tot maximaal 1600 px en omgezet naar WebP; geen extra uitsnede.",
+        "reviewed": "2026-11-06",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/slechtvalk",
+        "visualCheck": "Jonge Slechtvalk bij Morro Rock, Californië: bruine bovenzijde met lichte veerranden en lengtestrepen. Dezelfde soort, Noord-Amerikaanse herkomst.",
+        "width": 1576,
+        "height": 1169
+      }
     }
+  },
+  "poses": {
+    "sp008": [
+      {
+        "label": "Zittend",
+        "note": "Let op de staart die ruim voorbij de gevouwen vleugels uitsteekt. Dit beeld toont een volwassen mannetje.",
+        "file": "Common kestrel on a tree in Kraków, 20250412 1052 3641.jpg",
+        "author": "Jakub Hałun",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Common_kestrel_on_a_tree_in_Krak%C3%B3w,_20250412_1052_3641.jpg",
+        "width": 1065,
+        "height": 1600,
+        "sex": "male",
+        "nl": "Torenvalk",
+        "latin": "Falco tinnunculus",
+        "image": "/assets/species/sp008.webp",
+        "batch": "open-coast-08",
+        "modifications": "Resized to max 1600 px and converted to WebP; no crop",
+        "reviewed": "2026-11-06",
+        "verification": "Commons identity and license checked against visible field marks in the cited species account.",
+        "visualCheck": "Volledig mannetje op een boomstam, met grijze kop, roestbruine rug, donkere vlekken en lange staart.",
+        "alt": "Torenvalk — Volledig mannetje op een boomstam, met grijze kop, roestbruine rug, donkere vlekken en lange staart.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/torenvalk",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "label": "In vlucht · biddend",
+        "note": "Kijk naar de lange, uitgewaaierde staart en de vleugelvorm. Bidden is een aanwijzing; combineer gedrag met bouw.",
+        "file": "Falco tinnunculus in flight (45067938032).jpg",
+        "image": "/assets/species/plumage/sp008-flight.webp",
+        "nl": "Torenvalk",
+        "latin": "Falco tinnunculus",
+        "author": "Rolf Dietrich Brecher",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Falco_tinnunculus_in_flight_(45067938032).jpg",
+        "alt": "Torenvalk biddend, van voren en onderen: gespreide vleugels en lange waaiervormige staart. Geslacht niet vastgesteld.",
+        "modifications": "Verkleind tot maximaal 1600 px en omgezet naar WebP; geen extra uitsnede.",
+        "reviewed": "2026-11-06",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/torenvalk",
+        "visualCheck": "Torenvalk biddend, van voren en onderen: gespreide vleugels en lange waaiervormige staart. Geslacht niet vastgesteld.",
+        "width": 1600,
+        "height": 1004
+      }
+    ],
+    "sp009": [
+      {
+        "label": "Zittend",
+        "note": "Let op kopkap, baardstreep en dwarsbanden op de onderzijde. Dit is een volwassen vrouwtje van de ondersoort calidus uit India; de tint verschilt per ondersoort.",
+        "file": "Peregrine falcon portrait.jpg",
+        "image": "/assets/species/plumage/sp009-perched.webp",
+        "nl": "Slechtvalk",
+        "latin": "Falco peregrinus",
+        "author": "Dhairya dixit",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Peregrine_falcon_portrait.jpg",
+        "alt": "Volwassen Slechtvalk zittend, van voren: donkere kopkap, baardstreep en dwarsbanden. Bron: vrouwtje van ondersoort calidus, gefotografeerd in India.",
+        "modifications": "Commons-versie met aangepaste lichtwaarden (MPF); verkleind en omgezet naar WebP zonder extra uitsnede.",
+        "reviewed": "2026-11-06",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/slechtvalk",
+        "visualCheck": "Volwassen Slechtvalk zittend, van voren: donkere kopkap, baardstreep en dwarsbanden. Bron: vrouwtje van ondersoort calidus, gefotografeerd in India.",
+        "width": 1231,
+        "height": 1600
+      },
+      {
+        "label": "In vlucht",
+        "note": "Relatief korte staart en puntige vleugels met brede basis. De lichte onderzijde heeft bij deze volwassen vogel dwarsbanden.",
+        "file": "Falco peregrinus in flight (17659253649).jpg",
+        "author": "john581",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_in_flight_(17659253649).jpg",
+        "width": 1600,
+        "height": 1277,
+        "image": "/assets/showcase/sp009.webp",
+        "modifications": "Bestaande WebP hergebruikt zonder extra uitsnede",
+        "nl": "Slechtvalk",
+        "latin": "Falco peregrinus",
+        "batch": "field-variants-09",
+        "reviewed": "2026-11-06",
+        "verification": "Commons metadata and visual check against the cited species account.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/slechtvalk",
+        "visualCheck": "Volledige vogel in vlucht met spitse vleugels, donkere baardstreep en dwarsbandering op de onderzijde.",
+        "alt": "Slechtvalk — Volledige vogel in vlucht met spitse vleugels, donkere baardstreep en dwarsbandering op de onderzijde.",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+      }
+    ]
   }
 }

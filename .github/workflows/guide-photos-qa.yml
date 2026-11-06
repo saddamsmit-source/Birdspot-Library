@@ -5,6 +5,8 @@ on:
       - 'src/features/species/**'
       - 'assets/species/**'
       - 'styles/signature-phase2.css'
+      - 'styles/species.css'
+      - 'tests/test_guide_poses.mjs'
       - 'sw.js'
       - 'tests/test_guide_photos.py'
       - '.github/workflows/guide-photos-qa.yml'
@@ -23,4 +25,5 @@ jobs:
           python tools/species/build.py
           git diff --exit-code src/features/species/guidePhotos.js src/features/species/guideMedia.js
           node tools/species/guide_coverage.mjs --summary
+          node tests/test_guide_poses.mjs
       - run: python tests/test_guide_photos.py
