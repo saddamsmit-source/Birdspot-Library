@@ -62,7 +62,7 @@ Bronlinks staan per soort in `src/data/species.js` (`guideReview.sources`) en bi
 |---|---|---|
 | CAP-BIRD-012 — soortgids | Soorten → soort → Herkenning: kleden, bronlinks, vergelijkingen en optionele kijkhoeken. Leefwijze: gecorrigeerde gegevens. Waar: 15 fototips. | Bestaande vergelijkingsknop opent verwante kaart; geen data betekent geen leeg beeldblok. |
 | CAP-BIRD-015 — media | Klik op aanvullende foto → viewer → sluiten; 22 extra audiospelers met credits. | Bestaande foutmeldingen en één-opname-tegelijk blijven hergebruikt. Geen nieuwe upload-/verwijderflow. |
-| CAP-BIRD-040 — gids offline | Extra lokale bestanden in bestaande mediaregisters en SW-mediacache; versie `1.17.12-forestbirds-recognition-1`. | Offline vereist eerst geslaagde download en behouden browseropslag. Geen algemene claim van volledig offline op basis van alleen lokale bestanden. |
+| CAP-BIRD-040 — gids offline | Extra lokale bestanden in bestaande mediaregisters en SW-mediacache; versie `1.17.12-forestbirds-recognition-2`. | Offline vereist eerst geslaagde download en behouden browseropslag. Geen algemene claim van volledig offline op basis van alleen lokale bestanden. |
 
 Geen nieuwe route, filter, formulier, opslagkey of migratie. Geen wijziging aan eigen foto’s, waarnemingen, backup/herstel of centrale soortstatus. Alle **582 overige soorten** zijn programmatisch vergeleken met de basis en gelijk; overige velden van doelsoorten en buiten-scope leefwijze/media behouden.
 
@@ -84,6 +84,7 @@ Bewijsbeeld: [juveniele Goudhaan in mobiele viewer](evidence/forestbirds-goldcre
 
 - **L-019 / L-016:** bestandsnaam, bron-Type en geluidslabel kunnen verschillen. Oorzaak: voorlopige kandidaatsleutels/bronbenaming. Fix: bron-Type vóór lokale bestandsnaam en UI-label gecontroleerd; bron en precieze grenzen in register. Hergebruik bij iedere audiobatch.
 - **L-019:** betrouwbare bronmetadata is geen download- of visueel bewijs. Kandidaten door rate limit apart gehouden; pas na succesvolle download/inspectie opgenomen. Onvoldoende beelden blijven open.
+- **L-077:** de gedeelde preview maakte een te algemeen bijschrift bij de Groene Specht zichtbaar (geslacht onbekend naast een bronbevestigde mannenkaart). Gecorrigeerd naar concrete houdingkenmerken; cacheversie vernieuwd.
 - **L-077:** bronvoorstellen gebruikten soms `reviewed` in plaats van `date`, arrays als maandbereik en andere vergelijkingsschema’s. Fix vóór integratie: canoniek schema, bestaande generators en echte soortkaarten. Geen alternatieve parallelle appstructuur gemaakt.
 - **L-039 / L-077:** gedeelde volwassenkaarten voorkomen geforceerde sekseclaims. Geografische variatie en bronconflicten worden zichtbaar uitgelegd; referentiemedia blijven los van gebruikersdata.
 - Functiekaart hierboven bijgewerkt binnen bestaande capability-ID’s; geen nieuwe algemene learning-ID’s of normrevisie nodig.
