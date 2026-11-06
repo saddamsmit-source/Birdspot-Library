@@ -35,7 +35,15 @@ def main():
    assert p.locator('#screen-species').is_visible()
    # Remove only our malformed fixture, not through application code; test valid navigation too.
    p.evaluate('''()=>{const s=JSON.parse(localStorage.getItem('birdspot-sightings'));s.sightings=s.sightings.filter(Boolean);localStorage.setItem('birdspot-sightings',JSON.stringify(s));}''')
-   p.locator('[data-route="profile"]').click();p.go_back();p.locator('#screen-species').wait_for()
+   p.locator('[data-route="profile"]').click()
+   p.locator('#btnImport').wait_for()
+   p.locator('#importFile').set_input_files({'name':'cancel-check.json','mimeType':'application/json','buffer':json.dumps({'schemaVersion':2,'sightings':[]}).encode()})
+   p.locator('#confirmOverlay').wait_for()
+   before=p.evaluate('localStorage.getItem("birdspot-sightings")')
+   p.go_back();p.locator('#confirmOverlay').wait_for(state='hidden')
+   assert p.locator('#screen-profile').is_visible()
+   assert p.evaluate('localStorage.getItem("birdspot-sightings")')==before
+   p.go_back();p.locator('#screen-species').wait_for()
    assert p.locator('#speciesSearch').input_value()=='Winterkoning'
    p.go_back();p.locator('#screen-home').wait_for()
    p.go_forward();p.locator('#screen-species').wait_for()

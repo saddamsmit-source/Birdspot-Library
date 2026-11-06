@@ -9,7 +9,7 @@ function closeTopLayer() {
     .map((el,index)=>({el,index,z:Number(getComputedStyle(el).zIndex)||0}))
     .sort((a,b)=>b.z-a.z||b.index-a.index);
   for (const {el} of layers) {
-    const button = el.querySelector('.confirm-cancel,.signature-lightbox-close,.lightbox__close,#spPickerClose,#pinCancel,#addSheetCancel,#detailClose,.signature-species-detail-close,#mapSheetClose,#mapPinCancel');
+    const button = el.querySelector('#confirmCancel,.confirm-cancel,.signature-lightbox-close,.lightbox__close,#spPickerClose,#pinCancel,#addSheetCancel,#detailClose,.signature-species-detail-close,#mapSheetClose,#mapPinCancel');
     if (button && visible(button)) { button.click(); return true; }
     if (el.matches('.place-prompt')) {
       document.dispatchEvent(new KeyboardEvent('keydown',{key:'Escape',bubbles:true})); return true;
