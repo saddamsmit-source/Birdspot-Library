@@ -243,6 +243,46 @@ export const GUIDE_COMPARISONS = [
     ],
     tip: 'De foto’s laten verschillende houdingen zien. Beoordeel bij een bruine taling de koptekening op het water en de voorvleugel als de vogel opvliegt.',
   },
+  {
+    label: 'Bontbekplevier en Kleine Plevier · broedkleed',
+    birds: [
+      {id: 'sp146', source: 'bontbekplevier', plumage: 'breeding', marks: 'Oranje snavelbasis en poten. De borstband is breed. In vlucht is een witte vleugelstreep zichtbaar.'},
+      {id: 'sp147', source: 'kleine-plevier', plumage: 'breeding', marks: 'Gele oogring, donkere snavel en vleeskleurige poten. In vlucht ontbreekt de duidelijke witte vleugelstreep.'},
+    ],
+    tip: 'Op de grond helpen oogring en snavelkleur. In vlucht kun je letten op de witte vleugelstreep en de roep.',
+  },
+  {
+    label: 'Bontbekplevier en Kleine Plevier · jonge vogels',
+    birds: [
+      {id: 'sp146', source: 'bontbekplevier', plumage: 'juv', marks: 'Bruine koptekening met een lichte streep achter het oog. In vlucht blijft de witte vleugelstreep zichtbaar.'},
+      {id: 'sp147', source: 'kleine-plevier', plumage: 'juv', marks: 'Bruin koppatroon, vaak met een smalle, doffe oogring. In vlucht ontbreekt de duidelijke witte vleugelstreep.'},
+    ],
+    tip: 'Een donkere snavel komt bij beide jonge vogels voor. Bekijk de oogstreek en gebruik zo mogelijk de vleugelstreep of de roep als extra controle.',
+  },
+  {
+    label: 'Kleine Plevier en Strandplevier · broedkleed',
+    birds: [
+      {id: 'sp147', source: 'kleine-plevier', plumage: 'breeding', marks: 'Gele oogring en een donkere band die over de borst doorloopt. De poten zijn meestal vleeskleurig.'},
+      {id: 'sp206', source: 'strandplevier', plumage: 'adult_m', marks: 'Donkere poten en losse zwarte vlekken opzij van de witte borst. Het mannetje heeft een warmer achterhoofd.'},
+    ],
+    tip: 'Bekijk de borst van schuin voren. Van opzij kan één zijborstvlek op een deel van een borstband lijken.',
+  },
+  {
+    label: 'Bontbekplevier en Strandplevier · winterkleed',
+    birds: [
+      {id: 'sp146', source: 'bontbekplevier', plumage: 'winter', marks: 'Een brede bruine borstband en relatief forse bouw. De snavel is grotendeels donker en de poten kunnen nog oranje zijn.'},
+      {id: 'sp206', source: 'strandplevier', plumage: 'winter', marks: 'Bleke zandkleurige rug, donkere poten en kleine vlekken aan weerszijden van de witte borst.'},
+    ],
+    tip: 'Kijk of de borstband middenvoor doorloopt en controleer daarna de pootkleur. Beide soorten kunnen een donkere snavel hebben.',
+  },
+  {
+    label: 'Bontbekplevier en Strandplevier · jonge vogels',
+    birds: [
+      {id: 'sp146', source: 'bontbekplevier', plumage: 'juv', marks: 'Steviger gebouwd, met een duidelijker bruine borstband en een lichte lijn achter het oog.'},
+      {id: 'sp206', source: 'strandplevier', plumage: 'juv', marks: 'Bleker, met donkere poten en een veel kleinere zijborstvlek. Het midden van de borst is wit.'},
+    ],
+    tip: 'Ook jonge vogels kunnen lichtgerande rugveren hebben. De borsttekening, bouw en poten helpen beter bij het onderscheid.',
+  },
 ];
 
 export function comparisonSource(bird) {

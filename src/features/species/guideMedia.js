@@ -403,6 +403,100 @@ export const GUIDE_AUDIO = Object.freeze({
       "source": "https://xeno-canto.org/903822",
       "modifications": "Volledige opname, omgezet naar MP3 (mono)"
     }
+  ],
+  "sp146": [
+    {
+      "file": "XC1178346",
+      "audio": "/assets/species/audio/sp146-night-flight-call.mp3",
+      "label": "Nachtelijke vluchtroep",
+      "note": "Korte trekroep tijdens nachtelijke vlucht in Normandië.",
+      "author": "Lionel Triboulin",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://xeno-canto.org/1178346",
+      "modifications": "Volledige opname, volume verhoogd en omgezet naar MP3 (mono)"
+    },
+    {
+      "file": "XC897533",
+      "audio": "/assets/species/audio/sp146-call-song.mp3",
+      "label": "Roep en zang",
+      "note": "In april opgenomen bij Ottenby op het Zweedse eiland Öland. De maker vermeldt zowel roep als zang.",
+      "author": "Jochem verweij",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://xeno-canto.org/897533",
+      "modifications": "Volledige opname, volume verhoogd en omgezet naar MP3 (mono)"
+    }
+  ],
+  "sp147": [
+    {
+      "file": "XC1143443",
+      "audio": "/assets/species/audio/sp147-flight-call.mp3",
+      "label": "Roep en vluchtroep",
+      "note": "Overdag opgenomen in Extremadura. De maker vermeldt gewone roepen en vluchtroepen.",
+      "author": "Tanguy Loïs",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://xeno-canto.org/1143443",
+      "modifications": "Volledige opname, volume verhoogd en omgezet naar MP3 (mono)"
+    },
+    {
+      "file": "XC1107841",
+      "audio": "/assets/species/audio/sp147-flight-song.mp3",
+      "label": "Zang en vluchtroep",
+      "note": "Zang en vluchtroep in maart bij de baai van Mont-Saint-Michel.",
+      "author": "Sébastien Provost / Sonothèque ADVL",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://xeno-canto.org/1107841",
+      "modifications": "Volledige opname, volume verhoogd en omgezet naar MP3 (mono)"
+    }
+  ],
+  "sp206": [
+    {
+      "file": "XC730589",
+      "audio": "/assets/species/audio/sp206-call.mp3",
+      "label": "Roep",
+      "note": "Een reeks roepen aan de kust bij Genêts in Normandië.",
+      "author": "Sébastien Provost / Sonothèque ADVL",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://xeno-canto.org/730589",
+      "modifications": "Volledige opname, volume verhoogd en omgezet naar MP3 (mono)"
+    },
+    {
+      "file": "XC820173",
+      "audio": "/assets/species/audio/sp206-flight-call.mp3",
+      "label": "Vluchtroep",
+      "note": "Een vluchtroep bij Dragey-Ronthon aan de kust van Normandië.",
+      "author": "Sébastien Provost / Sonothèque ADVL",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://xeno-canto.org/820173",
+      "modifications": "Volledige opname, volume verhoogd en omgezet naar MP3 (mono)"
+    },
+    {
+      "file": "XC817939",
+      "audio": "/assets/species/audio/sp206-alarm-call.mp3",
+      "label": "Alarmroep",
+      "note": "Korte alarmroep bij Saint-Jean-le-Thomas in Normandië.",
+      "author": "Sébastien Provost / Sonothèque ADVL",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://xeno-canto.org/817939",
+      "modifications": "Volledige opname, volume verhoogd en omgezet naar MP3 (mono)"
+    },
+    {
+      "file": "XC817932",
+      "audio": "/assets/species/audio/sp206-song.mp3",
+      "label": "Zang",
+      "note": "Korte zang bij Dragey-Ronthon in Normandië.",
+      "author": "Sébastien Provost / Sonothèque ADVL",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://xeno-canto.org/817932",
+      "modifications": "Volledige opname, volume verhoogd en omgezet naar MP3 (mono)"
+    }
   ]
 });
 export const GUIDE_PLUMAGE = Object.freeze({
@@ -1316,6 +1410,161 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "visualCheck": "Mannetje in eclipskleed in vlucht boven Hongkong. Bruine kop, lichte keel en opvallend blauwgrijze voorvleugel.",
       "alt": "Zomertaling — Mannetje in eclipskleed in vlucht boven Hongkong. Bruine kop, lichte keel en opvallend blauwgrijze voorvleugel.",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+    }
+  },
+  "sp146": {
+    "winter": {
+      "file": "iNaturalist photo 460492953",
+      "author": "Paulo Caseirito",
+      "license": "CC0",
+      "source": "https://www.inaturalist.org/photos/460492953",
+      "image": "/assets/species/plumage/sp146-winter.webp",
+      "width": 1024,
+      "height": 682,
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+      "nl": "Bontbekplevier",
+      "latin": "Charadrius hiaticula",
+      "batch": "small-plovers",
+      "reviewed": "2026-11-06",
+      "verification": "Research-grade waarneming als Charadrius hiaticula. Het afgebeelde kleed is visueel getoetst.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bontbekplevier",
+      "visualCheck": "Bontbekplevier in december in Portugal. Donkere snavel met een lichte basis en gedempte koptekening.",
+      "alt": "Bontbekplevier in december in Portugal. Donkere snavel met een lichte basis en gedempte koptekening.",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "observation": "https://www.inaturalist.org/observations/256791018"
+    },
+    "juv": {
+      "file": "iNaturalist photo 733881501",
+      "author": "Stephen M.",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.inaturalist.org/photos/733881501",
+      "image": "/assets/species/plumage/sp146-juv.webp",
+      "width": 1024,
+      "height": 736,
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+      "nl": "Bontbekplevier",
+      "latin": "Charadrius hiaticula",
+      "batch": "small-plovers",
+      "reviewed": "2026-11-06",
+      "verification": "Research-grade waarneming als Charadrius hiaticula. Het afgebeelde kleed is visueel getoetst.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bontbekplevier",
+      "visualCheck": "Jonge Bontbekplevier in Engeland. Bruine kop en borstband, met een lichte lijn achter het oog.",
+      "alt": "Jonge Bontbekplevier in Engeland. Bruine kop en borstband, met een lichte lijn achter het oog.",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "observation": "https://www.inaturalist.org/observations/399972778"
+    },
+    "breeding": {
+      "reuseGuidePhoto": true
+    }
+  },
+  "sp147": {
+    "breeding": {
+      "reuseGuidePhoto": true
+    },
+    "winter": {
+      "file": "iNaturalist photo 94775001",
+      "author": "Karim Haddad",
+      "license": "CC BY 4.0",
+      "source": "https://www.inaturalist.org/photos/94775001",
+      "image": "/assets/species/plumage/sp147-winter.webp",
+      "width": 1024,
+      "height": 769,
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+      "nl": "Kleine Plevier",
+      "latin": "Charadrius dubius",
+      "batch": "small-plovers",
+      "reviewed": "2026-11-06",
+      "verification": "Research-grade waarneming als Thinornis dubius. Het afgebeelde kleed is visueel getoetst.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kleine-plevier",
+      "visualCheck": "Kleine Plevier in januari in Algerije. De bruine koptekening en borstband zijn minder contrastrijk.",
+      "alt": "Kleine Plevier in januari in Algerije. De bruine koptekening en borstband zijn minder contrastrijk.",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "observation": "https://www.inaturalist.org/observations/59320005"
+    },
+    "juv": {
+      "file": "iNaturalist photo 350059610",
+      "author": "Anthony McDonald",
+      "license": "CC BY 4.0",
+      "source": "https://www.inaturalist.org/photos/350059610",
+      "image": "/assets/species/plumage/sp147-juv.webp",
+      "width": 1024,
+      "height": 771,
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+      "nl": "Kleine Plevier",
+      "latin": "Charadrius dubius",
+      "batch": "small-plovers",
+      "reviewed": "2026-11-06",
+      "verification": "Research-grade waarneming als Thinornis dubius. Het afgebeelde kleed is visueel getoetst.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kleine-plevier",
+      "visualCheck": "Jonge Kleine Plevier in Engeland. Donkere snavel, bruine kop en weinig opvallende oogring.",
+      "alt": "Jonge Kleine Plevier in Engeland. Donkere snavel, bruine kop en weinig opvallende oogring.",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "observation": "https://www.inaturalist.org/observations/198592387"
+    }
+  },
+  "sp206": {
+    "adult_m": {
+      "reuseGuidePhoto": true
+    },
+    "adult_f": {
+      "file": "iNaturalist photo 268541114",
+      "author": "Katerina Kalogerini",
+      "license": "CC BY 4.0",
+      "source": "https://www.inaturalist.org/photos/268541114",
+      "image": "/assets/species/plumage/sp206-adult_f.webp",
+      "width": 1024,
+      "height": 768,
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+      "nl": "Strandplevier",
+      "latin": "Charadrius alexandrinus",
+      "batch": "small-plovers",
+      "reviewed": "2026-11-06",
+      "verification": "Research-grade waarneming als Anarhynchus alexandrinus. Het afgebeelde kleed is visueel getoetst.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/strandplevier",
+      "visualCheck": "Vrouwtje Strandplevier in Griekenland. Bruine koptekening, met een donkere snavel en donkere poten.",
+      "alt": "Vrouwtje Strandplevier in Griekenland. Bruine koptekening, met een donkere snavel en donkere poten.",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "observation": "https://www.inaturalist.org/observations/155359487"
+    },
+    "winter": {
+      "file": "iNaturalist photo 258130184",
+      "author": "Paulo Caseirito",
+      "license": "CC0",
+      "source": "https://www.inaturalist.org/photos/258130184",
+      "image": "/assets/species/plumage/sp206-winter.webp",
+      "width": 691,
+      "height": 691,
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+      "nl": "Strandplevier",
+      "latin": "Charadrius alexandrinus",
+      "batch": "small-plovers",
+      "reviewed": "2026-11-06",
+      "verification": "Research-grade waarneming als Anarhynchus alexandrinus. Het afgebeelde kleed is visueel getoetst.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/strandplevier",
+      "visualCheck": "Strandplevier in februari in Portugal. Bleke bovenzijde, donkere poten en een zijborstvlek.",
+      "alt": "Strandplevier in februari in Portugal. Bleke bovenzijde, donkere poten en een zijborstvlek.",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "observation": "https://www.inaturalist.org/observations/149773050"
+    },
+    "juv": {
+      "file": "iNaturalist photo 565748384",
+      "author": "SteveM4560",
+      "license": "CC BY 4.0",
+      "source": "https://www.inaturalist.org/photos/565748384",
+      "image": "/assets/species/plumage/sp206-juv.webp",
+      "width": 481,
+      "height": 361,
+      "modifications": "Uitsnede rond de hele vogel en omgezet naar WebP",
+      "nl": "Strandplevier",
+      "latin": "Charadrius alexandrinus",
+      "batch": "small-plovers",
+      "reviewed": "2026-11-06",
+      "verification": "Research-grade waarneming als Anarhynchus alexandrinus. Het afgebeelde kleed is visueel getoetst.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/strandplevier",
+      "visualCheck": "Jonge Strandplevier in Bulgarije. Lichte randen aan de rugveren en een kleine bleke zijborstvlek.",
+      "alt": "Jonge Strandplevier in Bulgarije. Lichte randen aan de rugveren en een kleine bleke zijborstvlek.",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "observation": "https://www.inaturalist.org/observations/313289879"
     }
   }
 });

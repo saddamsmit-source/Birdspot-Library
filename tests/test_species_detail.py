@@ -21,6 +21,8 @@ Birdspot Library — H2–H4: soortdetail met tabbladen
   H4-04  jonge Sperwer en Havik tonen juiste borsttekening, kleedfoto en benoemde roepen
   H4-05  Buizerd vergelijkt jonge en volwassen vogels zonder volwassen Buizerd een geslacht toe te kennen
   H4-06  witte reigers vergelijken het juiste kleed, met eigen broedmaanden en veldopnamen
+  H4-07  talingen vergelijken man, vrouw, juveniel en eclipskleed, met lokale roepen
+  H4-08  kleine plevieren vergelijken broedkleed, winterkleed en juveniel; broedkalender volgt de eileg
 
 Starten (vanuit repo-root):  python tests/test_species_detail.py
 """
@@ -505,6 +507,40 @@ def main():
             expect(months).to_be_visible()
             close_detail()
             print("H4-07 OK — talingen per kleed, lokale roepen en broedmaanden")
+
+            open_species("Bontbekplevier", "sp146")
+            expect(p.get_by_label("Nachtelijke vluchtroep van Bontbekplevier")).to_have_count(1)
+            young_plovers = p.locator('.sd-compare').filter(
+                has=p.get_by_role("heading", name="Bontbekplevier en Kleine Plevier · jonge vogels")
+            )
+            assert young_plovers.locator('.sd-badge').all_text_contents() == ["Juveniel", "Juveniel"]
+            assert young_plovers.locator('img').evaluate_all("images => images.map(img => img.getAttribute('src'))") == [
+                "/assets/species/plumage/sp146-juv.webp", "/assets/species/plumage/sp147-juv.webp",
+            ]
+            for picture in young_plovers.locator('img').all():
+                picture.scroll_into_view_if_needed()
+                picture.evaluate("img => img.decode()")
+            winter_plovers = p.locator('.sd-compare').filter(
+                has=p.get_by_role("heading", name="Bontbekplevier en Strandplevier · winterkleed")
+            )
+            assert winter_plovers.locator('.sd-badge').all_text_contents() == ["Winterkleed", "Winterkleed"]
+            assert winter_plovers.locator('img').evaluate_all("images => images.map(img => img.getAttribute('src'))") == [
+                "/assets/species/plumage/sp146-winter.webp", "/assets/species/plumage/sp206-winter.webp",
+            ]
+            young_plovers.get_by_role("button", name="Open soortkaart Kleine Plevier").click()
+            expect(p.get_by_label("Zang en vluchtroep van Kleine Plevier")).to_have_count(1)
+            breeding_plovers = p.locator('.sd-compare').filter(
+                has=p.get_by_role("heading", name="Kleine Plevier en Strandplevier · broedkleed")
+            )
+            breeding_plovers.get_by_role("button", name="Open soortkaart Strandplevier").click()
+            expect(p.get_by_label("Alarmroep van Strandplevier")).to_have_count(1)
+            expect(p.locator('.sd-plumage img[src$="sp206-adult_f.webp"]')).to_have_count(1)
+            tab("status")
+            expect(p.get_by_text('Gebruikelijke broedperiode · mei', exact=True)).to_be_visible()
+            expect(p.get_by_text('Jongen vliegvlug', exact=True)).to_be_visible()
+            assert p.locator('.sd-month-breeding .is-breeding').count() == 1
+            close_detail()
+            print("H4-08 OK — plevieren per kleed, bronfoto's, roepen en broedmaanden")
 
             assert not errors, f"H2-08 paginafouten: {errors}"
             print("H2-08 OK — geen paginafouten")

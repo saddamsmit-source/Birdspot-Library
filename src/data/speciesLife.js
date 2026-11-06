@@ -2045,33 +2045,35 @@ export const LIFE = Object.freeze({
  },
  "sp146": {
   "breeding": {
-   "period": "apr–jul",
-   "nest": "Kuiltje in zand of schelpen op het strand",
-   "eggs": "4",
-   "incubation": "23–25 dagen",
-   "fledging": "24 dagen",
-   "broods": "1–2",
+   "period": "Eileg meestal half april–half juli, soms vanaf eind maart",
+   "nest": "Ondiep kuiltje op kale zand-, schelp- of kiezelgrond. Soms liggen er steentjes, schelpjes of plantenresten in.",
+   "eggs": "Meestal 2–4",
+   "incubation": "21–27 dagen",
+   "fledging": "Nestvlieders, vliegvlug na ongeveer 24 dagen",
+   "broods": "1–2, soms 3",
+   "fledgingLabel": "Jongen vliegvlug",
    "months": "apr-jul"
   },
-  "diet": "Wormen, kreeftjes en insecten",
-  "behaviour": "Rennen, stoppen en pikken; gebroken-vleugeltruc bij het nest",
-  "migration": "Zomergast en doortrekker; overwintert in West-Afrika en West-Europa",
-  "voice": "Zacht oplopend \"tuu-ip\""
+  "diet": "Kleine ongewervelden, waaronder wormen, wadslakjes, kreeftachtigen en insecten.",
+  "behaviour": "Zoekt voedsel op zicht. Loopt korte stukjes, staat stil en pikt een prooi van de bodem. Op het wad volgt de soort vaak het getij.",
+  "migration": "Jaarrond aanwezig in Nederland, met kleine aantallen in de winter. Veel eigen broedvogels trekken naar Zuidwest-Europa of Noord-Afrika. Arctische doortrekkers kunnen verder naar West-Afrika.",
+  "voice": "Zachte, tweetonige fluitroep die omhoog buigt. In de baltsvlucht klinkt een ritmisch herhaalde roep."
  },
  "sp147": {
   "breeding": {
-   "period": "apr–jul",
-   "nest": "Kuiltje op kale grond, grind of bouwterrein",
-   "eggs": "4",
-   "incubation": "24–25 dagen",
-   "fledging": "24–29 dagen",
-   "broods": "1–2",
+   "period": "Eileg begin april–begin juli, soms tot in augustus",
+   "nest": "Ondiep kuiltje op kale grond, meestal met enkele steentjes.",
+   "eggs": "Meestal 3–4",
+   "incubation": "22–28 dagen",
+   "fledging": "Nestvlieders, vliegvlug na 24–29 dagen",
+   "broods": "1–2, volgens Vogelbescherming soms 3",
+   "fledgingLabel": "Jongen vliegvlug",
    "months": "apr-jul"
   },
-  "diet": "Insecten en spinnen",
-  "behaviour": "Broedt op kale terreinen, ook op bouwplaatsen en daken",
-  "migration": "Zomergast (mrt–sep); overwintert in West-Afrika",
-  "voice": "Aflopend \"pieu\"; ratelende baltsvlucht"
+  "diet": "Vooral insecten en hun larven, daarnaast spinnen en andere kleine ongewervelden.",
+  "behaviour": "Pionier op open zand- en grindgrond. Zoekt op zicht naar prooi en wisselt korte renstukjes af met stilstaan en pikken.",
+  "migration": "Trekt weg uit Nederland. Europese broedvogels overwinteren vooral in Afrika, onder meer ten zuiden van de Sahara.",
+  "voice": "De gewone roep is een korte, aflopende fluittoon. Tijdens balts of in vlucht kan een sneller herhaalde reeks te horen zijn."
  },
  "sp148": {
   "breeding": null,
@@ -2746,18 +2748,19 @@ export const LIFE = Object.freeze({
  },
  "sp206": {
   "breeding": {
-   "period": "apr–jul",
-   "nest": "Kuiltje in zand of schelpen op een open strand",
-   "eggs": "3",
-   "incubation": "24–27 dagen",
-   "fledging": "27–31 dagen",
-   "broods": "1–2",
-   "months": "apr-jul"
+   "period": "Eileg vooral in mei",
+   "nest": "Ondiep kuiltje in kale of schaars begroeide grond, vaak met schelpjes of steentjes.",
+   "eggs": "Meestal 3",
+   "incubation": "23–29 dagen",
+   "fledging": "Nestvlieders, vliegvlug na 27–31 dagen",
+   "broods": "Meestal 1",
+   "fledgingLabel": "Jongen vliegvlug",
+   "months": "mei"
   },
-  "diet": "Kleine kreeftjes, wormen en insecten",
-  "behaviour": "Broedt op rustige stranden; zeer gevoelig voor verstoring",
-  "migration": "Zomergast (mrt–sep); overwintert in Zuid-Europa en West-Afrika",
-  "voice": "Zacht \"pruit\" en rollend \"pirr\""
+  "diet": "Pikt insecten, spinnen en slakjes op. Langs de kust ook kleine kreeftachtigen en wormen.",
+  "behaviour": "Rent korte stukken en pikt prooien op zicht. Zoekt langs het strand vaak voedsel tussen aangespoeld materiaal.",
+  "migration": "West-Europese broedvogels overwinteren vooral in Zuidwest-Europa, mogelijk ook in Noord- en West-Afrika. In Nederland zijn winterwaarnemingen uitzonderlijk.",
+  "voice": "Korte, zacht fluitende roep en een rollend rateltje. Een vluchtroep en de korte baltszang zijn apart te beluisteren."
  },
  "sp207": {
   "breeding": null,
