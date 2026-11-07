@@ -492,7 +492,7 @@ function initMap(screenEl, sightings, leafletOk = true) {
     addPinBtn.hidden = on;
     addPinBtn.setAttribute('aria-pressed', String(on));
     if (on) {
-      map.stop();
+      map.stop?.();
       setFilterOpen(false);
       updatePin();
     }
