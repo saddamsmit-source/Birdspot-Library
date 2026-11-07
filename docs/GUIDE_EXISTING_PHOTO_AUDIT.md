@@ -34,9 +34,9 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp033 | Kuifmees | Ja | 3 | Apart beeld |
 | sp034 | Staartmees | Ja | 3 | Apart beeld |
 | sp035 | Vink | Ja | 3 | Apart beeld |
-| sp036 | Groenling | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp037 | Putter | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp038 | Sijs | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp036 | Groenling | Ja | 3 | Apart beeld |
+| sp037 | Putter | Ja | 3 | Apart beeld |
+| sp038 | Sijs | Ja | 3 | Apart beeld |
 | sp039 | Kneu | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp040 | Goudvink | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp041 | Appelvink | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
@@ -257,3 +257,15 @@ Basis is concept-PR #63, 05bd80006df48aa2f934f4504a90620350a0c350. Voor Staartme
 CAP-BIRD-012/015. Iedere soort krijgt een eigen vluchtfoto vóór het verenkleed. De vluchtfoto’s zijn afzonderlijke opnamen en worden vanaf lokale bestanden geladen. Volgende soort is Groenling. Na deze batch staan 97 soorten op de zoeklijst.
 
 Mobiele Chromium-test op 390 px: alle drie de kaarten geopend. De lokale vluchtfoto is afzonderlijk zichtbaar, staat vóór het verenkleed en opent met 2× zoom. Alle drie de bestanden decoderen en hebben een unieke SHA-256 in de gids- en showcasebibliotheek. Gidsdekking en positie- en uniciteitstest zijn geslaagd. Fysieke toesteltest staat open.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 7
+
+Basis is concept-PR #64, b9c63a25ba88135751cd7db61507cfa29e271d10. Voor Groenling en Putter zijn meerdere foto’s uit de Commons-vluchtcategorieën visueel vergeleken. Voor Sijs zijn ook Flickr en andere fotoplatforms doorzocht op Engelse, Nederlandse, Franse, Duitse en wetenschappelijke soortnamen. Expliciete Flickr-vluchtfoto’s met alle rechten voorbehouden vielen af. De onder een vrije licentie beschikbare opname heeft een algemene titel en toont een mannetje dat vrij aanvliegt op een voederplek. De uitsnede isoleert die vogel. De vleugel heeft enige bewegingsonscherpte.
+
+- Groenling · Bengt Nyman · CC BY-SA 2.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:NZ7_6126_(51832454526).jpg)
+- Putter · Bengt Nyman · CC BY-SA 2.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:NZ7_6264_(51833186500).jpg)
+- Sijs · john.purvis · CC BY 2.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Runway_Three_-_Flickr_-_john.purvis.jpg)
+
+CAP-BIRD-012/015. Groenling en Sijs staan in een vluchtvergelijking op basis van snavel en vleugeltekening. Putter heeft een eigen vluchtfoto. De foto's zijn lokale WebP-bestanden en staan elk eenmaal op de soortkaart, boven het verenkleed. Bron, maker, licentie en bewerking staan bij de beelden. Na deze ronde staan 94 soorten op de zoeklijst. Volgende soort is Kneu.
+
+Mobiele Chromium-test op 390 px: alle drie de kaarten geopend. De eigen foto staat vooraan, de beelden decoderen, de bronlinks zijn zichtbaar en 2× zoom werkt. Gidsdekking, foto-opmaak, volgorde en uniciteitstests zijn geslaagd. Alle drie de bestanden hebben een unieke SHA-256 tussen de appbeelden. Fysieke toesteltest staat open.

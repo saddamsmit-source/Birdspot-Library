@@ -873,6 +873,15 @@ export const GUIDE_COMPARISONS = [
     ],
     tip: 'Gebruik deze foto’s voor de vlieghouding. Luister bij twijfel naar de roep en bekijk de kop en gevouwen vleugel bij goed licht.',
   },
+  {
+    label: 'Groenling en Sijs · in vlucht',
+    flight: true,
+    birds: [
+      {id: 'sp036', source: 'groenling', marks: 'Stevige snavel en forsere bouw. Het geel valt op langs de buitenste vleugelpennen.'},
+      {id: 'sp038', source: 'sijs', marks: 'Kleinere, fijnere snavel en een gele vleugelband. Het mannetje op de foto heeft een zwarte kruin.'},
+    ],
+    tip: 'Vergelijk snavelvorm en vleugeltekening. De opnamen zijn op verschillende afstanden gemaakt.',
+  },
 ];
 
 export function comparisonSource(bird) {

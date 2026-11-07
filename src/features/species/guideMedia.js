@@ -4782,5 +4782,74 @@ export const GUIDE_POSES = Object.freeze({
       "height": 900,
       "image": "/assets/species/plumage/sp035-flight.webp"
     }
+  ],
+  "sp036": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "Let op de stevige snavel en de gele randen van de buitenste vleugelpennen.",
+      "file": "NZ7 6126 (51832454526).jpg",
+      "nl": "Groenling",
+      "latin": "Chloris chloris",
+      "author": "Bengt Nyman",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:NZ7_6126_(51832454526).jpg",
+      "showSourceLink": true,
+      "alt": "Groenling in vlucht met geheven vleugels, een stevige snavel en gele randen aan de slagpennen.",
+      "modifications": "Omgezet naar WebP zonder extra uitsnede",
+      "reviewed": "2026-11-07",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/groenling",
+      "visualCheck": "Groenling in vlucht met geheven vleugels, een stevige snavel en gele randen aan de slagpennen.",
+      "width": 1050,
+      "height": 1050,
+      "image": "/assets/species/plumage/sp036-flight.webp"
+    }
+  ],
+  "sp037": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "De brede gele vleugelband en het rode gezicht zijn goed zichtbaar.",
+      "file": "NZ7 6264 (51833186500).jpg",
+      "nl": "Putter",
+      "latin": "Carduelis carduelis",
+      "author": "Bengt Nyman",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:NZ7_6264_(51833186500).jpg",
+      "showSourceLink": true,
+      "alt": "Putter in vlucht met een rood gezicht en een brede gele band over de gespreide zwarte vleugel.",
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+      "reviewed": "2026-11-07",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/putter",
+      "visualCheck": "Putter in vlucht met een rood gezicht en een brede gele band over de gespreide zwarte vleugel.",
+      "width": 1400,
+      "height": 800,
+      "image": "/assets/species/plumage/sp037-flight.webp"
+    }
+  ],
+  "sp038": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "Let op de zwarte kruin en de gele vleugelband. De vleugel is iets onscherp door beweging.",
+      "file": "Runway Three - Flickr - john.purvis.jpg",
+      "nl": "Sijs",
+      "latin": "Spinus spinus",
+      "author": "john.purvis",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Runway_Three_-_Flickr_-_john.purvis.jpg",
+      "showSourceLink": true,
+      "alt": "Mannetje Sijs in vlucht met een zwarte kruin en een gele band op de opgeheven vleugel.",
+      "modifications": "Uitgesneden rond de vliegende Sijs, verkleind en omgezet naar WebP",
+      "reviewed": "2026-11-07",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/sijs",
+      "visualCheck": "Mannetje Sijs in vlucht met een zwarte kruin en een gele band op de opgeheven vleugel.",
+      "width": 1141,
+      "height": 1400,
+      "image": "/assets/species/plumage/sp038-flight.webp"
+    }
   ]
 });
