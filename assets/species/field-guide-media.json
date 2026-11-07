@@ -5219,6 +5219,52 @@
         "height": 1400,
         "image": "/assets/species/plumage/sp058-flight.webp"
       }
+    ],
+    "sp061": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "De lichte keel is te zien. Door de afstand en het tegenlicht blijft fijn verenkleeddetail beperkt.",
+        "file": "iNaturalist photo 197056025",
+        "nl": "Grasmus",
+        "latin": "Curruca communis",
+        "author": "Nigel Bentley",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://www.inaturalist.org/photos/197056025",
+        "showSourceLink": true,
+        "alt": "Grasmus in vrije vlucht tegen een blauwe lucht, met de lichte keel zichtbaar.",
+        "modifications": "Uitgesneden rond de vogel en omgezet naar WebP",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grasmus",
+        "visualCheck": "Grasmus in vrije vlucht tegen een blauwe lucht, met de lichte keel zichtbaar.",
+        "width": 550,
+        "height": 478,
+        "image": "/assets/species/plumage/sp061-flight.webp"
+      }
+    ],
+    "sp063": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Deze vluchtfoto toont de Oost-Aziatische ondersoort japonensis. Let op de compacte bouw en de gespreide vleugels.",
+        "file": "Regulus regulus japonensis in flight.JPG",
+        "nl": "Goudhaantje",
+        "latin": "Regulus regulus",
+        "author": "Alpsdake",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Regulus_regulus_japonensis_in_flight.JPG",
+        "showSourceLink": true,
+        "alt": "Goudhaantje van de Oost-Aziatische ondersoort japonensis in vlucht tussen takken, met gespreide vleugels.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/goudhaan",
+        "visualCheck": "Goudhaantje van de Oost-Aziatische ondersoort japonensis in vlucht tussen takken, met gespreide vleugels.",
+        "width": 1312,
+        "height": 1400,
+        "image": "/assets/species/plumage/sp063-flight.webp"
+      }
     ]
   }
 }
