@@ -1678,6 +1678,40 @@ export const GUIDE_AUDIO = Object.freeze({
       "duration": 33.802449,
       "originalURL": "https://xeno-canto.org/466466/download",
       "audio": "/assets/species/audio/sp128-a1.mp3"
+    },
+    {
+      "file": "Common Shelduck (Tadorna tadorna) (W1CDR0001430 BD7).ogg",
+      "label": "Roepende groep",
+      "note": "Meerdere roepende Bergeenden in het Tavy-estuarium, Devon, Engeland.",
+      "author": "Lawrence Shove / © The British Library Board",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Common_Shelduck_%28Tadorna_tadorna%29_%28W1CDR0001430_BD7%29.ogg",
+      "modifications": "Omgezet naar MP3 (mono), volledige opname zonder knippen",
+      "reviewed": "2026-11-07",
+      "taxon": "Tadorna tadorna",
+      "verification": "Taxon, geluidstype en licentie gecontroleerd in de opnamebron; volledig bestand technisch gedecodeerd. Geen onafhankelijke auditieve determinatie.",
+      "duration": 73.299592,
+      "originalURL": "https://upload.wikimedia.org/wikipedia/commons/1/13/Common_Shelduck_%28Tadorna_tadorna%29_%28W1CDR0001430_BD7%29.ogg",
+      "audio": "/assets/species/audio/sp128-a2.mp3"
+    }
+  ],
+  "sp092": [
+    {
+      "file": "Tufted Duck.ogg",
+      "label": "Roep",
+      "note": "De bron vermeldt roep; geslacht en locatie zijn niet opgegeven.",
+      "author": "Jamescandless",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Tufted_Duck.ogg",
+      "modifications": "Omgezet naar MP3 (mono), volledige opname zonder knippen",
+      "reviewed": "2026-11-07",
+      "taxon": "Aythya fuligula",
+      "verification": "Taxon, geluidstype en licentie gecontroleerd in de opnamebron; volledig bestand technisch gedecodeerd. Geen onafhankelijke auditieve determinatie.",
+      "duration": 4.231837,
+      "originalURL": "https://upload.wikimedia.org/wikipedia/commons/1/13/Tufted_Duck.ogg",
+      "audio": "/assets/species/audio/sp092-a1.mp3"
     }
   ]
 });
@@ -3728,6 +3762,25 @@ export const GUIDE_PLUMAGE = Object.freeze({
   "sp128": {
     "adult_m": {
       "reuseGuidePhoto": true
+    },
+    "juv": {
+      "file": "Brandgans Küken, Borkum.JPG",
+      "nl": "Bergeend",
+      "latin": "Tadorna tadorna",
+      "author": "Daniel Holl (Herunumen)",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Brandgans_K%C3%BCken%2C_Borkum.JPG",
+      "alt": "Bergeend — donsjongen met een zwart-wit patroon.",
+      "modifications": "Verkleind en omgezet naar WebP zonder extra uitsnede",
+      "reviewed": "2026-11-07",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bergeend",
+      "visualCheck": "Bron benoemt Brandgans-Küken / Young Common Shelducks op Borkum; zichtbare donsjongen gecontroleerd, niet verwarren met oudere juvenielen.",
+      "verification": "Bron benoemt Brandgans-Küken / Young Common Shelducks op Borkum; zichtbare donsjongen gecontroleerd, niet verwarren met oudere juvenielen.",
+      "width": 1600,
+      "height": 1200,
+      "originalURL": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Brandgans_K%C3%BCken%2C_Borkum.JPG",
+      "image": "/assets/species/plumage/sp128-juv.webp"
     }
   },
   "sp132": {
