@@ -5265,6 +5265,29 @@
         "height": 1400,
         "image": "/assets/species/plumage/sp063-flight.webp"
       }
+    ],
+    "sp065": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Let op de donkere oogstreep, de blauwgrijze bovenzijde en de korte, gespreide staart.",
+        "file": "Kleiber Flug.jpg",
+        "nl": "Boomklever",
+        "latin": "Sitta europaea",
+        "author": "C. Robiller / naturlichter.de",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Kleiber_Flug.jpg",
+        "showSourceLink": true,
+        "alt": "Boomklever in vlucht met uitgespreide vleugels, blauwgrijze bovenzijde en een donkere oogstreep.",
+        "modifications": "Omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/boomklever",
+        "visualCheck": "Boomklever in vlucht met uitgespreide vleugels, blauwgrijze bovenzijde en een donkere oogstreep.",
+        "width": 640,
+        "height": 640,
+        "image": "/assets/species/plumage/sp065-flight.webp"
+      }
     ]
   }
 }
