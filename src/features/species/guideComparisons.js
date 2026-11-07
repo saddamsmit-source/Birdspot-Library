@@ -782,6 +782,22 @@ export const GUIDE_COMPARISONS = [
     ],
     tip: 'Let op vleugelvorm en staart. Bij tegenlicht is het silhouet bruikbaarder dan de kleur.',
   },
+  {
+    label: 'Visdief en Noordse Stern · broedkleed',
+    birds: [
+      {id: 'sp165', source: 'visdief', plumage: 'breeding', marks: 'Langere oranjerode snavel, meestal met zwarte punt. De poten zijn langer.'},
+      {id: 'sp166', source: 'noordse-stern', plumage: 'breeding', marks: 'Kortere, doorgaans geheel bloedrode snavel en zeer korte poten.'},
+    ],
+    tip: 'Gebruik snavel en poten samen. Buiten het broedkleed veranderen kleuren en werkt deze combinatie minder goed.',
+  },
+  {
+    label: 'Grote Stern en Visdief · broedkleed',
+    birds: [
+      {id: 'sp167', source: 'grote-stern', plumage: 'breeding', marks: 'Zwarte snavel met gele punt, rafelige kuif en zwarte poten.'},
+      {id: 'sp165', source: 'visdief', plumage: 'breeding', marks: 'Oranjerode snavel met meestal zwarte punt en rode poten.'},
+    ],
+    tip: 'Kijk bij twijfel naar de volledige snavel en pootkleur. De gele punt kan op afstand wegvallen.',
+  },
 ];
 
 export function comparisonSource(bird) {

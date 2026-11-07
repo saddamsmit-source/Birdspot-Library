@@ -2259,11 +2259,11 @@ export const LIFE = Object.freeze({
  },
  "sp165": {
   "breeding": {
-   "period": "mei–jul",
-   "nest": "Kuiltje op de grond in een kolonie, ook op vlotjes",
+   "period": "Meestal mei tot begin juni",
+   "nest": "Kuiltje op schaars begroeide grond in een kolonie, ook op vlotten of daken.",
    "eggs": "2–3",
-   "incubation": "21–22 dagen",
-   "fledging": "22–28 dagen",
+   "incubation": "21–24 dagen",
+   "fledging": "23–27 dagen",
    "broods": "1",
    "months": "mei-jul"
   },
@@ -2274,31 +2274,31 @@ export const LIFE = Object.freeze({
  },
  "sp166": {
   "breeding": {
-   "period": "mei–jul",
+   "period": "Eind april tot juni",
    "nest": "Kuiltje in zand of schelpen in een kolonie",
-   "eggs": "1–3",
-   "incubation": "21–22 dagen",
+   "eggs": "2–3, meestal 2",
+   "incubation": "22–27 dagen",
    "fledging": "21–24 dagen",
    "broods": "1",
-   "months": "mei-jul"
+   "months": "apr-jun"
   },
   "diet": "Kleine vis en kreeftjes",
-  "behaviour": "Langste vogeltrek ter wereld; agressief bij de kolonie",
+  "behaviour": "Broedt vaak met Visdieven en Kokmeeuwen. Trekt na het broedseizoen naar zuidelijke oceaangebieden.",
   "migration": "Zomergast (mei–aug); overwintert rond Antarctica",
   "voice": "Hoger en korter dan de Visdief: \"kriie-ah\""
  },
  "sp167": {
   "breeding": {
-   "period": "mei–jul",
+   "period": "Vanaf eind april of begin mei",
    "nest": "Ondiepe kuil in een dichte kolonie op eilanden",
    "eggs": "1–2",
-   "incubation": "23–25 dagen",
-   "fledging": "28–30 dagen",
+   "incubation": "22–26 dagen",
+   "fledging": "25–35 dagen",
    "broods": "1",
-   "months": "mei-jul"
+   "months": "apr-jul"
   },
   "diet": "Haring, zandspiering en sprot",
-  "behaviour": "Broedt dicht opeen, vaak tussen Kokmeeuwen",
+  "behaviour": "Broedt dicht opeen. Na het uitvliegen blijven jongen nog weken afhankelijk van aangevoerde vis.",
   "migration": "Zomergast (mrt–sep); overwintert langs de West-Afrikaanse kust",
   "voice": "Luid, raspend \"kier-rik\""
  },

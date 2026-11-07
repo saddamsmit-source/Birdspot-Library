@@ -3912,6 +3912,69 @@
         "height": 833,
         "image": "/assets/species/plumage/sp141-adult.webp"
       }
+    },
+    "sp165": {
+      "breeding": {
+        "file": "Common tern (Sterna hirundo).jpg",
+        "nl": "Visdief",
+        "latin": "Sterna hirundo",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Common_tern_(Sterna_hirundo).jpg",
+        "showSourceLink": false,
+        "alt": "Visdief in broedkleed met oranjerode snavel, zwarte snavelpunt en rode poten.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/visdief",
+        "visualCheck": "Visdief in broedkleed met oranjerode snavel, zwarte snavelpunt en rode poten.",
+        "verification": "Bronbeschrijving en zichtbare veldkenmerken vergeleken.",
+        "width": 1250,
+        "height": 833,
+        "image": "/assets/species/plumage/sp165-adult.webp"
+      }
+    },
+    "sp166": {
+      "breeding": {
+        "file": "Arctic tern (Sterna paradisaea) with eel Blonduos.jpg",
+        "nl": "Noordse Stern",
+        "latin": "Sterna paradisaea",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Arctic_tern_(Sterna_paradisaea)_with_eel_Blonduos.jpg",
+        "showSourceLink": false,
+        "alt": "Noordse Stern in broedkleed in vlucht met zwarte kap, lange staartpennen en doorschijnende handpennen.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/noordse-stern",
+        "visualCheck": "Noordse Stern in broedkleed in vlucht met zwarte kap, lange staartpennen en doorschijnende handpennen.",
+        "verification": "Bronbeschrijving en zichtbare veldkenmerken vergeleken.",
+        "width": 1250,
+        "height": 833,
+        "image": "/assets/species/plumage/sp166-adult.webp"
+      }
+    },
+    "sp167": {
+      "breeding": {
+        "file": "Sandwich TernSterna sandvicensis.jpg",
+        "nl": "Grote Stern",
+        "latin": "Thalasseus sandvicensis",
+        "author": "Andreas Trepte",
+        "license": "CC BY-SA 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/",
+        "source": "https://commons.wikimedia.org/wiki/File:Sandwich_TernSterna_sandvicensis.jpg",
+        "showSourceLink": false,
+        "alt": "Grote Stern in broedkleed in vlucht met zwarte kap, lichte onderzijde en zwarte snavel met gele punt.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-stern",
+        "visualCheck": "Grote Stern in broedkleed in vlucht met zwarte kap, lichte onderzijde en zwarte snavel met gele punt.",
+        "verification": "Bronbeschrijving en zichtbare veldkenmerken vergeleken.",
+        "width": 1250,
+        "height": 833,
+        "image": "/assets/species/plumage/sp167-adult.webp"
+      }
     }
   },
   "poses": {
