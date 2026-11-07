@@ -4851,6 +4851,75 @@
         "height": 1400,
         "image": "/assets/species/plumage/sp038-flight.webp"
       }
+    ],
+    "sp039": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Let op de lichte vleugeltekening. Deze opname op afstand toont twee vogels uit een grotere groep.",
+        "file": "iNaturalist-foto 617561306",
+        "nl": "Kneu",
+        "latin": "Linaria cannabina",
+        "author": "Codrin Bucur",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://www.inaturalist.org/photos/617561306",
+        "showSourceLink": true,
+        "alt": "Twee Kneuen in zijaanzicht in vlucht tegen een grijze lucht, met lichte randen aan de vleugelpennen.",
+        "modifications": "Uitgesneden rond twee vogels uit de groep en omgezet naar WebP",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kneu",
+        "visualCheck": "Twee Kneuen in zijaanzicht in vlucht tegen een grijze lucht, met lichte randen aan de vleugelpennen.",
+        "width": 1045,
+        "height": 470,
+        "image": "/assets/species/plumage/sp039-flight.webp"
+      }
+    ],
+    "sp040": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "De witte stuit contrasteert met de zwarte staart. Ook de rode borst van het mannetje is goed zichtbaar.",
+        "file": "26 Gramm Fluggewicht erreicht ein Dompfaff. 01.jpg",
+        "nl": "Goudvink",
+        "latin": "Pyrrhula pyrrhula",
+        "author": "Holger Uwe Schmitt",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:26_Gramm_Fluggewicht_erreicht_ein_Dompfaff._01.jpg",
+        "showSourceLink": true,
+        "alt": "Mannetje Goudvink in zijaanzicht in vlucht met een rode borst, zwarte kop en witte stuit.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/goudvink",
+        "visualCheck": "Mannetje Goudvink in zijaanzicht in vlucht met een rode borst, zwarte kop en witte stuit.",
+        "width": 1400,
+        "height": 1400,
+        "image": "/assets/species/plumage/sp040-flight.webp"
+      }
+    ],
+    "sp041": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "De brede lichte vleugelband en de compacte bouw vallen op. De opname is van afstand gemaakt.",
+        "file": "iNaturalist-foto 576075793",
+        "nl": "Appelvink",
+        "latin": "Coccothraustes coccothraustes",
+        "author": "Codrin Bucur",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://www.inaturalist.org/photos/576075793",
+        "showSourceLink": true,
+        "alt": "Appelvink in zijaanzicht in vlucht tegen een blauwe lucht met een brede lichte band op de omhooggeheven vleugel.",
+        "modifications": "Eén vogel uitgesneden uit de opname en omgezet naar WebP",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/appelvink",
+        "visualCheck": "Appelvink in zijaanzicht in vlucht tegen een blauwe lucht met een brede lichte band op de omhooggeheven vleugel.",
+        "width": 330,
+        "height": 275,
+        "image": "/assets/species/plumage/sp041-flight.webp"
+      }
     ]
   }
 }
