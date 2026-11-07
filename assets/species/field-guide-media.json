@@ -4018,7 +4018,9 @@
         "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/torenvalk",
         "visualCheck": "Torenvalk biddend, van voren en onderen: gespreide vleugels en lange waaiervormige staart. Geslacht niet vastgesteld.",
         "width": 1600,
-        "height": 1004
+        "height": 1004,
+        "flight": true,
+        "showSourceLink": false
       }
     ],
     "sp009": [
@@ -4312,6 +4314,52 @@
         "image": "/assets/species/plumage/sp116-nestwand.webp",
         "label": "Bij de nestwand",
         "note": "De vogel hangt bij de ingang van een uitgegraven gang. Op dit beeld is de borstband beperkt zichtbaar."
+      }
+    ],
+    "sp006": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Let op de relatief korte vleugels, de kleine kop en de lange staart.",
+        "file": "Eurasian sparrowhawk 2023 12 31 01.jpg",
+        "nl": "Sperwer",
+        "latin": "Accipiter nisus",
+        "author": "Alexis Lours",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Eurasian_sparrowhawk_2023_12_31_01.jpg",
+        "showSourceLink": false,
+        "alt": "Volwassen man Sperwer in vlucht met korte brede vleugels, gebandeerde staart en roestkleurige onderzijde.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/sperwer",
+        "visualCheck": "Volwassen man Sperwer in vlucht met korte brede vleugels, gebandeerde staart en roestkleurige onderzijde.",
+        "width": 1400,
+        "height": 933,
+        "image": "/assets/species/plumage/sp006-flight.webp"
+      }
+    ],
+    "sp007": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "De fijne dwarsbanden passen bij volwassen kleed. Kijk ook naar de zware bouw en de uitstekende kop.",
+        "file": "Northern Goshawk (Accipiter gentilis) (1).JPG",
+        "nl": "Havik",
+        "latin": "Accipiter gentilis",
+        "author": "Ken Billington",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Northern_Goshawk_(Accipiter_gentilis)_(1).JPG",
+        "showSourceLink": false,
+        "alt": "Havik in vlucht met brede vleugel, stevige borst, lange staart en fijne dwarsbanden op de onderzijde.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/havik",
+        "visualCheck": "Havik in vlucht met brede vleugel, stevige borst, lange staart en fijne dwarsbanden op de onderzijde.",
+        "width": 800,
+        "height": 450,
+        "image": "/assets/species/plumage/sp007-flight.webp"
       }
     ]
   }

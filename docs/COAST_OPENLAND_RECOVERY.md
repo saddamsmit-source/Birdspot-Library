@@ -86,3 +86,16 @@ Basis: concept-PR #48 op e9d3ceea79f58ae122e6390827758506a7f81aba. De twaalf CI-
 - [Grote Stern](https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-stern): maten, broedgegevens, kustvindplaatsen, fotografietip en vergelijking met Visdief. [Lokale broedkleedfoto · Andreas Trepte · CC BY-SA 2.5](https://commons.wikimedia.org/wiki/File:Sandwich_TernSterna_sandvicensis.jpg)
 
 Drie gedecodeerde lokale WebP-bestanden, zichtbare credits en licenties, fotobronnen in het ontwikkelregister. Fysiek toestel niet getest.
+
+## Batch 7 · unieke gidsfoto’s, zoom en vluchtvergelijking
+
+Basis: #51 op 387d053141b21d20358b374a3cfa175973b7c082. CAP-BIRD-012/015.
+
+- De hoofdfoto heeft voorrang. Een gidsfoto wordt op dezelfde soortkaart één keer getoond. Foto’s worden herkend op lokaal pad en herkomst. Kleedtekst en vergelijkingen blijven leesbaar als een beeld al elders op de kaart staat.
+- Tik op de hoofdfoto, een gidsfoto of een eigen foto om de viewer te openen. Tik op de foto of gebruik de knoppen voor 1×, 2× of 4× en verschuif het ingezoomde beeld. Sluiten herstelt de focus op de geopende foto.
+- De aparte vluchtvergelijking staat onder de andere vergelijkingen. Sperwer, Havik en Torenvalk tonen drie lokale vluchtbeelden. Mannetje, vrouwtje en juveniel houden afzonderlijke kaarten waar betrouwbare beelden bestaan. De drie hoofdfoto’s tonen volwassen mannetjes en worden niet nogmaals gebruikt op de eigen soortkaart.
+- [Sperwer · Alexis Lours · CC BY 4.0](https://commons.wikimedia.org/wiki/File:Eurasian_sparrowhawk_2023_12_31_01.jpg): volwassen man in vlucht, met roestkleurige onderzijde en gebandeerde staart.
+- [Havik · Ken Billington · CC BY-SA 3.0](https://commons.wikimedia.org/wiki/File:Northern_Goshawk_(Accipiter_gentilis)_(1).JPG): vluchtbeeld met fijne dwarsbanden passend bij volwassen kleed.
+- [Torenvalk · Rolf Dietrich Brecher · CC BY 2.0](https://commons.wikimedia.org/wiki/File:Falco_tinnunculus_in_flight_(45067938032).jpg): bestaand biddend vluchtbeeld, leeftijd en geslacht niet vastgesteld. Vluchtbeelden laden lokaal. Licenties staan bij de foto, herkomstlinks staan in het register.
+
+Volgende gidsbatches vullen ontbrekende volwassen vluchtbeelden per soort in. Gebruik aparte, geverifieerde foto’s voor kleden en vergelijkingen wanneer hetzelfde bronbeeld al op de kaart staat. Houd de vluchtbeelden onderaan. Fysiek toestel niet getest.

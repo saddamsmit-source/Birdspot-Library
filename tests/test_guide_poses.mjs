@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 import { SPECIES } from '../src/data/species.js';
 import { GUIDE_AUDIO, GUIDE_PLUMAGE, GUIDE_POSES } from '../src/features/species/guideMedia.js';
+import { GUIDE_PHOTOS } from '../src/features/species/guidePhotos.js';
 import { recognitionPanel, wherePanel } from '../src/features/species/detailSections.js';
 
 const registry = JSON.parse(readFileSync(new URL('../assets/species/field-guide-media.json', import.meta.url)));
@@ -10,13 +11,14 @@ assert.deepEqual(GUIDE_POSES, registry.poses, 'Generated poses must match the so
 const species = new Map(SPECIES.map(s => [s.id, s]));
 for (const [id, poses] of Object.entries(GUIDE_POSES)) {
   const html = recognitionPanel(species.get(id));
-  const heading = poses.some(p => /vlucht|biddend/i.test(p.label)) ? 'Zittend en in vlucht' : 'Herkenning in beeld';
-  assert.ok(html.includes(`aria-label="${heading}"`), 'The heading must describe the actual viewing angles');
+  const ownMain = GUIDE_PHOTOS[id]?.image;
   assert.ok(poses.length >= 1 && poses.length <= 2);
   for (const pose of poses) {
     assert.ok(existsSync(new URL('..' + pose.image, import.meta.url)), pose.image);
-    assert.ok(html.includes(`data-guide-image="${pose.image}"`), 'Pose must use the existing accessible viewer');
-    assert.ok(html.includes(pose.licenseUrl), 'License must remain available with the photo');
+    const buttons = [...html.matchAll(/data-guide-image="([^"]+)"/g)].filter(match => match[1] === pose.image);
+    assert.equal(buttons.length, pose.image === ownMain ? 0 : 1, pose.image);
+    if (pose.image !== ownMain) assert.ok(html.includes(pose.licenseUrl), 'License must remain available');
+    if (pose.flight) assert.ok(html.indexOf(pose.image) > html.indexOf('Sperwer, Havik en Torenvalk · in vlucht'));
   }
 }
 const withoutPoses = SPECIES.find(s => !GUIDE_POSES[s.id]);
@@ -32,6 +34,9 @@ console.log('VERIFIED optional posture rendering, media wiring, shared adult lab
 // Plumage evidence must appear before look-alike comparisons, across all cards.
 for (const s of SPECIES) {
   const html = recognitionPanel(s);
+  const images = [...html.matchAll(/data-guide-image="([^"]+)"/g)].map(match => match[1]);
+  assert.equal(images.length, new Set(images).size, `Duplicate image on ${s.id}`);
+  assert.ok(!images.includes(GUIDE_PHOTOS[s.id]?.image), `Repeated main image on ${s.id}`);
   const plumage = html.indexOf('class="sd-plumage-list"');
   const comparison = html.indexOf('class="sd-compare"');
   if (plumage >= 0 && comparison >= 0) {
