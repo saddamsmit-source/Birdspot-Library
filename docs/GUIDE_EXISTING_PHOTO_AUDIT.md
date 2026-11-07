@@ -2,9 +2,9 @@
 
 Baseline: concept-PR #53, bbadaa799d870f1659c692fefb7998241cd81014. CAP-BIRD-012 en CAP-BIRD-015.
 
-**134 soorten, 127 hoofdfoto’s, 236 unieke lokale beeldbestanden.** Vluchtstatus: 10 hoofdfoto’s in vlucht, 6 aparte vluchtbeelden en 3 kaarten met een vluchtvergelijking. 20 soorten zijn visueel gecontroleerd zonder bestaand vluchtbeeld. 95 soorten vragen vervolgcontrole.
+**134 soorten, 127 hoofdfoto’s, 236 unieke lokale beeldbestanden.** Vluchtstatus: 10 hoofdfoto’s in vlucht, 6 aparte vluchtbeelden en 3 kaarten met een vluchtvergelijking. 40 soorten zijn visueel gecontroleerd zonder bestaand vluchtbeeld. 75 soorten vragen vervolgcontrole.
 
-Technische controle op alle soorten met bestaande, geregistreerde gidsfoto’s. Elk uniek lokaal bestand is gedecodeerd. Verschillende paden zijn vergeleken op SHA-256. De soortnaam en het lokale pad zijn ook gecontroleerd via guide_coverage. Bronregistratie bewijst eerdere beoordeling; de eerste visuele hercontrole betrof de vluchtkandidaten. Ronde 9 voegt twintig visueel gecontroleerde soorten toe.
+Technische controle op alle soorten met bestaande, geregistreerde gidsfoto’s. Elk uniek lokaal bestand is gedecodeerd. Verschillende paden zijn vergeleken op SHA-256. De soortnaam en het lokale pad zijn ook gecontroleerd via guide_coverage. Bronregistratie bewijst eerdere beoordeling; de eerste visuele hercontrole betrof de vluchtkandidaten. Rondes 9 en 10 voegen elk twintig visueel gecontroleerde soorten toe.
 
 Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen plaats vóór de kleden. **Vergelijking** toont de eigen soort als eerste vóór de kleden. **Gecontroleerd · geen vluchtbeeld** betekent dat alle geregistreerde gidsfoto’s voor die soort visueel zijn nagekeken en geen vlucht tonen. **Open** betekent dat de visuele vervolgcontrole nog moet gebeuren. Een apart vluchtbeeld mag een hoofdfoto nooit herhalen.
 
@@ -36,26 +36,26 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp035 | Vink | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
 | sp036 | Groenling | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp037 | Putter | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp038 | Sijs | Ja | 1 | Open |
-| sp039 | Kneu | Ja | 1 | Open |
-| sp040 | Goudvink | Ja | 1 | Open |
-| sp041 | Appelvink | Ja | 1 | Open |
-| sp042 | Roodmus | Ja | 1 | Open |
-| sp043 | Huismus | Ja | 2 | Open |
-| sp044 | Ringmus | Ja | 1 | Open |
-| sp045 | Merel | Ja | 3 | Open |
-| sp046 | Zanglijster | Ja | 1 | Open |
-| sp047 | Kramsvogel | Ja | 1 | Open |
-| sp048 | Koperwiek | Ja | 1 | Open |
-| sp049 | Grote Lijster | Ja | 1 | Open |
-| sp050 | Roodborst | Ja | 1 | Open |
-| sp051 | Zwarte Roodstaart | Ja | 1 | Open |
-| sp053 | Roodborsttapuit | Ja | 1 | Open |
-| sp054 | Heggenmus | Ja | 1 | Open |
-| sp055 | Winterkoning | Ja | 1 | Open |
-| sp056 | Tjiftjaf | Ja | 1 | Open |
-| sp057 | Fitis | Ja | 1 | Open |
-| sp058 | Fluiter | Ja | 1 | Open |
+| sp038 | Sijs | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp039 | Kneu | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp040 | Goudvink | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp041 | Appelvink | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp042 | Roodmus | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp043 | Huismus | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
+| sp044 | Ringmus | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp045 | Merel | Ja | 3 | Gecontroleerd · geen vluchtbeeld |
+| sp046 | Zanglijster | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp047 | Kramsvogel | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp048 | Koperwiek | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp049 | Grote Lijster | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp050 | Roodborst | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp051 | Zwarte Roodstaart | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp053 | Roodborsttapuit | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp054 | Heggenmus | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp055 | Winterkoning | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp056 | Tjiftjaf | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp057 | Fitis | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp058 | Fluiter | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp059 | Zwartkop | Ja | 1 | Open |
 | sp060 | Tuinfluiter | Ja | 1 | Open |
 | sp061 | Grasmus | Ja | 1 | Open |
@@ -153,6 +153,14 @@ Basis: concept-PR #54, 661fb803c5e0d781174e9eadfe92197231bc3187. Alle 33 bestaan
 - Glanskop: beide bronnen identificeren de soort als Glanskop. Het kleine frontale beeld laat het snaveldetail onvoldoende zien voor zelfstandig onderscheid met Matkop. De bestaande pose blijft een herkenningsbeeld zonder die claim. [Hoofdfoto](https://commons.wikimedia.org/wiki/File:Sumpfmeise_13ib.jpg) · [Pose](https://commons.wikimedia.org/wiki/File:Poecile_palustris_1_Luc_Viatour.jpg) · [Veldkenmerken](https://www.vogelbescherming.nl/actueel/bericht/matkop-vs-glanskop-en-vv)
 - De overige afbeeldingen passen bij hun geregistreerde soort en, waar aangegeven, het zichtbare kleed. Er zijn geen nieuwe beelden of bronlinks aan de app toegevoegd.
 
+## Ronde 10 · bestaande foto’s van Sijs tot Fluiter
+
+Basis: concept-PR #55, 780e17eaf63b040ea33351ab850fb9190dd3b28e. Alle 23 bestaande gidsfoto’s van de volgende twintig open soorten zijn visueel vergeleken met de bronregistratie en kleedomschrijving. De lokale paden en bestandsinhouden zijn uniek binnen de batch. Alle vogels zitten of staan. Deze twintig controles zijn afgerond zonder bestaand vluchtbeeld. Een ontbrekende vluchtfoto vereist geen aanvulling.
+
+- Zwarte Roodstaart: vrouwtje volgens de fotograaf. Grijsbruin kleed en roestkleurige staart passen bij de registratie. Geslacht is niet onafhankelijk uit het beeld vastgesteld. [Origineel](https://commons.wikimedia.org/wiki/File:Rougequeue_noir_Douga006.jpg)
+- Huismus: de lichte wenkbrauw en het kleed passen bij de bronregistratie als vrouwtje. [Origineel](https://commons.wikimedia.org/wiki/File:Sperling_Weibchen-20201025-RM-163340.jpg)
+- Tjiftjaf en Fitis: de beelden passen bij de bestaande registraties. Pootkleur alleen is onvoldoende als zelfstandige determinatie. [Gidsvergelijking](https://www.vogelbescherming.nl/docs/4278ab1d-29c0-478c-818c-1c18bef431ff.pdf)
+
 ## Volgende controlebatches
 
-Controleer eerst bestaande beelden per groep van ongeveer twintig soorten. Leg per bron soort, leeftijd of kleed, houding en licentie vast. Controleer open gevallen op beschikbare lokale vliegbeelden, markeer onzekere bron of determinatie en laat het beeld buiten de vluchtsectie zolang verificatie ontbreekt. Ga pas over op nieuwe foto’s wanneer de bestaande beeldset is afgewerkt.
+Controleer eerst bestaande beelden per groep van ongeveer twintig soorten. Leg per bron soort, leeftijd of kleed, houding en licentie vast. Controleer open gevallen op beschikbare lokale vliegbeelden, markeer onzekere bron of determinatie en laat het beeld buiten de vluchtsectie zolang verificatie ontbreekt. Rond een soort af met de bestaande beelden, ook als een vluchtfoto ontbreekt. Nieuwe beelden zijn een afzonderlijke fase na de controle van de bestaande beeldset.
