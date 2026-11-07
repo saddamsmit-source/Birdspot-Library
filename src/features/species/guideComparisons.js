@@ -837,6 +837,24 @@ export const GUIDE_COMPARISONS = [
     ],
     tip: 'Let op de stuitkleur en kijk, als je de vogel langer ziet, naar het verloop van de vlucht.',
   },
+  {
+    label: 'Zwarte Kraai en Kauw · in vlucht',
+    flight: true,
+    birds: [
+      {id: 'sp022', source: 'zwarte-kraai', marks: 'Geheel zwart, met een stevige snavel en brede vleugels met gespreide punten.'},
+      {id: 'sp025', source: 'kauw', marks: 'Compactere bouw, kortere snavel en grijze nek. Van dichtbij valt het lichte oog op.'},
+    ],
+    tip: 'Vergelijk kop en snavel. Tegen fel tegenlicht kan de grijze nek van de Kauw donker lijken.',
+  },
+  {
+    label: 'Gaai en Ekster · in vlucht',
+    flight: true,
+    birds: [
+      {id: 'sp026', source: 'gaai', marks: 'Rozegrijs lichaam en blauw-zwart gebandeerd vleugelveld. Van achteren valt de witte stuit op.'},
+      {id: 'sp021', source: 'ekster', marks: 'Zwart-wit met brede witte vleugelvelden en een lange, smalle staart.'},
+    ],
+    tip: 'Kijk eerst naar staartlengte en vleugeltekening. De witte stuit van de Gaai is het best van achteren te zien.',
+  },
 ];
 
 export function comparisonSource(bird) {
