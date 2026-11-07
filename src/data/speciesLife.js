@@ -1111,48 +1111,51 @@ export const LIFE = Object.freeze({
  },
  "sp077": {
   "breeding": {
-   "period": "apr–aug",
-   "nest": "Drijvend nest van waterplanten",
-   "eggs": "3–5",
-   "incubation": "27–29 dagen",
-   "fledging": "70–79 dagen",
-   "broods": "1–2",
-   "months": "apr-aug"
+   "period": "mrt–okt",
+   "nest": "Drijvend plantenplatform, vast aan oeverbegroeiing.",
+   "eggs": "Meestal 3–4; bereik 1–6",
+   "incubation": "25–29 dagen",
+   "fledging": "Jongen verlaten snel het nest; nog 10–11 weken gevoerd.",
+   "broods": "1, soms 2",
+   "fledgingLabel": "Verzorging jongen",
+   "months": "mrt-okt"
   },
-  "diet": "Vis, waterinsecten",
-  "behaviour": "Opvallende balts met kopschudden en \"pinguïndans\"; jongen rijden mee op de rug",
-  "migration": "Standvogel; in de winter op grote meren en langs de kust",
-  "voice": "Rauw \"krrraa-ah\" en een bulkend roepen"
+  "diet": "Vooral vis; ook ongewervelden.",
+  "behaviour": "Duikt naar prooi; kleine jongen reizen op de rug van ouders.",
+  "migration": "Na broeden vaak naar grote wateren; bij vorst belangrijker aan de kust.",
+  "voice": "Ver dragende rauwe roepen; jongen piepen hoog."
  },
  "sp078": {
   "breeding": {
-   "period": "mrt–aug",
-   "nest": "Nest van riet en plantenresten aan de oever of in het water",
-   "eggs": "6–10",
-   "incubation": "21–24 dagen",
-   "fledging": "55–60 dagen",
-   "broods": "1–2",
-   "months": "mrt-aug"
+   "period": "mrt–jul",
+   "nest": "Platform van planten aan of op het water.",
+   "eggs": "Meestal 5–10",
+   "incubation": "21–25 dagen",
+   "fledging": "Ongeveer 56 dagen",
+   "broods": "Meestal 1; soms 2; vervangende legsels mogelijk",
+   "fledgingLabel": "Vliegvlug na",
+   "months": "mrt-jul"
   },
-  "diet": "Waterplanten, gras, zaden en kleine waterdieren",
-  "behaviour": "Agressief tegen soortgenoten; in de winter in grote groepen",
-  "migration": "Standvogel; in de winter extra vogels uit het noordoosten",
-  "voice": "Kort, luid \"pik\" en \"kut\""
+  "diet": "Waterplanten, gras en kleine waterdieren.",
+  "behaviour": "Duikt met een sprongetje; verdedigt broedterritorium fel.",
+  "migration": "Veel Nederlandse vogels blijven; winteraanvulling uit noordoostelijk Europa.",
+  "voice": "Keffende, scherpe en zachtere roepen; ook nachtelijke vluchtroepen."
  },
  "sp079": {
   "breeding": {
-   "period": "apr–aug",
-   "nest": "Nest van plantenresten in oevervegetatie",
-   "eggs": "5–9",
+   "period": "mrt–aug",
+   "nest": "Kom van waterplanten, verborgen in oevervegetatie.",
+   "eggs": "Meestal 5–9",
    "incubation": "19–22 dagen",
-   "fledging": "40–50 dagen",
-   "broods": "2–3",
-   "months": "apr-aug"
+   "fledging": "Ongeveer 49 dagen",
+   "broods": "1–3",
+   "fledgingLabel": "Vliegvlug na",
+   "months": "mrt-aug"
   },
-  "diet": "Waterplanten, zaden, wormen en insecten",
-  "behaviour": "Knikt bij het zwemmen met de kop en flitst met de witte onderstaart",
-  "migration": "Standvogel",
-  "voice": "Plotseling \"krrruk\" en een herhaald \"kik-kik\""
+  "diet": "Planten, grassen en kleine ongewervelden.",
+  "behaviour": "Loopt met opgerichte staart; oudere jongen helpen soms bij een volgend nest.",
+  "migration": "Veel vogels blijven; verplaatsing bij vorst en aanvulling uit Duitsland en Denemarken.",
+  "voice": "Ver dragende territoriumroep en uiteenlopende korte roepen; ook in nachtelijke vlucht."
  },
  "sp080": {
   "breeding": {
@@ -1171,18 +1174,18 @@ export const LIFE = Object.freeze({
  },
  "sp081": {
   "breeding": {
-   "period": "feb–jul",
-   "nest": "Groot takkennest in een kolonie hoog in bomen",
-   "eggs": "3–5",
-   "incubation": "25–26 dagen",
-   "fledging": "50–55 dagen",
-   "broods": "1",
-   "months": "feb-jul"
+   "period": "feb–mei",
+   "nest": "Takkennest, vaak in een boomkolonie.",
+   "eggs": "Meestal 4–6",
+   "incubation": "23–28 dagen",
+   "fledging": "Ongeveer 45 dagen; blijft daarna nog bij het nest.",
+   "broods": "Meestal 1, zelden 2 (BTO)",
+   "months": "feb-mei"
   },
-  "diet": "Vis, muizen, kikkers en jonge vogels",
-  "behaviour": "Staat urenlang stil langs de waterkant; vliegt met ingetrokken nek",
-  "migration": "Standvogel",
-  "voice": "Rauw \"kraak\" in vlucht; kolonie vol geklepper"
+  "diet": "Vis, amfibieën, kreeftachtigen; ook muizen en mollen.",
+  "behaviour": "Jaagt stilstaand of langzaam lopend; trage vlucht met ingetrokken hals.",
+  "migration": "Deels blijvend, deels wegtrekkend; verplaatsingen bij vorst.",
+  "voice": "Luid, rauw gekrijs in vlucht en gevarieerde kolonieroepen."
  },
  "sp082": {
   "breeding": {
@@ -1218,78 +1221,81 @@ export const LIFE = Object.freeze({
  },
  "sp084": {
   "breeding": {
-   "period": "apr–jul",
-   "nest": "Nest van riet in een kolonie in uitgestrekte rietvelden",
-   "eggs": "4–5",
-   "incubation": "25–27 dagen",
+   "period": "apr–jun",
+   "nest": "Kolonies in oud riet en wilgenstruweel.",
+   "eggs": "Meestal 4–5 (Sovon); bereik 2–8 (Vogelbescherming)",
+   "incubation": "25–30 dagen",
    "fledging": "45–50 dagen",
-   "broods": "1",
-   "months": "apr-jul"
+   "broods": "1 (Sovon)",
+   "months": "apr-jun"
   },
-  "diet": "Vis, kikkers en grote waterinsecten",
-  "behaviour": "Zeer verborgen in het riet; jaagt bij schemering",
-  "migration": "Zomergast (apr–sep); overwintert in West-Afrika",
-  "voice": "Rauw \"kraik\", zachter dan de Blauwe Reiger"
+  "diet": "Vooral vis; ook amfibieën, insecten en andere kleine dieren.",
+  "behaviour": "Jaagt verborgen langs begroeid water; trekt vaak in avond en nacht.",
+  "migration": "Meestal weg in augustus–september naar Afrika; terug in maart–mei.",
+  "voice": "Hesere, minder zware roep dan Blauwe Reiger."
  },
  "sp085": {
   "breeding": {
-   "period": "apr–jul",
-   "nest": "Takkennest in een kolonie in struiken en wilgen",
-   "eggs": "3–5",
-   "incubation": "21–22 dagen",
-   "fledging": "40–50 dagen",
-   "broods": "1",
-   "months": "apr-jul"
+   "period": "apr–jun",
+   "nest": "Vaak gemengde kolonies bij water.",
+   "eggs": "Meestal 3–5",
+   "incubation": "21–24 dagen",
+   "fledging": "40–50 dagen; nest wordt eerder verlaten.",
+   "broods": "1 (Sovon)",
+   "months": "apr-jun"
   },
-  "diet": "Vis, kikkers en waterinsecten",
-  "behaviour": "Nachtactief; overdag rustend in dichte bomen",
-  "migration": "Zomergast (apr–sep); zeldzame broedvogel",
-  "voice": "Kort, kwakend \"kwak\" in vlucht bij schemering"
+  "diet": "Vis, amfibieën en uiteenlopende kleine waterdieren.",
+  "behaviour": "Vangt prooi stilstaand of wadend met een snelle uitval.",
+  "migration": "Europese vogels trekken naar Afrika; vrij vliegende dierentuinvogels bemoeilijken het patroon.",
+  "voice": "Hard, krakend kro-aak en zachtere korte roepen."
  },
  "sp086": {
   "breeding": {
-   "period": "mrt–jun",
-   "nest": "Nest van riet en dons op de grond of in rietkraag",
-   "eggs": "4–6",
-   "incubation": "27–28 dagen",
-   "fledging": "50–60 dagen",
+   "period": "feb–mei",
+   "nest": "Bij water, vaak met meerdere paren in de omgeving.",
+   "eggs": "Meestal 4–9",
+   "incubation": "27–29 dagen",
+   "fledging": "45–60 dagen",
    "broods": "1",
-   "months": "mrt-jun"
+   "fledgingLabel": "Vliegvlug na",
+   "months": "feb-mei"
   },
-  "diet": "Gras, waterplanten en wortels; in de winter oogstresten",
-  "behaviour": "Zeer talrijk geworden; gezinnen blijven tot het voorjaar bij elkaar",
-  "migration": "Standvogel; in de winter ook grote groepen uit het noordoosten",
-  "voice": "Luid gakkend \"ga-ga-ga\" zoals een tamme gans"
+  "diet": "Gras, wortels, zaden, rietscheuten en oogstresten.",
+  "behaviour": "Grazende groepen; familieverband vaak tot in de winter.",
+  "migration": "Veel Nederlandse vogels blijven; extra wintergasten uit noordelijk Europa.",
+  "voice": "Luid nasaal gegak; klinkt ook in vlucht."
  },
  "sp089": {
   "breeding": {
-   "period": "mrt–jul",
-   "nest": "Komnest met dons op de grond, ook in knotwilgen of bloembakken",
-   "eggs": "9–13",
-   "incubation": "27–28 dagen",
-   "fledging": "50–60 dagen",
+   "period": "feb–aug",
+   "nest": "Beschut kuiltje bij water, soms in een holte.",
+   "eggs": "Meestal 7–11",
+   "incubation": "24–32 dagen",
+   "fledging": "52–70 dagen",
    "broods": "1",
-   "months": "mrt-jul"
+   "fledgingLabel": "Vliegvlug na",
+   "months": "feb-aug"
   },
-  "diet": "Zaden, waterplanten, insecten en brood",
-  "behaviour": "Grondeleend die \"kopje-ondert\"; vrouw broedt en leidt de jongen",
-  "migration": "Standvogel; in de winter extra vogels uit het noordoosten",
-  "voice": "Vrouw luid \"kwèk-kwèk-kwèk\"; man zacht en hees"
+  "diet": "Waterplanten, gras en kleine waterdieren.",
+  "behaviour": "Grondelt in ondiep water en graast op land.",
+  "migration": "Nederlandse broeders grotendeels blijvend; noordelijke wintergasten en verplaatsing bij kou.",
+  "voice": "Vrouw luid kwakend; man zachter, raspend en tijdens balts fluitend."
  },
  "sp090": {
   "breeding": {
-   "period": "apr–jul",
-   "nest": "Komnest met dons in natte graslanden",
-   "eggs": "8–12",
-   "incubation": "22–23 dagen",
-   "fledging": "40–45 dagen",
-   "broods": "1",
-   "months": "apr-jul"
+   "period": "apr–jun",
+   "nest": "In dichte vegetatie, ook midden in grasland.",
+   "eggs": "Doorgaans 9–11 (BTO)",
+   "incubation": "22–23 dagen (BTO)",
+   "fledging": "40–45 dagen (BTO)",
+   "broods": "1; vervangend legsel mogelijk",
+   "fledgingLabel": "Vliegvlug na",
+   "months": "apr-jun"
   },
-  "diet": "Plankton, zaadjes en kleine waterdieren die ze uit het water zeeft",
-  "behaviour": "Zwemt met de snavel door het wateroppervlak; draait in groepen rondjes",
-  "migration": "Standvogel en trekvogel; veel vogels overwinteren zuidelijker",
-  "voice": "Man hol \"tuk-tuk\"; vrouw zacht kwakend"
+  "diet": "Plankton, kleine waterdieren en zaden.",
+  "behaviour": "Filtert voedsel uit water met de brede snavel.",
+  "migration": "Veel vogels overwinteren zuidelijker; aankomst vanaf maart, vertrek vaak september–oktober.",
+  "voice": "Man laag en keelachtig; vrouw met dubbele kwaak."
  },
  "sp091": {
   "breeding": {
@@ -1309,18 +1315,18 @@ export const LIFE = Object.freeze({
  },
  "sp092": {
   "breeding": {
-   "period": "mei–aug",
-   "nest": "Komnest met dons in oevervegetatie of op een eilandje",
+   "period": "Vanaf mei",
+   "nest": "Verborgen in oeverbegroeiing.",
    "eggs": "8–11",
-   "incubation": "23–25 dagen",
+   "incubation": "23–28 dagen",
    "fledging": "45–50 dagen",
    "broods": "1",
-   "months": "mei-aug"
+   "fledgingLabel": "Vliegvlug na"
   },
-  "diet": "Driehoeksmosselen, slakken en waterinsecten",
-  "behaviour": "Duikeend; rust in grote groepen op open water",
-  "migration": "Standvogel; in de winter grote aantallen uit het noordoosten",
-  "voice": "Meestal stil; vrouw schor \"krr-krr\""
+  "diet": "Vooral schelpdieren en andere waterdieren; ook plantaardig voedsel.",
+  "behaviour": "Duikt naar voedsel; vormt buiten broedtijd groepen.",
+  "migration": "Nederlandse broeders trekken deels zuidwestwaarts; wintergasten uit Centraal- en Noord-Europa.",
+  "voice": "Man bij balts hoog en gorgelend; vrouw lager en rauwer."
  },
  "sp093": {
   "breeding": {
@@ -1490,18 +1496,18 @@ export const LIFE = Object.freeze({
  },
  "sp104": {
   "breeding": {
-   "period": "feb–jul",
-   "nest": "Takkennest in een kolonie in bomen of op de grond",
-   "eggs": "3–4",
+   "period": "Vooral apr–jun; soms vanaf eind januari",
+   "nest": "Kolonie in bomen; plaatselijk op grond of in riet.",
+   "eggs": "Meestal 3–4",
    "incubation": "27–31 dagen",
-   "fledging": "48–52 dagen",
-   "broods": "1",
-   "months": "feb-jul"
+   "fledging": "Ongeveer 50 dagen",
+   "broods": "1; vervangend legsel mogelijk",
+   "months": "jan-jun"
   },
-  "diet": "Vis, die hij duikend vangt",
-  "behaviour": "Staat na het vissen met gespreide vleugels te drogen",
-  "migration": "Standvogel; ook zomergast en wintergast",
-  "voice": "Kolonie vol keelgeluiden en gegrom; verder stil"
+  "diet": "Vis die lokaal beschikbaar is.",
+  "behaviour": "Duikt naar vis en rust vaak met gespreide vleugels.",
+  "migration": "Verspreiding na broeden; bij strenge vorst wegtrek, ook noordelijke wintergasten.",
+  "voice": "Lage keelklanken en luidruchtige kolonieroepen; buiten broedtijd vaak stil."
  },
  "sp106": {
   "breeding": {
@@ -1782,18 +1788,19 @@ export const LIFE = Object.freeze({
  },
  "sp126": {
   "breeding": {
-   "period": "mrt–jun",
-   "nest": "Grote hoop plantenmateriaal aan de oever",
-   "eggs": "5–7",
-   "incubation": "35–41 dagen",
-   "fledging": "120–150 dagen",
+   "period": "mrt–mei",
+   "nest": "Groot planten- en takkennest langs water.",
+   "eggs": "Meestal 5–7 (Vogelbescherming)",
+   "incubation": "Circa 36 dagen (Vogelbescherming); BTO geeft 34–44.",
+   "fledging": "120–150 dagen (BTO)",
    "broods": "1",
-   "months": "mrt-jun"
+   "fledgingLabel": "Vliegvlug na",
+   "months": "mrt-mei"
   },
-  "diet": "Waterplanten, gras en algen",
-  "behaviour": "Verdedigt het nest met opgezette vleugels en blazen",
-  "migration": "Standvogel; in de winter ook vogels uit Oost-Europa",
-  "voice": "Meestal stil; blaast en sist; vleugels zingen in vlucht"
+  "diet": "Waterplanten, gras en kleine waterdieren.",
+  "behaviour": "Grondelt met de lange hals; beschermt nest en jongen.",
+  "migration": "Deels blijvend; groepen buiten broedtijd en verplaatsing bij kou.",
+  "voice": "Knorrende roep en gesis; ritmisch geluid van vleugelslagen."
  },
  "sp127": {
   "breeding": null,
@@ -1804,33 +1811,35 @@ export const LIFE = Object.freeze({
  },
  "sp128": {
   "breeding": {
-   "period": "mei–jul",
-   "nest": "In een konijnenhol, holle boom of nestkast",
-   "eggs": "8–10",
-   "incubation": "29–31 dagen",
-   "fledging": "45–50 dagen",
+   "period": "apr–jun",
+   "nest": "Vaak in een verlaten konijnenhol of andere holte.",
+   "eggs": "Meestal 8–10",
+   "incubation": "Circa 28 dagen (Vogelbescherming); BTO geeft 29–31.",
+   "fledging": "45–50 dagen (BTO)",
    "broods": "1",
-   "months": "mei-jul"
+   "fledgingLabel": "Vliegvlug na",
+   "months": "apr-jun"
   },
-  "diet": "Wadslakjes, kreeftjes en wormpjes uit het slik",
-  "behaviour": "Jongen van vele paren samen in een crèche; volwassen vogels ruien in de Duitse Waddenzee",
-  "migration": "Standvogel; in de nazomer ruitrek naar de Waddenzee",
-  "voice": "Man fluitend \"sie-sie\"; vrouw rauw \"ak-ak-ak\""
+  "diet": "Kleine schelp- en kreeftdieren, wormen en plantenmateriaal.",
+  "behaviour": "Jongen kunnen zich verzamelen in groepen met enkele begeleidende volwassen vogels.",
+  "migration": "Na broeden naar ruigebieden, vooral Waddenzee; bij kou deels naar Engeland en Frankrijk.",
+  "voice": "Man met zachte hoge fluitjes en trillers; vrouw lager en raspend."
  },
  "sp129": {
   "breeding": {
-   "period": "apr–jul",
-   "nest": "Komnest met dons in hoge oevervegetatie",
-   "eggs": "8–12",
-   "incubation": "24–27 dagen",
+   "period": "mei–jul",
+   "nest": "Verborgen tussen hoog gras, soms verder van water.",
+   "eggs": "8–12 (Vogelbescherming)",
+   "incubation": "24–26 dagen",
    "fledging": "45–50 dagen",
-   "broods": "1",
-   "months": "apr-jul"
+   "broods": "1 (BTO)",
+   "fledgingLabel": "Vliegvlug na",
+   "months": "mei-jul"
   },
-  "diet": "Waterplanten, zaden en algen",
-  "behaviour": "Grondeleend; volgt vaak duikende Meerkoeten",
-  "migration": "Standvogel; in de winter ook vogels uit het oosten",
-  "voice": "Man laag \"rèp\"; vrouw kwakend als Wilde Eend"
+  "diet": "Vooral waterplanten, aangevuld met kleine waterdieren.",
+  "behaviour": "Grondelt en eet ook algen langs stenige oevers.",
+  "migration": "Noordelijke populaties trekken zuidwaarts; deels overwinterend in Nederland.",
+  "voice": "Man met hoge fiep en droge korte tonen; vrouw snaterend."
  },
  "sp130": {
   "breeding": {
@@ -1864,18 +1873,18 @@ export const LIFE = Object.freeze({
  },
  "sp132": {
   "breeding": {
-   "period": "mei–jul",
-   "nest": "Komnest met dons in oevervegetatie",
-   "eggs": "8–10",
-   "incubation": "24–26 dagen",
+   "period": "Start eind april–begin mei",
+   "nest": "Planten- en rietnest bij de oever, door vrouw bekleed.",
+   "eggs": "Meestal 8–10",
+   "incubation": "Ongeveer 25 dagen",
    "fledging": "50–55 dagen",
    "broods": "1",
-   "months": "mei-jul"
+   "fledgingLabel": "Vliegvlug na"
   },
-  "diet": "Waterplanten, zaden en waterdiertjes",
-  "behaviour": "Duikeend; rust overdag in groepen op open water",
-  "migration": "Wintergast (okt–mrt) en kleine broedpopulatie",
-  "voice": "Meestal stil; man zacht fluitend in de balts"
+  "diet": "Waterplanten, zaden en kleine waterdieren.",
+  "behaviour": "Duikt; buiten broedtijd vaak in groepen op open water.",
+  "migration": "Nederlandse broeders blijven veelal; extra noordelijke vogels vanaf september, wegtrek bij vorst.",
+  "voice": "Vrouw laag kwakend; man met kenmerkende baltsroepen."
  },
  "sp133": {
   "breeding": null,

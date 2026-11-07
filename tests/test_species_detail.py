@@ -553,6 +553,7 @@ def main():
                 for index, sid in enumerate(["sp145", "sp144"]):
                     photo = comparison.locator("img").nth(index)
                     assert photo.get_attribute("src").endswith(f"/{sid}{suffix}.webp")
+                    photo.scroll_into_view_if_needed()
                     photo.evaluate("img => img.decode()")
             comparison.get_by_role("button", name="Open soortkaart Zilverplevier").click()
             expect(p.get_by_label("Nachtelijke vluchtroep van Zilverplevier")).to_have_count(1)
@@ -576,6 +577,7 @@ def main():
                 for index, sid in enumerate(["sp156", "sp159"]):
                     photo = sandpipers.locator("img").nth(index)
                     assert photo.get_attribute("src").endswith(f"/{sid}{suffix}.webp")
+                    photo.scroll_into_view_if_needed()
                     photo.evaluate("img => img.decode()")
             expect(p.locator(".sd-audio audio")).to_have_count(4)
             tab("status")
@@ -607,6 +609,7 @@ def main():
                 expect(p.locator(".sd-compare")).to_have_count(comparison_count)
                 for comparison in p.locator(".sd-compare").all():
                     for photo in comparison.locator("img").all():
+                        photo.scroll_into_view_if_needed()
                         photo.evaluate("img => img.decode()")
                 if sid == "sp158":
                     juvenile = p.locator(".sd-compare").filter(
