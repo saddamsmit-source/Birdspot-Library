@@ -53,7 +53,7 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp053 | Roodborsttapuit | Ja | 2 | Apart beeld |
 | sp054 | Heggenmus | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp055 | Winterkoning | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp056 | Tjiftjaf | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp056 | Tjiftjaf | Ja | 2 | Apart beeld |
 | sp057 | Fitis | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp058 | Fluiter | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp059 | Zwartkop | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
@@ -331,3 +331,15 @@ Bij Roodborsttapuit toont een scherpe foto met gespreide vleugels nog contact me
 CAP-BIRD-012/015. De twee beelden staan lokaal boven het verenkleed, elk op hun eigen soortkaart. Herbruikbare controle: bekijk bij een opvliegende vogel ook de poten op het originele beeld en vergelijk omliggende videoframes. Na deze ronde staan 80 soorten zonder vluchtbeeld op de zoeklijst. Winterkoning is de volgende nieuwe soort. Heggenmus blijft open voor een scherpe vrij gelicentieerde vluchtfoto. Een scherpere Roodmusfoto blijft ook open.
 
 Mobiele Chromium-test op 390 px: beide soortkaarten vanuit appbreed zoeken geopend met de wetenschappelijke naam. De beelden decoderen, staan eenmaal boven het verenkleed, tonen hun bronlink en openen met 2× zoom. Gidsdekking, bestaande volgorde- en uniciteitstests en de SHA-256-controle zijn geslaagd. Fysieke toesteltest staat open.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 13
+
+Basis is concept-PR #71, e8acdf8ab53ee17159b44bf47f738ce08c3a10a9. Winterkoning, Tjiftjaf en Fitis zijn gezocht onder Nederlandse, Engelse, Duitse en wetenschappelijke namen. Commons, iNaturalist-waarnemingsbeschrijvingen, Flickr en specialistische fotogalerijen zijn gebruikt. Een deel van de Commons-miniaturen gaf een HTTP 429. De relevante bronbestanden konden via de oorspronkelijke bestandslinks op de bronpagina's worden opgehaald. De algemene bestandsnaam 'Flight design' blijkt een Tjiftjaf in vrije vlucht. Beide uitgespreide vleugels en de kop zijn zichtbaar. Determinatie steunt op de Commons-soortcategorie en een controle van het beeld. Gebruik de zang bij twijfel met Fitis.
+
+- Tjiftjaf · Falco2022 · CC BY-SA 4.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Flight_design.jpg) · [Soortcategorie](https://commons.wikimedia.org/wiki/Category:Phylloscopus_collybita). Uitsnede en WebP-omzetting staan bij het beeld.
+- Winterkoning · bij de [Commons-foto met gespreide vleugels](https://commons.wikimedia.org/wiki/File:Wren_(Troglodytes_troglodytes)_(8838589725).jpg) en de [iNaturalist-foto van het opvliegen](https://www.inaturalist.org/photos/366896260) raken de poten nog de ondergrond. Vrije vlucht in [Zingende winterkoning](https://commons.wikimedia.org/wiki/File:Zingende_winterkoning-4962016.webm) rond 02:37,9 en in het [Sloveense sneeuwfragment](https://commons.wikimedia.org/wiki/File:2022-01-10_LJUBLJANA_Krajinski_park_Tivoli_PASSERIFORMES_Troglodytes_troglodytes_STR%C5%BDEK.webm) rond 00:05,05 is onscherp of afgesneden.
+- Fitis · [Zingende fitis](https://commons.wikimedia.org/wiki/File:Zingende_fitis-4961615.webm) toont korte vluchten rond 01:14, 02:20 en 02:44. In die frames zijn kenmerken vervaagd, door takken afgedekt of buiten beeld. Van de gevonden scherpe vluchtfoto's uit gespecialiseerde galerijen is geen geschikte herpublicatielicentie bevestigd.
+
+CAP-BIRD-012/015. De Tjiftjaf heeft een lokaal vluchtbeeld boven het verenkleed. Van de twee andere soorten zijn de onderzochte beelden te beperkt voor de soortkaart. Zij blijven open op de zoeklijst. Na deze ronde staan 79 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Fluiter. De scherpere Roodmusfoto en Heggenmus blijven ook open.
+
+Mobiele Chromium-test op 390 px: Tjiftjaf via appbreed zoeken met de wetenschappelijke naam geopend. De foto decodeert, staat eenmaal boven het verenkleed en opent met 2× zoom. De bronlink is zichtbaar. Gidsdekking, bestaande volgorde- en uniciteitstests en SHA-256-controle zijn geslaagd. Fysieke toesteltest staat open.
