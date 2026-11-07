@@ -61,7 +61,7 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp061 | Grasmus | Ja | 2 | Apart beeld |
 | sp063 | Goudhaantje | Ja | 3 | Apart beeld |
 | sp064 | Vuurgoudhaan | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp065 | Boomklever | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp065 | Boomklever | Ja | 2 | Apart beeld |
 | sp066 | Boomkruiper | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp067 | Taigaboomkruiper | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp068 | Witte Kwikstaart | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
@@ -367,3 +367,15 @@ Basis is concept-PR #73, 8403a629c0bb7e5e2d688ae108ac8e8fad61c402. Voor Grasmus,
 CAP-BIRD-012/015. Grasmus en Goudhaantje hebben elk een lokaal vluchtbeeld boven het verenkleed. Vuurgoudhaan blijft open. Na deze ronde staan 76 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Boomklever.
 
 Mobiele Chromium-test op 390 px: beide soortkaarten via appbreed zoeken met de wetenschappelijke naam geopend. De beelden decoderen, staan eenmaal boven het verenkleed, tonen hun bronlink en openen met 2× zoom. Gidsdekking, bestaande volgorde- en uniciteitstests en SHA-256-controle zijn geslaagd. Fysieke toesteltest staat open.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 16
+
+Basis is concept-PR #74, 6f4b88380e7c6744c7d7bb011d6554fe68eabe49. Voor Boomklever, Boomkruiper en Taigaboomkruiper zijn Commons, iNaturalist-waarnemingsbeschrijvingen, Flickr, specialistische galerijen en vrij gelicentieerde videofragmenten in meerdere talen nagezocht.
+
+- Boomklever · C. Robiller / naturlichter.de · CC BY-SA 3.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Kleiber_Flug.jpg) · [Broncategorie](https://commons.wikimedia.org/wiki/Category:Sitta_europaea_caesia_(in_flight)). De vogel is vrij in beeld, met uitgespreide vleugels, donkere oogstreep en korte gespreide staart. De licentie staat op de bestandspagina en is bevestigd via Wikimedia VRT. Twee alternatieven in de vluchtcategorie vielen af door steuncontact of onzekere soortregistratie. De geselecteerde foto is zonder uitsnede naar WebP omgezet.
+- Boomkruiper · in de [Nederlandse opname](https://commons.wikimedia.org/wiki/File:Boomkruiper-4961641.webm) en [Franse opname](https://commons.wikimedia.org/wiki/File:Grimpereau_prospectant_sur_un_ch%C3%AAne.ogv) zijn de dichtstbijzijnde bewegingsmomenten frame voor frame bekeken. Het beeld toont vooral klimmen, korte bewegingen achter takken of een vogel die te klein in beeld blijft. Een foto uit een gespecialiseerde galerij met gespreide vleugels toont nog contact met de stam.
+- Taigaboomkruiper · de foto's bij iNaturalist beschrijven soms verplaatsing tussen bomen, maar tonen een vogel op de stam, onder meer bij [deze waarneming](https://www.inaturalist.org/observations/301787863). De vijf bekeken Commons-video's leverden geen helder vluchtframe op. Voor de [Schotse vluchtfoto op BirdForum](https://www.birdforum.net/gallery/treecreeper-in-flight.521267/) is geen passende herpublicatielicentie bevestigd.
+
+CAP-BIRD-012/015. Boomklever heeft een lokaal vluchtbeeld boven het verenkleed. Boomkruiper en Taigaboomkruiper blijven open. Na deze ronde staan 75 soorten zonder vluchtbeeld op de lijst. Volgende nieuwe soort is Witte Kwikstaart.
+
+Mobiele Chromium-test op 390 px: Boomklever via appbreed zoeken met de wetenschappelijke naam geopend. De foto decodeert, staat eenmaal boven het verenkleed, toont de bronlink en opent met 2× zoom. Gidsdekking, volgorde- en uniciteitstests en SHA-256-controle zijn geslaagd. Fysieke toesteltest staat open.
