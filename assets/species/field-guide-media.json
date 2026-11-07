@@ -4376,6 +4376,75 @@
         "height": 450,
         "image": "/assets/species/plumage/sp007-flight.webp"
       }
+    ],
+    "sp002": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "De witte vleugelbanden vallen op tijdens de vlucht.",
+        "file": "Columba palumbus SB.jpg",
+        "nl": "Houtduif",
+        "latin": "Columba palumbus",
+        "author": "Stefan Berndtsson",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Columba_palumbus_SB.jpg",
+        "showSourceLink": false,
+        "alt": "Volwassen Houtduif in vlucht, van voren gezien, met witte vleugelbanden en roze borst.",
+        "modifications": "Omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/houtduif",
+        "visualCheck": "Volwassen Houtduif in vlucht, van voren gezien, met witte vleugelbanden en roze borst.",
+        "width": 1200,
+        "height": 746,
+        "image": "/assets/species/plumage/sp002-flight.webp"
+      }
+    ],
+    "sp003": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Let op de donkere vleugelranden en het ontbreken van een brede witte vleugelband.",
+        "file": "Skogsduva Stock Dove (19730362773).jpg",
+        "nl": "Holenduif",
+        "latin": "Columba oenas",
+        "author": "Åsa Berndtsson",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Skogsduva_Stock_Dove_(19730362773).jpg",
+        "showSourceLink": false,
+        "alt": "Holenduif vlak boven de grond met geheven grijze vleugels en donkere vleugelranden.",
+        "modifications": "Uitgesneden en omgezet naar WebP",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/holenduif",
+        "visualCheck": "Holenduif vlak boven de grond met geheven grijze vleugels en donkere vleugelranden.",
+        "width": 485,
+        "height": 325,
+        "image": "/assets/species/plumage/sp003-flight.webp"
+      }
+    ],
+    "sp004": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Let op de lichte vleugelvelden en lichte buitenste staartpennen.",
+        "file": "Tourterelle turque en vol près de Chambéry (avril 2020).JPG",
+        "nl": "Turkse Tortel",
+        "latin": "Streptopelia decaocto",
+        "author": "Florian Pépellin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Tourterelle_turque_en_vol_pr%C3%A8s_de_Chamb%C3%A9ry_(avril_2020).JPG",
+        "showSourceLink": false,
+        "alt": "Turkse Tortel in vlucht met lichte vleugelvelden en een lange, deels gespreide staart.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/turkse-tortel",
+        "visualCheck": "Turkse Tortel in vlucht met lichte vleugelvelden en een lange, deels gespreide staart.",
+        "width": 1400,
+        "height": 1053,
+        "image": "/assets/species/plumage/sp004-flight.webp"
+      }
     ]
   }
 }

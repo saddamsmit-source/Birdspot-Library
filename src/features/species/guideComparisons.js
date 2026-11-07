@@ -808,6 +808,16 @@ export const GUIDE_COMPARISONS = [
     ],
     tip: 'Vergelijk eerst vleugelvorm, staart en bouw. De foto’s tonen verschillende vlieghoudingen; gebruik schijnbare grootte alleen als extra aanwijzing.',
   },
+  {
+    label: 'Houtduif, Holenduif en Turkse Tortel · in vlucht',
+    flight: true,
+    birds: [
+      {id: 'sp002', source: 'houtduif', marks: 'Brede witte vleugelbanden. Volwassen vogels hebben ook een witte halsvlek.'},
+      {id: 'sp003', source: 'holenduif', marks: 'Grijze vleugels met donkere randen. Een brede witte vleugelband ontbreekt.'},
+      {id: 'sp004', source: 'turkse-tortel', marks: 'Lichte vleugelvelden en een lange staart met lichte buitenste staartpennen.'},
+    ],
+    tip: 'Vergelijk de vleugeltekening en de staart. De foto’s tonen verschillende hoeken en afstanden.',
+  },
 ];
 
 export function comparisonSource(bird) {
