@@ -21,7 +21,9 @@ function checkPhoto(id, photo) {
 
 for (const [id, photo] of Object.entries(GUIDE_PHOTOS)) checkPhoto(id, photo);
 for (const [id, photos] of Object.entries(GUIDE_POSES)) {
-  assert.ok(photos.length > 0 && photos.length <= 2, `Maximaal twee houdingsfoto's: ${id}`);
+  const flightCount = photos.filter(photo => photo.flight).length;
+  assert.ok(photos.length > 0 && photos.length - flightCount <= 2, `Maximaal twee houdingsfoto’s: ${id}`);
+  assert.ok(flightCount <= 1, `Maximaal één aparte vluchtfoto: ${id}`);
   for (const photo of photos) {
     assert.ok(photo.label && photo.note, `Ontbrekend houdingslabel: ${id}`);
     checkPhoto(id, photo);

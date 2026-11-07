@@ -819,13 +819,23 @@ export const GUIDE_COMPARISONS = [
     tip: 'Vergelijk de vleugeltekening en de staart. De foto’s tonen verschillende hoeken en afstanden.',
   },
   {
-    label: 'Grote en Kleine Bonte Specht · in vlucht',
+    label: 'Grote, Kleine en Middelste Bonte Specht · in vlucht',
     flight: true,
     birds: [
       {id: 'sp016', source: 'grote-bonte-specht', marks: 'Grote witte schoudervlekken en een rode onderstaart.'},
       {id: 'sp017', source: 'kleine-bonte-specht', marks: 'Lichte dwarsbanden op de rug, zonder grote witte schoudervlek of rode onderstaart.'},
+      {id: 'sp020', source: 'middelste-bonte-specht', marks: 'Gestreepte flanken en een roze onderstaart. Op deze foto vallen vooral de vleugeltekening en onderzijde op.'},
     ],
-    tip: 'Kijk naar de verdeling van het wit op de rug. De twee foto’s zijn op verschillende afstanden gemaakt.',
+    tip: 'Combineer het rugpatroon, de flankstrepen en de kleur van de onderstaart. De foto’s tonen verschillende hoeken.',
+  },
+  {
+    label: 'Groene en Zwarte Specht · in vlucht',
+    flight: true,
+    birds: [
+      {id: 'sp019', source: 'groene-specht', marks: 'Groene bovendelen, lichte geelgroene stuit en een diep golvende vlucht.'},
+      {id: 'sp018', source: 'zwarte-specht', marks: 'Vrijwel geheel zwart met een rode kruin en lichte snavel. De vlucht is doorgaans rechter.'},
+    ],
+    tip: 'Let op de stuitkleur en kijk, als je de vogel langer ziet, naar het verloop van de vlucht.',
   },
 ];
 

@@ -12,7 +12,9 @@ const species = new Map(SPECIES.map(s => [s.id, s]));
 for (const [id, poses] of Object.entries(GUIDE_POSES)) {
   const html = recognitionPanel(species.get(id));
   const ownMain = GUIDE_PHOTOS[id]?.image;
-  assert.ok(poses.length >= 1 && poses.length <= 2);
+  const flightCount = poses.filter(pose => pose.flight).length;
+  assert.ok(poses.length >= 1 && poses.length - flightCount <= 2, `Expected at most two recognition poses on ${id}`);
+  assert.ok(flightCount <= 1, `Expected at most one dedicated flight photo on ${id}`);
   for (const pose of poses) {
     assert.ok(existsSync(new URL('..' + pose.image, import.meta.url)), pose.image);
     const buttons = [...html.matchAll(/data-guide-image="([^"]+)"/g)].filter(match => match[1] === pose.image);

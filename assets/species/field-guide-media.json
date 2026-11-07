@@ -4125,6 +4125,27 @@
         "image": "/assets/species/plumage/sp019-female-ground.webp",
         "label": "Op de grond",
         "note": "Foeragerend op gras. De geheel zwarte snorstreep past bij een vrouwtje; het mannetje heeft rood in die streep."
+      },
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Let op de groen getinte rug en de lichtere stuit.",
+        "file": "Female green woodpecker in flight.jpg",
+        "nl": "Groene Specht",
+        "latin": "Picus viridis",
+        "author": "Alexis Lours",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Female_green_woodpecker_in_flight.jpg",
+        "showSourceLink": false,
+        "alt": "Vrouwtje Groene Specht in vlucht met opgerichte vleugels, een groene rug en geelgroene stuit.",
+        "modifications": "Uitgesneden, verkleind en omgezet naar WebP",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/groene-specht",
+        "visualCheck": "Vrouwtje Groene Specht in vlucht met opgerichte vleugels, een groene rug en geelgroene stuit.",
+        "width": 1400,
+        "height": 1050,
+        "image": "/assets/species/plumage/sp019-flight.webp"
       }
     ],
     "sp020": [
@@ -4173,6 +4194,27 @@
         "image": "/assets/species/plumage/sp020-pose.webp",
         "label": "Foeragerend op een stam",
         "note": "Bekijk de lichte kop, flankstrepen en roze onderstaart. Het rood op de kruin is op zichzelf geen bewijs voor leeftijd of geslacht."
+      },
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Let op de gestreepte flanken en de roze onderstaart.",
+        "file": "Middelste-bonte-specht-1 (28031708853).jpg",
+        "nl": "Middelste Bonte Specht",
+        "latin": "Dendrocoptes medius",
+        "author": "Yves Hoebeke",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Middelste-bonte-specht-1_(28031708853).jpg",
+        "showSourceLink": false,
+        "alt": "Middelste Bonte Specht in vlucht met gebandeerde vleugels, gestreepte flanken en een roze onderstaart.",
+        "modifications": "Omgezet naar WebP zonder extra uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/middelste-bonte-specht",
+        "visualCheck": "Middelste Bonte Specht in vlucht met gebandeerde vleugels, gestreepte flanken en een roze onderstaart.",
+        "width": 725,
+        "height": 483,
+        "image": "/assets/species/plumage/sp020-flight.webp"
       }
     ],
     "sp031": [
@@ -4513,6 +4555,29 @@
         "width": 1400,
         "height": 1085,
         "image": "/assets/species/plumage/sp018-flight.webp"
+      }
+    ],
+    "sp021": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Let op de brede witte vleugelvelden en de lange staart.",
+        "file": "Eurasian Magpie 2023-10-16 01.jpg",
+        "nl": "Ekster",
+        "latin": "Pica pica",
+        "author": "Alexis Lours",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Eurasian_Magpie_2023-10-16_01.jpg",
+        "showSourceLink": false,
+        "alt": "Ekster in vlucht met gespreide zwart-witte vleugels en een lange staart.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/ekster",
+        "visualCheck": "Ekster in vlucht met gespreide zwart-witte vleugels en een lange staart.",
+        "width": 1400,
+        "height": 933,
+        "image": "/assets/species/plumage/sp021-flight.webp"
       }
     ]
   }
