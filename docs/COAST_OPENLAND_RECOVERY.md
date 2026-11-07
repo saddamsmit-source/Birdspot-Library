@@ -99,3 +99,9 @@ Basis: #51 op 387d053141b21d20358b374a3cfa175973b7c082. CAP-BIRD-012/015.
 - [Torenvalk · Rolf Dietrich Brecher · CC BY 2.0](https://commons.wikimedia.org/wiki/File:Falco_tinnunculus_in_flight_(45067938032).jpg): bestaand biddend vluchtbeeld, leeftijd en geslacht niet vastgesteld. Vluchtbeelden laden lokaal. Licenties staan bij de foto, herkomstlinks staan in het register.
 
 Volgende gidsbatches vullen ontbrekende volwassen vluchtbeelden per soort in. Gebruik aparte, geverifieerde foto’s voor kleden en vergelijkingen wanneer hetzelfde bronbeeld al op de kaart staat. Houd de vluchtbeelden onderaan. Fysiek toestel niet getest.
+
+## Batch 8 · vluchtbeelden vóór verenkleed
+
+De hoofdfoto blijft de eerste foto. Een bestaande, afzonderlijke vluchtfoto of vluchtvergelijking komt direct vóór verenkleed. In de vluchtvergelijking staat de eigen soort als eerste. Is het vluchtbeeld al hoofdfoto, dan geeft het fotobijschrift dat aan. Beeldpaden en bronidentiteit worden op dezelfde soortkaart ontdubbeld. Gewone vergelijkingen blijven onderaan.
+
+[Inventaris bestaande gidsfoto’s](GUIDE_EXISTING_PHOTO_AUDIT.md): alle geregistreerde lokale bestanden technisch gecontroleerd, bestaande vluchtkandidaten eerst visueel nagelopen. Deze ronde gebruikt uitsluitend reeds aanwezige fotobestanden. CAP-BIRD-012/015. De route is klaar voor verdere visuele controles in groepen van ongeveer twintig soorten.

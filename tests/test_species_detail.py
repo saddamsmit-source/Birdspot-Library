@@ -445,7 +445,8 @@ def main():
             assert "lengtestrepen" in young_hawks.locator('.sd-compare-card').last.inner_text()
             for path in ("/assets/species/plumage/sp006-juv.webp", "/assets/species/plumage/sp007-juv.webp"):
                 assert_photo_once(path)
-            flight = p.locator('.sd-compare').last
+            flight = p.locator('.sd-flight-compare')
+            assert flight.evaluate("el => Boolean(el.compareDocumentPosition(document.querySelector('.sd-plumage-list')) & Node.DOCUMENT_POSITION_FOLLOWING)")
             expect(flight.get_by_role("heading", name="Sperwer, Havik en Torenvalk · in vlucht")).to_be_visible()
             assert flight.locator('strong').all_text_contents() == ["Sperwer", "Havik", "Torenvalk"]
             for sid in ("sp006", "sp007", "sp008"):

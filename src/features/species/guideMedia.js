@@ -2051,7 +2051,8 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/blauwe-kiekendief",
       "visualCheck": "Volwassen vrouwtje in vlucht van onderen, met duidelijke bandering op de vleugels en staart.",
       "alt": "Blauwe Kiekendief — Volwassen vrouwtje in vlucht van onderen, met duidelijke bandering op de vleugels en staart.",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "flight": true
     },
     "juv": {
       "file": "Blauwe Kiekendief.jpg",
@@ -2070,7 +2071,8 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/blauwe-kiekendief",
       "visualCheck": "Jong vrouwtje boven gras, met gebandeerde ondervleugels en een witte stuit.",
       "alt": "Blauwe Kiekendief — Jong vrouwtje boven gras, met gebandeerde ondervleugels en een witte stuit.",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "flight": true
     }
   },
   "sp250": {
@@ -2095,7 +2097,8 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "visualCheck": "Volwassen vrouwtje in vlucht. Smalle vleugels, bandering op de ondervleugel en gestreepte onderzijde.",
       "alt": "Steppekiekendief — Volwassen vrouwtje in vlucht. Smalle vleugels, bandering op de ondervleugel en gestreepte onderzijde.",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-      "observation": "https://www.inaturalist.org/observations/343960250"
+      "observation": "https://www.inaturalist.org/observations/343960250",
+      "flight": true
     },
     "juv": {
       "file": "Лунь степовий Circus macrourus, на о. Джарилгач.jpg",
@@ -2114,7 +2117,8 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/steppekiekendief",
       "visualCheck": "Jonge vogel in vlucht met warme onderzijde, lichte halsring en donkere halsvlek.",
       "alt": "Steppekiekendief — Jonge vogel in vlucht met warme onderzijde, lichte halsring en donkere halsvlek.",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "flight": true
     }
   },
   "sp251": {
@@ -2138,7 +2142,8 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grauwe-kiekendief",
       "visualCheck": "Volwassen vrouwtje bij het opvliegen. Gestreepte onderzijde en duidelijke banden op de ondervleugel.",
       "alt": "Grauwe Kiekendief — Volwassen vrouwtje bij het opvliegen. Gestreepte onderzijde en duidelijke banden op de ondervleugel.",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "flight": true
     },
     "juv": {
       "file": "Circus pygargus juvenile flight.jpg",
@@ -2157,7 +2162,8 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grauwe-kiekendief",
       "visualCheck": "Jonge vogel in vlucht. Warmbruine onderzijde en gebandeerde vleugels en staart.",
       "alt": "Grauwe Kiekendief — Jonge vogel in vlucht. Warmbruine onderzijde en gebandeerde vleugels en staart.",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "flight": true
     }
   },
   "sp006": {
@@ -2244,7 +2250,8 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "visualCheck": "Volwassen vrouwtje in vlucht in Japan. Uitstekende kop, gebandeerde onderzijde en een afgeronde staartpunt.",
       "alt": "Havik — Volwassen vrouwtje in vlucht in Japan. Uitstekende kop, gebandeerde onderzijde en een afgeronde staartpunt.",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-      "observation": "https://www.inaturalist.org/observations/266098077"
+      "observation": "https://www.inaturalist.org/observations/266098077",
+      "flight": true
     }
   },
   "sp005": {
@@ -2266,7 +2273,8 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "visualCheck": "Volwassen Buizerd van onderen. Brede vleugels, korte gespreide staart en fijne bandering op de staart.",
       "alt": "Buizerd — Volwassen Buizerd van onderen. Brede vleugels, korte gespreide staart en fijne bandering op de staart.",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-      "observation": "https://www.inaturalist.org/observations/177992598"
+      "observation": "https://www.inaturalist.org/observations/177992598",
+      "flight": true
     },
     "juv": {
       "file": "iNaturalist photo 147178882",
@@ -2311,7 +2319,8 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "visualCheck": "Volwassen vrouwtje met gespreide staart. Brede banden op de ondervleugels en de kenmerkende smalle, uitstekende kop.",
       "alt": "Wespendief — Volwassen vrouwtje met gespreide staart. Brede banden op de ondervleugels en de kenmerkende smalle, uitstekende kop.",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-      "observation": "https://www.inaturalist.org/observations/371545998"
+      "observation": "https://www.inaturalist.org/observations/371545998",
+      "flight": true
     },
     "juv": {
       "file": "Juvenile honey buzzard (52499563661).jpg",
@@ -2330,7 +2339,8 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wespendief",
       "visualCheck": "Jonge Wespendief in vlucht met langere staart en contrastrijke handpennen en armpennen.",
       "alt": "Wespendief — Jonge Wespendief in vlucht met langere staart en contrastrijke handpennen en armpennen.",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "flight": true
     }
   },
   "sp253": {
@@ -2668,7 +2678,8 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zomertaling",
       "visualCheck": "Mannetje in eclipskleed in vlucht boven Hongkong. Bruine kop, lichte keel en opvallend blauwgrijze voorvleugel.",
       "alt": "Zomertaling — Mannetje in eclipskleed in vlucht boven Hongkong. Bruine kop, lichte keel en opvallend blauwgrijze voorvleugel.",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "flight": true
     }
   },
   "sp146": {
@@ -3910,7 +3921,8 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "verification": "Bronbeschrijving en zichtbare veldkenmerken vergeleken.",
       "width": 1250,
       "height": 833,
-      "image": "/assets/species/plumage/sp141-adult.webp"
+      "image": "/assets/species/plumage/sp141-adult.webp",
+      "flight": true
     }
   },
   "sp165": {
@@ -3952,7 +3964,8 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "verification": "Bronbeschrijving en zichtbare veldkenmerken vergeleken.",
       "width": 1250,
       "height": 833,
-      "image": "/assets/species/plumage/sp166-adult.webp"
+      "image": "/assets/species/plumage/sp166-adult.webp",
+      "flight": true
     }
   },
   "sp167": {
@@ -3973,7 +3986,8 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "verification": "Bronbeschrijving en zichtbare veldkenmerken vergeleken.",
       "width": 1250,
       "height": 833,
-      "image": "/assets/species/plumage/sp167-adult.webp"
+      "image": "/assets/species/plumage/sp167-adult.webp",
+      "flight": true
     }
   }
 });
@@ -4202,7 +4216,8 @@ export const GUIDE_POSES = Object.freeze({
       "originalURL": "https://upload.wikimedia.org/wikipedia/commons/3/32/Poecile_Montanus_Kittila_20120306.JPG",
       "image": "/assets/species/plumage/sp031-flight.webp",
       "label": "In vlucht",
-      "note": "Vluchtbeeld uit Finland: uitgewaaierde vleugel en lange staart. Gebruik voor onderscheid met Glanskop vooral de gesloten vleugel, snavelbasis en geluid; dit beeld bewijst geen Nederlandse ondersoort."
+      "note": "Vluchtbeeld uit Finland: uitgewaaierde vleugel en lange staart. Gebruik voor onderscheid met Glanskop vooral de gesloten vleugel, snavelbasis en geluid; dit beeld bewijst geen Nederlandse ondersoort.",
+      "flight": true
     }
   ],
   "sp032": [
