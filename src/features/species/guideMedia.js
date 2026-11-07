@@ -4304,6 +4304,27 @@ export const GUIDE_POSES = Object.freeze({
       "image": "/assets/species/plumage/sp032-view.webp",
       "label": "Van voren",
       "note": "Vooraanzicht met de kop opzij: lichte borst en kleine donkere keelvlek. Dit beeld is geen bewijs voor het subtiele lichte vlekje aan de snavelbasis."
+    },
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "Het tegenlicht maakt kleine details in de kop en vleugel lastig te zien.",
+      "file": "Parus palustris IMG 9452.jpg",
+      "nl": "Glanskop",
+      "latin": "Poecile palustris",
+      "author": "Sébastien Bertru",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Parus_palustris_IMG_9452.jpg",
+      "showSourceLink": false,
+      "alt": "Glanskop in vlucht naast een tak, met een gespreide vleugel en donkere kruin.",
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+      "reviewed": "2026-11-07",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/glanskop",
+      "visualCheck": "Glanskop in vlucht naast een tak, met een gespreide vleugel en donkere kruin.",
+      "width": 1400,
+      "height": 1277,
+      "image": "/assets/species/plumage/sp032-flight.webp"
     }
   ],
   "sp033": [
@@ -4647,6 +4668,52 @@ export const GUIDE_POSES = Object.freeze({
       "width": 1400,
       "height": 933,
       "image": "/assets/species/plumage/sp026-flight.webp"
+    }
+  ],
+  "sp029": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "Let op de zwarte kop met witte wang en de gele onderzijde.",
+      "file": "13 bis 15 Zentimeter wird eine Kohlmeise lang. 01.jpg",
+      "nl": "Koolmees",
+      "latin": "Parus major",
+      "author": "Holger Uwe Schmitt",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:13_bis_15_Zentimeter_wird_eine_Kohlmeise_lang._01.jpg",
+      "showSourceLink": false,
+      "alt": "Koolmees in vlucht met een gele buik, zwarte kop, witte wang en gespreide vleugel.",
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+      "reviewed": "2026-11-07",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/koolmees",
+      "visualCheck": "Koolmees in vlucht met een gele buik, zwarte kop, witte wang en gespreide vleugel.",
+      "width": 1400,
+      "height": 1077,
+      "image": "/assets/species/plumage/sp029-flight.webp"
+    }
+  ],
+  "sp030": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "Let op de blauwe kruin en de donkere oogstreep door het witte gezicht.",
+      "file": "Blue Tit in flight (8360763555).jpg",
+      "nl": "Pimpelmees",
+      "latin": "Cyanistes caeruleus",
+      "author": "Joe Dyer",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Blue_Tit_in_flight_(8360763555).jpg",
+      "showSourceLink": false,
+      "alt": "Pimpelmees in vlucht met blauwe kruin, donkere oogstreep, gespreide staart en gele buik.",
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+      "reviewed": "2026-11-07",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/pimpelmees",
+      "visualCheck": "Pimpelmees in vlucht met blauwe kruin, donkere oogstreep, gespreide staart en gele buik.",
+      "width": 1400,
+      "height": 1050,
+      "image": "/assets/species/plumage/sp030-flight.webp"
     }
   ]
 });

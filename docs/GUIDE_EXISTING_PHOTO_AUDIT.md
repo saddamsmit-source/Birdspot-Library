@@ -2,7 +2,7 @@
 
 Baseline: concept-PR #53, bbadaa799d870f1659c692fefb7998241cd81014. CAP-BIRD-012 en CAP-BIRD-015.
 
-**134 soorten, 127 hoofdfoto’s, 248 unieke lokale beeldbestanden.** Vluchtstatus: 10 hoofdfoto’s in vlucht, 6 aparte vluchtbeelden en 15 kaarten met een vluchtvergelijking. 68 soorten zijn visueel gecontroleerd zonder bestaand vluchtbeeld. 35 soorten vragen vervolgcontrole.
+**134 soorten, 127 hoofdfoto’s, 251 unieke lokale beeldbestanden.** Vluchtstatus: 10 hoofdfoto’s in vlucht, 5 aparte vluchtbeelden en 19 kaarten met een vluchtvergelijking. 65 soorten zijn visueel gecontroleerd zonder bestaand vluchtbeeld. 35 soorten vragen vervolgcontrole.
 
 Technische controle op alle soorten met bestaande, geregistreerde gidsfoto’s. Elk uniek lokaal bestand is gedecodeerd. Verschillende paden zijn vergeleken op SHA-256. De soortnaam en het lokale pad zijn ook gecontroleerd via guide_coverage. Bronregistratie bewijst eerdere beoordeling; de eerste visuele hercontrole betrof de vluchtkandidaten. Rondes 9 tot en met 12 voegen elk twintig visueel gecontroleerde soorten toe.
 
@@ -27,10 +27,10 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp022 | Zwarte Kraai | Ja | 2 | Vergelijking |
 | sp025 | Kauw | Ja | 2 | Vergelijking |
 | sp026 | Gaai | Ja | 2 | Vergelijking |
-| sp029 | Koolmees | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp030 | Pimpelmees | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
-| sp031 | Matkop | Ja | 2 | Apart beeld |
-| sp032 | Glanskop | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
+| sp029 | Koolmees | Ja | 2 | Vergelijking |
+| sp030 | Pimpelmees | Ja | 3 | Vergelijking |
+| sp031 | Matkop | Ja | 2 | Vergelijking |
+| sp032 | Glanskop | Ja | 3 | Vergelijking |
 | sp033 | Kuifmees | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
 | sp034 | Staartmees | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
 | sp035 | Vink | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
@@ -233,3 +233,15 @@ Basis is concept-PR #61, 60e87e66c836b75547b75ca63f00046a92a1cb09. Per soort zij
 CAP-BIRD-012/015. Zwarte Kraai en Kauw vormen één vluchtvergelijking. Gaai en Ekster vormen de andere, met hergebruik van de bestaande vluchtfoto van de Ekster. Volgende soort is Koolmees. Na deze batch staan 103 soorten op de zoeklijst.
 
 Mobiele Chromium-test op 390 px: Zwarte Kraai, Kauw, Gaai en Ekster geopend vanuit de soortenlijst. De eigen soort staat vooraan, de lokale beelden laden vóór verenkleed waar aanwezig, en de foto opent en zoomt naar 2×. De drie bestanden zijn uniek in de gids- en showcasebibliotheek. Gidsdekking en de bestaande positie- en uniciteitstest zijn geslaagd. De fysieke toesteltest staat open.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 5
+
+Basis is concept-PR #62, 20ae3a00ec5b7e1b4883a8926389be2b1e09a282. Voor Koolmees en Pimpelmees zijn meerdere Commons-vluchtfoto’s vergeleken. Voor Glanskop zijn vluchttermen in meerdere talen, algemene fotosites en de bereikbare miniaturen in de Commons-soortcategorie bekeken. Die visuele controle leverde de gekozen foto op, met de oudere soortnaam Parus palustris en een generiek bestandsnummer. De vogel is los van de tak. Het beeld heeft tegenlicht en enige bewegingsonscherpte. De soortregistratie steunt op de oorspronkelijke bron. Gebruik dit beeld niet voor een zelfstandige determinatie tegenover Matkop. Leeftijd en geslacht zijn niet bevestigd.
+
+- Koolmees · Holger Uwe Schmitt · CC BY-SA 4.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:13_bis_15_Zentimeter_wird_eine_Kohlmeise_lang._01.jpg)
+- Pimpelmees · Joe Dyer · CC BY 2.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Blue_Tit_in_flight_(8360763555).jpg)
+- Glanskop · Sébastien Bertru · CC BY-SA 2.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Parus_palustris_IMG_9452.jpg)
+
+CAP-BIRD-012/015. Koolmees en Pimpelmees staan in een vluchtvergelijking. Glanskop en Matkop staan in een tweede vergelijking met de al aanwezige Matkopfoto. Volgende soort is Kuifmees. Na deze batch staan 100 soorten op de zoeklijst.
+
+Mobiele Chromium-test op 390 px: alle vier betrokken kaarten geopend. De eigen soort staat vooraan, vlucht staat vóór verenkleed waar aanwezig en de foto opent en zoomt naar 2×. De drie bestanden decoderen en hun SHA-256 komt verder nergens in de gids- of showcasebibliotheek voor. Gidsdekking en de bestaande positie- en uniciteitstest zijn geslaagd. Fysieke toesteltest staat open.
