@@ -4579,6 +4579,75 @@
         "height": 933,
         "image": "/assets/species/plumage/sp021-flight.webp"
       }
+    ],
+    "sp022": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Let op de forse bouw, brede vleugels en het geheel donkere kleed.",
+        "file": "Corvus corone in flight JdP 20191213 t160752.jpg",
+        "nl": "Zwarte Kraai",
+        "latin": "Corvus corone",
+        "author": "Marie-Lan Taÿ Pamart",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Corvus_corone_in_flight_JdP_20191213_t160752.jpg",
+        "showSourceLink": false,
+        "alt": "Zwarte Kraai in vlucht met brede zwarte vleugels, gespreide vleugelpunten en een stevige snavel.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwarte-kraai",
+        "visualCheck": "Zwarte Kraai in vlucht met brede zwarte vleugels, gespreide vleugelpunten en een stevige snavel.",
+        "width": 1400,
+        "height": 933,
+        "image": "/assets/species/plumage/sp022-flight.webp"
+      }
+    ],
+    "sp025": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Let op de grijze nek, lichte ogen en kortere snavel.",
+        "file": "Jackdaw (48142024622).jpg",
+        "nl": "Kauw",
+        "latin": "Coloeus monedula",
+        "author": "hedera.baltica",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Jackdaw_(48142024622).jpg",
+        "showSourceLink": false,
+        "alt": "Kauw in frontale vlucht met gespreide vleugels, grijze nek en lichte ogen.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kauw",
+        "visualCheck": "Kauw in frontale vlucht met gespreide vleugels, grijze nek en lichte ogen.",
+        "width": 1400,
+        "height": 934,
+        "image": "/assets/species/plumage/sp025-flight.webp"
+      }
+    ],
+    "sp026": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "De blauw-zwart gestreepte vleugelveren vallen op.",
+        "file": "075 Wild Eurasian jay in flight at the Parc naturel régional Jura vaudois Photo by Giles Laurent.jpg",
+        "nl": "Gaai",
+        "latin": "Garrulus glandarius",
+        "author": "Giles Laurent (gileslaurent.com)",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:075_Wild_Eurasian_jay_in_flight_at_the_Parc_naturel_r%C3%A9gional_Jura_vaudois_Photo_by_Giles_Laurent.jpg",
+        "showSourceLink": false,
+        "alt": "Gaai in vlucht met een rozegrijs lichaam en een blauw-zwart gebandeerd vleugelveld.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/gaai",
+        "visualCheck": "Gaai in vlucht met een rozegrijs lichaam en een blauw-zwart gebandeerd vleugelveld.",
+        "width": 1400,
+        "height": 933,
+        "image": "/assets/species/plumage/sp026-flight.webp"
+      }
     ]
   }
 }
