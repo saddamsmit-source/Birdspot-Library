@@ -230,6 +230,25 @@ const LIST_PAGE = 60;
 let _listLimit = LIST_PAGE;
 let _listKey = '';
 
+export function getSpeciesNavigationState() {
+  return {
+    category: _currentCategory, seasons: [..._seasons], hideYearRound: _hideYearRound,
+    query: _searchQuery, region: _currentRegion, onlyFavorites: _onlyFavorites,
+    listKey: _listKey, listLimit: _listLimit,
+  };
+}
+
+export function restoreSpeciesNavigationState(state) {
+  _currentCategory = state.category;
+  _seasons = [...state.seasons];
+  _hideYearRound = state.hideYearRound;
+  _searchQuery = state.query;
+  _currentRegion = state.region;
+  _onlyFavorites = state.onlyFavorites;
+  _listKey = state.listKey;
+  _listLimit = state.listLimit;
+}
+
 function renderList(el, seenIds, ctx = _speciesCtx) {
   seenIds = seenIds || getSeenIds();
   const favorites = getCollectionIds("species");

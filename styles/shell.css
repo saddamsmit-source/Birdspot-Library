@@ -503,3 +503,12 @@ body::before {
     transition-duration: .01ms !important;
   }
 }
+
+/* Handmatige updateactie gebruikt dezelfde visuele stijl als een melding. */
+.toast.app-update {
+  top: calc(env(safe-area-inset-top, 0px) + 62px);
+  z-index: 140;
+  pointer-events: auto;
+  text-align: left;
+  border: 0;
+}
