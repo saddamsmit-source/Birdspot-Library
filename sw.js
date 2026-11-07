@@ -12,9 +12,10 @@
  *   birdspot-media           — foto's/IDB-exports (permanent)
  */
 
-const APP_VERSION = '1.14.0-map-k5-links';
+const APP_VERSION = '1.14.1-guide-pilot';
 const APP_CACHE   = `birdspot-app-v${APP_VERSION}`;
 const MEDIA_CACHE = 'birdspot-media';
+const PILOT_AUDIO = '/assets/species/audio/sp078-xc519437.mp3';
 
 // ── Bestanden die offline beschikbaar moeten zijn ──────────────────────────
 // Suncalc wordt via CDN geladen; als het offline niet beschikbaar is,
@@ -43,6 +44,10 @@ const PRECACHE_URLS = [
   '/styles/cinematic-wetland.css',
   '/styles/map-explorer.css',
   '/assets/birdspot-ijsvogel-splash.avif',
+  '/assets/species/sp029.webp',
+  '/assets/species/sp078.webp',
+  '/assets/species/sp079.webp',
+  PILOT_AUDIO,
 
   // JS — app root
   '/src/app.js',
@@ -56,6 +61,7 @@ const PRECACHE_URLS = [
   '/src/features/home/showcaseData.js',
   '/src/features/species/view.js',
   '/src/features/species/detailSections.js',
+  '/src/features/species/pilotFieldGuide.js',
   '/src/features/sightings/view.js',
   '/src/features/sightings/addSheet.js',
   '/src/features/sightings/evidence.js',
@@ -171,6 +177,11 @@ self.addEventListener('fetch', event => {
   if (request.method !== 'GET') return;
   if (url.origin !== self.location.origin) return;
 
+  if (url.pathname === PILOT_AUDIO) {
+    event.respondWith(guideAudioResponse(request));
+    return;
+  }
+
   // Media: afbeeldingen uit de app-eigen upload-flow → media-cache
   // (In deze app slaan we binaire foto's in IndexedDB op; blob-URLs
   //  worden niet via fetch geladen. Deze tak is een vangnet voor toekomstig
@@ -225,7 +236,7 @@ async function networkFirstWithTimeout(request, timeoutMs) {
 // ── Cache-first voor media ─────────────────────────────────────────────────
 async function cacheFirstMedia(request) {
   const cache  = await caches.open(MEDIA_CACHE);
-  const cached = await cache.match(request);
+  const cached = await cache.match(request) || await caches.match(request, {cacheName: APP_CACHE});
   if (cached) return cached;
 
   try {
@@ -238,4 +249,27 @@ async function cacheFirstMedia(request) {
       headers: { 'Content-Type': 'text/plain; charset=utf-8' },
     });
   }
+}
+
+async function guideAudioResponse(request) {
+  // Cache de hele korte opname, zodat zoeken in de clip ook offline werkt.
+  const response = await cacheFirstMedia(request.url);
+  const range = request.headers.get('Range');
+  if (!range || !response.ok) return response;
+  const blob = await response.blob();
+  const match = /^bytes=(\d*)-(\d*)$/.exec(range);
+  const start = match?.[1] ? Number(match[1]) : Math.max(0, blob.size - Number(match?.[2]));
+  const end = match?.[1] && match[2] ? Math.min(blob.size - 1, Number(match[2])) : blob.size - 1;
+  if (!match || (!match[1] && !match[2]) || start > end || start >= blob.size) {
+    return new Response(null, {status:416, headers:{'Content-Range':`bytes */${blob.size}`}});
+  }
+  return new Response(blob.slice(start, end + 1, blob.type), {
+    status:206,
+    headers:{
+      'Content-Type':blob.type,
+      'Accept-Ranges':'bytes',
+      'Content-Length':String(end - start + 1),
+      'Content-Range':`bytes ${start}-${end}/${blob.size}`,
+    },
+  });
 }
