@@ -2,7 +2,7 @@
 
 Baseline: concept-PR #53, bbadaa799d870f1659c692fefb7998241cd81014. CAP-BIRD-012 en CAP-BIRD-015.
 
-**134 soorten, 127 hoofdfoto’s, 236 unieke lokale beeldbestanden.** Vluchtstatus: 10 hoofdfoto’s in vlucht, 6 aparte vluchtbeelden en 3 kaarten met een vluchtvergelijking. 80 soorten zijn visueel gecontroleerd zonder bestaand vluchtbeeld. 35 soorten vragen vervolgcontrole.
+**134 soorten, 127 hoofdfoto’s, 239 unieke lokale beeldbestanden.** Vluchtstatus: 10 hoofdfoto’s in vlucht, 6 aparte vluchtbeelden en 6 kaarten met een vluchtvergelijking. 77 soorten zijn visueel gecontroleerd zonder bestaand vluchtbeeld. 35 soorten vragen vervolgcontrole.
 
 Technische controle op alle soorten met bestaande, geregistreerde gidsfoto’s. Elk uniek lokaal bestand is gedecodeerd. Verschillende paden zijn vergeleken op SHA-256. De soortnaam en het lokale pad zijn ook gecontroleerd via guide_coverage. Bronregistratie bewijst eerdere beoordeling; de eerste visuele hercontrole betrof de vluchtkandidaten. Rondes 9 tot en met 12 voegen elk twintig visueel gecontroleerde soorten toe.
 
@@ -10,9 +10,9 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 
 | ID | Soort | Hoofdfoto | Unieke geregistreerde beelden | Vluchtdekking |
 |---|---|---|---:|---|
-| sp002 | Houtduif | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp003 | Holenduif | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp004 | Turkse Tortel | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp002 | Houtduif | Ja | 2 | Vergelijking |
+| sp003 | Holenduif | Ja | 2 | Vergelijking |
+| sp004 | Turkse Tortel | Ja | 2 | Vergelijking |
 | sp005 | Buizerd | Ja | 3 | Apart beeld |
 | sp006 | Sperwer | Ja | 4 | Vergelijking |
 | sp007 | Havik | Ja | 4 | Vergelijking |
@@ -182,3 +182,18 @@ De lokale gidscontroles voor dekking, unieke beelden en plaatsing van vluchtbeel
 ## Volgende controlebatches
 
 Controleer eerst bestaande beelden per groep van ongeveer twintig soorten. Leg per bron soort, leeftijd of kleed, houding en licentie vast. Controleer open gevallen op beschikbare lokale vliegbeelden, markeer onzekere bron of determinatie en laat het beeld buiten de vluchtsectie zolang verificatie ontbreekt. Rond een soort af met de bestaande beelden, ook als een vluchtfoto ontbreekt. Nieuwe beelden zijn een afzonderlijke fase na de controle van de bestaande beeldset.
+
+
+## Gericht zoeken naar vluchtfoto’s · ronde 1
+
+Basis is concept-PR #58, 2eb9e1ce38eae6705bfee9b4a86bf16075811557. Het vorige statusveld beschrijft uitsluitend de bestaande Birdspot-beelden. Voor iedere soort met een bestaande foto en zonder vluchtbeeld volgt gericht brononderzoek. De startlijst telt 115 soorten. Zoek op de wetenschappelijke en lokale soortnamen en op vluchttermen. Leg per soort vast of een foto is gevonden, of beeldkwaliteit of licentie de keuze verhindert en welke bronroutes zijn gecontroleerd.
+
+Voor Houtduif en Turkse Tortel zijn meerdere beelden uit de Commons-vluchtcategorie bekeken. Voor Holenduif zijn Commons, Flickr, iNaturalist-zoekresultaten en andere fotosites geraadpleegd met Engelse, Franse, Duitse en Nederlandse zoektermen. Twee expliciete Flickr-vluchtbeelden hadden alle rechten voorbehouden. Een derde kandidaat viel af door een licentie met beperkingen op commercieel gebruik en aanpassingen. De Commons-foto met Zweedse titel toont de Holenduif vlak boven de grond met loshangende poten. De uitsnede maakt de vleugelvorm beter zichtbaar. De precieze leeftijd van Holenduif en Turkse Tortel is niet vastgesteld.
+
+- Houtduif · Stefan Berndtsson · CC BY 2.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Columba_palumbus_SB.jpg)
+- Holenduif · Åsa Berndtsson · CC BY 2.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Skogsduva_Stock_Dove_(19730362773).jpg)
+- Turkse Tortel · Florian Pépellin · CC BY-SA 4.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Tourterelle_turque_en_vol_pr%C3%A8s_de_Chamb%C3%A9ry_(avril_2020).JPG)
+
+CAP-BIRD-012/015. De drie foto’s zijn lokale WebP-bestanden en staan in de bestaande vluchtvergelijking vóór de verenkleden. De foto van de geopende soort staat vooraan. De hoofdfoto blijft afzonderlijk. Technische controle omvat bron- en bestandsonderscheid, decodering, gidsdekking en de bestaande positie- en uniciteitstest. De zoekmethode is herbruikbaar voor de volgende soorten, vanaf Grote Bonte Specht.
+
+Mobiele Chromium-test op 390 px: alle drie de kaarten via de soortenlijst geopend. Per kaart zijn de eigen soort eerst, drie lokale beelden, de plaatsing vóór de kleden en 2× inzoomen gecontroleerd. Fysieke toesteltest staat open.
