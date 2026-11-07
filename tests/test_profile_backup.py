@@ -102,11 +102,11 @@ def main():
 
             ctx2 = browser.new_context(viewport={"width": 390, "height": 844}, reduced_motion="reduce")
             p2, errors2 = boot(ctx2, url, [])
-            p2.evaluate("() => navigator.serviceWorker.ready")
+            p2.wait_for_function("navigator.serviceWorker.controller !== null")
             open_profile(p2)
             p2.wait_for_function("() => !document.querySelector('#appVersion').textContent.includes('ophalen')")
             txt = p2.locator("#appVersion").inner_text()
-            assert txt == f"Versie {APP_VERSION} · werkt offline", txt
+            assert txt == f"Versie {APP_VERSION} · basis offline beschikbaar", txt
             assert p2.locator(".profile-stat").count() == 0 and p2.locator(".profile-empty").count() == 1
             assert "Nog geen back-up nodig" in p2.locator("#backupStatus").inner_text()
             print("B-05 OK —", txt)

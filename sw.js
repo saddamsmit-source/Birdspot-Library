@@ -2,9 +2,9 @@
  * BIRDSPOT LIBRARY — Service Worker (Fase G)
  *
  * Strategie:
- * - app-shell (code/HTML/CSS/JS): network-first met ~3 s time-out (L-009)
+ * - app-shell (code/HTML/CSS/JS): vaste cache per versie, netwerk bij ontbrekend bestand
  * - media (foto's in IDB): aparte cache, overleeft releases (L-052)
- * - update-notificatie via BroadcastChannel (L-011)
+ * - update activeren op verzoek (L-011)
  * - één versiebron: APP_VERSION → APP_CACHE (L-027)
  *
  * Caches:
@@ -12,7 +12,7 @@
  *   birdspot-media           — foto's/IDB-exports (permanent)
  */
 
-const APP_VERSION = '1.14.0-map-k5-links';
+const APP_VERSION = '1.14.1-navigation-recovery';
 const APP_CACHE   = `birdspot-app-v${APP_VERSION}`;
 const MEDIA_CACHE = 'birdspot-media';
 
@@ -47,6 +47,7 @@ const PRECACHE_URLS = [
   // JS — app root
   '/src/app.js',
   '/src/services/startup-splash.js',
+  '/src/services/navigation.js',
 
   // JS — features
   '/src/features/home/view.js',
@@ -60,7 +61,7 @@ const PRECACHE_URLS = [
   '/src/features/sightings/addSheet.js',
   '/src/features/sightings/evidence.js',
   '/src/features/sightings/pinPicker.js',
-  '/src/features/sightings/editSheet.js',
+  '/src/features/sightings/speciesPicker.js',
   '/src/features/sightings/detailSheet.js',
   '/src/features/map/view.js',
   '/src/features/map/centerPin.js',
@@ -77,6 +78,7 @@ const PRECACHE_URLS = [
 
   // JS — data
   '/src/data/sightings.js',
+  '/src/data/db.js',
   '/src/data/species.js',
   '/src/data/speciesLife.js',
   '/src/data/seasons.js',
@@ -88,34 +90,18 @@ const PRECACHE_URLS = [
   // JS — services
   '/src/services/sw-register.js',
 
-  // JS — utils (voeg toe als ze bestaan)
-  '/src/utils/date.js',
-  '/src/utils/search.js',
+  // JS — utils
+  '/src/utils/html.js',
+  '/src/utils/photoUrl.js',
 ];
 
 // ── Install: precache atomair ──────────────────────────────────────────────
 self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open(APP_CACHE).then(async cache => {
-      // Probeer elk bestand apart; sla ontbrekende utils over (allSettled)
-      const results = await Promise.allSettled(
-        PRECACHE_URLS.map(url =>
-          cache.add(url).catch(err => {
-            // Utils-bestanden zijn optioneel; log maar blokkeer niet
-            console.warn(`[SW] precache skip: ${url}`, err.message);
-          })
-        )
-      );
-      // Diashowfoto's (F): eenmalig in de media-cache, die releases overleeft (L-052)
-      await precacheShowcase();
-      const failed = results.filter(r => r.status === 'rejected');
-      if (failed.length) {
-        console.warn(`[SW] ${failed.length} precache-verzoeken overgeslagen`);
-      }
-    })
-  );
-  // Activeer direct (geen wachten op bestaande clients)
-  self.skipWaiting();
+  event.waitUntil((async () => {
+    const cache = await caches.open(APP_CACHE);
+    await cache.addAll(PRECACHE_URLS.map(url => new Request(url, { cache: 'reload' })));
+    await precacheShowcase();
+  })());
 });
 
 async function precacheShowcase() {
@@ -146,19 +132,24 @@ self.addEventListener('activate', event => {
       return self.clients.claim();
     })
   );
-
-  // Stuur update-notificatie naar alle open clients
-  self.clients.matchAll({ type: 'window' }).then(clients => {
-    clients.forEach(client => {
-      client.postMessage({ type: 'new-version', version: APP_VERSION });
-    });
-  });
 });
 
-// ── Versie opvragen (profielpagina) ────────────────────────────────────────
+async function reportVersion(port) {
+  let offlineReady = false;
+  try {
+    const cache = await caches.open(APP_CACHE);
+    const required = await Promise.all(PRECACHE_URLS.map(url => cache.match(url)));
+    offlineReady = required.every(response => response?.ok);
+  } catch (_) { /* opslag niet beschikbaar */ }
+  port.postMessage({ type: 'version', version: APP_VERSION, offlineReady });
+}
+
 self.addEventListener('message', event => {
-  if (event.data?.type === 'get-version') {
-    event.ports?.[0]?.postMessage({ type: 'version', version: APP_VERSION });
+  if (event.data?.type === 'apply-update') {
+    event.waitUntil(self.skipWaiting());
+  }
+  if (event.data?.type === 'get-version' && event.ports[0]) {
+    event.waitUntil(reportVersion(event.ports[0]));
   }
 });
 
@@ -170,6 +161,12 @@ self.addEventListener('fetch', event => {
   // Sla niet-GET en externe verzoeken over (bijv. Leaflet CDN, OpenStreetMap tiles)
   if (request.method !== 'GET') return;
   if (url.origin !== self.location.origin) return;
+
+  // Een wachtende release vervangt nog geen bestanden in de actieve codecache.
+  if (PRECACHE_URLS.includes(url.pathname)) {
+    event.respondWith(serveAppShell(request, url.pathname));
+    return;
+  }
 
   // Media: afbeeldingen uit de app-eigen upload-flow → media-cache
   // (In deze app slaan we binaire foto's in IndexedDB op; blob-URLs
@@ -184,6 +181,12 @@ self.addEventListener('fetch', event => {
   // App-shell: network-first met 3 s time-out
   event.respondWith(networkFirstWithTimeout(request, 3000));
 });
+
+async function serveAppShell(request, path) {
+  const cache = await caches.open(APP_CACHE);
+  const cached = await cache.match(path);
+  return cached || networkFirstWithTimeout(request, 3000);
+}
 
 // ── Network-first met time-out ─────────────────────────────────────────────
 async function networkFirstWithTimeout(request, timeoutMs) {

@@ -33,7 +33,7 @@ let _mapInstance  = null;   // L.map referentie (hergebruikt bij terugkeren)
 let _clusterLayer = null;   // MarkerCluster laag
 
 // ── Entry point ────────────────────────────────────────────────
-export function renderMap(el) {
+export function renderMap(el, selection) {
   el.innerHTML = `
     <div class="map-screen signature-map-loading" id="mapScreen">
       <div id="leafletMap"></div>
@@ -128,6 +128,11 @@ export function renderMap(el) {
   el.querySelector("#explorerSightingsBtn")?.addEventListener("click", () => {
     import("../../app.js").then(({ navigate }) => navigate("sightings"));
   });
+
+  if (selection) {
+    el.querySelector('#mapSpeciesSearch').value = selection.search ?? '';
+    el.querySelector('#mapStatusSelect').value = selection.status ?? 'all';
+  }
 
   // De kaart blijft functioneel bij traag/offline CDN; geen oneindige spinner.
   // Synchronisch cleanup-contract voor de bestaande router.
@@ -248,7 +253,8 @@ function initMap(screenEl, sightings, leafletOk = true) {
   const clearFilters = screenEl.querySelector('#mapClearFilters');
   const feedback = screenEl.querySelector('#mapFilterFeedback');
   const countEl = screenEl.querySelector('#mapCount');
-  const filterState = {speciesSearch:'',status:'all'};
+  const statusSelect = screenEl.querySelector('#mapStatusSelect');
+  const filterState = { speciesSearch: speciesSearch.value.trim(), status: statusSelect.value || 'all' };
   let updateMapMarkers=()=>{};
   let showSearchResults=()=>{};
   // K5: plekken zijn doorzoekbaar op naam
@@ -329,9 +335,6 @@ function initMap(screenEl, sightings, leafletOk = true) {
 
   // Locatie-knop — ook zonder kaart tonen
   const locBtn = screenEl.querySelector('#mapLocateBtn');
-  if (locBtn && leafletOk) {
-    // handler wordt gekoppeld nadat map aangemaakt is (zie hieronder)
-  }
 
   // Zonder Leaflet: geen kaart, wel teller + lege state + knop
   if (!leafletOk) {
@@ -488,7 +491,11 @@ function initMap(screenEl, sightings, leafletOk = true) {
     pinPanel.hidden = !on;
     addPinBtn.hidden = on;
     addPinBtn.setAttribute('aria-pressed', String(on));
-    if (on) { screenEl.querySelector('#mapFilterPanel').hidden = true; updatePin(); }
+    if (on) {
+      map.stop();
+      setFilterOpen(false);
+      updatePin();
+    }
   };
   map.on('move', updatePin);
   map.on('zoomend', updatePin);
@@ -504,7 +511,16 @@ function initMap(screenEl, sightings, leafletOk = true) {
   });
   // Locatie-knop koppelen
   if (locBtn) {
-    locBtn.addEventListener('click', () => centerOnUser(map, locBtn));
+    let locateRequest = 0;
+    addPinBtn?.addEventListener('click', () => {
+      locateRequest++;
+      locBtn.classList.remove('map-locate-btn--loading');
+    });
+    locBtn.addEventListener('click', () => {
+      if (placing) return;
+      const request = ++locateRequest;
+      centerOnUser(map, locBtn, () => locBtn.isConnected && request === locateRequest);
+    });
   }
 }
 
@@ -621,15 +637,16 @@ function openPlaceSheet(screenEl, place, visibleRecords, map) {
 }
 
 // ── Locatie ────────────────────────────────────────────────────
-function centerOnUser(map, btn) {
+function centerOnUser(map, btn, isCurrent) {
   if (!navigator.geolocation) return;
   btn.classList.add('map-locate-btn--loading');
   navigator.geolocation.getCurrentPosition(
     pos => {
+      if (!isCurrent()) return;
       btn.classList.remove('map-locate-btn--loading');
       map.flyTo([pos.coords.latitude, pos.coords.longitude], 17, { duration: 1 });
     },
-    () => btn.classList.remove('map-locate-btn--loading'),
+    () => { if (isCurrent()) btn.classList.remove('map-locate-btn--loading'); },
     { timeout: 10000, maximumAge: 60000 },
   );
 }
