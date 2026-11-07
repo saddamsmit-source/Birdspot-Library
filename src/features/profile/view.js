@@ -201,7 +201,7 @@ async function handleImport(el, file) {
 
     // Terugzetten-knop tonen (er is nu een veiligheidskopie)
     const restoreCard = el.querySelector('#restoreCard');
-    if (restoreCard) restoreCard.classList.remove('profile-card--hidden');
+    restoreCard?.classList.toggle('profile-card--hidden', !hasSafetyCopy());
 
     showToast(`Hersteld: ${result.merged} waarnemingen in je bibliotheek`);
 

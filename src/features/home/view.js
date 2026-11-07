@@ -9,6 +9,7 @@
  *   - Open-Meteo REST API (geen key)
  */
 
+import { escHtml } from '../../utils/html.js';
 import { getDB }                          from '../../data/db.js';
 import { getSightings }                   from '../../data/sightings.js';
 import { getPhotoUrl, revokePhotoUrl }    from '../../utils/photoUrl.js';
@@ -573,7 +574,7 @@ async function buildRecentItem(s) {
       const url = getPhotoUrl(photo);
       if (url) {
         blobUrl   = url;
-        thumbHtml = `<img src="${url}" alt="${s.speciesName || ''}" loading="lazy">`;
+        thumbHtml = `<img src="${url}" alt="${escHtml(s.speciesName || '')}" loading="lazy">`;
       }
     } catch (_) {}
   }
@@ -592,9 +593,9 @@ async function buildRecentItem(s) {
     <div class="recent-item">
       <div class="${thumbClass}">${thumbContent}</div>
       <div class="recent-item__body">
-        <div class="recent-item__name">${s.speciesName || 'Onbekend'}</div>
+        <div class="recent-item__name">${escHtml(s.speciesName || 'Onbekend')}</div>
         <div class="recent-item__meta">
-          ${fmtDate(s.date)}${s.locationName ? ` · ${s.locationName}` : ''}
+          ${fmtDate(s.date)}${s.locationName ? ` · ${escHtml(s.locationName)}` : ''}
         </div>
       </div>
       ${badge ? `<div class="recent-item__badge">${badge}</div>` : ''}
