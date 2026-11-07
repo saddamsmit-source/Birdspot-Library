@@ -1661,16 +1661,16 @@ export const LIFE = Object.freeze({
  },
  "sp116": {
   "breeding": {
-   "period": "mei–aug",
+   "period": "Eileg vanaf eind mei",
    "nest": "Zelf gegraven gang in een steile zandwand",
    "eggs": "4–5",
-   "incubation": "14–16 dagen",
-   "fledging": "18–22 dagen",
-   "broods": "1–2",
+   "incubation": "14–17 dagen",
+   "fledging": "20–24 dagen",
+   "broods": "Vaak 2, soms in verschillende kolonies",
    "months": "mei-aug"
   },
   "diet": "Kleine vliegende insecten boven water",
-  "behaviour": "Broedt in kolonies in zandafgravingen en rivieroevers",
+  "behaviour": "Graaft nestgangen in steile zandwanden; voor vertrek slapen groepen vaak in rietvelden.",
   "migration": "Zomergast (apr–sep); overwintert in de Sahel",
   "voice": "Raspend, droog \"tsjrr\""
  },
@@ -1992,17 +1992,17 @@ export const LIFE = Object.freeze({
  },
  "sp141": {
   "breeding": {
-   "period": "mei–jul",
-   "nest": "In een holte onder dakpannen of in een gierzwaluwkast",
+   "period": "Mei–juni",
+   "nest": "In een holte in een gebouw, onder dakpannen of in een neststeen of gierzwaluwkast.",
    "eggs": "2–3",
-   "incubation": "19–20 dagen",
+   "incubation": "18–22 dagen",
    "fledging": "37–56 dagen",
    "broods": "1",
    "months": "mei-jul"
   },
   "diet": "Kleine vliegende insecten en spinnetjes die in de lucht zweven",
   "behaviour": "Brengt bijna zijn hele leven in de lucht door, slaapt ook vliegend",
-  "migration": "Zomergast (mei–aug); een van de kortst aanwezige zomergasten; overwintert in zuidelijk Afrika",
+  "migration": "Zomergast met een korte verblijfsperiode. Trekt na het broedseizoen naar Afrika.",
   "voice": "Schel gierend \"srieee\", in groepen om huizen"
  },
  "sp142": {
@@ -2907,16 +2907,16 @@ export const LIFE = Object.freeze({
  "sp225": {
   "breeding": {
    "period": "mei–jul",
-   "nest": "Kuiltje in een kolonie, vaak tussen Kokmeeuwen",
+   "nest": "Grondnest in een kolonie, vaak tussen Kokmeeuwen en op schaars begroeide ondergrond.",
    "eggs": "2–3",
-   "incubation": "23–25 dagen",
+   "incubation": "23–26 dagen",
    "fledging": "35–40 dagen",
    "broods": "1",
    "months": "mei-jul"
   },
   "diet": "Insecten, kleine vis en wormen",
   "behaviour": "Broedt in kolonies in Zeeland en langs de kust",
-  "migration": "Zomergast (mrt–sep); overwintert langs Atlantische kusten",
+  "migration": "In de winter vooral langs Atlantische kusten van Frankrijk en Groot-Brittannië en soms verder zuidelijk.",
   "voice": "Nasaal \"kjau-oh\""
  },
  "sp226": {
