@@ -5058,5 +5058,74 @@ export const GUIDE_POSES = Object.freeze({
       "height": 1065,
       "image": "/assets/species/plumage/sp047-flight.webp"
     }
+  ],
+  "sp048": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "Let op de lichte wenkbrauwstreep en de roestrode flank.",
+      "file": "Redwing in flight.jpg",
+      "nl": "Koperwiek",
+      "latin": "Turdus iliacus",
+      "author": "Lucas Golden",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Redwing_in_flight.jpg",
+      "showSourceLink": true,
+      "alt": "Koperwiek laag in vlucht boven vegetatie, met een lichte wenkbrauwstreep en roestrode flank.",
+      "modifications": "Uitgesneden rond de vogel en omgezet naar WebP",
+      "reviewed": "2026-11-07",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/koperwiek",
+      "visualCheck": "Koperwiek laag in vlucht boven vegetatie, met een lichte wenkbrauwstreep en roestrode flank.",
+      "width": 1400,
+      "height": 1149,
+      "image": "/assets/species/plumage/sp048-flight.webp"
+    }
+  ],
+  "sp049": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "Let op de lange staart en lichtgevlekte onderzijde. De vogel is op afstand gefotografeerd, waardoor fijne details beperkt zichtbaar zijn.",
+      "file": "iNaturalist photo 576073830",
+      "nl": "Grote Lijster",
+      "latin": "Turdus viscivorus",
+      "author": "Codrin Bucur",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://www.inaturalist.org/photos/576073830",
+      "showSourceLink": true,
+      "alt": "Grote Lijster van opzij in vlucht, met een lange staart en een lichtgevlekte onderzijde.",
+      "modifications": "Uitgesneden rond de vogel en omgezet naar WebP",
+      "reviewed": "2026-11-07",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-lijster",
+      "visualCheck": "Grote Lijster van opzij in vlucht, met een lange staart en een lichtgevlekte onderzijde.",
+      "width": 415,
+      "height": 310,
+      "image": "/assets/species/plumage/sp049-flight.webp"
+    }
+  ],
+  "sp050": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "Het oranje gezicht en de gespreide vleugel zijn van opzij zichtbaar.",
+      "file": "Robin in Flight (8398860133).jpg",
+      "nl": "Roodborst",
+      "latin": "Erithacus rubecula",
+      "author": "Joe Dyer",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Robin_in_Flight_(8398860133).jpg",
+      "showSourceLink": true,
+      "alt": "Roodborst in vlucht met oranje gezicht en gespreide vleugel tegen besneeuwde takken.",
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+      "reviewed": "2026-11-07",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/roodborst",
+      "visualCheck": "Roodborst in vlucht met oranje gezicht en gespreide vleugel tegen besneeuwde takken.",
+      "width": 1400,
+      "height": 1050,
+      "image": "/assets/species/plumage/sp050-flight.webp"
+    }
   ]
 });

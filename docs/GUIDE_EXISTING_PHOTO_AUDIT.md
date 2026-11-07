@@ -46,9 +46,9 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp045 | Merel | Ja | 3 | Apart beeld |
 | sp046 | Zanglijster | Ja | 3 | Vergelijking |
 | sp047 | Kramsvogel | Ja | 3 | Vergelijking |
-| sp048 | Koperwiek | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp049 | Grote Lijster | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp050 | Roodborst | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp048 | Koperwiek | Ja | 2 | Apart beeld |
+| sp049 | Grote Lijster | Ja | 2 | Apart beeld |
+| sp050 | Roodborst | Ja | 2 | Apart beeld |
 | sp051 | Zwarte Roodstaart | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp053 | Roodborsttapuit | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp054 | Heggenmus | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
@@ -305,3 +305,15 @@ Basis is concept-PR #67, e44416be835c18ab87ccf5393f064342fa776c42. Voor Merel zi
 CAP-BIRD-012/015. Zanglijster en Kramsvogel vormen een vluchtvergelijking op basis van de ondervleugel en staart. Merel heeft een eigen vluchtfoto. De drie lokale WebP-bestanden verschijnen boven het verenkleed en de eigen soort staat vooraan. Volgende soort is Koperwiek. Na deze ronde staan 85 soorten zonder vluchtbeeld op de zoeklijst. Het verzoek om een scherpere Roodmusfoto blijft open.
 
 Mobiele Chromium-test op 390 px: drie soortkaarten geopend en decodering, eenmalige weergave, plaatsing boven verenkleed, bronlinks en 2× zoom gecontroleerd. Gidsdekking, bestaande volgorde- en uniciteitstests en SHA-256-controle zijn geslaagd. Fysieke toesteltest staat open.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 11
+
+Basis is concept-PR #69, 104c5a84373433e451466f1e05c709687e5bf1bc. Voor Koperwiek en Roodborst zijn Commons-foto’s en iNaturalist-waarnemingen vergeleken. Voor Grote Lijster zijn ook Flickr, meerdere soortnamen en vluchttermen en de bereikbare miniaturen uit de algemene Commons-categorie nagezocht. De gekozen Grote Lijsterfoto toont de staart en gevlekte onderzijde beter dan de tegenlichtbeelden uit een tweede onderzoekswaardige waarneming. De oorspronkelijke waarnemer schreef ‘Unknown Thrush’. Twee openbare determinaties duiden de vogel als Grote Lijster en de waarneming heeft onderzoeksstatus. De vogel is op afstand gefotografeerd en fijne details blijven beperkt.
+
+- Koperwiek · Lucas Golden · CC BY 4.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Redwing_in_flight.jpg).
+- Grote Lijster · Codrin Bucur · CC BY 4.0. [Bronfoto](https://www.inaturalist.org/photos/576073830) · [Waarneming](https://www.inaturalist.org/observations/318727779).
+- Roodborst · Joe Dyer · CC BY 2.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Robin_in_Flight_(8398860133).jpg).
+
+CAP-BIRD-012/015. De drie soortkaarten krijgen elk een eigen lokale vluchtfoto. De uitsneden van Koperwiek en Grote Lijster en de omzetting naar WebP staan bij de beelden vermeld. Volgende soort is Zwarte Roodstaart. Na deze ronde staan 82 soorten zonder vluchtbeeld op de zoeklijst. Een scherpere Roodmusfoto blijft open.
+
+Mobiele Chromium-test op 390 px: op alle drie de soortkaarten decodering, eenmalige weergave, volgorde, bronlink en 2× zoom gecontroleerd. Gidsdekking, bestaande volgorde- en uniciteitstests en de SHA-256-controle zijn geslaagd. De appbrede zoektest is ook geslaagd. Fysieke toesteltest staat open.
