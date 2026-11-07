@@ -2,9 +2,9 @@
 
 Baseline: concept-PR #53, bbadaa799d870f1659c692fefb7998241cd81014. CAP-BIRD-012 en CAP-BIRD-015.
 
-**134 soorten, 127 hoofdfoto’s, 236 unieke lokale beeldbestanden.** Vluchtstatus: 10 hoofdfoto’s in vlucht, 6 aparte vluchtbeelden en 3 kaarten met een vluchtvergelijking. 60 soorten zijn visueel gecontroleerd zonder bestaand vluchtbeeld. 55 soorten vragen vervolgcontrole.
+**134 soorten, 127 hoofdfoto’s, 236 unieke lokale beeldbestanden.** Vluchtstatus: 10 hoofdfoto’s in vlucht, 6 aparte vluchtbeelden en 3 kaarten met een vluchtvergelijking. 80 soorten zijn visueel gecontroleerd zonder bestaand vluchtbeeld. 35 soorten vragen vervolgcontrole.
 
-Technische controle op alle soorten met bestaande, geregistreerde gidsfoto’s. Elk uniek lokaal bestand is gedecodeerd. Verschillende paden zijn vergeleken op SHA-256. De soortnaam en het lokale pad zijn ook gecontroleerd via guide_coverage. Bronregistratie bewijst eerdere beoordeling; de eerste visuele hercontrole betrof de vluchtkandidaten. Rondes 9 tot en met 11 voegen elk twintig visueel gecontroleerde soorten toe.
+Technische controle op alle soorten met bestaande, geregistreerde gidsfoto’s. Elk uniek lokaal bestand is gedecodeerd. Verschillende paden zijn vergeleken op SHA-256. De soortnaam en het lokale pad zijn ook gecontroleerd via guide_coverage. Bronregistratie bewijst eerdere beoordeling; de eerste visuele hercontrole betrof de vluchtkandidaten. Rondes 9 tot en met 12 voegen elk twintig visueel gecontroleerde soorten toe.
 
 Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen plaats vóór de kleden. **Vergelijking** toont de eigen soort als eerste vóór de kleden. **Gecontroleerd · geen vluchtbeeld** betekent dat alle geregistreerde gidsfoto’s voor die soort visueel zijn nagekeken en geen vlucht tonen. **Open** betekent dat de visuele vervolgcontrole nog moet gebeuren. Een apart vluchtbeeld mag een hoofdfoto nooit herhalen.
 
@@ -78,26 +78,26 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp084 | Purperreiger | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
 | sp085 | Kwak | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
 | sp086 | Grauwe Gans | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
-| sp089 | Wilde Eend | Ja | 3 | Open |
-| sp090 | Slobeend | Ja | 2 | Open |
-| sp091 | Wintertaling | Ja | 5 | Open |
-| sp092 | Kuifeend | Ja | 2 | Open |
-| sp094 | Zilvermeeuw | Ja | 1 | Open |
-| sp095 | Kleine Mantelmeeuw | Ja | 1 | Open |
-| sp096 | Stormmeeuw | Ja | 1 | Open |
-| sp097 | Kokmeeuw | Ja | 2 | Open |
-| sp098 | Scholekster | Ja | 1 | Open |
-| sp099 | Kievit | Ja | 1 | Open |
-| sp100 | Wulp | Ja | 1 | Open |
-| sp101 | Grutto | Ja | 1 | Open |
-| sp102 | Tureluur | Ja | 3 | Open |
-| sp104 | Aalscholver | Ja | 2 | Open |
-| sp105 | Fazant | Ja | 1 | Open |
-| sp106 | Patrijs | Ja | 1 | Open |
-| sp108 | Grote Karekiet | Ja | 1 | Open |
-| sp110 | Rietzanger | Ja | 1 | Open |
-| sp112 | Spreeuw | Ja | 1 | Open |
-| sp113 | Wielewaal | Ja | 1 | Open |
+| sp089 | Wilde Eend | Ja | 3 | Gecontroleerd · geen vluchtbeeld |
+| sp090 | Slobeend | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
+| sp091 | Wintertaling | Ja | 5 | Gecontroleerd · geen vluchtbeeld |
+| sp092 | Kuifeend | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
+| sp094 | Zilvermeeuw | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp095 | Kleine Mantelmeeuw | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp096 | Stormmeeuw | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp097 | Kokmeeuw | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
+| sp098 | Scholekster | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp099 | Kievit | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp100 | Wulp | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp101 | Grutto | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp102 | Tureluur | Ja | 3 | Gecontroleerd · geen vluchtbeeld |
+| sp104 | Aalscholver | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
+| sp105 | Fazant | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp106 | Patrijs | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp108 | Grote Karekiet | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp110 | Rietzanger | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp112 | Spreeuw | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp113 | Wielewaal | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp114 | Boerenzwaluw | Ja | 1 | Open |
 | sp115 | Huiszwaluw | Ja | 1 | Open |
 | sp116 | Oeverzwaluw | — | 1 | Open |
@@ -168,6 +168,16 @@ Basis is concept-PR #56, fa2f52ed3480d480eb9a0b396b547a78e74f8d66. De 29 bestaan
 - Boomkruiper en Taigaboomkruiper: de foto's sluiten aan bij de geregistreerde soort. Het onderscheid steunt op de bronregistratie en een combinatie van kenmerken. Een lichte onderzijde of een kromme snavel op zichzelf volstaat niet. [Veldkenmerken](https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/taigaboomkruiper)
 - Grote Zilverreiger: het Californische nestbeeld toont jonge vogels op het nest, waaronder een jong met geopende vleugels. Het beeld blijft een leeftijdsvoorbeeld. [Bronfoto](https://www.inaturalist.org/photos/388019872)
 - Meerkoet en Grauwe Gans: de jonge vogels zijn donsjongen. De foto van het Waterhoen toont een verder ontwikkeld jeugdkleed.
+
+## Ronde 12 · bestaande foto’s van Wilde Eend tot Wielewaal
+
+Basis is concept-PR #57, ca230f95df4d5dd2f456b2538fc7047bfc3a386d. De 32 gidsfoto’s van twintig soorten zijn visueel beoordeeld naast de geregistreerde soort, kleed en bron. Alle bestanden decoderen en hebben unieke lokale paden en SHA-256-hashes binnen de batch. De foto’s tonen vogels die zitten, staan of zwemmen. Alle twintig soorten zijn afgerond zonder bestaand vluchtbeeld.
+
+- Aalscholver: de vogel met gespreide vleugels staat aan de waterkant. De fotograaf dateert de vogel uit het voorafgaande jaar. Het beeld blijft bij het kleed van de jaarling. [Bronfoto](https://commons.wikimedia.org/wiki/File:Great_cormorant_immature.jpg)
+- Wintertaling: de hoofdfoto met het paar is een afzonderlijke opname. De gids bevat daarnaast aparte beelden voor mannetje, vrouwtje, jeugdkleed en eclipskleed. De exacte leeftijd van de jonge vogel steunt op de bestaande bronregistratie.
+- Grutto: de controle betreft de foto op de soortkaart. Voor de gidsinventaris is het afzonderlijke bestand uit de startpagina niet meegeteld.
+
+De lokale gidscontroles voor dekking, unieke beelden en plaatsing van vluchtbeelden vóór de kleden zijn uitgevoerd. De wijziging betreft alleen dit register. Volgende groep begint bij Boerenzwaluw.
 
 ## Volgende controlebatches
 
