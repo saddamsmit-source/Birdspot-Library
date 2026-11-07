@@ -5127,5 +5127,51 @@ export const GUIDE_POSES = Object.freeze({
       "height": 1050,
       "image": "/assets/species/plumage/sp050-flight.webp"
     }
+  ],
+  "sp051": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "Let op de roestoranje staart. De bronfoto heeft een lage resolutie.",
+      "file": "iNaturalist photo 8255067",
+      "nl": "Zwarte Roodstaart",
+      "latin": "Phoenicurus ochruros",
+      "author": "portioid",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://www.inaturalist.org/photos/8255067",
+      "showSourceLink": true,
+      "alt": "Zwarte Roodstaart in vlucht van achteren met gespreide vleugels en een roestoranje staart.",
+      "modifications": "Omgezet naar WebP zonder uitsnede",
+      "reviewed": "2026-11-07",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwarte-roodstaart",
+      "visualCheck": "Zwarte Roodstaart in vlucht van achteren met gespreide vleugels en een roestoranje staart.",
+      "width": 291,
+      "height": 177,
+      "image": "/assets/species/plumage/sp051-flight.webp"
+    }
+  ],
+  "sp053": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "Op deze videostill is de vogel los van de tak. De lichte halszijden zijn zichtbaar. De vleugels zijn onscherp door beweging.",
+      "file": "European stonechat (Saxicola rubicola) in the UK.webm",
+      "nl": "Roodborsttapuit",
+      "latin": "Saxicola rubicola",
+      "author": "Boxmoor Blog",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:European_stonechat_(Saxicola_rubicola)_in_the_UK.webm",
+      "showSourceLink": true,
+      "alt": "Videostill van een Roodborsttapuit in vlucht boven een tak, met lichte halszijden en een warme borst.",
+      "modifications": "Videostill op 01:15,107, uitgesneden en omgezet naar WebP",
+      "reviewed": "2026-11-07",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/roodborsttapuit",
+      "visualCheck": "Videostill van een Roodborsttapuit in vlucht boven een tak, met lichte halszijden en een warme borst.",
+      "width": 610,
+      "height": 615,
+      "image": "/assets/species/plumage/sp053-flight.webp"
+    }
   ]
 });

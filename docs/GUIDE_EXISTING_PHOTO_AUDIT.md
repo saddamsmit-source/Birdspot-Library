@@ -49,8 +49,8 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp048 | Koperwiek | Ja | 2 | Apart beeld |
 | sp049 | Grote Lijster | Ja | 2 | Apart beeld |
 | sp050 | Roodborst | Ja | 2 | Apart beeld |
-| sp051 | Zwarte Roodstaart | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp053 | Roodborsttapuit | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp051 | Zwarte Roodstaart | Ja | 2 | Apart beeld |
+| sp053 | Roodborsttapuit | Ja | 2 | Apart beeld |
 | sp054 | Heggenmus | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp055 | Winterkoning | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp056 | Tjiftjaf | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
@@ -317,3 +317,17 @@ Basis is concept-PR #69, 104c5a84373433e451466f1e05c709687e5bf1bc. Voor Koperwie
 CAP-BIRD-012/015. De drie soortkaarten krijgen elk een eigen lokale vluchtfoto. De uitsneden van Koperwiek en Grote Lijster en de omzetting naar WebP staan bij de beelden vermeld. Volgende soort is Zwarte Roodstaart. Na deze ronde staan 82 soorten zonder vluchtbeeld op de zoeklijst. Een scherpere Roodmusfoto blijft open.
 
 Mobiele Chromium-test op 390 px: op alle drie de soortkaarten decodering, eenmalige weergave, volgorde, bronlink en 2× zoom gecontroleerd. Gidsdekking, bestaande volgorde- en uniciteitstests en de SHA-256-controle zijn geslaagd. De appbrede zoektest is ook geslaagd. Fysieke toesteltest staat open.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 12
+
+Basis is concept-PR #70, 6c3b8ee688963dff4039af82fa2579d798aa065d. De Nederlandse, Engelse, Duitse en wetenschappelijke namen zijn gebruikt om Commons, Flickr, iNaturalist en fotogalerijen gericht door te zoeken. Op iNaturalist is ook in waarnemingsbeschrijvingen gezocht. Commons-soortcategorieën zijn visueel nagekeken, inclusief foto's met algemene titels. De Zwarte Roodstaart komt uit een waarneming met onderzoeksstatus en twee overeenstemmende soortdeterminaties. Op de foto zijn de roestoranje staart en gespreide vleugels zichtbaar. Leeftijd en geslacht blijven open. Het origineel meet 291 × 177 px.
+
+Bij Roodborsttapuit toont een scherpe foto met gespreide vleugels nog contact met de plant. Het geselecteerde beeld komt uit een Commons-video en toont de vogel volledig los van de tak. De vleugels hebben bewegingsonscherpte. De kaart vermeldt de videostill en de uitsnede. Voor Heggenmus bleek de Commons-foto met 'take-off' in de titel nog contact met de rand te tonen. Videobeelden rond het loskomen in 'Zingende en poetsende heggenmus' zijn te onscherp voor bruikbare herkenning. Vluchtfoto's uit gespecialiseerde galerijen hadden geen geverifieerde licentie voor de beoogde herpublicatie en bewerking. Heggenmus blijft op de zoeklijst.
+
+- Zwarte Roodstaart · portioid · CC BY 4.0. [Bronfoto](https://www.inaturalist.org/photos/8255067) · [Waarneming](https://www.inaturalist.org/observations/6517885).
+- Roodborsttapuit · Boxmoor Blog · CC BY 3.0. [Bronvideo](https://commons.wikimedia.org/wiki/File:European_stonechat_(Saxicola_rubicola)_in_the_UK.webm), op 01:15,107.
+- Heggenmus · [Afgevallen take-off-foto](https://commons.wikimedia.org/wiki/File:A_Dunnock_in_take-off_(12861308634).jpg) · [Onderzochte video](https://commons.wikimedia.org/wiki/File:Zingende_en_poetsende_heggenmus-4961739.webm).
+
+CAP-BIRD-012/015. De twee beelden staan lokaal boven het verenkleed, elk op hun eigen soortkaart. Herbruikbare controle: bekijk bij een opvliegende vogel ook de poten op het originele beeld en vergelijk omliggende videoframes. Na deze ronde staan 80 soorten zonder vluchtbeeld op de zoeklijst. Winterkoning is de volgende nieuwe soort. Heggenmus blijft open voor een scherpe vrij gelicentieerde vluchtfoto. Een scherpere Roodmusfoto blijft ook open.
+
+Mobiele Chromium-test op 390 px: beide soortkaarten vanuit appbreed zoeken geopend met de wetenschappelijke naam. De beelden decoderen, staan eenmaal boven het verenkleed, tonen hun bronlink en openen met 2× zoom. Gidsdekking, bestaande volgorde- en uniciteitstests en de SHA-256-controle zijn geslaagd. Fysieke toesteltest staat open.
