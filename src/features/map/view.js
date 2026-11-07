@@ -107,10 +107,13 @@ export function renderMap(el, { searchQuery, selection } = {}) {
         </div>
       </div>
 
-      <div class="sheet-overlay" id="mapOverlay"></div>
+      <div class="map-sheet-overlay" id="mapOverlay"></div>
 
-      <div class="bottom-sheet" id="mapDetailSheet">
-        <div class="sheet-handle"></div>
+      <div class="bottom-sheet" id="mapDetailSheet" role="dialog" aria-labelledby="mapSheetName" inert>
+        <div class="map-sheet-controls">
+          <button type="button" class="map-sheet-handle" id="mapSheetHandle" aria-label="Klap pininformatie in"></button>
+          <button type="button" class="map-sheet-dismiss" id="mapSheetDismiss" aria-label="Sluit pininformatie">×</button>
+        </div>
         <div class="sheet-header" id="mapSheetHeader">
           <div class="sheet-header__icon" id="mapSheetIcon">🐦</div>
           <div>
@@ -120,7 +123,7 @@ export function renderMap(el, { searchQuery, selection } = {}) {
         </div>
         <div class="sheet-body" id="mapSheetBody"></div>
         <div class="sheet-footer">
-          <button class="sheet-close-btn" id="mapSheetClose">Sluiten</button>
+          <button type="button" class="sheet-close-btn" id="mapSheetClose">Sluiten</button>
         </div>
       </div>
     </div>`;
@@ -536,12 +539,20 @@ const MEDIA_ACCEPT='image/*,video/*,audio/*';
 function openPlaceSheet(screenEl, place, visibleRecords, map) {
   const sheet    = screenEl.querySelector('#mapDetailSheet');
   const overlay  = screenEl.querySelector('#mapOverlay');
-  const closeBtn = screenEl.querySelector('#mapSheetClose');
+  const dismiss = screenEl.querySelector('#mapSheetDismiss');
+  const returnFocus = document.activeElement;
   const body     = screenEl.querySelector('#mapSheetBody');
   const urls=[];
+  let closed = false;
   const reload=()=>import('../../app.js').then(({navigate})=>navigate('map',{force:true}));
 
+  screenEl.querySelector('#mapSheetName').textContent = place.name;
+  screenEl.querySelector('#mapSheetMeta').textContent = '';
+  body.innerHTML = '';
+  body.scrollTop = 0;
+
   getSightings().then(all=>{
+    if (closed || !sheet.isConnected) return;
     const rows=place.loose?visibleRecords:all.filter(s=>s.placeId===place.id);
     const st=place.loose?null:placeStats(place,all);
     screenEl.querySelector('#mapSheetIcon').innerHTML='<svg viewBox="0 0 24 24" class="place-sheet__pin"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>';
@@ -618,7 +629,7 @@ function openPlaceSheet(screenEl, place, visibleRecords, map) {
     if(!box)return;
     let items=[];
     try{items=await getMediaByPlace(place.id);}catch(_){}
-    if(!items.length)return;
+    if (closed || !sheet.isConnected || !items.length) return;
     urls.splice(0).forEach(u=>URL.revokeObjectURL(u));
     box.innerHTML=items.sort((a,b)=>(b.addedAt||'').localeCompare(a.addedAt||'')).map(m=>{
       const type=String(m.type||m.blob?.type||'');
@@ -632,16 +643,24 @@ function openPlaceSheet(screenEl, place, visibleRecords, map) {
   }
 
   if (validPin(place.lat,place.lon)) map?.panTo([place.lat, place.lon], { animate: true, duration: 0.4 });
+  sheet.inert = false;
   sheet.classList.add('open');
   overlay.classList.add('visible');
+  dismiss.focus({ preventScroll: true });
 
   function closeSheet() {
+    if (closed) return;
+    closed = true;
+    const restoreFocus = sheet.contains(document.activeElement);
+    sheet.inert = true;
     sheet.classList.remove('open');
     overlay.classList.remove('visible');
     urls.splice(0).forEach(u=>URL.revokeObjectURL(u));
+    if (restoreFocus && returnFocus?.isConnected) returnFocus.focus({ preventScroll: true });
   }
-  closeBtn.onclick  = closeSheet;
-  overlay.onclick   = closeSheet;
+  for (const selector of ['#mapSheetDismiss', '#mapSheetHandle', '#mapSheetClose', '#mapOverlay']) {
+    screenEl.querySelector(selector).onclick = closeSheet;
+  }
 }
 
 // ── Locatie ────────────────────────────────────────────────────
