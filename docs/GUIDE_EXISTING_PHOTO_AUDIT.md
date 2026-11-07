@@ -40,9 +40,9 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp039 | Kneu | Ja | 3 | Apart beeld |
 | sp040 | Goudvink | Ja | 3 | Apart beeld |
 | sp041 | Appelvink | Ja | 3 | Apart beeld |
-| sp042 | Roodmus | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp043 | Huismus | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
-| sp044 | Ringmus | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp042 | Roodmus | Ja | 3 | Videostill · scherpere vluchtfoto gezocht |
+| sp043 | Huismus | Ja | 3 | Vergelijking |
+| sp044 | Ringmus | Ja | 3 | Vergelijking |
 | sp045 | Merel | Ja | 3 | Gecontroleerd · geen vluchtbeeld |
 | sp046 | Zanglijster | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp047 | Kramsvogel | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
@@ -281,3 +281,15 @@ Basis is concept-PR #65, 7c17767af1ca8a257fb967555a0308a0b331e4d1. Commons-vluch
 CAP-BIRD-012/015. Iedere soort heeft een afzonderlijke lokale vluchtfoto vóór het verenkleed. Kneu en Appelvink zijn op afstand gefotografeerd, waardoor fijn verenkleeddetail beperkt blijft. Herbruikbare zoekmethode: zoek op vluchttermen in de waarnemingsbeschrijving, bekijk daarna de afzonderlijke foto’s en controleer de licentie op de fotopagina. Volgende soort is Roodmus. Na deze batch staan 91 soorten op de zoeklijst.
 
 Mobiele Chromium-test op 390 px: alle drie de soortkaarten geopend. Per kaart de lokale foto gedecodeerd, plaatsing vóór het verenkleed, eenmalige weergave, bronlink en 2× zoom gecontroleerd. Gidsdekking, bestaande volgorde- en uniciteitstests en de SHA-256-controle van de drie bestanden zijn geslaagd. Fysieke toesteltest staat open.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 9
+
+Basis is concept-PR #66, fb45a640a7357d001c8d5a55acefc4cc9c53f82f. Voor Huismus en Ringmus zijn meerdere Commons-vluchtfoto’s vergeleken. De selectie toont de kruin, bef en wangtekening. Voor Roodmus zijn zoektermen in meerdere talen, Commons-miniaturen, fotogalerijen en iNaturalist-waarnemingsbeschrijvingen nagezocht. De gevonden losse foto’s in vlucht hadden geen geverifieerde licentie voor hergebruik. Twee vrij beschikbare Commons-video’s zijn bekeken. In de opname van Marc Plomp is het mannetje op 00:13,96 zichtbaar na het loskomen van de tak. De rode kop en borst zijn herkenbaar, met duidelijke bewegingsonscherpte bij de vleugels. De app vermeldt dat het om een videostill gaat. Een scherpere vluchtfoto blijft gezocht.
+
+- Roodmus · Natuur Digitaal (Marc Plomp) en Stichting Natuurbeelden · CC BY-SA 3.0 NL. [Bronvideo](https://commons.wikimedia.org/wiki/File:Zingende_roodmus-4961932.webm).
+- Huismus · Mildeep · CC BY-SA 4.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:House_Sparrow1.jpg).
+- Ringmus · Galina Jacyna · CC BY-SA 3.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Waltz_(31982909).jpeg).
+
+CAP-BIRD-012/015. Huismus en Ringmus vormen een vluchtvergelijking op basis van kruin en wangtekening. Roodmus heeft een eigen vluchtbeeld. De drie bestanden staan lokaal. Op iedere kaart staat het eigen vluchtbeeld eerst en boven het verenkleed. Volgende soort is Merel. Na deze ronde hebben 88 soorten op de zoeklijst nog geen vluchtbeeld. Roodmus blijft daarnaast open voor een scherpere foto.
+
+Mobiele Chromium-test op 390 px: de drie soortkaarten geopend, foto’s lokaal gedecodeerd en eenmalige weergave, bronlinks, volgorde en 2× zoom gecontroleerd. Gidsdekking, bestaande volgorde- en uniciteitstests en de SHA-256-controle zijn geslaagd. Fysieke toesteltest staat open.
