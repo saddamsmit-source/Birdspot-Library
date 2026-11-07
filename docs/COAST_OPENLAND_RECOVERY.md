@@ -76,3 +76,13 @@ Basis: concept-PR #46 op 717dd06ddc877184d01ecb45418280a2098385d6. Drie soortkaa
 CAP-BIRD-012/015. De twee nieuwe WebP-bestanden worden lokaal geladen, met makerscredits en licentie zichtbaar. Voor deze beelden verschijnt geen externe fotobronlink in de interface.
 
 Regressies uit #46: Local Guide Photos QA vereiste voor alle vergelijkingskanten een foto. Expliciet als tekst gemarkeerde kanten worden nu door de renderer en de controle herkend. Een ongemarkeerde kant vereist nog steeds het juiste beeld. Species Data QA controleert de bestaande Kokmeeuw–Zwartkopmeeuw-vergelijking nu binnen het betreffende blok en behoudt de bestaande kleed-, navigatie- en fotocontroles. Fysiek toestel niet getest.
+
+## Batch 6 · Visdief, Noordse Stern en Grote Stern
+
+Basis: concept-PR #48 op e9d3ceea79f58ae122e6390827758506a7f81aba. De twaalf CI-workflows van die basis zijn geslaagd. CAP-BIRD-012/015.
+
+- [Visdief](https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/visdief): maten, herkenning, fotografie, vindplaatsen en broedgegevens. [Lokale broedkleedfoto · Charles J. Sharp · CC BY-SA 4.0](https://commons.wikimedia.org/wiki/File:Common_tern_(Sterna_hirundo).jpg)
+- [Noordse Stern](https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/noordse-stern): herkenning, fotografietip, broedkalender en broedduur. De vergelijking met Visdief behandelt snavel en poten. In de vluchtfoto zijn vooral staart en handpennen zichtbaar. [Lokale broedkleedfoto · Charles J. Sharp · CC BY-SA 4.0](https://commons.wikimedia.org/wiki/File:Arctic_tern_(Sterna_paradisaea)_with_eel_Blonduos.jpg)
+- [Grote Stern](https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-stern): maten, broedgegevens, kustvindplaatsen, fotografietip en vergelijking met Visdief. [Lokale broedkleedfoto · Andreas Trepte · CC BY-SA 2.5](https://commons.wikimedia.org/wiki/File:Sandwich_TernSterna_sandvicensis.jpg)
+
+Drie gedecodeerde lokale WebP-bestanden, zichtbare credits en licenties, fotobronnen in het ontwikkelregister. Fysiek toestel niet getest.
