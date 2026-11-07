@@ -4989,5 +4989,74 @@ export const GUIDE_POSES = Object.freeze({
       "height": 961,
       "image": "/assets/species/plumage/sp044-flight.webp"
     }
+  ],
+  "sp045": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "Let op het donkere verenkleed en de geelachtige snavel van het mannetje.",
+      "file": "NZ7 6931 (51844641169).jpg",
+      "nl": "Merel",
+      "latin": "Turdus merula",
+      "author": "Bengt Nyman",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:NZ7_6931_(51844641169).jpg",
+      "showSourceLink": true,
+      "alt": "Mannetje Merel in vlucht, met een geheven vleugel, geelachtige snavel en donker verenkleed.",
+      "modifications": "Verkleind en omgezet naar WebP zonder extra uitsnede",
+      "reviewed": "2026-11-07",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/merel",
+      "visualCheck": "Mannetje Merel in vlucht, met een geheven vleugel, geelachtige snavel en donker verenkleed.",
+      "width": 1400,
+      "height": 1120,
+      "image": "/assets/species/plumage/sp045-flight.webp"
+    }
+  ],
+  "sp046": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "De ondervleugels ogen warmbruin. De donkere vlekken op borst en flanken zijn zichtbaar.",
+      "file": "Song Thrush (Turdus philomelos) in flight.jpg",
+      "nl": "Zanglijster",
+      "latin": "Turdus philomelos",
+      "author": "Mark Kilner",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Song_Thrush_(Turdus_philomelos)_in_flight.jpg",
+      "showSourceLink": true,
+      "alt": "Zanglijster in vlucht tegen een blauwe lucht met warmbruine ondervleugels en donkere vlekken op borst en flanken.",
+      "modifications": "Uitsnede door Richard001 overgenomen en omgezet naar WebP",
+      "reviewed": "2026-11-07",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zanglijster",
+      "visualCheck": "Zanglijster in vlucht tegen een blauwe lucht met warmbruine ondervleugels en donkere vlekken op borst en flanken.",
+      "width": 666,
+      "height": 839,
+      "image": "/assets/species/plumage/sp046-flight.webp"
+    }
+  ],
+  "sp047": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "De lichte ondervleugeldekveren en donkere staart zijn zichtbaar.",
+      "file": "Turdus pilaris, winter, flying.jpg",
+      "nl": "Kramsvogel",
+      "latin": "Turdus pilaris",
+      "author": "Hangsna",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Turdus_pilaris,_winter,_flying.jpg",
+      "showSourceLink": true,
+      "alt": "Kramsvogel in vlucht tussen takken met lichte ondervleugeldekveren, een gevlekte borst en een donkere staart.",
+      "modifications": "Uitgesneden rond de vogel en omgezet naar WebP",
+      "reviewed": "2026-11-07",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kramsvogel",
+      "visualCheck": "Kramsvogel in vlucht tussen takken met lichte ondervleugeldekveren, een gevlekte borst en een donkere staart.",
+      "width": 845,
+      "height": 1065,
+      "image": "/assets/species/plumage/sp047-flight.webp"
+    }
   ]
 });

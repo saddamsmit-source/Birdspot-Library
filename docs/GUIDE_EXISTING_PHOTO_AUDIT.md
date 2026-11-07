@@ -43,9 +43,9 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp042 | Roodmus | Ja | 3 | Videostill · scherpere vluchtfoto gezocht |
 | sp043 | Huismus | Ja | 3 | Vergelijking |
 | sp044 | Ringmus | Ja | 3 | Vergelijking |
-| sp045 | Merel | Ja | 3 | Gecontroleerd · geen vluchtbeeld |
-| sp046 | Zanglijster | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp047 | Kramsvogel | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp045 | Merel | Ja | 3 | Apart beeld |
+| sp046 | Zanglijster | Ja | 3 | Vergelijking |
+| sp047 | Kramsvogel | Ja | 3 | Vergelijking |
 | sp048 | Koperwiek | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp049 | Grote Lijster | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp050 | Roodborst | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
@@ -293,3 +293,15 @@ Basis is concept-PR #66, fb45a640a7357d001c8d5a55acefc4cc9c53f82f. Voor Huismus 
 CAP-BIRD-012/015. Huismus en Ringmus vormen een vluchtvergelijking op basis van kruin en wangtekening. Roodmus heeft een eigen vluchtbeeld. De drie bestanden staan lokaal. Op iedere kaart staat het eigen vluchtbeeld eerst en boven het verenkleed. Volgende soort is Merel. Na deze ronde hebben 88 soorten op de zoeklijst nog geen vluchtbeeld. Roodmus blijft daarnaast open voor een scherpere foto.
 
 Mobiele Chromium-test op 390 px: de drie soortkaarten geopend, foto’s lokaal gedecodeerd en eenmalige weergave, bronlinks, volgorde en 2× zoom gecontroleerd. Gidsdekking, bestaande volgorde- en uniciteitstests en de SHA-256-controle zijn geslaagd. Fysieke toesteltest staat open.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 10
+
+Basis is concept-PR #67, e44416be835c18ab87ccf5393f064342fa776c42. Voor Merel zijn meerdere vluchtfoto’s op Commons vergeleken. De gekozen foto toont de vogel vrij in de lucht en heeft voldoende detail rond kop en vleugel. Bij Zanglijster is de oorspronkelijke bron gecontroleerd. De gekozen Commons-uitsnede toont uitsluitend de vogel in vrije vlucht. Voor Kramsvogel zijn ook iNaturalist, Flickr en andere fotogalerijen nagezocht. De gekozen foto is gevonden onder de wetenschappelijke soortnaam in de algemene Commons-soortcategorie. Een andere foto met de titel ‘flying off’ viel af omdat de vogel nog contact met de tak had.
+
+- Merel · Bengt Nyman · CC BY-SA 2.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:NZ7_6931_(51844641169).jpg).
+- Zanglijster · Mark Kilner, uitsnede Richard001 · CC BY-SA 2.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Song_Thrush_(Turdus_philomelos)_in_flight.jpg).
+- Kramsvogel · Hangsna · CC BY-SA 4.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Turdus_pilaris,_winter,_flying.jpg). Takken blijven op de achtergrond zichtbaar.
+
+CAP-BIRD-012/015. Zanglijster en Kramsvogel vormen een vluchtvergelijking op basis van de ondervleugel en staart. Merel heeft een eigen vluchtfoto. De drie lokale WebP-bestanden verschijnen boven het verenkleed en de eigen soort staat vooraan. Volgende soort is Koperwiek. Na deze ronde staan 85 soorten zonder vluchtbeeld op de zoeklijst. Het verzoek om een scherpere Roodmusfoto blijft open.
+
+Mobiele Chromium-test op 390 px: drie soortkaarten geopend en decodering, eenmalige weergave, plaatsing boven verenkleed, bronlinks en 2× zoom gecontroleerd. Gidsdekking, bestaande volgorde- en uniciteitstests en SHA-256-controle zijn geslaagd. Fysieke toesteltest staat open.

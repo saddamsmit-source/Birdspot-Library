@@ -891,6 +891,15 @@ export const GUIDE_COMPARISONS = [
     ],
     tip: 'Kijk bij een goed zicht op de kop eerst naar de kruin en de wang. Bij de Huismus op de foto ontbreekt een losse wangvlek.',
   },
+  {
+    label: 'Zanglijster en Kramsvogel · in vlucht',
+    flight: true,
+    birds: [
+      {id: 'sp046', source: 'zanglijster', marks: 'Warmbruine ondervleugels en donkere vlekken op borst en flanken.'},
+      {id: 'sp047', source: 'kramsvogel', marks: 'Lichte ondervleugeldekveren, gevlekte borst en een lange staart met een donker uiteinde.'},
+    ],
+    tip: 'Vergelijk de kleur van de ondervleugels en kijk ook naar de staart. Tegenlicht kan lichte veren donkerder laten lijken.',
+  },
 ];
 
 export function comparisonSource(bird) {
