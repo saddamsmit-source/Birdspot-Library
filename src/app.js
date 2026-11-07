@@ -37,9 +37,9 @@ let currentRoute  = null;
 let currentCleanup = null; // cleanup-functie van het huidige scherm (bijv. renderHome)
 
 // ── Navigeer naar een route (force=true herlaadt ook het huidige scherm) ──────
-export function navigate(route, { force = false } = {}) {
+export function navigate(route, { force = false, searchQuery } = {}) {
   if (!ROUTES[route]) return;
-  if (route === currentRoute && !force) return;
+  if (route === currentRoute && !force && searchQuery === undefined) return;
   currentRoute = route;
 
   // Roep cleanup van het vorige scherm aan vóór we de DOM wissen.
@@ -57,7 +57,7 @@ export function navigate(route, { force = false } = {}) {
   screen.className = 'screen active';
   screen.id = `screen-${route}`;
   main.appendChild(screen);
-  const result = ROUTES[route].render(screen);
+  const result = ROUTES[route].render(screen, searchQuery);
   // Sla cleanup-functie op als de render er één retourneert (bijv. renderHome)
   if (typeof result === 'function') currentCleanup = result;
 

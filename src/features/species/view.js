@@ -10,6 +10,7 @@ import { SEASONS, SEASON_ORDER, toggleSeason, seasonPeriod, presentIn, periodMon
 import { getDB, getPhotosBySpecies, getPhoto } from '../../data/db.js';
 import { getSightings }                 from '../../data/sightings.js';
 import { loadPlaces }                   from '../../data/places.js';
+import { searchPlaces }                  from '../map/visualization.js';
 import { getPhotoUrl, revokePhotoUrl }  from '../../utils/photoUrl.js';
 import { getCollectionIds, toggleCollectionItem } from '../../storage/collections.js';
 
@@ -105,7 +106,11 @@ function getRecentSpeciesIds(limit = 8) {
 }
 
 // ── Render entrypoint ──────────────────────────────────────────
-export function renderSpecies(el) {
+export function renderSpecies(el, searchQuery) {
+  if (searchQuery !== undefined) {
+    _searchQuery = searchQuery;
+    resetFilters();
+  }
   if (_speciesCtx?.cleanup) _speciesCtx.cleanup();
   const ctx = { destroyed:false, urls:new Set(), detailCleanup:null, listGeneration:0, cleanup:null };
   _speciesCtx = ctx;
@@ -172,6 +177,7 @@ export function renderSpecies(el) {
         </button>
       </div>
       <p class="species-season-hint" id="seasonHint" aria-live="polite"></p>
+      <button type="button" class="species-show-all" id="speciesSearchPlaces" hidden>Zoek plekken op de kaart</button>
     </div>
 
     ${recentIds.length > 0 ? `
@@ -226,6 +232,14 @@ export function renderSpecies(el) {
 // ── Render lijst ───────────────────────────────────────────────
 // Lange lijsten (bijv. 243 dwaalgasten) bouwen eerst LIST_PAGE rijen op;
 // de rest pas na "Toon alle" (render wat nodig is, Handbook §3.9 / L-053).
+function resetFilters() {
+  _currentCategory = ALL;
+  _currentRegion = null;
+  _seasons = [];
+  _hideYearRound = false;
+  _onlyFavorites = false;
+}
+
 const LIST_PAGE = 60;
 let _listLimit = LIST_PAGE;
 let _listKey = '';
@@ -241,6 +255,7 @@ function renderList(el, seenIds, ctx = _speciesCtx) {
   const generation = ctx ? ++ctx.listGeneration : 0;
   const list    = el.querySelector('#speciesList');
   if (!list) return;
+  el.querySelector('#speciesSearchPlaces').hidden = !searchPlaces(loadPlaces(), _searchQuery).length;
   const key = [_currentCategory, _searchQuery, _currentRegion, _onlyFavorites, _seasons.join('+'), _hideYearRound].join('|');
   if (key !== _listKey) { _listKey = key; _listLimit = LIST_PAGE; }
 
@@ -258,6 +273,7 @@ function renderList(el, seenIds, ctx = _speciesCtx) {
   }
 
   if (results.length === 0) {
+    const hasFilters = _currentCategory !== ALL || _currentRegion || _onlyFavorites || period;
     const emptyMsg = _onlyFavorites && !_searchQuery && !_currentRegion
       ? 'Nog geen favorieten in deze categorie. Gebruik de ster naast een vogelsoort.'
       : period && !_searchQuery
@@ -271,6 +287,7 @@ function renderList(el, seenIds, ctx = _speciesCtx) {
           <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
         </svg>
         <p>${emptyMsg}</p>
+        ${hasFilters && _searchQuery.trim() ? '<button type="button" class="species-show-all" id="speciesResetSearch">Zoek in alle soorten</button>' : ''}
       </div>`;
     return;
   }
@@ -334,6 +351,12 @@ function speciesRow(s, seenIds, favorites = getCollectionIds("species")) {
 
 // ── Events ─────────────────────────────────────────────────────
 function bindEvents(el, ctx = _speciesCtx) {
+  el.querySelector('#speciesSearchPlaces').addEventListener('click', () => {
+    const searchQuery = _searchQuery.trim();
+    import('../../app.js').then(({navigate}) => {
+      if (!ctx.destroyed) navigate('map', { searchQuery });
+    });
+  });
   el.querySelector('#speciesOpenMedia')?.addEventListener('click', () => {
     import('../../app.js').then(({navigate}) => navigate('media'));
   });
@@ -404,6 +427,15 @@ function bindEvents(el, ctx = _speciesCtx) {
 
   // Lijst — favorieten, gezienstatus en detail zijn gescheiden acties.
   el.querySelector('#speciesList')?.addEventListener('click', e => {
+    if (e.target.closest('#speciesResetSearch')) {
+      const searchQuery = _searchQuery;
+      import('../../app.js').then(({navigate}) => {
+        if (ctx.destroyed) return;
+        navigate('species', { searchQuery });
+        document.getElementById('speciesSearch')?.focus({preventScroll: true});
+      });
+      return;
+    }
     const favoriteBtn = e.target.closest('[data-species-fav]');
     if (favoriteBtn) {
       e.stopPropagation();
