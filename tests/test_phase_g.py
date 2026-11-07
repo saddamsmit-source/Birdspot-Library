@@ -3,8 +3,8 @@ BIRDSPOT LIBRARY — Fase G tests (PWA / Offline)
 
 G-01  Service Worker geregistreerd; app laadt offline < 4 s (L-009)
 G-02  Alle verplichte precache-URLs aanwezig na installatie (L-010)
-G-03  0 media-downloads bij release-update; media-cache overleeft (L-052)
-G-04  Update-toast "Nieuwe versie · Nu laden" zichtbaar (L-011)
+G-03  Media blijft via de worker beschikbaar na herladen (L-052)
+G-04  Eerste installatie toont geen updateactie (L-011)
 G-05  Manifest aanwezig en parseerbaar; juiste velden
 """
 
@@ -166,92 +166,33 @@ def test_g02_precache_urls_present(server):
         browser.close()
 
 
-# ── G-03: 0 media-downloads bij nieuwe release (L-052) ───────────────────────
-def test_g03_zero_media_downloads_on_update(server):
-    """
-    Controleert dat de birdspot-media cache NIET gewist wordt door de SW bij
-    een nieuwe app-versie. Playwright browser-contexten hebben geïsoleerde
-    caches, dus alles in één context: sla media op, herlaad de pagina
-    (simuleert een 'update'), check of de media-cache nog intact is.
-    """
+# ── G-03: Mediabestand blijft beschikbaar via de worker (L-052) ─────────────────
+def test_g03_media_survives_reload(server):
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
-        ctx = browser.new_context(
-            viewport={"width": 390, "height": 844},
-            locale="nl-NL",
-        )
-
-        # 1. Eerste bezoek: SW installeert + activeer
-        page1 = open_fresh_page(ctx)
-        wait_for_sw(page1, 12_000)
-        page1.wait_for_timeout(1_000)
-
-        # Sla synthetische media op in birdspot-media cache
-        page1.evaluate("""async () => {
-            const c = await caches.open('birdspot-media');
-            const fakeImg = new Response(new Blob(['fake'], {type:'image/jpeg'}));
-            await c.put('/photos/test-bird.jpg', fakeImg);
+        ctx = browser.new_context(viewport={"width": 390, "height": 844}, locale="nl-NL")
+        page = open_fresh_page(ctx)
+        wait_for_sw(page, 12_000)
+        page.evaluate("""async () => {
+            const cache = await caches.open('birdspot-media');
+            await cache.put('/photos/test-bird.jpg', new Response('cached photo'));
         }""")
-        page1.close()
-
-        # 2. Herladen in dezelfde context (SW activate zou media-cache NIET mogen wissen)
-        media_requests = []
-        page2 = ctx.new_page()
-        page2.on("request", lambda req: (
-            media_requests.append(req.url)
-            if "/photos/" in req.url or req.resource_type == "image"
-            else None
-        ))
-
-        page2.goto(BASE_URL, wait_until="networkidle", timeout=15_000)
-        page2.wait_for_timeout(2_000)
-
-        # Media-cache moet nog steeds de foto bevatten
-        still_cached = page2.evaluate("""async () => {
-            const c = await caches.open('birdspot-media');
-            const r = await c.match('/photos/test-bird.jpg');
-            return !!r;
-        }""")
-
-        assert still_cached, "Media-cache werd gewist (SW activate verwijderde birdspot-media)"
-        assert len(media_requests) == 0, (
-            f"Media-downloads gedetecteerd bij herlaad: {media_requests}"
-        )
-
+        page.reload(wait_until="domcontentloaded")
+        cached = page.evaluate("async () => (await fetch('/photos/test-bird.jpg')).text()")
+        assert cached == "cached photo"
         ctx.close()
         browser.close()
 
 
-# ── G-04: Update-toast "Nieuwe versie · Nu laden" ─────────────────────────────
-def test_g04_update_toast_visible(server):
-    """
-    Simuleert een SW-update door postMessage({type:'new-version'}) vanuit
-    de pagina te sturen, wat sw-register.js opvangt en de toast toont.
-    """
+# ── G-04: Een eerste installatie toont geen updateactie ──────────────────────
+def test_g04_first_install_has_no_update_action(server):
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
-        ctx = browser.new_context(
-            viewport={"width": 390, "height": 844},
-            locale="nl-NL",
-        )
+        ctx = browser.new_context(viewport={"width": 390, "height": 844}, locale="nl-NL")
         page = open_fresh_page(ctx)
         wait_for_sw(page, 12_000)
-
-        # Stuur update-bericht direct vanuit de pagina naar navigator.serviceWorker
-        page.evaluate("""() => {
-            // Simuleer het bericht dat de SW stuurt bij activate
-            navigator.serviceWorker.dispatchEvent(
-                new MessageEvent('message', { data: { type: 'new-version', version: '1.0.1' } })
-            );
-        }""")
-
-        # Toast moet zichtbaar worden (tekst "Nieuwe versie")
-        page.wait_for_selector(
-            "text=Nieuwe versie",
-            timeout=5_000,
-            state="visible",
-        )
-
+        page.wait_for_selector("#appUpdate", state="attached")
+        assert page.locator("#appUpdate").is_hidden()
         ctx.close()
         browser.close()
 

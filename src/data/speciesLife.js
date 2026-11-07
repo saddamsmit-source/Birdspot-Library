@@ -1014,11 +1014,11 @@ export const LIFE = Object.freeze({
  },
  "sp075": {
   "breeding": {
-   "period": "apr–aug",
+   "period": "Vanaf februari/maart",
    "nest": "Zelf gegraven gang van 50–90 cm in een steile oever",
    "eggs": "6–7",
    "incubation": "19–21 dagen",
-   "fledging": "23–27 dagen",
+   "fledging": "22–28 dagen",
    "broods": "2–3"
   },
   "diet": "Kleine vissen, ook waterinsecten",
@@ -1066,7 +1066,7 @@ export const LIFE = Object.freeze({
   "diet": "Waterplanten, gras, zaden en kleine waterdieren",
   "behaviour": "Agressief tegen soortgenoten; in de winter in grote groepen",
   "migration": "Standvogel; in de winter extra vogels uit het noordoosten",
-  "voice": "Kort, luid \"pik\" en \"kut\""
+  "voice": "Korte, luide roepen, vaak een hard kowk of kewk"
  },
  "sp079": {
   "breeding": {

@@ -124,12 +124,15 @@ export async function renderProfile(el) {
 
   // Versie ophalen bij de service worker (enige versiebron, L-027)
   const versionEl = el.querySelector('#appVersion');
-  const version = await askVersion();
-  versionEl.textContent = version
-    ? `Versie ${version} · werkt offline`
-    : 'Versie onbekend · offline-modus nog niet actief';
-
   attachEvents(el);
+  const info = await askVersion();
+  if (!info) {
+    versionEl.textContent = 'Versie onbekend · offline-modus nog niet actief';
+    return;
+  }
+  const offlineStatus = info.offlineReady === true ? 'basis offline beschikbaar'
+    : info.offlineReady === false ? 'offlinebasis onvolledig' : 'offlinebasis onbevestigd';
+  versionEl.textContent = `Versie ${info.version} · ${offlineStatus}`;
 }
 
 // ── Event handlers ─────────────────────────────────────────────────────────
@@ -201,7 +204,7 @@ async function handleImport(el, file) {
 
     // Terugzetten-knop tonen (er is nu een veiligheidskopie)
     const restoreCard = el.querySelector('#restoreCard');
-    if (restoreCard) restoreCard.classList.remove('profile-card--hidden');
+    restoreCard?.classList.toggle('profile-card--hidden', !hasSafetyCopy());
 
     showToast(`Hersteld: ${result.merged} waarnemingen in je bibliotheek`);
 
@@ -275,13 +278,17 @@ function showConfirm(el, html) {
 // ── Versie via MessageChannel; null als er (nog) geen service worker is ──────
 async function askVersion() {
   try {
-    const reg = await navigator.serviceWorker?.getRegistration?.();
-    const sw = reg?.active;
+    const sw = navigator.serviceWorker?.controller;
     if (!sw) return null;
     return await new Promise(resolve => {
       const ch = new MessageChannel();
-      const timer = setTimeout(() => resolve(null), 1500);
-      ch.port1.onmessage = e => { clearTimeout(timer); resolve(e.data?.version || null); };
+      const finish = info => {
+        clearTimeout(timer);
+        ch.port1.close();
+        resolve(info);
+      };
+      const timer = setTimeout(() => finish(null), 1500);
+      ch.port1.onmessage = e => finish(e.data?.version ? e.data : null);
       sw.postMessage({ type: 'get-version' }, [ch.port2]);
     });
   } catch (_) { return null; }
