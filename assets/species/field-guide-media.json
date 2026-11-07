@@ -4369,6 +4369,27 @@
         "image": "/assets/species/plumage/sp033-view.webp",
         "label": "Kop en kuif",
         "note": "Kijk naar de spitse kuif en de gebogen zwarte lijn achter de wang. Vergroot de foto om de koptekening te bekijken."
+      },
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "De spitse kuif en donkere halsband zijn ook bij het wegvliegen zichtbaar.",
+        "file": "Haubenmeise Abflug.JPG",
+        "nl": "Kuifmees",
+        "latin": "Lophophanes cristatus",
+        "author": "Sgbeer",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Haubenmeise_Abflug.JPG",
+        "showSourceLink": false,
+        "alt": "Kuifmees vliegt op boven de sneeuw, met geheven vleugels, een spitse kuif en zwart-witte koptekening.",
+        "modifications": "Omgezet naar WebP zonder extra uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kuifmees",
+        "visualCheck": "Kuifmees vliegt op boven de sneeuw, met geheven vleugels, een spitse kuif en zwart-witte koptekening.",
+        "width": 960,
+        "height": 720,
+        "image": "/assets/species/plumage/sp033-flight.webp"
       }
     ],
     "sp116": [
@@ -4714,6 +4735,52 @@
         "width": 1400,
         "height": 1050,
         "image": "/assets/species/plumage/sp030-flight.webp"
+      }
+    ],
+    "sp034": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Let op de ronde lichaamsbouw. De lange staart is door de hoek minder goed te zien.",
+        "file": "Long-tailed Tit in flight (8644086215).jpg",
+        "nl": "Staartmees",
+        "latin": "Aegithalos caudatus",
+        "author": "Martin Cooper",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Long-tailed_Tit_in_flight_(8644086215).jpg",
+        "showSourceLink": false,
+        "alt": "Staartmees in vlucht tussen takken, met gespreide vleugels en een compacte, rozegrijze romp.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/staartmees",
+        "visualCheck": "Staartmees in vlucht tussen takken, met gespreide vleugels en een compacte, rozegrijze romp.",
+        "width": 1400,
+        "height": 1049,
+        "image": "/assets/species/plumage/sp034-flight.webp"
+      }
+    ],
+    "sp035": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "De witte vleugeltekening en de rozerode borst vallen op.",
+        "file": "Fringilla coelebs -Lochwinnoch, Renfrewshire, Scotland -flying-8.jpg",
+        "nl": "Vink",
+        "latin": "Fringilla coelebs",
+        "author": "Mark Medcalf",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Fringilla_coelebs_-Lochwinnoch,_Renfrewshire,_Scotland_-flying-8.jpg",
+        "showSourceLink": false,
+        "alt": "Mannetje Vink in vlucht met een rozerode borst, blauwgrijze kruin en witte vlekken op de vleugel.",
+        "modifications": "Omgezet naar WebP zonder extra uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/vink",
+        "visualCheck": "Mannetje Vink in vlucht met een rozerode borst, blauwgrijze kruin en witte vlekken op de vleugel.",
+        "width": 900,
+        "height": 900,
+        "image": "/assets/species/plumage/sp035-flight.webp"
       }
     ]
   }
