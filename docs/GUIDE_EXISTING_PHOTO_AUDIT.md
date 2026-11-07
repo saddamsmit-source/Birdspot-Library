@@ -2,7 +2,7 @@
 
 Baseline: concept-PR #53, bbadaa799d870f1659c692fefb7998241cd81014. CAP-BIRD-012 en CAP-BIRD-015.
 
-**134 soorten, 127 hoofdfoto’s, 239 unieke lokale beeldbestanden.** Vluchtstatus: 10 hoofdfoto’s in vlucht, 6 aparte vluchtbeelden en 6 kaarten met een vluchtvergelijking. 77 soorten zijn visueel gecontroleerd zonder bestaand vluchtbeeld. 35 soorten vragen vervolgcontrole.
+**134 soorten, 127 hoofdfoto’s, 242 unieke lokale beeldbestanden.** Vluchtstatus: 10 hoofdfoto’s in vlucht, 7 aparte vluchtbeelden en 8 kaarten met een vluchtvergelijking. 74 soorten zijn visueel gecontroleerd zonder bestaand vluchtbeeld. 35 soorten vragen vervolgcontrole.
 
 Technische controle op alle soorten met bestaande, geregistreerde gidsfoto’s. Elk uniek lokaal bestand is gedecodeerd. Verschillende paden zijn vergeleken op SHA-256. De soortnaam en het lokale pad zijn ook gecontroleerd via guide_coverage. Bronregistratie bewijst eerdere beoordeling; de eerste visuele hercontrole betrof de vluchtkandidaten. Rondes 9 tot en met 12 voegen elk twintig visueel gecontroleerde soorten toe.
 
@@ -18,9 +18,9 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp007 | Havik | Ja | 4 | Vergelijking |
 | sp008 | Torenvalk | Ja | 4 | Vergelijking |
 | sp009 | Slechtvalk | Ja | 3 | Hoofdfoto |
-| sp016 | Grote Bonte Specht | Ja | 3 | Gecontroleerd · geen vluchtbeeld |
-| sp017 | Kleine Bonte Specht | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
-| sp018 | Zwarte Specht | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
+| sp016 | Grote Bonte Specht | Ja | 4 | Vergelijking |
+| sp017 | Kleine Bonte Specht | Ja | 3 | Vergelijking |
+| sp018 | Zwarte Specht | Ja | 3 | Apart beeld |
 | sp019 | Groene Specht | Ja | 3 | Gecontroleerd · geen vluchtbeeld |
 | sp020 | Middelste Bonte Specht | Ja | 3 | Gecontroleerd · geen vluchtbeeld |
 | sp021 | Ekster | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
@@ -197,3 +197,15 @@ Voor Houtduif en Turkse Tortel zijn meerdere beelden uit de Commons-vluchtcatego
 CAP-BIRD-012/015. De drie foto’s zijn lokale WebP-bestanden en staan in de bestaande vluchtvergelijking vóór de verenkleden. De foto van de geopende soort staat vooraan. De hoofdfoto blijft afzonderlijk. Technische controle omvat bron- en bestandsonderscheid, decodering, gidsdekking en de bestaande positie- en uniciteitstest. De zoekmethode is herbruikbaar voor de volgende soorten, vanaf Grote Bonte Specht.
 
 Mobiele Chromium-test op 390 px: alle drie de kaarten via de soortenlijst geopend. Per kaart zijn de eigen soort eerst, drie lokale beelden, de plaatsing vóór de kleden en 2× inzoomen gecontroleerd. Fysieke toesteltest staat open.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 2
+
+Basis is concept-PR #59, d6e3788de1bc31a15196d30d6eafba0cc7077ac7. Voor Grote Bonte Specht zijn de vluchtcategorie en alternatieve foto’s op Commons vergeleken. Voor Kleine Bonte Specht en Zwarte Specht zijn ook Flickr, iNaturalist-zoekresultaten, beeldzoekopdrachten en fotosites bekeken in meerdere talen. Enkele duidelijk gelabelde Flickr-beelden van Zwarte Specht hadden alle rechten voorbehouden. De geschikte bestanden voor beide soorten zijn via ruimere soortzoektermen gevonden en visueel als vluchtbeeld bevestigd.
+
+- Grote Bonte Specht · caroline legg · CC BY 2.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Dendrocopos_major_(51546452028).jpg)
+- Kleine Bonte Specht · blondinrikard · CC BY 2.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Lesser_spotted_woodpecker_(f),_Dryobates_minor,_Mindre_hackspett.jpg)
+- Zwarte Specht · Janus Mosbacher · CC BY-SA 4.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Schwarzspecht_(Dryocopus_martius).jpg)
+
+CAP-BIRD-012/015. De twee bonte spechten krijgen een gedeelde vluchtvergelijking boven de verenkleden. Zwarte Specht krijgt op dezelfde plek een eigen vluchtfoto. De uitsnede maakt de vogel beter zichtbaar, maar de oorspronkelijke opname heeft bewegingsonscherpte en de onderste vleugel raakt de beeldrand. Exacte leeftijd is niet voor alle foto’s bevestigd. Volgende soort is Groene Specht. Na deze batch staan 109 soorten op de zoeklijst.
+
+Mobiele Chromium-test op 390 px: de drie soortkaarten via de soortenlijst geopend. De lokale beelden laden, de eigen foto staat eerst, vlucht staat boven verenkleed waar aanwezig, en de foto opent en zoomt naar 2×. Gidsdekking en bestaande positie- en uniciteitstest geslaagd. Fysieke toesteltest staat open.

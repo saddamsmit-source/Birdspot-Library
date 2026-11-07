@@ -4445,6 +4445,75 @@
         "height": 1053,
         "image": "/assets/species/plumage/sp004-flight.webp"
       }
+    ],
+    "sp016": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "De witte schoudervlek is ook met uitgespreide vleugels goed zichtbaar.",
+        "file": "Dendrocopos major (51546452028).jpg",
+        "nl": "Grote Bonte Specht",
+        "latin": "Dendrocopos major",
+        "author": "caroline legg",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Dendrocopos_major_(51546452028).jpg",
+        "showSourceLink": false,
+        "alt": "Grote Bonte Specht in vlucht met een grote witte schoudervlek, witte vleugelstippen en voedsel in de snavel.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-bonte-specht",
+        "visualCheck": "Grote Bonte Specht in vlucht met een grote witte schoudervlek, witte vleugelstippen en voedsel in de snavel.",
+        "width": 1400,
+        "height": 933,
+        "image": "/assets/species/plumage/sp016-flight.webp"
+      }
+    ],
+    "sp017": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Let op de lichte dwarsbanden op de rug en vleugels.",
+        "file": "Lesser spotted woodpecker (f), Dryobates minor, Mindre hackspett.jpg",
+        "nl": "Kleine Bonte Specht",
+        "latin": "Dryobates minor",
+        "author": "blondinrikard",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Lesser_spotted_woodpecker_(f),_Dryobates_minor,_Mindre_hackspett.jpg",
+        "showSourceLink": false,
+        "alt": "Vrouwtje Kleine Bonte Specht vliegt weg van een boomholte. De rug en vleugels zijn zwart-wit gebandeerd.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kleine-bonte-specht",
+        "visualCheck": "Vrouwtje Kleine Bonte Specht vliegt weg van een boomholte. De rug en vleugels zijn zwart-wit gebandeerd.",
+        "width": 1400,
+        "height": 1400,
+        "image": "/assets/species/plumage/sp017-flight.webp"
+      }
+    ],
+    "sp018": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Let op de zwarte lichaamsveren, rode kruin en de lange lichte snavel.",
+        "file": "Schwarzspecht (Dryocopus martius).jpg",
+        "nl": "Zwarte Specht",
+        "latin": "Dryocopus martius",
+        "author": "Janus Mosbacher",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Schwarzspecht_(Dryocopus_martius).jpg",
+        "showSourceLink": false,
+        "alt": "Zwarte Specht in vlucht met geheven vleugels, rode kruin en lichte snavel.",
+        "modifications": "Uitgesneden, verkleind en omgezet naar WebP",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwarte-specht",
+        "visualCheck": "Zwarte Specht in vlucht met geheven vleugels, rode kruin en lichte snavel.",
+        "width": 1400,
+        "height": 1085,
+        "image": "/assets/species/plumage/sp018-flight.webp"
+      }
     ]
   }
 }
