@@ -521,7 +521,7 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
             (guidePhoto ? '<button type="button" class="sd-hero-photo" data-guide-image="' + escHtml(guidePhoto.image) + '" aria-label="Vergroot hoofdfoto">' +
               '<img class="species-guide-photo" data-src="' + escHtml(guidePhoto.image) + '" alt="' + escHtml(guidePhoto.alt) + '"></button>' :
               '<span aria-hidden="true">' + escHtml(s.icon) + '</span>') + '</div>' +
-          (guidePhoto ? '<p class="species-guide-credit">Gidsfoto · ' + escHtml(guidePhoto.author) + ' · <a href="' + escHtml(guidePhoto.licenseUrl) + '" target="_blank" rel="noopener noreferrer">' + escHtml(guidePhoto.license) + '</a> · <a href="' + escHtml(guidePhoto.source) + '" target="_blank" rel="noopener noreferrer">Bronvermelding</a><br>Verkleind; ongewijzigde uitsnede.</p>' : '') +
+          (guidePhoto ? '<p class="species-guide-credit">' + (guidePhoto.flight ? 'Gidsfoto in vlucht · ' : 'Gidsfoto · ') + escHtml(guidePhoto.author) + ' · <a href="' + escHtml(guidePhoto.licenseUrl) + '" target="_blank" rel="noopener noreferrer">' + escHtml(guidePhoto.license) + '</a> · <a href="' + escHtml(guidePhoto.source) + '" target="_blank" rel="noopener noreferrer">Bronvermelding</a><br>Verkleind; ongewijzigde uitsnede.</p>' : '') +
           '<div class="signature-species-detail-intro"><span class="signature-eyebrow">' + escHtml(s.family) + '</span>' +
             '<h2>' + escHtml(s.nameNL) + '</h2>' +
             '<p><em>' + escHtml(s.nameSci) + '</em></p>' +

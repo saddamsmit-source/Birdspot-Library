@@ -18,7 +18,11 @@ for (const [id, poses] of Object.entries(GUIDE_POSES)) {
     const buttons = [...html.matchAll(/data-guide-image="([^"]+)"/g)].filter(match => match[1] === pose.image);
     assert.equal(buttons.length, pose.image === ownMain ? 0 : 1, pose.image);
     if (pose.image !== ownMain) assert.ok(html.includes(pose.licenseUrl), 'License must remain available');
-    if (pose.flight) assert.ok(html.indexOf(pose.image) > html.indexOf('Sperwer, Havik en Torenvalk · in vlucht'));
+    if (pose.flight && pose.image !== ownMain) {
+      const flightSection = html.indexOf('aria-label="Vluchtvergelijking"') >= 0
+        ? html.indexOf('aria-label="Vluchtvergelijking"') : html.indexOf('aria-label="In vlucht"');
+      assert.ok(flightSection >= 0 && html.indexOf(pose.image) > flightSection);
+    }
   }
 }
 const withoutPoses = SPECIES.find(s => !GUIDE_POSES[s.id]);
@@ -38,9 +42,18 @@ for (const s of SPECIES) {
   assert.equal(images.length, new Set(images).size, `Duplicate image on ${s.id}`);
   assert.ok(!images.includes(GUIDE_PHOTOS[s.id]?.image), `Repeated main image on ${s.id}`);
   const plumage = html.indexOf('class="sd-plumage-list"');
+  const flight = ['aria-label="Vluchtvergelijking"', 'aria-label="In vlucht"']
+    .map(label => html.indexOf(label)).find(index => index >= 0);
+  if (flight !== undefined && plumage >= 0) assert.ok(flight < plumage, `${s.id}: flight must precede plumage`);
   const comparison = html.indexOf('class="sd-compare"');
   if (plumage >= 0 && comparison >= 0) {
     assert.ok(plumage < comparison, `${s.id}: plumage photos must precede comparisons`);
   }
 }
-console.log('VERIFIED plumage-before-comparisons ordering across the species catalogue');
+console.log('VERIFIED unique photos, flight before plumage and regular comparisons after plumage');
+
+const swift = recognitionPanel(species.get('sp141'));
+assert.ok(swift.indexOf('aria-label="In vlucht"') >= 0);
+assert.ok(swift.indexOf('/assets/species/plumage/sp141-adult.webp') < swift.indexOf('class="sd-plumage-list"'));
+const heron = recognitionPanel(species.get('sp081'));
+assert.ok(!heron.includes('aria-label="In vlucht"'), 'A flight main photo must not reappear below the header');

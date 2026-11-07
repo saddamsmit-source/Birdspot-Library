@@ -122,9 +122,17 @@ function plumageCard(ic, title, text, badge, photo) {
   return `<div class="sd-plumage">${icon(ic)}<div><strong>${esc(title)}${badge ? `<span class="sd-badge">${esc(badge)}</span>` : ''}</strong><p>${esc(text)}</p>${photo ? fieldPhoto(photo) : ''}</div></div>`;
 }
 
-function posesPanel(id, takePhoto, flightInComparison) {
-  const photos = (GUIDE_POSES[id] || []).filter(photo =>
-    !(flightInComparison && photo.flight) && takePhoto(photo));
+function flightPhoto(id) {
+  const pose = GUIDE_POSES[id]?.find(photo => photo.flight);
+  if (pose) return pose;
+  if (GUIDE_PHOTOS[id]?.flight) return null;
+  const variants = GUIDE_PLUMAGE[id];
+  return ['adult_m', 'adult_f', 'breeding', 'winter', 'eclipse', 'juv', 'jaarling']
+    .map(kind => variants?.[kind]).find(photo => photo?.flight);
+}
+
+function posesPanel(id, takePhoto) {
+  const photos = (GUIDE_POSES[id] || []).filter(takePhoto);
   if (!photos.length) return '';
   const title = photos.some(photo => /vlucht|biddend/i.test(photo.label)) && photos.length > 1
     ? 'Zittend en in vlucht' : 'Herkenning in beeld';
@@ -136,7 +144,7 @@ function posesPanel(id, takePhoto, flightInComparison) {
 
 function comparisonsPanel(id, comparisons, takePhoto) {
   if (!comparisons.length) return '';
-  return '<h3 class="sd-h">Lijkt op</h3>' + comparisons.map(({birds, tip, label, flight}) => {
+  return comparisons.map(({birds, tip, label, flight}) => {
     const ordered = [...birds].sort((a, b) => Number(b.id === id) - Number(a.id === id));
     const cards = ordered.map(bird => {
       const species = speciesById.get(bird.id);
@@ -144,7 +152,7 @@ function comparisonsPanel(id, comparisons, takePhoto) {
       const adult = bird.plumage === 'adult_m' && !species.plumage?.adult_f;
       const kind = flight ? 'In vlucht' : adult ? 'Volwassen' : PLUMAGE.find(([key]) => key === bird.plumage)?.[2];
       const photo = bird.textOnly ? null : flight
-        ? GUIDE_POSES[bird.id]?.find(pose => pose.flight)
+        ? flightPhoto(bird.id)
         : plumagePhoto(bird.id, bird.plumage);
       return `<div class="sd-compare-card">
         <strong>${esc(name)}</strong>${kind ? `<span class="sd-badge">${esc(kind)}</span>` : ''}
@@ -154,7 +162,7 @@ function comparisonsPanel(id, comparisons, takePhoto) {
         ${bird.id === id ? '' : `<button type="button" class="sd-compare-open" data-compare-species="${esc(bird.id)}">Open soortkaart<span class="visually-hidden"> ${esc(name)}</span></button>`}
       </div>`;
     });
-    return `<div class="sd-compare">${label ? `<h4 class="sd-compare-label">${esc(label)}</h4>` : ''}<p>${esc(tip)}</p><div class="sd-compare-grid">${cards.join('')}</div></div>`;
+    return `<div class="sd-compare${flight ? ' sd-flight-compare' : ''}">${label ? `<h4 class="sd-compare-label">${esc(label)}</h4>` : ''}<p>${esc(tip)}</p><div class="sd-compare-grid">${cards.join('')}</div></div>`;
   }).join('');
 }
 
@@ -206,7 +214,15 @@ export function recognitionPanel(s, life = null) {
   if (s.fieldmarks) {
     out.push(`<div class="sd-callout">${icon('eye')}<p>${esc(s.fieldmarks)}</p></div>`);
   }
-  out.push(posesPanel(s.id, takePhoto, flight.length > 0));
+  if (flight.length) {
+    out.push('<section aria-label="Vluchtvergelijking"><h3 class="sd-h">Vluchtvergelijking</h3>' +
+      comparisonsPanel(s.id, flight, takePhoto) + '</section>');
+  } else {
+    const photo = flightPhoto(s.id);
+    if (takePhoto(photo)) {
+      out.push('<section aria-label="In vlucht"><h3 class="sd-h">In vlucht</h3>' + fieldPhoto(photo) + '</section>');
+    }
+  }
   const p = s.plumage;
   if (p) {
     const cards = PLUMAGE.filter(([key]) => p[key]).map(([key, ic, label, badge]) => {
@@ -217,7 +233,9 @@ export function recognitionPanel(s, life = null) {
     });
     if (cards.length) out.push('<h3 class="sd-h">Verenkleed</h3><div class="sd-plumage-list">' + cards.join('') + '</div>');
   }
-  out.push(`<div id="sdVoice" class="sd-voice-section">${voicePanel(s, life?.voice)}</div>`, comparisonsPanel(s.id, [...regular, ...flight], takePhoto));
+  out.push(posesPanel(s.id, takePhoto));
+  out.push(`<div id="sdVoice" class="sd-voice-section">${voicePanel(s, life?.voice)}</div>`);
+  if (regular.length) out.push('<h3 class="sd-h">Lijkt op</h3>' + comparisonsPanel(s.id, regular, takePhoto));
   if (s.compact) {
     out.push(`<p class="sd-note">${icon('info')}Zeldzame dwaalgast: een uitgebreide beschrijving volgt nog.</p>`);
   }

@@ -1273,7 +1273,8 @@ export const GUIDE_PHOTOS = Object.freeze({
     "visualCheck": "Volledige vogel in vlucht boven water. Grijze vleugels, lichte hals en lange snavel.",
     "alt": "Blauwe Reiger — Volledige vogel in vlucht boven water. Grijze vleugels, lichte hals en lange snavel.",
     "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/blauwe-reiger",
-    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "flight": true
   },
   "sp082": {
     "file": "Little egret (Egretta garzetta) in flight.jpg",
@@ -1292,7 +1293,8 @@ export const GUIDE_PHOTOS = Object.freeze({
     "visualCheck": "Volledige vogel in vlucht boven riet. Wit verenkleed, donkere snavel en opvallend gele tenen.",
     "alt": "Kleine Zilverreiger — Volledige vogel in vlucht boven riet. Wit verenkleed, donkere snavel en opvallend gele tenen.",
     "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kleine-zilverreiger",
-    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "flight": true
   },
   "sp083": {
     "file": "Great Egret (Ardea alba) (25562005404).jpg",
@@ -1948,7 +1950,8 @@ export const GUIDE_PHOTOS = Object.freeze({
     "visualCheck": "Volledige vogel in vlucht. Witte romp, zwarte slagpennen, lange hals en rode snavel en poten.",
     "alt": "Ooievaar — Volledige vogel in vlucht. Witte romp, zwarte slagpennen, lange hals en rode snavel en poten.",
     "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/ooievaar",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "flight": true
   },
   "sp225": {
     "file": "2019-04-17 Ichthyaetus melanocephalus, Gosforth Park, Northumberland 2.jpg",
@@ -1986,7 +1989,8 @@ export const GUIDE_PHOTOS = Object.freeze({
     "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/slechtvalk",
     "visualCheck": "Volledige vogel in vlucht met spitse vleugels, donkere baardstreep en dwarsbandering op de onderzijde.",
     "alt": "Slechtvalk — Volledige vogel in vlucht met spitse vleugels, donkere baardstreep en dwarsbandering op de onderzijde.",
-    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "flight": true
   },
   "sp084": {
     "file": "Purple heron in Zimbabwe.jpg",
@@ -2062,7 +2066,8 @@ export const GUIDE_PHOTOS = Object.freeze({
     "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bruine-kiekendief",
     "visualCheck": "Volwassen mannetje in vlucht. Bruin lijf, grijze vleugelvelden en staart en zwarte vleugelpunten.",
     "alt": "Bruine Kiekendief — Volwassen mannetje in vlucht. Bruin lijf, grijze vleugelvelden en staart en zwarte vleugelpunten.",
-    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "flight": true
   },
   "sp249": {
     "file": "Hen Harrier - Male.jpg",
@@ -2081,7 +2086,8 @@ export const GUIDE_PHOTOS = Object.freeze({
     "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/blauwe-kiekendief",
     "visualCheck": "Volwassen mannetje in vlucht over gras. Grijze vleugels, zwarte vleugelpunten en een witte stuit.",
     "alt": "Blauwe Kiekendief — Volwassen mannetje in vlucht over gras. Grijze vleugels, zwarte vleugelpunten en een witte stuit.",
-    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "flight": true
   },
   "sp250": {
     "file": "A male Pallid Harrier flying away from us early morning (50536689517).jpg",
@@ -2100,7 +2106,8 @@ export const GUIDE_PHOTOS = Object.freeze({
     "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/steppekiekendief",
     "visualCheck": "Volwassen mannetje in vlucht, met bleke onderzijde en wigvormig zwart aan de vleugelpunt.",
     "alt": "Steppekiekendief — Volwassen mannetje in vlucht, met bleke onderzijde en wigvormig zwart aan de vleugelpunt.",
-    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "flight": true
   },
   "sp251": {
     "file": "Beautiful Montagu's Harrier in Flight (51042548717).jpg",
@@ -2119,7 +2126,8 @@ export const GUIDE_PHOTOS = Object.freeze({
     "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grauwe-kiekendief",
     "visualCheck": "Volwassen mannetje laag in vlucht, met grijze kop, zwarte vleugelpunten en donkere banden over de armvleugel.",
     "alt": "Grauwe Kiekendief — Volwassen mannetje laag in vlucht, met grijze kop, zwarte vleugelpunten en donkere banden over de armvleugel.",
-    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "flight": true
   },
   "sp006": {
     "file": "Male Sparrowhawk (46103963061).jpg",
@@ -2177,7 +2185,8 @@ export const GUIDE_PHOTOS = Object.freeze({
     "visualCheck": "Volwassen mannetje van onderen in vlucht. Lange staart met brede eindband en banden dichter bij het lichaam.",
     "alt": "Wespendief — Volwassen mannetje van onderen in vlucht. Lange staart met brede eindband en banden dichter bij het lichaam.",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-    "observation": "https://www.inaturalist.org/observations/120788543"
+    "observation": "https://www.inaturalist.org/observations/120788543",
+    "flight": true
   },
   "sp253": {
     "file": "Rough-legged Hawk, female (29534397942).jpg",
@@ -2196,7 +2205,8 @@ export const GUIDE_PHOTOS = Object.freeze({
     "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/Ruigpootbuizerd",
     "visualCheck": "Volwassen vrouwtje in vlucht in Canada. Donker buikschild en grote polsvlekken bij een lichte staartbasis.",
     "alt": "Ruigpootbuizerd — Volwassen vrouwtje in vlucht in Canada. Donker buikschild en grote polsvlekken bij een lichte staartbasis.",
-    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "flight": true
   },
   "sp245": {
     "file": "Cattle Egrets (Bubulcus ibis) (26473504731).jpg",
