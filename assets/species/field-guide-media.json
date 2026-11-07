@@ -3827,6 +3827,27 @@
         "originalURL": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Great_cormorant_immature.jpg",
         "image": "/assets/species/plumage/sp104-jaarling.webp"
       }
+    },
+    "sp130": {
+      "adult_f": {
+        "file": "Samice hvízdáka eurasijského na kameni.jpg",
+        "nl": "Smient",
+        "latin": "Mareca penelope",
+        "author": "Daniel106",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Samice_hv%C3%ADzd%C3%A1ka_eurasijsk%C3%A9ho_na_kameni.jpg",
+        "showSourceLink": false,
+        "alt": "Smient-vrouwtje met een korte blauwgrijze snavel en rossigbruine veren op een steen.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/smient",
+        "visualCheck": "Korte blauwgrijze snavel met zwarte punt, ronde kop en rossigbruin verenkleed. Bron identificeert dit exemplaar als vrouwtje.",
+        "verification": "Soort en kleed gecontroleerd aan de hand van bronbeschrijving en zichtbare veldkenmerken.",
+        "width": 1250,
+        "height": 938,
+        "image": "/assets/species/plumage/sp130-adult-f.webp"
+      }
     }
   },
   "poses": {

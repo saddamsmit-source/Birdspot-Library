@@ -108,7 +108,8 @@ function plumagePhoto(id, kind) {
 
 function mediaCredit(media) {
   const modifications = media.modifications?.startsWith('Resized') ? 'Verkleind zonder uitsnede' : media.modifications;
-  return `<small class="sd-media-credit">${esc(media.author)} · <a href="${esc(media.licenseUrl)}" target="_blank" rel="noopener noreferrer">${esc(media.license)}</a> · <a href="${esc(media.source)}" target="_blank" rel="noopener noreferrer">Bron</a>${modifications ? ' · ' + esc(modifications) : ''}</small>`;
+  const sourceLink = media.showSourceLink === false ? '' : ` · <a href="${esc(media.source)}" target="_blank" rel="noopener noreferrer">Bron</a>`;
+  return `<small class="sd-media-credit">${esc(media.author)} · <a href="${esc(media.licenseUrl)}" target="_blank" rel="noopener noreferrer">${esc(media.license)}</a>${sourceLink}${modifications ? ' · ' + esc(modifications) : ''}</small>`;
 }
 
 function fieldPhoto(photo) {
