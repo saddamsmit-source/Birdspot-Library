@@ -58,8 +58,8 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp058 | Fluiter | Ja | 2 | Apart beeld |
 | sp059 | Zwartkop | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp060 | Tuinfluiter | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp061 | Grasmus | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp063 | Goudhaantje | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
+| sp061 | Grasmus | Ja | 2 | Apart beeld |
+| sp063 | Goudhaantje | Ja | 3 | Apart beeld |
 | sp064 | Vuurgoudhaan | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp065 | Boomklever | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp066 | Boomkruiper | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
@@ -355,3 +355,15 @@ Basis is concept-PR #72, 9faf51d146df8be18af23e6d7b26d8baaf7f2618. Voor Fluiter,
 CAP-BIRD-012/015. Fluiter heeft een lokaal vluchtbeeld boven het verenkleed. Zwartkop en Tuinfluiter blijven open op de zoeklijst. Na deze ronde staan 78 soorten zonder vluchtbeeld op de lijst. Volgende nieuwe soort is Grasmus.
 
 Mobiele Chromium-test op 390 px: Fluiter via appbreed zoeken met de wetenschappelijke naam geopend. De foto decodeert, staat eenmaal boven het verenkleed, toont de bronlink en opent met 2× zoom. Gidsdekking, bestaande volgorde- en uniciteitstests en SHA-256-controle zijn geslaagd. Fysieke toesteltest staat open.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 15
+
+Basis is concept-PR #73, 8403a629c0bb7e5e2d688ae108ac8e8fad61c402. Voor Grasmus, Goudhaantje en Vuurgoudhaan zijn Commons, iNaturalist-waarnemingsbeschrijvingen, Flickr, fotoarchieven en vrij gelicentieerde videofragmenten in meerdere talen nagezocht.
+
+- Grasmus · Nigel Bentley · CC BY 4.0. [Bronfoto](https://www.inaturalist.org/photos/197056025) · [Waarneming](https://www.inaturalist.org/observations/116723329). De waarneming heeft onderzoeksstatus en twee overeenstemmende determinaties. Het beeld uit de reeks toont de vogel volledig los van de draad. De uitsnede laat de lichte keel zien. Afstand en tegenlicht beperken verenkleeddetail.
+- Goudhaantje · Alpsdake · CC BY-SA 3.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Regulus_regulus_japonensis_in_flight.JPG) · [Taxonomische controle](https://avibase.bsc-eoc.org/species.jsp?avibaseid=9B8C750951F2BA91). Dit is de Oost-Aziatische ondersoort japonensis. De soortkaart vermeldt de ondersoort bij het vluchtbeeld. Op de [Europese fotokandidaat](https://commons.wikimedia.org/wiki/File:Regulus_regulus1.jpg) verbergt de vegetatie de poten. De foto uit Japan toont beide poten los en de vleugels gespreid. Een Europese vluchtfoto blijft gewenst.
+- Vuurgoudhaan · op de [foto met gespreide vleugel](https://commons.wikimedia.org/wiki/File:Regulus_ignicapilla.jpg) houdt de vogel een blad vast. Het [dreigbeeld uit Franconville](https://commons.wikimedia.org/wiki/File:Common_firecrest_Franconville_04.jpg) toont een vogel op een tak. In [Foeragerende vuurgoudhaan](https://commons.wikimedia.org/wiki/File:Foeragerende_vuurgoudhaan-4962026.webm) is er vrije vlucht rond 00:18, maar bewegingsonscherpte beperkt herkenning. Voor de scherpe kandidaten buiten Commons is geen passende herpublicatielicentie bevestigd.
+
+CAP-BIRD-012/015. Grasmus en Goudhaantje hebben elk een lokaal vluchtbeeld boven het verenkleed. Vuurgoudhaan blijft open. Na deze ronde staan 76 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Boomklever.
+
+Mobiele Chromium-test op 390 px: beide soortkaarten via appbreed zoeken met de wetenschappelijke naam geopend. De beelden decoderen, staan eenmaal boven het verenkleed, tonen hun bronlink en openen met 2× zoom. Gidsdekking, bestaande volgorde- en uniciteitstests en SHA-256-controle zijn geslaagd. Fysieke toesteltest staat open.
