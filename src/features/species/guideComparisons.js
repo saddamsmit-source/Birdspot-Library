@@ -882,6 +882,15 @@ export const GUIDE_COMPARISONS = [
     ],
     tip: 'Vergelijk snavelvorm en vleugeltekening. De opnamen zijn op verschillende afstanden gemaakt.',
   },
+  {
+    label: 'Huismus en Ringmus · in vlucht',
+    flight: true,
+    birds: [
+      {id: 'sp043', source: 'huismus', marks: 'De man op de foto heeft een grijze kruin en een zwarte bef.'},
+      {id: 'sp044', source: 'ringmus', marks: 'Roodbruine kruin en een zwarte vlek op de lichte wang.'},
+    ],
+    tip: 'Kijk bij een goed zicht op de kop eerst naar de kruin en de wang. Bij de Huismus op de foto ontbreekt een losse wangvlek.',
+  },
 ];
 
 export function comparisonSource(bird) {

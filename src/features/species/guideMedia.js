@@ -4920,5 +4920,74 @@ export const GUIDE_POSES = Object.freeze({
       "height": 275,
       "image": "/assets/species/plumage/sp041-flight.webp"
     }
+  ],
+  "sp042": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "De rode kop en borst zijn zichtbaar. De vleugels zijn onscherp door beweging.",
+      "file": "Zingende roodmus-4961932.webm",
+      "nl": "Roodmus",
+      "latin": "Carpodacus erythrinus",
+      "author": "Natuur Digitaal (Marc Plomp) en Stichting Natuurbeelden",
+      "license": "CC BY-SA 3.0 NL",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/nl/",
+      "source": "https://commons.wikimedia.org/wiki/File:Zingende_roodmus-4961932.webm",
+      "showSourceLink": true,
+      "alt": "Videostill van een mannetje Roodmus vlak na het loskomen van de tak, met een rode kop en borst en bewogen vleugels.",
+      "modifications": "Videostill op 00:13,96, met gecorrigeerde pixelverhouding en omgezet naar WebP",
+      "reviewed": "2026-11-07",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/roodmus",
+      "visualCheck": "Videostill van een mannetje Roodmus vlak na het loskomen van de tak, met een rode kop en borst en bewogen vleugels.",
+      "width": 1023,
+      "height": 576,
+      "image": "/assets/species/plumage/sp042-flight.webp"
+    }
+  ],
+  "sp043": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "Let op de grijze kruin en de zwarte bef.",
+      "file": "House Sparrow1.jpg",
+      "nl": "Huismus",
+      "latin": "Passer domesticus",
+      "author": "Mildeep",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:House_Sparrow1.jpg",
+      "showSourceLink": true,
+      "alt": "Mannetje Huismus in vrije vlucht met gespreide vleugels, een grijze kruin en een zwarte bef.",
+      "modifications": "Uitgesneden rond de vogel, verkleind en omgezet naar WebP",
+      "reviewed": "2026-11-07",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/huismus",
+      "visualCheck": "Mannetje Huismus in vrije vlucht met gespreide vleugels, een grijze kruin en een zwarte bef.",
+      "width": 1400,
+      "height": 886,
+      "image": "/assets/species/plumage/sp043-flight.webp"
+    }
+  ],
+  "sp044": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "Let op de roodbruine kruin en de afzonderlijke donkere wangvlek.",
+      "file": "Waltz (31982909).jpeg",
+      "nl": "Ringmus",
+      "latin": "Passer montanus",
+      "author": "Galina Jacyna",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Waltz_(31982909).jpeg",
+      "showSourceLink": true,
+      "alt": "Twee Ringmussen vrij in de lucht met roodbruine kruinen en een donkere wangvlek op de lichte wang.",
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+      "reviewed": "2026-11-07",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/ringmus",
+      "visualCheck": "Twee Ringmussen vrij in de lucht met roodbruine kruinen en een donkere wangvlek op de lichte wang.",
+      "width": 1400,
+      "height": 961,
+      "image": "/assets/species/plumage/sp044-flight.webp"
+    }
   ]
 });
