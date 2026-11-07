@@ -855,6 +855,24 @@ export const GUIDE_COMPARISONS = [
     ],
     tip: 'Kijk eerst naar staartlengte en vleugeltekening. De witte stuit van de Gaai is het best van achteren te zien.',
   },
+  {
+    label: 'Koolmees en Pimpelmees · in vlucht',
+    flight: true,
+    birds: [
+      {id: 'sp029', source: 'koolmees', marks: 'Zwarte kop met witte wangen. Op de gele onderzijde loopt een donkere middenstreep.'},
+      {id: 'sp030', source: 'pimpelmees', marks: 'Blauwe kruin en een donkere oogstreep door het witte gezicht.'},
+    ],
+    tip: 'Beide hebben een gele buik. Kijk naar de koptekening als de vogel dicht genoeg langs vliegt.',
+  },
+  {
+    label: 'Glanskop en Matkop · in vlucht',
+    flight: true,
+    birds: [
+      {id: 'sp032', source: 'glanskop', marks: 'Kleine mees met donkere kruin. Op deze tegenlichtfoto zijn de kleine verschillen met Matkop lastig te zien.'},
+      {id: 'sp031', source: 'matkop', marks: 'Lijkt sterk op Glanskop. Een licht vleugelveld is vaak bruikbaar bij goed zicht.'},
+    ],
+    tip: 'Gebruik deze foto’s voor de vlieghouding. Luister bij twijfel naar de roep en bekijk de kop en gevouwen vleugel bij goed licht.',
+  },
 ];
 
 export function comparisonSource(bird) {
