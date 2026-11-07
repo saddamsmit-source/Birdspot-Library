@@ -2,9 +2,9 @@
 
 Baseline: concept-PR #53, bbadaa799d870f1659c692fefb7998241cd81014. CAP-BIRD-012 en CAP-BIRD-015.
 
-**134 soorten, 127 hoofdfoto’s, 236 unieke lokale beeldbestanden.** Vluchtstatus: 10 hoofdfoto’s in vlucht, 6 aparte vluchtbeelden en 3 kaarten met een vluchtvergelijking. 40 soorten zijn visueel gecontroleerd zonder bestaand vluchtbeeld. 75 soorten vragen vervolgcontrole.
+**134 soorten, 127 hoofdfoto’s, 236 unieke lokale beeldbestanden.** Vluchtstatus: 10 hoofdfoto’s in vlucht, 6 aparte vluchtbeelden en 3 kaarten met een vluchtvergelijking. 60 soorten zijn visueel gecontroleerd zonder bestaand vluchtbeeld. 55 soorten vragen vervolgcontrole.
 
-Technische controle op alle soorten met bestaande, geregistreerde gidsfoto’s. Elk uniek lokaal bestand is gedecodeerd. Verschillende paden zijn vergeleken op SHA-256. De soortnaam en het lokale pad zijn ook gecontroleerd via guide_coverage. Bronregistratie bewijst eerdere beoordeling; de eerste visuele hercontrole betrof de vluchtkandidaten. Rondes 9 en 10 voegen elk twintig visueel gecontroleerde soorten toe.
+Technische controle op alle soorten met bestaande, geregistreerde gidsfoto’s. Elk uniek lokaal bestand is gedecodeerd. Verschillende paden zijn vergeleken op SHA-256. De soortnaam en het lokale pad zijn ook gecontroleerd via guide_coverage. Bronregistratie bewijst eerdere beoordeling; de eerste visuele hercontrole betrof de vluchtkandidaten. Rondes 9 tot en met 11 voegen elk twintig visueel gecontroleerde soorten toe.
 
 Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen plaats vóór de kleden. **Vergelijking** toont de eigen soort als eerste vóór de kleden. **Gecontroleerd · geen vluchtbeeld** betekent dat alle geregistreerde gidsfoto’s voor die soort visueel zijn nagekeken en geen vlucht tonen. **Open** betekent dat de visuele vervolgcontrole nog moet gebeuren. Een apart vluchtbeeld mag een hoofdfoto nooit herhalen.
 
@@ -56,28 +56,28 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp056 | Tjiftjaf | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp057 | Fitis | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp058 | Fluiter | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp059 | Zwartkop | Ja | 1 | Open |
-| sp060 | Tuinfluiter | Ja | 1 | Open |
-| sp061 | Grasmus | Ja | 1 | Open |
-| sp063 | Goudhaantje | Ja | 2 | Open |
-| sp064 | Vuurgoudhaan | Ja | 1 | Open |
-| sp065 | Boomklever | Ja | 1 | Open |
-| sp066 | Boomkruiper | Ja | 1 | Open |
-| sp067 | Taigaboomkruiper | Ja | 1 | Open |
-| sp068 | Witte Kwikstaart | Ja | 1 | Open |
-| sp069 | Gele Kwikstaart | Ja | 1 | Open |
-| sp070 | Veldleeuwerik | Ja | 1 | Open |
-| sp072 | Graspieper | Ja | 1 | Open |
-| sp075 | IJsvogel | Ja | 1 | Open |
-| sp077 | Fuut | Ja | 2 | Open |
-| sp078 | Meerkoet | Ja | 2 | Open |
-| sp079 | Waterhoen | Ja | 2 | Open |
+| sp059 | Zwartkop | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp060 | Tuinfluiter | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp061 | Grasmus | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp063 | Goudhaantje | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
+| sp064 | Vuurgoudhaan | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp065 | Boomklever | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp066 | Boomkruiper | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp067 | Taigaboomkruiper | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp068 | Witte Kwikstaart | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp069 | Gele Kwikstaart | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp070 | Veldleeuwerik | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp072 | Graspieper | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp075 | IJsvogel | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp077 | Fuut | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
+| sp078 | Meerkoet | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
+| sp079 | Waterhoen | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
 | sp081 | Blauwe Reiger | Ja | 2 | Hoofdfoto |
 | sp082 | Kleine Zilverreiger | Ja | 4 | Hoofdfoto |
-| sp083 | Grote Zilverreiger | Ja | 3 | Open |
-| sp084 | Purperreiger | Ja | 2 | Open |
-| sp085 | Kwak | Ja | 2 | Open |
-| sp086 | Grauwe Gans | Ja | 2 | Open |
+| sp083 | Grote Zilverreiger | Ja | 3 | Gecontroleerd · geen vluchtbeeld |
+| sp084 | Purperreiger | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
+| sp085 | Kwak | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
+| sp086 | Grauwe Gans | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
 | sp089 | Wilde Eend | Ja | 3 | Open |
 | sp090 | Slobeend | Ja | 2 | Open |
 | sp091 | Wintertaling | Ja | 5 | Open |
@@ -160,6 +160,14 @@ Basis: concept-PR #55, 780e17eaf63b040ea33351ab850fb9190dd3b28e. Alle 23 bestaan
 - Zwarte Roodstaart: vrouwtje volgens de fotograaf. Grijsbruin kleed en roestkleurige staart passen bij de registratie. Geslacht is niet onafhankelijk uit het beeld vastgesteld. [Origineel](https://commons.wikimedia.org/wiki/File:Rougequeue_noir_Douga006.jpg)
 - Huismus: de lichte wenkbrauw en het kleed passen bij de bronregistratie als vrouwtje. [Origineel](https://commons.wikimedia.org/wiki/File:Sperling_Weibchen-20201025-RM-163340.jpg)
 - Tjiftjaf en Fitis: de beelden passen bij de bestaande registraties. Pootkleur alleen is onvoldoende als zelfstandige determinatie. [Gidsvergelijking](https://www.vogelbescherming.nl/docs/4278ab1d-29c0-478c-818c-1c18bef431ff.pdf)
+
+## Ronde 11 · bestaande foto’s van Zwartkop tot Grauwe Gans
+
+Basis is concept-PR #56, fa2f52ed3480d480eb9a0b396b547a78e74f8d66. De 29 bestaande gidsfoto’s van twintig soorten zijn visueel gecontroleerd tegen de geregistreerde soort en kleedomschrijving. Alle bestanden decoderen, hebben een bron, fotograaf en licentie in de registratie en zijn uniek op lokaal pad en SHA-256 binnen deze groep. De beelden tonen vogels op een tak, stam, nest, op de grond of in het water. De twintig soorten zijn afgerond zonder bestaand vluchtbeeld.
+
+- Boomkruiper en Taigaboomkruiper: de foto's sluiten aan bij de geregistreerde soort. Het onderscheid steunt op de bronregistratie en een combinatie van kenmerken. Een lichte onderzijde of een kromme snavel op zichzelf volstaat niet. [Veldkenmerken](https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/taigaboomkruiper)
+- Grote Zilverreiger: het Californische nestbeeld toont jonge vogels op het nest, waaronder een jong met geopende vleugels. Het beeld blijft een leeftijdsvoorbeeld. [Bronfoto](https://www.inaturalist.org/photos/388019872)
+- Meerkoet en Grauwe Gans: de jonge vogels zijn donsjongen. De foto van het Waterhoen toont een verder ontwikkeld jeugdkleed.
 
 ## Volgende controlebatches
 
