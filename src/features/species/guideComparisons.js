@@ -717,6 +717,14 @@ export const GUIDE_COMPARISONS = [
     ],
     tip: 'Kijk eerst naar stuit en keel. Een jonge Boerenzwaluw heeft kortere staartpennen dan een volwassen vogel.',
   },
+  {
+    label: 'Witte en Gele Kwikstaart · jonge vogels',
+    birds: [
+      {id: 'sp068', source: 'witte-kwikstaart', marks: 'Valer dan een volwassen vogel, met veel wit op de kop en een smalle donkere borstband.'},
+      {id: 'sp069', source: 'gele-kwikstaart', marks: 'Kan bleek ogen en weinig geel tonen. Bekijk ook de wenkbrauwstreep en luister naar de roep als de vogel opvliegt.'},
+    ],
+    tip: 'Gebruik de kleur alleen als aanwijzing. Combineer koptekening, borstpatroon en roep. Laat de soort open als de kenmerken elkaar tegenspreken.',
+  },
 ];
 
 export function comparisonSource(bird) {
