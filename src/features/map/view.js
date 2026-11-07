@@ -33,7 +33,7 @@ let _mapInstance  = null;   // L.map referentie (hergebruikt bij terugkeren)
 let _clusterLayer = null;   // MarkerCluster laag
 
 // ── Entry point ────────────────────────────────────────────────
-export function renderMap(el) {
+export function renderMap(el, target = {}) {
   el.innerHTML = `
     <div class="map-screen signature-map-loading" id="mapScreen">
       <div id="leafletMap"></div>
@@ -149,7 +149,7 @@ export function renderMap(el) {
       try { await ensurePlaces(); } catch (_) { /* opslag vol: kaart werkt per waarneming */ }
       const sightings = await getSightings();
       if (destroyed || !el.isConnected) return;
-      initMap(el, sightings, leafletOk);
+      initMap(el, sightings, leafletOk, target);
     } finally {
       if (!destroyed && el.isConnected) {
         el.querySelector('#mapScreen')?.classList.remove('signature-map-loading');
@@ -168,6 +168,7 @@ export function renderMap(el) {
 
   return () => {
     destroyed = true;
+    if (el.querySelector('#mapDetailSheet.open')) el.querySelector('#mapSheetClose').click();
     if (_mapInstance) {
       _mapInstance.remove();
       _mapInstance = null;
@@ -232,7 +233,7 @@ export function ensureLeaflet() {
 }
 
 // ── Kaart initialiseren ────────────────────────────────────────
-function initMap(screenEl, sightings, leafletOk = true) {
+function initMap(screenEl, sightings, leafletOk, { placeId, sightingId, section, placeMediaId }) {
   const mapEl = screenEl.querySelector('#leafletMap');
   if (!mapEl) return;
 
@@ -243,7 +244,7 @@ function initMap(screenEl, sightings, leafletOk = true) {
     _clusterLayer = null;
   }
 
-  const geoSightings = sightings.filter(s => validPin(s.lat,s.lon));
+  const geoSightings = sightings.filter(s => s && validPin(s.lat, s.lon));
   const speciesSearch = screenEl.querySelector('#mapSpeciesSearch');
   const clearFilters = screenEl.querySelector('#mapClearFilters');
   const feedback = screenEl.querySelector('#mapFilterFeedback');
@@ -324,6 +325,24 @@ function initMap(screenEl, sightings, leafletOk = true) {
   filterBtn.addEventListener('click',()=>setFilterOpen(filterPanel.hidden));
   mapEl.addEventListener('pointerdown',()=>setFilterOpen(false));
 
+  // K4: één pin per plek met de zichtbare waarnemingen; records zelf worden nooit gewijzigd.
+  const placeById=new Map(loadPlaces().map(p=>[p.id,p]));
+  function groupByPlace(rows){
+    const groups=new Map();
+    for(const s of rows){
+      const place=placeById.get(s.placeId)||{id:'s:'+s.id,name:s.locationName||s.speciesName||'Waarneming',lat:Number(s.lat),lon:Number(s.lon),loose:true};
+      const g=groups.get(place.id)||{place,records:[]};
+      g.records.push(s);groups.set(place.id,g);
+    }
+    return [...groups.values()];
+  }
+  const selectedSighting = geoSightings.find(s => s.id === sightingId);
+  const wanted = placeId || (selectedSighting && (selectedSighting.placeId || 's:' + selectedSighting.id));
+  const selectedPlace = wanted && (groupByPlace(geoSightings).find(group => group.place.id === wanted) ||
+    (placeById.has(wanted) ? { place: placeById.get(wanted), records: [] } : null));
+  if (section === 'mapFilterBtn') setFilterOpen(true);
+  if (section) screenEl.querySelector('#' + section)?.focus({ preventScroll: true });
+
   // Lege state — altijd tonen als er geen GPS-waarnemingen zijn
   if (!geoSightings.length) showNoGpsState(screenEl);
 
@@ -344,6 +363,7 @@ function initMap(screenEl, sightings, leafletOk = true) {
       openPinPicker({onConfirm:coords=>openAddSheet({initial:coords,
         onSaved:()=>import('../../app.js').then(({navigate})=>navigate('map',{force:true}))})});
     });
+    if (selectedPlace) openPlaceSheet(screenEl, selectedPlace.place, selectedPlace.records, null, placeMediaId);
     return;
   }
 
@@ -384,17 +404,6 @@ function initMap(screenEl, sightings, leafletOk = true) {
     iconCreateFunction:  makeClusterIcon,
   });
 
-  // K4: één pin per plek met de zichtbare waarnemingen; records zelf worden nooit gewijzigd.
-  const placeById=new Map(loadPlaces().map(p=>[p.id,p]));
-  function groupByPlace(rows){
-    const groups=new Map();
-    for(const s of rows){
-      const place=placeById.get(s.placeId)||{id:'s:'+s.id,name:s.locationName||s.speciesName||'Waarneming',lat:Number(s.lat),lon:Number(s.lon),loose:true};
-      const g=groups.get(place.id)||{place,records:[]};
-      g.records.push(s);groups.set(place.id,g);
-    }
-    return [...groups.values()];
-  }
   function markerFor({place,records}){
     const status=placeStatus(records);
     const label=records.length===1?records[0].speciesName:place.name+' · '+records.length+' waarnemingen';
@@ -415,9 +424,9 @@ function initMap(screenEl, sightings, leafletOk = true) {
 
   // K5: bij zoeken komen alle plekken met die vogel (of met die naam) naar voren
   const resultsEl=screenEl.querySelector('#mapSearchResults');
-  const focusPlace=(place,records)=>{
+  const focusPlace=(place,records,mediaId)=>{
     map.setView([Number(place.lat),Number(place.lon)],Math.max(map.getZoom(),16));
-    openPlaceSheet(screenEl,place,records,map);
+    openPlaceSheet(screenEl,place,records,map,mediaId);
   };
   showSearchResults=(matches)=>{
     if(!filterState.speciesSearch){resultsEl.hidden=true;resultsEl.innerHTML='';return;}
@@ -450,7 +459,8 @@ function initMap(screenEl, sightings, leafletOk = true) {
   applyFilters();
 
   // K5: van een soort of lijst direct naar een plek
-  try{
+  if (selectedPlace) focusPlace(selectedPlace.place, selectedPlace.records, placeMediaId);
+  else try{
     const wanted=sessionStorage.getItem('birdspot-map-place');
     if(wanted){
       sessionStorage.removeItem('birdspot-map-place');
@@ -510,15 +520,19 @@ function initMap(screenEl, sightings, leafletOk = true) {
 
 // ── K4: plekkaartje ───────────────────────────────────────────
 const MEDIA_ACCEPT='image/*,video/*,audio/*';
-function openPlaceSheet(screenEl, place, visibleRecords, map) {
+function openPlaceSheet(screenEl, place, visibleRecords, map, mediaId) {
   const sheet    = screenEl.querySelector('#mapDetailSheet');
   const overlay  = screenEl.querySelector('#mapOverlay');
   const closeBtn = screenEl.querySelector('#mapSheetClose');
   const body     = screenEl.querySelector('#mapSheetBody');
+  closeBtn.onclick?.();
+  let closed = false;
   const urls=[];
   const reload=()=>import('../../app.js').then(({navigate})=>navigate('map',{force:true}));
 
-  getSightings().then(all=>{
+  getSightings().then(sightings=>{
+    if (closed || !sheet.isConnected) return;
+    const all = sightings.filter(Boolean);
     const rows=place.loose?visibleRecords:all.filter(s=>s.placeId===place.id);
     const st=place.loose?null:placeStats(place,all);
     screenEl.querySelector('#mapSheetIcon').innerHTML='<svg viewBox="0 0 24 24" class="place-sheet__pin"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>';
@@ -594,24 +608,34 @@ function openPlaceSheet(screenEl, place, visibleRecords, map) {
     if(!box)return;
     let items=[];
     try{items=await getMediaByPlace(place.id);}catch(_){}
-    if(!items.length)return;
+    if (!items.length || closed || !box.isConnected) return;
     urls.splice(0).forEach(u=>URL.revokeObjectURL(u));
     box.innerHTML=items.sort((a,b)=>(b.addedAt||'').localeCompare(a.addedAt||'')).map(m=>{
       const type=String(m.type||m.blob?.type||'');
       const url=m.blob instanceof Blob?URL.createObjectURL(m.blob):'';
       if(url)urls.push(url);
       const name=escHtml(m.filename||'bestand');
-      if(type.startsWith('audio/'))return '<figure class="place-media__audio"><figcaption>'+name+'</figcaption><audio controls preload="metadata" src="'+url+'"></audio></figure>';
-      if(type.startsWith('video/'))return '<video class="place-media__thumb" controls playsinline preload="metadata" src="'+url+'" aria-label="'+name+'"></video>';
-      return '<img class="place-media__thumb" src="'+url+'" alt="'+name+'">';
+      const mediaKey=' data-place-media-id="'+escHtml(m.id)+'"';
+      if(type.startsWith('audio/'))return '<figure'+mediaKey+' class="place-media__audio"><figcaption>'+name+'</figcaption><audio controls preload="metadata" src="'+url+'"></audio></figure>';
+      if(type.startsWith('video/'))return '<video'+mediaKey+' class="place-media__thumb" controls playsinline preload="metadata" src="'+url+'" aria-label="'+name+'"></video>';
+      return '<img'+mediaKey+' class="place-media__thumb" src="'+url+'" alt="'+name+'">';
     }).join('');
+    if (mediaId) {
+      const selected = [...box.children].find(item => item.dataset.placeMediaId === mediaId);
+      selected?.scrollIntoView({ block: 'center' });
+      if (selected) {
+        selected.tabIndex = -1;
+        selected.focus({ preventScroll: true });
+      }
+    }
   }
 
-  if (validPin(place.lat,place.lon)) map.panTo([place.lat, place.lon], { animate: true, duration: 0.4 });
+  if (validPin(place.lat,place.lon)) map?.panTo([place.lat, place.lon], { animate: true, duration: 0.4 });
   sheet.classList.add('open');
   overlay.classList.add('visible');
 
   function closeSheet() {
+    closed = true;
     sheet.classList.remove('open');
     overlay.classList.remove('visible');
     urls.splice(0).forEach(u=>URL.revokeObjectURL(u));

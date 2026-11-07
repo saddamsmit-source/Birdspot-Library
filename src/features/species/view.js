@@ -138,7 +138,7 @@ function getRecentSpeciesIds(limit = 8) {
 }
 
 // ── Render entrypoint ──────────────────────────────────────────
-export function renderSpecies(el) {
+export function renderSpecies(el, { speciesId } = {}) {
   if (_speciesCtx?.cleanup) _speciesCtx.cleanup();
   const ctx = { destroyed:false, urls:new Set(), detailCleanup:null, listGeneration:0, cleanup:null, filterEvents:new AbortController() };
   _speciesCtx = ctx;
@@ -228,10 +228,12 @@ export function renderSpecies(el) {
   renderList(el, seenIds, ctx);
   bindEvents(el, ctx);
   // K5: vanaf de kaart direct een soort openen
+  let open = speciesId;
   try {
-    const open = sessionStorage.getItem('birdspot-open-species');
-    if (open) { sessionStorage.removeItem('birdspot-open-species'); if (SPECIES.some(x => x.id === open)) openDetail(open, el); }
+    open ||= sessionStorage.getItem('birdspot-open-species');
+    sessionStorage.removeItem('birdspot-open-species');
   } catch (_) {}
+  if (open) openDetail(open, el);
 
   // Laad async thumbnails voor "Recent bekeken"
   if (recentIds.length > 0) {

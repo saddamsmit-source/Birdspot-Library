@@ -12,7 +12,7 @@
  *   birdspot-media           — foto's/IDB-exports (permanent)
  */
 
-const APP_VERSION = '1.17.31-thrush-flight';
+const APP_VERSION = '1.17.32-app-search';
 const APP_CACHE   = `birdspot-app-v${APP_VERSION}`;
 const MEDIA_CACHE = 'birdspot-media';
 
@@ -52,6 +52,7 @@ const PRECACHE_URLS = [
 
   // JS — features
   '/src/features/home/view.js',
+  '/src/features/search/index.js',
   '/src/features/home/featuredCarousel.js',
   '/src/features/home/ambientBackdrop.js',
   '/src/features/home/specialBirds.js',

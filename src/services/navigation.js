@@ -3,6 +3,8 @@ const STATE = 'birdspotRoute';
 let lastRootBack = 0;
 const visible = el => el && !el.hidden && el.getClientRects().length > 0;
 function closeTopLayer() {
+  const search = document.querySelector('#appSearchDialog[open]');
+  if (search) { search.querySelector('.app-search-close').click(); return true; }
   // Reverse DOM order breaks equal-z-index ties in the same way as painting.
   const selectors = '.sheet-overlay.open,.signature-lightbox,.lightbox,.confirm-overlay,.manual-pin-dialog,.place-prompt,#mapDetailSheet.open,#mapPinPanel';
   const layers = [...document.querySelectorAll(selectors)].filter(visible)

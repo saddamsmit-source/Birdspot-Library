@@ -13,6 +13,7 @@ import { getDB }                          from '../../data/db.js';
 import { getSightings }                   from '../../data/sightings.js';
 import { getPhotoUrl, revokePhotoUrl }    from '../../utils/photoUrl.js';
 import { initFeaturedCarousel } from './featuredCarousel.js';
+import { bindAppSearch, searchMarkup } from '../search/index.js';
 import { buildAmbientBackdrop,initAmbientBackdrop } from './ambientBackdrop.js';
 
 // ── Constanten ─────────────────────────────────────────────
@@ -28,7 +29,7 @@ const FALLBACK_LON = 4.9041;
  *   2. Alle openstaande blob-URL's worden vrijgegeven.
  *   3. Async-callbacks die nog lopen een stale-flag checken en stil stoppen.
  */
-export function renderHome(el) {
+export function renderHome(el, { onSearchSelect } = {}) {
   // Gedeelde destroyed-vlag: alle async functies checken deze vóór DOM-mutaties.
   const ctx = { destroyed: false };
 
@@ -40,6 +41,7 @@ export function renderHome(el) {
     import('../../app.js').then(({ navigate }) => navigate(button.dataset.signatureRoute));
   };
   el.addEventListener('click', onSignatureClick);
+  const disposeSearch = bindAppSearch(el, onSearchSelect);
   const disposeFeatured = initFeaturedCarousel(el,ctx);
   const disposeHabitat = initAmbientBackdrop(el,ctx);
   loadStats(el, ctx);
@@ -52,6 +54,7 @@ export function renderHome(el) {
   return function cleanup() {
     ctx.destroyed = true;
     el.removeEventListener('click', onSignatureClick);
+    disposeSearch();
     disposeFeatured();
     disposeHabitat();
     // Stop timer
@@ -81,23 +84,13 @@ function buildSkeleton() {
         <span class="app-header__title">Birdspot Library</span>
       </div>
 
-      <div class="app-header__search">
-        <svg class="app-header__search-icon" viewBox="0 0 24 24" fill="none"
-             stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <circle cx="11" cy="11" r="8"/>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-        </svg>
-        <input class="app-header__search-input" type="search"
-               id="homeSearch" placeholder="Zoek soort of locatie…"
-               aria-label="Zoek soort of locatie">
-      </div>
-
-      <button class="app-header__avatar" aria-label="Profiel">
+      <button type="button" class="app-header__avatar" aria-label="Profiel" data-signature-route="profile">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
           <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
           <circle cx="12" cy="7" r="4"/>
         </svg>
       </button>
+      ${searchMarkup()}
     </header>
 
     <!-- Diashow: elke 30 s een bijzondere Nederlandse vogel; hervat waar hij was. -->
@@ -131,7 +124,7 @@ function buildSkeleton() {
     <section class="dash-section" id="recentSection">
       <div class="section-head">
         <span class="section-head__title">Recente waarnemingen</span>
-        <button class="section-head__link" id="allSightingsBtn" aria-label="Alle waarnemingen">
+        <button class="section-head__link" id="allSightingsBtn" aria-label="Alle waarnemingen" data-signature-route="sightings">
           Alles
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
             <polyline points="9 18 15 12 9 6"/>
@@ -323,7 +316,7 @@ function goToSlide(idx, inner, dots) {
 // ══════════════════════════════════════════════════════════
 async function loadStats(el, ctx) {
   try {
-    const sightings  = await getSightings();
+    const sightings  = (await getSightings()).filter(Boolean);
     if (ctx.destroyed) return;
     const speciesSet = new Set(sightings.map(s => s.speciesId));
     const photoCount = sightings.reduce((n, s) => n + (s.photoIds?.length || 0), 0);
@@ -533,7 +526,7 @@ async function loadRecentSightings(el, ctx) {
   _revokeRecentThumbUrls();
 
   try {
-    const all = await getSightings();
+    const all = (await getSightings()).filter(Boolean);
     if (ctx.destroyed) return;
     const recent = [...all]
       .sort((a, b) => new Date(b.date) - new Date(a.date))
@@ -660,7 +653,7 @@ async function loadMonthlyChart(el, ctx) {
   const loader = section.querySelector('.dash-section__loading');
 
   try {
-    const sightings = await getSightings();
+    const sightings = (await getSightings()).filter(Boolean);
     if (ctx.destroyed) return;
 
     // Bouw bucket: laatste 12 maanden
@@ -757,7 +750,7 @@ async function loadHotspotsMap(el, ctx) {
   const loader = section.querySelector('.dash-section__loading');
 
   try {
-    const sightings = await getSightings();
+    const sightings = (await getSightings()).filter(Boolean);
     if (ctx.destroyed) return;
 
     // Alleen waarnemingen met werkelijke GPS-coördinaten

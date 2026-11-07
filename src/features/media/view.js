@@ -37,8 +37,8 @@ export function findPossibleDuplicateIds(items) {
   return new Set([...groups.values()].filter(ids => ids.length > 1).flat());
 }
 
-export function renderMedia(el) {
-  const state = { destroyed:false, items:[], filter:'all', species:'all', search:'',
+export function renderMedia(el, { mediaId } = {}) {
+  const state = { destroyed:false, items:[], filter:'all', species:'all', search:'', mediaId,
     visible:BATCH_SIZE, urls:new Map(), lightbox:null, lightboxIndex:-1, focusReturn:null };
   let favorites = getCollectionIds('media');
   let film = getCollectionIds('film');
@@ -115,6 +115,7 @@ export function renderMedia(el) {
 
   function getFiltered() {
     return state.items.filter(item => {
+      if (state.mediaId && item.photo.id !== state.mediaId) return false;
       if (state.filter === 'photo' && item.kind !== 'photo') return false;
       if (state.filter === 'video' && item.kind !== 'video') return false;
       if (state.filter === 'favorites' && !favorites.has(item.photo.id)) return false;
@@ -208,6 +209,7 @@ export function renderMedia(el) {
   const onClick = event => {
     const filt = event.target.closest('[data-media-filter]');
     if (filt) {
+      state.mediaId = undefined;
       state.filter=filt.dataset.mediaFilter; state.visible=BATCH_SIZE;
       el.querySelectorAll('[data-media-filter]').forEach(b=>{
         const active=b.dataset.mediaFilter===state.filter;
@@ -234,11 +236,13 @@ export function renderMedia(el) {
 
   const onInput = event => {
     if(event.target.id!=='mediaSearch') return;
+    state.mediaId = undefined;
     state.search=event.target.value.trim().toLocaleLowerCase('nl');
     state.visible=BATCH_SIZE; draw();
   };
   const onChange = event => {
     if(event.target.id!=='mediaSpecies') return;
+    state.mediaId = undefined;
     state.species=event.target.value;
     state.visible=BATCH_SIZE; draw();
   };
@@ -254,7 +258,8 @@ export function renderMedia(el) {
 
   (async()=>{
     try {
-      const [sightings,db]=await Promise.all([getSightings(),getDB()]);
+      const [records,db]=await Promise.all([getSightings(),getDB()]);
+      const sightings = records.filter(Boolean);
       const photos=await new Promise((resolve,reject)=>{
         const req=db.transaction('photos','readonly').objectStore('photos').getAll();
         req.onsuccess=()=>resolve(req.result||[]);
@@ -281,7 +286,15 @@ export function renderMedia(el) {
           'Dit is geen beeldanalyse. Er wordt nooit automatisch iets verwijderd.';
       }
       showSpeciesOptions();
+      const selected = state.items.find(item => item.photo.id === state.mediaId);
+      if (selected) el.querySelector('#mediaSearch').value = selected.photo.filename || selected.name;
       draw();
+      if (selected) {
+        const frame = gallery.querySelector('.signature-media-open, video');
+        frame?.scrollIntoView({ block: 'center' });
+        if (selected.kind === 'photo' && frame) openLightbox(selected.photo.id, frame);
+        else frame?.focus({ preventScroll: true });
+      }
     } catch(_) {
       if(!state.destroyed) gallery.innerHTML='<div class="signature-empty"><h3>Media niet beschikbaar</h3>'+
         '<p>Controleer de lokale opslag. Je bestanden zijn niet gewijzigd.</p></div>';
