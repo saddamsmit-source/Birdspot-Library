@@ -798,6 +798,16 @@ export const GUIDE_COMPARISONS = [
     ],
     tip: 'Kijk bij twijfel naar de volledige snavel en pootkleur. De gele punt kan op afstand wegvallen.',
   },
+  {
+    label: 'Sperwer, Havik en Torenvalk · in vlucht',
+    flight: true,
+    birds: [
+      {id: 'sp006', source: 'sperwer', marks: 'Relatief korte, brede vleugels, kleine kop en lange staart met vaak hoekige uiteinden. Wisselt snelle vleugelslagen af met glijden.'},
+      {id: 'sp007', source: 'havik', marks: 'Forse borst en een kop die verder uitsteekt. De vleugels zijn langer in verhouding tot de staart. Volwassen vogels hebben fijne dwarsbanden op de onderzijde.'},
+      {id: 'sp008', source: 'torenvalk', marks: 'In doorgaande vlucht puntigere vleugels. Bij het bidden spreidt de vogel zijn lange staart vaak waaiervormig.'},
+    ],
+    tip: 'Vergelijk eerst vleugelvorm, staart en bouw. De foto’s tonen verschillende vlieghoudingen; gebruik schijnbare grootte alleen als extra aanwijzing.',
+  },
 ];
 
 export function comparisonSource(bird) {

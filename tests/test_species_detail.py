@@ -345,18 +345,32 @@ def main():
             close_detail()
             print("H3-03 OK — zonder leefwijze:", ex["nameNL"], "· niet-broedvogel Rotgans zonder broedblok")
 
+            def assert_photo_once(path):
+                photo = p.locator(f'.signature-species-detail-sheet [data-guide-image="{path}"] img')
+                expect(photo).to_have_count(1)
+                photo.scroll_into_view_if_needed()
+                photo.evaluate("img => img.decode()")
+
             open_species("Fitis", "sp057")
             cards = p.locator('#sdPanel-herkenning .sd-compare-card')
             assert cards.locator('strong').all_text_contents() == ["Fitis", "Tjiftjaf"]
             assert cards.get_by_role("link", name="Vogelbescherming").count() == 2
-            photo = cards.first.get_by_role("button", name="Vergroot foto:", exact=False)
+            photo = p.get_by_role("button", name="Vergroot hoofdfoto")
+            assert cards.first.locator("img").count() == 0
+            assert cards.last.locator("img").count() == 1
             photo.scroll_into_view_if_needed()
             photo.locator('img').evaluate("img => img.decode()")
             photo.click()
-            p.locator('.signature-lightbox img').evaluate("img => img.decode()")
+            zoomed = p.locator('.signature-lightbox img')
+            zoomed.evaluate("img => img.decode()")
+            initial = zoomed.bounding_box()["width"]
+            p.get_by_role("button", name="Inzoomen", exact=True).click()
+            p.wait_for_function("width => document.querySelector('.signature-lightbox img').getBoundingClientRect().width > width", arg=initial)
+            p.get_by_role("button", name="Zoom herstellen").click()
+            p.wait_for_function("width => Math.abs(document.querySelector('.signature-lightbox img').getBoundingClientRect().width - width) < 2", arg=initial)
             p.keyboard.press("Escape")
-            assert p.locator('.signature-lightbox').count() == 0
-            assert photo.evaluate("el => document.activeElement === el")
+            expect(p.locator('.signature-lightbox')).to_have_count(0)
+            expect(photo).to_be_focused()
             audio = p.get_by_label("Zang van Fitis")
             audio.evaluate("el => el.play()")
             p.wait_for_function("document.querySelector('.sd-audio audio').currentTime > 0.15")
@@ -374,7 +388,7 @@ def main():
             open_species("Grote Bonte Specht", "sp016")
             juvenile = p.locator('#sdPanel-herkenning .sd-compare-card').first
             assert "Juveniel" in juvenile.inner_text()
-            assert juvenile.locator('img').get_attribute("src") == "/assets/species/plumage/sp016-juv.webp"
+            assert_photo_once("/assets/species/plumage/sp016-juv.webp")
             close_detail()
             open_species("Kokmeeuw", "sp097")
             pair = p.locator('#sdPanel-herkenning .sd-compare').filter(
@@ -383,8 +397,8 @@ def main():
             assert pair.locator('strong').all_text_contents() == ["Kokmeeuw", "Zwartkopmeeuw"]
             for card in pair.all():
                 assert card.locator('.sd-badge').inner_text() == "Broedkleed"
-                card.locator('img').scroll_into_view_if_needed()
-                card.locator('img').evaluate("img => img.decode()")
+            assert_photo_once("/assets/species/sp097.webp")
+            assert_photo_once("/assets/species/sp225.webp")
             winter = p.locator('.sd-plumage').filter(has_text="Winterkleed")
             assert winter.locator('img').get_attribute("src") == "/assets/species/plumage/sp097-winter.webp"
             close_detail()
@@ -403,8 +417,13 @@ def main():
             ):
                 pair = comparisons.filter(has=p.get_by_role("heading", name=f"Bruine en Blauwe · {label}"))
                 assert pair.locator('.sd-badge').all_text_contents() == [key, key]
-                assert pair.locator('img').count() == 2
-                assert pair.locator('img').nth(1).get_attribute("src") == blue_path
+                assert_photo_once(blue_path)
+                brown_path = {
+                    "Man": "/assets/species/sp173.webp",
+                    "Vrouw": "/assets/species/plumage/sp173-adult_f.webp",
+                    "Juveniel": "/assets/species/plumage/sp173-juv.webp",
+                }[key]
+                assert_photo_once(brown_path)
                 for picture in pair.locator('img').all():
                     picture.scroll_into_view_if_needed()
                     picture.evaluate("img => img.decode()")
@@ -424,9 +443,13 @@ def main():
             )
             assert "dwarsbanden" in young_hawks.locator('.sd-compare-card').first.inner_text()
             assert "lengtestrepen" in young_hawks.locator('.sd-compare-card').last.inner_text()
-            assert young_hawks.locator('img').evaluate_all("images => images.map(img => img.getAttribute('src'))") == [
-                "/assets/species/plumage/sp006-juv.webp", "/assets/species/plumage/sp007-juv.webp",
-            ]
+            for path in ("/assets/species/plumage/sp006-juv.webp", "/assets/species/plumage/sp007-juv.webp"):
+                assert_photo_once(path)
+            flight = p.locator('.sd-compare').last
+            expect(flight.get_by_role("heading", name="Sperwer, Havik en Torenvalk · in vlucht")).to_be_visible()
+            assert flight.locator('strong').all_text_contents() == ["Sperwer", "Havik", "Torenvalk"]
+            for sid in ("sp006", "sp007", "sp008"):
+                assert_photo_once(f"/assets/species/plumage/{sid}-flight.webp")
             assert p.get_by_label("Roep vrouwtje van Sperwer").count() == 1
             young_hawks.get_by_role("button", name="Open soortkaart Havik").click()
             assert p.get_by_role("dialog", name="Havik", exact=True).count() == 1
@@ -442,9 +465,8 @@ def main():
                 has=p.get_by_role("heading", name="Buizerd en Ruigpootbuizerd · volwassen in vlucht")
             )
             assert adult.locator('.sd-badge').all_text_contents() == ["Volwassen", "Vrouw"]
-            assert adult.locator('img').evaluate_all("images => images.map(img => img.getAttribute('src'))") == [
-                "/assets/species/plumage/sp005-adult_m.webp", "/assets/species/sp253.webp",
-            ]
+            for path in ("/assets/species/plumage/sp005-adult_m.webp", "/assets/species/sp253.webp"):
+                assert_photo_once(path)
             juvenile = buzzard_comparisons.filter(
                 has=p.get_by_role("heading", name="Buizerd en Wespendief · jonge vogels")
             )
@@ -466,9 +488,8 @@ def main():
                 has=p.get_by_role("heading", name="Kleine en Grote Zilverreiger · broedkleed")
             )
             assert breeding.locator('.sd-badge').all_text_contents() == ["Broedkleed", "Broedkleed"]
-            assert breeding.locator('img').evaluate_all("images => images.map(img => img.getAttribute('src'))") == [
-                "/assets/species/plumage/sp082-breeding.webp", "/assets/species/plumage/sp083-breeding.webp",
-            ]
+            for path in ("/assets/species/plumage/sp082-breeding.webp", "/assets/species/plumage/sp083-breeding.webp"):
+                assert_photo_once(path)
             young = herons.filter(
                 has=p.get_by_role("heading", name="Kleine Zilverreiger en Koereiger · jonge vogels")
             )
@@ -497,9 +518,8 @@ def main():
                     has=p.get_by_role('heading', name=f'Wintertaling en Zomertaling · {label}')
                 )
                 expected_garganey = '/assets/species/sp188.webp' if plumage == 'adult_m' else f'/assets/species/plumage/sp188-{plumage}.webp'
-                assert pair.locator('img').evaluate_all("images => images.map(img => img.getAttribute('src'))") == [
-                    f'/assets/species/plumage/sp091-{plumage}.webp', expected_garganey,
-                ]
+                for path in (f'/assets/species/plumage/sp091-{plumage}.webp', expected_garganey):
+                    assert_photo_once(path)
             assert p.get_by_label('Vluchtroep bij Rotterdam van Wintertaling').count() == 1
             p.get_by_role('tab', name='Leefwijze', exact=True).click()
             months = p.get_by_text('Gebruikelijke broedperiode · april, mei, juni, juli', exact=True)
@@ -519,9 +539,8 @@ def main():
                 has=p.get_by_role("heading", name="Bontbekplevier en Kleine Plevier · jonge vogels")
             )
             assert young_plovers.locator('.sd-badge').all_text_contents() == ["Juveniel", "Juveniel"]
-            assert young_plovers.locator('img').evaluate_all("images => images.map(img => img.getAttribute('src'))") == [
-                "/assets/species/plumage/sp146-juv.webp", "/assets/species/plumage/sp147-juv.webp",
-            ]
+            for path in ("/assets/species/plumage/sp146-juv.webp", "/assets/species/plumage/sp147-juv.webp"):
+                assert_photo_once(path)
             for picture in young_plovers.locator('img').all():
                 picture.scroll_into_view_if_needed()
                 picture.evaluate("img => img.decode()")
@@ -529,9 +548,8 @@ def main():
                 has=p.get_by_role("heading", name="Bontbekplevier en Strandplevier · winterkleed")
             )
             assert winter_plovers.locator('.sd-badge').all_text_contents() == ["Winterkleed", "Winterkleed"]
-            assert winter_plovers.locator('img').evaluate_all("images => images.map(img => img.getAttribute('src'))") == [
-                "/assets/species/plumage/sp146-winter.webp", "/assets/species/plumage/sp206-winter.webp",
-            ]
+            for path in ("/assets/species/plumage/sp146-winter.webp", "/assets/species/plumage/sp206-winter.webp"):
+                assert_photo_once(path)
             young_plovers.get_by_role("button", name="Open soortkaart Kleine Plevier").click()
             expect(p.get_by_label("Zang en vluchtroep van Kleine Plevier")).to_have_count(1)
             breeding_plovers = p.locator('.sd-compare').filter(
@@ -552,11 +570,9 @@ def main():
                 comparison = p.locator('.sd-compare').filter(
                     has=p.get_by_role("heading", name=f"Goudplevier en Zilverplevier · {label}")
                 )
-                for index, sid in enumerate(["sp145", "sp144"]):
-                    photo = comparison.locator("img").nth(index)
-                    assert photo.get_attribute("src").endswith(f"/{sid}{suffix}.webp")
-                    photo.scroll_into_view_if_needed()
-                    photo.evaluate("img => img.decode()")
+                for sid in ("sp145", "sp144"):
+                    folder = "/assets/species/plumage" if suffix else "/assets/species"
+                    assert_photo_once(f"{folder}/{sid}{suffix}.webp")
             comparison.get_by_role("button", name="Open soortkaart Zilverplevier").click()
             expect(p.get_by_label("Nachtelijke vluchtroep van Zilverplevier")).to_have_count(1)
             tab("waar")
@@ -576,11 +592,9 @@ def main():
                 sandpipers = p.locator('.sd-compare').filter(
                     has=p.get_by_role("heading", name=f"Witgat en Bosruiter · {label}")
                 )
-                for index, sid in enumerate(["sp156", "sp159"]):
-                    photo = sandpipers.locator("img").nth(index)
-                    assert photo.get_attribute("src").endswith(f"/{sid}{suffix}.webp")
-                    photo.scroll_into_view_if_needed()
-                    photo.evaluate("img => img.decode()")
+                for sid in ("sp156", "sp159"):
+                    folder = "/assets/species/plumage" if suffix else "/assets/species"
+                    assert_photo_once(f"{folder}/{sid}{suffix}.webp")
             expect(p.locator(".sd-audio audio")).to_have_count(4)
             tab("status")
             expect(p.get_by_text("Jaarrond in Nederland", exact=True)).to_be_visible()
@@ -607,7 +621,10 @@ def main():
             for name, sid, recording_count, comparison_count, breeding_months in waders:
                 open_species(name, sid)
                 expect(p.locator(".sd-audio audio")).to_have_count(recording_count)
-                expect(p.locator(".sd-plumage img")).to_have_count(3)
+                assert_photo_once(f"/assets/species/{sid}.webp")
+                alternate = "breeding" if sid == "sp102" else "winter"
+                assert_photo_once(f"/assets/species/plumage/{sid}-{alternate}.webp")
+                assert_photo_once(f"/assets/species/plumage/{sid}-juv.webp")
                 expect(p.locator(".sd-compare")).to_have_count(comparison_count)
                 for comparison in p.locator(".sd-compare").all():
                     for photo in comparison.locator("img").all():
@@ -617,9 +634,9 @@ def main():
                     juvenile = p.locator(".sd-compare").filter(
                         has=p.get_by_role("heading", name="Groenpootruiter en Poelruiter · jonge vogels")
                     )
-                    assert juvenile.locator("img").evaluate_all("images => images.map(img => img.getAttribute('src'))") == [
-                        "/assets/species/plumage/sp158-juv.webp", "/assets/species/plumage/sp217-juv.webp",
-                    ]
+                    expect(juvenile.get_by_role("heading", name="Groenpootruiter en Poelruiter · jonge vogels")).to_be_visible()
+                    assert_photo_once("/assets/species/plumage/sp158-juv.webp")
+                    assert_photo_once("/assets/species/plumage/sp217-juv.webp")
                 tab("waar")
                 expect(p.locator(".sd-photo-tip")).to_be_visible()
                 tab("status")

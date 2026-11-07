@@ -849,3 +849,13 @@
   background: var(--surface); color: var(--ink); text-align: left; font: inherit;
 }
 .sd-place-link::after { content: "›"; color: var(--muted); font-size: 18px; }
+
+.sd-hero-photo { display:block; width:100%; height:100%; padding:0; border:0; background:none; cursor:zoom-in; }
+.signature-lightbox.sd-photo-viewer { grid-template-columns:minmax(0, 1fr); grid-template-rows:minmax(0, 1fr) auto; gap:12px; padding-bottom:24px; }
+.sd-photo-viewport { width:100%; height:100%; min-width:0; min-height:0; overflow:auto; overscroll-behavior:contain; }
+.sd-photo-stage { display:grid; place-items:center; width:max-content; min-width:100%; min-height:100%; }
+.sd-photo-viewer .sd-photo-stage img { display:block; max-width:calc(100vw - 28px); max-height:calc(100dvh - 138px); height:auto; cursor:zoom-in; }
+.sd-photo-viewer .sd-photo-stage img[style] { max-width:none; max-height:none; }
+.sd-photo-zoom { display:flex; gap:8px; }
+.sd-photo-zoom button { min-width:44px; min-height:44px; color:#fff; background:#102a20; border:1px solid #8da99b; border-radius:8px; }
+.sd-photo-zoom button:disabled { opacity:.5; }

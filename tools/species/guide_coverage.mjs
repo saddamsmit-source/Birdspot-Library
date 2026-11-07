@@ -37,11 +37,18 @@ for (const [id, clips] of Object.entries(GUIDE_AUDIO)) {
   assert.ok(species.has(id), `Onbekende soort bij opname: ${id}`);
   for (const clip of clips) checkMedia(clip, clip.audio);
 }
-for (const {birds, tip} of GUIDE_COMPARISONS) {
-  assert.ok(tip && birds.length === 2 && birds[0].id !== birds[1].id, 'Ongeldige vergelijking');
+for (const {birds, tip, flight} of GUIDE_COMPARISONS) {
+  assert.ok(tip && (birds.length === 2 || (flight && birds.length === 3)) &&
+    new Set(birds.map(bird => bird.id)).size === birds.length, 'Ongeldige vergelijking');
   for (const bird of birds) {
     const {id, plumage} = bird;
     assert.ok(bird.source && bird.marks && species.has(id), `Ongeldige vergelijking: ${id}`);
+    if (flight) {
+      const photo = GUIDE_POSES[id]?.find(pose => pose.flight);
+      checkPhoto(id, photo);
+      assert.notEqual(photo.image, GUIDE_PHOTOS[id]?.image, `Vluchtfoto is hoofdfoto: ${id}`);
+      continue;
+    }
     if (bird.textOnly === true) continue;
     const photo = GUIDE_PLUMAGE[id]?.[plumage];
     checkPhoto(id, !plumage || photo?.reuseGuidePhoto ? GUIDE_PHOTOS[id] : photo);
