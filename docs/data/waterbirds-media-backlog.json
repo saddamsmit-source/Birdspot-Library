@@ -1,0 +1,30 @@
+{
+  "reviewDate": "2026-11-07",
+  "candidates": [
+    {
+      "speciesId": "sp128",
+      "file": "Common Shelduck (Tadorna tadorna) juvenile, Slimbridge.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Common_Shelduck_%28Tadorna_tadorna%29_juvenile%2C_Slimbridge.jpg",
+      "status": "NOT INCLUDED",
+      "reason": "Bron noemt juvenile, maar beeld toont donkere kop, rode snavel en gedeeltelijke borstband; geen passend voorbeeld voor het beschreven vroege jeugdkleed. Geen exacte leeftijd geraden."
+    },
+    {
+      "speciesId": "sp128",
+      "file": "Brandgans Küken, Borkum.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Brandgans_K%C3%BCken,_Borkum.JPG",
+      "status": "NOT INCLUDED: download and visual check pending after source rate limit"
+    },
+    {
+      "speciesId": "sp092",
+      "file": "Tufted Duck.ogg",
+      "source": "https://commons.wikimedia.org/wiki/File:Tufted_Duck.ogg",
+      "status": "NOT INCLUDED: download blocked by source rate limit; no independent audit or decoding claimed"
+    },
+    {
+      "speciesId": "sp128",
+      "file": "Common Shelduck (Tadorna tadorna) (W1CDR0001430 BD7).ogg",
+      "source": "https://commons.wikimedia.org/wiki/File:Common_Shelduck_%28Tadorna_tadorna%29_%28W1CDR0001430_BD7%29.ogg",
+      "status": "NOT INCLUDED: download blocked by source rate limit; no independent audit or decoding claimed"
+    }
+  ]
+}

@@ -191,7 +191,6 @@ export function recognitionPanel(s, life = null) {
     out.push(`<div class="sd-callout">${icon('eye')}<p>${esc(s.fieldmarks)}</p></div>`);
   }
   out.push(posesPanel(s.id));
-  out.push(`<div id="sdVoice" class="sd-voice-section">${voicePanel(s, life?.voice)}</div>`, comparisonsPanel(s.id));
   const p = s.plumage;
   if (p) {
     const cards = PLUMAGE.filter(([key]) => p[key]).map(([key, ic, label, badge]) => {
@@ -201,6 +200,7 @@ export function recognitionPanel(s, life = null) {
     });
     if (cards.length) out.push('<h3 class="sd-h">Verenkleed</h3><div class="sd-plumage-list">' + cards.join('') + '</div>');
   }
+  out.push(`<div id="sdVoice" class="sd-voice-section">${voicePanel(s, life?.voice)}</div>`, comparisonsPanel(s.id));
   if (s.compact) {
     out.push(`<p class="sd-note">${icon('info')}Zeldzame dwaalgast: een uitgebreide beschrijving volgt nog.</p>`);
   }

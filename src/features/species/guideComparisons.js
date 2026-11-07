@@ -571,6 +571,128 @@ export const GUIDE_COMPARISONS = [
     ],
     "tip": "Luister naar volledige zangstrofen en vergelijk meerdere beelden. Kleur, snavellengte of één witte streep alleen is onvoldoende; ondersoorten en kijkhoek beïnvloeden het beeld."
   },
+  {
+    "label": "Meerkoet en Waterhoen · volwassen",
+    "birds": [
+      {
+        "id": "sp078",
+        "source": "meerkoet",
+        "marks": "Witte snavel en witte voorhoofdsplaat; vrijwel geheel donker lichaam."
+      },
+      {
+        "id": "sp079",
+        "source": "waterhoen",
+        "marks": "Rode snavel met gele punt, rood voorhoofd en een witte streep op de flank."
+      }
+    ],
+    "tip": "Bekijk vooral snavel en voorhoofd. Jonge vogels hebben deze volwassen kleuren nog niet."
+  },
+  {
+    "label": "Blauwe Reiger en Purperreiger · volwassen",
+    "birds": [
+      {
+        "id": "sp081",
+        "source": "blauwe-reiger",
+        "marks": "Robuuster met grijze rug, lichte hals en een relatief zware dolksnavel."
+      },
+      {
+        "id": "sp084",
+        "source": "purperreiger",
+        "marks": "Slanker met een dunne hals, kastanjebruine tinten en donkere halsstrepen."
+      }
+    ],
+    "tip": "Vergelijk bouw en hals naast kleur. Houd rekening met licht en houding; de foto’s zijn niet op dezelfde schaal."
+  },
+  {
+    "label": "Blauwe Reiger en Purperreiger · jonge vogels",
+    "birds": [
+      {
+        "id": "sp081",
+        "source": "blauwe-reiger",
+        "marks": "Grijzer en robuuster, met donkere kruin en een stevige snavel.",
+        "plumage": "juv"
+      },
+      {
+        "id": "sp084",
+        "source": "purperreiger",
+        "marks": "Warmer bruin, fijner gebouwd en met een relatief dunne hals en snavel.",
+        "plumage": "juv"
+      }
+    ],
+    "tip": "Bij beide ontbreekt de volledige volwassen koptekening. De Purperreigerfoto is uit India; tinten kunnen geografisch verschillen."
+  },
+  {
+    "label": "Kwak en Blauwe Reiger · jonge vogels",
+    "birds": [
+      {
+        "id": "sp085",
+        "source": "kwak",
+        "marks": "Compact met opvallende lichte druppelvlekken op de bruine vleugels en lengtestrepen op de borst.",
+        "plumage": "juv"
+      },
+      {
+        "id": "sp081",
+        "source": "blauwe-reiger",
+        "marks": "Langer en grijzer, met een lange hals en zonder de duidelijke lichte druppelvlekken op de vleugels.",
+        "plumage": "juv"
+      }
+    ],
+    "tip": "Een ingetrokken hals maakt ook een Blauwe Reiger compact. Controleer daarom vooral het patroon op rug en vleugels."
+  },
+  {
+    "label": "Wilde Eend en Slobeend · vrouwtjes",
+    "birds": [
+      {
+        "id": "sp089",
+        "source": "wilde-eend",
+        "marks": "Bruine eend met een gewone, relatief smalle eendensnavel en blauw-paarse spiegel.",
+        "plumage": "adult_f"
+      },
+      {
+        "id": "sp090",
+        "source": "slobeend",
+        "marks": "Eveneens bruin, maar met een opvallend lange snavel die naar het uiteinde breed uitloopt.",
+        "plumage": "adult_f"
+      }
+    ],
+    "tip": "Begin met de snavelvorm. De spiegel kan onder de gevouwen vleugel verborgen zijn."
+  },
+  {
+    "label": "Kuifeend en Tafeleend · mannetjes in prachtkleed",
+    "birds": [
+      {
+        "id": "sp092",
+        "source": "kuifeend",
+        "marks": "Zwarte kop en borst, witte flanken, geel oog en een afhangende kuif.",
+        "plumage": "adult_m"
+      },
+      {
+        "id": "sp132",
+        "source": "tafeleend",
+        "marks": "Roodbruine kop, zwarte borst, grijze flanken en rood oog; geen kuif.",
+        "plumage": "adult_m"
+      }
+    ],
+    "tip": "Vergelijk kopkleur, flankkleur en oog samen. Mannetjes zien er in eclipskleed minder contrastrijk uit."
+  },
+  {
+    "label": "Kuifeend en Tafeleend · vrouwtjes",
+    "birds": [
+      {
+        "id": "sp092",
+        "source": "kuifeend",
+        "marks": "Donkerder bruin, geel oog en vaak een kleine kuif. Soms wit rond de snavelbasis.",
+        "plumage": "adult_f"
+      },
+      {
+        "id": "sp132",
+        "source": "tafeleend",
+        "marks": "Grijsbruiner met een lichtere wang en keel, donker oog en een langere, aflopende kopvorm.",
+        "plumage": "adult_f"
+      }
+    ],
+    "tip": "Een kleine kuif kan platliggen of slecht zichtbaar zijn. Gebruik ook oogkleur, kopvorm en wangtekening."
+  },
 ];
 
 export function comparisonSource(bird) {

@@ -1299,6 +1299,386 @@
         "date": "20 May 1979",
         "audio": "/assets/species/audio/sp067-call.mp3"
       }
+    ],
+    "sp077": [
+      {
+        "file": "Great Crested Grebe (Podiceps cristatus) (W1CDR0001488 BD4).ogg",
+        "label": "Roep",
+        "note": "Roep bij Frensham Great Pond, Surrey, Engeland.",
+        "author": "Aubrey John Williams / © The British Library Board",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Great_Crested_Grebe_%28Podiceps_cristatus%29_%28W1CDR0001488_BD4%29.ogg",
+        "modifications": "Omgezet naar MP3 (mono), volledige opname zonder knippen",
+        "reviewed": "2026-11-07",
+        "taxon": "Podiceps cristatus",
+        "verification": "Taxon, geluidstype en licentie gecontroleerd in de opnamebron; volledig bestand technisch gedecodeerd. Geen onafhankelijke auditieve determinatie.",
+        "duration": 54.595918,
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/3/30/Great_Crested_Grebe_%28Podiceps_cristatus%29_%28W1CDR0001488_BD4%29.ogg",
+        "audio": "/assets/species/audio/sp077-a1.mp3"
+      }
+    ],
+    "sp078": [
+      {
+        "file": "Fulica atra - Eurasian Coot XC432890.mp3",
+        "label": "Nachtelijke vluchtroep",
+        "note": "Opgenomen boven Arnhem, Nederland.",
+        "author": "Joost van Bruggen",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Fulica_atra_-_Eurasian_Coot_XC432890.mp3",
+        "modifications": "Omgezet naar MP3 (mono), volledige opname zonder knippen",
+        "reviewed": "2026-11-07",
+        "taxon": "Fulica atra",
+        "verification": "Taxon, geluidstype en licentie gecontroleerd in de opnamebron; volledig bestand technisch gedecodeerd. Geen onafhankelijke auditieve determinatie.",
+        "duration": 31.032,
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Fulica_atra_-_Eurasian_Coot_XC432890.mp3",
+        "audio": "/assets/species/audio/sp078-a1.mp3"
+      },
+      {
+        "file": "Fulica atra - Eurasian Coot XC467829.mp3",
+        "label": "Nachtelijke vluchtroep · Finland",
+        "note": "Opgenomen bij Espoo, Finland; de bron heeft verkeersruis gefilterd.",
+        "author": "Mikko Heikkinen",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Fulica_atra_-_Eurasian_Coot_XC467829.mp3",
+        "modifications": "Omgezet naar MP3 (mono), volledige opname zonder knippen",
+        "reviewed": "2026-11-07",
+        "taxon": "Fulica atra",
+        "verification": "Taxon, geluidstype en licentie gecontroleerd in de opnamebron; volledig bestand technisch gedecodeerd. Geen onafhankelijke auditieve determinatie.",
+        "duration": 12.016327,
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Fulica_atra_-_Eurasian_Coot_XC467829.mp3",
+        "audio": "/assets/species/audio/sp078-a2.mp3"
+      }
+    ],
+    "sp079": [
+      {
+        "file": "Gallinula chloropus - Common Moorhen XC424197.mp3",
+        "label": "Roep",
+        "note": "Waterhoentjes met kleine jongen bij Getxo, Spanje; de bron heeft lage verkeersruis gefilterd.",
+        "author": "Borja",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Gallinula_chloropus_-_Common_Moorhen_XC424197.mp3",
+        "modifications": "Omgezet naar MP3 (mono), volledige opname zonder knippen",
+        "reviewed": "2026-11-07",
+        "taxon": "Gallinula chloropus",
+        "verification": "Taxon, geluidstype en licentie gecontroleerd in de opnamebron; volledig bestand technisch gedecodeerd. Geen onafhankelijke auditieve determinatie.",
+        "duration": 54.84,
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/3/34/Gallinula_chloropus_-_Common_Moorhen_XC424197.mp3",
+        "audio": "/assets/species/audio/sp079-a1.mp3"
+      },
+      {
+        "file": "Gallinula chloropus - Common Moorhen XC432930.mp3",
+        "label": "Nachtelijke vluchtroep",
+        "note": "Opgenomen boven Arnhem, Nederland.",
+        "author": "Joost van Bruggen",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Gallinula_chloropus_-_Common_Moorhen_XC432930.mp3",
+        "modifications": "Omgezet naar MP3 (mono), volledige opname zonder knippen",
+        "reviewed": "2026-11-07",
+        "taxon": "Gallinula chloropus",
+        "verification": "Taxon, geluidstype en licentie gecontroleerd in de opnamebron; volledig bestand technisch gedecodeerd. Geen onafhankelijke auditieve determinatie.",
+        "duration": 10.32,
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Gallinula_chloropus_-_Common_Moorhen_XC432930.mp3",
+        "audio": "/assets/species/audio/sp079-a2.mp3"
+      }
+    ],
+    "sp081": [
+      {
+        "file": "Ardea cinerea - Grey Heron XC432231.mp3",
+        "label": "Opgewonden roep · jonge vogel",
+        "note": "De opnamebron benoemt een juveniel; Isla Mayor, Spanje.",
+        "author": "Joost van Bruggen",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Ardea_cinerea_-_Grey_Heron_XC432231.mp3",
+        "modifications": "Omgezet naar MP3 (mono), volledige opname zonder knippen",
+        "reviewed": "2026-11-07",
+        "taxon": "Ardea cinerea",
+        "verification": "Taxon, geluidstype en licentie gecontroleerd in de opnamebron; volledig bestand technisch gedecodeerd. Geen onafhankelijke auditieve determinatie.",
+        "duration": 13.512,
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Ardea_cinerea_-_Grey_Heron_XC432231.mp3",
+        "audio": "/assets/species/audio/sp081-a1.mp3"
+      },
+      {
+        "file": "Ardea cinerea - Grey Heron XC436360.mp3",
+        "label": "Vluchtroep · schreeuw",
+        "note": "Opvallend scherpe roep boven Arnhem, Nederland.",
+        "author": "Joost van Bruggen",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Ardea_cinerea_-_Grey_Heron_XC436360.mp3",
+        "modifications": "Omgezet naar MP3 (mono), volledige opname zonder knippen",
+        "reviewed": "2026-11-07",
+        "taxon": "Ardea cinerea",
+        "verification": "Taxon, geluidstype en licentie gecontroleerd in de opnamebron; volledig bestand technisch gedecodeerd. Geen onafhankelijke auditieve determinatie.",
+        "duration": 23.832,
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/6/67/Ardea_cinerea_-_Grey_Heron_XC436360.mp3",
+        "audio": "/assets/species/audio/sp081-a2.mp3"
+      }
+    ],
+    "sp084": [
+      {
+        "file": "Ardea purpurea - Purple Heron XC432223.mp3",
+        "label": "Vluchtroep",
+        "note": "Twee of mogelijk drie overvliegende vogels bij Isla Mayor, Spanje.",
+        "author": "Joost van Bruggen",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Ardea_purpurea_-_Purple_Heron_XC432223.mp3",
+        "modifications": "Omgezet naar MP3 (mono), volledige opname zonder knippen",
+        "reviewed": "2026-11-07",
+        "taxon": "Ardea purpurea",
+        "verification": "Taxon, geluidstype en licentie gecontroleerd in de opnamebron; volledig bestand technisch gedecodeerd. Geen onafhankelijke auditieve determinatie.",
+        "duration": 10.968,
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Ardea_purpurea_-_Purple_Heron_XC432223.mp3",
+        "audio": "/assets/species/audio/sp084-a1.mp3"
+      },
+      {
+        "file": "Ardea purpurea - Purple Heron XC135429.ogg",
+        "label": "Alarmroep",
+        "note": "Opgenomen bij Mangalajodi, India. De bron vermeldt dat de vogel per ongeluk werd opgeschrikt door een boot.",
+        "author": "Sudipto Roy",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Ardea_purpurea_-_Purple_Heron_XC135429.ogg",
+        "modifications": "Omgezet naar MP3 (mono), volledige opname zonder knippen",
+        "reviewed": "2026-11-07",
+        "taxon": "Ardea purpurea",
+        "verification": "Taxon, geluidstype en licentie gecontroleerd in de opnamebron; volledig bestand technisch gedecodeerd. Geen onafhankelijke auditieve determinatie.",
+        "duration": 2.592,
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Ardea_purpurea_-_Purple_Heron_XC135429.ogg",
+        "audio": "/assets/species/audio/sp084-a2.mp3"
+      }
+    ],
+    "sp085": [
+      {
+        "file": "Nycticorax nycticorax - Black-crowned Night Heron XC383999.mp3",
+        "label": "Roep",
+        "note": "Opname uit Praag, Tsjechië; vermoedelijk twee vogels volgens de bron.",
+        "author": "Jan Cibulka",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Nycticorax_nycticorax_-_Black-crowned_Night_Heron_XC383999.mp3",
+        "modifications": "Omgezet naar MP3 (mono), volledige opname zonder knippen",
+        "reviewed": "2026-11-07",
+        "taxon": "Nycticorax nycticorax",
+        "verification": "Taxon, geluidstype en licentie gecontroleerd in de opnamebron; volledig bestand technisch gedecodeerd. Geen onafhankelijke auditieve determinatie.",
+        "duration": 54.073469,
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Nycticorax_nycticorax_-_Black-crowned_Night_Heron_XC383999.mp3",
+        "audio": "/assets/species/audio/sp085-a1.mp3"
+      },
+      {
+        "file": "Nycticorax nycticorax - Black-crowned Night Heron XC431999.mp3",
+        "label": "Vluchtroep",
+        "note": "Opgenomen bij Isla Mayor, Spanje.",
+        "author": "Joost van Bruggen",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Nycticorax_nycticorax_-_Black-crowned_Night_Heron_XC431999.mp3",
+        "modifications": "Omgezet naar MP3 (mono), volledige opname zonder knippen",
+        "reviewed": "2026-11-07",
+        "taxon": "Nycticorax nycticorax",
+        "verification": "Taxon, geluidstype en licentie gecontroleerd in de opnamebron; volledig bestand technisch gedecodeerd. Geen onafhankelijke auditieve determinatie.",
+        "duration": 49.752,
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Nycticorax_nycticorax_-_Black-crowned_Night_Heron_XC431999.mp3",
+        "audio": "/assets/species/audio/sp085-a2.mp3"
+      }
+    ],
+    "sp086": [
+      {
+        "file": "Anser anser - Greylag Goose XC436358.mp3",
+        "label": "Vluchtroep",
+        "note": "Twee overvliegende vogels boven Arnhem, Nederland.",
+        "author": "Joost van Bruggen",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Anser_anser_-_Greylag_Goose_XC436358.mp3",
+        "modifications": "Omgezet naar MP3 (mono), volledige opname zonder knippen",
+        "reviewed": "2026-11-07",
+        "taxon": "Anser anser",
+        "verification": "Taxon, geluidstype en licentie gecontroleerd in de opnamebron; volledig bestand technisch gedecodeerd. Geen onafhankelijke auditieve determinatie.",
+        "duration": 40.464,
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/7/70/Anser_anser_-_Greylag_Goose_XC436358.mp3",
+        "audio": "/assets/species/audio/sp086-a1.mp3"
+      },
+      {
+        "file": "Anser anser - Greylag Goose XC518305.mp3",
+        "label": "Nachtelijke vluchtroep",
+        "note": "Opgenomen boven Dresden, Duitsland; lage ruis is in de bron gefilterd.",
+        "author": "Jens Loose",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Anser_anser_-_Greylag_Goose_XC518305.mp3",
+        "modifications": "Omgezet naar MP3 (mono), volledige opname zonder knippen",
+        "reviewed": "2026-11-07",
+        "taxon": "Anser anser",
+        "verification": "Taxon, geluidstype en licentie gecontroleerd in de opnamebron; volledig bestand technisch gedecodeerd. Geen onafhankelijke auditieve determinatie.",
+        "duration": 10.840816,
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Anser_anser_-_Greylag_Goose_XC518305.mp3",
+        "audio": "/assets/species/audio/sp086-a2.mp3"
+      }
+    ],
+    "sp129": [
+      {
+        "file": "XC436359.mp3",
+        "label": "Vluchtroep",
+        "note": "Ten minste twee, mogelijk drie vogels boven Arnhem, Nederland.",
+        "author": "Joost van Bruggen",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://xeno-canto.org/436359",
+        "modifications": "Omgezet naar MP3 (mono), volledige opname zonder knippen",
+        "reviewed": "2026-11-07",
+        "taxon": "Mareca strepera",
+        "verification": "Taxon, geluidstype en licentie gecontroleerd in de opnamebron; volledig bestand technisch gedecodeerd. Geen onafhankelijke auditieve determinatie.",
+        "duration": 14.76,
+        "originalURL": "https://xeno-canto.org/436359/download",
+        "audio": "/assets/species/audio/sp129-a1.mp3"
+      }
+    ],
+    "sp132": [
+      {
+        "file": "XC991857.wav",
+        "label": "Alarm- en vluchtroep · vrouwtje",
+        "note": "Volwassen vrouwtje bij Abbeville, Frankrijk. Ook Rietzanger en Roodborst op de achtergrond volgens de bron.",
+        "author": "Noé Ferrari",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://xeno-canto.org/991857",
+        "modifications": "Omgezet naar MP3 (mono), volledige opname zonder knippen",
+        "reviewed": "2026-11-07",
+        "taxon": "Aythya ferina",
+        "verification": "Taxon, geluidstype en licentie gecontroleerd in de opnamebron; volledig bestand technisch gedecodeerd. Geen onafhankelijke auditieve determinatie.",
+        "duration": 9.696,
+        "originalURL": "https://xeno-canto.org/991857/download",
+        "audio": "/assets/species/audio/sp132-a1.mp3"
+      },
+      {
+        "file": "XC990310.wav",
+        "label": "Vluchtroep · vrouwtje",
+        "note": "Opgenomen bij Cambron, Somme, Frankrijk. Leeftijd niet vermeld in de bron.",
+        "author": "Noé Ferrari",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://xeno-canto.org/990310",
+        "modifications": "Omgezet naar MP3 (mono), volledige opname zonder knippen",
+        "reviewed": "2026-11-07",
+        "taxon": "Aythya ferina",
+        "verification": "Taxon, geluidstype en licentie gecontroleerd in de opnamebron; volledig bestand technisch gedecodeerd. Geen onafhankelijke auditieve determinatie.",
+        "duration": 14.928,
+        "originalURL": "https://xeno-canto.org/990310/download",
+        "audio": "/assets/species/audio/sp132-a2.mp3"
+      }
+    ],
+    "sp089": [
+      {
+        "file": "Anas platyrhynchos - Mallard XC112828.mp3",
+        "label": "Roep · vrouwtje",
+        "note": "Vrouwtje bij Powderhorn Park, Minneapolis, Verenigde Staten.",
+        "author": "Jonathon Jongsma",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Anas_platyrhynchos_-_Mallard_XC112828.mp3",
+        "modifications": "Omgezet naar MP3 (mono), volledige opname zonder knippen",
+        "reviewed": "2026-11-07",
+        "taxon": "Anas platyrhynchos",
+        "verification": "Taxon, geluidstype en licentie gecontroleerd in de opnamebron; volledig bestand technisch gedecodeerd. Geen onafhankelijke auditieve determinatie.",
+        "duration": 16.84898,
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/2/28/Anas_platyrhynchos_-_Mallard_XC112828.mp3",
+        "audio": "/assets/species/audio/sp089-a1.mp3"
+      },
+      {
+        "file": "Anas platyrhynchos - Mallard XC62258.mp3",
+        "label": "Roep",
+        "note": "Opgenomen bij Powderhorn Park, Minneapolis, Verenigde Staten; geslacht niet vermeld in de bron.",
+        "author": "Jonathon Jongsma",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Anas_platyrhynchos_-_Mallard_XC62258.mp3",
+        "modifications": "Omgezet naar MP3 (mono), volledige opname zonder knippen",
+        "reviewed": "2026-11-07",
+        "taxon": "Anas platyrhynchos",
+        "verification": "Taxon, geluidstype en licentie gecontroleerd in de opnamebron; volledig bestand technisch gedecodeerd. Geen onafhankelijke auditieve determinatie.",
+        "duration": 3.500408,
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/6/69/Anas_platyrhynchos_-_Mallard_XC62258.mp3",
+        "audio": "/assets/species/audio/sp089-a2.mp3"
+      }
+    ],
+    "sp090": [
+      {
+        "file": "Northern shoveler.ogg",
+        "label": "Roep op het water",
+        "note": "De bron beschrijft typische roep op het water en categoriseert de vogel als gehouden; geslacht niet opgegeven.",
+        "author": "Bubulcus",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Northern_shoveler.ogg",
+        "modifications": "Omgezet naar MP3 (mono), volledige opname zonder knippen",
+        "reviewed": "2026-11-07",
+        "taxon": "Spatula clypeata",
+        "verification": "Taxon, geluidstype en licentie gecontroleerd in de opnamebron; volledig bestand technisch gedecodeerd. Geen onafhankelijke auditieve determinatie.",
+        "duration": 3.056327,
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Northern_shoveler.ogg",
+        "audio": "/assets/species/audio/sp090-a1.mp3"
+      }
+    ],
+    "sp104": [
+      {
+        "file": "Cormorán grande (Phalacrocorax carbo).mp3",
+        "label": "Roep",
+        "note": "Opgenomen bij Sains, Bretagne, Frankrijk. Opname: Rozenn Le Fur voor Sonothèque ADVL.",
+        "author": "Rozenn Le Fur / Sonothèque ADVL",
+        "license": "CC0 1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source": "https://xeno-canto.org/964802",
+        "modifications": "Omgezet naar MP3 (mono), volledige opname zonder knippen",
+        "reviewed": "2026-11-07",
+        "taxon": "Phalacrocorax carbo",
+        "verification": "Taxon, geluidstype en licentie gecontroleerd in de opnamebron; volledig bestand technisch gedecodeerd. Geen onafhankelijke auditieve determinatie.",
+        "duration": 13.344,
+        "originalURL": "https://xeno-canto.org/964802/download",
+        "audio": "/assets/species/audio/sp104-a1.mp3"
+      }
+    ],
+    "sp126": [
+      {
+        "file": "Cygnus olor - Mute Swan XC307509.mp3",
+        "label": "Vleugelslagen en vluchtgeluid",
+        "note": "Opname bij de Kleine Donau, Slowakije. De bron noemt vluchtgeluid en vleugelslagen; er zijn ook andere vogels op de achtergrond.",
+        "author": "Alexander Kürthy",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://xeno-canto.org/307509",
+        "modifications": "Omgezet naar MP3 (mono), volledige opname zonder knippen",
+        "reviewed": "2026-11-07",
+        "taxon": "Cygnus olor",
+        "verification": "Taxon, geluidstype en licentie gecontroleerd in de opnamebron; volledig bestand technisch gedecodeerd. Geen onafhankelijke auditieve determinatie.",
+        "duration": 11.781224,
+        "originalURL": "https://xeno-canto.org/307509/download",
+        "audio": "/assets/species/audio/sp126-a1.mp3"
+      }
+    ],
+    "sp128": [
+      {
+        "file": "Tadorna tadorna - Common Shelduck XC466466.mp3",
+        "label": "Zang · bronlabel",
+        "note": "Opgenomen bij Lies op Terschelling. De opnamebron labelt dit als zang; geslacht niet opgegeven.",
+        "author": "Pascal Christe",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://xeno-canto.org/466466",
+        "modifications": "Omgezet naar MP3 (mono), volledige opname zonder knippen",
+        "reviewed": "2026-11-07",
+        "taxon": "Tadorna tadorna",
+        "verification": "Taxon, geluidstype en licentie gecontroleerd in de opnamebron; volledig bestand technisch gedecodeerd. Geen onafhankelijke auditieve determinatie.",
+        "duration": 33.802449,
+        "originalURL": "https://xeno-canto.org/466466/download",
+        "audio": "/assets/species/audio/sp128-a1.mp3"
+      }
     ]
   },
   "plumage": {
@@ -1502,6 +1882,25 @@
       },
       "adult_m": {
         "reuseGuidePhoto": true
+      },
+      "juv": {
+        "file": "Juvenile gadwall (Anas strepera) (34539448293).jpg",
+        "nl": "Krakeend",
+        "latin": "Mareca strepera",
+        "author": "Rebecca Fabbri / USFWS",
+        "license": "Public domain",
+        "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Juvenile_gadwall_%28Anas_strepera%29_%2834539448293%29.jpg",
+        "alt": "Jonge Krakeend tijdens ringonderzoek in Californië.",
+        "modifications": "Verkleind en omgezet naar WebP zonder extra uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/krakeend",
+        "visualCheck": "Officiële USFWS-bron noemt juvenile en ringonderzoek; fotografie in de hand, geen normaal veldbeeld.",
+        "verification": "Officiële USFWS-bron noemt juvenile en ringonderzoek; fotografie in de hand, geen normaal veldbeeld.",
+        "width": 1600,
+        "height": 1067,
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/7/76/Juvenile_gadwall_%28Anas_strepera%29_%2834539448293%29.jpg",
+        "image": "/assets/species/plumage/sp129-juv.webp"
       }
     },
     "sp097": {
@@ -3087,6 +3486,293 @@
     "sp067": {
       "adult_m": {
         "reuseGuidePhoto": true
+      }
+    },
+    "sp077": {
+      "juv": {
+        "file": "Great crested grebe (Podiceps cristatus) juvenile France.jpg",
+        "nl": "Fuut",
+        "latin": "Podiceps cristatus",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Great_crested_grebe_%28Podiceps_cristatus%29_juvenile_France.jpg",
+        "alt": "Jonge Fuut met zwart-wit gestreepte kop, zwemmend.",
+        "modifications": "Verkleind en omgezet naar WebP zonder extra uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/fuut",
+        "visualCheck": "Bron beschrijft juveniel; kopstrepen en lichte wang visueel gecontroleerd. Frankrijk.",
+        "verification": "Bron beschrijft juveniel; kopstrepen en lichte wang visueel gecontroleerd. Frankrijk.",
+        "width": 1600,
+        "height": 1067,
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Great_crested_grebe_%28Podiceps_cristatus%29_juvenile_France.jpg",
+        "image": "/assets/species/plumage/sp077-juv.webp"
+      },
+      "breeding": {
+        "reuseGuidePhoto": true
+      }
+    },
+    "sp078": {
+      "juv": {
+        "file": "Eurasian coot (Fulica atra) juvenile.jpg",
+        "nl": "Meerkoet",
+        "latin": "Fulica atra",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Eurasian_coot_%28Fulica_atra%29_juvenile.jpg",
+        "alt": "Meerkoet — donsjong met rood-oranje kop en zwart dons.",
+        "modifications": "Verkleind en omgezet naar WebP zonder extra uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/meerkoet",
+        "visualCheck": "Dit is een donsjong, geen oudere juveniel met lichte wangen. Leeftijd en kleed expliciet in soorttekst onderscheiden. Frankrijk.",
+        "verification": "Dit is een donsjong, geen oudere juveniel met lichte wangen. Leeftijd en kleed expliciet in soorttekst onderscheiden. Frankrijk.",
+        "width": 1600,
+        "height": 1067,
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Eurasian_coot_%28Fulica_atra%29_juvenile.jpg",
+        "image": "/assets/species/plumage/sp078-juv.webp"
+      },
+      "adult_m": {
+        "reuseGuidePhoto": true
+      }
+    },
+    "sp079": {
+      "juv": {
+        "file": "Common Moorhen (Gallinula chloropus) juvenile.jpg",
+        "nl": "Waterhoen",
+        "latin": "Gallinula chloropus",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Common_Moorhen_%28Gallinula_chloropus%29_juvenile.jpg",
+        "alt": "Jong Waterhoen met bruine bovenzijde, lichte keel en zonder rood voorhoofd.",
+        "modifications": "Verkleind en omgezet naar WebP zonder extra uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/waterhoen",
+        "visualCheck": "Bruin jeugdkleed, lichte keel en flankstreep visueel gecontroleerd. Verenigd Koninkrijk.",
+        "verification": "Bruin jeugdkleed, lichte keel en flankstreep visueel gecontroleerd. Verenigd Koninkrijk.",
+        "width": 1600,
+        "height": 1067,
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Common_Moorhen_%28Gallinula_chloropus%29_juvenile.jpg",
+        "image": "/assets/species/plumage/sp079-juv.webp"
+      },
+      "adult_m": {
+        "reuseGuidePhoto": true
+      }
+    },
+    "sp081": {
+      "juv": {
+        "file": "Ardea cinerea juvenile v2.jpg",
+        "nl": "Blauwe Reiger",
+        "latin": "Ardea cinerea",
+        "author": "Ralf Hüsges",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Ardea_cinerea_juvenile_v2.jpg",
+        "alt": "Jonge Blauwe Reiger met donkere kruin en zonder lange nekpluimen.",
+        "modifications": "Verkleind en omgezet naar WebP zonder extra uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/blauwe-reiger",
+        "visualCheck": "Bron beschrijft eerste vlucht; donkere kruin en onvolwassen kleed visueel gecontroleerd. Duitsland.",
+        "verification": "Bron beschrijft eerste vlucht; donkere kruin en onvolwassen kleed visueel gecontroleerd. Duitsland.",
+        "width": 1600,
+        "height": 1376,
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/d/de/Ardea_cinerea_juvenile_v2.jpg",
+        "image": "/assets/species/plumage/sp081-juv.webp"
+      }
+    },
+    "sp084": {
+      "juv": {
+        "file": "Purple Heron (Immature) I IMG 8123.jpg",
+        "nl": "Purperreiger",
+        "latin": "Ardea purpurea",
+        "author": "J.M.Garg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Purple_Heron_%28Immature%29_I_IMG_8123.jpg",
+        "alt": "Jonge Purperreiger met warmbruin kleed en een lange, dunne hals.",
+        "modifications": "Verkleind en omgezet naar WebP zonder extra uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/purperreiger",
+        "visualCheck": "Bron benoemt immature; warmbruine kleur en fijne bouw visueel gecontroleerd. Foto uit Bharatpur, India; geografische variatie mogelijk.",
+        "verification": "Bron benoemt immature; warmbruine kleur en fijne bouw visueel gecontroleerd. Foto uit Bharatpur, India; geografische variatie mogelijk.",
+        "width": 840,
+        "height": 630,
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/3/37/Purple_Heron_%28Immature%29_I_IMG_8123.jpg",
+        "image": "/assets/species/plumage/sp084-juv.webp"
+      },
+      "adult_m": {
+        "reuseGuidePhoto": true
+      }
+    },
+    "sp085": {
+      "juv": {
+        "file": "Nycticorax nycticorax young.jpg",
+        "nl": "Kwak",
+        "latin": "Nycticorax nycticorax",
+        "author": "Matteo Sorrentino",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Nycticorax_nycticorax_young.jpg",
+        "alt": "Jonge Kwak met lichte vlekken op de bruine vleugels en een gestreepte borst.",
+        "modifications": "Verkleind en omgezet naar WebP zonder extra uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kwak",
+        "visualCheck": "Gevlekte vleugels, gestreepte borst en compacte bouw visueel gecontroleerd; bron vermeldt young.",
+        "verification": "Gevlekte vleugels, gestreepte borst en compacte bouw visueel gecontroleerd; bron vermeldt young.",
+        "width": 482,
+        "height": 720,
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/1/12/Nycticorax_nycticorax_young.jpg",
+        "image": "/assets/species/plumage/sp085-juv.webp"
+      },
+      "adult_m": {
+        "reuseGuidePhoto": true
+      }
+    },
+    "sp086": {
+      "juv": {
+        "file": "Graugans-Jungtier-Schwalm-Nette-2013-01.jpg",
+        "nl": "Grauwe Gans",
+        "latin": "Anser anser",
+        "author": "Tuxyso / Wikimedia Commons",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Graugans-Jungtier-Schwalm-Nette-2013-01.jpg",
+        "alt": "Grauwe Gans — donsjong met geelbruin dons en beginnende vleugelveren.",
+        "modifications": "Verkleind en omgezet naar WebP zonder extra uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grauwe-gans",
+        "visualCheck": "Donsjong en beginnende veren visueel gecontroleerd; geen egaal verenkleed van volwassen vogel. Duitsland.",
+        "verification": "Donsjong en beginnende veren visueel gecontroleerd; geen egaal verenkleed van volwassen vogel. Duitsland.",
+        "width": 1600,
+        "height": 1188,
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Graugans-Jungtier-Schwalm-Nette-2013-01.jpg",
+        "image": "/assets/species/plumage/sp086-juv.webp"
+      },
+      "adult_m": {
+        "reuseGuidePhoto": true
+      }
+    },
+    "sp090": {
+      "adult_m": {
+        "reuseGuidePhoto": true
+      },
+      "adult_f": {
+        "file": "Northern Shoveler-Anas clypeata female.jpg",
+        "nl": "Slobeend",
+        "latin": "Spatula clypeata",
+        "author": "Andreas Trepte, www.avi-fauna.info",
+        "license": "CC BY-SA 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/",
+        "source": "https://commons.wikimedia.org/wiki/File:Northern_Shoveler-Anas_clypeata_female.jpg",
+        "alt": "Vrouw Slobeend met bruine tekening en een brede lepelvormige snavel.",
+        "modifications": "Verkleind en omgezet naar WebP zonder extra uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/slobeend",
+        "visualCheck": "Bron vermeldt female; bruine kleur en brede snavel visueel gecontroleerd.",
+        "verification": "Bron vermeldt female; bruine kleur en brede snavel visueel gecontroleerd.",
+        "width": 1600,
+        "height": 1067,
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/5/57/Northern_Shoveler-Anas_clypeata_female.jpg",
+        "image": "/assets/species/plumage/sp090-adult_f.webp"
+      }
+    },
+    "sp092": {
+      "adult_m": {
+        "reuseGuidePhoto": true
+      },
+      "adult_f": {
+        "file": "Aythya fuligula (female).jpg",
+        "nl": "Kuifeend",
+        "latin": "Aythya fuligula",
+        "author": "Hans Hillewaert",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Aythya_fuligula_%28female%29.jpg",
+        "alt": "Vrouw Kuifeend met bruine flanken en een korte kuif.",
+        "modifications": "Verkleind en omgezet naar WebP zonder extra uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kuifeend",
+        "visualCheck": "Bron vermeldt female; bruine flanken en geringe kuif visueel gecontroleerd. Uitkerkse Polders, België.",
+        "verification": "Bron vermeldt female; bruine flanken en geringe kuif visueel gecontroleerd. Uitkerkse Polders, België.",
+        "width": 1600,
+        "height": 1200,
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Aythya_fuligula_%28female%29.jpg",
+        "image": "/assets/species/plumage/sp092-adult_f.webp"
+      }
+    },
+    "sp126": {
+      "adult_m": {
+        "reuseGuidePhoto": true
+      },
+      "juv": {
+        "file": "CygnusOlorJuvenile.jpg",
+        "nl": "Knobbelzwaan",
+        "latin": "Cygnus olor",
+        "author": "Thermos",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:CygnusOlorJuvenile.jpg",
+        "alt": "Jonge Knobbelzwaan met grijsbruine veren en een donkere snavel.",
+        "modifications": "Verkleind en omgezet naar WebP zonder extra uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/knobbelzwaan",
+        "visualCheck": "Bron vermeldt juvenile; grijsbruin kleed en donkere snavel visueel gecontroleerd. Finland.",
+        "verification": "Bron vermeldt juvenile; grijsbruin kleed en donkere snavel visueel gecontroleerd. Finland.",
+        "width": 1600,
+        "height": 977,
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/c/c6/CygnusOlorJuvenile.jpg",
+        "image": "/assets/species/plumage/sp126-juv.webp"
+      }
+    },
+    "sp128": {
+      "adult_m": {
+        "reuseGuidePhoto": true
+      }
+    },
+    "sp132": {
+      "adult_m": {
+        "reuseGuidePhoto": true
+      },
+      "adult_f": {
+        "file": "Aythya ferina (female), Krasnodar, Russia.jpg",
+        "nl": "Tafeleend",
+        "latin": "Aythya ferina",
+        "author": "Klamul",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Aythya_ferina_%28female%29%2C_Krasnodar%2C_Russia.jpg",
+        "alt": "Vrouw Tafeleend met bruine kop, bleke wangtekening en grijsbruine flanken.",
+        "modifications": "Verkleind en omgezet naar WebP zonder extra uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/tafeleend",
+        "visualCheck": "Bron vermeldt female; bruine kop en flanken visueel gecontroleerd. Krasnodar, Rusland.",
+        "verification": "Bron vermeldt female; bruine kop en flanken visueel gecontroleerd. Krasnodar, Rusland.",
+        "width": 1600,
+        "height": 1200,
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Aythya_ferina_%28female%29%2C_Krasnodar%2C_Russia.jpg",
+        "image": "/assets/species/plumage/sp132-adult_f.webp"
+      }
+    },
+    "sp104": {
+      "jaarling": {
+        "file": "Great cormorant immature.jpg",
+        "nl": "Aalscholver",
+        "latin": "Phalacrocorax carbo",
+        "author": "Andreas Trepte, www.avi-fauna.info",
+        "license": "CC BY-SA 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/",
+        "source": "https://commons.wikimedia.org/wiki/File:Great_cormorant_immature.jpg",
+        "alt": "Aalscholver — jonge vogel uit het vorige jaar met een lichte onderzijde.",
+        "modifications": "Verkleind en omgezet naar WebP zonder extra uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/aalscholver",
+        "visualCheck": "Bron noemt uitdrukkelijk een vogel uit het vorige jaar (vorjähriger); daarom gekoppeld aan jaarling en niet aan pas uitgevlogen juveniel.",
+        "verification": "Bron noemt uitdrukkelijk een vogel uit het vorige jaar (vorjähriger); daarom gekoppeld aan jaarling en niet aan pas uitgevlogen juveniel.",
+        "width": 1000,
+        "height": 666,
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Great_cormorant_immature.jpg",
+        "image": "/assets/species/plumage/sp104-jaarling.webp"
       }
     }
   },

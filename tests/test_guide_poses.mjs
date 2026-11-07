@@ -28,3 +28,14 @@ for (const id of ['sp008', 'sp009']) {
 }
 assert.ok(recognitionPanel(species.get('sp009')).includes('Man en vrouw lijken op elkaar'), 'A shared adult photo must not silently imply male');
 console.log('VERIFIED optional posture rendering, media wiring, shared adult label and photography advice');
+
+// Plumage evidence must appear before look-alike comparisons, across all cards.
+for (const s of SPECIES) {
+  const html = recognitionPanel(s);
+  const plumage = html.indexOf('class="sd-plumage-list"');
+  const comparison = html.indexOf('class="sd-compare"');
+  if (plumage >= 0 && comparison >= 0) {
+    assert.ok(plumage < comparison, `${s.id}: plumage photos must precede comparisons`);
+  }
+}
+console.log('VERIFIED plumage-before-comparisons ordering across the species catalogue');
