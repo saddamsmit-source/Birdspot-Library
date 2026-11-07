@@ -108,3 +108,26 @@ export async function deletePhoto(id) {
     req.onerror   = () => reject(req.error);
   });
 }
+
+/** Zoekindex met bestandsgegevens, zonder mediabestanden te bewaren of te openen. */
+export async function getMediaMetadata() {
+  const db = await getDB();
+  return new Promise((resolve, reject) => {
+    const results = [];
+    const request = db.transaction('photos', 'readonly').objectStore('photos').openCursor();
+    request.onsuccess = () => {
+      const cursor = request.result;
+      if (!cursor) {
+        resolve(results);
+        return;
+      }
+      const { id, filename, speciesId, sightingId, placeId, addedAt, blob, type } = cursor.value;
+      const mime = blob?.type || type || '';
+      if (blob instanceof Blob && /^(image|video|audio)\//.test(mime)) {
+        results.push({ id, filename, speciesId, sightingId, placeId, addedAt, type: mime });
+      }
+      cursor.continue();
+    };
+    request.onerror = () => reject(request.error);
+  });
+}

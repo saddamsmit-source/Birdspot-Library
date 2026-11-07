@@ -40,7 +40,7 @@ let currentRoute  = null;
 let currentCleanup = null; // cleanup-functie van het huidige scherm (bijv. renderHome)
 
 // ── Navigeer naar een route (force=true herlaadt ook het huidige scherm) ──────
-export function navigate(route, { force = false, history: addHistory = true } = {}) {
+export function navigate(route, { force = false, history: addHistory = true, target = {} } = {}) {
   if (!ROUTES[route]) return;
   if (route === currentRoute && !force) return;
   const previousRoute = currentRoute;
@@ -62,7 +62,7 @@ export function navigate(route, { force = false, history: addHistory = true } = 
   screen.id = `screen-${route}`;
   main.appendChild(screen);
   let result;
-  try { result = ROUTES[route].render(screen); }
+  try { result = ROUTES[route].render(screen, { ...target, onSearchSelect: selectSearchResult }); }
   catch (error) {
     console.error('[Birdspot] Scherm openen mislukt:', route, error);
     screen.innerHTML = '<section class="route-recovery"><h1>Dit scherm kon niet worden geopend</h1><p>Je gegevens zijn niet verwijderd. Probeer het scherm opnieuw te openen.</p><button type="button">Opnieuw proberen</button></section>';
@@ -85,6 +85,27 @@ export function navigate(route, { force = false, history: addHistory = true } = 
 
   // Scroll naar top
   main.scrollTo({ top: 0 });
+  if (target.section && route !== 'map') {
+    Promise.resolve(result).then(() => {
+      if (screen.isConnected) focusSection(screen, target.section);
+    }).catch(() => showToast('Dit onderdeel kon niet worden geopend.'));
+  }
+}
+
+function focusSection(screen, id) {
+  const section = screen.querySelector('#' + id);
+  if (!section) return;
+  if (!section.matches('button, input, a[href], select')) section.tabIndex = -1;
+  section.scrollIntoView({ block: 'center' });
+  section.focus({ preventScroll: true });
+}
+
+function selectSearchResult({ route, ...target }) {
+  if (route === 'add') {
+    document.getElementById('fab').click();
+    return;
+  }
+  navigate(route, { force: Object.keys(target).some(key => target[key] !== undefined), target });
 }
 
 // ── Navigatie-klikken ─────────────────────────────────────

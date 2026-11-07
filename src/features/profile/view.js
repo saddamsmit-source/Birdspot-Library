@@ -19,7 +19,7 @@ import {
 import { getSightings } from '../../data/sightings.js';
 
 export async function renderProfile(el) {
-  const sightings   = await getSightings();
+  const sightings   = (await getSightings()).filter(Boolean);
   const backupStatus = getBackupStatus();
   const safetyCopy  = hasSafetyCopy();
 
