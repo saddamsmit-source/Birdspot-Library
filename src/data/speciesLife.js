@@ -1390,10 +1390,10 @@ export const LIFE = Object.freeze({
  },
  "sp097": {
   "breeding": {
-   "period": "apr–jul",
-   "nest": "Nest van plantenresten in een kolonie in moerassen en kwelders",
+   "period": "Eileg vanaf eind april en in mei",
+   "nest": "Nest van plantenmateriaal in kolonies bij zoet water of aan de kust.",
    "eggs": "2–3",
-   "incubation": "23–26 dagen",
+   "incubation": "22–26 dagen",
    "fledging": "35 dagen",
    "broods": "1",
    "months": "apr-jul"
@@ -2244,17 +2244,17 @@ export const LIFE = Object.freeze({
  },
  "sp164": {
   "breeding": {
-   "period": "apr–jul",
+   "period": "Eileg van half april tot eind mei",
    "nest": "Kuil op de grond, vaak op een duin of eilandje",
-   "eggs": "2–3",
-   "incubation": "27–28 dagen",
-   "fledging": "50–55 dagen",
+   "eggs": "Meestal 3",
+   "incubation": "26–28 dagen",
+   "fledging": "45–50 dagen",
    "broods": "1",
    "months": "apr-jul"
   },
   "diet": "Vis, vogels, aas en afval",
   "behaviour": "Grootste meeuw ter wereld; jaagt op andere zeevogels",
-  "migration": "Standvogel; vooral in de winter langs de kust",
+  "migration": "Buiten de broedtijd vaak bij groot open water. In de winter komen noordelijke vogels erbij.",
   "voice": "Diep, rauw \"owk-owk\""
  },
  "sp165": {
@@ -3635,17 +3635,17 @@ export const LIFE = Object.freeze({
  },
  "sp288": {
   "breeding": {
-   "period": "apr–jul",
+   "period": "Eileg van eind maart tot half juli",
    "nest": "In een nis bij stromend water, onder bruggen of sluizen",
    "eggs": "4–6",
-   "incubation": "12–14 dagen",
+   "incubation": "11–14 dagen",
    "fledging": "12–14 dagen",
-   "broods": "2",
-   "months": "apr-jul"
+   "broods": "Vaak 2",
+   "months": "mrt-jul"
   },
-  "diet": "Waterinsecten en larven",
+  "diet": "Watergebonden ongewervelden, vooral insecten en hun larven, ook spinnen en kleine slakken.",
   "behaviour": "Wipt voortdurend met de lange staart; bij beken en sluizen",
-  "migration": "Standvogel; in de winter ook langs stadsgrachten",
+  "migration": "Een deel van de Nederlandse broedvogels trekt zuidwaarts. Overwinteraars zijn ook langs stadsgrachten te vinden.",
   "voice": "Scherp, metaalachtig \"tsiet-tsiet\""
  },
  "sp289": {

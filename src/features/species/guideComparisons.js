@@ -741,6 +741,30 @@ export const GUIDE_COMPARISONS = [
     ],
     tip: 'Bekijk eerst de snavelkleur en wacht zo nodig op een beter zij- of vleugelaanzicht.',
   },
+  {
+    label: 'Grote en Kleine Mantelmeeuw · volwassen',
+    birds: [
+      {id: 'sp164', source: 'grote-mantelmeeuw', plumage: 'adult_m', marks: 'Zwaar gebouwd, met roze poten, een forse snavel en een bijna zwarte mantel.'},
+      {id: 'sp095', source: 'kleine-mantelmeeuw', plumage: 'adult_m', marks: 'Slanker, met gele poten, een fijnere snavel en een donkergrijze mantel.'},
+    ],
+    tip: 'Combineer pootkleur met bouw en snavel. Mantelkleur alleen kan door het licht misleiden.',
+  },
+  {
+    label: 'Kokmeeuw en Stormmeeuw · volwassen in winterkleed',
+    birds: [
+      {id: 'sp097', source: 'kokmeeuw', plumage: 'winter', marks: 'Vaak een donkere oorvlek op de witte kop. In vlucht een opvallend witte vleugelvoorrand.'},
+      {id: 'sp096', source: 'stormmeeuw', plumage: 'winter', marks: 'Groter en zwaarder gebouwd. Vaak verspreide grijze tekening op kop en nek; geelgroene poten.'},
+    ],
+    tip: 'Bekijk koptekening en poten samen. In vlucht helpt de witte vleugelvoorrand van de Kokmeeuw.',
+  },
+  {
+    label: 'Grote Gele Kwikstaart en Gele Kwikstaart · volwassen',
+    birds: [
+      {id: 'sp288', source: 'grote-gele-kwikstaart', plumage: 'adult_m', marks: 'Grijze mantel, opvallend lange staart en bruinroze poten. Vaak aan stromend water.'},
+      {id: 'sp069', source: 'gele-kwikstaart', plumage: 'adult_m', marks: 'Doorgaans olijfgroene mantel en donkere poten. Vaak op akkers of in open grasland.'},
+    ],
+    tip: 'Let op mantel, poten en staartverhouding. Gebruik de omgeving als extra aanwijzing.',
+  },
 ];
 
 export function comparisonSource(bird) {
