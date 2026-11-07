@@ -10,7 +10,9 @@
  */
 
 import { renderHome }       from './features/home/view.js';
-import { renderSpecies }    from './features/species/view.js';
+import {
+  renderSpecies, getSpeciesNavigationState, restoreSpeciesNavigationState,
+} from './features/species/view.js';
 import { renderSightings }  from './features/sightings/view.js';
 import { renderMap }        from './features/map/view.js';
 import { renderProfile }    from './features/profile/view.js';
@@ -19,6 +21,7 @@ import { renderJournal }    from './features/journal/view.js';
 import { renderInsights }   from './features/insights/view.js';
 import { renderFilmStudio } from './features/film/view.js';
 import { openAddSheet }     from './features/sightings/addSheet.js';
+import { closeTopLayer }    from './services/navigation.js';
 
 // ── Routes ────────────────────────────────────────────────
 const ROUTES = {
@@ -33,14 +36,46 @@ const ROUTES = {
   film:      { render: renderFilmStudio, fab: true  },
 };
 
-let currentRoute  = null;
-let currentCleanup = null; // cleanup-functie van het huidige scherm (bijv. renderHome)
+let currentRoute = null;
+let currentCleanup = null;
+let currentEntry = null;
+let entrySequence = 0;
+let returningToEntry = false;
+let leavingRoot = false;
+const entries = new Map();
+const main = document.getElementById('main-view');
 
-// ── Navigeer naar een route (force=true herlaadt ook het huidige scherm) ──────
-export function navigate(route, { force = false } = {}) {
-  if (!ROUTES[route]) return;
-  if (route === currentRoute && !force) return;
+function rememberEntry() {
+  entries.set(currentEntry.id, {
+    scrollTop: main.scrollTop,
+    species: currentRoute === 'species' ? getSpeciesNavigationState() : null,
+    map: currentRoute === 'map' ? {
+      search: document.getElementById('mapSpeciesSearch')?.value,
+      status: document.getElementById('mapStatusSelect')?.value,
+    } : null,
+  });
+}
+
+function makeEntry(route, depth) {
+  return { birdspot: true, route, depth, id: `${performance.timeOrigin}:${++entrySequence}` };
+}
+
+export function navigate(route, { force = false, searchQuery } = {}) {
+  if (!Object.hasOwn(ROUTES, route)) return;
+  if (route === currentRoute) {
+    if (force || searchQuery !== undefined) renderRoute(route, null, searchQuery);
+    return;
+  }
+
+  rememberEntry();
+  currentEntry = makeEntry(route, currentEntry.depth + 1);
+  history.pushState(currentEntry, '');
+  renderRoute(route, null, searchQuery);
+}
+
+function renderRoute(route, saved, searchQuery) {
   currentRoute = route;
+  if (saved?.species && route === 'species') restoreSpeciesNavigationState(saved.species);
 
   // Roep cleanup van het vorige scherm aan vóór we de DOM wissen.
   // Dit stopt timers, geeft blob-URL's vrij en zet destroyed=true zodat
@@ -51,13 +86,13 @@ export function navigate(route, { force = false } = {}) {
   }
 
   // Scherm wisselen
-  const main = document.getElementById('main-view');
   main.innerHTML = '';
   const screen = document.createElement('div');
   screen.className = 'screen active';
   screen.id = `screen-${route}`;
   main.appendChild(screen);
-  const result = ROUTES[route].render(screen);
+  const result = route === 'map' ? renderMap(screen, { selection: saved?.map, searchQuery })
+    : ROUTES[route].render(screen, searchQuery);
   // Sla cleanup-functie op als de render er één retourneert (bijv. renderHome)
   if (typeof result === 'function') currentCleanup = result;
 
@@ -72,8 +107,13 @@ export function navigate(route, { force = false } = {}) {
   const fab = document.getElementById('fab');
   if (fab) fab.hidden = !ROUTES[route].fab;
 
-  // Scroll naar top
-  main.scrollTo({ top: 0 });
+  main.scrollTop = 0;
+  if (saved?.scrollTop) {
+    // Sommige schermen vullen hun inhoud na een IndexedDB-read.
+    Promise.resolve(result).then(() => {
+      if (screen.isConnected) main.scrollTop = saved.scrollTop;
+    });
+  }
 }
 
 // ── Navigatie-klikken ─────────────────────────────────────
@@ -101,7 +141,7 @@ document.getElementById('fab').addEventListener('click', () => {
 // ── Toast utility ─────────────────────────────────────────
 let toastTimer = null;
 export function showToast(msg, duration = 2800) {
-  let toast = document.querySelector('.toast');
+  let toast = document.querySelector('.toast:not(.app-update)');
   if (!toast) {
     toast = document.createElement('div');
     toast.className = 'toast';
@@ -116,7 +156,49 @@ export function showToast(msg, duration = 2800) {
 }
 
 // ── Start ─────────────────────────────────────────────────
-navigate('home');
+history.scrollRestoration = 'manual';
+const previous = history.state;
+if (previous?.birdspot && Object.hasOwn(ROUTES, previous.route)) {
+  currentEntry = previous;
+} else {
+  history.replaceState({ birdspotRoot: true }, '');
+  currentEntry = makeEntry('home', 0);
+  history.pushState(currentEntry, '');
+}
+window.addEventListener('popstate', event => {
+  if (returningToEntry) {
+    returningToEntry = false;
+    return;
+  }
+  const target = event.state;
+  const goingBack = target?.birdspotRoot ||
+    (target?.birdspot && target.depth < currentEntry.depth);
+  if (goingBack && closeTopLayer()) {
+    // Herstel dezelfde history-entry zonder de forward-geschiedenis te wissen.
+    returningToEntry = true;
+    history.forward();
+    return;
+  }
+  if (target?.birdspotRoot) {
+    if (leavingRoot) {
+      leavingRoot = false;
+      history.back();
+      return;
+    }
+    leavingRoot = true;
+    returningToEntry = true;
+    history.forward();
+    showToast('Tik nogmaals op Terug om Birdspot te verlaten');
+    setTimeout(() => { leavingRoot = false; }, 2800);
+    return;
+  }
+  if (!target?.birdspot || !Object.hasOwn(ROUTES, target.route)) return;
+  leavingRoot = false;
+  rememberEntry();
+  currentEntry = target;
+  renderRoute(target.route, entries.get(target.id));
+});
+renderRoute(currentEntry.route);
 // Splash waits until the application home route is actually initialized.
 window.dispatchEvent(new Event('birdspot:ready'));
 

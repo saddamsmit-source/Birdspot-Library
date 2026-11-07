@@ -117,6 +117,25 @@ def main():
             p.locator("#detailSightingSheet").wait_for(state="detached", timeout=5000)
             print("K4-03 OK — plekkaartje met statistiek en lijst")
 
+            # Sluiten moet ook op een smal, laag scherm zonder scrollen lukken.
+            p.set_viewport_size({"width": 320, "height": 568})
+            for selector in ["#mapSheetDismiss", "#mapSheetHandle", "#mapOverlay"]:
+                p.evaluate("() => window.__birdspotMapTest.markers.find(m => m.birdspotRecords.length === 2).events.click()")
+                p.locator("#mapDetailSheet.open").wait_for(timeout=5000)
+                p.locator(".place-stats").wait_for(timeout=5000)
+                # Klik bij de bovenrand op de achtergrond, buiten het kaartje.
+                control = p.locator(selector)
+                position = {"x": 8, "y": 8} if selector == "#mapOverlay" else None
+                if position is None:
+                    box = control.bounding_box()
+                    assert box and box["y"] >= 0 and box["y"] + box["height"] <= 568, box
+                control.click(position=position)
+                p.locator("#mapDetailSheet.open").wait_for(state="detached", timeout=5000)
+                assert p.locator("#mapDetailSheet").get_attribute("inert") is not None
+                assert p.locator("#mapOverlay.visible").count() == 0
+            p.set_viewport_size({"width": 390, "height": 844})
+            print("K4-10 OK — kruisje, streepje en achtergrond sluiten de pinpopup")
+
             # K4-04: pin 22 m van de kijkhut
             open_map()
             p.locator("#mapAddPinBtn").click()

@@ -29,6 +29,11 @@ export function normalizedSearch(value) {
   return String(value??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'')
     .toLocaleLowerCase('nl').trim();
 }
+export function searchPlaces(places, query) {
+  const search = normalizedSearch(query);
+  return search ? places.filter(place => normalizedSearch(place?.name).includes(search)) : [];
+}
+
 /** K5: zoekt op vogelnaam (NL, EN, Latijn) én op naam van de plek of locatie. */
 export function filteredSightings(sightings,{speciesSearch='',status='all'}={},speciesCatalog=[],placeNames=new Map()) {
   const search=normalizedSearch(speciesSearch);

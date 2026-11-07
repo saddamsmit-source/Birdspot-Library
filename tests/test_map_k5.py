@@ -6,6 +6,8 @@ Birdspot Library — Kaart K5: zoeken op plek en alles aan elkaar koppelen
   K5-03  plekkaartje: 'Soorten hier'; tik op een soort opent de soortpagina
   K5-04  soortpagina, tab Waar: plekken uit de vaste plekken (naam van de plek); tik opent de kaart op die plek
   K5-05  geen paginafouten; screenshots 390 px
+  K5-06  Home-zoeken: soort, bestaande plek, gemengde resultaten en lege plek
+  K5-07  bestaande Home-snelknoppen en herstel van actieve zoekfilters
 
 Starten (vanuit repo-root):  python tests/test_map_k5.py
 """
@@ -108,6 +110,78 @@ def main():
             p.locator(".place-stats").wait_for(timeout=5000)
             assert p.locator("#mapSheetName").inner_text() == "Kijkhut Lauwersmeer"
             print("K5-04 OK — van soort naar plek op de kaart")
+
+            # Leave restrictive filters active before submitting a new Home search.
+            p.locator("#mapSheetClose").click()
+            p.locator('.nav-item[data-route="species"]').click()
+            p.get_by_role("button", name="Bos", exact=True).click()
+            p.get_by_role("button", name="Winter", exact=True).click()
+            p.locator("#speciesOnlyFavorites").click()
+            p.locator("#speciesSearch").fill("IJsvogel")
+            p.get_by_role("button", name="Zoek in alle soorten").click()
+            p.locator(".species-row__name").get_by_text("IJsvogel", exact=True).wait_for()
+            assert p.locator("#speciesSearch").input_value() == "IJsvogel"
+            assert p.locator("#speciesOnlyFavorites").get_attribute("aria-pressed") == "false"
+            assert p.get_by_role("tab", name="Alle", exact=True).get_attribute("aria-selected") == "true"
+            assert p.get_by_role("button", name="Bos", exact=True).get_attribute("aria-pressed") == "false"
+            assert p.get_by_role("button", name="Winter", exact=True).get_attribute("aria-pressed") == "false"
+
+            p.get_by_role("button", name="Bos", exact=True).click()
+            p.get_by_role("button", name="Winter", exact=True).click()
+            p.locator('.nav-item[data-route="home"]').click()
+            p.locator("#homeSearch").fill("   ")
+            p.locator("#homeSearch").press("Enter")
+            assert p.locator("#screen-home").is_visible()
+            p.locator("#homeSearch").fill(" IJsvogel ")
+            p.locator("#homeSearch").press("Enter")
+            p.locator(".species-row__name").get_by_text("IJsvogel", exact=True).wait_for()
+            assert p.locator("#speciesSearch").input_value() == "IJsvogel"
+            assert p.locator("#speciesSearchPlaces").is_hidden()
+
+            p.evaluate("""() => {
+                const data = JSON.parse(localStorage.getItem('birdspot-places'));
+                data.places.push({id:'pl_empty',name:'IJsvogeluitkijk',lat:52.21,lon:5.31});
+                localStorage.setItem('birdspot-places', JSON.stringify(data));
+            }""")
+            p.locator('.nav-item[data-route="home"]').click()
+            p.locator("#homeSearch").fill("IJsvogel")
+            p.get_by_role("button", name="Zoeken", exact=True).click()
+            p.locator(".species-row__name").get_by_text("IJsvogel", exact=True).wait_for()
+            p.get_by_role("button", name="Zoek plekken op de kaart").click()
+            p.locator('#mapSearchResults [data-place="pl_empty"]').click()
+            p.get_by_text("Nog geen waarnemingen op deze plek.", exact=True).wait_for()
+            assert p.locator("#mapSheetName").inner_text() == "IJsvogeluitkijk"
+            p.locator("#mapSheetClose").click()
+
+            p.locator('.nav-item[data-route="home"]').click()
+            p.locator("#homeSearch").fill("kijkhut")
+            p.locator("#homeSearch").press("Enter")
+            p.locator('#mapSearchResults [data-place="pl_hut"]').wait_for()
+            assert p.locator("#mapSpeciesSearch").input_value() == "kijkhut"
+            print("K5-06 OK — Home zoekt soorten en eigen plekken")
+
+            # Een nieuwe Home-zoekopdracht en de vorige kaart behouden elk hun eigen filters.
+            p.locator("#mapSpeciesSearch").fill("Oostvaardersplassen")
+            p.locator("#mapFilterBtn").click()
+            p.locator("#mapStatusSelect").select_option("seen")
+            p.locator("#mapFilterBtn").click()
+            p.locator('.nav-item[data-route="home"]').click()
+            p.locator("#homeSearch").fill("kijkhut")
+            p.locator("#homeSearch").press("Enter")
+            p.locator('#mapSearchResults [data-place="pl_hut"]').wait_for()
+            assert p.locator("#mapStatusSelect").input_value() == "all"
+            p.evaluate("history.go(-2)")
+            p.wait_for_function("document.querySelector('#mapSpeciesSearch')?.value === 'Oostvaardersplassen'")
+            assert p.locator("#mapStatusSelect").input_value() == "seen"
+            print("K5-08 OK — Home-zoekopdracht en herstelde kaartfilters blijven gescheiden")
+
+            p.locator('.nav-item[data-route="home"]').click()
+            p.locator(".app-header__avatar").click()
+            p.locator("#screen-profile .profile-header").wait_for()
+            p.locator('.nav-item[data-route="home"]').click()
+            p.locator("#allSightingsBtn").click()
+            p.locator("#sightingsList").wait_for()
+            print("K5-07 OK — Home-snelknoppen en filterherstel")
 
             assert not errors, errors
             print("K5-05 OK — geen paginafouten")

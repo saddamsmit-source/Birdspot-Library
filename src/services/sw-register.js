@@ -1,47 +1,67 @@
-/**
- * BIRDSPOT LIBRARY — Service Worker registratie (Fase G)
- *
- * Registreert de service worker en toont een update-melding (L-011)
- * wanneer een nieuwe versie beschikbaar is.
- */
+/** Registratie en handmatig toepassen van een beschikbare Birdspot-update. */
 
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js')
-    .then(reg => {
-      // Luister naar een nieuwe worker die aan het installeren is
-      reg.addEventListener('updatefound', () => {
-        const newWorker = reg.installing;
-        if (!newWorker) return;
-
-        newWorker.addEventListener('statechange', () => {
-          // Nieuwe versie klaar én er is al een actieve controller (niet eerste install)
-          if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-            showUpdateToast();
-          }
-        });
-      });
-    })
-    .catch(err => {
-      console.warn('[SW] Registratie mislukt:', err.message);
-    });
-
-  // Luister ook naar berichten van de SW (bijv. na activate bij terugkerende bezoeker)
-  navigator.serviceWorker.addEventListener('message', event => {
-    if (event.data?.type === 'new-version') {
-      showUpdateToast();
-    }
-  });
+function hasActiveInput() {
+  return Boolean(document.querySelector(
+    '#addSightingSheet, .manual-pin-dialog, .place-prompt, ' +
+    '#mapPinPanel:not([hidden]), #mapDetailSheet.open, #confirmOverlay:not([hidden]), ' +
+    '#btnImport:disabled, #btnExport:disabled, #filmEditor:not([hidden])'
+  ));
 }
 
-/**
- * Toont de "Nieuwe versie · Nu laden"-toast via de centrale showToast-functie.
- * Bij klikken herlaadt de pagina zodat de nieuwe SW actief wordt.
- */
-function showUpdateToast() {
-  import('/src/app.js').then(({ showToast }) => {
-    showToast('Nieuwe versie · Nu laden', 8000);
-  }).catch(() => {
-    // Fallback: inline toast als app.js niet beschikbaar is
-    console.info('[SW] Nieuwe versie beschikbaar — herlaad de pagina om bij te werken.');
+if ('serviceWorker' in navigator) {
+  const serviceWorker = navigator.serviceWorker;
+  serviceWorker.register('/sw.js').then(reg => {
+    let controller = serviceWorker.controller;
+    let reloadRequested = false;
+    let reloadAvailable = false;
+    const button = document.createElement('button');
+    button.id = 'appUpdate';
+    button.type = 'button';
+    button.className = 'toast show app-update';
+    button.textContent = 'Nieuwe versie · Nu laden';
+    button.hidden = true;
+    document.body.appendChild(button);
+
+    function showAvailableUpdate() {
+      button.hidden = !reg.waiting && !reloadAvailable;
+    }
+
+    button.addEventListener('click', () => {
+      if (hasActiveInput()) {
+        button.textContent = 'Rond je invoer af · Probeer opnieuw';
+        return;
+      }
+      if (reloadAvailable) {
+        location.reload();
+      } else if (reg.waiting) {
+        reloadRequested = true;
+        button.disabled = true;
+        reg.waiting.postMessage({ type: 'apply-update' });
+      }
+    });
+
+    serviceWorker.addEventListener('controllerchange', () => {
+      if (controller) {
+        reloadAvailable = true;
+        button.disabled = false;
+        if (reloadRequested && !hasActiveInput()) {
+          location.reload();
+          return;
+        }
+        button.textContent = 'Nieuwe versie · Nu laden';
+        showAvailableUpdate();
+      }
+      reloadRequested = false;
+      controller = serviceWorker.controller;
+    });
+
+    function watchInstalling() {
+      reg.installing?.addEventListener('statechange', showAvailableUpdate);
+    }
+    reg.addEventListener('updatefound', watchInstalling);
+    watchInstalling();
+    showAvailableUpdate();
+  }).catch(err => {
+    console.warn('[SW] Registratie mislukt:', err.message);
   });
 }

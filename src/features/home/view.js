@@ -9,8 +9,12 @@
  *   - Open-Meteo REST API (geen key)
  */
 
+import { escHtml } from '../../utils/html.js';
 import { getDB }                          from '../../data/db.js';
 import { getSightings }                   from '../../data/sightings.js';
+import { loadPlaces }                     from '../../data/places.js';
+import { searchSpecies }                  from '../../data/species.js';
+import { searchPlaces }                   from '../map/visualization.js';
 import { getPhotoUrl, revokePhotoUrl }    from '../../utils/photoUrl.js';
 import { initFeaturedCarousel } from './featuredCarousel.js';
 import { buildAmbientBackdrop,initAmbientBackdrop } from './ambientBackdrop.js';
@@ -40,6 +44,16 @@ export function renderHome(el) {
     import('../../app.js').then(({ navigate }) => navigate(button.dataset.signatureRoute));
   };
   el.addEventListener('click', onSignatureClick);
+
+  el.querySelector('#homeSearchForm').addEventListener('submit', event => {
+    event.preventDefault();
+    const searchQuery = el.querySelector('#homeSearch').value.trim();
+    if (!searchQuery) return;
+    const placeOnly = searchPlaces(loadPlaces(), searchQuery).length > 0 && !searchSpecies(searchQuery).length;
+    import('../../app.js').then(({ navigate }) => {
+      if (!ctx.destroyed) navigate(placeOnly ? 'map' : 'species', { searchQuery });
+    });
+  });
   const disposeFeatured = initFeaturedCarousel(el,ctx);
   const disposeHabitat = initAmbientBackdrop(el,ctx);
   loadStats(el, ctx);
@@ -81,18 +95,20 @@ function buildSkeleton() {
         <span class="app-header__title">Birdspot Library</span>
       </div>
 
-      <div class="app-header__search">
-        <svg class="app-header__search-icon" viewBox="0 0 24 24" fill="none"
-             stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <circle cx="11" cy="11" r="8"/>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-        </svg>
+      <form class="app-header__search" id="homeSearchForm" role="search">
+        <button type="submit" class="app-header__search-submit" aria-label="Zoeken">
+          <svg class="app-header__search-icon" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </button>
         <input class="app-header__search-input" type="search"
                id="homeSearch" placeholder="Zoek soort of locatie…"
-               aria-label="Zoek soort of locatie">
-      </div>
+               aria-label="Zoek soort of locatie" enterkeyhint="search">
+      </form>
 
-      <button class="app-header__avatar" aria-label="Profiel">
+      <button type="button" class="app-header__avatar" aria-label="Profiel" data-signature-route="profile">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
           <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
           <circle cx="12" cy="7" r="4"/>
@@ -131,7 +147,7 @@ function buildSkeleton() {
     <section class="dash-section" id="recentSection">
       <div class="section-head">
         <span class="section-head__title">Recente waarnemingen</span>
-        <button class="section-head__link" id="allSightingsBtn" aria-label="Alle waarnemingen">
+        <button class="section-head__link" id="allSightingsBtn" aria-label="Alle waarnemingen" data-signature-route="sightings">
           Alles
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
             <polyline points="9 18 15 12 9 6"/>
@@ -573,7 +589,7 @@ async function buildRecentItem(s) {
       const url = getPhotoUrl(photo);
       if (url) {
         blobUrl   = url;
-        thumbHtml = `<img src="${url}" alt="${s.speciesName || ''}" loading="lazy">`;
+        thumbHtml = `<img src="${url}" alt="${escHtml(s.speciesName || '')}" loading="lazy">`;
       }
     } catch (_) {}
   }
@@ -592,9 +608,9 @@ async function buildRecentItem(s) {
     <div class="recent-item">
       <div class="${thumbClass}">${thumbContent}</div>
       <div class="recent-item__body">
-        <div class="recent-item__name">${s.speciesName || 'Onbekend'}</div>
+        <div class="recent-item__name">${escHtml(s.speciesName || 'Onbekend')}</div>
         <div class="recent-item__meta">
-          ${fmtDate(s.date)}${s.locationName ? ` · ${s.locationName}` : ''}
+          ${fmtDate(s.date)}${s.locationName ? ` · ${escHtml(s.locationName)}` : ''}
         </div>
       </div>
       ${badge ? `<div class="recent-item__badge">${badge}</div>` : ''}
