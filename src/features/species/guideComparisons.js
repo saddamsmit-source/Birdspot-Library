@@ -693,6 +693,30 @@ export const GUIDE_COMPARISONS = [
     ],
     "tip": "Een kleine kuif kan platliggen of slecht zichtbaar zijn. Gebruik ook oogkleur, kopvorm en wangtekening."
   },
+  {
+    label: 'Zilvermeeuw en Kleine Mantelmeeuw · volwassen',
+    birds: [
+      {id: 'sp094', source: 'zilvermeeuw', marks: 'Lichtgrijze mantel en roze poten. De gele snavel heeft een rode vlek.'},
+      {id: 'sp095', source: 'kleine-mantelmeeuw', marks: 'Donkergrijze mantel en gele poten. Oogt doorgaans slanker.'},
+    ],
+    tip: 'Combineer mantelkleur en pootkleur. Licht en schaduw kunnen de mantel donkerder of lichter doen lijken.',
+  },
+  {
+    label: 'Zilvermeeuw en Kleine Mantelmeeuw · eerste winter',
+    birds: [
+      {id: 'sp094', source: 'zilvermeeuw', marks: 'De lichte randen van de tertials zijn vaak duidelijk gekarteld.'},
+      {id: 'sp095', source: 'kleine-mantelmeeuw', marks: 'De tertials ogen meestal egaler. In vlucht valt de donkere ondervleugel op.'},
+    ],
+    tip: 'Bekijk de binnenste armpennen op een scherp zijaanzicht en controleer zo mogelijk de ondervleugel in vlucht.',
+  },
+  {
+    label: 'Boerenzwaluw en Huiszwaluw',
+    birds: [
+      {id: 'sp114', source: 'boerenzwaluw', marks: 'Roestrode keel en donker borstbandje. Volwassen vogels hebben lange buitenste staartpennen.'},
+      {id: 'sp115', source: 'huiszwaluw', marks: 'Witte stuit en witte keel. De gevorkte staart is korter.'},
+    ],
+    tip: 'Kijk eerst naar stuit en keel. Een jonge Boerenzwaluw heeft kortere staartpennen dan een volwassen vogel.',
+  },
 ];
 
 export function comparisonSource(bird) {
