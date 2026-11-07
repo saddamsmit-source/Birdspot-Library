@@ -5173,6 +5173,29 @@
         "height": 615,
         "image": "/assets/species/plumage/sp053-flight.webp"
       }
+    ],
+    "sp056": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Beide vleugels zijn uitgespreid. Luister bij twijfel tussen Tjiftjaf en Fitis naar de zang.",
+        "file": "Flight design.jpg",
+        "nl": "Tjiftjaf",
+        "latin": "Phylloscopus collybita",
+        "author": "Falco2022",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Flight_design.jpg",
+        "showSourceLink": true,
+        "alt": "Tjiftjaf in vlucht tussen rietstengels, met twee uitgespreide vleugels.",
+        "modifications": "Uitgesneden rond de vogel en omgezet naar WebP",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/tjiftjaf",
+        "visualCheck": "Tjiftjaf in vlucht tussen rietstengels, met twee uitgespreide vleugels.",
+        "width": 1400,
+        "height": 1149,
+        "image": "/assets/species/plumage/sp056-flight.webp"
+      }
     ]
   }
 }
