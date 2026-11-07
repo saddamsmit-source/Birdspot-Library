@@ -2,7 +2,7 @@
 
 Baseline: concept-PR #53, bbadaa799d870f1659c692fefb7998241cd81014. CAP-BIRD-012 en CAP-BIRD-015.
 
-**134 soorten, 127 hoofdfoto’s, 251 unieke lokale beeldbestanden.** Vluchtstatus: 10 hoofdfoto’s in vlucht, 5 aparte vluchtbeelden en 19 kaarten met een vluchtvergelijking. 65 soorten zijn visueel gecontroleerd zonder bestaand vluchtbeeld. 35 soorten vragen vervolgcontrole.
+**134 soorten, 127 hoofdfoto’s, 254 unieke lokale beeldbestanden.** Vluchtstatus: 10 hoofdfoto’s in vlucht, 8 aparte vluchtbeelden en 19 kaarten met een vluchtvergelijking. 62 soorten zijn visueel gecontroleerd zonder bestaand vluchtbeeld. 35 soorten vragen vervolgcontrole.
 
 Technische controle op alle soorten met bestaande, geregistreerde gidsfoto’s. Elk uniek lokaal bestand is gedecodeerd. Verschillende paden zijn vergeleken op SHA-256. De soortnaam en het lokale pad zijn ook gecontroleerd via guide_coverage. Bronregistratie bewijst eerdere beoordeling; de eerste visuele hercontrole betrof de vluchtkandidaten. Rondes 9 tot en met 12 voegen elk twintig visueel gecontroleerde soorten toe.
 
@@ -31,9 +31,9 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp030 | Pimpelmees | Ja | 3 | Vergelijking |
 | sp031 | Matkop | Ja | 2 | Vergelijking |
 | sp032 | Glanskop | Ja | 3 | Vergelijking |
-| sp033 | Kuifmees | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
-| sp034 | Staartmees | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
-| sp035 | Vink | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
+| sp033 | Kuifmees | Ja | 3 | Apart beeld |
+| sp034 | Staartmees | Ja | 3 | Apart beeld |
+| sp035 | Vink | Ja | 3 | Apart beeld |
 | sp036 | Groenling | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp037 | Putter | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp038 | Sijs | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
@@ -245,3 +245,15 @@ Basis is concept-PR #62, 20ae3a00ec5b7e1b4883a8926389be2b1e09a282. Voor Koolmees
 CAP-BIRD-012/015. Koolmees en Pimpelmees staan in een vluchtvergelijking. Glanskop en Matkop staan in een tweede vergelijking met de al aanwezige Matkopfoto. Volgende soort is Kuifmees. Na deze batch staan 100 soorten op de zoeklijst.
 
 Mobiele Chromium-test op 390 px: alle vier betrokken kaarten geopend. De eigen soort staat vooraan, vlucht staat vóór verenkleed waar aanwezig en de foto opent en zoomt naar 2×. De drie bestanden decoderen en hun SHA-256 komt verder nergens in de gids- of showcasebibliotheek voor. Gidsdekking en de bestaande positie- en uniciteitstest zijn geslaagd. Fysieke toesteltest staat open.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 6
+
+Basis is concept-PR #63, 05bd80006df48aa2f934f4504a90620350a0c350. Voor Staartmees en Vink zijn meerdere Commons-vluchtfoto’s vergeleken. Voor Kuifmees zijn zoektermen in meerdere talen en de bereikbare miniaturen van de Commons-soortcategorie bekeken. Twee kandidaten tonen gespreide vleugels met een poot nog aan de tak. De gekozen opname is gevonden met de Duitse soortnaam en toont de vogel los van de ondergrond. Bij Staartmees maakt de hoek de staart minder goed zichtbaar. Leeftijd is niet uit alle foto's bevestigd.
+
+- Kuifmees · Sgbeer · CC BY-SA 3.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Haubenmeise_Abflug.JPG)
+- Staartmees · Martin Cooper · CC BY 2.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Long-tailed_Tit_in_flight_(8644086215).jpg)
+- Vink · Mark Medcalf · CC BY 2.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Fringilla_coelebs_-Lochwinnoch,_Renfrewshire,_Scotland_-flying-8.jpg)
+
+CAP-BIRD-012/015. Iedere soort krijgt een eigen vluchtfoto vóór het verenkleed. De vluchtfoto’s zijn afzonderlijke opnamen en worden vanaf lokale bestanden geladen. Volgende soort is Groenling. Na deze batch staan 97 soorten op de zoeklijst.
+
+Mobiele Chromium-test op 390 px: alle drie de kaarten geopend. De lokale vluchtfoto is afzonderlijk zichtbaar, staat vóór het verenkleed en opent met 2× zoom. Alle drie de bestanden decoderen en hebben een unieke SHA-256 in de gids- en showcasebibliotheek. Gidsdekking en positie- en uniciteitstest zijn geslaagd. Fysieke toesteltest staat open.
