@@ -5,7 +5,7 @@
  */
 
 import { SPECIES, CATEGORY_LABELS, REGIONS, getSeenIds, toggleSeen, searchSpecies, activeCategories, CATEGORY_BADGES } from '../../data/species.js';
-import { tabBar, recognitionPanel, statusPanel, wherePanel, minePanel, sightingStats } from './detailSections.js';
+import { tabBar, recognitionPanel, voicePanel, statusPanel, wherePanel, minePanel, sightingStats } from './detailSections.js';
 import { SEASONS, SEASON_ORDER, toggleSeason, seasonPeriod, presentIn, periodMonthsText, isYearRound } from '../../data/seasons.js';
 import { getDB, getPhotosBySpecies, getPhoto } from '../../data/db.js';
 import { getSightings }                 from '../../data/sightings.js';
@@ -519,10 +519,15 @@ function openDetail(speciesId, screenEl) {
   document.body.appendChild(sheet);
   const panel = sheet.querySelector('.sheet');
   requestAnimationFrame(() => { if (!closed) sheet.classList.add('open'); });
+  const audio = sheet.querySelector('.sd-guide-audio audio');
+  audio?.addEventListener('error', () => {
+    sheet.querySelector('[data-guide-error]').hidden = false;
+  });
   const seenBtn = sheet.querySelector('#speciesDetailSeen');
   sheet.querySelector('.sd-tabs')?.addEventListener('click', e => {
     const tab = e.target.closest('[data-sd-tab]');
     if (!tab) return;
+    if (tab.dataset.sdTab !== 'herkenning') audio?.pause();
     sheet.querySelectorAll('[data-sd-tab]').forEach(b => {
       const on = b === tab;
       b.classList.toggle('is-active', on);
@@ -533,7 +538,7 @@ function openDetail(speciesId, screenEl) {
   import('../../data/speciesLife.js').then(({ LIFE }) => {
     const life = LIFE[speciesId];
     if (!life || closed) return;
-    sheet.querySelector('#sdPanel-herkenning').innerHTML = recognitionPanel(s, life);
+    sheet.querySelector('#sdVoiceText').innerHTML = voicePanel(life);
     sheet.querySelector('#sdPanel-status').innerHTML = statusPanel(s, life);
   }).catch(() => {});
   const favBtn = sheet.querySelector('#speciesDetailFavorite');
@@ -555,6 +560,7 @@ function openDetail(speciesId, screenEl) {
   function close(animate = true) {
     if (closed) return;
     closed = true;
+    audio?.pause();
     closeViewer();
     document.removeEventListener('keydown',keyHandler);
     sheet.classList.remove('open');

@@ -192,7 +192,7 @@ export const SPECIES = [
   { id:'sp029', nameNL:'Koolmees',            nameEN:'Great Tit',                 nameSci:'Parus major',                family:'Mezen',           category:'standvogel', icon:'🐦', regions:['bos','stedelijk','agrarisch'],
     fieldmarks:'Geel met brede zwarte borststreep, zwart-wit hoofd.',
     size:{ length:'13–15 cm', wingspan:'22–25 cm', weight:'14–22 g' },
-    plumage:{ adult_m:'Zwart hoofd met witte wangen; gele onderzijde met brede zwarte middenstreep tot vent', adult_f:'Bredere streep minder duidelijk; geler tint', juv:'Geelachtig; streep smaller', jaarling:null, breeding:null, winter:null, eclipse:null },
+    plumage:{ adult_m:'Zwart hoofd met witte wangen; gele onderzijde met brede zwarte middenstreep tot vent', adult_f:'Lijkt op het mannetje, met een smallere en vaak onregelmatige zwarte buikstreep', juv:'Geelachtig; streep smaller', jaarling:null, breeding:null, winter:null, eclipse:null },
     distribution:'Heel Nederland; loofbos, parken, tuinen en agrarisch land', status:'Standvogel · jaarrond',
     statusExtra:null, months:'jan-dec', frequency:'algemeen', breeding:'ja', redList:null },
   { id:'sp030', nameNL:'Pimpelmees',          nameEN:'Eurasian Blue Tit',         nameSci:'Cyanistes caeruleus',        family:'Mezen',           category:'standvogel', icon:'🐦', regions:['bos','stedelijk'],
@@ -488,9 +488,9 @@ export const SPECIES = [
 
   // ── IJSVOGEL ─────────────────────────────────────────────────
   { id:'sp075', nameNL:'IJsvogel',            nameEN:'Common Kingfisher',         nameSci:'Alcedo atthis',              family:'IJsvogels',       category:'standvogel', icon:'🐦', regions:['rivierengebied','moeras','polder'],
-    fieldmarks:'Felturkoois-oranje, zwaar hoofd, schiet laag over water.',
-    size:{ length:'16–17 cm', wingspan:'24–26 cm', weight:'34–46 g' },
-    plumage:{ adult_m:'Turkooisblauwe rug en kop; oranje onderzijde; zwarte snavel', adult_f:'Rode onderkaak snavel', juv:'Minder fel; groenachtige gloed op rug', jaarling:null, breeding:null, winter:null, eclipse:null },
+    fieldmarks:'Blauwe rug, oranje onderzijde, witte keel en lange snavel. Vliegt vaak laag over het water.',
+    size:{ length:'17–19,5 cm', wingspan:'24–26 cm', weight:'34–46 g' },
+    plumage:{ adult_m:'Turkooisblauwe rug en kop; oranje onderzijde; zwarte snavel', adult_f:'Oranjerood aan de basis van de ondersnavel', juv:'Minder fel; groenachtige gloed op rug', jaarling:null, breeding:null, winter:null, eclipse:null },
     distribution:'Langs beken, rivieren en kanalen heel NL; lokaal broedvogel', status:'Standvogel · jaarrond',
     statusExtra:null, months:'jan-dec', frequency:'vrij-algemeen', breeding:'ja', redList:null },
 
@@ -510,7 +510,7 @@ export const SPECIES = [
 
   // ── RALLEN ───────────────────────────────────────────────────
   { id:'sp078', nameNL:'Meerkoet',            nameEN:'Common Coot',               nameSci:'Fulica atra',                family:'Rallen',          category:'standvogel', icon:'🐦', regions:['moeras','polder','stedelijk'],
-    fieldmarks:'Zwart met wit snavel-schildje, luidruchtig op open water.',
+    fieldmarks:'Donkere watervogel met witte snavel en wit voorhoofdsschild. Volwassen vogels hebben een rode iris.',
     size:{ length:'36–42 cm', wingspan:'70–80 cm', weight:'600–900 g' },
     plumage:{ adult_m:'Glanszwart; wit snavelschildje en snavel; rood oog; groene poten', adult_f:null, juv:'Grijsbruin; lichter hoofd', jaarling:null, breeding:null, winter:null, eclipse:null },
     distribution:'Meren, plassen, rivieren en stadswateren heel NL', status:'Standvogel, ook wintergast · jaarrond',

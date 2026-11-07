@@ -727,3 +727,26 @@
   background: var(--surface); color: var(--ink); text-align: left; font: inherit;
 }
 .sd-place-link::after { content: "›"; color: var(--muted); font-size: 18px; }
+
+/* Gidsmedia binnen het bestaande tabblad Herkenning. */
+#sdVoiceText { display: contents; }
+.sd-guide-photo { margin: 0; }
+.sd-guide-photo img {
+  display: block;
+  width: 100%;
+  max-height: 260px;
+  object-fit: contain;
+  border-radius: var(--r-sm);
+}
+.sd-guide-photo figcaption, .sd-guide-credit {
+  font-size: var(--fs-meta);
+  color: var(--muted);
+  font-weight: 400;
+}
+.sd-guide-credit { display: block; overflow-wrap: anywhere; }
+.sd-guide-audio audio { display: block; width: 100%; margin: var(--space-4) 0; }
+.sd-guide-compare summary { cursor: pointer; padding: var(--space-8) 0; }
+.sd-guide-compare table { table-layout: fixed; width: 100%; text-align: left; border-collapse: collapse; }
+.sd-guide-compare caption { text-align: left; color: var(--muted); }
+.sd-guide-compare :is(th, td) { padding: var(--space-4); vertical-align: top; overflow-wrap: anywhere; }
+.sd-guide-compare img { aspect-ratio: 4 / 3; }

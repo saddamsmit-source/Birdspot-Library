@@ -245,6 +245,43 @@ def main():
             close_detail()
             print("H3-03 OK — zonder leefwijze:", ex["nameNL"], "· niet-broedvogel Rotgans zonder broedblok")
 
+            open_species("Koolmees", "sp029")
+            assert p.get_by_text("smallere en vaak onregelmatige zwarte buikstreep", exact=False).is_visible()
+            assert p.locator(".sd-guide-photo img").get_attribute("src") == "/assets/species/sp029.webp"
+            assert p.get_by_text("Afzonderlijke kleedfoto’s", exact=False).is_visible()
+            assert p.locator("#speciesDetailSeen").is_visible()
+            assert p.locator("#speciesDetailFavorite").is_visible()
+            assert p.locator("[data-species-observe]").count() == 4
+            close_detail()
+
+            open_species("IJsvogel", "sp075")
+            assert p.get_by_text("Gidsfoto · volwassen vrouwtje", exact=False).is_visible()
+            p.locator(".sd-guide-photo img").scroll_into_view_if_needed()
+            p.wait_for_function("document.querySelector('.sd-guide-photo img').naturalWidth > 0")
+            tab("waar")
+            assert p.get_by_text("Fotografietip", exact=True).is_visible()
+            close_detail()
+
+            for name, sid in [("Meerkoet", "sp078"), ("Waterhoen", "sp079")]:
+                open_species(name, sid)
+                compare = p.locator(".sd-guide-compare")
+                compare.locator("summary").click()
+                assert compare.get_by_text("Volwassen vogels · drie veldkenmerken", exact=True).is_visible()
+                assert compare.locator("tbody th").count() == 3
+                compare.locator("img").first.scroll_into_view_if_needed()
+                p.wait_for_function("""() => [...document.querySelectorAll('.sd-guide-compare img')]
+                    .every(img => img.naturalWidth > 0 && new URL(img.src).origin === location.origin)""")
+                assert not compare.locator("a[href*='wikimedia']").count()
+                if sid == "sp078":
+                    audio = p.locator(".sd-guide-audio audio")
+                    assert audio.get_attribute("src") == "/assets/species/audio/sp078-xc519437.mp3"
+                    audio.evaluate("audio => audio.play()")
+                    p.wait_for_function("document.querySelector('.sd-guide-audio audio').currentTime > 0")
+                    tab("waar")
+                    assert audio.evaluate("audio => audio.paused")
+                close_detail()
+            print("Gidsproef OK — drie soortkaarten, vergelijking vanuit beide kaarten, lokale foto’s en dagroep")
+
             assert not errors, f"H2-08 paginafouten: {errors}"
             print("H2-08 OK — geen paginafouten")
             browser.close()

@@ -7,6 +7,7 @@
  */
 import { CATEGORY_BADGES } from '../../data/species.js';
 import { monthSet, MONTH_NAMES } from '../../data/seasons.js';
+import { PILOT_GUIDE, WATERBIRD_MARKS } from './pilotFieldGuide.js';
 
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
@@ -89,8 +90,36 @@ function plumageCard(ic, title, text, badge = '') {
   return `<div class="sd-plumage">${icon(ic)}<div><strong>${esc(title)}${badge}</strong><p>${esc(text)}</p></div></div>`;
 }
 
+function guideCredit(media) {
+  return `<small class="sd-guide-credit">${esc(media.credit)} ·
+    <a href="https://creativecommons.org/licenses/${esc(media.licensePath)}/" target="_blank" rel="noopener noreferrer">${esc(media.license)}</a>${media.changes ? ' · ' + esc(media.changes) : ''}</small>`;
+}
+
+function guidePhoto(photo) {
+  return `<figure class="sd-guide-photo"><img src="${esc(photo.src)}" alt="${esc(photo.alt)}" loading="lazy">
+    <figcaption>${esc(photo.label)}${guideCredit(photo)}</figcaption></figure>`;
+}
+
+function waterbirdComparison() {
+  return `<details class="sd-guide-compare">
+    <summary>Vergelijk Meerkoet en Waterhoen</summary>
+    <table>
+      <caption>Volwassen vogels · drie veldkenmerken</caption>
+      <thead><tr><th scope="col">Meerkoet${guidePhoto(PILOT_GUIDE.sp078.photo)}</th>
+        <th scope="col">Waterhoen${guidePhoto(PILOT_GUIDE.sp079.photo)}</th></tr></thead>
+      <tbody>${WATERBIRD_MARKS.map(([label, coot, moorhen]) => `<tr><th colspan="2" scope="rowgroup">${esc(label)}</th></tr>
+        <tr><td>${esc(coot)}</td><td>${esc(moorhen)}</td></tr>`).join('</tbody><tbody>')}</tbody>
+    </table>
+  </details>`;
+}
+
+export function voicePanel(life) {
+  if (!life?.voice) return '';
+  return `<h3 class="sd-h">Zang en roep</h3><div class="sd-callout sd-voice">${icon('note')}<p>${esc(life.voice)}</p></div>`;
+}
+
 /** Tab 1 — Herkenning: maten, kenmerken, verenkleed (incl. broed-, winter- en eclipskleed), zang en roep. */
-export function recognitionPanel(s, life = null) {
+export function recognitionPanel(s) {
   const out = [];
   if (s.size) {
     out.push('<div class="sd-tiles">' +
@@ -117,9 +146,18 @@ export function recognitionPanel(s, life = null) {
     if (p.jaarling) cards.push(plumageCard('chick', 'Jaarling', p.jaarling));
     if (cards.length) out.push('<h3 class="sd-h">Verenkleed</h3><div class="sd-plumage-list">' + cards.join('') + '</div>');
   }
-  if (life?.voice) {
-    out.push(`<h3 class="sd-h">Zang en roep</h3><div class="sd-callout sd-voice">${icon('note')}<p>${esc(life.voice)}</p></div>`);
+  const guide = PILOT_GUIDE[s.id];
+  if (s.id === 'sp029' || s.id === 'sp075') out.push(guidePhoto(guide.photo));
+  out.push('<div id="sdVoiceText"></div>');
+  if (guide?.audio) {
+    const audio = guide.audio;
+    out.push(`<div class="sd-guide-audio"><strong>${esc(audio.label)}</strong>
+      <audio controls preload="none" src="${esc(audio.src)}" aria-label="${esc(audio.label)} van ${esc(s.nameNL)}"></audio>
+      <p class="sd-caption" data-guide-error hidden role="status">Deze opname is tijdelijk niet beschikbaar.</p>
+      ${guideCredit(audio)}</div>`);
   }
+  if (guide?.missing) out.push(`<p class="sd-caption">${esc(guide.missing)}</p>`);
+  if (s.id === 'sp078' || s.id === 'sp079') out.push(waterbirdComparison());
   if (s.compact) {
     out.push(`<p class="sd-note">${icon('info')}Zeldzame dwaalgast: een uitgebreide beschrijving volgt nog.</p>`);
   }
@@ -184,6 +222,8 @@ export function wherePanel(s, places = []) {
       `<span class="sd-habitat">${icon(HABITAT[r][0])}${esc(HABITAT[r][1])}</span>`).join('') + '</div>');
   }
   if (s.distribution) out.push(`<div class="sd-callout">${icon('map')}<p>${esc(s.distribution)}</p></div>`);
+  const photoTip = PILOT_GUIDE[s.id]?.photoTip;
+  if (photoTip) out.push(`<h3 class="sd-h">Fotografietip</h3><div class="sd-callout">${icon('camera')}<p>${esc(photoTip)}</p></div>`);
   out.push('<h3 class="sd-h">Jouw plekken</h3>');
   if (places.length) {
     out.push('<ul class="sd-places">' + places.map(p => p.placeId
