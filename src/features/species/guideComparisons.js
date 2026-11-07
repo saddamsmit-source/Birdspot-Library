@@ -725,6 +725,22 @@ export const GUIDE_COMPARISONS = [
     ],
     tip: 'Gebruik de kleur alleen als aanwijzing. Combineer koptekening, borstpatroon en roep. Laat de soort open als de kenmerken elkaar tegenspreken.',
   },
+  {
+    label: 'Stormmeeuw en Zilvermeeuw · volwassen',
+    birds: [
+      {id: 'sp096', source: 'stormmeeuw', marks: 'Kleiner, met een fijnere snavel, donker oog en geelgroene poten.'},
+      {id: 'sp094', source: 'zilvermeeuw', marks: 'Groter, met een stevige gele snavel, licht oog en roze poten.'},
+    ],
+    tip: 'Kijk naar oog, poten en snavel samen. Formaat helpt vooral als beide vogels even ver weg staan.',
+  },
+  {
+    label: 'Smient en Krakeend · vrouwtjes',
+    birds: [
+      {id: 'sp130', source: 'smient', plumage: 'adult_f', marks: 'Korte blauwgrijze snavel en variabel rossig of grijsbruin verenkleed.'},
+      {id: 'sp129', source: 'krakeend', marks: 'Oranje langs de zijkant van de snavel en een witte spiegel die in vlucht goed opvalt.'},
+    ],
+    tip: 'Bekijk eerst de snavelkleur en wacht zo nodig op een beter zij- of vleugelaanzicht.',
+  },
 ];
 
 export function comparisonSource(bird) {

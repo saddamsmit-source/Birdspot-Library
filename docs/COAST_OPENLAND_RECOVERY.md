@@ -32,3 +32,23 @@ De bestaande appfoto's zijn visueel gecontroleerd. Huiszwaluw toont witte keel e
 **Media-afspraak voor volgende batches:** voeg uitsluitend geverifieerde lokale foto- en geluidsbestanden toe. Houd auteurscredit, herkomst en licentiebewijs bij de ontwikkelregistratie, met vereiste credits zichtbaar bij het beeld of geluid. Gebruik geen externe foto- of geluids-URL als afspeelbron of als nieuwe link in de app. Nieuwe kleedfoto's en gidsaudio staan open. Oudere media buiten deze batch zijn nog niet integraal beoordeeld.
 
 CAP-BIRD-012/015. Lokale syntaxcontrole, vergelijking en gegevensisolatie gecontroleerd. Geen nieuwe browser- of toestelproef.
+
+## Batch 3 · Smient, Ooievaar en Stormmeeuw
+
+Basis: #43, 0413d54fe30d4d60c0678777d61a22f2f7037bf3. Smient en Ooievaar komen uit het herstelonderzoek. Stormmeeuw sluit aan op de bestaande meeuwenvergelijking.
+
+- [Smient](https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/smient): herkenning man/vrouw, rustwater en grasland, lengte, broeden, wintertrek en fotografie. Vergelijking vrouwtjes met [Krakeend](https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/krakeend).
+- [Ooievaar](https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/ooievaar): vlucht, juveniel, vochtige graslanden, trek en nestjongduur. Spanwijdte gecorrigeerd van 155–165 naar 180–218 cm. Eilegtekst en bredere bestaande broedkalender zijn afzonderlijke gegevens.
+- [Stormmeeuw](https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/stormmeeuw): volwassen en jong, wintervindplaatsen, broedgegevens, fotografie en vergelijking met Zilvermeeuw. Lengte 40–46 cm volgens [Vleet](https://vleet.nl/stormmeeuw); Vogelbescherming vermeldt een ruimer bereik. Spanwijdte 110–125 cm volgens Vogelbescherming.
+
+Beeldcontrole op de bestaande lokale WebP's, met de herkomst uit het creditsregister:
+
+| Soort | Zichtbare kenmerken | Credit |
+|---|---|---|
+| Smient | Kastanjebruine kop, lichte bles, korte blauwgrijze snavel en grijze flanken. Volwassen man in herkenbaar kleed. | Andreas Trepte, CC BY-SA 2.5 |
+| Ooievaar | Witte romp, zwarte slagpennen, gestrekte hals en rode snavel en poten in vlucht. | Carlos Delgado, CC BY-SA 3.0 |
+| Stormmeeuw | Grijze mantel, donkere iris, fijne snavel en geelgroene poten. | Charles J. Sharp, CC BY-SA 4.0 |
+
+CAP-BIRD-012/015. De bestaande foto's blijven lokaal. Browserbediening en fysiek toestel zijn in deze ronde niet getest.
+
+Nieuwe lokale kleedfoto voor Smient-vrouwtje, zichtbaar op de soortkaart en in de vergelijking. De foto is gecontroleerd tegen de bronbeschrijving en toont de korte blauwgrijze snavel met zwarte punt, ronde kop en rossigbruine veren. Daniel106, CC BY 4.0. WebP van 1250 × 938, zonder uitsnede. Credit, licentie en bewerking worden getoond. Voor deze nieuwe foto wordt geen externe foto- of bronlink weergegeven. [Originele bron voor het ontwikkelregister](https://commons.wikimedia.org/wiki/File:Samice_hv%C3%ADzd%C3%A1ka_eurasijsk%C3%A9ho_na_kameni.jpg)

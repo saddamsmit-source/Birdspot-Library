@@ -1375,17 +1375,17 @@ export const LIFE = Object.freeze({
  },
  "sp096": {
   "breeding": {
-   "period": "apr–jul",
+   "period": "Eind april tot begin juni",
    "nest": "Nestkuil op de grond, ook op daken of palen",
-   "eggs": "2–3",
-   "incubation": "24–27 dagen",
+   "eggs": "Meestal 3",
+   "incubation": "24–25 dagen",
    "fledging": "30–35 dagen",
    "broods": "1",
-   "months": "apr-jul"
+   "months": "apr-jun"
   },
   "diet": "Regenwormen, insecten, kleine vis en afval",
   "behaviour": "Trappelt in natte weilanden om wormen naar boven te lokken",
-  "migration": "Standvogel; in de winter veel extra vogels uit het noorden",
+  "migration": "Nederlandse vogels blijven veelal hier. In de winter komen vogels uit Scandinavië, Rusland en het Oostzeegebied erbij.",
   "voice": "Hoog, schel \"kie-jaa\""
  },
  "sp097": {
@@ -1843,17 +1843,17 @@ export const LIFE = Object.freeze({
  },
  "sp130": {
   "breeding": {
-   "period": "mei–jul",
+   "period": "Mei–juni",
    "nest": "Komnest met dons in hoge vegetatie",
-   "eggs": "7–9",
-   "incubation": "24–25 dagen",
+   "eggs": "Meestal 7–8",
+   "incubation": "23–25 dagen",
    "fledging": "40–45 dagen",
    "broods": "1",
-   "months": "mei-jul"
+   "months": "mei-jun"
   },
   "diet": "Gras, kroos en waterplanten",
   "behaviour": "In de winter in grote, grazende groepen op natte graslanden",
-  "migration": "Wintergast uit Rusland en Scandinavië (sep–apr); zeer kleine broedpopulatie",
+  "migration": "De meeste wintergasten arriveren in oktober en november en vertrekken tussen februari en april.",
   "voice": "Man helder fluitend \"wie-oe\""
  },
  "sp131": {
@@ -2318,17 +2318,18 @@ export const LIFE = Object.freeze({
  },
  "sp170": {
   "breeding": {
-   "period": "mrt–jul",
+   "period": "Eileg doorgaans in april",
    "nest": "Groot takkennest op een paal, schoorsteen of nestplatform",
    "eggs": "3–5",
    "incubation": "33–34 dagen",
-   "fledging": "58–64 dagen",
+   "fledging": "55–60 dagen",
    "broods": "1",
+   "fledgingLabel": "Nestjongduur",
    "months": "mrt-jul"
   },
   "diet": "Muizen, kikkers, regenwormen en grote insecten",
   "behaviour": "Loopt in weilanden achter maaimachines; zweeft op thermiek",
-  "migration": "Zomergast (feb–sep); veel vogels uit uitzetprojecten blijven hier",
+  "migration": "Een deel trekt via Spanje en Gibraltar naar Afrika. Trekvogels keren vanaf februari terug en vertrekken vanaf augustus. Een deel overwintert in Nederland.",
   "voice": "Stil; klepperen met de snavel bij het nest"
  },
  "sp171": {
