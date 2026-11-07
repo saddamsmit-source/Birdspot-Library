@@ -806,26 +806,27 @@
  "sp068": {
   "period": "apr–aug",
   "nest": "In een holte in muur, dak of houtstapel",
-  "eggs": "5–6",
+  "eggs": "Meestal 4–6",
   "incubation": "12–14 dagen",
-  "fledging": "13–15 dagen",
-  "broods": "2",
+  "fledging": "13–14 dagen",
+  "broods": "1–2",
   "diet": "Kleine insecten, ook van wateroppervlak en wegdek",
   "behaviour": "Loopt snel en wipt met de staart; slaapt in groepen op daken en kassen",
-  "migration": "Zomergast (mrt–okt); in zachte winters overwinteren er enkele",
+  "migration": "Trekt in het najaar in zuidwestelijke richting, via het Iberisch schiereiland naar Marokko. Schaars als overwinteraar.",
   "voice": "Tweelettergrepig \"tsli-wiet\" in vlucht"
  },
  "sp069": {
-  "period": "mei–jul",
+  "period": "Eind april tot in juli",
   "nest": "Goed verstopt nest op de grond in gras of gewassen",
   "eggs": "4–6",
   "incubation": "12–14 dagen",
-  "fledging": "11–13 dagen",
+  "fledging": "10–13 dagen",
   "broods": "1–2",
   "diet": "Insecten, vaak opgejaagd door vee",
   "behaviour": "Loopt tussen koeien en paarden in natte graslanden en akkers",
-  "migration": "Zomergast (apr–sep); overwintert in West-Afrika",
-  "voice": "Scherp \"psie-ep\" in vlucht"
+  "migration": "Trekt via Frankrijk en het Iberisch schiereiland. Veel vogels overwinteren in de Sahel.",
+  "voice": "Scherp \"psie-ep\" in vlucht",
+  "months": "apr-jul"
  },
  "sp070": {
   "period": "apr–jul",
@@ -1342,16 +1343,17 @@
   "months": "mei-aug"
  },
  "sp115": {
-  "period": "mei–sep",
+  "period": "Eileg van half mei tot begin augustus",
   "nest": "Gesloten nest van modderbolletjes onder een dakrand",
-  "eggs": "3–5",
-  "incubation": "14–16 dagen",
-  "fledging": "22–32 dagen",
-  "broods": "2–3",
+  "eggs": "Meestal 4–5",
+  "incubation": "13–16 dagen",
+  "fledging": "23–30 dagen",
+  "broods": "1–2",
   "diet": "Vliegende insecten, hoger in de lucht dan de Boerenzwaluw",
   "behaviour": "Broedt in kolonies onder dakgoten",
   "migration": "Zomergast (apr–okt); overwintert in Afrika",
-  "voice": "Droog, kort \"prrrt\""
+  "voice": "Droog, kort \"prrrt\"",
+  "months": "mei-aug"
  },
  "sp116": {
   "period": "mei–aug",
