@@ -55,7 +55,7 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp055 | Winterkoning | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp056 | Tjiftjaf | Ja | 2 | Apart beeld |
 | sp057 | Fitis | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp058 | Fluiter | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp058 | Fluiter | Ja | 2 | Apart beeld |
 | sp059 | Zwartkop | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp060 | Tuinfluiter | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp061 | Grasmus | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
@@ -343,3 +343,15 @@ Basis is concept-PR #71, e8acdf8ab53ee17159b44bf47f738ce08c3a10a9. Winterkoning,
 CAP-BIRD-012/015. De Tjiftjaf heeft een lokaal vluchtbeeld boven het verenkleed. Van de twee andere soorten zijn de onderzochte beelden te beperkt voor de soortkaart. Zij blijven open op de zoeklijst. Na deze ronde staan 79 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Fluiter. De scherpere Roodmusfoto en Heggenmus blijven ook open.
 
 Mobiele Chromium-test op 390 px: Tjiftjaf via appbreed zoeken met de wetenschappelijke naam geopend. De foto decodeert, staat eenmaal boven het verenkleed en opent met 2× zoom. De bronlink is zichtbaar. Gidsdekking, bestaande volgorde- en uniciteitstests en SHA-256-controle zijn geslaagd. Fysieke toesteltest staat open.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 14
+
+Basis is concept-PR #72, 9faf51d146df8be18af23e6d7b26d8baaf7f2618. Voor Fluiter, Zwartkop en Tuinfluiter zijn Commons, iNaturalist-waarnemingsbeschrijvingen, Flickr en gespecialiseerde fotogalerijen in meerdere talen doorzocht. Foto's met algemene titels zijn visueel beoordeeld en op het bronbestand gecontroleerd. Bij de geselecteerde Fluiterfoto hangen beide poten vrij boven het blad. De gele kop en keel contrasteren met de lichte onderzijde. De Commons-bestandspagina vermeldt de fotograaf en CC BY 2.0.
+
+- Fluiter · Andrey Gulivanov · CC BY 2.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Wood_warbler_(49979490848).jpg). Uitgesneden en omgezet naar WebP.
+- Zwartkop · de [Capinera-foto](https://commons.wikimedia.org/wiki/File:Capinera_-_Flickr_-_Mauro_Gialdini.jpg) toont bij vergroting contact met de tak. De bewegingsmomenten in [Zingende zwartkop](https://commons.wikimedia.org/wiki/File:Zingende_zwartkop-4961998.webm) rond 01:55 en 02:49 tonen de vogel aan de rand van het beeld, achter takken of nog op de tak. Voor andere gevonden vluchtfoto's is geen geschikte herpublicatielicentie bevestigd.
+- Tuinfluiter · in [Zingende tuinfluiter](https://commons.wikimedia.org/wiki/File:Zingende_tuinfluiter-4961901.webm) is rond 00:40 het loskomen van de tak zichtbaar. Na het loskomen vervagen de herkenningskenmerken door bewegingsonscherpte. Voor kandidaten uit andere fotogalerijen is geen geschikte herpublicatielicentie bevestigd.
+
+CAP-BIRD-012/015. Fluiter heeft een lokaal vluchtbeeld boven het verenkleed. Zwartkop en Tuinfluiter blijven open op de zoeklijst. Na deze ronde staan 78 soorten zonder vluchtbeeld op de lijst. Volgende nieuwe soort is Grasmus.
+
+Mobiele Chromium-test op 390 px: Fluiter via appbreed zoeken met de wetenschappelijke naam geopend. De foto decodeert, staat eenmaal boven het verenkleed, toont de bronlink en opent met 2× zoom. Gidsdekking, bestaande volgorde- en uniciteitstests en SHA-256-controle zijn geslaagd. Fysieke toesteltest staat open.
