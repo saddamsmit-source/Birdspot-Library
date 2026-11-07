@@ -42,6 +42,7 @@ for (const {birds, tip} of GUIDE_COMPARISONS) {
   for (const bird of birds) {
     const {id, plumage} = bird;
     assert.ok(bird.source && bird.marks && species.has(id), `Ongeldige vergelijking: ${id}`);
+    if (bird.textOnly === true) continue;
     const photo = GUIDE_PLUMAGE[id]?.[plumage];
     checkPhoto(id, !plumage || photo?.reuseGuidePhoto ? GUIDE_PHOTOS[id] : photo);
   }

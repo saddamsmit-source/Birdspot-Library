@@ -142,7 +142,7 @@ function comparisonsPanel(id) {
       const name = species.nameNL;
       const adult = bird.plumage === 'adult_m' && !species.plumage?.adult_f;
       const kind = adult ? 'Volwassen' : PLUMAGE.find(([key]) => key === bird.plumage)?.[2];
-      const photo = plumagePhoto(bird.id, bird.plumage);
+      const photo = bird.textOnly ? null : plumagePhoto(bird.id, bird.plumage);
       return `<div class="sd-compare-card">
         <strong>${esc(name)}</strong>${kind ? `<span class="sd-badge">${esc(kind)}</span>` : ''}
         ${photo ? fieldPhoto(photo) : ''}

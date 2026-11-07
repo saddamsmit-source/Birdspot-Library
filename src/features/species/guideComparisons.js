@@ -96,6 +96,7 @@ export const GUIDE_COMPARISONS = [
     tip: 'Bij beide kan de snavel geel zijn. Vergelijk vooral de lengte van hals, snavel en poten.',
   },
   {
+    label: 'Kokmeeuw en Zwartkopmeeuw · broedkleed',
     birds: [
       {id: 'sp097', source: 'kokmeeuw', plumage: 'breeding', marks: 'Volwassen vogel heeft in broedkleed een chocoladebruine kap. In vlucht is de voorrand van de vleugel wit.'},
       {id: 'sp225', source: 'zwartkopmeeuw', plumage: 'breeding', marks: 'Volwassen vogel heeft een zwarte broedkap, een dikkere rode snavel en witte slagpennen.'},
@@ -745,7 +746,7 @@ export const GUIDE_COMPARISONS = [
     label: 'Grote en Kleine Mantelmeeuw · volwassen',
     birds: [
       {id: 'sp164', source: 'grote-mantelmeeuw', plumage: 'adult_m', marks: 'Zwaar gebouwd, met roze poten, een forse snavel en een bijna zwarte mantel.'},
-      {id: 'sp095', source: 'kleine-mantelmeeuw', plumage: 'adult_m', marks: 'Slanker, met gele poten, een fijnere snavel en een donkergrijze mantel.'},
+      {id: 'sp095', source: 'kleine-mantelmeeuw', plumage: 'adult_m', textOnly: true, marks: 'Slanker, met gele poten, een fijnere snavel en een donkergrijze mantel.'},
     ],
     tip: 'Combineer pootkleur met bouw en snavel. Mantelkleur alleen kan door het licht misleiden.',
   },
@@ -753,7 +754,7 @@ export const GUIDE_COMPARISONS = [
     label: 'Kokmeeuw en Stormmeeuw · volwassen in winterkleed',
     birds: [
       {id: 'sp097', source: 'kokmeeuw', plumage: 'winter', marks: 'Vaak een donkere oorvlek op de witte kop. In vlucht een opvallend witte vleugelvoorrand.'},
-      {id: 'sp096', source: 'stormmeeuw', plumage: 'winter', marks: 'Groter en zwaarder gebouwd. Vaak verspreide grijze tekening op kop en nek; geelgroene poten.'},
+      {id: 'sp096', source: 'stormmeeuw', plumage: 'winter', textOnly: true, marks: 'Groter en zwaarder gebouwd. Vaak verspreide grijze tekening op kop en nek; geelgroene poten.'},
     ],
     tip: 'Bekijk koptekening en poten samen. In vlucht helpt de witte vleugelvoorrand van de Kokmeeuw.',
   },
@@ -761,9 +762,25 @@ export const GUIDE_COMPARISONS = [
     label: 'Grote Gele Kwikstaart en Gele Kwikstaart · volwassen',
     birds: [
       {id: 'sp288', source: 'grote-gele-kwikstaart', plumage: 'adult_m', marks: 'Grijze mantel, opvallend lange staart en bruinroze poten. Vaak aan stromend water.'},
-      {id: 'sp069', source: 'gele-kwikstaart', plumage: 'adult_m', marks: 'Doorgaans olijfgroene mantel en donkere poten. Vaak op akkers of in open grasland.'},
+      {id: 'sp069', source: 'gele-kwikstaart', plumage: 'adult_m', textOnly: true, marks: 'Doorgaans olijfgroene mantel en donkere poten. Vaak op akkers of in open grasland.'},
     ],
     tip: 'Let op mantel, poten en staartverhouding. Gebruik de omgeving als extra aanwijzing.',
+  },
+  {
+    label: 'Oeverzwaluw en Huiszwaluw',
+    birds: [
+      {id: 'sp116', source: 'oeverzwaluw', textOnly: true, marks: 'Bruine bovenzijde en een duidelijke bruine borstband boven de witte buik.'},
+      {id: 'sp115', source: 'huiszwaluw', textOnly: true, marks: 'Witte keel en buik zonder borstband. In vlucht valt de witte stuit op.'},
+    ],
+    tip: 'Begin bij de borstband en de stuit. Een snelle glimp van alleen de staart is vaak onvoldoende.',
+  },
+  {
+    label: 'Gierzwaluw en Boerenzwaluw',
+    birds: [
+      {id: 'sp141', source: 'gierzwaluw', plumage: 'adult_m', marks: 'Vrijwel geheel donker silhouet, lange sikkelvleugels en korte vorkstaart.'},
+      {id: 'sp114', source: 'boerenzwaluw', textOnly: true, marks: 'Roestrode keel, lichte onderzijde en bij volwassen vogels lange buitenste staartpennen.'},
+    ],
+    tip: 'Let op vleugelvorm en staart. Bij tegenlicht is het silhouet bruikbaarder dan de kleur.',
   },
 ];
 

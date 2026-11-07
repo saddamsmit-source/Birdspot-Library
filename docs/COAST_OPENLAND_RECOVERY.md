@@ -64,3 +64,15 @@ Basis: concept-PR #44 op 38dcbb9a0f45d51c580ed8222de6ced128343631. Herkenning, v
 Nieuwe lokale kleedfoto’s voor volwassen Grote Mantelmeeuw en mannetje Grote Gele Kwikstaart. Makerscredit, licentie en bewerking worden in de app getoond. Bronverwijzingen naar de foto’s zijn geregistreerd voor ontwikkelaars. [Grote Mantelmeeuw · TRinaud · CC BY 4.0](https://commons.wikimedia.org/wiki/File:Great_black-backed_gull_(Larus_marinus)_2026_02.jpg) · [Grote Gele Kwikstaart · Nikola Veljković · CC BY-SA 4.0](https://commons.wikimedia.org/wiki/File:Motacilla_cinerea,_male.jpg)
 
 CAP-BIRD-012/015. Browserbediening en fysiek toestel zijn in deze ronde niet getest.
+
+## Batch 5 · Zwartkopmeeuw, Oeverzwaluw en Gierzwaluw
+
+Basis: concept-PR #46 op 717dd06ddc877184d01ecb45418280a2098385d6. Drie soortkaarten aangevuld met herkenning, leefwijze, vindplaatsen en fotografie.
+
+- [Zwartkopmeeuw](https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwartkopmeeuw): maten, broedduur, leeftijdsverschillen en bestaande vergelijking met Kokmeeuw. Lokale hoofdfoto visueel gecontroleerd op zwarte kap, dikke rode snavel en witte slagpennen.
+- [Oeverzwaluw](https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/oeverzwaluw): broedduur, nestjongduur, rietvelden en tekstvergelijking met Huiszwaluw. Nieuwe lokale habitatfoto bij de nestwand met bruine bovenzijde en lichte keel. [gailhampshire · CC BY 2.0](https://commons.wikimedia.org/wiki/File:Riparia_riparia._Sand_Martin_(27556953299).jpg)
+- [Gierzwaluw](https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/gierzwaluw): lengte, broedduur, nestplaatsen en vergelijking met Boerenzwaluw. Nieuwe lokale vluchtfoto met donkere onderzijde en sikkelvleugels. [Alexis Lours · CC BY 4.0](https://commons.wikimedia.org/wiki/File:Common_swift_2024_04_21.jpg)
+
+CAP-BIRD-012/015. De twee nieuwe WebP-bestanden worden lokaal geladen, met makerscredits en licentie zichtbaar. Voor deze beelden verschijnt geen externe fotobronlink in de interface.
+
+Regressies uit #46: Local Guide Photos QA vereiste voor alle vergelijkingskanten een foto. Expliciet als tekst gemarkeerde kanten worden nu door de renderer en de controle herkend. Een ongemarkeerde kant vereist nog steeds het juiste beeld. Species Data QA controleert de bestaande Kokmeeuw–Zwartkopmeeuw-vergelijking nu binnen het betreffende blok en behoudt de bestaande kleed-, navigatie- en fotocontroles. Fysiek toestel niet getest.

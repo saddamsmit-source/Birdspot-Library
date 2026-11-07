@@ -3891,6 +3891,27 @@
         "height": 938,
         "image": "/assets/species/plumage/sp288-adult.webp"
       }
+    },
+    "sp141": {
+      "adult_m": {
+        "file": "Common swift 2024 04 21.jpg",
+        "nl": "Gierzwaluw",
+        "latin": "Apus apus",
+        "author": "Alexis Lours",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Common_swift_2024_04_21.jpg",
+        "showSourceLink": false,
+        "alt": "Gierzwaluw in vlucht met donkere onderzijde, lange sikkelvleugels, lichte keel en korte gevorkte staart.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/gierzwaluw",
+        "visualCheck": "Gierzwaluw in vlucht met donkere onderzijde, lange sikkelvleugels, lichte keel en korte gevorkte staart.",
+        "verification": "Bronbeschrijving en zichtbare veldkenmerken vergeleken.",
+        "width": 1250,
+        "height": 833,
+        "image": "/assets/species/plumage/sp141-adult.webp"
+      }
     }
   },
   "poses": {
@@ -4205,6 +4226,29 @@
         "image": "/assets/species/plumage/sp033-view.webp",
         "label": "Kop en kuif",
         "note": "Kijk naar de spitse kuif en de gebogen zwarte lijn achter de wang. Vergroot de foto om de koptekening te bekijken."
+      }
+    ],
+    "sp116": [
+      {
+        "file": "Riparia riparia. Sand Martin (27556953299).jpg",
+        "nl": "Oeverzwaluw",
+        "latin": "Riparia riparia",
+        "author": "gailhampshire",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Riparia_riparia._Sand_Martin_(27556953299).jpg",
+        "showSourceLink": false,
+        "alt": "Oeverzwaluw met bruine bovenzijde en lichte keel bij een nestgang in een steile zandwand.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/oeverzwaluw",
+        "visualCheck": "Oeverzwaluw met bruine bovenzijde en lichte keel bij een nestgang in een steile zandwand.",
+        "verification": "Bronbeschrijving en zichtbare veldkenmerken vergeleken.",
+        "width": 1250,
+        "height": 974,
+        "image": "/assets/species/plumage/sp116-nestwand.webp",
+        "label": "Bij de nestwand",
+        "note": "De vogel hangt bij de ingang van een uitgegraven gang. Op dit beeld is de borstband beperkt zichtbaar."
       }
     ]
   }

@@ -377,7 +377,9 @@ def main():
             assert juvenile.locator('img').get_attribute("src") == "/assets/species/plumage/sp016-juv.webp"
             close_detail()
             open_species("Kokmeeuw", "sp097")
-            pair = p.locator('#sdPanel-herkenning .sd-compare-card')
+            pair = p.locator('#sdPanel-herkenning .sd-compare').filter(
+                has=p.get_by_role("heading", name="Kokmeeuw en Zwartkopmeeuw · broedkleed")
+            ).locator('.sd-compare-card')
             assert pair.locator('strong').all_text_contents() == ["Kokmeeuw", "Zwartkopmeeuw"]
             for card in pair.all():
                 assert card.locator('.sd-badge').inner_text() == "Broedkleed"
