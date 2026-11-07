@@ -2,7 +2,7 @@
 
 Baseline: concept-PR #53, bbadaa799d870f1659c692fefb7998241cd81014. CAP-BIRD-012 en CAP-BIRD-015.
 
-**134 soorten, 127 hoofdfoto’s, 242 unieke lokale beeldbestanden.** Vluchtstatus: 10 hoofdfoto’s in vlucht, 7 aparte vluchtbeelden en 8 kaarten met een vluchtvergelijking. 74 soorten zijn visueel gecontroleerd zonder bestaand vluchtbeeld. 35 soorten vragen vervolgcontrole.
+**134 soorten, 127 hoofdfoto’s, 245 unieke lokale beeldbestanden.** Vluchtstatus: 10 hoofdfoto’s in vlucht, 7 aparte vluchtbeelden en 11 kaarten met een vluchtvergelijking. 71 soorten zijn visueel gecontroleerd zonder bestaand vluchtbeeld. 35 soorten vragen vervolgcontrole.
 
 Technische controle op alle soorten met bestaande, geregistreerde gidsfoto’s. Elk uniek lokaal bestand is gedecodeerd. Verschillende paden zijn vergeleken op SHA-256. De soortnaam en het lokale pad zijn ook gecontroleerd via guide_coverage. Bronregistratie bewijst eerdere beoordeling; de eerste visuele hercontrole betrof de vluchtkandidaten. Rondes 9 tot en met 12 voegen elk twintig visueel gecontroleerde soorten toe.
 
@@ -20,10 +20,10 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp009 | Slechtvalk | Ja | 3 | Hoofdfoto |
 | sp016 | Grote Bonte Specht | Ja | 4 | Vergelijking |
 | sp017 | Kleine Bonte Specht | Ja | 3 | Vergelijking |
-| sp018 | Zwarte Specht | Ja | 3 | Apart beeld |
-| sp019 | Groene Specht | Ja | 3 | Gecontroleerd · geen vluchtbeeld |
-| sp020 | Middelste Bonte Specht | Ja | 3 | Gecontroleerd · geen vluchtbeeld |
-| sp021 | Ekster | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp018 | Zwarte Specht | Ja | 3 | Vergelijking |
+| sp019 | Groene Specht | Ja | 4 | Vergelijking |
+| sp020 | Middelste Bonte Specht | Ja | 4 | Vergelijking |
+| sp021 | Ekster | Ja | 2 | Apart beeld |
 | sp022 | Zwarte Kraai | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp025 | Kauw | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp026 | Gaai | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
@@ -209,3 +209,15 @@ Basis is concept-PR #59, d6e3788de1bc31a15196d30d6eafba0cc7077ac7. Voor Grote Bo
 CAP-BIRD-012/015. De twee bonte spechten krijgen een gedeelde vluchtvergelijking boven de verenkleden. Zwarte Specht krijgt op dezelfde plek een eigen vluchtfoto. De uitsnede maakt de vogel beter zichtbaar, maar de oorspronkelijke opname heeft bewegingsonscherpte en de onderste vleugel raakt de beeldrand. Exacte leeftijd is niet voor alle foto’s bevestigd. Volgende soort is Groene Specht. Na deze batch staan 109 soorten op de zoeklijst.
 
 Mobiele Chromium-test op 390 px: de drie soortkaarten via de soortenlijst geopend. De lokale beelden laden, de eigen foto staat eerst, vlucht staat boven verenkleed waar aanwezig, en de foto opent en zoomt naar 2×. Gidsdekking en bestaande positie- en uniciteitstest geslaagd. Fysieke toesteltest staat open.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 3
+
+Basis is concept-PR #60, 3455e3fb480b5fadfacc8c1921b3a6fcfa9e22a8. Voor Groene Specht en Ekster zijn foto’s uit de Commons-vluchtcategorieën bekeken. Voor Middelste Bonte Specht zijn de wetenschappelijke namen Dendrocoptes medius, Dendrocopos medius en Leiopicus medius en lokale soortnamen gebruikt. De gekozen opname is via een Nederlandse soortnaam gevonden en is visueel gecontroleerd. Hij toont de onderzijde, waardoor de rode kruin grotendeels achter de vleugel valt. De leeftijd en het geslacht van Middelste Bonte Specht en Ekster zijn niet uit deze foto’s vastgesteld.
+
+- Groene Specht · Alexis Lours · CC BY 4.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Female_green_woodpecker_in_flight.jpg)
+- Middelste Bonte Specht · Yves Hoebeke · CC BY-SA 2.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Middelste-bonte-specht-1_(28031708853).jpg)
+- Ekster · Alexis Lours · CC BY 4.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Eurasian_Magpie_2023-10-16_01.jpg)
+
+CAP-BIRD-012/015. De Groene en Zwarte Specht staan in een nieuwe vluchtvergelijking. De Middelste Bonte Specht is toegevoegd aan de vergelijking van bonte spechten. De Ekster heeft een afzonderlijke vluchtfoto. Volgende soort is Zwarte Kraai. Na deze batch staan 106 soorten op de zoeklijst.
+
+Het register bewaart maximaal twee houdingsfoto’s en kan daarnaast één aparte vluchtfoto bevatten. De twee validators tellen die afzonderlijk, zodat bestaande houdingbeelden behouden blijven. Mobiele Chromium-test op 390 px: zes betrokken kaarten via de soortenlijst geopend, de lokale vluchtfoto’s gedecodeerd, de eigen soort eerst en vóór verenkleed gecontroleerd, en 2× zoom bediend. Hashcontrole bevestigt dat de drie nieuwe bestanden nergens anders in de gids- of showcasebibliotheek staan. Fysieke toesteltest staat open.
