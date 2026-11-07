@@ -1346,10 +1346,10 @@ export const LIFE = Object.freeze({
  "sp094": {
   "breeding": {
    "period": "apr–jul",
-   "nest": "Kuil op de grond in een kolonie in duinen, op daken of dijken",
+   "nest": "Grondnest in kustkolonies; broedt ook op daken in steden.",
    "eggs": "2–3",
-   "incubation": "28–30 dagen",
-   "fledging": "35–40 dagen",
+   "incubation": "25–33 dagen",
+   "fledging": "35–49 dagen",
    "broods": "1",
    "months": "apr-jul"
   },
@@ -1361,10 +1361,10 @@ export const LIFE = Object.freeze({
  "sp095": {
   "breeding": {
    "period": "mei–jul",
-   "nest": "Kuil in de vegetatie in een kolonie, ook op platte daken",
+   "nest": "Grondnest in kustkolonies, vaak in dichtere vegetatie dan de Zilvermeeuw; ook op gebouwen.",
    "eggs": "2–3",
-   "incubation": "24–27 dagen",
-   "fledging": "35–40 dagen",
+   "incubation": "24–28 dagen",
+   "fledging": "30–40 dagen",
    "broods": "1",
    "months": "mei-jul"
   },
@@ -1641,7 +1641,7 @@ export const LIFE = Object.freeze({
   },
   "diet": "Vliegende insecten, laag boven land en water",
   "behaviour": "Jaagt laag boven weilanden en water; in de nazomer in grote groepen op draden",
-  "migration": "Zomergast (apr–okt); overwintert in zuidelijk Afrika",
+  "migration": "Zomergast en doortrekker; Nederlandse broedvogels overwinteren in West- en Centraal-Afrika, grofweg tussen Ivoorkust en Angola.",
   "voice": "Kwetterende zang met een raspend eindje; roep \"wit-wit\""
  },
  "sp115": {
