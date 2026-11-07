@@ -2,40 +2,40 @@
 
 Baseline: concept-PR #53, bbadaa799d870f1659c692fefb7998241cd81014. CAP-BIRD-012 en CAP-BIRD-015.
 
-**134 soorten, 127 hoofdfoto’s, 236 unieke lokale beeldbestanden.** Vluchtstatus: 10 hoofdfoto’s in vlucht, 6 aparte vluchtbeelden en 3 kaarten met een vluchtvergelijking. 115 soorten vragen vervolgcontrole.
+**134 soorten, 127 hoofdfoto’s, 236 unieke lokale beeldbestanden.** Vluchtstatus: 10 hoofdfoto’s in vlucht, 6 aparte vluchtbeelden en 3 kaarten met een vluchtvergelijking. 20 soorten zijn visueel gecontroleerd zonder bestaand vluchtbeeld. 95 soorten vragen vervolgcontrole.
 
-Technische controle op alle soorten met bestaande, geregistreerde gidsfoto’s. Elk uniek lokaal bestand is gedecodeerd. Verschillende paden zijn vergeleken op SHA-256. De soortnaam en het lokale pad zijn ook gecontroleerd via guide_coverage. Bronregistratie bewijst eerdere beoordeling; visuele hercontrole is in deze ronde beperkt tot de vluchtkandidaten hieronder.
+Technische controle op alle soorten met bestaande, geregistreerde gidsfoto’s. Elk uniek lokaal bestand is gedecodeerd. Verschillende paden zijn vergeleken op SHA-256. De soortnaam en het lokale pad zijn ook gecontroleerd via guide_coverage. Bronregistratie bewijst eerdere beoordeling; de eerste visuele hercontrole betrof de vluchtkandidaten. Ronde 9 voegt twintig visueel gecontroleerde soorten toe.
 
-Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen plaats vóór de kleden. **Vergelijking** toont de eigen soort als eerste vóór de kleden. **Open** betekent dat nog geen bestaand beeld als vlucht is bevestigd in deze inventarisatie. Een apart vluchtbeeld mag een hoofdfoto nooit herhalen.
+Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen plaats vóór de kleden. **Vergelijking** toont de eigen soort als eerste vóór de kleden. **Gecontroleerd · geen vluchtbeeld** betekent dat alle geregistreerde gidsfoto’s voor die soort visueel zijn nagekeken en geen vlucht tonen. **Open** betekent dat de visuele vervolgcontrole nog moet gebeuren. Een apart vluchtbeeld mag een hoofdfoto nooit herhalen.
 
 | ID | Soort | Hoofdfoto | Unieke geregistreerde beelden | Vluchtdekking |
 |---|---|---|---:|---|
-| sp002 | Houtduif | Ja | 1 | Open |
-| sp003 | Holenduif | Ja | 1 | Open |
-| sp004 | Turkse Tortel | Ja | 1 | Open |
+| sp002 | Houtduif | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp003 | Holenduif | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp004 | Turkse Tortel | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp005 | Buizerd | Ja | 3 | Apart beeld |
 | sp006 | Sperwer | Ja | 4 | Vergelijking |
 | sp007 | Havik | Ja | 4 | Vergelijking |
 | sp008 | Torenvalk | Ja | 4 | Vergelijking |
 | sp009 | Slechtvalk | Ja | 3 | Hoofdfoto |
-| sp016 | Grote Bonte Specht | Ja | 3 | Open |
-| sp017 | Kleine Bonte Specht | Ja | 2 | Open |
-| sp018 | Zwarte Specht | Ja | 2 | Open |
-| sp019 | Groene Specht | Ja | 3 | Open |
-| sp020 | Middelste Bonte Specht | Ja | 3 | Open |
-| sp021 | Ekster | Ja | 1 | Open |
-| sp022 | Zwarte Kraai | Ja | 1 | Open |
-| sp025 | Kauw | Ja | 1 | Open |
-| sp026 | Gaai | Ja | 1 | Open |
-| sp029 | Koolmees | Ja | 1 | Open |
-| sp030 | Pimpelmees | Ja | 2 | Open |
+| sp016 | Grote Bonte Specht | Ja | 3 | Gecontroleerd · geen vluchtbeeld |
+| sp017 | Kleine Bonte Specht | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
+| sp018 | Zwarte Specht | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
+| sp019 | Groene Specht | Ja | 3 | Gecontroleerd · geen vluchtbeeld |
+| sp020 | Middelste Bonte Specht | Ja | 3 | Gecontroleerd · geen vluchtbeeld |
+| sp021 | Ekster | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp022 | Zwarte Kraai | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp025 | Kauw | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp026 | Gaai | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp029 | Koolmees | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp030 | Pimpelmees | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
 | sp031 | Matkop | Ja | 2 | Apart beeld |
-| sp032 | Glanskop | Ja | 2 | Open |
-| sp033 | Kuifmees | Ja | 2 | Open |
-| sp034 | Staartmees | Ja | 2 | Open |
-| sp035 | Vink | Ja | 2 | Open |
-| sp036 | Groenling | Ja | 1 | Open |
-| sp037 | Putter | Ja | 1 | Open |
+| sp032 | Glanskop | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
+| sp033 | Kuifmees | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
+| sp034 | Staartmees | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
+| sp035 | Vink | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
+| sp036 | Groenling | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp037 | Putter | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp038 | Sijs | Ja | 1 | Open |
 | sp039 | Kneu | Ja | 1 | Open |
 | sp040 | Goudvink | Ja | 1 | Open |
@@ -144,6 +144,14 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp262 | Grauwe Klauwier | Ja | 1 | Open |
 | sp282 | Roze Spreeuw | Ja | 1 | Open |
 | sp288 | Grote Gele Kwikstaart | — | 1 | Open |
+
+## Ronde 9 · bestaande foto’s van duiven, spechten, kraaiachtigen, mezen en vinken
+
+Basis: concept-PR #54, 661fb803c5e0d781174e9eadfe92197231bc3187. Alle 33 bestaande gidsfoto’s voor de eerste twintig open soorten zijn visueel naast hun bronregistratie en kleedomschrijving gelegd. De 33 lokale paden en bestandsinhouden zijn uniek binnen deze groep. Verwijzingen die de hoofdfoto hergebruiken tellen één keer. De foto's tonen zittende, klimmende of staande vogels. De vluchtstatus is voor deze groep daarom vastgesteld als **geen bestaand vluchtbeeld**.
+
+- Middelste Bonte Specht: de soort past bij de zichtbare kenmerken. Het mannetje is aangeduid door de fotograaf. Het geslacht is niet onafhankelijk uit deze foto afgeleid. [Bronfoto](https://commons.wikimedia.org/wiki/File:Middle_spotted_woodpecker_(Dendrocoptes_medius_medius)_male.jpg)
+- Glanskop: beide bronnen identificeren de soort als Glanskop. Het kleine frontale beeld laat het snaveldetail onvoldoende zien voor zelfstandig onderscheid met Matkop. De bestaande pose blijft een herkenningsbeeld zonder die claim. [Hoofdfoto](https://commons.wikimedia.org/wiki/File:Sumpfmeise_13ib.jpg) · [Pose](https://commons.wikimedia.org/wiki/File:Poecile_palustris_1_Luc_Viatour.jpg) · [Veldkenmerken](https://www.vogelbescherming.nl/actueel/bericht/matkop-vs-glanskop-en-vv)
+- De overige afbeeldingen passen bij hun geregistreerde soort en, waar aangegeven, het zichtbare kleed. Er zijn geen nieuwe beelden of bronlinks aan de app toegevoegd.
 
 ## Volgende controlebatches
 
