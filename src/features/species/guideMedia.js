@@ -1955,7 +1955,8 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kokmeeuw",
       "visualCheck": "Volwassen vogel aan het water met witte kop, donkere oorvlek en rode poten.",
       "alt": "Kokmeeuw — Volwassen vogel aan het water met witte kop, donkere oorvlek en rode poten.",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "showSourceLink": false
     },
     "breeding": {
       "reuseGuidePhoto": true
@@ -3847,6 +3848,48 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "width": 1250,
       "height": 938,
       "image": "/assets/species/plumage/sp130-adult-f.webp"
+    }
+  },
+  "sp164": {
+    "adult_m": {
+      "file": "Great black-backed gull (Larus marinus) 2026 02.jpg",
+      "nl": "Grote Mantelmeeuw",
+      "latin": "Larus marinus",
+      "author": "TRinaud",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Great_black-backed_gull_(Larus_marinus)_2026_02.jpg",
+      "showSourceLink": false,
+      "alt": "Volwassen Grote Mantelmeeuw met roze poten, bijna zwarte mantel en een forse gele snavel met rode vlek.",
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+      "reviewed": "2026-11-07",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-mantelmeeuw",
+      "visualCheck": "Volwassen Grote Mantelmeeuw met roze poten, bijna zwarte mantel en een forse gele snavel met rode vlek.",
+      "verification": "Soort en kleed gecontroleerd aan de hand van bronbeschrijving en zichtbare veldkenmerken.",
+      "width": 1250,
+      "height": 833,
+      "image": "/assets/species/plumage/sp164-adult.webp"
+    }
+  },
+  "sp288": {
+    "adult_m": {
+      "file": "Motacilla cinerea, male.jpg",
+      "nl": "Grote Gele Kwikstaart",
+      "latin": "Motacilla cinerea",
+      "author": "Nikola Veljković",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Motacilla_cinerea,_male.jpg",
+      "showSourceLink": false,
+      "alt": "Mannetje Grote Gele Kwikstaart met zwarte keel, grijze bovenzijde en gele onderzijde bij stromend water.",
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+      "reviewed": "2026-11-07",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-gele-kwikstaart",
+      "visualCheck": "Mannetje Grote Gele Kwikstaart met zwarte keel, grijze bovenzijde en gele onderzijde bij stromend water.",
+      "verification": "Soort en kleed gecontroleerd aan de hand van bronbeschrijving en zichtbare veldkenmerken.",
+      "width": 1250,
+      "height": 938,
+      "image": "/assets/species/plumage/sp288-adult.webp"
     }
   }
 });

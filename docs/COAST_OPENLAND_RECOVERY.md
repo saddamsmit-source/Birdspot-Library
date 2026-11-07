@@ -52,3 +52,15 @@ Beeldcontrole op de bestaande lokale WebP's, met de herkomst uit het creditsregi
 CAP-BIRD-012/015. De bestaande foto's blijven lokaal. Browserbediening en fysiek toestel zijn in deze ronde niet getest.
 
 Nieuwe lokale kleedfoto voor Smient-vrouwtje, zichtbaar op de soortkaart en in de vergelijking. De foto is gecontroleerd tegen de bronbeschrijving en toont de korte blauwgrijze snavel met zwarte punt, ronde kop en rossigbruine veren. Daniel106, CC BY 4.0. WebP van 1250 × 938, zonder uitsnede. Credit, licentie en bewerking worden getoond. Voor deze nieuwe foto wordt geen externe foto- of bronlink weergegeven. [Originele bron voor het ontwikkelregister](https://commons.wikimedia.org/wiki/File:Samice_hv%C3%ADzd%C3%A1ka_eurasijsk%C3%A9ho_na_kameni.jpg)
+
+## Batch 4 · Grote Mantelmeeuw, Kokmeeuw en Grote Gele Kwikstaart
+
+Basis: concept-PR #44 op 38dcbb9a0f45d51c580ed8222de6ced128343631. Herkenning, vindplaatsen, fotografie en broedgegevens aangevuld.
+
+- [Grote Mantelmeeuw](https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-mantelmeeuw): onderscheid met Kleine Mantelmeeuw op bouw, snavel en poten, plus broedduur en tijd tot vliegvlug.
+- [Kokmeeuw](https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kokmeeuw): broed- en winterkleed, witte vleugelvoorrand, maten en vergelijking met Stormmeeuw. De bestaande lokale hoofdfoto toont een chocoladebruine kap, slanke donkerrode snavel en rode poten. De wintervergelijking gebruikt de apart gecontroleerde lokale winterfoto met witte kop en donkere oorvlek. De credit blijft zichtbaar en de fotobron staat in het register.
+- [Grote Gele Kwikstaart](https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-gele-kwikstaart): jeugdkleed, beken en stadswater, broedduur en vergelijking met Gele Kwikstaart op mantel, poten en staartverhouding.
+
+Nieuwe lokale kleedfoto’s voor volwassen Grote Mantelmeeuw en mannetje Grote Gele Kwikstaart. Makerscredit, licentie en bewerking worden in de app getoond. Bronverwijzingen naar de foto’s zijn geregistreerd voor ontwikkelaars. [Grote Mantelmeeuw · TRinaud · CC BY 4.0](https://commons.wikimedia.org/wiki/File:Great_black-backed_gull_(Larus_marinus)_2026_02.jpg) · [Grote Gele Kwikstaart · Nikola Veljković · CC BY-SA 4.0](https://commons.wikimedia.org/wiki/File:Motacilla_cinerea,_male.jpg)
+
+CAP-BIRD-012/015. Browserbediening en fysiek toestel zijn in deze ronde niet getest.
