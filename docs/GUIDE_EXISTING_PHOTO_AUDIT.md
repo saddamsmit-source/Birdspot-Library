@@ -37,9 +37,9 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp036 | Groenling | Ja | 3 | Apart beeld |
 | sp037 | Putter | Ja | 3 | Apart beeld |
 | sp038 | Sijs | Ja | 3 | Apart beeld |
-| sp039 | Kneu | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp040 | Goudvink | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp041 | Appelvink | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp039 | Kneu | Ja | 3 | Apart beeld |
+| sp040 | Goudvink | Ja | 3 | Apart beeld |
+| sp041 | Appelvink | Ja | 3 | Apart beeld |
 | sp042 | Roodmus | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp043 | Huismus | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
 | sp044 | Ringmus | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
@@ -269,3 +269,15 @@ Basis is concept-PR #64, b9c63a25ba88135751cd7db61507cfa29e271d10. Voor Groenlin
 CAP-BIRD-012/015. Groenling en Sijs staan in een vluchtvergelijking op basis van snavel en vleugeltekening. Putter heeft een eigen vluchtfoto. De foto's zijn lokale WebP-bestanden en staan elk eenmaal op de soortkaart, boven het verenkleed. Bron, maker, licentie en bewerking staan bij de beelden. Na deze ronde staan 94 soorten op de zoeklijst. Volgende soort is Kneu.
 
 Mobiele Chromium-test op 390 px: alle drie de kaarten geopend. De eigen foto staat vooraan, de beelden decoderen, de bronlinks zijn zichtbaar en 2× zoom werkt. Gidsdekking, foto-opmaak, volgorde en uniciteitstests zijn geslaagd. Alle drie de bestanden hebben een unieke SHA-256 tussen de appbeelden. Fysieke toesteltest staat open.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 8
+
+Basis is concept-PR #65, 7c17767af1ca8a257fb967555a0308a0b331e4d1. Commons-vluchtcategorieën, bereikbare Commons-miniaturen, fotosites en iNaturalist zijn nagezocht met soortnamen en vluchttermen in meerdere talen. Bij Kneu en Appelvink leverde zoeken in waarnemingsbeschrijvingen van iNaturalist bruikbare resultaten op. De determinatie is gecontroleerd aan de hand van de onderzoekswaardige waarnemingen, de zichtbare kenmerken en de soortgids. De licenties zijn per fotopagina gecontroleerd. Appelvinkfoto’s van vogels met poten aan de tak vielen af.
+
+- Kneu · Codrin Bucur · CC BY 4.0. [Bronfoto](https://www.inaturalist.org/photos/617561306) · [Waarneming](https://www.inaturalist.org/observations/339474823). De uitsnede toont twee vogels uit de groep.
+- Goudvink · Holger Uwe Schmitt · CC BY-SA 4.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:26_Gramm_Fluggewicht_erreicht_ein_Dompfaff._01.jpg). De zijaanzichtfoto toont de rode borst en witte stuit.
+- Appelvink · Codrin Bucur · CC BY 4.0. [Bronfoto](https://www.inaturalist.org/photos/576075793) · [Waarneming](https://www.inaturalist.org/observations/318728814). De uitsnede toont de vogel linksboven met de lichte vleugelband.
+
+CAP-BIRD-012/015. Iedere soort heeft een afzonderlijke lokale vluchtfoto vóór het verenkleed. Kneu en Appelvink zijn op afstand gefotografeerd, waardoor fijn verenkleeddetail beperkt blijft. Herbruikbare zoekmethode: zoek op vluchttermen in de waarnemingsbeschrijving, bekijk daarna de afzonderlijke foto’s en controleer de licentie op de fotopagina. Volgende soort is Roodmus. Na deze batch staan 91 soorten op de zoeklijst.
+
+Mobiele Chromium-test op 390 px: alle drie de soortkaarten geopend. Per kaart de lokale foto gedecodeerd, plaatsing vóór het verenkleed, eenmalige weergave, bronlink en 2× zoom gecontroleerd. Gidsdekking, bestaande volgorde- en uniciteitstests en de SHA-256-controle van de drie bestanden zijn geslaagd. Fysieke toesteltest staat open.
