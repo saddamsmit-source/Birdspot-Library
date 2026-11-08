@@ -5472,6 +5472,75 @@
         "height": 853,
         "image": "/assets/species/plumage/sp083-flight.webp"
       }
+    ],
+    "sp084": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Let op de roestbruine hals, de lange spitse snavel en de uitgestrekte tenen achter het lichaam.",
+        "file": "Purple heron in flight 01.jpg",
+        "nl": "Purperreiger",
+        "latin": "Ardea purpurea",
+        "author": "Alexis Lours",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Purple_heron_in_flight_01.jpg",
+        "showSourceLink": true,
+        "alt": "Purperreiger in vrije vlucht met geheven vleugels en een roestbruine, ingetrokken hals.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/purperreiger",
+        "visualCheck": "Purperreiger in vrije vlucht met geheven vleugels en een roestbruine, ingetrokken hals.",
+        "width": 1400,
+        "height": 933,
+        "image": "/assets/species/plumage/sp084-flight.webp"
+      }
+    ],
+    "sp085": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Bij deze volwassen Kwak vallen de zwarte kruin, het rode oog en de brede grijze vleugels op.",
+        "file": "Black-crowned night heron (Nycticorax nycticorax) in flight.jpg",
+        "nl": "Kwak",
+        "latin": "Nycticorax nycticorax",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Black-crowned_night_heron_(Nycticorax_nycticorax)_in_flight.jpg",
+        "showSourceLink": true,
+        "alt": "Volwassen Kwak in vrije vlucht, met brede grijze vleugels, een zwarte kruin en een rood oog.",
+        "modifications": "Uitgesneden rond de vogel, verkleind en omgezet naar WebP",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kwak",
+        "visualCheck": "Volwassen Kwak in vrije vlucht, met brede grijze vleugels, een zwarte kruin en een rood oog.",
+        "width": 1400,
+        "height": 1267,
+        "image": "/assets/species/plumage/sp085-flight.webp"
+      }
+    ],
+    "sp086": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Let op de oranje snavel en de lichte voorvleugel naast de donkere slagpennen.",
+        "file": "Greylag goose (Anser anser) in flight Marken.jpg",
+        "nl": "Grauwe Gans",
+        "latin": "Anser anser",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Greylag_goose_(Anser_anser)_in_flight_Marken.jpg",
+        "showSourceLink": true,
+        "alt": "Grauwe Gans in vrije vlucht bij Marken, met oranje snavel, vooruitgestrekte hals en geheven vleugels.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grauwe-gans",
+        "visualCheck": "Grauwe Gans in vrije vlucht bij Marken, met oranje snavel, vooruitgestrekte hals en geheven vleugels.",
+        "width": 1400,
+        "height": 933,
+        "image": "/assets/species/plumage/sp086-flight.webp"
+      }
     ]
   }
 }

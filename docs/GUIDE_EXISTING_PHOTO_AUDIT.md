@@ -75,9 +75,9 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp081 | Blauwe Reiger | Ja | 2 | Hoofdfoto |
 | sp082 | Kleine Zilverreiger | Ja | 4 | Hoofdfoto |
 | sp083 | Grote Zilverreiger | Ja | 4 | Apart beeld |
-| sp084 | Purperreiger | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
-| sp085 | Kwak | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
-| sp086 | Grauwe Gans | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
+| sp084 | Purperreiger | Ja | 3 | Apart beeld |
+| sp085 | Kwak | Ja | 3 | Apart beeld |
+| sp086 | Grauwe Gans | Ja | 3 | Apart beeld |
 | sp089 | Wilde Eend | Ja | 3 | Gecontroleerd · geen vluchtbeeld |
 | sp090 | Slobeend | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
 | sp091 | Wintertaling | Ja | 5 | Gecontroleerd · geen vluchtbeeld |
@@ -415,3 +415,15 @@ Basis is concept-PR #77, 53d05f9acb967499b1016d7ea0fe141cc985b323. Voor Meerkoet
 CAP-BIRD-012/015. De drie lokale vluchtbeelden staan elk eenmaal boven het verenkleed. Herbruikbare controle: kijk ook bij foto's met algemene bestandsnamen en gebruik een vergrote uitsnede om vrije vlucht te onderscheiden van afzet of landing. Na deze ronde staan 67 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Purperreiger.
 
 Mobiele Chromium-test op 390 px: alle drie de soortkaarten via appbreed zoeken met de wetenschappelijke naam geopend. De beelden decoderen, staan eenmaal boven het verenkleed, tonen hun bronlink en openen met 2× zoom. Appbrede zoekregressie, gidsdekking, volgorde- en uniciteitstests en SHA-256-controle zijn geslaagd. Fysieke toesteltest staat open.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 20
+
+Basis is concept-PR #79, 04fdb069b2760e0c764c1d12136dbad06a73b5b7. Voor Purperreiger, Kwak en Grauwe Gans zijn Commons-soortcategorieën en de afzonderlijke bronpagina's in meerdere talen nagezocht. Per soort zijn minimaal twee kandidaten visueel vergeleken op vrije vlucht en zichtbare herkenningskenmerken. De gekozen foto's tonen de vogel vrij boven de omgeving.
+
+- Purperreiger · Alexis Lours · CC BY 4.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Purple_heron_in_flight_01.jpg). Opname uit Gennevilliers, Frankrijk. De roestbruine ingetrokken hals, spitse snavel en lange tenen zijn zichtbaar. Verkleind en omgezet naar WebP.
+- Kwak · Charles J. Sharp · CC BY-SA 4.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Black-crowned_night_heron_(Nycticorax_nycticorax)_in_flight.jpg). Opname bij Akrotiri, Cyprus. De uitsnede laat bij deze volwassen vogel de zwarte kruin, het rode oog en de brede vleugels zien.
+- Grauwe Gans · Charles J. Sharp · CC BY-SA 4.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Greylag_goose_(Anser_anser)_in_flight_Marken.jpg). Opname bij Marken. De oranje snavel en het contrast tussen de lichte voorvleugel en donkere slagpennen zijn zichtbaar. De [alternatieve opname uit Krommenie](https://commons.wikimedia.org/wiki/File:Greylag_goose_flying.jpg) toont het opstijgen vlak bij het water. De foto uit Marken is verkleind en omgezet naar WebP.
+
+CAP-BIRD-012/015. De drie beelden staan lokaal en elk eenmaal boven het verenkleed. Herbruikbare controle: vergelijk dezelfde soort bij verschillende vleugelslagen en kies de opname waarop de kop en vleugelkenmerken samen leesbaar zijn. Na deze ronde staan 64 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Wilde Eend.
+
+Mobiele Chromium-test op 390 px: alle drie de soortkaarten via appbreed zoeken met de wetenschappelijke naam geopend. Elk beeld decodeert, staat eenmaal boven het verenkleed, toont de bronlink en opent met 2× zoom. Gidsdekking, volgorde- en uniciteitstests en SHA-256-controle zijn geslaagd. Fysieke toesteltest staat open.
