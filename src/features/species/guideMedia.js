@@ -6091,5 +6091,74 @@ export const GUIDE_POSES = Object.freeze({
       "height": 400,
       "image": "/assets/species/plumage/sp117-flight.webp"
     }
+  ],
+  "sp118": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "De opname toont de lichte onderzijde, de lange donkere staart en geheven vleugels. De vleugels zijn door beweging onscherp.",
+      "file": "iNaturalist photo 241756520",
+      "nl": "Rietgors",
+      "latin": "Emberiza schoeniclus",
+      "author": "Codrin Bucur",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://www.inaturalist.org/photos/241756520",
+      "showSourceLink": true,
+      "alt": "Rietgors van opzij in vrije vlucht met lichte onderzijde, donkere staart en geheven vleugels.",
+      "modifications": "Bijgesneden rond de vogel en omgezet naar WebP",
+      "reviewed": "2026-11-08",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/rietgors",
+      "visualCheck": "Rietgors van opzij in vrije vlucht met lichte onderzijde, donkere staart en geheven vleugels.",
+      "width": 605,
+      "height": 405,
+      "image": "/assets/species/plumage/sp118-flight.webp"
+    }
+  ],
+  "sp126": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "Let op de lang gestrekte hals, de brede witte vleugels en de oranjerode snavel met zwarte basis.",
+      "file": "Cygnus olor-pjt1.jpg",
+      "nl": "Knobbelzwaan",
+      "latin": "Cygnus olor",
+      "author": "Pjt56",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Cygnus_olor-pjt1.jpg",
+      "showSourceLink": true,
+      "alt": "Knobbelzwaan in vrije vlucht tegen een blauwe lucht met gestrekte hals en twee gespreide witte vleugels.",
+      "modifications": "Verkleind en omgezet naar WebP",
+      "reviewed": "2026-11-08",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/knobbelzwaan",
+      "visualCheck": "Knobbelzwaan in vrije vlucht tegen een blauwe lucht met gestrekte hals en twee gespreide witte vleugels.",
+      "width": 1400,
+      "height": 872,
+      "image": "/assets/species/plumage/sp126-flight.webp"
+    }
+  ],
+  "sp128": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "Bij deze man vallen de rode snavel met knobbel, donkere kop en brede kastanjebruine borstband op.",
+      "file": "Gravand - Common Shelduck - Tadorna tadorna.JPG",
+      "nl": "Bergeend",
+      "latin": "Tadorna tadorna",
+      "author": "Marton Berntsen",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Gravand_-_Common_Shelduck_-_Tadorna_tadorna.JPG",
+      "showSourceLink": true,
+      "alt": "Bergeend in vrije vlucht van opzij, met rode snavelknobbel, donkere kop, kastanjebruine borstband en wit lichaam.",
+      "modifications": "Verkleind en omgezet naar WebP",
+      "reviewed": "2026-11-08",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bergeend",
+      "visualCheck": "Bergeend in vrije vlucht van opzij, met rode snavelknobbel, donkere kop, kastanjebruine borstband en wit lichaam.",
+      "width": 1400,
+      "height": 742,
+      "image": "/assets/species/plumage/sp128-flight.webp"
+    }
   ]
 });
