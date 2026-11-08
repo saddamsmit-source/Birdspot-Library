@@ -715,3 +715,22 @@ Basis is [PR #109](https://github.com/saddamsmit-source/Birdspot-Library/pull/10
 - De [dekkingscontrole](../tools/species/guide_coverage.mjs) rapporteert per soort welke rubrieken beeld hebben en welke nog openstaan. In deze inventaris hebben 18 van de 134 soorten alle drie de rubrieken gevuld. Dat is de gemeten dekking van de bestaande foto's. Een nieuwe broncontrole per ontbrekend kleed volgt volgens roofvogelprioriteit.
 
 VERIFIED · Alle 134 gefotografeerde soorten hebben een soortspecifieke hoofdfoto, de bestaande unieke bronnen blijven vindbaar en de kleedrubrieken verschijnen vóór de vergelijkingen. NOT TESTED · Fysiek toestel en productie.
+
+## Nacontrole bestaande gidsbeelden · groep 1
+
+Basis [PR #110](https://github.com/saddamsmit-source/Birdspot-Library/pull/110), `5d1f474fc4c726873b2aa0a2ef22fb16f966ed44`. CAP-BIRD-012/015. De elf roofvogelkaarten met gidsfoto hadden al een foto voor mannetje, vrouwtje en juveniel. De eerste aanvullingen gaan daarom naar veelvoorkomende soorten met open rollen.
+
+| Soort | Ingevulde rubriek | Broncontrole |
+|---|---|---|
+| Vink | Juveniel | Marie-Lan Taÿ Pamart, CC BY 4.0. Bron noemt jonge vogel. Vleugelstrepen, bruin kleed en lichte snavelhoek zijn zichtbaar. |
+| Huismus | Juveniel | Charles J. Sharp, CC BY-SA 4.0. Bleke snavelbasis en getekende vleugel, met de jonge vogel op de voorgrond. |
+| Roodborst | Juveniel | Caroline Legg, CC BY 2.0. Lichtbruin gevlekt jeugdkleed zonder oranjerode borst. Volwassen geslachten lijken uiterlijk op elkaar. Aparte labels vragen bevestiging bij de bron. |
+| Roodborsttapuit | Vrouwtje en juveniel | Caroline Legg, CC BY 2.0, en Vcebollada, CC BY-SA 4.0. Bruine kop en lichtoranje borst bij het vrouwtje, lichtere spikkels bij het juveniel. |
+| IJsvogel | Mannetje, vrouwtje en juveniel | Andy Morffew, CC BY 2.0, Roland Riedel en Alexis Lours, CC BY 4.0. Ondersnavel en borsttekening vergeleken met Blasco-Zumeta en Heinze. Het bevestigde mannetje wordt de hoofdfoto. |
+| Wilde Eend | Juvenielen | Marie-Lan Nguyen / Wikimedia Commons, CC BY 2.5. De twee jonge vogels staan samen in de jeugdrubriek. De verschillende geslachtsaanduidingen op de bronpagina zijn voor deze rol niet nodig. |
+| Kuifeend | Juveniel | Tsyganov Sergey, CC BY-SA 4.0. Bruin, deels donzig jong. De als juveniel gepubliceerde kandidaat met verder ontwikkeld mannelijk kleed is afgevallen. |
+| Bergeend | Vrouwtje in vlucht | Charles J. Sharp, CC BY-SA 4.0. Bron vermeldt vrouwtje. De rode snavel heeft geen opvallende knobbel. |
+
+Het [mediaregister](../assets/species/field-guide-media.json) bevat per nieuw beeld de originele fotopagina, licentielink, herkenningsbron en bewerking. De stand is 25 van 134 gefotografeerde soorten met alle drie de rubrieken, tegenover 18 in de vorige versie. Bij 109 gefotografeerde soorten staat minstens één rubriek open. Eerst volgen de overige soorten uit deze inventaris. Daarna wordt het werk hervat aan soorten zonder gidsfoto. Geef bij nauwelijks te onderscheiden geslachten voorrang aan betrouwbare bronregistratie en geef onzekere beelden geen geslachtslabel.
+
+De gedeelde fotoviewer kan 90° links- of rechtsom draaien en op 1×, 2× en 4× vergroten. Na vergroten kan de gebruiker de foto slepen met de muis, vegen op een aanraakscherm of schuiven met de pijltjestoetsen als het fotovlak focus heeft. Draaien en zoomen vinden plaats in de viewer. VERIFIED · Chromium met muis en geëmuleerde aanraakbediening. NOT TESTED · Fysiek toestel en productie.

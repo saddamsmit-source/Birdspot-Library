@@ -46,6 +46,13 @@ assert.ok(photosFor('sp045', 'adult_m').some(image => image.endsWith('-flight.we
 assert.equal(guideHeroPhoto('sp043').image, '/assets/species/plumage/sp043-adult_m.webp');
 assert.equal(guideHeroPhoto('sp141').image, '/assets/species/plumage/sp141-adult.webp');
 assert.ok(recognitionPanel(species.get('sp009')).includes('Man en vrouw lijken op elkaar'));
+for (const id of ['sp035', 'sp043', 'sp053', 'sp075', 'sp089', 'sp092', 'sp128']) {
+  for (const role of ['adult_m', 'adult_f', 'juv']) {
+    assert.ok(photosFor(id, role).length, `Missing photo for ${id}: ${role}`);
+  }
+}
+assert.equal(guideHeroPhoto('sp075').image, '/assets/species/plumage/sp075-male-review.webp');
+assert.ok(photosFor('sp050', 'juv').includes('/assets/species/plumage/sp050-juv-review.webp'));
 for (const id of ['sp008', 'sp009']) {
   const s = species.get(id);
   assert.ok(wherePanel(s).includes(s.photoTip));
