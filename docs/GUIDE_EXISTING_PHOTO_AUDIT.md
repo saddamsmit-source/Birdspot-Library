@@ -64,9 +64,9 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp065 | Boomklever | Ja | 2 | Apart beeld |
 | sp066 | Boomkruiper | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp067 | Taigaboomkruiper | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp068 | Witte Kwikstaart | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp069 | Gele Kwikstaart | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp070 | Veldleeuwerik | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp068 | Witte Kwikstaart | Ja | 2 | Apart beeld |
+| sp069 | Gele Kwikstaart | Ja | 2 | Apart beeld |
+| sp070 | Veldleeuwerik | Ja | 2 | Apart beeld |
 | sp072 | Graspieper | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp075 | IJsvogel | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp077 | Fuut | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
@@ -379,3 +379,15 @@ Basis is concept-PR #74, 6f4b88380e7c6744c7d7bb011d6554fe68eabe49. Voor Boomklev
 CAP-BIRD-012/015. Boomklever heeft een lokaal vluchtbeeld boven het verenkleed. Boomkruiper en Taigaboomkruiper blijven open. Na deze ronde staan 75 soorten zonder vluchtbeeld op de lijst. Volgende nieuwe soort is Witte Kwikstaart.
 
 Mobiele Chromium-test op 390 px: Boomklever via appbreed zoeken met de wetenschappelijke naam geopend. De foto decodeert, staat eenmaal boven het verenkleed, toont de bronlink en opent met 2× zoom. Gidsdekking, volgorde- en uniciteitstests en SHA-256-controle zijn geslaagd. Fysieke toesteltest staat open.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 17
+
+Basis is concept-PR #75, e5eaea97595f66c5acc2b277d04c2124564cfa8a. Voor Witte Kwikstaart, Gele Kwikstaart en Veldleeuwerik zijn Commons, Flickr en iNaturalist gericht nagezocht met Nederlandse, Engelse, Duitse en wetenschappelijke namen. De geselecteerde beelden tonen vrije vlucht, met zichtbare kenmerken op het formaat van de soortkaart. Bij de Gele Kwikstaart is ook de oorspronkelijke Flickr-publicatie vastgelegd via Commons.
+
+- Witte Kwikstaart · Tranceliner · CC BY-SA 4.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Motacilla_alba,_Kalkara,_(2026)_(01).jpg). Gespreide vleugels en witte buitenste staartveren zichtbaar.
+- Gele Kwikstaart · Ralf Hüsges · CC BY 4.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Schafstelze_-_Motacilla_flava.jpg) · [Oorspronkelijke publicatie](https://www.flickr.com/photos/184290238@N07/55265719814/). De vogel vliegt vrij naast de stronk, met de gele onderzijde en lichte wenkbrauwstreep zichtbaar.
+- Veldleeuwerik · Charles J. Sharp · CC BY-SA 4.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Skylark_(Alauda_arvensis)_in_flight.jpg). De vogel is van opzij te zien met geheven vleugels.
+
+CAP-BIRD-012/015. Elke soort heeft één lokaal vluchtbeeld boven het verenkleed. De omzetting naar WebP staat bij elk beeld vermeld. De soortcategorieën op Commons hielpen foto’s met een algemene titel terug te vinden. Na deze ronde staan 72 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Graspieper.
+
+Mobiele Chromium-test op 390 px: alle drie de soortkaarten via appbreed zoeken met de wetenschappelijke naam geopend. Elk beeld decodeert, staat eenmaal boven het verenkleed, toont de bronlink en opent met 2× zoom. Gidsdekking, bestaande volgorde- en uniciteitstests en SHA-256-controle zijn geslaagd. Fysieke toesteltest staat open.
