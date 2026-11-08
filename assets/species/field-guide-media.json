@@ -4896,6 +4896,27 @@
         "height": 900,
         "image": "/assets/species/plumage/sp035-flight.webp",
         "sex": "male"
+      },
+      {
+        "label": "Juveniel",
+        "flight": false,
+        "age": "juvenile",
+        "note": "Jonge Vink met een bruin kleed, lichte vleugelstrepen en een zichtbare lichte snavelhoek.",
+        "file": "Fringilla coelebs juvenile Sigy 20180510 t170526.jpg",
+        "nl": "Vink",
+        "latin": "Fringilla coelebs",
+        "author": "Marie-Lan Taÿ Pamart",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Fringilla_coelebs_juvenile_Sigy_20180510_t170526.jpg",
+        "alt": "Jonge Vink met een bruin kleed, lichte vleugelstrepen en een zichtbare lichte snavelhoek.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://blascozumeta.com/specie_files/16360_ENG_Fringilla_coelebs_aranzadi.pdf",
+        "visualCheck": "Jonge Vink met een bruin kleed, lichte vleugelstrepen en een zichtbare lichte snavelhoek.",
+        "width": 1400,
+        "height": 933,
+        "image": "/assets/species/plumage/sp035-juv-review.webp"
       }
     ],
     "sp036": [
@@ -5084,6 +5105,27 @@
         "height": 886,
         "image": "/assets/species/plumage/sp043-flight.webp",
         "sex": "male"
+      },
+      {
+        "label": "Juveniel",
+        "flight": false,
+        "age": "juvenile",
+        "note": "De jonge Huismus vooraan heeft een lichtbruine kop, een bleke snavelbasis en een bruin getekende vleugel.",
+        "file": "House sparrow (Passer domesticus) juvenile.jpg",
+        "nl": "Huismus",
+        "latin": "Passer domesticus",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:House_sparrow_%28Passer_domesticus%29_juvenile.jpg",
+        "alt": "De jonge Huismus vooraan heeft een lichtbruine kop, een bleke snavelbasis en een bruin getekende vleugel.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.allaboutbirds.org/guide/House_Sparrow/id",
+        "visualCheck": "De jonge Huismus vooraan heeft een lichtbruine kop, een bleke snavelbasis en een bruin getekende vleugel.",
+        "width": 1400,
+        "height": 933,
+        "image": "/assets/species/plumage/sp043-juv-review.webp"
       }
     ],
     "sp044": [
@@ -5246,6 +5288,27 @@
         "width": 1400,
         "height": 1050,
         "image": "/assets/species/plumage/sp050-flight.webp"
+      },
+      {
+        "label": "Juveniel",
+        "flight": false,
+        "age": "juvenile",
+        "note": "Jonge Roodborst met lichtbruine vlekjes op kop en borst. De oranjerode borst van het volwassen kleed ontbreekt nog.",
+        "file": "European Robin - Erithacus rubecula - Juvenile.jpg",
+        "nl": "Roodborst",
+        "latin": "Erithacus rubecula",
+        "author": "Caroline Legg",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:European_Robin_-_Erithacus_rubecula_-_Juvenile.jpg",
+        "alt": "Jonge Roodborst met lichtbruine vlekjes op kop en borst. De oranjerode borst van het volwassen kleed ontbreekt nog.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/roodborst",
+        "visualCheck": "Jonge Roodborst met lichtbruine vlekjes op kop en borst. De oranjerode borst van het volwassen kleed ontbreekt nog.",
+        "width": 1400,
+        "height": 1000,
+        "image": "/assets/species/plumage/sp050-juv-review.webp"
       }
     ],
     "sp051": [
@@ -5292,6 +5355,48 @@
         "width": 610,
         "height": 615,
         "image": "/assets/species/plumage/sp053-flight.webp"
+      },
+      {
+        "label": "Vrouwtje in rust",
+        "flight": false,
+        "sex": "female",
+        "note": "Vrouwtje op een uitkijkpost met een bruin getekende kop en een lichtoranje borst.",
+        "file": "Stonechat - Saxicola rubicola, Female.jpg",
+        "nl": "Roodborsttapuit",
+        "latin": "Saxicola rubicola",
+        "author": "Caroline Legg",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Stonechat_-_Saxicola_rubicola%2C_Female.jpg",
+        "alt": "Vrouwtje op een uitkijkpost met een bruin getekende kop en een lichtoranje borst.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/roodborsttapuit",
+        "visualCheck": "Vrouwtje op een uitkijkpost met een bruin getekende kop en een lichtoranje borst.",
+        "width": 1000,
+        "height": 1400,
+        "image": "/assets/species/plumage/sp053-female-review.webp"
+      },
+      {
+        "label": "Juveniel",
+        "flight": false,
+        "age": "juvenile",
+        "note": "Jonge Roodborsttapuit met lichtbruine spikkels op kop en borst, in zijaanzicht.",
+        "file": "Saxicola rubicola juvenile.jpg",
+        "nl": "Roodborsttapuit",
+        "latin": "Saxicola rubicola",
+        "author": "Vcebollada",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Saxicola_rubicola_juvenile.jpg",
+        "alt": "Jonge Roodborsttapuit met lichtbruine spikkels op kop en borst, in zijaanzicht.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/roodborsttapuit",
+        "visualCheck": "Jonge Roodborsttapuit met lichtbruine spikkels op kop en borst, in zijaanzicht.",
+        "width": 1400,
+        "height": 933,
+        "image": "/assets/species/plumage/sp053-juv-review.webp"
       }
     ],
     "sp056": [
@@ -5522,6 +5627,69 @@
         "width": 1400,
         "height": 858,
         "image": "/assets/species/plumage/sp075-flight.webp"
+      },
+      {
+        "label": "Vrouwtje in rust",
+        "flight": false,
+        "sex": "female",
+        "note": "Vrouwtje op een stronk, met een oranje basis aan de ondersnavel en een donkere snavelpunt.",
+        "file": "Common Kingfisher perching (Alcedo atthis).jpg",
+        "nl": "IJsvogel",
+        "latin": "Alcedo atthis",
+        "author": "Roland Riedel",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Common_Kingfisher_perching_%28Alcedo_atthis%29.jpg",
+        "alt": "Vrouwtje op een stronk, met een oranje basis aan de ondersnavel en een donkere snavelpunt.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.blascozumeta.com/specie_files/08310_Aldedo_atthis_E.pdf",
+        "visualCheck": "Vrouwtje op een stronk, met een oranje basis aan de ondersnavel en een donkere snavelpunt.",
+        "width": 1400,
+        "height": 933,
+        "image": "/assets/species/plumage/sp075-female-review.webp"
+      },
+      {
+        "label": "Juveniel",
+        "flight": false,
+        "age": "juvenile",
+        "note": "Jonge IJsvogel met een donkere zoom op de borstveren, rustend op een tak.",
+        "file": "Common Kingfisher 2025 08 30 01.jpg",
+        "nl": "IJsvogel",
+        "latin": "Alcedo atthis",
+        "author": "Alexis Lours",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Common_Kingfisher_2025_08_30_01.jpg",
+        "alt": "Jonge IJsvogel met een donkere zoom op de borstveren, rustend op een tak.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.blascozumeta.com/specie_files/08310_Aldedo_atthis_E.pdf",
+        "visualCheck": "Jonge IJsvogel met een donkere zoom op de borstveren, rustend op een tak.",
+        "width": 1400,
+        "height": 933,
+        "image": "/assets/species/plumage/sp075-juv-review.webp"
+      },
+      {
+        "label": "Mannetje in rust",
+        "flight": false,
+        "sex": "male",
+        "note": "Mannetje op een tak, met een vrijwel geheel donkere ondersnavel en helderoranje borst.",
+        "file": "Male Alcedo atthis ispida looking to the left (19636115768).jpg",
+        "nl": "IJsvogel",
+        "latin": "Alcedo atthis",
+        "author": "Andy Morffew",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Male_Alcedo_atthis_ispida_looking_to_the_left_%2819636115768%29.jpg",
+        "alt": "Mannetje op een tak, met een vrijwel geheel donkere ondersnavel en helderoranje borst.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.blascozumeta.com/specie_files/08310_Aldedo_atthis_E.pdf",
+        "visualCheck": "Mannetje op een tak, met een vrijwel geheel donkere ondersnavel en helderoranje borst.",
+        "width": 1400,
+        "height": 1120,
+        "image": "/assets/species/plumage/sp075-male-review.webp"
       }
     ],
     "sp078": [
@@ -5684,6 +5852,27 @@
         "height": 958,
         "image": "/assets/species/plumage/sp089-flight.webp",
         "sex": "male"
+      },
+      {
+        "label": "Juvenielen",
+        "flight": false,
+        "age": "juvenile",
+        "note": "Twee jonge Wilde Eenden op de oever met bruin getekende veren en een donkere oogstreep.",
+        "file": "Anas platyrhynchos juvenile JdP 2013-06-14 n01.jpg",
+        "nl": "Wilde Eend",
+        "latin": "Anas platyrhynchos",
+        "author": "Marie-Lan Nguyen / Wikimedia Commons",
+        "license": "CC BY 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.5/",
+        "source": "https://commons.wikimedia.org/wiki/File:Anas_platyrhynchos_juvenile_JdP_2013-06-14_n01.jpg",
+        "alt": "Twee jonge Wilde Eenden op de oever met bruin getekende veren en een donkere oogstreep.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wilde-eend",
+        "visualCheck": "Twee jonge Wilde Eenden op de oever met bruin getekende veren en een donkere oogstreep.",
+        "width": 1400,
+        "height": 935,
+        "image": "/assets/species/plumage/sp089-juv-review.webp"
       }
     ],
     "sp090": [
@@ -5756,6 +5945,27 @@
         "height": 1050,
         "image": "/assets/species/plumage/sp092-flight.webp",
         "sex": "male"
+      },
+      {
+        "label": "Juveniel",
+        "flight": false,
+        "age": "juvenile",
+        "note": "Jonge Kuifeend met grotendeels bruin, nog deels donzig kleed en korte kuif, zwemmend in zijaanzicht.",
+        "file": "Aythya fuligula Чернеть хохлатая Птенец подрос.jpg",
+        "nl": "Kuifeend",
+        "latin": "Aythya fuligula",
+        "author": "Tsyganov Sergey",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Aythya_fuligula_%D0%A7%D0%B5%D1%80%D0%BD%D0%B5%D1%82%D1%8C_%D1%85%D0%BE%D1%85%D0%BB%D0%B0%D1%82%D0%B0%D1%8F_%D0%9F%D1%82%D0%B5%D0%BD%D0%B5%D1%86_%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D1%81.jpg",
+        "alt": "Jonge Kuifeend met grotendeels bruin, nog deels donzig kleed en korte kuif, zwemmend in zijaanzicht.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kuifeend",
+        "visualCheck": "Jonge Kuifeend met grotendeels bruin, nog deels donzig kleed en korte kuif, zwemmend in zijaanzicht.",
+        "width": 1400,
+        "height": 875,
+        "image": "/assets/species/plumage/sp092-juv-review.webp"
       }
     ],
     "sp094": [
@@ -6264,6 +6474,27 @@
         "width": 1400,
         "height": 742,
         "image": "/assets/species/plumage/sp128-flight.webp"
+      },
+      {
+        "label": "Vrouwtje in vlucht",
+        "flight": true,
+        "sex": "female",
+        "note": "Vrouwtje Bergeend in vlucht, met een rode snavel zonder opvallende knobbel, brede witte velden en een groene vleugelspiegel.",
+        "file": "Common shelduck (Tadorna tadorna) female in flight Sfax.jpg",
+        "nl": "Bergeend",
+        "latin": "Tadorna tadorna",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Common_shelduck_%28Tadorna_tadorna%29_female_in_flight_Sfax.jpg",
+        "alt": "Vrouwtje Bergeend in vlucht, met een rode snavel zonder opvallende knobbel, brede witte velden en een groene vleugelspiegel.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bergeend",
+        "visualCheck": "Vrouwtje Bergeend in vlucht, met een rode snavel zonder opvallende knobbel, brede witte velden en een groene vleugelspiegel.",
+        "width": 1400,
+        "height": 933,
+        "image": "/assets/species/plumage/sp128-female-review.webp"
       }
     ],
     "sp129": [
@@ -7139,6 +7370,7 @@
     "sp166": "/assets/species/plumage/sp166-adult.webp",
     "sp167": "/assets/species/plumage/sp167-adult.webp",
     "sp253": "/assets/species/plumage/sp253-male-rest.webp",
-    "sp288": "/assets/species/plumage/sp288-adult.webp"
+    "sp288": "/assets/species/plumage/sp288-adult.webp",
+    "sp075": "/assets/species/plumage/sp075-male-review.webp"
   }
 }
