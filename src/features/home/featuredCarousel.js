@@ -35,6 +35,7 @@ export function initFeaturedCarousel(el, ctx) {
   const presence = stage.querySelector('#featuredBirdPresence');
   const credit = stage.querySelector('#featuredBirdCredit');
   const toggle = stage.querySelector('#featuredBirdMotion');
+  const speciesButton = stage.querySelector('[data-featured-species]');
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
 
   let pos = loadPosition();
@@ -51,6 +52,9 @@ export function initFeaturedCarousel(el, ctx) {
     const bird = FEATURED_BIRDS[pos.index];
     const info = birdInfo(bird);
     stage.dataset.birdId = bird.id;
+    const hasSpeciesCard = byId.has(bird.id);
+    speciesButton.dataset.featuredSpecies = hasSpeciesCard ? bird.id : '';
+    speciesButton.querySelector('[data-featured-label]').textContent = hasSpeciesCard ? 'Bekijk soortkaart' : 'Open soortengids';
     stage.classList.remove('has-photo');
     photo.alt = bird.nl + (bird.pose === 'vlucht' ? ' in vlucht' : '');
     photo.src = bird.image;

@@ -121,6 +121,7 @@ def main():
             assert p.locator("#featuredBirdGroup").inner_text().strip().lower() == cur["groupLabel"].lower()
             assert p.locator("#featuredBirdName").inner_text() == cur["nl"]
             assert p.locator("#featuredBirdLatin").inner_text() == cur["latin"]
+            cap.locator("summary").click()
             assert p.locator("#featuredBirdWhere").inner_text().startswith("Herkenning: ")
             assert p.locator("#featuredBirdPresence").inner_text().startswith("In Nederland: ")
             credit = p.locator("#featuredBirdCredit")

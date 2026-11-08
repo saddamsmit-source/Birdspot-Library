@@ -164,6 +164,7 @@ function _openSightingForm(mode, initialState, { onSaved, editId } = {}) {
         ${_renderFormBody()}
       </div>
       <div class="sheet__footer">
+        <p class="sighting-local-note">Bewaart op dit apparaat</p>
         <button class="btn-primary" id="addSheetSubmit" type="button">Opslaan</button>
       </div>
     </div>`;

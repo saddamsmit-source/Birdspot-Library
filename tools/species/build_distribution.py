@@ -24,9 +24,12 @@ YEARS = "2020,2025"
 TILE_EXTENT = 4096
 CELL = 64  # ~24 km in NL in a Web Mercator tile at z4
 COLUMNS = TILE_EXTENT // CELL
+MIN_RECORDS = 5
 VIEW_BOX = (505, 605, 890, 1015)
 SOURCE = "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/"
 EXCLUDED = {"dwaalgast", "ontsnapt", "historisch"}
+# Keep the original coordinate-based grid for these documented tile discrepancies.
+DIRECT_GRID_KEYS = {2481120, 2481121}  # Witvleugelstern, Witwangstern
 BASE = dict(datasetKey=DATASET, country="NL", year=YEARS, hasCoordinate="true",
             hasGeospatialIssue="false", occurrenceStatus="PRESENT", license="CC_BY_4_0")
 
@@ -58,11 +61,14 @@ def tile_cells(key, total):
         if x % CELL or y % CELL or (x, y) in counts:
             raise ValueError("unexpected GBIF grid coordinates")
         counts[x, y] = feature["properties"]["total"]
-    if sum(counts.values()) != total:
+    if key in DIRECT_GRID_KEYS or sum(counts.values()) != total:
         counts = occurrence_cells(key, total)
     left, top, width, height = VIEW_BOX
-    return sorted((y // CELL) * COLUMNS + x // CELL for (x, y), count in counts.items()
-                  if count >= 5 and left < x + CELL / 2 < left + width and top < y + CELL / 2 < top + height)
+    return sorted(
+        ((y // CELL) * COLUMNS + x // CELL, count)
+        for (x, y), count in counts.items()
+        if count >= MIN_RECORDS and left < x + CELL / 2 < left + width and top < y + CELL / 2 < top + height
+    )
 
 
 def occurrence_cells(key, total):
@@ -84,7 +90,7 @@ def occurrence_cells(key, total):
 
 
 def distribution(species, cache):
-    cache_file = cache / f"{species['id']}.json"
+    cache_file = cache / f"{species['id']}-counts.json"
     if cache_file.exists():
         return json.loads(cache_file.read_text())
     search = urlencode(dict(BASE, scientificName=species["nameSci"], limit=1))
@@ -138,6 +144,7 @@ def module_source(paths, data):
         f"export const MAP_VIEW_BOX = '{' '.join(map(str, VIEW_BOX))}';\n"
         f"export const MAP_CELL = {CELL};\n"
         f"export const MAP_COLUMNS = {COLUMNS};\n"
+        f"export const MAP_MIN_RECORDS = {MIN_RECORDS};\n"
         f"export const MAP_PATHS = {json.dumps(paths, sort_keys=True, indent=2)};\n"
         "export const DISTRIBUTION = {\n"
         + "".join(f"  {sid}: {json.dumps(item, separators=(',', ':'))},\n" for sid, item in sorted(data.items()))

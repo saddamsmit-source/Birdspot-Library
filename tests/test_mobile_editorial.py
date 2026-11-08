@@ -33,7 +33,11 @@ def main():
       p.locator('#featuredBirdName').wait_for(timeout=14000)
       assert p.locator("#featuredBirdName").inner_text().strip()
       assert p.locator("#featuredBirdLatin").inner_text().strip()
+      notes = p.locator(".field-featured-notes summary")
+      notes.click()
       assert "Herkenning:" in p.locator("#featuredBirdWhere").inner_text()
+      notes.click()
+      assert p.locator("#homeLatestSighting").is_hidden()
       assert p.locator("#featuredBirdTheme").count()==0
       assert p.locator("#featuredPrev").count()==0
       assert p.locator("#featuredNext").count()==0

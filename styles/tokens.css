@@ -6,7 +6,7 @@
 
 :root {
   /* ── Merk ─────────────────────────────────────────── */
-  --brand:        #18362C;   /* diep woudgroen */
+  --brand:        #17382C;   /* diep woudgroen */
   --brand-mid:    #2D6A4F;   /* middengroen */
   --brand-light:  #52B788;   /* helder groen */
   --brand-pale:   #B7E4C7;   /* zacht groen */
@@ -17,16 +17,16 @@
   --accent-ink:   #1A4D8A;   /* donkerblauw tekst op licht */
 
   /* ── Neutraal ─────────────────────────────────────── */
-  --bg:           #F6F3E8;   /* licht ivoor-groen */
-  --surface:      #FFFFFF;
-  --surface-2:    #EEF4F0;
-  --line:         #D9E8DC;
+  --bg:           #F8F4E8;   /* licht ivoor-groen */
+  --surface:      #FFFCF4;
+  --surface-2:    #E9F0E4;
+  --line:         #C8D4C4;
   --on-brand:     #FFFFFF;
 
   /* ── Tekst ────────────────────────────────────────── */
   --ink:          #172820;
-  --ink-2:        #3D5245;
-  --muted:        #485E50;
+  --ink-2:        #425D4D;
+  --muted:        #425D4D;
 
   /* ── Status ───────────────────────────────────────── */
   --warn:         #F4A261;
@@ -44,23 +44,20 @@
   --guide-month-dark-ink: #291B35;
   --guide-month-breed:    #C9252D;
 
-  /* ── Soortgids: verspreidingskaart ─────────────────── */
-  --guide-distribution-opacity: .68;
-
   /* ── Op media ─────────────────────────────────────── */
   --on-media:     #FFFFFF;
   --media-veil:   linear-gradient(to top, rgba(0,0,0,.65) 0%, transparent 55%);
 
   /* ── Typografie ───────────────────────────────────── */
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-body:    'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: P052, 'Palatino Linotype', Palatino, Georgia, serif;
+  --font-body:    'Nimbus Sans', system-ui, -apple-system, sans-serif;
 
   --fs-display:   clamp(30px, 8vw, 40px);
   --fs-title:     22px;
   --fs-head:      16px;
-  --fs-body:      15px;
-  --fs-meta:      12.5px;
-  --fs-label:     11px;
+  --fs-body:      100%;
+  --fs-meta:      .875rem;
+  --fs-label:     .8125rem;
 
   /* ── Ruimte ───────────────────────────────────────── */
   --space-4:  4px;
@@ -84,10 +81,15 @@
 
   /* ── Navigatie hoogte ─────────────────────────────── */
   --nav-h: 72px;
-  --selected-gold: #EBCF99;
-  --focus-ink: #18362C;
-  --focus-light: #F6F3E8;
+  --selected-gold: #F2D18C;
+  --focus-ink: #17382C;
+  --focus-light: #F8F4E8;
   --hit-field: 44px;
+  --field-selected: #DCECDD;
+  --field-border: #758779;
+  --field-cta: var(--brand);
+  --field-cta-text: var(--focus-light);
+  --field-motion: 150ms;
 }
 
 /* ── Donker thema ─────────────────────────────────────── */
@@ -102,6 +104,9 @@
     --muted:     #A8C9AF;
     --accent-soft: #1A3560;
     --guide-month-breed: #FF5548;
+    --field-border: #8CA998;
+    --field-cta: var(--field-selected);
+    --field-cta-text: var(--brand);
     color-scheme: dark;
   }
 }
@@ -115,5 +120,8 @@
   --muted:     #A8C9AF;
   --accent-soft: #1A3560;
   --guide-month-breed: #FF5548;
+  --field-border: #8CA998;
+  --field-cta: var(--field-selected);
+  --field-cta-text: var(--brand);
   color-scheme: dark;
 }

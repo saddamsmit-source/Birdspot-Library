@@ -128,15 +128,15 @@ def main():
                 p.locator(f'[data-sd-tab="{key}"]').click()
                 p.locator(f'#sdPanel-{key}').wait_for(state="visible", timeout=4000)
 
-            def assert_distribution_palette(kind, label):
+            def assert_distribution_palette(label):
                 figure = p.locator('#sdPanel-waar .sd-distribution')
-                assert figure.get_attribute('data-month-kind') == kind
-                swatch = p.locator(f'.sd-month-legend [data-month-kind="{kind}"] span')
-                expected = swatch.evaluate('el => getComputedStyle(el).backgroundColor')
-                assert figure.locator('.sd-distribution-cloud').evaluate('el => getComputedStyle(el).fill') == expected
-                key = figure.locator('.sd-distribution-key')
-                assert label in key.inner_text()
-                assert key.locator('span').evaluate('el => getComputedStyle(el).backgroundColor') == expected
+                colors = ['rgb(243, 199, 68)', 'rgb(238, 152, 42)', 'rgb(223, 96, 38)', 'rgb(200, 61, 55)']
+                read_colors = "els => els.map(el => getComputedStyle(el).fill)"
+                assert figure.locator('.sd-distribution-legend svg circle').evaluate_all(read_colors) == colors
+                marks = figure.locator('.sd-distribution-marks circle')
+                bands = marks.evaluate_all("els => els.map(el => Number(el.dataset.band))")
+                assert marks.evaluate_all(read_colors) == [colors[band] for band in bands]
+                assert figure.get_by_text(f'Hoofdstatus: {label}', exact=True).is_visible()
 
             # Rietgors: eigen waarnemingen
             rg = next(s for s in species if s["id"] == "sp118")
@@ -165,12 +165,33 @@ def main():
             assert places == ["Oostvaardersplassen 2×", "Lauwersmeer 1×"], places
             assert p.locator('#sdPanel-waar .sd-habitat').count() == len(rg["regions"])
             distribution = p.locator('#sdPanel-waar .sd-distribution')
-            assert distribution.locator('.sd-distribution-cloud rect').count() >= 3
-            assert_distribution_palette('standvogel', 'Standvogel')
-            assert "Rietgors" in distribution.locator('svg').get_attribute('aria-label')
+            marks = distribution.locator('.sd-distribution-marks circle')
+            actual = marks.evaluate_all("els => els.map(e => Number(e.dataset.band))")
+            counts = p.evaluate("""async () => {
+                const { DISTRIBUTION } = await import('/src/data/speciesDistribution.js');
+                return DISTRIBUTION.sp118[1].map(([, count]) => count);
+            }""")
+            expected = [0 if n < 25 else 1 if n < 100 else 2 if n < 500 else 3 for n in counts]
+            assert actual == expected and len(set(actual)) >= 2, (actual, expected)
+            legend = distribution.get_by_role('table')
+            assert legend.get_by_role('columnheader', name='Openbare meldingen per vak').is_visible()
+            rows = legend.get_by_role('row').all_text_contents()
+            assert all(value in row for value, row in zip(
+                ['Openbare meldingen', '0–4', '5–24', '25–99', '100–499', '500 of meer'], rows, strict=True
+            )), rows
+            assert 'Ook in een leeg vak kan de soort voorkomen' in distribution.inner_text()
+            symbols = legend.locator('svg circle').evaluate_all(
+                "els => els.map(e => Number(e.getAttribute('r')))"
+            )
+            assert symbols == sorted(set(symbols))
+            assert marks.evaluate_all(
+                "els => els.map(e => Number(e.getAttribute('r')))"
+            ) == [symbols[band] for band in actual]
+            assert_distribution_palette('Standvogel')
+            assert "Rietgors" in distribution.locator('.sd-distribution-map').get_attribute('aria-label')
             assert "2020–2025" in distribution.inner_text()
             assert distribution.get_by_role('link', name='eBird via GBIF').get_attribute('href') == "https://doi.org/10.15468/aomfnb"
-            assert distribution.locator('svg').bounding_box()["width"] <= 390
+            assert distribution.locator('.sd-distribution-map').bounding_box()["width"] <= 390
             p.screenshot(path=str(SHOTS / "species_h2_waar_390.png"))
 
             tab("mijn")
@@ -293,7 +314,7 @@ def main():
             assert 0 < first["y"] - (may["y"] + may["height"]) <= 6
             assert bar.locator('.sd-month[title="november"]').get_attribute('class') == 'sd-month'
             tab("waar")
-            assert_distribution_palette('zomergast', 'Zomergast')
+            assert_distribution_palette('Zomergast')
             close_detail()
 
             # The Pimpelmees used to have breeding text but no line in its year-round calendar.

@@ -23,3 +23,18 @@ De eigenaar keurde sneller openen, breed zoeken, kaartbediening, compacte waarne
 - L-071/L-076. Media kunnen al geschreven zijn vóór een waarneming wordt opgeslagen. Bewaar de originele records, schrijf bijlagen in één IndexedDB-transactie en verwijder bij een mislukte opslag alleen de voor deze invoer geschreven media. Een foutproef telt bestanden en plekken vóór en na herpoging.
 - L-009/L-011. Een beschikbare update en een foutmelding hebben verschillende bediening en levensduur. Houd hun DOM-elementen apart en controleer een terugkerende gebruiker met een wachtende worker.
 - Gebruikersacceptatie: probeer de kandidaat op het fysieke doeltoestel met daglicht, grotere systeemtekst en een eigen toestelvideo. Gegevens uit verschillende previewdomeinen zitten in aparte browserprofielen. Kies een uiteindelijke integratiebasis na afstemming met de schrijver van de gidsstapel.
+
+## Veldschrift · 1.19.0-veldschrift-preview
+
+Basis: veldpreview [PR #78](https://github.com/saddamsmit-source/Birdspot-Library/pull/78), commit `f98aa6637714569c80d3dd34aea0ba7e9d40af45`. De parallelle gidsronde [#79](https://github.com/saddamsmit-source/Birdspot-Library/pull/79) houdt zijn eigen integratiepad.
+
+| Capability | Wijziging en controle |
+|---|---|
+| CAP-BIRD-001/003/004 | Home heeft één primaire invoeractie, een compact gidsportret met licentie en uitklapbare herkenning, en directe routes naar de soortkaart en opgeslagen waarnemingen. Leeg Home toont geen laatste-waarnemingknop. De bestaande intro, brede zoekbalk en fotopauze blijven werken. Desktop plaatst de eigen waarnemingen naast het portret. |
+| CAP-BIRD-005–010 | Soortzoeken en filters staan direct onder de titel. Soortnamen en recente soorten openen ook via het toetsenbord. In de soortkaart houden gidsfoto’s met credits en eigen foto’s ieder hun eigen plek. Escape geeft focus terug aan de soortknop. |
+| CAP-BIRD-014–018/027/028 | Waarnemen heeft één vaste opslagactie met lokale opslaguitleg, zichtbare keuzes en een rustiger formulier bij grotere tekst. De kaart gebruikt dekkende bediening en behoudt statusiconen. Na het sluiten van een pin blijven zoekterm, kaartcentrum en zoom behouden. |
+| CAP-BIRD-034/036/037–040 | Lege Media Studio brengt de eerste invoeractie vóór de filters. Nul resultaten heeft een aparte resetactie. Gevulde kaarten tonen soort, datum, plek en bestandstype waar beschikbaar. Favoriet en filmselectie behouden toetsenbordfocus na het opnieuw tekenen. Profiel gebruikt dezelfde knopstijlen. |
+
+**Dubbele controle.** Chromium op 320, 390 en 1440 CSS-pixels, inclusief donkere systeemweergave, touch, toetsenbord, 200% gesimuleerde tekst en minder beweging. Geteste tekstcontrasten in de lichte weergave: primaire knop en gidslabel 11,66:1, geselecteerd filter 10,43:1, zoekhint en profieluitleg 6,21:1. De proef met fictieve foto en video omvatte een defect bestand, een geïnjecteerde schrijffout, herpoging, terugvinden, filteren, favoriet, filmselectie, afspeelbare filmexport en ZIP-herstel in een schoon profiel. Offline openen, terugzien en nieuw opslaan zijn afzonderlijk beproefd. De bestaande no-pinch-keuze buiten de kaart is behouden. Fysieke bediening, systeemtekst op een telefoon, daglicht, kaarttegels en de externe Artlist-stream vragen afzonderlijk bewijs.
+
+**Hergebruik.** Scheid de lege verzameling van nul zoekresultaten en een laadfout. Controleer de hele taak opnieuw als een knop of onderdeel verhuist. Gebruik dekkende kleurvlakken op beeld, en laat tekst en vorm de selectie verduidelijken. De fonts gebruiken een lokaal beschikbaar lettertype of systeemfallback en vragen geen netwerkverzoek. Geen wijzigingen in opslagformaat, koppelingen of exportformaat.
