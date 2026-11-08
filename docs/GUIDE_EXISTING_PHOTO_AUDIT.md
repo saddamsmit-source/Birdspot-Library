@@ -99,9 +99,9 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp112 | Spreeuw | Ja | 2 | Apart beeld |
 | sp113 | Wielewaal | Ja | 2 | Apart beeld |
 | sp114 | Boerenzwaluw | Ja | 2 | Apart beeld |
-| sp115 | Huiszwaluw | Ja | 1 | Open |
-| sp116 | Oeverzwaluw | — | 1 | Open |
-| sp117 | Geelgors | Ja | 1 | Open |
+| sp115 | Huiszwaluw | Ja | 2 | Apart beeld |
+| sp116 | Oeverzwaluw | — | 2 | Apart beeld |
+| sp117 | Geelgors | Ja | 2 | Apart beeld |
 | sp118 | Rietgors | Ja | 1 | Open |
 | sp126 | Knobbelzwaan | Ja | 2 | Open |
 | sp128 | Bergeend | Ja | 2 | Open |
@@ -512,3 +512,15 @@ Basis is concept-PR #87, `9386ea84195a906bb0483489943c84d1a137cce0`. De drie bes
 CAP-BIRD-012/015. De drie foto’s staan lokaal en elk eenmaal vóór het verenkleed. Maker, bron, licentie en bewerking zijn vermeld. Bij een soort die herkenbaar is aan verlengde staartveren helpt een foto waarop de volledige staartvork, borstband en keel tegelijk zichtbaar zijn. Er staan 43 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Huiszwaluw.
 
 VERIFIED · Mobiele Chromium op 390 px. Zes soortkaarten via appbreed zoeken geopend op basis en kandidaat. De bestaande hoofdfoto’s en de vluchtfoto’s uit ronde 26 laden. De nieuwe foto’s staan elk eenmaal vóór het verenkleed, tonen bron en licentie en openen met 2× zoom. Ook na offline herladen zijn de drie kaarten en fotovergroting getest. Alle 316 gidsbeelden en 120 geluidsopnamen zijn na precache offline gedecodeerd. Gidsdekking, volgorde, uniciteit en SHA-256 zijn gecontroleerd. NOT TESTED · Fysiek toestel.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 28
+
+Basis is concept-PR #88, `463f71ff2ddcc2a74e85f35ba81bc9672e3762f2`. Huiszwaluw en Geelgors hadden elk een hoofdfoto. Oeverzwaluw had één gidsbeeld bij de nestwand. In de Commons-vluchtcategorieën zijn opnamen van beide zwaluwen vergeleken op vrije vlucht en de herkenbaarheid van stuit en borstband. Voor Geelgors is ook gezocht in research-grade iNaturalist-waarnemingen met een open fotolicentie. De drie gekozen beelden zijn op groter formaat en op kaartformaat gecontroleerd.
+
+- Huiszwaluw · Billy Lindblom · CC BY 2.0. De uitsnede toont de witte stuit, witte buik en korte staartvork in vrije vlucht. [Bronfoto](https://commons.wikimedia.org/wiki/File:Northern_House_Martin_(Delichon_urbicum).jpg) · [Oorspronkelijke publicatie](https://www.flickr.com/photos/41502344@N02/4739086303/).
+- Oeverzwaluw · Joe M. Devereux · CC BY 2.0. De opname van onderaf toont de bruine borstband tussen witte keel en buik. Het nieuwe beeld is zonder uitsnede omgezet. De fotograafvermelding in de foto is behouden. De eerdere foto bij de nestwand blijft als apart gidsbeeld staan. [Bronfoto](https://commons.wikimedia.org/wiki/File:Sandmartin_(28943239906).jpg) · [Oorspronkelijke publicatie](https://www.flickr.com/photos/59324099@N02/28943239906/).
+- Geelgors · William Harland · CC BY 4.0. De foto uit Nieuw-Zeeland toont vrije vlucht met een gele kop, roodbruine stuit en lange staart. De opname is bijgesneden en de schaduwen zijn licht opgehelderd vanwege tegenlicht. De soortidentificatie en licentie van het afzonderlijke bestand zijn gecontroleerd op iNaturalist. [Bronfoto](https://www.inaturalist.org/photos/622283477) · [Waarneming](https://www.inaturalist.org/observations/341790185).
+
+CAP-BIRD-012/015. De drie nieuwe beelden staan lokaal en elk eenmaal onder ‘In vlucht’, met maker, bron, licentie en bewerking. Bij vergelijkbare zwaluwen zijn een zichtbare stuit of borstband belangrijker dan een frontaal silhouet. Een nestwandbeeld en een afzonderlijk vluchtbeeld kunnen op dezelfde kaart verschillende herkenningsvragen beantwoorden. Er staan 40 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Rietgors.
+
+VERIFIED · Mobiele Chromium op 390 px. Zes soortkaarten vanuit appbreed zoeken geopend op basis en kandidaat. De bestaande hoofdfoto’s en het beeld bij de nestwand laden. De drie nieuwe foto’s staan elk eenmaal vóór de verdere herkenningsbeelden, tonen bron en licentie en openen met 2× zoom. Ook na offline herladen zijn de drie kaarten en fotovergroting getest. Alle 319 gidsbeelden en 120 geluidsopnamen zijn na precache offline gedecodeerd. Gidsdekking, volgorde, uniciteit en SHA-256 zijn gecontroleerd. NOT TESTED · Fysiek toestel.

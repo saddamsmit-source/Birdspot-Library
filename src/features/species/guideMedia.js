@@ -4413,6 +4413,27 @@ export const GUIDE_POSES = Object.freeze({
       "image": "/assets/species/plumage/sp116-nestwand.webp",
       "label": "Bij de nestwand",
       "note": "De vogel hangt bij de ingang van een uitgegraven gang. Op dit beeld is de borstband beperkt zichtbaar."
+    },
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "Van onderen zie je de bruine borstband tussen de witte keel en buik. De staart heeft een ondiepe vork.",
+      "file": "Sandmartin (28943239906).jpg",
+      "nl": "Oeverzwaluw",
+      "latin": "Riparia riparia",
+      "author": "Joe M. Devereux",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Sandmartin_(28943239906).jpg",
+      "showSourceLink": true,
+      "alt": "Oeverzwaluw in vrije vlucht van onderen gezien, met gespreide vleugels en een bruine borstband tussen witte keel en buik.",
+      "modifications": "Omgezet naar WebP zonder uitsnede, met behoud van de fotograafvermelding in beeld",
+      "reviewed": "2026-11-08",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/oeverzwaluw",
+      "visualCheck": "Oeverzwaluw in vrije vlucht van onderen gezien, met gespreide vleugels en een bruine borstband tussen witte keel en buik.",
+      "width": 1179,
+      "height": 971,
+      "image": "/assets/species/plumage/sp116-flight.webp"
     }
   ],
   "sp006": [
@@ -6023,6 +6044,52 @@ export const GUIDE_POSES = Object.freeze({
       "width": 1290,
       "height": 860,
       "image": "/assets/species/plumage/sp114-flight.webp"
+    }
+  ],
+  "sp115": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "Let op de opvallend witte stuit vlak voor de korte, gevorkte staart. Ook keel en buik zijn wit.",
+      "file": "Northern House Martin (Delichon urbicum).jpg",
+      "nl": "Huiszwaluw",
+      "latin": "Delichon urbicum",
+      "author": "Billy Lindblom",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Northern_House_Martin_(Delichon_urbicum).jpg",
+      "showSourceLink": true,
+      "alt": "Huiszwaluw van opzij in vrije vlucht, met witte stuit, witte keel en een korte gevorkte staart.",
+      "modifications": "Bijgesneden rond de vogel en omgezet naar WebP",
+      "reviewed": "2026-11-08",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/huiszwaluw",
+      "visualCheck": "Huiszwaluw van opzij in vrije vlucht, met witte stuit, witte keel en een korte gevorkte staart.",
+      "width": 825,
+      "height": 645,
+      "image": "/assets/species/plumage/sp115-flight.webp"
+    }
+  ],
+  "sp117": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "In dit zijaanzicht zijn de gele kop, de roodbruine stuit en de lange staart herkenbaar. De foto is gemaakt in Nieuw-Zeeland.",
+      "file": "iNaturalist photo 622283477",
+      "nl": "Geelgors",
+      "latin": "Emberiza citrinella",
+      "author": "William Harland",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://www.inaturalist.org/photos/622283477",
+      "showSourceLink": true,
+      "alt": "Geelgors in vrije vlucht tegen een lichte lucht met een gele kop, roodbruine stuit, lange staart en geheven vleugels.",
+      "modifications": "Bijgesneden rond de vogel, schaduwen licht opgehelderd en omgezet naar WebP",
+      "reviewed": "2026-11-08",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/geelgors",
+      "visualCheck": "Geelgors in vrije vlucht tegen een lichte lucht met een gele kop, roodbruine stuit, lange staart en geheven vleugels.",
+      "width": 600,
+      "height": 400,
+      "image": "/assets/species/plumage/sp117-flight.webp"
     }
   ]
 });
