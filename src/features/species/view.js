@@ -631,7 +631,10 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
       photosUrls.clear();
       if (ctx?.detailCleanup === close) ctx.detailCleanup = null;
       if (animate && !ctx?.destroyed && !ctx?.detailCleanup && restoreGuideDefaults(screenEl, ctx)) {
-        screenEl.querySelector('h1')?.focus({ preventScroll: true });
+        const id = returnFocus?.closest('.species-row')?.dataset.id;
+        const row = id && screenEl.querySelector(`.species-row[data-id="${CSS.escape(id)}"] .species-row__name`);
+        const focus = returnFocus?.isConnected ? returnFocus : row || screenEl.querySelector('h1');
+        focus?.focus({ preventScroll: true });
       } else if (!ctx?.destroyed && !ctx?.detailCleanup) {
         returnFocus?.focus?.();
       }
