@@ -87,9 +87,9 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp096 | Stormmeeuw | Ja | 2 | Apart beeld |
 | sp097 | Kokmeeuw | Ja | 3 | Apart beeld |
 | sp098 | Scholekster | Ja | 2 | Apart beeld |
-| sp099 | Kievit | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp100 | Wulp | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp101 | Grutto | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp099 | Kievit | Ja | 2 | Apart beeld |
+| sp100 | Wulp | Ja | 2 | Apart beeld |
+| sp101 | Grutto | Ja | 2 | Apart beeld |
 | sp102 | Tureluur | Ja | 3 | Gecontroleerd · geen vluchtbeeld |
 | sp104 | Aalscholver | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
 | sp105 | Fazant | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
@@ -464,3 +464,15 @@ Basis is concept-PR #83, `c03a6430bbfc434fe2c4e5a6f342354414a4fae4`. De soortkaa
 CAP-BIRD-012/015. De drie lokale beelden staan elk eenmaal vóór het verenkleed, met bron, maker, licentie en vermelding van de WebP-omzetting zonder uitsnede. Bij een soort met meerdere kandidaten helpt een vergelijking op kaartformaat om de foto te kiezen waarop snavel en vleugelkenmerken het best leesbaar zijn. Na deze ronde staan 55 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Kievit.
 
 VERIFIED · Mobiele Chromium-test op 390 px. Zes soortkaarten via appbreed zoeken geopend op zowel de basis als de nieuwe build. De bestaande hoofdfoto’s en de drie vluchtfoto’s uit ronde 22 laden. De nieuwe foto’s decoderen, staan eenmaal vóór het verenkleed, tonen hun bron en licentie en openen met 2× zoom. Gidsdekking, volgorde, uniciteit en SHA-256 zijn gecontroleerd. NOT TESTED · Fysiek toestel.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 24
+
+Basis is concept-PR #84, `7d52f5996498a507b77ab3c95d6f0bd427ccb8c4`. De soortkaarten voor Kievit, Wulp en Grutto hadden elk een hoofdfoto. Voor alle drie zijn Commons-vluchtcategorieën en bronbestanden in meerdere talen nagezocht. Vogelbescherming is gebruikt om de herkenningskenmerken te toetsen.
+
+- Kievit · Charles J. Sharp · CC BY-SA 4.0. Twee Kieviten in vrije vlucht bij Marken tonen samen de brede afgeronde vleugels, groenige bovenzijde en zwart-witte onderzijde. [Bronfoto](https://commons.wikimedia.org/wiki/File:Northern_lapwings_(Vanellus_vanellus)_in_flight_Marken.jpg).
+- Wulp · Charles J. Sharp · CC BY-SA 4.0. De Wulp vliegt boven water in Argyll. In zijaanzicht zijn de lange, neergebogen snavel en de lichte, fijn getekende ondervleugel zichtbaar. [Bronfoto](https://commons.wikimedia.org/wiki/File:Curlew_(Numenius_arquata)_in_flight.jpg).
+- Grutto · Hans Hillewaert · CC BY-SA 4.0. Op de opname uit de Uitkerkse Polder, België, zijn beide witte vleugelstrepen, de zwart-witte staart en de uitstekende poten zichtbaar. De app gebruikt een nieuwe uitsnede uit het originele bronbestand. [Bronfoto](https://commons.wikimedia.org/wiki/File:Limosa_limosa_(flying).jpg).
+
+CAP-BIRD-012/015. De drie lokale beelden staan elk eenmaal vóór het verenkleed. Maker, bron, licentie en omzetting naar WebP staan bij de foto. Bij Grutto is de uitsnede vermeld. Vergelijk voor soorten met een kenmerkende vleugelstreep boven- en onderaanzichten op mobiel formaat en controleer bij een bestaande uitsnede ook het oorspronkelijke bestand en de bijbehorende licentie. Er staan nog 52 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Tureluur.
+
+VERIFIED · Mobiele Chromium-test op 390 px. Zes soortkaarten vanuit appbreed zoeken geopend op basis en kandidaat. De bestaande hoofd- en vluchtfoto’s uit ronde 23 laden. De drie nieuwe foto’s staan elk eenmaal vóór het verenkleed, tonen hun bron en licentie en openen met 2× zoom. Ook na offline herladen zijn de drie kaarten en fotovergroting getest. Alle 307 gidsbeelden en 120 geluidsopnamen zijn na precache offline gedecodeerd. Gidsdekking, volgorde, uniciteit en SHA-256 zijn gecontroleerd. NOT TESTED · Fysiek toestel.
