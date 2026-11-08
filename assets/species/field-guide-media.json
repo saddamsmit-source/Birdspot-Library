@@ -6160,6 +6160,75 @@
         "height": 742,
         "image": "/assets/species/plumage/sp128-flight.webp"
       }
+    ],
+    "sp129": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Op de geheven vleugel zie je de kleine witte spiegel naast kastanjebruine veren. Let ook op de donkere snavel en het zwarte achterlijf van dit mannetje.",
+        "file": "Frisada, macho, Gadwall, male (50374265703).jpg",
+        "nl": "Krakeend",
+        "latin": "Mareca strepera",
+        "author": "Luiz Lapa",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Frisada,_macho,_Gadwall,_male_(50374265703).jpg",
+        "showSourceLink": true,
+        "alt": "Mannetje Krakeend in vrije vlucht boven water met een witte vleugelspiegel, kastanjebruin vleugelveld en zwart achterlijf.",
+        "modifications": "1280 px-bronweergave bijgesneden rond de vogel en omgezet naar WebP",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/krakeend",
+        "visualCheck": "Mannetje Krakeend in vrije vlucht boven water met een witte vleugelspiegel, kastanjebruin vleugelveld en zwart achterlijf.",
+        "width": 810,
+        "height": 595,
+        "image": "/assets/species/plumage/sp129-flight.webp"
+      }
+    ],
+    "sp130": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Bij deze man is het grote witte vleugelveld goed zichtbaar boven de donkergroene spiegel. De kop is kastanjebruin met een licht voorhoofd.",
+        "file": "Eurasian Wigeon (Anas penelope) (51171016336).jpg",
+        "nl": "Smient",
+        "latin": "Mareca penelope",
+        "author": "Imran Shah",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Eurasian_Wigeon_(Anas_penelope)_(51171016336).jpg",
+        "showSourceLink": true,
+        "alt": "Mannetje Smient in vrije vlucht boven water met een kastanjebruine kop, groot wit vleugelveld en groene spiegel.",
+        "modifications": "1280 px-bronweergave omgezet naar WebP met behoud van de fotograafvermelding in beeld",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/smient",
+        "visualCheck": "Mannetje Smient in vrije vlucht boven water met een kastanjebruine kop, groot wit vleugelveld en groene spiegel.",
+        "width": 1280,
+        "height": 960,
+        "image": "/assets/species/plumage/sp130-flight.webp"
+      }
+    ],
+    "sp132": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Let op de roodbruine kop, donkere borst en de lichtgrijze baan over de vleugel van het mannetje.",
+        "file": "Common pochard (Aythaya ferina) in flight Denmark.jpg",
+        "nl": "Tafeleend",
+        "latin": "Aythya ferina",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Common_pochard_(Aythaya_ferina)_in_flight_Denmark.jpg",
+        "showSourceLink": true,
+        "alt": "Mannetje Tafeleend in vrije vlucht langs groene begroeiing met roodbruine kop, donkere borst en lichtgrijze vleugelbaan.",
+        "modifications": "1280 px-bronweergave bijgesneden rond de vogel en omgezet naar WebP",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/tafeleend",
+        "visualCheck": "Mannetje Tafeleend in vrije vlucht langs groene begroeiing met roodbruine kop, donkere borst en lichtgrijze vleugelbaan.",
+        "width": 850,
+        "height": 535,
+        "image": "/assets/species/plumage/sp132-flight.webp"
+      }
     ]
   }
 }

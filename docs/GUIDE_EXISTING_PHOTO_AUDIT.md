@@ -105,9 +105,9 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp118 | Rietgors | Ja | 2 | Apart beeld |
 | sp126 | Knobbelzwaan | Ja | 3 | Apart beeld |
 | sp128 | Bergeend | Ja | 3 | Apart beeld |
-| sp129 | Krakeend | Ja | 3 | Open |
-| sp130 | Smient | Ja | 2 | Open |
-| sp132 | Tafeleend | Ja | 2 | Open |
+| sp129 | Krakeend | Ja | 4 | Apart beeld |
+| sp130 | Smient | Ja | 3 | Apart beeld |
+| sp132 | Tafeleend | Ja | 3 | Apart beeld |
 | sp141 | Gierzwaluw | — | 1 | Apart beeld |
 | sp143 | Kluut | Ja | 1 | Open |
 | sp144 | Zilverplevier | Ja | 3 | Open |
@@ -536,3 +536,15 @@ Basis is concept-PR #89, `fb4c0063c90a50430242f0737bc6c99fcfe313c6`. Rietgors, K
 CAP-BIRD-012/015. De drie foto’s staan lokaal en elk eenmaal onder ‘In vlucht’, met maker, bron, licentie en bewerking. Controleer bij afwijkende wetenschappelijke namen of bron en gids dezelfde soort bedoelen. Noteer bij een zeldzame bruikbare opname welke herkenningsdetails door beweging of kijkhoek minder duidelijk zijn. Er staan nog 37 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Krakeend.
 
 VERIFIED · Mobiele Chromium op 390 px. Zes soortkaarten via appbreed zoeken geopend op basis en kandidaat. De bestaande gidsbeelden en de vluchtfoto’s uit ronde 28 laden. De drie nieuwe foto’s staan elk eenmaal vóór het verenkleed, tonen bron en licentie en openen met 2× zoom. Ook na offline herladen zijn de drie kaarten en fotovergroting getest. Alle 322 gidsbeelden en 120 geluidsopnamen zijn na precache offline gedecodeerd. Gidsdekking, volgorde, uniciteit en SHA-256 zijn gecontroleerd. NOT TESTED · Fysiek toestel.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 30
+
+Basis is concept-PR #91, `7b7bfb64273e90a97a1a9dca01d695d37791dfc5`. Krakeend, Smient en Tafeleend hadden elk een hoofdfoto en ten minste één afzonderlijke kleedfoto. In de Commons-vluchtcategorieën zijn groepsbeelden, opnamen bij de afzet en zij- en bovenaanzichten vergeleken. De gekozen foto’s tonen één mannetje volledig los van het water. De maker, fotolicentie en kenmerken zijn gecontroleerd aan de hand van de fotopagina’s en de vogelgids van Vogelbescherming.
+
+- Krakeend · Luiz Lapa · CC BY 2.0. De uitsnede van het beeld uit Portugal laat de kleine witte spiegel, het kastanjebruine vleugelveld en het zwarte achterlijf zien. [Bronfoto](https://commons.wikimedia.org/wiki/File:Frisada,_macho,_Gadwall,_male_(50374265703).jpg) · [Oorspronkelijke publicatie](https://www.flickr.com/photos/181980422@N05/50374265703/).
+- Smient · Imran Shah · CC BY-SA 2.0. Op de zijaanblik uit Pakistan zijn de kastanjebruine kop, het grote witte vleugelveld en de groene spiegel zichtbaar. De vermelding van de fotograaf in het beeld is behouden. [Bronfoto](https://commons.wikimedia.org/wiki/File:Eurasian_Wigeon_(Anas_penelope)_(51171016336).jpg) · [Oorspronkelijke publicatie](https://www.flickr.com/photos/gilgit2/51171016336/).
+- Tafeleend · Charles J. Sharp · CC BY-SA 4.0. De uitsnede van de foto uit Denemarken toont de roodbruine kop, donkere borst en lichtgrijze vleugelbaan. De bestandsnaam van de bron bevat een typefout. De soortbeschrijving op de bronpagina en de gids gebruiken *Aythya ferina*. [Bronfoto](https://commons.wikimedia.org/wiki/File:Common_pochard_(Aythaya_ferina)_in_flight_Denmark.jpg).
+
+CAP-BIRD-012/015. De drie beelden staan lokaal en elk eenmaal onder ‘In vlucht’, met maker, bron, licentie en bewerking. Vergelijk bij eenden de kleur en omvang van het zichtbare vleugelveld. Kies een opname waarin dat veld én de kop en lichaamsbouw leesbaar blijven. Er staan nog 34 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Kluut.
+
+VERIFIED · Mobiele Chromium op 390 px. Zes soortkaarten via appbreed zoeken geopend op basis en kandidaat. De bestaande gidsbeelden en de vluchtfoto’s uit ronde 29 laden. De drie nieuwe foto’s staan elk eenmaal vóór het verenkleed, tonen bron en licentie en openen met 2× zoom. Ook na offline herladen zijn de drie kaarten en fotovergroting getest. Alle 325 gidsbeelden en 120 geluidsopnamen zijn na precache offline gedecodeerd. Gidsdekking, volgorde, uniciteit en SHA-256 zijn gecontroleerd. NOT TESTED · Fysiek toestel.
