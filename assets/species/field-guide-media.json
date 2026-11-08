@@ -5403,6 +5403,75 @@
         "height": 858,
         "image": "/assets/species/plumage/sp075-flight.webp"
       }
+    ],
+    "sp078": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Let op de witte snavel en voorhoofdsplaat, het donkere lichaam en de naar achteren gestrekte poten.",
+        "file": "Galeirão, Coot (50501136202).jpg",
+        "nl": "Meerkoet",
+        "latin": "Fulica atra",
+        "author": "Luiz Lapa",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Galeir%C3%A3o,_Coot_(50501136202).jpg",
+        "showSourceLink": true,
+        "alt": "Meerkoet in vrije vlucht boven water, met opgeheven vleugels en gestrekte poten.",
+        "modifications": "Uitgesneden rond de vogel en omgezet naar WebP",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/meerkoet",
+        "visualCheck": "Meerkoet in vrije vlucht boven water, met opgeheven vleugels en gestrekte poten.",
+        "width": 930,
+        "height": 620,
+        "image": "/assets/species/plumage/sp078-flight.webp"
+      }
+    ],
+    "sp079": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Op deze foto vliegt een jong Waterhoen. Let op het bruinige kleed, de lichte flankstreep en de lange, naar achteren gestrekte poten.",
+        "file": "Common Moorhen (Gallinula chloropus) (49249725853).jpg",
+        "nl": "Waterhoen",
+        "latin": "Gallinula chloropus",
+        "author": "Imran Shah",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Common_Moorhen_(Gallinula_chloropus)_(49249725853).jpg",
+        "showSourceLink": true,
+        "alt": "Jong Waterhoen in vrije vlucht vlak boven het water, met geheven vleugel en gestrekte poten.",
+        "modifications": "Wikimedia-versie op 1280 px omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/waterhoen",
+        "visualCheck": "Jong Waterhoen in vrije vlucht vlak boven het water, met geheven vleugel en gestrekte poten.",
+        "width": 1280,
+        "height": 960,
+        "image": "/assets/species/plumage/sp079-flight.webp"
+      }
+    ],
+    "sp083": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Let op de brede witte vleugels, de ingetrokken hals en de lange poten die achter het lichaam uitsteken.",
+        "file": "Great egret (Ardea alba) in flight Danube delta.jpg",
+        "nl": "Grote Zilverreiger",
+        "latin": "Ardea alba",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Great_egret_(Ardea_alba)_in_flight_Danube_delta.jpg",
+        "showSourceLink": true,
+        "alt": "Grote Zilverreiger in vrije vlucht, met geheven witte vleugels en een ingetrokken hals.",
+        "modifications": "Wikimedia-versie op 1280 px omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-zilverreiger",
+        "visualCheck": "Grote Zilverreiger in vrije vlucht, met geheven witte vleugels en een ingetrokken hals.",
+        "width": 1280,
+        "height": 853,
+        "image": "/assets/species/plumage/sp083-flight.webp"
+      }
     ]
   }
 }

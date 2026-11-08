@@ -70,11 +70,11 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp072 | Graspieper | Ja | 2 | Apart beeld |
 | sp075 | IJsvogel | Ja | 2 | Apart beeld |
 | sp077 | Fuut | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
-| sp078 | Meerkoet | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
-| sp079 | Waterhoen | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
+| sp078 | Meerkoet | Ja | 3 | Apart beeld |
+| sp079 | Waterhoen | Ja | 3 | Apart beeld |
 | sp081 | Blauwe Reiger | Ja | 2 | Hoofdfoto |
 | sp082 | Kleine Zilverreiger | Ja | 4 | Hoofdfoto |
-| sp083 | Grote Zilverreiger | Ja | 3 | Gecontroleerd · geen vluchtbeeld |
+| sp083 | Grote Zilverreiger | Ja | 4 | Apart beeld |
 | sp084 | Purperreiger | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
 | sp085 | Kwak | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
 | sp086 | Grauwe Gans | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
@@ -403,3 +403,15 @@ Basis is concept-PR #76, 0313ff2a8ea60ca0300c48d7a6bd0bba6f332e19. Voor Graspiep
 CAP-BIRD-012/015. Graspieper en IJsvogel hebben elk één lokaal vluchtbeeld boven het verenkleed. Uitsnede en WebP-omzetting staan bij elk beeld vermeld. Herbruikbare controle bij watervogels: bekijk de afzetpoot en de waterlijn apart op vergroting. Na deze ronde staan 70 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Meerkoet.
 
 Mobiele Chromium-test op 390 px: beide soortkaarten via appbreed zoeken met de wetenschappelijke naam geopend. Beide beelden decoderen, staan eenmaal boven het verenkleed, tonen hun bronlink en openen met 2× zoom. Appbrede zoekregressie, gidsdekking, volgorde- en uniciteitstests en SHA-256-controle zijn geslaagd. Fysieke toesteltest staat open.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 19
+
+Basis is concept-PR #77, 53d05f9acb967499b1016d7ea0fe141cc985b323. Voor Meerkoet, Waterhoen en Grote Zilverreiger zijn soortcategorieën, Flickr-verwijzingen en gespecialiseerde galerijen in meerdere talen nagezocht. Bij Meerkoet zijn de 97 miniaturen uit de Commons-vluchtcategorie bekeken. Opnamen met afzet, landing en watercontact zijn bij de selectie apart gehouden.
+
+- Meerkoet · Luiz Lapa · CC BY 2.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Galeir%C3%A3o,_Coot_(50501136202).jpg) · [Oorspronkelijke publicatie](https://www.flickr.com/photos/181980422@N05/50501136202/). Op de foto uit Portugal vliegt de vogel los boven het water. De uitsnede laat de witte voorhoofdsplaat, opgeheven vleugels en gestrekte poten zien.
+- Waterhoen · Imran Shah · CC BY-SA 2.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Common_Moorhen_(Gallinula_chloropus)_(49249725853).jpg) · [Categorie voor jonge vogels](https://commons.wikimedia.org/wiki/Category:Gallinula_chloropus_(juvenile)). Het jong vliegt vrij boven water. De kaart vermeldt de leeftijd, zodat het bruine kleed te plaatsen is. De geselecteerde foto is zonder uitsnede omgezet en de zichtbare fotograafvermelding is behouden.
+- Grote Zilverreiger · Charles J. Sharp · CC BY-SA 4.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Great_egret_(Ardea_alba)_in_flight_Danube_delta.jpg). De foto uit de Donaudelta toont de ingetrokken hals en de lange, achter het lichaam uitstekende poten. De foto is zonder uitsnede omgezet.
+
+CAP-BIRD-012/015. De drie lokale vluchtbeelden staan elk eenmaal boven het verenkleed. Herbruikbare controle: kijk ook bij foto's met algemene bestandsnamen en gebruik een vergrote uitsnede om vrije vlucht te onderscheiden van afzet of landing. Na deze ronde staan 67 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Purperreiger.
+
+Mobiele Chromium-test op 390 px: alle drie de soortkaarten via appbreed zoeken met de wetenschappelijke naam geopend. De beelden decoderen, staan eenmaal boven het verenkleed, tonen hun bronlink en openen met 2× zoom. Appbrede zoekregressie, gidsdekking, volgorde- en uniciteitstests en SHA-256-controle zijn geslaagd. Fysieke toesteltest staat open.
