@@ -45,7 +45,7 @@ export function renderMap(el, target = {}) {
         <label class="map-search" for="mapSpeciesSearch">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
           <input type="search" id="mapSpeciesSearch" list="mapSpeciesSuggestions"
-            placeholder="Zoek vogel of plek" autocomplete="off" aria-describedby="mapFilterFeedback"
+            placeholder="Vogel of plek" aria-label="Zoek vogel of plek" autocomplete="off" aria-describedby="mapFilterFeedback"
             aria-controls="mapSearchResults">
         </label>
         <datalist id="mapSpeciesSuggestions"></datalist>

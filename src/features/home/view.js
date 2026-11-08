@@ -354,14 +354,30 @@ function setStatVal(el, id, val) {
 // ══════════════════════════════════════════════════════════
 // ZON / GOLDEN HOUR  (SunCalc.js)
 // ══════════════════════════════════════════════════════════
+function getSunCalc() {
+  if (window.SunCalc) return Promise.resolve(window.SunCalc);
+  const script = document.getElementById('sunCalcScript');
+  if (!script) return Promise.resolve(null);
+  return new Promise(resolve => {
+    const finish = () => {
+      clearTimeout(timer);
+      script.removeEventListener('load', finish);
+      script.removeEventListener('error', finish);
+      resolve(window.SunCalc);
+    };
+    const timer = setTimeout(finish, 3500);
+    script.addEventListener('load', finish);
+    script.addEventListener('error', finish);
+  });
+}
+
 async function loadSunInfo(el, ctx) {
   const section = el.querySelector('#sunSection');
   if (!section) return;
 
-  const { lat, lon } = await getLocation();
+  const [{ lat, lon }, SC] = await Promise.all([getLocation(), getSunCalc()]);
   if (ctx.destroyed) return;
-  const now  = new Date();
-  const SC   = window.SunCalc;
+  const now = new Date();
 
   if (!SC) {
     section.querySelector('.dash-section__loading').outerHTML =

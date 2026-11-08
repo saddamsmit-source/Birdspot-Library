@@ -91,7 +91,7 @@
 #allSightingsBtn { min-height: var(--hit-field); padding: 4px 8px; }
 
 .app-nav .nav-item, .app-nav .nav-fab-slot { min-width: 0; }
-.app-nav .nav-fab-slot { flex-grow: 1.2; }
+.app-nav .nav-fab-slot { flex-grow: 1.45; }
 .app-nav .fab-nav { flex-shrink: 0; }
 .app-nav .nav-item { opacity: 1; color: #d2e0d8; }
 .app-nav .nav-item.active { color: var(--selected-gold); }
