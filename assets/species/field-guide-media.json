@@ -6091,6 +6091,213 @@
         "height": 400,
         "image": "/assets/species/plumage/sp117-flight.webp"
       }
+    ],
+    "sp118": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "De opname toont de lichte onderzijde, de lange donkere staart en geheven vleugels. De vleugels zijn door beweging onscherp.",
+        "file": "iNaturalist photo 241756520",
+        "nl": "Rietgors",
+        "latin": "Emberiza schoeniclus",
+        "author": "Codrin Bucur",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://www.inaturalist.org/photos/241756520",
+        "showSourceLink": true,
+        "alt": "Rietgors van opzij in vrije vlucht met lichte onderzijde, donkere staart en geheven vleugels.",
+        "modifications": "Bijgesneden rond de vogel en omgezet naar WebP",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/rietgors",
+        "visualCheck": "Rietgors van opzij in vrije vlucht met lichte onderzijde, donkere staart en geheven vleugels.",
+        "width": 605,
+        "height": 405,
+        "image": "/assets/species/plumage/sp118-flight.webp"
+      }
+    ],
+    "sp126": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Let op de lang gestrekte hals, de brede witte vleugels en de oranjerode snavel met zwarte basis.",
+        "file": "Cygnus olor-pjt1.jpg",
+        "nl": "Knobbelzwaan",
+        "latin": "Cygnus olor",
+        "author": "Pjt56",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Cygnus_olor-pjt1.jpg",
+        "showSourceLink": true,
+        "alt": "Knobbelzwaan in vrije vlucht tegen een blauwe lucht met gestrekte hals en twee gespreide witte vleugels.",
+        "modifications": "Verkleind en omgezet naar WebP",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/knobbelzwaan",
+        "visualCheck": "Knobbelzwaan in vrije vlucht tegen een blauwe lucht met gestrekte hals en twee gespreide witte vleugels.",
+        "width": 1400,
+        "height": 872,
+        "image": "/assets/species/plumage/sp126-flight.webp"
+      }
+    ],
+    "sp128": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Bij deze man vallen de rode snavel met knobbel, donkere kop en brede kastanjebruine borstband op.",
+        "file": "Gravand - Common Shelduck - Tadorna tadorna.JPG",
+        "nl": "Bergeend",
+        "latin": "Tadorna tadorna",
+        "author": "Marton Berntsen",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Gravand_-_Common_Shelduck_-_Tadorna_tadorna.JPG",
+        "showSourceLink": true,
+        "alt": "Bergeend in vrije vlucht van opzij, met rode snavelknobbel, donkere kop, kastanjebruine borstband en wit lichaam.",
+        "modifications": "Verkleind en omgezet naar WebP",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bergeend",
+        "visualCheck": "Bergeend in vrije vlucht van opzij, met rode snavelknobbel, donkere kop, kastanjebruine borstband en wit lichaam.",
+        "width": 1400,
+        "height": 742,
+        "image": "/assets/species/plumage/sp128-flight.webp"
+      }
+    ],
+    "sp129": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Op de geheven vleugel zie je de kleine witte spiegel naast kastanjebruine veren. Let ook op de donkere snavel en het zwarte achterlijf van dit mannetje.",
+        "file": "Frisada, macho, Gadwall, male (50374265703).jpg",
+        "nl": "Krakeend",
+        "latin": "Mareca strepera",
+        "author": "Luiz Lapa",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Frisada,_macho,_Gadwall,_male_(50374265703).jpg",
+        "showSourceLink": true,
+        "alt": "Mannetje Krakeend in vrije vlucht boven water met een witte vleugelspiegel, kastanjebruin vleugelveld en zwart achterlijf.",
+        "modifications": "1280 px-bronweergave bijgesneden rond de vogel en omgezet naar WebP",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/krakeend",
+        "visualCheck": "Mannetje Krakeend in vrije vlucht boven water met een witte vleugelspiegel, kastanjebruin vleugelveld en zwart achterlijf.",
+        "width": 810,
+        "height": 595,
+        "image": "/assets/species/plumage/sp129-flight.webp"
+      }
+    ],
+    "sp130": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Bij deze man is het grote witte vleugelveld goed zichtbaar boven de donkergroene spiegel. De kop is kastanjebruin met een licht voorhoofd.",
+        "file": "Eurasian Wigeon (Anas penelope) (51171016336).jpg",
+        "nl": "Smient",
+        "latin": "Mareca penelope",
+        "author": "Imran Shah",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Eurasian_Wigeon_(Anas_penelope)_(51171016336).jpg",
+        "showSourceLink": true,
+        "alt": "Mannetje Smient in vrije vlucht boven water met een kastanjebruine kop, groot wit vleugelveld en groene spiegel.",
+        "modifications": "1280 px-bronweergave omgezet naar WebP met behoud van de fotograafvermelding in beeld",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/smient",
+        "visualCheck": "Mannetje Smient in vrije vlucht boven water met een kastanjebruine kop, groot wit vleugelveld en groene spiegel.",
+        "width": 1280,
+        "height": 960,
+        "image": "/assets/species/plumage/sp130-flight.webp"
+      }
+    ],
+    "sp132": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Let op de roodbruine kop, donkere borst en de lichtgrijze baan over de vleugel van het mannetje.",
+        "file": "Common pochard (Aythaya ferina) in flight Denmark.jpg",
+        "nl": "Tafeleend",
+        "latin": "Aythya ferina",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Common_pochard_(Aythaya_ferina)_in_flight_Denmark.jpg",
+        "showSourceLink": true,
+        "alt": "Mannetje Tafeleend in vrije vlucht langs groene begroeiing met roodbruine kop, donkere borst en lichtgrijze vleugelbaan.",
+        "modifications": "1280 px-bronweergave bijgesneden rond de vogel en omgezet naar WebP",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/tafeleend",
+        "visualCheck": "Mannetje Tafeleend in vrije vlucht langs groene begroeiing met roodbruine kop, donkere borst en lichtgrijze vleugelbaan.",
+        "width": 850,
+        "height": 535,
+        "image": "/assets/species/plumage/sp132-flight.webp"
+      }
+    ],
+    "sp143": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Let op de dunne, omhooggebogen snavel, zwarte vleugelpunten en lange poten die voorbij de staart steken.",
+        "file": "Kluut-1 (28031728713).jpg",
+        "nl": "Kluut",
+        "latin": "Recurvirostra avosetta",
+        "author": "Yves Hoebeke",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Kluut-1_(28031728713).jpg",
+        "showSourceLink": true,
+        "alt": "Kluut in vrije vlucht met omhooggebogen snavel, zwarte vleugelpunten en achterwaarts gestrekte poten.",
+        "modifications": "1280 px-bronweergave omgezet naar WebP met behoud van de fotograafvermelding in beeld",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kluut",
+        "visualCheck": "Kluut in vrije vlucht met omhooggebogen snavel, zwarte vleugelpunten en achterwaarts gestrekte poten.",
+        "width": 1280,
+        "height": 853,
+        "image": "/assets/species/plumage/sp143-flight.webp"
+      }
+    ],
+    "sp144": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "De donkere oksel valt op aan de basis van de geheven vleugel. De opname toont ook de lichte onderzijde.",
+        "file": "Grey Plover - 1192 (11479350056).jpg",
+        "nl": "Zilverplevier",
+        "latin": "Pluvialis squatarola",
+        "author": "Donald Macauley",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Grey_Plover_-_1192_(11479350056).jpg",
+        "showSourceLink": true,
+        "alt": "Zilverplevier in vrije vlucht met lichte onderzijde en een duidelijke zwarte oksel onder de geheven vleugel.",
+        "modifications": "1280 px-bronweergave bijgesneden rond de vogel en omgezet naar WebP",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zilverplevier",
+        "visualCheck": "Zilverplevier in vrije vlucht met lichte onderzijde en een duidelijke zwarte oksel onder de geheven vleugel.",
+        "width": 855,
+        "height": 885,
+        "image": "/assets/species/plumage/sp144-flight.webp"
+      }
+    ],
+    "sp145": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "De gebogen vliegstand laat de goudgele spikkels op rug en bovenvleugel zien, met een lichte streep langs de flank.",
+        "file": "European golden plover (Pluvialis apricaria) in flight.jpg",
+        "nl": "Goudplevier",
+        "latin": "Pluvialis apricaria",
+        "author": "Hobbyfotowiki",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:European_golden_plover_(Pluvialis_apricaria)_in_flight.jpg",
+        "showSourceLink": true,
+        "alt": "Goudplevier in vrije vlucht boven water met goudgele spikkels op de rug en bovenvleugel.",
+        "modifications": "Verkleind en omgezet naar WebP",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/goudplevier",
+        "visualCheck": "Goudplevier in vrije vlucht boven water met goudgele spikkels op de rug en bovenvleugel.",
+        "width": 1400,
+        "height": 933,
+        "image": "/assets/species/plumage/sp145-flight.webp"
+      }
     ]
   }
 }
