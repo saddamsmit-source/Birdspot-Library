@@ -98,6 +98,7 @@ export function initFeaturedCarousel(el, ctx) {
     if (toggle) {
       toggle.hidden = motion.matches;
       toggle.setAttribute('aria-pressed', String(manuallyPaused));
+      toggle.setAttribute('aria-label', manuallyPaused ? 'Diashow hervatten' : 'Diashow pauzeren');
     }
     if (paused || document.hidden) stop();
     else start();
