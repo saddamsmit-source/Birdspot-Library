@@ -70,38 +70,38 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp072 | Graspieper | Ja | 2 | Apart beeld |
 | sp075 | IJsvogel | Ja | 2 | Apart beeld |
 | sp077 | Fuut | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
-| sp078 | Meerkoet | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
-| sp079 | Waterhoen | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
+| sp078 | Meerkoet | Ja | 3 | Apart beeld |
+| sp079 | Waterhoen | Ja | 3 | Apart beeld |
 | sp081 | Blauwe Reiger | Ja | 2 | Hoofdfoto |
 | sp082 | Kleine Zilverreiger | Ja | 4 | Hoofdfoto |
-| sp083 | Grote Zilverreiger | Ja | 3 | Gecontroleerd · geen vluchtbeeld |
-| sp084 | Purperreiger | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
-| sp085 | Kwak | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
-| sp086 | Grauwe Gans | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
-| sp089 | Wilde Eend | Ja | 3 | Gecontroleerd · geen vluchtbeeld |
-| sp090 | Slobeend | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
-| sp091 | Wintertaling | Ja | 5 | Gecontroleerd · geen vluchtbeeld |
-| sp092 | Kuifeend | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
-| sp094 | Zilvermeeuw | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp095 | Kleine Mantelmeeuw | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp096 | Stormmeeuw | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp097 | Kokmeeuw | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
-| sp098 | Scholekster | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp099 | Kievit | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp100 | Wulp | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp101 | Grutto | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp102 | Tureluur | Ja | 3 | Gecontroleerd · geen vluchtbeeld |
-| sp104 | Aalscholver | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
-| sp105 | Fazant | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp106 | Patrijs | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp108 | Grote Karekiet | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp110 | Rietzanger | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp112 | Spreeuw | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp113 | Wielewaal | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp114 | Boerenzwaluw | Ja | 1 | Open |
-| sp115 | Huiszwaluw | Ja | 1 | Open |
-| sp116 | Oeverzwaluw | — | 1 | Open |
-| sp117 | Geelgors | Ja | 1 | Open |
+| sp083 | Grote Zilverreiger | Ja | 4 | Apart beeld |
+| sp084 | Purperreiger | Ja | 3 | Apart beeld |
+| sp085 | Kwak | Ja | 3 | Apart beeld |
+| sp086 | Grauwe Gans | Ja | 3 | Apart beeld |
+| sp089 | Wilde Eend | Ja | 4 | Apart beeld |
+| sp090 | Slobeend | Ja | 3 | Apart beeld |
+| sp091 | Wintertaling | Ja | 6 | Apart beeld |
+| sp092 | Kuifeend | Ja | 3 | Apart beeld |
+| sp094 | Zilvermeeuw | Ja | 2 | Apart beeld |
+| sp095 | Kleine Mantelmeeuw | Ja | 2 | Apart beeld |
+| sp096 | Stormmeeuw | Ja | 2 | Apart beeld |
+| sp097 | Kokmeeuw | Ja | 3 | Apart beeld |
+| sp098 | Scholekster | Ja | 2 | Apart beeld |
+| sp099 | Kievit | Ja | 2 | Apart beeld |
+| sp100 | Wulp | Ja | 2 | Apart beeld |
+| sp101 | Grutto | Ja | 2 | Apart beeld |
+| sp102 | Tureluur | Ja | 4 | Apart beeld |
+| sp104 | Aalscholver | Ja | 3 | Apart beeld |
+| sp105 | Fazant | Ja | 2 | Apart beeld |
+| sp106 | Patrijs | Ja | 2 | Apart beeld |
+| sp108 | Grote Karekiet | Ja | 2 | Apart beeld |
+| sp110 | Rietzanger | Ja | 2 | Apart beeld |
+| sp112 | Spreeuw | Ja | 2 | Apart beeld |
+| sp113 | Wielewaal | Ja | 2 | Apart beeld |
+| sp114 | Boerenzwaluw | Ja | 2 | Apart beeld |
+| sp115 | Huiszwaluw | Ja | 2 | Apart beeld |
+| sp116 | Oeverzwaluw | — | 2 | Apart beeld |
+| sp117 | Geelgors | Ja | 2 | Apart beeld |
 | sp118 | Rietgors | Ja | 1 | Open |
 | sp126 | Knobbelzwaan | Ja | 2 | Open |
 | sp128 | Bergeend | Ja | 2 | Open |
@@ -403,3 +403,124 @@ Basis is concept-PR #76, 0313ff2a8ea60ca0300c48d7a6bd0bba6f332e19. Voor Graspiep
 CAP-BIRD-012/015. Graspieper en IJsvogel hebben elk één lokaal vluchtbeeld boven het verenkleed. Uitsnede en WebP-omzetting staan bij elk beeld vermeld. Herbruikbare controle bij watervogels: bekijk de afzetpoot en de waterlijn apart op vergroting. Na deze ronde staan 70 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Meerkoet.
 
 Mobiele Chromium-test op 390 px: beide soortkaarten via appbreed zoeken met de wetenschappelijke naam geopend. Beide beelden decoderen, staan eenmaal boven het verenkleed, tonen hun bronlink en openen met 2× zoom. Appbrede zoekregressie, gidsdekking, volgorde- en uniciteitstests en SHA-256-controle zijn geslaagd. Fysieke toesteltest staat open.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 19
+
+Basis is concept-PR #77, 53d05f9acb967499b1016d7ea0fe141cc985b323. Voor Meerkoet, Waterhoen en Grote Zilverreiger zijn soortcategorieën, Flickr-verwijzingen en gespecialiseerde galerijen in meerdere talen nagezocht. Bij Meerkoet zijn de 97 miniaturen uit de Commons-vluchtcategorie bekeken. Opnamen met afzet, landing en watercontact zijn bij de selectie apart gehouden.
+
+- Meerkoet · Luiz Lapa · CC BY 2.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Galeir%C3%A3o,_Coot_(50501136202).jpg) · [Oorspronkelijke publicatie](https://www.flickr.com/photos/181980422@N05/50501136202/). Op de foto uit Portugal vliegt de vogel los boven het water. De uitsnede laat de witte voorhoofdsplaat, opgeheven vleugels en gestrekte poten zien.
+- Waterhoen · Imran Shah · CC BY-SA 2.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Common_Moorhen_(Gallinula_chloropus)_(49249725853).jpg) · [Categorie voor jonge vogels](https://commons.wikimedia.org/wiki/Category:Gallinula_chloropus_(juvenile)). Het jong vliegt vrij boven water. De kaart vermeldt de leeftijd, zodat het bruine kleed te plaatsen is. De geselecteerde foto is zonder uitsnede omgezet en de zichtbare fotograafvermelding is behouden.
+- Grote Zilverreiger · Charles J. Sharp · CC BY-SA 4.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Great_egret_(Ardea_alba)_in_flight_Danube_delta.jpg). De foto uit de Donaudelta toont de ingetrokken hals en de lange, achter het lichaam uitstekende poten. De foto is zonder uitsnede omgezet.
+
+CAP-BIRD-012/015. De drie lokale vluchtbeelden staan elk eenmaal boven het verenkleed. Herbruikbare controle: kijk ook bij foto's met algemene bestandsnamen en gebruik een vergrote uitsnede om vrije vlucht te onderscheiden van afzet of landing. Na deze ronde staan 67 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Purperreiger.
+
+Mobiele Chromium-test op 390 px: alle drie de soortkaarten via appbreed zoeken met de wetenschappelijke naam geopend. De beelden decoderen, staan eenmaal boven het verenkleed, tonen hun bronlink en openen met 2× zoom. Appbrede zoekregressie, gidsdekking, volgorde- en uniciteitstests en SHA-256-controle zijn geslaagd. Fysieke toesteltest staat open.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 20
+
+Basis is concept-PR #79, 04fdb069b2760e0c764c1d12136dbad06a73b5b7. Voor Purperreiger, Kwak en Grauwe Gans zijn Commons-soortcategorieën en de afzonderlijke bronpagina's in meerdere talen nagezocht. Per soort zijn minimaal twee kandidaten visueel vergeleken op vrije vlucht en zichtbare herkenningskenmerken. De gekozen foto's tonen de vogel vrij boven de omgeving.
+
+- Purperreiger · Alexis Lours · CC BY 4.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Purple_heron_in_flight_01.jpg). Opname uit Gennevilliers, Frankrijk. De roestbruine ingetrokken hals, spitse snavel en lange tenen zijn zichtbaar. Verkleind en omgezet naar WebP.
+- Kwak · Charles J. Sharp · CC BY-SA 4.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Black-crowned_night_heron_(Nycticorax_nycticorax)_in_flight.jpg). Opname bij Akrotiri, Cyprus. De uitsnede laat bij deze volwassen vogel de zwarte kruin, het rode oog en de brede vleugels zien.
+- Grauwe Gans · Charles J. Sharp · CC BY-SA 4.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Greylag_goose_(Anser_anser)_in_flight_Marken.jpg). Opname bij Marken. De oranje snavel en het contrast tussen de lichte voorvleugel en donkere slagpennen zijn zichtbaar. De [alternatieve opname uit Krommenie](https://commons.wikimedia.org/wiki/File:Greylag_goose_flying.jpg) toont het opstijgen vlak bij het water. De foto uit Marken is verkleind en omgezet naar WebP.
+
+CAP-BIRD-012/015. De drie beelden staan lokaal en elk eenmaal boven het verenkleed. Herbruikbare controle: vergelijk dezelfde soort bij verschillende vleugelslagen en kies de opname waarop de kop en vleugelkenmerken samen leesbaar zijn. Na deze ronde staan 64 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Wilde Eend.
+
+Mobiele Chromium-test op 390 px: alle drie de soortkaarten via appbreed zoeken met de wetenschappelijke naam geopend. Elk beeld decodeert, staat eenmaal boven het verenkleed, toont de bronlink en opent met 2× zoom. Gidsdekking, volgorde- en uniciteitstests en SHA-256-controle zijn geslaagd. Fysieke toesteltest staat open.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 21
+
+Basis is concept-PR #80, 25b53325e107ed776f0f51c2dc5a13d6b0d3cbb3. Voor Wilde Eend, Slobeend en Wintertaling zijn vluchtcategorieën en individuele fotobronnen onder Nederlandse, Engelse en wetenschappelijke namen nagezocht. Voor Wintertaling zijn 59 Commons-miniaturen bekeken en zes kandidaten op groter formaat vergeleken. Per soort is gekozen voor een afzonderlijk herkenbaar mannetje met zichtbare vleugelkenmerken.
+
+- Wilde Eend · VJAnderson · CC BY-SA 4.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Mallard_male_in_flight.jpg). Het mannetje vliegt vrij met geheven vleugels. De groene kop, gele snavel en blauw-paarse spiegel zijn zichtbaar.
+- Slobeend · Frank Schulenburg · CC BY-SA 4.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Male_northern_shoveler_in_flight-0208.jpg). De foto toont de brede lepelvormige snavel, lichtblauwe vleugeldekveren en groene vleugelspiegel in één beeld.
+- Wintertaling · Ferran Pestaña · CC BY-SA 2.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Cerceta_com%C3%BAn_-_Flickr_-_ferran_pesta%C3%B1a.jpg) · [Oorspronkelijke publicatie](https://www.flickr.com/photos/57956171@N00/396965237/). De kastanjebruine kop met groen oogveld en de groene spiegel zijn goed zichtbaar.
+
+CAP-BIRD-012/015. Elk beeld staat lokaal, eenmaal boven het verenkleed, met bron, fotograaf, licentie en vermelding van de omzetting naar WebP. Herbruikbare controle: een vleugelspiegel kan door de vleugelslag verborgen blijven. Vergelijk opnamen waarop snavel, kop en spiegel tegelijk zichtbaar zijn. Na deze ronde staan 61 soorten zonder vluchtbeeld op de lijst. Volgende nieuwe soort is Kuifeend.
+
+Mobiele Chromium-test op 390 px: alle drie de soortkaarten via appbreed zoeken met de wetenschappelijke naam geopend. Elk beeld decodeert, toont de bronlink en opent met 2× zoom. Gidsdekking, volgorde- en uniciteitstests en SHA-256-controle zijn geslaagd. Fysieke toesteltest staat open.
+
+
+## Gericht zoeken naar vluchtfoto’s · ronde 22
+
+Basis is concept-PR #82, `9bbff5105a486abfe59cfd688fd5adabeac3a91f`. De appbuild van ronde 21 toont vluchtfoto’s bij Wilde Eend, Slobeend en Wintertaling. Kuifeend, Zilvermeeuw en Kleine Mantelmeeuw hadden daar ieder een hoofdfoto en stonden zonder vluchtbeeld op de lijst. Voor deze drie soorten zijn de vluchtcategorieën en afzonderlijke kandidaten op Wikimedia Commons bekeken. Opnamen vlak bij het water zijn op groter formaat gecontroleerd op vrije vlucht.
+
+- Kuifeend · Imran Shah / Birds of Gilgit-Baltistan · CC BY-SA 2.0. De foto uit Borit, Pakistan, toont een mannetje vrij boven water. De lichte flank, witte vleugelstreep en het gele oog zijn tegelijk zichtbaar. De fotograafvermelding in de foto is behouden. [Bronfoto](https://commons.wikimedia.org/wiki/File:Tufted_Duck_(Aythya_fuligula)_-_Flickr_-_gilgit2.jpg) · [Oorspronkelijke publicatie](https://www.flickr.com/photos/gilgit2/53450240916/).
+- Zilvermeeuw · Andreas Trepte · CC BY-SA 2.5. De volwassen vogel vliegt boven zee bij Helgoland. De lichtgrijze bovenvleugel en de zwarte vleugeltop met witte vlekken zijn zichtbaar. [Bronfoto](https://commons.wikimedia.org/wiki/File:Larus_argentatus_in_flight.jpg).
+- Kleine Mantelmeeuw · Charles J. Sharp · CC BY-SA 4.0. Op de foto uit Zweden contrasteert de donkere bovenvleugel met de witte kop en buik. De poten zijn vanuit deze hoek nauwelijks zichtbaar. [Bronfoto](https://commons.wikimedia.org/wiki/File:Lesser_black-backed_gull_(Larus_fuscus)_2.jpg).
+
+CAP-BIRD-012/015. De beelden staan lokaal en elk eenmaal vóór het verenkleed. Bron, maker, licentie en omzetting naar WebP staan bij de foto. Voor meeuwen die op elkaar lijken, is een zichtbare bovenvleugel nuttiger dan een opname die alleen de ondervleugel toont. Na deze ronde staan 58 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Stormmeeuw.
+
+Mobiele Chromium-test op 390 px: zes soortkaarten vanuit appbreed zoeken geopend, op zowel de basis als de nieuwe build. De bestaande hoofdfoto’s en de vluchtfoto’s uit ronde 21 zijn behouden. De drie nieuwe foto’s decoderen, tonen de bron en licentie en openen met 2× zoom. Gidsdekking, volgorde, uniciteit en SHA-256 zijn gecontroleerd. Fysieke toesteltest staat open.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 23
+
+Basis is concept-PR #83, `c03a6430bbfc434fe2c4e5a6f342354414a4fae4`. De soortkaarten voor Stormmeeuw, Kokmeeuw en Scholekster hadden een hoofdfoto. De bestaande broedkleedvergelijking bij Kokmeeuw blijft op zijn plek. Voor deze ronde zijn Wikimedia Commons en soortpagina’s van Vogelbescherming nagezocht op Nederlandse, Engelse en wetenschappelijke namen. De Commons-foto’s zijn op groter formaat vergeleken op vrije vlucht en zichtbaarheid van herkenningskenmerken.
+
+- Stormmeeuw · Charles J. Sharp · CC BY-SA 4.0. De volwassen vogel in broedkleed vliegt met gespreide vleugels boven Oppdal, Noorwegen. De zwarte vleugelpunten met witte vlekken zijn zichtbaar. [Bronfoto](https://commons.wikimedia.org/wiki/File:Common_gull_(Larus_canus)_adult_breeding_in_flight_Oppdal_2.jpg).
+- Kokmeeuw · Charles J. Sharp · CC BY-SA 3.0. De zijaanblik toont de chocoladebruine kopkap, de rode snavel en de lichte voorrand van de vleugel. [Bronfoto](https://commons.wikimedia.org/wiki/File:Black-headed_gull_(Chroicocephalus_ridibundus)_in_flight.jpg).
+- Scholekster · Charles J. Sharp · CC BY-SA 4.0. De foto uit Argyll, Schotland, toont één vogel laag boven water met een lange oranjerode snavel, zwarte kop en witte buik. De vogel blijft op kaartformaat goed herkenbaar. [Bronfoto](https://commons.wikimedia.org/wiki/File:Oystercatcher_(Haematopus_ostralegus)_in_flight.jpg).
+
+CAP-BIRD-012/015. De drie lokale beelden staan elk eenmaal vóór het verenkleed, met bron, maker, licentie en vermelding van de WebP-omzetting zonder uitsnede. Bij een soort met meerdere kandidaten helpt een vergelijking op kaartformaat om de foto te kiezen waarop snavel en vleugelkenmerken het best leesbaar zijn. Na deze ronde staan 55 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Kievit.
+
+VERIFIED · Mobiele Chromium-test op 390 px. Zes soortkaarten via appbreed zoeken geopend op zowel de basis als de nieuwe build. De bestaande hoofdfoto’s en de drie vluchtfoto’s uit ronde 22 laden. De nieuwe foto’s decoderen, staan eenmaal vóór het verenkleed, tonen hun bron en licentie en openen met 2× zoom. Gidsdekking, volgorde, uniciteit en SHA-256 zijn gecontroleerd. NOT TESTED · Fysiek toestel.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 24
+
+Basis is concept-PR #84, `7d52f5996498a507b77ab3c95d6f0bd427ccb8c4`. De soortkaarten voor Kievit, Wulp en Grutto hadden elk een hoofdfoto. Voor alle drie zijn Commons-vluchtcategorieën en bronbestanden in meerdere talen nagezocht. Vogelbescherming is gebruikt om de herkenningskenmerken te toetsen.
+
+- Kievit · Charles J. Sharp · CC BY-SA 4.0. Twee Kieviten in vrije vlucht bij Marken tonen samen de brede afgeronde vleugels, groenige bovenzijde en zwart-witte onderzijde. [Bronfoto](https://commons.wikimedia.org/wiki/File:Northern_lapwings_(Vanellus_vanellus)_in_flight_Marken.jpg).
+- Wulp · Charles J. Sharp · CC BY-SA 4.0. De Wulp vliegt boven water in Argyll. In zijaanzicht zijn de lange, neergebogen snavel en de lichte, fijn getekende ondervleugel zichtbaar. [Bronfoto](https://commons.wikimedia.org/wiki/File:Curlew_(Numenius_arquata)_in_flight.jpg).
+- Grutto · Hans Hillewaert · CC BY-SA 4.0. Op de opname uit de Uitkerkse Polder, België, zijn beide witte vleugelstrepen, de zwart-witte staart en de uitstekende poten zichtbaar. De app gebruikt een nieuwe uitsnede uit het originele bronbestand. [Bronfoto](https://commons.wikimedia.org/wiki/File:Limosa_limosa_(flying).jpg).
+
+CAP-BIRD-012/015. De drie lokale beelden staan elk eenmaal vóór het verenkleed. Maker, bron, licentie en omzetting naar WebP staan bij de foto. Bij Grutto is de uitsnede vermeld. Vergelijk voor soorten met een kenmerkende vleugelstreep boven- en onderaanzichten op mobiel formaat en controleer bij een bestaande uitsnede ook het oorspronkelijke bestand en de bijbehorende licentie. Er staan nog 52 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Tureluur.
+
+VERIFIED · Mobiele Chromium-test op 390 px. Zes soortkaarten vanuit appbreed zoeken geopend op basis en kandidaat. De bestaande hoofd- en vluchtfoto’s uit ronde 23 laden. De drie nieuwe foto’s staan elk eenmaal vóór het verenkleed, tonen hun bron en licentie en openen met 2× zoom. Ook na offline herladen zijn de drie kaarten en fotovergroting getest. Alle 307 gidsbeelden en 120 geluidsopnamen zijn na precache offline gedecodeerd. Gidsdekking, volgorde, uniciteit en SHA-256 zijn gecontroleerd. NOT TESTED · Fysiek toestel.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 25
+
+Basis is concept-PR #85, `748fc60a74460916f5c28446dea8737eb1f33ad4`. Tureluur, Aalscholver en Fazant hadden elk een hoofdfoto. Vluchtbeelden op Wikimedia Commons, Flickr-verwijzingen en de beeldcatalogus van U.S. Fish and Wildlife Service zijn gericht nagezocht. Vogelbescherming is gebruikt om de herkenningskenmerken te toetsen.
+
+- Tureluur · Charles J. Sharp · CC BY-SA 4.0. De opname uit Mýrar toont de IJslandse ondersoort in vrije vlucht. De witte vleugelachterrand en uitgestrekte oranjerode poten zijn goed zichtbaar. De ondersoort staat bij de foto vermeld. [Bronfoto](https://commons.wikimedia.org/wiki/File:Common_redshank_(Tringa_totanus_robusta)_in_flight_Myrar_2.jpg).
+- Aalscholver · Charles J. Sharp · CC BY-SA 3.0. De Aalscholver vliegt vrij boven het Farmoor Reservoir. De gestrekte hals, lange staart en gele snavelbasis zijn zichtbaar. De scherpe zijaanblik toont meer details dan de gecontroleerde silhouetfoto’s en de opname met afzet uit het water. [Bronfoto](https://commons.wikimedia.org/wiki/File:Great_cormorant_(Phalacrocorax_carbo)_in_flight.jpg).
+- Fazant · Tom Koerner / U.S. Fish and Wildlife Service · publiek domein. Het mannetje vliegt los boven de begroeiing in South Dakota. De gebandeerde staart, rode ooghuid en witte halsring zijn zichtbaar. [Bronfoto](https://commons.wikimedia.org/wiki/File:Rink-necked_pheasant_in_flight_(6922582382).jpg).
+
+CAP-BIRD-012/015. De drie foto’s staan lokaal en elk eenmaal boven het verenkleed. Maker, bron, licentie of publiek-domeinstatus en omzetting naar WebP staan bij de foto. Vergelijk bij watervogels op groter formaat of de poten vrij zijn van het water. Vermeld bij een regionale ondersoort de herkomst als die helpt het beeld te plaatsen. Er staan 49 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Patrijs.
+
+VERIFIED · Mobiele Chromium op 390 px. Zes soortkaarten vanuit appbreed zoeken geopend op basis en kandidaat. De bestaande hoofd- en vluchtfoto’s uit ronde 24 laden. De drie nieuwe foto’s staan elk eenmaal vóór het verenkleed, tonen hun bron en licentie of publiek-domeinstatus en openen met 2× zoom. Ook na offline herladen zijn de drie kaarten en de fotovergroting getest. Alle 310 gidsbeelden en 120 geluidsopnamen zijn na precache offline gedecodeerd. Gidsdekking, volgorde, uniciteit en SHA-256 zijn gecontroleerd. NOT TESTED · Fysiek toestel.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 26
+
+Basis is concept-PR #86, `59d492069a35936a8547086e7e3ede763d2e878e`. Patrijs, Grote Karekiet en Rietzanger hadden elk een hoofdfoto. De zoekronde combineerde meertalige zoektermen, de Commons-soortcategorieën en miniaturen van research-grade iNaturalist-waarnemingen met CC0, CC BY of CC BY-SA op fotoniveau. De gekozen foto’s zijn op groter formaat gecontroleerd op vrije vlucht, herkenningskenmerken en rechten.
+
+- Patrijs · Safina Rezeda · CC BY 4.0. Eén Patrijs vliegt laag over een veld. De uitsnede houdt de hele vogel in beeld en toont de compacte bouw, afgeronde vleugels en korte roodbruine staart. [Bronfoto](https://www.inaturalist.org/photos/77252585) · [Waarneming](https://www.inaturalist.org/observations/48680332).
+- Grote Karekiet · Ángel Marcos Luengo Bello · CC BY 4.0. De vogel vliegt van opzij langs riet. De stevige snavel en lichte wenkbrauwstreep zijn zichtbaar. Bij een andere scherpe opname bedekte een blad de voet en was vrije vlucht onzeker. [Bronfoto](https://www.inaturalist.org/photos/747529794) · [Waarneming](https://www.inaturalist.org/observations/406841487).
+- Rietzanger · Dominique Armange · CC BY-SA 4.0. De foto uit Brière toont de vogel net los van de tak. De lichte wenkbrauwstreep en donkere kruin zijn duidelijk. De vleugels hebben enige bewegingsonscherpte. De 960 px-weergave van Commons is verkleind en omgezet naar WebP. [Bronfoto](https://commons.wikimedia.org/wiki/File:Phragmite_des_Joncs_-_Envol.jpg).
+
+CAP-BIRD-012/015. De drie foto’s staan lokaal en elk eenmaal vóór het verenkleed. Maker, bron, licentie en eventuele uitsnede of verkleining staan bij de foto. Een visuele steekproef uit de soortcategorie kan beelden met een onopvallende titel vinden. Controleer bij iNaturalist de identificatie van de waarneming en de licentie van de afzonderlijke foto. Er staan 46 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Spreeuw.
+
+VERIFIED · Mobiele Chromium op 390 px. Zes soortkaarten vanuit appbreed zoeken geopend op basis en kandidaat. De bestaande hoofd- en vluchtfoto’s uit ronde 25 laden. De nieuwe foto’s staan elk eenmaal vóór het verenkleed, tonen bron en licentie en openen met 2× zoom. Ook na offline herladen zijn de drie kaarten en de fotovergroting getest. Alle 313 gidsbeelden en 120 geluidsopnamen zijn na precache offline gedecodeerd. Gidsdekking, volgorde, uniciteit en SHA-256 zijn gecontroleerd. NOT TESTED · Fysiek toestel.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 27
+
+Basis is concept-PR #87, `9386ea84195a906bb0483489943c84d1a137cce0`. De drie bestaande hoofdfoto’s tonen een vogel op een tak of in een boom. Voor de afzonderlijke vluchtbeelden zijn de Commons-vluchtcategorieën, Flickr-bronnen en iNaturalist-kandidaten voor Wielewaal nagezocht. De gekozen foto's zijn op groter formaat en op kaartformaat beoordeeld. Vogelbescherming is gebruikt om herkenningskenmerken te toetsen.
+
+- Spreeuw · Ralf Hüsges · CC BY 2.0. Eén vogel stijgt vrij op tegen een blauwe lucht. De spitse vleugels, korte staart en lichte spikkels op de donkere borst zijn zichtbaar. De bestaande Commons-uitsnede door Юрий Д.К. is verkleind en omgezet naar WebP. [Bronfoto](https://commons.wikimedia.org/wiki/File:Steigflug_(54094247446)_v2.jpg).
+- Wielewaal · Ferran Pestaña · CC BY-SA 2.0. Het mannetje uit Barcelona is volledig los van de takken. Beide donkere vleugels en de gele buitenranden van de staart zijn zichtbaar. De foto is bij vergroting iets zacht. [Bronfoto](https://commons.wikimedia.org/wiki/File:Oriolus_oriolus_Barcelona_1.jpg) · [Oorspronkelijke publicatie](https://www.flickr.com/photos/57956171@N00/240360017).
+- Boerenzwaluw · Rudolphous · CC BY-SA 4.0. Op de foto van Schiermonnikoog zijn de roestrode keel, donkere borstband en lange buitenste staartpennen te zien. De nieuwe uitsnede houdt beide vleugelpunten en de hele staart in beeld. [Bronfoto](https://commons.wikimedia.org/wiki/File:Schiermonnikoog_-_Boerenzwaluw_(Hirundo_rustica)_v2.jpg).
+
+CAP-BIRD-012/015. De drie foto’s staan lokaal en elk eenmaal vóór het verenkleed. Maker, bron, licentie en bewerking zijn vermeld. Bij een soort die herkenbaar is aan verlengde staartveren helpt een foto waarop de volledige staartvork, borstband en keel tegelijk zichtbaar zijn. Er staan 43 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Huiszwaluw.
+
+VERIFIED · Mobiele Chromium op 390 px. Zes soortkaarten via appbreed zoeken geopend op basis en kandidaat. De bestaande hoofdfoto’s en de vluchtfoto’s uit ronde 26 laden. De nieuwe foto’s staan elk eenmaal vóór het verenkleed, tonen bron en licentie en openen met 2× zoom. Ook na offline herladen zijn de drie kaarten en fotovergroting getest. Alle 316 gidsbeelden en 120 geluidsopnamen zijn na precache offline gedecodeerd. Gidsdekking, volgorde, uniciteit en SHA-256 zijn gecontroleerd. NOT TESTED · Fysiek toestel.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 28
+
+Basis is concept-PR #88, `463f71ff2ddcc2a74e85f35ba81bc9672e3762f2`. Huiszwaluw en Geelgors hadden elk een hoofdfoto. Oeverzwaluw had één gidsbeeld bij de nestwand. In de Commons-vluchtcategorieën zijn opnamen van beide zwaluwen vergeleken op vrije vlucht en de herkenbaarheid van stuit en borstband. Voor Geelgors is ook gezocht in research-grade iNaturalist-waarnemingen met een open fotolicentie. De drie gekozen beelden zijn op groter formaat en op kaartformaat gecontroleerd.
+
+- Huiszwaluw · Billy Lindblom · CC BY 2.0. De uitsnede toont de witte stuit, witte buik en korte staartvork in vrije vlucht. [Bronfoto](https://commons.wikimedia.org/wiki/File:Northern_House_Martin_(Delichon_urbicum).jpg) · [Oorspronkelijke publicatie](https://www.flickr.com/photos/41502344@N02/4739086303/).
+- Oeverzwaluw · Joe M. Devereux · CC BY 2.0. De opname van onderaf toont de bruine borstband tussen witte keel en buik. Het nieuwe beeld is zonder uitsnede omgezet. De fotograafvermelding in de foto is behouden. De eerdere foto bij de nestwand blijft als apart gidsbeeld staan. [Bronfoto](https://commons.wikimedia.org/wiki/File:Sandmartin_(28943239906).jpg) · [Oorspronkelijke publicatie](https://www.flickr.com/photos/59324099@N02/28943239906/).
+- Geelgors · William Harland · CC BY 4.0. De foto uit Nieuw-Zeeland toont vrije vlucht met een gele kop, roodbruine stuit en lange staart. De opname is bijgesneden en de schaduwen zijn licht opgehelderd vanwege tegenlicht. De soortidentificatie en licentie van het afzonderlijke bestand zijn gecontroleerd op iNaturalist. [Bronfoto](https://www.inaturalist.org/photos/622283477) · [Waarneming](https://www.inaturalist.org/observations/341790185).
+
+CAP-BIRD-012/015. De drie nieuwe beelden staan lokaal en elk eenmaal onder ‘In vlucht’, met maker, bron, licentie en bewerking. Bij vergelijkbare zwaluwen zijn een zichtbare stuit of borstband belangrijker dan een frontaal silhouet. Een nestwandbeeld en een afzonderlijk vluchtbeeld kunnen op dezelfde kaart verschillende herkenningsvragen beantwoorden. Er staan 40 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Rietgors.
+
+VERIFIED · Mobiele Chromium op 390 px. Zes soortkaarten vanuit appbreed zoeken geopend op basis en kandidaat. De bestaande hoofdfoto’s en het beeld bij de nestwand laden. De drie nieuwe foto’s staan elk eenmaal vóór de verdere herkenningsbeelden, tonen bron en licentie en openen met 2× zoom. Ook na offline herladen zijn de drie kaarten en fotovergroting getest. Alle 319 gidsbeelden en 120 geluidsopnamen zijn na precache offline gedecodeerd. Gidsdekking, volgorde, uniciteit en SHA-256 zijn gecontroleerd. NOT TESTED · Fysiek toestel.
