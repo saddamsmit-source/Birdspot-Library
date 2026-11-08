@@ -815,26 +815,23 @@
 .sd-distribution-neighbours { fill: var(--surface-2); stroke: var(--muted); stroke-opacity: .3; stroke-width: 2; }
 .sd-distribution-land { fill: var(--surface); }
 .sd-distribution-water { fill: var(--surface-2); }
-/* Size carries the same information when the status hue is hard to distinguish. */
+/* The round marker encodes the same band by size and color. */
 .sd-distribution-mark {
-  fill: var(--sd-month-color);
-  fill-opacity: var(--sd-map-opacity, 1);
   stroke: var(--ink);
   stroke-width: 1;
   stroke-opacity: .55;
   vector-effect: non-scaling-stroke;
 }
-.sd-distribution-mark[data-band="0"] { --sd-map-opacity: .35; }
-.sd-distribution-mark[data-band="1"] { --sd-map-opacity: .55; }
-.sd-distribution-mark[data-band="2"] { --sd-map-opacity: .78; }
+.sd-distribution-mark[data-band="0"] { fill: #f3c744; }
+.sd-distribution-mark[data-band="1"] { fill: #ee982a; }
+.sd-distribution-mark[data-band="2"] { fill: #df6026; }
+.sd-distribution-mark[data-band="3"] { fill: #c83d37; }
 .sd-distribution-outline { fill: none; stroke: var(--ink-2); stroke-width: 2; stroke-opacity: .66; }
 .sd-distribution-labels {
   fill: var(--ink-2); stroke: var(--surface); stroke-width: 6; stroke-linejoin: round;
   paint-order: stroke; font-size: 30px; font-weight: 600; text-anchor: middle;
 }
 .sd-distribution figcaption { display: grid; gap: var(--space-4); padding: var(--space-12); }
-.sd-distribution-key { display: flex; align-items: center; gap: var(--space-8); margin: 0; color: var(--ink); font-size: var(--fs-meta); }
-.sd-distribution-key span { flex: 0 0 14px; height: 14px; border-radius: 50%; background: var(--sd-month-color); }
 .sd-distribution-legend {
   width: 100%;
   max-width: 26rem;

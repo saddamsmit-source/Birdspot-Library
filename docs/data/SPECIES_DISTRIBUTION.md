@@ -14,12 +14,12 @@ In **Soorten → vogel → Waar** staat de openbare soortkaart boven **Jouw plek
 | Kaartteken | Openbare meldingen per vak |
 |---|---:|
 | Leeg | 0–4 |
-| Klein | 5–24 |
-| Middelklein | 25–99 |
-| Middelgroot | 100–499 |
-| Groot | 500 of meer |
+| Klein, geel | 5–24 |
+| Middelklein, geeloranje | 25–99 |
+| Middelgroot, donkeroranje | 100–499 |
+| Groot, rood | 500 of meer |
 
-Alle vakken hebben dezelfde ruimtelijke schaal. De grootte en tint van de ronde stip tonen de meldingsklasse. De stip staat in het midden van het vak en vat meldingen in dat hele vak samen. De basiskleur volgt de hoofdstatus van de soort. De legenda gebruikt dezelfde symbolen als de kaart. De aantallen zijn samengevoegd over 2020–2025 en volgen de bestaande bronfilters. Er is geen correctie voor ongelijke telinspanning.
+Alle vakken hebben dezelfde ruimtelijke schaal. De grootte en tint van de ronde stip tonen de meldingsklasse. De stip staat in het midden van het vak en vat meldingen in dat hele vak samen. De kleur loopt van geel bij weinig meldingen naar rood bij veel meldingen. De hoofdstatus staat apart als tekst. De legenda gebruikt dezelfde symbolen als de kaart. De aantallen zijn samengevoegd over 2020–2025 en volgen de bestaande bronfilters. Er is geen correctie voor ongelijke telinspanning.
 
 ## Dataset opnieuw bouwen
 
@@ -38,6 +38,6 @@ Gebruik voor een nieuwe momentopname een lege cachemap. De generator koppelt op 
 - L-019, L-039, L-027. Hergebruik een brongecontroleerde, afgeleide laag voor vaste gidsinhoud, met eigen legenda en een expliciete lege staat. Houd die gegevens gescheiden van persoonlijke records en voeg de gebundelde module toe aan de versiegebonden appcache.
 
 - L-003 en CAP-BIRD-012. Versie 1.16.4 gebruikte kobaltblauw op lichte kaarten en lichter blauw op donkere kaarten. De berekende contrastverhouding in het vol gevulde deel ging van ongeveer 1,8:1 naar 3,3–4,6:1 tegenover land en water. Op 390 px gecontroleerd voor Rietgors in beide thema’s.
-- Op verzoek volgt de wolk vanaf 1.16.5 de kleur van de hoofdstatus in de maandlegenda. Beide weergaven delen de statuslogica en het kleurentoken. De kaartlegenda noemt de hoofdstatus in tekst. De doorschijnende wolk heeft een zachte contrastrand en bundelt nog steeds waarnemingen uit alle seizoenen van de bronperiode. De kleuren zijn op 390 px gecontroleerd in beide thema’s voor standvogel, zomergast, wintergast, doortrekker, schaarse gast en exoot. De soortdetailtest controleert dat kaart en maandlegenda dezelfde kleur gebruiken bij Rietgors en Boerenzwaluw.
+- In 1.16.5 volgde de wolk de statuskleur van de maandlegenda. De huidige kaart heeft een vaste meldingsschaal voor alle soorten. De soortdetailtest controleert bij Rietgors en Boerenzwaluw dat kaart en kaartlegenda dezelfde meldingskleuren gebruiken.
 
 - CAP-BIRD-012, L-017, L-019. De kaart bewaart nu de onderliggende meldingentotalen per vak. De legenda en de kaart gebruiken dezelfde grenzen en symbolen. Test de klassen tegen de brondata en behoud het onderscheid tussen een lage meldingsfrequentie en weinig vogels. De persoonlijke kaart en de offline gidsroute zijn afzonderlijk gecontroleerd.

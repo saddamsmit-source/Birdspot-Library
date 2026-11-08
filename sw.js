@@ -12,7 +12,7 @@
  *   birdspot-media           — foto's/IDB-exports (permanent)
  */
 
-const APP_VERSION = '1.19.0-veldschrift-verspreiding-preview-3';
+const APP_VERSION = '1.19.0-veldschrift-verspreiding-preview-4';
 const APP_CACHE   = `birdspot-app-v${APP_VERSION}`;
 const MEDIA_CACHE = 'birdspot-media';
 

@@ -128,15 +128,15 @@ def main():
                 p.locator(f'[data-sd-tab="{key}"]').click()
                 p.locator(f'#sdPanel-{key}').wait_for(state="visible", timeout=4000)
 
-            def assert_distribution_palette(kind, label):
+            def assert_distribution_palette(label):
                 figure = p.locator('#sdPanel-waar .sd-distribution')
-                assert figure.get_attribute('data-month-kind') == kind
-                swatch = p.locator(f'.sd-month-legend [data-month-kind="{kind}"] span')
-                expected = swatch.evaluate('el => getComputedStyle(el).backgroundColor')
-                assert figure.locator('.sd-distribution-marks circle').first.evaluate('el => getComputedStyle(el).fill') == expected
-                key = figure.locator('.sd-distribution-key')
-                assert label in key.inner_text()
-                assert key.locator('span').evaluate('el => getComputedStyle(el).backgroundColor') == expected
+                colors = ['rgb(243, 199, 68)', 'rgb(238, 152, 42)', 'rgb(223, 96, 38)', 'rgb(200, 61, 55)']
+                read_colors = "els => els.map(el => getComputedStyle(el).fill)"
+                assert figure.locator('.sd-distribution-legend svg circle').evaluate_all(read_colors) == colors
+                marks = figure.locator('.sd-distribution-marks circle')
+                bands = marks.evaluate_all("els => els.map(el => Number(el.dataset.band))")
+                assert marks.evaluate_all(read_colors) == [colors[band] for band in bands]
+                assert figure.get_by_text(f'Hoofdstatus: {label}', exact=True).is_visible()
 
             # Rietgors: eigen waarnemingen
             rg = next(s for s in species if s["id"] == "sp118")
@@ -187,7 +187,7 @@ def main():
             assert marks.evaluate_all(
                 "els => els.map(e => Number(e.getAttribute('r')))"
             ) == [symbols[band] for band in actual]
-            assert_distribution_palette('standvogel', 'Standvogel')
+            assert_distribution_palette('Standvogel')
             assert "Rietgors" in distribution.locator('.sd-distribution-map').get_attribute('aria-label')
             assert "2020–2025" in distribution.inner_text()
             assert distribution.get_by_role('link', name='eBird via GBIF').get_attribute('href') == "https://doi.org/10.15468/aomfnb"
@@ -314,7 +314,7 @@ def main():
             assert 0 < first["y"] - (may["y"] + may["height"]) <= 6
             assert bar.locator('.sd-month[title="november"]').get_attribute('class') == 'sd-month'
             tab("waar")
-            assert_distribution_palette('zomergast', 'Zomergast')
+            assert_distribution_palette('Zomergast')
             close_detail()
 
             # The Pimpelmees used to have breeding text but no line in its year-round calendar.

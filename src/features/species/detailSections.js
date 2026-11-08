@@ -363,7 +363,6 @@ function distributionMap(s) {
   const cells = DISTRIBUTION[s.id]?.[1];
   const title = '<h3 class="sd-h">Verspreiding in Nederland</h3>';
   if (!cells) return `${title}<p class="sd-empty">Voor deze soort is geen onderbouwde verspreidingskaart beschikbaar.</p>`;
-  const kind = presenceColorKind(s.category);
   const status = CATEGORY_BADGES[s.category] || 'Overig';
   const backdrop = ['BEL', 'DEU', 'FRA', 'GBR'].map(key => `<path d="${MAP_PATHS[key]}"/>`).join('');
   const marks = cells.map(([cell, count]) => {
@@ -371,7 +370,7 @@ function distributionMap(s) {
     const y = Math.floor(cell / MAP_COLUMNS) * MAP_CELL;
     return distributionMark(x, y, DISTRIBUTION_BANDS.findIndex(({ max }) => count <= max));
   }).join('');
-  return `${title}<figure class="sd-distribution" data-month-kind="${kind}">
+  return `${title}<figure class="sd-distribution">
     <svg class="sd-distribution-map" viewBox="${MAP_VIEW_BOX}" role="img"
       aria-label="Kaart van Nederland met het aantal openbare meldingen per vak voor ${esc(s.nameNL)}"
       aria-describedby="sdDistributionNote">
@@ -389,8 +388,8 @@ function distributionMap(s) {
     </svg>
     <figcaption>
       ${distributionLegend()}
-      <p class="sd-distribution-key"><span aria-hidden="true"></span> Kleur van de hoofdstatus: ${esc(status)}</p>
-      <p class="sd-caption" id="sdDistributionNote">Een grotere stip betekent meer meldingen. Elke stip staat voor een vak van ongeveer 24 km breed. Alle seizoenen in ${GBIF_YEARS} zijn samengevoegd.</p>
+      <p class="sd-caption">Hoofdstatus: ${esc(status)}</p>
+      <p class="sd-caption" id="sdDistributionNote">Bij meer meldingen wordt de stip groter en verschuift de kleur van geel naar rood. Elke stip staat voor een vak van ongeveer 24 km breed. Alle seizoenen in ${GBIF_YEARS} zijn samengevoegd.</p>
       <p class="sd-caption">Plekken die vaker worden bezocht, kunnen meer meldingen hebben. Ook in een leeg vak kan de soort voorkomen.</p>
       <p class="sd-caption">Waarnemingen <a href="https://doi.org/10.15468/aomfnb" target="_blank" rel="noopener noreferrer">eBird via GBIF</a> (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>) · Kaart <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener noreferrer">Natural Earth</a></p>
     </figcaption>
