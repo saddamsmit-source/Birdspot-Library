@@ -109,9 +109,9 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp130 | Smient | Ja | 3 | Apart beeld |
 | sp132 | Tafeleend | Ja | 3 | Apart beeld |
 | sp141 | Gierzwaluw | — | 1 | Apart beeld |
-| sp143 | Kluut | Ja | 1 | Open |
-| sp144 | Zilverplevier | Ja | 3 | Open |
-| sp145 | Goudplevier | Ja | 3 | Open |
+| sp143 | Kluut | Ja | 2 | Apart beeld |
+| sp144 | Zilverplevier | Ja | 4 | Apart beeld |
+| sp145 | Goudplevier | Ja | 4 | Apart beeld |
 | sp146 | Bontbekplevier | Ja | 3 | Open |
 | sp147 | Kleine Plevier | Ja | 3 | Open |
 | sp150 | Steenloper | Ja | 1 | Open |
@@ -548,3 +548,15 @@ Basis is concept-PR #91, `7b7bfb64273e90a97a1a9dca01d695d37791dfc5`. Krakeend, S
 CAP-BIRD-012/015. De drie beelden staan lokaal en elk eenmaal onder ‘In vlucht’, met maker, bron, licentie en bewerking. Vergelijk bij eenden de kleur en omvang van het zichtbare vleugelveld. Kies een opname waarin dat veld én de kop en lichaamsbouw leesbaar blijven. Er staan nog 34 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Kluut.
 
 VERIFIED · Mobiele Chromium op 390 px. Zes soortkaarten via appbreed zoeken geopend op basis en kandidaat. De bestaande gidsbeelden en de vluchtfoto’s uit ronde 29 laden. De drie nieuwe foto’s staan elk eenmaal vóór het verenkleed, tonen bron en licentie en openen met 2× zoom. Ook na offline herladen zijn de drie kaarten en fotovergroting getest. Alle 325 gidsbeelden en 120 geluidsopnamen zijn na precache offline gedecodeerd. Gidsdekking, volgorde, uniciteit en SHA-256 zijn gecontroleerd. NOT TESTED · Fysiek toestel.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 31
+
+Basis is concept-PR #92, `4cb2ec7eccd6bb51c9ffb82f327314daf48df22b`. Kluut, Zilverplevier en Goudplevier hadden ieder een hoofdfoto. De Commons-vluchtcategorieën en de algemene categorie van Goudplevier zijn visueel nagezocht. Per soort zijn meerdere opnamen vergeleken op vrije vlucht, duidelijkheid bij kaartformaat en de rechten per bestand. De soortgids van Vogelbescherming ondersteunt de herkenningscontrole.
+
+- Kluut · Yves Hoebeke · CC BY-SA 2.0. De opname toont de omhooggebogen snavel, zwarte vleugelpunten en lange uitstekende poten. De fotograafvermelding in beeld is behouden. [Bronfoto](https://commons.wikimedia.org/wiki/File:Kluut-1_(28031728713).jpg).
+- Zilverplevier · Donald Macauley · CC BY-SA 2.0. De uitsnede toont de zwarte oksel onder de geheven vleugel en houdt beide vleugelpunten in beeld. [Bronfoto](https://commons.wikimedia.org/wiki/File:Grey_Plover_-_1192_(11479350056).jpg).
+- Goudplevier · Hobbyfotowiki · CC0. De bovenaanblik uit IJsland toont de goudgele spikkels op rug en bovenvleugel. De onderzijde van de vleugel valt grotendeels buiten deze kijkhoek. [Bronfoto](https://commons.wikimedia.org/wiki/File:European_golden_plover_(Pluvialis_apricaria)_in_flight.jpg).
+
+CAP-BIRD-012/015. De drie beelden staan lokaal en elk eenmaal onder ‘In vlucht’, met maker, bron, licentie en bewerking. Een zijaanblik van onderen toont de oksel bij Zilverplevier, terwijl een bovenaanblik het goudkleurige patroon bij Goudplevier toont. Leg vast welke herkenningsinformatie een foto door haar kijkhoek wel kan tonen. Er staan nog 31 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Bontbekplevier.
+
+VERIFIED · Mobiele Chromium op 390 px. Zes soortkaarten via appbreed zoeken geopend op basis en kandidaat. De bestaande gidsbeelden en vluchtfoto’s uit ronde 30 laden. De drie nieuwe beelden staan elk eenmaal vóór het verenkleed, tonen bron en licentie en openen met 2× zoom. Ook na offline herladen zijn de drie kaarten en fotovergroting getest. Alle 328 gidsbeelden en 120 geluidsopnamen zijn na precache offline gedecodeerd. Gidsdekking, volgorde, uniciteit en SHA-256 zijn gecontroleerd. NOT TESTED · Fysiek toestel.
