@@ -5288,5 +5288,74 @@ export const GUIDE_POSES = Object.freeze({
       "height": 640,
       "image": "/assets/species/plumage/sp065-flight.webp"
     }
+  ],
+  "sp068": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "Let op de lange staart met witte buitenste veren en de donkere keel.",
+      "file": "Motacilla alba, Kalkara, (2026) (01).jpg",
+      "nl": "Witte Kwikstaart",
+      "latin": "Motacilla alba",
+      "author": "Tranceliner",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Motacilla_alba,_Kalkara,_(2026)_(01).jpg",
+      "showSourceLink": true,
+      "alt": "Witte Kwikstaart in vrije vlucht met gespreide vleugels en witte buitenste staartveren.",
+      "modifications": "Wikimedia-versie op 1280 px omgezet naar WebP zonder uitsnede",
+      "reviewed": "2026-11-08",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/witte-kwikstaart",
+      "visualCheck": "Witte Kwikstaart in vrije vlucht met gespreide vleugels en witte buitenste staartveren.",
+      "width": 1280,
+      "height": 854,
+      "image": "/assets/species/plumage/sp068-flight.webp"
+    }
+  ],
+  "sp069": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "Deze vogel heeft een gele onderzijde en een blauwgrijze kop met een lichte wenkbrauwstreep.",
+      "file": "Schafstelze - Motacilla flava.jpg",
+      "nl": "Gele Kwikstaart",
+      "latin": "Motacilla flava",
+      "author": "Ralf Hüsges",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Schafstelze_-_Motacilla_flava.jpg",
+      "showSourceLink": true,
+      "alt": "Gele Kwikstaart in vrije vlucht naast een stronk, met een gele onderzijde.",
+      "modifications": "Wikimedia-versie op 1280 px omgezet naar WebP zonder uitsnede",
+      "reviewed": "2026-11-08",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/gele-kwikstaart",
+      "visualCheck": "Gele Kwikstaart in vrije vlucht naast een stronk, met een gele onderzijde.",
+      "width": 1280,
+      "height": 853,
+      "image": "/assets/species/plumage/sp069-flight.webp"
+    }
+  ],
+  "sp070": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "Let op de brede vleugels en de lichte onderzijde.",
+      "file": "Skylark (Alauda arvensis) in flight.jpg",
+      "nl": "Veldleeuwerik",
+      "latin": "Alauda arvensis",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Skylark_(Alauda_arvensis)_in_flight.jpg",
+      "showSourceLink": true,
+      "alt": "Veldleeuwerik in vrije vlucht met geheven vleugels, van opzij gezien.",
+      "modifications": "Wikimedia-versie op 1280 px omgezet naar WebP zonder uitsnede",
+      "reviewed": "2026-11-08",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/veldleeuwerik",
+      "visualCheck": "Veldleeuwerik in vrije vlucht met geheven vleugels, van opzij gezien.",
+      "width": 1280,
+      "height": 853,
+      "image": "/assets/species/plumage/sp070-flight.webp"
+    }
   ]
 });
