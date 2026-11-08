@@ -224,7 +224,7 @@ def main():
             we = next(s for s in species if s["nameNL"] == "Wilde Eend")
             open_species("Wilde Eend", we["id"])
             cards = p.eval_on_selector_all('#sdPanel-herkenning .sd-plumage strong', 'els => els.map(e => e.innerText)')
-            assert any(c.startswith("Eclipskleed") for c in cards) and "Man" in cards and "Vrouw" in cards, cards
+            assert any(c.startswith("Eclipskleed") for c in cards) and "Mannetje" in cards and "Vrouwtje" in cards, cards
             assert not any("Man en vrouw" in c for c in cards), cards
             close_detail()
 
@@ -367,10 +367,13 @@ def main():
             print("H3-03 OK — zonder leefwijze:", ex["nameNL"], "· niet-broedvogel Rotgans zonder broedblok")
 
             def assert_photo_once(path):
-                photo = p.locator(f'.signature-species-detail-sheet [data-guide-image="{path}"] img')
-                expect(photo).to_have_count(1)
-                photo.scroll_into_view_if_needed()
-                photo.evaluate("img => img.decode()")
+                photo = p.locator(f'.signature-species-detail-sheet [data-guide-image="{path}"]:not(.sd-plumage-comparison *) img')
+                assert 1 <= photo.count() <= 2
+                if photo.count() == 2:
+                    expect(p.locator(f'.sd-hero-photo[data-guide-image="{path}"] img')).to_have_count(1)
+                    expect(p.locator(f'#sdPanel-herkenning [data-guide-image="{path}"]:not(.sd-plumage-comparison *) img')).to_have_count(1)
+                photo.first.scroll_into_view_if_needed()
+                photo.first.evaluate("img => img.decode()")
 
             def check_comparison_photo(photo):
                 photo.scroll_into_view_if_needed()
@@ -410,7 +413,7 @@ def main():
             close_detail()
 
             open_species("Fitis", "sp057")
-            cards = p.locator('#sdPanel-herkenning .sd-compare-card')
+            cards = p.locator('#sdPanel-herkenning .sd-compare .sd-compare-card')
             assert cards.locator('strong').all_text_contents() == ["Fitis", "Tjiftjaf"]
             assert cards.get_by_role("link", name="Vogelbescherming").count() == 2
             photo = p.get_by_role("button", name="Vergroot hoofdfoto")
@@ -470,22 +473,31 @@ def main():
             open_species("Bruine Kiekendief", "sp173")
             comparisons = p.locator('.sd-compare')
             for label, key, blue_path in (
-                ("volwassen mannetjes", "Man", "/assets/species/sp249.webp"),
-                ("volwassen vrouwtjes", "Vrouw", "/assets/species/plumage/sp249-adult_f.webp"),
+                ("volwassen mannetjes", "Mannetje", "/assets/species/sp249.webp"),
+                ("volwassen vrouwtjes", "Vrouwtje", "/assets/species/plumage/sp249-adult_f.webp"),
                 ("jonge vogels", "Juveniel", "/assets/species/plumage/sp249-juv.webp"),
             ):
                 pair = comparisons.filter(has=p.get_by_role("heading", name=f"Bruine en Blauwe · {label}"))
                 assert pair.locator('.sd-badge').all_text_contents() == [key, key]
                 assert_photo_once(blue_path)
                 brown_path = {
-                    "Man": "/assets/species/sp173.webp",
-                    "Vrouw": "/assets/species/plumage/sp173-adult_f.webp",
+                    "Mannetje": "/assets/species/sp173.webp",
+                    "Vrouwtje": "/assets/species/plumage/sp173-adult_f.webp",
                     "Juveniel": "/assets/species/plumage/sp173-juv.webp",
                 }[key]
                 assert_photo_once(brown_path)
                 for picture in pair.locator('img').all():
                     picture.scroll_into_view_if_needed()
                     picture.evaluate("img => img.decode()")
+            rest = p.locator('[data-plumage="adult_f"] .sd-field-photo').filter(has=p.locator('img[src$="sp173-female-rest.webp"]'))
+            expect(p.locator('[data-plumage="adult_f"] .sd-field-photo')).to_have_count(2)
+            assert rest.locator('..').get_by_label("Foto-informatie").count() == 1
+            check_comparison_photo(rest)
+            comparison = p.get_by_role('region', name='Kleden vergelijken')
+            expect(comparison.locator('.sd-compare-grid')).not_to_be_visible()
+            comparison.get_by_text('Bekijk de kleden naast elkaar', exact=True).click()
+            expect(comparison.locator('.sd-compare-grid')).to_be_visible()
+            expect(comparison.locator('img')).to_have_count(3)
             assert p.get_by_label("Roep van Bruine Kiekendief").count() == 1
             close_detail()
             open_species("Steppekiekendief", "sp250")
@@ -505,7 +517,7 @@ def main():
             for path in ("/assets/species/plumage/sp006-juv.webp", "/assets/species/plumage/sp007-juv.webp"):
                 assert_photo_once(path)
             flight = p.locator('.sd-flight-compare')
-            assert flight.evaluate("el => Boolean(el.compareDocumentPosition(document.querySelector('.sd-plumage-list')) & Node.DOCUMENT_POSITION_FOLLOWING)")
+            assert flight.evaluate("el => Boolean(el.compareDocumentPosition(document.querySelector('.sd-plumage-list')) & Node.DOCUMENT_POSITION_PRECEDING)")
             expect(flight.get_by_role("heading", name="Sperwer, Havik en Torenvalk · in vlucht")).to_be_visible()
             assert flight.locator('strong').all_text_contents() == ["Sperwer", "Havik", "Torenvalk"]
             for sid in ("sp006", "sp007", "sp008"):
@@ -524,7 +536,7 @@ def main():
             adult = buzzard_comparisons.filter(
                 has=p.get_by_role("heading", name="Buizerd en Ruigpootbuizerd · volwassen in vlucht")
             )
-            assert adult.locator('.sd-badge').all_text_contents() == ["Volwassen", "Vrouw"]
+            assert adult.locator('.sd-badge').all_text_contents() == ["Volwassen", "Vrouwtje"]
             check_comparison_photo(adult.locator('.sd-field-photo').first)
             for path in ("/assets/species/plumage/sp005-adult_m.webp", "/assets/species/sp253.webp"):
                 assert_photo_once(path)

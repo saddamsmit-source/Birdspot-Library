@@ -5,7 +5,7 @@
  */
 
 import { SPECIES, CATEGORY_LABELS, REGIONS, searchSpecies, activeCategories, CATEGORY_BADGES, matchesSpeciesStatus } from '../../data/species.js';
-import { tabBar, recognitionPanel, voicePanel, voiceText, statusPanel, wherePanel, wherePlaces, minePanel, sightingStats } from './detailSections.js';
+import { tabBar, guideHeroPhoto, recognitionPanel, voicePanel, voiceText, statusPanel, wherePanel, wherePlaces, minePanel, sightingStats } from './detailSections.js';
 import { SEASONS, SEASON_ORDER, toggleSeason, seasonPeriod, presentIn, periodMonthsText, isYearRound } from '../../data/seasons.js';
 import { getDB, getPhotosBySpecies, getPhoto } from '../../data/db.js';
 import { getSightings, getSightingsSnapshot }                 from '../../data/sightings.js';
@@ -543,7 +543,7 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
   ctx?.detailCleanup?.(false);
   _detailSpeciesId = speciesId;
 
-  const guidePhoto = GUIDE_PHOTOS[speciesId];
+  const guidePhoto = guideHeroPhoto(speciesId);
   const photosUrls = new Set();
   const photoList = [];
   let closed = false;

@@ -2027,7 +2027,8 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "visualCheck": "Jonge vogel vlak boven riet, met donkerbruin kleed en lichte kruin.",
       "alt": "Bruine Kiekendief — Jonge vogel vlak boven riet, met donkerbruin kleed en lichte kruin.",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-      "observation": "https://www.inaturalist.org/observations/134634395"
+      "observation": "https://www.inaturalist.org/observations/134634395",
+      "flight": true
     }
   },
   "sp249": {
@@ -3991,6 +3992,22 @@ export const GUIDE_PLUMAGE = Object.freeze({
     }
   }
 });
+export const GUIDE_HEROES = Object.freeze({
+  "sp005": "/assets/species/plumage/sp005-male-rest.webp",
+  "sp009": "/assets/species/plumage/sp009-male-rest.webp",
+  "sp016": "/assets/species/plumage/sp016-male.webp",
+  "sp020": "/assets/species/plumage/sp020-male.webp",
+  "sp043": "/assets/species/plumage/sp043-adult_m.webp",
+  "sp091": "/assets/species/plumage/sp091-adult_m.webp",
+  "sp116": "/assets/species/plumage/sp116-flight.webp",
+  "sp141": "/assets/species/plumage/sp141-adult.webp",
+  "sp164": "/assets/species/plumage/sp164-adult.webp",
+  "sp165": "/assets/species/plumage/sp165-adult.webp",
+  "sp166": "/assets/species/plumage/sp166-adult.webp",
+  "sp167": "/assets/species/plumage/sp167-adult.webp",
+  "sp253": "/assets/species/plumage/sp253-male-rest.webp",
+  "sp288": "/assets/species/plumage/sp288-adult.webp"
+});
 export const GUIDE_POSES = Object.freeze({
   "sp008": [
     {
@@ -4061,7 +4078,7 @@ export const GUIDE_POSES = Object.freeze({
   ],
   "sp009": [
     {
-      "label": "Zittend",
+      "label": "Vrouwtje in rust",
       "note": "Let op kopkap, baardstreep en dwarsbanden op de onderzijde. Dit is een volwassen vrouwtje van de ondersoort calidus uit India; de tint verschilt per ondersoort.",
       "file": "Peregrine falcon portrait.jpg",
       "image": "/assets/species/plumage/sp009-perched.webp",
@@ -4077,7 +4094,9 @@ export const GUIDE_POSES = Object.freeze({
       "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/slechtvalk",
       "visualCheck": "Volwassen Slechtvalk zittend, van voren: donkere kopkap, baardstreep en dwarsbanden. Bron: vrouwtje van ondersoort calidus, gefotografeerd in India.",
       "width": 1231,
-      "height": 1600
+      "height": 1600,
+      "sex": "female",
+      "flight": false
     },
     {
       "label": "In vlucht",
@@ -4193,7 +4212,7 @@ export const GUIDE_POSES = Object.freeze({
       "note": "Foeragerend op gras. De geheel zwarte snorstreep past bij een vrouwtje; het mannetje heeft rood in die streep."
     },
     {
-      "label": "In vlucht",
+      "label": "Vrouwtje in vlucht",
       "flight": true,
       "note": "Let op de groen getinte rug en de lichtere stuit.",
       "file": "Female green woodpecker in flight.jpg",
@@ -4211,7 +4230,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Vrouwtje Groene Specht in vlucht met opgerichte vleugels, een groene rug en geelgroene stuit.",
       "width": 1400,
       "height": 1050,
-      "image": "/assets/species/plumage/sp019-flight.webp"
+      "image": "/assets/species/plumage/sp019-flight.webp",
+      "sex": "female"
     }
   ],
   "sp020": [
@@ -4664,7 +4684,7 @@ export const GUIDE_POSES = Object.freeze({
   ],
   "sp017": [
     {
-      "label": "In vlucht",
+      "label": "Vrouwtje in vlucht",
       "flight": true,
       "note": "Let op de lichte dwarsbanden op de rug en vleugels.",
       "file": "Lesser spotted woodpecker (f), Dryobates minor, Mindre hackspett.jpg",
@@ -4682,7 +4702,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Vrouwtje Kleine Bonte Specht vliegt weg van een boomholte. De rug en vleugels zijn zwart-wit gebandeerd.",
       "width": 1400,
       "height": 1400,
-      "image": "/assets/species/plumage/sp017-flight.webp"
+      "image": "/assets/species/plumage/sp017-flight.webp",
+      "sex": "female"
     }
   ],
   "sp018": [
@@ -4871,7 +4892,7 @@ export const GUIDE_POSES = Object.freeze({
   ],
   "sp035": [
     {
-      "label": "In vlucht",
+      "label": "Mannetje in vlucht",
       "flight": true,
       "note": "De witte vleugeltekening en de rozerode borst vallen op.",
       "file": "Fringilla coelebs -Lochwinnoch, Renfrewshire, Scotland -flying-8.jpg",
@@ -4889,7 +4910,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Mannetje Vink in vlucht met een rozerode borst, blauwgrijze kruin en witte vlekken op de vleugel.",
       "width": 900,
       "height": 900,
-      "image": "/assets/species/plumage/sp035-flight.webp"
+      "image": "/assets/species/plumage/sp035-flight.webp",
+      "sex": "male"
     }
   ],
   "sp036": [
@@ -4940,7 +4962,7 @@ export const GUIDE_POSES = Object.freeze({
   ],
   "sp038": [
     {
-      "label": "In vlucht",
+      "label": "Mannetje in vlucht",
       "flight": true,
       "note": "Let op de zwarte kruin en de gele vleugelband. De vleugel is iets onscherp door beweging.",
       "file": "Runway Three - Flickr - john.purvis.jpg",
@@ -4958,7 +4980,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Mannetje Sijs in vlucht met een zwarte kruin en een gele band op de opgeheven vleugel.",
       "width": 1141,
       "height": 1400,
-      "image": "/assets/species/plumage/sp038-flight.webp"
+      "image": "/assets/species/plumage/sp038-flight.webp",
+      "sex": "male"
     }
   ],
   "sp039": [
@@ -4986,7 +5009,7 @@ export const GUIDE_POSES = Object.freeze({
   ],
   "sp040": [
     {
-      "label": "In vlucht",
+      "label": "Mannetje in vlucht",
       "flight": true,
       "note": "De witte stuit contrasteert met de zwarte staart. Ook de rode borst van het mannetje is goed zichtbaar.",
       "file": "26 Gramm Fluggewicht erreicht ein Dompfaff. 01.jpg",
@@ -5004,7 +5027,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Mannetje Goudvink in zijaanzicht in vlucht met een rode borst, zwarte kop en witte stuit.",
       "width": 1400,
       "height": 1400,
-      "image": "/assets/species/plumage/sp040-flight.webp"
+      "image": "/assets/species/plumage/sp040-flight.webp",
+      "sex": "male"
     }
   ],
   "sp041": [
@@ -5032,7 +5056,7 @@ export const GUIDE_POSES = Object.freeze({
   ],
   "sp042": [
     {
-      "label": "In vlucht",
+      "label": "Mannetje in vlucht",
       "flight": true,
       "note": "De rode kop en borst zijn zichtbaar. De vleugels zijn onscherp door beweging.",
       "file": "Zingende roodmus-4961932.webm",
@@ -5050,12 +5074,13 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Videostill van een mannetje Roodmus vlak na het loskomen van de tak, met een rode kop en borst en bewogen vleugels.",
       "width": 1023,
       "height": 576,
-      "image": "/assets/species/plumage/sp042-flight.webp"
+      "image": "/assets/species/plumage/sp042-flight.webp",
+      "sex": "male"
     }
   ],
   "sp043": [
     {
-      "label": "In vlucht",
+      "label": "Mannetje in vlucht",
       "flight": true,
       "note": "Let op de grijze kruin en de zwarte bef.",
       "file": "House Sparrow1.jpg",
@@ -5073,7 +5098,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Mannetje Huismus in vrije vlucht met gespreide vleugels, een grijze kruin en een zwarte bef.",
       "width": 1400,
       "height": 886,
-      "image": "/assets/species/plumage/sp043-flight.webp"
+      "image": "/assets/species/plumage/sp043-flight.webp",
+      "sex": "male"
     }
   ],
   "sp044": [
@@ -5101,7 +5127,7 @@ export const GUIDE_POSES = Object.freeze({
   ],
   "sp045": [
     {
-      "label": "In vlucht",
+      "label": "Mannetje in vlucht",
       "flight": true,
       "note": "Let op het donkere verenkleed en de geelachtige snavel van het mannetje.",
       "file": "NZ7 6931 (51844641169).jpg",
@@ -5119,7 +5145,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Mannetje Merel in vlucht, met een geheven vleugel, geelachtige snavel en donker verenkleed.",
       "width": 1400,
       "height": 1120,
-      "image": "/assets/species/plumage/sp045-flight.webp"
+      "image": "/assets/species/plumage/sp045-flight.webp",
+      "sex": "male"
     }
   ],
   "sp046": [
@@ -5653,7 +5680,7 @@ export const GUIDE_POSES = Object.freeze({
   ],
   "sp089": [
     {
-      "label": "In vlucht",
+      "label": "Mannetje in vlucht",
       "flight": true,
       "note": "Let op de groene kop, de gele snavel en de blauw-paarse vleugelspiegel met lichte randen.",
       "file": "Mallard male in flight.jpg",
@@ -5671,12 +5698,13 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Mannetje Wilde Eend in vrije vlucht, met een groene kop en geheven vleugels.",
       "width": 1400,
       "height": 958,
-      "image": "/assets/species/plumage/sp089-flight.webp"
+      "image": "/assets/species/plumage/sp089-flight.webp",
+      "sex": "male"
     }
   ],
   "sp090": [
     {
-      "label": "In vlucht",
+      "label": "Mannetje in vlucht",
       "flight": true,
       "note": "Let op de brede lepelvormige snavel, de lichtblauwe vleugeldekveren en de groene vleugelspiegel.",
       "file": "Male northern shoveler in flight-0208.jpg",
@@ -5694,12 +5722,13 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Mannetje Slobeend in vrije vlucht, met brede snavel, lichtblauwe voorvleugel en groene vleugelspiegel.",
       "width": 1400,
       "height": 934,
-      "image": "/assets/species/plumage/sp090-flight.webp"
+      "image": "/assets/species/plumage/sp090-flight.webp",
+      "sex": "male"
     }
   ],
   "sp091": [
     {
-      "label": "In vlucht",
+      "label": "Mannetje in vlucht",
       "flight": true,
       "note": "Let op de kastanjebruine kop met groen oogveld en de helder groene vleugelspiegel.",
       "file": "Cerceta común - Flickr - ferran pestaña.jpg",
@@ -5717,12 +5746,13 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Mannetje Wintertaling in vrije vlucht met een kastanjebruine kop en een groene vleugelspiegel.",
       "width": 1400,
       "height": 978,
-      "image": "/assets/species/plumage/sp091-flight.webp"
+      "image": "/assets/species/plumage/sp091-flight.webp",
+      "sex": "male"
     }
   ],
   "sp092": [
     {
-      "label": "In vlucht",
+      "label": "Mannetje in vlucht",
       "flight": true,
       "note": "Let op de witte vleugelstreep, de lichte flank en het gele oog. Dit mannetje is gefotografeerd bij Borit, Pakistan.",
       "file": "Tufted Duck (Aythya fuligula) - Flickr - gilgit2.jpg",
@@ -5740,7 +5770,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Mannetje Kuifeend in vrije vlucht boven water, met opgeheven vleugels, een witte vleugelstreep en een geel oog.",
       "width": 1400,
       "height": 1050,
-      "image": "/assets/species/plumage/sp092-flight.webp"
+      "image": "/assets/species/plumage/sp092-flight.webp",
+      "sex": "male"
     }
   ],
   "sp094": [
@@ -5975,7 +6006,7 @@ export const GUIDE_POSES = Object.freeze({
   ],
   "sp105": [
     {
-      "label": "In vlucht",
+      "label": "Mannetje in vlucht",
       "flight": true,
       "note": "Let op de lange gebandeerde staart, de ronde vleugels en de rode huid rond het oog. Dit mannetje is gefotografeerd in South Dakota.",
       "file": "Rink-necked pheasant in flight (6922582382).jpg",
@@ -5993,7 +6024,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Mannetje Fazant in vrije vlucht met een lange gebandeerde staart, rode huid rond het oog en een witte halsring.",
       "width": 1280,
       "height": 740,
-      "image": "/assets/species/plumage/sp105-flight.webp"
+      "image": "/assets/species/plumage/sp105-flight.webp",
+      "sex": "male"
     }
   ],
   "sp106": [
@@ -6090,7 +6122,7 @@ export const GUIDE_POSES = Object.freeze({
   ],
   "sp113": [
     {
-      "label": "In vlucht",
+      "label": "Mannetje in vlucht",
       "flight": true,
       "note": "Bij dit mannetje contrasteert het gele lichaam met de zwarte slagpennen. De gespreide staart laat gele buitenranden zien.",
       "file": "Oriolus oriolus Barcelona 1.jpg",
@@ -6108,7 +6140,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Mannetje Wielewaal in vrije vlucht bij Barcelona met een geel lichaam, zwarte slagpennen en een geel-zwarte staart.",
       "width": 1400,
       "height": 874,
-      "image": "/assets/species/plumage/sp113-flight.webp"
+      "image": "/assets/species/plumage/sp113-flight.webp",
+      "sex": "male"
     }
   ],
   "sp114": [
@@ -6251,7 +6284,7 @@ export const GUIDE_POSES = Object.freeze({
   ],
   "sp129": [
     {
-      "label": "In vlucht",
+      "label": "Mannetje in vlucht",
       "flight": true,
       "note": "Op de geheven vleugel zie je de kleine witte spiegel naast kastanjebruine veren. Let ook op de donkere snavel en het zwarte achterlijf van dit mannetje.",
       "file": "Frisada, macho, Gadwall, male (50374265703).jpg",
@@ -6269,12 +6302,13 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Mannetje Krakeend in vrije vlucht boven water met een witte vleugelspiegel, kastanjebruin vleugelveld en zwart achterlijf.",
       "width": 810,
       "height": 595,
-      "image": "/assets/species/plumage/sp129-flight.webp"
+      "image": "/assets/species/plumage/sp129-flight.webp",
+      "sex": "male"
     }
   ],
   "sp130": [
     {
-      "label": "In vlucht",
+      "label": "Mannetje in vlucht",
       "flight": true,
       "note": "Bij deze man is het grote witte vleugelveld goed zichtbaar boven de donkergroene spiegel. De kop is kastanjebruin met een licht voorhoofd.",
       "file": "Eurasian Wigeon (Anas penelope) (51171016336).jpg",
@@ -6292,12 +6326,13 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Mannetje Smient in vrije vlucht boven water met een kastanjebruine kop, groot wit vleugelveld en groene spiegel.",
       "width": 1280,
       "height": 960,
-      "image": "/assets/species/plumage/sp130-flight.webp"
+      "image": "/assets/species/plumage/sp130-flight.webp",
+      "sex": "male"
     }
   ],
   "sp132": [
     {
-      "label": "In vlucht",
+      "label": "Mannetje in vlucht",
       "flight": true,
       "note": "Let op de roodbruine kop, donkere borst en de lichtgrijze baan over de vleugel van het mannetje.",
       "file": "Common pochard (Aythaya ferina) in flight Denmark.jpg",
@@ -6315,7 +6350,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Mannetje Tafeleend in vrije vlucht langs groene begroeiing met roodbruine kop, donkere borst en lichtgrijze vleugelbaan.",
       "width": 850,
       "height": 535,
-      "image": "/assets/species/plumage/sp132-flight.webp"
+      "image": "/assets/species/plumage/sp132-flight.webp",
+      "sex": "male"
     }
   ],
   "sp143": [
@@ -6458,7 +6494,7 @@ export const GUIDE_POSES = Object.freeze({
   ],
   "sp152": [
     {
-      "label": "In vlucht",
+      "label": "Juvenielen in vlucht",
       "flight": true,
       "note": "Jonge Drieteenstrandlopers in de herfst. De brede witte vleugelstrepen contrasteren met de donkere bovenvleugels.",
       "file": "Sanderling (Calidris alba) (3972936394).jpg",
@@ -6476,7 +6512,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Een groep jonge Drieteenstrandlopers boven water, met brede witte strepen op de gespreide vleugels.",
       "width": 1400,
       "height": 933,
-      "image": "/assets/species/plumage/sp152-flight.webp"
+      "image": "/assets/species/plumage/sp152-flight.webp",
+      "age": "juvenile"
     }
   ],
   "sp155": [
@@ -7078,6 +7115,29 @@ export const GUIDE_POSES = Object.freeze({
       "width": 767,
       "height": 615,
       "image": "/assets/species/plumage/sp253-male-flight.webp"
+    }
+  ],
+  "sp173": [
+    {
+      "label": "Vrouwtje in rust",
+      "sex": "female",
+      "flight": false,
+      "note": "Op een tak met gevouwen vleugels. De lichte kruin en keel steken af tegen het donkerbruine verenkleed.",
+      "file": "2017.07.19.-05-Grosser Glubigsee-Wendisch Rietz--Rohrweihe-Weibchen.jpg",
+      "nl": "Bruine Kiekendief",
+      "latin": "Circus aeruginosus",
+      "author": "Andreas Eichler",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:2017.07.19.-05-Grosser_Glubigsee-Wendisch_Rietz--Rohrweihe-Weibchen.jpg",
+      "alt": "Vrouwtje Bruine Kiekendief zittend op een tak met gevouwen vleugels.",
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+      "reviewed": "2026-11-08",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bruine-kiekendief",
+      "visualCheck": "Op een tak met gevouwen vleugels. De lichte kruin en keel steken af tegen het donkerbruine verenkleed.",
+      "width": 1023,
+      "height": 1400,
+      "image": "/assets/species/plumage/sp173-female-rest.webp"
     }
   ]
 });
