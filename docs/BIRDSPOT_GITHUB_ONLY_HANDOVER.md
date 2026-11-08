@@ -7,6 +7,13 @@ De Project Owner heeft besloten dat ontwikkeling, foto-audits, broncontrole, tes
 
 **Uitgevoerde stopmaatregel (beheer):** Vercel-project `birdspot-library` accepteerde op 8 november 2026 `previewDeploymentsDisabled: true` en `commandForIgnoringBuildStep: "exit 0"`. In `vercel.json` staat aanvullend `git.deploymentEnabled: false`, zodat het beleid duurzaam in GitHub kan worden beheerd. De wijzigingen zijn geen bewijs dat een volgende push daadwerkelijk niet deployt: controleer de Vercel-deploymentgeschiedenis zonder een build uit te lokken. Handmatige deploys zijn in deze ontwikkelfase eveneens niet toegestaan zonder opdracht.
 
+## Belangrijke kosten-/beveiligingsgrens bij Vercel
+- **VERIFIED in gekoppeld Vercel-project:** `previewDeploymentsDisabled: true` en `commandForIgnoringBuildStep: "exit 0"` zijn door Vercel geaccepteerd; na nieuwe PR #112-pushes was de laatste zichtbare deployment nog steeds de preview van PR #111 op 8 november 21:38:36 UTC.
+- **LET OP:** de Vercel-documentatie zegt expliciet dat door `exit 0` **geannuleerde builds alsnog meetellen voor deploymentquotum en gelijktijdige builds**. Dit is dus géén volledige kostenstop. De teller in Usage is niet rechtstreeks geverifieerd.
+- De sterkere projectbrede `deploymentPolicy` is geprobeerd, maar Vercel gaf **403 pro_plan_required** terug op het huidige Hobby-account. Geen upgrade uitgevoerd. Vercel-providerslot is daarmee **BLOCKED** voor deze optie.
+- `git.deploymentEnabled:false` staat in deze *ongemergde* featurebranch en is nog niet effectief voor de productiebranch `main`. Zonder merge kan die instelling niet voor alle branches als volledig bewijs worden opgevoerd.
+- **Voor sluitende, kostenvrije GitHub-only werkwijze op Hobby:** de eigenaar kan in het bewaarde Vercel-project via **Settings → Git → Connected Git Repository → Disconnect** de Git-trigger loskoppelen. Dit verwijdert niet de GitHub-repository of het Vercel-project; bij later opnieuw online testen kan de koppeling worden hersteld. De beschikbare connector had hiervoor geen directe disconnection-actie, dus **niet door agent uitgevoerd**. Tot die actie: geen nieuwe merges naar main, geen Vercel-previewlinks bouwen en Usage blijven beoordelen.
+
 ## Vastgelegd GitHub-startpunt
 - Repo: [saddamsmit-source/Birdspot-Library](https://github.com/saddamsmit-source/Birdspot-Library)
 - Ongewijzigde productie-/main-baseline bij hervatting: `5bf67043e830e977749f0ee593cf9f41f0e2822b`.
