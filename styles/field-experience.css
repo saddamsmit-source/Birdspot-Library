@@ -24,13 +24,6 @@
 .app-search-trigger::after { content: ''; position: absolute; inset: -3px 0; }
 .app-search-result { min-height: var(--hit-field); }
 
-.field-actions {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 9em), 1fr));
-  gap: 8px;
-  padding: 10px 16px 14px;
-  background: var(--bg);
-}
 .field-action {
   min-width: 0;
   min-height: var(--hit-field);
@@ -239,7 +232,7 @@
 #featuredBirdMotion[aria-pressed="true"] .featured-motion-play { display: inline; }
 #slideshow:not(.has-photo) .field-photo-label { display: none; }
 #featuredBirdMotion[aria-pressed="true"] { background: var(--selected-gold); color: var(--brand); }
-#screen-home #recentSection { margin-inline: 16px; }
+#screen-home #recentSection { margin-inline: 16px; margin-block-end: var(--space-16); }
 #screen-home #recentList { border: 1px solid var(--line); }
 #screen-home .recent-item { text-align: start; }
 #screen-home .recent-item:focus-visible { outline-offset: -4px; }
@@ -538,7 +531,6 @@
     max-width: 1120px;
     margin-inline: auto;
   }
-  .field-actions { grid-template-columns: repeat(2, minmax(175px, max-content)); }
   #screen-media .signature-media-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 

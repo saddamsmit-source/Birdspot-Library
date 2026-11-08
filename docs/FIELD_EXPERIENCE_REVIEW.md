@@ -42,3 +42,7 @@ Basis: veldpreview [PR #78](https://github.com/saddamsmit-source/Birdspot-Librar
 ## Gecombineerde reviewpreview
 
 De Veldschrift-review op a36a04f bevat de veldbediening en veilige mediaopslag uit f98aa66. Deze kandidaat voegt de vluchtfotostapel tot fb4c006 toe. Het enige handmatige samenvoegpunt was de serviceworkerversie. De kandidaat krijgt een eigen cacheversie zodat een eerdere previewcache de gecombineerde inhoud niet maskeert. Kaartuitbreidingen uit PR #34 blijven een aparte review. Fysieke Android- en iOS-tests blijven open.
+
+## Startpagina · 1.19.9-home-spacing-preview
+
+CAP-BIRD-001/003 en L-075. De diashow sluit direct aan op de bovenbalk. De vaste knop Waarnemen opent het formulier en de nieuwste waarneming opent vanuit de eerste rij onder Mijn waarnemingen. Tussen de waarnemingen en Meer ontdekken staat 16 px ruimte. De mobiele regressietest meet de aansluiting en de tussenruimte op 320, 390, 925 en 1440 CSS-pixels en opent een opgeslagen waarneming vanuit de lijst.
