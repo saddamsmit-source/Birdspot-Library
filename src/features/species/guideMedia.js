@@ -5817,5 +5817,74 @@ export const GUIDE_POSES = Object.freeze({
       "height": 875,
       "image": "/assets/species/plumage/sp101-flight.webp"
     }
+  ],
+  "sp102": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "Let op de witte achterrand van de vleugel en de oranjerode poten die achter de staart uitsteken. Op deze foto staat de IJslandse ondersoort.",
+      "file": "Common redshank (Tringa totanus robusta) in flight Myrar 2.jpg",
+      "nl": "Tureluur",
+      "latin": "Tringa totanus",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Common_redshank_(Tringa_totanus_robusta)_in_flight_Myrar_2.jpg",
+      "showSourceLink": true,
+      "alt": "Tureluur in vrije vlucht bij Mýrar op IJsland met een witte vleugelachterrand en uitgestrekte oranjerode poten.",
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+      "reviewed": "2026-11-08",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/tureluur",
+      "visualCheck": "Tureluur in vrije vlucht bij Mýrar op IJsland met een witte vleugelachterrand en uitgestrekte oranjerode poten.",
+      "width": 1400,
+      "height": 933,
+      "image": "/assets/species/plumage/sp102-flight.webp"
+    }
+  ],
+  "sp104": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "In vlucht vallen de lange, vooruitgestrekte hals, de brede vleugels en de lange staart op. Van opzij zie je ook het gele huidveld bij de snavelbasis.",
+      "file": "Great cormorant (Phalacrocorax carbo) in flight.jpg",
+      "nl": "Aalscholver",
+      "latin": "Phalacrocorax carbo",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Great_cormorant_(Phalacrocorax_carbo)_in_flight.jpg",
+      "showSourceLink": true,
+      "alt": "Aalscholver in vrije vlucht boven het Farmoor Reservoir met gestrekte hals, brede vleugels en geel bij de snavelbasis.",
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+      "reviewed": "2026-11-08",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/aalscholver",
+      "visualCheck": "Aalscholver in vrije vlucht boven het Farmoor Reservoir met gestrekte hals, brede vleugels en geel bij de snavelbasis.",
+      "width": 1400,
+      "height": 933,
+      "image": "/assets/species/plumage/sp104-flight.webp"
+    }
+  ],
+  "sp105": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "Let op de lange gebandeerde staart, de ronde vleugels en de rode huid rond het oog. Dit mannetje is gefotografeerd in South Dakota.",
+      "file": "Rink-necked pheasant in flight (6922582382).jpg",
+      "nl": "Fazant",
+      "latin": "Phasianus colchicus",
+      "author": "Tom Koerner / U.S. Fish and Wildlife Service",
+      "license": "Publiek domein",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Rink-necked_pheasant_in_flight_(6922582382).jpg",
+      "showSourceLink": true,
+      "alt": "Mannetje Fazant in vrije vlucht met een lange gebandeerde staart, rode huid rond het oog en een witte halsring.",
+      "modifications": "Omgezet naar WebP zonder uitsnede",
+      "reviewed": "2026-11-08",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/fazant",
+      "visualCheck": "Mannetje Fazant in vrije vlucht met een lange gebandeerde staart, rode huid rond het oog en een witte halsring.",
+      "width": 1280,
+      "height": 740,
+      "image": "/assets/species/plumage/sp105-flight.webp"
+    }
   ]
 });
