@@ -11,6 +11,7 @@
 
 import { getDB }                          from '../../data/db.js';
 import { getSightings }                   from '../../data/sightings.js';
+import { escHtml } from '../../utils/html.js';
 import { getPhotoUrl, revokePhotoUrl }    from '../../utils/photoUrl.js';
 import { initFeaturedCarousel } from './featuredCarousel.js';
 import { bindAppSearch, searchMarkup } from '../search/index.js';
@@ -36,10 +37,15 @@ export function renderHome(el, { onSearchSelect } = {}) {
   el.innerHTML = buildSkeleton();
   // New signature shortcuts use existing router; no parallel navigation state.
   const onSignatureClick = e => {
-    const button = e.target.closest('[data-signature-route], [data-latest-sighting]');
+    const button = e.target.closest('[data-signature-route], [data-latest-sighting], [data-home-sighting], [data-featured-species]');
     if (!button) return;
-    if (button.hasAttribute('data-latest-sighting')) {
-      onSearchSelect?.({ route: 'sightings', sightingId: button.dataset.latestSighting || undefined });
+    if (button.hasAttribute('data-featured-species')) {
+      onSearchSelect?.({ route: 'species', speciesId: button.dataset.featuredSpecies || undefined });
+      return;
+    }
+    const sightingId = button.dataset.latestSighting || button.dataset.homeSighting;
+    if (sightingId) {
+      onSearchSelect?.({ route: 'sightings', sightingId });
       return;
     }
     onSearchSelect?.({ route: button.dataset.signatureRoute });
@@ -99,7 +105,7 @@ function buildSkeleton() {
 
     <section class="field-actions" aria-label="Snel starten">
       <button type="button" class="field-action field-action--primary" data-signature-route="add">+ Waarnemen</button>
-      <button type="button" class="field-action" data-latest-sighting>Laatste waarneming</button>
+      <button type="button" class="field-action" id="homeLatestSighting" data-latest-sighting hidden>Laatste waarneming</button>
     </section>
 
     <div class="field-home-overview">
@@ -110,14 +116,21 @@ function buildSkeleton() {
         <img id="featuredBirdImage" class="featured-birds__photo" alt=""
           decoding="async">
       </div>
-      <div class="featured-birds__shade" aria-hidden="true"></div>
+      <span class="field-photo-label">Gidsfoto</span>
       <button type="button" id="featuredBirdMotion" aria-pressed="false">Diashow pauzeren</button>
       <div class="featured-birds__caption">
+        <p class="field-eyebrow">Vandaag in beeld</p>
         <span class="featured-birds__group" id="featuredBirdGroup"></span>
         <h2 id="featuredBirdName"></h2>
         <em id="featuredBirdLatin"></em>
-        <p id="featuredBirdWhere"></p>
-        <p class="featured-birds__presence" id="featuredBirdPresence"></p>
+        <div class="field-featured-actions">
+          <button type="button" class="field-action" data-featured-species><span data-featured-label>Bekijk soortkaart</span> <span aria-hidden="true">›</span></button>
+          <details class="field-featured-notes">
+            <summary>Veldkenmerken</summary>
+            <p id="featuredBirdWhere"></p>
+            <p class="featured-birds__presence" id="featuredBirdPresence"></p>
+          </details>
+        </div>
         <a id="featuredBirdCredit" class="featured-birds__credit"
           rel="noopener noreferrer" target="_blank" href="https://commons.wikimedia.org/">Fotobron</a>
       </div>
@@ -126,7 +139,7 @@ function buildSkeleton() {
     <!-- Recente waarnemingen -->
     <section class="dash-section" id="recentSection">
       <div class="section-head">
-        <span class="section-head__title">Recente waarnemingen</span>
+        <span class="section-head__title">Mijn waarnemingen</span>
         <button class="section-head__link" id="allSightingsBtn" aria-label="Alle waarnemingen" data-signature-route="sightings">
           Alles
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
@@ -561,15 +574,18 @@ async function loadRecentSightings(el, ctx) {
       .sort((a, b) => new Date(b.date) - new Date(a.date))
       .slice(0, 6);
 
-    const latest = el.querySelector('[data-latest-sighting]');
-    if (latest) latest.dataset.latestSighting = recent[0]?.id || '';
+    const latest = el.querySelector('#homeLatestSighting');
+    if (recent[0] && latest) {
+      latest.dataset.latestSighting = recent[0].id;
+      latest.hidden = false;
+    }
     if (recent.length === 0) {
       listEl.innerHTML = `
         <div class="empty-state" style="background:var(--surface);border-radius:var(--r-card);padding:var(--space-24)">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
             <path d="M3 12 Q6 6 12 8 Q16 5 21 3 Q19 11 13 12 Q9 13 7 18Z"/>
           </svg>
-          <p>Nog geen waarnemingen — tik + om te beginnen</p>
+          <p>Hier komen de vogels die je zelf hebt gezien of gehoord.</p>
         </div>
       `;
       return;
@@ -623,11 +639,15 @@ async function buildRecentItem(s) {
     try {
       const db = await getDB();
       const tx = db.transaction('photos', 'readonly');
-      const photo = await txGet(tx.objectStore('photos'), s.photoIds[0]);
-      const url = getPhotoUrl(photo);
-      if (url) {
-        blobUrl   = url;
-        thumbHtml = `<img src="${url}" alt="${s.speciesName || ''}" loading="lazy">`;
+      const photos = tx.objectStore('photos');
+      for (const id of s.photoIds) {
+        const photo = await txGet(photos, id);
+        if (!(photo?.blob?.type || photo?.type || '').startsWith('image/')) continue;
+        const url = getPhotoUrl(photo);
+        if (!url) continue;
+        blobUrl = url;
+        thumbHtml = `<img src="${url}" alt="" loading="lazy" decoding="async">`;
+        break;
       }
     } catch (_) {}
   }
@@ -643,16 +663,16 @@ async function buildRecentItem(s) {
   const badge = certBadge(s.certainty);
 
   const html = `
-    <div class="recent-item">
-      <div class="${thumbClass}">${thumbContent}</div>
-      <div class="recent-item__body">
-        <div class="recent-item__name">${s.speciesName || 'Onbekend'}</div>
-        <div class="recent-item__meta">
-          ${fmtDate(s.date)}${s.locationName ? ` · ${s.locationName}` : ''}
-        </div>
-      </div>
-      ${badge ? `<div class="recent-item__badge">${badge}</div>` : ''}
-    </div>
+    <button type="button" class="recent-item" data-home-sighting="${escHtml(String(s.id))}">
+      <span class="${thumbClass}">${thumbContent}</span>
+      <span class="recent-item__body">
+        <span class="recent-item__name">${escHtml(s.speciesName || 'Onbekend')}</span>
+        <span class="recent-item__meta">
+          ${fmtDate(s.date)}${s.locationName ? ` · ${escHtml(s.locationName)}` : ''}
+        </span>
+      </span>
+      ${badge ? `<span class="recent-item__badge">${badge}</span>` : ''}
+    </button>
   `;
 
   return { html, blobUrl };

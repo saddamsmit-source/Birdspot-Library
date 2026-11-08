@@ -37,7 +37,7 @@ export function findPossibleDuplicateIds(items) {
   return new Set([...groups.values()].filter(ids => ids.length > 1).flat());
 }
 
-export function renderMedia(el, { mediaId } = {}) {
+export function renderMedia(el, { mediaId, onSearchSelect } = {}) {
   const state = { destroyed:false, items:[], filter:'all', species:'all', search:'', mediaId,
     visible:BATCH_SIZE, urls:new Map(), lightbox:null, lightboxIndex:-1, focusReturn:null };
   let favorites = getCollectionIds('media');
@@ -47,9 +47,9 @@ export function renderMedia(el, { mediaId } = {}) {
   el.classList.add('signature-screen','signature-media','signature-media-v2');
   el.innerHTML =
     '<header class="signature-page-hero signature-page-hero--media">' +
-      '<span class="signature-kicker">BIRDSPOT / PRIVATE COLLECTION</span>' +
+      '<span class="signature-kicker">Jouw verzameling</span>' +
       '<h1>Wildlife Media Studio</h1>' +
-      '<p>Elke foto een herinnering. Ontdek, bewaar en verzamel je favoriete vogelmomenten.</p>' +
+      '<p>De foto’s en video’s die je zelf bij je waarnemingen bewaart.</p>' +
       '<div class="signature-orbit" aria-hidden="true"></div></header>' +
     '<div class="signature-content">' +
       '<div class="signature-media-summary" aria-label="Jouw mediacollectie">' +
@@ -57,8 +57,8 @@ export function renderMedia(el, { mediaId } = {}) {
         '<div><strong id="mediaFavoritesCount">—</strong><span>Favorieten</span></div>' +
         '<div><strong id="mediaFilmCount">—</strong><span>Filmselectie</span></div>' +
       '</div>' +
-      '<div class="signature-section-head"><div><span class="signature-eyebrow">JOUW VERZAMELING</span>' +
-        '<h2>Vogelmomenten</h2></div><span id="mediaCount" class="signature-count">Laden…</span></div>' +
+      '<div class="signature-section-head"><div><span class="signature-eyebrow">FOTO’S &amp; VIDEO’S</span>' +
+        '<h2>Eigen beelden</h2></div><span id="mediaCount" class="signature-count">Laden…</span></div>' +
       '<div class="signature-media-tools">' +
         '<label class="signature-media-search-label"><span>Zoeken</span>' +
           '<input id="mediaSearch" type="search" placeholder="Soort of locatie…" autocomplete="off"></label>' +
@@ -90,6 +90,7 @@ export function renderMedia(el, { mediaId } = {}) {
   const count = el.querySelector('#mediaCount');
   const feedback = el.querySelector('#mediaFeedback');
   const speciesSelect = el.querySelector('#mediaSpecies');
+  const searchInput = el.querySelector('#mediaSearch');
   const more = el.querySelector('#mediaMore');
   let toastCleanup = null;
 
@@ -147,8 +148,13 @@ export function renderMedia(el, { mediaId } = {}) {
     const shown = filtered.slice(0,state.visible);
     count.textContent = filtered.length + (filtered.length===1?' bestand':' bestanden');
     if (!shown.length) {
-      gallery.innerHTML = '<div class="signature-empty"><span aria-hidden="true">✧</span>' +
-        '<h3>Geen media gevonden</h3><p>Voeg foto’s of video’s toe aan een waarneming, of pas je filters aan.</p></div>';
+      const message = state.items.length
+        ? '<h3>Geen beelden bij deze filters</h3><p>Probeer een andere soort of zoekterm.</p>' +
+          '<button class="field-action" id="mediaReset" type="button">Wis filters</button>'
+        : '<h3>Begin met je eerste vogelmoment</h3><p>Voeg bij een waarneming een foto of video toe. Die vind je hier terug.</p>' +
+          '<button class="field-action field-action--primary" id="mediaFirstSighting" type="button">+ Waarneming toevoegen</button>';
+      gallery.innerHTML = '<div class="signature-empty field-media-empty"><span aria-hidden="true">◇</span>' +
+        message + '</div>';
     } else {
       gallery.innerHTML = shown.map(item => {
         const url = getPhotoUrl(item.photo);
@@ -207,16 +213,28 @@ export function renderMedia(el, { mediaId } = {}) {
   }
 
   const onClick = event => {
+    if (event.target.closest('#mediaFirstSighting')) {
+      onSearchSelect?.({ route: 'add' });
+      return;
+    }
     const filt = event.target.closest('[data-media-filter]');
-    if (filt) {
+    const reset = event.target.closest('#mediaReset');
+    if (filt || reset) {
+      if (reset) {
+        state.search = searchInput.value = '';
+        state.species = speciesSelect.value = 'all';
+      }
       state.mediaId = undefined;
-      state.filter=filt.dataset.mediaFilter; state.visible=BATCH_SIZE;
+      state.filter = filt?.dataset.mediaFilter || 'all';
+      state.visible = BATCH_SIZE;
       el.querySelectorAll('[data-media-filter]').forEach(b=>{
         const active=b.dataset.mediaFilter===state.filter;
         b.classList.toggle('is-selected',active);
         b.setAttribute('aria-pressed',String(active));
       });
-      draw(); return;
+      draw();
+      if (reset) searchInput.focus();
+      return;
     }
     if (event.target.closest('#mediaOpenFilmStudio')) {
       import('../../app.js').then(({navigate})=>navigate('film')); return;
@@ -226,7 +244,16 @@ export function renderMedia(el, { mediaId } = {}) {
     const chosen=event.target.closest('[data-media-film]');
     if(fav||chosen) {
       const kind=fav?'media':'film',id=(fav||chosen).dataset[fav?'mediaFav':'mediaFilm'];
-      try { toggleCollectionItem(kind,id); draw(); inform(kind==='media'?'Favorieten bijgewerkt':'Filmselectie bijgewerkt'); }
+      try {
+        toggleCollectionItem(kind,id);
+        const restoreFocus = document.activeElement === (fav || chosen);
+        draw();
+        if (restoreFocus) {
+          const button = gallery.querySelector('[data-media-' + (fav ? 'fav' : 'film') + '="' + CSS.escape(id) + '"]');
+          (button || el.querySelector('[data-media-filter].is-selected'))?.focus({ preventScroll: true });
+        }
+        inform(kind==='media'?'Favorieten bijgewerkt':'Filmselectie bijgewerkt');
+      }
       catch(_) { inform('Opslaan niet gelukt. Controleer de beschikbare opslagruimte.'); }
       return;
     }
@@ -285,9 +312,10 @@ export function renderMedia(el, { mediaId } = {}) {
         hint.textContent=dupIds.size+' bestanden lijken mogelijk dubbel op basis van soort, datum, naam en grootte. '+
           'Dit is geen beeldanalyse. Er wordt nooit automatisch iets verwijderd.';
       }
+      if (!state.items.length) el.querySelector('.signature-media-tools').before(gallery);
       showSpeciesOptions();
       const selected = state.items.find(item => item.photo.id === state.mediaId);
-      if (selected) el.querySelector('#mediaSearch').value = selected.photo.filename || selected.name;
+      if (selected) searchInput.value = selected.photo.filename || selected.name;
       draw();
       if (selected) {
         const frame = gallery.querySelector('.signature-media-open, video');

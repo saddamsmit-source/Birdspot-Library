@@ -147,26 +147,10 @@ export function renderSpecies(el, { speciesId } = {}) {
   const recentIds = getRecentSpeciesIds();
 
   el.innerHTML = `
-    <header class="species-header">
-      <div class="species-header__title">Soorten</div>
-      <div class="species-header__sub" id="speciesSub">${counterText(seenIds)}</div>
+    <header class="species-header signature-species-hero" aria-label="Soortenbibliotheek">
+      <h1>Soortengids</h1>
+      <p id="speciesSub">${counterText(seenIds)}</p>
     </header>
-    <section class="signature-species-hero" aria-label="Soortenbibliotheek">
-      <span class="signature-kicker">BIRDSPOT / SPECIES COLLECTION</span>
-      <h1>Ontdek elke vogel opnieuw.</h1>
-      <p>Lees over vogels en bekijk je eigen waarnemingen. Nieuwe waarnemingen voeg je toe via Waarnemen of de kaart.</p>
-      <div class="signature-species-hero-actions">
-        <button id="speciesOpenMedia" type="button">Mijn fotocollectie <span aria-hidden="true">↗</span></button>
-        <span id="speciesFavoriteCount">★ ${getCollectionIds("species").size} favorieten</span>
-      </div>
-    </section>
-
-    <section class="species-saved" aria-label="Bewaarde vogels">
-      <span>Bewaarde vogels</span>
-      <div class="signature-species-favorites-filter">
-        <button id="speciesOnlyFavorites" type="button" aria-pressed="${_onlyFavorites}" class="${_onlyFavorites ? "is-selected" : ""}">★ Alleen mijn favorieten</button>
-      </div>
-    </section>
 
     <div class="species-toolbar">
       <div class="species-search-wrap">
@@ -174,7 +158,7 @@ export function renderSpecies(el, { speciesId } = {}) {
           <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
         </svg>
         <input id="speciesSearch" class="species-search" type="search"
-          placeholder="Zoek soort, familie, gebied…" autocomplete="off"
+          placeholder="Zoek soort, familie, gebied…" aria-label="Zoek soort, familie of gebied" autocomplete="off"
           value="${escHtml(_searchQuery)}">
       </div>
       <div class="species-filter-menus">
@@ -203,6 +187,16 @@ export function renderSpecies(el, { speciesId } = {}) {
       <p class="species-season-hint" id="seasonHint" aria-live="polite"></p>
     </div>
 
+    <section class="species-saved" aria-label="Bewaarde vogels">
+      <div class="signature-species-favorites-filter">
+        <button id="speciesOnlyFavorites" type="button" aria-pressed="${_onlyFavorites}" class="${_onlyFavorites ? "is-selected" : ""}">★ Alleen mijn favorieten</button>
+      </div>
+      <div class="signature-species-hero-actions">
+        <button id="speciesOpenMedia" type="button">Mijn fotocollectie <span aria-hidden="true">↗</span></button>
+        <span id="speciesFavoriteCount">★ ${getCollectionIds("species").size} favorieten</span>
+      </div>
+    </section>
+
     ${recentIds.length > 0 ? `
     <div class="species-recent-section" id="recentSection">
       <div class="section-head" style="padding-top:var(--space-12)">
@@ -212,12 +206,12 @@ export function renderSpecies(el, { speciesId } = {}) {
         ${recentIds.map(id => {
           const s = SPECIES.find(x => x.id === id);
           if (!s) return '';
-          return `<div class="species-recent-chip" data-id="${s.id}">
-            <div class="species-recent-chip__thumb" id="rthumb-${s.id}">
-              <span aria-hidden="true">${s.icon}</span>
-            </div>
-            <div class="species-recent-chip__name">${escHtml(s.nameNL)}</div>
-          </div>`;
+          return `<button type="button" class="species-recent-chip" data-id="${s.id}">
+            <span class="species-recent-chip__thumb" id="rthumb-${s.id}" aria-hidden="true">
+              <span>${s.icon}</span>
+            </span>
+            <span class="species-recent-chip__name">${escHtml(s.nameNL)}</span>
+          </button>`;
         }).join('')}
       </div>
     </div>` : ''}
@@ -350,7 +344,7 @@ function speciesRow(s, seenIds, favorites = getCollectionIds("species")) {
         <span>${s.icon}</span>
       </div>
       <div class="species-row__body">
-        <div class="species-row__name">${escHtml(s.nameNL)}</div>
+        <button class="species-row__name" type="button">${escHtml(s.nameNL)}</button>
         <div class="species-row__sci">${escHtml(s.nameSci)}</div>
       </div>
       <span class="species-row__rarity ${secondary ? 'signature-species-category' : rm?.cls || 'signature-species-category'}">${escHtml(badge)}</span>
@@ -469,11 +463,17 @@ function bindEvents(el, ctx = _speciesCtx) {
     if (favoriteBtn) {
       e.stopPropagation();
       try {
-        toggleCollectionItem('species',favoriteBtn.dataset.speciesFav);
+        const id = favoriteBtn.dataset.speciesFav;
+        const restoreFocus = document.activeElement === favoriteBtn;
+        toggleCollectionItem('species', id);
         const totalFavorites = getCollectionIds('species').size;
         const label = el.querySelector('#speciesFavoriteCount');
         if (label) label.textContent = '★ ' + totalFavorites + ' favorieten';
         renderList(el,undefined,ctx);
+        if (restoreFocus) {
+          const next = el.querySelector('[data-species-fav="' + CSS.escape(id) + '"]');
+          (next || el.querySelector('#speciesOnlyFavorites'))?.focus({ preventScroll: true });
+        }
       } catch (_) {
         const label = el.querySelector('#speciesFavoriteCount');
         if (label) label.textContent = 'Favoriet opslaan mislukt';
@@ -514,7 +514,7 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
     '<div class="sheet signature-species-detail-sheet" role="dialog" aria-modal="true" aria-label="' + escHtml(s.nameNL) + '">' +
       '<div class="sheet__handle" aria-hidden="true"></div>' +
       '<div class="signature-species-detail-top">' +
-        '<span class="signature-kicker">BIRDSPOT / FIELD GUIDE</span>' +
+        '<span class="signature-kicker">Veldgids</span>' +
         '<button type="button" class="signature-species-detail-close" aria-label="Sluit soortdetail">×</button>' +
       '</div>' +
       '<div class="sheet__content">' +
@@ -599,7 +599,7 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
       if (ctx?.detailCleanup === close) ctx.detailCleanup = null;
       returnFocus?.focus?.();
     };
-    if (animate && sheet.isConnected) setTimeout(cleanup,250);
+    if (animate && sheet.isConnected && !matchMedia('(prefers-reduced-motion: reduce)').matches) setTimeout(cleanup,250);
     else cleanup();
   }
   if (ctx) ctx.detailCleanup = close;
