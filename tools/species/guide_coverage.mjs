@@ -21,9 +21,13 @@ function checkPhoto(id, photo) {
 
 for (const [id, photo] of Object.entries(GUIDE_PHOTOS)) checkPhoto(id, photo);
 for (const [id, photos] of Object.entries(GUIDE_POSES)) {
-  const flightCount = photos.filter(photo => photo.flight).length;
-  assert.ok(photos.length > 0 && photos.length - flightCount <= 2, `Maximaal twee houdingsfoto’s: ${id}`);
-  assert.ok(flightCount <= 1, `Maximaal één aparte vluchtfoto: ${id}`);
+  const flights = photos.filter(photo => photo.flight);
+  assert.ok(photos.length > 0 && photos.filter(photo => !photo.flight && !photo.sex).length <= 2,
+    `Maximaal twee algemene houdingsfoto’s: ${id}`);
+  assert.ok(flights.length <= 2 && flights.filter(photo => !photo.sex).length <= 1,
+    `Een extra vluchtfoto vereist een geslachtslabel: ${id}`);
+  const roles = photos.filter(photo => photo.sex).map(photo => `${photo.sex}:${Boolean(photo.flight)}`);
+  assert.equal(roles.length, new Set(roles).size, `Dubbele combinatie van geslacht en houding: ${id}`);
   for (const photo of photos) {
     assert.ok(photo.label && photo.note, `Ontbrekend houdingslabel: ${id}`);
     checkPhoto(id, photo);
