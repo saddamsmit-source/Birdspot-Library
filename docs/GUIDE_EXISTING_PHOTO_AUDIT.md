@@ -112,9 +112,9 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp143 | Kluut | Ja | 2 | Apart beeld |
 | sp144 | Zilverplevier | Ja | 4 | Apart beeld |
 | sp145 | Goudplevier | Ja | 4 | Apart beeld |
-| sp146 | Bontbekplevier | Ja | 3 | Open |
-| sp147 | Kleine Plevier | Ja | 3 | Open |
-| sp150 | Steenloper | Ja | 1 | Open |
+| sp146 | Bontbekplevier | Ja | 4 | Apart beeld |
+| sp147 | Kleine Plevier | Ja | 4 | Apart beeld |
+| sp150 | Steenloper | Ja | 2 | Apart beeld |
 | sp152 | Drieteenstrandloper | Ja | 1 | Open |
 | sp155 | Oeverloper | Ja | 3 | Open |
 | sp156 | Witgat | Ja | 3 | Open |
@@ -560,3 +560,15 @@ Basis is concept-PR #92, `4cb2ec7eccd6bb51c9ffb82f327314daf48df22b`. Kluut, Zilv
 CAP-BIRD-012/015. De drie beelden staan lokaal en elk eenmaal onder ‘In vlucht’, met maker, bron, licentie en bewerking. Een zijaanblik van onderen toont de oksel bij Zilverplevier, terwijl een bovenaanblik het goudkleurige patroon bij Goudplevier toont. Leg vast welke herkenningsinformatie een foto door haar kijkhoek wel kan tonen. Er staan nog 31 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Bontbekplevier.
 
 VERIFIED · Mobiele Chromium op 390 px. Zes soortkaarten via appbreed zoeken geopend op basis en kandidaat. De bestaande gidsbeelden en vluchtfoto’s uit ronde 30 laden. De drie nieuwe beelden staan elk eenmaal vóór het verenkleed, tonen bron en licentie en openen met 2× zoom. Ook na offline herladen zijn de drie kaarten en fotovergroting getest. Alle 328 gidsbeelden en 120 geluidsopnamen zijn na precache offline gedecodeerd. Gidsdekking, volgorde, uniciteit en SHA-256 zijn gecontroleerd. NOT TESTED · Fysiek toestel.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 32
+
+Basis is concept-PR #93, `0636510ef2436db8d7b5198311393450d7dce6d9`. Bontbekplevier, Kleine Plevier en Steenloper hadden ieder een hoofdfoto. De drie vluchtcategorieën op Wikimedia Commons zijn visueel nagezocht. Per soort zijn opnamen vergeleken op vrije vlucht, herkenbaarheid op kaartformaat en fotorechten. De soortgids van Vogelbescherming ondersteunt de herkenningscontrole.
+
+- Bontbekplevier · Arnstein Rønning · CC BY-SA 4.0. De opname uit Noorwegen toont de witte vleugelstreep, oranje snavelbasis en donkere borstband. De vleugelpunten blijven in beeld. [Bronfoto](https://commons.wikimedia.org/wiki/File:Charadrius_hiaticula_Lvk.jpg).
+- Kleine Plevier · Prasan Shrestha · CC BY-SA 4.0. De uitsnede uit de opname uit Nepal toont de gele oogring en beide bovenvleugels zonder brede witte vleugelstreep. [Bronfoto](https://commons.wikimedia.org/wiki/File:The_Little_ringed_plover_in_flight.jpg).
+- Steenloper · Charles J. Sharp · CC BY-SA 4.0. De uitsnede van de foto uit Madagaskar toont een vogel in winterkleed. De witte vleugelstreep en korte donkere snavel zijn zichtbaar. [Bronfoto](https://commons.wikimedia.org/wiki/File:Ruddy_turnstone_(Arenaria_interpres)_in_flight_non-breeding.jpg).
+
+CAP-BIRD-012/015. De beelden staan lokaal en elk eenmaal onder ‘In vlucht’, met maker, bron, licentie en bewerking. Zoek bij sterk gelijkende soorten naar een vergelijkbare kijkhoek. Bij deze plevieren zijn bovenvleugel en kop tegelijkertijd zichtbaar, zodat vleugelstreep, snavel en oogring kunnen worden vergeleken. Er staan nog 28 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Drieteenstrandloper.
+
+VERIFIED · Mobiele Chromium op 390 px. Zes soortkaarten via appbreed zoeken geopend op basis en kandidaat. De drie nieuwe beelden staan elk eenmaal vóór het verenkleed, met bron, licentie en 2× zoom. Ook na offline herladen zijn de drie kaarten en fotovergroting getest. Alle 331 gidsbeelden en 120 veldopnamen zijn na precache offline gedecodeerd. Gidsdekking, volgorde, uniciteit en SHA-256 zijn gecontroleerd. NOT TESTED · Fysiek toestel.
