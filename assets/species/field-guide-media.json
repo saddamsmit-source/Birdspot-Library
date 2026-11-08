@@ -6643,6 +6643,144 @@
         "height": 950,
         "image": "/assets/species/plumage/sp177-flight.webp"
       }
+    ],
+    "sp206": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Zijaanzicht in vrije vlucht. De donkere vlek op de borstzij en lichte streep over de vleugel zijn zichtbaar.",
+        "file": "iNaturalist photo 180206774",
+        "nl": "Strandplevier",
+        "latin": "Charadrius alexandrinus",
+        "author": "Forest Botial-Jarvis",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://www.inaturalist.org/photos/180206774",
+        "showSourceLink": true,
+        "alt": "Strandplevier vliegt naar rechts, met een lichte vleugelstreep en donkere vlek aan de zijkant van de borst.",
+        "modifications": "Bijgesneden en omgezet naar WebP",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/strandplevier",
+        "visualCheck": "Strandplevier vliegt naar rechts, met een lichte vleugelstreep en donkere vlek aan de zijkant van de borst.",
+        "width": 610,
+        "height": 460,
+        "image": "/assets/species/plumage/sp206-flight.webp"
+      }
+    ],
+    "sp217": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "De Poelruiter vliegt schuin van de camera af. Let op de dunne rechte snavel, de witte wig op de rug en de poten die achter de staart uitsteken.",
+        "file": "Marsh Sandpiper (Tringa stagnatilis) (8079446361).jpg",
+        "nl": "Poelruiter",
+        "latin": "Tringa stagnatilis",
+        "author": "Ron Knight",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Marsh_Sandpiper_(Tringa_stagnatilis)_(8079446361).jpg",
+        "showSourceLink": true,
+        "alt": "Poelruiter in vlucht met witte rugwig, dunne snavel en lange, naar achter gestrekte poten.",
+        "modifications": "Omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/poelruiter",
+        "visualCheck": "Poelruiter in vlucht met witte rugwig, dunne snavel en lange, naar achter gestrekte poten.",
+        "width": 960,
+        "height": 638,
+        "image": "/assets/species/plumage/sp217-flight.webp"
+      }
+    ],
+    "sp225": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Volwassen Zwartkopmeeuw buiten het broedseizoen. De vrijwel witte vleugels en donkere tekening rond het oog zijn zichtbaar.",
+        "file": "Mediterranean gull (Ichthyaetus melanocephalus) non breeding in flight Vadu.jpg",
+        "nl": "Zwartkopmeeuw",
+        "latin": "Ichthyaetus melanocephalus",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Mediterranean_gull_(Ichthyaetus_melanocephalus)_non_breeding_in_flight_Vadu.jpg",
+        "showSourceLink": true,
+        "alt": "Volwassen Zwartkopmeeuw in winterkleed boven de camera, met lichte vleugels tegen een blauwe lucht.",
+        "modifications": "Bijgesneden en omgezet naar WebP",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwartkopmeeuw",
+        "visualCheck": "Volwassen Zwartkopmeeuw in winterkleed boven de camera, met lichte vleugels tegen een blauwe lucht.",
+        "width": 1210,
+        "height": 1240,
+        "image": "/assets/species/plumage/sp225-flight.webp"
+      }
+    ],
+    "sp245": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "De Koereiger vliegt met ingetrokken hals. De gele snavel, warme kruin en poten achter de staart zijn zichtbaar.",
+        "file": "Cattle Egret (Bubulcus ibis) -in flight.jpg",
+        "nl": "Koereiger",
+        "latin": "Bubulcus ibis",
+        "author": "Derek Bakken",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Cattle_Egret_(Bubulcus_ibis)_-in_flight.jpg",
+        "showSourceLink": true,
+        "alt": "Koereiger in zijaanzicht boven water, met ingetrokken hals, lichte vleugels en naar achter gestrekte poten.",
+        "modifications": "Omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/koereiger",
+        "visualCheck": "Koereiger in zijaanzicht boven water, met ingetrokken hals, lichte vleugels en naar achter gestrekte poten.",
+        "width": 1114,
+        "height": 729,
+        "image": "/assets/species/plumage/sp245-flight.webp"
+      }
+    ],
+    "sp282": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Een groep lichte Roze Spreeuwen in vlucht. Let op de donkere vleugels tegenover het lichtere lijf.",
+        "file": "iNaturalist photo 562383062",
+        "nl": "Roze Spreeuw",
+        "latin": "Pastor roseus",
+        "author": "Kudaibergen Amirekul",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://www.inaturalist.org/photos/562383062",
+        "showSourceLink": true,
+        "alt": "Groep Roze Spreeuwen in vlucht tegen een blauwe lucht, met lichte lijven en donkere vleugels.",
+        "modifications": "Omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/roze-spreeuw",
+        "visualCheck": "Groep Roze Spreeuwen in vlucht tegen een blauwe lucht, met lichte lijven en donkere vleugels.",
+        "width": 1400,
+        "height": 934,
+        "image": "/assets/species/plumage/sp282-flight.webp"
+      }
+    ],
+    "sp288": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "De Grote Gele Kwikstaart vliegt boven stromend water. De lange staart en gele onderzijde zijn zichtbaar.",
+        "file": "iNaturalist photo 607642010",
+        "nl": "Grote Gele Kwikstaart",
+        "latin": "Motacilla cinerea",
+        "author": "Jiro Iguchi",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://www.inaturalist.org/photos/607642010",
+        "showSourceLink": true,
+        "alt": "Grote Gele Kwikstaart in vrije vlucht boven water, schuin van achteren gezien, met een lange staart en gele onderzijde.",
+        "modifications": "Bijgesneden en omgezet naar WebP",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-gele-kwikstaart",
+        "visualCheck": "Grote Gele Kwikstaart in vrije vlucht boven water, schuin van achteren gezien, met een lange staart en gele onderzijde.",
+        "width": 850,
+        "height": 650,
+        "image": "/assets/species/plumage/sp288-flight.webp"
+      }
     ]
   }
 }

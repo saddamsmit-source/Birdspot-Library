@@ -132,18 +132,18 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp177 | Bonte Vliegenvanger | Ja | 2 | Apart beeld |
 | sp178 | Gekraagde Roodstaart | Ja | 2 | Apart beeld |
 | sp188 | Zomertaling | Ja | 4 | Apart beeld |
-| sp206 | Strandplevier | Ja | 4 | Open |
-| sp217 | Poelruiter | Ja | 3 | Open |
-| sp225 | Zwartkopmeeuw | Ja | 2 | Open |
-| sp245 | Koereiger | Ja | 4 | Open |
+| sp206 | Strandplevier | Ja | 5 | Apart beeld |
+| sp217 | Poelruiter | Ja | 4 | Apart beeld |
+| sp225 | Zwartkopmeeuw | Ja | 3 | Apart beeld |
+| sp245 | Koereiger | Ja | 5 | Apart beeld |
 | sp248 | Wespendief | Ja | 3 | Hoofdfoto |
 | sp249 | Blauwe Kiekendief | Ja | 3 | Hoofdfoto |
 | sp250 | Steppekiekendief | Ja | 3 | Hoofdfoto |
 | sp251 | Grauwe Kiekendief | Ja | 3 | Hoofdfoto |
 | sp253 | Ruigpootbuizerd | Ja | 2 | Hoofdfoto |
 | sp262 | Grauwe Klauwier | Ja | 1 | Open |
-| sp282 | Roze Spreeuw | Ja | 1 | Open |
-| sp288 | Grote Gele Kwikstaart | — | 1 | Open |
+| sp282 | Roze Spreeuw | Ja | 2 | Apart beeld |
+| sp288 | Grote Gele Kwikstaart | — | 2 | Apart beeld |
 
 ## Ronde 9 · bestaande foto’s van duiven, spechten, kraaiachtigen, mezen en vinken
 
@@ -620,3 +620,42 @@ Basis is concept-PR #99, `c84ab922f828639621d395857d4815473ccc885c`. Grauwe Vlie
 CAP-BIRD-012/015. Drie lokale vluchtbeelden met maker, bron, licentie en bewerking. De bestaande hoofdfoto’s blijven beschikbaar. De WebP-bestanden bevatten geen EXIF. Bij een foto in een herkenningsarm aanzicht is de volledige bronreeks nuttig voor soortcontrole. Leg herkenbare en beperkt zichtbare kenmerken afzonderlijk vast. Er staan nog 16 soorten zonder vluchtbeeld op de auditlijst. De volgende soort is Strandplevier.
 
 VERIFIED · Mobiele Chromium op 390 px. Zes kaarten via appbreed zoeken geopend op basis en kandidaat. De nieuwe beelden staan elk eenmaal onder ‘In vlucht’, vóór eventueel verenkleed, tonen bron en licentie en openen met 2× zoom. Ook na offline herladen openen en vergroten alle drie. Alle 343 gidsbeelden en 120 veldopnamen decodeerden offline na precache. Gidsdekking, volgorde, bestaande metadata en SHA-256-uniciteit zijn gecontroleerd. NOT TESTED · Fysiek toestel en productie.
+
+
+## Gericht zoeken naar vluchtfoto’s · rondes 37–39
+
+Basis is [PR #101](https://github.com/saddamsmit-source/Birdspot-Library/pull/101) op `92f62a40460325aabf159f36c31853ee4290a028`. CAP-BIRD-012/015. De zes foto's staan lokaal onder In vlucht. De bestaande foto’s zijn vergeleken met de nieuwe bestanden en de kleedrollen zijn behouden.
+
+| Ronde | Soort | Beeld en bron |
+|---|---|---|
+| 37 | Strandplevier | Zijaanzicht met vleugelstreep en donkere zijborstvlek. Forest Botial-Jarvis, CC BY 4.0. [Foto](https://www.inaturalist.org/photos/180206774) · [Waarneming](https://www.inaturalist.org/observations/107177768) |
+| 37 | Poelruiter | Eén vogel met zichtbare rugwig en uitstekende poten. Ron Knight, CC BY 2.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Marsh_Sandpiper_(Tringa_stagnatilis)_(8079446361).jpg) |
+| 37 | Zwartkopmeeuw | Volwassen vogel in winterkleed met vrijwel witte vleugels. Charles J. Sharp, CC BY-SA 4.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Mediterranean_gull_(Ichthyaetus_melanocephalus)_non_breeding_in_flight_Vadu.jpg) |
+| 38 | Koereiger | Zijaanzicht boven water met ingetrokken hals. Derek Bakken, CC BY 2.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Cattle_Egret_(Bubulcus_ibis)_-in_flight.jpg) |
+| 38 | Grauwe Klauwier | Open. In de gecontroleerde vrij gelicentieerde beeldreeksen is geen bruikbaar beeld in vrije vlucht bevestigd. De gevonden [Flickr-opname](https://www.flickr.com/photos/92999647@N05/53014823545/) vermeldt alle rechten voorbehouden. |
+| 38 | Roze Spreeuw | Vluchtgroep met lichte lijven en donkere vleugels. Kudaibergen Amirekul, CC BY-SA 4.0. [Foto](https://www.inaturalist.org/photos/562383062) · [Waarneming](https://www.inaturalist.org/observations/311531949) |
+| 39 | Grote Gele Kwikstaart | Vrije vlucht boven stromend water, met zichtbare gele onderzijde en lange staart. Jiro Iguchi, CC BY 4.0. [Foto](https://www.inaturalist.org/photos/607642010) · [Waarneming](https://www.inaturalist.org/observations/334586094) |
+
+De geplande zoekrondes zijn doorlopen. Van de auditlijst missen nog tien soorten een bruikbaar vluchtbeeld: Heggenmus, Winterkoning, Fitis, Zwartkop, Tuinfluiter, Vuurgoudhaan, Boomkruiper, Taigaboomkruiper, Fuut en Grauwe Klauwier. De eerdere zoekresultaten voor de eerste negen blijven van toepassing. Roodmus houdt een apart verbeterpunt voor scherpte. Bij beelden van een groep is de soort gecontroleerd aan de hand van de bronwaarneming en het beeld. Bij geen van de zes nieuwe vluchtbeelden wordt het geslacht afgeleid uit de opname.
+
+## Nacontrole van man, vrouw en juveniel
+
+CAP-BIRD-012/015. Per soort worden vier afzonderlijke beeldrollen gecontroleerd: volwassen man in rust, volwassen vrouw, juveniel en vlucht. Bij roofvogels telt een bronbevestigd mannetje in vrije vlucht afzonderlijk van een algemeen vluchtbeeld. Een vrouw in vlucht is wel bewijs voor de rol vrouw. Een gedeeld volwassen kleed blijft herkenbaar als volwassen kleed. Het telt pas als man of vrouw wanneer de bron of aantoonbare kenmerken die rol ondersteunen. Bij zangvogels krijgen ontbrekende kleedfoto’s voorrang boven de vluchtfoto. De controle hieronder is een inventarisatie van geregistreerde foto's en bijschriften. Van 134 soorten met gidsbeelden hebben 42 een ingevulde rol `adult_m`, 25 een ingevulde rol `adult_f` en 44 een ingevulde rol `juv`; bij 15 zijn alle drie die velden ingevuld. Dit zijn veldtellingen. Hoofdfoto’s en houdingsfoto’s kunnen ontbrekende velden al dekken. Omgekeerd kan `adult_m` een gedeeld volwassen kleed of een vluchtbeeld bevatten. De elf Haviken en Valken met gidsbeeld zijn daarom ook op die andere fotoplekken gecontroleerd. Soortkaarten zonder geregistreerd beeld en een volledige visuele hercontrole per soort staan nog open.
+
+| Roofvogel met gidsbeeld | Man in rust | Man in vlucht | Vrouw | Juveniel |
+|---|---|---|---|---|
+| Buizerd | Open | Open | Open | Foto aanwezig |
+| Sperwer | Foto aanwezig | Foto aanwezig | Foto aanwezig | Foto aanwezig |
+| Havik | Foto aanwezig | Open | Foto aanwezig | Foto aanwezig |
+| Torenvalk | Foto aanwezig | Open | Foto aanwezig | Foto aanwezig |
+| Slechtvalk | Open | Open | Foto aanwezig onder Zittend | Foto aanwezig |
+| Bruine Kiekendief | Open | Foto aanwezig | Foto aanwezig | Foto aanwezig |
+| Wespendief | Open | Foto aanwezig | Foto aanwezig | Foto aanwezig |
+| Blauwe Kiekendief | Open | Foto aanwezig | Foto aanwezig | Foto aanwezig |
+| Steppekiekendief | Open | Foto aanwezig | Foto aanwezig | Foto aanwezig |
+| Grauwe Kiekendief | Open | Foto aanwezig | Foto aanwezig | Foto aanwezig |
+| Ruigpootbuizerd | Open | Open | Foto aanwezig | Foto aanwezig |
+
+‘Open’ betekent dat de rol uit de geregistreerde beelden en hun onderbouwing nog niet is bevestigd. Voor Buizerd en Slechtvalk bestaan algemene foto's van volwassen vogels. Die blijven buiten de telling per geslacht. De vervolgvolgorde begint bij roofvogels met ontbrekende foto's van man en vrouw, daarna de overige ontbrekende roofvogelrollen en vervolgens de andere soorten met gidsbeelden.
+
+VERIFIED · Mobiele Chromium op 390 px na offline herladen. De zes foto’s verschijnen elk eenmaal onder In vlucht, vóór eventueel verenkleed, met bron en licentie. Ze openen in de fotoviewer en vergroten naar 2×. Alle 349 gidsbeelden en 120 veldopnamen zijn offline gedecodeerd na precache. NOT TESTED · Fysiek toestel en productie.
