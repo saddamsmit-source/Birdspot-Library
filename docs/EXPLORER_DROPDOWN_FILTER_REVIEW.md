@@ -15,3 +15,7 @@
 - Andere bestaande QA-reeksen moeten blijven slagen.
 - Android/iOS-native dropdownweergave nog apart op toestel beoordelen.
 - Geen merge/publicatie zonder eigenaarakkoord.
+
+## Standaardstatus · 1.19.10-species-default-all-preview
+
+CAP-BIRD-010 en L-075. De Soortengids start met Alle vogels. De status die iemand daarna zelf kiest blijft actief bij terugkeer binnen dezelfde appsessie, zoals bij de andere filters. De browsertest controleert de geselecteerde status én de vindbaarheid van Koperwiek, en combineert de status daarna met seizoen en gebied.

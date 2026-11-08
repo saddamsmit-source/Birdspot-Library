@@ -21,10 +21,10 @@ import { BREEDING_BEHAVIORS, methodLabel, sourceLabel } from '../sightings/evide
 function guideSightings() { return getSightingsSnapshot().filter(s=>s && typeof s === 'object' && typeof s.speciesId === 'string'); }
 function getObservedIds() { return new Set(guideSightings().map(s=>s.speciesId)); }
 
-let _currentCategory = 'standvogel';
+const ALL = 'alle';
+let _currentCategory = ALL;
 let _seasons = [];
 let _hideYearRound = false;  // optie bij seizoensfilter: (bijna) jaarrondvogels verbergen            // max. twee aangrenzende seizoenen (zie data/seasons.js)
-const ALL = 'alle';           // categorie-tab voor alle soorten
 const FILTER_CATEGORIES = [[ALL, 'Alle'], ...activeCategories().map(key => [key, CATEGORY_LABELS[key]])];
 let _searchQuery     = '';
 let _currentRegion   = null;

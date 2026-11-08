@@ -98,9 +98,24 @@ def main():
             p.locator('.nav-item[data-route="species"]').click()
             tabs = p.eval_on_selector_all("#speciesFilters .filter-chip[data-cat]", "els => els.map(e => e.dataset.cat)")
             assert tabs[0] == "alle", f"I6-04 eerste tab {tabs[0]}"
-            assert p.locator('#speciesFilters .filter-chip.active').get_attribute("data-cat") == "standvogel"
-            p.locator("#speciesFiltersToggle").click()
+            assert p.locator('#speciesFilters .filter-chip[aria-pressed="true"]').get_attribute("data-cat") == "alle"
+            status_toggle = p.locator("#speciesFiltersToggle")
+            assert status_toggle.locator("strong").inner_text() == "Alle vogels"
+            search = p.locator("#speciesSearch")
+            search.fill("Koperwiek")
+            winter_bird = p.locator('#speciesList .species-row[data-id="sp048"]')
+            winter_bird.wait_for()
+            status_toggle.click()
+            p.locator('#speciesFilters .filter-chip[data-cat="standvogel"]').click()
+            winter_bird.wait_for(state="detached")
+            p.locator('.nav-item[data-route="home"]').click()
+            p.locator('.nav-item[data-route="species"]').click()
+            assert status_toggle.locator("strong").inner_text() == "Standvogels"
+            status_toggle.click()
             p.locator('#speciesFilters .filter-chip[data-cat="alle"]').click()
+            winter_bird.wait_for()
+            search.clear()
+            print("I6-04 OK — standaard alle vogels, ook wintergasten; handmatige status blijft behouden")
             season_toggle = p.locator("#seizoenFiltersToggle")
             season_toggle.click()
             assert p.locator("#seasonHideYearRound").is_hidden(), "I6-06 optie zichtbaar zonder seizoen"
