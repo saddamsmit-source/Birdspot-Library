@@ -6505,5 +6505,74 @@ export const GUIDE_POSES = Object.freeze({
       "height": 639,
       "image": "/assets/species/plumage/sp159-flight.webp"
     }
+  ],
+  "sp164": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "Volwassen Grote Mantelmeeuw. Let op de brede, donkere vleugels en de forse gele snavel.",
+      "file": "Great black-backed gull (Larus marinus) in flight Moher.jpg",
+      "nl": "Grote Mantelmeeuw",
+      "latin": "Larus marinus",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Great_black-backed_gull_(Larus_marinus)_in_flight_Moher.jpg",
+      "showSourceLink": true,
+      "alt": "Volwassen Grote Mantelmeeuw in vlucht boven zee, met een geheven donkere vleugel, witte kop en forse gele snavel.",
+      "modifications": "Bijgesneden, verkleind en omgezet naar WebP",
+      "reviewed": "2026-11-08",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-mantelmeeuw",
+      "visualCheck": "Volwassen Grote Mantelmeeuw in vlucht boven zee, met een geheven donkere vleugel, witte kop en forse gele snavel.",
+      "width": 1400,
+      "height": 1084,
+      "image": "/assets/species/plumage/sp164-flight.webp"
+    }
+  ],
+  "sp165": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "Visdief in broedkleed. Let op de oranjerode snavel met donkere punt, zwarte kap en donkere buitenste handpennen.",
+      "file": "Common tern (Sterna hirundo) in flight Ramsviklandet 2.jpg",
+      "nl": "Visdief",
+      "latin": "Sterna hirundo",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Common_tern_(Sterna_hirundo)_in_flight_Ramsviklandet_2.jpg",
+      "showSourceLink": true,
+      "alt": "Visdief in vrije vlucht met oranjerode snavel, zwarte kap, gevorkte staart en donkere buitenste handpennen.",
+      "modifications": "Bijgesneden, verkleind en omgezet naar WebP",
+      "reviewed": "2026-11-08",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/visdief",
+      "visualCheck": "Visdief in vrije vlucht met oranjerode snavel, zwarte kap, gevorkte staart en donkere buitenste handpennen.",
+      "width": 1400,
+      "height": 582,
+      "image": "/assets/species/plumage/sp165-flight.webp"
+    }
+  ],
+  "sp174": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "De Zwarte Mees vliegt tussen dennentakken. De zwarte kop en witte wang zijn zichtbaar. De vleugels hebben bewegingsonscherpte.",
+      "file": "iNaturalist photo 176460220",
+      "nl": "Zwarte Mees",
+      "latin": "Periparus ater",
+      "author": "euqirneto",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://www.inaturalist.org/photos/176460220",
+      "showSourceLink": true,
+      "alt": "Zwarte Mees in vrije vlucht tussen dennentakken met een witte wang, zwarte kop en uitgespreide vleugels.",
+      "modifications": "Bijgesneden en omgezet naar WebP",
+      "reviewed": "2026-11-08",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwarte-mees",
+      "visualCheck": "Zwarte Mees in vrije vlucht tussen dennentakken met een witte wang, zwarte kop en uitgespreide vleugels.",
+      "width": 820,
+      "height": 425,
+      "image": "/assets/species/plumage/sp174-flight.webp"
+    }
   ]
 });
