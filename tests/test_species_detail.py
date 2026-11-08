@@ -372,6 +372,43 @@ def main():
                 photo.scroll_into_view_if_needed()
                 photo.evaluate("img => img.decode()")
 
+            def check_comparison_photo(photo):
+                photo.scroll_into_view_if_needed()
+                image = photo.locator('img')
+                image.evaluate("img => img.decode()")
+                assert image.bounding_box()["height"] > 160
+                frame = photo.locator('..')
+                info = frame.get_by_label("Foto-informatie")
+                info_box = info.bounding_box()
+                marker = info.locator('span').bounding_box()
+                frame_box = frame.bounding_box()
+                assert info_box["width"] >= 44 and marker["width"] <= 26
+                assert abs(info_box["x"] + info_box["width"] - frame_box["x"] - frame_box["width"]) < 2
+                photo.click()
+                zoom = p.get_by_role("dialog", name="Vogelfoto bekijken")
+                plus = zoom.get_by_role("button", name="Inzoomen")
+                minus = zoom.get_by_role("button", name="Uitzoomen")
+                indicator = zoom.get_by_role("button", name="Zoom herstellen")
+                expect(minus).to_be_disabled()
+                plus.click()
+                plus.click()
+                expect(indicator).to_have_text("4×")
+                expect(plus).to_be_disabled()
+                minus.click()
+                expect(indicator).to_have_text("2×")
+                minus.click()
+                expect(indicator).to_have_text("1×")
+                p.keyboard.press("Escape")
+                expect(zoom).to_have_count(0)
+                expect(photo).to_be_focused()
+
+            open_species("Houtduif", "sp002")
+            flight_photos = p.locator('.sd-flight-compare .sd-field-photo')
+            expect(flight_photos).to_have_count(3)
+            for flight_photo in flight_photos.all():
+                check_comparison_photo(flight_photo)
+            close_detail()
+
             open_species("Fitis", "sp057")
             cards = p.locator('#sdPanel-herkenning .sd-compare-card')
             assert cards.locator('strong').all_text_contents() == ["Fitis", "Tjiftjaf"]
@@ -488,12 +525,14 @@ def main():
                 has=p.get_by_role("heading", name="Buizerd en Ruigpootbuizerd · volwassen in vlucht")
             )
             assert adult.locator('.sd-badge').all_text_contents() == ["Volwassen", "Vrouw"]
+            check_comparison_photo(adult.locator('.sd-field-photo').first)
             for path in ("/assets/species/plumage/sp005-adult_m.webp", "/assets/species/sp253.webp"):
                 assert_photo_once(path)
             juvenile = buzzard_comparisons.filter(
                 has=p.get_by_role("heading", name="Buizerd en Wespendief · jonge vogels")
             )
             assert juvenile.locator('.sd-badge').all_text_contents() == ["Juveniel", "Juveniel"]
+            check_comparison_photo(juvenile.locator('.sd-field-photo').first)
             for picture in juvenile.locator('img').all():
                 picture.scroll_into_view_if_needed()
                 picture.evaluate("img => img.decode()")

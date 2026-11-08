@@ -19,8 +19,8 @@ const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': 
 // ── Lijniconen (24×24, stroke = currentColor) ─────────────────
 const P = {
   ruler:   '<path d="M3 15 15 3l6 6L9 21z"/><path d="m7 11 2 2M10 8l2 2M13 5l2 2"/>',
-  wings:   '<path d="M12 12c-2-4-6-6-10-6 1 5 4 8 10 8 6 0 9-3 10-8-4 0-8 2-10 6z"/><path d="M12 12v6"/>',
-  scale:   '<path d="M5 7h14l-1.5 13h-11z"/><path d="M9 7a3 3 0 0 1 6 0"/>',
+  wingspan:'<path d="M2 4h20M5 2 2 4l3 2m14-4 3 2-3 2"/><path d="M12 12c-3-3-7-4-10-4 1 5 3.5 8 8 9l2 4 2-4c4.5-1 7-4 8-9-3 0-7 1-10 4Z"/><path d="m4 12 4 1m12-1-4 1"/>',
+  weight:  '<circle cx="12" cy="5" r="2.5"/><path d="M7 8h10l4 12H3z"/><path d="M8 17h8"/>',
   eye:     '<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
   male:    '<circle cx="10" cy="14" r="5"/><path d="M14 10l6-6M15 4h5v5"/>',
   female:  '<circle cx="12" cy="9" r="5"/><path d="M12 14v7M9 18h6"/>',
@@ -52,7 +52,7 @@ const P = {
   bush:    '<circle cx="8" cy="13" r="4"/><circle cx="15" cy="12" r="5"/><path d="M4 21h16"/>',
   river:   '<path d="M6 3c4 4-4 8 0 12s-2 6 0 6M14 3c4 4-4 8 0 12s-2 6 0 6"/>',
   camera:  '<path d="M4 8h3l2-3h6l2 3h3v12H4z"/><circle cx="12" cy="13" r="3.5"/>',
-  leaf:    '<path d="M5 19C5 10 10 5 20 4c-1 10-6 15-15 15z"/><path d="M5 19 13 11"/>',
+  lifestyle:'<path d="M3 17h7a6 6 0 0 0 6-6V9l4-2-4-1a3 3 0 0 0-5-1L6 11l-4 4h4m1 6h15m-11-4v4m8 0 3-4"/><path d="M13.5 7h.01m-5 7 3-2"/>',
   egg:     '<path d="M12 3c3.5 0 6 5.5 6 10a6 6 0 0 1-12 0c0-4.5 2.5-10 6-10z"/>',
   timer:   '<circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6"/>',
   repeat:  '<path d="M4 9a7 7 0 0 1 12-3l3 3"/><path d="M19 4v5h-5"/><path d="M20 15a7 7 0 0 1-12 3l-3-3"/><path d="M5 20v-5h5"/>',
@@ -77,7 +77,7 @@ const MONTH_LETTERS = ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D
 
 export const TABS = [
   ['herkenning', 'Herkenning', 'eye'],
-  ['status', 'Leefwijze', 'leaf'],
+  ['status', 'Leefwijze', 'lifestyle'],
   ['waar', 'Waar', 'pin'],
   ['mijn', 'Waarnemingen', 'camera'],
 ];
@@ -206,7 +206,7 @@ export function recognitionPanel(s, life = null) {
   const regular = comparisons.filter(pair => !pair.flight);
   const flight = comparisons.filter(pair => pair.flight);
   if (s.size) {
-    const dimensions = [['length', 'ruler', 'Lengte'], ['wingspan', 'wings', 'Spanwijdte'], ['weight', 'scale', 'Gewicht']]
+    const dimensions = [['length', 'ruler', 'Lengte'], ['wingspan', 'wingspan', 'Spanwijdte'], ['weight', 'weight', 'Gewicht']]
       .filter(([key]) => s.size[key] && (!s.guideReview || s.guideReview.dimensions.includes(key)));
     if (dimensions.length) {
       out.push('<div class="sd-tiles">' + dimensions.map(([key, ic, label]) => tile(ic, label, esc(s.size[key]))).join('') + '</div>');

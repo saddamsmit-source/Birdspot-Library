@@ -8,6 +8,7 @@
 import { FEATURED_BIRDS, advance, loadPosition, savePosition } from './specialBirds.js';
 import { SPECIES, CATEGORY_BADGES } from '../../data/species.js';
 import { closePhotoInfo, photoInfoMarkup } from '../../utils/photoInfo.js';
+import { openPhotoViewer } from '../../utils/photoViewer.js';
 
 const byId = new Map(SPECIES.map(s => [s.id, s]));
 const SAVE_EVERY_MS = 5_000;
@@ -29,6 +30,8 @@ export function initFeaturedCarousel(el, ctx) {
   const stage = el.querySelector('#slideshow');
   if (!stage || !FEATURED_BIRDS.length) return () => {};
   const photo = stage.querySelector('#featuredBirdImage');
+  const zoom = stage.querySelector('#featuredBirdZoom');
+  let closeViewer;
   const group = stage.querySelector('#featuredBirdGroup');
   const name = stage.querySelector('#featuredBirdName');
   const latin = stage.querySelector('#featuredBirdLatin');
@@ -72,7 +75,7 @@ export function initFeaturedCarousel(el, ctx) {
     if (!motion.matches && !manuallyPaused && next && next !== bird) { const pre = new Image(); pre.src = next.image; }
   }
 
-  const detailsOpen = () => Boolean(stage.querySelector('details[open]'));
+  const detailsOpen = () => Boolean(closeViewer || stage.querySelector('details[open]'));
 
   function tick() {
     const now = performance.now();
@@ -112,6 +115,15 @@ export function initFeaturedCarousel(el, ctx) {
   const onKey = event => {
     if (event.key === 'Escape' && closePhotoInfo(stage)) event.stopPropagation();
   };
+  zoom.addEventListener('click', () => {
+    if (closeViewer) return;
+    stop();
+    closeViewer = openPhotoViewer({
+      url: photo.src, alt: photo.alt, trigger: zoom,
+      photoInfo: credit.querySelector('.photo-info'),
+      onClose: () => { closeViewer = undefined; updateMotion(); },
+    });
+  });
   stage.addEventListener('toggle', updateMotion, true);
   stage.addEventListener('keydown', onKey);
   toggle?.addEventListener('click', onToggle);
@@ -126,6 +138,7 @@ export function initFeaturedCarousel(el, ctx) {
   return () => {
     stop();
     destroyed = true;
+    closeViewer?.(false);
     document.removeEventListener('visibilitychange', onVis);
     stage.removeEventListener('toggle', updateMotion, true);
     stage.removeEventListener('keydown', onKey);

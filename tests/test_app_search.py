@@ -96,8 +96,13 @@ def main():
 
         run_search(page).fill('merel-ochtend.webp')
         choose(page, 'Media', 'merel-ochtend.webp')
-        expect(page.get_by_role('dialog', name='Fotoweergave')).to_be_visible()
-        page.get_by_role('button', name='Foto sluiten').click()
+        viewer = page.get_by_role('dialog', name='Fotoweergave')
+        expect(viewer).to_be_visible()
+        viewer.get_by_role('button', name='Inzoomen').click()
+        expect(viewer.get_by_role('button', name='Zoom herstellen')).to_have_text('2×')
+        viewer.get_by_role('button', name='Uitzoomen').click()
+        expect(viewer.get_by_role('button', name='Zoom herstellen')).to_have_text('1×')
+        viewer.get_by_role('button', name='Foto sluiten').click()
 
         run_search(page).fill('hut-geluid.wav')
         choose(page, 'Media', 'hut-geluid.wav')

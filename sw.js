@@ -12,7 +12,7 @@
  *   birdspot-media           — foto's/IDB-exports (permanent)
  */
 
-const APP_VERSION = '1.19.7-photo-info-preview';
+const APP_VERSION = '1.19.8-guide-photo-zoom-preview';
 const APP_CACHE   = `birdspot-app-v${APP_VERSION}`;
 const MEDIA_CACHE = 'birdspot-media';
 
@@ -103,6 +103,7 @@ const PRECACHE_URLS = [
   // JS — utils (voeg toe als ze bestaan)
   '/src/utils/html.js',
   '/src/utils/photoInfo.js',
+  '/src/utils/photoViewer.js',
   '/src/utils/photoUrl.js',
   '/src/utils/validateMedia.js',
 ];
