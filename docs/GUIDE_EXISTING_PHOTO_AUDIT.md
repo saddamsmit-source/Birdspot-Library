@@ -78,9 +78,9 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp084 | Purperreiger | Ja | 3 | Apart beeld |
 | sp085 | Kwak | Ja | 3 | Apart beeld |
 | sp086 | Grauwe Gans | Ja | 3 | Apart beeld |
-| sp089 | Wilde Eend | Ja | 3 | Gecontroleerd · geen vluchtbeeld |
-| sp090 | Slobeend | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
-| sp091 | Wintertaling | Ja | 5 | Gecontroleerd · geen vluchtbeeld |
+| sp089 | Wilde Eend | Ja | 4 | Apart beeld |
+| sp090 | Slobeend | Ja | 3 | Apart beeld |
+| sp091 | Wintertaling | Ja | 6 | Apart beeld |
 | sp092 | Kuifeend | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
 | sp094 | Zilvermeeuw | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp095 | Kleine Mantelmeeuw | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
@@ -427,3 +427,15 @@ Basis is concept-PR #79, 04fdb069b2760e0c764c1d12136dbad06a73b5b7. Voor Purperre
 CAP-BIRD-012/015. De drie beelden staan lokaal en elk eenmaal boven het verenkleed. Herbruikbare controle: vergelijk dezelfde soort bij verschillende vleugelslagen en kies de opname waarop de kop en vleugelkenmerken samen leesbaar zijn. Na deze ronde staan 64 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Wilde Eend.
 
 Mobiele Chromium-test op 390 px: alle drie de soortkaarten via appbreed zoeken met de wetenschappelijke naam geopend. Elk beeld decodeert, staat eenmaal boven het verenkleed, toont de bronlink en opent met 2× zoom. Gidsdekking, volgorde- en uniciteitstests en SHA-256-controle zijn geslaagd. Fysieke toesteltest staat open.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 21
+
+Basis is concept-PR #80, 25b53325e107ed776f0f51c2dc5a13d6b0d3cbb3. Voor Wilde Eend, Slobeend en Wintertaling zijn vluchtcategorieën en individuele fotobronnen onder Nederlandse, Engelse en wetenschappelijke namen nagezocht. Voor Wintertaling zijn 59 Commons-miniaturen bekeken en zes kandidaten op groter formaat vergeleken. Per soort is gekozen voor een afzonderlijk herkenbaar mannetje met zichtbare vleugelkenmerken.
+
+- Wilde Eend · VJAnderson · CC BY-SA 4.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Mallard_male_in_flight.jpg). Het mannetje vliegt vrij met geheven vleugels. De groene kop, gele snavel en blauw-paarse spiegel zijn zichtbaar.
+- Slobeend · Frank Schulenburg · CC BY-SA 4.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Male_northern_shoveler_in_flight-0208.jpg). De foto toont de brede lepelvormige snavel, lichtblauwe vleugeldekveren en groene vleugelspiegel in één beeld.
+- Wintertaling · Ferran Pestaña · CC BY-SA 2.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Cerceta_com%C3%BAn_-_Flickr_-_ferran_pesta%C3%B1a.jpg) · [Oorspronkelijke publicatie](https://www.flickr.com/photos/57956171@N00/396965237/). De kastanjebruine kop met groen oogveld en de groene spiegel zijn goed zichtbaar.
+
+CAP-BIRD-012/015. Elk beeld staat lokaal, eenmaal boven het verenkleed, met bron, fotograaf, licentie en vermelding van de omzetting naar WebP. Herbruikbare controle: een vleugelspiegel kan door de vleugelslag verborgen blijven. Vergelijk opnamen waarop snavel, kop en spiegel tegelijk zichtbaar zijn. Na deze ronde staan 61 soorten zonder vluchtbeeld op de lijst. Volgende nieuwe soort is Kuifeend.
+
+Mobiele Chromium-test op 390 px: alle drie de soortkaarten via appbreed zoeken met de wetenschappelijke naam geopend. Elk beeld decodeert, toont de bronlink en opent met 2× zoom. Gidsdekking, volgorde- en uniciteitstests en SHA-256-controle zijn geslaagd. Fysieke toesteltest staat open.
