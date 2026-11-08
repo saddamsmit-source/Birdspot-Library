@@ -18,7 +18,9 @@ import { methodLabel, sourceLabel, validPin } from '../sightings/evidence.js';
 import { placeStatus, MAP_STATUS, MAP_ORDER, statusForSighting, filteredSightings, statusCounts, statusCountLabel, clusterGradient } from './visualization.js';
 import { escHtml } from '../../utils/html.js';
 import { ensurePlaces, loadPlaces, placeStats, renamePlace } from '../../data/places.js';
-import { savePhoto, getMediaByPlace } from '../../data/db.js';
+import { changePhotos, getMediaByPlace } from '../../data/db.js';
+import { openMediaPreview } from '../../utils/validateMedia.js';
+import { showToast } from '../../app.js';
 import { centerPinMarkup, attachBaseLayers, pinAccuracyM, accuracyLabel, coordLabel, MAX_PIN_ACCURACY_M, LAYERS } from './centerPin.js';
 
 // Leaflet + MarkerCluster worden lazy geladen via <script> tags die we
@@ -237,12 +239,12 @@ export function ensureLeaflet() {
 
 // ── Kaart initialiseren ────────────────────────────────────────
 export function getMapView(screen) {
-  const center = _mapInstance?.getCenter();
+  const center = _mapInstance?.getCenter?.();
   return {
     search: screen.querySelector('#mapSpeciesSearch')?.value,
     status: screen.querySelector('#mapStatusSelect')?.value,
     center: center ? [center.lat, center.lng] : undefined,
-    zoom: _mapInstance?.getZoom(),
+    zoom: _mapInstance?.getZoom?.(),
   };
 }
 
@@ -471,6 +473,7 @@ function initMap(screenEl, sightings, leafletOk, { placeId, sightingId, section,
     const marker=window.L.marker([Number(place.lat),Number(place.lon)],{
       icon:makeBirdIcon(null,status,label,records.length),
       title:label+' · '+MAP_STATUS[status].label,
+      autoPanOnFocus: false,
     });
     marker.birdspotRecords=records;marker.birdspotRecord=records[0];marker.birdspotPlace=place;
     marker.on('click',()=>openPlaceSheet(screenEl,place,records,map,undefined,marker.getElement?.()));
@@ -575,8 +578,8 @@ function openPlaceSheet(screenEl, place, visibleRecords, map, mediaId, trigger =
         tile(st.visits,st.visits===1?'bezoek':'bezoeken')+tile(st.sightings,st.sightings===1?'waarneming':'waarnemingen')+'</div>':'')+
       (place.loose?'':'<div class="place-actions">'+
         '<button type="button" class="place-action place-action--primary" id="placeAddSighting">+ Waarneming hier</button>'+
-        '<label class="place-action" for="placeMediaInput">+ Foto, video of geluid</label>'+
-        '<input type="file" id="placeMediaInput" accept="'+MEDIA_ACCEPT+'" multiple class="visually-hidden">'+
+        '<button type="button" class="place-action" id="placeMediaAdd">+ Foto, video of geluid</button>'+
+        '<input type="file" id="placeMediaInput" accept="'+MEDIA_ACCEPT+'" multiple hidden>'+
         '<button type="button" class="place-action place-action--quiet" id="placeRename">Naam wijzigen</button></div>'+
         '<div class="place-rename" id="placeRenameRow" hidden><input type="text" id="placeRenameInput" maxlength="80" value="'+escHtml(place.name)+'" aria-label="Naam van de plek">'+
         '<button type="button" id="placeRenameSave">Bewaar</button></div>')+
@@ -616,17 +619,40 @@ function openPlaceSheet(screenEl, place, visibleRecords, map, mediaId, trigger =
         if(p){place.name=p.name;screenEl.querySelector('#mapSheetName').textContent=p.name;renameRow.hidden=true;}
       }catch(_){window.__birdspot?.toast?.('Naam opslaan mislukt','error');}
     });
-    body.querySelector('#placeMediaInput').addEventListener('change',async e=>{
-      const files=[...(e.target.files||[])];
-      for(const file of files){
-        try{
-          await savePhoto({id:'pm_'+Date.now().toString(36)+Math.random().toString(36).slice(2,7),
-            blob:new Blob([await file.arrayBuffer()],{type:file.type}),type:file.type,filename:file.name,
-            speciesId:null,sightingId:null,placeId:place.id,addedAt:new Date().toISOString()});
-        }catch(_){window.__birdspot?.toast?.('Bestand opslaan mislukt: '+file.name,'error');}
+    const input = body.querySelector('#placeMediaInput');
+    const addMedia = body.querySelector('#placeMediaAdd');
+    addMedia.addEventListener('click', () => input.click());
+    input.addEventListener('change', async () => {
+      const files = [...input.files];
+      input.value = '';
+      if (!files.length) return;
+      addMedia.disabled = true;
+      const accepted = [];
+      const rejected = [];
+      try {
+        for (const file of files) {
+          const kind = file.type.split('/')[0];
+          try {
+            if (!['image', 'video', 'audio'].includes(kind)) throw new Error('Onbekend bestandstype');
+            URL.revokeObjectURL(await openMediaPreview(file, kind));
+            if (closed) return;
+            accepted.push({
+              id: 'pm_' + crypto.randomUUID(), blob: file, type: file.type,
+              filename: file.name, speciesId: null, sightingId: null,
+              placeId: place.id, addedAt: new Date().toISOString(),
+            });
+          } catch (_) { rejected.push(file.name); }
+        }
+        if (closed) return;
+        await changePhotos({ put: accepted });
+        if (rejected.length) showToast('Kan niet worden geopend: ' + rejected.join(', '));
+        else if (accepted.length) showToast('Media bij de plek opgeslagen');
+        drawMedia();
+      } catch (_) {
+        showToast('Media bij de plek opslaan mislukt');
+      } finally {
+        addMedia.disabled = false;
       }
-      e.target.value='';
-      drawMedia();
     });
     drawMedia();
   });

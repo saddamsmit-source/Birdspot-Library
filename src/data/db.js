@@ -42,15 +42,29 @@ export function getDB() {
   });
 }
 
+/** Pas één partij mediabestanden in één IndexedDB-transactie toe. */
+export async function changePhotos({ put = [], remove = [] }) {
+  if (!put.length && !remove.length) return;
+  const db = await getDB();
+  await new Promise((resolve, reject) => {
+    const tx = db.transaction('photos', 'readwrite');
+    tx.oncomplete = resolve;
+    tx.onabort = () => reject(tx.error ?? new Error('Mediaopslag afgebroken'));
+    const store = tx.objectStore('photos');
+    try {
+      for (const photo of put) store.put(photo);
+      for (const id of remove) store.delete(id);
+    } catch (error) {
+      tx.abort();
+      reject(error);
+    }
+  });
+}
+
 /** Sla een foto op. id moet een stabiele string zijn (nanoid of UUID). */
 export async function savePhoto(photo) {
-  const db = await getDB();
-  return new Promise((resolve, reject) => {
-    const tx  = db.transaction('photos', 'readwrite');
-    const req = tx.objectStore('photos').put(photo);
-    req.onsuccess = () => resolve(req.result);
-    req.onerror   = () => reject(req.error);
-  });
+  await changePhotos({ put: [photo] });
+  return photo.id;
 }
 
 /** Haal één foto op by id. */
@@ -100,13 +114,7 @@ export async function getMediaByPlace(placeId) {
 
 /** Verwijder één foto. */
 export async function deletePhoto(id) {
-  const db = await getDB();
-  return new Promise((resolve, reject) => {
-    const tx  = db.transaction('photos', 'readwrite');
-    const req = tx.objectStore('photos').delete(id);
-    req.onsuccess = () => resolve();
-    req.onerror   = () => reject(req.error);
-  });
+  await changePhotos({ remove: [id] });
 }
 
 /** Zoekindex met bestandsgegevens, zonder mediabestanden te bewaren of te openen. */

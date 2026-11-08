@@ -56,7 +56,7 @@ def seed_media_files(page):
       input.files=transfer.files;
       input.dispatchEvent(new Event('change',{bubbles:true}));
     }""")
-    page.locator("#mediaAttachRow .media-thumb").first.wait_for(timeout=8000)
+    page.wait_for_function("() => document.querySelectorAll('#mediaAttachRow .media-thumb').length === 2", timeout=12000)
     inputs=page.evaluate("""() => ({
       fileCount:document.getElementById('sightingMediaInput').files.length,
       visibleThumbs:document.querySelectorAll('#mediaAttachRow .media-thumb').length
@@ -76,6 +76,7 @@ def main():
             page.locator("#fab").click()
             page.locator("#addSightingSheet.open").wait_for(timeout=9000)
             select_species(page)
+            page.locator('#sightingMore summary').click()
             page.locator('#sightSourceGroup input[value="merlin"]').check()
             assert page.locator('#sightMethodGroup input[value="heard"]').is_checked()
             assert page.locator('#certaintyGroup input[value="possible"]').is_checked()
@@ -84,6 +85,25 @@ def main():
             choose_pin(page,51.59,5.09)
             seed_media_files(page)
             page.screenshot(path=str(SHOTS/"sighting_merlin_form_390.png"),animations="disabled")
+            page.evaluate("""() => {
+                const set = Storage.prototype.setItem;
+                Storage.prototype.setItem = function(key, value) {
+                    if (key === 'birdspot-sightings') throw new DOMException('QA quota','QuotaExceededError');
+                    return set.call(this, key, value);
+                };
+                window.restoreStorage = () => { Storage.prototype.setItem = set; };
+            }""")
+            page.locator("#addSheetSubmit").click()
+            page.get_by_text("Opslaan mislukt — je invoer staat nog klaar").wait_for()
+            assert page.locator("#sightLocation").input_value()=="Brabant testpark"
+            assert page.evaluate("""async () => {
+              const { getDB } = await import('/src/data/db.js');
+              const db = await getDB();
+              const request = db.transaction('photos').objectStore('photos').count();
+              return await new Promise(resolve => { request.onsuccess = () => resolve(request.result); });
+            }""")==0
+            assert page.evaluate("JSON.parse(localStorage.getItem('birdspot-places') || '{}').places?.length || 0")==0
+            page.evaluate("window.restoreStorage()")
             first=save(page)
             assert len(first)==1
             heard=first[0]
@@ -106,6 +126,7 @@ def main():
             page.locator("#fab").click()
             select_species(page)
             page.locator("#sightLocation").fill("Limburg testbos")
+            page.locator('#sightingMore summary').click()
             page.locator('#behaviorChips [data-value="nestmateriaal dragen"]').click()
             choose_pin(page,50.95,5.83)
             page.screenshot(path=str(SHOTS/"sighting_manual_pin_390.png"),animations="disabled")

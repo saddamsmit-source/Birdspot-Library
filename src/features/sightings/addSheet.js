@@ -33,9 +33,10 @@ import { SPECIES } from '../../data/species.js';
 import { openPinPicker } from './pinPicker.js';
 import { normalizeEvidence, validPin, OBSERVATION_METHODS, BREEDING_BEHAVIORS } from './evidence.js';
 import { addSighting, updateSighting } from '../../data/sightings.js';
-import { loadPlaces, addPlace } from '../../data/places.js';
+import { loadPlaces, addPlace, savePlaces } from '../../data/places.js';
 import { askPlaceReuse } from '../map/placePrompt.js';
-import { savePhoto, getPhoto, deletePhoto } from '../../data/db.js';
+import { changePhotos, getPhoto } from '../../data/db.js';
+import { openMediaPreview } from '../../utils/validateMedia.js';
 import { openSpeciesPicker }     from './speciesPicker.js';
 import { escHtml }               from '../../utils/html.js';
 import { showToast }             from '../../app.js';
@@ -141,11 +142,12 @@ export function openEditSheet(sighting, { onSaved } = {}) {
 
 // ── Interne implementatie ─────────────────────────────────
 function _openSightingForm(mode, initialState, { onSaved, editId } = {}) {
+  if (document.getElementById('addSightingSheet')) return;
+  const trigger = document.activeElement;
   _state = initialState;
 
   const isEdit  = mode === 'edit';
   const title   = isEdit ? 'Waarneming bewerken' : 'Nieuwe waarneming';
-  const saveLbl = isEdit ? 'Opslaan'             : 'Opslaan';
 
   const ov = document.createElement('div');
   ov.className = 'sheet-overlay';
@@ -155,14 +157,14 @@ function _openSightingForm(mode, initialState, { onSaved, editId } = {}) {
     <div class="sheet" role="dialog" aria-modal="true" aria-label="${escHtml(title)}">
       <div class="sheet__handle"></div>
       <div class="sheet__header">
-        <span class="sheet__title">${escHtml(title)}</span>
+        <span class="sheet__title" id="addSightingTitle" tabindex="-1">${escHtml(title)}</span>
         <button class="btn-close" id="addSheetCancel" type="button">Annuleer</button>
       </div>
       <div class="sheet__content" id="addSheetContent">
         ${_renderFormBody()}
       </div>
       <div class="sheet__footer">
-        <button class="btn-primary" id="addSheetSubmit" type="button">${escHtml(saveLbl)}</button>
+        <button class="btn-primary" id="addSheetSubmit" type="button">Opslaan</button>
       </div>
     </div>`;
 
@@ -178,17 +180,30 @@ function _openSightingForm(mode, initialState, { onSaved, editId } = {}) {
   document.body.appendChild(ov);
   requestAnimationFrame(() => { if (ov.isConnected) ov.classList.add('open'); });
 
-  const ctx = { destroyed: false, cancelPinPicker:null, locationRevision: 0 };
+  const ctx = { destroyed: false, cancelPinPicker: null, locationRevision: 0, mediaChecking: false, detailsOpen: isEdit };
+  const submit = ov.querySelector('#addSheetSubmit');
+  ov.querySelector('#addSightingTitle').focus({ preventScroll: true });
 
   const close = () => {
-    if (ctx.destroyed) return;
+    if (ctx.destroyed || ctx.saving) return;
     ctx.destroyed = true;
     ctx.cancelPinPicker?.();
     ov.classList.remove('open');
+    ov.inert = true;
+    if (trigger?.isConnected) trigger.focus({ preventScroll: true });
+    document.removeEventListener('keydown', onEscape);
     setTimeout(() => { ov.remove(); fileInput.remove(); }, 300);
     _releaseObjectUrls();
+    releaseExistingPreviews(ov);
   };
 
+  const onEscape = event => {
+    if (event.key !== 'Escape' || ov.inert || !ov.contains(document.activeElement)) return;
+    event.preventDefault();
+    close();
+  };
+  document.addEventListener('keydown', onEscape);
+  submit.addEventListener('click', () => _submitForm(ov, close, onSaved, { isEdit, editId, ctx }));
   ov.addEventListener('click', e => { if (e.target === ov) close(); });
   ov.querySelector('.sheet__handle').addEventListener('click', close);
   ov.querySelector('#addSheetCancel').addEventListener('click', close);
@@ -230,37 +245,16 @@ function _renderFormBody() {
       ${!_state.observationMethod ? '<p class="form-hint">Bij deze oudere waarneming is de manier van waarnemen niet vastgelegd. Selecteer die als je hem weet.</p>' : ''}
     </section>
 
-    <!-- Bron van herkenning -->
-    <section class="form-field sighting-source-field" aria-label="Hoe heb je de soort herkend?">
-      <div class="form-label">Herkenning</div>
-      <div class="sighting-source-options" id="sightSourceGroup" role="group" aria-label="Herkenningsbron">
-        <label class="sighting-source-choice${_state.identificationSource === 'self' ? ' is-selected' : ''}">
-          <input type="radio" name="identificationSource" value="self" ${_state.identificationSource === 'self' ? 'checked' : ''}>
-          Eigen herkenning</label>
-        <label class="sighting-source-choice${_state.identificationSource === 'merlin' ? ' is-selected' : ''}">
-          <input type="radio" name="identificationSource" value="merlin" ${_state.identificationSource === 'merlin' ? 'checked' : ''}>
-          Merlin Sound ID</label>
-      </div>
-      ${_state.identificationSource === 'merlin' ? `
-        <div class="sighting-merlin-panel">
-          <strong>♪ Merlin Sound ID</strong>
-          <p>Een suggestie van Merlin is niet automatisch een bevestigde soort. Controleer de vogel zelf via het geluid, de omgeving of de soortbeschrijving.</p>
-          <label class="sighting-merlin-reviewed">
-            <input id="sightMerlinChecked" type="checkbox" ${_state.merlinVerification === 'checked' ? 'checked' : ''}>
-            Ik heb de soort zelf gecontroleerd
-          </label>
-        </div>` : ''}
-    </section>
     <!-- Datum + Tijd -->
     <div class="form-field">
-      <label class="form-label">Datum &amp; tijd <span class="form-required">*</span></label>
+      <label class="form-label" for="sightDate">Datum &amp; tijd <span class="form-required">*</span></label>
       <div class="form-row">
         <input type="date" id="sightDate" class="form-input"
-          value="${escHtml(_state.date)}" max="${isoToday()}">
+          value="${escHtml(_state.date)}" max="${isoToday()}" required>
         <button class="form-btn-secondary" id="sightDateToday" type="button">Vandaag</button>
       </div>
       <div class="form-row form-row--narrow" style="margin-top:var(--space-2)">
-        <input type="time" id="sightTime" class="form-input form-input--time"
+        <input type="time" id="sightTime" class="form-input form-input--time" aria-label="Tijd (optioneel)"
           value="${escHtml(_state.time || '')}" placeholder="--:--">
         <span class="form-hint-inline">optioneel</span>
       </div>
@@ -287,6 +281,37 @@ function _renderFormBody() {
       </div>
     </div>
 
+    <!-- Media -->
+    <div class="form-field sighting-media-field">
+      <label class="form-label">Foto's &amp; video's</label>
+      <div class="media-attach-row" id="mediaAttachRow">
+        ${_renderMediaItems()}
+      </div>
+      <p class="form-hint" id="sightingMediaStatus" role="status"></p>
+    </div>
+    <details class="sighting-more" id="sightingMore">
+      <summary>Meer details</summary>
+    <!-- Bron van herkenning -->
+    <section class="form-field sighting-source-field" aria-label="Hoe heb je de soort herkend?">
+      <div class="form-label">Herkenning</div>
+      <div class="sighting-source-options" id="sightSourceGroup" role="group" aria-label="Herkenningsbron">
+        <label class="sighting-source-choice${_state.identificationSource === 'self' ? ' is-selected' : ''}">
+          <input type="radio" name="identificationSource" value="self" ${_state.identificationSource === 'self' ? 'checked' : ''}>
+          Eigen herkenning</label>
+        <label class="sighting-source-choice${_state.identificationSource === 'merlin' ? ' is-selected' : ''}">
+          <input type="radio" name="identificationSource" value="merlin" ${_state.identificationSource === 'merlin' ? 'checked' : ''}>
+          Merlin Sound ID</label>
+      </div>
+      ${_state.identificationSource === 'merlin' ? `
+        <div class="sighting-merlin-panel">
+          <strong>♪ Merlin Sound ID</strong>
+          <p>Een suggestie van Merlin is niet automatisch een bevestigde soort. Controleer de vogel zelf via het geluid, de omgeving of de soortbeschrijving.</p>
+          <label class="sighting-merlin-reviewed">
+            <input id="sightMerlinChecked" type="checkbox" ${_state.merlinVerification === 'checked' ? 'checked' : ''}>
+            Ik heb de soort zelf gecontroleerd
+          </label>
+        </div>` : ''}
+    </section>
     <!-- Aantal + Zekerheid (naast elkaar) -->
     <div class="form-row form-row--fields">
       <div class="form-field form-field--half">
@@ -313,7 +338,7 @@ function _renderFormBody() {
       <div class="chip-row" id="habitatChips">
         ${HABITATS.map(h => `
           <button type="button" class="chip${_state.habitat === h ? ' chip--active' : ''}"
-            data-group="habitat" data-value="${h}">
+            data-group="habitat" data-value="${h}" aria-pressed="${_state.habitat === h}">
             ${escHtml(h.charAt(0).toUpperCase() + h.slice(1))}
           </button>`).join('')}
       </div>
@@ -325,7 +350,7 @@ function _renderFormBody() {
       <div class="chip-row" id="behaviorChips">
         ${BEHAVIORS.map(b => `
           <button type="button" class="chip${_state.behavior === b ? ' chip--active' : ''}"
-            data-group="behavior" data-value="${b}">
+            data-group="behavior" data-value="${b}" aria-pressed="${_state.behavior === b}">
             ${escHtml(b.charAt(0).toUpperCase() + b.slice(1))}
           </button>`).join('')}
       </div>
@@ -337,7 +362,7 @@ function _renderFormBody() {
       <div class="chip-row" id="weatherChips">
         ${WEATHERS.map(w => `
           <button type="button" class="chip${_state.weather === w ? ' chip--active' : ''}"
-            data-group="weather" data-value="${w}">
+            data-group="weather" data-value="${w}" aria-pressed="${_state.weather === w}">
             ${escHtml(w.charAt(0).toUpperCase() + w.slice(1))}
           </button>`).join('')}
       </div>
@@ -350,25 +375,25 @@ function _renderFormBody() {
         placeholder="Bijzonderheden, vluchtnummer, sociaal gedrag…">${escHtml(_state.notes)}</textarea>
     </div>
 
-    <!-- Media -->
-    <div class="form-field" style="padding-bottom:var(--space-8)">
-      <label class="form-label">Foto's &amp; video's</label>
-      <div class="media-attach-row" id="mediaAttachRow">
+    </details>`;
+}
+
+function _renderMediaItems() {
+  return `
         ${_state.existingPhotoIds.map(id => _renderExistingThumb(id)).join('')}
         ${_state.mediaFiles.map(m => _renderNewThumb(m)).join('')}
         <button class="media-add-btn" id="mediaAddBtn" type="button" aria-label="Bestand toevoegen">
-          ${_svgPlus()}
+          ${_svgPlus()} <span>Bestand toevoegen</span>
         </button>
-      </div>
-    </div>`;
+  `;
 }
 
 function _renderExistingThumb(photoId) {
   return `
-    <div class="media-thumb media-thumb--existing" data-photoid="${photoId}">
-      <img class="media-thumb__img" data-lazy-idb="${photoId}" alt="">
-      <button class="media-thumb__del" data-photoid="${photoId}"
-        aria-label="Verwijder foto">
+    <div class="media-thumb media-thumb--existing" data-photoid="${escHtml(photoId)}">
+      <span class="media-thumb__placeholder" data-lazy-idb="${escHtml(photoId)}">Media laden…</span>
+      <button class="media-thumb__del" data-photoid="${escHtml(photoId)}"
+        aria-label="Verwijder bestand">
         ${_svgClose()}
       </button>
     </div>`;
@@ -418,14 +443,24 @@ function _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx })
   const refresh = () => {
     const el = content();
     if (!el || ctx.destroyed) return;
+    const active = document.activeElement;
+    const activeId = el.contains(active) ? active.id : null;
+    const top = el.scrollTop;
+    releaseExistingPreviews(el);
     el.innerHTML = _renderFormBody();
     _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx });
-    // Laad bestaande thumbnails async (geen await op toplevel)
-    _loadExistingThumbs(el);
+    el.scrollTop = top;
+    if (activeId) el.querySelector('#' + CSS.escape(activeId))?.focus({ preventScroll: true });
   };
 
   const el = content();
   if (!el) return;
+
+  const details = el.querySelector('#sightingMore');
+  details.open = ctx.detailsOpen || _state.identificationSource === 'merlin';
+  details.addEventListener('toggle', () => { if (details.isConnected) ctx.detailsOpen = details.open; });
+  const mediaStatus = el.querySelector('#sightingMediaStatus');
+  mediaStatus.textContent = ctx.mediaMessage || '';
 
   // Laad bestaande thumbnails bij eerste render
   _loadExistingThumbs(el);
@@ -532,12 +567,14 @@ function _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx })
       if (_state[group] === val) {
         _state[group] = null;
         btn.classList.remove('chip--active');
+        btn.setAttribute('aria-pressed', 'false');
       } else {
         // Deactiveer andere chips in deze groep
         const groupEl = btn.closest('.chip-row');
-        groupEl?.querySelectorAll('.chip').forEach(c => c.classList.remove('chip--active'));
+        groupEl?.querySelectorAll('.chip').forEach(c => { c.classList.remove('chip--active'); c.setAttribute('aria-pressed', 'false'); });
         _state[group] = val;
         btn.classList.add('chip--active');
+        btn.setAttribute('aria-pressed', 'true');
       }
     });
   });
@@ -548,20 +585,42 @@ function _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx })
   });
 
   // Media: open file picker
-  el.querySelector('#mediaAddBtn')?.addEventListener('click', () => {
-    fileInput.value = '';
-    fileInput.click();
-  });
-
-  // Gebruik { once: true } om herhaalde bindings te voorkomen
   const onFileChange = async () => {
-    if (ctx.destroyed) return;
-    for (const file of fileInput.files) {
-      const tempId    = _uid();
-      const objectUrl = URL.createObjectURL(file);
-      _state.mediaFiles.push({ tempId, file, objectUrl });
+    if (ctx.destroyed || ctx.saving || ctx.mediaChecking || !fileInput.files.length) return;
+    const files = [...fileInput.files];
+    ctx.mediaChecking = true;
+    ctx.mediaMessage = 'Bestanden controleren…';
+    content().querySelector('#sightingMediaStatus').textContent = ctx.mediaMessage;
+    const submit = ov.querySelector('#addSheetSubmit');
+    submit.disabled = true;
+    const rejected = [];
+    for (const file of files) {
+      const kind = file.type.split('/')[0];
+      try {
+        if (!['image', 'video'].includes(kind)) throw new Error('Onbekend bestandstype');
+        const objectUrl = await openMediaPreview(file, kind);
+        if (ctx.destroyed) {
+          URL.revokeObjectURL(objectUrl);
+          return;
+        }
+        _state.mediaFiles.push({ tempId: _uid(), file, objectUrl });
+      } catch (_) {
+        rejected.push(file.name);
+      }
+      if (ctx.destroyed) return;
     }
-    refresh();
+    ctx.mediaChecking = false;
+    submit.disabled = false;
+    ctx.mediaMessage = rejected.length ? 'Kan niet worden geopend: ' + rejected.join(', ') : '';
+    // Gebruik de huidige DOM. De gebruiker kan tussentijds een ander veld hebben gewijzigd.
+    const current = content();
+    const row = current.querySelector('#mediaAttachRow');
+    const restoreFocus = row.contains(document.activeElement);
+    releaseExistingPreviews(row);
+    row.innerHTML = _renderMediaItems();
+    if (restoreFocus) row.querySelector('#mediaAddBtn').focus({ preventScroll: true });
+    current.querySelector('#sightingMediaStatus').textContent = ctx.mediaMessage;
+    _loadExistingThumbs(current);
   };
   // Bind once per form lifecycle. Re-rendering evidence/pin fields must not
   // attach another file handler and duplicate photo/video IDs.
@@ -572,10 +631,15 @@ function _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx })
 
   // Media: verwijder nieuw bestand
   el.querySelector('#mediaAttachRow')?.addEventListener('click', e => {
-    // Nieuw bestand verwijderen
-    const delNew = e.target.closest('[data-tempid].media-thumb__del, .media-thumb__del[data-tempid]');
+    if (e.target.closest('#mediaAddBtn')) {
+      if (!ctx.mediaChecking && !ctx.saving) {
+        fileInput.value = '';
+        fileInput.click();
+      }
+      return;
+    }
     const delBtn = e.target.closest('.media-thumb__del');
-    if (!delBtn) return;
+    if (!delBtn || ctx.saving || ctx.mediaChecking) return;
 
     const tempId  = delBtn.dataset.tempid;
     const photoId = delBtn.dataset.photoid;
@@ -594,36 +658,51 @@ function _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx })
     }
   });
 
-  // Submit
-  ov.querySelector('#addSheetSubmit')?.addEventListener('click', () => {
-    _submitForm(ov, close, onSaved, { isEdit, editId, ctx });
-  });
+
 }
 
 // ── Lazy-load IDB thumbnails ───────────────────────────────
+function releaseExistingPreviews(container) {
+  container.querySelectorAll('[data-preview-url]').forEach(thumb => URL.revokeObjectURL(thumb.dataset.previewUrl));
+}
+
 async function _loadExistingThumbs(containerEl) {
-  const imgs = containerEl.querySelectorAll('img[data-lazy-idb]');
-  for (const img of imgs) {
-    const id = img.dataset.lazyIdb;
-    if (!id) continue;
+  for (const placeholder of containerEl.querySelectorAll('[data-lazy-idb]')) {
     try {
-      const record = await getPhoto(id);
-      if (!record) continue;
-      const blob    = record.blob instanceof Blob ? record.blob
-                    : new Blob([record.blob], { type: record.type });
-      const objUrl  = URL.createObjectURL(blob);
-      img.src = objUrl;
-      // Revoke na laden om geheugen vrij te geven
-      img.onload  = () => URL.revokeObjectURL(objUrl);
-      img.onerror = () => URL.revokeObjectURL(objUrl);
-    } catch (_) { /* foto niet gevonden, laat thumbnail leeg */ }
+      const photo = await getPhoto(placeholder.dataset.lazyIdb);
+      if (!placeholder.isConnected) continue;
+      if (!photo?.blob) {
+        placeholder.textContent = 'Bestand ontbreekt';
+        continue;
+      }
+      const video = photo.type?.startsWith('video/');
+      const thumb = document.createElement(video ? 'video' : 'img');
+      thumb.className = 'media-thumb__img';
+      if (video) {
+        thumb.muted = thumb.playsInline = true;
+        thumb.preload = 'metadata';
+      } else thumb.alt = photo.filename || '';
+      const url = URL.createObjectURL(photo.blob);
+      thumb.addEventListener(video ? 'loadeddata' : 'load', () => URL.revokeObjectURL(url), { once: true });
+      thumb.addEventListener('error', () => URL.revokeObjectURL(url), { once: true });
+      thumb.dataset.previewUrl = url;
+      thumb.src = url;
+      placeholder.replaceWith(thumb);
+    } catch (_) {
+      placeholder.textContent = 'Bestand kan niet worden geladen';
+    }
   }
 }
 
 // ── Opslaan ────────────────────────────────────────────────
 async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
   if (!_state.speciesId) { showToast('Kies eerst een soort'); return; }
-  if (!_state.date)      { showToast('Vul een datum in');    return; }
+  const dateInput = ov.querySelector('#sightDate');
+  if (!dateInput.validity.valid) {
+    dateInput.reportValidity();
+    dateInput.focus();
+    return;
+  }
   let evidence;
   try { evidence=normalizeEvidence(_state); }
   catch(err){ showToast(err.message); return; }
@@ -635,53 +714,38 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
   }
 
   const btn = ov.querySelector('#addSheetSubmit');
-  if (!btn || btn.disabled) return;   // guard: voorkomt dubbele submit
+  if (!btn || btn.disabled || ctx.mediaChecking || ctx.saving) return;   // guard: voorkomt dubbele submit
   btn.disabled = true;
   btn.textContent = 'Opslaan…';
 
+  ctx.saving = true;
+  const content = ov.querySelector('#addSheetContent');
+  const cancel = ov.querySelector('#addSheetCancel');
+  content.inert = true;
+  cancel.disabled = true;
+  const now = new Date().toISOString();
+  const sightingId = isEdit ? editId : _uid();
+  const newPhotos = _state.mediaFiles.map(({ file, tempId }) => ({
+    id: tempId,
+    blob: file,
+    type: file.type,
+    filename: file.name,
+    speciesId: _state.speciesId,
+    speciesName: _state.speciesName,
+    sightingId,
+    addedAt: now,
+  }));
+  let mediaWritten = false;
+  let newPlace = null;
+  let savedSighting;
   try {
-    // VEILIGE OPSLAGVOLGORDE (data-integriteit):
-    // 1. Nieuwe media naar IDB (omkeerbaar: orphan IDs — kunnen later worden opgeruimd)
-    // 2. Record naar localStorage (gooit bij fout → stap 3 wordt NIET uitgevoerd)
-    // 3. PAS NA bevestigde opslag: verwijder orphaned IDB-foto's
-    //
-    // Dit voorkomt onherstelbaar dataverlies waarbij foto's weg zijn maar
-    // het record ze nog refereert (was het geval bij de oude volgorde).
-
-    // 1. Nieuwe media opslaan in IndexedDB
-    const newPhotoIds = [];
-    for (const m of _state.mediaFiles) {
-      if (ctx.destroyed) return;
-      const buf = await m.file.arrayBuffer();
-      const id  = _uid();
-      await savePhoto({
-        id,
-        dataUrl:     null,
-        blob:        new Blob([buf], { type: m.file.type }),
-        type:        m.file.type,
-        filename:    m.file.name,
-        speciesId:   _state.speciesId,
-        speciesName: _state.speciesName,
-        sightingId:  null,      // wordt later gepatcht
-        addedAt:     new Date().toISOString(),
-      });
-      newPhotoIds.push(id);
-    }
-
-    if (ctx.destroyed) return;
-
-    // 2. Stel alle photoIds samen en sla record op in localStorage
-    //    saveSightings() gooit nu bij fout (QuotaExceededError e.d.) →
-    //    catch-blok onderaan handelt af, stap 3 wordt NIET bereikt.
-    const allPhotoIds = [..._state.existingPhotoIds, ...newPhotoIds];
-
-    const now = new Date().toISOString();
-    let savedSighting;
-
-    // K4: elke pin hoort bij een plek; nieuwe plek alleen als de gebruiker geen bestaande koos
-    let placeId = validPin(_state.lat,_state.lon) ? _state.placeId : null;
-    if (validPin(_state.lat,_state.lon) && (!placeId || !loadPlaces().some(p => p.id === placeId))) {
-      placeId = addPlace({ name: _state.locationName, lat: _state.lat, lon: _state.lon }).id;
+    await changePhotos({ put: newPhotos });
+    mediaWritten = true;
+    const allPhotoIds = [..._state.existingPhotoIds, ...newPhotos.map(photo => photo.id)];
+    let placeId = validPin(_state.lat, _state.lon) ? _state.placeId : null;
+    if (validPin(_state.lat, _state.lon) && (!placeId || !loadPlaces().some(place => place.id === placeId))) {
+      newPlace = addPlace({ name: _state.locationName, lat: _state.lat, lon: _state.lon });
+      placeId = newPlace.id;
     }
 
     const sightingData = {
@@ -704,52 +768,35 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
       ...evidence,
     };
 
-    if (isEdit) {
-      savedSighting = await updateSighting(editId, sightingData);
-    } else {
-      const full = {
-        id:        _uid(),
-        ...sightingData,
-        createdAt: now,
-        updatedAt: now,
-      };
-      savedSighting = await addSighting(full);
+    savedSighting = isEdit
+      ? await updateSighting(sightingId, sightingData)
+      : await addSighting({ id: sightingId, ...sightingData, createdAt: now, updatedAt: now });
+  } catch (error) {
+    if (mediaWritten) {
+      try { await changePhotos({ remove: newPhotos.map(photo => photo.id) }); }
+      catch (cleanupError) { console.error('[sightingForm] media rollback', cleanupError); }
     }
-
-    if (ctx.destroyed) return;
-
-    // 2b. Patch sightingId terug in nieuwe IDB-foto's
-    for (const id of newPhotoIds) {
-      try {
-        const existing = await getPhoto(id);
-        if (existing) await savePhoto({ ...existing, sightingId: savedSighting.id });
-      } catch (_) {}
+    if (newPlace) {
+      try { savePlaces(loadPlaces().filter(place => place.id !== newPlace.id)); }
+      catch (cleanupError) { console.error('[sightingForm] place rollback', cleanupError); }
     }
-
-    // 3. Record is bevestigd opgeslagen → verwijder nu orphaned IDB-foto's (alleen bij edit)
-    //    Pas NA succesvolle localStorage-write om onherstelbaar verlies te voorkomen.
-    if (isEdit && _state.deletedPhotoIds.length > 0) {
-      for (const id of _state.deletedPhotoIds) {
-        try { await deletePhoto(id); } catch (_) {}
-      }
-    }
-
-    // 4. Alleen visueel waargenomen soorten als GEZIEN markeren.
-    // Een tweede waarneming mag een bestaand gezien-vinkje niet UIT zetten.
-    // 5. Afsluiten
-    close();
-    const label = isEdit ? 'Waarneming bijgewerkt' : `${savedSighting.speciesName} opgeslagen`;
-    showToast(label);
-    onSaved?.(savedSighting);
-
-  } catch (err) {
-    console.error('[sightingForm] save error', err);
-    if (!ctx.destroyed) {
-      btn.disabled    = false;
-      btn.textContent = 'Opslaan';
-      showToast('Opslaan mislukt — probeer opnieuw');
-    }
+    console.error('[sightingForm] save error', error);
+    ctx.saving = false;
+    content.inert = false;
+    cancel.disabled = false;
+    btn.disabled = false;
+    btn.textContent = 'Opslaan';
+    showToast('Opslaan mislukt — je invoer staat nog klaar');
+    return;
   }
+
+  // Bestaande media worden pas verwijderd na bevestigde opslag van de waarneming.
+  try { await changePhotos({ remove: _state.deletedPhotoIds }); }
+  catch (error) { console.error('[sightingForm] detached media cleanup', error); }
+  ctx.saving = false;
+  close();
+  showToast(isEdit ? 'Waarneming bijgewerkt' : `${savedSighting.speciesName} opgeslagen`);
+  onSaved?.(savedSighting);
 }
 
 // ── GPS ────────────────────────────────────────────────────
@@ -799,7 +846,9 @@ function _releaseObjectUrls() {
 
 // ── Helpers ────────────────────────────────────────────────
 function isoToday() {
-  return new Date().toISOString().slice(0, 10);
+  const now = new Date();
+  const pad = value => String(value).padStart(2, '0');
+  return `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
 }
 
 function _uid() {

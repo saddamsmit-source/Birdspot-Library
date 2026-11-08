@@ -6,7 +6,7 @@
 
 :root {
   /* ── Merk ─────────────────────────────────────────── */
-  --brand:        #1A3A2A;   /* diep woudgroen */
+  --brand:        #18362C;   /* diep woudgroen */
   --brand-mid:    #2D6A4F;   /* middengroen */
   --brand-light:  #52B788;   /* helder groen */
   --brand-pale:   #B7E4C7;   /* zacht groen */
@@ -17,7 +17,7 @@
   --accent-ink:   #1A4D8A;   /* donkerblauw tekst op licht */
 
   /* ── Neutraal ─────────────────────────────────────── */
-  --bg:           #F7FAF8;   /* licht ivoor-groen */
+  --bg:           #F6F3E8;   /* licht ivoor-groen */
   --surface:      #FFFFFF;
   --surface-2:    #EEF4F0;
   --line:         #D9E8DC;
@@ -26,7 +26,7 @@
   /* ── Tekst ────────────────────────────────────────── */
   --ink:          #172820;
   --ink-2:        #3D5245;
-  --muted:        #7A9A82;
+  --muted:        #485E50;
 
   /* ── Status ───────────────────────────────────────── */
   --warn:         #F4A261;
@@ -83,7 +83,11 @@
   --shadow-sheet: 0 -4px 32px rgba(26,58,42,.12);
 
   /* ── Navigatie hoogte ─────────────────────────────── */
-  --nav-h: 64px;
+  --nav-h: 72px;
+  --selected-gold: #EBCF99;
+  --focus-ink: #18362C;
+  --focus-light: #F6F3E8;
+  --hit-field: 44px;
 }
 
 /* ── Donker thema ─────────────────────────────────────── */
@@ -95,7 +99,7 @@
     --line:      #2A4535;
     --ink:       #E6F2E9;
     --ink-2:     #A8C9AF;
-    --muted:     #5E8C6A;
+    --muted:     #A8C9AF;
     --accent-soft: #1A3560;
     --guide-month-breed: #FF5548;
     color-scheme: dark;
@@ -108,7 +112,7 @@
   --line:      #2A4535;
   --ink:       #E6F2E9;
   --ink-2:     #A8C9AF;
-  --muted:     #5E8C6A;
+  --muted:     #A8C9AF;
   --accent-soft: #1A3560;
   --guide-month-breed: #FF5548;
   color-scheme: dark;

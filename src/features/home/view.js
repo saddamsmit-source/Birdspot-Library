@@ -36,9 +36,13 @@ export function renderHome(el, { onSearchSelect } = {}) {
   el.innerHTML = buildSkeleton();
   // New signature shortcuts use existing router; no parallel navigation state.
   const onSignatureClick = e => {
-    const button = e.target.closest('[data-signature-route]');
+    const button = e.target.closest('[data-signature-route], [data-latest-sighting]');
     if (!button) return;
-    import('../../app.js').then(({ navigate }) => navigate(button.dataset.signatureRoute));
+    if (button.hasAttribute('data-latest-sighting')) {
+      onSearchSelect?.({ route: 'sightings', sightingId: button.dataset.latestSighting || undefined });
+      return;
+    }
+    onSearchSelect?.({ route: button.dataset.signatureRoute });
   };
   el.addEventListener('click', onSignatureClick);
   const disposeSearch = bindAppSearch(el, onSearchSelect);
@@ -93,6 +97,12 @@ function buildSkeleton() {
       ${searchMarkup()}
     </header>
 
+    <section class="field-actions" aria-label="Snel starten">
+      <button type="button" class="field-action field-action--primary" data-signature-route="add">+ Waarnemen</button>
+      <button type="button" class="field-action" data-latest-sighting>Laatste waarneming</button>
+    </section>
+
+    <div class="field-home-overview">
     <!-- Diashow: elke 30 s een bijzondere Nederlandse vogel; hervat waar hij was. -->
     <section class="slideshow featured-birds" id="slideshow" aria-label="Bijzondere vogel in beeld">
       <div class="featured-birds__media">
@@ -101,6 +111,7 @@ function buildSkeleton() {
           decoding="async">
       </div>
       <div class="featured-birds__shade" aria-hidden="true"></div>
+      <button type="button" id="featuredBirdMotion" aria-pressed="false">Diashow pauzeren</button>
       <div class="featured-birds__caption">
         <span class="featured-birds__group" id="featuredBirdGroup"></span>
         <h2 id="featuredBirdName"></h2>
@@ -111,14 +122,6 @@ function buildSkeleton() {
           rel="noopener noreferrer" target="_blank" href="https://commons.wikimedia.org/">Fotobron</a>
       </div>
     </section>
-
-    <!-- Stat tiles — 4 kolommen -->
-    <div class="stats-row" id="statsRow">
-      ${statTile('stat-species', '—', 'Soorten',     iconBird())}
-      ${statTile('stat-total',   '—', 'Waarnemingen', iconEye())}
-      ${statTile('stat-photos',  '—', "Media",        iconPhoto())}
-      ${statTile('stat-hotspot', '—', 'Hotspots',    iconMap())}
-    </div>
 
     <!-- Recente waarnemingen -->
     <section class="dash-section" id="recentSection">
@@ -137,6 +140,16 @@ function buildSkeleton() {
         </div>
       </div>
     </section>
+
+    </div>
+
+    <!-- Stat tiles — 4 kolommen -->
+    <div class="stats-row" id="statsRow">
+      ${statTile('stat-species', '—', 'Soorten',     iconBird())}
+      ${statTile('stat-total',   '—', 'Waarnemingen', iconEye())}
+      ${statTile('stat-photos',  '—', "Media",        iconPhoto())}
+      ${statTile('stat-hotspot', '—', 'Hotspots',    iconMap())}
+    </div>
 
     <!-- Accessible secondary features: stays collapsed beneath the primary KPI row. -->
     <details class="signature-home-intro signature-quick-access" id="homeMoreFeatures">
@@ -532,6 +545,8 @@ async function loadRecentSightings(el, ctx) {
       .sort((a, b) => new Date(b.date) - new Date(a.date))
       .slice(0, 6);
 
+    const latest = el.querySelector('[data-latest-sighting]');
+    if (latest) latest.dataset.latestSighting = recent[0]?.id || '';
     if (recent.length === 0) {
       listEl.innerHTML = `
         <div class="empty-state" style="background:var(--surface);border-radius:var(--r-card);padding:var(--space-24)">

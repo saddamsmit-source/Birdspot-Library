@@ -10,6 +10,7 @@ import { SPECIES, CATEGORY_BADGES } from '../../data/species.js';
 
 const byId = new Map(SPECIES.map(s => [s.id, s]));
 const SAVE_EVERY_MS = 5_000;
+let manuallyPaused = false;
 
 /** Tekst onder de naam: herkenning + wanneer in Nederland. Pure functie (testbaar). */
 export function birdInfo(bird) {
@@ -33,6 +34,8 @@ export function initFeaturedCarousel(el, ctx) {
   const place = stage.querySelector('#featuredBirdWhere');
   const presence = stage.querySelector('#featuredBirdPresence');
   const credit = stage.querySelector('#featuredBirdCredit');
+  const toggle = stage.querySelector('#featuredBirdMotion');
+  const motion = matchMedia('(prefers-reduced-motion: reduce)');
 
   let pos = loadPosition();
   let shownIndex = -1, timer = null, lastTick = 0, lastSave = 0, destroyed = false;
@@ -62,7 +65,7 @@ export function initFeaturedCarousel(el, ctx) {
     credit.href = bird.source; credit.target = '_blank'; credit.rel = 'noopener noreferrer';
     // volgende foto alvast laden, zodat de wissel direct is
     const next = FEATURED_BIRDS[(pos.index + 1) % FEATURED_BIRDS.length];
-    if (next && next !== bird) { const pre = new Image(); pre.src = next.image; }
+    if (!motion.matches && !manuallyPaused && next && next !== bird) { const pre = new Image(); pre.src = next.image; }
   }
 
   function tick() {
@@ -74,7 +77,7 @@ export function initFeaturedCarousel(el, ctx) {
   }
 
   function start() {
-    if (destroyed || ctx.destroyed || document.hidden || timer) return;
+    if (destroyed || ctx.destroyed || document.hidden || timer || motion.matches || manuallyPaused) return;
     lastTick = lastSave = performance.now();
     show();
     timer = setInterval(tick, 1000);
@@ -86,16 +89,34 @@ export function initFeaturedCarousel(el, ctx) {
     savePosition(pos);
   }
 
-  const onVis = () => (document.hidden ? stop() : start());
+  const updateMotion = () => {
+    const paused = motion.matches || manuallyPaused;
+    if (toggle) {
+      toggle.hidden = motion.matches;
+      toggle.setAttribute('aria-pressed', String(manuallyPaused));
+    }
+    if (paused || document.hidden) stop();
+    else start();
+  };
+  const onToggle = () => {
+    manuallyPaused = !manuallyPaused;
+    updateMotion();
+  };
+  toggle?.addEventListener('click', onToggle);
+  motion.addEventListener('change', updateMotion);
+  const onVis = updateMotion;
   const onHide = () => stop();
   document.addEventListener('visibilitychange', onVis);
   window.addEventListener('pagehide', onHide);
-  start();
+  show();
+  updateMotion();
 
   return () => {
     stop();
     destroyed = true;
     document.removeEventListener('visibilitychange', onVis);
+    toggle?.removeEventListener('click', onToggle);
+    motion.removeEventListener('change', updateMotion);
     window.removeEventListener('pagehide', onHide);
     photo.removeEventListener('load', onLoad);
     photo.removeEventListener('error', onError);

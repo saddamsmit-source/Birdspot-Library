@@ -122,6 +122,8 @@ export async function renderProfile(el) {
     </div>
   `;
 
+  attachEvents(el);
+
   // Versie ophalen bij de service worker (enige versiebron, L-027)
   const versionEl = el.querySelector('#appVersion');
   attachEvents(el);

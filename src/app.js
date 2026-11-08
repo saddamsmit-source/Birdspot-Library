@@ -145,7 +145,7 @@ document.getElementById('fab').addEventListener('click', () => {
 // ── Toast utility ─────────────────────────────────────────
 let toastTimer = null;
 export function showToast(msg, duration = 2800) {
-  let toast = document.querySelector('.toast');
+  let toast = document.querySelector('.toast:not(.app-update)');
   if (!toast) {
     toast = document.createElement('div');
     toast.className = 'toast';

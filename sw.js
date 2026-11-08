@@ -45,6 +45,7 @@ const PRECACHE_URLS = [
   '/styles/mobile-field-editorial.css',
   '/styles/cinematic-wetland.css',
   '/styles/map-explorer.css',
+  '/styles/field-experience.css',
   '/assets/birdspot-ijsvogel-splash.avif',
 
   // JS — app root
@@ -102,6 +103,7 @@ const PRECACHE_URLS = [
   // JS — utils (voeg toe als ze bestaan)
   '/src/utils/html.js',
   '/src/utils/photoUrl.js',
+  '/src/utils/validateMedia.js',
 ];
 
 // ── Install: precache atomair ──────────────────────────────────────────────
