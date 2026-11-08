@@ -12,7 +12,7 @@
  *   birdspot-media           — foto's/IDB-exports (permanent)
  */
 
-const APP_VERSION = '1.17.40-pipit-kingfisher-flight';
+const APP_VERSION = '1.18.0-field-preview-2';
 const APP_CACHE   = `birdspot-app-v${APP_VERSION}`;
 const MEDIA_CACHE = 'birdspot-media';
 
@@ -23,6 +23,9 @@ const PRECACHE_URLS = [
   '/',
   '/index.html',
   '/manifest.webmanifest',
+  '/assets/species/field-guide-media.json',
+  '/assets/species/credits.json',
+  '/assets/showcase/credits.json',
 
   // Stylesheets
   '/styles/tokens.css',
@@ -42,6 +45,7 @@ const PRECACHE_URLS = [
   '/styles/mobile-field-editorial.css',
   '/styles/cinematic-wetland.css',
   '/styles/map-explorer.css',
+  '/styles/field-experience.css',
   '/assets/birdspot-ijsvogel-splash.avif',
 
   // JS — app root
@@ -67,7 +71,6 @@ const PRECACHE_URLS = [
   '/src/features/sightings/speciesPicker.js',
   '/src/features/sightings/evidence.js',
   '/src/features/sightings/pinPicker.js',
-  '/src/features/sightings/editSheet.js',
   '/src/features/sightings/detailSheet.js',
   '/src/features/map/view.js',
   '/src/features/map/centerPin.js',
@@ -100,35 +103,16 @@ const PRECACHE_URLS = [
   // JS — utils (voeg toe als ze bestaan)
   '/src/utils/html.js',
   '/src/utils/photoUrl.js',
-  '/src/utils/date.js',
-  '/src/utils/search.js',
+  '/src/utils/validateMedia.js',
 ];
 
 // ── Install: precache atomair ──────────────────────────────────────────────
 self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open(APP_CACHE).then(async cache => {
-      // Probeer elk bestand apart; sla ontbrekende utils over (allSettled)
-      const results = await Promise.allSettled(
-        PRECACHE_URLS.map(url =>
-          cache.add(url).catch(err => {
-            // Utils-bestanden zijn optioneel; log maar blokkeer niet
-            console.warn(`[SW] precache skip: ${url}`, err.message);
-          })
-        )
-      );
-      // Diashowfoto's (F): eenmalig in de media-cache, die releases overleeft (L-052)
-      await precacheShowcase();
-      await precacheGuidePhotos();
-      await precacheFieldGuideMedia();
-      const failed = results.filter(r => r.status === 'rejected');
-      if (failed.length) {
-        console.warn(`[SW] ${failed.length} precache-verzoeken overgeslagen`);
-      }
-    })
-  );
-  // Activeer direct (geen wachten op bestaande clients)
-  self.skipWaiting();
+  event.waitUntil((async () => {
+    const cache = await caches.open(APP_CACHE);
+    await cache.addAll(PRECACHE_URLS.map(url => new Request(url, { cache: 'reload' })));
+    await Promise.all([precacheShowcase(), precacheGuidePhotos(), precacheFieldGuideMedia()]);
+  })());
 });
 
 async function precacheGuidePhotos() {
@@ -182,18 +166,24 @@ self.addEventListener('activate', event => {
     })
   );
 
-  // Stuur update-notificatie naar alle open clients
-  self.clients.matchAll({ type: 'window' }).then(clients => {
-    clients.forEach(client => {
-      client.postMessage({ type: 'new-version', version: APP_VERSION });
-    });
-  });
 });
 
-// ── Versie opvragen (profielpagina) ────────────────────────────────────────
+async function reportVersion(port) {
+  let offlineReady = false;
+  try {
+    const cache = await caches.open(APP_CACHE);
+    const required = await Promise.all(PRECACHE_URLS.map(url => cache.match(url)));
+    offlineReady = required.every(response => response?.ok);
+  } catch (_) { /* opslag niet beschikbaar */ }
+  port.postMessage({ type: 'version', version: APP_VERSION, offlineReady });
+}
+
 self.addEventListener('message', event => {
-  if (event.data?.type === 'get-version') {
-    event.ports?.[0]?.postMessage({ type: 'version', version: APP_VERSION });
+  if (event.data?.type === 'apply-update') {
+    event.waitUntil(self.skipWaiting());
+  }
+  if (event.data?.type === 'get-version' && event.ports[0]) {
+    event.waitUntil(reportVersion(event.ports[0]));
   }
 });
 
@@ -211,6 +201,12 @@ self.addEventListener('fetch', event => {
     return;
   }
 
+  // Houd de actieve shell consistent tijdens een wachtende update.
+  if (PRECACHE_URLS.includes(url.pathname)) {
+    event.respondWith(serveAppShell(request, url.pathname));
+    return;
+  }
+
   // Media: afbeeldingen uit de app-eigen upload-flow → media-cache
   // (In deze app slaan we binaire foto's in IndexedDB op; blob-URLs
   //  worden niet via fetch geladen. Deze tak is een vangnet voor toekomstig
@@ -224,6 +220,12 @@ self.addEventListener('fetch', event => {
   // App-shell: network-first met 3 s time-out
   event.respondWith(networkFirstWithTimeout(request, 3000));
 });
+
+async function serveAppShell(request, path) {
+  const cache = await caches.open(APP_CACHE);
+  const cached = await cache.match(path);
+  return cached || networkFirstWithTimeout(request, 3000);
+}
 
 // ── Network-first met time-out ─────────────────────────────────────────────
 async function networkFirstWithTimeout(request, timeoutMs) {

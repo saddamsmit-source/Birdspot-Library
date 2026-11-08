@@ -120,7 +120,7 @@ def main():
         page.wait_for_function('() => !!navigator.serviceWorker.controller', timeout=90000)
         context.set_offline(True)
         page.reload(wait_until='domcontentloaded')
-        page.locator('#birdspotSplashSkip').click()
+        expect(page.locator('#birdspotSplash')).to_have_count(0)
         run_search(page).fill('Koperwiek')
         choose(page, 'Vogelsoorten', 'Koperwiek Turdus iliacus')
         expect(page.locator('.signature-species-detail-overlay')).to_contain_text('Koperwiek')

@@ -113,6 +113,7 @@ def main():
       p.locator('#addSightingSheet.open').wait_for(timeout=9000)
       p.locator('#speciesPickerBtn').click()
       p.locator('#spPickerList .species-row[data-id="sp002"]').click()
+      p.locator('#sightingMore summary').click()
       p.locator('#sightSourceGroup input[value="merlin"]').check()
       assert p.locator('#sightMethodGroup input[value="heard"]').is_checked()
       assert p.locator('#sightSourceGroup input[value="merlin"]').is_checked()

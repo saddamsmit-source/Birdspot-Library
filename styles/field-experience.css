@@ -1,0 +1,166 @@
+/* Gedeelde veldbediening voor smalle en brede schermen. */
+:where(button, a[href], input, select, textarea, summary):focus-visible {
+  outline: 2px solid var(--focus-light);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 5px var(--focus-ink);
+}
+
+.app-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px 12px;
+}
+
+.app-header__logo { min-width: 0; }
+.app-header__title { line-height: 1.12; overflow-wrap: anywhere; }
+.app-header__avatar { width: var(--hit-field); height: var(--hit-field); }
+.app-header__avatar svg { color: var(--on-brand); }
+.app-search-trigger {
+  grid-column: 1 / -1;
+  position: relative;
+  min-width: 0;
+  padding-inline: 14px;
+}
+.app-search-trigger::after { content: ''; position: absolute; inset: -3px 0; }
+.app-search-result { min-height: var(--hit-field); }
+
+.field-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 9em), 1fr));
+  gap: 8px;
+  padding: 10px 16px 14px;
+  background: var(--brand);
+}
+.field-action {
+  min-width: 0;
+  min-height: var(--hit-field);
+  padding: 8px 10px;
+  border: 1px solid var(--selected-gold);
+  border-radius: var(--r-sm);
+  color: var(--on-brand);
+  font-size: 1rem;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+.field-action--primary {
+  background: var(--selected-gold);
+  color: var(--focus-ink);
+}
+.field-actions :focus-visible,
+.app-header :focus-visible,
+.app-nav :focus-visible {
+  outline: 2px solid var(--focus-light);
+  outline-offset: -3px;
+  box-shadow: 0 0 0 2px var(--focus-ink);
+}
+
+.field-home-overview { min-width: 0; }
+#slideshow.featured-birds {
+  height: auto;
+  min-height: 0;
+  display: grid;
+  align-content: end;
+  --bird-image-height: clamp(165px, 54vw, 320px);
+  padding-top: var(--bird-image-height);
+}
+#slideshow.featured-birds .featured-birds__media,
+#slideshow.featured-birds .featured-birds__shade { height: var(--bird-image-height); }
+#slideshow.featured-birds .featured-birds__photo { height: 100%; }
+#slideshow.featured-birds .featured-birds__caption {
+  position: relative;
+  inset: auto;
+  padding: 12px 16px;
+  color: var(--focus-light);
+  background: var(--focus-ink);
+  max-width: none;
+  overflow-wrap: anywhere;
+}
+#slideshow.featured-birds .featured-birds__caption p { font-size: .9375rem; }
+#featuredBirdMotion {
+  position: absolute;
+  z-index: 2;
+  top: 8px;
+  right: 12px;
+  min-height: var(--hit-field);
+  padding: 5px 12px;
+  border: 1px solid var(--selected-gold);
+  border-radius: var(--r-pill);
+  background: var(--focus-ink);
+  color: var(--focus-light);
+}
+#allSightingsBtn { min-height: var(--hit-field); padding: 4px 8px; }
+
+.app-nav .nav-item, .app-nav .nav-fab-slot { min-width: 0; }
+.app-nav .nav-fab-slot { flex-grow: 1.45; }
+.app-nav .fab-nav { flex-shrink: 0; }
+.app-nav .nav-item { opacity: 1; color: #d2e0d8; }
+.app-nav .nav-item.active { color: var(--selected-gold); }
+.app-nav .nav-item.active span { text-decoration: underline; text-underline-offset: .22em; }
+.app-nav .nav-item span, .app-nav .nav-fab-label {
+  max-width: 100%;
+  text-align: center;
+  overflow-wrap: anywhere;
+  letter-spacing: 0;
+}
+
+.sighting-more {
+  margin-block: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  padding-inline: 10px;
+  color: var(--ink);
+}
+.sighting-more summary {
+  min-height: var(--hit-field);
+  padding-block: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.sighting-more .form-field { min-width: 0; }
+.sighting-media-field .media-add-btn {
+  width: auto;
+  min-width: var(--hit-field);
+  min-height: var(--hit-field);
+  height: auto;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 12px;
+  color: var(--ink);
+  font-size: 1rem;
+}
+.media-thumb__placeholder { display: grid; place-items: center; height: 100%; padding: 4px; font-size: .75rem; color: var(--ink); }
+#sightingMediaStatus:empty { display: none; }
+#sightingMediaStatus { overflow-wrap: anywhere; }
+#addSheetCancel, #sightDateToday, #sightPinBtn, #sightClearPin, #sightGpsBtn,
+#mapSheetClose, .place-action, .signature-filter { min-height: var(--hit-field); }
+#screen-media .signature-filterbar { flex-wrap: wrap; overflow: visible; }
+#screen-media .signature-filter[aria-pressed="true"]::before { content: '✓ '; }
+#mapPinConfirm:disabled { opacity: 1; color: var(--focus-ink); background: #d2dfd5; }
+.map-sheet-handle::before { background: var(--muted); }
+
+@media (min-width: 800px) {
+  .field-home-overview {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    align-items: start;
+    gap: 16px;
+    padding-inline: 16px;
+  }
+  .field-actions { grid-template-columns: repeat(2, minmax(175px, max-content)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-nav .nav-item, .map-sheet-overlay, #mapDetailSheet { transition: none; }
+}
+
+.toast.app-update {
+  top: auto;
+  bottom: calc(var(--nav-h) + env(safe-area-inset-bottom, 0px) + 12px);
+  z-index: 140;
+  min-height: var(--hit-field);
+  width: max-content;
+  max-width: calc(100% - 32px);
+  margin-inline: auto;
+  pointer-events: auto;
+}

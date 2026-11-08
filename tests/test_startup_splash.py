@@ -1,4 +1,4 @@
-"""Birdspot premium 5-second splash screen QA.
+"""Birdspot one-time kingfisher welcome QA.
 
 Checks that the exact locally committed kingfisher image loads, the home route
 initializes behind it, automatic dismissal happens after approximately 5 s,
@@ -66,25 +66,28 @@ def main():
             assert page.locator("#screen-home").is_visible()
             assert not errors, errors
 
-            # Next page load: skip on tap, without corrupting saved sightings.
+            # Returning users see Home immediately and keep their saved sightings.
             page.evaluate("""() => localStorage.setItem('birdspot-sightings',JSON.stringify({
                 schemaVersion:2,
                 sightings:[{id:'splash-test',speciesName:'Koolmees',
                  speciesId:'sp001',date:'2026-11-04',locationName:'Testbos',photoIds:[]}]
             }))""")
             page.reload(wait_until="domcontentloaded")
-            page.locator("#birdspotSplash").wait_for(state="visible",timeout=5000)
             page.locator("#screen-home").wait_for(timeout=7000)
-            page.locator("#birdspotSplashSkip").click()
-            page.locator("#birdspotSplash").wait_for(state="detached",timeout=2400)
+            assert page.locator("#birdspotSplash").count()==0
             assert page.evaluate("""() => JSON.parse(
                 localStorage.getItem('birdspot-sightings')).sightings[0].id
             """)=="splash-test"
+            page.evaluate("localStorage.removeItem('birdspot-welcome-seen')")
+            page.reload(wait_until="domcontentloaded")
+            page.locator("#birdspotSplashSkip").click()
+            page.locator("#birdspotSplash").wait_for(state="detached",timeout=2400)
+            assert page.evaluate("localStorage.getItem('birdspot-welcome-seen')")=="1"
             page.locator(".nav-item[data-route='map']").click()
             assert page.locator("#mapScreen").count()==1
             assert page.locator("#birdspotSplash").count()==0
             assert not errors, errors
-            print("PASS: exact image, app-ready, five-second display, skip, no data loss")
+            print("PASS: exact image, app-ready, five-second welcome, fast return, skip and data preservation")
             context.close()
             browser.close()
         server.shutdown()
