@@ -105,4 +105,22 @@ const summary = {
   speciesWithComparisons: rows.filter(bird => bird.comparisons).length,
   comparisons: GUIDE_COMPARISONS.length,
 };
-console.log(JSON.stringify(process.argv.includes('--summary') ? summary : {summary, species: rows}, null, 2));
+if (process.argv.includes('--open-photo-roles')) {
+  const openPhotoRoles = rows
+    .filter(bird => bird.mainPhoto && bird.unfilledPhotoRoles.length)
+    .sort((a, b) => a.unfilledPhotoRoles.length - b.unfilledPhotoRoles.length || a.id.localeCompare(b.id))
+    .map(bird => ({
+      id: bird.id,
+      name: bird.name,
+      latin: bird.latin,
+      mainPhoto: bird.mainPhoto,
+      filledRoles: roles.filter(role => bird.groupedPhotos[role]),
+      missingRoles: bird.unfilledPhotoRoles,
+    }));
+  console.log(JSON.stringify({
+    summary: {picturedSpecies: rows.filter(bird => bird.mainPhoto).length, speciesWithOpenPhotoRoles: openPhotoRoles.length},
+    openPhotoRoles,
+  }, null, 2));
+} else {
+  console.log(JSON.stringify(process.argv.includes('--summary') ? summary : {summary, species: rows}, null, 2));
+}
