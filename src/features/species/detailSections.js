@@ -352,7 +352,7 @@ function distributionLegend() {
       <td>${range}</td></tr>`;
   }).join('');
   return `<table class="sd-distribution-legend">
-    <thead><tr><th scope="col">Kaartteken</th><th scope="col">Openbare meldingen per vak</th></tr></thead>
+    <thead><tr><th scope="col">Teken</th><th scope="col">Openbare meldingen per vak</th></tr></thead>
     <tbody><tr><td><span class="sd-distribution-blank" aria-hidden="true"></span></td>
       <td>0–${MAP_MIN_RECORDS - 1} · leeg vak</td></tr>${rows}</tbody>
   </table>`;

@@ -849,8 +849,9 @@
   border-bottom: 1px solid var(--line);
   text-align: start;
   vertical-align: middle;
+  overflow-wrap: anywhere;
 }
-.sd-distribution-legend td:first-child { width: 5.75em; }
+.sd-distribution-legend th:first-child { width: 1%; white-space: nowrap; }
 .sd-distribution-legend svg, .sd-distribution-blank {
   display: inline-block;
   width: 22px;
