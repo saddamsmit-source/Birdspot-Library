@@ -37,7 +37,21 @@ def main():
       notes.click()
       assert "Herkenning:" in p.locator("#featuredBirdWhere").inner_text()
       notes.click()
-      assert p.locator("#homeLatestSighting").is_hidden()
+      def check_home_spacing():
+        assert p.locator('#screen-home [data-signature-route="add"]').count() == 0
+        assert p.locator('#fab').is_visible()
+        assert p.evaluate("""() => {
+          const box = id => document.getElementById(id).getBoundingClientRect();
+          const header = document.querySelector('#screen-home .app-header').getBoundingClientRect();
+          return Math.abs(box('slideshow').top - header.bottom) <= 1 &&
+                 box('homeMoreFeatures').top - box('recentList').bottom >= 15;
+        }""")
+
+      p.locator('#recentList .empty-state').wait_for()
+      for width in (320, 390, 925, 1440):
+        p.set_viewport_size({"width":width,"height":844})
+        check_home_spacing()
+      p.set_viewport_size({"width":390,"height":844})
       assert p.locator("#featuredBirdTheme").count()==0
       assert p.locator("#featuredPrev").count()==0
       assert p.locator("#featuredNext").count()==0
@@ -131,6 +145,16 @@ def main():
       assert rows[0]['observationMethod']=='heard' and rows[0]['identificationSource']=='merlin',rows
       assert rows[0]['merlinVerification']=='suggested',rows
       assert rows[0]['lat'] is None and rows[0]['lon'] is None,rows
+
+      p.locator('.nav-item[data-route="home"]').click()
+      recent = p.locator('#recentList [data-home-sighting]')
+      recent.wait_for()
+      check_home_spacing()
+      recent.click()
+      p.locator('#detailSightingSheet').wait_for()
+      assert "Houtduif" in p.locator('#detailSightingSheet .sheet__title').inner_text()
+      p.locator('#detailClose').click()
+      p.locator('#detailSightingSheet').wait_for(state='detached')
 
       # Existing FAB stays a normal observation (regression).
       p.locator('#fab').click()

@@ -37,13 +37,13 @@ export function renderHome(el, { onSearchSelect } = {}) {
   el.innerHTML = buildSkeleton();
   // New signature shortcuts use existing router; no parallel navigation state.
   const onSignatureClick = e => {
-    const button = e.target.closest('[data-signature-route], [data-latest-sighting], [data-home-sighting], [data-featured-species]');
+    const button = e.target.closest('[data-signature-route], [data-home-sighting], [data-featured-species]');
     if (!button) return;
     if (button.hasAttribute('data-featured-species')) {
       onSearchSelect?.({ route: 'species', speciesId: button.dataset.featuredSpecies || undefined });
       return;
     }
-    const sightingId = button.dataset.latestSighting || button.dataset.homeSighting;
+    const sightingId = button.dataset.homeSighting;
     if (sightingId) {
       onSearchSelect?.({ route: 'sightings', sightingId });
       return;
@@ -103,11 +103,6 @@ function buildSkeleton() {
       ${searchMarkup()}
     </header>
 
-    <section class="field-actions" aria-label="Snel starten">
-      <button type="button" class="field-action field-action--primary" data-signature-route="add">+ Waarnemen</button>
-      <button type="button" class="field-action" id="homeLatestSighting" data-latest-sighting hidden>Laatste waarneming</button>
-    </section>
-
     <!-- Diashow: elke 30 s een bijzondere Nederlandse vogel; hervat waar hij was. -->
     <section class="slideshow featured-birds" id="slideshow" aria-label="Bijzondere vogel in beeld">
       <div class="featured-birds__media">
@@ -165,7 +160,7 @@ function buildSkeleton() {
       </div>
     </section>
 
-    <!-- Accessible secondary features: stays collapsed beneath the primary KPI row. -->
+    <!-- Accessible secondary features: stays collapsed beneath recent sightings. -->
     <details class="signature-home-intro signature-quick-access" id="homeMoreFeatures">
       <summary class="signature-quick-access__summary">
         <span class="signature-quick-access__icon" aria-hidden="true">✦</span>
@@ -575,11 +570,6 @@ async function loadRecentSightings(el, ctx) {
       .sort((a, b) => new Date(b.date) - new Date(a.date))
       .slice(0, 6);
 
-    const latest = el.querySelector('#homeLatestSighting');
-    if (recent[0] && latest) {
-      latest.dataset.latestSighting = recent[0].id;
-      latest.hidden = false;
-    }
     if (recent.length === 0) {
       listEl.innerHTML = `
         <div class="empty-state" style="background:var(--surface);border-radius:var(--r-card);padding:var(--space-24)">
