@@ -659,3 +659,32 @@ CAP-BIRD-012/015. Per soort worden vier afzonderlijke beeldrollen gecontroleerd:
 ‘Open’ betekent dat de rol uit de geregistreerde beelden en hun onderbouwing nog niet is bevestigd. Voor Buizerd en Slechtvalk bestaan algemene foto's van volwassen vogels. Die blijven buiten de telling per geslacht. De vervolgvolgorde begint bij roofvogels met ontbrekende foto's van man en vrouw, daarna de overige ontbrekende roofvogelrollen en vervolgens de andere soorten met gidsbeelden.
 
 VERIFIED · Mobiele Chromium op 390 px na offline herladen. De zes foto’s verschijnen elk eenmaal onder In vlucht, vóór eventueel verenkleed, met bron en licentie. Ze openen in de fotoviewer en vergroten naar 2×. Alle 349 gidsbeelden en 120 veldopnamen zijn offline gedecodeerd na precache. NOT TESTED · Fysiek toestel en productie.
+
+
+## Foto’s uit de nacontrole · roofvogels
+
+Basis is [PR #107](https://github.com/saddamsmit-source/Birdspot-Library/pull/107) op `95214a2a1e45d59b8b4d2a534c07911250eeeb1b`. CAP-BIRD-012/015. De tabel hierboven blijft de nulmeting. Dertien nieuwe foto’s vullen dertien van de veertien open rollen in die nulmeting. De eerdere herkenningsbeelden staan nog op de kaarten. Extra beelden verschijnen met hun eigen label, maker, licentie en bron en zijn vergrootbaar.
+
+| Soort | Aanvulling | Maker, licentie en bron |
+|---|---|---|
+| Buizerd | Mannetje in rust | Gianluca Congi · CC BY-SA 4.0 · [Foto](https://www.inaturalist.org/photos/291739391) · [Waarneming](https://www.inaturalist.org/observations/168347110) |
+| Buizerd | Mannetje in vlucht | Simone Bocca · CC BY-SA 4.0 · [Foto](https://www.inaturalist.org/photos/112563579) · [Waarneming](https://www.inaturalist.org/observations/69384883) |
+| Buizerd | Vrouwtje in vlucht | Simone Bocca · CC BY-SA 4.0 · [Foto](https://www.inaturalist.org/photos/112563573) · [Waarneming](https://www.inaturalist.org/observations/69384882) |
+| Havik | Mannetje in vlucht | Вячеслав Юсупов · CC BY 4.0 · [Foto](https://www.inaturalist.org/photos/29451692) · [Waarneming](https://www.inaturalist.org/observations/19176694) |
+| Torenvalk | Mannetje in vlucht | Zeynel Cebeci · CC BY-SA 4.0 · [Foto](https://commons.wikimedia.org/wiki/File:Falco_tinnunculus_-_Common_kestrel_20.jpg) |
+| Slechtvalk | Mannetje in rust | Sumeet Moghe · CC BY-SA 4.0 · [Foto](https://commons.wikimedia.org/wiki/File:Peregrine_Falcon_(male)_cropped.jpg) |
+| Slechtvalk | Mannetje in vlucht | Jonathan Tollin · CC BY 4.0 · [Foto](https://www.inaturalist.org/photos/9819028) · [Waarneming](https://www.inaturalist.org/observations/7528897) |
+| Wespendief | Mannetje in rust | Павел Кунгуров · CC BY 4.0 · [Foto](https://www.inaturalist.org/photos/610450616) · [Waarneming](https://www.inaturalist.org/observations/335975132) |
+| Blauwe Kiekendief | Mannetje in rust | Sofia Voynovskaya · CC BY 4.0 · [Foto](https://www.inaturalist.org/photos/728343078) · [Waarneming](https://www.inaturalist.org/observations/397126880) |
+| Steppekiekendief | Mannetje in rust | Jan Ebr & Ivana Ebrová · CC BY 4.0 · [Foto](https://www.inaturalist.org/photos/506883636) · [Waarneming](https://www.inaturalist.org/observations/72514102) |
+| Grauwe Kiekendief | Mannetje in rust | Rohitjahnavi · CC BY 4.0 · [Foto](https://commons.wikimedia.org/wiki/File:Montagu's_Harrier_Male_(Circus_pygargus)_at_Velavadar_National_Park,_Gujarat,_India_DSCN7503_02.jpg) |
+| Ruigpootbuizerd | Mannetje in rust | Spencer Hurt · CC BY 4.0 · [Foto](https://www.inaturalist.org/photos/349699219) · [Waarneming](https://www.inaturalist.org/observations/198409972) |
+| Ruigpootbuizerd | Mannetje in vlucht | psweet · CC BY-SA 4.0 · [Foto](https://www.inaturalist.org/photos/30000101) · [Waarneming](https://www.inaturalist.org/observations/19496287) |
+
+Bij Buizerd, Havik, Slechtvalk in vlucht en Ruigpootbuizerd volgt het geslachtslabel de bronregistratie. Een individuele foto kan bij die soorten onvoldoende zijn om het geslacht zelfstandig te bepalen. De twee vluchtbeelden van Buizerd zijn door dezelfde waarnemer vlak na elkaar apart als mannetje en vrouwtje geregistreerd. Een open fotolicentie is per afzonderlijk bestand gecontroleerd. Foto’s met een Amerikaanse Blauwe Kiekendief (`Circus hudsonius`) zijn uitgesloten. Bij `Circus cyaneus` is de bronwaarneming ook op taxon gecontroleerd.
+
+**Open in deze groep:** een volwassen mannetje Bruine Kiekendief in rust. Een kandidaat met het bijschrift ‘perched’ toont bij beeldcontrole uitgestrekte vleugels boven een tak. De andere goed zittende kandidaat heeft geen geslachtsaanduiding die het beeld bevestigt. [Kandidaat met gespreide vleugels](https://commons.wikimedia.org/wiki/File:Marsh_Harrier_,_male,perched.(Circus_aeruginosus)_-_Flickr_-_gailhampshire.jpg) · [Zittende kandidaat](https://commons.wikimedia.org/wiki/File:Western_Marsh_Harrier_2.jpg)
+
+De overige soorten uit de foto-inventaris en kaarten zonder gidsbeeld vallen in volgende rondes. Voor zangvogels komen de kleedrollen vóór aanvullende vluchtbeelden. Een extra vluchtfoto in de soortkaart heeft een duidelijk geslachtslabel. Bestaande algemene vluchtfoto’s in vergelijkingen houden hun eigen plaats.
+
+VERIFIED · Lokale Chromium. Na offline herladen zijn alle dertien nieuwe beelden geopend en tot 2× vergroot op de negen soortkaarten. Iedere foto kwam eenmaal voor en had haar eigen houding- en geslachtslabel, bronlink en licentie. De soortdetailregressie en de controle op gidsfoto’s slaagden. Alle 362 gidsbeelden en 120 veldopnamen zijn gedecodeerd vanuit de offline cache. NOT TESTED · Fysiek toestel en productie.
