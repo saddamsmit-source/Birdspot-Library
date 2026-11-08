@@ -110,12 +110,12 @@ def main():
             winter_bird.wait_for(state="detached")
             p.locator('.nav-item[data-route="home"]').click()
             p.locator('.nav-item[data-route="species"]').click()
-            assert status_toggle.locator("strong").inner_text() == "Standvogels"
-            status_toggle.click()
-            p.locator('#speciesFilters .filter-chip[data-cat="alle"]').click()
+            assert status_toggle.locator("strong").inner_text() == "Alle vogels"
+            assert search.input_value() == ""
+            search.fill("Koperwiek")
             winter_bird.wait_for()
             search.clear()
-            print("I6-04 OK — standaard alle vogels, ook wintergasten; handmatige status blijft behouden")
+            print("I6-04 OK — standaard alle vogels, ook wintergasten; handmatige status filtert en reset bij verlaten")
             season_toggle = p.locator("#seizoenFiltersToggle")
             season_toggle.click()
             assert p.locator("#seasonHideYearRound").is_hidden(), "I6-06 optie zichtbaar zonder seizoen"

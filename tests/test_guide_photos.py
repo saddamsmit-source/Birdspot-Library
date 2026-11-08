@@ -19,8 +19,7 @@ def main():
     ctx=browser.new_context(viewport={'width':width,'height':844},service_workers='block')
     p=ctx.new_page();p.goto(url);p.locator('#birdspotSplashSkip').click()
     p.locator('[data-nav="species"]').click() if p.locator('[data-nav="species"]').count() else p.get_by_role('button',name='Soorten',exact=True).click()
-    p.locator('#speciesFiltersToggle').click()
-    p.locator('#speciesFilters').get_by_role('button',name='Alle',exact=True).click()
+    assert p.locator('#speciesFilters [data-cat="alle"]').get_attribute('aria-pressed') == 'true'
     for sid,photo in photos.items():
      p.locator('#speciesSearch').fill(photo['nl'])
      row=p.locator(f'.species-row[data-id="{sid}"]');row.wait_for()
@@ -75,8 +74,7 @@ def main():
    p.reload(wait_until='domcontentloaded')
    p.locator('#birdspotSplashSkip').click()
    p.get_by_role('button',name='Soorten',exact=True).click()
-   p.locator('#speciesFiltersToggle').click()
-   p.locator('#speciesFilters').get_by_role('button',name='Alle',exact=True).click()
+   assert p.locator('#speciesFilters [data-cat="alle"]').get_attribute('aria-pressed') == 'true'
    sid='sp057'  # Fitis heeft zowel een lokale gidsfoto als een soortkaart.
    photo=photos[sid]
    p.locator('#speciesSearch').fill(photo['nl'])

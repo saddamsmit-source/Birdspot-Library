@@ -96,7 +96,7 @@ export function navigate(route, { force = false, history: addHistory = true, tar
   if (fab) fab.hidden = !ROUTES[route].fab;
 
   // Scroll naar top
-  main.scrollTo({ top: direct ? 0 : saved?.scrollTop || 0, behavior: 'instant' });
+  main.scrollTo({ top: direct || route === 'species' ? 0 : saved?.scrollTop || 0, behavior: 'instant' });
   if (target.section && route !== 'map') {
     Promise.resolve(result).then(() => {
       if (screen.isConnected) focusSection(screen, target.section);

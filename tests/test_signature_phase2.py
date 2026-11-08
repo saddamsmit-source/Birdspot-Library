@@ -74,6 +74,8 @@ def main():
             p.keyboard.press("Escape")
             p.locator(".signature-species-detail-overlay").wait_for(state="detached")
             assert row.evaluate("(node) => document.activeElement === node")
+            assert p.locator("#speciesOnlyFavorites").get_attribute("aria-pressed") == "false"
+            assert p.locator(".species-row").count() > 1
             p.locator('.nav-item[data-route="home"]').click()
             p.locator("#stat-photos").click()
             p.locator(".signature-media-v2").wait_for()
