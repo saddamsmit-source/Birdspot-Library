@@ -96,9 +96,9 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp106 | Patrijs | Ja | 2 | Apart beeld |
 | sp108 | Grote Karekiet | Ja | 2 | Apart beeld |
 | sp110 | Rietzanger | Ja | 2 | Apart beeld |
-| sp112 | Spreeuw | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp113 | Wielewaal | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp114 | Boerenzwaluw | Ja | 1 | Open |
+| sp112 | Spreeuw | Ja | 2 | Apart beeld |
+| sp113 | Wielewaal | Ja | 2 | Apart beeld |
+| sp114 | Boerenzwaluw | Ja | 2 | Apart beeld |
 | sp115 | Huiszwaluw | Ja | 1 | Open |
 | sp116 | Oeverzwaluw | — | 1 | Open |
 | sp117 | Geelgors | Ja | 1 | Open |
@@ -500,3 +500,15 @@ Basis is concept-PR #86, `59d492069a35936a8547086e7e3ede763d2e878e`. Patrijs, Gr
 CAP-BIRD-012/015. De drie foto’s staan lokaal en elk eenmaal vóór het verenkleed. Maker, bron, licentie en eventuele uitsnede of verkleining staan bij de foto. Een visuele steekproef uit de soortcategorie kan beelden met een onopvallende titel vinden. Controleer bij iNaturalist de identificatie van de waarneming en de licentie van de afzonderlijke foto. Er staan 46 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Spreeuw.
 
 VERIFIED · Mobiele Chromium op 390 px. Zes soortkaarten vanuit appbreed zoeken geopend op basis en kandidaat. De bestaande hoofd- en vluchtfoto’s uit ronde 25 laden. De nieuwe foto’s staan elk eenmaal vóór het verenkleed, tonen bron en licentie en openen met 2× zoom. Ook na offline herladen zijn de drie kaarten en de fotovergroting getest. Alle 313 gidsbeelden en 120 geluidsopnamen zijn na precache offline gedecodeerd. Gidsdekking, volgorde, uniciteit en SHA-256 zijn gecontroleerd. NOT TESTED · Fysiek toestel.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 27
+
+Basis is concept-PR #87, `9386ea84195a906bb0483489943c84d1a137cce0`. De drie bestaande hoofdfoto’s tonen een vogel op een tak of in een boom. Voor de afzonderlijke vluchtbeelden zijn de Commons-vluchtcategorieën, Flickr-bronnen en iNaturalist-kandidaten voor Wielewaal nagezocht. De gekozen foto's zijn op groter formaat en op kaartformaat beoordeeld. Vogelbescherming is gebruikt om herkenningskenmerken te toetsen.
+
+- Spreeuw · Ralf Hüsges · CC BY 2.0. Eén vogel stijgt vrij op tegen een blauwe lucht. De spitse vleugels, korte staart en lichte spikkels op de donkere borst zijn zichtbaar. De bestaande Commons-uitsnede door Юрий Д.К. is verkleind en omgezet naar WebP. [Bronfoto](https://commons.wikimedia.org/wiki/File:Steigflug_(54094247446)_v2.jpg).
+- Wielewaal · Ferran Pestaña · CC BY-SA 2.0. Het mannetje uit Barcelona is volledig los van de takken. Beide donkere vleugels en de gele buitenranden van de staart zijn zichtbaar. De foto is bij vergroting iets zacht. [Bronfoto](https://commons.wikimedia.org/wiki/File:Oriolus_oriolus_Barcelona_1.jpg) · [Oorspronkelijke publicatie](https://www.flickr.com/photos/57956171@N00/240360017).
+- Boerenzwaluw · Rudolphous · CC BY-SA 4.0. Op de foto van Schiermonnikoog zijn de roestrode keel, donkere borstband en lange buitenste staartpennen te zien. De nieuwe uitsnede houdt beide vleugelpunten en de hele staart in beeld. [Bronfoto](https://commons.wikimedia.org/wiki/File:Schiermonnikoog_-_Boerenzwaluw_(Hirundo_rustica)_v2.jpg).
+
+CAP-BIRD-012/015. De drie foto’s staan lokaal en elk eenmaal vóór het verenkleed. Maker, bron, licentie en bewerking zijn vermeld. Bij een soort die herkenbaar is aan verlengde staartveren helpt een foto waarop de volledige staartvork, borstband en keel tegelijk zichtbaar zijn. Er staan 43 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Huiszwaluw.
+
+VERIFIED · Mobiele Chromium op 390 px. Zes soortkaarten via appbreed zoeken geopend op basis en kandidaat. De bestaande hoofdfoto’s en de vluchtfoto’s uit ronde 26 laden. De nieuwe foto’s staan elk eenmaal vóór het verenkleed, tonen bron en licentie en openen met 2× zoom. Ook na offline herladen zijn de drie kaarten en fotovergroting getest. Alle 316 gidsbeelden en 120 geluidsopnamen zijn na precache offline gedecodeerd. Gidsdekking, volgorde, uniciteit en SHA-256 zijn gecontroleerd. NOT TESTED · Fysiek toestel.
