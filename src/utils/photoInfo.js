@@ -22,7 +22,7 @@ export function photoInfoMarkup(photo) {
   return `<details class="photo-info">
     <summary title="Foto-informatie" aria-label="Foto-informatie"><span aria-hidden="true">i</span></summary>
     <div class="photo-info__panel">
-      <strong>Foto-informatie</strong>
+      <span class="photo-info__title">Foto-informatie</span>
       ${photo.file ? `<span>${escHtml(photo.file)}</span>` : ''}
       <span>Maker: ${escHtml(photo.author)}</span>
       <span>Licentie: ${link(licenseHref(photo), photo.license)}</span>

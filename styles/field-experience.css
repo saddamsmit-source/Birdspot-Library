@@ -168,6 +168,7 @@
   overscroll-behavior: contain;
   pointer-events: auto;
 }
+.photo-info__title { font-weight: 750; }
 .photo-info__panel a { color: inherit; text-decoration: underline; }
 .featured-photo-info {
   position: absolute;
