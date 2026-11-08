@@ -6229,5 +6229,74 @@ export const GUIDE_POSES = Object.freeze({
       "height": 535,
       "image": "/assets/species/plumage/sp132-flight.webp"
     }
+  ],
+  "sp143": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "Let op de dunne, omhooggebogen snavel, zwarte vleugelpunten en lange poten die voorbij de staart steken.",
+      "file": "Kluut-1 (28031728713).jpg",
+      "nl": "Kluut",
+      "latin": "Recurvirostra avosetta",
+      "author": "Yves Hoebeke",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Kluut-1_(28031728713).jpg",
+      "showSourceLink": true,
+      "alt": "Kluut in vrije vlucht met omhooggebogen snavel, zwarte vleugelpunten en achterwaarts gestrekte poten.",
+      "modifications": "1280 px-bronweergave omgezet naar WebP met behoud van de fotograafvermelding in beeld",
+      "reviewed": "2026-11-08",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kluut",
+      "visualCheck": "Kluut in vrije vlucht met omhooggebogen snavel, zwarte vleugelpunten en achterwaarts gestrekte poten.",
+      "width": 1280,
+      "height": 853,
+      "image": "/assets/species/plumage/sp143-flight.webp"
+    }
+  ],
+  "sp144": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "De donkere oksel valt op aan de basis van de geheven vleugel. De opname toont ook de lichte onderzijde.",
+      "file": "Grey Plover - 1192 (11479350056).jpg",
+      "nl": "Zilverplevier",
+      "latin": "Pluvialis squatarola",
+      "author": "Donald Macauley",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Grey_Plover_-_1192_(11479350056).jpg",
+      "showSourceLink": true,
+      "alt": "Zilverplevier in vrije vlucht met lichte onderzijde en een duidelijke zwarte oksel onder de geheven vleugel.",
+      "modifications": "1280 px-bronweergave bijgesneden rond de vogel en omgezet naar WebP",
+      "reviewed": "2026-11-08",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zilverplevier",
+      "visualCheck": "Zilverplevier in vrije vlucht met lichte onderzijde en een duidelijke zwarte oksel onder de geheven vleugel.",
+      "width": 855,
+      "height": 885,
+      "image": "/assets/species/plumage/sp144-flight.webp"
+    }
+  ],
+  "sp145": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "De gebogen vliegstand laat de goudgele spikkels op rug en bovenvleugel zien, met een lichte streep langs de flank.",
+      "file": "European golden plover (Pluvialis apricaria) in flight.jpg",
+      "nl": "Goudplevier",
+      "latin": "Pluvialis apricaria",
+      "author": "Hobbyfotowiki",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:European_golden_plover_(Pluvialis_apricaria)_in_flight.jpg",
+      "showSourceLink": true,
+      "alt": "Goudplevier in vrije vlucht boven water met goudgele spikkels op de rug en bovenvleugel.",
+      "modifications": "Verkleind en omgezet naar WebP",
+      "reviewed": "2026-11-08",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/goudplevier",
+      "visualCheck": "Goudplevier in vrije vlucht boven water met goudgele spikkels op de rug en bovenvleugel.",
+      "width": 1400,
+      "height": 933,
+      "image": "/assets/species/plumage/sp145-flight.webp"
+    }
   ]
 });
