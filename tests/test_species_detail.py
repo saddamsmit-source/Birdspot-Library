@@ -386,8 +386,9 @@ def main():
             print("H4-01 OK — Fitis/Tjiftjaf, foto vergroten, navigatie en afspelen van zang en roep")
 
             open_species("Grote Bonte Specht", "sp016")
-            juvenile = p.locator('#sdPanel-herkenning .sd-compare-card').first
-            assert "Juveniel" in juvenile.inner_text()
+            # De nieuwere vluchtvergelijking staat vóór de vergelijkingen per kleed.
+            juvenile = p.locator('#sdPanel-herkenning .sd-compare:not(.sd-flight-compare) .sd-compare-card').filter(has_text='Juveniel')
+            expect(juvenile.first).to_be_visible()
             assert_photo_once("/assets/species/plumage/sp016-juv.webp")
             close_detail()
             open_species("Kokmeeuw", "sp097")
@@ -460,7 +461,7 @@ def main():
             print("H4-04 OK — jonge Sperwer/Havik, juiste borsttekening en lokale roepen")
 
             open_species("Buizerd", "sp005")
-            buzzard_comparisons = p.locator('.sd-compare')
+            buzzard_comparisons = p.locator('.sd-compare:not(.sd-flight-compare)')
             assert buzzard_comparisons.count() == 4
             adult = buzzard_comparisons.filter(
                 has=p.get_by_role("heading", name="Buizerd en Ruigpootbuizerd · volwassen in vlucht")
@@ -483,7 +484,7 @@ def main():
             print("H4-05 OK — volwassen en jonge Buizerd, Ruigpootbuizerd en Wespendief met bronfoto's")
 
             open_species("Kleine Zilverreiger", "sp082")
-            herons = p.locator('.sd-compare')
+            herons = p.locator('.sd-compare:not(.sd-flight-compare)')
             assert herons.count() == 4
             breeding = herons.filter(
                 has=p.get_by_role("heading", name="Kleine en Grote Zilverreiger · broedkleed")
@@ -511,7 +512,7 @@ def main():
             print("H4-06 OK — witte reigers per kleed, bronfoto's, roepen en broedmaanden")
 
             open_species("Wintertaling", "sp091")
-            teal_comparisons = p.locator('.sd-compare')
+            teal_comparisons = p.locator('.sd-compare:not(.sd-flight-compare)')
             assert teal_comparisons.count() == 4
             for label, plumage in [('mannetjes in prachtkleed', 'adult_m'), ('volwassen vrouwtjes', 'adult_f'),
                                    ('jonge vogels', 'juv'), ('mannetjes in eclipskleed', 'eclipse')]:
@@ -626,7 +627,7 @@ def main():
                 alternate = "breeding" if sid == "sp102" else "winter"
                 assert_photo_once(f"/assets/species/plumage/{sid}-{alternate}.webp")
                 assert_photo_once(f"/assets/species/plumage/{sid}-juv.webp")
-                expect(p.locator(".sd-compare")).to_have_count(comparison_count)
+                expect(p.locator(".sd-compare:not(.sd-flight-compare)")).to_have_count(comparison_count)
                 for comparison in p.locator(".sd-compare").all():
                     for photo in comparison.locator("img").all():
                         photo.scroll_into_view_if_needed()
