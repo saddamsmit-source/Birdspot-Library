@@ -102,19 +102,19 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp115 | Huiszwaluw | Ja | 2 | Apart beeld |
 | sp116 | Oeverzwaluw | — | 2 | Apart beeld |
 | sp117 | Geelgors | Ja | 2 | Apart beeld |
-| sp118 | Rietgors | Ja | 1 | Open |
-| sp126 | Knobbelzwaan | Ja | 2 | Open |
-| sp128 | Bergeend | Ja | 2 | Open |
-| sp129 | Krakeend | Ja | 3 | Open |
-| sp130 | Smient | Ja | 2 | Open |
-| sp132 | Tafeleend | Ja | 2 | Open |
+| sp118 | Rietgors | Ja | 2 | Apart beeld |
+| sp126 | Knobbelzwaan | Ja | 3 | Apart beeld |
+| sp128 | Bergeend | Ja | 3 | Apart beeld |
+| sp129 | Krakeend | Ja | 4 | Apart beeld |
+| sp130 | Smient | Ja | 3 | Apart beeld |
+| sp132 | Tafeleend | Ja | 3 | Apart beeld |
 | sp141 | Gierzwaluw | — | 1 | Apart beeld |
-| sp143 | Kluut | Ja | 1 | Open |
-| sp144 | Zilverplevier | Ja | 3 | Open |
-| sp145 | Goudplevier | Ja | 3 | Open |
-| sp146 | Bontbekplevier | Ja | 3 | Open |
-| sp147 | Kleine Plevier | Ja | 3 | Open |
-| sp150 | Steenloper | Ja | 1 | Open |
+| sp143 | Kluut | Ja | 2 | Apart beeld |
+| sp144 | Zilverplevier | Ja | 4 | Apart beeld |
+| sp145 | Goudplevier | Ja | 4 | Apart beeld |
+| sp146 | Bontbekplevier | Ja | 4 | Apart beeld |
+| sp147 | Kleine Plevier | Ja | 4 | Apart beeld |
+| sp150 | Steenloper | Ja | 2 | Apart beeld |
 | sp152 | Drieteenstrandloper | Ja | 1 | Open |
 | sp155 | Oeverloper | Ja | 3 | Open |
 | sp156 | Witgat | Ja | 3 | Open |
@@ -524,3 +524,51 @@ Basis is concept-PR #88, `463f71ff2ddcc2a74e85f35ba81bc9672e3762f2`. Huiszwaluw 
 CAP-BIRD-012/015. De drie nieuwe beelden staan lokaal en elk eenmaal onder ‘In vlucht’, met maker, bron, licentie en bewerking. Bij vergelijkbare zwaluwen zijn een zichtbare stuit of borstband belangrijker dan een frontaal silhouet. Een nestwandbeeld en een afzonderlijk vluchtbeeld kunnen op dezelfde kaart verschillende herkenningsvragen beantwoorden. Er staan 40 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Rietgors.
 
 VERIFIED · Mobiele Chromium op 390 px. Zes soortkaarten vanuit appbreed zoeken geopend op basis en kandidaat. De bestaande hoofdfoto’s en het beeld bij de nestwand laden. De drie nieuwe foto’s staan elk eenmaal vóór de verdere herkenningsbeelden, tonen bron en licentie en openen met 2× zoom. Ook na offline herladen zijn de drie kaarten en fotovergroting getest. Alle 319 gidsbeelden en 120 geluidsopnamen zijn na precache offline gedecodeerd. Gidsdekking, volgorde, uniciteit en SHA-256 zijn gecontroleerd. NOT TESTED · Fysiek toestel.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 29
+
+Basis is concept-PR #89, `fb4c0063c90a50430242f0737bc6c99fcfe313c6`. Rietgors, Knobbelzwaan en Bergeend hadden elk een hoofdfoto. Voor de Rietgors zijn meertalige zoekopdrachten, de Commons-soortcategorie en miniaturen van research-grade iNaturalist-waarnemingen met een open fotolicentie nagezocht. Voor Knobbelzwaan en Bergeend zijn meerdere opnamen van Commons op herkenbaarheid vergeleken. Vogelbescherming is gebruikt om de kenmerken te toetsen.
+
+- Rietgors · Codrin Bucur · CC BY 4.0. De uitsnede toont een vogel in vrije vlucht met lichte onderzijde en lange donkere staart. De vleugels hebben bewegingsonscherpte en de witte buitenste staartveren zijn in deze opname niet duidelijk te onderscheiden. iNaturalist gebruikt het synoniem *Schoeniclus schoeniclus* voor de soort die in de gids staat als *Emberiza schoeniclus*. [Bronfoto](https://www.inaturalist.org/photos/241756520) · [Waarneming](https://www.inaturalist.org/observations/141157898).
+- Knobbelzwaan · Pjt56 · CC BY-SA 3.0. In de opname uit Venetië zijn de gestrekte hals, brede witte vleugels en oranjerode snavel met zwarte basis zichtbaar. [Bronfoto](https://commons.wikimedia.org/wiki/File:Cygnus_olor-pjt1.jpg).
+- Bergeend · Marton Berntsen · CC BY-SA 4.0. De foto toont een man in vrije vlucht met een rode snavelknobbel, donkere kop en brede kastanjebruine borstband. [Bronfoto](https://commons.wikimedia.org/wiki/File:Gravand_-_Common_Shelduck_-_Tadorna_tadorna.JPG).
+
+CAP-BIRD-012/015. De drie foto’s staan lokaal en elk eenmaal onder ‘In vlucht’, met maker, bron, licentie en bewerking. Controleer bij afwijkende wetenschappelijke namen of bron en gids dezelfde soort bedoelen. Noteer bij een zeldzame bruikbare opname welke herkenningsdetails door beweging of kijkhoek minder duidelijk zijn. Er staan nog 37 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Krakeend.
+
+VERIFIED · Mobiele Chromium op 390 px. Zes soortkaarten via appbreed zoeken geopend op basis en kandidaat. De bestaande gidsbeelden en de vluchtfoto’s uit ronde 28 laden. De drie nieuwe foto’s staan elk eenmaal vóór het verenkleed, tonen bron en licentie en openen met 2× zoom. Ook na offline herladen zijn de drie kaarten en fotovergroting getest. Alle 322 gidsbeelden en 120 geluidsopnamen zijn na precache offline gedecodeerd. Gidsdekking, volgorde, uniciteit en SHA-256 zijn gecontroleerd. NOT TESTED · Fysiek toestel.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 30
+
+Basis is concept-PR #91, `7b7bfb64273e90a97a1a9dca01d695d37791dfc5`. Krakeend, Smient en Tafeleend hadden elk een hoofdfoto en ten minste één afzonderlijke kleedfoto. In de Commons-vluchtcategorieën zijn groepsbeelden, opnamen bij de afzet en zij- en bovenaanzichten vergeleken. De gekozen foto’s tonen één mannetje volledig los van het water. De maker, fotolicentie en kenmerken zijn gecontroleerd aan de hand van de fotopagina’s en de vogelgids van Vogelbescherming.
+
+- Krakeend · Luiz Lapa · CC BY 2.0. De uitsnede van het beeld uit Portugal laat de kleine witte spiegel, het kastanjebruine vleugelveld en het zwarte achterlijf zien. [Bronfoto](https://commons.wikimedia.org/wiki/File:Frisada,_macho,_Gadwall,_male_(50374265703).jpg) · [Oorspronkelijke publicatie](https://www.flickr.com/photos/181980422@N05/50374265703/).
+- Smient · Imran Shah · CC BY-SA 2.0. Op de zijaanblik uit Pakistan zijn de kastanjebruine kop, het grote witte vleugelveld en de groene spiegel zichtbaar. De vermelding van de fotograaf in het beeld is behouden. [Bronfoto](https://commons.wikimedia.org/wiki/File:Eurasian_Wigeon_(Anas_penelope)_(51171016336).jpg) · [Oorspronkelijke publicatie](https://www.flickr.com/photos/gilgit2/51171016336/).
+- Tafeleend · Charles J. Sharp · CC BY-SA 4.0. De uitsnede van de foto uit Denemarken toont de roodbruine kop, donkere borst en lichtgrijze vleugelbaan. De bestandsnaam van de bron bevat een typefout. De soortbeschrijving op de bronpagina en de gids gebruiken *Aythya ferina*. [Bronfoto](https://commons.wikimedia.org/wiki/File:Common_pochard_(Aythaya_ferina)_in_flight_Denmark.jpg).
+
+CAP-BIRD-012/015. De drie beelden staan lokaal en elk eenmaal onder ‘In vlucht’, met maker, bron, licentie en bewerking. Vergelijk bij eenden de kleur en omvang van het zichtbare vleugelveld. Kies een opname waarin dat veld én de kop en lichaamsbouw leesbaar blijven. Er staan nog 34 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Kluut.
+
+VERIFIED · Mobiele Chromium op 390 px. Zes soortkaarten via appbreed zoeken geopend op basis en kandidaat. De bestaande gidsbeelden en de vluchtfoto’s uit ronde 29 laden. De drie nieuwe foto’s staan elk eenmaal vóór het verenkleed, tonen bron en licentie en openen met 2× zoom. Ook na offline herladen zijn de drie kaarten en fotovergroting getest. Alle 325 gidsbeelden en 120 geluidsopnamen zijn na precache offline gedecodeerd. Gidsdekking, volgorde, uniciteit en SHA-256 zijn gecontroleerd. NOT TESTED · Fysiek toestel.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 31
+
+Basis is concept-PR #92, `4cb2ec7eccd6bb51c9ffb82f327314daf48df22b`. Kluut, Zilverplevier en Goudplevier hadden ieder een hoofdfoto. De Commons-vluchtcategorieën en de algemene categorie van Goudplevier zijn visueel nagezocht. Per soort zijn meerdere opnamen vergeleken op vrije vlucht, duidelijkheid bij kaartformaat en de rechten per bestand. De soortgids van Vogelbescherming ondersteunt de herkenningscontrole.
+
+- Kluut · Yves Hoebeke · CC BY-SA 2.0. De opname toont de omhooggebogen snavel, zwarte vleugelpunten en lange uitstekende poten. De fotograafvermelding in beeld is behouden. [Bronfoto](https://commons.wikimedia.org/wiki/File:Kluut-1_(28031728713).jpg).
+- Zilverplevier · Donald Macauley · CC BY-SA 2.0. De uitsnede toont de zwarte oksel onder de geheven vleugel en houdt beide vleugelpunten in beeld. [Bronfoto](https://commons.wikimedia.org/wiki/File:Grey_Plover_-_1192_(11479350056).jpg).
+- Goudplevier · Hobbyfotowiki · CC0. De bovenaanblik uit IJsland toont de goudgele spikkels op rug en bovenvleugel. De onderzijde van de vleugel valt grotendeels buiten deze kijkhoek. [Bronfoto](https://commons.wikimedia.org/wiki/File:European_golden_plover_(Pluvialis_apricaria)_in_flight.jpg).
+
+CAP-BIRD-012/015. De drie beelden staan lokaal en elk eenmaal onder ‘In vlucht’, met maker, bron, licentie en bewerking. Een zijaanblik van onderen toont de oksel bij Zilverplevier, terwijl een bovenaanblik het goudkleurige patroon bij Goudplevier toont. Leg vast welke herkenningsinformatie een foto door haar kijkhoek wel kan tonen. Er staan nog 31 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Bontbekplevier.
+
+VERIFIED · Mobiele Chromium op 390 px. Zes soortkaarten via appbreed zoeken geopend op basis en kandidaat. De bestaande gidsbeelden en vluchtfoto’s uit ronde 30 laden. De drie nieuwe beelden staan elk eenmaal vóór het verenkleed, tonen bron en licentie en openen met 2× zoom. Ook na offline herladen zijn de drie kaarten en fotovergroting getest. Alle 328 gidsbeelden en 120 geluidsopnamen zijn na precache offline gedecodeerd. Gidsdekking, volgorde, uniciteit en SHA-256 zijn gecontroleerd. NOT TESTED · Fysiek toestel.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 32
+
+Basis is concept-PR #93, `0636510ef2436db8d7b5198311393450d7dce6d9`. Bontbekplevier, Kleine Plevier en Steenloper hadden ieder een hoofdfoto. De drie vluchtcategorieën op Wikimedia Commons zijn visueel nagezocht. Per soort zijn opnamen vergeleken op vrije vlucht, herkenbaarheid op kaartformaat en fotorechten. De soortgids van Vogelbescherming ondersteunt de herkenningscontrole.
+
+- Bontbekplevier · Arnstein Rønning · CC BY-SA 4.0. De opname uit Noorwegen toont de witte vleugelstreep, oranje snavelbasis en donkere borstband. De vleugelpunten blijven in beeld. [Bronfoto](https://commons.wikimedia.org/wiki/File:Charadrius_hiaticula_Lvk.jpg).
+- Kleine Plevier · Prasan Shrestha · CC BY-SA 4.0. De uitsnede uit de opname uit Nepal toont de gele oogring en beide bovenvleugels zonder brede witte vleugelstreep. [Bronfoto](https://commons.wikimedia.org/wiki/File:The_Little_ringed_plover_in_flight.jpg).
+- Steenloper · Charles J. Sharp · CC BY-SA 4.0. De uitsnede van de foto uit Madagaskar toont een vogel in winterkleed. De witte vleugelstreep en korte donkere snavel zijn zichtbaar. [Bronfoto](https://commons.wikimedia.org/wiki/File:Ruddy_turnstone_(Arenaria_interpres)_in_flight_non-breeding.jpg).
+
+CAP-BIRD-012/015. De beelden staan lokaal en elk eenmaal onder ‘In vlucht’, met maker, bron, licentie en bewerking. Zoek bij sterk gelijkende soorten naar een vergelijkbare kijkhoek. Bij deze plevieren zijn bovenvleugel en kop tegelijkertijd zichtbaar, zodat vleugelstreep, snavel en oogring kunnen worden vergeleken. Er staan nog 28 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Drieteenstrandloper.
+
+VERIFIED · Mobiele Chromium op 390 px. Zes soortkaarten via appbreed zoeken geopend op basis en kandidaat. De drie nieuwe beelden staan elk eenmaal vóór het verenkleed, met bron, licentie en 2× zoom. Ook na offline herladen zijn de drie kaarten en fotovergroting getest. Alle 331 gidsbeelden en 120 veldopnamen zijn na precache offline gedecodeerd. Gidsdekking, volgorde, uniciteit en SHA-256 zijn gecontroleerd. NOT TESTED · Fysiek toestel.
