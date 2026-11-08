@@ -9,10 +9,13 @@
  * - Schermen lazy-laden
  */
 
+import { installNavigation, recordRoute } from './services/navigation.js';
+import './services/gestures.js';
+
 import { renderHome }       from './features/home/view.js';
 import { renderSpecies }    from './features/species/view.js';
 import { renderSightings }  from './features/sightings/view.js';
-import { renderMap }        from './features/map/view.js';
+import { renderMap, getMapView }        from './features/map/view.js';
 import { renderProfile }    from './features/profile/view.js';
 import { renderMedia }      from './features/media/view.js';
 import { renderJournal }    from './features/journal/view.js';
@@ -34,12 +37,27 @@ const ROUTES = {
 };
 
 let currentRoute  = null;
+let currentEntry;
+const routeViews = new Map();
 let currentCleanup = null; // cleanup-functie van het huidige scherm (bijv. renderHome)
 
 // ── Navigeer naar een route (force=true herlaadt ook het huidige scherm) ──────
-export function navigate(route, { force = false } = {}) {
+export function navigate(route, { force = false, history: addHistory = true, target = {} } = {}) {
   if (!ROUTES[route]) return;
   if (route === currentRoute && !force) return;
+  const main = document.getElementById('main-view');
+  const previousRoute = currentRoute;
+  if (currentEntry) {
+    routeViews.set(currentEntry, {
+      scrollTop: main.scrollTop,
+      mapView: previousRoute === 'map' ? getMapView(main) : undefined,
+    });
+  }
+  if (addHistory && previousRoute && route !== previousRoute) recordRoute(route);
+  currentEntry = history.state?.birdspotEntry;
+  const saved = routeViews.get(currentEntry);
+  const direct = Object.keys(target).length > 0;
+  if (saved?.mapView && route === 'map' && !direct) target = { mapView: saved.mapView };
   currentRoute = route;
 
   // Roep cleanup van het vorige scherm aan vóór we de DOM wissen.
@@ -51,13 +69,18 @@ export function navigate(route, { force = false } = {}) {
   }
 
   // Scherm wisselen
-  const main = document.getElementById('main-view');
   main.innerHTML = '';
   const screen = document.createElement('div');
   screen.className = 'screen active';
   screen.id = `screen-${route}`;
   main.appendChild(screen);
-  const result = ROUTES[route].render(screen);
+  let result;
+  try { result = ROUTES[route].render(screen, { ...target, onSearchSelect: selectSearchResult }); }
+  catch (error) {
+    console.error('[Birdspot] Scherm openen mislukt:', route, error);
+    screen.innerHTML = '<section class="route-recovery"><h1>Dit scherm kon niet worden geopend</h1><p>Je gegevens zijn niet verwijderd. Probeer het scherm opnieuw te openen.</p><button type="button">Opnieuw proberen</button></section>';
+    screen.querySelector('button').addEventListener('click',()=>navigate(route,{force:true,history:false}));
+  }
   // Sla cleanup-functie op als de render er één retourneert (bijv. renderHome)
   if (typeof result === 'function') currentCleanup = result;
 
@@ -73,7 +96,28 @@ export function navigate(route, { force = false } = {}) {
   if (fab) fab.hidden = !ROUTES[route].fab;
 
   // Scroll naar top
-  main.scrollTo({ top: 0 });
+  main.scrollTo({ top: direct ? 0 : saved?.scrollTop || 0, behavior: 'instant' });
+  if (target.section && route !== 'map') {
+    Promise.resolve(result).then(() => {
+      if (screen.isConnected) focusSection(screen, target.section);
+    }).catch(() => showToast('Dit onderdeel kon niet worden geopend.'));
+  }
+}
+
+function focusSection(screen, id) {
+  const section = screen.querySelector('#' + id);
+  if (!section) return;
+  if (!section.matches('button, input, a[href], select')) section.tabIndex = -1;
+  section.scrollIntoView({ block: 'center' });
+  section.focus({ preventScroll: true });
+}
+
+function selectSearchResult({ route, ...target }) {
+  if (route === 'add') {
+    document.getElementById('fab').click();
+    return;
+  }
+  navigate(route, { force: Object.keys(target).some(key => target[key] !== undefined), target });
 }
 
 // ── Navigatie-klikken ─────────────────────────────────────
@@ -101,7 +145,7 @@ document.getElementById('fab').addEventListener('click', () => {
 // ── Toast utility ─────────────────────────────────────────
 let toastTimer = null;
 export function showToast(msg, duration = 2800) {
-  let toast = document.querySelector('.toast');
+  let toast = document.querySelector('.toast:not(.app-update)');
   if (!toast) {
     toast = document.createElement('div');
     toast.className = 'toast';
@@ -116,7 +160,8 @@ export function showToast(msg, duration = 2800) {
 }
 
 // ── Start ─────────────────────────────────────────────────
-navigate('home');
+const initialRoute = installNavigation({navigate,current:()=>currentRoute,currentEntry:()=>currentEntry,toast:showToast});
+navigate(ROUTES[initialRoute] ? initialRoute : 'home',{history:false});
 // Splash waits until the application home route is actually initialized.
 window.dispatchEvent(new Event('birdspot:ready'));
 

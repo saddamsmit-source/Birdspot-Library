@@ -5,7 +5,7 @@
  * Acties: Bewerken (opent editSheet) · Verwijder (met confirmatie).
  *
  * @param {object}   sighting
- * @param {{ onDeleted?: function, onUpdated?: function }} options
+ * @param {{ onDeleted?: function, onUpdated?: function, isActive?: function }} options
  */
 
 import { deleteSighting }                   from '../../data/sightings.js';
@@ -21,7 +21,7 @@ const CERTAINTY_NL = {
   possible: 'Mogelijk',
 };
 
-export async function openDetailSheet(sighting, { onDeleted, onUpdated } = {}) {
+export async function openDetailSheet(sighting, { onDeleted, onUpdated, isActive = () => true } = {}) {
   // Laad media uit IndexedDB
   const photos = await getPhotosBySighting(sighting.id).catch(() => []);
   // Fallback for legacy photos linked through sighting.photoIds only.
@@ -32,6 +32,7 @@ export async function openDetailSheet(sighting, { onDeleted, onUpdated } = {}) {
     if(photo){photos.push(photo);ids.add(id);}
   }
 
+  if (!isActive()) return;
   const ov = document.createElement('div');
   ov.className = 'sheet-overlay';
   ov.id = 'detailSightingSheet';
