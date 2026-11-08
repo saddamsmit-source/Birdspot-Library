@@ -151,13 +151,16 @@ function comparisonsPanel(id, comparisons, takePhoto) {
       const species = speciesById.get(bird.id);
       const name = species.nameNL;
       const adult = bird.plumage === 'adult_m' && !species.plumage?.adult_f;
-      const kind = flight ? 'In vlucht' : adult ? 'Volwassen' : PLUMAGE.find(([key]) => key === bird.plumage)?.[2];
       const photo = bird.textOnly ? null : flight
         ? flightPhoto(bird.id)
         : plumagePhoto(bird.id, bird.plumage);
+      const kind = flight ? (photo?.sex ? photo.label : 'In vlucht')
+        : adult ? 'Volwassen' : PLUMAGE.find(([key]) => key === bird.plumage)?.[2];
+      const showPhoto = takePhoto(photo);
       return `<div class="sd-compare-card">
         <strong>${esc(name)}</strong>${kind ? `<span class="sd-badge">${esc(kind)}</span>` : ''}
-        ${takePhoto(photo) ? fieldPhoto(photo) : ''}
+        ${showPhoto ? fieldPhoto(photo) : ''}
+        ${showPhoto && flight && photo.sex ? `<p>${esc(photo.note)}</p>` : ''}
         <p>${esc(bird.marks)}</p>
         <a class="sd-media-credit" href="${esc(comparisonSource(bird))}" target="_blank" rel="noopener noreferrer">Vogelbescherming</a>
         ${bird.id === id ? '' : `<button type="button" class="sd-compare-open" data-compare-species="${esc(bird.id)}">Open soortkaart<span class="visually-hidden"> ${esc(name)}</span></button>`}
@@ -221,7 +224,9 @@ export function recognitionPanel(s, life = null) {
   } else {
     const photo = flightPhoto(s.id);
     if (takePhoto(photo)) {
-      out.push('<section aria-label="In vlucht"><h3 class="sd-h">In vlucht</h3>' + fieldPhoto(photo) + '</section>');
+      const title = photo.sex ? photo.label : 'In vlucht';
+      const note = photo.sex ? `<p>${esc(photo.note)}</p>` : '';
+      out.push(`<section aria-label="In vlucht"><h3 class="sd-h">${esc(title)}</h3>${fieldPhoto(photo)}${note}</section>`);
     }
   }
   const p = s.plumage;

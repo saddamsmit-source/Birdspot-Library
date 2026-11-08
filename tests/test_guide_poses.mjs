@@ -4,6 +4,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { SPECIES } from '../src/data/species.js';
 import { GUIDE_AUDIO, GUIDE_PLUMAGE, GUIDE_POSES } from '../src/features/species/guideMedia.js';
 import { GUIDE_PHOTOS } from '../src/features/species/guidePhotos.js';
+import { escHtml } from '../src/utils/html.js';
 import { recognitionPanel, wherePanel } from '../src/features/species/detailSections.js';
 
 const registry = JSON.parse(readFileSync(new URL('../assets/species/field-guide-media.json', import.meta.url)));
@@ -13,13 +14,23 @@ for (const [id, poses] of Object.entries(GUIDE_POSES)) {
   const html = recognitionPanel(species.get(id));
   const ownMain = GUIDE_PHOTOS[id]?.image;
   const flightCount = poses.filter(pose => pose.flight).length;
-  assert.ok(poses.length >= 1 && poses.length - flightCount <= 2, `Expected at most two recognition poses on ${id}`);
-  assert.ok(flightCount <= 1, `Expected at most one dedicated flight photo on ${id}`);
+  assert.ok(poses.length >= 1 && poses.filter(pose => !pose.flight && !pose.sex).length <= 2,
+    `Expected at most two general recognition poses on ${id}`);
+  const sexAndPose = poses.filter(pose => pose.sex).map(pose => `${pose.sex}:${Boolean(pose.flight)}`);
+  assert.equal(sexAndPose.length, new Set(sexAndPose).size, `Repeated sex and posture on ${id}`);
+  const flightPhotos = poses.filter(pose => pose.flight);
+  assert.ok(flightCount <= 2 && flightPhotos.filter(pose => !pose.sex).length <= 1,
+    `An extra flight photo must have a sex label on ${id}`);
   for (const pose of poses) {
     assert.ok(existsSync(new URL('..' + pose.image, import.meta.url)), pose.image);
     const buttons = [...html.matchAll(/data-guide-image="([^"]+)"/g)].filter(match => match[1] === pose.image);
     assert.equal(buttons.length, pose.image === ownMain ? 0 : 1, pose.image);
     if (pose.image !== ownMain) assert.ok(html.includes(pose.licenseUrl), 'License must remain available');
+    if (/-(male|female)-(rest|flight)\.webp$/.test(pose.image)) {
+      assert.match(pose.label, /^(Mannetje|Vrouwtje) in (rust|vlucht)$/);
+      assert.equal(pose.flight, pose.label.endsWith('vlucht'));
+      assert.ok(html.includes(pose.label) && html.includes(escHtml(pose.source)), pose.image);
+    }
     if (pose.flight && pose.image !== ownMain) {
       const flightSection = html.indexOf('aria-label="Vluchtvergelijking"') >= 0
         ? html.indexOf('aria-label="Vluchtvergelijking"') : html.indexOf('aria-label="In vlucht"');
