@@ -6298,5 +6298,74 @@ export const GUIDE_POSES = Object.freeze({
       "height": 933,
       "image": "/assets/species/plumage/sp145-flight.webp"
     }
+  ],
+  "sp146": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "Let op de witte vleugelstreep, oranje snavelbasis en donkere borstband.",
+      "file": "Charadrius hiaticula Lvk.jpg",
+      "nl": "Bontbekplevier",
+      "latin": "Charadrius hiaticula",
+      "author": "Arnstein Rønning",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Charadrius_hiaticula_Lvk.jpg",
+      "showSourceLink": true,
+      "alt": "Bontbekplevier in vrije vlucht boven water, met gespreide vleugels, witte vleugelstrepen en een oranje snavelbasis.",
+      "modifications": "Zonder uitsnede omgezet naar WebP",
+      "reviewed": "2026-11-08",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bontbekplevier",
+      "visualCheck": "Bontbekplevier in vrije vlucht boven water, met gespreide vleugels, witte vleugelstrepen en een oranje snavelbasis.",
+      "width": 872,
+      "height": 1077,
+      "image": "/assets/species/plumage/sp146-flight.webp"
+    }
+  ],
+  "sp147": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "De gele oogring valt op. De bovenvleugel heeft geen brede witte streep zoals die van de Bontbekplevier.",
+      "file": "The Little ringed plover in flight.jpg",
+      "nl": "Kleine Plevier",
+      "latin": "Charadrius dubius",
+      "author": "Prasan Shrestha",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:The_Little_ringed_plover_in_flight.jpg",
+      "showSourceLink": true,
+      "alt": "Kleine Plevier in vrije vlucht met beide bovenvleugels zichtbaar en een gele oogring.",
+      "modifications": "Bijgesneden, verkleind en omgezet naar WebP",
+      "reviewed": "2026-11-08",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kleine-plevier",
+      "visualCheck": "Kleine Plevier in vrije vlucht met beide bovenvleugels zichtbaar en een gele oogring.",
+      "width": 1188,
+      "height": 1400,
+      "image": "/assets/species/plumage/sp147-flight.webp"
+    }
+  ],
+  "sp150": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "De Steenloper in winterkleed toont een opvallend witte vleugelstreep op de geheven vleugel en een korte donkere snavel.",
+      "file": "Ruddy turnstone (Arenaria interpres) in flight non-breeding.jpg",
+      "nl": "Steenloper",
+      "latin": "Arenaria interpres",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Ruddy_turnstone_(Arenaria_interpres)_in_flight_non-breeding.jpg",
+      "showSourceLink": true,
+      "alt": "Steenloper in vrije vlucht boven golven, met een witte vleugelstreep op de geheven vleugel en een korte donkere snavel.",
+      "modifications": "1280 px-bronweergave bijgesneden en omgezet naar WebP",
+      "reviewed": "2026-11-08",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/steenloper",
+      "visualCheck": "Steenloper in vrije vlucht boven golven, met een witte vleugelstreep op de geheven vleugel en een korte donkere snavel.",
+      "width": 730,
+      "height": 685,
+      "image": "/assets/species/plumage/sp150-flight.webp"
+    }
   ]
 });
