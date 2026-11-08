@@ -90,9 +90,9 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp099 | Kievit | Ja | 2 | Apart beeld |
 | sp100 | Wulp | Ja | 2 | Apart beeld |
 | sp101 | Grutto | Ja | 2 | Apart beeld |
-| sp102 | Tureluur | Ja | 3 | Gecontroleerd · geen vluchtbeeld |
-| sp104 | Aalscholver | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
-| sp105 | Fazant | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp102 | Tureluur | Ja | 4 | Apart beeld |
+| sp104 | Aalscholver | Ja | 3 | Apart beeld |
+| sp105 | Fazant | Ja | 2 | Apart beeld |
 | sp106 | Patrijs | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp108 | Grote Karekiet | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp110 | Rietzanger | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
@@ -476,3 +476,15 @@ Basis is concept-PR #84, `7d52f5996498a507b77ab3c95d6f0bd427ccb8c4`. De soortkaa
 CAP-BIRD-012/015. De drie lokale beelden staan elk eenmaal vóór het verenkleed. Maker, bron, licentie en omzetting naar WebP staan bij de foto. Bij Grutto is de uitsnede vermeld. Vergelijk voor soorten met een kenmerkende vleugelstreep boven- en onderaanzichten op mobiel formaat en controleer bij een bestaande uitsnede ook het oorspronkelijke bestand en de bijbehorende licentie. Er staan nog 52 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Tureluur.
 
 VERIFIED · Mobiele Chromium-test op 390 px. Zes soortkaarten vanuit appbreed zoeken geopend op basis en kandidaat. De bestaande hoofd- en vluchtfoto’s uit ronde 23 laden. De drie nieuwe foto’s staan elk eenmaal vóór het verenkleed, tonen hun bron en licentie en openen met 2× zoom. Ook na offline herladen zijn de drie kaarten en fotovergroting getest. Alle 307 gidsbeelden en 120 geluidsopnamen zijn na precache offline gedecodeerd. Gidsdekking, volgorde, uniciteit en SHA-256 zijn gecontroleerd. NOT TESTED · Fysiek toestel.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 25
+
+Basis is concept-PR #85, `748fc60a74460916f5c28446dea8737eb1f33ad4`. Tureluur, Aalscholver en Fazant hadden elk een hoofdfoto. Vluchtbeelden op Wikimedia Commons, Flickr-verwijzingen en de beeldcatalogus van U.S. Fish and Wildlife Service zijn gericht nagezocht. Vogelbescherming is gebruikt om de herkenningskenmerken te toetsen.
+
+- Tureluur · Charles J. Sharp · CC BY-SA 4.0. De opname uit Mýrar toont de IJslandse ondersoort in vrije vlucht. De witte vleugelachterrand en uitgestrekte oranjerode poten zijn goed zichtbaar. De ondersoort staat bij de foto vermeld. [Bronfoto](https://commons.wikimedia.org/wiki/File:Common_redshank_(Tringa_totanus_robusta)_in_flight_Myrar_2.jpg).
+- Aalscholver · Charles J. Sharp · CC BY-SA 3.0. De Aalscholver vliegt vrij boven het Farmoor Reservoir. De gestrekte hals, lange staart en gele snavelbasis zijn zichtbaar. De scherpe zijaanblik toont meer details dan de gecontroleerde silhouetfoto’s en de opname met afzet uit het water. [Bronfoto](https://commons.wikimedia.org/wiki/File:Great_cormorant_(Phalacrocorax_carbo)_in_flight.jpg).
+- Fazant · Tom Koerner / U.S. Fish and Wildlife Service · publiek domein. Het mannetje vliegt los boven de begroeiing in South Dakota. De gebandeerde staart, rode ooghuid en witte halsring zijn zichtbaar. [Bronfoto](https://commons.wikimedia.org/wiki/File:Rink-necked_pheasant_in_flight_(6922582382).jpg).
+
+CAP-BIRD-012/015. De drie foto’s staan lokaal en elk eenmaal boven het verenkleed. Maker, bron, licentie of publiek-domeinstatus en omzetting naar WebP staan bij de foto. Vergelijk bij watervogels op groter formaat of de poten vrij zijn van het water. Vermeld bij een regionale ondersoort de herkomst als die helpt het beeld te plaatsen. Er staan 49 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Patrijs.
+
+VERIFIED · Mobiele Chromium op 390 px. Zes soortkaarten vanuit appbreed zoeken geopend op basis en kandidaat. De bestaande hoofd- en vluchtfoto’s uit ronde 24 laden. De drie nieuwe foto’s staan elk eenmaal vóór het verenkleed, tonen hun bron en licentie of publiek-domeinstatus en openen met 2× zoom. Ook na offline herladen zijn de drie kaarten en de fotovergroting getest. Alle 310 gidsbeelden en 120 geluidsopnamen zijn na precache offline gedecodeerd. Gidsdekking, volgorde, uniciteit en SHA-256 zijn gecontroleerd. NOT TESTED · Fysiek toestel.
