@@ -12,7 +12,7 @@
  *   birdspot-media           — foto's/IDB-exports (permanent)
  */
 
-const APP_VERSION = '1.14.0-map-k5-links';
+const APP_VERSION = '1.19.13-combined-guide-and-ui-preview';
 const APP_CACHE   = `birdspot-app-v${APP_VERSION}`;
 const MEDIA_CACHE = 'birdspot-media';
 
@@ -23,6 +23,9 @@ const PRECACHE_URLS = [
   '/',
   '/index.html',
   '/manifest.webmanifest',
+  '/assets/species/field-guide-media.json',
+  '/assets/species/credits.json',
+  '/assets/showcase/credits.json',
 
   // Stylesheets
   '/styles/tokens.css',
@@ -42,25 +45,32 @@ const PRECACHE_URLS = [
   '/styles/mobile-field-editorial.css',
   '/styles/cinematic-wetland.css',
   '/styles/map-explorer.css',
+  '/styles/field-experience.css',
   '/assets/birdspot-ijsvogel-splash.avif',
 
   // JS — app root
   '/src/app.js',
+  '/src/services/navigation.js',
+  '/src/services/gestures.js',
   '/src/services/startup-splash.js',
 
   // JS — features
   '/src/features/home/view.js',
+  '/src/features/search/index.js',
   '/src/features/home/featuredCarousel.js',
   '/src/features/home/ambientBackdrop.js',
   '/src/features/home/specialBirds.js',
   '/src/features/home/showcaseData.js',
   '/src/features/species/view.js',
+  '/src/features/species/guidePhotos.js',
+  '/src/features/species/guideComparisons.js',
+  '/src/features/species/guideMedia.js',
   '/src/features/species/detailSections.js',
   '/src/features/sightings/view.js',
   '/src/features/sightings/addSheet.js',
+  '/src/features/sightings/speciesPicker.js',
   '/src/features/sightings/evidence.js',
   '/src/features/sightings/pinPicker.js',
-  '/src/features/sightings/editSheet.js',
   '/src/features/sightings/detailSheet.js',
   '/src/features/map/view.js',
   '/src/features/map/centerPin.js',
@@ -77,8 +87,10 @@ const PRECACHE_URLS = [
 
   // JS — data
   '/src/data/sightings.js',
+  '/src/data/db.js',
   '/src/data/species.js',
   '/src/data/speciesLife.js',
+  '/src/data/speciesDistribution.js',
   '/src/data/seasons.js',
 
   // JS — storage
@@ -89,34 +101,43 @@ const PRECACHE_URLS = [
   '/src/services/sw-register.js',
 
   // JS — utils (voeg toe als ze bestaan)
-  '/src/utils/date.js',
-  '/src/utils/search.js',
+  '/src/utils/html.js',
+  '/src/utils/photoInfo.js',
+  '/src/utils/photoViewer.js',
+  '/src/utils/photoUrl.js',
+  '/src/utils/validateMedia.js',
 ];
 
 // ── Install: precache atomair ──────────────────────────────────────────────
 self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open(APP_CACHE).then(async cache => {
-      // Probeer elk bestand apart; sla ontbrekende utils over (allSettled)
-      const results = await Promise.allSettled(
-        PRECACHE_URLS.map(url =>
-          cache.add(url).catch(err => {
-            // Utils-bestanden zijn optioneel; log maar blokkeer niet
-            console.warn(`[SW] precache skip: ${url}`, err.message);
-          })
-        )
-      );
-      // Diashowfoto's (F): eenmalig in de media-cache, die releases overleeft (L-052)
-      await precacheShowcase();
-      const failed = results.filter(r => r.status === 'rejected');
-      if (failed.length) {
-        console.warn(`[SW] ${failed.length} precache-verzoeken overgeslagen`);
-      }
-    })
-  );
-  // Activeer direct (geen wachten op bestaande clients)
-  self.skipWaiting();
+  event.waitUntil((async () => {
+    const cache = await caches.open(APP_CACHE);
+    await cache.addAll(PRECACHE_URLS.map(url => new Request(url, { cache: 'reload' })));
+    await Promise.all([precacheShowcase(), precacheGuidePhotos(), precacheFieldGuideMedia()]);
+  })());
 });
+
+async function precacheGuidePhotos() {
+  try {
+    const media = await caches.open(MEDIA_CACHE);
+    const credits = await (await fetch('/assets/species/credits.json', {cache:'no-cache'})).json();
+    await Promise.allSettled(Object.values(credits).map(async photo => {
+      if (!(await media.match(photo.image))) await media.add(photo.image);
+    }));
+  } catch (err) { console.warn('[SW] gidsfoto’s niet vooraf geladen', err?.message); }
+}
+
+async function precacheFieldGuideMedia() {
+  try {
+    const media = await caches.open(MEDIA_CACHE);
+    const data = await (await fetch('/assets/species/field-guide-media.json', {cache:'no-cache'})).json();
+    const variants = [...Object.values(data.plumage).flatMap(cards => Object.values(cards)), ...Object.values(data.poses || {}).flat()];
+    const urls = [...variants.map(photo => photo.image), ...Object.values(data.audio).flat().map(clip => clip.audio)];
+    await Promise.allSettled(urls.filter(Boolean).map(async url => {
+      if (!(await media.match(url))) await media.add(url);
+    }));
+  } catch (err) { console.warn('[SW] gidsmedia niet vooraf geladen', err?.message); }
+}
 
 async function precacheShowcase() {
   try {
@@ -147,18 +168,24 @@ self.addEventListener('activate', event => {
     })
   );
 
-  // Stuur update-notificatie naar alle open clients
-  self.clients.matchAll({ type: 'window' }).then(clients => {
-    clients.forEach(client => {
-      client.postMessage({ type: 'new-version', version: APP_VERSION });
-    });
-  });
 });
 
-// ── Versie opvragen (profielpagina) ────────────────────────────────────────
+async function reportVersion(port) {
+  let offlineReady = false;
+  try {
+    const cache = await caches.open(APP_CACHE);
+    const required = await Promise.all(PRECACHE_URLS.map(url => cache.match(url)));
+    offlineReady = required.every(response => response?.ok);
+  } catch (_) { /* opslag niet beschikbaar */ }
+  port.postMessage({ type: 'version', version: APP_VERSION, offlineReady });
+}
+
 self.addEventListener('message', event => {
-  if (event.data?.type === 'get-version') {
-    event.ports?.[0]?.postMessage({ type: 'version', version: APP_VERSION });
+  if (event.data?.type === 'apply-update') {
+    event.waitUntil(self.skipWaiting());
+  }
+  if (event.data?.type === 'get-version' && event.ports[0]) {
+    event.waitUntil(reportVersion(event.ports[0]));
   }
 });
 
@@ -170,6 +197,17 @@ self.addEventListener('fetch', event => {
   // Sla niet-GET en externe verzoeken over (bijv. Leaflet CDN, OpenStreetMap tiles)
   if (request.method !== 'GET') return;
   if (url.origin !== self.location.origin) return;
+
+  if (url.pathname.startsWith('/assets/species/audio/')) {
+    event.respondWith(guideAudioResponse(request));
+    return;
+  }
+
+  // Houd de actieve shell consistent tijdens een wachtende update.
+  if (PRECACHE_URLS.includes(url.pathname)) {
+    event.respondWith(serveAppShell(request, url.pathname));
+    return;
+  }
 
   // Media: afbeeldingen uit de app-eigen upload-flow → media-cache
   // (In deze app slaan we binaire foto's in IndexedDB op; blob-URLs
@@ -184,6 +222,12 @@ self.addEventListener('fetch', event => {
   // App-shell: network-first met 3 s time-out
   event.respondWith(networkFirstWithTimeout(request, 3000));
 });
+
+async function serveAppShell(request, path) {
+  const cache = await caches.open(APP_CACHE);
+  const cached = await cache.match(path);
+  return cached || networkFirstWithTimeout(request, 3000);
+}
 
 // ── Network-first met time-out ─────────────────────────────────────────────
 async function networkFirstWithTimeout(request, timeoutMs) {
@@ -225,7 +269,7 @@ async function networkFirstWithTimeout(request, timeoutMs) {
 // ── Cache-first voor media ─────────────────────────────────────────────────
 async function cacheFirstMedia(request) {
   const cache  = await caches.open(MEDIA_CACHE);
-  const cached = await cache.match(request);
+  const cached = await cache.match(request) || await caches.match(request, {cacheName: APP_CACHE});
   if (cached) return cached;
 
   try {
@@ -238,4 +282,27 @@ async function cacheFirstMedia(request) {
       headers: { 'Content-Type': 'text/plain; charset=utf-8' },
     });
   }
+}
+
+async function guideAudioResponse(request) {
+  // Cache de hele korte opname, zodat zoeken in de clip ook offline werkt.
+  const response = await cacheFirstMedia(request.url);
+  const range = request.headers.get('Range');
+  if (!range || !response.ok) return response;
+  const blob = await response.blob();
+  const match = /^bytes=(\d*)-(\d*)$/.exec(range);
+  const start = match?.[1] ? Number(match[1]) : Math.max(0, blob.size - Number(match?.[2]));
+  const end = match?.[1] && match[2] ? Math.min(blob.size - 1, Number(match[2])) : blob.size - 1;
+  if (!match || start > end || start >= blob.size) {
+    return new Response(null, {status:416, headers:{'Content-Range':`bytes */${blob.size}`}});
+  }
+  return new Response(blob.slice(start, end + 1, blob.type), {
+    status:206,
+    headers:{
+      'Content-Type':blob.type,
+      'Accept-Ranges':'bytes',
+      'Content-Length':String(end - start + 1),
+      'Content-Range':`bytes ${start}-${end}/${blob.size}`,
+    },
+  });
 }

@@ -56,7 +56,7 @@ def seed_media_files(page):
       input.files=transfer.files;
       input.dispatchEvent(new Event('change',{bubbles:true}));
     }""")
-    page.locator("#mediaAttachRow .media-thumb").first.wait_for(timeout=8000)
+    page.wait_for_function("() => document.querySelectorAll('#mediaAttachRow .media-thumb').length === 2", timeout=12000)
     inputs=page.evaluate("""() => ({
       fileCount:document.getElementById('sightingMediaInput').files.length,
       visibleThumbs:document.querySelectorAll('#mediaAttachRow .media-thumb').length
@@ -76,6 +76,7 @@ def main():
             page.locator("#fab").click()
             page.locator("#addSightingSheet.open").wait_for(timeout=9000)
             select_species(page)
+            page.locator('#sightingMore summary').click()
             page.locator('#sightSourceGroup input[value="merlin"]').check()
             assert page.locator('#sightMethodGroup input[value="heard"]').is_checked()
             assert page.locator('#certaintyGroup input[value="possible"]').is_checked()
@@ -84,6 +85,25 @@ def main():
             choose_pin(page,51.59,5.09)
             seed_media_files(page)
             page.screenshot(path=str(SHOTS/"sighting_merlin_form_390.png"),animations="disabled")
+            page.evaluate("""() => {
+                const set = Storage.prototype.setItem;
+                Storage.prototype.setItem = function(key, value) {
+                    if (key === 'birdspot-sightings') throw new DOMException('QA quota','QuotaExceededError');
+                    return set.call(this, key, value);
+                };
+                window.restoreStorage = () => { Storage.prototype.setItem = set; };
+            }""")
+            page.locator("#addSheetSubmit").click()
+            page.get_by_text("Opslaan mislukt — je invoer staat nog klaar").wait_for()
+            assert page.locator("#sightLocation").input_value()=="Brabant testpark"
+            assert page.evaluate("""async () => {
+              const { getDB } = await import('/src/data/db.js');
+              const db = await getDB();
+              const request = db.transaction('photos').objectStore('photos').count();
+              return await new Promise(resolve => { request.onsuccess = () => resolve(request.result); });
+            }""")==0
+            assert page.evaluate("JSON.parse(localStorage.getItem('birdspot-places') || '{}').places?.length || 0")==0
+            page.evaluate("window.restoreStorage()")
             first=save(page)
             assert len(first)==1
             heard=first[0]
@@ -106,6 +126,8 @@ def main():
             page.locator("#fab").click()
             select_species(page)
             page.locator("#sightLocation").fill("Limburg testbos")
+            page.locator('#sightingMore summary').click()
+            page.locator('#behaviorChips [data-value="nestmateriaal dragen"]').click()
             choose_pin(page,50.95,5.83)
             page.screenshot(path=str(SHOTS/"sighting_manual_pin_390.png"),animations="disabled")
             all_records=save(page)
@@ -114,14 +136,15 @@ def main():
             assert seen["observationMethod"]=="seen" and seen["identificationSource"]=="self"
             assert seen["lat"]!=heard["lat"] and seen["lon"]!=heard["lon"]
             assert seen["locationName"]=="Limburg testbos" and seen["photoIds"]==[]
-            assert page.evaluate("""() => JSON.parse(localStorage.getItem('birdspot-seen-species')||'[]').includes('sp001')""")
+            assert seen["behavior"] == "nestmateriaal dragen"
+            assert page.evaluate("""() => JSON.parse(localStorage.getItem('birdspot-sightings')).sightings.some(s=>s.speciesId==='sp001' && ['seen','both'].includes(s.observationMethod))""")
 
-            # Third sighting must not toggle the seen species OFF.
+            # Third sighting preserves the earlier visual evidence.
             page.locator("#fab").click()
             select_species(page)
             third=save(page)
             assert len(third)==3
-            assert page.evaluate("""() => JSON.parse(localStorage.getItem('birdspot-seen-species')||'[]').includes('sp001')""")
+            assert page.evaluate("""() => JSON.parse(localStorage.getItem('birdspot-sightings')).sightings.some(s=>s.speciesId==='sp001' && ['seen','both'].includes(s.observationMethod))""")
 
             # Old records without an observationMethod remain unlabeled, not falsely "seen".
             page.evaluate("""() => {
@@ -166,6 +189,30 @@ def main():
                 assert "📍" in page.locator("#coordsHint").inner_text()
                 page.locator("#addSheetCancel").click()
 
+            # Guide reads the same records as map, including legacy unknown evidence.
+            page.evaluate("() => localStorage.setItem('birdspot-seen-species',JSON.stringify(['sp002']))")
+            page.locator('.nav-item[data-route="species"]').click()
+            assert page.locator('.species-saved #speciesOnlyFavorites').count()==1
+            assert page.locator('.species-toolbar #speciesOnlyFavorites').count()==0
+            assert page.locator('.species-row[data-id="sp002"] .species-observation-status').inner_text()==''
+            page.locator('#speciesFiltersToggle').click()
+            page.locator('#speciesFilters [data-cat="alle"]').click()
+            page.locator('#speciesSearch').fill('Stadsduif')
+            assert page.locator('.species-row[data-id="sp001"] .species-observation-status').inner_text()=='Waargenomen'
+            page.locator('.species-row[data-id="sp001"] .species-row__body').click()
+            page.locator('[data-sd-tab="mijn"]').click()
+            page.locator('.signature-species-sighting').first.wait_for()
+            assert page.locator('[data-species-observe]').count()==0
+            assert page.locator('.signature-species-sighting').count()==4
+            assert page.locator('.signature-species-photo-tile').count()==1
+            stats=page.locator('#sdMineStats').inner_text()
+            assert 'Gezien' in stats and 'Gehoord' in stats and 'Wijze onbekend' in stats,stats
+            row=page.locator('[data-sighting-id="'+heard['id']+'"]')
+            assert 'Brabant testpark' in row.inner_text() and 'Gehoord' in row.inner_text(),row.inner_text()
+            assert page.locator('[data-sighting-id="'+seen['id']+'"] .sd-breeding-observation').inner_text().lower() == "nestmateriaal dragen"
+            page.screenshot(path=str(SHOTS/'sighting_information_guide_390.png'),animations='disabled')
+            page.locator('.signature-species-detail-close').click()
+
             # Existing ZIP backup must retain evidence and separate media links.
             with tempfile.TemporaryDirectory() as folder:
                 with page.expect_download(timeout=17000) as result:
@@ -186,6 +233,7 @@ def main():
                 assert restored["identificationSource"]=="merlin"
                 assert restored["observationMethod"]=="heard"
                 assert len(restored["photoIds"])==2
+                assert next(x for x in data["sightings"] if x["id"]==seen["id"])["behavior"] == "nestmateriaal dragen"
                 # Remove both synthetic media from IDB and prove ZIP restore brings them back.
                 page.evaluate("""async ids=>{
                   const {getDB}=await import('/src/data/db.js');

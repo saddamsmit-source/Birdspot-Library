@@ -66,6 +66,11 @@ def main():
             ctx = browser.new_context(viewport={"width": 390, "height": 844}, reduced_motion="reduce",
                                       service_workers="block", accept_downloads=True)
             p, errors = boot(ctx, url, SIGHTINGS)
+            p.evaluate("""async () => {
+              const { savePhoto } = await import('/src/data/db.js');
+              const image = new Blob(['<svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"/>'], {type:'image/svg+xml'});
+              await Promise.all(['f1', 'f2', 'f3'].map(id => savePhoto({ id, blob:image, type:image.type })));
+            }""")
             open_profile(p)
 
             assert p.locator("#confirmOverlay").is_hidden(), "B-01 dialoog staat open bij openen"
@@ -102,11 +107,11 @@ def main():
 
             ctx2 = browser.new_context(viewport={"width": 390, "height": 844}, reduced_motion="reduce")
             p2, errors2 = boot(ctx2, url, [])
-            p2.evaluate("() => navigator.serviceWorker.ready")
+            p2.wait_for_function("() => !!navigator.serviceWorker.controller", timeout=90000)
             open_profile(p2)
             p2.wait_for_function("() => !document.querySelector('#appVersion').textContent.includes('ophalen')")
             txt = p2.locator("#appVersion").inner_text()
-            assert txt == f"Versie {APP_VERSION} · werkt offline", txt
+            assert txt == f"Versie {APP_VERSION} · basis offline beschikbaar", txt
             assert p2.locator(".profile-stat").count() == 0 and p2.locator(".profile-empty").count() == 1
             assert "Nog geen back-up nodig" in p2.locator("#backupStatus").inner_text()
             print("B-05 OK —", txt)

@@ -10,6 +10,7 @@ import { getSightings } from '../../data/sightings.js';
 import { SPECIES } from '../../data/species.js';
 import { getPhotoUrl, revokePhotoUrl } from '../../utils/photoUrl.js';
 import { escHtml } from '../../utils/html.js';
+import { openPhotoViewer } from '../../utils/photoViewer.js';
 import { getCollectionIds, toggleCollectionItem } from '../../storage/collections.js';
 
 const BATCH_SIZE = 18;
@@ -37,9 +38,9 @@ export function findPossibleDuplicateIds(items) {
   return new Set([...groups.values()].filter(ids => ids.length > 1).flat());
 }
 
-export function renderMedia(el) {
-  const state = { destroyed:false, items:[], filter:'all', species:'all', search:'',
-    visible:BATCH_SIZE, urls:new Map(), lightbox:null, lightboxIndex:-1, focusReturn:null };
+export function renderMedia(el, { mediaId, onSearchSelect } = {}) {
+  const state = { destroyed:false, items:[], filter:'all', species:'all', search:'', mediaId,
+    visible:BATCH_SIZE, urls:new Map(), closePhoto:null };
   let favorites = getCollectionIds('media');
   let film = getCollectionIds('film');
   const knownNames = new Map(SPECIES.map(s => [s.id,s.nameNL]));
@@ -47,9 +48,9 @@ export function renderMedia(el) {
   el.classList.add('signature-screen','signature-media','signature-media-v2');
   el.innerHTML =
     '<header class="signature-page-hero signature-page-hero--media">' +
-      '<span class="signature-kicker">BIRDSPOT / PRIVATE COLLECTION</span>' +
+      '<span class="signature-kicker">Jouw verzameling</span>' +
       '<h1>Wildlife Media Studio</h1>' +
-      '<p>Elke foto een herinnering. Ontdek, bewaar en verzamel je favoriete vogelmomenten.</p>' +
+      '<p>De foto’s en video’s die je zelf bij je waarnemingen bewaart.</p>' +
       '<div class="signature-orbit" aria-hidden="true"></div></header>' +
     '<div class="signature-content">' +
       '<div class="signature-media-summary" aria-label="Jouw mediacollectie">' +
@@ -57,8 +58,8 @@ export function renderMedia(el) {
         '<div><strong id="mediaFavoritesCount">—</strong><span>Favorieten</span></div>' +
         '<div><strong id="mediaFilmCount">—</strong><span>Filmselectie</span></div>' +
       '</div>' +
-      '<div class="signature-section-head"><div><span class="signature-eyebrow">JOUW VERZAMELING</span>' +
-        '<h2>Vogelmomenten</h2></div><span id="mediaCount" class="signature-count">Laden…</span></div>' +
+      '<div class="signature-section-head"><div><span class="signature-eyebrow">FOTO’S &amp; VIDEO’S</span>' +
+        '<h2>Eigen beelden</h2></div><span id="mediaCount" class="signature-count">Laden…</span></div>' +
       '<div class="signature-media-tools">' +
         '<label class="signature-media-search-label"><span>Zoeken</span>' +
           '<input id="mediaSearch" type="search" placeholder="Soort of locatie…" autocomplete="off"></label>' +
@@ -90,6 +91,7 @@ export function renderMedia(el) {
   const count = el.querySelector('#mediaCount');
   const feedback = el.querySelector('#mediaFeedback');
   const speciesSelect = el.querySelector('#mediaSpecies');
+  const searchInput = el.querySelector('#mediaSearch');
   const more = el.querySelector('#mediaMore');
   let toastCleanup = null;
 
@@ -115,6 +117,7 @@ export function renderMedia(el) {
 
   function getFiltered() {
     return state.items.filter(item => {
+      if (state.mediaId && item.photo.id !== state.mediaId) return false;
       if (state.filter === 'photo' && item.kind !== 'photo') return false;
       if (state.filter === 'video' && item.kind !== 'video') return false;
       if (state.filter === 'favorites' && !favorites.has(item.photo.id)) return false;
@@ -137,7 +140,7 @@ export function renderMedia(el) {
 
   function draw() {
     if (state.destroyed) return;
-    closeLightbox();
+    state.closePhoto?.(false);
     releaseGalleryUrls();
     favorites = getCollectionIds('media');
     film = getCollectionIds('film');
@@ -146,8 +149,13 @@ export function renderMedia(el) {
     const shown = filtered.slice(0,state.visible);
     count.textContent = filtered.length + (filtered.length===1?' bestand':' bestanden');
     if (!shown.length) {
-      gallery.innerHTML = '<div class="signature-empty"><span aria-hidden="true">✧</span>' +
-        '<h3>Geen media gevonden</h3><p>Voeg foto’s of video’s toe aan een waarneming, of pas je filters aan.</p></div>';
+      const message = state.items.length
+        ? '<h3>Geen beelden bij deze filters</h3><p>Probeer een andere soort of zoekterm.</p>' +
+          '<button class="field-action" id="mediaReset" type="button">Wis filters</button>'
+        : '<h3>Begin met je eerste vogelmoment</h3><p>Voeg bij een waarneming een foto of video toe. Die vind je hier terug.</p>' +
+          '<button class="field-action field-action--primary" id="mediaFirstSighting" type="button">+ Waarneming toevoegen</button>';
+      gallery.innerHTML = '<div class="signature-empty field-media-empty"><span aria-hidden="true">◇</span>' +
+        message + '</div>';
     } else {
       gallery.innerHTML = shown.map(item => {
         const url = getPhotoUrl(item.photo);
@@ -175,46 +183,40 @@ export function renderMedia(el) {
     more.hidden = filtered.length <= state.visible;
   }
 
-  function closeLightbox() {
-    if (state.lightbox) {
-      state.lightbox.remove();
-      state.lightbox = null;
-      state.focusReturn?.focus?.();
-      state.focusReturn = null;
-    }
-  }
-
   function openLightbox(id, trigger) {
-    closeLightbox();
+    state.closePhoto?.(false);
     const item = state.items.find(x=>x.photo.id===id);
     const url = state.urls.get(id);
     if (!item || !url || item.kind==='video') return;
-    state.focusReturn = trigger;
-    const dialog = document.createElement('div');
-    dialog.className = 'signature-lightbox';
-    dialog.setAttribute('role','dialog');
-    dialog.setAttribute('aria-modal','true');
-    dialog.setAttribute('aria-label','Fotoweergave');
-    dialog.innerHTML = '<button class="signature-lightbox-close" type="button" aria-label="Foto sluiten">×</button>'+
-      '<img src="'+url+'" alt="'+safe(item.name)+'">';
-    document.body.appendChild(dialog);
-    dialog.addEventListener('click', e=>{
-      if(e.target===dialog || e.target.closest('.signature-lightbox-close')) closeLightbox();
+    state.closePhoto = openPhotoViewer({
+      url, alt: item.name, trigger, label: 'Fotoweergave', closeLabel: 'Foto sluiten',
+      onClose: () => { state.closePhoto = null; },
     });
-    state.lightbox=dialog;
-    dialog.querySelector('button').focus();
   }
 
   const onClick = event => {
+    if (event.target.closest('#mediaFirstSighting')) {
+      onSearchSelect?.({ route: 'add' });
+      return;
+    }
     const filt = event.target.closest('[data-media-filter]');
-    if (filt) {
-      state.filter=filt.dataset.mediaFilter; state.visible=BATCH_SIZE;
+    const reset = event.target.closest('#mediaReset');
+    if (filt || reset) {
+      if (reset) {
+        state.search = searchInput.value = '';
+        state.species = speciesSelect.value = 'all';
+      }
+      state.mediaId = undefined;
+      state.filter = filt?.dataset.mediaFilter || 'all';
+      state.visible = BATCH_SIZE;
       el.querySelectorAll('[data-media-filter]').forEach(b=>{
         const active=b.dataset.mediaFilter===state.filter;
         b.classList.toggle('is-selected',active);
         b.setAttribute('aria-pressed',String(active));
       });
-      draw(); return;
+      draw();
+      if (reset) searchInput.focus();
+      return;
     }
     if (event.target.closest('#mediaOpenFilmStudio')) {
       import('../../app.js').then(({navigate})=>navigate('film')); return;
@@ -224,7 +226,16 @@ export function renderMedia(el) {
     const chosen=event.target.closest('[data-media-film]');
     if(fav||chosen) {
       const kind=fav?'media':'film',id=(fav||chosen).dataset[fav?'mediaFav':'mediaFilm'];
-      try { toggleCollectionItem(kind,id); draw(); inform(kind==='media'?'Favorieten bijgewerkt':'Filmselectie bijgewerkt'); }
+      try {
+        toggleCollectionItem(kind,id);
+        const restoreFocus = document.activeElement === (fav || chosen);
+        draw();
+        if (restoreFocus) {
+          const button = gallery.querySelector('[data-media-' + (fav ? 'fav' : 'film') + '="' + CSS.escape(id) + '"]');
+          (button || el.querySelector('[data-media-filter].is-selected'))?.focus({ preventScroll: true });
+        }
+        inform(kind==='media'?'Favorieten bijgewerkt':'Filmselectie bijgewerkt');
+      }
       catch(_) { inform('Opslaan niet gelukt. Controleer de beschikbare opslagruimte.'); }
       return;
     }
@@ -234,27 +245,24 @@ export function renderMedia(el) {
 
   const onInput = event => {
     if(event.target.id!=='mediaSearch') return;
+    state.mediaId = undefined;
     state.search=event.target.value.trim().toLocaleLowerCase('nl');
     state.visible=BATCH_SIZE; draw();
   };
   const onChange = event => {
     if(event.target.id!=='mediaSpecies') return;
+    state.mediaId = undefined;
     state.species=event.target.value;
     state.visible=BATCH_SIZE; draw();
   };
-  const onKey = event => {
-    if(!state.lightbox || event.key!=='Escape') return;
-    closeLightbox();
-  };
-
   el.addEventListener('click',onClick);
   el.addEventListener('input',onInput);
   el.addEventListener('change',onChange);
-  document.addEventListener('keydown',onKey);
 
   (async()=>{
     try {
-      const [sightings,db]=await Promise.all([getSightings(),getDB()]);
+      const [records,db]=await Promise.all([getSightings(),getDB()]);
+      const sightings = records.filter(Boolean);
       const photos=await new Promise((resolve,reject)=>{
         const req=db.transaction('photos','readonly').objectStore('photos').getAll();
         req.onsuccess=()=>resolve(req.result||[]);
@@ -280,8 +288,17 @@ export function renderMedia(el) {
         hint.textContent=dupIds.size+' bestanden lijken mogelijk dubbel op basis van soort, datum, naam en grootte. '+
           'Dit is geen beeldanalyse. Er wordt nooit automatisch iets verwijderd.';
       }
+      if (!state.items.length) el.querySelector('.signature-media-tools').before(gallery);
       showSpeciesOptions();
+      const selected = state.items.find(item => item.photo.id === state.mediaId);
+      if (selected) searchInput.value = selected.photo.filename || selected.name;
       draw();
+      if (selected) {
+        const frame = gallery.querySelector('.signature-media-open, video');
+        frame?.scrollIntoView({ block: 'center' });
+        if (selected.kind === 'photo' && frame) openLightbox(selected.photo.id, frame);
+        else frame?.focus({ preventScroll: true });
+      }
     } catch(_) {
       if(!state.destroyed) gallery.innerHTML='<div class="signature-empty"><h3>Media niet beschikbaar</h3>'+
         '<p>Controleer de lokale opslag. Je bestanden zijn niet gewijzigd.</p></div>';
@@ -293,9 +310,8 @@ export function renderMedia(el) {
     el.removeEventListener('click',onClick);
     el.removeEventListener('input',onInput);
     el.removeEventListener('change',onChange);
-    document.removeEventListener('keydown',onKey);
     if(toastCleanup) clearTimeout(toastCleanup);
-    closeLightbox();
+    state.closePhoto?.(false);
     releaseGalleryUrls();
   };
 }
