@@ -821,7 +821,7 @@
   fill-opacity: var(--sd-map-opacity, 1);
   stroke: var(--ink);
   stroke-width: 1;
-  stroke-opacity: .65;
+  stroke-opacity: .55;
   vector-effect: non-scaling-stroke;
 }
 .sd-distribution-mark[data-band="0"] { --sd-map-opacity: .35; }
@@ -863,7 +863,7 @@
   height: 13px;
   margin-inline: 4.5px;
   border: 1px dashed var(--muted);
-  border-radius: 2px;
+  border-radius: 50%;
 }
 .sd-distribution figcaption a { color: inherit; }
 .sd-places-panel { display: flex; flex-direction: column; gap: var(--space-12); }

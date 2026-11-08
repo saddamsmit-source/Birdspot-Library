@@ -133,7 +133,7 @@ def main():
                 assert figure.get_attribute('data-month-kind') == kind
                 swatch = p.locator(f'.sd-month-legend [data-month-kind="{kind}"] span')
                 expected = swatch.evaluate('el => getComputedStyle(el).backgroundColor')
-                assert figure.locator('.sd-distribution-marks rect').first.evaluate('el => getComputedStyle(el).fill') == expected
+                assert figure.locator('.sd-distribution-marks circle').first.evaluate('el => getComputedStyle(el).fill') == expected
                 key = figure.locator('.sd-distribution-key')
                 assert label in key.inner_text()
                 assert key.locator('span').evaluate('el => getComputedStyle(el).backgroundColor') == expected
@@ -165,7 +165,7 @@ def main():
             assert places == ["Oostvaardersplassen 2×", "Lauwersmeer 1×"], places
             assert p.locator('#sdPanel-waar .sd-habitat').count() == len(rg["regions"])
             distribution = p.locator('#sdPanel-waar .sd-distribution')
-            marks = distribution.locator('.sd-distribution-marks rect')
+            marks = distribution.locator('.sd-distribution-marks circle')
             actual = marks.evaluate_all("els => els.map(e => Number(e.dataset.band))")
             counts = p.evaluate("""async () => {
                 const { DISTRIBUTION } = await import('/src/data/speciesDistribution.js');
@@ -180,12 +180,12 @@ def main():
                 ['Openbare meldingen', '0–4', '5–24', '25–99', '100–499', '500 of meer'], rows, strict=True
             )), rows
             assert 'Ook in een leeg vak kan de soort voorkomen' in distribution.inner_text()
-            symbols = legend.locator('svg rect').evaluate_all(
-                "els => els.map(e => Number(e.getAttribute('width')))"
+            symbols = legend.locator('svg circle').evaluate_all(
+                "els => els.map(e => Number(e.getAttribute('r')))"
             )
             assert symbols == sorted(set(symbols))
             assert marks.evaluate_all(
-                "els => els.map(e => Number(e.getAttribute('width')))"
+                "els => els.map(e => Number(e.getAttribute('r')))"
             ) == [symbols[band] for band in actual]
             assert_distribution_palette('standvogel', 'Standvogel')
             assert "Rietgors" in distribution.locator('.sd-distribution-map').get_attribute('aria-label')

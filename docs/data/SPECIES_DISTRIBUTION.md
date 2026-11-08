@@ -19,7 +19,7 @@ In **Soorten → vogel → Waar** staat de openbare soortkaart boven **Jouw plek
 | Middelgroot | 100–499 |
 | Groot | 500 of meer |
 
-Alle vakken hebben dezelfde ruimtelijke schaal. De grootte en tint van het symbool tonen de meldingsklasse. De basiskleur volgt de hoofdstatus van de soort. De legenda gebruikt dezelfde symbolen als de kaart. De aantallen zijn samengevoegd over 2020–2025 en volgen de bestaande bronfilters. Er is geen correctie voor ongelijke telinspanning.
+Alle vakken hebben dezelfde ruimtelijke schaal. De grootte en tint van de ronde stip tonen de meldingsklasse. De stip staat in het midden van het vak en vat meldingen in dat hele vak samen. De basiskleur volgt de hoofdstatus van de soort. De legenda gebruikt dezelfde symbolen als de kaart. De aantallen zijn samengevoegd over 2020–2025 en volgen de bestaande bronfilters. Er is geen correctie voor ongelijke telinspanning.
 
 ## Dataset opnieuw bouwen
 

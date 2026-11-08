@@ -78,7 +78,7 @@ def main():
    p.wait_for_function("document.querySelector('.sd-audio audio').currentTime > 0.15")
    p.get_by_role('tab',name='Waar',exact=True).click()
    p.locator('.sd-distribution-map').wait_for()
-   assert p.locator('.sd-distribution-marks rect').count() >= 3
+   assert p.locator('.sd-distribution-marks circle').count() >= 3
    assert p.get_by_role('columnheader', name='Openbare meldingen per vak').is_visible()
    print('PASS offline reload, species search, guide photo, playback and distribution',sid,flush=True)
    browser.close()

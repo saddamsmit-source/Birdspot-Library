@@ -332,16 +332,17 @@ export function statusPanel(s, life = null) {
 
 // These sizes apply to both the map and its legend. Each mark represents a whole grid cell.
 const DISTRIBUTION_BANDS = [
-  { max: 24, size: 20 },
-  { max: 99, size: 34 },
-  { max: 499, size: 46 },
-  { max: Infinity, size: 60 },
+  { max: 24, radius: 10 },
+  { max: 99, radius: 17 },
+  { max: 499, radius: 23 },
+  { max: Infinity, radius: 28 },
 ];
 
 function distributionMark(x, y, band) {
-  const { size } = DISTRIBUTION_BANDS[band];
-  return `<rect class="sd-distribution-mark" data-band="${band}" x="${x + (MAP_CELL - size) / 2}"
-    y="${y + (MAP_CELL - size) / 2}" width="${size}" height="${size}" rx="5"/>`;
+  const { radius } = DISTRIBUTION_BANDS[band];
+  const center = MAP_CELL / 2;
+  return `<circle class="sd-distribution-mark" data-band="${band}"
+    cx="${x + center}" cy="${y + center}" r="${radius}"/>`;
 }
 
 function distributionLegend() {
@@ -389,7 +390,7 @@ function distributionMap(s) {
     <figcaption>
       ${distributionLegend()}
       <p class="sd-distribution-key"><span aria-hidden="true"></span> Kleur van de hoofdstatus: ${esc(status)}</p>
-      <p class="sd-caption" id="sdDistributionNote">Een groter kaartteken betekent meer meldingen. Elk vak is ongeveer 24 km breed. Alle seizoenen in ${GBIF_YEARS} zijn samengevoegd.</p>
+      <p class="sd-caption" id="sdDistributionNote">Een grotere stip betekent meer meldingen. Elke stip staat voor een vak van ongeveer 24 km breed. Alle seizoenen in ${GBIF_YEARS} zijn samengevoegd.</p>
       <p class="sd-caption">Plekken die vaker worden bezocht, kunnen meer meldingen hebben. Ook in een leeg vak kan de soort voorkomen.</p>
       <p class="sd-caption">Waarnemingen <a href="https://doi.org/10.15468/aomfnb" target="_blank" rel="noopener noreferrer">eBird via GBIF</a> (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>) · Kaart <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener noreferrer">Natural Earth</a></p>
     </figcaption>
