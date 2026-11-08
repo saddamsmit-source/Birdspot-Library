@@ -178,7 +178,7 @@ function _openSightingForm(mode, initialState, { onSaved, editId } = {}) {
   document.body.appendChild(ov);
   requestAnimationFrame(() => { if (ov.isConnected) ov.classList.add('open'); });
 
-  const ctx = { destroyed: false, cancelPinPicker:null };
+  const ctx = { destroyed: false, cancelPinPicker:null, locationRevision: 0 };
 
   const close = () => {
     if (ctx.destroyed) return;
@@ -399,8 +399,9 @@ function _coordsHintText() {
 /** K4: na een nieuwe pin vragen of een bestaande plek binnen 50 m gebruikt wordt. */
 async function _offerPlace(ov, ctx) {
   if (ctx.destroyed || !validPin(_state.lat,_state.lon) || _state.placeId) return;
+  const revision = ctx.locationRevision;
   const res = await askPlaceReuse(_state.lat, _state.lon);
-  if (ctx.destroyed || !res) return;
+  if (ctx.destroyed || revision !== ctx.locationRevision || !res) return;
   _state.placeId = res.placeId || null;
   if (_state.placeId && !_state.locationName) {
     const place = loadPlaces().find(p => p.id === _state.placeId);
@@ -483,6 +484,8 @@ function _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx })
 
   // Pin on map, or enter coordinates offline in the map picker.
   el.querySelector('#sightPinBtn')?.addEventListener('click',()=>{
+    ctx.locationRevision++;
+    _resetGPSButton(ov);
     ctx.cancelPinPicker?.();
     ctx.cancelPinPicker=openPinPicker({
       lat:_state.lat,lon:_state.lon,
@@ -496,6 +499,7 @@ function _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx })
     });
   });
   el.querySelector('#sightClearPin')?.addEventListener('click',()=>{
+    ctx.locationRevision++;
     _state.lat=null;_state.lon=null;_state.pinAccuracyM=null;_state.placeId=null;refresh();
   });
   // GPS
@@ -749,31 +753,37 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
 }
 
 // ── GPS ────────────────────────────────────────────────────
+function _resetGPSButton(ov) {
+  const button = ov.querySelector('#sightGpsBtn');
+  if (!button) return;
+  button.classList.remove('gps-btn--loading');
+  button.innerHTML = _svgGps() + ' GPS';
+  return button;
+}
+
 function _requestGPS(ov,ctx) {
   if (!navigator.geolocation) { showToast('GPS niet beschikbaar'); return; }
   const btn  = ov.querySelector('#sightGpsBtn');
-  const hint = ov.querySelector('#coordsHint');
   if (!btn) return;
+  const revision = ++ctx.locationRevision;
   btn.classList.add('gps-btn--loading');
   btn.innerHTML = _svgSpinner() + ' GPS';
 
   navigator.geolocation.getCurrentPosition(
     pos => {
-      if(ctx.destroyed) return;
+      if (ctx.destroyed || revision !== ctx.locationRevision) return;
       _state.lat = pos.coords.latitude;
       _state.lon = pos.coords.longitude;
       _state.pinAccuracyM = Number.isFinite(pos.coords.accuracy) ? Math.round(pos.coords.accuracy) : null;
       _state.placeId = null;
-      btn.classList.remove('gps-btn--loading');
-      btn.classList.add('gps-btn--active');
-      btn.innerHTML = _svgGps() + ' GPS';
+      _resetGPSButton(ov)?.classList.add('gps-btn--active');
+      const hint = ov.querySelector('#coordsHint');
       if (hint) hint.innerHTML = _coordsHintText();
       _offerPlace(ov, ctx);
     },
     () => {
-      if(ctx.destroyed) return;
-      btn.classList.remove('gps-btn--loading');
-      btn.innerHTML = _svgGps() + ' GPS';
+      if (ctx.destroyed || revision !== ctx.locationRevision) return;
+      _resetGPSButton(ov);
       showToast('GPS niet beschikbaar — vul locatie handmatig in');
     },
     { timeout: 10000, maximumAge: 60000 }

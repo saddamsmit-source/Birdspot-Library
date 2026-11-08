@@ -34,8 +34,8 @@
  * }
  */
 
-const STORAGE_KEY    = 'birdspot-sightings';
-const SCHEMA_VERSION = 2;
+export const STORAGE_KEY    = 'birdspot-sightings';
+export const SCHEMA_VERSION = 2;
 
 // ── Migratie ────────────────────────────────────────────────
 /**
@@ -44,7 +44,7 @@ const SCHEMA_VERSION = 2;
  * en vult ontbrekende velden aan met defaults.
  * Bestaande velden worden NOOIT overschreven.
  */
-function migrateSighting(s) {
+export function migrateSighting(s) {
   return {
     // Behoud ALLE bestaande velden — inclusief toekomstige/onbekende properties.
     // Defaults hieronder overschrijven NIET: ze worden uitsluitend gezet

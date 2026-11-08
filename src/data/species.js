@@ -3314,7 +3314,7 @@ export const REGIONS = {
 export const REGION_KEYS = Object.keys(REGIONS);
 
 // ── Gezien-status (localStorage) ─────────────────────────────
-const SEEN_KEY = 'birdspot-seen-species';
+export const SEEN_KEY = 'birdspot-seen-species';
 
 export function getSeenIds() {
   try {

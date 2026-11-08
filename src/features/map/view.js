@@ -107,10 +107,13 @@ export function renderMap(el, target = {}) {
         </div>
       </div>
 
-      <div class="sheet-overlay" id="mapOverlay"></div>
+      <div class="map-sheet-overlay" id="mapOverlay"></div>
 
-      <div class="bottom-sheet" id="mapDetailSheet">
-        <div class="sheet-handle"></div>
+      <div class="bottom-sheet" id="mapDetailSheet" role="dialog" aria-modal="true" aria-labelledby="mapSheetName" inert>
+        <div class="map-sheet-controls">
+          <button type="button" class="map-sheet-handle" id="mapSheetHandle" aria-label="Klap pininformatie in"></button>
+          <button type="button" class="map-sheet-dismiss" id="mapSheetDismiss" aria-label="Sluit pininformatie">×</button>
+        </div>
         <div class="sheet-header" id="mapSheetHeader">
           <div class="sheet-header__icon" id="mapSheetIcon">🐦</div>
           <div>
@@ -233,7 +236,17 @@ export function ensureLeaflet() {
 }
 
 // ── Kaart initialiseren ────────────────────────────────────────
-function initMap(screenEl, sightings, leafletOk, { placeId, sightingId, section, placeMediaId }) {
+export function getMapView(screen) {
+  const center = _mapInstance?.getCenter();
+  return {
+    search: screen.querySelector('#mapSpeciesSearch')?.value,
+    status: screen.querySelector('#mapStatusSelect')?.value,
+    center: center ? [center.lat, center.lng] : undefined,
+    zoom: _mapInstance?.getZoom(),
+  };
+}
+
+function initMap(screenEl, sightings, leafletOk, { placeId, sightingId, section, placeMediaId, mapView }) {
   const mapEl = screenEl.querySelector('#leafletMap');
   if (!mapEl) return;
 
@@ -249,11 +262,13 @@ function initMap(screenEl, sightings, leafletOk, { placeId, sightingId, section,
   const clearFilters = screenEl.querySelector('#mapClearFilters');
   const feedback = screenEl.querySelector('#mapFilterFeedback');
   const countEl = screenEl.querySelector('#mapCount');
-  const filterState = {speciesSearch:'',status:'all'};
+  const filterState = {speciesSearch: mapView?.search || '', status: mapView?.status || 'all'};
+  speciesSearch.value = filterState.speciesSearch;
   let updateMapMarkers=()=>{};
   let showSearchResults=()=>{};
   // K5: plekken zijn doorzoekbaar op naam
-  const placeNames=new Map(loadPlaces().map(p=>[p.id,p.name]));
+  const places = loadPlaces().filter(place => place && validPin(place.lat, place.lon));
+  const placeNames = new Map(places.map(place => [place.id, place.name]));
 
   // Only species with an actual geolocated observation appear as suggestions.
   const suggestions = screenEl.querySelector('#mapSpeciesSuggestions');
@@ -313,8 +328,6 @@ function initMap(screenEl, sightings, leafletOk, { placeId, sightingId, section,
     filterState.speciesSearch='';filterState.status='all';speciesSearch.value='';
     applyFilters();speciesSearch.focus();
   });
-  applyFilters();
-
   // Filterpaneel opent onder de balk en sluit bij tik op de kaart
   const filterBtn=screenEl.querySelector('#mapFilterBtn');
   const filterPanel=screenEl.querySelector('#mapFilterPanel');
@@ -326,7 +339,7 @@ function initMap(screenEl, sightings, leafletOk, { placeId, sightingId, section,
   mapEl.addEventListener('pointerdown',()=>setFilterOpen(false));
 
   // K4: één pin per plek met de zichtbare waarnemingen; records zelf worden nooit gewijzigd.
-  const placeById=new Map(loadPlaces().map(p=>[p.id,p]));
+  const placeById = new Map(places.map(place => [place.id, place]));
   function groupByPlace(rows){
     const groups=new Map();
     for(const s of rows){
@@ -348,9 +361,56 @@ function initMap(screenEl, sightings, leafletOk, { placeId, sightingId, section,
 
   // Locatie-knop — ook zonder kaart tonen
   const locBtn = screenEl.querySelector('#mapLocateBtn');
-  if (locBtn && leafletOk) {
-    // handler wordt gekoppeld nadat map aangemaakt is (zie hieronder)
-  }
+
+  let map = null;
+  let restoringView = Boolean(mapView);
+  // K5: bij zoeken komen alle plekken met die vogel (of met die naam) naar voren
+  const resultsEl=screenEl.querySelector('#mapSearchResults');
+  const focusPlace=(place,records,mediaId)=>{
+    map?.setView([Number(place.lat),Number(place.lon)],Math.max(map.getZoom(),16));
+    openPlaceSheet(screenEl,place,records,map,mediaId);
+  };
+  showSearchResults=(matches)=>{
+    if(!filterState.speciesSearch){resultsEl.hidden=true;resultsEl.innerHTML='';return;}
+    const groups = groupByPlace(matches);
+    const normalize = text => text.normalize('NFD').replace(/\p{M}/gu, '').toLocaleLowerCase('nl');
+    if (filterState.status === 'all') {
+      const shown = new Set(groups.map(group => group.place.id));
+      for (const place of places) {
+        if (!shown.has(place.id) && normalize(place.name || '').includes(normalize(filterState.speciesSearch))) {
+          groups.push({ place, records: [] });
+        }
+      }
+    }
+    groups.sort((a,b)=>b.records.length-a.records.length||a.place.name.localeCompare(b.place.name,'nl'));
+    if(!groups.length){
+      resultsEl.innerHTML='<p class="map-search-results__empty">Geen plekken gevonden voor “'+escHtml(filterState.speciesSearch)+'”.</p>';
+      resultsEl.hidden=!screenEl.querySelector('#mapFilterPanel').hidden;return;
+    }
+    resultsEl.innerHTML='<h3>'+groups.length+' '+(groups.length===1?'plek':'plekken')+'</h3><ul>'+groups.slice(0,8).map(g=>{
+      const species=[...new Set(g.records.map(r=>r.speciesName).filter(Boolean))];
+      return '<li><button type="button" data-place="'+escHtml(g.place.id)+'">'+
+        '<i class="map-legend__dot map-legend__dot--'+(placeStatus(g.records)==='merlin'?'heard':placeStatus(g.records))+'"></i>'+
+        '<span><b>'+escHtml(g.place.name)+'</b><small>'+escHtml(species.length ? species.slice(0,3).join(', ')+(species.length>3?' +'+(species.length-3):'') : 'Nog geen waarnemingen')+'</small></span>'+
+        '<em>'+g.records.length+'×</em></button></li>';
+    }).join('')+'</ul>';
+    resultsEl.hidden=!screenEl.querySelector('#mapFilterPanel').hidden;
+    resultsEl.querySelectorAll('[data-place]').forEach(btn=>btn.addEventListener('click',()=>{
+      const g=groups.find(x=>x.place.id===btn.dataset.place);
+      if(!g)return;
+      resultsEl.hidden=true;
+      focusPlace(g.place,g.records);
+    }));
+    if (!map || restoringView) return;
+    const pts=groups.map(g=>[Number(g.place.lat),Number(g.place.lon)]);
+    if(pts.length===1)map.setView(pts[0],Math.max(map.getZoom(),14));
+    else if(pts.length > 1 && map.fitBounds)map.fitBounds(pts,{padding:[60,60],maxZoom:15});
+  };
+  mapEl.addEventListener('pointerdown',()=>{resultsEl.hidden=true;});
+  speciesSearch.addEventListener('focus',()=>{
+    if (filterState.speciesSearch && filterPanel.hidden && resultsEl.children.length) resultsEl.hidden = false;
+  });
+
 
   // Zonder Leaflet: geen kaart, wel teller + lege state + knop
   if (!leafletOk) {
@@ -363,17 +423,18 @@ function initMap(screenEl, sightings, leafletOk, { placeId, sightingId, section,
       openPinPicker({onConfirm:coords=>openAddSheet({initial:coords,
         onSaved:()=>import('../../app.js').then(({navigate})=>navigate('map',{force:true}))})});
     });
+    applyFilters();
     if (selectedPlace) openPlaceSheet(screenEl, selectedPlace.place, selectedPlace.records, null, placeMediaId);
     return;
   }
 
   // Bepaal beginpositie: gemiddelde van waarnemingen met GPS, anders NL centrum
-  const center = geoSightings.length
+  const center = mapView?.center || (geoSightings.length
     ? averageCenter(geoSightings)
-    : [52.15, 5.30];
-  const zoom = geoSightings.length > 0 ? 8 : 7;
+    : [52.15, 5.30]);
+  const zoom = mapView?.zoom ?? (geoSightings.length > 0 ? 8 : 7);
 
-  const map = window.L.map(mapEl, {
+  map = window.L.map(mapEl, {
     center,
     zoom,
     maxZoom:            21,
@@ -412,7 +473,7 @@ function initMap(screenEl, sightings, leafletOk, { placeId, sightingId, section,
       title:label+' · '+MAP_STATUS[status].label,
     });
     marker.birdspotRecords=records;marker.birdspotRecord=records[0];marker.birdspotPlace=place;
-    marker.on('click',()=>openPlaceSheet(screenEl,place,records,map));
+    marker.on('click',()=>openPlaceSheet(screenEl,place,records,map,undefined,marker.getElement?.()));
     return marker;
   }
 
@@ -422,41 +483,8 @@ function initMap(screenEl, sightings, leafletOk, { placeId, sightingId, section,
     _clusterLayer.addLayers(groupByPlace(matches).map(markerFor));
   };
 
-  // K5: bij zoeken komen alle plekken met die vogel (of met die naam) naar voren
-  const resultsEl=screenEl.querySelector('#mapSearchResults');
-  const focusPlace=(place,records,mediaId)=>{
-    map.setView([Number(place.lat),Number(place.lon)],Math.max(map.getZoom(),16));
-    openPlaceSheet(screenEl,place,records,map,mediaId);
-  };
-  showSearchResults=(matches)=>{
-    if(!filterState.speciesSearch){resultsEl.hidden=true;resultsEl.innerHTML='';return;}
-    const groups=groupByPlace(matches).sort((a,b)=>b.records.length-a.records.length||a.place.name.localeCompare(b.place.name,'nl'));
-    if(!groups.length){
-      resultsEl.innerHTML='<p class="map-search-results__empty">Geen plekken gevonden voor “'+escHtml(filterState.speciesSearch)+'”.</p>';
-      resultsEl.hidden=!screenEl.querySelector('#mapFilterPanel').hidden;return;
-    }
-    resultsEl.innerHTML='<h3>'+groups.length+' '+(groups.length===1?'plek':'plekken')+'</h3><ul>'+groups.slice(0,8).map(g=>{
-      const species=[...new Set(g.records.map(r=>r.speciesName).filter(Boolean))];
-      return '<li><button type="button" data-place="'+escHtml(g.place.id)+'">'+
-        '<i class="map-legend__dot map-legend__dot--'+(placeStatus(g.records)==='merlin'?'heard':placeStatus(g.records))+'"></i>'+
-        '<span><b>'+escHtml(g.place.name)+'</b><small>'+escHtml(species.slice(0,3).join(', ')+(species.length>3?' +'+(species.length-3):''))+'</small></span>'+
-        '<em>'+g.records.length+'×</em></button></li>';
-    }).join('')+'</ul>';
-    resultsEl.hidden=!screenEl.querySelector('#mapFilterPanel').hidden;
-    resultsEl.querySelectorAll('[data-place]').forEach(btn=>btn.addEventListener('click',()=>{
-      const g=groups.find(x=>x.place.id===btn.dataset.place);
-      if(!g)return;
-      resultsEl.hidden=true;
-      focusPlace(g.place,g.records);
-    }));
-    // Kaart toont alle gevonden plekken
-    const pts=groups.map(g=>[Number(g.place.lat),Number(g.place.lon)]);
-    if(pts.length===1)map.setView(pts[0],Math.max(map.getZoom(),14));
-    else if(map.fitBounds)map.fitBounds(pts,{padding:[60,60],maxZoom:15});
-  };
-  mapEl.addEventListener('pointerdown',()=>{resultsEl.hidden=true;});
-  speciesSearch.addEventListener('focus',()=>{if(filterState.speciesSearch)applyFilters();});
   applyFilters();
+  restoringView = false;
 
   // K5: van een soort of lijst direct naar een plek
   if (selectedPlace) focusPlace(selectedPlace.place, selectedPlace.records, placeMediaId);
@@ -520,7 +548,7 @@ function initMap(screenEl, sightings, leafletOk, { placeId, sightingId, section,
 
 // ── K4: plekkaartje ───────────────────────────────────────────
 const MEDIA_ACCEPT='image/*,video/*,audio/*';
-function openPlaceSheet(screenEl, place, visibleRecords, map, mediaId) {
+function openPlaceSheet(screenEl, place, visibleRecords, map, mediaId, trigger = document.activeElement) {
   const sheet    = screenEl.querySelector('#mapDetailSheet');
   const overlay  = screenEl.querySelector('#mapOverlay');
   const closeBtn = screenEl.querySelector('#mapSheetClose');
@@ -630,16 +658,42 @@ function openPlaceSheet(screenEl, place, visibleRecords, map, mediaId) {
     }
   }
 
-  if (validPin(place.lat,place.lon)) map?.panTo([place.lat, place.lon], { animate: true, duration: 0.4 });
+  sheet.inert = false;
   sheet.classList.add('open');
   overlay.classList.add('visible');
+  screenEl.querySelector('#mapSheetName').textContent = place.name;
+  const dismiss = screenEl.querySelector('#mapSheetDismiss');
+  dismiss.focus({ preventScroll: true });
+
+  function onKey(event) {
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      closeSheet();
+    }
+    if (event.key !== 'Tab') return;
+    const buttons = [...sheet.querySelectorAll('button:not([disabled]), input:not([hidden]), audio[controls], video[controls]')]
+      .filter(element => element.getClientRects().length && element.tabIndex >= 0);
+    if (!buttons.length) return;
+    const boundary = event.shiftKey ? buttons[0] : buttons.at(-1);
+    if (document.activeElement === boundary || !sheet.contains(document.activeElement)) {
+      event.preventDefault();
+      (event.shiftKey ? buttons.at(-1) : buttons[0]).focus();
+    }
+  }
+  document.addEventListener('keydown', onKey);
 
   function closeSheet() {
+    if (closed) return;
     closed = true;
+    document.removeEventListener('keydown', onKey);
+    sheet.inert = true;
     sheet.classList.remove('open');
     overlay.classList.remove('visible');
     urls.splice(0).forEach(u=>URL.revokeObjectURL(u));
+    if (trigger?.isConnected && trigger !== document.body) trigger.focus({ preventScroll: true });
   }
+  dismiss.onclick = closeSheet;
+  screenEl.querySelector('#mapSheetHandle').onclick = closeSheet;
   closeBtn.onclick  = closeSheet;
   overlay.onclick   = closeSheet;
 }
