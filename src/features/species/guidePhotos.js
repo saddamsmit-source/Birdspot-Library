@@ -52,7 +52,8 @@ export const GUIDE_PHOTOS = Object.freeze({
     "verification": "Source metadata + visual morphology review; not an independent ornithologist certification",
     "visualCheck": "Mannetje: blauwgrijze kruin, roestroze borst en witte vleugelstrepen; volledig op tak.",
     "alt": "Vink in natuurlijke omgeving — Mannetje: blauwgrijze kruin, roestroze borst en witte vleugelstrepen; volledig op tak.",
-    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "sex": "male"
   },
   "sp043": {
     "file": "Sperling Weibchen-20201025-RM-163340.jpg",
@@ -70,7 +71,8 @@ export const GUIDE_PHOTOS = Object.freeze({
     "verification": "Source metadata + visual morphology review; not an independent ornithologist certification",
     "visualCheck": "Vrouwtje: lichte wenkbrauw, bruine gestreepte rug, forse kegelvormige snavel; op zonnebloem.",
     "alt": "Huismus in natuurlijke omgeving — Vrouwtje: lichte wenkbrauw, bruine gestreepte rug, forse kegelvormige snavel; op zonnebloem.",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "sex": "female"
   },
   "sp045": {
     "file": "Common Blackbird.jpg",
@@ -88,7 +90,8 @@ export const GUIDE_PHOTOS = Object.freeze({
     "verification": "Source metadata + visual morphology review; not an independent ornithologist certification",
     "visualCheck": "Mannetje: zwart verenkleed, oranjegele snavel en oogring; foeragerend op gras.",
     "alt": "Merel in natuurlijke omgeving — Mannetje: zwart verenkleed, oranjegele snavel en oogring; foeragerend op gras.",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/"
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/",
+    "sex": "male"
   },
   "sp050": {
     "file": "European robin Créteil 2.jpg",
@@ -124,7 +127,8 @@ export const GUIDE_PHOTOS = Object.freeze({
     "verification": "Source metadata + visual morphology review; not an independent ornithologist certification",
     "visualCheck": "Mannetje: geel lichaam met zwarte vleugels; volledig in boom met bladeren.",
     "alt": "Wielewaal in natuurlijke omgeving — Mannetje: geel lichaam met zwarte vleugels; volledig in boom met bladeren.",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "sex": "male"
   },
   "sp262": {
     "file": "Lanius collurio соропуд сірий.jpg",
@@ -142,7 +146,8 @@ export const GUIDE_PHOTOS = Object.freeze({
     "verification": "Source metadata + visual morphology review; not an independent ornithologist certification",
     "visualCheck": "Mannetje: grijze kop, zwart oogmasker, kastanjebruine rug; volledig op tak.",
     "alt": "Grauwe Klauwier in natuurlijke omgeving — Mannetje: grijze kop, zwart oogmasker, kastanjebruine rug; volledig op tak.",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "sex": "male"
   },
   "sp042": {
     "file": "Carpodacus erythrinus 303190528.jpg",
@@ -160,7 +165,9 @@ export const GUIDE_PHOTOS = Object.freeze({
     "verification": "Source metadata + visual morphology review; not an independent ornithologist certification",
     "visualCheck": "Rode kop en borst, forse vinkensnavel; volledig op tak tussen bladeren.",
     "alt": "Roodmus in natuurlijke omgeving — Rode kop en borst, forse vinkensnavel; volledig op tak tussen bladeren.",
-    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "sex": "male",
+    "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/roodmus"
   },
   "sp282": {
     "file": "An Adult Rosy Starling Looking for food (50620492117).jpg",
@@ -2067,7 +2074,8 @@ export const GUIDE_PHOTOS = Object.freeze({
     "visualCheck": "Volwassen mannetje in vlucht. Bruin lijf, grijze vleugelvelden en staart en zwarte vleugelpunten.",
     "alt": "Bruine Kiekendief — Volwassen mannetje in vlucht. Bruin lijf, grijze vleugelvelden en staart en zwarte vleugelpunten.",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
-    "flight": true
+    "flight": true,
+    "sex": "male"
   },
   "sp249": {
     "file": "Hen Harrier - Male.jpg",
@@ -2087,7 +2095,8 @@ export const GUIDE_PHOTOS = Object.freeze({
     "visualCheck": "Volwassen mannetje in vlucht over gras. Grijze vleugels, zwarte vleugelpunten en een witte stuit.",
     "alt": "Blauwe Kiekendief — Volwassen mannetje in vlucht over gras. Grijze vleugels, zwarte vleugelpunten en een witte stuit.",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
-    "flight": true
+    "flight": true,
+    "sex": "male"
   },
   "sp250": {
     "file": "A male Pallid Harrier flying away from us early morning (50536689517).jpg",
@@ -2107,7 +2116,8 @@ export const GUIDE_PHOTOS = Object.freeze({
     "visualCheck": "Volwassen mannetje in vlucht, met bleke onderzijde en wigvormig zwart aan de vleugelpunt.",
     "alt": "Steppekiekendief — Volwassen mannetje in vlucht, met bleke onderzijde en wigvormig zwart aan de vleugelpunt.",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
-    "flight": true
+    "flight": true,
+    "sex": "male"
   },
   "sp251": {
     "file": "Beautiful Montagu's Harrier in Flight (51042548717).jpg",
@@ -2127,7 +2137,8 @@ export const GUIDE_PHOTOS = Object.freeze({
     "visualCheck": "Volwassen mannetje laag in vlucht, met grijze kop, zwarte vleugelpunten en donkere banden over de armvleugel.",
     "alt": "Grauwe Kiekendief — Volwassen mannetje laag in vlucht, met grijze kop, zwarte vleugelpunten en donkere banden over de armvleugel.",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
-    "flight": true
+    "flight": true,
+    "sex": "male"
   },
   "sp006": {
     "file": "Male Sparrowhawk (46103963061).jpg",
@@ -2146,7 +2157,8 @@ export const GUIDE_PHOTOS = Object.freeze({
     "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/sperwer",
     "visualCheck": "Volwassen mannetje op een met mos begroeide stronk, met blauwgrijze rug en roestkleurige wang en onderzijde.",
     "alt": "Sperwer — Volwassen mannetje op een met mos begroeide stronk, met blauwgrijze rug en roestkleurige wang en onderzijde.",
-    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "sex": "male"
   },
   "sp007": {
     "file": "Male northern goshawk (49434582392).jpg",
@@ -2165,7 +2177,8 @@ export const GUIDE_PHOTOS = Object.freeze({
     "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/havik",
     "visualCheck": "Volwassen mannetje op een tak, met lichte wenkbrauw en fijn dwarsgebandeerde onderzijde.",
     "alt": "Havik — Volwassen mannetje op een tak, met lichte wenkbrauw en fijn dwarsgebandeerde onderzijde.",
-    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "sex": "male"
   },
   "sp248": {
     "file": "iNaturalist photo 204335214",
@@ -2186,7 +2199,8 @@ export const GUIDE_PHOTOS = Object.freeze({
     "alt": "Wespendief — Volwassen mannetje van onderen in vlucht. Lange staart met brede eindband en banden dichter bij het lichaam.",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
     "observation": "https://www.inaturalist.org/observations/120788543",
-    "flight": true
+    "flight": true,
+    "sex": "male"
   },
   "sp253": {
     "file": "Rough-legged Hawk, female (29534397942).jpg",
@@ -2206,7 +2220,8 @@ export const GUIDE_PHOTOS = Object.freeze({
     "visualCheck": "Volwassen vrouwtje in vlucht in Canada. Donker buikschild en grote polsvlekken bij een lichte staartbasis.",
     "alt": "Ruigpootbuizerd — Volwassen vrouwtje in vlucht in Canada. Donker buikschild en grote polsvlekken bij een lichte staartbasis.",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
-    "flight": true
+    "flight": true,
+    "sex": "female"
   },
   "sp245": {
     "file": "Cattle Egrets (Bubulcus ibis) (26473504731).jpg",
@@ -2244,7 +2259,8 @@ export const GUIDE_PHOTOS = Object.freeze({
     "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zomertaling",
     "visualCheck": "Volwassen mannetje in Spanje. Brede witte oogboog, bruine borst, fijne grijze flanktekening en verlengde schouderveren.",
     "alt": "Zomertaling — Volwassen mannetje in Spanje. Brede witte oogboog, bruine borst, fijne grijze flanktekening en verlengde schouderveren.",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sex": "male"
   },
   "sp147": {
     "file": "iNaturalist photo 680750765",
@@ -2284,7 +2300,8 @@ export const GUIDE_PHOTOS = Object.freeze({
     "visualCheck": "Mannetje Strandplevier in Frankrijk. Zwarte tekening op het voorhoofd en opzij van de witte borst.",
     "alt": "Mannetje Strandplevier in Frankrijk. Zwarte tekening op het voorhoofd en opzij van de witte borst.",
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-    "observation": "https://www.inaturalist.org/observations/269952441"
+    "observation": "https://www.inaturalist.org/observations/269952441",
+    "sex": "male"
   },
   "sp144": {
     "file": "iNaturalist photo 66147127",

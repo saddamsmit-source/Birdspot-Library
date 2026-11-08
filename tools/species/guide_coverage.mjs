@@ -2,8 +2,9 @@ import assert from 'node:assert/strict';
 import { existsSync } from 'node:fs';
 import { SPECIES } from '../../src/data/species.js';
 import { GUIDE_PHOTOS } from '../../src/features/species/guidePhotos.js';
-import { GUIDE_AUDIO, GUIDE_PLUMAGE, GUIDE_POSES } from '../../src/features/species/guideMedia.js';
+import { GUIDE_AUDIO, GUIDE_HEROES, GUIDE_PLUMAGE, GUIDE_POSES } from '../../src/features/species/guideMedia.js';
 import { GUIDE_COMPARISONS } from '../../src/features/species/guideComparisons.js';
+import { guideHeroPhoto, guidePlumageGroups } from '../../src/features/species/detailSections.js';
 
 const species = new Map(SPECIES.map(bird => [bird.id, bird]));
 
@@ -21,15 +22,12 @@ function checkPhoto(id, photo) {
 
 for (const [id, photo] of Object.entries(GUIDE_PHOTOS)) checkPhoto(id, photo);
 for (const [id, photos] of Object.entries(GUIDE_POSES)) {
-  const flights = photos.filter(photo => photo.flight);
-  assert.ok(photos.length > 0 && photos.filter(photo => !photo.flight && !photo.sex).length <= 2,
-    `Maximaal twee algemene houdingsfoto’s: ${id}`);
-  assert.ok(flights.length <= 2 && flights.filter(photo => !photo.sex).length <= 1,
-    `Een extra vluchtfoto vereist een geslachtslabel: ${id}`);
-  const roles = photos.filter(photo => photo.sex).map(photo => `${photo.sex}:${Boolean(photo.flight)}`);
-  assert.equal(roles.length, new Set(roles).size, `Dubbele combinatie van geslacht en houding: ${id}`);
+  assert.ok(photos.length && new Set(photos.map(photo => photo.image)).size === photos.length,
+    `Dubbele of lege houdingsfoto’s: ${id}`);
   for (const photo of photos) {
     assert.ok(photo.label && photo.note, `Ontbrekend houdingslabel: ${id}`);
+    assert.ok(!photo.sex || ['male', 'female'].includes(photo.sex), `Ongeldig geslachtslabel: ${id}`);
+    assert.ok(!photo.age || ['adult', 'juvenile'].includes(photo.age), `Ongeldig leeftijdslabel: ${id}`);
     checkPhoto(id, photo);
   }
 }
@@ -38,6 +36,11 @@ for (const [id, cards] of Object.entries(GUIDE_PLUMAGE)) {
     assert.ok(species.get(id)?.plumage?.[plumage], `Kleedkaart ontbreekt: ${id} ${plumage}`);
     checkPhoto(id, photo.reuseGuidePhoto ? GUIDE_PHOTOS[id] : photo);
   }
+}
+for (const [id, image] of Object.entries(GUIDE_HEROES)) {
+  const hero = guideHeroPhoto(id);
+  assert.equal(hero?.image, image, `Onbekende hoofdfoto: ${id}`);
+  checkPhoto(id, hero);
 }
 for (const [id, clips] of Object.entries(GUIDE_AUDIO)) {
   assert.ok(species.has(id), `Onbekende soort bij opname: ${id}`);
@@ -61,7 +64,12 @@ for (const {birds, tip, flight} of GUIDE_COMPARISONS) {
   }
 }
 
+const roles = ['adult_m', 'adult_f', 'juv'];
 const rows = SPECIES.map(bird => {
+  const groupedPhotos = Object.fromEntries(guidePlumageGroups(bird)
+    .filter(group => roles.includes(group.key) && group.photos.length)
+    .map(group => [group.key, [...new Set(group.photos.map(photo => photo.image))]]));
+  const mainPhoto = guideHeroPhoto(bird.id)?.image ?? null;
   const plumagePhotos = Object.keys(GUIDE_PLUMAGE[bird.id] || {});
   return {
     id: bird.id,
@@ -71,6 +79,9 @@ const rows = SPECIES.map(bird => {
     status: bird.category,
     documentedReview: bird.guideReview?.date ?? null,
     guidePhoto: Boolean(GUIDE_PHOTOS[bird.id]),
+    mainPhoto,
+    groupedPhotos,
+    unfilledPhotoRoles: mainPhoto ? roles.filter(role => !groupedPhotos[role]) : [],
     poses: (GUIDE_POSES[bird.id] || []).map(photo => photo.label),
     plumagePhotos,
     plumageWithoutPhoto: Object.keys(bird.plumage || {}).filter(kind =>
@@ -84,6 +95,8 @@ const summary = {
   species: rows.length,
   documentedReviews: rows.filter(bird => bird.documentedReview).length,
   guidePhotos: rows.filter(bird => bird.guidePhoto).length,
+  speciesWithMainPhoto: rows.filter(bird => bird.mainPhoto).length,
+  speciesWithAllPhotoRoles: rows.filter(bird => roles.every(role => bird.groupedPhotos[role])).length,
   speciesWithPoses: rows.filter(bird => bird.poses.length).length,
   speciesWithPlumagePhotos: rows.filter(bird => bird.plumagePhotos.length).length,
   plumagePhotos: rows.flatMap(bird => bird.plumagePhotos).length,

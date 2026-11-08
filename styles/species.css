@@ -899,3 +899,12 @@
 .sd-photo-zoom { display:flex; gap:8px; }
 .sd-photo-zoom button { min-width:44px; min-height:44px; color:#fff; background:#102a20; border:1px solid #8da99b; border-radius:8px; }
 .sd-photo-zoom button:disabled { opacity:.5; }
+
+.sd-plumage-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+  gap: var(--space-8);
+}
+.sd-plumage-comparison details > summary { margin-bottom: var(--space-8); cursor: pointer; }
+.sd-plumage-photo { min-width: 0; margin: 0; }
+.sd-plumage-photo figcaption { margin-top: 4px; font-size: var(--fs-meta); font-weight: 650; }

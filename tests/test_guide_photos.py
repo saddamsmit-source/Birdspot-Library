@@ -10,6 +10,10 @@ def main():
  clips=[clip['audio'] for entries in guide_media['audio'].values() for clip in entries]
  poses=[v['image'] for cards in guide_media.get('poses', {}).values() for v in cards]
  images=[v['image'] for v in photos.values()] + variants + poses
+ hero_paths=guide_media.get('heroes', {})
+ by_path={v['image']:v for entries in guide_media['poses'].values() for v in entries}
+ by_path.update({v['image']:v for cards in guide_media['plumage'].values() for v in cards.values() if 'image' in v})
+ pictured_species={**photos, **{sid:by_path[path] for sid,path in hero_paths.items() if sid not in photos}}
  with Server(('127.0.0.1',0),Quiet) as server:
   threading.Thread(target=server.serve_forever,daemon=True).start()
   url=f'http://127.0.0.1:{server.server_address[1]}/'
@@ -20,16 +24,17 @@ def main():
     p=ctx.new_page();p.goto(url);p.locator('#birdspotSplashSkip').click()
     p.locator('[data-nav="species"]').click() if p.locator('[data-nav="species"]').count() else p.get_by_role('button',name='Soorten',exact=True).click()
     assert p.locator('#speciesFilters [data-cat="alle"]').get_attribute('aria-pressed') == 'true'
-    for sid,photo in photos.items():
+    for sid,photo in pictured_species.items():
      p.locator('#speciesSearch').fill(photo['nl'])
      row=p.locator(f'.species-row[data-id="{sid}"]');row.wait_for()
-     thumb=row.locator('.species-guide-thumb img')
-     assert thumb.get_attribute('src')==photo['image']
-     assert thumb.evaluate('(i)=>getComputedStyle(i).objectFit')=='contain'
+     if sid in photos:
+      thumb=row.locator('.species-guide-thumb img')
+      assert thumb.get_attribute('src')==photo['image']
+      assert thumb.evaluate('(i)=>getComputedStyle(i).objectFit')=='contain'
      row.click()
      hero=p.locator(f'#detailThumb-{sid} img')
      p.wait_for_function('(id)=>{const i=document.querySelector("#detailThumb-"+id+" img");return i&&i.complete&&i.naturalWidth>0}',arg=sid)
-     assert hero.get_attribute('src')==photo['image']
+     assert hero.get_attribute('src')==hero_paths.get(sid, photo['image']), (sid, hero.get_attribute('src'), photo['image'])
      assert hero.evaluate('(i)=>getComputedStyle(i).objectFit')=='contain'
      credit=p.locator(f'#detailThumb-{sid} .photo-info')
      assert credit.locator('summary').is_visible()
@@ -40,6 +45,17 @@ def main():
       assert photo['author'] in credit.inner_text()
       p.keyboard.press('Escape')
       assert not credit.locator('.photo-info__panel').is_visible()
+     if sid == 'sp173':
+      gallery=p.locator('[data-plumage="adult_f"] .sd-plumage-gallery')
+      sitting=gallery.locator('img[src$="-female-rest.webp"]')
+      flight=gallery.locator('img[src$="-adult_f.webp"]')
+      sitting.evaluate('i => i.decode()')
+      flight.evaluate('i => i.decode()')
+      a,b=sitting.bounding_box(),flight.bounding_box()
+      if width > 390:
+       assert abs(a['y']-b['y']) < 2 and abs(a['x']-b['x']) > 30
+      else:
+       assert abs(a['x']-b['x']) < 2 and abs(a['y']-b['y']) > 50
      # The title must not obscure the photo.
      geometry=p.evaluate('''(id)=>{const i=document.querySelector('#detailThumb-'+id+' img').getBoundingClientRect();const t=document.querySelector('.signature-species-detail-intro').getBoundingClientRect();return {imageBottom:i.bottom,titleTop:t.top}}''',sid)
      assert geometry['titleTop'] >= geometry['imageBottom'], (width,sid,geometry)

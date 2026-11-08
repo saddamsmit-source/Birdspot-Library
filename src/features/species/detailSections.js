@@ -11,7 +11,7 @@ import { monthSet, MONTH_NAMES } from '../../data/seasons.js';
 import { DISTRIBUTION, GBIF_YEARS, MAP_CELL, MAP_COLUMNS, MAP_MIN_RECORDS, MAP_PATHS, MAP_VIEW_BOX } from '../../data/speciesDistribution.js';
 import { GUIDE_COMPARISONS, comparisonSource } from './guideComparisons.js';
 import { GUIDE_PHOTOS } from './guidePhotos.js';
-import { GUIDE_AUDIO, GUIDE_PLUMAGE, GUIDE_POSES } from './guideMedia.js';
+import { GUIDE_AUDIO, GUIDE_HEROES, GUIDE_PLUMAGE, GUIDE_POSES } from './guideMedia.js';
 import { photoInfoMarkup } from '../../utils/photoInfo.js';
 
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -93,11 +93,11 @@ function tile(ic, label, value, extra = '') {
 }
 
 const PLUMAGE = [
-  ['adult_m', 'male', 'Man'], ['adult_f', 'female', 'Vrouw'],
+  ['adult_m', 'male', 'Mannetje'], ['adult_f', 'female', 'Vrouwtje'], ['juv', 'chick', 'Juveniel'],
   ['breeding', 'sun', 'Broedkleed', 'voorjaar en zomer'],
   ['winter', 'snow', 'Winterkleed', 'najaar en winter'],
   ['eclipse', 'moon', 'Eclipskleed', 'zomerrui'],
-  ['juv', 'chick', 'Juveniel'], ['jaarling', 'chick', 'Jaarling'],
+  ['jaarling', 'chick', 'Jaarling'],
 ];
 const speciesById = new Map(SPECIES.map(bird => [bird.id, bird]));
 
@@ -119,8 +119,65 @@ function fieldPhoto(photo) {
   </button>${photoInfoMarkup(photo)}</div>`;
 }
 
-function plumageCard(ic, title, text, badge, photo) {
-  return `<div class="sd-plumage">${icon(ic)}<div><strong>${esc(title)}${badge ? `<span class="sd-badge">${esc(badge)}</span>` : ''}</strong><p>${esc(text)}</p>${photo ? fieldPhoto(photo) : ''}</div></div>`;
+export function guideHeroPhoto(id) {
+  const image = GUIDE_HEROES[id];
+  if (!image) return GUIDE_PHOTOS[id];
+  return [...(GUIDE_POSES[id] || []), ...Object.values(GUIDE_PLUMAGE[id] || {})]
+    .find(photo => photo.image === image) || GUIDE_PHOTOS[id];
+}
+
+function photoRole(photo) {
+  if (photo.age === 'juvenile') return 'juv';
+  if (photo.sex === 'male') return 'adult_m';
+  if (photo.sex === 'female') return 'adult_f';
+}
+
+export function guidePlumageGroups(s) {
+  const {id} = s;
+  const plumage = s.plumage || {};
+  const poses = GUIDE_POSES[id] || [];
+  const main = GUIDE_PHOTOS[id];
+  const sharedAdult = Boolean(plumage.adult_m && !plumage.adult_f);
+  const groups = PLUMAGE.flatMap(([key, icon, title, badge]) => {
+    const shared = key === 'adult_m' && sharedAdult;
+    const variant = plumagePhoto(id, key);
+    const photos = poses.filter(photo => photoRole(photo) === key);
+    if (main && photoRole(main) === key) photos.unshift(main);
+    if (variant && (!shared || photoRole(variant) === key)) photos.unshift(variant);
+    const text = shared ? null : plumage[key];
+    return photos.length || text ? [{key, icon, title, text, badge, photos}] : [];
+  });
+  if (sharedAdult) {
+    const variant = plumagePhoto(id, 'adult_m');
+    const photos = variant && !photoRole(variant) ? [variant] : [];
+    const badge = s.guideReview?.similarSexes ? 'Man en vrouw lijken op elkaar' : '';
+    const index = groups.findIndex(group => !['adult_m', 'adult_f', 'juv'].includes(group.key));
+    groups.splice(index < 0 ? groups.length : index, 0, {
+      key: 'adult', icon: 'equal', title: 'Volwassen', text: plumage.adult_m, badge, photos,
+    });
+  }
+  return groups;
+}
+
+function plumageCard({key, icon: iconName, title, text, badge, photos}) {
+  const gallery = photos.map(photo => {
+    const label = photo.label || (photo.flight ? 'In vlucht' : '');
+    return `<figure class="sd-plumage-photo">${fieldPhoto(photo)}${label ? `<figcaption>${esc(label)}</figcaption>` : ''}${photo.note ? `<p>${esc(photo.note)}</p>` : ''}</figure>`;
+  });
+  return `<div class="sd-plumage" data-plumage="${key}">${icon(iconName)}<div><strong>${esc(title)}${badge ? `<span class="sd-badge">${esc(badge)}</span>` : ''}</strong>${text ? `<p>${esc(text)}</p>` : ''}${gallery.length ? `<div class="sd-plumage-gallery">${gallery.join('')}</div>` : ''}</div></div>`;
+}
+
+function comparePlumages(groups) {
+  const cards = groups.filter(group => ['adult_m', 'adult_f', 'juv'].includes(group.key))
+    .filter(group => group.text || group.photos.length);
+  if (cards.length < 2) return '';
+  return '<section class="sd-plumage-comparison" aria-label="Kleden vergelijken"><h3 class="sd-h">Kleden vergelijken</h3>' +
+    '<details><summary>Bekijk de kleden naast elkaar</summary><div class="sd-compare-grid">' +
+    cards.map(({title, text, photos}) => {
+      const photo = photos[0];
+      const marks = text || photo?.visualCheck;
+      return `<div class="sd-compare-card"><strong>${esc(title)}</strong>${photo ? fieldPhoto(photo) : ''}${marks ? `<p>${esc(marks)}</p>` : ''}</div>`;
+    }).join('') + '</div></details></section>';
 }
 
 function flightPhoto(id) {
@@ -132,14 +189,16 @@ function flightPhoto(id) {
     .map(kind => variants?.[kind]).find(photo => photo?.flight);
 }
 
-function posesPanel(id, takePhoto) {
-  const photos = (GUIDE_POSES[id] || []).filter(takePhoto);
+function posesPanel(id, takePhoto, hasFlightComparison) {
+  const main = GUIDE_PHOTOS[id];
+  const original = main && main !== guideHeroPhoto(id) ? [main] : [];
+  const photos = [...(GUIDE_POSES[id] || []), ...original]
+    .filter(photo => !photoRole(photo) && (!photo.flight || !hasFlightComparison) && takePhoto(photo));
   if (!photos.length) return '';
-  const title = photos.some(photo => /vlucht|biddend/i.test(photo.label)) && photos.length > 1
-    ? 'Zittend en in vlucht' : 'Herkenning in beeld';
+  const title = photos.every(photo => photo.flight) ? 'In vlucht' : 'Overige herkenningsfoto’s';
   return `<section class="sd-poses" aria-label="${title}"><h3 class="sd-h">${title}</h3>` +
     '<div class="sd-compare-grid">' + photos.map(photo =>
-      `<div class="sd-compare-card"><strong>${esc(photo.label)}</strong>${fieldPhoto(photo)}<p>${esc(photo.note)}</p></div>`
+      `<div class="sd-compare-card"><strong>${esc(photo.label || (photo.flight ? 'In vlucht' : 'Soortportret'))}</strong>${fieldPhoto(photo)}${photo.note ? `<p>${esc(photo.note)}</p>` : ''}</div>`
     ).join('') + '</div></section>';
 }
 
@@ -204,7 +263,6 @@ export function recognitionPanel(s, life = null) {
     keys.forEach(key => displayed.add(key));
     return true;
   };
-  takePhoto(GUIDE_PHOTOS[s.id]);
   const comparisons = GUIDE_COMPARISONS.filter(pair => pair.birds.some(bird => bird.id === s.id));
   const regular = comparisons.filter(pair => !pair.flight);
   const flight = comparisons.filter(pair => pair.flight);
@@ -218,30 +276,18 @@ export function recognitionPanel(s, life = null) {
   if (s.fieldmarks) {
     out.push(`<div class="sd-callout">${icon('eye')}<p>${esc(s.fieldmarks)}</p></div>`);
   }
+  const groups = guidePlumageGroups(s).map(group => ({...group, photos: group.photos.filter(takePhoto)}));
+  if (groups.length) out.push('<h3 class="sd-h">Verenkleed</h3><div class="sd-plumage-list">' + groups.map(plumageCard).join('') + '</div>');
+
+  takePhoto(guideHeroPhoto(s.id));
+  out.push(posesPanel(s.id, takePhoto, flight.length > 0));
+  out.push(comparePlumages(groups));
   if (flight.length) {
     out.push('<section aria-label="Vluchtvergelijking"><h3 class="sd-h">Vluchtvergelijking</h3>' +
       comparisonsPanel(s.id, flight, takePhoto) + '</section>');
-  } else {
-    const photo = flightPhoto(s.id);
-    if (takePhoto(photo)) {
-      const title = photo.sex ? photo.label : 'In vlucht';
-      const note = photo.sex ? `<p>${esc(photo.note)}</p>` : '';
-      out.push(`<section aria-label="In vlucht"><h3 class="sd-h">${esc(title)}</h3>${fieldPhoto(photo)}${note}</section>`);
-    }
   }
-  const p = s.plumage;
-  if (p) {
-    const cards = PLUMAGE.filter(([key]) => p[key]).map(([key, ic, label, badge]) => {
-      const adult = key === 'adult_m' && !p.adult_f;
-      const note = adult && s.guideReview?.similarSexes ? 'Man en vrouw lijken op elkaar' : badge;
-      const photo = plumagePhoto(s.id, key);
-      return plumageCard(adult ? 'equal' : ic, adult ? 'Volwassen' : label, p[key], note, takePhoto(photo) ? photo : null);
-    });
-    if (cards.length) out.push('<h3 class="sd-h">Verenkleed</h3><div class="sd-plumage-list">' + cards.join('') + '</div>');
-  }
-  out.push(posesPanel(s.id, takePhoto));
-  out.push(`<div id="sdVoice" class="sd-voice-section">${voicePanel(s, life?.voice)}</div>`);
   if (regular.length) out.push('<h3 class="sd-h">Lijkt op</h3>' + comparisonsPanel(s.id, regular, takePhoto));
+  out.push(`<div id="sdVoice" class="sd-voice-section">${voicePanel(s, life?.voice)}</div>`);
   if (s.compact) {
     out.push(`<p class="sd-note">${icon('info')}Zeldzame dwaalgast: een uitgebreide beschrijving volgt nog.</p>`);
   }
