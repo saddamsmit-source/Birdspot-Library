@@ -1,5 +1,7 @@
 /** Contract checks for guide photo grouping. Browser interaction is covered separately. */
 import assert from 'node:assert/strict';
+import { execFileSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
 import { readFileSync } from 'node:fs';
 import { SPECIES } from '../src/data/species.js';
 import { GUIDE_AUDIO, GUIDE_HEROES, GUIDE_PLUMAGE, GUIDE_POSES } from '../src/features/species/guideMedia.js';
@@ -57,5 +59,21 @@ for (const id of ['sp008', 'sp009']) {
   const s = species.get(id);
   assert.ok(wherePanel(s).includes(s.photoTip));
   assert.ok(GUIDE_PLUMAGE[id].juv && GUIDE_AUDIO[id].length);
+}
+const openQueue = JSON.parse(execFileSync(process.execPath, [
+  fileURLToPath(new URL('../tools/species/guide_coverage.mjs', import.meta.url)),
+  '--open-photo-roles',
+], { encoding: 'utf8' }));
+assert.equal(openQueue.openPhotoRoles.length, openQueue.summary.speciesWithOpenPhotoRoles);
+assert.ok(openQueue.summary.picturedSpecies >= openQueue.summary.speciesWithOpenPhotoRoles);
+const seenQueueIds = new Set();
+for (const bird of openQueue.openPhotoRoles) {
+  assert.ok(!seenQueueIds.has(bird.id), `Duplicate review queue species: ${bird.id}`);
+  seenQueueIds.add(bird.id);
+  assert.ok(bird.mainPhoto && bird.missingRoles.length, `Invalid review queue item: ${bird.id}`);
+  assert.ok(bird.missingRoles.every(role => ['adult_m', 'adult_f', 'juv'].includes(role)),
+    `Unknown sex/age role: ${bird.id}`);
+  assert.ok(bird.filledRoles.every(role => !bird.missingRoles.includes(role)),
+    `Conflicting role: ${bird.id}`);
 }
 console.log(`VERIFIED main photos, retained assets, licensed galleries and comparison order across ${picturedSpecies.size} photographed species`);
