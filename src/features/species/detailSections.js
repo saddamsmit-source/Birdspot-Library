@@ -12,6 +12,7 @@ import { DISTRIBUTION, GBIF_YEARS, MAP_CELL, MAP_COLUMNS, MAP_MIN_RECORDS, MAP_P
 import { GUIDE_COMPARISONS, comparisonSource } from './guideComparisons.js';
 import { GUIDE_PHOTOS } from './guidePhotos.js';
 import { GUIDE_AUDIO, GUIDE_PLUMAGE, GUIDE_POSES } from './guideMedia.js';
+import { photoInfoMarkup } from '../../utils/photoInfo.js';
 
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
@@ -113,9 +114,9 @@ function mediaCredit(media) {
 }
 
 function fieldPhoto(photo) {
-  return `<button type="button" class="sd-field-photo" data-guide-image="${esc(photo.image)}" aria-label="Vergroot foto: ${esc(photo.alt)}">
+  return `<div class="photo-info-frame"><button type="button" class="sd-field-photo" data-guide-image="${esc(photo.image)}" aria-label="Vergroot foto: ${esc(photo.alt)}">
     <img src="${esc(photo.image)}" alt="${esc(photo.alt)}" loading="lazy">
-  </button>${mediaCredit(photo)}`;
+  </button>${photoInfoMarkup(photo)}</div>`;
 }
 
 function plumageCard(ic, title, text, badge, photo) {

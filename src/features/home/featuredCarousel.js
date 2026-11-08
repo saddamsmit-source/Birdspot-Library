@@ -7,6 +7,7 @@
  */
 import { FEATURED_BIRDS, advance, loadPosition, savePosition } from './specialBirds.js';
 import { SPECIES, CATEGORY_BADGES } from '../../data/species.js';
+import { closePhotoInfo, photoInfoMarkup } from '../../utils/photoInfo.js';
 
 const byId = new Map(SPECIES.map(s => [s.id, s]));
 const SAVE_EVERY_MS = 5_000;
@@ -65,23 +66,24 @@ export function initFeaturedCarousel(el, ctx) {
     latin.textContent = bird.latin;
     place.textContent = info.recognition;
     if (presence) presence.textContent = info.presence;
-    credit.textContent = 'Foto: ' + bird.author + ' · ' + bird.license + ' · Wikimedia Commons';
-    credit.href = bird.source; credit.target = '_blank'; credit.rel = 'noopener noreferrer';
+    credit.innerHTML = photoInfoMarkup(bird);
     // volgende foto alvast laden, zodat de wissel direct is
     const next = FEATURED_BIRDS[(pos.index + 1) % FEATURED_BIRDS.length];
     if (!motion.matches && !manuallyPaused && next && next !== bird) { const pre = new Image(); pre.src = next.image; }
   }
 
+  const detailsOpen = () => Boolean(stage.querySelector('details[open]'));
+
   function tick() {
     const now = performance.now();
     pos = advance(pos, now - lastTick);
     lastTick = now;
-    show();
+    if (!detailsOpen()) show();
     if (now - lastSave >= SAVE_EVERY_MS) { savePosition(pos); lastSave = now; }
   }
 
   function start() {
-    if (destroyed || ctx.destroyed || document.hidden || timer || motion.matches || manuallyPaused) return;
+    if (destroyed || ctx.destroyed || document.hidden || timer || motion.matches || manuallyPaused || detailsOpen()) return;
     lastTick = lastSave = performance.now();
     show();
     timer = setInterval(tick, 1000);
@@ -100,13 +102,18 @@ export function initFeaturedCarousel(el, ctx) {
       toggle.setAttribute('aria-pressed', String(manuallyPaused));
       toggle.setAttribute('aria-label', manuallyPaused ? 'Diashow hervatten' : 'Diashow pauzeren');
     }
-    if (paused || document.hidden) stop();
+    if (paused || document.hidden || detailsOpen()) stop();
     else start();
   };
   const onToggle = () => {
     manuallyPaused = !manuallyPaused;
     updateMotion();
   };
+  const onKey = event => {
+    if (event.key === 'Escape' && closePhotoInfo(stage)) event.stopPropagation();
+  };
+  stage.addEventListener('toggle', updateMotion, true);
+  stage.addEventListener('keydown', onKey);
   toggle?.addEventListener('click', onToggle);
   motion.addEventListener('change', updateMotion);
   const onVis = updateMotion;
@@ -120,6 +127,8 @@ export function initFeaturedCarousel(el, ctx) {
     stop();
     destroyed = true;
     document.removeEventListener('visibilitychange', onVis);
+    stage.removeEventListener('toggle', updateMotion, true);
+    stage.removeEventListener('keydown', onKey);
     toggle?.removeEventListener('click', onToggle);
     motion.removeEventListener('change', updateMotion);
     window.removeEventListener('pagehide', onHide);

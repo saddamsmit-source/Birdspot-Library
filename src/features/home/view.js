@@ -122,6 +122,7 @@ function buildSkeleton() {
           <path class="featured-motion-play" d="M8 4v16l12-8z"/>
         </svg>
       </button>
+      <div id="featuredBirdCredit" class="featured-photo-info"></div>
       <div class="featured-birds__caption">
         <p class="field-eyebrow">Vandaag in beeld</p>
         <span class="featured-birds__group" id="featuredBirdGroup"></span>
@@ -135,8 +136,6 @@ function buildSkeleton() {
             <p class="featured-birds__presence" id="featuredBirdPresence"></p>
           </details>
         </div>
-        <a id="featuredBirdCredit" class="featured-birds__credit"
-          rel="noopener noreferrer" target="_blank" href="https://commons.wikimedia.org/">Fotobron</a>
       </div>
     </section>
 

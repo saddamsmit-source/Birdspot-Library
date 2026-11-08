@@ -32,7 +32,15 @@ def main():
      p.wait_for_function('(id)=>{const i=document.querySelector("#detailThumb-"+id+" img");return i&&i.complete&&i.naturalWidth>0}',arg=sid)
      assert hero.get_attribute('src')==photo['image']
      assert hero.evaluate('(i)=>getComputedStyle(i).objectFit')=='contain'
-     assert p.locator('.species-guide-credit').is_visible()
+     credit=p.locator(f'#detailThumb-{sid} .photo-info')
+     assert credit.locator('summary').is_visible()
+     assert not credit.locator('.photo-info__panel').is_visible()
+     if sid == 'sp045':
+      credit.locator('summary').click()
+      assert credit.get_by_role('link', name='Open fotobron').get_attribute('href') == photo['source']
+      assert photo['author'] in credit.inner_text()
+      p.keyboard.press('Escape')
+      assert not credit.locator('.photo-info__panel').is_visible()
      # The title must not obscure the photo.
      geometry=p.evaluate('''(id)=>{const i=document.querySelector('#detailThumb-'+id+' img').getBoundingClientRect();const t=document.querySelector('.signature-species-detail-intro').getBoundingClientRect();return {imageBottom:i.bottom,titleTop:t.top}}''',sid)
      assert geometry['titleTop'] >= geometry['imageBottom'], (width,sid,geometry)

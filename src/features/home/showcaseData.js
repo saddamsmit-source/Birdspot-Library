@@ -16,7 +16,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1200,
   "author": "dog_funtom",
   "license": "CC BY-SA 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Oriolus_oriolus_from_behind_looking_right.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Oriolus_oriolus_from_behind_looking_right.jpg",
+  "file": "Oriolus oriolus from behind looking right.jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp268",
@@ -30,7 +32,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1067,
   "author": "Hobbyfotowiki",
   "license": "CC0",
-  "source": "https://commons.wikimedia.org/wiki/File:Bearded_reedling_(Panurus_biarmicus).jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Bearded_reedling_(Panurus_biarmicus).jpg",
+  "file": "Bearded reedling (Panurus biarmicus).jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp009",
@@ -44,7 +48,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1277,
   "author": "john581",
   "license": "CC BY 2.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_in_flight_(17659253649).jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_in_flight_(17659253649).jpg",
+  "file": "Falco peregrinus in flight (17659253649).jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp252",
@@ -58,7 +64,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1067,
   "author": "Charles J. Sharp",
   "license": "CC BY-SA 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:White-tailed_eagle_(Haliaeetus_albicilla)_in_flight_2.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:White-tailed_eagle_(Haliaeetus_albicilla)_in_flight_2.jpg",
+  "file": "White-tailed eagle (Haliaeetus albicilla) in flight 2.jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp463",
@@ -73,6 +81,8 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "author": "Stefan Krause, Germany",
   "license": "CC BY-SA 3.0",
   "source": "https://commons.wikimedia.org/wiki/File:Gyps_fulvus_in_flight.jpg",
+  "file": "Gyps fulvus in flight.jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP",
   "info": "Enorme zandbruine gier met lichte kale kop en witte kraag; zweeft op brede vleugels met lange 'vingers', soms in groepen."
  },
  {
@@ -87,7 +97,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1143,
   "author": "Hansueli Krapf",
   "license": "CC BY-SA 3.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Milvus_milvus_(2011-04-17_Switzerland_Kanton_Schaffhausen_Gennersbrunn_2).jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Milvus_milvus_(2011-04-17_Switzerland_Kanton_Schaffhausen_Gennersbrunn_2).jpg",
+  "file": "Milvus milvus (2011-04-17 Switzerland Kanton Schaffhausen Gennersbrunn 2).jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp084",
@@ -101,7 +113,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1067,
   "author": "Bernard Gagnon",
   "license": "CC BY-SA 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Purple_heron_in_Zimbabwe.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Purple_heron_in_Zimbabwe.jpg",
+  "file": "Purple heron in Zimbabwe.jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp143",
@@ -115,7 +129,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1200,
   "author": "El Golli Mohamed",
   "license": "CC BY-SA 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Avocette_%C3%A9l%C3%A9gante060_Thyna.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Avocette_%C3%A9l%C3%A9gante060_Thyna.jpg",
+  "file": "Avocette élégante060 Thyna.jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp225",
@@ -129,7 +145,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1000,
   "author": "christoph_moning",
   "license": "CC BY 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Ichthyaetus_melanocephalus,_Ferrara,_Ravenna,_Italy_1.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Ichthyaetus_melanocephalus,_Ferrara,_Ravenna,_Italy_1.jpg",
+  "file": "Ichthyaetus melanocephalus, Ferrara, Ravenna, Italy 1.jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp255",
@@ -143,7 +161,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1067,
   "author": "Stephan Sprinz",
   "license": "CC BY 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Sumpfohreule_(Asio_flammeus)_auf_Spiekeroog_-_Nationalpark_nieders%C3%A4chsisches_Wattenmeer.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Sumpfohreule_(Asio_flammeus)_auf_Spiekeroog_-_Nationalpark_nieders%C3%A4chsisches_Wattenmeer.jpg",
+  "file": "Sumpfohreule (Asio flammeus) auf Spiekeroog - Nationalpark niedersächsisches Wattenmeer.jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp018",
@@ -157,7 +177,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1600,
   "author": "xulescu_g",
   "license": "CC BY-SA 2.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Dryocopus_martius,_Perersberg,_Brasov,_Romania_0_(cropped).jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Dryocopus_martius,_Perersberg,_Brasov,_Romania_0_(cropped).jpg",
+  "file": "Dryocopus martius, Perersberg, Brasov, Romania 0 (cropped).jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp075",
@@ -171,7 +193,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1600,
   "author": "Andreas Trepte",
   "license": "CC BY-SA 2.5",
-  "source": "https://commons.wikimedia.org/wiki/File:Common_Kingfisher_Alcedo_atthis.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Common_Kingfisher_Alcedo_atthis.jpg",
+  "file": "Common Kingfisher Alcedo atthis.jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp142",
@@ -185,7 +209,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1600,
   "author": "Andreas Trepte",
   "license": "CC BY-SA 2.5",
-  "source": "https://commons.wikimedia.org/wiki/File:Common_crane_grus_grus.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Common_crane_grus_grus.jpg",
+  "file": "Common crane grus grus.jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp223",
@@ -199,7 +225,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1067,
   "author": "Charles J. Sharp",
   "license": "CC BY-SA 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Puffin_(Fratercula_arctica)_with_lesser_sand_eels_(Ammodytes_tobianus).jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Puffin_(Fratercula_arctica)_with_lesser_sand_eels_(Ammodytes_tobianus).jpg",
+  "file": "Puffin (Fratercula arctica) with lesser sand eels (Ammodytes tobianus).jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp186",
@@ -213,7 +241,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1068,
   "author": "Christoph Moning",
   "license": "CC BY 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Branta_ruficollis_94321119.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Branta_ruficollis_94321119.jpg",
+  "file": "Branta ruficollis 94321119.jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp262",
@@ -227,7 +257,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1063,
   "author": "Бусел В.А.",
   "license": "CC BY-SA 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Lanius_collurio_%D1%81%D0%BE%D1%80%D0%BE%D0%BF%D1%83%D0%B4_%D1%81%D1%96%D1%80%D0%B8%D0%B9.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Lanius_collurio_%D1%81%D0%BE%D1%80%D0%BE%D0%BF%D1%83%D0%B4_%D1%81%D1%96%D1%80%D0%B8%D0%B9.jpg",
+  "file": "Lanius collurio соропуд сірий.jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp108",
@@ -241,7 +273,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1067,
   "author": "Eugene Stolyarov",
   "license": "CC BY-SA 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:%D0%9E%D1%87%D0%B5%D1%80%D0%B5%D1%82%D1%8F%D0%BD%D0%BA%D0%B0_%D0%B2%D0%B5%D0%BB%D0%B8%D0%BA%D0%B0_(%D0%B0%D0%BD%D0%B3%D0%BB._Great_Reed_Warbler;_%D0%BB%D0%B0%D1%82._Acrocephalus_arundinaceus).jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:%D0%9E%D1%87%D0%B5%D1%80%D0%B5%D1%82%D1%8F%D0%BD%D0%BA%D0%B0_%D0%B2%D0%B5%D0%BB%D0%B8%D0%BA%D0%B0_(%D0%B0%D0%BD%D0%B3%D0%BB._Great_Reed_Warbler;_%D0%BB%D0%B0%D1%82._Acrocephalus_arundinaceus).jpg",
+  "file": "Очеретянка велика (англ. Great Reed Warbler; лат. Acrocephalus arundinaceus).jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp261",
@@ -255,7 +289,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1600,
   "author": "Rodrigo de Almeida",
   "license": "CC BY 2.0",
-  "source": "https://commons.wikimedia.org/wiki/File:%C3%93gea_(Falco_subbuteo).jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:%C3%93gea_(Falco_subbuteo).jpg",
+  "file": "Ógea (Falco subbuteo).jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp247",
@@ -269,7 +305,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1600,
   "author": "Alpsdake",
   "license": "CC BY-SA 3.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Pandion_haliaetus_(in_flight).JPG"
+  "source": "https://commons.wikimedia.org/wiki/File:Pandion_haliaetus_(in_flight).JPG",
+  "file": "Pandion haliaetus (in flight).JPG",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp462",
@@ -284,6 +322,8 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "author": "Juan Lacruz",
   "license": "CC BY-SA 3.0",
   "source": "https://commons.wikimedia.org/wiki/File:Buitre_negro_1.jpg",
+  "file": "Buitre negro 1.jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP",
   "info": "Grootste roofvogel van Europa: egaal donkerbruin met plankvormige vleugels en een kale, blauwgrijze kop."
  },
  {
@@ -298,7 +338,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1067,
   "author": "Stephan Sprinz",
   "license": "CC BY 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:M%C3%A4nnliche_Rohrweihe_im_Flug_04.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:M%C3%A4nnliche_Rohrweihe_im_Flug_04.jpg",
+  "file": "Männliche Rohrweihe im Flug 04.jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp243",
@@ -312,7 +354,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1200,
   "author": "MPF",
   "license": "CC BY-SA 3.0",
-  "source": "https://commons.wikimedia.org/wiki/File:2015-10-19_Botaurus_stellaris,_Gosforth_Park_5.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:2015-10-19_Botaurus_stellaris,_Gosforth_Park_5.jpg",
+  "file": "2015-10-19 Botaurus stellaris, Gosforth Park 5.jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp101",
@@ -326,7 +370,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1200,
   "author": "Hans Hillewaert",
   "license": "CC BY-SA 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Limosa_limosa_(calling).jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Limosa_limosa_(calling).jpg",
+  "file": "Limosa limosa (calling).jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp163",
@@ -340,7 +386,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1200,
   "author": "Ekaterina Chernetsova (Papchinskaya) from Saint-Petersburg, Russia",
   "license": "CC BY 2.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Hydrocoloeus_minutus_Russia_01.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Hydrocoloeus_minutus_Russia_01.jpg",
+  "file": "Hydrocoloeus minutus Russia 01.jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp254",
@@ -354,7 +402,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1600,
   "author": "Alvesgaspar",
   "license": "CC BY-SA 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Bubo_Mafra_November_2022-2.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Bubo_Mafra_November_2022-2.jpg",
+  "file": "Bubo Mafra November 2022-2.jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp020",
@@ -368,7 +418,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1200,
   "author": "Hyppolyte de Saint-Rambert",
   "license": "CC BY 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Placey_(Doubs)_Pic_mar_hdsr_1DMkIII_2018_03_18_9999_27.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Placey_(Doubs)_Pic_mar_hdsr_1DMkIII_2018_03_18_9999_27.jpg",
+  "file": "Placey (Doubs) Pic mar hdsr 1DMkIII 2018 03 18 9999 27.jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp257",
@@ -382,7 +434,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1118,
   "author": "El Golli Mohamed",
   "license": "CC BY-SA 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Gu%C3%A9pier_d%27Europe_ichkeul_(Merops_apiaster)_European_Bee-eater.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Gu%C3%A9pier_d%27Europe_ichkeul_(Merops_apiaster)_European_Bee-eater.jpg",
+  "file": "Guépier d'Europe ichkeul (Merops apiaster) European Bee-eater.jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp192",
@@ -396,7 +450,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1067,
   "author": "Scosse",
   "license": "CC BY-SA 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Gallo_forcello.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Gallo_forcello.jpg",
+  "file": "Gallo forcello.jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp218",
@@ -410,7 +466,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 934,
   "author": "Noel Reynolds",
   "license": "CC BY 2.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Great_Skua_(cropped).jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Great_Skua_(cropped).jpg",
+  "file": "Great Skua (cropped).jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp189",
@@ -424,7 +482,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1282,
   "author": "Dr. Raju Kasambe",
   "license": "CC BY-SA 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Ferruginous_Pochard_Aythya_nyroca_Male_by_Dr._Raju_Kasambe_DSCN2746_(12).jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Ferruginous_Pochard_Aythya_nyroca_Male_by_Dr._Raju_Kasambe_DSCN2746_(12).jpg",
+  "file": "Ferruginous Pochard Aythya nyroca Male by Dr. Raju Kasambe DSCN2746 (12).jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp042",
@@ -438,7 +498,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1068,
   "author": "Поляков Александр",
   "license": "CC BY 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Carpodacus_erythrinus_303190528.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Carpodacus_erythrinus_303190528.jpg",
+  "file": "Carpodacus erythrinus 303190528.jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp274",
@@ -452,7 +514,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1600,
   "author": "Christian Lindner",
   "license": "CC BY-SA 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Savi%27s_Warbler_(Locustella_luscinioides),_Vogelfreist%C3%A4tte_Glender_Wiesen,_Coburg,_Germany.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Savi%27s_Warbler_(Locustella_luscinioides),_Vogelfreist%C3%A4tte_Glender_Wiesen,_Coburg,_Germany.jpg",
+  "file": "Savi's Warbler (Locustella luscinioides), Vogelfreistätte Glender Wiesen, Coburg, Germany.jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp259",
@@ -466,7 +530,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1280,
   "author": "Andy Morffew from Itchen Abbas, Hampshire, UK",
   "license": "CC BY 2.0",
-  "source": "https://commons.wikimedia.org/wiki/File:A_Sweet_Something_-_Flickr_-_Andy_Morffew.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:A_Sweet_Something_-_Flickr_-_Andy_Morffew.jpg",
+  "file": "A Sweet Something - Flickr - Andy Morffew.jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp464",
@@ -481,6 +547,8 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "author": "Hobbyfotowiki",
   "license": "CC0",
   "source": "https://commons.wikimedia.org/wiki/File:Short-toed_snake_eagle_(Circaetus_gallicus),_Potokaki_Wetland.jpg",
+  "file": "Short-toed snake eagle (Circaetus gallicus), Potokaki Wetland.jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP",
   "info": "Grote lichte arend met ronde, uilachtige kop en gele ogen; bidt boven open land en vangt slangen en hagedissen."
  },
  {
@@ -495,7 +563,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1067,
   "author": "Hari K Patibanda",
   "license": "CC BY 2.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Beautiful_Montagu%27s_Harrier_in_Flight_(51042548717).jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Beautiful_Montagu%27s_Harrier_in_Flight_(51042548717).jpg",
+  "file": "Beautiful Montagu's Harrier in Flight (51042548717).jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp244",
@@ -509,7 +579,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1067,
   "author": "Alexis Lours",
   "license": "CC BY 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Little_Bittern_2025_06_14_02.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Little_Bittern_2025_06_14_02.jpg",
+  "file": "Little Bittern 2025 06 14 02.jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp208",
@@ -523,7 +595,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1067,
   "author": "Lucwrte",
   "license": "CC BY-SA 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Male_Ruff_(Calidris_pugnax)_in_Finnmark.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Male_Ruff_(Calidris_pugnax)_in_Finnmark.jpg",
+  "file": "Male Ruff (Calidris pugnax) in Finnmark.jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp233",
@@ -537,7 +611,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1067,
   "author": "U. S. Fish and Wildlife Service - Northeast Region",
   "license": "Public domain",
-  "source": "https://commons.wikimedia.org/wiki/File:Black_tern_flying_(7402339080).jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Black_tern_flying_(7402339080).jpg",
+  "file": "Black tern flying (7402339080).jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp258",
@@ -551,7 +627,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1123,
   "author": "Donald Hobern from Copenhagen, Denmark",
   "license": "CC BY 2.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Jynx_torquilla_(34536504885).jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Jynx_torquilla_(34536504885).jpg",
+  "file": "Jynx torquilla (34536504885).jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp256",
@@ -565,7 +643,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1010,
   "author": "Dûrzan Cîrano",
   "license": "CC BY-SA 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Upupa_epops_2019.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Upupa_epops_2019.jpg",
+  "file": "Upupa epops 2019.jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp200",
@@ -579,7 +659,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1067,
   "author": "Ron Knight from Seaford, East Sussex, United Kingdom",
   "license": "CC BY 2.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Crex_crex,_Beachy_Head_1.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Crex_crex,_Beachy_Head_1.jpg",
+  "file": "Crex crex, Beachy Head 1.jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp282",
@@ -593,7 +675,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1067,
   "author": "Hari K Patibanda",
   "license": "CC BY 2.0",
-  "source": "https://commons.wikimedia.org/wiki/File:An_Adult_Rosy_Starling_Looking_for_food_(50620492117).jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:An_Adult_Rosy_Starling_Looking_for_food_(50620492117).jpg",
+  "file": "An Adult Rosy Starling Looking for food (50620492117).jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp273",
@@ -607,7 +691,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1066,
   "author": "Сергей Неклюдов",
   "license": "CC BY 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Locustella_fluviatilis_123791068.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Locustella_fluviatilis_123791068.jpg",
+  "file": "Locustella fluviatilis 123791068.jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp249",
@@ -621,7 +707,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1068,
   "author": "caroline legg",
   "license": "CC BY 2.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Hen_Harrier_-_Male.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Hen_Harrier_-_Male.jpg",
+  "file": "Hen Harrier - Male.jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp085",
@@ -635,7 +723,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1598,
   "author": "Mike & Chris",
   "license": "CC BY-SA 2.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Nycticorax_nycticorax_5.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Nycticorax_nycticorax_5.jpg",
+  "file": "Nycticorax nycticorax 5.jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp205",
@@ -649,7 +739,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1067,
   "author": "Andreas Trepte",
   "license": "CC BY-SA 2.5",
-  "source": "https://commons.wikimedia.org/wiki/File:Stelzenl%C3%A4ufer_(Himantopus_himantopus).jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Stelzenl%C3%A4ufer_(Himantopus_himantopus).jpg",
+  "file": "Stelzenläufer (Himantopus himantopus).jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp232",
@@ -663,7 +755,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1000,
   "author": "Pseudopanax at English Wikipedia",
   "license": "Public domain",
-  "source": "https://commons.wikimedia.org/wiki/File:Caspian_tern_flying_with_fish_in_its_beak_against_blue_sky.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Caspian_tern_flying_with_fish_in_its_beak_against_blue_sky.jpg",
+  "file": "Caspian tern flying with fish in its beak against blue sky.jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp481",
@@ -678,6 +772,8 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "author": "Zeynel Cebeci",
   "license": "CC BY-SA 4.0",
   "source": "https://commons.wikimedia.org/wiki/File:Coracias_garrulus_-_European_roller_02.jpg",
+  "file": "Coracias garrulus - European roller 02.jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP",
   "info": "Turkooisblauwe vogel met roodbruine rug en zwarte vleugelpunten; zit op draden en dode takken en duikt op grote insecten."
  },
  {
@@ -692,7 +788,9 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1067,
   "author": "Salvatore De Castro",
   "license": "CC BY-SA 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:European_honey_buzzard_-_Riserva_naturale_Palude_Brabbia_2019-05-29.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:European_honey_buzzard_-_Riserva_naturale_Palude_Brabbia_2019-05-29.jpg",
+  "file": "European honey buzzard - Riserva naturale Palude Brabbia 2019-05-29.jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  },
  {
   "id": "sp241",
@@ -706,6 +804,8 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "height": 1067,
   "author": "מינוזיג - MinoZig",
   "license": "CC BY-SA 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Black_stork_(Ciconia_nigra).jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Black_stork_(Ciconia_nigra).jpg",
+  "file": "Black stork (Ciconia nigra).jpg",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP"
  }
 ]);
