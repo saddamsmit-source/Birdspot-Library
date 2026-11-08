@@ -8,7 +8,7 @@
 import { observedVisually, observedBySound, validPin } from '../sightings/evidence.js';
 import { CATEGORY_BADGES, SPECIES } from '../../data/species.js';
 import { monthSet, MONTH_NAMES } from '../../data/seasons.js';
-import { DISTRIBUTION, GBIF_YEARS, MAP_CELL, MAP_COLUMNS, MAP_PATHS, MAP_VIEW_BOX } from '../../data/speciesDistribution.js';
+import { DISTRIBUTION, GBIF_YEARS, MAP_CELL, MAP_COLUMNS, MAP_MIN_RECORDS, MAP_PATHS, MAP_VIEW_BOX } from '../../data/speciesDistribution.js';
 import { GUIDE_COMPARISONS, comparisonSource } from './guideComparisons.js';
 import { GUIDE_PHOTOS } from './guidePhotos.js';
 import { GUIDE_AUDIO, GUIDE_PLUMAGE, GUIDE_POSES } from './guideMedia.js';
@@ -330,6 +330,34 @@ export function statusPanel(s, life = null) {
   return out.join('');
 }
 
+// These sizes apply to both the map and its legend. Each mark represents a whole grid cell.
+const DISTRIBUTION_BANDS = [
+  { max: 24, size: 20 },
+  { max: 99, size: 34 },
+  { max: 499, size: 46 },
+  { max: Infinity, size: 60 },
+];
+
+function distributionMark(x, y, band) {
+  const { size } = DISTRIBUTION_BANDS[band];
+  return `<rect class="sd-distribution-mark" data-band="${band}" x="${x + (MAP_CELL - size) / 2}"
+    y="${y + (MAP_CELL - size) / 2}" width="${size}" height="${size}" rx="5"/>`;
+}
+
+function distributionLegend() {
+  const rows = DISTRIBUTION_BANDS.map(({ max }, band) => {
+    const min = band === 0 ? MAP_MIN_RECORDS : DISTRIBUTION_BANDS[band - 1].max + 1;
+    const range = Number.isFinite(max) ? `${min}–${max}` : `${min} of meer`;
+    return `<tr><td><svg viewBox="0 0 ${MAP_CELL} ${MAP_CELL}" aria-hidden="true">${distributionMark(0, 0, band)}</svg></td>
+      <td>${range}</td></tr>`;
+  }).join('');
+  return `<table class="sd-distribution-legend">
+    <thead><tr><th scope="col">Kaartteken</th><th scope="col">Openbare meldingen per vak</th></tr></thead>
+    <tbody><tr><td><span class="sd-distribution-blank" aria-hidden="true"></span></td>
+      <td>0–${MAP_MIN_RECORDS - 1} · leeg vak</td></tr>${rows}</tbody>
+  </table>`;
+}
+
 function distributionMap(s) {
   const cells = DISTRIBUTION[s.id]?.[1];
   const title = '<h3 class="sd-h">Verspreiding in Nederland</h3>';
@@ -337,21 +365,18 @@ function distributionMap(s) {
   const kind = presenceColorKind(s.category);
   const status = CATEGORY_BADGES[s.category] || 'Overig';
   const backdrop = ['BEL', 'DEU', 'FRA', 'GBR'].map(key => `<path d="${MAP_PATHS[key]}"/>`).join('');
-  const clouds = cells.map(cell => {
+  const marks = cells.map(([cell, count]) => {
     const x = (cell % MAP_COLUMNS) * MAP_CELL;
     const y = Math.floor(cell / MAP_COLUMNS) * MAP_CELL;
-    return `<rect x="${x - 3}" y="${y - 3}" width="${MAP_CELL + 6}" height="${MAP_CELL + 6}" rx="24"/>`;
+    return distributionMark(x, y, DISTRIBUTION_BANDS.findIndex(({ max }) => count <= max));
   }).join('');
   return `${title}<figure class="sd-distribution" data-month-kind="${kind}">
     <svg class="sd-distribution-map" viewBox="${MAP_VIEW_BOX}" role="img"
-      aria-label="Kaart van Nederland met openbare waarnemingsgebieden voor ${esc(s.nameNL)}">
-      <defs><filter id="sdDistributionBlur">
-        <feGaussianBlur stdDeviation="9"/>
-        <feDropShadow class="sd-distribution-edge" dx="0" dy="0" stdDeviation="6"/>
-      </filter></defs>
+      aria-label="Kaart van Nederland met het aantal openbare meldingen per vak voor ${esc(s.nameNL)}"
+      aria-describedby="sdDistributionNote">
       <path class="sd-distribution-land" fill-rule="evenodd" d="${MAP_PATHS.NLD}"/>
       <path class="sd-distribution-water" d="${MAP_PATHS.water}"/>
-      <g class="sd-distribution-cloud" filter="url(#sdDistributionBlur)">${clouds}</g>
+      <g class="sd-distribution-marks" aria-hidden="true">${marks}</g>
       <g class="sd-distribution-neighbours">${backdrop}</g>
       <path class="sd-distribution-outline" d="${MAP_PATHS.NLD}"/>
       <g class="sd-distribution-labels" aria-hidden="true">
@@ -362,8 +387,10 @@ function distributionMap(s) {
       </g>
     </svg>
     <figcaption>
-      <p class="sd-distribution-key"><span aria-hidden="true"></span> Gebieden met openbare waarnemingen · ${esc(status)}</p>
-      <p class="sd-caption">Alle seizoenen in ${GBIF_YEARS}, samengevoegd per gebied van ongeveer 24 km. Ook buiten de wolk kan de soort voorkomen.</p>
+      ${distributionLegend()}
+      <p class="sd-distribution-key"><span aria-hidden="true"></span> Kleur van de hoofdstatus: ${esc(status)}</p>
+      <p class="sd-caption" id="sdDistributionNote">Een groter kaartteken betekent meer meldingen. Elk vak is ongeveer 24 km breed. Alle seizoenen in ${GBIF_YEARS} zijn samengevoegd.</p>
+      <p class="sd-caption">Plekken die vaker worden bezocht, kunnen meer meldingen hebben. Ook in een leeg vak kan de soort voorkomen.</p>
       <p class="sd-caption">Waarnemingen <a href="https://doi.org/10.15468/aomfnb" target="_blank" rel="noopener noreferrer">eBird via GBIF</a> (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>) · Kaart <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener noreferrer">Natural Earth</a></p>
     </figcaption>
   </figure>`;

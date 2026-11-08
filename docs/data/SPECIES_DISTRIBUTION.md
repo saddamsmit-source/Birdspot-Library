@@ -4,10 +4,22 @@ In **Soorten → vogel → Waar** staat de openbare soortkaart boven **Jouw plek
 
 ## Herkomst en afbakening
 
-- Waarnemingen uit **EOD – eBird Observation Dataset**, Imani et al. (2026), Cornell Lab of Ornithology, via GBIF geraadpleegd op 2026-11-06. Selectie uit 2020–2025, Nederland, aanwezige exemplaren, coördinaten zonder door GBIF gemarkeerde geografische problemen, uitsluitend CC BY 4.0. De waarnemingen zijn geaggregeerd en omgezet naar een lokale kaartlaag. [Dataset en auteurs](https://doi.org/10.15468/aomfnb) · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Waarnemingen uit **EOD – eBird Observation Dataset**, Imani et al. (2026), Cornell Lab of Ornithology, via GBIF geraadpleegd op 2026-11-08. Selectie uit 2020–2025, Nederland, aanwezige exemplaren, coördinaten zonder door GBIF gemarkeerde geografische problemen, uitsluitend CC BY 4.0. De waarnemingen zijn geaggregeerd en omgezet naar een lokale kaartlaag. [Dataset en auteurs](https://doi.org/10.15468/aomfnb) · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - Landgrenzen en binnenwater uit Natural Earth 1:10m, publiek domein. Omgezet naar Web Mercator en vereenvoudigd voor het mobiele overzicht. [Kaartbestanden](https://github.com/nvkelso/natural-earth-vector/tree/master/geojson) · [Gebruiksvoorwaarden](https://www.naturalearthdata.com/about/terms-of-use/)
-- Kaartcellen van ongeveer 24 km breed in Nederland. Een cel wordt getoond vanaf vijf records, en een kaart vanaf drie zichtbare cellen. De bron bepaalt welke waarnemingen publiek zijn. Dwaalgasten, ontsnapte en historische soorten krijgen geen laag. Voor onvoldoende onderbouwing toont de gids een melding. De bron kan meldingen op populaire telplekken oververtegenwoordigen. De laag beschrijft vastgelegde waarnemingsgebieden uit alle seizoenen. Ook buiten de wolk kan de soort voorkomen. Er worden geen aantallen, nestlocaties of exacte punten afgebeeld.
+- Kaartcellen van ongeveer 24 km breed in Nederland. Een cel wordt getoond vanaf vijf records, en een kaart vanaf drie zichtbare cellen. De bron bepaalt welke waarnemingen publiek zijn. Dwaalgasten, ontsnapte en historische soorten krijgen geen laag. Voor onvoldoende onderbouwing toont de gids een melding. De bron kan meldingen op populaire telplekken oververtegenwoordigen. De laag beschrijft vastgelegde waarnemingsgebieden uit alle seizoenen. De kaart toont per vak een klasse van het aantal openbare meldingen. Ook in een leeg vak kan de soort voorkomen. De klasse geeft geen populatieaantal, trefkans, nestlocatie of exacte waarnemingslocatie weer.
 - Deze momentopname toont een kaart voor 292 van de 597 soorten. Van de 319 soorten in de geselecteerde categorieën haalden 27 de drempel niet.
+
+## Legenda en telling
+
+| Kaartteken | Openbare meldingen per vak |
+|---|---:|
+| Leeg | 0–4 |
+| Klein | 5–24 |
+| Middelklein | 25–99 |
+| Middelgroot | 100–499 |
+| Groot | 500 of meer |
+
+Alle vakken hebben dezelfde ruimtelijke schaal. De grootte en tint van het symbool tonen de meldingsklasse. De basiskleur volgt de hoofdstatus van de soort. De legenda gebruikt dezelfde symbolen als de kaart. De aantallen zijn samengevoegd over 2020–2025 en volgen de bestaande bronfilters. Er is geen correctie voor ongelijke telinspanning.
 
 ## Dataset opnieuw bouwen
 
@@ -17,7 +29,7 @@ Installeer `mapbox-vector-tile` en voer uit vanuit de repo-root met Node.js besc
 python tools/species/build_distribution.py /pad/naar/download-cache
 ```
 
-Gebruik voor een nieuwe momentopname een lege cachemap. De generator koppelt op wetenschappelijke naam en GBIF-soortsleutel, vergelijkt het aantal records in de kaarttegel met de bijbehorende zoekopdracht en stopt bij onopgeloste fouten. Voor Witvleugelstern en Witwangstern ontbrak één record in de kaarttegel. Daar zijn de publieke records met dezelfde filters direct geaggregeerd en opnieuw geteld. Het gebundelde bestand bevat per soort de bron-ID en de indices van zichtbare cellen. Het bevat geen ruwe waarnemingen. Noteer bij een volgende datasetversie de gegevensperiode en raadpleegdatum, controleer de bronlicentie opnieuw en verhoog de serviceworkerversie.
+Gebruik voor een nieuwe momentopname een lege cachemap. De generator koppelt op wetenschappelijke naam en GBIF-soortsleutel, vergelijkt het aantal records in de kaarttegel met de bijbehorende zoekopdracht en stopt bij onopgeloste fouten. Voor Witvleugelstern en Witwangstern kunnen de vakken van de GBIF-tegel afwijken van de vakken op basis van de openbare coördinaten, ook bij een gelijk landelijk totaal. Voor deze twee soorten gebruikt de generator daarom de directe telling met dezelfde filters. Daarmee blijven alle vakken uit de vorige kaart behouden. Het gebundelde bestand bevat per soort de bron-ID en paren van vakindex en meldingentotaal voor de zichtbare vakken. Nieuwe tussencaches hebben de suffix `-counts.json`, zodat oude caches zonder aantallen niet worden ingelezen. Het bevat geen ruwe waarnemingen. Noteer bij een volgende datasetversie de gegevensperiode en raadpleegdatum, controleer de bronlicentie opnieuw en verhoog de serviceworkerversie.
 
 ## Functiekaart en learning
 
@@ -27,3 +39,5 @@ Gebruik voor een nieuwe momentopname een lege cachemap. De generator koppelt op 
 
 - L-003 en CAP-BIRD-012. Versie 1.16.4 gebruikte kobaltblauw op lichte kaarten en lichter blauw op donkere kaarten. De berekende contrastverhouding in het vol gevulde deel ging van ongeveer 1,8:1 naar 3,3–4,6:1 tegenover land en water. Op 390 px gecontroleerd voor Rietgors in beide thema’s.
 - Op verzoek volgt de wolk vanaf 1.16.5 de kleur van de hoofdstatus in de maandlegenda. Beide weergaven delen de statuslogica en het kleurentoken. De kaartlegenda noemt de hoofdstatus in tekst. De doorschijnende wolk heeft een zachte contrastrand en bundelt nog steeds waarnemingen uit alle seizoenen van de bronperiode. De kleuren zijn op 390 px gecontroleerd in beide thema’s voor standvogel, zomergast, wintergast, doortrekker, schaarse gast en exoot. De soortdetailtest controleert dat kaart en maandlegenda dezelfde kleur gebruiken bij Rietgors en Boerenzwaluw.
+
+- CAP-BIRD-012, L-017, L-019. De kaart bewaart nu de onderliggende meldingentotalen per vak. De legenda en de kaart gebruiken dezelfde grenzen en symbolen. Test de klassen tegen de brondata en behoud het onderscheid tussen een lage meldingsfrequentie en weinig vogels. De persoonlijke kaart en de offline gidsroute zijn afzonderlijk gecontroleerd.
