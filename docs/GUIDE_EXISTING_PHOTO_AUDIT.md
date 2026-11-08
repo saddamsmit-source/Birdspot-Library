@@ -93,9 +93,9 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp102 | Tureluur | Ja | 4 | Apart beeld |
 | sp104 | Aalscholver | Ja | 3 | Apart beeld |
 | sp105 | Fazant | Ja | 2 | Apart beeld |
-| sp106 | Patrijs | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp108 | Grote Karekiet | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp110 | Rietzanger | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp106 | Patrijs | Ja | 2 | Apart beeld |
+| sp108 | Grote Karekiet | Ja | 2 | Apart beeld |
+| sp110 | Rietzanger | Ja | 2 | Apart beeld |
 | sp112 | Spreeuw | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp113 | Wielewaal | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp114 | Boerenzwaluw | Ja | 1 | Open |
@@ -488,3 +488,15 @@ Basis is concept-PR #85, `748fc60a74460916f5c28446dea8737eb1f33ad4`. Tureluur, A
 CAP-BIRD-012/015. De drie foto’s staan lokaal en elk eenmaal boven het verenkleed. Maker, bron, licentie of publiek-domeinstatus en omzetting naar WebP staan bij de foto. Vergelijk bij watervogels op groter formaat of de poten vrij zijn van het water. Vermeld bij een regionale ondersoort de herkomst als die helpt het beeld te plaatsen. Er staan 49 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Patrijs.
 
 VERIFIED · Mobiele Chromium op 390 px. Zes soortkaarten vanuit appbreed zoeken geopend op basis en kandidaat. De bestaande hoofd- en vluchtfoto’s uit ronde 24 laden. De drie nieuwe foto’s staan elk eenmaal vóór het verenkleed, tonen hun bron en licentie of publiek-domeinstatus en openen met 2× zoom. Ook na offline herladen zijn de drie kaarten en de fotovergroting getest. Alle 310 gidsbeelden en 120 geluidsopnamen zijn na precache offline gedecodeerd. Gidsdekking, volgorde, uniciteit en SHA-256 zijn gecontroleerd. NOT TESTED · Fysiek toestel.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 26
+
+Basis is concept-PR #86, `59d492069a35936a8547086e7e3ede763d2e878e`. Patrijs, Grote Karekiet en Rietzanger hadden elk een hoofdfoto. De zoekronde combineerde meertalige zoektermen, de Commons-soortcategorieën en miniaturen van research-grade iNaturalist-waarnemingen met CC0, CC BY of CC BY-SA op fotoniveau. De gekozen foto’s zijn op groter formaat gecontroleerd op vrije vlucht, herkenningskenmerken en rechten.
+
+- Patrijs · Safina Rezeda · CC BY 4.0. Eén Patrijs vliegt laag over een veld. De uitsnede houdt de hele vogel in beeld en toont de compacte bouw, afgeronde vleugels en korte roodbruine staart. [Bronfoto](https://www.inaturalist.org/photos/77252585) · [Waarneming](https://www.inaturalist.org/observations/48680332).
+- Grote Karekiet · Ángel Marcos Luengo Bello · CC BY 4.0. De vogel vliegt van opzij langs riet. De stevige snavel en lichte wenkbrauwstreep zijn zichtbaar. Bij een andere scherpe opname bedekte een blad de voet en was vrije vlucht onzeker. [Bronfoto](https://www.inaturalist.org/photos/747529794) · [Waarneming](https://www.inaturalist.org/observations/406841487).
+- Rietzanger · Dominique Armange · CC BY-SA 4.0. De foto uit Brière toont de vogel net los van de tak. De lichte wenkbrauwstreep en donkere kruin zijn duidelijk. De vleugels hebben enige bewegingsonscherpte. De 960 px-weergave van Commons is verkleind en omgezet naar WebP. [Bronfoto](https://commons.wikimedia.org/wiki/File:Phragmite_des_Joncs_-_Envol.jpg).
+
+CAP-BIRD-012/015. De drie foto’s staan lokaal en elk eenmaal vóór het verenkleed. Maker, bron, licentie en eventuele uitsnede of verkleining staan bij de foto. Een visuele steekproef uit de soortcategorie kan beelden met een onopvallende titel vinden. Controleer bij iNaturalist de identificatie van de waarneming en de licentie van de afzonderlijke foto. Er staan 46 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Spreeuw.
+
+VERIFIED · Mobiele Chromium op 390 px. Zes soortkaarten vanuit appbreed zoeken geopend op basis en kandidaat. De bestaande hoofd- en vluchtfoto’s uit ronde 25 laden. De nieuwe foto’s staan elk eenmaal vóór het verenkleed, tonen bron en licentie en openen met 2× zoom. Ook na offline herladen zijn de drie kaarten en de fotovergroting getest. Alle 313 gidsbeelden en 120 geluidsopnamen zijn na precache offline gedecodeerd. Gidsdekking, volgorde, uniciteit en SHA-256 zijn gecontroleerd. NOT TESTED · Fysiek toestel.

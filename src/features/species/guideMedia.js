@@ -5886,5 +5886,74 @@ export const GUIDE_POSES = Object.freeze({
       "height": 740,
       "image": "/assets/species/plumage/sp105-flight.webp"
     }
+  ],
+  "sp106": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "Deze Patrijs vliegt laag over een open veld. Let op het compacte lichaam, de ronde, fijn getekende vleugels en de korte roodbruine staart.",
+      "file": "iNaturalist photo 77252585",
+      "nl": "Patrijs",
+      "latin": "Perdix perdix",
+      "author": "Safina Rezeda",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://www.inaturalist.org/photos/77252585",
+      "showSourceLink": true,
+      "alt": "Patrijs in vrije vlucht boven een geelgroen veld, met een naar beneden geslagen vleugel en een korte roodbruine staart.",
+      "modifications": "Bijgesneden rond de vogel en omgezet naar WebP",
+      "reviewed": "2026-11-08",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/patrijs",
+      "visualCheck": "Patrijs in vrije vlucht boven een geelgroen veld, met een naar beneden geslagen vleugel en een korte roodbruine staart.",
+      "width": 450,
+      "height": 300,
+      "image": "/assets/species/plumage/sp106-flight.webp"
+    }
+  ],
+  "sp108": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "Let op de stevige snavel en de lichte wenkbrauwstreep. De Grote Karekiet vliegt hier van opzij gezien langs het riet.",
+      "file": "iNaturalist photo 747529794",
+      "nl": "Grote Karekiet",
+      "latin": "Acrocephalus arundinaceus",
+      "author": "Ángel Marcos Luengo Bello",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://www.inaturalist.org/photos/747529794",
+      "showSourceLink": true,
+      "alt": "Grote Karekiet met opgetrokken vleugels, een lichte wenkbrauwstreep en een forse snavel in vrije vlucht langs riet.",
+      "modifications": "Omgezet naar WebP zonder uitsnede",
+      "reviewed": "2026-11-08",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-karekiet",
+      "visualCheck": "Grote Karekiet met opgetrokken vleugels, een lichte wenkbrauwstreep en een forse snavel in vrije vlucht langs riet.",
+      "width": 724,
+      "height": 543,
+      "image": "/assets/species/plumage/sp108-flight.webp"
+    }
+  ],
+  "sp110": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "Let op de brede, lichte wenkbrauwstreep en de donkere kruin. De vogel is hier net los van de tak.",
+      "file": "Phragmite des Joncs - Envol.jpg",
+      "nl": "Rietzanger",
+      "latin": "Acrocephalus schoenobaenus",
+      "author": "Dominique Armange",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Phragmite_des_Joncs_-_Envol.jpg",
+      "showSourceLink": true,
+      "alt": "Rietzanger in vrije vlucht tussen takken in Brière, met een brede lichte wenkbrauwstreep en een donkere kruin.",
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+      "reviewed": "2026-11-08",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/rietzanger",
+      "visualCheck": "Rietzanger in vrije vlucht tussen takken in Brière, met een brede lichte wenkbrauwstreep en een donkere kruin.",
+      "width": 850,
+      "height": 823,
+      "image": "/assets/species/plumage/sp110-flight.webp"
+    }
   ]
 });
