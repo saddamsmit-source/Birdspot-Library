@@ -6436,6 +6436,75 @@
         "height": 1400,
         "image": "/assets/species/plumage/sp156-flight.webp"
       }
+    ],
+    "sp157": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "De vogel draait boven water. Let op de witte wig op de rug, lange snavel en rode poten.",
+        "file": "iNaturalist photo 711147296",
+        "nl": "Zwarte Ruiter",
+        "latin": "Tringa erythropus",
+        "author": "Barry Stewart",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://www.inaturalist.org/photos/711147296",
+        "showSourceLink": true,
+        "alt": "Zwarte Ruiter in vrije vlucht boven water met gespreide vleugels, een witte rugwig en rode poten.",
+        "modifications": "Bijgesneden en omgezet naar WebP",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwarte-ruiter",
+        "visualCheck": "Zwarte Ruiter in vrije vlucht boven water met gespreide vleugels, een witte rugwig en rode poten.",
+        "width": 995,
+        "height": 1365,
+        "image": "/assets/species/plumage/sp157-flight.webp"
+      }
+    ],
+    "sp158": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "In zijaanzicht zijn de stevige, licht opgewipte snavel, uitstekende poten en donkere vleugels zichtbaar.",
+        "file": "The Common Greenshank.jpg",
+        "nl": "Groenpootruiter",
+        "latin": "Tringa nebularia",
+        "author": "Prasan Shrestha",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:The_Common_Greenshank.jpg",
+        "showSourceLink": true,
+        "alt": "Groenpootruiter in vrije vlucht met neerwaartse vleugels, een licht opgewipte snavel en achter de staart uitstekende poten.",
+        "modifications": "1280 px-bronweergave zonder uitsnede omgezet naar WebP",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/groenpootruiter",
+        "visualCheck": "Groenpootruiter in vrije vlucht met neerwaartse vleugels, een licht opgewipte snavel en achter de staart uitstekende poten.",
+        "width": 1280,
+        "height": 791,
+        "image": "/assets/species/plumage/sp158-flight.webp"
+      }
+    ],
+    "sp159": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "De lichte, gevlekte ondervleugel en de geelgroene poten achter de staart zijn zichtbaar. De ondervleugel van het Witgat is donkerder.",
+        "file": "Wood Sandpiper (Tringa glareola) (53879706937), crop.jpg",
+        "nl": "Bosruiter",
+        "latin": "Tringa glareola",
+        "author": "Birds of Gilgit-Baltistan",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Wood_Sandpiper_(Tringa_glareola)_(53879706937),_crop.jpg",
+        "showSourceLink": true,
+        "alt": "Bosruiter in vrije vlucht met een lichte, gevlekte ondervleugel en geelgroene poten die achter de staart uitsteken.",
+        "modifications": "Bestaande Commons-uitsnede door JMK zonder verdere uitsnede omgezet naar WebP",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bosruiter",
+        "visualCheck": "Bosruiter in vrije vlucht met een lichte, gevlekte ondervleugel en geelgroene poten die achter de staart uitsteken.",
+        "width": 842,
+        "height": 639,
+        "image": "/assets/species/plumage/sp159-flight.webp"
+      }
     ]
   }
 }
