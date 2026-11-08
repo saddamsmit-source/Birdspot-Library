@@ -115,9 +115,9 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp146 | Bontbekplevier | Ja | 4 | Apart beeld |
 | sp147 | Kleine Plevier | Ja | 4 | Apart beeld |
 | sp150 | Steenloper | Ja | 2 | Apart beeld |
-| sp152 | Drieteenstrandloper | Ja | 1 | Open |
-| sp155 | Oeverloper | Ja | 3 | Open |
-| sp156 | Witgat | Ja | 3 | Open |
+| sp152 | Drieteenstrandloper | Ja | 2 | Apart beeld |
+| sp155 | Oeverloper | Ja | 4 | Apart beeld |
+| sp156 | Witgat | Ja | 4 | Apart beeld |
 | sp157 | Zwarte Ruiter | Ja | 3 | Open |
 | sp158 | Groenpootruiter | Ja | 3 | Open |
 | sp159 | Bosruiter | Ja | 3 | Open |
@@ -572,3 +572,15 @@ Basis is concept-PR #93, `0636510ef2436db8d7b5198311393450d7dce6d9`. Bontbekplev
 CAP-BIRD-012/015. De beelden staan lokaal en elk eenmaal onder ‘In vlucht’, met maker, bron, licentie en bewerking. Zoek bij sterk gelijkende soorten naar een vergelijkbare kijkhoek. Bij deze plevieren zijn bovenvleugel en kop tegelijkertijd zichtbaar, zodat vleugelstreep, snavel en oogring kunnen worden vergeleken. Er staan nog 28 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Drieteenstrandloper.
 
 VERIFIED · Mobiele Chromium op 390 px. Zes soortkaarten via appbreed zoeken geopend op basis en kandidaat. De drie nieuwe beelden staan elk eenmaal vóór het verenkleed, met bron, licentie en 2× zoom. Ook na offline herladen zijn de drie kaarten en fotovergroting getest. Alle 331 gidsbeelden en 120 veldopnamen zijn na precache offline gedecodeerd. Gidsdekking, volgorde, uniciteit en SHA-256 zijn gecontroleerd. NOT TESTED · Fysiek toestel.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 33
+
+Basis is concept-PR #95, `2ab43bd140a4078556b5a076370f38212455cc81`. Drieteenstrandloper, Oeverloper en Witgat hadden elk een hoofdfoto. Vergelijking van Wikimedia Commons-kandidaten op vrije vlucht, herkenbaarheid op kaartformaat en licentie per bestand. De soortgids van Vogelbescherming ondersteunt de herkenningscontrole.
+
+- Drieteenstrandloper · Dominic Sherony · CC BY-SA 2.0. Jonge vogels in de herfst, met brede witte vleugelstrepen. De compacte groep toont meerdere vleugelstanden. De vogels vullen het beeld beter dan in de vergeleken opname van een verspreide groep boven zee. [Bronfoto](https://commons.wikimedia.org/wiki/File:Sanderling_(Calidris_alba)_(3972936394).jpg).
+- Oeverloper · Bengt Nyman · CC BY-SA 2.0. De opname uit Zweden toont de vogel laag boven water, met een witte vleugelstreep en de witte inkeping tussen borst en vleugelboeg. [Bronfoto](https://commons.wikimedia.org/wiki/File:NZ7_7499_(52887647148).jpg).
+- Witgat · Prasan Shrestha · CC BY-SA 4.0. De uitsnede van de opname uit Nepal houdt beide vleugels in beeld en toont de witte stuit en staartbasis tegen donkere vleugels. [Bronfoto](https://commons.wikimedia.org/wiki/File:Green_sandpiper_flying.jpg).
+
+CAP-BIRD-012/015. De drie beelden staan lokaal en elk eenmaal onder ‘In vlucht’, met maker, bron, licentie en bewerking. Bestaande hoofd- en kleedfoto’s zijn behouden. Een compact groepsbeeld kan verschillende vleugelstanden duidelijk tonen. Vermeld de leeftijd wanneer de bron die bevestigt. Voor Witgat geeft een draai in vlucht goed zicht op de witte stuit. Er staan nog 25 soorten zonder vluchtbeeld op de auditlijst. De volgende nieuwe soort is Zwarte Ruiter.
+
+VERIFIED · Mobiele Chromium op 390 px. Zes soortkaarten zijn via appbreed zoeken geopend op basis en kandidaat. De drie nieuwe beelden staan elk eenmaal onder ‘In vlucht’, vóór eventueel verenkleed, tonen bron en licentie en openen met 2× zoom. Alle 334 gidsbeelden en 120 veldopnamen decodeerden offline na precache. Ook na offline herladen zijn de drie nieuwe beelden geopend en vergroot. Gidsdekking, volgorde, behoud van bestaande metadata, uniciteit en SHA-256 zijn gecontroleerd. NOT TESTED · Fysiek toestel en productie.

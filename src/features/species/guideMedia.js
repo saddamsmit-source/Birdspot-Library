@@ -6367,5 +6367,74 @@ export const GUIDE_POSES = Object.freeze({
       "height": 685,
       "image": "/assets/species/plumage/sp150-flight.webp"
     }
+  ],
+  "sp152": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "Jonge Drieteenstrandlopers in de herfst. De brede witte vleugelstrepen contrasteren met de donkere bovenvleugels.",
+      "file": "Sanderling (Calidris alba) (3972936394).jpg",
+      "nl": "Drieteenstrandloper",
+      "latin": "Calidris alba",
+      "author": "Dominic Sherony",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Sanderling_(Calidris_alba)_(3972936394).jpg",
+      "showSourceLink": true,
+      "alt": "Een groep jonge Drieteenstrandlopers boven water, met brede witte strepen op de gespreide vleugels.",
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+      "reviewed": "2026-11-08",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/drieteenstrandloper",
+      "visualCheck": "Een groep jonge Drieteenstrandlopers boven water, met brede witte strepen op de gespreide vleugels.",
+      "width": 1400,
+      "height": 933,
+      "image": "/assets/species/plumage/sp152-flight.webp"
+    }
+  ],
+  "sp155": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "De Oeverloper vliegt laag boven water. Let op de witte vleugelstreep en de witte inkeping tussen borst en vleugelboeg.",
+      "file": "NZ7 7499 (52887647148).jpg",
+      "nl": "Oeverloper",
+      "latin": "Actitis hypoleucos",
+      "author": "Bengt Nyman",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:NZ7_7499_(52887647148).jpg",
+      "showSourceLink": true,
+      "alt": "Oeverloper in vrije vlucht boven water, met een witte streep op de neerwaartse vleugel en een witte inkeping langs de borst.",
+      "modifications": "Omgezet naar WebP zonder uitsnede",
+      "reviewed": "2026-11-08",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/oeverloper",
+      "visualCheck": "Oeverloper in vrije vlucht boven water, met een witte streep op de neerwaartse vleugel en een witte inkeping langs de borst.",
+      "width": 1213,
+      "height": 809,
+      "image": "/assets/species/plumage/sp155-flight.webp"
+    }
+  ],
+  "sp156": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "Het Witgat draait boven water. De opvallend witte stuit en staartbasis contrasteren met de donkere vleugels.",
+      "file": "Green sandpiper flying.jpg",
+      "nl": "Witgat",
+      "latin": "Tringa ochropus",
+      "author": "Prasan Shrestha",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Green_sandpiper_flying.jpg",
+      "showSourceLink": true,
+      "alt": "Witgat in vrije vlucht met gespreide donkere vleugels en een opvallend witte stuit en staartbasis.",
+      "modifications": "Bijgesneden, verkleind en omgezet naar WebP",
+      "reviewed": "2026-11-08",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/witgat",
+      "visualCheck": "Witgat in vrije vlucht met gespreide donkere vleugels en een opvallend witte stuit en staartbasis.",
+      "width": 1247,
+      "height": 1400,
+      "image": "/assets/species/plumage/sp156-flight.webp"
+    }
   ]
 });
