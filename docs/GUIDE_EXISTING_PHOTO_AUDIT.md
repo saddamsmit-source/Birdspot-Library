@@ -84,9 +84,9 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp092 | Kuifeend | Ja | 3 | Apart beeld |
 | sp094 | Zilvermeeuw | Ja | 2 | Apart beeld |
 | sp095 | Kleine Mantelmeeuw | Ja | 2 | Apart beeld |
-| sp096 | Stormmeeuw | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp097 | Kokmeeuw | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
-| sp098 | Scholekster | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp096 | Stormmeeuw | Ja | 2 | Apart beeld |
+| sp097 | Kokmeeuw | Ja | 3 | Apart beeld |
+| sp098 | Scholekster | Ja | 2 | Apart beeld |
 | sp099 | Kievit | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp100 | Wulp | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp101 | Grutto | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
@@ -452,3 +452,15 @@ Basis is concept-PR #82, `9bbff5105a486abfe59cfd688fd5adabeac3a91f`. De appbuild
 CAP-BIRD-012/015. De beelden staan lokaal en elk eenmaal vóór het verenkleed. Bron, maker, licentie en omzetting naar WebP staan bij de foto. Voor meeuwen die op elkaar lijken, is een zichtbare bovenvleugel nuttiger dan een opname die alleen de ondervleugel toont. Na deze ronde staan 58 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Stormmeeuw.
 
 Mobiele Chromium-test op 390 px: zes soortkaarten vanuit appbreed zoeken geopend, op zowel de basis als de nieuwe build. De bestaande hoofdfoto’s en de vluchtfoto’s uit ronde 21 zijn behouden. De drie nieuwe foto’s decoderen, tonen de bron en licentie en openen met 2× zoom. Gidsdekking, volgorde, uniciteit en SHA-256 zijn gecontroleerd. Fysieke toesteltest staat open.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 23
+
+Basis is concept-PR #83, `c03a6430bbfc434fe2c4e5a6f342354414a4fae4`. De soortkaarten voor Stormmeeuw, Kokmeeuw en Scholekster hadden een hoofdfoto. De bestaande broedkleedvergelijking bij Kokmeeuw blijft op zijn plek. Voor deze ronde zijn Wikimedia Commons en soortpagina’s van Vogelbescherming nagezocht op Nederlandse, Engelse en wetenschappelijke namen. De Commons-foto’s zijn op groter formaat vergeleken op vrije vlucht en zichtbaarheid van herkenningskenmerken.
+
+- Stormmeeuw · Charles J. Sharp · CC BY-SA 4.0. De volwassen vogel in broedkleed vliegt met gespreide vleugels boven Oppdal, Noorwegen. De zwarte vleugelpunten met witte vlekken zijn zichtbaar. [Bronfoto](https://commons.wikimedia.org/wiki/File:Common_gull_(Larus_canus)_adult_breeding_in_flight_Oppdal_2.jpg).
+- Kokmeeuw · Charles J. Sharp · CC BY-SA 3.0. De zijaanblik toont de chocoladebruine kopkap, de rode snavel en de lichte voorrand van de vleugel. [Bronfoto](https://commons.wikimedia.org/wiki/File:Black-headed_gull_(Chroicocephalus_ridibundus)_in_flight.jpg).
+- Scholekster · Charles J. Sharp · CC BY-SA 4.0. De foto uit Argyll, Schotland, toont één vogel laag boven water met een lange oranjerode snavel, zwarte kop en witte buik. De vogel blijft op kaartformaat goed herkenbaar. [Bronfoto](https://commons.wikimedia.org/wiki/File:Oystercatcher_(Haematopus_ostralegus)_in_flight.jpg).
+
+CAP-BIRD-012/015. De drie lokale beelden staan elk eenmaal vóór het verenkleed, met bron, maker, licentie en vermelding van de WebP-omzetting zonder uitsnede. Bij een soort met meerdere kandidaten helpt een vergelijking op kaartformaat om de foto te kiezen waarop snavel en vleugelkenmerken het best leesbaar zijn. Na deze ronde staan 55 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Kievit.
+
+VERIFIED · Mobiele Chromium-test op 390 px. Zes soortkaarten via appbreed zoeken geopend op zowel de basis als de nieuwe build. De bestaande hoofdfoto’s en de drie vluchtfoto’s uit ronde 22 laden. De nieuwe foto’s decoderen, staan eenmaal vóór het verenkleed, tonen hun bron en licentie en openen met 2× zoom. Gidsdekking, volgorde, uniciteit en SHA-256 zijn gecontroleerd. NOT TESTED · Fysiek toestel.

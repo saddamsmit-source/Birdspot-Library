@@ -5679,6 +5679,75 @@
         "height": 933,
         "image": "/assets/species/plumage/sp095-flight.webp"
       }
+    ],
+    "sp096": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Let op het donkere oog, de slanke gele snavel en de zwarte vleugelpunten met witte vlekken. Deze volwassen vogel is in broedkleed.",
+        "file": "Common gull (Larus canus) adult breeding in flight Oppdal 2.jpg",
+        "nl": "Stormmeeuw",
+        "latin": "Larus canus",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Common_gull_(Larus_canus)_adult_breeding_in_flight_Oppdal_2.jpg",
+        "showSourceLink": true,
+        "alt": "Volwassen Stormmeeuw met gespreide vleugels in vrije vlucht bij Oppdal. De zwarte vleugelpunten hebben witte vlekken.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/stormmeeuw",
+        "visualCheck": "Volwassen Stormmeeuw met gespreide vleugels in vrije vlucht bij Oppdal. De zwarte vleugelpunten hebben witte vlekken.",
+        "width": 1400,
+        "height": 700,
+        "image": "/assets/species/plumage/sp096-flight.webp"
+      }
+    ],
+    "sp097": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Let op de chocoladebruine kopkap van het broedkleed, de rode snavel en de lichte voorrand van de vleugel.",
+        "file": "Black-headed gull (Chroicocephalus ridibundus) in flight.jpg",
+        "nl": "Kokmeeuw",
+        "latin": "Chroicocephalus ridibundus",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Black-headed_gull_(Chroicocephalus_ridibundus)_in_flight.jpg",
+        "showSourceLink": true,
+        "alt": "Volwassen Kokmeeuw met chocoladebruine kopkap en opgeheven vleugels in vrije vlucht tegen een blauwe lucht.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kokmeeuw",
+        "visualCheck": "Volwassen Kokmeeuw met chocoladebruine kopkap en opgeheven vleugels in vrije vlucht tegen een blauwe lucht.",
+        "width": 1400,
+        "height": 933,
+        "image": "/assets/species/plumage/sp097-flight.webp"
+      }
+    ],
+    "sp098": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Let op de lange oranjerode snavel, de zwarte kop en de witte buik. Hier vliegt de vogel laag boven water.",
+        "file": "Oystercatcher (Haematopus ostralegus) in flight.jpg",
+        "nl": "Scholekster",
+        "latin": "Haematopus ostralegus",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Oystercatcher_(Haematopus_ostralegus)_in_flight.jpg",
+        "showSourceLink": true,
+        "alt": "Scholekster in vrije vlucht laag boven water in Schotland, met een lange oranjerode snavel, zwarte kop en witte buik.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/scholekster",
+        "visualCheck": "Scholekster in vrije vlucht laag boven water in Schotland, met een lange oranjerode snavel, zwarte kop en witte buik.",
+        "width": 1400,
+        "height": 934,
+        "image": "/assets/species/plumage/sp098-flight.webp"
+      }
     ]
   }
 }
