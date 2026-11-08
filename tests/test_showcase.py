@@ -44,7 +44,7 @@ def main():
         url = f"http://127.0.0.1:{server.server_address[1]}/"
         with sync_playwright() as pw:
             browser = pw.chromium.launch(headless=True)
-            ctx = browser.new_context(viewport={"width": 390, "height": 844}, reduced_motion="reduce", service_workers="block")
+            ctx = browser.new_context(viewport={"width": 390, "height": 844}, reduced_motion="no-preference", service_workers="block")
             p = ctx.new_page()
             errors, external = [], []
             p.on("pageerror", lambda e: errors.append(str(e)))
@@ -104,11 +104,24 @@ def main():
             assert shown() == birds[6]["id"], ("F-04 hervat niet", shown())
             print("F-04 OK — hervat waar hij was, telt niet op de achtergrond")
 
+            before_pause = shown()
+            toggle = p.locator("#featuredBirdMotion")
+            toggle.click()
+            assert toggle.get_attribute("aria-pressed") == "true"
+            p.clock.run_for(32000)
+            assert shown() == before_pause, "F-04 handmatig pauzeren"
+            toggle.click()
+            p.emulate_media(reduced_motion="reduce")
+            toggle.wait_for(state="hidden")
+            p.clock.run_for(32000)
+            assert shown() == before_pause, "F-04 respecteer minder beweging"
+
             cur = next(b for b in birds if b["id"] == shown())
             cap = p.locator("#slideshow .featured-birds__caption")
             assert p.locator("#featuredBirdGroup").inner_text().strip().lower() == cur["groupLabel"].lower()
             assert p.locator("#featuredBirdName").inner_text() == cur["nl"]
             assert p.locator("#featuredBirdLatin").inner_text() == cur["latin"]
+            cap.locator("summary").click()
             assert p.locator("#featuredBirdWhere").inner_text().startswith("Herkenning: ")
             assert p.locator("#featuredBirdPresence").inner_text().startswith("In Nederland: ")
             credit = p.locator("#featuredBirdCredit")

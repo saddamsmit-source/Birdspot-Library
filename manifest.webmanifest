@@ -4,8 +4,8 @@
   "description": "Persoonlijke vogelwaarnemingen bibliotheek",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#FAFAF8",
-  "theme_color": "#1A3A2A",
+  "background_color": "#F8F4E8",
+  "theme_color": "#17382C",
   "lang": "nl",
   "icons": [
     {
