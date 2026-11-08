@@ -108,7 +108,6 @@ function buildSkeleton() {
       <button type="button" class="field-action" id="homeLatestSighting" data-latest-sighting hidden>Laatste waarneming</button>
     </section>
 
-    <div class="field-home-overview">
     <!-- Diashow: elke 30 s een bijzondere Nederlandse vogel; hervat waar hij was. -->
     <section class="slideshow featured-birds" id="slideshow" aria-label="Bijzondere vogel in beeld">
       <div class="featured-birds__media">
@@ -117,7 +116,13 @@ function buildSkeleton() {
           decoding="async">
       </div>
       <span class="field-photo-label">Gidsfoto</span>
-      <button type="button" id="featuredBirdMotion" aria-pressed="false">Diashow pauzeren</button>
+      <button type="button" id="featuredBirdMotion" aria-label="Diashow pauzeren" aria-pressed="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path class="featured-motion-pause" d="M6 4h4v16H6z M14 4h4v16h-4z"/>
+          <path class="featured-motion-play" d="M8 4v16l12-8z"/>
+        </svg>
+      </button>
+      <div id="featuredBirdCredit" class="featured-photo-info"></div>
       <div class="featured-birds__caption">
         <p class="field-eyebrow">Vandaag in beeld</p>
         <span class="featured-birds__group" id="featuredBirdGroup"></span>
@@ -131,10 +136,16 @@ function buildSkeleton() {
             <p class="featured-birds__presence" id="featuredBirdPresence"></p>
           </details>
         </div>
-        <a id="featuredBirdCredit" class="featured-birds__credit"
-          rel="noopener noreferrer" target="_blank" href="https://commons.wikimedia.org/">Fotobron</a>
       </div>
     </section>
+
+    <!-- Stat tiles — 4 kolommen -->
+    <div class="stats-row" id="statsRow">
+      ${statTile('stat-species', '—', 'Soorten',     iconBird())}
+      ${statTile('stat-total',   '—', 'Waarnemingen', iconEye())}
+      ${statTile('stat-photos',  '—', "Media",        iconPhoto())}
+      ${statTile('stat-hotspot', '—', 'Hotspots',    iconMap())}
+    </div>
 
     <!-- Recente waarnemingen -->
     <section class="dash-section" id="recentSection">
@@ -153,16 +164,6 @@ function buildSkeleton() {
         </div>
       </div>
     </section>
-
-    </div>
-
-    <!-- Stat tiles — 4 kolommen -->
-    <div class="stats-row" id="statsRow">
-      ${statTile('stat-species', '—', 'Soorten',     iconBird())}
-      ${statTile('stat-total',   '—', 'Waarnemingen', iconEye())}
-      ${statTile('stat-photos',  '—', "Media",        iconPhoto())}
-      ${statTile('stat-hotspot', '—', 'Hotspots',    iconMap())}
-    </div>
 
     <!-- Accessible secondary features: stays collapsed beneath the primary KPI row. -->
     <details class="signature-home-intro signature-quick-access" id="homeMoreFeatures">

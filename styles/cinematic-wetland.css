@@ -279,12 +279,6 @@
 #slideshow.featured-birds .featured-birds__caption p.featured-birds__presence {
   margin:-4px 0 12px;font-size:12px;color:#efe4d2;font-weight:600;
 }
-#slideshow.featured-birds .featured-birds__credit {
-  max-width:95%;font-size:11px;color:#f5cd88;
-}
-#slideshow.featured-birds .featured-birds__credit:not([href]) {
-  text-decoration:none;opacity:.8;
-}
 .signature-quick-access {
   background:linear-gradient(120deg,#10352c,#103a32);
   color:#f7edda;box-sizing:border-box;

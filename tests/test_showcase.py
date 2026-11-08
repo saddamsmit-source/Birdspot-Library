@@ -125,8 +125,21 @@ def main():
             assert p.locator("#featuredBirdWhere").inner_text().startswith("Herkenning: ")
             assert p.locator("#featuredBirdPresence").inner_text().startswith("In Nederland: ")
             credit = p.locator("#featuredBirdCredit")
-            assert cur["author"] in credit.inner_text() and cur["license"] in credit.inner_text()
-            assert credit.get_attribute("href") == cur["source"]
+            credit_info = credit.get_by_text("Maker:", exact=False)
+            assert not credit_info.is_visible()
+            cap.locator("summary").click()
+            p.emulate_media(reduced_motion="no-preference")
+            toggle.click()  # Resume the manually paused slideshow.
+            info_trigger = credit.get_by_label("Foto-informatie", exact=True)
+            info_trigger.click()
+            assert credit_info.is_visible() and cur["author"] in credit_info.inner_text()
+            assert cur["license"] in credit.inner_text()
+            assert credit.get_by_role("link", name="Open fotobron").get_attribute("href") == cur["source"]
+            p.clock.run_for(32000)
+            assert shown() == cur["id"], "De fotobron moet bij de zichtbare vogel blijven"
+            p.keyboard.press("Escape")
+            assert not credit_info.is_visible()
+            assert info_trigger.evaluate("(el) => document.activeElement === el")
             p.wait_for_function("() => document.querySelector('#featuredBirdImage').naturalWidth > 0", timeout=8000)
             assert cap.is_visible()
             p.screenshot(path=str(SHOTS / "showcase_f_390.png"))

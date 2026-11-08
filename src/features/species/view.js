@@ -14,6 +14,7 @@ import { getPhotoUrl, revokePhotoUrl }  from '../../utils/photoUrl.js';
 import { getCollectionIds, toggleCollectionItem } from '../../storage/collections.js';
 
 import { GUIDE_PHOTOS } from './guidePhotos.js';
+import { closePhotoInfo, photoInfoMarkup } from '../../utils/photoInfo.js';
 
 import { BREEDING_BEHAVIORS, methodLabel, sourceLabel } from '../sightings/evidence.js';
 function guideSightings() { return getSightingsSnapshot().filter(s=>s && typeof s === 'object' && typeof s.speciesId === 'string'); }
@@ -521,9 +522,8 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
         '<div class="signature-species-detail-hero' + (guidePhoto ? ' has-guide-photo' : '') + '">' +
           '<div id="detailThumb-' + escHtml(s.id) + '" class="signature-species-detail-image">' +
             (guidePhoto ? '<button type="button" class="sd-hero-photo" data-guide-image="' + escHtml(guidePhoto.image) + '" aria-label="Vergroot hoofdfoto">' +
-              '<img class="species-guide-photo" data-src="' + escHtml(guidePhoto.image) + '" alt="' + escHtml(guidePhoto.alt) + '"></button>' :
+              '<img class="species-guide-photo" data-src="' + escHtml(guidePhoto.image) + '" alt="' + escHtml(guidePhoto.alt) + '"></button>' + photoInfoMarkup(guidePhoto) :
               '<span aria-hidden="true">' + escHtml(s.icon) + '</span>') + '</div>' +
-          (guidePhoto ? '<p class="species-guide-credit">' + (guidePhoto.flight ? 'Gidsfoto in vlucht · ' : 'Gidsfoto · ') + escHtml(guidePhoto.author) + ' · <a href="' + escHtml(guidePhoto.licenseUrl) + '" target="_blank" rel="noopener noreferrer">' + escHtml(guidePhoto.license) + '</a> · <a href="' + escHtml(guidePhoto.source) + '" target="_blank" rel="noopener noreferrer">Bronvermelding</a><br>Verkleind; ongewijzigde uitsnede.</p>' : '') +
           '<div class="signature-species-detail-intro"><span class="signature-eyebrow">' + escHtml(s.family) + '</span>' +
             '<h2>' + escHtml(s.nameNL) + '</h2>' +
             '<p><em>' + escHtml(s.nameSci) + '</em></p>' +
@@ -606,6 +606,7 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
 
   function keyHandler(e) {
     if (e.key === 'Escape') {
+      if (closePhotoInfo(viewer || sheet)) return;
       if (viewer) closeViewer(); else close();
     }
   }
@@ -664,6 +665,12 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
         '<button type="button" data-zoom="out" aria-label="Uitzoomen">−</button>'+
         '<button type="button" data-zoom="reset" aria-label="Zoom herstellen">1×</button>'+
         '<button type="button" data-zoom="in" aria-label="Inzoomen">+</button></div>';
+    const photoInfo = trigger?.parentElement.querySelector('.photo-info');
+    if (photoInfo) {
+      const copy = photoInfo.cloneNode(true);
+      copy.open = false;
+      viewer.appendChild(copy);
+    }
     document.body.appendChild(viewer);
     const dialog = viewer;
     const viewport = dialog.querySelector('.sd-photo-viewport');

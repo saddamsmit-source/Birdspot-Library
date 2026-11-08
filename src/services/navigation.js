@@ -1,4 +1,6 @@
 /** Browser back belongs to the current sheet first, then to the app route. */
+import { closePhotoInfo } from '../utils/photoInfo.js';
+
 const STATE = 'birdspotRoute';
 let lastRootBack = 0;
 let sequence = 0;
@@ -12,6 +14,7 @@ function closeTopLayer() {
     .map((el,index)=>({el,index,z:Number(getComputedStyle(el).zIndex)||0}))
     .sort((a,b)=>b.z-a.z||b.index-a.index);
   for (const {el} of layers) {
+    if (closePhotoInfo(el)) return true;
     const button = el.querySelector('#confirmCancel,.confirm-cancel,.signature-lightbox-close,.lightbox__close,#spPickerClose,#pinCancel,#addSheetCancel,#detailClose,.signature-species-detail-close,#mapSheetClose,#mapPinCancel');
     if (button && visible(button)) {
       if (!el.querySelector('#addSheetSubmit:disabled')) button.click();
@@ -21,6 +24,8 @@ function closeTopLayer() {
       document.dispatchEvent(new KeyboardEvent('keydown',{key:'Escape',bubbles:true})); return true;
     }
   }
+  const home = document.querySelector('#screen-home');
+  if (visible(home) && closePhotoInfo(home)) return true;
   const filter = document.querySelector('.species-filter[open] > summary');
   if (visible(filter)) { filter.click(); filter.focus({preventScroll:true}); return true; }
   return false;
