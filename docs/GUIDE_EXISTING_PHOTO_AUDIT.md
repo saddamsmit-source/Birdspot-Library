@@ -118,16 +118,16 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp152 | Drieteenstrandloper | Ja | 2 | Apart beeld |
 | sp155 | Oeverloper | Ja | 4 | Apart beeld |
 | sp156 | Witgat | Ja | 4 | Apart beeld |
-| sp157 | Zwarte Ruiter | Ja | 3 | Open |
-| sp158 | Groenpootruiter | Ja | 3 | Open |
-| sp159 | Bosruiter | Ja | 3 | Open |
-| sp164 | Grote Mantelmeeuw | — | 1 | Open |
-| sp165 | Visdief | — | 1 | Open |
+| sp157 | Zwarte Ruiter | Ja | 4 | Apart beeld |
+| sp158 | Groenpootruiter | Ja | 4 | Apart beeld |
+| sp159 | Bosruiter | Ja | 4 | Apart beeld |
+| sp164 | Grote Mantelmeeuw | — | 2 | Apart beeld |
+| sp165 | Visdief | — | 2 | Apart beeld |
 | sp166 | Noordse Stern | — | 1 | Apart beeld |
 | sp167 | Grote Stern | — | 1 | Apart beeld |
 | sp170 | Ooievaar | Ja | 1 | Hoofdfoto |
 | sp173 | Bruine Kiekendief | Ja | 3 | Hoofdfoto |
-| sp174 | Zwarte Mees | Ja | 1 | Open |
+| sp174 | Zwarte Mees | Ja | 2 | Apart beeld |
 | sp176 | Grauwe Vliegenvanger | Ja | 1 | Open |
 | sp177 | Bonte Vliegenvanger | Ja | 1 | Open |
 | sp178 | Gekraagde Roodstaart | Ja | 1 | Open |
@@ -584,3 +584,27 @@ Basis is concept-PR #95, `2ab43bd140a4078556b5a076370f38212455cc81`. Drieteenstr
 CAP-BIRD-012/015. De drie beelden staan lokaal en elk eenmaal onder ‘In vlucht’, met maker, bron, licentie en bewerking. Bestaande hoofd- en kleedfoto’s zijn behouden. Een compact groepsbeeld kan verschillende vleugelstanden duidelijk tonen. Vermeld de leeftijd wanneer de bron die bevestigt. Voor Witgat geeft een draai in vlucht goed zicht op de witte stuit. Er staan nog 25 soorten zonder vluchtbeeld op de auditlijst. De volgende nieuwe soort is Zwarte Ruiter.
 
 VERIFIED · Mobiele Chromium op 390 px. Zes soortkaarten zijn via appbreed zoeken geopend op basis en kandidaat. De drie nieuwe beelden staan elk eenmaal onder ‘In vlucht’, vóór eventueel verenkleed, tonen bron en licentie en openen met 2× zoom. Alle 334 gidsbeelden en 120 veldopnamen decodeerden offline na precache. Ook na offline herladen zijn de drie nieuwe beelden geopend en vergroot. Gidsdekking, volgorde, behoud van bestaande metadata, uniciteit en SHA-256 zijn gecontroleerd. NOT TESTED · Fysiek toestel en productie.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 34
+
+Basis is concept-PR #96, `772cd41410d2326bf52aaba56bfdacc830d1fd95`. Zwarte Ruiter, Groenpootruiter en Bosruiter hadden elk een hoofdfoto en twee andere geregistreerde beelden. Wikimedia Commons is nagezocht voor alle drie. Voor Zwarte Ruiter zijn ook research-grade iNaturalist-waarnemingen met een open fotolicentie visueel gecontroleerd. De soortgids van Vogelbescherming ondersteunt de herkenningscontrole.
+
+- Zwarte Ruiter · Barry Stewart · CC BY 4.0. De uitsnede toont de witte rugwig, lange snavel en rode poten van een vogel die boven water draait. Twee Commons-alternatieven toonden een vogel bij de grond met onzekere vrije vlucht. [Bronfoto](https://www.inaturalist.org/photos/711147296) · [Waarneming](https://www.inaturalist.org/observations/388305318).
+- Groenpootruiter · Prasan Shrestha · CC BY-SA 4.0. De opname uit Nepal toont de stevige, licht opgewipte snavel, uitstekende poten en donkere vleugels. De 1280 px-weergave is zonder uitsnede omgezet naar WebP. [Bronfoto](https://commons.wikimedia.org/wiki/File:The_Common_Greenshank.jpg).
+- Bosruiter · Birds of Gilgit-Baltistan · CC BY-SA 2.0. De foto uit Pakistan toont de lichte, gevlekte ondervleugel en de uitstekende geelgroene poten. De bestaande Commons-uitsnede door JMK is omgezet naar WebP. [Bronfoto](https://commons.wikimedia.org/wiki/File:Wood_Sandpiper_(Tringa_glareola)_(53879706937),_crop.jpg).
+
+CAP-BIRD-012/015. De drie beelden staan lokaal en elk eenmaal onder ‘In vlucht’, met maker, bron, licentie en bewerking. Voor herkenning tussen ruiters helpt een bovenaanzicht bij de rugwig en een onderaanzicht bij de vleugelkleur. Een zijaanzicht kan de snavelvorm en uitstekende poten laten zien. Er staan nog 22 soorten zonder vluchtbeeld op de auditlijst. De volgende soort op de lijst is Grote Mantelmeeuw.
+
+VERIFIED · Mobiele Chromium op 390 px. Zes soortkaarten vanuit appbreed zoeken op basis en kandidaat. De drie nieuwe beelden staan elk eenmaal vóór het verenkleed, tonen bron en licentie en openen met 2× zoom. Ook na offline herladen zijn ze geopend en vergroot. Alle 337 gidsbeelden en 120 veldopnamen decodeerden offline na precache. Gidsdekking, volgorde, bestaande metadata en SHA-256-uniciteit gecontroleerd. NOT TESTED · Fysiek toestel en productie.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 35
+
+Basis is concept-PR #98, `82730b76d552cd9b6e7b91218127cbf378204056`. Grote Mantelmeeuw en Visdief hadden elk één verenkleedfoto. Zwarte Mees had één hoofdfoto. Voor de eerste twee soorten zijn foto’s uit de vluchtcategorieën van Wikimedia Commons vergeleken. Voor Zwarte Mees zijn research-grade iNaturalist-waarnemingen met een open fotolicentie visueel gecontroleerd. De soortgids van Vogelbescherming ondersteunt de herkenningscontrole.
+
+- Grote Mantelmeeuw · Charles J. Sharp · CC BY-SA 4.0. De uitsnede van de foto boven zee bij de Cliffs of Moher toont de donkere geheven vleugel, witte kop en forse gele snavel. [Bronfoto](https://commons.wikimedia.org/wiki/File:Great_black-backed_gull_(Larus_marinus)_in_flight_Moher.jpg).
+- Visdief · Charles J. Sharp · CC BY-SA 4.0. De uitsnede van de opname uit Zweden toont broedkleed, de zwarte kap, oranjerode snavel met donkere punt en donkere buitenste handpennen. [Bronfoto](https://commons.wikimedia.org/wiki/File:Common_tern_(Sterna_hirundo)_in_flight_Ramsviklandet_2.jpg).
+- Zwarte Mees · euqirneto · CC BY 4.0. De vogel vliegt los tussen dennentakken. Zwarte kop en witte wang zijn zichtbaar. De vleugels hebben bewegingsonscherpte. Alternatieven bij een tak of voederhuis maakten vrije vlucht minder duidelijk. [Bronfoto](https://www.inaturalist.org/photos/176460220) · [Waarneming](https://www.inaturalist.org/observations/105201740).
+
+CAP-BIRD-012/015. De drie beelden staan lokaal en elk eenmaal onder ‘In vlucht’, met maker, bron, licentie en bewerking. Bij kaarten met alleen een verenkleedfoto blijft die foto beschikbaar als zelfstandig beeld. Test dat pad los van kaarten met een hoofdfoto. Controleer bij kleine zangvogels of de voeten en takken voldoende van elkaar te onderscheiden zijn. Er staan nog 19 soorten zonder vluchtbeeld op de auditlijst. De volgende soort is Grauwe Vliegenvanger.
+
+VERIFIED · Mobiele Chromium op 390 px. Zes soortkaarten via appbreed zoeken geopend op basis en kandidaat. Bestaande hoofd- en verenkleedfoto’s laden. De drie nieuwe beelden staan elk eenmaal vóór eventueel verenkleed, tonen bron en licentie en openen met 2× zoom. Na offline herladen zijn alle drie geopend en vergroot. Alle 340 gidsbeelden en 120 veldopnamen zijn offline gedecodeerd na precache. Gidsdekking, behoud van bestaande metadata, volgorde en SHA-256-uniciteit gecontroleerd. NOT TESTED · Fysiek toestel en productie.
