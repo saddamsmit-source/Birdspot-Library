@@ -5955,6 +5955,75 @@
         "height": 823,
         "image": "/assets/species/plumage/sp110-flight.webp"
       }
+    ],
+    "sp112": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Let op de spitse vleugels en de korte staart. Op deze opname zijn de lichte spikkels op de donkere borst goed zichtbaar.",
+        "file": "Steigflug (54094247446) v2.jpg",
+        "nl": "Spreeuw",
+        "latin": "Sturnus vulgaris",
+        "author": "Ralf Hüsges",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Steigflug_(54094247446)_v2.jpg",
+        "showSourceLink": true,
+        "alt": "Spreeuw in vrije vlucht tegen een blauwe lucht, met gespreide spitse vleugels, een korte staart en een lichtgespikkelde donkere borst.",
+        "modifications": "Commons-uitsnede door Юрий Д.К., verkleind en omgezet naar WebP",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/spreeuw",
+        "visualCheck": "Spreeuw in vrije vlucht tegen een blauwe lucht, met gespreide spitse vleugels, een korte staart en een lichtgespikkelde donkere borst.",
+        "width": 1370,
+        "height": 1400,
+        "image": "/assets/species/plumage/sp112-flight.webp"
+      }
+    ],
+    "sp113": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Bij dit mannetje contrasteert het gele lichaam met de zwarte slagpennen. De gespreide staart laat gele buitenranden zien.",
+        "file": "Oriolus oriolus Barcelona 1.jpg",
+        "nl": "Wielewaal",
+        "latin": "Oriolus oriolus",
+        "author": "Ferran Pestaña",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Oriolus_oriolus_Barcelona_1.jpg",
+        "showSourceLink": true,
+        "alt": "Mannetje Wielewaal in vrije vlucht bij Barcelona met een geel lichaam, zwarte slagpennen en een geel-zwarte staart.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wielewaal",
+        "visualCheck": "Mannetje Wielewaal in vrije vlucht bij Barcelona met een geel lichaam, zwarte slagpennen en een geel-zwarte staart.",
+        "width": 1400,
+        "height": 874,
+        "image": "/assets/species/plumage/sp113-flight.webp"
+      }
+    ],
+    "sp114": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Let op de roestrode keel, de donkere borstband en de diepe staartvork met lange buitenste staartpennen.",
+        "file": "Schiermonnikoog - Boerenzwaluw (Hirundo rustica) v2.jpg",
+        "nl": "Boerenzwaluw",
+        "latin": "Hirundo rustica",
+        "author": "Rudolphous",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Schiermonnikoog_-_Boerenzwaluw_(Hirundo_rustica)_v2.jpg",
+        "showSourceLink": true,
+        "alt": "Boerenzwaluw in vrije vlucht op Schiermonnikoog, met roestrode keel, gespreide vleugels en twee lange buitenste staartpennen.",
+        "modifications": "Bijgesneden rond de vogel en omgezet naar WebP",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/boerenzwaluw",
+        "visualCheck": "Boerenzwaluw in vrije vlucht op Schiermonnikoog, met roestrode keel, gespreide vleugels en twee lange buitenste staartpennen.",
+        "width": 1290,
+        "height": 860,
+        "image": "/assets/species/plumage/sp114-flight.webp"
+      }
     ]
   }
 }
