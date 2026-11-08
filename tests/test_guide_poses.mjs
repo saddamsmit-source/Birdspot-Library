@@ -28,7 +28,7 @@ for (const [id, poses] of Object.entries(GUIDE_POSES)) {
     if (/-(male|female)-(rest|flight)\.webp$/.test(pose.image)) {
       assert.match(pose.label, /^(Mannetje|Vrouwtje) in (rust|vlucht)$/);
       assert.equal(pose.flight, pose.label.endsWith('vlucht'));
-      assert.ok(html.includes(pose.label) && html.includes(pose.source));
+      assert.ok(html.includes(pose.label) && html.includes(pose.source.replaceAll("'", "&#39;")), pose.image);
     }
     if (pose.flight && pose.image !== ownMain) {
       const flightSection = html.indexOf('aria-label="Vluchtvergelijking"') >= 0
