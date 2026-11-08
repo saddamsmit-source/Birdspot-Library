@@ -5357,6 +5357,52 @@
         "height": 853,
         "image": "/assets/species/plumage/sp070-flight.webp"
       }
+    ],
+    "sp072": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Let op de lichte vleugelstrepen en de bruingestreepte bovendelen.",
+        "file": "Meadow Pipit in flight (51113279347).jpg",
+        "nl": "Graspieper",
+        "latin": "Anthus pratensis",
+        "author": "caroline legg",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Meadow_Pipit_in_flight_(51113279347).jpg",
+        "showSourceLink": true,
+        "alt": "Graspieper in vrije vlucht boven heide, met neergeslagen vleugels.",
+        "modifications": "Uitgesneden rond de vogel en omgezet naar WebP",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/graspieper",
+        "visualCheck": "Graspieper in vrije vlucht boven heide, met neergeslagen vleugels.",
+        "width": 1400,
+        "height": 1077,
+        "image": "/assets/species/plumage/sp072-flight.webp"
+      }
+    ],
+    "sp075": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Let op de helderblauwe rugstreep, de roestoranje onderzijde en de lange, rechte snavel.",
+        "file": "Common kingfisher (Alcedo atthis ispida) in flight.jpg",
+        "nl": "IJsvogel",
+        "latin": "Alcedo atthis",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Common_kingfisher_(Alcedo_atthis_ispida)_in_flight.jpg",
+        "showSourceLink": true,
+        "alt": "IJsvogel in vrije vlucht met een prooi in de lange snavel en een helderblauwe rug.",
+        "modifications": "Uitgesneden rond de vogel en omgezet naar WebP",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/IJsvogel",
+        "visualCheck": "IJsvogel in vrije vlucht met een prooi in de lange snavel en een helderblauwe rug.",
+        "width": 1400,
+        "height": 858,
+        "image": "/assets/species/plumage/sp075-flight.webp"
+      }
     ]
   }
 }

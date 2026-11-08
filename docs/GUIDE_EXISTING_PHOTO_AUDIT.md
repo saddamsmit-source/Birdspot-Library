@@ -67,8 +67,8 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp068 | Witte Kwikstaart | Ja | 2 | Apart beeld |
 | sp069 | Gele Kwikstaart | Ja | 2 | Apart beeld |
 | sp070 | Veldleeuwerik | Ja | 2 | Apart beeld |
-| sp072 | Graspieper | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp075 | IJsvogel | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp072 | Graspieper | Ja | 2 | Apart beeld |
+| sp075 | IJsvogel | Ja | 2 | Apart beeld |
 | sp077 | Fuut | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
 | sp078 | Meerkoet | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
 | sp079 | Waterhoen | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
@@ -391,3 +391,15 @@ Basis is concept-PR #75, e5eaea97595f66c5acc2b277d04c2124564cfa8a. Voor Witte Kw
 CAP-BIRD-012/015. Elke soort heeft één lokaal vluchtbeeld boven het verenkleed. De omzetting naar WebP staat bij elk beeld vermeld. De soortcategorieën op Commons hielpen foto’s met een algemene titel terug te vinden. Na deze ronde staan 72 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Graspieper.
 
 Mobiele Chromium-test op 390 px: alle drie de soortkaarten via appbreed zoeken met de wetenschappelijke naam geopend. Elk beeld decodeert, staat eenmaal boven het verenkleed, toont de bronlink en opent met 2× zoom. Gidsdekking, bestaande volgorde- en uniciteitstests en SHA-256-controle zijn geslaagd. Fysieke toesteltest staat open.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 18
+
+Basis is concept-PR #76, 0313ff2a8ea60ca0300c48d7a6bd0bba6f332e19. Voor Graspieper, IJsvogel en Fuut zijn Commons, Flickr en gespecialiseerde galerijen in meerdere talen nagezocht. Bij Fuut zijn ook iNaturalist-waarnemingsbeschrijvingen en Commons-videofragmenten gecontroleerd.
+
+- Graspieper · caroline legg · CC BY 2.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Meadow_Pipit_in_flight_(51113279347).jpg). De vogel vliegt boven de heide. De uitsnede toont de bruingestreepte bovendelen en lichte vleugelstrepen.
+- IJsvogel · Charles J. Sharp · CC BY-SA 4.0. [Bronfoto](https://commons.wikimedia.org/wiki/File:Common_kingfisher_(Alcedo_atthis_ispida)_in_flight.jpg). De helderblauwe rug en lange snavel zijn goed zichtbaar. De foto is genomen in Engeland.
+- Fuut · in de [foto uit Bangladesh](https://commons.wikimedia.org/wiki/File:Great_crested_grebe_(Podiceps_cristatus)_running_on_water_before_flight.jpg) is de afzet op het water zichtbaar. Bij de [foto uit Hamburg](https://commons.wikimedia.org/wiki/File:Podiceps_cristatus_3a.JPG) zijn de poten deels verborgen door opspattend water. In de [foto uit Kerkini](https://commons.wikimedia.org/wiki/File:Great_crested_grebe_(Podiceps_cristatus)_taking_off_Kerkini.jpg) overlapt een poot op vergroting met de waterpluim, waardoor vrije vlucht niet zeker is. De gevonden [Flickr-vluchtfoto uit Scheveningen](https://www.flickr.com/photos/78941013@N00/52691433613/) heeft voorbehouden rechten. Steekproeven uit drie [Commons-video’s](https://commons.wikimedia.org/wiki/Category:Videos_of_Podiceps_cristatus) en de gecontroleerde iNaturalist-foto’s leverden geen bruikbaar vluchtbeeld op. Fuut blijft op de zoeklijst.
+
+CAP-BIRD-012/015. Graspieper en IJsvogel hebben elk één lokaal vluchtbeeld boven het verenkleed. Uitsnede en WebP-omzetting staan bij elk beeld vermeld. Herbruikbare controle bij watervogels: bekijk de afzetpoot en de waterlijn apart op vergroting. Na deze ronde staan 70 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Meerkoet.
+
+Mobiele Chromium-test op 390 px: beide soortkaarten via appbreed zoeken met de wetenschappelijke naam geopend. Beide beelden decoderen, staan eenmaal boven het verenkleed, tonen hun bronlink en openen met 2× zoom. Appbrede zoekregressie, gidsdekking, volgorde- en uniciteitstests en SHA-256-controle zijn geslaagd. Fysieke toesteltest staat open.
