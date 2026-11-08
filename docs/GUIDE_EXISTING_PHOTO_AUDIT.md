@@ -128,9 +128,9 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp170 | Ooievaar | Ja | 1 | Hoofdfoto |
 | sp173 | Bruine Kiekendief | Ja | 3 | Hoofdfoto |
 | sp174 | Zwarte Mees | Ja | 2 | Apart beeld |
-| sp176 | Grauwe Vliegenvanger | Ja | 1 | Open |
-| sp177 | Bonte Vliegenvanger | Ja | 1 | Open |
-| sp178 | Gekraagde Roodstaart | Ja | 1 | Open |
+| sp176 | Grauwe Vliegenvanger | Ja | 2 | Apart beeld |
+| sp177 | Bonte Vliegenvanger | Ja | 2 | Apart beeld |
+| sp178 | Gekraagde Roodstaart | Ja | 2 | Apart beeld |
 | sp188 | Zomertaling | Ja | 4 | Apart beeld |
 | sp206 | Strandplevier | Ja | 4 | Open |
 | sp217 | Poelruiter | Ja | 3 | Open |
@@ -608,3 +608,15 @@ Basis is concept-PR #98, `82730b76d552cd9b6e7b91218127cbf378204056`. Grote Mante
 CAP-BIRD-012/015. De drie beelden staan lokaal en elk eenmaal onder ‘In vlucht’, met maker, bron, licentie en bewerking. Bij kaarten met alleen een verenkleedfoto blijft die foto beschikbaar als zelfstandig beeld. Test dat pad los van kaarten met een hoofdfoto. Controleer bij kleine zangvogels of de voeten en takken voldoende van elkaar te onderscheiden zijn. Er staan nog 19 soorten zonder vluchtbeeld op de auditlijst. De volgende soort is Grauwe Vliegenvanger.
 
 VERIFIED · Mobiele Chromium op 390 px. Zes soortkaarten via appbreed zoeken geopend op basis en kandidaat. Bestaande hoofd- en verenkleedfoto’s laden. De drie nieuwe beelden staan elk eenmaal vóór eventueel verenkleed, tonen bron en licentie en openen met 2× zoom. Na offline herladen zijn alle drie geopend en vergroot. Alle 340 gidsbeelden en 120 veldopnamen zijn offline gedecodeerd na precache. Gidsdekking, behoud van bestaande metadata, volgorde en SHA-256-uniciteit gecontroleerd. NOT TESTED · Fysiek toestel en productie.
+
+## Gericht zoeken naar vluchtfoto’s · ronde 36
+
+Basis is concept-PR #99, `c84ab922f828639621d395857d4815473ccc885c`. Grauwe Vliegenvanger, Bonte Vliegenvanger en Gekraagde Roodstaart hadden elk één hoofdfoto. Voor Grauwe Vliegenvanger is de Commons-vluchtcategorie gecontroleerd. Voor de overige soorten zijn research-grade iNaturalist-waarnemingen met een open fotolicentie visueel gecontroleerd. De soortgids van Vogelbescherming ondersteunt de herkenningscontrole.
+
+- Grauwe Vliegenvanger · Zeynel Cebeci · CC BY-SA 4.0. Zijaanzicht met geheven vleugel, lange staart en slanke snavel tegen een blauwe lucht. [Bronfoto](https://commons.wikimedia.org/wiki/File:Muscicapa_striata_-_Spotted_Flycatcher_05.jpg).
+- Bonte Vliegenvanger · carabus123 · CC BY 4.0. Vrije vlucht in frontaal aanzicht, met lichte onderzijde en neerwaartse vleugels. De kenmerkende witte vleugelvlek is vanuit deze hoek beperkt zichtbaar. De determinatie is mede gebaseerd op de research-grade bronwaarneming en de overige beelden uit dezelfde reeks. Foto’s met contact met een tak of boomstam zijn uitgesloten. [Bronfoto](https://www.inaturalist.org/photos/735032492) · [Waarneming](https://www.inaturalist.org/observations/400536338).
+- Gekraagde Roodstaart · Paolo Zucca · CC BY 4.0. Vrije vlucht tussen takken met zichtbare roestoranje staart. Een alternatief met de vogel verder weg gaf minder detail op kaartformaat. [Bronfoto](https://www.inaturalist.org/photos/50225292) · [Waarneming](https://www.inaturalist.org/observations/32047784).
+
+CAP-BIRD-012/015. Drie lokale vluchtbeelden met maker, bron, licentie en bewerking. De bestaande hoofdfoto’s blijven beschikbaar. De WebP-bestanden bevatten geen EXIF. Bij een foto in een herkenningsarm aanzicht is de volledige bronreeks nuttig voor soortcontrole. Leg herkenbare en beperkt zichtbare kenmerken afzonderlijk vast. Er staan nog 16 soorten zonder vluchtbeeld op de auditlijst. De volgende soort is Strandplevier.
+
+VERIFIED · Mobiele Chromium op 390 px. Zes kaarten via appbreed zoeken geopend op basis en kandidaat. De nieuwe beelden staan elk eenmaal onder ‘In vlucht’, vóór eventueel verenkleed, tonen bron en licentie en openen met 2× zoom. Ook na offline herladen openen en vergroten alle drie. Alle 343 gidsbeelden en 120 veldopnamen decodeerden offline na precache. Gidsdekking, volgorde, bestaande metadata en SHA-256-uniciteit zijn gecontroleerd. NOT TESTED · Fysiek toestel en productie.

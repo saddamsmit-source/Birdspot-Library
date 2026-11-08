@@ -6574,5 +6574,74 @@ export const GUIDE_POSES = Object.freeze({
       "height": 425,
       "image": "/assets/species/plumage/sp174-flight.webp"
     }
+  ],
+  "sp176": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "De Grauwe Vliegenvanger vliegt vrij tegen een blauwe lucht. Let op de lange staart, slanke snavel en lichte veerranden.",
+      "file": "Muscicapa striata - Spotted Flycatcher 05.jpg",
+      "nl": "Grauwe Vliegenvanger",
+      "latin": "Muscicapa striata",
+      "author": "Zeynel Cebeci",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Muscicapa_striata_-_Spotted_Flycatcher_05.jpg",
+      "showSourceLink": true,
+      "alt": "Grauwe Vliegenvanger in zijaanzicht met geheven vleugel, grijsbruine bovenzijde, lange staart en slanke snavel.",
+      "modifications": "Bijgesneden en omgezet naar WebP",
+      "reviewed": "2026-11-08",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grauwe-vliegenvanger",
+      "visualCheck": "Grauwe Vliegenvanger in zijaanzicht met geheven vleugel, grijsbruine bovenzijde, lange staart en slanke snavel.",
+      "width": 752,
+      "height": 642,
+      "image": "/assets/species/plumage/sp176-flight.webp"
+    }
+  ],
+  "sp178": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "De Gekraagde Roodstaart vliegt tussen takken. De roestoranje staart en lichte, warm getinte onderzijde zijn zichtbaar.",
+      "file": "iNaturalist photo 50225292",
+      "nl": "Gekraagde Roodstaart",
+      "latin": "Phoenicurus phoenicurus",
+      "author": "Paolo Zucca",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://www.inaturalist.org/photos/50225292",
+      "showSourceLink": true,
+      "alt": "Gekraagde Roodstaart in vrije vlucht, met geheven vleugels en een roestoranje staart tegen een lichte lucht.",
+      "modifications": "Bijgesneden en omgezet naar WebP",
+      "reviewed": "2026-11-08",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/gekraagde-roodstaart",
+      "visualCheck": "Gekraagde Roodstaart in vrije vlucht, met geheven vleugels en een roestoranje staart tegen een lichte lucht.",
+      "width": 830,
+      "height": 740,
+      "image": "/assets/species/plumage/sp178-flight.webp"
+    }
+  ],
+  "sp177": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "De Bonte Vliegenvanger vliegt naar de camera toe. De lichte onderzijde en beide neerwaartse vleugels zijn zichtbaar.",
+      "file": "iNaturalist photo 735032492",
+      "nl": "Bonte Vliegenvanger",
+      "latin": "Ficedula hypoleuca",
+      "author": "carabus123",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://www.inaturalist.org/photos/735032492",
+      "showSourceLink": true,
+      "alt": "Bonte Vliegenvanger in vrije vlucht, frontaal gefotografeerd met een lichte onderzijde en twee neerwaarts gespreide vleugels.",
+      "modifications": "Bijgesneden en omgezet naar WebP",
+      "reviewed": "2026-11-08",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bonte-vliegenvanger",
+      "visualCheck": "Bonte Vliegenvanger in vrije vlucht, frontaal gefotografeerd met een lichte onderzijde en twee neerwaarts gespreide vleugels.",
+      "width": 1260,
+      "height": 950,
+      "image": "/assets/species/plumage/sp177-flight.webp"
+    }
   ]
 });
