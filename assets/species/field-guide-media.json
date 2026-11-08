@@ -5748,6 +5748,75 @@
         "height": 934,
         "image": "/assets/species/plumage/sp098-flight.webp"
       }
+    ],
+    "sp099": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Let op de brede, afgeronde vleugels. Op deze foto zie je bij de ene vogel de groenige bovenzijde en bij de andere de witte buik en zwarte borst.",
+        "file": "Northern lapwings (Vanellus vanellus) in flight Marken.jpg",
+        "nl": "Kievit",
+        "latin": "Vanellus vanellus",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Northern_lapwings_(Vanellus_vanellus)_in_flight_Marken.jpg",
+        "showSourceLink": true,
+        "alt": "Twee Kieviten in vrije vlucht bij Marken. De ene toont brede afgeronde vleugels en een groenige rug, de andere een witte buik en zwarte borst.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kievit",
+        "visualCheck": "Twee Kieviten in vrije vlucht bij Marken. De ene toont brede afgeronde vleugels en een groenige rug, de andere een witte buik en zwarte borst.",
+        "width": 1400,
+        "height": 934,
+        "image": "/assets/species/plumage/sp099-flight.webp"
+      }
+    ],
+    "sp100": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "De lange, omlaag gebogen snavel valt op in zijaanzicht. Let ook op de lichte, fijn getekende ondervleugel.",
+        "file": "Curlew (Numenius arquata) in flight.jpg",
+        "nl": "Wulp",
+        "latin": "Numenius arquata",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Curlew_(Numenius_arquata)_in_flight.jpg",
+        "showSourceLink": true,
+        "alt": "Wulp met een lange neergebogen snavel en een opgeheven, licht getekende vleugel in vrije vlucht boven water in Argyll.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wulp",
+        "visualCheck": "Wulp met een lange neergebogen snavel en een opgeheven, licht getekende vleugel in vrije vlucht boven water in Argyll.",
+        "width": 1400,
+        "height": 933,
+        "image": "/assets/species/plumage/sp100-flight.webp"
+      }
+    ],
+    "sp101": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Let op de brede witte vleugelstrepen, de witte staartbasis met zwarte eindband en de poten die achter de staart uitsteken.",
+        "file": "Limosa limosa (flying).jpg",
+        "nl": "Grutto",
+        "latin": "Limosa limosa",
+        "author": "Hans Hillewaert",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Limosa_limosa_(flying).jpg",
+        "showSourceLink": true,
+        "alt": "Grutto in vrije vlucht in de Uitkerkse Polder, met witte strepen op beide vleugels, een zwarte staartband en achteruit gestrekte poten.",
+        "modifications": "Bijgesneden rond de vogel, verkleind en omgezet naar WebP",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grutto",
+        "visualCheck": "Grutto in vrije vlucht in de Uitkerkse Polder, met witte strepen op beide vleugels, een zwarte staartband en achteruit gestrekte poten.",
+        "width": 1400,
+        "height": 875,
+        "image": "/assets/species/plumage/sp101-flight.webp"
+      }
     ]
   }
 }
