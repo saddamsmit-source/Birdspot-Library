@@ -2,16 +2,12 @@
 <html lang="nl" data-theme="">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="theme-color" content="#102a20">
+  <meta name="theme-color" content="#17382C">
   <link rel="manifest" href="manifest.webmanifest">
   <title>Birdspot Library</title>
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
 
   <!-- Tokens -->
   <link rel="stylesheet" href="styles/tokens.css">
@@ -39,10 +35,11 @@
   <link rel="stylesheet" href="styles/cinematic-wetland.css">
   <!-- Kaart K1/K2: volledig scherm en vaste pin; als laatste geladen -->
   <link rel="stylesheet" href="styles/map-explorer.css">
+  <link rel="stylesheet" href="styles/field-experience.css">
   <link rel="preload" as="image" type="image/avif" href="assets/birdspot-ijsvogel-splash.avif" fetchpriority="high">
 
   <!-- SunCalc (offline-capable sunrise/sunset/golden hour) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/suncalc/1.9.0/suncalc.min.js"></script>
+  <script id="sunCalcScript" async src="https://cdnjs.cloudflare.com/ajax/libs/suncalc/1.9.0/suncalc.min.js"></script>
 
   <!-- Module bootstrap -->
   <script type="module" src="src/app.js"></script>

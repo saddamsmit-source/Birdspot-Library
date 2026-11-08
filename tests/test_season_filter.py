@@ -90,7 +90,7 @@ def main():
             assert r["p3"]["months"] == [5, 6, 7], r["p3"]
             print("I6-03 OK — overgangsperiodes")
 
-            species = p.evaluate("async () => (await import('/src/data/species.js')).SPECIES.map(s => ({id:s.id, months:s.months}))")
+            species = p.evaluate("async () => (await import('/src/data/species.js')).SPECIES.map(({id, months, category, statusExtra, regions}) => ({id, months, category, statusExtra, regions}))")
 
             def expected(months):
                 return {s["id"] for s in species if months_of(s["months"]) & set(months)}
@@ -99,13 +99,19 @@ def main():
             tabs = p.eval_on_selector_all("#speciesFilters .filter-chip[data-cat]", "els => els.map(e => e.dataset.cat)")
             assert tabs[0] == "alle", f"I6-04 eerste tab {tabs[0]}"
             assert p.locator('#speciesFilters .filter-chip.active').get_attribute("data-cat") == "standvogel"
+            p.locator("#speciesFiltersToggle").click()
             p.locator('#speciesFilters .filter-chip[data-cat="alle"]').click()
+            season_toggle = p.locator("#seizoenFiltersToggle")
+            season_toggle.click()
             assert p.locator("#seasonHideYearRound").is_hidden(), "I6-06 optie zichtbaar zonder seizoen"
-            assert f"/{len(species)} soorten gezien" in p.locator("#speciesSub").inner_text()
+            season_toggle.click()
+            assert f"/{len(species)} soorten waargenomen" in p.locator("#speciesSub").inner_text()
 
             def check(clicks, months, label):
+                season_toggle.click()
                 for c in clicks:
                     p.locator(f'.filter-chip--seizoen[data-season="{c}"]').click()
+                season_toggle.click()
                 exp = expected(months)
                 p.wait_for_function("(t) => document.querySelector('#seasonHint').textContent.startsWith(t)", arg=label, timeout=8000)
                 hint = p.locator("#seasonHint").inner_text()
@@ -120,7 +126,9 @@ def main():
             # I6-06: optie "Zonder jaarrondvogels" (>= 10 maanden aanwezig) aan en weer uit
             winter = expected(SEASON["winter"])
             yearround = {s["id"] for s in species if len(months_of(s["months"])) >= 10}
+            season_toggle.click()
             p.locator("#seasonHideYearRound").click()
+            season_toggle.click()
             p.wait_for_function("() => document.querySelector('#seasonHint').textContent.includes('zonder jaarrondvogels')", timeout=8000)
             if p.locator("#speciesShowAll").count():
                 p.locator("#speciesShowAll").click()
@@ -128,18 +136,40 @@ def main():
             assert rows == winter - yearround and rows, f"I6-06 {len(rows)} vs {len(winter - yearround)}"
             assert f"· {len(winter - yearround)} soorten" in p.locator("#seasonHint").inner_text()
             p.screenshot(path=str(SHOTS / "species_i6_no_yearround_390.png"))
+            season_toggle.click()
             p.locator("#seasonHideYearRound").click()
+            season_toggle.click()
             p.wait_for_function("(n) => document.querySelector('#seasonHint').textContent.includes('· ' + n + ' soorten')", arg=len(winter), timeout=8000)
             print(f"I6-06 OK — winter zonder jaarrondvogels: {len(winter - yearround)} van {len(winter)}, optie weer uit")
             check(["lente"], [1, 2], "Winter–lente:")
             p.screenshot(path=str(SHOTS / "species_i6_season_390.png"))
             check(["zomer"], SEASON["zomer"], "Zomer:")
+            assert p.locator('.species-row[data-id="sp091"]').count() == 1, "Wintertaling ook in de zomer"
             check(["herfst"], [7, 8], "Zomer–herfst:")
             pressed = p.eval_on_selector_all('.filter-chip--seizoen[aria-pressed="true"]', "els => els.map(e => e.dataset.season)")
             assert pressed == ["zomer", "herfst"], pressed
+            season_toggle.click()
             p.locator('.filter-chip--seizoen[data-season="zomer"]').click()
             p.locator('.filter-chip--seizoen[data-season="herfst"]').click()
             assert p.locator("#seasonHint").is_hidden()
+
+            # Switching menus keeps the other selections and combines all three filters.
+            p.locator("#speciesFiltersToggle").click()
+            assert p.locator("#seizoenFilters").is_hidden()
+            p.locator('#speciesFilters [data-cat="trekvogel"]').click()
+            p.locator("#gebiedFiltersToggle").click()
+            p.locator('#gebiedFilters [data-region="bos"]').click()
+            season_toggle.click()
+            p.locator('[data-season="lente"]').click()
+            p.locator('[data-season="zomer"]').click()
+            p.keyboard.press("Escape")
+            assert p.locator("#seizoenFilters").is_hidden()
+            assert "Lente–zomer" in season_toggle.inner_text()
+            assert "Doortrekkers" in p.locator("#speciesFiltersToggle").inner_text()
+            assert "Bos" in p.locator("#gebiedFiltersToggle").inner_text()
+            exp = expected([4, 5]) & {s["id"] for s in species if "trekvogel" in (s["category"], s["statusExtra"]) and "bos" in s["regions"]}
+            rows = set(p.eval_on_selector_all("#speciesList .species-row", "els => els.map(e => e.dataset.id)"))
+            assert rows and rows == exp, f"Gecombineerde filters: {rows} vs {exp}"
             assert not errors, f"I6-05 paginafouten: {errors}"
             print("I6-05 OK — geen paginafouten")
             browser.close()

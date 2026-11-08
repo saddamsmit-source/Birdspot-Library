@@ -6,7 +6,7 @@
  *
  * Regels per Handbook §3.5:
  *   - Eén "Alles bewaren": alle opslagsoorten in één actie
- *   - Eén "Herstellen": samenvoegen, back-up wint bij verschil
+ *   - Eén "Herstellen": samenvoegen op ID, recentere wijzigingen winnen
  *   - Positieve status (certainty) gaat NOOIT terug
  *   - Geen dubbelen op basis van id
  *   - Veiligheidskopie vóór herstellen
@@ -15,19 +15,17 @@
  *   - Format: ZIP met datum in de naam (birdspot-YYYY-MM-DD.zip)
  */
 
-import { getSightings }                    from '../data/sightings.js';
+import { STORAGE_KEY, SCHEMA_VERSION, migrateSighting } from '../data/sightings.js';
+import { SEEN_KEY } from '../data/species.js';
 import { getDB }                            from '../data/db.js';
-import { exportCollections, mergeCollections, restoreCollections } from './collections.js';
-import { loadPlaces, savePlaces, PLACES_KEY } from '../data/places.js';
-
-const STORAGE_KEY    = 'birdspot-sightings';
-const SCHEMA_VERSION = 2;
+import { COLLECTION_KEYS, normalizeIds } from './collections.js';
+import { PLACES_KEY, PLACES_SCHEMA } from '../data/places.js';
 
 // ── ZIP-helpers (geen CDN-dependency; pure JS) ─────────────────────────────
 
 /**
  * Minimale ZIP-builder in pure JS.
- * Ondersteunt stored (method 0) en deflate (method 8) via CompressionStream.
+ * Birdspot gebruikt stored (method 0).
  */
 async function buildZip(files) {
   // files: Array<{ name: string, data: Uint8Array }>
@@ -140,31 +138,11 @@ function _crcTable() {
 // ── Alle IDB-foto's ophalen ────────────────────────────────────────────────
 
 async function getAllPhotos() {
-  try {
-    const db = await getDB();
-    return new Promise((resolve, reject) => {
-      const tx  = db.transaction('photos', 'readonly');
-      const req = tx.objectStore('photos').getAll();
-      req.onsuccess = () => resolve(req.result || []);
-      req.onerror   = () => reject(req.error);
-    });
-  } catch (_) {
-    return [];
-  }
-}
-
-async function saveAllPhotos(photos) {
   const db = await getDB();
   return new Promise((resolve, reject) => {
-    const tx = db.transaction('photos', 'readwrite');
-    const store = tx.objectStore('photos');
-    let done = 0;
-    if (!photos.length) { resolve(); return; }
-    for (const p of photos) {
-      const req = store.put(p);
-      req.onsuccess = () => { if (++done === photos.length) resolve(); };
-      req.onerror   = () => reject(req.error);
-    }
+    const req = db.transaction('photos', 'readonly').objectStore('photos').getAll();
+    req.onsuccess = () => resolve(req.result);
+    req.onerror = () => reject(req.error);
   });
 }
 
@@ -191,18 +169,94 @@ function setBackupStatus(info) {
 
 const SAFETY_KEY = 'birdspot-safety-copy';
 
-function saveSafetyCopy() {
+const DATA_KEYS = [STORAGE_KEY, PLACES_KEY, SEEN_KEY, ...Object.values(COLLECTION_KEYS)];
+
+function readStorage() {
+  return Object.fromEntries([...DATA_KEYS, SAFETY_KEY].map(key => [key, localStorage.getItem(key)]));
+}
+
+function readList(raw, property) {
+  if (raw === null) return [];
+  const data = JSON.parse(raw);
+  const list = property ? data?.[property] : data;
+  if (!Array.isArray(list)) throw new Error('Bestaande bibliotheekgegevens kunnen niet worden gelezen.');
+  return list;
+}
+
+function writeStorage(key, value) {
+  if (value === null) localStorage.removeItem(key);
+  else localStorage.setItem(key, value);
+}
+
+function verifyStorage(snapshot) {
+  if (Object.entries(snapshot).some(([key, value]) => localStorage.getItem(key) !== value)) {
+    throw new Error('De bibliotheek is intussen gewijzigd. Probeer opnieuw.');
+  }
+}
+
+function applyStorageChanges(before, changes) {
+  verifyStorage(before);
+  const written = [];
+  const rollback = () => {
+    for (const [key, value] of written.reverse()) {
+      if (localStorage.getItem(key) === value) writeStorage(key, before[key]);
+    }
+  };
   try {
-    const current = localStorage.getItem(STORAGE_KEY) || '{}';
-    const photos  = ''; // foto's zijn groot; we slaan de ID-lijst op
-    const sightings = JSON.parse(current)?.sightings || [];
-    localStorage.setItem(SAFETY_KEY, JSON.stringify({
-      savedAt:   new Date().toISOString(),
-      sightings,
-      places: loadPlaces(),
-      collections: exportCollections(),
-    }));
-  } catch (_) { /* quota: veiligheidskopie mislukt stille */ }
+    for (const [key, value] of changes) {
+      if (value === before[key]) continue;
+      writeStorage(key, value);
+      written.push([key, value]);
+    }
+  } catch (error) {
+    rollback();
+    throw error;
+  }
+  return rollback;
+}
+
+// Houd de mediawijzigingen onzichtbaar tot de overige opslag is bijgewerkt.
+// Een fout in localStorage breekt de IndexedDB-transactie af.
+async function commitRestore(before, changes, media, remove = false) {
+  if (!media.length) {
+    applyStorageChanges(before, changes);
+    return;
+  }
+  const db = await getDB();
+  await new Promise((resolve, reject) => {
+    const tx = db.transaction('photos', 'readwrite');
+    const store = tx.objectStore('photos');
+    let remaining = media.length;
+    let storageError;
+    let rollback;
+    tx.oncomplete = () => resolve();
+    tx.onabort = () => {
+      try {
+        rollback?.();
+      } catch (error) {
+        reject(new Error('Opslag terugzetten mislukt: ' + error.message));
+        return;
+      }
+      reject(storageError || tx.error || new Error('Media opslaan is afgebroken.'));
+    };
+    try {
+      for (const item of media) {
+        const request = remove ? store.delete(item) : store.add(item);
+        request.onsuccess = () => {
+          if (--remaining) return;
+          try {
+            rollback = applyStorageChanges(before, changes);
+          } catch (error) {
+            storageError = error;
+            tx.abort();
+          }
+        };
+      }
+    } catch (error) {
+      storageError = error;
+      tx.abort();
+    }
+  });
 }
 
 export function getSafetyCopy() {
@@ -248,8 +302,13 @@ function zipMediaExtension(photo) {
  * Returns { sightingCount, photoCount, filename }
  */
 export async function exportBackup() {
-  const sightings = await getSightings();
-  const photos    = await getAllPhotos();
+  const storage = readStorage();
+  const sightings = readList(storage[STORAGE_KEY], 'sightings').map(migrateSighting);
+  const photos = await getAllPhotos();
+  const photoIds = new Set(photos.filter(photo => photo.blob).map(photo => photo.id));
+  if (photos.length !== photoIds.size || sightings.some(s => s.photoIds.some(id => !photoIds.has(id)))) {
+    throw new Error('Een of meer mediabestanden ontbreken. Er is geen onvolledige back-up gemaakt.');
+  }
 
   const encoder = new TextEncoder();
 
@@ -259,19 +318,20 @@ export async function exportBackup() {
     schemaVersion: SCHEMA_VERSION,
     exportedAt:    new Date().toISOString(),
     sightings,
-    places: loadPlaces(),
+    places: readList(storage[PLACES_KEY], 'places'),
     photoIds: photos.map(p => p.id),
     // Metadata per bestand: plek-media (K4) houdt zo zijn plek en exacte type
     mediaMeta: photos.map(p => ({ id: p.id, type: p.type || p.blob?.type || null, filename: p.filename || null,
       speciesId: p.speciesId || null, sightingId: p.sightingId || null, placeId: p.placeId || null })),
-    collections: exportCollections(),
+    collections: Object.fromEntries(Object.entries(COLLECTION_KEYS).map(([kind, key]) =>
+      [kind, normalizeIds(readList(storage[key]))])),
+    seenSpecies: normalizeIds(readList(storage[SEEN_KEY])),
   };
   const gegevensBytes = encoder.encode(JSON.stringify(gegevens, null, 2));
 
   // Alle foto's als individuele bestanden
   const zipFiles = [{ name: 'gegevens.json', data: gegevensBytes }];
   for (const photo of photos) {
-    if (!photo.blob) continue;
     const buf = photo.blob instanceof Blob
       ? new Uint8Array(await photo.blob.arrayBuffer())
       : new Uint8Array(photo.blob);
@@ -280,6 +340,7 @@ export async function exportBackup() {
   }
 
   const zipBytes = await buildZip(zipFiles);
+  verifyStorage(storage);
   const blob     = new Blob([zipBytes], { type: 'application/zip' });
 
   // Datum in bestandsnaam
@@ -315,241 +376,207 @@ export async function exportBackup() {
  */
 export async function validateBackupFile(file) {
   try {
-    if (!file || !file.name.endsWith('.zip')) {
-      return { valid: false, error: 'Bestand is geen ZIP-bestand.' };
-    }
-
-    const buf   = await file.arrayBuffer();
-    const bytes = new Uint8Array(buf);
-
-    // Zoek gegevens.json in de ZIP
-    const gegevensJson = extractFromZip(bytes, 'gegevens.json');
-    if (!gegevensJson) {
-      return { valid: false, error: 'Geen gegevens.json gevonden in het ZIP-bestand.' };
-    }
-
-    const data = JSON.parse(new TextDecoder().decode(gegevensJson));
-    if (data.format !== 'birdspot-backup') {
-      return { valid: false, error: 'Dit is geen Birdspot back-up.' };
-    }
-    if (!Array.isArray(data.sightings)) {
-      return { valid: false, error: 'Ongeldig bestandsformaat: waarnemingen ontbreken.' };
-    }
-
-    return {
-      valid:         true,
-      sightingCount: data.sightings.length,
-      photoCount:    Array.isArray(data.photoIds) ? data.photoIds.length : 0,
-    };
-  } catch (e) {
-    return { valid: false, error: `Fout bij lezen: ${e.message}` };
+    const { data, files } = await readBackup(file);
+    return { valid: true, sightingCount: data.sightings.length, photoCount: files.size };
+  } catch (error) {
+    return { valid: false, error: error.message };
   }
 }
 
-// ── Import / herstel ──────────────────────────────────────────────────────
-
-/**
- * Importeert een ZIP back-up.
- * Volgorde: validatie → veiligheidskopie → samenvoegen → status → herladen.
- * Back-up wint bij verschil; positieve certainty gaat nooit terug; geen dubbelen.
- * Returns { imported: number, merged: number }
- */
-export async function importBackup(file) {
-  // 1. Lees en valideer het bestand
-  const buf   = await file.arrayBuffer();
-  const bytes = new Uint8Array(buf);
-
-  const gegevensJson = extractFromZip(bytes, 'gegevens.json');
-  if (!gegevensJson) throw new Error('gegevens.json niet gevonden in ZIP');
-
-  const data = JSON.parse(new TextDecoder().decode(gegevensJson));
-  if (data.format !== 'birdspot-backup' || !Array.isArray(data.sightings)) {
-    throw new Error('Ongeldig back-upbestand');
+async function readBackup(file) {
+  if (!file?.name.toLowerCase().endsWith('.zip')) throw new Error('Bestand is geen ZIP-bestand.');
+  const entries = readZip(new Uint8Array(await file.arrayBuffer()));
+  const metadata = entries.get('gegevens.json');
+  if (!metadata) throw new Error('Geen gegevens.json gevonden in het ZIP-bestand.');
+  const data = JSON.parse(new TextDecoder().decode(metadata));
+  if (data?.format !== 'birdspot-backup' || !Array.isArray(data.sightings)) {
+    throw new Error('Ongeldig Birdspot-back-upbestand.');
   }
-
-  // 2. Veiligheidskopie van huidige data
-  saveSafetyCopy();
-
-  // 3. Huidige waarnemingen ophalen
-  const current = await getSightings();
-  const byId    = new Map(current.map(s => [s.id, s]));
-
-  // 4. Samenvoegen: back-up wint bij verschil
-  const CERTAINTY_RANK = { certain: 2, probable: 1, possible: 0 };
-
-  for (const imported of data.sightings) {
-    const existing = byId.get(imported.id);
-    if (!existing) {
-      // Nieuwe waarneming — toevoegen
-      byId.set(imported.id, _migrate(imported));
-    } else {
-      // Bestaand — samenvoegen, back-up wint op de meeste velden
-      const merged = { ...existing, ...imported };
-      // Positieve certainty gaat nooit terug
-      const existRank  = CERTAINTY_RANK[existing.certainty]  ?? 0;
-      const importRank = CERTAINTY_RANK[imported.certainty]  ?? 0;
-      merged.certainty = existRank > importRank ? existing.certainty : imported.certainty;
-      byId.set(imported.id, _migrate(merged));
-    }
+  const validId = id => typeof id === 'string' && id.trim().length > 0;
+  if (data.sightings.some(s => !validId(s?.id) ||
+    [s.speciesName, s.locationName, s.date].some(value => value != null && typeof value !== 'string') ||
+    (s.photoIds != null && (!Array.isArray(s.photoIds) || !s.photoIds.every(validId))))) {
+    throw new Error('De back-up bevat een ongeldige waarneming of mediaverwijzing.');
   }
-
-  const merged = Array.from(byId.values());
-
-  // 5. Foto's importeren (die al ontbreken)
-  const existingPhotos = await getAllPhotos();
-  const existingIds    = new Set(existingPhotos.map(p => p.id));
-  const newPhotos      = [];
-
-  const metaById = new Map((Array.isArray(data.mediaMeta) ? data.mediaMeta : []).map(m => [m.id, m]));
-  for (const photoId of (data.photoIds || [])) {
-    if (existingIds.has(photoId)) continue;
-    const meta = metaById.get(photoId);
-    // Zoek het fotobestand in de ZIP (probeert meerdere extensies)
-    for (const ext of Object.keys(MEDIA_EXT_MIME)) {
-      const photoBytes = extractFromZip(bytes, `photos/${photoId}.${ext}`);
-      if (photoBytes) {
-        const mimeType = meta?.type || MEDIA_EXT_MIME[ext];
-        const blob     = new Blob([photoBytes], { type: mimeType });
-        // Zoek bijbehorende sighting
-        const sighting = merged.find(s => (s.photoIds || []).includes(photoId));
-        newPhotos.push({
-          id:        photoId,
-          blob,
-          type:      mimeType,
-          filename:  meta?.filename || `${photoId}.${ext}`,
-          speciesId: sighting?.speciesId || meta?.speciesId || null,
-          sightingId: sighting?.id       || meta?.sightingId || null,
-          placeId:   meta?.placeId || null,
-          addedAt:   new Date().toISOString(),
-        });
-        break;
-      }
-    }
+  if (data.photoIds != null && (!Array.isArray(data.photoIds) || !data.photoIds.every(validId))) {
+    throw new Error('De back-up bevat een ongeldige medialijst.');
   }
-
-  // 5b. Plekken samenvoegen (op id; back-up wint bij verschil). Oude ZIPs zonder plekken: niets.
-  let mergedPlaces = null;
-  if (Array.isArray(data.places)) {
-    const placeById = new Map(loadPlaces().map(p => [p.id, p]));
-    for (const p of data.places) {
-      if (p && typeof p.id === 'string' && Number.isFinite(Number(p.lat)) && Number.isFinite(Number(p.lon))) {
-        placeById.set(p.id, { ...(placeById.get(p.id) || {}), ...p });
-      }
-    }
-    mergedPlaces = [...placeById.values()];
+  const files = new Map();
+  for (const [path, bytes] of entries) {
+    const match = /^photos\/([^/]+)\.([^.]+)$/.exec(path);
+    if (!match || !Object.hasOwn(MEDIA_EXT_MIME, match[2])) continue;
+    const [, id, ext] = match;
+    if (files.has(id)) throw new Error('De back-up bevat meerdere bestanden met dezelfde media-ID.');
+    files.set(id, { bytes, ext });
   }
+  return { data, files };
+}
 
-  // 6. Alles opslaan
+function mergeRecord(local, incoming) {
+  if (!local) return incoming;
+  const localDate = Date.parse(local.updatedAt ?? local.createdAt);
+  const incomingDate = Date.parse(incoming.updatedAt ?? incoming.createdAt);
+  return incomingDate > localDate ? { ...local, ...incoming } : local;
+}
+
+let restoring = false;
+async function runRestore(operation) {
+  if (restoring) throw new Error('Er wordt al een back-up hersteld.');
+  restoring = true;
   try {
-    if (mergedPlaces) savePlaces(mergedPlaces);
-    localStorage.setItem(STORAGE_KEY, JSON.stringify({
-      schemaVersion: SCHEMA_VERSION,
-      exportedAt:    new Date().toISOString(),
-      sightings:     merged,
-    }));
-  } catch (e) {
-    throw new Error(`Opslaan mislukt: ${e.message}`);
+    if (navigator.locks) return await navigator.locks.request(SAFETY_KEY, operation);
+    return await operation();
+  } finally {
+    restoring = false;
   }
-
-  if (newPhotos.length > 0) {
-    // Write failures must propagate; never report a successful restore with missing media.
-    await saveAllPhotos(newPhotos);
-  }
-
-  // 7. Favorieten en filmselectie additief samenvoegen met oude back-ups.
-  //    Oude ZIPs zonder collections blijven volledig compatibel.
-  mergeCollections(data.collections);
-
-  // 8. Status bijwerken
-  setBackupStatus(prev => ({
-    ...(getBackupStatus() || {}),
-    lastRestore:   new Date().toISOString(),
-    restoreCount:  data.sightings.length,
-  }));
-
-  return { imported: data.sightings.length, merged: merged.length };
 }
 
-// ── Terugzetten naar veiligheidskopie ─────────────────────────────────────
-
-/**
- * Zet de data terug naar de veiligheidskopie van vóór de laatste import.
- * Gooit als er geen veiligheidskopie is.
- */
-export async function restoreFromSafetyCopy() {
-  const copy = getSafetyCopy();
-  if (!copy || !Array.isArray(copy.sightings)) {
-    throw new Error('Geen veiligheidskopie beschikbaar.');
-  }
-
-  localStorage.setItem(STORAGE_KEY, JSON.stringify({
-    schemaVersion: SCHEMA_VERSION,
-    exportedAt:    copy.savedAt,
-    sightings:     copy.sightings,
-  }));
-
-  // De persoonlijke collecties en plekken horen bij dezelfde veiligheidssnapshot.
-  restoreCollections(copy.collections);
-  if (Array.isArray(copy.places)) savePlaces(copy.places);
-  else localStorage.removeItem(PLACES_KEY);
-
-  // Veiligheidskopie verwijderen (terugzetten is klaar)
-  localStorage.removeItem(SAFETY_KEY);
-}
-
-// ── ZIP-reader (minimale implementatie voor stored files) ─────────────────
-
-function extractFromZip(bytes, targetName) {
-  const view    = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
-  const encoder = new TextEncoder();
-  const target  = encoder.encode(targetName);
-  let i = 0;
-
-  while (i < bytes.length - 30) {
-    if (view.getUint32(i, true) !== 0x04034b50) { i++; continue; }
-
-    const method    = view.getUint16(i + 8,  true);
-    const compSize  = view.getUint32(i + 18, true);
-    const uncompSize = view.getUint32(i + 22, true);
-    const nameLen   = view.getUint16(i + 26, true);
-    const extraLen  = view.getUint16(i + 28, true);
-    const nameBytes = bytes.slice(i + 30, i + 30 + nameLen);
-
-    const dataOffset = i + 30 + nameLen + extraLen;
-
-    if (_bytesEqual(nameBytes, target)) {
-      if (method === 0) {
-        // Stored
-        return bytes.slice(dataOffset, dataOffset + uncompSize);
+export function importBackup(file) {
+  return runRestore(async () => {
+    const { data, files } = await readBackup(file);
+    const before = readStorage();
+    const current = readList(before[STORAGE_KEY], 'sightings');
+    const byId = new Map(current.map(s => [s.id, s]));
+    const certaintyRank = { certain: 2, probable: 1, possible: 0 };
+    const skippedAttachments = new Set();
+    for (const incoming of data.sightings) {
+      const local = byId.get(incoming.id);
+      const merged = mergeRecord(local, incoming);
+      if (merged === local) {
+        for (const id of incoming.photoIds || []) skippedAttachments.add(id);
       }
-      // Deflate of andere methoden — voor nu: null (alleen stored gebruikt in buildZip)
-      return null;
+      const certainty = (certaintyRank[local?.certainty] ?? -1) > (certaintyRank[incoming.certainty] ?? -1)
+        ? local.certainty : incoming.certainty;
+      byId.set(incoming.id, merged === local
+        ? (certainty === local.certainty ? local : { ...local, certainty })
+        : migrateSighting({ ...merged, certainty }));
     }
 
-    i = dataOffset + compSize;
+    const sightings = [...byId.values()];
+    const photoOwners = new Map(sightings.flatMap(s => s.photoIds?.map(id => [id, s]) || []));
+    const existingPhotos = new Set((await getAllPhotos()).map(p => p.id));
+    const metadata = new Map((Array.isArray(data.mediaMeta) ? data.mediaMeta : []).filter(Boolean).map(m => [m.id, m]));
+    const mediaIds = new Set([...(data.photoIds || files.keys()), ...data.sightings.flatMap(s => s.photoIds || [])]);
+    const newPhotos = [];
+    for (const id of mediaIds) {
+      if (existingPhotos.has(id) || (skippedAttachments.has(id) && !photoOwners.has(id))) continue;
+      const file = files.get(id);
+      if (!file) throw new Error('Mediabestand ontbreekt in de back-up: ' + id);
+      const meta = metadata.get(id);
+      const owner = photoOwners.get(id);
+      const type = meta?.type || MEDIA_EXT_MIME[file.ext];
+      newPhotos.push({
+        id, blob: new Blob([file.bytes], { type }), type,
+        filename: meta?.filename || id + '.' + file.ext,
+        speciesId: owner?.speciesId ?? meta?.speciesId ?? null,
+        sightingId: owner?.id ?? meta?.sightingId ?? null,
+        placeId: meta?.placeId ?? null,
+        addedAt: new Date().toISOString(),
+      });
+    }
+
+    const dataChanges = new Map();
+    if (JSON.stringify(sightings) !== JSON.stringify(current)) {
+      dataChanges.set(STORAGE_KEY, JSON.stringify({
+        ...JSON.parse(before[STORAGE_KEY]),
+        schemaVersion: SCHEMA_VERSION, exportedAt: new Date().toISOString(), sightings,
+      }));
+    }
+    if (Array.isArray(data.places) && data.places.length) {
+      const currentPlaces = readList(before[PLACES_KEY], 'places');
+      const places = new Map(currentPlaces.map(place => [place.id, place]));
+      for (const place of data.places) {
+        if (place && typeof place.id === 'string' && place.id.trim() && place.lat != null && place.lon != null
+          && Number.isFinite(Number(place.lat)) && Math.abs(place.lat) <= 90
+          && Number.isFinite(Number(place.lon)) && Math.abs(place.lon) <= 180) {
+          places.set(place.id, mergeRecord(places.get(place.id), place));
+        }
+      }
+      if (JSON.stringify([...places.values()]) !== JSON.stringify(currentPlaces)) {
+        dataChanges.set(PLACES_KEY, JSON.stringify({
+          ...JSON.parse(before[PLACES_KEY]), schemaVersion: PLACES_SCHEMA, places: [...places.values()],
+        }));
+      }
+    }
+    for (const [kind, key] of Object.entries(COLLECTION_KEYS)) {
+      if (Array.isArray(data.collections?.[kind])) {
+        const local = readList(before[key]);
+        const merged = normalizeIds([...local, ...data.collections[kind]]);
+        if (JSON.stringify(merged) !== JSON.stringify(local)) dataChanges.set(key, JSON.stringify(merged));
+      }
+    }
+    if (Array.isArray(data.seenSpecies)) {
+      const local = readList(before[SEEN_KEY]);
+      const merged = normalizeIds([...local, ...data.seenSpecies]);
+      if (JSON.stringify(merged) !== JSON.stringify(local)) dataChanges.set(SEEN_KEY, JSON.stringify(merged));
+    }
+
+    // Laat een eerdere veiligheidskopie intact bij een herhaalde, ongewijzigde import.
+    if (!dataChanges.size && !newPhotos.length) {
+      return { imported: data.sightings.length, merged: sightings.length };
+    }
+
+    const safety = {
+      storage: Object.fromEntries(DATA_KEYS.map(key => [key, before[key]])),
+      importedMediaIds: newPhotos.map(photo => photo.id),
+    };
+    await commitRestore(before, [[SAFETY_KEY, JSON.stringify(safety)], ...dataChanges], newPhotos);
+    setBackupStatus({ ...getBackupStatus(), lastRestore: new Date().toISOString(), restoreCount: data.sightings.length });
+    return { imported: data.sightings.length, merged: sightings.length };
+  });
+}
+
+export function restoreFromSafetyCopy() {
+  return runRestore(async () => {
+    const before = readStorage();
+    const copy = JSON.parse(before[SAFETY_KEY]);
+    const changes = new Map();
+    if (copy?.storage && DATA_KEYS.every(key => copy.storage[key] === null || typeof copy.storage[key] === 'string')) {
+      for (const key of DATA_KEYS) changes.set(key, copy.storage[key]);
+    } else if (Array.isArray(copy?.sightings)) {
+      // Veiligheidskopieën van eerdere versies hadden geen ruwe opslagsnapshot.
+      changes.set(STORAGE_KEY, JSON.stringify({
+        schemaVersion: SCHEMA_VERSION, exportedAt: copy.savedAt, sightings: copy.sightings,
+      }));
+      changes.set(PLACES_KEY, Array.isArray(copy.places)
+        ? JSON.stringify({ schemaVersion: PLACES_SCHEMA, places: copy.places }) : null);
+      for (const [kind, key] of Object.entries(COLLECTION_KEYS)) {
+        if (Array.isArray(copy.collections?.[kind])) changes.set(key, JSON.stringify(normalizeIds(copy.collections[kind])));
+      }
+    } else {
+      throw new Error('Geen veiligheidskopie beschikbaar.');
+    }
+    changes.set(SAFETY_KEY, null);
+    await commitRestore(before, changes, normalizeIds(copy.importedMediaIds), true);
+  });
+}
+
+// Birdspot exporteert ZIP-items zonder compressie. Controleer grenzen en CRC
+// voordat een item als bibliotheekdata of media wordt gebruikt.
+function readZip(bytes) {
+  const view = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
+  const decoder = new TextDecoder();
+  const entries = new Map();
+  let offset = 0;
+  while (offset + 30 <= bytes.length && view.getUint32(offset, true) === 0x04034b50) {
+    const size = view.getUint32(offset + 18, true);
+    const nameStart = offset + 30;
+    const nameEnd = nameStart + view.getUint16(offset + 26, true);
+    const start = nameEnd + view.getUint16(offset + 28, true);
+    const end = start + size;
+    if (view.getUint16(offset + 8, true) !== 0 || view.getUint32(offset + 22, true) !== size || end > bytes.length) {
+      throw new Error('Het ZIP-bestand is beschadigd of gebruikt een niet-ondersteunde compressie.');
+    }
+    const name = decoder.decode(bytes.subarray(nameStart, nameEnd));
+    const data = bytes.subarray(start, end);
+    if (entries.has(name) || crc32(data) !== view.getUint32(offset + 14, true)) {
+      throw new Error('Het ZIP-bestand bevat dubbele of beschadigde bestanden.');
+    }
+    entries.set(name, data);
+    offset = end;
   }
-  return null;
-}
-
-function _bytesEqual(a, b) {
-  if (a.length !== b.length) return false;
-  for (let i = 0; i < a.length; i++) if (a[i] !== b[i]) return false;
-  return true;
-}
-
-function _migrate(s) {
-  return {
-    ...s,
-    lat:          s.lat          ?? null,
-    lon:          s.lon          ?? null,
-    locationName: s.locationName ?? null,
-    notes:        s.notes        ?? null,
-    photoIds:     Array.isArray(s.photoIds) ? s.photoIds : [],
-    time:         s.time         !== undefined ? s.time         : null,
-    count:        s.count        !== undefined ? s.count        : 1,
-    certainty:    s.certainty    !== undefined ? s.certainty    : 'certain',
-    habitat:      s.habitat      !== undefined ? s.habitat      : null,
-    behavior:     s.behavior     !== undefined ? s.behavior     : null,
-    weather:      s.weather      !== undefined ? s.weather      : null,
-  };
+  const directory = offset + 4 <= bytes.length && view.getUint32(offset, true) === 0x02014b50;
+  const endOfDirectory = bytes.length >= 22 && view.getUint32(bytes.length - 22, true) === 0x06054b50;
+  if (!directory || !endOfDirectory) throw new Error('Het ZIP-bestand is onvolledig.');
+  return entries;
 }
