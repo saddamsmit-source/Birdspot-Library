@@ -18,6 +18,8 @@ def main():
    raw=json.dumps({'schemaVersion':2,'custom':'keep','sightings':[None,{'id':'test-existing','speciesId':'sp055','date':'2026-11-01','observationMethod':'heard','photoIds':[],'unknownField':42}]})
    p.evaluate('(raw)=>localStorage.setItem("birdspot-sightings",raw)',raw)
    p.locator('[data-route="species"]').click();p.locator('#speciesSearch').fill('Winterkoning')
+   p.locator('#speciesFiltersToggle').click()
+   p.locator('#speciesFilters [data-cat="standvogel"]').click()
    p.locator('.species-row[data-id="sp055"] .species-row__body').click()
    p.locator('[data-sd-tab="mijn"]').click()
    p.locator('.signature-species-sighting').wait_for()
@@ -28,7 +30,15 @@ def main():
    p.locator('#seizoenFiltersToggle').click()
    p.locator('#seizoenFilters').wait_for()
    p.go_back();p.locator('#seizoenFilters').wait_for(state='hidden')
-   assert p.locator('#speciesSearch').input_value()=='Winterkoning'
+   assert p.locator('#speciesSearch').input_value()==''
+   assert p.locator('#speciesFiltersToggle strong').inner_text()=='Alle vogels'
+   assert p.locator('#speciesList .species-row').count()>1
+   p.locator('#speciesSearch').fill('Winterkoning')
+   p.locator('.species-row[data-id="sp055"] .species-row__body').click()
+   p.locator('.signature-species-detail-close').click()
+   p.locator('.signature-species-detail-overlay').wait_for(state='detached')
+   assert p.locator('#speciesSearch').input_value()==''
+   p.locator('#speciesSearch').fill('Winterkoning')
    # Nested picker Back closes only the top layer; form values survive.
    p.locator('#fab').click();p.locator('#sightLocation').fill('Terugtest')
    p.locator('#speciesPickerBtn').click();p.go_back()
@@ -37,6 +47,7 @@ def main():
    assert p.locator('#sightLocation').input_value()=='Terugtest'
    p.go_back();p.locator('#addSightingSheet').wait_for(state='detached')
    assert p.locator('#screen-species').is_visible()
+   assert p.locator('#speciesSearch').input_value()=='Winterkoning'
    # Remove only our malformed fixture, not through application code; test valid navigation too.
    p.evaluate('''()=>{const s=JSON.parse(localStorage.getItem('birdspot-sightings'));s.sightings=s.sightings.filter(Boolean);localStorage.setItem('birdspot-sightings',JSON.stringify(s));}''')
    p.locator('[data-route="profile"]').click()
@@ -51,7 +62,7 @@ def main():
    assert p.locator('#screen-profile').is_visible()
    assert p.evaluate('localStorage.getItem("birdspot-sightings")')==before
    p.go_back();p.locator('#screen-species').wait_for()
-   assert p.locator('#speciesSearch').input_value()=='Winterkoning'
+   assert p.locator('#speciesSearch').input_value()==''
    p.go_back();p.locator('#screen-home').wait_for()
    p.go_forward();p.locator('#screen-species').wait_for()
    # Native page pinch is blocked outside Leaflet, while events reach map handling.

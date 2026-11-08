@@ -32,6 +32,43 @@ let _detailSpeciesId = null;
 let _onlyFavorites = false;
 let _speciesCtx = null;
 
+function resetGuideFilters() {
+  _searchQuery = '';
+  _currentCategory = ALL;
+  _currentRegion = null;
+  _seasons = [];
+  _hideYearRound = false;
+  _onlyFavorites = false;
+  _listLimit = LIST_PAGE;
+  _listKey = '';
+}
+
+function restoreGuideDefaults(el, ctx) {
+  const changed = _searchQuery || _currentCategory !== ALL || _currentRegion || _seasons.length ||
+    _hideYearRound || _onlyFavorites || _listLimit !== LIST_PAGE;
+  if (!changed) return false;
+  resetGuideFilters();
+  el.querySelector('#speciesSearch').value = '';
+  el.querySelectorAll('.species-filter').forEach(menu => {
+    menu.open = false;
+    menu.querySelector('summary strong').textContent = filterLabel(menu.querySelector('.species-filters').id);
+  });
+  el.querySelectorAll('.species-filter .filter-chip').forEach(chip => {
+    const selected = chip.dataset.cat === ALL;
+    chip.classList.toggle('active', selected);
+    chip.setAttribute('aria-pressed', String(selected));
+  });
+  el.querySelector('#seasonHideYearRound').hidden = true;
+  const favorites = el.querySelector('#speciesOnlyFavorites');
+  if (favorites) {
+    favorites.classList.remove('is-selected');
+    favorites.setAttribute('aria-pressed', 'false');
+  }
+  renderList(el, undefined, ctx);
+  el.closest('#main-view')?.scrollTo({ top: 0, behavior: 'instant' });
+  return true;
+}
+
 function filterLabel(id) {
   if (id === 'speciesFilters') return CATEGORY_LABELS[_currentCategory] || 'Alle vogels';
   if (id === 'gebiedFilters') return REGIONS[_currentRegion]?.label || 'Alle gebieden';
@@ -150,7 +187,7 @@ export function renderSpecies(el, { speciesId } = {}) {
 
   el.innerHTML = `
     <header class="species-header signature-species-hero" aria-label="Soortenbibliotheek">
-      <h1>Soortengids</h1>
+      <h1 tabindex="-1">Soortengids</h1>
       <p id="speciesSub">${counterText(seenIds)}</p>
     </header>
 
@@ -246,7 +283,10 @@ export function renderSpecies(el, { speciesId } = {}) {
     ctx.detailCleanup?.(false);
     ctx.urls.forEach(revokePhotoUrl);
     ctx.urls.clear();
-    if (_speciesCtx === ctx) _speciesCtx = null;
+    if (_speciesCtx === ctx) {
+      resetGuideFilters();
+      _speciesCtx = null;
+    }
   };
   return ctx.cleanup;
 }
@@ -500,7 +540,7 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
   if (!s) return;
   const ctx = _speciesCtx;
   if (ctx?.destroyed) return;
-  ctx?.detailCleanup?.();
+  ctx?.detailCleanup?.(false);
   _detailSpeciesId = speciesId;
 
   const guidePhoto = GUIDE_PHOTOS[speciesId];
@@ -590,7 +630,11 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
       for (const url of photosUrls) revokePhotoUrl(url);
       photosUrls.clear();
       if (ctx?.detailCleanup === close) ctx.detailCleanup = null;
-      returnFocus?.focus?.();
+      if (animate && !ctx?.destroyed && !ctx?.detailCleanup && restoreGuideDefaults(screenEl, ctx)) {
+        screenEl.querySelector('h1')?.focus({ preventScroll: true });
+      } else if (!ctx?.destroyed && !ctx?.detailCleanup) {
+        returnFocus?.focus?.();
+      }
     };
     if (animate && sheet.isConnected && !matchMedia('(prefers-reduced-motion: reduce)').matches) setTimeout(cleanup,250);
     else cleanup();
