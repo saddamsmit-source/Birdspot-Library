@@ -17,6 +17,7 @@ import { openPinPicker } from '../sightings/pinPicker.js';
 import { methodLabel, sourceLabel, validPin } from '../sightings/evidence.js';
 import { placeStatus, MAP_STATUS, MAP_ORDER, statusForSighting, filteredSightings, statusCounts, statusCountLabel, clusterGradient } from './visualization.js';
 import { escHtml } from '../../utils/html.js';
+import { openPhotoViewer } from '../../utils/photoViewer.js';
 import { ensurePlaces, loadPlaces, placeStats, renamePlace } from '../../data/places.js';
 import { changePhotos, getMediaByPlace } from '../../data/db.js';
 import { openMediaPreview } from '../../utils/validateMedia.js';
@@ -558,6 +559,7 @@ function openPlaceSheet(screenEl, place, visibleRecords, map, mediaId, trigger =
   const body     = screenEl.querySelector('#mapSheetBody');
   closeBtn.onclick?.();
   let closed = false;
+  let closePhoto;
   const urls=[];
   const reload=()=>import('../../app.js').then(({navigate})=>navigate('map',{force:true}));
 
@@ -672,13 +674,24 @@ function openPlaceSheet(screenEl, place, visibleRecords, map, mediaId, trigger =
       const mediaKey=' data-place-media-id="'+escHtml(m.id)+'"';
       if(type.startsWith('audio/'))return '<figure'+mediaKey+' class="place-media__audio"><figcaption>'+name+'</figcaption><audio controls preload="metadata" src="'+url+'"></audio></figure>';
       if(type.startsWith('video/'))return '<video'+mediaKey+' class="place-media__thumb" controls playsinline preload="metadata" src="'+url+'" aria-label="'+name+'"></video>';
-      return '<img'+mediaKey+' class="place-media__thumb" src="'+url+'" alt="'+name+'">';
+      return '<button type="button"'+mediaKey+' class="place-media__photo" aria-label="Vergroot foto: '+name+'">'+
+        '<img class="place-media__thumb" src="'+url+'" alt="'+name+'"></button>';
     }).join('');
+    box.querySelectorAll('.place-media__photo').forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        closePhoto?.(false);
+        const image = trigger.querySelector('img');
+        closePhoto = openPhotoViewer({
+          url: image.src, alt: image.alt, trigger,
+          onClose: () => { closePhoto = undefined; },
+        });
+      });
+    });
     if (mediaId) {
       const selected = [...box.children].find(item => item.dataset.placeMediaId === mediaId);
       selected?.scrollIntoView({ block: 'center' });
       if (selected) {
-        selected.tabIndex = -1;
+        if (!selected.matches('button')) selected.tabIndex = -1;
         selected.focus({ preventScroll: true });
       }
     }
@@ -712,6 +725,7 @@ function openPlaceSheet(screenEl, place, visibleRecords, map, mediaId, trigger =
     if (closed) return;
     closed = true;
     document.removeEventListener('keydown', onKey);
+    closePhoto?.(false);
     sheet.inert = true;
     sheet.classList.remove('open');
     overlay.classList.remove('visible');

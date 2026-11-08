@@ -142,6 +142,16 @@ def main():
             assert info_trigger.evaluate("(el) => document.activeElement === el")
             p.wait_for_function("() => document.querySelector('#featuredBirdImage').naturalWidth > 0", timeout=8000)
             assert cap.is_visible()
+            zoom_trigger = p.locator('#featuredBirdZoom')
+            zoom_trigger.click()
+            viewer = p.get_by_role("dialog", name="Vogelfoto bekijken")
+            viewer.get_by_role("button", name="Inzoomen").click()
+            assert viewer.get_by_role("button", name="Zoom herstellen").inner_text() == "2×"
+            p.clock.run_for(32000)
+            assert shown() == cur["id"], "De diashow blijft stilstaan zolang de zoomviewer open is"
+            p.keyboard.press("Escape")
+            viewer.wait_for(state="detached")
+            assert zoom_trigger.evaluate("(el) => document.activeElement === el")
             p.screenshot(path=str(SHOTS / "showcase_f_390.png"))
             vg = p.evaluate("async () => { const m = await import('/src/features/home/featuredCarousel.js');"
                             " const b = (await import('/src/features/home/specialBirds.js')).FEATURED_BIRDS.find(x => x.id === 'sp463');"

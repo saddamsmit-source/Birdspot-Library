@@ -365,21 +365,23 @@
 }
 
 /* Eerste item spanning als er meerdere zijn */
-.detail-media-grid > .detail-media__item:first-child:not(:only-child) {
+.detail-media-grid > .detail-media__item:first-child {
   grid-column: 1 / -1;
   aspect-ratio: 16 / 9;
 }
 
 .detail-media__item {
+  border: 0;
+  padding: 0;
   position:     relative;
   aspect-ratio: 1;
   border-radius: var(--r-sm);
   overflow:     hidden;
   background:   var(--surface-2);
-  cursor:       pointer;
+  cursor:       zoom-in;
 }
 
-.detail-media__item:first-child:not(:only-child) {
+.detail-media__item:first-child {
   aspect-ratio: 16 / 9;
 }
 

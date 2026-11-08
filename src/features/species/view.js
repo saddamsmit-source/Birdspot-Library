@@ -15,6 +15,7 @@ import { getCollectionIds, toggleCollectionItem } from '../../storage/collection
 
 import { GUIDE_PHOTOS } from './guidePhotos.js';
 import { closePhotoInfo, photoInfoMarkup } from '../../utils/photoInfo.js';
+import { openPhotoViewer } from '../../utils/photoViewer.js';
 
 import { BREEDING_BEHAVIORS, methodLabel, sourceLabel } from '../sightings/evidence.js';
 function guideSightings() { return getSightingsSnapshot().filter(s=>s && typeof s === 'object' && typeof s.speciesId === 'string'); }
@@ -506,8 +507,7 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
   const photosUrls = new Set();
   const photoList = [];
   let closed = false;
-  let viewer = null;
-  let viewerFocus = null;
+  let closeViewer;
 
   const sheet = document.createElement('div');
   sheet.className = 'sheet-overlay signature-species-detail-overlay';
@@ -578,18 +578,11 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
     }
     sheet.querySelector('#sdPanel-status').innerHTML = statusPanel(s, life);
   }).catch(() => {});
-  function closeViewer() {
-    if (!viewer) return;
-    viewer.remove();
-    viewer = null;
-    if (!closed) viewerFocus?.focus();
-    viewerFocus = null;
-  }
   function close(animate = true) {
     if (closed) return;
     closed = true;
     sheet.querySelectorAll('.sd-audio audio').forEach(audio => audio.pause());
-    closeViewer();
+    closeViewer?.(false);
     document.removeEventListener('keydown',keyHandler);
     sheet.classList.remove('open');
     const cleanup = () => {
@@ -606,8 +599,7 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
 
   function keyHandler(e) {
     if (e.key === 'Escape') {
-      if (closePhotoInfo(viewer || sheet)) return;
-      if (viewer) closeViewer(); else close();
+      if (!closePhotoInfo(sheet)) close();
     }
   }
   document.addEventListener('keydown',keyHandler);
@@ -650,63 +642,11 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
   });
 
   function openViewer(url, alt, trigger) {
-    closeViewer();
-    viewerFocus=trigger;
-    viewer=document.createElement('div');
-    viewer.className='signature-lightbox';
-    viewer.setAttribute('role','dialog');
-    viewer.setAttribute('aria-modal','true');
-    viewer.setAttribute('aria-label','Vogelfoto bekijken');
-    viewer.classList.add('sd-photo-viewer');
-    viewer.innerHTML='<button type="button" class="signature-lightbox-close" aria-label="Sluit foto">×</button>'+
-      '<div class="sd-photo-viewport" tabindex="0" aria-label="Vogelfoto, verschuif na het inzoomen">'+
-        '<div class="sd-photo-stage"><img src="'+escHtml(url)+'" alt="'+escHtml(alt)+'"></div></div>'+
-      '<div class="sd-photo-zoom" role="group" aria-label="Fotozoom">'+
-        '<button type="button" data-zoom="out" aria-label="Uitzoomen">−</button>'+
-        '<button type="button" data-zoom="reset" aria-label="Zoom herstellen">1×</button>'+
-        '<button type="button" data-zoom="in" aria-label="Inzoomen">+</button></div>';
-    const photoInfo = trigger?.parentElement.querySelector('.photo-info');
-    if (photoInfo) {
-      const copy = photoInfo.cloneNode(true);
-      copy.open = false;
-      viewer.appendChild(copy);
-    }
-    document.body.appendChild(viewer);
-    const dialog = viewer;
-    const viewport = dialog.querySelector('.sd-photo-viewport');
-    const stage = dialog.querySelector('.sd-photo-stage');
-    const image = dialog.querySelector('img');
-    const zoomIn = dialog.querySelector('[data-zoom="in"]');
-    const zoomOut = dialog.querySelector('[data-zoom="out"]');
-    const resetZoom = dialog.querySelector('[data-zoom="reset"]');
-    let zoom = 1;
-    function setZoom(next) {
-      if (!image.naturalWidth || !viewport.clientWidth || !viewport.clientHeight) return;
-      const ratio = Math.min(viewport.clientWidth / image.naturalWidth, viewport.clientHeight / image.naturalHeight, 1);
-      const centerX = (viewport.scrollLeft + viewport.clientWidth / 2) / stage.offsetWidth;
-      const centerY = (viewport.scrollTop + viewport.clientHeight / 2) / stage.offsetHeight;
-      zoom = Math.max(1, Math.min(4, next));
-      const width = Math.round(image.naturalWidth * ratio * zoom);
-      stage.style.width = `${Math.max(width, viewport.clientWidth)}px`;
-      image.style.width = `${width}px`;
-      image.style.minWidth = `${width}px`;
-      viewport.scrollLeft = centerX * stage.offsetWidth - viewport.clientWidth / 2;
-      viewport.scrollTop = centerY * stage.offsetHeight - viewport.clientHeight / 2;
-      zoomIn.disabled = zoom === 4;
-      zoomOut.disabled = zoom === 1;
-      resetZoom.textContent = `${zoom}×`;
-    }
-    zoomOut.disabled = true;
-    image.addEventListener('load', () => setZoom(1), {once:true});
-    if (image.complete) setZoom(1);
-    dialog.querySelector('.signature-lightbox-close').focus();
-    dialog.addEventListener('click',event=>{
-      if (event.target === dialog || event.target === stage || event.target === viewport ||
-          event.target.closest('.signature-lightbox-close')) closeViewer();
-      else if (event.target === zoomIn) setZoom(zoom * 2);
-      else if (event.target === zoomOut) setZoom(zoom / 2);
-      else if (event.target === resetZoom) setZoom(1);
-      else if (event.target === image) setZoom(zoom === 1 ? 2 : 1);
+    closeViewer?.(false);
+    closeViewer = openPhotoViewer({
+      url, alt, trigger,
+      photoInfo: trigger.parentElement.querySelector('.photo-info'),
+      onClose: () => { closeViewer = undefined; },
     });
   }
 
@@ -754,9 +694,16 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
         const hero=sheet.querySelector('#detailThumb-'+speciesId);
         if(hero && photoList[0] && !guidePhoto) {
           const img=document.createElement('img');
-          img.alt='';
+          img.alt=s.nameNL;
           img.src=photoList[0].url;
-          hero.replaceChildren(img);
+          const button = document.createElement('button');
+          button.type = 'button';
+          button.className = 'sd-hero-photo';
+          button.dataset.guideImage = photoList[0].url;
+          button.setAttribute('aria-label', 'Vergroot hoofdfoto');
+          button.appendChild(img);
+          hero.closest('.signature-species-detail-hero').classList.add('has-guide-photo');
+          hero.replaceChildren(button);
         }
       }
       const stats=sightingStats(matches, loadPlaces());

@@ -10,6 +10,7 @@ import { getSightings } from '../../data/sightings.js';
 import { SPECIES } from '../../data/species.js';
 import { getPhotoUrl, revokePhotoUrl } from '../../utils/photoUrl.js';
 import { escHtml } from '../../utils/html.js';
+import { openPhotoViewer } from '../../utils/photoViewer.js';
 import { getCollectionIds, toggleCollectionItem } from '../../storage/collections.js';
 
 const BATCH_SIZE = 18;
@@ -39,7 +40,7 @@ export function findPossibleDuplicateIds(items) {
 
 export function renderMedia(el, { mediaId, onSearchSelect } = {}) {
   const state = { destroyed:false, items:[], filter:'all', species:'all', search:'', mediaId,
-    visible:BATCH_SIZE, urls:new Map(), lightbox:null, lightboxIndex:-1, focusReturn:null };
+    visible:BATCH_SIZE, urls:new Map(), closePhoto:null };
   let favorites = getCollectionIds('media');
   let film = getCollectionIds('film');
   const knownNames = new Map(SPECIES.map(s => [s.id,s.nameNL]));
@@ -139,7 +140,7 @@ export function renderMedia(el, { mediaId, onSearchSelect } = {}) {
 
   function draw() {
     if (state.destroyed) return;
-    closeLightbox();
+    state.closePhoto?.(false);
     releaseGalleryUrls();
     favorites = getCollectionIds('media');
     film = getCollectionIds('film');
@@ -182,34 +183,15 @@ export function renderMedia(el, { mediaId, onSearchSelect } = {}) {
     more.hidden = filtered.length <= state.visible;
   }
 
-  function closeLightbox() {
-    if (state.lightbox) {
-      state.lightbox.remove();
-      state.lightbox = null;
-      state.focusReturn?.focus?.();
-      state.focusReturn = null;
-    }
-  }
-
   function openLightbox(id, trigger) {
-    closeLightbox();
+    state.closePhoto?.(false);
     const item = state.items.find(x=>x.photo.id===id);
     const url = state.urls.get(id);
     if (!item || !url || item.kind==='video') return;
-    state.focusReturn = trigger;
-    const dialog = document.createElement('div');
-    dialog.className = 'signature-lightbox';
-    dialog.setAttribute('role','dialog');
-    dialog.setAttribute('aria-modal','true');
-    dialog.setAttribute('aria-label','Fotoweergave');
-    dialog.innerHTML = '<button class="signature-lightbox-close" type="button" aria-label="Foto sluiten">×</button>'+
-      '<img src="'+url+'" alt="'+safe(item.name)+'">';
-    document.body.appendChild(dialog);
-    dialog.addEventListener('click', e=>{
-      if(e.target===dialog || e.target.closest('.signature-lightbox-close')) closeLightbox();
+    state.closePhoto = openPhotoViewer({
+      url, alt: item.name, trigger, label: 'Fotoweergave', closeLabel: 'Foto sluiten',
+      onClose: () => { state.closePhoto = null; },
     });
-    state.lightbox=dialog;
-    dialog.querySelector('button').focus();
   }
 
   const onClick = event => {
@@ -273,15 +255,9 @@ export function renderMedia(el, { mediaId, onSearchSelect } = {}) {
     state.species=event.target.value;
     state.visible=BATCH_SIZE; draw();
   };
-  const onKey = event => {
-    if(!state.lightbox || event.key!=='Escape') return;
-    closeLightbox();
-  };
-
   el.addEventListener('click',onClick);
   el.addEventListener('input',onInput);
   el.addEventListener('change',onChange);
-  document.addEventListener('keydown',onKey);
 
   (async()=>{
     try {
@@ -334,9 +310,8 @@ export function renderMedia(el, { mediaId, onSearchSelect } = {}) {
     el.removeEventListener('click',onClick);
     el.removeEventListener('input',onInput);
     el.removeEventListener('change',onChange);
-    document.removeEventListener('keydown',onKey);
     if(toastCleanup) clearTimeout(toastCleanup);
-    closeLightbox();
+    state.closePhoto?.(false);
     releaseGalleryUrls();
   };
 }

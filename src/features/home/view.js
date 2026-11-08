@@ -112,9 +112,9 @@ function buildSkeleton() {
     <section class="slideshow featured-birds" id="slideshow" aria-label="Bijzondere vogel in beeld">
       <div class="featured-birds__media">
         <div class="featured-birds__fallback" id="featuredBirdFallback" aria-hidden="true"><span>✦</span></div>
-        <img id="featuredBirdImage" class="featured-birds__photo" alt=""
-          decoding="async">
+        <img id="featuredBirdImage" class="featured-birds__photo" alt="" decoding="async">
       </div>
+      <button type="button" id="featuredBirdZoom" aria-label="Vergroot foto"></button>
       <span class="field-photo-label">Gidsfoto</span>
       <button type="button" id="featuredBirdMotion" aria-label="Diashow pauzeren" aria-pressed="false">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">

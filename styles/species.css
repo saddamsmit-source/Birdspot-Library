@@ -729,7 +729,11 @@
 .sd-compare, .sd-audio {
   padding: var(--space-12); border: 1px solid var(--line); border-radius: var(--r-sm); background: var(--surface);
 }
-.sd-compare-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-8); }
+.sd-compare-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: var(--space-8);
+}
 .sd-compare-label { margin: 0 0 var(--space-8); font-size: var(--fs-body); }
 .sd-compare-card {
   display: grid; align-content: start; gap: var(--space-8); padding: var(--space-8);
@@ -746,10 +750,8 @@
   display: block; width: 100%; margin-top: var(--space-8); padding: 0;
   border: 0; border-radius: var(--r-sm); overflow: hidden; background: var(--bg); cursor: zoom-in;
 }
-.sd-field-photo img { display: block; width: 100%; height: 160px; object-fit: contain; }
+.sd-field-photo img { display: block; width: 100%; aspect-ratio: 4 / 3; max-height: 420px; object-fit: contain; }
 .sd-compare-card .sd-field-photo { margin-top: 0; }
-.sd-compare-card .sd-field-photo img { height: 100px; }
-.sd-poses .sd-field-photo img { height: 160px; }
 .sd-media-credit { display: block; margin-top: 4px; color: var(--ink-2); font-size: var(--fs-meta); overflow-wrap: anywhere; }
 .sd-media-credit a { color: inherit; text-decoration: underline; }
 .sd-audio audio { display: block; width: 100%; height: 44px; }
@@ -893,6 +895,7 @@
 .sd-photo-stage { display:grid; place-items:center; width:max-content; min-width:100%; min-height:100%; }
 .sd-photo-viewer .sd-photo-stage img { display:block; max-width:calc(100vw - 28px); max-height:calc(100dvh - 138px); height:auto; cursor:zoom-in; }
 .sd-photo-viewer .sd-photo-stage img[style] { max-width:none; max-height:none; }
+.sd-photo-error { color:#fff; padding:16px; text-align:center; }
 .sd-photo-zoom { display:flex; gap:8px; }
 .sd-photo-zoom button { min-width:44px; min-height:44px; color:#fff; background:#102a20; border:1px solid #8da99b; border-radius:8px; }
 .sd-photo-zoom button:disabled { opacity:.5; }

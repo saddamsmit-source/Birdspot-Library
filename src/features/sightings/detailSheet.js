@@ -12,6 +12,7 @@ import { deleteSighting }                   from '../../data/sightings.js';
 import { getPhotosBySighting, getPhoto, deletePhoto } from '../../data/db.js';
 import { methodLabel, sourceLabel } from './evidence.js';
 import { escHtml }                          from '../../utils/html.js';
+import { openPhotoViewer } from '../../utils/photoViewer.js';
 import { showToast }                        from '../../app.js';
 import { openEditSheet }                    from './addSheet.js';
 
@@ -62,6 +63,7 @@ export async function openDetailSheet(sighting, { onDeleted, onUpdated, isActive
 
   const previousFocus = document.activeElement;
   let closed = false;
+  let closePhoto;
   document.body.appendChild(ov);
   requestAnimationFrame(() => { if (!closed) ov.classList.add('open'); });
 
@@ -71,6 +73,7 @@ export async function openDetailSheet(sighting, { onDeleted, onUpdated, isActive
   const close = () => {
     if (closed) return;
     closed = true;
+    closePhoto?.(false);
     ov.classList.remove('open');
     document.removeEventListener('keydown',onKey);
     setTimeout(() => { ov.remove(); _releaseUrls(); previousFocus?.focus?.(); }, 300);
@@ -118,7 +121,19 @@ export async function openDetailSheet(sighting, { onDeleted, onUpdated, isActive
   });
 
   // ── Lightbox op mediabestanden ────────────────────────────
-  _bindLightbox(ov);
+  ov.querySelectorAll('.detail-media__item[data-url]').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      if (trigger.dataset.type.startsWith('video/')) {
+        _openVideoLightbox(trigger.dataset.url);
+        return;
+      }
+      closePhoto?.(false);
+      closePhoto = openPhotoViewer({
+        url: trigger.dataset.url, alt: trigger.querySelector('img').alt, trigger,
+        onClose: () => { closePhoto = undefined; },
+      });
+    });
+  });
 }
 
 // ── Detail body HTML ───────────────────────────────────────
@@ -202,35 +217,25 @@ function _renderDetailBody(s, photos) {
         const url = _blobToUrl(p);
         if (!url) return '';
         const isVideo = p.type?.startsWith('video/');
-        return `<div class="detail-media__item" data-url="${escHtml(url)}"
+        return `<button type="button" class="detail-media__item" aria-label="${isVideo ? 'Bekijk video' : 'Vergroot foto'}" data-url="${escHtml(url)}"
           data-type="${escHtml(p.type || '')}">
           ${isVideo
             ? `<video src="${escHtml(url)}" class="detail-media__img" muted playsinline></video>
-               <div class="detail-media__badge">▶</div>`
+               <span class="detail-media__badge">▶</span>`
             : `<img src="${escHtml(url)}" class="detail-media__img"
                  alt="${escHtml(p.filename || '')}">`}
-        </div>`;
+        </button>`;
       }).join('')}
     </div>` : ''}`;
 }
 
 // ── Lightbox ───────────────────────────────────────────────
-function _bindLightbox(ov) {
-  ov.querySelectorAll('.detail-media__item[data-url]').forEach(el => {
-    el.addEventListener('click', () => _openLightbox(el.dataset.url, el.dataset.type));
-  });
-}
-
-function _openLightbox(url, type) {
+function _openVideoLightbox(url) {
   const lb = document.createElement('div');
   lb.className = 'lightbox';
-  const isVideo = type?.startsWith('video/');
   lb.innerHTML = `
-    ${isVideo
-      ? `<video src="${escHtml(url)}" controls autoplay playsinline
-           style="max-width:100%;max-height:90vh;border-radius:8px"></video>`
-      : `<img src="${escHtml(url)}" alt=""
-           style="max-width:100%;max-height:90vh;object-fit:contain;border-radius:8px">`}
+    <video src="${escHtml(url)}" controls autoplay playsinline
+           style="max-width:100%;max-height:90vh;border-radius:8px"></video>
     <button class="lightbox__close" aria-label="Sluiten">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
         style="width:20px;height:20px">

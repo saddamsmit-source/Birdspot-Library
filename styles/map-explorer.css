@@ -186,6 +186,8 @@
 .place-sightings small { font-size: 12px; color: var(--muted); }
 .place-sightings em { font-style: normal; color: var(--muted); font-size: 18px; }
 .place-media { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+.place-media__photo { min-width: 0; padding: 0; border: 0; background: none; cursor: zoom-in; }
+.place-media__photo img { display: block; }
 .place-media__thumb { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 10px; background: var(--surface-2); }
 .place-media__audio { grid-column: 1 / -1; margin: 0; padding: 8px 10px; border-radius: 12px; background: var(--surface-2); }
 .place-media__audio figcaption { font-size: 12px; color: var(--muted); margin-bottom: 4px; overflow-wrap: anywhere; }
