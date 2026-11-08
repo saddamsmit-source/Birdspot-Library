@@ -5541,5 +5541,74 @@ export const GUIDE_POSES = Object.freeze({
       "height": 933,
       "image": "/assets/species/plumage/sp086-flight.webp"
     }
+  ],
+  "sp089": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "Let op de groene kop, de gele snavel en de blauw-paarse vleugelspiegel met lichte randen.",
+      "file": "Mallard male in flight.jpg",
+      "nl": "Wilde Eend",
+      "latin": "Anas platyrhynchos",
+      "author": "VJAnderson",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Mallard_male_in_flight.jpg",
+      "showSourceLink": true,
+      "alt": "Mannetje Wilde Eend in vrije vlucht, met een groene kop en geheven vleugels.",
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+      "reviewed": "2026-11-08",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wilde-eend",
+      "visualCheck": "Mannetje Wilde Eend in vrije vlucht, met een groene kop en geheven vleugels.",
+      "width": 1400,
+      "height": 958,
+      "image": "/assets/species/plumage/sp089-flight.webp"
+    }
+  ],
+  "sp090": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "Let op de brede lepelvormige snavel, de lichtblauwe vleugeldekveren en de groene vleugelspiegel.",
+      "file": "Male northern shoveler in flight-0208.jpg",
+      "nl": "Slobeend",
+      "latin": "Spatula clypeata",
+      "author": "Frank Schulenburg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Male_northern_shoveler_in_flight-0208.jpg",
+      "showSourceLink": true,
+      "alt": "Mannetje Slobeend in vrije vlucht, met brede snavel, lichtblauwe voorvleugel en groene vleugelspiegel.",
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+      "reviewed": "2026-11-08",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/slobeend",
+      "visualCheck": "Mannetje Slobeend in vrije vlucht, met brede snavel, lichtblauwe voorvleugel en groene vleugelspiegel.",
+      "width": 1400,
+      "height": 934,
+      "image": "/assets/species/plumage/sp090-flight.webp"
+    }
+  ],
+  "sp091": [
+    {
+      "label": "In vlucht",
+      "flight": true,
+      "note": "Let op de kastanjebruine kop met groen oogveld en de helder groene vleugelspiegel.",
+      "file": "Cerceta común - Flickr - ferran pestaña.jpg",
+      "nl": "Wintertaling",
+      "latin": "Anas crecca",
+      "author": "Ferran Pestaña",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Cerceta_com%C3%BAn_-_Flickr_-_ferran_pesta%C3%B1a.jpg",
+      "showSourceLink": true,
+      "alt": "Mannetje Wintertaling in vrije vlucht met een kastanjebruine kop en een groene vleugelspiegel.",
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+      "reviewed": "2026-11-08",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wintertaling",
+      "visualCheck": "Mannetje Wintertaling in vrije vlucht met een kastanjebruine kop en een groene vleugelspiegel.",
+      "width": 1400,
+      "height": 978,
+      "image": "/assets/species/plumage/sp091-flight.webp"
+    }
   ]
 });
