@@ -5610,6 +5610,75 @@
         "height": 978,
         "image": "/assets/species/plumage/sp091-flight.webp"
       }
+    ],
+    "sp092": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Let op de witte vleugelstreep, de lichte flank en het gele oog. Dit mannetje is gefotografeerd bij Borit, Pakistan.",
+        "file": "Tufted Duck (Aythya fuligula) - Flickr - gilgit2.jpg",
+        "nl": "Kuifeend",
+        "latin": "Aythya fuligula",
+        "author": "Imran Shah / Birds of Gilgit-Baltistan",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Tufted_Duck_(Aythya_fuligula)_-_Flickr_-_gilgit2.jpg",
+        "showSourceLink": true,
+        "alt": "Mannetje Kuifeend in vrije vlucht boven water, met opgeheven vleugels, een witte vleugelstreep en een geel oog.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kuifeend",
+        "visualCheck": "Mannetje Kuifeend in vrije vlucht boven water, met opgeheven vleugels, een witte vleugelstreep en een geel oog.",
+        "width": 1400,
+        "height": 1050,
+        "image": "/assets/species/plumage/sp092-flight.webp"
+      }
+    ],
+    "sp094": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Let op de lichtgrijze bovenvleugel en de zwarte vleugeltop met witte vlekken.",
+        "file": "Larus argentatus in flight.jpg",
+        "nl": "Zilvermeeuw",
+        "latin": "Larus argentatus",
+        "author": "Andreas Trepte",
+        "license": "CC BY-SA 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/",
+        "source": "https://commons.wikimedia.org/wiki/File:Larus_argentatus_in_flight.jpg",
+        "showSourceLink": true,
+        "alt": "Volwassen Zilvermeeuw in vrije vlucht boven zee bij Helgoland, met een lichtgrijze bovenvleugel en zwarte vleugeltop.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zilvermeeuw",
+        "visualCheck": "Volwassen Zilvermeeuw in vrije vlucht boven zee bij Helgoland, met een lichtgrijze bovenvleugel en zwarte vleugeltop.",
+        "width": 1400,
+        "height": 933,
+        "image": "/assets/species/plumage/sp094-flight.webp"
+      }
+    ],
+    "sp095": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "De donkere bovenvleugel contrasteert met de witte kop en buik. De poten zijn vanuit deze hoek nauwelijks zichtbaar.",
+        "file": "Lesser black-backed gull (Larus fuscus) 2.jpg",
+        "nl": "Kleine Mantelmeeuw",
+        "latin": "Larus fuscus",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Lesser_black-backed_gull_(Larus_fuscus)_2.jpg",
+        "showSourceLink": true,
+        "alt": "Kleine Mantelmeeuw in vrije vlucht in Zweden, met een geheven donkere vleugel en een witte kop en buik.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kleine-mantelmeeuw",
+        "visualCheck": "Kleine Mantelmeeuw in vrije vlucht in Zweden, met een geheven donkere vleugel en een witte kop en buik.",
+        "width": 1400,
+        "height": 933,
+        "image": "/assets/species/plumage/sp095-flight.webp"
+      }
     ]
   }
 }

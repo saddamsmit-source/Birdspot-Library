@@ -81,9 +81,9 @@ Vluchtdekking: **hoofdfoto** staat al bovenaan. **Apart beeld** krijgt een eigen
 | sp089 | Wilde Eend | Ja | 4 | Apart beeld |
 | sp090 | Slobeend | Ja | 3 | Apart beeld |
 | sp091 | Wintertaling | Ja | 6 | Apart beeld |
-| sp092 | Kuifeend | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
-| sp094 | Zilvermeeuw | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
-| sp095 | Kleine Mantelmeeuw | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
+| sp092 | Kuifeend | Ja | 3 | Apart beeld |
+| sp094 | Zilvermeeuw | Ja | 2 | Apart beeld |
+| sp095 | Kleine Mantelmeeuw | Ja | 2 | Apart beeld |
 | sp096 | Stormmeeuw | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
 | sp097 | Kokmeeuw | Ja | 2 | Gecontroleerd · geen vluchtbeeld |
 | sp098 | Scholekster | Ja | 1 | Gecontroleerd · geen vluchtbeeld |
@@ -439,3 +439,16 @@ Basis is concept-PR #80, 25b53325e107ed776f0f51c2dc5a13d6b0d3cbb3. Voor Wilde Ee
 CAP-BIRD-012/015. Elk beeld staat lokaal, eenmaal boven het verenkleed, met bron, fotograaf, licentie en vermelding van de omzetting naar WebP. Herbruikbare controle: een vleugelspiegel kan door de vleugelslag verborgen blijven. Vergelijk opnamen waarop snavel, kop en spiegel tegelijk zichtbaar zijn. Na deze ronde staan 61 soorten zonder vluchtbeeld op de lijst. Volgende nieuwe soort is Kuifeend.
 
 Mobiele Chromium-test op 390 px: alle drie de soortkaarten via appbreed zoeken met de wetenschappelijke naam geopend. Elk beeld decodeert, toont de bronlink en opent met 2× zoom. Gidsdekking, volgorde- en uniciteitstests en SHA-256-controle zijn geslaagd. Fysieke toesteltest staat open.
+
+
+## Gericht zoeken naar vluchtfoto’s · ronde 22
+
+Basis is concept-PR #82, `9bbff5105a486abfe59cfd688fd5adabeac3a91f`. De appbuild van ronde 21 toont vluchtfoto’s bij Wilde Eend, Slobeend en Wintertaling. Kuifeend, Zilvermeeuw en Kleine Mantelmeeuw hadden daar ieder een hoofdfoto en stonden zonder vluchtbeeld op de lijst. Voor deze drie soorten zijn de vluchtcategorieën en afzonderlijke kandidaten op Wikimedia Commons bekeken. Opnamen vlak bij het water zijn op groter formaat gecontroleerd op vrije vlucht.
+
+- Kuifeend · Imran Shah / Birds of Gilgit-Baltistan · CC BY-SA 2.0. De foto uit Borit, Pakistan, toont een mannetje vrij boven water. De lichte flank, witte vleugelstreep en het gele oog zijn tegelijk zichtbaar. De fotograafvermelding in de foto is behouden. [Bronfoto](https://commons.wikimedia.org/wiki/File:Tufted_Duck_(Aythya_fuligula)_-_Flickr_-_gilgit2.jpg) · [Oorspronkelijke publicatie](https://www.flickr.com/photos/gilgit2/53450240916/).
+- Zilvermeeuw · Andreas Trepte · CC BY-SA 2.5. De volwassen vogel vliegt boven zee bij Helgoland. De lichtgrijze bovenvleugel en de zwarte vleugeltop met witte vlekken zijn zichtbaar. [Bronfoto](https://commons.wikimedia.org/wiki/File:Larus_argentatus_in_flight.jpg).
+- Kleine Mantelmeeuw · Charles J. Sharp · CC BY-SA 4.0. Op de foto uit Zweden contrasteert de donkere bovenvleugel met de witte kop en buik. De poten zijn vanuit deze hoek nauwelijks zichtbaar. [Bronfoto](https://commons.wikimedia.org/wiki/File:Lesser_black-backed_gull_(Larus_fuscus)_2.jpg).
+
+CAP-BIRD-012/015. De beelden staan lokaal en elk eenmaal vóór het verenkleed. Bron, maker, licentie en omzetting naar WebP staan bij de foto. Voor meeuwen die op elkaar lijken, is een zichtbare bovenvleugel nuttiger dan een opname die alleen de ondervleugel toont. Na deze ronde staan 58 soorten zonder vluchtbeeld op de lijst. De volgende nieuwe soort is Stormmeeuw.
+
+Mobiele Chromium-test op 390 px: zes soortkaarten vanuit appbreed zoeken geopend, op zowel de basis als de nieuwe build. De bestaande hoofdfoto’s en de vluchtfoto’s uit ronde 21 zijn behouden. De drie nieuwe foto’s decoderen, tonen de bron en licentie en openen met 2× zoom. Gidsdekking, volgorde, uniciteit en SHA-256 zijn gecontroleerd. Fysieke toesteltest staat open.
