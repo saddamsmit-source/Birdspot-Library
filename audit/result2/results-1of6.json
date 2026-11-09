@@ -1,0 +1,303 @@
+[
+ {
+  "image": "/assets/showcase/sp262.webp",
+  "species": "sp262",
+  "latin": "Lanius collurio",
+  "app": {
+   "author": "Бусел В.А.",
+   "license": "CC BY-SA 4.0",
+   "sex": "male",
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Lanius_collurio_%D1%81%D0%BE%D1%80%D0%BE%D0%BF%D1%83%D0%B4_%D1%81%D1%96%D1%80%D0%B8%D0%B9.jpg",
+  "src": {
+   "title": "File:Lanius collurio соропуд сірий.jpg",
+   "author": "Бусел В.А.",
+   "license": "CC BY-SA 4.0",
+   "description": "This is a photo of a natural heritage site in Ukraine, id: 23-209-5001",
+   "objectName": "Lanius collurio соропуд сірий",
+   "categories": [
+    "Birds of Zaporizhzhia Oblast",
+    "CC-BY-SA-4.0",
+    "Images from Wiki Loves Earth 2020",
+    "Images from Wiki Loves Earth 2020 in Ukraine",
+    "Images from Wiki Loves Earth missing SDC location of creation",
+    "Laniidae of Ukraine",
+    "Lanius collurio (male)",
+    "Natural heritage sites in Ukraine with known IDs",
+    "Quality images",
+    "Quality images from Wiki Loves Earth 2020 in Ukraine",
+    "Quality images of Lanius collurio",
+    "Self-published work",
+    "Ukraine photographs taken on 2015-06-23",
+    "Uploaded via Campaign:wle-ua",
+    "Velykyi Luh National Nature Park",
+    "Wiki Loves Earth Ukraine 2020 - Quality"
+   ],
+   "width": 4288,
+   "height": 2848,
+   "sha1": "627c9125c480c16d5e5db5d0e45a5a32c0367165",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Lanius_collurio_%D1%81%D0%BE%D1%80%D0%BE%D0%BF%D1%83%D0%B4_%D1%81%D1%96%D1%80%D0%B8%D0%B9.jpg/1280px-Lanius_collurio_%D1%81%D0%BE%D1%80%D0%BE%D0%BF%D1%83%D0%B4_%D1%81%D1%96%D1%80%D0%B8%D0%B9.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [
+   "male"
+  ],
+  "sourceAge": [],
+  "authorMatch": false,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2231,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "maker wijkt af"
+  ],
+  "pair": "pairs/sp262.jpg"
+ },
+ {
+  "image": "/assets/showcase/sp009.webp",
+  "species": "sp009",
+  "latin": "Falco peregrinus",
+  "app": {
+   "author": "john581",
+   "license": "CC BY 2.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_in_flight_(17659253649).jpg",
+  "src": {
+   "title": "File:Falco peregrinus in flight (17659253649).jpg",
+   "author": "john581",
+   "license": "CC BY 2.0",
+   "description": "Birds",
+   "objectName": "Falco peregrinus in flight (17659253649)",
+   "categories": [
+    "CC-BY-2.0",
+    "Falco peregrinus in flight",
+    "Flickr images reviewed by FlickreviewR 2"
+   ],
+   "width": 2048,
+   "height": 1634,
+   "sha1": "cbdcd25f769e5675e356c702a8b78784ac1ea6eb",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Falco_peregrinus_in_flight_%2817659253649%29.jpg/1280px-Falco_peregrinus_in_flight_%2817659253649%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2165,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/sp206.webp",
+  "species": "sp206",
+  "latin": "Charadrius alexandrinus",
+  "app": {
+   "author": "Sylvain Montagner",
+   "license": "CC BY 4.0",
+   "sex": "male",
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/485435922",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/sp157.webp",
+  "species": "sp157",
+  "latin": "Tringa erythropus",
+  "app": {
+   "author": "Jan Ebr & Ivana Ebrová",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/121189174",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp041-flight.webp",
+  "species": "sp041",
+  "latin": "Coccothraustes coccothraustes",
+  "app": {
+   "author": "Codrin Bucur",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/576075793",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp117-flight.webp",
+  "species": "sp117",
+  "latin": "Emberiza citrinella",
+  "app": {
+   "author": "William Harland",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/622283477",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp206-flight.webp",
+  "species": "sp206",
+  "latin": "Charadrius alexandrinus",
+  "app": {
+   "author": "Forest Botial-Jarvis",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/180206774",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp248-male-rest.webp",
+  "species": "sp248",
+  "latin": "Pernis apivorus",
+  "app": {
+   "author": "Павел Кунгуров",
+   "license": "CC BY 4.0",
+   "sex": "male",
+   "age": null,
+   "flight": false,
+   "label": "Mannetje in rust"
+  },
+  "source": "https://www.inaturalist.org/photos/610450616",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp250-adult_f.webp",
+  "species": "sp250",
+  "latin": "Circus macrourus",
+  "app": {
+   "author": "Tejas M",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/626654808",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp082-breeding.webp",
+  "species": "sp082",
+  "latin": "Egretta garzetta",
+  "app": {
+   "author": "Donald Davesne",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/364893145",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp245-juv.webp",
+  "species": "sp245",
+  "latin": "Bubulcus ibis",
+  "app": {
+   "author": "Zac Peterson",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/113155242",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp147-juv.webp",
+  "species": "sp147",
+  "latin": "Charadrius dubius",
+  "app": {
+   "author": "Anthony McDonald",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/350059610",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp145-winter.webp",
+  "species": "sp145",
+  "latin": "Pluvialis apricaria",
+  "app": {
+   "author": "Jonas Kraft",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/189221283",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp102-breeding.webp",
+  "species": "sp102",
+  "latin": "Tringa totanus",
+  "app": {
+   "author": "Clare Edwards",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/508406832",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp158-winter.webp",
+  "species": "sp158",
+  "latin": "Tringa nebularia",
+  "app": {
+   "author": "Joseph Morlan",
+   "license": "CC BY-SA 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/475334386",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ }
+]
