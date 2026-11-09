@@ -1,0 +1,614 @@
+[
+ {
+  "image": "/assets/species/sp206.webp",
+  "species": "sp206",
+  "latin": "Charadrius alexandrinus",
+  "app": {
+   "author": "Sylvain Montagner",
+   "license": "CC BY 4.0",
+   "sex": "male",
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/485435922",
+  "src": {
+   "title": "iNaturalist 269952441",
+   "observation": "https://www.inaturalist.org/observations/269952441",
+   "author": "(c) Sylvain Montagner, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Anarhynchus alexandrinus",
+   "taxonCommon": "Kentish Plover",
+   "qualityGrade": "research",
+   "annotations": [
+    "Life Stage: Adult",
+    "Sex: Male",
+    "Alive or Dead: Alive",
+    "Evidence of Presence: Organism"
+   ],
+   "description": "2 individus sur les récifs (dont un immature ou femelle, visible sur les dernières photos). Semblent nous surveiller pour que nous n'approchions pas la plage de galets à proximité : probable nid ? (nous faisons demi-tour pour ne pas déranger)",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/485435922/large.jpg"
+  },
+  "speciesInSource": false,
+  "sourceTaxon": "Anarhynchus alexandrinus",
+  "sourceSex": [
+   "female",
+   "male"
+  ],
+  "sourceAge": [
+   "juvenile",
+   "adult"
+  ],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2783,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "soort niet in bron",
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp206.jpg"
+ },
+ {
+  "image": "/assets/species/sp157.webp",
+  "species": "sp157",
+  "latin": "Tringa erythropus",
+  "app": {
+   "author": "Jan Ebr & Ivana Ebrová",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/121189174",
+  "src": {
+   "title": "iNaturalist 74171588",
+   "observation": "https://www.inaturalist.org/observations/74171588",
+   "author": "(c) Jan Ebr & Ivana Ebrová, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Tringa erythropus",
+   "taxonCommon": "Spotted Redshank",
+   "qualityGrade": "research",
+   "annotations": [],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/121189174/large.jpeg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Tringa erythropus",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2658,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp157.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp041-flight.webp",
+  "species": "sp041",
+  "latin": "Coccothraustes coccothraustes",
+  "app": {
+   "author": "Codrin Bucur",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/576075793",
+  "src": {
+   "title": "iNaturalist 318728814",
+   "observation": "https://www.inaturalist.org/observations/318728814",
+   "author": "(c) Codrin Bucur, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Coccothraustes coccothraustes coccothraustes",
+   "taxonCommon": "Western Hawfinch",
+   "qualityGrade": "research",
+   "annotations": [
+    "None: None",
+    "None: None",
+    "None: None"
+   ],
+   "description": "Western Hawfinches flying at Wacht Gempen - Oct 2023",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/576075793/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Coccothraustes coccothraustes coccothraustes",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 124,
+   "mirror": false,
+   "scale": 0.486,
+   "areaOfSource": 0.038
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp041-flight.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp117-flight.webp",
+  "species": "sp117",
+  "latin": "Emberiza citrinella",
+  "app": {
+   "author": "William Harland",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/622283477",
+  "src": {
+   "title": "iNaturalist 341790185",
+   "observation": "https://www.inaturalist.org/observations/341790185",
+   "author": "(c) William Harland, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Emberiza citrinella",
+   "taxonCommon": "Yellowhammer",
+   "qualityGrade": "research",
+   "annotations": [],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/622283477/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Emberiza citrinella",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 153,
+   "mirror": false,
+   "scale": 0.488,
+   "areaOfSource": 0.102
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp117-flight.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp206-flight.webp",
+  "species": "sp206",
+  "latin": "Charadrius alexandrinus",
+  "app": {
+   "author": "Forest Botial-Jarvis",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/180206774",
+  "src": {
+   "title": "iNaturalist 107177768",
+   "observation": "https://www.inaturalist.org/observations/107177768",
+   "author": "(c) Forest Botial-Jarvis, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Anarhynchus alexandrinus",
+   "taxonCommon": "Kentish Plover",
+   "qualityGrade": "research",
+   "annotations": [],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/180206774/large.jpg"
+  },
+  "speciesInSource": false,
+  "sourceTaxon": "Anarhynchus alexandrinus",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 225,
+   "mirror": false,
+   "scale": 0.486,
+   "areaOfSource": 0.114
+  },
+  "sameShot": true,
+  "issues": [
+   "soort niet in bron",
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp206-flight.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp248-male-rest.webp",
+  "species": "sp248",
+  "latin": "Pernis apivorus",
+  "app": {
+   "author": "Павел Кунгуров",
+   "license": "CC BY 4.0",
+   "sex": "male",
+   "age": null,
+   "flight": false,
+   "label": "Mannetje in rust"
+  },
+  "source": "https://www.inaturalist.org/photos/610450616",
+  "src": {
+   "title": "iNaturalist 335975132",
+   "observation": "https://www.inaturalist.org/observations/335975132",
+   "author": "(c) Павел Кунгуров, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Pernis apivorus",
+   "taxonCommon": "European Honey-buzzard",
+   "qualityGrade": "research",
+   "annotations": [
+    "Life Stage: Adult",
+    "Sex: Male"
+   ],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/610450616/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Pernis apivorus",
+  "sourceSex": [
+   "male"
+  ],
+  "sourceAge": [
+   "adult"
+  ],
+  "authorMatch": false,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 482,
+   "mirror": false,
+   "scale": 0.75,
+   "areaOfSource": 0.462
+  },
+  "sameShot": true,
+  "issues": [
+   "maker wijkt af",
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp248-male-rest.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp250-adult_f.webp",
+  "species": "sp250",
+  "latin": "Circus macrourus",
+  "app": {
+   "author": "Tejas M",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/626654808",
+  "src": {
+   "title": "iNaturalist 343960250",
+   "observation": "https://www.inaturalist.org/observations/343960250",
+   "author": "(c) Tejas M, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Circus macrourus",
+   "taxonCommon": "Pallid Harrier",
+   "qualityGrade": "research",
+   "annotations": [
+    "Life Stage: Adult",
+    "Sex: Female",
+    "Alive or Dead: Alive",
+    "Evidence of Presence: Organism"
+   ],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/626654808/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Circus macrourus",
+  "sourceSex": [
+   "female"
+  ],
+  "sourceAge": [
+   "adult"
+  ],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2243,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp250-adult_f.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp082-breeding.webp",
+  "species": "sp082",
+  "latin": "Egretta garzetta",
+  "app": {
+   "author": "Donald Davesne",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/364893145",
+  "src": {
+   "title": "iNaturalist 206314322",
+   "observation": "https://www.inaturalist.org/observations/206314322",
+   "author": "(c) Donald Davesne, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Egretta garzetta",
+   "taxonCommon": "Little Egret",
+   "qualityGrade": "research",
+   "annotations": [],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/364893145/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Egretta garzetta",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 661,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 0.999
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp082-breeding.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp245-juv.webp",
+  "species": "sp245",
+  "latin": "Bubulcus ibis",
+  "app": {
+   "author": "Zac Peterson",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/113155242",
+  "src": {
+   "title": "iNaturalist 69701226",
+   "observation": "https://www.inaturalist.org/observations/69701226",
+   "author": "(c) Zac Peterson, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Ardea ibis",
+   "taxonCommon": "Western Cattle-Egret",
+   "qualityGrade": "research",
+   "annotations": [
+    "Life Stage: Juvenile",
+    "Alive or Dead: Alive"
+   ],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/113155242/large.jpeg"
+  },
+  "speciesInSource": false,
+  "sourceTaxon": "Ardea ibis",
+  "sourceSex": [],
+  "sourceAge": [
+   "juvenile"
+  ],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2650,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "soort niet in bron",
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp245-juv.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp147-juv.webp",
+  "species": "sp147",
+  "latin": "Charadrius dubius",
+  "app": {
+   "author": "Anthony McDonald",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/350059610",
+  "src": {
+   "title": "iNaturalist 198592387",
+   "observation": "https://www.inaturalist.org/observations/198592387",
+   "author": "(c) Anthony McDonald, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Thinornis dubius",
+   "taxonCommon": "Little Ringed Plover",
+   "qualityGrade": "research",
+   "annotations": [
+    "Life Stage: Juvenile",
+    "Alive or Dead: Alive",
+    "Evidence of Presence: Organism"
+   ],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/350059610/large.jpeg"
+  },
+  "speciesInSource": false,
+  "sourceTaxon": "Thinornis dubius",
+  "sourceSex": [],
+  "sourceAge": [
+   "juvenile"
+  ],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2749,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "soort niet in bron",
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp147-juv.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp145-winter.webp",
+  "species": "sp145",
+  "latin": "Pluvialis apricaria",
+  "app": {
+   "author": "Jonas Kraft",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/189221283",
+  "src": {
+   "title": "iNaturalist 112043037",
+   "observation": "https://www.inaturalist.org/observations/112043037",
+   "author": "(c) Jonas Kraft, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Pluvialis apricaria",
+   "taxonCommon": "European Golden-Plover",
+   "qualityGrade": "research",
+   "annotations": [
+    "Life Stage: Adult",
+    "Alive or Dead: Alive",
+    "Evidence of Presence: Organism"
+   ],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/189221283/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Pluvialis apricaria",
+  "sourceSex": [],
+  "sourceAge": [
+   "adult"
+  ],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2674,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp145-winter.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp102-breeding.webp",
+  "species": "sp102",
+  "latin": "Tringa totanus",
+  "app": {
+   "author": "Clare Edwards",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/508406832",
+  "src": {
+   "title": "iNaturalist 282961325",
+   "observation": "https://www.inaturalist.org/observations/282961325",
+   "author": "(c) Clare Edwards, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Tringa totanus",
+   "taxonCommon": "Common Redshank",
+   "qualityGrade": "research",
+   "annotations": [],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/508406832/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Tringa totanus",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2198,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp102-breeding.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp158-winter.webp",
+  "species": "sp158",
+  "latin": "Tringa nebularia",
+  "app": {
+   "author": "Joseph Morlan",
+   "license": "CC BY-SA 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/475334386",
+  "src": {
+   "title": "iNaturalist 264704796",
+   "observation": "https://www.inaturalist.org/observations/264704796",
+   "author": "(c) Joseph Morlan, some rights reserved (CC BY-SA)",
+   "license": "CC BY SA",
+   "taxon": "Tringa nebularia",
+   "taxonCommon": "Common Greenshank",
+   "qualityGrade": "research",
+   "annotations": [],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/475334386/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Tringa nebularia",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2724,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp158-winter.jpg"
+ }
+]
