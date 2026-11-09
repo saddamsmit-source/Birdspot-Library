@@ -50,10 +50,17 @@ for (const [id, label] of [['sp078', 'Donsjong'], ['sp086', 'Donsjong'], ['sp128
   assert.equal(GUIDE_PLUMAGE[id]?.juv, undefined, `Donsjong nog in rol Juveniel: ${id}`);
   const chick = (GUIDE_POSES[id] || []).find(p => p.age === 'chick');
   assert.equal(chick?.label, label, `Donsjong ontbreekt: ${id}`);
-  const juv = guidePlumageGroups(byId.get(id)).find(g => g.key === 'juv');
-  assert.ok(!juv || juv.photos.length === 0, `Juveniel-galerij bij ${id} bevat nog een foto`);
 }
-console.log('V-03 OK — donsjongen apart gelabeld');
+// Meerkoet en Bergeend hebben inmiddels een bevestigde, volgroeide juveniele foto; Grauwe Gans nog niet
+// (alle gevonden kandidaten waren donskuikens) — de galerij blijft daar leeg tot er een goede foto is.
+for (const id of ['sp078', 'sp128']) {
+  const juv = guidePlumageGroups(byId.get(id)).find(g => g.key === 'juv');
+  assert.ok(juv?.photos.length === 1, `Juveniele foto ontbreekt bij ${id}`);
+  assert.equal(juv.photos[0].age, 'juvenile', `Verkeerde leeftijd in Juveniel-galerij: ${id}`);
+}
+assert.ok(!guidePlumageGroups(byId.get('sp086')).find(g => g.key === 'juv')?.photos.length,
+  'Juveniel-galerij bij sp086 hoort nog leeg te zijn (geen kandidaat gevonden)');
+console.log('V-03 OK — donsjongen apart gelabeld; Meerkoet en Bergeend hebben nu ook een juveniele foto');
 
 // V-04
 assert.equal(GUIDE_PHOTOS.sp173.sex, undefined);
