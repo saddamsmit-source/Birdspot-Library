@@ -14,7 +14,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp029.webp",
   "species": "sp029",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Eurasian Blue Tit 2025 04 07.jpg",
@@ -31,7 +32,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp030.webp",
   "species": "sp030",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Fringilla coelebs on branch.jpg",
@@ -48,7 +50,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp035.webp",
   "species": "sp035",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Sperling Weibchen-20201025-RM-163340.jpg",
@@ -65,7 +68,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp043.webp",
   "species": "sp043",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Common Blackbird.jpg",
@@ -82,7 +86,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp045.webp",
   "species": "sp045",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "European robin Créteil 2.jpg",
@@ -99,7 +104,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp050.webp",
   "species": "sp050",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Oriolus oriolus from behind looking right.jpg",
@@ -116,7 +122,8 @@
   "modifications": "Existing local showcase WebP; reused without further crop",
   "image": "/assets/showcase/sp113.webp",
   "species": "sp113",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Lanius collurio соропуд сірий.jpg",
@@ -133,7 +140,8 @@
   "modifications": "Existing local showcase WebP; reused without further crop",
   "image": "/assets/showcase/sp262.webp",
   "species": "sp262",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Carpodacus erythrinus 303190528.jpg",
@@ -150,7 +158,8 @@
   "modifications": "Existing local showcase WebP; reused without further crop",
   "image": "/assets/showcase/sp042.webp",
   "species": "sp042",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "An Adult Rosy Starling Looking for food (50620492117).jpg",
@@ -167,7 +176,8 @@
   "modifications": "Existing local showcase WebP; reused without further crop",
   "image": "/assets/showcase/sp282.webp",
   "species": "sp282",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Chloris chloris (profile).jpg",
@@ -184,7 +194,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp036.webp",
   "species": "sp036",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Song Thrush Turdus philomelos.jpg",
@@ -201,7 +212,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp046.webp",
   "species": "sp046",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "The dunnock (Prunella modularis).jpg",
@@ -218,7 +230,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp054.webp",
   "species": "sp054",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Eurasian wren (Troglodytes troglodytes).jpg",
@@ -235,7 +248,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp055.webp",
   "species": "sp055",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Kleiber (Sitta europaea caesia) Val Roseg.jpg",
@@ -252,7 +266,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp065.webp",
   "species": "sp065",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "European starling in CP (33849).jpg",
@@ -269,7 +284,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp112.webp",
   "species": "sp112",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Long-tailed Tit 2025 03 20 02.jpg",
@@ -286,7 +302,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp034.webp",
   "species": "sp034",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Carduelis carduelis close up.jpg",
@@ -303,7 +320,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp037.webp",
   "species": "sp037",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Eurasian tree sparrow, Rżuchów, Świętokrzyskie Voivodeship, 20250421 1151 4165.jpg",
@@ -320,7 +338,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp044.webp",
   "species": "sp044",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Rougequeue noir Douga006.jpg",
@@ -337,7 +356,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp051.webp",
   "species": "sp051",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Ringeltaube auf Norderney 03.jpg",
@@ -354,7 +374,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp002.webp",
   "species": "sp002",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Sierpówka zwyczajna w Rżuchowie w województwie świętokrzyskim, 20250421 0903 4128.jpg",
@@ -371,7 +392,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp004.webp",
   "species": "sp004",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "2015.05.08.-04-Kaefertaler Wald-Mannheim--Buntspecht-Weibchen.jpg",
@@ -388,7 +410,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp016.webp",
   "species": "sp016",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Eurasian magpie 2022 05 03.jpg",
@@ -405,7 +428,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp021.webp",
   "species": "sp021",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Carrion crow perched on a branch 01.jpg",
@@ -422,7 +446,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp022.webp",
   "species": "sp022",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Western Jackdaw 2025 05 23 03.jpg",
@@ -439,7 +464,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp025.webp",
   "species": "sp025",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Eichelhäher mit Eichel im Schnabel im Geo-Naturpark Bergstraße-Odenwald.jpg",
@@ -456,7 +482,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp026.webp",
   "species": "sp026",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Common Chiffchaff 2025 04 04 01.jpg",
@@ -473,7 +500,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp056.webp",
   "species": "sp056",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Eurasian Blackcap 2025 04 05.jpg",
@@ -490,7 +518,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp059.webp",
   "species": "sp059",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Bachstelze (motacilla alba) auf Singwarte - Spiekeroog, Nationalpark niedersächsisches Wattenmeer.jpg",
@@ -507,7 +536,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp068.webp",
   "species": "sp068",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Willow Warbler Phylloscopus trochilus.jpg",
@@ -524,7 +554,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp057.webp",
   "species": "sp057",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Green woodpecker Franconville 2022 01 21 2.jpg",
@@ -541,7 +572,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp019.webp",
   "species": "sp019",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Eurasian siskin (Spinus spinus) male Biebrzanski.jpg",
@@ -558,7 +590,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp038.webp",
   "species": "sp038",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Carduelis cannabina -England -male-8.jpg",
@@ -575,7 +608,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp039.webp",
   "species": "sp039",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Bullfinch male.jpg",
@@ -592,7 +626,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp040.webp",
   "species": "sp040",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Hawfinch (Coccothraustes coccothraustes) male Drenthe 2.jpg",
@@ -609,7 +644,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp041.webp",
   "species": "sp041",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Björktrast (Turdus pilaris)-4.jpg",
@@ -626,7 +662,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp047.webp",
   "species": "sp047",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Redwing Turdus iliacus.jpg",
@@ -643,7 +680,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp048.webp",
   "species": "sp048",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Turdus viscivorus -England-8.jpg",
@@ -660,7 +698,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp049.webp",
   "species": "sp049",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Garden warbler (Sylvia borin) at the UNESCO Biosphere Reserve Swabian Alb.jpg",
@@ -677,7 +716,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp060.webp",
   "species": "sp060",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Common whitethroat 2025 05 25.jpg",
@@ -694,7 +734,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp061.webp",
   "species": "sp061",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Eurasian Teal Anas crecca, RSPB Titchwell, Norfolk (33675784246).jpg",
@@ -711,7 +752,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp091.webp",
   "species": "sp091",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Sedge warbler (Acrocephalus schoenobaenus) 2.jpg",
@@ -728,7 +770,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp110.webp",
   "species": "sp110",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Barn Swallow (14543889672).jpg",
@@ -745,7 +788,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp114.webp",
   "species": "sp114",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Delichon urbicum Oulu 20120527 04.JPG",
@@ -762,7 +806,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp115.webp",
   "species": "sp115",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Common reed bunting (emberiza schoeniclus) male.jpg",
@@ -779,7 +824,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp118.webp",
   "species": "sp118",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Columba oenas1.jpg",
@@ -796,7 +842,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp003.webp",
   "species": "sp003",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Picchio rosso minore con mora di gelso.jpg",
@@ -813,7 +860,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp017.webp",
   "species": "sp017",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Dryocopus martius, Perersberg, Brasov, Romania 0 (cropped).jpg",
@@ -830,7 +878,8 @@
   "modifications": "Existing local showcase WebP; reused without further crop",
   "image": "/assets/showcase/sp018.webp",
   "species": "sp018",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Middle-spotted woodpecker (Dendrocopos medius), Parc du Rouge-Cloître, Brussels (49179578882) (cropped).jpg",
@@ -847,7 +896,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp020.webp",
   "species": "sp020",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Willow Tit Lancashire.jpg",
@@ -864,7 +914,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp031.webp",
   "species": "sp031",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Sumpfmeise 13ib.jpg",
@@ -881,7 +932,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp032.webp",
   "species": "sp032",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Crested tit 2026 01 04 01.jpg",
@@ -898,7 +950,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp033.webp",
   "species": "sp033",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Phylloscopus sibilatrix Wood Warbler WOWA Waldlaubsänger MD284.jpg",
@@ -915,7 +968,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp058.webp",
   "species": "sp058",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Goldcrest 2025 11 21 05.jpg",
@@ -932,7 +986,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp063.webp",
   "species": "sp063",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Common firecrest Franconville 03.jpg",
@@ -949,7 +1004,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp064.webp",
   "species": "sp064",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Gartenbaumläuferchen.jpg",
@@ -966,7 +1022,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp066.webp",
   "species": "sp066",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Certhia familiaris EM1B0410 (48689577163).jpg",
@@ -983,7 +1040,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp067.webp",
   "species": "sp067",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Coal Tit 2026 03 23.jpg",
@@ -1000,7 +1058,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp174.webp",
   "species": "sp174",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Muscicapa striata мухоловка сіра.jpg",
@@ -1017,7 +1076,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp176.webp",
   "species": "sp176",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Ficedula hypoleuca Sussex 1.jpg",
@@ -1034,7 +1094,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp177.webp",
   "species": "sp177",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Phoenicurus phoenicurus 07(js), Lodz (Poland).jpg",
@@ -1051,7 +1112,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp178.webp",
   "species": "sp178",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Common Kingfisher Alcedo atthis.jpg",
@@ -1068,7 +1130,8 @@
   "modifications": "Existing local showcase WebP; reused without further crop",
   "image": "/assets/showcase/sp075.webp",
   "species": "sp075",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Great crested grebe swimming 2022-02-27.jpg",
@@ -1085,7 +1148,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp077.webp",
   "species": "sp077",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Eurasian Coot 2025 11 30 03.jpg",
@@ -1102,7 +1166,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp078.webp",
   "species": "sp078",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Common moorhen (Gallinula chloropus) France.jpg",
@@ -1119,7 +1184,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp079.webp",
   "species": "sp079",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Ardea cinerea in flight.jpg",
@@ -1136,7 +1202,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp081.webp",
   "species": "sp081",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Little egret (Egretta garzetta) in flight.jpg",
@@ -1153,7 +1220,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp082.webp",
   "species": "sp082",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Great Egret (Ardea alba) (25562005404).jpg",
@@ -1170,7 +1238,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp083.webp",
   "species": "sp083",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Greylag Goose - St James's Park, London - Nov 2006.jpg",
@@ -1187,7 +1256,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp086.webp",
   "species": "sp086",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Anas platyrhynchos male female.jpg",
@@ -1204,7 +1274,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp089.webp",
   "species": "sp089",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Northern shoveler 2024 02 03.jpg",
@@ -1221,7 +1292,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp090.webp",
   "species": "sp090",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Tufted Duck Aythya fuligula Male by Dr. Raju Kasambe DSCN9795 (17).jpg",
@@ -1238,7 +1310,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp092.webp",
   "species": "sp092",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "2021-05-05 Phalacrocorax carbo carbo, Killingworth Lake, Northumberland 1-2.jpg",
@@ -1255,7 +1328,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp104.webp",
   "species": "sp104",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Mute Swan Emsworth2.JPG",
@@ -1272,7 +1346,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp126.webp",
   "species": "sp126",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Frisada, macho, Gadwall, male (49060286588).jpg",
@@ -1289,7 +1364,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp129.webp",
   "species": "sp129",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Eurasian Wigeon - male.jpg",
@@ -1306,7 +1382,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp130.webp",
   "species": "sp130",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Common Pochard 2025 11 11 08.jpg",
@@ -1323,7 +1400,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp132.webp",
   "species": "sp132",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Common buzzard 2024-01-20.jpg",
@@ -1340,7 +1418,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp005.webp",
   "species": "sp005",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Common kestrel on a tree in Kraków, 20250412 1052 3641.jpg",
@@ -1357,7 +1436,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp008.webp",
   "species": "sp008",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Saxicola rubicola.006 - A Coruña.jpg",
@@ -1374,7 +1454,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp053.webp",
   "species": "sp053",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Wiesenschafstelze (Motacilla flava flava) im LSG Bergstraße-Nord 08.jpg",
@@ -1391,7 +1472,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp069.webp",
   "species": "sp069",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Skylark 2, Lake District, England - June 2009.jpg",
@@ -1408,7 +1490,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp070.webp",
   "species": "sp070",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Meadow pipit (Anthus pratensis pratensis) Marken.jpg",
@@ -1425,7 +1508,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp072.webp",
   "species": "sp072",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Silbermöwe auf Eis - Spiekeroog, Nationalpark niedersächsisches Wattenmeer.jpg",
@@ -1442,7 +1526,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp094.webp",
   "species": "sp094",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Heringsmöwe auf Spiekeroog 04.jpg",
@@ -1459,7 +1544,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp095.webp",
   "species": "sp095",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Common gull (Larus canus) adult breeding Oppdal.jpg",
@@ -1476,7 +1562,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp096.webp",
   "species": "sp096",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Black-headed gull breeding plumage.jpg",
@@ -1493,7 +1580,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp097.webp",
   "species": "sp097",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Eurasian oystercatcher (Haematopus ostralegus) at Amrum.jpg",
@@ -1510,7 +1598,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp098.webp",
   "species": "sp098",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Vanneau huppé Ichkeul021.jpg",
@@ -1527,7 +1616,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp099.webp",
   "species": "sp099",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Curlew (Numenius arquata) (12).jpg",
@@ -1544,7 +1634,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp100.webp",
   "species": "sp100",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Limosa limosa (alerted).jpg",
@@ -1561,7 +1652,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp101.webp",
   "species": "sp101",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Tringa totanus - Common Redshank, Mersin 2016-12-11 02-4.jpg",
@@ -1578,7 +1670,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp102.webp",
   "species": "sp102",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Jagdfasan-Hahn (März 2025).jpg",
@@ -1595,7 +1688,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp105.webp",
   "species": "sp105",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Nurmkana (cropped).jpg",
@@ -1612,7 +1706,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp106.webp",
   "species": "sp106",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Yellowhammer (Emberiza citrinella) male Drenthe.jpg",
@@ -1629,7 +1724,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp117.webp",
   "species": "sp117",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Common shelduck (Tadorna tadorna) male 2.jpg",
@@ -1646,7 +1742,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp128.webp",
   "species": "sp128",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Avocette élégante060 Thyna.jpg",
@@ -1663,7 +1760,8 @@
   "modifications": "Existing local showcase WebP; reused without further crop",
   "image": "/assets/showcase/sp143.webp",
   "species": "sp143",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Common ringed plover (Charadrius hiaticula) Oppdal.jpg",
@@ -1680,7 +1778,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp146.webp",
   "species": "sp146",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Tournepierre à collier Thyna010.jpg",
@@ -1697,7 +1796,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp150.webp",
   "species": "sp150",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Sanderling Westkapelle 02.jpg",
@@ -1714,7 +1814,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp152.webp",
   "species": "sp152",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Ciconia ciconia - 01.jpg",
@@ -1731,7 +1832,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/sp170.webp",
   "species": "sp170",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "2019-04-17 Ichthyaetus melanocephalus, Gosforth Park, Northumberland 2.jpg",
@@ -1748,7 +1850,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/sp225.webp",
   "species": "sp225",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Falco peregrinus in flight (17659253649).jpg",
@@ -1765,7 +1868,8 @@
   "modifications": "Bestaande WebP hergebruikt zonder extra uitsnede",
   "image": "/assets/showcase/sp009.webp",
   "species": "sp009",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Purple heron in Zimbabwe.jpg",
@@ -1782,7 +1886,8 @@
   "modifications": "Bestaande WebP hergebruikt zonder extra uitsnede",
   "image": "/assets/showcase/sp084.webp",
   "species": "sp084",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Nycticorax nycticorax 5.jpg",
@@ -1799,7 +1904,8 @@
   "modifications": "Bestaande WebP hergebruikt zonder extra uitsnede",
   "image": "/assets/showcase/sp085.webp",
   "species": "sp085",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Очеретянка велика (англ. Great Reed Warbler; лат. Acrocephalus arundinaceus).jpg",
@@ -1816,7 +1922,8 @@
   "modifications": "Bestaande WebP hergebruikt zonder extra uitsnede",
   "image": "/assets/showcase/sp108.webp",
   "species": "sp108",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "An Eurasian Marsh Harrier - Adult Male in flight (50572292483).jpg",
@@ -1833,7 +1940,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/sp173.webp",
   "species": "sp173",
-  "flagged": true
+  "flagged": true,
+  "obsHint": null
  },
  {
   "file": "Hen Harrier - Male.jpg",
@@ -1850,7 +1958,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/sp249.webp",
   "species": "sp249",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "A male Pallid Harrier flying away from us early morning (50536689517).jpg",
@@ -1867,7 +1976,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/sp250.webp",
   "species": "sp250",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Beautiful Montagu's Harrier in Flight (51042548717).jpg",
@@ -1884,7 +1994,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/sp251.webp",
   "species": "sp251",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Male Sparrowhawk (46103963061).jpg",
@@ -1901,7 +2012,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/sp006.webp",
   "species": "sp006",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Male northern goshawk (49434582392).jpg",
@@ -1918,7 +2030,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/sp007.webp",
   "species": "sp007",
-  "flagged": true
+  "flagged": true,
+  "obsHint": null
  },
  {
   "file": "iNaturalist photo 204335214",
@@ -1935,7 +2048,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/sp248.webp",
   "species": "sp248",
-  "flagged": true
+  "flagged": true,
+  "obsHint": "120788543"
  },
  {
   "file": "Rough-legged Hawk, female (29534397942).jpg",
@@ -1952,7 +2066,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/sp253.webp",
   "species": "sp253",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Cattle Egrets (Bubulcus ibis) (26473504731).jpg",
@@ -1969,7 +2084,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/sp245.webp",
   "species": "sp245",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Garganey (Spatula querquedula) male.jpg",
@@ -1986,7 +2102,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/sp188.webp",
   "species": "sp188",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "iNaturalist photo 680750765",
@@ -2003,7 +2120,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/sp147.webp",
   "species": "sp147",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "372539444"
  },
  {
   "file": "iNaturalist photo 485435922",
@@ -2020,7 +2138,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/sp206.webp",
   "species": "sp206",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "269952441"
  },
  {
   "file": "iNaturalist photo 66147127",
@@ -2037,7 +2156,8 @@
   "modifications": "Omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/sp144.webp",
   "species": "sp144",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "41697265"
  },
  {
   "file": "iNaturalist photo 605984899",
@@ -2054,7 +2174,8 @@
   "modifications": "Omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/sp145.webp",
   "species": "sp145",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "290110164"
  },
  {
   "file": "iNaturalist photo 246109837",
@@ -2071,7 +2192,8 @@
   "modifications": "Omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/sp156.webp",
   "species": "sp156",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "143500119"
  },
  {
   "file": "iNaturalist photo 121189166",
@@ -2088,7 +2210,8 @@
   "modifications": "Omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/sp159.webp",
   "species": "sp159",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "74171586"
  },
  {
   "file": "iNaturalist photo 56953995",
@@ -2105,7 +2228,8 @@
   "modifications": "Omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/sp155.webp",
   "species": "sp155",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "36060892"
  },
  {
   "file": "iNaturalist photo 121189174",
@@ -2122,7 +2246,8 @@
   "modifications": "Omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/sp157.webp",
   "species": "sp157",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "74171588"
  },
  {
   "file": "iNaturalist photo 198450766",
@@ -2139,7 +2264,8 @@
   "modifications": "Omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/sp158.webp",
   "species": "sp158",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "117502970"
  },
  {
   "file": "iNaturalist photo 103339289",
@@ -2156,7 +2282,8 @@
   "modifications": "Omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/sp217.webp",
   "species": "sp217",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "64292081"
  },
  {
   "file": "Falco tinnunculus in flight (45067938032).jpg",
@@ -2173,7 +2300,8 @@
   "modifications": "Verkleind tot maximaal 1600 px en omgezet naar WebP; geen extra uitsnede.",
   "image": "/assets/species/plumage/sp008-flight.webp",
   "species": "sp008",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Falco tinnunculus - Common kestrel 20.jpg",
@@ -2190,7 +2318,8 @@
   "modifications": "Omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp008-male-flight.webp",
   "species": "sp008",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Peregrine falcon portrait.jpg",
@@ -2207,7 +2336,8 @@
   "modifications": "Commons-versie met aangepaste lichtwaarden (MPF); verkleind en omgezet naar WebP zonder extra uitsnede.",
   "image": "/assets/species/plumage/sp009-perched.webp",
   "species": "sp009",
-  "flagged": true
+  "flagged": true,
+  "obsHint": null
  },
  {
   "file": "Peregrine Falcon (male) cropped.jpg",
@@ -2224,7 +2354,8 @@
   "modifications": "Omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp009-male-rest.webp",
   "species": "sp009",
-  "flagged": true
+  "flagged": true,
+  "obsHint": null
  },
  {
   "file": "iNaturalist photo 9819028",
@@ -2241,7 +2372,8 @@
   "modifications": "Bijgesneden en omgezet naar WebP",
   "image": "/assets/species/plumage/sp009-male-flight.webp",
   "species": "sp009",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "7528897"
  },
  {
   "file": "European green woodpecker eating.jpg",
@@ -2258,7 +2390,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/plumage/sp019-female-ground.webp",
   "species": "sp019",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Female green woodpecker in flight.jpg",
@@ -2275,7 +2408,8 @@
   "modifications": "Uitgesneden, verkleind en omgezet naar WebP",
   "image": "/assets/species/plumage/sp019-flight.webp",
   "species": "sp019",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Mittelspecht bei der Nahrungssuche.jpg",
@@ -2292,7 +2426,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/plumage/sp020-pose.webp",
   "species": "sp020",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Middelste-bonte-specht-1 (28031708853).jpg",
@@ -2309,7 +2444,8 @@
   "modifications": "Omgezet naar WebP zonder extra uitsnede",
   "image": "/assets/species/plumage/sp020-flight.webp",
   "species": "sp020",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Poecile Montanus Kittila 20120306.JPG",
@@ -2326,7 +2462,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp031-flight.webp",
   "species": "sp031",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Poecile palustris 1 Luc Viatour.jpg",
@@ -2343,7 +2480,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp032-view.webp",
   "species": "sp032",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Parus palustris IMG 9452.jpg",
@@ -2360,7 +2498,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp032-flight.webp",
   "species": "sp032",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Lophophanes cristatus Luc Viatour 1.jpg",
@@ -2377,7 +2516,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp033-view.webp",
   "species": "sp033",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Haubenmeise Abflug.JPG",
@@ -2394,7 +2534,8 @@
   "modifications": "Omgezet naar WebP zonder extra uitsnede",
   "image": "/assets/species/plumage/sp033-flight.webp",
   "species": "sp033",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Riparia riparia. Sand Martin (27556953299).jpg",
@@ -2411,7 +2552,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp116-nestwand.webp",
   "species": "sp116",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Sandmartin (28943239906).jpg",
@@ -2428,7 +2570,8 @@
   "modifications": "Omgezet naar WebP zonder uitsnede, met behoud van de fotograafvermelding in beeld",
   "image": "/assets/species/plumage/sp116-flight.webp",
   "species": "sp116",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Eurasian sparrowhawk 2023 12 31 01.jpg",
@@ -2445,7 +2588,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp006-flight.webp",
   "species": "sp006",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Northern Goshawk (Accipiter gentilis) (1).JPG",
@@ -2462,7 +2606,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp007-flight.webp",
   "species": "sp007",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "iNaturalist photo 29451692",
@@ -2479,7 +2624,8 @@
   "modifications": "Bijgesneden en omgezet naar WebP",
   "image": "/assets/species/plumage/sp007-male-flight.webp",
   "species": "sp007",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "19176694"
  },
  {
   "file": "Columba palumbus SB.jpg",
@@ -2496,7 +2642,8 @@
   "modifications": "Omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp002-flight.webp",
   "species": "sp002",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Skogsduva Stock Dove (19730362773).jpg",
@@ -2513,7 +2660,8 @@
   "modifications": "Uitgesneden en omgezet naar WebP",
   "image": "/assets/species/plumage/sp003-flight.webp",
   "species": "sp003",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Tourterelle turque en vol près de Chambéry (avril 2020).JPG",
@@ -2530,7 +2678,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp004-flight.webp",
   "species": "sp004",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Dendrocopos major (51546452028).jpg",
@@ -2547,7 +2696,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp016-flight.webp",
   "species": "sp016",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Lesser spotted woodpecker (f), Dryobates minor, Mindre hackspett.jpg",
@@ -2564,7 +2714,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp017-flight.webp",
   "species": "sp017",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Schwarzspecht (Dryocopus martius).jpg",
@@ -2581,7 +2732,8 @@
   "modifications": "Uitgesneden, verkleind en omgezet naar WebP",
   "image": "/assets/species/plumage/sp018-flight.webp",
   "species": "sp018",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Dryocopus martius 03.jpg",
@@ -2598,7 +2750,8 @@
   "modifications": "Originele JPEG omgezet naar WebP, zonder uitsnede en zonder EXIF/GPS/XMP.",
   "image": "/assets/species/plumage/sp018-juv-review.webp",
   "species": "sp018",
-  "flagged": true
+  "flagged": true,
+  "obsHint": null
  },
  {
   "file": "Eurasian Magpie 2023-10-16 01.jpg",
@@ -2615,7 +2768,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp021-flight.webp",
   "species": "sp021",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Corvus corone in flight JdP 20191213 t160752.jpg",
@@ -2632,7 +2786,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp022-flight.webp",
   "species": "sp022",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Jackdaw (48142024622).jpg",
@@ -2649,7 +2804,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp025-flight.webp",
   "species": "sp025",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "075 Wild Eurasian jay in flight at the Parc naturel régional Jura vaudois Photo by Giles Laurent.jpg",
@@ -2666,7 +2822,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp026-flight.webp",
   "species": "sp026",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "13 bis 15 Zentimeter wird eine Kohlmeise lang. 01.jpg",
@@ -2683,7 +2840,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp029-flight.webp",
   "species": "sp029",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Blue Tit in flight (8360763555).jpg",
@@ -2700,7 +2858,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp030-flight.webp",
   "species": "sp030",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Long-tailed Tit in flight (8644086215).jpg",
@@ -2717,7 +2876,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp034-flight.webp",
   "species": "sp034",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Fringilla coelebs -Lochwinnoch, Renfrewshire, Scotland -flying-8.jpg",
@@ -2734,7 +2894,8 @@
   "modifications": "Omgezet naar WebP zonder extra uitsnede",
   "image": "/assets/species/plumage/sp035-flight.webp",
   "species": "sp035",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Fringilla coelebs juvenile Sigy 20180510 t170526.jpg",
@@ -2751,7 +2912,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp035-juv-review.webp",
   "species": "sp035",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "NZ7 6126 (51832454526).jpg",
@@ -2768,7 +2930,8 @@
   "modifications": "Omgezet naar WebP zonder extra uitsnede",
   "image": "/assets/species/plumage/sp036-flight.webp",
   "species": "sp036",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "NZ7 6264 (51833186500).jpg",
@@ -2785,7 +2948,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp037-flight.webp",
   "species": "sp037",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Runway Three - Flickr - john.purvis.jpg",
@@ -2802,7 +2966,8 @@
   "modifications": "Uitgesneden rond de vliegende Sijs, verkleind en omgezet naar WebP",
   "image": "/assets/species/plumage/sp038-flight.webp",
   "species": "sp038",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "iNaturalist-foto 617561306",
@@ -2819,7 +2984,8 @@
   "modifications": "Uitgesneden rond twee vogels uit de groep en omgezet naar WebP",
   "image": "/assets/species/plumage/sp039-flight.webp",
   "species": "sp039",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "26 Gramm Fluggewicht erreicht ein Dompfaff. 01.jpg",
@@ -2836,7 +3002,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp040-flight.webp",
   "species": "sp040",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "iNaturalist-foto 576075793",
@@ -2853,7 +3020,8 @@
   "modifications": "Eén vogel uitgesneden uit de opname en omgezet naar WebP",
   "image": "/assets/species/plumage/sp041-flight.webp",
   "species": "sp041",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Zingende roodmus-4961932.webm",
@@ -2870,7 +3038,8 @@
   "modifications": "Videostill op 00:13,96, met gecorrigeerde pixelverhouding en omgezet naar WebP",
   "image": "/assets/species/plumage/sp042-flight.webp",
   "species": "sp042",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "House Sparrow1.jpg",
@@ -2887,7 +3056,8 @@
   "modifications": "Uitgesneden rond de vogel, verkleind en omgezet naar WebP",
   "image": "/assets/species/plumage/sp043-flight.webp",
   "species": "sp043",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "House sparrow (Passer domesticus) juvenile.jpg",
@@ -2904,7 +3074,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp043-juv-review.webp",
   "species": "sp043",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Waltz (31982909).jpeg",
@@ -2921,7 +3092,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp044-flight.webp",
   "species": "sp044",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "NZ7 6931 (51844641169).jpg",
@@ -2938,7 +3110,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder extra uitsnede",
   "image": "/assets/species/plumage/sp045-flight.webp",
   "species": "sp045",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Song Thrush (Turdus philomelos) in flight.jpg",
@@ -2955,7 +3128,8 @@
   "modifications": "Uitsnede door Richard001 overgenomen en omgezet naar WebP",
   "image": "/assets/species/plumage/sp046-flight.webp",
   "species": "sp046",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Turdus pilaris, winter, flying.jpg",
@@ -2972,7 +3146,8 @@
   "modifications": "Uitgesneden rond de vogel en omgezet naar WebP",
   "image": "/assets/species/plumage/sp047-flight.webp",
   "species": "sp047",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Redwing in flight.jpg",
@@ -2989,7 +3164,8 @@
   "modifications": "Uitgesneden rond de vogel en omgezet naar WebP",
   "image": "/assets/species/plumage/sp048-flight.webp",
   "species": "sp048",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "iNaturalist photo 576073830",
@@ -3006,7 +3182,8 @@
   "modifications": "Uitgesneden rond de vogel en omgezet naar WebP",
   "image": "/assets/species/plumage/sp049-flight.webp",
   "species": "sp049",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Robin in Flight (8398860133).jpg",
@@ -3023,7 +3200,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp050-flight.webp",
   "species": "sp050",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "European Robin - Erithacus rubecula - Juvenile.jpg",
@@ -3040,7 +3218,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp050-juv-review.webp",
   "species": "sp050",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "iNaturalist photo 8255067",
@@ -3057,7 +3236,8 @@
   "modifications": "Omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp051-flight.webp",
   "species": "sp051",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "European stonechat (Saxicola rubicola) in the UK.webm",
@@ -3074,7 +3254,8 @@
   "modifications": "Videostill op 01:15,107, uitgesneden en omgezet naar WebP",
   "image": "/assets/species/plumage/sp053-flight.webp",
   "species": "sp053",
-  "flagged": true
+  "flagged": true,
+  "obsHint": null
  },
  {
   "file": "Stonechat - Saxicola rubicola, Female.jpg",
@@ -3091,7 +3272,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp053-female-review.webp",
   "species": "sp053",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Saxicola rubicola juvenile.jpg",
@@ -3108,7 +3290,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp053-juv-review.webp",
   "species": "sp053",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Flight design.jpg",
@@ -3125,7 +3308,8 @@
   "modifications": "Uitgesneden rond de vogel en omgezet naar WebP",
   "image": "/assets/species/plumage/sp056-flight.webp",
   "species": "sp056",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Wood warbler (49979490848).jpg",
@@ -3142,7 +3326,8 @@
   "modifications": "Uitgesneden rond de vogel en omgezet naar WebP",
   "image": "/assets/species/plumage/sp058-flight.webp",
   "species": "sp058",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "iNaturalist photo 197056025",
@@ -3159,7 +3344,8 @@
   "modifications": "Uitgesneden rond de vogel en omgezet naar WebP",
   "image": "/assets/species/plumage/sp061-flight.webp",
   "species": "sp061",
-  "flagged": true
+  "flagged": true,
+  "obsHint": null
  },
  {
   "file": "Regulus regulus japonensis in flight.JPG",
@@ -3176,7 +3362,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp063-flight.webp",
   "species": "sp063",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Kleiber Flug.jpg",
@@ -3193,7 +3380,8 @@
   "modifications": "Omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp065-flight.webp",
   "species": "sp065",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Motacilla alba, Kalkara, (2026) (01).jpg",
@@ -3210,7 +3398,8 @@
   "modifications": "Wikimedia-versie op 1280 px omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp068-flight.webp",
   "species": "sp068",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Schafstelze - Motacilla flava.jpg",
@@ -3227,7 +3416,8 @@
   "modifications": "Wikimedia-versie op 1280 px omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp069-flight.webp",
   "species": "sp069",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Skylark (Alauda arvensis) in flight.jpg",
@@ -3244,7 +3434,8 @@
   "modifications": "Wikimedia-versie op 1280 px omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp070-flight.webp",
   "species": "sp070",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Meadow Pipit in flight (51113279347).jpg",
@@ -3261,7 +3452,8 @@
   "modifications": "Uitgesneden rond de vogel en omgezet naar WebP",
   "image": "/assets/species/plumage/sp072-flight.webp",
   "species": "sp072",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Common kingfisher (Alcedo atthis ispida) in flight.jpg",
@@ -3278,7 +3470,8 @@
   "modifications": "Uitgesneden rond de vogel en omgezet naar WebP",
   "image": "/assets/species/plumage/sp075-flight.webp",
   "species": "sp075",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Common Kingfisher perching (Alcedo atthis).jpg",
@@ -3295,7 +3488,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp075-female-review.webp",
   "species": "sp075",
-  "flagged": true
+  "flagged": true,
+  "obsHint": null
  },
  {
   "file": "Common Kingfisher 2025 08 30 01.jpg",
@@ -3312,7 +3506,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp075-juv-review.webp",
   "species": "sp075",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Male Alcedo atthis ispida looking to the left (19636115768).jpg",
@@ -3329,7 +3524,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp075-male-review.webp",
   "species": "sp075",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Galeirão, Coot (50501136202).jpg",
@@ -3346,7 +3542,8 @@
   "modifications": "Uitgesneden rond de vogel en omgezet naar WebP",
   "image": "/assets/species/plumage/sp078-flight.webp",
   "species": "sp078",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Common Moorhen (Gallinula chloropus) (49249725853).jpg",
@@ -3363,7 +3560,8 @@
   "modifications": "Wikimedia-versie op 1280 px omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp079-flight.webp",
   "species": "sp079",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Great egret (Ardea alba) in flight Danube delta.jpg",
@@ -3380,7 +3578,8 @@
   "modifications": "Wikimedia-versie op 1280 px omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp083-flight.webp",
   "species": "sp083",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Purple heron in flight 01.jpg",
@@ -3397,7 +3596,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp084-flight.webp",
   "species": "sp084",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Black-crowned night heron (Nycticorax nycticorax) in flight.jpg",
@@ -3414,7 +3614,8 @@
   "modifications": "Uitgesneden rond de vogel, verkleind en omgezet naar WebP",
   "image": "/assets/species/plumage/sp085-flight.webp",
   "species": "sp085",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Greylag goose (Anser anser) in flight Marken.jpg",
@@ -3431,7 +3632,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp086-flight.webp",
   "species": "sp086",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Mallard male in flight.jpg",
@@ -3448,7 +3650,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp089-flight.webp",
   "species": "sp089",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Anas platyrhynchos juvenile JdP 2013-06-14 n01.jpg",
@@ -3465,7 +3668,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp089-juv-review.webp",
   "species": "sp089",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Male northern shoveler in flight-0208.jpg",
@@ -3482,7 +3686,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp090-flight.webp",
   "species": "sp090",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Cerceta común - Flickr - ferran pestaña.jpg",
@@ -3499,7 +3704,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp091-flight.webp",
   "species": "sp091",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Tufted Duck (Aythya fuligula) - Flickr - gilgit2.jpg",
@@ -3516,7 +3722,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp092-flight.webp",
   "species": "sp092",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Aythya fuligula Чернеть хохлатая Птенец подрос.jpg",
@@ -3533,7 +3740,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp092-juv-review.webp",
   "species": "sp092",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Larus argentatus in flight.jpg",
@@ -3550,7 +3758,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp094-flight.webp",
   "species": "sp094",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Lesser black-backed gull (Larus fuscus) 2.jpg",
@@ -3567,7 +3776,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp095-flight.webp",
   "species": "sp095",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Common gull (Larus canus) adult breeding in flight Oppdal 2.jpg",
@@ -3584,7 +3794,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp096-flight.webp",
   "species": "sp096",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Black-headed gull (Chroicocephalus ridibundus) in flight.jpg",
@@ -3601,7 +3812,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp097-flight.webp",
   "species": "sp097",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Oystercatcher (Haematopus ostralegus) in flight.jpg",
@@ -3618,7 +3830,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp098-flight.webp",
   "species": "sp098",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Northern lapwings (Vanellus vanellus) in flight Marken.jpg",
@@ -3635,7 +3848,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp099-flight.webp",
   "species": "sp099",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Curlew (Numenius arquata) in flight.jpg",
@@ -3652,7 +3866,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp100-flight.webp",
   "species": "sp100",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Limosa limosa (flying).jpg",
@@ -3669,7 +3884,8 @@
   "modifications": "Bijgesneden rond de vogel, verkleind en omgezet naar WebP",
   "image": "/assets/species/plumage/sp101-flight.webp",
   "species": "sp101",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Common redshank (Tringa totanus robusta) in flight Myrar 2.jpg",
@@ -3686,7 +3902,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp102-flight.webp",
   "species": "sp102",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Great cormorant (Phalacrocorax carbo) in flight.jpg",
@@ -3703,7 +3920,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp104-flight.webp",
   "species": "sp104",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Rink-necked pheasant in flight (6922582382).jpg",
@@ -3720,7 +3938,8 @@
   "modifications": "Omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp105-flight.webp",
   "species": "sp105",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "iNaturalist photo 77252585",
@@ -3737,7 +3956,8 @@
   "modifications": "Bijgesneden rond de vogel en omgezet naar WebP",
   "image": "/assets/species/plumage/sp106-flight.webp",
   "species": "sp106",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "iNaturalist photo 747529794",
@@ -3754,7 +3974,8 @@
   "modifications": "Omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp108-flight.webp",
   "species": "sp108",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Phragmite des Joncs - Envol.jpg",
@@ -3771,7 +3992,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp110-flight.webp",
   "species": "sp110",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Steigflug (54094247446) v2.jpg",
@@ -3788,7 +4010,8 @@
   "modifications": "Commons-uitsnede door Юрий Д.К., verkleind en omgezet naar WebP",
   "image": "/assets/species/plumage/sp112-flight.webp",
   "species": "sp112",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Oriolus oriolus Barcelona 1.jpg",
@@ -3805,7 +4028,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp113-flight.webp",
   "species": "sp113",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Schiermonnikoog - Boerenzwaluw (Hirundo rustica) v2.jpg",
@@ -3822,7 +4046,8 @@
   "modifications": "Bijgesneden rond de vogel en omgezet naar WebP",
   "image": "/assets/species/plumage/sp114-flight.webp",
   "species": "sp114",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Northern House Martin (Delichon urbicum).jpg",
@@ -3839,7 +4064,8 @@
   "modifications": "Bijgesneden rond de vogel en omgezet naar WebP",
   "image": "/assets/species/plumage/sp115-flight.webp",
   "species": "sp115",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "iNaturalist photo 622283477",
@@ -3856,7 +4082,8 @@
   "modifications": "Bijgesneden rond de vogel, schaduwen licht opgehelderd en omgezet naar WebP",
   "image": "/assets/species/plumage/sp117-flight.webp",
   "species": "sp117",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "iNaturalist photo 241756520",
@@ -3873,7 +4100,8 @@
   "modifications": "Bijgesneden rond de vogel en omgezet naar WebP",
   "image": "/assets/species/plumage/sp118-flight.webp",
   "species": "sp118",
-  "flagged": true
+  "flagged": true,
+  "obsHint": null
  },
  {
   "file": "Cygnus olor-pjt1.jpg",
@@ -3890,7 +4118,8 @@
   "modifications": "Verkleind en omgezet naar WebP",
   "image": "/assets/species/plumage/sp126-flight.webp",
   "species": "sp126",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Gravand - Common Shelduck - Tadorna tadorna.JPG",
@@ -3907,7 +4136,8 @@
   "modifications": "Verkleind en omgezet naar WebP",
   "image": "/assets/species/plumage/sp128-flight.webp",
   "species": "sp128",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Common shelduck (Tadorna tadorna) female in flight Sfax.jpg",
@@ -3924,7 +4154,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp128-female-review.webp",
   "species": "sp128",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Frisada, macho, Gadwall, male (50374265703).jpg",
@@ -3941,7 +4172,8 @@
   "modifications": "1280 px-bronweergave bijgesneden rond de vogel en omgezet naar WebP",
   "image": "/assets/species/plumage/sp129-flight.webp",
   "species": "sp129",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Eurasian Wigeon (Anas penelope) (51171016336).jpg",
@@ -3958,7 +4190,8 @@
   "modifications": "1280 px-bronweergave omgezet naar WebP met behoud van de fotograafvermelding in beeld",
   "image": "/assets/species/plumage/sp130-flight.webp",
   "species": "sp130",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Common pochard (Aythaya ferina) in flight Denmark.jpg",
@@ -3975,7 +4208,8 @@
   "modifications": "1280 px-bronweergave bijgesneden rond de vogel en omgezet naar WebP",
   "image": "/assets/species/plumage/sp132-flight.webp",
   "species": "sp132",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Kluut-1 (28031728713).jpg",
@@ -3992,7 +4226,8 @@
   "modifications": "1280 px-bronweergave omgezet naar WebP met behoud van de fotograafvermelding in beeld",
   "image": "/assets/species/plumage/sp143-flight.webp",
   "species": "sp143",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Grey Plover - 1192 (11479350056).jpg",
@@ -4009,7 +4244,8 @@
   "modifications": "1280 px-bronweergave bijgesneden rond de vogel en omgezet naar WebP",
   "image": "/assets/species/plumage/sp144-flight.webp",
   "species": "sp144",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "European golden plover (Pluvialis apricaria) in flight.jpg",
@@ -4026,7 +4262,8 @@
   "modifications": "Verkleind en omgezet naar WebP",
   "image": "/assets/species/plumage/sp145-flight.webp",
   "species": "sp145",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Charadrius hiaticula Lvk.jpg",
@@ -4043,7 +4280,8 @@
   "modifications": "Zonder uitsnede omgezet naar WebP",
   "image": "/assets/species/plumage/sp146-flight.webp",
   "species": "sp146",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "The Little ringed plover in flight.jpg",
@@ -4060,7 +4298,8 @@
   "modifications": "Bijgesneden, verkleind en omgezet naar WebP",
   "image": "/assets/species/plumage/sp147-flight.webp",
   "species": "sp147",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Ruddy turnstone (Arenaria interpres) in flight non-breeding.jpg",
@@ -4077,7 +4316,8 @@
   "modifications": "1280 px-bronweergave bijgesneden en omgezet naar WebP",
   "image": "/assets/species/plumage/sp150-flight.webp",
   "species": "sp150",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Sanderling (Calidris alba) (3972936394).jpg",
@@ -4094,7 +4334,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp152-flight.webp",
   "species": "sp152",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "NZ7 7499 (52887647148).jpg",
@@ -4111,7 +4352,8 @@
   "modifications": "Omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp155-flight.webp",
   "species": "sp155",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Green sandpiper flying.jpg",
@@ -4128,7 +4370,8 @@
   "modifications": "Bijgesneden, verkleind en omgezet naar WebP",
   "image": "/assets/species/plumage/sp156-flight.webp",
   "species": "sp156",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "iNaturalist photo 711147296",
@@ -4145,7 +4388,8 @@
   "modifications": "Bijgesneden en omgezet naar WebP",
   "image": "/assets/species/plumage/sp157-flight.webp",
   "species": "sp157",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "The Common Greenshank.jpg",
@@ -4162,7 +4406,8 @@
   "modifications": "1280 px-bronweergave zonder uitsnede omgezet naar WebP",
   "image": "/assets/species/plumage/sp158-flight.webp",
   "species": "sp158",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Wood Sandpiper (Tringa glareola) (53879706937), crop.jpg",
@@ -4179,7 +4424,8 @@
   "modifications": "Bestaande Commons-uitsnede door JMK zonder verdere uitsnede omgezet naar WebP",
   "image": "/assets/species/plumage/sp159-flight.webp",
   "species": "sp159",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Great black-backed gull (Larus marinus) in flight Moher.jpg",
@@ -4196,7 +4442,8 @@
   "modifications": "Bijgesneden, verkleind en omgezet naar WebP",
   "image": "/assets/species/plumage/sp164-flight.webp",
   "species": "sp164",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Common tern (Sterna hirundo) in flight Ramsviklandet 2.jpg",
@@ -4213,7 +4460,8 @@
   "modifications": "Bijgesneden, verkleind en omgezet naar WebP",
   "image": "/assets/species/plumage/sp165-flight.webp",
   "species": "sp165",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "iNaturalist photo 176460220",
@@ -4230,7 +4478,8 @@
   "modifications": "Bijgesneden en omgezet naar WebP",
   "image": "/assets/species/plumage/sp174-flight.webp",
   "species": "sp174",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Muscicapa striata - Spotted Flycatcher 05.jpg",
@@ -4247,7 +4496,8 @@
   "modifications": "Bijgesneden en omgezet naar WebP",
   "image": "/assets/species/plumage/sp176-flight.webp",
   "species": "sp176",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "iNaturalist photo 50225292",
@@ -4264,7 +4514,8 @@
   "modifications": "Bijgesneden en omgezet naar WebP",
   "image": "/assets/species/plumage/sp178-flight.webp",
   "species": "sp178",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "iNaturalist photo 735032492",
@@ -4281,7 +4532,8 @@
   "modifications": "Bijgesneden en omgezet naar WebP",
   "image": "/assets/species/plumage/sp177-flight.webp",
   "species": "sp177",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "iNaturalist photo 180206774",
@@ -4298,7 +4550,8 @@
   "modifications": "Bijgesneden en omgezet naar WebP",
   "image": "/assets/species/plumage/sp206-flight.webp",
   "species": "sp206",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Marsh Sandpiper (Tringa stagnatilis) (8079446361).jpg",
@@ -4315,7 +4568,8 @@
   "modifications": "Omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp217-flight.webp",
   "species": "sp217",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Mediterranean gull (Ichthyaetus melanocephalus) non breeding in flight Vadu.jpg",
@@ -4332,7 +4586,8 @@
   "modifications": "Bijgesneden en omgezet naar WebP",
   "image": "/assets/species/plumage/sp225-flight.webp",
   "species": "sp225",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Cattle Egret (Bubulcus ibis) -in flight.jpg",
@@ -4349,7 +4604,8 @@
   "modifications": "Omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp245-flight.webp",
   "species": "sp245",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "iNaturalist photo 562383062",
@@ -4366,7 +4622,8 @@
   "modifications": "Omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp282-flight.webp",
   "species": "sp282",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "iNaturalist photo 607642010",
@@ -4383,7 +4640,8 @@
   "modifications": "Bijgesneden en omgezet naar WebP",
   "image": "/assets/species/plumage/sp288-flight.webp",
   "species": "sp288",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "iNaturalist photo 291739391",
@@ -4400,7 +4658,8 @@
   "modifications": "Omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp005-male-rest.webp",
   "species": "sp005",
-  "flagged": true
+  "flagged": true,
+  "obsHint": "168347110"
  },
  {
   "file": "iNaturalist photo 112563579",
@@ -4417,7 +4676,8 @@
   "modifications": "Bijgesneden en omgezet naar WebP",
   "image": "/assets/species/plumage/sp005-male-flight.webp",
   "species": "sp005",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "69384883"
  },
  {
   "file": "iNaturalist photo 112563573",
@@ -4434,7 +4694,8 @@
   "modifications": "Bijgesneden en omgezet naar WebP",
   "image": "/assets/species/plumage/sp005-female-flight.webp",
   "species": "sp005",
-  "flagged": true
+  "flagged": true,
+  "obsHint": "69384882"
  },
  {
   "file": "iNaturalist photo 610450616",
@@ -4451,7 +4712,8 @@
   "modifications": "Bijgesneden en omgezet naar WebP",
   "image": "/assets/species/plumage/sp248-male-rest.webp",
   "species": "sp248",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "335975132"
  },
  {
   "file": "iNaturalist photo 728343078",
@@ -4468,7 +4730,8 @@
   "modifications": "Bijgesneden en omgezet naar WebP",
   "image": "/assets/species/plumage/sp249-male-rest.webp",
   "species": "sp249",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "397126880"
  },
  {
   "file": "iNaturalist photo 506883636",
@@ -4485,7 +4748,8 @@
   "modifications": "Omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp250-male-rest.webp",
   "species": "sp250",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "72514102"
  },
  {
   "file": "Montagu's Harrier Male (Circus pygargus) at Velavadar National Park, Gujarat, India DSCN7503 02.jpg",
@@ -4502,7 +4766,8 @@
   "modifications": "Bijgesneden en omgezet naar WebP",
   "image": "/assets/species/plumage/sp251-male-rest.webp",
   "species": "sp251",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "iNaturalist photo 349699219",
@@ -4519,7 +4784,8 @@
   "modifications": "Omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp253-male-rest.webp",
   "species": "sp253",
-  "flagged": true
+  "flagged": true,
+  "obsHint": "198409972"
  },
  {
   "file": "iNaturalist photo 30000101",
@@ -4536,7 +4802,8 @@
   "modifications": "Bijgesneden en omgezet naar WebP",
   "image": "/assets/species/plumage/sp253-male-flight.webp",
   "species": "sp253",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "19496287"
  },
  {
   "file": "2017.07.19.-05-Grosser Glubigsee-Wendisch Rietz--Rohrweihe-Weibchen.jpg",
@@ -4553,7 +4820,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp173-female-rest.webp",
   "species": "sp173",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Common chaffinch (Fringilla coelebs) female Drenthe.jpg",
@@ -4570,7 +4838,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp035-adult_f.webp",
   "species": "sp035",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "House sparrow 2022 04 22.jpg",
@@ -4587,7 +4856,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp043-adult_m.webp",
   "species": "sp043",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Juvenile great spotted woodpecker (52200334398).jpg",
@@ -4604,7 +4874,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp016-juv.webp",
   "species": "sp016",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Great spotted woodpecker (Dendrocopos major) male Drenthe.jpg",
@@ -4621,7 +4892,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/plumage/sp016-male.webp",
   "species": "sp016",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "A female blackbird.jpg",
@@ -4638,7 +4910,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp045-adult_f.webp",
   "species": "sp045",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Blackbird (36889364072).jpg",
@@ -4655,7 +4928,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp045-juv.webp",
   "species": "sp045",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Female Mallard Swimming.jpg",
@@ -4672,7 +4946,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp089-adult_f.webp",
   "species": "sp089",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Male eclipse Mallard on Lake Bled.jpg",
@@ -4689,7 +4964,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp089-eclipse.webp",
   "species": "sp089",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Female gadwall (52294387865).jpg",
@@ -4706,7 +4982,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp129-adult_f.webp",
   "species": "sp129",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Juvenile gadwall (Anas strepera) (34539448293).jpg",
@@ -4723,7 +5000,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder extra uitsnede",
   "image": "/assets/species/plumage/sp129-juv.webp",
   "species": "sp129",
-  "flagged": true
+  "flagged": true,
+  "obsHint": null
  },
  {
   "file": "Black-headed gull (winter plumage).JPG",
@@ -4740,7 +5018,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp097-winter.webp",
   "species": "sp097",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "2022-01-24 Ichthyaetus melanocephalus, Killingworth Lake, Northumberland 1.jpg",
@@ -4757,7 +5036,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp225-winter.webp",
   "species": "sp225",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Circus aeruginosus female Oulu Finland 2021-04-21.jpg",
@@ -4774,7 +5054,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp173-adult_f.webp",
   "species": "sp173",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "iNaturalist photo 229518401",
@@ -4791,7 +5072,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp173-juv.webp",
   "species": "sp173",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "134634395"
  },
  {
   "file": "Blauwe kiekendief fem.jpg",
@@ -4808,7 +5090,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp249-adult_f.webp",
   "species": "sp249",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Blauwe Kiekendief.jpg",
@@ -4825,7 +5108,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp249-juv.webp",
   "species": "sp249",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "iNaturalist photo 626654808",
@@ -4842,7 +5126,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp250-adult_f.webp",
   "species": "sp250",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "343960250"
  },
  {
   "file": "Лунь степовий Circus macrourus, на о. Джарилгач.jpg",
@@ -4859,7 +5144,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp250-juv.webp",
   "species": "sp250",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "A Montagu's Harrier Taking Flight (51621854680).jpg",
@@ -4876,7 +5162,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp251-adult_f.webp",
   "species": "sp251",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Circus pygargus juvenile flight.jpg",
@@ -4893,7 +5180,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp251-juv.webp",
   "species": "sp251",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Female Sparrowhawk (45968114392).jpg",
@@ -4910,7 +5198,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp006-adult_f.webp",
   "species": "sp006",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Female Juvenile Sparrowhawk (36519885205).jpg",
@@ -4927,7 +5216,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp006-juv.webp",
   "species": "sp006",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Juvenile northern goshawk (52310658114).jpg",
@@ -4944,7 +5234,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp007-juv.webp",
   "species": "sp007",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "iNaturalist photo 478065886",
@@ -4961,7 +5252,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp007-adult_f.webp",
   "species": "sp007",
-  "flagged": true
+  "flagged": true,
+  "obsHint": "266098077"
  },
  {
   "file": "iNaturalist photo 309645414",
@@ -4978,7 +5270,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp005-adult_m.webp",
   "species": "sp005",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "177992598"
  },
  {
   "file": "iNaturalist photo 147178882",
@@ -4995,7 +5288,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp005-juv.webp",
   "species": "sp005",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "89145381"
  },
  {
   "file": "iNaturalist photo 678848182",
@@ -5012,7 +5306,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp248-adult_f.webp",
   "species": "sp248",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "371545998"
  },
  {
   "file": "Juvenile honey buzzard (52499563661).jpg",
@@ -5029,7 +5324,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp248-juv.webp",
   "species": "sp248",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "iNaturalist photo 113794458",
@@ -5046,7 +5342,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp253-juv.webp",
   "species": "sp253",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "70044579"
  },
  {
   "file": "iNaturalist photo 364893145",
@@ -5063,7 +5360,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp082-breeding.webp",
   "species": "sp082",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "206314322"
  },
  {
   "file": "iNaturalist photo 172413835",
@@ -5080,7 +5378,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp082-winter.webp",
   "species": "sp082",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "103063658"
  },
  {
   "file": "iNaturalist photo 92502660",
@@ -5097,7 +5396,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp082-juv.webp",
   "species": "sp082",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "57964762"
  },
  {
   "file": "iNaturalist photo 243252269",
@@ -5114,7 +5414,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp083-breeding.webp",
   "species": "sp083",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "141931939"
  },
  {
   "file": "iNaturalist photo 388019872",
@@ -5131,7 +5432,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp083-juv.webp",
   "species": "sp083",
-  "flagged": true
+  "flagged": true,
+  "obsHint": "219231388"
  },
  {
   "file": "Cattle egret (Bubulcus ibis) summer plumage Cyprus.jpg",
@@ -5148,7 +5450,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp245-breeding.webp",
   "species": "sp245",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "iNaturalist photo 116157768",
@@ -5165,7 +5468,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp245-winter.webp",
   "species": "sp245",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "71350962"
  },
  {
   "file": "iNaturalist photo 113155242",
@@ -5182,7 +5486,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp245-juv.webp",
   "species": "sp245",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "69701226"
  },
  {
   "file": "Common Teal Male (8602525826).jpg",
@@ -5199,7 +5504,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp091-adult_m.webp",
   "species": "sp091",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Female Eurasian Teal (Anas crecca), Parc du Rouge Cloître, Brussels (13353864095).jpg",
@@ -5216,7 +5522,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp091-adult_f.webp",
   "species": "sp091",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "iNaturalist photo 169592753",
@@ -5233,7 +5540,8 @@
   "modifications": "Uitgesneden en omgezet naar WebP",
   "image": "/assets/species/plumage/sp091-juv.webp",
   "species": "sp091",
-  "flagged": true
+  "flagged": true,
+  "obsHint": "101542967"
  },
  {
   "file": "iNaturalist photo 76374524",
@@ -5250,7 +5558,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp091-eclipse.webp",
   "species": "sp091",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "48145191"
  },
  {
   "file": "Garganey 04f (3225295980).jpg",
@@ -5267,7 +5576,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp188-adult_f.webp",
   "species": "sp188",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Anas querquedula, Slottsskogen, Göteborg, Sweden 1.jpg",
@@ -5284,7 +5594,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp188-juv.webp",
   "species": "sp188",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Anas querquedula, Hong Kong 1.jpg",
@@ -5301,7 +5612,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp188-eclipse.webp",
   "species": "sp188",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "iNaturalist photo 460492953",
@@ -5318,7 +5630,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp146-winter.webp",
   "species": "sp146",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "256791018"
  },
  {
   "file": "iNaturalist photo 733881501",
@@ -5335,7 +5648,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp146-juv.webp",
   "species": "sp146",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "399972778"
  },
  {
   "file": "iNaturalist photo 94775001",
@@ -5352,7 +5666,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp147-winter.webp",
   "species": "sp147",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "59320005"
  },
  {
   "file": "iNaturalist photo 350059610",
@@ -5369,7 +5684,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp147-juv.webp",
   "species": "sp147",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "198592387"
  },
  {
   "file": "iNaturalist photo 268541114",
@@ -5386,7 +5702,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp206-adult_f.webp",
   "species": "sp206",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "155359487"
  },
  {
   "file": "iNaturalist photo 258130184",
@@ -5403,7 +5720,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp206-winter.webp",
   "species": "sp206",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "149773050"
  },
  {
   "file": "iNaturalist photo 565748384",
@@ -5420,7 +5738,8 @@
   "modifications": "Uitsnede rond de hele vogel en omgezet naar WebP",
   "image": "/assets/species/plumage/sp206-juv.webp",
   "species": "sp206",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "313289879"
  },
  {
   "file": "iNaturalist photo 602569884",
@@ -5437,7 +5756,8 @@
   "modifications": "Omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp144-winter.webp",
   "species": "sp144",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "332079128"
  },
  {
   "file": "iNaturalist photo 327282937",
@@ -5454,7 +5774,8 @@
   "modifications": "Omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp144-juv.webp",
   "species": "sp144",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "187179542"
  },
  {
   "file": "iNaturalist photo 189221283",
@@ -5471,7 +5792,8 @@
   "modifications": "Omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp145-winter.webp",
   "species": "sp145",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "112043037"
  },
  {
   "file": "iNaturalist photo 148325469",
@@ -5488,7 +5810,8 @@
   "modifications": "Omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp145-juv.webp",
   "species": "sp145",
-  "flagged": true
+  "flagged": true,
+  "obsHint": "89795942"
  },
  {
   "file": "iNaturalist photo 604589887",
@@ -5505,7 +5828,8 @@
   "modifications": "Omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp156-winter.webp",
   "species": "sp156",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "333061769"
  },
  {
   "file": "iNaturalist photo 556521052",
@@ -5522,7 +5846,8 @@
   "modifications": "Uitgesneden rond de vogel links en omgezet naar WebP",
   "image": "/assets/species/plumage/sp156-juv.webp",
   "species": "sp156",
-  "flagged": true
+  "flagged": true,
+  "obsHint": "308473713"
  },
  {
   "file": "iNaturalist photo 365421308",
@@ -5539,7 +5864,8 @@
   "modifications": "Omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp159-winter.webp",
   "species": "sp159",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "206638733"
  },
  {
   "file": "iNaturalist photo 555542627",
@@ -5556,7 +5882,8 @@
   "modifications": "Omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp159-juv.webp",
   "species": "sp159",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "307959225"
  },
  {
   "file": "iNaturalist photo 508406832",
@@ -5573,7 +5900,8 @@
   "modifications": "Omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp102-breeding.webp",
   "species": "sp102",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "282961325"
  },
  {
   "file": "iNaturalist photo 177943621",
@@ -5590,7 +5918,8 @@
   "modifications": "Uitgesneden rond de vogel en omgezet naar WebP",
   "image": "/assets/species/plumage/sp102-juv.webp",
   "species": "sp102",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "105980004"
  },
  {
   "file": "iNaturalist photo 617218276",
@@ -5607,7 +5936,8 @@
   "modifications": "Omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp155-winter.webp",
   "species": "sp155",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "339306085"
  },
  {
   "file": "iNaturalist photo 85106472",
@@ -5624,7 +5954,8 @@
   "modifications": "Uitgesneden rond de vogel en omgezet naar WebP",
   "image": "/assets/species/plumage/sp155-juv.webp",
   "species": "sp155",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "53481960"
  },
  {
   "file": "iNaturalist photo 603401014",
@@ -5641,7 +5972,8 @@
   "modifications": "Omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp157-winter.webp",
   "species": "sp157",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "332483167"
  },
  {
   "file": "iNaturalist photo 722959312",
@@ -5658,7 +5990,8 @@
   "modifications": "Omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp157-juv.webp",
   "species": "sp157",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "394358144"
  },
  {
   "file": "iNaturalist photo 475334386",
@@ -5675,7 +6008,8 @@
   "modifications": "Omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp158-winter.webp",
   "species": "sp158",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "264704796"
  },
  {
   "file": "iNaturalist photo 168627338",
@@ -5692,7 +6026,8 @@
   "modifications": "Uitgesneden rond de vogel en omgezet naar WebP",
   "image": "/assets/species/plumage/sp158-juv.webp",
   "species": "sp158",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "100997515"
  },
  {
   "file": "iNaturalist photo 246809118",
@@ -5709,7 +6044,8 @@
   "modifications": "Omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp217-winter.webp",
   "species": "sp217",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "143868114"
  },
  {
   "file": "iNaturalist photo 28427341",
@@ -5726,7 +6062,8 @@
   "modifications": "Uitgesneden rond de vogel en omgezet naar WebP",
   "image": "/assets/species/plumage/sp217-juv.webp",
   "species": "sp217",
-  "flagged": false
+  "flagged": false,
+  "obsHint": "18578496"
  },
  {
   "file": "Common kestrel female France.jpg",
@@ -5743,7 +6080,8 @@
   "modifications": "Verkleind tot maximaal 1600 px en omgezet naar WebP; geen extra uitsnede.",
   "image": "/assets/species/plumage/sp008-adult_f.webp",
   "species": "sp008",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Kestrel - Falco tinnunculus - Juvenile.jpg",
@@ -5760,7 +6098,8 @@
   "modifications": "Verkleind tot maximaal 1600 px en omgezet naar WebP; geen extra uitsnede.",
   "image": "/assets/species/plumage/sp008-juv.webp",
   "species": "sp008",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "PeregrineFalconperched.jpg",
@@ -5777,7 +6116,8 @@
   "modifications": "Verkleind tot maximaal 1600 px en omgezet naar WebP; geen extra uitsnede.",
   "image": "/assets/species/plumage/sp009-juv.webp",
   "species": "sp009",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Lesser-spotted woodpecker (Dryobates minor hortorum) female.jpg",
@@ -5794,7 +6134,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/plumage/sp017-female.webp",
   "species": "sp017",
-  "flagged": true
+  "flagged": true,
+  "obsHint": null
  },
  {
   "file": "2016.08.27.-15-Viernheimer Heide-Viernheim--Schwarzspecht-Weibchen.jpg",
@@ -5811,7 +6152,8 @@
   "modifications": "Commons-voorbeeld omgezet naar WebP; uitsnede behouden, 500 px breed",
   "image": "/assets/species/plumage/sp018-female-single.webp",
   "species": "sp018",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Picus viridis (juvenile).jpg",
@@ -5828,7 +6170,8 @@
   "modifications": "Resized to max 1600 px and converted to WebP; no crop",
   "image": "/assets/species/plumage/sp019-juv.webp",
   "species": "sp019",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Middle spotted woodpecker (Dendrocoptes medius medius) male.jpg",
@@ -5845,7 +6188,8 @@
   "modifications": "Commons-voorbeeld omgezet naar WebP; uitsnede behouden, 500 px breed",
   "image": "/assets/species/plumage/sp020-male.webp",
   "species": "sp020",
-  "flagged": true
+  "flagged": true,
+  "obsHint": null
  },
  {
   "file": "Blue tit - Juvenile - Cyanistes caeruleus (53079786093).jpg",
@@ -5862,7 +6206,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp030-juv2.webp",
   "species": "sp030",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Long-tailed tit (Aegithalos caudatus) juvenile 2.jpg",
@@ -5879,7 +6224,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp034-juv.webp",
   "species": "sp034",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Juvenile goldcrest.jpg",
@@ -5896,7 +6242,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp063-juv.webp",
   "species": "sp063",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Great crested grebe (Podiceps cristatus) juvenile France.jpg",
@@ -5913,7 +6260,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder extra uitsnede",
   "image": "/assets/species/plumage/sp077-juv.webp",
   "species": "sp077",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Eurasian coot (Fulica atra) juvenile.jpg",
@@ -5930,7 +6278,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder extra uitsnede",
   "image": "/assets/species/plumage/sp078-juv.webp",
   "species": "sp078",
-  "flagged": true
+  "flagged": true,
+  "obsHint": null
  },
  {
   "file": "Common Moorhen (Gallinula chloropus) juvenile.jpg",
@@ -5947,7 +6296,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder extra uitsnede",
   "image": "/assets/species/plumage/sp079-juv.webp",
   "species": "sp079",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Ardea cinerea juvenile v2.jpg",
@@ -5964,7 +6314,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder extra uitsnede",
   "image": "/assets/species/plumage/sp081-juv.webp",
   "species": "sp081",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Purple Heron (Immature) I IMG 8123.jpg",
@@ -5981,7 +6332,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder extra uitsnede",
   "image": "/assets/species/plumage/sp084-juv.webp",
   "species": "sp084",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Nycticorax nycticorax young.jpg",
@@ -5998,7 +6350,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder extra uitsnede",
   "image": "/assets/species/plumage/sp085-juv.webp",
   "species": "sp085",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Graugans-Jungtier-Schwalm-Nette-2013-01.jpg",
@@ -6015,7 +6368,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder extra uitsnede",
   "image": "/assets/species/plumage/sp086-juv.webp",
   "species": "sp086",
-  "flagged": true
+  "flagged": true,
+  "obsHint": null
  },
  {
   "file": "Northern Shoveler-Anas clypeata female.jpg",
@@ -6032,7 +6386,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder extra uitsnede",
   "image": "/assets/species/plumage/sp090-adult_f.webp",
   "species": "sp090",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Aythya fuligula (female).jpg",
@@ -6049,7 +6404,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder extra uitsnede",
   "image": "/assets/species/plumage/sp092-adult_f.webp",
   "species": "sp092",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "CygnusOlorJuvenile.jpg",
@@ -6066,7 +6422,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder extra uitsnede",
   "image": "/assets/species/plumage/sp126-juv.webp",
   "species": "sp126",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Brandgans Küken, Borkum.JPG",
@@ -6083,7 +6440,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder extra uitsnede",
   "image": "/assets/species/plumage/sp128-juv.webp",
   "species": "sp128",
-  "flagged": true
+  "flagged": true,
+  "obsHint": null
  },
  {
   "file": "Aythya ferina (female), Krasnodar, Russia.jpg",
@@ -6100,7 +6458,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder extra uitsnede",
   "image": "/assets/species/plumage/sp132-adult_f.webp",
   "species": "sp132",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Great cormorant immature.jpg",
@@ -6117,7 +6476,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder extra uitsnede",
   "image": "/assets/species/plumage/sp104-jaarling.webp",
   "species": "sp104",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Samice hvízdáka eurasijského na kameni.jpg",
@@ -6134,7 +6494,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp130-adult-f.webp",
   "species": "sp130",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Great black-backed gull (Larus marinus) 2026 02.jpg",
@@ -6151,7 +6512,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp164-adult.webp",
   "species": "sp164",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Motacilla cinerea, male.jpg",
@@ -6168,7 +6530,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp288-adult.webp",
   "species": "sp288",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Common swift 2024 04 21.jpg",
@@ -6185,7 +6548,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp141-adult.webp",
   "species": "sp141",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Common tern (Sterna hirundo).jpg",
@@ -6202,7 +6566,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp165-adult.webp",
   "species": "sp165",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Arctic tern (Sterna paradisaea) with eel Blonduos.jpg",
@@ -6219,7 +6584,8 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp166-adult.webp",
   "species": "sp166",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  },
  {
   "file": "Sandwich TernSterna sandvicensis.jpg",
@@ -6236,6 +6602,7 @@
   "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
   "image": "/assets/species/plumage/sp167-adult.webp",
   "species": "sp167",
-  "flagged": false
+  "flagged": false,
+  "obsHint": null
  }
 ]

@@ -6,7 +6,7 @@ geen vrouw/juveniel/gevangenschap/museum/in de hand/nest, wetenschappelijke naam
 Schrijft candidates.json en per soort een contactsheet met genummerde kandidaten. Beslist niets: keuze volgt na visuele controle.
 """
 from __future__ import annotations
-import html, io, json, re, sys, time, urllib.parse, urllib.request
+import html, io, json, re, sys, time, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageOps
 
@@ -14,7 +14,7 @@ HERE = Path(__file__).resolve().parent
 OUT = HERE / "out_heroes"; (OUT / "sheets").mkdir(parents=True, exist_ok=True)
 UA = {"User-Agent": "BirdspotLibrary-photo-review/1.0 (GitHub: saddamsmit-source/Birdspot-Library)"}
 OK_LIC = re.compile(r"^(CC0|Public domain|PD|CC BY(-SA)? [1-4]\.0)", re.I)
-BAD = re.compile(r"\b(female|femelle|weibchen|juvenile|juv|immature|young|chick|nest|egg|captive|captivity|zoo|tierpark|vogelpark|aviary|museum|specimen|taxidermy|mounted|stuffed|skin|in hand|ringing|ringed|beringung|rehab|rescue|dead|road ?kill|hybrid|leucistic|drawing|illustration|painting|stamp)\b", re.I)
+BAD = re.compile(r"\b(female|femelle|weibchen|juvenile|juv|immature|young|chick|nest|egg|captive|captivity|zoo|tierpark|vogelpark|aviary|museum|specimen|taxidermy|mounted|stuffed|skin|in hand|ringing|ringed|beringung|rehab|rescue|dead|road ?kill|hybrid|leucistic|drawing|illustration|painting|stamp|mosaic|fresco|nivosus|hondoensis|bengalensis)\b", re.I)
 MALE = re.compile(r"\b(male|mâle|männchen|mannetje|macho|maschio|drake|♂)\b", re.I)
 
 def get(url, binary=False):
@@ -22,9 +22,12 @@ def get(url, binary=False):
         try:
             with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=40) as r:
                 d = r.read(); return d if binary else json.loads(d)
+        except urllib.error.HTTPError as e:
+            if i == 3: raise
+            time.sleep(40 * (i + 1) if e.code == 429 else 4 + 3 * i)
         except Exception:  # noqa: BLE001
             if i == 3: raise
-            time.sleep(3 + 3 * i)
+            time.sleep(4 + 3 * i)
 
 def text(v):
     return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", html.unescape(str(v or "")))).strip()
@@ -85,9 +88,12 @@ def main():
     for sp in species:
         try:
             c = search(sp["latin"], used); res[sp["id"]] = c; sheet(sp["id"], sp["nl"], c)
-            print(sp["id"], len(c), flush=True)
+            print(sp["id"], len(c), flush=True); time.sleep(5)
         except Exception as e:  # noqa: BLE001
             res[sp["id"]] = {"error": str(e)[:200]}; print(sp["id"], "FOUT", e, flush=True)
+    prev = HERE / "heroes" / "candidates.json"
+    if prev.exists():
+        old = json.loads(prev.read_text()); old.update(res); res = old
     (OUT / "candidates.json").write_text(json.dumps(res, indent=1, ensure_ascii=False))
 
 if __name__ == "__main__":

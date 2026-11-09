@@ -70,15 +70,21 @@ def commons(items):
 
 def inat(it):
     pid = re.search(r"/photos/(\d+)", it["source"]).group(1)
-    page = get(f"https://www.inaturalist.org/photos/{pid}", binary=True).decode("utf-8", "replace")
-    ids = list(dict.fromkeys(re.findall(r"/observations/(\d+)", page)))
-    if not ids: raise RuntimeError(f"Geen observatie op fotopagina {pid}")
     obs = None
-    for oid in ids[:3]:
-        o = (get(f"https://api.inaturalist.org/v1/observations/{oid}").get("results") or [None])[0]
-        if o and any(str(p.get("id")) == pid for p in o.get("photos", [])): obs = o; break
+    if it.get("obsHint"):
+        o = (get(f"https://api.inaturalist.org/v1/observations/{it['obsHint']}").get("results") or [None])[0]
+        if o and any(str(p.get("id")) == pid for p in o.get("photos", [])): obs = o
         time.sleep(1)
-    if not obs: raise RuntimeError(f"Foto {pid} niet gevonden in observaties {ids[:3]}")
+    if not obs:
+        name = re.sub(r"[^\w .'-]", "", it.get("author") or "").strip()
+        users = get("https://api.inaturalist.org/v1/users/autocomplete?" + urllib.parse.urlencode({"q": name, "per_page": 5})).get("results", [])
+        for u in users[:3]:
+            time.sleep(1)
+            q = urllib.parse.urlencode({"user_id": u["id"], "taxon_name": it["latin"], "photos": "true", "per_page": 200})
+            for o in get("https://api.inaturalist.org/v1/observations?" + q).get("results", []):
+                if any(str(p.get("id")) == pid for p in o.get("photos", [])): obs = o; break
+            if obs: break
+    if not obs: raise RuntimeError(f"Foto {pid} niet te herleiden via iNaturalist-API")
     ph = next(p for p in obs["photos"] if str(p.get("id")) == pid)
     ann = [f"{a.get('controlled_attribute', {}).get('label')}: {a.get('controlled_value', {}).get('label')}" for a in obs.get("annotations", [])]
     url = re.sub(r"/square\.", "/large.", ph.get("url") or "")
