@@ -21,20 +21,34 @@ def fetch(url):
                 return r.read(60_000_001)
         except Exception:  # noqa: BLE001
             if i == 4: raise
-            time.sleep(10 * (i + 1))
+            time.sleep(30 * (i + 1))
 
 def main():
     items = json.loads(LIST.read_text())
-    report = []
+    rep_path = ROOT / "docs/evidence/verified_heroes_import_2026-11-09.json"
+    report = json.loads(rep_path.read_text()) if rep_path.exists() else []
+    done = {r["target"] for r in report if "sha1" in r}
+    report = [r for r in report if "sha1" in r]
     for it in items:
         out = ROOT / it["target"].lstrip("/")
-        if out.exists(): raise RuntimeError(f"Bestaat al: {out}")
+        if it["target"] in done and out.exists(): continue
+        try:
+            one(it, out, report)
+        except Exception as e:  # noqa: BLE001
+            report.append({"target": it["target"], "error": f"{type(e).__name__}: {e}"[:300]})
+        time.sleep(4)
+    rep_path.parent.mkdir(parents=True, exist_ok=True)
+    rep_path.write_text(json.dumps(report, indent=1))
+    print("geïmporteerd", sum("sha1" in r for r in report), "fouten", sum("error" in r for r in report))
+
+def one(it, out, report):
+        if out.exists(): raise RuntimeError(f"Bestaat al zonder rapport: {out}")
         data = fetch(it["original"])
         digest = hashlib.sha1(data).hexdigest()
         if digest != it["sha1"]: raise RuntimeError(f"SHA-1 wijkt af voor {it['title']}: {digest}")
         im = Image.open(io.BytesIO(data)); im.load()
-        if im.size != (it["width"], it["height"]): raise RuntimeError(f"Afmeting wijkt af voor {it['title']}: {im.size}")
-        im = ImageOps.exif_transpose(im).convert("RGB")
+        if sorted(im.size) != sorted((it["width"], it["height"])): raise RuntimeError(f"Afmeting wijkt af voor {it['title']}: {im.size}")
+        im = ImageOps.exif_transpose(im).convert("RGB"); im.info = {}
         im.thumbnail((1600, 1600), Image.LANCZOS)
         out.parent.mkdir(parents=True, exist_ok=True)
         im.save(out, "WEBP", quality=84, method=6)
@@ -43,10 +57,6 @@ def main():
             for k in ("exif", "xmp", "icc_profile"):
                 if k in chk.info: raise RuntimeError(f"Metadata niet verwijderd: {k}")
             report.append({"target": it["target"], "sha1": digest, "size": list(chk.size)})
-        time.sleep(2)
-    (ROOT / "docs/evidence").mkdir(parents=True, exist_ok=True)
-    (ROOT / "docs/evidence/verified_heroes_import_2026-11-09.json").write_text(json.dumps(report, indent=1))
-    print("geïmporteerd", len(report))
 
 if __name__ == "__main__":
     main()
