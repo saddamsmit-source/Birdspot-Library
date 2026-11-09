@@ -368,11 +368,14 @@ def main():
             print("H3-03 OK — zonder leefwijze:", ex["nameNL"], "· niet-broedvogel Rotgans zonder broedblok")
 
             def assert_photo_once(path):
-                photo = p.locator(f'.signature-species-detail-sheet [data-guide-image="{path}"] img')
+                # data-guide-image bevat sinds de subpad-fix een opgeloste absolute URL
+                # (assetUrl.js), geen ruw root-relatief pad meer — dus matchen op het
+                # einde van de attribuutwaarde ($=), niet op een exacte string.
+                photo = p.locator(f'.signature-species-detail-sheet [data-guide-image$="{path}"] img')
                 assert 1 <= photo.count() <= 2
                 if photo.count() == 2:
-                    expect(p.locator(f'.sd-hero-photo[data-guide-image="{path}"] img')).to_have_count(1)
-                    expect(p.locator(f'#sdPanel-herkenning [data-guide-image="{path}"] img')).to_have_count(1)
+                    expect(p.locator(f'.sd-hero-photo[data-guide-image$="{path}"] img')).to_have_count(1)
+                    expect(p.locator(f'#sdPanel-herkenning [data-guide-image$="{path}"] img')).to_have_count(1)
                 photo.first.scroll_into_view_if_needed()
                 photo.first.evaluate("img => img.decode()")
 
@@ -503,11 +506,13 @@ def main():
             assert_photo_once("/assets/species/sp097.webp")
             assert_photo_once("/assets/species/sp225.webp")
             winter = p.locator('.sd-plumage').filter(has_text="Winterkleed")
-            assert winter.locator('img').get_attribute("src") == "/assets/species/plumage/sp097-winter.webp"
+            # src is sinds de subpad-fix een opgeloste absolute URL (assetUrl.js), geen
+            # ruw root-relatief pad meer — vergelijk daarom op het einde van de waarde.
+            assert winter.locator('img').get_attribute("src").endswith("/assets/species/plumage/sp097-winter.webp")
             close_detail()
             open_species("Wilde Eend", "sp089")
             eclipse = p.locator('.sd-plumage').filter(has_text="Eclipskleed")
-            assert eclipse.locator('img').get_attribute("src") == "/assets/species/plumage/sp089-eclipse.webp"
+            assert eclipse.locator('img').get_attribute("src").endswith("/assets/species/plumage/sp089-eclipse.webp")
             close_detail()
             print("H4-02 OK — jonge specht (vergelijkingskaart), Kokmeeuw/Zwartkopmeeuw in broedkleed, Wilde Eend in eclipskleed")
 

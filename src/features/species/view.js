@@ -11,6 +11,7 @@ import { getDB, getPhotosBySpecies, getPhoto } from '../../data/db.js';
 import { getSightings, getSightingsSnapshot }                 from '../../data/sightings.js';
 import { loadPlaces }                   from '../../data/places.js';
 import { getPhotoUrl, revokePhotoUrl }  from '../../utils/photoUrl.js';
+import { assetUrl } from '../../utils/assetUrl.js';
 import { getCollectionIds, toggleCollectionItem } from '../../storage/collections.js';
 
 import { GUIDE_PHOTOS } from './guidePhotos.js';
@@ -154,7 +155,7 @@ function mountSpeciesThumb(container, url, ctx) {
   const release = () => { revokePhotoUrl(url); ctx?.urls?.delete(url); };
   img.addEventListener('load',release,{once:true});
   img.addEventListener('error',()=>{ release(); img.remove(); container.textContent='Foto niet beschikbaar'; },{once:true});
-  img.src = url;
+  img.src = assetUrl(url);
   container.replaceChildren(img);
 }
 
@@ -561,8 +562,8 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
       '<div class="sheet__content">' +
         '<div class="signature-species-detail-hero' + (guidePhoto ? ' has-guide-photo' : '') + '">' +
           '<div id="detailThumb-' + escHtml(s.id) + '" class="signature-species-detail-image">' +
-            (guidePhoto ? '<button type="button" class="sd-hero-photo" data-guide-image="' + escHtml(guidePhoto.image) + '" aria-label="Vergroot hoofdfoto">' +
-              '<img class="species-guide-photo" data-src="' + escHtml(guidePhoto.image) + '" alt="' + escHtml(guidePhoto.alt) + '"></button>' + photoInfoMarkup(guidePhoto) :
+            (guidePhoto ? '<button type="button" class="sd-hero-photo" data-guide-image="' + escHtml(assetUrl(guidePhoto.image)) + '" aria-label="Vergroot hoofdfoto">' +
+              '<img class="species-guide-photo" data-src="' + escHtml(assetUrl(guidePhoto.image)) + '" alt="' + escHtml(guidePhoto.alt) + '"></button>' + photoInfoMarkup(guidePhoto) :
               '<span aria-hidden="true">' + escHtml(s.icon) + '</span>') + '</div>' +
           '<div class="signature-species-detail-intro"><span class="signature-eyebrow">' + escHtml(s.family) + '</span>' +
             '<h2>' + escHtml(s.nameNL) + '</h2>' +

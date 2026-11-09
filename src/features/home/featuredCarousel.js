@@ -9,6 +9,7 @@ import { FEATURED_BIRDS, advance, loadPosition, savePosition } from './specialBi
 import { SPECIES, CATEGORY_BADGES } from '../../data/species.js';
 import { closePhotoInfo, photoInfoMarkup } from '../../utils/photoInfo.js';
 import { openPhotoViewer } from '../../utils/photoViewer.js';
+import { assetUrl } from '../../utils/assetUrl.js';
 
 const byId = new Map(SPECIES.map(s => [s.id, s]));
 const SAVE_EVERY_MS = 5_000;
@@ -61,9 +62,9 @@ export function initFeaturedCarousel(el, ctx) {
     speciesButton.querySelector('[data-featured-label]').textContent = hasSpeciesCard ? 'Bekijk soortkaart' : 'Open soortengids';
     stage.classList.remove('has-photo');
     photo.alt = bird.nl + (bird.pose === 'vlucht' ? ' in vlucht' : '');
-    photo.src = bird.image;
+    photo.src = assetUrl(bird.image);
     // hele foto in beeld (contain); dezelfde foto vervaagd als achtergrond vult de rest
-    stage.style.setProperty('--bird-bg', `url("${bird.image}")`);
+    stage.style.setProperty('--bird-bg', `url("${assetUrl(bird.image)}")`);
     if (group) group.textContent = bird.groupLabel;
     name.textContent = bird.nl;
     latin.textContent = bird.latin;
@@ -72,7 +73,7 @@ export function initFeaturedCarousel(el, ctx) {
     credit.innerHTML = photoInfoMarkup(bird);
     // volgende foto alvast laden, zodat de wissel direct is
     const next = FEATURED_BIRDS[(pos.index + 1) % FEATURED_BIRDS.length];
-    if (!motion.matches && !manuallyPaused && next && next !== bird) { const pre = new Image(); pre.src = next.image; }
+    if (!motion.matches && !manuallyPaused && next && next !== bird) { const pre = new Image(); pre.src = assetUrl(next.image); }
   }
 
   const detailsOpen = () => Boolean(closeViewer || stage.querySelector('details[open]'));

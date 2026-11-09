@@ -29,12 +29,14 @@ def main():
      row=p.locator(f'.species-row[data-id="{sid}"]');row.wait_for()
      if sid in photos:
       thumb=row.locator('.species-guide-thumb img')
-      assert thumb.get_attribute('src')==photo['image']
+      # src is sinds de subpad-fix een opgeloste absolute URL (assetUrl.js), geen
+      # ruw root-relatief pad meer — vergelijk daarom op het einde van de waarde.
+      assert thumb.get_attribute('src').endswith(photo['image'])
       assert thumb.evaluate('(i)=>getComputedStyle(i).objectFit')=='contain'
      row.click()
      hero=p.locator(f'#detailThumb-{sid} img')
      p.wait_for_function('(id)=>{const i=document.querySelector("#detailThumb-"+id+" img");return i&&i.complete&&i.naturalWidth>0}',arg=sid)
-     assert hero.get_attribute('src')==hero_paths.get(sid, photo['image']), (sid, hero.get_attribute('src'), photo['image'])
+     assert hero.get_attribute('src').endswith(hero_paths.get(sid, photo['image'])), (sid, hero.get_attribute('src'), photo['image'])
      assert hero.evaluate('(i)=>getComputedStyle(i).objectFit')=='contain'
      credit=p.locator(f'#detailThumb-{sid} .photo-info')
      assert credit.locator('summary').is_visible()

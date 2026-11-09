@@ -12,7 +12,7 @@
  *   birdspot-media           — foto's/IDB-exports (permanent)
  */
 
-const APP_VERSION = '1.19.19-scope-relative-paths';
+const APP_VERSION = '1.19.20-asset-url-subpath-fix';
 const APP_CACHE   = `birdspot-app-v${APP_VERSION}`;
 const MEDIA_CACHE = 'birdspot-media';
 
@@ -114,6 +114,7 @@ const PRECACHE_PATHS = [
   'src/utils/photoInfo.js',
   'src/utils/photoViewer.js',
   'src/utils/photoUrl.js',
+  'src/utils/assetUrl.js',
   'src/utils/validateMedia.js',
 ];
 const PRECACHE_URLS = PRECACHE_PATHS.map(atScope);

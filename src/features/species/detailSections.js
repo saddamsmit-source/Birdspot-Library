@@ -13,6 +13,7 @@ import { GUIDE_COMPARISONS, comparisonSource } from './guideComparisons.js';
 import { GUIDE_PHOTOS } from './guidePhotos.js';
 import { GUIDE_AUDIO, GUIDE_HEROES, GUIDE_PLUMAGE, GUIDE_POSES } from './guideMedia.js';
 import { photoInfoMarkup } from '../../utils/photoInfo.js';
+import { assetUrl } from '../../utils/assetUrl.js';
 
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
@@ -114,8 +115,8 @@ function mediaCredit(media) {
 }
 
 function fieldPhoto(photo) {
-  return `<div class="photo-info-frame"><button type="button" class="sd-field-photo" data-guide-image="${esc(photo.image)}" aria-label="Vergroot foto: ${esc(photo.alt)}">
-    <img src="${esc(photo.image)}" alt="${esc(photo.alt)}" loading="lazy">
+  return `<div class="photo-info-frame"><button type="button" class="sd-field-photo" data-guide-image="${esc(assetUrl(photo.image))}" aria-label="Vergroot foto: ${esc(photo.alt)}">
+    <img src="${esc(assetUrl(photo.image))}" alt="${esc(photo.alt)}" loading="lazy">
   </button>${photoInfoMarkup(photo)}</div>`;
 }
 
@@ -308,7 +309,7 @@ export function voicePanel(s, voice) {
   if (!voice && !clips.length) return '';
   const players = clips.map(clip => `<div class="sd-audio">
     <strong>${esc(clip.label)}</strong><p>${esc(clip.note)}</p>
-    <audio controls preload="none" src="${esc(clip.audio)}" aria-label="${esc(clip.label)} van ${esc(s.nameNL)}"></audio>
+    <audio controls preload="none" src="${esc(assetUrl(clip.audio))}" aria-label="${esc(clip.label)} van ${esc(s.nameNL)}"></audio>
     <p class="sd-audio-error" hidden role="status">Deze opname is nu niet beschikbaar.</p>
     ${mediaCredit(clip)}
   </div>`);
