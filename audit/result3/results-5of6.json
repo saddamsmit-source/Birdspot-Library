@@ -1,0 +1,614 @@
+[
+ {
+  "image": "/assets/species/sp156.webp",
+  "species": "sp156",
+  "latin": "Tringa ochropus",
+  "app": {
+   "author": "Daniel Benák",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/246109837",
+  "src": {
+   "title": "iNaturalist 143500119",
+   "observation": "https://www.inaturalist.org/observations/143500119",
+   "author": "(c) Daniel Benák, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Tringa ochropus",
+   "taxonCommon": "Green Sandpiper",
+   "qualityGrade": "research",
+   "annotations": [],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/246109837/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Tringa ochropus",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2677,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp156.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp009-male-flight.webp",
+  "species": "sp009",
+  "latin": "Falco peregrinus",
+  "app": {
+   "author": "Jonathan Tollin",
+   "license": "CC BY 4.0",
+   "sex": "male",
+   "age": null,
+   "flight": true,
+   "label": "Mannetje in vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/9819028",
+  "src": {
+   "title": "iNaturalist 7528897",
+   "observation": "https://www.inaturalist.org/observations/7528897",
+   "author": "(c) Jonathan Tollin, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Falco peregrinus",
+   "taxonCommon": "Peregrine Falcon",
+   "qualityGrade": "research",
+   "annotations": [
+    "Life Stage: Adult",
+    "Sex: Male"
+   ],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/9819028/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Falco peregrinus",
+  "sourceSex": [
+   "male"
+  ],
+  "sourceAge": [
+   "adult"
+  ],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 797,
+   "mirror": false,
+   "scale": 0.76,
+   "areaOfSource": 0.577
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp009-male-flight.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp061-flight.webp",
+  "species": "sp061",
+  "latin": "Curruca communis",
+  "app": {
+   "author": "Nigel Bentley",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/197056025",
+  "src": {
+   "title": "iNaturalist 116723329",
+   "observation": "https://www.inaturalist.org/observations/116723329",
+   "author": "(c) Nigel Bentley, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Curruca communis",
+   "taxonCommon": "Greater Whitethroat",
+   "qualityGrade": "research",
+   "annotations": [],
+   "description": "Whitethroat found singing away, perched up on a power cable line ... camera on, ready ... going for the shutter release just as the Whitethroat decided to up, up and away. By some miracle these two in-flight images resulted ... then just blue skies 😂",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/197056025/large.jpeg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Curruca communis",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 196,
+   "mirror": false,
+   "scale": 0.855,
+   "areaOfSource": 0.306
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp061-flight.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp174-flight.webp",
+  "species": "sp174",
+  "latin": "Periparus ater",
+  "app": {
+   "author": "euqirneto",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/176460220",
+  "src": {
+   "title": "iNaturalist 105201740",
+   "observation": "https://www.inaturalist.org/observations/105201740",
+   "author": "(c) euqirneto, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Periparus ater",
+   "taxonCommon": "Coal Tit",
+   "qualityGrade": "research",
+   "annotations": [
+    "None: None",
+    "None: None"
+   ],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/176460220/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Periparus ater",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 210,
+   "mirror": false,
+   "scale": 0.78,
+   "areaOfSource": 0.212
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp174-flight.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp005-male-rest.webp",
+  "species": "sp005",
+  "latin": "Buteo buteo",
+  "app": {
+   "author": "Gianluca Congi",
+   "license": "CC BY-SA 4.0",
+   "sex": "male",
+   "age": null,
+   "flight": false,
+   "label": "Mannetje in rust"
+  },
+  "source": "https://www.inaturalist.org/photos/291739391",
+  "src": {
+   "title": "iNaturalist 168347110",
+   "observation": "https://www.inaturalist.org/observations/168347110",
+   "author": "(c) Gianluca Congi🪶🦆🌲, some rights reserved (CC BY-SA)",
+   "license": "CC BY SA",
+   "taxon": "Buteo buteo",
+   "taxonCommon": "Common Buzzard",
+   "qualityGrade": "research",
+   "annotations": [
+    "Life Stage: Adult",
+    "Sex: Male",
+    "Alive or Dead: Alive",
+    "Evidence of Presence: Organism"
+   ],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/291739391/large.jpeg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Buteo buteo",
+  "sourceSex": [
+   "male"
+  ],
+  "sourceAge": [
+   "adult"
+  ],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2514,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp005-male-rest.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp253-male-rest.webp",
+  "species": "sp253",
+  "latin": "Buteo lagopus",
+  "app": {
+   "author": "Spencer Hurt",
+   "license": "CC BY 4.0",
+   "sex": "male",
+   "age": null,
+   "flight": false,
+   "label": "Mannetje in rust"
+  },
+  "source": "https://www.inaturalist.org/photos/349699219",
+  "src": {
+   "title": "iNaturalist 198409972",
+   "observation": "https://www.inaturalist.org/observations/198409972",
+   "author": "(c) Spencer Hurt, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Buteo lagopus",
+   "taxonCommon": "Rough-legged Hawk",
+   "qualityGrade": "research",
+   "annotations": [
+    "Sex: Male",
+    "Alive or Dead: Alive",
+    "Evidence of Presence: Organism"
+   ],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/349699219/large.jpeg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Buteo lagopus",
+  "sourceSex": [
+   "male"
+  ],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2557,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp253-male-rest.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp005-juv.webp",
+  "species": "sp005",
+  "latin": "Buteo buteo",
+  "app": {
+   "author": "rober025",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/147178882",
+  "src": {
+   "title": "iNaturalist 89145381",
+   "observation": "https://www.inaturalist.org/observations/89145381",
+   "author": "(c) rober025, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Buteo buteo",
+   "taxonCommon": "Common Buzzard",
+   "qualityGrade": "research",
+   "annotations": [
+    "Life Stage: Juvenile"
+   ],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/147178882/large.jpeg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Buteo buteo",
+  "sourceSex": [],
+  "sourceAge": [
+   "juvenile"
+  ],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 1936,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp005-juv.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp083-breeding.webp",
+  "species": "sp083",
+  "latin": "Ardea alba",
+  "app": {
+   "author": "Olivier Morel",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/243252269",
+  "src": {
+   "title": "iNaturalist 141931939",
+   "observation": "https://www.inaturalist.org/observations/141931939",
+   "author": "(c) Olivier Morel, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Ardea alba",
+   "taxonCommon": "Great Egret",
+   "qualityGrade": "research",
+   "annotations": [],
+   "description": "breeding adult",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/243252269/large.jpeg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Ardea alba",
+  "sourceSex": [],
+  "sourceAge": [
+   "adult"
+  ],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 1781,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp083-breeding.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp146-winter.webp",
+  "species": "sp146",
+  "latin": "Charadrius hiaticula",
+  "app": {
+   "author": "Paulo Caseirito",
+   "license": "CC0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/460492953",
+  "src": {
+   "title": "iNaturalist 256791018",
+   "observation": "https://www.inaturalist.org/observations/256791018",
+   "author": "no rights reserved",
+   "license": "CC0",
+   "taxon": "Charadrius hiaticula",
+   "taxonCommon": "Common Ringed Plover",
+   "qualityGrade": "research",
+   "annotations": [],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/460492953/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Charadrius hiaticula",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": false,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2812,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "maker wijkt af"
+  ],
+  "pair": "pairs/sp146-winter.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp206-juv.webp",
+  "species": "sp206",
+  "latin": "Charadrius alexandrinus",
+  "app": {
+   "author": "SteveM4560",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/565748384",
+  "src": {
+   "title": "iNaturalist 313289879",
+   "observation": "https://www.inaturalist.org/observations/313289879",
+   "author": "(c) SteveM4560, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Anarhynchus alexandrinus",
+   "taxonCommon": "Kentish Plover",
+   "qualityGrade": "research",
+   "annotations": [
+    "Life Stage: Juvenile",
+    "Alive or Dead: Alive",
+    "Evidence of Presence: Organism"
+   ],
+   "description": "With Rositsa Delcheva and Stefaniya Kamenova and students for Pro Bleu Project",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/565748384/large.jpg"
+  },
+  "speciesInSource": false,
+  "sourceTaxon": "Anarhynchus alexandrinus",
+  "sourceSex": [],
+  "sourceAge": [
+   "juvenile"
+  ],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 950,
+   "mirror": false,
+   "scale": 0.976,
+   "areaOfSource": 0.221
+  },
+  "sameShot": true,
+  "issues": [
+   "soort niet in bron",
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp206-juv.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp156-juv.webp",
+  "species": "sp156",
+  "latin": "Tringa ochropus",
+  "app": {
+   "author": "Dominic Best",
+   "license": "CC0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/556521052",
+  "src": {
+   "title": "iNaturalist 308473713",
+   "observation": "https://www.inaturalist.org/observations/308473713",
+   "author": "no rights reserved",
+   "license": "CC0",
+   "taxon": "Tringa ochropus",
+   "taxonCommon": "Green Sandpiper",
+   "qualityGrade": "research",
+   "annotations": [
+    "Life Stage: Juvenile"
+   ],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/556521052/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Tringa ochropus",
+  "sourceSex": [],
+  "sourceAge": [
+   "juvenile"
+  ],
+  "authorMatch": false,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 58,
+   "mirror": false,
+   "scale": 0.972,
+   "areaOfSource": 0.115
+  },
+  "sameShot": true,
+  "issues": [
+   "maker wijkt af"
+  ],
+  "pair": "pairs/sp156-juv.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp155-juv.webp",
+  "species": "sp155",
+  "latin": "Actitis hypoleucos",
+  "app": {
+   "author": "Дарья Орлова",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/85106472",
+  "src": {
+   "title": "iNaturalist 53481960",
+   "observation": "https://www.inaturalist.org/observations/53481960",
+   "author": "(c) Дарья Орлова, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Actitis hypoleucos",
+   "taxonCommon": "Common Sandpiper",
+   "qualityGrade": "research",
+   "annotations": [
+    "Life Stage: Juvenile",
+    "Alive or Dead: Alive"
+   ],
+   "description": "совсем небольшого размера, думаю, молодая особь, издавал одинаковые призывные крики",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/85106472/large.jpeg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Actitis hypoleucos",
+  "sourceSex": [],
+  "sourceAge": [
+   "juvenile"
+  ],
+  "authorMatch": false,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 1004,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 0.593
+  },
+  "sameShot": true,
+  "issues": [
+   "maker wijkt af",
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp155-juv.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp217-juv.webp",
+  "species": "sp217",
+  "latin": "Tringa stagnatilis",
+  "app": {
+   "author": "Вячеслав Юсупов",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/28427341",
+  "src": {
+   "title": "iNaturalist 18578496",
+   "observation": "https://www.inaturalist.org/observations/18578496",
+   "author": "(c) Вячеслав Юсупов, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Tringa stagnatilis",
+   "taxonCommon": "Marsh Sandpiper",
+   "qualityGrade": "research",
+   "annotations": [
+    "Life Stage: Juvenile"
+   ],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/28427341/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Tringa stagnatilis",
+  "sourceSex": [],
+  "sourceAge": [
+   "juvenile"
+  ],
+  "authorMatch": false,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 1317,
+   "mirror": false,
+   "scale": 0.976,
+   "areaOfSource": 0.502
+  },
+  "sameShot": true,
+  "issues": [
+   "maker wijkt af",
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp217-juv.jpg"
+ }
+]
