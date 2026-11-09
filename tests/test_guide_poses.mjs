@@ -53,6 +53,19 @@ for (const id of ['sp035', 'sp043', 'sp053', 'sp075', 'sp089', 'sp092', 'sp128']
     assert.ok(photosFor(id, role).length, `Missing photo for ${id}: ${role}`);
   }
 }
+assert.equal(GUIDE_PHOTOS.sp018.sex, 'male');
+assert.equal(GUIDE_PHOTOS.sp019.sex, 'male');
+assert.deepEqual(photosFor('sp018', 'adult_m'), ['/assets/showcase/sp018.webp']);
+assert.deepEqual(photosFor('sp019', 'adult_m'), ['/assets/species/sp019.webp']);
+assert.ok(photosFor('sp018', 'adult_f').length && !photosFor('sp018', 'juv').length,
+  'Juvenile Black Woodpecker stays open until a photograph is independently verified');
+assert.ok(photosFor('sp019', 'adult_f').length && photosFor('sp019', 'juv').length);
+for (const bird of SPECIES) {
+  for (const group of guidePlumageGroups(bird)) {
+    const keys = group.photos.map(photo => photo.image);
+    assert.equal(new Set(keys).size, keys.length, `Duplicate guide photo in ${bird.id} / ${group.key}`);
+  }
+}
 assert.equal(guideHeroPhoto('sp075').image, '/assets/species/plumage/sp075-male-review.webp');
 assert.ok(photosFor('sp050', 'juv').includes('/assets/species/plumage/sp050-juv-review.webp'));
 for (const id of ['sp008', 'sp009']) {

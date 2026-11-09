@@ -144,8 +144,12 @@ export function guidePlumageGroups(s) {
     const photos = poses.filter(photo => photoRole(photo) === key);
     if (main && photoRole(main) === key) photos.unshift(main);
     if (variant && (!shared || photoRole(variant) === key)) photos.unshift(variant);
+    // The same local image can be both the hero, a pose and a reused plumage photo.
+    // Keep only one copy within each gallery, without dropping distinct photos.
+    const uniquePhotos = photos.filter((photo, index) =>
+      photos.findIndex(other => other.image === photo.image) === index);
     const text = shared ? null : plumage[key];
-    return photos.length || text ? [{key, icon, title, text, badge, photos}] : [];
+    return uniquePhotos.length || text ? [{key, icon, title, text, badge, photos: uniquePhotos}] : [];
   });
   if (sharedAdult) {
     const variant = plumagePhoto(id, 'adult_m');

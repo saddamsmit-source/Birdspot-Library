@@ -36,3 +36,13 @@ Een tweede kandidaat voor juveniele Zwarte Specht is [Dryocopus martius 03.jpg](
 5. Geen productie- of Vercel-preview starten om één foto te bekijken.
 
 **Vervolg na deze preflight:** voltooi de drie soorten in afzonderlijke fotobatches zodra individuele beeldbron, licentie en bestandskwaliteit daadwerkelijk bevestigd zijn. Tot die tijd blijft de stand **25/134 compleet, 109/134 deels open**: dit vooronderzoek verandert geen dekkingsteller.
+
+## Uitgevoerde role-review (9 november 2026)
+
+**Nieuwe opvolgbranch:** `feat/guide-photo-review-02-verified-roles` boven op PR #112. De daadwerkelijke bestaande lokale WebP's voor Zwarte Specht en Groene Specht zijn visueel geopend. Het mannetjeskenmerk wordt onafhankelijk onderbouwd via Vogelbescherming; bij Groene Specht staat bovendien dezelfde Wikimedia-fotopagina onder `Picus viridis (male)`. `sex=male` is toegevoegd aan de bestaande foto-registratie, zonder nieuwe media of nieuwe Vercel-deployment. Bron- en licentievelden blijven behouden.
+
+**Nog open:** juveniel Zwarte Specht, juveniel Kleine Bonte Specht en andere ontbrekende rubrieken. Het eerder genoemde juveniele nestbeeld (Bouke ten Cate, CC BY 4.0) blijft kandidaat: niet lokaal verwerkt, niet door CI op beeldkwaliteit getest, nestlocatie strikt vertrouwelijk behandelen. Zie [gidsfoto-audit](GUIDE_EXISTING_PHOTO_AUDIT.md) voor gecontroleerde kenmerken, bronverwijzingen en bewijsgrenzen.
+
+### Definitieve dekkingscontrole (GitHub Actions, 9 november 2026)
+
+De geautomatiseerde `node tools/species/guide_coverage.mjs --summary` rapporteert op `3c984e47` nog **25/134** soorten met alle drie de rubrieken; dus **109/134** blijven deels open. De Groene Specht werd vóór deze review al meegeteld door het bestaande `adult_m.reuseGuidePhoto`-pad. Deze ronde bevestigt de sekse van dat reeds getoonde beeld, maar voegt geen nieuwe lokale foto toe en wijzigt de teller terecht niet. De controles van de foto- en geluidsassets, mediaregister, viewer en de op deze branch beschikbare browserproeven zijn via GitHub CI geslaagd.

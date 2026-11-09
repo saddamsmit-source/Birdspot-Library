@@ -602,12 +602,13 @@ export const GUIDE_PHOTOS = Object.freeze({
     "image": "/assets/species/sp019.webp",
     "batch": "garden-song-05",
     "modifications": "Resized to max 1600 px and converted to WebP; no crop",
-    "reviewed": "2026-11-06",
-    "verification": "Commons identity and license checked against visible field marks in Vogelbescherming.",
-    "visualCheck": "Volledige vogel op een berkenstam. Rode kruin, donkere oogtekening en groen verenkleed.",
+    "reviewed": "2026-11-09",
+    "verification": "Commons identity and license checked against visible field marks in Vogelbescherming. 9 november: exact lokaal GitHub-WebP gecontroleerd op rode baardstreep conform Vogelbescherming; originele Wikimedia Commons-foto staat in categorie Picus viridis (male).",
+    "visualCheck": "Volledige vogel op een berkenstam. Rode kruin, donkere oogtekening en groen verenkleed. Mannetje: duidelijk rode baardstreep, ook in de originele foto zichtbaar.",
     "alt": "Groene Specht — Volledige vogel op een berkenstam. Rode kruin, donkere oogtekening en groen verenkleed.",
     "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/groene-specht",
-    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "sex": "male"
   },
   "sp038": {
     "file": "Eurasian siskin (Spinus spinus) male Biebrzanski.jpg",
@@ -931,12 +932,13 @@ export const GUIDE_PHOTOS = Object.freeze({
     "image": "/assets/showcase/sp018.webp",
     "batch": "forest-06",
     "modifications": "Existing local showcase WebP; reused without further crop",
-    "reviewed": "2026-11-06",
-    "verification": "Commons identity and license checked against visible field marks in the cited species account.",
-    "visualCheck": "Volledige zwarte specht tegen een boomstam. Rode kruin en lange lichte snavel.",
+    "reviewed": "2026-11-09",
+    "verification": "Commons identity and license checked against visible field marks in the cited species account. 9 november: dezelfde GitHub-WebP geopend, volledige rode kruin bevestigd conform Vogelbescherming en Blasco-Zumeta/Heinze; oorspronkelijke foto en licentie onveranderd.",
+    "visualCheck": "Volledige zwarte specht tegen een boomstam. Rode kruin en lange lichte snavel. Mannetje: volledig rode kruin, direct op het opgeslagen WebP gecontroleerd; leeftijd niet onafhankelijk vastgesteld.",
     "alt": "Zwarte Specht — Volledige zwarte specht tegen een boomstam. Rode kruin en lange lichte snavel.",
     "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwarte-specht",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/"
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "sex": "male"
   },
   "sp020": {
     "file": "Middle-spotted woodpecker (Dendrocopos medius), Parc du Rouge-Cloître, Brussels (49179578882) (cropped).jpg",
