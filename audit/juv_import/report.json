@@ -1,0 +1,20 @@
+[
+ {
+  "target": "/assets/species/plumage/sp078-juv.webp",
+  "sha1": "f5522453133053691b4b821a106fe80c0bde1e10",
+  "size": [
+   1600,
+   1067
+  ],
+  "file": "sp078-juv.webp"
+ },
+ {
+  "target": "/assets/species/plumage/sp128-juv-grown.webp",
+  "sha1": "f40b827a4b71e097efe2bb807a4f517a63ef4e89",
+  "size": [
+   1600,
+   1067
+  ],
+  "file": "sp128-juv-grown.webp"
+ }
+]
