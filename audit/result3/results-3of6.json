@@ -1,0 +1,623 @@
+[
+ {
+  "image": "/assets/species/sp144.webp",
+  "species": "sp144",
+  "latin": "Pluvialis squatarola",
+  "app": {
+   "author": "William Stephens",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/66147127",
+  "src": {
+   "title": "iNaturalist 41697265",
+   "observation": "https://www.inaturalist.org/observations/41697265",
+   "author": "(c) William Stephens, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Pluvialis squatarola",
+   "taxonCommon": "Black-bellied Plover",
+   "qualityGrade": "research",
+   "annotations": [],
+   "description": "Grey Plover (Black-bellied Plover) female summer plumage",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/66147127/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Pluvialis squatarola",
+  "sourceSex": [
+   "female"
+  ],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2617,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp144.jpg"
+ },
+ {
+  "image": "/assets/species/sp158.webp",
+  "species": "sp158",
+  "latin": "Tringa nebularia",
+  "app": {
+   "author": "Pål A. Olsvik",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/198450766",
+  "src": {
+   "title": "iNaturalist 117502970",
+   "observation": "https://www.inaturalist.org/observations/117502970",
+   "author": "(c) Pål A. Olsvik, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Tringa nebularia",
+   "taxonCommon": "Common Greenshank",
+   "qualityGrade": "research",
+   "annotations": [],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/198450766/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Tringa nebularia",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2645,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp158.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp049-flight.webp",
+  "species": "sp049",
+  "latin": "Turdus viscivorus",
+  "app": {
+   "author": "Codrin Bucur",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/576073830",
+  "src": {
+   "title": "iNaturalist 318727779",
+   "observation": "https://www.inaturalist.org/observations/318727779",
+   "author": "(c) Codrin Bucur, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Turdus viscivorus",
+   "taxonCommon": "Mistle Thrush",
+   "qualityGrade": "research",
+   "annotations": [
+    "None: None",
+    "None: None",
+    "None: None"
+   ],
+   "description": "Unknown Thrush at Wacht Gempen - Oct 2023",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/576073830/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Turdus viscivorus",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 179,
+   "mirror": false,
+   "scale": 0.498,
+   "areaOfSource": 0.048
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp049-flight.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp118-flight.webp",
+  "species": "sp118",
+  "latin": "Emberiza schoeniclus",
+  "app": {
+   "author": "Codrin Bucur",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/241756520",
+  "src": {
+   "title": "iNaturalist 141157898",
+   "observation": "https://www.inaturalist.org/observations/141157898",
+   "author": "(c) Codrin Bucur, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Schoeniclus schoeniclus",
+   "taxonCommon": "Reed Bunting",
+   "qualityGrade": "research",
+   "annotations": [
+    "None: None",
+    "None: None",
+    "None: None"
+   ],
+   "description": "Unknown bird #1 flying at Florești Lake, Cluj - Nov 2022",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/241756520/large.jpg"
+  },
+  "speciesInSource": false,
+  "sourceTaxon": "Schoeniclus schoeniclus",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 350,
+   "mirror": false,
+   "scale": 0.968,
+   "areaOfSource": 0.344
+  },
+  "sameShot": true,
+  "issues": [
+   "soort niet in bron",
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp118-flight.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp282-flight.webp",
+  "species": "sp282",
+  "latin": "Pastor roseus",
+  "app": {
+   "author": "Kudaibergen Amirekul",
+   "license": "CC BY-SA 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/562383062",
+  "src": {
+   "title": "iNaturalist 311531949",
+   "observation": "https://www.inaturalist.org/observations/311531949",
+   "author": "(c) Kudaibergen Amirekul, some rights reserved (CC BY-SA)",
+   "license": "CC BY SA",
+   "taxon": "Pastor roseus",
+   "taxonCommon": "Rosy Starling",
+   "qualityGrade": "research",
+   "annotations": [],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/562383062/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Pastor roseus",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 1289,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp282-flight.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp249-male-rest.webp",
+  "species": "sp249",
+  "latin": "Circus cyaneus",
+  "app": {
+   "author": "Sofia Voynovskaya",
+   "license": "CC BY 4.0",
+   "sex": "male",
+   "age": null,
+   "flight": false,
+   "label": "Mannetje in rust"
+  },
+  "source": "https://www.inaturalist.org/photos/728343078",
+  "src": {
+   "title": "iNaturalist 397126880",
+   "observation": "https://www.inaturalist.org/observations/397126880",
+   "author": "(c) Sofia Voynovskaya, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Circus cyaneus",
+   "taxonCommon": "Hen Harrier",
+   "qualityGrade": "research",
+   "annotations": [
+    "Life Stage: Adult",
+    "Sex: Male"
+   ],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/728343078/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Circus cyaneus",
+  "sourceSex": [
+   "male"
+  ],
+  "sourceAge": [
+   "adult"
+  ],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 826,
+   "mirror": false,
+   "scale": 0.694,
+   "areaOfSource": 0.301
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp249-male-rest.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp007-adult_f.webp",
+  "species": "sp007",
+  "latin": "Accipiter gentilis",
+  "app": {
+   "author": "WATANABE Hitoshi 渡辺仁",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/478065886",
+  "src": {
+   "title": "iNaturalist 266098077",
+   "observation": "https://www.inaturalist.org/observations/266098077",
+   "author": "(c) WATANABE Hitoshi 渡辺仁, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Astur gentilis",
+   "taxonCommon": "Eurasian Goshawk",
+   "qualityGrade": "research",
+   "annotations": [
+    "Life Stage: Adult",
+    "Sex: Female"
+   ],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/478065886/large.jpeg"
+  },
+  "speciesInSource": false,
+  "sourceTaxon": "Astur gentilis",
+  "sourceSex": [
+   "female"
+  ],
+  "sourceAge": [
+   "adult"
+  ],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2618,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "soort niet in bron",
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp007-adult_f.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp082-winter.webp",
+  "species": "sp082",
+  "latin": "Egretta garzetta",
+  "app": {
+   "author": "Florin Feneru",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/172413835",
+  "src": {
+   "title": "iNaturalist 103063658",
+   "observation": "https://www.inaturalist.org/observations/103063658",
+   "author": "(c) Florin Feneru, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Egretta garzetta",
+   "taxonCommon": "Little Egret",
+   "qualityGrade": "research",
+   "annotations": [],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/172413835/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Egretta garzetta",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2722,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp082-winter.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp091-juv.webp",
+  "species": "sp091",
+  "latin": "Anas crecca",
+  "app": {
+   "author": "Se Lena",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/169592753",
+  "src": {
+   "title": "iNaturalist 101542967",
+   "observation": "https://www.inaturalist.org/observations/101542967",
+   "author": "(c) Se Lena, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Anas crecca crecca",
+   "taxonCommon": "Eurasian Teal",
+   "qualityGrade": "research",
+   "annotations": [
+    "Life Stage: Juvenile",
+    "Sex: Male",
+    "Alive or Dead: Alive",
+    "Evidence of Presence: Organism"
+   ],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/169592753/large.jpeg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Anas crecca crecca",
+  "sourceSex": [
+   "male"
+  ],
+  "sourceAge": [
+   "juvenile"
+  ],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 1321,
+   "mirror": false,
+   "scale": 0.976,
+   "areaOfSource": 0.225
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp091-juv.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp206-adult_f.webp",
+  "species": "sp206",
+  "latin": "Charadrius alexandrinus",
+  "app": {
+   "author": "Katerina Kalogerini",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/268541114",
+  "src": {
+   "title": "iNaturalist 155359487",
+   "observation": "https://www.inaturalist.org/observations/155359487",
+   "author": "(c) Katerina Kalogerini, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Anarhynchus alexandrinus",
+   "taxonCommon": "Kentish Plover",
+   "qualityGrade": "research",
+   "annotations": [
+    "Life Stage: Adult",
+    "Sex: Female",
+    "Alive or Dead: Alive",
+    "Evidence of Presence: Organism"
+   ],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/268541114/large.jpeg"
+  },
+  "speciesInSource": false,
+  "sourceTaxon": "Anarhynchus alexandrinus",
+  "sourceSex": [
+   "female"
+  ],
+  "sourceAge": [
+   "adult"
+  ],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2751,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "soort niet in bron",
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp206-adult_f.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp145-juv.webp",
+  "species": "sp145",
+  "latin": "Pluvialis apricaria",
+  "app": {
+   "author": "Eva Uzdilova",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/148325469",
+  "src": {
+   "title": "iNaturalist 89795942",
+   "observation": "https://www.inaturalist.org/observations/89795942",
+   "author": "(c) Eva Uzdilova, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Pluvialis apricaria",
+   "taxonCommon": "European Golden-Plover",
+   "qualityGrade": "research",
+   "annotations": [
+    "Life Stage: Juvenile",
+    "Sex: Cannot Be Determined",
+    "Alive or Dead: Alive",
+    "Evidence of Presence: Organism"
+   ],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/148325469/large.jpeg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Pluvialis apricaria",
+  "sourceSex": [],
+  "sourceAge": [
+   "juvenile"
+  ],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2632,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp145-juv.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp102-juv.webp",
+  "species": "sp102",
+  "latin": "Tringa totanus",
+  "app": {
+   "author": "Stefan Haag",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/177943621",
+  "src": {
+   "title": "iNaturalist 105980004",
+   "observation": "https://www.inaturalist.org/observations/105980004",
+   "author": "(c) Stefan Haag, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Tringa totanus",
+   "taxonCommon": "Common Redshank",
+   "qualityGrade": "research",
+   "annotations": [
+    "Life Stage: Juvenile"
+   ],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/177943621/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Tringa totanus",
+  "sourceSex": [],
+  "sourceAge": [
+   "juvenile"
+  ],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 1286,
+   "mirror": false,
+   "scale": 0.985,
+   "areaOfSource": 0.418
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp102-juv.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp158-juv.webp",
+  "species": "sp158",
+  "latin": "Tringa nebularia",
+  "app": {
+   "author": "Se Lena",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/168627338",
+  "src": {
+   "title": "iNaturalist 100997515",
+   "observation": "https://www.inaturalist.org/observations/100997515",
+   "author": "(c) Se Lena, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Tringa nebularia",
+   "taxonCommon": "Common Greenshank",
+   "qualityGrade": "research",
+   "annotations": [
+    "Life Stage: Juvenile",
+    "Alive or Dead: Alive",
+    "Evidence of Presence: Organism"
+   ],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/168627338/large.jpeg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Tringa nebularia",
+  "sourceSex": [],
+  "sourceAge": [
+   "juvenile"
+  ],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 1427,
+   "mirror": false,
+   "scale": 0.976,
+   "areaOfSource": 0.504
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp158-juv.jpg"
+ }
+]
