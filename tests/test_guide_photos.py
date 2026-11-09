@@ -41,8 +41,9 @@ def main():
      assert not credit.locator('.photo-info__panel').is_visible()
      if sid == 'sp045':
       credit.locator('summary').click()
-      assert credit.get_by_role('link', name='Open fotobron').get_attribute('href') == photo['source']
-      assert photo['author'] in credit.inner_text()
+      shown=by_path.get(hero_paths.get(sid), photo)  # sinds de bronaudit van 9-11 heeft sp045 een aparte hoofdfoto
+      assert credit.get_by_role('link', name='Open fotobron').get_attribute('href') == shown['source']
+      assert shown['author'] in credit.inner_text()
       p.keyboard.press('Escape')
       assert not credit.locator('.photo-info__panel').is_visible()
      if sid == 'sp173':
