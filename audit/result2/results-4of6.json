@@ -1,0 +1,311 @@
+[
+ {
+  "image": "/assets/showcase/sp018.webp",
+  "species": "sp018",
+  "latin": "Dryocopus martius",
+  "app": {
+   "author": "xulescu_g",
+   "license": "CC BY-SA 2.0",
+   "sex": "male",
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Dryocopus_martius,_Perersberg,_Brasov,_Romania_0_(cropped).jpg",
+  "src": {
+   "title": "File:Dryocopus martius, Perersberg, Brasov, Romania 0 (cropped).jpg",
+   "author": "xulescu_g",
+   "license": "CC BY-SA 2.0",
+   "description": "Black Woodpecker ( Dryocopus martius ), Lempeş hill near Sânpetru, Braşov County, Romania",
+   "objectName": "Dryocopus martius, Perersberg, Brasov, Romania 0 (cropped)",
+   "categories": [
+    "Bokeh photographs of birds",
+    "CC-BY-SA-2.0",
+    "Dealul Cetății - Lempeș",
+    "Dryocopus martius",
+    "Extracted images",
+    "Files with coordinates missing SDC location of creation",
+    "Photographs by xulescu g",
+    "Piciformes in Romania",
+    "Romania photographs taken on 2015-04-26"
+   ],
+   "width": 1817,
+   "height": 2400,
+   "sha1": "545977136e3d32c1f1fc04bd200126a9e039f657",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Dryocopus_martius%2C_Perersberg%2C_Brasov%2C_Romania_0_%28cropped%29.jpg/1280px-Dryocopus_martius%2C_Perersberg%2C_Brasov%2C_Romania_0_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2471,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "geslacht male niet in bron"
+  ],
+  "pair": "pairs/sp018.jpg"
+ },
+ {
+  "image": "/assets/showcase/sp108.webp",
+  "species": "sp108",
+  "latin": "Acrocephalus arundinaceus",
+  "app": {
+   "author": "Eugene Stolyarov",
+   "license": "CC BY-SA 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:%D0%9E%D1%87%D0%B5%D1%80%D0%B5%D1%82%D1%8F%D0%BD%D0%BA%D0%B0_%D0%B2%D0%B5%D0%BB%D0%B8%D0%BA%D0%B0_(%D0%B0%D0%BD%D0%B3%D0%BB._Great_Reed_Warbler;_%D0%BB%D0%B0%D1%82._Acrocephalus_arundinaceus).jpg",
+  "src": {
+   "title": "File:Очеретянка велика (англ. Great Reed Warbler; лат. Acrocephalus arundinaceus).jpg",
+   "author": "Eugene Stolyarov",
+   "license": "CC BY-SA 4.0",
+   "description": "« Партизанська Слава », Дарницький район",
+   "objectName": "Очеретянка велика (англ. Great Reed Warbler; лат. Acrocephalus arundinaceus)",
+   "categories": [
+    "Acrocephalus arundinaceus",
+    "Animals for WLE 2017 in Ukraine",
+    "Birds of Kyiv",
+    "CC-BY-SA-4.0",
+    "Files with coordinates missing SDC location of creation",
+    "Images from Wiki Loves Earth 2018",
+    "Images from Wiki Loves Earth 2018 in Ukraine",
+    "Images from Wiki Loves Earth missing SDC depicts",
+    "Images from Wiki Loves Earth missing SDC location of creation",
+    "Natural heritage sites in Ukraine with known IDs",
+    "Park of Partisan Glory, Kyiv",
+    "Quality images",
+    "Quality images from Wiki Loves Earth 2018 in Ukraine",
+    "Quality images missing SDC depicts",
+    "Quality images of Acrocephalidae",
+    "Quality images of Kyiv",
+    "Quality images of animals in Ukraine",
+    "Self-published work",
+    "Ukraine photographs taken on 2014-04-26",
+    "Uploaded via Campaign:wle-ua"
+   ],
+   "width": 3690,
+   "height": 2460,
+   "sha1": "c5ff95e4acd69da2543de7390874c1275b6eccae",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/%D0%9E%D1%87%D0%B5%D1%80%D0%B5%D1%82%D1%8F%D0%BD%D0%BA%D0%B0_%D0%B2%D0%B5%D0%BB%D0%B8%D0%BA%D0%B0_%28%D0%B0%D0%BD%D0%B3%D0%BB._Great_Reed_Warbler%3B_%D0%BB%D0%B0%D1%82._Acrocephalus_arundinaceus%29.jpg/1280px-%D0%9E%D1%87%D0%B5%D1%80%D0%B5%D1%82%D1%8F%D0%BD%D0%BA%D0%B0_%D0%B2%D0%B5%D0%BB%D0%B8%D0%BA%D0%B0_%28%D0%B0%D0%BD%D0%B3%D0%BB._Great_Reed_Warbler%3B_%D0%BB%D0%B0%D1%82._Acrocephalus_arundinaceus%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 1966,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.001
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/sp156.webp",
+  "species": "sp156",
+  "latin": "Tringa ochropus",
+  "app": {
+   "author": "Daniel Benák",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/246109837",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp009-male-flight.webp",
+  "species": "sp009",
+  "latin": "Falco peregrinus",
+  "app": {
+   "author": "Jonathan Tollin",
+   "license": "CC BY 4.0",
+   "sex": "male",
+   "age": null,
+   "flight": true,
+   "label": "Mannetje in vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/9819028",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp061-flight.webp",
+  "species": "sp061",
+  "latin": "Curruca communis",
+  "app": {
+   "author": "Nigel Bentley",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/197056025",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp174-flight.webp",
+  "species": "sp174",
+  "latin": "Periparus ater",
+  "app": {
+   "author": "euqirneto",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/176460220",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp005-male-rest.webp",
+  "species": "sp005",
+  "latin": "Buteo buteo",
+  "app": {
+   "author": "Gianluca Congi",
+   "license": "CC BY-SA 4.0",
+   "sex": "male",
+   "age": null,
+   "flight": false,
+   "label": "Mannetje in rust"
+  },
+  "source": "https://www.inaturalist.org/photos/291739391",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp253-male-rest.webp",
+  "species": "sp253",
+  "latin": "Buteo lagopus",
+  "app": {
+   "author": "Spencer Hurt",
+   "license": "CC BY 4.0",
+   "sex": "male",
+   "age": null,
+   "flight": false,
+   "label": "Mannetje in rust"
+  },
+  "source": "https://www.inaturalist.org/photos/349699219",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp005-juv.webp",
+  "species": "sp005",
+  "latin": "Buteo buteo",
+  "app": {
+   "author": "rober025",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/147178882",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp083-breeding.webp",
+  "species": "sp083",
+  "latin": "Ardea alba",
+  "app": {
+   "author": "Olivier Morel",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/243252269",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp146-winter.webp",
+  "species": "sp146",
+  "latin": "Charadrius hiaticula",
+  "app": {
+   "author": "Paulo Caseirito",
+   "license": "CC0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/460492953",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp206-juv.webp",
+  "species": "sp206",
+  "latin": "Charadrius alexandrinus",
+  "app": {
+   "author": "SteveM4560",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/565748384",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp156-juv.webp",
+  "species": "sp156",
+  "latin": "Tringa ochropus",
+  "app": {
+   "author": "Dominic Best",
+   "license": "CC0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/556521052",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp155-juv.webp",
+  "species": "sp155",
+  "latin": "Actitis hypoleucos",
+  "app": {
+   "author": "Дарья Орлова",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/85106472",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp217-juv.webp",
+  "species": "sp217",
+  "latin": "Tringa stagnatilis",
+  "app": {
+   "author": "Вячеслав Юсупов",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/28427341",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ }
+]
