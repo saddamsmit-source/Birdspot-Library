@@ -18,7 +18,9 @@ jobs:
         with:
           ref: 46e4337028d1fc818a6f189019f558f9a8ca891c
           path: app
-          sparse-checkout: assets/species
+          sparse-checkout: |
+            assets/species
+            assets/showcase
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install opencv-python-headless==4.10.0.84 pillow==10.4.0 numpy==1.26.4
@@ -27,9 +29,9 @@ jobs:
       - name: Resultaat terugschrijven
         if: always()
         run: |
-          mkdir -p audit/result/pairs && cp -r audit/out/* audit/result/ 2>/dev/null || true
+          mkdir -p audit/result2/pairs && cp -r audit/out/* audit/result2/ 2>/dev/null || true
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          git add audit/result
+          git add audit/result2
           git commit -m "bronaudit deel ${{ matrix.shard }}" || exit 0
           for i in 1 2 3 4 5 6; do git pull --rebase -q && git push && break; sleep $((RANDOM % 10 + 3)); done

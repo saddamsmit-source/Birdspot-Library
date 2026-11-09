@@ -70,21 +70,21 @@ def commons(items):
 
 def inat(it):
     pid = re.search(r"/photos/(\d+)", it["source"]).group(1)
+    page = get(f"https://www.inaturalist.org/photos/{pid}", binary=True).decode("utf-8", "replace")
+    ids = list(dict.fromkeys(re.findall(r"/observations/(\d+)", page)))
+    if not ids: raise RuntimeError(f"Geen observatie op fotopagina {pid}")
     obs = None
-    try:
-        r = get(f"https://api.inaturalist.org/v1/observations?photo_id={pid}&per_page=1")
-        obs = (r.get("results") or [None])[0]
-    except Exception:  # noqa: BLE001
-        obs = None
-    if not obs:
-        page = get(f"https://www.inaturalist.org/photos/{pid}.json") if False else None
-        raise RuntimeError(f"Geen observatie voor iNaturalist-foto {pid}")
-    ph = next((p for p in obs.get("photos", []) if str(p.get("id")) == pid), {})
+    for oid in ids[:3]:
+        o = (get(f"https://api.inaturalist.org/v1/observations/{oid}").get("results") or [None])[0]
+        if o and any(str(p.get("id")) == pid for p in o.get("photos", [])): obs = o; break
+        time.sleep(1)
+    if not obs: raise RuntimeError(f"Foto {pid} niet gevonden in observaties {ids[:3]}")
+    ph = next(p for p in obs["photos"] if str(p.get("id")) == pid)
     ann = [f"{a.get('controlled_attribute', {}).get('label')}: {a.get('controlled_value', {}).get('label')}" for a in obs.get("annotations", [])]
-    url = (ph.get("url") or "").replace("square", "large")
+    url = re.sub(r"/square\.", "/large.", ph.get("url") or "")
     time.sleep(1.2)
     return {"title": f"iNaturalist {obs.get('id')}", "observation": f"https://www.inaturalist.org/observations/{obs.get('id')}",
-            "author": text(ph.get("attribution")), "license": (ph.get("license_code") or "").upper(),
+            "author": text(ph.get("attribution")), "license": (ph.get("license_code") or "").upper().replace("CC-", "CC ").replace("-", " "),
             "taxon": (obs.get("taxon") or {}).get("name"), "taxonCommon": (obs.get("taxon") or {}).get("preferred_common_name"),
             "qualityGrade": obs.get("quality_grade"), "annotations": ann, "description": text(obs.get("description"))[:800],
             "thumb": url}
