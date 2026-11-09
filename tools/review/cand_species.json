@@ -1,0 +1,127 @@
+[
+{
+"id": "sp005",
+"nl": "Buizerd",
+"latin": "Buteo buteo"
+},
+{
+"id": "sp006",
+"nl": "Sperwer",
+"latin": "Accipiter nisus"
+},
+{
+"id": "sp007",
+"nl": "Havik",
+"latin": "Accipiter gentilis"
+},
+{
+"id": "sp008",
+"nl": "Torenvalk",
+"latin": "Falco tinnunculus"
+},
+{
+"id": "sp009",
+"nl": "Slechtvalk",
+"latin": "Falco peregrinus"
+},
+{
+"id": "sp016",
+"nl": "Grote Bonte Specht",
+"latin": "Dendrocopos major"
+},
+{
+"id": "sp018",
+"nl": "Zwarte Specht",
+"latin": "Dryocopus martius"
+},
+{
+"id": "sp019",
+"nl": "Groene Specht",
+"latin": "Picus viridis"
+},
+{
+"id": "sp035",
+"nl": "Vink",
+"latin": "Fringilla coelebs"
+},
+{
+"id": "sp043",
+"nl": "Huismus",
+"latin": "Passer domesticus"
+},
+{
+"id": "sp045",
+"nl": "Merel",
+"latin": "Turdus merula"
+},
+{
+"id": "sp053",
+"nl": "Roodborsttapuit",
+"latin": "Saxicola rubicola"
+},
+{
+"id": "sp075",
+"nl": "IJsvogel",
+"latin": "Alcedo atthis"
+},
+{
+"id": "sp091",
+"nl": "Wintertaling",
+"latin": "Anas crecca"
+},
+{
+"id": "sp092",
+"nl": "Kuifeend",
+"latin": "Aythya fuligula"
+},
+{
+"id": "sp128",
+"nl": "Bergeend",
+"latin": "Tadorna tadorna"
+},
+{
+"id": "sp129",
+"nl": "Krakeend",
+"latin": "Mareca strepera"
+},
+{
+"id": "sp173",
+"nl": "Bruine Kiekendief",
+"latin": "Circus aeruginosus"
+},
+{
+"id": "sp188",
+"nl": "Zomertaling",
+"latin": "Spatula querquedula"
+},
+{
+"id": "sp206",
+"nl": "Strandplevier",
+"latin": "Charadrius alexandrinus"
+},
+{
+"id": "sp248",
+"nl": "Wespendief",
+"latin": "Pernis apivorus"
+},
+{
+"id": "sp249",
+"nl": "Blauwe Kiekendief",
+"latin": "Circus cyaneus"
+},
+{
+"id": "sp250",
+"nl": "Steppekiekendief",
+"latin": "Circus macrourus"
+},
+{
+"id": "sp251",
+"nl": "Grauwe Kiekendief",
+"latin": "Circus pygargus"
+},
+{
+"id": "sp253",
+"nl": "Ruigpootbuizerd",
+"latin": "Buteo lagopus"
+}
+]

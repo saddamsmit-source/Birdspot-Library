@@ -1,7 +1,7 @@
 """Eenmalige broncontrole (alleen-lezen t.o.v. de app): haalt per gidsfoto de bronmetadata en het bronbeeld op,
 vergelijkt bronbeeld en app-beeld (zelfde opname, spiegeling) en maakt een zij-aan-zij-afbeelding.
 Uitvoer: tools/review/out/report.json en tools/review/out/img/*.jpg. Wijzigt geen appbestanden."""
-import json, re, sys, time, html, io, urllib.parse, urllib.request
+import json, re, sys, time, html, io, urllib.parse, urllib.request, urllib.error
 from pathlib import Path
 import numpy as np, cv2
 from PIL import Image, ImageDraw
@@ -15,8 +15,10 @@ def get(url, binary=False, tries=4):
         try:
             with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=40) as r:
                 b = r.read(); return b if binary else b.decode('utf-8', 'replace')
+        except urllib.error.HTTPError as e:
+            err = e; time.sleep(45 if e.code == 429 else 3 + 3 * i)
         except Exception as e:
-            err = e; time.sleep(2 + 3 * i)
+            err = e; time.sleep(3 + 3 * i)
     raise err
 
 def strip(s):
@@ -80,10 +82,12 @@ def compare(local_path, src_bytes, name, caption):
 
 def main():
     targets = json.loads((ROOT / 'tools/review/targets.json').read_text())
-    only = set(sys.argv[1:])
+    prev_path = OUT / 'report.json'
+    prev = {r['image']: r for r in json.loads(prev_path.read_text())} if prev_path.exists() else {}
     report = []
     for t in targets:
-        if only and t['image'] not in only: continue
+        if t['image'] in prev and 'error' not in prev[t['image']]:
+            report.append(prev[t['image']]); continue
         row = {'image': t['image'], 'app': t}
         try:
             meta = commons(t['source']) if 'commons.wikimedia.org' in t['source'] else inat(t['source'])
@@ -93,7 +97,7 @@ def main():
         except Exception as e:
             row['error'] = f'{type(e).__name__}: {e}'
         report.append(row); print(t['image'], 'ok' if 'error' not in row else row['error'], flush=True)
-        time.sleep(0.4)
+        time.sleep(2.5)
     (OUT / 'report.json').write_text(json.dumps(report, indent=1, ensure_ascii=False))
 
 if __name__ == '__main__':

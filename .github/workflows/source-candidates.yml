@@ -1,0 +1,24 @@
+name: Birdspot male candidates (eenmalig, scratch)
+on:
+  push:
+    branches: ['chore/source-check-*']
+    paths: ['tools/review/cand_species.json', 'tools/review/candidates.py', '.github/workflows/source-candidates.yml']
+permissions:
+  contents: write
+jobs:
+  cand:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: pip install pillow
+      - run: python tools/review/candidates.py
+      - name: Commit uitvoer naar deze scratch-branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898273+github-actions[bot]@users.noreply.github.com"
+          git add tools/review/cand
+          git commit -m "candidate sheets" || echo "niets te committen"
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
