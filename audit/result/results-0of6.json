@@ -1,0 +1,2938 @@
+[
+ {
+  "image": "/assets/species/sp029.webp",
+  "species": "sp029",
+  "latin": "Parus major",
+  "app": {
+   "author": "Rhododendrites",
+   "license": "CC BY-SA 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Great_tit_on_Djurgarden_(52306).jpg",
+  "src": {
+   "title": "File:Great tit on Djurgarden (52306).jpg",
+   "author": "Rhododendrites",
+   "license": "CC BY-SA 4.0",
+   "description": "Great tit on Djurgarden",
+   "objectName": "Great tit on Djurgarden (52306)",
+   "categories": [
+    "August 2019 in Sweden",
+    "CC-BY-SA-4.0",
+    "Djurgården in the 2010s",
+    "Files by Rhododendrites - 2019-08",
+    "Files uploaded by Rhododendrites (all)",
+    "Files with coordinates missing SDC location of creation",
+    "Parus major",
+    "Photographs taken by Rhododendrites - Djurgarden",
+    "Photographs taken by Rhododendrites - birds",
+    "Quality images",
+    "Quality images by Rhododendrites",
+    "Quality images of Parus major",
+    "Quality images of animals in Sweden",
+    "Quality images of birds by Rhododendrites",
+    "Self-published work"
+   ],
+   "width": 2276,
+   "height": 1912,
+   "sha1": "e640954b05fa0055bea16dfe1af3b4a02f50407b",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Great_tit_on_Djurgarden_%2852306%29.jpg/1280px-Great_tit_on_Djurgarden_%2852306%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2464,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/showcase/sp113.webp",
+  "species": "sp113",
+  "latin": "Oriolus oriolus",
+  "app": {
+   "author": "dog_funtom",
+   "license": "CC BY-SA 4.0",
+   "sex": "male",
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Oriolus_oriolus_from_behind_looking_right.jpg",
+  "src": {
+   "title": "File:Oriolus oriolus from behind looking right.jpg",
+   "author": "dog_funtom",
+   "license": "CC BY-SA 4.0",
+   "description": "Oriolus oriolus is sitting on a branch, looking to its right",
+   "objectName": "Oriolus oriolus from behind looking right",
+   "categories": [
+    "CC-BY-SA-4.0",
+    "Files with coordinates missing SDC location of creation",
+    "Oriolus oriolus",
+    "Self-published work"
+   ],
+   "width": 5152,
+   "height": 3864,
+   "sha1": "a0a6fd58d94fccf954c2573a94f47f72655b0f62",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Oriolus_oriolus_from_behind_looking_right.jpg/1280px-Oriolus_oriolus_from_behind_looking_right.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "error": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Birdspot-Library/Birdspot-Library/app/assets/showcase/sp113.webp'"
+ },
+ {
+  "image": "/assets/species/sp054.webp",
+  "species": "sp054",
+  "latin": "Prunella modularis",
+  "app": {
+   "author": "Hobbyfotowiki",
+   "license": "CC0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:The_dunnock_(Prunella_modularis).jpg",
+  "src": {
+   "title": "File:The dunnock (Prunella modularis).jpg",
+   "author": "Hobbyfotowiki Camera location 51° 10′ 43.32″ N, 7° 00′ 23.65″ E View this and other nearby images on: OpenStreetMap 51.178700; 7.006570",
+   "license": "CC0",
+   "description": "Prunella modularis, photographed in Haan, Germany in March, 2021",
+   "objectName": "The dunnock (Prunella modularis)",
+   "categories": [
+    "Animals with Rubus",
+    "Birds on branches",
+    "CC-Zero",
+    "Featured pictures on Wikimedia Commons",
+    "Files with coordinates missing SDC location of creation (51° N, 7° E)",
+    "Nature of Haan",
+    "Passeriformes in North Rhine-Westphalia",
+    "Prunella modularis in Germany",
+    "Quality images",
+    "Quality images of Prunella modularis",
+    "Self-published work"
+   ],
+   "width": 2477,
+   "height": 1647,
+   "sha1": "0228e774c78e1e78e40b64fd65188e9f5973259d",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/The_dunnock_%28Prunella_modularis%29.jpg/1280px-The_dunnock_%28Prunella_modularis%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2210,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 0.999
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/sp044.webp",
+  "species": "sp044",
+  "latin": "Passer montanus",
+  "app": {
+   "author": "Jakub Hałun",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Eurasian_tree_sparrow,_R%C5%BCuch%C3%B3w,_%C5%9Awi%C4%99tokrzyskie_Voivodeship,_20250421_1151_4165.jpg",
+  "src": {
+   "title": "File:Eurasian tree sparrow, Rżuchów, Świętokrzyskie Voivodeship, 20250421 1151 4165.jpg",
+   "author": "Jakub Hałun",
+   "license": "CC BY 4.0",
+   "description": "Eurasian tree sparrow, Rżuchów, Świętokrzyskie Voivodeship",
+   "objectName": "Eurasian tree sparrow, Rżuchów, Świętokrzyskie Voivodeship, 20250421 1151 4165",
+   "categories": [
+    "Birds of Świętokrzyskie Voivodeship",
+    "CC-BY-4.0",
+    "Files with coordinates missing SDC location of creation",
+    "Passer montanus in Poland",
+    "Quality images",
+    "Quality images by Jakub Hałun",
+    "Quality images of Passer montanus",
+    "Quality images of birds in Poland",
+    "Self-published work"
+   ],
+   "width": 3180,
+   "height": 2116,
+   "sha1": "e0cc7b79b985796d5a81c64030cb965ee3a5774f",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Eurasian_tree_sparrow%2C_R%C5%BCuch%C3%B3w%2C_%C5%9Awi%C4%99tokrzyskie_Voivodeship%2C_20250421_1151_4165.jpg/1280px-Eurasian_tree_sparrow%2C_R%C5%BCuch%C3%B3w%2C_%C5%9Awi%C4%99tokrzyskie_Voivodeship%2C_20250421_1151_4165.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2281,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 0.999
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/sp022.webp",
+  "species": "sp022",
+  "latin": "Corvus corone",
+  "app": {
+   "author": "Alexis Lours",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Carrion_crow_perched_on_a_branch_01.jpg",
+  "src": {
+   "title": "File:Carrion crow perched on a branch 01.jpg",
+   "author": "Alexis Lours",
+   "license": "CC BY 4.0",
+   "description": "Carrion crow ( Corvus corone ) perched on a branch in Gennevilliers, France.",
+   "objectName": "Carrion crow perched on a branch 01",
+   "categories": [
+    "Birds of Parc des Chanteraines",
+    "CC-BY-4.0",
+    "Corvus corone in Hauts-de-Seine",
+    "Photos by Alexis Lours",
+    "Photos of Corvus corone by Alexis Lours",
+    "QI photos by Alexis Lours",
+    "Quality images",
+    "Quality images of Corvus corone",
+    "Quality images of Hauts-de-Seine",
+    "Quality images of birds in France",
+    "Self-published work",
+    "Île-de-France photographs taken on 2022-03-23"
+   ],
+   "width": 5071,
+   "height": 3294,
+   "sha1": "d0c3345107b6db8214b03a7849df912f6f00a672",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Carrion_crow_perched_on_a_branch_01.jpg/1280px-Carrion_crow_perched_on_a_branch_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2478,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/sp057.webp",
+  "species": "sp057",
+  "latin": "Phylloscopus trochilus",
+  "app": {
+   "author": "Andreas Trepte",
+   "license": "CC BY-SA 2.5",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Willow_Warbler_Phylloscopus_trochilus.jpg",
+  "src": {
+   "title": "File:Willow Warbler Phylloscopus trochilus.jpg",
+   "author": "Andreas Trepte",
+   "license": "CC BY-SA 2.5",
+   "description": "Willow Warbler",
+   "objectName": "Willow Warbler Phylloscopus trochilus",
+   "categories": [
+    "Andreas Trepte",
+    "CC-BY-SA-2.5",
+    "Phylloscopus trochilus",
+    "Taken with Canon EOS-1D Mark IV"
+   ],
+   "width": 2151,
+   "height": 2151,
+   "sha1": "2a3de3e6a26a56dbfd573de249046fa834f5781b",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Willow_Warbler_Phylloscopus_trochilus.jpg/1280px-Willow_Warbler_Phylloscopus_trochilus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2394,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/sp047.webp",
+  "species": "sp047",
+  "latin": "Turdus pilaris",
+  "app": {
+   "author": "Frankie Fouganthin",
+   "license": "CC BY-SA 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Bj%C3%B6rktrast_(Turdus_pilaris)-4.jpg",
+  "src": {
+   "title": "File:Björktrast (Turdus pilaris)-4.jpg",
+   "author": "Frankie Fouganthin",
+   "license": "CC BY-SA 4.0",
+   "description": "Fieldfare (Turdus pilaris) in Serafimerparken in Stockholm on april 8, 2015.",
+   "objectName": "Björktrast (Turdus pilaris)-4",
+   "categories": [
+    "Birds of Stockholm",
+    "CC-BY-SA-4.0",
+    "Photographs by Frankie Fouganthin",
+    "Self-published work",
+    "Serafimerparken",
+    "Turdus pilaris in Sweden"
+   ],
+   "width": 2077,
+   "height": 1798,
+   "sha1": "c616f7d91106a4d970b894e935f8114dd0d8e090",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Bj%C3%B6rktrast_%28Turdus_pilaris%29-4.jpg/1280px-Bj%C3%B6rktrast_%28Turdus_pilaris%29-4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2412,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/sp110.webp",
+  "species": "sp110",
+  "latin": "Acrocephalus schoenobaenus",
+  "app": {
+   "author": "Charles J. Sharp",
+   "license": "CC BY-SA 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Sedge_warbler_(Acrocephalus_schoenobaenus)_2.jpg",
+  "src": {
+   "title": "File:Sedge warbler (Acrocephalus schoenobaenus) 2.jpg",
+   "author": "Charles J. Sharp",
+   "license": "CC BY-SA 4.0",
+   "description": "Sedge warbler ( Acrocephalus schoenobaenus ), Otmoor RSPB Reserve, Oxfordshire",
+   "objectName": "Sedge warbler (Acrocephalus schoenobaenus) 2",
+   "categories": [
+    "Acrocephalus schoenobaenus in England",
+    "Birds of Oxfordshire",
+    "CC-BY-SA-4.0",
+    "Files with coordinates missing SDC location of creation (51° N, 2° W)",
+    "Photographs by Charlesjsharp",
+    "Quality images",
+    "Quality images by Charlesjsharp",
+    "Quality images missing SDC creator",
+    "Quality images missing SDC depicts",
+    "Quality images of Acrocephalus schoenobaenus",
+    "Quality images of Oxfordshire",
+    "Quality images of Passeriformes by Charlesjsharp",
+    "Quality images of birds by Charlesjsharp",
+    "Quality images of birds in the United Kingdom",
+    "Self-published work",
+    "United Kingdom photographs taken on 2017-06-14"
+   ],
+   "width": 2394,
+   "height": 1596,
+   "sha1": "dad9ac39268578b18db30190b6c51682fb43351f",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Sedge_warbler_%28Acrocephalus_schoenobaenus%29_2.jpg/1280px-Sedge_warbler_%28Acrocephalus_schoenobaenus%29_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2309,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.001
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/showcase/sp018.webp",
+  "species": "sp018",
+  "latin": "Dryocopus martius",
+  "app": {
+   "author": "xulescu_g",
+   "license": "CC BY-SA 2.0",
+   "sex": "male",
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Dryocopus_martius,_Perersberg,_Brasov,_Romania_0_(cropped).jpg",
+  "src": {
+   "title": "File:Dryocopus martius, Perersberg, Brasov, Romania 0 (cropped).jpg",
+   "author": "xulescu_g",
+   "license": "CC BY-SA 2.0",
+   "description": "Black Woodpecker ( Dryocopus martius ), Lempeş hill near Sânpetru, Braşov County, Romania",
+   "objectName": "Dryocopus martius, Perersberg, Brasov, Romania 0 (cropped)",
+   "categories": [
+    "Bokeh photographs of birds",
+    "CC-BY-SA-2.0",
+    "Dealul Cetății - Lempeș",
+    "Dryocopus martius",
+    "Extracted images",
+    "Files with coordinates missing SDC location of creation",
+    "Photographs by xulescu g",
+    "Piciformes in Romania",
+    "Romania photographs taken on 2015-04-26"
+   ],
+   "width": 1817,
+   "height": 2400,
+   "sha1": "545977136e3d32c1f1fc04bd200126a9e039f657",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Dryocopus_martius%2C_Perersberg%2C_Brasov%2C_Romania_0_%28cropped%29.jpg/1280px-Dryocopus_martius%2C_Perersberg%2C_Brasov%2C_Romania_0_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "error": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Birdspot-Library/Birdspot-Library/app/assets/showcase/sp018.webp'"
+ },
+ {
+  "image": "/assets/species/sp063.webp",
+  "species": "sp063",
+  "latin": "Regulus regulus",
+  "app": {
+   "author": "Alexis Lours",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Goldcrest_2025_11_21_05.jpg",
+  "src": {
+   "title": "File:Goldcrest 2025 11 21 05.jpg",
+   "author": "Alexis Lours",
+   "license": "CC BY 4.0",
+   "description": "A goldcrest (Regulus regulus).",
+   "objectName": "Goldcrest 2025 11 21 05",
+   "categories": [
+    "CC-BY-4.0",
+    "Featured photos by Alexis Lours",
+    "Featured pictures of Seine-et-Marne",
+    "Featured pictures on Wikimedia Commons",
+    "Files with coordinates missing SDC location of creation (48° N, 2° E)",
+    "Photos by Alexis Lours",
+    "QI photos by Alexis Lours",
+    "Quality images",
+    "Quality images missing SDC creator",
+    "Quality images missing SDC source of file",
+    "Quality images of Seine-et-Marne",
+    "Quality images with different SDC Commons quality assessment",
+    "Regulus regulus",
+    "Regulus regulus in Val-de-Marne",
+    "Self-published work",
+    "Île-de-France photographs taken on 2025-11-21"
+   ],
+   "width": 4710,
+   "height": 3140,
+   "sha1": "e18e008fb8e988fe0a16876297348c434e49828c",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Goldcrest_2025_11_21_05.jpg/1280px-Goldcrest_2025_11_21_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2174,
+   "mirror": false,
+   "scale": 0.999,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/sp177.webp",
+  "species": "sp177",
+  "latin": "Ficedula hypoleuca",
+  "app": {
+   "author": "Ron Knight from Seaford, East Sussex, United Kingdom",
+   "license": "CC BY 2.0",
+   "sex": "male",
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Ficedula_hypoleuca_Sussex_1.jpg",
+  "src": {
+   "title": "File:Ficedula hypoleuca Sussex 1.jpg",
+   "author": "Ron Knight from Seaford, East Sussex, United Kingdom",
+   "license": "CC BY 2.0",
+   "description": "Pied Flycatcher Ficedula hypoleuca , first-summer male; newly arrived at Harry's Bush, Cuckmere Haven, Sussex, UK.",
+   "objectName": "Ficedula hypoleuca Sussex 1",
+   "categories": [
+    "CC-BY-2.0",
+    "Ficedula hypoleuca",
+    "Files with coordinates missing SDC location of creation (50° N, 0° E)",
+    "Flickr images reviewed by FlickreviewR",
+    "Photographs by Ron Knight",
+    "Taken with Canon EOS 7D"
+   ],
+   "width": 4838,
+   "height": 3456,
+   "sha1": "e5322c75e4bce5ff17c3332dd2e1f3836c4dd2e7",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Ficedula_hypoleuca_Sussex_1.jpg/1280px-Ficedula_hypoleuca_Sussex_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [
+   "male"
+  ],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2339,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 0.999
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/sp081.webp",
+  "species": "sp081",
+  "latin": "Ardea cinerea",
+  "app": {
+   "author": "Dinkum",
+   "license": "CC0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Ardea_cinerea_in_flight.jpg",
+  "src": {
+   "title": "File:Ardea cinerea in flight.jpg",
+   "author": "Dinkum",
+   "license": "CC0",
+   "description": "Grey heron flying in London",
+   "objectName": "Ardea cinerea in flight",
+   "categories": [
+    "Ardea cinerea in London",
+    "Ardea cinerea in flight",
+    "CC-Zero",
+    "Featured photographs in the public domain",
+    "Featured pictures of Ardea cinerea",
+    "Featured pictures of animals in London",
+    "Featured pictures of birds in flight",
+    "Featured pictures on Wikimedia Commons",
+    "Quality images",
+    "Quality images of Ardea cinerea",
+    "Quality images of birds in the United Kingdom",
+    "Self-published work",
+    "Taken with Pentax K-30"
+   ],
+   "width": 3977,
+   "height": 2142,
+   "sha1": "145a7e542f20e8e66e197a2c826c9f4575d4387c",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Ardea_cinerea_in_flight.jpg/1280px-Ardea_cinerea_in_flight.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2009,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.001
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/sp092.webp",
+  "species": "sp092",
+  "latin": "Aythya fuligula",
+  "app": {
+   "author": "Dr. Raju Kasambe",
+   "license": "CC BY-SA 4.0",
+   "sex": "male",
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Tufted_Duck_Aythya_fuligula_Male_by_Dr._Raju_Kasambe_DSCN9795_(17).jpg",
+  "src": {
+   "title": "File:Tufted Duck Aythya fuligula Male by Dr. Raju Kasambe DSCN9795 (17).jpg",
+   "author": "Dr. Raju Kasambe",
+   "license": "CC BY-SA 4.0",
+   "description": "Tufted Duck Aythya fuligula Male. Photographed by Dr. Raju Kasambe at Lakhota Lake, Jamnagar, Gujarat, India.",
+   "objectName": "Tufted Duck Aythya fuligula Male by Dr. Raju Kasambe DSCN9795 (17)",
+   "categories": [
+    "Aythya fuligula (male)",
+    "Aythya fuligula in India",
+    "Birds in Lakhota Lake Jamnagar",
+    "CC-BY-SA-4.0",
+    "Files with coordinates missing SDC location of creation",
+    "Self-published work"
+   ],
+   "width": 3328,
+   "height": 2110,
+   "sha1": "a6109d26cd703dfaf1e5229e0d8371bf32b50193",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Tufted_Duck_Aythya_fuligula_Male_by_Dr._Raju_Kasambe_DSCN9795_%2817%29.jpg/1280px-Tufted_Duck_Aythya_fuligula_Male_by_Dr._Raju_Kasambe_DSCN9795_%2817%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [
+   "male"
+  ],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 1717,
+   "mirror": false,
+   "scale": 1.001,
+   "areaOfSource": 1.001
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/sp005.webp",
+  "species": "sp005",
+  "latin": "Buteo buteo",
+  "app": {
+   "author": "Alexis Lours",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Common_buzzard_2024-01-20.jpg",
+  "src": {
+   "title": "File:Common buzzard 2024-01-20.jpg",
+   "author": "Alexis Lours",
+   "license": "CC BY 4.0",
+   "description": "A common buzzard ( Buteo buteo ) perched on a tree in Franconville, France.",
+   "objectName": "Common buzzard 2024-01-20",
+   "categories": [
+    "Buteo buteo in France",
+    "CC-BY-4.0",
+    "Files with coordinates missing SDC location of creation (48° N, 2° E)",
+    "Nature of Franconville (Val-d'Oise)",
+    "Photos by Alexis Lours",
+    "QI photos by Alexis Lours",
+    "Quality images",
+    "Quality images of Val-d'Oise",
+    "Self-published work"
+   ],
+   "width": 4746,
+   "height": 3164,
+   "sha1": "72d78c0753e96d9f4042fdb2a63e2527d1d35bb7",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Common_buzzard_2024-01-20.jpg/1280px-Common_buzzard_2024-01-20.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2130,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.001
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/sp094.webp",
+  "species": "sp094",
+  "latin": "Larus argentatus",
+  "app": {
+   "author": "Stephan Sprinz",
+   "license": "CC BY-SA 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Silberm%C3%B6we_auf_Eis_-_Spiekeroog,_Nationalpark_nieders%C3%A4chsisches_Wattenmeer.jpg",
+  "src": {
+   "title": "File:Silbermöwe auf Eis - Spiekeroog, Nationalpark niedersächsisches Wattenmeer.jpg",
+   "author": "Stephan Sprinz",
+   "license": "CC BY-SA 4.0",
+   "description": "Silbermöwe (larus argentatus) auf Eis - Spiekeroog, Nationalpark niedersächsisches Wattenmeer",
+   "objectName": "Silbermöwe auf Eis - Spiekeroog, Nationalpark niedersächsisches Wattenmeer",
+   "categories": [
+    "Birds of Spiekeroog",
+    "CC-BY-SA-4.0",
+    "Images from Wiki Loves Earth 2020",
+    "Images from Wiki Loves Earth 2020, DE-NI",
+    "Images from Wiki Loves Earth 2020 in Germany",
+    "Images from Wiki Loves Earth missing SDC location of creation",
+    "Images from Wiki Loves Earth missing SDC participant in",
+    "Larus argentatus in Lower Saxony",
+    "March 2018 in Lower Saxony",
+    "Photographs by Stephan Sprinz",
+    "Quality images",
+    "Quality images by Stephan Sprinz",
+    "Quality images from Wiki Loves Earth 2020 in Germany",
+    "Quality images of Larus argentatus",
+    "Quality images of North Rhine-Westphalia",
+    "Self-published work",
+    "Uploaded via Campaign:wle-de-ni"
+   ],
+   "width": 6000,
+   "height": 4000,
+   "sha1": "ccd3829fd8cbdb7c2c1ecedd40d573219986c56a",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Silberm%C3%B6we_auf_Eis_-_Spiekeroog%2C_Nationalpark_nieders%C3%A4chsisches_Wattenmeer.jpg/1280px-Silberm%C3%B6we_auf_Eis_-_Spiekeroog%2C_Nationalpark_nieders%C3%A4chsisches_Wattenmeer.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 1819,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.001
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/sp100.webp",
+  "species": "sp100",
+  "latin": "Numenius arquata",
+  "app": {
+   "author": "Ken Billington",
+   "license": "CC BY-SA 3.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Curlew_(Numenius_arquata)_(12).jpg",
+  "src": {
+   "title": "File:Curlew (Numenius arquata) (12).jpg",
+   "author": "Ken Billington",
+   "license": "CC BY-SA 3.0",
+   "description": "Curlew (Numenius arquata) Photo taken at Brow Head, Co. Cork, Republic of Ireland",
+   "objectName": "Curlew (Numenius arquata) (12)",
+   "categories": [
+    "CC-BY-SA-3.0",
+    "Charadriiformes of Ireland",
+    "Files with coordinates missing SDC location of creation",
+    "Numenius arquata",
+    "Quality images",
+    "Quality images of Numenius arquata",
+    "Quality images of animals in Ireland",
+    "Self-published work",
+    "Taken with Canon EOS 30D"
+   ],
+   "width": 2000,
+   "height": 1500,
+   "sha1": "5f1b9234739edee4dc97acaebccab8975feeb4c2",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Curlew_%28Numenius_arquata%29_%2812%29.jpg/1280px-Curlew_%28Numenius_arquata%29_%2812%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2452,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/sp128.webp",
+  "species": "sp128",
+  "latin": "Tadorna tadorna",
+  "app": {
+   "author": "Charles J. Sharp",
+   "license": "CC BY-SA 4.0",
+   "sex": "male",
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Common_shelduck_(Tadorna_tadorna)_male_2.jpg",
+  "src": {
+   "title": "File:Common shelduck (Tadorna tadorna) male 2.jpg",
+   "author": "Charles J. Sharp",
+   "license": "CC BY-SA 4.0",
+   "description": "Common shelduck ( Tadorna tadorna ) male, Titchwell Marsh, Norfolk",
+   "objectName": "Common shelduck (Tadorna tadorna) male 2",
+   "categories": [
+    "Anseriformes of the United Kingdom",
+    "CC-BY-SA-4.0",
+    "Files with coordinates missing SDC location of creation (52° N, 0° E)",
+    "Photographs by Charlesjsharp",
+    "Quality images",
+    "Quality images by Charlesjsharp",
+    "Quality images missing SDC creator",
+    "Quality images missing SDC depicts",
+    "Quality images of Anseriformes by Charlesjsharp",
+    "Quality images of Norfolk",
+    "Quality images of birds by Charlesjsharp",
+    "Quality images of birds in the United Kingdom",
+    "Self-published work",
+    "Tadorna tadorna"
+   ],
+   "width": 3599,
+   "height": 2399,
+   "sha1": "6db56d739ba34386d04c189764047e87e8ce86ba",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Common_shelduck_%28Tadorna_tadorna%29_male_2.jpg/1280px-Common_shelduck_%28Tadorna_tadorna%29_male_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [
+   "male"
+  ],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 1748,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.001
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/sp225.webp",
+  "species": "sp225",
+  "latin": "Ichthyaetus melanocephalus",
+  "app": {
+   "author": "MPF",
+   "license": "CC BY-SA 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:2019-04-17_Ichthyaetus_melanocephalus,_Gosforth_Park,_Northumberland_2.jpg",
+  "src": {
+   "title": "File:2019-04-17 Ichthyaetus melanocephalus, Gosforth Park, Northumberland 2.jpg",
+   "author": "MPF",
+   "license": "CC BY-SA 4.0",
+   "description": "Mediterranean Gull Ichthyaetus melanocephalus adult pair in summer breeding plumage, Gosforth Park Nature Reserve, Northumberland, UK",
+   "objectName": "2019-04-17 Ichthyaetus melanocephalus, Gosforth Park, Northumberland 2",
+   "categories": [
+    "CC-BY-SA-4.0",
+    "Files with coordinates missing SDC location of creation (55° N, 2° W)",
+    "Ichthyaetus melanocephalus in England",
+    "Laridae in Northumberland",
+    "Self-published work"
+   ],
+   "width": 3200,
+   "height": 2400,
+   "sha1": "8ac077620d37651edfb76f3fca092f651838928a",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/2019-04-17_Ichthyaetus_melanocephalus%2C_Gosforth_Park%2C_Northumberland_2.jpg/1280px-2019-04-17_Ichthyaetus_melanocephalus%2C_Gosforth_Park%2C_Northumberland_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [
+   "adult"
+  ],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2451,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/sp249.webp",
+  "species": "sp249",
+  "latin": "Circus cyaneus",
+  "app": {
+   "author": "caroline legg",
+   "license": "CC BY 2.0",
+   "sex": "male",
+   "age": null,
+   "flight": true,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Hen_Harrier_-_Male.jpg",
+  "src": {
+   "title": "File:Hen Harrier - Male.jpg",
+   "author": "caroline legg",
+   "license": "CC BY 2.0",
+   "description": "Hen Harrier - Lancashire - UK",
+   "objectName": "Hen Harrier - Male",
+   "categories": [
+    "Birds of Lancashire",
+    "CC-BY-2.0",
+    "Circus cyaneus in flight",
+    "England photographs taken on 2024-05-01",
+    "Files from Caroline Legg Flickr stream",
+    "Flickr images reviewed by FlickreviewR 2",
+    "May 2024 in Lancashire"
+   ],
+   "width": 2315,
+   "height": 1544,
+   "sha1": "d26537a5aa24dbbc6ac1e56bb681f07be8347afb",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Hen_Harrier_-_Male.jpg/1280px-Hen_Harrier_-_Male.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [
+   "female",
+   "male"
+  ],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2103,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/sp253.webp",
+  "species": "sp253",
+  "latin": "Buteo lagopus",
+  "app": {
+   "author": "dfaulder",
+   "license": "CC BY 2.0",
+   "sex": "female",
+   "age": null,
+   "flight": true,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Rough-legged_Hawk,_female_(29534397942).jpg",
+  "src": {
+   "title": "File:Rough-legged Hawk, female (29534397942).jpg",
+   "author": "dfaulder",
+   "license": "CC BY 2.0",
+   "description": "Two Hills County, Alberta",
+   "objectName": "Rough-legged Hawk, female (29534397942)",
+   "categories": [
+    "Birds of Two Hills No. 21",
+    "Buteo lagopus sanctijohannis in flight",
+    "CC-BY-2.0",
+    "Flickr images reviewed by FlickreviewR 2",
+    "September 2016 in Alberta"
+   ],
+   "width": 1735,
+   "height": 1156,
+   "sha1": "27c807a2d352589fb631898ec791add1caa433d6",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Rough-legged_Hawk%2C_female_%2829534397942%29.jpg/1280px-Rough-legged_Hawk%2C_female_%2829534397942%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [
+   "female"
+  ],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2828,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/sp145.webp",
+  "species": "sp145",
+  "latin": "Pluvialis apricaria",
+  "app": {
+   "author": "Andrea Battisti",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/605984899",
+  "src": {
+   "title": "iNaturalist 413782615",
+   "observation": "https://www.inaturalist.org/observations/413782615",
+   "author": "",
+   "license": "",
+   "taxon": "Hypolimnas misippus",
+   "taxonCommon": "Danaid Eggfly",
+   "qualityGrade": "needs_id",
+   "annotations": [],
+   "description": "My old ADU virtual Museum records",
+   "thumb": ""
+  },
+  "speciesInSource": false,
+  "sourceTaxon": "Hypolimnas misippus",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": false,
+  "licenseMatch": false,
+  "error": "ValueError: unknown url type: ''"
+ },
+ {
+  "image": "/assets/species/sp217.webp",
+  "species": "sp217",
+  "latin": "Tringa stagnatilis",
+  "app": {
+   "author": "Вячеслав Юсупов",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/103339289",
+  "src": {
+   "title": "iNaturalist 413782694",
+   "observation": "https://www.inaturalist.org/observations/413782694",
+   "author": "",
+   "license": "",
+   "taxon": "Lepidoptera",
+   "taxonCommon": "Butterflies and Moths",
+   "qualityGrade": "needs_id",
+   "annotations": [],
+   "description": "",
+   "thumb": ""
+  },
+  "speciesInSource": false,
+  "sourceTaxon": "Lepidoptera",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": false,
+  "licenseMatch": false,
+  "error": "ValueError: unknown url type: ''"
+ },
+ {
+  "image": "/assets/species/plumage/sp019-female-ground.webp",
+  "species": "sp019",
+  "latin": "Picus viridis",
+  "app": {
+   "author": "Remyymer",
+   "license": "CC BY-SA 4.0",
+   "sex": "female",
+   "age": "adult",
+   "flight": null,
+   "label": "Op de grond"
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:European_green_woodpecker_eating.jpg",
+  "src": {
+   "title": "File:European green woodpecker eating.jpg",
+   "author": "Remyymer",
+   "license": "CC BY-SA 4.0",
+   "description": "European green woodpecker eating",
+   "objectName": "European green woodpecker eating",
+   "categories": [
+    "CC-BY-SA-4.0",
+    "Picidae eating",
+    "Piciformes eating insects",
+    "Picus viridis (female)",
+    "Self-published work"
+   ],
+   "width": 2967,
+   "height": 2966,
+   "sha1": "53be9981138c5b7e9adbf1a89713916596bdc430",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/European_green_woodpecker_eating.jpg/1280px-European_green_woodpecker_eating.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [
+   "female"
+  ],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2131,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 0.999
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/plumage/sp032-flight.webp",
+  "species": "sp032",
+  "latin": "Poecile palustris",
+  "app": {
+   "author": "Sébastien Bertru",
+   "license": "CC BY-SA 2.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Parus_palustris_IMG_9452.jpg",
+  "src": {
+   "title": "File:Parus palustris IMG 9452.jpg",
+   "author": "sébastien bertru",
+   "license": "CC BY-SA 2.0",
+   "description": "Mésange nonnette Parus palustris Marsh Tit",
+   "objectName": "Parus palustris IMG 9452",
+   "categories": [
+    "CC-BY-SA-2.0",
+    "Flickr images uploaded by Flickr upload bot",
+    "Paridae in flight",
+    "Poecile palustris",
+    "Taken with Canon EOS 450D"
+   ],
+   "width": 2449,
+   "height": 2234,
+   "sha1": "5c8031bb7b6fae23b3e0d648b7311f17bc67d6b6",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Parus_palustris_IMG_9452.jpg/1280px-Parus_palustris_IMG_9452.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2454,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/plumage/sp007-flight.webp",
+  "species": "sp007",
+  "latin": "Accipiter gentilis",
+  "app": {
+   "author": "Ken Billington",
+   "license": "CC BY-SA 3.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Northern_Goshawk_(Accipiter_gentilis)_(1).JPG",
+  "src": {
+   "title": "File:Northern Goshawk (Accipiter gentilis) (1).JPG",
+   "author": "Ken Billington",
+   "license": "CC BY-SA 3.0",
+   "description": "Northern Goshawk (Accipiter gentilis)",
+   "objectName": "Northern Goshawk (Accipiter gentilis) (1)",
+   "categories": [
+    "Astur gentilis in flight",
+    "CC-BY-SA-3.0",
+    "Self-published work"
+   ],
+   "width": 800,
+   "height": 450,
+   "sha1": "195142d2ac6ea6502f28ad3970a24be0aae1127b",
+   "thumb": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Northern_Goshawk_%28Accipiter_gentilis%29_%281%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 1887,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/plumage/sp017-flight.webp",
+  "species": "sp017",
+  "latin": "Dryobates minor",
+  "app": {
+   "author": "blondinrikard",
+   "license": "CC BY 2.0",
+   "sex": "female",
+   "age": null,
+   "flight": true,
+   "label": "Vrouwtje in vlucht"
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Lesser_spotted_woodpecker_(f),_Dryobates_minor,_Mindre_hackspett.jpg",
+  "src": {
+   "title": "File:Lesser spotted woodpecker (f), Dryobates minor, Mindre hackspett.jpg",
+   "author": "blondinrikard",
+   "license": "CC BY 2.0",
+   "description": "Lesser spotted woodpecker, Dryobates minor, Mindre hackspett Near threatened (NT) – close to being at high risk of extinction in the near future. Swedish Red List 2020",
+   "objectName": "Lesser spotted woodpecker (f), Dryobates minor, Mindre hackspett",
+   "categories": [
+    "CC-BY-2.0",
+    "Dryobates minor",
+    "Flickr images missing SDC published in",
+    "Flickr images reviewed by FlickreviewR 2",
+    "Picidae in flight"
+   ],
+   "width": 1783,
+   "height": 1783,
+   "sha1": "f0c24e03b8ce97a34da3eb81d598570630a107dc",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Lesser_spotted_woodpecker_%28f%29%2C_Dryobates_minor%2C_Mindre_hackspett.jpg/1280px-Lesser_spotted_woodpecker_%28f%29%2C_Dryobates_minor%2C_Mindre_hackspett.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2525,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "geslacht female niet in bron"
+  ],
+  "pair": "pairs/sp017-flight.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp026-flight.webp",
+  "species": "sp026",
+  "latin": "Garrulus glandarius",
+  "app": {
+   "author": "Giles Laurent (gileslaurent.com)",
+   "license": "CC BY-SA 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:075_Wild_Eurasian_jay_in_flight_at_the_Parc_naturel_r%C3%A9gional_Jura_vaudois_Photo_by_Giles_Laurent.jpg",
+  "src": {
+   "title": "File:075 Wild Eurasian jay in flight at the Parc naturel régional Jura vaudois Photo by Giles Laurent.jpg",
+   "author": "Giles Laurent",
+   "license": "CC BY-SA 4.0",
+   "description": "Wild Eurasian jay flying in the middle of flowers at the Parc naturel régional Jura vaudois",
+   "objectName": "075 Wild Eurasian jay in flight at the Parc naturel régional Jura vaudois Photo by Giles Laurent",
+   "categories": [
+    "CC-BY-SA-4.0",
+    "Files with coordinates missing SDC location of creation",
+    "Garrulus glandarius in flight",
+    "Images from Wiki Loves Earth 2022 in Switzerland",
+    "Images from Wiki Loves Switzerland 2022 - close-up",
+    "Parc naturel régional Jura vaudois",
+    "Photos by Giles Laurent",
+    "Self-published work",
+    "Taken with Sony ILCE-1 and Sony FE 200-600mm F5.6-6.3 G OSS",
+    "Valued images by Giles Laurent",
+    "Valued images missing SDC inception",
+    "Valued images promoted 2024-10",
+    "Valued images sorted by promotion date"
+   ],
+   "width": 2525,
+   "height": 1683,
+   "sha1": "192cfec163630f42a74ee75f363924b175105dfb",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/075_Wild_Eurasian_jay_in_flight_at_the_Parc_naturel_r%C3%A9gional_Jura_vaudois_Photo_by_Giles_Laurent.jpg/1280px-075_Wild_Eurasian_jay_in_flight_at_the_Parc_naturel_r%C3%A9gional_Jura_vaudois_Photo_by_Giles_Laurent.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2288,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/plumage/sp036-flight.webp",
+  "species": "sp036",
+  "latin": "Chloris chloris",
+  "app": {
+   "author": "Bengt Nyman",
+   "license": "CC BY-SA 2.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:NZ7_6126_(51832454526).jpg",
+  "src": {
+   "title": "File:NZ7 6126 (51832454526).jpg",
+   "author": "Bengt Nyman from Vaxholm, Sweden",
+   "license": "CC BY-SA 2.0",
+   "description": "Chloris chloris in Sweden Chloris chloris in flight Birds by BN",
+   "objectName": "NZ7 6126 (51832454526)",
+   "categories": [
+    "Birds by BN",
+    "CC-BY-SA-2.0",
+    "Chloris chloris in Sweden",
+    "Chloris chloris in flight",
+    "Flickr images reviewed by FlickreviewR 2"
+   ],
+   "width": 1050,
+   "height": 1050,
+   "sha1": "80bbf06f97f27c9b6abd671dde8332f02acd5545",
+   "thumb": "https://upload.wikimedia.org/wikipedia/commons/e/ed/NZ7_6126_%2851832454526%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 1819,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/plumage/sp042-flight.webp",
+  "species": "sp042",
+  "latin": "Carpodacus erythrinus",
+  "app": {
+   "author": "Natuur Digitaal (Marc Plomp) en Stichting Natuurbeelden",
+   "license": "CC BY-SA 3.0 NL",
+   "sex": "male",
+   "age": null,
+   "flight": true,
+   "label": "Mannetje in vlucht"
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Zingende_roodmus-4961932.webm",
+  "src": {
+   "title": "File:Zingende roodmus-4961932.webm",
+   "author": "Marc Plomp",
+   "license": "CC BY-SA 3.0 nl",
+   "description": "Singing male common rosefinch (Carpodacus erythrinus).",
+   "objectName": "Zingende roodmus",
+   "categories": [
+    "Artworks with known accession number",
+    "Artworks without Wikidata item",
+    "CC-BY-SA-3.0-NL",
+    "Carpodacus erythrinus",
+    "GWToolset Batch Upload",
+    "Stichting Natuurbeelden on Open Images",
+    "Unsupported object",
+    "Video display resolution 720 x 576",
+    "Videos of birds of the Netherlands"
+   ],
+   "width": 1023,
+   "height": 576,
+   "sha1": "7ab46cc21370ac0b32e01015c995080271bdb957",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Zingende_roodmus-4961932.webm/960px--Zingende_roodmus-4961932.webm.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [
+   "male"
+  ],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 5,
+   "mirror": false,
+   "scale": 0.128,
+   "areaOfSource": 0.018
+  },
+  "sameShot": false,
+  "issues": [
+   "bronbeeld niet herkend"
+  ],
+  "pair": "pairs/sp042-flight.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp047-flight.webp",
+  "species": "sp047",
+  "latin": "Turdus pilaris",
+  "app": {
+   "author": "Hangsna",
+   "license": "CC BY-SA 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Turdus_pilaris,_winter,_flying.jpg",
+  "src": {
+   "title": "File:Turdus pilaris, winter, flying.jpg",
+   "author": "Hangsna",
+   "license": "CC BY-SA 4.0",
+   "description": "Turdus pilaris, in Sweden during winter.",
+   "objectName": "Turdus pilaris, winter, flying",
+   "categories": [
+    "CC-BY-SA-4.0",
+    "Self-published work",
+    "Turdus pilaris",
+    "Turdus pilaris in Sweden"
+   ],
+   "width": 1658,
+   "height": 1103,
+   "sha1": "cc8349509b51441e20029b11c0606d10a89f2a90",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Turdus_pilaris%2C_winter%2C_flying.jpg/1280px-Turdus_pilaris%2C_winter%2C_flying.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 521,
+   "mirror": false,
+   "scale": 0.643,
+   "areaOfSource": 0.492
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/plumage/sp053-flight.webp",
+  "species": "sp053",
+  "latin": "Saxicola rubicola",
+  "app": {
+   "author": "Boxmoor Blog",
+   "license": "CC BY 3.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:European_stonechat_(Saxicola_rubicola)_in_the_UK.webm",
+  "src": {
+   "title": "File:European stonechat (Saxicola rubicola) in the UK.webm",
+   "author": "Boxmoor Blog",
+   "license": "CC BY 3.0",
+   "description": "Immature male European stonechat ( Saxicola rubicola ) passing through on migration. Enjoying insects around an area of scrub in Bovingdon Reach meadow at Westbrook Hay, Box Moor Trust estate, Hemel Hempstead, Hertfordshire, United Kingdom. In this video, the audio has been removed from the original material and sections of it have been removed.",
+   "objectName": "European stonechat (Saxicola rubicola) in the UK",
+   "categories": [
+    "CC-BY-3.0",
+    "Video display resolution 1920 x 1080",
+    "Videos of Saxicola rubicola",
+    "Videos without audio",
+    "WebM videos"
+   ],
+   "width": 1920,
+   "height": 1080,
+   "sha1": "ad67dff8c8e9844c18c4c0b48daee959b0c7edec",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/European_stonechat_%28Saxicola_rubicola%29_in_the_UK.webm/1280px--European_stonechat_%28Saxicola_rubicola%29_in_the_UK.webm.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [
+   "male"
+  ],
+  "sourceAge": [
+   "juvenile"
+  ],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 0
+  },
+  "sameShot": false,
+  "issues": [
+   "bronbeeld niet herkend"
+  ],
+  "pair": "pairs/sp053-flight.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp063-flight.webp",
+  "species": "sp063",
+  "latin": "Regulus regulus",
+  "app": {
+   "author": "Alpsdake",
+   "license": "CC BY-SA 3.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Regulus_regulus_japonensis_in_flight.JPG",
+  "src": {
+   "title": "File:Regulus regulus japonensis in flight.JPG",
+   "author": "Alpsdake",
+   "license": "CC BY-SA 3.0",
+   "description": "Regulus regulus japonensis ( Goldcrest ) in flight, in Japan.",
+   "objectName": "Regulus regulus japonensis in flight",
+   "categories": [
+    "CC-BY-SA-3.0",
+    "Regulus regulus japonensis",
+    "Self-published work",
+    "Taken with Canon EOS 600D"
+   ],
+   "width": 1920,
+   "height": 2048,
+   "sha1": "b09efc0a9e482b19713d22afa8dcfd0a0dbf7769",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Regulus_regulus_japonensis_in_flight.JPG/1280px-Regulus_regulus_japonensis_in_flight.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 282,
+   "mirror": false,
+   "scale": 1.001,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/plumage/sp075-flight.webp",
+  "species": "sp075",
+  "latin": "Alcedo atthis",
+  "app": {
+   "author": "Charles J. Sharp",
+   "license": "CC BY-SA 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Common_kingfisher_(Alcedo_atthis_ispida)_in_flight.jpg",
+  "src": {
+   "title": "File:Common kingfisher (Alcedo atthis ispida) in flight.jpg",
+   "author": "Charles J. Sharp",
+   "license": "CC BY-SA 4.0",
+   "description": "Common kingfisher ( Alcedo atthis ispida ) in flight, Caen Hill flight, Devizes",
+   "objectName": "Common kingfisher (Alcedo atthis ispida) in flight",
+   "categories": [
+    "Alcedinidae in flight",
+    "Alcedo atthis in England",
+    "Alcedo atthis ispida",
+    "CC-BY-SA-4.0",
+    "Files with coordinates missing SDC location of creation (51° N, 3° W)",
+    "Photographs by Charlesjsharp",
+    "Self-published work"
+   ],
+   "width": 2168,
+   "height": 1445,
+   "sha1": "cab2482071020db08b3b8b738a81d6efd04ceebe",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Common_kingfisher_%28Alcedo_atthis_ispida%29_in_flight.jpg/1280px-Common_kingfisher_%28Alcedo_atthis_ispida%29_in_flight.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 852,
+   "mirror": false,
+   "scale": 0.745,
+   "areaOfSource": 0.511
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/plumage/sp083-flight.webp",
+  "species": "sp083",
+  "latin": "Ardea alba",
+  "app": {
+   "author": "Charles J. Sharp",
+   "license": "CC BY-SA 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Great_egret_(Ardea_alba)_in_flight_Danube_delta.jpg",
+  "src": {
+   "title": "File:Great egret (Ardea alba) in flight Danube delta.jpg",
+   "author": "Charles J. Sharp",
+   "license": "CC BY-SA 4.0",
+   "description": "Great egret ( Ardea alba ) in flight, Danube delta, Romania",
+   "objectName": "Great egret (Ardea alba) in flight Danube delta",
+   "categories": [
+    "Ardea alba in flight",
+    "Ardeidae in Romania",
+    "CC-BY-SA-4.0",
+    "Files with coordinates missing SDC location of creation",
+    "Maliuc commune, Tulcea",
+    "Photographs by Charlesjsharp",
+    "Self-published work",
+    "Sulina branch"
+   ],
+   "width": 2967,
+   "height": 1978,
+   "sha1": "9e0a0386206492ce4f3bc481519fcc75af91d1e2",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Great_egret_%28Ardea_alba%29_in_flight_Danube_delta.jpg/1280px-Great_egret_%28Ardea_alba%29_in_flight_Danube_delta.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 1627,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/plumage/sp090-flight.webp",
+  "species": "sp090",
+  "latin": "Spatula clypeata",
+  "app": {
+   "author": "Frank Schulenburg",
+   "license": "CC BY-SA 4.0",
+   "sex": "male",
+   "age": null,
+   "flight": true,
+   "label": "Mannetje in vlucht"
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Male_northern_shoveler_in_flight-0208.jpg",
+  "src": {
+   "title": "File:Male northern shoveler in flight-0208.jpg",
+   "author": "Frank Schulenburg",
+   "license": "CC BY-SA 4.0",
+   "description": "An adult male northern shoveler ( Spatula clypeata ) at the Llano Seco Unit of the Sacramento National Wildlife Refuge, Butte County, California",
+   "objectName": "Male northern shoveler in flight-0208",
+   "categories": [
+    "CC-BY-SA-4.0",
+    "Files with coordinates missing SDC location of creation",
+    "Llano Seco Unit of the Steve Thompson North Central Valley Wildlife Management Area",
+    "Quality images",
+    "Quality images by Frank Schulenburg",
+    "Quality images of Spatula clypeata",
+    "Self-published work",
+    "Spatula clypeata in flight"
+   ],
+   "width": 3286,
+   "height": 2192,
+   "sha1": "3ccee8e0f0e27478a6395d051426ebc01261db37",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Male_northern_shoveler_in_flight-0208.jpg/1280px-Male_northern_shoveler_in_flight-0208.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [
+   "male"
+  ],
+  "sourceAge": [
+   "adult"
+  ],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2318,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/plumage/sp096-flight.webp",
+  "species": "sp096",
+  "latin": "Larus canus",
+  "app": {
+   "author": "Charles J. Sharp",
+   "license": "CC BY-SA 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Common_gull_(Larus_canus)_adult_breeding_in_flight_Oppdal_2.jpg",
+  "src": {
+   "title": "File:Common gull (Larus canus) adult breeding in flight Oppdal 2.jpg",
+   "author": "Charles J. Sharp",
+   "license": "CC BY-SA 4.0",
+   "description": "Common gull ( Larus canus ) adult in breeding plumage in flight in the hills above Oppdal, Norway",
+   "objectName": "Common gull (Larus canus) adult breeding in flight Oppdal 2",
+   "categories": [
+    "CC-BY-SA-4.0",
+    "Charadriiformes of Norway",
+    "Files with coordinates missing SDC location of creation",
+    "Larus canus in flight",
+    "Photographs by Charlesjsharp",
+    "Quality images",
+    "Quality images by Charlesjsharp",
+    "Quality images missing SDC creator",
+    "Quality images of Charadriiformes by Charlesjsharp",
+    "Quality images of Larus canus",
+    "Quality images of animals in Norway",
+    "Quality images of birds by Charlesjsharp",
+    "Self-published work"
+   ],
+   "width": 5533,
+   "height": 2767,
+   "sha1": "2ea34bf40c254984bd1029ddd7040634fbb7710f",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Common_gull_%28Larus_canus%29_adult_breeding_in_flight_Oppdal_2.jpg/1280px-Common_gull_%28Larus_canus%29_adult_breeding_in_flight_Oppdal_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [
+   "adult"
+  ],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 753,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/plumage/sp102-flight.webp",
+  "species": "sp102",
+  "latin": "Tringa totanus",
+  "app": {
+   "author": "Charles J. Sharp",
+   "license": "CC BY-SA 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Common_redshank_(Tringa_totanus_robusta)_in_flight_Myrar_2.jpg",
+  "src": {
+   "title": "File:Common redshank (Tringa totanus robusta) in flight Myrar 2.jpg",
+   "author": "Charles J. Sharp",
+   "license": "CC BY-SA 4.0",
+   "description": "Common redshank ( Tringa totanus robusta ) in flight, Mýrar Wetland, Western Iceland",
+   "objectName": "Common redshank (Tringa totanus robusta) in flight Myrar 2",
+   "categories": [
+    "CC-BY-SA-4.0",
+    "Files with coordinates missing SDC location of creation",
+    "Iceland photographs taken on 2025-08-04",
+    "Mýrar (Borgarfjörður)",
+    "Photographs by Charlesjsharp",
+    "Quality images",
+    "Quality images by Charlesjsharp",
+    "Quality images missing SDC creator",
+    "Quality images missing SDC depicts",
+    "Quality images of Charadriiformes by Charlesjsharp",
+    "Quality images of birds by Charlesjsharp",
+    "Self-published work",
+    "Tringa totanus in Iceland",
+    "Tringa totanus in flight",
+    "Valued images by Charlesjsharp",
+    "Valued images missing SDC creator",
+    "Valued images missing SDC depicts",
+    "Valued images of Charadriiformes by Charlesjsharp",
+    "Valued images of Iceland",
+    "Valued images of Tringa",
+    "Valued images of birds by Charlesjsharp",
+    "Valued images promoted 2025-09",
+    "Valued images sorted by promotion date",
+    "Valued images with different SDC Commons quality assessment"
+   ],
+   "width": 4018,
+   "height": 2678,
+   "sha1": "e77fa4399f6f8722f9676a1a9e75824601ce2d38",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Common_redshank_%28Tringa_totanus_robusta%29_in_flight_Myrar_2.jpg/1280px-Common_redshank_%28Tringa_totanus_robusta%29_in_flight_Myrar_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2259,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/plumage/sp112-flight.webp",
+  "species": "sp112",
+  "latin": "Sturnus vulgaris",
+  "app": {
+   "author": "Ralf Hüsges",
+   "license": "CC BY 2.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Steigflug_(54094247446)_v2.jpg",
+  "src": {
+   "title": "File:Steigflug (54094247446) v2.jpg",
+   "author": "Ralf Hüsges",
+   "license": "CC BY 2.0",
+   "description": "Starling in flight",
+   "objectName": "Steigflug (54094247446) v2",
+   "categories": [
+    "Blue sky background in Germany",
+    "CC-BY-2.0",
+    "Extracted images",
+    "Germany photographs taken on 2024-10-17",
+    "Photographs by Ralf Hüsges",
+    "Sturnus vulgaris in Germany",
+    "Sturnus vulgaris in flight"
+   ],
+   "width": 3636,
+   "height": 3715,
+   "sha1": "8bf35e0f1b63e1c61eb3d0b154a194f9b5e50527",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Steigflug_%2854094247446%29_v2.jpg/1280px-Steigflug_%2854094247446%29_v2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2073,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/plumage/sp126-flight.webp",
+  "species": "sp126",
+  "latin": "Cygnus olor",
+  "app": {
+   "author": "Pjt56",
+   "license": "CC BY-SA 3.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Cygnus_olor-pjt1.jpg",
+  "src": {
+   "title": "File:Cygnus olor-pjt1.jpg",
+   "author": "Pjt56",
+   "license": "CC BY-SA 3.0",
+   "description": "Mute swan ( Cygnus olor ) in flight, salt marshes in the lagoon of Venice, Italy",
+   "objectName": "Cygnus olor-pjt1",
+   "categories": [
+    "Birds of Venice",
+    "CC-BY-SA-3.0",
+    "Cygnus olor in flight",
+    "Self-published work"
+   ],
+   "width": 4300,
+   "height": 2679,
+   "sha1": "2f9759e9bb823356a41ac8a329063626a3e1f199",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Cygnus_olor-pjt1.jpg/1280px-Cygnus_olor-pjt1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 1483,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/plumage/sp143-flight.webp",
+  "species": "sp143",
+  "latin": "Recurvirostra avosetta",
+  "app": {
+   "author": "Yves Hoebeke",
+   "license": "CC BY-SA 2.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Kluut-1_(28031728713).jpg",
+  "src": {
+   "title": "File:Kluut-1 (28031728713).jpg",
+   "author": "yves hoebeke",
+   "license": "CC BY-SA 2.0",
+   "description": "kluut-1.jpg",
+   "objectName": "Kluut-1 (28031728713)",
+   "categories": [
+    "CC-BY-SA-2.0",
+    "Flickr images reviewed by FlickreviewR 2",
+    "Images with watermarks",
+    "Photographs of Yves Hoebeke",
+    "Recurvirostra avosetta in flight"
+   ],
+   "width": 800,
+   "height": 533,
+   "sha1": "5d8121374c86f39edaa26df1d45d67ec1eac54db",
+   "thumb": "https://upload.wikimedia.org/wikipedia/commons/1/16/Kluut-1_%2828031728713%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 454,
+   "mirror": false,
+   "scale": 0.8,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/plumage/sp152-flight.webp",
+  "species": "sp152",
+  "latin": "Calidris alba",
+  "app": {
+   "author": "Dominic Sherony",
+   "license": "CC BY-SA 2.0",
+   "sex": null,
+   "age": "juvenile",
+   "flight": true,
+   "label": "Juvenielen in vlucht"
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Sanderling_(Calidris_alba)_(3972936394).jpg",
+  "src": {
+   "title": "File:Sanderling (Calidris alba) (3972936394).jpg",
+   "author": "Dominic Sherony",
+   "license": "CC BY-SA 2.0",
+   "description": "Sanderlings in flight, immatures in fall.",
+   "objectName": "Sanderling (Calidris alba) (3972936394)",
+   "categories": [
+    "CC-BY-SA-2.0",
+    "Calidris alba (flocks)",
+    "Flickr images reviewed by File Upload Bot (Magnus Manske)",
+    "Flocks of birds in flight",
+    "Photographs by Dominic Sherony",
+    "Taken with Canon EOS 20D"
+   ],
+   "width": 2049,
+   "height": 1366,
+   "sha1": "92f923de5b3735f7d9cc339c9adb532354aa98db",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Sanderling_%28Calidris_alba%29_%283972936394%29.jpg/1280px-Sanderling_%28Calidris_alba%29_%283972936394%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2434,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "leeftijd juvenile niet in bron"
+  ],
+  "pair": "pairs/sp152-flight.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp164-flight.webp",
+  "species": "sp164",
+  "latin": "Larus marinus",
+  "app": {
+   "author": "Charles J. Sharp",
+   "license": "CC BY-SA 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Great_black-backed_gull_(Larus_marinus)_in_flight_Moher.jpg",
+  "src": {
+   "title": "File:Great black-backed gull (Larus marinus) in flight Moher.jpg",
+   "author": "Charles J. Sharp",
+   "license": "CC BY-SA 4.0",
+   "description": "Great black-backed gull ( Larus marinus ) in flight off the Cliffs of Moher, County Clare, Ireland",
+   "objectName": "Great black-backed gull (Larus marinus) in flight Moher",
+   "categories": [
+    "CC-BY-SA-4.0",
+    "Charadriiformes of Ireland",
+    "Files with coordinates missing SDC location of creation",
+    "Larus marinus in flight",
+    "Photographs by Charlesjsharp",
+    "Self-published work",
+    "Unassessed QI candidates"
+   ],
+   "width": 2735,
+   "height": 1824,
+   "sha1": "ecb89b05e34266d42970705b173ffd782358d16b",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Great_black-backed_gull_%28Larus_marinus%29_in_flight_Moher.jpg/1280px-Great_black-backed_gull_%28Larus_marinus%29_in_flight_Moher.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 888,
+   "mirror": false,
+   "scale": 0.633,
+   "areaOfSource": 0.465
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/plumage/sp206-flight.webp",
+  "species": "sp206",
+  "latin": "Charadrius alexandrinus",
+  "app": {
+   "author": "Forest Botial-Jarvis",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/180206774",
+  "src": {
+   "title": "iNaturalist 413782944",
+   "observation": "https://www.inaturalist.org/observations/413782944",
+   "author": "",
+   "license": "",
+   "taxon": "Lepidoptera",
+   "taxonCommon": "Butterflies and Moths",
+   "qualityGrade": "needs_id",
+   "annotations": [],
+   "description": "",
+   "thumb": ""
+  },
+  "speciesInSource": false,
+  "sourceTaxon": "Lepidoptera",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": false,
+  "licenseMatch": false,
+  "error": "ValueError: unknown url type: ''"
+ },
+ {
+  "image": "/assets/species/plumage/sp005-male-rest.webp",
+  "species": "sp005",
+  "latin": "Buteo buteo",
+  "app": {
+   "author": "Gianluca Congi",
+   "license": "CC BY-SA 4.0",
+   "sex": "male",
+   "age": null,
+   "flight": false,
+   "label": "Mannetje in rust"
+  },
+  "source": "https://www.inaturalist.org/photos/291739391",
+  "src": {
+   "title": "iNaturalist 413783105",
+   "observation": "https://www.inaturalist.org/observations/413783105",
+   "author": "",
+   "license": "",
+   "taxon": "Magnoliopsida",
+   "taxonCommon": "Dicots",
+   "qualityGrade": "casual",
+   "annotations": [],
+   "description": "",
+   "thumb": ""
+  },
+  "speciesInSource": false,
+  "sourceTaxon": "Magnoliopsida",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": false,
+  "licenseMatch": false,
+  "error": "ValueError: unknown url type: ''"
+ },
+ {
+  "image": "/assets/species/plumage/sp251-male-rest.webp",
+  "species": "sp251",
+  "latin": "Circus pygargus",
+  "app": {
+   "author": "Rohitjahnavi",
+   "license": "CC BY 4.0",
+   "sex": "male",
+   "age": null,
+   "flight": false,
+   "label": "Mannetje in rust"
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Montagu's_Harrier_Male_(Circus_pygargus)_at_Velavadar_National_Park,_Gujarat,_India_DSCN7503_02.jpg",
+  "src": {
+   "title": "File:Montagu's Harrier Male (Circus pygargus) at Velavadar National Park, Gujarat, India DSCN7503 02.jpg",
+   "author": "Rohitjahnavi",
+   "license": "CC BY 4.0",
+   "description": "Montagu's Harrier Male (Circus pygargus) at Velavadar National Park, Gujarat, India",
+   "objectName": "Montagu's Harrier Male (Circus pygargus) at Velavadar National Park, Gujarat, India DSCN7503 02",
+   "categories": [
+    "CC-BY-4.0",
+    "Circus pygargus",
+    "Circus pygargus in India",
+    "NCF photos",
+    "Photos by Rohit N",
+    "Self-published work"
+   ],
+   "width": 4608,
+   "height": 3456,
+   "sha1": "8b36c094d18c9d93109050ec2ad57489da6a608e",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Montagu%27s_Harrier_Male_%28Circus_pygargus%29_at_Velavadar_National_Park%2C_Gujarat%2C_India_DSCN7503_02.jpg/1280px-Montagu%27s_Harrier_Male_%28Circus_pygargus%29_at_Velavadar_National_Park%2C_Gujarat%2C_India_DSCN7503_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [
+   "male"
+  ],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 1089,
+   "mirror": false,
+   "scale": 0.7,
+   "areaOfSource": 0.518
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/plumage/sp016-juv.webp",
+  "species": "sp016",
+  "latin": "Dendrocopos major",
+  "app": {
+   "author": "Andrey Gulivanov",
+   "license": "CC BY 2.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Juvenile_great_spotted_woodpecker_(52200334398).jpg",
+  "src": {
+   "title": "File:Juvenile great spotted woodpecker (52200334398).jpg",
+   "author": "Andrey Gulivanov",
+   "license": "CC BY 2.0",
+   "description": "St Petersburg/Leningrad Oblast. Juvenile great spotted woodpecker",
+   "objectName": "Juvenile great spotted woodpecker (52200334398)",
+   "categories": [
+    "CC-BY-2.0",
+    "Dendrocopos major (juvenile)",
+    "Dendrocopos major in Russia",
+    "Flickr images reviewed by FlickreviewR 2",
+    "Photographs by Andrey Gulivanov",
+    "Russia photographs taken on 2022-06-21"
+   ],
+   "width": 7466,
+   "height": 5600,
+   "sha1": "adb765161e60ca0fd0eea31b0ddf534c31bd54b8",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Juvenile_great_spotted_woodpecker_%2852200334398%29.jpg/1280px-Juvenile_great_spotted_woodpecker_%2852200334398%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [
+   "juvenile"
+  ],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2851,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/plumage/sp129-adult_f.webp",
+  "species": "sp129",
+  "latin": "Mareca strepera",
+  "app": {
+   "author": "Andrey Gulivanov",
+   "license": "CC BY 2.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Female_gadwall_(52294387865).jpg",
+  "src": {
+   "title": "File:Female gadwall (52294387865).jpg",
+   "author": "Andrey Gulivanov",
+   "license": "CC BY 2.0",
+   "description": "St Petersburg/Leningrad Oblast. Female gadwall",
+   "objectName": "Female gadwall (52294387865)",
+   "categories": [
+    "CC-BY-2.0",
+    "Flickr images reviewed by FlickreviewR 2",
+    "Mareca strepera (female)",
+    "Mareca strepera in Russia",
+    "Mareca strepera swimming",
+    "Photographs by Andrey Gulivanov",
+    "Russia photographs taken on 2022-07-17"
+   ],
+   "width": 6000,
+   "height": 4000,
+   "sha1": "95dc13eee1c34196e8de14d3a9669460575824c8",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Female_gadwall_%2852294387865%29.jpg/1280px-Female_gadwall_%2852294387865%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [
+   "female"
+  ],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2802,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/plumage/sp249-adult_f.webp",
+  "species": "sp249",
+  "latin": "Circus cyaneus",
+  "app": {
+   "author": "Maurice.dekens",
+   "license": "CC BY-SA 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Blauwe_kiekendief_fem.jpg",
+  "src": {
+   "title": "File:Blauwe kiekendief fem.jpg",
+   "author": "Maurice.dekens",
+   "license": "CC BY-SA 4.0",
+   "description": "Vrouwtje blauwe kiekendief, wintergast in België",
+   "objectName": "Blauwe kiekendief fem",
+   "categories": [
+    "Accipitriformes of Belgium",
+    "CC-BY-SA-4.0",
+    "Circus cyaneus in flight",
+    "Self-published work"
+   ],
+   "width": 1974,
+   "height": 1316,
+   "sha1": "271d54aaca28120f5c98603bcced33326f18547f",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Blauwe_kiekendief_fem.jpg/1280px-Blauwe_kiekendief_fem.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [
+   "female"
+  ],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2833,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/plumage/sp006-adult_f.webp",
+  "species": "sp006",
+  "latin": "Accipiter nisus",
+  "app": {
+   "author": "caroline legg",
+   "license": "CC BY 2.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Female_Sparrowhawk_(45968114392).jpg",
+  "src": {
+   "title": "File:Female Sparrowhawk (45968114392).jpg",
+   "author": "caroline legg",
+   "license": "CC BY 2.0",
+   "description": "Female Sparrowhawk - Dumfriesshire",
+   "objectName": "Female Sparrowhawk (45968114392)",
+   "categories": [
+    "Accipiter nisus (female)",
+    "Accipiter nisus in Scotland",
+    "Birds of Dumfries and Galloway",
+    "CC-BY-2.0",
+    "Files from Caroline Legg Flickr stream",
+    "Flickr images reviewed by FlickreviewR 2",
+    "November 2018 in Dumfries and Galloway",
+    "Scotland photographs taken on 2018-11-20",
+    "Wildlife in Dumfriesshire"
+   ],
+   "width": 5568,
+   "height": 3712,
+   "sha1": "6b7753b86a43fc0bdfad4c6cd3bf1efe57ca2f03",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Female_Sparrowhawk_%2845968114392%29.jpg/1280px-Female_Sparrowhawk_%2845968114392%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [
+   "female"
+  ],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2816,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/plumage/sp248-adult_f.webp",
+  "species": "sp248",
+  "latin": "Pernis apivorus",
+  "app": {
+   "author": "Donald Davesne",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/678848182",
+  "src": {
+   "title": "iNaturalist 413783202",
+   "observation": "https://www.inaturalist.org/observations/413783202",
+   "author": "",
+   "license": "",
+   "taxon": "Citheronia laocoon",
+   "taxonCommon": null,
+   "qualityGrade": "casual",
+   "annotations": [],
+   "description": "",
+   "thumb": ""
+  },
+  "speciesInSource": false,
+  "sourceTaxon": "Citheronia laocoon",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": false,
+  "licenseMatch": false,
+  "error": "ValueError: unknown url type: ''"
+ },
+ {
+  "image": "/assets/species/plumage/sp083-breeding.webp",
+  "species": "sp083",
+  "latin": "Ardea alba",
+  "app": {
+   "author": "Olivier Morel",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/243252269",
+  "src": {
+   "title": "iNaturalist 413783337",
+   "observation": "https://www.inaturalist.org/observations/413783337",
+   "author": "",
+   "license": "",
+   "taxon": "Angelica decurrens",
+   "taxonCommon": null,
+   "qualityGrade": "needs_id",
+   "annotations": [],
+   "description": "",
+   "thumb": ""
+  },
+  "speciesInSource": false,
+  "sourceTaxon": "Angelica decurrens",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": false,
+  "licenseMatch": false,
+  "error": "ValueError: unknown url type: ''"
+ },
+ {
+  "image": "/assets/species/plumage/sp091-adult_f.webp",
+  "species": "sp091",
+  "latin": "Anas crecca",
+  "app": {
+   "author": "Frank Vassen from Brussels, Belgium",
+   "license": "CC BY 2.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Female_Eurasian_Teal_(Anas_crecca),_Parc_du_Rouge_Clo%C3%AEtre,_Brussels_(13353864095).jpg",
+  "src": {
+   "title": "File:Female Eurasian Teal (Anas crecca), Parc du Rouge Cloître, Brussels (13353864095).jpg",
+   "author": "Frank Vassen from Brussels, Belgium",
+   "license": "CC BY 2.0",
+   "description": "Digiscoping with Swarovski ATM 80 HD 30 X, Nikon1 V1 + 11-27,5 mm lens (Adapter DCB)",
+   "objectName": "Female Eurasian Teal (Anas crecca), Parc du Rouge Cloître, Brussels (13353864095)",
+   "categories": [
+    "Anas crecca (female)",
+    "Anas crecca in Belgium",
+    "Belgium photographs taken on 2014-03-16",
+    "Birds of Parc of the Red Cloister",
+    "CC-BY-2.0",
+    "Files with coordinates missing SDC location of creation (50° N, 4° E)",
+    "Flickr images reviewed by FlickreviewR",
+    "Photographs by Frank Vassen"
+   ],
+   "width": 3443,
+   "height": 2434,
+   "sha1": "7b532056af936ce0476a580da635ac03027da458",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Female_Eurasian_Teal_%28Anas_crecca%29%2C_Parc_du_Rouge_Clo%C3%AEtre%2C_Brussels_%2813353864095%29.jpg/1280px-Female_Eurasian_Teal_%28Anas_crecca%29%2C_Parc_du_Rouge_Clo%C3%AEtre%2C_Brussels_%2813353864095%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [
+   "female"
+  ],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2777,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/plumage/sp146-winter.webp",
+  "species": "sp146",
+  "latin": "Charadrius hiaticula",
+  "app": {
+   "author": "Paulo Caseirito",
+   "license": "CC0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/460492953",
+  "src": {
+   "title": "iNaturalist 413783411",
+   "observation": "https://www.inaturalist.org/observations/413783411",
+   "author": "",
+   "license": "",
+   "taxon": "Pentatominae",
+   "taxonCommon": null,
+   "qualityGrade": "casual",
+   "annotations": [],
+   "description": "",
+   "thumb": ""
+  },
+  "speciesInSource": false,
+  "sourceTaxon": "Pentatominae",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": false,
+  "licenseMatch": false,
+  "error": "ValueError: unknown url type: ''"
+ },
+ {
+  "image": "/assets/species/plumage/sp206-juv.webp",
+  "species": "sp206",
+  "latin": "Charadrius alexandrinus",
+  "app": {
+   "author": "SteveM4560",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/565748384",
+  "src": {
+   "title": "iNaturalist 413783442",
+   "observation": "https://www.inaturalist.org/observations/413783442",
+   "author": "",
+   "license": "",
+   "taxon": "Rhododendron ovatum",
+   "taxonCommon": null,
+   "qualityGrade": "casual",
+   "annotations": [],
+   "description": "",
+   "thumb": ""
+  },
+  "speciesInSource": false,
+  "sourceTaxon": "Rhododendron ovatum",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": false,
+  "licenseMatch": false,
+  "error": "ValueError: unknown url type: ''"
+ },
+ {
+  "image": "/assets/species/plumage/sp156-juv.webp",
+  "species": "sp156",
+  "latin": "Tringa ochropus",
+  "app": {
+   "author": "Dominic Best",
+   "license": "CC0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/556521052",
+  "src": {
+   "title": "iNaturalist 413782393",
+   "observation": "https://www.inaturalist.org/observations/413782393",
+   "author": "",
+   "license": "",
+   "taxon": null,
+   "taxonCommon": null,
+   "qualityGrade": "casual",
+   "annotations": [],
+   "description": "",
+   "thumb": ""
+  },
+  "speciesInSource": false,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": false,
+  "licenseMatch": false,
+  "error": "ValueError: unknown url type: ''"
+ },
+ {
+  "image": "/assets/species/plumage/sp155-juv.webp",
+  "species": "sp155",
+  "latin": "Actitis hypoleucos",
+  "app": {
+   "author": "Дарья Орлова",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/85106472",
+  "src": {
+   "title": "iNaturalist 413783500",
+   "observation": "https://www.inaturalist.org/observations/413783500",
+   "author": "",
+   "license": "",
+   "taxon": null,
+   "taxonCommon": null,
+   "qualityGrade": "casual",
+   "annotations": [],
+   "description": "",
+   "thumb": ""
+  },
+  "speciesInSource": false,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": false,
+  "licenseMatch": false,
+  "error": "ValueError: unknown url type: ''"
+ },
+ {
+  "image": "/assets/species/plumage/sp217-juv.webp",
+  "species": "sp217",
+  "latin": "Tringa stagnatilis",
+  "app": {
+   "author": "Вячеслав Юсупов",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/28427341",
+  "src": {
+   "title": "iNaturalist 413783552",
+   "observation": "https://www.inaturalist.org/observations/413783552",
+   "author": "",
+   "license": "",
+   "taxon": "Capys diocles",
+   "taxonCommon": "Orange-barred Playboy",
+   "qualityGrade": "needs_id",
+   "annotations": [],
+   "description": "My old ADU virtual Museum records",
+   "thumb": ""
+  },
+  "speciesInSource": false,
+  "sourceTaxon": "Capys diocles",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": false,
+  "licenseMatch": false,
+  "error": "ValueError: unknown url type: ''"
+ },
+ {
+  "image": "/assets/species/plumage/sp019-juv.webp",
+  "species": "sp019",
+  "latin": "Picus viridis",
+  "app": {
+   "author": "Hans Hillewaert",
+   "license": "CC BY-SA 3.0",
+   "sex": null,
+   "age": "juvenile",
+   "flight": null,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Picus_viridis_(juvenile).jpg",
+  "src": {
+   "title": "File:Picus viridis (juvenile).jpg",
+   "author": "Hans Hillewaert",
+   "license": "CC BY-SA 3.0",
+   "description": "Juvenile Green Woodpecker at Kampenhout, Belgium",
+   "objectName": "Picus viridis (juvenile)",
+   "categories": [
+    "Belgium photographs taken on 2008-06-07",
+    "CC-BY-SA-3.0",
+    "Files with coordinates missing SDC location of creation (50° N, 4° E)",
+    "Information field template with formatting",
+    "Photographs by Hans Hillewaert",
+    "Piciformes of Belgium",
+    "Picus viridis (juvenile)",
+    "Self-published work",
+    "Taken with Sony DSLR-A700"
+   ],
+   "width": 2732,
+   "height": 2049,
+   "sha1": "7fbbe5f99b57b5931f9a661ac0ed9fa780716d93",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Picus_viridis_%28juvenile%29.jpg/1280px-Picus_viridis_%28juvenile%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [
+   "juvenile"
+  ],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2600,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/plumage/sp078-juv.webp",
+  "species": "sp078",
+  "latin": "Fulica atra",
+  "app": {
+   "author": "Charles J. Sharp",
+   "license": "CC BY-SA 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Eurasian_coot_%28Fulica_atra%29_juvenile.jpg",
+  "src": {
+   "title": "File:Eurasian coot (Fulica atra) juvenile.jpg",
+   "author": "Charles J. Sharp",
+   "license": "CC BY-SA 4.0",
+   "description": "Eurasian coot ( Fulica atra ) juvenile, Marais Audomarois, St Omer , France",
+   "objectName": "Eurasian coot (Fulica atra) juvenile",
+   "categories": [
+    "Animals in Saint-Omer-Capelle",
+    "Aves in right lateral aspect",
+    "CC-BY-SA-4.0",
+    "Commons featured widescreen desktop backgrounds",
+    "Featured pictures by Charlesjsharp",
+    "Featured pictures by Charlesjsharp/France",
+    "Featured pictures of Fulica atra",
+    "Featured pictures of Pas-de-Calais",
+    "Featured pictures of birds by Charlesjsharp",
+    "Featured pictures on English Wikipedia by Charlesjsharp",
+    "Featured pictures on Wikimedia Commons",
+    "Featured pictures on Wikipedia, English",
+    "Files with coordinates missing SDC location of creation (50° N, 2° E)",
+    "Fulica atra (chicks)",
+    "Fulica atra in Pas-de-Calais",
+    "Hauts-de-France photographs taken on 2020-07-21",
+    "Photographs by Charlesjsharp",
+    "Quality images",
+    "Quality images by Charlesjsharp",
+    "Quality images missing SDC creator",
+    "Quality images of Fulica atra",
+    "Quality images of Gruiformes by Charlesjsharp",
+    "Quality images of Pas-de-Calais",
+    "Quality images of birds by Charlesjsharp",
+    "Quality images of birds in France",
+    "Self-published work",
+    "Valued images by Charlesjsharp",
+    "Valued images missing SDC creator",
+    "Valued images of Fulica",
+    "Valued images of Gruiformes by Charlesjsharp",
+    "Valued images of Pas-de-Calais",
+    "Valued images of birds by Charlesjsharp",
+    "Valued images promoted 2020-07",
+    "Valued images sorted by promotion date"
+   ],
+   "width": 3644,
+   "height": 2429,
+   "sha1": "8d3e29317bd6f86570a72b2284e036f9bc9c0b4d",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Eurasian_coot_%28Fulica_atra%29_juvenile.jpg/1280px-Eurasian_coot_%28Fulica_atra%29_juvenile.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [
+   "juvenile",
+   "chick"
+  ],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2027,
+   "mirror": false,
+   "scale": 0.999,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [],
+  "pair": "pairs/sp078-juv.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp090-adult_f.webp",
+  "species": "sp090",
+  "latin": "Spatula clypeata",
+  "app": {
+   "author": "Andreas Trepte, www.avi-fauna.info",
+   "license": "CC BY-SA 2.5",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Northern_Shoveler-Anas_clypeata_female.jpg",
+  "src": {
+   "title": "File:Northern Shoveler-Anas clypeata female.jpg",
+   "author": "Andreas Trepte",
+   "license": "CC BY-SA 2.5",
+   "description": "female Northern Shoveler",
+   "objectName": "Northern Shoveler-Anas clypeata female",
+   "categories": [
+    "Andreas Trepte",
+    "CC-BY-SA-2.5",
+    "Files with coordinates missing SDC location of creation",
+    "Spatula clypeata swimming",
+    "Taken with Canon EOS-1D X"
+   ],
+   "width": 3936,
+   "height": 2624,
+   "sha1": "01ec99086fcc0b613b4e901d6f6d66c5e13a9a1e",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Northern_Shoveler-Anas_clypeata_female.jpg/1280px-Northern_Shoveler-Anas_clypeata_female.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [
+   "female"
+  ],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2002,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.001
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/plumage/sp130-adult-f.webp",
+  "species": "sp130",
+  "latin": "Mareca penelope",
+  "app": {
+   "author": "Daniel106",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Samice_hv%C3%ADzd%C3%A1ka_eurasijsk%C3%A9ho_na_kameni.jpg",
+  "src": {
+   "title": "File:Samice hvízdáka eurasijského na kameni.jpg",
+   "author": "Daniel106",
+   "license": "CC BY 4.0",
+   "description": "Samice hvízdáka eurasijského (mareca Penelope) na kameni",
+   "objectName": "Samice hvízdáka eurasijského na kameni",
+   "categories": [
+    "CC-BY-4.0",
+    "Creative Commons Attribution 4.0 missing SDC copyright license",
+    "Creative Commons Attribution missing SDC copyright status",
+    "Mareca penelope",
+    "Self-published work",
+    "Self-published work missing SDC copyright license"
+   ],
+   "width": 4608,
+   "height": 3456,
+   "sha1": "3bbe06e7afe89f3be9f84cd192ade4aab9bdc7d3",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Samice_hv%C3%ADzd%C3%A1ka_eurasijsk%C3%A9ho_na_kameni.jpg/1280px-Samice_hv%C3%ADzd%C3%A1ka_eurasijsk%C3%A9ho_na_kameni.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [
+   "female"
+  ],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2296,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 0.999
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/plumage/sp167-adult.webp",
+  "species": "sp167",
+  "latin": "Thalasseus sandvicensis",
+  "app": {
+   "author": "Andreas Trepte",
+   "license": "CC BY-SA 2.5",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Sandwich_TernSterna_sandvicensis.jpg",
+  "src": {
+   "title": "File:Sandwich TernSterna sandvicensis.jpg",
+   "author": "Andreas Trepte",
+   "license": "CC BY-SA 2.5",
+   "description": "Sandwich Tern",
+   "objectName": "Sandwich TernSterna sandvicensis",
+   "categories": [
+    "Andreas Trepte",
+    "CC-BY-SA-2.5",
+    "Taken with Canon EOS-1D Mark IV",
+    "Thalasseus sandvicensis in flight with fish"
+   ],
+   "width": 3500,
+   "height": 2333,
+   "sha1": "37113ecdbc600636fc73bd42dc5c8dd1d62cb980",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Sandwich_TernSterna_sandvicensis.jpg/1280px-Sandwich_TernSterna_sandvicensis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 595,
+   "mirror": false,
+   "scale": 0.999,
+   "areaOfSource": 0.999
+  },
+  "sameShot": true,
+  "issues": []
+ }
+]
