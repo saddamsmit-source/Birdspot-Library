@@ -1,0 +1,26 @@
+name: Kandidaten ontbrekende juveniele foto (eenmalig)
+on:
+  push:
+    branches: [chore/source-audit]
+    paths: ["audit/juv_species.json", "audit/juv_candidates.py", ".github/workflows/juv-candidates.yml"]
+permissions:
+  contents: write
+concurrency: { group: source-audit-branch, cancel-in-progress: false }
+jobs:
+  juv:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install pillow==10.4.0
+      - run: python audit/juv_candidates.py
+      - name: Resultaat terugschrijven
+        run: |
+          mkdir -p audit/juv/sheets && cp -r audit/out_juv/* audit/juv/
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add audit/juv
+          git commit -m "kandidaten juveniel $(date -u +%FT%TZ)" || exit 0
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
