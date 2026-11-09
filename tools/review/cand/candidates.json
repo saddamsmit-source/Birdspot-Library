@@ -1,0 +1,2990 @@
+{
+ "sp005": [
+  {
+   "photoId": 295575233,
+   "observation": "https://www.inaturalist.org/observations/170417256",
+   "source": "https://www.inaturalist.org/photos/295575233",
+   "author": "(c) Gianluca Congi🪶🦆🌲, some rights reserved (CC BY-SA)",
+   "license": "cc-by-sa",
+   "annotations": {},
+   "place": "Parco nazionale della Sila",
+   "observedOn": "2023-06-29",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/295575233/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/295575233/large.jpeg",
+   "largeSize": [
+    1024,
+    821
+   ]
+  },
+  {
+   "photoId": 256554102,
+   "observation": "https://www.inaturalist.org/observations/148929587",
+   "source": "https://www.inaturalist.org/photos/256554102",
+   "author": "(c) Gianluca Congi🪶🦆🌲, some rights reserved (CC BY-SA)",
+   "license": "cc-by-sa",
+   "annotations": {},
+   "place": "San Giovanni in Fiore",
+   "observedOn": "2023-02-13",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/256554102/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/256554102/large.jpeg",
+   "largeSize": [
+    1024,
+    811
+   ]
+  },
+  {
+   "photoId": 196288227,
+   "observation": "https://www.inaturalist.org/observations/116293067",
+   "source": "https://www.inaturalist.org/photos/196288227",
+   "author": "(c) Simone Bocca, some rights reserved (CC BY-SA)",
+   "license": "cc-by-sa",
+   "annotations": {},
+   "place": "Provincia di Biella, Italia",
+   "observedOn": "2022-05-09",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/196288227/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/196288227/large.jpg",
+   "largeSize": [
+    1024,
+    711
+   ]
+  },
+  {
+   "photoId": 112563579,
+   "observation": "https://www.inaturalist.org/observations/69384883",
+   "source": "https://www.inaturalist.org/photos/112563579",
+   "author": "(c) Simone Bocca, some rights reserved (CC BY-SA)",
+   "license": "cc-by-sa",
+   "annotations": {},
+   "place": "Provincia di Biella, Italia",
+   "observedOn": "2021-02-10",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/112563579/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/112563579/large.jpg",
+   "largeSize": [
+    1024,
+    789
+   ]
+  },
+  {
+   "photoId": 291739391,
+   "observation": "https://www.inaturalist.org/observations/168347110",
+   "source": "https://www.inaturalist.org/photos/291739391",
+   "author": "(c) Gianluca Congi🪶🦆🌲, some rights reserved (CC BY-SA)",
+   "license": "cc-by-sa",
+   "annotations": {},
+   "place": "Sila",
+   "observedOn": "2023-06-17",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/291739391/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/291739391/large.jpeg",
+   "largeSize": [
+    1024,
+    843
+   ]
+  }
+ ],
+ "sp006": [
+  {
+   "photoId": 19906041,
+   "observation": "https://www.inaturalist.org/observations/13542723",
+   "source": "https://www.inaturalist.org/photos/19906041",
+   "author": "(c) Paul Lewis, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Maple Cross, UK",
+   "observedOn": "2018-03-20",
+   "faves": 3,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/19906041/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/19906041/large.jpg",
+   "largeSize": [
+    1024,
+    702
+   ]
+  },
+  {
+   "photoId": 203152920,
+   "observation": "https://www.inaturalist.org/observations/120131336",
+   "source": "https://www.inaturalist.org/photos/203152920",
+   "author": "(c) Julia Moning, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Au-Haidhausen, München, Deutschland",
+   "observedOn": "2022-06-01",
+   "faves": 2,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/203152920/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/203152920/large.jpeg",
+   "largeSize": [
+    1024,
+    683
+   ]
+  },
+  {
+   "photoId": 203152836,
+   "observation": "https://www.inaturalist.org/observations/120131335",
+   "source": "https://www.inaturalist.org/photos/203152836",
+   "author": "(c) Julia Moning, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Au-Haidhausen, München, Deutschland",
+   "observedOn": "2022-05-31",
+   "faves": 2,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/203152836/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/203152836/large.jpeg",
+   "largeSize": [
+    1024,
+    682
+   ]
+  },
+  {
+   "photoId": 334353669,
+   "observation": "https://www.inaturalist.org/observations/190695118",
+   "source": "https://www.inaturalist.org/photos/334353669",
+   "author": "no rights reserved",
+   "license": "cc0",
+   "annotations": {},
+   "place": "Sutton Coldfield B76 0BN, UK",
+   "observedOn": "2023-11-11",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/334353669/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/334353669/large.jpeg",
+   "largeSize": [
+    448,
+    1024
+   ]
+  },
+  {
+   "photoId": 182064198,
+   "observation": "https://www.inaturalist.org/observations/108165617",
+   "source": "https://www.inaturalist.org/photos/182064198",
+   "author": "(c) Dr. Nasser Halaweh, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Südstadt-Bult, Hanover, Germany",
+   "observedOn": "2021-12-31",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/182064198/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/182064198/large.jpeg",
+   "largeSize": [
+    1024,
+    768
+   ]
+  },
+  {
+   "photoId": 256944092,
+   "observation": "https://www.inaturalist.org/observations/149138443",
+   "source": "https://www.inaturalist.org/photos/256944092",
+   "author": "(c) Andrew Skotnicki, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Lower Ham Road, Kingston upon Thames, London, UK",
+   "observedOn": "2023-02-19",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/256944092/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/256944092/large.jpg",
+   "largeSize": [
+    1024,
+    682
+   ]
+  },
+  {
+   "photoId": 249516827,
+   "observation": "https://www.inaturalist.org/observations/145271854",
+   "source": "https://www.inaturalist.org/photos/249516827",
+   "author": "(c) William Stephens, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Steppingley, Bedford MK45, UK",
+   "observedOn": "2022-12-24",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/249516827/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/249516827/large.jpg",
+   "largeSize": [
+    682,
+    1024
+   ]
+  },
+  {
+   "photoId": 456848879,
+   "observation": "https://www.inaturalist.org/observations/254982919",
+   "source": "https://www.inaturalist.org/photos/456848879",
+   "author": "(c) franciscodocampo, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Teis, Vigo, Redondela, Pontevedra, España",
+   "observedOn": "2024-12-13",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/456848879/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/456848879/large.jpeg",
+   "largeSize": [
+    1024,
+    576
+   ]
+  }
+ ],
+ "sp007": [],
+ "sp008": [
+  {
+   "photoId": 255957127,
+   "observation": "https://www.inaturalist.org/observations/148613413",
+   "source": "https://www.inaturalist.org/photos/255957127",
+   "author": "no rights reserved",
+   "license": "cc0",
+   "annotations": {},
+   "place": "2770 Paço de Arcos, Portugal",
+   "observedOn": "2023-02-12",
+   "faves": 3,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/255957127/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/255957127/large.jpeg",
+   "largeSize": [
+    1024,
+    787
+   ]
+  },
+  {
+   "photoId": 187660947,
+   "observation": "https://www.inaturalist.org/observations/111181813",
+   "source": "https://www.inaturalist.org/photos/187660947",
+   "author": "(c) Codrin Bucur, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Zorilor, Cluj-Napoca, Romania",
+   "observedOn": "2022-04-11",
+   "faves": 3,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/187660947/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/187660947/large.jpeg",
+   "largeSize": [
+    1024,
+    684
+   ]
+  },
+  {
+   "photoId": 176132490,
+   "observation": "https://www.inaturalist.org/observations/105032479",
+   "source": "https://www.inaturalist.org/photos/176132490",
+   "author": "(c) Thorsten Hackbarth, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "86643 Rennertshofen, Deutschland",
+   "observedOn": "2022-01-16",
+   "faves": 2,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/176132490/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/176132490/large.jpeg",
+   "largeSize": [
+    1024,
+    860
+   ]
+  },
+  {
+   "photoId": 348277438,
+   "observation": "https://www.inaturalist.org/observations/197706012",
+   "source": "https://www.inaturalist.org/photos/348277438",
+   "author": "(c) Alexis Lours, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "95570 Bouffémont, France",
+   "observedOn": "2024-01-27",
+   "faves": 2,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/348277438/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/348277438/large.jpg",
+   "largeSize": [
+    1024,
+    683
+   ]
+  },
+  {
+   "photoId": 35474403,
+   "observation": "https://www.inaturalist.org/observations/22886408",
+   "source": "https://www.inaturalist.org/photos/35474403",
+   "author": "(c) Charlotte Kirchner, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Mandelbachtal, Deutschland",
+   "observedOn": "2019-04-22",
+   "faves": 2,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/35474403/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/35474403/large.jpeg",
+   "largeSize": [
+    1024,
+    678
+   ]
+  },
+  {
+   "photoId": 463582738,
+   "observation": "https://www.inaturalist.org/observations/258390559",
+   "source": "https://www.inaturalist.org/photos/463582738",
+   "author": "(c) Frank Dietze, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Altstadt, 99084 Erfurt, Germany",
+   "observedOn": "2024-04-30",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/463582738/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/463582738/large.jpg",
+   "largeSize": [
+    1024,
+    683
+   ]
+  },
+  {
+   "photoId": 257561981,
+   "observation": "https://www.inaturalist.org/observations/149467097",
+   "source": "https://www.inaturalist.org/photos/257561981",
+   "author": "(c) E. A., some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "7062 St. Margarethen im Burgenland, Österreich",
+   "observedOn": "2023-02-22",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/257561981/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/257561981/large.jpeg",
+   "largeSize": [
+    1024,
+    678
+   ]
+  },
+  {
+   "photoId": 382606588,
+   "observation": "https://www.inaturalist.org/observations/216344981",
+   "source": "https://www.inaturalist.org/photos/382606588",
+   "author": "(c) Jeff Jones, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Hertfordshire, UK",
+   "observedOn": "2024-05-17",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/382606588/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/382606588/large.jpg",
+   "largeSize": [
+    1024,
+    819
+   ]
+  }
+ ],
+ "sp009": [
+  {
+   "photoId": 414567658,
+   "observation": "https://www.inaturalist.org/observations/233282981",
+   "source": "https://www.inaturalist.org/photos/414567658",
+   "author": "(c) egorbirder, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Сергиево-Посадский р-н, Московская обл., Россия",
+   "observedOn": "2024-08-01",
+   "faves": 2,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/414567658/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/414567658/large.jpg",
+   "largeSize": [
+    1024,
+    682
+   ]
+  },
+  {
+   "photoId": 114327678,
+   "observation": "https://www.inaturalist.org/observations/70339860",
+   "source": "https://www.inaturalist.org/photos/114327678",
+   "author": "(c) Donald Davesne, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Ouessant, France",
+   "observedOn": "2021-02-25",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/114327678/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/114327678/large.jpg",
+   "largeSize": [
+    1024,
+    680
+   ]
+  },
+  {
+   "photoId": 183653971,
+   "observation": "https://www.inaturalist.org/observations/109013677",
+   "source": "https://www.inaturalist.org/photos/183653971",
+   "author": "(c) rober025, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Clausen",
+   "observedOn": "2022-03-18",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/183653971/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/183653971/large.jpeg",
+   "largeSize": [
+    1024,
+    683
+   ]
+  },
+  {
+   "photoId": 326274423,
+   "observation": "https://www.inaturalist.org/observations/186671486",
+   "source": "https://www.inaturalist.org/photos/326274423",
+   "author": "(c) Paulo Martins, some rights reserved (CC BY-SA)",
+   "license": "cc-by-sa",
+   "annotations": {},
+   "place": "8650 Sagres, Portugal",
+   "observedOn": "2023-10-05",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/326274423/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/326274423/large.jpeg",
+   "largeSize": [
+    1024,
+    549
+   ]
+  },
+  {
+   "photoId": 369779925,
+   "observation": "https://www.inaturalist.org/observations/208972138",
+   "source": "https://www.inaturalist.org/photos/369779925",
+   "author": "no rights reserved",
+   "license": "cc0",
+   "annotations": {},
+   "place": "Pedra da Nau, Portugal",
+   "observedOn": "2024-04-20",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/369779925/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/369779925/large.jpeg",
+   "largeSize": [
+    1024,
+    576
+   ]
+  },
+  {
+   "photoId": 209796651,
+   "observation": "https://www.inaturalist.org/observations/123815725",
+   "source": "https://www.inaturalist.org/photos/209796651",
+   "author": "(c) Morgan Caygill, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "North Atlantic Ocean, Bridlington, England, GB",
+   "observedOn": "2021-02-21",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/209796651/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/209796651/large.jpg",
+   "largeSize": [
+    747,
+    1024
+   ]
+  },
+  {
+   "photoId": 106328692,
+   "observation": "https://www.inaturalist.org/observations/66013499",
+   "source": "https://www.inaturalist.org/photos/106328692",
+   "author": "no rights reserved",
+   "license": "cc0",
+   "annotations": {},
+   "place": "20270 Aléria, Ranska",
+   "observedOn": "2011-04-03",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/106328692/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/106328692/large.jpeg",
+   "largeSize": [
+    1024,
+    666
+   ]
+  },
+  {
+   "photoId": 92961379,
+   "observation": "https://www.inaturalist.org/observations/58239041",
+   "source": "https://www.inaturalist.org/photos/92961379",
+   "author": "(c) Christoph Moning, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Apetlon, Österreich",
+   "observedOn": "2011-09-25",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/92961379/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/92961379/large.jpeg",
+   "largeSize": [
+    1024,
+    683
+   ]
+  }
+ ],
+ "sp016": [
+  {
+   "photoId": 351209552,
+   "observation": "https://www.inaturalist.org/observations/199177159",
+   "source": "https://www.inaturalist.org/photos/351209552",
+   "author": "(c) SteveM4560, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "4292 Dobri Dol, Bulgaria",
+   "observedOn": "2024-02-13",
+   "faves": 2,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/351209552/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/351209552/large.jpg",
+   "largeSize": [
+    1024,
+    768
+   ]
+  },
+  {
+   "photoId": 612889576,
+   "observation": "https://www.inaturalist.org/observations/337179988",
+   "source": "https://www.inaturalist.org/photos/612889576",
+   "author": "(c) Andrey Polstianoi, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Лесопарк, Харків, Харківська область, Украина, 61000",
+   "observedOn": "2026-02-03",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/612889576/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/612889576/large.jpg",
+   "largeSize": [
+    768,
+    1024
+   ]
+  },
+  {
+   "photoId": 130771987,
+   "observation": "https://www.inaturalist.org/observations/79824401",
+   "source": "https://www.inaturalist.org/photos/130771987",
+   "author": "(c) Codrin Bucur, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Gellert, 4052 Basel, Switzerland",
+   "observedOn": "2021-05-17",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/130771987/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/130771987/large.jpeg",
+   "largeSize": [
+    1024,
+    679
+   ]
+  },
+  {
+   "photoId": 361640118,
+   "observation": "https://www.inaturalist.org/observations/204588763",
+   "source": "https://www.inaturalist.org/photos/361640118",
+   "author": "(c) SteveM4560, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Parvomay, Bulgaria",
+   "observedOn": "2024-03-30",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/361640118/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/361640118/large.jpg",
+   "largeSize": [
+    1024,
+    768
+   ]
+  },
+  {
+   "photoId": 185921473,
+   "observation": "https://www.inaturalist.org/observations/110234256",
+   "source": "https://www.inaturalist.org/photos/185921473",
+   "author": "no rights reserved",
+   "license": "cc0",
+   "annotations": {},
+   "place": "Wormwood Scrubs, East Acton, Gtr London, UK",
+   "observedOn": "2022-03-15",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/185921473/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/185921473/large.jpeg",
+   "largeSize": [
+    1024,
+    682
+   ]
+  },
+  {
+   "photoId": 261865378,
+   "observation": "https://www.inaturalist.org/observations/151742582",
+   "source": "https://www.inaturalist.org/photos/261865378",
+   "author": "(c) E. A., some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Murtal, Österreich",
+   "observedOn": "2023-03-20",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/261865378/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/261865378/large.jpeg",
+   "largeSize": [
+    1024,
+    678
+   ]
+  },
+  {
+   "photoId": 393796710,
+   "observation": "https://www.inaturalist.org/observations/222317769",
+   "source": "https://www.inaturalist.org/photos/393796710",
+   "author": "(c) Gianluca Congi🪶🦆🌲, some rights reserved (CC BY-SA)",
+   "license": "cc-by-sa",
+   "annotations": {},
+   "place": "87055 San Giovanni in Fiore CS, Italia",
+   "observedOn": "2024-06-07",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/393796710/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/393796710/large.jpeg",
+   "largeSize": [
+    1024,
+    802
+   ]
+  },
+  {
+   "photoId": 748991442,
+   "observation": "https://www.inaturalist.org/observations/407563771",
+   "source": "https://www.inaturalist.org/photos/748991442",
+   "author": "(c) Edoardo Nardelli, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Hanko, Uusimaa, FI",
+   "observedOn": "2026-10-11",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/748991442/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/748991442/large.jpg",
+   "largeSize": [
+    768,
+    1024
+   ]
+  }
+ ],
+ "sp018": [
+  {
+   "photoId": 361645525,
+   "observation": "https://www.inaturalist.org/observations/204591714",
+   "source": "https://www.inaturalist.org/photos/361645525",
+   "author": "(c) SteveM4560, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Parvomay, Bulgaria",
+   "observedOn": "2024-03-30",
+   "faves": 2,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/361645525/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/361645525/large.jpg",
+   "largeSize": [
+    1024,
+    768
+   ]
+  },
+  {
+   "photoId": 361642516,
+   "observation": "https://www.inaturalist.org/observations/204590590",
+   "source": "https://www.inaturalist.org/photos/361642516",
+   "author": "(c) SteveM4560, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Parvomay, Bulgaria",
+   "observedOn": "2024-03-30",
+   "faves": 2,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/361642516/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/361642516/large.jpg",
+   "largeSize": [
+    1024,
+    768
+   ]
+  },
+  {
+   "photoId": 361644472,
+   "observation": "https://www.inaturalist.org/observations/204591218",
+   "source": "https://www.inaturalist.org/photos/361644472",
+   "author": "(c) SteveM4560, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Parvomay, Bulgaria",
+   "observedOn": "2024-03-30",
+   "faves": 2,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/361644472/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/361644472/large.jpg",
+   "largeSize": [
+    1024,
+    768
+   ]
+  },
+  {
+   "photoId": 389884529,
+   "observation": "https://www.inaturalist.org/observations/220224728",
+   "source": "https://www.inaturalist.org/photos/389884529",
+   "author": "(c) SteveM4560, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Parvomay, Bulgaria",
+   "observedOn": "2024-06-03",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/389884529/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/389884529/large.jpg",
+   "largeSize": [
+    1024,
+    768
+   ]
+  },
+  {
+   "photoId": 285685858,
+   "observation": "https://www.inaturalist.org/observations/165065983",
+   "source": "https://www.inaturalist.org/photos/285685858",
+   "author": "(c) Gianluca Congi🪶🦆🌲, some rights reserved (CC BY-SA)",
+   "license": "cc-by-sa",
+   "annotations": {},
+   "place": "Bocchigliero",
+   "observedOn": "2023-06-01",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/285685858/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/285685858/large.jpeg",
+   "largeSize": [
+    1024,
+    833
+   ]
+  },
+  {
+   "photoId": 621735709,
+   "observation": "https://www.inaturalist.org/observations/341518375",
+   "source": "https://www.inaturalist.org/photos/621735709",
+   "author": "(c) Константин Селивёрстов, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Глазовский р-н, республика Удмуртия, Россия",
+   "observedOn": "2026-03-06",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/621735709/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/621735709/large.jpg",
+   "largeSize": [
+    768,
+    1024
+   ]
+  },
+  {
+   "photoId": 117816375,
+   "observation": "https://www.inaturalist.org/observations/72279666",
+   "source": "https://www.inaturalist.org/photos/117816375",
+   "author": "(c) Сергей Неклюдов, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Советский р-н, Казань, Респ. Татарстан, Россия",
+   "observedOn": "2017-03-11",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/117816375/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/117816375/large.jpg",
+   "largeSize": [
+    768,
+    1024
+   ]
+  },
+  {
+   "photoId": 187299105,
+   "observation": "https://www.inaturalist.org/observations/110982444",
+   "source": "https://www.inaturalist.org/photos/187299105",
+   "author": "no rights reserved",
+   "license": "cc0",
+   "annotations": {},
+   "place": "Кировский р-н, Волгоград, Волгоградская обл., Россия",
+   "observedOn": "2022-04-10",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/187299105/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/187299105/large.jpeg",
+   "largeSize": [
+    1024,
+    576
+   ]
+  }
+ ],
+ "sp019": [
+  {
+   "photoId": 242668015,
+   "observation": "https://www.inaturalist.org/observations/141624066",
+   "source": "https://www.inaturalist.org/photos/242668015",
+   "author": "(c) Andrea Poggi, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Quartiere XII Gianicolense, Roma RM, Italia",
+   "observedOn": "2022-11-10",
+   "faves": 2,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/242668015/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/242668015/large.jpg",
+   "largeSize": [
+    820,
+    1024
+   ]
+  },
+  {
+   "photoId": 597294952,
+   "observation": "https://www.inaturalist.org/observations/329502960",
+   "source": "https://www.inaturalist.org/photos/597294952",
+   "author": "(c) Stephen M., some rights reserved (CC BY-SA)",
+   "license": "cc-by-sa",
+   "annotations": {},
+   "place": "Nunnery Lakes",
+   "observedOn": "2016-07-17",
+   "faves": 2,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/597294952/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/597294952/large.jpg",
+   "largeSize": [
+    977,
+    1024
+   ]
+  },
+  {
+   "photoId": 255640895,
+   "observation": "https://www.inaturalist.org/observations/148448012",
+   "source": "https://www.inaturalist.org/photos/255640895",
+   "author": "(c) SteveM4560, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "4292 Dobri Dol, Bulgaria",
+   "observedOn": "2020-09-19",
+   "faves": 2,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/255640895/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/255640895/large.jpg",
+   "largeSize": [
+    1024,
+    768
+   ]
+  },
+  {
+   "photoId": 550879372,
+   "observation": "https://www.inaturalist.org/observations/305525117",
+   "source": "https://www.inaturalist.org/photos/550879372",
+   "author": "(c) Paul Lewis, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Maple Cross, UK",
+   "observedOn": "2025-08-10",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/550879372/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/550879372/large.jpg",
+   "largeSize": [
+    1024,
+    699
+   ]
+  },
+  {
+   "photoId": 192276690,
+   "observation": "https://www.inaturalist.org/observations/113832077",
+   "source": "https://www.inaturalist.org/photos/192276690",
+   "author": "(c) Сергей Неклюдов, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Советский р-н, Казань, Респ. Татарстан, Россия",
+   "observedOn": "2022-04-30",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/192276690/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/192276690/large.jpg",
+   "largeSize": [
+    1024,
+    768
+   ]
+  },
+  {
+   "photoId": 61377876,
+   "observation": "https://www.inaturalist.org/observations/38604986",
+   "source": "https://www.inaturalist.org/photos/61377876",
+   "author": "(c) Karsten Rohweder, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Via da Sviamaint, Scuol, Graubünden (kanton), CH",
+   "observedOn": "2016-05-28",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/61377876/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/61377876/large.jpg",
+   "largeSize": [
+    1024,
+    768
+   ]
+  },
+  {
+   "photoId": 584527012,
+   "observation": "https://www.inaturalist.org/observations/323062720",
+   "source": "https://www.inaturalist.org/photos/584527012",
+   "author": "(c) Maciej Boenisch, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "05-800 Pruszków, Polska",
+   "observedOn": "2025-10-25",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/584527012/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/584527012/large.jpg",
+   "largeSize": [
+    1024,
+    731
+   ]
+  },
+  {
+   "photoId": 280892856,
+   "observation": "https://www.inaturalist.org/observations/162447710",
+   "source": "https://www.inaturalist.org/photos/280892856",
+   "author": "(c) saydelah, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Ornex, France",
+   "observedOn": "2023-05-14",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/280892856/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/280892856/large.jpg",
+   "largeSize": [
+    1024,
+    576
+   ]
+  }
+ ],
+ "sp035": [
+  {
+   "photoId": 136408520,
+   "observation": "https://www.inaturalist.org/observations/83075710",
+   "source": "https://www.inaturalist.org/photos/136408520",
+   "author": "(c) Donald Davesne, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "20170 Levie, France",
+   "observedOn": "2021-06-06",
+   "faves": 4,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/136408520/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/136408520/large.jpg",
+   "largeSize": [
+    1024,
+    681
+   ]
+  },
+  {
+   "photoId": 729609564,
+   "observation": "https://www.inaturalist.org/observations/397779576",
+   "source": "https://www.inaturalist.org/photos/729609564",
+   "author": "(c) Павел Кунгуров, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Северо-Восточный административный округ, Москва, Россия",
+   "observedOn": "2026-04-19",
+   "faves": 2,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/729609564/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/729609564/large.jpg",
+   "largeSize": [
+    1024,
+    1024
+   ]
+  },
+  {
+   "photoId": 681146589,
+   "observation": "https://www.inaturalist.org/observations/372742290",
+   "source": "https://www.inaturalist.org/photos/681146589",
+   "author": "(c) harry beaman, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Route de la Canourgue, La Malène, Occitanie, FR",
+   "observedOn": "2026-06-17",
+   "faves": 2,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/681146589/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/681146589/large.jpg",
+   "largeSize": [
+    1024,
+    827
+   ]
+  },
+  {
+   "photoId": 253882825,
+   "observation": "https://www.inaturalist.org/observations/147533979",
+   "source": "https://www.inaturalist.org/photos/253882825",
+   "author": "no rights reserved",
+   "license": "cc0",
+   "annotations": {},
+   "place": "Dumfries, UK",
+   "observedOn": "2023-01-28",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/253882825/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/253882825/large.jpeg",
+   "largeSize": [
+    1024,
+    824
+   ]
+  },
+  {
+   "photoId": 111424664,
+   "observation": "https://www.inaturalist.org/observations/68762984",
+   "source": "https://www.inaturalist.org/photos/111424664",
+   "author": "(c) Codrin Bucur, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Giassa, Zernez, Graubünden, CH",
+   "observedOn": "2021-01-29",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/111424664/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/111424664/large.jpg",
+   "largeSize": [
+    768,
+    1024
+   ]
+  },
+  {
+   "photoId": 362865565,
+   "observation": "https://www.inaturalist.org/observations/205236054",
+   "source": "https://www.inaturalist.org/photos/362865565",
+   "author": "(c) E. A., some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Murtal, Österreich",
+   "observedOn": "2024-04-03",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/362865565/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/362865565/large.jpeg",
+   "largeSize": [
+    1024,
+    876
+   ]
+  },
+  {
+   "photoId": 482507784,
+   "observation": "https://www.inaturalist.org/observations/268435340",
+   "source": "https://www.inaturalist.org/photos/482507784",
+   "author": "(c) Dave, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "ACP/HW, Wakefield, West Yorkshire, UK",
+   "observedOn": "2025-04-02",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/482507784/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/482507784/large.jpg",
+   "largeSize": [
+    1024,
+    683
+   ]
+  },
+  {
+   "photoId": 260371775,
+   "observation": "https://www.inaturalist.org/observations/150947090",
+   "source": "https://www.inaturalist.org/photos/260371775",
+   "author": "(c) Daniel Capilla, some rights reserved (CC BY-SA)",
+   "license": "cc-by-sa",
+   "annotations": {},
+   "place": "Jardín Botánico La Concepción, 29014 Málaga, España",
+   "observedOn": "2023-03-12",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/260371775/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/260371775/large.jpg",
+   "largeSize": [
+    1024,
+    768
+   ]
+  }
+ ],
+ "sp043": [
+  {
+   "photoId": 212832926,
+   "observation": "https://www.inaturalist.org/observations/125500734",
+   "source": "https://www.inaturalist.org/photos/212832926",
+   "author": "(c) carnifex, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Castle",
+   "observedOn": "2022-07-09",
+   "faves": 58,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/212832926/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/212832926/large.jpeg",
+   "largeSize": [
+    851,
+    1024
+   ]
+  },
+  {
+   "photoId": 107143486,
+   "observation": "https://www.inaturalist.org/observations/66460204",
+   "source": "https://www.inaturalist.org/photos/107143486",
+   "author": "no rights reserved",
+   "license": "cc0",
+   "annotations": {},
+   "place": "Tumba, Botkyrka, Sverige",
+   "observedOn": "2020-12-11",
+   "faves": 2,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/107143486/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/107143486/large.jpeg",
+   "largeSize": [
+    1024,
+    683
+   ]
+  },
+  {
+   "photoId": 163860605,
+   "observation": "https://www.inaturalist.org/observations/98424244",
+   "source": "https://www.inaturalist.org/photos/163860605",
+   "author": "(c) Donald Davesne, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Berliner Innenstadt, Berlin, Allemagne",
+   "observedOn": "2021-10-16",
+   "faves": 2,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/163860605/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/163860605/large.jpg",
+   "largeSize": [
+    1024,
+    681
+   ]
+  },
+  {
+   "photoId": 365602105,
+   "observation": "https://www.inaturalist.org/observations/206733638",
+   "source": "https://www.inaturalist.org/photos/365602105",
+   "author": "(c) SteveM4560, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "4292 Dobri Dol, Bulgaria",
+   "observedOn": "2024-04-11",
+   "faves": 2,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/365602105/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/365602105/large.jpg",
+   "largeSize": [
+    1024,
+    768
+   ]
+  },
+  {
+   "photoId": 61073182,
+   "observation": "https://www.inaturalist.org/observations/38429213",
+   "source": "https://www.inaturalist.org/photos/61073182",
+   "author": "(c) Alexis Tinker-Tsavalas, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Berliner Innenstadt, Berlin, Germany",
+   "observedOn": "2020-02-04",
+   "faves": 2,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/61073182/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/61073182/large.jpeg",
+   "largeSize": [
+    1024,
+    768
+   ]
+  },
+  {
+   "photoId": 122046189,
+   "observation": "https://www.inaturalist.org/observations/74660571",
+   "source": "https://www.inaturalist.org/photos/122046189",
+   "author": "no rights reserved",
+   "license": "cc0",
+   "annotations": {},
+   "place": "Aalburg, Noord-Brabant, Netherlands",
+   "observedOn": "2021-04-20",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/122046189/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/122046189/large.jpeg",
+   "largeSize": [
+    1024,
+    768
+   ]
+  },
+  {
+   "photoId": 121130768,
+   "observation": "https://www.inaturalist.org/observations/74135777",
+   "source": "https://www.inaturalist.org/photos/121130768",
+   "author": "(c) Barry Walter, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Footpath from Hammer Dyke to Five Oak Green, Five Oak Green",
+   "observedOn": "2021-03-30",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/121130768/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/121130768/large.jpg",
+   "largeSize": [
+    1024,
+    1024
+   ]
+  },
+  {
+   "photoId": 82722161,
+   "observation": "https://www.inaturalist.org/observations/52050185",
+   "source": "https://www.inaturalist.org/photos/82722161",
+   "author": "no rights reserved",
+   "license": "cc0",
+   "annotations": {},
+   "place": "Karoline Kristiansens vei, Oslo, Oslo, NO",
+   "observedOn": "2020-07-01",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/82722161/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/82722161/large.jpg",
+   "largeSize": [
+    858,
+    858
+   ]
+  }
+ ],
+ "sp045": [
+  {
+   "photoId": 31623386,
+   "observation": "https://www.inaturalist.org/observations/20490738",
+   "source": "https://www.inaturalist.org/photos/31623386",
+   "author": "(c) Alexis Tinker-Tsavalas, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Mitte, Berlin, Germany",
+   "observedOn": "2019-02-17",
+   "faves": 8,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/31623386/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/31623386/large.jpeg",
+   "largeSize": [
+    1024,
+    769
+   ]
+  },
+  {
+   "photoId": 186757278,
+   "observation": "https://www.inaturalist.org/observations/110684075",
+   "source": "https://www.inaturalist.org/photos/186757278",
+   "author": "(c) Codrin Bucur, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "4125 Riehen, Switzerland",
+   "observedOn": "2022-04-06",
+   "faves": 3,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/186757278/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/186757278/large.jpeg",
+   "largeSize": [
+    1024,
+    683
+   ]
+  },
+  {
+   "photoId": 271872096,
+   "observation": "https://www.inaturalist.org/observations/157225625",
+   "source": "https://www.inaturalist.org/photos/271872096",
+   "author": "(c) Bruno Peixoto, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Vila Real, Portugal",
+   "observedOn": "2023-04-08",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/271872096/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/271872096/large.jpg",
+   "largeSize": [
+    1024,
+    683
+   ]
+  },
+  {
+   "photoId": 115801325,
+   "observation": "https://www.inaturalist.org/observations/71155599",
+   "source": "https://www.inaturalist.org/photos/115801325",
+   "author": "no rights reserved",
+   "license": "cc0",
+   "annotations": {},
+   "place": "Bludenz, Österreich",
+   "observedOn": "2021-02-16",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/115801325/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/115801325/large.jpg",
+   "largeSize": [
+    1024,
+    684
+   ]
+  },
+  {
+   "photoId": 176249102,
+   "observation": "https://www.inaturalist.org/observations/105092522",
+   "source": "https://www.inaturalist.org/photos/176249102",
+   "author": "(c) Codrin Bucur, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Lindenweg, Basel, Basle, CH",
+   "observedOn": "2022-01-17",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/176249102/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/176249102/large.jpg",
+   "largeSize": [
+    768,
+    1024
+   ]
+  },
+  {
+   "photoId": 27031421,
+   "observation": "https://www.inaturalist.org/observations/17728029",
+   "source": "https://www.inaturalist.org/photos/27031421",
+   "author": "(c) Gianni Del Bufalo bygdb, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Via Gentile da Fabriano, 3, 60125 Ancona AN, Italia",
+   "observedOn": "2018-10-19",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/27031421/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/27031421/large.jpeg",
+   "largeSize": [
+    768,
+    1024
+   ]
+  },
+  {
+   "photoId": 688955708,
+   "observation": "https://www.inaturalist.org/observations/376789952",
+   "source": "https://www.inaturalist.org/photos/688955708",
+   "author": "(c) Gabriele Vaudano, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "13867 Pray BI, Italia",
+   "observedOn": "2026-06-20",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/688955708/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/688955708/large.jpg",
+   "largeSize": [
+    1024,
+    768
+   ]
+  },
+  {
+   "photoId": 387908385,
+   "observation": "https://www.inaturalist.org/observations/219172208",
+   "source": "https://www.inaturalist.org/photos/387908385",
+   "author": "(c) Zoltán Nagy, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Szeged, HU-CS, HU",
+   "observedOn": "2024-05-29",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/387908385/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/387908385/large.jpg",
+   "largeSize": [
+    1024,
+    768
+   ]
+  }
+ ],
+ "sp053": [
+  {
+   "photoId": 114669325,
+   "observation": "https://www.inaturalist.org/observations/70526018",
+   "source": "https://www.inaturalist.org/photos/114669325",
+   "author": "(c) Donald Davesne, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "29890 Kerlouan, France",
+   "observedOn": "2021-02-26",
+   "faves": 2,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/114669325/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/114669325/large.jpg",
+   "largeSize": [
+    1024,
+    783
+   ]
+  },
+  {
+   "photoId": 415324786,
+   "observation": "https://www.inaturalist.org/observations/233681697",
+   "source": "https://www.inaturalist.org/photos/415324786",
+   "author": "(c) SteveM4560, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Parvomay, Bulgaria",
+   "observedOn": "2024-07-30",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/415324786/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/415324786/large.jpg",
+   "largeSize": [
+    1024,
+    768
+   ]
+  },
+  {
+   "photoId": 185668959,
+   "observation": "https://www.inaturalist.org/observations/110096572",
+   "source": "https://www.inaturalist.org/photos/185668959",
+   "author": "(c) Phil James, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Newport, UK",
+   "observedOn": "2022-03-31",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/185668959/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/185668959/large.jpeg",
+   "largeSize": [
+    1024,
+    773
+   ]
+  },
+  {
+   "photoId": 94739435,
+   "observation": "https://www.inaturalist.org/observations/59298161",
+   "source": "https://www.inaturalist.org/photos/94739435",
+   "author": "(c) Paul Lewis, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Maple Cross, UK",
+   "observedOn": "2020-09-10",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/94739435/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/94739435/large.jpg",
+   "largeSize": [
+    1024,
+    649
+   ]
+  },
+  {
+   "photoId": 28848723,
+   "observation": "https://www.inaturalist.org/observations/18832894",
+   "source": "https://www.inaturalist.org/photos/28848723",
+   "author": "(c) carnifex, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Floridsdorf, 1210 Wien, Österreich",
+   "observedOn": "2016-10-16",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/28848723/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/28848723/large.jpg",
+   "largeSize": [
+    1024,
+    973
+   ]
+  },
+  {
+   "photoId": 243041006,
+   "observation": "https://www.inaturalist.org/observations/141832310",
+   "source": "https://www.inaturalist.org/photos/243041006",
+   "author": "(c) bitsnbirds, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Newcourt, Co. Wicklow, Ireland",
+   "observedOn": "2022-07-26",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/243041006/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/243041006/large.jpeg",
+   "largeSize": [
+    1024,
+    768
+   ]
+  },
+  {
+   "photoId": 170762022,
+   "observation": "https://www.inaturalist.org/observations/102184174",
+   "source": "https://www.inaturalist.org/photos/170762022",
+   "author": "(c) Phil James, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Newport, UK",
+   "observedOn": "2021-11-29",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/170762022/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/170762022/large.jpeg",
+   "largeSize": [
+    1024,
+    825
+   ]
+  },
+  {
+   "photoId": 350196421,
+   "observation": "https://www.inaturalist.org/observations/198661688",
+   "source": "https://www.inaturalist.org/photos/350196421",
+   "author": "(c) SteveM4560, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Parvomay, Bulgaria",
+   "observedOn": "2024-02-07",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/350196421/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/350196421/large.jpg",
+   "largeSize": [
+    1024,
+    768
+   ]
+  }
+ ],
+ "sp075": [
+  {
+   "photoId": 163772236,
+   "observation": "https://www.inaturalist.org/observations/98375354",
+   "source": "https://www.inaturalist.org/photos/163772236",
+   "author": "(c) Alexis Lours, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "92230 Gennevilliers, France",
+   "observedOn": "2021-10-16",
+   "faves": 5,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/163772236/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/163772236/large.jpg",
+   "largeSize": [
+    1024,
+    683
+   ]
+  },
+  {
+   "photoId": 347327856,
+   "observation": "https://www.inaturalist.org/observations/197233516",
+   "source": "https://www.inaturalist.org/photos/347327856",
+   "author": "(c) SteveM4560, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "4292 Dobri Dol, Bulgaria",
+   "observedOn": "2024-01-21",
+   "faves": 5,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/347327856/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/347327856/large.jpg",
+   "largeSize": [
+    1024,
+    768
+   ]
+  },
+  {
+   "photoId": 4172736,
+   "observation": "https://www.inaturalist.org/observations/3614281",
+   "source": "https://www.inaturalist.org/photos/4172736",
+   "author": "no rights reserved",
+   "license": "cc0",
+   "annotations": {},
+   "place": "Losser, Netherlands",
+   "observedOn": "2016-07-03",
+   "faves": 2,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/4172736/original.JPG",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/4172736/large.JPG",
+   "largeSize": [
+    1024,
+    738
+   ]
+  },
+  {
+   "photoId": 345689280,
+   "observation": "https://www.inaturalist.org/observations/196362581",
+   "source": "https://www.inaturalist.org/photos/345689280",
+   "author": "(c) Stephan Mende, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "31 Hildesheim, Germany",
+   "observedOn": "2024-01-11",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/345689280/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/345689280/large.jpeg",
+   "largeSize": [
+    1024,
+    1024
+   ]
+  },
+  {
+   "photoId": 755920976,
+   "observation": "https://www.inaturalist.org/observations/410957701",
+   "source": "https://www.inaturalist.org/photos/755920976",
+   "author": "(c) carnifex, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "St. Pölten, Österreich",
+   "observedOn": "2026-10-26",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/755920976/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/755920976/large.jpg",
+   "largeSize": [
+    1024,
+    968
+   ]
+  },
+  {
+   "photoId": 750395169,
+   "observation": "https://www.inaturalist.org/observations/408243779",
+   "source": "https://www.inaturalist.org/photos/750395169",
+   "author": "no rights reserved",
+   "license": "cc0",
+   "annotations": {},
+   "place": "Glasgow, UK",
+   "observedOn": "2026-10-14",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/750395169/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/750395169/large.jpg",
+   "largeSize": [
+    1024,
+    1024
+   ]
+  },
+  {
+   "photoId": 111201542,
+   "observation": "https://www.inaturalist.org/observations/68641927",
+   "source": "https://www.inaturalist.org/photos/111201542",
+   "author": "(c) Andrea, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Agnesviertel, Köln, Deutschland",
+   "observedOn": "2021-01-26",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/111201542/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/111201542/large.jpg",
+   "largeSize": [
+    1024,
+    767
+   ]
+  },
+  {
+   "photoId": 201481996,
+   "observation": "https://www.inaturalist.org/observations/119199799",
+   "source": "https://www.inaturalist.org/photos/201481996",
+   "author": "(c) Sem Khatov, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Вестлихе Форштадт, Потсдам, Германия",
+   "observedOn": "2022-05-29",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/201481996/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/201481996/large.jpg",
+   "largeSize": [
+    1024,
+    576
+   ]
+  }
+ ],
+ "sp091": [
+  {
+   "photoId": 60085010,
+   "observation": "https://www.inaturalist.org/observations/37850649",
+   "source": "https://www.inaturalist.org/photos/60085010",
+   "author": "(c) Mikhail Nevsky, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Юж. административный округ, Москва, Россия",
+   "observedOn": "2020-01-18",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/60085010/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/60085010/large.jpg",
+   "largeSize": [
+    1024,
+    732
+   ]
+  },
+  {
+   "photoId": 172420546,
+   "observation": "https://www.inaturalist.org/observations/103067146",
+   "source": "https://www.inaturalist.org/photos/172420546",
+   "author": "(c) Phil James, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Newport, UK",
+   "observedOn": "2021-12-14",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/172420546/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/172420546/large.jpeg",
+   "largeSize": [
+    1024,
+    698
+   ]
+  },
+  {
+   "photoId": 30200895,
+   "observation": "https://www.inaturalist.org/observations/19615137",
+   "source": "https://www.inaturalist.org/photos/30200895",
+   "author": "(c) Михаил Малышев, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Фрунзенский р-н, Владимир, Владимирская обл., Россия",
+   "observedOn": "2019-01-10",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/30200895/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/30200895/large.jpeg",
+   "largeSize": [
+    1024,
+    575
+   ]
+  },
+  {
+   "photoId": 170019469,
+   "observation": "https://www.inaturalist.org/observations/101782640",
+   "source": "https://www.inaturalist.org/photos/170019469",
+   "author": "(c) Phil James, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Newport, UK",
+   "observedOn": "2021-11-23",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/170019469/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/170019469/large.jpeg",
+   "largeSize": [
+    1024,
+    672
+   ]
+  },
+  {
+   "photoId": 515772021,
+   "observation": "https://www.inaturalist.org/observations/286874305",
+   "source": "https://www.inaturalist.org/photos/515772021",
+   "author": "(c) Сергей Неклюдов, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Волжский р-н, Респ. Марий Эл, Россия",
+   "observedOn": "2025-06-04",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/515772021/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/515772021/large.jpg",
+   "largeSize": [
+    1024,
+    768
+   ]
+  },
+  {
+   "photoId": 453336794,
+   "observation": "https://www.inaturalist.org/observations/253210397",
+   "source": "https://www.inaturalist.org/photos/453336794",
+   "author": "(c) Joss Carr, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "River Lea, Newham, London, UK",
+   "observedOn": "2024-11-22",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/453336794/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/453336794/large.jpeg",
+   "largeSize": [
+    1006,
+    754
+   ]
+  },
+  {
+   "photoId": 451978453,
+   "observation": "https://www.inaturalist.org/observations/252478600",
+   "source": "https://www.inaturalist.org/photos/451978453",
+   "author": "(c) Julien Fougeroux, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "49610 Mûrs-Erigné, France",
+   "observedOn": "2023-02-18",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/451978453/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/451978453/large.jpeg",
+   "largeSize": [
+    1024,
+    684
+   ]
+  },
+  {
+   "photoId": 446996222,
+   "observation": "https://www.inaturalist.org/observations/249990505",
+   "source": "https://www.inaturalist.org/photos/446996222",
+   "author": "(c) Martin Jung, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "QWQ5+RR, 7161 St. Andrä am Zicksee, Österreich",
+   "observedOn": "2024-11-01",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/446996222/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/446996222/large.jpeg",
+   "largeSize": [
+    576,
+    1024
+   ]
+  }
+ ],
+ "sp092": [
+  {
+   "photoId": 6548618,
+   "observation": "https://www.inaturalist.org/observations/5292868",
+   "source": "https://www.inaturalist.org/photos/6548618",
+   "author": "(c) Justin, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Hellusund 101 Reykjavík",
+   "observedOn": "2017-03-12",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/6548618/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/6548618/large.jpg",
+   "largeSize": [
+    88,
+    88
+   ]
+  },
+  {
+   "photoId": 113803721,
+   "observation": "https://www.inaturalist.org/observations/70050197",
+   "source": "https://www.inaturalist.org/photos/113803721",
+   "author": "(c) Donald Davesne, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Brest, France",
+   "observedOn": "2021-02-22",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/113803721/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/113803721/large.jpg",
+   "largeSize": [
+    1024,
+    750
+   ]
+  },
+  {
+   "photoId": 115815424,
+   "observation": "https://www.inaturalist.org/observations/71162578",
+   "source": "https://www.inaturalist.org/photos/115815424",
+   "author": "(c) Tomas Broucek, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "149 00 Praha-Újezd, Česko",
+   "observedOn": "2021-03-13",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/115815424/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/115815424/large.jpeg",
+   "largeSize": [
+    1024,
+    683
+   ]
+  },
+  {
+   "photoId": 5537306,
+   "observation": "https://www.inaturalist.org/observations/4583753",
+   "source": "https://www.inaturalist.org/photos/5537306",
+   "author": "(c) Justin Johnsen, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Battersea Park",
+   "observedOn": "2016-11-13",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/5537306/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/5537306/large.jpg",
+   "largeSize": [
+    1024,
+    671
+   ]
+  },
+  {
+   "photoId": 259001604,
+   "observation": "https://www.inaturalist.org/observations/150231435",
+   "source": "https://www.inaturalist.org/photos/259001604",
+   "author": "(c) Tim Worwood, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Pelsall, Walsall, UK",
+   "observedOn": "2023-03-04",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/259001604/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/259001604/large.jpg",
+   "largeSize": [
+    1024,
+    576
+   ]
+  },
+  {
+   "photoId": 85764400,
+   "observation": "https://www.inaturalist.org/observations/53913792",
+   "source": "https://www.inaturalist.org/photos/85764400",
+   "author": "(c) Lars Falkdalen Lindahl, some rights reserved (CC BY-SA)",
+   "license": "cc-by-sa",
+   "annotations": {},
+   "place": "Åre SV, Sweden",
+   "observedOn": "2020-06-17",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/85764400/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/85764400/large.jpg",
+   "largeSize": [
+    1024,
+    742
+   ]
+  },
+  {
+   "photoId": 480941723,
+   "observation": "https://www.inaturalist.org/observations/267612109",
+   "source": "https://www.inaturalist.org/photos/480941723",
+   "author": "no rights reserved",
+   "license": "cc0",
+   "annotations": {},
+   "place": "Portugal",
+   "observedOn": "2025-03-29",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/480941723/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/480941723/large.jpg",
+   "largeSize": [
+    1024,
+    768
+   ]
+  },
+  {
+   "photoId": 188055616,
+   "observation": "https://www.inaturalist.org/observations/111401028",
+   "source": "https://www.inaturalist.org/photos/188055616",
+   "author": "(c) Donald Davesne, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Londres, Royaume-Uni",
+   "observedOn": "2022-04-10",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/188055616/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/188055616/large.jpg",
+   "largeSize": [
+    1024,
+    681
+   ]
+  }
+ ],
+ "sp128": [
+  {
+   "photoId": 627686308,
+   "observation": "https://www.inaturalist.org/observations/344490260",
+   "source": "https://www.inaturalist.org/photos/627686308",
+   "author": "(c) Kostas Zontanos, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Central Macedonia, Greece",
+   "observedOn": "2026-03-20",
+   "faves": 2,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/627686308/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/627686308/large.jpg",
+   "largeSize": [
+    1024,
+    793
+   ]
+  },
+  {
+   "photoId": 116965613,
+   "observation": "https://www.inaturalist.org/observations/71805252",
+   "source": "https://www.inaturalist.org/photos/116965613",
+   "author": "(c) William Stephens, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Bedfordshire, England, United Kingdom",
+   "observedOn": "2021-03-22",
+   "faves": 2,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/116965613/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/116965613/large.jpg",
+   "largeSize": [
+    1024,
+    768
+   ]
+  },
+  {
+   "photoId": 657419271,
+   "observation": "https://www.inaturalist.org/observations/360291076",
+   "source": "https://www.inaturalist.org/photos/657419271",
+   "author": "(c) Mikael Nyman, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Parainen, Jurmo, Suomi",
+   "observedOn": "2026-05-09",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/657419271/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/657419271/large.jpg",
+   "largeSize": [
+    1024,
+    695
+   ]
+  },
+  {
+   "photoId": 182842709,
+   "observation": "https://www.inaturalist.org/observations/108581038",
+   "source": "https://www.inaturalist.org/photos/182842709",
+   "author": "(c) richyfourtytwo, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Nordfriesland, Schleswig-Holstein, Germany",
+   "observedOn": "2022-03-14",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/182842709/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/182842709/large.jpg",
+   "largeSize": [
+    370,
+    310
+   ]
+  },
+  {
+   "photoId": 508016839,
+   "observation": "https://www.inaturalist.org/observations/282755854",
+   "source": "https://www.inaturalist.org/photos/508016839",
+   "author": "(c) olmagon, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Cley Marshes, Norfolk, UK",
+   "observedOn": "2025-05-13",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/508016839/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/508016839/large.jpg",
+   "largeSize": [
+    705,
+    545
+   ]
+  },
+  {
+   "photoId": 272777603,
+   "observation": "https://www.inaturalist.org/observations/157809159",
+   "source": "https://www.inaturalist.org/photos/272777603",
+   "author": "(c) Micha Baum, some rights reserved (CC BY-SA)",
+   "license": "cc-by-sa",
+   "annotations": {},
+   "place": "24229 Strande, Deutschland",
+   "observedOn": "2023-04-29",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/272777603/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/272777603/large.jpeg",
+   "largeSize": [
+    935,
+    932
+   ]
+  },
+  {
+   "photoId": 510918077,
+   "observation": "https://www.inaturalist.org/observations/284301588",
+   "source": "https://www.inaturalist.org/photos/510918077",
+   "author": "no rights reserved",
+   "license": "cc0",
+   "annotations": {},
+   "place": "Gwynedd, UK",
+   "observedOn": "2025-05-22",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/510918077/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/510918077/large.jpg",
+   "largeSize": [
+    1024,
+    768
+   ]
+  },
+  {
+   "photoId": 507469683,
+   "observation": "https://www.inaturalist.org/observations/282465522",
+   "source": "https://www.inaturalist.org/photos/507469683",
+   "author": "(c) olmagon, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Cley Marshes, Norfolk, UK",
+   "observedOn": "2025-05-13",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/507469683/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/507469683/large.jpg",
+   "largeSize": [
+    1024,
+    757
+   ]
+  }
+ ],
+ "sp129": [
+  {
+   "photoId": 181992821,
+   "observation": "https://www.inaturalist.org/observations/108127741",
+   "source": "https://www.inaturalist.org/photos/181992821",
+   "author": "(c) Phil James, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Newport, UK",
+   "observedOn": "2022-03-07",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/181992821/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/181992821/large.jpeg",
+   "largeSize": [
+    1024,
+    715
+   ]
+  },
+  {
+   "photoId": 504511919,
+   "observation": "https://www.inaturalist.org/observations/280879489",
+   "source": "https://www.inaturalist.org/photos/504511919",
+   "author": "(c) Priya Sandhu, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Beechbank Road, Liverpool, England, GB",
+   "observedOn": "2025-05-12",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/504511919/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/504511919/large.jpg",
+   "largeSize": [
+    1024,
+    683
+   ]
+  },
+  {
+   "photoId": 723166295,
+   "observation": "https://www.inaturalist.org/observations/394465984",
+   "source": "https://www.inaturalist.org/photos/723166295",
+   "author": "no rights reserved",
+   "license": "cc0",
+   "annotations": {},
+   "place": "Queen Elizabeth Walk, London, England, GB",
+   "observedOn": "2026-08-25",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/723166295/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/723166295/large.jpg",
+   "largeSize": [
+    1024,
+    768
+   ]
+  },
+  {
+   "photoId": 580926263,
+   "observation": "https://www.inaturalist.org/observations/321234277",
+   "source": "https://www.inaturalist.org/photos/580926263",
+   "author": "(c) Phil James, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "West Harptree, Bristol BS40, UK",
+   "observedOn": "2025-10-14",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/580926263/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/580926263/large.jpg",
+   "largeSize": [
+    1024,
+    768
+   ]
+  },
+  {
+   "photoId": 612725362,
+   "observation": "https://www.inaturalist.org/observations/337099032",
+   "source": "https://www.inaturalist.org/photos/612725362",
+   "author": "(c) tobijw, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "45 Mülheim an der Ruhr, Deutschland",
+   "observedOn": "2026-02-02",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/612725362/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/612725362/large.jpg",
+   "largeSize": [
+    1024,
+    683
+   ]
+  },
+  {
+   "photoId": 442832402,
+   "observation": "https://www.inaturalist.org/observations/247894023",
+   "source": "https://www.inaturalist.org/photos/442832402",
+   "author": "(c) Brenda Black, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "80 München-Neuhausen-Nymphenburg, Deutschland",
+   "observedOn": "2024-10-18",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/442832402/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/442832402/large.jpeg",
+   "largeSize": [
+    1024,
+    828
+   ]
+  },
+  {
+   "photoId": 660697116,
+   "observation": "https://www.inaturalist.org/observations/362009653",
+   "source": "https://www.inaturalist.org/photos/660697116",
+   "author": "(c) Dave, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "RSPB St Aidan's, West Yorkshire, UK",
+   "observedOn": "2026-04-03",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/660697116/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/660697116/large.jpg",
+   "largeSize": [
+    1024,
+    683
+   ]
+  },
+  {
+   "photoId": 491761744,
+   "observation": "https://www.inaturalist.org/observations/273420633",
+   "source": "https://www.inaturalist.org/photos/491761744",
+   "author": "(c) Rhys, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "PHQQ+PH, Gloucester GL2 7BT, UK",
+   "observedOn": "2025-04-23",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/491761744/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/491761744/large.jpeg",
+   "largeSize": [
+    1024,
+    768
+   ]
+  }
+ ],
+ "sp173": [
+  {
+   "photoId": 283322176,
+   "observation": "https://www.inaturalist.org/observations/163784184",
+   "source": "https://www.inaturalist.org/photos/283322176",
+   "author": "(c) Roy Lowry, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "RSBP Leighton Moss",
+   "observedOn": "2023-05-15",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/283322176/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/283322176/large.jpeg",
+   "largeSize": [
+    1024,
+    683
+   ]
+  },
+  {
+   "photoId": 128080168,
+   "observation": "https://www.inaturalist.org/observations/78275405",
+   "source": "https://www.inaturalist.org/photos/128080168",
+   "author": "(c) rober025, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Remerschen ",
+   "observedOn": "2021-05-02",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/128080168/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/128080168/large.jpeg",
+   "largeSize": [
+    640,
+    433
+   ]
+  },
+  {
+   "photoId": 273513181,
+   "observation": "https://www.inaturalist.org/observations/158261016",
+   "source": "https://www.inaturalist.org/photos/273513181",
+   "author": "(c) Philip Schaffer, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Neusiedl am See, Österreich",
+   "observedOn": "2023-04-30",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/273513181/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/273513181/large.jpeg",
+   "largeSize": [
+    1024,
+    959
+   ]
+  },
+  {
+   "photoId": 273513434,
+   "observation": "https://www.inaturalist.org/observations/158261033",
+   "source": "https://www.inaturalist.org/photos/273513434",
+   "author": "(c) Philip Schaffer, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Neusiedl am See, Österreich",
+   "observedOn": "2023-04-30",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/273513434/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/273513434/large.jpeg",
+   "largeSize": [
+    1024,
+    989
+   ]
+  },
+  {
+   "photoId": 135757409,
+   "observation": "https://www.inaturalist.org/observations/82701799",
+   "source": "https://www.inaturalist.org/photos/135757409",
+   "author": "(c) Марат Адиев, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Чекмагушевский р-н, Респ. Башкортостан, Россия",
+   "observedOn": "2021-05-28",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/135757409/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/135757409/large.jpeg",
+   "largeSize": [
+    1024,
+    768
+   ]
+  },
+  {
+   "photoId": 14463092,
+   "observation": "https://www.inaturalist.org/observations/10413256",
+   "source": "https://www.inaturalist.org/photos/14463092",
+   "author": "(c) carnifex, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Eisenstadt-Umgebung, Österreich",
+   "observedOn": "2018-03-25",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/14463092/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/14463092/large.jpg",
+   "largeSize": [
+    1024,
+    794
+   ]
+  },
+  {
+   "photoId": 346659439,
+   "observation": "https://www.inaturalist.org/observations/196904105",
+   "source": "https://www.inaturalist.org/photos/346659439",
+   "author": "(c) Nuno Fialho, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Castro Verde, 7780, Portugal",
+   "observedOn": "2024-01-15",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/346659439/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/346659439/large.jpg",
+   "largeSize": [
+    1024,
+    1024
+   ]
+  },
+  {
+   "photoId": 419863426,
+   "observation": "https://www.inaturalist.org/observations/236033362",
+   "source": "https://www.inaturalist.org/photos/419863426",
+   "author": "(c) Aurelijus Narbutas, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "71284, Lietuva",
+   "observedOn": "2024-08-16",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/419863426/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/419863426/large.jpeg",
+   "largeSize": [
+    768,
+    1024
+   ]
+  }
+ ],
+ "sp188": [
+  {
+   "photoId": 480949444,
+   "observation": "https://www.inaturalist.org/observations/267615962",
+   "source": "https://www.inaturalist.org/photos/480949444",
+   "author": "(c) Diego González Dopico, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Fray Albino, Sur, 14009 Córdoba, España",
+   "observedOn": "2025-03-28",
+   "faves": 2,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/480949444/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/480949444/large.jpg",
+   "largeSize": [
+    1024,
+    683
+   ]
+  },
+  {
+   "photoId": 374501053,
+   "observation": "https://www.inaturalist.org/observations/211884364",
+   "source": "https://www.inaturalist.org/photos/374501053",
+   "author": "(c) Dave, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Manvers, Wath upon Dearne, Rotherham S63 7GH,",
+   "observedOn": "2024-04-29",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/374501053/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/374501053/large.jpg",
+   "largeSize": [
+    1024,
+    683
+   ]
+  },
+  {
+   "photoId": 523530554,
+   "observation": "https://www.inaturalist.org/observations/203635440",
+   "source": "https://www.inaturalist.org/photos/523530554",
+   "author": "(c) Jan Ebr &amp; Ivana Ebrová, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "2272 Ringelsdorf-Niederabsdorf, Austria",
+   "observedOn": "2024-03-22",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/523530554/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/523530554/large.jpg",
+   "largeSize": [
+    386,
+    385
+   ]
+  },
+  {
+   "photoId": 71960425,
+   "observation": "https://www.inaturalist.org/observations/45383337",
+   "source": "https://www.inaturalist.org/photos/71960425",
+   "author": "(c) Vsevolod Rudyi, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Прионежский р-н, Респ. Карелия, Россия",
+   "observedOn": "2020-05-09",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/71960425/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/71960425/large.jpeg",
+   "largeSize": [
+    1024,
+    683
+   ]
+  },
+  {
+   "photoId": 507499166,
+   "observation": "https://www.inaturalist.org/observations/282483449",
+   "source": "https://www.inaturalist.org/photos/507499166",
+   "author": "(c) Diego González Dopico, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Ciudad Real, España",
+   "observedOn": "2025-05-18",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/507499166/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/507499166/large.jpg",
+   "largeSize": [
+    1024,
+    683
+   ]
+  },
+  {
+   "photoId": 382538464,
+   "observation": "https://www.inaturalist.org/observations/216306528",
+   "source": "https://www.inaturalist.org/photos/382538464",
+   "author": "(c) Валерия Ковалева, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Ивановская обл., Россия, 155065",
+   "observedOn": "2024-05-15",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/382538464/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/382538464/large.jpeg",
+   "largeSize": [
+    1024,
+    683
+   ]
+  },
+  {
+   "photoId": 661242350,
+   "observation": "https://www.inaturalist.org/observations/362294482",
+   "source": "https://www.inaturalist.org/photos/661242350",
+   "author": "(c) Константин Селивёрстов, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Глазовский р-н, республика Удмуртия, Россия",
+   "observedOn": "2026-05-17",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/661242350/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/661242350/large.jpg",
+   "largeSize": [
+    1024,
+    683
+   ]
+  },
+  {
+   "photoId": 188593569,
+   "observation": "https://www.inaturalist.org/observations/111703517",
+   "source": "https://www.inaturalist.org/photos/188593569",
+   "author": "(c) Donald Davesne, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Oxford, Royaume-Uni",
+   "observedOn": "2022-04-13",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/188593569/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/188593569/large.jpg",
+   "largeSize": [
+    1024,
+    681
+   ]
+  }
+ ],
+ "sp206": [],
+ "sp248": [
+  {
+   "photoId": 554134012,
+   "observation": "https://www.inaturalist.org/observations/307231752",
+   "source": "https://www.inaturalist.org/photos/554134012",
+   "author": "(c) David Pereira, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Aveiro, PT",
+   "observedOn": "2025-08-16",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/554134012/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/554134012/large.jpg",
+   "largeSize": [
+    1024,
+    898
+   ]
+  },
+  {
+   "photoId": 686080701,
+   "observation": "https://www.inaturalist.org/observations/375305950",
+   "source": "https://www.inaturalist.org/photos/686080701",
+   "author": "(c) Марина Садыкова, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Дмитровский муниципальный округ, Московская обл., Россия",
+   "observedOn": "2026-06-25",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/686080701/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/686080701/large.jpg",
+   "largeSize": [
+    1024,
+    829
+   ]
+  },
+  {
+   "photoId": 314595647,
+   "observation": "https://www.inaturalist.org/observations/180586895",
+   "source": "https://www.inaturalist.org/photos/314595647",
+   "author": "(c) Шальнов Кирилл, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Володарский р-н, Нижегородская обл., Россия",
+   "observedOn": "2023-08-27",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/314595647/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/314595647/large.jpg",
+   "largeSize": [
+    1024,
+    682
+   ]
+  },
+  {
+   "photoId": 403363374,
+   "observation": "https://www.inaturalist.org/observations/227384392",
+   "source": "https://www.inaturalist.org/photos/403363374",
+   "author": "(c) Alex Stach, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Milovice, Czechia",
+   "observedOn": "2024-06-20",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/403363374/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/403363374/large.jpg",
+   "largeSize": [
+    1024,
+    683
+   ]
+  },
+  {
+   "photoId": 204335214,
+   "observation": "https://www.inaturalist.org/observations/120788543",
+   "source": "https://www.inaturalist.org/photos/204335214",
+   "author": "(c) Gianluca Congi🪶🦆🌲, some rights reserved (CC BY-SA)",
+   "license": "cc-by-sa",
+   "annotations": {},
+   "place": "Parco Nazionale della Sila",
+   "observedOn": "2022-06-03",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/204335214/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/204335214/large.jpeg",
+   "largeSize": [
+    1024,
+    864
+   ]
+  },
+  {
+   "photoId": 509595337,
+   "observation": "https://www.inaturalist.org/observations/283593518",
+   "source": "https://www.inaturalist.org/photos/509595337",
+   "author": "no rights reserved",
+   "license": "cc0",
+   "annotations": {},
+   "place": "Florești, Cluj, RO",
+   "observedOn": "2025-05-24",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/509595337/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/509595337/large.jpg",
+   "largeSize": [
+    1024,
+    683
+   ]
+  },
+  {
+   "photoId": 549028405,
+   "observation": "https://www.inaturalist.org/observations/304555133",
+   "source": "https://www.inaturalist.org/photos/549028405",
+   "author": "no rights reserved",
+   "license": "cc0",
+   "annotations": {},
+   "place": "Le Moulin de Pensol, de Pensol, 1 Le Moulin, 87440 Pensol, France",
+   "observedOn": "2025-07-31",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/549028405/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/549028405/large.jpg",
+   "largeSize": [
+    1024,
+    635
+   ]
+  },
+  {
+   "photoId": 425835431,
+   "observation": "https://www.inaturalist.org/observations/239140910",
+   "source": "https://www.inaturalist.org/photos/425835431",
+   "author": "(c) Andrew Bazdyrev, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Мезенский р-н, Архангельская обл., Россия",
+   "observedOn": "2024-07-02",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/425835431/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/425835431/large.jpg",
+   "largeSize": [
+    1024,
+    683
+   ]
+  }
+ ],
+ "sp249": [
+  {
+   "photoId": 253964018,
+   "observation": "https://www.inaturalist.org/observations/147577169",
+   "source": "https://www.inaturalist.org/photos/253964018",
+   "author": "(c) Benny Albro, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Big Island, Co. Wexford, Ireland",
+   "observedOn": "2020-02-08",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/253964018/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/253964018/large.jpg",
+   "largeSize": [
+    1024,
+    762
+   ]
+  },
+  {
+   "photoId": 323070964,
+   "observation": "https://www.inaturalist.org/observations/185027148",
+   "source": "https://www.inaturalist.org/photos/323070964",
+   "author": "(c) Andreas Eriksson, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Östersund, Sverige",
+   "observedOn": "2023-09-10",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/323070964/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/323070964/large.jpg",
+   "largeSize": [
+    749,
+    1024
+   ]
+  },
+  {
+   "photoId": 727282720,
+   "observation": "https://www.inaturalist.org/observations/396578113",
+   "source": "https://www.inaturalist.org/photos/727282720",
+   "author": "(c) relew, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Респ. Татарстан, Россия, 423113",
+   "observedOn": "2026-09-02",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/727282720/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/727282720/large.jpg",
+   "largeSize": [
+    576,
+    1024
+   ]
+  },
+  {
+   "photoId": 703821873,
+   "observation": "https://www.inaturalist.org/observations/384490521",
+   "source": "https://www.inaturalist.org/photos/703821873",
+   "author": "(c) Константин Селивёрстов, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Глазовский р-н, республика Удмуртия, Россия",
+   "observedOn": "2026-07-24",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/703821873/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/703821873/large.jpg",
+   "largeSize": [
+    1024,
+    683
+   ]
+  },
+  {
+   "photoId": 612194872,
+   "observation": "https://www.inaturalist.org/observations/336839518",
+   "source": "https://www.inaturalist.org/photos/612194872",
+   "author": "(c) Thorsten Hackbarth, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Bayern, DE",
+   "observedOn": "2021-01-02",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/612194872/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/612194872/large.jpg",
+   "largeSize": [
+    840,
+    725
+   ]
+  },
+  {
+   "photoId": 254457918,
+   "observation": "https://www.inaturalist.org/observations/147835470",
+   "source": "https://www.inaturalist.org/photos/254457918",
+   "author": "(c) Yann Geshors, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "34420 Villeneuve-lès-Béziers, France",
+   "observedOn": "2023-02-01",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/254457918/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/254457918/large.jpg",
+   "largeSize": [
+    1024,
+    683
+   ]
+  },
+  {
+   "photoId": 382118752,
+   "observation": "https://www.inaturalist.org/observations/216094092",
+   "source": "https://www.inaturalist.org/photos/382118752",
+   "author": "(c) Константин Селивёрстов, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Глазовский р-н, республика Удмуртия, Россия",
+   "observedOn": "2024-05-16",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/382118752/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/382118752/large.jpg",
+   "largeSize": [
+    1024,
+    683
+   ]
+  },
+  {
+   "photoId": 269012587,
+   "observation": "https://www.inaturalist.org/observations/155613299",
+   "source": "https://www.inaturalist.org/photos/269012587",
+   "author": "(c) Борис Георги, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Первомайский р-н, Ижевск, республика Удмуртия, Россия",
+   "observedOn": "2023-04-19",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/269012587/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/269012587/large.jpg",
+   "largeSize": [
+    1024,
+    768
+   ]
+  }
+ ],
+ "sp250": [
+  {
+   "photoId": 66640272,
+   "observation": "https://www.inaturalist.org/observations/41989769",
+   "source": "https://www.inaturalist.org/photos/66640272",
+   "author": "(c) Vsevolod Rudyi, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Prionezhskiy rayon, RU-KI, RU",
+   "observedOn": "2020-04-12",
+   "faves": 2,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/66640272/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/66640272/large.jpeg",
+   "largeSize": [
+    1024,
+    683
+   ]
+  },
+  {
+   "photoId": 532410732,
+   "observation": "https://www.inaturalist.org/observations/295729608",
+   "source": "https://www.inaturalist.org/photos/532410732",
+   "author": "(c) Mikael Nyman, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Southwest Finland, FI-LS, FI",
+   "observedOn": "2025-07-06",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/532410732/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/532410732/large.jpg",
+   "largeSize": [
+    1024,
+    682
+   ]
+  },
+  {
+   "photoId": 432027285,
+   "observation": "https://www.inaturalist.org/observations/242337596",
+   "source": "https://www.inaturalist.org/photos/432027285",
+   "author": "(c) Nathan Mesnildrey, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Nordrhein-Westfalen, DE",
+   "observedOn": "2024-09-17",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/432027285/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/432027285/large.jpg",
+   "largeSize": [
+    1024,
+    682
+   ]
+  },
+  {
+   "photoId": 123833100,
+   "observation": "https://www.inaturalist.org/observations/75674987",
+   "source": "https://www.inaturalist.org/photos/123833100",
+   "author": "(c) Mikael Nyman, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Southwest Finland, FI-LS, FI",
+   "observedOn": "2013-08-22",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/123833100/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/123833100/large.jpeg",
+   "largeSize": [
+    1024,
+    683
+   ]
+  },
+  {
+   "photoId": 582300769,
+   "observation": "https://www.inaturalist.org/observations/321939654",
+   "source": "https://www.inaturalist.org/photos/582300769",
+   "author": "(c) Gianluca Congi🪶🦆🌲, some rights reserved (CC BY-SA)",
+   "license": "cc-by-sa",
+   "annotations": {},
+   "place": "Sila Grande",
+   "observedOn": "2025-10-01",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/582300769/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/582300769/large.jpg",
+   "largeSize": [
+    1024,
+    837
+   ]
+  },
+  {
+   "photoId": 91129196,
+   "observation": "https://www.inaturalist.org/observations/57146882",
+   "source": "https://www.inaturalist.org/photos/91129196",
+   "author": "(c) Thomas Galewski, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Arles, France",
+   "observedOn": "2018-12-26",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/91129196/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/91129196/large.jpg",
+   "largeSize": [
+    1024,
+    683
+   ]
+  },
+  {
+   "photoId": 265234280,
+   "observation": "https://www.inaturalist.org/observations/153558566",
+   "source": "https://www.inaturalist.org/photos/265234280",
+   "author": "(c) Константин Селивёрстов, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Glazovskiy rayon, RU-UD, RU",
+   "observedOn": "2023-04-05",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/265234280/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/265234280/large.jpg",
+   "largeSize": [
+    1024,
+    683
+   ]
+  },
+  {
+   "photoId": 244166488,
+   "observation": "https://www.inaturalist.org/observations/142422404",
+   "source": "https://www.inaturalist.org/photos/244166488",
+   "author": "(c) Daniel Benák, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "289 11 Dobřichov, Česko",
+   "observedOn": "2020-04-27",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/244166488/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/244166488/large.jpg",
+   "largeSize": [
+    578,
+    385
+   ]
+  }
+ ],
+ "sp251": [
+  {
+   "photoId": 171076888,
+   "observation": "https://www.inaturalist.org/observations/102357068",
+   "source": "https://www.inaturalist.org/photos/171076888",
+   "author": "(c) Сергей Неклюдов, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "г. Казань, Респ. Татарстан, Россия",
+   "observedOn": "2018-07-09",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/171076888/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/171076888/large.jpg",
+   "largeSize": [
+    1024,
+    768
+   ]
+  },
+  {
+   "photoId": 654178637,
+   "observation": "https://www.inaturalist.org/observations/358591717",
+   "source": "https://www.inaturalist.org/photos/654178637",
+   "author": "(c) euqirneto, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Castilla y León, ES",
+   "observedOn": "2026-05-01",
+   "faves": 1,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/654178637/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/654178637/large.jpg",
+   "largeSize": [
+    714,
+    714
+   ]
+  },
+  {
+   "photoId": 140253825,
+   "observation": "https://www.inaturalist.org/observations/85261549",
+   "source": "https://www.inaturalist.org/photos/140253825",
+   "author": "(c) Denys Vynokurov, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Burgos, ES-CL, ES",
+   "observedOn": "2021-07-01",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/140253825/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/140253825/large.jpeg",
+   "largeSize": [
+    1024,
+    768
+   ]
+  },
+  {
+   "photoId": 91766442,
+   "observation": "https://www.inaturalist.org/observations/57525798",
+   "source": "https://www.inaturalist.org/photos/91766442",
+   "author": "(c) Christoph Moning, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Cáceres, ES-EX, ES",
+   "observedOn": "2009-05-23",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/91766442/original.jpeg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/91766442/large.jpeg",
+   "largeSize": [
+    1024,
+    683
+   ]
+  },
+  {
+   "photoId": 384064575,
+   "observation": "https://www.inaturalist.org/observations/217123520",
+   "source": "https://www.inaturalist.org/photos/384064575",
+   "author": "(c) euqirneto, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Burgos, ES-CL, ES",
+   "observedOn": "2024-05-18",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/384064575/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/384064575/large.jpg",
+   "largeSize": [
+    1024,
+    1024
+   ]
+  },
+  {
+   "photoId": 651416907,
+   "observation": "https://www.inaturalist.org/observations/357176660",
+   "source": "https://www.inaturalist.org/photos/651416907",
+   "author": "(c) Emanuele Santarelli, some rights reserved (CC BY-SA)",
+   "license": "cc-by-sa",
+   "annotations": {},
+   "place": "Province of L'Aquila, Italy",
+   "observedOn": "2026-04-23",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/651416907/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/651416907/large.jpg",
+   "largeSize": [
+    1024,
+    768
+   ]
+  },
+  {
+   "photoId": 197517577,
+   "observation": "https://www.inaturalist.org/observations/116985714",
+   "source": "https://www.inaturalist.org/photos/197517577",
+   "author": "(c) Сергей Неклюдов, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Пестречинский р-н, Респ. Татарстан, Россия",
+   "observedOn": "2022-05-14",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/197517577/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/197517577/large.jpg",
+   "largeSize": [
+    1024,
+    768
+   ]
+  },
+  {
+   "photoId": 207903266,
+   "observation": "https://www.inaturalist.org/observations/122768440",
+   "source": "https://www.inaturalist.org/photos/207903266",
+   "author": "(c) euqirneto, some rights reserved (CC BY)",
+   "license": "cc-by",
+   "annotations": {},
+   "place": "Spain",
+   "observedOn": "2022-06-14",
+   "faves": 0,
+   "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/207903266/original.jpg",
+   "large": "https://inaturalist-open-data.s3.amazonaws.com/photos/207903266/large.jpg",
+   "largeSize": [
+    1024,
+    1024
+   ]
+  }
+ ],
+ "sp253": []
+}
