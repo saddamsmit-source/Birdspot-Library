@@ -519,7 +519,44 @@
    "flight": null,
    "label": null
   },
-  "error": "HTTPError: HTTP Error 429: Too Many Requests"
+  "source": {
+   "kind": "commons",
+   "title": "File:Chloris chloris (profile).jpg",
+   "author": "Martin Kunz",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "description": "Male greenfinch ( Chloris chloris ) sitting on a branch. Photographed in a garden in Jena, Germany.",
+   "objectName": "Chloris chloris (profile)",
+   "date": "Taken on 2 July 2019 16:43:34",
+   "categories": [
+    "Animals of Jena",
+    "Aves in left lateral aspect",
+    "Birds on branches",
+    "CC-BY-4.0",
+    "Chloris chloris in Germany",
+    "Featured pictures of Fringillidae",
+    "Featured pictures of Thuringia",
+    "Featured pictures of animals in Germany",
+    "Featured pictures on Wikimedia Commons",
+    "Fringillidae in Germany",
+    "Jena photographs taken on 2019-07-02",
+    "Passeriformes in Thuringia",
+    "Quality images",
+    "Quality images of Chloris chloris",
+    "Quality images of birds in Germany",
+    "Self-published work"
+   ],
+   "width": 3508,
+   "height": 2732,
+   "sha1": "2b350740b88234181a3c6fc04f2cbff8b30ad139",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Chloris_chloris_%28profile%29.jpg/1280px-Chloris_chloris_%28profile%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "compare": {
+   "orbSame": 1761,
+   "orbMirror": 5,
+   "localAR": 1.284,
+   "sourceAR": 1.284
+  }
  },
  {
   "image": "/assets/species/sp046.webp",
@@ -536,7 +573,39 @@
    "flight": null,
    "label": null
   },
-  "error": "HTTPError: HTTP Error 429: Too Many Requests"
+  "source": {
+   "kind": "commons",
+   "title": "File:Song Thrush Turdus philomelos.jpg",
+   "author": "Andreas Trepte",
+   "license": "CC BY-SA 2.5",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+   "description": "Song Thrush",
+   "objectName": "Song Thrush Turdus philomelos",
+   "date": "2012-10-24",
+   "categories": [
+    "1 bird in Germany",
+    "Andreas Trepte",
+    "CC-BY-SA-2.5",
+    "Files with coordinates missing SDC location of creation",
+    "Quality images",
+    "Quality images missing SDC creator",
+    "Quality images missing SDC source of file",
+    "Quality images of Turdus philomelos",
+    "Taken with Canon EOS-1D Mark IV",
+    "Turdidae in Germany",
+    "Turdus philomelos"
+   ],
+   "width": 3000,
+   "height": 2000,
+   "sha1": "106cb1d99dce73eb277fe57e74cc4e8f4d84c5ea",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Song_Thrush_Turdus_philomelos.jpg/1280px-Song_Thrush_Turdus_philomelos.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "compare": {
+   "orbSame": 1814,
+   "orbMirror": 6,
+   "localAR": 1.5,
+   "sourceAR": 1.501
+  }
  },
  {
   "image": "/assets/species/sp054.webp",
@@ -1087,7 +1156,46 @@
    "flight": null,
    "label": null
   },
-  "error": "HTTPError: HTTP Error 429: Too Many Requests"
+  "source": {
+   "kind": "commons",
+   "title": "File:2015.05.08.-04-Kaefertaler Wald-Mannheim--Buntspecht-Weibchen.jpg",
+   "author": "Andreas Eichler",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "description": "Great spotted woodpecker - Dendrocopos major, female. Taken in Mannheim im Käfertaler Wald, Baden-Württemberg, Germany.",
+   "objectName": "2015.05.08.-04-Kaefertaler Wald-Mannheim--Buntspecht-Weibchen",
+   "date": "Taken on 8 May 2015",
+   "categories": [
+    "CC-BY-SA-4.0",
+    "Dendrocopos major eating",
+    "Dendrocopos major in Mannheim",
+    "F-number f/8",
+    "Featured pictures by hockei",
+    "Featured pictures of Baden-Württemberg",
+    "Featured pictures of Picidae",
+    "Featured pictures on Wikimedia Commons",
+    "Files with coordinates missing SDC location of creation (49° N, 8° E)",
+    "Images by Hockei",
+    "Lens focal length 150 mm",
+    "Mannheim photographs taken on 2015-05-08",
+    "Piciformes in Käfertal (Mannheim)",
+    "Quality images",
+    "Quality images by hockei",
+    "Quality images of Dendrocopos major",
+    "Quality images of nature in Baden-Württemberg",
+    "Taken with Panasonic Lumix DMC-GH3"
+   ],
+   "width": 2306,
+   "height": 2597,
+   "sha1": "249b69338056a4acb99dc72c1e9c91d6084b6895",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/2015.05.08.-04-Kaefertaler_Wald-Mannheim--Buntspecht-Weibchen.jpg/1280px-2015.05.08.-04-Kaefertaler_Wald-Mannheim--Buntspecht-Weibchen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "compare": {
+   "orbSame": 1819,
+   "orbMirror": 4,
+   "localAR": 0.888,
+   "sourceAR": 0.888
+  }
  },
  {
   "image": "/assets/species/sp021.webp",
@@ -1104,7 +1212,40 @@
    "flight": null,
    "label": null
   },
-  "error": "HTTPError: HTTP Error 429: Too Many Requests"
+  "source": {
+   "kind": "commons",
+   "title": "File:Eurasian magpie 2022 05 03.jpg",
+   "author": "Alexis Lours",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "description": "Eurasian magpie ( Pica pica ) on a branch in Gennevilliers, France.",
+   "objectName": "Eurasian magpie 2022 05 03",
+   "date": "Taken on 3 May 2022, 11:30:50",
+   "categories": [
+    "Birds of Parc des Chanteraines",
+    "CC-BY-4.0",
+    "Photos by Alexis Lours",
+    "Photos of Pica pica by Alexis Lours",
+    "Pica pica in Hauts-de-Seine",
+    "QI photos by Alexis Lours",
+    "Quality images",
+    "Quality images of Hauts-de-Seine",
+    "Quality images of Pica pica",
+    "Quality images of birds in France",
+    "Self-published work",
+    "Île-de-France photographs taken on 2022-05-03"
+   ],
+   "width": 5078,
+   "height": 3385,
+   "sha1": "b31b18a604fe8e14ccd9a4ebf67261ef999aa93b",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Eurasian_magpie_2022_05_03.jpg/1280px-Eurasian_magpie_2022_05_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "compare": {
+   "orbSame": 1825,
+   "orbMirror": 4,
+   "localAR": 1.5,
+   "sourceAR": 1.501
+  }
  },
  {
   "image": "/assets/species/sp022.webp",
@@ -1626,7 +1767,47 @@
    "flight": null,
    "label": null
   },
-  "error": "HTTPError: HTTP Error 429: Too Many Requests"
+  "source": {
+   "kind": "commons",
+   "title": "File:Bullfinch male.jpg",
+   "author": "Francis Franklin",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "description": "Eurasian bullfinch, Pyrrhula pyrrhula , male. Lancashire, UK.",
+   "objectName": "Bullfinch male",
+   "date": "Taken on 4 January 2015, 11:53:13",
+   "categories": [
+    "Birds in January 2015",
+    "Birds of Lancashire",
+    "CC-BY-SA-3.0",
+    "England photographs taken on 2015-01-04",
+    "Featured pictures of Lancashire",
+    "Featured pictures of Pyrrhula pyrrhula",
+    "Featured pictures of birds in the United Kingdom",
+    "Featured pictures on Wikimedia Commons",
+    "Featured pictures on Wikipedia, Arabic",
+    "Featured pictures on Wikipedia, English",
+    "Featured pictures on Wikipedia, Persian",
+    "Files with coordinates missing SDC location of creation (53° N, 3° W)",
+    "January 2015 in Lancashire",
+    "Pyrrhula pyrrhula in England",
+    "Pyrrhula pyrrhula pileata",
+    "Quality images",
+    "Quality images of Pyrrhula pyrrhula",
+    "Self-published work",
+    "Taken with Olympus E-PL5"
+   ],
+   "width": 3026,
+   "height": 2161,
+   "sha1": "a93979059b39caf171d72e9810ac59c9ee610baa",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Bullfinch_male.jpg/1280px-Bullfinch_male.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "compare": {
+   "orbSame": 1627,
+   "orbMirror": 5,
+   "localAR": 1.4,
+   "sourceAR": 1.4
+  }
  },
  {
   "image": "/assets/species/sp041.webp",
@@ -1643,7 +1824,43 @@
    "flight": null,
    "label": null
   },
-  "error": "HTTPError: HTTP Error 429: Too Many Requests"
+  "source": {
+   "kind": "commons",
+   "title": "File:Hawfinch (Coccothraustes coccothraustes) male Drenthe 2.jpg",
+   "author": "Charles J. Sharp",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "description": "Hawfinch ( Coccothraustes coccothraustes ) male, Drenthe, Netherlands",
+   "objectName": "Hawfinch (Coccothraustes coccothraustes) male Drenthe 2",
+   "date": "2026-04-09 10:54:39",
+   "categories": [
+    "CC-BY-SA-4.0",
+    "Coccothraustes coccothraustes",
+    "Files with coordinates missing SDC location of creation (52° N, 6° E)",
+    "Focus stacked image",
+    "Fringillidae of the Netherlands",
+    "Photographs by Charlesjsharp",
+    "Quality images",
+    "Quality images by Charlesjsharp",
+    "Quality images missing SDC Commons quality assessment",
+    "Quality images missing SDC creator",
+    "Quality images missing SDC depicts",
+    "Quality images missing SDC source of file",
+    "Quality images of Passeriformes by Charlesjsharp",
+    "Quality images of birds by Charlesjsharp",
+    "Self-published work"
+   ],
+   "width": 6414,
+   "height": 4276,
+   "sha1": "c137822cf5b571303c95c00d3aa15e712cb8441c",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Hawfinch_%28Coccothraustes_coccothraustes%29_male_Drenthe_2.jpg/1280px-Hawfinch_%28Coccothraustes_coccothraustes%29_male_Drenthe_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "compare": {
+   "orbSame": 1739,
+   "orbMirror": 4,
+   "localAR": 1.5,
+   "sourceAR": 1.501
+  }
  },
  {
   "image": "/assets/species/sp047.webp",
@@ -2149,7 +2366,36 @@
    "flight": null,
    "label": null
   },
-  "error": "HTTPError: HTTP Error 429: Too Many Requests"
+  "source": {
+   "kind": "commons",
+   "title": "File:Columba oenas1.jpg",
+   "author": "Chris Cant from Cumbria, UK",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "description": "Stock Dove",
+   "objectName": "Columba oenas1",
+   "date": "2010-01-20 10:17",
+   "categories": [
+    "Birds of Cumbria",
+    "CC-BY-2.0",
+    "Columba oenas",
+    "Columbiformes of England",
+    "Flickr images reviewed by FlickreviewR",
+    "Images with extracted images",
+    "January 2010 in Cumbria",
+    "Taken with Canon EOS 400D"
+   ],
+   "width": 3888,
+   "height": 2592,
+   "sha1": "cdc04d813e4db915116ca51a9ab06309b67cb5b7",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Columba_oenas1.jpg/1280px-Columba_oenas1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "compare": {
+   "orbSame": 1766,
+   "orbMirror": 6,
+   "localAR": 1.5,
+   "sourceAR": 1.501
+  }
  },
  {
   "image": "/assets/species/sp017.webp",
@@ -2166,7 +2412,45 @@
    "flight": null,
    "label": null
   },
-  "error": "HTTPError: HTTP Error 429: Too Many Requests"
+  "source": {
+   "kind": "commons",
+   "title": "File:Picchio rosso minore con mora di gelso.jpg",
+   "author": "Maurizio Carlini",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "description": "Male Lesser Spotted Woodpecker (Dryobates minor) carrying a mulberry in its nest",
+   "objectName": "Picchio rosso minore con mora di gelso",
+   "date": "2024-06-05 16:36:38",
+   "categories": [
+    "CC-BY-SA-4.0",
+    "Dryobates minor",
+    "Greto dello Scrivia",
+    "Images from Wiki Loves Earth 2024",
+    "Images from Wiki Loves Earth 2024 in Italy",
+    "Images from Wiki Loves Earth 2024 in Italy - Piedmont",
+    "Images from Wiki Loves Earth 2024 in Italy - Round 1",
+    "Images from Wiki Loves Earth 2024 in Italy - Round 2",
+    "Images from Wiki Loves Earth missing SDC depicts",
+    "Images from Wiki Loves Earth missing SDC location of creation",
+    "Quality images",
+    "Quality images from Wiki Loves Earth 2024 in Italy",
+    "Quality images missing SDC depicts",
+    "Quality images of Picidae",
+    "Quality images of birds in Italy",
+    "Self-published work",
+    "Uploaded via Campaign:wle-it"
+   ],
+   "width": 3155,
+   "height": 4733,
+   "sha1": "7147b8e3e86e857922b2185f0bac56d43b1706c4",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Picchio_rosso_minore_con_mora_di_gelso.jpg/1280px-Picchio_rosso_minore_con_mora_di_gelso.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "compare": {
+   "orbSame": 1863,
+   "orbMirror": 2,
+   "localAR": 0.667,
+   "sourceAR": 0.667
+  }
  },
  {
   "image": "/assets/showcase/sp018.webp",
@@ -2648,7 +2932,40 @@
    "flight": null,
    "label": null
   },
-  "error": "HTTPError: HTTP Error 429: Too Many Requests"
+  "source": {
+   "kind": "commons",
+   "title": "File:Coal Tit 2026 03 23.jpg",
+   "author": "Alexis Lours",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "description": "A coal tit (Periparus ater).",
+   "objectName": "Coal Tit 2026 03 23",
+   "date": "2026-03-21 12:07:52",
+   "categories": [
+    "CC-BY-4.0",
+    "Files with coordinates missing SDC location of creation (48° N, 2° E)",
+    "Paridae of Paris",
+    "Periparus ater",
+    "Photos by Alexis Lours",
+    "QI photos by Alexis Lours",
+    "Quality images",
+    "Quality images missing SDC Commons quality assessment",
+    "Quality images missing SDC creator",
+    "Quality images missing SDC source of file",
+    "Quality images of Saint-Denis (Seine-Saint-Denis)",
+    "Self-published work"
+   ],
+   "width": 4892,
+   "height": 3261,
+   "sha1": "8263b66e5f6fb1982b6da02b7196ed1fda29eb34",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Coal_Tit_2026_03_23.jpg/1280px-Coal_Tit_2026_03_23.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "compare": {
+   "orbSame": 1821,
+   "orbMirror": 5,
+   "localAR": 1.5,
+   "sourceAR": 1.501
+  }
  },
  {
   "image": "/assets/species/sp176.webp",
@@ -2665,7 +2982,43 @@
    "flight": null,
    "label": null
   },
-  "error": "HTTPError: HTTP Error 429: Too Many Requests"
+  "source": {
+   "kind": "commons",
+   "title": "File:Muscicapa striata мухоловка сіра.jpg",
+   "author": "Бусел В.А.",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "description": "This is a photo of a natural heritage site in Ukraine, id: 23-209-5001",
+   "objectName": "Muscicapa striata мухоловка сіра",
+   "date": "2014-09-07 04:13:05",
+   "categories": [
+    "Birds of Zaporizhzhia Oblast",
+    "CC-BY-SA-4.0",
+    "Images from Wiki Loves Earth 2020",
+    "Images from Wiki Loves Earth 2020 in Ukraine",
+    "Images from Wiki Loves Earth missing SDC location of creation",
+    "Muscicapa striata",
+    "Muscicapidae of Ukraine",
+    "Natural heritage sites in Ukraine with known IDs",
+    "Quality images",
+    "Quality images from Wiki Loves Earth 2020 in Ukraine",
+    "Quality images of Muscicapa striata",
+    "Self-published work",
+    "Ukraine photographs taken on 2014-09-07",
+    "Uploaded via Campaign:wle-ua",
+    "Wiki Loves Earth Ukraine 2020 - Quality"
+   ],
+   "width": 4288,
+   "height": 2848,
+   "sha1": "bc23ca6fc649e605ac7a917f36fe5ee64e4318b0",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Muscicapa_striata_%D0%BC%D1%83%D1%85%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0_%D1%81%D1%96%D1%80%D0%B0.jpg/1280px-Muscicapa_striata_%D0%BC%D1%83%D1%85%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0_%D1%81%D1%96%D1%80%D0%B0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "compare": {
+   "orbSame": 1767,
+   "orbMirror": 4,
+   "localAR": 1.505,
+   "sourceAR": 1.506
+  }
  },
  {
   "image": "/assets/species/sp177.webp",
@@ -3186,7 +3539,49 @@
    "flight": null,
    "label": null
   },
-  "error": "HTTPError: HTTP Error 429: Too Many Requests"
+  "source": {
+   "kind": "commons",
+   "title": "File:Anas platyrhynchos male female.jpg",
+   "author": "This picture was realized by Richard Bartz by using a Canon EF 70-300mm f/4-5.6 IS USM Lens",
+   "license": "CC BY-SA 2.5",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+   "description": "A Mallard pair at Mühlthal, Straßlach-Dingharting, Germany. The Mallard is the archetypal \"wild duck\" and probably the best-known of all ducks, is a dabbling duck which breeds throughout the temperate areas of Europe, Asia, and North America; it is also introduced in New Zealand and Australia.",
+   "objectName": "Anas platyrhynchos male female",
+   "date": "2008-04-09",
+   "categories": [
+    "Anas platyrhynchos (mixed pairs in April)",
+    "Anas platyrhynchos in Germany",
+    "Assessment tagged pages marked as POTY candidates",
+    "CC-BY-SA-2.5",
+    "Commons featured widescreen desktop backgrounds",
+    "Featured pictures by User:Richard Bartz",
+    "Featured pictures of Anas platyrhynchos",
+    "Featured pictures of Bavaria",
+    "Featured pictures on Wikimedia Commons",
+    "Featured pictures on Wikipedia, German",
+    "Files with coordinates missing SDC location of creation",
+    "Photographs by User:Richard Bartz",
+    "Pictures of the Year (2009)",
+    "Pictures of the Year (candidate)",
+    "Pictures of the day (2010)",
+    "Quality images",
+    "Quality images by User:Richard Bartz",
+    "Quality images of Anas platyrhynchos",
+    "Quality images of Bavaria",
+    "Taken with Canon EF 70-300mm F4-5.6 IS USM",
+    "Taken with Canon EOS 40D"
+   ],
+   "width": 3888,
+   "height": 2384,
+   "sha1": "1ac09a57e6912efd967430732a414362c4ae4243",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Anas_platyrhynchos_male_female.jpg/1280px-Anas_platyrhynchos_male_female.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "compare": {
+   "orbSame": 1776,
+   "orbMirror": 9,
+   "localAR": 1.631,
+   "sourceAR": 1.631
+  }
  },
  {
   "image": "/assets/species/sp090.webp",
@@ -3203,7 +3598,37 @@
    "flight": null,
    "label": null
   },
-  "error": "HTTPError: HTTP Error 429: Too Many Requests"
+  "source": {
+   "kind": "commons",
+   "title": "File:Northern shoveler 2024 02 03.jpg",
+   "author": "Alexis Lours",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "description": "A male northern shoveler ( Spatula clypeata ) in Gennevilliers (Hauts-de-Seine), France.",
+   "objectName": "Northern shoveler 2024 02 03",
+   "date": "2024-02-03 15:14:33",
+   "categories": [
+    "CC-BY-4.0",
+    "Files with coordinates missing SDC location of creation (48° N, 2° E)",
+    "Photos by Alexis Lours",
+    "QI photos by Alexis Lours",
+    "Quality images",
+    "Quality images of Hauts-de-Seine",
+    "Self-published work",
+    "Spatula clypeata (male)",
+    "Spatula clypeata in Hauts-de-Seine"
+   ],
+   "width": 4719,
+   "height": 3146,
+   "sha1": "c8471485d5741ac166f3f0fc408fad6b9cfd7b46",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Northern_shoveler_2024_02_03.jpg/1280px-Northern_shoveler_2024_02_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "compare": {
+   "orbSame": 1830,
+   "orbMirror": 6,
+   "localAR": 1.5,
+   "sourceAR": 1.501
+  }
  },
  {
   "image": "/assets/species/sp092.webp",
@@ -3692,7 +4117,54 @@
    "flight": null,
    "label": null
   },
-  "error": "HTTPError: HTTP Error 429: Too Many Requests"
+  "source": {
+   "kind": "commons",
+   "title": "File:Skylark 2, Lake District, England - June 2009.jpg",
+   "author": "User:Diliff",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "description": "A skylark ( Alauda arvensis , sex unknown) with insects in its beak, taken by myself in the Lake District near Derwent Water, in Cumbria, England. Taken with a 5D and 70-200mm f/2.8L at 200mm and f/8.",
+   "objectName": "Skylark 2, Lake District, England - June 2009",
+   "date": "2009-06-25",
+   "categories": [
+    "Alauda arvensis",
+    "Alaudidae eating",
+    "Alaudidae of the United Kingdom",
+    "Birds of Cumbria",
+    "CC-BY-SA-3.0",
+    "Commons featured desktop backgrounds",
+    "Featured pictures by User:Diliff",
+    "Featured pictures of Alaudidae",
+    "Featured pictures of Cumbria",
+    "Featured pictures of birds in the United Kingdom",
+    "Featured pictures on Wikimedia Commons",
+    "Featured pictures on Wikipedia, English",
+    "Featured pictures on Wikipedia, German",
+    "GFDL",
+    "June 2009 in Cumbria",
+    "License migration redundant",
+    "Passeriformes eating insects",
+    "Photographs by User:Diliff",
+    "Pictures of the day (2011)",
+    "Quality images",
+    "Quality images by User:Diliff",
+    "Quality images of Cumbria",
+    "Quality images of birds in the United Kingdom",
+    "Self-published work",
+    "Valued images",
+    "Valued images of Cumbria"
+   ],
+   "width": 2560,
+   "height": 1920,
+   "sha1": "919cedace8ed54b860ed65a4bf136524f5cd6097",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Skylark_2%2C_Lake_District%2C_England_-_June_2009.jpg/1280px-Skylark_2%2C_Lake_District%2C_England_-_June_2009.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "compare": {
+   "orbSame": 1821,
+   "orbMirror": 7,
+   "localAR": 1.333,
+   "sourceAR": 1.333
+  }
  },
  {
   "image": "/assets/species/sp072.webp",
@@ -3709,7 +4181,41 @@
    "flight": null,
    "label": null
   },
-  "error": "HTTPError: HTTP Error 429: Too Many Requests"
+  "source": {
+   "kind": "commons",
+   "title": "File:Meadow pipit (Anthus pratensis pratensis) Marken.jpg",
+   "author": "Charles J. Sharp",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "description": "Meadow pipit ( Anthus pratensis pratensis ), Marken, Netherlands",
+   "objectName": "Meadow pipit (Anthus pratensis pratensis) Marken",
+   "date": "2026-04-08 10:14:56",
+   "categories": [
+    "Anthus pratensis",
+    "CC-BY-SA-4.0",
+    "Files with coordinates missing SDC location of creation (52° N, 5° E)",
+    "Motacillidae of the Netherlands",
+    "Photographs by Charlesjsharp",
+    "Quality images",
+    "Quality images by Charlesjsharp",
+    "Quality images missing SDC Commons quality assessment",
+    "Quality images missing SDC creator",
+    "Quality images missing SDC depicts",
+    "Quality images of Passeriformes by Charlesjsharp",
+    "Quality images of birds by Charlesjsharp",
+    "Self-published work"
+   ],
+   "width": 4209,
+   "height": 2806,
+   "sha1": "470b3b11aa905c9c9f294222819b0b7453f91aae",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Meadow_pipit_%28Anthus_pratensis_pratensis%29_Marken.jpg/1280px-Meadow_pipit_%28Anthus_pratensis_pratensis%29_Marken.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "compare": {
+   "orbSame": 1790,
+   "orbMirror": 7,
+   "localAR": 1.5,
+   "sourceAR": 1.501
+  }
  },
  {
   "image": "/assets/species/sp094.webp",
@@ -4226,7 +4732,33 @@
    "flight": null,
    "label": null
   },
-  "error": "HTTPError: HTTP Error 429: Too Many Requests"
+  "source": {
+   "kind": "commons",
+   "title": "File:Nurmkana (cropped).jpg",
+   "author": "K.Pitk",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "description": "Perdix perdix",
+   "objectName": "Nurmkana (cropped)",
+   "date": "2010-03-11 13:17:14",
+   "categories": [
+    "CC-BY-SA-3.0",
+    "Extracted images",
+    "Galliformes of Estonia",
+    "Perdix perdix",
+    "Self-published work"
+   ],
+   "width": 2587,
+   "height": 1901,
+   "sha1": "a47709d6aac425054c19b38ecddf300ce9e6026f",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Nurmkana_%28cropped%29.jpg/1280px-Nurmkana_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "compare": {
+   "orbSame": 1636,
+   "orbMirror": 3,
+   "localAR": 1.361,
+   "sourceAR": 1.36
+  }
  },
  {
   "image": "/assets/species/sp117.webp",
@@ -4243,7 +4775,41 @@
    "flight": null,
    "label": null
   },
-  "error": "HTTPError: HTTP Error 429: Too Many Requests"
+  "source": {
+   "kind": "commons",
+   "title": "File:Yellowhammer (Emberiza citrinella) male Drenthe.jpg",
+   "author": "Charles J. Sharp",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "description": "Yellowhammer ( Emberiza citrinella ) male, Drenthe, Netherlands",
+   "objectName": "Yellowhammer (Emberiza citrinella) male Drenthe",
+   "date": "2026-04-09 09:16:15",
+   "categories": [
+    "CC-BY-SA-4.0",
+    "Emberiza citrinella",
+    "Emberizidae of the Netherlands",
+    "Files with coordinates missing SDC location of creation (52° N, 6° E)",
+    "Photographs by Charlesjsharp",
+    "Quality images",
+    "Quality images by Charlesjsharp",
+    "Quality images missing SDC Commons quality assessment",
+    "Quality images missing SDC creator",
+    "Quality images missing SDC depicts",
+    "Quality images of Passeriformes by Charlesjsharp",
+    "Quality images of birds by Charlesjsharp",
+    "Self-published work"
+   ],
+   "width": 6418,
+   "height": 4281,
+   "sha1": "d571c784b0707a744802c31f969b919a8435812c",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Yellowhammer_%28Emberiza_citrinella%29_male_Drenthe.jpg/1280px-Yellowhammer_%28Emberiza_citrinella%29_male_Drenthe.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "compare": {
+   "orbSame": 1556,
+   "orbMirror": 3,
+   "localAR": 1.498,
+   "sourceAR": 1.499
+  }
  },
  {
   "image": "/assets/species/sp128.webp",
@@ -4770,7 +5336,48 @@
    "flight": null,
    "label": null
   },
-  "error": "HTTPError: HTTP Error 429: Too Many Requests"
+  "source": {
+   "kind": "commons",
+   "title": "File:Очеретянка велика (англ. Great Reed Warbler; лат. Acrocephalus arundinaceus).jpg",
+   "author": "Eugene Stolyarov",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "description": "« Партизанська Слава », Дарницький район",
+   "objectName": "Очеретянка велика (англ. Great Reed Warbler; лат. Acrocephalus arundinaceus)",
+   "date": "2014-04-26",
+   "categories": [
+    "Acrocephalus arundinaceus",
+    "Animals for WLE 2017 in Ukraine",
+    "Birds of Kyiv",
+    "CC-BY-SA-4.0",
+    "Files with coordinates missing SDC location of creation",
+    "Images from Wiki Loves Earth 2018",
+    "Images from Wiki Loves Earth 2018 in Ukraine",
+    "Images from Wiki Loves Earth missing SDC depicts",
+    "Images from Wiki Loves Earth missing SDC location of creation",
+    "Natural heritage sites in Ukraine with known IDs",
+    "Park of Partisan Glory, Kyiv",
+    "Quality images",
+    "Quality images from Wiki Loves Earth 2018 in Ukraine",
+    "Quality images missing SDC depicts",
+    "Quality images of Acrocephalidae",
+    "Quality images of Kyiv",
+    "Quality images of animals in Ukraine",
+    "Self-published work",
+    "Ukraine photographs taken on 2014-04-26",
+    "Uploaded via Campaign:wle-ua"
+   ],
+   "width": 3690,
+   "height": 2460,
+   "sha1": "c5ff95e4acd69da2543de7390874c1275b6eccae",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/%D0%9E%D1%87%D0%B5%D1%80%D0%B5%D1%82%D1%8F%D0%BD%D0%BA%D0%B0_%D0%B2%D0%B5%D0%BB%D0%B8%D0%BA%D0%B0_%28%D0%B0%D0%BD%D0%B3%D0%BB._Great_Reed_Warbler%3B_%D0%BB%D0%B0%D1%82._Acrocephalus_arundinaceus%29.jpg/1280px-%D0%9E%D1%87%D0%B5%D1%80%D0%B5%D1%82%D1%8F%D0%BD%D0%BA%D0%B0_%D0%B2%D0%B5%D0%BB%D0%B8%D0%BA%D0%B0_%28%D0%B0%D0%BD%D0%B3%D0%BB._Great_Reed_Warbler%3B_%D0%BB%D0%B0%D1%82._Acrocephalus_arundinaceus%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "compare": {
+   "orbSame": 1628,
+   "orbMirror": 2,
+   "localAR": 1.5,
+   "sourceAR": 1.501
+  }
  },
  {
   "image": "/assets/species/sp173.webp",
@@ -5419,7 +6026,34 @@
    "flight": true,
    "label": "Mannetje in vlucht"
   },
-  "error": "HTTPError: HTTP Error 429: Too Many Requests"
+  "source": {
+   "kind": "commons",
+   "title": "File:Falco tinnunculus - Common kestrel 20.jpg",
+   "author": "Zeynel Cebeci",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "description": "A male common kestrel ( Falco tinnunculus ) in flight. Seyhan - Adana, Turkey.",
+   "objectName": "Falco tinnunculus - Common kestrel 20",
+   "date": "2020-04-06 19:34:57",
+   "categories": [
+    "Birds of Adana Province",
+    "CC-BY-SA-4.0",
+    "Falco tinnunculus (male)",
+    "Falco tinnunculus in flight",
+    "Files with coordinates missing SDC location of creation",
+    "Self-published work"
+   ],
+   "width": 2050,
+   "height": 1537,
+   "sha1": "0801e85f403acc625b2819c147b84cdeb1856d43",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Falco_tinnunculus_-_Common_kestrel_20.jpg/1280px-Falco_tinnunculus_-_Common_kestrel_20.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "compare": {
+   "orbSame": 1346,
+   "orbMirror": 25,
+   "localAR": 1.333,
+   "sourceAR": 1.333
+  }
  },
  {
   "image": "/assets/species/plumage/sp009-perched.webp",
@@ -5912,7 +6546,36 @@
    "flight": true,
    "label": "In vlucht"
   },
-  "error": "HTTPError: HTTP Error 429: Too Many Requests"
+  "source": {
+   "kind": "commons",
+   "title": "File:Haubenmeise Abflug.JPG",
+   "author": "Sgbeer",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "description": "A crested Tit is flying away with some food",
+   "objectName": "Haubenmeise Abflug",
+   "date": "2010-02-17",
+   "categories": [
+    "Birds in 2010",
+    "CC-BY-SA-3.0,2.5,2.0,1.0",
+    "GFDL",
+    "License migration redundant",
+    "Lophophanes cristatus",
+    "Paridae in flight",
+    "Self-published work",
+    "Taken with Nikon D40"
+   ],
+   "width": 960,
+   "height": 720,
+   "sha1": "d0797726f5df96962f00b23b45a21e77d7f69ae7",
+   "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/05/Haubenmeise_Abflug.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  "compare": {
+   "orbSame": 1763,
+   "orbMirror": 2,
+   "localAR": 1.333,
+   "sourceAR": 1.333
+  }
  },
  {
   "image": "/assets/species/plumage/sp116-nestwand.webp",
@@ -5929,7 +6592,35 @@
    "flight": null,
    "label": "Bij de nestwand"
   },
-  "error": "HTTPError: HTTP Error 429: Too Many Requests"
+  "source": {
+   "kind": "commons",
+   "title": "File:Riparia riparia. Sand Martin (27556953299).jpg",
+   "author": "gailhampshire from Cradley, Malvern, U.K",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "description": "Catacol, Arran. NR915495",
+   "objectName": "Riparia riparia. Sand Martin (27556953299)",
+   "date": "2017-06-13 15:29",
+   "categories": [
+    "Birds of the Isle of Arran",
+    "CC-BY-2.0",
+    "Catacol",
+    "Flickr images reviewed by FlickreviewR 2",
+    "Hirundinidae of the United Kingdom",
+    "Photographs by gailhampshire",
+    "Riparia riparia"
+   ],
+   "width": 2773,
+   "height": 2160,
+   "sha1": "0db6640eb31ca3ec0c9eb49aefd7e7370629cb21",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Riparia_riparia._Sand_Martin_%2827556953299%29.jpg/1280px-Riparia_riparia._Sand_Martin_%2827556953299%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "compare": {
+   "orbSame": 1626,
+   "orbMirror": 9,
+   "localAR": 1.283,
+   "sourceAR": 1.284
+  }
  },
  {
   "image": "/assets/species/plumage/sp116-flight.webp",
@@ -6386,7 +7077,12 @@
    "sha1": "d0d3ff3ba4e7905e88b00a44dae51cc259bdedca",
    "thumb": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Dryocopus_martius_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
-  "error": "HTTPError: HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)"
+  "compare": {
+   "orbSame": 1890,
+   "orbMirror": 3,
+   "localAR": 1.818,
+   "sourceAR": 1.818
+  }
  },
  {
   "image": "/assets/species/plumage/sp021-flight.webp",
@@ -6739,7 +7435,12 @@
    "sha1": "3aa4012ab9532bc3666efd73de7c140d42ea7acf",
    "thumb": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Fringilla_coelebs_-Lochwinnoch%2C_Renfrewshire%2C_Scotland_-flying-8.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
-  "error": "HTTPError: HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)"
+  "compare": {
+   "orbSame": 1841,
+   "orbMirror": 4,
+   "localAR": 1.0,
+   "sourceAR": 1.0
+  }
  },
  {
   "image": "/assets/species/plumage/sp035-juv-review.webp",
@@ -6822,7 +7523,12 @@
    "sha1": "80bbf06f97f27c9b6abd671dde8332f02acd5545",
    "thumb": "https://upload.wikimedia.org/wikipedia/commons/e/ed/NZ7_6126_%2851832454526%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
-  "error": "HTTPError: HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)"
+  "compare": {
+   "orbSame": 1655,
+   "orbMirror": 6,
+   "localAR": 1.0,
+   "sourceAR": 1.0
+  }
  },
  {
   "image": "/assets/species/plumage/sp037-flight.webp",
@@ -7255,7 +7961,12 @@
    "sha1": "53e6b2ba38a1b2eef958e9fb54c9c73a3c2d697c",
    "thumb": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Song_Thrush_%28Turdus_philomelos%29_in_flight.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
-  "error": "HTTPError: HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)"
+  "compare": {
+   "orbSame": 1275,
+   "orbMirror": 2,
+   "localAR": 0.794,
+   "sourceAR": 0.794
+  }
  },
  {
   "image": "/assets/species/plumage/sp047-flight.webp",
@@ -7806,7 +8517,40 @@
    "flight": true,
    "label": "In vlucht"
   },
-  "error": "HTTPError: HTTP Error 429: Too Many Requests"
+  "source": {
+   "kind": "commons",
+   "title": "File:Motacilla alba, Kalkara, (2026) (01).jpg",
+   "author": "Tranceliner",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "description": "Caught in mid-flight.",
+   "objectName": "Motacilla alba, Kalkara, (2026) (01)",
+   "date": "2026-02-05 11:50:10",
+   "categories": [
+    "Birds of Malta",
+    "CC-BY-SA-4.0",
+    "Images from Wiki Loves Earth 2026",
+    "Images from Wiki Loves Earth 2026 in Malta",
+    "Images from Wiki Loves Earth missing SDC creator",
+    "Images from Wiki Loves Earth missing SDC location of creation",
+    "Images from Wiki Loves Earth missing SDC participant in",
+    "Images from Wiki Loves Earth missing SDC source of file",
+    "Motacilla alba in flight",
+    "Protected areas of Malta",
+    "Self-published work",
+    "Uploaded via Campaign:wle-mt"
+   ],
+   "width": 2483,
+   "height": 1656,
+   "sha1": "643e96314b340741f5ab07e15dcb809119918516",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Motacilla_alba%2C_Kalkara%2C_%282026%29_%2801%29.jpg/1280px-Motacilla_alba%2C_Kalkara%2C_%282026%29_%2801%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "compare": {
+   "orbSame": 1720,
+   "orbMirror": 7,
+   "localAR": 1.499,
+   "sourceAR": 1.499
+  }
  },
  {
   "image": "/assets/species/plumage/sp069-flight.webp",
@@ -7823,7 +8567,40 @@
    "flight": true,
    "label": "In vlucht"
   },
-  "error": "HTTPError: HTTP Error 429: Too Many Requests"
+  "source": {
+   "kind": "commons",
+   "title": "File:Schafstelze - Motacilla flava.jpg",
+   "author": "Ralf Hüsges",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "description": "Motacilla flava",
+   "objectName": "Schafstelze - Motacilla flava",
+   "date": "Taken on 1 May 2026, 13:51:44",
+   "categories": [
+    "CC-BY-4.0",
+    "Creative Commons Attribution 4.0 missing SDC copyright license",
+    "Creative Commons Attribution missing SDC copyright status",
+    "Flickr images missing SDC copyright status",
+    "Flickr images missing SDC creator",
+    "Flickr images missing SDC published in",
+    "Flickr images missing SDC source of file",
+    "Flickr images reviewed by FlickreviewR 2",
+    "Germany photographs taken on 2026-05-01",
+    "Motacilla flava in Germany",
+    "Motacilla flava in flight",
+    "Photographs by Ralf Hüsges"
+   ],
+   "width": 9134,
+   "height": 6090,
+   "sha1": "6558ca12b5ca141a4558efa10568420f7450d5ea",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Schafstelze_-_Motacilla_flava.jpg/1280px-Schafstelze_-_Motacilla_flava.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "compare": {
+   "orbSame": 1618,
+   "orbMirror": 4,
+   "localAR": 1.501,
+   "sourceAR": 1.501
+  }
  },
  {
   "image": "/assets/species/plumage/sp070-flight.webp",
@@ -8288,7 +9065,45 @@
    "flight": true,
    "label": "In vlucht"
   },
-  "error": "HTTPError: HTTP Error 429: Too Many Requests"
+  "source": {
+   "kind": "commons",
+   "title": "File:Black-crowned night heron (Nycticorax nycticorax) in flight.jpg",
+   "author": "Charles J. Sharp",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "description": "Black-crowned night heron ( Nycticorax nycticorax ) in flight near Akrotiri, Cyprus.",
+   "objectName": "Black-crowned night heron (Nycticorax nycticorax) in flight",
+   "date": "2021-08-07 09:48:29",
+   "categories": [
+    "Akrotiri (village), Cyprus",
+    "Birds in August 2021",
+    "CC-BY-SA-4.0",
+    "Cyprus photographs taken on 2021-08-07",
+    "Files with coordinates missing SDC location of creation",
+    "Nycticorax nycticorax in flight",
+    "Nycticorax nycticorax nycticorax",
+    "Pelecaniformes of Cyprus",
+    "Photographs by Charlesjsharp",
+    "Self-published work",
+    "Valued images by Charlesjsharp",
+    "Valued images of Ardeidae",
+    "Valued images of Cyprus",
+    "Valued images of Pelecaniformes by Charlesjsharp",
+    "Valued images of birds by Charlesjsharp",
+    "Valued images promoted 2021-09",
+    "Valued images sorted by promotion date"
+   ],
+   "width": 3682,
+   "height": 2455,
+   "sha1": "ab583fe83f5e0d451ee135836c086a2c66b4f7af",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Black-crowned_night_heron_%28Nycticorax_nycticorax%29_in_flight.jpg/1280px-Black-crowned_night_heron_%28Nycticorax_nycticorax%29_in_flight.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "compare": {
+   "orbSame": 928,
+   "orbMirror": 3,
+   "localAR": 1.105,
+   "sourceAR": 1.501
+  }
  },
  {
   "image": "/assets/species/plumage/sp086-flight.webp",
@@ -8305,7 +9120,41 @@
    "flight": true,
    "label": "In vlucht"
   },
-  "error": "HTTPError: HTTP Error 429: Too Many Requests"
+  "source": {
+   "kind": "commons",
+   "title": "File:Greylag goose (Anser anser) in flight Marken.jpg",
+   "author": "Charles J. Sharp",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "description": "Greylag goose ( Anser anser ), Marken, Netherlands",
+   "objectName": "Greylag goose (Anser anser) in flight Marken",
+   "date": "2026-04-08 09:20:12",
+   "categories": [
+    "Anser anser in flight",
+    "Anseriformes of the Netherlands",
+    "CC-BY-SA-4.0",
+    "Files with coordinates missing SDC location of creation (52° N, 5° E)",
+    "Photographs by Charlesjsharp",
+    "Quality images",
+    "Quality images by Charlesjsharp",
+    "Quality images missing SDC Commons quality assessment",
+    "Quality images missing SDC creator",
+    "Quality images missing SDC depicts",
+    "Quality images of Anseriformes by Charlesjsharp",
+    "Quality images of birds by Charlesjsharp",
+    "Self-published work"
+   ],
+   "width": 4726,
+   "height": 3150,
+   "sha1": "24ccb9852d146c2864968f96a8d18f854a17bc20",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Greylag_goose_%28Anser_anser%29_in_flight_Marken.jpg/1280px-Greylag_goose_%28Anser_anser%29_in_flight_Marken.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "compare": {
+   "orbSame": 1745,
+   "orbMirror": 3,
+   "localAR": 1.501,
+   "sourceAR": 1.501
+  }
  },
  {
   "image": "/assets/species/plumage/sp089-flight.webp",
@@ -8785,7 +9634,34 @@
    "flight": true,
    "label": "In vlucht"
   },
-  "error": "HTTPError: HTTP Error 429: Too Many Requests"
+  "source": {
+   "kind": "commons",
+   "title": "File:Oystercatcher (Haematopus ostralegus) in flight.jpg",
+   "author": "Charles J. Sharp",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "description": "Oystercatcher ( Haematopus ostralegus ) in flight, Argyll, Scotland",
+   "objectName": "Oystercatcher (Haematopus ostralegus) in flight",
+   "date": "2015-08-21 15:52:51",
+   "categories": [
+    "CC-BY-SA-4.0",
+    "Charadriiformes of the United Kingdom",
+    "Files with coordinates missing SDC location of creation",
+    "Haematopus ostralegus in flight",
+    "Photographs by Charlesjsharp",
+    "Self-published work"
+   ],
+   "width": 2198,
+   "height": 1466,
+   "sha1": "095bcef2652428714bf3b70dec7feec20f7a6ca2",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Oystercatcher_%28Haematopus_ostralegus%29_in_flight.jpg/1280px-Oystercatcher_%28Haematopus_ostralegus%29_in_flight.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "compare": {
+   "orbSame": 978,
+   "orbMirror": 8,
+   "localAR": 1.499,
+   "sourceAR": 1.499
+  }
  },
  {
   "image": "/assets/species/plumage/sp099-flight.webp",
@@ -8802,7 +9678,42 @@
    "flight": true,
    "label": "In vlucht"
   },
-  "error": "HTTPError: HTTP Error 429: Too Many Requests"
+  "source": {
+   "kind": "commons",
+   "title": "File:Northern lapwings (Vanellus vanellus) in flight Marken.jpg",
+   "author": "Charles J. Sharp",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "description": "Northern lapwings ( Vanellus vanellus ), Marken, Netherlands",
+   "objectName": "Northern lapwings (Vanellus vanellus) in flight Marken",
+   "date": "2026-04-07 17:10:30",
+   "categories": [
+    "CC-BY-SA-4.0",
+    "Charadriidae of the Netherlands",
+    "Files with coordinates missing SDC location of creation (52° N, 5° E)",
+    "Photographs by Charlesjsharp",
+    "Quality images",
+    "Quality images by Charlesjsharp",
+    "Quality images missing SDC Commons quality assessment",
+    "Quality images missing SDC creator",
+    "Quality images missing SDC depicts",
+    "Quality images missing SDC source of file",
+    "Quality images of Charadriiformes by Charlesjsharp",
+    "Quality images of birds by Charlesjsharp",
+    "Self-published work",
+    "Vanellus vanellus in flight"
+   ],
+   "width": 3585,
+   "height": 2391,
+   "sha1": "c31b1f779552147e0063dcf4e5dd1af257dc56ad",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Northern_lapwings_%28Vanellus_vanellus%29_in_flight_Marken.jpg/1280px-Northern_lapwings_%28Vanellus_vanellus%29_in_flight_Marken.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "compare": {
+   "orbSame": 1711,
+   "orbMirror": 3,
+   "localAR": 1.499,
+   "sourceAR": 1.499
+  }
  },
  {
   "image": "/assets/species/plumage/sp100-flight.webp",
@@ -9059,7 +9970,12 @@
    "sha1": "71df4e8e42b11b34893c94de018da09e6ae4b493",
    "thumb": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Rink-necked_pheasant_in_flight_%286922582382%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
-  "error": "HTTPError: HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)"
+  "compare": {
+   "orbSame": 1683,
+   "orbMirror": 7,
+   "localAR": 1.73,
+   "sourceAR": 1.731
+  }
  },
  {
   "image": "/assets/species/plumage/sp106-flight.webp",
@@ -9660,7 +10576,12 @@
    "sha1": "5d8121374c86f39edaa26df1d45d67ec1eac54db",
    "thumb": "https://upload.wikimedia.org/wikipedia/commons/1/16/Kluut-1_%2828031728713%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
-  "error": "HTTPError: HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)"
+  "compare": {
+   "orbSame": 732,
+   "orbMirror": 4,
+   "localAR": 1.501,
+   "sourceAR": 1.501
+  }
  },
  {
   "image": "/assets/species/plumage/sp144-flight.webp",
@@ -9788,7 +10709,12 @@
    "sha1": "7b1bfd83016a8cb20b1e2a496d381639680aa4be",
    "thumb": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Charadrius_hiaticula_Lvk.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
-  "error": "HTTPError: HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)"
+  "compare": {
+   "orbSame": 1804,
+   "orbMirror": 5,
+   "localAR": 0.81,
+   "sourceAR": 0.81
+  }
  },
  {
   "image": "/assets/species/plumage/sp147-flight.webp",
@@ -11159,7 +12085,34 @@
    "flight": null,
    "label": null
   },
-  "error": "HTTPError: HTTP Error 429: Too Many Requests"
+  "source": {
+   "kind": "commons",
+   "title": "File:Juvenile gadwall (Anas strepera) (34539448293).jpg",
+   "author": "Pacific Southwest Region USFWS from Sacramento, US",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "description": "California Waterfowl Association, a USFWS partner, held a youth camp this past weekend. The campers learned how to band waterfowl and released them out into the wild. Taken at Grizzly Ranch near Suisun, California. Photo by Rebecca Fabbri/ Partnership at USFWS",
+   "objectName": "Juvenile gadwall (Anas strepera) (34539448293)",
+   "date": "2017-06-14 01:55",
+   "categories": [
+    "Files from the United States Fish and Wildlife Service Pacific Southwest Region Flickr stream",
+    "Flickr images reviewed by FlickreviewR 2",
+    "Images from the United States Fish and Wildlife Service",
+    "Mareca strepera (with other species)",
+    "PD US FWS",
+    "USGov files uploaded by OceanAtoll"
+   ],
+   "width": 5184,
+   "height": 3456,
+   "sha1": "8b703e781b0ee2b4936b1a38f43d2f4600ebd429",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Juvenile_gadwall_%28Anas_strepera%29_%2834539448293%29.jpg/1280px-Juvenile_gadwall_%28Anas_strepera%29_%2834539448293%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "compare": {
+   "orbSame": 1716,
+   "orbMirror": 3,
+   "localAR": 1.5,
+   "sourceAR": 1.501
+  }
  },
  {
   "image": "/assets/species/plumage/sp097-winter.webp",
@@ -11176,7 +12129,32 @@
    "flight": null,
    "label": null
   },
-  "error": "HTTPError: HTTP Error 429: Too Many Requests"
+  "source": {
+   "kind": "commons",
+   "title": "File:Black-headed gull (winter plumage).JPG",
+   "author": "Bartosz MORĄG",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "description": "Black-headed gull (winter plumage)",
+   "objectName": "Black-headed gull (winter plumage)",
+   "date": "2013-10-10 14:08:10",
+   "categories": [
+    "CC-BY-SA-3.0",
+    "Chroicocephalus ridibundus (adult in winter plumage)",
+    "Self-published work",
+    "Taken with Nikon Coolpix P500"
+   ],
+   "width": 2727,
+   "height": 2054,
+   "sha1": "180e53cf9fb4df031163324583fb0df6febb4f96",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Black-headed_gull_%28winter_plumage%29.JPG/1280px-Black-headed_gull_%28winter_plumage%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "compare": {
+   "orbSame": 1746,
+   "orbMirror": 4,
+   "localAR": 1.328,
+   "sourceAR": 1.328
+  }
  },
  {
   "image": "/assets/species/plumage/sp225-winter.webp",
@@ -11737,7 +12715,35 @@
    "flight": true,
    "label": null
   },
-  "error": "HTTPError: HTTP Error 429: Too Many Requests"
+  "source": {
+   "kind": "commons",
+   "title": "File:Juvenile honey buzzard (52499563661).jpg",
+   "author": "Andrey Gulivanov",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "description": "St Petersburg/Leningrad Oblast. Pernis apivorus",
+   "objectName": "Juvenile honey buzzard (52499563661)",
+   "date": "Taken on 7 September 2022, 09:27",
+   "categories": [
+    "CC-BY-2.0",
+    "Flickr images reviewed by FlickreviewR 2",
+    "Pernis apivorus (juvenile)",
+    "Pernis apivorus in Russia",
+    "Pernis apivorus in flight",
+    "Photographs by Andrey Gulivanov",
+    "Russia photographs taken on 2022-09-07"
+   ],
+   "width": 2925,
+   "height": 1950,
+   "sha1": "dacf1663ec5ee942898f8e715dbd0f57b8bd888d",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Juvenile_honey_buzzard_%2852499563661%29.jpg/1280px-Juvenile_honey_buzzard_%2852499563661%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "compare": {
+   "orbSame": 1782,
+   "orbMirror": 20,
+   "localAR": 1.501,
+   "sourceAR": 1.501
+  }
  },
  {
   "image": "/assets/species/plumage/sp253-juv.webp",
@@ -12764,7 +13770,12 @@
    "sha1": "6ab4ca0f4600d3943d1b01965c0c12bf80d6767a",
    "thumb": "https://upload.wikimedia.org/wikipedia/commons/9/98/Lesser-spotted_woodpecker_%28Dryobates_minor_hortorum%29_female.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
-  "error": "HTTPError: HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)"
+  "compare": {
+   "orbSame": 1856,
+   "orbMirror": 4,
+   "localAR": 1.0,
+   "sourceAR": 1.0
+  }
  },
  {
   "image": "/assets/species/plumage/sp018-female-single.webp",
@@ -13242,7 +14253,35 @@
    "flight": null,
    "label": null
   },
-  "error": "HTTPError: HTTP Error 429: Too Many Requests"
+  "source": {
+   "kind": "commons",
+   "title": "File:Ardea cinerea juvenile v2.jpg",
+   "author": "Ralf Hüsges",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "description": "Graureiher Jungvogel nach seinem ersten Flug.",
+   "objectName": "Ardea cinerea juvenile v2",
+   "date": "Taken on 29 April 2024, 14:12",
+   "categories": [
+    "Ardea cinerea (juvenile)",
+    "Ardea cinerea in Germany",
+    "CC-BY-2.0",
+    "Extracted images",
+    "Germany photographs taken on 2024-04-29",
+    "Photographs by Ralf Hüsges",
+    "Taken with Sony ILCE-6700"
+   ],
+   "width": 3727,
+   "height": 3205,
+   "sha1": "b6bed02788376bda7cff49997f3ee7b211578618",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Ardea_cinerea_juvenile_v2.jpg/1280px-Ardea_cinerea_juvenile_v2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "compare": {
+   "orbSame": 1600,
+   "orbMirror": 7,
+   "localAR": 1.163,
+   "sourceAR": 1.163
+  }
  },
  {
   "image": "/assets/species/plumage/sp084-juv.webp",
@@ -13283,7 +14322,12 @@
    "sha1": "a3d7193ef3e7cb766df02891071202019328b7b3",
    "thumb": "https://upload.wikimedia.org/wikipedia/commons/3/37/Purple_Heron_%28Immature%29_I_IMG_8123.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
-  "error": "HTTPError: HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)"
+  "compare": {
+   "orbSame": 1837,
+   "orbMirror": 8,
+   "localAR": 1.333,
+   "sourceAR": 1.333
+  }
  },
  {
   "image": "/assets/species/plumage/sp085-juv.webp",
