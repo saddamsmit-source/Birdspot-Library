@@ -911,7 +911,54 @@
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
   gap: var(--space-8);
 }
-.sd-plumage-comparison details > summary { margin-bottom: var(--space-8); cursor: pointer; }
 .sd-plumage-photo { min-width: 0; margin: 0; }
 .sd-hero-ref { margin-top: var(--space-4); font-size: var(--fs-meta); color: var(--muted); }
 .sd-plumage-photo figcaption { margin-top: 4px; font-size: var(--fs-meta); font-weight: 650; }
+
+/* "Lijkt op" — vergelijkingskaart (Ontwerp A) */
+.sd-cmp-card {
+  display: grid; gap: var(--space-12); padding: var(--space-12);
+  border: 1px solid var(--line); border-radius: var(--r-sm); background: var(--surface);
+}
+.sd-cmp-tabs { display: flex; flex-wrap: wrap; gap: var(--space-8); }
+.sd-cmp-tab {
+  min-height: 40px; padding: 0 var(--space-12); border: 1px solid var(--line); border-radius: var(--r-pill);
+  background: var(--surface-2); color: var(--ink-2); font-size: var(--fs-meta); font-weight: 600; cursor: pointer;
+}
+.sd-cmp-tab.is-active { background: var(--brand-mid); border-color: var(--brand-mid); color: var(--on-brand); }
+.sd-cmp-head {
+  display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-12);
+}
+.sd-cmp-who { display: grid; align-content: start; gap: 2px; min-width: 0; }
+.sd-cmp-who strong { color: var(--ink); font-size: var(--fs-body); }
+.sd-cmp-who small { color: var(--ink-2); font-size: var(--fs-meta); }
+.sd-cmp-who .sd-field-photo { margin-top: var(--space-8); }
+.sd-cmp-ref {
+  display: grid; place-items: center; min-height: 80px; margin-top: var(--space-8); padding: var(--space-8);
+  border: 1px dashed var(--line); border-radius: var(--r-sm); color: var(--ink-2); font-size: var(--fs-meta);
+  text-align: center; background: var(--surface-2);
+}
+.sd-cmp-rows { display: grid; gap: var(--space-8); }
+.sd-cmp-row {
+  display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8) var(--space-12);
+  padding: var(--space-8) 0; border-top: 1px solid var(--line); font-size: var(--fs-meta); color: var(--ink);
+}
+.sd-cmp-row b { grid-column: 1 / -1; color: var(--ink-2); font-weight: 650; font-size: var(--fs-label); }
+.sd-cmp-tip {
+  margin: 0; padding: var(--space-8) var(--space-12); border-radius: var(--r-sm);
+  background: var(--accent-soft); color: var(--accent-ink); font-size: var(--fs-meta); line-height: 1.45;
+}
+.sd-cmp-foot {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-8);
+}
+.sd-cmp-foot span { color: var(--ink-2); font-size: var(--fs-meta); }
+.sd-cmp-foot a { color: inherit; text-decoration: underline; }
+.sd-cmp-more { margin-top: var(--space-8); }
+.sd-cmp-more > summary {
+  min-height: 40px; display: flex; align-items: center; padding: 0 var(--space-8);
+  color: var(--ink-2); font-size: var(--fs-meta); font-weight: 600; cursor: pointer;
+}
+.sd-cmp-more > .sd-cmp-card { margin-top: var(--space-8); }
+@media (max-width: 420px) {
+  .sd-cmp-head { grid-template-columns: 1fr; }
+}

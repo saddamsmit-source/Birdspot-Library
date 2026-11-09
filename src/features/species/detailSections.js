@@ -176,19 +176,6 @@ function plumageCard({key, icon: iconName, title, text, badge, photos, heroRef})
   return `<div class="sd-plumage" data-plumage="${key}">${icon(iconName)}<div><strong>${esc(title)}${badge ? `<span class="sd-badge">${esc(badge)}</span>` : ''}</strong>${text ? `<p>${esc(text)}</p>` : ''}${gallery.length ? `<div class="sd-plumage-gallery">${gallery.join('')}</div>` : ''}${heroRef ? '<p class="sd-hero-ref">Foto: de hoofdfoto bovenaan deze kaart.</p>' : ''}</div></div>`;
 }
 
-function comparePlumages(groups) {
-  const cards = groups.filter(group => ['adult_m', 'adult_f', 'juv'].includes(group.key))
-    .filter(group => group.text || group.photos.length);
-  if (cards.length < 2) return '';
-  return '<section class="sd-plumage-comparison" aria-label="Kleden vergelijken"><h3 class="sd-h">Kleden vergelijken</h3>' +
-    '<details><summary>Bekijk de kleden naast elkaar</summary><div class="sd-compare-grid">' +
-    cards.map(({title, text, photos}) => {
-      const photo = photos[0];
-      const marks = text || photo?.visualCheck;
-      return `<div class="sd-compare-card"><strong>${esc(title)}</strong>${photo ? fieldPhoto(photo) : ''}${marks ? `<p>${esc(marks)}</p>` : ''}</div>`;
-    }).join('') + '</div></details></section>';
-}
-
 function flightPhoto(id) {
   const pose = GUIDE_POSES[id]?.find(photo => photo.flight);
   if (pose) return pose;
@@ -198,11 +185,13 @@ function flightPhoto(id) {
     .map(kind => variants?.[kind]).find(photo => photo?.flight);
 }
 
-function posesPanel(id, takePhoto, hasFlightComparison) {
+function posesPanel(id, takePhoto) {
   const main = GUIDE_PHOTOS[id];
   const original = main && main !== guideHeroPhoto(id) ? [main] : [];
+  // Een vluchtfoto die ook in een vergelijkingskaart meedoet wordt daar nooit herhaald (dashed verwijzing
+  // in plaats van de foto zelf), dus hoort hij hier altijd te staan — niet uitgesloten zoals vóór de redesign.
   const photos = [...(GUIDE_POSES[id] || []), ...original]
-    .filter(photo => !photoRole(photo) && (!photo.flight || !hasFlightComparison) && takePhoto(photo));
+    .filter(photo => !photoRole(photo) && takePhoto(photo));
   if (!photos.length) return '';
   const title = photos.every(photo => photo.flight) ? 'In vlucht' : 'Overige herkenningsfoto’s';
   return `<section class="sd-poses" aria-label="${title}"><h3 class="sd-h">${title}</h3>` +
@@ -211,31 +200,103 @@ function posesPanel(id, takePhoto, hasFlightComparison) {
     ).join('') + '</div></section>';
 }
 
-function comparisonsPanel(id, comparisons, takePhoto) {
-  if (!comparisons.length) return '';
-  return comparisons.map(({birds, tip, label, flight}) => {
-    const ordered = [...birds].sort((a, b) => Number(b.id === id) - Number(a.id === id));
-    const cards = ordered.map(bird => {
-      const species = speciesById.get(bird.id);
-      const name = species.nameNL;
-      const adult = bird.plumage === 'adult_m' && !species.plumage?.adult_f;
-      const photo = bird.textOnly ? null : flight
-        ? flightPhoto(bird.id)
-        : plumagePhoto(bird.id, bird.plumage);
-      const kind = flight ? (photo?.sex ? photo.label : 'In vlucht')
-        : adult ? 'Volwassen' : PLUMAGE.find(([key]) => key === bird.plumage)?.[2];
-      const showPhoto = takePhoto(photo);
-      return `<div class="sd-compare-card">
-        <strong>${esc(name)}</strong>${kind ? `<span class="sd-badge">${esc(kind)}</span>` : ''}
-        ${showPhoto ? fieldPhoto(photo) : ''}
-        ${showPhoto && flight && photo.sex ? `<p>${esc(photo.note)}</p>` : ''}
-        <p>${esc(bird.marks)}</p>
-        <a class="sd-media-credit" href="${esc(comparisonSource(bird))}" target="_blank" rel="noopener noreferrer">Vogelbescherming</a>
-        ${bird.id === id ? '' : `<button type="button" class="sd-compare-open" data-compare-species="${esc(bird.id)}">Open soortkaart<span class="visually-hidden"> ${esc(name)}</span></button>`}
-      </div>`;
-    });
-    return `<div class="sd-compare${flight ? ' sd-flight-compare' : ''}">${label ? `<h4 class="sd-compare-label">${esc(label)}</h4>` : ''}<p>${esc(tip)}</p><div class="sd-compare-grid">${cards.join('')}</div></div>`;
+/** Titel van het kleed dat een vergelijking toont, voor de tab, de "eigen kleed"-verwijzing en de badge. */
+function cmpPlumageTitle(entry, bird) {
+  if (entry.flight) {
+    const photo = flightPhoto(bird.id);
+    return photo?.sex ? photo.label : 'In vlucht';
+  }
+  const species = speciesById.get(bird.id);
+  const adult = bird.plumage === 'adult_m' && !species.plumage?.adult_f;
+  if (adult) return 'Volwassen';
+  const fromPlumage = PLUMAGE.find(([key]) => key === bird.plumage)?.[2];
+  if (fromPlumage) return fromPlumage;
+  const suffix = entry.label?.split('·').pop()?.trim();
+  return suffix ? suffix[0].toUpperCase() + suffix.slice(1) : 'Volwassen';
+}
+
+function splitMarks(text, max = 3) {
+  return String(text || '').split(/(?<=[.!?])\s+/).map(part => part.trim()).filter(Boolean).slice(0, max);
+}
+
+/** Rijen met max. 3 kenmerken voor één focal/partner-paar. Handgeschreven `rows` gaan voor (geïndexeerd op de
+ * positie van beide vogels in entry.birds); anders volgt de rijindeling de bestaande, al geverifieerde
+ * marks-tekst van beide vogels (geen nieuwe feiten, alleen herordend). Bij 3+ vogels in één entry (bv. een
+ * gezamenlijke vluchtvergelijking) tellen alleen de marks van het focal/partner-paar zelf mee. */
+function cmpRows({entry, focal, partner}) {
+  if (entry.rows) {
+    const focalIndex = entry.birds.indexOf(focal), partnerIndex = entry.birds.indexOf(partner);
+    return entry.rows.slice(0, 3).map(row => ({label: row.label, own: row.values[focalIndex], other: row.values[partnerIndex]}));
+  }
+  const own = splitMarks(focal.marks), other = splitMarks(partner.marks);
+  const rows = [];
+  for (let i = 0; i < Math.max(own.length, other.length) && rows.length < 3; i++) {
+    if (!own[i] && !other[i]) continue;
+    rows.push({label: '', own: own[i] || '', other: other[i] || ''});
+  }
+  return rows;
+}
+
+/** Vergelijkingen van één soort gegroepeerd per andere soort, rijkste groep eerst. Eén entry kan meerdere
+ * paringen opleveren wanneer hij meer dan twee vogels bevat (bv. Sperwer/Havik/Torenvalk in vlucht). */
+function groupComparisonsByPartner(id, comparisons) {
+  const groups = new Map();
+  for (const entry of comparisons) {
+    const focal = entry.birds.find(bird => bird.id === id);
+    if (!focal) continue;
+    for (const partner of entry.birds) {
+      if (partner.id === id) continue;
+      if (!groups.has(partner.id)) groups.set(partner.id, {partnerId: partner.id, pairings: []});
+      groups.get(partner.id).pairings.push({entry, focal, partner});
+    }
+  }
+  return [...groups.values()].sort((a, b) => b.pairings.length - a.pairings.length);
+}
+
+function comparisonCard(id, group, takePhoto) {
+  const {pairings} = group;
+  const own = speciesById.get(id).nameNL;
+  const partnerSpecies = speciesById.get(group.partnerId);
+  const tabs = pairings.length > 1;
+  const panels = pairings.map((pairing, i) => {
+    const {entry, focal, partner} = pairing;
+    const title = cmpPlumageTitle(entry, focal);
+    const partnerTitle = cmpPlumageTitle(entry, partner);
+    const photo = partner.textOnly ? null : entry.flight ? flightPhoto(partner.id) : plumagePhoto(partner.id, partner.plumage);
+    const showPhoto = takePhoto(photo);
+    const rows = cmpRows(pairing).map(row =>
+      `<div class="sd-cmp-row">${row.label ? `<b>${esc(row.label)}</b>` : ''}<span>${esc(row.own)}</span><span>${esc(row.other)}</span></div>`
+    ).join('');
+    const refLabel = focal.plumage || entry.flight ? title.toLowerCase() : 'hoofdfoto';
+    return `<div class="sd-cmp-panel" data-cmp-panel${i === 0 ? '' : ' hidden'}>
+      <div class="sd-cmp-head">
+        <div class="sd-cmp-who"><strong>${esc(own)}</strong><small>${esc(title)}</small><div class="sd-cmp-ref">↑ zie ${esc(refLabel)}</div></div>
+        <div class="sd-cmp-who"><strong>${esc(partnerSpecies.nameNL)}</strong><small>${esc(partnerTitle)}</small>${showPhoto ? fieldPhoto(photo) : '<div class="sd-cmp-ref">Nog geen foto</div>'}</div>
+      </div>
+      ${rows ? `<div class="sd-cmp-rows">${rows}</div>` : ''}
+      ${entry.tip ? `<p class="sd-cmp-tip">Tip: ${esc(entry.tip)}</p>` : ''}
+      <div class="sd-cmp-foot">
+        <span>${showPhoto ? `Bron: <a href="${esc(comparisonSource(partner))}" target="_blank" rel="noopener noreferrer">Vogelbescherming</a>` : `Nog geen foto van ${esc(partnerSpecies.nameNL)} in dit kleed.`}</span>
+        <button type="button" class="sd-compare-open" data-compare-species="${esc(partner.id)}">Open ${esc(partnerSpecies.nameNL)}<span aria-hidden="true"> →</span></button>
+      </div>
+    </div>`;
   }).join('');
+  const tabBar = tabs ? `<div class="sd-cmp-tabs" role="tablist">${pairings.map(({entry, focal}, i) =>
+    `<button type="button" class="sd-cmp-tab${i === 0 ? ' is-active' : ''}" data-cmp-tab aria-selected="${i === 0}">${esc(cmpPlumageTitle(entry, focal))}</button>`
+  ).join('')}</div>` : '';
+  return `<div class="sd-cmp-card">${tabBar}${panels}</div>`;
+}
+
+function comparisonsSection(id, comparisons, takePhoto) {
+  if (!comparisons.length) return '';
+  const groups = groupComparisonsByPartner(id, comparisons);
+  if (!groups.length) return '';
+  const [primary, ...rest] = groups;
+  const primaryCard = comparisonCard(id, primary, takePhoto);
+  if (!rest.length) return primaryCard;
+  const names = rest.map(group => speciesById.get(group.partnerId).nameNL);
+  const moreCards = rest.map(group => comparisonCard(id, group, takePhoto)).join('');
+  return primaryCard + `<details class="sd-cmp-more"><summary>Nog ${rest.length} ${rest.length === 1 ? 'soort' : 'soorten'}: ${names.map(esc).join(' · ')}</summary>${moreCards}</details>`;
 }
 
 export function voiceText(voice) {
@@ -289,13 +350,12 @@ export function recognitionPanel(s, life = null) {
   if (groups.length) out.push('<h3 class="sd-h">Verenkleed</h3><div class="sd-plumage-list">' + groups.map(plumageCard).join('') + '</div>');
 
   takePhoto(guideHeroPhoto(s.id));
-  out.push(posesPanel(s.id, takePhoto, flight.length > 0));
-  out.push(comparePlumages(groups));
+  out.push(posesPanel(s.id, takePhoto));
   if (flight.length) {
     out.push('<section aria-label="Vluchtvergelijking"><h3 class="sd-h">Vluchtvergelijking</h3>' +
-      comparisonsPanel(s.id, flight, takePhoto) + '</section>');
+      comparisonsSection(s.id, flight, takePhoto) + '</section>');
   }
-  if (regular.length) out.push('<h3 class="sd-h">Lijkt op</h3>' + comparisonsPanel(s.id, regular, takePhoto));
+  if (regular.length) out.push('<h3 class="sd-h">Lijkt op</h3>' + comparisonsSection(s.id, regular, takePhoto));
   out.push(`<div id="sdVoice" class="sd-voice-section">${voicePanel(s, life?.voice)}</div>`);
   if (s.compact) {
     out.push(`<p class="sd-note">${icon('info')}Zeldzame dwaalgast: een uitgebreide beschrijving volgt nog.</p>`);

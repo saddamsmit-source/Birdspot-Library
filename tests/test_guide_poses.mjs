@@ -17,8 +17,7 @@ const picturedSpecies = new Set([...Object.keys(GUIDE_PHOTOS), ...Object.keys(GU
 for (const s of SPECIES) {
   const {id} = s;
   const html = recognitionPanel(s);
-  const photosOutsideComparison = html.replace(/<section class="sd-plumage-comparison".*?<\/section>/gs, '');
-  const images = [...photosOutsideComparison.matchAll(/data-guide-image="([^"]+)"/g)].map(match => match[1]);
+  const images = [...html.matchAll(/data-guide-image="([^"]+)"/g)].map(match => match[1]);
   assert.equal(images.length, new Set(images).size, `Duplicate image within Herkenning: ${id}`);
   if (!picturedSpecies.has(id)) continue;
   const hero = guideHeroPhoto(id);
@@ -31,10 +30,8 @@ for (const s of SPECIES) {
     if (images.includes(photo.image)) assert.ok(html.includes(escHtml(photo.source)), `Missing credits: ${photo.image}`);
   }
   const plumage = html.indexOf('class="sd-plumage-list"');
-  for (const section of ['Kleden vergelijken', 'Vluchtvergelijking']) {
-    const comparison = html.indexOf(`aria-label="${section}"`);
-    if (plumage >= 0 && comparison >= 0) assert.ok(plumage < comparison, `${section} must follow plumage: ${id}`);
-  }
+  const flightCompare = html.indexOf('aria-label="Vluchtvergelijking"');
+  if (plumage >= 0 && flightCompare >= 0) assert.ok(plumage < flightCompare, `Vluchtvergelijking must follow plumage: ${id}`);
   if (plumage >= 0 && html.includes('>Lijkt op<')) assert.ok(plumage < html.indexOf('>Lijkt op<'), id);
 }
 const photosFor = (id, key) => guidePlumageGroups(species.get(id)).find(group => group.key === key).photos.map(photo => photo.image);

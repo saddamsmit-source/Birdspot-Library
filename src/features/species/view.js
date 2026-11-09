@@ -659,6 +659,16 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
       close(false);
       openDetail(compare.dataset.compareSpecies, screenEl, returnFocus);
     }
+    const cmpTab = e.target.closest('[data-cmp-tab]');
+    if (cmpTab) {
+      const card = cmpTab.closest('.sd-cmp-card');
+      const index = [...card.querySelectorAll('[data-cmp-tab]')].indexOf(cmpTab);
+      card.querySelectorAll('[data-cmp-tab]').forEach((tab, i) => {
+        tab.classList.toggle('is-active', i === index);
+        tab.setAttribute('aria-selected', String(i === index));
+      });
+      card.querySelectorAll('[data-cmp-panel]').forEach((panel, i) => { panel.hidden = i !== index; });
+    }
   });
   sheet.addEventListener('play', e => {
     if (!e.target.matches('.sd-audio audio')) return;

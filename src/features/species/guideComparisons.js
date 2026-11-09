@@ -116,6 +116,11 @@ export const GUIDE_COMPARISONS = [
       {id: 'sp173', source: 'bruine-kiekendief', plumage: 'adult_m', marks: 'Bruin lijf met grijze vleugelvelden en grijze staart. De vleugelpunten zijn zwart.'},
       {id: 'sp249', source: 'blauwe-kiekendief', plumage: 'adult_m', marks: 'Licht blauwgrijs lijf, witte buik en witte stuit. De vleugelpunten zijn zwart.'},
     ],
+    rows: [
+      {label: 'Lijf', values: ['Bruin', 'Lichtblauwgrijs, witte buik']},
+      {label: 'Stuit / staart', values: ['Grijze staart, geen witte stuit', 'Witte stuit']},
+      {label: 'Vleugelpunt', values: ['Zwart', 'Zwart']},
+    ],
     tip: 'Begin bij de kleur van het lijf. Kijk bij een draai in de vlucht ook naar de stuit, de plek net boven de staart.',
   },
   {
@@ -124,6 +129,11 @@ export const GUIDE_COMPARISONS = [
       {id: 'sp173', source: 'bruine-kiekendief', plumage: 'adult_f', marks: 'Donkerbruin met een lichte kruin en keel, vaak ook een lichte vleugelvoorrand. Geen brede witte stuit.'},
       {id: 'sp249', source: 'blauwe-kiekendief', plumage: 'adult_f', marks: 'Bruin met brede witte stuit. Van onderen vallen donkere banden op de vleugels en staart op.'},
     ],
+    rows: [
+      {label: 'Kop', values: ['Lichte kruin en keel', 'Geen opvallend lichte kruin']},
+      {label: 'Stuit', values: ['Geen brede witte stuit', 'Brede witte stuit']},
+      {label: 'Ondervleugel', values: ['Geen opvallende banden benoemd', 'Donkere banden']},
+    ],
     tip: 'Van onderen zijn de vleugelbanden goed te vergelijken. De witte stuit zie je van boven of wanneer de vogel wegdraait.',
   },
   {
@@ -131,6 +141,11 @@ export const GUIDE_COMPARISONS = [
     birds: [
       {id: 'sp173', source: 'bruine-kiekendief', plumage: 'juv', marks: 'Meestal vrijwel egaal donkerbruin, met een lichte kruin. Mist een brede witte stuit.'},
       {id: 'sp249', source: 'blauwe-kiekendief', plumage: 'juv', marks: 'Bruin met witte stuit. De staart en ondervleugels zijn gebandeerd.'},
+    ],
+    rows: [
+      {label: 'Kleed', values: ['Egaal donkerbruin, lichte kruin', 'Bruin']},
+      {label: 'Stuit', values: ['Geen brede witte stuit', 'Witte stuit']},
+      {label: 'Staart / ondervleugel', values: ['Ongebandeerd', 'Gebandeerd']},
     ],
     tip: 'Beide zijn bruin. Gebruik de stuit samen met de bandering. Bij een kort silhouet kan de soort onzeker blijven.',
   },
@@ -699,6 +714,11 @@ export const GUIDE_COMPARISONS = [
     birds: [
       {id: 'sp094', source: 'zilvermeeuw', marks: 'Lichtgrijze mantel en roze poten. De gele snavel heeft een rode vlek.'},
       {id: 'sp095', source: 'kleine-mantelmeeuw', marks: 'Donkergrijze mantel en gele poten. Oogt doorgaans slanker.'},
+    ],
+    rows: [
+      {label: 'Mantel', values: ['Lichtgrijs', 'Donkergrijs']},
+      {label: 'Poten', values: ['Roze', 'Geel']},
+      {label: 'Snavel / bouw', values: ['Gele snavel, rode vlek', 'Slanker']},
     ],
     tip: 'Combineer mantelkleur en pootkleur. Licht en schaduw kunnen de mantel donkerder of lichter doen lijken.',
   },
