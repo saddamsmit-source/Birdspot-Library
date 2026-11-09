@@ -1,0 +1,302 @@
+[
+ {
+  "image": "/assets/showcase/sp042.webp",
+  "species": "sp042",
+  "latin": "Carpodacus erythrinus",
+  "app": {
+   "author": "Поляков Александр",
+   "license": "CC BY 4.0",
+   "sex": "male",
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Carpodacus_erythrinus_303190528.jpg",
+  "src": {
+   "title": "File:Carpodacus erythrinus 303190528.jpg",
+   "author": "Поляков Александр",
+   "license": "CC BY 4.0",
+   "description": "Common Rosefinch ( Carpodacus erythrinus )",
+   "objectName": "Carpodacus erythrinus 303190528",
+   "categories": [
+    "Birds of Smolensk Oblast",
+    "CC-BY-4.0",
+    "Carpodacus erythrinus",
+    "Files with coordinates missing SDC location of creation",
+    "Fringillidae in Russia",
+    "INaturalist images reviewed by iNaturalistReviewBot",
+    "Media from iNaturalist",
+    "Russia photographs taken on 2023-07-22",
+    "Uploaded with iNaturalist2Commons"
+   ],
+   "width": 2048,
+   "height": 1366,
+   "sha1": "dca500456e4c38a218e7527842cfde596ad83d19",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Carpodacus_erythrinus_303190528.jpg/1280px-Carpodacus_erythrinus_303190528.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": false,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2093,
+   "mirror": false,
+   "scale": 0.999,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "maker wijkt af",
+   "geslacht male niet in bron"
+  ],
+  "pair": "pairs/sp042.jpg"
+ },
+ {
+  "image": "/assets/showcase/sp084.webp",
+  "species": "sp084",
+  "latin": "Ardea purpurea",
+  "app": {
+   "author": "Bernard Gagnon",
+   "license": "CC BY-SA 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Purple_heron_in_Zimbabwe.jpg",
+  "src": {
+   "title": "File:Purple heron in Zimbabwe.jpg",
+   "author": "Bernard Gagnon",
+   "license": "CC BY-SA 4.0",
+   "description": "Purple heron ( Ardea purpurea ) on the bank of the Zambezi, Zimbabwe",
+   "objectName": "Purple heron in Zimbabwe",
+   "categories": [
+    "Ardea purpurea purpurea",
+    "CC-BY-SA-4.0,3.0,2.5,2.0,1.0",
+    "Files with coordinates missing SDC location of creation",
+    "GFDL",
+    "License migration redundant",
+    "Pelecaniformes of Zimbabwe",
+    "Quality images",
+    "Quality images of Ardea purpurea",
+    "Quality images of animals in Zimbabwe",
+    "Self-published work"
+   ],
+   "width": 3914,
+   "height": 2609,
+   "sha1": "f3dfbfb45846ead5567f28bac37c1de4ef58167e",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Purple_heron_in_Zimbabwe.jpg/1280px-Purple_heron_in_Zimbabwe.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 1999,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.001
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/sp144.webp",
+  "species": "sp144",
+  "latin": "Pluvialis squatarola",
+  "app": {
+   "author": "William Stephens",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/66147127",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/sp158.webp",
+  "species": "sp158",
+  "latin": "Tringa nebularia",
+  "app": {
+   "author": "Pål A. Olsvik",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/198450766",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp049-flight.webp",
+  "species": "sp049",
+  "latin": "Turdus viscivorus",
+  "app": {
+   "author": "Codrin Bucur",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/576073830",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp118-flight.webp",
+  "species": "sp118",
+  "latin": "Emberiza schoeniclus",
+  "app": {
+   "author": "Codrin Bucur",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/241756520",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp282-flight.webp",
+  "species": "sp282",
+  "latin": "Pastor roseus",
+  "app": {
+   "author": "Kudaibergen Amirekul",
+   "license": "CC BY-SA 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/562383062",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp249-male-rest.webp",
+  "species": "sp249",
+  "latin": "Circus cyaneus",
+  "app": {
+   "author": "Sofia Voynovskaya",
+   "license": "CC BY 4.0",
+   "sex": "male",
+   "age": null,
+   "flight": false,
+   "label": "Mannetje in rust"
+  },
+  "source": "https://www.inaturalist.org/photos/728343078",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp007-adult_f.webp",
+  "species": "sp007",
+  "latin": "Accipiter gentilis",
+  "app": {
+   "author": "WATANABE Hitoshi 渡辺仁",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/478065886",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp082-winter.webp",
+  "species": "sp082",
+  "latin": "Egretta garzetta",
+  "app": {
+   "author": "Florin Feneru",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/172413835",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp091-juv.webp",
+  "species": "sp091",
+  "latin": "Anas crecca",
+  "app": {
+   "author": "Se Lena",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/169592753",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp206-adult_f.webp",
+  "species": "sp206",
+  "latin": "Charadrius alexandrinus",
+  "app": {
+   "author": "Katerina Kalogerini",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/268541114",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp145-juv.webp",
+  "species": "sp145",
+  "latin": "Pluvialis apricaria",
+  "app": {
+   "author": "Eva Uzdilova",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/148325469",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp102-juv.webp",
+  "species": "sp102",
+  "latin": "Tringa totanus",
+  "app": {
+   "author": "Stefan Haag",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/177943621",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp158-juv.webp",
+  "species": "sp158",
+  "latin": "Tringa nebularia",
+  "app": {
+   "author": "Se Lena",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/168627338",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ }
+]
