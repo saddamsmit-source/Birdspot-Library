@@ -4178,14 +4178,15 @@ export const GUIDE_POSES = Object.freeze({
       "image": "/assets/species/sp019.webp",
       "batch": "garden-song-05",
       "modifications": "Resized to max 1600 px and converted to WebP; no crop",
-      "reviewed": "2026-11-06",
+      "reviewed": "2026-11-09",
       "verification": "Commons identity and license checked against visible field marks in Vogelbescherming.",
-      "visualCheck": "Volledige vogel op een berkenstam. Rode kruin, donkere oogtekening en groen verenkleed.",
+      "visualCheck": "Volledige vogel op een berkenstam. Rode kruin, donkere oogtekening en groen verenkleed. Rode baardstreep geeft mannetje aan; exacte bestaande bron staat op Commons onder Picus viridis (male).",
       "alt": "Groene Specht — Volledige vogel op een berkenstam. Rode kruin, donkere oogtekening en groen verenkleed.",
       "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/groene-specht",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
       "label": "Zijaanzicht",
-      "note": "Klimmend aan een stam: let op de rode kruin, donkere oogtekening en groene bovendelen."
+      "note": "Klimmend aan een stam: let op de rode kruin, donkere oogtekening en groene bovendelen. De rode baardstreep bevestigt een mannetje.",
+      "sex": "male"
     },
     {
       "file": "European green woodpecker eating.jpg",
