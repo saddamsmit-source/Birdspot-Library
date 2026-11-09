@@ -10,7 +10,9 @@ function hasActiveInput() {
 
 if ('serviceWorker' in navigator) {
   const serviceWorker = navigator.serviceWorker;
-  serviceWorker.register('/sw.js').then(reg => {
+  // Relatief (i.p.v. vast "/sw.js") zodat registratie en scope ook onder een
+  // subpad kloppen (bv. een GitHub Pages-projectpagina) — zie sw.js SCOPE_PATH.
+  serviceWorker.register('./sw.js').then(reg => {
     let controller = serviceWorker.controller;
     let reloadRequested = false;
     let reloadAvailable = false;
