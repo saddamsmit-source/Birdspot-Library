@@ -1,0 +1,264 @@
+[
+ {
+  "image": "/assets/showcase/sp075.webp",
+  "species": "sp075",
+  "latin": "Alcedo atthis",
+  "app": {
+   "author": "Andreas Trepte",
+   "license": "CC BY-SA 2.5",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Common_Kingfisher_Alcedo_atthis.jpg",
+  "src": {
+   "title": "File:Common Kingfisher Alcedo atthis.jpg",
+   "author": "Andreas Trepte",
+   "license": "CC BY-SA 2.5",
+   "description": "Common Kingfisher , Marburg, Germany",
+   "objectName": "Common Kingfisher Alcedo atthis",
+   "categories": [
+    "21st-century photographs of Landkreis Marburg-Biedenkopf",
+    "Alcedo atthis of Germany",
+    "Andreas Trepte",
+    "Animals of Marburg",
+    "Birds of Hesse",
+    "CC-BY-SA-2.5",
+    "Featured pictures of Alcedo atthis",
+    "Featured pictures of Hesse",
+    "Featured pictures on Wikimedia Commons",
+    "Featured pictures on Wikipedia, English",
+    "Featured pictures on Wikipedia, German",
+    "Featured pictures on Wikipedia, Persian",
+    "Featured pictures on Wikipedia, Spanish",
+    "Featured pictures on Wikipedia, Vietnamese",
+    "Files with coordinates missing SDC location of creation (50° N, 8° E)",
+    "October 2013 Hesse photographs",
+    "Pictures of the Year/2013 (finalist)",
+    "Pictures of the Year (2013)",
+    "Pictures of the Year (candidate)",
+    "Pictures of the Year (finalist)",
+    "Pictures of the day (2014)",
+    "Quality images",
+    "Quality images missing SDC creator",
+    "Quality images missing SDC source of file",
+    "Quality images of Hesse",
+    "Taken with Canon EOS-1D Mark IV"
+   ],
+   "width": 2000,
+   "height": 2000,
+   "sha1": "b72cae08ddb2c4a4d06d91d052cf0b78ed1ab74c",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Common_Kingfisher_Alcedo_atthis.jpg/1280px-Common_Kingfisher_Alcedo_atthis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2383,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/sp248.webp",
+  "species": "sp248",
+  "latin": "Pernis apivorus",
+  "app": {
+   "author": "Gianluca Congi🪶🦆🌲",
+   "license": "CC BY-SA 4.0",
+   "sex": "male",
+   "age": null,
+   "flight": true,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/204335214",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/sp159.webp",
+  "species": "sp159",
+  "latin": "Tringa glareola",
+  "app": {
+   "author": "Jan Ebr & Ivana Ebrová",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/121189166",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp007-male-flight.webp",
+  "species": "sp007",
+  "latin": "Accipiter gentilis",
+  "app": {
+   "author": "Вячеслав Юсупов",
+   "license": "CC BY 4.0",
+   "sex": "male",
+   "age": null,
+   "flight": true,
+   "label": "Mannetje in vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/29451692",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp106-flight.webp",
+  "species": "sp106",
+  "latin": "Perdix perdix",
+  "app": {
+   "author": "Safina Rezeda",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/77252585",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp178-flight.webp",
+  "species": "sp178",
+  "latin": "Phoenicurus phoenicurus",
+  "app": {
+   "author": "Paolo Zucca",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/50225292",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp005-male-flight.webp",
+  "species": "sp005",
+  "latin": "Buteo buteo",
+  "app": {
+   "author": "Simone Bocca",
+   "license": "CC BY-SA 4.0",
+   "sex": "male",
+   "age": null,
+   "flight": true,
+   "label": "Mannetje in vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/112563579",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp253-male-flight.webp",
+  "species": "sp253",
+  "latin": "Buteo lagopus",
+  "app": {
+   "author": "psweet",
+   "license": "CC BY-SA 4.0",
+   "sex": "male",
+   "age": null,
+   "flight": true,
+   "label": "Mannetje in vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/30000101",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp248-adult_f.webp",
+  "species": "sp248",
+  "latin": "Pernis apivorus",
+  "app": {
+   "author": "Donald Davesne",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/678848182",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp083-juv.webp",
+  "species": "sp083",
+  "latin": "Ardea alba",
+  "app": {
+   "author": "Annette Herz",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/388019872",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp146-juv.webp",
+  "species": "sp146",
+  "latin": "Charadrius hiaticula",
+  "app": {
+   "author": "Stephen M.",
+   "license": "CC BY-SA 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/733881501",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp144-winter.webp",
+  "species": "sp144",
+  "latin": "Pluvialis squatarola",
+  "app": {
+   "author": "Shane Austin",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/602569884",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp159-winter.webp",
+  "species": "sp159",
+  "latin": "Tringa glareola",
+  "app": {
+   "author": "Afsar Nayakkan",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/365421308",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp157-winter.webp",
+  "species": "sp157",
+  "latin": "Tringa erythropus",
+  "app": {
+   "author": "Cameron Findlay",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/603401014",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ }
+]
