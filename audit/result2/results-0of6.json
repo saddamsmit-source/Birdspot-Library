@@ -1,0 +1,300 @@
+[
+ {
+  "image": "/assets/showcase/sp113.webp",
+  "species": "sp113",
+  "latin": "Oriolus oriolus",
+  "app": {
+   "author": "dog_funtom",
+   "license": "CC BY-SA 4.0",
+   "sex": "male",
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Oriolus_oriolus_from_behind_looking_right.jpg",
+  "src": {
+   "title": "File:Oriolus oriolus from behind looking right.jpg",
+   "author": "dog_funtom",
+   "license": "CC BY-SA 4.0",
+   "description": "Oriolus oriolus is sitting on a branch, looking to its right",
+   "objectName": "Oriolus oriolus from behind looking right",
+   "categories": [
+    "CC-BY-SA-4.0",
+    "Files with coordinates missing SDC location of creation",
+    "Oriolus oriolus",
+    "Self-published work"
+   ],
+   "width": 5152,
+   "height": 3864,
+   "sha1": "a0a6fd58d94fccf954c2573a94f47f72655b0f62",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Oriolus_oriolus_from_behind_looking_right.jpg/1280px-Oriolus_oriolus_from_behind_looking_right.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2567,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "geslacht male niet in bron"
+  ],
+  "pair": "pairs/sp113.jpg"
+ },
+ {
+  "image": "/assets/showcase/sp143.webp",
+  "species": "sp143",
+  "latin": "Recurvirostra avosetta",
+  "app": {
+   "author": "El Golli Mohamed",
+   "license": "CC BY-SA 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Avocette_%C3%A9l%C3%A9gante060_Thyna.jpg",
+  "src": {
+   "title": "File:Avocette élégante060 Thyna.jpg",
+   "author": "El Golli Mohamed",
+   "license": "CC BY-SA 4.0",
+   "description": "Pied avocet (Recurvirostra avosetta) in Thyna",
+   "objectName": "Avocette élégante060 Thyna",
+   "categories": [
+    "Birds at the salt evaporation ponds of Thyna",
+    "CC-BY-SA-4.0",
+    "Images from Wiki Loves Earth 2024",
+    "Images from Wiki Loves Earth 2024 Human Rights and Environment Special Nomination",
+    "Images from Wiki Loves Earth 2024 in Tunisia",
+    "Images from Wiki Loves Earth missing SDC location of creation",
+    "Quality images",
+    "Quality images by User:El Golli Mohamed",
+    "Quality images from Wiki Loves Earth 2024 in Tunisia",
+    "Quality images of Recurvirostra avosetta",
+    "Quality images of birds in Tunisia",
+    "Recurvirostra avosetta in Tunisia",
+    "Self-published work",
+    "Uploaded via Campaign:wle-tn"
+   ],
+   "width": 3771,
+   "height": 2828,
+   "sha1": "f5de1c07f45d30ee2a44fd46151fa9ddde2343c3",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Avocette_%C3%A9l%C3%A9gante060_Thyna.jpg/1280px-Avocette_%C3%A9l%C3%A9gante060_Thyna.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2343,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/sp147.webp",
+  "species": "sp147",
+  "latin": "Charadrius dubius",
+  "app": {
+   "author": "Donsky",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/680750765",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/sp155.webp",
+  "species": "sp155",
+  "latin": "Actitis hypoleucos",
+  "app": {
+   "author": "Константин Селивёрстов",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/56953995",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp039-flight.webp",
+  "species": "sp039",
+  "latin": "Linaria cannabina",
+  "app": {
+   "author": "Codrin Bucur",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/617561306",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp108-flight.webp",
+  "species": "sp108",
+  "latin": "Acrocephalus arundinaceus",
+  "app": {
+   "author": "Ángel Marcos Luengo Bello",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/747529794",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp177-flight.webp",
+  "species": "sp177",
+  "latin": "Ficedula hypoleuca",
+  "app": {
+   "author": "carabus123",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/735032492",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp005-female-flight.webp",
+  "species": "sp005",
+  "latin": "Buteo buteo",
+  "app": {
+   "author": "Simone Bocca",
+   "license": "CC BY-SA 4.0",
+   "sex": "female",
+   "age": null,
+   "flight": true,
+   "label": "Vrouwtje in vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/112563573",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp173-juv.webp",
+  "species": "sp173",
+  "latin": "Circus aeruginosus",
+  "app": {
+   "author": "Codrin Bucur",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/229518401",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp253-juv.webp",
+  "species": "sp253",
+  "latin": "Buteo lagopus",
+  "app": {
+   "author": "Radek Ošlejšek",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/113794458",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp245-winter.webp",
+  "species": "sp245",
+  "latin": "Bubulcus ibis",
+  "app": {
+   "author": "Andrea Mologni",
+   "license": "CC BY-SA 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/116157768",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp147-winter.webp",
+  "species": "sp147",
+  "latin": "Charadrius dubius",
+  "app": {
+   "author": "Karim Haddad",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/94775001",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp144-juv.webp",
+  "species": "sp144",
+  "latin": "Pluvialis squatarola",
+  "app": {
+   "author": "Scott Harris",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/327282937",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp159-juv.webp",
+  "species": "sp159",
+  "latin": "Tringa glareola",
+  "app": {
+   "author": "Ian Ballam",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/555542627",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp157-juv.webp",
+  "species": "sp157",
+  "latin": "Tringa erythropus",
+  "app": {
+   "author": "Phil James",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/722959312",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ }
+]
