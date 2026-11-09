@@ -1,0 +1,594 @@
+[
+ {
+  "image": "/assets/species/sp145.webp",
+  "species": "sp145",
+  "latin": "Pluvialis apricaria",
+  "app": {
+   "author": "Andrea Battisti",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/605984899",
+  "src": {
+   "title": "iNaturalist 290110164",
+   "observation": "https://www.inaturalist.org/observations/290110164",
+   "author": "(c) Andrea Battisti, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Pluvialis apricaria",
+   "taxonCommon": "European Golden-Plover",
+   "qualityGrade": "research",
+   "annotations": [],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/605984899/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Pluvialis apricaria",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2795,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp145.jpg"
+ },
+ {
+  "image": "/assets/species/sp217.webp",
+  "species": "sp217",
+  "latin": "Tringa stagnatilis",
+  "app": {
+   "author": "Вячеслав Юсупов",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/103339289",
+  "src": {
+   "title": "iNaturalist 64292081",
+   "observation": "https://www.inaturalist.org/observations/64292081",
+   "author": "(c) Вячеслав Юсупов, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Tringa stagnatilis",
+   "taxonCommon": "Marsh Sandpiper",
+   "qualityGrade": "research",
+   "annotations": [],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/103339289/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Tringa stagnatilis",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": false,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2780,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "maker wijkt af",
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp217.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp051-flight.webp",
+  "species": "sp051",
+  "latin": "Phoenicurus ochruros",
+  "app": {
+   "author": "portioid",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/8255067",
+  "src": {
+   "title": "iNaturalist 6517885",
+   "observation": "https://www.inaturalist.org/observations/6517885",
+   "author": "(c) portioid, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Phoenicurus ochruros",
+   "taxonCommon": "Black Redstart",
+   "qualityGrade": "research",
+   "annotations": [
+    "None: None",
+    "None: None",
+    "None: None"
+   ],
+   "description": "Female or immature in flight. At a train station in Eifel region.",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/8255067/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Phoenicurus ochruros",
+  "sourceSex": [
+   "female"
+  ],
+  "sourceAge": [
+   "juvenile"
+  ],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 1682,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp051-flight.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp157-flight.webp",
+  "species": "sp157",
+  "latin": "Tringa erythropus",
+  "app": {
+   "author": "Barry Stewart",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/711147296",
+  "src": {
+   "title": "iNaturalist 388305318",
+   "observation": "https://www.inaturalist.org/observations/388305318",
+   "author": "(c) Barry Stewart, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Tringa erythropus",
+   "taxonCommon": "Spotted Redshank",
+   "qualityGrade": "research",
+   "annotations": [],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/711147296/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Tringa erythropus",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 1170,
+   "mirror": false,
+   "scale": 0.667,
+   "areaOfSource": 0.487
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp157-flight.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp288-flight.webp",
+  "species": "sp288",
+  "latin": "Motacilla cinerea",
+  "app": {
+   "author": "Jiro Iguchi",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/607642010",
+  "src": {
+   "title": "iNaturalist 334586094",
+   "observation": "https://www.inaturalist.org/observations/334586094",
+   "author": "(c) Jiro Iguchi, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Motacilla cinerea cinerea",
+   "taxonCommon": "Common Grey Wagtail",
+   "qualityGrade": "research",
+   "annotations": [
+    "None: None"
+   ],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/607642010/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Motacilla cinerea cinerea",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 235,
+   "mirror": false,
+   "scale": 0.488,
+   "areaOfSource": 0.198
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp288-flight.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp250-male-rest.webp",
+  "species": "sp250",
+  "latin": "Circus macrourus",
+  "app": {
+   "author": "Jan Ebr & Ivana Ebrová",
+   "license": "CC BY 4.0",
+   "sex": "male",
+   "age": null,
+   "flight": false,
+   "label": "Mannetje in rust"
+  },
+  "source": "https://www.inaturalist.org/photos/506883636",
+  "src": {
+   "title": "iNaturalist 72514102",
+   "observation": "https://www.inaturalist.org/observations/72514102",
+   "author": "(c) Jan Ebr & Ivana Ebrová, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Circus macrourus",
+   "taxonCommon": "Pallid Harrier",
+   "qualityGrade": "research",
+   "annotations": [
+    "Life Stage: Adult",
+    "Sex: Male",
+    "Alive or Dead: Alive",
+    "Evidence of Presence: Organism"
+   ],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/506883636/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Circus macrourus",
+  "sourceSex": [
+   "male"
+  ],
+  "sourceAge": [
+   "adult"
+  ],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2189,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp250-male-rest.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp005-adult_m.webp",
+  "species": "sp005",
+  "latin": "Buteo buteo",
+  "app": {
+   "author": "Roy Lowry",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/309645414",
+  "src": {
+   "title": "iNaturalist 177992598",
+   "observation": "https://www.inaturalist.org/observations/177992598",
+   "author": "(c) Roy Lowry, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Buteo buteo",
+   "taxonCommon": "Common Buzzard",
+   "qualityGrade": "research",
+   "annotations": [
+    "Life Stage: Adult",
+    "Alive or Dead: Alive"
+   ],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/309645414/large.jpeg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Buteo buteo",
+  "sourceSex": [],
+  "sourceAge": [
+   "adult"
+  ],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2590,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp005-adult_m.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp082-juv.webp",
+  "species": "sp082",
+  "latin": "Egretta garzetta",
+  "app": {
+   "author": "Paulo Martins",
+   "license": "CC BY-SA 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/92502660",
+  "src": {
+   "title": "iNaturalist 57964762",
+   "observation": "https://www.inaturalist.org/observations/57964762",
+   "author": "(c) Paulo Martins, some rights reserved (CC BY-SA)",
+   "license": "CC BY SA",
+   "taxon": "Egretta garzetta",
+   "taxonCommon": "Little Egret",
+   "qualityGrade": "research",
+   "annotations": [
+    "Life Stage: Juvenile",
+    "Alive or Dead: Alive"
+   ],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/92502660/large.jpeg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Egretta garzetta",
+  "sourceSex": [],
+  "sourceAge": [
+   "juvenile"
+  ],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2744,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp082-juv.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp091-eclipse.webp",
+  "species": "sp091",
+  "latin": "Anas crecca",
+  "app": {
+   "author": "Roy Lowry",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/76374524",
+  "src": {
+   "title": "iNaturalist 48145191",
+   "observation": "https://www.inaturalist.org/observations/48145191",
+   "author": "(c) Roy Lowry, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Anas crecca",
+   "taxonCommon": "Green-winged Teal",
+   "qualityGrade": "research",
+   "annotations": [],
+   "description": "Duck and eclipse drake.",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/76374524/large.jpeg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Anas crecca",
+  "sourceSex": [
+   "male"
+  ],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2795,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp091-eclipse.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp206-winter.webp",
+  "species": "sp206",
+  "latin": "Charadrius alexandrinus",
+  "app": {
+   "author": "Paulo Caseirito",
+   "license": "CC0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/258130184",
+  "src": {
+   "title": "iNaturalist 149773050",
+   "observation": "https://www.inaturalist.org/observations/149773050",
+   "author": "no rights reserved",
+   "license": "CC0",
+   "taxon": "Anarhynchus alexandrinus",
+   "taxonCommon": "Kentish Plover",
+   "qualityGrade": "research",
+   "annotations": [],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/258130184/large.jpg"
+  },
+  "speciesInSource": false,
+  "sourceTaxon": "Anarhynchus alexandrinus",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": false,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2413,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "soort niet in bron",
+   "maker wijkt af"
+  ],
+  "pair": "pairs/sp206-winter.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp156-winter.webp",
+  "species": "sp156",
+  "latin": "Tringa ochropus",
+  "app": {
+   "author": "Paulo Caseirito",
+   "license": "CC0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/604589887",
+  "src": {
+   "title": "iNaturalist 333061769",
+   "observation": "https://www.inaturalist.org/observations/333061769",
+   "author": "no rights reserved",
+   "license": "CC0",
+   "taxon": "Tringa ochropus",
+   "taxonCommon": "Green Sandpiper",
+   "qualityGrade": "research",
+   "annotations": [],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/604589887/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Tringa ochropus",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": false,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 1903,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "maker wijkt af"
+  ],
+  "pair": "pairs/sp156-winter.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp155-winter.webp",
+  "species": "sp155",
+  "latin": "Actitis hypoleucos",
+  "app": {
+   "author": "rashidchan",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/617218276",
+  "src": {
+   "title": "iNaturalist 339306085",
+   "observation": "https://www.inaturalist.org/observations/339306085",
+   "author": "(c) rashidchan, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Actitis hypoleucos",
+   "taxonCommon": "Common Sandpiper",
+   "qualityGrade": "research",
+   "annotations": [],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/617218276/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Actitis hypoleucos",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2414,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp155-winter.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp217-winter.webp",
+  "species": "sp217",
+  "latin": "Tringa stagnatilis",
+  "app": {
+   "author": "Marian Read",
+   "license": "CC0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/246809118",
+  "src": {
+   "title": "iNaturalist 143868114",
+   "observation": "https://www.inaturalist.org/observations/143868114",
+   "author": "no rights reserved",
+   "license": "CC0",
+   "taxon": "Tringa stagnatilis",
+   "taxonCommon": "Marsh Sandpiper",
+   "qualityGrade": "research",
+   "annotations": [],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/246809118/large.jpeg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Tringa stagnatilis",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": false,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2608,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "maker wijkt af"
+  ],
+  "pair": "pairs/sp217-winter.jpg"
+ }
+]
