@@ -1,0 +1,27 @@
+name: Videostills controleren (eenmalig)
+on:
+  push:
+    branches: [chore/source-audit]
+    paths: ["audit/videoframes.json"]
+permissions:
+  contents: write
+jobs:
+  vf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: 46e4337028d1fc818a6f189019f558f9a8ca891c
+          path: app
+          sparse-checkout: assets/species
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: sudo apt-get install -y -qq ffmpeg && pip install opencv-python-headless==4.10.0.84 pillow==10.4.0 numpy==1.26.4
+      - run: python audit/videoframes.py
+      - run: |
+          rm -f audit/videoframes/*.png audit/videoframes/*.webm
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add audit/videoframes && git commit -m "videostills" || exit 0
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
