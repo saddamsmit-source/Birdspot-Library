@@ -2,11 +2,12 @@
 """Eenmalige import van geverifieerde hoofdfoto's (Wikimedia Commons), alleen build-time.
 
 Lijst: tools/species/verified_heroes_2026-11-09.json (bestand, SHA-1, maker, licentie, bron; visueel gekozen).
-Per foto: origineel downloaden, SHA-1 tegen de lijst controleren, EXIF-oriëntatie toepassen, verkleinen tot
-max. 1600 px zonder uitsnede, als WebP opslaan zonder EXIF/GPS/XMP/ICC. Weigert te overschrijven.
+Per foto: via de Commons-API controleren dat de huidige bestandsversie exact de beoordeelde SHA-1 heeft, daarna de
+door Wikimedia van díe versie gemaakte afbeelding van 1600 px ophalen (het origineel van 5–45 MB wordt door
+Wikimedia sterk gedoseerd), EXIF-oriëntatie toepassen en als WebP opslaan zonder EXIF/GPS/XMP/ICC.
 """
 from __future__ import annotations
-import hashlib, io, json, time, urllib.request
+import hashlib, io, json, time, urllib.parse, urllib.request
 from pathlib import Path
 from PIL import Image, ImageOps
 
@@ -43,11 +44,15 @@ def main():
 
 def one(it, out, report):
         if out.exists(): raise RuntimeError(f"Bestaat al zonder rapport: {out}")
-        data = fetch(it["original"])
-        digest = hashlib.sha1(data).hexdigest()
-        if digest != it["sha1"]: raise RuntimeError(f"SHA-1 wijkt af voor {it['title']}: {digest}")
+        q = urllib.parse.urlencode({"action": "query", "format": "json", "prop": "imageinfo", "iiprop": "sha1|size|url",
+                                    "iiurlwidth": 1600, "titles": it["title"]})
+        page = next(iter(json.loads(fetch("https://commons.wikimedia.org/w/api.php?" + q))["query"]["pages"].values()))
+        info = page["imageinfo"][0]
+        if info["sha1"] != it["sha1"]: raise RuntimeError(f"Bestandsversie gewijzigd sinds beoordeling: {it['title']}")
+        if (info["width"], info["height"]) != (it["width"], it["height"]): raise RuntimeError(f"Afmeting gewijzigd: {it['title']}")
+        data = fetch(info["thumburl"])
+        digest = info["sha1"]
         im = Image.open(io.BytesIO(data)); im.load()
-        if sorted(im.size) != sorted((it["width"], it["height"])): raise RuntimeError(f"Afmeting wijkt af voor {it['title']}: {im.size}")
         im = ImageOps.exif_transpose(im).convert("RGB"); im.info = {}
         im.thumbnail((1600, 1600), Image.LANCZOS)
         out.parent.mkdir(parents=True, exist_ok=True)
