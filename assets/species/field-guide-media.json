@@ -1988,7 +1988,29 @@
     },
     "sp173": {
       "adult_m": {
-        "reuseGuidePhoto": true
+        "label": "Mannetje in vlucht",
+        "sex": "male",
+        "flight": true,
+        "note": "Driekleurig: bruin lijf, grijze vleugelvelden en staart, zwarte vleugelpunten.",
+        "file": "Marsh harrier (Circus aeruginosus) male in flight Norfolk.jpg",
+        "nl": "Bruine Kiekendief",
+        "latin": "Circus aeruginosus",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File%3AMarsh_harrier_%28Circus_aeruginosus%29_male_in_flight_Norfolk.jpg",
+        "showSourceLink": true,
+        "alt": "Bruine Kiekendief · mannetje in vlucht. Driekleurig: bruin lijf, grijze vleugelvelden en staart, zwarte vleugelpunten.",
+        "modifications": "Verkleind tot max. 1600 px en omgezet naar WebP, zonder uitsnede en zonder EXIF/GPS/XMP",
+        "reviewed": "2026-11-09",
+        "sourceAudit": "2026-11-09",
+        "sha1": "064e8f9728836eed3aeebf2f77196f185f1c3a09",
+        "verification": "Bron noemt een mannetje: \"File:Marsh harrier (Circus aeruginosus) male in flight Norfolk\". Visueel gecontroleerd op de kenmerken hiernaast.",
+        "verificationSource": "https://commons.wikimedia.org/wiki/File%3AMarsh_harrier_%28Circus_aeruginosus%29_male_in_flight_Norfolk.jpg",
+        "visualCheck": "Driekleurig: bruin lijf, grijze vleugelvelden en staart, zwarte vleugelpunten.",
+        "width": 1600,
+        "height": 1067,
+        "image": "/assets/species/plumage/sp173-male-2.webp"
       },
       "adult_f": {
         "file": "Circus aeruginosus female Oulu Finland 2021-04-21.jpg",
@@ -2470,7 +2492,8 @@
         "visualCheck": "Jonge Grote Zilverreigers bij hun nest in Californië. Hun witte verenkleed heeft nog geen lange sierveren.",
         "alt": "Grote Zilverreiger — Jonge Grote Zilverreigers bij hun nest in Californië. Hun witte verenkleed heeft nog geen lange sierveren.",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-        "observation": "https://www.inaturalist.org/observations/219231388"
+        "observation": "https://www.inaturalist.org/observations/219231388",
+        "label": "Juvenielen op het nest"
       },
       "winter": {
         "reuseGuidePhoto": true
@@ -3421,11 +3444,11 @@
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
         "source": "https://commons.wikimedia.org/wiki/File:Middle_spotted_woodpecker_(Dendrocoptes_medius_medius)_male.jpg",
-        "alt": "Middelste Bonte Specht — Middelste bonte specht, door de fotograaf als mannetje aangeduid; rode kruin, wit gezicht en roze onderstaart.",
+        "alt": "Middelste Bonte Specht — volwassen vogel met rode kruin, wit gezicht en roze onderstaart.",
         "modifications": "Commons-voorbeeld omgezet naar WebP; uitsnede behouden, 500 px breed",
         "reviewed": "2026-11-06",
         "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/middelste-bonte-specht",
-        "visualCheck": "Middelste bonte specht, door de fotograaf als mannetje aangeduid; rode kruin, wit gezicht en roze onderstaart.",
+        "visualCheck": "Volwassen Middelste Bonte Specht: rode kruin, wit gezicht en roze onderstaart.",
         "width": 500,
         "height": 750,
         "verification": "Soort en licentie gecontroleerd op Commons; foto visueel vergeleken met veldkenmerken.",
@@ -3436,9 +3459,10 @@
         "sourceHeight": 750,
         "originalWidth": 1438,
         "originalHeight": 2157,
-        "sex": "male",
         "age": "adult",
-        "image": "/assets/species/plumage/sp020-male.webp"
+        "image": "/assets/species/plumage/sp020-male.webp",
+        "sourceAudit": "2026-11-09",
+        "sexNote": "De bron noemt een mannetje, maar bij de Middelste Bonte Specht lijken man en vrouw op elkaar; daarom zonder geslachtslabel."
       }
     },
     "sp030": {
@@ -3560,25 +3584,6 @@
       }
     },
     "sp078": {
-      "juv": {
-        "file": "Eurasian coot (Fulica atra) juvenile.jpg",
-        "nl": "Meerkoet",
-        "latin": "Fulica atra",
-        "author": "Charles J. Sharp",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-        "source": "https://commons.wikimedia.org/wiki/File:Eurasian_coot_%28Fulica_atra%29_juvenile.jpg",
-        "alt": "Meerkoet — donsjong met rood-oranje kop en zwart dons.",
-        "modifications": "Verkleind en omgezet naar WebP zonder extra uitsnede",
-        "reviewed": "2026-11-07",
-        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/meerkoet",
-        "visualCheck": "Dit is een donsjong, geen oudere juveniel met lichte wangen. Leeftijd en kleed expliciet in soorttekst onderscheiden. Frankrijk.",
-        "verification": "Dit is een donsjong, geen oudere juveniel met lichte wangen. Leeftijd en kleed expliciet in soorttekst onderscheiden. Frankrijk.",
-        "width": 1600,
-        "height": 1067,
-        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Eurasian_coot_%28Fulica_atra%29_juvenile.jpg",
-        "image": "/assets/species/plumage/sp078-juv.webp"
-      },
       "adult_m": {
         "reuseGuidePhoto": true
       }
@@ -3677,25 +3682,6 @@
       }
     },
     "sp086": {
-      "juv": {
-        "file": "Graugans-Jungtier-Schwalm-Nette-2013-01.jpg",
-        "nl": "Grauwe Gans",
-        "latin": "Anser anser",
-        "author": "Tuxyso / Wikimedia Commons",
-        "license": "CC BY-SA 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-        "source": "https://commons.wikimedia.org/wiki/File:Graugans-Jungtier-Schwalm-Nette-2013-01.jpg",
-        "alt": "Grauwe Gans — donsjong met geelbruin dons en beginnende vleugelveren.",
-        "modifications": "Verkleind en omgezet naar WebP zonder extra uitsnede",
-        "reviewed": "2026-11-07",
-        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grauwe-gans",
-        "visualCheck": "Donsjong en beginnende veren visueel gecontroleerd; geen egaal verenkleed van volwassen vogel. Duitsland.",
-        "verification": "Donsjong en beginnende veren visueel gecontroleerd; geen egaal verenkleed van volwassen vogel. Duitsland.",
-        "width": 1600,
-        "height": 1188,
-        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Graugans-Jungtier-Schwalm-Nette-2013-01.jpg",
-        "image": "/assets/species/plumage/sp086-juv.webp"
-      },
       "adult_m": {
         "reuseGuidePhoto": true
       }
@@ -3775,25 +3761,6 @@
     "sp128": {
       "adult_m": {
         "reuseGuidePhoto": true
-      },
-      "juv": {
-        "file": "Brandgans Küken, Borkum.JPG",
-        "nl": "Bergeend",
-        "latin": "Tadorna tadorna",
-        "author": "Daniel Holl (Herunumen)",
-        "license": "Public domain",
-        "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
-        "source": "https://commons.wikimedia.org/wiki/File:Brandgans_K%C3%BCken%2C_Borkum.JPG",
-        "alt": "Bergeend — donsjongen met een zwart-wit patroon.",
-        "modifications": "Verkleind en omgezet naar WebP zonder extra uitsnede",
-        "reviewed": "2026-11-07",
-        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bergeend",
-        "visualCheck": "Bron benoemt Brandgans-Küken / Young Common Shelducks op Borkum; zichtbare donsjongen gecontroleerd, niet verwarren met oudere juvenielen.",
-        "verification": "Bron benoemt Brandgans-Küken / Young Common Shelducks op Borkum; zichtbare donsjongen gecontroleerd, niet verwarren met oudere juvenielen.",
-        "width": 1600,
-        "height": 1200,
-        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Brandgans_K%C3%BCken%2C_Borkum.JPG",
-        "image": "/assets/species/plumage/sp128-juv.webp"
       }
     },
     "sp132": {
@@ -4058,12 +4025,37 @@
         "width": 1400,
         "height": 1050,
         "image": "/assets/species/plumage/sp008-male-flight.webp"
+      },
+      {
+        "label": "Mannetje",
+        "sex": "male",
+        "flight": false,
+        "note": "Grijze kop, roodbruine gevlekte rug en grijze staart met zwarte eindband.",
+        "file": "Falco tinnunculus WE Faucons LPO 20260621 n06.jpg",
+        "nl": "Torenvalk",
+        "latin": "Falco tinnunculus",
+        "author": "Marie-Lan Taÿ Pamart",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File%3AFalco_tinnunculus_WE_Faucons_LPO_20260621_n06.jpg",
+        "showSourceLink": true,
+        "alt": "Torenvalk · mannetje. Grijze kop, roodbruine gevlekte rug en grijze staart met zwarte eindband.",
+        "modifications": "Verkleind tot max. 1600 px en omgezet naar WebP, zonder uitsnede en zonder EXIF/GPS/XMP",
+        "reviewed": "2026-11-09",
+        "sourceAudit": "2026-11-09",
+        "sha1": "9041286b8d585208dbab30655cacb41c59babd1a",
+        "verification": "Bron noemt een mannetje: \"jpg Male Common Kestrel ( Falco tinnunculus ) on\". Visueel gecontroleerd op de kenmerken hiernaast.",
+        "verificationSource": "https://commons.wikimedia.org/wiki/File%3AFalco_tinnunculus_WE_Faucons_LPO_20260621_n06.jpg",
+        "visualCheck": "Grijze kop, roodbruine gevlekte rug en grijze staart met zwarte eindband.",
+        "width": 1600,
+        "height": 1067,
+        "image": "/assets/species/plumage/sp008-hero-male.webp"
       }
     ],
     "sp009": [
       {
-        "label": "Vrouwtje in rust",
-        "note": "Let op kopkap, baardstreep en dwarsbanden op de onderzijde. Dit is een volwassen vrouwtje van de ondersoort calidus uit India; de tint verschilt per ondersoort.",
+        "label": "Volwassen in rust",
+        "note": "Let op kopkap, baardstreep en dwarsbanden op de onderzijde. Ondersoort calidus uit India; de tint verschilt per ondersoort.",
         "file": "Peregrine falcon portrait.jpg",
         "image": "/assets/species/plumage/sp009-perched.webp",
         "nl": "Slechtvalk",
@@ -4072,15 +4064,16 @@
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
         "source": "https://commons.wikimedia.org/wiki/File:Peregrine_falcon_portrait.jpg",
-        "alt": "Volwassen Slechtvalk zittend, van voren: donkere kopkap, baardstreep en dwarsbanden. Bron: vrouwtje van ondersoort calidus, gefotografeerd in India.",
+        "alt": "Volwassen Slechtvalk zittend, van voren: donkere kopkap, baardstreep en dwarsbanden. Bron: volwassen vogel van ondersoort calidus, gefotografeerd in India.",
         "modifications": "Commons-versie met aangepaste lichtwaarden (MPF); verkleind en omgezet naar WebP zonder extra uitsnede.",
         "reviewed": "2026-11-06",
         "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/slechtvalk",
-        "visualCheck": "Volwassen Slechtvalk zittend, van voren: donkere kopkap, baardstreep en dwarsbanden. Bron: vrouwtje van ondersoort calidus, gefotografeerd in India.",
+        "visualCheck": "Volwassen Slechtvalk zittend, van voren: donkere kopkap, baardstreep en dwarsbanden. Bron: volwassen vogel van ondersoort calidus, gefotografeerd in India.",
         "width": 1231,
         "height": 1600,
-        "sex": "female",
-        "flight": false
+        "flight": false,
+        "sourceAudit": "2026-11-09",
+        "sexNote": "Geslacht volgens de bron, maar bij de Slechtvalk niet aan het verenkleed te zien; daarom zonder geslachtslabel."
       },
       {
         "label": "In vlucht",
@@ -4104,8 +4097,7 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
       },
       {
-        "label": "Mannetje in rust",
-        "sex": "male",
+        "label": "Volwassen in rust, van opzij",
         "flight": false,
         "note": "Op de grond. Let op de donkere baardstreep en de dwarsbanden op de onderzijde. Gefotografeerd in India. De fotograaf benoemt het geslacht in de bronbeschrijving.",
         "file": "Peregrine Falcon (male) cropped.jpg",
@@ -4116,18 +4108,19 @@
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
         "source": "https://commons.wikimedia.org/wiki/File:Peregrine_Falcon_(male)_cropped.jpg",
         "showSourceLink": true,
-        "alt": "Slechtvalk · mannetje in rust. Op de grond. Let op de donkere baardstreep en de dwarsbanden op de onderzijde. Gefotografeerd in India.",
+        "alt": "Slechtvalk · volwassen vogel in rust. Op de grond. Let op de donkere baardstreep en de dwarsbanden op de onderzijde. Gefotografeerd in India.",
         "modifications": "Omgezet naar WebP zonder uitsnede",
         "reviewed": "2026-11-08",
         "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/slechtvalk",
-        "visualCheck": "Slechtvalk · mannetje in rust. Op de grond. Let op de donkere baardstreep en de dwarsbanden op de onderzijde. Gefotografeerd in India.",
+        "visualCheck": "Slechtvalk · volwassen vogel in rust. Op de grond. Let op de donkere baardstreep en de dwarsbanden op de onderzijde. Gefotografeerd in India.",
         "width": 1382,
         "height": 1400,
-        "image": "/assets/species/plumage/sp009-male-rest.webp"
+        "image": "/assets/species/plumage/sp009-male-rest.webp",
+        "sourceAudit": "2026-11-09",
+        "sexNote": "Geslacht volgens de bron, maar bij de Slechtvalk niet aan het verenkleed te zien; daarom zonder geslachtslabel."
       },
       {
-        "label": "Mannetje in vlucht",
-        "sex": "male",
+        "label": "Volwassen in vlucht",
         "flight": true,
         "note": "Van onderen, met gespreide staart en spitse vleugels tegen de lucht. Het geslacht is geregistreerd in iNaturalist-waarneming 7528897.",
         "file": "iNaturalist photo 9819028",
@@ -4138,14 +4131,16 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
         "source": "https://www.inaturalist.org/photos/9819028",
         "showSourceLink": true,
-        "alt": "Slechtvalk · mannetje in vlucht. Van onderen, met gespreide staart en spitse vleugels tegen de lucht.",
+        "alt": "Slechtvalk · volwassen vogel in vlucht. Van onderen, met gespreide staart en spitse vleugels tegen de lucht.",
         "modifications": "Bijgesneden en omgezet naar WebP",
         "reviewed": "2026-11-08",
         "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/slechtvalk",
-        "visualCheck": "Slechtvalk · mannetje in vlucht. Van onderen, met gespreide staart en spitse vleugels tegen de lucht.",
+        "visualCheck": "Slechtvalk · volwassen vogel in vlucht. Van onderen, met gespreide staart en spitse vleugels tegen de lucht.",
         "width": 1223,
         "height": 815,
-        "image": "/assets/species/plumage/sp009-male-flight.webp"
+        "image": "/assets/species/plumage/sp009-male-flight.webp",
+        "sourceAudit": "2026-11-09",
+        "sexNote": "Geslacht volgens de bron, maar bij de Slechtvalk niet aan het verenkleed te zien; daarom zonder geslachtslabel."
       }
     ],
     "sp019": [
@@ -4217,6 +4212,31 @@
         "height": 1050,
         "image": "/assets/species/plumage/sp019-flight.webp",
         "sex": "female"
+      },
+      {
+        "label": "Mannetje",
+        "sex": "male",
+        "flight": false,
+        "note": "Rode kruin en zwart masker met rode kern in de baardstreep.",
+        "file": "European green woodpecker (Picus viridis) male.JPG",
+        "nl": "Groene Specht",
+        "latin": "Picus viridis",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File%3AEuropean_green_woodpecker_%28Picus_viridis%29_male.JPG",
+        "showSourceLink": true,
+        "alt": "Groene Specht · mannetje. Rode kruin en zwart masker met rode kern in de baardstreep.",
+        "modifications": "Verkleind tot max. 1600 px en omgezet naar WebP, zonder uitsnede en zonder EXIF/GPS/XMP",
+        "reviewed": "2026-11-09",
+        "sourceAudit": "2026-11-09",
+        "sha1": "dcca199304f4e8bd1c68ee2bab9a84be93aef3fd",
+        "verification": "Bron noemt een mannetje: \"File:European green woodpecker (Picus viridis) male\". Visueel gecontroleerd op de kenmerken hiernaast.",
+        "verificationSource": "https://commons.wikimedia.org/wiki/File%3AEuropean_green_woodpecker_%28Picus_viridis%29_male.JPG",
+        "visualCheck": "Rode kruin en zwart masker met rode kern in de baardstreep.",
+        "width": 1600,
+        "height": 1067,
+        "image": "/assets/species/plumage/sp019-hero-male.webp"
       }
     ],
     "sp020": [
@@ -4528,6 +4548,31 @@
         "width": 1400,
         "height": 933,
         "image": "/assets/species/plumage/sp006-flight.webp"
+      },
+      {
+        "label": "Mannetje",
+        "sex": "male",
+        "flight": false,
+        "note": "Blauwgrijze bovendelen, oranje gebandeerde flanken en wangen.",
+        "file": "Sparrowhawk - Accipiter nisus - Male (52253225702).jpg",
+        "nl": "Sperwer",
+        "latin": "Accipiter nisus",
+        "author": "caroline legg",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "source": "https://commons.wikimedia.org/wiki/File%3ASparrowhawk_-_Accipiter_nisus_-_Male_%2852253225702%29.jpg",
+        "showSourceLink": true,
+        "alt": "Sperwer · mannetje. Blauwgrijze bovendelen, oranje gebandeerde flanken en wangen.",
+        "modifications": "Verkleind tot max. 1600 px en omgezet naar WebP, zonder uitsnede en zonder EXIF/GPS/XMP",
+        "reviewed": "2026-11-09",
+        "sourceAudit": "2026-11-09",
+        "sha1": "c6bec5e043429e9eff72ddddb8acb135547d1aa1",
+        "verification": "Bron noemt een mannetje: \"File:Sparrowhawk - Accipiter nisus - Male (52253225702)\". Visueel gecontroleerd op de kenmerken hiernaast.",
+        "verificationSource": "https://commons.wikimedia.org/wiki/File%3ASparrowhawk_-_Accipiter_nisus_-_Male_%2852253225702%29.jpg",
+        "visualCheck": "Blauwgrijze bovendelen, oranje gebandeerde flanken en wangen.",
+        "width": 1600,
+        "height": 1143,
+        "image": "/assets/species/plumage/sp006-hero-male.webp"
       }
     ],
     "sp007": [
@@ -4573,6 +4618,31 @@
         "width": 922,
         "height": 792,
         "image": "/assets/species/plumage/sp007-male-flight.webp"
+      },
+      {
+        "label": "Mannetje",
+        "sex": "male",
+        "flight": false,
+        "note": "Leigrijze bovendelen, fijn gebandeerde borst, oranje oog en witte wenkbrauwstreep.",
+        "file": "Male northern goshawk (52294386465).jpg",
+        "nl": "Havik",
+        "latin": "Accipiter gentilis",
+        "author": "Andrey Gulivanov",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "source": "https://commons.wikimedia.org/wiki/File%3AMale_northern_goshawk_%2852294386465%29.jpg",
+        "showSourceLink": true,
+        "alt": "Havik · mannetje. Leigrijze bovendelen, fijn gebandeerde borst, oranje oog en witte wenkbrauwstreep.",
+        "modifications": "Verkleind tot max. 1600 px en omgezet naar WebP, zonder uitsnede en zonder EXIF/GPS/XMP",
+        "reviewed": "2026-11-09",
+        "sourceAudit": "2026-11-09",
+        "sha1": "7d6ecbe1e4d126293b12272763b62e9c6c07da4e",
+        "verification": "Bron noemt een mannetje: \"File:Male northern goshawk (52294386465)\". Visueel gecontroleerd op de kenmerken hiernaast.",
+        "verificationSource": "https://commons.wikimedia.org/wiki/File%3AMale_northern_goshawk_%2852294386465%29.jpg",
+        "visualCheck": "Leigrijze bovendelen, fijn gebandeerde borst, oranje oog en witte wenkbrauwstreep.",
+        "width": 1600,
+        "height": 1067,
+        "image": "/assets/species/plumage/sp007-hero-male.webp"
       }
     ],
     "sp002": [
@@ -4665,6 +4735,31 @@
         "width": 1400,
         "height": 933,
         "image": "/assets/species/plumage/sp016-flight.webp"
+      },
+      {
+        "label": "Mannetje",
+        "sex": "male",
+        "flight": false,
+        "note": "Rode nekvlek, zwart-witte bovendelen en rode onderstaart.",
+        "file": "Great Spotted Woodpecker - Dendrocopos major - Male (52580093933).jpg",
+        "nl": "Grote Bonte Specht",
+        "latin": "Dendrocopos major",
+        "author": "caroline legg",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "source": "https://commons.wikimedia.org/wiki/File%3AGreat_Spotted_Woodpecker_-_Dendrocopos_major_-_Male_%2852580093933%29.jpg",
+        "showSourceLink": true,
+        "alt": "Grote Bonte Specht · mannetje. Rode nekvlek, zwart-witte bovendelen en rode onderstaart.",
+        "modifications": "Verkleind tot max. 1600 px en omgezet naar WebP, zonder uitsnede en zonder EXIF/GPS/XMP",
+        "reviewed": "2026-11-09",
+        "sourceAudit": "2026-11-09",
+        "sha1": "eb15a906daa107613ad83f13b2f93b709da92bc5",
+        "verification": "Bron noemt een mannetje: \"File:Great Spotted Woodpecker - Dendrocopos major - Male (52580093933)\". Visueel gecontroleerd op de kenmerken hiernaast.",
+        "verificationSource": "https://commons.wikimedia.org/wiki/File%3AGreat_Spotted_Woodpecker_-_Dendrocopos_major_-_Male_%2852580093933%29.jpg",
+        "visualCheck": "Rode nekvlek, zwart-witte bovendelen en rode onderstaart.",
+        "width": 1600,
+        "height": 1143,
+        "image": "/assets/species/plumage/sp016-hero-male.webp"
       }
     ],
     "sp017": [
@@ -4734,6 +4829,31 @@
         "height": 550,
         "image": "/assets/species/plumage/sp018-juv-review.webp",
         "sourceSha1": "d0d3ff3ba4e7905e88b00a44dae51cc259bdedca"
+      },
+      {
+        "label": "Mannetje",
+        "sex": "male",
+        "flight": false,
+        "note": "Rode kruin van voorhoofd tot achterhoofd; verder zwart.",
+        "file": "Black Woodpecker (Dryocopus martius), Parc de Woluwé, Brussels 1.jpg",
+        "nl": "Zwarte Specht",
+        "latin": "Dryocopus martius",
+        "author": "Frank Vassen from Brussels, Belgium",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "source": "https://commons.wikimedia.org/wiki/File%3ABlack_Woodpecker_%28Dryocopus_martius%29%2C_Parc_de_Woluw%C3%A9%2C_Brussels_1.jpg",
+        "showSourceLink": true,
+        "alt": "Zwarte Specht · mannetje. Rode kruin van voorhoofd tot achterhoofd; verder zwart.",
+        "modifications": "Verkleind tot max. 1600 px en omgezet naar WebP, zonder uitsnede en zonder EXIF/GPS/XMP",
+        "reviewed": "2026-11-09",
+        "sourceAudit": "2026-11-09",
+        "sha1": "305a08246ecd575f7e8546ccfd240ecca70581bd",
+        "verification": "Bron noemt een mannetje: \"jpg Black Woodpecker Dryocopus martius male, Parc de Woluwé, Brussels, Belgium\". Visueel gecontroleerd op de kenmerken hiernaast.",
+        "verificationSource": "https://commons.wikimedia.org/wiki/File%3ABlack_Woodpecker_%28Dryocopus_martius%29%2C_Parc_de_Woluw%C3%A9%2C_Brussels_1.jpg",
+        "visualCheck": "Rode kruin van voorhoofd tot achterhoofd; verder zwart.",
+        "width": 1600,
+        "height": 1045,
+        "image": "/assets/species/plumage/sp018-hero-male.webp"
       }
     ],
     "sp021": [
@@ -4940,6 +5060,31 @@
         "width": 1400,
         "height": 933,
         "image": "/assets/species/plumage/sp035-juv-review.webp"
+      },
+      {
+        "label": "Mannetje",
+        "sex": "male",
+        "flight": false,
+        "note": "Blauwgrijze kruin en nek, roze-bruine wangen en borst, witte vleugelstrepen.",
+        "file": "Common chaffinch (Fringilla coelebs) breeding male Drenthe.jpg",
+        "nl": "Vink",
+        "latin": "Fringilla coelebs",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File%3ACommon_chaffinch_%28Fringilla_coelebs%29_breeding_male_Drenthe.jpg",
+        "showSourceLink": true,
+        "alt": "Vink · mannetje. Blauwgrijze kruin en nek, roze-bruine wangen en borst, witte vleugelstrepen.",
+        "modifications": "Verkleind tot max. 1600 px en omgezet naar WebP, zonder uitsnede en zonder EXIF/GPS/XMP",
+        "reviewed": "2026-11-09",
+        "sourceAudit": "2026-11-09",
+        "sha1": "04c9fd7979ee5a62b6975b56e3c995baa7cf7ccd",
+        "verification": "Bron noemt een mannetje: \"File:Common chaffinch (Fringilla coelebs) breeding male Drenthe\". Visueel gecontroleerd op de kenmerken hiernaast.",
+        "verificationSource": "https://commons.wikimedia.org/wiki/File%3ACommon_chaffinch_%28Fringilla_coelebs%29_breeding_male_Drenthe.jpg",
+        "visualCheck": "Blauwgrijze kruin en nek, roze-bruine wangen en borst, witte vleugelstrepen.",
+        "width": 1600,
+        "height": 1067,
+        "image": "/assets/species/plumage/sp035-hero-male.webp"
       }
     ],
     "sp036": [
@@ -5149,6 +5294,31 @@
         "width": 1400,
         "height": 933,
         "image": "/assets/species/plumage/sp043-juv-review.webp"
+      },
+      {
+        "label": "Mannetje",
+        "sex": "male",
+        "flight": false,
+        "note": "Grijze kruin, kastanjebruine kopzijde, zwarte bef en witte wang.",
+        "file": "House sparrow (Passer domesticus) breeding male Heligan.jpg",
+        "nl": "Huismus",
+        "latin": "Passer domesticus",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File%3AHouse_sparrow_%28Passer_domesticus%29_breeding_male_Heligan.jpg",
+        "showSourceLink": true,
+        "alt": "Huismus · mannetje. Grijze kruin, kastanjebruine kopzijde, zwarte bef en witte wang.",
+        "modifications": "Verkleind tot max. 1600 px en omgezet naar WebP, zonder uitsnede en zonder EXIF/GPS/XMP",
+        "reviewed": "2026-11-09",
+        "sourceAudit": "2026-11-09",
+        "sha1": "95f79228d7f22968c5b895cbdad143fcc8741ecd",
+        "verification": "Bron noemt een mannetje: \"File:House sparrow (Passer domesticus) breeding male Heligan\". Visueel gecontroleerd op de kenmerken hiernaast.",
+        "verificationSource": "https://commons.wikimedia.org/wiki/File%3AHouse_sparrow_%28Passer_domesticus%29_breeding_male_Heligan.jpg",
+        "visualCheck": "Grijze kruin, kastanjebruine kopzijde, zwarte bef en witte wang.",
+        "width": 1600,
+        "height": 1067,
+        "image": "/assets/species/plumage/sp043-hero-male.webp"
       }
     ],
     "sp044": [
@@ -5196,6 +5366,31 @@
         "height": 1120,
         "image": "/assets/species/plumage/sp045-flight.webp",
         "sex": "male"
+      },
+      {
+        "label": "Mannetje",
+        "sex": "male",
+        "flight": false,
+        "note": "Geheel zwart met oranjegele snavel en oogring.",
+        "file": "Melro-preto, macho, Common Blackbird, male (52790386033).jpg",
+        "nl": "Merel",
+        "latin": "Turdus merula",
+        "author": "Luiz Lapa from Oeiras, Portugal",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "source": "https://commons.wikimedia.org/wiki/File%3AMelro-preto%2C_macho%2C_Common_Blackbird%2C_male_%2852790386033%29.jpg",
+        "showSourceLink": true,
+        "alt": "Merel · mannetje. Geheel zwart met oranjegele snavel en oogring.",
+        "modifications": "Verkleind tot max. 1600 px en omgezet naar WebP, zonder uitsnede en zonder EXIF/GPS/XMP",
+        "reviewed": "2026-11-09",
+        "sourceAudit": "2026-11-09",
+        "sha1": "461e691ba602573b15abc848e07a3280e67984fd",
+        "verification": "Bron noemt een mannetje: \"File:Melro-preto, macho, Common Blackbird, male (52790386033)\". Visueel gecontroleerd op de kenmerken hiernaast.",
+        "verificationSource": "https://commons.wikimedia.org/wiki/File%3AMelro-preto%2C_macho%2C_Common_Blackbird%2C_male_%2852790386033%29.jpg",
+        "visualCheck": "Geheel zwart met oranjegele snavel en oogring.",
+        "width": 1600,
+        "height": 1067,
+        "image": "/assets/species/plumage/sp045-hero-male.webp"
       }
     ],
     "sp046": [
@@ -5420,6 +5615,31 @@
         "width": 1400,
         "height": 933,
         "image": "/assets/species/plumage/sp053-juv-review.webp"
+      },
+      {
+        "label": "Mannetje",
+        "sex": "male",
+        "flight": false,
+        "note": "Zwarte kop, witte halsvlek en oranje borst.",
+        "file": "Stonechat (Saxicola rubicola) male, Beaulieu, Hampshire.jpg",
+        "nl": "Roodborsttapuit",
+        "latin": "Saxicola rubicola",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File%3AStonechat_%28Saxicola_rubicola%29_male%2C_Beaulieu%2C_Hampshire.jpg",
+        "showSourceLink": true,
+        "alt": "Roodborsttapuit · mannetje. Zwarte kop, witte halsvlek en oranje borst.",
+        "modifications": "Verkleind tot max. 1600 px en omgezet naar WebP, zonder uitsnede en zonder EXIF/GPS/XMP",
+        "reviewed": "2026-11-09",
+        "sourceAudit": "2026-11-09",
+        "sha1": "d955fc880b13363095232f793bb374583761b0f5",
+        "verification": "Bron noemt een mannetje: \"File:Stonechat (Saxicola rubicola) male, Beaulieu, Hampshire\". Visueel gecontroleerd op de kenmerken hiernaast.",
+        "verificationSource": "https://commons.wikimedia.org/wiki/File%3AStonechat_%28Saxicola_rubicola%29_male%2C_Beaulieu%2C_Hampshire.jpg",
+        "visualCheck": "Zwarte kop, witte halsvlek en oranje borst.",
+        "width": 1471,
+        "height": 1600,
+        "image": "/assets/species/plumage/sp053-hero-male.webp"
       }
     ],
     "sp056": [
@@ -5713,6 +5933,31 @@
         "width": 1400,
         "height": 1120,
         "image": "/assets/species/plumage/sp075-male-review.webp"
+      },
+      {
+        "label": "Mannetje",
+        "sex": "male",
+        "flight": false,
+        "note": "Geheel donkere snavel, blauwe bovendelen en oranje onderdelen.",
+        "file": "Guarda-rios-comum, macho, Common Kingfisher, male (54530531861).jpg",
+        "nl": "IJsvogel",
+        "latin": "Alcedo atthis",
+        "author": "Luiz Lapa from Oeiras, Portugal",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "source": "https://commons.wikimedia.org/wiki/File%3AGuarda-rios-comum%2C_macho%2C_Common_Kingfisher%2C_male_%2854530531861%29.jpg",
+        "showSourceLink": true,
+        "alt": "IJsvogel · mannetje. Geheel donkere snavel, blauwe bovendelen en oranje onderdelen.",
+        "modifications": "Verkleind tot max. 1600 px en omgezet naar WebP, zonder uitsnede en zonder EXIF/GPS/XMP",
+        "reviewed": "2026-11-09",
+        "sourceAudit": "2026-11-09",
+        "sha1": "673f3060010093786a66ea4db6c0073517d62267",
+        "verification": "Bron noemt een mannetje: \"File:Guarda-rios-comum, macho, Common Kingfisher, male (54530531861)\". Visueel gecontroleerd op de kenmerken hiernaast.",
+        "verificationSource": "https://commons.wikimedia.org/wiki/File%3AGuarda-rios-comum%2C_macho%2C_Common_Kingfisher%2C_male_%2854530531861%29.jpg",
+        "visualCheck": "Geheel donkere snavel, blauwe bovendelen en oranje onderdelen.",
+        "width": 1600,
+        "height": 914,
+        "image": "/assets/species/plumage/sp075-hero-male.webp"
       }
     ],
     "sp078": [
@@ -5736,6 +5981,30 @@
         "width": 930,
         "height": 620,
         "image": "/assets/species/plumage/sp078-flight.webp"
+      },
+      {
+        "file": "Eurasian coot (Fulica atra) juvenile.jpg",
+        "nl": "Meerkoet",
+        "latin": "Fulica atra",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Eurasian_coot_%28Fulica_atra%29_juvenile.jpg",
+        "alt": "Meerkoet — donsjong met rood-oranje kop en zwart dons.",
+        "modifications": "Verkleind en omgezet naar WebP zonder extra uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/meerkoet",
+        "visualCheck": "Dit is een donsjong, geen oudere juveniel met lichte wangen. Leeftijd en kleed expliciet in soorttekst onderscheiden. Frankrijk.",
+        "verification": "Dit is een donsjong, geen oudere juveniel met lichte wangen. Leeftijd en kleed expliciet in soorttekst onderscheiden. Frankrijk.",
+        "width": 1600,
+        "height": 1067,
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Eurasian_coot_%28Fulica_atra%29_juvenile.jpg",
+        "image": "/assets/species/plumage/sp078-juv.webp",
+        "age": "chick",
+        "label": "Donsjong",
+        "note": "Donsjong met rood-oranje kop. Het juveniele kleed (grijsbruin met lichte keel) heeft nog geen foto.",
+        "flight": false,
+        "sourceAudit": "2026-11-09"
       }
     ],
     "sp079": [
@@ -5851,6 +6120,30 @@
         "width": 1400,
         "height": 933,
         "image": "/assets/species/plumage/sp086-flight.webp"
+      },
+      {
+        "file": "Graugans-Jungtier-Schwalm-Nette-2013-01.jpg",
+        "nl": "Grauwe Gans",
+        "latin": "Anser anser",
+        "author": "Tuxyso / Wikimedia Commons",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Graugans-Jungtier-Schwalm-Nette-2013-01.jpg",
+        "alt": "Grauwe Gans — donsjong met geelbruin dons en beginnende vleugelveren.",
+        "modifications": "Verkleind en omgezet naar WebP zonder extra uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grauwe-gans",
+        "visualCheck": "Donsjong en beginnende veren visueel gecontroleerd; geen egaal verenkleed van volwassen vogel. Duitsland.",
+        "verification": "Donsjong en beginnende veren visueel gecontroleerd; geen egaal verenkleed van volwassen vogel. Duitsland.",
+        "width": 1600,
+        "height": 1188,
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Graugans-Jungtier-Schwalm-Nette-2013-01.jpg",
+        "image": "/assets/species/plumage/sp086-juv.webp",
+        "age": "chick",
+        "label": "Donsjong",
+        "note": "Donsjong met grijsgeel dons. Het juveniele kleed heeft nog geen foto.",
+        "flight": false,
+        "sourceAudit": "2026-11-09"
       }
     ],
     "sp089": [
@@ -5944,6 +6237,31 @@
         "height": 978,
         "image": "/assets/species/plumage/sp091-flight.webp",
         "sex": "male"
+      },
+      {
+        "label": "Mannetje",
+        "sex": "male",
+        "flight": false,
+        "note": "Kastanjebruine kop met groene oogvlek en gele driehoek bij de staart.",
+        "file": "Eurasian teal (Anas crecca crecca) male Qingshui.jpg",
+        "nl": "Wintertaling",
+        "latin": "Anas crecca",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File%3AEurasian_teal_%28Anas_crecca_crecca%29_male_Qingshui.jpg",
+        "showSourceLink": true,
+        "alt": "Wintertaling · mannetje. Kastanjebruine kop met groene oogvlek en gele driehoek bij de staart.",
+        "modifications": "Verkleind tot max. 1600 px en omgezet naar WebP, zonder uitsnede en zonder EXIF/GPS/XMP",
+        "reviewed": "2026-11-09",
+        "sourceAudit": "2026-11-09",
+        "sha1": "ed2eefdff81a0c4d9e46c4dfe3e21878e63c83b1",
+        "verification": "Bron noemt een mannetje: \"File:Eurasian teal (Anas crecca crecca) male Qingshui\". Visueel gecontroleerd op de kenmerken hiernaast.",
+        "verificationSource": "https://commons.wikimedia.org/wiki/File%3AEurasian_teal_%28Anas_crecca_crecca%29_male_Qingshui.jpg",
+        "visualCheck": "Kastanjebruine kop met groene oogvlek en gele driehoek bij de staart.",
+        "width": 1600,
+        "height": 1067,
+        "image": "/assets/species/plumage/sp091-hero-male.webp"
       }
     ],
     "sp092": [
@@ -5989,6 +6307,31 @@
         "width": 1400,
         "height": 875,
         "image": "/assets/species/plumage/sp092-juv-review.webp"
+      },
+      {
+        "label": "Mannetje",
+        "sex": "male",
+        "flight": false,
+        "note": "Zwart met witte flanken, hangende kuif en geel oog.",
+        "file": "Aythya fuligula (male) 2022 03 20.jpg",
+        "nl": "Kuifeend",
+        "latin": "Aythya fuligula",
+        "author": "Alexis Lours",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File%3AAythya_fuligula_%28male%29_2022_03_20.jpg",
+        "showSourceLink": true,
+        "alt": "Kuifeend · mannetje. Zwart met witte flanken, hangende kuif en geel oog.",
+        "modifications": "Verkleind tot max. 1600 px en omgezet naar WebP, zonder uitsnede en zonder EXIF/GPS/XMP",
+        "reviewed": "2026-11-09",
+        "sourceAudit": "2026-11-09",
+        "sha1": "01c902a7dc37ebc8e4463a3f067986644dd32648",
+        "verification": "Bron noemt een mannetje: \"File:Aythya fuligula (male) 2022 03 20\". Visueel gecontroleerd op de kenmerken hiernaast.",
+        "verificationSource": "https://commons.wikimedia.org/wiki/File%3AAythya_fuligula_%28male%29_2022_03_20.jpg",
+        "visualCheck": "Zwart met witte flanken, hangende kuif en geel oog.",
+        "width": 1600,
+        "height": 1067,
+        "image": "/assets/species/plumage/sp092-hero-male.webp"
       }
     ],
     "sp094": [
@@ -6518,6 +6861,30 @@
         "width": 1400,
         "height": 933,
         "image": "/assets/species/plumage/sp128-female-review.webp"
+      },
+      {
+        "file": "Brandgans Küken, Borkum.JPG",
+        "nl": "Bergeend",
+        "latin": "Tadorna tadorna",
+        "author": "Daniel Holl (Herunumen)",
+        "license": "Public domain",
+        "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Brandgans_K%C3%BCken%2C_Borkum.JPG",
+        "alt": "Bergeend — donsjongen met een zwart-wit patroon.",
+        "modifications": "Verkleind en omgezet naar WebP zonder extra uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bergeend",
+        "visualCheck": "Bron benoemt Brandgans-Küken / Young Common Shelducks op Borkum; zichtbare donsjongen gecontroleerd, niet verwarren met oudere juvenielen.",
+        "verification": "Bron benoemt Brandgans-Küken / Young Common Shelducks op Borkum; zichtbare donsjongen gecontroleerd, niet verwarren met oudere juvenielen.",
+        "width": 1600,
+        "height": 1200,
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Brandgans_K%C3%BCken%2C_Borkum.JPG",
+        "image": "/assets/species/plumage/sp128-juv.webp",
+        "age": "chick",
+        "label": "Donsjongen",
+        "note": "Donsjongen. Het juveniele kleed (bruingrijs zonder borstband) heeft nog geen foto.",
+        "flight": false,
+        "sourceAudit": "2026-11-09"
       }
     ],
     "sp129": [
@@ -6542,6 +6909,31 @@
         "height": 595,
         "image": "/assets/species/plumage/sp129-flight.webp",
         "sex": "male"
+      },
+      {
+        "label": "Mannetje",
+        "sex": "male",
+        "flight": false,
+        "note": "Grijs gevermiculeerd lijf, zwarte achterzijde en donkere snavel.",
+        "file": "Gadwall male (91087).jpg",
+        "nl": "Krakeend",
+        "latin": "Mareca strepera",
+        "author": "Rhododendrites",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File%3AGadwall_male_%2891087%29.jpg",
+        "showSourceLink": true,
+        "alt": "Krakeend · mannetje. Grijs gevermiculeerd lijf, zwarte achterzijde en donkere snavel.",
+        "modifications": "Verkleind tot max. 1600 px en omgezet naar WebP, zonder uitsnede en zonder EXIF/GPS/XMP",
+        "reviewed": "2026-11-09",
+        "sourceAudit": "2026-11-09",
+        "sha1": "c0a14edeee3b8ed944090f45f64a1c3d2f6ef3ea",
+        "verification": "Bron noemt een mannetje: \"File:Gadwall male (91087)\". Visueel gecontroleerd op de kenmerken hiernaast.",
+        "verificationSource": "https://commons.wikimedia.org/wiki/File%3AGadwall_male_%2891087%29.jpg",
+        "visualCheck": "Grijs gevermiculeerd lijf, zwarte achterzijde en donkere snavel.",
+        "width": 1600,
+        "height": 1033,
+        "image": "/assets/species/plumage/sp129-hero-male.webp"
       }
     ],
     "sp130": [
@@ -6732,9 +7124,9 @@
     ],
     "sp152": [
       {
-        "label": "Juvenielen in vlucht",
+        "label": "Groep in vlucht",
         "flight": true,
-        "note": "Jonge Drieteenstrandlopers in de herfst. De brede witte vleugelstrepen contrasteren met de donkere bovenvleugels.",
+        "note": "Groep Drieteenstrandlopers boven water. De brede witte vleugelstrepen contrasteren met de donkere bovenvleugels. De leeftijd staat niet in de bron.",
         "file": "Sanderling (Calidris alba) (3972936394).jpg",
         "nl": "Drieteenstrandloper",
         "latin": "Calidris alba",
@@ -6743,15 +7135,15 @@
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
         "source": "https://commons.wikimedia.org/wiki/File:Sanderling_(Calidris_alba)_(3972936394).jpg",
         "showSourceLink": true,
-        "alt": "Een groep jonge Drieteenstrandlopers boven water, met brede witte strepen op de gespreide vleugels.",
+        "alt": "Een groep Drieteenstrandlopers boven water, met brede witte strepen op de gespreide vleugels.",
         "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
         "reviewed": "2026-11-08",
         "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/drieteenstrandloper",
-        "visualCheck": "Een groep jonge Drieteenstrandlopers boven water, met brede witte strepen op de gespreide vleugels.",
+        "visualCheck": "Een groep Drieteenstrandlopers boven water, met brede witte strepen op de gespreide vleugels.",
         "width": 1400,
         "height": 933,
         "image": "/assets/species/plumage/sp152-flight.webp",
-        "age": "juvenile"
+        "sourceAudit": "2026-11-09"
       }
     ],
     "sp155": [
@@ -7147,10 +7539,9 @@
     ],
     "sp005": [
       {
-        "label": "Mannetje in rust",
-        "sex": "male",
+        "label": "Volwassen in rust",
         "flight": false,
-        "note": "Op een kabel. Het borstpatroon en de houding zijn zichtbaar. Het geslacht is geregistreerd in iNaturalist-waarneming 168347110.",
+        "note": "Op een kabel. Het borstpatroon en de houding zijn zichtbaar.",
         "file": "iNaturalist photo 291739391",
         "nl": "Buizerd",
         "latin": "Buteo buteo",
@@ -7159,20 +7550,21 @@
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
         "source": "https://www.inaturalist.org/photos/291739391",
         "showSourceLink": true,
-        "alt": "Buizerd · mannetje in rust. Op een kabel. Het borstpatroon en de houding zijn zichtbaar.",
+        "alt": "Buizerd · volwassen vogel in rust. Op een kabel. Het borstpatroon en de houding zijn zichtbaar.",
         "modifications": "Omgezet naar WebP zonder uitsnede",
         "reviewed": "2026-11-08",
         "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/buizerd",
-        "visualCheck": "Buizerd · mannetje in rust. Op een kabel. Het borstpatroon en de houding zijn zichtbaar.",
+        "visualCheck": "Buizerd · volwassen vogel in rust. Op een kabel. Het borstpatroon en de houding zijn zichtbaar.",
         "width": 1222,
         "height": 1006,
-        "image": "/assets/species/plumage/sp005-male-rest.webp"
+        "image": "/assets/species/plumage/sp005-male-rest.webp",
+        "sourceAudit": "2026-11-09",
+        "sexNote": "Geslacht volgens de bron, maar bij de Buizerd niet aan het verenkleed te zien; daarom zonder geslachtslabel."
       },
       {
-        "label": "Mannetje in vlucht",
-        "sex": "male",
+        "label": "Volwassen in vlucht",
         "flight": true,
-        "note": "Schuin van onderen. De brede vleugels en gebandeerde staart zijn zichtbaar. Het geslacht is geregistreerd in iNaturalist-waarneming 69384883.",
+        "note": "Schuin van onderen. De brede vleugels en gebandeerde staart zijn zichtbaar.",
         "file": "iNaturalist photo 112563579",
         "nl": "Buizerd",
         "latin": "Buteo buteo",
@@ -7181,20 +7573,21 @@
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
         "source": "https://www.inaturalist.org/photos/112563579",
         "showSourceLink": true,
-        "alt": "Buizerd · mannetje in vlucht. Schuin van onderen. De brede vleugels en gebandeerde staart zijn zichtbaar.",
+        "alt": "Buizerd · volwassen vogel in vlucht. Schuin van onderen. De brede vleugels en gebandeerde staart zijn zichtbaar.",
         "modifications": "Bijgesneden en omgezet naar WebP",
         "reviewed": "2026-11-08",
         "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/buizerd",
-        "visualCheck": "Buizerd · mannetje in vlucht. Schuin van onderen. De brede vleugels en gebandeerde staart zijn zichtbaar.",
+        "visualCheck": "Buizerd · volwassen vogel in vlucht. Schuin van onderen. De brede vleugels en gebandeerde staart zijn zichtbaar.",
         "width": 918,
         "height": 728,
-        "image": "/assets/species/plumage/sp005-male-flight.webp"
+        "image": "/assets/species/plumage/sp005-male-flight.webp",
+        "sourceAudit": "2026-11-09",
+        "sexNote": "Geslacht volgens de bron, maar bij de Buizerd niet aan het verenkleed te zien; daarom zonder geslachtslabel."
       },
       {
-        "label": "Vrouwtje in vlucht",
-        "sex": "female",
+        "label": "Volwassen in vlucht, van onderen",
         "flight": true,
-        "note": "Schuin van onderen, met lichte onderzijde en donkere slagpennen. De fotograaf registreerde vlak hierna ook het mannetje. Het geslacht is geregistreerd in iNaturalist-waarneming 69384882.",
+        "note": "Van onderen. Donkere polsvlekken en de lichte borstband zijn zichtbaar.",
         "file": "iNaturalist photo 112563573",
         "nl": "Buizerd",
         "latin": "Buteo buteo",
@@ -7203,14 +7596,16 @@
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
         "source": "https://www.inaturalist.org/photos/112563573",
         "showSourceLink": true,
-        "alt": "Buizerd · vrouwtje in vlucht. Schuin van onderen, met lichte onderzijde en donkere slagpennen. De fotograaf registreerde vlak hierna ook het mannetje.",
+        "alt": "Buizerd · volwassen vogel in vlucht. Schuin van onderen, met lichte onderzijde en donkere slagpennen. De fotograaf registreerde vlak hierna ook het volwassen vogel.",
         "modifications": "Bijgesneden en omgezet naar WebP",
         "reviewed": "2026-11-08",
         "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/buizerd",
-        "visualCheck": "Buizerd · vrouwtje in vlucht. Schuin van onderen, met lichte onderzijde en donkere slagpennen. De fotograaf registreerde vlak hierna ook het mannetje.",
+        "visualCheck": "Buizerd · volwassen vogel in vlucht. Schuin van onderen, met lichte onderzijde en donkere slagpennen. De fotograaf registreerde vlak hierna ook het volwassen vogel.",
         "width": 1270,
         "height": 958,
-        "image": "/assets/species/plumage/sp005-female-flight.webp"
+        "image": "/assets/species/plumage/sp005-female-flight.webp",
+        "sourceAudit": "2026-11-09",
+        "sexNote": "Geslacht volgens de bron, maar bij de Buizerd niet aan het verenkleed te zien; daarom zonder geslachtslabel."
       }
     ],
     "sp248": [
@@ -7259,6 +7654,31 @@
         "width": 835,
         "height": 529,
         "image": "/assets/species/plumage/sp249-male-rest.webp"
+      },
+      {
+        "label": "Mannetje in vlucht",
+        "sex": "male",
+        "flight": true,
+        "note": "Blauwgrijs met zwarte vleugelpunten, van voren in vlucht.",
+        "file": "Blauwe kiekendief masc.jpg",
+        "nl": "Blauwe Kiekendief",
+        "latin": "Circus cyaneus",
+        "author": "Maurice.dekens",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File%3ABlauwe_kiekendief_masc.jpg",
+        "showSourceLink": true,
+        "alt": "Blauwe Kiekendief · mannetje in vlucht. Blauwgrijs met zwarte vleugelpunten, van voren in vlucht.",
+        "modifications": "Verkleind tot max. 1600 px en omgezet naar WebP, zonder uitsnede en zonder EXIF/GPS/XMP",
+        "reviewed": "2026-11-09",
+        "sourceAudit": "2026-11-09",
+        "sha1": "64776ff45b35448cccaa999dce89231a010f3e0b",
+        "verification": "Bron noemt een mannetje: \"jpg Mannetje blauwe kiekendief, wintergast in België\". Visueel gecontroleerd op de kenmerken hiernaast.",
+        "verificationSource": "https://commons.wikimedia.org/wiki/File%3ABlauwe_kiekendief_masc.jpg",
+        "visualCheck": "Blauwgrijs met zwarte vleugelpunten, van voren in vlucht.",
+        "width": 1600,
+        "height": 1067,
+        "image": "/assets/species/plumage/sp249-hero-male.webp"
       }
     ],
     "sp250": [
@@ -7283,6 +7703,31 @@
         "width": 448,
         "height": 448,
         "image": "/assets/species/plumage/sp250-male-rest.webp"
+      },
+      {
+        "label": "Mannetje",
+        "sex": "male",
+        "flight": false,
+        "note": "Zeer licht grijs met wit gezicht en witte borst.",
+        "file": "Tartaranhão- pálido, macho, Pallid Harrier, male (49237959991).jpg",
+        "nl": "Steppekiekendief",
+        "latin": "Circus macrourus",
+        "author": "Luiz Lapa from Oeiras, Portugal",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "source": "https://commons.wikimedia.org/wiki/File%3ATartaranh%C3%A3o-_p%C3%A1lido%2C_macho%2C_Pallid_Harrier%2C_male_%2849237959991%29.jpg",
+        "showSourceLink": true,
+        "alt": "Steppekiekendief · mannetje. Zeer licht grijs met wit gezicht en witte borst.",
+        "modifications": "Verkleind tot max. 1600 px en omgezet naar WebP, zonder uitsnede en zonder EXIF/GPS/XMP",
+        "reviewed": "2026-11-09",
+        "sourceAudit": "2026-11-09",
+        "sha1": "181df22271372fc80fd064d0337a4a4e83f04a52",
+        "verification": "Bron noemt een mannetje: \"File:Tartaranhão- pálido, macho, Pallid Harrier, male (49237959991)\". Visueel gecontroleerd op de kenmerken hiernaast.",
+        "verificationSource": "https://commons.wikimedia.org/wiki/File%3ATartaranh%C3%A3o-_p%C3%A1lido%2C_macho%2C_Pallid_Harrier%2C_male_%2849237959991%29.jpg",
+        "visualCheck": "Zeer licht grijs met wit gezicht en witte borst.",
+        "width": 1184,
+        "height": 1600,
+        "image": "/assets/species/plumage/sp250-hero-male.webp"
       }
     ],
     "sp251": [
@@ -7307,6 +7752,31 @@
         "width": 1400,
         "height": 1110,
         "image": "/assets/species/plumage/sp251-male-rest.webp"
+      },
+      {
+        "label": "Mannetje",
+        "sex": "male",
+        "flight": false,
+        "note": "Grijs verenkleed met geel oog.",
+        "file": "Montagu's Harrier Male (Circus pygargus) at Velavadar National Park, Gujarat, India DSCN7503 01.jpg",
+        "nl": "Grauwe Kiekendief",
+        "latin": "Circus pygargus",
+        "author": "Rohitjahnavi",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File%3AMontagu%27s_Harrier_Male_%28Circus_pygargus%29_at_Velavadar_National_Park%2C_Gujarat%2C_India_DSCN7503_01.jpg",
+        "showSourceLink": true,
+        "alt": "Grauwe Kiekendief · mannetje. Grijs verenkleed met geel oog.",
+        "modifications": "Verkleind tot max. 1600 px en omgezet naar WebP, zonder uitsnede en zonder EXIF/GPS/XMP",
+        "reviewed": "2026-11-09",
+        "sourceAudit": "2026-11-09",
+        "sha1": "0e2bd84406173f924386128e618fb4941decb6d7",
+        "verification": "Bron noemt een mannetje: \"File:Montagu's Harrier Male (Circus pygargus) at Velavadar National\". Visueel gecontroleerd op de kenmerken hiernaast.",
+        "verificationSource": "https://commons.wikimedia.org/wiki/File%3AMontagu%27s_Harrier_Male_%28Circus_pygargus%29_at_Velavadar_National_Park%2C_Gujarat%2C_India_DSCN7503_01.jpg",
+        "visualCheck": "Grijs verenkleed met geel oog.",
+        "width": 1600,
+        "height": 1200,
+        "image": "/assets/species/plumage/sp251-hero-male.webp"
       }
     ],
     "sp253": [
@@ -7376,16 +7846,68 @@
         "width": 1023,
         "height": 1400,
         "image": "/assets/species/plumage/sp173-female-rest.webp"
+      },
+      {
+        "label": "Mannetje in vlucht",
+        "sex": "male",
+        "flight": true,
+        "note": "Driekleurig: bruin lijf, grijze vleugelvelden en staart, zwarte vleugelpunten.",
+        "file": "Männliche Rohrweihe im Flug 04.jpg",
+        "nl": "Bruine Kiekendief",
+        "latin": "Circus aeruginosus",
+        "author": "Stephan Sprinz",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File%3AM%C3%A4nnliche_Rohrweihe_im_Flug_04.jpg",
+        "showSourceLink": true,
+        "alt": "Bruine Kiekendief · mannetje in vlucht. Driekleurig: bruin lijf, grijze vleugelvelden en staart, zwarte vleugelpunten.",
+        "modifications": "Verkleind tot max. 1600 px en omgezet naar WebP, zonder uitsnede en zonder EXIF/GPS/XMP",
+        "reviewed": "2026-11-09",
+        "sourceAudit": "2026-11-09",
+        "sha1": "c07a256fef54c3506cdf0173be3f28e774a4cd4a",
+        "verification": "Bron noemt een mannetje: \"File:Männliche Rohrweihe im Flug 04\". Visueel gecontroleerd op de kenmerken hiernaast.",
+        "verificationSource": "https://commons.wikimedia.org/wiki/File%3AM%C3%A4nnliche_Rohrweihe_im_Flug_04.jpg",
+        "visualCheck": "Driekleurig: bruin lijf, grijze vleugelvelden en staart, zwarte vleugelpunten.",
+        "width": 1600,
+        "height": 1067,
+        "image": "/assets/species/plumage/sp173-hero-male.webp"
+      }
+    ],
+    "sp188": [
+      {
+        "label": "Mannetje",
+        "sex": "male",
+        "flight": false,
+        "note": "Brede witte wenkbrauwstreep, bruine kop en grijze flanken.",
+        "file": "Garganey, Israel.jpg",
+        "nl": "Zomertaling",
+        "latin": "Spatula querquedula",
+        "author": "YedidyaPopper",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File%3AGarganey%2C_Israel.jpg",
+        "showSourceLink": true,
+        "alt": "Zomertaling · mannetje. Brede witte wenkbrauwstreep, bruine kop en grijze flanken.",
+        "modifications": "Verkleind tot max. 1600 px en omgezet naar WebP, zonder uitsnede en zonder EXIF/GPS/XMP",
+        "reviewed": "2026-11-09",
+        "sourceAudit": "2026-11-09",
+        "sha1": "bf5b3e3dc2cf713bca6f0b8c162c4fbbc53ea58e",
+        "verification": "Bron noemt een mannetje: \"jpg A male Garganey (Spatula querquedula), photogr\". Visueel gecontroleerd op de kenmerken hiernaast.",
+        "verificationSource": "https://commons.wikimedia.org/wiki/File%3AGarganey%2C_Israel.jpg",
+        "visualCheck": "Brede witte wenkbrauwstreep, bruine kop en grijze flanken.",
+        "width": 1600,
+        "height": 1067,
+        "image": "/assets/species/plumage/sp188-hero-male.webp"
       }
     ]
   },
   "heroes": {
     "sp005": "/assets/species/plumage/sp005-male-rest.webp",
     "sp009": "/assets/species/plumage/sp009-male-rest.webp",
-    "sp016": "/assets/species/plumage/sp016-male.webp",
+    "sp016": "/assets/species/plumage/sp016-hero-male.webp",
     "sp020": "/assets/species/plumage/sp020-male.webp",
-    "sp043": "/assets/species/plumage/sp043-adult_m.webp",
-    "sp091": "/assets/species/plumage/sp091-adult_m.webp",
+    "sp043": "/assets/species/plumage/sp043-hero-male.webp",
+    "sp091": "/assets/species/plumage/sp091-hero-male.webp",
     "sp116": "/assets/species/plumage/sp116-flight.webp",
     "sp141": "/assets/species/plumage/sp141-adult.webp",
     "sp164": "/assets/species/plumage/sp164-adult.webp",
@@ -7394,6 +7916,21 @@
     "sp167": "/assets/species/plumage/sp167-adult.webp",
     "sp253": "/assets/species/plumage/sp253-male-rest.webp",
     "sp288": "/assets/species/plumage/sp288-adult.webp",
-    "sp075": "/assets/species/plumage/sp075-male-review.webp"
+    "sp075": "/assets/species/plumage/sp075-hero-male.webp",
+    "sp006": "/assets/species/plumage/sp006-hero-male.webp",
+    "sp007": "/assets/species/plumage/sp007-hero-male.webp",
+    "sp008": "/assets/species/plumage/sp008-hero-male.webp",
+    "sp018": "/assets/species/plumage/sp018-hero-male.webp",
+    "sp019": "/assets/species/plumage/sp019-hero-male.webp",
+    "sp035": "/assets/species/plumage/sp035-hero-male.webp",
+    "sp045": "/assets/species/plumage/sp045-hero-male.webp",
+    "sp053": "/assets/species/plumage/sp053-hero-male.webp",
+    "sp092": "/assets/species/plumage/sp092-hero-male.webp",
+    "sp129": "/assets/species/plumage/sp129-hero-male.webp",
+    "sp173": "/assets/species/plumage/sp173-hero-male.webp",
+    "sp188": "/assets/species/plumage/sp188-hero-male.webp",
+    "sp249": "/assets/species/plumage/sp249-hero-male.webp",
+    "sp250": "/assets/species/plumage/sp250-hero-male.webp",
+    "sp251": "/assets/species/plumage/sp251-hero-male.webp"
   }
 }

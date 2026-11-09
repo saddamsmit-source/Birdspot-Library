@@ -27,7 +27,7 @@ for (const [id, photos] of Object.entries(GUIDE_POSES)) {
   for (const photo of photos) {
     assert.ok(photo.label && photo.note, `Ontbrekend houdingslabel: ${id}`);
     assert.ok(!photo.sex || ['male', 'female'].includes(photo.sex), `Ongeldig geslachtslabel: ${id}`);
-    assert.ok(!photo.age || ['adult', 'juvenile'].includes(photo.age), `Ongeldig leeftijdslabel: ${id}`);
+    assert.ok(!photo.age || ['adult', 'juvenile', 'chick'].includes(photo.age), `Ongeldig leeftijdslabel: ${id}`);
     checkPhoto(id, photo);
   }
 }

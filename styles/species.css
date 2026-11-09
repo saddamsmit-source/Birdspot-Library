@@ -913,4 +913,5 @@
 }
 .sd-plumage-comparison details > summary { margin-bottom: var(--space-8); cursor: pointer; }
 .sd-plumage-photo { min-width: 0; margin: 0; }
+.sd-hero-ref { margin-top: var(--space-4); font-size: var(--fs-meta); color: var(--muted); }
 .sd-plumage-photo figcaption { margin-top: 4px; font-size: var(--fs-meta); font-weight: 650; }

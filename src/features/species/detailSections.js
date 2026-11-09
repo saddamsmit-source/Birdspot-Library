@@ -138,6 +138,8 @@ export function guidePlumageGroups(s) {
   const poses = GUIDE_POSES[id] || [];
   const main = GUIDE_PHOTOS[id];
   const sharedAdult = Boolean(plumage.adult_m && !plumage.adult_f);
+  const heroPhoto = guideHeroPhoto(id);
+  const heroImage = heroPhoto?.image;
   const groups = PLUMAGE.flatMap(([key, icon, title, badge]) => {
     const shared = key === 'adult_m' && sharedAdult;
     const variant = plumagePhoto(id, key);
@@ -146,29 +148,32 @@ export function guidePlumageGroups(s) {
     if (variant && (!shared || photoRole(variant) === key)) photos.unshift(variant);
     // The same local image can be both the hero, a pose and a reused plumage photo.
     // Keep only one copy within each gallery, without dropping distinct photos.
+    // De hoofdfoto staat al bovenaan de kaart en komt niet nog eens in een kleedgalerij.
     const uniquePhotos = photos.filter((photo, index) =>
-      photos.findIndex(other => other.image === photo.image) === index);
+      photo.image !== heroImage && photos.findIndex(other => other.image === photo.image) === index);
     const text = shared ? null : plumage[key];
-    return uniquePhotos.length || text ? [{key, icon, title, text, badge, photos: uniquePhotos}] : [];
+    const heroRef = !uniquePhotos.length && Boolean(heroPhoto) && photoRole(heroPhoto) === key;
+    return uniquePhotos.length || text ? [{key, icon, title, text, badge, photos: uniquePhotos, heroRef}] : [];
   });
   if (sharedAdult) {
     const variant = plumagePhoto(id, 'adult_m');
-    const photos = variant && !photoRole(variant) ? [variant] : [];
+    const photos = variant && !photoRole(variant) && variant.image !== heroImage ? [variant] : [];
     const badge = s.guideReview?.similarSexes ? 'Man en vrouw lijken op elkaar' : '';
     const index = groups.findIndex(group => !['adult_m', 'adult_f', 'juv'].includes(group.key));
     groups.splice(index < 0 ? groups.length : index, 0, {
       key: 'adult', icon: 'equal', title: 'Volwassen', text: plumage.adult_m, badge, photos,
+      heroRef: !photos.length && Boolean(heroPhoto) && !photoRole(heroPhoto),
     });
   }
   return groups;
 }
 
-function plumageCard({key, icon: iconName, title, text, badge, photos}) {
+function plumageCard({key, icon: iconName, title, text, badge, photos, heroRef}) {
   const gallery = photos.map(photo => {
     const label = photo.label || (photo.flight ? 'In vlucht' : '');
     return `<figure class="sd-plumage-photo">${fieldPhoto(photo)}${label ? `<figcaption>${esc(label)}</figcaption>` : ''}${photo.note ? `<p>${esc(photo.note)}</p>` : ''}</figure>`;
   });
-  return `<div class="sd-plumage" data-plumage="${key}">${icon(iconName)}<div><strong>${esc(title)}${badge ? `<span class="sd-badge">${esc(badge)}</span>` : ''}</strong>${text ? `<p>${esc(text)}</p>` : ''}${gallery.length ? `<div class="sd-plumage-gallery">${gallery.join('')}</div>` : ''}</div></div>`;
+  return `<div class="sd-plumage" data-plumage="${key}">${icon(iconName)}<div><strong>${esc(title)}${badge ? `<span class="sd-badge">${esc(badge)}</span>` : ''}</strong>${text ? `<p>${esc(text)}</p>` : ''}${gallery.length ? `<div class="sd-plumage-gallery">${gallery.join('')}</div>` : ''}${heroRef ? '<p class="sd-hero-ref">Foto: de hoofdfoto bovenaan deze kaart.</p>' : ''}</div></div>`;
 }
 
 function comparePlumages(groups) {

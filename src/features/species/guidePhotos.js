@@ -2073,11 +2073,13 @@ export const GUIDE_PHOTOS = Object.freeze({
     "reviewed": "2026-11-06",
     "verification": "Bronmetadata en zichtbare kenmerken vergeleken met de gelinkte soortkaart.",
     "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bruine-kiekendief",
-    "visualCheck": "Volwassen mannetje in vlucht. Bruin lijf, grijze vleugelvelden en staart en zwarte vleugelpunten.",
-    "alt": "Bruine Kiekendief — Volwassen mannetje in vlucht. Bruin lijf, grijze vleugelvelden en staart en zwarte vleugelpunten.",
+    "visualCheck": "Bruine Kiekendief in vlucht. Bruine vleugels zonder grijze velden en een roodbruine staart; geslacht en leeftijd daarom niet vast te stellen.",
+    "alt": "Bruine Kiekendief in vlucht van opzij: bruin lijf, bruine vleugels met zwarte punten en een roodbruine staart.",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
     "flight": true,
-    "sex": "male"
+    "label": "In vlucht",
+    "sourceAudit": "2026-11-09",
+    "sexNote": "De bron noemt een volwassen mannetje, maar grijze vleugelvelden en staart zijn niet zichtbaar; daarom zonder geslacht."
   },
   "sp249": {
     "file": "Hen Harrier - Male.jpg",

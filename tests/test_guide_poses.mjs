@@ -38,17 +38,20 @@ for (const s of SPECIES) {
   if (plumage >= 0 && html.includes('>Lijkt op<')) assert.ok(plumage < html.indexOf('>Lijkt op<'), id);
 }
 const photosFor = (id, key) => guidePlumageGroups(species.get(id)).find(group => group.key === key).photos.map(photo => photo.image);
-assert.equal(guideHeroPhoto('sp173').image, '/assets/species/sp173.webp');
+assert.equal(guideHeroPhoto('sp173').image, '/assets/species/plumage/sp173-hero-male.webp');
+assert.deepEqual(photosFor('sp173', 'adult_m'), ['/assets/species/plumage/sp173-male-2.webp']);
 assert.deepEqual(photosFor('sp173', 'adult_f'), [
   '/assets/species/plumage/sp173-adult_f.webp',
   '/assets/species/plumage/sp173-female-rest.webp',
 ]);
 assert.deepEqual(photosFor('sp173', 'juv'), ['/assets/species/plumage/sp173-juv.webp']);
 assert.ok(photosFor('sp045', 'adult_m').some(image => image.endsWith('-flight.webp')));
-assert.equal(guideHeroPhoto('sp043').image, '/assets/species/plumage/sp043-adult_m.webp');
+assert.equal(guideHeroPhoto('sp043').image, '/assets/species/plumage/sp043-hero-male.webp');
+assert.equal(photosFor('sp043', 'adult_m')[0], '/assets/species/plumage/sp043-adult_m.webp');
 assert.equal(guideHeroPhoto('sp141').image, '/assets/species/plumage/sp141-adult.webp');
 assert.ok(recognitionPanel(species.get('sp009')).includes('Man en vrouw lijken op elkaar'));
-for (const id of ['sp035', 'sp043', 'sp053', 'sp075', 'sp089', 'sp092', 'sp128']) {
+// sp128: donsjongen staan sinds de bronaudit van 9-11 niet meer onder Juveniel; het mannetje is de hoofdfoto.
+for (const id of ['sp035', 'sp043', 'sp053', 'sp075', 'sp089', 'sp092']) {
   for (const role of ['adult_m', 'adult_f', 'juv']) {
     assert.ok(photosFor(id, role).length, `Missing photo for ${id}: ${role}`);
   }
@@ -83,7 +86,8 @@ for (const bird of SPECIES) {
     assert.equal(new Set(keys).size, keys.length, `Duplicate guide photo in ${bird.id} / ${group.key}`);
   }
 }
-assert.equal(guideHeroPhoto('sp075').image, '/assets/species/plumage/sp075-male-review.webp');
+assert.equal(guideHeroPhoto('sp075').image, '/assets/species/plumage/sp075-hero-male.webp');
+assert.ok(photosFor('sp075', 'adult_m').includes('/assets/species/plumage/sp075-male-review.webp'));
 assert.ok(photosFor('sp050', 'juv').includes('/assets/species/plumage/sp050-juv-review.webp'));
 for (const id of ['sp008', 'sp009']) {
   const s = species.get(id);
