@@ -78,7 +78,7 @@ def main():
             assert top == "page", "B-01 overlay ligt over de pagina"
             print("B-01 OK — geen dialoog bij openen")
 
-            stats = p.eval_on_selector_all(".profile-stat", "els => els.map(e => e.innerText.replace(/\\s+/g,' ').trim())")
+            stats = p.eval_on_selector_all("#overviewHeading + .profile-stats .profile-stat", "els => els.map(e => e.innerText.replace(/\\s+/g,' ').trim())")
             assert stats == ["3 waarnemingen", "2 soorten", "2 plekken", "3 foto's"], stats
             print("B-02 OK — overzicht:", stats)
 

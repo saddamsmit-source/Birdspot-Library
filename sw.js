@@ -12,7 +12,7 @@
  *   birdspot-media           — foto's/IDB-exports (permanent)
  */
 
-const APP_VERSION = '1.19.20-asset-url-subpath-fix';
+const APP_VERSION = '1.21.0-review-candidate';
 const APP_CACHE   = `birdspot-app-v${APP_VERSION}`;
 const MEDIA_CACHE = 'birdspot-media';
 
@@ -84,9 +84,13 @@ const PRECACHE_PATHS = [
   'src/features/map/view.js',
   'src/features/map/centerPin.js',
   'src/features/map/placePrompt.js',
+  'src/features/map/insights.js',
   'src/data/places.js',
   'src/features/map/visualization.js',
   'src/features/profile/view.js',
+  'src/features/profile/stats.js',
+  'src/features/profile/exportCsv.js',
+  'src/data/settings.js',
   'src/features/media/view.js',
   'src/features/journal/view.js',
   'src/features/insights/view.js',
