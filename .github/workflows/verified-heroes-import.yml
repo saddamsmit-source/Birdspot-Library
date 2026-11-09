@@ -1,0 +1,23 @@
+name: Geverifieerde hoofdfoto's importeren (eenmalig)
+on:
+  push:
+    branches: [feat/guide-photo-verification]
+    paths: ["tools/species/verified_heroes_2026-11-09.json"]
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install pillow==10.4.0
+      - run: python tools/species/import_verified_heroes.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add assets/species/plumage docs/evidence/verified_heroes_import_2026-11-09.json
+          git commit -m "assets: 20 geverifieerde hoofd- en mannetjesfoto's (SHA-1 gecontroleerd, zonder EXIF)"
+          git push
