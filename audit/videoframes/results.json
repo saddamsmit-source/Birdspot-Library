@@ -1,0 +1,28 @@
+[
+ {
+  "image": "/assets/species/plumage/sp042-flight.webp",
+  "title": "File:Zingende roodmus-4961932.webm",
+  "t": 13.96,
+  "offset": 0,
+  "match": {
+   "inliers": 78,
+   "mirror": false,
+   "scale": 0.893,
+   "areaOfSource": 1.082
+  },
+  "sha1": "7ab46cc21370ac0b32e01015c995080271bdb957"
+ },
+ {
+  "image": "/assets/species/plumage/sp053-flight.webp",
+  "title": "File:European stonechat (Saxicola rubicola) in the UK.webm",
+  "t": 75.107,
+  "offset": 0,
+  "match": {
+   "inliers": 49,
+   "mirror": false,
+   "scale": 0.521,
+   "areaOfSource": 0.181
+  },
+  "sha1": "ad67dff8c8e9844c18c4c0b48daee959b0c7edec"
+ }
+]
