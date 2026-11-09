@@ -1,0 +1,24 @@
+name: Birdspot source check (eenmalig, scratch)
+on:
+  push:
+    branches: ['chore/source-check-*']
+    paths: ['tools/review/targets.json', 'tools/review/source_check.py', '.github/workflows/source-check.yml']
+permissions:
+  contents: write
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: pip install pillow opencv-python-headless numpy
+      - run: python tools/review/source_check.py
+      - name: Commit uitvoer naar deze scratch-branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898273+github-actions[bot]@users.noreply.github.com"
+          git add tools/review/out
+          git commit -m "source check output" || echo "niets te committen"
+          git push
