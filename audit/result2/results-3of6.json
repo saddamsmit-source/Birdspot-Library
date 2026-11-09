@@ -1,0 +1,292 @@
+[
+ {
+  "image": "/assets/showcase/sp282.webp",
+  "species": "sp282",
+  "latin": "Pastor roseus",
+  "app": {
+   "author": "Hari K Patibanda",
+   "license": "CC BY 2.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:An_Adult_Rosy_Starling_Looking_for_food_(50620492117).jpg",
+  "src": {
+   "title": "File:An Adult Rosy Starling Looking for food (50620492117).jpg",
+   "author": "Hari K Patibanda",
+   "license": "CC BY 2.0",
+   "description": "A migrant bird to India during winters, an estimated million+ birds are thought to migrate into the country. And they are everywhere, all places in very good numbers. Pecking on the grains that are ready for harvest, the birds are always active and very playful. They are generally social birds and always seen in flocks. Thanks in advance for your views and feedback. Much appreciated.",
+   "objectName": "An Adult Rosy Starling Looking for food (50620492117)",
+   "categories": [
+    "CC-BY-2.0",
+    "Flickr images reviewed by FlickreviewR 2",
+    "Images with watermarks",
+    "Pastor roseus in India",
+    "Photographs by Hari K Patibanda"
+   ],
+   "width": 2575,
+   "height": 1717,
+   "sha1": "8476e777c6311ccd6609e97cc9032687715c7647",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/An_Adult_Rosy_Starling_Looking_for_food_%2850620492117%29.jpg/1280px-An_Adult_Rosy_Starling_Looking_for_food_%2850620492117%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [
+   "adult"
+  ],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2072,
+   "mirror": false,
+   "scale": 0.999,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/showcase/sp085.webp",
+  "species": "sp085",
+  "latin": "Nycticorax nycticorax",
+  "app": {
+   "author": "Mike & Chris",
+   "license": "CC BY-SA 2.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://commons.wikimedia.org/wiki/File:Nycticorax_nycticorax_5.jpg",
+  "src": {
+   "title": "File:Nycticorax nycticorax 5.jpg",
+   "author": "Mike & Chris",
+   "license": "CC BY-SA 2.0",
+   "description": "An adult Black-crowned Night Heron in New Jersey, USA.",
+   "objectName": "Nycticorax nycticorax 5",
+   "categories": [
+    "CC-BY-SA-2.0",
+    "Files with coordinates missing SDC location of creation",
+    "Flickr images reviewed by File Upload Bot (Magnus Manske)",
+    "Nycticorax nycticorax in New Jersey"
+   ],
+   "width": 3254,
+   "height": 3250,
+   "sha1": "85b870e2e84bbe61ce3f2e3d391dd6fa9955fed4",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Nycticorax_nycticorax_5.jpg/1280px-Nycticorax_nycticorax_5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": null,
+  "sourceSex": [],
+  "sourceAge": [
+   "adult"
+  ],
+  "authorMatch": true,
+  "licenseMatch": true,
+  "match": {
+   "inliers": 2130,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.001
+  },
+  "sameShot": true,
+  "issues": []
+ },
+ {
+  "image": "/assets/species/sp145.webp",
+  "species": "sp145",
+  "latin": "Pluvialis apricaria",
+  "app": {
+   "author": "Andrea Battisti",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/605984899",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/sp217.webp",
+  "species": "sp217",
+  "latin": "Tringa stagnatilis",
+  "app": {
+   "author": "Вячеслав Юсупов",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/103339289",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp051-flight.webp",
+  "species": "sp051",
+  "latin": "Phoenicurus ochruros",
+  "app": {
+   "author": "portioid",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/8255067",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp157-flight.webp",
+  "species": "sp157",
+  "latin": "Tringa erythropus",
+  "app": {
+   "author": "Barry Stewart",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/711147296",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp288-flight.webp",
+  "species": "sp288",
+  "latin": "Motacilla cinerea",
+  "app": {
+   "author": "Jiro Iguchi",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/607642010",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp250-male-rest.webp",
+  "species": "sp250",
+  "latin": "Circus macrourus",
+  "app": {
+   "author": "Jan Ebr & Ivana Ebrová",
+   "license": "CC BY 4.0",
+   "sex": "male",
+   "age": null,
+   "flight": false,
+   "label": "Mannetje in rust"
+  },
+  "source": "https://www.inaturalist.org/photos/506883636",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp005-adult_m.webp",
+  "species": "sp005",
+  "latin": "Buteo buteo",
+  "app": {
+   "author": "Roy Lowry",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/309645414",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp082-juv.webp",
+  "species": "sp082",
+  "latin": "Egretta garzetta",
+  "app": {
+   "author": "Paulo Martins",
+   "license": "CC BY-SA 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/92502660",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp091-eclipse.webp",
+  "species": "sp091",
+  "latin": "Anas crecca",
+  "app": {
+   "author": "Roy Lowry",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/76374524",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp206-winter.webp",
+  "species": "sp206",
+  "latin": "Charadrius alexandrinus",
+  "app": {
+   "author": "Paulo Caseirito",
+   "license": "CC0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/258130184",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp156-winter.webp",
+  "species": "sp156",
+  "latin": "Tringa ochropus",
+  "app": {
+   "author": "Paulo Caseirito",
+   "license": "CC0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/604589887",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp155-winter.webp",
+  "species": "sp155",
+  "latin": "Actitis hypoleucos",
+  "app": {
+   "author": "rashidchan",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/617218276",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ {
+  "image": "/assets/species/plumage/sp217-winter.webp",
+  "species": "sp217",
+  "latin": "Tringa stagnatilis",
+  "app": {
+   "author": "Marian Read",
+   "license": "CC0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/246809118",
+  "error": "HTTPError: HTTP Error 403: Forbidden"
+ }
+]
