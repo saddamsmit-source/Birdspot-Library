@@ -1,0 +1,607 @@
+[
+ {
+  "image": "/assets/species/sp248.webp",
+  "species": "sp248",
+  "latin": "Pernis apivorus",
+  "app": {
+   "author": "Gianluca Congi🪶🦆🌲",
+   "license": "CC BY-SA 4.0",
+   "sex": "male",
+   "age": null,
+   "flight": true,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/204335214",
+  "src": {
+   "title": "iNaturalist 120788543",
+   "observation": "https://www.inaturalist.org/observations/120788543",
+   "author": "(c) Gianluca Congi🪶🦆🌲, some rights reserved (CC BY-SA)",
+   "license": "CC BY SA",
+   "taxon": "Pernis apivorus",
+   "taxonCommon": "European Honey-buzzard",
+   "qualityGrade": "research",
+   "annotations": [
+    "Life Stage: Adult",
+    "Sex: Male",
+    "Alive or Dead: Alive",
+    "Evidence of Presence: Organism"
+   ],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/204335214/large.jpeg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Pernis apivorus",
+  "sourceSex": [
+   "male"
+  ],
+  "sourceAge": [
+   "adult"
+  ],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2436,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp248.jpg"
+ },
+ {
+  "image": "/assets/species/sp159.webp",
+  "species": "sp159",
+  "latin": "Tringa glareola",
+  "app": {
+   "author": "Jan Ebr & Ivana Ebrová",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/121189166",
+  "src": {
+   "title": "iNaturalist 74171586",
+   "observation": "https://www.inaturalist.org/observations/74171586",
+   "author": "(c) Jan Ebr & Ivana Ebrová, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Tringa glareola",
+   "taxonCommon": "Wood Sandpiper",
+   "qualityGrade": "research",
+   "annotations": [],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/121189166/large.jpeg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Tringa glareola",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2600,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp159.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp007-male-flight.webp",
+  "species": "sp007",
+  "latin": "Accipiter gentilis",
+  "app": {
+   "author": "Вячеслав Юсупов",
+   "license": "CC BY 4.0",
+   "sex": "male",
+   "age": null,
+   "flight": true,
+   "label": "Mannetje in vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/29451692",
+  "src": {
+   "title": "iNaturalist 19176694",
+   "observation": "https://www.inaturalist.org/observations/19176694",
+   "author": "(c) Вячеслав Юсупов, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Astur gentilis",
+   "taxonCommon": "Eurasian Goshawk",
+   "qualityGrade": "research",
+   "annotations": [
+    "Sex: Male"
+   ],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/29451692/large.jpg"
+  },
+  "speciesInSource": false,
+  "sourceTaxon": "Astur gentilis",
+  "sourceSex": [
+   "male"
+  ],
+  "sourceAge": [],
+  "authorMatch": false,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 714,
+   "mirror": false,
+   "scale": 0.489,
+   "areaOfSource": 0.262
+  },
+  "sameShot": true,
+  "issues": [
+   "soort niet in bron",
+   "maker wijkt af",
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp007-male-flight.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp106-flight.webp",
+  "species": "sp106",
+  "latin": "Perdix perdix",
+  "app": {
+   "author": "Safina Rezeda",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/77252585",
+  "src": {
+   "title": "iNaturalist 48680332",
+   "observation": "https://www.inaturalist.org/observations/48680332",
+   "author": "(c) Safina Rezeda, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Perdix perdix",
+   "taxonCommon": "Gray Partridge",
+   "qualityGrade": "research",
+   "annotations": [],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/77252585/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Perdix perdix",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 452,
+   "mirror": false,
+   "scale": 0.947,
+   "areaOfSource": 0.182
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp106-flight.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp178-flight.webp",
+  "species": "sp178",
+  "latin": "Phoenicurus phoenicurus",
+  "app": {
+   "author": "Paolo Zucca",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/50225292",
+  "src": {
+   "title": "iNaturalist 32047784",
+   "observation": "https://www.inaturalist.org/observations/32047784",
+   "author": "(c) Paolo Zucca, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Phoenicurus phoenicurus",
+   "taxonCommon": "Common Redstart",
+   "qualityGrade": "research",
+   "annotations": [],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/50225292/large.png"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Phoenicurus phoenicurus",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 670,
+   "mirror": false,
+   "scale": 0.778,
+   "areaOfSource": 0.545
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp178-flight.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp005-male-flight.webp",
+  "species": "sp005",
+  "latin": "Buteo buteo",
+  "app": {
+   "author": "Simone Bocca",
+   "license": "CC BY-SA 4.0",
+   "sex": "male",
+   "age": null,
+   "flight": true,
+   "label": "Mannetje in vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/112563579",
+  "src": {
+   "title": "iNaturalist 69384883",
+   "observation": "https://www.inaturalist.org/observations/69384883",
+   "author": "(c) Simone Bocca, some rights reserved (CC BY-SA)",
+   "license": "CC BY SA",
+   "taxon": "Buteo buteo",
+   "taxonCommon": "Common Buzzard",
+   "qualityGrade": "research",
+   "annotations": [
+    "Life Stage: Adult",
+    "Sex: Male",
+    "Alive or Dead: Alive"
+   ],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/112563579/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Buteo buteo",
+  "sourceSex": [
+   "male"
+  ],
+  "sourceAge": [
+   "adult"
+  ],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 558,
+   "mirror": false,
+   "scale": 0.74,
+   "areaOfSource": 0.475
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp005-male-flight.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp253-male-flight.webp",
+  "species": "sp253",
+  "latin": "Buteo lagopus",
+  "app": {
+   "author": "psweet",
+   "license": "CC BY-SA 4.0",
+   "sex": "male",
+   "age": null,
+   "flight": true,
+   "label": "Mannetje in vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/30000101",
+  "src": {
+   "title": "iNaturalist 19496287",
+   "observation": "https://www.inaturalist.org/observations/19496287",
+   "author": "(c) psweet, some rights reserved (CC BY-SA)",
+   "license": "CC BY SA",
+   "taxon": "Buteo lagopus",
+   "taxonCommon": "Rough-legged Hawk",
+   "qualityGrade": "research",
+   "annotations": [
+    "Sex: Male"
+   ],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/30000101/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Buteo lagopus",
+  "sourceSex": [
+   "male"
+  ],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 1639,
+   "mirror": false,
+   "scale": 0.808,
+   "areaOfSource": 0.446
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp253-male-flight.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp248-adult_f.webp",
+  "species": "sp248",
+  "latin": "Pernis apivorus",
+  "app": {
+   "author": "Donald Davesne",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/678848182",
+  "src": {
+   "title": "iNaturalist 371545998",
+   "observation": "https://www.inaturalist.org/observations/371545998",
+   "author": "(c) Donald Davesne, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Pernis apivorus",
+   "taxonCommon": "European Honey-buzzard",
+   "qualityGrade": "research",
+   "annotations": [
+    "Life Stage: Adult",
+    "Sex: Female"
+   ],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/678848182/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Pernis apivorus",
+  "sourceSex": [
+   "female"
+  ],
+  "sourceAge": [
+   "adult"
+  ],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2476,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp248-adult_f.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp083-juv.webp",
+  "species": "sp083",
+  "latin": "Ardea alba",
+  "app": {
+   "author": "Annette Herz",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/388019872",
+  "src": {
+   "title": "iNaturalist 219231388",
+   "observation": "https://www.inaturalist.org/observations/219231388",
+   "author": "(c) Annette Herz, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Ardea alba",
+   "taxonCommon": "Great Egret",
+   "qualityGrade": "research",
+   "annotations": [
+    "Life Stage: Juvenile",
+    "Alive or Dead: Alive",
+    "Evidence of Presence: Organism",
+    "Evidence of Presence: Construction"
+   ],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/388019872/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Ardea alba",
+  "sourceSex": [],
+  "sourceAge": [
+   "juvenile"
+  ],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2771,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp083-juv.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp146-juv.webp",
+  "species": "sp146",
+  "latin": "Charadrius hiaticula",
+  "app": {
+   "author": "Stephen M.",
+   "license": "CC BY-SA 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/733881501",
+  "src": {
+   "title": "iNaturalist 399972778",
+   "observation": "https://www.inaturalist.org/observations/399972778",
+   "author": "(c) Stephen M., some rights reserved (CC BY-SA)",
+   "license": "CC BY SA",
+   "taxon": "Charadrius hiaticula",
+   "taxonCommon": "Common Ringed Plover",
+   "qualityGrade": "research",
+   "annotations": [
+    "Life Stage: Juvenile",
+    "Alive or Dead: Alive"
+   ],
+   "description": "Three.",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/733881501/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Charadrius hiaticula",
+  "sourceSex": [],
+  "sourceAge": [
+   "juvenile"
+  ],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2629,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp146-juv.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp144-winter.webp",
+  "species": "sp144",
+  "latin": "Pluvialis squatarola",
+  "app": {
+   "author": "Shane Austin",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/602569884",
+  "src": {
+   "title": "iNaturalist 332079128",
+   "observation": "https://www.inaturalist.org/observations/332079128",
+   "author": "(c) Shane Austin, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Pluvialis squatarola",
+   "taxonCommon": "Black-bellied Plover",
+   "qualityGrade": "research",
+   "annotations": [],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/602569884/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Pluvialis squatarola",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2486,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp144-winter.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp159-winter.webp",
+  "species": "sp159",
+  "latin": "Tringa glareola",
+  "app": {
+   "author": "Afsar Nayakkan",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/365421308",
+  "src": {
+   "title": "iNaturalist 206638733",
+   "observation": "https://www.inaturalist.org/observations/206638733",
+   "author": "(c) Afsar Nayakkan, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Tringa glareola",
+   "taxonCommon": "Wood Sandpiper",
+   "qualityGrade": "research",
+   "annotations": [],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/365421308/large.jpeg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Tringa glareola",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2621,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp159-winter.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp157-winter.webp",
+  "species": "sp157",
+  "latin": "Tringa erythropus",
+  "app": {
+   "author": "Cameron Findlay",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/603401014",
+  "src": {
+   "title": "iNaturalist 332483167",
+   "observation": "https://www.inaturalist.org/observations/332483167",
+   "author": "(c) Cameron Findlay, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Tringa erythropus",
+   "taxonCommon": "Spotted Redshank",
+   "qualityGrade": "research",
+   "annotations": [],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/603401014/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Tringa erythropus",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2609,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp157-winter.jpg"
+ }
+]
