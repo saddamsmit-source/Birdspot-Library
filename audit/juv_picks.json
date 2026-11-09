@@ -1,0 +1,20 @@
+[
+  {
+    "species": "sp078", "target": "/assets/species/plumage/sp078-juv.webp",
+    "title": "File:Eurasian coot 2025 06 18.jpg", "sha1": "f5522453133053691b4b821a106fe80c0bde1e10",
+    "width": 6437, "height": 4291,
+    "author": "Alexis Lours", "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Eurasian_coot_2025_06_18.jpg",
+    "nl": "Meerkoet", "latin": "Fulica atra"
+  },
+  {
+    "species": "sp128", "target": "/assets/species/plumage/sp128-juv-grown.webp",
+    "title": "File:Juvenile common shelduck (54206317564).jpg", "sha1": "f40b827a4b71e097efe2bb807a4f517a63ef4e89",
+    "width": 5100, "height": 3400,
+    "author": "Andrey Gulivanov", "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Juvenile_common_shelduck_(54206317564).jpg",
+    "nl": "Bergeend", "latin": "Tadorna tadorna"
+  }
+]
