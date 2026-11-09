@@ -50,3 +50,9 @@ De nieuwe ontwikkelhulp `node tools/species/guide_coverage.mjs --open-photo-role
 De hierboven beschreven stand is het **startpunt** van PR #112, niet de actuele eindstand van de nieuwe opvolgbranch. In de opvolgende ronde zijn bestaande GitHub-WebP's van `sp018` Zwarte Specht en `sp019` Groene Specht op sexeigen veldkenmerken en exacte bron gecontroleerd. Beide foto's zijn nu in de brondata als mannetje gelabeld; voor Groene Specht is de drieledige fotogroep daarmee compleet. Het juveniele beeld van Zwarte Specht en Kleine Bonte Specht blijft open.
 
 Geen nieuwe fotobestanden, geen Vercel-deployments, geen merge. Test GitHub Actions op de HEAD van de opvolgende PR en hervat daarna de resterende open rollen; de lokale foto-queue blijft leidend. Het Vercel Hobby-/Git-afkoppelvoorbehoud hierboven blijft ongewijzigd.
+
+## QA-correctie bij de dekkingscijfers (9 november 2026)
+
+Op de opvolgende GitHub-commit `3c984e47` zijn alle negen relevante workflows succesvol afgerond. De **feitelijke coverage-stand is nog steeds 25/134 volledig, 109/134 deels open**. De Groene Specht telde vóór de correctie al als volledig door een bestaande `reuseGuidePhoto`-koppeling die een nog ongesekste hoofdfoto in de mannetjesrubriek plaatste. In deze ronde is die bestaande foto pas écht als mannetje bevestigd op bron en beeld; er is geen nieuwe foto toegevoegd. Een eerdere verwachting van 26/134 was daarom onjuist en mag niet als behaalde voortgang worden gemeld.
+
+**Nog open:** de brede audit van alle hergebruikte hoofdfoto's zonder bevestigd geslachtslabel, plus nieuwe lokaal verifieerbare juvenielbeelden (waaronder Kleine Bonte Specht en Zwarte Specht). De daadwerkelijk geïnstalleerde PWA en fysieke Android/iOS-regressie blijven NOT TESTED.
