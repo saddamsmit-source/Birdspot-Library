@@ -1,0 +1,31 @@
+name: Bronaudit gidsfoto's (eenmalig)
+on:
+  push:
+    branches: [chore/source-audit]
+    paths: ["audit/manifest.json", "audit/source_audit.py", "audit/run.txt", ".github/workflows/source-audit.yml"]
+permissions:
+  contents: write
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: 46e43370ea5c34bc9e24ea94d6be4e72f7d73b70
+          path: app
+          sparse-checkout: assets/species
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install opencv-python-headless==4.10.0.84 pillow==10.4.0 numpy==1.26.4
+      - name: Bronaudit
+        run: python audit/source_audit.py app "$(cat audit/run.txt 2>/dev/null || true)"
+      - name: Resultaat terugschrijven
+        run: |
+          rm -rf audit/result && mv audit/out audit/result
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add audit/result
+          git commit -m "bronaudit: resultaat $(date -u +%FT%TZ)" || exit 0
+          git push
