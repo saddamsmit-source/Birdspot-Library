@@ -29,20 +29,23 @@ def main():
      row=p.locator(f'.species-row[data-id="{sid}"]');row.wait_for()
      if sid in photos:
       thumb=row.locator('.species-guide-thumb img')
-      assert thumb.get_attribute('src')==photo['image']
+      # src is sinds de subpad-fix een opgeloste absolute URL (assetUrl.js), geen
+      # ruw root-relatief pad meer — vergelijk daarom op het einde van de waarde.
+      assert thumb.get_attribute('src').endswith(photo['image'])
       assert thumb.evaluate('(i)=>getComputedStyle(i).objectFit')=='contain'
      row.click()
      hero=p.locator(f'#detailThumb-{sid} img')
      p.wait_for_function('(id)=>{const i=document.querySelector("#detailThumb-"+id+" img");return i&&i.complete&&i.naturalWidth>0}',arg=sid)
-     assert hero.get_attribute('src')==hero_paths.get(sid, photo['image']), (sid, hero.get_attribute('src'), photo['image'])
+     assert hero.get_attribute('src').endswith(hero_paths.get(sid, photo['image'])), (sid, hero.get_attribute('src'), photo['image'])
      assert hero.evaluate('(i)=>getComputedStyle(i).objectFit')=='contain'
      credit=p.locator(f'#detailThumb-{sid} .photo-info')
      assert credit.locator('summary').is_visible()
      assert not credit.locator('.photo-info__panel').is_visible()
      if sid == 'sp045':
       credit.locator('summary').click()
-      assert credit.get_by_role('link', name='Open fotobron').get_attribute('href') == photo['source']
-      assert photo['author'] in credit.inner_text()
+      shown=by_path.get(hero_paths.get(sid), photo)  # sinds de bronaudit van 9-11 heeft sp045 een aparte hoofdfoto
+      assert credit.get_by_role('link', name='Open fotobron').get_attribute('href') == shown['source']
+      assert shown['author'] in credit.inner_text()
       p.keyboard.press('Escape')
       assert not credit.locator('.photo-info__panel').is_visible()
      if sid == 'sp173':
