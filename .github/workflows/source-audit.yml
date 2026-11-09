@@ -2,13 +2,16 @@ name: Bronaudit gidsfoto's (eenmalig)
 on:
   push:
     branches: [chore/source-audit]
-    paths: ["audit/manifest.json", "audit/source_audit.py", "audit/run.txt", ".github/workflows/source-audit.yml"]
+    paths: ["audit/manifest.json", "audit/source_audit.py", "audit/run.txt"]
 permissions:
   contents: write
 jobs:
   audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 50
+    strategy:
+      fail-fast: false
+      matrix: { shard: [0, 1, 2, 3, 4, 5] }
     steps:
       - uses: actions/checkout@v4
       - uses: actions/checkout@v4
@@ -19,13 +22,14 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install opencv-python-headless==4.10.0.84 pillow==10.4.0 numpy==1.26.4
-      - name: Bronaudit
-        run: python audit/source_audit.py app "$(cat audit/run.txt 2>/dev/null || true)"
+      - name: Bronaudit deel ${{ matrix.shard }}
+        run: python audit/source_audit.py app "$(cat audit/run.txt 2>/dev/null || true)" "${{ matrix.shard }}/6"
       - name: Resultaat terugschrijven
+        if: always()
         run: |
-          rm -rf audit/result && mv audit/out audit/result
+          mkdir -p audit/result/pairs && cp -r audit/out/* audit/result/ 2>/dev/null || true
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
           git add audit/result
-          git commit -m "bronaudit: resultaat $(date -u +%FT%TZ)" || exit 0
-          git push
+          git commit -m "bronaudit deel ${{ matrix.shard }}" || exit 0
+          for i in 1 2 3 4 5 6; do git pull --rebase -q && git push && break; sleep $((RANDOM % 10 + 3)); done

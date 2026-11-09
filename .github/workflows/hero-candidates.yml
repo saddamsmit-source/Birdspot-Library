@@ -1,0 +1,26 @@
+name: Kandidaten aparte hoofdfoto (eenmalig)
+on:
+  push:
+    branches: [chore/source-audit]
+    paths: ["audit/hero_species.json", "audit/hero_candidates.py", ".github/workflows/hero-candidates.yml"]
+permissions:
+  contents: write
+concurrency: { group: source-audit-branch, cancel-in-progress: false }
+jobs:
+  heroes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install pillow==10.4.0
+      - run: python audit/hero_candidates.py
+      - name: Resultaat terugschrijven
+        run: |
+          rm -rf audit/heroes && mv audit/out_heroes audit/heroes
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add audit/heroes
+          git commit -m "kandidaten hoofdfoto $(date -u +%FT%TZ)" || exit 0
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done

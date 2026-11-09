@@ -54,7 +54,7 @@ def commons(items):
     ts = list(set(titles.values()))
     for i in range(0, len(ts), 40):
         q = urllib.parse.urlencode({"action": "query", "format": "json", "prop": "imageinfo|categories", "cllimit": "max",
-                                    "iiprop": "url|size|sha1|extmetadata", "iiurlwidth": "1600", "titles": "|".join(ts[i:i + 40])})
+                                    "iiprop": "url|size|sha1|extmetadata", "iiurlwidth": "1280", "titles": "|".join(ts[i:i + 40])})
         data = get("https://commons.wikimedia.org/w/api.php?" + q)
         norm = {n["to"]: n["from"] for n in data["query"].get("normalized", [])}
         for p in data["query"]["pages"].values():
@@ -142,6 +142,9 @@ def main():
     items = json.loads((HERE / "manifest.json").read_text())
     only = set(sys.argv[2].split(",")) if len(sys.argv) > 2 and sys.argv[2] else None
     if only: items = [i for i in items if i["species"] in only or i["image"] in only]
+    shard = sys.argv[3] if len(sys.argv) > 3 else ""
+    if shard:
+        k, n = map(int, shard.split("/")); items = items[k::n]
     cm = commons([i for i in items if "commons.wikimedia.org" in i["source"]])
     results = []
     for n, it in enumerate(items, 1):
@@ -178,7 +181,9 @@ def main():
             r["error"] = f"{type(e).__name__}: {e}"[:300]
         results.append(r)
         print(n, it["image"], r.get("issues", r.get("error")), flush=True)
-    (OUT / "results.json").write_text(json.dumps(results, indent=1, ensure_ascii=False))
+        if n % 10 == 0:
+            (OUT / f"results{('-' + shard.replace('/', 'of')) if shard else ''}.json").write_text(json.dumps(results, indent=1, ensure_ascii=False))
+    (OUT / f"results{('-' + shard.replace('/', 'of')) if shard else ''}.json").write_text(json.dumps(results, indent=1, ensure_ascii=False))
     print("klaar", len(results), "fouten", sum("error" in r for r in results), "met afwijking", sum(bool(r.get("issues")) for r in results))
 
 if __name__ == "__main__":
