@@ -1,0 +1,613 @@
+[
+ {
+  "image": "/assets/species/sp147.webp",
+  "species": "sp147",
+  "latin": "Charadrius dubius",
+  "app": {
+   "author": "Donsky",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/680750765",
+  "src": {
+   "title": "iNaturalist 372539444",
+   "observation": "https://www.inaturalist.org/observations/372539444",
+   "author": "(c) Donsky, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Thinornis dubius",
+   "taxonCommon": "Little Ringed Plover",
+   "qualityGrade": "research",
+   "annotations": [
+    "Life Stage: Adult",
+    "Alive or Dead: Alive",
+    "Evidence of Presence: Organism"
+   ],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/680750765/large.jpg"
+  },
+  "speciesInSource": false,
+  "sourceTaxon": "Thinornis dubius",
+  "sourceSex": [],
+  "sourceAge": [
+   "adult"
+  ],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2800,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "soort niet in bron",
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp147.jpg"
+ },
+ {
+  "image": "/assets/species/sp155.webp",
+  "species": "sp155",
+  "latin": "Actitis hypoleucos",
+  "app": {
+   "author": "Константин Селивёрстов",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/56953995",
+  "src": {
+   "title": "iNaturalist 36060892",
+   "observation": "https://www.inaturalist.org/observations/36060892",
+   "author": "(c) Константин Селивёрстов, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Actitis hypoleucos",
+   "taxonCommon": "Common Sandpiper",
+   "qualityGrade": "research",
+   "annotations": [],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/56953995/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Actitis hypoleucos",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": false,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2456,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "maker wijkt af",
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp155.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp039-flight.webp",
+  "species": "sp039",
+  "latin": "Linaria cannabina",
+  "app": {
+   "author": "Codrin Bucur",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/617561306",
+  "src": {
+   "title": "iNaturalist 339474823",
+   "observation": "https://www.inaturalist.org/observations/339474823",
+   "author": "(c) Codrin Bucur, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Linaria cannabina",
+   "taxonCommon": "Eurasian Linnet",
+   "qualityGrade": "research",
+   "annotations": [
+    "None: None",
+    "None: None",
+    "None: None"
+   ],
+   "description": "Eurasian Linnets flying at Holi Gass, Reinach - Feb 2026",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/617561306/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Linaria cannabina",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 150,
+   "mirror": false,
+   "scale": 0.51,
+   "areaOfSource": 0.208
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp039-flight.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp108-flight.webp",
+  "species": "sp108",
+  "latin": "Acrocephalus arundinaceus",
+  "app": {
+   "author": "Ángel Marcos Luengo Bello",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/747529794",
+  "src": {
+   "title": "iNaturalist 406841487",
+   "observation": "https://www.inaturalist.org/observations/406841487",
+   "author": "(c) ANGEL MARCOS LUENGO BELLO, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Acrocephalus arundinaceus",
+   "taxonCommon": "Great Reed Warbler",
+   "qualityGrade": "research",
+   "annotations": [],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/747529794/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Acrocephalus arundinaceus",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 923,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp108-flight.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp177-flight.webp",
+  "species": "sp177",
+  "latin": "Ficedula hypoleuca",
+  "app": {
+   "author": "carabus123",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": "In vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/735032492",
+  "src": {
+   "title": "iNaturalist 400536338",
+   "observation": "https://www.inaturalist.org/observations/400536338",
+   "author": "(c) carabus123, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Ficedula hypoleuca",
+   "taxonCommon": "European Pied Flycatcher",
+   "qualityGrade": "research",
+   "annotations": [],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/735032492/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Ficedula hypoleuca",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 764,
+   "mirror": false,
+   "scale": 0.615,
+   "areaOfSource": 0.38
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp177-flight.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp005-female-flight.webp",
+  "species": "sp005",
+  "latin": "Buteo buteo",
+  "app": {
+   "author": "Simone Bocca",
+   "license": "CC BY-SA 4.0",
+   "sex": "female",
+   "age": null,
+   "flight": true,
+   "label": "Vrouwtje in vlucht"
+  },
+  "source": "https://www.inaturalist.org/photos/112563573",
+  "src": {
+   "title": "iNaturalist 69384882",
+   "observation": "https://www.inaturalist.org/observations/69384882",
+   "author": "(c) Simone Bocca, some rights reserved (CC BY-SA)",
+   "license": "CC BY SA",
+   "taxon": "Buteo buteo",
+   "taxonCommon": "Common Buzzard",
+   "qualityGrade": "research",
+   "annotations": [
+    "Life Stage: Adult",
+    "Sex: Female",
+    "Alive or Dead: Alive"
+   ],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/112563573/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Buteo buteo",
+  "sourceSex": [
+   "female"
+  ],
+  "sourceAge": [
+   "adult"
+  ],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 1075,
+   "mirror": false,
+   "scale": 0.71,
+   "areaOfSource": 0.519
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp005-female-flight.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp173-juv.webp",
+  "species": "sp173",
+  "latin": "Circus aeruginosus",
+  "app": {
+   "author": "Codrin Bucur",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": true,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/229518401",
+  "src": {
+   "title": "iNaturalist 134634395",
+   "observation": "https://www.inaturalist.org/observations/134634395",
+   "author": "(c) Codrin Bucur, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Circus aeruginosus",
+   "taxonCommon": "Western Marsh Harrier",
+   "qualityGrade": "research",
+   "annotations": [
+    "Life Stage: Juvenile",
+    "Alive or Dead: Alive",
+    "Evidence of Presence: Organism"
+   ],
+   "description": "Eurasian Marsh Harrier flying at Klingnauer Stausee - Sep 2022",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/229518401/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Circus aeruginosus",
+  "sourceSex": [],
+  "sourceAge": [
+   "juvenile"
+  ],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2827,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp173-juv.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp253-juv.webp",
+  "species": "sp253",
+  "latin": "Buteo lagopus",
+  "app": {
+   "author": "Radek Ošlejšek",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/113794458",
+  "src": {
+   "title": "iNaturalist 70044579",
+   "observation": "https://www.inaturalist.org/observations/70044579",
+   "author": "(c) Radek Ošlejšek, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Buteo lagopus",
+   "taxonCommon": "Rough-legged Hawk",
+   "qualityGrade": "research",
+   "annotations": [
+    "Life Stage: Juvenile"
+   ],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/113794458/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Buteo lagopus",
+  "sourceSex": [],
+  "sourceAge": [
+   "juvenile"
+  ],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2207,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp253-juv.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp245-winter.webp",
+  "species": "sp245",
+  "latin": "Bubulcus ibis",
+  "app": {
+   "author": "Andrea Mologni",
+   "license": "CC BY-SA 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/116157768",
+  "src": {
+   "title": "iNaturalist 71350962",
+   "observation": "https://www.inaturalist.org/observations/71350962",
+   "author": "(c) Andrea Mologni, some rights reserved (CC BY-SA)",
+   "license": "CC BY SA",
+   "taxon": "Ardea ibis",
+   "taxonCommon": "Western Cattle-Egret",
+   "qualityGrade": "research",
+   "annotations": [
+    "Life Stage: Adult",
+    "Alive or Dead: Alive"
+   ],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/116157768/large.jpeg"
+  },
+  "speciesInSource": false,
+  "sourceTaxon": "Ardea ibis",
+  "sourceSex": [],
+  "sourceAge": [
+   "adult"
+  ],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2632,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "soort niet in bron",
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp245-winter.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp147-winter.webp",
+  "species": "sp147",
+  "latin": "Charadrius dubius",
+  "app": {
+   "author": "Karim Haddad",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/94775001",
+  "src": {
+   "title": "iNaturalist 59320005",
+   "observation": "https://www.inaturalist.org/observations/59320005",
+   "author": "(c) Karim Haddad, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Thinornis dubius",
+   "taxonCommon": "Little Ringed Plover",
+   "qualityGrade": "research",
+   "annotations": [],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/94775001/large.jpg"
+  },
+  "speciesInSource": false,
+  "sourceTaxon": "Thinornis dubius",
+  "sourceSex": [],
+  "sourceAge": [],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2753,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "soort niet in bron",
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp147-winter.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp144-juv.webp",
+  "species": "sp144",
+  "latin": "Pluvialis squatarola",
+  "app": {
+   "author": "Scott Harris",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/327282937",
+  "src": {
+   "title": "iNaturalist 187179542",
+   "observation": "https://www.inaturalist.org/observations/187179542",
+   "author": "(c) Scott Harris, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Pluvialis squatarola",
+   "taxonCommon": "Black-bellied Plover",
+   "qualityGrade": "research",
+   "annotations": [
+    "Life Stage: Juvenile",
+    "Sex: Cannot Be Determined",
+    "Alive or Dead: Alive",
+    "Evidence of Presence: Organism"
+   ],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/327282937/large.jpeg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Pluvialis squatarola",
+  "sourceSex": [],
+  "sourceAge": [
+   "juvenile"
+  ],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2690,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp144-juv.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp159-juv.webp",
+  "species": "sp159",
+  "latin": "Tringa glareola",
+  "app": {
+   "author": "Ian Ballam",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/555542627",
+  "src": {
+   "title": "iNaturalist 307959225",
+   "observation": "https://www.inaturalist.org/observations/307959225",
+   "author": "(c) Ian Ballam, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Tringa glareola",
+   "taxonCommon": "Wood Sandpiper",
+   "qualityGrade": "research",
+   "annotations": [
+    "Life Stage: Juvenile"
+   ],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/555542627/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Tringa glareola",
+  "sourceSex": [],
+  "sourceAge": [
+   "juvenile"
+  ],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2673,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp159-juv.jpg"
+ },
+ {
+  "image": "/assets/species/plumage/sp157-juv.webp",
+  "species": "sp157",
+  "latin": "Tringa erythropus",
+  "app": {
+   "author": "Phil James",
+   "license": "CC BY 4.0",
+   "sex": null,
+   "age": null,
+   "flight": null,
+   "label": null
+  },
+  "source": "https://www.inaturalist.org/photos/722959312",
+  "src": {
+   "title": "iNaturalist 394358144",
+   "observation": "https://www.inaturalist.org/observations/394358144",
+   "author": "(c) Phil James, some rights reserved (CC BY)",
+   "license": "CC BY",
+   "taxon": "Tringa erythropus",
+   "taxonCommon": "Spotted Redshank",
+   "qualityGrade": "research",
+   "annotations": [
+    "Life Stage: Juvenile"
+   ],
+   "description": "",
+   "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/722959312/large.jpg"
+  },
+  "speciesInSource": true,
+  "sourceTaxon": "Tringa erythropus",
+  "sourceSex": [],
+  "sourceAge": [
+   "juvenile"
+  ],
+  "authorMatch": true,
+  "licenseMatch": false,
+  "match": {
+   "inliers": 2269,
+   "mirror": false,
+   "scale": 1.0,
+   "areaOfSource": 1.0
+  },
+  "sameShot": true,
+  "issues": [
+   "licentie wijkt af"
+  ],
+  "pair": "pairs/sp157-juv.jpg"
+ }
+]
