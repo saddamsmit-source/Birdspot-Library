@@ -23,7 +23,7 @@ import { SPECIES } from '../../data/species.js';
 import { loadPlaces } from '../../data/places.js';
 import { loadSettings, saveSetting, BACKUP_REMINDER_OPTIONS } from '../../data/settings.js';
 import { LAYERS, savedLayer, saveLayer } from '../map/centerPin.js';
-import { profileLists } from './stats.js';
+import { profileLists, groupSpeciesByFamily } from './stats.js';
 import { downloadCsv } from './exportCsv.js';
 
 const SPECIES_BY_ID = new Map(SPECIES.map(s => [s.id, s]));
@@ -245,7 +245,7 @@ function attachEvents(el, sightings = [], places = [], lists = null) {
   all?.addEventListener('toggle', () => {
     if (!all.open || all.dataset.built) return;
     all.dataset.built = '1';
-    all.querySelector('.profile-list').innerHTML = speciesRows(lists?.list || []);
+    all.querySelector('.profile-list').innerHTML = speciesRowsGrouped(lists?.list || [], SPECIES_BY_ID);
   });
 }
 
@@ -425,6 +425,14 @@ function speciesRows(rows) {
       <span class="profile-row__name">${esc(r.name)}</span>
       <span class="profile-row__meta">${r.count}× · sinds ${esc(dayLabel(r.first))}</span>
     </button></li>`).join('');
+}
+
+// "Alle soorten": zelfde rijen/telling/klikgedrag als speciesRows(), alleen
+// gegroepeerd op soortgroep (familie) A-Z met de naam A-Z binnen de groep.
+function speciesRowsGrouped(list, speciesById) {
+  return groupSpeciesByFamily(list, speciesById).map(({ family, rows }) =>
+    `<li class="profile-group-label" role="presentation">${esc(family)}</li>${speciesRows(rows)}`
+  ).join('');
 }
 
 function renderLists(l) {

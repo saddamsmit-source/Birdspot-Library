@@ -82,6 +82,29 @@ export function topPlaces(sightings, places = [], limit = 5) {
     .slice(0, limit);
 }
 
+/**
+ * "Alle soorten" gegroepeerd op soortgroep/familie, alfabetisch A–Z; binnen
+ * elke groep de Nederlandse naam alfabetisch A–Z. Zuivere herordening voor
+ * de volledige soortenlijst alleen — wijzigt de rijen uit `list` niet (zelfde
+ * speciesId/count/first/last), dus newSpeciesInYear/yearLists/topPlaces, die
+ * hun eigen bestaande sorteerlogica (datum resp. aantal) gebruiken op diezelfde
+ * `list`, blijven volledig ongewijzigd.
+ */
+export function groupSpeciesByFamily(list, speciesById = new Map()) {
+  const groups = new Map();
+  for (const row of list || []) {
+    const family = speciesById.get(row.speciesId)?.family || 'Overig';
+    if (!groups.has(family)) groups.set(family, []);
+    groups.get(family).push(row);
+  }
+  return [...groups.entries()]
+    .sort((a, b) => a[0].localeCompare(b[0], 'nl'))
+    .map(([family, rows]) => ({
+      family,
+      rows: rows.slice().sort((a, b) => a.name.localeCompare(b.name, 'nl')),
+    }));
+}
+
 /** Alles voor het profiel in één keer. */
 export function profileLists(sightings, { places = [], speciesById = new Map(), now = new Date() } = {}) {
   const list = speciesList(sightings, speciesById);

@@ -94,6 +94,34 @@ def main():
             assert u["skipped"] == 2 and u["checked"] is True, u
             print("K7-01 OK — rekenregels")
 
+            # K7-09: "Alle soorten" groepeert op soortgroep (familie) A-Z, met de
+            # naam A-Z binnen elke groep — onafhankelijk van de datumvolgorde die
+            # `list` zelf houdt (newSpeciesInYear/yearLists/topPlaces blijven dus
+            # ongewijzigd, want die lezen `list` zelf, niet deze groepering).
+            g = p.evaluate("""async () => {
+                const m = await import('/src/features/profile/stats.js');
+                const list = [
+                    {speciesId:'sp045', name:'Merel', count:1, first:null, last:null},
+                    {speciesId:'sp999', name:'Zwarte Mees', count:1, first:null, last:null},
+                    {speciesId:'sp118', name:'Rietgors', count:1, first:null, last:null},
+                    {speciesId:'sp998', name:'Matkop', count:1, first:null, last:null},
+                    {speciesId:'sp997', name:'onbekend-geen-soortdata', count:1, first:null, last:null},
+                ];
+                const bySp = new Map([
+                    ['sp045', {family:'Lijsters'}], ['sp999', {family:'Mezen'}],
+                    ['sp118', {family:'Gorzen'}], ['sp998', {family:'Mezen'}],
+                ]);
+                return m.groupSpeciesByFamily(list, bySp)
+                    .map(g => [g.family, g.rows.map(r => r.name)]);
+            }""")
+            assert g == [
+                ["Gorzen", ["Rietgors"]],
+                ["Lijsters", ["Merel"]],
+                ["Mezen", ["Matkop", "Zwarte Mees"]],
+                ["Overig", ["onbekend-geen-soortdata"]],
+            ], g
+            print("K7-09 OK — groepering op soortgroep A-Z, naam A-Z binnen de groep")
+
             def open_profile():
                 p.locator('.nav-item[data-route="profile"]').click()
                 p.locator("#backupStatus").wait_for(timeout=8000)
@@ -116,13 +144,25 @@ def main():
             assert all_list.locator("li").count() == 0
             p.locator("#profileAllSpecies summary").click()
             all_list.locator("li").first.wait_for(timeout=3000)
-            assert all_list.locator("li").count() == 3
+            # Gegroepeerd op soortgroep (familie) A-Z: Merel=Lijsters, Rietgors=Gorzen,
+            # Roerdomp=Reigers → Gorzen, Lijsters, Reigers. Telling/datum/klikgedrag/
+            # speciesId ongewijzigd (zelfde cijfers als K7-01: sp118=2, sp045=2, sp243=1).
+            # .profile-group-label staat op text-transform:uppercase (CSS), dus
+            # inner_text() geeft de gerenderde (hoofdletter)tekst terug.
+            groups = all_list.locator(".profile-group-label").all_inner_texts()
+            assert groups == ["GORZEN", "LIJSTERS", "REIGERS"], groups
+            names = all_list.locator(".profile-row__name").all_inner_texts()
+            assert names == ["Rietgors", "Merel", "Roerdomp"], names
+            counts = all_list.locator(".profile-row__meta").all_inner_texts()
+            assert [c.split("×")[0] for c in counts] == ["2", "2", "1"], counts
+            assert all_list.locator("[data-open-species]").count() == 3
+            p.screenshot(path=str(SHOTS / "profile_k7_all_species_grouped_390.png"), full_page=True)
             all_list.locator('[data-open-species="sp045"]').click()
             p.locator(".sd-tabs").wait_for(timeout=8000)
             assert "Merel" in p.locator(".signature-species-detail-overlay").inner_text()
             p.locator(".signature-species-detail-close").click()
             p.locator(".signature-species-detail-overlay").wait_for(state="detached", timeout=5000)
-            print("K7-03 OK — soortenlijst lui opgebouwd; tik opent soort")
+            print("K7-03 OK — soortenlijst lui opgebouwd, gegroepeerd op soortgroep A-Z; tik opent soort")
 
             open_profile()
             p.locator('.profile-list--places [data-open-place="pl_hut"]').click()
