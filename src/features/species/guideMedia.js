@@ -4729,6 +4729,28 @@ export const GUIDE_POSES = Object.freeze({
       "width": 1400,
       "height": 1085,
       "image": "/assets/species/plumage/sp018-flight.webp"
+    },
+    {
+      "file": "Dryocopus martius 03.jpg",
+      "label": "Juveniel — kopdetail",
+      "nl": "Zwarte Specht",
+      "latin": "Dryocopus martius",
+      "age": "juvenile",
+      "flight": false,
+      "note": "Close-up van de kop van een jonge Zwarte Specht. Geschikt als detail voor het jeugdkleed; geen volledig vogelportret.",
+      "author": "Philippe Kurlapski",
+      "license": "CC BY 1.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/1.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Dryocopus_martius_03.jpg",
+      "alt": "Kopdetail van een jonge Zwarte Specht met lichte snavel, donkere oogpartij en rode kruin.",
+      "modifications": "Originele JPEG omgezet naar WebP, zonder uitsnede en zonder EXIF/GPS/XMP.",
+      "reviewed": "2026-11-09",
+      "verificationSource": "https://commons.wikimedia.org/wiki/File:Dryocopus_martius_03.jpg",
+      "visualCheck": "De originele Commons-beschrijving identificeert dit portret expliciet als juveniel (pic noir juvénile). Het beeld toont de kop met lichte snavel, donkere veren en rode kruin. Exacte sekse wordt niet geclaimd.",
+      "width": 1000,
+      "height": 550,
+      "image": "/assets/species/plumage/sp018-juv-review.webp",
+      "sourceSha1": "d0d3ff3ba4e7905e88b00a44dae51cc259bdedca"
     }
   ],
   "sp021": [
