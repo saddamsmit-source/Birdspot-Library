@@ -46,3 +46,7 @@ Een tweede kandidaat voor juveniele Zwarte Specht is [Dryocopus martius 03.jpg](
 ### Definitieve dekkingscontrole (GitHub Actions, 9 november 2026)
 
 De geautomatiseerde `node tools/species/guide_coverage.mjs --summary` rapporteert op `3c984e47` nog **25/134** soorten met alle drie de rubrieken; dus **109/134** blijven deels open. De Groene Specht werd vóór deze review al meegeteld door het bestaande `adult_m.reuseGuidePhoto`-pad. Deze ronde bevestigt de sekse van dat reeds getoonde beeld, maar voegt geen nieuwe lokale foto toe en wijzigt de teller terecht niet. De controles van de foto- en geluidsassets, mediaregister, viewer en de op deze branch beschikbare browserproeven zijn via GitHub CI geslaagd.
+
+## Status update groep 3 (9 november 2026)
+
+De **kopdetail-kandidaat van Philippe Kurlapski** is via een checksum-gecontroleerde eenmalige GitHub Action tot lokaal WebP verwerkt, inclusief bronvermelding en volledige verwijdering van camera- en GPS-metadata. De exacte afbeelding is na de GitHub-commit visueel nagekeken. Deze opname is een diagnostisch juveniel-kopportret; de eerdere kandidaatafbeelding van Bouke ten Cate met nest blijft **niet ingevoerd**. `sp017` juveniel blijft open; de overige groepsfoto's en alle bestaande soortdetails blijven intact. Nieuwe GitHub CI moet de dekking, galerij en offline-heropening aantonen.

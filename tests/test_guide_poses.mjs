@@ -57,8 +57,25 @@ assert.equal(GUIDE_PHOTOS.sp018.sex, 'male');
 assert.equal(GUIDE_PHOTOS.sp019.sex, 'male');
 assert.deepEqual(photosFor('sp018', 'adult_m'), ['/assets/showcase/sp018.webp']);
 assert.deepEqual(photosFor('sp019', 'adult_m'), ['/assets/species/sp019.webp']);
-assert.ok(photosFor('sp018', 'adult_f').length && !photosFor('sp018', 'juv').length,
-  'Juvenile Black Woodpecker stays open until a photograph is independently verified');
+assert.ok(photosFor('sp018', 'adult_f').length);
+assert.deepEqual(photosFor('sp018', 'juv'), ['/assets/species/plumage/sp018-juv-review.webp']);
+const juvenile = GUIDE_POSES.sp018.filter(photo => photo.age === 'juvenile');
+assert.equal(juvenile.length, 1, 'Juvenile Black Woodpecker must not be duplicated');
+assert.equal(juvenile[0].sex, undefined, 'Do not assign uncertain sex to juvenile');
+assert.equal(juvenile[0].author, 'Philippe Kurlapski');
+assert.equal(juvenile[0].license, 'CC BY 1.0');
+assert.equal(juvenile[0].sourceSha1, 'd0d3ff3ba4e7905e88b00a44dae51cc259bdedca');
+const juvenileWebp = readFileSync(new URL('../assets/species/plumage/sp018-juv-review.webp', import.meta.url));
+assert.equal(juvenileWebp.toString('ascii', 0, 4), 'RIFF');
+assert.equal(juvenileWebp.toString('ascii', 8, 12), 'WEBP');
+let chunkOffset = 12;
+while (chunkOffset + 8 <= juvenileWebp.length) {
+  const id = juvenileWebp.toString('ascii', chunkOffset, chunkOffset + 4);
+  const len = juvenileWebp.readUInt32LE(chunkOffset + 4);
+  assert.ok(!['EXIF', 'XMP ', 'ICCP'].includes(id), 'Metadata chunk must be stripped from the local WebP');
+  chunkOffset += 8 + len + (len & 1);
+}
+assert.equal(chunkOffset, juvenileWebp.length, 'WebP chunks must parse completely');
 assert.ok(photosFor('sp019', 'adult_f').length && photosFor('sp019', 'juv').length);
 for (const bird of SPECIES) {
   for (const group of guidePlumageGroups(bird)) {
