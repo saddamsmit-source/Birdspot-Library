@@ -1,0 +1,31 @@
+name: Birdspot Local Guide Photos QA
+on:
+  pull_request:
+    paths:
+      - 'src/features/species/**'
+      - 'assets/species/**'
+      - 'styles/signature-phase2.css'
+      - 'styles/species.css'
+      - 'tests/test_guide_poses.mjs'
+      - 'tests/test_guide_photo_verification.mjs'
+      - 'sw.js'
+      - 'tests/test_guide_photos.py'
+      - '.github/workflows/guide-photos-qa.yml'
+jobs:
+  guide-photos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r tests/requirements.txt
+      - run: python -m playwright install --with-deps chromium
+      - run: |
+          python tools/species/build.py
+          git diff --exit-code src/features/species/guidePhotos.js src/features/species/guideMedia.js
+          node tools/species/guide_coverage.mjs --summary
+          node tests/test_guide_poses.mjs
+          node tests/test_guide_photo_verification.mjs
+      - run: python tests/test_guide_photos.py

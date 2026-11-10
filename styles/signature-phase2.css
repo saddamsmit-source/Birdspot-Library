@@ -214,3 +214,16 @@
   .signature-species-hero::before {animation:none!important;}
   .signature-species-star,.signature-species-photo-tile img {transition:none!important;}
 }
+
+/* Curated local guide photos: preserve the entire image, including tail and feet. */
+.species-guide-thumb {background:#15382d;}
+.species-guide-thumb img.species-guide-photo {object-fit:contain;}
+.has-guide-photo .signature-species-detail-image {display:block;height:clamp(280px,54dvh,520px);background:#102b23;}
+.has-guide-photo .signature-species-detail-image img {display:block;min-width:0;min-height:0;max-height:100%;object-fit:contain;}
+.has-guide-photo .signature-species-detail-intro {margin:12px 16px 0;}
+
+/* Saved reading list sits outside the biological filters. */
+.species-saved {display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:14px 16px;background:var(--surface);border-bottom:1px solid var(--line);}
+.species-saved>span {font-size:12px;font-weight:700;color:var(--muted);}
+.species-saved .signature-species-favorites-filter {padding:0;border:0;}
+.species-observation-status {font-size:10px;color:var(--muted);max-width:78px;}

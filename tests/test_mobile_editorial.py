@@ -33,7 +33,25 @@ def main():
       p.locator('#featuredBirdName').wait_for(timeout=14000)
       assert p.locator("#featuredBirdName").inner_text().strip()
       assert p.locator("#featuredBirdLatin").inner_text().strip()
+      notes = p.locator(".field-featured-notes summary")
+      notes.click()
       assert "Herkenning:" in p.locator("#featuredBirdWhere").inner_text()
+      notes.click()
+      def check_home_spacing():
+        assert p.locator('#screen-home [data-signature-route="add"]').count() == 0
+        assert p.locator('#fab').is_visible()
+        assert p.evaluate("""() => {
+          const box = id => document.getElementById(id).getBoundingClientRect();
+          const header = document.querySelector('#screen-home .app-header').getBoundingClientRect();
+          return Math.abs(box('slideshow').top - header.bottom) <= 1 &&
+                 box('homeMoreFeatures').top - box('recentList').bottom >= 15;
+        }""")
+
+      p.locator('#recentList .empty-state').wait_for()
+      for width in (320, 390, 925, 1440):
+        p.set_viewport_size({"width":width,"height":844})
+        check_home_spacing()
+      p.set_viewport_size({"width":390,"height":844})
       assert p.locator("#featuredBirdTheme").count()==0
       assert p.locator("#featuredPrev").count()==0
       assert p.locator("#featuredNext").count()==0
@@ -100,16 +118,21 @@ def main():
       p.locator('#addSheetCancel').click()
       p.locator('#addSightingSheet').wait_for(state='detached',timeout=5000)
 
-      # Species detail now offers the exact observation methods, not merely
-      # a legacy seen toggle. A quick click preselects species + method.
+      # The guide is informational; creation belongs to the global observation form.
       p.locator('.nav-item[data-route="species"]').click()
+      assert p.locator('.species-toolbar #speciesOnlyFavorites').count()==0
       p.locator('.species-row[data-id="sp002"] .species-row__body').first.click()
-      p.locator('.signature-species-methods').wait_for(timeout=9000)
-      assert p.locator('.signature-species-methods button').count()==4
-      capture(p,'mobile_species_methods_390.png')
-      p.locator('[data-species-observe="merlin"]').click()
+      p.locator('.signature-species-detail-close').wait_for(timeout=9000)
+      assert p.locator('[data-species-observe]').count()==0
+      assert p.locator('.signature-species-detail-actions').count()==0
+      capture(p,'mobile_species_information_390.png')
+      p.locator('.signature-species-detail-close').click()
+      p.locator('#fab').click()
       p.locator('#addSightingSheet.open').wait_for(timeout=9000)
-      assert "Houtduif" in p.locator('#speciesPickerBtn').inner_text()
+      p.locator('#speciesPickerBtn').click()
+      p.locator('#spPickerList .species-row[data-id="sp002"]').click()
+      p.locator('#sightingMore summary').click()
+      p.locator('#sightSourceGroup input[value="merlin"]').check()
       assert p.locator('#sightMethodGroup input[value="heard"]').is_checked()
       assert p.locator('#sightSourceGroup input[value="merlin"]').is_checked()
       assert p.locator('#certaintyGroup input[value="possible"]').is_checked()
@@ -123,11 +146,23 @@ def main():
       assert rows[0]['merlinVerification']=='suggested',rows
       assert rows[0]['lat'] is None and rows[0]['lon'] is None,rows
 
+      p.locator('.nav-item[data-route="home"]').click()
+      recent = p.locator('#recentList [data-home-sighting]')
+      recent.wait_for()
+      check_home_spacing()
+      recent.click()
+      p.locator('#detailSightingSheet').wait_for()
+      assert "Houtduif" in p.locator('#detailSightingSheet .sheet__title').inner_text()
+      p.locator('#detailClose').click()
+      p.locator('#detailSightingSheet').wait_for(state='detached')
+
       # Existing FAB stays a normal observation (regression).
       p.locator('#fab').click()
       p.locator('#addSightingSheet.open').wait_for(timeout=9000)
       assert p.locator('#sightMethodGroup input[value="seen"]').is_checked()
       p.locator('#addSheetCancel').click()
+
+      p.locator('.nav-item[data-route="species"]').click()
 
       # Final page should not be wider than mobile viewport.
       for width in (320,360,390,430):
@@ -135,7 +170,7 @@ def main():
         assert p.locator('.signature-species-hero').is_visible()
         assert p.evaluate("() => document.documentElement.scrollWidth<=window.innerWidth+2"),width
       assert not errors,errors
-      print("PASS: 30-second local bird showcase, species quick modes, mobile form bounds, ambient pause")
+      print("PASS: 30-second local bird showcase, informational species guide, mobile form bounds, ambient pause")
       context.close();browser.close()
     srv.shutdown()
 if __name__=='__main__':main()

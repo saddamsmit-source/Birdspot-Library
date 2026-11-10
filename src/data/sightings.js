@@ -34,8 +34,8 @@
  * }
  */
 
-const STORAGE_KEY    = 'birdspot-sightings';
-const SCHEMA_VERSION = 2;
+export const STORAGE_KEY    = 'birdspot-sightings';
+export const SCHEMA_VERSION = 2;
 
 // ── Migratie ────────────────────────────────────────────────
 /**
@@ -44,7 +44,7 @@ const SCHEMA_VERSION = 2;
  * en vult ontbrekende velden aan met defaults.
  * Bestaande velden worden NOOIT overschreven.
  */
-function migrateSighting(s) {
+export function migrateSighting(s) {
   return {
     // Behoud ALLE bestaande velden — inclusief toekomstige/onbekende properties.
     // Defaults hieronder overschrijven NIET: ze worden uitsluitend gezet
@@ -70,14 +70,14 @@ function migrateSighting(s) {
 /**
  * Laadt sightings uit localStorage.
  * Voert automatisch schema-migratie uit (additief, safe).
- * @returns {Promise<Object[]>}
+ * @returns {Object[]}
  */
-export function getSightings() {
+export function getSightingsSnapshot() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
-    if (!raw) return Promise.resolve([]);
+    if (!raw) return [];
     const store = JSON.parse(raw);
-    if (!store || !Array.isArray(store.sightings)) return Promise.resolve([]);
+    if (!store || !Array.isArray(store.sightings)) return [];
 
     // Migreer naar huidig schema als nodig
     const version = store.schemaVersion ?? 1;
@@ -91,14 +91,16 @@ export function getSightings() {
           sightings:     migrated,
         }));
       } catch (_) { /* quota-fout: sla migratie over, retourneer toch */ }
-      return Promise.resolve(migrated);
+      return migrated;
     }
 
-    return Promise.resolve(store.sightings);
+    return store.sightings;
   } catch (_) {
-    return Promise.resolve([]);
+    return [];
   }
 }
+
+export function getSightings() { return Promise.resolve(getSightingsSnapshot()); }
 
 // ── Sla alle waarnemingen op ───────────────────────────────
 /**

@@ -8,6 +8,7 @@ import { getSightings } from '../../data/sightings.js';
 import { getPhoto } from '../../data/db.js';
 import { getPhotoUrl,revokePhotoUrl } from '../../utils/photoUrl.js';
 import { escHtml } from '../../utils/html.js';
+import { openPhotoViewer } from '../../utils/photoViewer.js';
 import { FILM_LIMIT,chooseMovieFormat,movieEstimate,renderFilm } from './renderer.js';
 
 const safe=x=>escHtml(String(x??''));
@@ -17,6 +18,7 @@ const slug=x=>String(x||'birdspot-film').normalize('NFKD').replace(/[\u0300-\u03
 const shorten=(v,n=75)=>String(v||'').trim().slice(0,n);
 
 export function renderFilmStudio(el) {
+  let closePhoto;
   let destroyed=false,busy=false,selectedIndex=0,playing=false,timer=null,abort=null;
   let items=[],urls=new Map(),resultUrl=null,resultBlob=null,missing=0;
   const state={aspect:'landscape',seconds:3,title:'My Birding Story'};
@@ -140,7 +142,8 @@ export function renderFilmStudio(el) {
       '<strong>'+safe(item.name)+'</strong><small>'+safe(item.where||'')+'</small></div>';
     const media=item.kind==='video'
       ? '<video controls muted playsinline preload="metadata" src="'+url+'" aria-label="Voorbeeld: '+safe(item.name)+'"></video>'
-      : '<img alt="'+safe(item.name)+'" src="'+url+'" decoding="async">';
+      : '<button type="button" class="film-studio-photo" aria-label="Vergroot foto: '+safe(item.name)+'">'+
+        '<img alt="'+safe(item.name)+'" src="'+url+'" decoding="async"></button>';
     out.classList.toggle('is-portrait',state.aspect==='portrait');
     out.innerHTML='<div class="film-studio-preview-media">'+media+caption+'</div>';
     byId('filmPreviewPosition').textContent=(selectedIndex+1)+' / '+items.length;
@@ -282,6 +285,17 @@ export function renderFilmStudio(el) {
   }
 
   const onClick=e=>{
+    const trigger = e.target.closest('.film-studio-photo');
+    if (trigger) {
+      stopPreview();
+      closePhoto?.(false);
+      const image = trigger.querySelector('img');
+      closePhoto = openPhotoViewer({
+        url: image.src, alt: image.alt, trigger,
+        onClose: () => { closePhoto = undefined; },
+      });
+      return;
+    }
     if(e.target.closest('#filmBackToMedia')||e.target.closest('[data-film-route="media"]')){
       if(busy){inform('Stop de export eerst om dit scherm te verlaten.');return;}
       import('../../app.js').then(({navigate})=>navigate('media'));return;
@@ -339,6 +353,7 @@ export function renderFilmStudio(el) {
 
   return()=>{
     destroyed=true;
+    closePhoto?.(false);
     stopPreview();
     abort?.abort();
     el.removeEventListener('click',onClick);

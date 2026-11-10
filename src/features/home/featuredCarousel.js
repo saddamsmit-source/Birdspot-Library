@@ -7,9 +7,13 @@
  */
 import { FEATURED_BIRDS, advance, loadPosition, savePosition } from './specialBirds.js';
 import { SPECIES, CATEGORY_BADGES } from '../../data/species.js';
+import { closePhotoInfo, photoInfoMarkup } from '../../utils/photoInfo.js';
+import { openPhotoViewer } from '../../utils/photoViewer.js';
+import { assetUrl } from '../../utils/assetUrl.js';
 
 const byId = new Map(SPECIES.map(s => [s.id, s]));
 const SAVE_EVERY_MS = 5_000;
+let manuallyPaused = false;
 
 /** Tekst onder de naam: herkenning + wanneer in Nederland. Pure functie (testbaar). */
 export function birdInfo(bird) {
@@ -27,12 +31,17 @@ export function initFeaturedCarousel(el, ctx) {
   const stage = el.querySelector('#slideshow');
   if (!stage || !FEATURED_BIRDS.length) return () => {};
   const photo = stage.querySelector('#featuredBirdImage');
+  const zoom = stage.querySelector('#featuredBirdZoom');
+  let closeViewer;
   const group = stage.querySelector('#featuredBirdGroup');
   const name = stage.querySelector('#featuredBirdName');
   const latin = stage.querySelector('#featuredBirdLatin');
   const place = stage.querySelector('#featuredBirdWhere');
   const presence = stage.querySelector('#featuredBirdPresence');
   const credit = stage.querySelector('#featuredBirdCredit');
+  const toggle = stage.querySelector('#featuredBirdMotion');
+  const speciesButton = stage.querySelector('[data-featured-species]');
+  const motion = matchMedia('(prefers-reduced-motion: reduce)');
 
   let pos = loadPosition();
   let shownIndex = -1, timer = null, lastTick = 0, lastSave = 0, destroyed = false;
@@ -48,33 +57,37 @@ export function initFeaturedCarousel(el, ctx) {
     const bird = FEATURED_BIRDS[pos.index];
     const info = birdInfo(bird);
     stage.dataset.birdId = bird.id;
+    const hasSpeciesCard = byId.has(bird.id);
+    speciesButton.dataset.featuredSpecies = hasSpeciesCard ? bird.id : '';
+    speciesButton.querySelector('[data-featured-label]').textContent = hasSpeciesCard ? 'Bekijk soortkaart' : 'Open soortengids';
     stage.classList.remove('has-photo');
     photo.alt = bird.nl + (bird.pose === 'vlucht' ? ' in vlucht' : '');
-    photo.src = bird.image;
+    photo.src = assetUrl(bird.image);
     // hele foto in beeld (contain); dezelfde foto vervaagd als achtergrond vult de rest
-    stage.style.setProperty('--bird-bg', `url("${bird.image}")`);
+    stage.style.setProperty('--bird-bg', `url("${assetUrl(bird.image)}")`);
     if (group) group.textContent = bird.groupLabel;
     name.textContent = bird.nl;
     latin.textContent = bird.latin;
     place.textContent = info.recognition;
     if (presence) presence.textContent = info.presence;
-    credit.textContent = 'Foto: ' + bird.author + ' · ' + bird.license + ' · Wikimedia Commons';
-    credit.href = bird.source; credit.target = '_blank'; credit.rel = 'noopener noreferrer';
+    credit.innerHTML = photoInfoMarkup(bird);
     // volgende foto alvast laden, zodat de wissel direct is
     const next = FEATURED_BIRDS[(pos.index + 1) % FEATURED_BIRDS.length];
-    if (next && next !== bird) { const pre = new Image(); pre.src = next.image; }
+    if (!motion.matches && !manuallyPaused && next && next !== bird) { const pre = new Image(); pre.src = assetUrl(next.image); }
   }
+
+  const detailsOpen = () => Boolean(closeViewer || stage.querySelector('details[open]'));
 
   function tick() {
     const now = performance.now();
     pos = advance(pos, now - lastTick);
     lastTick = now;
-    show();
+    if (!detailsOpen()) show();
     if (now - lastSave >= SAVE_EVERY_MS) { savePosition(pos); lastSave = now; }
   }
 
   function start() {
-    if (destroyed || ctx.destroyed || document.hidden || timer) return;
+    if (destroyed || ctx.destroyed || document.hidden || timer || motion.matches || manuallyPaused || detailsOpen()) return;
     lastTick = lastSave = performance.now();
     show();
     timer = setInterval(tick, 1000);
@@ -86,16 +99,52 @@ export function initFeaturedCarousel(el, ctx) {
     savePosition(pos);
   }
 
-  const onVis = () => (document.hidden ? stop() : start());
+  const updateMotion = () => {
+    const paused = motion.matches || manuallyPaused;
+    if (toggle) {
+      toggle.hidden = motion.matches;
+      toggle.setAttribute('aria-pressed', String(manuallyPaused));
+      toggle.setAttribute('aria-label', manuallyPaused ? 'Diashow hervatten' : 'Diashow pauzeren');
+    }
+    if (paused || document.hidden || detailsOpen()) stop();
+    else start();
+  };
+  const onToggle = () => {
+    manuallyPaused = !manuallyPaused;
+    updateMotion();
+  };
+  const onKey = event => {
+    if (event.key === 'Escape' && closePhotoInfo(stage)) event.stopPropagation();
+  };
+  zoom.addEventListener('click', () => {
+    if (closeViewer) return;
+    stop();
+    closeViewer = openPhotoViewer({
+      url: photo.src, alt: photo.alt, trigger: zoom,
+      photoInfo: credit.querySelector('.photo-info'),
+      onClose: () => { closeViewer = undefined; updateMotion(); },
+    });
+  });
+  stage.addEventListener('toggle', updateMotion, true);
+  stage.addEventListener('keydown', onKey);
+  toggle?.addEventListener('click', onToggle);
+  motion.addEventListener('change', updateMotion);
+  const onVis = updateMotion;
   const onHide = () => stop();
   document.addEventListener('visibilitychange', onVis);
   window.addEventListener('pagehide', onHide);
-  start();
+  show();
+  updateMotion();
 
   return () => {
     stop();
     destroyed = true;
+    closeViewer?.(false);
     document.removeEventListener('visibilitychange', onVis);
+    stage.removeEventListener('toggle', updateMotion, true);
+    stage.removeEventListener('keydown', onKey);
+    toggle?.removeEventListener('click', onToggle);
+    motion.removeEventListener('change', updateMotion);
     window.removeEventListener('pagehide', onHide);
     photo.removeEventListener('load', onLoad);
     photo.removeEventListener('error', onError);

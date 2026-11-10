@@ -225,9 +225,14 @@ def test_g03_zero_media_downloads_on_update(server):
 # ── G-04: Update-toast "Nieuwe versie · Nu laden" ─────────────────────────────
 def test_g04_update_toast_visible(server):
     """
-    Simuleert een SW-update door postMessage({type:'new-version'}) vanuit
-    de pagina te sturen, wat sw-register.js opvangt en de toast toont.
+    sw-register.js toont de toast via de echte SW-levenscyclus (updatefound →
+    installing → reg.waiting → controllerchange), niet via een eigen
+    message-protocol. Simuleert dus een echte release: APP_VERSION in sw.js
+    op schijf ophogen, reg.update() aanroepen, en controleren dat de toast
+    via die échte weg verschijnt (bestand wordt na de test teruggezet).
     """
+    sw_path = ROOT / "sw.js"
+    original = sw_path.read_text(encoding="utf-8")
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         ctx = browser.new_context(
@@ -237,20 +242,24 @@ def test_g04_update_toast_visible(server):
         page = open_fresh_page(ctx)
         wait_for_sw(page, 12_000)
 
-        # Stuur update-bericht direct vanuit de pagina naar navigator.serviceWorker
-        page.evaluate("""() => {
-            // Simuleer het bericht dat de SW stuurt bij activate
-            navigator.serviceWorker.dispatchEvent(
-                new MessageEvent('message', { data: { type: 'new-version', version: '1.0.1' } })
-            );
-        }""")
+        try:
+            bumped = re.sub(r"const APP_VERSION = '[^']+'", "const APP_VERSION = 'test-g04-update'", original, count=1)
+            assert bumped != original, "APP_VERSION niet gevonden in sw.js"
+            sw_path.write_text(bumped, encoding="utf-8")
 
-        # Toast moet zichtbaar worden (tekst "Nieuwe versie")
-        page.wait_for_selector(
-            "text=Nieuwe versie",
-            timeout=5_000,
-            state="visible",
-        )
+            page.evaluate("""async () => {
+                const reg = await navigator.serviceWorker.getRegistration();
+                await reg.update();
+            }""")
+
+            # Toast moet zichtbaar worden (tekst "Nieuwe versie") via reg.waiting
+            page.wait_for_selector(
+                "#appUpdate:not([hidden])",
+                timeout=8_000,
+                state="visible",
+            )
+        finally:
+            sw_path.write_text(original, encoding="utf-8")
 
         ctx.close()
         browser.close()
@@ -275,7 +284,9 @@ def test_g05_manifest_valid(server):
         assert manifest is not None, "Manifest niet beschikbaar of fout bij parsen"
         assert manifest.get("name") == "Birdspot Library"
         assert manifest.get("display") == "standalone"
-        assert manifest.get("start_url") == "/"
+        # Relatief (i.p.v. vast "/") zodat de manifest ook onder een subpad
+        # (bv. een GitHub Pages-projectpagina) naar de juiste scope wijst.
+        assert manifest.get("start_url") == "./"
         icons = manifest.get("icons", [])
         sizes = [i.get("sizes") for i in icons]
         assert "192x192" in sizes, "icon-192 ontbreekt"

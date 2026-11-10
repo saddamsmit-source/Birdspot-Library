@@ -44,7 +44,7 @@ def main():
         url = f"http://127.0.0.1:{server.server_address[1]}/"
         with sync_playwright() as pw:
             browser = pw.chromium.launch(headless=True)
-            ctx = browser.new_context(viewport={"width": 390, "height": 844}, reduced_motion="reduce", service_workers="block")
+            ctx = browser.new_context(viewport={"width": 390, "height": 844}, reduced_motion="no-preference", service_workers="block")
             p = ctx.new_page()
             errors, external = [], []
             p.on("pageerror", lambda e: errors.append(str(e)))
@@ -104,18 +104,54 @@ def main():
             assert shown() == birds[6]["id"], ("F-04 hervat niet", shown())
             print("F-04 OK — hervat waar hij was, telt niet op de achtergrond")
 
+            before_pause = shown()
+            toggle = p.locator("#featuredBirdMotion")
+            toggle.click()
+            assert toggle.get_attribute("aria-pressed") == "true"
+            p.clock.run_for(32000)
+            assert shown() == before_pause, "F-04 handmatig pauzeren"
+            toggle.click()
+            p.emulate_media(reduced_motion="reduce")
+            toggle.wait_for(state="hidden")
+            p.clock.run_for(32000)
+            assert shown() == before_pause, "F-04 respecteer minder beweging"
+
             cur = next(b for b in birds if b["id"] == shown())
             cap = p.locator("#slideshow .featured-birds__caption")
             assert p.locator("#featuredBirdGroup").inner_text().strip().lower() == cur["groupLabel"].lower()
             assert p.locator("#featuredBirdName").inner_text() == cur["nl"]
             assert p.locator("#featuredBirdLatin").inner_text() == cur["latin"]
+            cap.locator("summary").click()
             assert p.locator("#featuredBirdWhere").inner_text().startswith("Herkenning: ")
             assert p.locator("#featuredBirdPresence").inner_text().startswith("In Nederland: ")
             credit = p.locator("#featuredBirdCredit")
-            assert cur["author"] in credit.inner_text() and cur["license"] in credit.inner_text()
-            assert credit.get_attribute("href") == cur["source"]
+            credit_info = credit.get_by_text("Maker:", exact=False)
+            assert not credit_info.is_visible()
+            cap.locator("summary").click()
+            p.emulate_media(reduced_motion="no-preference")
+            toggle.click()  # Resume the manually paused slideshow.
+            info_trigger = credit.get_by_label("Foto-informatie", exact=True)
+            info_trigger.click()
+            assert credit_info.is_visible() and cur["author"] in credit_info.inner_text()
+            assert cur["license"] in credit.inner_text()
+            assert credit.get_by_role("link", name="Open fotobron").get_attribute("href") == cur["source"]
+            p.clock.run_for(32000)
+            assert shown() == cur["id"], "De fotobron moet bij de zichtbare vogel blijven"
+            p.keyboard.press("Escape")
+            assert not credit_info.is_visible()
+            assert info_trigger.evaluate("(el) => document.activeElement === el")
             p.wait_for_function("() => document.querySelector('#featuredBirdImage').naturalWidth > 0", timeout=8000)
             assert cap.is_visible()
+            zoom_trigger = p.locator('#featuredBirdZoom')
+            zoom_trigger.click()
+            viewer = p.get_by_role("dialog", name="Vogelfoto bekijken")
+            viewer.get_by_role("button", name="Inzoomen").click()
+            assert viewer.get_by_role("button", name="Zoom herstellen").inner_text() == "2×"
+            p.clock.run_for(32000)
+            assert shown() == cur["id"], "De diashow blijft stilstaan zolang de zoomviewer open is"
+            p.keyboard.press("Escape")
+            viewer.wait_for(state="detached")
+            assert zoom_trigger.evaluate("(el) => document.activeElement === el")
             p.screenshot(path=str(SHOTS / "showcase_f_390.png"))
             vg = p.evaluate("async () => { const m = await import('/src/features/home/featuredCarousel.js');"
                             " const b = (await import('/src/features/home/specialBirds.js')).FEATURED_BIRDS.find(x => x.id === 'sp463');"

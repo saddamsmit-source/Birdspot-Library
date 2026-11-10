@@ -91,10 +91,15 @@ function renderOpts(ov, query) {
     if (!byFamily[s.family]) byFamily[s.family] = [];
     byFamily[s.family].push(s);
   });
-  list.innerHTML = Object.entries(byFamily).map(([fam, birds]) => `
+  // Soortgroepen A-Z op Nederlandse groepsnaam (Opdracht 2, 2026-11-10).
+  // Niveau 2 (Opdracht 3, 2026-11-10): binnen iedere soortgroep ook de individuele vogels A-Z op
+  // Nederlandse naam, niet op database-volgorde of ID.
+  list.innerHTML = Object.entries(byFamily)
+    .sort((a, b) => a[0].localeCompare(b[0], 'nl'))
+    .map(([fam, birds]) => `
     <div class="species-group">
       <div class="species-group__label">${escHtml(fam)}</div>
-      ${birds.map(s => `
+      ${[...birds].sort((a, b) => a.nameNL.localeCompare(b.nameNL, 'nl')).map(s => `
         <div class="species-row" data-id="${s.id}" role="option" tabindex="0">
           <div class="species-row__icon" aria-hidden="true">${s.icon}</div>
           <div class="species-row__body">
