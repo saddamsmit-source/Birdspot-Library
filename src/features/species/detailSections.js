@@ -369,12 +369,17 @@ export function recognitionPanel(s, life = null) {
   // aparte sectie "In vlucht" (ná Juveniel, vóór de vergelijkingen) — met behoud van het geslachts-/
   // leeftijdslabel uit de oorspronkelijke groep (geen geslacht verzinnen, geen foto dubbel tonen).
   const flightEntries = [];
+  // Fotobaseline batch 1 (10-11-2026): als een kleedkaart na het verplaatsen van zijn vluchtfoto's
+  // leeg is en de hoofdfoto dat kleed toont, verwijst de kaart naar de hoofdfoto (§6.B: referentie
+  // in plaats van dezelfde opname opnieuw). Zelfde rolregel als guidePlumageGroups().
+  const hero = guideHeroPhoto(s.id);
+  const heroShows = key => Boolean(hero) && (key === 'adult' ? !photoRole(hero) : photoRole(hero) === key);
   const groups = guidePlumageGroups(s).map(group => {
     const kept = group.photos.filter(takePhoto);
     const flightPhotos = kept.filter(photo => photo.flight);
     const restPhotos = kept.filter(photo => !photo.flight);
     if (flightPhotos.length) flightEntries.push({...group, photos: flightPhotos, heroRef: false});
-    return {...group, photos: restPhotos};
+    return {...group, photos: restPhotos, heroRef: group.heroRef || (!restPhotos.length && heroShows(group.key))};
   });
   if (groups.length) out.push('<h3 class="sd-h">Verenkleed</h3><div class="sd-plumage-list">' + groups.map(plumageCard).join('') + '</div>');
 
