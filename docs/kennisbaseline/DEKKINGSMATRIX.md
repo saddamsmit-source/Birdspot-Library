@@ -12,12 +12,12 @@ Gegenereerd door `tools/kennisbaseline/coverage.mjs`. Meet aanwezigheid en omvan
 | withVoiceText | 301 |
 | withAudio | 59 |
 | withGuideReview | 65 |
-| withKnowledgeProfile | 8 |
-| fieldmarksShort | 434 |
+| withKnowledgeProfile | 11 |
+| fieldmarksShort | 433 |
 | femaleText | 126 |
 | juvText | 347 |
 | redList | 87 |
-| levels | 245 / 285 / 59 / 8 |
+| levels | 245 / 282 / 59 / 11 |
 
 | ID | Soort | Groep | Niv. | Veldkenmerken (tekens) | Kleden met tekst | Foto | Vergelijkingen | Leefwijze | Zangtekst | Audio | Bronnen soortkaart | Kritische kenmerken |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -68,12 +68,12 @@ Gegenereerd door `tools/kennisbaseline/coverage.mjs`. Meet aanwezigheid en omvan
 | sp446 | Pacifische Parelduiker (compact) | Duikers | 0 | 64 | — | — | — | — | — | — | — | — |
 | sp236 | Parelduiker | Duikers | 1 | 71 | adult_m, juv, breeding, winter | — | — | ja | ja | — | — | — |
 | sp168 | Roodkeelduiker | Duikers | 1 | 68 | adult_m, juv, breeding, winter | — | — | ja | ja | — | — | — |
-| sp003 | Holenduif | Duiven | 1 | 64 | adult_m, juv | ja | 1 | ja | ja | — | — | — |
-| sp002 | Houtduif | Duiven | 1 | 73 | adult_m, juv | ja | 1 | ja | ja | — | — | — |
+| sp003 | Holenduif | Duiven | 3 | 86 | adult_m, juv | ja | 1 | ja | ja | — | — | 2 |
+| sp002 | Houtduif | Duiven | 3 | 73 | adult_m, juv | ja | 1 | ja | ja | — | — | 2 |
 | sp340 | Lachduif | Duiven | 1 | 91 | adult_m, juv | — | — | — | — | — | — | — |
 | sp373 | Oosterse Tortel (compact) | Duiven | 0 | 64 | — | — | — | — | — | — | — | — |
 | sp001 | Stadsduif | Duiven | 1 | 62 | adult_m, juv | — | — | — | — | — | — | — |
-| sp004 | Turkse Tortel | Duiven | 1 | 63 | adult_m, juv | ja | 1 | ja | ja | — | — | — |
+| sp004 | Turkse Tortel | Duiven | 3 | 63 | adult_m, juv | ja | 1 | ja | ja | — | — | 2 |
 | sp197 | Zomertortel | Duiven | 1 | 97 | adult_m, juv | — | — | ja | ja | — | — | — |
 | sp013 | Bosuil | Echte uilen | 1 | 56 | adult_m, adult_f, juv | — | — | ja | ja | — | — | — |
 | sp474 | Dwergooruil (compact) | Echte uilen | 0 | 64 | — | — | — | — | — | — | — | — |

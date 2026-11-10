@@ -1,5 +1,5 @@
 {
- "generatedFor": "456c891",
+ "generatedFor": "71dbd95",
  "date": "2026-11-10",
  "batchSize": 12,
  "rows": [
@@ -30,7 +30,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K06",
+   "batch": "K11",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -39,29 +39,29 @@
    "family": "Duiven",
    "compact": false,
    "frequency": "algemeen",
-   "level": 1,
+   "level": 3,
    "missing": [
-    "A maten zonder bron",
-    "B veldkenmerken kort",
     "B vrouwtje-tekst",
-    "C kritische kenmerken",
-    "E audio",
-    "H status met bron"
+    "E audio"
    ],
-   "criticalChecked": 0,
+   "criticalChecked": 2,
    "similar": [
     "sp003",
+    "sp001",
     "sp004"
    ],
-   "openQuestions": [],
-   "discrepancies": 0,
-   "sourceStatus": "geen bron per soort",
+   "openQuestions": [
+    "Juveniel- en vluchtvergelijking met Stadsduif nog niet uit een Nederlandse bron uitgewerkt.",
+    "Geen gidsfoto van een juveniel (positie ontbreekt)."
+   ],
+   "discrepancies": 1,
+   "sourceStatus": "bron per bewering, 5 bron(nen), gecontroleerd door Claude 2026-11-10",
    "contentQA": "NOT TESTED",
-   "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
-   "sha": null,
-   "lastCheck": null,
-   "batch": "K02",
-   "next": "profiel opstellen volgens contract v0.1"
+   "uiStatus": "VERIFIED (helpertest 390/1280 px, Chromium)",
+   "sha": "71dbd95",
+   "lastCheck": "2026-11-10",
+   "batch": null,
+   "next": "onafhankelijke inhoudelijke QA + open punten afhandelen"
   },
   {
    "id": "sp003",
@@ -69,29 +69,30 @@
    "family": "Duiven",
    "compact": false,
    "frequency": "vrij-algemeen",
-   "level": 1,
+   "level": 3,
    "missing": [
-    "A maten zonder bron",
-    "B veldkenmerken kort",
     "B vrouwtje-tekst",
-    "C kritische kenmerken",
-    "E audio",
-    "H status met bron"
+    "E audio"
    ],
-   "criticalChecked": 0,
+   "criticalChecked": 2,
    "similar": [
     "sp002",
+    "sp001",
     "sp004"
    ],
-   "openQuestions": [],
+   "openQuestions": [
+    "Geen goede vluchtfoto: de vorige 'vluchtfoto' toonde een opvliegende vogel en is uit de vluchtrol gehaald (positie ontbreekt).",
+    "Geen gidsfoto van een juveniel.",
+    "Kleedvariatie van stadsduiven maakt de stuit niet doorslaggevend."
+   ],
    "discrepancies": 0,
-   "sourceStatus": "geen bron per soort",
+   "sourceStatus": "bron per bewering, 5 bron(nen), gecontroleerd door Claude 2026-11-10",
    "contentQA": "NOT TESTED",
-   "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
-   "sha": null,
-   "lastCheck": null,
-   "batch": "K07",
-   "next": "profiel opstellen volgens contract v0.1"
+   "uiStatus": "VERIFIED (helpertest 390/1280 px, Chromium)",
+   "sha": "71dbd95",
+   "lastCheck": "2026-11-10",
+   "batch": null,
+   "next": "onafhankelijke inhoudelijke QA + open punten afhandelen"
   },
   {
    "id": "sp004",
@@ -99,29 +100,29 @@
    "family": "Duiven",
    "compact": false,
    "frequency": "algemeen",
-   "level": 1,
+   "level": 3,
    "missing": [
-    "A maten zonder bron",
-    "B veldkenmerken kort",
     "B vrouwtje-tekst",
-    "C kritische kenmerken",
-    "E audio",
-    "H status met bron"
+    "E audio"
    ],
-   "criticalChecked": 0,
+   "criticalChecked": 2,
    "similar": [
-    "sp002",
-    "sp003"
+    "sp197",
+    "sp002"
    ],
-   "openQuestions": [],
+   "openQuestions": [
+    "Onderscheid met Lachduif (ontsnapte vogels) nog uit een bron uitwerken.",
+    "Spanwijdte en gewicht niet in de geraadpleegde Nederlandse bron.",
+    "Geen gidsfoto van een juveniel; hoofdfoto toont de vogel vrij klein in beeld."
+   ],
    "discrepancies": 0,
-   "sourceStatus": "geen bron per soort",
+   "sourceStatus": "bron per bewering, 4 bron(nen), gecontroleerd door Claude 2026-11-10",
    "contentQA": "NOT TESTED",
-   "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
-   "sha": null,
-   "lastCheck": null,
-   "batch": "K02",
-   "next": "profiel opstellen volgens contract v0.1"
+   "uiStatus": "VERIFIED (helpertest 390/1280 px, Chromium)",
+   "sha": "71dbd95",
+   "lastCheck": "2026-11-10",
+   "batch": null,
+   "next": "onafhankelijke inhoudelijke QA + open punten afhandelen"
   },
   {
    "id": "sp005",
@@ -147,7 +148,7 @@
    "sourceStatus": "bron per bewering, 2 bron(nen), gecontroleerd door Claude 2026-11-10",
    "contentQA": "NOT TESTED",
    "uiStatus": "VERIFIED (helpertest 390/1280 px, Chromium)",
-   "sha": "456c891",
+   "sha": "71dbd95",
    "lastCheck": "2026-11-10",
    "batch": null,
    "next": "onafhankelijke inhoudelijke QA + open punten afhandelen"
@@ -169,10 +170,10 @@
     "Leeftijdsbepaling in vlucht nog uit een bron beschrijven."
    ],
    "discrepancies": 1,
-   "sourceStatus": "bron per bewering, 3 bron(nen), gecontroleerd door Claude 2026-11-10",
+   "sourceStatus": "bron per bewering, 4 bron(nen), gecontroleerd door Claude 2026-11-10",
    "contentQA": "NOT TESTED",
    "uiStatus": "VERIFIED (helpertest 390/1280 px, Chromium)",
-   "sha": "456c891",
+   "sha": "71dbd95",
    "lastCheck": "2026-11-10",
    "batch": null,
    "next": "onafhankelijke inhoudelijke QA + open punten afhandelen"
@@ -224,10 +225,10 @@
     "Uitgewerkte vergelijking met Boomvalk en Smelleken ontbreekt."
    ],
    "discrepancies": 0,
-   "sourceStatus": "bron per bewering, 1 bron(nen), gecontroleerd door Claude 2026-11-10",
+   "sourceStatus": "bron per bewering, 2 bron(nen), gecontroleerd door Claude 2026-11-10",
    "contentQA": "NOT TESTED",
    "uiStatus": "VERIFIED (helpertest 390/1280 px, Chromium)",
-   "sha": "456c891",
+   "sha": "71dbd95",
    "lastCheck": "2026-11-10",
    "batch": null,
    "next": "onafhankelijke inhoudelijke QA + open punten afhandelen"
@@ -339,7 +340,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K12",
+   "batch": "K14",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -366,7 +367,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K11",
+   "batch": "K12",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -394,7 +395,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K11",
+   "batch": "K12",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -422,7 +423,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K11",
+   "batch": "K12",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -474,7 +475,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K15",
+   "batch": "K10",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -499,7 +500,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K15",
+   "batch": "K10",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -524,7 +525,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K09",
+   "batch": "K08",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -551,7 +552,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K10",
+   "batch": "K08",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -572,13 +573,14 @@
    ],
    "openQuestions": [
     "Juveniel kleed en leefgebied niet opnieuw gecontroleerd tegen een bron.",
-    "Vergelijking met Gaai is bestaande Birdspot-inhoud, niet opnieuw gecontroleerd."
+    "Vergelijking met Gaai is bestaande Birdspot-inhoud, niet opnieuw gecontroleerd.",
+    "Kleedpatroon is in Nederland vrijwel onmiskenbaar, maar staat op \"Helpt\" tot een tweede, onafhankelijke bron is vastgelegd (regel doorslaggevend, 10-11-2026)."
    ],
-   "discrepancies": 2,
+   "discrepancies": 0,
    "sourceStatus": "bron per bewering, 1 bron(nen), gecontroleerd door Claude 2026-11-10",
    "contentQA": "NOT TESTED",
    "uiStatus": "VERIFIED (helpertest 390/1280 px, Chromium)",
-   "sha": "456c891",
+   "sha": "71dbd95",
    "lastCheck": "2026-11-10",
    "batch": null,
    "next": "onafhankelijke inhoudelijke QA + open punten afhandelen"
@@ -637,7 +639,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K25",
+   "batch": "K24",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -665,7 +667,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K07",
+   "batch": "K12",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -779,7 +781,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K25",
+   "batch": "K24",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -807,7 +809,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K04",
+   "batch": "K03",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -861,7 +863,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K14",
+   "batch": "K09",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -887,7 +889,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K14",
+   "batch": "K09",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -913,7 +915,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K08",
+   "batch": "K06",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -938,7 +940,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K10",
+   "batch": "K08",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -1048,7 +1050,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K10",
+   "batch": "K08",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -1075,7 +1077,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K10",
+   "batch": "K08",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -1102,7 +1104,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K10",
+   "batch": "K08",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -1129,7 +1131,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K15",
+   "batch": "K10",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -1156,7 +1158,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K20",
+   "batch": "K11",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -1214,7 +1216,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K08",
+   "batch": "K06",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -1239,7 +1241,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K04",
+   "batch": "K03",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -1268,7 +1270,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K04",
+   "batch": "K03",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -1297,7 +1299,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K04",
+   "batch": "K03",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -1325,7 +1327,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K04",
+   "batch": "K03",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -1353,7 +1355,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K08",
+   "batch": "K06",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -1407,7 +1409,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K10",
+   "batch": "K09",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -1434,7 +1436,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K13",
+   "batch": "K15",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -1461,7 +1463,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K10",
+   "batch": "K09",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -1517,7 +1519,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K06",
+   "batch": "K05",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -1543,7 +1545,7 @@
    "sourceStatus": "bron per bewering, 3 bron(nen), gecontroleerd door Claude 2026-11-10",
    "contentQA": "NOT TESTED",
    "uiStatus": "VERIFIED (helpertest 390/1280 px, Chromium)",
-   "sha": "456c891",
+   "sha": "71dbd95",
    "lastCheck": "2026-11-10",
    "batch": null,
    "next": "onafhankelijke inhoudelijke QA + open punten afhandelen"
@@ -1571,7 +1573,7 @@
    "sourceStatus": "bron per bewering, 3 bron(nen), gecontroleerd door Claude 2026-11-10",
    "contentQA": "NOT TESTED",
    "uiStatus": "VERIFIED (helpertest 390/1280 px, Chromium)",
-   "sha": "456c891",
+   "sha": "71dbd95",
    "lastCheck": "2026-11-10",
    "batch": null,
    "next": "onafhankelijke inhoudelijke QA + open punten afhandelen"
@@ -1601,7 +1603,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K14",
+   "batch": "K09",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -1628,7 +1630,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K06",
+   "batch": "K05",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -1656,7 +1658,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K11",
+   "batch": "K09",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -1683,7 +1685,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K06",
+   "batch": "K05",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -1711,7 +1713,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K14",
+   "batch": "K15",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -1761,7 +1763,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K08",
+   "batch": "K06",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -1815,7 +1817,7 @@
    "sourceStatus": "bron per bewering, 5 bron(nen), gecontroleerd door Claude 2026-11-10",
    "contentQA": "NOT TESTED",
    "uiStatus": "VERIFIED (helpertest 390/1280 px, Chromium)",
-   "sha": "456c891",
+   "sha": "71dbd95",
    "lastCheck": "2026-11-10",
    "batch": null,
    "next": "onafhankelijke inhoudelijke QA + open punten afhandelen"
@@ -1898,7 +1900,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K08",
+   "batch": "K06",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -1954,7 +1956,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K13",
+   "batch": "K14",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -2010,7 +2012,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K13",
+   "batch": "K14",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -2065,7 +2067,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K08",
+   "batch": "K06",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -2093,7 +2095,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K06",
+   "batch": "K11",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -2118,7 +2120,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K03",
+   "batch": "K02",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -2225,7 +2227,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K05",
+   "batch": "K04",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -2252,7 +2254,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K15",
+   "batch": "K10",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -2279,7 +2281,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K09",
+   "batch": "K07",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -2305,7 +2307,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K15",
+   "batch": "K10",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -2331,7 +2333,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K20",
+   "batch": "K10",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -2356,7 +2358,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K03",
+   "batch": "K02",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -2386,7 +2388,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K06",
+   "batch": "K11",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -2416,7 +2418,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K07",
+   "batch": "K11",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -2442,7 +2444,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K03",
+   "batch": "K02",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -2492,7 +2494,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K03",
+   "batch": "K02",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -2543,7 +2545,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K11",
+   "batch": "K13",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -2569,11 +2571,11 @@
     "Onderscheid met Pontische Meeuw uitwerken.",
     "Kopstreping in winterkleed is in de bron alleen als foto te zien."
    ],
-   "discrepancies": 1,
-   "sourceStatus": "bron per bewering, 2 bron(nen), gecontroleerd door Claude 2026-11-10",
+   "discrepancies": 0,
+   "sourceStatus": "bron per bewering, 3 bron(nen), gecontroleerd door Claude 2026-11-10",
    "contentQA": "NOT TESTED",
    "uiStatus": "VERIFIED (helpertest 390/1280 px, Chromium)",
-   "sha": "456c891",
+   "sha": "71dbd95",
    "lastCheck": "2026-11-10",
    "batch": null,
    "next": "onafhankelijke inhoudelijke QA + open punten afhandelen"
@@ -2604,7 +2606,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K02",
+   "batch": "K01",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -2633,7 +2635,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K02",
+   "batch": "K01",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -2662,7 +2664,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K04",
+   "batch": "K03",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -2690,7 +2692,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K05",
+   "batch": "K04",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -2744,7 +2746,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K05",
+   "batch": "K04",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -2771,7 +2773,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K05",
+   "batch": "K04",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -2797,7 +2799,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K05",
+   "batch": "K04",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -2825,7 +2827,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K13",
+   "batch": "K14",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -2850,7 +2852,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K02",
+   "batch": "K01",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -2879,7 +2881,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K03",
+   "batch": "K02",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -2906,7 +2908,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K07",
+   "batch": "K06",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -2961,7 +2963,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K20",
+   "batch": "K10",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -2989,7 +2991,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K07",
+   "batch": "K12",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -3016,7 +3018,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K09",
+   "batch": "K07",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -3098,7 +3100,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K15",
+   "batch": "K10",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -3126,7 +3128,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K06",
+   "batch": "K05",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -3155,7 +3157,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K06",
+   "batch": "K05",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -3183,7 +3185,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K11",
+   "batch": "K09",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -3210,7 +3212,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K07",
+   "batch": "K06",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -3235,7 +3237,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K08",
+   "batch": "K06",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -3291,7 +3293,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K19",
+   "batch": "K20",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -3319,7 +3321,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K07",
+   "batch": "K11",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -3347,7 +3349,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K12",
+   "batch": "K13",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -3375,7 +3377,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K12",
+   "batch": "K13",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -3403,7 +3405,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K07",
+   "batch": "K11",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -3431,7 +3433,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K06",
+   "batch": "K11",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -3456,7 +3458,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K06",
+   "batch": "K05",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -3484,7 +3486,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K14",
+   "batch": "K15",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -3588,7 +3590,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K12",
+   "batch": "K13",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -3640,7 +3642,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K12",
+   "batch": "K13",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -3667,7 +3669,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K06",
+   "batch": "K11",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -3693,7 +3695,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K06",
+   "batch": "K11",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -3719,7 +3721,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K11",
+   "batch": "K13",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -3745,7 +3747,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K12",
+   "batch": "K13",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -3772,7 +3774,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K11",
+   "batch": "K13",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -3798,7 +3800,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K11",
+   "batch": "K13",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -3824,7 +3826,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K12",
+   "batch": "K14",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -3852,7 +3854,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K03",
+   "batch": "K02",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -3879,7 +3881,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K12",
+   "batch": "K14",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -3907,7 +3909,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K08",
+   "batch": "K06",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -3933,7 +3935,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K09",
+   "batch": "K07",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -3959,7 +3961,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K09",
+   "batch": "K07",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -3986,7 +3988,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K08",
+   "batch": "K07",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -4013,7 +4015,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K09",
+   "batch": "K07",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -4040,7 +4042,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K13",
+   "batch": "K15",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -4066,7 +4068,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K07",
+   "batch": "K12",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -4094,7 +4096,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K09",
+   "batch": "K07",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -4122,7 +4124,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K07",
+   "batch": "K12",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -4149,7 +4151,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K05",
+   "batch": "K04",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -4177,7 +4179,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K07",
+   "batch": "K12",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -4204,7 +4206,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K13",
+   "batch": "K15",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -4231,7 +4233,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K09",
+   "batch": "K07",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -4258,7 +4260,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K09",
+   "batch": "K07",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -4284,7 +4286,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K09",
+   "batch": "K08",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -4310,7 +4312,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K09",
+   "batch": "K07",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -4337,7 +4339,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K09",
+   "batch": "K07",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -4364,7 +4366,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K11",
+   "batch": "K12",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -4392,7 +4394,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K11",
+   "batch": "K12",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -4419,7 +4421,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K13",
+   "batch": "K14",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -4447,7 +4449,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K13",
+   "batch": "K14",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -4475,7 +4477,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K08",
+   "batch": "K06",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -4532,7 +4534,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K10",
+   "batch": "K08",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -4560,7 +4562,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K10",
+   "batch": "K08",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -4588,7 +4590,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K11",
+   "batch": "K12",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -4615,7 +4617,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K13",
+   "batch": "K15",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -4642,7 +4644,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K08",
+   "batch": "K07",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -4669,7 +4671,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K12",
+   "batch": "K13",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -4696,7 +4698,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K12",
+   "batch": "K14",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -4748,7 +4750,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K08",
+   "batch": "K06",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -4775,7 +4777,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K13",
+   "batch": "K14",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -4802,7 +4804,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K10",
+   "batch": "K08",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -4828,7 +4830,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K10",
+   "batch": "K08",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -4854,7 +4856,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K10",
+   "batch": "K08",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -4881,7 +4883,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K14",
+   "batch": "K15",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -4908,7 +4910,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K13",
+   "batch": "K14",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -4935,7 +4937,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K07",
+   "batch": "K12",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -5127,7 +5129,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K14",
+   "batch": "K09",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -5588,7 +5590,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K25",
+   "batch": "K24",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -5614,7 +5616,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K14",
+   "batch": "K10",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -5667,7 +5669,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K18",
+   "batch": "K19",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -5777,7 +5779,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K18",
+   "batch": "K19",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -5805,7 +5807,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K27",
+   "batch": "K26",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -5911,7 +5913,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K20",
+   "batch": "K11",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -6078,7 +6080,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K21",
+   "batch": "K20",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -6134,7 +6136,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K14",
+   "batch": "K09",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -6162,7 +6164,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K01",
+   "batch": "K18",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -6189,7 +6191,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K02",
+   "batch": "K18",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -6493,7 +6495,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K28",
+   "batch": "K27",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -6548,7 +6550,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K28",
+   "batch": "K27",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -6684,7 +6686,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K15",
+   "batch": "K10",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -6790,7 +6792,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K14",
+   "batch": "K09",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -6817,7 +6819,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K20",
+   "batch": "K10",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -6844,7 +6846,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K20",
+   "batch": "K10",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -7006,7 +7008,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K21",
+   "batch": "K20",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -7088,7 +7090,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K01",
+   "batch": "K19",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -7115,7 +7117,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K01",
+   "batch": "K19",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -7141,7 +7143,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K14",
+   "batch": "K09",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -7330,7 +7332,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K29",
+   "batch": "K28",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -7357,7 +7359,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K27",
+   "batch": "K26",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -7413,7 +7415,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K27",
+   "batch": "K26",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -7496,7 +7498,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K29",
+   "batch": "K28",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -7634,7 +7636,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K29",
+   "batch": "K28",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -7689,7 +7691,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K20",
+   "batch": "K11",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -7797,7 +7799,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K19",
+   "batch": "K20",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -7824,7 +7826,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K26",
+   "batch": "K25",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -7851,7 +7853,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K14",
+   "batch": "K09",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -8096,7 +8098,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K19",
+   "batch": "K20",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -8149,7 +8151,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K19",
+   "batch": "K20",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -8203,7 +8205,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K24",
+   "batch": "K23",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -8284,7 +8286,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K24",
+   "batch": "K23",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -8311,7 +8313,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K24",
+   "batch": "K23",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -8545,7 +8547,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K23",
+   "batch": "K22",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -8632,7 +8634,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K13",
+   "batch": "K14",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -8662,7 +8664,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K26",
+   "batch": "K25",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -8751,7 +8753,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K12",
+   "batch": "K13",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -8956,7 +8958,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K22",
+   "batch": "K21",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -8985,7 +8987,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K12",
+   "batch": "K13",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -9015,7 +9017,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K22",
+   "batch": "K21",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -9075,7 +9077,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K22",
+   "batch": "K21",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -9162,7 +9164,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K23",
+   "batch": "K22",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -9248,7 +9250,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K23",
+   "batch": "K22",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -9421,7 +9423,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K21",
+   "batch": "K20",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -9657,7 +9659,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K28",
+   "batch": "K27",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -9687,7 +9689,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K26",
+   "batch": "K25",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -9749,7 +9751,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K33",
+   "batch": "K32",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -9873,7 +9875,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K30",
+   "batch": "K29",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -9966,7 +9968,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K33",
+   "batch": "K32",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -9997,7 +9999,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K30",
+   "batch": "K29",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -10059,7 +10061,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K34",
+   "batch": "K33",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -10183,7 +10185,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K30",
+   "batch": "K29",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -10214,7 +10216,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K33",
+   "batch": "K32",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -10276,7 +10278,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K34",
+   "batch": "K33",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -10307,7 +10309,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K34",
+   "batch": "K33",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -10369,7 +10371,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K49",
+   "batch": "K48",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -10400,7 +10402,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K46",
+   "batch": "K45",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -10741,7 +10743,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K42",
+   "batch": "K41",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -10772,7 +10774,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K42",
+   "batch": "K41",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -10803,7 +10805,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K38",
+   "batch": "K37",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -10834,7 +10836,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K38",
+   "batch": "K37",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -11051,7 +11053,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K42",
+   "batch": "K41",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -11175,7 +11177,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K44",
+   "batch": "K43",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -11237,7 +11239,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K44",
+   "batch": "K43",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -11330,7 +11332,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K45",
+   "batch": "K44",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -11361,7 +11363,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K45",
+   "batch": "K44",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -11485,7 +11487,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K44",
+   "batch": "K43",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -11795,7 +11797,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K45",
+   "batch": "K44",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -12229,7 +12231,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K40",
+   "batch": "K39",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -12291,7 +12293,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K40",
+   "batch": "K39",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -12322,7 +12324,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K39",
+   "batch": "K38",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -12353,7 +12355,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K40",
+   "batch": "K39",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -12415,7 +12417,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K39",
+   "batch": "K38",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -12663,7 +12665,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K46",
+   "batch": "K45",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -12818,7 +12820,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K46",
+   "batch": "K45",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -13035,7 +13037,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K36",
+   "batch": "K35",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -13221,7 +13223,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K36",
+   "batch": "K35",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -13252,7 +13254,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K36",
+   "batch": "K35",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -13624,7 +13626,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K37",
+   "batch": "K36",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -13810,7 +13812,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K47",
+   "batch": "K46",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -13965,7 +13967,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K37",
+   "batch": "K36",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -14151,7 +14153,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K38",
+   "batch": "K37",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -14337,7 +14339,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K43",
+   "batch": "K42",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -14461,7 +14463,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K43",
+   "batch": "K42",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -14492,7 +14494,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K43",
+   "batch": "K42",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -14554,7 +14556,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K50",
+   "batch": "K49",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -14771,7 +14773,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K32",
+   "batch": "K31",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -14802,7 +14804,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K32",
+   "batch": "K31",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -14926,7 +14928,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K32",
+   "batch": "K31",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -15019,7 +15021,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K49",
+   "batch": "K48",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -15143,7 +15145,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K49",
+   "batch": "K48",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -15515,7 +15517,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K39",
+   "batch": "K38",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -15639,7 +15641,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K48",
+   "batch": "K47",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -15949,7 +15951,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K48",
+   "batch": "K47",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -16042,7 +16044,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K48",
+   "batch": "K47",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -16197,7 +16199,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K41",
+   "batch": "K40",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -16352,7 +16354,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K41",
+   "batch": "K40",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -16383,7 +16385,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K41",
+   "batch": "K40",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -16414,7 +16416,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K47",
+   "batch": "K46",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -16569,7 +16571,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K47",
+   "batch": "K46",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -16631,7 +16633,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K35",
+   "batch": "K34",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -16693,7 +16695,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K35",
+   "batch": "K34",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -16910,7 +16912,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K35",
+   "batch": "K34",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -16941,7 +16943,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K31",
+   "batch": "K30",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -16972,7 +16974,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K31",
+   "batch": "K30",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -17003,7 +17005,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K31",
+   "batch": "K30",
    "next": "profiel opstellen volgens contract v0.1"
   },
   {
@@ -17282,7 +17284,7 @@
    "uiStatus": "n.v.t. (geen profiel; bestaande kaart ongewijzigd)",
    "sha": null,
    "lastCheck": null,
-   "batch": "K37",
+   "batch": "K36",
    "next": "profiel opstellen volgens contract v0.1"
   }
  ]

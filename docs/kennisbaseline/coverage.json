@@ -8,16 +8,16 @@
   "withVoiceText": 301,
   "withAudio": 59,
   "withGuideReview": 65,
-  "withKnowledgeProfile": 8,
-  "fieldmarksShort": 434,
+  "withKnowledgeProfile": 11,
+  "fieldmarksShort": 433,
   "femaleText": 126,
   "juvText": 347,
   "redList": 87,
   "levels": [
    245,
-   285,
+   282,
    59,
-   8
+   11
   ]
  },
  "rows": [
@@ -101,7 +101,7 @@
     "photos": true
    },
    "C": {
-    "criticalMarks": 0
+    "criticalMarks": 2
    },
    "D": {
     "comparisons": 1,
@@ -134,9 +134,9 @@
     "guideReview": false,
     "guideReviewSources": 0,
     "lifeSourcePerSpecies": false,
-    "knowledgeProfile": false
+    "knowledgeProfile": true
    },
-   "level": 1
+   "level": 3
   },
   {
    "id": "sp003",
@@ -153,7 +153,7 @@
     "redList": null
    },
    "B": {
-    "fieldmarksChars": 64,
+    "fieldmarksChars": 86,
     "plumageFields": [
      "adult_m",
      "juv"
@@ -161,7 +161,7 @@
     "photos": true
    },
    "C": {
-    "criticalMarks": 0
+    "criticalMarks": 2
    },
    "D": {
     "comparisons": 1,
@@ -194,9 +194,9 @@
     "guideReview": false,
     "guideReviewSources": 0,
     "lifeSourcePerSpecies": false,
-    "knowledgeProfile": false
+    "knowledgeProfile": true
    },
-   "level": 1
+   "level": 3
   },
   {
    "id": "sp004",
@@ -221,7 +221,7 @@
     "photos": true
    },
    "C": {
-    "criticalMarks": 0
+    "criticalMarks": 2
    },
    "D": {
     "comparisons": 1,
@@ -254,9 +254,9 @@
     "guideReview": false,
     "guideReviewSources": 0,
     "lifeSourcePerSpecies": false,
-    "knowledgeProfile": false
+    "knowledgeProfile": true
    },
-   "level": 1
+   "level": 3
   },
   {
    "id": "sp005",

@@ -1,0 +1,2314 @@
+{
+ "sha": "71dbd95",
+ "generated": "2026-11-10",
+ "species": [
+  {
+   "id": "sp002",
+   "nameNL": "Houtduif",
+   "family": "Duiven",
+   "audited": true,
+   "batch": "M1",
+   "date": "2026-11-10",
+   "sha": "71dbd95",
+   "assets": [
+    {
+     "image": "/assets/species/sp002.webp",
+     "role": "Hoofdfoto",
+     "content": "Volwassen Houtduif zittend op paal, zijaanzicht; witte halsvlek, lichte iris, roze borst.",
+     "sexAge": "volwassen (halsvlek, lichte iris); geslacht niet op kleed",
+     "quality": "goed: scherp, vogel groot in beeld",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Stephan Sprinz",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp002-flight.webp",
+     "role": "In vlucht",
+     "content": "Vrij in de lucht, frontaal van onderen; vleugels gespreid, witte vleugelrand zichtbaar.",
+     "sexAge": "niet vastgesteld (neutraal label)",
+     "quality": "goed",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Stefan Berndtsson",
+      "annotations": []
+     },
+     "flight": {
+      "n": 6,
+      "id": "sp002",
+      "nameNL": "Houtduif",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 2.0"
+     }
+    }
+   ],
+   "corrections": [],
+   "missing": [
+    "Juveniel (zonder halsvlek, wel vleugelband)",
+    "Vluchtfoto van boven met volledige witte vleugelband (wenselijk)"
+   ],
+   "uncertain": [],
+   "sexPolicy": "Geslachten gelijk; geen Mannetje/Vrouwtje-vakken (bron: VB_HOUT).",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "PARTIALLY TESTED",
+    "browser": "VERIFIED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": false,
+   "knowledge": {
+    "profile": true,
+    "critical": 2,
+    "decisive": 2,
+    "notDecisive": [],
+    "open": [
+     "Juveniel- en vluchtvergelijking met Stadsduif nog niet uit een Nederlandse bron uitgewerkt.",
+     "Geen gidsfoto van een juveniel (positie ontbreekt)."
+    ],
+    "discrepancies": 1
+   },
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium (Playwright)",
+    "photos": 2,
+    "sections": [
+     "Hoofdfoto",
+     "In vlucht"
+    ],
+    "flight": [
+     "/assets/species/plumage/sp002-flight.webp"
+    ],
+    "checks": "SAB-01..07"
+   },
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
+  },
+  {
+   "id": "sp003",
+   "nameNL": "Holenduif",
+   "family": "Duiven",
+   "audited": true,
+   "batch": "M1",
+   "date": "2026-11-10",
+   "sha": "71dbd95",
+   "assets": [
+    {
+     "image": "/assets/species/sp003.webp",
+     "role": "Hoofdfoto",
+     "content": "Holenduif in gras, zijaanzicht; groen glanzende halsvlek, korte zwarte vleugelstrepen, donker oog.",
+     "sexAge": "volwassen-ogend; geslacht niet op kleed",
+     "quality": "goed",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Chris Cant from Cumbria, UK",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp003-flight.webp",
+     "role": "Overige herkenningsfoto's (was: In vlucht)",
+     "content": "Vogel zet af vanaf de grond; poten raken nog de grond. Vleugelpatroon wel zichtbaar.",
+     "sexAge": "niet vastgesteld",
+     "quality": "matig: 485 px, zacht",
+     "verdict": "uit-rol",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Åsa Berndtsson",
+      "annotations": []
+     },
+     "flight": {
+      "n": 5,
+      "id": "sp003",
+      "nameNL": "Holenduif",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "opvliegen",
+      "quality": "matig",
+      "decision": "uit-rol",
+      "target": "overig",
+      "newLabel": "Opvliegend vanaf de grond",
+      "newNote": "Toont de grijze vleugels met donkere randen, zonder brede witte vleugelband.",
+      "reason": "Poten raken nog de grond; vogel zet af. Ook laag opgelost (485 px).",
+      "airborne": false,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 2.0"
+     }
+    }
+   ],
+   "corrections": [
+    "Opvliegende foto uit 'In vlucht' (eigenaarsmelding) — label 'Opvliegend vanaf de grond' (vluchtcontrole ronde 1).",
+    "Veldkenmerken en kleedtekst: \"zwarte vleugelpunten\" → geen wit in hals/vleugel, twee korte zwarte vleugelstrepen, brede zwarte staartband (VB_HOLEN, RSPB_SD).",
+    "Zang: \"oe-oe-oe steeds sneller\" → eentonige reeks tweelettergrepige roepen (VB_HVH).",
+    "Lengte 30–33 → 28–32 cm; broedduur 16–18 → 16–17 dagen; nestjongen 27–28 → ca. 24 dagen (VB_HOLEN)."
+   ],
+   "missing": [
+    "In vlucht (geen echte vluchtfoto)",
+    "Juveniel"
+   ],
+   "uncertain": [],
+   "sexPolicy": "Geslachten gelijk; geen Mannetje/Vrouwtje-vakken (bron: VB_HOLEN).",
+   "previous": "Fotobaseline batch 01 gaf VERIFIED inclusief de opvliegende vluchtfoto; die uitslag is vervallen.",
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "PARTIALLY TESTED",
+    "browser": "VERIFIED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": false,
+   "knowledge": {
+    "profile": true,
+    "critical": 2,
+    "decisive": 1,
+    "notDecisive": [
+     "Stuit"
+    ],
+    "open": [
+     "Geen goede vluchtfoto: de vorige 'vluchtfoto' toonde een opvliegende vogel en is uit de vluchtrol gehaald (positie ontbreekt).",
+     "Geen gidsfoto van een juveniel.",
+     "Kleedvariatie van stadsduiven maakt de stuit niet doorslaggevend."
+    ],
+    "discrepancies": 0
+   },
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium (Playwright)",
+    "photos": 2,
+    "sections": [
+     "Hoofdfoto",
+     "Overige herkenningsfoto's"
+    ],
+    "flight": [],
+    "checks": "SAB-01..07"
+   },
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
+  },
+  {
+   "id": "sp004",
+   "nameNL": "Turkse Tortel",
+   "family": "Duiven",
+   "audited": true,
+   "batch": "M1",
+   "date": "2026-11-10",
+   "sha": "71dbd95",
+   "assets": [
+    {
+     "image": "/assets/species/sp004.webp",
+     "role": "Hoofdfoto",
+     "content": "Turkse Tortel op sparrentop tegen blauwe lucht; zwarte halsband, rood oog.",
+     "sexAge": "volwassen (scherpe halsband); geslacht niet vast te stellen",
+     "quality": "voldoende: scherp, maar vogel vrij klein in beeld",
+     "verdict": "voorwaardelijk",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Jakub Hałun",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp004-flight.webp",
+     "role": "In vlucht",
+     "content": "Vrij in de lucht, zijaanzicht van onderen; staartpatroon (donkere basis, witte eindrand) zichtbaar.",
+     "sexAge": "niet vastgesteld",
+     "quality": "goed",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Florian Pépellin",
+      "annotations": []
+     },
+     "flight": {
+      "n": 7,
+      "id": "sp004",
+      "nameNL": "Turkse Tortel",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0"
+     }
+    }
+   ],
+   "corrections": [
+    "Broedsels per jaar 3–5 → 2–5 (VB_TT)."
+   ],
+   "missing": [
+    "Juveniel (zonder of met vage halsband)",
+    "Hoofdfoto met grotere vogel (wenselijk)"
+   ],
+   "uncertain": [],
+   "sexPolicy": "Geslacht vaak niet op kleed te bepalen (BZ_CD); geen geslachtsvakken.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "PARTIALLY TESTED",
+    "browser": "VERIFIED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": false,
+   "knowledge": {
+    "profile": true,
+    "critical": 2,
+    "decisive": 1,
+    "notDecisive": [
+     "Staart in vlucht"
+    ],
+    "open": [
+     "Onderscheid met Lachduif (ontsnapte vogels) nog uit een bron uitwerken.",
+     "Spanwijdte en gewicht niet in de geraadpleegde Nederlandse bron.",
+     "Geen gidsfoto van een juveniel; hoofdfoto toont de vogel vrij klein in beeld."
+    ],
+    "discrepancies": 0
+   },
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium (Playwright)",
+    "photos": 2,
+    "sections": [
+     "Hoofdfoto",
+     "In vlucht"
+    ],
+    "flight": [
+     "/assets/species/plumage/sp004-flight.webp"
+    ],
+    "checks": "SAB-01..07"
+   },
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
+  },
+  {
+   "id": "sp005",
+   "nameNL": "Buizerd",
+   "family": "Haviken",
+   "audited": true,
+   "batch": "M1",
+   "date": "2026-11-10",
+   "sha": "71dbd95",
+   "assets": [
+    {
+     "image": "/assets/species/plumage/sp005-male-rest.webp",
+     "role": "Hoofdfoto",
+     "content": "Lichte Buizerd op kabel, frontaal; donkere iris, gestreepte borst. Watermerk van de maker in beeld.",
+     "sexAge": "volwassen (donkere iris; bron: Life Stage Adult). Bron noemt 'Male', maar geslacht niet op kleed te zien: terecht zonder geslachtslabel.",
+     "quality": "goed",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY SA · (c) Gianluca Congi🪶🦆🌲, some rights reserved (CC BY-SA)",
+      "annotations": [
+       "Life Stage: Adult",
+       "Sex: Male",
+       "Alive or Dead: Alive",
+       "Evidence of Presence: Organism"
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/sp005.webp",
+     "role": "Overige herkenningsfoto's",
+     "content": "Donker gekleurde Buizerd op tak; laat de kleedvariatie zien.",
+     "sexAge": "niet vastgesteld",
+     "quality": "goed",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp005-juv.webp",
+     "role": "Juveniel",
+     "content": "Lichte jonge Buizerd in vlucht van onderen; lichte iris, gelijkmatig gebandeerde staart.",
+     "sexAge": "juveniel (bron: Life Stage Juvenile; lichte iris consistent)",
+     "quality": "goed",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) rober025, some rights reserved (CC BY)",
+      "annotations": [
+       "Life Stage: Juvenile"
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp005-adult_m.webp",
+     "role": "In vlucht (Volwassen)",
+     "content": "Vrij in de lucht van onderen; brede vleugels, gebandeerde staart met donkerder eindband.",
+     "sexAge": "volwassen (bron: Life Stage Adult); kaart toont geen geslacht ondanks registersleutel adult_m",
+     "quality": "goed",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Roy Lowry, some rights reserved (CC BY)",
+      "annotations": [
+       "Life Stage: Adult",
+       "Alive or Dead: Alive"
+      ]
+     },
+     "flight": {
+      "n": 33,
+      "id": "sp005",
+      "nameNL": "Buizerd",
+      "registry": "GUIDE_PLUMAGE.adult_m",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY"
+     }
+    },
+    {
+     "image": "/assets/species/plumage/sp005-male-flight.webp",
+     "role": "In vlucht",
+     "content": "Donkere Buizerd vrij in de lucht, schuin van onderen.",
+     "sexAge": "volwassen volgens bron (Life Stage Adult); niet uit beeld te bevestigen",
+     "quality": "matig: onscherp bij vergroting",
+     "verdict": "voorwaardelijk",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY SA · (c) Simone Bocca, some rights reserved (CC BY-SA)",
+      "annotations": [
+       "Life Stage: Adult",
+       "Sex: Male",
+       "Alive or Dead: Alive"
+      ]
+     },
+     "flight": {
+      "n": 34,
+      "id": "sp005",
+      "nameNL": "Buizerd",
+      "registry": "GUIDE_POSES[1]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "matig",
+      "decision": "voorwaardelijk",
+      "target": null,
+      "newNote": null,
+      "reason": "Mijlpaal 1 (aangescherpt): echte vlucht, maar onscherp bij vergroting; vervanging gewenst. Leeftijd \"volwassen\" steunt op de iNaturalist-annotatie (Life Stage: Adult, bronaudit 09-11); label blijft.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY SA",
+      "history": [
+       {
+        "class": "vlucht",
+        "quality": "goed",
+        "decision": "goedgekeurd",
+        "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+        "date": "2026-11-10",
+        "round": "vluchtcontrole ronde 1"
+       }
+      ]
+     }
+    },
+    {
+     "image": "/assets/species/plumage/sp005-female-flight.webp",
+     "role": "In vlucht",
+     "content": "Lichte Buizerd vrij in de lucht van onderen; brede donkere achterrand van de vleugel.",
+     "sexAge": "volwassen (bron: Life Stage Adult; donkere achterrand consistent)",
+     "quality": "voldoende",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY SA · (c) Simone Bocca, some rights reserved (CC BY-SA)",
+      "annotations": [
+       "Life Stage: Adult",
+       "Sex: Female",
+       "Alive or Dead: Alive"
+      ]
+     },
+     "flight": {
+      "n": 35,
+      "id": "sp005",
+      "nameNL": "Buizerd",
+      "registry": "GUIDE_POSES[2]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY SA"
+     }
+    }
+   ],
+   "corrections": [],
+   "missing": [],
+   "uncertain": [
+    "Registersleutels 'adult_m' en bestandsnamen 'male/female' suggereren geslacht; de kaart toont dat niet. Hernoemen is cosmetisch en niet uitgevoerd."
+   ],
+   "sexPolicy": "Geslacht niet op kleed te zien; alle foto's zonder geslachtslabel (bronaudit 09-11).",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "PARTIALLY TESTED",
+    "browser": "VERIFIED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": false,
+   "knowledge": {
+    "profile": true,
+    "critical": 6,
+    "decisive": 0,
+    "notDecisive": [
+     "Kop",
+     "Vleugelhouding en -slag",
+     "Staart",
+     "Iris",
+     "Kleur",
+     "Geluid"
+    ],
+    "open": [
+     "Onderscheid met Ruigpootbuizerd uit een bron uitwerken.",
+     "Leefgebied niet opnieuw gecontroleerd."
+    ],
+    "discrepancies": 1
+   },
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium (Playwright)",
+    "photos": 6,
+    "sections": [
+     "Hoofdfoto",
+     "Verenkleed",
+     "In vlucht",
+     "Overige herkenningsfoto's"
+    ],
+    "flight": [
+     "/assets/species/plumage/sp005-adult_m.webp",
+     "/assets/species/plumage/sp005-male-flight.webp",
+     "/assets/species/plumage/sp005-female-flight.webp"
+    ],
+    "checks": "SAB-01..07"
+   },
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
+  },
+  {
+   "id": "sp006",
+   "nameNL": "Sperwer",
+   "family": "Haviken",
+   "audited": true,
+   "batch": "M1",
+   "date": "2026-11-10",
+   "sha": "71dbd95",
+   "assets": [
+    {
+     "image": "/assets/species/plumage/sp006-hero-male.webp",
+     "role": "Hoofdfoto",
+     "content": "Volwassen mannetje op stronk met geheven vleugels; blauwgrijze bovendelen, oranje wangen en flanken.",
+     "sexAge": "volwassen mannetje (bron: 'Male'; kleed bevestigt)",
+     "quality": "goed; vleugels bedekken deel van de rug",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "geverifieerde import 09-11 (SHA-1 c6bec5e043…), CC BY 2.0 · caroline legg",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/sp006.webp",
+     "role": "Mannetje",
+     "content": "Volwassen mannetje zittend, zijaanzicht; blauwgrijze rug, roestkleurige onderzijde.",
+     "sexAge": "volwassen mannetje (bron: 'Male Sparrowhawk'; kleed bevestigt)",
+     "quality": "goed",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · caroline legg",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp006-adult_f.webp",
+     "role": "Vrouwtje",
+     "content": "Vrouwtje met gespreide vleugels op stronk; grijsbruine bovendelen, fijn gebandeerde borst, witte wenkbrauw.",
+     "sexAge": "volwassen vrouwtje (bron: 'Female Sparrowhawk'; kleed bevestigt)",
+     "quality": "goed",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · caroline legg",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp006-juv.webp",
+     "role": "Juveniel",
+     "content": "Jonge Sperwer op gras; bruine bovendelen, grove bruine dwarsbandering.",
+     "sexAge": "juveniel (bron: 'Female Juvenile Sparrowhawk')",
+     "quality": "goed",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · caroline legg",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp006-flight.webp",
+     "role": "In vlucht",
+     "content": "Vrij in de lucht van onderen; korte brede vleugels, gebandeerde staart met rechte hoeken, roestige onderzijde.",
+     "sexAge": "niet vastgesteld op de kaart (neutraal label)",
+     "quality": "goed",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
+      "annotations": []
+     },
+     "flight": {
+      "n": 44,
+      "id": "sp006",
+      "nameNL": "Sperwer",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 4.0"
+     }
+    }
+   ],
+   "corrections": [],
+   "missing": [
+    "Vrouwtje in vlucht (wenselijk)"
+   ],
+   "uncertain": [],
+   "sexPolicy": "Geslachten verschillen duidelijk (VB_SPERWER_MV); mannetje en vrouwtje getoond met bronbevestiging.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "PARTIALLY TESTED",
+    "browser": "VERIFIED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": false,
+   "knowledge": {
+    "profile": true,
+    "critical": 6,
+    "decisive": 1,
+    "notDecisive": [
+     "Staartpunt",
+     "Kop en vleugels in vlucht",
+     "Vliegstijl",
+     "Roep",
+     "Grootte"
+    ],
+    "open": [
+     "Leeftijdsbepaling in vlucht nog uit een bron beschrijven."
+    ],
+    "discrepancies": 1
+   },
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium (Playwright)",
+    "photos": 5,
+    "sections": [
+     "Hoofdfoto",
+     "Verenkleed",
+     "In vlucht"
+    ],
+    "flight": [
+     "/assets/species/plumage/sp006-flight.webp"
+    ],
+    "checks": "SAB-01..07"
+   },
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
+  },
+  {
+   "id": "sp007",
+   "nameNL": "Havik",
+   "family": "Haviken",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp008",
+   "nameNL": "Torenvalk",
+   "family": "Valken",
+   "audited": true,
+   "batch": "M1",
+   "date": "2026-11-10",
+   "sha": "71dbd95",
+   "assets": [
+    {
+     "image": "/assets/species/plumage/sp008-hero-male.webp",
+     "role": "Hoofdfoto",
+     "content": "Mannetje op boogvormige paal, schuin frontaal; grijze kop, roodbruine gevlekte rug.",
+     "sexAge": "volwassen mannetje (bron: 'Male Common Kestrel'; kleed bevestigt)",
+     "quality": "voldoende: scherp, vogel middelgroot in beeld",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "geverifieerde import 09-11 (SHA-1 9041286b8d…), CC BY 4.0 · Marie-Lan Taÿ Pamart",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/sp008.webp",
+     "role": "Mannetje",
+     "content": "Mannetje op boomstam, zijaanzicht; grijze kop en staart, roestbruine rug met vlekken.",
+     "sexAge": "mannetje (kleed: grijze kop en staart)",
+     "quality": "goed",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Jakub Hałun",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp008-adult_f.webp",
+     "role": "Vrouwtje",
+     "content": "Vrouwtje op tak; bruine kop, gevlekte borst, gebandeerde staart.",
+     "sexAge": "vrouwtje (bron: 'female'; kleed bevestigt)",
+     "quality": "goed",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp008-juv.webp",
+     "role": "Juveniel",
+     "content": "Jonge Torenvalk op tak; bruine kop en rug, gestreepte borst.",
+     "sexAge": "juveniel volgens bron ('Juvenile'); visueel lastig van vrouwtje te scheiden",
+     "quality": "goed",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · caroline legg",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp008-male-flight.webp",
+     "role": "In vlucht (Mannetje)",
+     "content": "Vrij in de lucht van onderen; spitse vleugels, grijze ongebandeerde staart met brede zwarte eindband.",
+     "sexAge": "mannetje: visueel (grijze ongebandeerde staart met zwarte eindband); bron noemt geen geslacht",
+     "quality": "goed",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Zeynel Cebeci",
+      "annotations": []
+     },
+     "flight": {
+      "n": 124,
+      "id": "sp008",
+      "nameNL": "Torenvalk",
+      "registry": "GUIDE_POSES[2]",
+      "sexLabel": "male",
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0"
+     }
+    },
+    {
+     "image": "/assets/species/plumage/sp008-flight.webp",
+     "role": "In vlucht (biddend)",
+     "content": "Biddend, frontaal van onderen; gespreide vleugels en waaierstaart.",
+     "sexAge": "niet vastgesteld (neutraal label)",
+     "quality": "goed",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Rolf Dietrich Brecher from Germany",
+      "annotations": []
+     },
+     "flight": {
+      "n": 123,
+      "id": "sp008",
+      "nameNL": "Torenvalk",
+      "registry": "GUIDE_POSES[1]",
+      "sexLabel": null,
+      "class": "bidden",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Biddend in de lucht; typerende houding voor deze soort.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 2.0"
+     }
+    }
+   ],
+   "corrections": [],
+   "missing": [],
+   "uncertain": [
+    "Geslacht van de mannetje-vluchtfoto steunt op beeldkenmerken, niet op de bron (REVIEW REQUIRED voor onafhankelijke bevestiging)."
+   ],
+   "sexPolicy": "Geslachten verschillen (VB_TOREN, EB_KES); mannetje en vrouwtje getoond.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "PARTIALLY TESTED",
+    "rights": "VERIFIED",
+    "knowledge": "PARTIALLY TESTED",
+    "browser": "VERIFIED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 2,
+    "decisive": 1,
+    "notDecisive": [
+     "Silhouet en jachtgedrag"
+    ],
+    "open": [
+     "Juveniel kleed en het onderscheid juveniel/vrouwtje uit een bron beschrijven.",
+     "Uitgewerkte vergelijking met Boomvalk en Smelleken ontbreekt."
+    ],
+    "discrepancies": 0
+   },
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium (Playwright)",
+    "photos": 6,
+    "sections": [
+     "Hoofdfoto",
+     "Verenkleed",
+     "In vlucht"
+    ],
+    "flight": [
+     "/assets/species/plumage/sp008-male-flight.webp",
+     "/assets/species/plumage/sp008-flight.webp"
+    ],
+    "checks": "SAB-01..07"
+   },
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review (ChatGPT)"
+  },
+  {
+   "id": "sp009",
+   "nameNL": "Slechtvalk",
+   "family": "Valken",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp016",
+   "nameNL": "Grote Bonte Specht",
+   "family": "Spechten",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp017",
+   "nameNL": "Kleine Bonte Specht",
+   "family": "Spechten",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp018",
+   "nameNL": "Zwarte Specht",
+   "family": "Spechten",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp019",
+   "nameNL": "Groene Specht",
+   "family": "Spechten",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp020",
+   "nameNL": "Middelste Bonte Specht",
+   "family": "Spechten",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp021",
+   "nameNL": "Ekster",
+   "family": "Kraaien",
+   "audited": true,
+   "batch": "M1",
+   "date": "2026-11-10",
+   "sha": "71dbd95",
+   "assets": [
+    {
+     "image": "/assets/species/sp021.webp",
+     "role": "Hoofdfoto",
+     "content": "Ekster op tak; zwart-wit kleed, glanzende staart en blauwe vleugelglans.",
+     "sexAge": "volwassen-ogend; geslachten gelijk",
+     "quality": "goed",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp021-flight.webp",
+     "role": "In vlucht",
+     "content": "Vrij in de lucht boven water; gespreide zwart-witte vleugels met witte handvleugel, lange staart. Geen contact met de steen rechtsonder.",
+     "sexAge": "niet vastgesteld",
+     "quality": "goed",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
+      "annotations": []
+     },
+     "flight": {
+      "n": 53,
+      "id": "sp021",
+      "nameNL": "Ekster",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 4.0"
+     }
+    }
+   ],
+   "corrections": [
+    "Lengte 44–46 → 46–50 cm; broedduur 17–18 → 17–24 dagen; nestjongen 24–30 → 22–30 dagen (VB_EKSTER)."
+   ],
+   "missing": [
+    "Juveniel (kortere staart)"
+   ],
+   "uncertain": [],
+   "sexPolicy": "Geslachten gelijk; geen geslachtsvakken.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "PARTIALLY TESTED",
+    "browser": "VERIFIED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": false,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Kleedpatroon en staart"
+    ],
+    "open": [
+     "Juveniel kleed en leefgebied niet opnieuw gecontroleerd tegen een bron.",
+     "Vergelijking met Gaai is bestaande Birdspot-inhoud, niet opnieuw gecontroleerd.",
+     "Kleedpatroon is in Nederland vrijwel onmiskenbaar, maar staat op \"Helpt\" tot een tweede, onafhankelijke bron is vastgelegd (regel doorslaggevend, 10-11-2026)."
+    ],
+    "discrepancies": 0
+   },
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium (Playwright)",
+    "photos": 2,
+    "sections": [
+     "Hoofdfoto",
+     "In vlucht"
+    ],
+    "flight": [
+     "/assets/species/plumage/sp021-flight.webp"
+    ],
+    "checks": "SAB-01..07"
+   },
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
+  },
+  {
+   "id": "sp022",
+   "nameNL": "Zwarte Kraai",
+   "family": "Kraaien",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp025",
+   "nameNL": "Kauw",
+   "family": "Kraaien",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp026",
+   "nameNL": "Gaai",
+   "family": "Kraaien",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp029",
+   "nameNL": "Koolmees",
+   "family": "Mezen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp030",
+   "nameNL": "Pimpelmees",
+   "family": "Mezen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp031",
+   "nameNL": "Matkop",
+   "family": "Mezen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp032",
+   "nameNL": "Glanskop",
+   "family": "Mezen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp033",
+   "nameNL": "Kuifmees",
+   "family": "Mezen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp034",
+   "nameNL": "Staartmees",
+   "family": "Staartmezen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp035",
+   "nameNL": "Vink",
+   "family": "Vinken",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp036",
+   "nameNL": "Groenling",
+   "family": "Vinken",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp037",
+   "nameNL": "Putter",
+   "family": "Vinken",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp038",
+   "nameNL": "Sijs",
+   "family": "Vinken",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp039",
+   "nameNL": "Kneu",
+   "family": "Vinken",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp040",
+   "nameNL": "Goudvink",
+   "family": "Vinken",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp041",
+   "nameNL": "Appelvink",
+   "family": "Vinken",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp042",
+   "nameNL": "Roodmus",
+   "family": "Vinken",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp043",
+   "nameNL": "Huismus",
+   "family": "Mussen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp044",
+   "nameNL": "Ringmus",
+   "family": "Mussen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp045",
+   "nameNL": "Merel",
+   "family": "Lijsters",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp046",
+   "nameNL": "Zanglijster",
+   "family": "Lijsters",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp047",
+   "nameNL": "Kramsvogel",
+   "family": "Lijsters",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp048",
+   "nameNL": "Koperwiek",
+   "family": "Lijsters",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp049",
+   "nameNL": "Grote Lijster",
+   "family": "Lijsters",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp050",
+   "nameNL": "Roodborst",
+   "family": "Vliegenvangers",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp051",
+   "nameNL": "Zwarte Roodstaart",
+   "family": "Vliegenvangers",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp053",
+   "nameNL": "Roodborsttapuit",
+   "family": "Vliegenvangers",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp054",
+   "nameNL": "Heggenmus",
+   "family": "Heggenmus",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp055",
+   "nameNL": "Winterkoning",
+   "family": "Winterkoningen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp056",
+   "nameNL": "Tjiftjaf",
+   "family": "Boszangers",
+   "audited": true,
+   "batch": "M1",
+   "date": "2026-11-10",
+   "sha": "71dbd95",
+   "assets": [
+    {
+     "image": "/assets/species/sp056.webp",
+     "role": "Hoofdfoto",
+     "content": "Tjiftjaf op dunne tak; donkere poten, korte handpenprojectie.",
+     "sexAge": "niet vast te stellen",
+     "quality": "goed",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp056-flight.webp",
+     "role": "Overige herkenningsfoto's (was: In vlucht)",
+     "content": "Fladderend tussen rietstengels met gespreide vleugels; contact met stengels niet uit te sluiten.",
+     "sexAge": "niet vastgesteld",
+     "quality": "goed",
+     "verdict": "uit-rol",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Falco2022",
+      "annotations": []
+     },
+     "flight": {
+      "n": 4,
+      "id": "sp056",
+      "nameNL": "Tjiftjaf",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "opvliegen",
+      "quality": "goed",
+      "decision": "uit-rol",
+      "target": "overig",
+      "newLabel": "Fladderend tussen rietstengels",
+      "newNote": "Geen bruikbare vluchtfoto: vogel tussen planten, afzetten niet uit te sluiten. Vluchtpositie ontbreekt.",
+      "reason": "Mijlpaal 1 (aangescherpt): fladderend tussen rietstengels valt onder de eigen klasse \"opvliegen / tussen planten\"; contact met de stengels niet uit te sluiten. Uit \"In vlucht\"; vluchtpositie geregistreerd als ontbrekend.",
+      "airborne": null,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0",
+      "history": [
+       {
+        "class": "vlucht",
+        "quality": "goed",
+        "decision": "voorwaardelijk",
+        "reason": "Fladderend tussen rietstengels; geen contact zichtbaar maar afzetten niet uit te sluiten. REVIEW REQUIRED.",
+        "date": "2026-11-10",
+        "round": "vluchtcontrole ronde 1"
+       }
+      ]
+     }
+    }
+   ],
+   "corrections": [
+    "Uit 'In vlucht' gehaald: valt onder de klasse opvliegen/tussen planten (mijlpaal 1)."
+   ],
+   "missing": [
+    "In vlucht",
+    "Juveniel/najaarsvogel"
+   ],
+   "uncertain": [],
+   "sexPolicy": "Geslachten gelijk.",
+   "previous": "Fotobaseline batch 01 gaf VERIFIED met deze foto als vluchtfoto; vervallen.",
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "PARTIALLY TESTED",
+    "browser": "VERIFIED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": false,
+   "knowledge": {
+    "profile": true,
+    "critical": 5,
+    "decisive": 1,
+    "notDecisive": [
+     "Handpenprojectie",
+     "Staartbeweging",
+     "Poten",
+     "Seizoen"
+    ],
+    "open": [
+     "Spanwijdte en gewicht niet opnieuw gecontroleerd.",
+     "Iberische Tjiftjaf heeft nog geen eigen vergelijking."
+    ],
+    "discrepancies": 0
+   },
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium (Playwright)",
+    "photos": 2,
+    "sections": [
+     "Hoofdfoto",
+     "Overige herkenningsfoto's"
+    ],
+    "flight": [],
+    "checks": "SAB-01..07"
+   },
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
+  },
+  {
+   "id": "sp057",
+   "nameNL": "Fitis",
+   "family": "Boszangers",
+   "audited": true,
+   "batch": "M1",
+   "date": "2026-11-10",
+   "sha": "71dbd95",
+   "assets": [
+    {
+     "image": "/assets/species/sp057.webp",
+     "role": "Hoofdfoto",
+     "content": "Zingende Fitis op tak; lichte poten, geelwitte onderzijde, lange handpenprojectie.",
+     "sexAge": "zingend, dus waarschijnlijk mannetje; niet als zodanig gelabeld",
+     "quality": "goed",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.5 · Andreas Trepte",
+      "annotations": []
+     },
+     "flight": null
+    }
+   ],
+   "corrections": [],
+   "missing": [
+    "In vlucht",
+    "Juveniel (gelere najaarsvogel)"
+   ],
+   "uncertain": [],
+   "sexPolicy": "Geslachten gelijk.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "PARTIALLY TESTED",
+    "browser": "VERIFIED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": false,
+   "knowledge": {
+    "profile": true,
+    "critical": 5,
+    "decisive": 1,
+    "notDecisive": [
+     "Handpenprojectie",
+     "Kop",
+     "Poten",
+     "Seizoen"
+    ],
+    "open": [
+     "Spanwijdte en gewicht niet opnieuw gecontroleerd.",
+     "Verschil met Iberische Tjiftjaf alleen als waarschuwing opgenomen."
+    ],
+    "discrepancies": 0
+   },
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium (Playwright)",
+    "photos": 1,
+    "sections": [
+     "Hoofdfoto"
+    ],
+    "flight": [],
+    "checks": "SAB-01..07"
+   },
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
+  },
+  {
+   "id": "sp058",
+   "nameNL": "Fluiter",
+   "family": "Boszangers",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp059",
+   "nameNL": "Zwartkop",
+   "family": "Zangers",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp060",
+   "nameNL": "Tuinfluiter",
+   "family": "Zangers",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp061",
+   "nameNL": "Grasmus",
+   "family": "Zangers",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp063",
+   "nameNL": "Goudhaantje",
+   "family": "Goudhaantjes",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp064",
+   "nameNL": "Vuurgoudhaan",
+   "family": "Goudhaantjes",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp065",
+   "nameNL": "Boomklever",
+   "family": "Boomklevers",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp066",
+   "nameNL": "Boomkruiper",
+   "family": "Boomkruipers",
+   "audited": true,
+   "batch": "M1",
+   "date": "2026-11-10",
+   "sha": "71dbd95",
+   "assets": [
+    {
+     "image": "/assets/species/sp066.webp",
+     "role": "Hoofdfoto",
+     "content": "Boomkruiper tegen stam; gestreepte bruine rug, gebogen snavel, steunstaart.",
+     "sexAge": "niet vast te stellen",
+     "quality": "matig: vogel klein in beeld en wat zacht; vleugelband (kritisch kenmerk) niet scherp",
+     "verdict": "voorwaardelijk",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Jan Matthies",
+      "annotations": []
+     },
+     "flight": null
+    }
+   ],
+   "corrections": [],
+   "missing": [
+    "In vlucht",
+    "Juveniel",
+    "Hoofdfoto waarop het vleugelbandpatroon leesbaar is"
+   ],
+   "uncertain": [
+    "Boomkruiper en Taigaboomkruiper zijn op deze foto niet zelfstandig te onderscheiden; soortbepaling steunt op de bron (Commons-titel 'Gartenbaumläufer')."
+   ],
+   "sexPolicy": "Geslachten gelijk.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "PARTIALLY TESTED",
+    "browser": "VERIFIED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": false,
+   "knowledge": {
+    "profile": true,
+    "critical": 6,
+    "decisive": 0,
+    "notDecisive": [
+     "Roep",
+     "Zang",
+     "Vleugelbandpatroon",
+     "Alula",
+     "Flanken en wenkbrauw",
+     "Snavel en achternagel"
+    ],
+    "open": [
+     "Nederlandse status en aantallen niet opnieuw gecontroleerd (Sovon/Vogelbescherming).",
+     "Roep en zang van de Taigaboomkruiper nog uit een bron beschrijven.",
+     "Hoofdfoto toont de vleugelband niet scherp; soortbepaling van die foto steunt op bronmetadata (fotobaseline batch 01).",
+     "Volledige tekst van het British Birds-artikel niet gelezen."
+    ],
+    "discrepancies": 0
+   },
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium (Playwright)",
+    "photos": 1,
+    "sections": [
+     "Hoofdfoto"
+    ],
+    "flight": [],
+    "checks": "SAB-01..07"
+   },
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
+  },
+  {
+   "id": "sp067",
+   "nameNL": "Taigaboomkruiper",
+   "family": "Boomkruipers",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp068",
+   "nameNL": "Witte Kwikstaart",
+   "family": "Kwikstaarten",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp069",
+   "nameNL": "Gele Kwikstaart",
+   "family": "Kwikstaarten",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp070",
+   "nameNL": "Veldleeuwerik",
+   "family": "Leeuweriken",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp072",
+   "nameNL": "Graspieper",
+   "family": "Piepers",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp075",
+   "nameNL": "IJsvogel",
+   "family": "IJsvogels",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp077",
+   "nameNL": "Fuut",
+   "family": "Futen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp078",
+   "nameNL": "Meerkoet",
+   "family": "Rallen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp079",
+   "nameNL": "Waterhoen",
+   "family": "Rallen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp081",
+   "nameNL": "Blauwe Reiger",
+   "family": "Reigers",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp082",
+   "nameNL": "Kleine Zilverreiger",
+   "family": "Reigers",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp083",
+   "nameNL": "Grote Zilverreiger",
+   "family": "Reigers",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp084",
+   "nameNL": "Purperreiger",
+   "family": "Reigers",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp085",
+   "nameNL": "Kwak",
+   "family": "Reigers",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp086",
+   "nameNL": "Grauwe Gans",
+   "family": "Ganzen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp089",
+   "nameNL": "Wilde Eend",
+   "family": "Eenden",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp090",
+   "nameNL": "Slobeend",
+   "family": "Eenden",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp091",
+   "nameNL": "Wintertaling",
+   "family": "Eenden",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp092",
+   "nameNL": "Kuifeend",
+   "family": "Eenden",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp094",
+   "nameNL": "Zilvermeeuw",
+   "family": "Meeuwen",
+   "audited": true,
+   "batch": "M1",
+   "date": "2026-11-10",
+   "sha": "71dbd95",
+   "assets": [
+    {
+     "image": "/assets/species/sp094.webp",
+     "role": "Hoofdfoto",
+     "content": "Volwassen Zilvermeeuw op ijs; grijze mantel, witte kop, roze poten, zwarte vleugelpunten.",
+     "sexAge": "volwassen (adult kleed)",
+     "quality": "voldoende: scherp, vogel vrij klein in beeld",
+     "verdict": "voorwaardelijk",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Stephan Sprinz",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp094-flight.webp",
+     "role": "In vlucht",
+     "content": "Volwassen vogel vrij in de lucht boven zee; lichtgrijze bovenvleugel, zwarte vleugelpunten met witte vlekken.",
+     "sexAge": "volwassen; geslacht niet vastgesteld",
+     "quality": "goed",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.5 · Andreas Trepte",
+      "annotations": []
+     },
+     "flight": {
+      "n": 70,
+      "id": "sp094",
+      "nameNL": "Zilvermeeuw",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.5"
+     }
+    }
+   ],
+   "corrections": [
+    "Lengte 54–60 → 55–67 cm; spanwijdte 123–148 → 125–155 cm (VB_ZILV)."
+   ],
+   "missing": [
+    "Juveniel / eerste kalenderjaar",
+    "Onvolwassen kleden (leeftijdsreeks)"
+   ],
+   "uncertain": [],
+   "sexPolicy": "Geslachten gelijk.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "PARTIALLY TESTED",
+    "browser": "VERIFIED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": false,
+   "knowledge": {
+    "profile": true,
+    "critical": 3,
+    "decisive": 0,
+    "notDecisive": [
+     "Pootkleur",
+     "Tertials eerstejaars",
+     "Leeftijd"
+    ],
+    "open": [
+     "Snavel- en oogkleur per leeftijd uit een bron beschrijven.",
+     "Onderscheid met Pontische Meeuw uitwerken.",
+     "Kopstreping in winterkleed is in de bron alleen als foto te zien."
+    ],
+    "discrepancies": 0
+   },
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium (Playwright)",
+    "photos": 2,
+    "sections": [
+     "Hoofdfoto",
+     "In vlucht"
+    ],
+    "flight": [
+     "/assets/species/plumage/sp094-flight.webp"
+    ],
+    "checks": "SAB-01..07"
+   },
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
+  },
+  {
+   "id": "sp095",
+   "nameNL": "Kleine Mantelmeeuw",
+   "family": "Meeuwen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp096",
+   "nameNL": "Stormmeeuw",
+   "family": "Meeuwen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp097",
+   "nameNL": "Kokmeeuw",
+   "family": "Meeuwen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp098",
+   "nameNL": "Scholekster",
+   "family": "Scholeksters",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp099",
+   "nameNL": "Kievit",
+   "family": "Plevieren",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp100",
+   "nameNL": "Wulp",
+   "family": "Snippen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp101",
+   "nameNL": "Grutto",
+   "family": "Snippen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp102",
+   "nameNL": "Tureluur",
+   "family": "Snippen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp104",
+   "nameNL": "Aalscholver",
+   "family": "Aalscholvers",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp105",
+   "nameNL": "Fazant",
+   "family": "Fazanten",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp106",
+   "nameNL": "Patrijs",
+   "family": "Fazanten",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp108",
+   "nameNL": "Grote Karekiet",
+   "family": "Rietvogels",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp110",
+   "nameNL": "Rietzanger",
+   "family": "Rietvogels",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp112",
+   "nameNL": "Spreeuw",
+   "family": "Spreeuwen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp113",
+   "nameNL": "Wielewaal",
+   "family": "Wielewalen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp114",
+   "nameNL": "Boerenzwaluw",
+   "family": "Zwaluwen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp115",
+   "nameNL": "Huiszwaluw",
+   "family": "Zwaluwen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp116",
+   "nameNL": "Oeverzwaluw",
+   "family": "Zwaluwen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp117",
+   "nameNL": "Geelgors",
+   "family": "Gorzen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp118",
+   "nameNL": "Rietgors",
+   "family": "Gorzen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp126",
+   "nameNL": "Knobbelzwaan",
+   "family": "Zwanen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp128",
+   "nameNL": "Bergeend",
+   "family": "Eenden",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp129",
+   "nameNL": "Krakeend",
+   "family": "Eenden",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp130",
+   "nameNL": "Smient",
+   "family": "Eenden",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp132",
+   "nameNL": "Tafeleend",
+   "family": "Eenden",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp141",
+   "nameNL": "Gierzwaluw",
+   "family": "Gierzwaluwen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp143",
+   "nameNL": "Kluut",
+   "family": "Kluten",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp144",
+   "nameNL": "Zilverplevier",
+   "family": "Plevieren",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp145",
+   "nameNL": "Goudplevier",
+   "family": "Plevieren",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp146",
+   "nameNL": "Bontbekplevier",
+   "family": "Plevieren",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp147",
+   "nameNL": "Kleine Plevier",
+   "family": "Plevieren",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp150",
+   "nameNL": "Steenloper",
+   "family": "Snippen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp152",
+   "nameNL": "Drieteenstrandloper",
+   "family": "Snippen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp155",
+   "nameNL": "Oeverloper",
+   "family": "Snippen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp156",
+   "nameNL": "Witgat",
+   "family": "Snippen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp157",
+   "nameNL": "Zwarte Ruiter",
+   "family": "Snippen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp158",
+   "nameNL": "Groenpootruiter",
+   "family": "Snippen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp159",
+   "nameNL": "Bosruiter",
+   "family": "Snippen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp164",
+   "nameNL": "Grote Mantelmeeuw",
+   "family": "Meeuwen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp165",
+   "nameNL": "Visdief",
+   "family": "Sterns",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp166",
+   "nameNL": "Noordse Stern",
+   "family": "Sterns",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp167",
+   "nameNL": "Grote Stern",
+   "family": "Sterns",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp170",
+   "nameNL": "Ooievaar",
+   "family": "Ooievaars",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp173",
+   "nameNL": "Bruine Kiekendief",
+   "family": "Haviken",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp174",
+   "nameNL": "Zwarte Mees",
+   "family": "Mezen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp176",
+   "nameNL": "Grauwe Vliegenvanger",
+   "family": "Vliegenvangers",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp177",
+   "nameNL": "Bonte Vliegenvanger",
+   "family": "Vliegenvangers",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp178",
+   "nameNL": "Gekraagde Roodstaart",
+   "family": "Vliegenvangers",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp188",
+   "nameNL": "Zomertaling",
+   "family": "Eenden",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp206",
+   "nameNL": "Strandplevier",
+   "family": "Plevieren",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp217",
+   "nameNL": "Poelruiter",
+   "family": "Snippen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp225",
+   "nameNL": "Zwartkopmeeuw",
+   "family": "Meeuwen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp245",
+   "nameNL": "Koereiger",
+   "family": "Reigers",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp248",
+   "nameNL": "Wespendief",
+   "family": "Haviken",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp249",
+   "nameNL": "Blauwe Kiekendief",
+   "family": "Haviken",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp250",
+   "nameNL": "Steppekiekendief",
+   "family": "Haviken",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp251",
+   "nameNL": "Grauwe Kiekendief",
+   "family": "Haviken",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp253",
+   "nameNL": "Ruigpootbuizerd",
+   "family": "Haviken",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp262",
+   "nameNL": "Grauwe Klauwier",
+   "family": "Klauwieren",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp282",
+   "nameNL": "Roze Spreeuw",
+   "family": "Spreeuwen",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  },
+  {
+   "id": "sp288",
+   "nameNL": "Grote Gele Kwikstaart",
+   "family": "Kwikstaarten",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  }
+ ]
+}
