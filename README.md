@@ -129,14 +129,45 @@ als naslagwerk erbij.
 
 - **CDN (alleen online nodig)**: cdnjs — Leaflet, Leaflet.markercluster,
   Suncalc.
-- **Hosting/deploy**: nog niet definitief gekozen. Een `vercel.json` met
-  `git.deploymentEnabled: false` staat al klaar in de K7-featurelijn (bewust
-  geen automatische git-deploys); Kevin test tot nu toe lokaal
-  (`localhost`, testprofiel, fictieve data) en beslist zelf wanneer er voor
-  het eerst online getest of live gegaan wordt.
+- **Hosting/deploy**: GitHub Pages (`https://saddamsmit-source.github.io/Birdspot-Library/`),
+  gebouwd vanuit een branch. Sinds 10-11-2026 is dat `preview/birdspot-review`;
+  daarvoor was het `main`. De Pages-instelling is alleen via
+  *Settings → Pages* te wijzigen. Vercel staat bewust uit: `vercel.json` met
+  `git.deploymentEnabled: false`, preview-deployments uitgeschakeld en de
+  build wordt overgeslagen. Vercel wordt niet opnieuw geactiveerd zonder
+  eigenaarbesluit. Een formele keuze voor de productiehost ligt bij Kevin.
+  Releaseverloop en terugvalplan staan in `docs/release/`.
 - **Geen accounts, geen betaalde diensten, geen eigen backend.**
 - Fotobronnen voor de gids: diverse, per foto vastgelegd met auteur, licentie
   en bron-SHA-1 (zie de bronaudit-commits in de git-historie).
+
+## Kwaliteitsnorm (inhoud en foto's)
+
+Leidend voor alle soortkaarten is **`docs/BIRDSPOT_KWALITEITSNORM.md`**
+(eigenaarbesluit 10-11-2026). Deze README herhaalt de regels niet. De norm
+bevat:
+
+- **Biometrie (§1):** maten tonen als afgeronde "ca."-band uit minstens twee
+  uitgevers. De bronwaarden en de methode staan als bewijs bij de soort.
+- **Herkenning (§2):** "Doorslaggevend" alleen voor echt diagnostische en sterk
+  onderbouwde kenmerken. Daarnaast "Helpt" en "Niet alleen op vertrouwen".
+  Niets verzinnen.
+- **Foto's (§3):** vaste volgorde Hoofdfoto → Mannetje → Vrouwtje → Juveniel →
+  In vlucht → Vergelijkingen. Elke foto is geverifieerd op soort, leeftijd en
+  geslacht, houding, herkomst, licentie en kwaliteit. Een vogel die klein in
+  beeld staat is toegestaan. "In vlucht" alleen bij echte vlucht. Ontbrekende
+  posities blijven open.
+
+Uitvoering:
+
+- **Kennisprofielen:** zie `docs/kennisbaseline/README.md`. Bron is
+  `tools/kennisbaseline/knowledge.json`. Wijzig
+  `src/data/speciesKnowledge.js` nooit met de hand.
+- **Foto-voor-foto soortaudit:** `docs/fotokwaliteit/SOORTAUDIT_TRACKER.md`,
+  met vluchtbeoordelingen in `docs/fotokwaliteit/vluchtcontrole.json`.
+- **Niet geaudit is niet goedgekeurd.** Soorten die nog niet individueel
+  geaudit zijn, gelden niet als inhoudelijk goedgekeurd, ook niet in een
+  tussenrelease.
 
 ## Risico's
 
@@ -211,4 +242,5 @@ Geen bekende afwijkingen op dit moment.
   Index en de werkelijke repo-status (Handbook §4.11) is nog niet apart
   uitgevoerd.
 - Supportmatrix (browsers/toestellen, Handbook §4.5) nog niet vastgelegd.
-- Hostingkeuze en livegang-moment: nog niet bepaald, ligt bij Kevin.
+- Formele keuze productiehost en de Pages-bron (`main` of een releasebranch):
+  ligt bij Kevin. Zie `docs/release/` voor de actuele publicatie-SHA.
