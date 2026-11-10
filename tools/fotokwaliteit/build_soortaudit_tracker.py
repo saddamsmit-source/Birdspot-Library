@@ -24,7 +24,8 @@ def main():
     rights = [(r["id"], a["image"].split("/")[-1], a["rights"]["note"]) for r in aud for a in r["assets"] if a["rights"]["status"] != "VERIFIED"]
     L = ["# Birdspot — soortaudit van de collectie met foto's", "",
          f"Gegenereerd door `tools/fotokwaliteit/build_soortaudit_tracker.py` · status voor commit `{st['sha']}` · {st['generated']}.",
-         "Statussen: VERIFIED / PARTIALLY TESTED / NOT TESTED / BLOCKED. Een geautomatiseerde rendercontrole telt **niet** als visuele of inhoudelijke controle.", "",
+         "Statussen: VERIFIED / PARTIALLY TESTED / NOT TESTED / BLOCKED. Een geautomatiseerde rendercontrole telt **niet** als visuele of inhoudelijke controle.",
+         "Beoordeeld volgens `docs/BIRDSPOT_KWALITEITSNORM.md` (biometrie §1, herkenning §2, foto §3). Verbeterwensen zijn voor de latere beoordeling door de eigenaar en blokkeren de batch niet.", "",
          "## Overzicht (eindeisen 1–9)", "", "| # | Meting | Stand |", "|---|---|---|",
          f"| 1 | Soorten met bestaande gidsfoto's | {len(rows)} |",
          f"| 2 | Afzonderlijk (aangescherpt) gecontroleerd | {len(aud)} ({', '.join(sorted({r['batch'] for r in aud}))}) |",
@@ -51,6 +52,7 @@ def main():
         k = r["knowledge"]
         L += ["", f"- **Correcties:** {'; '.join(r['corrections']) or 'geen'}",
               f"- **Ontbreekt:** {'; '.join(r['missing']) or 'niets'}",
+              f"- **Verbeterwensen (eigenaar beoordeelt later):** {'; '.join(r.get('wishes') or []) or '—'}",
               f"- **Geslacht:** {r['sexPolicy']}",
               f"- **Kennisprofiel:** " + (f"{k['critical']} kritische kenmerken ({k['decisive']} doorslaggevend); niet doorslaggevend: {', '.join(k['notDecisive']) or '—'}; open: {'; '.join(k['open']) or '—'}; resterende dataverschillen: {k['discrepancies']}" if k.get("profile") else "ontbreekt"),
               f"- **Browser:** {(r['browser'] or {}).get('viewport', 'NOT TESTED')} · {(r['browser'] or {}).get('checks', '')}",

@@ -259,4 +259,29 @@ console.log('KB-09 OK — kennismodules in de service-worker-precache');
   console.log(`KB-10 OK — ${live.length} doorslaggevende kenmerken, alle handmatig beoordeeld; opgewaardeerde Zilvermeeuw-pootkleur gedetecteerd`);
 }
 
-console.log('Kennisbaseline proef: alle controles geslaagd (KB-01..KB-10)');
+// ── KB-11 (kwaliteitsnorm §1, biometrie) ─────────────────────────────────────
+{
+  const LABEL = { length: 'Lengte', wingspan: 'Spanwijdte', weight: 'Gewicht' };
+  let n = 0;
+  for (const id of ids) {
+    for (const b of KNOWLEDGE[id].basis?.biometrics || []) {
+      n++;
+      const s = byId.get(id);
+      assert.equal(s.size?.[b.field], b.display, `KB-11 ${id} species.js size.${b.field} ≠ ${b.display}`);
+      assert.match(b.display, /^ca\. \d+–\d+ (cm|g)$/, `KB-11 ${id} display zonder "ca."`);
+      const html = lifeDetails(s);
+      assert.ok(html.includes(`${LABEL[b.field]} ${esc(b.display)}`), `KB-11 ${id} berekening niet getoond`);
+      for (const v of [...b.values, ...(b.excluded || [])]) assert.ok(html.includes(`${v.min}–${v.max} ${b.unit}`), `KB-11 ${id} bronwaarde ${v.source} niet getoond`);
+      if (b.excluded?.length) assert.ok(html.includes('niet meegeteld'), `KB-11 ${id} uitgesloten waarde niet zichtbaar`);
+      assert.ok(!/volledige variatie/.test(html) || /niet de volledige variatie/.test(html), `KB-11 ${id} band als volledige variatie gepresenteerd`);
+      assert.ok(!(KNOWLEDGE[id].discrepancies || []).some(d => d.field === `species.size.${b.field}` || d.field === 'species.size'),
+        `KB-11 ${id} opgelost maatverschil staat nog in discrepancies`);
+      const tile = recognitionPanel(s);
+      assert.ok(tile.includes(esc(b.display)), `KB-11 ${id} maattegel toont de circa-band niet`);
+    }
+  }
+  assert.ok(n >= 4, `KB-11 verwacht minstens 4 circa-banden, kreeg ${n}`);
+  console.log(`KB-11 OK — ${n} circa-banden: gelijk aan species.js, met bronwaarden, uitsluitingen en methode op de kaart`);
+}
+
+console.log('Kennisbaseline proef: alle controles geslaagd (KB-01..KB-11)');

@@ -506,6 +506,39 @@
       "checked": "2026-11-10",
       "certainty": "hoog",
       "publisher": "Vogelbescherming Nederland"
+    },
+    "WT_KMM": {
+      "register": "nieuw (buiten register v1.2)",
+      "label": "The Wildlife Trusts — Lesser black-backed gull",
+      "url": "https://www.wildlifetrusts.org/node/187",
+      "edition": "online soortpagina, geraadpleegd 10-11-2026",
+      "scope": "Verenigd Koninkrijk",
+      "confirms": "lengte 52–67 cm, spanwijdte 135–150 cm, gewicht 620–1000 g",
+      "checked": "2026-11-10",
+      "certainty": "middel-hoog",
+      "publisher": "The Wildlife Trusts"
+    },
+    "WT_STORM": {
+      "register": "nieuw (buiten register v1.2)",
+      "label": "The Wildlife Trusts — Common gull",
+      "url": "https://www.wildlifetrusts.org/node/185",
+      "edition": "online soortpagina, geraadpleegd 10-11-2026",
+      "scope": "Verenigd Koninkrijk",
+      "confirms": "lengte 38–44 cm, spanwijdte 110–130 cm, gewicht 300–480 g",
+      "checked": "2026-11-10",
+      "certainty": "middel-hoog",
+      "publisher": "The Wildlife Trusts"
+    },
+    "OB_STORM": {
+      "register": "nieuw (buiten register v1.2)",
+      "label": "Oiseaux-Birds — Mew Gull (biometrie L. c. canus)",
+      "url": "https://www.oiseaux-birds.com/card-mew-gull.html",
+      "edition": "online soortkaart, geraadpleegd 10-11-2026",
+      "scope": "nominaat L. c. canus (Europa)",
+      "confirms": "lengte 40–46 cm, spanwijdte 110–125 cm, gewicht 300–500 g voor L. c. canus",
+      "checked": "2026-11-10",
+      "certainty": "middel",
+      "publisher": "Oiseaux-Birds"
     }
   },
   "sp021": {
@@ -2526,11 +2559,32 @@
     ],
     "basis": {
       "size": {
-        "text": "Lengte 40–42 cm, spanwijdte 68–77 cm.",
+        "text": "Lengte ca. 40–45 cm (afgeronde middenband uit twee bronnen), spanwijdte 68–77 cm.",
         "sources": [
-          "VB_HOUT"
+          "VB_HOUT",
+          "CL_WP"
         ]
-      }
+      },
+      "biometrics": [
+        {
+          "field": "length",
+          "unit": "cm",
+          "display": "ca. 40–45 cm",
+          "values": [
+            {
+              "source": "VB_HOUT",
+              "min": 40,
+              "max": 42
+            },
+            {
+              "source": "CL_WP",
+              "min": 41,
+              "max": 45
+            }
+          ],
+          "note": "Afgeronde middenband, niet de volledige variatie."
+        }
+      ]
     },
     "habitat": [
       {
@@ -2592,17 +2646,6 @@
           "VB_HOUT"
         ],
         "kind": "trek"
-      }
-    ],
-    "discrepancies": [
-      {
-        "field": "species.size.length",
-        "app": "38–43 cm",
-        "source": "40–42 cm (Vogelbescherming); 41–45 cm (Cornell)",
-        "sources": [
-          "VB_HOUT",
-          "CL_WP"
-        ]
       }
     ],
     "open": [
@@ -4253,11 +4296,50 @@
     ],
     "basis": {
       "size": {
-        "text": "Lengte 51–61 cm, spanwijdte 124–127 cm (zoals de bron opgeeft).",
+        "text": "Lengte ca. 50–65 cm, spanwijdte ca. 130–140 cm: afgeronde middenband uit twee bronnen, niet de volledige variatie.",
         "sources": [
-          "VB_KMM"
+          "VB_KMM",
+          "WT_KMM"
         ]
-      }
+      },
+      "biometrics": [
+        {
+          "field": "length",
+          "unit": "cm",
+          "display": "ca. 50–65 cm",
+          "values": [
+            {
+              "source": "VB_KMM",
+              "min": 51,
+              "max": 61
+            },
+            {
+              "source": "WT_KMM",
+              "min": 52,
+              "max": 67
+            }
+          ],
+          "note": "Afgeronde middenband, niet de volledige variatie."
+        },
+        {
+          "field": "wingspan",
+          "unit": "cm",
+          "display": "ca. 130–140 cm",
+          "values": [
+            {
+              "source": "VB_KMM",
+              "min": 124,
+              "max": 127
+            },
+            {
+              "source": "WT_KMM",
+              "min": 135,
+              "max": 150
+            }
+          ],
+          "note": "Afgeronde middenband, niet de volledige variatie. De bronnen liggen ver uiteen; de oude Birdspot-waarde 117–134 cm had geen vastgelegde bron."
+        }
+      ]
     },
     "habitat": [
       {
@@ -4302,16 +4384,6 @@
       {
         "kind": "broeden",
         "text": "Vanaf eind april, gemiddeld 2–3 eieren; broedduur 24–28 dagen, jongen vliegvlug na 30–40 dagen.",
-        "sources": [
-          "VB_KMM"
-        ]
-      }
-    ],
-    "discrepancies": [
-      {
-        "field": "species.size",
-        "app": "52–64 cm / 117–134 cm",
-        "source": "51–61 cm / 124–127 cm (spanwijdte in de bron opvallend smal)",
         "sources": [
           "VB_KMM"
         ]
@@ -4419,11 +4491,41 @@
     ],
     "basis": {
       "size": {
-        "text": "Lengte 40–60 cm, spanwijdte 110–125 cm (zoals de bron opgeeft).",
+        "text": "Lengte ca. 40–45 cm (afgeronde middenband uit twee bronnen), spanwijdte 110–125 cm.",
         "sources": [
+          "WT_STORM",
+          "OB_STORM",
           "VB_STORM"
         ]
-      }
+      },
+      "biometrics": [
+        {
+          "field": "length",
+          "unit": "cm",
+          "display": "ca. 40–45 cm",
+          "values": [
+            {
+              "source": "WT_STORM",
+              "min": 38,
+              "max": 44
+            },
+            {
+              "source": "OB_STORM",
+              "min": 40,
+              "max": 46
+            }
+          ],
+          "excluded": [
+            {
+              "source": "VB_STORM",
+              "min": 40,
+              "max": 60,
+              "reason": "Bovengrens 60 cm past niet bij een meeuw die duidelijk kleiner is dan de Zilvermeeuw (55–67 cm bij dezelfde uitgever); waarschijnlijk een fout."
+            }
+          ],
+          "note": "Afgeronde middenband, niet de volledige variatie."
+        }
+      ]
     },
     "habitat": [
       {
@@ -4468,16 +4570,6 @@
       {
         "kind": "broeden",
         "text": "Eind april–begin juni, meestal 3 eieren; broedduur 24–25 dagen, jongen vliegvlug na 30–35 dagen.",
-        "sources": [
-          "VB_STORM"
-        ]
-      }
-    ],
-    "discrepancies": [
-      {
-        "field": "species.size.length",
-        "app": "40–46 cm",
-        "source": "40–60 cm (bovengrens in de bron opvallend hoog)",
         "sources": [
           "VB_STORM"
         ]

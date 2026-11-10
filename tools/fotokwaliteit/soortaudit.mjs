@@ -99,7 +99,7 @@ export function build(auditJson, { sha = null } = {}) {
     if (verdict === 'VERIFIED' && !photoComplete) verdict = 'PARTIALLY TESTED';
     result.push({
       id: row.id, nameNL: row.nameNL, family: row.family, audited: true, batch: entry.batch, date: entry.date, sha,
-      assets, corrections: entry.corrections, missing: entry.missing, uncertain: entry.uncertain, sexPolicy: entry.sexPolicy,
+      assets, corrections: entry.corrections, missing: entry.missing, wishes: entry.wishes || [], uncertain: entry.uncertain, sexPolicy: entry.sexPolicy,
       previous: entry.previous || null, status: st, photoComplete,
       knowledge: k ? { profile: true, critical: k.critical.length, decisive: k.critical.length - criticalWeak.length, notDecisive: criticalWeak, open: k.open || [], discrepancies: (k.discrepancies || []).length } : { profile: false },
       browser: b, errors, verdict,

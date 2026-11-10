@@ -85,8 +85,9 @@
           "role": "Hoofdfoto",
           "content": "Turkse Tortel op sparrentop tegen blauwe lucht; zwarte halsband, rood oog.",
           "sexAge": "volwassen (scherpe halsband); geslacht niet vast te stellen",
-          "quality": "voldoende: scherp, maar vogel vrij klein in beeld",
-          "verdict": "voorwaardelijk"
+          "quality": "goed: scherp; vogel kleiner in beeld, halsband, oog en kleed goed zichtbaar",
+          "verdict": "goedgekeurd",
+          "reassessed": "Herbeoordeeld 10-11-2026 volgens kwaliteitsnorm §3.3 (klein in beeld mag als de vogel goed zichtbaar en herkenbaar is); was voorwaardelijk."
         },
         "/assets/species/plumage/sp004-flight.webp": {
           "role": "In vlucht",
@@ -98,7 +99,8 @@
       },
       "corrections": [
         "Broedsels per jaar 3–5 → 2–5 (VB_TT).",
-        "FQA-04: tweede onafhankelijke bron voor de Zomertortel-kant (eBird, birdspot.co.uk) en uitzondering voor juvenielen zonder halstekening."
+        "FQA-04: tweede onafhankelijke bron voor de Zomertortel-kant (eBird, birdspot.co.uk) en uitzondering voor juvenielen zonder halstekening.",
+        "sp004.webp: voorwaardelijk → goedgekeurd na kwaliteitsnorm §3.3 (klein in beeld is geen afkeurgrond)"
       ],
       "missing": [
         "Juveniel (zonder of met vage halsband)",
@@ -363,8 +365,9 @@
           "role": "Hoofdfoto",
           "content": "Volwassen Zilvermeeuw op ijs; grijze mantel, witte kop, roze poten, zwarte vleugelpunten.",
           "sexAge": "volwassen (adult kleed)",
-          "quality": "voldoende: scherp, vogel vrij klein in beeld",
-          "verdict": "voorwaardelijk"
+          "quality": "goed: scherp; vogel kleiner in beeld, mantel, vleugelpunt, snavel en poten goed zichtbaar",
+          "verdict": "goedgekeurd",
+          "reassessed": "Herbeoordeeld 10-11-2026 volgens kwaliteitsnorm §3.3 (klein in beeld mag als de vogel goed zichtbaar en herkenbaar is); was voorwaardelijk."
         },
         "/assets/species/plumage/sp094-flight.webp": {
           "role": "In vlucht",
@@ -375,7 +378,8 @@
         }
       },
       "corrections": [
-        "Lengte 54–60 → 55–67 cm; spanwijdte 123–148 → 125–155 cm (VB_ZILV)."
+        "Lengte 54–60 → 55–67 cm; spanwijdte 123–148 → 125–155 cm (VB_ZILV).",
+        "sp094.webp: voorwaardelijk → goedgekeurd na kwaliteitsnorm §3.3 (klein in beeld is geen afkeurgrond)"
       ],
       "missing": [
         "Juveniel / eerste kalenderjaar",

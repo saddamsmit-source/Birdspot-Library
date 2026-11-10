@@ -23,6 +23,7 @@ Profielsleutel = bestaand Birdspot-ID (`spNNN`). Elke bewering is `{text, source
 | Sectie | Veld | Inhoud | Verplicht |
 |---|---|---|---|
 | A Basis | `basis.size` | maten met bron | nee |
+| | `basis.biometrics[]` | circa-band per maat: `field, unit, display, values[{source,min,max}], excluded[{…,reason}], note` (kwaliteitsnorm §1) | nee |
 | B Herkenning | `summary` | 1–2 zinnen, eigen tekst | ja |
 | | `keyMarks[]` | 3–5 kenmerken + `reliability` | ja |
 | | `caution` | waarschuwing voor de valkuil | nee |
@@ -40,7 +41,11 @@ Profielsleutel = bestaand Birdspot-ID (`spNNN`). Elke bewering is `{text, source
 
 Bron (`_sources.KEY`): `label, url (https), edition, scope, confirms, checked (YYYY-MM-DD), certainty`.
 
+Validator weigert ook (sinds 10-11-2026): doorslaggevend zonder twee uitgevers, context en onderbouwing (KV-11/12); een circa-band met minder dan twee uitgevers, een afwijkende berekening of een uitsluiting zonder reden (KV-13); een circa-band die niet gelijk is aan de getoonde maat in `species.js` (KV-14).
+
 Validator weigert: onbekend ID, bewering zonder bron, onbekende bronsleutel, ongeldige betrouwbaarheid, `vs`/`similar` naar zichzelf of onbestaand ID, <3 of >5 keyMarks, leeg verplicht veld in `critical`, onvolledige bron, handmatig gewijzigde gegenereerde module.
+
+Inhoudelijke regels: **`docs/BIRDSPOT_KWALITEITSNORM.md`** (biometrie §1, betrouwbaarheid §2, foto §3) is leidend; deze README herhaalt ze niet.
 
 Regels: eigen tekst, geen brontekst kopiëren; ontbrekend = weglaten of in `open`, nooit verzinnen; verschil met bestaande data → `discrepancies`, eigenaar beslist over correctie.
 
@@ -63,8 +68,8 @@ Regels: eigen tekst, geen brontekst kopiëren; ontbrekend = weglaten of in `open
 
 | Test | Dekt |
 |---|---|
-| `tests/test_kennisbaseline.mjs` | KB-01..09: ID's, bron per bewering (171), geldige vergelijkings-ID's, 12 anti-verwisselfixtures + 4 paren, Niveau 1 vóór foto's, Niveau 2 ingeklapt, bronnen gelinkt, 589 soorten zonder kb-markup, 597 renderen, negatieve scenario's, precache |
-| `tests/test_kennisbaseline_validator.py` | KV-01..10: validator weigert 13 ongeldige varianten; `--check` vangt handwijziging |
+| `tests/test_kennisbaseline.mjs` | KB-01..11 (KB-10 doorslaggevend-review, KB-11 circa-banden); oorspronkelijk KB-01..09: ID's, bron per bewering (171), geldige vergelijkings-ID's, 12 anti-verwisselfixtures + 4 paren, Niveau 1 vóór foto's, Niveau 2 ingeklapt, bronnen gelinkt, 589 soorten zonder kb-markup, 597 renderen, negatieve scenario's, precache |
+| `tests/test_kennisbaseline_validator.py` | KV-01..14 (KV-11/12 doorslaggevend, KV-13/14 biometrie); oorspronkelijk KV-01..10: validator weigert 13 ongeldige varianten; `--check` vangt handwijziging |
 | `tests/test_kennisbaseline_browser.py` | KBB-01..08: 390 px + 1280 px, kritisch kenmerk binnen eerste scherm, accordion klik/Enter, chipnavigatie heen/terug, bronlinks, zoom/audio/tabs/sluiten, soort zonder profiel, geen horizontale scroll, geen paginafouten |
 | `.github/workflows/kennisbaseline-qa.yml` | alle bovenstaande + bestaande foto/volgorde-contracten |
 
@@ -86,3 +91,12 @@ De app-README bestaat alleen in open PR #117 en niet op deze base. Toe te voegen
 - "Lijkt op" is één sectie met één kaart per gelijkende soort; kleed- en vluchtvergelijking zijn tabbladen in die kaart.
 - Capabilitydelta: CAP-BIRD-015 Vergelijken — vluchtvergelijking als tabblad, geen eigen sectie meer. CAP-BIRD-012 Soortkaart — kleedkaart verwijst naar "In vlucht" wanneer de enige foto van dat kleed een vluchtfoto is; voorlopige foto's tonen hun status. Fotokwaliteit-tooling — beeldinventaris met SHA-1 per foto (VC-07).
 - Learning (kandidaat): een controle die alleen geregistreerde labels inventariseert (`flight:true`) mist precies de fouten die ze moet vinden; inventariseer altijd de hele populatie en koppel een visueel oordeel aan de bestandshash.
+
+## 9. Kwaliteitsnorm v1.0 (eigenaarbesluit 10-11-2026)
+
+- De drie blijvende Birdspot-regels (biometrie, betrouwbaarheid van herkenningsinformatie, foto's) staan in `docs/BIRDSPOT_KWALITEITSNORM.md`. Bij strijdigheid gaat dat document voor op §2–§8 hierboven.
+- **Biometrie:** maatverschillen tussen bronnen zijn geen `discrepancies` meer zodra twee uitgevers een circa-band onderbouwen. De band staat in `basis.biometrics` en in `species.js` (KV-13/14, KB-11). Eerst toegepast op Kleine Mantelmeeuw (lengte, spanwijdte), Stormmeeuw (lengte; Vogelbescherming 40–60 cm uitgesloten als uitschieter) en Houtduif (lengte).
+- Een maatverschil met één bron of één uitgever blijft een `discrepancy`; de bestaande waarde blijft staan.
+- Weergave: Kennisprofiel → Bronnen en controle → "Maten: berekening", met bronwaarden, uitsluitingen en methode.
+- Capabilitydelta: CAP-BIRD-012 Soortkaart: maattegels kunnen een circa-band tonen, met de berekening in het profiel. Tooling: biometrievalidator (KV-13/14).
+- Learning (kandidaat, scope U): **variabele meetwaarden niet laten blokkeren.** Toon bij natuurlijke variatie een afgeronde band uit meerdere uitgevers en bewaar de ruwe waarden en de methode als bewijs, met een validator die de band herberekent. Behandel één afwijkende bron als uitschieter met reden, niet als blokkade. Koppelt aan L-018/L-019 (niets verzinnen) en Handbook §6A.

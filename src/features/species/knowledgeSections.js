@@ -158,6 +158,8 @@ export function voiceDetails(s) {
   return `<div class="kb-voice" data-kb-voice>${items(k.voice, { zang: 'Zang', roep: 'Roep', alarm: 'Alarm', vlucht: 'Vluchtroep' })}</div>`;
 }
 
+const BIO_LABEL = { length: 'Lengte', wingspan: 'Spanwijdte', weight: 'Gewicht' };
+
 /** Niveau 2, tab Leefwijze — status, leefwijze en de bronverantwoording. */
 export function lifeDetails(s) {
   const k = knowledgeFor(s.id);
@@ -166,6 +168,7 @@ export function lifeDetails(s) {
   const collect = x => (x?.sources || []).forEach(r => used.add(r));
   [k.summary, k.caution, k.basis?.size, ...(k.keyMarks || []), ...(k.critical || []), ...(k.similar || []),
     ...(k.detail || []), ...(k.voice || []), ...(k.habitat || []), ...(k.status || []), ...(k.life || [])].forEach(collect);
+  (k.basis?.biometrics || []).forEach(b => b.values.forEach(v => used.add(v.source)));
   const sources = [...used].map(key => {
     const src = KNOWLEDGE_SOURCES[key];
     return `<li><a href="${esc(src.url)}" target="_blank" rel="noopener noreferrer">${esc(src.label)}</a>
@@ -175,7 +178,15 @@ export function lifeDetails(s) {
     `<li><b>${esc(d.field)}</b> Birdspot: ${esc(d.app)} · bron: ${esc(d.source)}${srcLine(d.sources)}</li>`).join('');
   const open = (k.open || []).map(o => `<li>${esc(o)}</li>`).join('');
   const size = k.basis?.size ? `<p class="kb-basis">${esc(k.basis.size.text)}${srcLine(k.basis.size.sources)}</p>` : '';
-  const accountability = `${size}<h4 class="kb-sub">Gebruikte bronnen</h4><ol class="kb-sources">${sources}</ol>` +
+  const bio = (k.basis?.biometrics || []).map(b => {
+    const val = v => `${esc(KNOWLEDGE_SOURCES[v.source]?.label?.split(' — ')[0] || v.source)} ${v.min}–${v.max} ${esc(b.unit)}`;
+    const excl = (b.excluded || []).map(x => ` · niet meegeteld: ${val(x)} — ${esc(x.reason)}`).join('');
+    return `<li data-kb-bio="${esc(b.field)}"><b>${esc(BIO_LABEL[b.field] || b.field)} ${esc(b.display)}</b> uit ${b.values.map(val).join(' en ')}${excl}. ` +
+      `Gemiddelde van onder- en bovengrenzen, afgerond.${b.note ? ' ' + esc(b.note) : ''}</li>`;
+  }).join('');
+  const accountability = `${size}` +
+    (bio ? `<h4 class="kb-sub">Maten: berekening</h4><ul class="kb-list">${bio}</ul>` : '') +
+    `<h4 class="kb-sub">Gebruikte bronnen</h4><ol class="kb-sources">${sources}</ol>` +
     (disc ? `<h4 class="kb-sub">Verschillen met bestaande gegevens</h4><ul class="kb-list">${disc}</ul>` : '') +
     (open ? `<h4 class="kb-sub">Nog open</h4><ul class="kb-list kb-list--open">${open}</ul>` : '') +
     '<p class="kb-review">Kennisprofiel v0.1 · proef · broncontrole door Claude op 10-11-2026 · onafhankelijke controle nog open.</p>';
