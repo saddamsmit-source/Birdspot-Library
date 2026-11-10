@@ -1036,3 +1036,8 @@
 
 /* FQA-03 (10-11-2026): één sectie "Lijkt op"; kritische verschillen uitklapbaar binnen de sectie. */
 .sd-similar .kb-acc { margin-top: .75rem; }
+/* M2 (ChatGPT-QA M1 punt 2): op smalle schermen zijn de verwijs- en 'nog geen foto'-vakken in de vergelijkingskaart
+   één regel hoog in plaats van een leeg fotovak; de boodschap zelf blijft zichtbaar. */
+@media (max-width: 719px) {
+  .sd-cmp-ref { min-height: 0; padding: var(--space-8) var(--space-12); place-items: center start; text-align: left; }
+}

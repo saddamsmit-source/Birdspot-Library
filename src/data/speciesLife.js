@@ -368,9 +368,9 @@ export const LIFE = Object.freeze({
   "breeding": {
    "period": "apr–jun",
    "nest": "Komvormig takjesnest in een boom of struik",
-   "eggs": "4–6",
-   "incubation": "16–17 dagen",
-   "fledging": "19–23 dagen",
+   "eggs": "5–7",
+   "incubation": "16–21 dagen",
+   "fledging": "19–21 dagen",
    "broods": "1",
    "months": "apr-jun"
   },

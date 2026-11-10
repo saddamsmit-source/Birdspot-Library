@@ -188,7 +188,7 @@ export const SPECIES = [
     statusExtra:'wintergast', months:'jan-dec', frequency:'algemeen', breeding:'ja', redList:null },
   { id:'sp026', nameNL:'Gaai',                nameEN:'Eurasian Jay',              nameSci:'Garrulus glandarius',        family:'Kraaien',         category:'standvogel', icon:'🐦', regions:['bos','stedelijk'],
     fieldmarks:'Roze-bruin, blauw vleugelspiegeltje, witte stuit.',
-    size:{ length:'32–35 cm', wingspan:'52–58 cm', weight:'140–190 g' },
+    size:{ length:'32–36 cm', wingspan:'50–60 cm', weight:'140–190 g' },
     plumage:{ adult_m:'Roze-bruin lichaam; zwart-wit vleugelspiegeltje met blauw; witte stuit; zwarte snorstreep', adult_f:null, juv:'Matter; vergelijkbaar', jaarling:null, breeding:null, winter:null, eclipse:null },
     distribution:'Loofbossen heel Nederland; ook in parken en grote tuinen', status:'Standvogel, ook doortrekker · jaarrond',
     statusExtra:'trekvogel', months:'jan-dec', frequency:'algemeen', breeding:'ja', redList:null },

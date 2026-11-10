@@ -417,7 +417,9 @@ export function recognitionPanel(s, life = null) {
   // foto of uitleg dubbel verschijnt. Daarna gelijkende soorten uit het kennisprofiel zonder eigen kaart en de
   // kritische determinatieverschillen (uitklapbaar). Alle bestaande vergelijkingsdata blijven.
   const cardsHtml = comparisonsSection(s.id, [...regular, ...flight], takePhoto);
-  const covered = new Set(comparisons.flatMap(pair => pair.birds.map(bird => bird.id)));
+  // Alleen soorten die werkelijk een kaart krijgen tellen als 'gedekt' (verborgen juveniel-paren niet), anders
+  // verdwijnt een gelijkende soort uit het kennisprofiel zonder kaart én zonder knop.
+  const covered = new Set(groupComparisonsByPartner(s.id, [...regular, ...flight]).map(group => group.partnerId));
   const extra = similarExtra(s, covered);
   const critical = criticalDetails(s);
   if (cardsHtml || extra || critical) {

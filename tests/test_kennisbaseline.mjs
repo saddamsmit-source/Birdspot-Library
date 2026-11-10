@@ -25,6 +25,7 @@ import { SPECIES } from '../src/data/species.js';
 import { LIFE } from '../src/data/speciesLife.js';
 import { KNOWLEDGE, KNOWLEDGE_SOURCES } from '../src/data/speciesKnowledge.js';
 import { GUIDE_PHOTOS } from '../src/features/species/guidePhotos.js';
+import { GUIDE_COMPARISONS } from '../src/features/species/guideComparisons.js';
 import { GUIDE_HEROES, GUIDE_PLUMAGE, GUIDE_POSES } from '../src/features/species/guideMedia.js';
 import { recognitionPanel, statusPanel, wherePanel } from '../src/features/species/detailSections.js';
 import { knowledgeFor, quickPanel, recognitionDetails, criticalDetails, lifeDetails, whereDetails } from '../src/features/species/knowledgeSections.js';
@@ -101,6 +102,12 @@ for (const id of ids) {
   assert.ok(!quick.includes('data-compare-species'), `KB-03 ${id} Niveau 1 bevat nog vergelijkingschips (dubbel met "Lijkt op")`);
   assert.ok(!recognitionDetails(byId.get(id)).includes('data-kb-section="gelijkend"'), `KB-03 ${id} accordion "Vergelijkbare soorten" nog aanwezig (dubbel)`);
 }
+// KB-03b (M2): een 'similar' zonder bron mag alleen verwijzen naar een werkelijk bestaande Birdspot-vergelijking.
+for (const id of ids) for (const x of KNOWLEDGE[id].similar || []) {
+  if (x.sources?.length) continue;
+  assert.ok(GUIDE_COMPARISONS.some(e => e.birds.some(b => b.id === id) && e.birds.some(b => b.id === x.id)),
+    `KB-03b ${id} → ${x.id}: 'bestaande Birdspot-vergelijking' zonder bron, maar die vergelijking bestaat niet`);
+}
 console.log('KB-03 OK — vergelijkings-ID\'s geldig; één vergelijkingsplek onder "Lijkt op", geen dubbele chips of accordion');
 
 // ── KB-04 anti-verwisseling ─────────────────────────────────────────────────
@@ -123,6 +130,11 @@ const FIXTURES = [
   ['sp002', 'Witte vleugelband', /witte band/i, /geen wit/i, 'sp003'],      // Houtduif wit, Holenduif niet
   ['sp003', 'Wit in de vleugel', /geen wit/i, /witte vleugelband/i, 'sp002'],
   ['sp004', 'Hals en bovendelen', /zwarte halsband/i, /gestreepte halsvlek/i, 'sp197'], // Turkse Tortel vs Zomertortel
+  ['sp007', 'Onderzijde jonge vogels', /lengtestrepen/i, /dwarsbanden/i, 'sp006'],    // M2: jonge Havik vs jonge Sperwer
+  ['sp067', 'Vleugelbandpatroon', /recht afgesneden|blokvormig/i, /tandvormig/i, 'sp066'], // M2: Taiga- vs Boomkruiper
+  ['sp248', 'Kop en staart', /uitstekende kop/i, /korte, brede kop/i, 'sp005'],     // M2: Wespendief vs Buizerd
+  ['sp253', 'Staartcontrast', /witte basis/i, /gebandeerde staart/i, 'sp005'],        // M2: Ruigpootbuizerd vs Buizerd
+  ['sp095', 'Mantel en poten (volwassen)', /gele poten/i, /lichtgrijze mantel, roze poten/i, 'sp094'], // M2: Kleine Mantelmeeuw vs Zilvermeeuw
   ['sp005', 'Iris', /donker/i, /geel/i, 'sp248'],             // Buizerd volwassen donker, Wespendief geel
 ];
 for (const [id, feature, thisRe, otherRe, vs] of FIXTURES) {
@@ -135,14 +147,14 @@ for (const [id, feature, thisRe, otherRe, vs] of FIXTURES) {
 assert.match(crit('sp008', 'Geslacht').this, /Mannetje: grijze kop/, 'KB-04 Torenvalk mannetje grijze kop');
 assert.doesNotMatch(crit('sp008', 'Geslacht').this, /Vroutje: grijze kop|Vrouwtje: grijze kop/, 'KB-04 Torenvalk vrouwtje grijze kop');
 // Gerenderd: het profiel van de ene soort komt nooit in de kaart van de partner terecht.
-for (const [a, b] of [['sp057', 'sp056'], ['sp006', 'sp007'], ['sp005', 'sp248'], ['sp066', 'sp067'], ['sp002', 'sp003'], ['sp004', 'sp197']]) {
+for (const [a, b] of [['sp057', 'sp056'], ['sp006', 'sp007'], ['sp005', 'sp248'], ['sp066', 'sp067'], ['sp002', 'sp003'], ['sp004', 'sp197'], ['sp007', 'sp006'], ['sp067', 'sp066'], ['sp248', 'sp005'], ['sp253', 'sp005'], ['sp095', 'sp094']]) {
   const htmlB = recognitionPanel(byId.get(b), LIFE[b] || null);
   assert.ok(!htmlB.includes(esc(KNOWLEDGE[a].summary.text)), `KB-04 samenvatting ${a} verschijnt bij ${b}`);
   const htmlA = recognitionPanel(byId.get(a), LIFE[a] || null);
   assert.ok(htmlA.includes(`data-kb="${a}"`) && !htmlA.includes(`data-kb="${b}"`), `KB-04 ${a} draagt verkeerd profiel`);
   if (KNOWLEDGE[b]) assert.ok(!htmlA.includes(esc(KNOWLEDGE[b].summary.text)), `KB-04 samenvatting ${b} verschijnt bij ${a}`);
 }
-console.log(`KB-04 OK — ${FIXTURES.length + 1} feitenfixtures en 6 paren zonder verwisseling`);
+console.log(`KB-04 OK — ${FIXTURES.length + 1} feitenfixtures en 11 paren zonder verwisseling`);
 
 // ── KB-05 proefsoorten gerenderd ────────────────────────────────────────────
 for (const id of ids) {

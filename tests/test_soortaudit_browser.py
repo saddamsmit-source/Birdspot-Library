@@ -198,7 +198,8 @@ def main():
                 page.locator(f'.species-row[data-id="{sid}"] .species-row__body').click()
                 page.locator('.sd-tabs').wait_for(timeout=8000)
 
-            for name, sid in [("Holenduif", "sp003"), ("Sperwer", "sp006"), ("Buizerd", "sp005"), ("Zilvermeeuw", "sp094")]:
+            for name, sid in [("Holenduif", "sp003"), ("Sperwer", "sp006"), ("Buizerd", "sp005"), ("Zilvermeeuw", "sp094"),
+                              ("Havik", "sp007"), ("Wespendief", "sp248"), ("Taigaboomkruiper", "sp067"), ("Ruigpootbuizerd", "sp253")]:
                 similar_section(p, name, sid, "390")
                 open_card(p, name, sid)
                 sec = p.locator('#sdPanel-herkenning section.sd-similar')
@@ -213,10 +214,11 @@ def main():
             dctx = browser.new_context(viewport={"width": 1280, "height": 900}, reduced_motion="reduce", service_workers="block")
             dp = dctx.new_page()
             dp.on("pageerror", lambda e: errors.append(str(e)))
-            similar_section(dp, "Sperwer", "sp006", "1280")
-            results.setdefault("sp006", {})["lijktOpDesktop"] = "SAB-09 OK (1280 px)"
+            for name, sid in [("Sperwer", "sp006"), ("Wespendief", "sp248")]:
+                similar_section(dp, name, sid, "1280")
+                results.setdefault(sid, {})["lijktOpDesktop"] = "SAB-09 OK (1280 px)"
             dctx.close()
-            print("SAB-09 OK — Sperwer ook op 1280 px")
+            print("SAB-09 OK — Sperwer en Wespendief ook op 1280 px")
 
             assert not errors, f"paginafouten: {errors}"
             browser.close()
