@@ -4,7 +4,8 @@ Birdspot Library — kennisbaseline proef, browserdekking (contract v0.1, 10-11-
   KBB-01  Alle 8 proefsoorten op 390 px: "Snel herkennen" zichtbaar met kritisch kenmerk en
           betrouwbaarheidslabels, vóór de Verenkleed-kop; geen horizontale scroll.
   KBB-02  Niveau 2 is standaard ingeklapt; een accordion opent en sluit met klik én toetsenbord.
-  KBB-03  Chip "Gelijkende soorten" navigeert naar de partner (Fitis → Tjiftjaf) en weer terug.
+  KBB-03  Eén vergelijkingsplek: geen chips in Niveau 1; vergelijkingsknop navigeert heen en terug;
+          extra gelijkende soort zonder eigen kaart staat onder "Lijkt op" en navigeert.
   KBB-04  Tab Leefwijze toont het kennisprofiel met gelinkte bronnen (target=_blank, rel=noopener).
   KBB-05  Soort zonder profiel (Merel sp037... gekozen via de data) toont geen kb-onderdelen en
           behoudt de bestaande veldkenmerken-callout.
@@ -150,7 +151,7 @@ def main():
             # ── KBB-02: accordions ──────────────────────────────────────────────────
             open_species(p, "Fitis", "sp057")
             details = p.locator('#sdPanel-herkenning details.kb-acc')
-            assert details.count() >= 4
+            assert details.count() >= 3, "KBB-02 Niveau 2 (kritisch, herkenning, geslacht/leeftijd) ontbreekt"
             for i in range(details.count()):
                 assert details.nth(i).evaluate("d => d.open") is False, "KBB-02 accordion standaard open"
             acc = p.locator('#sdPanel-herkenning details[data-kb-section="kritisch"]')
@@ -159,22 +160,40 @@ def main():
             expect(acc.locator(".kb-crit-card").first).to_be_visible()
             acc.locator("summary").click()
             assert acc.evaluate("d => d.open") is False
-            geluid = p.locator('#sdPanel-herkenning details[data-kb-section="geluid"] > summary')
+            geluid = p.locator('#sdPanel-herkenning details[data-kb-section="herkenning"] > summary')
             geluid.focus()
             p.keyboard.press("Enter")
             assert geluid.evaluate("s => s.parentElement.open") is True, "KBB-02 toetsenbord opent accordion niet"
             print("KBB-02 OK — Niveau 2 standaard ingeklapt; opent/sluit met klik en Enter")
 
             # ── KBB-03: chip-navigatie heen en terug ────────────────────────────────
-            chip = p.locator('#sdPanel-herkenning .kb-quick .kb-chip[data-compare-species="sp056"]')
-            expect(chip).to_have_count(1)
+            expect(p.locator('#sdPanel-herkenning .kb-quick [data-compare-species]')).to_have_count(0)
+            chip = p.locator('#sdPanel-herkenning .sd-cmp-card [data-compare-species="sp056"]').first
+            chip.scroll_into_view_if_needed()
             chip.click()
             expect(p.locator(".signature-species-detail-sheet h2")).to_have_text("Tjiftjaf")
             expect(p.locator('#sdPanel-herkenning .kb-quick')).to_have_attribute("data-kb", "sp056")
-            p.locator('#sdPanel-herkenning .kb-quick .kb-chip[data-compare-species="sp057"]').click()
+            back = p.locator('#sdPanel-herkenning .sd-cmp-card [data-compare-species="sp057"]').first
+            back.scroll_into_view_if_needed()
+            back.click()
             expect(p.locator(".signature-species-detail-sheet h2")).to_have_text("Fitis")
             expect(p.locator(".signature-species-detail-overlay")).to_have_count(1)
-            print("KBB-03 OK — chip Fitis → Tjiftjaf → Fitis, precies één open kaart")
+            print("KBB-03 OK — geen chips in Niveau 1; vergelijkingsknop Fitis → Tjiftjaf → Fitis, precies één open kaart")
+
+            # KBB-03b: extra gelijkende soort zonder eigen vergelijkingskaart (Zilvermeeuw → Geelpootmeeuw)
+            p.locator(".signature-species-detail-close").click()
+            expect(p.locator(".signature-species-detail-overlay")).to_have_count(0)
+            open_species(p, "Zilvermeeuw", "sp094")
+            extra = p.locator('#sdPanel-herkenning [data-kb-similar] [data-compare-species="sp226"]')
+            expect(extra).to_have_count(1)
+            p.locator('#sdPanel-herkenning [data-kb-similar]').scroll_into_view_if_needed()
+            p.screenshot(path=str(SHOTS / "sp094_390_lijkt-op.png"))
+            extra.click()
+            expect(p.locator(".signature-species-detail-sheet h2")).to_have_text("Geelpootmeeuw")
+            p.locator(".signature-species-detail-close").click()
+            expect(p.locator(".signature-species-detail-overlay")).to_have_count(0)
+            open_species(p, "Fitis", "sp057")
+            print("KBB-03b OK — Zilvermeeuw: Geelpootmeeuw onder Lijkt op, navigeert")
 
             # ── KBB-04: Leefwijze-tab, bronnen ──────────────────────────────────────
             p.locator("#sdTab-status").click()
@@ -204,6 +223,9 @@ def main():
                 expect(zoom).to_have_count(0)
             audio = p.locator("#sdPanel-herkenning audio")
             clips = audio.count()
+            p.wait_for_timeout(500)  # na het asynchroon laden van speciesLife
+            expect(p.locator("#sdVoice [data-kb-voice]")).to_have_count(1)
+            assert p.locator("#sdVoice h3.sd-h").count() == 1, "KBB-06 dubbele kop Zang en roep"
             assert clips == 2, f"KBB-06 Fitis: verwacht 2 bestaande geluidsfragmenten, kreeg {audio.count()}"
             for i in range(audio.count()):
                 src = audio.nth(i).get_attribute("src")

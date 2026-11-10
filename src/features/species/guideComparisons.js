@@ -833,7 +833,7 @@ export const GUIDE_COMPARISONS = [
     flight: true,
     birds: [
       {id: 'sp002', source: 'houtduif', marks: 'Brede witte vleugelbanden. Volwassen vogels hebben ook een witte halsvlek.'},
-      {id: 'sp003', source: 'holenduif', marks: 'Grijze vleugels met donkere randen. Een brede witte vleugelband ontbreekt.'},
+      {id: 'sp003', source: 'holenduif', photoMissing: 'vluchtcontrole 2026-11-10: geen geschikte vluchtfoto', marks: 'Grijze vleugels met donkere randen. Een brede witte vleugelband ontbreekt.'},
       {id: 'sp004', source: 'turkse-tortel', marks: 'Lichte vleugelvelden en een lange staart met lichte buitenste staartpennen.'},
     ],
     tip: 'Vergelijk de vleugeltekening en de staart. De foto’s tonen verschillende hoeken en afstanden.',
@@ -843,7 +843,7 @@ export const GUIDE_COMPARISONS = [
     flight: true,
     birds: [
       {id: 'sp016', source: 'grote-bonte-specht', marks: 'Grote witte schoudervlekken en een rode onderstaart.'},
-      {id: 'sp017', source: 'kleine-bonte-specht', marks: 'Lichte dwarsbanden op de rug, zonder grote witte schoudervlek of rode onderstaart.'},
+      {id: 'sp017', source: 'kleine-bonte-specht', photoMissing: 'vluchtcontrole 2026-11-10: geen geschikte vluchtfoto', marks: 'Lichte dwarsbanden op de rug, zonder grote witte schoudervlek of rode onderstaart.'},
       {id: 'sp020', source: 'middelste-bonte-specht', marks: 'Gestreepte flanken en een roze onderstaart. Op deze foto vallen vooral de vleugeltekening en onderzijde op.'},
     ],
     tip: 'Combineer het rugpatroon, de flankstrepen en de kleur van de onderstaart. De foto’s tonen verschillende hoeken.',
@@ -862,7 +862,7 @@ export const GUIDE_COMPARISONS = [
     flight: true,
     birds: [
       {id: 'sp022', source: 'zwarte-kraai', marks: 'Geheel zwart, met een stevige snavel en brede vleugels met gespreide punten.'},
-      {id: 'sp025', source: 'kauw', marks: 'Compactere bouw, kortere snavel en grijze nek. Van dichtbij valt het lichte oog op.'},
+      {id: 'sp025', source: 'kauw', photoMissing: 'vluchtcontrole 2026-11-10: geen geschikte vluchtfoto', marks: 'Compactere bouw, kortere snavel en grijze nek. Van dichtbij valt het lichte oog op.'},
     ],
     tip: 'Vergelijk kop en snavel. Tegen fel tegenlicht kan de grijze nek van de Kauw donker lijken.',
   },
@@ -888,10 +888,10 @@ export const GUIDE_COMPARISONS = [
     label: 'Glanskop en Matkop · in vlucht',
     flight: true,
     birds: [
-      {id: 'sp032', source: 'glanskop', marks: 'Kleine mees met donkere kruin. Op deze tegenlichtfoto zijn de kleine verschillen met Matkop lastig te zien.'},
-      {id: 'sp031', source: 'matkop', marks: 'Lijkt sterk op Glanskop. Een licht vleugelveld is vaak bruikbaar bij goed zicht.'},
+      {id: 'sp032', source: 'glanskop', photoMissing: 'vluchtcontrole 2026-11-10: geen geschikte vluchtfoto', marks: 'Kleine mees met donkere kruin. In vlucht zijn de kleine verschillen met Matkop lastig te zien.'},
+      {id: 'sp031', source: 'matkop', photoMissing: 'vluchtcontrole 2026-11-10: geen geschikte vluchtfoto', marks: 'Lijkt sterk op Glanskop. Een licht vleugelveld is vaak bruikbaar bij goed zicht.'},
     ],
-    tip: 'Gebruik deze foto’s voor de vlieghouding. Luister bij twijfel naar de roep en bekijk de kop en gevouwen vleugel bij goed licht.',
+    tip: 'Van beide soorten is nog geen geschikte vluchtfoto. Luister bij twijfel naar de roep en bekijk de kop en gevouwen vleugel bij goed licht.',
   },
   {
     label: 'Groenling en Sijs · in vlucht',

@@ -62,10 +62,11 @@ def main():
     for sid in sorted(done):
         k = know[sid]
         for pid in [x["id"] for x in k.get("similar", [])] + [v for c in k.get("critical", []) for v in c.get("vs", [])]:
-            if pid not in done and pid not in partners:
+            if pid not in done and pid not in partners and rows[pid]["B"]["photos"]:
                 partners.append(pid)
     rest = [r for r in cov["rows"] if r["id"] not in done and r["id"] not in partners]
-    rest.sort(key=lambda r: (r["compact"], FREQ.get(r["H"]["frequency"], 4), not r["B"]["photos"], r["family"], r["nameNL"]))
+    # Eigenaarsbesluit 10-11-2026: eerst alle soorten met gidsfoto's, pas daarna de rest.
+    rest.sort(key=lambda r: (not r["B"]["photos"], r["compact"], FREQ.get(r["H"]["frequency"], 4), r["family"], r["nameNL"]))
     order = partners + [r["id"] for r in rest]
     batches = {}
     for i, sid in enumerate(order):
@@ -115,9 +116,9 @@ def main():
             L.append(f"| {e['id']} | {e['nameNL']} | {e['criticalChecked']} | {', '.join(e['similar']) or '—'} | {e['discrepancies']} | "
                      f"{len(e['openQuestions'])} | {e['sourceStatus']} | {e['contentQA']} | {e['uiStatus']} | `{e['sha']}` | {e['lastCheck']} | {e['next']} |")
     L += ["", "## Batchplan", "",
-          "Volgorde: K01 = vergelijkingspartners van de proefsoorten (maakt de proefparen compleet); daarna niet-compacte soorten op frequentie "
-          "(algemeen → zeer zeldzaam), soorten met gidsfoto eerst, gegroepeerd per familie; compacte soorten (245) als laatste — "
-          "voor die groep is een lichter profiel een eigenaarsbesluit (zie handover).", "",
+          "Volgorde (eigenaarsbesluit 10-11-2026): eerst alle soorten mét gidsfoto — K01 = vergelijkingspartners met foto van de profielsoorten, "
+          "daarna de overige fotosoorten op frequentie en familie. Soorten zonder foto pas na akkoord van de eigenaar op de fotocollectie; "
+          "compacte soorten als laatste (profielomvang is een eigenaarsbesluit).", "",
           "| Batch | Soorten | Families | Frequentie |", "|---|---|---|---|"]
     for b, es in sorted(by_batch.items()):
         fams = sorted({e["family"] for e in es})

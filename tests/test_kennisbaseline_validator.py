@@ -14,6 +14,10 @@ stil door te laten. Elke case muteert een kopie van knowledge.json en verwacht e
   KV-08  leeg verplicht veld in kritisch kenmerk
   KV-09  bron zonder URL/controledatum
   KV-10  --check detecteert een handmatig gewijzigde speciesKnowledge.js
+  KV-11  'doorslaggevend' met bronnen van maar één uitgever, of bron zonder uitgever, wordt geweigerd
+  KV-12  FQA-04: veldkenmerk (keyMark) nooit doorslaggevend; kritisch kenmerk doorslaggevend vereist diagnostische onderbouwing
+  KV-13  biometrie (kwaliteitsnorm §1): <2 uitgevers, afwijkende circa-band, uitgesloten waarde zonder reden
+  KV-14  circa-band wijkt af van de getoonde maat in species.js
 
 Starten (vanuit repo-root):  python3 tests/test_kennisbaseline_validator.py
 """
@@ -36,10 +40,13 @@ IDS = bk.species_ids()
 FIRST = next(k for k in BASE if not k.startswith("_"))
 
 
-def errors_after(mutate):
+SIZES = bk.species_sizes()
+
+
+def errors_after(mutate, sizes=None):
     data = copy.deepcopy(BASE)
     mutate(data)
-    return bk.validate(data, IDS)
+    return bk.validate(data, IDS, sizes or SIZES)
 
 
 def expect(case, mutate, needle):
@@ -49,7 +56,7 @@ def expect(case, mutate, needle):
 
 
 def main():
-    assert bk.validate(copy.deepcopy(BASE), IDS) == [], "KV-01 huidige bron is ongeldig"
+    assert bk.validate(copy.deepcopy(BASE), IDS, SIZES) == [], "KV-01 huidige bron is ongeldig"
     print("KV-01 OK — huidige knowledge.json is geldig")
 
     expect("KV-02", lambda d: d.__setitem__("sp999", copy.deepcopy(d[FIRST])), "onbekend Birdspot-ID")
@@ -66,6 +73,36 @@ def main():
     expect("KV-09", lambda d: d["_sources"][first_src].__setitem__("url", ""), "veld url ontbreekt")
     expect("KV-09b", lambda d: d["_sources"][first_src].pop("checked"), "veld checked ontbreekt")
 
+    def one_publisher(d):
+        c = next(c for k, v in d.items() if not k.startswith("_") for c in v["critical"] if c["reliability"] == "doorslaggevend")
+        c["sources"] = c["sources"][:1]
+    expect("KV-11", one_publisher, "doorslaggevend zonder twee onafhankelijke uitgevers")
+    expect("KV-11b", lambda d: d["_sources"][first_src].pop("publisher"), "veld publisher ontbreekt")
+
+    # KV-12 (FQA-04): veldkenmerk nooit doorslaggevend; kritisch kenmerk doorslaggevend vereist diagnostische onderbouwing.
+    def km_decisive(d):
+        d["sp002"]["keyMarks"][0]["reliability"] = "doorslaggevend"
+    expect("KV-12", km_decisive, "niet bij een veldkenmerk")
+    def no_diag(d):
+        c = next(c for c in d["sp002"]["critical"] if c["reliability"] == "doorslaggevend")
+        c.pop("diagnostic", None)
+    expect("KV-12b", no_diag, "zonder diagnostische onderbouwing")
+
+    # KV-13/14: biometrie volgens kwaliteitsnorm §1.
+    assert bk.bio_display([{"min": 124, "max": 127}, {"min": 135, "max": 150}], "cm") == "ca. 130–140 cm"
+    assert bk.bio_display([{"min": 15, "max": 17}, {"min": 16, "max": 18}], "cm") == "ca. 16–18 cm"
+    assert bk.bio_display([{"min": 620, "max": 1000}, {"min": 550, "max": 1100}], "g") == "ca. 590–1050 g"
+    print("KV-13 OK — afronding: 5 cm vanaf 30 cm, 1 cm eronder, 10 g / 50 g")
+    bio = lambda d: d["sp095"]["basis"]["biometrics"][1]
+    expect("KV-13", lambda d: bio(d)["values"].pop(), "KV-13 minder dan twee uitgevers")
+    expect("KV-13b", lambda d: bio(d)["values"][1].__setitem__("source", "VB_KMM"), "KV-13 minder dan twee uitgevers")
+    expect("KV-13c", lambda d: bio(d).__setitem__("display", "124–150 cm"), "KV-13 display")
+    expect("KV-13d", lambda d: d["sp096"]["basis"]["biometrics"][0]["excluded"][0].__setitem__("reason", ""), "uitgesloten waarde zonder reden")
+    sizes = copy.deepcopy(SIZES); sizes["sp095"]["wingspan"] = "117–134 cm"
+    errs = errors_after(lambda d: None, sizes)
+    assert any("KV-14" in e for e in errs), f"KV-14 niet gedetecteerd: {errs}"
+    print(f"KV-14 OK — geweigerd: {next(e for e in errs if 'KV-14' in e)}")
+
     # KV-10: --check in een tijdelijke kopie van de relevante bestanden
     with tempfile.TemporaryDirectory() as tmp:
         t = Path(tmp)
@@ -81,7 +118,7 @@ def main():
         bad = subprocess.run([sys.executable, "-I", str(script), "--check"], capture_output=True, text=True)
         assert bad.returncode == 1 and "loopt niet gelijk" in bad.stdout, f"KV-10 handwijziging niet gedetecteerd: {bad.stdout}"
     print("KV-10 OK — --check weigert een handmatig gewijzigde speciesKnowledge.js")
-    print("Kennisprofiel-validator: alle negatieve controles geslaagd (KV-01..KV-10)")
+    print("Kennisprofiel-validator: alle negatieve controles geslaagd (KV-01..KV-14)")
 
 
 if __name__ == "__main__":

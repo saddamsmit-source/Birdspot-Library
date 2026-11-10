@@ -2010,7 +2010,8 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "visualCheck": "Driekleurig: bruin lijf, grijze vleugelvelden en staart, zwarte vleugelpunten.",
       "width": 1600,
       "height": 1067,
-      "image": "/assets/species/plumage/sp173-male-2.webp"
+      "image": "/assets/species/plumage/sp173-male-2.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     },
     "adult_f": {
       "file": "Circus aeruginosus female Oulu Finland 2021-04-21.jpg",
@@ -2029,7 +2030,9 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bruine-kiekendief",
       "visualCheck": "Volwassen vrouwtje in frontale vlucht. Donkerbruin, met lichte kruin en voorrand van de vleugel.",
       "alt": "Bruine Kiekendief — Volwassen vrouwtje in frontale vlucht. Donkerbruin, met lichte kruin en voorrand van de vleugel.",
-      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "flight": true,
+      "flightReview": "goedgekeurd 2026-11-10: FQA-01 beeldinventaris 10-11-2026: stond niet als vlucht geregistreerd maar toont echte vrije vlucht. Vrouwtje (bron: Commons-titel \"female\"); vliegt vrij, vleugels volledig gestrekt. Leeftijd/geslacht blijft; foto één keer, onder In vlucht."
     },
     "juv": {
       "file": "iNaturalist photo 229518401",
@@ -2050,7 +2053,10 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "alt": "Bruine Kiekendief — Jonge vogel vlak boven riet, met donkerbruin kleed en lichte kruin.",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
       "observation": "https://www.inaturalist.org/observations/134634395",
-      "flight": true
+      "flight": false,
+      "flightReview": "uit-rol 2026-11-10: Strijkt met hangende poten neer in het riet; geen vrije vlucht.",
+      "label": "Juveniel, neerstrijkend in riet",
+      "note": "Roomkleurige kop op donkerbruin lichaam."
     }
   },
   "sp249": {
@@ -2075,7 +2081,8 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "visualCheck": "Volwassen vrouwtje in vlucht van onderen, met duidelijke bandering op de vleugels en staart.",
       "alt": "Blauwe Kiekendief — Volwassen vrouwtje in vlucht van onderen, met duidelijke bandering op de vleugels en staart.",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "flight": true
+      "flight": true,
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     },
     "juv": {
       "file": "Blauwe Kiekendief.jpg",
@@ -2095,7 +2102,8 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "visualCheck": "Jong vrouwtje boven gras, met gebandeerde ondervleugels en een witte stuit.",
       "alt": "Blauwe Kiekendief — Jong vrouwtje boven gras, met gebandeerde ondervleugels en een witte stuit.",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
-      "flight": true
+      "flight": true,
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   },
   "sp250": {
@@ -2121,7 +2129,8 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "alt": "Steppekiekendief — Volwassen vrouwtje in vlucht. Smalle vleugels, bandering op de ondervleugel en gestreepte onderzijde.",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
       "observation": "https://www.inaturalist.org/observations/343960250",
-      "flight": true
+      "flight": true,
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     },
     "juv": {
       "file": "Лунь степовий Circus macrourus, на о. Джарилгач.jpg",
@@ -2141,7 +2150,8 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "visualCheck": "Jonge vogel in vlucht met warme onderzijde, lichte halsring en donkere halsvlek.",
       "alt": "Steppekiekendief — Jonge vogel in vlucht met warme onderzijde, lichte halsring en donkere halsvlek.",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "flight": true
+      "flight": true,
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   },
   "sp251": {
@@ -2166,7 +2176,10 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "visualCheck": "Volwassen vrouwtje bij het opvliegen. Gestreepte onderzijde en duidelijke banden op de ondervleugel.",
       "alt": "Grauwe Kiekendief — Volwassen vrouwtje bij het opvliegen. Gestreepte onderzijde en duidelijke banden op de ondervleugel.",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
-      "flight": true
+      "flight": false,
+      "flightReview": "uit-rol 2026-11-10: Vleugels hoog opgeslagen, poten omlaag: neerstrijken/remmen, geen herkenbare vlieghouding.",
+      "label": "Vrouwtje, remmend met hangende poten",
+      "note": "Bruin gestreept vrouwtje met witte stuit en gebandeerde staart."
     },
     "juv": {
       "file": "Circus pygargus juvenile flight.jpg",
@@ -2186,7 +2199,10 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "visualCheck": "Jonge vogel in vlucht. Warmbruine onderzijde en gebandeerde vleugels en staart.",
       "alt": "Grauwe Kiekendief — Jonge vogel in vlucht. Warmbruine onderzijde en gebandeerde vleugels en staart.",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
-      "flight": true
+      "flight": false,
+      "flightReview": "uit-rol 2026-11-10: Landt boven gras met uitgestrekte poten.",
+      "label": "Juveniel, landend",
+      "note": "Roestbruine onderzijde en gebandeerde slagpennen."
     }
   },
   "sp006": {
@@ -2274,7 +2290,8 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "alt": "Havik — Volwassen vrouwtje in vlucht in Japan. Uitstekende kop, gebandeerde onderzijde en een afgeronde staartpunt.",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
       "observation": "https://www.inaturalist.org/observations/266098077",
-      "flight": true
+      "flight": true,
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   },
   "sp005": {
@@ -2297,7 +2314,8 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "alt": "Buizerd — Volwassen Buizerd van onderen. Brede vleugels, korte gespreide staart en fijne bandering op de staart.",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
       "observation": "https://www.inaturalist.org/observations/177992598",
-      "flight": true
+      "flight": true,
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     },
     "juv": {
       "file": "iNaturalist photo 147178882",
@@ -2317,7 +2335,9 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "visualCheck": "Jonge Buizerd in licht kleed. De buik is licht en de polsvlekken en bandering op de staart zijn zichtbaar.",
       "alt": "Buizerd — Jonge Buizerd in licht kleed. De buik is licht en de polsvlekken en bandering op de staart zijn zichtbaar.",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-      "observation": "https://www.inaturalist.org/observations/89145381"
+      "observation": "https://www.inaturalist.org/observations/89145381",
+      "flight": true,
+      "flightReview": "goedgekeurd 2026-11-10: FQA-01 beeldinventaris 10-11-2026: stond niet als vlucht geregistreerd maar toont echte vrije vlucht. Juveniel (bron: iNaturalist Life Stage: Juvenile); zweeft vrij met volledig gespreide vleugels. Leeftijd/geslacht blijft; foto één keer, onder In vlucht."
     }
   },
   "sp248": {
@@ -2343,7 +2363,8 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "alt": "Wespendief — Volwassen vrouwtje met gespreide staart. Brede banden op de ondervleugels en de kenmerkende smalle, uitstekende kop.",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
       "observation": "https://www.inaturalist.org/observations/371545998",
-      "flight": true
+      "flight": true,
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     },
     "juv": {
       "file": "Juvenile honey buzzard (52499563661).jpg",
@@ -2363,7 +2384,8 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "visualCheck": "Jonge Wespendief in vlucht met langere staart en contrastrijke handpennen en armpennen.",
       "alt": "Wespendief — Jonge Wespendief in vlucht met langere staart en contrastrijke handpennen en armpennen.",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
-      "flight": true
+      "flight": true,
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   },
   "sp253": {
@@ -2388,7 +2410,9 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "visualCheck": "Jonge Ruigpootbuizerd in Tsjechië. Lichte borst, donkere buik en donkere polsvlekken.",
       "alt": "Ruigpootbuizerd — Jonge Ruigpootbuizerd in Tsjechië. Lichte borst, donkere buik en donkere polsvlekken.",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-      "observation": "https://www.inaturalist.org/observations/70044579"
+      "observation": "https://www.inaturalist.org/observations/70044579",
+      "flight": true,
+      "flightReview": "goedgekeurd 2026-11-10: FQA-01 beeldinventaris 10-11-2026: stond niet als vlucht geregistreerd maar toont echte vrije vlucht. Juveniel (bron: iNaturalist Life Stage: Juvenile); vrij in de lucht, gespreide vleugels en staart. Leeftijd/geslacht blijft; foto één keer, onder In vlucht."
     }
   },
   "sp082": {
@@ -2703,7 +2727,8 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "visualCheck": "Mannetje in eclipskleed in vlucht boven Hongkong. Bruine kop, lichte keel en opvallend blauwgrijze voorvleugel.",
       "alt": "Zomertaling — Mannetje in eclipskleed in vlucht boven Hongkong. Bruine kop, lichte keel en opvallend blauwgrijze voorvleugel.",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "flight": true
+      "flight": true,
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   },
   "sp146": {
@@ -3890,7 +3915,8 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "width": 1250,
       "height": 833,
       "image": "/assets/species/plumage/sp141-adult.webp",
-      "flight": true
+      "flight": true,
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   },
   "sp165": {
@@ -3933,7 +3959,8 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "width": 1250,
       "height": 833,
       "image": "/assets/species/plumage/sp166-adult.webp",
-      "flight": true
+      "flight": true,
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   },
   "sp167": {
@@ -3955,7 +3982,8 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "width": 1250,
       "height": 833,
       "image": "/assets/species/plumage/sp167-adult.webp",
-      "flight": true
+      "flight": true,
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   }
 });
@@ -4034,7 +4062,8 @@ export const GUIDE_POSES = Object.freeze({
       "width": 1600,
       "height": 1004,
       "flight": true,
-      "showSourceLink": false
+      "showSourceLink": false,
+      "flightReview": "goedgekeurd 2026-11-10: Biddend in de lucht; typerende houding voor deze soort."
     },
     {
       "label": "Mannetje in vlucht",
@@ -4056,7 +4085,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Torenvalk · mannetje in vlucht. Recht van voren van onderen. De lange staart met donkere eindband en spitse vleugels zijn zichtbaar.",
       "width": 1400,
       "height": 1050,
-      "image": "/assets/species/plumage/sp008-male-flight.webp"
+      "image": "/assets/species/plumage/sp008-male-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     },
     {
       "label": "Mannetje",
@@ -4126,7 +4156,8 @@ export const GUIDE_POSES = Object.freeze({
       "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/slechtvalk",
       "visualCheck": "Volledige vogel in vlucht met spitse vleugels, donkere baardstreep en dwarsbandering op de onderzijde.",
       "alt": "Slechtvalk — Volledige vogel in vlucht met spitse vleugels, donkere baardstreep en dwarsbandering op de onderzijde.",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     },
     {
       "label": "Volwassen in rust, van opzij",
@@ -4172,7 +4203,8 @@ export const GUIDE_POSES = Object.freeze({
       "height": 815,
       "image": "/assets/species/plumage/sp009-male-flight.webp",
       "sourceAudit": "2026-11-09",
-      "sexNote": "Geslacht volgens de bron, maar bij de Slechtvalk niet aan het verenkleed te zien; daarom zonder geslachtslabel."
+      "sexNote": "Geslacht volgens de bron, maar bij de Slechtvalk niet aan het verenkleed te zien; daarom zonder geslachtslabel.",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp019": [
@@ -4243,7 +4275,8 @@ export const GUIDE_POSES = Object.freeze({
       "width": 1400,
       "height": 1050,
       "image": "/assets/species/plumage/sp019-flight.webp",
-      "sex": "female"
+      "sex": "female",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     },
     {
       "label": "Mannetje",
@@ -4337,7 +4370,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Middelste Bonte Specht in vlucht met gebandeerde vleugels, gestreepte flanken en een roze onderstaart.",
       "width": 725,
       "height": 483,
-      "image": "/assets/species/plumage/sp020-flight.webp"
+      "image": "/assets/species/plumage/sp020-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp031": [
@@ -4380,9 +4414,10 @@ export const GUIDE_POSES = Object.freeze({
       "verification": "Commons beschrijft Poecile montanus in vlucht in Kittilä, Finland. Visuele soortcontrole passend; leeftijd en geslacht niet vastgesteld. Illustratie van houding, geen bewijs voor een Nederlands ondersoortkleed.",
       "originalURL": "https://upload.wikimedia.org/wikipedia/commons/3/32/Poecile_Montanus_Kittila_20120306.JPG",
       "image": "/assets/species/plumage/sp031-flight.webp",
-      "label": "In vlucht",
-      "note": "Vluchtbeeld uit Finland: uitgewaaierde vleugel en lange staart. Gebruik voor onderscheid met Glanskop vooral de gesloten vleugel, snavelbasis en geluid; dit beeld bewijst geen Nederlandse ondersoort.",
-      "flight": true
+      "label": "Opvliegend boven sneeuw",
+      "note": "Toont het lichte vleugelpaneel.",
+      "flight": false,
+      "flightReview": "uit-rol 2026-11-10: Poten naar beneden vlak boven de sneeuw: afzetten of neerstrijken."
     }
   ],
   "sp032": [
@@ -4427,27 +4462,6 @@ export const GUIDE_POSES = Object.freeze({
       "image": "/assets/species/plumage/sp032-view.webp",
       "label": "Van voren",
       "note": "Vooraanzicht met de kop opzij: lichte borst en kleine donkere keelvlek. Dit beeld is geen bewijs voor het subtiele lichte vlekje aan de snavelbasis."
-    },
-    {
-      "label": "In vlucht",
-      "flight": true,
-      "note": "Het tegenlicht maakt kleine details in de kop en vleugel lastig te zien.",
-      "file": "Parus palustris IMG 9452.jpg",
-      "nl": "Glanskop",
-      "latin": "Poecile palustris",
-      "author": "Sébastien Bertru",
-      "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
-      "source": "https://commons.wikimedia.org/wiki/File:Parus_palustris_IMG_9452.jpg",
-      "showSourceLink": false,
-      "alt": "Glanskop in vlucht naast een tak, met een gespreide vleugel en donkere kruin.",
-      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
-      "reviewed": "2026-11-07",
-      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/glanskop",
-      "visualCheck": "Glanskop in vlucht naast een tak, met een gespreide vleugel en donkere kruin.",
-      "width": 1400,
-      "height": 1277,
-      "image": "/assets/species/plumage/sp032-flight.webp"
     }
   ],
   "sp033": [
@@ -4494,9 +4508,9 @@ export const GUIDE_POSES = Object.freeze({
       "note": "Kijk naar de spitse kuif en de gebogen zwarte lijn achter de wang. Vergroot de foto om de koptekening te bekijken."
     },
     {
-      "label": "In vlucht",
-      "flight": true,
-      "note": "De spitse kuif en donkere halsband zijn ook bij het wegvliegen zichtbaar.",
+      "label": "Opvliegend vanaf sneeuw",
+      "flight": false,
+      "note": "Kuif en kopkleed goed zichtbaar.",
       "file": "Haubenmeise Abflug.JPG",
       "nl": "Kuifmees",
       "latin": "Lophophanes cristatus",
@@ -4512,7 +4526,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Kuifmees vliegt op boven de sneeuw, met geheven vleugels, een spitse kuif en zwart-witte koptekening.",
       "width": 960,
       "height": 720,
-      "image": "/assets/species/plumage/sp033-flight.webp"
+      "image": "/assets/species/plumage/sp033-flight.webp",
+      "flightReview": "uit-rol 2026-11-10: Staat met de poten op de sneeuw met geheven vleugels."
     }
   ],
   "sp116": [
@@ -4556,7 +4571,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Oeverzwaluw in vrije vlucht van onderen gezien, met gespreide vleugels en een bruine borstband tussen witte keel en buik.",
       "width": 1179,
       "height": 971,
-      "image": "/assets/species/plumage/sp116-flight.webp"
+      "image": "/assets/species/plumage/sp116-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp006": [
@@ -4579,7 +4595,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Volwassen man Sperwer in vlucht met korte brede vleugels, gebandeerde staart en roestkleurige onderzijde.",
       "width": 1400,
       "height": 933,
-      "image": "/assets/species/plumage/sp006-flight.webp"
+      "image": "/assets/species/plumage/sp006-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     },
     {
       "label": "Mannetje",
@@ -4627,7 +4644,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Havik in vlucht met brede vleugel, stevige borst, lange staart en fijne dwarsbanden op de onderzijde.",
       "width": 800,
       "height": 450,
-      "image": "/assets/species/plumage/sp007-flight.webp"
+      "image": "/assets/species/plumage/sp007-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     },
     {
       "label": "Mannetje in vlucht",
@@ -4649,7 +4667,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Havik · mannetje in vlucht. In zijaanzicht met geheven vleugel. Let op de bandering en de lange staart.",
       "width": 922,
       "height": 792,
-      "image": "/assets/species/plumage/sp007-male-flight.webp"
+      "image": "/assets/species/plumage/sp007-male-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     },
     {
       "label": "Mannetje",
@@ -4697,14 +4716,15 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Volwassen Houtduif in vlucht, van voren gezien, met witte vleugelbanden en roze borst.",
       "width": 1200,
       "height": 746,
-      "image": "/assets/species/plumage/sp002-flight.webp"
+      "image": "/assets/species/plumage/sp002-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp003": [
     {
-      "label": "In vlucht",
-      "flight": true,
-      "note": "Let op de donkere vleugelranden en het ontbreken van een brede witte vleugelband.",
+      "label": "Opvliegend vanaf de grond",
+      "flight": false,
+      "note": "Toont de grijze vleugels met donkere randen, zonder brede witte vleugelband.",
       "file": "Skogsduva Stock Dove (19730362773).jpg",
       "nl": "Holenduif",
       "latin": "Columba oenas",
@@ -4720,7 +4740,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Holenduif vlak boven de grond met geheven grijze vleugels en donkere vleugelranden.",
       "width": 485,
       "height": 325,
-      "image": "/assets/species/plumage/sp003-flight.webp"
+      "image": "/assets/species/plumage/sp003-flight.webp",
+      "flightReview": "uit-rol 2026-11-10: Poten raken nog de grond; vogel zet af. Ook laag opgelost (485 px)."
     }
   ],
   "sp004": [
@@ -4743,7 +4764,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Turkse Tortel in vlucht met lichte vleugelvelden en een lange, deels gespreide staart.",
       "width": 1400,
       "height": 1053,
-      "image": "/assets/species/plumage/sp004-flight.webp"
+      "image": "/assets/species/plumage/sp004-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp016": [
@@ -4766,7 +4788,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Grote Bonte Specht in vlucht met een grote witte schoudervlek, witte vleugelstippen en voedsel in de snavel.",
       "width": 1400,
       "height": 933,
-      "image": "/assets/species/plumage/sp016-flight.webp"
+      "image": "/assets/species/plumage/sp016-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     },
     {
       "label": "Mannetje",
@@ -4796,9 +4819,9 @@ export const GUIDE_POSES = Object.freeze({
   ],
   "sp017": [
     {
-      "label": "Vrouwtje in vlucht",
-      "flight": true,
-      "note": "Let op de lichte dwarsbanden op de rug en vleugels.",
+      "label": "Vrouwtje, wegvliegend bij nestholte",
+      "flight": false,
+      "note": "Vrouwtje zonder rode kruin, gebandeerde rug.",
       "file": "Lesser spotted woodpecker (f), Dryobates minor, Mindre hackspett.jpg",
       "nl": "Kleine Bonte Specht",
       "latin": "Dryobates minor",
@@ -4815,7 +4838,8 @@ export const GUIDE_POSES = Object.freeze({
       "width": 1400,
       "height": 1400,
       "image": "/assets/species/plumage/sp017-flight.webp",
-      "sex": "female"
+      "sex": "female",
+      "flightReview": "uit-rol 2026-11-10: Zet af van de stam bij de nestholte; staart nog tegen de bast."
     }
   ],
   "sp018": [
@@ -4838,7 +4862,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Zwarte Specht in vlucht met geheven vleugels, rode kruin en lichte snavel.",
       "width": 1400,
       "height": 1085,
-      "image": "/assets/species/plumage/sp018-flight.webp"
+      "image": "/assets/species/plumage/sp018-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     },
     {
       "file": "Dryocopus martius 03.jpg",
@@ -4908,7 +4933,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Ekster in vlucht met gespreide zwart-witte vleugels en een lange staart.",
       "width": 1400,
       "height": 933,
-      "image": "/assets/species/plumage/sp021-flight.webp"
+      "image": "/assets/species/plumage/sp021-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp022": [
@@ -4931,14 +4957,15 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Zwarte Kraai in vlucht met brede zwarte vleugels, gespreide vleugelpunten en een stevige snavel.",
       "width": 1400,
       "height": 933,
-      "image": "/assets/species/plumage/sp022-flight.webp"
+      "image": "/assets/species/plumage/sp022-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp025": [
     {
-      "label": "In vlucht",
-      "flight": true,
-      "note": "Let op de grijze nek, lichte ogen en kortere snavel.",
+      "label": "Landend tussen takken",
+      "flight": false,
+      "note": "Van voren: grijze nek en lichte iris.",
       "file": "Jackdaw (48142024622).jpg",
       "nl": "Kauw",
       "latin": "Coloeus monedula",
@@ -4954,7 +4981,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Kauw in frontale vlucht met gespreide vleugels, grijze nek en lichte ogen.",
       "width": 1400,
       "height": 934,
-      "image": "/assets/species/plumage/sp025-flight.webp"
+      "image": "/assets/species/plumage/sp025-flight.webp",
+      "flightReview": "uit-rol 2026-11-10: Frontale landingsnadering met poten naar voren en gespreide staart."
     }
   ],
   "sp026": [
@@ -4977,7 +5005,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Gaai in vlucht met een rozegrijs lichaam en een blauw-zwart gebandeerd vleugelveld.",
       "width": 1400,
       "height": 933,
-      "image": "/assets/species/plumage/sp026-flight.webp"
+      "image": "/assets/species/plumage/sp026-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp029": [
@@ -5000,7 +5029,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Koolmees in vlucht met een gele buik, zwarte kop, witte wang en gespreide vleugel.",
       "width": 1400,
       "height": 1077,
-      "image": "/assets/species/plumage/sp029-flight.webp"
+      "image": "/assets/species/plumage/sp029-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp030": [
@@ -5023,30 +5053,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Pimpelmees in vlucht met blauwe kruin, donkere oogstreep, gespreide staart en gele buik.",
       "width": 1400,
       "height": 1050,
-      "image": "/assets/species/plumage/sp030-flight.webp"
-    }
-  ],
-  "sp034": [
-    {
-      "label": "In vlucht",
-      "flight": true,
-      "note": "Let op de ronde lichaamsbouw. De lange staart is door de hoek minder goed te zien.",
-      "file": "Long-tailed Tit in flight (8644086215).jpg",
-      "nl": "Staartmees",
-      "latin": "Aegithalos caudatus",
-      "author": "Martin Cooper",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
-      "source": "https://commons.wikimedia.org/wiki/File:Long-tailed_Tit_in_flight_(8644086215).jpg",
-      "showSourceLink": false,
-      "alt": "Staartmees in vlucht tussen takken, met gespreide vleugels en een compacte, rozegrijze romp.",
-      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
-      "reviewed": "2026-11-07",
-      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/staartmees",
-      "visualCheck": "Staartmees in vlucht tussen takken, met gespreide vleugels en een compacte, rozegrijze romp.",
-      "width": 1400,
-      "height": 1049,
-      "image": "/assets/species/plumage/sp034-flight.webp"
+      "image": "/assets/species/plumage/sp030-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp035": [
@@ -5070,7 +5078,8 @@ export const GUIDE_POSES = Object.freeze({
       "width": 900,
       "height": 900,
       "image": "/assets/species/plumage/sp035-flight.webp",
-      "sex": "male"
+      "sex": "male",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     },
     {
       "label": "Juveniel",
@@ -5139,7 +5148,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Groenling in vlucht met geheven vleugels, een stevige snavel en gele randen aan de slagpennen.",
       "width": 1050,
       "height": 1050,
-      "image": "/assets/species/plumage/sp036-flight.webp"
+      "image": "/assets/species/plumage/sp036-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp037": [
@@ -5162,7 +5172,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Putter in vlucht met een rood gezicht en een brede gele band over de gespreide zwarte vleugel.",
       "width": 1400,
       "height": 800,
-      "image": "/assets/species/plumage/sp037-flight.webp"
+      "image": "/assets/species/plumage/sp037-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp038": [
@@ -5186,14 +5197,15 @@ export const GUIDE_POSES = Object.freeze({
       "width": 1141,
       "height": 1400,
       "image": "/assets/species/plumage/sp038-flight.webp",
-      "sex": "male"
+      "sex": "male",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp039": [
     {
       "label": "In vlucht",
       "flight": true,
-      "note": "Let op de lichte vleugeltekening. Deze opname op afstand toont twee vogels uit een grotere groep.",
+      "note": "Voorlopige foto: beperkte scherpte. Let op de lichte vleugeltekening. Deze opname op afstand toont twee vogels uit een grotere groep.",
       "file": "iNaturalist-foto 617561306",
       "nl": "Kneu",
       "latin": "Linaria cannabina",
@@ -5209,7 +5221,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Twee Kneuen in zijaanzicht in vlucht tegen een grijze lucht, met lichte randen aan de vleugelpennen.",
       "width": 1045,
       "height": 470,
-      "image": "/assets/species/plumage/sp039-flight.webp"
+      "image": "/assets/species/plumage/sp039-flight.webp",
+      "flightReview": "voorwaardelijk 2026-11-10: FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): in vlucht ja; twee vogels klein in beeld, witte handpenranden nauwelijks bruikbaar; niet definitief. Vervanging met hoge prioriteit."
     }
   ],
   "sp040": [
@@ -5233,14 +5246,15 @@ export const GUIDE_POSES = Object.freeze({
       "width": 1400,
       "height": 1400,
       "image": "/assets/species/plumage/sp040-flight.webp",
-      "sex": "male"
+      "sex": "male",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp041": [
     {
       "label": "In vlucht",
       "flight": true,
-      "note": "De brede lichte vleugelband en de compacte bouw vallen op. De opname is van afstand gemaakt.",
+      "note": "Voorlopige foto: beperkte scherpte. De brede lichte vleugelband en de compacte bouw vallen op. De opname is van afstand gemaakt.",
       "file": "iNaturalist-foto 576075793",
       "nl": "Appelvink",
       "latin": "Coccothraustes coccothraustes",
@@ -5256,31 +5270,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Appelvink in zijaanzicht in vlucht tegen een blauwe lucht met een brede lichte band op de omhooggeheven vleugel.",
       "width": 330,
       "height": 275,
-      "image": "/assets/species/plumage/sp041-flight.webp"
-    }
-  ],
-  "sp042": [
-    {
-      "label": "Mannetje in vlucht",
-      "flight": true,
-      "note": "De rode kop en borst zijn zichtbaar. De vleugels zijn onscherp door beweging.",
-      "file": "Zingende roodmus-4961932.webm",
-      "nl": "Roodmus",
-      "latin": "Carpodacus erythrinus",
-      "author": "Natuur Digitaal (Marc Plomp) en Stichting Natuurbeelden",
-      "license": "CC BY-SA 3.0 NL",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/nl/",
-      "source": "https://commons.wikimedia.org/wiki/File:Zingende_roodmus-4961932.webm",
-      "showSourceLink": true,
-      "alt": "Videostill van een mannetje Roodmus vlak na het loskomen van de tak, met een rode kop en borst en bewogen vleugels.",
-      "modifications": "Videostill op 00:13,96, met gecorrigeerde pixelverhouding en omgezet naar WebP",
-      "reviewed": "2026-11-07",
-      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/roodmus",
-      "visualCheck": "Videostill van een mannetje Roodmus vlak na het loskomen van de tak, met een rode kop en borst en bewogen vleugels.",
-      "width": 1023,
-      "height": 576,
-      "image": "/assets/species/plumage/sp042-flight.webp",
-      "sex": "male"
+      "image": "/assets/species/plumage/sp041-flight.webp",
+      "flightReview": "voorwaardelijk 2026-11-10: FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): in vlucht ja; 330 px, maar witte vleugelband en snavel herkenbaar; niet definitief. Vervanging gewenst: grotere opname."
     }
   ],
   "sp043": [
@@ -5304,7 +5295,8 @@ export const GUIDE_POSES = Object.freeze({
       "width": 1400,
       "height": 886,
       "image": "/assets/species/plumage/sp043-flight.webp",
-      "sex": "male"
+      "sex": "male",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     },
     {
       "label": "Juveniel",
@@ -5373,14 +5365,15 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Twee Ringmussen vrij in de lucht met roodbruine kruinen en een donkere wangvlek op de lichte wang.",
       "width": 1400,
       "height": 961,
-      "image": "/assets/species/plumage/sp044-flight.webp"
+      "image": "/assets/species/plumage/sp044-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp045": [
     {
-      "label": "Mannetje in vlucht",
-      "flight": true,
-      "note": "Let op het donkere verenkleed en de geelachtige snavel van het mannetje.",
+      "label": "Mannetje, landend",
+      "flight": false,
+      "note": "Zwart mannetje met gele snavel en oogring.",
       "file": "NZ7 6931 (51844641169).jpg",
       "nl": "Merel",
       "latin": "Turdus merula",
@@ -5397,7 +5390,8 @@ export const GUIDE_POSES = Object.freeze({
       "width": 1400,
       "height": 1120,
       "image": "/assets/species/plumage/sp045-flight.webp",
-      "sex": "male"
+      "sex": "male",
+      "flightReview": "uit-rol 2026-11-10: Poten naar voren gestrekt: landingshouding."
     },
     {
       "label": "Mannetje",
@@ -5445,7 +5439,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Zanglijster in vlucht tegen een blauwe lucht met warmbruine ondervleugels en donkere vlekken op borst en flanken.",
       "width": 666,
       "height": 839,
-      "image": "/assets/species/plumage/sp046-flight.webp"
+      "image": "/assets/species/plumage/sp046-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp047": [
@@ -5468,14 +5463,15 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Kramsvogel in vlucht tussen takken met lichte ondervleugeldekveren, een gevlekte borst en een donkere staart.",
       "width": 845,
       "height": 1065,
-      "image": "/assets/species/plumage/sp047-flight.webp"
+      "image": "/assets/species/plumage/sp047-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp048": [
     {
-      "label": "In vlucht",
-      "flight": true,
-      "note": "Let op de lichte wenkbrauwstreep en de roestrode flank.",
+      "label": "Opvliegend tussen planten",
+      "flight": false,
+      "note": "Wenkbrauwstreep en roestrode flank zichtbaar.",
       "file": "Redwing in flight.jpg",
       "nl": "Koperwiek",
       "latin": "Turdus iliacus",
@@ -5491,37 +5487,15 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Koperwiek laag in vlucht boven vegetatie, met een lichte wenkbrauwstreep en roestrode flank.",
       "width": 1400,
       "height": 1149,
-      "image": "/assets/species/plumage/sp048-flight.webp"
-    }
-  ],
-  "sp049": [
-    {
-      "label": "In vlucht",
-      "flight": true,
-      "note": "Let op de lange staart en lichtgevlekte onderzijde. De vogel is op afstand gefotografeerd, waardoor fijne details beperkt zichtbaar zijn.",
-      "file": "iNaturalist photo 576073830",
-      "nl": "Grote Lijster",
-      "latin": "Turdus viscivorus",
-      "author": "Codrin Bucur",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-      "source": "https://www.inaturalist.org/photos/576073830",
-      "showSourceLink": true,
-      "alt": "Grote Lijster van opzij in vlucht, met een lange staart en een lichtgevlekte onderzijde.",
-      "modifications": "Uitgesneden rond de vogel en omgezet naar WebP",
-      "reviewed": "2026-11-07",
-      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-lijster",
-      "visualCheck": "Grote Lijster van opzij in vlucht, met een lange staart en een lichtgevlekte onderzijde.",
-      "width": 415,
-      "height": 310,
-      "image": "/assets/species/plumage/sp049-flight.webp"
+      "image": "/assets/species/plumage/sp048-flight.webp",
+      "flightReview": "uit-rol 2026-11-10: Tussen planten met half geopende vleugels; niet vrij in de lucht."
     }
   ],
   "sp050": [
     {
-      "label": "In vlucht",
-      "flight": true,
-      "note": "Het oranje gezicht en de gespreide vleugel zijn van opzij zichtbaar.",
+      "label": "Opvliegend in besneeuwde struik",
+      "flight": false,
+      "note": "Oranje borst en vleugelpennen zichtbaar.",
       "file": "Robin in Flight (8398860133).jpg",
       "nl": "Roodborst",
       "latin": "Erithacus rubecula",
@@ -5537,7 +5511,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Roodborst in vlucht met oranje gezicht en gespreide vleugel tegen besneeuwde takken.",
       "width": 1400,
       "height": 1050,
-      "image": "/assets/species/plumage/sp050-flight.webp"
+      "image": "/assets/species/plumage/sp050-flight.webp",
+      "flightReview": "uit-rol 2026-11-10: Tussen besneeuwde takken; niet vrij in de lucht."
     },
     {
       "label": "Juveniel",
@@ -5561,51 +5536,7 @@ export const GUIDE_POSES = Object.freeze({
       "image": "/assets/species/plumage/sp050-juv-review.webp"
     }
   ],
-  "sp051": [
-    {
-      "label": "In vlucht",
-      "flight": true,
-      "note": "Let op de roestoranje staart. De bronfoto heeft een lage resolutie.",
-      "file": "iNaturalist photo 8255067",
-      "nl": "Zwarte Roodstaart",
-      "latin": "Phoenicurus ochruros",
-      "author": "portioid",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-      "source": "https://www.inaturalist.org/photos/8255067",
-      "showSourceLink": true,
-      "alt": "Zwarte Roodstaart in vlucht van achteren met gespreide vleugels en een roestoranje staart.",
-      "modifications": "Omgezet naar WebP zonder uitsnede",
-      "reviewed": "2026-11-07",
-      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwarte-roodstaart",
-      "visualCheck": "Zwarte Roodstaart in vlucht van achteren met gespreide vleugels en een roestoranje staart.",
-      "width": 291,
-      "height": 177,
-      "image": "/assets/species/plumage/sp051-flight.webp"
-    }
-  ],
   "sp053": [
-    {
-      "label": "In vlucht",
-      "flight": true,
-      "note": "Op deze videostill is de vogel los van de tak. De lichte halszijden zijn zichtbaar. De vleugels zijn onscherp door beweging.",
-      "file": "European stonechat (Saxicola rubicola) in the UK.webm",
-      "nl": "Roodborsttapuit",
-      "latin": "Saxicola rubicola",
-      "author": "Boxmoor Blog",
-      "license": "CC BY 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
-      "source": "https://commons.wikimedia.org/wiki/File:European_stonechat_(Saxicola_rubicola)_in_the_UK.webm",
-      "showSourceLink": true,
-      "alt": "Videostill van een Roodborsttapuit in vlucht boven een tak, met lichte halszijden en een warme borst.",
-      "modifications": "Videostill op 01:15,107, uitgesneden en omgezet naar WebP",
-      "reviewed": "2026-11-07",
-      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/roodborsttapuit",
-      "visualCheck": "Videostill van een Roodborsttapuit in vlucht boven een tak, met lichte halszijden en een warme borst.",
-      "width": 610,
-      "height": 615,
-      "image": "/assets/species/plumage/sp053-flight.webp"
-    },
     {
       "label": "Vrouwtje in rust",
       "flight": false,
@@ -5676,9 +5607,9 @@ export const GUIDE_POSES = Object.freeze({
   ],
   "sp056": [
     {
-      "label": "In vlucht",
-      "flight": true,
-      "note": "Beide vleugels zijn uitgespreid. Luister bij twijfel tussen Tjiftjaf en Fitis naar de zang.",
+      "label": "Fladderend tussen rietstengels",
+      "flight": false,
+      "note": "Geen bruikbare vluchtfoto: vogel tussen planten, afzetten niet uit te sluiten. Vluchtpositie ontbreekt.",
       "file": "Flight design.jpg",
       "nl": "Tjiftjaf",
       "latin": "Phylloscopus collybita",
@@ -5694,14 +5625,15 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Tjiftjaf in vlucht tussen rietstengels, met twee uitgespreide vleugels.",
       "width": 1400,
       "height": 1149,
-      "image": "/assets/species/plumage/sp056-flight.webp"
+      "image": "/assets/species/plumage/sp056-flight.webp",
+      "flightReview": "uit-rol 2026-11-10: Mijlpaal 1 (aangescherpt): fladderend tussen rietstengels valt onder de eigen klasse \"opvliegen / tussen planten\"; contact met de stengels niet uit te sluiten. Uit \"In vlucht\"; vluchtpositie geregistreerd als ontbrekend."
     }
   ],
   "sp058": [
     {
-      "label": "In vlucht",
-      "flight": true,
-      "note": "Let op het contrast tussen de gele kop en keel en de lichte onderzijde.",
+      "label": "Fladderend bij blad",
+      "flight": false,
+      "note": "Poten naar voren gestrekt richting blad; toont gele keel en wenkbrauwstreep.",
       "file": "Wood warbler (49979490848).jpg",
       "nl": "Fluiter",
       "latin": "Phylloscopus sibilatrix",
@@ -5717,30 +5649,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Fluiter in vlucht boven bladeren, met een omhooggespreide vleugel, gele kop en lichte onderzijde.",
       "width": 1329,
       "height": 1400,
-      "image": "/assets/species/plumage/sp058-flight.webp"
-    }
-  ],
-  "sp061": [
-    {
-      "label": "In vlucht",
-      "flight": true,
-      "note": "De lichte keel is te zien. Door de afstand en het tegenlicht blijft fijn verenkleeddetail beperkt.",
-      "file": "iNaturalist photo 197056025",
-      "nl": "Grasmus",
-      "latin": "Curruca communis",
-      "author": "Nigel Bentley",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-      "source": "https://www.inaturalist.org/photos/197056025",
-      "showSourceLink": true,
-      "alt": "Grasmus in vrije vlucht tegen een blauwe lucht, met de lichte keel zichtbaar.",
-      "modifications": "Uitgesneden rond de vogel en omgezet naar WebP",
-      "reviewed": "2026-11-08",
-      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grasmus",
-      "visualCheck": "Grasmus in vrije vlucht tegen een blauwe lucht, met de lichte keel zichtbaar.",
-      "width": 550,
-      "height": 478,
-      "image": "/assets/species/plumage/sp061-flight.webp"
+      "image": "/assets/species/plumage/sp058-flight.webp",
+      "flightReview": "uit-rol 2026-11-10: Fladdert met uitgestrekte poten vlak bij blad: neerstrijken, geen vrije vlucht."
     }
   ],
   "sp063": [
@@ -5763,7 +5673,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Goudhaantje van de Oost-Aziatische ondersoort japonensis in vlucht tussen takken, met gespreide vleugels.",
       "width": 1312,
       "height": 1400,
-      "image": "/assets/species/plumage/sp063-flight.webp"
+      "image": "/assets/species/plumage/sp063-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp065": [
@@ -5786,7 +5697,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Boomklever in vlucht met uitgespreide vleugels, blauwgrijze bovenzijde en een donkere oogstreep.",
       "width": 640,
       "height": 640,
-      "image": "/assets/species/plumage/sp065-flight.webp"
+      "image": "/assets/species/plumage/sp065-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp068": [
@@ -5809,14 +5721,15 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Witte Kwikstaart in vrije vlucht met gespreide vleugels en witte buitenste staartveren.",
       "width": 1280,
       "height": 854,
-      "image": "/assets/species/plumage/sp068-flight.webp"
+      "image": "/assets/species/plumage/sp068-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp069": [
     {
-      "label": "In vlucht",
-      "flight": true,
-      "note": "Deze vogel heeft een gele onderzijde en een blauwgrijze kop met een lichte wenkbrauwstreep.",
+      "label": "Landend bij een paal",
+      "flight": false,
+      "note": "Gele onderzijde en kopkleed goed zichtbaar.",
       "file": "Schafstelze - Motacilla flava.jpg",
       "nl": "Gele Kwikstaart",
       "latin": "Motacilla flava",
@@ -5832,7 +5745,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Gele Kwikstaart in vrije vlucht naast een stronk, met een gele onderzijde.",
       "width": 1280,
       "height": 853,
-      "image": "/assets/species/plumage/sp069-flight.webp"
+      "image": "/assets/species/plumage/sp069-flight.webp",
+      "flightReview": "uit-rol 2026-11-10: Poten uitgestrekt naar de paal; neerstrijken."
     }
   ],
   "sp070": [
@@ -5855,7 +5769,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Veldleeuwerik in vrije vlucht met geheven vleugels, van opzij gezien.",
       "width": 1280,
       "height": 853,
-      "image": "/assets/species/plumage/sp070-flight.webp"
+      "image": "/assets/species/plumage/sp070-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp072": [
@@ -5878,7 +5793,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Graspieper in vrije vlucht boven heide, met neergeslagen vleugels.",
       "width": 1400,
       "height": 1077,
-      "image": "/assets/species/plumage/sp072-flight.webp"
+      "image": "/assets/species/plumage/sp072-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp075": [
@@ -5901,7 +5817,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "IJsvogel in vrije vlucht met een prooi in de lange snavel en een helderblauwe rug.",
       "width": 1400,
       "height": 858,
-      "image": "/assets/species/plumage/sp075-flight.webp"
+      "image": "/assets/species/plumage/sp075-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     },
     {
       "label": "Vrouwtje in rust",
@@ -6012,7 +5929,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Meerkoet in vrije vlucht boven water, met opgeheven vleugels en gestrekte poten.",
       "width": 930,
       "height": 620,
-      "image": "/assets/species/plumage/sp078-flight.webp"
+      "image": "/assets/species/plumage/sp078-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     },
     {
       "file": "Eurasian coot (Fulica atra) juvenile.jpg",
@@ -6084,7 +6002,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Jong Waterhoen in vrije vlucht vlak boven het water, met geheven vleugel en gestrekte poten.",
       "width": 1280,
       "height": 960,
-      "image": "/assets/species/plumage/sp079-flight.webp"
+      "image": "/assets/species/plumage/sp079-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp083": [
@@ -6107,7 +6026,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Grote Zilverreiger in vrije vlucht, met geheven witte vleugels en een ingetrokken hals.",
       "width": 1280,
       "height": 853,
-      "image": "/assets/species/plumage/sp083-flight.webp"
+      "image": "/assets/species/plumage/sp083-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp084": [
@@ -6130,7 +6050,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Purperreiger in vrije vlucht met geheven vleugels en een roestbruine, ingetrokken hals.",
       "width": 1400,
       "height": 933,
-      "image": "/assets/species/plumage/sp084-flight.webp"
+      "image": "/assets/species/plumage/sp084-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp085": [
@@ -6153,7 +6074,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Volwassen Kwak in vrije vlucht, met brede grijze vleugels, een zwarte kruin en een rood oog.",
       "width": 1400,
       "height": 1267,
-      "image": "/assets/species/plumage/sp085-flight.webp"
+      "image": "/assets/species/plumage/sp085-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp086": [
@@ -6176,7 +6098,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Grauwe Gans in vrije vlucht bij Marken, met oranje snavel, vooruitgestrekte hals en geheven vleugels.",
       "width": 1400,
       "height": 933,
-      "image": "/assets/species/plumage/sp086-flight.webp"
+      "image": "/assets/species/plumage/sp086-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     },
     {
       "file": "Graugans-Jungtier-Schwalm-Nette-2013-01.jpg",
@@ -6224,7 +6147,8 @@ export const GUIDE_POSES = Object.freeze({
       "width": 1400,
       "height": 958,
       "image": "/assets/species/plumage/sp089-flight.webp",
-      "sex": "male"
+      "sex": "male",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     },
     {
       "label": "Juvenielen",
@@ -6269,7 +6193,8 @@ export const GUIDE_POSES = Object.freeze({
       "width": 1400,
       "height": 934,
       "image": "/assets/species/plumage/sp090-flight.webp",
-      "sex": "male"
+      "sex": "male",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp091": [
@@ -6293,7 +6218,8 @@ export const GUIDE_POSES = Object.freeze({
       "width": 1400,
       "height": 978,
       "image": "/assets/species/plumage/sp091-flight.webp",
-      "sex": "male"
+      "sex": "male",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     },
     {
       "label": "Mannetje",
@@ -6342,7 +6268,8 @@ export const GUIDE_POSES = Object.freeze({
       "width": 1400,
       "height": 1050,
       "image": "/assets/species/plumage/sp092-flight.webp",
-      "sex": "male"
+      "sex": "male",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     },
     {
       "label": "Juveniel",
@@ -6411,7 +6338,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Volwassen Zilvermeeuw in vrije vlucht boven zee bij Helgoland, met een lichtgrijze bovenvleugel en zwarte vleugeltop.",
       "width": 1400,
       "height": 933,
-      "image": "/assets/species/plumage/sp094-flight.webp"
+      "image": "/assets/species/plumage/sp094-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp095": [
@@ -6434,7 +6362,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Kleine Mantelmeeuw in vrije vlucht in Zweden, met een geheven donkere vleugel en een witte kop en buik.",
       "width": 1400,
       "height": 933,
-      "image": "/assets/species/plumage/sp095-flight.webp"
+      "image": "/assets/species/plumage/sp095-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp096": [
@@ -6457,7 +6386,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Volwassen Stormmeeuw met gespreide vleugels in vrije vlucht bij Oppdal. De zwarte vleugelpunten hebben witte vlekken.",
       "width": 1400,
       "height": 700,
-      "image": "/assets/species/plumage/sp096-flight.webp"
+      "image": "/assets/species/plumage/sp096-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp097": [
@@ -6480,7 +6410,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Volwassen Kokmeeuw met chocoladebruine kopkap en opgeheven vleugels in vrije vlucht tegen een blauwe lucht.",
       "width": 1400,
       "height": 933,
-      "image": "/assets/species/plumage/sp097-flight.webp"
+      "image": "/assets/species/plumage/sp097-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp098": [
@@ -6503,7 +6434,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Scholekster in vrije vlucht laag boven water in Schotland, met een lange oranjerode snavel, zwarte kop en witte buik.",
       "width": 1400,
       "height": 934,
-      "image": "/assets/species/plumage/sp098-flight.webp"
+      "image": "/assets/species/plumage/sp098-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp099": [
@@ -6526,7 +6458,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Twee Kieviten in vrije vlucht bij Marken. De ene toont brede afgeronde vleugels en een groenige rug, de andere een witte buik en zwarte borst.",
       "width": 1400,
       "height": 934,
-      "image": "/assets/species/plumage/sp099-flight.webp"
+      "image": "/assets/species/plumage/sp099-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp100": [
@@ -6549,7 +6482,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Wulp met een lange neergebogen snavel en een opgeheven, licht getekende vleugel in vrije vlucht boven water in Argyll.",
       "width": 1400,
       "height": 933,
-      "image": "/assets/species/plumage/sp100-flight.webp"
+      "image": "/assets/species/plumage/sp100-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp101": [
@@ -6572,7 +6506,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Grutto in vrije vlucht in de Uitkerkse Polder, met witte strepen op beide vleugels, een zwarte staartband en achteruit gestrekte poten.",
       "width": 1400,
       "height": 875,
-      "image": "/assets/species/plumage/sp101-flight.webp"
+      "image": "/assets/species/plumage/sp101-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp102": [
@@ -6595,7 +6530,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Tureluur in vrije vlucht bij Mýrar op IJsland met een witte vleugelachterrand en uitgestrekte oranjerode poten.",
       "width": 1400,
       "height": 933,
-      "image": "/assets/species/plumage/sp102-flight.webp"
+      "image": "/assets/species/plumage/sp102-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp104": [
@@ -6618,7 +6554,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Aalscholver in vrije vlucht boven het Farmoor Reservoir met gestrekte hals, brede vleugels en geel bij de snavelbasis.",
       "width": 1400,
       "height": 933,
-      "image": "/assets/species/plumage/sp104-flight.webp"
+      "image": "/assets/species/plumage/sp104-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp105": [
@@ -6642,14 +6579,15 @@ export const GUIDE_POSES = Object.freeze({
       "width": 1280,
       "height": 740,
       "image": "/assets/species/plumage/sp105-flight.webp",
-      "sex": "male"
+      "sex": "male",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp106": [
     {
       "label": "In vlucht",
       "flight": true,
-      "note": "Deze Patrijs vliegt laag over een open veld. Let op het compacte lichaam, de ronde, fijn getekende vleugels en de korte roodbruine staart.",
+      "note": "Voorlopige foto: beperkte scherpte. Deze Patrijs vliegt laag over een open veld. Let op het compacte lichaam, de ronde, fijn getekende vleugels en de korte roodbruine staart.",
       "file": "iNaturalist photo 77252585",
       "nl": "Patrijs",
       "latin": "Perdix perdix",
@@ -6665,14 +6603,15 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Patrijs in vrije vlucht boven een geelgroen veld, met een naar beneden geslagen vleugel en een korte roodbruine staart.",
       "width": 450,
       "height": 300,
-      "image": "/assets/species/plumage/sp106-flight.webp"
+      "image": "/assets/species/plumage/sp106-flight.webp",
+      "flightReview": "voorwaardelijk 2026-11-10: FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): in vlucht ja; zacht en 450 px; niet definitief. Vervanging gewenst: scherpe Patrijs in vlucht, zijaanzicht."
     }
   ],
   "sp108": [
     {
       "label": "In vlucht",
       "flight": true,
-      "note": "Let op de stevige snavel en de lichte wenkbrauwstreep. De Grote Karekiet vliegt hier van opzij gezien langs het riet.",
+      "note": "Voorlopige foto: beperkte scherpte. Let op de stevige snavel en de lichte wenkbrauwstreep. De Grote Karekiet vliegt hier van opzij gezien langs het riet.",
       "file": "iNaturalist photo 747529794",
       "nl": "Grote Karekiet",
       "latin": "Acrocephalus arundinaceus",
@@ -6688,14 +6627,15 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Grote Karekiet met opgetrokken vleugels, een lichte wenkbrauwstreep en een forse snavel in vrije vlucht langs riet.",
       "width": 724,
       "height": 543,
-      "image": "/assets/species/plumage/sp108-flight.webp"
+      "image": "/assets/species/plumage/sp108-flight.webp",
+      "flightReview": "voorwaardelijk 2026-11-10: FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): in vlucht ja; zacht maar silhouet en wenkbrauw herkenbaar; niet definitief. Vervanging gewenst."
     }
   ],
   "sp110": [
     {
-      "label": "In vlucht",
-      "flight": true,
-      "note": "Let op de brede, lichte wenkbrauwstreep en de donkere kruin. De vogel is hier net los van de tak.",
+      "label": "Opvliegend in struik",
+      "flight": false,
+      "note": "Lichte wenkbrauwstreep zichtbaar.",
       "file": "Phragmite des Joncs - Envol.jpg",
       "nl": "Rietzanger",
       "latin": "Acrocephalus schoenobaenus",
@@ -6711,7 +6651,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Rietzanger in vrije vlucht tussen takken in Brière, met een brede lichte wenkbrauwstreep en een donkere kruin.",
       "width": 850,
       "height": 823,
-      "image": "/assets/species/plumage/sp110-flight.webp"
+      "image": "/assets/species/plumage/sp110-flight.webp",
+      "flightReview": "uit-rol 2026-11-10: Tussen takken van een struik met bewogen vleugels; niet vrij in de lucht."
     }
   ],
   "sp112": [
@@ -6734,7 +6675,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Spreeuw in vrije vlucht tegen een blauwe lucht, met gespreide spitse vleugels, een korte staart en een lichtgespikkelde donkere borst.",
       "width": 1370,
       "height": 1400,
-      "image": "/assets/species/plumage/sp112-flight.webp"
+      "image": "/assets/species/plumage/sp112-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp113": [
@@ -6758,7 +6700,8 @@ export const GUIDE_POSES = Object.freeze({
       "width": 1400,
       "height": 874,
       "image": "/assets/species/plumage/sp113-flight.webp",
-      "sex": "male"
+      "sex": "male",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp114": [
@@ -6781,7 +6724,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Boerenzwaluw in vrije vlucht op Schiermonnikoog, met roestrode keel, gespreide vleugels en twee lange buitenste staartpennen.",
       "width": 1290,
       "height": 860,
-      "image": "/assets/species/plumage/sp114-flight.webp"
+      "image": "/assets/species/plumage/sp114-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp115": [
@@ -6804,7 +6748,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Huiszwaluw van opzij in vrije vlucht, met witte stuit, witte keel en een korte gevorkte staart.",
       "width": 825,
       "height": 645,
-      "image": "/assets/species/plumage/sp115-flight.webp"
+      "image": "/assets/species/plumage/sp115-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp117": [
@@ -6827,30 +6772,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Geelgors in vrije vlucht tegen een lichte lucht met een gele kop, roodbruine stuit, lange staart en geheven vleugels.",
       "width": 600,
       "height": 400,
-      "image": "/assets/species/plumage/sp117-flight.webp"
-    }
-  ],
-  "sp118": [
-    {
-      "label": "In vlucht",
-      "flight": true,
-      "note": "De opname toont de lichte onderzijde, de lange donkere staart en geheven vleugels. De vleugels zijn door beweging onscherp.",
-      "file": "iNaturalist photo 241756520",
-      "nl": "Rietgors",
-      "latin": "Emberiza schoeniclus",
-      "author": "Codrin Bucur",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-      "source": "https://www.inaturalist.org/photos/241756520",
-      "showSourceLink": true,
-      "alt": "Rietgors van opzij in vrije vlucht met lichte onderzijde, donkere staart en geheven vleugels.",
-      "modifications": "Bijgesneden rond de vogel en omgezet naar WebP",
-      "reviewed": "2026-11-08",
-      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/rietgors",
-      "visualCheck": "Rietgors van opzij in vrije vlucht met lichte onderzijde, donkere staart en geheven vleugels.",
-      "width": 605,
-      "height": 405,
-      "image": "/assets/species/plumage/sp118-flight.webp"
+      "image": "/assets/species/plumage/sp117-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp126": [
@@ -6873,7 +6796,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Knobbelzwaan in vrije vlucht tegen een blauwe lucht met gestrekte hals en twee gespreide witte vleugels.",
       "width": 1400,
       "height": 872,
-      "image": "/assets/species/plumage/sp126-flight.webp"
+      "image": "/assets/species/plumage/sp126-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp128": [
@@ -6896,7 +6820,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Bergeend in vrije vlucht van opzij, met rode snavelknobbel, donkere kop, kastanjebruine borstband en wit lichaam.",
       "width": 1400,
       "height": 742,
-      "image": "/assets/species/plumage/sp128-flight.webp"
+      "image": "/assets/species/plumage/sp128-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     },
     {
       "label": "Vrouwtje in vlucht",
@@ -6917,7 +6842,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Vrouwtje Bergeend in vlucht, met een rode snavel zonder opvallende knobbel, brede witte velden en een groene vleugelspiegel.",
       "width": 1400,
       "height": 933,
-      "image": "/assets/species/plumage/sp128-female-review.webp"
+      "image": "/assets/species/plumage/sp128-female-review.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     },
     {
       "file": "Brandgans Küken, Borkum.JPG",
@@ -6990,7 +6916,8 @@ export const GUIDE_POSES = Object.freeze({
       "width": 810,
       "height": 595,
       "image": "/assets/species/plumage/sp129-flight.webp",
-      "sex": "male"
+      "sex": "male",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     },
     {
       "label": "Mannetje",
@@ -7039,7 +6966,8 @@ export const GUIDE_POSES = Object.freeze({
       "width": 1280,
       "height": 960,
       "image": "/assets/species/plumage/sp130-flight.webp",
-      "sex": "male"
+      "sex": "male",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp132": [
@@ -7063,7 +6991,8 @@ export const GUIDE_POSES = Object.freeze({
       "width": 850,
       "height": 535,
       "image": "/assets/species/plumage/sp132-flight.webp",
-      "sex": "male"
+      "sex": "male",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp143": [
@@ -7086,7 +7015,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Kluut in vrije vlucht met omhooggebogen snavel, zwarte vleugelpunten en achterwaarts gestrekte poten.",
       "width": 1280,
       "height": 853,
-      "image": "/assets/species/plumage/sp143-flight.webp"
+      "image": "/assets/species/plumage/sp143-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp144": [
@@ -7109,7 +7039,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Zilverplevier in vrije vlucht met lichte onderzijde en een duidelijke zwarte oksel onder de geheven vleugel.",
       "width": 855,
       "height": 885,
-      "image": "/assets/species/plumage/sp144-flight.webp"
+      "image": "/assets/species/plumage/sp144-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp145": [
@@ -7132,7 +7063,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Goudplevier in vrije vlucht boven water met goudgele spikkels op de rug en bovenvleugel.",
       "width": 1400,
       "height": 933,
-      "image": "/assets/species/plumage/sp145-flight.webp"
+      "image": "/assets/species/plumage/sp145-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp146": [
@@ -7155,7 +7087,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Bontbekplevier in vrije vlucht boven water, met gespreide vleugels, witte vleugelstrepen en een oranje snavelbasis.",
       "width": 872,
       "height": 1077,
-      "image": "/assets/species/plumage/sp146-flight.webp"
+      "image": "/assets/species/plumage/sp146-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp147": [
@@ -7178,7 +7111,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Kleine Plevier in vrije vlucht met beide bovenvleugels zichtbaar en een gele oogring.",
       "width": 1188,
       "height": 1400,
-      "image": "/assets/species/plumage/sp147-flight.webp"
+      "image": "/assets/species/plumage/sp147-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp150": [
@@ -7201,7 +7135,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Steenloper in vrije vlucht boven golven, met een witte vleugelstreep op de geheven vleugel en een korte donkere snavel.",
       "width": 730,
       "height": 685,
-      "image": "/assets/species/plumage/sp150-flight.webp"
+      "image": "/assets/species/plumage/sp150-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp152": [
@@ -7225,7 +7160,8 @@ export const GUIDE_POSES = Object.freeze({
       "width": 1400,
       "height": 933,
       "image": "/assets/species/plumage/sp152-flight.webp",
-      "sourceAudit": "2026-11-09"
+      "sourceAudit": "2026-11-09",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp155": [
@@ -7248,7 +7184,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Oeverloper in vrije vlucht boven water, met een witte streep op de neerwaartse vleugel en een witte inkeping langs de borst.",
       "width": 1213,
       "height": 809,
-      "image": "/assets/species/plumage/sp155-flight.webp"
+      "image": "/assets/species/plumage/sp155-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp156": [
@@ -7271,7 +7208,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Witgat in vrije vlucht met gespreide donkere vleugels en een opvallend witte stuit en staartbasis.",
       "width": 1247,
       "height": 1400,
-      "image": "/assets/species/plumage/sp156-flight.webp"
+      "image": "/assets/species/plumage/sp156-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp157": [
@@ -7294,7 +7232,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Zwarte Ruiter in vrije vlucht boven water met gespreide vleugels, een witte rugwig en rode poten.",
       "width": 995,
       "height": 1365,
-      "image": "/assets/species/plumage/sp157-flight.webp"
+      "image": "/assets/species/plumage/sp157-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp158": [
@@ -7317,7 +7256,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Groenpootruiter in vrije vlucht met neerwaartse vleugels, een licht opgewipte snavel en achter de staart uitstekende poten.",
       "width": 1280,
       "height": 791,
-      "image": "/assets/species/plumage/sp158-flight.webp"
+      "image": "/assets/species/plumage/sp158-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp159": [
@@ -7340,7 +7280,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Bosruiter in vrije vlucht met een lichte, gevlekte ondervleugel en geelgroene poten die achter de staart uitsteken.",
       "width": 842,
       "height": 639,
-      "image": "/assets/species/plumage/sp159-flight.webp"
+      "image": "/assets/species/plumage/sp159-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp164": [
@@ -7363,7 +7304,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Volwassen Grote Mantelmeeuw in vlucht boven zee, met een geheven donkere vleugel, witte kop en forse gele snavel.",
       "width": 1400,
       "height": 1084,
-      "image": "/assets/species/plumage/sp164-flight.webp"
+      "image": "/assets/species/plumage/sp164-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp165": [
@@ -7386,14 +7328,15 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Visdief in vrije vlucht met oranjerode snavel, zwarte kap, gevorkte staart en donkere buitenste handpennen.",
       "width": 1400,
       "height": 582,
-      "image": "/assets/species/plumage/sp165-flight.webp"
+      "image": "/assets/species/plumage/sp165-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp174": [
     {
       "label": "In vlucht",
       "flight": true,
-      "note": "De Zwarte Mees vliegt tussen dennentakken. De zwarte kop en witte wang zijn zichtbaar. De vleugels hebben bewegingsonscherpte.",
+      "note": "Voorlopige foto: beperkte scherpte. De Zwarte Mees vliegt tussen dennentakken. De zwarte kop en witte wang zijn zichtbaar. De vleugels hebben bewegingsonscherpte.",
       "file": "iNaturalist photo 176460220",
       "nl": "Zwarte Mees",
       "latin": "Periparus ater",
@@ -7409,7 +7352,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Zwarte Mees in vrije vlucht tussen dennentakken met een witte wang, zwarte kop en uitgespreide vleugels.",
       "width": 820,
       "height": 425,
-      "image": "/assets/species/plumage/sp174-flight.webp"
+      "image": "/assets/species/plumage/sp174-flight.webp",
+      "flightReview": "voorwaardelijk 2026-11-10: FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): in vlucht ja; kop met witte nekvlek scherp, vleugels bewogen; niet definitief. Vervanging gewenst: scherpere Zwarte Mees in vlucht."
     }
   ],
   "sp176": [
@@ -7432,14 +7376,15 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Grauwe Vliegenvanger in zijaanzicht met geheven vleugel, grijsbruine bovenzijde, lange staart en slanke snavel.",
       "width": 752,
       "height": 642,
-      "image": "/assets/species/plumage/sp176-flight.webp"
+      "image": "/assets/species/plumage/sp176-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp178": [
     {
-      "label": "In vlucht",
-      "flight": true,
-      "note": "De Gekraagde Roodstaart vliegt tussen takken. De roestoranje staart en lichte, warm getinte onderzijde zijn zichtbaar.",
+      "label": "Vliegend vlak bij takken",
+      "flight": false,
+      "note": "Mogelijk net afgezet; geen definitieve vluchtfoto.",
       "file": "iNaturalist photo 50225292",
       "nl": "Gekraagde Roodstaart",
       "latin": "Phoenicurus phoenicurus",
@@ -7455,7 +7400,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Gekraagde Roodstaart in vrije vlucht, met geheven vleugels en een roestoranje staart tegen een lichte lucht.",
       "width": 830,
       "height": 740,
-      "image": "/assets/species/plumage/sp178-flight.webp"
+      "image": "/assets/species/plumage/sp178-flight.webp",
+      "flightReview": "uit-rol 2026-11-10: FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): luchtgedragen, maar poten hangen en takken vlakbij: vermoedelijk kort na het afzetten; korrelig. Vluchtstatus niet uit dit ene frame te bewijzen (REVIEW REQUIRED); daarom niet in de definitieve vluchtrol. Vluchtpositie ontbreekt."
     }
   ],
   "sp177": [
@@ -7478,7 +7424,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Bonte Vliegenvanger in vrije vlucht, frontaal gefotografeerd met een lichte onderzijde en twee neerwaarts gespreide vleugels.",
       "width": 1260,
       "height": 950,
-      "image": "/assets/species/plumage/sp177-flight.webp"
+      "image": "/assets/species/plumage/sp177-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp206": [
@@ -7501,7 +7448,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Strandplevier vliegt naar rechts, met een lichte vleugelstreep en donkere vlek aan de zijkant van de borst.",
       "width": 610,
       "height": 460,
-      "image": "/assets/species/plumage/sp206-flight.webp"
+      "image": "/assets/species/plumage/sp206-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp217": [
@@ -7524,7 +7472,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Poelruiter in vlucht met witte rugwig, dunne snavel en lange, naar achter gestrekte poten.",
       "width": 960,
       "height": 638,
-      "image": "/assets/species/plumage/sp217-flight.webp"
+      "image": "/assets/species/plumage/sp217-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp225": [
@@ -7547,7 +7496,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Volwassen Zwartkopmeeuw in winterkleed boven de camera, met lichte vleugels tegen een blauwe lucht.",
       "width": 1210,
       "height": 1240,
-      "image": "/assets/species/plumage/sp225-flight.webp"
+      "image": "/assets/species/plumage/sp225-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp245": [
@@ -7570,7 +7520,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Koereiger in zijaanzicht boven water, met ingetrokken hals, lichte vleugels en naar achter gestrekte poten.",
       "width": 1114,
       "height": 729,
-      "image": "/assets/species/plumage/sp245-flight.webp"
+      "image": "/assets/species/plumage/sp245-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp282": [
@@ -7593,7 +7544,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Groep Roze Spreeuwen in vlucht tegen een blauwe lucht, met lichte lijven en donkere vleugels.",
       "width": 1400,
       "height": 934,
-      "image": "/assets/species/plumage/sp282-flight.webp"
+      "image": "/assets/species/plumage/sp282-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp288": [
@@ -7616,7 +7568,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Grote Gele Kwikstaart in vrije vlucht boven water, schuin van achteren gezien, met een lange staart en gele onderzijde.",
       "width": 850,
       "height": 650,
-      "image": "/assets/species/plumage/sp288-flight.webp"
+      "image": "/assets/species/plumage/sp288-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp005": [
@@ -7646,7 +7599,7 @@ export const GUIDE_POSES = Object.freeze({
     {
       "label": "Volwassen in vlucht",
       "flight": true,
-      "note": "Schuin van onderen. De brede vleugels en gebandeerde staart zijn zichtbaar.",
+      "note": "Voorlopige foto: beperkte scherpte. Schuin van onderen. De brede vleugels en gebandeerde staart zijn zichtbaar.",
       "file": "iNaturalist photo 112563579",
       "nl": "Buizerd",
       "latin": "Buteo buteo",
@@ -7664,7 +7617,8 @@ export const GUIDE_POSES = Object.freeze({
       "height": 728,
       "image": "/assets/species/plumage/sp005-male-flight.webp",
       "sourceAudit": "2026-11-09",
-      "sexNote": "Geslacht volgens de bron, maar bij de Buizerd niet aan het verenkleed te zien; daarom zonder geslachtslabel."
+      "sexNote": "Geslacht volgens de bron, maar bij de Buizerd niet aan het verenkleed te zien; daarom zonder geslachtslabel.",
+      "flightReview": "voorwaardelijk 2026-11-10: FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): in vlucht ja; licht onscherp, vogel klein; laat wel de donkere kleedvariant zien. Vervanging gewenst: scherpe donkere Buizerd van onderen."
     },
     {
       "label": "Volwassen in vlucht, van onderen",
@@ -7687,7 +7641,8 @@ export const GUIDE_POSES = Object.freeze({
       "height": 958,
       "image": "/assets/species/plumage/sp005-female-flight.webp",
       "sourceAudit": "2026-11-09",
-      "sexNote": "Geslacht volgens de bron, maar bij de Buizerd niet aan het verenkleed te zien; daarom zonder geslachtslabel."
+      "sexNote": "Geslacht volgens de bron, maar bij de Buizerd niet aan het verenkleed te zien; daarom zonder geslachtslabel.",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp248": [
@@ -7760,7 +7715,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Blauwgrijs met zwarte vleugelpunten, van voren in vlucht.",
       "width": 1600,
       "height": 1067,
-      "image": "/assets/species/plumage/sp249-hero-male.webp"
+      "image": "/assets/species/plumage/sp249-hero-male.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp250": [
@@ -7904,7 +7860,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Ruigpootbuizerd · mannetje in vlucht. Vrije vlucht in zijaanzicht met lichte vleugelvelden. Gefotografeerd in de Verenigde Staten.",
       "width": 767,
       "height": 615,
-      "image": "/assets/species/plumage/sp253-male-flight.webp"
+      "image": "/assets/species/plumage/sp253-male-flight.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp173": [
@@ -7952,7 +7909,8 @@ export const GUIDE_POSES = Object.freeze({
       "visualCheck": "Driekleurig: bruin lijf, grijze vleugelvelden en staart, zwarte vleugelpunten.",
       "width": 1600,
       "height": 1067,
-      "image": "/assets/species/plumage/sp173-hero-male.webp"
+      "image": "/assets/species/plumage/sp173-hero-male.webp",
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
   ],
   "sp188": [

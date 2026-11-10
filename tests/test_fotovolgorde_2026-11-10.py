@@ -97,7 +97,6 @@ def main():
                   const marks = [
                     ['Verenkleed', [...panel.querySelectorAll('.sd-h')].find(h => h.textContent === 'Verenkleed')],
                     ['In vlucht', find('section[aria-label="In vlucht"]')],
-                    ['Vluchtvergelijking', find('section[aria-label="Vluchtvergelijking"]')],
                     ['Lijkt op', [...panel.querySelectorAll('.sd-h')].find(h => h.textContent === 'Lijkt op')],
                   ].filter(([, el]) => el);
                   return marks.map(([name, el]) => [name, el.getBoundingClientRect().top]);
@@ -109,7 +108,7 @@ def main():
                 ("Blauwe Kiekendief", "sp249", ["Verenkleed", "In vlucht", "Lijkt op"]),
                 ("Ruigpootbuizerd", "sp253", ["Verenkleed", "In vlucht", "Lijkt op"]),
                 ("Zwartkop", "sp059", ["Verenkleed"]),
-                ("Torenvalk", "sp008", ["Verenkleed", "In vlucht", "Vluchtvergelijking", "Lijkt op"]),
+                ("Torenvalk", "sp008", ["Verenkleed", "In vlucht", "Lijkt op"]),
             ]
             for name, sid, expected in cases:
                 open_species(name, sid)

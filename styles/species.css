@@ -986,13 +986,17 @@
 .kb-critical strong { color: var(--ink); }
 .kb-critical p { margin: 0; color: var(--ink); line-height: 1.45; }
 .kb-critical .kb-vs { color: var(--ink-2); }
-.kb-similar { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-8); }
-.kb-similar__label { font-size: var(--fs-meta); color: var(--ink-2); }
-.kb-chip {
-  min-height: 44px; padding: 0 var(--space-12); border: 1px solid var(--line); border-radius: var(--r-pill);
-  background: var(--surface); color: var(--ink); font: inherit; font-size: var(--fs-meta); cursor: pointer;
+.kb-similar { display: grid; gap: var(--space-8); margin-top: var(--space-8); }
+.kb-similar__item {
+  display: grid; gap: var(--space-8); padding: var(--space-12);
+  border: 1px solid var(--line); border-radius: var(--r-sm); background: var(--surface);
 }
-.kb-chip:focus-visible { outline: 3px solid var(--focus-ink); outline-offset: 2px; }
+.kb-similar__item p { margin: var(--space-4) 0 0; color: var(--ink-2); font-size: var(--fs-meta); line-height: 1.45; }
+.kb-similar__item .sd-compare-open { justify-self: start; min-height: 44px; padding: 0 var(--space-12); }
+.kb-similar__item .sd-compare-open:focus-visible { outline: 3px solid var(--focus-ink); outline-offset: 2px; }
+@media (min-width: 720px) {
+  .kb-similar__item { grid-template-columns: 1fr auto; align-items: center; }
+}
 .kb-caution {
   margin: 0; padding: var(--space-10) var(--space-12); border-radius: var(--r-sm);
   background: var(--warn-soft); color: var(--ink); line-height: 1.45;
@@ -1014,8 +1018,6 @@
 }
 .kb-acc__body { display: flex; flex-direction: column; gap: var(--space-10); padding: 0 var(--space-12) var(--space-12); }
 .kb-list { margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: var(--space-8); color: var(--ink); line-height: 1.45; }
-.kb-list--similar { list-style: none; padding-left: 0; }
-.kb-list--similar li { display: flex; flex-direction: column; gap: var(--space-8); }
 .kb-src { display: block; margin-top: 2px; font-size: var(--fs-label); color: var(--ink-2); }
 .kb-crit-card { display: flex; flex-direction: column; gap: var(--space-8); padding: var(--space-10); border-radius: var(--r-sm); background: var(--surface-2); }
 .kb-crit-card header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-8); color: var(--ink); }
@@ -1030,5 +1032,12 @@
 @media (min-width: 720px) {
   .kb-crit-card dl { grid-template-columns: 9rem 1fr; column-gap: var(--space-12); }
   .kb-crit-card dt { margin-top: 0; }
-  .kb-list--similar li { flex-direction: row; align-items: center; justify-content: space-between; }
+}
+
+/* FQA-03 (10-11-2026): één sectie "Lijkt op"; kritische verschillen uitklapbaar binnen de sectie. */
+.sd-similar .kb-acc { margin-top: .75rem; }
+/* M2 (ChatGPT-QA M1 punt 2): op smalle schermen zijn de verwijs- en 'nog geen foto'-vakken in de vergelijkingskaart
+   één regel hoog in plaats van een leeg fotovak; de boodschap zelf blijft zichtbaar. */
+@media (max-width: 719px) {
+  .sd-cmp-ref { min-height: 0; padding: var(--space-8) var(--space-12); place-items: center start; text-align: left; }
 }

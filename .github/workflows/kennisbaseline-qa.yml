@@ -1,4 +1,4 @@
-name: Birdspot Kennisbaseline QA
+name: Birdspot Kennisbaseline en Soortaudit QA
 on:
   pull_request:
     paths:
@@ -11,6 +11,11 @@ on:
       - 'sw.js'
       - 'tests/test_kennisbaseline*.mjs'
       - 'tests/test_kennisbaseline*.py'
+      - 'tests/test_soortaudit*'
+      - 'tests/test_vluchtcontrole.mjs'
+      - 'docs/fotokwaliteit/**'
+      - 'tools/fotokwaliteit/**'
+      - 'assets/species/field-guide-media.json'
       - '.github/workflows/kennisbaseline-qa.yml'
 jobs:
   kennisbaseline:
@@ -34,6 +39,12 @@ jobs:
           node tests/test_fotovolgorde_2026-11-10.mjs
           node tests/test_guide_poses.mjs
           node tests/test_guide_photo_verification.mjs
+      - name: Vluchtcontrole en soortaudit (beoordeling = getoonde kaart, negatieve gevallen)
+        run: |
+          node tests/test_vluchtcontrole.mjs
+          node tests/test_soortaudit.mjs
+      - name: Soortaudit in de browser (390 px)
+        run: python tests/test_soortaudit_browser.py
       - name: Dekkingsmatrix draait
         run: node tools/kennisbaseline/coverage.mjs
       - name: Browser 390 px en 1280 px
@@ -43,5 +54,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: birdspot-kennisbaseline-screenshots
-          path: tests/screenshots/kennisbaseline/*.png
+          path: |
+            tests/screenshots/kennisbaseline/*.png
+            tests/screenshots/soortaudit/*.png
           if-no-files-found: ignore

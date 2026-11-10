@@ -620,7 +620,8 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
     const voice = sheet.querySelector('#sdVoice');
     const description = voice.querySelector('.sd-voice-text');
     if (description) {
-      if (life.voice) description.innerHTML = voiceText(life.voice);
+      // Kennisprofiel: de gebronde zang/roep-tekst blijft staan; de grove veldgidsregel vervangt die niet.
+      if (life.voice && !description.querySelector('[data-kb-voice]')) description.innerHTML = voiceText(life.voice);
     } else {
       voice.innerHTML = voicePanel(s, life.voice);
     }

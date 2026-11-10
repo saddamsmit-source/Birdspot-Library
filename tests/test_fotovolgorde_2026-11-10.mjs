@@ -6,7 +6,8 @@
  * geen nieuwe fotobatches toegevoegd (§5: "Start nog niet met nieuwe fotobatches"):
  *   FV-01  Fotosecties staan in exact deze volgorde, voor elke soort die een sectie heeft:
  *          Verenkleed (hoofdfoto staat al bovenaan de kaart, buiten dit panel) -> In vlucht ->
- *          Vluchtvergelijking -> Lijkt op.
+ *          Lijkt op. Sinds FQA-03 (ChatGPT-QA 10-11-2026, eigenaarsbesluit) is de vluchtvergelijking een
+ *          tabblad "In vlucht" in de ene kaart per gelijkende soort binnen "Lijkt op", geen eigen blok meer.
  *   FV-02  "In vlucht" is altijd een eigen, herkenbare sectie (aria-label="In vlucht"), nooit
  *          samengevoegd met "Overige herkenningsfoto's" of met Verenkleed.
  *   FV-03  Beide vluchtgeslachten zijn zichtbaar wanneer beide bevestigd geregistreerd staan
@@ -50,9 +51,17 @@ for (const s of SPECIES) {
   const vlucht = html.indexOf('aria-label="In vlucht"');
   const vluchtvergelijking = html.indexOf('aria-label="Vluchtvergelijking"');
   const lijktOp = html.indexOf('>Lijkt op<');
-  const positions = [verenkleed, vlucht, vluchtvergelijking, lijktOp].filter(i => i >= 0);
+  const positions = [verenkleed, vlucht, lijktOp].filter(i => i >= 0);
   assert.deepEqual(positions, [...positions].sort((a, b) => a - b),
     `FV-01 fotosecties niet in de juiste volgorde: ${s.id}`);
+  // FQA-03: geen losse sectie meer; vluchtvergelijkingen zijn tabbladen in de kaarten binnen "Lijkt op".
+  assert.equal(vluchtvergelijking, -1, `FV-01 ${s.id}: losse sectie "Vluchtvergelijking" mag niet meer`);
+  const firstFlightPanel = html.indexOf('data-cmp-flight');
+  if (firstFlightPanel >= 0) {
+    const sec = html.indexOf('<section class="sd-similar"');
+    assert.ok(sec >= 0 && sec < firstFlightPanel && firstFlightPanel < html.indexOf('</section>', sec) + 1e9,
+      `FV-01 ${s.id}: vluchtvergelijking staat niet binnen "Lijkt op"`);
+  }
   if (vlucht >= 0) {
     flightSections++;
     // FV-02: "In vlucht" mag niet samenvallen met Verenkleed of Overige herkenningsfoto's.
@@ -99,10 +108,21 @@ function flightTitlesAndImages(html) {
 {
   const flight = flightTitlesAndImages(recognitionPanel(byId.get('sp173')));
   assert.ok(flight, 'sp173 hoort een "In vlucht"-sectie te hebben');
-  assert.deepEqual(flight.titles, ['Mannetje', 'Juveniel', 'In vlucht']);
-  assert.equal(flight.plumageKeys.filter(k => k === 'adult_m' || k === 'juv').length, 2);
+  // Vluchtcontrole 10-11-2026 (eigenaarseis "alleen echte vlucht"): de juveniele foto toont neerstrijken
+  // in riet en staat sindsdien onder Verenkleed › Juveniel, niet meer onder "In vlucht".
+  // FQA-01 (ChatGPT-QA 10-11-2026): het vrouwtje vliegt vrij (stond als kleedfoto zonder vluchtlabel) en
+  // staat nu één keer onder In vlucht, met behoud van het label Vrouwtje.
+  assert.deepEqual(flight.titles, ['Mannetje', 'Vrouwtje', 'In vlucht']);
+  assert.equal(flight.plumageKeys.filter(k => k === 'adult_m').length, 1);
+  {
+    const html = recognitionPanel(byId.get('sp173'));
+    const veren = html.split('aria-label="In vlucht"')[0];
+    assert.ok(!veren.includes('sp173-adult_f.webp'), 'sp173 vrouwtje-vluchtfoto mag niet ook in Verenkleed staan');
+    assert.ok(/data-plumage="adult_f"[\s\S]*?data-flight-ref/.test(veren) || veren.includes('sp173-female-rest'), 'sp173 Vrouwtje-kaart toont eigen rustfoto of verwijst naar In vlucht');
+  }
+  assert.ok(!flight.plumageKeys.includes('juv'), 'sp173 juveniel is geen vluchtfoto meer');
   assert.ok(flight.plumageKeys.includes('neutral'), 'sp173 hoort ook een neutrale (geslachtsloze) vluchtkaart te hebben');
-  console.log('FV-07 sp173 OK — Mannetje + Juveniel (bevestigd) + neutrale vluchtfoto zonder verzonnen geslacht');
+  console.log('FV-07 sp173 OK — Mannetje + Vrouwtje (FQA-01) + neutrale vluchtfoto; juveniel neerstrijkend staat onder Verenkleed');
 }
 
 // sp249 Blauwe Kiekendief — man/vrouw-verschil én meerdere vluchtfoto's: alle drie rollen bevestigd
@@ -120,9 +140,10 @@ function flightTitlesAndImages(html) {
 {
   const html = recognitionPanel(byId.get('sp253'));
   const flight = flightTitlesAndImages(html);
-  assert.deepEqual(flight.titles, ['Mannetje', 'Vrouwtje']);
+  // FQA-01: ook de juveniel vliegt vrij (stond zonder vluchtlabel onder Juveniel).
+  assert.deepEqual(flight.titles, ['Mannetje', 'Vrouwtje', 'Juveniel']);
   assert.ok(html.includes('>Lijkt op<'), 'sp253 vergelijking met Buizerd moet blijven bestaan');
-  console.log('FV-07 sp253 OK — Mannetje + Vrouwtje in vlucht, vergelijking met Buizerd blijft (zonder Juveniel-paar)');
+  console.log('FV-07 sp253 OK — Mannetje + Vrouwtje + Juveniel (FQA-01) in vlucht, vergelijking met Buizerd blijft');
 }
 
 // sp059 Zwartkop — géén vluchtdata: de sectie moet volledig afwezig zijn, niet leeg getoond.

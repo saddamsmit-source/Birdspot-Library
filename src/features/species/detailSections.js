@@ -14,7 +14,7 @@ import { GUIDE_PHOTOS } from './guidePhotos.js';
 import { GUIDE_AUDIO, GUIDE_HEROES, GUIDE_PLUMAGE, GUIDE_POSES } from './guideMedia.js';
 import { photoInfoMarkup } from '../../utils/photoInfo.js';
 import { assetUrl } from '../../utils/assetUrl.js';
-import { knowledgeFor, quickPanel, recognitionDetails, lifeDetails, whereDetails } from './knowledgeSections.js';
+import { knowledgeFor, quickPanel, recognitionDetails, criticalDetails, lifeDetails, whereDetails, similarExtra, voiceDetails } from './knowledgeSections.js';
 
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
@@ -170,12 +170,12 @@ export function guidePlumageGroups(s) {
   return groups;
 }
 
-function plumageCard({key, icon: iconName, title, text, badge, photos, heroRef}) {
+function plumageCard({key, icon: iconName, title, text, badge, photos, heroRef, flightRef}) {
   const gallery = photos.map(photo => {
     const label = photo.label || (photo.flight ? 'In vlucht' : '');
     return `<figure class="sd-plumage-photo">${fieldPhoto(photo)}${label ? `<figcaption>${esc(label)}</figcaption>` : ''}${photo.note ? `<p>${esc(photo.note)}</p>` : ''}</figure>`;
   });
-  return `<div class="sd-plumage" data-plumage="${key}">${icon(iconName)}<div><strong>${esc(title)}${badge ? `<span class="sd-badge">${esc(badge)}</span>` : ''}</strong>${text ? `<p>${esc(text)}</p>` : ''}${gallery.length ? `<div class="sd-plumage-gallery">${gallery.join('')}</div>` : ''}${heroRef ? '<p class="sd-hero-ref">Foto: de hoofdfoto bovenaan deze kaart.</p>' : ''}</div></div>`;
+  return `<div class="sd-plumage" data-plumage="${key}">${icon(iconName)}<div><strong>${esc(title)}${badge ? `<span class="sd-badge">${esc(badge)}</span>` : ''}</strong>${text ? `<p>${esc(text)}</p>` : ''}${gallery.length ? `<div class="sd-plumage-gallery">${gallery.join('')}</div>` : ''}${heroRef ? '<p class="sd-hero-ref">Foto: de hoofdfoto bovenaan deze kaart.</p>' : ''}${flightRef ? '<p class="sd-hero-ref" data-flight-ref>Foto: zie In vlucht hieronder.</p>' : ''}</div></div>`;
 }
 
 function flightPhoto(id) {
@@ -217,6 +217,13 @@ function flightSection(entries) {
 }
 
 /** Titel van het kleed dat een vergelijking toont, voor de tab, de "eigen kleed"-verwijzing en de badge. */
+/** Tablabel: een vluchtvergelijking heet altijd "In vlucht" (eventueel met geslacht), zodat hij in één kaart naast
+ * de kleedtabs (Mannetje/Vrouwtje/…) niet verward kan worden (FQA-03). */
+function cmpTabLabel(entry, bird) {
+  const title = cmpPlumageTitle(entry, bird);
+  return entry.flight && title !== 'In vlucht' ? `In vlucht · ${title}` : title;
+}
+
 function cmpPlumageTitle(entry, bird) {
   if (entry.flight) {
     const photo = flightPhoto(bird.id);
@@ -287,9 +294,11 @@ function comparisonCard(id, group, takePhoto) {
       `<div class="sd-cmp-row">${row.label ? `<b>${esc(row.label)}</b>` : ''}<span>${esc(row.own)}</span><span>${esc(row.other)}</span></div>`
     ).join('');
     const refLabel = focal.plumage || entry.flight ? title.toLowerCase() : 'hoofdfoto';
-    return `<div class="sd-cmp-panel" data-cmp-panel${i === 0 ? '' : ' hidden'}>
+    // Mijlpaal 1 (10-11-2026): geen verwijzing naar een "In vlucht"-sectie die er niet (meer) is.
+    const ownMissing = entry.flight && (focal.photoMissing || !flightPhoto(focal.id));
+    return `<div class="sd-cmp-panel" data-cmp-panel${entry.flight ? ' data-cmp-flight' : ''}${i === 0 ? '' : ' hidden'}>
       <div class="sd-cmp-head">
-        <div class="sd-cmp-who"><strong>${esc(own)}</strong><small>${esc(title)}</small><div class="sd-cmp-ref">↑ zie ${esc(refLabel)}</div></div>
+        <div class="sd-cmp-who"><strong>${esc(own)}</strong><small>${esc(title)}</small><div class="sd-cmp-ref">${ownMissing ? 'Nog geen geschikte vluchtfoto' : `↑ zie ${esc(refLabel)}`}</div></div>
         <div class="sd-cmp-who"><strong>${esc(partnerSpecies.nameNL)}</strong><small>${esc(partnerTitle)}</small>${showPhoto ? fieldPhoto(photo) : '<div class="sd-cmp-ref">Nog geen foto</div>'}</div>
       </div>
       ${rows ? `<div class="sd-cmp-rows">${rows}</div>` : ''}
@@ -301,7 +310,7 @@ function comparisonCard(id, group, takePhoto) {
     </div>`;
   }).join('');
   const tabBar = tabs ? `<div class="sd-cmp-tabs" role="tablist">${pairings.map(({entry, focal}, i) =>
-    `<button type="button" class="sd-cmp-tab${i === 0 ? ' is-active' : ''}" data-cmp-tab aria-selected="${i === 0}">${esc(cmpPlumageTitle(entry, focal))}</button>`
+    `<button type="button" class="sd-cmp-tab${i === 0 ? ' is-active' : ''}" data-cmp-tab aria-selected="${i === 0}">${esc(cmpTabLabel(entry, focal))}</button>`
   ).join('')}</div>` : '';
   return `<div class="sd-cmp-card">${tabBar}${panels}</div>`;
 }
@@ -322,16 +331,16 @@ export function voiceText(voice) {
   return `<div class="sd-callout sd-voice">${icon('note')}<p>${esc(voice)}</p></div>`;
 }
 
-export function voicePanel(s, voice) {
+export function voicePanel(s, voice, sourced = '') {
   const clips = GUIDE_AUDIO[s.id] || [];
-  if (!voice && !clips.length) return '';
+  if (!voice && !clips.length && !sourced) return '';
   const players = clips.map(clip => `<div class="sd-audio">
     <strong>${esc(clip.label)}</strong><p>${esc(clip.note)}</p>
     <audio controls preload="none" src="${esc(assetUrl(clip.audio))}" aria-label="${esc(clip.label)} van ${esc(s.nameNL)}"></audio>
     <p class="sd-audio-error" hidden role="status">Deze opname is nu niet beschikbaar.</p>
     ${mediaCredit(clip)}
   </div>`);
-  return `<h3 class="sd-h">Zang en roep</h3><div class="sd-voice-text">${voice ? voiceText(voice) : ''}</div>${players.join('')}`;
+  return `<h3 class="sd-h">Zang en roep</h3><div class="sd-voice-text">${sourced || (voice ? voiceText(voice) : '')}</div>${players.join('')}`;
 }
 
 function guideSources(review) {
@@ -383,7 +392,10 @@ export function recognitionPanel(s, life = null) {
     const flightPhotos = kept.filter(photo => photo.flight);
     const restPhotos = kept.filter(photo => !photo.flight);
     if (flightPhotos.length) flightEntries.push({...group, photos: flightPhotos, heroRef: false});
-    return {...group, photos: restPhotos, heroRef: group.heroRef || (!restPhotos.length && heroShows(group.key))};
+    const heroRef = group.heroRef || (!restPhotos.length && heroShows(group.key));
+    // FQA-01 (10-11-2026): een juveniel/vrouwtje dat alleen in vlucht is gefotografeerd staat één keer onder
+    // In vlucht (met behoud van het label); de kleedkaart verwijst ernaar in plaats van de foto te herhalen.
+    return {...group, photos: restPhotos, heroRef, flightRef: !heroRef && !restPhotos.length && flightPhotos.length > 0};
   });
   if (groups.length) out.push('<h3 class="sd-h">Verenkleed</h3><div class="sd-plumage-list">' + groups.map(plumageCard).join('') + '</div>');
 
@@ -394,19 +406,36 @@ export function recognitionPanel(s, life = null) {
   if (neutralFlight.length) {
     flightEntries.push({key: 'neutral', icon: 'wingspan', title: 'In vlucht', text: null, badge: '', photos: neutralFlight, heroRef: false});
   }
+  // Vaste slotvolgorde binnen In vlucht, gelijk aan Verenkleed: mannetje → volwassen → vrouwtje → juveniel → … → neutraal.
+  const FLIGHT_SLOTS = ['adult_m', 'adult', 'adult_f', 'juv', 'breeding', 'winter', 'eclipse', 'jaarling', 'neutral'];
+  const slotRank = key => (FLIGHT_SLOTS.includes(key) ? FLIGHT_SLOTS.indexOf(key) : FLIGHT_SLOTS.length - 1);
+  flightEntries.sort((a, b) => slotRank(a.key) - slotRank(b.key));
   out.push(flightSection(flightEntries));
   out.push(posesPanel(neutralRest));
-  if (flight.length) {
-    out.push('<section aria-label="Vluchtvergelijking"><h3 class="sd-h">Vluchtvergelijking</h3>' +
-      comparisonsSection(s.id, flight, takePhoto) + '</section>');
+  // FQA-03 (10-11-2026): één sectie "Lijkt op" met één kaart per gelijkende soort. Kleed- en vluchtvergelijking
+  // van dezelfde soort staan als tabbladen in die ene kaart (kleed eerst, dan "In vlucht"), zodat geen soortnaam,
+  // foto of uitleg dubbel verschijnt. Daarna gelijkende soorten uit het kennisprofiel zonder eigen kaart en de
+  // kritische determinatieverschillen (uitklapbaar). Alle bestaande vergelijkingsdata blijven.
+  const cardsHtml = comparisonsSection(s.id, [...regular, ...flight], takePhoto);
+  // Alleen soorten die werkelijk een kaart krijgen tellen als 'gedekt' (verborgen juveniel-paren niet), anders
+  // verdwijnt een gelijkende soort uit het kennisprofiel zonder kaart én zonder knop.
+  const covered = new Set(groupComparisonsByPartner(s.id, [...regular, ...flight]).map(group => group.partnerId));
+  const extra = similarExtra(s, covered);
+  const critical = criticalDetails(s);
+  if (cardsHtml || extra || critical) {
+    out.push(`<section class="sd-similar" aria-label="Lijkt op"><h3 class="sd-h">Lijkt op</h3>${cardsHtml}${extra}${critical}</section>`);
   }
-  if (regular.length) out.push('<h3 class="sd-h">Lijkt op</h3>' + comparisonsSection(s.id, regular, takePhoto));
+
   out.push(recognitionDetails(s));
-  out.push(`<div id="sdVoice" class="sd-voice-section">${voicePanel(s, life?.voice)}</div>`);
+  const sourcedVoice = voiceDetails(s);
+  out.push(`<div id="sdVoice" class="sd-voice-section">${voicePanel(s, sourcedVoice ? null : life?.voice, sourcedVoice)}</div>`);
   if (s.compact) {
     out.push(`<p class="sd-note">${icon('info')}Zeldzame dwaalgast: een uitgebreide beschrijving volgt nog.</p>`);
   }
-  out.push(guideSources(s.guideReview));
+  // Soorten met kennisprofiel: bronnen staan per bewering; geen "Broncontrole volgt" meer.
+  out.push(!s.guideReview && knowledgeFor(s.id)
+    ? '<p class="sd-source">Bronnen staan per bewering hierboven en volledig onder Leefwijze › Kennisprofiel.</p>'
+    : guideSources(s.guideReview));
   return out.join('');
 }
 

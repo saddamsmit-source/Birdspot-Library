@@ -1,7 +1,8 @@
 /**
  * Birdspot Library — weergave van kennisprofielen (contract v0.1, proef 10-11-2026).
- * Niveau 1 "Snel herkennen": samenvatting, 3–5 veldkenmerken met betrouwbaarheid, het belangrijkste
- * kritische kenmerk, gelijkende soorten en een waarschuwing. Niveau 2: uitklapbare secties.
+ * Niveau 1 "Snel herkennen": samenvatting, het belangrijkste kritische kenmerk, 3–5 veldkenmerken met
+ * betrouwbaarheid en een waarschuwing. Gelijkende soorten staan op één plek: onder "Lijkt op" (similarExtra).
+ * Niveau 2: uitklapbare secties.
  * Pure render-functies; soorten zonder profiel krijgen niets (de bestaande kaart blijft ongewijzigd).
  * Iedere getoonde bewering draagt haar eigen bronvermelding; ontbrekende inhoud staat onder "Nog open".
  */
@@ -22,7 +23,8 @@ export const knowledgeFor = id => KNOWLEDGE[id] || null;
 function srcLine(refs) {
   const list = [...new Set(refs || [])];
   if (!list.length) return '<small class="kb-src">Bestaande Birdspot-inhoud, niet opnieuw gecontroleerd</small>';
-  return `<small class="kb-src">Bron: ${list.map(short).map(esc).join(' · ')}</small>`;
+  // Twee artikelen van dezelfde uitgever tonen één keer de uitgeversnaam (de bronlijst onder Leefwijze noemt ze apart).
+  return `<small class="kb-src">Bron: ${[...new Set(list.map(short))].map(esc).join(' · ')}</small>`;
 }
 
 function relPill(rel) {
@@ -34,8 +36,20 @@ function name(id) {
   return byId.get(id)?.nameNL || id;
 }
 
-function chip(id) {
-  return `<button type="button" class="kb-chip" data-compare-species="${esc(id)}">${esc(name(id))}<span aria-hidden="true"> →</span></button>`;
+/**
+ * Gelijkende soorten uit het kennisprofiel die nog géén eigen vergelijkingskaart hebben (UX-besluit
+ * 10-11-2026: één vergelijkingsplek onder "Lijkt op", geen dubbele kaarten of chips). Soorten die al een
+ * vergelijkingskaart of vluchtvergelijking hebben worden hier overgeslagen; die kaart heeft zelf de
+ * knop "Open …". Zelfde knopstijl als de bestaande vergelijkingskaarten.
+ */
+export function similarExtra(s, covered = new Set()) {
+  const k = knowledgeFor(s.id);
+  const list = (k?.similar || []).filter(x => !covered.has(x.id));
+  if (!list.length) return '';
+  return `<div class="kb-similar" data-kb-similar>${list.map(x => `<div class="kb-similar__item">
+      <div><strong>${esc(name(x.id))}</strong><p>${esc(x.why)}</p>${srcLine(x.sources)}</div>
+      <button type="button" class="sd-compare-open" data-compare-species="${esc(x.id)}">Open ${esc(name(x.id))}<span aria-hidden="true"> →</span></button>
+    </div>`).join('')}</div>`;
 }
 
 function topCritical(k) {
@@ -57,7 +71,7 @@ function otherLine(c) {
 }
 
 /** Niveau 1 — staat direct onder de maten, vóór de fotosecties. Volgorde: samenvatting →
- * kritisch kenmerk → veldkenmerken → gelijkende soorten → let op (kritisch kenmerk eerst, zodat
+ * kritisch kenmerk → veldkenmerken → let op (kritisch kenmerk eerst, zodat
  * het op 390 px binnen het eerste scherm van de tab valt). */
 export function quickPanel(s) {
   const k = knowledgeFor(s.id);
@@ -71,14 +85,12 @@ export function quickPanel(s) {
       ${crit.vs?.length && crit.other !== '—' ? `<p class="kb-vs">${esc(otherLine(crit))}</p>` : ''}
       ${relPill(crit.reliability)}
     </div>` : '';
-  const similar = (k.similar || []).slice(0, 4);
   const caution = k.caution ? `<p class="kb-caution"><strong>Let op</strong> ${esc(k.caution.text)}</p>` : '';
   return `<section class="kb-quick" aria-label="Snel herkennen" data-kb="${esc(s.id)}">
     <h3 class="sd-h">Snel herkennen</h3>
     <p class="kb-summary">${esc(k.summary.text)}</p>
     ${critical}
     <ul class="kb-marks">${marks}</ul>
-    ${similar.length ? `<div class="kb-similar"><span class="kb-similar__label">Gelijkende soorten</span>${similar.map(x => chip(x.id)).join('')}</div>` : ''}
     ${caution}
   </section>`;
 }
@@ -94,8 +106,8 @@ function items(list, labels = {}) {
     `<li>${labels[it.kind || it.topic] ? `<b>${esc(labels[it.kind || it.topic])}</b> ` : ''}${esc(it.text)}${srcLine(it.sources)}</li>`).join('') + '</ul>';
 }
 
-function criticalCards(k) {
-  const list = k.critical || [];
+function criticalCards(k, filter = () => true) {
+  const list = (k.critical || []).filter(filter);
   if (!list.length) return '';
   return list.map(c => `<article class="kb-crit-card">
     <header><strong>${esc(c.feature)}</strong>${relPill(c.reliability)}</header>
@@ -117,19 +129,36 @@ const pick = (list, topics) => (list || []).filter(it => topics.includes(it.topi
 export function recognitionDetails(s) {
   const k = knowledgeFor(s.id);
   if (!k) return '';
-  const sim = (k.similar || []).map(x => `<li><div><b>${esc(name(x.id))}</b> ${esc(x.why)}${srcLine(x.sources)}</div>${chip(x.id)}</li>`).join('');
   const parts = [
-    acc('kritisch', 'Alle kritische kenmerken', criticalCards(k), (k.critical || []).length),
+    // Kritische kenmerken mét vergelijkingssoort staan onder "Lijkt op" (criticalDetails); hier alleen de overige.
+    acc('kritisch-overig', 'Kritische kenmerken', criticalCards(k, c => !c.vs?.length), (k.critical || []).filter(c => !c.vs?.length).length),
     acc('herkenning', 'Uitgebreide herkenning', items(pick(k.detail, ['bouw', 'kleed', 'gedrag', 'variatie']),
       { bouw: 'Bouw', kleed: 'Kleed', gedrag: 'Gedrag', variatie: 'Variatie' })),
     acc('geslacht-leeftijd', 'Mannetje, vrouwtje en juveniel', items(pick(k.detail, ['geslacht', 'leeftijd']),
       { geslacht: 'Geslacht', leeftijd: 'Leeftijd' })),
     acc('vlucht', 'Vluchtkenmerken', items(pick(k.detail, ['vlucht']))),
-    acc('geluid', 'Zang en roep', items(k.voice, { zang: 'Zang', roep: 'Roep', alarm: 'Alarm', vlucht: 'Vluchtroep' })),
-    acc('gelijkend', 'Vergelijkbare soorten', sim ? `<ul class="kb-list kb-list--similar">${sim}</ul>` : '', (k.similar || []).length),
   ].join('');
+  if (!parts) return '';
   return `<section class="kb-more" aria-label="Determinatie in detail"><h3 class="sd-h">Determinatie in detail</h3>${parts}</section>`;
 }
+
+/** FQA-03 (10-11-2026): kritische determinatieverschillen met een vergelijkingssoort, binnen de ene sectie "Lijkt op". */
+export function criticalDetails(s) {
+  const k = knowledgeFor(s.id);
+  if (!k) return '';
+  const withVs = (k.critical || []).filter(c => c.vs?.length);
+  return withVs.length ? acc('kritisch', 'Kritische determinatieverschillen', criticalCards(k, c => c.vs?.length), withVs.length) : '';
+}
+
+/** Zang en roep met bron, getoond in de bestaande sectie "Zang en roep" (één kop, geen dubbele tekst):
+ * vervangt daar alleen de ongebronde veldgidsregel; de opnames blijven ongewijzigd. */
+export function voiceDetails(s) {
+  const k = knowledgeFor(s.id);
+  if (!k?.voice?.length) return '';
+  return `<div class="kb-voice" data-kb-voice>${items(k.voice, { zang: 'Zang', roep: 'Roep', alarm: 'Alarm', vlucht: 'Vluchtroep' })}</div>`;
+}
+
+const BIO_LABEL = { length: 'Lengte', wingspan: 'Spanwijdte', weight: 'Gewicht' };
 
 /** Niveau 2, tab Leefwijze — status, leefwijze en de bronverantwoording. */
 export function lifeDetails(s) {
@@ -139,6 +168,7 @@ export function lifeDetails(s) {
   const collect = x => (x?.sources || []).forEach(r => used.add(r));
   [k.summary, k.caution, k.basis?.size, ...(k.keyMarks || []), ...(k.critical || []), ...(k.similar || []),
     ...(k.detail || []), ...(k.voice || []), ...(k.habitat || []), ...(k.status || []), ...(k.life || [])].forEach(collect);
+  (k.basis?.biometrics || []).forEach(b => b.values.forEach(v => used.add(v.source)));
   const sources = [...used].map(key => {
     const src = KNOWLEDGE_SOURCES[key];
     return `<li><a href="${esc(src.url)}" target="_blank" rel="noopener noreferrer">${esc(src.label)}</a>
@@ -148,7 +178,15 @@ export function lifeDetails(s) {
     `<li><b>${esc(d.field)}</b> Birdspot: ${esc(d.app)} · bron: ${esc(d.source)}${srcLine(d.sources)}</li>`).join('');
   const open = (k.open || []).map(o => `<li>${esc(o)}</li>`).join('');
   const size = k.basis?.size ? `<p class="kb-basis">${esc(k.basis.size.text)}${srcLine(k.basis.size.sources)}</p>` : '';
-  const accountability = `${size}<h4 class="kb-sub">Gebruikte bronnen</h4><ol class="kb-sources">${sources}</ol>` +
+  const bio = (k.basis?.biometrics || []).map(b => {
+    const val = v => `${esc(KNOWLEDGE_SOURCES[v.source]?.label?.split(' — ')[0] || v.source)} ${v.min}–${v.max} ${esc(b.unit)}`;
+    const excl = (b.excluded || []).map(x => ` · niet meegeteld: ${val(x)} — ${esc(x.reason)}`).join('');
+    return `<li data-kb-bio="${esc(b.field)}"><b>${esc(BIO_LABEL[b.field] || b.field)} ${esc(b.display)}</b> uit ${b.values.map(val).join(' en ')}${excl}. ` +
+      `Gemiddelde van onder- en bovengrenzen, afgerond.${b.note ? ' ' + esc(b.note) : ''}</li>`;
+  }).join('');
+  const accountability = `${size}` +
+    (bio ? `<h4 class="kb-sub">Maten: berekening</h4><ul class="kb-list">${bio}</ul>` : '') +
+    `<h4 class="kb-sub">Gebruikte bronnen</h4><ol class="kb-sources">${sources}</ol>` +
     (disc ? `<h4 class="kb-sub">Verschillen met bestaande gegevens</h4><ul class="kb-list">${disc}</ul>` : '') +
     (open ? `<h4 class="kb-sub">Nog open</h4><ul class="kb-list kb-list--open">${open}</ul>` : '') +
     '<p class="kb-review">Kennisprofiel v0.1 · proef · broncontrole door Claude op 10-11-2026 · onafhankelijke controle nog open.</p>';
