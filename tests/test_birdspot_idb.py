@@ -8,13 +8,33 @@ Aanpak:
   3. Navigeer via nav-klikken zodat renderHome() vers wordt aangeroepen.
 
 Scenarios:
-  IDB-1  Één foto: slideshow laadt blob-URL (src starts with blob:)
-  IDB-2  Meerdere foto's: slides == dots (pre-filter invariant)
-  IDB-3  Ontbrekende blob (record zonder .blob): geen crash, slides==dots
-  IDB-4  Thumbnail recentList: blob-URL aanwezig bij DOM-placement (niet vroeg revoked)
-  IDB-5  Herlaad (Home→Soorten→Home): slideshow herstart zonder crash
-  IDB-6  Snelle tabwissel x3: geen JS-crash, diashow correct na terugkeer
-  IDB-7  URL-lifecycle: getPhotoUrl geeft null terug voor record zonder blob
+  IDB-4       Thumbnail recentList: blob-URL aanwezig bij DOM-placement (niet vroeg revoked)
+  IDB-7       URL-lifecycle: getPhotoUrl geeft null terug voor record zonder blob
+  SHOWCASE-1  Home-showcase (CAP-BIRD-006): foto echt complete+naturalWidth>0 na verse load
+  SHOWCASE-2  Showcase blijft echt gedecodeerd na snelle tabwissel x3
+  SHOWCASE-3  Negatieve/mutatiecontrole: geblokkeerde foto → fallback-klasse aan +
+              dezelfde decode-assertie als SHOWCASE-1/2 is dan terecht False
+              (bewijs dat die assertie een echte regressie ook daadwerkelijk vangt)
+
+Uitgefaseerd op 10-11-2026 (zie PR "fix/retire-orphaned-slideshow"):
+  IDB-1, IDB-2, IDB-3, IDB-5, IDB-6 testten de persoonlijke-foto-diashow
+  (#slideshowInner/#slideshowDots/.slideshow__slide/.slideshow__dot/.slideshow__empty).
+  Die markup is sinds commit 2b910c2 (05-11-2026) niet meer aanwezig: #slideshow
+  werd hergebruikt voor de nieuwe curated showcase (CAP-BIRD-006, featuredCarousel.js).
+  initSlideshow()/goToSlide() bleven als dode code staan — stil, geen crash, geen
+  functionaliteit — en zijn in dezelfde PR verwijderd (Projecteigenaar koos Optie A:
+  weesfunctie + verouderde tests opruimen, niet herbouwen). IDB-2 en IDB-3 slaagden
+  daardoor al stilzwijgend vals-positief (0 slides == 0 dots). IDB-4 en IDB-7 testen
+  een ongerelateerd mechanisme (recente-waarnemingenlijst resp. getPhotoUrl) en blijven
+  ongewijzigd.
+
+Bijgewerkt 10-11-2026 na onafhankelijke ChatGPT-QA op PR #119: SHOWCASE-1/2 toetsten
+aanvankelijk alleen niet-lege naam/img.src — een onbereikbare of ondecodeerbare foto
+kon dus toch slagen. Nu toetsen ze img.complete && img.naturalWidth>0 (echte decode),
+en SHOWCASE-3 is toegevoegd als negatieve/mutatiecontrole: met de showcase-afbeeldingen
+geblokkeerd via page.route(...).abort() moet (a) de bestaande has-no-photo-fallback
+aanslaan, (b) er geen JS-crash optreden, en (c) dezelfde decode-assertie expliciet
+False opleveren — het bewijs dat die assertie een echte regressie ook werkelijk vangt.
 """
 
 import http.server
@@ -161,78 +181,6 @@ with sync_playwright() as pw:
     page.wait_for_timeout(1000)
     print("App geladen. Start IDB-injectietests.\n")
 
-    # ── IDB-1: Één foto — slideshow laadt blob-URL ────────────────────────────
-    print("[IDB-1] Één foto: diashow toont <img src='blob:…'>")
-    fresh_home(page)
-    s1 = [make_sighting("s1", photo_id="p1")]
-    set_ls(page, s1)
-    injected = inject_idb(page, ["p1"])
-    go_to_home(page)
-
-    try:
-        # Diashow-slides gebruiken backgroundImage (CSS), niet <img>.
-        # Wacht tot er minstens één slide met een backgroundImage is.
-        page.wait_for_selector('.slideshow__slide', timeout=5000)
-        # Haal backgroundImage op van de eerste slide
-        bg = page.evaluate("""
-            () => {
-                const s = document.querySelector('.slideshow__slide');
-                return s ? s.style.backgroundImage : '';
-            }
-        """)
-        if "blob:" in bg:
-            log("IDB-1: slideshow slide backgroundImage=blob:", "PASS", bg[:60])
-        else:
-            empty = page.locator('.slideshow__empty').is_visible()
-            log("IDB-1: slideshow slide backgroundImage=blob:", "FAIL",
-                f"bg='{bg[:80]}', empty={empty}")
-    except Exception as e:
-        debug = page.evaluate("""
-            () => ({
-                inner: !!document.querySelector('.slideshow__inner'),
-                slides: document.querySelectorAll('.slideshow__slide').length,
-                empty: !!document.querySelector('.slideshow__empty'),
-            })
-        """)
-        log("IDB-1: slideshow slide backgroundImage=blob:", "FAIL",
-            f"Timeout — debug: {debug}")
-
-    # ── IDB-2: Meerdere foto's — slides == dots ───────────────────────────────
-    print("\n[IDB-2] Meerdere foto's: slides == dots")
-    fresh_home(page)
-    s2 = [make_sighting(f"s2-{i}", photo_id=f"p2-{i}") for i in range(3)]
-    set_ls(page, s2)
-    inject_idb(page, [f"p2-{i}" for i in range(3)])
-    go_to_home(page)
-
-    slides = page.locator('.slideshow__slide').count()
-    dots   = page.locator('.slideshow__dot').count()
-    if slides == dots:
-        log(f"IDB-2: slides({slides}) == dots({dots})", "PASS")
-    else:
-        log(f"IDB-2: slides({slides}) == dots({dots})", "FAIL",
-            "Pre-filter invariant geschonden")
-
-    # ── IDB-3: Ontbrekende blob — geen crash, slides==dots ───────────────────
-    print("\n[IDB-3] Ontbrekende blob: geen crash, slides==dots")
-    fresh_home(page)
-    s3 = [make_sighting("s3-valid", photo_id="p3-valid"),
-          make_sighting("s3-bad",   photo_id="p3-no-blob")]
-    set_ls(page, s3)
-    inject_idb(page, ["p3-valid"], extra_no_blob="p3-no-blob")
-    go_to_home(page)
-
-    slides3 = page.locator('.slideshow__slide').count()
-    dots3   = page.locator('.slideshow__dot').count()
-    errs3   = console_errors(page)
-    if slides3 == dots3 and not errs3:
-        log(f"IDB-3: slides({slides3})==dots({dots3}), geen JS-errors", "PASS")
-    elif errs3:
-        log("IDB-3: geen JS-errors", "FAIL", f"errors: {errs3[:120]}")
-    else:
-        log(f"IDB-3: slides({slides3})==dots({dots3})", "FAIL",
-            "Pre-filter invariant geschonden met ontbrekende blob")
-
     # ── IDB-4: Thumbnail recentList — blob-URL bij DOM-placement ─────────────
     print("\n[IDB-4] Thumbnail recente lijst: src=blob: bij DOM-placement")
     fresh_home(page)
@@ -277,49 +225,101 @@ with sync_playwright() as pw:
         log("IDB-4: thumbnail img src=blob: bij DOM-placement", "FAIL",
             f"Timeout — debug: {debug4b}")
 
-    # ── IDB-5: Home→Soorten→Home — slideshow herstart zonder crash ───────────
-    print("\n[IDB-5] Home→Soorten→Home: slideshow herstart, geen crash")
+    # ── Helper: strikte bewijs dat de showcase-foto echt geladen/decodeerbaar is ──
+    SHOWCASE_DECODE_CHECK = """
+        () => {
+            const stage = document.querySelector('#slideshow');
+            const name  = document.querySelector('#featuredBirdName');
+            const img   = document.querySelector('#featuredBirdImage');
+            return {
+                name: name ? name.textContent.trim() : '',
+                imgSrc: img ? img.src : '',
+                complete: img ? img.complete : false,
+                naturalWidth: img ? img.naturalWidth : 0,
+                hasPhotoClass: stage ? stage.classList.contains('has-photo') : false,
+                hasNoPhotoClass: stage ? stage.classList.contains('has-no-photo') : false,
+            };
+        }
+    """
+
+    def showcase_decoded(page):
+        """True alleen als de foto daadwerkelijk gedecodeerd is (geen lege/gebroken img)."""
+        d = page.evaluate(SHOWCASE_DECODE_CHECK)
+        return d, bool(d["name"]) and bool(d["imgSrc"]) and d["complete"] and d["naturalWidth"] > 0
+
+    # ── SHOWCASE-1: Home-showcase toont een vogel na verse load ──────────────
+    print("\n[SHOWCASE-1] Home-showcase (CAP-BIRD-006): foto echt geladen/decodeerbaar na verse load")
     fresh_home(page)
-    s5 = [make_sighting(f"s5-{i}", photo_id=f"p5-{i}") for i in range(2)]
-    set_ls(page, s5)
-    inject_idb(page, [f"p5-{i}" for i in range(2)])
-    go_to_home(page)
-    # Nu wisselen
-    go_to_species(page)
     go_to_home(page)
 
-    errs5 = console_errors(page)
-    has_ss = page.locator('.slideshow__inner, .slideshow__empty').count() > 0
-    if not errs5 and has_ss:
-        log("IDB-5: Home→Soorten→Home crashvrij + diashow aanwezig", "PASS")
-    elif errs5:
-        log("IDB-5: geen JS-crash", "FAIL", f"errors: {errs5[:120]}")
-    else:
-        log("IDB-5: diashow aanwezig na herstart", "FAIL")
+    try:
+        page.wait_for_selector('#featuredBirdName', timeout=5000)
+        page.wait_for_function(
+            "() => { const i = document.querySelector('#featuredBirdImage'); return i && i.complete; }",
+            timeout=5000,
+        )
+        debug_sc1, ok_sc1 = showcase_decoded(page)
+        if ok_sc1:
+            log("SHOWCASE-1: foto complete + naturalWidth>0 na verse load", "PASS",
+                f"{debug_sc1['name']} | naturalWidth={debug_sc1['naturalWidth']} | has-photo={debug_sc1['hasPhotoClass']}")
+        else:
+            log("SHOWCASE-1: foto complete + naturalWidth>0 na verse load", "FAIL", f"debug: {debug_sc1}")
+    except Exception as e:
+        log("SHOWCASE-1: foto complete + naturalWidth>0 na verse load", "FAIL", f"Timeout: {e}")
 
-    # ── IDB-6: Snelle tabwissel ×3 — geen crash ───────────────────────────────
-    print("\n[IDB-6] Snelle tabwissel ×3: geen crash, diashow stabiel")
-    fresh_home(page)
-    s6 = [make_sighting(f"s6-{i}", photo_id=f"p6-{i}") for i in range(2)]
-    set_ls(page, s6)
-    inject_idb(page, [f"p6-{i}" for i in range(2)])
-    go_to_home(page)
-
+    # ── SHOWCASE-2: Snelle tabwissel ×3 — showcase blijft stabiel én gedecodeerd ──
+    print("\n[SHOWCASE-2] Snelle tabwissel ×3: geen crash, foto blijft echt gedecodeerd")
     for _ in range(3):
         page.locator('.nav-item[data-route="species"]').click()
         page.wait_for_timeout(150)
         page.locator('.nav-item[data-route="home"]').click()
         page.wait_for_timeout(200)
 
-    page.wait_for_timeout(1000)
-    errs6 = console_errors(page)
-    has_ss6 = page.locator('.slideshow__inner, .slideshow__empty').count() > 0
-    if not errs6 and has_ss6:
-        log("IDB-6: 3× tabwissel crashvrij + diashow aanwezig", "PASS")
-    elif errs6:
-        log("IDB-6: geen JS-crash na 3× tabwissel", "FAIL", f"errors: {errs6[:120]}")
+    page.wait_for_timeout(500)
+    errs_sc2 = console_errors(page)
+    debug_sc2, ok_sc2 = showcase_decoded(page)
+    if not errs_sc2 and ok_sc2:
+        log("SHOWCASE-2: 3× tabwissel crashvrij + foto complete+naturalWidth>0", "PASS",
+            f"naturalWidth={debug_sc2['naturalWidth']}")
+    elif errs_sc2:
+        log("SHOWCASE-2: geen JS-crash na 3× tabwissel", "FAIL", f"errors: {errs_sc2[:120]}")
     else:
-        log("IDB-6: diashow aanwezig na 3× tabwissel", "FAIL")
+        log("SHOWCASE-2: foto complete+naturalWidth>0 na 3× tabwissel", "FAIL", f"debug: {debug_sc2}")
+
+    # ── SHOWCASE-3: negatieve/mutatiecontrole — gebroken foto moet détecteerbaar zijn ──
+    # Bewijst dat de SHOWCASE-1/2-assertie (complete && naturalWidth>0) niet zomaar
+    # altijd waar is: met een geblokkeerde showcase-afbeelding moet diezelfde check
+    # False opleveren én moet de bestaande has-no-photo-fallback aanslaan.
+    print("\n[SHOWCASE-3] Negatieve controle: geblokkeerde foto → fallback + assertie slaat om naar False")
+    ctx_neg  = browser.new_context(viewport={"width": 390, "height": 844})
+    page_neg = ctx_neg.new_page()
+    page_neg.add_init_script("window.__errs = []; window.onerror = (m,s,l,c,e) => window.__errs.push(m);")
+    page_neg.route("**/assets/showcase/**", lambda route: route.abort())
+    try:
+        page_neg.goto(BASE_URL, wait_until="networkidle")
+        page_neg.wait_for_selector('#featuredBirdName', timeout=5000)
+        page_neg.wait_for_function(
+            "() => { const s = document.querySelector('#slideshow'); return s && s.classList.contains('has-no-photo'); }",
+            timeout=5000,
+        )
+        debug_neg, ok_neg = showcase_decoded(page_neg)
+        errs_neg = page_neg.evaluate("(window.__errs||[]).join('\\n')")
+        # Verwachte uitkomst van een ECHTE regressie: fallback-klasse aan, geen crash,
+        # en de SHOWCASE-1/2-assertie is False (dus die zou in dit geval terecht FAILen).
+        if debug_neg["hasNoPhotoClass"] and not errs_neg and not ok_neg:
+            log("SHOWCASE-3: fallback actief + geen crash + decode-assertie correct False", "PASS",
+                f"hasNoPhotoClass={debug_neg['hasNoPhotoClass']}, naturalWidth={debug_neg['naturalWidth']}")
+        elif errs_neg:
+            log("SHOWCASE-3: geen JS-crash bij geblokkeerde foto", "FAIL", f"errors: {errs_neg[:120]}")
+        elif ok_neg:
+            log("SHOWCASE-3: decode-assertie had False moeten zijn bij geblokkeerde foto", "FAIL",
+                f"debug: {debug_neg}")
+        else:
+            log("SHOWCASE-3: has-no-photo fallback niet aangeslagen", "FAIL", f"debug: {debug_neg}")
+    except Exception as e:
+        log("SHOWCASE-3: fallback actief + geen crash + decode-assertie correct False", "FAIL", f"Timeout: {e}")
+    finally:
+        ctx_neg.close()
 
     # ── IDB-7: getPhotoUrl geeft null voor record zonder blob ─────────────────
     print("\n[IDB-7] getPhotoUrl(record zonder .blob) retourneert null")
