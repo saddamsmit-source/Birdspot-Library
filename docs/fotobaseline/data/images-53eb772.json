@@ -1,0 +1,4696 @@
+{
+ "sp002": {
+  "images": {
+   "/assets/species/sp002.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1280
+    ],
+    "bytes": 119176,
+    "shortSide": 1280
+   },
+   "/assets/species/plumage/sp002-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1200,
+     746
+    ],
+    "bytes": 19900,
+    "shortSide": 746
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp003": {
+  "images": {
+   "/assets/species/sp003.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 163314,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp003-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     485,
+     325
+    ],
+    "bytes": 36186,
+    "shortSide": 325
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp004": {
+  "images": {
+   "/assets/species/sp004.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1064
+    ],
+    "bytes": 95808,
+    "shortSide": 1064
+   },
+   "/assets/species/plumage/sp004-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     1053
+    ],
+    "bytes": 34392,
+    "shortSide": 1053
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp005": {
+  "images": {
+   "/assets/species/plumage/sp005-male-rest.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1222,
+     1006
+    ],
+    "bytes": 52588,
+    "shortSide": 1006
+   },
+   "/assets/species/plumage/sp005-juv.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     1024,
+     682
+    ],
+    "bytes": 23774,
+    "shortSide": 682
+   },
+   "/assets/species/plumage/sp005-adult_m.webp": {
+    "label": "In vlucht/adult",
+    "ok": true,
+    "size": [
+     1024,
+     683
+    ],
+    "bytes": 37120,
+    "shortSide": 683
+   },
+   "/assets/species/plumage/sp005-male-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     918,
+     728
+    ],
+    "bytes": 13324,
+    "shortSide": 728
+   },
+   "/assets/species/plumage/sp005-female-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1270,
+     958
+    ],
+    "bytes": 37724,
+    "shortSide": 958
+   },
+   "/assets/species/sp005.webp": {
+    "label": "Overige herkenningsfoto's/-",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 186476,
+    "shortSide": 1067
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp006": {
+  "images": {
+   "/assets/species/plumage/sp006-hero-male.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1143
+    ],
+    "bytes": 125156,
+    "shortSide": 1143
+   },
+   "/assets/species/sp006.webp": {
+    "label": "Verenkleed/adult_m",
+    "ok": true,
+    "size": [
+     1280,
+     853
+    ],
+    "bytes": 89770,
+    "shortSide": 853
+   },
+   "/assets/species/plumage/sp006-adult_f.webp": {
+    "label": "Verenkleed/adult_f",
+    "ok": true,
+    "size": [
+     1280,
+     853
+    ],
+    "bytes": 105256,
+    "shortSide": 853
+   },
+   "/assets/species/plumage/sp006-juv.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     1280,
+     853
+    ],
+    "bytes": 184576,
+    "shortSide": 853
+   },
+   "/assets/species/plumage/sp006-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     933
+    ],
+    "bytes": 14974,
+    "shortSide": 933
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp007": {
+  "images": {
+   "/assets/species/plumage/sp007-hero-male.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 346662,
+    "shortSide": 1067
+   },
+   "/assets/species/sp007.webp": {
+    "label": "Verenkleed/adult_m",
+    "ok": true,
+    "size": [
+     1280,
+     960
+    ],
+    "bytes": 108678,
+    "shortSide": 960
+   },
+   "/assets/species/plumage/sp007-juv.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     1280,
+     853
+    ],
+    "bytes": 176986,
+    "shortSide": 853
+   },
+   "/assets/species/plumage/sp007-male-flight.webp": {
+    "label": "In vlucht/adult_m",
+    "ok": true,
+    "size": [
+     922,
+     792
+    ],
+    "bytes": 21170,
+    "shortSide": 792
+   },
+   "/assets/species/plumage/sp007-adult_f.webp": {
+    "label": "In vlucht/adult_f",
+    "ok": true,
+    "size": [
+     683,
+     1024
+    ],
+    "bytes": 32412,
+    "shortSide": 683
+   },
+   "/assets/species/plumage/sp007-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     800,
+     450
+    ],
+    "bytes": 6844,
+    "shortSide": 450
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp008": {
+  "images": {
+   "/assets/species/plumage/sp008-hero-male.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 83368,
+    "shortSide": 1067
+   },
+   "/assets/species/sp008.webp": {
+    "label": "Verenkleed/adult_m",
+    "ok": true,
+    "size": [
+     1065,
+     1600
+    ],
+    "bytes": 141250,
+    "shortSide": 1065
+   },
+   "/assets/species/plumage/sp008-adult_f.webp": {
+    "label": "Verenkleed/adult_f",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 88578,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp008-juv.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     1143,
+     1600
+    ],
+    "bytes": 202180,
+    "shortSide": 1143
+   },
+   "/assets/species/plumage/sp008-male-flight.webp": {
+    "label": "In vlucht/adult_m",
+    "ok": true,
+    "size": [
+     1400,
+     1050
+    ],
+    "bytes": 81624,
+    "shortSide": 1050
+   },
+   "/assets/species/plumage/sp008-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1600,
+     1004
+    ],
+    "bytes": 81946,
+    "shortSide": 1004
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp009": {
+  "images": {
+   "/assets/species/plumage/sp009-male-rest.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1382,
+     1400
+    ],
+    "bytes": 165276,
+    "shortSide": 1382
+   },
+   "/assets/species/plumage/sp009-juv.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     1576,
+     1169
+    ],
+    "bytes": 208164,
+    "shortSide": 1169
+   },
+   "/assets/showcase/sp009.webp": {
+    "label": "In vlucht/adult",
+    "ok": true,
+    "size": [
+     1600,
+     1277
+    ],
+    "bytes": 33820,
+    "shortSide": 1277
+   },
+   "/assets/species/plumage/sp009-male-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1223,
+     815
+    ],
+    "bytes": 35562,
+    "shortSide": 815
+   },
+   "/assets/species/plumage/sp009-perched.webp": {
+    "label": "Overige herkenningsfoto's/-",
+    "ok": true,
+    "size": [
+     1231,
+     1600
+    ],
+    "bytes": 255468,
+    "shortSide": 1231
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp016": {
+  "images": {
+   "/assets/species/plumage/sp016-hero-male.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1143
+    ],
+    "bytes": 120812,
+    "shortSide": 1143
+   },
+   "/assets/species/plumage/sp016-male.webp": {
+    "label": "Verenkleed/adult_m",
+    "ok": true,
+    "size": [
+     1600,
+     1066
+    ],
+    "bytes": 149178,
+    "shortSide": 1066
+   },
+   "/assets/species/sp016.webp": {
+    "label": "Verenkleed/adult_f",
+    "ok": true,
+    "size": [
+     1421,
+     1600
+    ],
+    "bytes": 477090,
+    "shortSide": 1421
+   },
+   "/assets/species/plumage/sp016-juv.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     1280,
+     960
+    ],
+    "bytes": 244686,
+    "shortSide": 960
+   },
+   "/assets/species/plumage/sp016-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     933
+    ],
+    "bytes": 31182,
+    "shortSide": 933
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp017": {
+  "images": {
+   "/assets/species/sp017.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1067,
+     1600
+    ],
+    "bytes": 174492,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp017-female.webp": {
+    "label": "Verenkleed/adult_f",
+    "ok": true,
+    "size": [
+     1101,
+     1101
+    ],
+    "bytes": 118276,
+    "shortSide": 1101
+   },
+   "/assets/species/plumage/sp017-flight.webp": {
+    "label": "In vlucht/adult_f",
+    "ok": true,
+    "size": [
+     1400,
+     1400
+    ],
+    "bytes": 292848,
+    "shortSide": 1400
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp018": {
+  "images": {
+   "/assets/species/plumage/sp018-hero-male.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1045
+    ],
+    "bytes": 244862,
+    "shortSide": 1045
+   },
+   "/assets/showcase/sp018.webp": {
+    "label": "Verenkleed/adult_m",
+    "ok": true,
+    "size": [
+     1211,
+     1600
+    ],
+    "bytes": 206442,
+    "shortSide": 1211
+   },
+   "/assets/species/plumage/sp018-female-single.webp": {
+    "label": "Verenkleed/adult_f",
+    "ok": true,
+    "size": [
+     500,
+     661
+    ],
+    "bytes": 93256,
+    "shortSide": 500
+   },
+   "/assets/species/plumage/sp018-juv-review.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     1000,
+     550
+    ],
+    "bytes": 182240,
+    "shortSide": 550
+   },
+   "/assets/species/plumage/sp018-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     1085
+    ],
+    "bytes": 74986,
+    "shortSide": 1085
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp019": {
+  "images": {
+   "/assets/species/plumage/sp019-hero-male.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 450474,
+    "shortSide": 1067
+   },
+   "/assets/species/sp019.webp": {
+    "label": "Verenkleed/adult_m",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 267322,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp019-female-ground.webp": {
+    "label": "Verenkleed/adult_f",
+    "ok": true,
+    "size": [
+     1600,
+     1599
+    ],
+    "bytes": 335028,
+    "shortSide": 1599
+   },
+   "/assets/species/plumage/sp019-juv.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     1600,
+     1200
+    ],
+    "bytes": 387920,
+    "shortSide": 1200
+   },
+   "/assets/species/plumage/sp019-flight.webp": {
+    "label": "In vlucht/adult_f",
+    "ok": true,
+    "size": [
+     1400,
+     1050
+    ],
+    "bytes": 182058,
+    "shortSide": 1050
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp020": {
+  "images": {
+   "/assets/species/plumage/sp020-male.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     500,
+     750
+    ],
+    "bytes": 113408,
+    "shortSide": 500
+   },
+   "/assets/species/plumage/sp020-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     725,
+     483
+    ],
+    "bytes": 30776,
+    "shortSide": 483
+   },
+   "/assets/species/sp020.webp": {
+    "label": "Overige herkenningsfoto's/-",
+    "ok": true,
+    "size": [
+     1585,
+     1600
+    ],
+    "bytes": 275208,
+    "shortSide": 1585
+   },
+   "/assets/species/plumage/sp020-pose.webp": {
+    "label": "Overige herkenningsfoto's/-",
+    "ok": true,
+    "size": [
+     1475,
+     1600
+    ],
+    "bytes": 179148,
+    "shortSide": 1475
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp021": {
+  "images": {
+   "/assets/species/sp021.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 105708,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp021-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     933
+    ],
+    "bytes": 80560,
+    "shortSide": 933
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp022": {
+  "images": {
+   "/assets/species/sp022.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1039
+    ],
+    "bytes": 90786,
+    "shortSide": 1039
+   },
+   "/assets/species/plumage/sp022-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     933
+    ],
+    "bytes": 21964,
+    "shortSide": 933
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp025": {
+  "images": {
+   "/assets/species/sp025.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 205936,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp025-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     934
+    ],
+    "bytes": 88290,
+    "shortSide": 934
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp026": {
+  "images": {
+   "/assets/species/sp026.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 161262,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp026-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     933
+    ],
+    "bytes": 69010,
+    "shortSide": 933
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp029": {
+  "images": {
+   "/assets/species/sp029.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1344
+    ],
+    "bytes": 134908,
+    "shortSide": 1344
+   },
+   "/assets/species/plumage/sp029-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     1077
+    ],
+    "bytes": 66312,
+    "shortSide": 1077
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp030": {
+  "images": {
+   "/assets/species/sp030.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 93526,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp030-juv2.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     1133,
+     1600
+    ],
+    "bytes": 93444,
+    "shortSide": 1133
+   },
+   "/assets/species/plumage/sp030-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     1050
+    ],
+    "bytes": 53186,
+    "shortSide": 1050
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp031": {
+  "images": {
+   "/assets/species/sp031.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 101036,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp031-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1600,
+     1123
+    ],
+    "bytes": 191482,
+    "shortSide": 1123
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp032": {
+  "images": {
+   "/assets/species/sp032.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1000,
+     667
+    ],
+    "bytes": 27544,
+    "shortSide": 667
+   },
+   "/assets/species/plumage/sp032-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     1277
+    ],
+    "bytes": 75608,
+    "shortSide": 1277
+   },
+   "/assets/species/plumage/sp032-view.webp": {
+    "label": "Overige herkenningsfoto's/-",
+    "ok": true,
+    "size": [
+     1400,
+     1050
+    ],
+    "bytes": 44062,
+    "shortSide": 1050
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp033": {
+  "images": {
+   "/assets/species/sp033.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 133832,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp033-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     960,
+     720
+    ],
+    "bytes": 48434,
+    "shortSide": 720
+   },
+   "/assets/species/plumage/sp033-view.webp": {
+    "label": "Overige herkenningsfoto's/-",
+    "ok": true,
+    "size": [
+     1400,
+     1400
+    ],
+    "bytes": 288158,
+    "shortSide": 1400
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp034": {
+  "images": {
+   "/assets/species/sp034.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 69780,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp034-juv.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     1600,
+     1066
+    ],
+    "bytes": 240414,
+    "shortSide": 1066
+   },
+   "/assets/species/plumage/sp034-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     1049
+    ],
+    "bytes": 66968,
+    "shortSide": 1049
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp035": {
+  "images": {
+   "/assets/species/plumage/sp035-hero-male.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 124166,
+    "shortSide": 1067
+   },
+   "/assets/species/sp035.webp": {
+    "label": "Verenkleed/adult_m",
+    "ok": true,
+    "size": [
+     1600,
+     1070
+    ],
+    "bytes": 65932,
+    "shortSide": 1070
+   },
+   "/assets/species/plumage/sp035-adult_f.webp": {
+    "label": "Verenkleed/adult_f",
+    "ok": true,
+    "size": [
+     1280,
+     853
+    ],
+    "bytes": 158108,
+    "shortSide": 853
+   },
+   "/assets/species/plumage/sp035-juv-review.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     1400,
+     933
+    ],
+    "bytes": 108094,
+    "shortSide": 933
+   },
+   "/assets/species/plumage/sp035-flight.webp": {
+    "label": "In vlucht/adult_m",
+    "ok": true,
+    "size": [
+     900,
+     900
+    ],
+    "bytes": 56660,
+    "shortSide": 900
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp036": {
+  "images": {
+   "/assets/species/sp036.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1246
+    ],
+    "bytes": 109674,
+    "shortSide": 1246
+   },
+   "/assets/species/plumage/sp036-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1050,
+     1050
+    ],
+    "bytes": 43874,
+    "shortSide": 1050
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp037": {
+  "images": {
+   "/assets/species/sp037.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1268
+    ],
+    "bytes": 131538,
+    "shortSide": 1268
+   },
+   "/assets/species/plumage/sp037-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     800
+    ],
+    "bytes": 61358,
+    "shortSide": 800
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp038": {
+  "images": {
+   "/assets/species/sp038.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 164600,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp038-flight.webp": {
+    "label": "In vlucht/adult_m",
+    "ok": true,
+    "size": [
+     1141,
+     1400
+    ],
+    "bytes": 364690,
+    "shortSide": 1141
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp039": {
+  "images": {
+   "/assets/species/sp039.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1329
+    ],
+    "bytes": 135556,
+    "shortSide": 1329
+   },
+   "/assets/species/plumage/sp039-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1045,
+     470
+    ],
+    "bytes": 9996,
+    "shortSide": 470
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp040": {
+  "images": {
+   "/assets/species/sp040.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1143
+    ],
+    "bytes": 130428,
+    "shortSide": 1143
+   },
+   "/assets/species/plumage/sp040-flight.webp": {
+    "label": "In vlucht/adult_m",
+    "ok": true,
+    "size": [
+     1400,
+     1400
+    ],
+    "bytes": 87148,
+    "shortSide": 1400
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp041": {
+  "images": {
+   "/assets/species/sp041.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 95292,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp041-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     330,
+     275
+    ],
+    "bytes": 2998,
+    "shortSide": 275
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp042": {
+  "images": {
+   "/assets/showcase/sp042.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1068
+    ],
+    "bytes": 63658,
+    "shortSide": 1068
+   },
+   "/assets/species/plumage/sp042-flight.webp": {
+    "label": "In vlucht/adult_m",
+    "ok": true,
+    "size": [
+     1023,
+     576
+    ],
+    "bytes": 19262,
+    "shortSide": 576
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp043": {
+  "images": {
+   "/assets/species/plumage/sp043-hero-male.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 139976,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp043-adult_m.webp": {
+    "label": "Verenkleed/adult_m",
+    "ok": true,
+    "size": [
+     1280,
+     853
+    ],
+    "bytes": 97892,
+    "shortSide": 853
+   },
+   "/assets/species/sp043.webp": {
+    "label": "Verenkleed/adult_f",
+    "ok": true,
+    "size": [
+     1200,
+     1600
+    ],
+    "bytes": 90254,
+    "shortSide": 1200
+   },
+   "/assets/species/plumage/sp043-juv-review.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     1400,
+     933
+    ],
+    "bytes": 174300,
+    "shortSide": 933
+   },
+   "/assets/species/plumage/sp043-flight.webp": {
+    "label": "In vlucht/adult_m",
+    "ok": true,
+    "size": [
+     1400,
+     886
+    ],
+    "bytes": 50604,
+    "shortSide": 886
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp044": {
+  "images": {
+   "/assets/species/sp044.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1065
+    ],
+    "bytes": 151322,
+    "shortSide": 1065
+   },
+   "/assets/species/plumage/sp044-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     961
+    ],
+    "bytes": 61008,
+    "shortSide": 961
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp045": {
+  "images": {
+   "/assets/species/plumage/sp045-hero-male.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 113682,
+    "shortSide": 1067
+   },
+   "/assets/species/sp045.webp": {
+    "label": "Verenkleed/adult_m",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 163830,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp045-adult_f.webp": {
+    "label": "Verenkleed/adult_f",
+    "ok": true,
+    "size": [
+     1280,
+     853
+    ],
+    "bytes": 110576,
+    "shortSide": 853
+   },
+   "/assets/species/plumage/sp045-juv.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     1280,
+     1068
+    ],
+    "bytes": 320998,
+    "shortSide": 1068
+   },
+   "/assets/species/plumage/sp045-flight.webp": {
+    "label": "In vlucht/adult_m",
+    "ok": true,
+    "size": [
+     1400,
+     1120
+    ],
+    "bytes": 56566,
+    "shortSide": 1120
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp046": {
+  "images": {
+   "/assets/species/sp046.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 90392,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp046-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     666,
+     839
+    ],
+    "bytes": 43352,
+    "shortSide": 666
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp047": {
+  "images": {
+   "/assets/species/sp047.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1385
+    ],
+    "bytes": 226320,
+    "shortSide": 1385
+   },
+   "/assets/species/plumage/sp047-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     845,
+     1065
+    ],
+    "bytes": 147570,
+    "shortSide": 845
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp048": {
+  "images": {
+   "/assets/species/sp048.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 150290,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp048-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     1149
+    ],
+    "bytes": 230996,
+    "shortSide": 1149
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp049": {
+  "images": {
+   "/assets/species/sp049.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1149
+    ],
+    "bytes": 126636,
+    "shortSide": 1149
+   },
+   "/assets/species/plumage/sp049-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     415,
+     310
+    ],
+    "bytes": 7030,
+    "shortSide": 310
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp050": {
+  "images": {
+   "/assets/species/sp050.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 83544,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp050-juv-review.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     1400,
+     1000
+    ],
+    "bytes": 113654,
+    "shortSide": 1000
+   },
+   "/assets/species/plumage/sp050-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     1050
+    ],
+    "bytes": 185190,
+    "shortSide": 1050
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp051": {
+  "images": {
+   "/assets/species/sp051.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 164642,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp051-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     291,
+     177
+    ],
+    "bytes": 21148,
+    "shortSide": 177
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp053": {
+  "images": {
+   "/assets/species/plumage/sp053-hero-male.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1471,
+     1600
+    ],
+    "bytes": 225232,
+    "shortSide": 1471
+   },
+   "/assets/species/sp053.webp": {
+    "label": "Verenkleed/adult_m",
+    "ok": true,
+    "size": [
+     1600,
+     1200
+    ],
+    "bytes": 127174,
+    "shortSide": 1200
+   },
+   "/assets/species/plumage/sp053-female-review.webp": {
+    "label": "Verenkleed/adult_f",
+    "ok": true,
+    "size": [
+     1000,
+     1400
+    ],
+    "bytes": 77790,
+    "shortSide": 1000
+   },
+   "/assets/species/plumage/sp053-juv-review.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     1400,
+     933
+    ],
+    "bytes": 54902,
+    "shortSide": 933
+   },
+   "/assets/species/plumage/sp053-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     610,
+     615
+    ],
+    "bytes": 10788,
+    "shortSide": 610
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp054": {
+  "images": {
+   "/assets/species/sp054.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1064
+    ],
+    "bytes": 158766,
+    "shortSide": 1064
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp055": {
+  "images": {
+   "/assets/species/sp055.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1056
+    ],
+    "bytes": 96308,
+    "shortSide": 1056
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp056": {
+  "images": {
+   "/assets/species/sp056.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 91146,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp056-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     1149
+    ],
+    "bytes": 363320,
+    "shortSide": 1149
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp057": {
+  "images": {
+   "/assets/species/sp057.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1600
+    ],
+    "bytes": 217492,
+    "shortSide": 1600
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp058": {
+  "images": {
+   "/assets/species/sp058.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     900
+    ],
+    "bytes": 46088,
+    "shortSide": 900
+   },
+   "/assets/species/plumage/sp058-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1329,
+     1400
+    ],
+    "bytes": 184626,
+    "shortSide": 1329
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp059": {
+  "images": {
+   "/assets/species/sp059.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 70744,
+    "shortSide": 1067
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp060": {
+  "images": {
+   "/assets/species/sp060.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 229556,
+    "shortSide": 1067
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp061": {
+  "images": {
+   "/assets/species/sp061.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 72996,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp061-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     550,
+     478
+    ],
+    "bytes": 26656,
+    "shortSide": 478
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp063": {
+  "images": {
+   "/assets/species/sp063.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 123230,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp063-juv.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     1600,
+     1194
+    ],
+    "bytes": 223582,
+    "shortSide": 1194
+   },
+   "/assets/species/plumage/sp063-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1312,
+     1400
+    ],
+    "bytes": 91428,
+    "shortSide": 1312
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp064": {
+  "images": {
+   "/assets/species/sp064.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 116460,
+    "shortSide": 1067
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp065": {
+  "images": {
+   "/assets/species/sp065.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 110612,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp065-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     640,
+     640
+    ],
+    "bytes": 36528,
+    "shortSide": 640
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp066": {
+  "images": {
+   "/assets/species/sp066.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1141,
+     1600
+    ],
+    "bytes": 343770,
+    "shortSide": 1141
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp067": {
+  "images": {
+   "/assets/species/sp067.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1600
+    ],
+    "bytes": 298652,
+    "shortSide": 1600
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp068": {
+  "images": {
+   "/assets/species/sp068.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 56480,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp068-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1280,
+     854
+    ],
+    "bytes": 50184,
+    "shortSide": 854
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp069": {
+  "images": {
+   "/assets/species/sp069.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 107216,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp069-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1280,
+     853
+    ],
+    "bytes": 96394,
+    "shortSide": 853
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp070": {
+  "images": {
+   "/assets/species/sp070.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1200
+    ],
+    "bytes": 254974,
+    "shortSide": 1200
+   },
+   "/assets/species/plumage/sp070-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1280,
+     853
+    ],
+    "bytes": 48098,
+    "shortSide": 853
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp072": {
+  "images": {
+   "/assets/species/sp072.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 214918,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp072-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     1077
+    ],
+    "bytes": 84044,
+    "shortSide": 1077
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp075": {
+  "images": {
+   "/assets/species/plumage/sp075-hero-male.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     914
+    ],
+    "bytes": 75772,
+    "shortSide": 914
+   },
+   "/assets/species/plumage/sp075-male-review.webp": {
+    "label": "Verenkleed/adult_m",
+    "ok": true,
+    "size": [
+     1400,
+     1120
+    ],
+    "bytes": 101782,
+    "shortSide": 1120
+   },
+   "/assets/species/plumage/sp075-female-review.webp": {
+    "label": "Verenkleed/adult_f",
+    "ok": true,
+    "size": [
+     1400,
+     933
+    ],
+    "bytes": 72872,
+    "shortSide": 933
+   },
+   "/assets/species/plumage/sp075-juv-review.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     1400,
+     933
+    ],
+    "bytes": 53178,
+    "shortSide": 933
+   },
+   "/assets/species/plumage/sp075-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     858
+    ],
+    "bytes": 46484,
+    "shortSide": 858
+   },
+   "/assets/showcase/sp075.webp": {
+    "label": "Overige herkenningsfoto's/-",
+    "ok": true,
+    "size": [
+     1600,
+     1600
+    ],
+    "bytes": 103950,
+    "shortSide": 1600
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp077": {
+  "images": {
+   "/assets/species/sp077.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 114426,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp077-juv.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 94296,
+    "shortSide": 1067
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp078": {
+  "images": {
+   "/assets/species/sp078.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 98864,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp078-juv-grown.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 102678,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp078-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     930,
+     620
+    ],
+    "bytes": 134482,
+    "shortSide": 620
+   },
+   "/assets/species/plumage/sp078-juv.webp": {
+    "label": "Overige herkenningsfoto's/-",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 202560,
+    "shortSide": 1067
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp079": {
+  "images": {
+   "/assets/species/sp079.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1127
+    ],
+    "bytes": 157272,
+    "shortSide": 1127
+   },
+   "/assets/species/plumage/sp079-juv.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 196096,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp079-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1280,
+     960
+    ],
+    "bytes": 121024,
+    "shortSide": 960
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp081": {
+  "images": {
+   "/assets/species/sp081.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     862
+    ],
+    "bytes": 157670,
+    "shortSide": 862
+   },
+   "/assets/species/plumage/sp081-juv.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     1600,
+     1376
+    ],
+    "bytes": 337398,
+    "shortSide": 1376
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp082": {
+  "images": {
+   "/assets/species/sp082.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1064
+    ],
+    "bytes": 195806,
+    "shortSide": 1064
+   },
+   "/assets/species/plumage/sp082-juv.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     1024,
+     609
+    ],
+    "bytes": 68514,
+    "shortSide": 609
+   },
+   "/assets/species/plumage/sp082-breeding.webp": {
+    "label": "Verenkleed/breeding",
+    "ok": true,
+    "size": [
+     1024,
+     681
+    ],
+    "bytes": 22804,
+    "shortSide": 681
+   },
+   "/assets/species/plumage/sp082-winter.webp": {
+    "label": "Verenkleed/winter",
+    "ok": true,
+    "size": [
+     1024,
+     659
+    ],
+    "bytes": 160970,
+    "shortSide": 659
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp083": {
+  "images": {
+   "/assets/species/sp083.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 544458,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp083-juv.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     1024,
+     683
+    ],
+    "bytes": 110336,
+    "shortSide": 683
+   },
+   "/assets/species/plumage/sp083-breeding.webp": {
+    "label": "Verenkleed/breeding",
+    "ok": true,
+    "size": [
+     1024,
+     768
+    ],
+    "bytes": 69356,
+    "shortSide": 768
+   },
+   "/assets/species/plumage/sp083-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1280,
+     853
+    ],
+    "bytes": 82660,
+    "shortSide": 853
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp084": {
+  "images": {
+   "/assets/showcase/sp084.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 348656,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp084-juv.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     840,
+     630
+    ],
+    "bytes": 119326,
+    "shortSide": 630
+   },
+   "/assets/species/plumage/sp084-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     933
+    ],
+    "bytes": 39680,
+    "shortSide": 933
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp085": {
+  "images": {
+   "/assets/showcase/sp085.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1598
+    ],
+    "bytes": 222150,
+    "shortSide": 1598
+   },
+   "/assets/species/plumage/sp085-juv.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     482,
+     720
+    ],
+    "bytes": 59298,
+    "shortSide": 482
+   },
+   "/assets/species/plumage/sp085-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     1267
+    ],
+    "bytes": 60256,
+    "shortSide": 1267
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp086": {
+  "images": {
+   "/assets/species/sp086.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1318
+    ],
+    "bytes": 191664,
+    "shortSide": 1318
+   },
+   "/assets/species/plumage/sp086-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     933
+    ],
+    "bytes": 105408,
+    "shortSide": 933
+   },
+   "/assets/species/plumage/sp086-juv.webp": {
+    "label": "Overige herkenningsfoto's/-",
+    "ok": true,
+    "size": [
+     1600,
+     1188
+    ],
+    "bytes": 373938,
+    "shortSide": 1188
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp089": {
+  "images": {
+   "/assets/species/sp089.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     981
+    ],
+    "bytes": 231424,
+    "shortSide": 981
+   },
+   "/assets/species/plumage/sp089-adult_f.webp": {
+    "label": "Verenkleed/adult_f",
+    "ok": true,
+    "size": [
+     1280,
+     853
+    ],
+    "bytes": 54672,
+    "shortSide": 853
+   },
+   "/assets/species/plumage/sp089-juv-review.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     1400,
+     935
+    ],
+    "bytes": 176340,
+    "shortSide": 935
+   },
+   "/assets/species/plumage/sp089-eclipse.webp": {
+    "label": "Verenkleed/eclipse",
+    "ok": true,
+    "size": [
+     1280,
+     1036
+    ],
+    "bytes": 260184,
+    "shortSide": 1036
+   },
+   "/assets/species/plumage/sp089-flight.webp": {
+    "label": "In vlucht/adult_m",
+    "ok": true,
+    "size": [
+     1400,
+     958
+    ],
+    "bytes": 110226,
+    "shortSide": 958
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp090": {
+  "images": {
+   "/assets/species/sp090.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 211334,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp090-adult_f.webp": {
+    "label": "Verenkleed/adult_f",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 126462,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp090-flight.webp": {
+    "label": "In vlucht/adult_m",
+    "ok": true,
+    "size": [
+     1400,
+     934
+    ],
+    "bytes": 67982,
+    "shortSide": 934
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp091": {
+  "images": {
+   "/assets/species/plumage/sp091-hero-male.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 313390,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp091-adult_m.webp": {
+    "label": "Verenkleed/adult_m",
+    "ok": true,
+    "size": [
+     1024,
+     650
+    ],
+    "bytes": 104614,
+    "shortSide": 650
+   },
+   "/assets/species/plumage/sp091-adult_f.webp": {
+    "label": "Verenkleed/adult_f",
+    "ok": true,
+    "size": [
+     1280,
+     905
+    ],
+    "bytes": 127384,
+    "shortSide": 905
+   },
+   "/assets/species/plumage/sp091-juv.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     500,
+     335
+    ],
+    "bytes": 16962,
+    "shortSide": 335
+   },
+   "/assets/species/plumage/sp091-eclipse.webp": {
+    "label": "Verenkleed/eclipse",
+    "ok": true,
+    "size": [
+     1024,
+     683
+    ],
+    "bytes": 103394,
+    "shortSide": 683
+   },
+   "/assets/species/plumage/sp091-flight.webp": {
+    "label": "In vlucht/adult_m",
+    "ok": true,
+    "size": [
+     1400,
+     978
+    ],
+    "bytes": 42426,
+    "shortSide": 978
+   },
+   "/assets/species/sp091.webp": {
+    "label": "Overige herkenningsfoto's/-",
+    "ok": true,
+    "size": [
+     1600,
+     1173
+    ],
+    "bytes": 184064,
+    "shortSide": 1173
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp092": {
+  "images": {
+   "/assets/species/plumage/sp092-hero-male.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 86576,
+    "shortSide": 1067
+   },
+   "/assets/species/sp092.webp": {
+    "label": "Verenkleed/adult_m",
+    "ok": true,
+    "size": [
+     1600,
+     1014
+    ],
+    "bytes": 81044,
+    "shortSide": 1014
+   },
+   "/assets/species/plumage/sp092-adult_f.webp": {
+    "label": "Verenkleed/adult_f",
+    "ok": true,
+    "size": [
+     1600,
+     1200
+    ],
+    "bytes": 88534,
+    "shortSide": 1200
+   },
+   "/assets/species/plumage/sp092-juv-review.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     1400,
+     875
+    ],
+    "bytes": 119594,
+    "shortSide": 875
+   },
+   "/assets/species/plumage/sp092-flight.webp": {
+    "label": "In vlucht/adult_m",
+    "ok": true,
+    "size": [
+     1400,
+     1050
+    ],
+    "bytes": 53960,
+    "shortSide": 1050
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp094": {
+  "images": {
+   "/assets/species/sp094.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 70540,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp094-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     933
+    ],
+    "bytes": 32540,
+    "shortSide": 933
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp095": {
+  "images": {
+   "/assets/species/sp095.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 76646,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp095-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     933
+    ],
+    "bytes": 24748,
+    "shortSide": 933
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp096": {
+  "images": {
+   "/assets/species/sp096.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 46974,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp096-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     700
+    ],
+    "bytes": 19844,
+    "shortSide": 700
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp097": {
+  "images": {
+   "/assets/species/sp097.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 90032,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp097-winter.webp": {
+    "label": "Verenkleed/winter",
+    "ok": true,
+    "size": [
+     1280,
+     964
+    ],
+    "bytes": 188674,
+    "shortSide": 964
+   },
+   "/assets/species/plumage/sp097-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     933
+    ],
+    "bytes": 32194,
+    "shortSide": 933
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp098": {
+  "images": {
+   "/assets/species/sp098.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 89532,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp098-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     934
+    ],
+    "bytes": 64442,
+    "shortSide": 934
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp099": {
+  "images": {
+   "/assets/species/sp099.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 274194,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp099-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     934
+    ],
+    "bytes": 51850,
+    "shortSide": 934
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp100": {
+  "images": {
+   "/assets/species/sp100.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1200
+    ],
+    "bytes": 117260,
+    "shortSide": 1200
+   },
+   "/assets/species/plumage/sp100-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     933
+    ],
+    "bytes": 55978,
+    "shortSide": 933
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp101": {
+  "images": {
+   "/assets/species/sp101.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1199
+    ],
+    "bytes": 165832,
+    "shortSide": 1199
+   },
+   "/assets/species/plumage/sp101-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     875
+    ],
+    "bytes": 36368,
+    "shortSide": 875
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp102": {
+  "images": {
+   "/assets/species/sp102.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1146
+    ],
+    "bytes": 94388,
+    "shortSide": 1146
+   },
+   "/assets/species/plumage/sp102-juv.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     558,
+     480
+    ],
+    "bytes": 34214,
+    "shortSide": 480
+   },
+   "/assets/species/plumage/sp102-breeding.webp": {
+    "label": "Verenkleed/breeding",
+    "ok": true,
+    "size": [
+     1024,
+     768
+    ],
+    "bytes": 35350,
+    "shortSide": 768
+   },
+   "/assets/species/plumage/sp102-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     933
+    ],
+    "bytes": 37830,
+    "shortSide": 933
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp104": {
+  "images": {
+   "/assets/species/sp104.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1200
+    ],
+    "bytes": 165966,
+    "shortSide": 1200
+   },
+   "/assets/species/plumage/sp104-jaarling.webp": {
+    "label": "Verenkleed/jaarling",
+    "ok": true,
+    "size": [
+     1000,
+     666
+    ],
+    "bytes": 125066,
+    "shortSide": 666
+   },
+   "/assets/species/plumage/sp104-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     933
+    ],
+    "bytes": 34730,
+    "shortSide": 933
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp105": {
+  "images": {
+   "/assets/species/sp105.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 221036,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp105-flight.webp": {
+    "label": "In vlucht/adult_m",
+    "ok": true,
+    "size": [
+     1280,
+     740
+    ],
+    "bytes": 82474,
+    "shortSide": 740
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp106": {
+  "images": {
+   "/assets/species/sp106.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1176
+    ],
+    "bytes": 158272,
+    "shortSide": 1176
+   },
+   "/assets/species/plumage/sp106-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     450,
+     300
+    ],
+    "bytes": 17306,
+    "shortSide": 300
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp108": {
+  "images": {
+   "/assets/showcase/sp108.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 83112,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp108-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     724,
+     543
+    ],
+    "bytes": 36982,
+    "shortSide": 543
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp110": {
+  "images": {
+   "/assets/species/sp110.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 127348,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp110-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     850,
+     823
+    ],
+    "bytes": 154774,
+    "shortSide": 823
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp112": {
+  "images": {
+   "/assets/species/sp112.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1283
+    ],
+    "bytes": 173320,
+    "shortSide": 1283
+   },
+   "/assets/species/plumage/sp112-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1370,
+     1400
+    ],
+    "bytes": 85998,
+    "shortSide": 1370
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp113": {
+  "images": {
+   "/assets/showcase/sp113.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1200
+    ],
+    "bytes": 175662,
+    "shortSide": 1200
+   },
+   "/assets/species/plumage/sp113-flight.webp": {
+    "label": "In vlucht/adult_m",
+    "ok": true,
+    "size": [
+     1400,
+     874
+    ],
+    "bytes": 22452,
+    "shortSide": 874
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp114": {
+  "images": {
+   "/assets/species/sp114.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1280
+    ],
+    "bytes": 193686,
+    "shortSide": 1280
+   },
+   "/assets/species/plumage/sp114-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1290,
+     860
+    ],
+    "bytes": 17256,
+    "shortSide": 860
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp115": {
+  "images": {
+   "/assets/species/sp115.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1097
+    ],
+    "bytes": 102922,
+    "shortSide": 1097
+   },
+   "/assets/species/plumage/sp115-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     825,
+     645
+    ],
+    "bytes": 19226,
+    "shortSide": 645
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp116": {
+  "images": {
+   "/assets/species/plumage/sp116-flight.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1179,
+     971
+    ],
+    "bytes": 160584,
+    "shortSide": 971
+   },
+   "/assets/species/plumage/sp116-nestwand.webp": {
+    "label": "Overige herkenningsfoto's/-",
+    "ok": true,
+    "size": [
+     1250,
+     974
+    ],
+    "bytes": 214026,
+    "shortSide": 974
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp117": {
+  "images": {
+   "/assets/species/sp117.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1068
+    ],
+    "bytes": 67364,
+    "shortSide": 1068
+   },
+   "/assets/species/plumage/sp117-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     600,
+     400
+    ],
+    "bytes": 7746,
+    "shortSide": 400
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp118": {
+  "images": {
+   "/assets/species/sp118.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 111186,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp118-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     605,
+     405
+    ],
+    "bytes": 7078,
+    "shortSide": 405
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp126": {
+  "images": {
+   "/assets/species/sp126.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1212
+    ],
+    "bytes": 136102,
+    "shortSide": 1212
+   },
+   "/assets/species/plumage/sp126-juv.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     1600,
+     977
+    ],
+    "bytes": 121800,
+    "shortSide": 977
+   },
+   "/assets/species/plumage/sp126-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     872
+    ],
+    "bytes": 30206,
+    "shortSide": 872
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp128": {
+  "images": {
+   "/assets/species/sp128.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 142548,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp128-juv-grown.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 72534,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp128-female-review.webp": {
+    "label": "In vlucht/adult_f",
+    "ok": true,
+    "size": [
+     1400,
+     933
+    ],
+    "bytes": 43826,
+    "shortSide": 933
+   },
+   "/assets/species/plumage/sp128-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     742
+    ],
+    "bytes": 26632,
+    "shortSide": 742
+   },
+   "/assets/species/plumage/sp128-juv.webp": {
+    "label": "Overige herkenningsfoto's/-",
+    "ok": true,
+    "size": [
+     1600,
+     1200
+    ],
+    "bytes": 181512,
+    "shortSide": 1200
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp129": {
+  "images": {
+   "/assets/species/plumage/sp129-hero-male.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1033
+    ],
+    "bytes": 251702,
+    "shortSide": 1033
+   },
+   "/assets/species/sp129.webp": {
+    "label": "Verenkleed/adult_m",
+    "ok": true,
+    "size": [
+     1600,
+     1177
+    ],
+    "bytes": 310284,
+    "shortSide": 1177
+   },
+   "/assets/species/plumage/sp129-adult_f.webp": {
+    "label": "Verenkleed/adult_f",
+    "ok": true,
+    "size": [
+     1280,
+     853
+    ],
+    "bytes": 106958,
+    "shortSide": 853
+   },
+   "/assets/species/plumage/sp129-juv.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 151964,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp129-flight.webp": {
+    "label": "In vlucht/adult_m",
+    "ok": true,
+    "size": [
+     810,
+     595
+    ],
+    "bytes": 71612,
+    "shortSide": 595
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp130": {
+  "images": {
+   "/assets/species/sp130.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1172
+    ],
+    "bytes": 194394,
+    "shortSide": 1172
+   },
+   "/assets/species/plumage/sp130-adult-f.webp": {
+    "label": "Verenkleed/adult_f",
+    "ok": true,
+    "size": [
+     1250,
+     938
+    ],
+    "bytes": 111574,
+    "shortSide": 938
+   },
+   "/assets/species/plumage/sp130-flight.webp": {
+    "label": "In vlucht/adult_m",
+    "ok": true,
+    "size": [
+     1280,
+     960
+    ],
+    "bytes": 33960,
+    "shortSide": 960
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp132": {
+  "images": {
+   "/assets/species/sp132.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 70768,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp132-adult_f.webp": {
+    "label": "Verenkleed/adult_f",
+    "ok": true,
+    "size": [
+     1600,
+     1200
+    ],
+    "bytes": 146762,
+    "shortSide": 1200
+   },
+   "/assets/species/plumage/sp132-flight.webp": {
+    "label": "In vlucht/adult_m",
+    "ok": true,
+    "size": [
+     850,
+     535
+    ],
+    "bytes": 64888,
+    "shortSide": 535
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp141": {
+  "images": {
+   "/assets/species/plumage/sp141-adult.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1250,
+     833
+    ],
+    "bytes": 9290,
+    "shortSide": 833
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp143": {
+  "images": {
+   "/assets/showcase/sp143.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1200
+    ],
+    "bytes": 79552,
+    "shortSide": 1200
+   },
+   "/assets/species/plumage/sp143-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1280,
+     853
+    ],
+    "bytes": 16464,
+    "shortSide": 853
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp144": {
+  "images": {
+   "/assets/species/sp144.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     949,
+     712
+    ],
+    "bytes": 62364,
+    "shortSide": 712
+   },
+   "/assets/species/plumage/sp144-juv.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     1024,
+     682
+    ],
+    "bytes": 100892,
+    "shortSide": 682
+   },
+   "/assets/species/plumage/sp144-winter.webp": {
+    "label": "Verenkleed/winter",
+    "ok": true,
+    "size": [
+     1024,
+     676
+    ],
+    "bytes": 48434,
+    "shortSide": 676
+   },
+   "/assets/species/plumage/sp144-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     855,
+     885
+    ],
+    "bytes": 193768,
+    "shortSide": 855
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp145": {
+  "images": {
+   "/assets/species/sp145.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1024,
+     683
+    ],
+    "bytes": 97206,
+    "shortSide": 683
+   },
+   "/assets/species/plumage/sp145-juv.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     1024,
+     768
+    ],
+    "bytes": 64828,
+    "shortSide": 768
+   },
+   "/assets/species/plumage/sp145-winter.webp": {
+    "label": "Verenkleed/winter",
+    "ok": true,
+    "size": [
+     1024,
+     768
+    ],
+    "bytes": 100946,
+    "shortSide": 768
+   },
+   "/assets/species/plumage/sp145-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     933
+    ],
+    "bytes": 107410,
+    "shortSide": 933
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp146": {
+  "images": {
+   "/assets/species/sp146.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 147426,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp146-juv.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     1024,
+     736
+    ],
+    "bytes": 92768,
+    "shortSide": 736
+   },
+   "/assets/species/plumage/sp146-winter.webp": {
+    "label": "Verenkleed/winter",
+    "ok": true,
+    "size": [
+     1024,
+     682
+    ],
+    "bytes": 145100,
+    "shortSide": 682
+   },
+   "/assets/species/plumage/sp146-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     872,
+     1077
+    ],
+    "bytes": 90736,
+    "shortSide": 872
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp147": {
+  "images": {
+   "/assets/species/sp147.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1024,
+     683
+    ],
+    "bytes": 190786,
+    "shortSide": 683
+   },
+   "/assets/species/plumage/sp147-juv.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     1024,
+     771
+    ],
+    "bytes": 109640,
+    "shortSide": 771
+   },
+   "/assets/species/plumage/sp147-winter.webp": {
+    "label": "Verenkleed/winter",
+    "ok": true,
+    "size": [
+     1024,
+     769
+    ],
+    "bytes": 131742,
+    "shortSide": 769
+   },
+   "/assets/species/plumage/sp147-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1188,
+     1400
+    ],
+    "bytes": 61440,
+    "shortSide": 1188
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp150": {
+  "images": {
+   "/assets/species/sp150.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 93746,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp150-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     730,
+     685
+    ],
+    "bytes": 90022,
+    "shortSide": 685
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp152": {
+  "images": {
+   "/assets/species/sp152.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 55456,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp152-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     933
+    ],
+    "bytes": 150474,
+    "shortSide": 933
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp155": {
+  "images": {
+   "/assets/species/sp155.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1024,
+     683
+    ],
+    "bytes": 32552,
+    "shortSide": 683
+   },
+   "/assets/species/plumage/sp155-juv.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     500,
+     341
+    ],
+    "bytes": 50914,
+    "shortSide": 341
+   },
+   "/assets/species/plumage/sp155-winter.webp": {
+    "label": "Verenkleed/winter",
+    "ok": true,
+    "size": [
+     768,
+     1024
+    ],
+    "bytes": 42536,
+    "shortSide": 768
+   },
+   "/assets/species/plumage/sp155-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1213,
+     809
+    ],
+    "bytes": 114008,
+    "shortSide": 809
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp156": {
+  "images": {
+   "/assets/species/sp156.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1024,
+     683
+    ],
+    "bytes": 97472,
+    "shortSide": 683
+   },
+   "/assets/species/plumage/sp156-juv.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     371,
+     197
+    ],
+    "bytes": 2032,
+    "shortSide": 197
+   },
+   "/assets/species/plumage/sp156-winter.webp": {
+    "label": "Verenkleed/winter",
+    "ok": true,
+    "size": [
+     1024,
+     1024
+    ],
+    "bytes": 32674,
+    "shortSide": 1024
+   },
+   "/assets/species/plumage/sp156-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1247,
+     1400
+    ],
+    "bytes": 88708,
+    "shortSide": 1247
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp157": {
+  "images": {
+   "/assets/species/sp157.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1024,
+     683
+    ],
+    "bytes": 49084,
+    "shortSide": 683
+   },
+   "/assets/species/plumage/sp157-juv.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     1024,
+     768
+    ],
+    "bytes": 50822,
+    "shortSide": 768
+   },
+   "/assets/species/plumage/sp157-winter.webp": {
+    "label": "Verenkleed/winter",
+    "ok": true,
+    "size": [
+     1024,
+     768
+    ],
+    "bytes": 80428,
+    "shortSide": 768
+   },
+   "/assets/species/plumage/sp157-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     995,
+     1365
+    ],
+    "bytes": 214460,
+    "shortSide": 995
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp158": {
+  "images": {
+   "/assets/species/sp158.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1024,
+     865
+    ],
+    "bytes": 47934,
+    "shortSide": 865
+   },
+   "/assets/species/plumage/sp158-juv.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     727,
+     476
+    ],
+    "bytes": 13258,
+    "shortSide": 476
+   },
+   "/assets/species/plumage/sp158-winter.webp": {
+    "label": "Verenkleed/winter",
+    "ok": true,
+    "size": [
+     1024,
+     768
+    ],
+    "bytes": 168142,
+    "shortSide": 768
+   },
+   "/assets/species/plumage/sp158-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1280,
+     791
+    ],
+    "bytes": 78764,
+    "shortSide": 791
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp159": {
+  "images": {
+   "/assets/species/sp159.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1024,
+     754
+    ],
+    "bytes": 40512,
+    "shortSide": 754
+   },
+   "/assets/species/plumage/sp159-juv.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     786,
+     600
+    ],
+    "bytes": 77840,
+    "shortSide": 600
+   },
+   "/assets/species/plumage/sp159-winter.webp": {
+    "label": "Verenkleed/winter",
+    "ok": true,
+    "size": [
+     1024,
+     869
+    ],
+    "bytes": 53908,
+    "shortSide": 869
+   },
+   "/assets/species/plumage/sp159-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     842,
+     639
+    ],
+    "bytes": 36442,
+    "shortSide": 639
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp164": {
+  "images": {
+   "/assets/species/plumage/sp164-adult.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1250,
+     833
+    ],
+    "bytes": 31420,
+    "shortSide": 833
+   },
+   "/assets/species/plumage/sp164-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     1084
+    ],
+    "bytes": 86258,
+    "shortSide": 1084
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp165": {
+  "images": {
+   "/assets/species/plumage/sp165-adult.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1250,
+     833
+    ],
+    "bytes": 47870,
+    "shortSide": 833
+   },
+   "/assets/species/plumage/sp165-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     582
+    ],
+    "bytes": 26008,
+    "shortSide": 582
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp166": {
+  "images": {
+   "/assets/species/plumage/sp166-adult.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1250,
+     833
+    ],
+    "bytes": 9154,
+    "shortSide": 833
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp167": {
+  "images": {
+   "/assets/species/plumage/sp167-adult.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1250,
+     833
+    ],
+    "bytes": 10660,
+    "shortSide": 833
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp170": {
+  "images": {
+   "/assets/species/sp170.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 37852,
+    "shortSide": 1067
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp173": {
+  "images": {
+   "/assets/species/plumage/sp173-hero-male.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 105386,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp173-adult_f.webp": {
+    "label": "Verenkleed/adult_f",
+    "ok": true,
+    "size": [
+     1280,
+     885
+    ],
+    "bytes": 40048,
+    "shortSide": 885
+   },
+   "/assets/species/plumage/sp173-female-rest.webp": {
+    "label": "Verenkleed/adult_f",
+    "ok": true,
+    "size": [
+     1023,
+     1400
+    ],
+    "bytes": 306822,
+    "shortSide": 1023
+   },
+   "/assets/species/plumage/sp173-male-2.webp": {
+    "label": "In vlucht/adult_m",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 44468,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp173-juv.webp": {
+    "label": "In vlucht/juv",
+    "ok": true,
+    "size": [
+     1024,
+     682
+    ],
+    "bytes": 219122,
+    "shortSide": 682
+   },
+   "/assets/species/sp173.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1280,
+     854
+    ],
+    "bytes": 48084,
+    "shortSide": 854
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp174": {
+  "images": {
+   "/assets/species/sp174.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 127578,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp174-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     820,
+     425
+    ],
+    "bytes": 24416,
+    "shortSide": 425
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp176": {
+  "images": {
+   "/assets/species/sp176.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1063
+    ],
+    "bytes": 137200,
+    "shortSide": 1063
+   },
+   "/assets/species/plumage/sp176-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     752,
+     642
+    ],
+    "bytes": 25542,
+    "shortSide": 642
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp177": {
+  "images": {
+   "/assets/species/sp177.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1143
+    ],
+    "bytes": 125476,
+    "shortSide": 1143
+   },
+   "/assets/species/plumage/sp177-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1260,
+     950
+    ],
+    "bytes": 68184,
+    "shortSide": 950
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp178": {
+  "images": {
+   "/assets/species/sp178.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 193478,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp178-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     830,
+     740
+    ],
+    "bytes": 92238,
+    "shortSide": 740
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp188": {
+  "images": {
+   "/assets/species/plumage/sp188-hero-male.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 177364,
+    "shortSide": 1067
+   },
+   "/assets/species/sp188.webp": {
+    "label": "Verenkleed/adult_m",
+    "ok": true,
+    "size": [
+     1280,
+     853
+    ],
+    "bytes": 264906,
+    "shortSide": 853
+   },
+   "/assets/species/plumage/sp188-adult_f.webp": {
+    "label": "Verenkleed/adult_f",
+    "ok": true,
+    "size": [
+     1063,
+     640
+    ],
+    "bytes": 107222,
+    "shortSide": 640
+   },
+   "/assets/species/plumage/sp188-juv.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     1200,
+     741
+    ],
+    "bytes": 99106,
+    "shortSide": 741
+   },
+   "/assets/species/plumage/sp188-eclipse.webp": {
+    "label": "In vlucht/eclipse",
+    "ok": true,
+    "size": [
+     1024,
+     768
+    ],
+    "bytes": 183260,
+    "shortSide": 768
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp206": {
+  "images": {
+   "/assets/species/sp206.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     821,
+     547
+    ],
+    "bytes": 91596,
+    "shortSide": 547
+   },
+   "/assets/species/plumage/sp206-adult_f.webp": {
+    "label": "Verenkleed/adult_f",
+    "ok": true,
+    "size": [
+     1024,
+     768
+    ],
+    "bytes": 100060,
+    "shortSide": 768
+   },
+   "/assets/species/plumage/sp206-juv.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     481,
+     361
+    ],
+    "bytes": 51850,
+    "shortSide": 361
+   },
+   "/assets/species/plumage/sp206-winter.webp": {
+    "label": "Verenkleed/winter",
+    "ok": true,
+    "size": [
+     691,
+     691
+    ],
+    "bytes": 77406,
+    "shortSide": 691
+   },
+   "/assets/species/plumage/sp206-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     610,
+     460
+    ],
+    "bytes": 29458,
+    "shortSide": 460
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp217": {
+  "images": {
+   "/assets/species/sp217.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1024,
+     683
+    ],
+    "bytes": 64758,
+    "shortSide": 683
+   },
+   "/assets/species/plumage/sp217-juv.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     584,
+     508
+    ],
+    "bytes": 15444,
+    "shortSide": 508
+   },
+   "/assets/species/plumage/sp217-winter.webp": {
+    "label": "Verenkleed/winter",
+    "ok": true,
+    "size": [
+     1024,
+     1024
+    ],
+    "bytes": 70276,
+    "shortSide": 1024
+   },
+   "/assets/species/plumage/sp217-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     960,
+     638
+    ],
+    "bytes": 106310,
+    "shortSide": 638
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp225": {
+  "images": {
+   "/assets/species/sp225.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1280,
+     960
+    ],
+    "bytes": 193608,
+    "shortSide": 960
+   },
+   "/assets/species/plumage/sp225-winter.webp": {
+    "label": "Verenkleed/winter",
+    "ok": true,
+    "size": [
+     1280,
+     960
+    ],
+    "bytes": 206180,
+    "shortSide": 960
+   },
+   "/assets/species/plumage/sp225-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1210,
+     1240
+    ],
+    "bytes": 36284,
+    "shortSide": 1210
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp245": {
+  "images": {
+   "/assets/species/sp245.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1280,
+     837
+    ],
+    "bytes": 313378,
+    "shortSide": 837
+   },
+   "/assets/species/plumage/sp245-juv.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     1024,
+     1024
+    ],
+    "bytes": 129324,
+    "shortSide": 1024
+   },
+   "/assets/species/plumage/sp245-breeding.webp": {
+    "label": "Verenkleed/breeding",
+    "ok": true,
+    "size": [
+     853,
+     1280
+    ],
+    "bytes": 225932,
+    "shortSide": 853
+   },
+   "/assets/species/plumage/sp245-winter.webp": {
+    "label": "Verenkleed/winter",
+    "ok": true,
+    "size": [
+     1024,
+     920
+    ],
+    "bytes": 92052,
+    "shortSide": 920
+   },
+   "/assets/species/plumage/sp245-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1114,
+     729
+    ],
+    "bytes": 66914,
+    "shortSide": 729
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp248": {
+  "images": {
+   "/assets/species/sp248.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1024,
+     864
+    ],
+    "bytes": 27068,
+    "shortSide": 864
+   },
+   "/assets/species/plumage/sp248-male-rest.webp": {
+    "label": "Verenkleed/adult_m",
+    "ok": true,
+    "size": [
+     920,
+     893
+    ],
+    "bytes": 168868,
+    "shortSide": 893
+   },
+   "/assets/species/plumage/sp248-adult_f.webp": {
+    "label": "In vlucht/adult_f",
+    "ok": true,
+    "size": [
+     1024,
+     768
+    ],
+    "bytes": 20394,
+    "shortSide": 768
+   },
+   "/assets/species/plumage/sp248-juv.webp": {
+    "label": "In vlucht/juv",
+    "ok": true,
+    "size": [
+     1280,
+     853
+    ],
+    "bytes": 40616,
+    "shortSide": 853
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp249": {
+  "images": {
+   "/assets/species/plumage/sp249-hero-male.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 47896,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp249-male-rest.webp": {
+    "label": "Verenkleed/adult_m",
+    "ok": true,
+    "size": [
+     835,
+     529
+    ],
+    "bytes": 29486,
+    "shortSide": 529
+   },
+   "/assets/species/sp249.webp": {
+    "label": "In vlucht/adult_m",
+    "ok": true,
+    "size": [
+     1280,
+     854
+    ],
+    "bytes": 123376,
+    "shortSide": 854
+   },
+   "/assets/species/plumage/sp249-adult_f.webp": {
+    "label": "In vlucht/adult_f",
+    "ok": true,
+    "size": [
+     1280,
+     853
+    ],
+    "bytes": 60964,
+    "shortSide": 853
+   },
+   "/assets/species/plumage/sp249-juv.webp": {
+    "label": "In vlucht/juv",
+    "ok": true,
+    "size": [
+     1280,
+     720
+    ],
+    "bytes": 57458,
+    "shortSide": 720
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp250": {
+  "images": {
+   "/assets/species/plumage/sp250-hero-male.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1184,
+     1600
+    ],
+    "bytes": 68148,
+    "shortSide": 1184
+   },
+   "/assets/species/plumage/sp250-male-rest.webp": {
+    "label": "Verenkleed/adult_m",
+    "ok": true,
+    "size": [
+     448,
+     448
+    ],
+    "bytes": 43520,
+    "shortSide": 448
+   },
+   "/assets/species/sp250.webp": {
+    "label": "In vlucht/adult_m",
+    "ok": true,
+    "size": [
+     1280,
+     854
+    ],
+    "bytes": 26666,
+    "shortSide": 854
+   },
+   "/assets/species/plumage/sp250-adult_f.webp": {
+    "label": "In vlucht/adult_f",
+    "ok": true,
+    "size": [
+     1024,
+     708
+    ],
+    "bytes": 17406,
+    "shortSide": 708
+   },
+   "/assets/species/plumage/sp250-juv.webp": {
+    "label": "In vlucht/juv",
+    "ok": true,
+    "size": [
+     1280,
+     853
+    ],
+    "bytes": 194142,
+    "shortSide": 853
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp251": {
+  "images": {
+   "/assets/species/plumage/sp251-hero-male.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1200
+    ],
+    "bytes": 202850,
+    "shortSide": 1200
+   },
+   "/assets/species/plumage/sp251-male-rest.webp": {
+    "label": "Verenkleed/adult_m",
+    "ok": true,
+    "size": [
+     1400,
+     1110
+    ],
+    "bytes": 136632,
+    "shortSide": 1110
+   },
+   "/assets/species/sp251.webp": {
+    "label": "In vlucht/adult_m",
+    "ok": true,
+    "size": [
+     1280,
+     853
+    ],
+    "bytes": 44268,
+    "shortSide": 853
+   },
+   "/assets/species/plumage/sp251-adult_f.webp": {
+    "label": "In vlucht/adult_f",
+    "ok": true,
+    "size": [
+     1280,
+     720
+    ],
+    "bytes": 52848,
+    "shortSide": 720
+   },
+   "/assets/species/plumage/sp251-juv.webp": {
+    "label": "In vlucht/juv",
+    "ok": true,
+    "size": [
+     972,
+     708
+    ],
+    "bytes": 154374,
+    "shortSide": 708
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp253": {
+  "images": {
+   "/assets/species/plumage/sp253-male-rest.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1400,
+     1050
+    ],
+    "bytes": 83940,
+    "shortSide": 1050
+   },
+   "/assets/species/plumage/sp253-juv.webp": {
+    "label": "Verenkleed/juv",
+    "ok": true,
+    "size": [
+     1024,
+     684
+    ],
+    "bytes": 16136,
+    "shortSide": 684
+   },
+   "/assets/species/plumage/sp253-male-flight.webp": {
+    "label": "In vlucht/adult_m",
+    "ok": true,
+    "size": [
+     767,
+     615
+    ],
+    "bytes": 25074,
+    "shortSide": 615
+   },
+   "/assets/species/sp253.webp": {
+    "label": "In vlucht/adult_f",
+    "ok": true,
+    "size": [
+     1280,
+     853
+    ],
+    "bytes": 120810,
+    "shortSide": 853
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp262": {
+  "images": {
+   "/assets/showcase/sp262.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1063
+    ],
+    "bytes": 104306,
+    "shortSide": 1063
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp282": {
+  "images": {
+   "/assets/showcase/sp282.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1600,
+     1067
+    ],
+    "bytes": 96636,
+    "shortSide": 1067
+   },
+   "/assets/species/plumage/sp282-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     1400,
+     934
+    ],
+    "bytes": 30856,
+    "shortSide": 934
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ },
+ "sp288": {
+  "images": {
+   "/assets/species/plumage/sp288-adult.webp": {
+    "label": "Hoofdfoto/hero",
+    "ok": true,
+    "size": [
+     1250,
+     938
+    ],
+    "bytes": 108960,
+    "shortSide": 938
+   },
+   "/assets/species/plumage/sp288-flight.webp": {
+    "label": "In vlucht/neutral",
+    "ok": true,
+    "size": [
+     850,
+     650
+    ],
+    "bytes": 61446,
+    "shortSide": 650
+   }
+  },
+  "nearDuplicates": [],
+  "hiddenRegistryImages": []
+ }
+}
