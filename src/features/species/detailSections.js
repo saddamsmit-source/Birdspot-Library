@@ -14,6 +14,7 @@ import { GUIDE_PHOTOS } from './guidePhotos.js';
 import { GUIDE_AUDIO, GUIDE_HEROES, GUIDE_PLUMAGE, GUIDE_POSES } from './guideMedia.js';
 import { photoInfoMarkup } from '../../utils/photoInfo.js';
 import { assetUrl } from '../../utils/assetUrl.js';
+import { knowledgeFor, quickPanel, recognitionDetails, lifeDetails, whereDetails } from './knowledgeSections.js';
 
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
@@ -361,7 +362,10 @@ export function recognitionPanel(s, life = null) {
       out.push('<div class="sd-tiles">' + dimensions.map(([key, ic, label]) => tile(ic, label, esc(s.size[key]))).join('') + '</div>');
     }
   }
-  if (s.fieldmarks) {
+  // Kennisbaseline (proef 10-11-2026): met profiel vervangt "Snel herkennen" de korte veldkenmerkregel.
+  // Zonder profiel blijft de kaart exact zoals voorheen.
+  if (knowledgeFor(s.id)) out.push(quickPanel(s));
+  else if (s.fieldmarks) {
     out.push(`<div class="sd-callout">${icon('eye')}<p>${esc(s.fieldmarks)}</p></div>`);
   }
   // Opdracht 3 (10-11-2026): vaste fotovolgorde. Verenkleed toont voortaan uitsluitend stilstaande
@@ -397,6 +401,7 @@ export function recognitionPanel(s, life = null) {
       comparisonsSection(s.id, flight, takePhoto) + '</section>');
   }
   if (regular.length) out.push('<h3 class="sd-h">Lijkt op</h3>' + comparisonsSection(s.id, regular, takePhoto));
+  out.push(recognitionDetails(s));
   out.push(`<div id="sdVoice" class="sd-voice-section">${voicePanel(s, life?.voice)}</div>`);
   if (s.compact) {
     out.push(`<p class="sd-note">${icon('info')}Zeldzame dwaalgast: een uitgebreide beschrijving volgt nog.</p>`);
@@ -470,6 +475,7 @@ export function statusPanel(s, life = null) {
   out.push('<div class="sd-tiles sd-tiles--2">' + tiles.join('') + '</div>');
   if (!life) {
     out.push(`<p class="sd-note">${icon('info')}Broeden, voedsel en trek voor deze soort volgen nog.</p>`);
+    out.push(lifeDetails(s));
     return out.join('');
   }
   const b = life.breeding;
@@ -489,6 +495,7 @@ export function statusPanel(s, life = null) {
       `<div class="sd-fact">${icon(ic)}<div><strong>${label}</strong><p>${esc(text)}</p></div></div>`).join('') + '</div>');
   }
   if (s.guideReview) out.push(guideSources(s.guideReview));
+  out.push(lifeDetails(s));
   return out.join('');
 }
 
@@ -570,6 +577,7 @@ export function wherePanel(s) {
   if (s.photoTip) {
     out.push(`<h3 class="sd-h">Fotografietip</h3><div class="sd-callout sd-photo-tip">${icon('camera')}<p>${esc(s.photoTip)}</p></div>`);
   }
+  out.push(whereDetails(s));
   out.push(`<div class="sd-places-panel" id="sdWherePlaces">${wherePlaces([])}</div>`);
   return out.join('');
 }

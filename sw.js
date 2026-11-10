@@ -12,7 +12,7 @@
  *   birdspot-media           — foto's/IDB-exports (permanent)
  */
 
-const APP_VERSION = '1.21.0-review-candidate';
+const APP_VERSION = '1.22.0-kennisbaseline-proef';
 const APP_CACHE   = `birdspot-app-v${APP_VERSION}`;
 const MEDIA_CACHE = 'birdspot-media';
 
@@ -75,6 +75,7 @@ const PRECACHE_PATHS = [
   'src/features/species/guideComparisons.js',
   'src/features/species/guideMedia.js',
   'src/features/species/detailSections.js',
+  'src/features/species/knowledgeSections.js',
   'src/features/sightings/view.js',
   'src/features/sightings/addSheet.js',
   'src/features/sightings/speciesPicker.js',
@@ -103,6 +104,7 @@ const PRECACHE_PATHS = [
   'src/data/db.js',
   'src/data/species.js',
   'src/data/speciesLife.js',
+  'src/data/speciesKnowledge.js',
   'src/data/speciesDistribution.js',
   'src/data/seasons.js',
 
