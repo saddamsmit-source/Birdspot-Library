@@ -142,4 +142,34 @@ function flightTitlesAndImages(html) {
   console.log('FV-07/FV-04 sp008 OK — bevestigd mannetje-in-vlucht naast neutrale vluchtfoto zonder verzonnen geslacht');
 }
 
-console.log('Fotovolgorde (Opdracht 3): alle controles geslaagd (FV-01..FV-07)');
+// FV-08 (fotobaseline batch 1, 10-11-2026): toont de hoofdfoto een kleed (geslacht of gedeeld
+// volwassen kleed) en heeft die kleedkaart na het verplaatsen van de vluchtfoto's geen eigen foto
+// meer, dan verwijst de kaart naar de hoofdfoto. Vóór de fix: 12 soorten met een lege Mannetje-/
+// Volwassen-kaart, o.a. sp090 Slobeend, sp130 Smient, sp132 Tafeleend, sp173, sp253.
+{
+  const { guideHeroPhoto } = await import('../src/features/species/detailSections.js');
+  const role = p => p?.age === 'juvenile' ? 'juv' : p?.sex === 'male' ? 'adult_m' : p?.sex === 'female' ? 'adult_f' : undefined;
+  const empty = [];
+  for (const s of SPECIES) {
+    const hero = guideHeroPhoto(s.id);
+    if (!hero) continue;
+    const key = role(hero) || (s.plumage?.adult_m && !s.plumage?.adult_f ? 'adult' : undefined);
+    if (!key) continue;
+    const html = recognitionPanel(s);
+    const start = html.indexOf(`data-plumage="${key}"`);
+    const flightAt = html.indexOf('aria-label="In vlucht"');
+    if (start < 0 || (flightAt >= 0 && start > flightAt)) continue; // geen kleedkaart in Verenkleed
+    const ends = [html.indexOf('data-plumage=', start + 1), html.indexOf('<section', start)].filter(i => i > 0);
+    const card = html.slice(start, ends.length ? Math.min(...ends) : html.length);
+    if (!card.includes('<img') && !card.includes('sd-hero-ref')) empty.push(s.id);
+  }
+  assert.deepEqual(empty, [], `FV-08 kleedkaart zonder foto én zonder hoofdfotoverwijzing: ${empty.join(', ')}`);
+  for (const id of ['sp090', 'sp130', 'sp132', 'sp173', 'sp253']) {
+    const html = recognitionPanel(byId.get(id));
+    const start = html.indexOf('data-plumage="adult_m"');
+    assert.ok(html.slice(start, start + 900).includes('sd-hero-ref'), `FV-08 ${id} Mannetje verwijst niet naar hoofdfoto`);
+  }
+  console.log('FV-08 OK — lege kleedkaart verwijst naar de hoofdfoto wanneer die dat kleed toont');
+}
+
+console.log('Fotovolgorde (Opdracht 3): alle controles geslaagd (FV-01..FV-08)');
