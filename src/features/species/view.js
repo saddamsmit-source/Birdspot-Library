@@ -353,7 +353,11 @@ function renderList(el, seenIds, ctx = _speciesCtx) {
     byFamily[s.family].push(s);
   });
 
-  list.innerHTML = Object.entries(byFamily).map(([family, birds]) => `
+  // Soortgroepen A-Z op Nederlandse groepsnaam (Opdracht 2, 2026-11-10).
+  // Individuele vogelkaarten binnen een groep behouden hun bestaande volgorde.
+  list.innerHTML = Object.entries(byFamily)
+    .sort((a, b) => a[0].localeCompare(b[0], 'nl'))
+    .map(([family, birds]) => `
     <div class="species-group">
       <div class="species-group__label">${escHtml(family)}</div>
       ${birds.map(s => speciesRow(s, seenIds, favorites)).join('')}
