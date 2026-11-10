@@ -14,7 +14,7 @@ import { GUIDE_PHOTOS } from './guidePhotos.js';
 import { GUIDE_AUDIO, GUIDE_HEROES, GUIDE_PLUMAGE, GUIDE_POSES } from './guideMedia.js';
 import { photoInfoMarkup } from '../../utils/photoInfo.js';
 import { assetUrl } from '../../utils/assetUrl.js';
-import { knowledgeFor, quickPanel, recognitionDetails, lifeDetails, whereDetails } from './knowledgeSections.js';
+import { knowledgeFor, quickPanel, recognitionDetails, lifeDetails, whereDetails, similarExtra, voiceDetails } from './knowledgeSections.js';
 
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
@@ -322,16 +322,16 @@ export function voiceText(voice) {
   return `<div class="sd-callout sd-voice">${icon('note')}<p>${esc(voice)}</p></div>`;
 }
 
-export function voicePanel(s, voice) {
+export function voicePanel(s, voice, sourced = '') {
   const clips = GUIDE_AUDIO[s.id] || [];
-  if (!voice && !clips.length) return '';
+  if (!voice && !clips.length && !sourced) return '';
   const players = clips.map(clip => `<div class="sd-audio">
     <strong>${esc(clip.label)}</strong><p>${esc(clip.note)}</p>
     <audio controls preload="none" src="${esc(assetUrl(clip.audio))}" aria-label="${esc(clip.label)} van ${esc(s.nameNL)}"></audio>
     <p class="sd-audio-error" hidden role="status">Deze opname is nu niet beschikbaar.</p>
     ${mediaCredit(clip)}
   </div>`);
-  return `<h3 class="sd-h">Zang en roep</h3><div class="sd-voice-text">${voice ? voiceText(voice) : ''}</div>${players.join('')}`;
+  return `<h3 class="sd-h">Zang en roep</h3><div class="sd-voice-text">${sourced || (voice ? voiceText(voice) : '')}</div>${players.join('')}`;
 }
 
 function guideSources(review) {
@@ -400,9 +400,16 @@ export function recognitionPanel(s, life = null) {
     out.push('<section aria-label="Vluchtvergelijking"><h3 class="sd-h">Vluchtvergelijking</h3>' +
       comparisonsSection(s.id, flight, takePhoto) + '</section>');
   }
-  if (regular.length) out.push('<h3 class="sd-h">Lijkt op</h3>' + comparisonsSection(s.id, regular, takePhoto));
+  // Eén vergelijkingsplek (UX-besluit 10-11-2026): bestaande vergelijkingskaarten, aangevuld met
+  // gelijkende soorten uit het kennisprofiel die nog geen eigen kaart hebben. Geen dubbele kaarten.
+  const covered = new Set(comparisons.flatMap(pair => pair.birds.map(bird => bird.id)));
+  const extra = similarExtra(s, covered);
+  if (regular.length || extra) {
+    out.push('<h3 class="sd-h">Lijkt op</h3>' + (regular.length ? comparisonsSection(s.id, regular, takePhoto) : '') + extra);
+  }
   out.push(recognitionDetails(s));
-  out.push(`<div id="sdVoice" class="sd-voice-section">${voicePanel(s, life?.voice)}</div>`);
+  const sourcedVoice = voiceDetails(s);
+  out.push(`<div id="sdVoice" class="sd-voice-section">${voicePanel(s, sourcedVoice ? null : life?.voice, sourcedVoice)}</div>`);
   if (s.compact) {
     out.push(`<p class="sd-note">${icon('info')}Zeldzame dwaalgast: een uitgebreide beschrijving volgt nog.</p>`);
   }

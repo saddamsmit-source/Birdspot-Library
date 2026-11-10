@@ -12,7 +12,8 @@ const DATA = {
    "scope": "Nederland",
    "confirms": "kleedpatroon, glans, witte handvleugel, maten, geluid, aantallen en trend (Sovon-cijfers 2018–2020 en 2012/13–2014/15), broedgegevens",
    "checked": "2026-11-10",
-   "certainty": "hoog"
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
   },
   "VB_FITIS": {
    "register": "NL07",
@@ -22,7 +23,8 @@ const DATA = {
    "scope": "Nederland",
    "confirms": "zang, roep, poten, vleugellengte, leefgebied, aantallen 2018–2020, trend sinds 1990, broedgegevens, trek",
    "checked": "2026-11-10",
-   "certainty": "hoog"
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
   },
   "VB_TJIF": {
    "register": "NL07",
@@ -32,7 +34,8 @@ const DATA = {
    "scope": "Nederland",
    "confirms": "zang, roep, poten, staartbeweging, leefgebied, aantallen, overwintering, broedgegevens, trek",
    "checked": "2026-11-10",
-   "certainty": "hoog"
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
   },
   "BG_CHIFF": {
    "register": "nieuw (specialistisch determinatieartikel, buiten register v1.2)",
@@ -42,7 +45,8 @@ const DATA = {
    "scope": "Groot-Brittannië / West-Europa",
    "confirms": "handpenprojectie, wenkbrauw, oogring, oorstreek, pootkleur en uitzonderingen, staartbewegen, zang, roep, seizoen, najaarsjuvenielen, Iberische Tjiftjaf",
    "checked": "2026-11-10",
-   "certainty": "middel-hoog"
+   "certainty": "middel-hoog",
+   "publisher": "BirdGuides"
   },
   "VB_HVS": {
    "register": "NL07",
@@ -52,7 +56,8 @@ const DATA = {
    "scope": "Nederland",
    "confirms": "grootte, vleugel- en staartvorm, kop in vlucht, vliegstijl, onderzijde jonge vogels, roep, onbetrouwbare kenmerken",
    "checked": "2026-11-10",
-   "certainty": "hoog"
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
   },
   "VB_SPERWER": {
    "register": "NL07",
@@ -62,7 +67,8 @@ const DATA = {
    "scope": "Nederland",
    "confirms": "bouw, poten, onderzijde, vliegbeeld, roep, aantallen 2018–2020, trend, Oranje lijst, broeden, voedsel",
    "checked": "2026-11-10",
-   "certainty": "hoog"
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
   },
   "VB_SPERWER_MV": {
    "register": "NL07",
@@ -72,7 +78,8 @@ const DATA = {
    "scope": "Nederland",
    "confirms": "verschillen man/vrouw (bovenzijde, wangen, onderzijde, wenkbrauw, iris, gewicht) en jonge vogels, rui",
    "checked": "2026-11-10",
-   "certainty": "hoog"
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
   },
   "VB_TOREN": {
    "register": "NL07",
@@ -82,7 +89,8 @@ const DATA = {
    "scope": "Nederland",
    "confirms": "man/vrouw-kleed, bidden, silhouet, gelijkende soorten, roep, aantallen 2018–2020, Rode Lijst, trend en oorzaak, broeden",
    "checked": "2026-11-10",
-   "certainty": "hoog"
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
   },
   "VB_BUIZ": {
    "register": "NL07",
@@ -92,7 +100,8 @@ const DATA = {
    "scope": "Nederland",
    "confirms": "kleurvariatie, kop, vleugels, staart, vliegbeeld, gelijkende soorten, roep, aantallen, broeden",
    "checked": "2026-11-10",
-   "certainty": "hoog"
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
   },
   "BG_BUZZ": {
    "register": "nieuw (specialistisch determinatieartikel, buiten register v1.2)",
@@ -102,7 +111,8 @@ const DATA = {
    "scope": "Groot-Brittannië / Europa",
    "confirms": "kop, vleugelvorm en zweefhouding, vleugelslag, staart, ondervleugel, kleedvariatie, juvenielen, iris, geluid, onbetrouwbare kenmerken",
    "checked": "2026-11-10",
-   "certainty": "middel-hoog"
+   "certainty": "middel-hoog",
+   "publisher": "BirdGuides"
   },
   "VB_ZILV": {
    "register": "NL07",
@@ -112,7 +122,8 @@ const DATA = {
    "scope": "Nederland",
    "confirms": "volwassen kleed, poten, maten, tertials eerstejaars, juveniel kleed, gelijkende soorten, roep, aantallen 2025, trend, bescherming",
    "checked": "2026-11-10",
-   "certainty": "hoog"
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
   },
   "MUN_GULL": {
    "register": "nieuw (universitaire introductie meeuwdeterminatie, buiten register v1.2)",
@@ -122,7 +133,8 @@ const DATA = {
    "scope": "Noord-Atlantisch (algemeen)",
    "confirms": "grote meeuwen zoals Zilvermeeuw hebben vier jaar nodig voor het volwassen kleed",
    "checked": "2026-11-10",
-   "certainty": "middel"
+   "certainty": "middel",
+   "publisher": "Memorial University (SERG)"
   },
   "NAT_STT": {
    "register": "Naturalis (Linnaeus, Birds of Europe)",
@@ -132,7 +144,8 @@ const DATA = {
    "scope": "Europa",
    "confirms": "flanken, wenkbrauw, snavel, achternagel, roep, zang, moeilijkheid van onderscheid",
    "checked": "2026-11-10",
-   "certainty": "middel-hoog"
+   "certainty": "middel-hoog",
+   "publisher": "Naturalis"
   },
   "BG_STT": {
    "register": "nieuw (determinatieverslag, buiten register v1.2)",
@@ -142,7 +155,8 @@ const DATA = {
    "scope": "Groot-Brittannië (vondst van een dwaalgast)",
    "confirms": "vleugelbandpatroon, alularand, handpentoppen, snavel als determinatiekenmerken",
    "checked": "2026-11-10",
-   "certainty": "middel"
+   "certainty": "middel",
+   "publisher": "BirdGuides"
   },
   "EB_STT": {
    "register": "M02-familie (Cornell/eBird, soortpagina)",
@@ -152,7 +166,8 @@ const DATA = {
    "scope": "wereldwijd",
    "confirms": "lastig onderscheid, snavel, achternagel, flanken, vleugelband, roep als beste veldkenmerk, leefgebied",
    "checked": "2026-11-10",
-   "certainty": "middel-hoog"
+   "certainty": "middel-hoog",
+   "publisher": "eBird (Cornell Lab)"
   },
   "RSPB_STT": {
    "register": "nieuw (RSPB soortpagina)",
@@ -162,7 +177,8 @@ const DATA = {
    "scope": "Groot-Brittannië",
    "confirms": "sterke gelijkenis met Taigaboomkruiper, zang onderscheidt",
    "checked": "2026-11-10",
-   "certainty": "middel"
+   "certainty": "middel",
+   "publisher": "RSPB"
   },
   "BB_STT": {
    "register": "M06-familie (vaktijdschrift; British Birds)",
@@ -172,7 +188,41 @@ const DATA = {
    "scope": "Denemarken / Europa",
    "confirms": "menggezang bij boomkruipers is bekend en vraagt voorzichtigheid bij determinatie op zang",
    "checked": "2026-11-10",
-   "certainty": "middel (alleen inleiding gelezen)"
+   "certainty": "middel (alleen inleiding gelezen)",
+   "publisher": "British Birds"
+  },
+  "EB_KES": {
+   "register": "nieuw (buiten register v1.2)",
+   "label": "eBird — Eurasian Kestrel",
+   "url": "https://ebird.org/species/eurkes",
+   "edition": "online soortpagina, geraadpleegd 10-11-2026",
+   "scope": "identificatietekst",
+   "confirms": "mannetje grijze kop en grijze staart met brede zwarte eindband; vrouwtje bruinig met bandering op rug, vleugels en staart",
+   "checked": "2026-11-10",
+   "certainty": "middel-hoog",
+   "publisher": "eBird (Cornell Lab)"
+  },
+  "BZ_SPA": {
+   "register": "nieuw (buiten register v1.2)",
+   "label": "Blasco-Zumeta & Heinze — Eurasian Sparrowhawk (ageing and sexing)",
+   "url": "https://www.blascozumeta.com/specie_files/02690_ENG_Accipiter_nisus_aranzadi.pdf",
+   "edition": "online determinatieblad, geen datum vermeld, geraadpleegd 10-11-2026",
+   "scope": "leeftijds- en geslachtsbepaling",
+   "confirms": "onderzijde gebandeerd, juvenielen met hartvormige bruine vlekken; jonge Havik gevlekt op de onderzijde",
+   "checked": "2026-11-10",
+   "certainty": "middel-hoog",
+   "publisher": "Blasco-Zumeta & Heinze"
+  },
+  "ROSS_YLG": {
+   "register": "nieuw (buiten register v1.2)",
+   "label": "Nick Rossiter — Yellow-legged Herring Gulls argentatus in Eastern Scandinavia",
+   "url": "https://nickrossiter.org.uk/ylgweb/argentatus%20omissus.html",
+   "edition": "webpagina 2006, geraadpleegd 10-11-2026",
+   "scope": "pootkleur bij noordelijke Zilvermeeuwen; kleine steekproef op één locatie",
+   "confirms": "naast roze ook bleek- en strogele poten bij argentatus; pootkleur alleen is geen veilig onderscheid",
+   "checked": "2026-11-10",
+   "certainty": "middel (kleine steekproef)",
+   "publisher": "Nick Rossiter"
   }
  },
  "profiles": {
@@ -186,7 +236,7 @@ const DATA = {
    "keyMarks": [
     {
      "text": "Zwarte kop, borst en rug tegen een witte buik en witte schoudervlekken.",
-     "reliability": "doorslaggevend",
+     "reliability": "ondersteunend",
      "sources": [
       "VB_EKSTER"
      ]
@@ -200,7 +250,7 @@ const DATA = {
     },
     {
      "text": "In vlucht een vrijwel geheel witte handvleugel.",
-     "reliability": "doorslaggevend",
+     "reliability": "ondersteunend",
      "sources": [
       "VB_EKSTER"
      ]
@@ -223,7 +273,7 @@ const DATA = {
      "vs": [
       "sp016"
      ],
-     "reliability": "doorslaggevend",
+     "reliability": "ondersteunend",
      "conditions": "Bij elk redelijk zicht",
      "exceptions": "Geen genoemd in de geraadpleegde bron",
      "supporting": "Schorre roep; witte handvleugel in vlucht",
@@ -346,7 +396,8 @@ const DATA = {
    ],
    "open": [
     "Juveniel kleed en leefgebied niet opnieuw gecontroleerd tegen een bron.",
-    "Vergelijking met Gaai is bestaande Birdspot-inhoud, niet opnieuw gecontroleerd."
+    "Vergelijking met Gaai is bestaande Birdspot-inhoud, niet opnieuw gecontroleerd.",
+    "Kleedpatroon is in Nederland vrijwel onmiskenbaar, maar staat op \"Helpt\" tot een tweede, onafhankelijke bron is vastgelegd (regel doorslaggevend, 10-11-2026)."
    ]
   },
   "sp057": {
@@ -362,7 +413,8 @@ const DATA = {
      "text": "Zang: helder, melodieus riedeltje dat in toon afloopt.",
      "reliability": "doorslaggevend",
      "sources": [
-      "VB_FITIS"
+      "VB_FITIS",
+      "BG_CHIFF"
      ]
     },
     {
@@ -622,7 +674,8 @@ const DATA = {
      "text": "Zang: steeds herhaald 'tjif-tjaf'.",
      "reliability": "doorslaggevend",
      "sources": [
-      "VB_TJIF"
+      "VB_TJIF",
+      "BG_CHIFF"
      ]
     },
     {
@@ -1114,7 +1167,8 @@ const DATA = {
      "text": "Mannetje: grijze kop, grijze staart met zwarte eindband, roodbruine rug.",
      "reliability": "doorslaggevend",
      "sources": [
-      "VB_TOREN"
+      "VB_TOREN",
+      "EB_KES"
      ]
     },
     {
@@ -1143,7 +1197,8 @@ const DATA = {
      "exceptions": "Jonge vogels zijn in de bron niet beschreven; bepaal geslacht dan niet op kleur alleen",
      "supporting": "Rugkleur",
      "sources": [
-      "VB_TOREN"
+      "VB_TOREN",
+      "EB_KES"
      ]
     },
     {
@@ -1292,10 +1347,11 @@ const DATA = {
      ]
     },
     {
-     "text": "Roze poten: volgens de bron het belangrijkste verschil met de Geelpootmeeuw.",
-     "reliability": "doorslaggevend",
+     "text": "Meestal roze poten. Vogelbescherming noemt dit het belangrijkste verschil met de Geelpootmeeuw, maar pootkleur varieert en is alleen niet sluitend.",
+     "reliability": "ondersteunend",
      "sources": [
-      "VB_ZILV"
+      "VB_ZILV",
+      "ROSS_YLG"
      ]
     },
     {
@@ -1329,12 +1385,13 @@ const DATA = {
      "vs": [
       "sp226"
      ],
-     "reliability": "doorslaggevend",
+     "reliability": "ondersteunend",
      "conditions": "Volwassen vogels, poten zichtbaar",
-     "exceptions": "Voor onvolwassen vogels niet beschreven in de bron",
-     "supporting": "Mantelkleur, kopstreping",
+     "exceptions": "Pootkleur varieert: noordelijke Zilvermeeuwen kunnen bleek- tot strogele poten hebben, en Geelpootmeeuwen tonen in de rui minder fel gekleurde poten. Combineer met rugtint, vleugelpunt en oog.",
+     "supporting": "Rugtint, vleugelpunttekening, snavel en oogring samen beoordelen",
      "sources": [
-      "VB_ZILV"
+      "VB_ZILV",
+      "ROSS_YLG"
      ]
     },
     {
@@ -1372,9 +1429,10 @@ const DATA = {
    "similar": [
     {
      "id": "sp226",
-     "why": "Pootkleur is het belangrijkste verschil",
+     "why": "Lijkt sterk op. Pootkleur helpt maar varieert; combineer met rugtint, vleugelpunt en oog.",
      "sources": [
-      "VB_ZILV"
+      "VB_ZILV",
+      "ROSS_YLG"
      ]
     },
     {
@@ -1522,7 +1580,8 @@ const DATA = {
      "reliability": "doorslaggevend",
      "sources": [
       "VB_SPERWER",
-      "VB_HVS"
+      "VB_HVS",
+      "BZ_SPA"
      ]
     },
     {
@@ -1554,7 +1613,8 @@ const DATA = {
      "supporting": "Staartvorm, vliegstijl",
      "sources": [
       "VB_HVS",
-      "VB_SPERWER_MV"
+      "VB_SPERWER_MV",
+      "BZ_SPA"
      ]
     },
     {

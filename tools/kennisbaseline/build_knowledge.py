@@ -8,7 +8,8 @@ Validatie (contract v0.1):
   Birdspot-vergelijking verwijst mag leeg zijn en wordt dan als zodanig getoond);
 - betrouwbaarheid is doorslaggevend | ondersteunend | onbetrouwbaar-alleen;
 - vs- en similar-ID's bestaan en verwijzen niet naar de soort zelf;
-- keyMarks 3–5 stuks.
+- keyMarks 3–5 stuks;
+- doorslaggevend alleen met bronnen van >=2 verschillende uitgevers en een context (regel 10-11-2026).
 Gebruik: python3 -I tools/kennisbaseline/build_knowledge.py [--check]
 """
 import json
@@ -32,7 +33,7 @@ def validate(data, ids):
     errors = []
     sources = data.get("_sources", {})
     for key, src in sources.items():
-        for field in ("label", "url", "edition", "scope", "confirms", "checked", "certainty"):
+        for field in ("label", "url", "edition", "scope", "confirms", "checked", "certainty", "publisher"):
             if not str(src.get(field, "")).strip():
                 errors.append(f"bron {key}: veld {field} ontbreekt")
 
@@ -46,6 +47,16 @@ def validate(data, ids):
         for ref in refs:
             if ref not in sources:
                 errors.append(f"{sid} {where}: onbekende bron {ref}")
+
+    def decisive(sid, where, item):
+        # Regel 10-11-2026: doorslaggevend alleen met >=2 bronnen van verschillende uitgevers en een context.
+        if item.get("reliability") != "doorslaggevend":
+            return
+        pubs = {sources.get(r, {}).get("publisher") for r in item.get("sources", [])} - {None}
+        if len(pubs) < 2:
+            errors.append(f"{sid} {where}: doorslaggevend zonder twee onafhankelijke uitgevers")
+        if where.startswith("critical") and not str(item.get("conditions", "")).strip(" —-"):
+            errors.append(f"{sid} {where}: doorslaggevend zonder context (conditions)")
 
     for sid, k in data.items():
         if sid.startswith("_"):
@@ -61,6 +72,7 @@ def validate(data, ids):
             claim(sid, f"keyMarks[{i}]", m)
             if m.get("reliability") not in RELIABILITY:
                 errors.append(f"{sid} keyMarks[{i}]: ongeldige betrouwbaarheid {m.get('reliability')}")
+            decisive(sid, f"keyMarks[{i}]", m)
         if k.get("caution") is not None:
             claim(sid, "caution", k["caution"])
         for i, c in enumerate(k.get("critical", [])):
@@ -70,6 +82,7 @@ def validate(data, ids):
                     errors.append(f"{sid} critical[{i}]: veld {field} leeg")
             if c.get("reliability") not in RELIABILITY:
                 errors.append(f"{sid} critical[{i}]: ongeldige betrouwbaarheid {c.get('reliability')}")
+            decisive(sid, f"critical[{i}]", c)
             for vs in c.get("vs", []):
                 if vs not in ids or vs == sid:
                     errors.append(f"{sid} critical[{i}]: ongeldige vergelijkingssoort {vs}")

@@ -14,6 +14,7 @@ stil door te laten. Elke case muteert een kopie van knowledge.json en verwacht e
   KV-08  leeg verplicht veld in kritisch kenmerk
   KV-09  bron zonder URL/controledatum
   KV-10  --check detecteert een handmatig gewijzigde speciesKnowledge.js
+  KV-11  'doorslaggevend' met bronnen van maar één uitgever, of bron zonder uitgever, wordt geweigerd
 
 Starten (vanuit repo-root):  python3 tests/test_kennisbaseline_validator.py
 """
@@ -66,6 +67,12 @@ def main():
     expect("KV-09", lambda d: d["_sources"][first_src].__setitem__("url", ""), "veld url ontbreekt")
     expect("KV-09b", lambda d: d["_sources"][first_src].pop("checked"), "veld checked ontbreekt")
 
+    def one_publisher(d):
+        c = next(c for k, v in d.items() if not k.startswith("_") for c in v["critical"] if c["reliability"] == "doorslaggevend")
+        c["sources"] = c["sources"][:1]
+    expect("KV-11", one_publisher, "doorslaggevend zonder twee onafhankelijke uitgevers")
+    expect("KV-11b", lambda d: d["_sources"][first_src].pop("publisher"), "veld publisher ontbreekt")
+
     # KV-10: --check in een tijdelijke kopie van de relevante bestanden
     with tempfile.TemporaryDirectory() as tmp:
         t = Path(tmp)
@@ -81,7 +88,7 @@ def main():
         bad = subprocess.run([sys.executable, "-I", str(script), "--check"], capture_output=True, text=True)
         assert bad.returncode == 1 and "loopt niet gelijk" in bad.stdout, f"KV-10 handwijziging niet gedetecteerd: {bad.stdout}"
     print("KV-10 OK — --check weigert een handmatig gewijzigde speciesKnowledge.js")
-    print("Kennisprofiel-validator: alle negatieve controles geslaagd (KV-01..KV-10)")
+    print("Kennisprofiel-validator: alle negatieve controles geslaagd (KV-01..KV-11)")
 
 
 if __name__ == "__main__":

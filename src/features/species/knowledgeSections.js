@@ -1,7 +1,8 @@
 /**
  * Birdspot Library — weergave van kennisprofielen (contract v0.1, proef 10-11-2026).
- * Niveau 1 "Snel herkennen": samenvatting, 3–5 veldkenmerken met betrouwbaarheid, het belangrijkste
- * kritische kenmerk, gelijkende soorten en een waarschuwing. Niveau 2: uitklapbare secties.
+ * Niveau 1 "Snel herkennen": samenvatting, het belangrijkste kritische kenmerk, 3–5 veldkenmerken met
+ * betrouwbaarheid en een waarschuwing. Gelijkende soorten staan op één plek: onder "Lijkt op" (similarExtra).
+ * Niveau 2: uitklapbare secties.
  * Pure render-functies; soorten zonder profiel krijgen niets (de bestaande kaart blijft ongewijzigd).
  * Iedere getoonde bewering draagt haar eigen bronvermelding; ontbrekende inhoud staat onder "Nog open".
  */
@@ -34,8 +35,20 @@ function name(id) {
   return byId.get(id)?.nameNL || id;
 }
 
-function chip(id) {
-  return `<button type="button" class="kb-chip" data-compare-species="${esc(id)}">${esc(name(id))}<span aria-hidden="true"> →</span></button>`;
+/**
+ * Gelijkende soorten uit het kennisprofiel die nog géén eigen vergelijkingskaart hebben (UX-besluit
+ * 10-11-2026: één vergelijkingsplek onder "Lijkt op", geen dubbele kaarten of chips). Soorten die al een
+ * vergelijkingskaart of vluchtvergelijking hebben worden hier overgeslagen; die kaart heeft zelf de
+ * knop "Open …". Zelfde knopstijl als de bestaande vergelijkingskaarten.
+ */
+export function similarExtra(s, covered = new Set()) {
+  const k = knowledgeFor(s.id);
+  const list = (k?.similar || []).filter(x => !covered.has(x.id));
+  if (!list.length) return '';
+  return `<div class="kb-similar" data-kb-similar>${list.map(x => `<div class="kb-similar__item">
+      <div><strong>${esc(name(x.id))}</strong><p>${esc(x.why)}</p>${srcLine(x.sources)}</div>
+      <button type="button" class="sd-compare-open" data-compare-species="${esc(x.id)}">Open ${esc(name(x.id))}<span aria-hidden="true"> →</span></button>
+    </div>`).join('')}</div>`;
 }
 
 function topCritical(k) {
@@ -57,7 +70,7 @@ function otherLine(c) {
 }
 
 /** Niveau 1 — staat direct onder de maten, vóór de fotosecties. Volgorde: samenvatting →
- * kritisch kenmerk → veldkenmerken → gelijkende soorten → let op (kritisch kenmerk eerst, zodat
+ * kritisch kenmerk → veldkenmerken → let op (kritisch kenmerk eerst, zodat
  * het op 390 px binnen het eerste scherm van de tab valt). */
 export function quickPanel(s) {
   const k = knowledgeFor(s.id);
@@ -71,14 +84,12 @@ export function quickPanel(s) {
       ${crit.vs?.length && crit.other !== '—' ? `<p class="kb-vs">${esc(otherLine(crit))}</p>` : ''}
       ${relPill(crit.reliability)}
     </div>` : '';
-  const similar = (k.similar || []).slice(0, 4);
   const caution = k.caution ? `<p class="kb-caution"><strong>Let op</strong> ${esc(k.caution.text)}</p>` : '';
   return `<section class="kb-quick" aria-label="Snel herkennen" data-kb="${esc(s.id)}">
     <h3 class="sd-h">Snel herkennen</h3>
     <p class="kb-summary">${esc(k.summary.text)}</p>
     ${critical}
     <ul class="kb-marks">${marks}</ul>
-    ${similar.length ? `<div class="kb-similar"><span class="kb-similar__label">Gelijkende soorten</span>${similar.map(x => chip(x.id)).join('')}</div>` : ''}
     ${caution}
   </section>`;
 }
@@ -117,7 +128,6 @@ const pick = (list, topics) => (list || []).filter(it => topics.includes(it.topi
 export function recognitionDetails(s) {
   const k = knowledgeFor(s.id);
   if (!k) return '';
-  const sim = (k.similar || []).map(x => `<li><div><b>${esc(name(x.id))}</b> ${esc(x.why)}${srcLine(x.sources)}</div>${chip(x.id)}</li>`).join('');
   const parts = [
     acc('kritisch', 'Alle kritische kenmerken', criticalCards(k), (k.critical || []).length),
     acc('herkenning', 'Uitgebreide herkenning', items(pick(k.detail, ['bouw', 'kleed', 'gedrag', 'variatie']),
@@ -125,10 +135,16 @@ export function recognitionDetails(s) {
     acc('geslacht-leeftijd', 'Mannetje, vrouwtje en juveniel', items(pick(k.detail, ['geslacht', 'leeftijd']),
       { geslacht: 'Geslacht', leeftijd: 'Leeftijd' })),
     acc('vlucht', 'Vluchtkenmerken', items(pick(k.detail, ['vlucht']))),
-    acc('geluid', 'Zang en roep', items(k.voice, { zang: 'Zang', roep: 'Roep', alarm: 'Alarm', vlucht: 'Vluchtroep' })),
-    acc('gelijkend', 'Vergelijkbare soorten', sim ? `<ul class="kb-list kb-list--similar">${sim}</ul>` : '', (k.similar || []).length),
   ].join('');
   return `<section class="kb-more" aria-label="Determinatie in detail"><h3 class="sd-h">Determinatie in detail</h3>${parts}</section>`;
+}
+
+/** Zang en roep met bron, getoond in de bestaande sectie "Zang en roep" (één kop, geen dubbele tekst):
+ * vervangt daar alleen de ongebronde veldgidsregel; de opnames blijven ongewijzigd. */
+export function voiceDetails(s) {
+  const k = knowledgeFor(s.id);
+  if (!k?.voice?.length) return '';
+  return `<div class="kb-voice" data-kb-voice>${items(k.voice, { zang: 'Zang', roep: 'Roep', alarm: 'Alarm', vlucht: 'Vluchtroep' })}</div>`;
 }
 
 /** Niveau 2, tab Leefwijze — status, leefwijze en de bronverantwoording. */

@@ -74,16 +74,27 @@ console.log(`KB-02 OK — ${claims} beweringen met bron, ${Object.keys(KNOWLEDGE
 // ── KB-03 ───────────────────────────────────────────────────────────────────
 for (const id of ids) {
   const k = KNOWLEDGE[id];
-  const html = recognitionDetails(byId.get(id));
+  const html = recognitionPanel(byId.get(id), LIFE[id] || null);
   for (const c of k.critical) for (const vs of c.vs || []) {
     assert.ok(byId.has(vs) && vs !== id, `KB-03 ${id} critical vs ${vs}`);
   }
   for (const x of k.similar || []) {
     assert.ok(byId.has(x.id) && x.id !== id, `KB-03 ${id} similar ${x.id}`);
-    assert.ok(html.includes(`data-compare-species="${x.id}"`), `KB-03 ${id} chip naar ${x.id} ontbreekt`);
+    assert.ok(html.includes(`data-compare-species="${x.id}"`), `KB-03 ${id} knop naar ${x.id} ontbreekt`);
+    // Precies één navigatieknop per gelijkende soort binnen de vergelijkingsplek (geen dubbele kaarten).
+    const lijkt = html.slice(html.indexOf('>Lijkt op<'));
+    const vlucht = html.match(/aria-label="Vluchtvergelijking"[\s\S]*?<\/section>/)?.[0] || '';
+    const n = (lijkt.match(new RegExp(`data-compare-species="${x.id}"`, 'g')) || []).length
+      + (vlucht.match(new RegExp(`data-compare-species="${x.id}"`, 'g')) || []).length;
+    assert.ok(n >= 1, `KB-03 ${id} geen vergelijkingsplek voor ${x.id}`);
+    assert.ok(!(html.indexOf('>Lijkt op<') > 0 && vlucht.includes(`data-compare-species="${x.id}"`) && lijkt.includes(`data-kb-similar`) && lijkt.match(/data-kb-similar[\s\S]*/)[0].includes(`data-compare-species="${x.id}"`)),
+      `KB-03 ${id} ${x.id} staat dubbel (vluchtvergelijking én extra lijst)`);
   }
+  const quick = quickPanel(byId.get(id));
+  assert.ok(!quick.includes('data-compare-species'), `KB-03 ${id} Niveau 1 bevat nog vergelijkingschips (dubbel met "Lijkt op")`);
+  assert.ok(!recognitionDetails(byId.get(id)).includes('data-kb-section="gelijkend"'), `KB-03 ${id} accordion "Vergelijkbare soorten" nog aanwezig (dubbel)`);
 }
-console.log('KB-03 OK — alle vergelijkings-ID\'s geldig en navigeerbaar');
+console.log('KB-03 OK — vergelijkings-ID\'s geldig; één vergelijkingsplek onder "Lijkt op", geen dubbele chips of accordion');
 
 // ── KB-04 anti-verwisseling ─────────────────────────────────────────────────
 const crit = (id, feature) => {
