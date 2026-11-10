@@ -12,12 +12,12 @@ Gegenereerd door `tools/kennisbaseline/coverage.mjs`. Meet aanwezigheid en omvan
 | withVoiceText | 301 |
 | withAudio | 59 |
 | withGuideReview | 65 |
-| withKnowledgeProfile | 0 |
+| withKnowledgeProfile | 8 |
 | fieldmarksShort | 434 |
 | femaleText | 126 |
 | juvText | 347 |
 | redList | 87 |
-| levels | 245 / 287 / 65 / 0 |
+| levels | 245 / 285 / 59 / 8 |
 
 | ID | Soort | Groep | Niv. | Veldkenmerken (tekens) | Kleden met tekst | Foto | Vergelijkingen | Leefwijze | Zangtekst | Audio | Bronnen soortkaart | Kritische kenmerken |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -43,13 +43,13 @@ Gegenereerd door `tools/kennisbaseline/coverage.mjs`. Meet aanwezigheid en omvan
 | sp257 | Bijeneter | Bijeneters | 1 | 90 | adult_m, juv | — | — | ja | ja | — | — | — |
 | sp480 | Groene Bijeneter (compact) | Bijeneters | 0 | 64 | — | — | — | — | — | — | — | — |
 | sp065 | Boomklever | Boomklevers | 2 | 169 | adult_m, adult_f, juv | ja | 1 | ja | ja | 2 | 3 | — |
-| sp066 | Boomkruiper | Boomkruipers | 2 | 202 | adult_m, juv | ja | 2 | ja | ja | 2 | 6 | — |
+| sp066 | Boomkruiper | Boomkruipers | 3 | 202 | adult_m, juv | ja | 2 | ja | ja | 2 | 6 | 6 |
 | sp067 | Taigaboomkruiper | Boomkruipers | 2 | 196 | adult_m, juv | ja | 1 | ja | ja | 2 | 4 | — |
 | sp512 | Balkanbergfluiter (compact) | Boszangers | 0 | 64 | — | — | — | — | — | — | — | — |
 | sp511 | Bergfluiter (compact) | Boszangers | 0 | 64 | — | — | — | — | — | — | — | — |
 | sp276 | Bladkoning | Boszangers | 1 | 89 | adult_m, juv | — | — | ja | ja | — | — | — |
 | sp515 | Bruine Boszanger (compact) | Boszangers | 0 | 64 | — | — | — | — | — | — | — | — |
-| sp057 | Fitis | Boszangers | 2 | 88 | adult_m | ja | 1 | ja | ja | 2 | 2 | — |
+| sp057 | Fitis | Boszangers | 3 | 88 | adult_m | ja | 1 | ja | ja | 2 | 2 | 5 |
 | sp058 | Fluiter | Boszangers | 1 | 55 | adult_m, juv | ja | — | ja | ja | — | — | — |
 | sp519 | Grauwe Fitis (compact) | Boszangers | 0 | 64 | — | — | — | — | — | — | — | — |
 | sp518 | Groene Fitis (compact) | Boszangers | 0 | 64 | — | — | — | — | — | — | — | — |
@@ -61,7 +61,7 @@ Gegenereerd door `tools/kennisbaseline/coverage.mjs`. Meet aanwezigheid en omvan
 | sp514 | Raddes Boszanger (compact) | Boszangers | 0 | 64 | — | — | — | — | — | — | — | — |
 | sp278 | Siberische Tjiftjaf | Boszangers | 1 | 57 | adult_m, juv | — | — | ja | ja | — | — | — |
 | sp520 | Swinhoes Boszanger (compact) | Boszangers | 0 | 64 | — | — | — | — | — | — | — | — |
-| sp056 | Tjiftjaf | Boszangers | 2 | 90 | adult_m | ja | 1 | ja | ja | 2 | 3 | — |
+| sp056 | Tjiftjaf | Boszangers | 3 | 90 | adult_m | ja | 1 | ja | ja | 2 | 3 | 5 |
 | sp265 | Buidelmees | Buidelmezen | 1 | 81 | adult_m, adult_f, juv | — | — | ja | ja | — | — | — |
 | sp447 | Geelsnavelduiker (compact) | Duikers | 0 | 64 | — | — | — | — | — | — | — | — |
 | sp237 | IJsduiker | Duikers | 1 | 58 | adult_m, juv, breeding, winter | — | — | ja | ja | — | — | — |
@@ -211,7 +211,7 @@ Gegenereerd door `tools/kennisbaseline/coverage.mjs`. Meet aanwezigheid en omvan
 | sp466 | Bastaardarend (compact) | Haviken | 0 | 64 | — | — | — | — | — | — | — | — |
 | sp249 | Blauwe Kiekendief | Haviken | 2 | 113 | adult_m, adult_f, juv | ja | 5 | ja | ja | 1 | 3 | — |
 | sp173 | Bruine Kiekendief | Haviken | 2 | 117 | adult_m, adult_f, juv | ja | 3 | ja | ja | 1 | 2 | — |
-| sp005 | Buizerd | Haviken | 2 | 153 | adult_m, juv | ja | 4 | ja | ja | 3 | 3 | — |
+| sp005 | Buizerd | Haviken | 3 | 153 | adult_m, juv | ja | 4 | ja | ja | 3 | 3 | 6 |
 | sp467 | Dwergarend (compact) | Haviken | 0 | 64 | — | — | — | — | — | — | — | — |
 | sp251 | Grauwe Kiekendief | Haviken | 2 | 133 | adult_m, adult_f, juv | ja | 4 | ja | ja | — | 3 | — |
 | sp460 | Grijze Wouw (compact) | Haviken | 0 | 64 | — | — | — | — | — | — | — | — |
@@ -224,7 +224,7 @@ Gegenereerd door `tools/kennisbaseline/coverage.mjs`. Meet aanwezigheid en omvan
 | sp465 | Schreeuwarend (compact) | Haviken | 0 | 64 | — | — | — | — | — | — | — | — |
 | sp464 | Slangenarend (compact) | Haviken | 0 | 64 | — | — | — | — | — | — | — | — |
 | sp469 | Spaanse Keizerarend (compact) | Haviken | 0 | 64 | — | — | — | — | — | — | — | — |
-| sp006 | Sperwer | Haviken | 2 | 141 | adult_m, adult_f, juv | ja | 5 | ja | ja | 2 | 3 | — |
+| sp006 | Sperwer | Haviken | 3 | 141 | adult_m, adult_f, juv | ja | 5 | ja | ja | 2 | 3 | 6 |
 | sp471 | Steenarend (compact) | Haviken | 0 | 64 | — | — | — | — | — | — | — | — |
 | sp468 | Steppearend (compact) | Haviken | 0 | 64 | — | — | — | — | — | — | — | — |
 | sp250 | Steppekiekendief | Haviken | 2 | 150 | adult_m, adult_f, juv | ja | 4 | ja | ja | — | 4 | — |
@@ -268,7 +268,7 @@ Gegenereerd door `tools/kennisbaseline/coverage.mjs`. Meet aanwezigheid en omvan
 | sp378 | Kuifkoekoek (compact) | Koekoeken | 0 | 64 | — | — | — | — | — | — | — | — |
 | sp023 | Bonte Kraai | Kraaien | 1 | 42 | adult_m, juv | — | — | ja | ja | — | — | — |
 | sp496 | Daurische Kauw (compact) | Kraaien | 0 | 64 | — | — | — | — | — | — | — | — |
-| sp021 | Ekster | Kraaien | 1 | 44 | adult_m, juv | ja | 1 | ja | ja | — | — | — |
+| sp021 | Ekster | Kraaien | 3 | 44 | adult_m, juv | ja | 1 | ja | ja | — | — | 1 |
 | sp026 | Gaai | Kraaien | 1 | 49 | adult_m, juv | ja | 1 | ja | ja | — | — | — |
 | sp318 | Huiskraai | Kraaien | 1 | 60 | adult_m, juv | — | — | — | — | — | — | — |
 | sp025 | Kauw | Kraaien | 1 | 57 | adult_m, juv | ja | 1 | ja | ja | — | — | — |
@@ -334,7 +334,7 @@ Gegenereerd door `tools/kennisbaseline/coverage.mjs`. Meet aanwezigheid en omvan
 | sp096 | Stormmeeuw | Meeuwen | 1 | 121 | adult_m, juv, breeding, winter | ja | 2 | ja | ja | — | — | — |
 | sp439 | Thayers Meeuw (compact) | Meeuwen | 0 | 64 | — | — | — | — | — | — | — | — |
 | sp224 | Vorkstaartmeeuw | Meeuwen | 1 | 78 | adult_m, juv, breeding, winter | — | — | ja | ja | — | — | — |
-| sp094 | Zilvermeeuw | Meeuwen | 1 | 160 | adult_m, juv, jaarling, breeding, winter | ja | 3 | ja | ja | — | — | — |
+| sp094 | Zilvermeeuw | Meeuwen | 3 | 160 | adult_m, juv, jaarling, breeding, winter | ja | 3 | ja | ja | — | — | 3 |
 | sp225 | Zwartkopmeeuw | Meeuwen | 1 | 129 | adult_m, juv, breeding, winter | ja | 1 | ja | ja | — | — | — |
 | sp032 | Glanskop | Mezen | 2 | 153 | adult_m, juv | ja | 2 | ja | ja | 1 | 3 | — |
 | sp029 | Koolmees | Mezen | 2 | 62 | adult_m, adult_f | ja | 2 | ja | ja | — | 1 | — |
@@ -530,7 +530,7 @@ Gegenereerd door `tools/kennisbaseline/coverage.mjs`. Meet aanwezigheid en omvan
 | sp485 | Sakervalk (compact) | Valken | 0 | 64 | — | — | — | — | — | — | — | — |
 | sp009 | Slechtvalk | Valken | 2 | 155 | adult_m, juv | ja | 3 | ja | ja | 1 | 3 | — |
 | sp260 | Smelleken | Valken | 1 | 64 | adult_m, adult_f, juv | — | — | ja | ja | — | — | — |
-| sp008 | Torenvalk | Valken | 2 | 138 | adult_m, adult_f, juv | ja | 4 | ja | ja | 2 | 3 | — |
+| sp008 | Torenvalk | Valken | 3 | 138 | adult_m, adult_f, juv | ja | 4 | ja | ja | 2 | 3 | 2 |
 | sp041 | Appelvink | Vinken | 1 | 63 | adult_m, adult_f, juv | ja | — | ja | ja | — | — | — |
 | sp569 | Atlasvink (compact) | Vinken | 0 | 64 | — | — | — | — | — | — | — | — |
 | sp348 | Chinese Appelvink | Vinken | 1 | 68 | adult_m, adult_f, juv | — | — | — | — | — | — | — |
