@@ -78,3 +78,11 @@ Regels: eigen tekst, geen brontekst kopiëren; ontbrekend = weglaten of in `open
 ## 7. App-README
 
 De app-README bestaat alleen in open PR #117 en niet op deze base. Toe te voegen regel zodra die PR landt: *"Kennisprofielen: zie `docs/kennisbaseline/README.md`; bron `tools/kennisbaseline/knowledge.json`, nooit `src/data/speciesKnowledge.js` met de hand wijzigen."*
+
+## 8. Wijzigingen na ChatGPT-QA M1 (10-11-2026, `dd5da6b`)
+
+- `doorslaggevend` alleen bij een kritisch kenmerk met context, ≥2 uitgevers én `diagnostic` (onderbouwing); nooit bij een veldkenmerk (KV-12). Iedere doorslaggevende claim staat in `docs/kennisbaseline/doorslaggevend-review.json` (KB-10).
+- Weergave: kritische kenmerken mét vergelijkingssoort staan uitklapbaar onder "Lijkt op" (`criticalDetails`); de overige onder "Determinatie in detail".
+- "Lijkt op" is één sectie met één kaart per gelijkende soort; kleed- en vluchtvergelijking zijn tabbladen in die kaart.
+- Capabilitydelta: CAP-BIRD-015 Vergelijken — vluchtvergelijking als tabblad, geen eigen sectie meer. CAP-BIRD-012 Soortkaart — kleedkaart verwijst naar "In vlucht" wanneer de enige foto van dat kleed een vluchtfoto is; voorlopige foto's tonen hun status. Fotokwaliteit-tooling — beeldinventaris met SHA-1 per foto (VC-07).
+- Learning (kandidaat): een controle die alleen geregistreerde labels inventariseert (`flight:true`) mist precies de fouten die ze moet vinden; inventariseer altijd de hele populatie en koppel een visueel oordeel aan de bestandshash.

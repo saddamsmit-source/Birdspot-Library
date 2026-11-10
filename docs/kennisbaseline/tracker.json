@@ -1,5 +1,5 @@
 {
- "generatedFor": "71dbd95",
+ "generatedFor": "dd5da6b",
  "date": "2026-11-10",
  "batchSize": 12,
  "rows": [
@@ -58,7 +58,7 @@
    "sourceStatus": "bron per bewering, 5 bron(nen), gecontroleerd door Claude 2026-11-10",
    "contentQA": "NOT TESTED",
    "uiStatus": "VERIFIED (helpertest 390/1280 px, Chromium)",
-   "sha": "71dbd95",
+   "sha": "dd5da6b",
    "lastCheck": "2026-11-10",
    "batch": null,
    "next": "onafhankelijke inhoudelijke QA + open punten afhandelen"
@@ -89,7 +89,7 @@
    "sourceStatus": "bron per bewering, 5 bron(nen), gecontroleerd door Claude 2026-11-10",
    "contentQA": "NOT TESTED",
    "uiStatus": "VERIFIED (helpertest 390/1280 px, Chromium)",
-   "sha": "71dbd95",
+   "sha": "dd5da6b",
    "lastCheck": "2026-11-10",
    "batch": null,
    "next": "onafhankelijke inhoudelijke QA + open punten afhandelen"
@@ -116,10 +116,10 @@
     "Geen gidsfoto van een juveniel; hoofdfoto toont de vogel vrij klein in beeld."
    ],
    "discrepancies": 0,
-   "sourceStatus": "bron per bewering, 4 bron(nen), gecontroleerd door Claude 2026-11-10",
+   "sourceStatus": "bron per bewering, 6 bron(nen), gecontroleerd door Claude 2026-11-10",
    "contentQA": "NOT TESTED",
    "uiStatus": "VERIFIED (helpertest 390/1280 px, Chromium)",
-   "sha": "71dbd95",
+   "sha": "dd5da6b",
    "lastCheck": "2026-11-10",
    "batch": null,
    "next": "onafhankelijke inhoudelijke QA + open punten afhandelen"
@@ -148,7 +148,7 @@
    "sourceStatus": "bron per bewering, 2 bron(nen), gecontroleerd door Claude 2026-11-10",
    "contentQA": "NOT TESTED",
    "uiStatus": "VERIFIED (helpertest 390/1280 px, Chromium)",
-   "sha": "71dbd95",
+   "sha": "dd5da6b",
    "lastCheck": "2026-11-10",
    "batch": null,
    "next": "onafhankelijke inhoudelijke QA + open punten afhandelen"
@@ -173,7 +173,7 @@
    "sourceStatus": "bron per bewering, 4 bron(nen), gecontroleerd door Claude 2026-11-10",
    "contentQA": "NOT TESTED",
    "uiStatus": "VERIFIED (helpertest 390/1280 px, Chromium)",
-   "sha": "71dbd95",
+   "sha": "dd5da6b",
    "lastCheck": "2026-11-10",
    "batch": null,
    "next": "onafhankelijke inhoudelijke QA + open punten afhandelen"
@@ -228,7 +228,7 @@
    "sourceStatus": "bron per bewering, 2 bron(nen), gecontroleerd door Claude 2026-11-10",
    "contentQA": "NOT TESTED",
    "uiStatus": "VERIFIED (helpertest 390/1280 px, Chromium)",
-   "sha": "71dbd95",
+   "sha": "dd5da6b",
    "lastCheck": "2026-11-10",
    "batch": null,
    "next": "onafhankelijke inhoudelijke QA + open punten afhandelen"
@@ -580,7 +580,7 @@
    "sourceStatus": "bron per bewering, 1 bron(nen), gecontroleerd door Claude 2026-11-10",
    "contentQA": "NOT TESTED",
    "uiStatus": "VERIFIED (helpertest 390/1280 px, Chromium)",
-   "sha": "71dbd95",
+   "sha": "dd5da6b",
    "lastCheck": "2026-11-10",
    "batch": null,
    "next": "onafhankelijke inhoudelijke QA + open punten afhandelen"
@@ -1539,13 +1539,14 @@
    ],
    "openQuestions": [
     "Spanwijdte en gewicht niet opnieuw gecontroleerd.",
-    "Iberische Tjiftjaf heeft nog geen eigen vergelijking."
+    "Iberische Tjiftjaf heeft nog geen eigen vergelijking.",
+    "Gemengde zang (vogels die elementen van beide soorten zingen) is in de geraadpleegde bronnen niet uitgewerkt; zang blijft doorslaggevend alleen bij een typisch, volledig lied."
    ],
    "discrepancies": 0,
    "sourceStatus": "bron per bewering, 3 bron(nen), gecontroleerd door Claude 2026-11-10",
    "contentQA": "NOT TESTED",
    "uiStatus": "VERIFIED (helpertest 390/1280 px, Chromium)",
-   "sha": "71dbd95",
+   "sha": "dd5da6b",
    "lastCheck": "2026-11-10",
    "batch": null,
    "next": "onafhankelijke inhoudelijke QA + open punten afhandelen"
@@ -1567,13 +1568,14 @@
    ],
    "openQuestions": [
     "Spanwijdte en gewicht niet opnieuw gecontroleerd.",
-    "Verschil met Iberische Tjiftjaf alleen als waarschuwing opgenomen."
+    "Verschil met Iberische Tjiftjaf alleen als waarschuwing opgenomen.",
+    "Gemengde zang (vogels die elementen van beide soorten zingen) is in de geraadpleegde bronnen niet uitgewerkt; zang blijft doorslaggevend alleen bij een typisch, volledig lied."
    ],
    "discrepancies": 0,
    "sourceStatus": "bron per bewering, 3 bron(nen), gecontroleerd door Claude 2026-11-10",
    "contentQA": "NOT TESTED",
    "uiStatus": "VERIFIED (helpertest 390/1280 px, Chromium)",
-   "sha": "71dbd95",
+   "sha": "dd5da6b",
    "lastCheck": "2026-11-10",
    "batch": null,
    "next": "onafhankelijke inhoudelijke QA + open punten afhandelen"
@@ -1817,7 +1819,7 @@
    "sourceStatus": "bron per bewering, 5 bron(nen), gecontroleerd door Claude 2026-11-10",
    "contentQA": "NOT TESTED",
    "uiStatus": "VERIFIED (helpertest 390/1280 px, Chromium)",
-   "sha": "71dbd95",
+   "sha": "dd5da6b",
    "lastCheck": "2026-11-10",
    "batch": null,
    "next": "onafhankelijke inhoudelijke QA + open punten afhandelen"
@@ -2575,7 +2577,7 @@
    "sourceStatus": "bron per bewering, 3 bron(nen), gecontroleerd door Claude 2026-11-10",
    "contentQA": "NOT TESTED",
    "uiStatus": "VERIFIED (helpertest 390/1280 px, Chromium)",
-   "sha": "71dbd95",
+   "sha": "dd5da6b",
    "lastCheck": "2026-11-10",
    "batch": null,
    "next": "onafhankelijke inhoudelijke QA + open punten afhandelen"

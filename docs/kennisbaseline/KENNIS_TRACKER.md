@@ -1,6 +1,6 @@
 # Birdspot — voortgangsregister kennisbaseline
 
-Gegenereerd door `tools/kennisbaseline/build_tracker.py` voor commit `71dbd95` op 2026-11-10. Bron: `coverage.json` + `knowledge.json`.
+Gegenereerd door `tools/kennisbaseline/build_tracker.py` voor commit `dd5da6b` op 2026-11-10. Bron: `coverage.json` + `knowledge.json`.
 
 Statussen: VERIFIED / PARTIALLY TESTED / NOT TESTED / BLOCKED. Inhoudelijke QA staat op NOT TESTED tot een onafhankelijke controle is vastgelegd in `docs/kennisbaseline/reviews.json`.
 
@@ -10,17 +10,17 @@ Statussen: VERIFIED / PARTIALLY TESTED / NOT TESTED / BLOCKED. Inhoudelijke QA s
 
 | ID | Soort | Kritisch | Vergelijkbaar | Verschillen | Open vragen | Bronstatus | Inhoud-QA | UI/browser | SHA | Laatste controle | Volgende actie |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| sp002 | Houtduif | 2 | sp003, sp001, sp004 | 1 | 2 | bron per bewering, 5 bron(nen), gecontroleerd door Claude 2026-11-10 | NOT TESTED | VERIFIED (helpertest 390/1280 px, Chromium) | `71dbd95` | 2026-11-10 | onafhankelijke inhoudelijke QA + open punten afhandelen |
-| sp003 | Holenduif | 2 | sp002, sp001, sp004 | 0 | 3 | bron per bewering, 5 bron(nen), gecontroleerd door Claude 2026-11-10 | NOT TESTED | VERIFIED (helpertest 390/1280 px, Chromium) | `71dbd95` | 2026-11-10 | onafhankelijke inhoudelijke QA + open punten afhandelen |
-| sp004 | Turkse Tortel | 2 | sp197, sp002 | 0 | 3 | bron per bewering, 4 bron(nen), gecontroleerd door Claude 2026-11-10 | NOT TESTED | VERIFIED (helpertest 390/1280 px, Chromium) | `71dbd95` | 2026-11-10 | onafhankelijke inhoudelijke QA + open punten afhandelen |
-| sp005 | Buizerd | 6 | sp248, sp253, sp173 | 1 | 2 | bron per bewering, 2 bron(nen), gecontroleerd door Claude 2026-11-10 | NOT TESTED | VERIFIED (helpertest 390/1280 px, Chromium) | `71dbd95` | 2026-11-10 | onafhankelijke inhoudelijke QA + open punten afhandelen |
-| sp006 | Sperwer | 6 | sp007, sp008 | 1 | 1 | bron per bewering, 4 bron(nen), gecontroleerd door Claude 2026-11-10 | NOT TESTED | VERIFIED (helpertest 390/1280 px, Chromium) | `71dbd95` | 2026-11-10 | onafhankelijke inhoudelijke QA + open punten afhandelen |
-| sp008 | Torenvalk | 2 | sp006, sp009, sp261, sp260 | 0 | 2 | bron per bewering, 2 bron(nen), gecontroleerd door Claude 2026-11-10 | NOT TESTED | VERIFIED (helpertest 390/1280 px, Chromium) | `71dbd95` | 2026-11-10 | onafhankelijke inhoudelijke QA + open punten afhandelen |
-| sp021 | Ekster | 1 | sp016, sp026 | 0 | 3 | bron per bewering, 1 bron(nen), gecontroleerd door Claude 2026-11-10 | NOT TESTED | VERIFIED (helpertest 390/1280 px, Chromium) | `71dbd95` | 2026-11-10 | onafhankelijke inhoudelijke QA + open punten afhandelen |
-| sp056 | Tjiftjaf | 5 | sp057 | 0 | 2 | bron per bewering, 3 bron(nen), gecontroleerd door Claude 2026-11-10 | NOT TESTED | VERIFIED (helpertest 390/1280 px, Chromium) | `71dbd95` | 2026-11-10 | onafhankelijke inhoudelijke QA + open punten afhandelen |
-| sp057 | Fitis | 5 | sp056 | 0 | 2 | bron per bewering, 3 bron(nen), gecontroleerd door Claude 2026-11-10 | NOT TESTED | VERIFIED (helpertest 390/1280 px, Chromium) | `71dbd95` | 2026-11-10 | onafhankelijke inhoudelijke QA + open punten afhandelen |
-| sp066 | Boomkruiper | 6 | sp067, sp065 | 0 | 4 | bron per bewering, 5 bron(nen), gecontroleerd door Claude 2026-11-10 | NOT TESTED | VERIFIED (helpertest 390/1280 px, Chromium) | `71dbd95` | 2026-11-10 | onafhankelijke inhoudelijke QA + open punten afhandelen |
-| sp094 | Zilvermeeuw | 3 | sp226, sp095, sp227, sp096 | 0 | 3 | bron per bewering, 3 bron(nen), gecontroleerd door Claude 2026-11-10 | NOT TESTED | VERIFIED (helpertest 390/1280 px, Chromium) | `71dbd95` | 2026-11-10 | onafhankelijke inhoudelijke QA + open punten afhandelen |
+| sp002 | Houtduif | 2 | sp003, sp001, sp004 | 1 | 2 | bron per bewering, 5 bron(nen), gecontroleerd door Claude 2026-11-10 | NOT TESTED | VERIFIED (helpertest 390/1280 px, Chromium) | `dd5da6b` | 2026-11-10 | onafhankelijke inhoudelijke QA + open punten afhandelen |
+| sp003 | Holenduif | 2 | sp002, sp001, sp004 | 0 | 3 | bron per bewering, 5 bron(nen), gecontroleerd door Claude 2026-11-10 | NOT TESTED | VERIFIED (helpertest 390/1280 px, Chromium) | `dd5da6b` | 2026-11-10 | onafhankelijke inhoudelijke QA + open punten afhandelen |
+| sp004 | Turkse Tortel | 2 | sp197, sp002 | 0 | 3 | bron per bewering, 6 bron(nen), gecontroleerd door Claude 2026-11-10 | NOT TESTED | VERIFIED (helpertest 390/1280 px, Chromium) | `dd5da6b` | 2026-11-10 | onafhankelijke inhoudelijke QA + open punten afhandelen |
+| sp005 | Buizerd | 6 | sp248, sp253, sp173 | 1 | 2 | bron per bewering, 2 bron(nen), gecontroleerd door Claude 2026-11-10 | NOT TESTED | VERIFIED (helpertest 390/1280 px, Chromium) | `dd5da6b` | 2026-11-10 | onafhankelijke inhoudelijke QA + open punten afhandelen |
+| sp006 | Sperwer | 6 | sp007, sp008 | 1 | 1 | bron per bewering, 4 bron(nen), gecontroleerd door Claude 2026-11-10 | NOT TESTED | VERIFIED (helpertest 390/1280 px, Chromium) | `dd5da6b` | 2026-11-10 | onafhankelijke inhoudelijke QA + open punten afhandelen |
+| sp008 | Torenvalk | 2 | sp006, sp009, sp261, sp260 | 0 | 2 | bron per bewering, 2 bron(nen), gecontroleerd door Claude 2026-11-10 | NOT TESTED | VERIFIED (helpertest 390/1280 px, Chromium) | `dd5da6b` | 2026-11-10 | onafhankelijke inhoudelijke QA + open punten afhandelen |
+| sp021 | Ekster | 1 | sp016, sp026 | 0 | 3 | bron per bewering, 1 bron(nen), gecontroleerd door Claude 2026-11-10 | NOT TESTED | VERIFIED (helpertest 390/1280 px, Chromium) | `dd5da6b` | 2026-11-10 | onafhankelijke inhoudelijke QA + open punten afhandelen |
+| sp056 | Tjiftjaf | 5 | sp057 | 0 | 3 | bron per bewering, 3 bron(nen), gecontroleerd door Claude 2026-11-10 | NOT TESTED | VERIFIED (helpertest 390/1280 px, Chromium) | `dd5da6b` | 2026-11-10 | onafhankelijke inhoudelijke QA + open punten afhandelen |
+| sp057 | Fitis | 5 | sp056 | 0 | 3 | bron per bewering, 3 bron(nen), gecontroleerd door Claude 2026-11-10 | NOT TESTED | VERIFIED (helpertest 390/1280 px, Chromium) | `dd5da6b` | 2026-11-10 | onafhankelijke inhoudelijke QA + open punten afhandelen |
+| sp066 | Boomkruiper | 6 | sp067, sp065 | 0 | 4 | bron per bewering, 5 bron(nen), gecontroleerd door Claude 2026-11-10 | NOT TESTED | VERIFIED (helpertest 390/1280 px, Chromium) | `dd5da6b` | 2026-11-10 | onafhankelijke inhoudelijke QA + open punten afhandelen |
+| sp094 | Zilvermeeuw | 3 | sp226, sp095, sp227, sp096 | 0 | 3 | bron per bewering, 3 bron(nen), gecontroleerd door Claude 2026-11-10 | NOT TESTED | VERIFIED (helpertest 390/1280 px, Chromium) | `dd5da6b` | 2026-11-10 | onafhankelijke inhoudelijke QA + open punten afhandelen |
 
 ## Batchplan
 
@@ -85,7 +85,7 @@ Volgorde (eigenaarsbesluit 10-11-2026): eerst alle soorten mét gidsfoto — K01
 | sp001 | Stadsduif | 1 | K11 | A maten zonder bron; B veldkenmerken kort; B vrouwtje-tekst; C kritische kenmerken; D vergelijkingen; E zang/roep; E audio; G leefwijze; H status met bron | — | geen bron per soort | NOT TESTED | profiel opstellen volgens contract v0.1 |
 | sp002 | Houtduif | 3 | proef | B vrouwtje-tekst; E audio | sp003, sp001, sp004 | bron per bewering, 5 bron(nen), gecontroleerd door Claude 2026-11-10 | NOT TESTED | onafhankelijke inhoudelijke QA + open punten afhandelen |
 | sp003 | Holenduif | 3 | proef | B vrouwtje-tekst; E audio | sp002, sp001, sp004 | bron per bewering, 5 bron(nen), gecontroleerd door Claude 2026-11-10 | NOT TESTED | onafhankelijke inhoudelijke QA + open punten afhandelen |
-| sp004 | Turkse Tortel | 3 | proef | B vrouwtje-tekst; E audio | sp197, sp002 | bron per bewering, 4 bron(nen), gecontroleerd door Claude 2026-11-10 | NOT TESTED | onafhankelijke inhoudelijke QA + open punten afhandelen |
+| sp004 | Turkse Tortel | 3 | proef | B vrouwtje-tekst; E audio | sp197, sp002 | bron per bewering, 6 bron(nen), gecontroleerd door Claude 2026-11-10 | NOT TESTED | onafhankelijke inhoudelijke QA + open punten afhandelen |
 | sp005 | Buizerd | 3 | proef | B vrouwtje-tekst | sp248, sp253, sp173 | bron per bewering, 2 bron(nen), gecontroleerd door Claude 2026-11-10 | NOT TESTED | onafhankelijke inhoudelijke QA + open punten afhandelen |
 | sp006 | Sperwer | 3 | proef | — | sp007, sp008 | bron per bewering, 4 bron(nen), gecontroleerd door Claude 2026-11-10 | NOT TESTED | onafhankelijke inhoudelijke QA + open punten afhandelen |
 | sp007 | Havik | 2 | K01 | C kritische kenmerken; H status met bron | sp006, sp009, sp008 | deels: guideReview | NOT TESTED | profiel opstellen volgens contract v0.1 |
