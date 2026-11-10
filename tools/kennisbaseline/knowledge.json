@@ -220,6 +220,116 @@
       "checked": "2026-11-10",
       "certainty": "middel (kleine steekproef)",
       "publisher": "Nick Rossiter"
+    },
+    "VB_HOUT": {
+      "register": "NL07",
+      "label": "Vogelbescherming — Houtduif",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/houtduif",
+      "edition": "online soortpagina, geraadpleegd 10-11-2026",
+      "scope": "Nederland",
+      "confirms": "maten, witte halsvlek (niet bij juvenielen), witte vleugelband, geluid, leefgebied, voedsel, broedgegevens, trek, aantallen en trend (Sovon), bescherming en bejaagbaarheid",
+      "checked": "2026-11-10",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_HOLEN": {
+      "register": "NL07",
+      "label": "Vogelbescherming — Holenduif",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/holenduif",
+      "edition": "online soortpagina, geraadpleegd 10-11-2026",
+      "scope": "Nederland",
+      "confirms": "maten, geen witte vleugelband, groene halsglans, twee zwarte vleugelstrepen, brede zwarte staartband, compacte vlucht, geluid, leefgebied, voedsel, broedgegevens, trek, aantallen en trend",
+      "checked": "2026-11-10",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_TT": {
+      "register": "NL07",
+      "label": "Vogelbescherming — Turkse tortel",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/turkse-tortel",
+      "edition": "online soortpagina, geraadpleegd 10-11-2026",
+      "scope": "Nederland",
+      "confirms": "lengte, beigegrijs kleed, zwart-witte halsband, donkerrode iris, lichte vleugelvelden en staartranden in vlucht, geluid, leefgebied, voedsel, broedgegevens, standvogel, aantallen en trend",
+      "checked": "2026-11-10",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_ZT": {
+      "register": "NL07",
+      "label": "Vogelbescherming — Zomertortel",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zomertortel",
+      "edition": "online soortpagina, geraadpleegd 10-11-2026",
+      "scope": "Nederland",
+      "confirms": "zwart-wit gestreepte halsvlek, roodbruine bovendelen met zwarte vlekken, wigvormige staart met witte eindband, rode oogring",
+      "checked": "2026-11-10",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_HVH": {
+      "register": "NL07",
+      "label": "Vogelbescherming — Vogels herkennen: houtduif vs. holenduif",
+      "url": "https://www.vogelbescherming.nl/actueel/bericht/vogels-herkennen-houtduif-vs-holenduif",
+      "edition": "online artikel, 7 november 2022, geraadpleegd 10-11-2026",
+      "scope": "Nederland",
+      "confirms": "grootte en bouw, witte vleugelband houtduif, twee zwarte vleugelvlekken holenduif, halsvlek, irisskleur, juveniele houtduif zonder lichte iris en halsvlek maar met vleugelband, roep",
+      "checked": "2026-11-10",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_5D": {
+      "register": "NL07",
+      "label": "Vogelbescherming — De 5 soorten duiven van Nederland",
+      "url": "https://www.vogelbescherming.nl/actueel/bericht/de-vijf-duiven-van-nederland",
+      "edition": "online artikel, 18 juli 2023, geraadpleegd 10-11-2026",
+      "scope": "Nederland",
+      "confirms": "witte vleugelvlek houtduif in alle kleden, donker oog en groene halsvlek holenduif, baltsvluchten, leefgebied Turkse tortel en zomertortel, geluid",
+      "checked": "2026-11-10",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "CL_WP": {
+      "register": "nieuw (buiten register v1.2)",
+      "label": "Cornell Lab, All About Birds — Common Wood-Pigeon Identification",
+      "url": "https://www.allaboutbirds.org/guide/Common_Wood-Pigeon/id",
+      "edition": "online identificatiepagina, geraadpleegd 10-11-2026",
+      "scope": "wereldwijd",
+      "confirms": "halsvlek bij volwassenen, ontbreekt bij juvenielen in nazomer en herfst; brede witte vleugelband in vlucht; staart breed zwart afgezet; lengte 41–45 cm",
+      "checked": "2026-11-10",
+      "certainty": "middel-hoog",
+      "publisher": "Cornell Lab of Ornithology"
+    },
+    "GB_SD": {
+      "register": "nieuw (buiten register v1.2)",
+      "label": "British Garden Birds (D. Gains) — Stock Dove",
+      "url": "https://www.garden-birds.co.uk/birds/stock_dove.html",
+      "edition": "online soortpagina, geen datum vermeld, geraadpleegd 10-11-2026",
+      "scope": "Groot-Brittannië",
+      "confirms": "geen witte halsvlek, groene halsvlek, twee kleine zwarte vleugelstrepen (minder duidelijk dan bij Rotsduif), donker oog als beste onderscheidend kenmerk, donkerder dan Houtduif",
+      "checked": "2026-11-10",
+      "certainty": "middel",
+      "publisher": "British Garden Birds"
+    },
+    "RSPB_SD": {
+      "register": "nieuw (buiten register v1.2)",
+      "label": "RSPB — Stock dove",
+      "url": "https://www.rspb.org.uk/birds-and-wildlife/stock-dove",
+      "edition": "online soortpagina, geraadpleegd 10-11-2026",
+      "scope": "Groot-Brittannië",
+      "confirms": "geen wit in de hals, mist de lichte stuit van Rotsduif/stadsduif, zwarte vleugelranden en twee korte zwarte banden",
+      "checked": "2026-11-10",
+      "certainty": "middel-hoog",
+      "publisher": "RSPB"
+    },
+    "BZ_CD": {
+      "register": "nieuw (buiten register v1.2)",
+      "label": "Blasco-Zumeta & Heinze — Eurasian Collared Dove (ageing and sexing)",
+      "url": "https://www.blascozumeta.com/specie_files/06840_ENG_Streptopelia_decaocto_aranzadi.pdf",
+      "edition": "online determinatieblad, geen datum vermeld, geraadpleegd 10-11-2026",
+      "scope": "leeftijds- en geslachtsbepaling",
+      "confirms": "juvenielen zonder of met vage halsband en bruine iris; volwassenen scherpe zwarte halsband en robijnrode iris; geslacht vaak niet op kleed te bepalen",
+      "checked": "2026-11-10",
+      "certainty": "middel-hoog",
+      "publisher": "Blasco-Zumeta & Heinze"
     }
   },
   "sp021": {
@@ -372,24 +482,7 @@
       }
     ],
     "habitat": [],
-    "discrepancies": [
-      {
-        "field": "species.size.length",
-        "app": "44–46 cm",
-        "source": "46–50 cm",
-        "sources": [
-          "VB_EKSTER"
-        ]
-      },
-      {
-        "field": "speciesLife.breeding.incubation / fledging",
-        "app": "17–18 dagen / 24–30 dagen",
-        "source": "17–24 dagen / 22–30 dagen",
-        "sources": [
-          "VB_EKSTER"
-        ]
-      }
-    ],
+    "discrepancies": [],
     "open": [
       "Juveniel kleed en leefgebied niet opnieuw gecontroleerd tegen een bron.",
       "Vergelijking met Gaai is bestaande Birdspot-inhoud, niet opnieuw gecontroleerd.",
@@ -1523,16 +1616,7 @@
       }
     ],
     "life": [],
-    "discrepancies": [
-      {
-        "field": "species.size",
-        "app": "54–60 cm, spanwijdte 123–148 cm",
-        "source": "55–67 cm, spanwijdte 125–155 cm",
-        "sources": [
-          "VB_ZILV"
-        ]
-      }
-    ],
+    "discrepancies": [],
     "open": [
       "Snavel- en oogkleur per leeftijd uit een bron beschrijven.",
       "Onderscheid met Pontische Meeuw uitwerken.",
@@ -2106,6 +2190,682 @@
     "open": [
       "Onderscheid met Ruigpootbuizerd uit een bron uitwerken.",
       "Leefgebied niet opnieuw gecontroleerd."
+    ]
+  },
+  "sp002": {
+    "summary": {
+      "text": "Grootste duif van Nederland: blauwgrijs met roze borst. Volwassen vogels hebben een witte halsvlek; elke Houtduif toont in vlucht een witte band over de vleugel.",
+      "sources": [
+        "VB_HOUT",
+        "VB_5D"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Witte band over de vleugel, in vlucht in elk kleed zichtbaar.",
+        "reliability": "doorslaggevend",
+        "sources": [
+          "VB_HVH",
+          "VB_5D",
+          "CL_WP"
+        ]
+      },
+      {
+        "text": "Witte halsvlek, alleen bij volwassen vogels.",
+        "reliability": "ondersteunend",
+        "sources": [
+          "VB_HOUT",
+          "CL_WP"
+        ]
+      },
+      {
+        "text": "Lichte iris bij volwassen vogels.",
+        "reliability": "ondersteunend",
+        "sources": [
+          "VB_HVH"
+        ]
+      },
+      {
+        "text": "Groot en zwaar gebouwd, met een wat langere staart dan Holenduif.",
+        "reliability": "ondersteunend",
+        "sources": [
+          "VB_HVH"
+        ]
+      }
+    ],
+    "caution": {
+      "text": "Jonge Houtduiven missen de halsvlek en de lichte iris en lijken dan op Holenduif; let op de witte vleugelband.",
+      "sources": [
+        "VB_HVH",
+        "CL_WP"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Witte vleugelband",
+        "where": "Bovenvleugel, het best in vlucht of bij gespreide vleugel",
+        "this": "Brede witte band over de vleugel, ook bij jonge vogels",
+        "other": "Holenduif: geen wit in de vleugel, alleen twee korte zwarte vleugelstrepen",
+        "vs": [
+          "sp003"
+        ],
+        "reliability": "doorslaggevend",
+        "conditions": "Vleugel gespreid of vogel in vlucht; alle leeftijden",
+        "exceptions": "Bij een zittende vogel met gesloten vleugel is de band vaak slechts als witte rand zichtbaar",
+        "supporting": "Grootte, langere staart, halsvlek bij volwassenen",
+        "sources": [
+          "VB_HVH",
+          "VB_5D",
+          "CL_WP"
+        ]
+      },
+      {
+        "feature": "Halsvlek en iris",
+        "where": "Halszijde en oog, zittende vogel van dichtbij",
+        "this": "Volwassen: grote witte halsvlek en lichte iris",
+        "other": "Holenduif: geen wit in de hals maar een groen glanzende vlek, en een donker oog",
+        "vs": [
+          "sp003"
+        ],
+        "reliability": "doorslaggevend",
+        "conditions": "Alleen bij volwassen vogels, hals en oog goed zichtbaar",
+        "exceptions": "Jonge Houtduiven hebben nog geen halsvlek en geen lichte iris; dan alleen de vleugelband gebruiken",
+        "supporting": "Witte vleugelband",
+        "sources": [
+          "VB_HVH",
+          "GB_SD",
+          "CL_WP"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp003",
+        "why": "Holenduif is kleiner en donkerder, zonder wit in hals en vleugel",
+        "sources": [
+          "VB_HVH"
+        ]
+      },
+      {
+        "id": "sp001",
+        "why": "Houtduif is groter dan Rotsduif/stadsduif",
+        "sources": [
+          "CL_WP"
+        ]
+      },
+      {
+        "id": "sp004",
+        "why": "Bestaande vluchtvergelijking in Birdspot",
+        "sources": []
+      }
+    ],
+    "detail": [
+      {
+        "topic": "bouw",
+        "text": "Oogt dikker dan Holenduif, met een wat langere staart.",
+        "sources": [
+          "VB_HVH"
+        ]
+      },
+      {
+        "topic": "leeftijd",
+        "text": "Juvenielen zonder witte halsvlek en zonder lichte iris; de witte vleugelband hebben ze al wel.",
+        "sources": [
+          "VB_HVH",
+          "CL_WP"
+        ]
+      },
+      {
+        "topic": "geslacht",
+        "text": "Mannetje en vrouwtje zijn in de geraadpleegde bronnen niet op kleed te onderscheiden; Birdspot toont daarom geen geslachtsfoto's.",
+        "sources": [
+          "VB_HOUT"
+        ]
+      },
+      {
+        "topic": "vlucht",
+        "text": "Baltsvlucht: klapperend omhoog en daarna in een boog glijdend met gespreide vleugels.",
+        "sources": [
+          "VB_5D"
+        ]
+      }
+    ],
+    "voice": [
+      {
+        "text": "Laag, zwaar koeren in langere, gevarieerde frasen van vijf lettergrepen.",
+        "sources": [
+          "VB_HOUT",
+          "VB_HVH"
+        ],
+        "kind": "zang"
+      }
+    ],
+    "basis": {
+      "size": {
+        "text": "Lengte 40–42 cm, spanwijdte 68–77 cm.",
+        "sources": [
+          "VB_HOUT"
+        ]
+      }
+    },
+    "habitat": [
+      {
+        "text": "Vrijwel overal waar bomen staan: tuinen, parken en bos; zoekt voedsel op akkers.",
+        "sources": [
+          "VB_HOUT"
+        ],
+        "kind": "voorkeur"
+      }
+    ],
+    "status": [
+      {
+        "text": "Talrijke broedvogel en standvogel; in de winter aangevuld met vogels uit Duitsland en Scandinavië.",
+        "sources": [
+          "VB_HOUT"
+        ],
+        "kind": "voorkomen"
+      },
+      {
+        "text": "290.000–580.000 broedparen (2018–2020); maximaal 1–2 miljoen vogels in de winter (2012/13–2014/15).",
+        "sources": [
+          "VB_HOUT"
+        ],
+        "kind": "aantal"
+      },
+      {
+        "text": "Sinds de jaren zeventig minstens een derde afgenomen, vooral door veranderingen in de landbouw.",
+        "sources": [
+          "VB_HOUT"
+        ],
+        "kind": "trend"
+      },
+      {
+        "text": "Beschermd, maar staat op de lijst van bejaagbare soorten (15 oktober–31 januari).",
+        "sources": [
+          "VB_HOUT"
+        ],
+        "kind": "bescherming"
+      }
+    ],
+    "life": [
+      {
+        "text": "Vooral plantaardig: zaden, knoppen, bladeren en achtergebleven graan.",
+        "sources": [
+          "VB_HOUT"
+        ],
+        "kind": "voedsel"
+      },
+      {
+        "text": "Kan bijna het hele jaar broeden, tot drie legsels van meestal twee eieren; broedduur 16–17 dagen, jongen 28–29 dagen in het nest.",
+        "sources": [
+          "VB_HOUT"
+        ],
+        "kind": "broeden"
+      },
+      {
+        "text": "Grotendeels standvogel; een klein deel trekt naar Frankrijk en Spanje.",
+        "sources": [
+          "VB_HOUT"
+        ],
+        "kind": "trek"
+      }
+    ],
+    "discrepancies": [
+      {
+        "field": "species.size.length",
+        "app": "38–43 cm",
+        "source": "40–42 cm (Vogelbescherming); 41–45 cm (Cornell)",
+        "sources": [
+          "VB_HOUT",
+          "CL_WP"
+        ]
+      }
+    ],
+    "open": [
+      "Juveniel- en vluchtvergelijking met Stadsduif nog niet uit een Nederlandse bron uitgewerkt.",
+      "Geen gidsfoto van een juveniel (positie ontbreekt)."
+    ]
+  },
+  "sp003": {
+    "summary": {
+      "text": "Middelgrote, egaal blauwgrijze duif met een groen glanzende halsvlek, donker oog en twee korte zwarte vleugelstrepen. Mist het wit van de Houtduif.",
+      "sources": [
+        "VB_HOLEN",
+        "VB_HVH"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Geen wit in hals of vleugel.",
+        "reliability": "doorslaggevend",
+        "sources": [
+          "VB_HOLEN",
+          "VB_HVH",
+          "RSPB_SD"
+        ]
+      },
+      {
+        "text": "Twee korte zwarte vleugelstrepen en een brede zwarte staartband.",
+        "reliability": "ondersteunend",
+        "sources": [
+          "VB_HOLEN",
+          "GB_SD"
+        ]
+      },
+      {
+        "text": "Donker oog.",
+        "reliability": "ondersteunend",
+        "sources": [
+          "VB_HVH",
+          "GB_SD"
+        ]
+      },
+      {
+        "text": "Groen glanzende halsvlek.",
+        "reliability": "ondersteunend",
+        "sources": [
+          "VB_HOLEN",
+          "VB_5D"
+        ]
+      }
+    ],
+    "caution": {
+      "text": "Jonge Houtduiven hebben ook een donker oog en geen halsvlek, maar wel een witte vleugelband. Stadsduiven kunnen sterk op Holenduif lijken.",
+      "sources": [
+        "VB_HVH",
+        "RSPB_SD"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Wit in de vleugel",
+        "where": "Bovenvleugel, in vlucht of bij gespreide vleugel",
+        "this": "Geen wit; zwarte vleugelranden en twee korte zwarte strepen",
+        "other": "Houtduif: brede witte vleugelband, ook bij jonge vogels",
+        "vs": [
+          "sp002"
+        ],
+        "reliability": "doorslaggevend",
+        "conditions": "Vleugel gespreid of vogel in vlucht",
+        "exceptions": "Geen genoemd in de geraadpleegde bronnen",
+        "supporting": "Kleiner en donkerder, compactere vlucht",
+        "sources": [
+          "VB_HOLEN",
+          "VB_HVH",
+          "RSPB_SD"
+        ]
+      },
+      {
+        "feature": "Stuit",
+        "where": "Onderrug, het best in vlucht van boven",
+        "this": "Niet licht; even grijs als de rug",
+        "other": "Rotsduif en veel stadsduiven: lichte stuit",
+        "vs": [
+          "sp001"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Vogel van boven of in vlucht",
+        "exceptions": "Stadsduiven zijn sterk variabel; niet elke stadsduif heeft een lichte stuit",
+        "supporting": "Zwarte vleugelstrepen bij Holenduif kort en minder duidelijk dan bij Rotsduif",
+        "sources": [
+          "RSPB_SD",
+          "GB_SD"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp002",
+        "why": "Houtduif is groter, heeft een witte vleugelband en bij volwassenen een witte halsvlek",
+        "sources": [
+          "VB_HVH"
+        ]
+      },
+      {
+        "id": "sp001",
+        "why": "Ongeveer even groot; stadsduif vaak met lichte stuit en langere vleugelstrepen",
+        "sources": [
+          "VB_HOLEN",
+          "RSPB_SD",
+          "GB_SD"
+        ]
+      },
+      {
+        "id": "sp004",
+        "why": "Bestaande vluchtvergelijking in Birdspot",
+        "sources": []
+      }
+    ],
+    "detail": [
+      {
+        "topic": "kleed",
+        "text": "Donkerder blauwgrijs dan Houtduif, met roze getinte borst.",
+        "sources": [
+          "VB_HVH",
+          "GB_SD"
+        ]
+      },
+      {
+        "topic": "geslacht",
+        "text": "Geslachten worden in de geraadpleegde bronnen niet op kleed onderscheiden; Birdspot toont geen geslachtsfoto's.",
+        "sources": [
+          "VB_HOLEN"
+        ]
+      },
+      {
+        "topic": "vlucht",
+        "text": "Vliegt compacter en directer dan Houtduif; baltsvlucht in cirkels met vleugels in een V.",
+        "sources": [
+          "VB_HOLEN",
+          "VB_5D"
+        ]
+      }
+    ],
+    "voice": [
+      {
+        "text": "Eentonige reeks tweelettergrepige koerroepen, wat lijkend op stadsduif.",
+        "sources": [
+          "VB_HVH",
+          "VB_5D"
+        ],
+        "kind": "zang"
+      }
+    ],
+    "basis": {
+      "size": {
+        "text": "Lengte 28–32 cm, spanwijdte 60–66 cm; ongeveer zo groot als een stadsduif.",
+        "sources": [
+          "VB_HOLEN"
+        ]
+      }
+    },
+    "habitat": [
+      {
+        "text": "Kleinschalig boerenland met bosjes, bosranden, oud loofbos en parken; zoekt voedsel op de grond, vaker op grasland dan Houtduif.",
+        "sources": [
+          "VB_HOLEN"
+        ],
+        "kind": "voorkeur"
+      },
+      {
+        "text": "Grootste aantallen in Noord-Brabant, Gelderland, Overijssel en Drenthe.",
+        "sources": [
+          "VB_HOLEN"
+        ],
+        "kind": "nederland"
+      }
+    ],
+    "status": [
+      {
+        "text": "Algemene broedvogel, het hele jaar aanwezig; in de winter vogels uit het noorden.",
+        "sources": [
+          "VB_HOLEN"
+        ],
+        "kind": "voorkomen"
+      },
+      {
+        "text": "54.000–67.000 broedparen (2018–2020); maximaal 100.000–200.000 vogels in de winter (2012/13–2014/15).",
+        "sources": [
+          "VB_HOLEN"
+        ],
+        "kind": "aantal"
+      },
+      {
+        "text": "Sinds de jaren zeventig sterk toegenomen na het verdwijnen van giftige zaaizaadontsmetting; de groei vlakt af.",
+        "sources": [
+          "VB_HOLEN"
+        ],
+        "kind": "trend"
+      }
+    ],
+    "life": [
+      {
+        "text": "Zaden en andere plantendelen, op de grond, vaak in groepjes.",
+        "sources": [
+          "VB_HOLEN"
+        ],
+        "kind": "voedsel"
+      },
+      {
+        "text": "Twee tot drie legsels van meestal twee eieren; broedduur 16–17 dagen, jongen ongeveer 24 dagen in het nest.",
+        "sources": [
+          "VB_HOLEN"
+        ],
+        "kind": "broeden"
+      },
+      {
+        "text": "Nestelt in holtes: boomholtes, nestkasten (ook uilenkasten), oude gebouwen, soms konijnenholen.",
+        "sources": [
+          "VB_HOLEN"
+        ],
+        "kind": "nest"
+      },
+      {
+        "text": "Grotendeels standvogel; zwerft in de winter in groepen.",
+        "sources": [
+          "VB_HOLEN"
+        ],
+        "kind": "trek"
+      }
+    ],
+    "discrepancies": [],
+    "open": [
+      "Geen goede vluchtfoto: de vorige 'vluchtfoto' toonde een opvliegende vogel en is uit de vluchtrol gehaald (positie ontbreekt).",
+      "Geen gidsfoto van een juveniel.",
+      "Kleedvariatie van stadsduiven maakt de stuit niet doorslaggevend."
+    ]
+  },
+  "sp004": {
+    "summary": {
+      "text": "Slanke, licht beigegrijze duif met een smalle zwarte halsband en donkerrood oog. Leeft dicht bij mensen.",
+      "sources": [
+        "VB_TT"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Zwarte halsband met witte rand bij volwassen vogels.",
+        "reliability": "doorslaggevend",
+        "sources": [
+          "VB_TT",
+          "BZ_CD"
+        ]
+      },
+      {
+        "text": "Egaal licht beigegrijs, zonder geschubde rug.",
+        "reliability": "ondersteunend",
+        "sources": [
+          "VB_TT",
+          "VB_ZT"
+        ]
+      },
+      {
+        "text": "Donkerrode iris bij volwassenen, bruin bij juvenielen.",
+        "reliability": "ondersteunend",
+        "sources": [
+          "VB_TT",
+          "BZ_CD"
+        ]
+      },
+      {
+        "text": "Driedelig koeren, makkelijk na te fluiten.",
+        "reliability": "ondersteunend",
+        "sources": [
+          "VB_TT",
+          "VB_5D"
+        ]
+      }
+    ],
+    "caution": {
+      "text": "Jonge vogels hebben geen of een vage halsband en een bruin oog; let dan op de egale, ongeschubde bovendelen.",
+      "sources": [
+        "BZ_CD",
+        "VB_ZT"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Hals en bovendelen",
+        "where": "Halszijde en vleugeldekveren, zittende vogel",
+        "this": "Eén smalle zwarte halsband; bovendelen egaal beigegrijs",
+        "other": "Zomertortel: zwart-wit gestreepte halsvlek en roodbruine bovendelen met zwarte vlekken",
+        "vs": [
+          "sp197"
+        ],
+        "reliability": "doorslaggevend",
+        "conditions": "Volwassen vogels, hals en rug goed zichtbaar",
+        "exceptions": "Juveniele Turkse Tortel zonder of met vage halsband; dan de egale bovendelen gebruiken",
+        "supporting": "Grootte (Zomertortel is de kleinste duif), geluid, leefgebied",
+        "sources": [
+          "VB_TT",
+          "VB_ZT",
+          "BZ_CD"
+        ]
+      },
+      {
+        "feature": "Staart in vlucht",
+        "where": "Staart van onderen of bij landen",
+        "this": "Lichte buitenste staartpennen; staart grijs met witte randen",
+        "other": "Zomertortel: wigvormige staart met witte eindband",
+        "vs": [
+          "sp197"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Vogel in vlucht of landend",
+        "exceptions": "Uitgewerkte vergelijking van beide staartpatronen ontbreekt in één bron",
+        "supporting": "Lichte vleugelvelden in vlucht",
+        "sources": [
+          "VB_TT",
+          "VB_ZT",
+          "BZ_CD"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp197",
+        "why": "Zomertortel is kleiner, met gestreepte halsvlek en geschubde roodbruine rug",
+        "sources": [
+          "VB_TT",
+          "VB_ZT"
+        ]
+      },
+      {
+        "id": "sp002",
+        "why": "Door de bron genoemd; Houtduif is veel groter en grijzer",
+        "sources": [
+          "VB_TT"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "topic": "leeftijd",
+        "text": "Juveniel: geen of vage halsband en bruine iris; volwassen: scherpe zwarte halsband en robijnrode iris.",
+        "sources": [
+          "BZ_CD"
+        ]
+      },
+      {
+        "topic": "geslacht",
+        "text": "Kleine verschillen in kop- en nekkleur, maar veel vogels zijn op kleed niet te sexen; Birdspot toont geen geslachtsfoto's.",
+        "sources": [
+          "BZ_CD"
+        ]
+      },
+      {
+        "topic": "gedrag",
+        "text": "Meestal in paren; baltsvlucht steil omhoog en dan in een grote boog naar beneden.",
+        "sources": [
+          "VB_TT",
+          "VB_5D"
+        ]
+      }
+    ],
+    "voice": [
+      {
+        "text": "Driedelig koeren met zuivere, fagotachtige tonen; vrouwtje hoger en zachter.",
+        "sources": [
+          "VB_TT"
+        ],
+        "kind": "zang"
+      },
+      {
+        "text": "Bij onrust een rauwe, schorre alarmroep.",
+        "sources": [
+          "VB_TT"
+        ],
+        "kind": "alarm"
+      }
+    ],
+    "basis": {
+      "size": {
+        "text": "Lengte 31–33 cm.",
+        "sources": [
+          "VB_TT"
+        ]
+      }
+    },
+    "habitat": [
+      {
+        "text": "Tuinen, parken, erven en stadscentra; ook dorpen met boerderijen.",
+        "sources": [
+          "VB_TT"
+        ],
+        "kind": "voorkeur"
+      }
+    ],
+    "status": [
+      {
+        "text": "Standvogel; sinds het eerste broedgeval in 1950 over heel Nederland verspreid.",
+        "sources": [
+          "VB_TT"
+        ],
+        "kind": "voorkomen"
+      },
+      {
+        "text": "53.000–68.000 broedparen (2018–2020); maximaal 100.000–200.000 vogels in de winter (2012/13–2014/15).",
+        "sources": [
+          "VB_TT"
+        ],
+        "kind": "aantal"
+      },
+      {
+        "text": "Landelijk stabiel; toename in steden in Laag-Nederland, afname in Hoog-Nederland.",
+        "sources": [
+          "VB_TT"
+        ],
+        "kind": "trend"
+      }
+    ],
+    "life": [
+      {
+        "text": "Graan, onkruidzaden en fruit, soms insecten; bezoekt voederplaatsen.",
+        "sources": [
+          "VB_TT"
+        ],
+        "kind": "voedsel"
+      },
+      {
+        "text": "Broedt van half februari tot november, 2–5 legsels per jaar van meestal twee eieren.",
+        "sources": [
+          "VB_TT"
+        ],
+        "kind": "broeden"
+      },
+      {
+        "text": "Dun takjesnest in boom, struik of tegen een gebouw; valt makkelijk uit elkaar.",
+        "sources": [
+          "VB_TT"
+        ],
+        "kind": "nest"
+      }
+    ],
+    "discrepancies": [],
+    "open": [
+      "Onderscheid met Lachduif (ontsnapte vogels) nog uit een bron uitwerken.",
+      "Spanwijdte en gewicht niet in de geraadpleegde Nederlandse bron.",
+      "Geen gidsfoto van een juveniel; hoofdfoto toont de vogel vrij klein in beeld."
     ]
   }
 }

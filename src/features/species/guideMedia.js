@@ -5625,9 +5625,9 @@ export const GUIDE_POSES = Object.freeze({
   ],
   "sp056": [
     {
-      "label": "In vlucht",
-      "flight": true,
-      "note": "Beide vleugels zijn uitgespreid. Luister bij twijfel tussen Tjiftjaf en Fitis naar de zang.",
+      "label": "Fladderend tussen rietstengels",
+      "flight": false,
+      "note": "Geen bruikbare vluchtfoto: vogel tussen planten, afzetten niet uit te sluiten. Vluchtpositie ontbreekt.",
       "file": "Flight design.jpg",
       "nl": "Tjiftjaf",
       "latin": "Phylloscopus collybita",
@@ -5644,7 +5644,7 @@ export const GUIDE_POSES = Object.freeze({
       "width": 1400,
       "height": 1149,
       "image": "/assets/species/plumage/sp056-flight.webp",
-      "flightReview": "voorwaardelijk 2026-11-10: Fladderend tussen rietstengels; geen contact zichtbaar maar afzetten niet uit te sluiten. REVIEW REQUIRED."
+      "flightReview": "uit-rol 2026-11-10: Mijlpaal 1 (aangescherpt): fladderend tussen rietstengels valt onder de eigen klasse \"opvliegen / tussen planten\"; contact met de stengels niet uit te sluiten. Uit \"In vlucht\"; vluchtpositie geregistreerd als ontbrekend."
     }
   ],
   "sp058": [
@@ -7636,7 +7636,7 @@ export const GUIDE_POSES = Object.freeze({
       "image": "/assets/species/plumage/sp005-male-flight.webp",
       "sourceAudit": "2026-11-09",
       "sexNote": "Geslacht volgens de bron, maar bij de Buizerd niet aan het verenkleed te zien; daarom zonder geslachtslabel.",
-      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+      "flightReview": "voorwaardelijk 2026-11-10: Mijlpaal 1 (aangescherpt): echte vlucht, maar onscherp bij vergroting; vervanging gewenst. Leeftijd \"volwassen\" steunt op de iNaturalist-annotatie (Life Stage: Adult, bronaudit 09-11); label blijft."
     },
     {
       "label": "Volwassen in vlucht, van onderen",

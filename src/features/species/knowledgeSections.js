@@ -23,7 +23,8 @@ export const knowledgeFor = id => KNOWLEDGE[id] || null;
 function srcLine(refs) {
   const list = [...new Set(refs || [])];
   if (!list.length) return '<small class="kb-src">Bestaande Birdspot-inhoud, niet opnieuw gecontroleerd</small>';
-  return `<small class="kb-src">Bron: ${list.map(short).map(esc).join(' · ')}</small>`;
+  // Twee artikelen van dezelfde uitgever tonen één keer de uitgeversnaam (de bronlijst onder Leefwijze noemt ze apart).
+  return `<small class="kb-src">Bron: ${[...new Set(list.map(short))].map(esc).join(' · ')}</small>`;
 }
 
 function relPill(rel) {

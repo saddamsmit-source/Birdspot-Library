@@ -1,0 +1,146 @@
+{
+ "testedOn": "e6d5f2c + lokale wijzigingen",
+ "date": "2026-11-10",
+ "species": {
+  "sp002": {
+   "ok": true,
+   "viewport": "390x844 Chromium (Playwright)",
+   "photos": 2,
+   "sections": [
+    "Hoofdfoto",
+    "In vlucht"
+   ],
+   "flight": [
+    "/assets/species/plumage/sp002-flight.webp"
+   ],
+   "checks": "SAB-01..07"
+  },
+  "sp003": {
+   "ok": true,
+   "viewport": "390x844 Chromium (Playwright)",
+   "photos": 2,
+   "sections": [
+    "Hoofdfoto",
+    "Overige herkenningsfoto's"
+   ],
+   "flight": [],
+   "checks": "SAB-01..07"
+  },
+  "sp004": {
+   "ok": true,
+   "viewport": "390x844 Chromium (Playwright)",
+   "photos": 2,
+   "sections": [
+    "Hoofdfoto",
+    "In vlucht"
+   ],
+   "flight": [
+    "/assets/species/plumage/sp004-flight.webp"
+   ],
+   "checks": "SAB-01..07"
+  },
+  "sp005": {
+   "ok": true,
+   "viewport": "390x844 Chromium (Playwright)",
+   "photos": 6,
+   "sections": [
+    "Hoofdfoto",
+    "Verenkleed",
+    "In vlucht",
+    "Overige herkenningsfoto's"
+   ],
+   "flight": [
+    "/assets/species/plumage/sp005-adult_m.webp",
+    "/assets/species/plumage/sp005-male-flight.webp",
+    "/assets/species/plumage/sp005-female-flight.webp"
+   ],
+   "checks": "SAB-01..07"
+  },
+  "sp006": {
+   "ok": true,
+   "viewport": "390x844 Chromium (Playwright)",
+   "photos": 5,
+   "sections": [
+    "Hoofdfoto",
+    "Verenkleed",
+    "In vlucht"
+   ],
+   "flight": [
+    "/assets/species/plumage/sp006-flight.webp"
+   ],
+   "checks": "SAB-01..07"
+  },
+  "sp008": {
+   "ok": true,
+   "viewport": "390x844 Chromium (Playwright)",
+   "photos": 6,
+   "sections": [
+    "Hoofdfoto",
+    "Verenkleed",
+    "In vlucht"
+   ],
+   "flight": [
+    "/assets/species/plumage/sp008-male-flight.webp",
+    "/assets/species/plumage/sp008-flight.webp"
+   ],
+   "checks": "SAB-01..07"
+  },
+  "sp021": {
+   "ok": true,
+   "viewport": "390x844 Chromium (Playwright)",
+   "photos": 2,
+   "sections": [
+    "Hoofdfoto",
+    "In vlucht"
+   ],
+   "flight": [
+    "/assets/species/plumage/sp021-flight.webp"
+   ],
+   "checks": "SAB-01..07"
+  },
+  "sp056": {
+   "ok": true,
+   "viewport": "390x844 Chromium (Playwright)",
+   "photos": 2,
+   "sections": [
+    "Hoofdfoto",
+    "Overige herkenningsfoto's"
+   ],
+   "flight": [],
+   "checks": "SAB-01..07"
+  },
+  "sp057": {
+   "ok": true,
+   "viewport": "390x844 Chromium (Playwright)",
+   "photos": 1,
+   "sections": [
+    "Hoofdfoto"
+   ],
+   "flight": [],
+   "checks": "SAB-01..07"
+  },
+  "sp066": {
+   "ok": true,
+   "viewport": "390x844 Chromium (Playwright)",
+   "photos": 1,
+   "sections": [
+    "Hoofdfoto"
+   ],
+   "flight": [],
+   "checks": "SAB-01..07"
+  },
+  "sp094": {
+   "ok": true,
+   "viewport": "390x844 Chromium (Playwright)",
+   "photos": 2,
+   "sections": [
+    "Hoofdfoto",
+    "In vlucht"
+   ],
+   "flight": [
+    "/assets/species/plumage/sp094-flight.webp"
+   ],
+   "checks": "SAB-01..07"
+  }
+ }
+}

@@ -462,7 +462,12 @@ def main():
 
             open_species("Houtduif", "sp002")
             stock_dove_card = cmp_card("Holenduif", flight=True)
-            check_comparison_photo(stock_dove_card.locator('.sd-cmp-panel:visible .sd-field-photo'))
+            # Vluchtcontrole 10-11-2026 (eigenaarsbesluit): de Holenduif-'vluchtfoto' toonde een opvliegende vogel
+            # en is uit de vluchtrol gehaald. De vergelijking blijft (tekst + navigatie) maar toont eerlijk dat de foto
+            # ontbreekt; een andere foto mag die plek niet vullen.
+            expect(stock_dove_card.locator('.sd-cmp-panel:visible .sd-field-photo')).to_have_count(0)
+            expect(stock_dove_card.locator('.sd-cmp-panel:visible .sd-cmp-ref', has_text="Nog geen foto")).to_have_count(1)
+            expect(stock_dove_card.locator('.sd-cmp-panel:visible .sd-compare-open')).to_have_text(re.compile(r"Open Holenduif"))
             expect(p.locator('#sdPanel-herkenning section[aria-label="Vluchtvergelijking"] .sd-cmp-more > summary'))\
                 .to_have_text("Nog 1 soort: Turkse Tortel")
             turtle_dove_card = cmp_card("Turkse Tortel", flight=True)
@@ -545,7 +550,10 @@ def main():
             expect(harrier_card.locator('.sd-cmp-tab', has_text=re.compile(r'^Juveniel$'))).to_have_count(0)
             flight_section = p.locator('#sdPanel-herkenning section[aria-label="In vlucht"]')
             expect(flight_section).to_have_count(1)
-            expect(flight_section.locator('[data-guide-image$="sp173-juv.webp"]')).to_have_count(1)
+            # Vluchtcontrole 10-11-2026: de juveniele foto toont een neerstrijkende vogel (landen) en staat daarom
+            # niet meer in "In vlucht" maar in de Juveniel-kaart; zichtbaar gebleven, niet verwijderd.
+            expect(flight_section.locator('[data-guide-image$="sp173-juv.webp"]')).to_have_count(0)
+            expect(p.locator('#sdPanel-herkenning [data-plumage="juv"] [data-guide-image$="sp173-juv.webp"]')).to_have_count(1)
             rest = p.locator('[data-plumage="adult_f"] .sd-field-photo').filter(has=p.locator('img[src$="sp173-female-rest.webp"]'))
             expect(p.locator('[data-plumage="adult_f"] .sd-field-photo')).to_have_count(2)
             assert rest.locator('..').get_by_label("Foto-informatie").count() == 1

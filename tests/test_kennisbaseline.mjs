@@ -4,7 +4,8 @@
  * Contract- en renderdekking zonder browser (de browserdekking op 390 px en 1280 px staat in
  * tests/test_kennisbaseline_browser.py; de validator-negatieftests in tests/test_kennisbaseline_validator.py).
  *
- *   KB-01  Elk profiel hoort bij een bestaand Birdspot-ID; profiel en soort verwijzen naar hetzelfde ID.
+ *   KB-01  Elk profiel hoort bij een bestaand Birdspot-ID. Eigenaarsbesluit 10-11-2026: eerst de soorten met
+ *          gidsfoto's; een profiel voor een soort zonder foto faalt (vervangt de proefgrens 6–10 soorten).
  *   KB-02  Elke inhoudelijke bewering heeft ≥1 bron; elke bronsleutel bestaat; elke bron heeft https-URL,
  *          editie/datum, scope, wat bevestigd, controledatum en zekerheid.
  *   KB-03  vs- en similar-ID's bestaan, zijn niet de soort zelf en worden als navigeerbare chip getoond.
@@ -23,6 +24,8 @@ import { readFileSync } from 'node:fs';
 import { SPECIES } from '../src/data/species.js';
 import { LIFE } from '../src/data/speciesLife.js';
 import { KNOWLEDGE, KNOWLEDGE_SOURCES } from '../src/data/speciesKnowledge.js';
+import { GUIDE_PHOTOS } from '../src/features/species/guidePhotos.js';
+import { GUIDE_HEROES, GUIDE_PLUMAGE, GUIDE_POSES } from '../src/features/species/guideMedia.js';
 import { recognitionPanel, statusPanel, wherePanel } from '../src/features/species/detailSections.js';
 import { knowledgeFor, quickPanel, recognitionDetails, lifeDetails, whereDetails } from '../src/features/species/knowledgeSections.js';
 
@@ -32,8 +35,13 @@ const REL = new Set(['doorslaggevend', 'ondersteunend', 'onbetrouwbaar-alleen'])
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 
 // ── KB-01 ───────────────────────────────────────────────────────────────────
-assert.ok(ids.length >= 6 && ids.length <= 10, `KB-01 proef moet 6–10 soorten hebben, nu ${ids.length}`);
-for (const id of ids) assert.ok(byId.has(id), `KB-01 onbekend Birdspot-ID ${id}`);
+assert.ok(ids.length >= 6, `KB-01 minstens de 6 proefsoorten verwacht, nu ${ids.length}`);
+const hasPhoto = id => Boolean(GUIDE_PHOTOS[id] || GUIDE_HEROES[id] ||
+  (GUIDE_PLUMAGE[id] && Object.keys(GUIDE_PLUMAGE[id]).length) || GUIDE_POSES[id]?.length);
+for (const id of ids) {
+  assert.ok(byId.has(id), `KB-01 onbekend Birdspot-ID ${id}`);
+  assert.ok(hasPhoto(id), `KB-01 ${id} heeft geen gidsfoto: eerst de collectie met foto's (eigenaarsbesluit 10-11-2026)`);
+}
 console.log(`KB-01 OK — ${ids.length} profielen, alle ID's bestaan`);
 
 // ── KB-02 ───────────────────────────────────────────────────────────────────
@@ -113,6 +121,9 @@ const FIXTURES = [
   ['sp006', 'Onderzijde jonge vogels', /dwarsbanden/i, /lengtestrepen/i, 'sp007'],
   ['sp094', 'Pootkleur', /roze/i, /geel/i, 'sp226'],          // Zilvermeeuw roze, Geelpootmeeuw geel
   ['sp066', 'Vleugelbandpatroon', /tandvormig|driehoekig/i, /recht afgesneden|blokvormig/i, 'sp067'],
+  ['sp002', 'Witte vleugelband', /witte band/i, /geen wit/i, 'sp003'],      // Houtduif wit, Holenduif niet
+  ['sp003', 'Wit in de vleugel', /geen wit/i, /witte vleugelband/i, 'sp002'],
+  ['sp004', 'Hals en bovendelen', /zwarte halsband/i, /gestreepte halsvlek/i, 'sp197'], // Turkse Tortel vs Zomertortel
   ['sp005', 'Iris', /donker/i, /geel/i, 'sp248'],             // Buizerd volwassen donker, Wespendief geel
 ];
 for (const [id, feature, thisRe, otherRe, vs] of FIXTURES) {
@@ -125,14 +136,14 @@ for (const [id, feature, thisRe, otherRe, vs] of FIXTURES) {
 assert.match(crit('sp008', 'Geslacht').this, /Mannetje: grijze kop/, 'KB-04 Torenvalk mannetje grijze kop');
 assert.doesNotMatch(crit('sp008', 'Geslacht').this, /Vroutje: grijze kop|Vrouwtje: grijze kop/, 'KB-04 Torenvalk vrouwtje grijze kop');
 // Gerenderd: het profiel van de ene soort komt nooit in de kaart van de partner terecht.
-for (const [a, b] of [['sp057', 'sp056'], ['sp006', 'sp007'], ['sp005', 'sp248'], ['sp066', 'sp067']]) {
+for (const [a, b] of [['sp057', 'sp056'], ['sp006', 'sp007'], ['sp005', 'sp248'], ['sp066', 'sp067'], ['sp002', 'sp003'], ['sp004', 'sp197']]) {
   const htmlB = recognitionPanel(byId.get(b), LIFE[b] || null);
   assert.ok(!htmlB.includes(esc(KNOWLEDGE[a].summary.text)), `KB-04 samenvatting ${a} verschijnt bij ${b}`);
   const htmlA = recognitionPanel(byId.get(a), LIFE[a] || null);
   assert.ok(htmlA.includes(`data-kb="${a}"`) && !htmlA.includes(`data-kb="${b}"`), `KB-04 ${a} draagt verkeerd profiel`);
   if (KNOWLEDGE[b]) assert.ok(!htmlA.includes(esc(KNOWLEDGE[b].summary.text)), `KB-04 samenvatting ${b} verschijnt bij ${a}`);
 }
-console.log(`KB-04 OK — ${FIXTURES.length + 1} feitenfixtures en 4 paren zonder verwisseling`);
+console.log(`KB-04 OK — ${FIXTURES.length + 1} feitenfixtures en 6 paren zonder verwisseling`);
 
 // ── KB-05 proefsoorten gerenderd ────────────────────────────────────────────
 for (const id of ids) {

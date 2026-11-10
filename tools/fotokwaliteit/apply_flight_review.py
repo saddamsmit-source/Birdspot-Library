@@ -4,7 +4,8 @@
               met geslacht/leeftijd in de kleedkaart, anders onder "Overige herkenningsfoto's".
 - archief  -> verwijderd uit `poses`/`plumage` en met volledige herkomst bewaard onder `retired[<id>]`
               (niet getoond, niet gecachet; het bestand blijft in de repo).
-- goedgekeurd/voorwaardelijk -> geen wijziging in de getoonde rol; uitslag in `flightReview`.
+- goedgekeurd/voorwaardelijk -> geen wijziging in de getoonde rol; uitslag in `flightReview`; een
+              opgegeven `newLabel` (neutraler label) wordt wel doorgevoerd.
 Idempotent. Draai daarna tools/species/build.py.
 Gebruik: python3 -I tools/fotokwaliteit/apply_flight_review.py
 """
@@ -57,6 +58,9 @@ def main():
                 del media["plumage"][sid][key]
             changed["archief"] += 1
         else:
+            # Blijft vlucht; een neutraler label (bv. leeftijd niet vast te stellen) wordt wel doorgevoerd.
+            if r.get("newLabel"):
+                p["label"] = r["newLabel"]
             changed["gemarkeerd"] += 1
     MEDIA.write_text(json.dumps(media, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(changed)

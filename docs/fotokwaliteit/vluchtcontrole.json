@@ -88,16 +88,26 @@
    "nameNL": "Tjiftjaf",
    "registry": "GUIDE_POSES[0]",
    "sexLabel": null,
-   "class": "vlucht",
+   "class": "opvliegen",
    "quality": "goed",
-   "decision": "voorwaardelijk",
-   "target": null,
-   "newLabel": null,
-   "newNote": null,
-   "reason": "Fladderend tussen rietstengels; geen contact zichtbaar maar afzetten niet uit te sluiten. REVIEW REQUIRED.",
-   "airborne": true,
+   "decision": "uit-rol",
+   "target": "overig",
+   "newLabel": "Fladderend tussen rietstengels",
+   "newNote": "Geen bruikbare vluchtfoto: vogel tussen planten, afzetten niet uit te sluiten. Vluchtpositie ontbreekt.",
+   "reason": "Mijlpaal 1 (aangescherpt): fladderend tussen rietstengels valt onder de eigen klasse \"opvliegen / tussen planten\"; contact met de stengels niet uit te sluiten. Uit \"In vlucht\"; vluchtpositie geregistreerd als ontbrekend.",
+   "airborne": null,
    "rights": "VERIFIED",
-   "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0"
+   "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0",
+   "history": [
+    {
+     "class": "vlucht",
+     "quality": "goed",
+     "decision": "voorwaardelijk",
+     "reason": "Fladderend tussen rietstengels; geen contact zichtbaar maar afzetten niet uit te sluiten. REVIEW REQUIRED.",
+     "date": "2026-11-10",
+     "round": "vluchtcontrole ronde 1"
+    }
+   ]
   },
   "/assets/species/plumage/sp003-flight.webp": {
    "n": 5,
@@ -599,15 +609,24 @@
    "registry": "GUIDE_POSES[1]",
    "sexLabel": null,
    "class": "vlucht",
-   "quality": "goed",
-   "decision": "goedgekeurd",
+   "quality": "matig",
+   "decision": "voorwaardelijk",
    "target": null,
-   "newLabel": null,
    "newNote": null,
-   "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+   "reason": "Mijlpaal 1 (aangescherpt): echte vlucht, maar onscherp bij vergroting; vervanging gewenst. Leeftijd \"volwassen\" steunt op de iNaturalist-annotatie (Life Stage: Adult, bronaudit 09-11); label blijft.",
    "airborne": true,
    "rights": "VERIFIED",
-   "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY SA"
+   "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY SA",
+   "history": [
+    {
+     "class": "vlucht",
+     "quality": "goed",
+     "decision": "goedgekeurd",
+     "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+     "date": "2026-11-10",
+     "round": "vluchtcontrole ronde 1"
+    }
+   ]
   },
   "/assets/species/plumage/sp005-female-flight.webp": {
    "n": 35,

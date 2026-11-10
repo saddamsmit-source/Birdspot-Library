@@ -287,9 +287,11 @@ function comparisonCard(id, group, takePhoto) {
       `<div class="sd-cmp-row">${row.label ? `<b>${esc(row.label)}</b>` : ''}<span>${esc(row.own)}</span><span>${esc(row.other)}</span></div>`
     ).join('');
     const refLabel = focal.plumage || entry.flight ? title.toLowerCase() : 'hoofdfoto';
+    // Mijlpaal 1 (10-11-2026): geen verwijzing naar een "In vlucht"-sectie die er niet (meer) is.
+    const ownMissing = entry.flight && (focal.photoMissing || !flightPhoto(focal.id));
     return `<div class="sd-cmp-panel" data-cmp-panel${i === 0 ? '' : ' hidden'}>
       <div class="sd-cmp-head">
-        <div class="sd-cmp-who"><strong>${esc(own)}</strong><small>${esc(title)}</small><div class="sd-cmp-ref">↑ zie ${esc(refLabel)}</div></div>
+        <div class="sd-cmp-who"><strong>${esc(own)}</strong><small>${esc(title)}</small><div class="sd-cmp-ref">${ownMissing ? 'Nog geen geschikte vluchtfoto' : `↑ zie ${esc(refLabel)}`}</div></div>
         <div class="sd-cmp-who"><strong>${esc(partnerSpecies.nameNL)}</strong><small>${esc(partnerTitle)}</small>${showPhoto ? fieldPhoto(photo) : '<div class="sd-cmp-ref">Nog geen foto</div>'}</div>
       </div>
       ${rows ? `<div class="sd-cmp-rows">${rows}</div>` : ''}
@@ -413,7 +415,10 @@ export function recognitionPanel(s, life = null) {
   if (s.compact) {
     out.push(`<p class="sd-note">${icon('info')}Zeldzame dwaalgast: een uitgebreide beschrijving volgt nog.</p>`);
   }
-  out.push(guideSources(s.guideReview));
+  // Soorten met kennisprofiel: bronnen staan per bewering; geen "Broncontrole volgt" meer.
+  out.push(!s.guideReview && knowledgeFor(s.id)
+    ? '<p class="sd-source">Bronnen staan per bewering hierboven en volledig onder Leefwijze › Kennisprofiel.</p>'
+    : guideSources(s.guideReview));
   return out.join('');
 }
 
