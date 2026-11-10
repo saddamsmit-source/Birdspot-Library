@@ -11,6 +11,13 @@ Birdspot Library — Soortgroepen alfabetisch A-Z (Opdracht 2, 2026-11-10)
   SG-05  Favorieten, zoeken, seizoenfilter en navigatie blijven werken na de
          sorteerwijziging (lichte rooktest; volledige dekking in andere tests)
 
+Niveau 2 — individuele vogels A-Z binnen de soortgroep (Opdracht 3, 2026-11-10)
+  SG-06  Soorten-pagina: binnen elke soortgroep staan de vogelnamen
+         (species-row__name) A-Z op Nederlandse naam, voor "Alle", een losse
+         categorie, na zoeken, en (voor zover zichtbaar) na "Toon alle"
+  SG-07  Soortkiezer: binnen elke groep staan de vogelnamen A-Z, zowel
+         ongefilterd als na zoeken
+
 Starten (vanuit repo-root):  python tests/test_species_groups_az.py
 """
 import http.server
@@ -49,6 +56,22 @@ def ensure_species_filter_open(page):
     is_open = page.eval_on_selector("#speciesFiltersToggle", "el => el.closest('details').open")
     if not is_open:
         toggle.click()
+
+
+def groups_with_names(page, group_selector, name_selector):
+    """Geeft per zichtbare soortgroep (in DOM-volgorde) de lijst vogelnamen terug,
+    ook in DOM-volgorde — voor de Niveau-2 A-Z-check (SG-06/SG-07)."""
+    return page.evaluate(
+        """([groupSel, nameSel]) => [...document.querySelectorAll(groupSel)].map(
+             g => [...g.querySelectorAll(nameSel)].map(e => e.textContent.trim()))""",
+        [group_selector, name_selector],
+    )
+
+
+def assert_groups_az(groups, context):
+    for names in groups:
+        assert len(names) > 0, f"SG-06/07 lege soortgroep gevonden ({context})"
+        assert names == nl_sorted(names), f"SG-06/07 vogelnamen niet A-Z binnen groep ({context}): {names}"
 
 
 def nl_sorted(labels):
@@ -110,6 +133,27 @@ def main():
                     assert families_by_id.get(sid) == g["label"], \
                         f"SG-04 {sid} staat onder groep '{g['label']}', brondata zegt '{families_by_id.get(sid)}'"
 
+            # ── SG-06: Niveau 2 — vogelnamen A-Z binnen elke groep, "Alle" ──
+            name_groups = groups_with_names(page, "#speciesList .species-group", ".species-row__name")
+            assert_groups_az(name_groups, "Soorten-pagina, Alle")
+            total_before = sum(len(g) for g in name_groups)
+
+            # Paginering/"Toon meer" mag de A-Z-volgorde niet verstoren (expliciet gevraagd,
+            # Opdracht 3 §2): als de knop zichtbaar is, klik 'm en herhaal de check.
+            show_all = page.locator("#speciesShowAll")
+            if show_all.count():
+                show_all.click()
+                page.wait_for_function(
+                    "() => !document.querySelector('#speciesShowAll')", timeout=8000)
+                name_groups_all = groups_with_names(page, "#speciesList .species-group", ".species-row__name")
+                assert_groups_az(name_groups_all, "Soorten-pagina, Alle, na 'Toon alle'")
+                total_after = sum(len(g) for g in name_groups_all)
+                assert total_after >= total_before, "SG-06 'Toon alle' toont minder vogels dan voor de klik"
+                print(f"SG-06 OK — vogelnamen A-Z binnen {len(name_groups)} groepen, "
+                      f"ook na 'Toon alle' ({total_before} -> {total_after} vogels)")
+            else:
+                print(f"SG-06 OK — vogelnamen A-Z binnen {len(name_groups)} groepen ('Toon alle' niet nodig)")
+
             # ── SG-01b: Soorten-pagina, één losse categorie ─────────────
             cat = data["active"][0]
             ensure_species_filter_open(page)
@@ -120,6 +164,8 @@ def main():
                 "#speciesList .species-group__label", "els => els.map(e => e.textContent.trim())")
             assert labels_cat == nl_sorted(labels_cat), f"SG-01 categorie '{cat}' niet A-Z: {labels_cat}"
             print(f"SG-01 OK — 'Alle' ({len(labels)} groepen) en '{cat}' ({len(labels_cat)} groepen) A-Z")
+            assert_groups_az(groups_with_names(page, "#speciesList .species-group", ".species-row__name"),
+                              f"Soorten-pagina, categorie '{cat}'")
 
             # ── SG-05: zoeken/favorieten/navigatie blijven werken ───────
             ensure_species_filter_open(page)
@@ -131,6 +177,8 @@ def main():
             labels_search = page.eval_on_selector_all(
                 "#speciesList .species-group__label", "els => els.map(e => e.textContent.trim())")
             assert labels_search == nl_sorted(labels_search), f"SG-05 zoekresultaat niet A-Z: {labels_search}"
+            assert_groups_az(groups_with_names(page, "#speciesList .species-group", ".species-row__name"),
+                              "Soorten-pagina, na zoeken 'mees'")
             star = page.locator("#speciesList .signature-species-star").first
             star.click()
             assert "is-on" in (star.get_attribute("class") or ""), "SG-05 favoriet-ster reageert niet meer"
@@ -149,6 +197,8 @@ def main():
                 "#spPickerList .species-group__label", "els => els.map(e => e.textContent.trim())")
             assert len(picker_labels) > 1, "SG-02 te weinig groepen in soortkiezer"
             assert picker_labels == nl_sorted(picker_labels), f"SG-02 soortkiezer niet A-Z: {picker_labels}"
+            assert_groups_az(groups_with_names(page, "#spPickerList .species-group", ".species-row__name"),
+                              "Soortkiezer, ongefilterd")
 
             page.locator("#spPickerSearch").fill("eend")
             page.wait_for_function(
@@ -157,9 +207,12 @@ def main():
                 "#spPickerList .species-group__label", "els => els.map(e => e.textContent.trim())")
             assert picker_labels_q == nl_sorted(picker_labels_q), \
                 f"SG-02 soortkiezer na zoeken niet A-Z: {picker_labels_q}"
+            assert_groups_az(groups_with_names(page, "#spPickerList .species-group", ".species-row__name"),
+                              "Soortkiezer, na zoeken 'eend'")
             page.screenshot(path=str(SHOTS / "species_picker_groups_az_390.png"))
             print(f"SG-02 OK — soortkiezer A-Z ({len(picker_labels)} groepen, "
                   f"{len(picker_labels_q)} na zoeken 'eend')")
+            print("SG-07 OK — vogelnamen A-Z binnen elke groep in de soortkiezer, ongefilterd en na zoeken")
 
             page.locator("#spPickerClose").click()
             page.locator("#speciesPickerOverlay").wait_for(state="detached", timeout=5000)
@@ -186,7 +239,7 @@ def main():
 
             assert not errors, f"paginafouten tijdens SG-run: {errors}"
             browser.close()
-    print("Soortgroepen A-Z: alle controles geslaagd (SG-01..SG-05)")
+    print("Soortgroepen A-Z: alle controles geslaagd (SG-01..SG-07)")
 
 
 if __name__ == "__main__":

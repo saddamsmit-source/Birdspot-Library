@@ -354,13 +354,16 @@ function renderList(el, seenIds, ctx = _speciesCtx) {
   });
 
   // Soortgroepen A-Z op Nederlandse groepsnaam (Opdracht 2, 2026-11-10).
-  // Individuele vogelkaarten binnen een groep behouden hun bestaande volgorde.
+  // Niveau 2 (Opdracht 3, 2026-11-10): binnen iedere soortgroep ook de individuele vogels A-Z op
+  // Nederlandse naam — niet langer op database-volgorde, ID, waarnemingsdatum of wetenschappelijke
+  // naam. Werkt ook correct door bij "Toon meer": elke nieuw zichtbare pagina wordt hier opnieuw
+  // per groep gesorteerd, dus de getoonde volgorde klopt altijd, wat er ook al zichtbaar was.
   list.innerHTML = Object.entries(byFamily)
     .sort((a, b) => a[0].localeCompare(b[0], 'nl'))
     .map(([family, birds]) => `
     <div class="species-group">
       <div class="species-group__label">${escHtml(family)}</div>
-      ${birds.map(s => speciesRow(s, seenIds, favorites)).join('')}
+      ${[...birds].sort((a, b) => a.nameNL.localeCompare(b.nameNL, 'nl')).map(s => speciesRow(s, seenIds, favorites)).join('')}
     </div>`).join('') + (hidden > 0 ? `
     <button type="button" class="species-show-all" id="speciesShowAll">Toon alle ${results.length} soorten (+${hidden})</button>` : '');
 

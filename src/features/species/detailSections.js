@@ -186,19 +186,33 @@ function flightPhoto(id) {
     .map(kind => variants?.[kind]).find(photo => photo?.flight);
 }
 
-function posesPanel(id, takePhoto) {
+/** Foto's zonder vastgesteld geslacht/leeftijd (niet in een kleedgroep van guidePlumageGroups).
+ * Gesplitst in neutrale stilstaande foto's (posesPanel) en neutrale vluchtfoto's (flightSection) —
+ * Opdracht 3, 10-11-2026: vlucht staat altijd in de eigen sectie, nooit meer gemengd met "overige". */
+function neutralPhotos(id, takePhoto) {
   const main = GUIDE_PHOTOS[id];
   const original = main && main !== guideHeroPhoto(id) ? [main] : [];
   // Een vluchtfoto die ook in een vergelijkingskaart meedoet wordt daar nooit herhaald (dashed verwijzing
   // in plaats van de foto zelf), dus hoort hij hier altijd te staan — niet uitgesloten zoals vóór de redesign.
-  const photos = [...(GUIDE_POSES[id] || []), ...original]
-    .filter(photo => !photoRole(photo) && takePhoto(photo));
+  return [...(GUIDE_POSES[id] || []), ...original].filter(photo => !photoRole(photo) && takePhoto(photo));
+}
+
+function posesPanel(photos) {
   if (!photos.length) return '';
-  const title = photos.every(photo => photo.flight) ? 'In vlucht' : 'Overige herkenningsfoto’s';
-  return `<section class="sd-poses" aria-label="${title}"><h3 class="sd-h">${title}</h3>` +
+  return `<section class="sd-poses" aria-label="Overige herkenningsfoto’s"><h3 class="sd-h">Overige herkenningsfoto’s</h3>` +
     '<div class="sd-compare-grid">' + photos.map(photo =>
-      `<div class="sd-compare-card"><strong>${esc(photo.label || (photo.flight ? 'In vlucht' : 'Soortportret'))}</strong>${fieldPhoto(photo)}${photo.note ? `<p>${esc(photo.note)}</p>` : ''}</div>`
+      `<div class="sd-compare-card"><strong>${esc(photo.label || 'Soortportret')}</strong>${fieldPhoto(photo)}${photo.note ? `<p>${esc(photo.note)}</p>` : ''}</div>`
     ).join('') + '</div></section>';
+}
+
+/** Eén geconsolideerde "In vlucht"-sectie, altijd ná Juveniel en vóór de vergelijkingen (Opdracht 3,
+ * 10-11-2026). Combineert vluchtfoto's die uit de kleed-/geslachtsgroepen zijn gehaald (met geslacht/
+ * leeftijd-label uit die groep) met neutrale vluchtfoto's zonder vastgesteld geslacht (eigen, neutrale
+ * kaart — geen geslacht verzinnen). Hergebruikt plumageCard voor dezelfde visuele taal als Verenkleed. */
+function flightSection(entries) {
+  const cards = entries.filter(entry => entry.photos.length).map(plumageCard);
+  if (!cards.length) return '';
+  return `<section class="sd-flight" aria-label="In vlucht"><h3 class="sd-h">In vlucht</h3><div class="sd-plumage-list">${cards.join('')}</div></section>`;
 }
 
 /** Titel van het kleed dat een vergelijking toont, voor de tab, de "eigen kleed"-verwijzing en de badge. */
@@ -247,6 +261,9 @@ function groupComparisonsByPartner(id, comparisons) {
     if (!focal) continue;
     for (const partner of entry.birds) {
       if (partner.id === id) continue;
+      // Opdracht 3 (10-11-2026): geen juveniel-tegen-juvenielvergelijkingen meer — maakt de kaart te
+      // druk. De onderliggende GUIDE_COMPARISONS-data blijft ongewijzigd; alleen het tonen is verborgen.
+      if (focal.plumage === 'juv' && partner.plumage === 'juv') continue;
       if (!groups.has(partner.id)) groups.set(partner.id, {partnerId: partner.id, pairings: []});
       groups.get(partner.id).pairings.push({entry, focal, partner});
     }
@@ -347,11 +364,29 @@ export function recognitionPanel(s, life = null) {
   if (s.fieldmarks) {
     out.push(`<div class="sd-callout">${icon('eye')}<p>${esc(s.fieldmarks)}</p></div>`);
   }
-  const groups = guidePlumageGroups(s).map(group => ({...group, photos: group.photos.filter(takePhoto)}));
+  // Opdracht 3 (10-11-2026): vaste fotovolgorde. Verenkleed toont voortaan uitsluitend stilstaande
+  // foto's per geslacht/leeftijd; elke vluchtfoto die daar vandaan komt gaat naar de nieuwe, altijd
+  // aparte sectie "In vlucht" (ná Juveniel, vóór de vergelijkingen) — met behoud van het geslachts-/
+  // leeftijdslabel uit de oorspronkelijke groep (geen geslacht verzinnen, geen foto dubbel tonen).
+  const flightEntries = [];
+  const groups = guidePlumageGroups(s).map(group => {
+    const kept = group.photos.filter(takePhoto);
+    const flightPhotos = kept.filter(photo => photo.flight);
+    const restPhotos = kept.filter(photo => !photo.flight);
+    if (flightPhotos.length) flightEntries.push({...group, photos: flightPhotos, heroRef: false});
+    return {...group, photos: restPhotos};
+  });
   if (groups.length) out.push('<h3 class="sd-h">Verenkleed</h3><div class="sd-plumage-list">' + groups.map(plumageCard).join('') + '</div>');
 
   takePhoto(guideHeroPhoto(s.id));
-  out.push(posesPanel(s.id, takePhoto));
+  const neutral = neutralPhotos(s.id, takePhoto);
+  const neutralFlight = neutral.filter(photo => photo.flight);
+  const neutralRest = neutral.filter(photo => !photo.flight);
+  if (neutralFlight.length) {
+    flightEntries.push({key: 'neutral', icon: 'wingspan', title: 'In vlucht', text: null, badge: '', photos: neutralFlight, heroRef: false});
+  }
+  out.push(flightSection(flightEntries));
+  out.push(posesPanel(neutralRest));
   if (flight.length) {
     out.push('<section aria-label="Vluchtvergelijking"><h3 class="sd-h">Vluchtvergelijking</h3>' +
       comparisonsSection(s.id, flight, takePhoto) + '</section>');
