@@ -9,158 +9,253 @@
    "labels": "Jaarling-label consistent met lichte onderzijde. Vluchtfoto bruinig, terecht zonder geslacht/leeftijd.",
    "quality": "Goed.",
    "missing": "Juveniel (pas uitgevlogen) ontbreekt; jaarling staat apart.",
-   "status": "VERIFIED",
-   "action": "Geen correctie. Fase 2: juveniel zoeken."
+   "action": "Geen correctie. Fase 2: juveniel zoeken.",
+   "visual": "VERIFIED",
+   "technical": "VERIFIED",
+   "technicalNote": "Laden, volgorde, offline-precachebron en credits gecontroleerd op 53eb772.",
+   "rights": "VERIFIED",
+   "rightsNote": "Alle beelden in de bronaudit van 09-11: zelfde opname, maker en licentie overeenkomend.",
+   "status": "VERIFIED"
   },
   "sp065": {
    "hero": "Geschikt: scherp, volledig, typerend. Geslacht niet betrouwbaar vast te stellen (subtiel flankverschil) — niet geforceerd.",
    "labels": "Vluchtfoto terecht neutraal.",
    "quality": "Goed.",
    "missing": "Mannetje, Vrouwtje en Juveniel als bevestigde foto ontbreken.",
-   "status": "VERIFIED",
-   "action": "Geen correctie. Fase 2: bevestigd mannetje/vrouwtje en juveniel zoeken."
+   "action": "Geen correctie. Fase 2: bevestigd mannetje/vrouwtje en juveniel zoeken.",
+   "visual": "VERIFIED",
+   "technical": "VERIFIED",
+   "technicalNote": "Laden, volgorde, offline-precachebron en credits gecontroleerd op 53eb772.",
+   "rights": "VERIFIED",
+   "rightsNote": "Alle beelden in de bronaudit van 09-11: zelfde opname, maker en licentie overeenkomend.",
+   "status": "VERIFIED"
   },
   "sp066": {
    "hero": "Bruikbaar maar klein in beeld en wat zacht. Boomkruiper/Taigaboomkruiper is op foto niet zelfstandig te onderscheiden; beeld consistent met bron (bruinige flanken).",
    "labels": "Geen geslachts-/leeftijdslabels.",
    "quality": "Matig: vogel klein in kader.",
    "missing": "Vluchtfoto en juveniel ontbreken; geslachten gelijk.",
-   "status": "PARTIALLY TESTED",
    "action": "Soort-ID steunt op bronmetadata, niet op eigen visuele bevestiging. Fase 2: scherpere hoofdfoto overwegen.",
-   "replacement": "hoofdfoto (vogel klein, zacht)"
+   "replacement": "hoofdfoto (vogel klein, zacht)",
+   "visual": "PARTIALLY TESTED",
+   "technical": "VERIFIED",
+   "technicalNote": "Laden, volgorde, offline-precachebron en credits gecontroleerd op 53eb772.",
+   "rights": "VERIFIED",
+   "rightsNote": "Alle beelden in de bronaudit van 09-11: zelfde opname, maker en licentie overeenkomend.",
+   "status": "PARTIALLY TESTED"
   },
   "sp067": {
    "hero": "Geschikt: scherp, witte onderzijde, steunstaart. Soort-ID op foto niet zelfstandig te bevestigen t.o.v. Boomkruiper; consistent met bron.",
    "labels": "Geen.",
    "quality": "Goed.",
    "missing": "Vluchtfoto en juveniel ontbreken.",
-   "status": "PARTIALLY TESTED",
-   "action": "Soort-ID steunt op bronmetadata. Fase 2: vlucht/juveniel."
+   "action": "Soort-ID steunt op bronmetadata. Fase 2: vlucht/juveniel.",
+   "visual": "PARTIALLY TESTED",
+   "technical": "VERIFIED",
+   "technicalNote": "Laden, volgorde, offline-precachebron en credits gecontroleerd op 53eb772.",
+   "rights": "VERIFIED",
+   "rightsNote": "Alle beelden in de bronaudit van 09-11: zelfde opname, maker en licentie overeenkomend.",
+   "status": "PARTIALLY TESTED"
   },
   "sp057": {
    "hero": "Geschikt: scherp, lichte poten zichtbaar (onderscheid Tjiftjaf).",
    "labels": "Geen.",
    "quality": "Goed.",
    "missing": "Vluchtfoto en juveniel ontbreken.",
-   "status": "VERIFIED",
-   "action": "Geen correctie. Fase 2: vlucht/juveniel."
+   "action": "Geen correctie. Fase 2: vlucht/juveniel.",
+   "visual": "VERIFIED",
+   "technical": "VERIFIED",
+   "technicalNote": "Laden, volgorde, offline-precachebron en credits gecontroleerd op 53eb772.",
+   "rights": "VERIFIED",
+   "rightsNote": "Alle beelden in de bronaudit van 09-11: zelfde opname, maker en licentie overeenkomend.",
+   "status": "VERIFIED"
   },
   "sp058": {
    "hero": "Geschikt: scherp, gele keel/wenkbrauw.",
    "labels": "Vluchtfoto (biddend) terecht neutraal; kop eerder groengeel dan uitgesproken geel, past bij soort.",
    "quality": "Goed.",
    "missing": "Juveniel ontbreekt.",
-   "status": "VERIFIED",
-   "action": "Geen correctie."
+   "action": "Geen correctie.",
+   "visual": "VERIFIED",
+   "technical": "VERIFIED",
+   "technicalNote": "Laden, volgorde, offline-precachebron en credits gecontroleerd op 53eb772.",
+   "rights": "VERIFIED",
+   "rightsNote": "Alle beelden in de bronaudit van 09-11: zelfde opname, maker en licentie overeenkomend.",
+   "status": "VERIFIED"
   },
   "sp056": {
    "hero": "Geschikt: scherp, donkere poten zichtbaar.",
    "labels": "Vluchtfoto terecht neutraal.",
    "quality": "Hoofdfoto goed; vluchtfoto bewegingsonscherp maar herkenbaar.",
    "missing": "Juveniel ontbreekt.",
-   "status": "VERIFIED",
-   "action": "Geen correctie."
+   "action": "Geen correctie.",
+   "visual": "VERIFIED",
+   "technical": "VERIFIED",
+   "technicalNote": "Laden, volgorde, offline-precachebron en credits gecontroleerd op 53eb772.",
+   "rights": "VERIFIED",
+   "rightsNote": "Alle beelden in de bronaudit van 09-11: zelfde opname, maker en licentie overeenkomend.",
+   "status": "VERIFIED"
   },
   "sp003": {
    "hero": "Geschikt: scherp, groene halsvlek, korte vleugelstrepen.",
    "labels": "Vluchtfoto terecht neutraal.",
    "quality": "Vluchtfoto laag van resolutie (485x325), zacht, vogel vlak bij de grond (opvliegend).",
    "missing": "Juveniel ontbreekt.",
-   "status": "VERIFIED",
    "action": "Fase 2: vluchtfoto vervangen door scherpere, hogere resolutie.",
-   "replacement": "vluchtfoto (485×325, zacht)"
+   "replacement": "vluchtfoto (485×325, zacht)",
+   "visual": "VERIFIED",
+   "technical": "VERIFIED",
+   "technicalNote": "Laden, volgorde, offline-precachebron en credits gecontroleerd op 53eb772.",
+   "rights": "VERIFIED",
+   "rightsNote": "Alle beelden in de bronaudit van 09-11: zelfde opname, maker en licentie overeenkomend.",
+   "status": "VERIFIED"
   },
   "sp002": {
    "hero": "Geschikt: scherp, witte halsvlek.",
    "labels": "Vluchtfoto terecht neutraal.",
    "quality": "Goed.",
    "missing": "Juveniel ontbreekt.",
-   "status": "VERIFIED",
-   "action": "Geen correctie."
+   "action": "Geen correctie.",
+   "visual": "VERIFIED",
+   "technical": "VERIFIED",
+   "technicalNote": "Laden, volgorde, offline-precachebron en credits gecontroleerd op 53eb772.",
+   "rights": "VERIFIED",
+   "rightsNote": "Alle beelden in de bronaudit van 09-11: zelfde opname, maker en licentie overeenkomend.",
+   "status": "VERIFIED"
   },
   "sp004": {
    "hero": "Geschikt: volledig, zwarte nekband zichtbaar.",
    "labels": "Vluchtfoto terecht neutraal.",
    "quality": "Goed.",
    "missing": "Juveniel ontbreekt.",
-   "status": "VERIFIED",
-   "action": "Geen correctie."
+   "action": "Geen correctie.",
+   "visual": "VERIFIED",
+   "technical": "VERIFIED",
+   "technicalNote": "Laden, volgorde, offline-precachebron en credits gecontroleerd op 53eb772.",
+   "rights": "VERIFIED",
+   "rightsNote": "Alle beelden in de bronaudit van 09-11: zelfde opname, maker en licentie overeenkomend.",
+   "status": "VERIFIED"
   },
   "sp128": {
    "hero": "Geschikt maar niet ideaal: bevestigd mannetje (snavelknobbel zichtbaar in uitsnede), kop deels omlaag (foeragerend).",
-   "labels": "AFWIJKING: vluchtfoto sp128-flight.webp staat neutraal, maar toont een grote rode snavelknobbel = kenmerk adult mannetje; visualCheck noemt de knobbel zelf ook. Voorstel: sex=male. Niet toegepast — eigenaarbesluit.",
+   "labels": "AFWIJKING: vluchtfoto sp128-flight.webp staat neutraal, maar toont een grote rode snavelknobbel = kenmerk adult mannetje; visualCheck noemt de knobbel zelf ook. Voorstel: sex=male. Niet toegepast — eigenaarbesluit. Bronaudit: geen geslachtswoorden in de bron van deze foto.",
    "quality": "Goed.",
    "missing": "Vrouwtje stilstaand ontbreekt (alleen vrouwtje in vlucht).",
-   "status": "PARTIALLY TESTED",
-   "action": "Labelcorrectie sp128-flight → mannetje na akkoord; daarna toont 'In vlucht' Mannetje vóór Vrouwtje. Fase 2: vrouwtje stilstaand."
+   "action": "Labelcorrectie sp128-flight → mannetje na akkoord; daarna toont 'In vlucht' Mannetje vóór Vrouwtje. Fase 2: vrouwtje stilstaand.",
+   "visual": "PARTIALLY TESTED",
+   "technical": "VERIFIED",
+   "technicalNote": "Laden, volgorde, offline-precachebron en credits gecontroleerd op 53eb772.",
+   "rights": "PARTIALLY TESTED",
+   "rightsNote": "sp128-juv-grown.webp heeft geen record in de bronaudit van 09-11 (toegevoegd in f03b636; bron en licentie alleen in commitbericht en registry).",
+   "status": "PARTIALLY TESTED"
   },
   "sp129": {
    "hero": "Geschikt: bevestigd mannetje, scherp.",
    "labels": "Juveniel-foto is in de hand (ringonderzoek), close-up kop; soort/leeftijd niet zelfstandig te bevestigen, steunt op USFWS-bron.",
    "quality": "Juveniel: geen normaal veldbeeld.",
    "missing": "Vrouwtje in vlucht ontbreekt.",
-   "status": "PARTIALLY TESTED",
    "action": "Fase 2: juveniel vervangen door veldfoto.",
-   "replacement": "juveniel (foto in de hand, geen veldbeeld)"
+   "replacement": "juveniel (foto in de hand, geen veldbeeld)",
+   "visual": "PARTIALLY TESTED",
+   "technical": "VERIFIED",
+   "technicalNote": "Laden, volgorde, offline-precachebron en credits gecontroleerd op 53eb772.",
+   "rights": "PARTIALLY TESTED",
+   "rightsNote": "Hoofdfoto sp129-hero-male.webp is na de bronaudit geïmporteerd (tools/species/verified_heroes_2026-11-09.json: Commons-bestand, maker, licentie en SHA-1 van het origineel); geen same-shot-vergelijking.",
+   "status": "PARTIALLY TESTED"
   },
   "sp092": {
    "hero": "Geschikt: bevestigd mannetje, kuif, geel oog.",
    "labels": "Mannetje, vrouwtje, juveniel en mannetje-in-vlucht visueel consistent.",
    "quality": "Goed; vluchtfoto heeft fotografennaam als watermerk in beeld.",
    "missing": "Vrouwtje in vlucht ontbreekt.",
-   "status": "VERIFIED",
-   "action": "Geen correctie. Watermerk: geen licentieprobleem vastgesteld, wel cosmetisch."
+   "action": "Geen correctie. Watermerk: geen licentieprobleem vastgesteld, wel cosmetisch.",
+   "visual": "VERIFIED",
+   "technical": "VERIFIED",
+   "technicalNote": "Laden, volgorde, offline-precachebron en credits gecontroleerd op 53eb772.",
+   "rights": "PARTIALLY TESTED",
+   "rightsNote": "Hoofdfoto sp092-hero-male.webp: idem, na de bronaudit geïmporteerd; geen same-shot-vergelijking.",
+   "status": "PARTIALLY TESTED"
   },
   "sp090": {
    "hero": "Geschikt: bevestigd mannetje, scherp.",
    "labels": "Vrouwtje en mannetje-in-vlucht consistent.",
    "quality": "Goed.",
    "missing": "Juveniel en vrouwtje in vlucht ontbreken.",
-   "status": "VERIFIED",
-   "action": "Volgorde gecorrigeerd in PR #124: Mannetje-kaart verwees niet naar hoofdfoto."
+   "action": "Volgorde gecorrigeerd in PR #124: Mannetje-kaart verwees niet naar hoofdfoto.",
+   "visual": "VERIFIED",
+   "technical": "VERIFIED",
+   "technicalNote": "Laden, volgorde, offline-precachebron en credits gecontroleerd op 53eb772. Op de4ef30 (#122 zonder #124) bleef de Mannetje-kaart leeg; gecorrigeerd in #124.",
+   "rights": "VERIFIED",
+   "rightsNote": "Alle beelden in de bronaudit van 09-11: zelfde opname, maker en licentie overeenkomend.",
+   "status": "VERIFIED"
   },
   "sp130": {
    "hero": "Geschikt: bevestigd mannetje, volledig.",
    "labels": "Vrouwtje en mannetje-in-vlucht consistent.",
    "quality": "Vluchtfoto: vogel klein in kader, watermerk in beeld.",
    "missing": "Juveniel en vrouwtje in vlucht ontbreken.",
-   "status": "VERIFIED",
    "action": "Volgorde gecorrigeerd in PR #124. Fase 2: grotere vluchtfoto overwegen.",
-   "replacement": "vluchtfoto (vogel klein, watermerk)"
+   "replacement": "vluchtfoto (vogel klein, watermerk)",
+   "visual": "VERIFIED",
+   "technical": "VERIFIED",
+   "technicalNote": "Laden, volgorde, offline-precachebron en credits gecontroleerd op 53eb772. Op de4ef30 (#122 zonder #124) bleef de Mannetje-kaart leeg; gecorrigeerd in #124.",
+   "rights": "VERIFIED",
+   "rightsNote": "Alle beelden in de bronaudit van 09-11: zelfde opname, maker en licentie overeenkomend.",
+   "status": "VERIFIED"
   },
   "sp132": {
    "hero": "Geschikt: bevestigd mannetje.",
    "labels": "Vrouwtje en mannetje-in-vlucht consistent.",
    "quality": "Goed.",
    "missing": "Juveniel en vrouwtje in vlucht ontbreken.",
-   "status": "VERIFIED",
-   "action": "Volgorde gecorrigeerd in PR #124."
+   "action": "Volgorde gecorrigeerd in PR #124.",
+   "visual": "VERIFIED",
+   "technical": "VERIFIED",
+   "technicalNote": "Laden, volgorde, offline-precachebron en credits gecontroleerd op 53eb772. Op de4ef30 (#122 zonder #124) bleef de Mannetje-kaart leeg; gecorrigeerd in #124.",
+   "rights": "VERIFIED",
+   "rightsNote": "Alle beelden in de bronaudit van 09-11: zelfde opname, maker en licentie overeenkomend.",
+   "status": "VERIFIED"
   },
   "sp089": {
    "hero": "AFWIJKING van baseline-voorkeur: hoofdfoto is een paar (mannetje + vrouwtje), geen solo bevestigd mannetje. Er is geen stilstaande mannetjesfoto om naar te wisselen.",
    "labels": "Vrouwtje, eclipskleed en mannetje-in-vlucht consistent. 'Juvenielen' (2 vogels) plausibel, leeftijd steunt op bron.",
    "quality": "Goed.",
    "missing": "Mannetje stilstaand (solo) ontbreekt; vrouwtje in vlucht ontbreekt.",
-   "status": "PARTIALLY TESTED",
-   "action": "Fase 2: solo adult mannetje als hoofdfoto zoeken; paarfoto dan naar 'Overige'."
+   "action": "Fase 2: solo adult mannetje als hoofdfoto zoeken; paarfoto dan naar 'Overige'.",
+   "visual": "PARTIALLY TESTED",
+   "technical": "VERIFIED",
+   "technicalNote": "Laden, volgorde, offline-precachebron en credits gecontroleerd op 53eb772.",
+   "rights": "VERIFIED",
+   "rightsNote": "Alle beelden in de bronaudit van 09-11: zelfde opname, maker en licentie overeenkomend.",
+   "status": "PARTIALLY TESTED"
   },
   "sp091": {
    "hero": "Geschikt: bevestigd mannetje, scherp.",
-   "labels": "Juveniel-foto ambigu (bruine kop met roodbruine zweem, groene spiegel); leeftijd steunt op bron ('Jonge Wintertaling, Tokio'), niet zelfstandig te bevestigen.",
+   "labels": "Juveniel-foto visueel ambigu (bruine kop met roodbruine zweem, groene spiegel), maar de bron (iNaturalist, research grade) annoteert Life Stage: Juvenile en Sex: Male; label daarmee onderbouwd. Eigen visuele bevestiging niet mogelijk.",
    "quality": "Juveniel 500x335, aan de kleine kant.",
    "missing": "Vrouwtje in vlucht ontbreekt.",
-   "status": "PARTIALLY TESTED",
    "action": "Fase 2: duidelijkere juveniel overwegen.",
-   "replacement": "juveniel (ambigu, 500×335)"
+   "replacement": "juveniel (ambigu, 500×335)",
+   "visual": "PARTIALLY TESTED",
+   "technical": "VERIFIED",
+   "technicalNote": "Laden, volgorde, offline-precachebron en credits gecontroleerd op 53eb772.",
+   "rights": "PARTIALLY TESTED",
+   "rightsNote": "Hoofdfoto sp091-hero-male.webp: idem; geen same-shot-vergelijking. Licentie \"CC BY\" (iNaturalist) = CC BY 4.0 volgens bronaudit.",
+   "status": "PARTIALLY TESTED"
   },
   "sp188": {
    "hero": "Geschikt: bevestigd mannetje, witte wenkbrauwstreep.",
    "labels": "Eclipskleed-in-vlucht consistent (bruine kop, blauwgrijze voorvleugel).",
    "quality": "Vrouwtje-foto zacht en klein in kader.",
    "missing": "Mannetje (broedkleed) in vlucht ontbreekt.",
-   "status": "VERIFIED",
    "action": "Fase 2: scherpere vrouwtje-foto.",
-   "replacement": "vrouwtje (zacht, klein in kader)"
+   "replacement": "vrouwtje (zacht, klein in kader)",
+   "visual": "VERIFIED",
+   "technical": "VERIFIED",
+   "technicalNote": "Laden, volgorde, offline-precachebron en credits gecontroleerd op 53eb772.",
+   "rights": "PARTIALLY TESTED",
+   "rightsNote": "Hoofdfoto sp188-hero-male.webp: idem; geen same-shot-vergelijking.",
+   "status": "PARTIALLY TESTED"
   }
  },
  "outOfBatchFindings": [
@@ -170,5 +265,11 @@
    "batch": "Haviken (batch 2)",
    "status": "NOT TESTED"
   }
- ]
+ ],
+ "statusModel": {
+  "technical": "Node-render via recognitionPanel() op de render-commit, Pillow-decode, volgordecontrole, precachebron, creditvelden. Browser alleen steekproef.",
+  "visual": "Eigen visuele beoordeling van ieder getoond beeld (contactsheet, uitsneden).",
+  "rights": "Koppeling aan docs/evidence/GUIDE_SOURCE_AUDIT_2026-11-09.json (zelfde opname, maker, licentie) of tools/species/verified_heroes_2026-11-09.json. Licentieconformiteit, geen juridisch oordeel.",
+  "overall": "Slechtste van de drie."
+ }
 }

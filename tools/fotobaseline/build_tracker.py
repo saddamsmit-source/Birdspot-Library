@@ -89,6 +89,9 @@ w(f"| Soorten met ≥1 gidsfoto | {audit['summary']['withPhoto']} |")
 w(f"| Soorten zonder gidsfoto | {audit['summary']['withoutPhoto']} |")
 w(f"| Volledig gecontroleerde soortkaarten (VERIFIED) | {counts['VERIFIED']} |")
 w(f"| PARTIALLY TESTED / NOT TESTED / BLOCKED | {counts['PARTIALLY TESTED']} / {counts['NOT TESTED']} / {counts['BLOCKED']} |")
+for dim, lab in [('technical', 'technisch'), ('visual', 'visueel'), ('rights', 'bron/rechten')]:
+    c = {k: sum(1 for rv in reviews.values() if rv.get(dim) == k) for k in STATUSES}
+    w(f"| Gecontroleerde soorten — {lab}: VERIFIED / PARTIALLY / NOT TESTED / BLOCKED | {c['VERIFIED']} / {c['PARTIALLY TESTED']} / {c['NOT TESTED']} / {c['BLOCKED']} |")
 w(f"| Gecontroleerde soorten met openstaande issues | {len(open_issues)}: {', '.join(open_issues) or '—'} |")
 w(f"| Ontbrekend (van {len(rows)}) — hoofdfoto / mannetje / vrouwtje / juveniel / vlucht | "
   f"{missing_count['hero']} / {missing_count['male']} / {missing_count['female']} / {missing_count['juv']} / {missing_count['flight']} |")
@@ -106,6 +109,7 @@ w('')
 w('- **Code/render** (VERIFIED-basis): `recognitionPanel()` en `guideHeroPhoto()` uit de checkout zelf, in Node gerenderd; volgordecontrole per sectie en kleedslot.')
 w('- **Beeld**: alle bestanden gedecodeerd (Pillow), afmetingen gemeten, dHash over alle eigen beelden per soort.')
 w('- **Visueel**: contactsheets per soort bekeken door Claude; geslacht/leeftijd alleen bevestigd waar het kenmerk zichtbaar is. Geen onafhankelijke ornithologische certificering.')
+w('- **Bron/rechten**: koppeling aan `docs/evidence/GUIDE_SOURCE_AUDIT_2026-11-09.json` (367 foto\'s, zelfde opname via ORB+RANSAC, maker, licentie, iNaturalist-annotaties) of `tools/species/verified_heroes_2026-11-09.json`. Licentieconformiteit, geen juridisch oordeel.')
 w('- **Offline**: alleen gecontroleerd dat het pad in `credits.json`/`field-guide-media.json` staat (precachebron van `sw.js`). Browser-offline en fysiek toestel: NOT TESTED.')
 w('- Status geldt voor de render-commit hierboven. Correcties die alleen op een ongemergede PR staan, staan bij de soort vermeld.')
 w('')
@@ -132,7 +136,7 @@ for b in batches:
         if r['duplicateSourcesInRegistry']:
             dup += '; registry-hergebruik zelfde bestand, één keer getoond'
         offline = 'alle beelden in precachebron' if all(m['offline'] for m in r['media']) else 'NIET: ' + ', '.join(fname(m['image']) for m in r['media'] if not m['offline'])
-        w(f"### {sid} {r['nameNL']} — {rv['status']}")
+        w(f"### {sid} {r['nameNL']} — {rv['status']} (technisch {rv['technical']} · visueel {rv['visual']} · bron/rechten {rv['rights']})")
         w('')
         w('| # | Veld | Bevinding |')
         w('|---|---|---|')
@@ -147,11 +151,11 @@ for b in batches:
             ('Volgorde (§6.B)', ('conform: ' if not r['orderIssues'] else 'AFWIJKING ' + '; '.join(r['orderIssues']) + ': ') + order),
             ('Duplicaten', dup),
             ('Geslacht-/leeftijdslabels', rv['labels']),
-            ('Maker/bron/licentie', credits + ('' if all(not m['missingCredit'] and m['latinOk'] for m in r['media']) else ' — PROBLEEM')),
+            ('Maker/bron/licentie', credits + ('' if all(not m['missingCredit'] and m['latinOk'] for m in r['media']) else ' — PROBLEEM') + f" — **{rv['rights']}**: {rv['rightsNote']}"),
             ('Kwaliteit + laadbaarheid', f"{ok}/{len(loaded)} beelden laden. {rv['quality']}" + (f" Korte zijde < 500 px: {sizes}." if sizes else '')),
             ('Offline', offline + ' (code-niveau)'),
             ('Ontbrekend / vervanging', rv['missing'] + (f" Vervanging: {rv['replacement']}" if rv.get('replacement') else '')),
-            ('Teststatus + vervolgactie', f"**{rv['status']}** — {rv['action']}"),
+            ('Teststatus + vervolgactie', f"**{rv['status']}** (technisch {rv['technical']}: {rv['technicalNote']}) — {rv['action']}"),
         ]
         for i, (k, v) in enumerate(fields, 1):
             w(f"| {i} | {k} | {str(v).replace('|', '/')} |")
@@ -164,10 +168,11 @@ if extra:
     w('')
 w('## Alle soorten met foto — status')
 w('')
-w('| Soortgroep | ID | Soort | Status | Batch |')
-w('|---|---|---|---|---|')
+w('| Soortgroep | ID | Soort | Status | Technisch | Visueel | Bron/rechten | Batch |')
+w('|---|---|---|---|---|---|---|---|')
 for r in sorted(rows, key=lambda r: (r['family'].casefold(), r['nameNL'].casefold())):
-    w(f"| {r['family']} | {r['id']} | {r['nameNL']} | {status[r['id']]} | {reviews.get(r['id'], {}).get('batch', '—')} |")
+    rv = reviews.get(r['id'], {})
+    w(f"| {r['family']} | {r['id']} | {r['nameNL']} | {status[r['id']]} | {rv.get('technical', 'NOT TESTED')} | {rv.get('visual', 'NOT TESTED')} | {rv.get('rights', 'NOT TESTED')} | {rv.get('batch', '—')} |")
 w('')
 w('## Reproduceren')
 w('')
