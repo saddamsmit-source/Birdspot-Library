@@ -37,6 +37,20 @@ class Server(http.server.ThreadingHTTPServer):
     daemon_threads = True
 
 
+def ensure_species_filter_open(page):
+    """Op UI-versies met een inklapbare categoriefilter (<details class="species-filter">,
+    reviewpreview na de UI-redesign) moet het menu open staan voordat een filter-chip
+    klikbaar/zichtbaar is; na een keuze klapt het vanzelf weer dicht. Op de eenvoudigere
+    hoofdlijn-UI (main, zonder <details>-wrapper) bestaat deze toggle niet en is dit een
+    no-op, zodat deze test op beide UI-versies werkt."""
+    toggle = page.locator("#speciesFiltersToggle")
+    if toggle.count() == 0:
+        return
+    is_open = page.eval_on_selector("#speciesFiltersToggle", "el => el.closest('details').open")
+    if not is_open:
+        toggle.click()
+
+
 def nl_sorted(labels):
     # Geen afhankelijkheid van een geïnstalleerde OS-locale (niet gegarandeerd
     # op een CI-runner). str.casefold() geeft een case-INsensitive vergelijking
@@ -70,6 +84,7 @@ def main():
 
             # ── SG-01: Soorten-pagina, "Alle" ────────────────────────────
             page.locator('.nav-item[data-route="species"]').click()
+            ensure_species_filter_open(page)
             page.locator("#speciesFilters .filter-chip").first.wait_for(timeout=10000)
             page.locator('#speciesFilters .filter-chip[data-cat="alle"]').click()
             page.locator("#speciesList .species-group").first.wait_for(timeout=10000)
@@ -97,6 +112,7 @@ def main():
 
             # ── SG-01b: Soorten-pagina, één losse categorie ─────────────
             cat = data["active"][0]
+            ensure_species_filter_open(page)
             page.locator(f'#speciesFilters .filter-chip[data-cat="{cat}"]').click()
             page.wait_for_function(
                 "() => document.querySelectorAll('#speciesList .species-group').length > 0", timeout=8000)
@@ -106,6 +122,7 @@ def main():
             print(f"SG-01 OK — 'Alle' ({len(labels)} groepen) en '{cat}' ({len(labels_cat)} groepen) A-Z")
 
             # ── SG-05: zoeken/favorieten/navigatie blijven werken ───────
+            ensure_species_filter_open(page)
             page.locator('#speciesFilters .filter-chip[data-cat="alle"]').click()
             search = page.locator("#speciesSearch, input[placeholder*='Zoek soort']").first
             search.fill("mees")
