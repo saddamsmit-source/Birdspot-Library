@@ -88,7 +88,8 @@ let refs = 0;
 for (const s of SPECIES) {
   const html = recognitionPanel(s, null);
   const hasOwnFlight = /<section[^>]*aria-label="In vlucht"/.test(html);
-  const flightCmp = html.split('aria-label="Vluchtvergelijking"')[1]?.split('<h3 class="sd-h">Lijkt op')[0] || '';
+  // FQA-03: vluchtvergelijkingen zijn tabbladen (data-cmp-flight) in de kaarten onder "Lijkt op".
+  const flightCmp = html.split('<div class="sd-cmp-panel"').slice(1).filter(part => part.startsWith(' data-cmp-panel data-cmp-flight')).join('');
   if (!hasOwnFlight && flightCmp.includes('↑ zie in vlucht')) assert.fail(`SA-07 ${s.id} verwijst naar ontbrekende eigen vluchtfoto`);
   if (flightCmp) refs++;
 }

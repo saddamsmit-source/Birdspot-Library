@@ -11,7 +11,14 @@
       "voorwaardelijk": "rol klopt, maar kwaliteit of uitsnede matig; vervanging gewenst",
       "uit-rol": "niet geschikt voor de getoonde rol; elders getoond met eerlijk label",
       "review": "REVIEW REQUIRED: bewijs onvoldoende om te bevestigen of te wijzigen"
-    }
+    },
+    "revisions": [
+      {
+        "date": "2026-11-10",
+        "round": "FQA-herstel na ChatGPT-QA (PR #127, comment 6776090974)",
+        "changes": "FQA-01 Buizerd-juveniel naar In vlucht; FQA-02 Buizerd donkere vluchtfoto voorlopig; FQA-03 één sectie Lijkt op; FQA-04 doorslaggevend herbeoordeeld (keyMarks nooit doorslaggevend, Houtduif halsvlek los van iris, Turkse Tortel tweede bron + uitzondering juvenielen)."
+      }
+    ]
   },
   "species": {
     "sp002": {
@@ -31,7 +38,9 @@
           "verdict": "goedgekeurd"
         }
       },
-      "corrections": [],
+      "corrections": [
+        "FQA-04: kritisch kenmerk 'Halsvlek en iris' gesplitst; 'Witte halsvlek' (alleen volwassen) blijft doorslaggevend, iris alleen ondersteunend."
+      ],
       "missing": [
         "Juveniel (zonder halsvlek, wel vleugelband)",
         "Vluchtfoto van boven met volledige witte vleugelband (wenselijk)"
@@ -88,7 +97,8 @@
         }
       },
       "corrections": [
-        "Broedsels per jaar 3–5 → 2–5 (VB_TT)."
+        "Broedsels per jaar 3–5 → 2–5 (VB_TT).",
+        "FQA-04: tweede onafhankelijke bron voor de Zomertortel-kant (eBird, birdspot.co.uk) en uitzondering voor juvenielen zonder halstekening."
       ],
       "missing": [
         "Juveniel (zonder of met vage halsband)",
@@ -114,9 +124,9 @@
           "verdict": "goedgekeurd"
         },
         "/assets/species/plumage/sp005-juv.webp": {
-          "role": "Juveniel",
-          "content": "Lichte jonge Buizerd in vlucht van onderen; lichte iris, gelijkmatig gebandeerde staart.",
-          "sexAge": "juveniel (bron: Life Stage Juvenile; lichte iris consistent)",
+          "role": "In vlucht (Juveniel)",
+          "content": "Jonge Buizerd zweeft vrij met volledig gespreide vleugels, van onderen; lichte iris, gelijkmatig gebandeerde staart.",
+          "sexAge": "juveniel (bron: iNaturalist Life Stage Juvenile; lichte iris consistent); label Juveniel blijft in de vluchtsectie",
           "quality": "goed",
           "verdict": "goedgekeurd"
         },
@@ -131,7 +141,7 @@
           "role": "In vlucht",
           "content": "Donkere Buizerd vrij in de lucht, schuin van onderen.",
           "sexAge": "volwassen volgens bron (Life Stage Adult); niet uit beeld te bevestigen",
-          "quality": "matig: onscherp bij vergroting",
+          "quality": "matig: licht onscherp, vogel klein; toont wel de donkere variant. Voorlopige status zichtbaar in de kaart; vervanging gewenst",
           "verdict": "voorwaardelijk"
         },
         "/assets/species/plumage/sp005-female-flight.webp": {
@@ -142,11 +152,16 @@
           "verdict": "goedgekeurd"
         }
       },
-      "corrections": [],
-      "missing": [],
+      "corrections": [
+        "FQA-01: juveniele foto toont echte vlucht maar stond zonder vluchtlabel onder Juveniel. Nu flight:true, één keer onder In vlucht met label Juveniel; de Juveniel-kaart verwijst ernaar."
+      ],
+      "missing": [
+        "Definitieve (scherpe) donkere Buizerd in vlucht"
+      ],
       "sexPolicy": "Geslacht niet op kleed te zien; alle foto's zonder geslachtslabel (bronaudit 09-11).",
       "uncertain": [
-        "Registersleutels 'adult_m' en bestandsnamen 'male/female' suggereren geslacht; de kaart toont dat niet. Hernoemen is cosmetisch en niet uitgevoerd."
+        "Registersleutels 'adult_m' en bestandsnamen 'male/female' suggereren geslacht; de kaart toont dat niet. Hernoemen is cosmetisch en niet uitgevoerd.",
+        "ChatGPT-QA markeerde de Buizerd als REVIEW REQUIRED tot het rolconflict juveniel/vlucht is opgelost; opgelost in deze herstelronde, onafhankelijke hercontrole open."
       ]
     },
     "sp006": {
@@ -290,7 +305,8 @@
         }
       },
       "corrections": [
-        "Uit 'In vlucht' gehaald: valt onder de klasse opvliegen/tussen planten (mijlpaal 1)."
+        "Uit 'In vlucht' gehaald: valt onder de klasse opvliegen/tussen planten (mijlpaal 1).",
+        "FQA-04: zang alleen doorslaggevend bij een typisch, volledig lied; gemengde zang als open punt."
       ],
       "missing": [
         "In vlucht",
@@ -310,7 +326,9 @@
           "verdict": "goedgekeurd"
         }
       },
-      "corrections": [],
+      "corrections": [
+        "FQA-04: zang alleen doorslaggevend bij een typisch, volledig lied; gemengde zang als open punt."
+      ],
       "missing": [
         "In vlucht",
         "Juveniel (gelere najaarsvogel)"

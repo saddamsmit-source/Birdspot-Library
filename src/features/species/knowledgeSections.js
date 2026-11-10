@@ -106,8 +106,8 @@ function items(list, labels = {}) {
     `<li>${labels[it.kind || it.topic] ? `<b>${esc(labels[it.kind || it.topic])}</b> ` : ''}${esc(it.text)}${srcLine(it.sources)}</li>`).join('') + '</ul>';
 }
 
-function criticalCards(k) {
-  const list = k.critical || [];
+function criticalCards(k, filter = () => true) {
+  const list = (k.critical || []).filter(filter);
   if (!list.length) return '';
   return list.map(c => `<article class="kb-crit-card">
     <header><strong>${esc(c.feature)}</strong>${relPill(c.reliability)}</header>
@@ -130,14 +130,24 @@ export function recognitionDetails(s) {
   const k = knowledgeFor(s.id);
   if (!k) return '';
   const parts = [
-    acc('kritisch', 'Alle kritische kenmerken', criticalCards(k), (k.critical || []).length),
+    // Kritische kenmerken mét vergelijkingssoort staan onder "Lijkt op" (criticalDetails); hier alleen de overige.
+    acc('kritisch-overig', 'Kritische kenmerken', criticalCards(k, c => !c.vs?.length), (k.critical || []).filter(c => !c.vs?.length).length),
     acc('herkenning', 'Uitgebreide herkenning', items(pick(k.detail, ['bouw', 'kleed', 'gedrag', 'variatie']),
       { bouw: 'Bouw', kleed: 'Kleed', gedrag: 'Gedrag', variatie: 'Variatie' })),
     acc('geslacht-leeftijd', 'Mannetje, vrouwtje en juveniel', items(pick(k.detail, ['geslacht', 'leeftijd']),
       { geslacht: 'Geslacht', leeftijd: 'Leeftijd' })),
     acc('vlucht', 'Vluchtkenmerken', items(pick(k.detail, ['vlucht']))),
   ].join('');
+  if (!parts) return '';
   return `<section class="kb-more" aria-label="Determinatie in detail"><h3 class="sd-h">Determinatie in detail</h3>${parts}</section>`;
+}
+
+/** FQA-03 (10-11-2026): kritische determinatieverschillen met een vergelijkingssoort, binnen de ene sectie "Lijkt op". */
+export function criticalDetails(s) {
+  const k = knowledgeFor(s.id);
+  if (!k) return '';
+  const withVs = (k.critical || []).filter(c => c.vs?.length);
+  return withVs.length ? acc('kritisch', 'Kritische determinatieverschillen', criticalCards(k, c => c.vs?.length), withVs.length) : '';
 }
 
 /** Zang en roep met bron, getoond in de bestaande sectie "Zang en roep" (één kop, geen dubbele tekst):

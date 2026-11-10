@@ -14,7 +14,7 @@ import { GUIDE_PHOTOS } from './guidePhotos.js';
 import { GUIDE_AUDIO, GUIDE_HEROES, GUIDE_PLUMAGE, GUIDE_POSES } from './guideMedia.js';
 import { photoInfoMarkup } from '../../utils/photoInfo.js';
 import { assetUrl } from '../../utils/assetUrl.js';
-import { knowledgeFor, quickPanel, recognitionDetails, lifeDetails, whereDetails, similarExtra, voiceDetails } from './knowledgeSections.js';
+import { knowledgeFor, quickPanel, recognitionDetails, criticalDetails, lifeDetails, whereDetails, similarExtra, voiceDetails } from './knowledgeSections.js';
 
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
@@ -170,12 +170,12 @@ export function guidePlumageGroups(s) {
   return groups;
 }
 
-function plumageCard({key, icon: iconName, title, text, badge, photos, heroRef}) {
+function plumageCard({key, icon: iconName, title, text, badge, photos, heroRef, flightRef}) {
   const gallery = photos.map(photo => {
     const label = photo.label || (photo.flight ? 'In vlucht' : '');
     return `<figure class="sd-plumage-photo">${fieldPhoto(photo)}${label ? `<figcaption>${esc(label)}</figcaption>` : ''}${photo.note ? `<p>${esc(photo.note)}</p>` : ''}</figure>`;
   });
-  return `<div class="sd-plumage" data-plumage="${key}">${icon(iconName)}<div><strong>${esc(title)}${badge ? `<span class="sd-badge">${esc(badge)}</span>` : ''}</strong>${text ? `<p>${esc(text)}</p>` : ''}${gallery.length ? `<div class="sd-plumage-gallery">${gallery.join('')}</div>` : ''}${heroRef ? '<p class="sd-hero-ref">Foto: de hoofdfoto bovenaan deze kaart.</p>' : ''}</div></div>`;
+  return `<div class="sd-plumage" data-plumage="${key}">${icon(iconName)}<div><strong>${esc(title)}${badge ? `<span class="sd-badge">${esc(badge)}</span>` : ''}</strong>${text ? `<p>${esc(text)}</p>` : ''}${gallery.length ? `<div class="sd-plumage-gallery">${gallery.join('')}</div>` : ''}${heroRef ? '<p class="sd-hero-ref">Foto: de hoofdfoto bovenaan deze kaart.</p>' : ''}${flightRef ? '<p class="sd-hero-ref" data-flight-ref>Foto: zie In vlucht hieronder.</p>' : ''}</div></div>`;
 }
 
 function flightPhoto(id) {
@@ -217,6 +217,13 @@ function flightSection(entries) {
 }
 
 /** Titel van het kleed dat een vergelijking toont, voor de tab, de "eigen kleed"-verwijzing en de badge. */
+/** Tablabel: een vluchtvergelijking heet altijd "In vlucht" (eventueel met geslacht), zodat hij in één kaart naast
+ * de kleedtabs (Mannetje/Vrouwtje/…) niet verward kan worden (FQA-03). */
+function cmpTabLabel(entry, bird) {
+  const title = cmpPlumageTitle(entry, bird);
+  return entry.flight && title !== 'In vlucht' ? `In vlucht · ${title}` : title;
+}
+
 function cmpPlumageTitle(entry, bird) {
   if (entry.flight) {
     const photo = flightPhoto(bird.id);
@@ -289,7 +296,7 @@ function comparisonCard(id, group, takePhoto) {
     const refLabel = focal.plumage || entry.flight ? title.toLowerCase() : 'hoofdfoto';
     // Mijlpaal 1 (10-11-2026): geen verwijzing naar een "In vlucht"-sectie die er niet (meer) is.
     const ownMissing = entry.flight && (focal.photoMissing || !flightPhoto(focal.id));
-    return `<div class="sd-cmp-panel" data-cmp-panel${i === 0 ? '' : ' hidden'}>
+    return `<div class="sd-cmp-panel" data-cmp-panel${entry.flight ? ' data-cmp-flight' : ''}${i === 0 ? '' : ' hidden'}>
       <div class="sd-cmp-head">
         <div class="sd-cmp-who"><strong>${esc(own)}</strong><small>${esc(title)}</small><div class="sd-cmp-ref">${ownMissing ? 'Nog geen geschikte vluchtfoto' : `↑ zie ${esc(refLabel)}`}</div></div>
         <div class="sd-cmp-who"><strong>${esc(partnerSpecies.nameNL)}</strong><small>${esc(partnerTitle)}</small>${showPhoto ? fieldPhoto(photo) : '<div class="sd-cmp-ref">Nog geen foto</div>'}</div>
@@ -303,7 +310,7 @@ function comparisonCard(id, group, takePhoto) {
     </div>`;
   }).join('');
   const tabBar = tabs ? `<div class="sd-cmp-tabs" role="tablist">${pairings.map(({entry, focal}, i) =>
-    `<button type="button" class="sd-cmp-tab${i === 0 ? ' is-active' : ''}" data-cmp-tab aria-selected="${i === 0}">${esc(cmpPlumageTitle(entry, focal))}</button>`
+    `<button type="button" class="sd-cmp-tab${i === 0 ? ' is-active' : ''}" data-cmp-tab aria-selected="${i === 0}">${esc(cmpTabLabel(entry, focal))}</button>`
   ).join('')}</div>` : '';
   return `<div class="sd-cmp-card">${tabBar}${panels}</div>`;
 }
@@ -385,7 +392,10 @@ export function recognitionPanel(s, life = null) {
     const flightPhotos = kept.filter(photo => photo.flight);
     const restPhotos = kept.filter(photo => !photo.flight);
     if (flightPhotos.length) flightEntries.push({...group, photos: flightPhotos, heroRef: false});
-    return {...group, photos: restPhotos, heroRef: group.heroRef || (!restPhotos.length && heroShows(group.key))};
+    const heroRef = group.heroRef || (!restPhotos.length && heroShows(group.key));
+    // FQA-01 (10-11-2026): een juveniel/vrouwtje dat alleen in vlucht is gefotografeerd staat één keer onder
+    // In vlucht (met behoud van het label); de kleedkaart verwijst ernaar in plaats van de foto te herhalen.
+    return {...group, photos: restPhotos, heroRef, flightRef: !heroRef && !restPhotos.length && flightPhotos.length > 0};
   });
   if (groups.length) out.push('<h3 class="sd-h">Verenkleed</h3><div class="sd-plumage-list">' + groups.map(plumageCard).join('') + '</div>');
 
@@ -396,19 +406,24 @@ export function recognitionPanel(s, life = null) {
   if (neutralFlight.length) {
     flightEntries.push({key: 'neutral', icon: 'wingspan', title: 'In vlucht', text: null, badge: '', photos: neutralFlight, heroRef: false});
   }
+  // Vaste slotvolgorde binnen In vlucht, gelijk aan Verenkleed: mannetje → volwassen → vrouwtje → juveniel → … → neutraal.
+  const FLIGHT_SLOTS = ['adult_m', 'adult', 'adult_f', 'juv', 'breeding', 'winter', 'eclipse', 'jaarling', 'neutral'];
+  const slotRank = key => (FLIGHT_SLOTS.includes(key) ? FLIGHT_SLOTS.indexOf(key) : FLIGHT_SLOTS.length - 1);
+  flightEntries.sort((a, b) => slotRank(a.key) - slotRank(b.key));
   out.push(flightSection(flightEntries));
   out.push(posesPanel(neutralRest));
-  if (flight.length) {
-    out.push('<section aria-label="Vluchtvergelijking"><h3 class="sd-h">Vluchtvergelijking</h3>' +
-      comparisonsSection(s.id, flight, takePhoto) + '</section>');
-  }
-  // Eén vergelijkingsplek (UX-besluit 10-11-2026): bestaande vergelijkingskaarten, aangevuld met
-  // gelijkende soorten uit het kennisprofiel die nog geen eigen kaart hebben. Geen dubbele kaarten.
+  // FQA-03 (10-11-2026): één sectie "Lijkt op" met één kaart per gelijkende soort. Kleed- en vluchtvergelijking
+  // van dezelfde soort staan als tabbladen in die ene kaart (kleed eerst, dan "In vlucht"), zodat geen soortnaam,
+  // foto of uitleg dubbel verschijnt. Daarna gelijkende soorten uit het kennisprofiel zonder eigen kaart en de
+  // kritische determinatieverschillen (uitklapbaar). Alle bestaande vergelijkingsdata blijven.
+  const cardsHtml = comparisonsSection(s.id, [...regular, ...flight], takePhoto);
   const covered = new Set(comparisons.flatMap(pair => pair.birds.map(bird => bird.id)));
   const extra = similarExtra(s, covered);
-  if (regular.length || extra) {
-    out.push('<h3 class="sd-h">Lijkt op</h3>' + (regular.length ? comparisonsSection(s.id, regular, takePhoto) : '') + extra);
+  const critical = criticalDetails(s);
+  if (cardsHtml || extra || critical) {
+    out.push(`<section class="sd-similar" aria-label="Lijkt op"><h3 class="sd-h">Lijkt op</h3>${cardsHtml}${extra}${critical}</section>`);
   }
+
   out.push(recognitionDetails(s));
   const sourcedVoice = voiceDetails(s);
   out.push(`<div id="sdVoice" class="sd-voice-section">${voicePanel(s, sourcedVoice ? null : life?.voice, sourcedVoice)}</div>`);

@@ -1033,3 +1033,6 @@
   .kb-crit-card dl { grid-template-columns: 9rem 1fr; column-gap: var(--space-12); }
   .kb-crit-card dt { margin-top: 0; }
 }
+
+/* FQA-03 (10-11-2026): één sectie "Lijkt op"; kritische verschillen uitklapbaar binnen de sectie. */
+.sd-similar .kb-acc { margin-top: .75rem; }

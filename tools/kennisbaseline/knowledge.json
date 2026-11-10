@@ -330,6 +330,28 @@
       "checked": "2026-11-10",
       "certainty": "middel-hoog",
       "publisher": "Blasco-Zumeta & Heinze"
+    },
+    "EB_ETD": {
+      "register": "nieuw (buiten register v1.2)",
+      "label": "eBird — European Turtle-Dove",
+      "url": "https://ebird.org/species/eutdov",
+      "edition": "online soortpagina, geraadpleegd 10-11-2026",
+      "scope": "identificatietekst",
+      "confirms": "gestreepte halsvlek, gevlekte vleugels, afgeronde staart met brede witte eindband; kleiner en slanker dan de bleker gekleurde Turkse Tortel",
+      "checked": "2026-11-10",
+      "certainty": "middel-hoog",
+      "publisher": "eBird (Cornell Lab)"
+    },
+    "BS_TD": {
+      "register": "nieuw (buiten register v1.2)",
+      "label": "birdspot.co.uk — Turtle Dove Identification Guide",
+      "url": "https://www.birdspot.co.uk/bird-identification/turtle-dove",
+      "edition": "online determinatiepagina, 7 april 2024 (bijgewerkt 19 april 2025), geraadpleegd 10-11-2026",
+      "scope": "Groot-Brittannië",
+      "confirms": "zwart-wit gestreepte halsvlek; juvenielen doffer en zonder halsvlek; kastanjebruine bovenvleugel met geschubd patroon",
+      "checked": "2026-11-10",
+      "certainty": "middel",
+      "publisher": "birdspot.co.uk (los van Birdspot Library)"
     }
   },
   "sp021": {
@@ -500,7 +522,7 @@
     "keyMarks": [
       {
         "text": "Zang: helder, melodieus riedeltje dat in toon afloopt.",
-        "reliability": "doorslaggevend",
+        "reliability": "ondersteunend",
         "sources": [
           "VB_FITIS",
           "BG_CHIFF"
@@ -546,14 +568,15 @@
           "sp056"
         ],
         "reliability": "doorslaggevend",
-        "conditions": "Alleen bij zingende vogels, vooral in voorjaar en zomer",
+        "conditions": "Alleen bij een zingende vogel met een typisch, volledig lied (vooral voorjaar en zomer)",
         "exceptions": "Zwijgende vogels en najaarsvogels moet je op uiterlijk en roep beoordelen",
         "supporting": "Roep, handpenprojectie",
         "sources": [
           "VB_FITIS",
           "VB_TJIF",
           "BG_CHIFF"
-        ]
+        ],
+        "diagnostic": "Het lied verschilt principieel van opbouw (aflopend riedeltje tegen tweetonig tjif-tjaf); beide VB-soortpagina's en BirdGuides (andere uitgever) beschrijven dit onafhankelijk."
       },
       {
         "feature": "Handpenprojectie",
@@ -747,7 +770,8 @@
     "discrepancies": [],
     "open": [
       "Spanwijdte en gewicht niet opnieuw gecontroleerd.",
-      "Verschil met Iberische Tjiftjaf alleen als waarschuwing opgenomen."
+      "Verschil met Iberische Tjiftjaf alleen als waarschuwing opgenomen.",
+      "Gemengde zang (vogels die elementen van beide soorten zingen) is in de geraadpleegde bronnen niet uitgewerkt; zang blijft doorslaggevend alleen bij een typisch, volledig lied."
     ]
   },
   "sp056": {
@@ -761,7 +785,7 @@
     "keyMarks": [
       {
         "text": "Zang: steeds herhaald 'tjif-tjaf'.",
-        "reliability": "doorslaggevend",
+        "reliability": "ondersteunend",
         "sources": [
           "VB_TJIF",
           "BG_CHIFF"
@@ -814,14 +838,15 @@
           "sp057"
         ],
         "reliability": "doorslaggevend",
-        "conditions": "Alleen bij zingende vogels",
+        "conditions": "Alleen bij een zingende vogel met een typisch, volledig lied (vooral voorjaar en zomer)",
         "exceptions": "Iberische Tjiftjaf heeft een afwijkende zang",
         "supporting": "Roep, handpenprojectie",
         "sources": [
           "VB_TJIF",
           "VB_FITIS",
           "BG_CHIFF"
-        ]
+        ],
+        "diagnostic": "Zelfde onderbouwing als bij Fitis: tweetonig tjif-tjaf tegen aflopend riedeltje; VB en BirdGuides."
       },
       {
         "feature": "Handpenprojectie",
@@ -1002,7 +1027,8 @@
     "discrepancies": [],
     "open": [
       "Spanwijdte en gewicht niet opnieuw gecontroleerd.",
-      "Iberische Tjiftjaf heeft nog geen eigen vergelijking."
+      "Iberische Tjiftjaf heeft nog geen eigen vergelijking.",
+      "Gemengde zang (vogels die elementen van beide soorten zingen) is in de geraadpleegde bronnen niet uitgewerkt; zang blijft doorslaggevend alleen bij een typisch, volledig lied."
     ]
   },
   "sp066": {
@@ -1254,7 +1280,7 @@
       },
       {
         "text": "Mannetje: grijze kop, grijze staart met zwarte eindband, roodbruine rug.",
-        "reliability": "doorslaggevend",
+        "reliability": "ondersteunend",
         "sources": [
           "VB_TOREN",
           "EB_KES"
@@ -1288,7 +1314,8 @@
         "sources": [
           "VB_TOREN",
           "EB_KES"
-        ]
+        ],
+        "diagnostic": "Volwassen mannetje (grijze kop en staart met zwarte eindband) tegen vrouwtje (bruine kop, gebandeerde staart): VB en eBird (Cornell) onafhankelijk; geldt niet voor jonge vogels."
       },
       {
         "feature": "Silhouet en jachtgedrag",
@@ -1657,7 +1684,7 @@
       },
       {
         "text": "Onderzijde altijd dwars gebandeerd, ook bij jonge vogels.",
-        "reliability": "doorslaggevend",
+        "reliability": "ondersteunend",
         "sources": [
           "VB_SPERWER",
           "VB_HVS",
@@ -1695,7 +1722,8 @@
           "VB_HVS",
           "VB_SPERWER_MV",
           "BZ_SPA"
-        ]
+        ],
+        "diagnostic": "Dwarsbanden (Sperwer) tegen lengtestrepen (jonge Havik): VB-artikel havik vs sperwer en Blasco-Zumeta (los determinatieblad)."
       },
       {
         "feature": "Staartpunt",
@@ -2203,7 +2231,7 @@
     "keyMarks": [
       {
         "text": "Witte band over de vleugel, in vlucht in elk kleed zichtbaar.",
-        "reliability": "doorslaggevend",
+        "reliability": "ondersteunend",
         "sources": [
           "VB_HVH",
           "VB_5D",
@@ -2257,25 +2285,27 @@
           "VB_HVH",
           "VB_5D",
           "CL_WP"
-        ]
+        ],
+        "diagnostic": "Witte vleugelband in alle leeftijden bij Houtduif, afwezig bij Holenduif: VB en Cornell (vleugelband), RSPB/VB (geen wit bij Holenduif)."
       },
       {
-        "feature": "Halsvlek en iris",
-        "where": "Halszijde en oog, zittende vogel van dichtbij",
-        "this": "Volwassen: grote witte halsvlek en lichte iris",
-        "other": "Holenduif: geen wit in de hals maar een groen glanzende vlek, en een donker oog",
+        "feature": "Witte halsvlek",
+        "where": "Halszijde, zittende vogel",
+        "this": "Volwassen: grote witte vlek aan weerszijden van de hals",
+        "other": "Holenduif: geen wit in de hals, wel een groen glanzende vlek",
         "vs": [
           "sp003"
         ],
         "reliability": "doorslaggevend",
-        "conditions": "Alleen bij volwassen vogels, hals en oog goed zichtbaar",
-        "exceptions": "Jonge Houtduiven hebben nog geen halsvlek en geen lichte iris; dan alleen de vleugelband gebruiken",
-        "supporting": "Witte vleugelband",
+        "conditions": "Alleen volwassen vogels, hals goed zichtbaar",
+        "exceptions": "Jonge Houtduiven hebben nog geen halsvlek; dan alleen de witte vleugelband gebruiken",
+        "supporting": "Lichte iris bij volwassen Houtduif (donker bij Holenduif); witte vleugelband",
         "sources": [
           "VB_HVH",
-          "GB_SD",
-          "CL_WP"
-        ]
+          "CL_WP",
+          "GB_SD"
+        ],
+        "diagnostic": "Witte halsvlek bij volwassen Houtduif, nooit bij Holenduif: VB, Cornell en British Garden Birds; alleen volwassenen."
       }
     ],
     "similar": [
@@ -2437,7 +2467,7 @@
     "keyMarks": [
       {
         "text": "Geen wit in hals of vleugel.",
-        "reliability": "doorslaggevend",
+        "reliability": "ondersteunend",
         "sources": [
           "VB_HOLEN",
           "VB_HVH",
@@ -2493,7 +2523,8 @@
           "VB_HOLEN",
           "VB_HVH",
           "RSPB_SD"
-        ]
+        ],
+        "diagnostic": "Geen wit in de vleugel bij Holenduif tegen witte band bij Houtduif: VB (twee pagina's) en RSPB onafhankelijk."
       },
       {
         "feature": "Stuit",
@@ -2665,7 +2696,7 @@
     "keyMarks": [
       {
         "text": "Zwarte halsband met witte rand bij volwassen vogels.",
-        "reliability": "doorslaggevend",
+        "reliability": "ondersteunend",
         "sources": [
           "VB_TT",
           "BZ_CD"
@@ -2708,19 +2739,22 @@
         "feature": "Hals en bovendelen",
         "where": "Halszijde en vleugeldekveren, zittende vogel",
         "this": "Eén smalle zwarte halsband; bovendelen egaal beigegrijs",
-        "other": "Zomertortel: zwart-wit gestreepte halsvlek en roodbruine bovendelen met zwarte vlekken",
+        "other": "Zomertortel: zwart-wit gestreepte halsvlek en roodbruine, geschubde bovendelen; kleiner en slanker",
         "vs": [
           "sp197"
         ],
         "reliability": "doorslaggevend",
         "conditions": "Volwassen vogels, hals en rug goed zichtbaar",
-        "exceptions": "Juveniele Turkse Tortel zonder of met vage halsband; dan de egale bovendelen gebruiken",
+        "exceptions": "Juvenielen van beide soorten missen de halstekening (Turkse Tortel geen of vage halsband, Zomertortel geen gestreepte vlek); gebruik dan de bovendelen: egaal beigegrijs tegen roodbruin geschubd",
         "supporting": "Grootte (Zomertortel is de kleinste duif), geluid, leefgebied",
         "sources": [
           "VB_TT",
           "VB_ZT",
-          "BZ_CD"
-        ]
+          "BZ_CD",
+          "EB_ETD",
+          "BS_TD"
+        ],
+        "diagnostic": "Volwassen: zwarte halsband (VB, Blasco-Zumeta) tegen gestreepte halsvlek met geschubde roodbruine rug (VB, eBird, birdspot.co.uk); juvenielen alleen via de bovendelen."
       },
       {
         "feature": "Staart in vlucht",
@@ -2747,7 +2781,8 @@
         "why": "Zomertortel is kleiner, met gestreepte halsvlek en geschubde roodbruine rug",
         "sources": [
           "VB_TT",
-          "VB_ZT"
+          "VB_ZT",
+          "EB_ETD"
         ]
       },
       {

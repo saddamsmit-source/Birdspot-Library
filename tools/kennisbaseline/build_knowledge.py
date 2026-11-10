@@ -57,6 +57,12 @@ def validate(data, ids):
             errors.append(f"{sid} {where}: doorslaggevend zonder twee onafhankelijke uitgevers")
         if where.startswith("critical") and not str(item.get("conditions", "")).strip(" —-"):
             errors.append(f"{sid} {where}: doorslaggevend zonder context (conditions)")
+        # FQA-04 (10-11-2026): een keyMark heeft geen context- of uitzonderingenveld en mag dus nooit doorslaggevend zijn;
+        # een kritisch kenmerk heeft een expliciete diagnostische onderbouwing nodig.
+        if where.startswith("keyMarks"):
+            errors.append(f"{sid} {where}: doorslaggevend alleen bij een kritisch kenmerk met context, niet bij een veldkenmerk")
+        if where.startswith("critical") and not str(item.get("diagnostic", "")).strip():
+            errors.append(f"{sid} {where}: doorslaggevend zonder diagnostische onderbouwing (diagnostic)")
 
     for sid, k in data.items():
         if sid.startswith("_"):

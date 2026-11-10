@@ -27,7 +27,7 @@ import { KNOWLEDGE, KNOWLEDGE_SOURCES } from '../src/data/speciesKnowledge.js';
 import { GUIDE_PHOTOS } from '../src/features/species/guidePhotos.js';
 import { GUIDE_HEROES, GUIDE_PLUMAGE, GUIDE_POSES } from '../src/features/species/guideMedia.js';
 import { recognitionPanel, statusPanel, wherePanel } from '../src/features/species/detailSections.js';
-import { knowledgeFor, quickPanel, recognitionDetails, lifeDetails, whereDetails } from '../src/features/species/knowledgeSections.js';
+import { knowledgeFor, quickPanel, recognitionDetails, criticalDetails, lifeDetails, whereDetails } from '../src/features/species/knowledgeSections.js';
 
 const byId = new Map(SPECIES.map(s => [s.id, s]));
 const ids = Object.keys(KNOWLEDGE);
@@ -89,14 +89,13 @@ for (const id of ids) {
   for (const x of k.similar || []) {
     assert.ok(byId.has(x.id) && x.id !== id, `KB-03 ${id} similar ${x.id}`);
     assert.ok(html.includes(`data-compare-species="${x.id}"`), `KB-03 ${id} knop naar ${x.id} ontbreekt`);
-    // Precies één navigatieknop per gelijkende soort binnen de vergelijkingsplek (geen dubbele kaarten).
-    const lijkt = html.slice(html.indexOf('>Lijkt op<'));
-    const vlucht = html.match(/aria-label="Vluchtvergelijking"[\s\S]*?<\/section>/)?.[0] || '';
-    const n = (lijkt.match(new RegExp(`data-compare-species="${x.id}"`, 'g')) || []).length
-      + (vlucht.match(new RegExp(`data-compare-species="${x.id}"`, 'g')) || []).length;
-    assert.ok(n >= 1, `KB-03 ${id} geen vergelijkingsplek voor ${x.id}`);
-    assert.ok(!(html.indexOf('>Lijkt op<') > 0 && vlucht.includes(`data-compare-species="${x.id}"`) && lijkt.includes(`data-kb-similar`) && lijkt.match(/data-kb-similar[\s\S]*/)[0].includes(`data-compare-species="${x.id}"`)),
-      `KB-03 ${id} ${x.id} staat dubbel (vluchtvergelijking én extra lijst)`);
+    // Eén vergelijkingssectie (FQA-03): de soort heeft een knop binnen "Lijkt op", en staat niet zowel op een
+    // vergelijkingskaart (kleed of vlucht) als in de aanvullende lijst uit het kennisprofiel.
+    const sec = html.match(/<section class="sd-similar"[\s\S]*?<\/section>/)?.[0] || '';
+    assert.ok(sec.includes(`data-compare-species="${x.id}"`), `KB-03 ${id} geen knop naar ${x.id} binnen "Lijkt op"`);
+    const [cards, extraList = ''] = sec.split('data-kb-similar');
+    assert.ok(!(cards.includes(`data-compare-species="${x.id}"`) && extraList.includes(`data-compare-species="${x.id}"`)),
+      `KB-03 ${id} ${x.id} staat dubbel (vergelijkingskaart én extra lijst)`);
   }
   const quick = quickPanel(byId.get(id));
   assert.ok(!quick.includes('data-compare-species'), `KB-03 ${id} Niveau 1 bevat nog vergelijkingschips (dubbel met "Lijkt op")`);
@@ -161,7 +160,16 @@ for (const id of ids) {
   assert.equal((quickHtml.match(/class="kb-mark"/g) || []).length, KNOWLEDGE[id].keyMarks.length, `KB-05 ${id} veldkenmerken`);
   const det = recognitionDetails(s);
   assert.ok(!/<details[^>]*\bopen\b/.test(det), `KB-05 ${id} Niveau 2 staat standaard open`);
-  assert.equal((det.match(/class="kb-crit-card"/g) || []).length, KNOWLEDGE[id].critical.length, `KB-05 ${id} kritische kaarten`);
+  // FQA-03: kritische kenmerken mét vergelijkingssoort staan uitklapbaar binnen "Lijkt op"; de overige onder
+  // "Determinatie in detail". Samen precies alle kritische kenmerken, elk één keer.
+  const crit = criticalDetails(s);
+  assert.ok(!/<details[^>]*\bopen\b/.test(crit), `KB-05 ${id} kritische verschillen staan standaard open`);
+  const nCrit = (det.match(/class="kb-crit-card"/g) || []).length + (crit.match(/class="kb-crit-card"/g) || []).length;
+  assert.equal(nCrit, KNOWLEDGE[id].critical.length, `KB-05 ${id} kritische kaarten`);
+  if (crit) {
+    const sec = html.match(/<section class="sd-similar"[\s\S]*?<\/section>/)?.[0] || '';
+    assert.ok(sec.includes('data-kb-section="kritisch"'), `KB-05 ${id} kritische verschillen niet binnen "Lijkt op"`);
+  }
   const life = statusPanel(s, LIFE[id] || null);
   assert.ok(life.includes('aria-label="Kennisprofiel"'), `KB-05 ${id} Kennisprofiel ontbreekt in Leefwijze`);
   const kbLife = lifeDetails(s);
@@ -214,4 +222,29 @@ for (const p of ['src/features/species/knowledgeSections.js', 'src/data/speciesK
   assert.ok(sw.includes(`'${p}'`), `KB-09 ${p} niet in precache`);
 console.log('KB-09 OK — kennismodules in de service-worker-precache');
 
-console.log('Kennisbaseline proef: alle controles geslaagd (KB-01..KB-09)');
+// ── KB-10 (FQA-04) ────────────────────────────────────────────────────────────
+// Elk 'doorslaggevend' kritisch kenmerk is handmatig beoordeeld (docs/kennisbaseline/doorslaggevend-review.json):
+// ≥2 uitgevers, context, diagnostische onderbouwing. Een nieuwe of opgewaardeerde claim faalt tot hij beoordeeld is.
+{
+  const review = JSON.parse(readFileSync(new URL('../docs/kennisbaseline/doorslaggevend-review.json', import.meta.url), 'utf8'));
+  const approved = new Set(review.approved.map(a => `${a.id}|${a.feature}`));
+  const decisive = (K) => Object.entries(K).flatMap(([id, k]) => (k.critical || []).filter(c => c.reliability === 'doorslaggevend').map(c => `${id}|${c.feature}`));
+  const live = decisive(KNOWLEDGE);
+  assert.deepEqual([...live].sort(), [...approved].sort(), 'KB-10 doorslaggevend-set wijkt af van de beoordeelde lijst');
+  for (const [id, k] of Object.entries(KNOWLEDGE)) {
+    for (const m of k.keyMarks) assert.notEqual(m.reliability, 'doorslaggevend', `KB-10 ${id} veldkenmerk doorslaggevend`);
+    for (const c of k.critical.filter(c => c.reliability === 'doorslaggevend')) {
+      const pubs = new Set(c.sources.map(r => KNOWLEDGE_SOURCES[r].publisher));
+      assert.ok(pubs.size >= 2 && c.conditions && c.diagnostic, `KB-10 ${id} ${c.feature} onvoldoende onderbouwd`);
+    }
+  }
+  // Negatief: Zilvermeeuw-pootkleur (variabel) opgewaardeerd naar doorslaggevend → niet in de beoordeelde lijst.
+  const mut = JSON.parse(JSON.stringify(KNOWLEDGE));
+  const leg = mut.sp094.critical.find(c => /poot/i.test(c.feature));
+  assert.ok(leg && leg.reliability !== 'doorslaggevend', 'KB-10 Zilvermeeuw pootkleur hoort niet doorslaggevend te zijn');
+  leg.reliability = 'doorslaggevend';
+  assert.ok(decisive(mut).some(x => !approved.has(x)), 'KB-10 opgewaardeerde pootkleur niet gedetecteerd');
+  console.log(`KB-10 OK — ${live.length} doorslaggevende kenmerken, alle handmatig beoordeeld; opgewaardeerde Zilvermeeuw-pootkleur gedetecteerd`);
+}
+
+console.log('Kennisbaseline proef: alle controles geslaagd (KB-01..KB-10)');

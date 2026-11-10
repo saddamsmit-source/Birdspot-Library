@@ -61,6 +61,9 @@ def main():
             # Blijft vlucht; een neutraler label (bv. leeftijd niet vast te stellen) wordt wel doorgevoerd.
             if r.get("newLabel"):
                 p["label"] = r["newLabel"]
+            # Voorlopige status vóór de bestaande notitie zetten; bestaande inhoud blijft behouden (idempotent).
+            if r.get("newNote") and r["newNote"] not in (p.get("note") or ""):
+                p["note"] = (r["newNote"] + " " + (p.get("note") or "")).strip()
             changed["gemarkeerd"] += 1
     MEDIA.write_text(json.dumps(media, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(changed)

@@ -2030,7 +2030,9 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bruine-kiekendief",
       "visualCheck": "Volwassen vrouwtje in frontale vlucht. Donkerbruin, met lichte kruin en voorrand van de vleugel.",
       "alt": "Bruine Kiekendief — Volwassen vrouwtje in frontale vlucht. Donkerbruin, met lichte kruin en voorrand van de vleugel.",
-      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "flight": true,
+      "flightReview": "goedgekeurd 2026-11-10: FQA-01 beeldinventaris 10-11-2026: stond niet als vlucht geregistreerd maar toont echte vrije vlucht. Vrouwtje (bron: Commons-titel \"female\"); vliegt vrij, vleugels volledig gestrekt. Leeftijd/geslacht blijft; foto één keer, onder In vlucht."
     },
     "juv": {
       "file": "iNaturalist photo 229518401",
@@ -2333,7 +2335,9 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "visualCheck": "Jonge Buizerd in licht kleed. De buik is licht en de polsvlekken en bandering op de staart zijn zichtbaar.",
       "alt": "Buizerd — Jonge Buizerd in licht kleed. De buik is licht en de polsvlekken en bandering op de staart zijn zichtbaar.",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-      "observation": "https://www.inaturalist.org/observations/89145381"
+      "observation": "https://www.inaturalist.org/observations/89145381",
+      "flight": true,
+      "flightReview": "goedgekeurd 2026-11-10: FQA-01 beeldinventaris 10-11-2026: stond niet als vlucht geregistreerd maar toont echte vrije vlucht. Juveniel (bron: iNaturalist Life Stage: Juvenile); zweeft vrij met volledig gespreide vleugels. Leeftijd/geslacht blijft; foto één keer, onder In vlucht."
     }
   },
   "sp248": {
@@ -2406,7 +2410,9 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "visualCheck": "Jonge Ruigpootbuizerd in Tsjechië. Lichte borst, donkere buik en donkere polsvlekken.",
       "alt": "Ruigpootbuizerd — Jonge Ruigpootbuizerd in Tsjechië. Lichte borst, donkere buik en donkere polsvlekken.",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-      "observation": "https://www.inaturalist.org/observations/70044579"
+      "observation": "https://www.inaturalist.org/observations/70044579",
+      "flight": true,
+      "flightReview": "goedgekeurd 2026-11-10: FQA-01 beeldinventaris 10-11-2026: stond niet als vlucht geregistreerd maar toont echte vrije vlucht. Juveniel (bron: iNaturalist Life Stage: Juvenile); vrij in de lucht, gespreide vleugels en staart. Leeftijd/geslacht blijft; foto één keer, onder In vlucht."
     }
   },
   "sp082": {
@@ -5199,7 +5205,7 @@ export const GUIDE_POSES = Object.freeze({
     {
       "label": "In vlucht",
       "flight": true,
-      "note": "Let op de lichte vleugeltekening. Deze opname op afstand toont twee vogels uit een grotere groep.",
+      "note": "Voorlopige foto: beperkte scherpte. Let op de lichte vleugeltekening. Deze opname op afstand toont twee vogels uit een grotere groep.",
       "file": "iNaturalist-foto 617561306",
       "nl": "Kneu",
       "latin": "Linaria cannabina",
@@ -5216,7 +5222,7 @@ export const GUIDE_POSES = Object.freeze({
       "width": 1045,
       "height": 470,
       "image": "/assets/species/plumage/sp039-flight.webp",
-      "flightReview": "voorwaardelijk 2026-11-10: Echte vlucht, vogels klein in beeld. Vervanging gewenst."
+      "flightReview": "voorwaardelijk 2026-11-10: FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): in vlucht ja; twee vogels klein in beeld, witte handpenranden nauwelijks bruikbaar; niet definitief. Vervanging met hoge prioriteit."
     }
   ],
   "sp040": [
@@ -5248,7 +5254,7 @@ export const GUIDE_POSES = Object.freeze({
     {
       "label": "In vlucht",
       "flight": true,
-      "note": "De brede lichte vleugelband en de compacte bouw vallen op. De opname is van afstand gemaakt.",
+      "note": "Voorlopige foto: beperkte scherpte. De brede lichte vleugelband en de compacte bouw vallen op. De opname is van afstand gemaakt.",
       "file": "iNaturalist-foto 576075793",
       "nl": "Appelvink",
       "latin": "Coccothraustes coccothraustes",
@@ -5265,7 +5271,7 @@ export const GUIDE_POSES = Object.freeze({
       "width": 330,
       "height": 275,
       "image": "/assets/species/plumage/sp041-flight.webp",
-      "flightReview": "voorwaardelijk 2026-11-10: Echte vlucht met zichtbare vleugeltekening, maar 330 px. Vervanging gewenst."
+      "flightReview": "voorwaardelijk 2026-11-10: FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): in vlucht ja; 330 px, maar witte vleugelband en snavel herkenbaar; niet definitief. Vervanging gewenst: grotere opname."
     }
   ],
   "sp043": [
@@ -5483,30 +5489,6 @@ export const GUIDE_POSES = Object.freeze({
       "height": 1149,
       "image": "/assets/species/plumage/sp048-flight.webp",
       "flightReview": "uit-rol 2026-11-10: Tussen planten met half geopende vleugels; niet vrij in de lucht."
-    }
-  ],
-  "sp049": [
-    {
-      "label": "In vlucht",
-      "flight": true,
-      "note": "Let op de lange staart en lichtgevlekte onderzijde. De vogel is op afstand gefotografeerd, waardoor fijne details beperkt zichtbaar zijn.",
-      "file": "iNaturalist photo 576073830",
-      "nl": "Grote Lijster",
-      "latin": "Turdus viscivorus",
-      "author": "Codrin Bucur",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-      "source": "https://www.inaturalist.org/photos/576073830",
-      "showSourceLink": true,
-      "alt": "Grote Lijster van opzij in vlucht, met een lange staart en een lichtgevlekte onderzijde.",
-      "modifications": "Uitgesneden rond de vogel en omgezet naar WebP",
-      "reviewed": "2026-11-07",
-      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-lijster",
-      "visualCheck": "Grote Lijster van opzij in vlucht, met een lange staart en een lichtgevlekte onderzijde.",
-      "width": 415,
-      "height": 310,
-      "image": "/assets/species/plumage/sp049-flight.webp",
-      "flightReview": "voorwaardelijk 2026-11-10: Echte vlucht, maar klein (415 px) en zacht. Vervanging gewenst."
     }
   ],
   "sp050": [
@@ -6605,7 +6587,7 @@ export const GUIDE_POSES = Object.freeze({
     {
       "label": "In vlucht",
       "flight": true,
-      "note": "Deze Patrijs vliegt laag over een open veld. Let op het compacte lichaam, de ronde, fijn getekende vleugels en de korte roodbruine staart.",
+      "note": "Voorlopige foto: beperkte scherpte. Deze Patrijs vliegt laag over een open veld. Let op het compacte lichaam, de ronde, fijn getekende vleugels en de korte roodbruine staart.",
       "file": "iNaturalist photo 77252585",
       "nl": "Patrijs",
       "latin": "Perdix perdix",
@@ -6622,14 +6604,14 @@ export const GUIDE_POSES = Object.freeze({
       "width": 450,
       "height": 300,
       "image": "/assets/species/plumage/sp106-flight.webp",
-      "flightReview": "voorwaardelijk 2026-11-10: Echte vlucht, maar klein (450 px) en zacht. Vervanging gewenst."
+      "flightReview": "voorwaardelijk 2026-11-10: FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): in vlucht ja; zacht en 450 px; niet definitief. Vervanging gewenst: scherpe Patrijs in vlucht, zijaanzicht."
     }
   ],
   "sp108": [
     {
       "label": "In vlucht",
       "flight": true,
-      "note": "Let op de stevige snavel en de lichte wenkbrauwstreep. De Grote Karekiet vliegt hier van opzij gezien langs het riet.",
+      "note": "Voorlopige foto: beperkte scherpte. Let op de stevige snavel en de lichte wenkbrauwstreep. De Grote Karekiet vliegt hier van opzij gezien langs het riet.",
       "file": "iNaturalist photo 747529794",
       "nl": "Grote Karekiet",
       "latin": "Acrocephalus arundinaceus",
@@ -6646,7 +6628,7 @@ export const GUIDE_POSES = Object.freeze({
       "width": 724,
       "height": 543,
       "image": "/assets/species/plumage/sp108-flight.webp",
-      "flightReview": "voorwaardelijk 2026-11-10: Echte vlucht, bewogen. Vervanging gewenst."
+      "flightReview": "voorwaardelijk 2026-11-10: FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): in vlucht ja; zacht maar silhouet en wenkbrauw herkenbaar; niet definitief. Vervanging gewenst."
     }
   ],
   "sp110": [
@@ -7354,7 +7336,7 @@ export const GUIDE_POSES = Object.freeze({
     {
       "label": "In vlucht",
       "flight": true,
-      "note": "De Zwarte Mees vliegt tussen dennentakken. De zwarte kop en witte wang zijn zichtbaar. De vleugels hebben bewegingsonscherpte.",
+      "note": "Voorlopige foto: beperkte scherpte. De Zwarte Mees vliegt tussen dennentakken. De zwarte kop en witte wang zijn zichtbaar. De vleugels hebben bewegingsonscherpte.",
       "file": "iNaturalist photo 176460220",
       "nl": "Zwarte Mees",
       "latin": "Periparus ater",
@@ -7371,7 +7353,7 @@ export const GUIDE_POSES = Object.freeze({
       "width": 820,
       "height": 425,
       "image": "/assets/species/plumage/sp174-flight.webp",
-      "flightReview": "voorwaardelijk 2026-11-10: Echte vlucht, vleugels bewogen. Vervanging gewenst."
+      "flightReview": "voorwaardelijk 2026-11-10: FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): in vlucht ja; kop met witte nekvlek scherp, vleugels bewogen; niet definitief. Vervanging gewenst: scherpere Zwarte Mees in vlucht."
     }
   ],
   "sp176": [
@@ -7400,9 +7382,9 @@ export const GUIDE_POSES = Object.freeze({
   ],
   "sp178": [
     {
-      "label": "In vlucht",
-      "flight": true,
-      "note": "De Gekraagde Roodstaart vliegt tussen takken. De roestoranje staart en lichte, warm getinte onderzijde zijn zichtbaar.",
+      "label": "Vliegend vlak bij takken",
+      "flight": false,
+      "note": "Mogelijk net afgezet; geen definitieve vluchtfoto.",
       "file": "iNaturalist photo 50225292",
       "nl": "Gekraagde Roodstaart",
       "latin": "Phoenicurus phoenicurus",
@@ -7419,7 +7401,7 @@ export const GUIDE_POSES = Object.freeze({
       "width": 830,
       "height": 740,
       "image": "/assets/species/plumage/sp178-flight.webp",
-      "flightReview": "voorwaardelijk 2026-11-10: Luchtgedragen kort na afzetten (poot hangt), korrelig. Vervanging gewenst."
+      "flightReview": "uit-rol 2026-11-10: FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): luchtgedragen, maar poten hangen en takken vlakbij: vermoedelijk kort na het afzetten; korrelig. Vluchtstatus niet uit dit ene frame te bewijzen (REVIEW REQUIRED); daarom niet in de definitieve vluchtrol. Vluchtpositie ontbreekt."
     }
   ],
   "sp177": [
@@ -7617,7 +7599,7 @@ export const GUIDE_POSES = Object.freeze({
     {
       "label": "Volwassen in vlucht",
       "flight": true,
-      "note": "Schuin van onderen. De brede vleugels en gebandeerde staart zijn zichtbaar.",
+      "note": "Voorlopige foto: beperkte scherpte. Schuin van onderen. De brede vleugels en gebandeerde staart zijn zichtbaar.",
       "file": "iNaturalist photo 112563579",
       "nl": "Buizerd",
       "latin": "Buteo buteo",
@@ -7636,7 +7618,7 @@ export const GUIDE_POSES = Object.freeze({
       "image": "/assets/species/plumage/sp005-male-flight.webp",
       "sourceAudit": "2026-11-09",
       "sexNote": "Geslacht volgens de bron, maar bij de Buizerd niet aan het verenkleed te zien; daarom zonder geslachtslabel.",
-      "flightReview": "voorwaardelijk 2026-11-10: Mijlpaal 1 (aangescherpt): echte vlucht, maar onscherp bij vergroting; vervanging gewenst. Leeftijd \"volwassen\" steunt op de iNaturalist-annotatie (Life Stage: Adult, bronaudit 09-11); label blijft."
+      "flightReview": "voorwaardelijk 2026-11-10: FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): in vlucht ja; licht onscherp, vogel klein; laat wel de donkere kleedvariant zien. Vervanging gewenst: scherpe donkere Buizerd van onderen."
     },
     {
       "label": "Volwassen in vlucht, van onderen",

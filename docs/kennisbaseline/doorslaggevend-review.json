@@ -1,0 +1,49 @@
+{
+  "_meta": {
+    "date": "2026-11-10",
+    "rule": "Een kritisch kenmerk mag alleen 'doorslaggevend' zijn als het hier staat: per (soort, kenmerk) handmatig beoordeeld op diagnostische waarde binnen de context, met ≥2 onafhankelijke uitgevers. Nieuwe of gewijzigde 'doorslaggevend'-claims laten de test falen tot ze hier zijn beoordeeld.",
+    "reviewer": "Claude (FQA-04); onafhankelijke herbeoordeling door ChatGPT open"
+  },
+  "approved": [
+    {
+      "id": "sp057",
+      "feature": "Zang",
+      "why": "Het lied verschilt principieel van opbouw (aflopend riedeltje tegen tweetonig tjif-tjaf); beide VB-soortpagina's en BirdGuides (andere uitgever) beschrijven dit onafhankelijk."
+    },
+    {
+      "id": "sp056",
+      "feature": "Zang",
+      "why": "Zelfde onderbouwing als bij Fitis: tweetonig tjif-tjaf tegen aflopend riedeltje; VB en BirdGuides."
+    },
+    {
+      "id": "sp008",
+      "feature": "Geslacht",
+      "why": "Volwassen mannetje (grijze kop en staart met zwarte eindband) tegen vrouwtje (bruine kop, gebandeerde staart): VB en eBird (Cornell) onafhankelijk; geldt niet voor jonge vogels."
+    },
+    {
+      "id": "sp006",
+      "feature": "Onderzijde jonge vogels",
+      "why": "Dwarsbanden (Sperwer) tegen lengtestrepen (jonge Havik): VB-artikel havik vs sperwer en Blasco-Zumeta (los determinatieblad)."
+    },
+    {
+      "id": "sp002",
+      "feature": "Witte vleugelband",
+      "why": "Witte vleugelband in alle leeftijden bij Houtduif, afwezig bij Holenduif: VB en Cornell (vleugelband), RSPB/VB (geen wit bij Holenduif)."
+    },
+    {
+      "id": "sp002",
+      "feature": "Witte halsvlek",
+      "why": "Witte halsvlek bij volwassen Houtduif, nooit bij Holenduif: VB, Cornell en British Garden Birds; alleen volwassenen."
+    },
+    {
+      "id": "sp003",
+      "feature": "Wit in de vleugel",
+      "why": "Geen wit in de vleugel bij Holenduif tegen witte band bij Houtduif: VB (twee pagina's) en RSPB onafhankelijk."
+    },
+    {
+      "id": "sp004",
+      "feature": "Hals en bovendelen",
+      "why": "Volwassen: zwarte halsband (VB, Blasco-Zumeta) tegen gestreepte halsvlek met geschubde roodbruine rug (VB, eBird, birdspot.co.uk); juvenielen alleen via de bovendelen."
+    }
+  ]
+}

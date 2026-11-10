@@ -358,11 +358,22 @@
    "decision": "voorwaardelijk",
    "target": null,
    "newLabel": null,
-   "newNote": null,
-   "reason": "Echte vlucht, maar klein (450 px) en zacht. Vervanging gewenst.",
+   "newNote": "Voorlopige foto: beperkte scherpte.",
+   "reason": "FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): in vlucht ja; zacht en 450 px; niet definitief. Vervanging gewenst: scherpe Patrijs in vlucht, zijaanzicht.",
    "airborne": true,
    "rights": "VERIFIED",
-   "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY"
+   "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY",
+   "history": [
+    {
+     "class": "vlucht",
+     "quality": "matig",
+     "decision": "voorwaardelijk",
+     "reason": "Echte vlucht, maar klein (450 px) en zacht. Vervanging gewenst.",
+     "date": "2026-11-10",
+     "round": "vóór FQA-02"
+    }
+   ],
+   "replacement": "gewenst"
   },
   "/assets/species/plumage/sp086-flight.webp": {
    "n": 20,
@@ -612,8 +623,8 @@
    "quality": "matig",
    "decision": "voorwaardelijk",
    "target": null,
-   "newNote": null,
-   "reason": "Mijlpaal 1 (aangescherpt): echte vlucht, maar onscherp bij vergroting; vervanging gewenst. Leeftijd \"volwassen\" steunt op de iNaturalist-annotatie (Life Stage: Adult, bronaudit 09-11); label blijft.",
+   "newNote": "Voorlopige foto: beperkte scherpte.",
+   "reason": "FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): in vlucht ja; licht onscherp, vogel klein; laat wel de donkere kleedvariant zien. Vervanging gewenst: scherpe donkere Buizerd van onderen.",
    "airborne": true,
    "rights": "VERIFIED",
    "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY SA",
@@ -625,8 +636,17 @@
      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
      "date": "2026-11-10",
      "round": "vluchtcontrole ronde 1"
+    },
+    {
+     "class": "vlucht",
+     "quality": "matig",
+     "decision": "voorwaardelijk",
+     "reason": "Mijlpaal 1 (aangescherpt): echte vlucht, maar onscherp bij vergroting; vervanging gewenst. Leeftijd \"volwassen\" steunt op de iNaturalist-annotatie (Life Stage: Adult, bronaudit 09-11); label blijft.",
+     "date": "2026-11-10",
+     "round": "vóór FQA-02"
     }
-   ]
+   ],
+   "replacement": "gewenst"
   },
   "/assets/species/plumage/sp005-female-flight.webp": {
    "n": 35,
@@ -1077,15 +1097,26 @@
    "registry": "GUIDE_POSES[0]",
    "sexLabel": null,
    "class": "vlucht",
-   "quality": "matig",
-   "decision": "voorwaardelijk",
+   "quality": "onscherp",
+   "decision": "archief",
    "target": null,
    "newLabel": null,
    "newNote": null,
-   "reason": "Echte vlucht, maar klein (415 px) en zacht. Vervanging gewenst.",
+   "reason": "FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): in vlucht ja, maar sterk bewegingsonscherp: vleugeltekening niet bruikbaar voor determinatie. Duidelijk ongeschikt als gidsbeeld; uit de kaart, herkomst en bestand bewaard. Vluchtpositie ontbreekt.",
    "airborne": true,
    "rights": "VERIFIED",
-   "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY"
+   "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY",
+   "history": [
+    {
+     "class": "vlucht",
+     "quality": "matig",
+     "decision": "voorwaardelijk",
+     "reason": "Echte vlucht, maar klein (415 px) en zacht. Vervanging gewenst.",
+     "date": "2026-11-10",
+     "round": "vóór FQA-02"
+    }
+   ],
+   "replacement": "gewenst"
   },
   "/assets/species/plumage/sp048-flight.webp": {
    "n": 62,
@@ -1353,11 +1384,22 @@
    "decision": "voorwaardelijk",
    "target": null,
    "newLabel": null,
-   "newNote": null,
-   "reason": "Echte vlucht, vleugels bewogen. Vervanging gewenst.",
+   "newNote": "Voorlopige foto: beperkte scherpte.",
+   "reason": "FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): in vlucht ja; kop met witte nekvlek scherp, vleugels bewogen; niet definitief. Vervanging gewenst: scherpere Zwarte Mees in vlucht.",
    "airborne": true,
    "rights": "VERIFIED",
-   "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY"
+   "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY",
+   "history": [
+    {
+     "class": "vlucht",
+     "quality": "matig",
+     "decision": "voorwaardelijk",
+     "reason": "Echte vlucht, vleugels bewogen. Vervanging gewenst.",
+     "date": "2026-11-10",
+     "round": "vóór FQA-02"
+    }
+   ],
+   "replacement": "gewenst"
   },
   "/assets/species/plumage/sp043-flight.webp": {
    "n": 78,
@@ -1676,11 +1718,22 @@
    "decision": "voorwaardelijk",
    "target": null,
    "newLabel": null,
-   "newNote": null,
-   "reason": "Echte vlucht, bewogen. Vervanging gewenst.",
+   "newNote": "Voorlopige foto: beperkte scherpte.",
+   "reason": "FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): in vlucht ja; zacht maar silhouet en wenkbrauw herkenbaar; niet definitief. Vervanging gewenst.",
    "airborne": true,
    "rights": "VERIFIED",
-   "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY"
+   "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY",
+   "history": [
+    {
+     "class": "vlucht",
+     "quality": "matig",
+     "decision": "voorwaardelijk",
+     "reason": "Echte vlucht, bewogen. Vervanging gewenst.",
+     "date": "2026-11-10",
+     "round": "vóór FQA-02"
+    }
+   ],
+   "replacement": "gewenst"
   },
   "/assets/species/plumage/sp110-flight.webp": {
    "n": 97,
@@ -2169,11 +2222,22 @@
    "decision": "voorwaardelijk",
    "target": null,
    "newLabel": null,
-   "newNote": null,
-   "reason": "Echte vlucht met zichtbare vleugeltekening, maar 330 px. Vervanging gewenst.",
+   "newNote": "Voorlopige foto: beperkte scherpte.",
+   "reason": "FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): in vlucht ja; 330 px, maar witte vleugelband en snavel herkenbaar; niet definitief. Vervanging gewenst: grotere opname.",
    "airborne": true,
    "rights": "VERIFIED",
-   "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY"
+   "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY",
+   "history": [
+    {
+     "class": "vlucht",
+     "quality": "matig",
+     "decision": "voorwaardelijk",
+     "reason": "Echte vlucht met zichtbare vleugeltekening, maar 330 px. Vervanging gewenst.",
+     "date": "2026-11-10",
+     "round": "vóór FQA-02"
+    }
+   ],
+   "replacement": "gewenst"
   },
   "/assets/species/plumage/sp040-flight.webp": {
    "n": 126,
@@ -2220,11 +2284,22 @@
    "decision": "voorwaardelijk",
    "target": null,
    "newLabel": null,
-   "newNote": null,
-   "reason": "Echte vlucht, vogels klein in beeld. Vervanging gewenst.",
+   "newNote": "Voorlopige foto: beperkte scherpte.",
+   "reason": "FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): in vlucht ja; twee vogels klein in beeld, witte handpenranden nauwelijks bruikbaar; niet definitief. Vervanging met hoge prioriteit.",
    "airborne": true,
    "rights": "VERIFIED",
-   "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY"
+   "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY",
+   "history": [
+    {
+     "class": "vlucht",
+     "quality": "matig",
+     "decision": "voorwaardelijk",
+     "reason": "Echte vlucht, vogels klein in beeld. Vervanging gewenst.",
+     "date": "2026-11-10",
+     "round": "vóór FQA-02"
+    }
+   ],
+   "replacement": "gewenst"
   },
   "/assets/species/plumage/sp037-flight.webp": {
    "n": 129,
@@ -2317,16 +2392,27 @@
    "nameNL": "Gekraagde Roodstaart",
    "registry": "GUIDE_POSES[0]",
    "sexLabel": null,
-   "class": "vlucht",
+   "class": "opvliegen",
    "quality": "matig",
-   "decision": "voorwaardelijk",
-   "target": null,
-   "newLabel": null,
-   "newNote": null,
-   "reason": "Luchtgedragen kort na afzetten (poot hangt), korrelig. Vervanging gewenst.",
+   "decision": "uit-rol",
+   "target": "overig",
+   "newLabel": "Vliegend vlak bij takken",
+   "newNote": "Mogelijk net afgezet; geen definitieve vluchtfoto.",
+   "reason": "FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): luchtgedragen, maar poten hangen en takken vlakbij: vermoedelijk kort na het afzetten; korrelig. Vluchtstatus niet uit dit ene frame te bewijzen (REVIEW REQUIRED); daarom niet in de definitieve vluchtrol. Vluchtpositie ontbreekt.",
    "airborne": true,
    "rights": "VERIFIED",
-   "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY"
+   "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY",
+   "history": [
+    {
+     "class": "vlucht",
+     "quality": "matig",
+     "decision": "voorwaardelijk",
+     "reason": "Luchtgedragen kort na afzetten (poot hangt), korrelig. Vervanging gewenst.",
+     "date": "2026-11-10",
+     "round": "vóór FQA-02"
+    }
+   ],
+   "replacement": "gewenst"
   },
   "/assets/species/plumage/sp176-flight.webp": {
    "n": 135,
@@ -2497,6 +2583,45 @@
    "airborne": true,
    "rights": "VERIFIED",
    "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0"
+  },
+  "/assets/species/plumage/sp005-juv.webp": {
+   "id": "sp005",
+   "nameNL": "Buizerd",
+   "from": "GUIDE_PLUMAGE.juv",
+   "class": "vlucht",
+   "airborne": true,
+   "quality": "goed",
+   "decision": "goedgekeurd",
+   "reason": "FQA-01 beeldinventaris 10-11-2026: stond niet als vlucht geregistreerd maar toont echte vrije vlucht. Juveniel (bron: iNaturalist Life Stage: Juvenile); zweeft vrij met volledig gespreide vleugels. Leeftijd/geslacht blijft; foto één keer, onder In vlucht.",
+   "rights": "VERIFIED",
+   "origin": "beeldinventaris (was flight:false)",
+   "fqa": "FQA-01"
+  },
+  "/assets/species/plumage/sp173-adult_f.webp": {
+   "id": "sp173",
+   "nameNL": "Bruine Kiekendief",
+   "from": "GUIDE_PLUMAGE.adult_f",
+   "class": "vlucht",
+   "airborne": true,
+   "quality": "goed",
+   "decision": "goedgekeurd",
+   "reason": "FQA-01 beeldinventaris 10-11-2026: stond niet als vlucht geregistreerd maar toont echte vrije vlucht. Vrouwtje (bron: Commons-titel \"female\"); vliegt vrij, vleugels volledig gestrekt. Leeftijd/geslacht blijft; foto één keer, onder In vlucht.",
+   "rights": "VERIFIED",
+   "origin": "beeldinventaris (was flight:false)",
+   "fqa": "FQA-01"
+  },
+  "/assets/species/plumage/sp253-juv.webp": {
+   "id": "sp253",
+   "nameNL": "Ruigpootbuizerd",
+   "from": "GUIDE_PLUMAGE.juv",
+   "class": "vlucht",
+   "airborne": true,
+   "quality": "goed",
+   "decision": "goedgekeurd",
+   "reason": "FQA-01 beeldinventaris 10-11-2026: stond niet als vlucht geregistreerd maar toont echte vrije vlucht. Juveniel (bron: iNaturalist Life Stage: Juvenile); vrij in de lucht, gespreide vleugels en staart. Leeftijd/geslacht blijft; foto één keer, onder In vlucht.",
+   "rights": "VERIFIED",
+   "origin": "beeldinventaris (was flight:false)",
+   "fqa": "FQA-01"
   }
  }
 }

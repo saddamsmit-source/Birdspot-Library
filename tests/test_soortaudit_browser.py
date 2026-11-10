@@ -11,12 +11,16 @@ Voor iedere soort in docs/fotokwaliteit/soortaudit/M*.json, op 390 px (Chromium)
   SAB-06  Kaartlabels tonen geen geslacht bij soorten waarvan de audit zegt dat geslacht niet op kleed te zien is.
   SAB-07  Zoomviewer opent en sluit op de hoofdfoto.
   SAB-08  Volledige kaart als screenshot; uitslag per soort in docs/fotokwaliteit/soortaudit/browser.json.
+  SAB-09  FQA-03: precies één vergelijkingssectie "Lijkt op" (geen losse kop "Vluchtvergelijking"); één kaart per
+          gelijkende soort met kleed- en vluchtvergelijking als tabbladen; geen dubbele foto's; navigatieknoppen werken.
+          Screenshots van de sectie op 390 px (Holenduif, Sperwer, Buizerd, Zilvermeeuw) en 1280 px (Sperwer).
 Offline-beschikbaarheid van alle getoonde foto's wordt gedekt door tests/test_guide_photos.py (precache + offline decode).
 
 Starten (vanuit repo-root):  python tests/test_soortaudit_browser.py
 """
 import http.server
 import json
+import re
 import subprocess
 import threading
 from pathlib import Path
@@ -152,6 +156,68 @@ def main():
                 print(f"{sid} {name}: {len(own)} foto's geladen, secties {order}, vlucht {len(fl)}")
                 p.goto(base, wait_until="domcontentloaded")
                 p.locator("#birdspotSplash").wait_for(state="detached", timeout=15000)
+            # SAB-09 — één vergelijkingssectie (FQA-03)
+            def similar_section(page, name, sid, tag):
+                open_card(page, name, sid)
+                sec = page.locator('#sdPanel-herkenning section.sd-similar')
+                expect(sec).to_have_count(1)
+                assert page.locator('#sdPanel-herkenning .sd-h', has_text=re.compile(r'^Vluchtvergelijking$')).count() == 0, f"SAB-09 {sid}: losse kop Vluchtvergelijking"
+                # Eén kaart per gelijkende soort: geen partnernaam op twee kaarten (kleed + vlucht zijn tabbladen).
+                partners = sec.locator('.sd-cmp-card').evaluate_all(
+                    "cards => cards.map(c => [...c.querySelectorAll('.sd-cmp-who strong')].map(s => s.textContent).filter((n, i, a) => a.indexOf(n) === i))")
+                names = [n for names_ in partners for n in names_[1:]]
+                assert len(names) == len(set(names)), f"SAB-09 {sid}: soort op meer dan één kaart: {names}"
+                # Vluchttabblad tonen waar het bestaat, zodat ook die vergelijking in het screenshot staat.
+                flight_tab = sec.locator('.sd-cmp-tab', has_text=re.compile(r'^In vlucht')).first
+                if flight_tab.count():
+                    flight_tab.evaluate("el => { const d = el.closest('details'); if (d) d.open = true; }")
+                    flight_tab.click()
+                for d in sec.locator('details.sd-cmp-more').all():
+                    d.evaluate("el => el.open = true")
+                loaded = sec.locator('img').evaluate_all("""async els => { const out = []; for (const e of els) { e.loading = 'eager';
+                  try { await e.decode(); } catch (x) {} out.push([e.getAttribute('src'), e.naturalWidth > 0]); } return out; }""")
+                assert all(ok for _, ok in loaded), f"SAB-09 {sid}: vergelijkingsfoto laadt niet: {[s for s, ok in loaded if not ok]}"
+                srcs = [s for s, _ in loaded]
+                assert len(srcs) == len(set(srcs)), f"SAB-09 {sid}: dubbele foto in Lijkt op"
+                # Vaste hoogte van de sheet tijdelijk opheffen (zoals SAB-08), anders knipt de scrollcontainer de sectie af.
+                page.evaluate("""() => { for (const sel of ['.signature-species-detail-overlay', '.signature-species-detail-sheet']) {
+                  const el = document.querySelector(sel); if (!el) continue;
+                  Object.assign(el.style, {position: 'static', height: 'auto', maxHeight: 'none', overflow: 'visible', inset: 'auto'}); } }""")
+                page.screenshot(path=str(SHOTS / f"{sid}_{tag}_lijkt-op.png"), full_page=True,
+                                clip=sec.bounding_box() and {**sec.bounding_box(), "x": 0, "width": page.viewport_size["width"]})
+                return sec
+
+            def open_card(page, name, sid):
+                page.goto(base, wait_until="domcontentloaded")
+                page.locator("#birdspotSplash").wait_for(state="detached", timeout=15000)
+                page.locator('.nav-item[data-route="species"]').click()
+                if page.locator('#speciesFiltersToggle').count():
+                    page.locator('#speciesFiltersToggle').click()
+                page.locator('#speciesFilters .filter-chip[data-cat="alle"]').click()
+                page.locator('#speciesSearch').fill(name)
+                page.locator(f'.species-row[data-id="{sid}"] .species-row__body').click()
+                page.locator('.sd-tabs').wait_for(timeout=8000)
+
+            for name, sid in [("Holenduif", "sp003"), ("Sperwer", "sp006"), ("Buizerd", "sp005"), ("Zilvermeeuw", "sp094")]:
+                similar_section(p, name, sid, "390")
+                open_card(p, name, sid)
+                sec = p.locator('#sdPanel-herkenning section.sd-similar')
+                btn = sec.locator('[data-compare-species]').first
+                btn.scroll_into_view_if_needed()
+                target = btn.get_attribute('data-compare-species')
+                btn.click()
+                expect(p.locator('.signature-species-detail-overlay')).to_have_count(1)
+                expect(p.locator(f'.signature-species-detail-sheet [data-kb], .signature-species-detail-sheet h2')).not_to_have_count(0)
+                results.setdefault(sid, {})["lijktOp"] = "SAB-09 OK (390 px)"
+                print(f"SAB-09 {sid} {name}: één sectie Lijkt op, geen dubbele foto's, knop naar {target} werkt")
+            dctx = browser.new_context(viewport={"width": 1280, "height": 900}, reduced_motion="reduce", service_workers="block")
+            dp = dctx.new_page()
+            dp.on("pageerror", lambda e: errors.append(str(e)))
+            similar_section(dp, "Sperwer", "sp006", "1280")
+            results.setdefault("sp006", {})["lijktOpDesktop"] = "SAB-09 OK (1280 px)"
+            dctx.close()
+            print("SAB-09 OK — Sperwer ook op 1280 px")
+
             assert not errors, f"paginafouten: {errors}"
             browser.close()
     head = subprocess.run(["git", "rev-parse", "--short", "HEAD"], cwd=ROOT, capture_output=True, text=True).stdout.strip()
@@ -159,7 +225,7 @@ def main():
                                 cwd=ROOT, capture_output=True, text=True).stdout.strip())
     (AUDIT_DIR / "browser.json").write_text(json.dumps({"testedOn": head + (" + lokale wijzigingen" if dirty else ""), "date": "2026-11-10",
                                                         "species": results}, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-    print(f"Soortaudit browser: {len(results)} soorten geslaagd (SAB-01..SAB-08)")
+    print(f"Soortaudit browser: {len(results)} soorten geslaagd (SAB-01..SAB-09)")
 
 
 if __name__ == "__main__":

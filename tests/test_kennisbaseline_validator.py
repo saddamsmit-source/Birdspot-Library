@@ -15,6 +15,7 @@ stil door te laten. Elke case muteert een kopie van knowledge.json en verwacht e
   KV-09  bron zonder URL/controledatum
   KV-10  --check detecteert een handmatig gewijzigde speciesKnowledge.js
   KV-11  'doorslaggevend' met bronnen van maar één uitgever, of bron zonder uitgever, wordt geweigerd
+  KV-12  FQA-04: veldkenmerk (keyMark) nooit doorslaggevend; kritisch kenmerk doorslaggevend vereist diagnostische onderbouwing
 
 Starten (vanuit repo-root):  python3 tests/test_kennisbaseline_validator.py
 """
@@ -73,6 +74,15 @@ def main():
     expect("KV-11", one_publisher, "doorslaggevend zonder twee onafhankelijke uitgevers")
     expect("KV-11b", lambda d: d["_sources"][first_src].pop("publisher"), "veld publisher ontbreekt")
 
+    # KV-12 (FQA-04): veldkenmerk nooit doorslaggevend; kritisch kenmerk doorslaggevend vereist diagnostische onderbouwing.
+    def km_decisive(d):
+        d["sp002"]["keyMarks"][0]["reliability"] = "doorslaggevend"
+    expect("KV-12", km_decisive, "niet bij een veldkenmerk")
+    def no_diag(d):
+        c = next(c for c in d["sp002"]["critical"] if c["reliability"] == "doorslaggevend")
+        c.pop("diagnostic", None)
+    expect("KV-12b", no_diag, "zonder diagnostische onderbouwing")
+
     # KV-10: --check in een tijdelijke kopie van de relevante bestanden
     with tempfile.TemporaryDirectory() as tmp:
         t = Path(tmp)
@@ -88,7 +98,7 @@ def main():
         bad = subprocess.run([sys.executable, "-I", str(script), "--check"], capture_output=True, text=True)
         assert bad.returncode == 1 and "loopt niet gelijk" in bad.stdout, f"KV-10 handwijziging niet gedetecteerd: {bad.stdout}"
     print("KV-10 OK — --check weigert een handmatig gewijzigde speciesKnowledge.js")
-    print("Kennisprofiel-validator: alle negatieve controles geslaagd (KV-01..KV-11)")
+    print("Kennisprofiel-validator: alle negatieve controles geslaagd (KV-01..KV-12)")
 
 
 if __name__ == "__main__":

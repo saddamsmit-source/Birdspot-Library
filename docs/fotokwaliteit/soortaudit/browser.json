@@ -1,5 +1,5 @@
 {
- "testedOn": "71dbd95",
+ "testedOn": "956b6cf + lokale wijzigingen",
  "date": "2026-11-10",
  "species": {
   "sp002": {
@@ -24,7 +24,8 @@
     "Overige herkenningsfoto's"
    ],
    "flight": [],
-   "checks": "SAB-01..07"
+   "checks": "SAB-01..07",
+   "lijktOp": "SAB-09 OK (390 px)"
   },
   "sp004": {
    "ok": true,
@@ -45,16 +46,17 @@
    "photos": 6,
    "sections": [
     "Hoofdfoto",
-    "Verenkleed",
     "In vlucht",
     "Overige herkenningsfoto's"
    ],
    "flight": [
     "/assets/species/plumage/sp005-adult_m.webp",
+    "/assets/species/plumage/sp005-juv.webp",
     "/assets/species/plumage/sp005-male-flight.webp",
     "/assets/species/plumage/sp005-female-flight.webp"
    ],
-   "checks": "SAB-01..07"
+   "checks": "SAB-01..07",
+   "lijktOp": "SAB-09 OK (390 px)"
   },
   "sp006": {
    "ok": true,
@@ -68,7 +70,9 @@
    "flight": [
     "/assets/species/plumage/sp006-flight.webp"
    ],
-   "checks": "SAB-01..07"
+   "checks": "SAB-01..07",
+   "lijktOp": "SAB-09 OK (390 px)",
+   "lijktOpDesktop": "SAB-09 OK (1280 px)"
   },
   "sp008": {
    "ok": true,
@@ -140,7 +144,8 @@
    "flight": [
     "/assets/species/plumage/sp094-flight.webp"
    ],
-   "checks": "SAB-01..07"
+   "checks": "SAB-01..07",
+   "lijktOp": "SAB-09 OK (390 px)"
   }
  }
 }

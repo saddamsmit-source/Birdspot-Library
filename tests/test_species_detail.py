@@ -442,16 +442,18 @@ def main():
                 expect(photo).to_be_focused()
 
             def cmp_card(name, flight=False):
-                """De .sd-cmp-card ('Lijkt op' / 'Vluchtvergelijking') waarin `name` als andere soort voorkomt."""
-                xpath = (
-                    '//section[@aria-label="Vluchtvergelijking"]//div[contains(@class,"sd-cmp-card")]'
-                    if flight else
-                    '//*[@id="sdPanel-herkenning"]//div[contains(@class,"sd-cmp-card")]'
-                    '[not(ancestor::section[@aria-label="Vluchtvergelijking"])]'
-                )
-                card = p.locator(f'xpath={xpath}').filter(has=p.get_by_text(name, exact=True))
-                # Een kaart in het ingeklapte "Nog N soorten" blok openklappen, anders is hij niet zichtbaar.
-                card.evaluate("el => { const d = el.closest('details'); if (d && !d.open) d.open = true; }")
+                """De ene .sd-cmp-card binnen 'Lijkt op' waarin `name` als andere soort voorkomt. Sinds FQA-03 staan kleed-
+                en vluchtvergelijking van dezelfde soort als tabbladen in die ene kaart; flight=True opent het tabblad
+                "In vlucht" (als er meerdere tabbladen zijn)."""
+                card = p.locator('#sdPanel-herkenning section.sd-similar .sd-cmp-card').filter(
+                    has=p.locator('.sd-cmp-who strong', has_text=re.compile(rf'^{re.escape(name)}$')))
+                assert card.count() == 1, f"{name}: verwacht precies één vergelijkingskaart, kreeg {card.count()}"
+                card.evaluate("el => { for (let d = el.closest('details'); d; d = d.parentElement.closest('details')) d.open = true; }")
+                tabs = card.locator('.sd-cmp-tab')
+                if tabs.count():
+                    want = tabs.filter(has_text=re.compile(r'^In vlucht')) if flight else tabs.filter(has_text=re.compile(r'^(?!In vlucht)'))
+                    if want.count():
+                        want.first.click()
                 return card
 
             def cmp_tab(card, label):
@@ -468,7 +470,7 @@ def main():
             expect(stock_dove_card.locator('.sd-cmp-panel:visible .sd-field-photo')).to_have_count(0)
             expect(stock_dove_card.locator('.sd-cmp-panel:visible .sd-cmp-ref', has_text="Nog geen foto")).to_have_count(1)
             expect(stock_dove_card.locator('.sd-cmp-panel:visible .sd-compare-open')).to_have_text(re.compile(r"Open Holenduif"))
-            expect(p.locator('#sdPanel-herkenning section[aria-label="Vluchtvergelijking"] .sd-cmp-more > summary'))\
+            expect(p.locator('#sdPanel-herkenning section.sd-similar .sd-cmp-more > summary'))\
                 .to_have_text("Nog 1 soort: Turkse Tortel")
             turtle_dove_card = cmp_card("Turkse Tortel", flight=True)
             check_comparison_photo(turtle_dove_card.locator('.sd-cmp-panel:visible .sd-field-photo'))
@@ -576,7 +578,7 @@ def main():
             # juveniele foto verschijnt alleen nog op Haviks eigen kaart, niet langer als voorbeeld hier.
             expect(hawk_card.locator('.sd-cmp-tab', has_text=re.compile(r'^Juveniel$'))).to_have_count(0)
             assert_photo_once("/assets/species/plumage/sp006-juv.webp")
-            flight_section = p.locator('#sdPanel-herkenning section[aria-label="Vluchtvergelijking"]')
+            flight_section = p.locator('#sdPanel-herkenning section.sd-similar')
             assert flight_section.evaluate(
                 "el => Boolean(el.compareDocumentPosition(document.querySelector('.sd-plumage-list')) & Node.DOCUMENT_POSITION_PRECEDING)")
             flight_hawk_panel = cmp_card("Havik", flight=True).locator('.sd-cmp-panel:visible')
@@ -595,9 +597,7 @@ def main():
             print("H4-04 OK — jonge Sperwer/Havik (tab Juveniel, juiste borsttekening), vluchtvergelijking met Havik en Torenvalk")
 
             open_species("Buizerd", "sp005")
-            regular_cards = p.locator(
-                'xpath=//*[@id="sdPanel-herkenning"]//div[contains(@class,"sd-cmp-card")]'
-                '[not(ancestor::section[@aria-label="Vluchtvergelijking"])]')
+            regular_cards = p.locator('#sdPanel-herkenning section.sd-similar .sd-cmp-card')
             assert regular_cards.count() == 2
             rough_card = cmp_card("Ruigpootbuizerd")
             # Opdracht 3 (10-11-2026): sp005 vs sp253 had twee kledenparen (Volwassen/Vrouwtje en

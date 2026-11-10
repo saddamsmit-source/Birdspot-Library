@@ -11,6 +11,11 @@
  *          nieuwe label; gearchiveerde foto's staan niet op de kaart maar herkomst + bestand blijven.
  *   VC-05  Offline: gearchiveerde foto's vallen buiten de precache-lijst; getoonde foto's niet.
  *   VC-06  Vluchtvergelijkingen met een ontbrekende foto tonen "Nog geen foto" en behouden hun tekst.
+ *   VC-07  FQA-01: álle gidsfoto's (ook zonder vluchtlabel) hebben een visuele beeldbeoordeling voor precies dít bestand
+ *          (SHA-1); vrij vliegend ⇔ flight:true. Negatief: Buizerd-juveniel en Bruine Kiekendief-vrouwtje zonder
+ *          vluchtlabel, een zittende Sperwer met gespreide vleugels mét vluchtlabel, een gewijzigd beeldbestand.
+ *   VC-08  FQA-02: voorwaardelijke vluchtfoto's tonen hun voorlopige status in de kaart; Grote Lijster gearchiveerd,
+ *          Gekraagde Roodstaart uit de vluchtrol.
  *
  * Starten: node tests/test_vluchtcontrole.mjs
  */
@@ -21,7 +26,9 @@ import { GUIDE_PHOTOS } from '../src/features/species/guidePhotos.js';
 import { GUIDE_PLUMAGE, GUIDE_POSES } from '../src/features/species/guideMedia.js';
 import { GUIDE_COMPARISONS } from '../src/features/species/guideComparisons.js';
 import { recognitionPanel } from '../src/features/species/detailSections.js';
-import { checkFlight, flightAssets } from '../tools/fotokwaliteit/flightcheck.mjs';
+import { checkFlight, checkInventory, flightAssets } from '../tools/fotokwaliteit/flightcheck.mjs';
+import { GUIDE_HEROES } from '../src/features/species/guideMedia.js';
+import { createHash } from 'node:crypto';
 
 const read = p => JSON.parse(readFileSync(new URL(p, import.meta.url), 'utf8'));
 const review = read('../docs/fotokwaliteit/vluchtcontrole.json');
@@ -63,11 +70,13 @@ const rejected = Object.entries(review.assets).filter(([, r]) => r.decision === 
 let sections = 0;
 for (const s of SPECIES) {
   const html = recognitionPanel(s);
-  for (const label of ['In vlucht', 'Vluchtvergelijking']) {
-    const m = html.match(new RegExp(`aria-label="${label}"[\\s\\S]*?</section>`));
-    if (!m) continue;
+  const own = html.match(/aria-label="In vlucht"[\s\S]*?<\/section>/)?.[0];
+  // FQA-03: vluchtvergelijkingen zijn tabbladen (data-cmp-flight) in de kaarten onder "Lijkt op".
+  const cmpPanels = html.split('<div class="sd-cmp-panel"').slice(1).filter(part => part.startsWith(' data-cmp-panel data-cmp-flight'));
+  for (const [label, part] of [['In vlucht', own], ...cmpPanels.map(part => ['vluchtvergelijking', part])]) {
+    if (!part) continue;
     sections++;
-    for (const im of rejected) assert.ok(!m[0].includes(`data-guide-image="${im}"`), `VC-03 ${s.id}: afgekeurde ${im} in ${label}`);
+    for (const im of rejected) assert.ok(!part.includes(`data-guide-image="${im}"`), `VC-03 ${s.id}: afgekeurde ${im} in ${label}`);
   }
 }
 console.log(`VC-03 OK — ${sections} vluchtsecties/-vergelijkingen zonder afgekeurde foto (${rejected.length} afgekeurd)`);
@@ -109,4 +118,56 @@ for (const e of GUIDE_COMPARISONS.filter(x => x.flight)) for (const b of e.birds
   assert.ok(html.includes(`Nog geen foto van ${byId.get(b.id).nameNL}`), `VC-06 ${other.id}: ontbrekende foto van ${b.id} niet als zodanig getoond`);
 }
 console.log('VC-06 OK — vergelijkingen met ontbrekende vluchtfoto behouden hun tekst en melden "Nog geen foto"');
-console.log('Vluchtcontrole: alle controles geslaagd (VC-01..VC-06)');
+// VC-07 — beeldinhoud ⇔ vluchtlabel over álle gidsfoto's (FQA-01)
+{
+  const inventory = read('../docs/fotokwaliteit/beeldinventaris.json');
+  const hashOf = img => createHash('sha1').update(readFileSync(new URL('..' + img, import.meta.url))).digest('hex');
+  const all = { photos: GUIDE_PHOTOS, heroes: GUIDE_HEROES, plumage: GUIDE_PLUMAGE, poses: GUIDE_POSES };
+  const errs = checkInventory(all, inventory, hashOf);
+  assert.deepEqual(errs, [], 'VC-07\n' + errs.join('\n'));
+  const n = Object.keys(inventory.images).length;
+  // Positief bewijs voor de drie gevonden gevallen: nu één keer onder In vlucht, met leeftijd/geslacht.
+  for (const [sid, img, title] of [['sp005', 'sp005-juv.webp', 'Juveniel'], ['sp173', 'sp173-adult_f.webp', 'Vrouwtje'], ['sp253', 'sp253-juv.webp', 'Juveniel']]) {
+    const html = recognitionPanel(byId.get(sid));
+    const [before, after = ''] = html.split('aria-label="In vlucht"');
+    const flightPart = after.split('aria-label="Vluchtvergelijking"')[0].split('<h3 class="sd-h">Lijkt op')[0];
+    assert.equal((html.match(new RegExp(img.replace('.', '\\.'), 'g')) || []).length >= 1, true);
+    assert.ok(flightPart.includes(img), `VC-07 ${sid} ${img} hoort onder In vlucht`);
+    assert.ok(!before.includes(img), `VC-07 ${sid} ${img} staat ook nog in een kleedgalerij`);
+    assert.ok(new RegExp(`<strong>${title}`).test(flightPart), `VC-07 ${sid} label ${title} verloren`);
+  }
+  // Negatief: label vergeten, label onterecht, bestand gewijzigd.
+  const neg = (mutate, expectText, why) => {
+    const regs = JSON.parse(JSON.stringify(all));
+    const inv = JSON.parse(JSON.stringify(inventory));
+    mutate(regs, inv);
+    const e = checkInventory(regs, inv, hashOf);
+    assert.ok(e.some(x => x.includes(expectText)), `VC-07 negatief niet geweigerd: ${why}\n${e.join('\n')}`);
+  };
+  neg(r => { delete r.plumage.sp005.juv.flight; }, 'zonder flight:true', 'Buizerd-juveniel zonder vluchtlabel');
+  neg(r => { delete r.plumage.sp173.adult_f.flight; }, 'zonder flight:true', 'Bruine Kiekendief-vrouwtje zonder vluchtlabel');
+  neg(r => { r.plumage.sp006.adult_f.flight = true; }, 'toont vleugels-strekken', 'zittende Sperwer met gespreide vleugels als vlucht');
+  neg(r => { r.poses.sp003 = [{ ...(r.poses.sp003?.[0] || {}), image: '/assets/species/plumage/sp003-flight.webp', flight: true }]; }, 'toont opvliegen', 'opvliegende Holenduif terug als vlucht');
+  neg((r, inv) => { inv.images['/assets/species/plumage/sp002-flight.webp'].sha1 = '0'.repeat(40); }, 'SHA-1 wijkt af', 'gewijzigd beeldbestand');
+  neg((r, inv) => { delete inv.images['/assets/species/sp066.webp']; }, 'geen visuele beeldbeoordeling', 'foto zonder beoordeling');
+  console.log(`VC-07 OK — ${n} gidsfoto's met beeldbeoordeling op SHA-1; vrij vliegend ⇔ flight:true; 6 negatieve gevallen geweigerd`);
+}
+
+// VC-08 — voorwaardelijke vluchtfoto's (FQA-02)
+{
+  const cond = Object.entries(review.assets).filter(([, r]) => r.decision === 'voorwaardelijk');
+  for (const [img, r] of cond) {
+    const html = recognitionPanel(byId.get(r.id));
+    const i = html.indexOf(img);
+    assert.ok(i > 0, `VC-08 ${r.id} voorwaardelijke foto niet getoond`);
+    assert.ok(html.slice(i, i + 2500).includes('Voorlopige foto'), `VC-08 ${r.id} toont de voorlopige status niet`);
+    assert.ok(r.replacement === 'gewenst', `VC-08 ${r.id} vervangingsbehoefte niet vastgelegd`);
+  }
+  assert.equal(review.assets['/assets/species/plumage/sp049-flight.webp'].decision, 'archief');
+  assert.equal(review.assets['/assets/species/plumage/sp178-flight.webp'].decision, 'uit-rol');
+  const rs = recognitionPanel(byId.get('sp178'));
+  assert.ok(!(rs.split('aria-label="In vlucht"')[1] || '').split('<h3 class="sd-h">Lijkt op')[0].includes('sp178-flight.webp'), 'VC-08 Gekraagde Roodstaart staat nog in In vlucht');
+  console.log(`VC-08 OK — ${cond.length} voorwaardelijke vluchtfoto's tonen hun voorlopige status; Grote Lijster gearchiveerd, Gekraagde Roodstaart uit de vluchtrol`);
+}
+
+console.log('Vluchtcontrole: alle controles geslaagd (VC-01..VC-08)');
