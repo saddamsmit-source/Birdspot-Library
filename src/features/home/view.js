@@ -16,7 +16,6 @@ import { initFeaturedCarousel } from './featuredCarousel.js';
 import { buildAmbientBackdrop,initAmbientBackdrop } from './ambientBackdrop.js';
 
 // ── Constanten ─────────────────────────────────────────────
-const SLIDESHOW_INTERVAL = 3500;
 const FALLBACK_LAT = 52.3676;
 const FALLBACK_LON = 4.9041;
 
@@ -24,9 +23,8 @@ const FALLBACK_LON = 4.9041;
 /**
  * renderHome retourneert een cleanup-functie.
  * app.js roept cleanup() aan vóór elke routewissel zodat:
- *   1. De slideshow-timer stopt.
- *   2. Alle openstaande blob-URL's worden vrijgegeven.
- *   3. Async-callbacks die nog lopen een stale-flag checken en stil stoppen.
+ *   1. Alle openstaande blob-URL's worden vrijgegeven.
+ *   2. Async-callbacks die nog lopen een stale-flag checken en stil stoppen.
  */
 export function renderHome(el) {
   // Gedeelde destroyed-vlag: alle async functies checken deze vóór DOM-mutaties.
@@ -54,13 +52,7 @@ export function renderHome(el) {
     el.removeEventListener('click', onSignatureClick);
     disposeFeatured();
     disposeHabitat();
-    // Stop timer
-    if (_slideshowTimer !== null) {
-      clearInterval(_slideshowTimer);
-      _slideshowTimer = null;
-    }
-    // Geef alle openstaande blob-URL's vrij (slideshow + recent-thumbnails)
-    _revokeSlideshowUrls();
+    // Geef alle openstaande blob-URL's vrij (recent-thumbnails)
     _revokeRecentThumbUrls();
   };
 }
@@ -212,20 +204,6 @@ function buildSkeleton() {
 }
 
 
-// ══════════════════════════════════════════════════════════
-// DIASHOW
-// ══════════════════════════════════════════════════════════
-let _slideshowTimer = null;
-let _slideIndex     = 0;
-let _slides         = [];
-// Bijhouden van blob-URL's zodat ze ingetrokken worden bij re-render
-let _slideshowUrls  = [];
-
-function _revokeSlideshowUrls() {
-  _slideshowUrls.forEach(revokePhotoUrl);
-  _slideshowUrls = [];
-}
-
 // ── Recente waarnemingen thumbnail-URLs ─────────────────────
 // Bijhouden zodat cleanup() ze kan vrijgeven ook als load/error
 // event al gevuurd was vóór de listener werd gekoppeld.
@@ -234,88 +212,6 @@ let _recentThumbUrls = [];
 function _revokeRecentThumbUrls() {
   _recentThumbUrls.forEach(revokePhotoUrl);
   _recentThumbUrls = [];
-}
-
-async function initSlideshow(el, ctx) {
-  // Ruim vorige URL's op vóór een nieuwe initialisatie
-  _revokeSlideshowUrls();
-
-  try {
-    const db = await getDB();
-    const tx = db.transaction('photos', 'readonly');
-    const all = await txAll(tx.objectStore('photos'));
-    _slides = shuffleArray(all);
-  } catch (_) {
-    _slides = [];
-  }
-
-  // Guard: scherm al verlaten vóórdat IDB terugkwam
-  if (ctx.destroyed) { _revokeSlideshowUrls(); return; }
-
-  const inner = el.querySelector('#slideshowInner');
-  const dots  = el.querySelector('#slideshowDots');
-  if (!inner) return;
-  if (_slides.length === 0) return;
-
-  // Pre-filter: genereer URL's en behoud alleen records met bruikbare blob.
-  // Zo lopen slide-index, slide-elementen en dots altijd 1:1 synchroon.
-  const validSlides = [];
-  for (const photo of _slides) {
-    const url = getPhotoUrl(photo);
-    if (url) validSlides.push({ photo, url });
-  }
-
-  if (validSlides.length === 0) return; // geen bruikbare blobs
-
-  _slides = validSlides.map(vs => vs.photo); // update module-state
-  validSlides.forEach(vs => _slideshowUrls.push(vs.url));
-
-  inner.innerHTML = '';
-  dots.innerHTML  = '';
-  _slideIndex = 0;
-
-  validSlides.forEach(({ photo, url }, i) => {
-    const slide = document.createElement('div');
-    slide.className = 'slideshow__slide' + (i === 0 ? ' active' : '');
-    slide.style.backgroundImage = `url(${url})`;
-    slide.setAttribute('aria-hidden', i !== 0 ? 'true' : 'false');
-
-    const caption = document.createElement('div');
-    caption.className = 'slideshow__caption';
-    caption.textContent = photo.speciesName || '';
-    slide.appendChild(caption);
-    inner.appendChild(slide);
-
-    const dot = document.createElement('button');
-    dot.className = 'slideshow__dot' + (i === 0 ? ' active' : '');
-    dot.setAttribute('aria-label', `Foto ${i + 1}`);
-    dot.addEventListener('click', () => {
-      if (!ctx.destroyed) goToSlide(i, inner, dots);
-    });
-    dots.appendChild(dot);
-  });
-
-  clearInterval(_slideshowTimer);
-  _slideshowTimer = setInterval(() => {
-    if (ctx.destroyed) {
-      clearInterval(_slideshowTimer);
-      _slideshowTimer = null;
-      return;
-    }
-    _slideIndex = (_slideIndex + 1) % _slides.length;
-    goToSlide(_slideIndex, inner, dots);
-  }, SLIDESHOW_INTERVAL);
-}
-
-function goToSlide(idx, inner, dots) {
-  _slideIndex = idx;
-  inner.querySelectorAll('.slideshow__slide').forEach((s, i) => {
-    s.classList.toggle('active', i === idx);
-    s.setAttribute('aria-hidden', i !== idx ? 'true' : 'false');
-  });
-  dots.querySelectorAll('.slideshow__dot').forEach((d, i) => {
-    d.classList.toggle('active', i === idx);
-  });
 }
 
 // ══════════════════════════════════════════════════════════
@@ -838,23 +734,6 @@ function fmtTime(date) {
 function fmtDate(dateStr) {
   if (!dateStr) return '';
   return new Date(dateStr).toLocaleDateString('nl-NL', { day: 'numeric', month: 'short' });
-}
-
-function shuffleArray(arr) {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
-
-function txAll(store) {
-  return new Promise((resolve, reject) => {
-    const req = store.getAll();
-    req.onsuccess = () => resolve(req.result);
-    req.onerror   = () => reject(req.error);
-  });
 }
 
 function txGet(store, key) {
