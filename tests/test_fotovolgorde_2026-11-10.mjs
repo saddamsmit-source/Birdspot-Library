@@ -99,10 +99,13 @@ function flightTitlesAndImages(html) {
 {
   const flight = flightTitlesAndImages(recognitionPanel(byId.get('sp173')));
   assert.ok(flight, 'sp173 hoort een "In vlucht"-sectie te hebben');
-  assert.deepEqual(flight.titles, ['Mannetje', 'Juveniel', 'In vlucht']);
-  assert.equal(flight.plumageKeys.filter(k => k === 'adult_m' || k === 'juv').length, 2);
+  // Vluchtcontrole 10-11-2026 (eigenaarseis "alleen echte vlucht"): de juveniele foto toont neerstrijken
+  // in riet en staat sindsdien onder Verenkleed › Juveniel, niet meer onder "In vlucht".
+  assert.deepEqual(flight.titles, ['Mannetje', 'In vlucht']);
+  assert.equal(flight.plumageKeys.filter(k => k === 'adult_m').length, 1);
+  assert.ok(!flight.plumageKeys.includes('juv'), 'sp173 juveniel is geen vluchtfoto meer');
   assert.ok(flight.plumageKeys.includes('neutral'), 'sp173 hoort ook een neutrale (geslachtsloze) vluchtkaart te hebben');
-  console.log('FV-07 sp173 OK — Mannetje + Juveniel (bevestigd) + neutrale vluchtfoto zonder verzonnen geslacht');
+  console.log('FV-07 sp173 OK — Mannetje (bevestigd) + neutrale vluchtfoto; juveniel neerstrijkend staat onder Verenkleed');
 }
 
 // sp249 Blauwe Kiekendief — man/vrouw-verschil én meerdere vluchtfoto's: alle drie rollen bevestigd
