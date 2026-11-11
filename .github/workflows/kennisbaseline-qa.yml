@@ -1,0 +1,60 @@
+name: Birdspot Kennisbaseline en Soortaudit QA
+on:
+  pull_request:
+    paths:
+      - 'tools/kennisbaseline/**'
+      - 'src/data/speciesKnowledge.js'
+      - 'src/data/species.js'
+      - 'src/data/speciesLife.js'
+      - 'src/features/species/**'
+      - 'styles/species.css'
+      - 'sw.js'
+      - 'tests/test_kennisbaseline*.mjs'
+      - 'tests/test_kennisbaseline*.py'
+      - 'tests/test_soortaudit*'
+      - 'tests/test_vluchtcontrole.mjs'
+      - 'docs/fotokwaliteit/**'
+      - 'tools/fotokwaliteit/**'
+      - 'assets/species/field-guide-media.json'
+      - '.github/workflows/kennisbaseline-qa.yml'
+jobs:
+  kennisbaseline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r tests/requirements.txt
+      - run: python -m playwright install --with-deps chromium
+      - name: Kennisprofielen geldig en gegenereerde module gelijk aan de bron
+        run: python3 -I tools/kennisbaseline/build_knowledge.py --check
+      - name: Validator weigert ongeldige profielen
+        run: python3 tests/test_kennisbaseline_validator.py
+      - name: Contract, render, anti-verwisseling, offline (alle 597 soorten)
+        run: node tests/test_kennisbaseline.mjs
+      - name: Bestaande foto- en volgordecontracten blijven groen
+        run: |
+          node tests/test_fotovolgorde_2026-11-10.mjs
+          node tests/test_guide_poses.mjs
+          node tests/test_guide_photo_verification.mjs
+      - name: Vluchtcontrole en soortaudit (beoordeling = getoonde kaart, negatieve gevallen)
+        run: |
+          node tests/test_vluchtcontrole.mjs
+          node tests/test_soortaudit.mjs
+      - name: Soortaudit in de browser (390 px)
+        run: python tests/test_soortaudit_browser.py
+      - name: Dekkingsmatrix draait
+        run: node tools/kennisbaseline/coverage.mjs
+      - name: Browser 390 px en 1280 px
+        run: python tests/test_kennisbaseline_browser.py
+      - name: Screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: birdspot-kennisbaseline-screenshots
+          path: |
+            tests/screenshots/kennisbaseline/*.png
+            tests/screenshots/soortaudit/*.png
+          if-no-files-found: ignore

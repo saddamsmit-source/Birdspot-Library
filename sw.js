@@ -12,7 +12,7 @@
  *   birdspot-media           — foto's/IDB-exports (permanent)
  */
 
-const APP_VERSION = '1.21.0-review-candidate';
+const APP_VERSION = '1.27.0';
 const APP_CACHE   = `birdspot-app-v${APP_VERSION}`;
 const MEDIA_CACHE = 'birdspot-media';
 
@@ -75,6 +75,7 @@ const PRECACHE_PATHS = [
   'src/features/species/guideComparisons.js',
   'src/features/species/guideMedia.js',
   'src/features/species/detailSections.js',
+  'src/features/species/knowledgeSections.js',
   'src/features/sightings/view.js',
   'src/features/sightings/addSheet.js',
   'src/features/sightings/speciesPicker.js',
@@ -103,6 +104,7 @@ const PRECACHE_PATHS = [
   'src/data/db.js',
   'src/data/species.js',
   'src/data/speciesLife.js',
+  'src/data/speciesKnowledge.js',
   'src/data/speciesDistribution.js',
   'src/data/seasons.js',
 
@@ -129,8 +131,26 @@ self.addEventListener('install', event => {
     const cache = await caches.open(APP_CACHE);
     await cache.addAll(PRECACHE_URLS.map(url => new Request(url, { cache: 'reload' })));
     await Promise.all([precacheShowcase(), precacheGuidePhotos(), precacheFieldGuideMedia()]);
+    // Releasegate 1.27.0 (RU-02): een service worker van vóór 1.18.0 kent het 'apply-update'-bericht niet en
+    // haalt zijn app-shell network-first via de HTTP-cache op. Laat de nieuwe versie dan direct actief worden,
+    // anders kan die oude worker oude en nieuwe modules door elkaar serveren en start de app niet.
+    if (await legacyWorkerActive()) {
+      legacyUpgrade = true;
+      await self.skipWaiting();
+    }
   })());
 });
+
+let legacyUpgrade = false;
+
+async function legacyWorkerActive() {
+  if (!self.registration.active) return false;
+  const keys = await caches.keys();
+  return keys.some(key => {
+    const m = /^birdspot-app-v(\d+)\.(\d+)\./.exec(key);
+    return key !== APP_CACHE && m && (Number(m[1]) < 1 || (Number(m[1]) === 1 && Number(m[2]) < 18));
+  });
+}
 
 async function precacheGuidePhotos() {
   try {
@@ -179,7 +199,13 @@ self.addEventListener('activate', event => {
         }
       }
       // Neem meteen beheer over alle open tabs
-      return self.clients.claim();
+      await self.clients.claim();
+      // Een pagina van vóór 1.18.0 toont zijn updatemelding op dit bericht.
+      if (legacyUpgrade) {
+        for (const client of await self.clients.matchAll({ type: 'window' })) {
+          client.postMessage({ type: 'new-version', version: APP_VERSION });
+        }
+      }
     })
   );
 

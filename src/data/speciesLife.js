@@ -24,15 +24,15 @@ export const LIFE = Object.freeze({
    "period": "mrt–sep",
    "nest": "In boomholte, vaak oude spechtenholte of nestkast",
    "eggs": "2",
-   "incubation": "16–18 dagen",
-   "fledging": "27–28 dagen",
+   "incubation": "16–17 dagen",
+   "fledging": "ca. 24 dagen",
    "broods": "2–3",
    "months": "mrt-sep"
   },
   "diet": "Zaden, graan en groene plantendelen van akkers en graslanden",
   "behaviour": "Vaak in paren of kleine groepen; zit in oude lanen en bosranden",
   "migration": "Standvogel met enige doortrek in het najaar",
-  "voice": "Diep, herhaald \"oe-oe-oe\" dat steeds sneller wordt"
+  "voice": "Eentonige reeks tweelettergrepige koerroepen, wat lijkend op stadsduif"
  },
  "sp004": {
   "breeding": {
@@ -41,7 +41,7 @@ export const LIFE = Object.freeze({
    "eggs": "2",
    "incubation": "14–16 dagen",
    "fledging": "15–19 dagen",
-   "broods": "3–5",
+   "broods": "2–5",
    "months": "feb-okt"
   },
   "diet": "Zaden, graan en voer bij boerderijen en tuinen",
@@ -294,8 +294,8 @@ export const LIFE = Object.freeze({
    "period": "mrt–jun",
    "nest": "Overdekt koepelnest van takken hoog in boom of struik",
    "eggs": "5–7",
-   "incubation": "17–18 dagen",
-   "fledging": "24–30 dagen",
+   "incubation": "17–24 dagen",
+   "fledging": "22–30 dagen",
    "broods": "1",
    "months": "mrt-jun"
   },
@@ -368,9 +368,9 @@ export const LIFE = Object.freeze({
   "breeding": {
    "period": "apr–jun",
    "nest": "Komvormig takjesnest in een boom of struik",
-   "eggs": "4–6",
-   "incubation": "16–17 dagen",
-   "fledging": "19–23 dagen",
+   "eggs": "5–7",
+   "incubation": "16–21 dagen",
+   "fledging": "19–21 dagen",
    "broods": "1",
    "months": "apr-jun"
   },

@@ -54,6 +54,13 @@ for (const {birds, tip, flight} of GUIDE_COMPARISONS) {
     assert.ok(bird.source && bird.marks && species.has(id), `Ongeldige vergelijking: ${id}`);
     if (flight) {
       const photo = GUIDE_POSES[id]?.find(pose => pose.flight);
+      // Vluchtcontrole 10-11-2026: een afgekeurde vluchtfoto wordt niet door een ongeschikte vervangen.
+      // De vergelijking blijft (tekst), de positie staat expliciet als ontbrekend geregistreerd.
+      if (bird.photoMissing) {
+        assert.ok(!photo, `photoMissing maar er is wel een vluchtfoto: ${id}`);
+        assert.ok(String(bird.photoMissing).startsWith('vluchtcontrole'), `photoMissing zonder controleverwijzing: ${id}`);
+        continue;
+      }
       checkPhoto(id, photo);
       assert.notEqual(photo.image, GUIDE_PHOTOS[id]?.image, `Vluchtfoto is hoofdfoto: ${id}`);
       continue;

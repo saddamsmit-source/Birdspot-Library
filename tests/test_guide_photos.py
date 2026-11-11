@@ -49,16 +49,16 @@ def main():
       p.keyboard.press('Escape')
       assert not credit.locator('.photo-info__panel').is_visible()
      if sid == 'sp173':
-      gallery=p.locator('[data-plumage="adult_f"] .sd-plumage-gallery')
-      sitting=gallery.locator('img[src$="-female-rest.webp"]')
-      flight=gallery.locator('img[src$="-adult_f.webp"]')
+      # FQA-01 (ChatGPT-QA 10-11-2026): de vrouwtjesfoto in vlucht staat niet meer naast de zittende foto in de
+      # Vrouwtje-galerij, maar één keer onder "In vlucht" met het label Vrouwtje.
+      veren=p.locator('xpath=//*[@id="sdPanel-herkenning"]//*[@data-plumage="adult_f"][not(ancestor::section[@aria-label="In vlucht"])]//*[contains(@class,"sd-plumage-gallery")]')
+      sitting=veren.locator('img[src$="-female-rest.webp"]')
       sitting.evaluate('i => i.decode()')
+      assert sitting.bounding_box()['width'] > 100
+      assert veren.locator('img[src$="-adult_f.webp"]').count() == 0
+      flight=p.locator('#sdPanel-herkenning section[aria-label="In vlucht"] [data-plumage="adult_f"] img[src$="-adult_f.webp"]')
       flight.evaluate('i => i.decode()')
-      a,b=sitting.bounding_box(),flight.bounding_box()
-      if width > 390:
-       assert abs(a['y']-b['y']) < 2 and abs(a['x']-b['x']) > 30
-      else:
-       assert abs(a['x']-b['x']) < 2 and abs(a['y']-b['y']) > 50
+      assert flight.count() == 1 and flight.bounding_box()['width'] > 100
      # The title must not obscure the photo.
      geometry=p.evaluate('''(id)=>{const i=document.querySelector('#detailThumb-'+id+' img').getBoundingClientRect();const t=document.querySelector('.signature-species-detail-intro').getBoundingClientRect();return {imageBottom:i.bottom,titleTop:t.top}}''',sid)
      assert geometry['titleTop'] >= geometry['imageBottom'], (width,sid,geometry)
