@@ -1,6 +1,6 @@
 # Birdspot — soortaudit van de collectie met foto's
 
-Gegenereerd door `tools/fotokwaliteit/build_soortaudit_tracker.py` · status voor commit `c4c084f8545ebca0eb2f2b188b4b8021776e27ea` · 2026-11-11.
+Gegenereerd door `tools/fotokwaliteit/build_soortaudit_tracker.py` · status voor commit `7cdfd22b58495a91552ef3f1cfa61906a11f5760` · 2026-11-11.
 Statussen: VERIFIED / PARTIALLY TESTED / NOT TESTED / BLOCKED. Een geautomatiseerde rendercontrole telt **niet** als visuele of inhoudelijke controle.
 Beoordeeld volgens `docs/BIRDSPOT_KWALITEITSNORM.md` (biometrie §1, herkenning §2, foto §3). Verbeterwensen zijn voor de latere beoordeling door de eigenaar en blokkeren de batch niet.
 
@@ -580,7 +580,7 @@ Batch M3 · 2026-11-11 · SHA `ae8b8a4daeeb3e89cde4523ea05f33e14fe8b44f` · tech
 
 ### sp048 Koperwiek — PARTIALLY TESTED
 
-Batch M4 · 2026-11-11 · SHA `c4c084f8545ebca0eb2f2b188b4b8021776e27ea` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M4 · 2026-11-11 · SHA `7cdfd22b58495a91552ef3f1cfa61906a11f5760` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -593,7 +593,7 @@ Batch M4 · 2026-11-11 · SHA `c4c084f8545ebca0eb2f2b188b4b8021776e27ea` · tech
 - **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** Verenkleed van beide geslachten gelijk. Neutrale fotolabels.
 - **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Wenkbrauw en kleur onder de vleugel; open: —; resterende dataverschillen: 2
-- **Browser:** 390x844 Chromium 145 (Playwright) · Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik
+- **Browser:** 390x844 Chromium 145 (Playwright) · Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik, broedstatus en afwezigheid van een Nederlandse broedkalender
 - **Onzeker:** De bestaande opname toont opvliegen tussen planten. Ze blijft in de aanvullende sectie.
 - **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
 
@@ -774,7 +774,7 @@ Batch M4 · 2026-11-11 · SHA `635d78a2eae05c63bfbb43f8d9a5dc1d550c7fde` · tech
 
 ### sp072 Graspieper — VERIFIED
 
-Batch M4 · 2026-11-11 · SHA `c4c084f8545ebca0eb2f2b188b4b8021776e27ea` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M4 · 2026-11-11 · SHA `7cdfd22b58495a91552ef3f1cfa61906a11f5760` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -793,7 +793,7 @@ Batch M4 · 2026-11-11 · SHA `c4c084f8545ebca0eb2f2b188b4b8021776e27ea` · tech
 
 ### sp078 Meerkoet — VERIFIED
 
-Batch M4 · 2026-11-11 · SHA `c4c084f8545ebca0eb2f2b188b4b8021776e27ea` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M4 · 2026-11-11 · SHA `7cdfd22b58495a91552ef3f1cfa61906a11f5760` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|

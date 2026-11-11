@@ -512,13 +512,13 @@
     "Overige herkenningsfoto's"
    ],
    "flight": [],
-   "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik",
+   "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik, broedstatus en afwezigheid van een Nederlandse broedkalender",
    "lijktOp": "SAB-09 OK (390 px)",
    "offline": {
     "status": "VERIFIED",
     "method": "Na precache herladen en de kaart heropend met HTTP-server uit. Alle eigen beelden gedecodeerd."
    },
-   "testedOn": "c4c084f8545ebca0eb2f2b188b4b8021776e27ea",
+   "testedOn": "7cdfd22b58495a91552ef3f1cfa61906a11f5760",
    "date": "2026-11-11"
   },
   "sp072": {
@@ -539,7 +539,7 @@
     "status": "VERIFIED",
     "method": "Na precache herladen en de kaart heropend met HTTP-server uit. Alle eigen beelden gedecodeerd."
    },
-   "testedOn": "c4c084f8545ebca0eb2f2b188b4b8021776e27ea",
+   "testedOn": "7cdfd22b58495a91552ef3f1cfa61906a11f5760",
    "date": "2026-11-11"
   },
   "sp078": {
@@ -561,7 +561,7 @@
     "status": "VERIFIED",
     "method": "Na precache herladen en de kaart heropend met HTTP-server uit. Alle eigen beelden gedecodeerd."
    },
-   "testedOn": "c4c084f8545ebca0eb2f2b188b4b8021776e27ea",
+   "testedOn": "7cdfd22b58495a91552ef3f1cfa61906a11f5760",
    "date": "2026-11-11"
   }
  }

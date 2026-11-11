@@ -1,5 +1,5 @@
 {
- "sha": "c4c084f8545ebca0eb2f2b188b4b8021776e27ea",
+ "sha": "7cdfd22b58495a91552ef3f1cfa61906a11f5760",
  "generated": "2026-11-11",
  "species": [
   {
@@ -2771,7 +2771,7 @@
    "audited": true,
    "batch": "M4",
    "date": "2026-11-11",
-   "sha": "c4c084f8545ebca0eb2f2b188b4b8021776e27ea",
+   "sha": "7cdfd22b58495a91552ef3f1cfa61906a11f5760",
    "assets": [
     {
      "image": "/assets/species/sp048.webp",
@@ -2876,13 +2876,13 @@
      "Overige herkenningsfoto's"
     ],
     "flight": [],
-    "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik",
+    "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik, broedstatus en afwezigheid van een Nederlandse broedkalender",
     "lijktOp": "SAB-09 OK (390 px)",
     "offline": {
      "status": "VERIFIED",
      "method": "Na precache herladen en de kaart heropend met HTTP-server uit. Alle eigen beelden gedecodeerd."
     },
-    "testedOn": "c4c084f8545ebca0eb2f2b188b4b8021776e27ea",
+    "testedOn": "7cdfd22b58495a91552ef3f1cfa61906a11f5760",
     "date": "2026-11-11"
    },
    "errors": [],
@@ -3785,7 +3785,7 @@
    "audited": true,
    "batch": "M4",
    "date": "2026-11-11",
-   "sha": "c4c084f8545ebca0eb2f2b188b4b8021776e27ea",
+   "sha": "7cdfd22b58495a91552ef3f1cfa61906a11f5760",
    "assets": [
     {
      "image": "/assets/species/sp072.webp",
@@ -3895,7 +3895,7 @@
      "status": "VERIFIED",
      "method": "Na precache herladen en de kaart heropend met HTTP-server uit. Alle eigen beelden gedecodeerd."
     },
-    "testedOn": "c4c084f8545ebca0eb2f2b188b4b8021776e27ea",
+    "testedOn": "7cdfd22b58495a91552ef3f1cfa61906a11f5760",
     "date": "2026-11-11"
    },
    "errors": [],
@@ -3991,7 +3991,7 @@
    "audited": true,
    "batch": "M4",
    "date": "2026-11-11",
-   "sha": "c4c084f8545ebca0eb2f2b188b4b8021776e27ea",
+   "sha": "7cdfd22b58495a91552ef3f1cfa61906a11f5760",
    "assets": [
     {
      "image": "/assets/species/sp078.webp",
@@ -4115,7 +4115,7 @@
      "status": "VERIFIED",
      "method": "Na precache herladen en de kaart heropend met HTTP-server uit. Alle eigen beelden gedecodeerd."
     },
-    "testedOn": "c4c084f8545ebca0eb2f2b188b4b8021776e27ea",
+    "testedOn": "7cdfd22b58495a91552ef3f1cfa61906a11f5760",
     "date": "2026-11-11"
    },
    "errors": [],
