@@ -161,7 +161,7 @@ export function guidePlumageGroups(s) {
     const variant = plumagePhoto(id, 'adult_m');
     const photos = variant && !photoRole(variant) && variant.image !== heroImage ? [variant] : [];
     const badge = s.guideReview?.similarSexes ? 'Man en vrouw lijken op elkaar' : '';
-    const index = groups.findIndex(group => !['adult_m', 'adult_f', 'juv'].includes(group.key));
+    const index = groups.findIndex(group => !['adult_m', 'adult_f'].includes(group.key));
     groups.splice(index < 0 ? groups.length : index, 0, {
       key: 'adult', icon: 'equal', title: 'Volwassen', text: plumage.adult_m, badge, photos,
       heroRef: !photos.length && Boolean(heroPhoto) && !photoRole(heroPhoto),

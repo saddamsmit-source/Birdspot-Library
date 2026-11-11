@@ -1,15 +1,16 @@
 {
   "_meta": {
     "batch": "M3",
-    "phase": 3,
+    "phase": 4,
     "date": "2026-11-11",
-    "title": "K02 fasen 1–3 — negen gecontroleerde soorten",
+    "title": "K02 fasen 1–4 — twaalf gecontroleerde soorten",
     "reviewer": "ChatGPT (Codex), beeldinspectie per fase met controle van bronpagina’s. Onafhankelijke review staat open.",
     "basis": "reviewversie 41c7fed, M2-rapport §9 en Birdspot-kwaliteitsnorm",
     "phaseReports": [
       "../M3_FASE_1_2026-11-11.md",
       "../M3_FASE_2_2026-11-11.md",
-      "../M3_FASE_3_2026-11-11.md"
+      "../M3_FASE_3_2026-11-11.md",
+      "../M3_FASE_4_2026-11-11.md"
     ]
   },
   "species": {
@@ -305,6 +306,146 @@
       "sexPolicy": "Geslacht alleen vermeld waar bron en beeld dit dragen. De twee juvenielen worden zonder geslacht aangeduid.",
       "uncertain": [
         "REVIEW REQUIRED: de Engelse en Sloveense bijschriften bij het vermoedelijke eclipskleed geven een verschillend geslacht."
+      ]
+    },
+    "sp091": {
+      "assets": {
+        "/assets/species/plumage/sp091-hero-male.webp": {
+          "role": "Hoofdfoto",
+          "content": "Zwemmende woerd met kastanjebruine kop, groen oogveld en gele staartzijde.",
+          "sexAge": "Bron noemt een mannetje. Zichtbaar prachtkleed.",
+          "quality": "Duidelijk zijaanzicht.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp091-adult_m.webp": {
+          "role": "Verenkleed (Mannetje)",
+          "content": "Een andere woerd in prachtkleed met goed zichtbare flankstreep.",
+          "sexAge": "Bron noemt een mannetje. Kop en flank ondersteunen het label.",
+          "quality": "De flankstreep is duidelijker dan op de hoofdfoto.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp091-adult_f.webp": {
+          "role": "Verenkleed (Vrouwtje)",
+          "content": "Bruin gevlekt kleed, relatief egale kop en lichte staartzijde.",
+          "sexAge": "Fotograaf benoemt een vrouwtje.",
+          "quality": "Duidelijke soort- en kleedkenmerken.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp091-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Bruine jonge vogel met groene vleugelspiegel.",
+          "sexAge": "iNaturalist-annotatie Juvenile in de bronaudit van 9 november. Geen geslachtslabel.",
+          "quality": "Kleine uitsnede. Kop en vleugeltekening zijn zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp091-eclipse.webp": {
+          "role": "Verenkleed (Overgang naar eclipskleed)",
+          "content": "Bruin getekende vogel met resterende groene kopveren.",
+          "sexAge": "Fotobeschrijving vermeldt een ruiend mannetje. Beeld ondersteunt overgangskleed.",
+          "quality": "Herkenbaar voorbeeld van de overgang.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp091-flight.webp": {
+          "role": "In vlucht (Mannetje)",
+          "content": "Vrije vlucht met open vleugels, groene spiegel en groen oogveld.",
+          "sexAge": "Kop en vleugeltekening bevestigen een woerd in prachtkleed.",
+          "quality": "Helder beeld van spiegel en silhouet.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/sp091.webp": {
+          "role": "Overige herkenningsfoto's",
+          "content": "Mannetje in prachtkleed en bruine Wintertaling op ondiep water.",
+          "sexAge": "Mannetje herkenbaar. Bruine vogel vermeld zonder afzonderlijk leeftijdslabel.",
+          "quality": "Bruikbaar zij-aan-zijbeeld.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "De ruifoto vermeldt overgang naar eclipskleed. Het juveniel staat zonder geslachtslabel.",
+        "De vergelijking met Zomertaling legt de combinatie van kop, staartzijde en vleugel uit."
+      ],
+      "missing": [],
+      "wishes": [
+        "Vervang de kleine juvenielenfoto als een scherper bronbeeld met bevestigde leeftijd beschikbaar komt."
+      ],
+      "sexPolicy": "De kaart vermeldt geslacht waar bron en verenkleed dat ondersteunen. Het juveniel blijft zonder geslachtslabel.",
+      "uncertain": [
+        "De twee iNaturalist-pagina’s waren op 11 november niet opnieuw bereikbaar. Eerder vastgelegd bronbewijs is gebruikt."
+      ]
+    },
+    "sp105": {
+      "assets": {
+        "/assets/species/sp105.webp": {
+          "role": "Hoofdfoto",
+          "content": "Haan met rode huid rond het oog, glanzende kop, witte halsring en lange staart.",
+          "sexAge": "Kenmerken bevestigen een mannetje.",
+          "quality": "Hele vogel zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp105-adult_f.webp": {
+          "role": "Verenkleed (Vrouwtje)",
+          "content": "Vrouwtje Fazant op Texel, met donkere vlekken op het bruine kleed en een lange gebandeerde staart.",
+          "sexAge": "Fotograaf benoemt een vrouwtje. Bruin kleed en lange staart ondersteunen het label.",
+          "quality": "Scherp genoeg om tekening en staartvorm te zien.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp105-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Fazant in Finland, met een bruin gevlekt kleed en een nog korte staart.",
+          "sexAge": "Fotograaf benoemt een jonge Fazant. Geslacht onbekend.",
+          "quality": "Korte staart en tekening goed zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp105-flight.webp": {
+          "role": "In vlucht (Mannetje)",
+          "content": "Vrije vlucht met gespreide, afgeronde vleugels en lange staart.",
+          "sexAge": "Rode huid rond het oog, halsring en kleed bevestigen het mannetje.",
+          "quality": "Zijaanzicht van de vogel uit South Dakota.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Vrouwtjesfoto van Texel en juvenielenfoto uit Finland toegevoegd. Vergelijking met Patrijs gebruikt staart en lichaamsbouw."
+      ],
+      "missing": [],
+      "sexPolicy": "Haan en hen waar bron en kenmerken overeenstemmen. Juveniel zonder geslachtslabel.",
+      "uncertain": []
+    },
+    "sp141": {
+      "assets": {
+        "/assets/species/plumage/sp141-adult.webp": {
+          "role": "Hoofdfoto",
+          "content": "Vrije vlucht van onderaf met donker silhouet en lange sikkelvleugels.",
+          "sexAge": "Fotograaf benoemt de soort. Geslacht en exacte leeftijd onbekend.",
+          "quality": "Goed overzicht van het typische silhouet.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp141-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Juveniele Gierzwaluw tijdens opvang na redding, met lichte veerranden op kop en vleugels.",
+          "sexAge": "Fotograaf benoemt een juveniel. Lichte veerranden zichtbaar. Geslacht onbekend.",
+          "quality": "Detailfoto uit opvang. De context staat bij de foto.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp141-flight.webp": {
+          "role": "In vlucht",
+          "content": "Gierzwaluw in vrije vlucht, met lange, smalle vleugels en een gespreide gevorkte staart.",
+          "sexAge": "De bron bevestigt soort en vlucht. Leeftijd en geslacht onbekend.",
+          "quality": "Andere opname en kijkhoek dan de hoofdfoto.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Een juvenielenfoto met expliciete opvangcontext en een afzonderlijke vrije-vluchtfoto toegevoegd. De kaart benoemt overeenkomend verenkleed bij mannetje en vrouwtje.",
+        "Herkenningsprofiel vergelijkt Gierzwaluw met Boerenzwaluw en Huiszwaluw."
+      ],
+      "missing": [],
+      "wishes": [
+        "Een duidelijk juveniel in een natuurlijke situatie als aanvullende foto, zodra leeftijd, bron en licentie bevestigd zijn."
+      ],
+      "sexPolicy": "Neutrale labels. De geslachten hebben hetzelfde verenkleed.",
+      "uncertain": [
+        "De fotograaf vermeldt bij beide vluchtfoto’s geen exacte leeftijd."
       ]
     }
   }

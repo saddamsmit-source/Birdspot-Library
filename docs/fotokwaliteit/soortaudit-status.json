@@ -1,5 +1,5 @@
 {
- "sha": "7640bab7427054eeeeef30a9856dc82fcda7ddba",
+ "sha": "70c4f3fec7508812ab9bb0b50833b52706ce4720",
  "generated": "2026-11-11",
  "species": [
   {
@@ -3294,9 +3294,169 @@
    "id": "sp091",
    "nameNL": "Wintertaling",
    "family": "Eenden",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M3",
+   "date": "2026-11-11",
+   "sha": "70c4f3fec7508812ab9bb0b50833b52706ce4720",
+   "assets": [
+    {
+     "image": "/assets/species/plumage/sp091-hero-male.webp",
+     "role": "Hoofdfoto",
+     "content": "Zwemmende woerd met kastanjebruine kop, groen oogveld en gele staartzijde.",
+     "sexAge": "Bron noemt een mannetje. Zichtbaar prachtkleed.",
+     "quality": "Duidelijk zijaanzicht.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "geverifieerde import 09-11 (SHA-1 ed2eefdff8…), CC BY-SA 4.0 · Charles J. Sharp",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp091-adult_m.webp",
+     "role": "Verenkleed (Mannetje)",
+     "content": "Een andere woerd in prachtkleed met goed zichtbare flankstreep.",
+     "sexAge": "Bron noemt een mannetje. Kop en flank ondersteunen het label.",
+     "quality": "De flankstreep is duidelijker dan op de hoofdfoto.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Koshy Koshy from Faridabad, Haryana, India",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp091-adult_f.webp",
+     "role": "Verenkleed (Vrouwtje)",
+     "content": "Bruin gevlekt kleed, relatief egale kop en lichte staartzijde.",
+     "sexAge": "Fotograaf benoemt een vrouwtje.",
+     "quality": "Duidelijke soort- en kleedkenmerken.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Frank Vassen from Brussels, Belgium",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp091-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Bruine jonge vogel met groene vleugelspiegel.",
+     "sexAge": "iNaturalist-annotatie Juvenile in de bronaudit van 9 november. Geen geslachtslabel.",
+     "quality": "Kleine uitsnede. Kop en vleugeltekening zijn zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Se Lena, some rights reserved (CC BY)",
+      "annotations": [
+       "Life Stage: Juvenile",
+       "Sex: Male",
+       "Alive or Dead: Alive",
+       "Evidence of Presence: Organism"
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp091-eclipse.webp",
+     "role": "Verenkleed (Overgang naar eclipskleed)",
+     "content": "Bruin getekende vogel met resterende groene kopveren.",
+     "sexAge": "Fotobeschrijving vermeldt een ruiend mannetje. Beeld ondersteunt overgangskleed.",
+     "quality": "Herkenbaar voorbeeld van de overgang.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Roy Lowry, some rights reserved (CC BY)",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp091-flight.webp",
+     "role": "In vlucht (Mannetje)",
+     "content": "Vrije vlucht met open vleugels, groene spiegel en groen oogveld.",
+     "sexAge": "Kop en vleugeltekening bevestigen een woerd in prachtkleed.",
+     "quality": "Helder beeld van spiegel en silhouet.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · Ferran Pestaña from Barcelona, España",
+      "annotations": []
+     },
+     "flight": {
+      "n": 16,
+      "id": "sp091",
+      "nameNL": "Wintertaling",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": "male",
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0"
+     }
+    },
+    {
+     "image": "/assets/species/sp091.webp",
+     "role": "Overige herkenningsfoto's",
+     "content": "Mannetje in prachtkleed en bruine Wintertaling op ondiep water.",
+     "sexAge": "Mannetje herkenbaar. Bruine vogel vermeld zonder afzonderlijk leeftijdslabel.",
+     "quality": "Bruikbaar zij-aan-zijbeeld.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · gailhampshire from Cradley, Malvern, U.K",
+      "annotations": []
+     },
+     "flight": null
+    }
+   ],
+   "corrections": [
+    "De ruifoto vermeldt overgang naar eclipskleed. Het juveniel staat zonder geslachtslabel.",
+    "De vergelijking met Zomertaling legt de combinatie van kop, staartzijde en vleugel uit."
+   ],
+   "missing": [],
+   "wishes": [
+    "Vervang de kleine juvenielenfoto als een scherper bronbeeld met bevestigde leeftijd beschikbaar komt."
+   ],
+   "uncertain": [
+    "De twee iNaturalist-pagina’s waren op 11 november niet opnieuw bereikbaar. Eerder vastgelegd bronbewijs is gebruikt."
+   ],
+   "sexPolicy": "De kaart vermeldt geslacht waar bron en verenkleed dat ondersteunen. Het juveniel blijft zonder geslachtslabel.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "PARTIALLY TESTED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Kop, staartzijde en bovenvleugel bij bruine vogels"
+    ],
+    "open": [
+     "De iNaturalist-waarnemingen bij jeugdkleed en rui konden op 11 november niet opnieuw worden geopend. De foto-identiteit en annotaties uit de bronaudit van 9 november zijn hergebruikt. De jeugdfoto krijgt geen geslachtslabel."
+    ],
+    "discrepancies": 1
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp092",
@@ -3779,9 +3939,119 @@
    "id": "sp105",
    "nameNL": "Fazant",
    "family": "Fazanten",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M3",
+   "date": "2026-11-11",
+   "sha": "70c4f3fec7508812ab9bb0b50833b52706ce4720",
+   "assets": [
+    {
+     "image": "/assets/species/sp105.webp",
+     "role": "Hoofdfoto",
+     "content": "Haan met rode huid rond het oog, glanzende kop, witte halsring en lange staart.",
+     "sexAge": "Kenmerken bevestigen een mannetje.",
+     "quality": "Hele vogel zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC0 · Romzig",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp105-adult_f.webp",
+     "role": "Verenkleed (Vrouwtje)",
+     "content": "Vrouwtje Fazant op Texel, met donkere vlekken op het bruine kleed en een lange gebandeerde staart.",
+     "sexAge": "Fotograaf benoemt een vrouwtje. Bruin kleed en lange staart ondersteunen het label.",
+     "quality": "Scherp genoeg om tekening en staartvorm te zien.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van de originele Commons-JPEG), CC0 1.0 · Bj.schoenmakers",
+      "annotations": [
+       "Fotograaf benoemt een vrouwtje. Het verenkleed en de staart ondersteunen het label."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp105-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge Fazant in Finland, met een bruin gevlekt kleed en een nog korte staart.",
+     "sexAge": "Fotograaf benoemt een jonge Fazant. Geslacht onbekend.",
+     "quality": "Korte staart en tekening goed zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van de originele Commons-JPEG), CC0 1.0 · Estormiz",
+      "annotations": [
+       "Fotograaf benoemt een jonge Fazant. Het geslacht blijft onbekend."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp105-flight.webp",
+     "role": "In vlucht (Mannetje)",
+     "content": "Vrije vlucht met gespreide, afgeronde vleugels en lange staart.",
+     "sexAge": "Rode huid rond het oog, halsring en kleed bevestigen het mannetje.",
+     "quality": "Zijaanzicht van de vogel uit South Dakota.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), Public domain · U.S. Fish and Wildlife Service Headquarters",
+      "annotations": []
+     },
+     "flight": {
+      "n": 18,
+      "id": "sp105",
+      "nameNL": "Fazant",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": "male",
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), Public domain"
+     }
+    }
+   ],
+   "corrections": [
+    "Vrouwtjesfoto van Texel en juvenielenfoto uit Finland toegevoegd. Vergelijking met Patrijs gebruikt staart en lichaamsbouw."
+   ],
+   "missing": [],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "Haan en hen waar bron en kenmerken overeenstemmen. Juveniel zonder geslachtslabel.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Staartlengte en bouw bij bruine vogels"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp106",
@@ -3907,9 +4177,126 @@
    "id": "sp141",
    "nameNL": "Gierzwaluw",
    "family": "Gierzwaluwen",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M3",
+   "date": "2026-11-11",
+   "sha": "70c4f3fec7508812ab9bb0b50833b52706ce4720",
+   "assets": [
+    {
+     "image": "/assets/species/plumage/sp141-adult.webp",
+     "role": "Hoofdfoto",
+     "content": "Vrije vlucht van onderaf met donker silhouet en lange sikkelvleugels.",
+     "sexAge": "Fotograaf benoemt de soort. Geslacht en exacte leeftijd onbekend.",
+     "quality": "Goed overzicht van het typische silhouet.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
+      "annotations": []
+     },
+     "flight": {
+      "n": 21,
+      "id": "sp141",
+      "nameNL": "Gierzwaluw",
+      "registry": "GUIDE_PLUMAGE.adult_m",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 4.0"
+     }
+    },
+    {
+     "image": "/assets/species/plumage/sp141-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Juveniele Gierzwaluw tijdens opvang na redding, met lichte veerranden op kop en vleugels.",
+     "sexAge": "Fotograaf benoemt een juveniel. Lichte veerranden zichtbaar. Geslacht onbekend.",
+     "quality": "Detailfoto uit opvang. De context staat bij de foto.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van de originele Commons-JPEG), CC BY 4.0 · Marie-Lan Taÿ Pamart",
+      "annotations": [
+       "Fotograaf benoemt een juveniel dat na redding werd opgevangen. De lichte veerranden ondersteunen het label."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp141-flight.webp",
+     "role": "In vlucht",
+     "content": "Gierzwaluw in vrije vlucht, met lange, smalle vleugels en een gespreide gevorkte staart.",
+     "sexAge": "De bron bevestigt soort en vlucht. Leeftijd en geslacht onbekend.",
+     "quality": "Andere opname en kijkhoek dan de hoofdfoto.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van de originele Commons-JPEG), CC BY 4.0 · Alexis Lours",
+      "annotations": [
+       "Fotograaf benoemt een Gierzwaluw in vlucht. Leeftijd en geslacht zijn niet vastgesteld."
+      ]
+     },
+     "flight": {
+      "n": 146,
+      "id": "sp141",
+      "nameNL": "Gierzwaluw",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Gierzwaluw in vrije vlucht, met lange, smalle vleugels en een gespreide gevorkte staart.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "Oorspronkelijke Commons-JPEG gedownload en naar WebP omgezet, CC BY 4.0."
+     }
+    }
+   ],
+   "corrections": [
+    "Een juvenielenfoto met expliciete opvangcontext en een afzonderlijke vrije-vluchtfoto toegevoegd. De kaart benoemt overeenkomend verenkleed bij mannetje en vrouwtje.",
+    "Herkenningsprofiel vergelijkt Gierzwaluw met Boerenzwaluw en Huiszwaluw."
+   ],
+   "missing": [],
+   "wishes": [
+    "Een duidelijk juveniel in een natuurlijke situatie als aanvullende foto, zodra leeftijd, bron en licentie bevestigd zijn."
+   ],
+   "uncertain": [
+    "De fotograaf vermeldt bij beide vluchtfoto’s geen exacte leeftijd."
+   ],
+   "sexPolicy": "Neutrale labels. De geslachten hebben hetzelfde verenkleed.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Vleugelvorm, onderzijde en staart in vlucht"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp143",

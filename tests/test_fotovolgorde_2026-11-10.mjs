@@ -193,4 +193,14 @@ function flightTitlesAndImages(html) {
   console.log('FV-08 OK — lege kleedkaart verwijst naar de hoofdfoto wanneer die dat kleed toont');
 }
 
-console.log('Fotovolgorde (Opdracht 3): alle controles geslaagd (FV-01..FV-08)');
+// FV-09: een gedeelde volwassen kleedgroep hoort vóór de juvenielenkaart.
+{
+  const html = recognitionPanel(byId.get('sp141'));
+  const adult = html.indexOf('data-plumage="adult"');
+  const juvenile = html.indexOf('data-plumage="juv"');
+  assert.ok(adult >= 0 && juvenile > adult, 'FV-09 Gierzwaluw: Volwassen hoort vóór Juveniel');
+  assert.ok(html.slice(adult, juvenile).includes('sd-hero-ref'), 'FV-09 Gierzwaluw: verwijzing naar hoofdfoto ontbreekt');
+  console.log('FV-09 OK — gedeelde volwassen kleedgroep vóór Juveniel');
+}
+
+console.log('Fotovolgorde (Opdracht 3): alle controles geslaagd (FV-01..FV-09)');
