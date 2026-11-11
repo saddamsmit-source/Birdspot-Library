@@ -1,6 +1,6 @@
 {
- "sha": "61ad1e3",
- "generated": "2026-11-10",
+ "sha": "7cdfd22b58495a91552ef3f1cfa61906a11f5760",
+ "generated": "2026-11-11",
  "species": [
   {
    "id": "sp002",
@@ -1530,17 +1530,185 @@
    "id": "sp022",
    "nameNL": "Zwarte Kraai",
    "family": "Kraaien",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M3",
+   "date": "2026-11-11",
+   "sha": "11c3751aecaabc37b41feb23fd364fe3298ce1dd",
+   "assets": [
+    {
+     "image": "/assets/species/sp022.webp",
+     "role": "Hoofdfoto",
+     "content": "Zwarte kraai in zijaanzicht op een tak. De krachtige snavel, kop en het zwarte kleed zijn zichtbaar.",
+     "sexAge": "Leeftijd en geslacht zijn niet bevestigd door de fotobron.",
+     "quality": "Scherp zijaanzicht.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp022-flight.webp",
+     "role": "In vlucht",
+     "content": "Vogel vrij in de lucht met gespreide vleugels. De foto en bronbeschrijving tonen dezelfde vluchtrol.",
+     "sexAge": "Leeftijd en geslacht zijn niet bevestigd door de fotobron.",
+     "quality": "Bruikbaar voor silhouet en vleugelvorm.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Marie-Lan Taÿ Pamart",
+      "annotations": []
+     },
+     "flight": {
+      "n": 56,
+      "id": "sp022",
+      "nameNL": "Zwarte Kraai",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 4.0"
+     }
+    }
+   ],
+   "corrections": [
+    "Bronprofiel met vergelijking met Roek en Kauw. De snavelbasis is bij jonge Roeken geen betrouwbaar enkelvoudig onderscheid.",
+    "Lengte en spanwijdte als indicatieve band berekend met Vogelbescherming en RSPB."
+   ],
+   "missing": [
+    "Afzonderlijke juvenielenfoto"
+   ],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "Geslachten zijn uiterlijk gelijkend. De kaart houdt deze foto’s neutraal.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "PARTIALLY TESTED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": false,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Snavelbasis"
+    ],
+    "open": [
+     "Een afzonderlijke juvenielenfoto en een eigen geluidsopname voor de gids ontbreken."
+    ],
+    "discrepancies": 0
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
   },
   {
    "id": "sp025",
    "nameNL": "Kauw",
    "family": "Kraaien",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M3",
+   "date": "2026-11-11",
+   "sha": "11c3751aecaabc37b41feb23fd364fe3298ce1dd",
+   "assets": [
+    {
+     "image": "/assets/species/sp025.webp",
+     "role": "Hoofdfoto",
+     "content": "Kauw in zijaanzicht op een tak. Lichte iris, grijze nek en de korte donkere snavel zijn zichtbaar.",
+     "sexAge": "Fotobron bevestigt de soort. Leeftijd en geslacht zijn niet expliciet geannoteerd.",
+     "quality": "Scherpe, goed leesbare kop.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp025-flight.webp",
+     "role": "Overige herkenningsfoto’s (landingshouding)",
+     "content": "Frontaal beeld met uitgespreide staart en vooruitgestoken poten tussen takken.",
+     "sexAge": "Leeftijd en geslacht zijn niet bevestigd door de fotobron.",
+     "quality": "Bruikbaar als aanvullende herkenningsfoto.",
+     "verdict": "uit-rol",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · hedera.baltica from Wrocław, Poland",
+      "annotations": []
+     },
+     "flight": {
+      "n": 55,
+      "id": "sp025",
+      "nameNL": "Kauw",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "landen",
+      "quality": "goed",
+      "decision": "uit-rol",
+      "target": "overig",
+      "newLabel": "Landend tussen takken",
+      "newNote": "Van voren: grijze nek en lichte iris.",
+      "reason": "Frontale landingsnadering met poten naar voren en gespreide staart.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0"
+     }
+    }
+   ],
+   "corrections": [
+    "De bestaande landingsfoto blijft buiten In vlucht. Het kennisprofiel maakt het leeftijdsvoorbehoud bij oogkleur expliciet."
+   ],
+   "missing": [
+    "Afzonderlijke juvenielenfoto",
+    "Vrije-vluchtfoto"
+   ],
+   "wishes": [],
+   "uncertain": [
+    "De fotobron noemt het beeld in algemene zin “in flight”. De zichtbare poten en houding ondersteunen de specifiekere Birdspot-indeling als landingshouding."
+   ],
+   "sexPolicy": "Geslachten zijn uiterlijk gelijkend. De kaart houdt beide foto’s neutraal.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "PARTIALLY TESTED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": false,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Iris en achterhoofd"
+    ],
+    "open": [
+     "Een afzonderlijke juvenielenfoto, een vrije-vluchtfoto en een eigen geluidsopname voor de gids ontbreken."
+    ],
+    "discrepancies": 0
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
   },
   {
    "id": "sp026",
@@ -1647,17 +1815,274 @@
    "id": "sp029",
    "nameNL": "Koolmees",
    "family": "Mezen",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M4",
+   "date": "2026-11-11",
+   "sha": "635d78a2eae05c63bfbb43f8d9a5dc1d550c7fde",
+   "assets": [
+    {
+     "image": "/assets/species/plumage/sp029-adult_m.webp",
+     "role": "Hoofdfoto (Mannetje)",
+     "content": "Mannetje Koolmees met zwarte kop, witte wang en brede donkere buikstreep.",
+     "sexAge": "Fotograaf vermeldt een mannetje. Brede buikstreep zichtbaar.",
+     "quality": "Herkenbare kop en onderzijde.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY-SA 4.0 · Charles J. Sharp",
+      "annotations": [
+       "De fotograaf vermeldt een mannetje. De brede donkere buikstreep ondersteunt dat label."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp029-adult_f.webp",
+     "role": "Verenkleed (Vrouwtje)",
+     "content": "Vrouwtje Koolmees met witte wangen en een smalle, onderbroken donkere buikstreep.",
+     "sexAge": "Fotograaf vermeldt een vrouwtje. Smalle, onderbroken buikstreep zichtbaar.",
+     "quality": "Vooraanzicht toont de streep goed.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY-SA 4.0 · Evas-naturfotografie",
+      "annotations": [
+       "De fotograaf vermeldt een vrouwtje. Het vooraanzicht toont de smallere buikstreep."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp029-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Juveniele Koolmees met doffe kap, lichte wang en lichte mondhoek.",
+     "sexAge": "Fotograaf vermeldt een juveniel. Geslacht onbekend.",
+     "quality": "Scherpe kop en mondhoek.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY 2.0 · caroline legg",
+      "annotations": [
+       "De fotograaf benoemt een juveniel. De doffe kap en lichte mondhoek ondersteunen de leeftijd. Geslacht niet vastgesteld."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp029-flight.webp",
+     "role": "In vlucht",
+     "content": "Vrij in de lucht met uitgespreide vleugel. Zwarte kop, lichte wang en gele onderzijde zichtbaar.",
+     "sexAge": "Geen betrouwbaar geslachts- of leeftijdslabel bij deze kijkhoek.",
+     "quality": "Goed voor herkenning van vleugel en lichaam.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Holger Uwe Schmitt",
+      "annotations": []
+     },
+     "flight": {
+      "n": 73,
+      "id": "sp029",
+      "nameNL": "Koolmees",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0"
+     }
+    },
+    {
+     "image": "/assets/species/sp029.webp",
+     "role": "Overige herkenningsfoto's",
+     "content": "Koolmees zijwaarts op een tak, met gele buik, witte wang en lichte vleugelstreep.",
+     "sexAge": "Geslacht niet vastgesteld op deze foto.",
+     "quality": "Aanvullend zijaanzicht.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Rhododendrites",
+      "annotations": []
+     },
+     "flight": null
+    }
+   ],
+   "corrections": [
+    "Brongeverifieerd mannetje als hoofdfoto, met verwijzing vanuit Mannetje. Vrouwtje en juveniel toegevoegd. Oud hoofdbeeld blijft als aanvullend portret."
+   ],
+   "missing": [],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "Volwassen geslachtslabels alleen als bron en zichtbaar buikpatroon overeenstemmen. Vluchtfoto en juveniel zonder geslachtslabel.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "VERIFIED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Kap, oogstreek en middenstreep"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium 145 (Playwright)",
+    "photos": 5,
+    "sections": [
+     "Hoofdfoto",
+     "Verenkleed",
+     "In vlucht",
+     "Overige herkenningsfoto's"
+    ],
+    "flight": [
+     "/assets/species/plumage/sp029-flight.webp"
+    ],
+    "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik",
+    "testedOn": "635d78a2eae05c63bfbb43f8d9a5dc1d550c7fde",
+    "date": "2026-11-11",
+    "offline": {
+     "method": "Lokale HTTP-server stopgezet na precache, herladen, soortkaart geopend en foto’s gedecodeerd",
+     "status": "VERIFIED"
+    }
+   },
+   "errors": [],
+   "verdict": "VERIFIED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp030",
    "nameNL": "Pimpelmees",
    "family": "Mezen",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M4",
+   "date": "2026-11-11",
+   "sha": "635d78a2eae05c63bfbb43f8d9a5dc1d550c7fde",
+   "assets": [
+    {
+     "image": "/assets/species/sp030.webp",
+     "role": "Hoofdfoto",
+     "content": "Pimpelmees op een twijg, met blauwe kruin, witte wangen en donkere oogstreep.",
+     "sexAge": "Volwassen kleed als herkenningsvoorbeeld. Geslacht onbekend.",
+     "quality": "Helder zijaanzicht.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp030-juv2.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge Pimpelmees met bleekgele wang en doffe blauwgrijze kruin.",
+     "sexAge": "Fotograaf noemt een juveniel. Geslacht onbekend.",
+     "quality": "Kop goed zichtbaar, kleine vogel in staand beeld.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · caroline legg",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp030-flight.webp",
+     "role": "In vlucht",
+     "content": "Vrij in de lucht met gespreide staart en vleugels. Blauwe bovenzijde en oogstreep zichtbaar.",
+     "sexAge": "Geslacht onbekend.",
+     "quality": "Vleugels en staart zichtbaar van bovenaf.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Joe Dyer from Buckhurst Hill, England",
+      "annotations": []
+     },
+     "flight": {
+      "n": 76,
+      "id": "sp030",
+      "nameNL": "Pimpelmees",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 2.0"
+     }
+    }
+   ],
+   "corrections": [
+    "Jeugdfoto voorzien van zichtbare aanwijzing bij wang en kruin. De bestaande neutrale foto-indeling blijft bruikbaar."
+   ],
+   "missing": [],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "De kenmerken voor beide geslachten overlappen. Op deze beelden is het geslacht niet op kleed vastgesteld.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "VERIFIED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Koptekening en onderzijde"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium 145 (Playwright)",
+    "photos": 3,
+    "sections": [
+     "Hoofdfoto",
+     "Verenkleed",
+     "In vlucht"
+    ],
+    "flight": [
+     "/assets/species/plumage/sp030-flight.webp"
+    ],
+    "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik",
+    "testedOn": "635d78a2eae05c63bfbb43f8d9a5dc1d550c7fde",
+    "date": "2026-11-11",
+    "offline": {
+     "method": "Lokale HTTP-server stopgezet na precache, herladen, soortkaart geopend en foto’s gedecodeerd",
+     "status": "VERIFIED"
+    }
+   },
+   "errors": [],
+   "verdict": "VERIFIED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp031",
@@ -1759,9 +2184,149 @@
    "id": "sp043",
    "nameNL": "Huismus",
    "family": "Mussen",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M4",
+   "date": "2026-11-11",
+   "sha": "635d78a2eae05c63bfbb43f8d9a5dc1d550c7fde",
+   "assets": [
+    {
+     "image": "/assets/species/plumage/sp043-hero-male.webp",
+     "role": "Hoofdfoto (Mannetje)",
+     "content": "Rustend mannetje met grijze kruin, kastanjebruine zijkant van de kop en zwarte bef.",
+     "sexAge": "De bron benoemt een mannetje. Kruin en bef ondersteunen dat.",
+     "quality": "Kop, bef en bouw zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "geverifieerde import 09-11 (SHA-1 95f79228d7…), CC BY-SA 4.0 · Charles J. Sharp",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp043-adult_m.webp",
+     "role": "Verenkleed (Mannetje)",
+     "content": "Mannetje op een bloesemtak, met zwarte bef en bruin getekende vleugel.",
+     "sexAge": "Koptekening en donkere bef passen bij een mannetje.",
+     "quality": "Duidelijke vleugeltekening vanuit een andere kijkhoek.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/sp043.webp",
+     "role": "Verenkleed (Vrouwtje)",
+     "content": "Bruine Huismus op een tak met lichte wenkbrauwstreep en kegelvormige snavel.",
+     "sexAge": "De fotograaf benoemt een vrouwtje. Bruin kleed en wenkbrauw ondersteunen het label.",
+     "quality": "Bruikbaar kopaanzicht.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Ermell",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp043-juv-review.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Scherpe voorgrondvogel in jeugdkleed. Een tweede mus staat onscherp op de achtergrond.",
+     "sexAge": "Fotograaf benoemt een juveniel. Het geslacht van de voorgrondvogel is onbekend.",
+     "quality": "Kleed van de voorgrondvogel is goed zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp043-flight.webp",
+     "role": "In vlucht (Mannetje)",
+     "content": "Huismus in vrije vlucht, met open vleugels, gespreide staart en donkere bef.",
+     "sexAge": "Grijze kruin en zwarte bef bevestigen een mannetje.",
+     "quality": "Vlucht en borsttekening duidelijk zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Mildeep",
+      "annotations": []
+     },
+     "flight": {
+      "n": 78,
+      "id": "sp043",
+      "nameNL": "Huismus",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": "male",
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0"
+     }
+    }
+   ],
+   "corrections": [
+    "Jeugdfoto benoemt nu de voorgrondvogel. Herkenningsprofiel onderbouwt de vergelijking met Ringmus en Vink."
+   ],
+   "missing": [],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "Mannetje en vrouwtje waar bron en beeld dat dragen. Juveniel zonder geslachtslabel.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "VERIFIED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 2,
+    "decisive": 0,
+    "notDecisive": [
+     "Kruin en afzonderlijke wangvlek",
+     "Vleugelstrepen bij bruine vogels"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium 145 (Playwright)",
+    "photos": 5,
+    "sections": [
+     "Hoofdfoto",
+     "Verenkleed",
+     "In vlucht"
+    ],
+    "flight": [
+     "/assets/species/plumage/sp043-flight.webp"
+    ],
+    "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik",
+    "testedOn": "635d78a2eae05c63bfbb43f8d9a5dc1d550c7fde",
+    "date": "2026-11-11",
+    "offline": {
+     "method": "Lokale HTTP-server stopgezet na precache, herladen, soortkaart geopend en foto’s gedecodeerd",
+     "status": "VERIFIED"
+    }
+   },
+   "errors": [],
+   "verdict": "VERIFIED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp044",
@@ -1775,33 +2340,554 @@
    "id": "sp045",
    "nameNL": "Merel",
    "family": "Lijsters",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M4",
+   "date": "2026-11-11",
+   "sha": "ffa1c97b6f736b1c6f5df5cfd4f3fcfd5b0748d7",
+   "assets": [
+    {
+     "image": "/assets/species/plumage/sp045-hero-male.webp",
+     "role": "Hoofdfoto",
+     "content": "Merel op de grond met zwart kleed en geel-oranje snavel.",
+     "sexAge": "Fotograaf benoemt een mannetje. Snavel en kleed ondersteunen dat.",
+     "quality": "Scherp zijaanzicht.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "geverifieerde import 09-11 (SHA-1 461e691ba6…), CC BY 2.0 · Luiz Lapa from Oeiras, Portugal",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/sp045.webp",
+     "role": "Verenkleed (Mannetje)",
+     "content": "Mannetje op gras, met zichtbare oogring, snavel en staart.",
+     "sexAge": "Kleed, snavel en oogring bevestigen het mannetje.",
+     "quality": "Duidelijke kop en staart.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.5 · Andreas Trepte",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp045-flight.webp",
+     "role": "Verenkleed (Mannetje, landend)",
+     "content": "Mannetje met open vleugels en vooruit gestrekte poten.",
+     "sexAge": "Zwart kleed, geelachtige snavel en oogring.",
+     "quality": "Bruikbaar voor kleed en landingshouding.",
+     "verdict": "uit-rol",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · Bengt Nyman from Vaxholm, Sweden",
+      "annotations": []
+     },
+     "flight": {
+      "n": 64,
+      "id": "sp045",
+      "nameNL": "Merel",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": "male",
+      "class": "landen",
+      "quality": "goed",
+      "decision": "uit-rol",
+      "target": "kleed",
+      "newLabel": "Mannetje, landend",
+      "newNote": "Zwart mannetje met gele snavel en oogring.",
+      "reason": "Poten naar voren gestrekt: landingshouding.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0"
+     }
+    },
+    {
+     "image": "/assets/species/plumage/sp045-adult_f.webp",
+     "role": "Verenkleed (Vrouwtje)",
+     "content": "Vrouwtje op een tak met donkerbruin kleed en lichter getekende borst.",
+     "sexAge": "Fotograaf benoemt een vrouwtje. Bruin kleed ondersteunt dit.",
+     "quality": "Borsttekening goed zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Rupdeb",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp045-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Bruin jong met lichte en roestkleurige spikkels op het verenkleed.",
+     "sexAge": "Brondossier 9 november vermeldt juveniel. Geslacht onbekend.",
+     "quality": "Kleed op kop, borst en rug herkenbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · hedera.baltica from Wrocław, Poland",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp045-free-flight.webp",
+     "role": "In vlucht (Mannetje, voorlopig)",
+     "content": "Merel in vrije vlucht met de vleugels omlaag. Uitsnede van de bovenste vogel.",
+     "sexAge": "Commons categoriseert het beeld als mannetje. Kleed en snavel ondersteunen dat.",
+     "quality": "De staart is deels afgedekt. Bewegingsonscherpte beperkt het vleugeldetail.",
+     "verdict": "voorwaardelijk",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-11: zelfde opname (uitsnede uit originele Commons-JPEG, daarna WebP), CC0 1.0 · Alf Beard",
+      "annotations": [
+       "Commons vermeldt Merel, vlucht en mannetje in de categorieën. Bij de bovenste vogel zijn het donkere kleed en de geel-oranje snavel zichtbaar."
+      ]
+     },
+     "flight": {
+      "n": 147,
+      "id": "sp045",
+      "nameNL": "Merel",
+      "registry": "GUIDE_POSES[2]",
+      "sexLabel": "male",
+      "class": "vlucht",
+      "quality": "matig",
+      "decision": "voorwaardelijk",
+      "target": null,
+      "newLabel": null,
+      "newNote": "Voorlopige foto: mannetje Merel in vrije vlucht. De staart is deels afgedekt en de vleugels zijn deels onscherp.",
+      "reason": "Vrije vlucht met open vleugels en zonder zichtbare landingshouding. Staart gedeeltelijk afgedekt en veren deels onscherp.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "CC0 1.0 op Commons. Uitsnede uit de originele JPEG met bron- en bestandshash.",
+      "replacement": "gewenst"
+     }
+    }
+   ],
+   "corrections": [
+    "Aparte voorlopige vrije-vluchtfoto toegevoegd. De landingsopname blijft in de kleedgroep. De bruine Merel wordt met Zanglijster vergeleken."
+   ],
+   "missing": [],
+   "wishes": [
+    "Scherpe vrije-vluchtfoto met de staart en vleugels volledig zichtbaar."
+   ],
+   "uncertain": [
+    "De nieuwe vluchtfoto is bruikbaar als voorlopig voorbeeld, met beperkte zichtbaarheid van de staart en bewegingsonscherpte."
+   ],
+   "sexPolicy": "Mannetje en vrouwtje waar bron en beeld dat dragen. Het juveniel blijft zonder geslachtslabel.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "PARTIALLY TESTED",
+    "browser": "VERIFIED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": false,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Borstgrondkleur en staart bij bruine vogels"
+    ],
+    "open": [
+     "De vluchtopname is echt, maar de staart is deels afgedekt en de vleugels zijn niet overal scherp. De foto staat als voorlopig."
+    ],
+    "discrepancies": 0
+   },
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium 145 (Playwright)",
+    "photos": 6,
+    "sections": [
+     "Hoofdfoto",
+     "Verenkleed",
+     "In vlucht"
+    ],
+    "flight": [
+     "/assets/species/plumage/sp045-free-flight.webp"
+    ],
+    "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik",
+    "testedOn": "ffa1c97b6f736b1c6f5df5cfd4f3fcfd5b0748d7",
+    "date": "2026-11-11",
+    "offline": {
+     "method": "Lokale HTTP-server stopgezet na precache, herladen, soortkaart geopend en foto’s gedecodeerd",
+     "status": "VERIFIED"
+    }
+   },
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
   },
   {
    "id": "sp046",
    "nameNL": "Zanglijster",
    "family": "Lijsters",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M4",
+   "date": "2026-11-11",
+   "sha": "ffa1c97b6f736b1c6f5df5cfd4f3fcfd5b0748d7",
+   "assets": [
+    {
+     "image": "/assets/species/sp046.webp",
+     "role": "Hoofdfoto",
+     "content": "Lijster op een tak met bruine bovendelen en donkere vlekken op een lichte onderzijde.",
+     "sexAge": "Geslacht onbekend.",
+     "quality": "Borsttekening en vleugel goed zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.5 · Andreas Trepte",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp046-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Juveniele Zanglijster met lichte tekening op de bovenzijde en een gevlekte borst.",
+     "sexAge": "De fotograaf benoemt een juveniel. Geslacht onbekend.",
+     "quality": "Voldoende detail in rug en vleugeldekveren.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY 2.0 · Frank Vassen",
+      "annotations": [
+       "Fotograaf benoemt een juveniel. De lichte boventekening ondersteunt het label. Geslacht onbekend."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp046-flight.webp",
+     "role": "In vlucht",
+     "content": "Zanglijster vrij in de lucht met uitgespreide vleugels en warm gekleurde ondervleugeldekveren.",
+     "sexAge": "Geslacht en exacte leeftijd onbekend.",
+     "quality": "Herkenbare borsttekening en ondervleugelkleur.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · Mark Kilner",
+      "annotations": []
+     },
+     "flight": {
+      "n": 65,
+      "id": "sp046",
+      "nameNL": "Zanglijster",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0"
+     }
+    }
+   ],
+   "corrections": [
+    "Brongeverifieerd juveniel toegevoegd. De vergelijkingen tonen verschillen met Grote Lijster, Merel en Kramsvogel."
+   ],
+   "missing": [],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "De geslachten hebben gelijk verenkleed. Neutrale fotolabels.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "VERIFIED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Borstvlekken en ondervleugeldekveren"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium 145 (Playwright)",
+    "photos": 3,
+    "sections": [
+     "Hoofdfoto",
+     "Verenkleed",
+     "In vlucht"
+    ],
+    "flight": [
+     "/assets/species/plumage/sp046-flight.webp"
+    ],
+    "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik",
+    "testedOn": "ffa1c97b6f736b1c6f5df5cfd4f3fcfd5b0748d7",
+    "date": "2026-11-11",
+    "offline": {
+     "method": "Lokale HTTP-server stopgezet na precache, herladen, soortkaart geopend en foto’s gedecodeerd",
+     "status": "VERIFIED"
+    }
+   },
+   "errors": [],
+   "verdict": "VERIFIED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp047",
    "nameNL": "Kramsvogel",
    "family": "Lijsters",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M4",
+   "date": "2026-11-11",
+   "sha": "ffa1c97b6f736b1c6f5df5cfd4f3fcfd5b0748d7",
+   "assets": [
+    {
+     "image": "/assets/species/sp047.webp",
+     "role": "Hoofdfoto",
+     "content": "Kramsvogel op de grond, met grijze kop, warmbruine mantel en gevlekte borst.",
+     "sexAge": "Geslacht onbekend.",
+     "quality": "Goed zijaanzicht van kop, mantel en borst.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Frankie Fouganthin",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp047-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Juveniele Kramsvogel met gevlekte borst, bruingrijze kop en minder sterk contrast tussen kop en rug.",
+     "sexAge": "De fotograaf benoemt een juveniel. Geslacht onbekend.",
+     "quality": "Voldoende detail op kop en borst.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY-SA 2.0 · hedera.baltica",
+      "annotations": [
+       "De fotograaf benoemt een juveniele Kramsvogel. Doffere kop en rug passen bij het jeugdkleed. Geslacht onbekend."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp047-flight.webp",
+     "role": "In vlucht",
+     "content": "Vogel los van ondergrond en takken, met gespreide vleugels en lichte ondervleugeldekveren.",
+     "sexAge": "Geslacht en exacte leeftijd onbekend.",
+     "quality": "Vleugels zichtbaar. Takken maken de achtergrond druk.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Hangsna",
+      "annotations": []
+     },
+     "flight": {
+      "n": 63,
+      "id": "sp047",
+      "nameNL": "Kramsvogel",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0"
+     }
+    }
+   ],
+   "corrections": [
+    "Brongeverifieerd juveniel toegevoegd. Vergelijking met Koperwiek toont kop en flank. De vluchtvergelijking met Zanglijster gebruikt ondervleugeldekveren."
+   ],
+   "missing": [],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "Geen geslacht vastgesteld. Veldfoto’s tonen de fijne veerdetails onvoldoende.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "VERIFIED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Kop, stuit en ondervleugel"
+    ],
+    "open": [],
+    "discrepancies": 1
+   },
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium 145 (Playwright)",
+    "photos": 3,
+    "sections": [
+     "Hoofdfoto",
+     "Verenkleed",
+     "In vlucht"
+    ],
+    "flight": [
+     "/assets/species/plumage/sp047-flight.webp"
+    ],
+    "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik",
+    "testedOn": "ffa1c97b6f736b1c6f5df5cfd4f3fcfd5b0748d7",
+    "date": "2026-11-11",
+    "offline": {
+     "method": "Lokale HTTP-server stopgezet na precache, herladen, soortkaart geopend en foto’s gedecodeerd",
+     "status": "VERIFIED"
+    }
+   },
+   "errors": [],
+   "verdict": "VERIFIED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp048",
    "nameNL": "Koperwiek",
    "family": "Lijsters",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M4",
+   "date": "2026-11-11",
+   "sha": "7cdfd22b58495a91552ef3f1cfa61906a11f5760",
+   "assets": [
+    {
+     "image": "/assets/species/sp048.webp",
+     "role": "Hoofdfoto",
+     "content": "Koperwiek met lichte wenkbrauw, gestreepte borst en roestrode flank.",
+     "sexAge": "Geslacht onbekend.",
+     "quality": "Herkenbaar zijaanzicht van kop en flank.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.5 · Andreas Trepte",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp048-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge Koperwiek met lichte wenkbrauwstreep, gevlekte borst en lichte veerpunten.",
+     "sexAge": "iNaturalist Research Grade met annotatie Juvenile. Geslacht onbekend.",
+     "quality": "Kop, borst en vleugeldekveren zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele JPEG zonder uitsnede), CC BY 4.0 · Pyry Liedes",
+      "annotations": [
+       "iNaturalist-waarneming van onderzoekskwaliteit, taxon Turdus iliacus, leeftijdsannotatie Juvenile. Geslacht onbekend.",
+       "Fotopagina bevestigt Pyry Liedes en linkt naar CC BY 4.0. Waarneming in Finland op 24 juli 2026, met de leeftijdsannotatie (1, 8)."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp048-flight.webp",
+     "role": "Overige herkenningsfoto's (Opvliegend tussen planten)",
+     "content": "Vogel tussen de vegetatie met uitgestrekte vleugels en neerhangende poten.",
+     "sexAge": "Geslacht en exacte leeftijd onbekend.",
+     "quality": "Bruikbaar voor houding en ondervleugel. Vrije vlucht onvoldoende overtuigend door de opstijghouding en de vegetatie.",
+     "verdict": "uit-rol",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Lucas Golden",
+      "annotations": []
+     },
+     "flight": {
+      "n": 62,
+      "id": "sp048",
+      "nameNL": "Koperwiek",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "opvliegen",
+      "quality": "goed",
+      "decision": "uit-rol",
+      "target": "overig",
+      "newLabel": "Opvliegend tussen planten",
+      "newNote": "Wenkbrauwstreep en roestrode flank zichtbaar.",
+      "reason": "Tussen planten met half geopende vleugels; niet vrij in de lucht.",
+      "airborne": false,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 4.0"
+     }
+    }
+   ],
+   "corrections": [
+    "Juvenielenfoto en vergelijking met Zanglijster toegevoegd. De Nederlandse broedstatus is gecorrigeerd. Het kennisprofiel legt de grens van het Sovon-territoriumbewijs vast."
+   ],
+   "missing": [
+    "Geverifieerde, goed herkenbare foto in vrije vlucht."
+   ],
+   "wishes": [],
+   "uncertain": [
+    "De bestaande opname toont opvliegen tussen planten. Ze blijft in de aanvullende sectie."
+   ],
+   "sexPolicy": "Verenkleed van beide geslachten gelijk. Neutrale fotolabels.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "VERIFIED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": false,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Wenkbrauw en kleur onder de vleugel"
+    ],
+    "open": [],
+    "discrepancies": 2
+   },
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium 145 (Playwright)",
+    "photos": 3,
+    "sections": [
+     "Hoofdfoto",
+     "Verenkleed",
+     "Overige herkenningsfoto's"
+    ],
+    "flight": [],
+    "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik, broedstatus en afwezigheid van een Nederlandse broedkalender",
+    "lijktOp": "SAB-09 OK (390 px)",
+    "offline": {
+     "status": "VERIFIED",
+     "method": "Na precache herladen en de kaart heropend met HTTP-server uit. Alle eigen beelden gedecodeerd."
+    },
+    "testedOn": "7cdfd22b58495a91552ef3f1cfa61906a11f5760",
+    "date": "2026-11-11"
+   },
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
   },
   {
    "id": "sp049",
@@ -1839,9 +2925,62 @@
    "id": "sp054",
    "nameNL": "Heggenmus",
    "family": "Heggenmus",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M3",
+   "date": "2026-11-11",
+   "sha": "11c3751aecaabc37b41feb23fd364fe3298ce1dd",
+   "assets": [
+    {
+     "image": "/assets/species/sp054.webp",
+     "role": "Hoofdfoto",
+     "content": "Heggenmus in zijaanzicht op een tak. De fijne spitse snavel en bruin gestreepte rug zijn zichtbaar.",
+     "sexAge": "Fotobron bevestigt de soort. Leeftijd en geslacht zijn niet expliciet geannoteerd.",
+     "quality": "Scherp beeld met vrij zicht op de kop en snavel.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC0 · Hobbyfotowiki Camera location 51° 10′ 43.32″ N, 7° 00′ 23.65″ E View this and other nearby images on: OpenStreetMap 51.178700; 7.006570",
+      "annotations": []
+     },
+     "flight": null
+    }
+   ],
+   "corrections": [
+    "Bronprofiel met het snavelverschil ten opzichte van Huismus en het leeftijdsvoorbehoud bij de grijze kop en borst."
+   ],
+   "missing": [
+    "Afzonderlijke juvenielenfoto",
+    "Vrije-vluchtfoto"
+   ],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "Geslachten zijn uiterlijk gelijkend. De kaart houdt de hoofdfoto neutraal.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "PARTIALLY TESTED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": false,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Snavel en kop"
+    ],
+    "open": [
+     "Een afzonderlijke juvenielenfoto, een vrije-vluchtfoto en een eigen geluidsopname voor de gids ontbreken."
+    ],
+    "discrepancies": 1
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
   },
   {
    "id": "sp055",
@@ -2077,9 +3216,111 @@
    "id": "sp063",
    "nameNL": "Goudhaantje",
    "family": "Goudhaantjes",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M3",
+   "date": "2026-11-11",
+   "sha": "ae8b8a4daeeb3e89cde4523ea05f33e14fe8b44f",
+   "assets": [
+    {
+     "image": "/assets/species/sp063.webp",
+     "role": "Hoofdfoto",
+     "content": "Scherp zijaanzicht op een tak. Het donkere oog, de lichte vleugelstrepen en de gele kruinstreep zijn zichtbaar.",
+     "sexAge": "Geen geslacht of exacte leeftijd bevestigd door de fotobron.",
+     "quality": "Gezicht en vleugeltekening zijn goed leesbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp063-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge vogel op een naaldboomtak. De opvallende gekleurde kruinstreep ontbreekt.",
+     "sexAge": "Bron noemt de vogel juveniel. Geslacht niet vermeld.",
+     "quality": "Goed bruikbaar voor vergelijking met het volwassen kleed.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Silmethule",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp063-flight.webp",
+     "role": "In vlucht",
+     "content": "Vrij in de lucht tussen takken. De bron vermeldt de Oost-Aziatische ondersoort japonensis.",
+     "sexAge": "Geen geslacht of exacte leeftijd bevestigd door de fotobron.",
+     "quality": "Bewegingsonscherpte beperkt de herkenningsdetails.",
+     "verdict": "voorwaardelijk",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Alpsdake",
+      "annotations": []
+     },
+     "flight": {
+      "n": 24,
+      "id": "sp063",
+      "nameNL": "Goudhaantje",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "beperkte scherpte",
+      "decision": "voorwaardelijk",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht. Bewegingsonscherpte beperkt herkenningsdetails. De bron toont de Oost-Aziatische ondersoort japonensis.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0",
+      "replacement": "gewenst"
+     }
+    }
+   ],
+   "corrections": [
+    "Vluchtfoto blijft in de vluchtsectie met de aanduiding Voorlopige foto. De ondersoort staat zichtbaar in het bijschrift.",
+    "Kennisprofiel vergelijkt het gezicht met Vuurgoudhaan en vermeldt de beperking van een gele kruin voor geslachtsbepaling."
+   ],
+   "missing": [
+    "Afzonderlijke mannetjesfoto",
+    "Afzonderlijke vrouwtjesfoto",
+    "Scherpe Europese vluchtfoto"
+   ],
+   "wishes": [],
+   "uncertain": [
+    "De fotograaf van de hoofdfoto noemt geen geslacht. De zichtbare gele kruin is onvoldoende voor het label Vrouwtje."
+   ],
+   "sexPolicy": "Oranje kan bij mannetjes verborgen zijn. De hoofdfoto en de vluchtfoto krijgen zonder bronbewijs een neutraal label.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "PARTIALLY TESTED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": false,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Wenkbrauw en oogstreep"
+    ],
+    "open": [
+     "De hoofdfoto heeft geen bevestigd geslachtslabel. Afzonderlijke mannetjes- en vrouwtjesfoto’s en een scherpere Europese vluchtfoto ontbreken."
+    ],
+    "discrepancies": 0
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
   },
   {
    "id": "sp064",
@@ -2345,9 +3586,96 @@
    "id": "sp068",
    "nameNL": "Witte Kwikstaart",
    "family": "Kwikstaarten",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M3",
+   "date": "2026-11-11",
+   "sha": "ae8b8a4daeeb3e89cde4523ea05f33e14fe8b44f",
+   "assets": [
+    {
+     "image": "/assets/species/sp068.webp",
+     "role": "Hoofdfoto",
+     "content": "Vogel op een tak met zwart-witte kop, donkere keel en lange staart.",
+     "sexAge": "Geen geslacht of exacte leeftijd bevestigd door de fotobron.",
+     "quality": "Scherp portret met herkenbare kop en staart.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Stephan Sprinz",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp068-flight.webp",
+     "role": "In vlucht",
+     "content": "Vrij in de lucht. Gespreide vleugels en lichte buitenste staartveren zijn zichtbaar.",
+     "sexAge": "Geen geslacht of exacte leeftijd bevestigd door de fotobron.",
+     "quality": "Bruikbaar voor het vluchtbeeld.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Tranceliner",
+      "annotations": []
+     },
+     "flight": {
+      "n": 59,
+      "id": "sp068",
+      "nameNL": "Witte Kwikstaart",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0"
+     }
+    }
+   ],
+   "corrections": [
+    "De vergelijking met Rouwkwikstaart let op rug, stuit en flanken samen en benoemt variatie naar leeftijd, geslacht en seizoen.",
+    "Prachtkleed van het vrouwtje omschreven via de begrenzing van de koptekening."
+   ],
+   "missing": [
+    "Afzonderlijke mannetjesfoto",
+    "Afzonderlijke vrouwtjesfoto",
+    "Afzonderlijke juvenielenfoto"
+   ],
+   "wishes": [],
+   "uncertain": [
+    "De vluchtfoto bevestigt de soort en de vluchtrol. De ondersoort is bij deze opname niet geverifieerd."
+   ],
+   "sexPolicy": "De koptekening kan verschillen per kleed. De twee foto’s behouden neutrale labels.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "PARTIALLY TESTED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": false,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Rug, stuit en flanken"
+    ],
+    "open": [
+     "Afzonderlijke mannetjes-, vrouwtjes- en juvenielenfoto’s en lokale gidsaudio ontbreken. De bestaande foto’s krijgen geen nieuw leeftijds- of geslachtslabel."
+    ],
+    "discrepancies": 0
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
   },
   {
    "id": "sp069",
@@ -2361,17 +3689,218 @@
    "id": "sp070",
    "nameNL": "Veldleeuwerik",
    "family": "Leeuweriken",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M3",
+   "date": "2026-11-11",
+   "sha": "ae8b8a4daeeb3e89cde4523ea05f33e14fe8b44f",
+   "assets": [
+    {
+     "image": "/assets/species/sp070.webp",
+     "role": "Hoofdfoto",
+     "content": "Zijaanzicht op gras met voedsel in de snavel. Streping van borst en rug is zichtbaar.",
+     "sexAge": "Geen geslacht of exacte leeftijd bevestigd door de fotobron.",
+     "quality": "Bruikbaar voor bouw en kleed.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · User:Diliff",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp070-flight.webp",
+     "role": "In vlucht",
+     "content": "Vrije vlucht van opzij met geheven vleugels en duidelijk silhouet.",
+     "sexAge": "Geen geslacht of exacte leeftijd bevestigd door de fotobron.",
+     "quality": "Bruikbaar voor het vluchtbeeld.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp",
+      "annotations": []
+     },
+     "flight": {
+      "n": 60,
+      "id": "sp070",
+      "nameNL": "Veldleeuwerik",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0"
+     }
+    }
+   ],
+   "corrections": [
+    "Kennisprofiel vergelijkt staart en vleugelvorm met Boomleeuwerik.",
+    "Broedduur en nestjongenperiode volgen Sovon. De oude kaart toonde dagen tot vliegvlug onder Jongen in nest."
+   ],
+   "missing": [
+    "Afzonderlijke juvenielenfoto"
+   ],
+   "wishes": [],
+   "uncertain": [
+    "Sovon noemt 11 dagen in het nest. Vogelbescherming noemt circa 8 dagen. De bronafwijking staat in het kennisprofiel."
+   ],
+   "sexPolicy": "De bestaande foto’s blijven neutraal bij gebrek aan bevestigde geslachtslabels.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "PARTIALLY TESTED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": false,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Staart en vleugels in vlucht"
+    ],
+    "open": [
+     "Een afzonderlijke juvenielenfoto en lokale gidsaudio ontbreken. De bestaande foto’s bevestigen geen geslacht."
+    ],
+    "discrepancies": 1
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
   },
   {
    "id": "sp072",
    "nameNL": "Graspieper",
    "family": "Piepers",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M4",
+   "date": "2026-11-11",
+   "sha": "7cdfd22b58495a91552ef3f1cfa61906a11f5760",
+   "assets": [
+    {
+     "image": "/assets/species/sp072.webp",
+     "role": "Hoofdfoto",
+     "content": "Graspieper in zit met lichte oogring, slanke snavel en duidelijke streping.",
+     "sexAge": "Geslacht onbekend.",
+     "quality": "Goed zicht op de kop en het kleed.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp072-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge Graspieper met lichte veerranden en gestreepte borst.",
+     "sexAge": "Fotograaf benoemt juveniel. Geslacht onbekend.",
+     "quality": "Scherp beeld van kop, borst en vleugeldekveren.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele JPEG zonder uitsnede), CC BY 2.0 · caroline legg",
+      "annotations": [
+       "De fotograaf vermeldt een juveniel. Lichte veerranden en borststreping zichtbaar. Geslacht onbekend."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp072-flight.webp",
+     "role": "In vlucht",
+     "content": "Graspieper in vrije vlucht boven heide met uitgespreide vleugels.",
+     "sexAge": "Geslacht en exacte leeftijd onbekend.",
+     "quality": "Genoeg ruimte rond de vogel en zicht op de vluchthouding.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · caroline legg",
+      "annotations": []
+     },
+     "flight": {
+      "n": 81,
+      "id": "sp072",
+      "nameNL": "Graspieper",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 2.0"
+     }
+    }
+   ],
+   "corrections": [
+    "Juvenielenfoto toegevoegd. Vergelijking met Boompieper legt flankstreping, achternagel en geluid uit. De partner heeft nog geen foto in de gids."
+   ],
+   "missing": [],
+   "wishes": [
+    "Geverifieerde Boompieperfoto bij de vergelijking."
+   ],
+   "uncertain": [],
+   "sexPolicy": "Verenkleed van beide geslachten gelijk. Neutrale fotolabels.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "VERIFIED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Flankstrepen, snavel en achternagel"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium 145 (Playwright)",
+    "photos": 3,
+    "sections": [
+     "Hoofdfoto",
+     "Verenkleed",
+     "In vlucht"
+    ],
+    "flight": [
+     "/assets/species/plumage/sp072-flight.webp"
+    ],
+    "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik",
+    "lijktOp": "SAB-09 OK (390 px)",
+    "offline": {
+     "status": "VERIFIED",
+     "method": "Na precache herladen en de kaart heropend met HTTP-server uit. Alle eigen beelden gedecodeerd."
+    },
+    "testedOn": "7cdfd22b58495a91552ef3f1cfa61906a11f5760",
+    "date": "2026-11-11"
+   },
+   "errors": [],
+   "verdict": "VERIFIED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp075",
@@ -2385,17 +3914,213 @@
    "id": "sp077",
    "nameNL": "Fuut",
    "family": "Futen",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M3",
+   "date": "2026-11-11",
+   "sha": "7640bab7427054eeeeef30a9856dc82fcda7ddba",
+   "assets": [
+    {
+     "image": "/assets/species/sp077.webp",
+     "role": "Hoofdfoto",
+     "content": "Zwemmende Fuut in prachtkleed. De lange hals, spitse snavel en roodbruine kraag zijn zichtbaar.",
+     "sexAge": "Geslacht niet benoemd door de bron.",
+     "quality": "Helder zijaanzicht.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp077-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Zwemmende jonge Fuut met zwart-wit gestreepte kop en hals.",
+     "sexAge": "Fotograaf noemt het dier juveniel. Geslacht onbekend.",
+     "quality": "Heldere leeftijdskenmerken.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp",
+      "annotations": []
+     },
+     "flight": null
+    }
+   ],
+   "corrections": [
+    "Wintervergelijking met Roodhalsfuut toegevoegd met aandacht voor halsdikte en snavelbasis."
+   ],
+   "missing": [
+    "Geverifieerde vrije-vluchtfoto"
+   ],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "Mannetje en vrouwtje hebben gelijkend kleed. De hoofdfoto behoudt een neutraal label.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "PARTIALLY TESTED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": false,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Snavel en hals in winterkleed"
+    ],
+    "open": [
+     "Een geverifieerde vluchtfoto ontbreekt. De volwassen hoofdfoto heeft een neutraal geslachtslabel."
+    ],
+    "discrepancies": 0
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
   },
   {
    "id": "sp078",
    "nameNL": "Meerkoet",
    "family": "Rallen",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M4",
+   "date": "2026-11-11",
+   "sha": "7cdfd22b58495a91552ef3f1cfa61906a11f5760",
+   "assets": [
+    {
+     "image": "/assets/species/sp078.webp",
+     "role": "Hoofdfoto",
+     "content": "Volwassen Meerkoet met donker kleed, witte snavel en wit voorhoofdsschild.",
+     "sexAge": "Volwassen kleed. Geslacht onbekend.",
+     "quality": "Snavel, schild en rode iris zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp078-juv-grown.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Grijsbruine Meerkoet met lichte keel en wangen en een klein voorhoofdsschild.",
+     "sexAge": "Fotograaf benoemt juveniel. Geslacht onbekend.",
+     "quality": "Kop en lichte veerpartijen goed zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-11: zelfde opname (directe pixelvergelijking na schalen van originele Commons-JPEG naar de WebP-afmetingen), CC BY 4.0 · Alexis Lours",
+      "annotations": [
+       "De fotograaf benoemt een juveniel en vermeldt CC BY 4.0. Lichte keel en wangen en klein voorhoofdsschild zijn zichtbaar.",
+       "Gemiddeld absoluut RGB-kanaalverschil na LANCZOS-schaal 1,71 / 1,46 / 2,17 op 255."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp078-flight.webp",
+     "role": "In vlucht",
+     "content": "Meerkoet vrij in de lucht boven het water, met de poten naar achteren.",
+     "sexAge": "Geslacht onbekend.",
+     "quality": "Vluchthouding en donkere lichaamsbouw zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Luiz Lapa from Oeiras, Portugal",
+      "annotations": []
+     },
+     "flight": {
+      "n": 88,
+      "id": "sp078",
+      "nameNL": "Meerkoet",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 2.0"
+     }
+    },
+    {
+     "image": "/assets/species/plumage/sp078-juv.webp",
+     "role": "Overige herkenningsfoto's (Donsjong)",
+     "content": "Donsjong met rood-oranje kop en donker dons.",
+     "sexAge": "Kleed van een donsjong. Geslacht onbekend.",
+     "quality": "Kopkleuren en dons goed zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp",
+      "annotations": []
+     },
+     "flight": null
+    }
+   ],
+   "corrections": [
+    "Tekst van de juvenielenkaart verwijst naar het afgebeelde oudere jong. Het donsjong heeft een eigen label en verwijst naar het latere kleed."
+   ],
+   "missing": [],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "Verenkleed gelijk. De grootte van het voorhoofdsschild overlapt tussen de geslachten.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "VERIFIED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Snavel en voorhoofdsschild"
+    ],
+    "open": [],
+    "discrepancies": 1
+   },
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium 145 (Playwright)",
+    "photos": 4,
+    "sections": [
+     "Hoofdfoto",
+     "Verenkleed",
+     "In vlucht",
+     "Overige herkenningsfoto's"
+    ],
+    "flight": [
+     "/assets/species/plumage/sp078-flight.webp"
+    ],
+    "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik",
+    "lijktOp": "SAB-09 OK (390 px)",
+    "offline": {
+     "status": "VERIFIED",
+     "method": "Na precache herladen en de kaart heropend met HTTP-server uit. Alle eigen beelden gedecodeerd."
+    },
+    "testedOn": "7cdfd22b58495a91552ef3f1cfa61906a11f5760",
+    "date": "2026-11-11"
+   },
+   "errors": [],
+   "verdict": "VERIFIED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp079",
@@ -2449,17 +4174,277 @@
    "id": "sp086",
    "nameNL": "Grauwe Gans",
    "family": "Ganzen",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M3",
+   "date": "2026-11-11",
+   "sha": "7640bab7427054eeeeef30a9856dc82fcda7ddba",
+   "assets": [
+    {
+     "image": "/assets/species/sp086.webp",
+     "role": "Hoofdfoto",
+     "content": "Grauwe Gans op gras. Stevige oranje snavel, roze poten en grijsbruine veren zichtbaar.",
+     "sexAge": "Geslacht niet benoemd door de bron.",
+     "quality": "Gehele vogel en herkenningsdetails goed zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Diliff",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp086-flight.webp",
+     "role": "In vlucht",
+     "content": "Grauwe Gans vrij in de lucht, met gestrekte hals en achterwaarts gehouden poten.",
+     "sexAge": "Geslacht niet benoemd door de bron.",
+     "quality": "Heldere vleugelvorm en snavel.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp",
+      "annotations": []
+     },
+     "flight": {
+      "n": 20,
+      "id": "sp086",
+      "nameNL": "Grauwe Gans",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0"
+     }
+    },
+    {
+     "image": "/assets/species/plumage/sp086-juv.webp",
+     "role": "Overige herkenningsfoto’s (Donsjong)",
+     "content": "Jonge Grauwe Gans met duidelijk dons en beginnende veerontwikkeling.",
+     "sexAge": "Bron noemt jong dier. Beeld toont donskleed. Geslacht onbekend.",
+     "quality": "Geschikt als voorbeeld van donskleed.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Tuxyso",
+      "annotations": []
+     },
+     "flight": null
+    }
+   ],
+   "corrections": [
+    "Vergelijking met Kolgans behandelt het ontbreken van kol en buikstrepen bij jonge Kolganzen."
+   ],
+   "missing": [
+    "Afzonderlijke foto van een ouder juveniel"
+   ],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "De bestaande beelden behouden neutrale labels. Het donsjong heeft een afzonderlijk leeftijdslabel.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "PARTIALLY TESTED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": false,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Snavel, kol en buik"
+    ],
+    "open": [
+     "De jonge vogel op de kaart is een donsjong. Een afzonderlijke foto van een ouder juveniel ontbreekt."
+    ],
+    "discrepancies": 0
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
   },
   {
    "id": "sp089",
    "nameNL": "Wilde Eend",
    "family": "Eenden",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M3",
+   "date": "2026-11-11",
+   "sha": "7640bab7427054eeeeef30a9856dc82fcda7ddba",
+   "assets": [
+    {
+     "image": "/assets/species/sp089.webp",
+     "role": "Hoofdfoto",
+     "content": "Wilde-Eend-paar op de oever. De groene kop van het mannetje en het bruine kleed van het vrouwtje zijn zichtbaar.",
+     "sexAge": "Commons identificeert het beeld als een paar. Herkenbare geslachtskenmerken zichtbaar.",
+     "quality": "Twee vogels duidelijk zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.5 · This picture was realized by Richard Bartz by using a Canon EF 70-300mm f/4-5.6 IS USM Lens",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp089-adult_f.webp",
+     "role": "Verenkleed (Vrouwtje)",
+     "content": "Zwemmend vrouwtje met bruin getekend kleed en oranje met donkere snavel.",
+     "sexAge": "Fotograaf noemt een vrouwtje.",
+     "quality": "Geschikt voor vrouwtjeskleed en snavel.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Roshan Kumar Ban",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp089-juv-review.webp",
+     "role": "Verenkleed (Juvenielen)",
+     "content": "Twee jonge Wilde Eenden met bruin getekend kleed.",
+     "sexAge": "Bron bevestigt twee jonge vogels. De Engelse en Franse tekst verschillen over geslacht.",
+     "quality": "Geschikt om jeugdkleed te tonen.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.5 · Marie-Lan Nguyen",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp089-eclipse.webp",
+     "role": "Verenkleed (Eclipskleed, voorlopig)",
+     "content": "Bruin verenkleed met een gele snavel. Dat past bij een woerd in eclipskleed.",
+     "sexAge": "De Engelse en Sloveense bronbijschriften spreken elkaar tegen over het geslacht.",
+     "quality": "Scherp beeld, kleedlabel voorlopig.",
+     "verdict": "review",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Mihael Grmek",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp089-flight.webp",
+     "role": "Verenkleed (Mannetje)",
+     "content": "Woerd met geheven vleugels en poten omlaag. Dat past bij een landingshouding.",
+     "sexAge": "Groene kop en geelachtige snavel bevestigen een mannetje in prachtkleed.",
+     "quality": "Goed bruikbaar voor prachtkleed.",
+     "verdict": "uit-rol",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-11: zelfde opname (originele JPEG opnieuw gedownload en vergeleken na verkleinen; licentie uit de bronaudit van 09-11), CC BY-SA 4.0 · VJAnderson",
+      "annotations": []
+     },
+     "flight": {
+      "n": 15,
+      "id": "sp089",
+      "nameNL": "Wilde Eend",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": "male",
+      "class": "landen",
+      "quality": "goed",
+      "decision": "uit-rol",
+      "target": "kleed",
+      "newLabel": "Mannetje met uitgespreide vleugels",
+      "newNote": "De poten hangen omlaag. De houding past bij landen en toont het prachtkleed.",
+      "reason": "Luchtgedragen met uitgestrekte poten omlaag, passend bij landingshouding. Vrije vlucht is niet bevestigd voor dit beeld.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0"
+     }
+    },
+    {
+     "image": "/assets/species/plumage/sp089-free-flight.webp",
+     "role": "In vlucht (Mannetje)",
+     "content": "Vrij in de lucht, met voorwaarts gestrekte hals en ingetrokken poten.",
+     "sexAge": "Fotobron noemt een woerd. Groene kop, gele snavel en witte halsring zijn zichtbaar.",
+     "quality": "Duidelijk silhouet en herkenningsdetails.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van de originele Commons-JPEG), CC BY-SA 4.0 · Bert de Tilly",
+      "annotations": [
+       "Mannetje in prachtkleed",
+       "Vrije vlucht"
+      ]
+     },
+     "flight": {
+      "n": 145,
+      "id": "sp089",
+      "nameNL": "Wilde Eend",
+      "registry": "GUIDE_POSES[2]",
+      "sexLabel": "male",
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, met voorwaarts gestrekte hals en ingetrokken poten. De groene kop en gele snavel bevestigen een mannetje in prachtkleed.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "Oorspronkelijke Commons-JPEG gedownload en herleidbaar omgezet naar WebP, CC BY-SA 4.0."
+     }
+    }
+   ],
+   "corrections": [
+    "De eerdere vluchtfoto is bij Mannetje geplaatst vanwege de neerhangende poten. Een aparte, brongeverifieerde vrije-vluchtfoto is toegevoegd.",
+    "Eclipsfoto zichtbaar gemarkeerd als voorlopig. Het juvenielenlabel noemt alleen de leeftijd.",
+    "Vergelijking met Krakeend legt uit wanneer de vleugelspiegel zichtbaar en bruikbaar is."
+   ],
+   "missing": [
+    "Eenduidig bevestigde eclipsfoto"
+   ],
+   "wishes": [
+    "Individueel rustportret van een mannetje in prachtkleed als extra hoofdbeeldkandidaat."
+   ],
+   "uncertain": [
+    "REVIEW REQUIRED: de Engelse en Sloveense bijschriften bij het vermoedelijke eclipskleed geven een verschillend geslacht."
+   ],
+   "sexPolicy": "Geslacht alleen vermeld waar bron en beeld dit dragen. De twee juvenielen worden zonder geslacht aangeduid.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "PARTIALLY TESTED",
+    "rights": "VERIFIED",
+    "knowledge": "PARTIALLY TESTED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": false,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Vleugelspiegel bij bruine vogels"
+    ],
+    "open": [
+     "De Commons-beschrijvingen spreken elkaar tegen over het geslacht op de vermoedelijke eclipsfoto. Het beeld staat daarom als voorlopig vermeld.",
+     "Bij de juvenielenfoto bevestigen de bronbeschrijvingen jonge vogels, maar verschillen ze over het geslacht. Het fotolabel vermeldt alleen de leeftijd."
+    ],
+    "discrepancies": 0
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
   },
   {
    "id": "sp090",
@@ -2473,9 +4458,189 @@
    "id": "sp091",
    "nameNL": "Wintertaling",
    "family": "Eenden",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M3",
+   "date": "2026-11-11",
+   "sha": "70c4f3fec7508812ab9bb0b50833b52706ce4720",
+   "assets": [
+    {
+     "image": "/assets/species/plumage/sp091-hero-male.webp",
+     "role": "Hoofdfoto",
+     "content": "Zwemmende woerd met kastanjebruine kop, groen oogveld en gele staartzijde.",
+     "sexAge": "Bron noemt een mannetje. Zichtbaar prachtkleed.",
+     "quality": "Duidelijk zijaanzicht.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "geverifieerde import 09-11 (SHA-1 ed2eefdff8…), CC BY-SA 4.0 · Charles J. Sharp",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp091-adult_m.webp",
+     "role": "Verenkleed (Mannetje)",
+     "content": "Een andere woerd in prachtkleed met goed zichtbare flankstreep.",
+     "sexAge": "Bron noemt een mannetje. Kop en flank ondersteunen het label.",
+     "quality": "De flankstreep is duidelijker dan op de hoofdfoto.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Koshy Koshy from Faridabad, Haryana, India",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp091-adult_f.webp",
+     "role": "Verenkleed (Vrouwtje)",
+     "content": "Bruin gevlekt kleed, relatief egale kop en lichte staartzijde.",
+     "sexAge": "Fotograaf benoemt een vrouwtje.",
+     "quality": "Duidelijke soort- en kleedkenmerken.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Frank Vassen from Brussels, Belgium",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp091-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Bruine jonge vogel met groene vleugelspiegel.",
+     "sexAge": "iNaturalist-annotatie Juvenile in de bronaudit van 9 november. Geen geslachtslabel.",
+     "quality": "Kleine uitsnede. Kop en vleugeltekening zijn zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Se Lena, some rights reserved (CC BY)",
+      "annotations": [
+       "Life Stage: Juvenile",
+       "Sex: Male",
+       "Alive or Dead: Alive",
+       "Evidence of Presence: Organism"
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp091-eclipse.webp",
+     "role": "Verenkleed (Overgang naar eclipskleed)",
+     "content": "Bruin getekende vogel met resterende groene kopveren.",
+     "sexAge": "Fotobeschrijving vermeldt een ruiend mannetje. Beeld ondersteunt overgangskleed.",
+     "quality": "Herkenbaar voorbeeld van de overgang.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Roy Lowry, some rights reserved (CC BY)",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp091-flight.webp",
+     "role": "In vlucht (Mannetje)",
+     "content": "Vrije vlucht met open vleugels, groene spiegel en groen oogveld.",
+     "sexAge": "Kop en vleugeltekening bevestigen een woerd in prachtkleed.",
+     "quality": "Helder beeld van spiegel en silhouet.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · Ferran Pestaña from Barcelona, España",
+      "annotations": []
+     },
+     "flight": {
+      "n": 16,
+      "id": "sp091",
+      "nameNL": "Wintertaling",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": "male",
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0"
+     }
+    },
+    {
+     "image": "/assets/species/sp091.webp",
+     "role": "Overige herkenningsfoto's",
+     "content": "Mannetje in prachtkleed en bruine Wintertaling op ondiep water.",
+     "sexAge": "Mannetje herkenbaar. Bruine vogel vermeld zonder afzonderlijk leeftijdslabel.",
+     "quality": "Bruikbaar zij-aan-zijbeeld.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · gailhampshire from Cradley, Malvern, U.K",
+      "annotations": []
+     },
+     "flight": null
+    }
+   ],
+   "corrections": [
+    "De ruifoto vermeldt overgang naar eclipskleed. Het juveniel staat zonder geslachtslabel.",
+    "De vergelijking met Zomertaling legt de combinatie van kop, staartzijde en vleugel uit."
+   ],
+   "missing": [],
+   "wishes": [
+    "Vervang de kleine juvenielenfoto als een scherper bronbeeld met bevestigde leeftijd beschikbaar komt."
+   ],
+   "uncertain": [
+    "De twee iNaturalist-pagina’s waren op 11 november niet opnieuw bereikbaar. Eerder vastgelegd bronbewijs is gebruikt."
+   ],
+   "sexPolicy": "De kaart vermeldt geslacht waar bron en verenkleed dat ondersteunen. Het juveniel blijft zonder geslachtslabel.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "PARTIALLY TESTED",
+    "browser": "VERIFIED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Kop, staartzijde en bovenvleugel bij bruine vogels"
+    ],
+    "open": [
+     "De iNaturalist-waarnemingen bij jeugdkleed en rui konden op 11 november niet opnieuw worden geopend. De foto-identiteit en annotaties uit de bronaudit van 9 november zijn hergebruikt. De jeugdfoto krijgt geen geslachtslabel."
+    ],
+    "discrepancies": 1
+   },
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium 145 (Playwright)",
+    "photos": 7,
+    "sections": [
+     "Hoofdfoto",
+     "Verenkleed",
+     "In vlucht",
+     "Overige herkenningsfoto's"
+    ],
+    "flight": [
+     "/assets/species/plumage/sp091-flight.webp"
+    ],
+    "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik",
+    "testedOn": "635d78a2eae05c63bfbb43f8d9a5dc1d550c7fde",
+    "date": "2026-11-11",
+    "offline": {
+     "method": "Lokale HTTP-server stopgezet na precache, herladen, soortkaart geopend en foto’s gedecodeerd",
+     "status": "VERIFIED"
+    }
+   },
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp092",
@@ -2958,9 +5123,138 @@
    "id": "sp105",
    "nameNL": "Fazant",
    "family": "Fazanten",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M3",
+   "date": "2026-11-11",
+   "sha": "70c4f3fec7508812ab9bb0b50833b52706ce4720",
+   "assets": [
+    {
+     "image": "/assets/species/sp105.webp",
+     "role": "Hoofdfoto",
+     "content": "Haan met rode huid rond het oog, glanzende kop, witte halsring en lange staart.",
+     "sexAge": "Kenmerken bevestigen een mannetje.",
+     "quality": "Hele vogel zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC0 · Romzig",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp105-adult_f.webp",
+     "role": "Verenkleed (Vrouwtje)",
+     "content": "Vrouwtje Fazant op Texel, met donkere vlekken op het bruine kleed en een lange gebandeerde staart.",
+     "sexAge": "Fotograaf benoemt een vrouwtje. Bruin kleed en lange staart ondersteunen het label.",
+     "quality": "Scherp genoeg om tekening en staartvorm te zien.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van de originele Commons-JPEG), CC0 1.0 · Bj.schoenmakers",
+      "annotations": [
+       "Fotograaf benoemt een vrouwtje. Het verenkleed en de staart ondersteunen het label."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp105-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge Fazant in Finland, met een bruin gevlekt kleed en een nog korte staart.",
+     "sexAge": "Fotograaf benoemt een jonge Fazant. Geslacht onbekend.",
+     "quality": "Korte staart en tekening goed zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van de originele Commons-JPEG), CC0 1.0 · Estormiz",
+      "annotations": [
+       "Fotograaf benoemt een jonge Fazant. Het geslacht blijft onbekend."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp105-flight.webp",
+     "role": "In vlucht (Mannetje)",
+     "content": "Vrije vlucht met gespreide, afgeronde vleugels en lange staart.",
+     "sexAge": "Rode huid rond het oog, halsring en kleed bevestigen het mannetje.",
+     "quality": "Zijaanzicht van de vogel uit South Dakota.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), Public domain · U.S. Fish and Wildlife Service Headquarters",
+      "annotations": []
+     },
+     "flight": {
+      "n": 18,
+      "id": "sp105",
+      "nameNL": "Fazant",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": "male",
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), Public domain"
+     }
+    }
+   ],
+   "corrections": [
+    "Vrouwtjesfoto van Texel en juvenielenfoto uit Finland toegevoegd. Vergelijking met Patrijs gebruikt staart en lichaamsbouw."
+   ],
+   "missing": [],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "Haan en hen waar bron en kenmerken overeenstemmen. Juveniel zonder geslachtslabel.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "VERIFIED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Staartlengte en bouw bij bruine vogels"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium 145 (Playwright)",
+    "photos": 4,
+    "sections": [
+     "Hoofdfoto",
+     "Verenkleed",
+     "In vlucht"
+    ],
+    "flight": [
+     "/assets/species/plumage/sp105-flight.webp"
+    ],
+    "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik",
+    "testedOn": "635d78a2eae05c63bfbb43f8d9a5dc1d550c7fde",
+    "date": "2026-11-11",
+    "offline": {
+     "method": "Lokale HTTP-server stopgezet na precache, herladen, soortkaart geopend en foto’s gedecodeerd",
+     "status": "VERIFIED"
+    }
+   },
+   "errors": [],
+   "verdict": "VERIFIED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp106",
@@ -3086,9 +5380,145 @@
    "id": "sp141",
    "nameNL": "Gierzwaluw",
    "family": "Gierzwaluwen",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M3",
+   "date": "2026-11-11",
+   "sha": "70c4f3fec7508812ab9bb0b50833b52706ce4720",
+   "assets": [
+    {
+     "image": "/assets/species/plumage/sp141-adult.webp",
+     "role": "Hoofdfoto",
+     "content": "Vrije vlucht van onderaf met donker silhouet en lange sikkelvleugels.",
+     "sexAge": "Fotograaf benoemt de soort. Geslacht en exacte leeftijd onbekend.",
+     "quality": "Goed overzicht van het typische silhouet.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
+      "annotations": []
+     },
+     "flight": {
+      "n": 21,
+      "id": "sp141",
+      "nameNL": "Gierzwaluw",
+      "registry": "GUIDE_PLUMAGE.adult_m",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 4.0"
+     }
+    },
+    {
+     "image": "/assets/species/plumage/sp141-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Juveniele Gierzwaluw tijdens opvang na redding, met lichte veerranden op kop en vleugels.",
+     "sexAge": "Fotograaf benoemt een juveniel. Lichte veerranden zichtbaar. Geslacht onbekend.",
+     "quality": "Detailfoto uit opvang. De context staat bij de foto.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van de originele Commons-JPEG), CC BY 4.0 · Marie-Lan Taÿ Pamart",
+      "annotations": [
+       "Fotograaf benoemt een juveniel dat na redding werd opgevangen. De lichte veerranden ondersteunen het label."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp141-flight.webp",
+     "role": "In vlucht",
+     "content": "Gierzwaluw in vrije vlucht, met lange, smalle vleugels en een gespreide gevorkte staart.",
+     "sexAge": "De bron bevestigt soort en vlucht. Leeftijd en geslacht onbekend.",
+     "quality": "Andere opname en kijkhoek dan de hoofdfoto.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van de originele Commons-JPEG), CC BY 4.0 · Alexis Lours",
+      "annotations": [
+       "Fotograaf benoemt een Gierzwaluw in vlucht. Leeftijd en geslacht zijn niet vastgesteld."
+      ]
+     },
+     "flight": {
+      "n": 146,
+      "id": "sp141",
+      "nameNL": "Gierzwaluw",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Gierzwaluw in vrije vlucht, met lange, smalle vleugels en een gespreide gevorkte staart.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "Oorspronkelijke Commons-JPEG gedownload en naar WebP omgezet, CC BY 4.0."
+     }
+    }
+   ],
+   "corrections": [
+    "Een juvenielenfoto met expliciete opvangcontext en een afzonderlijke vrije-vluchtfoto toegevoegd. De kaart benoemt overeenkomend verenkleed bij mannetje en vrouwtje.",
+    "Herkenningsprofiel vergelijkt Gierzwaluw met Boerenzwaluw en Huiszwaluw."
+   ],
+   "missing": [],
+   "wishes": [
+    "Een duidelijk juveniel in een natuurlijke situatie als aanvullende foto, zodra leeftijd, bron en licentie bevestigd zijn."
+   ],
+   "uncertain": [
+    "De fotograaf vermeldt bij beide vluchtfoto’s geen exacte leeftijd."
+   ],
+   "sexPolicy": "Neutrale labels. De geslachten hebben hetzelfde verenkleed.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "VERIFIED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Vleugelvorm, onderzijde en staart in vlucht"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium 145 (Playwright)",
+    "photos": 3,
+    "sections": [
+     "Hoofdfoto",
+     "Verenkleed",
+     "In vlucht"
+    ],
+    "flight": [
+     "/assets/species/plumage/sp141-flight.webp"
+    ],
+    "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik",
+    "testedOn": "635d78a2eae05c63bfbb43f8d9a5dc1d550c7fde",
+    "date": "2026-11-11",
+    "offline": {
+     "method": "Lokale HTTP-server stopgezet na precache, herladen, soortkaart geopend en foto’s gedecodeerd",
+     "status": "VERIFIED"
+    }
+   },
+   "errors": [],
+   "verdict": "VERIFIED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp143",
@@ -3736,7 +6166,7 @@
    "audited": true,
    "batch": "M2",
    "date": "2026-11-10",
-   "sha": "61ad1e3",
+   "sha": "11c3751aecaabc37b41feb23fd364fe3298ce1dd",
    "assets": [
     {
      "image": "/assets/species/plumage/sp253-male-rest.webp",
@@ -3759,8 +6189,8 @@
     {
      "image": "/assets/species/plumage/sp253-male-flight.webp",
      "role": "In vlucht (Mannetje)",
-     "content": "Vrij in de lucht; donkere borst, staart met meerdere banden.",
-     "sexAge": "mannetje (iNaturalist: Male; meerdere staartbanden passen bij VB_BVR)",
+     "content": "Vrij in de lucht met zicht op donkere borst en gevlekte vleugels. De staart is gedeeltelijk zichtbaar.",
+     "sexAge": "Mannetje volgens de vastgelegde iNaturalist-annotatie. Houding en uitsnede beperken de zelfstandige controle van de volledige staartbandering.",
      "quality": "voldoende: licht zacht",
      "verdict": "goedgekeurd",
      "rights": {
@@ -3848,21 +6278,28 @@
     }
    ],
    "corrections": [
-    "FQA-01 (eerder in deze PR): juveniel in vlucht naar In vlucht met label Juveniel."
+    "FQA-01 (eerder in deze PR): juveniel in vlucht naar In vlucht met label Juveniel.",
+    "11-11-2026: vier eigen foto’s onafhankelijk visueel herbekeken. Verschil tussen lichte vrouwtjes en juvenielen in het kennisprofiel als ondersteunend beschreven met Europese en Noord-Amerikaanse bronnen."
    ],
-   "missing": [],
-   "uncertain": [],
-   "sexPolicy": "Geslachten verschillen in staart en buik (VB_BVR); labels steunen op bron en passen bij het beeld.",
+   "missing": [
+    "Afzonderlijke rustfoto van vrouwtje",
+    "Afzonderlijke rustfoto van juveniel"
+   ],
+   "wishes": [],
+   "uncertain": [
+    "De drie iNaturalist-foto’s zijn gekoppeld aan de geverifieerde opname en annotaties uit de bronaudit van 9 november. De actuele primaire fotopagina’s en waarnemingen waren bij de hercontrole niet bereikbaar."
+   ],
+   "sexPolicy": "De kleden kunnen in de buik- en staarttekening verschillen en deels overlappen. Foto-annotaties en waarneembare kenmerken worden samen gelezen.",
    "previous": null,
    "status": {
     "technical": "VERIFIED",
     "visual": "VERIFIED",
     "rights": "VERIFIED",
     "knowledge": "PARTIALLY TESTED",
-    "browser": "VERIFIED",
+    "browser": "NOT TESTED",
     "independent": "NOT TESTED"
    },
-   "photoComplete": true,
+   "photoComplete": false,
    "knowledge": {
     "profile": true,
     "critical": 2,
@@ -3872,29 +6309,14 @@
      "Geslacht en leeftijd"
     ],
     "open": [
-     "Geslachtslabels op de vluchtfoto's steunen op de bron (iNaturalist/Commons) en passen bij de beschreven kenmerken; onafhankelijke controle open."
+     "De drie iNaturalist-bronpagina’s konden tijdens de hercontrole niet opnieuw worden geopend. De fotolabels steunen op het vastgelegde bronbewijs van 9 november en zijn niet opnieuw tegen de oorspronkelijke annotaties bevestigd."
     ],
     "discrepancies": 0
    },
-   "browser": {
-    "ok": true,
-    "viewport": "390x844 Chromium (Playwright)",
-    "photos": 4,
-    "sections": [
-     "Hoofdfoto",
-     "In vlucht"
-    ],
-    "flight": [
-     "/assets/species/plumage/sp253-male-flight.webp",
-     "/assets/species/sp253.webp",
-     "/assets/species/plumage/sp253-juv.webp"
-    ],
-    "checks": "SAB-01..07",
-    "lijktOp": "SAB-09 OK (390 px)"
-   },
+   "browser": null,
    "errors": [],
    "verdict": "PARTIALLY TESTED",
-   "next": "Onafhankelijke review (ChatGPT)"
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
   },
   {
    "id": "sp262",

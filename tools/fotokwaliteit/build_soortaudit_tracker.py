@@ -30,7 +30,7 @@ def main():
          f"| 1 | Soorten met bestaande gidsfoto's | {len(rows)} |",
          f"| 2 | Afzonderlijk (aangescherpt) gecontroleerd | {len(aud)} ({', '.join(sorted({r['batch'] for r in aud}))}) |",
          f"| 3 | Technisch correct (laden, volgorde, offline-bron, beoordeling = kaart) | {c(lambda r: r['status']['technical'] == 'VERIFIED')} van {len(aud)} |",
-         f"| 4a | Visueel VERIFIED (Claude, beeld per foto) | {c(lambda r: r['status']['visual'] == 'VERIFIED')} van {len(aud)} |",
+         f"| 4a | Visueel VERIFIED (beeld per foto) | {c(lambda r: r['status']['visual'] == 'VERIFIED')} van {len(aud)} |",
          f"| 4b | Inhoud (kennisprofiel) VERIFIED | {c(lambda r: r['status']['knowledge'] == 'VERIFIED')} van {len(aud)} — alle profielen hebben nog open punten |",
          f"| 4c | Onafhankelijk beoordeeld (ChatGPT) | 0 — NOT TESTED |",
          f"| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | {corrections}; plus collectiebrede vluchtcontrole: {sum(1 for v in fl.values() if v['decision']=='uit-rol')} uit de vluchtrol, {sum(1 for v in fl.values() if v['decision']=='archief')} gearchiveerd |",
@@ -50,12 +50,14 @@ def main():
             L.append(f"| `{a['image'].split('/')[-1]}` | {a['role']} | {a['content']} | {a['sexAge']} | {a['quality']} | {a['verdict']} | "
                      f"{(f['class'] + ' · ' + f['decision']) if f else '—'} | {a['rights']['status']}: {a['rights']['note']} |")
         k = r["knowledge"]
+        browser = r["browser"]
+        browser_text = f"{browser['viewport']} · {browser['checks']}" if browser else "NOT TESTED"
         L += ["", f"- **Correcties:** {'; '.join(r['corrections']) or 'geen'}",
               f"- **Ontbreekt:** {'; '.join(r['missing']) or 'niets'}",
               f"- **Verbeterwensen (eigenaar beoordeelt later):** {'; '.join(r.get('wishes') or []) or '—'}",
               f"- **Geslacht:** {r['sexPolicy']}",
               f"- **Kennisprofiel:** " + (f"{k['critical']} kritische kenmerken ({k['decisive']} doorslaggevend); niet doorslaggevend: {', '.join(k['notDecisive']) or '—'}; open: {'; '.join(k['open']) or '—'}; resterende dataverschillen: {k['discrepancies']}" if k.get("profile") else "ontbreekt"),
-              f"- **Browser:** {(r['browser'] or {}).get('viewport', 'NOT TESTED')} · {(r['browser'] or {}).get('checks', '')}",
+              f"- **Browser:** {browser_text}",
               f"- **Onzeker:** {'; '.join(r['uncertain']) or '—'}"]
         if r.get("previous"):
             L.append(f"- **Eerdere uitslag:** {r['previous']}")

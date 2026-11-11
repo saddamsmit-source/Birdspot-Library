@@ -144,14 +144,14 @@
     "sp253": {
       "assets": {
         "/assets/species/plumage/sp253-male-rest.webp": {"role": "Hoofdfoto", "content": "Ruigpootbuizerd op paal in sneeuwlandschap; lichte kop, donkere flanken/buik.", "sexAge": "iNaturalist: Male; geen label op de hoofdfoto", "quality": "goed", "verdict": "goedgekeurd"},
-        "/assets/species/plumage/sp253-male-flight.webp": {"role": "In vlucht (Mannetje)", "content": "Vrij in de lucht; donkere borst, staart met meerdere banden.", "sexAge": "mannetje (iNaturalist: Male; meerdere staartbanden passen bij VB_BVR)", "quality": "voldoende: licht zacht", "verdict": "goedgekeurd"},
+        "/assets/species/plumage/sp253-male-flight.webp": {"role": "In vlucht (Mannetje)", "content": "Vrij in de lucht met zicht op donkere borst en gevlekte vleugels. De staart is gedeeltelijk zichtbaar.", "sexAge": "Mannetje volgens de vastgelegde iNaturalist-annotatie. Houding en uitsnede beperken de zelfstandige controle van de volledige staartbandering.", "quality": "voldoende: licht zacht", "verdict": "goedgekeurd"},
         "/assets/species/sp253.webp": {"role": "In vlucht (Vrouwtje)", "content": "Vrij in de lucht van onderen; lichte kop, donker buikschild, witte staartbasis met één brede eindband.", "sexAge": "vrouwtje (bron: 'female'; buikschild en één eindband passen bij VB_BVR)", "quality": "goed", "verdict": "goedgekeurd"},
         "/assets/species/plumage/sp253-juv.webp": {"role": "In vlucht (Juveniel)", "content": "Jonge vogel vrij in de lucht; gespreide vleugels en staart.", "sexAge": "juveniel (iNaturalist: Life Stage Juvenile)", "quality": "goed; watermerk maker", "verdict": "goedgekeurd"}
       },
-      "corrections": ["FQA-01 (eerder in deze PR): juveniel in vlucht naar In vlucht met label Juveniel."],
-      "missing": [],
-      "sexPolicy": "Geslachten verschillen in staart en buik (VB_BVR); labels steunen op bron en passen bij het beeld.",
-      "uncertain": []
+      "corrections": ["FQA-01 (eerder in deze PR): juveniel in vlucht naar In vlucht met label Juveniel.", "11-11-2026: vier eigen foto’s onafhankelijk visueel herbekeken. Verschil tussen lichte vrouwtjes en juvenielen in het kennisprofiel als ondersteunend beschreven met Europese en Noord-Amerikaanse bronnen."],
+      "missing": ["Afzonderlijke rustfoto van vrouwtje", "Afzonderlijke rustfoto van juveniel"],
+      "sexPolicy": "De kleden kunnen in de buik- en staarttekening verschillen en deels overlappen. Foto-annotaties en waarneembare kenmerken worden samen gelezen.",
+      "uncertain": ["De drie iNaturalist-foto’s zijn gekoppeld aan de geverifieerde opname en annotaties uit de bronaudit van 9 november. De actuele primaire fotopagina’s en waarnemingen waren bij de hercontrole niet bereikbaar."]
     }
   }
 }

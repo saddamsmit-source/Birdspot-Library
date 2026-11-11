@@ -1358,11 +1358,11 @@
     "sp089 GUIDE_POSES[0]"
    ],
    "sha1": "0d71c694397180edb91762e0249dccbff23ca129",
-   "class": "vlucht",
-   "airborne": true,
+   "class": "landen",
+   "airborne": false,
    "source": "vluchtcontrole",
-   "decision": "goedgekeurd",
-   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+   "decision": "uit-rol",
+   "note": "Luchtgedragen met uitgestrekte poten omlaag, passend bij landingshouding. Vrije vlucht is niet bevestigd voor dit beeld."
   },
   "/assets/species/plumage/sp089-juv-review.webp": {
    "refs": [
@@ -3977,6 +3977,149 @@
    "source": "vluchtcontrole",
    "decision": "goedgekeurd",
    "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp089-free-flight.webp": {
+   "refs": [
+    "sp089 GUIDE_POSES[2]"
+   ],
+   "sha1": "3a1b881977d401ef2b7a18fa9edfc445338be7f7",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, met voorwaarts gestrekte hals en ingetrokken poten. De groene kop en gele snavel bevestigen een mannetje in prachtkleed."
+  },
+  "/assets/species/plumage/sp105-adult_f.webp": {
+   "refs": [
+    "sp105 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "85071d1d286688aba5b9db55323c0a54c166f3a7",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M3-fase 4",
+   "decision": "goedgekeurd",
+   "note": "Vrouwtje Fazant op Texel, met donkere vlekken op het bruine kleed en een lange gebandeerde staart."
+  },
+  "/assets/species/plumage/sp105-juv.webp": {
+   "refs": [
+    "sp105 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "617a552d2e813c7223e8d7231b7ab64f04fce796",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M3-fase 4",
+   "decision": "goedgekeurd",
+   "note": "Jonge Fazant in Finland, met een bruin gevlekt kleed en een nog korte staart."
+  },
+  "/assets/species/plumage/sp141-juv.webp": {
+   "refs": [
+    "sp141 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "329bd54779414abb93c31cebd7d3d1b2169e9a30",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M3-fase 4",
+   "decision": "goedgekeurd",
+   "note": "Juveniele Gierzwaluw tijdens opvang na redding, met lichte veerranden op kop en vleugels."
+  },
+  "/assets/species/plumage/sp141-flight.webp": {
+   "refs": [
+    "sp141 GUIDE_POSES[0]"
+   ],
+   "sha1": "c70b8bd9869dd7cedbe5fee70a6be78693830596",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Gierzwaluw in vrije vlucht, met lange, smalle vleugels en een gespreide gevorkte staart."
+  },
+  "/assets/species/plumage/sp029-adult_m.webp": {
+   "refs": [
+    "sp029 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "fdd5f978ff7b1af1d16c13dbc5e3217f3fd36b3e",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M4-fase 1",
+   "decision": "goedgekeurd",
+   "note": "Mannetje Koolmees met zwarte kop, witte wang en brede donkere buikstreep."
+  },
+  "/assets/species/plumage/sp029-adult_f.webp": {
+   "refs": [
+    "sp029 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "50108909b3b49c08582855b3e2372cfc58914c97",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M4-fase 1",
+   "decision": "goedgekeurd",
+   "note": "Vrouwtje Koolmees met witte wangen en een smalle, onderbroken donkere buikstreep."
+  },
+  "/assets/species/plumage/sp029-juv.webp": {
+   "refs": [
+    "sp029 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "ef2814e8f25fee6a21c0ac9dda43ac4e86c09f52",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M4-fase 1",
+   "decision": "goedgekeurd",
+   "note": "Juveniele Koolmees met doffe kap, lichte wang en lichte mondhoek."
+  },
+  "/assets/species/plumage/sp045-free-flight.webp": {
+   "refs": [
+    "sp045 GUIDE_POSES[2]"
+   ],
+   "sha1": "d9e9c39d5adba501f9cb93d48b3d0267a4471ff1",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "voorwaardelijk",
+   "note": "Voorlopige foto: mannetje Merel in vrije vlucht. De staart is deels afgedekt en de vleugels zijn deels onscherp."
+  },
+  "/assets/species/plumage/sp046-juv.webp": {
+   "refs": [
+    "sp046 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "729d0cee694eb155ee2760a23221cbc44ec56c6b",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M4-fase 2",
+   "decision": "goedgekeurd",
+   "note": "Juveniele Zanglijster met lichte tekening op de bovenzijde en een gevlekte borst."
+  },
+  "/assets/species/plumage/sp047-juv.webp": {
+   "refs": [
+    "sp047 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "c98102528e7451cf0d962063d2dbec0491c70a42",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M4-fase 2",
+   "decision": "goedgekeurd",
+   "note": "Juveniele Kramsvogel met gevlekte borst, bruingrijze kop en minder sterk contrast tussen kop en rug."
+  },
+  "/assets/species/plumage/sp048-juv.webp": {
+   "refs": [
+    "sp048 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "070d035c1a3b20a8779dde602da55aee260fd7a7",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M4-fase 3",
+   "decision": "goedgekeurd",
+   "note": "iNaturalist-waarneming van onderzoekskwaliteit, taxon Turdus iliacus, leeftijdsannotatie Juvenile. Geslacht onbekend."
+  },
+  "/assets/species/plumage/sp072-juv.webp": {
+   "refs": [
+    "sp072 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "e26ec91749dca6e45d73d8053cbdbbb8d74c0026",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M4-fase 3",
+   "decision": "goedgekeurd",
+   "note": "De fotograaf vermeldt een juveniel. Lichte veerranden en borststreping zichtbaar. Geslacht onbekend."
   }
  }
 }

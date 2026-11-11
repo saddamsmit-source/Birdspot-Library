@@ -55,6 +55,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SHOTS = ROOT / "tests" / "screenshots"
 SHOTS.mkdir(parents=True, exist_ok=True)
 LIFE_SRC = json.loads((ROOT / "tools" / "species" / "species_life.json").read_text(encoding="utf-8"))
+KNOWLEDGE_SRC = json.loads((ROOT / "tools" / "kennisbaseline" / "knowledge.json").read_text(encoding="utf-8"))
 SEASONAL = json.loads((ROOT / "tools" / "species" / "seasonal_plumage.json").read_text(encoding="utf-8"))
 MONTHS = ['jan', 'feb', 'mrt', 'apr', 'mei', 'jun', 'jul', 'aug', 'sep', 'okt', 'nov', 'dec']
 SIGHTINGS = [
@@ -294,8 +295,15 @@ def main():
             ml = life[me["id"]]
             open_species("Merel", me["id"])
             assert p.locator('[data-sd-tab="status"]').inner_text().strip() == "Leefwijze"
-            p.locator('#sdPanel-herkenning .sd-voice').wait_for(timeout=5000)
-            assert p.locator('#sdPanel-herkenning .sd-voice p').inner_text() == ml["voice"]
+            voice = p.locator('#sdPanel-herkenning [data-kb-voice] li')
+            expected_voice = KNOWLEDGE_SRC[me["id"]]["voice"]
+            assert expected_voice, "H3-02 geen brongeverifieerde zangtekst voor Merel"
+            expect(voice).to_have_count(len(expected_voice))
+            for i, entry in enumerate(expected_voice):
+                expect(voice.nth(i)).to_contain_text(entry["text"])
+                labels = [KNOWLEDGE_SRC["_sources"][key]["label"].split(" — ")[0] for key in entry["sources"]]
+                expect(voice.nth(i).locator('.kb-src')).to_have_text("Bron: " + " · ".join(dict.fromkeys(labels)))
+            expect(p.locator('#sdPanel-herkenning .sd-voice')).to_have_count(0)
             tab("status")
             vals = p.eval_on_selector_all('#sdPanel-status .sd-breed .sd-tile__value', 'els => els.map(e => e.innerText)')
             b = ml["breeding"]

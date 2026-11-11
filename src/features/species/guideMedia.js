@@ -1848,7 +1848,8 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/merel",
       "visualCheck": "Jonge Merel op een tak met lichte spikkels op de bruinige borst.",
       "alt": "Merel — Jonge Merel op een tak met lichte spikkels op de bruinige borst.",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/"
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "note": "Let op de lichte vlekjes en streepjes op het bruine verenkleed. Geslacht onbekend."
     },
     "adult_m": {
       "reuseGuidePhoto": true
@@ -1889,9 +1890,11 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "reviewed": "2026-11-06",
       "verification": "Commons metadata and visual check against the cited species account.",
       "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wilde-eend",
-      "visualCheck": "Mannetje in eclipskleed aan het water, met bruin verenkleed en een effen gele snavel.",
-      "alt": "Wilde Eend — Mannetje in eclipskleed aan het water, met bruin verenkleed en een effen gele snavel.",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      "visualCheck": "Bruin kleed en gele snavel. Het Engelse en Sloveense bronbijschrift verschillen over het geslacht.",
+      "alt": "Bruin getekende Wilde Eend met gele snavel bij water.",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "label": "Voorlopige foto",
+      "note": "Waarschijnlijk een mannetje in eclipskleed. De gele snavel ondersteunt dit, maar de bronbijschriften verschillen over het geslacht."
     }
   },
   "sp129": {
@@ -2644,7 +2647,8 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "visualCheck": "Jonge Wintertaling in Tokio. Bruine kop met donkere oogstreep en een zichtbare groene vleugelspiegel.",
       "alt": "Wintertaling — Jonge Wintertaling in Tokio. Bruine kop met donkere oogstreep en een zichtbare groene vleugelspiegel.",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-      "observation": "https://www.inaturalist.org/observations/101542967"
+      "observation": "https://www.inaturalist.org/observations/101542967",
+      "note": "De waarneming vermeldt een juveniel. Het geslacht is op deze foto niet betrouwbaar vast te stellen."
     },
     "eclipse": {
       "file": "iNaturalist photo 76374524",
@@ -2664,7 +2668,9 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "visualCheck": "Ruiend mannetje in Cheshire. Overwegend bruin lichaam met nog groene veren op de kop.",
       "alt": "Wintertaling — Ruiend mannetje in Cheshire. Overwegend bruin lichaam met nog groene veren op de kop.",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-      "observation": "https://www.inaturalist.org/observations/48145191"
+      "observation": "https://www.inaturalist.org/observations/48145191",
+      "label": "Overgang naar eclipskleed",
+      "note": "Het mannetje krijgt een bruin kleed. Op de kop zijn nog groene veren zichtbaar."
     }
   },
   "sp188": {
@@ -3511,7 +3517,8 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "height": 1600,
       "verification": "Juveniel expliciet in bestandsnaam en oorspronkelijke Flickr-beschrijving; gele wang visueel passend bij BTO. Geen geslachtsclaim.",
       "originalURL": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Blue_tit_-_Juvenile_-_Cyanistes_caeruleus_%2853079786093%29.jpg",
-      "image": "/assets/species/plumage/sp030-juv2.webp"
+      "image": "/assets/species/plumage/sp030-juv2.webp",
+      "note": "Let op de gelige wang en de doffe kruin. De bron bevestigt een juveniel."
     }
   },
   "sp031": {
@@ -3905,7 +3912,7 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
       "source": "https://commons.wikimedia.org/wiki/File:Common_swift_2024_04_21.jpg",
-      "showSourceLink": false,
+      "showSourceLink": true,
       "alt": "Gierzwaluw in vlucht met donkere onderzijde, lange sikkelvleugels, lichte keel en korte gevorkte staart.",
       "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
       "reviewed": "2026-11-07",
@@ -3917,6 +3924,29 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "image": "/assets/species/plumage/sp141-adult.webp",
       "flight": true,
       "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+    },
+    "juv": {
+      "file": "Apus apus juvenile rescue Paris 20260627.jpg",
+      "nl": "Gierzwaluw",
+      "latin": "Apus apus",
+      "author": "Marie-Lan Taÿ Pamart",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Apus_apus_juvenile_rescue_Paris_20260627.jpg",
+      "showSourceLink": true,
+      "alt": "Juveniele Gierzwaluw tijdens opvang na redding, met lichte veerranden op kop en vleugels.",
+      "note": "Juveniele Gierzwaluw tijdens opvang na redding, met lichte veerranden op kop en vleugels.",
+      "modifications": "Verkleind tot max. 1440 px en omgezet naar WebP zonder uitsnede en zonder EXIF/GPS/XMP",
+      "reviewed": "2026-11-11",
+      "verificationSource": "https://commons.wikimedia.org/wiki/File:Apus_apus_juvenile_rescue_Paris_20260627.jpg",
+      "visualCheck": "Juveniele Gierzwaluw tijdens opvang na redding, met lichte veerranden op kop en vleugels.",
+      "verification": "Fotograaf benoemt een juveniel dat na redding werd opgevangen. De lichte veerranden ondersteunen het label.",
+      "width": 1440,
+      "height": 1080,
+      "image": "/assets/species/plumage/sp141-juv.webp",
+      "sha1": "329bd54779414abb93c31cebd7d3d1b2169e9a30",
+      "sourceAudit": "2026-11-11",
+      "age": "juvenile"
     }
   },
   "sp165": {
@@ -3985,6 +4015,223 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "flight": true,
       "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
     }
+  },
+  "sp105": {
+    "adult_f": {
+      "file": "Phasianus colchicus (Common pheasant) female, Texel, the Netherlands.jpg",
+      "nl": "Fazant",
+      "latin": "Phasianus colchicus",
+      "author": "Bj.schoenmakers",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Phasianus_colchicus_%28Common_pheasant%29_female%2C_Texel%2C_the_Netherlands.jpg",
+      "showSourceLink": true,
+      "alt": "Vrouwtje Fazant op Texel, met donkere vlekken op het bruine kleed en een lange gebandeerde staart.",
+      "note": "Vrouwtje Fazant op Texel, met donkere vlekken op het bruine kleed en een lange gebandeerde staart.",
+      "modifications": "Omgezet naar WebP zonder uitsnede en zonder EXIF/GPS/XMP",
+      "reviewed": "2026-11-11",
+      "verificationSource": "https://commons.wikimedia.org/wiki/File:Phasianus_colchicus_%28Common_pheasant%29_female%2C_Texel%2C_the_Netherlands.jpg",
+      "visualCheck": "Vrouwtje Fazant op Texel, met donkere vlekken op het bruine kleed en een lange gebandeerde staart.",
+      "verification": "Fotograaf benoemt een vrouwtje. Het verenkleed en de staart ondersteunen het label.",
+      "width": 800,
+      "height": 600,
+      "image": "/assets/species/plumage/sp105-adult_f.webp",
+      "sha1": "85071d1d286688aba5b9db55323c0a54c166f3a7",
+      "sourceAudit": "2026-11-11",
+      "sex": "female"
+    },
+    "juv": {
+      "file": "Phasianus colchicus Oulu 20170723 04.jpg",
+      "nl": "Fazant",
+      "latin": "Phasianus colchicus",
+      "author": "Estormiz",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Phasianus_colchicus_Oulu_20170723_04.jpg",
+      "showSourceLink": true,
+      "alt": "Jonge Fazant in Finland, met een bruin gevlekt kleed en een nog korte staart.",
+      "note": "Jonge Fazant in Finland, met een bruin gevlekt kleed en een nog korte staart.",
+      "modifications": "Verkleind tot max. 1440 px en omgezet naar WebP zonder uitsnede en zonder EXIF/GPS/XMP",
+      "reviewed": "2026-11-11",
+      "verificationSource": "https://commons.wikimedia.org/wiki/File:Phasianus_colchicus_Oulu_20170723_04.jpg",
+      "visualCheck": "Jonge Fazant in Finland, met een bruin gevlekt kleed en een nog korte staart.",
+      "verification": "Fotograaf benoemt een jonge Fazant. Het geslacht blijft onbekend.",
+      "width": 1440,
+      "height": 1153,
+      "image": "/assets/species/plumage/sp105-juv.webp",
+      "sha1": "617a552d2e813c7223e8d7231b7ab64f04fce796",
+      "sourceAudit": "2026-11-11",
+      "age": "juvenile"
+    }
+  },
+  "sp029": {
+    "adult_m": {
+      "file": "Great tit (Parus major) male.jpg",
+      "nl": "Koolmees",
+      "latin": "Parus major",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Great_tit_%28Parus_major%29_male.jpg",
+      "showSourceLink": true,
+      "alt": "Mannetje Koolmees met zwarte kop, witte wang en brede donkere buikstreep.",
+      "modifications": "Verkleind tot max. 1400 px en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+      "reviewed": "2026-11-11",
+      "verificationSource": "https://commons.wikimedia.org/wiki/File:Great_tit_%28Parus_major%29_male.jpg",
+      "visualCheck": "Mannetje Koolmees met zwarte kop, witte wang en brede donkere buikstreep.",
+      "verification": "De fotograaf vermeldt een mannetje. De brede donkere buikstreep ondersteunt dat label.",
+      "width": 1400,
+      "height": 933,
+      "image": "/assets/species/plumage/sp029-adult_m.webp",
+      "sha1": "fdd5f978ff7b1af1d16c13dbc5e3217f3fd36b3e",
+      "sourceAudit": "2026-11-11",
+      "sex": "male"
+    },
+    "adult_f": {
+      "file": "Female Great tit.jpg",
+      "nl": "Koolmees",
+      "latin": "Parus major",
+      "author": "Evas-naturfotografie",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Female_Great_tit.jpg",
+      "showSourceLink": true,
+      "alt": "Vrouwtje Koolmees met witte wangen en een smalle, onderbroken donkere buikstreep.",
+      "modifications": "Verkleind tot max. 1400 px en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+      "reviewed": "2026-11-11",
+      "verificationSource": "https://commons.wikimedia.org/wiki/File:Female_Great_tit.jpg",
+      "visualCheck": "Vrouwtje Koolmees met witte wangen en een smalle, onderbroken donkere buikstreep.",
+      "verification": "De fotograaf vermeldt een vrouwtje. Het vooraanzicht toont de smallere buikstreep.",
+      "width": 1400,
+      "height": 1050,
+      "image": "/assets/species/plumage/sp029-adult_f.webp",
+      "sha1": "50108909b3b49c08582855b3e2372cfc58914c97",
+      "sourceAudit": "2026-11-11",
+      "sex": "female"
+    },
+    "juv": {
+      "file": "Great tit - Juvenile - Parus major (53034153829).jpg",
+      "nl": "Koolmees",
+      "latin": "Parus major",
+      "author": "caroline legg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Great_tit_-_Juvenile_-_Parus_major_%2853034153829%29.jpg",
+      "showSourceLink": true,
+      "alt": "Juveniele Koolmees met doffe kap, lichte wang en lichte mondhoek.",
+      "modifications": "Verkleind tot max. 1400 px en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+      "reviewed": "2026-11-11",
+      "verificationSource": "https://commons.wikimedia.org/wiki/File:Great_tit_-_Juvenile_-_Parus_major_%2853034153829%29.jpg",
+      "visualCheck": "Juveniele Koolmees met doffe kap, lichte wang en lichte mondhoek.",
+      "verification": "De fotograaf benoemt een juveniel. De doffe kap en lichte mondhoek ondersteunen de leeftijd. Geslacht niet vastgesteld.",
+      "width": 1400,
+      "height": 1000,
+      "image": "/assets/species/plumage/sp029-juv.webp",
+      "sha1": "ef2814e8f25fee6a21c0ac9dda43ac4e86c09f52",
+      "sourceAudit": "2026-11-11",
+      "age": "juvenile"
+    }
+  },
+  "sp046": {
+    "juv": {
+      "file": "Juvenile Song Thrush (Turdus philomelos), Puszcza Knyszyńska, Polska (4664107073).jpg",
+      "nl": "Zanglijster",
+      "latin": "Turdus philomelos",
+      "author": "Frank Vassen",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Juvenile_Song_Thrush_%28Turdus_philomelos%29%2C_Puszcza_Knyszy%C5%84ska%2C_Polska_%284664107073%29.jpg",
+      "showSourceLink": true,
+      "alt": "Juveniele Zanglijster met lichte tekening op de bovenzijde en een gevlekte borst.",
+      "note": "Juveniele Zanglijster met lichte tekening op de bovenzijde en een gevlekte borst.",
+      "modifications": "Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+      "reviewed": "2026-11-11",
+      "verificationSource": "https://commons.wikimedia.org/wiki/File:Juvenile_Song_Thrush_%28Turdus_philomelos%29%2C_Puszcza_Knyszy%C5%84ska%2C_Polska_%284664107073%29.jpg",
+      "visualCheck": "Juveniele Zanglijster met lichte tekening op de bovenzijde en een gevlekte borst.",
+      "verification": "Fotograaf benoemt een juveniel. De lichte boventekening ondersteunt het label. Geslacht onbekend.",
+      "width": 1400,
+      "height": 1050,
+      "image": "/assets/species/plumage/sp046-juv.webp",
+      "sha1": "729d0cee694eb155ee2760a23221cbc44ec56c6b",
+      "sourceAudit": "2026-11-11",
+      "age": "juvenile"
+    }
+  },
+  "sp047": {
+    "juv": {
+      "file": "Fieldfare (41635078500).jpg",
+      "nl": "Kramsvogel",
+      "latin": "Turdus pilaris",
+      "author": "hedera.baltica",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Fieldfare_%2841635078500%29.jpg",
+      "showSourceLink": true,
+      "alt": "Juveniele Kramsvogel met gevlekte borst, bruingrijze kop en minder sterk contrast tussen kop en rug.",
+      "note": "Juveniele Kramsvogel met gevlekte borst, bruingrijze kop en minder sterk contrast tussen kop en rug.",
+      "modifications": "Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+      "reviewed": "2026-11-11",
+      "verificationSource": "https://commons.wikimedia.org/wiki/File:Fieldfare_%2841635078500%29.jpg",
+      "visualCheck": "Juveniele Kramsvogel met gevlekte borst, bruingrijze kop en minder sterk contrast tussen kop en rug.",
+      "verification": "De fotograaf benoemt een juveniele Kramsvogel. Doffere kop en rug passen bij het jeugdkleed. Geslacht onbekend.",
+      "width": 1400,
+      "height": 1135,
+      "image": "/assets/species/plumage/sp047-juv.webp",
+      "sha1": "c98102528e7451cf0d962063d2dbec0491c70a42",
+      "sourceAudit": "2026-11-11",
+      "age": "juvenile"
+    }
+  },
+  "sp048": {
+    "juv": {
+      "file": "Koperwiek · iNaturalist-foto 703836505",
+      "nl": "Koperwiek",
+      "latin": "Turdus iliacus",
+      "author": "Pyry Liedes",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://www.inaturalist.org/photos/703836505",
+      "showSourceLink": true,
+      "alt": "Jonge Koperwiek met lichte wenkbrauwstreep, gevlekte borst en lichte punten aan vleugeldekveren.",
+      "note": "Jonge Koperwiek met lichte wenkbrauwstreep, gevlekte borst en lichte punten aan vleugeldekveren.",
+      "modifications": "Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+      "reviewed": "2026-11-11",
+      "verificationSource": "https://www.inaturalist.org/observations/384496263",
+      "visualCheck": "Jonge Koperwiek met lichte wenkbrauwstreep, gevlekte borst en lichte punten aan vleugeldekveren.",
+      "verification": "iNaturalist-waarneming van onderzoekskwaliteit, taxon Turdus iliacus, leeftijdsannotatie Juvenile. Geslacht onbekend.",
+      "width": 1400,
+      "height": 1119,
+      "image": "/assets/species/plumage/sp048-juv.webp",
+      "sha1": "070d035c1a3b20a8779dde602da55aee260fd7a7",
+      "sourceAudit": "2026-11-11",
+      "age": "juvenile",
+      "observation": "https://www.inaturalist.org/observations/384496263"
+    }
+  },
+  "sp072": {
+    "juv": {
+      "file": "Juvenile Meadow Pipit (50181136792).jpg",
+      "nl": "Graspieper",
+      "latin": "Anthus pratensis",
+      "author": "caroline legg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Juvenile_Meadow_Pipit_(50181136792).jpg",
+      "showSourceLink": true,
+      "alt": "Jonge Graspieper met lichte veerranden op de vleugel, borststrepen en lichte poten.",
+      "note": "Jonge Graspieper met lichte veerranden op de vleugel, borststrepen en lichte poten.",
+      "modifications": "Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+      "reviewed": "2026-11-11",
+      "verificationSource": "https://commons.wikimedia.org/wiki/File:Juvenile_Meadow_Pipit_(50181136792).jpg",
+      "visualCheck": "Jonge Graspieper met lichte veerranden op de vleugel, borststrepen en lichte poten.",
+      "verification": "De fotograaf vermeldt een juveniel. Lichte veerranden en borststreping zichtbaar. Geslacht onbekend.",
+      "width": 1400,
+      "height": 933,
+      "image": "/assets/species/plumage/sp072-juv.webp",
+      "sha1": "e26ec91749dca6e45d73d8053cbdbbb8d74c0026",
+      "sourceAudit": "2026-11-11",
+      "age": "juvenile"
+    }
   }
 });
 export const GUIDE_HEROES = Object.freeze({
@@ -4017,7 +4264,8 @@ export const GUIDE_HEROES = Object.freeze({
   "sp188": "/assets/species/plumage/sp188-hero-male.webp",
   "sp249": "/assets/species/plumage/sp249-hero-male.webp",
   "sp250": "/assets/species/plumage/sp250-hero-male.webp",
-  "sp251": "/assets/species/plumage/sp251-hero-male.webp"
+  "sp251": "/assets/species/plumage/sp251-hero-male.webp",
+  "sp029": "/assets/species/plumage/sp029-adult_m.webp"
 });
 export const GUIDE_POSES = Object.freeze({
   "sp008": [
@@ -5302,7 +5550,7 @@ export const GUIDE_POSES = Object.freeze({
       "label": "Juveniel",
       "flight": false,
       "age": "juvenile",
-      "note": "De jonge Huismus vooraan heeft een lichtbruine kop, een bleke snavelbasis en een bruin getekende vleugel.",
+      "note": "De fotograaf benoemt de vogel op de voorgrond als juveniel. Het geslacht is onbekend.",
       "file": "House sparrow (Passer domesticus) juvenile.jpg",
       "nl": "Huismus",
       "latin": "Passer domesticus",
@@ -5417,6 +5665,33 @@ export const GUIDE_POSES = Object.freeze({
       "width": 1600,
       "height": 1067,
       "image": "/assets/species/plumage/sp045-hero-male.webp"
+    },
+    {
+      "file": "Blackbirds.JPG",
+      "nl": "Merel",
+      "latin": "Turdus merula",
+      "author": "Alf Beard",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Blackbirds.JPG",
+      "showSourceLink": true,
+      "alt": "Voorlopige foto: mannetje Merel in vrije vlucht. De staart is deels afgedekt en de vleugels zijn deels onscherp.",
+      "note": "Voorlopige foto: mannetje Merel in vrije vlucht. De staart is deels afgedekt en de vleugels zijn deels onscherp.",
+      "modifications": "Uitsnede van de bovenste vogel en omgezet naar WebP zonder EXIF/GPS/XMP",
+      "reviewed": "2026-11-11",
+      "verificationSource": "https://commons.wikimedia.org/wiki/File:Blackbirds.JPG",
+      "visualCheck": "Voorlopige foto: mannetje Merel in vrije vlucht. De staart is deels afgedekt en de vleugels zijn deels onscherp.",
+      "verification": "Commons vermeldt Merel, vlucht en mannetje in de categorieën. Bij de bovenste vogel zijn het donkere kleed en de geel-oranje snavel zichtbaar.",
+      "width": 825,
+      "height": 615,
+      "image": "/assets/species/plumage/sp045-free-flight.webp",
+      "sha1": "d9e9c39d5adba501f9cb93d48b3d0267a4471ff1",
+      "sourceAudit": "2026-11-11",
+      "label": "Mannetje in vlucht",
+      "sex": "male",
+      "flight": true,
+      "replacement": "gewenst",
+      "flightReview": "voorwaardelijk 2026-11-11: vrije vlucht bevestigd. Staart deels afgedekt en vleugels deels onscherp."
     }
   ],
   "sp046": [
@@ -5657,7 +5932,7 @@ export const GUIDE_POSES = Object.freeze({
     {
       "label": "In vlucht",
       "flight": true,
-      "note": "Deze vluchtfoto toont de Oost-Aziatische ondersoort japonensis. Let op de compacte bouw en de gespreide vleugels.",
+      "note": "Voorlopige foto: bewegingsonscherpte beperkt de herkenningsdetails. De opname toont de Oost-Aziatische ondersoort japonensis.",
       "file": "Regulus regulus japonensis in flight.JPG",
       "nl": "Goudhaantje",
       "latin": "Regulus regulus",
@@ -5674,7 +5949,7 @@ export const GUIDE_POSES = Object.freeze({
       "width": 1312,
       "height": 1400,
       "image": "/assets/species/plumage/sp063-flight.webp",
-      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+      "flightReview": "voorwaardelijk 2026-11-11: In vrije vlucht. Bewegingsonscherpte beperkt details en de foto toont japonensis. Een scherpe Europese vluchtfoto is gewenst."
     }
   ],
   "sp065": [
@@ -5952,7 +6227,7 @@ export const GUIDE_POSES = Object.freeze({
       "image": "/assets/species/plumage/sp078-juv.webp",
       "age": "chick",
       "label": "Donsjong",
-      "note": "Donsjong met rood-oranje kop. Het latere juveniele kleed (grijsbruin met lichte keel) is hiernaast te zien.",
+      "note": "Donsjong met rood-oranje kop en donker dons. Het latere kleed staat bij Juveniel.",
       "flight": false,
       "sourceAudit": "2026-11-09"
     },
@@ -5966,12 +6241,12 @@ export const GUIDE_POSES = Object.freeze({
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Eurasian_coot_2025_06_18.jpg",
       "showSourceLink": true,
-      "alt": "Meerkoet — juveniel, grijsbruin met een lichte keel en wangen, nog zonder de witte snavelplaat van een volwassen vogel.",
+      "alt": "Jonge Meerkoet met grijsbruin kleed, lichte keel en wangen en een klein voorhoofdsschild.",
       "modifications": "Omgezet naar WebP zonder uitsnede",
       "reviewed": "2026-11-09",
       "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/meerkoet",
-      "visualCheck": "Bron noemt expliciet 'a juvenile Eurasian coot'. Grijsbruin verenkleed met lichte keel/wangen, nog geen witte snavelplaat.",
-      "verification": "Bron noemt expliciet 'a juvenile Eurasian coot'. Grijsbruin verenkleed met lichte keel/wangen, nog geen witte snavelplaat.",
+      "visualCheck": "De fotograaf benoemt een juveniel. Lichte keel en wangen en een klein voorhoofdsschild zijn zichtbaar.",
+      "verification": "De fotograaf benoemt een juveniel. Lichte keel en wangen en een klein voorhoofdsschild zijn zichtbaar.",
       "width": 1600,
       "height": 1067,
       "image": "/assets/species/plumage/sp078-juv-grown.webp",
@@ -5979,7 +6254,7 @@ export const GUIDE_POSES = Object.freeze({
       "sha1": "f5522453133053691b4b821a106fe80c0bde1e10",
       "flight": false,
       "sourceAudit": "2026-11-09",
-      "note": "Grijsbruin verenkleed met een lichte keel en wangen, nog zonder de witte snavelplaat van een volwassen vogel."
+      "note": "Grijsbruin kleed met lichte keel en wangen. Het voorhoofdsschild is nog klein en onopvallend."
     }
   ],
   "sp079": [
@@ -6128,9 +6403,9 @@ export const GUIDE_POSES = Object.freeze({
   ],
   "sp089": [
     {
-      "label": "Mannetje in vlucht",
-      "flight": true,
-      "note": "Let op de groene kop, de gele snavel en de blauw-paarse vleugelspiegel met lichte randen.",
+      "label": "Mannetje met uitgespreide vleugels",
+      "flight": false,
+      "note": "De poten hangen omlaag. De houding past bij landen en toont het prachtkleed.",
       "file": "Mallard male in flight.jpg",
       "nl": "Wilde Eend",
       "latin": "Anas platyrhynchos",
@@ -6139,16 +6414,16 @@ export const GUIDE_POSES = Object.freeze({
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://commons.wikimedia.org/wiki/File:Mallard_male_in_flight.jpg",
       "showSourceLink": true,
-      "alt": "Mannetje Wilde Eend in vrije vlucht, met een groene kop en geheven vleugels.",
+      "alt": "Wilde Eend mannetje met groene kop, geheven vleugels en neerhangende poten.",
       "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
       "reviewed": "2026-11-08",
       "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wilde-eend",
-      "visualCheck": "Mannetje Wilde Eend in vrije vlucht, met een groene kop en geheven vleugels.",
+      "visualCheck": "De poten hangen omlaag. De houding past bij landen en toont het prachtkleed.",
       "width": 1400,
       "height": 958,
       "image": "/assets/species/plumage/sp089-flight.webp",
       "sex": "male",
-      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+      "flightReview": "uit-rol 2026-11-11: Luchtgedragen met uitgestrekte poten omlaag, passend bij landingshouding. Vrije vlucht is niet bevestigd voor dit beeld."
     },
     {
       "label": "Juvenielen",
@@ -6170,6 +6445,31 @@ export const GUIDE_POSES = Object.freeze({
       "width": 1400,
       "height": 935,
       "image": "/assets/species/plumage/sp089-juv-review.webp"
+    },
+    {
+      "label": "Mannetje in vlucht",
+      "flight": true,
+      "sex": "male",
+      "note": "Zijaanzicht met vooruitgestrekte hals, groene kop en een gele snavel.",
+      "file": "Mallard duck in flight.jpg",
+      "nl": "Wilde Eend",
+      "latin": "Anas platyrhynchos",
+      "author": "Bert de Tilly",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Mallard_duck_in_flight.jpg",
+      "showSourceLink": true,
+      "alt": "Mannetje Wilde Eend in vrije vlucht met voorwaarts gestrekte hals, ingetrokken poten en een groene kop.",
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP.",
+      "reviewed": "2026-11-11",
+      "verificationSource": "https://commons.wikimedia.org/wiki/File:Mallard_duck_in_flight.jpg",
+      "visualCheck": "Vrij in de lucht, met voorwaarts gestrekte hals en ingetrokken poten. De groene kop en gele snavel bevestigen een mannetje in prachtkleed.",
+      "width": 1440,
+      "height": 960,
+      "image": "/assets/species/plumage/sp089-free-flight.webp",
+      "originalURL": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Mallard_duck_in_flight.jpg",
+      "sha1": "3a1b881977d401ef2b7a18fa9edfc445338be7f7",
+      "flightReview": "goedgekeurd 2026-11-11: Vrij in de lucht, met voorwaarts gestrekte hals en ingetrokken poten. De groene kop en gele snavel bevestigen een mannetje in prachtkleed."
     }
   ],
   "sp090": [
@@ -7938,6 +8238,33 @@ export const GUIDE_POSES = Object.freeze({
       "width": 1600,
       "height": 1067,
       "image": "/assets/species/plumage/sp188-hero-male.webp"
+    }
+  ],
+  "sp141": [
+    {
+      "file": "Common Swift 2025 07 18 01.jpg",
+      "nl": "Gierzwaluw",
+      "latin": "Apus apus",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Common_Swift_2025_07_18_01.jpg",
+      "showSourceLink": true,
+      "alt": "Gierzwaluw in vrije vlucht, met lange, smalle vleugels en een gespreide gevorkte staart.",
+      "note": "Gierzwaluw in vrije vlucht, met lange, smalle vleugels en een gespreide gevorkte staart.",
+      "modifications": "Verkleind tot max. 1440 px en omgezet naar WebP zonder uitsnede en zonder EXIF/GPS/XMP",
+      "reviewed": "2026-11-11",
+      "verificationSource": "https://commons.wikimedia.org/wiki/File:Common_Swift_2025_07_18_01.jpg",
+      "visualCheck": "Gierzwaluw in vrije vlucht, met lange, smalle vleugels en een gespreide gevorkte staart.",
+      "verification": "Fotograaf benoemt een Gierzwaluw in vlucht. Leeftijd en geslacht zijn niet vastgesteld.",
+      "width": 1440,
+      "height": 960,
+      "image": "/assets/species/plumage/sp141-flight.webp",
+      "sha1": "c70b8bd9869dd7cedbe5fee70a6be78693830596",
+      "sourceAudit": "2026-11-11",
+      "label": "In vlucht",
+      "flight": true,
+      "flightReview": "goedgekeurd 2026-11-11: Vrij in de lucht, herkenbaar silhouet en beide vleugels in beeld."
     }
   ]
 });

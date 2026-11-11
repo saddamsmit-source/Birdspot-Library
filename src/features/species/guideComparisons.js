@@ -803,6 +803,44 @@ export const GUIDE_COMPARISONS = [
     tip: 'Let op vleugelvorm en staart. Bij tegenlicht is het silhouet bruikbaarder dan de kleur.',
   },
   {
+    label: 'Fazant en Patrijs · volwassen',
+    birds: [
+      {id: 'sp105', source: 'fazant', plumage: 'adult_f', marks: 'De hen heeft een lange, gebandeerde staart en een bruin gevlekt kleed.'},
+      {id: 'sp106', source: 'patrijs', marks: 'Compacte bouw met korte roestrode staart. Volwassen vogels hebben een oranjebruin gezicht.'},
+    ],
+    rows: [
+      {label: 'Staart', values: ['Lang en gebandeerd', 'Kort en roestrood']},
+      {label: 'Kleed', values: ['Bruin met donkere vlekken', 'Oranjebruin gezicht en grijze borst bij volwassen vogels']},
+    ],
+    tip: 'Bekijk de volledige staart. Een juveniele Fazant heeft een kortere staart dan een hen.',
+  },
+  {
+    label: 'Gierzwaluw en Boerenzwaluw · in vlucht',
+    flight: true,
+    birds: [
+      {id: 'sp141', source: 'gierzwaluw', marks: 'Lange sikkelvleugels, donker lichaam en een gevorkte staart.'},
+      {id: 'sp114', source: 'boerenzwaluw', marks: 'Lichte onderzijde en bij volwassen vogels lange buitenste staartpennen.'},
+    ],
+    rows: [
+      {label: 'Lichte delen', values: ['Kleine, vaak moeilijk zichtbare keelvlek', 'Lichte onderzijde met roodbruine keel']},
+      {label: 'Vliegbeeld', values: ['Lange sikkelvleugels en gevorkte staart', 'Lange buitenste staartpennen bij volwassen vogels']},
+    ],
+    tip: 'Begin bij het silhouet. Tegenlicht kan een lichte onderzijde donker doen lijken.',
+  },
+  {
+    label: 'Gierzwaluw en Huiszwaluw · in vlucht',
+    flight: true,
+    birds: [
+      {id: 'sp141', source: 'gierzwaluw', marks: 'Lange sikkelvleugels, donker lichaam en een gevorkte staart.'},
+      {id: 'sp115', source: 'huiszwaluw', marks: 'Witte stuit, witte onderzijde en een korte, gevorkte staart.'},
+    ],
+    rows: [
+      {label: 'Lichte delen', values: ['Kleine, vaak moeilijk zichtbare keelvlek', 'Witte onderzijde en witte stuit']},
+      {label: 'Vliegbeeld', values: ['Lange sikkelvleugels en gevorkte staart', 'Korte, gevorkte staart']},
+    ],
+    tip: 'Bekijk ook de stuit als de vogel wegvliegt.',
+  },
+  {
     label: 'Visdief en Noordse Stern · broedkleed',
     birds: [
       {id: 'sp165', source: 'visdief', plumage: 'breeding', marks: 'Langere oranjerode snavel, meestal met zwarte punt. De poten zijn langer.'},
@@ -912,10 +950,70 @@ export const GUIDE_COMPARISONS = [
     tip: 'Kijk bij een goed zicht op de kop eerst naar de kruin en de wang. Bij de Huismus op de foto ontbreekt een losse wangvlek.',
   },
   {
+    label: 'Merel en Zanglijster · volwassen',
+    birds: [
+      {id: 'sp045', source: 'merel', plumage: 'adult_f', marks: 'Bruine onderzijde, licht getekende borst en relatief lange staart.'},
+      {id: 'sp046', source: 'zanglijster', marks: 'Lichte onderzijde met donkere vlekken en een kortere staart.'},
+    ],
+    rows: [
+      {label: 'Borst en buik', values: ['Bruin met een lichtere, getekende borst', 'Licht met duidelijke donkere vlekken']},
+      {label: 'Staart', values: ['Relatief lang', 'Relatief kort']},
+    ],
+    tip: 'Kijk bij een bruine vogel naar de grondkleur onder de vlekken. Ook een jonge Merel kan sterk gevlekt zijn.',
+  },
+  {
+    label: 'Zanglijster en Grote Lijster · volwassen',
+    birds: [
+      {id: 'sp046', source: 'zanglijster', marks: 'Warmbruin van boven, vaak pijlpuntige borstvlekken.'},
+      {id: 'sp049', source: 'grote-lijster', marks: 'Grijzer van boven, rondere borstvlekken en groter postuur.'},
+    ],
+    rows: [
+      {label: 'Borstvlekken', values: ['Vaak pijlpuntig', 'Doorgaans ronder']},
+      {label: 'Bovendelen', values: ['Warmbruin', 'Bleker en grijzer']},
+    ],
+    tip: 'Bekijk de vorm van meerdere vlekken. In vlucht helpt ook de blekere ondervleugel van Grote Lijster.',
+  },
+  {
+    label: 'Kramsvogel en Koperwiek · volwassen',
+    birds: [
+      {id: 'sp047', source: 'kramsvogel', marks: 'Grijze kop en stuit, warmbruine mantel.'},
+      {id: 'sp048', source: 'koperwiek', marks: 'Brede lichte wenkbrauwstreep en roestrode flanken.'},
+    ],
+    rows: [
+      {label: 'Kop', values: ['Overwegend grijs bij volwassen vogels', 'Duidelijke lichte wenkbrauwstreep']},
+      {label: 'Flank en ondervleugel', values: ['Lichte ondervleugeldekveren', 'Roestrode flanken en ondervleugeldekveren']},
+    ],
+    tip: 'Controleer kop en flank samen. Bij een jonge Kramsvogel is de kop minder duidelijk grijs.',
+  },
+  {
+    label: 'Koperwiek en Zanglijster · volwassen',
+    birds: [
+      {id: 'sp048', source: 'koperwiek', marks: 'Brede roomwitte wenkbrauwstreep en roestrode flanken.'},
+      {id: 'sp046', source: 'zanglijster', marks: 'Minder opvallende wenkbrauw en donkere vlekken op de lichte onderzijde.'},
+    ],
+    rows: [
+      {label: 'Boven het oog', values: ['Brede lichte wenkbrauwstreep', 'Geen brede, opvallende lichte wenkbrauwstreep']},
+      {label: 'Flanken', values: ['Roestrode veerpartij', 'Licht met donkere vlekken']},
+    ],
+    tip: 'Bekijk kop en flank samen. Bij een foto met tegenlicht kan de flankkleur moeilijk zichtbaar zijn.',
+  },
+  {
+    label: 'Graspieper en Boompieper · veldkenmerken',
+    birds: [
+      {id: 'sp072', source: 'graspieper', marks: 'Fijne snavel. De borst- en flankstrepen zijn ongeveer even breed.'},
+      {id: 'sp073', source: 'boompieper', textOnly: true, marks: 'Iets forsere snavel en dunnere flankstreepjes dan borststrepen.'},
+    ],
+    rows: [
+      {label: 'Flanken', values: ['Strepen ongeveer even breed als op de borst', 'Strepen duidelijk fijner dan op de borst']},
+      {label: 'Achternagel', values: ['Doorgaans langer', 'Doorgaans korter']},
+    ],
+    tip: 'Begin bij de flankstreping. Een scherpe zijfoto kan de nagel tonen. Bij twijfel helpt een duidelijke roep of zang.',
+  },
+  {
     label: 'Zanglijster en Kramsvogel · in vlucht',
     flight: true,
     birds: [
-      {id: 'sp046', source: 'zanglijster', marks: 'Warmbruine ondervleugels en donkere vlekken op borst en flanken.'},
+      {id: 'sp046', source: 'zanglijster', marks: 'Warm geelbruine ondervleugeldekveren en donkere vlekken op borst en flanken.'},
       {id: 'sp047', source: 'kramsvogel', marks: 'Lichte ondervleugeldekveren, gevlekte borst en een lange staart met een donker uiteinde.'},
     ],
     tip: 'Vergelijk de kleur van de ondervleugels en kijk ook naar de staart. Tegenlicht kan lichte veren donkerder laten lijken.',

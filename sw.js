@@ -12,7 +12,7 @@
  *   birdspot-media           — foto's/IDB-exports (permanent)
  */
 
-const APP_VERSION = '1.27.0';
+const APP_VERSION = '1.27.1';
 const APP_CACHE   = `birdspot-app-v${APP_VERSION}`;
 const MEDIA_CACHE = 'birdspot-media';
 
