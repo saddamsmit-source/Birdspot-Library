@@ -4232,6 +4232,77 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "sourceAudit": "2026-11-11",
       "age": "juvenile"
     }
+  },
+  "sp099": {
+    "adult_m": {
+      "file": "Northern-Lapwing-Vanellus-vanellus.jpg",
+      "nl": "Kievit",
+      "latin": "Vanellus vanellus",
+      "author": "Andreas Trepte",
+      "license": "CC BY-SA 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/",
+      "source": "https://commons.wikimedia.org/wiki/File:Northern-Lapwing-Vanellus-vanellus.jpg",
+      "showSourceLink": true,
+      "alt": "Mannetje Kievit in broedkleed, met lange kuif, donkere keel en groen-paarse rugglans.",
+      "modifications": "Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+      "reviewed": "2026-11-11",
+      "verificationSource": "https://www.audubon.org/field-guide/bird/northern-lapwing",
+      "visualCheck": "Mannetje Kievit in broedkleed, met lange kuif, donkere keel en groen-paarse rugglans.",
+      "verification": "Audubon benoemt dezelfde opname als volwassen mannetje in broedkleed. De lange kuif en donkere keel zijn zichtbaar.",
+      "width": 1400,
+      "height": 933,
+      "image": "/assets/species/plumage/sp099-adult_m.webp",
+      "sha1": "28531cfdd01870144d7474f951cee3a1aee1f108",
+      "sourceAudit": "2026-11-11",
+      "sex": "male",
+      "note": "Mannetje Kievit in broedkleed, met lange kuif, donkere keel en groen-paarse rugglans."
+    },
+    "adult_f": {
+      "file": "Northern lapwing (Vanellus vanellus) female display Marken.jpg",
+      "nl": "Kievit",
+      "latin": "Vanellus vanellus",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Northern_lapwing_(Vanellus_vanellus)_female_display_Marken.jpg",
+      "showSourceLink": true,
+      "alt": "Vrouwtje Kievit in een voorovergebogen baltsende houding bij Marken.",
+      "modifications": "Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+      "reviewed": "2026-11-11",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kievit",
+      "visualCheck": "Vrouwtje Kievit in een voorovergebogen baltsende houding bij Marken.",
+      "verification": "De fotograaf benoemt een baltsend vrouwtje bij Marken. Het beeld toont een volwassen vogel in baltspositie.",
+      "width": 1400,
+      "height": 933,
+      "image": "/assets/species/plumage/sp099-adult_f.webp",
+      "sha1": "e49a32d38cb5e3a920c7dc2ea4305b207019e8d7",
+      "sourceAudit": "2026-11-11",
+      "sex": "female",
+      "note": "Vrouwtje Kievit in een voorovergebogen baltsende houding bij Marken."
+    },
+    "juv": {
+      "file": "Northern lapwing (Vanellus vanellus) Standlake.jpg",
+      "nl": "Kievit",
+      "latin": "Vanellus vanellus",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Northern_lapwing_(Vanellus_vanellus)_Standlake.jpg",
+      "showSourceLink": true,
+      "alt": "Juveniele Kievit met een korte kuif en lichte veerranden op rug en vleugels.",
+      "modifications": "Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+      "reviewed": "2026-11-11",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kievit",
+      "visualCheck": "Juveniele Kievit met een korte kuif en lichte veerranden op rug en vleugels.",
+      "verification": "Commons categoriseert de opname als juveniel. Korte kuif, bruin kleed en brede lichte veerranden ondersteunen het label. Geslacht onbekend.",
+      "width": 1400,
+      "height": 933,
+      "image": "/assets/species/plumage/sp099-juv.webp",
+      "sha1": "e44b49a0b447a025da6b5cd27fc55543a256c2b5",
+      "sourceAudit": "2026-11-11",
+      "age": "juvenile",
+      "note": "Juveniele Kievit met een korte kuif en lichte veerranden op rug en vleugels."
+    }
   }
 });
 export const GUIDE_HEROES = Object.freeze({
@@ -4265,7 +4336,8 @@ export const GUIDE_HEROES = Object.freeze({
   "sp249": "/assets/species/plumage/sp249-hero-male.webp",
   "sp250": "/assets/species/plumage/sp250-hero-male.webp",
   "sp251": "/assets/species/plumage/sp251-hero-male.webp",
-  "sp029": "/assets/species/plumage/sp029-adult_m.webp"
+  "sp029": "/assets/species/plumage/sp029-adult_m.webp",
+  "sp099": "/assets/species/plumage/sp099-adult_m.webp"
 });
 export const GUIDE_POSES = Object.freeze({
   "sp008": [
@@ -8265,6 +8337,30 @@ export const GUIDE_POSES = Object.freeze({
       "label": "In vlucht",
       "flight": true,
       "flightReview": "goedgekeurd 2026-11-11: Vrij in de lucht, herkenbaar silhouet en beide vleugels in beeld."
+    }
+  ],
+  "sp081": [
+    {
+      "file": "Ardea cinerea in flight.jpg",
+      "author": "Dinkum",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ardea_cinerea_in_flight.jpg",
+      "width": 1600,
+      "height": 862,
+      "nl": "Blauwe Reiger",
+      "latin": "Ardea cinerea",
+      "image": "/assets/species/sp081.webp",
+      "batch": "water-07",
+      "modifications": "Resized to max 1600 px and converted to WebP; no crop",
+      "reviewed": "2026-11-06",
+      "verification": "Commons identity and license checked against visible field marks in the cited species account.",
+      "visualCheck": "Volledige vogel in vlucht boven water. Grijze vleugels, lichte hals en lange snavel.",
+      "alt": "Blauwe Reiger — Volledige vogel in vlucht boven water. Grijze vleugels, lichte hals en lange snavel.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/blauwe-reiger",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "flight": true,
+      "label": "In vlucht",
+      "note": "De vogel vliegt vrij boven water met de lange poten naar achteren. Op deze opname is de hals relatief gestrekt."
     }
   ]
 });

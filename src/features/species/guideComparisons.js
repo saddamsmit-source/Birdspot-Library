@@ -998,6 +998,18 @@ export const GUIDE_COMPARISONS = [
     tip: 'Bekijk kop en flank samen. Bij een foto met tegenlicht kan de flankkleur moeilijk zichtbaar zijn.',
   },
   {
+    label: 'Kievit en Zilverplevier · volwassen',
+    birds: [
+      {id: 'sp099', source: 'kievit', plumage: 'adult_m', marks: 'Kuif, metaalgroene rug en witte buik onder een donkere borst.'},
+      {id: 'sp144', source: 'zilverplevier', marks: 'Geen kuif. Grijs getekende bovenzijde.'},
+    ],
+    rows: [
+      {label: 'Kop', values: ['Opstaande kuif', 'Geen kuif']},
+      {label: 'Bovendelen', values: ['Groen-paarse glans bij goed licht', 'Grijze tekening']},
+    ],
+    tip: 'Kijk naar kop en rug samen. Een jonge Kievit heeft een korte kuif en een doffer, bruiner kleed.',
+  },
+  {
     label: 'Graspieper en Boompieper · veldkenmerken',
     birds: [
       {id: 'sp072', source: 'graspieper', marks: 'Fijne snavel. De borst- en flankstrepen zijn ongeveer even breed.'},

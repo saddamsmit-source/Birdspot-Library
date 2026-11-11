@@ -1488,6 +1488,138 @@ const DATA = {
    "checked": "2026-11-11",
    "certainty": "hoog",
    "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "VB_WATERRAL": {
+   "register": "NL07",
+   "label": "Vogelbescherming Nederland — Waterral",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/waterral",
+   "edition": "Online geraadpleegd 11-11-2026",
+   "scope": "Nederland",
+   "confirms": "snavelvorm, verenkleed en leefgebied",
+   "checked": "2026-11-11",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "VB_BLAUWREIG": {
+   "register": "NL07",
+   "label": "Vogelbescherming Nederland — Blauwe Reiger",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/blauwe-reiger",
+   "edition": "Online geraadpleegd 11-11-2026",
+   "scope": "Nederland",
+   "confirms": "herkenning, vlucht, lengte en leefwijze",
+   "checked": "2026-11-11",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "VB_PURPERREIG": {
+   "register": "NL07",
+   "label": "Vogelbescherming Nederland — Purperreiger",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/purperreiger",
+   "edition": "Online geraadpleegd 11-11-2026",
+   "scope": "Nederland",
+   "confirms": "bouw en verenkleed",
+   "checked": "2026-11-11",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "VB_KIEVIT": {
+   "register": "NL07",
+   "label": "Vogelbescherming Nederland — Kievit",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kievit",
+   "edition": "Online geraadpleegd 11-11-2026",
+   "scope": "Nederland",
+   "confirms": "herkenning, kleed, biometrie, gedrag en leefwijze",
+   "checked": "2026-11-11",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "BZH_WATERHOEN": {
+   "register": "nieuwe soortreferentie",
+   "label": "Javier Blasco-Zumeta & Gerd-Michael Heinze — Common Moorhen",
+   "url": "https://blascozumeta.com/specie_files/04240_ENG_Gallinula_chloropus_aranzadi.pdf",
+   "edition": "Online geraadpleegd 11-11-2026",
+   "scope": "Europa",
+   "confirms": "lengte, juveniel, geslacht en onderstaart",
+   "checked": "2026-11-11",
+   "certainty": "hoog",
+   "publisher": "Javier Blasco-Zumeta & Gerd-Michael Heinze"
+  },
+  "BZH_BLAUWREIG": {
+   "register": "nieuwe soortreferentie",
+   "label": "Javier Blasco-Zumeta & Gerd-Michael Heinze — Grey Heron",
+   "url": "https://www.blascozumeta.com/specie_files/01220_ENG_Ardea_cinerea_aranzadi.pdf",
+   "edition": "Online geraadpleegd 11-11-2026",
+   "scope": "Europa",
+   "confirms": "leeftijd, geslacht en vergelijking met Purperreiger",
+   "checked": "2026-11-11",
+   "certainty": "hoog",
+   "publisher": "Javier Blasco-Zumeta & Gerd-Michael Heinze"
+  },
+  "BZH_KIEVIT": {
+   "register": "nieuwe soortreferentie",
+   "label": "Javier Blasco-Zumeta & Gerd-Michael Heinze — Northern Lapwing",
+   "url": "https://blascozumeta.com/specie_files/04930_ENG_Vanellus_vanellus_aranzadi.pdf",
+   "edition": "Online geraadpleegd 11-11-2026",
+   "scope": "Europa",
+   "confirms": "leeftijd, geslacht, vleugelvorm en kleed",
+   "checked": "2026-11-11",
+   "certainty": "hoog",
+   "publisher": "Javier Blasco-Zumeta & Gerd-Michael Heinze"
+  },
+  "RSPB_BLAUWREIG": {
+   "register": "nieuwe soortreferentie",
+   "label": "Royal Society for the Protection of Birds — Grey Heron",
+   "url": "https://www.rspb.org.uk/birds-and-wildlife/grey-heron",
+   "edition": "Online geraadpleegd 11-11-2026",
+   "scope": "Verenigd Koninkrijk",
+   "confirms": "lengte en spanwijdte",
+   "checked": "2026-11-11",
+   "certainty": "hoog",
+   "publisher": "Royal Society for the Protection of Birds"
+  },
+  "MME_BLAUWREIG": {
+   "register": "nieuwe soortreferentie",
+   "label": "Magyar Madártani és Természetvédelmi Egyesület — Grey Heron",
+   "url": "https://www.mme.hu/en/magyarorszagmadarai/madaradatbazis-ardcin",
+   "edition": "Online geraadpleegd 11-11-2026",
+   "scope": "Hongarije",
+   "confirms": "spanwijdte",
+   "checked": "2026-11-11",
+   "certainty": "hoog",
+   "publisher": "Magyar Madártani és Természetvédelmi Egyesület"
+  },
+  "MME_KIEVIT": {
+   "register": "nieuwe soortreferentie",
+   "label": "Magyar Madártani és Természetvédelmi Egyesület — Northern Lapwing",
+   "url": "https://mme.hu/en/magyarorszagmadarai/madaradatbazis-vanvan",
+   "edition": "Online geraadpleegd 11-11-2026",
+   "scope": "Hongarije",
+   "confirms": "lengte en spanwijdte",
+   "checked": "2026-11-11",
+   "certainty": "hoog",
+   "publisher": "Magyar Madártani és Természetvédelmi Egyesület"
+  },
+  "SOV_BLAUWREIG": {
+   "register": "nieuwe soortreferentie",
+   "label": "Sovon Vogelonderzoek Nederland — Blauwe Reiger",
+   "url": "https://stats.sovon.nl/stats/soort/1220",
+   "edition": "Online geraadpleegd 11-11-2026",
+   "scope": "Nederland",
+   "confirms": "broedvogel en wintergast",
+   "checked": "2026-11-11",
+   "certainty": "hoog",
+   "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "SOV_KIEVIT": {
+   "register": "nieuwe soortreferentie",
+   "label": "Sovon Vogelonderzoek Nederland — Kievit",
+   "url": "https://stats.sovon.nl/stats/soort/4930",
+   "edition": "Online geraadpleegd 11-11-2026",
+   "scope": "Nederland",
+   "confirms": "broedvogel, wintergast en doortrek",
+   "checked": "2026-11-11",
+   "certainty": "hoog",
+   "publisher": "Sovon Vogelonderzoek Nederland"
   }
  },
  "profiles": {
@@ -9334,6 +9466,532 @@ const DATA = {
      "sources": [
       "VB_MEERKOET",
       "BZH_MEERKOET"
+     ]
+    }
+   ],
+   "open": []
+  },
+  "sp079": {
+   "summary": {
+    "text": "Donkere watervogel met witte flankstrepen en witte onderstaartzijden. Bij volwassen vogels is de snavel rood met een gele punt.",
+    "sources": [
+     "VB_WATERHOEN",
+     "BZH_WATERHOEN"
+    ]
+   },
+   "keyMarks": [
+    {
+     "text": "Rode snavel met gele punt en rood voorhoofdsschild bij volwassen vogels.",
+     "sources": [
+      "VB_WATERHOEN",
+      "BZH_WATERHOEN"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Witte flanktekening en witte onderstaart met een donkere middenstreep.",
+     "sources": [
+      "VB_WATERHOEN",
+      "BZH_WATERHOEN"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Jonge vogels hebben een bruin kleed, lichte keel en een doffere snavel.",
+     "sources": [
+      "VB_WATERHOEN",
+      "BZH_WATERHOEN"
+     ],
+     "reliability": "ondersteunend"
+    }
+   ],
+   "caution": {
+    "text": "De snavelkleur van een jong is minder uitgesproken. Bekijk ook flank, onderstaart en snavelvorm.",
+    "sources": [
+     "VB_WATERHOEN",
+     "BZH_WATERHOEN"
+    ]
+   },
+   "critical": [
+    {
+     "feature": "Snavel en witte tekening",
+     "where": "Volwassen vogels in zijaanzicht",
+     "this": "Rode snavel met gele punt en een witte flankstreep.",
+     "other": "Meerkoet heeft een witte snavel en wit schild. Waterral heeft een langere slanke snavel en gebandeerde flanken.",
+     "vs": [
+      "sp078",
+      "sp080"
+     ],
+     "reliability": "ondersteunend",
+     "conditions": "Kijk naar kop en flank in hetzelfde beeld.",
+     "exceptions": "De snavelkleuren zijn bij juvenielen minder uitgesproken.",
+     "supporting": "Een opgerichte staart kan de witte onderstaarttekening zichtbaar maken.",
+     "sources": [
+      "VB_WATERHOEN",
+      "VB_MEERKOET",
+      "VB_WATERRAL",
+      "BZH_WATERHOEN"
+     ]
+    }
+   ],
+   "similar": [
+    {
+     "id": "sp078",
+     "why": "Vergelijk snavel, voorhoofd en witte flanktekening.",
+     "sources": [
+      "VB_WATERHOEN",
+      "VB_MEERKOET"
+     ]
+    },
+    {
+     "id": "sp080",
+     "why": "Waterral heeft een langere snavel, bruin gestreepte rug en gebandeerde flanken.",
+     "sources": [
+      "VB_WATERHOEN",
+      "VB_WATERRAL"
+     ]
+    }
+   ],
+   "detail": [
+    {
+     "text": "Het oudere jong heeft een lichtgekleurde kin en keel en een bruine bovenzijde.",
+     "sources": [
+      "BZH_WATERHOEN"
+     ],
+     "topic": "leeftijd"
+    },
+    {
+     "text": "De geslachten hebben gelijk verenkleed.",
+     "sources": [
+      "BZH_WATERHOEN"
+     ],
+     "topic": "geslacht"
+    }
+   ],
+   "voice": [
+    {
+     "text": "Een verdragende territoriumroep en uiteenlopende kortere geluiden.",
+     "sources": [
+      "VB_WATERHOEN"
+     ],
+     "kind": "roep"
+    }
+   ],
+   "basis": {
+    "biometrics": [
+     {
+      "field": "length",
+      "unit": "cm",
+      "display": "ca. 26–30 cm",
+      "values": [
+       {
+        "source": "VB_WATERHOEN",
+        "min": 27,
+        "max": 31
+       },
+       {
+        "source": "BZH_WATERHOEN",
+        "min": 25,
+        "max": 31
+       }
+      ],
+      "note": "Afgeronde middenband als indicatie van het formaat."
+     }
+    ],
+    "size": {
+     "text": "Vogelbescherming vermeldt 50–55 cm spanwijdte.",
+     "sources": [
+      "VB_WATERHOEN"
+     ]
+    }
+   },
+   "habitat": [
+    {
+     "text": "Zoet water met dekking langs de oever, ook bij sloten en stadsvijvers.",
+     "sources": [
+      "VB_WATERHOEN"
+     ],
+     "kind": "nederland"
+    }
+   ],
+   "status": [
+    {
+     "text": "Algemene broedvogel van zoete wateren in Nederland.",
+     "sources": [
+      "VB_WATERHOEN"
+     ],
+     "kind": "voorkomen"
+    }
+   ],
+   "life": [
+    {
+     "text": "Zwemmen en lopen vaak met de staart omhoog, zodat de witte onderstaart zichtbaar is.",
+     "sources": [
+      "VB_WATERHOEN"
+     ],
+     "kind": "gedrag"
+    }
+   ],
+   "discrepancies": [],
+   "open": []
+  },
+  "sp081": {
+   "summary": {
+    "text": "Grote, grijze reiger met lange poten en een stevige dolksnavel. De nek is in vlucht meestal ingetrokken.",
+    "sources": [
+     "VB_BLAUWREIG",
+     "BZH_BLAUWREIG"
+    ]
+   },
+   "keyMarks": [
+    {
+     "text": "Grijze rug, lichte hals en stevige, rechte dolksnavel.",
+     "sources": [
+      "VB_BLAUWREIG",
+      "BZH_BLAUWREIG"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Bij volwassen vogels loopt een zwarte streep van het oog naar de sierveren achter op de kop.",
+     "sources": [
+      "VB_BLAUWREIG",
+      "BZH_BLAUWREIG"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Vliegt doorgaans met ingetrokken nek en poten die achter de staart uitsteken.",
+     "sources": [
+      "VB_BLAUWREIG",
+      "RSPB_BLAUWREIG"
+     ],
+     "reliability": "ondersteunend"
+    }
+   ],
+   "caution": {
+    "text": "Gebruik bouw en kleur samen. Een jonge Blauwe Reiger mist de opvallende koptekening van een volwassen vogel.",
+    "sources": [
+     "VB_BLAUWREIG",
+     "BZH_BLAUWREIG"
+    ]
+   },
+   "critical": [
+    {
+     "feature": "Bouw en halskleur",
+     "where": "Volwassen vogels in zijaanzicht",
+     "this": "Grote grijze reiger, relatief stevig gebouwd met een lichte hals.",
+     "other": "Purperreiger is slanker, met warme roodbruine tinten en donkere halsstrepen.",
+     "vs": [
+      "sp084"
+     ],
+     "reliability": "ondersteunend",
+     "conditions": "Vergelijk houding, hals en snavel samen.",
+     "exceptions": "Jonge vogels tonen minder duidelijke volwassen kop- en halskleuren.",
+     "supporting": "Een compacte houding kan het verschil in halsdikte verhullen.",
+     "sources": [
+      "VB_BLAUWREIG",
+      "VB_PURPERREIG",
+      "BZH_BLAUWREIG"
+     ]
+    }
+   ],
+   "similar": [
+    {
+     "id": "sp084",
+     "why": "Vergelijk de bouw, snavel en warme tinten op kop en hals.",
+     "sources": [
+      "VB_PURPERREIG",
+      "BZH_BLAUWREIG"
+     ]
+    }
+   ],
+   "detail": [
+    {
+     "text": "Juvenielen hebben een grijzere kop zonder lange afhangende sierveren.",
+     "sources": [
+      "BZH_BLAUWREIG"
+     ],
+     "topic": "leeftijd"
+    },
+    {
+     "text": "De geslachten hebben gelijk verenkleed.",
+     "sources": [
+      "BZH_BLAUWREIG"
+     ],
+     "topic": "geslacht"
+    }
+   ],
+   "voice": [
+    {
+     "text": "Harde, rauwe, verdragende roep, onder meer in vlucht.",
+     "sources": [
+      "VB_BLAUWREIG"
+     ],
+     "kind": "roep"
+    }
+   ],
+   "basis": {
+    "biometrics": [
+     {
+      "field": "length",
+      "unit": "cm",
+      "display": "ca. 85–100 cm",
+      "values": [
+       {
+        "source": "VB_BLAUWREIG",
+        "min": 80,
+        "max": 102
+       },
+       {
+        "source": "RSPB_BLAUWREIG",
+        "min": 90,
+        "max": 98
+       }
+      ],
+      "note": "Afgeronde middenband als indicatie van het formaat."
+     },
+     {
+      "field": "wingspan",
+      "unit": "cm",
+      "display": "ca. 175–195 cm",
+      "values": [
+       {
+        "source": "RSPB_BLAUWREIG",
+        "min": 175,
+        "max": 195
+       },
+       {
+        "source": "MME_BLAUWREIG",
+        "min": 175,
+        "max": 195
+       }
+      ],
+      "note": "Afgeronde middenband als indicatie van het formaat.",
+      "excluded": [
+       {
+        "source": "VB_BLAUWREIG",
+        "min": 110,
+        "max": 145,
+        "reason": "Geen overlap met de twee andere gepubliceerde spanwijdtebereiken voor deze soort."
+       }
+      ]
+     }
+    ]
+   },
+   "habitat": [
+    {
+     "text": "Ondiep water en oevers, ook in stedelijk gebied. Foerageert ook op nat grasland.",
+     "sources": [
+      "VB_BLAUWREIG",
+      "RSPB_BLAUWREIG"
+     ],
+     "kind": "nederland"
+    }
+   ],
+   "status": [
+    {
+     "text": "Broedt in Nederland. Ook tijdens de winter en trek in Nederland aanwezig.",
+     "sources": [
+      "SOV_BLAUWREIG"
+     ],
+     "kind": "voorkomen"
+    }
+   ],
+   "life": [
+    {
+     "text": "Vangt veel vis en eet ook amfibieën, kleine zoogdieren en grote insecten.",
+     "sources": [
+      "VB_BLAUWREIG",
+      "RSPB_BLAUWREIG"
+     ],
+     "kind": "voedsel"
+    }
+   ],
+   "discrepancies": [],
+   "open": []
+  },
+  "sp099": {
+   "summary": {
+    "text": "Plevier met een kuif, groen-paarse glans en witte buik onder een donkere borst. De brede vleugels vallen op in vlucht.",
+    "sources": [
+     "VB_KIEVIT",
+     "BZH_KIEVIT"
+    ]
+   },
+   "keyMarks": [
+    {
+     "text": "Dunne, naar achteren gerichte kuif. De kuif van jonge vogels is korter.",
+     "sources": [
+      "VB_KIEVIT",
+      "BZH_KIEVIT"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Groene en paarse glans op de rug, vooral in goed licht.",
+     "sources": [
+      "VB_KIEVIT",
+      "BZH_KIEVIT"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Brede afgeronde vleugels en een sterk zwart-witpatroon in vlucht.",
+     "sources": [
+      "VB_KIEVIT",
+      "BZH_KIEVIT"
+     ],
+     "reliability": "ondersteunend"
+    }
+   ],
+   "caution": {
+    "text": "Buiten de broedtijd lijken de geslachten sterk op elkaar. Gebruik kuiflengte samen met kleed en seizoen.",
+    "sources": [
+     "VB_KIEVIT",
+     "BZH_KIEVIT"
+    ]
+   },
+   "critical": [
+    {
+     "feature": "Kuif en rugtekening",
+     "where": "Zijaanzicht in zit, vooral in goed licht",
+     "this": "Kuif, glanzend donkere rug en witte buik onder een donkere borst.",
+     "other": "Zilverplevier heeft geen kuif en een grijzer getekende bovenzijde.",
+     "vs": [
+      "sp144"
+     ],
+     "reliability": "ondersteunend",
+     "conditions": "Vergelijk de kopvorm en rug als de hele vogel zichtbaar is.",
+     "exceptions": "Een juveniele Kievit heeft een korte kuif en een bruiner kleed.",
+     "supporting": "Bekijk ook het brede vleugelsilhouet of luister naar de roep.",
+     "sources": [
+      "VB_KIEVIT",
+      "VB_ZILV",
+      "BZH_KIEVIT"
+     ]
+    }
+   ],
+   "similar": [
+    {
+     "id": "sp144",
+     "why": "Let op de kuif en de groen-paarse rugglans bij Kievit.",
+     "sources": [
+      "VB_KIEVIT",
+      "VB_ZILV"
+     ]
+    }
+   ],
+   "detail": [
+    {
+     "text": "Verse juvenielen hebben brede lichte veerranden op rug en vleugeldekveren en een korte kuif.",
+     "sources": [
+      "BZH_KIEVIT"
+     ],
+     "topic": "leeftijd"
+    },
+    {
+     "text": "In broedkleed heeft het mannetje doorgaans een langere kuif en egaler donkere keel. Het vrouwtje heeft vaak lichtere veertjes tussen de donkere.",
+     "sources": [
+      "VB_KIEVIT",
+      "BZH_KIEVIT"
+     ],
+     "topic": "geslacht"
+    },
+    {
+     "text": "Buiten de broedtijd hebben beide geslachten een lichte keel.",
+     "sources": [
+      "VB_KIEVIT",
+      "BZH_KIEVIT"
+     ],
+     "topic": "variatie"
+    }
+   ],
+   "voice": [
+    {
+     "text": "Scherpe, herkenbare baltsroep, vaak tijdens buitelende vlucht.",
+     "sources": [
+      "VB_KIEVIT"
+     ],
+     "kind": "roep"
+    }
+   ],
+   "basis": {
+    "biometrics": [
+     {
+      "field": "length",
+      "unit": "cm",
+      "display": "ca. 28–30 cm",
+      "values": [
+       {
+        "source": "VB_KIEVIT",
+        "min": 28,
+        "max": 31
+       },
+       {
+        "source": "MME_KIEVIT",
+        "min": 28,
+        "max": 31
+       }
+      ],
+      "note": "Afgeronde middenband als indicatie van het formaat."
+     },
+     {
+      "field": "wingspan",
+      "unit": "cm",
+      "display": "ca. 80–85 cm",
+      "values": [
+       {
+        "source": "VB_KIEVIT",
+        "min": 82,
+        "max": 87
+       },
+       {
+        "source": "MME_KIEVIT",
+        "min": 82,
+        "max": 87
+       }
+      ],
+      "note": "Afgeronde middenband als indicatie van het formaat."
+     }
+    ]
+   },
+   "habitat": [
+    {
+     "text": "Open grasland en akkers, vooral in open landschappen met korte vegetatie.",
+     "sources": [
+      "VB_KIEVIT"
+     ],
+     "kind": "nederland"
+    }
+   ],
+   "status": [
+    {
+     "text": "Nederlandse broedvogel. Ook als wintergast en doortrekker in Nederland aanwezig.",
+     "sources": [
+      "SOV_KIEVIT",
+      "VB_KIEVIT"
+     ],
+     "kind": "voorkomen"
+    }
+   ],
+   "life": [
+    {
+     "text": "Broedt op de grond. De jongen verlaten het nest kort na uitkomen.",
+     "sources": [
+      "VB_KIEVIT"
+     ],
+     "kind": "broeden"
+    }
+   ],
+   "discrepancies": [
+    {
+     "field": "Spanwijdte",
+     "app": "Bijgesteld van 67–72 cm naar de afgeronde bronband.",
+     "source": "Vogelbescherming en MME geven beide 82–87 cm. De oude waarde overlapt daar niet mee.",
+     "sources": [
+      "VB_KIEVIT",
+      "MME_KIEVIT"
      ]
     }
    ],

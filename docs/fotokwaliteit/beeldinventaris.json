@@ -3391,7 +3391,7 @@
   },
   "/assets/species/sp081.webp": {
    "refs": [
-    "sp081 GUIDE_PHOTOS"
+    "sp081 GUIDE_POSES[0]"
    ],
    "sha1": "3687ecef4652e3798e38c3ccef7a1171b07114cb",
    "class": "vlucht",
@@ -4120,6 +4120,50 @@
    "source": "M4-fase 3",
    "decision": "goedgekeurd",
    "note": "De fotograaf vermeldt een juveniel. Lichte veerranden en borststreping zichtbaar. Geslacht onbekend."
+  },
+  "/assets/species/plumage/sp081-portrait.webp": {
+   "refs": [
+    "sp081 GUIDE_PHOTOS"
+   ],
+   "sha1": "ddefc7d3dd31e7ab49fcffd68f27b69fb2055400",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M4-fase 4",
+   "decision": "goedgekeurd",
+   "note": "Bron bevestigt Ardea cinerea. De volwassen koptekening en stevige snavel zijn zichtbaar. Geslacht onbekend."
+  },
+  "/assets/species/plumage/sp099-adult_m.webp": {
+   "refs": [
+    "sp099 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "28531cfdd01870144d7474f951cee3a1aee1f108",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M4-fase 4",
+   "decision": "goedgekeurd",
+   "note": "Audubon benoemt dezelfde opname als volwassen mannetje in broedkleed. De lange kuif en donkere keel zijn zichtbaar."
+  },
+  "/assets/species/plumage/sp099-adult_f.webp": {
+   "refs": [
+    "sp099 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "e49a32d38cb5e3a920c7dc2ea4305b207019e8d7",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M4-fase 4",
+   "decision": "goedgekeurd",
+   "note": "De fotograaf benoemt een baltsend vrouwtje bij Marken. Het beeld toont een volwassen vogel in baltspositie."
+  },
+  "/assets/species/plumage/sp099-juv.webp": {
+   "refs": [
+    "sp099 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "e44b49a0b447a025da6b5cd27fc55543a256c2b5",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M4-fase 4",
+   "decision": "goedgekeurd",
+   "note": "Commons categoriseert de opname als juveniel. Korte kuif, bruin kleed en brede lichte veerranden ondersteunen het label. Geslacht onbekend."
   }
  }
 }
