@@ -2657,6 +2657,24 @@
    "airborne": true,
    "rights": "VERIFIED",
    "rightsNote": "Oorspronkelijke Commons-JPEG gedownload en naar WebP omgezet, CC BY 4.0."
+  },
+  "/assets/species/plumage/sp045-free-flight.webp": {
+   "n": 147,
+   "id": "sp045",
+   "nameNL": "Merel",
+   "registry": "GUIDE_POSES[2]",
+   "sexLabel": "male",
+   "class": "vlucht",
+   "quality": "matig",
+   "decision": "voorwaardelijk",
+   "target": null,
+   "newLabel": null,
+   "newNote": "Voorlopige foto: mannetje Merel in vrije vlucht. De staart is deels afgedekt en de vleugels zijn deels onscherp.",
+   "reason": "Vrije vlucht met open vleugels en zonder zichtbare landingshouding. Staart gedeeltelijk afgedekt en veren deels onscherp.",
+   "airborne": true,
+   "rights": "VERIFIED",
+   "rightsNote": "CC0 1.0 op Commons. Uitsnede uit de originele JPEG met bron- en bestandshash.",
+   "replacement": "gewenst"
   }
  }
 }

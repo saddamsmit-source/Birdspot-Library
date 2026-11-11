@@ -1,0 +1,62 @@
+[
+ {
+  "image": "/assets/species/plumage/sp045-free-flight.webp",
+  "species": "sp045",
+  "source": "https://commons.wikimedia.org/wiki/File:Blackbirds.JPG",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Blackbirds.JPG",
+  "sourceTitle": "File:Blackbirds.JPG",
+  "sourceAuthor": "Alf Beard",
+  "sourceLicense": "CC0 1.0",
+  "sameShot": true,
+  "method": "uitsnede uit originele Commons-JPEG, daarna WebP",
+  "sourceSha256": "c92bee77ef88cabee61e96ba82cb4f0ee914b9d247d73feb01090f8ae2bcad95",
+  "sha1": "d9e9c39d5adba501f9cb93d48b3d0267a4471ff1",
+  "taxonInSource": "Turdus merula",
+  "annotations": [
+   "Commons vermeldt Merel, vlucht en mannetje in de categorieën. Bij de bovenste vogel zijn het donkere kleed en de geel-oranje snavel zichtbaar."
+  ],
+  "auditDate": "2026-11-11",
+  "cropPixels": [
+   90,
+   110,
+   915,
+   725
+  ]
+ },
+ {
+  "image": "/assets/species/plumage/sp046-juv.webp",
+  "species": "sp046",
+  "source": "https://commons.wikimedia.org/wiki/File:Juvenile_Song_Thrush_%28Turdus_philomelos%29%2C_Puszcza_Knyszy%C5%84ska%2C_Polska_%284664107073%29.jpg",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Juvenile_Song_Thrush_%28Turdus_philomelos%29%2C_Puszcza_Knyszy%C5%84ska%2C_Polska_%284664107073%29.jpg",
+  "sourceTitle": "File:Juvenile Song Thrush (Turdus philomelos), Puszcza Knyszyńska, Polska (4664107073).jpg",
+  "sourceAuthor": "Frank Vassen",
+  "sourceLicense": "CC BY 2.0",
+  "sameShot": true,
+  "method": "directe WebP-conversie van originele Commons-JPEG",
+  "sourceSha256": "58b5fa785a02e0d50ad0b9ffb968ee89b54b8cb1d9832cb53760e7ae2e45047a",
+  "sha1": "729d0cee694eb155ee2760a23221cbc44ec56c6b",
+  "taxonInSource": "Turdus philomelos",
+  "annotations": [
+   "Fotograaf benoemt een juveniel. De lichte boventekening ondersteunt het label. Geslacht onbekend."
+  ],
+  "auditDate": "2026-11-11"
+ },
+ {
+  "image": "/assets/species/plumage/sp047-juv.webp",
+  "species": "sp047",
+  "source": "https://commons.wikimedia.org/wiki/File:Fieldfare_%2841635078500%29.jpg",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Fieldfare_%2841635078500%29.jpg",
+  "sourceTitle": "File:Fieldfare (41635078500).jpg",
+  "sourceAuthor": "hedera.baltica",
+  "sourceLicense": "CC BY-SA 2.0",
+  "sameShot": true,
+  "method": "directe WebP-conversie van originele Commons-JPEG",
+  "sourceSha256": "7078e682e6f38289ff6ab287d716d55aaacc812d0a311ee9879ef619790e42c4",
+  "sha1": "c98102528e7451cf0d962063d2dbec0491c70a42",
+  "taxonInSource": "Turdus pilaris",
+  "annotations": [
+   "De fotograaf benoemt een juveniele Kramsvogel. Doffere kop en rug passen bij het jeugdkleed. Geslacht onbekend."
+  ],
+  "auditDate": "2026-11-11"
+ }
+]

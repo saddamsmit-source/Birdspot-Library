@@ -1848,7 +1848,8 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/merel",
       "visualCheck": "Jonge Merel op een tak met lichte spikkels op de bruinige borst.",
       "alt": "Merel — Jonge Merel op een tak met lichte spikkels op de bruinige borst.",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/"
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "note": "Let op de lichte vlekjes en streepjes op het bruine verenkleed. Geslacht onbekend."
     },
     "adult_m": {
       "reuseGuidePhoto": true
@@ -4130,6 +4131,56 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "sourceAudit": "2026-11-11",
       "age": "juvenile"
     }
+  },
+  "sp046": {
+    "juv": {
+      "file": "Juvenile Song Thrush (Turdus philomelos), Puszcza Knyszyńska, Polska (4664107073).jpg",
+      "nl": "Zanglijster",
+      "latin": "Turdus philomelos",
+      "author": "Frank Vassen",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Juvenile_Song_Thrush_%28Turdus_philomelos%29%2C_Puszcza_Knyszy%C5%84ska%2C_Polska_%284664107073%29.jpg",
+      "showSourceLink": true,
+      "alt": "Juveniele Zanglijster met lichte tekening op de bovenzijde en een gevlekte borst.",
+      "note": "Juveniele Zanglijster met lichte tekening op de bovenzijde en een gevlekte borst.",
+      "modifications": "Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+      "reviewed": "2026-11-11",
+      "verificationSource": "https://commons.wikimedia.org/wiki/File:Juvenile_Song_Thrush_%28Turdus_philomelos%29%2C_Puszcza_Knyszy%C5%84ska%2C_Polska_%284664107073%29.jpg",
+      "visualCheck": "Juveniele Zanglijster met lichte tekening op de bovenzijde en een gevlekte borst.",
+      "verification": "Fotograaf benoemt een juveniel. De lichte boventekening ondersteunt het label. Geslacht onbekend.",
+      "width": 1400,
+      "height": 1050,
+      "image": "/assets/species/plumage/sp046-juv.webp",
+      "sha1": "729d0cee694eb155ee2760a23221cbc44ec56c6b",
+      "sourceAudit": "2026-11-11",
+      "age": "juvenile"
+    }
+  },
+  "sp047": {
+    "juv": {
+      "file": "Fieldfare (41635078500).jpg",
+      "nl": "Kramsvogel",
+      "latin": "Turdus pilaris",
+      "author": "hedera.baltica",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Fieldfare_%2841635078500%29.jpg",
+      "showSourceLink": true,
+      "alt": "Juveniele Kramsvogel met gevlekte borst, bruingrijze kop en minder sterk contrast tussen kop en rug.",
+      "note": "Juveniele Kramsvogel met gevlekte borst, bruingrijze kop en minder sterk contrast tussen kop en rug.",
+      "modifications": "Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+      "reviewed": "2026-11-11",
+      "verificationSource": "https://commons.wikimedia.org/wiki/File:Fieldfare_%2841635078500%29.jpg",
+      "visualCheck": "Juveniele Kramsvogel met gevlekte borst, bruingrijze kop en minder sterk contrast tussen kop en rug.",
+      "verification": "De fotograaf benoemt een juveniele Kramsvogel. Doffere kop en rug passen bij het jeugdkleed. Geslacht onbekend.",
+      "width": 1400,
+      "height": 1135,
+      "image": "/assets/species/plumage/sp047-juv.webp",
+      "sha1": "c98102528e7451cf0d962063d2dbec0491c70a42",
+      "sourceAudit": "2026-11-11",
+      "age": "juvenile"
+    }
   }
 });
 export const GUIDE_HEROES = Object.freeze({
@@ -5563,6 +5614,33 @@ export const GUIDE_POSES = Object.freeze({
       "width": 1600,
       "height": 1067,
       "image": "/assets/species/plumage/sp045-hero-male.webp"
+    },
+    {
+      "file": "Blackbirds.JPG",
+      "nl": "Merel",
+      "latin": "Turdus merula",
+      "author": "Alf Beard",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Blackbirds.JPG",
+      "showSourceLink": true,
+      "alt": "Voorlopige foto: mannetje Merel in vrije vlucht. De staart is deels afgedekt en de vleugels zijn deels onscherp.",
+      "note": "Voorlopige foto: mannetje Merel in vrije vlucht. De staart is deels afgedekt en de vleugels zijn deels onscherp.",
+      "modifications": "Uitsnede van de bovenste vogel en omgezet naar WebP zonder EXIF/GPS/XMP",
+      "reviewed": "2026-11-11",
+      "verificationSource": "https://commons.wikimedia.org/wiki/File:Blackbirds.JPG",
+      "visualCheck": "Voorlopige foto: mannetje Merel in vrije vlucht. De staart is deels afgedekt en de vleugels zijn deels onscherp.",
+      "verification": "Commons vermeldt Merel, vlucht en mannetje in de categorieën. Bij de bovenste vogel zijn het donkere kleed en de geel-oranje snavel zichtbaar.",
+      "width": 825,
+      "height": 615,
+      "image": "/assets/species/plumage/sp045-free-flight.webp",
+      "sha1": "d9e9c39d5adba501f9cb93d48b3d0267a4471ff1",
+      "sourceAudit": "2026-11-11",
+      "label": "Mannetje in vlucht",
+      "sex": "male",
+      "flight": true,
+      "replacement": "gewenst",
+      "flightReview": "voorwaardelijk 2026-11-11: vrije vlucht bevestigd. Staart deels afgedekt en vleugels deels onscherp."
     }
   ],
   "sp046": [

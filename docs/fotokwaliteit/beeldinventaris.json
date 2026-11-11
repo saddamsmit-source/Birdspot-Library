@@ -4065,6 +4065,39 @@
    "source": "M4-fase 1",
    "decision": "goedgekeurd",
    "note": "Juveniele Koolmees met doffe kap, lichte wang en lichte mondhoek."
+  },
+  "/assets/species/plumage/sp045-free-flight.webp": {
+   "refs": [
+    "sp045 GUIDE_POSES[2]"
+   ],
+   "sha1": "d9e9c39d5adba501f9cb93d48b3d0267a4471ff1",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "voorwaardelijk",
+   "note": "Voorlopige foto: mannetje Merel in vrije vlucht. De staart is deels afgedekt en de vleugels zijn deels onscherp."
+  },
+  "/assets/species/plumage/sp046-juv.webp": {
+   "refs": [
+    "sp046 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "729d0cee694eb155ee2760a23221cbc44ec56c6b",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M4-fase 2",
+   "decision": "goedgekeurd",
+   "note": "Juveniele Zanglijster met lichte tekening op de bovenzijde en een gevlekte borst."
+  },
+  "/assets/species/plumage/sp047-juv.webp": {
+   "refs": [
+    "sp047 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "c98102528e7451cf0d962063d2dbec0491c70a42",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M4-fase 2",
+   "decision": "goedgekeurd",
+   "note": "Juveniele Kramsvogel met gevlekte borst, bruingrijze kop en minder sterk contrast tussen kop en rug."
   }
  }
 }
