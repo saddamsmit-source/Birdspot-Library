@@ -14,6 +14,7 @@ on:
     branches:
       - main
       - release/birdspot-1.27.0
+      - preview/birdspot-review
     paths:
       - .github/workflows/release-upgrade-qa.yml
       - tests/test_release_upgrade.py
@@ -36,6 +37,8 @@ jobs:
         baseline:
           - name: 1.14.0-main
             ref: 5bf67043e830e977749f0ee593cf9f41f0e2822b
+          - name: 1.27.0-pages
+            ref: 41c7fed620d9abc95aa86ba8d8e9f779d87f95a8
           - name: previous-pages-review
             ref: 659cbb8bc3c4c54a7d6ae7a5fe499319de309d88
     steps:
