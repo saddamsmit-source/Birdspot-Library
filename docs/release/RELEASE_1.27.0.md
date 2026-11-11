@@ -32,6 +32,19 @@ De kandidaat combineert de bestaande onafhankelijke GitHub-overdrachten: fotover
 
 **Claimgrens:** een groene bestaande 14/14-run is niet het bewijs van RU-01..07. Een lokale test is niet automatisch een CI-run. Een Pages-review is nog geen officiële productie-PASS.
 
+## 2A. Geobserveerde CI-uitkomst — 11 november 2026
+
+**VERIFIED voor RU-01..RU-07 op de QA-kandidaat:** GitHub Actions-run [#43028619333](https://github.com/saddamsmit-source/Birdspot-Library/actions/runs/43028619333), head `3272db72e5366b7023e9a7999425ccae6e2ff5bf` (PR #129, met **ongewijzigde 1.27.0-appcode** van `9d4b727`). Beide matrixjobs geslaagd; logs rechtstreeks door ChatGPT gelezen:
+
+| Upgradebasis | Geobserveerde bewijzen | Status |
+|---|---|---|
+| `5bf6704` / 1.14.0 | RU-01 seed 7 localStorage-sleutels en 1 IndexedDB-blob; RU-02 1.27.0 actief na één herlaadbeurt, daarna drie foutvrije herlaadbeurten; RU-03 zes gebruikerssleutels byte-gelijk; RU-04 blob en extra velden gelijk; RU-05 waarneming via profiel en soortkaart; RU-06 offline kaart+foto; RU-07 geen paginafouten | **VERIFIED / PASS in Chromium CI** |
+| `659cbb8` / 1.21.0-review | Zelfde beproevingen; RU-02 gebruikte de bestaande updateknop en schakelde na twee herlaadbeurten door naar 1.27.0; drie extra herlaadbeurten foutvrij | **VERIFIED / PASS in Chromium CI** |
+
+De afzonderlijke push-run [#43028561824](https://github.com/saddamsmit-source/Birdspot-Library/actions/runs/43028561824) herhaalde beide tests met dezelfde positieve uitkomst. Dit bewijs geldt voor de op de QA-branch geteste **1.27.0-code**, niet voor een al gepubliceerde website.
+
+**Statusupdate op G02–G05:** G02 en G03 zijn **VERIFIED** (CI, beide baselines). G04 is **PARTIALLY TESTED** (de beschreven voorbeeld-LocalStorage- en één IndexedDB-blob, **niet** een volledige export/herstelmatrix). G05 is **PARTIALLY TESTED** (offline herstart en één gidsfoto in Chromium, **niet** op een fysiek toestel of alle mediasoorten). G06–G10 blijven conform de open gate-matrix hierboven. Een full release-PASS wordt hier nadrukkelijk niet geclaimd.
+
 ## 3. Upgradeproef RU-01 t/m RU-07
 
 De toegevoegde workflow gebruikt `actions/checkout@v4` met `fetch-depth: 0`; de test archiveert **exact** de oude commit en serveert daarna de kandidaat vanaf hetzelfde lokale adres met een echt geregistreerde service worker. Bij elke baseline draait een geïsoleerde Playwright Chromium-context met fictieve waarnemingen, onbekende sleutels/velden en een fotoblob.
