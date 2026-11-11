@@ -1,14 +1,15 @@
 {
   "_meta": {
     "batch": "M4",
-    "phase": 2,
+    "phase": 3,
     "date": "2026-11-11",
-    "title": "K03 fasen 1–2 — zes gecontroleerde soorten",
+    "title": "K03 fasen 1–3 — negen gecontroleerde soorten",
     "reviewer": "ChatGPT (Codex), beeldinspectie en primaire broncontrole. Onafhankelijke review open.",
     "basis": "M3 fase 4 op 4d0f0ac, K03-batchplan en Birdspot-kwaliteitsnorm",
     "phaseReports": [
       "../M4_FASE_1_2026-11-11.md",
-      "../M4_FASE_2_2026-11-11.md"
+      "../M4_FASE_2_2026-11-11.md",
+      "../M4_FASE_3_2026-11-11.md"
     ]
   },
   "species": {
@@ -250,6 +251,113 @@
       ],
       "missing": [],
       "sexPolicy": "Geen geslacht vastgesteld. Veldfoto’s tonen de fijne veerdetails onvoldoende.",
+      "uncertain": []
+    },
+    "sp048": {
+      "assets": {
+        "/assets/species/sp048.webp": {
+          "role": "Hoofdfoto",
+          "content": "Koperwiek met lichte wenkbrauw, gestreepte borst en roestrode flank.",
+          "sexAge": "Geslacht onbekend.",
+          "quality": "Herkenbaar zijaanzicht van kop en flank.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp048-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Koperwiek met lichte wenkbrauwstreep, gevlekte borst en lichte veerpunten.",
+          "sexAge": "iNaturalist Research Grade met annotatie Juvenile. Geslacht onbekend.",
+          "quality": "Kop, borst en vleugeldekveren zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp048-flight.webp": {
+          "role": "Overige herkenningsfoto's (Opvliegend tussen planten)",
+          "content": "Vogel tussen de vegetatie met uitgestrekte vleugels en neerhangende poten.",
+          "sexAge": "Geslacht en exacte leeftijd onbekend.",
+          "quality": "Bruikbaar voor houding en ondervleugel. Vrije vlucht onvoldoende overtuigend door de opstijghouding en de vegetatie.",
+          "verdict": "uit-rol"
+        }
+      },
+      "corrections": [
+        "Juvenielenfoto en vergelijking met Zanglijster toegevoegd. De Nederlandse broedstatus is gecorrigeerd. Het kennisprofiel legt de grens van het Sovon-territoriumbewijs vast."
+      ],
+      "missing": [
+        "Geverifieerde, goed herkenbare foto in vrije vlucht."
+      ],
+      "sexPolicy": "Verenkleed van beide geslachten gelijk. Neutrale fotolabels.",
+      "uncertain": [
+        "De bestaande opname toont opvliegen tussen planten. Ze blijft in de aanvullende sectie."
+      ]
+    },
+    "sp072": {
+      "assets": {
+        "/assets/species/sp072.webp": {
+          "role": "Hoofdfoto",
+          "content": "Graspieper in zit met lichte oogring, slanke snavel en duidelijke streping.",
+          "sexAge": "Geslacht onbekend.",
+          "quality": "Goed zicht op de kop en het kleed.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp072-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Graspieper met lichte veerranden en gestreepte borst.",
+          "sexAge": "Fotograaf benoemt juveniel. Geslacht onbekend.",
+          "quality": "Scherp beeld van kop, borst en vleugeldekveren.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp072-flight.webp": {
+          "role": "In vlucht",
+          "content": "Graspieper in vrije vlucht boven heide met uitgespreide vleugels.",
+          "sexAge": "Geslacht en exacte leeftijd onbekend.",
+          "quality": "Genoeg ruimte rond de vogel en zicht op de vluchthouding.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Juvenielenfoto toegevoegd. Vergelijking met Boompieper legt flankstreping, achternagel en geluid uit. De partner heeft nog geen foto in de gids."
+      ],
+      "missing": [],
+      "wishes": [
+        "Geverifieerde Boompieperfoto bij de vergelijking."
+      ],
+      "sexPolicy": "Verenkleed van beide geslachten gelijk. Neutrale fotolabels.",
+      "uncertain": []
+    },
+    "sp078": {
+      "assets": {
+        "/assets/species/sp078.webp": {
+          "role": "Hoofdfoto",
+          "content": "Volwassen Meerkoet met donker kleed, witte snavel en wit voorhoofdsschild.",
+          "sexAge": "Volwassen kleed. Geslacht onbekend.",
+          "quality": "Snavel, schild en rode iris zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp078-juv-grown.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Grijsbruine Meerkoet met lichte keel en wangen en een klein voorhoofdsschild.",
+          "sexAge": "Fotograaf benoemt juveniel. Geslacht onbekend.",
+          "quality": "Kop en lichte veerpartijen goed zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp078-flight.webp": {
+          "role": "In vlucht",
+          "content": "Meerkoet vrij in de lucht boven het water, met de poten naar achteren.",
+          "sexAge": "Geslacht onbekend.",
+          "quality": "Vluchthouding en donkere lichaamsbouw zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp078-juv.webp": {
+          "role": "Overige herkenningsfoto's (Donsjong)",
+          "content": "Donsjong met rood-oranje kop en donker dons.",
+          "sexAge": "Kleed van een donsjong. Geslacht onbekend.",
+          "quality": "Kopkleuren en dons goed zichtbaar.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Tekst van de juvenielenkaart verwijst naar het afgebeelde oudere jong. Het donsjong heeft een eigen label en verwijst naar het latere kleed."
+      ],
+      "missing": [],
+      "sexPolicy": "Verenkleed gelijk. De grootte van het voorhoofdsschild overlapt tussen de geslachten.",
       "uncertain": []
     }
   }

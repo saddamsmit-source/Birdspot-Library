@@ -685,19 +685,11 @@ export const LIFE = Object.freeze({
   "voice": "Schor \"tsjak-tsjak-tsjak\""
  },
  "sp048": {
-  "breeding": {
-   "period": "mei–jul",
-   "nest": "Komnest laag in een boom of struik",
-   "eggs": "4–6",
-   "incubation": "12–13 dagen",
-   "fledging": "12–14 dagen",
-   "broods": "1–2",
-   "months": "mei-jul"
-  },
-  "diet": "Regenwormen, insecten en bessen",
-  "behaviour": "In de winter in groepen met Kramsvogels op weilanden",
-  "migration": "Wintergast (okt–apr); trekt 's nachts in grote aantallen over; zeer zelden broedvogel",
-  "voice": "Ijl, langgerekt \"tsiiep\", vooral 's nachts in oktober"
+  "breeding": null,
+  "diet": "In de winter onder meer wormen en bessen. Zoekt ook naar valfruit.",
+  "behaviour": "Zoekt in het najaar en de winter vaak in groepen naar voedsel, onder meer in weilanden en boomgaarden.",
+  "migration": "Doortrekker en wintergast. Trekt overdag en 's nachts, soms in grote groepen. Najaarstrek valt vooral in oktober op.",
+  "voice": "Hoge, scherpe en gerekte vluchtroep. Kortere roep in zit."
  },
  "sp049": {
   "breeding": {

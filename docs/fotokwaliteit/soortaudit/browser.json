@@ -501,6 +501,68 @@
     "method": "Lokale HTTP-server stopgezet na precache, herladen, soortkaart geopend en foto’s gedecodeerd",
     "status": "VERIFIED"
    }
+  },
+  "sp048": {
+   "ok": true,
+   "viewport": "390x844 Chromium 145 (Playwright)",
+   "photos": 3,
+   "sections": [
+    "Hoofdfoto",
+    "Verenkleed",
+    "Overige herkenningsfoto's"
+   ],
+   "flight": [],
+   "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik, broedstatus en afwezigheid van een Nederlandse broedkalender",
+   "lijktOp": "SAB-09 OK (390 px)",
+   "offline": {
+    "status": "VERIFIED",
+    "method": "Na precache herladen en de kaart heropend met HTTP-server uit. Alle eigen beelden gedecodeerd."
+   },
+   "testedOn": "7cdfd22b58495a91552ef3f1cfa61906a11f5760",
+   "date": "2026-11-11"
+  },
+  "sp072": {
+   "ok": true,
+   "viewport": "390x844 Chromium 145 (Playwright)",
+   "photos": 3,
+   "sections": [
+    "Hoofdfoto",
+    "Verenkleed",
+    "In vlucht"
+   ],
+   "flight": [
+    "/assets/species/plumage/sp072-flight.webp"
+   ],
+   "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik",
+   "lijktOp": "SAB-09 OK (390 px)",
+   "offline": {
+    "status": "VERIFIED",
+    "method": "Na precache herladen en de kaart heropend met HTTP-server uit. Alle eigen beelden gedecodeerd."
+   },
+   "testedOn": "7cdfd22b58495a91552ef3f1cfa61906a11f5760",
+   "date": "2026-11-11"
+  },
+  "sp078": {
+   "ok": true,
+   "viewport": "390x844 Chromium 145 (Playwright)",
+   "photos": 4,
+   "sections": [
+    "Hoofdfoto",
+    "Verenkleed",
+    "In vlucht",
+    "Overige herkenningsfoto's"
+   ],
+   "flight": [
+    "/assets/species/plumage/sp078-flight.webp"
+   ],
+   "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik",
+   "lijktOp": "SAB-09 OK (390 px)",
+   "offline": {
+    "status": "VERIFIED",
+    "method": "Na precache herladen en de kaart heropend met HTTP-server uit. Alle eigen beelden gedecodeerd."
+   },
+   "testedOn": "7cdfd22b58495a91552ef3f1cfa61906a11f5760",
+   "date": "2026-11-11"
   }
  }
 }

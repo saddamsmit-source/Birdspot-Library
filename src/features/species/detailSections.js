@@ -296,9 +296,12 @@ function comparisonCard(id, group, takePhoto) {
     const refLabel = focal.plumage || entry.flight ? title.toLowerCase() : 'hoofdfoto';
     // Mijlpaal 1 (10-11-2026): geen verwijzing naar een "In vlucht"-sectie die er niet (meer) is.
     const ownMissing = entry.flight && (focal.photoMissing || !flightPhoto(focal.id));
+    let ownRef = `↑ zie ${refLabel}`;
+    if (ownMissing) ownRef = 'Nog geen geschikte vluchtfoto';
+    else if (focal.textOnly) ownRef = 'Nog geen foto';
     return `<div class="sd-cmp-panel" data-cmp-panel${entry.flight ? ' data-cmp-flight' : ''}${i === 0 ? '' : ' hidden'}>
       <div class="sd-cmp-head">
-        <div class="sd-cmp-who"><strong>${esc(own)}</strong><small>${esc(title)}</small><div class="sd-cmp-ref">${ownMissing ? 'Nog geen geschikte vluchtfoto' : `↑ zie ${esc(refLabel)}`}</div></div>
+        <div class="sd-cmp-who"><strong>${esc(own)}</strong><small>${esc(title)}</small><div class="sd-cmp-ref">${esc(ownRef)}</div></div>
         <div class="sd-cmp-who"><strong>${esc(partnerSpecies.nameNL)}</strong><small>${esc(partnerTitle)}</small>${showPhoto ? fieldPhoto(photo) : '<div class="sd-cmp-ref">Nog geen foto</div>'}</div>
       </div>
       ${rows ? `<div class="sd-cmp-rows">${rows}</div>` : ''}
