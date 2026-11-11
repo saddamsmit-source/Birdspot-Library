@@ -1,5 +1,5 @@
 {
- "sha": "7cdfd22b58495a91552ef3f1cfa61906a11f5760",
+ "sha": "c1c0f11ab367f35c4efc483ad986a6e726154651",
  "generated": "2026-11-11",
  "species": [
   {
@@ -4126,17 +4126,243 @@
    "id": "sp079",
    "nameNL": "Waterhoen",
    "family": "Rallen",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M4",
+   "date": "2026-11-11",
+   "sha": "c1c0f11ab367f35c4efc483ad986a6e726154651",
+   "assets": [
+    {
+     "image": "/assets/species/sp079.webp",
+     "role": "Hoofdfoto",
+     "content": "Volwassen Waterhoen aan de oever met rood schild, gele snavelpunt en witte flanktekening.",
+     "sexAge": "Volwassen kleed. Geslacht onbekend.",
+     "quality": "Hele vogel goed zichtbaar, inclusief tenen en onderstaart.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp079-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Bruin jong Waterhoen zwemmend, met lichte keel en witte flanktekening.",
+     "sexAge": "Bron benoemt juveniel. Geslacht onbekend.",
+     "quality": "Kop en flank voldoende zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Charles J. Sharp",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp079-flight.webp",
+     "role": "In vlucht",
+     "content": "Jong Waterhoen vrij boven water, met vleugels uitgespreid en poten naar achteren.",
+     "sexAge": "Bruinig jeugdkleed volgens eerder bronbewijs. Geslacht onbekend.",
+     "quality": "Vlieghouding en flank zichtbaar, vogel relatief klein in beeld.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · Imran Shah from Islamabad, Pakistan",
+      "annotations": []
+     },
+     "flight": {
+      "n": 89,
+      "id": "sp079",
+      "nameNL": "Waterhoen",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0"
+     }
+    }
+   ],
+   "corrections": [
+    "Bronprofiel en vergelijking op snavel- en flanktekening aangevuld. Bestaande drie foto’s beoordeeld."
+   ],
+   "missing": [],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "Verenkleed van beide geslachten gelijk. Neutrale fotolabels.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "VERIFIED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Snavel en witte tekening"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium 145 (Playwright)",
+    "photos": 3,
+    "sections": [
+     "Hoofdfoto",
+     "Verenkleed",
+     "In vlucht"
+    ],
+    "flight": [
+     "/assets/species/plumage/sp079-flight.webp"
+    ],
+    "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, vluchtrol, zoom, doorklik en toepasselijke maten/labels",
+    "lijktOp": "SAB-09 OK (390 px)",
+    "offline": {
+     "status": "VERIFIED",
+     "method": "Na precache herladen en de kaart heropend met HTTP-server uit. Alle eigen beelden gedecodeerd."
+    },
+    "testedOn": "c1c0f11ab367f35c4efc483ad986a6e726154651",
+    "date": "2026-11-11"
+   },
+   "errors": [],
+   "verdict": "VERIFIED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp081",
    "nameNL": "Blauwe Reiger",
    "family": "Reigers",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M4",
+   "date": "2026-11-11",
+   "sha": "c1c0f11ab367f35c4efc483ad986a6e726154651",
+   "assets": [
+    {
+     "image": "/assets/species/plumage/sp081-portrait.webp",
+     "role": "Hoofdfoto",
+     "content": "Volwassen Blauwe Reiger staand in ondiep water, met dolksnavel, lange poten en lichte hals.",
+     "sexAge": "Volwassen kleed. Geslacht onbekend.",
+     "quality": "Hele vogel in zijaanzicht met duidelijk profiel.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY-SA 3.0 · Charles J. Sharp",
+      "annotations": [
+       "Bron bevestigt Ardea cinerea. De volwassen koptekening en stevige snavel zijn zichtbaar. Geslacht onbekend."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp081-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge Blauwe Reiger met donkere kruin en grijzere kop zonder lange sierveren.",
+     "sexAge": "Jeugdkleed in eerder bronbewijs. Geslacht onbekend.",
+     "quality": "Kop en snavel zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Ralf Hüsges",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/sp081.webp",
+     "role": "In vlucht",
+     "content": "Blauwe Reiger vrij in de lucht boven water met uitgespreide vleugels en de poten naar achteren.",
+     "sexAge": "Geslacht onbekend.",
+     "quality": "Hele vogel zichtbaar. De relatief gestrekte hals is op de kaart toegelicht.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC0 · Dinkum",
+      "annotations": []
+     },
+     "flight": {
+      "n": 90,
+      "id": "sp081",
+      "nameNL": "Blauwe Reiger",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC0"
+     }
+    }
+   ],
+   "corrections": [
+    "Staande hoofdfoto toegevoegd. De bestaande vrije-vluchtfoto staat nu één keer in In vlucht. Vergelijking met Purperreiger gebruikt nu het zijportret."
+   ],
+   "missing": [],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "Verenkleed van beide geslachten gelijk. Neutrale fotolabels.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "VERIFIED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Bouw en halskleur"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium 145 (Playwright)",
+    "photos": 3,
+    "sections": [
+     "Hoofdfoto",
+     "Verenkleed",
+     "In vlucht"
+    ],
+    "flight": [
+     "/assets/species/sp081.webp"
+    ],
+    "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, vluchtrol, zoom, doorklik en toepasselijke maten/labels",
+    "lijktOp": "SAB-09 OK (390 px)",
+    "offline": {
+     "status": "VERIFIED",
+     "method": "Na precache herladen en de kaart heropend met HTTP-server uit. Alle eigen beelden gedecodeerd."
+    },
+    "testedOn": "c1c0f11ab367f35c4efc483ad986a6e726154651",
+    "date": "2026-11-11"
+   },
+   "errors": [],
+   "verdict": "VERIFIED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp082",
@@ -4978,9 +5204,157 @@
    "id": "sp099",
    "nameNL": "Kievit",
    "family": "Plevieren",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M4",
+   "date": "2026-11-11",
+   "sha": "c1c0f11ab367f35c4efc483ad986a6e726154651",
+   "assets": [
+    {
+     "image": "/assets/species/plumage/sp099-adult_m.webp",
+     "role": "Hoofdfoto (Mannetje)",
+     "content": "Kievit in broedkleed met lange kuif, donkere keel en groen-paarse rugglans.",
+     "sexAge": "Audubon benoemt dezelfde opname als volwassen mannetje in broedkleed.",
+     "quality": "Hele vogel scherp in rustig zijaanzicht.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY-SA 2.5 · Andreas Trepte",
+      "annotations": [
+       "Audubon benoemt dezelfde opname als volwassen mannetje in broedkleed. De lange kuif en donkere keel zijn zichtbaar.",
+       "Identieke opname als in Audubon. Gemiddeld absoluut RGB-kanaalverschil na schalen: 2.72, 2.40, 3.32 op 255."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp099-adult_f.webp",
+     "role": "Verenkleed (Vrouwtje)",
+     "content": "Baltsend Kievitvrouwtje in voorovergebogen houding bij Marken.",
+     "sexAge": "De fotograaf benoemt een vrouwtje.",
+     "quality": "Het volledige lijf, de kuif en de baltspositie zijn zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY-SA 4.0 · Charles J. Sharp",
+      "annotations": [
+       "De fotograaf benoemt een baltsend vrouwtje bij Marken. Het beeld toont een volwassen vogel in baltspositie."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp099-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge Kievit met korte kuif en lichte randen aan rug- en vleugelveren.",
+     "sexAge": "Commons categoriseert de opname als juveniel. Geslacht onbekend.",
+     "quality": "Scherp zijaanzicht met kop, rug en veerranden.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY-SA 4.0 · Charles J. Sharp",
+      "annotations": [
+       "Commons categoriseert de opname als juveniel. Korte kuif, bruin kleed en brede lichte veerranden ondersteunen het label. Geslacht onbekend."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp099-flight.webp",
+     "role": "In vlucht",
+     "content": "Twee Kieviten vrij in de lucht, met brede afgeronde vleugels en zichtbaar zwart-wit contrast.",
+     "sexAge": "Geslacht per vogel niet vastgesteld.",
+     "quality": "Vrije vlucht duidelijk, rug- en buikzijde afzonderlijk zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp",
+      "annotations": []
+     },
+     "flight": {
+      "n": 84,
+      "id": "sp099",
+      "nameNL": "Kievit",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0"
+     }
+    },
+    {
+     "image": "/assets/species/sp099.webp",
+     "role": "Overige herkenningsfoto's",
+     "content": "Kievit in laag gras met lange kuif, witte buik en groene rugglans.",
+     "sexAge": "Geslacht onbekend.",
+     "quality": "Aanvullend zijaanzicht met lange kuif.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · El Golli Mohamed",
+      "annotations": []
+     },
+     "flight": null
+    }
+   ],
+   "corrections": [
+    "Mannetje als hoofdfoto. Vrouwtje en juveniel toegevoegd. Vergelijking met Zilverplevier toegevoegd. Spanwijdte gecorrigeerd volgens twee bronnen."
+   ],
+   "missing": [],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "Geslachtslabels alleen bij het mannetje en vrouwtje met bronbewijs. Vluchtbeeld zonder geslachtslabel.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "VERIFIED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Kuif en rugtekening"
+    ],
+    "open": [],
+    "discrepancies": 1
+   },
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium 145 (Playwright)",
+    "photos": 5,
+    "sections": [
+     "Hoofdfoto",
+     "Verenkleed",
+     "In vlucht",
+     "Overige herkenningsfoto's"
+    ],
+    "flight": [
+     "/assets/species/plumage/sp099-flight.webp"
+    ],
+    "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, vluchtrol, zoom, doorklik en toepasselijke maten/labels",
+    "lijktOp": "SAB-09 OK (390 px)",
+    "offline": {
+     "status": "VERIFIED",
+     "method": "Na precache herladen en de kaart heropend met HTTP-server uit. Alle eigen beelden gedecodeerd."
+    },
+    "testedOn": "c1c0f11ab367f35c4efc483ad986a6e726154651",
+    "date": "2026-11-11"
+   },
+   "errors": [],
+   "verdict": "VERIFIED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp100",
