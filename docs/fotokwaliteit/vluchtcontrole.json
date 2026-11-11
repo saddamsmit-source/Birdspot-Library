@@ -2640,6 +2640,23 @@
    "airborne": true,
    "rights": "VERIFIED",
    "rightsNote": "Oorspronkelijke Commons-JPEG gedownload en herleidbaar omgezet naar WebP, CC BY-SA 4.0."
+  },
+  "/assets/species/plumage/sp141-flight.webp": {
+   "n": 146,
+   "id": "sp141",
+   "nameNL": "Gierzwaluw",
+   "registry": "GUIDE_POSES[0]",
+   "sexLabel": null,
+   "class": "vlucht",
+   "quality": "goed",
+   "decision": "goedgekeurd",
+   "target": null,
+   "newLabel": null,
+   "newNote": null,
+   "reason": "Gierzwaluw in vrije vlucht, met lange, smalle vleugels en een gespreide gevorkte staart.",
+   "airborne": true,
+   "rights": "VERIFIED",
+   "rightsNote": "Oorspronkelijke Commons-JPEG gedownload en naar WebP omgezet, CC BY 4.0."
   }
  }
 }

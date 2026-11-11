@@ -803,6 +803,44 @@ export const GUIDE_COMPARISONS = [
     tip: 'Let op vleugelvorm en staart. Bij tegenlicht is het silhouet bruikbaarder dan de kleur.',
   },
   {
+    label: 'Fazant en Patrijs · volwassen',
+    birds: [
+      {id: 'sp105', source: 'fazant', plumage: 'adult_f', marks: 'De hen heeft een lange, gebandeerde staart en een bruin gevlekt kleed.'},
+      {id: 'sp106', source: 'patrijs', marks: 'Compacte bouw met korte roestrode staart. Volwassen vogels hebben een oranjebruin gezicht.'},
+    ],
+    rows: [
+      {label: 'Staart', values: ['Lang en gebandeerd', 'Kort en roestrood']},
+      {label: 'Kleed', values: ['Bruin met donkere vlekken', 'Oranjebruin gezicht en grijze borst bij volwassen vogels']},
+    ],
+    tip: 'Bekijk de volledige staart. Een juveniele Fazant heeft een kortere staart dan een hen.',
+  },
+  {
+    label: 'Gierzwaluw en Boerenzwaluw · in vlucht',
+    flight: true,
+    birds: [
+      {id: 'sp141', source: 'gierzwaluw', marks: 'Lange sikkelvleugels, donker lichaam en een gevorkte staart.'},
+      {id: 'sp114', source: 'boerenzwaluw', marks: 'Lichte onderzijde en bij volwassen vogels lange buitenste staartpennen.'},
+    ],
+    rows: [
+      {label: 'Lichte delen', values: ['Kleine, vaak moeilijk zichtbare keelvlek', 'Lichte onderzijde met roodbruine keel']},
+      {label: 'Vliegbeeld', values: ['Lange sikkelvleugels en gevorkte staart', 'Lange buitenste staartpennen bij volwassen vogels']},
+    ],
+    tip: 'Begin bij het silhouet. Tegenlicht kan een lichte onderzijde donker doen lijken.',
+  },
+  {
+    label: 'Gierzwaluw en Huiszwaluw · in vlucht',
+    flight: true,
+    birds: [
+      {id: 'sp141', source: 'gierzwaluw', marks: 'Lange sikkelvleugels, donker lichaam en een gevorkte staart.'},
+      {id: 'sp115', source: 'huiszwaluw', marks: 'Witte stuit, witte onderzijde en een korte, gevorkte staart.'},
+    ],
+    rows: [
+      {label: 'Lichte delen', values: ['Kleine, vaak moeilijk zichtbare keelvlek', 'Witte onderzijde en witte stuit']},
+      {label: 'Vliegbeeld', values: ['Lange sikkelvleugels en gevorkte staart', 'Korte, gevorkte staart']},
+    ],
+    tip: 'Bekijk ook de stuit als de vogel wegvliegt.',
+  },
+  {
     label: 'Visdief en Noordse Stern · broedkleed',
     birds: [
       {id: 'sp165', source: 'visdief', plumage: 'breeding', marks: 'Langere oranjerode snavel, meestal met zwarte punt. De poten zijn langer.'},

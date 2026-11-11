@@ -3988,6 +3988,50 @@
    "source": "vluchtcontrole",
    "decision": "goedgekeurd",
    "note": "Vrij in de lucht, met voorwaarts gestrekte hals en ingetrokken poten. De groene kop en gele snavel bevestigen een mannetje in prachtkleed."
+  },
+  "/assets/species/plumage/sp105-adult_f.webp": {
+   "refs": [
+    "sp105 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "85071d1d286688aba5b9db55323c0a54c166f3a7",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M3-fase 4",
+   "decision": "goedgekeurd",
+   "note": "Vrouwtje Fazant op Texel, met donkere vlekken op het bruine kleed en een lange gebandeerde staart."
+  },
+  "/assets/species/plumage/sp105-juv.webp": {
+   "refs": [
+    "sp105 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "617a552d2e813c7223e8d7231b7ab64f04fce796",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M3-fase 4",
+   "decision": "goedgekeurd",
+   "note": "Jonge Fazant in Finland, met een bruin gevlekt kleed en een nog korte staart."
+  },
+  "/assets/species/plumage/sp141-juv.webp": {
+   "refs": [
+    "sp141 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "329bd54779414abb93c31cebd7d3d1b2169e9a30",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M3-fase 4",
+   "decision": "goedgekeurd",
+   "note": "Juveniele Gierzwaluw tijdens opvang na redding, met lichte veerranden op kop en vleugels."
+  },
+  "/assets/species/plumage/sp141-flight.webp": {
+   "refs": [
+    "sp141 GUIDE_POSES[0]"
+   ],
+   "sha1": "c70b8bd9869dd7cedbe5fee70a6be78693830596",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Gierzwaluw in vrije vlucht, met lange, smalle vleugels en een gespreide gevorkte staart."
   }
  }
 }

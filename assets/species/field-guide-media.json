@@ -2646,7 +2646,8 @@
         "visualCheck": "Jonge Wintertaling in Tokio. Bruine kop met donkere oogstreep en een zichtbare groene vleugelspiegel.",
         "alt": "Wintertaling — Jonge Wintertaling in Tokio. Bruine kop met donkere oogstreep en een zichtbare groene vleugelspiegel.",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-        "observation": "https://www.inaturalist.org/observations/101542967"
+        "observation": "https://www.inaturalist.org/observations/101542967",
+        "note": "De waarneming vermeldt een juveniel. Het geslacht is op deze foto niet betrouwbaar vast te stellen."
       },
       "eclipse": {
         "file": "iNaturalist photo 76374524",
@@ -2666,7 +2667,9 @@
         "visualCheck": "Ruiend mannetje in Cheshire. Overwegend bruin lichaam met nog groene veren op de kop.",
         "alt": "Wintertaling — Ruiend mannetje in Cheshire. Overwegend bruin lichaam met nog groene veren op de kop.",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-        "observation": "https://www.inaturalist.org/observations/48145191"
+        "observation": "https://www.inaturalist.org/observations/48145191",
+        "label": "Overgang naar eclipskleed",
+        "note": "Het mannetje krijgt een bruin kleed. Op de kop zijn nog groene veren zichtbaar."
       }
     },
     "sp188": {
@@ -3907,7 +3910,7 @@
         "license": "CC BY 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
         "source": "https://commons.wikimedia.org/wiki/File:Common_swift_2024_04_21.jpg",
-        "showSourceLink": false,
+        "showSourceLink": true,
         "alt": "Gierzwaluw in vlucht met donkere onderzijde, lange sikkelvleugels, lichte keel en korte gevorkte staart.",
         "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
         "reviewed": "2026-11-07",
@@ -3919,6 +3922,29 @@
         "image": "/assets/species/plumage/sp141-adult.webp",
         "flight": true,
         "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+      },
+      "juv": {
+        "file": "Apus apus juvenile rescue Paris 20260627.jpg",
+        "nl": "Gierzwaluw",
+        "latin": "Apus apus",
+        "author": "Marie-Lan Taÿ Pamart",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Apus_apus_juvenile_rescue_Paris_20260627.jpg",
+        "showSourceLink": true,
+        "alt": "Juveniele Gierzwaluw tijdens opvang na redding, met lichte veerranden op kop en vleugels.",
+        "note": "Juveniele Gierzwaluw tijdens opvang na redding, met lichte veerranden op kop en vleugels.",
+        "modifications": "Verkleind tot max. 1440 px en omgezet naar WebP zonder uitsnede en zonder EXIF/GPS/XMP",
+        "reviewed": "2026-11-11",
+        "verificationSource": "https://commons.wikimedia.org/wiki/File:Apus_apus_juvenile_rescue_Paris_20260627.jpg",
+        "visualCheck": "Juveniele Gierzwaluw tijdens opvang na redding, met lichte veerranden op kop en vleugels.",
+        "verification": "Fotograaf benoemt een juveniel dat na redding werd opgevangen. De lichte veerranden ondersteunen het label.",
+        "width": 1440,
+        "height": 1080,
+        "image": "/assets/species/plumage/sp141-juv.webp",
+        "sha1": "329bd54779414abb93c31cebd7d3d1b2169e9a30",
+        "sourceAudit": "2026-11-11",
+        "age": "juvenile"
       }
     },
     "sp165": {
@@ -3986,6 +4012,54 @@
         "image": "/assets/species/plumage/sp167-adult.webp",
         "flight": true,
         "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+      }
+    },
+    "sp105": {
+      "adult_f": {
+        "file": "Phasianus colchicus (Common pheasant) female, Texel, the Netherlands.jpg",
+        "nl": "Fazant",
+        "latin": "Phasianus colchicus",
+        "author": "Bj.schoenmakers",
+        "license": "CC0 1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Phasianus_colchicus_%28Common_pheasant%29_female%2C_Texel%2C_the_Netherlands.jpg",
+        "showSourceLink": true,
+        "alt": "Vrouwtje Fazant op Texel, met donkere vlekken op het bruine kleed en een lange gebandeerde staart.",
+        "note": "Vrouwtje Fazant op Texel, met donkere vlekken op het bruine kleed en een lange gebandeerde staart.",
+        "modifications": "Omgezet naar WebP zonder uitsnede en zonder EXIF/GPS/XMP",
+        "reviewed": "2026-11-11",
+        "verificationSource": "https://commons.wikimedia.org/wiki/File:Phasianus_colchicus_%28Common_pheasant%29_female%2C_Texel%2C_the_Netherlands.jpg",
+        "visualCheck": "Vrouwtje Fazant op Texel, met donkere vlekken op het bruine kleed en een lange gebandeerde staart.",
+        "verification": "Fotograaf benoemt een vrouwtje. Het verenkleed en de staart ondersteunen het label.",
+        "width": 800,
+        "height": 600,
+        "image": "/assets/species/plumage/sp105-adult_f.webp",
+        "sha1": "85071d1d286688aba5b9db55323c0a54c166f3a7",
+        "sourceAudit": "2026-11-11",
+        "sex": "female"
+      },
+      "juv": {
+        "file": "Phasianus colchicus Oulu 20170723 04.jpg",
+        "nl": "Fazant",
+        "latin": "Phasianus colchicus",
+        "author": "Estormiz",
+        "license": "CC0 1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Phasianus_colchicus_Oulu_20170723_04.jpg",
+        "showSourceLink": true,
+        "alt": "Jonge Fazant in Finland, met een bruin gevlekt kleed en een nog korte staart.",
+        "note": "Jonge Fazant in Finland, met een bruin gevlekt kleed en een nog korte staart.",
+        "modifications": "Verkleind tot max. 1440 px en omgezet naar WebP zonder uitsnede en zonder EXIF/GPS/XMP",
+        "reviewed": "2026-11-11",
+        "verificationSource": "https://commons.wikimedia.org/wiki/File:Phasianus_colchicus_Oulu_20170723_04.jpg",
+        "visualCheck": "Jonge Fazant in Finland, met een bruin gevlekt kleed en een nog korte staart.",
+        "verification": "Fotograaf benoemt een jonge Fazant. Het geslacht blijft onbekend.",
+        "width": 1440,
+        "height": 1153,
+        "image": "/assets/species/plumage/sp105-juv.webp",
+        "sha1": "617a552d2e813c7223e8d7231b7ab64f04fce796",
+        "sourceAudit": "2026-11-11",
+        "age": "juvenile"
       }
     }
   },
@@ -7933,6 +8007,33 @@
         "width": 1600,
         "height": 1067,
         "image": "/assets/species/plumage/sp188-hero-male.webp"
+      }
+    ],
+    "sp141": [
+      {
+        "file": "Common Swift 2025 07 18 01.jpg",
+        "nl": "Gierzwaluw",
+        "latin": "Apus apus",
+        "author": "Alexis Lours",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Common_Swift_2025_07_18_01.jpg",
+        "showSourceLink": true,
+        "alt": "Gierzwaluw in vrije vlucht, met lange, smalle vleugels en een gespreide gevorkte staart.",
+        "note": "Gierzwaluw in vrije vlucht, met lange, smalle vleugels en een gespreide gevorkte staart.",
+        "modifications": "Verkleind tot max. 1440 px en omgezet naar WebP zonder uitsnede en zonder EXIF/GPS/XMP",
+        "reviewed": "2026-11-11",
+        "verificationSource": "https://commons.wikimedia.org/wiki/File:Common_Swift_2025_07_18_01.jpg",
+        "visualCheck": "Gierzwaluw in vrije vlucht, met lange, smalle vleugels en een gespreide gevorkte staart.",
+        "verification": "Fotograaf benoemt een Gierzwaluw in vlucht. Leeftijd en geslacht zijn niet vastgesteld.",
+        "width": 1440,
+        "height": 960,
+        "image": "/assets/species/plumage/sp141-flight.webp",
+        "sha1": "c70b8bd9869dd7cedbe5fee70a6be78693830596",
+        "sourceAudit": "2026-11-11",
+        "label": "In vlucht",
+        "flight": true,
+        "flightReview": "goedgekeurd 2026-11-11: Vrij in de lucht, herkenbaar silhouet en beide vleugels in beeld."
       }
     ]
   },
