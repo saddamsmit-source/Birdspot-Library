@@ -1358,11 +1358,11 @@
     "sp089 GUIDE_POSES[0]"
    ],
    "sha1": "0d71c694397180edb91762e0249dccbff23ca129",
-   "class": "vlucht",
-   "airborne": true,
+   "class": "landen",
+   "airborne": false,
    "source": "vluchtcontrole",
-   "decision": "goedgekeurd",
-   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+   "decision": "uit-rol",
+   "note": "Luchtgedragen met uitgestrekte poten omlaag, passend bij landingshouding. Vrije vlucht is niet bevestigd voor dit beeld."
   },
   "/assets/species/plumage/sp089-juv-review.webp": {
    "refs": [
@@ -3977,6 +3977,17 @@
    "source": "vluchtcontrole",
    "decision": "goedgekeurd",
    "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp089-free-flight.webp": {
+   "refs": [
+    "sp089 GUIDE_POSES[2]"
+   ],
+   "sha1": "3a1b881977d401ef2b7a18fa9edfc445338be7f7",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, met voorwaarts gestrekte hals en ingetrokken poten. De groene kop en gele snavel bevestigen een mannetje in prachtkleed."
   }
  }
 }

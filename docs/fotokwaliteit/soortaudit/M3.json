@@ -1,14 +1,15 @@
 {
   "_meta": {
     "batch": "M3",
-    "phase": 2,
+    "phase": 3,
     "date": "2026-11-11",
-    "title": "K02 fasen 1 en 2 — zes gecontroleerde soorten",
+    "title": "K02 fasen 1–3 — negen gecontroleerde soorten",
     "reviewer": "ChatGPT (Codex), beeldinspectie per fase met controle van bronpagina’s. Onafhankelijke review staat open.",
     "basis": "reviewversie 41c7fed, M2-rapport §9 en Birdspot-kwaliteitsnorm",
     "phaseReports": [
       "../M3_FASE_1_2026-11-11.md",
-      "../M3_FASE_2_2026-11-11.md"
+      "../M3_FASE_2_2026-11-11.md",
+      "../M3_FASE_3_2026-11-11.md"
     ]
   },
   "species": {
@@ -184,6 +185,126 @@
       "sexPolicy": "De bestaande foto’s blijven neutraal bij gebrek aan bevestigde geslachtslabels.",
       "uncertain": [
         "Sovon noemt 11 dagen in het nest. Vogelbescherming noemt circa 8 dagen. De bronafwijking staat in het kennisprofiel."
+      ]
+    },
+    "sp077": {
+      "assets": {
+        "/assets/species/sp077.webp": {
+          "role": "Hoofdfoto",
+          "content": "Zwemmende Fuut in prachtkleed. De lange hals, spitse snavel en roodbruine kraag zijn zichtbaar.",
+          "sexAge": "Geslacht niet benoemd door de bron.",
+          "quality": "Helder zijaanzicht.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp077-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Zwemmende jonge Fuut met zwart-wit gestreepte kop en hals.",
+          "sexAge": "Fotograaf noemt het dier juveniel. Geslacht onbekend.",
+          "quality": "Heldere leeftijdskenmerken.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Wintervergelijking met Roodhalsfuut toegevoegd met aandacht voor halsdikte en snavelbasis."
+      ],
+      "missing": [
+        "Geverifieerde vrije-vluchtfoto"
+      ],
+      "sexPolicy": "Mannetje en vrouwtje hebben gelijkend kleed. De hoofdfoto behoudt een neutraal label.",
+      "uncertain": []
+    },
+    "sp086": {
+      "assets": {
+        "/assets/species/sp086.webp": {
+          "role": "Hoofdfoto",
+          "content": "Grauwe Gans op gras. Stevige oranje snavel, roze poten en grijsbruine veren zichtbaar.",
+          "sexAge": "Geslacht niet benoemd door de bron.",
+          "quality": "Gehele vogel en herkenningsdetails goed zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp086-flight.webp": {
+          "role": "In vlucht",
+          "content": "Grauwe Gans vrij in de lucht, met gestrekte hals en achterwaarts gehouden poten.",
+          "sexAge": "Geslacht niet benoemd door de bron.",
+          "quality": "Heldere vleugelvorm en snavel.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp086-juv.webp": {
+          "role": "Overige herkenningsfoto’s (Donsjong)",
+          "content": "Jonge Grauwe Gans met duidelijk dons en beginnende veerontwikkeling.",
+          "sexAge": "Bron noemt jong dier. Beeld toont donskleed. Geslacht onbekend.",
+          "quality": "Geschikt als voorbeeld van donskleed.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Vergelijking met Kolgans behandelt het ontbreken van kol en buikstrepen bij jonge Kolganzen."
+      ],
+      "missing": [
+        "Afzonderlijke foto van een ouder juveniel"
+      ],
+      "sexPolicy": "De bestaande beelden behouden neutrale labels. Het donsjong heeft een afzonderlijk leeftijdslabel.",
+      "uncertain": []
+    },
+    "sp089": {
+      "assets": {
+        "/assets/species/sp089.webp": {
+          "role": "Hoofdfoto",
+          "content": "Wilde-Eend-paar op de oever. De groene kop van het mannetje en het bruine kleed van het vrouwtje zijn zichtbaar.",
+          "sexAge": "Commons identificeert het beeld als een paar. Herkenbare geslachtskenmerken zichtbaar.",
+          "quality": "Twee vogels duidelijk zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp089-adult_f.webp": {
+          "role": "Verenkleed (Vrouwtje)",
+          "content": "Zwemmend vrouwtje met bruin getekend kleed en oranje met donkere snavel.",
+          "sexAge": "Fotograaf noemt een vrouwtje.",
+          "quality": "Geschikt voor vrouwtjeskleed en snavel.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp089-juv-review.webp": {
+          "role": "Verenkleed (Juvenielen)",
+          "content": "Twee jonge Wilde Eenden met bruin getekend kleed.",
+          "sexAge": "Bron bevestigt twee jonge vogels. De Engelse en Franse tekst verschillen over geslacht.",
+          "quality": "Geschikt om jeugdkleed te tonen.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp089-eclipse.webp": {
+          "role": "Verenkleed (Eclipskleed, voorlopig)",
+          "content": "Bruin verenkleed met een gele snavel. Dat past bij een woerd in eclipskleed.",
+          "sexAge": "De Engelse en Sloveense bronbijschriften spreken elkaar tegen over het geslacht.",
+          "quality": "Scherp beeld, kleedlabel voorlopig.",
+          "verdict": "review"
+        },
+        "/assets/species/plumage/sp089-flight.webp": {
+          "role": "Verenkleed (Mannetje)",
+          "content": "Woerd met geheven vleugels en poten omlaag. Dat past bij een landingshouding.",
+          "sexAge": "Groene kop en geelachtige snavel bevestigen een mannetje in prachtkleed.",
+          "quality": "Goed bruikbaar voor prachtkleed.",
+          "verdict": "uit-rol"
+        },
+        "/assets/species/plumage/sp089-free-flight.webp": {
+          "role": "In vlucht (Mannetje)",
+          "content": "Vrij in de lucht, met voorwaarts gestrekte hals en ingetrokken poten.",
+          "sexAge": "Fotobron noemt een woerd. Groene kop, gele snavel en witte halsring zijn zichtbaar.",
+          "quality": "Duidelijk silhouet en herkenningsdetails.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "De eerdere vluchtfoto is bij Mannetje geplaatst vanwege de neerhangende poten. Een aparte, brongeverifieerde vrije-vluchtfoto is toegevoegd.",
+        "Eclipsfoto zichtbaar gemarkeerd als voorlopig. Het juvenielenlabel noemt alleen de leeftijd.",
+        "Vergelijking met Krakeend legt uit wanneer de vleugelspiegel zichtbaar en bruikbaar is."
+      ],
+      "missing": [
+        "Eenduidig bevestigde eclipsfoto"
+      ],
+      "wishes": [
+        "Individueel rustportret van een mannetje in prachtkleed als extra hoofdbeeldkandidaat."
+      ],
+      "sexPolicy": "Geslacht alleen vermeld waar bron en beeld dit dragen. De twee juvenielen worden zonder geslacht aangeduid.",
+      "uncertain": [
+        "REVIEW REQUIRED: de Engelse en Sloveense bijschriften bij het vermoedelijke eclipskleed geven een verschillend geslacht."
       ]
     }
   }

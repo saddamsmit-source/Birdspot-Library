@@ -817,6 +817,116 @@ const DATA = {
    "checked": "2026-11-11",
    "certainty": "hoog",
    "publisher": "Naturalis Biodiversity Center"
+  },
+  "VB_FUUT": {
+   "register": "NL07",
+   "label": "Vogelbescherming Nederland — Fuut",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/fuut",
+   "edition": "Online geraadpleegd 11-11-2026",
+   "scope": "Nederland",
+   "confirms": "kleed, geslachtsgelijkenis, maten, roep, broeden en voorkomen",
+   "checked": "2026-11-11",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "VB_GGANS": {
+   "register": "NL07",
+   "label": "Vogelbescherming Nederland — Grauwe Gans",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grauwe-gans",
+   "edition": "Online geraadpleegd 11-11-2026",
+   "scope": "Nederland",
+   "confirms": "bouw, vlucht, snavel, poten, maten, geluid, voedsel en voorkomen",
+   "checked": "2026-11-11",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "VB_KGANS": {
+   "register": "NL07",
+   "label": "Vogelbescherming Nederland — Kolgans",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kolgans",
+   "edition": "Online geraadpleegd 11-11-2026",
+   "scope": "Nederland",
+   "confirms": "snavel, kol, buikstrepen en leeftijd",
+   "checked": "2026-11-11",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "VB_WEEND": {
+   "register": "NL07",
+   "label": "Vogelbescherming Nederland — Wilde Eend",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wilde-eend",
+   "edition": "Online geraadpleegd 11-11-2026",
+   "scope": "Nederland",
+   "confirms": "geslacht en kleed, vleugelspiegel, maten, geluid, voedsel en voorkomen",
+   "checked": "2026-11-11",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "VB_KREEND": {
+   "register": "NL07",
+   "label": "Vogelbescherming Nederland — Krakeend",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/krakeend",
+   "edition": "Online geraadpleegd 11-11-2026",
+   "scope": "Nederland",
+   "confirms": "vleugelspiegel en herkenning vrouwtje",
+   "checked": "2026-11-11",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "NAT_FUUT": {
+   "register": "nieuwe soortreferentie",
+   "label": "Naturalis Biodiversity Center — Great Crested Grebe",
+   "url": "https://birds-europe.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/taxon.php?id=130333",
+   "edition": "Online geraadpleegd 11-11-2026",
+   "scope": "Europa",
+   "confirms": "kop, snavel, winterkleed en juveniel",
+   "checked": "2026-11-11",
+   "certainty": "hoog",
+   "publisher": "Naturalis Biodiversity Center"
+  },
+  "RSPB_RHFUUT": {
+   "register": "nieuwe soortreferentie",
+   "label": "RSPB — Red-necked Grebe",
+   "url": "https://www.rspb.org.uk/birds-and-wildlife/red-necked-grebe",
+   "edition": "Online geraadpleegd 11-11-2026",
+   "scope": "West-Europa",
+   "confirms": "snavel en hals in winterkleed",
+   "checked": "2026-11-11",
+   "certainty": "hoog",
+   "publisher": "RSPB"
+  },
+  "VB_GANZEN": {
+   "register": "NL07",
+   "label": "Vogelbescherming Nederland — Herkenning van winterse ganzen",
+   "url": "https://www.vogelbescherming.nl/actueel/bericht/vijftig-tinten-bruin-herkenning-van-winterse-ganzen",
+   "edition": "Online geraadpleegd 11-11-2026",
+   "scope": "Nederland",
+   "confirms": "combinatie van snavel, vleugels, bouw en kenmerken van volwassen en jonge ganzen",
+   "checked": "2026-11-11",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "NWF_WEEND": {
+   "register": "nieuwe soortreferentie",
+   "label": "National Wildlife Federation — Mallard",
+   "url": "https://www.nwf.org/Educational-Resources/Wildlife-Guide/Birds/Mallard",
+   "edition": "Online geraadpleegd 11-11-2026",
+   "scope": "soortkenmerken, Noord-Amerika",
+   "confirms": "snavelkleur in eclipskleed en vleugelspiegel",
+   "checked": "2026-11-11",
+   "certainty": "hoog",
+   "publisher": "National Wildlife Federation"
+  },
+  "WT_EEND": {
+   "register": "nieuwe soortreferentie",
+   "label": "The Wildlife Trusts — How to identify dabbling ducks",
+   "url": "https://www.wildlifetrusts.org/wildlife/how-identify/how-identify-dabbling-ducks",
+   "edition": "Online geraadpleegd 11-11-2026",
+   "scope": "West-Europa",
+   "confirms": "spiegel en snavelpatroon Wilde Eend en Krakeend",
+   "checked": "2026-11-11",
+   "certainty": "hoog",
+   "publisher": "The Wildlife Trusts"
   }
  },
  "profiles": {
@@ -6450,6 +6560,395 @@ const DATA = {
    ],
    "open": [
     "Een afzonderlijke juvenielenfoto en lokale gidsaudio ontbreken. De bestaande foto’s bevestigen geen geslacht."
+   ]
+  },
+  "sp077": {
+   "summary": {
+    "text": "Slanke duikvogel met een lange hals en spitse snavel. Volwassen vogels hebben in prachtkleed een roodbruine kraag en donkere koppluimen.",
+    "sources": [
+     "VB_FUUT",
+     "NAT_FUUT"
+    ]
+   },
+   "keyMarks": [
+    {
+     "text": "Lange, slanke hals en smalle, puntige snavel.",
+     "sources": [
+      "NAT_FUUT"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "In prachtkleed roodbruine kraag met donkere buitenrand.",
+     "sources": [
+      "VB_FUUT",
+      "NAT_FUUT"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "In winterkleed een lichte zone boven de donkere teugel.",
+     "sources": [
+      "VB_FUUT",
+      "NAT_FUUT"
+     ],
+     "reliability": "ondersteunend"
+    }
+   ],
+   "critical": [
+    {
+     "feature": "Snavel en hals in winterkleed",
+     "where": "Kop en hals in zijaanzicht",
+     "this": "Slanke hals en smalle spitse snavel.",
+     "other": "Roodhalsfuut heeft een dikkere hals en een forsere, donkere snavel met gele basis.",
+     "vs": [
+      "sp195"
+     ],
+     "reliability": "ondersteunend",
+     "conditions": "Goed zicht op kop, snavelbasis en hals.",
+     "exceptions": "Afstand en licht beïnvloeden de zichtbaarheid van snavelkleur.",
+     "supporting": "Bekijk ook de verdeling van wit en donker rond het oog.",
+     "sources": [
+      "VB_FUUT",
+      "NAT_FUUT",
+      "RSPB_RHFUUT"
+     ]
+    }
+   ],
+   "similar": [
+    {
+     "id": "sp195",
+     "why": "Bij wintervogels helpen de snavelvorm en halsdikte bij het onderscheid.",
+     "sources": [
+      "NAT_FUUT",
+      "RSPB_RHFUUT"
+     ]
+    }
+   ],
+   "detail": [
+    {
+     "text": "Jonge futen hebben zwart-witte strepen op kop en hals.",
+     "sources": [
+      "VB_FUUT",
+      "NAT_FUUT"
+     ],
+     "topic": "leeftijd"
+    },
+    {
+     "text": "Mannetje en vrouwtje zien er in hetzelfde kleed gelijk uit.",
+     "sources": [
+      "VB_FUUT"
+     ],
+     "topic": "geslacht"
+    }
+   ],
+   "voice": [
+    {
+     "text": "Rauwe roepen, vooral tijdens de broedtijd. Jonge vogels laten hoge pieptonen horen.",
+     "sources": [
+      "VB_FUUT"
+     ],
+     "kind": "roep"
+    }
+   ],
+   "basis": {
+    "size": {
+     "text": "Vogelbescherming noemt 46–51 cm lengte en 85–90 cm spanwijdte.",
+     "sources": [
+      "VB_FUUT"
+     ]
+    }
+   },
+   "habitat": [
+    {
+     "text": "Waterrijke gebieden, van grachten en parkvijvers tot meren en moerassen.",
+     "sources": [
+      "VB_FUUT"
+     ],
+     "kind": "nederland"
+    }
+   ],
+   "status": [
+    {
+     "text": "Broedvogel en jaarrond aanwezig. De verspreiding verandert buiten de broedtijd.",
+     "sources": [
+      "VB_FUUT"
+     ],
+     "kind": "voorkomen"
+    }
+   ],
+   "life": [
+    {
+     "text": "Duikt vooral naar vis.",
+     "sources": [
+      "VB_FUUT"
+     ],
+     "kind": "voedsel"
+    },
+    {
+     "text": "Jonge futen worden soms op de rug van een ouder gedragen.",
+     "sources": [
+      "VB_FUUT"
+     ],
+     "kind": "broeden"
+    }
+   ],
+   "discrepancies": [],
+   "open": [
+    "Een geverifieerde vluchtfoto ontbreekt. De volwassen hoofdfoto heeft een neutraal geslachtslabel."
+   ]
+  },
+  "sp086": {
+   "summary": {
+    "text": "Forse grijsbruine gans met een stevige oranje tot roze snavel. In vlucht valt de lichte voorvleugel op naast de donkere slagpennen.",
+    "sources": [
+     "VB_GGANS",
+     "VB_GANZEN"
+    ]
+   },
+   "keyMarks": [
+    {
+     "text": "Forse bouw en stevige snavel.",
+     "sources": [
+      "VB_GGANS",
+      "VB_GANZEN"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Doorgaans rozeachtige poten.",
+     "sources": [
+      "VB_GANZEN"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Lichtgrijze voorvleugel naast donkere slagpennen.",
+     "sources": [
+      "VB_GGANS",
+      "VB_GANZEN"
+     ],
+     "reliability": "ondersteunend"
+    }
+   ],
+   "critical": [
+    {
+     "feature": "Snavel, kol en buik",
+     "where": "Kop en onderzijde in zijaanzicht",
+     "this": "Forse oranje tot roze snavel. De combinatie van bouw en lichte voorvleugel helpt.",
+     "other": "Volwassen Kolgans heeft wit rond de snavelbasis en vaak zwarte buikstrepen.",
+     "vs": [
+      "sp121"
+     ],
+     "reliability": "ondersteunend",
+     "conditions": "Goed zicht op snavelbasis, buik en zo mogelijk vleugel.",
+     "exceptions": "Jonge Kolganzen missen de duidelijke witte kol en zwarte buikstrepen van volwassen vogels.",
+     "supporting": "Combineer kop- en buikpatroon met bouw en vleugeltekening.",
+     "sources": [
+      "VB_GGANS",
+      "VB_KGANS",
+      "VB_GANZEN"
+     ]
+    }
+   ],
+   "similar": [
+    {
+     "id": "sp121",
+     "why": "Bij jonge Kolganzen kunnen de typische kol en buikstrepen ontbreken.",
+     "sources": [
+      "VB_KGANS",
+      "VB_GANZEN"
+     ]
+    }
+   ],
+   "detail": [
+    {
+     "text": "De lichte voorvleugel contrasteert in vlucht met de donkere slagpennen.",
+     "sources": [
+      "VB_GGANS",
+      "VB_GANZEN"
+     ],
+     "topic": "vlucht"
+    }
+   ],
+   "voice": [
+    {
+     "text": "Luid, nasaal gegak.",
+     "sources": [
+      "VB_GGANS"
+     ],
+     "kind": "roep"
+    }
+   ],
+   "basis": {
+    "size": {
+     "text": "Vogelbescherming noemt 76–89 cm lengte en 147–180 cm spanwijdte.",
+     "sources": [
+      "VB_GGANS"
+     ]
+    }
+   },
+   "habitat": [
+    {
+     "text": "Open grasland bij water, moeras en uiterwaarden.",
+     "sources": [
+      "VB_GGANS"
+     ],
+     "kind": "nederland"
+    }
+   ],
+   "status": [
+    {
+     "text": "Broedvogel en jaarrond aanwezig. In de winter zijn er ook vogels uit noordelijker gebieden.",
+     "sources": [
+      "VB_GGANS"
+     ],
+     "kind": "voorkomen"
+    }
+   ],
+   "life": [
+    {
+     "text": "Eet plantaardig voedsel, waaronder gras.",
+     "sources": [
+      "VB_GGANS"
+     ],
+     "kind": "voedsel"
+    }
+   ],
+   "discrepancies": [],
+   "open": [
+    "De jonge vogel op de kaart is een donsjong. Een afzonderlijke foto van een ouder juveniel ontbreekt."
+   ]
+  },
+  "sp089": {
+   "summary": {
+    "text": "Algemene grondeleend. Het mannetje heeft in prachtkleed een groene kop. Bij bruine vogels helpt de blauwviolette vleugelspiegel met lichte randen.",
+    "sources": [
+     "VB_WEEND",
+     "WT_EEND"
+    ]
+   },
+   "keyMarks": [
+    {
+     "text": "Mannetje in prachtkleed met groene kop en witte halsring.",
+     "sources": [
+      "VB_WEEND"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Blauwviolette vleugelspiegel met witte randen.",
+     "sources": [
+      "VB_WEEND",
+      "NWF_WEEND"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Bruin getekend vrouwtje met een vaak oranjeachtige, donker getekende snavel.",
+     "sources": [
+      "VB_WEEND",
+      "WT_EEND"
+     ],
+     "reliability": "ondersteunend"
+    }
+   ],
+   "caution": {
+    "text": "Mannetjes kunnen in eclipskleed bruin ogen. Snavelkleur helpt bij onderscheid van een vrouwtje. Combineer die met andere kenmerken.",
+    "sources": [
+     "VB_WEEND",
+     "NWF_WEEND"
+    ]
+   },
+   "critical": [
+    {
+     "feature": "Vleugelspiegel bij bruine vogels",
+     "where": "Armvleugel, bij voorkeur zichtbaar in beweging",
+     "this": "Blauwviolette spiegel met lichte randen.",
+     "other": "Vrouwtje Krakeend kan een kleine witte spiegel tonen.",
+     "vs": [
+      "sp129"
+     ],
+     "reliability": "ondersteunend",
+     "conditions": "Goed zicht op de uitgespreide of deels geopende vleugel.",
+     "exceptions": "Op een gesloten vleugel kan de spiegel schuilgaan. Bij bruine vogels kunnen leeftijd en kleed voor verwarring zorgen.",
+     "supporting": "Bekijk ook snavelpatroon en lichaamsbouw.",
+     "sources": [
+      "VB_WEEND",
+      "VB_KREEND",
+      "WT_EEND"
+     ]
+    }
+   ],
+   "similar": [
+    {
+     "id": "sp129",
+     "why": "Bij bruine vogels helpt de kleur van de zichtbare vleugelspiegel.",
+     "sources": [
+      "VB_WEEND",
+      "VB_KREEND",
+      "WT_EEND"
+     ]
+    }
+   ],
+   "detail": [
+    {
+     "text": "De woerd wordt tijdens de rui tijdelijk bruin. Een geelachtige snavel kan bij het herkennen helpen.",
+     "sources": [
+      "VB_WEEND",
+      "NWF_WEEND"
+     ],
+     "topic": "kleed"
+    }
+   ],
+   "voice": [
+    {
+     "text": "Het vrouwtje kwaakt duidelijker en luider. Het mannetje heeft een zachtere, raspende roep.",
+     "sources": [
+      "VB_WEEND"
+     ],
+     "kind": "roep"
+    }
+   ],
+   "basis": {
+    "size": {
+     "text": "Vogelbescherming noemt 50–65 cm lengte en 75–100 cm spanwijdte.",
+     "sources": [
+      "VB_WEEND"
+     ]
+    }
+   },
+   "habitat": [
+    {
+     "text": "Onder meer sloten, plassen, stadsvijvers en kanalen.",
+     "sources": [
+      "VB_WEEND"
+     ],
+     "kind": "nederland"
+    }
+   ],
+   "status": [
+    {
+     "text": "Jaarrond aanwezig als broedvogel. In de winter zijn er ook vogels uit noordelijker gebieden.",
+     "sources": [
+      "VB_WEEND"
+     ],
+     "kind": "voorkomen"
+    }
+   ],
+   "life": [
+    {
+     "text": "Grondelt in ondiep water en zoekt zowel plantaardig als dierlijk voedsel.",
+     "sources": [
+      "VB_WEEND"
+     ],
+     "kind": "voedsel"
+    }
+   ],
+   "discrepancies": [],
+   "open": [
+    "De Commons-beschrijvingen spreken elkaar tegen over het geslacht op de vermoedelijke eclipsfoto. Het beeld staat daarom als voorlopig vermeld.",
+    "Bij de juvenielenfoto bevestigen de bronbeschrijvingen jonge vogels, maar verschillen ze over het geslacht. Het fotolabel vermeldt alleen de leeftijd."
    ]
   }
  }

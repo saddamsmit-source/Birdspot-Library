@@ -1326,7 +1326,7 @@ export const GUIDE_PHOTOS = Object.freeze({
   },
   "sp086": {
     "file": "Greylag Goose - St James's Park, London - Nov 2006.jpg",
-    "author": "Diliff",
+    "author": "David Iliff (Diliff)",
     "license": "CC BY-SA 3.0",
     "source": "https://commons.wikimedia.org/wiki/File:Greylag_Goose_-_St_James%27s_Park,_London_-_Nov_2006.jpg",
     "width": 1600,
@@ -1345,7 +1345,7 @@ export const GUIDE_PHOTOS = Object.freeze({
   },
   "sp089": {
     "file": "Anas platyrhynchos male female.jpg",
-    "author": "This picture was realized by Richard Bartz by using a Canon EF 70-300mm f/4-5.6 ",
+    "author": "Richard Bartz",
     "license": "CC BY-SA 2.5",
     "source": "https://commons.wikimedia.org/wiki/File:Anas_platyrhynchos_male_female.jpg",
     "width": 1600,
