@@ -1,6 +1,6 @@
 # Birdspot — soortaudit van de collectie met foto's
 
-Gegenereerd door `tools/fotokwaliteit/build_soortaudit_tracker.py` · status voor commit `7640bab7427054eeeeef30a9856dc82fcda7ddba` · 2026-11-11.
+Gegenereerd door `tools/fotokwaliteit/build_soortaudit_tracker.py` · status voor commit `70c4f3fec7508812ab9bb0b50833b52706ce4720` · 2026-11-11.
 Statussen: VERIFIED / PARTIALLY TESTED / NOT TESTED / BLOCKED. Een geautomatiseerde rendercontrole telt **niet** als visuele of inhoudelijke controle.
 Beoordeeld volgens `docs/BIRDSPOT_KWALITEITSNORM.md` (biometrie §1, herkenning §2, foto §3). Verbeterwensen zijn voor de latere beoordeling door de eigenaar en blokkeren de batch niet.
 
@@ -9,18 +9,18 @@ Beoordeeld volgens `docs/BIRDSPOT_KWALITEITSNORM.md` (biometrie §1, herkenning 
 | # | Meting | Stand |
 |---|---|---|
 | 1 | Soorten met bestaande gidsfoto's | 134 |
-| 2 | Afzonderlijk (aangescherpt) gecontroleerd | 32 (M1, M2, M3) |
-| 3 | Technisch correct (laden, volgorde, offline-bron, beoordeling = kaart) | 32 van 32 |
-| 4a | Visueel VERIFIED (beeld per foto) | 27 van 32 |
-| 4b | Inhoud (kennisprofiel) VERIFIED | 0 van 32 — alle profielen hebben nog open punten |
+| 2 | Afzonderlijk (aangescherpt) gecontroleerd | 35 (M1, M2, M3) |
+| 3 | Technisch correct (laden, volgorde, offline-bron, beoordeling = kaart) | 35 van 35 |
+| 4a | Visueel VERIFIED (beeld per foto) | 30 van 35 |
+| 4b | Inhoud (kennisprofiel) VERIFIED | 2 van 35 — alle profielen hebben nog open punten |
 | 4c | Onafhankelijk beoordeeld (ChatGPT) | 0 — NOT TESTED |
-| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 32; plus collectiebrede vluchtcontrole: 17 uit de vluchtrol, 8 gearchiveerd |
+| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 37; plus collectiebrede vluchtcontrole: 17 uit de vluchtrol, 8 gearchiveerd |
 | 6 | Afgekeurde vluchtfoto's | 25 (tabel hieronder) |
-| 7 | Ontbrekende foto-/kennisonderdelen | 46 fotoposities in gecontroleerde soorten; 102 fotosoorten zonder kennisprofiel |
-| 8 | Kritische kenmerken niet doorslaggevend onderbouwd | 61 (tabel hieronder) |
+| 7 | Ontbrekende foto-/kennisonderdelen | 46 fotoposities in gecontroleerde soorten; 99 fotosoorten zonder kennisprofiel |
+| 8 | Kritische kenmerken niet doorslaggevend onderbouwd | 64 (tabel hieronder) |
 | 9 | Open bron-/licentieproblemen | 0 in gecontroleerde soorten; collectiebreed blijft het eerder gemelde punt '22 afbeeldingen buiten de bronaudit' open |
 
-Eindoordeel per gecontroleerde soort: PARTIALLY TESTED 32.
+Eindoordeel per gecontroleerde soort: PARTIALLY TESTED 35.
 
 ## Gecontroleerde soorten
 
@@ -208,6 +208,49 @@ Batch M3 · 2026-11-11 · SHA `7640bab7427054eeeeef30a9856dc82fcda7ddba` · tech
 - **Onzeker:** REVIEW REQUIRED: de Engelse en Sloveense bijschriften bij het vermoedelijke eclipskleed geven een verschillend geslacht.
 - **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
 
+### sp091 Wintertaling — PARTIALLY TESTED
+
+Batch M3 · 2026-11-11 · SHA `70c4f3fec7508812ab9bb0b50833b52706ce4720` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp091-hero-male.webp` | Hoofdfoto | Zwemmende woerd met kastanjebruine kop, groen oogveld en gele staartzijde. | Bron noemt een mannetje. Zichtbaar prachtkleed. | Duidelijk zijaanzicht. | goedgekeurd | — | VERIFIED: geverifieerde import 09-11 (SHA-1 ed2eefdff8…), CC BY-SA 4.0 · Charles J. Sharp |
+| `sp091-adult_m.webp` | Verenkleed (Mannetje) | Een andere woerd in prachtkleed met goed zichtbare flankstreep. | Bron noemt een mannetje. Kop en flank ondersteunen het label. | De flankstreep is duidelijker dan op de hoofdfoto. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Koshy Koshy from Faridabad, Haryana, India |
+| `sp091-adult_f.webp` | Verenkleed (Vrouwtje) | Bruin gevlekt kleed, relatief egale kop en lichte staartzijde. | Fotograaf benoemt een vrouwtje. | Duidelijke soort- en kleedkenmerken. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Frank Vassen from Brussels, Belgium |
+| `sp091-juv.webp` | Verenkleed (Juveniel) | Bruine jonge vogel met groene vleugelspiegel. | iNaturalist-annotatie Juvenile in de bronaudit van 9 november. Geen geslachtslabel. | Kleine uitsnede. Kop en vleugeltekening zijn zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Se Lena, some rights reserved (CC BY) |
+| `sp091-eclipse.webp` | Verenkleed (Overgang naar eclipskleed) | Bruin getekende vogel met resterende groene kopveren. | Fotobeschrijving vermeldt een ruiend mannetje. Beeld ondersteunt overgangskleed. | Herkenbaar voorbeeld van de overgang. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Roy Lowry, some rights reserved (CC BY) |
+| `sp091-flight.webp` | In vlucht (Mannetje) | Vrije vlucht met open vleugels, groene spiegel en groen oogveld. | Kop en vleugeltekening bevestigen een woerd in prachtkleed. | Helder beeld van spiegel en silhouet. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · Ferran Pestaña from Barcelona, España |
+| `sp091.webp` | Overige herkenningsfoto's | Mannetje in prachtkleed en bruine Wintertaling op ondiep water. | Mannetje herkenbaar. Bruine vogel vermeld zonder afzonderlijk leeftijdslabel. | Bruikbaar zij-aan-zijbeeld. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · gailhampshire from Cradley, Malvern, U.K |
+
+- **Correcties:** De ruifoto vermeldt overgang naar eclipskleed. Het juveniel staat zonder geslachtslabel.; De vergelijking met Zomertaling legt de combinatie van kop, staartzijde en vleugel uit.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** Vervang de kleine juvenielenfoto als een scherper bronbeeld met bevestigde leeftijd beschikbaar komt.
+- **Geslacht:** De kaart vermeldt geslacht waar bron en verenkleed dat ondersteunen. Het juveniel blijft zonder geslachtslabel.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Kop, staartzijde en bovenvleugel bij bruine vogels; open: De iNaturalist-waarnemingen bij jeugdkleed en rui konden op 11 november niet opnieuw worden geopend. De foto-identiteit en annotaties uit de bronaudit van 9 november zijn hergebruikt. De jeugdfoto krijgt geen geslachtslabel.; resterende dataverschillen: 1
+- **Browser:** NOT TESTED
+- **Onzeker:** De twee iNaturalist-pagina’s waren op 11 november niet opnieuw bereikbaar. Eerder vastgelegd bronbewijs is gebruikt.
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp105 Fazant — PARTIALLY TESTED
+
+Batch M3 · 2026-11-11 · SHA `70c4f3fec7508812ab9bb0b50833b52706ce4720` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp105.webp` | Hoofdfoto | Haan met rode huid rond het oog, glanzende kop, witte halsring en lange staart. | Kenmerken bevestigen een mannetje. | Hele vogel zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC0 · Romzig |
+| `sp105-adult_f.webp` | Verenkleed (Vrouwtje) | Vrouwtje Fazant op Texel, met donkere vlekken op het bruine kleed en een lange gebandeerde staart. | Fotograaf benoemt een vrouwtje. Bruin kleed en lange staart ondersteunen het label. | Scherp genoeg om tekening en staartvorm te zien. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van de originele Commons-JPEG), CC0 1.0 · Bj.schoenmakers |
+| `sp105-juv.webp` | Verenkleed (Juveniel) | Jonge Fazant in Finland, met een bruin gevlekt kleed en een nog korte staart. | Fotograaf benoemt een jonge Fazant. Geslacht onbekend. | Korte staart en tekening goed zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van de originele Commons-JPEG), CC0 1.0 · Estormiz |
+| `sp105-flight.webp` | In vlucht (Mannetje) | Vrije vlucht met gespreide, afgeronde vleugels en lange staart. | Rode huid rond het oog, halsring en kleed bevestigen het mannetje. | Zijaanzicht van de vogel uit South Dakota. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), Public domain · U.S. Fish and Wildlife Service Headquarters |
+
+- **Correcties:** Vrouwtjesfoto van Texel en juvenielenfoto uit Finland toegevoegd. Vergelijking met Patrijs gebruikt staart en lichaamsbouw.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Haan en hen waar bron en kenmerken overeenstemmen. Juveniel zonder geslachtslabel.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Staartlengte en bouw bij bruine vogels; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
 ### sp077 Fuut — PARTIALLY TESTED
 
 Batch M3 · 2026-11-11 · SHA `7640bab7427054eeeeef30a9856dc82fcda7ddba` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
@@ -244,6 +287,25 @@ Batch M3 · 2026-11-11 · SHA `7640bab7427054eeeeef30a9856dc82fcda7ddba` · tech
 - **Browser:** NOT TESTED
 - **Onzeker:** —
 - **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp141 Gierzwaluw — PARTIALLY TESTED
+
+Batch M3 · 2026-11-11 · SHA `70c4f3fec7508812ab9bb0b50833b52706ce4720` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp141-adult.webp` | Hoofdfoto | Vrije vlucht van onderaf met donker silhouet en lange sikkelvleugels. | Fotograaf benoemt de soort. Geslacht en exacte leeftijd onbekend. | Goed overzicht van het typische silhouet. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours |
+| `sp141-juv.webp` | Verenkleed (Juveniel) | Juveniele Gierzwaluw tijdens opvang na redding, met lichte veerranden op kop en vleugels. | Fotograaf benoemt een juveniel. Lichte veerranden zichtbaar. Geslacht onbekend. | Detailfoto uit opvang. De context staat bij de foto. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van de originele Commons-JPEG), CC BY 4.0 · Marie-Lan Taÿ Pamart |
+| `sp141-flight.webp` | In vlucht | Gierzwaluw in vrije vlucht, met lange, smalle vleugels en een gespreide gevorkte staart. | De bron bevestigt soort en vlucht. Leeftijd en geslacht onbekend. | Andere opname en kijkhoek dan de hoofdfoto. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van de originele Commons-JPEG), CC BY 4.0 · Alexis Lours |
+
+- **Correcties:** Een juvenielenfoto met expliciete opvangcontext en een afzonderlijke vrije-vluchtfoto toegevoegd. De kaart benoemt overeenkomend verenkleed bij mannetje en vrouwtje.; Herkenningsprofiel vergelijkt Gierzwaluw met Boerenzwaluw en Huiszwaluw.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** Een duidelijk juveniel in een natuurlijke situatie als aanvullende foto, zodra leeftijd, bron en licentie bevestigd zijn.
+- **Geslacht:** Neutrale labels. De geslachten hebben hetzelfde verenkleed.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Vleugelvorm, onderzijde en staart in vlucht; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** De fotograaf vermeldt bij beide vluchtfoto’s geen exacte leeftijd.
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
 
 ### sp063 Goudhaantje — PARTIALLY TESTED
 
@@ -716,6 +778,7 @@ Batch M1 · 2026-11-10 · SHA `61ad1e3` · technisch VERIFIED · visueel PARTIAL
 | sp077 Fuut | Snavel en hals in winterkleed |
 | sp086 Grauwe Gans | Snavel, kol en buik |
 | sp089 Wilde Eend | Vleugelspiegel bij bruine vogels |
+| sp091 Wintertaling | Kop, staartzijde en bovenvleugel bij bruine vogels |
 | sp094 Zilvermeeuw | Pootkleur |
 | sp094 Zilvermeeuw | Tertials eerstejaars |
 | sp094 Zilvermeeuw | Leeftijd |
@@ -723,6 +786,8 @@ Batch M1 · 2026-11-10 · SHA `61ad1e3` · technisch VERIFIED · visueel PARTIAL
 | sp095 Kleine Mantelmeeuw | Tertials eerstejaars |
 | sp096 Stormmeeuw | Snavel, oog en poten |
 | sp104 Aalscholver | Broedkleed |
+| sp105 Fazant | Staartlengte en bouw bij bruine vogels |
+| sp141 Gierzwaluw | Vleugelvorm, onderzijde en staart in vlucht |
 | sp173 Bruine Kiekendief | Silhouet en vleugelhouding |
 | sp173 Bruine Kiekendief | Geslacht en leeftijd |
 | sp248 Wespendief | Kop en staart |
@@ -734,5 +799,5 @@ Batch M1 · 2026-11-10 · SHA `61ad1e3` · technisch VERIFIED · visueel PARTIAL
 
 Deze soorten renderen technisch, maar zijn **niet** foto voor foto opnieuw beoordeeld. Eerdere uitslagen (fotobaseline batch 01) gelden niet automatisch.
 
-sp058 Fluiter, sp128 Bergeend, sp129 Krakeend, sp092 Kuifeend, sp090 Slobeend, sp130 Smient, sp132 Tafeleend, sp091 Wintertaling, sp188 Zomertaling, sp105 Fazant, sp106 Patrijs, sp141 Gierzwaluw, sp117 Geelgors, sp118 Rietgors, sp064 Vuurgoudhaan, sp249 Blauwe Kiekendief, sp251 Grauwe Kiekendief, sp250 Steppekiekendief, sp075 IJsvogel, sp262 Grauwe Klauwier, sp143 Kluut, sp069 Gele Kwikstaart, sp288 Grote Gele Kwikstaart, sp049 Grote Lijster, sp048 Koperwiek, sp047 Kramsvogel, sp045 Merel, sp046 Zanglijster, sp164 Grote Mantelmeeuw, sp097 Kokmeeuw, sp225 Zwartkopmeeuw, sp032 Glanskop, sp029 Koolmees, sp033 Kuifmees, sp031 Matkop, sp030 Pimpelmees, sp174 Zwarte Mees, sp043 Huismus, sp044 Ringmus, sp170 Ooievaar, sp072 Graspieper, sp146 Bontbekplevier, sp145 Goudplevier, sp099 Kievit, sp147 Kleine Plevier, sp206 Strandplevier, sp144 Zilverplevier, sp078 Meerkoet, sp079 Waterhoen, sp081 Blauwe Reiger, sp083 Grote Zilverreiger, sp082 Kleine Zilverreiger, sp245 Koereiger, sp085 Kwak, sp084 Purperreiger, sp108 Grote Karekiet, sp110 Rietzanger, sp098 Scholekster, sp159 Bosruiter, sp152 Drieteenstrandloper, sp158 Groenpootruiter, sp101 Grutto, sp155 Oeverloper, sp217 Poelruiter, sp150 Steenloper, sp102 Tureluur, sp156 Witgat, sp100 Wulp, sp157 Zwarte Ruiter, sp019 Groene Specht, sp017 Kleine Bonte Specht, sp020 Middelste Bonte Specht, sp018 Zwarte Specht, sp282 Roze Spreeuw, sp112 Spreeuw, sp034 Staartmees, sp167 Grote Stern, sp166 Noordse Stern, sp165 Visdief, sp041 Appelvink, sp040 Goudvink, sp036 Groenling, sp039 Kneu, sp037 Putter, sp042 Roodmus, sp038 Sijs, sp035 Vink, sp177 Bonte Vliegenvanger, sp178 Gekraagde Roodstaart, sp176 Grauwe Vliegenvanger, sp050 Roodborst, sp053 Roodborsttapuit, sp051 Zwarte Roodstaart, sp113 Wielewaal, sp055 Winterkoning, sp061 Grasmus, sp060 Tuinfluiter, sp059 Zwartkop, sp114 Boerenzwaluw, sp115 Huiszwaluw, sp116 Oeverzwaluw, sp126 Knobbelzwaan
+sp058 Fluiter, sp128 Bergeend, sp129 Krakeend, sp092 Kuifeend, sp090 Slobeend, sp130 Smient, sp132 Tafeleend, sp188 Zomertaling, sp106 Patrijs, sp117 Geelgors, sp118 Rietgors, sp064 Vuurgoudhaan, sp249 Blauwe Kiekendief, sp251 Grauwe Kiekendief, sp250 Steppekiekendief, sp075 IJsvogel, sp262 Grauwe Klauwier, sp143 Kluut, sp069 Gele Kwikstaart, sp288 Grote Gele Kwikstaart, sp049 Grote Lijster, sp048 Koperwiek, sp047 Kramsvogel, sp045 Merel, sp046 Zanglijster, sp164 Grote Mantelmeeuw, sp097 Kokmeeuw, sp225 Zwartkopmeeuw, sp032 Glanskop, sp029 Koolmees, sp033 Kuifmees, sp031 Matkop, sp030 Pimpelmees, sp174 Zwarte Mees, sp043 Huismus, sp044 Ringmus, sp170 Ooievaar, sp072 Graspieper, sp146 Bontbekplevier, sp145 Goudplevier, sp099 Kievit, sp147 Kleine Plevier, sp206 Strandplevier, sp144 Zilverplevier, sp078 Meerkoet, sp079 Waterhoen, sp081 Blauwe Reiger, sp083 Grote Zilverreiger, sp082 Kleine Zilverreiger, sp245 Koereiger, sp085 Kwak, sp084 Purperreiger, sp108 Grote Karekiet, sp110 Rietzanger, sp098 Scholekster, sp159 Bosruiter, sp152 Drieteenstrandloper, sp158 Groenpootruiter, sp101 Grutto, sp155 Oeverloper, sp217 Poelruiter, sp150 Steenloper, sp102 Tureluur, sp156 Witgat, sp100 Wulp, sp157 Zwarte Ruiter, sp019 Groene Specht, sp017 Kleine Bonte Specht, sp020 Middelste Bonte Specht, sp018 Zwarte Specht, sp282 Roze Spreeuw, sp112 Spreeuw, sp034 Staartmees, sp167 Grote Stern, sp166 Noordse Stern, sp165 Visdief, sp041 Appelvink, sp040 Goudvink, sp036 Groenling, sp039 Kneu, sp037 Putter, sp042 Roodmus, sp038 Sijs, sp035 Vink, sp177 Bonte Vliegenvanger, sp178 Gekraagde Roodstaart, sp176 Grauwe Vliegenvanger, sp050 Roodborst, sp053 Roodborsttapuit, sp051 Zwarte Roodstaart, sp113 Wielewaal, sp055 Winterkoning, sp061 Grasmus, sp060 Tuinfluiter, sp059 Zwartkop, sp114 Boerenzwaluw, sp115 Huiszwaluw, sp116 Oeverzwaluw, sp126 Knobbelzwaan
 
