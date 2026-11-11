@@ -1129,7 +1129,7 @@
       "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/vink",
       "edition": "Online geraadpleegd 11-11-2026",
       "scope": "Nederland",
-      "confirms": "vrouwtjeskleed en dubbele vleugelstreep",
+      "confirms": "herkenning, geslacht, vleugelstrepen, maten en zang",
       "checked": "2026-11-11",
       "certainty": "hoog",
       "publisher": "Vogelbescherming Nederland"
@@ -1485,6 +1485,248 @@
       "checked": "2026-11-11",
       "certainty": "hoog",
       "publisher": "Sovon Vogelonderzoek Nederland"
+    },
+    "VB_WATERRAL": {
+      "register": "NL07",
+      "label": "Vogelbescherming Nederland — Waterral",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/waterral",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland",
+      "confirms": "snavelvorm, verenkleed en leefgebied",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_BLAUWREIG": {
+      "register": "NL07",
+      "label": "Vogelbescherming Nederland — Blauwe Reiger",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/blauwe-reiger",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland",
+      "confirms": "herkenning, vlucht, lengte en leefwijze",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_PURPERREIG": {
+      "register": "NL07",
+      "label": "Vogelbescherming Nederland — Purperreiger",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/purperreiger",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland",
+      "confirms": "bouw en verenkleed",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_KIEVIT": {
+      "register": "NL07",
+      "label": "Vogelbescherming Nederland — Kievit",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kievit",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland",
+      "confirms": "herkenning, kleed, biometrie, gedrag en leefwijze",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "BZH_WATERHOEN": {
+      "register": "nieuwe soortreferentie",
+      "label": "Javier Blasco-Zumeta & Gerd-Michael Heinze — Common Moorhen",
+      "url": "https://blascozumeta.com/specie_files/04240_ENG_Gallinula_chloropus_aranzadi.pdf",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Europa",
+      "confirms": "lengte, juveniel, geslacht en onderstaart",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Javier Blasco-Zumeta & Gerd-Michael Heinze"
+    },
+    "BZH_BLAUWREIG": {
+      "register": "nieuwe soortreferentie",
+      "label": "Javier Blasco-Zumeta & Gerd-Michael Heinze — Grey Heron",
+      "url": "https://www.blascozumeta.com/specie_files/01220_ENG_Ardea_cinerea_aranzadi.pdf",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Europa",
+      "confirms": "leeftijd, geslacht en vergelijking met Purperreiger",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Javier Blasco-Zumeta & Gerd-Michael Heinze"
+    },
+    "BZH_KIEVIT": {
+      "register": "nieuwe soortreferentie",
+      "label": "Javier Blasco-Zumeta & Gerd-Michael Heinze — Northern Lapwing",
+      "url": "https://blascozumeta.com/specie_files/04930_ENG_Vanellus_vanellus_aranzadi.pdf",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Europa",
+      "confirms": "leeftijd, geslacht, vleugelvorm en kleed",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Javier Blasco-Zumeta & Gerd-Michael Heinze"
+    },
+    "RSPB_BLAUWREIG": {
+      "register": "nieuwe soortreferentie",
+      "label": "Royal Society for the Protection of Birds — Grey Heron",
+      "url": "https://www.rspb.org.uk/birds-and-wildlife/grey-heron",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Verenigd Koninkrijk",
+      "confirms": "lengte en spanwijdte",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Royal Society for the Protection of Birds"
+    },
+    "MME_BLAUWREIG": {
+      "register": "nieuwe soortreferentie",
+      "label": "Magyar Madártani és Természetvédelmi Egyesület — Grey Heron",
+      "url": "https://www.mme.hu/en/magyarorszagmadarai/madaradatbazis-ardcin",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Hongarije",
+      "confirms": "spanwijdte",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Magyar Madártani és Természetvédelmi Egyesület"
+    },
+    "MME_KIEVIT": {
+      "register": "nieuwe soortreferentie",
+      "label": "Magyar Madártani és Természetvédelmi Egyesület — Northern Lapwing",
+      "url": "https://mme.hu/en/magyarorszagmadarai/madaradatbazis-vanvan",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Hongarije",
+      "confirms": "lengte en spanwijdte",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Magyar Madártani és Természetvédelmi Egyesület"
+    },
+    "SOV_BLAUWREIG": {
+      "register": "nieuwe soortreferentie",
+      "label": "Sovon Vogelonderzoek Nederland — Blauwe Reiger",
+      "url": "https://stats.sovon.nl/stats/soort/1220",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland",
+      "confirms": "broedvogel en wintergast",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Sovon Vogelonderzoek Nederland"
+    },
+    "SOV_KIEVIT": {
+      "register": "nieuwe soortreferentie",
+      "label": "Sovon Vogelonderzoek Nederland — Kievit",
+      "url": "https://stats.sovon.nl/stats/soort/4930",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland",
+      "confirms": "broedvogel, wintergast en doortrek",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Sovon Vogelonderzoek Nederland"
+    },
+    "VB_GROENLING": {
+      "register": "NL07",
+      "label": "Vogelbescherming Nederland — Groenling",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/groenling",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland",
+      "confirms": "herkenning, geslacht, jeugdkleed, lengte, habitat en zang",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_PUTTER": {
+      "register": "NL07",
+      "label": "Vogelbescherming Nederland — Putter",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/putter",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland",
+      "confirms": "herkenning, vluchtroep, lengte, habitat en voedsel",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_SIJS": {
+      "register": "NL07",
+      "label": "Vogelbescherming Nederland — Sijs",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/sijs",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland",
+      "confirms": "bouw, kruin en vleugeltekening",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_KEEP": {
+      "register": "NL07",
+      "label": "Vogelbescherming Nederland — Keep",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/keep",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland",
+      "confirms": "borsttekening, stuit en voorkomen",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "BZH_VINK": {
+      "register": "nieuwe soortreferentie",
+      "label": "Javier Blasco-Zumeta & Gerd-Michael Heinze — Common Chaffinch",
+      "url": "https://www.blascozumeta.com/specie_files/16360_ENG_Fringilla_coelebs_aranzadi.pdf",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Europa",
+      "confirms": "lengte, leeftijd, geslacht, kleed en vergelijkbare soorten",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Javier Blasco-Zumeta & Gerd-Michael Heinze"
+    },
+    "BZH_GROENLING": {
+      "register": "nieuwe soortreferentie",
+      "label": "Javier Blasco-Zumeta & Gerd-Michael Heinze — European Greenfinch",
+      "url": "https://www.blascozumeta.com/specie_files/16490_ENG_Chloris_chloris_aranzadi.pdf",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Europa",
+      "confirms": "lengte, leeftijd, geslacht, vleugel- en staarttekening",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Javier Blasco-Zumeta & Gerd-Michael Heinze"
+    },
+    "BZH_PUTTER": {
+      "register": "nieuwe soortreferentie",
+      "label": "Javier Blasco-Zumeta & Gerd-Michael Heinze — Goldfinch",
+      "url": "https://www.blascozumeta.com/specie_files/16530_ENG_Carduelis_carduelis_aranzadi.pdf",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Europa",
+      "confirms": "lengte, jeugdkleed en overlap van de geslachtskenmerken",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Javier Blasco-Zumeta & Gerd-Michael Heinze"
+    },
+    "RSPB_VINK": {
+      "register": "nieuwe soortreferentie",
+      "label": "Royal Society for the Protection of Birds — Chaffinch",
+      "url": "https://www.rspb.org.uk/birds-and-wildlife/chaffinch/",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Verenigd Koninkrijk",
+      "confirms": "spanwijdte en vleugeltekening",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Royal Society for the Protection of Birds"
+    },
+    "MME_GROENLING": {
+      "register": "nieuwe soortreferentie",
+      "label": "Magyar Madártani és Természetvédelmi Egyesület — European Greenfinch",
+      "url": "https://www.mme.hu/en/magyarorszagmadarai/madaradatbazis-carchl",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Hongarije",
+      "confirms": "spanwijdte",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Magyar Madártani és Természetvédelmi Egyesület"
+    },
+    "RSPB_GROENLING": {
+      "register": "nieuwe soortreferentie",
+      "label": "Royal Society for the Protection of Birds — Greenfinch",
+      "url": "https://www.rspb.org.uk/birds-and-wildlife/greenfinch/",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Verenigd Koninkrijk",
+      "confirms": "enkele referentiewaarde voor spanwijdte",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Royal Society for the Protection of Birds"
     }
   },
   "sp021": {
@@ -9333,6 +9575,1010 @@
         ]
       }
     ],
+    "open": []
+  },
+  "sp079": {
+    "summary": {
+      "text": "Donkere watervogel met witte flankstrepen en witte onderstaartzijden. Bij volwassen vogels is de snavel rood met een gele punt.",
+      "sources": [
+        "VB_WATERHOEN",
+        "BZH_WATERHOEN"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Rode snavel met gele punt en rood voorhoofdsschild bij volwassen vogels.",
+        "sources": [
+          "VB_WATERHOEN",
+          "BZH_WATERHOEN"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Witte flanktekening en witte onderstaart met een donkere middenstreep.",
+        "sources": [
+          "VB_WATERHOEN",
+          "BZH_WATERHOEN"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Jonge vogels hebben een bruin kleed, lichte keel en een doffere snavel.",
+        "sources": [
+          "VB_WATERHOEN",
+          "BZH_WATERHOEN"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "caution": {
+      "text": "De snavelkleur van een jong is minder uitgesproken. Bekijk ook flank, onderstaart en snavelvorm.",
+      "sources": [
+        "VB_WATERHOEN",
+        "BZH_WATERHOEN"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Snavel en witte tekening",
+        "where": "Volwassen vogels in zijaanzicht",
+        "this": "Rode snavel met gele punt en een witte flankstreep.",
+        "other": "Meerkoet heeft een witte snavel en wit schild. Waterral heeft een langere slanke snavel en gebandeerde flanken.",
+        "vs": [
+          "sp078",
+          "sp080"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Kijk naar kop en flank in hetzelfde beeld.",
+        "exceptions": "De snavelkleuren zijn bij juvenielen minder uitgesproken.",
+        "supporting": "Een opgerichte staart kan de witte onderstaarttekening zichtbaar maken.",
+        "sources": [
+          "VB_WATERHOEN",
+          "VB_MEERKOET",
+          "VB_WATERRAL",
+          "BZH_WATERHOEN"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp078",
+        "why": "Vergelijk snavel, voorhoofd en witte flanktekening.",
+        "sources": [
+          "VB_WATERHOEN",
+          "VB_MEERKOET"
+        ]
+      },
+      {
+        "id": "sp080",
+        "why": "Waterral heeft een langere snavel, bruin gestreepte rug en gebandeerde flanken.",
+        "sources": [
+          "VB_WATERHOEN",
+          "VB_WATERRAL"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "text": "Het oudere jong heeft een lichtgekleurde kin en keel en een bruine bovenzijde.",
+        "sources": [
+          "BZH_WATERHOEN"
+        ],
+        "topic": "leeftijd"
+      },
+      {
+        "text": "De geslachten hebben gelijk verenkleed.",
+        "sources": [
+          "BZH_WATERHOEN"
+        ],
+        "topic": "geslacht"
+      }
+    ],
+    "voice": [
+      {
+        "text": "Een verdragende territoriumroep en uiteenlopende kortere geluiden.",
+        "sources": [
+          "VB_WATERHOEN"
+        ],
+        "kind": "roep"
+      }
+    ],
+    "basis": {
+      "biometrics": [
+        {
+          "field": "length",
+          "unit": "cm",
+          "display": "ca. 26–30 cm",
+          "values": [
+            {
+              "source": "VB_WATERHOEN",
+              "min": 27,
+              "max": 31
+            },
+            {
+              "source": "BZH_WATERHOEN",
+              "min": 25,
+              "max": 31
+            }
+          ],
+          "note": "Afgeronde middenband als indicatie van het formaat."
+        }
+      ],
+      "size": {
+        "text": "Vogelbescherming vermeldt 50–55 cm spanwijdte.",
+        "sources": [
+          "VB_WATERHOEN"
+        ]
+      }
+    },
+    "habitat": [
+      {
+        "text": "Zoet water met dekking langs de oever, ook bij sloten en stadsvijvers.",
+        "sources": [
+          "VB_WATERHOEN"
+        ],
+        "kind": "nederland"
+      }
+    ],
+    "status": [
+      {
+        "text": "Algemene broedvogel van zoete wateren in Nederland.",
+        "sources": [
+          "VB_WATERHOEN"
+        ],
+        "kind": "voorkomen"
+      }
+    ],
+    "life": [
+      {
+        "text": "Zwemmen en lopen vaak met de staart omhoog, zodat de witte onderstaart zichtbaar is.",
+        "sources": [
+          "VB_WATERHOEN"
+        ],
+        "kind": "gedrag"
+      }
+    ],
+    "discrepancies": [],
+    "open": []
+  },
+  "sp081": {
+    "summary": {
+      "text": "Grote, grijze reiger met lange poten en een stevige dolksnavel. De nek is in vlucht meestal ingetrokken.",
+      "sources": [
+        "VB_BLAUWREIG",
+        "BZH_BLAUWREIG"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Grijze rug, lichte hals en stevige, rechte dolksnavel.",
+        "sources": [
+          "VB_BLAUWREIG",
+          "BZH_BLAUWREIG"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Bij volwassen vogels loopt een zwarte streep van het oog naar de sierveren achter op de kop.",
+        "sources": [
+          "VB_BLAUWREIG",
+          "BZH_BLAUWREIG"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Vliegt doorgaans met ingetrokken nek en poten die achter de staart uitsteken.",
+        "sources": [
+          "VB_BLAUWREIG",
+          "RSPB_BLAUWREIG"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "caution": {
+      "text": "Gebruik bouw en kleur samen. Een jonge Blauwe Reiger mist de opvallende koptekening van een volwassen vogel.",
+      "sources": [
+        "VB_BLAUWREIG",
+        "BZH_BLAUWREIG"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Bouw en halskleur",
+        "where": "Volwassen vogels in zijaanzicht",
+        "this": "Grote grijze reiger, relatief stevig gebouwd met een lichte hals.",
+        "other": "Purperreiger is slanker, met warme roodbruine tinten en donkere halsstrepen.",
+        "vs": [
+          "sp084"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Vergelijk houding, hals en snavel samen.",
+        "exceptions": "Jonge vogels tonen minder duidelijke volwassen kop- en halskleuren.",
+        "supporting": "Een compacte houding kan het verschil in halsdikte verhullen.",
+        "sources": [
+          "VB_BLAUWREIG",
+          "VB_PURPERREIG",
+          "BZH_BLAUWREIG"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp084",
+        "why": "Vergelijk de bouw, snavel en warme tinten op kop en hals.",
+        "sources": [
+          "VB_PURPERREIG",
+          "BZH_BLAUWREIG"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "text": "Juvenielen hebben een grijzere kop zonder lange afhangende sierveren.",
+        "sources": [
+          "BZH_BLAUWREIG"
+        ],
+        "topic": "leeftijd"
+      },
+      {
+        "text": "De geslachten hebben gelijk verenkleed.",
+        "sources": [
+          "BZH_BLAUWREIG"
+        ],
+        "topic": "geslacht"
+      }
+    ],
+    "voice": [
+      {
+        "text": "Harde, rauwe, verdragende roep, onder meer in vlucht.",
+        "sources": [
+          "VB_BLAUWREIG"
+        ],
+        "kind": "roep"
+      }
+    ],
+    "basis": {
+      "biometrics": [
+        {
+          "field": "length",
+          "unit": "cm",
+          "display": "ca. 85–100 cm",
+          "values": [
+            {
+              "source": "VB_BLAUWREIG",
+              "min": 80,
+              "max": 102
+            },
+            {
+              "source": "RSPB_BLAUWREIG",
+              "min": 90,
+              "max": 98
+            }
+          ],
+          "note": "Afgeronde middenband als indicatie van het formaat."
+        },
+        {
+          "field": "wingspan",
+          "unit": "cm",
+          "display": "ca. 175–195 cm",
+          "values": [
+            {
+              "source": "RSPB_BLAUWREIG",
+              "min": 175,
+              "max": 195
+            },
+            {
+              "source": "MME_BLAUWREIG",
+              "min": 175,
+              "max": 195
+            }
+          ],
+          "note": "Afgeronde middenband als indicatie van het formaat.",
+          "excluded": [
+            {
+              "source": "VB_BLAUWREIG",
+              "min": 110,
+              "max": 145,
+              "reason": "Geen overlap met de twee andere gepubliceerde spanwijdtebereiken voor deze soort."
+            }
+          ]
+        }
+      ]
+    },
+    "habitat": [
+      {
+        "text": "Ondiep water en oevers, ook in stedelijk gebied. Foerageert ook op nat grasland.",
+        "sources": [
+          "VB_BLAUWREIG",
+          "RSPB_BLAUWREIG"
+        ],
+        "kind": "nederland"
+      }
+    ],
+    "status": [
+      {
+        "text": "Broedt in Nederland. Ook tijdens de winter en trek in Nederland aanwezig.",
+        "sources": [
+          "SOV_BLAUWREIG"
+        ],
+        "kind": "voorkomen"
+      }
+    ],
+    "life": [
+      {
+        "text": "Vangt veel vis en eet ook amfibieën, kleine zoogdieren en grote insecten.",
+        "sources": [
+          "VB_BLAUWREIG",
+          "RSPB_BLAUWREIG"
+        ],
+        "kind": "voedsel"
+      }
+    ],
+    "discrepancies": [],
+    "open": []
+  },
+  "sp099": {
+    "summary": {
+      "text": "Plevier met een kuif, groen-paarse glans en witte buik onder een donkere borst. De brede vleugels vallen op in vlucht.",
+      "sources": [
+        "VB_KIEVIT",
+        "BZH_KIEVIT"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Dunne, naar achteren gerichte kuif. De kuif van jonge vogels is korter.",
+        "sources": [
+          "VB_KIEVIT",
+          "BZH_KIEVIT"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Groene en paarse glans op de rug, vooral in goed licht.",
+        "sources": [
+          "VB_KIEVIT",
+          "BZH_KIEVIT"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Brede afgeronde vleugels en een sterk zwart-witpatroon in vlucht.",
+        "sources": [
+          "VB_KIEVIT",
+          "BZH_KIEVIT"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "caution": {
+      "text": "Buiten de broedtijd lijken de geslachten sterk op elkaar. Gebruik kuiflengte samen met kleed en seizoen.",
+      "sources": [
+        "VB_KIEVIT",
+        "BZH_KIEVIT"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Kuif en rugtekening",
+        "where": "Zijaanzicht in zit, vooral in goed licht",
+        "this": "Kuif, glanzend donkere rug en witte buik onder een donkere borst.",
+        "other": "Zilverplevier heeft geen kuif en een grijzer getekende bovenzijde.",
+        "vs": [
+          "sp144"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Vergelijk de kopvorm en rug als de hele vogel zichtbaar is.",
+        "exceptions": "Een juveniele Kievit heeft een korte kuif en een bruiner kleed.",
+        "supporting": "Bekijk ook het brede vleugelsilhouet of luister naar de roep.",
+        "sources": [
+          "VB_KIEVIT",
+          "VB_ZILV",
+          "BZH_KIEVIT"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp144",
+        "why": "Let op de kuif en de groen-paarse rugglans bij Kievit.",
+        "sources": [
+          "VB_KIEVIT",
+          "VB_ZILV"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "text": "Verse juvenielen hebben brede lichte veerranden op rug en vleugeldekveren en een korte kuif.",
+        "sources": [
+          "BZH_KIEVIT"
+        ],
+        "topic": "leeftijd"
+      },
+      {
+        "text": "In broedkleed heeft het mannetje doorgaans een langere kuif en egaler donkere keel. Het vrouwtje heeft vaak lichtere veertjes tussen de donkere.",
+        "sources": [
+          "VB_KIEVIT",
+          "BZH_KIEVIT"
+        ],
+        "topic": "geslacht"
+      },
+      {
+        "text": "Buiten de broedtijd hebben beide geslachten een lichte keel.",
+        "sources": [
+          "VB_KIEVIT",
+          "BZH_KIEVIT"
+        ],
+        "topic": "variatie"
+      }
+    ],
+    "voice": [
+      {
+        "text": "Scherpe, herkenbare baltsroep, vaak tijdens buitelende vlucht.",
+        "sources": [
+          "VB_KIEVIT"
+        ],
+        "kind": "roep"
+      }
+    ],
+    "basis": {
+      "biometrics": [
+        {
+          "field": "length",
+          "unit": "cm",
+          "display": "ca. 28–30 cm",
+          "values": [
+            {
+              "source": "VB_KIEVIT",
+              "min": 28,
+              "max": 31
+            },
+            {
+              "source": "MME_KIEVIT",
+              "min": 28,
+              "max": 31
+            }
+          ],
+          "note": "Afgeronde middenband als indicatie van het formaat."
+        },
+        {
+          "field": "wingspan",
+          "unit": "cm",
+          "display": "ca. 80–85 cm",
+          "values": [
+            {
+              "source": "VB_KIEVIT",
+              "min": 82,
+              "max": 87
+            },
+            {
+              "source": "MME_KIEVIT",
+              "min": 82,
+              "max": 87
+            }
+          ],
+          "note": "Afgeronde middenband als indicatie van het formaat."
+        }
+      ]
+    },
+    "habitat": [
+      {
+        "text": "Open grasland en akkers, vooral in open landschappen met korte vegetatie.",
+        "sources": [
+          "VB_KIEVIT"
+        ],
+        "kind": "nederland"
+      }
+    ],
+    "status": [
+      {
+        "text": "Nederlandse broedvogel. Ook als wintergast en doortrekker in Nederland aanwezig.",
+        "sources": [
+          "SOV_KIEVIT",
+          "VB_KIEVIT"
+        ],
+        "kind": "voorkomen"
+      }
+    ],
+    "life": [
+      {
+        "text": "Broedt op de grond. De jongen verlaten het nest kort na uitkomen.",
+        "sources": [
+          "VB_KIEVIT"
+        ],
+        "kind": "broeden"
+      }
+    ],
+    "discrepancies": [
+      {
+        "field": "Spanwijdte",
+        "app": "Bijgesteld van 67–72 cm naar de afgeronde bronband.",
+        "source": "Vogelbescherming en MME geven beide 82–87 cm. De oude waarde overlapt daar niet mee.",
+        "sources": [
+          "VB_KIEVIT",
+          "MME_KIEVIT"
+        ]
+      }
+    ],
+    "open": []
+  },
+  "sp035": {
+    "summary": {
+      "text": "Let bij beide geslachten op twee lichte vleugelstrepen. Bij een mannetje vallen de blauwgrijze kruin en rozerode borst op.",
+      "sources": [
+        "VB_VINK",
+        "BZH_VINK"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Twee lichte vleugelstrepen en witte buitenste staartpennen.",
+        "sources": [
+          "VB_VINK",
+          "BZH_VINK"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Mannetje in broedkleed met blauwgrijze kruin en rozerode borst en wangen.",
+        "sources": [
+          "VB_VINK",
+          "BZH_VINK"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Vrouwtje en juveniel zijn bruiniger. Kijk ook naar de lichte vleugel- en schoudertekening.",
+        "sources": [
+          "VB_VINK",
+          "BZH_VINK"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "caution": {
+      "text": "Een jonge Vink lijkt op een vrouwtje. Een bruin kleed alleen geeft geen zekere leeftijd of sekse.",
+      "sources": [
+        "BZH_VINK"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Vleugelstrepen en borsttekening",
+        "where": "Zijaanzicht met zicht op de gevouwen vleugel",
+        "this": "Twee lichte vleugelstrepen, lichte schoudertekening en witte buitenste staartpennen.",
+        "other": "Vrouwtje Huismus mist die combinatie. Keep heeft vaak een oranje borst die overgaat in een witte buik.",
+        "vs": [
+          "sp043",
+          "sp181"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Bekijk vleugel en borst samen.",
+        "exceptions": "In tegenlicht zijn lichte veerranden minder zichtbaar. Een juveniele Vink lijkt op een vrouwtje.",
+        "supporting": "Let bij een opvliegende vogel ook op het wit aan de buitenkant van de staart.",
+        "sources": [
+          "VB_VINK",
+          "VB_HMUS",
+          "VB_KEEP",
+          "BZH_VINK"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp043",
+        "why": "Vergelijk de twee lichte vleugelstrepen en het wit aan de buitenstaart.",
+        "sources": [
+          "VB_VINK",
+          "BZH_VINK"
+        ]
+      },
+      {
+        "id": "sp181",
+        "why": "Let op de combinatie van oranje borst en witte buik bij Keep.",
+        "sources": [
+          "VB_VINK",
+          "VB_KEEP"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "text": "Het mannetje is in de winter doffer. De vrouwtjes en jonge vogels hebben een bruiner kleed.",
+        "sources": [
+          "BZH_VINK"
+        ],
+        "topic": "variatie"
+      },
+      {
+        "text": "Juvenielen lijken op vrouwtjes en hebben vers verenkleed. Voor nauwkeurige leeftijdsbepaling is zicht op de veren nodig.",
+        "sources": [
+          "BZH_VINK"
+        ],
+        "topic": "leeftijd"
+      }
+    ],
+    "voice": [
+      {
+        "text": "Aflopende zang die vaak eindigt met een korte opwaartse slag.",
+        "sources": [
+          "VB_VINK"
+        ],
+        "kind": "zang"
+      }
+    ],
+    "basis": {
+      "biometrics": [
+        {
+          "field": "length",
+          "unit": "cm",
+          "display": "ca. 14–16 cm",
+          "values": [
+            {
+              "source": "VB_VINK",
+              "min": 14,
+              "max": 16
+            },
+            {
+              "source": "BZH_VINK",
+              "min": 14,
+              "max": 16
+            }
+          ],
+          "note": "Afgeronde middenband als indicatie van het formaat."
+        },
+        {
+          "field": "wingspan",
+          "unit": "cm",
+          "display": "ca. 25–28 cm",
+          "values": [
+            {
+              "source": "VB_VINK",
+              "min": 25,
+              "max": 28
+            },
+            {
+              "source": "RSPB_VINK",
+              "min": 24.5,
+              "max": 28.5
+            }
+          ],
+          "note": "Afgeronde middenband als indicatie van het formaat."
+        }
+      ]
+    },
+    "habitat": [
+      {
+        "text": "Bossen, boomrijke tuinen en parken.",
+        "sources": [
+          "VB_VINK"
+        ],
+        "kind": "nederland"
+      }
+    ],
+    "status": [
+      {
+        "text": "Algemene Nederlandse broedvogel die het hele jaar te zien is. Ook wintergast en doortrekker.",
+        "sources": [
+          "VB_VINK"
+        ],
+        "kind": "voorkomen"
+      }
+    ],
+    "life": [
+      {
+        "text": "Eet onder meer zaden en zachte plantendelen.",
+        "sources": [
+          "VB_VINK"
+        ],
+        "kind": "voedsel"
+      }
+    ],
+    "discrepancies": [],
+    "open": []
+  },
+  "sp036": {
+    "summary": {
+      "text": "Fors gebouwde vink met dikke, kegelvormige snavel en geel langs de vleugelpennen en aan de buitenstaart.",
+      "sources": [
+        "VB_GROENLING",
+        "BZH_GROENLING"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Forse kop en stevige, lichte snavel.",
+        "sources": [
+          "VB_GROENLING",
+          "BZH_GROENLING"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Geel langs de buitenste vleugelpennen. Ook geel aan de buitenstaart.",
+        "sources": [
+          "VB_GROENLING",
+          "BZH_GROENLING"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Mannetje doorgaans groener en geler. Vrouwtje grijsgroen. Juveniel sterker gestreept.",
+        "sources": [
+          "VB_GROENLING",
+          "BZH_GROENLING"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "caution": {
+      "text": "De hoeveelheid geel hangt ook af van hoe de vleugel ligt. Kijk bij twijfel tegelijk naar snavel en bouw.",
+      "sources": [
+        "VB_GROENLING",
+        "BZH_GROENLING"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Snavel, bouw en plaats van het geel",
+        "where": "Zijaanzicht of vlucht met een goed zichtbare vleugel",
+        "this": "Dikke snavel en geel langs de randen van de buitenste vleugelpennen.",
+        "other": "Sijs is kleiner en fijner gebouwd en heeft een gele vleugelband. Het mannetje heeft een zwarte kruin.",
+        "vs": [
+          "sp038"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Vergelijk bouw en vleugeltekening, bij voorkeur van dezelfde kijkhoek.",
+        "exceptions": "Een jonge Groenling kan sterk gestreept zijn. Een vrouwelijke Sijs heeft geen zwarte kruin.",
+        "supporting": "Let op de nasale uithaal van de Groenling als de vogel zingt.",
+        "sources": [
+          "VB_GROENLING",
+          "VB_SIJS",
+          "BZH_GROENLING"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp038",
+        "why": "Vergelijk de snaveldikte en de positie van het geel op de vleugel.",
+        "sources": [
+          "VB_GROENLING",
+          "VB_SIJS"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "text": "Een juveniel is grijzer en toont duidelijke donkere streping.",
+        "sources": [
+          "VB_GROENLING",
+          "BZH_GROENLING"
+        ],
+        "topic": "leeftijd"
+      },
+      {
+        "text": "Mannetjes zijn gemiddeld helderder. Voor nauwkeurige geslachtsbepaling helpen details van de slagpennen en staart.",
+        "sources": [
+          "BZH_GROENLING"
+        ],
+        "topic": "geslacht"
+      }
+    ],
+    "voice": [
+      {
+        "text": "Trillers met een langgerekte, nasale uithaal.",
+        "sources": [
+          "VB_GROENLING"
+        ],
+        "kind": "zang"
+      }
+    ],
+    "basis": {
+      "size": {
+        "text": "MME geeft 24–28 cm spanwijdte. RSPB geeft 26 cm als enkele referentiewaarde.",
+        "sources": [
+          "MME_GROENLING",
+          "RSPB_GROENLING"
+        ]
+      },
+      "biometrics": [
+        {
+          "field": "length",
+          "unit": "cm",
+          "display": "ca. 14–16 cm",
+          "values": [
+            {
+              "source": "VB_GROENLING",
+              "min": 14.5,
+              "max": 16
+            },
+            {
+              "source": "BZH_GROENLING",
+              "min": 14,
+              "max": 15
+            }
+          ],
+          "note": "Afgeronde middenband als indicatie van het formaat."
+        }
+      ]
+    },
+    "habitat": [
+      {
+        "text": "Halfopen landschap met dichte struiken, ook parken en tuinen.",
+        "sources": [
+          "VB_GROENLING"
+        ],
+        "kind": "nederland"
+      }
+    ],
+    "status": [
+      {
+        "text": "Broedvogel in Nederland. De soort is het hele jaar te zien.",
+        "sources": [
+          "VB_GROENLING"
+        ],
+        "kind": "voorkomen"
+      }
+    ],
+    "life": [
+      {
+        "text": "Gebruikt de stevige snavel om zaden van hun schil te ontdoen.",
+        "sources": [
+          "VB_GROENLING"
+        ],
+        "kind": "voedsel"
+      }
+    ],
+    "discrepancies": [],
+    "open": []
+  },
+  "sp037": {
+    "summary": {
+      "text": "Volwassen Putter met rood gezicht en zwart-witte kop. De brede gele band op de donkere vleugel helpt ook bij een juveniel.",
+      "sources": [
+        "VB_PUTTER",
+        "BZH_PUTTER"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Volwassen vogels hebben een rood gezicht binnen een zwart-witte koptekening.",
+        "sources": [
+          "VB_PUTTER",
+          "BZH_PUTTER"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Brede gele vleugelband op een donkere vleugel.",
+        "sources": [
+          "VB_PUTTER",
+          "BZH_PUTTER"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Verse juvenielen hebben een grijsbruine kop en missen het volwassen rode masker.",
+        "sources": [
+          "BZH_PUTTER"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "caution": {
+      "text": "De hoeveelheid rood overlapt tussen mannetjes en vrouwtjes. Bekijk meerdere kop- en vleugelkenmerken als het geslacht van belang is.",
+      "sources": [
+        "BZH_PUTTER"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Vleugelband en koptekening",
+        "where": "Goed zijaanzicht, ook in vlucht bij zicht op de vleugel",
+        "this": "Brede gele vleugelband, bij een volwassen vogel samen met een rood gezicht en zwart-witte kop.",
+        "other": "Sijs heeft ook geel op de vleugel. De soort heeft een andere koptekening en meestal meer zichtbare flankstreping.",
+        "vs": [
+          "sp038"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Bekijk de hele kop en gevouwen vleugel.",
+        "exceptions": "Een jonge Putter mist het volwassen gezichtspatroon.",
+        "supporting": "Let bij jonge vogels ook op het wit in de donkere staart en luister naar de tinkelende roep.",
+        "sources": [
+          "VB_PUTTER",
+          "VB_SIJS",
+          "BZH_PUTTER"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp038",
+        "why": "Bij een jonge Putter helpen de brede vleugelband en de staarttekening, bij een volwassen Putter ook het rode gezicht.",
+        "sources": [
+          "VB_PUTTER",
+          "VB_SIJS",
+          "BZH_PUTTER"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "text": "Een verse juveniel heeft al een gele vleugelband. De kop is nog grijsbruin.",
+        "sources": [
+          "BZH_PUTTER"
+        ],
+        "topic": "leeftijd"
+      },
+      {
+        "text": "Bij mannetjes reikt het rode masker vaak verder achter het oog. Kopkleur, veren rond de snavel en dekveren helpen samen bij beoordeling.",
+        "sources": [
+          "BZH_PUTTER"
+        ],
+        "topic": "geslacht"
+      }
+    ],
+    "voice": [
+      {
+        "text": "Hoge, tinkelende en kwetterende roep, ook in vlucht.",
+        "sources": [
+          "VB_PUTTER"
+        ],
+        "kind": "roep"
+      }
+    ],
+    "basis": {
+      "biometrics": [
+        {
+          "field": "length",
+          "unit": "cm",
+          "display": "ca. 11–13 cm",
+          "values": [
+            {
+              "source": "VB_PUTTER",
+              "min": 10.5,
+              "max": 13.5
+            },
+            {
+              "source": "BZH_PUTTER",
+              "min": 11,
+              "max": 13
+            }
+          ],
+          "note": "Afgeronde middenband als indicatie van het formaat."
+        }
+      ]
+    },
+    "habitat": [
+      {
+        "text": "Ruigtes met zaaddragende planten, boomgaarden en parken.",
+        "sources": [
+          "VB_PUTTER"
+        ],
+        "kind": "nederland"
+      }
+    ],
+    "status": [
+      {
+        "text": "Broedvogel in Nederland. Ook in het winterhalfjaar aanwezig.",
+        "sources": [
+          "VB_PUTTER"
+        ],
+        "kind": "voorkomen"
+      }
+    ],
+    "life": [
+      {
+        "text": "Eet vooral zaden, onder meer van distels en andere composieten.",
+        "sources": [
+          "VB_PUTTER"
+        ],
+        "kind": "voedsel"
+      }
+    ],
+    "discrepancies": [],
     "open": []
   }
 }

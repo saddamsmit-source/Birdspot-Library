@@ -1,15 +1,16 @@
 {
   "_meta": {
     "batch": "M4",
-    "phase": 3,
+    "phase": 4,
     "date": "2026-11-11",
-    "title": "K03 fasen 1–3 — negen gecontroleerde soorten",
+    "title": "K03 fasen 1–4 — twaalf gecontroleerde soorten",
     "reviewer": "ChatGPT (Codex), beeldinspectie en primaire broncontrole. Onafhankelijke review open.",
     "basis": "M3 fase 4 op 4d0f0ac, K03-batchplan en Birdspot-kwaliteitsnorm",
     "phaseReports": [
       "../M4_FASE_1_2026-11-11.md",
       "../M4_FASE_2_2026-11-11.md",
-      "../M4_FASE_3_2026-11-11.md"
+      "../M4_FASE_3_2026-11-11.md",
+      "../M4_FASE_4_2026-11-11.md"
     ]
   },
   "species": {
@@ -358,6 +359,113 @@
       ],
       "missing": [],
       "sexPolicy": "Verenkleed gelijk. De grootte van het voorhoofdsschild overlapt tussen de geslachten.",
+      "uncertain": []
+    },
+    "sp079": {
+      "assets": {
+        "/assets/species/sp079.webp": {
+          "role": "Hoofdfoto",
+          "content": "Volwassen Waterhoen aan de oever met rood schild, gele snavelpunt en witte flanktekening.",
+          "sexAge": "Volwassen kleed. Geslacht onbekend.",
+          "quality": "Hele vogel goed zichtbaar, inclusief tenen en onderstaart.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp079-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Bruin jong Waterhoen zwemmend, met lichte keel en witte flanktekening.",
+          "sexAge": "Bron benoemt juveniel. Geslacht onbekend.",
+          "quality": "Kop en flank voldoende zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp079-flight.webp": {
+          "role": "In vlucht",
+          "content": "Jong Waterhoen vrij boven water, met vleugels uitgespreid en poten naar achteren.",
+          "sexAge": "Bruinig jeugdkleed volgens eerder bronbewijs. Geslacht onbekend.",
+          "quality": "Vlieghouding en flank zichtbaar, vogel relatief klein in beeld.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Bronprofiel en vergelijking op snavel- en flanktekening aangevuld. Bestaande drie foto’s beoordeeld."
+      ],
+      "missing": [],
+      "sexPolicy": "Verenkleed van beide geslachten gelijk. Neutrale fotolabels.",
+      "uncertain": []
+    },
+    "sp081": {
+      "assets": {
+        "/assets/species/plumage/sp081-portrait.webp": {
+          "role": "Hoofdfoto",
+          "content": "Volwassen Blauwe Reiger staand in ondiep water, met dolksnavel, lange poten en lichte hals.",
+          "sexAge": "Volwassen kleed. Geslacht onbekend.",
+          "quality": "Hele vogel in zijaanzicht met duidelijk profiel.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp081-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Blauwe Reiger met donkere kruin en grijzere kop zonder lange sierveren.",
+          "sexAge": "Jeugdkleed in eerder bronbewijs. Geslacht onbekend.",
+          "quality": "Kop en snavel zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/sp081.webp": {
+          "role": "In vlucht",
+          "content": "Blauwe Reiger vrij in de lucht boven water met uitgespreide vleugels en de poten naar achteren.",
+          "sexAge": "Geslacht onbekend.",
+          "quality": "Hele vogel zichtbaar. De relatief gestrekte hals is op de kaart toegelicht.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Staande hoofdfoto toegevoegd. De bestaande vrije-vluchtfoto staat nu één keer in In vlucht. Vergelijking met Purperreiger gebruikt nu het zijportret."
+      ],
+      "missing": [],
+      "sexPolicy": "Verenkleed van beide geslachten gelijk. Neutrale fotolabels.",
+      "uncertain": []
+    },
+    "sp099": {
+      "assets": {
+        "/assets/species/plumage/sp099-adult_m.webp": {
+          "role": "Hoofdfoto (Mannetje)",
+          "content": "Kievit in broedkleed met lange kuif, donkere keel en groen-paarse rugglans.",
+          "sexAge": "Audubon benoemt dezelfde opname als volwassen mannetje in broedkleed.",
+          "quality": "Hele vogel scherp in rustig zijaanzicht.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp099-adult_f.webp": {
+          "role": "Verenkleed (Vrouwtje)",
+          "content": "Baltsend Kievitvrouwtje in voorovergebogen houding bij Marken.",
+          "sexAge": "De fotograaf benoemt een vrouwtje.",
+          "quality": "Het volledige lijf, de kuif en de baltspositie zijn zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp099-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Kievit met korte kuif en lichte randen aan rug- en vleugelveren.",
+          "sexAge": "Commons categoriseert de opname als juveniel. Geslacht onbekend.",
+          "quality": "Scherp zijaanzicht met kop, rug en veerranden.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp099-flight.webp": {
+          "role": "In vlucht",
+          "content": "Twee Kieviten vrij in de lucht, met brede afgeronde vleugels en zichtbaar zwart-wit contrast.",
+          "sexAge": "Geslacht per vogel niet vastgesteld.",
+          "quality": "Vrije vlucht duidelijk, rug- en buikzijde afzonderlijk zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/sp099.webp": {
+          "role": "Overige herkenningsfoto's",
+          "content": "Kievit in laag gras met lange kuif, witte buik en groene rugglans.",
+          "sexAge": "Geslacht onbekend.",
+          "quality": "Aanvullend zijaanzicht met lange kuif.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Mannetje als hoofdfoto. Vrouwtje en juveniel toegevoegd. Vergelijking met Zilverplevier toegevoegd. Spanwijdte gecorrigeerd volgens twee bronnen."
+      ],
+      "missing": [],
+      "sexPolicy": "Geslachtslabels alleen bij het mannetje en vrouwtje met bronbewijs. Vluchtbeeld zonder geslachtslabel.",
       "uncertain": []
     }
   }

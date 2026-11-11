@@ -941,6 +941,15 @@ export const GUIDE_COMPARISONS = [
     tip: 'Vergelijk snavelvorm en vleugeltekening. De opnamen zijn op verschillende afstanden gemaakt.',
   },
   {
+    label: 'Putter en Sijs · in vlucht',
+    flight: true,
+    birds: [
+      {id: 'sp037', source: 'putter', marks: 'Brede gele vleugelband. Bij volwassen vogels valt ook het rode gezicht op.'},
+      {id: 'sp038', source: 'sijs', marks: 'Gele vleugelband en fijnere bouw. Het mannetje op de foto heeft een zwarte kruin.'},
+    ],
+    tip: 'Bekijk de vleugel samen met kop en staart. Bij een juveniele Putter is het rode masker nog afwezig.',
+  },
+  {
     label: 'Huismus en Ringmus · in vlucht',
     flight: true,
     birds: [
@@ -996,6 +1005,18 @@ export const GUIDE_COMPARISONS = [
       {label: 'Flanken', values: ['Roestrode veerpartij', 'Licht met donkere vlekken']},
     ],
     tip: 'Bekijk kop en flank samen. Bij een foto met tegenlicht kan de flankkleur moeilijk zichtbaar zijn.',
+  },
+  {
+    label: 'Kievit en Zilverplevier · volwassen',
+    birds: [
+      {id: 'sp099', source: 'kievit', plumage: 'adult_m', marks: 'Kuif, metaalgroene rug en witte buik onder een donkere borst.'},
+      {id: 'sp144', source: 'zilverplevier', marks: 'Geen kuif. Grijs getekende bovenzijde.'},
+    ],
+    rows: [
+      {label: 'Kop', values: ['Opstaande kuif', 'Geen kuif']},
+      {label: 'Bovendelen', values: ['Groen-paarse glans bij goed licht', 'Grijze tekening']},
+    ],
+    tip: 'Kijk naar kop en rug samen. Een jonge Kievit heeft een korte kuif en een doffer, bruiner kleed.',
   },
   {
     label: 'Graspieper en Boompieper · veldkenmerken',
