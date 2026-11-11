@@ -307,17 +307,17 @@ export const LIFE = Object.freeze({
  "sp022": {
   "breeding": {
    "period": "mrt–jun",
-   "nest": "Groot takkennest hoog in een boom of mast",
-   "eggs": "4–5",
-   "incubation": "18–20 dagen",
-   "fledging": "29–35 dagen",
+   "nest": "Groot takkennest hoog in een boom, soms in een hoogspanningsmast.",
+   "eggs": "Meestal 4",
+   "incubation": "17–22 dagen",
+   "fledging": "30–36 dagen",
    "broods": "1",
    "months": "mrt-jun"
   },
-  "diet": "Alleseter: aas, afval, wormen, insecten, eieren en jonge vogels",
-  "behaviour": "Leeft in paren; laat noten en schelpen vallen om ze te breken",
+  "diet": "Alleseter, onder meer insecten, zaden, noten en aas.",
+  "behaviour": "Vormt buiten het broedseizoen geregeld groepen.",
   "migration": "Standvogel",
-  "voice": "Rauw \"kraa-kraa-kraa\""
+  "voice": "Lage, krassende roep."
  },
  "sp023": {
   "breeding": {
@@ -353,16 +353,16 @@ export const LIFE = Object.freeze({
   "breeding": {
    "period": "apr–jun",
    "nest": "In holtes: schoorstenen, boomholtes en nestkasten",
-   "eggs": "4–6",
-   "incubation": "17–18 dagen",
+   "eggs": "3–8, meestal 4",
+   "incubation": "17–19 dagen",
    "fledging": "30–35 dagen",
    "broods": "1",
    "months": "apr-jun"
   },
   "diet": "Insecten, zaden, afval en kruimels",
-  "behaviour": "Altijd in paren of groepen; levenslange partners",
+  "behaviour": "Sociale vogel die geregeld in groepen leeft. Broedt vaak nabij andere Kauwen.",
   "migration": "Standvogel; in de winter extra vogels uit het oosten",
-  "voice": "Kort helder \"kjak\" of \"kauw\""
+  "voice": "Korte, scherpe contactroep, vaak weergegeven als “ka”."
  },
  "sp026": {
   "breeding": {
@@ -776,18 +776,18 @@ export const LIFE = Object.freeze({
  },
  "sp054": {
   "breeding": {
-   "period": "mrt–aug",
-   "nest": "Komnest van mos in een dichte struik",
-   "eggs": "4–5",
-   "incubation": "12–13 dagen",
+   "period": "Eind april–augustus",
+   "nest": "Nest laag in dichte begroeiing.",
+   "eggs": "3–6",
+   "incubation": "11–13 dagen",
    "fledging": "11–12 dagen",
    "broods": "2–3",
-   "months": "mrt-aug"
+   "months": "apr-aug"
   },
-  "diet": "Kleine insecten en zaden",
+  "diet": "Insecten, spinnen en andere kleine bodemdiertjes. In de winter ook kleine zaden.",
   "behaviour": "Schuifelt onopvallend over de grond",
   "migration": "Standvogel; deels doortrekker",
-  "voice": "Snel kabbelend liedje; roep \"tsieh\""
+  "voice": "Helder, metaalachtig liedje."
  },
  "sp055": {
   "breeding": {
@@ -3249,7 +3249,7 @@ export const LIFE = Object.freeze({
   "diet": "Vooral woelmuizen en in het noordelijke broedgebied ook veel lemmingen.",
   "behaviour": "Jaagt boven open land. Hangt daarbij geregeld op één plek in de lucht met slaande vleugels.",
   "migration": "Zeldzame wintergast uit het noorden. In Nederland vooral van oktober tot april, in wisselende aantallen.",
-  "voice": "Miauwende, klagende roep die lager klinkt dan die van de Buizerd. Vooral hoorbaar in het broedgebied."
+  "voice": "Miauwende roep die lijkt op die van de Buizerd."
  },
  "sp254": {
   "breeding": {

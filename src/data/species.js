@@ -163,8 +163,8 @@ export const SPECIES = [
     distribution:'Heel Nederland; steden, dorpen en agrarisch land', status:'Standvogel · jaarrond',
     statusExtra:null, months:'jan-dec', frequency:'algemeen', breeding:'ja', redList:null },
   { id:'sp022', nameNL:'Zwarte Kraai',        nameEN:'Carrion Crow',              nameSci:'Corvus corone',              family:'Kraaien',         category:'standvogel', icon:'🐦', regions:['stedelijk','agrarisch','kust','polder'],
-    fieldmarks:'Geheel zwart, zware snavel, geeft harde "kauw".',
-    size:{ length:'45–47 cm', wingspan:'93–104 cm', weight:'370–650 g' },
+    fieldmarks:'Geheel zwart, krachtige donkere snavel, lage krassende roep.',
+    size:{ length:'ca. 45–50 cm', wingspan:'ca. 90–100 cm', weight:'370–650 g' },
     plumage:{ adult_m:'Geheel gitzwart met paarse-groene glans; zware gebogen snavel', adult_f:null, juv:'Matter zwart; bruinachtig', jaarling:null, breeding:null, winter:null, eclipse:null },
     distribution:'Heel Nederland; open land, steden en kust', status:'Standvogel · jaarrond',
     statusExtra:null, months:'jan-dec', frequency:'algemeen', breeding:'ja', redList:null },
@@ -181,7 +181,7 @@ export const SPECIES = [
     distribution:'Agrarisch land heel Nederland; broedt koloniaal in bomengroepen', status:'Standvogel, ook wintergast · jaarrond',
     statusExtra:'wintergast', months:'jan-dec', frequency:'algemeen', breeding:'ja', redList:null },
   { id:'sp025', nameNL:'Kauw',                nameEN:'Western Jackdaw',           nameSci:'Coloeus monedula',           family:'Kraaien',         category:'standvogel', icon:'🐦', regions:['stedelijk','agrarisch','kust'],
-    fieldmarks:'Klein, grijs achterste, blauwe ogen, snel roepend "djak".',
+    fieldmarks:'Compacte kraaiachtige met grijze nek, licht oog bij volwassen vogels en een korte donkere snavel.',
     size:{ length:'30–34 cm', wingspan:'64–73 cm', weight:'136–265 g' },
     plumage:{ adult_m:'Zwarte kap; grijze nek en wang; wit-blauwe ogen; grijze onderzijde', adult_f:null, juv:'Matter zwart; bruinachtige tint; donkere ogen', jaarling:null, breeding:null, winter:null, eclipse:null },
     distribution:'Heel Nederland; steden, boerderijen, kliffen en bossen', status:'Standvogel, ook wintergast · jaarrond',
@@ -380,9 +380,9 @@ export const SPECIES = [
 
   // ── HEGGENMUS ────────────────────────────────────────────────
   { id:'sp054', nameNL:'Heggenmus',           nameEN:'Dunnock',                   nameSci:'Prunella modularis',         family:'Heggenmus',       category:'standvogel', icon:'🐦', regions:['bos','stedelijk','struweel'],
-    fieldmarks:'Muizig grijs-bruin, gestreept, sluipend in lage begroeiing.',
+    fieldmarks:'Spitse snavel, bruine gestreepte rug en grijzige kop en borst bij volwassen vogels.',
     size:{ length:'13–14 cm', wingspan:'19–21 cm', weight:'19–24 g' },
-    plumage:{ adult_m:'Grijze kop en borst; kastanjebruin gestreepte rug; rozige snavel', adult_f:null, juv:'Meer gestreept bruin-beige', jaarling:null, breeding:null, winter:null, eclipse:null },
+    plumage:{ adult_m:'Grijzige kop en borst, bruine gestreepte rug en een fijne, spitse snavel', adult_f:null, juv:'Minder grijs dan een volwassen vogel', jaarling:null, breeding:null, winter:null, eclipse:null },
     distribution:'Heel Nederland in heggen, tuinen, bosranden en struweel', status:'Standvogel, ook doortrekker · jaarrond',
     statusExtra:'trekvogel', months:'jan-dec', frequency:'algemeen', breeding:'ja', redList:null },
 

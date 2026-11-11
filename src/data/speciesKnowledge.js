@@ -542,6 +542,127 @@ const DATA = {
    "checked": "2026-11-10",
    "certainty": "middel",
    "publisher": "Oiseaux-Birds"
+  },
+  "VB_ZKR": {
+   "register": "NL07",
+   "label": "Vogelbescherming Nederland — Zwarte Kraai",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwarte-kraai",
+   "edition": "Online geraadpleegd 11-11-2026",
+   "scope": "Nederland",
+   "confirms": "kleed, bouw, geluid, lengte en spanwijdte, broeden, leefgebied en voedsel",
+   "checked": "2026-11-11",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "VB_KAUW": {
+   "register": "NL07",
+   "label": "Vogelbescherming Nederland — Kauw",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kauw",
+   "edition": "Online geraadpleegd 11-11-2026",
+   "scope": "Nederland",
+   "confirms": "kleed, bouw, vliegstijl, roep, maten, broeden, leefgebied en voedsel",
+   "checked": "2026-11-11",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "VB_HEGM": {
+   "register": "NL07",
+   "label": "Vogelbescherming Nederland — Heggenmus",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/heggenmus",
+   "edition": "Online geraadpleegd 11-11-2026",
+   "scope": "Nederland",
+   "confirms": "kleed, snavel, zang, lengte, broeden, leefgebied en trek",
+   "checked": "2026-11-11",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "VB_ROEK": {
+   "register": "NL07",
+   "label": "Vogelbescherming Nederland — Roek",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/roek",
+   "edition": "Online geraadpleegd 11-11-2026",
+   "scope": "Nederland",
+   "confirms": "snavelbasis, snavelvorm, voorhoofd en gedrag",
+   "checked": "2026-11-11",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "VB_HMUS": {
+   "register": "NL07",
+   "label": "Vogelbescherming Nederland — Huismus",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/huismus",
+   "edition": "Online geraadpleegd 11-11-2026",
+   "scope": "Nederland",
+   "confirms": "stevige bouw en snavelvorm",
+   "checked": "2026-11-11",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "RSPB_ZKR": {
+   "register": "nieuwe soortreferentie",
+   "label": "RSPB — Carrion Crow",
+   "url": "https://www.rspb.org.uk/birds-and-wildlife/carrion-crow",
+   "edition": "Online geraadpleegd 11-11-2026",
+   "scope": "Groot-Brittannië, soortkenmerken",
+   "confirms": "donker kleed en uiterlijke overeenkomst tussen de geslachten en jonge vogels",
+   "checked": "2026-11-11",
+   "certainty": "hoog",
+   "publisher": "RSPB"
+  },
+  "RSPB_KAUW": {
+   "register": "nieuwe soortreferentie",
+   "label": "RSPB — Jackdaw",
+   "url": "https://www.rspb.org.uk/birds-and-wildlife/jackdaw",
+   "edition": "Online geraadpleegd 11-11-2026",
+   "scope": "Groot-Brittannië, soortkenmerken",
+   "confirms": "kleed, oogkleur, leeftijd en overeenkomst tussen de geslachten",
+   "checked": "2026-11-11",
+   "certainty": "hoog",
+   "publisher": "RSPB"
+  },
+  "RSPB_HEGM": {
+   "register": "nieuwe soortreferentie",
+   "label": "RSPB — Dunnock",
+   "url": "https://www.rspb.org.uk/birds-and-wildlife/dunnock",
+   "edition": "Online geraadpleegd 11-11-2026",
+   "scope": "Groot-Brittannië, soortkenmerken",
+   "confirms": "spitse snavel, grijze delen, overeenkomst tussen de geslachten en minder grijs bij juvenielen",
+   "checked": "2026-11-11",
+   "certainty": "hoog",
+   "publisher": "RSPB"
+  },
+  "RSPB_ROEK": {
+   "register": "nieuwe soortreferentie",
+   "label": "RSPB — Rook",
+   "url": "https://www.rspb.org.uk/birds-and-wildlife/rook/",
+   "edition": "Online geraadpleegd 11-11-2026",
+   "scope": "Groot-Brittannië, soortkenmerken",
+   "confirms": "onderscheid tussen volwassen en juveniele roeken bij de snavelbasis",
+   "checked": "2026-11-11",
+   "certainty": "hoog",
+   "publisher": "RSPB"
+  },
+  "CL_RPB": {
+   "register": "nieuwe soortreferentie",
+   "label": "Cornell Lab of Ornithology — Rough-legged Hawk Identification",
+   "url": "https://www.allaboutbirds.org/guide/Rough-legged_Hawk/id/",
+   "edition": "Online geraadpleegd 11-11-2026",
+   "scope": "Noord-Amerika, relevant voor de Noord-Amerikaanse foto’s in de kaart",
+   "confirms": "kleedvariatie, poten, leeftijd en geslacht bij lichte en donkere vogels",
+   "checked": "2026-11-11",
+   "certainty": "hoog",
+   "publisher": "Cornell Lab of Ornithology"
+  },
+  "RSPB_CORVIDS": {
+   "register": "nieuwe soortreferentie",
+   "label": "RSPB — Corvids",
+   "url": "https://www.rspb.org.uk/birds-and-wildlife/identifying-birds/corvids-how-to-identify-the-crow-family",
+   "edition": "Online geraadpleegd 11-11-2026",
+   "scope": "Groot-Brittannië",
+   "confirms": "lengte en spanwijdte van Zwarte Kraai",
+   "checked": "2026-11-11",
+   "certainty": "hoog",
+   "publisher": "RSPB"
   }
  },
  "profiles": {
@@ -5118,12 +5239,13 @@ const DATA = {
    },
    "keyMarks": [
     {
-     "text": "Staart bijna wit met één (vrouw/jong) of enkele (man) donkere banden aan het eind.",
-     "reliability": "ondersteunend",
+     "text": "Bij lichte vogels valt de witte staartbasis op. Let ook op de donkere bandering richting de staartpunt.",
      "sources": [
       "VB_RPB",
-      "VB_BVR"
-     ]
+      "VB_BVR",
+      "CL_RPB"
+     ],
+     "reliability": "ondersteunend"
     },
     {
      "text": "Grote zwarte polsvlekken onder de vleugel.",
@@ -5153,8 +5275,8 @@ const DATA = {
    "caution": {
     "text": "Buizerds variëren sterk en worden vaak voor Ruigpootbuizerd aangezien; geen enkel kenmerk is alleen betrouwbaar, gebruik een combinatie.",
     "sources": [
-     "VB_BVR",
-     "BG_BUZZ"
+     "VB_RPB",
+     "VB_BVR"
     ]
    },
    "critical": [
@@ -5168,7 +5290,7 @@ const DATA = {
      ],
      "reliability": "ondersteunend",
      "conditions": "Staart goed zichtbaar, liefst gespreid",
-     "exceptions": "Buizerds zijn zeer variabel; bron noemt dit contrast bij Buizerd afwezig, maar beschrijft niet alle kleden",
+     "exceptions": "Buizerds zijn zeer variabel. Tegenlicht of een gesloten staart kan de bandering verbergen.",
      "supporting": "Polsvlekken, buikschild, bevederde poten, soepele vleugelslag",
      "sources": [
       "VB_BVR",
@@ -5178,15 +5300,16 @@ const DATA = {
     {
      "feature": "Geslacht en leeftijd",
      "where": "Buik en staart",
-     "this": "Vrouw en jong: donker buikschild, lichte kop en borst, één eindband; man: enkele staartbanden",
-     "other": "—",
+     "this": "Bij lichte vogels hebben vrouwtjes en juvenielen vaak een donkere buikvlek. Mannetjes kunnen meerdere staartbanden tonen.",
+     "other": "Bij juvenielen kan de donkere staartpunt diffuser zijn dan bij volwassen vrouwtjes.",
      "vs": [],
      "reliability": "ondersteunend",
-     "conditions": "Goed zicht",
-     "exceptions": "Overgangen komen voor",
-     "supporting": "—",
+     "conditions": "Lichte vogel, met goed zicht op onderzijde, staart en vleugelrand.",
+     "exceptions": "Leeftijd en geslacht overlappen in het patroon. Donkere vormen tonen andere contrasten.",
+     "supporting": "Combineer staartbanden met borst, buik en de achterrand van de vleugel.",
      "sources": [
-      "VB_BVR"
+      "VB_BVR",
+      "CL_RPB"
      ]
     }
    ],
@@ -5217,24 +5340,26 @@ const DATA = {
      ]
     },
     {
-     "topic": "geslacht",
-     "text": "Man: enkele staartbanden; vrouw: één eindband en donker buikschild.",
+     "text": "Bij lichte mannetjes is de borst vaak sterker getekend en het donkere buikschild minder uitgesproken dan bij lichte vrouwtjes.",
      "sources": [
-      "VB_BVR"
-     ]
+      "VB_BVR",
+      "CL_RPB"
+     ],
+     "topic": "geslacht"
     },
     {
-     "topic": "leeftijd",
-     "text": "Juvenielen lijken op vrouwtjes: lichte kop en borst, donker buikschild.",
+     "text": "Lichte juvenielen kunnen op lichte vrouwtjes lijken. Een minder scherpe donkere staartpunt kan helpen bij leeftijdsbepaling.",
      "sources": [
-      "VB_BVR"
-     ]
+      "VB_BVR",
+      "CL_RPB"
+     ],
+     "topic": "leeftijd"
     }
    ],
    "voice": [
     {
      "kind": "roep",
-     "text": "Miauwend, vergelijkbaar met Buizerd; in Nederland zelden te horen.",
+     "text": "Miauwende roep die lijkt op die van Buizerd. Vogelbescherming beschrijft de roep als in Nederland niet te horen.",
      "sources": [
       "VB_RPB"
      ]
@@ -5275,7 +5400,7 @@ const DATA = {
     },
     {
      "kind": "trend",
-     "text": "Sinds 1980 afnemend als wintervogel; soms invasiejaren.",
+     "text": "Vogelbescherming meldt een afname sinds 1980 en vermeldt dat de recente aantallen op de bronpagina te laag zijn voor een trendberekening.",
      "sources": [
       "VB_RPB"
      ]
@@ -5284,7 +5409,7 @@ const DATA = {
    "life": [
     {
      "kind": "voedsel",
-     "text": "Vrijwel uitsluitend woelmuizen; jaagt vaak biddend.",
+     "text": "Jaagt op kleine knaagdieren. Lemmingen zijn belangrijk in het noordelijke broedgebied en woelmuizen in het wintergebied.",
      "sources": [
       "VB_RPB"
      ]
@@ -5292,7 +5417,460 @@ const DATA = {
    ],
    "discrepancies": [],
    "open": [
-    "Geslachtslabels op de vluchtfoto's steunen op de bron (iNaturalist/Commons) en passen bij de beschreven kenmerken; onafhankelijke controle open."
+    "De drie iNaturalist-bronpagina’s konden tijdens de hercontrole niet opnieuw worden geopend. De fotolabels steunen op het vastgelegde bronbewijs van 9 november en zijn niet opnieuw tegen de oorspronkelijke annotaties bevestigd."
+   ]
+  },
+  "sp022": {
+   "summary": {
+    "text": "Forse, geheel zwarte kraaiachtige met een krachtige zwarte snavel. Let voor het onderscheid van Roek ook op de leeftijd.",
+    "sources": [
+     "VB_ZKR",
+     "VB_ROEK",
+     "RSPB_ROEK"
+    ]
+   },
+   "keyMarks": [
+    {
+     "text": "Zwarte veren en poten.",
+     "sources": [
+      "VB_ZKR"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Krachtige donkere snavel met bevederde basis.",
+     "sources": [
+      "VB_ZKR",
+      "VB_ROEK"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Lage, raspende roep.",
+     "sources": [
+      "VB_ZKR"
+     ],
+     "reliability": "ondersteunend"
+    }
+   ],
+   "critical": [
+    {
+     "feature": "Snavelbasis",
+     "where": "Zijaanzicht van de kop",
+     "this": "Donkere, bevederde snavelbasis.",
+     "other": "Volwassen Roek heeft een bleke, kale snavelbasis.",
+     "vs": [
+      "sp024"
+     ],
+     "reliability": "ondersteunend",
+     "conditions": "Goed licht en een vrij zichtbare snavelbasis.",
+     "exceptions": "Een jonge Roek heeft nog geen bleke, kale basis.",
+     "supporting": "Let ook op de snavelvorm en het voorhoofd.",
+     "sources": [
+      "VB_ZKR",
+      "VB_ROEK",
+      "RSPB_ROEK"
+     ]
+    }
+   ],
+   "similar": [
+    {
+     "id": "sp024",
+     "why": "Vergelijk de snavelbasis en bouw, vooral bij volwassen vogels.",
+     "sources": [
+      "VB_ROEK",
+      "RSPB_ROEK"
+     ]
+    },
+    {
+     "id": "sp025",
+     "why": "Kauw heeft een compactere bouw, relatief kortere snavel en bij volwassen vogels een lichtere iris.",
+     "sources": [
+      "VB_KAUW",
+      "RSPB_KAUW"
+     ]
+    }
+   ],
+   "detail": [
+    {
+     "text": "Mannetje en vrouwtje lijken op elkaar. Ook jonge vogels kunnen er sterk op lijken.",
+     "sources": [
+      "RSPB_ZKR"
+     ],
+     "topic": "geslacht"
+    }
+   ],
+   "voice": [
+    {
+     "text": "Lage, krassende roep.",
+     "sources": [
+      "VB_ZKR"
+     ],
+     "kind": "roep"
+    }
+   ],
+   "basis": {
+    "size": {
+     "text": "Indicatieve lengte ca. 45–50 cm en spanwijdte ca. 90–100 cm.",
+     "sources": [
+      "VB_ZKR",
+      "RSPB_CORVIDS"
+     ]
+    },
+    "biometrics": [
+     {
+      "field": "length",
+      "unit": "cm",
+      "display": "ca. 45–50 cm",
+      "values": [
+       {
+        "source": "VB_ZKR",
+        "min": 44,
+        "max": 51
+       },
+       {
+        "source": "RSPB_CORVIDS",
+        "min": 45,
+        "max": 47
+       }
+      ]
+     },
+     {
+      "field": "wingspan",
+      "unit": "cm",
+      "display": "ca. 90–100 cm",
+      "values": [
+       {
+        "source": "VB_ZKR",
+        "min": 84,
+        "max": 100
+       },
+       {
+        "source": "RSPB_CORVIDS",
+        "min": 93,
+        "max": 104
+       }
+      ]
+     }
+    ]
+   },
+   "habitat": [
+    {
+     "text": "Komt in Nederland voor in open en halfopen land, aan bosranden, in parken en in bebouwd gebied.",
+     "sources": [
+      "VB_ZKR"
+     ],
+     "kind": "nederland"
+    }
+   ],
+   "status": [
+    {
+     "text": "Een algemene broedvogel die jaarrond aanwezig is in Nederland.",
+     "sources": [
+      "VB_ZKR"
+     ],
+     "kind": "voorkomen"
+    }
+   ],
+   "life": [
+    {
+     "text": "Nestelt doorgaans hoog in bomen en soms in hoogspanningsmasten.",
+     "sources": [
+      "VB_ZKR"
+     ],
+     "kind": "broeden"
+    },
+    {
+     "text": "Alleseter die onder meer insecten, zaden en aas benut.",
+     "sources": [
+      "VB_ZKR"
+     ],
+     "kind": "voedsel"
+    }
+   ],
+   "discrepancies": [],
+   "open": [
+    "Een afzonderlijke juvenielenfoto en een eigen geluidsopname voor de gids ontbreken."
+   ]
+  },
+  "sp025": {
+   "summary": {
+    "text": "Compacte kraaiachtige met een relatief korte snavel. Bij volwassen vogels vallen vaak de lichte iris en het grijze achterhoofd op.",
+    "sources": [
+     "VB_KAUW",
+     "RSPB_KAUW"
+    ]
+   },
+   "keyMarks": [
+    {
+     "text": "Grijze nek en grijs achterhoofd bij volwassen vogels.",
+     "sources": [
+      "VB_KAUW",
+      "RSPB_KAUW"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Opvallend lichte iris bij volwassen vogels.",
+     "sources": [
+      "VB_KAUW",
+      "RSPB_KAUW"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Compacte bouw en relatief korte, donkere snavel.",
+     "sources": [
+      "VB_KAUW"
+     ],
+     "reliability": "ondersteunend"
+    }
+   ],
+   "critical": [
+    {
+     "feature": "Iris en achterhoofd",
+     "where": "Kop in zijaanzicht",
+     "this": "Lichte iris en grijs achterhoofd bij volwassen vogels.",
+     "other": "Zwarte Kraai heeft een geheel donkere kop en een zwaardere snavel.",
+     "vs": [
+      "sp022"
+     ],
+     "reliability": "ondersteunend",
+     "conditions": "Goed zicht op de kop en voldoende licht.",
+     "exceptions": "Jonge Kauwen zijn bruiner en hebben donkerdere ogen.",
+     "supporting": "Let op de korte snavel en het compacte silhouet.",
+     "sources": [
+      "VB_KAUW",
+      "VB_ZKR",
+      "RSPB_KAUW"
+     ]
+    }
+   ],
+   "similar": [
+    {
+     "id": "sp022",
+     "why": "Vergelijk de koptekening, iris en snavelverhoudingen.",
+     "sources": [
+      "VB_KAUW",
+      "VB_ZKR"
+     ]
+    }
+   ],
+   "detail": [
+    {
+     "text": "Juvenielen zijn doorgaans bruiner en hebben een donkerder iris dan volwassen vogels.",
+     "sources": [
+      "RSPB_KAUW"
+     ],
+     "topic": "leeftijd"
+    },
+    {
+     "text": "Mannetje en vrouwtje lijken op elkaar.",
+     "sources": [
+      "RSPB_KAUW"
+     ],
+     "topic": "geslacht"
+    }
+   ],
+   "voice": [
+    {
+     "text": "Korte, scherpe contactroep, vaak weergegeven als “ka”.",
+     "sources": [
+      "VB_KAUW"
+     ],
+     "kind": "roep"
+    }
+   ],
+   "basis": {
+    "size": {
+     "text": "Vogelbescherming noemt 30–34 cm lengte en 64–73 cm spanwijdte.",
+     "sources": [
+      "VB_KAUW"
+     ]
+    }
+   },
+   "habitat": [
+    {
+     "text": "Veel in bebouwd gebied, ook in kleinschalig cultuurlandschap en bij geschikte holten elders.",
+     "sources": [
+      "VB_KAUW"
+     ],
+     "kind": "nederland"
+    }
+   ],
+   "status": [
+    {
+     "text": "Talrijke broedvogel en jaarrond aanwezig. In trek- en wintertijd komen extra vogels naar Nederland.",
+     "sources": [
+      "VB_KAUW"
+     ],
+     "kind": "voorkomen"
+    }
+   ],
+   "life": [
+    {
+     "text": "Nestelt in holten, onder meer in bomen, muren en schoorstenen.",
+     "sources": [
+      "VB_KAUW"
+     ],
+     "kind": "broeden"
+    },
+    {
+     "text": "Zoekt vooral op de grond naar onder meer ongewervelden, zaden en andere voedselresten.",
+     "sources": [
+      "VB_KAUW"
+     ],
+     "kind": "voedsel"
+    }
+   ],
+   "discrepancies": [],
+   "open": [
+    "Een afzonderlijke juvenielenfoto, een vrije-vluchtfoto en een eigen geluidsopname voor de gids ontbreken."
+   ]
+  },
+  "sp054": {
+   "summary": {
+    "text": "Kleine bruingrijze vogel met een fijn gepunte snavel. Bij volwassen vogels vallen de grijzige kop en borst op naast de bruin gestreepte rug.",
+    "sources": [
+     "VB_HEGM",
+     "RSPB_HEGM"
+    ]
+   },
+   "keyMarks": [
+    {
+     "text": "Fijne, spitse snavel.",
+     "sources": [
+      "VB_HEGM",
+      "RSPB_HEGM"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Grijzige kop en borst bij volwassen vogels.",
+     "sources": [
+      "VB_HEGM",
+      "RSPB_HEGM"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Bruine rug met donkere strepen.",
+     "sources": [
+      "VB_HEGM",
+      "RSPB_HEGM"
+     ],
+     "reliability": "ondersteunend"
+    }
+   ],
+   "critical": [
+    {
+     "feature": "Snavel en kop",
+     "where": "Snavel, kop en borst",
+     "this": "Fijne snavel en bij volwassen vogels een grijzige kop en borst.",
+     "other": "Huismus heeft een stevigere, dikkere snavel.",
+     "vs": [
+      "sp043"
+     ],
+     "reliability": "ondersteunend",
+     "conditions": "Goed zicht op de snavel, bij voorkeur in zijaanzicht.",
+     "exceptions": "Juveniele Heggenmussen tonen minder grijs.",
+     "supporting": "Bekijk ook de gestreepte rug en het gedrag bij lage begroeiing.",
+     "sources": [
+      "VB_HEGM",
+      "VB_HMUS",
+      "RSPB_HEGM"
+     ]
+    }
+   ],
+   "similar": [
+    {
+     "id": "sp043",
+     "why": "De rug kan op Huismus lijken. Controleer vooral de snavelvorm.",
+     "sources": [
+      "VB_HEGM",
+      "VB_HMUS"
+     ]
+    }
+   ],
+   "detail": [
+    {
+     "text": "Juvenielen hebben minder grijs dan volwassen vogels.",
+     "sources": [
+      "RSPB_HEGM"
+     ],
+     "topic": "leeftijd"
+    },
+    {
+     "text": "De geslachten zijn uiterlijk gelijkend.",
+     "sources": [
+      "RSPB_HEGM"
+     ],
+     "topic": "geslacht"
+    }
+   ],
+   "voice": [
+    {
+     "text": "Helder, metaalachtig liedje.",
+     "sources": [
+      "VB_HEGM"
+     ],
+     "kind": "zang"
+    }
+   ],
+   "basis": {
+    "size": {
+     "text": "Vogelbescherming noemt 13–14,5 cm lengte.",
+     "sources": [
+      "VB_HEGM"
+     ]
+    }
+   },
+   "habitat": [
+    {
+     "text": "Heggen, struiken en lage begroeiing in onder meer tuinen, parken, houtwallen en bosranden.",
+     "sources": [
+      "VB_HEGM"
+     ],
+     "kind": "nederland"
+    }
+   ],
+   "status": [
+    {
+     "text": "Jaarrond aanwezig. Een deel van de noordelijke vogels overwintert in Nederland of trekt door.",
+     "sources": [
+      "VB_HEGM"
+     ],
+     "kind": "voorkomen"
+    }
+   ],
+   "life": [
+    {
+     "text": "Het nest ligt doorgaans laag in dichte begroeiing. Vogelbescherming geeft eind april tot in augustus als broedperiode.",
+     "sources": [
+      "VB_HEGM"
+     ],
+     "kind": "broeden"
+    },
+    {
+     "text": "Zoekt vaak onopvallend op de grond onder struiken naar voedsel.",
+     "sources": [
+      "VB_HEGM"
+     ],
+     "kind": "gedrag"
+    }
+   ],
+   "discrepancies": [
+    {
+     "field": "lengte",
+     "app": "13–14 cm",
+     "source": "13–14,5 cm. Het genoemde verschil is klein. De bestaande band blijft staan tot een tweede vergelijkbare band is vastgesteld.",
+     "sources": [
+      "VB_HEGM"
+     ]
+    }
+   ],
+   "open": [
+    "Een afzonderlijke juvenielenfoto, een vrije-vluchtfoto en een eigen geluidsopname voor de gids ontbreken."
    ]
   }
  }
