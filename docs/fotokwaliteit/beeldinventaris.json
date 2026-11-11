@@ -4032,6 +4032,39 @@
    "source": "vluchtcontrole",
    "decision": "goedgekeurd",
    "note": "Gierzwaluw in vrije vlucht, met lange, smalle vleugels en een gespreide gevorkte staart."
+  },
+  "/assets/species/plumage/sp029-adult_m.webp": {
+   "refs": [
+    "sp029 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "fdd5f978ff7b1af1d16c13dbc5e3217f3fd36b3e",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M4-fase 1",
+   "decision": "goedgekeurd",
+   "note": "Mannetje Koolmees met zwarte kop, witte wang en brede donkere buikstreep."
+  },
+  "/assets/species/plumage/sp029-adult_f.webp": {
+   "refs": [
+    "sp029 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "50108909b3b49c08582855b3e2372cfc58914c97",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M4-fase 1",
+   "decision": "goedgekeurd",
+   "note": "Vrouwtje Koolmees met witte wangen en een smalle, onderbroken donkere buikstreep."
+  },
+  "/assets/species/plumage/sp029-juv.webp": {
+   "refs": [
+    "sp029 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "ef2814e8f25fee6a21c0ac9dda43ac4e86c09f52",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M4-fase 1",
+   "decision": "goedgekeurd",
+   "note": "Juveniele Koolmees met doffe kap, lichte wang en lichte mondhoek."
   }
  }
 }

@@ -3516,7 +3516,8 @@
         "height": 1600,
         "verification": "Juveniel expliciet in bestandsnaam en oorspronkelijke Flickr-beschrijving; gele wang visueel passend bij BTO. Geen geslachtsclaim.",
         "originalURL": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Blue_tit_-_Juvenile_-_Cyanistes_caeruleus_%2853079786093%29.jpg",
-        "image": "/assets/species/plumage/sp030-juv2.webp"
+        "image": "/assets/species/plumage/sp030-juv2.webp",
+        "note": "Let op de gelige wang en de doffe kruin. De bron bevestigt een juveniel."
       }
     },
     "sp031": {
@@ -4058,6 +4059,74 @@
         "height": 1153,
         "image": "/assets/species/plumage/sp105-juv.webp",
         "sha1": "617a552d2e813c7223e8d7231b7ab64f04fce796",
+        "sourceAudit": "2026-11-11",
+        "age": "juvenile"
+      }
+    },
+    "sp029": {
+      "adult_m": {
+        "file": "Great tit (Parus major) male.jpg",
+        "nl": "Koolmees",
+        "latin": "Parus major",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Great_tit_%28Parus_major%29_male.jpg",
+        "showSourceLink": true,
+        "alt": "Mannetje Koolmees met zwarte kop, witte wang en brede donkere buikstreep.",
+        "modifications": "Verkleind tot max. 1400 px en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+        "reviewed": "2026-11-11",
+        "verificationSource": "https://commons.wikimedia.org/wiki/File:Great_tit_%28Parus_major%29_male.jpg",
+        "visualCheck": "Mannetje Koolmees met zwarte kop, witte wang en brede donkere buikstreep.",
+        "verification": "De fotograaf vermeldt een mannetje. De brede donkere buikstreep ondersteunt dat label.",
+        "width": 1400,
+        "height": 933,
+        "image": "/assets/species/plumage/sp029-adult_m.webp",
+        "sha1": "fdd5f978ff7b1af1d16c13dbc5e3217f3fd36b3e",
+        "sourceAudit": "2026-11-11",
+        "sex": "male"
+      },
+      "adult_f": {
+        "file": "Female Great tit.jpg",
+        "nl": "Koolmees",
+        "latin": "Parus major",
+        "author": "Evas-naturfotografie",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Female_Great_tit.jpg",
+        "showSourceLink": true,
+        "alt": "Vrouwtje Koolmees met witte wangen en een smalle, onderbroken donkere buikstreep.",
+        "modifications": "Verkleind tot max. 1400 px en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+        "reviewed": "2026-11-11",
+        "verificationSource": "https://commons.wikimedia.org/wiki/File:Female_Great_tit.jpg",
+        "visualCheck": "Vrouwtje Koolmees met witte wangen en een smalle, onderbroken donkere buikstreep.",
+        "verification": "De fotograaf vermeldt een vrouwtje. Het vooraanzicht toont de smallere buikstreep.",
+        "width": 1400,
+        "height": 1050,
+        "image": "/assets/species/plumage/sp029-adult_f.webp",
+        "sha1": "50108909b3b49c08582855b3e2372cfc58914c97",
+        "sourceAudit": "2026-11-11",
+        "sex": "female"
+      },
+      "juv": {
+        "file": "Great tit - Juvenile - Parus major (53034153829).jpg",
+        "nl": "Koolmees",
+        "latin": "Parus major",
+        "author": "caroline legg",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Great_tit_-_Juvenile_-_Parus_major_%2853034153829%29.jpg",
+        "showSourceLink": true,
+        "alt": "Juveniele Koolmees met doffe kap, lichte wang en lichte mondhoek.",
+        "modifications": "Verkleind tot max. 1400 px en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+        "reviewed": "2026-11-11",
+        "verificationSource": "https://commons.wikimedia.org/wiki/File:Great_tit_-_Juvenile_-_Parus_major_%2853034153829%29.jpg",
+        "visualCheck": "Juveniele Koolmees met doffe kap, lichte wang en lichte mondhoek.",
+        "verification": "De fotograaf benoemt een juveniel. De doffe kap en lichte mondhoek ondersteunen de leeftijd. Geslacht niet vastgesteld.",
+        "width": 1400,
+        "height": 1000,
+        "image": "/assets/species/plumage/sp029-juv.webp",
+        "sha1": "ef2814e8f25fee6a21c0ac9dda43ac4e86c09f52",
         "sourceAudit": "2026-11-11",
         "age": "juvenile"
       }
@@ -5346,7 +5415,7 @@
         "label": "Juveniel",
         "flight": false,
         "age": "juvenile",
-        "note": "De jonge Huismus vooraan heeft een lichtbruine kop, een bleke snavelbasis en een bruin getekende vleugel.",
+        "note": "De fotograaf benoemt de vogel op de voorgrond als juveniel. Het geslacht is onbekend.",
         "file": "House sparrow (Passer domesticus) juvenile.jpg",
         "nl": "Huismus",
         "latin": "Passer domesticus",
@@ -8067,7 +8136,8 @@
     "sp188": "/assets/species/plumage/sp188-hero-male.webp",
     "sp249": "/assets/species/plumage/sp249-hero-male.webp",
     "sp250": "/assets/species/plumage/sp250-hero-male.webp",
-    "sp251": "/assets/species/plumage/sp251-hero-male.webp"
+    "sp251": "/assets/species/plumage/sp251-hero-male.webp",
+    "sp029": "/assets/species/plumage/sp029-adult_m.webp"
   },
   "retired": {
     "sp118": [

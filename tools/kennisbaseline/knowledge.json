@@ -1089,6 +1089,116 @@
       "checked": "2026-11-11",
       "certainty": "hoog",
       "publisher": "Javier Blasco-Zumeta & Gerd-Michael Heinze"
+    },
+    "VB_KOOL": {
+      "register": "NL07",
+      "label": "Vogelbescherming Nederland — Koolmees",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/koolmees",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland",
+      "confirms": "kleed, buikstreep, staart, zang, leefgebied en maten",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_PIMPEL": {
+      "register": "NL07",
+      "label": "Vogelbescherming Nederland — Pimpelmees",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/pimpelmees",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland",
+      "confirms": "kleed, oogstreep, zang, leefgebied en maten",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_RINGM": {
+      "register": "NL07",
+      "label": "Vogelbescherming Nederland — Ringmus",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/ringmus",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland",
+      "confirms": "kruin, wangvlek en geslacht",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_VINK": {
+      "register": "NL07",
+      "label": "Vogelbescherming Nederland — Vink",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/vink",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland",
+      "confirms": "vrouwtjeskleed en dubbele vleugelstreep",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_MEZEN": {
+      "register": "NL07",
+      "label": "Vogelbescherming Nederland — Koolmees en pimpelmees",
+      "url": "https://www.vogelbescherming.nl/beleefdelente/blog/lezen/koolmees-en-pimpelmees-zoek-de-verschillen",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland",
+      "confirms": "vergelijking van kap, wang, oogstreep en borststreep",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "BZH_KOOL": {
+      "register": "nieuwe soortreferentie",
+      "label": "Blasco-Zumeta & Heinze — Great Tit",
+      "url": "https://www.blascozumeta.com/specie_files/14640_ENG_Parus_major_aranzadi.pdf",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Europa",
+      "confirms": "leeftijd, buikpatroon en verschillen tussen geslachten",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Javier Blasco-Zumeta & Gerd-Michael Heinze"
+    },
+    "BZH_PIMPEL": {
+      "register": "nieuwe soortreferentie",
+      "label": "Blasco-Zumeta & Heinze — Eurasian Blue Tit",
+      "url": "https://www.blascozumeta.com/specie_files/14620_Cyanistes_caeruleus_E.pdf",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Europa",
+      "confirms": "jeugdkleed en overlap in geslachtskenmerken",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Javier Blasco-Zumeta & Gerd-Michael Heinze"
+    },
+    "CLO_KOOL": {
+      "register": "nieuwe soortreferentie",
+      "label": "Cornell Lab of Ornithology — Great Tit Identification",
+      "url": "https://www.allaboutbirds.org/guide/Great_Tit/id",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Europa, ook Aziatische populaties",
+      "confirms": "lichte wang en doffere kap bij juvenielen",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Cornell Lab of Ornithology"
+    },
+    "NHM_HMUS": {
+      "register": "nieuwe soortreferentie",
+      "label": "Natural History Museum — House Sparrow",
+      "url": "https://www.nhm.ac.uk/discover/house-sparrow-passer-domesticus.html",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Europa",
+      "confirms": "geslachtsverschil, juveniel en vergelijking met Ringmus",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Natural History Museum London"
+    },
+    "SOV_HMUS": {
+      "register": "nieuwe soortreferentie",
+      "label": "Sovon — Huismus",
+      "url": "https://stats.sovon.nl/huismus",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland",
+      "confirms": "standvogel, plaatstrouw en Rode Lijst",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Sovon Vogelonderzoek Nederland"
     }
   },
   "sp021": {
@@ -7552,6 +7662,442 @@
           "VB_GIERZW"
         ],
         "kind": "voedsel"
+      }
+    ],
+    "discrepancies": [],
+    "open": []
+  },
+  "sp029": {
+    "summary": {
+      "text": "Gele onderzijde met een donkere middenstreep, een zwarte kop en grote witte wangen. Bekijk bij jonge vogels vooral de hele koptekening.",
+      "sources": [
+        "VB_KOOL",
+        "CLO_KOOL"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Zwarte kap en grote, doorgaans witte wangen bij volwassen vogels.",
+        "sources": [
+          "VB_KOOL"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Donkere middenstreep over de gele borst en buik.",
+        "sources": [
+          "VB_KOOL"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Mosgroene rug en een lichte vleugelstreep.",
+        "sources": [
+          "VB_KOOL"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Juveniel met doffere kap en vaak gelig getinte wangen.",
+        "sources": [
+          "CLO_KOOL",
+          "BZH_KOOL"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "caution": {
+      "text": "De buikstreep is bij mannetjes doorgaans breder. Gebruik een volledig zichtbare borst en buik, zeker bij een foto onder een schuine hoek.",
+      "sources": [
+        "VB_KOOL",
+        "BZH_KOOL"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Kap, oogstreek en middenstreep",
+        "where": "Kop van opzij en borst en buik van voren",
+        "this": "Zwarte kap met grote lichte wang. Op de onderzijde loopt een donkere middenstreep.",
+        "other": "Pimpelmees heeft een blauw petje en een donkere oogstreep door de lichte wangstreek.",
+        "vs": [
+          "sp030"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Goed licht en zicht op kop en onderzijde.",
+        "exceptions": "Jonge vogels van beide soorten kunnen gelige wangen hebben. Bij tegenlicht is blauw minder goed te zien.",
+        "supporting": "Combineer de koptekening met de donkere buikstreep.",
+        "sources": [
+          "VB_KOOL",
+          "VB_PIMPEL",
+          "VB_MEZEN",
+          "BZH_PIMPEL",
+          "CLO_KOOL"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp030",
+        "why": "Vergelijk kap, oogstreep en onderzijde.",
+        "sources": [
+          "VB_KOOL",
+          "VB_PIMPEL",
+          "VB_MEZEN"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "text": "De donkere middenstreep is doorgaans breder en loopt verder door bij het mannetje. Bij juvenielen is geslacht aan verenkleed moeilijk te bepalen.",
+        "sources": [
+          "VB_KOOL",
+          "BZH_KOOL"
+        ],
+        "topic": "geslacht"
+      }
+    ],
+    "voice": [
+      {
+        "text": "Ritmische zang met veel varianten. De soort heeft uiteenlopende roepen.",
+        "sources": [
+          "VB_KOOL"
+        ],
+        "kind": "zang"
+      }
+    ],
+    "basis": {
+      "size": {
+        "text": "Vogelbescherming noemt 13,5–15 cm lichaamslengte.",
+        "sources": [
+          "VB_KOOL"
+        ]
+      }
+    },
+    "habitat": [
+      {
+        "text": "Bossen, parken en tuinen met bomen en nestgelegenheid.",
+        "sources": [
+          "VB_KOOL"
+        ],
+        "kind": "nederland"
+      }
+    ],
+    "status": [
+      {
+        "text": "Nederlandse broedvogels blijven jaarrond. In de winter komen ook vogels uit Noord- en Oost-Europa.",
+        "sources": [
+          "VB_KOOL"
+        ],
+        "kind": "voorkomen"
+      }
+    ],
+    "life": [
+      {
+        "text": "Broedt onder meer in boomholtes en nestkasten. Eet rupsen, andere insecten en zaden.",
+        "sources": [
+          "VB_KOOL"
+        ],
+        "kind": "broeden"
+      }
+    ],
+    "discrepancies": [],
+    "open": []
+  },
+  "sp030": {
+    "summary": {
+      "text": "Kleine mees met een blauw petje en een smalle donkere oogstreep. Jonge vogels zijn doffer en hebben gelige wangen.",
+      "sources": [
+        "VB_PIMPEL",
+        "BZH_PIMPEL"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Volwassen vogels hebben een blauw petje en blauwe vleugels.",
+        "sources": [
+          "VB_PIMPEL",
+          "BZH_PIMPEL"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Smalle donkere oogstreep door het lichte gezicht.",
+        "sources": [
+          "VB_PIMPEL",
+          "VB_MEZEN"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Gele onderzijde zonder brede donkere streep over borst en buik.",
+        "sources": [
+          "VB_MEZEN"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Bij een juveniel zijn de wangen bleekgeel en is de kruin dof blauwgrijs.",
+        "sources": [
+          "BZH_PIMPEL"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "caution": {
+      "text": "Blauwtinten overlappen tussen mannetje en vrouwtje. Een doorsneefoto biedt vaak onvoldoende zicht op de geschikte veerdetails.",
+      "sources": [
+        "BZH_PIMPEL"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Koptekening en onderzijde",
+        "where": "Kop van opzij en gele onderzijde",
+        "this": "Blauwe kruin, donkere oogstreep en lichte wangen. De brede donkere buikstreep ontbreekt.",
+        "other": "Koolmees heeft een zwarte kap, grote lichte wangen en een donkere middenstreep op borst en buik.",
+        "vs": [
+          "sp029"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Goed zicht op het profiel en de borst.",
+        "exceptions": "Bij juvenielen van beide soorten kunnen de wangen geelachtig zijn. In slecht licht is de kruinkleur minder goed te zien.",
+        "supporting": "Bekijk waar het donkere patroon op de kop loopt.",
+        "sources": [
+          "VB_PIMPEL",
+          "VB_KOOL",
+          "VB_MEZEN",
+          "BZH_PIMPEL",
+          "CLO_KOOL"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp029",
+        "why": "Bekijk de plaats van de donkere strepen op kop en borst.",
+        "sources": [
+          "VB_MEZEN",
+          "VB_KOOL",
+          "VB_PIMPEL"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "text": "Juvenielen zijn aan het verenkleed niet op geslacht te brengen. Bij oudere vogels overlappen kleurkenmerken.",
+        "sources": [
+          "BZH_PIMPEL"
+        ],
+        "topic": "geslacht"
+      },
+      {
+        "text": "Juvenielen hebben een doffere kruin en bleekgele wangen.",
+        "sources": [
+          "BZH_PIMPEL"
+        ],
+        "topic": "leeftijd"
+      }
+    ],
+    "voice": [
+      {
+        "text": "Heldere zang met een vaak aflopende triller. Het patroon varieert.",
+        "sources": [
+          "VB_PIMPEL"
+        ],
+        "kind": "zang"
+      }
+    ],
+    "basis": {
+      "size": {
+        "text": "Vogelbescherming noemt 10,5–12 cm lichaamslengte.",
+        "sources": [
+          "VB_PIMPEL"
+        ]
+      }
+    },
+    "habitat": [
+      {
+        "text": "Loofbossen, parken en tuinen. In de winter ook rietkragen.",
+        "sources": [
+          "VB_PIMPEL"
+        ],
+        "kind": "nederland"
+      }
+    ],
+    "status": [
+      {
+        "text": "Jaarrond in Nederland. In het najaar komen ook vogels uit Scandinavië en het Oostzeegebied.",
+        "sources": [
+          "VB_PIMPEL"
+        ],
+        "kind": "voorkomen"
+      }
+    ],
+    "life": [
+      {
+        "text": "Zoekt vaak voedsel op dunne takken. In de broedtijd eet de soort vooral insecten en andere geleedpotigen.",
+        "sources": [
+          "VB_PIMPEL"
+        ],
+        "kind": "voedsel"
+      }
+    ],
+    "discrepancies": [],
+    "open": []
+  },
+  "sp043": {
+    "summary": {
+      "text": "Stevig gebouwde mus rond bebouwing. Bij mannetjes vallen de grijze kruin en zwarte bef op. Vrouwtjes en juvenielen zijn minder contrastrijk.",
+      "sources": [
+        "VB_HMUS",
+        "NHM_HMUS"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Mannetje met grijze kruin, kastanjebruine kopzijden en zwarte bef.",
+        "sources": [
+          "VB_HMUS",
+          "NHM_HMUS"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Vrouwtje met lichtbruin kleed en een lichte wenkbrauwstreep.",
+        "sources": [
+          "VB_HMUS"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Stevige kegelvormige snavel.",
+        "sources": [
+          "VB_HMUS",
+          "NHM_HMUS"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Juvenielen lijken op het vrouwtje.",
+        "sources": [
+          "NHM_HMUS"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "caution": {
+      "text": "Vrouwtjes en juvenielen kunnen sterk op elkaar lijken. Bij het mannetje is de grootte van de donkere bef variabel.",
+      "sources": [
+        "NHM_HMUS"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Kruin en afzonderlijke wangvlek",
+        "where": "Kop van opzij, met zicht op de kruin",
+        "this": "Mannetje met een grijze kruin en zonder afzonderlijke zwarte vlek midden op de wang.",
+        "other": "Ringmus heeft een kastanjebruine kruin en een zwarte vlek op de lichte wang.",
+        "vs": [
+          "sp044"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Goed zicht op de kop, vooral bij volwassen vogels.",
+        "exceptions": "Dit onderscheid op grijze kruin geldt voor het mannetje Huismus. Bij jonge vogels kan de tekening minder duidelijk zijn.",
+        "supporting": "Bekijk de hele koptekening bij twijfel.",
+        "sources": [
+          "VB_HMUS",
+          "VB_RINGM",
+          "NHM_HMUS"
+        ]
+      },
+      {
+        "feature": "Vleugelstrepen bij bruine vogels",
+        "where": "Gevouwen vleugel in zijaanzicht",
+        "this": "Lichtbruine kop met een lichte wenkbrauwstreep en een bruin gestreepte rug.",
+        "other": "Vrouwtje Vink valt op door twee lichte vleugelstrepen.",
+        "vs": [
+          "sp035"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Zicht op de gevouwen vleugel en kop.",
+        "exceptions": "De strepen kunnen wegvallen bij een ongunstige kijkhoek of weinig licht.",
+        "supporting": "Bekijk de koptekening en de vleugel samen.",
+        "sources": [
+          "VB_HMUS",
+          "VB_VINK"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp044",
+        "why": "Vergelijk de kruin en de afzonderlijke wangvlek.",
+        "sources": [
+          "VB_RINGM",
+          "NHM_HMUS"
+        ]
+      },
+      {
+        "id": "sp035",
+        "why": "Bij bruine vogels helpen de twee lichte vleugelstrepen van de Vink.",
+        "sources": [
+          "VB_HMUS",
+          "VB_VINK"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "text": "Het vrouwtje en het juveniel hebben allebei een betrekkelijk egaal lichtbruin uiterlijk.",
+        "sources": [
+          "VB_HMUS",
+          "NHM_HMUS"
+        ],
+        "topic": "leeftijd"
+      }
+    ],
+    "voice": [
+      {
+        "text": "Kenmerkend getsjilp, met variaties in toon en ritme.",
+        "sources": [
+          "VB_HMUS"
+        ],
+        "kind": "roep"
+      }
+    ],
+    "basis": {
+      "size": {
+        "text": "Vogelbescherming noemt 14–16 cm lichaamslengte.",
+        "sources": [
+          "VB_HMUS"
+        ]
+      }
+    },
+    "habitat": [
+      {
+        "text": "Vooral in de buurt van huizen, andere gebouwen en boerderijen.",
+        "sources": [
+          "VB_HMUS"
+        ],
+        "kind": "nederland"
+      }
+    ],
+    "status": [
+      {
+        "text": "Plaatstrouwe Nederlandse broedvogel. Op de Rode Lijst aangeduid als Gevoelig.",
+        "sources": [
+          "SOV_HMUS"
+        ],
+        "kind": "voorkomen"
+      }
+    ],
+    "life": [
+      {
+        "text": "Broedt vaak in holtes bij gebouwen, bijvoorbeeld onder dakpannen.",
+        "sources": [
+          "VB_HMUS"
+        ],
+        "kind": "broeden"
       }
     ],
     "discrepancies": [],
