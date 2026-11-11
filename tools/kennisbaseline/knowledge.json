@@ -1199,6 +1199,171 @@
       "checked": "2026-11-11",
       "certainty": "hoog",
       "publisher": "Sovon Vogelonderzoek Nederland"
+    },
+    "VB_MEREL": {
+      "register": "NL07",
+      "label": "Vogelbescherming Nederland — Merel",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/merel",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland",
+      "confirms": "kleed, jeugdkleed, zang, leefgebied, broeden en maten",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_ZANGL": {
+      "register": "NL07",
+      "label": "Vogelbescherming Nederland — Zanglijster",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zanglijster",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland",
+      "confirms": "borstvlekken, zang, leefgebied en voedsel",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_KRAM": {
+      "register": "NL07",
+      "label": "Vogelbescherming Nederland — Kramsvogel",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kramsvogel",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland",
+      "confirms": "kleed, vluchtkenmerken, leefgebied, maten en roep",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_GL": {
+      "register": "NL07",
+      "label": "Vogelbescherming Nederland — Grote Lijster",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-lijster",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland",
+      "confirms": "borstvlekken, postuur en ondervleugel",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_KOPER": {
+      "register": "NL07",
+      "label": "Vogelbescherming Nederland — Koperwiek",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/koperwiek",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland",
+      "confirms": "wenkbrauwstreep, roestrode flanken en ondervleugeldekveren",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_SPREEUW": {
+      "register": "NL07",
+      "label": "Vogelbescherming Nederland — Spreeuw",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/spreeuw",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland",
+      "confirms": "verenkleed en seizoensvariatie",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_LIJSTERZANG": {
+      "register": "NL07",
+      "label": "Vogelbescherming — 3 meesterzangers van het vroege voorjaar",
+      "url": "https://www.vogelbescherming.nl/actueel/bericht/lijsterzang",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland",
+      "confirms": "vergelijking van de zang van Merel, Zanglijster en Grote Lijster",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "BZH_MEREL": {
+      "register": "nieuwe soortreferentie",
+      "label": "Blasco-Zumeta & Heinze — Blackbird",
+      "url": "https://blascozumeta.com/specie_files/11870_Turdus_merula_E.pdf",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Europa",
+      "confirms": "juveniele veertekening, geslacht en snavelkleur",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Javier Blasco-Zumeta & Gerd-Michael Heinze"
+    },
+    "BZH_ZANGL": {
+      "register": "nieuwe soortreferentie",
+      "label": "Blasco-Zumeta & Heinze — Song Thrush",
+      "url": "https://blascozumeta.com/specie_files/12000_ENG_Turdus_philomelos_aranzadi.pdf",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Europa",
+      "confirms": "lengte, ondervleugeldekveren, juveniel en gelijk verenkleed van beide geslachten",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Javier Blasco-Zumeta & Gerd-Michael Heinze"
+    },
+    "BZH_KRAM": {
+      "register": "nieuwe soortreferentie",
+      "label": "Blasco-Zumeta & Heinze — Fieldfare",
+      "url": "https://blascozumeta.com/specie_files/11980_ENG_Turdus_pilaris_aranzadi.pdf",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Europa",
+      "confirms": "overlap van geslachtskenmerken en rui",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Javier Blasco-Zumeta & Gerd-Michael Heinze"
+    },
+    "NAT_ZANGL": {
+      "register": "nieuwe soortreferentie",
+      "label": "Naturalis, Birds of Europe — Zanglijster",
+      "url": "https://birds-europe.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/taxon.php?id=130874",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Europa",
+      "confirms": "ondervleugel, jeugdkleed, staart en voedsel",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Naturalis Biodiversity Center"
+    },
+    "NAT_KRAM": {
+      "register": "nieuwe soortreferentie",
+      "label": "Naturalis, Birds of Europe — Kramsvogel",
+      "url": "https://birds-europe.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/taxon.php?id=130873",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Europa",
+      "confirms": "kleurcontrast, juveniel, stuit en ondervleugel",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Naturalis Biodiversity Center"
+    },
+    "RSPB_LIJSTERS": {
+      "register": "nieuwe soortreferentie",
+      "label": "RSPB — How to identify the UK’s thrushes",
+      "url": "https://www.rspb.org.uk/birds-and-wildlife/identifying-birds/all-about-thrushes",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "West-Europa",
+      "confirms": "kleedverschillen tussen lijsters, leeftijd en zang",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Royal Society for the Protection of Birds"
+    },
+    "SOV_KRAM": {
+      "register": "nieuwe soortreferentie",
+      "label": "Sovon — Kramsvogel",
+      "url": "https://stats.sovon.nl/stats/soort/11980?language=dutch",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland",
+      "confirms": "zeer schaarse broedvogel, wintergast, doortrekker en Rode Lijst",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Sovon Vogelonderzoek Nederland"
+    },
+    "SOV_ZANGL": {
+      "register": "nieuwe soortreferentie",
+      "label": "Sovon — Zanglijster",
+      "url": "https://stats.sovon.nl/stats/soort/12000?language=dutch",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland",
+      "confirms": "broedvogel, overwintering en doortrek",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Sovon Vogelonderzoek Nederland"
     }
   },
   "sp021": {
@@ -8101,6 +8266,485 @@
       }
     ],
     "discrepancies": [],
+    "open": []
+  },
+  "sp045": {
+    "summary": {
+      "text": "Bij de volwassen man vallen het zwarte kleed en de gele tot oranje snavel op. Het vrouwtje is bruin. Een juveniel lijkt op het vrouwtje en heeft vaak meer vlekjes op rug en vleugels.",
+      "sources": [
+        "VB_MEREL",
+        "BZH_MEREL"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Volwassen man met zwart kleed, gele tot oranje snavel en vaak een heldere oogring.",
+        "sources": [
+          "VB_MEREL",
+          "RSPB_LIJSTERS"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Vrouwtje met donkerbruin kleed en een wat lichtere, bruin getekende borst.",
+        "sources": [
+          "VB_MEREL"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Juveniel vaak warmer bruin met lichte vlekjes en strepen op rug en vleugels.",
+        "sources": [
+          "BZH_MEREL"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Relatief lange staart vergeleken met Zanglijster.",
+        "sources": [
+          "NAT_ZANGL"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "caution": {
+      "text": "Een bruin verenkleed kan bij een vrouwtje of juveniel passen. Kijk voor een leeftijdsschatting ook naar de tekening op rug en vleugeldekveren.",
+      "sources": [
+        "VB_MEREL",
+        "BZH_MEREL"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Borstgrondkleur en staart bij bruine vogels",
+        "where": "Borst, buik en staart in zijaanzicht",
+        "this": "Vrouwtje Merel heeft meestal een bruine borst en buik. De staart is relatief lang.",
+        "other": "Zanglijster heeft een lichtere onderzijde met duidelijke donkere vlekken en een kortere staart.",
+        "vs": [
+          "sp046"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Voldoende licht op de onderzijde en zicht op de hele staart.",
+        "exceptions": "Jonge Merels kunnen sterk gevlekt zijn. Licht en houding beïnvloeden de indruk van beide soorten.",
+        "supporting": "Vergelijk ook de bovendelen en luister naar het zangpatroon als de vogel zingt.",
+        "sources": [
+          "VB_MEREL",
+          "BZH_ZANGL",
+          "NAT_ZANGL",
+          "VB_LIJSTERZANG"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp046",
+        "why": "Kijk bij een bruine vogel naar de grondkleur van de buik en de relatieve staartlengte.",
+        "sources": [
+          "BZH_ZANGL",
+          "NAT_ZANGL"
+        ]
+      },
+      {
+        "id": "sp112",
+        "why": "Een Spreeuw kan ook donker zijn en in de broedtijd een gele snavel hebben. Let op glans en eventuele lichte spikkels.",
+        "sources": [
+          "VB_MEREL",
+          "VB_SPREEUW"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "text": "In de herfst gaan jonge vogels meer op volwassen vogels lijken.",
+        "sources": [
+          "VB_MEREL",
+          "BZH_MEREL"
+        ],
+        "topic": "leeftijd"
+      }
+    ],
+    "voice": [
+      {
+        "text": "Fluitende, rollende zang, vaak vanaf een hoge zangpost. De alarmroep is veel scherper.",
+        "sources": [
+          "VB_MEREL",
+          "VB_LIJSTERZANG"
+        ],
+        "kind": "zang"
+      }
+    ],
+    "basis": {
+      "size": {
+        "text": "Vogelbescherming geeft 23,5–29 cm lichaamslengte en 34–38 cm spanwijdte.",
+        "sources": [
+          "VB_MEREL"
+        ]
+      }
+    },
+    "habitat": [
+      {
+        "text": "Onder meer tuinen, parken, houtwallen en bossen.",
+        "sources": [
+          "VB_MEREL"
+        ],
+        "kind": "nederland"
+      }
+    ],
+    "status": [
+      {
+        "text": "Jaarrond in Nederland. Noordelijke vogels kunnen hier overwinteren.",
+        "sources": [
+          "VB_MEREL"
+        ],
+        "kind": "voorkomen"
+      }
+    ],
+    "life": [
+      {
+        "text": "Zoekt voedsel op de grond en eet onder meer regenwormen en fruit.",
+        "sources": [
+          "VB_MEREL",
+          "RSPB_LIJSTERS"
+        ],
+        "kind": "voedsel"
+      }
+    ],
+    "discrepancies": [],
+    "open": [
+      "De vluchtopname is echt, maar de staart is deels afgedekt en de vleugels zijn niet overal scherp. De foto staat als voorlopig."
+    ]
+  },
+  "sp046": {
+    "summary": {
+      "text": "Warme bruine lijster met een lichte onderzijde en donkere, vaak pijlpuntige vlekken. In de zang worden korte motieven enkele keren herhaald.",
+      "sources": [
+        "VB_ZANGL",
+        "VB_LIJSTERZANG",
+        "RSPB_LIJSTERS"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Vrij egaal warmbruin van boven bij volwassen vogels.",
+        "sources": [
+          "VB_ZANGL",
+          "RSPB_LIJSTERS"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Lichte borst met donkere, vaak pijlpuntige vlekken.",
+        "sources": [
+          "VB_ZANGL"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Warme geelbruine tot oranjegele ondervleugeldekveren.",
+        "sources": [
+          "BZH_ZANGL",
+          "NAT_ZANGL"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Bij juvenielen zitten lichte vlekjes en streepjes op de bovendelen.",
+        "sources": [
+          "BZH_ZANGL",
+          "NAT_ZANGL"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "caution": {
+      "text": "Een gevlekte borst komt bij meerdere lijsters voor. Combineer de vorm van de vlekken met ondervleugel, rugkleur en bouw.",
+      "sources": [
+        "VB_ZANGL",
+        "VB_GL",
+        "NAT_ZANGL"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Borstvlekken en ondervleugeldekveren",
+        "where": "Borst van voren en ondervleugel in vlucht",
+        "this": "Vaak pijlpuntige vlekken op een lichte onderzijde. De ondervleugeldekveren zijn warm geelbruin.",
+        "other": "Grote Lijster heeft doorgaans rondere vlekken en bleke ondervleugels. Kramsvogel heeft witte ondervleugeldekveren en een grijze kop en stuit.",
+        "vs": [
+          "sp049",
+          "sp047"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Goed zicht op de vorm van de vlekken en liefst ook de ondervleugel.",
+        "exceptions": "De vorm van de vlekken kan met kijkhoek en positie op het lichaam veranderen. Tegenlicht beïnvloedt de ondervleugelkleur.",
+        "supporting": "Vergelijk rugkleur en postuur. Luister bij zang naar herhaalde motieven.",
+        "sources": [
+          "VB_ZANGL",
+          "VB_GL",
+          "VB_KRAM",
+          "BZH_ZANGL",
+          "NAT_ZANGL",
+          "VB_LIJSTERZANG"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp049",
+        "why": "Vergelijk vorm van de borstvlekken, rugkleur en ondervleugel.",
+        "sources": [
+          "VB_GL",
+          "VB_ZANGL"
+        ]
+      },
+      {
+        "id": "sp047",
+        "why": "Kijk naar de warmere ondervleugel van de Zanglijster en de grijze kop en stuit van de Kramsvogel.",
+        "sources": [
+          "VB_KRAM",
+          "BZH_ZANGL"
+        ]
+      },
+      {
+        "id": "sp045",
+        "why": "Bij een bruine Merel zijn borst en buik donkerder en is de staart relatief langer.",
+        "sources": [
+          "BZH_ZANGL",
+          "NAT_ZANGL"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "text": "De geslachten hebben hetzelfde verenkleed.",
+        "sources": [
+          "BZH_ZANGL"
+        ],
+        "topic": "geslacht"
+      },
+      {
+        "text": "Lichte vlekjes en streepjes op rug en vleugeldekveren helpen bij een juveniel.",
+        "sources": [
+          "BZH_ZANGL",
+          "NAT_ZANGL"
+        ],
+        "topic": "leeftijd"
+      }
+    ],
+    "voice": [
+      {
+        "text": "Luide zang waarin korte motieven meestal twee of drie keer klinken voordat het volgende motief volgt.",
+        "sources": [
+          "VB_LIJSTERZANG",
+          "RSPB_LIJSTERS"
+        ],
+        "kind": "zang"
+      }
+    ],
+    "basis": {
+      "size": {
+        "text": "Blasco-Zumeta en Heinze geven 20–22 cm lichaamslengte.",
+        "sources": [
+          "BZH_ZANGL"
+        ]
+      }
+    },
+    "habitat": [
+      {
+        "text": "Bossen, parken en tuinen met bomen en lage begroeiing.",
+        "sources": [
+          "VB_ZANGL",
+          "NAT_ZANGL"
+        ],
+        "kind": "nederland"
+      }
+    ],
+    "status": [
+      {
+        "text": "Broedt in Nederland. De soort is ook op doortrek en in de winter aanwezig.",
+        "sources": [
+          "SOV_ZANGL"
+        ],
+        "kind": "voorkomen"
+      }
+    ],
+    "life": [
+      {
+        "text": "Zoekt onder meer regenwormen en slakken. Kan slakkenhuisjes op een vaste steen stukslaan.",
+        "sources": [
+          "VB_ZANGL",
+          "NAT_ZANGL"
+        ],
+        "kind": "voedsel"
+      }
+    ],
+    "discrepancies": [],
+    "open": []
+  },
+  "sp047": {
+    "summary": {
+      "text": "Lijster met een grijze kop en stuit, bruine rug en donker gevlekte borst. In Nederland vooral te zien tijdens de trek en in de winter.",
+      "sources": [
+        "VB_KRAM",
+        "NAT_KRAM",
+        "SOV_KRAM"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Bij volwassen vogels een overwegend grijze kop en stuit met een warmbruine mantel.",
+        "sources": [
+          "VB_KRAM",
+          "NAT_KRAM"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Gevlekte onderzijde met een oranjegele tint op de borst.",
+        "sources": [
+          "VB_KRAM",
+          "NAT_KRAM"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Lichte ondervleugeldekveren en een donkere staart.",
+        "sources": [
+          "VB_KRAM",
+          "NAT_KRAM"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Juveniel met doffere rug en minder uitgesproken contrast tussen kop en rug.",
+        "sources": [
+          "NAT_KRAM"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "caution": {
+      "text": "Bij juvenielen is het grijs van de kop minder opvallend. Bij gewone kijkafstand blijven geslachtsdetails vaak onzeker.",
+      "sources": [
+        "NAT_KRAM",
+        "BZH_KRAM"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Kop, stuit en ondervleugel",
+        "where": "Zijaanzicht en in vlucht, met zicht op stuit of ondervleugel",
+        "this": "Grijze kop en stuit bij volwassen vogels, donker uiteinde van de staart en witte ondervleugeldekveren.",
+        "other": "Koperwiek heeft een opvallende lichte wenkbrauwstreep en roestrode flanken en ondervleugeldekveren. Zanglijster is egaler bruin en heeft geelbruine ondervleugeldekveren.",
+        "vs": [
+          "sp048",
+          "sp046"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Kijk in voldoende licht naar meerdere delen van de vogel.",
+        "exceptions": "Bij jonge Kramsvogels zijn kop en rug minder contrastrijk. De stuit of ondervleugel kan uit beeld blijven.",
+        "supporting": "Luister naar de scherpe, tsjakkende roep en vergelijk de rugkleur.",
+        "sources": [
+          "VB_KRAM",
+          "VB_KOPER",
+          "BZH_ZANGL",
+          "NAT_KRAM"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp048",
+        "why": "De wenkbrauw en de roestrode flanken helpen om Koperwiek te herkennen.",
+        "sources": [
+          "VB_KOPER",
+          "VB_KRAM"
+        ]
+      },
+      {
+        "id": "sp046",
+        "why": "Vergelijk de stuit, rug en ondervleugeldekveren.",
+        "sources": [
+          "VB_KRAM",
+          "BZH_ZANGL"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "text": "Jonge vogels hebben een minder contrastrijke kop en rug. De grijze stuit kan nog contrasteren met de donkere staart.",
+        "sources": [
+          "NAT_KRAM"
+        ],
+        "topic": "leeftijd"
+      },
+      {
+        "text": "Geslachtsbepaling vraagt zicht op fijne veerdetails. De kruintekening kan bij de geslachten overlappen.",
+        "sources": [
+          "BZH_KRAM"
+        ],
+        "topic": "geslacht"
+      }
+    ],
+    "voice": [
+      {
+        "text": "Scherpe, herhaalde tsjak-roep, vaak te horen bij groepen in het najaar en de winter.",
+        "sources": [
+          "VB_KRAM",
+          "NAT_KRAM"
+        ],
+        "kind": "roep"
+      }
+    ],
+    "basis": {
+      "size": {
+        "text": "Vogelbescherming noemt 22–27 cm lichaamslengte. Naturalis geeft 26 cm als referentiewaarde.",
+        "sources": [
+          "VB_KRAM",
+          "NAT_KRAM"
+        ]
+      }
+    },
+    "habitat": [
+      {
+        "text": "Zoekt in de winter onder meer voedsel op grasland en in boomgaarden.",
+        "sources": [
+          "VB_KRAM"
+        ],
+        "kind": "nederland"
+      }
+    ],
+    "status": [
+      {
+        "text": "Veel vaker doortrekker en wintergast dan broedvogel in Nederland. Als Nederlandse broedvogel staat de soort op de Rode Lijst als Gevoelig.",
+        "sources": [
+          "SOV_KRAM",
+          "VB_KRAM"
+        ],
+        "kind": "voorkomen"
+      }
+    ],
+    "life": [
+      {
+        "text": "Eet ongewervelden en, vooral buiten de broedtijd, fruit en bessen.",
+        "sources": [
+          "VB_KRAM",
+          "NAT_KRAM"
+        ],
+        "kind": "voedsel"
+      }
+    ],
+    "discrepancies": [
+      {
+        "field": "Lichaamslengte",
+        "app": "Bestaande kaartwaarde 25–27 cm.",
+        "source": "Vogelbescherming noemt 22–27 cm. Naturalis vermeldt één waarde van 26 cm. Twee vergelijkbare bronbereiken ontbreken.",
+        "sources": [
+          "VB_KRAM",
+          "NAT_KRAM"
+        ]
+      }
+    ],
     "open": []
   }
 }

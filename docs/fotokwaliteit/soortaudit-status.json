@@ -1,5 +1,5 @@
 {
- "sha": "635d78a2eae05c63bfbb43f8d9a5dc1d550c7fde",
+ "sha": "ffa1c97b6f736b1c6f5df5cfd4f3fcfd5b0748d7",
  "generated": "2026-11-11",
  "species": [
   {
@@ -2340,25 +2340,429 @@
    "id": "sp045",
    "nameNL": "Merel",
    "family": "Lijsters",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M4",
+   "date": "2026-11-11",
+   "sha": "ffa1c97b6f736b1c6f5df5cfd4f3fcfd5b0748d7",
+   "assets": [
+    {
+     "image": "/assets/species/plumage/sp045-hero-male.webp",
+     "role": "Hoofdfoto",
+     "content": "Merel op de grond met zwart kleed en geel-oranje snavel.",
+     "sexAge": "Fotograaf benoemt een mannetje. Snavel en kleed ondersteunen dat.",
+     "quality": "Scherp zijaanzicht.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "geverifieerde import 09-11 (SHA-1 461e691ba6…), CC BY 2.0 · Luiz Lapa from Oeiras, Portugal",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/sp045.webp",
+     "role": "Verenkleed (Mannetje)",
+     "content": "Mannetje op gras, met zichtbare oogring, snavel en staart.",
+     "sexAge": "Kleed, snavel en oogring bevestigen het mannetje.",
+     "quality": "Duidelijke kop en staart.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.5 · Andreas Trepte",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp045-flight.webp",
+     "role": "Verenkleed (Mannetje, landend)",
+     "content": "Mannetje met open vleugels en vooruit gestrekte poten.",
+     "sexAge": "Zwart kleed, geelachtige snavel en oogring.",
+     "quality": "Bruikbaar voor kleed en landingshouding.",
+     "verdict": "uit-rol",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · Bengt Nyman from Vaxholm, Sweden",
+      "annotations": []
+     },
+     "flight": {
+      "n": 64,
+      "id": "sp045",
+      "nameNL": "Merel",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": "male",
+      "class": "landen",
+      "quality": "goed",
+      "decision": "uit-rol",
+      "target": "kleed",
+      "newLabel": "Mannetje, landend",
+      "newNote": "Zwart mannetje met gele snavel en oogring.",
+      "reason": "Poten naar voren gestrekt: landingshouding.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0"
+     }
+    },
+    {
+     "image": "/assets/species/plumage/sp045-adult_f.webp",
+     "role": "Verenkleed (Vrouwtje)",
+     "content": "Vrouwtje op een tak met donkerbruin kleed en lichter getekende borst.",
+     "sexAge": "Fotograaf benoemt een vrouwtje. Bruin kleed ondersteunt dit.",
+     "quality": "Borsttekening goed zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Rupdeb",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp045-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Bruin jong met lichte en roestkleurige spikkels op het verenkleed.",
+     "sexAge": "Brondossier 9 november vermeldt juveniel. Geslacht onbekend.",
+     "quality": "Kleed op kop, borst en rug herkenbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · hedera.baltica from Wrocław, Poland",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp045-free-flight.webp",
+     "role": "In vlucht (Mannetje, voorlopig)",
+     "content": "Merel in vrije vlucht met de vleugels omlaag. Uitsnede van de bovenste vogel.",
+     "sexAge": "Commons categoriseert het beeld als mannetje. Kleed en snavel ondersteunen dat.",
+     "quality": "De staart is deels afgedekt. Bewegingsonscherpte beperkt het vleugeldetail.",
+     "verdict": "voorwaardelijk",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-11: zelfde opname (uitsnede uit originele Commons-JPEG, daarna WebP), CC0 1.0 · Alf Beard",
+      "annotations": [
+       "Commons vermeldt Merel, vlucht en mannetje in de categorieën. Bij de bovenste vogel zijn het donkere kleed en de geel-oranje snavel zichtbaar."
+      ]
+     },
+     "flight": {
+      "n": 147,
+      "id": "sp045",
+      "nameNL": "Merel",
+      "registry": "GUIDE_POSES[2]",
+      "sexLabel": "male",
+      "class": "vlucht",
+      "quality": "matig",
+      "decision": "voorwaardelijk",
+      "target": null,
+      "newLabel": null,
+      "newNote": "Voorlopige foto: mannetje Merel in vrije vlucht. De staart is deels afgedekt en de vleugels zijn deels onscherp.",
+      "reason": "Vrije vlucht met open vleugels en zonder zichtbare landingshouding. Staart gedeeltelijk afgedekt en veren deels onscherp.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "CC0 1.0 op Commons. Uitsnede uit de originele JPEG met bron- en bestandshash.",
+      "replacement": "gewenst"
+     }
+    }
+   ],
+   "corrections": [
+    "Aparte voorlopige vrije-vluchtfoto toegevoegd. De landingsopname blijft in de kleedgroep. De bruine Merel wordt met Zanglijster vergeleken."
+   ],
+   "missing": [],
+   "wishes": [
+    "Scherpe vrije-vluchtfoto met de staart en vleugels volledig zichtbaar."
+   ],
+   "uncertain": [
+    "De nieuwe vluchtfoto is bruikbaar als voorlopig voorbeeld, met beperkte zichtbaarheid van de staart en bewegingsonscherpte."
+   ],
+   "sexPolicy": "Mannetje en vrouwtje waar bron en beeld dat dragen. Het juveniel blijft zonder geslachtslabel.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "PARTIALLY TESTED",
+    "browser": "VERIFIED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": false,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Borstgrondkleur en staart bij bruine vogels"
+    ],
+    "open": [
+     "De vluchtopname is echt, maar de staart is deels afgedekt en de vleugels zijn niet overal scherp. De foto staat als voorlopig."
+    ],
+    "discrepancies": 0
+   },
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium 145 (Playwright)",
+    "photos": 6,
+    "sections": [
+     "Hoofdfoto",
+     "Verenkleed",
+     "In vlucht"
+    ],
+    "flight": [
+     "/assets/species/plumage/sp045-free-flight.webp"
+    ],
+    "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik",
+    "testedOn": "ffa1c97b6f736b1c6f5df5cfd4f3fcfd5b0748d7",
+    "date": "2026-11-11",
+    "offline": {
+     "method": "Lokale HTTP-server stopgezet na precache, herladen, soortkaart geopend en foto’s gedecodeerd",
+     "status": "VERIFIED"
+    }
+   },
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
   },
   {
    "id": "sp046",
    "nameNL": "Zanglijster",
    "family": "Lijsters",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M4",
+   "date": "2026-11-11",
+   "sha": "ffa1c97b6f736b1c6f5df5cfd4f3fcfd5b0748d7",
+   "assets": [
+    {
+     "image": "/assets/species/sp046.webp",
+     "role": "Hoofdfoto",
+     "content": "Lijster op een tak met bruine bovendelen en donkere vlekken op een lichte onderzijde.",
+     "sexAge": "Geslacht onbekend.",
+     "quality": "Borsttekening en vleugel goed zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.5 · Andreas Trepte",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp046-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Juveniele Zanglijster met lichte tekening op de bovenzijde en een gevlekte borst.",
+     "sexAge": "De fotograaf benoemt een juveniel. Geslacht onbekend.",
+     "quality": "Voldoende detail in rug en vleugeldekveren.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY 2.0 · Frank Vassen",
+      "annotations": [
+       "Fotograaf benoemt een juveniel. De lichte boventekening ondersteunt het label. Geslacht onbekend."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp046-flight.webp",
+     "role": "In vlucht",
+     "content": "Zanglijster vrij in de lucht met uitgespreide vleugels en warm gekleurde ondervleugeldekveren.",
+     "sexAge": "Geslacht en exacte leeftijd onbekend.",
+     "quality": "Herkenbare borsttekening en ondervleugelkleur.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · Mark Kilner",
+      "annotations": []
+     },
+     "flight": {
+      "n": 65,
+      "id": "sp046",
+      "nameNL": "Zanglijster",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0"
+     }
+    }
+   ],
+   "corrections": [
+    "Brongeverifieerd juveniel toegevoegd. De vergelijkingen tonen verschillen met Grote Lijster, Merel en Kramsvogel."
+   ],
+   "missing": [],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "De geslachten hebben gelijk verenkleed. Neutrale fotolabels.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "VERIFIED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Borstvlekken en ondervleugeldekveren"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium 145 (Playwright)",
+    "photos": 3,
+    "sections": [
+     "Hoofdfoto",
+     "Verenkleed",
+     "In vlucht"
+    ],
+    "flight": [
+     "/assets/species/plumage/sp046-flight.webp"
+    ],
+    "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik",
+    "testedOn": "ffa1c97b6f736b1c6f5df5cfd4f3fcfd5b0748d7",
+    "date": "2026-11-11",
+    "offline": {
+     "method": "Lokale HTTP-server stopgezet na precache, herladen, soortkaart geopend en foto’s gedecodeerd",
+     "status": "VERIFIED"
+    }
+   },
+   "errors": [],
+   "verdict": "VERIFIED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp047",
    "nameNL": "Kramsvogel",
    "family": "Lijsters",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M4",
+   "date": "2026-11-11",
+   "sha": "ffa1c97b6f736b1c6f5df5cfd4f3fcfd5b0748d7",
+   "assets": [
+    {
+     "image": "/assets/species/sp047.webp",
+     "role": "Hoofdfoto",
+     "content": "Kramsvogel op de grond, met grijze kop, warmbruine mantel en gevlekte borst.",
+     "sexAge": "Geslacht onbekend.",
+     "quality": "Goed zijaanzicht van kop, mantel en borst.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Frankie Fouganthin",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp047-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Juveniele Kramsvogel met gevlekte borst, bruingrijze kop en minder sterk contrast tussen kop en rug.",
+     "sexAge": "De fotograaf benoemt een juveniel. Geslacht onbekend.",
+     "quality": "Voldoende detail op kop en borst.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY-SA 2.0 · hedera.baltica",
+      "annotations": [
+       "De fotograaf benoemt een juveniele Kramsvogel. Doffere kop en rug passen bij het jeugdkleed. Geslacht onbekend."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp047-flight.webp",
+     "role": "In vlucht",
+     "content": "Vogel los van ondergrond en takken, met gespreide vleugels en lichte ondervleugeldekveren.",
+     "sexAge": "Geslacht en exacte leeftijd onbekend.",
+     "quality": "Vleugels zichtbaar. Takken maken de achtergrond druk.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Hangsna",
+      "annotations": []
+     },
+     "flight": {
+      "n": 63,
+      "id": "sp047",
+      "nameNL": "Kramsvogel",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0"
+     }
+    }
+   ],
+   "corrections": [
+    "Brongeverifieerd juveniel toegevoegd. Vergelijking met Koperwiek toont kop en flank. De vluchtvergelijking met Zanglijster gebruikt ondervleugeldekveren."
+   ],
+   "missing": [],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "Geen geslacht vastgesteld. Veldfoto’s tonen de fijne veerdetails onvoldoende.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "VERIFIED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Kop, stuit en ondervleugel"
+    ],
+    "open": [],
+    "discrepancies": 1
+   },
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium 145 (Playwright)",
+    "photos": 3,
+    "sections": [
+     "Hoofdfoto",
+     "Verenkleed",
+     "In vlucht"
+    ],
+    "flight": [
+     "/assets/species/plumage/sp047-flight.webp"
+    ],
+    "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik",
+    "testedOn": "ffa1c97b6f736b1c6f5df5cfd4f3fcfd5b0748d7",
+    "date": "2026-11-11",
+    "offline": {
+     "method": "Lokale HTTP-server stopgezet na precache, herladen, soortkaart geopend en foto’s gedecodeerd",
+     "status": "VERIFIED"
+    }
+   },
+   "errors": [],
+   "verdict": "VERIFIED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp048",

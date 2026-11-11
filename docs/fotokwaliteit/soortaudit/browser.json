@@ -441,6 +441,66 @@
     "method": "Lokale HTTP-server stopgezet na precache, herladen, soortkaart geopend en foto’s gedecodeerd",
     "status": "VERIFIED"
    }
+  },
+  "sp047": {
+   "ok": true,
+   "viewport": "390x844 Chromium 145 (Playwright)",
+   "photos": 3,
+   "sections": [
+    "Hoofdfoto",
+    "Verenkleed",
+    "In vlucht"
+   ],
+   "flight": [
+    "/assets/species/plumage/sp047-flight.webp"
+   ],
+   "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik",
+   "testedOn": "ffa1c97b6f736b1c6f5df5cfd4f3fcfd5b0748d7",
+   "date": "2026-11-11",
+   "offline": {
+    "method": "Lokale HTTP-server stopgezet na precache, herladen, soortkaart geopend en foto’s gedecodeerd",
+    "status": "VERIFIED"
+   }
+  },
+  "sp045": {
+   "ok": true,
+   "viewport": "390x844 Chromium 145 (Playwright)",
+   "photos": 6,
+   "sections": [
+    "Hoofdfoto",
+    "Verenkleed",
+    "In vlucht"
+   ],
+   "flight": [
+    "/assets/species/plumage/sp045-free-flight.webp"
+   ],
+   "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik",
+   "testedOn": "ffa1c97b6f736b1c6f5df5cfd4f3fcfd5b0748d7",
+   "date": "2026-11-11",
+   "offline": {
+    "method": "Lokale HTTP-server stopgezet na precache, herladen, soortkaart geopend en foto’s gedecodeerd",
+    "status": "VERIFIED"
+   }
+  },
+  "sp046": {
+   "ok": true,
+   "viewport": "390x844 Chromium 145 (Playwright)",
+   "photos": 3,
+   "sections": [
+    "Hoofdfoto",
+    "Verenkleed",
+    "In vlucht"
+   ],
+   "flight": [
+    "/assets/species/plumage/sp046-flight.webp"
+   ],
+   "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik",
+   "testedOn": "ffa1c97b6f736b1c6f5df5cfd4f3fcfd5b0748d7",
+   "date": "2026-11-11",
+   "offline": {
+    "method": "Lokale HTTP-server stopgezet na precache, herladen, soortkaart geopend en foto’s gedecodeerd",
+    "status": "VERIFIED"
+   }
   }
  }
 }

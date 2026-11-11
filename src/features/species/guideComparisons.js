@@ -950,10 +950,46 @@ export const GUIDE_COMPARISONS = [
     tip: 'Kijk bij een goed zicht op de kop eerst naar de kruin en de wang. Bij de Huismus op de foto ontbreekt een losse wangvlek.',
   },
   {
+    label: 'Merel en Zanglijster · volwassen',
+    birds: [
+      {id: 'sp045', source: 'merel', plumage: 'adult_f', marks: 'Bruine onderzijde, licht getekende borst en relatief lange staart.'},
+      {id: 'sp046', source: 'zanglijster', marks: 'Lichte onderzijde met donkere vlekken en een kortere staart.'},
+    ],
+    rows: [
+      {label: 'Borst en buik', values: ['Bruin met een lichtere, getekende borst', 'Licht met duidelijke donkere vlekken']},
+      {label: 'Staart', values: ['Relatief lang', 'Relatief kort']},
+    ],
+    tip: 'Kijk bij een bruine vogel naar de grondkleur onder de vlekken. Ook een jonge Merel kan sterk gevlekt zijn.',
+  },
+  {
+    label: 'Zanglijster en Grote Lijster · volwassen',
+    birds: [
+      {id: 'sp046', source: 'zanglijster', marks: 'Warmbruin van boven, vaak pijlpuntige borstvlekken.'},
+      {id: 'sp049', source: 'grote-lijster', marks: 'Grijzer van boven, rondere borstvlekken en groter postuur.'},
+    ],
+    rows: [
+      {label: 'Borstvlekken', values: ['Vaak pijlpuntig', 'Doorgaans ronder']},
+      {label: 'Bovendelen', values: ['Warmbruin', 'Bleker en grijzer']},
+    ],
+    tip: 'Bekijk de vorm van meerdere vlekken. In vlucht helpt ook de blekere ondervleugel van Grote Lijster.',
+  },
+  {
+    label: 'Kramsvogel en Koperwiek · volwassen',
+    birds: [
+      {id: 'sp047', source: 'kramsvogel', marks: 'Grijze kop en stuit, warmbruine mantel.'},
+      {id: 'sp048', source: 'koperwiek', marks: 'Brede lichte wenkbrauwstreep en roestrode flanken.'},
+    ],
+    rows: [
+      {label: 'Kop', values: ['Overwegend grijs bij volwassen vogels', 'Duidelijke lichte wenkbrauwstreep']},
+      {label: 'Flank en ondervleugel', values: ['Lichte ondervleugeldekveren', 'Roestrode flanken en ondervleugeldekveren']},
+    ],
+    tip: 'Controleer kop en flank samen. Bij een jonge Kramsvogel is de kop minder duidelijk grijs.',
+  },
+  {
     label: 'Zanglijster en Kramsvogel · in vlucht',
     flight: true,
     birds: [
-      {id: 'sp046', source: 'zanglijster', marks: 'Warmbruine ondervleugels en donkere vlekken op borst en flanken.'},
+      {id: 'sp046', source: 'zanglijster', marks: 'Warm geelbruine ondervleugeldekveren en donkere vlekken op borst en flanken.'},
       {id: 'sp047', source: 'kramsvogel', marks: 'Lichte ondervleugeldekveren, gevlekte borst en een lange staart met een donker uiteinde.'},
     ],
     tip: 'Vergelijk de kleur van de ondervleugels en kijk ook naar de staart. Tegenlicht kan lichte veren donkerder laten lijken.',

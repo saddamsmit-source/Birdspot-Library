@@ -1,13 +1,14 @@
 {
   "_meta": {
     "batch": "M4",
-    "phase": 1,
+    "phase": 2,
     "date": "2026-11-11",
-    "title": "K03 fase 1 — drie gecontroleerde soorten",
+    "title": "K03 fasen 1–2 — zes gecontroleerde soorten",
     "reviewer": "ChatGPT (Codex), beeldinspectie en primaire broncontrole. Onafhankelijke review open.",
     "basis": "M3 fase 4 op 4d0f0ac, K03-batchplan en Birdspot-kwaliteitsnorm",
     "phaseReports": [
-      "../M4_FASE_1_2026-11-11.md"
+      "../M4_FASE_1_2026-11-11.md",
+      "../M4_FASE_2_2026-11-11.md"
     ]
   },
   "species": {
@@ -130,6 +131,125 @@
       ],
       "missing": [],
       "sexPolicy": "Mannetje en vrouwtje waar bron en beeld dat dragen. Juveniel zonder geslachtslabel.",
+      "uncertain": []
+    },
+    "sp045": {
+      "assets": {
+        "/assets/species/plumage/sp045-hero-male.webp": {
+          "role": "Hoofdfoto",
+          "content": "Merel op de grond met zwart kleed en geel-oranje snavel.",
+          "sexAge": "Fotograaf benoemt een mannetje. Snavel en kleed ondersteunen dat.",
+          "quality": "Scherp zijaanzicht.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/sp045.webp": {
+          "role": "Verenkleed (Mannetje)",
+          "content": "Mannetje op gras, met zichtbare oogring, snavel en staart.",
+          "sexAge": "Kleed, snavel en oogring bevestigen het mannetje.",
+          "quality": "Duidelijke kop en staart.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp045-flight.webp": {
+          "role": "Verenkleed (Mannetje, landend)",
+          "content": "Mannetje met open vleugels en vooruit gestrekte poten.",
+          "sexAge": "Zwart kleed, geelachtige snavel en oogring.",
+          "quality": "Bruikbaar voor kleed en landingshouding.",
+          "verdict": "uit-rol"
+        },
+        "/assets/species/plumage/sp045-adult_f.webp": {
+          "role": "Verenkleed (Vrouwtje)",
+          "content": "Vrouwtje op een tak met donkerbruin kleed en lichter getekende borst.",
+          "sexAge": "Fotograaf benoemt een vrouwtje. Bruin kleed ondersteunt dit.",
+          "quality": "Borsttekening goed zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp045-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Bruin jong met lichte en roestkleurige spikkels op het verenkleed.",
+          "sexAge": "Brondossier 9 november vermeldt juveniel. Geslacht onbekend.",
+          "quality": "Kleed op kop, borst en rug herkenbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp045-free-flight.webp": {
+          "role": "In vlucht (Mannetje, voorlopig)",
+          "content": "Merel in vrije vlucht met de vleugels omlaag. Uitsnede van de bovenste vogel.",
+          "sexAge": "Commons categoriseert het beeld als mannetje. Kleed en snavel ondersteunen dat.",
+          "quality": "De staart is deels afgedekt. Bewegingsonscherpte beperkt het vleugeldetail.",
+          "verdict": "voorwaardelijk"
+        }
+      },
+      "corrections": [
+        "Aparte voorlopige vrije-vluchtfoto toegevoegd. De landingsopname blijft in de kleedgroep. De bruine Merel wordt met Zanglijster vergeleken."
+      ],
+      "missing": [],
+      "wishes": [
+        "Scherpe vrije-vluchtfoto met de staart en vleugels volledig zichtbaar."
+      ],
+      "sexPolicy": "Mannetje en vrouwtje waar bron en beeld dat dragen. Het juveniel blijft zonder geslachtslabel.",
+      "uncertain": [
+        "De nieuwe vluchtfoto is bruikbaar als voorlopig voorbeeld, met beperkte zichtbaarheid van de staart en bewegingsonscherpte."
+      ]
+    },
+    "sp046": {
+      "assets": {
+        "/assets/species/sp046.webp": {
+          "role": "Hoofdfoto",
+          "content": "Lijster op een tak met bruine bovendelen en donkere vlekken op een lichte onderzijde.",
+          "sexAge": "Geslacht onbekend.",
+          "quality": "Borsttekening en vleugel goed zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp046-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Juveniele Zanglijster met lichte tekening op de bovenzijde en een gevlekte borst.",
+          "sexAge": "De fotograaf benoemt een juveniel. Geslacht onbekend.",
+          "quality": "Voldoende detail in rug en vleugeldekveren.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp046-flight.webp": {
+          "role": "In vlucht",
+          "content": "Zanglijster vrij in de lucht met uitgespreide vleugels en warm gekleurde ondervleugeldekveren.",
+          "sexAge": "Geslacht en exacte leeftijd onbekend.",
+          "quality": "Herkenbare borsttekening en ondervleugelkleur.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Brongeverifieerd juveniel toegevoegd. De vergelijkingen tonen verschillen met Grote Lijster, Merel en Kramsvogel."
+      ],
+      "missing": [],
+      "sexPolicy": "De geslachten hebben gelijk verenkleed. Neutrale fotolabels.",
+      "uncertain": []
+    },
+    "sp047": {
+      "assets": {
+        "/assets/species/sp047.webp": {
+          "role": "Hoofdfoto",
+          "content": "Kramsvogel op de grond, met grijze kop, warmbruine mantel en gevlekte borst.",
+          "sexAge": "Geslacht onbekend.",
+          "quality": "Goed zijaanzicht van kop, mantel en borst.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp047-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Juveniele Kramsvogel met gevlekte borst, bruingrijze kop en minder sterk contrast tussen kop en rug.",
+          "sexAge": "De fotograaf benoemt een juveniel. Geslacht onbekend.",
+          "quality": "Voldoende detail op kop en borst.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp047-flight.webp": {
+          "role": "In vlucht",
+          "content": "Vogel los van ondergrond en takken, met gespreide vleugels en lichte ondervleugeldekveren.",
+          "sexAge": "Geslacht en exacte leeftijd onbekend.",
+          "quality": "Vleugels zichtbaar. Takken maken de achtergrond druk.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Brongeverifieerd juveniel toegevoegd. Vergelijking met Koperwiek toont kop en flank. De vluchtvergelijking met Zanglijster gebruikt ondervleugeldekveren."
+      ],
+      "missing": [],
+      "sexPolicy": "Geen geslacht vastgesteld. Veldfoto’s tonen de fijne veerdetails onvoldoende.",
       "uncertain": []
     }
   }
