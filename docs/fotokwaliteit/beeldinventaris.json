@@ -4164,6 +4164,61 @@
    "source": "M4-fase 4",
    "decision": "goedgekeurd",
    "note": "Commons categoriseert de opname als juveniel. Korte kuif, bruin kleed en brede lichte veerranden ondersteunen het label. Geslacht onbekend."
+  },
+  "/assets/species/plumage/sp036-adult_f.webp": {
+   "refs": [
+    "sp036 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "eb489f1cf65881d186d598620ce52630385802a2",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M5-fase 1",
+   "decision": "goedgekeurd",
+   "note": "De fotograaf benoemt een vrouwtje. Het grijsgroene kleed en de gele vleugelrand zijn zichtbaar."
+  },
+  "/assets/species/plumage/sp036-juv.webp": {
+   "refs": [
+    "sp036 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "5e733dd05a2e542b6c32ba045e68bb4e9ef3f1a7",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M5-fase 1",
+   "decision": "goedgekeurd",
+   "note": "De fotograaf benoemt een juveniel. Stevige snavel en donkere streping zichtbaar. Geslacht onbekend."
+  },
+  "/assets/species/plumage/sp037-adult_m.webp": {
+   "refs": [
+    "sp037 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "e77aa4956ce5eaa2dc32b10079d2dedc3b79e7a5",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M5-fase 1",
+   "decision": "goedgekeurd",
+   "note": "De fotograaf benoemt een mannetje. Het rode masker reikt achter het oog."
+  },
+  "/assets/species/plumage/sp037-adult_f.webp": {
+   "refs": [
+    "sp037 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "d7723bfae4910c2e619ec30de489ab01b09b2505",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M5-fase 1",
+   "decision": "goedgekeurd",
+   "note": "De oorspronkelijke bestandsnaam van fotograaf Francesco Canu noemt femmina (vrouwtje). Het zichtbare masker is relatief beperkt. Maskergrootte alleen geeft geen zekere geslachtsbepaling."
+  },
+  "/assets/species/plumage/sp037-juv.webp": {
+   "refs": [
+    "sp037 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "fab2ba3414543ae8865db0190be163ca04cc1419",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M5-fase 1",
+   "decision": "goedgekeurd",
+   "note": "De fotograaf benoemt een juveniel. Bruine kop en gele vleugelband zijn zichtbaar. Geslacht onbekend."
   }
  }
 }
