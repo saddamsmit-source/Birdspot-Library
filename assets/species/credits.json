@@ -199,11 +199,12 @@
     "batch": "garden-song-02",
     "modifications": "Resized to max 1600 px and converted to WebP; no crop",
     "reviewed": "2026-11-05",
-    "verification": "Commons scientific identity and license metadata; visual morphology compared with Vogelbescherming recognition page; no independent ornithologist certification",
+    "verification": "De fotograaf vermeldt een mannetje. Het helder geelgroene kleed is zichtbaar. Beeldmatch in bronaudit 09-11.",
     "visualCheck": "Groene vogel met zware bleke snavel en gele vleugelrand; volledig op een tak in een tuin.",
     "alt": "Groenling in natuurlijke omgeving — Groene vogel met zware bleke snavel en gele vleugelrand; volledig op een tak in een tuin.",
     "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/groenling",
-    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "sex": "male"
   },
   "sp046": {
     "file": "Song Thrush Turdus philomelos.jpg",

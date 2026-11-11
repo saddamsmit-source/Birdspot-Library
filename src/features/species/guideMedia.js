@@ -4303,6 +4303,128 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "age": "juvenile",
       "note": "Juveniele Kievit met een korte kuif en lichte veerranden op rug en vleugels."
     }
+  },
+  "sp036": {
+    "adult_f": {
+      "file": "Chloris chloris female.jpg",
+      "nl": "Groenling",
+      "latin": "Chloris chloris",
+      "author": "Francis C. Franklin",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Chloris_chloris_female.jpg",
+      "showSourceLink": true,
+      "alt": "Vrouwtje Groenling in zijaanzicht met grijsgroen kleed, stevige snavel en gedempte gele vleugelrand.",
+      "note": "Vrouwtje Groenling in zijaanzicht met grijsgroen kleed, stevige snavel en gedempte gele vleugelrand.",
+      "modifications": "Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+      "reviewed": "2026-11-11",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/groenling",
+      "visualCheck": "Vrouwtje Groenling in zijaanzicht met grijsgroen kleed, stevige snavel en gedempte gele vleugelrand.",
+      "verification": "De fotograaf benoemt een vrouwtje. Het grijsgroene kleed en de gele vleugelrand zijn zichtbaar.",
+      "width": 1400,
+      "height": 1050,
+      "image": "/assets/species/plumage/sp036-adult_f.webp",
+      "sha1": "eb489f1cf65881d186d598620ce52630385802a2",
+      "sourceAudit": "2026-11-11",
+      "sex": "female"
+    },
+    "juv": {
+      "file": "Verdilhão, juvenil, European Greenfinch, juvenile (50375120742).jpg",
+      "nl": "Groenling",
+      "latin": "Chloris chloris",
+      "author": "Luiz Lapa from Oeiras, Portugal",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Verdilh%C3%A3o%2C_juvenil%2C_European_Greenfinch%2C_juvenile_(50375120742).jpg",
+      "showSourceLink": true,
+      "alt": "Jonge Groenling met sterk gestreepte borst en buik en geel langs de vleugel.",
+      "note": "Jonge Groenling met sterk gestreepte borst en buik en geel langs de vleugel.",
+      "modifications": "Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+      "reviewed": "2026-11-11",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/groenling",
+      "visualCheck": "Jonge Groenling met sterk gestreepte borst en buik en geel langs de vleugel.",
+      "verification": "De fotograaf benoemt een juveniel. Stevige snavel en donkere streping zichtbaar. Geslacht onbekend.",
+      "width": 1400,
+      "height": 897,
+      "image": "/assets/species/plumage/sp036-juv.webp",
+      "sha1": "5e733dd05a2e542b6c32ba045e68bb4e9ef3f1a7",
+      "sourceAudit": "2026-11-11",
+      "age": "juvenile"
+    },
+    "adult_m": {
+      "reuseGuidePhoto": true
+    }
+  },
+  "sp037": {
+    "adult_m": {
+      "file": "European goldfinch (Carduelis carduelis) male.jpg",
+      "nl": "Putter",
+      "latin": "Carduelis carduelis",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:European_goldfinch_(Carduelis_carduelis)_male.jpg",
+      "showSourceLink": true,
+      "alt": "Mannetje Putter op een tak met rood gezicht, donkere vleugel en brede gele vleugelband.",
+      "note": "Mannetje Putter op een tak met rood gezicht, donkere vleugel en brede gele vleugelband.",
+      "modifications": "Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+      "reviewed": "2026-11-11",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/putter",
+      "visualCheck": "Mannetje Putter op een tak met rood gezicht, donkere vleugel en brede gele vleugelband.",
+      "verification": "De fotograaf benoemt een mannetje. Het rode masker reikt achter het oog.",
+      "width": 1400,
+      "height": 934,
+      "image": "/assets/species/plumage/sp037-adult_m.webp",
+      "sha1": "e77aa4956ce5eaa2dc32b10079d2dedc3b79e7a5",
+      "sourceAudit": "2026-11-11",
+      "sex": "male"
+    },
+    "adult_f": {
+      "file": "Cardelius Cardelius femmina.JPG",
+      "nl": "Putter",
+      "latin": "Carduelis carduelis",
+      "author": "Francesco Canu",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Cardelius_Cardelius_femmina.JPG",
+      "showSourceLink": true,
+      "alt": "Volwassen vrouwtje Putter op een draad. Het rode masker is rond de snavel en het oog zichtbaar.",
+      "note": "Volwassen vrouwtje Putter op een draad. Het rode masker is rond de snavel en het oog zichtbaar.",
+      "modifications": "Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+      "reviewed": "2026-11-11",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/putter",
+      "visualCheck": "Volwassen vrouwtje Putter op een draad. Het rode masker is rond de snavel en het oog zichtbaar.",
+      "verification": "De oorspronkelijke bestandsnaam van fotograaf Francesco Canu noemt femmina (vrouwtje). Het zichtbare masker is relatief beperkt. Maskergrootte alleen geeft geen zekere geslachtsbepaling.",
+      "width": 1400,
+      "height": 961,
+      "image": "/assets/species/plumage/sp037-adult_f.webp",
+      "sha1": "d7723bfae4910c2e619ec30de489ab01b09b2505",
+      "sourceAudit": "2026-11-11",
+      "sex": "female"
+    },
+    "juv": {
+      "file": "Goldfinch - Carduelis carduelis - Juvenile.jpg",
+      "nl": "Putter",
+      "latin": "Carduelis carduelis",
+      "author": "caroline legg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Goldfinch_-_Carduelis_carduelis_-_Juvenile.jpg",
+      "showSourceLink": true,
+      "alt": "Juveniele Putter met grijsbruine kop, donker gevlekte borst en gele vleugelband.",
+      "note": "Juveniele Putter met grijsbruine kop, donker gevlekte borst en gele vleugelband.",
+      "modifications": "Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+      "reviewed": "2026-11-11",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/putter",
+      "visualCheck": "Juveniele Putter met grijsbruine kop, donker gevlekte borst en gele vleugelband.",
+      "verification": "De fotograaf benoemt een juveniel. Bruine kop en gele vleugelband zijn zichtbaar. Geslacht onbekend.",
+      "width": 1000,
+      "height": 1400,
+      "image": "/assets/species/plumage/sp037-juv.webp",
+      "sha1": "fab2ba3414543ae8865db0190be163ca04cc1419",
+      "sourceAudit": "2026-11-11",
+      "age": "juvenile"
+    }
   }
 });
 export const GUIDE_HEROES = Object.freeze({
@@ -4337,7 +4459,8 @@ export const GUIDE_HEROES = Object.freeze({
   "sp250": "/assets/species/plumage/sp250-hero-male.webp",
   "sp251": "/assets/species/plumage/sp251-hero-male.webp",
   "sp029": "/assets/species/plumage/sp029-adult_m.webp",
-  "sp099": "/assets/species/plumage/sp099-adult_m.webp"
+  "sp099": "/assets/species/plumage/sp099-adult_m.webp",
+  "sp037": "/assets/species/plumage/sp037-adult_m.webp"
 });
 export const GUIDE_POSES = Object.freeze({
   "sp008": [

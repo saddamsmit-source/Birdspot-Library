@@ -1,5 +1,5 @@
 {
- "sha": "c1c0f11ab367f35c4efc483ad986a6e726154651",
+ "sha": "181688362b2b385e47939e8761586d0288259ede",
  "generated": "2026-11-11",
  "species": [
   {
@@ -2120,25 +2120,446 @@
    "id": "sp035",
    "nameNL": "Vink",
    "family": "Vinken",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M5",
+   "date": "2026-11-11",
+   "sha": "181688362b2b385e47939e8761586d0288259ede",
+   "assets": [
+    {
+     "image": "/assets/species/plumage/sp035-hero-male.webp",
+     "role": "Hoofdfoto (Mannetje)",
+     "content": "Mannetje op een tak, met blauwgrijze kop, rozige borst en lichte vleugelstreep.",
+     "sexAge": "Fotobron benoemt mannetje. Kop en borst ondersteunen het label.",
+     "quality": "Rustig zijaanzicht.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "geverifieerde import 09-11 (SHA-1 04c9fd7979…), CC BY-SA 4.0 · Charles J. Sharp",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/sp035.webp",
+     "role": "Verenkleed (Mannetje)",
+     "content": "Tweede opname van een mannetje op een tak met rozerode borst en blauwgrijze kruin.",
+     "sexAge": "Mannetje volgens eerder bron- en beeldbewijs.",
+     "quality": "Onderscheidende opname met meer zicht op de rug en staart.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 3.0 · Martin Kunz",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp035-adult_f.webp",
+     "role": "Verenkleed (Vrouwtje)",
+     "content": "Grijsbruine Vink met witte vleugelstrepen en witte buitenste staartveren.",
+     "sexAge": "Fotograaf benoemt een vrouwtje in Drenthe.",
+     "quality": "Kop en flank in zijaanzicht.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp035-juv-review.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Bruine juveniele Vink met lichte vleugelstrepen en lichte mondhoek.",
+     "sexAge": "Fotograaf benoemt een juveniel. Geslacht onbekend.",
+     "quality": "Goed zichtbaar op korte vegetatie.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Marie-Lan Taÿ Pamart",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp035-flight.webp",
+     "role": "In vlucht (Mannetje)",
+     "content": "Mannetje in vrije vlucht. Blauwe kruin, rozerode borst en lichte vleugeltekening zichtbaar.",
+     "sexAge": "Roze borst en blauwgrijze kop ondersteunen het mannelijke kleed.",
+     "quality": "Volledige vogel vrij in de lucht.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Mark Medcalf",
+      "annotations": []
+     },
+     "flight": {
+      "n": 132,
+      "id": "sp035",
+      "nameNL": "Vink",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": "male",
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 2.0"
+     }
+    }
+   ],
+   "corrections": [
+    "Fotoverdeling bevestigd. Herkenning, maatbanden en vergelijking met Huismus en Keep onderbouwd."
+   ],
+   "missing": [],
+   "wishes": [
+    "Geverifieerde gidsfoto van Keep bij de vergelijking."
+   ],
+   "uncertain": [],
+   "sexPolicy": "Volwassen man en vrouw zijn verschillend van kleed. Geslacht van het jong blijft onbekend.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "VERIFIED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Vleugelstrepen en borsttekening"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium 145 (Playwright)",
+    "photos": 5,
+    "sections": [
+     "Hoofdfoto",
+     "Verenkleed",
+     "In vlucht"
+    ],
+    "flight": [
+     "/assets/species/plumage/sp035-flight.webp"
+    ],
+    "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, vluchtrol, zoom, doorklik en geslachts- en leeftijdslabels",
+    "lijktOp": "SAB-09 OK (390 px)",
+    "offline": {
+     "status": "VERIFIED",
+     "method": "Na precache herladen en de kaart heropend met HTTP-server uit. Alle eigen beelden gedecodeerd."
+    },
+    "testedOn": "181688362b2b385e47939e8761586d0288259ede",
+    "date": "2026-11-11"
+   },
+   "errors": [],
+   "verdict": "VERIFIED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp036",
    "nameNL": "Groenling",
    "family": "Vinken",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M5",
+   "date": "2026-11-11",
+   "sha": "181688362b2b385e47939e8761586d0288259ede",
+   "assets": [
+    {
+     "image": "/assets/species/sp036.webp",
+     "role": "Hoofdfoto (Mannetje)",
+     "content": "Groenling op een tak, met geelgroen kleed en stevige, lichte snavel.",
+     "sexAge": "Fotograaf benoemt een mannetje. Kleed ondersteunt het label.",
+     "quality": "Gehele vogel goed zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Martin Kunz",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp036-adult_f.webp",
+     "role": "Verenkleed (Vrouwtje)",
+     "content": "Grijsgroene Groenling met dikke snavel en gedempte gele vleugelrand.",
+     "sexAge": "Fotograaf benoemt een vrouwtje.",
+     "quality": "Scherp zijaanzicht.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY-SA 3.0 · Francis C. Franklin",
+      "annotations": [
+       "De fotograaf benoemt een vrouwtje. Het grijsgroene kleed en de gele vleugelrand zijn zichtbaar."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp036-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge Groenling met duidelijke streping op borst en buik, gele vleugelrand en stevige snavel.",
+     "sexAge": "Fotograaf benoemt een juveniel. Geslacht onbekend.",
+     "quality": "Kop, snavel en borst in beeld.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY 2.0 · Luiz Lapa from Oeiras, Portugal",
+      "annotations": [
+       "De fotograaf benoemt een juveniel. Stevige snavel en donkere streping zichtbaar. Geslacht onbekend."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp036-flight.webp",
+     "role": "In vlucht",
+     "content": "Groenling vrij in de lucht, met gele randen aan de buitenste vleugelpennen.",
+     "sexAge": "Geslacht en precieze leeftijd niet vastgesteld.",
+     "quality": "Vleugel, staart en snavel goed zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · Bengt Nyman from Vaxholm, Sweden",
+      "annotations": []
+     },
+     "flight": {
+      "n": 127,
+      "id": "sp036",
+      "nameNL": "Groenling",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0"
+     }
+    }
+   ],
+   "corrections": [
+    "Mannetje op bestaande hoofdfoto bevestigd. Vrouwtje en juveniel toegevoegd. Vergelijking met Sijs aangevuld."
+   ],
+   "missing": [],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "Geslachtslabels bij foto’s met bronbewijs. De vluchtfoto blijft neutraal.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "VERIFIED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Snavel, bouw en plaats van het geel"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium 145 (Playwright)",
+    "photos": 4,
+    "sections": [
+     "Hoofdfoto",
+     "Verenkleed",
+     "In vlucht"
+    ],
+    "flight": [
+     "/assets/species/plumage/sp036-flight.webp"
+    ],
+    "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, vluchtrol, zoom, doorklik en geslachts- en leeftijdslabels",
+    "lijktOp": "SAB-09 OK (390 px)",
+    "offline": {
+     "status": "VERIFIED",
+     "method": "Na precache herladen en de kaart heropend met HTTP-server uit. Alle eigen beelden gedecodeerd."
+    },
+    "testedOn": "181688362b2b385e47939e8761586d0288259ede",
+    "date": "2026-11-11"
+   },
+   "errors": [],
+   "verdict": "VERIFIED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp037",
    "nameNL": "Putter",
    "family": "Vinken",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M5",
+   "date": "2026-11-11",
+   "sha": "181688362b2b385e47939e8761586d0288259ede",
+   "assets": [
+    {
+     "image": "/assets/species/plumage/sp037-adult_m.webp",
+     "role": "Hoofdfoto (Mannetje)",
+     "content": "Putter met rood masker, brede gele vleugelband en zwart-witte kop.",
+     "sexAge": "Fotograaf benoemt mannetje. Rood reikt achter het oog.",
+     "quality": "Goed beeld van kop en gevouwen vleugel.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY-SA 3.0 · Charles J. Sharp",
+      "annotations": [
+       "De fotograaf benoemt een mannetje. Het rode masker reikt achter het oog."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp037-adult_f.webp",
+     "role": "Verenkleed (Vrouwtje)",
+     "content": "Volwassen Putter op een draad met relatief beperkt rood masker en gele vleugelband.",
+     "sexAge": "De oorspronkelijke bestandsnaam van de fotograaf vermeldt femmina (vrouwtje).",
+     "quality": "Het kopaanzicht is schuin van voren. Fijne geslachtskenmerken zijn minder duidelijk.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY-SA 3.0 · Francesco Canu",
+      "annotations": [
+       "De oorspronkelijke bestandsnaam van fotograaf Francesco Canu noemt femmina (vrouwtje). Het zichtbare masker is relatief beperkt. Maskergrootte alleen geeft geen zekere geslachtsbepaling."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp037-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge Putter met grijsbruine kop, gele vleugelband en donkere borsttekening.",
+     "sexAge": "Fotograaf benoemt juveniel. Geslacht onbekend.",
+     "quality": "Borst en gevouwen vleugel zijn zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY 2.0 · caroline legg",
+      "annotations": [
+       "De fotograaf benoemt een juveniel. Bruine kop en gele vleugelband zijn zichtbaar. Geslacht onbekend."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp037-flight.webp",
+     "role": "In vlucht",
+     "content": "Putter vrij in de lucht met open vleugel en brede gele vleugelband.",
+     "sexAge": "Geslacht niet vastgesteld.",
+     "quality": "Vlieghouding en vleugeltekening duidelijk.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · Bengt Nyman from Vaxholm, Sweden",
+      "annotations": []
+     },
+     "flight": {
+      "n": 129,
+      "id": "sp037",
+      "nameNL": "Putter",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0"
+     }
+    },
+    {
+     "image": "/assets/species/sp037.webp",
+     "role": "Overige herkenningsfoto's",
+     "content": "Volwassen Putter op een tak met brede gele vleugelband en rood gezicht.",
+     "sexAge": "Volwassen kleed. Geslacht onbekend.",
+     "quality": "Aanvullend zijportret met lichte snavel.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Francis C. Franklin",
+      "annotations": []
+     },
+     "flight": null
+    }
+   ],
+   "corrections": [
+    "Mannetje, vrouwtje en juveniel met bronvermelding toegevoegd. Vrije vlucht behouden. Vluchtvergelijking met Sijs toegevoegd."
+   ],
+   "missing": [],
+   "wishes": [
+    "Een vrouwtjesfoto in zuiver zijaanzicht voor een directere vergelijking van kop en vleugel."
+   ],
+   "uncertain": [],
+   "sexPolicy": "Geslachtslabels volgen de fotobron. Maskeromvang overlapt en is op zichzelf geen zekere bepaling.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "VERIFIED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Vleugelband en koptekening"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium 145 (Playwright)",
+    "photos": 5,
+    "sections": [
+     "Hoofdfoto",
+     "Verenkleed",
+     "In vlucht",
+     "Overige herkenningsfoto's"
+    ],
+    "flight": [
+     "/assets/species/plumage/sp037-flight.webp"
+    ],
+    "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, vluchtrol, zoom, doorklik en geslachts- en leeftijdslabels",
+    "lijktOp": "SAB-09 OK (390 px)",
+    "offline": {
+     "status": "VERIFIED",
+     "method": "Na precache herladen en de kaart heropend met HTTP-server uit. Alle eigen beelden gedecodeerd."
+    },
+    "testedOn": "181688362b2b385e47939e8761586d0288259ede",
+    "date": "2026-11-11"
+   },
+   "errors": [],
+   "verdict": "VERIFIED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp038",

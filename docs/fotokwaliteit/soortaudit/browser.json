@@ -627,6 +627,70 @@
    },
    "testedOn": "c1c0f11ab367f35c4efc483ad986a6e726154651",
    "date": "2026-11-11"
+  },
+  "sp035": {
+   "ok": true,
+   "viewport": "390x844 Chromium 145 (Playwright)",
+   "photos": 5,
+   "sections": [
+    "Hoofdfoto",
+    "Verenkleed",
+    "In vlucht"
+   ],
+   "flight": [
+    "/assets/species/plumage/sp035-flight.webp"
+   ],
+   "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, vluchtrol, zoom, doorklik en geslachts- en leeftijdslabels",
+   "lijktOp": "SAB-09 OK (390 px)",
+   "offline": {
+    "status": "VERIFIED",
+    "method": "Na precache herladen en de kaart heropend met HTTP-server uit. Alle eigen beelden gedecodeerd."
+   },
+   "testedOn": "181688362b2b385e47939e8761586d0288259ede",
+   "date": "2026-11-11"
+  },
+  "sp036": {
+   "ok": true,
+   "viewport": "390x844 Chromium 145 (Playwright)",
+   "photos": 4,
+   "sections": [
+    "Hoofdfoto",
+    "Verenkleed",
+    "In vlucht"
+   ],
+   "flight": [
+    "/assets/species/plumage/sp036-flight.webp"
+   ],
+   "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, vluchtrol, zoom, doorklik en geslachts- en leeftijdslabels",
+   "lijktOp": "SAB-09 OK (390 px)",
+   "offline": {
+    "status": "VERIFIED",
+    "method": "Na precache herladen en de kaart heropend met HTTP-server uit. Alle eigen beelden gedecodeerd."
+   },
+   "testedOn": "181688362b2b385e47939e8761586d0288259ede",
+   "date": "2026-11-11"
+  },
+  "sp037": {
+   "ok": true,
+   "viewport": "390x844 Chromium 145 (Playwright)",
+   "photos": 5,
+   "sections": [
+    "Hoofdfoto",
+    "Verenkleed",
+    "In vlucht",
+    "Overige herkenningsfoto's"
+   ],
+   "flight": [
+    "/assets/species/plumage/sp037-flight.webp"
+   ],
+   "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, vluchtrol, zoom, doorklik en geslachts- en leeftijdslabels",
+   "lijktOp": "SAB-09 OK (390 px)",
+   "offline": {
+    "status": "VERIFIED",
+    "method": "Na precache herladen en de kaart heropend met HTTP-server uit. Alle eigen beelden gedecodeerd."
+   },
+   "testedOn": "181688362b2b385e47939e8761586d0288259ede",
+   "date": "2026-11-11"
   }
  }
 }
