@@ -45,6 +45,19 @@ De afzonderlijke push-run [#43028561824](https://github.com/saddamsmit-source/Bi
 
 **Statusupdate op G02–G05:** G02 en G03 zijn **VERIFIED** (CI, beide baselines). G04 is **PARTIALLY TESTED** (de beschreven voorbeeld-LocalStorage- en één IndexedDB-blob, **niet** een volledige export/herstelmatrix). G05 is **PARTIALLY TESTED** (offline herstart en één gidsfoto in Chromium, **niet** op een fysiek toestel of alle mediasoorten). G06–G10 blijven conform de open gate-matrix hierboven. Een full release-PASS wordt hier nadrukkelijk niet geclaimd.
 
+## 2B. Geobserveerde back-up/hersteltest — 11 november 2026
+
+**VERIFIED voor de uitgevoerde BR-01..BR-07-scenario's:** [CI-run #43029814713](https://github.com/saddamsmit-source/Birdspot-Library/actions/runs/43029814713), kandidaat `9c43379a16957d76684fe8e253459ec0c87fe14f` met ongewijzigde 1.27.0-appcode. GitHub-logs rechtstreeks gelezen; de nieuwe `tests/test_release_backup_roundtrip.py` liep via de echte profiel-UI in Chromium (fictieve data, geïsoleerd testprofiel).
+
+- BR-01/02: eigen waarneming met onbekend veld, locatie en gekoppelde IndexedDB-foto werd geëxporteerd naar geldig ZIP; byte-inhoud van de foto en referenties gecontroleerd.
+- BR-03: corrupte ZIP geweigerd zonder data te wijzigen en handmatig geannuleerde valide import eveneens zonder mutatie.
+- BR-04: herimport via de UI gaf waarneming, onbekend veld, locatie, metadata en **exacte foto-bytes** terug.
+- BR-05: dezelfde ZIP opnieuw importeren veroorzaakte geen dubbel waarnemingsrecord.
+- BR-06: de veiligheidskopie zette het testprofiel terug naar de toestand vóór de import en verwijderde importmedia.
+- BR-07: geen browserpaginafouten. Daarnaast slaagde de bestaande `tests/test_profile_backup.py` (B-01..06).
+
+**Statusupdate G06:** `PARTIALLY TESTED` wordt gehandhaafd ondanks **BR-01..BR-07 PASS**, omdat oudere externe back-upformaten, alle mediavarianten, storage failure-injectie en echte toestellen nog niet afzonderlijk zijn getest. Het bewijs toont de huidige export/import-/rollbackroute, niet iedere mogelijke migratie. De beide RU-upgradematrixjobs bleven op deze code-SHA eveneens geslaagd.
+
 ## 3. Upgradeproef RU-01 t/m RU-07
 
 De toegevoegde workflow gebruikt `actions/checkout@v4` met `fetch-depth: 0`; de test archiveert **exact** de oude commit en serveert daarna de kandidaat vanaf hetzelfde lokale adres met een echt geregistreerde service worker. Bij elke baseline draait een geïsoleerde Playwright Chromium-context met fictieve waarnemingen, onbekende sleutels/velden en een fotoblob.
