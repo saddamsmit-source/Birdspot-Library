@@ -7,6 +7,7 @@ on:
     paths:
       - .github/workflows/release-upgrade-qa.yml
       - tests/test_release_upgrade.py
+      - tests/test_release_backup_roundtrip.py
       - sw.js
       - docs/release/**
   pull_request:
@@ -16,6 +17,7 @@ on:
     paths:
       - .github/workflows/release-upgrade-qa.yml
       - tests/test_release_upgrade.py
+      - tests/test_release_backup_roundtrip.py
       - sw.js
       - docs/release/**
   workflow_dispatch:
@@ -60,10 +62,20 @@ jobs:
         run: |
           set -o pipefail
           python tests/test_release_upgrade.py --base "$BASE_SHA" 2>&1 | tee "upgrade-${{ matrix.baseline.name }}.log"
+      - name: BR-01..BR-07 real ZIP backup, import, cancel, corruption and safety rollback
+        if: matrix.baseline.name == '1.14.0-main'
+        shell: bash
+        run: |
+          set -o pipefail
+          python tests/test_profile_backup.py 2>&1 | tee profile-backup.log
+          python tests/test_release_backup_roundtrip.py 2>&1 | tee backup-roundtrip.log
       - name: Preserve reproducible upgrade evidence on success or failure
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: birdspot-release-upgrade-${{ matrix.baseline.name }}
-          path: upgrade-*.log
+          path: |
+            upgrade-*.log
+            profile-backup.log
+            backup-roundtrip.log
           if-no-files-found: warn
