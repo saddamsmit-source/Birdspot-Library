@@ -450,15 +450,16 @@
    "registry": "GUIDE_POSES[0]",
    "sexLabel": null,
    "class": "vlucht",
-   "quality": "goed",
-   "decision": "goedgekeurd",
+   "quality": "beperkte scherpte",
+   "decision": "voorwaardelijk",
    "target": null,
    "newLabel": null,
    "newNote": null,
-   "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+   "reason": "Vrij in de lucht. Bewegingsonscherpte beperkt herkenningsdetails. De bron toont de Oost-Aziatische ondersoort japonensis.",
    "airborne": true,
    "rights": "VERIFIED",
-   "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0"
+   "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0",
+   "replacement": "gewenst"
   },
   "/assets/species/sp249.webp": {
    "n": 25,

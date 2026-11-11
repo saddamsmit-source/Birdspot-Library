@@ -5657,7 +5657,7 @@ export const GUIDE_POSES = Object.freeze({
     {
       "label": "In vlucht",
       "flight": true,
-      "note": "Deze vluchtfoto toont de Oost-Aziatische ondersoort japonensis. Let op de compacte bouw en de gespreide vleugels.",
+      "note": "Voorlopige foto: bewegingsonscherpte beperkt de herkenningsdetails. De opname toont de Oost-Aziatische ondersoort japonensis.",
       "file": "Regulus regulus japonensis in flight.JPG",
       "nl": "Goudhaantje",
       "latin": "Regulus regulus",
@@ -5674,7 +5674,7 @@ export const GUIDE_POSES = Object.freeze({
       "width": 1312,
       "height": 1400,
       "image": "/assets/species/plumage/sp063-flight.webp",
-      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+      "flightReview": "voorwaardelijk 2026-11-11: In vrije vlucht. Bewegingsonscherpte beperkt details en de foto toont japonensis. Een scherpe Europese vluchtfoto is gewenst."
     }
   ],
   "sp065": [
