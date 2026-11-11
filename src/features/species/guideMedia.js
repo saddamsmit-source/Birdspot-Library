@@ -4181,6 +4181,57 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "sourceAudit": "2026-11-11",
       "age": "juvenile"
     }
+  },
+  "sp048": {
+    "juv": {
+      "file": "Koperwiek · iNaturalist-foto 703836505",
+      "nl": "Koperwiek",
+      "latin": "Turdus iliacus",
+      "author": "Pyry Liedes",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://www.inaturalist.org/photos/703836505",
+      "showSourceLink": true,
+      "alt": "Jonge Koperwiek met lichte wenkbrauwstreep, gevlekte borst en lichte punten aan vleugeldekveren.",
+      "note": "Jonge Koperwiek met lichte wenkbrauwstreep, gevlekte borst en lichte punten aan vleugeldekveren.",
+      "modifications": "Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+      "reviewed": "2026-11-11",
+      "verificationSource": "https://www.inaturalist.org/observations/384496263",
+      "visualCheck": "Jonge Koperwiek met lichte wenkbrauwstreep, gevlekte borst en lichte punten aan vleugeldekveren.",
+      "verification": "iNaturalist-waarneming van onderzoekskwaliteit, taxon Turdus iliacus, leeftijdsannotatie Juvenile. Geslacht onbekend.",
+      "width": 1400,
+      "height": 1119,
+      "image": "/assets/species/plumage/sp048-juv.webp",
+      "sha1": "070d035c1a3b20a8779dde602da55aee260fd7a7",
+      "sourceAudit": "2026-11-11",
+      "age": "juvenile",
+      "observation": "https://www.inaturalist.org/observations/384496263"
+    }
+  },
+  "sp072": {
+    "juv": {
+      "file": "Juvenile Meadow Pipit (50181136792).jpg",
+      "nl": "Graspieper",
+      "latin": "Anthus pratensis",
+      "author": "caroline legg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Juvenile_Meadow_Pipit_(50181136792).jpg",
+      "showSourceLink": true,
+      "alt": "Jonge Graspieper met lichte veerranden op de vleugel, borststrepen en lichte poten.",
+      "note": "Jonge Graspieper met lichte veerranden op de vleugel, borststrepen en lichte poten.",
+      "modifications": "Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+      "reviewed": "2026-11-11",
+      "verificationSource": "https://commons.wikimedia.org/wiki/File:Juvenile_Meadow_Pipit_(50181136792).jpg",
+      "visualCheck": "Jonge Graspieper met lichte veerranden op de vleugel, borststrepen en lichte poten.",
+      "verification": "De fotograaf vermeldt een juveniel. Lichte veerranden en borststreping zichtbaar. Geslacht onbekend.",
+      "width": 1400,
+      "height": 933,
+      "image": "/assets/species/plumage/sp072-juv.webp",
+      "sha1": "e26ec91749dca6e45d73d8053cbdbbb8d74c0026",
+      "sourceAudit": "2026-11-11",
+      "age": "juvenile"
+    }
   }
 });
 export const GUIDE_HEROES = Object.freeze({
@@ -6176,7 +6227,7 @@ export const GUIDE_POSES = Object.freeze({
       "image": "/assets/species/plumage/sp078-juv.webp",
       "age": "chick",
       "label": "Donsjong",
-      "note": "Donsjong met rood-oranje kop. Het latere juveniele kleed (grijsbruin met lichte keel) is hiernaast te zien.",
+      "note": "Donsjong met rood-oranje kop en donker dons. Het latere kleed staat bij Juveniel.",
       "flight": false,
       "sourceAudit": "2026-11-09"
     },
@@ -6190,12 +6241,12 @@ export const GUIDE_POSES = Object.freeze({
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Eurasian_coot_2025_06_18.jpg",
       "showSourceLink": true,
-      "alt": "Meerkoet — juveniel, grijsbruin met een lichte keel en wangen, nog zonder de witte snavelplaat van een volwassen vogel.",
+      "alt": "Jonge Meerkoet met grijsbruin kleed, lichte keel en wangen en een klein voorhoofdsschild.",
       "modifications": "Omgezet naar WebP zonder uitsnede",
       "reviewed": "2026-11-09",
       "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/meerkoet",
-      "visualCheck": "Bron noemt expliciet 'a juvenile Eurasian coot'. Grijsbruin verenkleed met lichte keel/wangen, nog geen witte snavelplaat.",
-      "verification": "Bron noemt expliciet 'a juvenile Eurasian coot'. Grijsbruin verenkleed met lichte keel/wangen, nog geen witte snavelplaat.",
+      "visualCheck": "De fotograaf benoemt een juveniel. Lichte keel en wangen en een klein voorhoofdsschild zijn zichtbaar.",
+      "verification": "De fotograaf benoemt een juveniel. Lichte keel en wangen en een klein voorhoofdsschild zijn zichtbaar.",
       "width": 1600,
       "height": 1067,
       "image": "/assets/species/plumage/sp078-juv-grown.webp",
@@ -6203,7 +6254,7 @@ export const GUIDE_POSES = Object.freeze({
       "sha1": "f5522453133053691b4b821a106fe80c0bde1e10",
       "flight": false,
       "sourceAudit": "2026-11-09",
-      "note": "Grijsbruin verenkleed met een lichte keel en wangen, nog zonder de witte snavelplaat van een volwassen vogel."
+      "note": "Grijsbruin kleed met lichte keel en wangen. Het voorhoofdsschild is nog klein en onopvallend."
     }
   ],
   "sp079": [

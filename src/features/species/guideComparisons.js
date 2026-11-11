@@ -986,6 +986,30 @@ export const GUIDE_COMPARISONS = [
     tip: 'Controleer kop en flank samen. Bij een jonge Kramsvogel is de kop minder duidelijk grijs.',
   },
   {
+    label: 'Koperwiek en Zanglijster · volwassen',
+    birds: [
+      {id: 'sp048', source: 'koperwiek', marks: 'Brede roomwitte wenkbrauwstreep en roestrode flanken.'},
+      {id: 'sp046', source: 'zanglijster', marks: 'Minder opvallende wenkbrauw en donkere vlekken op de lichte onderzijde.'},
+    ],
+    rows: [
+      {label: 'Boven het oog', values: ['Brede lichte wenkbrauwstreep', 'Geen brede, opvallende lichte wenkbrauwstreep']},
+      {label: 'Flanken', values: ['Roestrode veerpartij', 'Licht met donkere vlekken']},
+    ],
+    tip: 'Bekijk kop en flank samen. Bij een foto met tegenlicht kan de flankkleur moeilijk zichtbaar zijn.',
+  },
+  {
+    label: 'Graspieper en Boompieper · veldkenmerken',
+    birds: [
+      {id: 'sp072', source: 'graspieper', marks: 'Fijne snavel. De borst- en flankstrepen zijn ongeveer even breed.'},
+      {id: 'sp073', source: 'boompieper', textOnly: true, marks: 'Iets forsere snavel en dunnere flankstreepjes dan borststrepen.'},
+    ],
+    rows: [
+      {label: 'Flanken', values: ['Strepen ongeveer even breed als op de borst', 'Strepen duidelijk fijner dan op de borst']},
+      {label: 'Achternagel', values: ['Doorgaans langer', 'Doorgaans korter']},
+    ],
+    tip: 'Begin bij de flankstreping. Een scherpe zijfoto kan de nagel tonen. Bij twijfel helpt een duidelijke roep of zang.',
+  },
+  {
     label: 'Zanglijster en Kramsvogel · in vlucht',
     flight: true,
     birds: [

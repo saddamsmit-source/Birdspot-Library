@@ -4098,6 +4098,28 @@
    "source": "M4-fase 2",
    "decision": "goedgekeurd",
    "note": "Juveniele Kramsvogel met gevlekte borst, bruingrijze kop en minder sterk contrast tussen kop en rug."
+  },
+  "/assets/species/plumage/sp048-juv.webp": {
+   "refs": [
+    "sp048 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "070d035c1a3b20a8779dde602da55aee260fd7a7",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M4-fase 3",
+   "decision": "goedgekeurd",
+   "note": "iNaturalist-waarneming van onderzoekskwaliteit, taxon Turdus iliacus, leeftijdsannotatie Juvenile. Geslacht onbekend."
+  },
+  "/assets/species/plumage/sp072-juv.webp": {
+   "refs": [
+    "sp072 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "e26ec91749dca6e45d73d8053cbdbbb8d74c0026",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M4-fase 3",
+   "decision": "goedgekeurd",
+   "note": "De fotograaf vermeldt een juveniel. Lichte veerranden en borststreping zichtbaar. Geslacht onbekend."
   }
  }
 }

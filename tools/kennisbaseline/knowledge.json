@@ -1250,7 +1250,7 @@
       "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/koperwiek",
       "edition": "Online geraadpleegd 11-11-2026",
       "scope": "Nederland",
-      "confirms": "wenkbrauwstreep, roestrode flanken en ondervleugeldekveren",
+      "confirms": "herkenning, vluchtroep, lengte, winterhabitat en Nederlandse broedstatus",
       "checked": "2026-11-11",
       "certainty": "hoog",
       "publisher": "Vogelbescherming Nederland"
@@ -1361,6 +1361,127 @@
       "edition": "Online geraadpleegd 11-11-2026",
       "scope": "Nederland",
       "confirms": "broedvogel, overwintering en doortrek",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Sovon Vogelonderzoek Nederland"
+    },
+    "BZH_KOPER": {
+      "register": "nieuwe soortreferentie",
+      "label": "Blasco-Zumeta & Heinze — Redwing",
+      "url": "https://www.blascozumeta.com/specie_files/12010_ENG_Turdus_iliacus_aranzadi.pdf",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Europa",
+      "confirms": "geslacht, vergelijking met Zanglijster en Kramsvogel, rui",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Javier Blasco-Zumeta & Gerd-Michael Heinze"
+    },
+    "SOV_KOPER_2023": {
+      "register": "nieuwe soortreferentie",
+      "label": "Sovon — Broedvogels in Nederland in 2023",
+      "url": "https://stats.sovon.nl/static/publicaties/Rap_2024-40_Brv-in-Nederland-in-2023-LR.pdf",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland",
+      "confirms": "een zingend territorium in 2023",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Sovon Vogelonderzoek Nederland"
+    },
+    "INAT_KOPER_JUV": {
+      "register": "nieuwe soortreferentie",
+      "label": "iNaturalist — jonge Koperwiek, Pyry Liedes",
+      "url": "https://www.inaturalist.org/observations/384496263",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Finland, 24 juli 2026",
+      "confirms": "soortidentificatie van onderzoekskwaliteit en leeftijdsannotatie Juvenile bij de opname",
+      "checked": "2026-11-11",
+      "certainty": "middel",
+      "publisher": "iNaturalist"
+    },
+    "VB_GRAS": {
+      "register": "NL07",
+      "label": "Vogelbescherming Nederland — Graspieper",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/graspieper",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland",
+      "confirms": "herkenning, vluchtroep, lengte, leefgebied en trek",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_BOOMPIEP": {
+      "register": "NL07",
+      "label": "Vogelbescherming Nederland — Boompieper",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/boompieper",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland",
+      "confirms": "vergelijking met Graspieper op geluid, snavel, flankstreping en achternagel",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "BZH_GRAS": {
+      "register": "nieuwe soortreferentie",
+      "label": "Blasco-Zumeta & Heinze — Meadow Pipit",
+      "url": "https://blascozumeta.wimbitek.com/specie_files/10110_ENG_Anthus_pratensis_aranzadi.pdf",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Europa",
+      "confirms": "geslacht, lengte, leeftijddetails en vergelijking met Boompieper",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Javier Blasco-Zumeta & Gerd-Michael Heinze"
+    },
+    "SOV_GRAS": {
+      "register": "nieuwe soortreferentie",
+      "label": "Sovon — Graspieper",
+      "url": "https://stats.sovon.nl/stats/soort/10110",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland",
+      "confirms": "broedvogel, wintergast, doortrekker en Rode Lijst",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Sovon Vogelonderzoek Nederland"
+    },
+    "VB_MEERKOET": {
+      "register": "NL07",
+      "label": "Vogelbescherming Nederland — Meerkoet",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/meerkoet",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland",
+      "confirms": "kleed, geluid, afmetingen, leefgebied en voedsel",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_WATERHOEN": {
+      "register": "NL07",
+      "label": "Vogelbescherming Nederland — Waterhoen",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/waterhoen",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland",
+      "confirms": "snavel, voorhoofdsschild en witte flanktekening",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "BZH_MEERKOET": {
+      "register": "nieuwe soortreferentie",
+      "label": "Blasco-Zumeta & Heinze — Eurasian Coot",
+      "url": "https://www.blascozumeta.com/specie_files/04290_ENG_Fulica_atra_aranzadi.pdf",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Europa",
+      "confirms": "juveniel en volwassen kleed, voorhoofdsschild en geslacht",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Javier Blasco-Zumeta & Gerd-Michael Heinze"
+    },
+    "SOV_MEERKOET": {
+      "register": "nieuwe soortreferentie",
+      "label": "Sovon — Meerkoet",
+      "url": "https://stats.sovon.nl/stats/soort/4290",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland",
+      "confirms": "broedvogel en wintergast, verspreiding bij zoet water",
       "checked": "2026-11-11",
       "certainty": "hoog",
       "publisher": "Sovon Vogelonderzoek Nederland"
@@ -8742,6 +8863,473 @@
         "sources": [
           "VB_KRAM",
           "NAT_KRAM"
+        ]
+      }
+    ],
+    "open": []
+  },
+  "sp048": {
+    "summary": {
+      "text": "Kleine bruine lijster met een brede lichte wenkbrauw, donkere borststrepen en roestrode flanken.",
+      "sources": [
+        "VB_KOPER",
+        "BZH_KOPER"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Brede roomwitte wenkbrauwstreep en een lichte mondstreep.",
+        "sources": [
+          "VB_KOPER",
+          "BZH_KOPER"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Roestrode flanken en ondervleugeldekveren.",
+        "sources": [
+          "VB_KOPER",
+          "BZH_KOPER"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Lichte onderzijde met donkere streping.",
+        "sources": [
+          "VB_KOPER",
+          "BZH_KOPER"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "caution": {
+      "text": "Bekijk kop en flank samen. In tegenlicht of bij een steile kijkhoek kan de roodbruine kleur moeilijk te zien zijn.",
+      "sources": [
+        "VB_KOPER",
+        "BZH_KOPER"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Wenkbrauw en kleur onder de vleugel",
+        "where": "Zijaanzicht en bij zicht op de ondervleugel",
+        "this": "Brede lichte wenkbrauwstreep en roestrode flanken en ondervleugeldekveren.",
+        "other": "Zanglijster mist de opvallende lichte wenkbrauwstreep en heeft geelbruine ondervleugeldekveren. Kramsvogel heeft lichte ondervleugeldekveren en als volwassen vogel een grijze kop en stuit.",
+        "vs": [
+          "sp046",
+          "sp047"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Kijk bij voldoende licht naar kop én flank of ondervleugel.",
+        "exceptions": "Een jonge Kramsvogel heeft minder grijscontrast op de kop.",
+        "supporting": "Let op de scherpe hoge vluchtroep.",
+        "sources": [
+          "VB_KOPER",
+          "BZH_KOPER",
+          "NAT_KRAM",
+          "VB_KRAM"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp046",
+        "why": "Let op de wenkbrauw, flankkleur en ondervleugeldekveren.",
+        "sources": [
+          "VB_KOPER",
+          "BZH_KOPER"
+        ]
+      },
+      {
+        "id": "sp047",
+        "why": "Vergelijk de kop en stuit, en de roestrode of lichte ondervleugeldekveren.",
+        "sources": [
+          "VB_KRAM",
+          "BZH_KOPER"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "text": "De geslachten hebben gelijk verenkleed.",
+        "sources": [
+          "BZH_KOPER"
+        ],
+        "topic": "geslacht"
+      },
+      {
+        "text": "Het getoonde jong heeft lichte punten op enkele vleugeldekveren. Bij leeftijdsbepaling in het najaar kan een ruigrens tussen oude en nieuwe dekveren helpen.",
+        "sources": [
+          "INAT_KOPER_JUV",
+          "BZH_KOPER"
+        ],
+        "topic": "leeftijd"
+      },
+      {
+        "text": "Bij gespreide vleugels kunnen de roestrode ondervleugeldekveren opvallen.",
+        "sources": [
+          "VB_KOPER",
+          "BZH_KOPER"
+        ],
+        "topic": "vlucht"
+      }
+    ],
+    "voice": [
+      {
+        "text": "Hoge, scherpe, gerekte vluchtroep. In zit kan de roep korter klinken.",
+        "sources": [
+          "VB_KOPER"
+        ],
+        "kind": "roep"
+      }
+    ],
+    "basis": {
+      "size": {
+        "text": "Vogelbescherming geeft 19–23 cm lichaamslengte. Blasco-Zumeta en Heinze geven 20–22 cm.",
+        "sources": [
+          "VB_KOPER",
+          "BZH_KOPER"
+        ]
+      }
+    },
+    "habitat": [
+      {
+        "text": "In Nederland in het najaar en de winter onder meer in weilanden, boomgaarden, bossen en parken.",
+        "sources": [
+          "VB_KOPER"
+        ],
+        "kind": "nederland"
+      }
+    ],
+    "status": [
+      {
+        "text": "In Nederland vooral doortrekker en wintergast. Sovon registreerde in 2023 een territorium op basis van een langdurig zingende vogel. De melding bevestigt geen nest.",
+        "sources": [
+          "VB_KOPER",
+          "SOV_KOPER_2023"
+        ],
+        "kind": "voorkomen"
+      }
+    ],
+    "life": [
+      {
+        "text": "Eet in de winter onder meer wormen en bessen. Zoekt in fruitteeltgebieden ook naar valfruit.",
+        "sources": [
+          "VB_KOPER"
+        ],
+        "kind": "voedsel"
+      }
+    ],
+    "discrepancies": [
+      {
+        "field": "Lichaamslengte",
+        "app": "19–23 cm, overeenkomstig de Nederlandse soortgids.",
+        "source": "Blasco-Zumeta en Heinze hanteren het smallere bereik 20–22 cm.",
+        "sources": [
+          "VB_KOPER",
+          "BZH_KOPER"
+        ]
+      },
+      {
+        "field": "Nederlandse broedstatus",
+        "app": "Aangepast naar Broedt niet in NL op basis van de soortgids. De territoriumwaarneming staat in het profiel.",
+        "source": "Vogelbescherming classificeert de soort als geen Nederlandse broedvogel. Sovon vermeldt één territorium in 2023.",
+        "sources": [
+          "VB_KOPER",
+          "SOV_KOPER_2023"
+        ]
+      }
+    ],
+    "open": []
+  },
+  "sp072": {
+    "summary": {
+      "text": "Kleine, gestreepte vogel van open terrein. Vergelijk bij twijfel met Boompieper vooral de flankstreping en luister naar de roep.",
+      "sources": [
+        "VB_GRAS",
+        "VB_BOOMPIEP",
+        "BZH_GRAS"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Donkere strepen op borst en flank zijn ongeveer even breed.",
+        "sources": [
+          "VB_GRAS",
+          "BZH_GRAS"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Fijne snavel, lichte oogring en lichte poten.",
+        "sources": [
+          "VB_GRAS",
+          "BZH_GRAS"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "De buitenste staartpennen hebben wit.",
+        "sources": [
+          "VB_GRAS",
+          "BZH_GRAS"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "caution": {
+      "text": "Voor de achternagel is een goed zijaanzicht nodig. Gebruik bij twijfel ook flankstreping en geluid.",
+      "sources": [
+        "VB_GRAS",
+        "VB_BOOMPIEP",
+        "BZH_GRAS"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Flankstrepen, snavel en achternagel",
+        "where": "In zit of lopend, schuin van voren of van opzij",
+        "this": "Borststrepen en flankstrepen ongeveer even breed, fijne snavel en doorgaans langere achternagel.",
+        "other": "Boompieper heeft fijnere flankstrepen dan borststrepen, een iets forsere snavel en doorgaans een kortere achternagel.",
+        "vs": [
+          "sp073"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Vergelijk meerdere strepen op de borst en flanken aan dezelfde zijde.",
+        "exceptions": "De achterteen of flank kan deels door gras of veren worden afgedekt.",
+        "supporting": "De heldere hoge Graspieperroep verschilt van de rauwere vluchtroep van Boompieper.",
+        "sources": [
+          "VB_GRAS",
+          "VB_BOOMPIEP",
+          "BZH_GRAS"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp073",
+        "why": "De flankstrepen van Boompieper zijn fijner dan zijn borststrepen. Vergelijk ook de roep.",
+        "sources": [
+          "VB_GRAS",
+          "VB_BOOMPIEP",
+          "BZH_GRAS"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "text": "De geslachten hebben gelijk verenkleed.",
+        "sources": [
+          "BZH_GRAS"
+        ],
+        "topic": "geslacht"
+      },
+      {
+        "text": "Leeftijdsbepaling buiten het verse jeugdkleed vraagt zicht op onder meer vleugeldekveren en rui.",
+        "sources": [
+          "BZH_GRAS"
+        ],
+        "topic": "leeftijd"
+      }
+    ],
+    "voice": [
+      {
+        "text": "Hoge, vaak herhaalde vluchtroep, ongeveer psiep-psiep.",
+        "sources": [
+          "VB_GRAS"
+        ],
+        "kind": "roep"
+      },
+      {
+        "text": "Een reeks hoge aflopende tonen, vaak tijdens de zangvlucht.",
+        "sources": [
+          "VB_GRAS"
+        ],
+        "kind": "zang"
+      }
+    ],
+    "basis": {
+      "size": {
+        "text": "Lichaamslengte 14–15 cm.",
+        "sources": [
+          "VB_GRAS",
+          "BZH_GRAS"
+        ]
+      }
+    },
+    "habitat": [
+      {
+        "text": "Open terrein met korte begroeiing, onder meer duin, heide en kwelders. Buiten de broedtijd ook op vochtige graslanden en akkers.",
+        "sources": [
+          "VB_GRAS"
+        ],
+        "kind": "nederland"
+      }
+    ],
+    "status": [
+      {
+        "text": "Broedvogel, doortrekker en wintergast. Een groot deel van de Nederlandse broedvogels trekt na het broedseizoen weg. Op de Nederlandse Rode Lijst van broedvogels: Gevoelig.",
+        "sources": [
+          "SOV_GRAS",
+          "VB_GRAS"
+        ],
+        "kind": "voorkomen"
+      }
+    ],
+    "life": [
+      {
+        "text": "Zoekt lopend naar insecten en andere kleine ongewervelden. Buiten de broedtijd eet de soort ook zaden.",
+        "sources": [
+          "VB_GRAS"
+        ],
+        "kind": "voedsel"
+      }
+    ],
+    "discrepancies": [],
+    "open": []
+  },
+  "sp078": {
+    "summary": {
+      "text": "Roetgrijze watervogel met een zwarte kop en bij volwassen vogels een witte snavel en wit voorhoofdsschild.",
+      "sources": [
+        "VB_MEERKOET",
+        "BZH_MEERKOET"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Volwassen vogels hebben een witte snavel en wit voorhoofdsschild.",
+        "sources": [
+          "VB_MEERKOET",
+          "BZH_MEERKOET"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Zwarte kop, roetgrijs lichaam en bij volwassen vogels een rode iris.",
+        "sources": [
+          "VB_MEERKOET",
+          "BZH_MEERKOET"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Oudere jongen zijn grijsbruin met lichte delen aan de kop en een klein grijs voorhoofdsschild.",
+        "sources": [
+          "BZH_MEERKOET"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "caution": {
+      "text": "De vergelijking op snavel- en schildkleur geldt voor volwassen vogels. Jonge Meerkoeten en Waterhoentjes zijn minder uitgesproken gekleurd.",
+      "sources": [
+        "VB_MEERKOET",
+        "VB_WATERHOEN",
+        "BZH_MEERKOET"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Snavel en voorhoofdsschild",
+        "where": "Van voren of opzij bij een volwassen vogel",
+        "this": "Witte snavel en wit voorhoofdsschild, met een donker lichaam.",
+        "other": "Waterhoen heeft een rode snavel met een gele punt, een rood voorhoofdsschild en witte flanktekening.",
+        "vs": [
+          "sp079"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Bekijk de snavel en het voorhoofd in voldoende licht.",
+        "exceptions": "Bij een juveniele Meerkoet is het schild klein en grijs. Ook jonge Waterhoentjes missen de volwassen snavelkleur.",
+        "supporting": "Kijk bij Waterhoen ook naar de witte flanktekening.",
+        "sources": [
+          "VB_MEERKOET",
+          "VB_WATERHOEN",
+          "BZH_MEERKOET"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp079",
+        "why": "Bij volwassen vogels verschillen snavelkleur en schildkleur. Waterhoen heeft ook wit op de flank.",
+        "sources": [
+          "VB_MEERKOET",
+          "VB_WATERHOEN"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "text": "Het oudere jong op de juvenielenfoto toont lichte wangen en keel en een klein voorhoofdsschild. Later worden snavel en schild wit.",
+        "sources": [
+          "BZH_MEERKOET"
+        ],
+        "topic": "leeftijd"
+      },
+      {
+        "text": "De geslachten hebben gelijk verenkleed. De grootte van het voorhoofdsschild overlapt.",
+        "sources": [
+          "BZH_MEERKOET"
+        ],
+        "topic": "geslacht"
+      }
+    ],
+    "voice": [
+      {
+        "text": "Gevarieerde roepen, waaronder korte, keffende en niesende geluiden.",
+        "sources": [
+          "VB_MEERKOET"
+        ],
+        "kind": "roep"
+      }
+    ],
+    "basis": {
+      "size": {
+        "text": "Vogelbescherming geeft 36–42 cm lichaamslengte en 70–80 cm spanwijdte. Blasco-Zumeta en Heinze geven 38–45 cm lengte.",
+        "sources": [
+          "VB_MEERKOET",
+          "BZH_MEERKOET"
+        ]
+      }
+    },
+    "habitat": [
+      {
+        "text": "Zoet water, vaak met oevervegetatie. In de winter ook in groepen op grasland in de omgeving van water.",
+        "sources": [
+          "VB_MEERKOET",
+          "SOV_MEERKOET"
+        ],
+        "kind": "nederland"
+      }
+    ],
+    "status": [
+      {
+        "text": "Jaarrond aanwezig als broedvogel en wintergast. Ook Meerkoeten uit noordoostelijke streken overwinteren in Nederland.",
+        "sources": [
+          "VB_MEERKOET",
+          "SOV_MEERKOET"
+        ],
+        "kind": "voorkomen"
+      }
+    ],
+    "life": [
+      {
+        "text": "Eet vooral waterplanten en ook gras en kleine waterdieren. Duikt geregeld om voedsel te zoeken.",
+        "sources": [
+          "VB_MEERKOET"
+        ],
+        "kind": "voedsel"
+      }
+    ],
+    "discrepancies": [
+      {
+        "field": "Lichaamslengte",
+        "app": "36–42 cm, overeenkomstig de Nederlandse soortgids.",
+        "source": "Blasco-Zumeta en Heinze geven 38–45 cm.",
+        "sources": [
+          "VB_MEERKOET",
+          "BZH_MEERKOET"
         ]
       }
     ],
