@@ -660,6 +660,160 @@
       "checked": "2026-11-11",
       "certainty": "hoog",
       "publisher": "RSPB"
+    },
+    "VB_GH": {
+      "register": "NL07",
+      "label": "Vogelbescherming Nederland — Goudhaan",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/goudhaan",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland",
+      "confirms": "bouw, kleed, roep, lengte, leefgebied, broeden en voorkomen",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_WKW": {
+      "register": "NL07",
+      "label": "Vogelbescherming Nederland — Witte Kwikstaart",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/witte-kwikstaart",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland",
+      "confirms": "kleed, vlucht, roep, lengte, broeden, voedsel en voorkomen",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_VLL": {
+      "register": "NL07",
+      "label": "Vogelbescherming Nederland — Veldleeuwerik",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/veldleeuwerik",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland",
+      "confirms": "kleed, vlucht, zang, maten, broeden en trek",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_BLL": {
+      "register": "NL07",
+      "label": "Vogelbescherming Nederland — Boomleeuwerik",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/boomleeuwerik",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland",
+      "confirms": "korte staart, lichte wenkbrauwen, roep en zang",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_GH_VGH": {
+      "register": "NL07",
+      "label": "Vogelbescherming Nederland — Goudhaan vs. Vuurgoudhaan",
+      "url": "https://www.vogelbescherming.nl/actueel/bericht/goudhaan-vs-vuurgoudhaan",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland",
+      "confirms": "kruin en gezichtspatroon",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_WKW_RKW": {
+      "register": "NL07",
+      "label": "Vogelbescherming Nederland — Witte Kwikstaart vs. Rouwkwikstaart",
+      "url": "https://www.vogelbescherming.nl/actueel/bericht/witte-kwikstaart-vs-rouwkwikstaart",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland en West-Europa",
+      "confirms": "prachtkleed, rug, stuit, flanken en variatie naar leeftijd en geslacht",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "RSPB_GH": {
+      "register": "nieuwe soortreferentie",
+      "label": "RSPB — Goldcrest",
+      "url": "https://www.rspb.org.uk/birds-and-wildlife/goldcrest",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "West-Europa",
+      "confirms": "kruin, kleed en vergelijking met Vuurgoudhaan",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "RSPB"
+    },
+    "ADW_GH": {
+      "register": "nieuwe soortreferentie",
+      "label": "University of Michigan, Animal Diversity Web — Regulus regulus",
+      "url": "https://animaldiversity.org/accounts/Regulus_regulus/",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "soortbreed",
+      "confirms": "kruinpatroon en juveniel zonder opvallende kruinstreep",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "University of Michigan, Animal Diversity Web"
+    },
+    "AV_GH_JPN": {
+      "register": "nieuwe soortreferentie",
+      "label": "Birds Canada, Avibase — Goldcrest (japonensis)",
+      "url": "https://avibase.bsc-eoc.org/species.jsp?avibaseid=9B8C750951F2BA91&lang=EN",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Oost-Azië",
+      "confirms": "taxonomische rang en verspreiding van japonensis",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Birds Canada, Avibase"
+    },
+    "BTO_KWIK": {
+      "register": "nieuwe soortreferentie",
+      "label": "British Trust for Ornithology — Pied/White Wagtail",
+      "url": "https://www.bto.org/learn/about-birds/birdfacts/piedwhite-wagtail",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Groot-Brittannië en Europa",
+      "confirms": "ondersoorten alba en yarrellii",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "British Trust for Ornithology"
+    },
+    "BTO_VLL_BLL": {
+      "register": "nieuwe soortreferentie",
+      "label": "British Trust for Ornithology — Identifying Skylark and Woodlark",
+      "url": "https://www.bto.org/learn/skills/bird-identification/videos/skylark-woodlark",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Groot-Brittannië",
+      "confirms": "vergelijking Veldleeuwerik en Boomleeuwerik",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "British Trust for Ornithology"
+    },
+    "RSPB_BLL": {
+      "register": "nieuwe soortreferentie",
+      "label": "RSPB — Woodlark",
+      "url": "https://www.rspb.org.uk/birds-and-wildlife/woodlark/",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Groot-Brittannië",
+      "confirms": "korte staart, vleugelvorm, wenkbrauwen en vlucht",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "RSPB"
+    },
+    "SV_VLL": {
+      "register": "nieuwe soortreferentie",
+      "label": "Sovon Vogelonderzoek Nederland — Veldleeuwerik",
+      "url": "https://stats.sovon.nl/stats/soort/9760",
+      "edition": "Online geraadpleegd 11-11-2026",
+      "scope": "Nederland, nestonderzoek",
+      "confirms": "eileg, broedduur, nestjongenperiode en broedsels",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Sovon Vogelonderzoek Nederland"
+    },
+    "NAT_GH": {
+      "register": "nieuwe soortreferentie",
+      "label": "Naturalis Biodiversity Center — Goldcrest",
+      "url": "https://birds-europe.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/taxon.php?id=130926",
+      "edition": "Birds of Europe 3.1, online geraadpleegd 11-11-2026",
+      "scope": "Europa",
+      "confirms": "gezicht, vleugelstrepen en mogelijk verborgen oranje kruinveren",
+      "checked": "2026-11-11",
+      "certainty": "hoog",
+      "publisher": "Naturalis Biodiversity Center"
     }
   },
   "sp021": {
@@ -5867,6 +6021,431 @@
     ],
     "open": [
       "Een afzonderlijke juvenielenfoto, een vrije-vluchtfoto en een eigen geluidsopname voor de gids ontbreken."
+    ]
+  },
+  "sp063": {
+    "summary": {
+      "text": "Piepkleine vogel met een olijfgroene rug, lichte vleugelstrepen en een vrij egaal gezicht waarin het donkere oog opvalt.",
+      "sources": [
+        "VB_GH",
+        "RSPB_GH"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Donker oog in een rustig getekend gezicht.",
+        "sources": [
+          "VB_GH",
+          "VB_GH_VGH"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Twee lichte vleugelstrepen.",
+        "sources": [
+          "VB_GH_VGH",
+          "NAT_GH"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Volwassen vogels hebben een gele kruinstreep met donkere randen. Bij mannetjes zit vaak oranje in het midden.",
+        "sources": [
+          "VB_GH",
+          "RSPB_GH"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "caution": {
+      "text": "Oranje kruinveren kunnen onder gele veren schuilgaan. Een ogenschijnlijk gele kruin is daarom onvoldoende om een foto als vrouwtje te labelen.",
+      "sources": [
+        "NAT_GH"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Wenkbrauw en oogstreep",
+        "where": "Kop in zijaanzicht",
+        "this": "Vrij egaal gezicht zonder brede witte wenkbrauw.",
+        "other": "Vuurgoudhaan heeft een duidelijk witte wenkbrauw en donkere oogstreep.",
+        "vs": [
+          "sp064"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Scherp zijaanzicht met goed zicht op de oogstreek.",
+        "exceptions": "Een slecht belichte of deels bedekte kop kan het patroon verbergen.",
+        "supporting": "Bekijk gezicht en kruin samen.",
+        "sources": [
+          "VB_GH_VGH",
+          "RSPB_GH"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp064",
+        "why": "Let op het sterkere contrast van wenkbrauw en oogstreep bij Vuurgoudhaan.",
+        "sources": [
+          "VB_GH_VGH",
+          "RSPB_GH"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "text": "Een jong Goudhaantje mist aanvankelijk de opvallende gekleurde kruinstreep.",
+        "sources": [
+          "ADW_GH"
+        ],
+        "topic": "leeftijd"
+      },
+      {
+        "text": "De huidige vluchtfoto toont de Oost-Aziatische ondersoort japonensis en is voorlopig.",
+        "sources": [
+          "AV_GH_JPN"
+        ],
+        "topic": "vlucht"
+      }
+    ],
+    "voice": [
+      {
+        "text": "Zeer hoge, dunne roep.",
+        "sources": [
+          "VB_GH"
+        ],
+        "kind": "roep"
+      },
+      {
+        "text": "Herhaalde hoge reeks met wisselende toonhoogte en vaak een korte triller aan het eind.",
+        "sources": [
+          "VB_GH"
+        ],
+        "kind": "zang"
+      }
+    ],
+    "basis": {
+      "size": {
+        "text": "Vogelbescherming noemt 8,5–9,5 cm lengte.",
+        "sources": [
+          "VB_GH"
+        ]
+      }
+    },
+    "habitat": [
+      {
+        "text": "Broedt vooral in naaldbos, met een voorkeur voor sparren.",
+        "sources": [
+          "VB_GH"
+        ],
+        "kind": "nederland"
+      }
+    ],
+    "status": [
+      {
+        "text": "Jaarrond aanwezig in Nederland. Tijdens trek en winter zijn er ook vogels van noordelijker herkomst.",
+        "sources": [
+          "VB_GH"
+        ],
+        "kind": "voorkomen"
+      }
+    ],
+    "life": [
+      {
+        "text": "Bouwt een klein komnest tussen takken van naaldbomen.",
+        "sources": [
+          "VB_GH"
+        ],
+        "kind": "broeden"
+      }
+    ],
+    "discrepancies": [],
+    "open": [
+      "De hoofdfoto heeft geen bevestigd geslachtslabel. Afzonderlijke mannetjes- en vrouwtjesfoto’s en een scherpere Europese vluchtfoto ontbreken."
+    ]
+  },
+  "sp068": {
+    "summary": {
+      "text": "Slanke vogel die vaak met de lange staart beweegt. In prachtkleed heeft de West-Europese Witte Kwikstaart een zwart-witte kop en doorgaans een grijze rug.",
+      "sources": [
+        "VB_WKW",
+        "VB_WKW_RKW"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Lange, beweeglijke staart.",
+        "sources": [
+          "VB_WKW"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Zwart-witte kop en donkere keel in prachtkleed.",
+        "sources": [
+          "VB_WKW"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Grijze rug en doorgaans lichte flanken bij de ondersoort alba.",
+        "sources": [
+          "VB_WKW_RKW",
+          "BTO_KWIK"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "caution": {
+      "text": "De tekening verschilt naar leeftijd, geslacht en seizoen. Bekijk bij twijfel tussen Witte Kwikstaart en Rouwkwikstaart rug, stuit en flanken samen.",
+      "sources": [
+        "VB_WKW_RKW"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Rug, stuit en flanken",
+        "where": "Zijaanzicht en bovenzijde",
+        "this": "Bij alba doorgaans grijze rug, minder donkere stuit en lichtere flanken.",
+        "other": "Bij Rouwkwikstaart is de stuit doorgaans zwart. Voorjaarsmannetjes hebben ook een zwarte rug.",
+        "vs": [
+          "sp290"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Voldoende zicht op rug en stuit, met aandacht voor het kleed.",
+        "exceptions": "Bij vrouwtjes en jonge vogels is rugkleur op zichzelf geen betrouwbaar onderscheid. Mengparen komen voor.",
+        "supporting": "Bekijk ook de omvang van donker op de flanken en het wit in de vleugel.",
+        "sources": [
+          "VB_WKW",
+          "VB_WKW_RKW",
+          "BTO_KWIK"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp290",
+        "why": "Rouwkwikstaart is de ondersoort yarrellii van dezelfde soort. Let op rug, stuit en flanken.",
+        "sources": [
+          "VB_WKW_RKW",
+          "BTO_KWIK"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "text": "Jonge vogels ogen valer en hebben veel wit op de kop.",
+        "sources": [
+          "VB_WKW"
+        ],
+        "topic": "leeftijd"
+      },
+      {
+        "text": "Bij vrouwtjes in prachtkleed is de koptekening vaak minder scherp begrensd.",
+        "sources": [
+          "VB_WKW_RKW"
+        ],
+        "topic": "geslacht"
+      },
+      {
+        "text": "De vlucht kan diep golvend zijn.",
+        "sources": [
+          "VB_WKW"
+        ],
+        "topic": "vlucht"
+      }
+    ],
+    "voice": [
+      {
+        "text": "De gebruikelijke roep is kort en scherp.",
+        "sources": [
+          "VB_WKW"
+        ],
+        "kind": "roep"
+      }
+    ],
+    "basis": {
+      "size": {
+        "text": "Vogelbescherming noemt 16,5–19 cm lengte.",
+        "sources": [
+          "VB_WKW"
+        ]
+      }
+    },
+    "habitat": [
+      {
+        "text": "Open terreinen, onder meer erven, oevers, graslanden en plekken in bebouwd gebied.",
+        "sources": [
+          "VB_WKW"
+        ],
+        "kind": "nederland"
+      }
+    ],
+    "status": [
+      {
+        "text": "Broedvogel en doortrekker in Nederland. Een klein aantal vogels overwintert hier.",
+        "sources": [
+          "VB_WKW_RKW"
+        ],
+        "kind": "voorkomen"
+      }
+    ],
+    "life": [
+      {
+        "text": "Zoekt vooral lopend op de grond naar insecten.",
+        "sources": [
+          "VB_WKW"
+        ],
+        "kind": "voedsel"
+      },
+      {
+        "text": "Broedt onder meer bij gebouwen en onder bruggen.",
+        "sources": [
+          "VB_WKW"
+        ],
+        "kind": "broeden"
+      }
+    ],
+    "discrepancies": [],
+    "open": [
+      "Afzonderlijke mannetjes-, vrouwtjes- en juvenielenfoto’s en lokale gidsaudio ontbreken. De bestaande foto’s krijgen geen nieuw leeftijds- of geslachtslabel."
+    ]
+  },
+  "sp070": {
+    "summary": {
+      "text": "Bruingestreepte vogel van open terrein, met soms een korte opgerichte kuif. De aanhoudende zang tijdens een hoge zangvlucht helpt bij herkenning.",
+      "sources": [
+        "VB_VLL"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Bruin gestreepte borst en bovendelen, met een lichtere buik.",
+        "sources": [
+          "VB_VLL"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Smalle lichte vleugelachterrand en witte staartzijden in vlucht.",
+        "sources": [
+          "VB_VLL"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Lang aangehouden zangvlucht boven open terrein.",
+        "sources": [
+          "VB_VLL"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "critical": [
+      {
+        "feature": "Staart en vleugels in vlucht",
+        "where": "Silhouet tijdens vlucht",
+        "this": "Langere staart dan Boomleeuwerik. Bij goed zicht kunnen de witte staartzijden en smalle lichte vleugelachterrand helpen.",
+        "other": "Boomleeuwerik oogt kortstaartig, met bredere, afgeronde vleugels.",
+        "vs": [
+          "sp071"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Vrij zicht op het silhouet, de staart en de vleugels.",
+        "exceptions": "Bij afstand of tegenlicht kunnen lichte randen wegvallen.",
+        "supporting": "Gebruik ook roep of zang en bekijk bij een zittende vogel de wenkbrauwtekening.",
+        "sources": [
+          "VB_VLL",
+          "VB_BLL",
+          "BTO_VLL_BLL",
+          "RSPB_BLL"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp071",
+        "why": "Boomleeuwerik heeft een kortere staart en lichte wenkbrauwstrepen die achter op de kop samenkomen.",
+        "sources": [
+          "VB_BLL",
+          "RSPB_BLL"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "text": "De lichte vleugelachterrand en witte staartzijden zijn bruikbaar wanneer ze goed zichtbaar zijn.",
+        "sources": [
+          "VB_VLL"
+        ],
+        "topic": "vlucht"
+      }
+    ],
+    "voice": [
+      {
+        "text": "Een lange, gevarieerde reeks die vaak tijdens de zangvlucht klinkt.",
+        "sources": [
+          "VB_VLL"
+        ],
+        "kind": "zang"
+      }
+    ],
+    "basis": {
+      "size": {
+        "text": "Vogelbescherming noemt 16–18 cm lengte en 30–36 cm spanwijdte.",
+        "sources": [
+          "VB_VLL"
+        ]
+      }
+    },
+    "habitat": [
+      {
+        "text": "Open landschappen zoals grasland, akkers, duinen en heide.",
+        "sources": [
+          "VB_VLL"
+        ],
+        "kind": "nederland"
+      }
+    ],
+    "status": [
+      {
+        "text": "Broedvogel, doortrekker en wintergast. Een deel van de Nederlandse broedvogels trekt weg.",
+        "sources": [
+          "VB_VLL"
+        ],
+        "kind": "voorkomen"
+      }
+    ],
+    "life": [
+      {
+        "text": "Nestelt op de grond. Sovon noemt 12–13 dagen broedduur en 11 dagen nestjongenperiode. Uit het nest stappen en kunnen vliegen zijn verschillende momenten.",
+        "sources": [
+          "SV_VLL",
+          "VB_VLL"
+        ],
+        "kind": "broeden"
+      },
+      {
+        "text": "Zoekt in de broedtijd vooral insecten en in de winter vooral granen en zaden.",
+        "sources": [
+          "VB_VLL"
+        ],
+        "kind": "voedsel"
+      }
+    ],
+    "discrepancies": [
+      {
+        "field": "broedduur en nestjongenperiode",
+        "app": "Sovon: 12–13 dagen broedduur en 11 dagen in het nest",
+        "source": "Vogelbescherming noemt ongeveer twee weken broeden en ongeveer acht dagen in het nest. De kaart volgt Sovon voor de Nederlandse nestgegevens.",
+        "sources": [
+          "SV_VLL",
+          "VB_VLL"
+        ]
+      }
+    ],
+    "open": [
+      "Een afzonderlijke juvenielenfoto en lokale gidsaudio ontbreken. De bestaande foto’s bevestigen geen geslacht."
     ]
   }
 }

@@ -1014,16 +1014,17 @@ export const LIFE = Object.freeze({
  },
  "sp070": {
   "breeding": {
-   "period": "apr–jul",
+   "period": "Eileg half april–begin juli",
    "nest": "Komnest in een kuiltje op de grond in gras of akker",
-   "eggs": "3–5",
-   "incubation": "11–12 dagen",
-   "fledging": "18–20 dagen (vliegvlug)",
-   "broods": "2–3",
+   "eggs": "Meestal 2–5",
+   "incubation": "12–13 dagen",
+   "fledging": "Ca. 11 dagen",
+   "broods": "Meestal 2",
+   "fledgingLabel": "Jongen in nest",
    "months": "apr-jul"
   },
   "diet": "Zaden en in de broedtijd insecten",
-  "behaviour": "Zingt urenlang hoog in de lucht boven open land",
+  "behaviour": "Kenmerkende lange zangvlucht hoog boven open terrein.",
   "migration": "Standvogel en trekvogel; in oktober grote doortrek",
   "voice": "Lange, ononderbroken jubelende zang in de lucht"
  },
