@@ -32,6 +32,20 @@ als naslagwerk erbij.
 3. Een soort opzoeken in de veldgids: herkenning (kleden, vergelijking met
    gelijkende soorten), leefwijze, waar en wanneer, zang/roep.
 
+De soortengids sorteert de soortgroepen op Nederlandse naam en de vogels binnen
+elke groep op Nederlandse soortnaam, beide A–Z. De eerste 60 resultaten vormen
+het begin van de volledige lijst onder **Toon alle**, ook na zoeken of filteren.
+Zie `tests/test_species_groups_az.py` voor de browsercontrole (CAP-BIRD-010).
+
+Voor verdere soortaudits zijn Havik, Sperwer en Buizerd de door de eigenaar
+goedgekeurde voorbeelden voor de soortkaart (CAP-BIRD-012 en CAP-BIRD-015).
+Gebruik **Snel herkennen**, de afgesproken volgorde hoofdfoto → mannetje →
+vrouwtje → juveniel → in vlucht, één sectie **Lijkt op** en uitklapbare verdieping.
+Elke fotopositie vereist een geverifieerde, unieke opname met een betrouwbaar
+label. Voor de beeld- en broncontrole gelden de
+[Birdspot-kwaliteitsnorm](docs/BIRDSPOT_KWALITEITSNORM.md) en het
+[vastgelegde eigenaarbesluit](https://github.com/saddamsmit-source/Birdspot-Library/pull/127#issuecomment-6797564073).
+
 ## Scope
 
 **MUST**
