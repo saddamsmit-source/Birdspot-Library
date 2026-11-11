@@ -1,25 +1,26 @@
 # Birdspot — soortaudit van de collectie met foto's
 
-Gegenereerd door `tools/fotokwaliteit/build_soortaudit_tracker.py` · status voor commit `61ad1e3` · 2026-11-10.
+Gegenereerd door `tools/fotokwaliteit/build_soortaudit_tracker.py` · status voor commit `11c3751aecaabc37b41feb23fd364fe3298ce1dd` · 2026-11-11.
 Statussen: VERIFIED / PARTIALLY TESTED / NOT TESTED / BLOCKED. Een geautomatiseerde rendercontrole telt **niet** als visuele of inhoudelijke controle.
+Beoordeeld volgens `docs/BIRDSPOT_KWALITEITSNORM.md` (biometrie §1, herkenning §2, foto §3). Verbeterwensen zijn voor de latere beoordeling door de eigenaar en blokkeren de batch niet.
 
 ## Overzicht (eindeisen 1–9)
 
 | # | Meting | Stand |
 |---|---|---|
 | 1 | Soorten met bestaande gidsfoto's | 134 |
-| 2 | Afzonderlijk (aangescherpt) gecontroleerd | 23 (M1, M2) |
-| 3 | Technisch correct (laden, volgorde, offline-bron, beoordeling = kaart) | 23 van 23 |
-| 4a | Visueel VERIFIED (Claude, beeld per foto) | 19 van 23 |
-| 4b | Inhoud (kennisprofiel) VERIFIED | 0 van 23 — alle profielen hebben nog open punten |
+| 2 | Afzonderlijk (aangescherpt) gecontroleerd | 26 (M1, M2, M3) |
+| 3 | Technisch correct (laden, volgorde, offline-bron, beoordeling = kaart) | 26 van 26 |
+| 4a | Visueel VERIFIED (beeld per foto) | 22 van 26 |
+| 4b | Inhoud (kennisprofiel) VERIFIED | 0 van 26 — alle profielen hebben nog open punten |
 | 4c | Onafhankelijk beoordeeld (ChatGPT) | 0 — NOT TESTED |
-| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 16; plus collectiebrede vluchtcontrole: 16 uit de vluchtrol, 8 gearchiveerd |
+| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 21; plus collectiebrede vluchtcontrole: 16 uit de vluchtrol, 8 gearchiveerd |
 | 6 | Afgekeurde vluchtfoto's | 24 (tabel hieronder) |
-| 7 | Ontbrekende foto-/kennisonderdelen | 29 fotoposities in gecontroleerde soorten; 111 fotosoorten zonder kennisprofiel |
-| 8 | Kritische kenmerken niet doorslaggevend onderbouwd | 52 (tabel hieronder) |
+| 7 | Ontbrekende foto-/kennisonderdelen | 36 fotoposities in gecontroleerde soorten; 108 fotosoorten zonder kennisprofiel |
+| 8 | Kritische kenmerken niet doorslaggevend onderbouwd | 55 (tabel hieronder) |
 | 9 | Open bron-/licentieproblemen | 0 in gecontroleerde soorten; collectiebreed blijft het eerder gemelde punt '22 afbeeldingen buiten de bronaudit' open |
 
-Eindoordeel per gecontroleerde soort: PARTIALLY TESTED 23.
+Eindoordeel per gecontroleerde soort: PARTIALLY TESTED 26.
 
 ## Gecontroleerde soorten
 
@@ -35,6 +36,7 @@ Batch M2 · 2026-11-10 · SHA `61ad1e3` · technisch VERIFIED · visueel VERIFIE
 
 - **Correcties:** geen
 - **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** Geslachten gelijk.
 - **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Broedkleed; open: Juveniel/onvolwassen kleed niet uit een bron beschreven; de jaarlingfoto steunt op de Commons-bron ('immature').; Onderscheid met Kuifaalscholver uit een bron uitwerken.; resterende dataverschillen: 0
 - **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
@@ -52,6 +54,7 @@ Batch M2 · 2026-11-10 · SHA `61ad1e3` · technisch VERIFIED · visueel VERIFIE
 
 - **Correcties:** geen
 - **Ontbreekt:** Juveniel
+- **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** Geslachtsverschil klein; geen geslachtsvakken.
 - **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Kleur en gedrag; open: Broedduur en nestjongenduur niet in de geraadpleegde bron; Birdspot-waarden niet opnieuw gecontroleerd.; Geen gidsfoto van een juveniel.; resterende dataverschillen: 0
 - **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
@@ -68,6 +71,7 @@ Batch M1 · 2026-11-10 · SHA `61ad1e3` · technisch VERIFIED · visueel VERIFIE
 
 - **Correcties:** geen
 - **Ontbreekt:** In vlucht; Juveniel; Hoofdfoto waarop het vleugelbandpatroon leesbaar is
+- **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** Geslachten gelijk.
 - **Kennisprofiel:** 6 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Roep, Zang, Vleugelbandpatroon, Alula, Flanken en wenkbrauw, Snavel en achternagel; open: Nederlandse status en aantallen niet opnieuw gecontroleerd (Sovon/Vogelbescherming).; Roep en zang van de Taigaboomkruiper nog uit een bron beschrijven.; Hoofdfoto toont de vleugelband niet scherp; soortbepaling van die foto steunt op bronmetadata (fotobaseline batch 01).; Volledige tekst van het British Birds-artikel niet gelezen.; resterende dataverschillen: 0
 - **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
@@ -84,6 +88,7 @@ Batch M2 · 2026-11-10 · SHA `61ad1e3` · technisch VERIFIED · visueel PARTIAL
 
 - **Correcties:** geen
 - **Ontbreekt:** In vlucht; Juveniel; Foto waarop het vleugelbandpatroon leesbaar is
+- **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** Geslachten gelijk.
 - **Kennisprofiel:** 3 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Vleugelbandpatroon, Zang en roep, Flanken en wenkbrauw; open: De hoofdfoto laat het vleugelpatroon niet goed zien; soortbepaling steunt op de bron (Commons, Certhia familiaris).; Welke vorm (nominaat of kortsnavel) de hoofdfoto toont, is niet uit de bron vast te stellen.; resterende dataverschillen: 0
 - **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
@@ -100,6 +105,7 @@ Batch M1 · 2026-11-10 · SHA `61ad1e3` · technisch VERIFIED · visueel VERIFIE
 
 - **Correcties:** FQA-04: zang alleen doorslaggevend bij een typisch, volledig lied; gemengde zang als open punt.
 - **Ontbreekt:** In vlucht; Juveniel (gelere najaarsvogel)
+- **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** Geslachten gelijk.
 - **Kennisprofiel:** 5 kritische kenmerken (1 doorslaggevend); niet doorslaggevend: Handpenprojectie, Kop, Poten, Seizoen; open: Spanwijdte en gewicht niet opnieuw gecontroleerd.; Verschil met Iberische Tjiftjaf alleen als waarschuwing opgenomen.; Gemengde zang (vogels die elementen van beide soorten zingen) is in de geraadpleegde bronnen niet uitgewerkt; zang blijft doorslaggevend alleen bij een typisch, volledig lied.; resterende dataverschillen: 0
 - **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
@@ -117,6 +123,7 @@ Batch M1 · 2026-11-10 · SHA `61ad1e3` · technisch VERIFIED · visueel VERIFIE
 
 - **Correcties:** Uit 'In vlucht' gehaald: valt onder de klasse opvliegen/tussen planten (mijlpaal 1).; FQA-04: zang alleen doorslaggevend bij een typisch, volledig lied; gemengde zang als open punt.
 - **Ontbreekt:** In vlucht; Juveniel/najaarsvogel
+- **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** Geslachten gelijk.
 - **Kennisprofiel:** 5 kritische kenmerken (1 doorslaggevend); niet doorslaggevend: Handpenprojectie, Staartbeweging, Poten, Seizoen; open: Spanwijdte en gewicht niet opnieuw gecontroleerd.; Iberische Tjiftjaf heeft nog geen eigen vergelijking.; Gemengde zang (vogels die elementen van beide soorten zingen) is in de geraadpleegde bronnen niet uitgewerkt; zang blijft doorslaggevend alleen bij een typisch, volledig lied.; resterende dataverschillen: 0
 - **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
@@ -135,6 +142,7 @@ Batch M1 · 2026-11-10 · SHA `61ad1e3` · technisch VERIFIED · visueel VERIFIE
 
 - **Correcties:** Opvliegende foto uit 'In vlucht' (eigenaarsmelding) — label 'Opvliegend vanaf de grond' (vluchtcontrole ronde 1).; Veldkenmerken en kleedtekst: "zwarte vleugelpunten" → geen wit in hals/vleugel, twee korte zwarte vleugelstrepen, brede zwarte staartband (VB_HOLEN, RSPB_SD).; Zang: "oe-oe-oe steeds sneller" → eentonige reeks tweelettergrepige roepen (VB_HVH).; Lengte 30–33 → 28–32 cm; broedduur 16–18 → 16–17 dagen; nestjongen 27–28 → ca. 24 dagen (VB_HOLEN).
 - **Ontbreekt:** In vlucht (geen echte vluchtfoto); Juveniel
+- **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** Geslachten gelijk; geen Mannetje/Vrouwtje-vakken (bron: VB_HOLEN).
 - **Kennisprofiel:** 2 kritische kenmerken (1 doorslaggevend); niet doorslaggevend: Stuit; open: Geen goede vluchtfoto: de vorige 'vluchtfoto' toonde een opvliegende vogel en is uit de vluchtrol gehaald (positie ontbreekt).; Geen gidsfoto van een juveniel.; Kleedvariatie van stadsduiven maakt de stuit niet doorslaggevend.; resterende dataverschillen: 0
 - **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
@@ -153,6 +161,7 @@ Batch M1 · 2026-11-10 · SHA `61ad1e3` · technisch VERIFIED · visueel VERIFIE
 
 - **Correcties:** FQA-04: kritisch kenmerk 'Halsvlek en iris' gesplitst; 'Witte halsvlek' (alleen volwassen) blijft doorslaggevend, iris alleen ondersteunend.
 - **Ontbreekt:** Juveniel (zonder halsvlek, wel vleugelband); Vluchtfoto van boven met volledige witte vleugelband (wenselijk)
+- **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** Geslachten gelijk; geen Mannetje/Vrouwtje-vakken (bron: VB_HOUT).
 - **Kennisprofiel:** 2 kritische kenmerken (2 doorslaggevend); niet doorslaggevend: —; open: Juveniel- en vluchtvergelijking met Stadsduif nog niet uit een Nederlandse bron uitgewerkt.; Geen gidsfoto van een juveniel (positie ontbreekt).; resterende dataverschillen: 1
 - **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
@@ -170,6 +179,7 @@ Batch M1 · 2026-11-10 · SHA `61ad1e3` · technisch VERIFIED · visueel VERIFIE
 
 - **Correcties:** Broedsels per jaar 3–5 → 2–5 (VB_TT).; FQA-04: tweede onafhankelijke bron voor de Zomertortel-kant (eBird, birdspot.co.uk) en uitzondering voor juvenielen zonder halstekening.
 - **Ontbreekt:** Juveniel (zonder of met vage halsband); Hoofdfoto met grotere vogel (wenselijk)
+- **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** Geslacht vaak niet op kleed te bepalen (BZ_CD); geen geslachtsvakken.
 - **Kennisprofiel:** 2 kritische kenmerken (1 doorslaggevend); niet doorslaggevend: Staart in vlucht; open: Onderscheid met Lachduif (ontsnapte vogels) nog uit een bron uitwerken.; Spanwijdte en gewicht niet in de geraadpleegde Nederlandse bron.; Geen gidsfoto van een juveniel; hoofdfoto toont de vogel vrij klein in beeld.; resterende dataverschillen: 0
 - **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
@@ -191,6 +201,7 @@ Batch M2 · 2026-11-10 · SHA `61ad1e3` · technisch VERIFIED · visueel VERIFIE
 
 - **Correcties:** FQA-01 (eerder in deze PR): vrouwtje in vlucht naar In vlucht met label Vrouwtje.
 - **Ontbreekt:** Mannetje zittend
+- **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** Geslachten verschillen duidelijk (VB_BRK); labels door beeld en bron bevestigd.
 - **Kennisprofiel:** 2 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Silhouet en vleugelhouding, Geslacht en leeftijd; open: Hoofdfoto is een vluchtfoto (eigenaarsbesluit 'hoofdfoto als enige vluchtfoto' open).; Geen zittende foto van een mannetje.; resterende dataverschillen: 0
 - **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
@@ -212,6 +223,7 @@ Batch M1 · 2026-11-10 · SHA `61ad1e3` · technisch VERIFIED · visueel PARTIAL
 
 - **Correcties:** FQA-01: juveniele foto toont echte vlucht maar stond zonder vluchtlabel onder Juveniel. Nu flight:true, één keer onder In vlucht met label Juveniel; de Juveniel-kaart verwijst ernaar.
 - **Ontbreekt:** Definitieve (scherpe) donkere Buizerd in vlucht
+- **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** Geslacht niet op kleed te zien; alle foto's zonder geslachtslabel (bronaudit 09-11).
 - **Kennisprofiel:** 6 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Kop, Vleugelhouding en -slag, Staart, Iris, Kleur, Geluid; open: Onderscheid met Ruigpootbuizerd uit een bron uitwerken.; Leefgebied niet opnieuw gecontroleerd.; resterende dataverschillen: 1
 - **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
@@ -233,6 +245,7 @@ Batch M2 · 2026-11-10 · SHA `61ad1e3` · technisch VERIFIED · visueel PARTIAL
 
 - **Correcties:** geen
 - **Ontbreekt:** Vrouwtje zittend (alleen in vlucht aanwezig; Vrouwtje-kaart verwijst naar In vlucht)
+- **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** Geslachten verschillen vooral in grootte; labels Mannetje/Vrouwtje steunen op de foto-bron.
 - **Kennisprofiel:** 3 kritische kenmerken (1 doorslaggevend); niet doorslaggevend: Kop en staart in vlucht, Grootte; open: Geslachtsverschil in kleed niet uit een bron vastgelegd; Birdspot-labels Mannetje/Vrouwtje steunen op de foto-bron (Commons/iNaturalist).; Neutrale vluchtfoto (sp007-flight) lijkt een jonge vogel; leeftijd niet uit de bron vast te stellen (REVIEW REQUIRED).; resterende dataverschillen: 0
 - **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
@@ -241,22 +254,23 @@ Batch M2 · 2026-11-10 · SHA `61ad1e3` · technisch VERIFIED · visueel PARTIAL
 
 ### sp253 Ruigpootbuizerd — PARTIALLY TESTED
 
-Batch M2 · 2026-11-10 · SHA `61ad1e3` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M2 · 2026-11-10 · SHA `11c3751aecaabc37b41feb23fd364fe3298ce1dd` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
 | `sp253-male-rest.webp` | Hoofdfoto | Ruigpootbuizerd op paal in sneeuwlandschap; lichte kop, donkere flanken/buik. | iNaturalist: Male; geen label op de hoofdfoto | goed | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Spencer Hurt, some rights reserved (CC BY) |
-| `sp253-male-flight.webp` | In vlucht (Mannetje) | Vrij in de lucht; donkere borst, staart met meerdere banden. | mannetje (iNaturalist: Male; meerdere staartbanden passen bij VB_BVR) | voldoende: licht zacht | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY SA · (c) psweet, some rights reserved (CC BY-SA) |
+| `sp253-male-flight.webp` | In vlucht (Mannetje) | Vrij in de lucht met zicht op donkere borst en gevlekte vleugels. De staart is gedeeltelijk zichtbaar. | Mannetje volgens de vastgelegde iNaturalist-annotatie. Houding en uitsnede beperken de zelfstandige controle van de volledige staartbandering. | voldoende: licht zacht | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY SA · (c) psweet, some rights reserved (CC BY-SA) |
 | `sp253.webp` | In vlucht (Vrouwtje) | Vrij in de lucht van onderen; lichte kop, donker buikschild, witte staartbasis met één brede eindband. | vrouwtje (bron: 'female'; buikschild en één eindband passen bij VB_BVR) | goed | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · dfaulder |
 | `sp253-juv.webp` | In vlucht (Juveniel) | Jonge vogel vrij in de lucht; gespreide vleugels en staart. | juveniel (iNaturalist: Life Stage Juvenile) | goed; watermerk maker | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Radek Ošlejšek, some rights reserved (CC BY) |
 
-- **Correcties:** FQA-01 (eerder in deze PR): juveniel in vlucht naar In vlucht met label Juveniel.
-- **Ontbreekt:** niets
-- **Geslacht:** Geslachten verschillen in staart en buik (VB_BVR); labels steunen op bron en passen bij het beeld.
-- **Kennisprofiel:** 2 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Staartcontrast, Geslacht en leeftijd; open: Geslachtslabels op de vluchtfoto's steunen op de bron (iNaturalist/Commons) en passen bij de beschreven kenmerken; onafhankelijke controle open.; resterende dataverschillen: 0
-- **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
-- **Onzeker:** —
-- **Volgende actie:** Onafhankelijke review (ChatGPT)
+- **Correcties:** FQA-01 (eerder in deze PR): juveniel in vlucht naar In vlucht met label Juveniel.; 11-11-2026: vier eigen foto’s onafhankelijk visueel herbekeken. Verschil tussen lichte vrouwtjes en juvenielen in het kennisprofiel als ondersteunend beschreven met Europese en Noord-Amerikaanse bronnen.
+- **Ontbreekt:** Afzonderlijke rustfoto van vrouwtje; Afzonderlijke rustfoto van juveniel
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** De kleden kunnen in de buik- en staarttekening verschillen en deels overlappen. Foto-annotaties en waarneembare kenmerken worden samen gelezen.
+- **Kennisprofiel:** 2 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Staartcontrast, Geslacht en leeftijd; open: De drie iNaturalist-bronpagina’s konden tijdens de hercontrole niet opnieuw worden geopend. De fotolabels steunen op het vastgelegde bronbewijs van 9 november en zijn niet opnieuw tegen de oorspronkelijke annotaties bevestigd.; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** De drie iNaturalist-foto’s zijn gekoppeld aan de geverifieerde opname en annotaties uit de bronaudit van 9 november. De actuele primaire fotopagina’s en waarnemingen waren bij de hercontrole niet bereikbaar.
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
 
 ### sp006 Sperwer — PARTIALLY TESTED
 
@@ -272,6 +286,7 @@ Batch M1 · 2026-11-10 · SHA `61ad1e3` · technisch VERIFIED · visueel VERIFIE
 
 - **Correcties:** geen
 - **Ontbreekt:** Vrouwtje in vlucht (wenselijk)
+- **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** Geslachten verschillen duidelijk (VB_SPERWER_MV); mannetje en vrouwtje getoond met bronbevestiging.
 - **Kennisprofiel:** 6 kritische kenmerken (1 doorslaggevend); niet doorslaggevend: Staartpunt, Kop en vleugels in vlucht, Vliegstijl, Roep, Grootte; open: Leeftijdsbepaling in vlucht nog uit een bron beschrijven.; resterende dataverschillen: 1
 - **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
@@ -291,10 +306,28 @@ Batch M2 · 2026-11-10 · SHA `61ad1e3` · technisch VERIFIED · visueel VERIFIE
 
 - **Correcties:** geen
 - **Ontbreekt:** Vrouwtje zittend; Scherpere/grotere vrouwtje-vluchtfoto
+- **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** Geslachten verschillen; labels steunen op iNaturalist-annotaties.
 - **Kennisprofiel:** 2 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Kop en staart, Vleugelhouding; open: Geslachtskenmerken (grijze kop man, oogkleur) nog uit een tweede bron vastleggen.; Vrouwtje in vlucht klein in beeld; vervanging gewenst.; resterende dataverschillen: 0
 - **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
 - **Onzeker:** Geslachtskenmerken van Wespendief nog niet uit een tweede bron vastgelegd (zie kennisprofiel).
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp054 Heggenmus — PARTIALLY TESTED
+
+Batch M3 · 2026-11-11 · SHA `11c3751aecaabc37b41feb23fd364fe3298ce1dd` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp054.webp` | Hoofdfoto | Heggenmus in zijaanzicht op een tak. De fijne spitse snavel en bruin gestreepte rug zijn zichtbaar. | Fotobron bevestigt de soort. Leeftijd en geslacht zijn niet expliciet geannoteerd. | Scherp beeld met vrij zicht op de kop en snavel. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC0 · Hobbyfotowiki Camera location 51° 10′ 43.32″ N, 7° 00′ 23.65″ E View this and other nearby images on: OpenStreetMap 51.178700; 7.006570 |
+
+- **Correcties:** Bronprofiel met het snavelverschil ten opzichte van Huismus en het leeftijdsvoorbehoud bij de grijze kop en borst.
+- **Ontbreekt:** Afzonderlijke juvenielenfoto; Vrije-vluchtfoto
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Geslachten zijn uiterlijk gelijkend. De kaart houdt de hoofdfoto neutraal.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Snavel en kop; open: Een afzonderlijke juvenielenfoto, een vrije-vluchtfoto en een eigen geluidsopname voor de gids ontbreken.; resterende dataverschillen: 1
+- **Browser:** NOT TESTED
+- **Onzeker:** —
 - **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
 
 ### sp021 Ekster — PARTIALLY TESTED
@@ -308,6 +341,7 @@ Batch M1 · 2026-11-10 · SHA `61ad1e3` · technisch VERIFIED · visueel VERIFIE
 
 - **Correcties:** Lengte 44–46 → 46–50 cm; broedduur 17–18 → 17–24 dagen; nestjongen 24–30 → 22–30 dagen (VB_EKSTER).
 - **Ontbreekt:** Juveniel (kortere staart)
+- **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** Geslachten gelijk; geen geslachtsvakken.
 - **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Kleedpatroon en staart; open: Juveniel kleed en leefgebied niet opnieuw gecontroleerd tegen een bron.; Vergelijking met Gaai is bestaande Birdspot-inhoud, niet opnieuw gecontroleerd.; Kleedpatroon is in Nederland vrijwel onmiskenbaar, maar staat op "Helpt" tot een tweede, onafhankelijke bron is vastgelegd (regel doorslaggevend, 10-11-2026).; resterende dataverschillen: 0
 - **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
@@ -325,9 +359,46 @@ Batch M2 · 2026-11-10 · SHA `61ad1e3` · technisch VERIFIED · visueel VERIFIE
 
 - **Correcties:** Maten en broedgegevens naar de bron: lengte 32–36 cm, spanwijdte 50–60 cm, 5–7 eieren, broedduur 16–21 dagen, nestjongen 19–21 dagen (VB_GAAI).
 - **Ontbreekt:** Juveniel
+- **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** Geslachten gelijk; geen geslachtsvakken.
 - **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Kleedpatroon; open: Juveniel kleed niet uit een bron beschreven; geen gidsfoto van een juveniel.; resterende dataverschillen: 0
 - **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp025 Kauw — PARTIALLY TESTED
+
+Batch M3 · 2026-11-11 · SHA `11c3751aecaabc37b41feb23fd364fe3298ce1dd` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp025.webp` | Hoofdfoto | Kauw in zijaanzicht op een tak. Lichte iris, grijze nek en de korte donkere snavel zijn zichtbaar. | Fotobron bevestigt de soort. Leeftijd en geslacht zijn niet expliciet geannoteerd. | Scherpe, goed leesbare kop. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours |
+| `sp025-flight.webp` | Overige herkenningsfoto’s (landingshouding) | Frontaal beeld met uitgespreide staart en vooruitgestoken poten tussen takken. | Leeftijd en geslacht zijn niet bevestigd door de fotobron. | Bruikbaar als aanvullende herkenningsfoto. | uit-rol | landen · uit-rol | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · hedera.baltica from Wrocław, Poland |
+
+- **Correcties:** De bestaande landingsfoto blijft buiten In vlucht. Het kennisprofiel maakt het leeftijdsvoorbehoud bij oogkleur expliciet.
+- **Ontbreekt:** Afzonderlijke juvenielenfoto; Vrije-vluchtfoto
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Geslachten zijn uiterlijk gelijkend. De kaart houdt beide foto’s neutraal.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Iris en achterhoofd; open: Een afzonderlijke juvenielenfoto, een vrije-vluchtfoto en een eigen geluidsopname voor de gids ontbreken.; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** De fotobron noemt het beeld in algemene zin “in flight”. De zichtbare poten en houding ondersteunen de specifiekere Birdspot-indeling als landingshouding.
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp022 Zwarte Kraai — PARTIALLY TESTED
+
+Batch M3 · 2026-11-11 · SHA `11c3751aecaabc37b41feb23fd364fe3298ce1dd` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp022.webp` | Hoofdfoto | Zwarte kraai in zijaanzicht op een tak. De krachtige snavel, kop en het zwarte kleed zijn zichtbaar. | Leeftijd en geslacht zijn niet bevestigd door de fotobron. | Scherp zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours |
+| `sp022-flight.webp` | In vlucht | Vogel vrij in de lucht met gespreide vleugels. De foto en bronbeschrijving tonen dezelfde vluchtrol. | Leeftijd en geslacht zijn niet bevestigd door de fotobron. | Bruikbaar voor silhouet en vleugelvorm. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Marie-Lan Taÿ Pamart |
+
+- **Correcties:** Bronprofiel met vergelijking met Roek en Kauw. De snavelbasis is bij jonge Roeken geen betrouwbaar enkelvoudig onderscheid.; Lengte en spanwijdte als indicatieve band berekend met Vogelbescherming en RSPB.
+- **Ontbreekt:** Afzonderlijke juvenielenfoto
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Geslachten zijn uiterlijk gelijkend. De kaart houdt deze foto’s neutraal.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Snavelbasis; open: Een afzonderlijke juvenielenfoto en een eigen geluidsopname voor de gids ontbreken.; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
 - **Onzeker:** —
 - **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
 
@@ -342,6 +413,7 @@ Batch M2 · 2026-11-10 · SHA `61ad1e3` · technisch VERIFIED · visueel VERIFIE
 
 - **Correcties:** geen
 - **Ontbreekt:** Juveniel / onvolwassen kleden
+- **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** Geslachten gelijk.
 - **Kennisprofiel:** 2 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Mantel en poten (volwassen), Tertials eerstejaars; open: Spanwijdte in de bron lijkt onvolledig; tweede bron nodig voordat de Birdspot-waarde wordt aangepast.; Geen foto's van onvolwassen kleden.; resterende dataverschillen: 1
 - **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
@@ -359,6 +431,7 @@ Batch M2 · 2026-11-10 · SHA `61ad1e3` · technisch VERIFIED · visueel VERIFIE
 
 - **Correcties:** geen
 - **Ontbreekt:** Juveniel / onvolwassen kleden
+- **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** Geslachten gelijk.
 - **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Snavel, oog en poten; open: Lengte-bovengrens in de bron lijkt een fout; tweede bron nodig.; Geen foto's van onvolwassen kleden.; resterende dataverschillen: 1
 - **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
@@ -376,6 +449,7 @@ Batch M1 · 2026-11-10 · SHA `61ad1e3` · technisch VERIFIED · visueel VERIFIE
 
 - **Correcties:** Lengte 54–60 → 55–67 cm; spanwijdte 123–148 → 125–155 cm (VB_ZILV).
 - **Ontbreekt:** Juveniel / eerste kalenderjaar; Onvolwassen kleden (leeftijdsreeks)
+- **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** Geslachten gelijk.
 - **Kennisprofiel:** 3 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Pootkleur, Tertials eerstejaars, Leeftijd; open: Snavel- en oogkleur per leeftijd uit een bron beschrijven.; Onderscheid met Pontische Meeuw uitwerken.; Kopstreping in winterkleed is in de bron alleen als foto te zien.; resterende dataverschillen: 0
 - **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
@@ -396,6 +470,7 @@ Batch M2 · 2026-11-10 · SHA `61ad1e3` · technisch VERIFIED · visueel VERIFIE
 
 - **Correcties:** geen
 - **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** Geslachten verschillen (rode nekvlek man); labels door beeld bevestigd.
 - **Kennisprofiel:** 2 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Koppatroon, Grootte en rug; open: Spanwijdte niet in de geraadpleegde bron; Birdspot-waarde (34–39 cm) niet opnieuw gecontroleerd.; resterende dataverschillen: 0
 - **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
@@ -416,6 +491,7 @@ Batch M2 · 2026-11-10 · SHA `61ad1e3` · technisch VERIFIED · visueel VERIFIE
 
 - **Correcties:** geen
 - **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** Geslachten alleen in grootte verschillend (VB_SLECHT); geen geslachtslabels.
 - **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Bouw en kopkap; open: Onderscheid met Boomvalk en Smelleken nog uit een bron uitwerken.; resterende dataverschillen: 0
 - **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
@@ -437,6 +513,7 @@ Batch M1 · 2026-11-10 · SHA `61ad1e3` · technisch VERIFIED · visueel PARTIAL
 
 - **Correcties:** geen
 - **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** Geslachten verschillen (VB_TOREN, EB_KES); mannetje en vrouwtje getoond.
 - **Kennisprofiel:** 2 kritische kenmerken (1 doorslaggevend); niet doorslaggevend: Silhouet en jachtgedrag; open: Juveniel kleed en het onderscheid juveniel/vrouwtje uit een bron beschrijven.; Uitgewerkte vergelijking met Boomvalk en Smelleken ontbreekt.; resterende dataverschillen: 0
 - **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
@@ -496,7 +573,10 @@ Batch M1 · 2026-11-10 · SHA `61ad1e3` · technisch VERIFIED · visueel PARTIAL
 | sp016 Grote Bonte Specht | Koppatroon |
 | sp016 Grote Bonte Specht | Grootte en rug |
 | sp021 Ekster | Kleedpatroon en staart |
+| sp022 Zwarte Kraai | Snavelbasis |
+| sp025 Kauw | Iris en achterhoofd |
 | sp026 Gaai | Kleedpatroon |
+| sp054 Heggenmus | Snavel en kop |
 | sp056 Tjiftjaf | Handpenprojectie |
 | sp056 Tjiftjaf | Staartbeweging |
 | sp056 Tjiftjaf | Poten |
@@ -533,5 +613,5 @@ Batch M1 · 2026-11-10 · SHA `61ad1e3` · technisch VERIFIED · visueel PARTIAL
 
 Deze soorten renderen technisch, maar zijn **niet** foto voor foto opnieuw beoordeeld. Eerdere uitslagen (fotobaseline batch 01) gelden niet automatisch.
 
-sp058 Fluiter, sp128 Bergeend, sp129 Krakeend, sp092 Kuifeend, sp090 Slobeend, sp130 Smient, sp132 Tafeleend, sp089 Wilde Eend, sp091 Wintertaling, sp188 Zomertaling, sp105 Fazant, sp106 Patrijs, sp077 Fuut, sp086 Grauwe Gans, sp141 Gierzwaluw, sp117 Geelgors, sp118 Rietgors, sp063 Goudhaantje, sp064 Vuurgoudhaan, sp249 Blauwe Kiekendief, sp251 Grauwe Kiekendief, sp250 Steppekiekendief, sp054 Heggenmus, sp075 IJsvogel, sp262 Grauwe Klauwier, sp143 Kluut, sp025 Kauw, sp022 Zwarte Kraai, sp069 Gele Kwikstaart, sp288 Grote Gele Kwikstaart, sp068 Witte Kwikstaart, sp070 Veldleeuwerik, sp049 Grote Lijster, sp048 Koperwiek, sp047 Kramsvogel, sp045 Merel, sp046 Zanglijster, sp164 Grote Mantelmeeuw, sp097 Kokmeeuw, sp225 Zwartkopmeeuw, sp032 Glanskop, sp029 Koolmees, sp033 Kuifmees, sp031 Matkop, sp030 Pimpelmees, sp174 Zwarte Mees, sp043 Huismus, sp044 Ringmus, sp170 Ooievaar, sp072 Graspieper, sp146 Bontbekplevier, sp145 Goudplevier, sp099 Kievit, sp147 Kleine Plevier, sp206 Strandplevier, sp144 Zilverplevier, sp078 Meerkoet, sp079 Waterhoen, sp081 Blauwe Reiger, sp083 Grote Zilverreiger, sp082 Kleine Zilverreiger, sp245 Koereiger, sp085 Kwak, sp084 Purperreiger, sp108 Grote Karekiet, sp110 Rietzanger, sp098 Scholekster, sp159 Bosruiter, sp152 Drieteenstrandloper, sp158 Groenpootruiter, sp101 Grutto, sp155 Oeverloper, sp217 Poelruiter, sp150 Steenloper, sp102 Tureluur, sp156 Witgat, sp100 Wulp, sp157 Zwarte Ruiter, sp019 Groene Specht, sp017 Kleine Bonte Specht, sp020 Middelste Bonte Specht, sp018 Zwarte Specht, sp282 Roze Spreeuw, sp112 Spreeuw, sp034 Staartmees, sp167 Grote Stern, sp166 Noordse Stern, sp165 Visdief, sp041 Appelvink, sp040 Goudvink, sp036 Groenling, sp039 Kneu, sp037 Putter, sp042 Roodmus, sp038 Sijs, sp035 Vink, sp177 Bonte Vliegenvanger, sp178 Gekraagde Roodstaart, sp176 Grauwe Vliegenvanger, sp050 Roodborst, sp053 Roodborsttapuit, sp051 Zwarte Roodstaart, sp113 Wielewaal, sp055 Winterkoning, sp061 Grasmus, sp060 Tuinfluiter, sp059 Zwartkop, sp114 Boerenzwaluw, sp115 Huiszwaluw, sp116 Oeverzwaluw, sp126 Knobbelzwaan
+sp058 Fluiter, sp128 Bergeend, sp129 Krakeend, sp092 Kuifeend, sp090 Slobeend, sp130 Smient, sp132 Tafeleend, sp089 Wilde Eend, sp091 Wintertaling, sp188 Zomertaling, sp105 Fazant, sp106 Patrijs, sp077 Fuut, sp086 Grauwe Gans, sp141 Gierzwaluw, sp117 Geelgors, sp118 Rietgors, sp063 Goudhaantje, sp064 Vuurgoudhaan, sp249 Blauwe Kiekendief, sp251 Grauwe Kiekendief, sp250 Steppekiekendief, sp075 IJsvogel, sp262 Grauwe Klauwier, sp143 Kluut, sp069 Gele Kwikstaart, sp288 Grote Gele Kwikstaart, sp068 Witte Kwikstaart, sp070 Veldleeuwerik, sp049 Grote Lijster, sp048 Koperwiek, sp047 Kramsvogel, sp045 Merel, sp046 Zanglijster, sp164 Grote Mantelmeeuw, sp097 Kokmeeuw, sp225 Zwartkopmeeuw, sp032 Glanskop, sp029 Koolmees, sp033 Kuifmees, sp031 Matkop, sp030 Pimpelmees, sp174 Zwarte Mees, sp043 Huismus, sp044 Ringmus, sp170 Ooievaar, sp072 Graspieper, sp146 Bontbekplevier, sp145 Goudplevier, sp099 Kievit, sp147 Kleine Plevier, sp206 Strandplevier, sp144 Zilverplevier, sp078 Meerkoet, sp079 Waterhoen, sp081 Blauwe Reiger, sp083 Grote Zilverreiger, sp082 Kleine Zilverreiger, sp245 Koereiger, sp085 Kwak, sp084 Purperreiger, sp108 Grote Karekiet, sp110 Rietzanger, sp098 Scholekster, sp159 Bosruiter, sp152 Drieteenstrandloper, sp158 Groenpootruiter, sp101 Grutto, sp155 Oeverloper, sp217 Poelruiter, sp150 Steenloper, sp102 Tureluur, sp156 Witgat, sp100 Wulp, sp157 Zwarte Ruiter, sp019 Groene Specht, sp017 Kleine Bonte Specht, sp020 Middelste Bonte Specht, sp018 Zwarte Specht, sp282 Roze Spreeuw, sp112 Spreeuw, sp034 Staartmees, sp167 Grote Stern, sp166 Noordse Stern, sp165 Visdief, sp041 Appelvink, sp040 Goudvink, sp036 Groenling, sp039 Kneu, sp037 Putter, sp042 Roodmus, sp038 Sijs, sp035 Vink, sp177 Bonte Vliegenvanger, sp178 Gekraagde Roodstaart, sp176 Grauwe Vliegenvanger, sp050 Roodborst, sp053 Roodborsttapuit, sp051 Zwarte Roodstaart, sp113 Wielewaal, sp055 Winterkoning, sp061 Grasmus, sp060 Tuinfluiter, sp059 Zwartkop, sp114 Boerenzwaluw, sp115 Huiszwaluw, sp116 Oeverzwaluw, sp126 Knobbelzwaan
 
