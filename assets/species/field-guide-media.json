@@ -1889,9 +1889,11 @@
         "reviewed": "2026-11-06",
         "verification": "Commons metadata and visual check against the cited species account.",
         "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wilde-eend",
-        "visualCheck": "Mannetje in eclipskleed aan het water, met bruin verenkleed en een effen gele snavel.",
-        "alt": "Wilde Eend — Mannetje in eclipskleed aan het water, met bruin verenkleed en een effen gele snavel.",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+        "visualCheck": "Bruin kleed en gele snavel. Het Engelse en Sloveense bronbijschrift verschillen over het geslacht.",
+        "alt": "Bruin getekende Wilde Eend met gele snavel bij water.",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "label": "Voorlopige foto",
+        "note": "Waarschijnlijk een mannetje in eclipskleed. De gele snavel ondersteunt dit, maar de bronbijschriften verschillen over het geslacht."
       }
     },
     "sp129": {
@@ -6096,9 +6098,9 @@
     ],
     "sp089": [
       {
-        "label": "Mannetje in vlucht",
-        "flight": true,
-        "note": "Let op de groene kop, de gele snavel en de blauw-paarse vleugelspiegel met lichte randen.",
+        "label": "Mannetje met uitgespreide vleugels",
+        "flight": false,
+        "note": "De poten hangen omlaag. De houding past bij landen en toont het prachtkleed.",
         "file": "Mallard male in flight.jpg",
         "nl": "Wilde Eend",
         "latin": "Anas platyrhynchos",
@@ -6107,16 +6109,16 @@
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
         "source": "https://commons.wikimedia.org/wiki/File:Mallard_male_in_flight.jpg",
         "showSourceLink": true,
-        "alt": "Mannetje Wilde Eend in vrije vlucht, met een groene kop en geheven vleugels.",
+        "alt": "Wilde Eend mannetje met groene kop, geheven vleugels en neerhangende poten.",
         "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
         "reviewed": "2026-11-08",
         "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wilde-eend",
-        "visualCheck": "Mannetje Wilde Eend in vrije vlucht, met een groene kop en geheven vleugels.",
+        "visualCheck": "De poten hangen omlaag. De houding past bij landen en toont het prachtkleed.",
         "width": 1400,
         "height": 958,
         "image": "/assets/species/plumage/sp089-flight.webp",
         "sex": "male",
-        "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+        "flightReview": "uit-rol 2026-11-11: Luchtgedragen met uitgestrekte poten omlaag, passend bij landingshouding. Vrije vlucht is niet bevestigd voor dit beeld."
       },
       {
         "label": "Juvenielen",
@@ -6138,6 +6140,31 @@
         "width": 1400,
         "height": 935,
         "image": "/assets/species/plumage/sp089-juv-review.webp"
+      },
+      {
+        "label": "Mannetje in vlucht",
+        "flight": true,
+        "sex": "male",
+        "note": "Zijaanzicht met vooruitgestrekte hals, groene kop en een gele snavel.",
+        "file": "Mallard duck in flight.jpg",
+        "nl": "Wilde Eend",
+        "latin": "Anas platyrhynchos",
+        "author": "Bert de Tilly",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Mallard_duck_in_flight.jpg",
+        "showSourceLink": true,
+        "alt": "Mannetje Wilde Eend in vrije vlucht met voorwaarts gestrekte hals, ingetrokken poten en een groene kop.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP.",
+        "reviewed": "2026-11-11",
+        "verificationSource": "https://commons.wikimedia.org/wiki/File:Mallard_duck_in_flight.jpg",
+        "visualCheck": "Vrij in de lucht, met voorwaarts gestrekte hals en ingetrokken poten. De groene kop en gele snavel bevestigen een mannetje in prachtkleed.",
+        "width": 1440,
+        "height": 960,
+        "image": "/assets/species/plumage/sp089-free-flight.webp",
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Mallard_duck_in_flight.jpg",
+        "sha1": "3a1b881977d401ef2b7a18fa9edfc445338be7f7",
+        "flightReview": "goedgekeurd 2026-11-11: Vrij in de lucht, met voorwaarts gestrekte hals en ingetrokken poten. De groene kop en gele snavel bevestigen een mannetje in prachtkleed."
       }
     ],
     "sp090": [

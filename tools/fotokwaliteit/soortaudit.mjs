@@ -51,7 +51,7 @@ export function checkSpecies(row, entry, flightReview) {
 
 function rightsFor(img, evidence, heroes) {
   const e = evidence.get(img);
-  if (e?.sameShot) return { status: 'VERIFIED', note: `bronaudit 09-11: zelfde opname (${e.method}), ${e.sourceLicense} · ${e.sourceAuthor}`, annotations: e.annotations || [] };
+  if (e?.sameShot) return { status: 'VERIFIED', note: `bronaudit ${e.auditDate || '09-11'}: zelfde opname (${e.method}), ${e.sourceLicense} · ${e.sourceAuthor}`, annotations: e.annotations || [] };
   const h = heroes.get(img);
   if (h?.sha1) return { status: 'VERIFIED', note: `geverifieerde import 09-11 (SHA-1 ${h.sha1.slice(0, 10)}…), ${h.license} · ${h.author}`, annotations: [] };
   return { status: 'NOT TESTED', note: 'niet in bronaudit of geverifieerde import', annotations: [] };
@@ -62,7 +62,10 @@ const worst = list => (list.includes('BLOCKED') ? 'BLOCKED' : list.includes('NOT
 export function build(auditJson, { sha = null } = {}) {
   const batches = loadBatches();
   const flight = J('docs/fotokwaliteit/vluchtcontrole.json').assets;
-  const evidence = new Map(J('docs/evidence/GUIDE_SOURCE_AUDIT_2026-11-09.json').map(e => [e.image, e]));
+  const evidenceFiles = readdirSync(resolve(ROOT, 'docs/evidence'))
+    .filter(file => /^GUIDE_SOURCE_AUDIT_\d{4}-\d{2}-\d{2}.*\.json$/.test(file))
+    .sort();
+  const evidence = new Map(evidenceFiles.flatMap(file => J(`docs/evidence/${file}`).map(e => [e.image, e])));
   const heroes = new Map(J('tools/species/verified_heroes_2026-11-09.json').map(h => [h.target, h]));
   const know = J('tools/kennisbaseline/knowledge.json');
   const browserPath = resolve(ROOT, 'docs/fotokwaliteit/soortaudit/browser.json');

@@ -285,13 +285,13 @@
    "nameNL": "Wilde Eend",
    "registry": "GUIDE_POSES[0]",
    "sexLabel": "male",
-   "class": "vlucht",
+   "class": "landen",
    "quality": "goed",
-   "decision": "goedgekeurd",
-   "target": null,
-   "newLabel": null,
-   "newNote": null,
-   "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+   "decision": "uit-rol",
+   "target": "kleed",
+   "newLabel": "Mannetje met uitgespreide vleugels",
+   "newNote": "De poten hangen omlaag. De houding past bij landen en toont het prachtkleed.",
+   "reason": "Luchtgedragen met uitgestrekte poten omlaag, passend bij landingshouding. Vrije vlucht is niet bevestigd voor dit beeld.",
    "airborne": true,
    "rights": "VERIFIED",
    "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0"
@@ -2623,6 +2623,23 @@
    "rights": "VERIFIED",
    "origin": "beeldinventaris (was flight:false)",
    "fqa": "FQA-01"
+  },
+  "/assets/species/plumage/sp089-free-flight.webp": {
+   "n": 145,
+   "id": "sp089",
+   "nameNL": "Wilde Eend",
+   "registry": "GUIDE_POSES[2]",
+   "sexLabel": "male",
+   "class": "vlucht",
+   "quality": "goed",
+   "decision": "goedgekeurd",
+   "target": null,
+   "newLabel": null,
+   "newNote": null,
+   "reason": "Vrij in de lucht, met voorwaarts gestrekte hals en ingetrokken poten. De groene kop en gele snavel bevestigen een mannetje in prachtkleed.",
+   "airborne": true,
+   "rights": "VERIFIED",
+   "rightsNote": "Oorspronkelijke Commons-JPEG gedownload en herleidbaar omgezet naar WebP, CC BY-SA 4.0."
   }
  }
 }
