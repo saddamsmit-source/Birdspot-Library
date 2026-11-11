@@ -37,5 +37,24 @@
    "De fotograaf vermeldt een juveniel. Lichte veerranden en borststreping zichtbaar. Geslacht onbekend."
   ],
   "auditDate": "2026-11-11"
+ },
+ {
+  "image": "/assets/species/plumage/sp078-juv-grown.webp",
+  "species": "sp078",
+  "source": "https://commons.wikimedia.org/wiki/File:Eurasian_coot_2025_06_18.jpg",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Eurasian_coot_2025_06_18.jpg",
+  "sourceTitle": "File:Eurasian coot 2025 06 18.jpg",
+  "sourceAuthor": "Alexis Lours",
+  "sourceLicense": "CC BY 4.0",
+  "sameShot": true,
+  "method": "directe pixelvergelijking na schalen van originele Commons-JPEG naar de WebP-afmetingen",
+  "sourceSha256": "178d087342136243adf79f87d7ac3fa56806631612dae278cac2d220ae844be4",
+  "sha1": "44726ff2d91feb161f75d62df1aea3bb7c136800",
+  "taxonInSource": "Fulica atra",
+  "annotations": [
+   "De fotograaf benoemt een juveniel en vermeldt CC BY 4.0. Lichte keel en wangen en klein voorhoofdsschild zijn zichtbaar.",
+   "Gemiddeld absoluut RGB-kanaalverschil na LANCZOS-schaal 1,71 / 1,46 / 2,17 op 255."
+  ],
+  "auditDate": "2026-11-11"
  }
 ]
