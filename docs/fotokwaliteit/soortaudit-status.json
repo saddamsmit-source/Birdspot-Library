@@ -1,5 +1,5 @@
 {
- "sha": "70c4f3fec7508812ab9bb0b50833b52706ce4720",
+ "sha": "635d78a2eae05c63bfbb43f8d9a5dc1d550c7fde",
  "generated": "2026-11-11",
  "species": [
   {
@@ -1815,17 +1815,274 @@
    "id": "sp029",
    "nameNL": "Koolmees",
    "family": "Mezen",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M4",
+   "date": "2026-11-11",
+   "sha": "635d78a2eae05c63bfbb43f8d9a5dc1d550c7fde",
+   "assets": [
+    {
+     "image": "/assets/species/plumage/sp029-adult_m.webp",
+     "role": "Hoofdfoto (Mannetje)",
+     "content": "Mannetje Koolmees met zwarte kop, witte wang en brede donkere buikstreep.",
+     "sexAge": "Fotograaf vermeldt een mannetje. Brede buikstreep zichtbaar.",
+     "quality": "Herkenbare kop en onderzijde.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY-SA 4.0 · Charles J. Sharp",
+      "annotations": [
+       "De fotograaf vermeldt een mannetje. De brede donkere buikstreep ondersteunt dat label."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp029-adult_f.webp",
+     "role": "Verenkleed (Vrouwtje)",
+     "content": "Vrouwtje Koolmees met witte wangen en een smalle, onderbroken donkere buikstreep.",
+     "sexAge": "Fotograaf vermeldt een vrouwtje. Smalle, onderbroken buikstreep zichtbaar.",
+     "quality": "Vooraanzicht toont de streep goed.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY-SA 4.0 · Evas-naturfotografie",
+      "annotations": [
+       "De fotograaf vermeldt een vrouwtje. Het vooraanzicht toont de smallere buikstreep."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp029-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Juveniele Koolmees met doffe kap, lichte wang en lichte mondhoek.",
+     "sexAge": "Fotograaf vermeldt een juveniel. Geslacht onbekend.",
+     "quality": "Scherpe kop en mondhoek.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY 2.0 · caroline legg",
+      "annotations": [
+       "De fotograaf benoemt een juveniel. De doffe kap en lichte mondhoek ondersteunen de leeftijd. Geslacht niet vastgesteld."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp029-flight.webp",
+     "role": "In vlucht",
+     "content": "Vrij in de lucht met uitgespreide vleugel. Zwarte kop, lichte wang en gele onderzijde zichtbaar.",
+     "sexAge": "Geen betrouwbaar geslachts- of leeftijdslabel bij deze kijkhoek.",
+     "quality": "Goed voor herkenning van vleugel en lichaam.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Holger Uwe Schmitt",
+      "annotations": []
+     },
+     "flight": {
+      "n": 73,
+      "id": "sp029",
+      "nameNL": "Koolmees",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0"
+     }
+    },
+    {
+     "image": "/assets/species/sp029.webp",
+     "role": "Overige herkenningsfoto's",
+     "content": "Koolmees zijwaarts op een tak, met gele buik, witte wang en lichte vleugelstreep.",
+     "sexAge": "Geslacht niet vastgesteld op deze foto.",
+     "quality": "Aanvullend zijaanzicht.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Rhododendrites",
+      "annotations": []
+     },
+     "flight": null
+    }
+   ],
+   "corrections": [
+    "Brongeverifieerd mannetje als hoofdfoto, met verwijzing vanuit Mannetje. Vrouwtje en juveniel toegevoegd. Oud hoofdbeeld blijft als aanvullend portret."
+   ],
+   "missing": [],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "Volwassen geslachtslabels alleen als bron en zichtbaar buikpatroon overeenstemmen. Vluchtfoto en juveniel zonder geslachtslabel.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "VERIFIED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Kap, oogstreek en middenstreep"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium 145 (Playwright)",
+    "photos": 5,
+    "sections": [
+     "Hoofdfoto",
+     "Verenkleed",
+     "In vlucht",
+     "Overige herkenningsfoto's"
+    ],
+    "flight": [
+     "/assets/species/plumage/sp029-flight.webp"
+    ],
+    "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik",
+    "testedOn": "635d78a2eae05c63bfbb43f8d9a5dc1d550c7fde",
+    "date": "2026-11-11",
+    "offline": {
+     "method": "Lokale HTTP-server stopgezet na precache, herladen, soortkaart geopend en foto’s gedecodeerd",
+     "status": "VERIFIED"
+    }
+   },
+   "errors": [],
+   "verdict": "VERIFIED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp030",
    "nameNL": "Pimpelmees",
    "family": "Mezen",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M4",
+   "date": "2026-11-11",
+   "sha": "635d78a2eae05c63bfbb43f8d9a5dc1d550c7fde",
+   "assets": [
+    {
+     "image": "/assets/species/sp030.webp",
+     "role": "Hoofdfoto",
+     "content": "Pimpelmees op een twijg, met blauwe kruin, witte wangen en donkere oogstreep.",
+     "sexAge": "Volwassen kleed als herkenningsvoorbeeld. Geslacht onbekend.",
+     "quality": "Helder zijaanzicht.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp030-juv2.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge Pimpelmees met bleekgele wang en doffe blauwgrijze kruin.",
+     "sexAge": "Fotograaf noemt een juveniel. Geslacht onbekend.",
+     "quality": "Kop goed zichtbaar, kleine vogel in staand beeld.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · caroline legg",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp030-flight.webp",
+     "role": "In vlucht",
+     "content": "Vrij in de lucht met gespreide staart en vleugels. Blauwe bovenzijde en oogstreep zichtbaar.",
+     "sexAge": "Geslacht onbekend.",
+     "quality": "Vleugels en staart zichtbaar van bovenaf.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Joe Dyer from Buckhurst Hill, England",
+      "annotations": []
+     },
+     "flight": {
+      "n": 76,
+      "id": "sp030",
+      "nameNL": "Pimpelmees",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 2.0"
+     }
+    }
+   ],
+   "corrections": [
+    "Jeugdfoto voorzien van zichtbare aanwijzing bij wang en kruin. De bestaande neutrale foto-indeling blijft bruikbaar."
+   ],
+   "missing": [],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "De kenmerken voor beide geslachten overlappen. Op deze beelden is het geslacht niet op kleed vastgesteld.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "VERIFIED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Koptekening en onderzijde"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium 145 (Playwright)",
+    "photos": 3,
+    "sections": [
+     "Hoofdfoto",
+     "Verenkleed",
+     "In vlucht"
+    ],
+    "flight": [
+     "/assets/species/plumage/sp030-flight.webp"
+    ],
+    "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik",
+    "testedOn": "635d78a2eae05c63bfbb43f8d9a5dc1d550c7fde",
+    "date": "2026-11-11",
+    "offline": {
+     "method": "Lokale HTTP-server stopgezet na precache, herladen, soortkaart geopend en foto’s gedecodeerd",
+     "status": "VERIFIED"
+    }
+   },
+   "errors": [],
+   "verdict": "VERIFIED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp031",
@@ -1927,9 +2184,149 @@
    "id": "sp043",
    "nameNL": "Huismus",
    "family": "Mussen",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M4",
+   "date": "2026-11-11",
+   "sha": "635d78a2eae05c63bfbb43f8d9a5dc1d550c7fde",
+   "assets": [
+    {
+     "image": "/assets/species/plumage/sp043-hero-male.webp",
+     "role": "Hoofdfoto (Mannetje)",
+     "content": "Rustend mannetje met grijze kruin, kastanjebruine zijkant van de kop en zwarte bef.",
+     "sexAge": "De bron benoemt een mannetje. Kruin en bef ondersteunen dat.",
+     "quality": "Kop, bef en bouw zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "geverifieerde import 09-11 (SHA-1 95f79228d7…), CC BY-SA 4.0 · Charles J. Sharp",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp043-adult_m.webp",
+     "role": "Verenkleed (Mannetje)",
+     "content": "Mannetje op een bloesemtak, met zwarte bef en bruin getekende vleugel.",
+     "sexAge": "Koptekening en donkere bef passen bij een mannetje.",
+     "quality": "Duidelijke vleugeltekening vanuit een andere kijkhoek.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/sp043.webp",
+     "role": "Verenkleed (Vrouwtje)",
+     "content": "Bruine Huismus op een tak met lichte wenkbrauwstreep en kegelvormige snavel.",
+     "sexAge": "De fotograaf benoemt een vrouwtje. Bruin kleed en wenkbrauw ondersteunen het label.",
+     "quality": "Bruikbaar kopaanzicht.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Ermell",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp043-juv-review.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Scherpe voorgrondvogel in jeugdkleed. Een tweede mus staat onscherp op de achtergrond.",
+     "sexAge": "Fotograaf benoemt een juveniel. Het geslacht van de voorgrondvogel is onbekend.",
+     "quality": "Kleed van de voorgrondvogel is goed zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp043-flight.webp",
+     "role": "In vlucht (Mannetje)",
+     "content": "Huismus in vrije vlucht, met open vleugels, gespreide staart en donkere bef.",
+     "sexAge": "Grijze kruin en zwarte bef bevestigen een mannetje.",
+     "quality": "Vlucht en borsttekening duidelijk zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Mildeep",
+      "annotations": []
+     },
+     "flight": {
+      "n": 78,
+      "id": "sp043",
+      "nameNL": "Huismus",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": "male",
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0"
+     }
+    }
+   ],
+   "corrections": [
+    "Jeugdfoto benoemt nu de voorgrondvogel. Herkenningsprofiel onderbouwt de vergelijking met Ringmus en Vink."
+   ],
+   "missing": [],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "Mannetje en vrouwtje waar bron en beeld dat dragen. Juveniel zonder geslachtslabel.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "VERIFIED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 2,
+    "decisive": 0,
+    "notDecisive": [
+     "Kruin en afzonderlijke wangvlek",
+     "Vleugelstrepen bij bruine vogels"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium 145 (Playwright)",
+    "photos": 5,
+    "sections": [
+     "Hoofdfoto",
+     "Verenkleed",
+     "In vlucht"
+    ],
+    "flight": [
+     "/assets/species/plumage/sp043-flight.webp"
+    ],
+    "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik",
+    "testedOn": "635d78a2eae05c63bfbb43f8d9a5dc1d550c7fde",
+    "date": "2026-11-11",
+    "offline": {
+     "method": "Lokale HTTP-server stopgezet na precache, herladen, soortkaart geopend en foto’s gedecodeerd",
+     "status": "VERIFIED"
+    }
+   },
+   "errors": [],
+   "verdict": "VERIFIED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp044",
@@ -3437,7 +3834,7 @@
     "visual": "VERIFIED",
     "rights": "VERIFIED",
     "knowledge": "PARTIALLY TESTED",
-    "browser": "NOT TESTED",
+    "browser": "VERIFIED",
     "independent": "NOT TESTED"
    },
    "photoComplete": true,
@@ -3453,7 +3850,27 @@
     ],
     "discrepancies": 1
    },
-   "browser": null,
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium 145 (Playwright)",
+    "photos": 7,
+    "sections": [
+     "Hoofdfoto",
+     "Verenkleed",
+     "In vlucht",
+     "Overige herkenningsfoto's"
+    ],
+    "flight": [
+     "/assets/species/plumage/sp091-flight.webp"
+    ],
+    "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik",
+    "testedOn": "635d78a2eae05c63bfbb43f8d9a5dc1d550c7fde",
+    "date": "2026-11-11",
+    "offline": {
+     "method": "Lokale HTTP-server stopgezet na precache, herladen, soortkaart geopend en foto’s gedecodeerd",
+     "status": "VERIFIED"
+    }
+   },
    "errors": [],
    "verdict": "PARTIALLY TESTED",
    "next": "Onafhankelijke review (ChatGPT)"
@@ -4034,7 +4451,7 @@
     "visual": "VERIFIED",
     "rights": "VERIFIED",
     "knowledge": "VERIFIED",
-    "browser": "NOT TESTED",
+    "browser": "VERIFIED",
     "independent": "NOT TESTED"
    },
    "photoComplete": true,
@@ -4048,9 +4465,28 @@
     "open": [],
     "discrepancies": 0
    },
-   "browser": null,
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium 145 (Playwright)",
+    "photos": 4,
+    "sections": [
+     "Hoofdfoto",
+     "Verenkleed",
+     "In vlucht"
+    ],
+    "flight": [
+     "/assets/species/plumage/sp105-flight.webp"
+    ],
+    "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik",
+    "testedOn": "635d78a2eae05c63bfbb43f8d9a5dc1d550c7fde",
+    "date": "2026-11-11",
+    "offline": {
+     "method": "Lokale HTTP-server stopgezet na precache, herladen, soortkaart geopend en foto’s gedecodeerd",
+     "status": "VERIFIED"
+    }
+   },
    "errors": [],
-   "verdict": "PARTIALLY TESTED",
+   "verdict": "VERIFIED",
    "next": "Onafhankelijke review (ChatGPT)"
   },
   {
@@ -4279,7 +4715,7 @@
     "visual": "VERIFIED",
     "rights": "VERIFIED",
     "knowledge": "VERIFIED",
-    "browser": "NOT TESTED",
+    "browser": "VERIFIED",
     "independent": "NOT TESTED"
    },
    "photoComplete": true,
@@ -4293,9 +4729,28 @@
     "open": [],
     "discrepancies": 0
    },
-   "browser": null,
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium 145 (Playwright)",
+    "photos": 3,
+    "sections": [
+     "Hoofdfoto",
+     "Verenkleed",
+     "In vlucht"
+    ],
+    "flight": [
+     "/assets/species/plumage/sp141-flight.webp"
+    ],
+    "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik",
+    "testedOn": "635d78a2eae05c63bfbb43f8d9a5dc1d550c7fde",
+    "date": "2026-11-11",
+    "offline": {
+     "method": "Lokale HTTP-server stopgezet na precache, herladen, soortkaart geopend en foto’s gedecodeerd",
+     "status": "VERIFIED"
+    }
+   },
    "errors": [],
-   "verdict": "PARTIALLY TESTED",
+   "verdict": "VERIFIED",
    "next": "Onafhankelijke review (ChatGPT)"
   },
   {

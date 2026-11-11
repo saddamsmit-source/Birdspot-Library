@@ -65,8 +65,10 @@ def main():
      p.get_by_role('button',name='Sluit soortdetail',exact=True).click()
      p.locator('.signature-species-detail-overlay').wait_for(state='detached')
     # Explicit broken-photo state, no unrelated external fallback image.
-    ctx.route('**/assets/species/sp029.webp',lambda route:route.abort())
-    p.locator('#speciesSearch').fill('Koolmees');p.locator('.species-row[data-id="sp029"]').click()
+    broken_sid='sp029'
+    broken_image=hero_paths.get(broken_sid, photos[broken_sid]['image'])
+    ctx.route('**'+broken_image,lambda route:route.abort())
+    p.locator('#speciesSearch').fill('Koolmees');p.locator(f'.species-row[data-id="{broken_sid}"]').click()
     p.get_by_text('Gidsfoto niet beschikbaar',exact=True).wait_for()
     ctx.close();print('PASS guide display and failure',width,flush=True)
    ctx=browser.new_context();p=ctx.new_page();p.goto(url)

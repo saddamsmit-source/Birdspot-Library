@@ -209,7 +209,7 @@ export const SPECIES = [
   { id:'sp029', nameNL:'Koolmees',            nameEN:'Great Tit',                 nameSci:'Parus major',                family:'Mezen',           category:'standvogel', icon:'🐦', regions:['bos','stedelijk','agrarisch'],
     fieldmarks:'Gele buik met zwarte lengtestreep, zwarte kop en witte wangen.',
     size:{ length:'13,5–15 cm', wingspan:'22–25 cm', weight:'14–22 g' },
-    plumage:{ adult_m:'Brede zwarte buikstreep. Groene rug en lichte vleugelstreep.', adult_f:'Dezelfde kleuren als het mannetje, met een smallere zwarte buikstreep.', juv:null, jaarling:null, breeding:null, winter:null, eclipse:null },
+    plumage:{ adult_m:'Brede zwarte buikstreep. Groene rug en lichte vleugelstreep.', adult_f:'Dezelfde basiskleuren als het mannetje, met meestal een smallere donkere buikstreep.', juv:'Doffere kap en vaak gelig getinte wangen.', jaarling:null, breeding:null, winter:null, eclipse:null },
     guideReview:{"date":"2026-11-06","dimensions":["length"],"sources":[{"label":"Vogelbescherming","url":"https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/koolmees"}]},
     distribution:'Vooral loofbossen, parken en tuinen met bomen en nestholtes.', status:'Standvogel, ook wintergast · jaarrond',
     statusExtra:'wintergast', months:'jan-dec', frequency:'algemeen', breeding:'ja', redList:null },
@@ -306,9 +306,9 @@ export const SPECIES = [
 
   // ── MUSSEN ───────────────────────────────────────────────────
   { id:'sp043', nameNL:'Huismus',             nameEN:'House Sparrow',             nameSci:'Passer domesticus',          family:'Mussen',          category:'standvogel', icon:'🐦', regions:['stedelijk','agrarisch'],
-    fieldmarks:'Mannetje grijs dak, kastanjebruin, zwarte keel-vlek.',
+    fieldmarks:'Stevige mus. Mannetje met grijze kruin, kastanjebruine kopzijden en zwarte bef. Vrouwtje met lichte wenkbrauwstreep.',
     size:{ length:'14–16 cm', wingspan:'21–25 cm', weight:'24–40 g' },
-    plumage:{ adult_m:'Grijs kruin; kastanjebruine nek; zwarte keelvlek; witte wang; gestreepte bruine rug', adult_f:'Gestreept bruin-beige; geen zwarte keel; bleke wenkbrauwstreep', juv:'Als vrouwtje', jaarling:null, breeding:'Mannetje met grote zwarte bef en zwarte snavel', winter:'Kleinere grijzige bef; gelige snavel', eclipse:null },
+    plumage:{ adult_m:'Grijze kruin, kastanjebruine kopzijden en zwarte bef. De rug is bruin gestreept.', adult_f:'Lichtbruin kleed met een lichte wenkbrauwstreep en gestreepte rug.', juv:'Lijkt op het vrouwtje, met een weinig contrastrijk bruin kleed.', jaarling:null, breeding:'Mannetje met grote zwarte bef en zwarte snavel', winter:'Kleinere grijzige bef; gelige snavel', eclipse:null },
     distribution:'Heel Nederland rondom bebouwing; steden, dorpen en boerderijen', status:'Standvogel · jaarrond',
     statusExtra:null, months:'jan-dec', frequency:'algemeen', breeding:'ja', redList:'Gevoelig' },
   { id:'sp044', nameNL:'Ringmus',             nameEN:'Eurasian Tree Sparrow',     nameSci:'Passer montanus',            family:'Mussen',          category:'standvogel', icon:'🐦', regions:['agrarisch','stedelijk','bos'],

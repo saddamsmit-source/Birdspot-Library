@@ -1,0 +1,56 @@
+[
+ {
+  "image": "/assets/species/plumage/sp029-adult_m.webp",
+  "species": "sp029",
+  "source": "https://commons.wikimedia.org/wiki/File:Great_tit_%28Parus_major%29_male.jpg",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Great_tit_%28Parus_major%29_male.jpg",
+  "sourceTitle": "File:Great tit (Parus major) male.jpg",
+  "sourceAuthor": "Charles J. Sharp",
+  "sourceLicense": "CC BY-SA 4.0",
+  "sameShot": true,
+  "method": "directe WebP-conversie van originele Commons-JPEG",
+  "sourceSha256": "10974c373893c70a12e6c03683d0276d5c5b65dacb38086209bdcb82e4dd0548",
+  "sha1": "fdd5f978ff7b1af1d16c13dbc5e3217f3fd36b3e",
+  "taxonInSource": "Parus major",
+  "annotations": [
+   "De fotograaf vermeldt een mannetje. De brede donkere buikstreep ondersteunt dat label."
+  ],
+  "auditDate": "2026-11-11"
+ },
+ {
+  "image": "/assets/species/plumage/sp029-adult_f.webp",
+  "species": "sp029",
+  "source": "https://commons.wikimedia.org/wiki/File:Female_Great_tit.jpg",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Female_Great_tit.jpg",
+  "sourceTitle": "File:Female Great tit.jpg",
+  "sourceAuthor": "Evas-naturfotografie",
+  "sourceLicense": "CC BY-SA 4.0",
+  "sameShot": true,
+  "method": "directe WebP-conversie van originele Commons-JPEG",
+  "sourceSha256": "f4d76659fb63a425477dc18445d4f78434c2b599f18907fa5ddca0f5badf31a9",
+  "sha1": "50108909b3b49c08582855b3e2372cfc58914c97",
+  "taxonInSource": "Parus major",
+  "annotations": [
+   "De fotograaf vermeldt een vrouwtje. Het vooraanzicht toont de smallere buikstreep."
+  ],
+  "auditDate": "2026-11-11"
+ },
+ {
+  "image": "/assets/species/plumage/sp029-juv.webp",
+  "species": "sp029",
+  "source": "https://commons.wikimedia.org/wiki/File:Great_tit_-_Juvenile_-_Parus_major_%2853034153829%29.jpg",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Great_tit_-_Juvenile_-_Parus_major_%2853034153829%29.jpg",
+  "sourceTitle": "File:Great tit - Juvenile - Parus major (53034153829).jpg",
+  "sourceAuthor": "caroline legg",
+  "sourceLicense": "CC BY 2.0",
+  "sameShot": true,
+  "method": "directe WebP-conversie van originele Commons-JPEG",
+  "sourceSha256": "d67c8ce760d0736136d97c4d4ab2e9ec9c2fbcfb0ab382c9084fb3f372759f1a",
+  "sha1": "ef2814e8f25fee6a21c0ac9dda43ac4e86c09f52",
+  "taxonInSource": "Parus major",
+  "annotations": [
+   "De fotograaf benoemt een juveniel. De doffe kap en lichte mondhoek ondersteunen de leeftijd. Geslacht niet vastgesteld."
+  ],
+  "auditDate": "2026-11-11"
+ }
+]

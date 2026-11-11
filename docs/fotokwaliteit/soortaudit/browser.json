@@ -319,6 +319,128 @@
    ],
    "checks": "SAB-01..07",
    "lijktOp": "SAB-09 OK (390 px)"
+  },
+  "sp043": {
+   "ok": true,
+   "viewport": "390x844 Chromium 145 (Playwright)",
+   "photos": 5,
+   "sections": [
+    "Hoofdfoto",
+    "Verenkleed",
+    "In vlucht"
+   ],
+   "flight": [
+    "/assets/species/plumage/sp043-flight.webp"
+   ],
+   "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik",
+   "testedOn": "635d78a2eae05c63bfbb43f8d9a5dc1d550c7fde",
+   "date": "2026-11-11",
+   "offline": {
+    "method": "Lokale HTTP-server stopgezet na precache, herladen, soortkaart geopend en foto’s gedecodeerd",
+    "status": "VERIFIED"
+   }
+  },
+  "sp029": {
+   "ok": true,
+   "viewport": "390x844 Chromium 145 (Playwright)",
+   "photos": 5,
+   "sections": [
+    "Hoofdfoto",
+    "Verenkleed",
+    "In vlucht",
+    "Overige herkenningsfoto's"
+   ],
+   "flight": [
+    "/assets/species/plumage/sp029-flight.webp"
+   ],
+   "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik",
+   "testedOn": "635d78a2eae05c63bfbb43f8d9a5dc1d550c7fde",
+   "date": "2026-11-11",
+   "offline": {
+    "method": "Lokale HTTP-server stopgezet na precache, herladen, soortkaart geopend en foto’s gedecodeerd",
+    "status": "VERIFIED"
+   }
+  },
+  "sp030": {
+   "ok": true,
+   "viewport": "390x844 Chromium 145 (Playwright)",
+   "photos": 3,
+   "sections": [
+    "Hoofdfoto",
+    "Verenkleed",
+    "In vlucht"
+   ],
+   "flight": [
+    "/assets/species/plumage/sp030-flight.webp"
+   ],
+   "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik",
+   "testedOn": "635d78a2eae05c63bfbb43f8d9a5dc1d550c7fde",
+   "date": "2026-11-11",
+   "offline": {
+    "method": "Lokale HTTP-server stopgezet na precache, herladen, soortkaart geopend en foto’s gedecodeerd",
+    "status": "VERIFIED"
+   }
+  },
+  "sp105": {
+   "ok": true,
+   "viewport": "390x844 Chromium 145 (Playwright)",
+   "photos": 4,
+   "sections": [
+    "Hoofdfoto",
+    "Verenkleed",
+    "In vlucht"
+   ],
+   "flight": [
+    "/assets/species/plumage/sp105-flight.webp"
+   ],
+   "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik",
+   "testedOn": "635d78a2eae05c63bfbb43f8d9a5dc1d550c7fde",
+   "date": "2026-11-11",
+   "offline": {
+    "method": "Lokale HTTP-server stopgezet na precache, herladen, soortkaart geopend en foto’s gedecodeerd",
+    "status": "VERIFIED"
+   }
+  },
+  "sp141": {
+   "ok": true,
+   "viewport": "390x844 Chromium 145 (Playwright)",
+   "photos": 3,
+   "sections": [
+    "Hoofdfoto",
+    "Verenkleed",
+    "In vlucht"
+   ],
+   "flight": [
+    "/assets/species/plumage/sp141-flight.webp"
+   ],
+   "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik",
+   "testedOn": "635d78a2eae05c63bfbb43f8d9a5dc1d550c7fde",
+   "date": "2026-11-11",
+   "offline": {
+    "method": "Lokale HTTP-server stopgezet na precache, herladen, soortkaart geopend en foto’s gedecodeerd",
+    "status": "VERIFIED"
+   }
+  },
+  "sp091": {
+   "ok": true,
+   "viewport": "390x844 Chromium 145 (Playwright)",
+   "photos": 7,
+   "sections": [
+    "Hoofdfoto",
+    "Verenkleed",
+    "In vlucht",
+    "Overige herkenningsfoto's"
+   ],
+   "flight": [
+    "/assets/species/plumage/sp091-flight.webp"
+   ],
+   "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik",
+   "testedOn": "635d78a2eae05c63bfbb43f8d9a5dc1d550c7fde",
+   "date": "2026-11-11",
+   "offline": {
+    "method": "Lokale HTTP-server stopgezet na precache, herladen, soortkaart geopend en foto’s gedecodeerd",
+    "status": "VERIFIED"
+   }
   }
  }
 }
