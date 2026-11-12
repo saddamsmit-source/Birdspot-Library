@@ -1,6 +1,6 @@
 # Birdspot — soortaudit van de collectie met foto's
 
-Gegenereerd door `tools/fotokwaliteit/build_soortaudit_tracker.py` · status voor commit `a692d987fba980b275b4f6d07f936bfd3260b762` · 2026-11-12.
+Gegenereerd door `tools/fotokwaliteit/build_soortaudit_tracker.py` · status voor commit `ba87378fea76b9fa9aead8592afe6aa83f211645` · 2026-11-12.
 Statussen: VERIFIED / PARTIALLY TESTED / NOT TESTED / BLOCKED. Een geautomatiseerde rendercontrole telt **niet** als visuele of inhoudelijke controle.
 Beoordeeld volgens `docs/BIRDSPOT_KWALITEITSNORM.md` (biometrie §1, herkenning §2, foto §3). Verbeterwensen zijn voor de latere beoordeling door de eigenaar en blokkeren de batch niet.
 
@@ -9,18 +9,18 @@ Beoordeeld volgens `docs/BIRDSPOT_KWALITEITSNORM.md` (biometrie §1, herkenning 
 | # | Meting | Stand |
 |---|---|---|
 | 1 | Soorten met bestaande gidsfoto's | 140 |
-| 2 | Afzonderlijk (aangescherpt) gecontroleerd | 89 (M1, M2, M3, M4, M5, M6, M7, M8) |
-| 3 | Technisch correct (laden, volgorde, offline-bron, beoordeling = kaart) | 89 van 89 |
-| 4a | Visueel VERIFIED (beeld per foto) | 84 van 89 |
-| 4b | Inhoud (kennisprofiel) VERIFIED | 55 van 89 — alle profielen hebben nog open punten |
+| 2 | Afzonderlijk (aangescherpt) gecontroleerd | 92 (M1, M2, M3, M4, M5, M6, M7, M8) |
+| 3 | Technisch correct (laden, volgorde, offline-bron, beoordeling = kaart) | 92 van 92 |
+| 4a | Visueel VERIFIED (beeld per foto) | 87 van 92 |
+| 4b | Inhoud (kennisprofiel) VERIFIED | 58 van 92 — alle profielen hebben nog open punten |
 | 4c | Onafhankelijk beoordeeld (ChatGPT) | 0 — NOT TESTED |
-| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 99; plus collectiebrede vluchtcontrole: 17 uit de vluchtrol, 8 gearchiveerd |
+| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 102; plus collectiebrede vluchtcontrole: 17 uit de vluchtrol, 8 gearchiveerd |
 | 6 | Afgekeurde vluchtfoto's | 25 (tabel hieronder) |
-| 7 | Ontbrekende foto-/kennisonderdelen | 66 fotoposities in gecontroleerde soorten; 51 fotosoorten zonder kennisprofiel |
-| 8 | Kritische kenmerken niet doorslaggevend onderbouwd | 119 (tabel hieronder) |
+| 7 | Ontbrekende foto-/kennisonderdelen | 66 fotoposities in gecontroleerde soorten; 48 fotosoorten zonder kennisprofiel |
+| 8 | Kritische kenmerken niet doorslaggevend onderbouwd | 122 (tabel hieronder) |
 | 9 | Open bron-/licentieproblemen | 0 in gecontroleerde soorten; collectiebreed blijft het eerder gemelde punt '22 afbeeldingen buiten de bronaudit' open |
 
-Eindoordeel per gecontroleerde soort: PARTIALLY TESTED 74, VERIFIED 15.
+Eindoordeel per gecontroleerde soort: PARTIALLY TESTED 77, VERIFIED 15.
 
 ## Gecontroleerde soorten
 
@@ -185,6 +185,68 @@ Batch M1 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · tech
 - **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
 - **Onzeker:** —
 - **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp092 Kuifeend — PARTIALLY TESTED
+
+Batch M8 · 2026-11-12 · SHA `ba87378fea76b9fa9aead8592afe6aa83f211645` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp092-hero-male.webp` | Hoofdfoto (Mannetje) | Mannetje met afhangende kuif, wit flankveld en geel oog. | Volwassen mannetje volgens bron en kleed. | Scherpe kop en herkenbare houding. | goedgekeurd | — | VERIFIED: geverifieerde import 09-11 (SHA-1 01c902a7dc…), CC BY 4.0 · Alexis Lours |
+| `sp092.webp` | Verenkleed (Mannetje) | Tweede opname van zwemmend mannetje met lange kuif, gele iris en witte flanken. | Volwassen mannetje volgens bron en kleed. | Volledig profiel uit een andere opname. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Dr. Raju Kasambe |
+| `sp092-adult_f.webp` | Verenkleed (Vrouwtje) | Donkerbruin vrouwtje met lichtere flanken en korte kuif. | Vrouwtje volgens bron en kleed. | Kopprofiel, snavel en flank zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Hans Hillewaert |
+| `sp092-juv.webp` | Verenkleed (Juveniel) | Jonge Kuifeend met bruin verenkleed en korte kuif. | Onderzoekswaarneming met annotatie Juvenile. | Volledig zijaanzicht, duidelijke kop en snavel. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind tot maximaal 1400 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.), CC BY 4.0 · SkippingShoe |
+| `sp092-juv-review.webp` | Verenkleed (Juveniel, jonger stadium) | Bruine jonge Kuifeend met nog deels donzig kleed. | Juveniel volgens bestaande bronbeoordeling. | Eerder verenkleedstadium, herkenbaar naast de nieuwe opname. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Tsyganov Sergey |
+| `sp092-flight.webp` | In vlucht (Mannetje) | Mannetje met gele iris en lichte vleugelbaan. | Volwassen mannetje volgens bron en kleed. | Vrije vlucht boven water, vleugelbaan goed zichtbaar. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · Birds of Gilgit-Baltistan from Aliabad, Hunza, Pakistan |
+
+- **Correcties:** Een volledig bevederde juveniel toegevoegd naast de bestaande opname van een jonger stadium. Vergelijking met Tafeleend op kop, oog en flanken uitgewerkt.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Volwassen labels volgen bron en kleed. Juvenielen blijven neutraal gelabeld.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Kuif, oog en kopprofiel; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp090 Slobeend — PARTIALLY TESTED
+
+Batch M8 · 2026-11-12 · SHA `ba87378fea76b9fa9aead8592afe6aa83f211645` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp090.webp` | Hoofdfoto (Mannetje) | Mannetje in ondiep water, met groene kop, lichte borst en brede snavel. | Volwassen mannetje volgens bron en kleed. | Volledig zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours |
+| `sp090-adult_f.webp` | Verenkleed (Vrouwtje) | Bruin vrouwtje met brede lepelvormige snavel. | Vrouwtje volgens bron en kleed. | De vorm van de snavel is goed zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.5 · Andreas Trepte |
+| `sp090-juv.webp` | Verenkleed (Juveniel) | Jonge Slobeend in bruin kleed met brede snavel, zwemmend in de Verenigde Staten. | Onderzoekswaarneming met annotatie Juvenile. | Kop, snavel en lichaam goed zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind tot maximaal 1400 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.), CC BY-SA 4.0 · Hal |
+| `sp090-flight.webp` | In vlucht (Mannetje) | Mannetje met brede snavel, lichtblauwe voorvleugel en groene spiegel. | Volwassen mannetje volgens bron en kleed. | Herkenbare volledige vogel in vrije vlucht. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Frank Schulenburg |
+
+- **Correcties:** Bronbevestigde juvenielenfoto toegevoegd. Kennisprofiel en vergelijking met Wilde Eend op snavel en vleugeltekening uitgewerkt.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Volwassen labels volgen bron en kleed. Juvenielen blijven neutraal gelabeld.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Snavelvorm; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp132 Tafeleend — PARTIALLY TESTED
+
+Batch M8 · 2026-11-12 · SHA `ba87378fea76b9fa9aead8592afe6aa83f211645` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp132.webp` | Hoofdfoto (Mannetje) | Roodbruine kop, rood oog, donkere borst en grijze romp. | Volwassen mannetje volgens bron en kleed. | Helder zijaanzicht en zichtbare iris. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours |
+| `sp132-adult_f.webp` | Verenkleed (Vrouwtje) | Bruine kop met lichte wangtekening en grijsbruine flanken. | Vrouwtje volgens bron en kleed. | Kopprofiel, wang en flank duidelijk zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Klamul |
+| `sp132-juv.webp` | Verenkleed (Juveniel) | Jonge Tafeleend linksachter een grotere soortgenoot. | De fotograaf benoemt een begeleidende juveniel. | Beide vogels zijn zichtbaar en de juveniel is aangeduid in de fototekst. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind tot maximaal 1400 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.), CC BY 4.0 · James Heal |
+| `sp132-flight.webp` | In vlucht (Mannetje) | Roodbruine kop, donkere borst en lichtgrijze vleugelbaan. | Volwassen mannetje volgens bron en kleed. | Volledig silhouet in vrije vlucht. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp |
+
+- **Correcties:** Juvenielenfoto toegevoegd met uitleg welke vogel de juveniel is. Vergelijking met Kuifeend voor beide geslachten uitgewerkt.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Volwassen labels volgen bron en kleed. Juvenielen blijven neutraal gelabeld.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Kopprofiel, oog en flanken; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
 
 ### sp089 Wilde Eend — PARTIALLY TESTED
 
@@ -1883,7 +1945,9 @@ Batch M6 · 2026-11-12 · SHA `38e3b3c42662dc49be8b769fd9f82a8dde65cad7` · tech
 | sp084 Purperreiger | Hals, snavel en vliegbeeld |
 | sp086 Grauwe Gans | Snavel, kol en buik |
 | sp089 Wilde Eend | Vleugelspiegel bij bruine vogels |
+| sp090 Slobeend | Snavelvorm |
 | sp091 Wintertaling | Kop, staartzijde en bovenvleugel bij bruine vogels |
+| sp092 Kuifeend | Kuif, oog en kopprofiel |
 | sp094 Zilvermeeuw | Pootkleur |
 | sp094 Zilvermeeuw | Tertials eerstejaars |
 | sp094 Zilvermeeuw | Leeftijd |
@@ -1904,6 +1968,7 @@ Batch M6 · 2026-11-12 · SHA `38e3b3c42662dc49be8b769fd9f82a8dde65cad7` · tech
 | sp117 Geelgors | Stuit, kop en omgeving |
 | sp118 Rietgors | Kop en stuit |
 | sp126 Knobbelzwaan | Snavel en houding |
+| sp132 Tafeleend | Kopprofiel, oog en flanken |
 | sp141 Gierzwaluw | Vleugelvorm, onderzijde en staart in vlucht |
 | sp143 Kluut | Snavelvorm en pootkleur |
 | sp152 Drieteenstrandloper | Snavelvorm en winterkleed |
@@ -1923,5 +1988,5 @@ Batch M6 · 2026-11-12 · SHA `38e3b3c42662dc49be8b769fd9f82a8dde65cad7` · tech
 
 Deze soorten renderen technisch, maar zijn **niet** foto voor foto opnieuw beoordeeld. Eerdere uitslagen (fotobaseline batch 01) gelden niet automatisch.
 
-sp257 Bijeneter, sp058 Fluiter, sp128 Bergeend, sp129 Krakeend, sp092 Kuifeend, sp090 Slobeend, sp130 Smient, sp132 Tafeleend, sp188 Zomertaling, sp249 Blauwe Kiekendief, sp251 Grauwe Kiekendief, sp250 Steppekiekendief, sp262 Grauwe Klauwier, sp288 Grote Gele Kwikstaart, sp164 Grote Mantelmeeuw, sp097 Kokmeeuw, sp225 Zwartkopmeeuw, sp170 Ooievaar, sp146 Bontbekplevier, sp145 Goudplevier, sp147 Kleine Plevier, sp206 Strandplevier, sp144 Zilverplevier, sp245 Koereiger, sp085 Kwak, sp108 Grote Karekiet, sp110 Rietzanger, sp153 Bonte Strandloper, sp159 Bosruiter, sp158 Groenpootruiter, sp155 Oeverloper, sp217 Poelruiter, sp148 Regenwulp, sp149 Rosse Grutto, sp150 Steenloper, sp156 Witgat, sp157 Zwarte Ruiter, sp019 Groene Specht, sp017 Kleine Bonte Specht, sp020 Middelste Bonte Specht, sp018 Zwarte Specht, sp282 Roze Spreeuw, sp167 Grote Stern, sp166 Noordse Stern, sp039 Kneu, sp042 Roodmus, sp113 Wielewaal, sp062 Braamsluiper, sp060 Tuinfluiter, sp116 Oeverzwaluw, sp187 Wilde Zwaan
+sp257 Bijeneter, sp058 Fluiter, sp128 Bergeend, sp129 Krakeend, sp130 Smient, sp188 Zomertaling, sp249 Blauwe Kiekendief, sp251 Grauwe Kiekendief, sp250 Steppekiekendief, sp262 Grauwe Klauwier, sp288 Grote Gele Kwikstaart, sp164 Grote Mantelmeeuw, sp097 Kokmeeuw, sp225 Zwartkopmeeuw, sp170 Ooievaar, sp146 Bontbekplevier, sp145 Goudplevier, sp147 Kleine Plevier, sp206 Strandplevier, sp144 Zilverplevier, sp245 Koereiger, sp085 Kwak, sp108 Grote Karekiet, sp110 Rietzanger, sp153 Bonte Strandloper, sp159 Bosruiter, sp158 Groenpootruiter, sp155 Oeverloper, sp217 Poelruiter, sp148 Regenwulp, sp149 Rosse Grutto, sp150 Steenloper, sp156 Witgat, sp157 Zwarte Ruiter, sp019 Groene Specht, sp017 Kleine Bonte Specht, sp020 Middelste Bonte Specht, sp018 Zwarte Specht, sp282 Roze Spreeuw, sp167 Grote Stern, sp166 Noordse Stern, sp039 Kneu, sp042 Roodmus, sp113 Wielewaal, sp062 Braamsluiper, sp060 Tuinfluiter, sp116 Oeverzwaluw, sp187 Wilde Zwaan
 

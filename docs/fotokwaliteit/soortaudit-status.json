@@ -1,5 +1,5 @@
 {
- "sha": "a692d987fba980b275b4f6d07f936bfd3260b762",
+ "sha": "ba87378fea76b9fa9aead8592afe6aa83f211645",
  "generated": "2026-11-12",
  "species": [
   {
@@ -7157,9 +7157,117 @@
    "id": "sp090",
    "nameNL": "Slobeend",
    "family": "Eenden",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M8",
+   "date": "2026-11-12",
+   "sha": "ba87378fea76b9fa9aead8592afe6aa83f211645",
+   "assets": [
+    {
+     "image": "/assets/species/sp090.webp",
+     "role": "Hoofdfoto (Mannetje)",
+     "content": "Mannetje in ondiep water, met groene kop, lichte borst en brede snavel.",
+     "sexAge": "Volwassen mannetje volgens bron en kleed.",
+     "quality": "Volledig zijaanzicht.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp090-adult_f.webp",
+     "role": "Verenkleed (Vrouwtje)",
+     "content": "Bruin vrouwtje met brede lepelvormige snavel.",
+     "sexAge": "Vrouwtje volgens bron en kleed.",
+     "quality": "De vorm van de snavel is goed zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.5 · Andreas Trepte",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp090-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge Slobeend in bruin kleed met brede snavel, zwemmend in de Verenigde Staten.",
+     "sexAge": "Onderzoekswaarneming met annotatie Juvenile.",
+     "quality": "Kop, snavel en lichaam goed zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-12: zelfde opname (Verkleind tot maximaal 1400 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.), CC BY-SA 4.0 · Hal",
+      "annotations": [
+       "iNaturalist-onderzoekswaarneming van Slobeend uit de Verenigde Staten met de leeftijdsannotatie Juvenile."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp090-flight.webp",
+     "role": "In vlucht (Mannetje)",
+     "content": "Mannetje met brede snavel, lichtblauwe voorvleugel en groene spiegel.",
+     "sexAge": "Volwassen mannetje volgens bron en kleed.",
+     "quality": "Herkenbare volledige vogel in vrije vlucht.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Frank Schulenburg",
+      "annotations": []
+     },
+     "flight": {
+      "n": 12,
+      "id": "sp090",
+      "nameNL": "Slobeend",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": "male",
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0"
+     }
+    }
+   ],
+   "corrections": [
+    "Bronbevestigde juvenielenfoto toegevoegd. Kennisprofiel en vergelijking met Wilde Eend op snavel en vleugeltekening uitgewerkt."
+   ],
+   "missing": [],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "Volwassen labels volgen bron en kleed. Juvenielen blijven neutraal gelabeld.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Snavelvorm"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp091",
@@ -7353,9 +7461,145 @@
    "id": "sp092",
    "nameNL": "Kuifeend",
    "family": "Eenden",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M8",
+   "date": "2026-11-12",
+   "sha": "ba87378fea76b9fa9aead8592afe6aa83f211645",
+   "assets": [
+    {
+     "image": "/assets/species/plumage/sp092-hero-male.webp",
+     "role": "Hoofdfoto (Mannetje)",
+     "content": "Mannetje met afhangende kuif, wit flankveld en geel oog.",
+     "sexAge": "Volwassen mannetje volgens bron en kleed.",
+     "quality": "Scherpe kop en herkenbare houding.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "geverifieerde import 09-11 (SHA-1 01c902a7dc…), CC BY 4.0 · Alexis Lours",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/sp092.webp",
+     "role": "Verenkleed (Mannetje)",
+     "content": "Tweede opname van zwemmend mannetje met lange kuif, gele iris en witte flanken.",
+     "sexAge": "Volwassen mannetje volgens bron en kleed.",
+     "quality": "Volledig profiel uit een andere opname.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Dr. Raju Kasambe",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp092-adult_f.webp",
+     "role": "Verenkleed (Vrouwtje)",
+     "content": "Donkerbruin vrouwtje met lichtere flanken en korte kuif.",
+     "sexAge": "Vrouwtje volgens bron en kleed.",
+     "quality": "Kopprofiel, snavel en flank zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Hans Hillewaert",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp092-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge Kuifeend met bruin verenkleed en korte kuif.",
+     "sexAge": "Onderzoekswaarneming met annotatie Juvenile.",
+     "quality": "Volledig zijaanzicht, duidelijke kop en snavel.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-12: zelfde opname (Verkleind tot maximaal 1400 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.), CC BY 4.0 · SkippingShoe",
+      "annotations": [
+       "iNaturalist-onderzoekswaarneming van Kuifeend uit het Verenigd Koninkrijk met de leeftijdsannotatie Juvenile."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp092-juv-review.webp",
+     "role": "Verenkleed (Juveniel, jonger stadium)",
+     "content": "Bruine jonge Kuifeend met nog deels donzig kleed.",
+     "sexAge": "Juveniel volgens bestaande bronbeoordeling.",
+     "quality": "Eerder verenkleedstadium, herkenbaar naast de nieuwe opname.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Tsyganov Sergey",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp092-flight.webp",
+     "role": "In vlucht (Mannetje)",
+     "content": "Mannetje met gele iris en lichte vleugelbaan.",
+     "sexAge": "Volwassen mannetje volgens bron en kleed.",
+     "quality": "Vrije vlucht boven water, vleugelbaan goed zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · Birds of Gilgit-Baltistan from Aliabad, Hunza, Pakistan",
+      "annotations": []
+     },
+     "flight": {
+      "n": 11,
+      "id": "sp092",
+      "nameNL": "Kuifeend",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": "male",
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0"
+     }
+    }
+   ],
+   "corrections": [
+    "Een volledig bevederde juveniel toegevoegd naast de bestaande opname van een jonger stadium. Vergelijking met Tafeleend op kop, oog en flanken uitgewerkt."
+   ],
+   "missing": [],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "Volwassen labels volgen bron en kleed. Juvenielen blijven neutraal gelabeld.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Kuif, oog en kopprofiel"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp094",
@@ -9490,9 +9734,117 @@
    "id": "sp132",
    "nameNL": "Tafeleend",
    "family": "Eenden",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M8",
+   "date": "2026-11-12",
+   "sha": "ba87378fea76b9fa9aead8592afe6aa83f211645",
+   "assets": [
+    {
+     "image": "/assets/species/sp132.webp",
+     "role": "Hoofdfoto (Mannetje)",
+     "content": "Roodbruine kop, rood oog, donkere borst en grijze romp.",
+     "sexAge": "Volwassen mannetje volgens bron en kleed.",
+     "quality": "Helder zijaanzicht en zichtbare iris.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp132-adult_f.webp",
+     "role": "Verenkleed (Vrouwtje)",
+     "content": "Bruine kop met lichte wangtekening en grijsbruine flanken.",
+     "sexAge": "Vrouwtje volgens bron en kleed.",
+     "quality": "Kopprofiel, wang en flank duidelijk zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Klamul",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp132-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge Tafeleend linksachter een grotere soortgenoot.",
+     "sexAge": "De fotograaf benoemt een begeleidende juveniel.",
+     "quality": "Beide vogels zijn zichtbaar en de juveniel is aangeduid in de fototekst.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-12: zelfde opname (Verkleind tot maximaal 1400 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.), CC BY 4.0 · James Heal",
+      "annotations": [
+       "De fotograaf benoemt een begeleidende juveniel in de iNaturalist-onderzoekswaarneming. De kleinere vogel linksachter toont het jonge kleed."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp132-flight.webp",
+     "role": "In vlucht (Mannetje)",
+     "content": "Roodbruine kop, donkere borst en lichtgrijze vleugelbaan.",
+     "sexAge": "Volwassen mannetje volgens bron en kleed.",
+     "quality": "Volledig silhouet in vrije vlucht.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp",
+      "annotations": []
+     },
+     "flight": {
+      "n": 14,
+      "id": "sp132",
+      "nameNL": "Tafeleend",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": "male",
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0"
+     }
+    }
+   ],
+   "corrections": [
+    "Juvenielenfoto toegevoegd met uitleg welke vogel de juveniel is. Vergelijking met Kuifeend voor beide geslachten uitgewerkt."
+   ],
+   "missing": [],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "Volwassen labels volgen bron en kleed. Juvenielen blijven neutraal gelabeld.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Kopprofiel, oog en flanken"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp141",
