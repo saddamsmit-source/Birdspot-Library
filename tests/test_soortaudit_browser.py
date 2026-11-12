@@ -201,7 +201,8 @@ def main():
             for name, sid in [("Holenduif", "sp003"), ("Sperwer", "sp006"), ("Buizerd", "sp005"), ("Zilvermeeuw", "sp094"),
                               ("Havik", "sp007"), ("Wespendief", "sp248"), ("Taigaboomkruiper", "sp067"), ("Ruigpootbuizerd", "sp253"),
                               ("Gele Kwikstaart", "sp069"), ("IJsvogel", "sp075"), ("Patrijs", "sp106"),
-                              ("Boerenzwaluw", "sp114"), ("Huiszwaluw", "sp115"), ("Geelgors", "sp117")]:
+                              ("Boerenzwaluw", "sp114"), ("Huiszwaluw", "sp115"), ("Geelgors", "sp117"),
+                              ("Rietgors", "sp118"), ("Knobbelzwaan", "sp126"), ("Kluut", "sp143")]:
                 similar_section(p, name, sid, "390")
                 open_card(p, name, sid)
                 sec = p.locator('#sdPanel-herkenning section.sd-similar')

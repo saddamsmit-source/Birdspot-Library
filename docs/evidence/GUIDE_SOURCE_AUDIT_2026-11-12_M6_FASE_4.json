@@ -1,0 +1,110 @@
+[
+  {
+    "image": "/assets/species/plumage/sp118-adult_f.webp",
+    "species": "sp118",
+    "source": "https://commons.wikimedia.org/wiki/File:Common_reed_bunting_%28emberiza_schoeniclus%29_female.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Common_reed_bunting_%28emberiza_schoeniclus%29_female.jpg",
+    "sourceTitle": "Common reed bunting (emberiza schoeniclus) female.jpg",
+    "sourceAuthor": "Charles J. Sharp",
+    "sourceLicense": "CC BY-SA 3.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "221c02b98d07e6cad8219cc41b47405dd7227a07cded887ebf72c0fb38337d78",
+    "sha1": "967eb350597d013ec6195c0162775c026c9b0ce5",
+    "taxonInSource": "Emberiza schoeniclus",
+    "annotations": [
+      "De fotograaf benoemt een vrouwtje op de bestandspagina. De opname in maart laat de bruine kruin en lichte wenkbrauw zien."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp118-juv.webp",
+    "species": "sp118",
+    "source": "https://commons.wikimedia.org/wiki/File:Reed_Bunting_Juvenile_%284707446668%29.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Reed_Bunting_Juvenile_%284707446668%29.jpg",
+    "sourceTitle": "Reed Bunting Juvenile (4707446668).jpg",
+    "sourceAuthor": "nottsexminer",
+    "sourceLicense": "CC BY-SA 2.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "b6e0df10a58a8ea92378a764facd2fa9f1e026166e8d3ecb167f4145c197d5e4",
+    "sha1": "2560b12ebf82684bff5ef4aac3ef03f590f48e27",
+    "taxonInSource": "Emberiza schoeniclus",
+    "annotations": [
+      "De bron benoemt een juveniele Rietgors. Opname in juni. Open bedelsnavel en deels donsachtige veren zijn zichtbaar. Geslacht onbekend."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp126-hero-male.webp",
+    "species": "sp126",
+    "source": "https://www.inaturalist.org/photos/487622913",
+    "originalUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/487622913/original.jpg",
+    "sourceTitle": "iNaturalist photo 487622913",
+    "sourceAuthor": "Dave",
+    "sourceLicense": "CC BY 4.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "5a7eeef5149d34b9b5bc031475e397440ea73daa3bf0248b7299fdf6af008964",
+    "sha1": "6e63d6c1b49d1e03b6693db4a52010279dbe8ce7",
+    "taxonInSource": "Cygnus olor",
+    "annotations": [
+      "De fotograaf annoteert de voorjaarswaarneming als Adult en Male. Het oorspronkelijke bijschrift duidt het dier als M. Snavel en knobbel zijn zichtbaar."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp126-adult_f.webp",
+    "species": "sp126",
+    "source": "https://www.inaturalist.org/photos/687016180",
+    "originalUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/687016180/original.jpg",
+    "sourceTitle": "iNaturalist photo 687016180",
+    "sourceAuthor": "Dave",
+    "sourceLicense": "CC BY 4.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "c6cca6a76186a932e4f19cff5aa845310872107163fcb0d61477011ee0e39536",
+    "sha1": "35d43de80042f5d51d3f032887f4839cd2e7cb29",
+    "taxonInSource": "Cygnus olor",
+    "annotations": [
+      "De fotograaf annoteert de waarneming als Adult en Female. De vogel is van opzij te zien. De veldkenmerken alleen zijn onvoldoende voor het geslachtslabel."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp143-juv.webp",
+    "species": "sp143",
+    "source": "https://www.inaturalist.org/photos/714030288",
+    "originalUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/714030288/original.jpg",
+    "sourceTitle": "iNaturalist photo 714030288",
+    "sourceAuthor": "Mark",
+    "sourceLicense": "CC BY 4.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "62fb2b5ee5fc7b28d632627a41fb09b32ea471d3c66a94ee9b704a0ce9b65a5c",
+    "sha1": "851fe75b07381452d276ad884bb98622cc78acc4",
+    "taxonInSource": "Recurvirostra avosetta",
+    "annotations": [
+      "De research-grade waarneming is geannoteerd als Juvenile. Bruinere veerdelen en lichte randen ondersteunen dit. Geslacht onbekend."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/sp187.webp",
+    "species": "sp187",
+    "source": "https://commons.wikimedia.org/wiki/File:WhooperSwan1.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f5/WhooperSwan1.jpg",
+    "sourceTitle": "WhooperSwan1.jpg",
+    "sourceAuthor": "Andrew Lee",
+    "sourceLicense": "Public domain",
+    "sameShot": true,
+    "method": "Uitgesneden rond de vogel en omgezet naar WebP zonder EXIF/GPS/XMP",
+    "sourceSha256": "9120c0c71450355ff4df60df154a25d3dccb4af4103b957be5b65097ec009774",
+    "sha1": "7391f3ae249ad643d2cfd379e40aa9caaaa911f3",
+    "taxonInSource": "Cygnus cygnus",
+    "annotations": [
+      "De fotograaf benoemt de Wilde Zwaan en geeft de opname wereldwijd vrij aan het publieke domein. De snaveltekening is zichtbaar."
+    ],
+    "auditDate": "2026-11-12"
+  }
+]

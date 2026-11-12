@@ -3768,7 +3768,29 @@
     },
     "sp126": {
       "adult_m": {
-        "reuseGuidePhoto": true
+        "file": "iNaturalist photo 487622913",
+        "nl": "Knobbelzwaan",
+        "latin": "Cygnus olor",
+        "author": "Dave",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://www.inaturalist.org/photos/487622913",
+        "showSourceLink": true,
+        "alt": "Mannetje Knobbelzwaan in zijaanzicht op rustig water, met witte veren, oranjerode snavel en zwarte knobbel.",
+        "modifications": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+        "reviewed": "2026-11-12",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/knobbelzwaan",
+        "visualCheck": "Mannetje Knobbelzwaan in zijaanzicht op rustig water, met witte veren, oranjerode snavel en zwarte knobbel.",
+        "verification": "De fotograaf annoteert de voorjaarswaarneming als Adult en Male. Het oorspronkelijke bijschrift duidt het dier als M. Snavel en knobbel zijn zichtbaar.",
+        "width": 933,
+        "height": 1400,
+        "image": "/assets/species/plumage/sp126-hero-male.webp",
+        "sha1": "6e63d6c1b49d1e03b6693db4a52010279dbe8ce7",
+        "sourceAudit": "2026-11-12",
+        "observation": "https://www.inaturalist.org/observations/271107099",
+        "sex": "male",
+        "age": "adult",
+        "label": "Mannetje"
       },
       "juv": {
         "file": "CygnusOlorJuvenile.jpg",
@@ -3787,7 +3809,32 @@
         "width": 1600,
         "height": 977,
         "originalURL": "https://upload.wikimedia.org/wikipedia/commons/c/c6/CygnusOlorJuvenile.jpg",
-        "image": "/assets/species/plumage/sp126-juv.webp"
+        "image": "/assets/species/plumage/sp126-juv.webp",
+        "age": "juvenile"
+      },
+      "adult_f": {
+        "file": "iNaturalist photo 687016180",
+        "nl": "Knobbelzwaan",
+        "latin": "Cygnus olor",
+        "author": "Dave",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://www.inaturalist.org/photos/687016180",
+        "showSourceLink": true,
+        "alt": "Vrouwtje Knobbelzwaan tussen lage bloemen en grassen, met witte hals, oranjerode snavel en zwarte snavelbasis.",
+        "modifications": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+        "reviewed": "2026-11-12",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/knobbelzwaan",
+        "visualCheck": "Vrouwtje Knobbelzwaan tussen lage bloemen en grassen, met witte hals, oranjerode snavel en zwarte snavelbasis.",
+        "verification": "De fotograaf annoteert de waarneming als Adult en Female. De vogel is van opzij te zien. De veldkenmerken alleen zijn onvoldoende voor het geslachtslabel.",
+        "width": 1400,
+        "height": 933,
+        "image": "/assets/species/plumage/sp126-adult_f.webp",
+        "sha1": "35d43de80042f5d51d3f032887f4839cd2e7cb29",
+        "sourceAudit": "2026-11-12",
+        "observation": "https://www.inaturalist.org/observations/375785890",
+        "sex": "female",
+        "age": "adult"
       }
     },
     "sp128": {
@@ -5135,6 +5182,81 @@
         "sha1": "2da635da325061c04f4f4bb5f65264623ffd0844",
         "sourceAudit": "2026-11-12",
         "observation": "https://www.inaturalist.org/observations/290383611",
+        "age": "juvenile"
+      }
+    },
+    "sp118": {
+      "adult_f": {
+        "file": "Common reed bunting (emberiza schoeniclus) female.jpg",
+        "nl": "Rietgors",
+        "latin": "Emberiza schoeniclus",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Common_reed_bunting_%28emberiza_schoeniclus%29_female.jpg",
+        "showSourceLink": true,
+        "alt": "Vrouwtje Rietgors op een tak, met bruine kruin, lichte wenkbrauw en donkere borststrepen.",
+        "modifications": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+        "reviewed": "2026-11-12",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/rietgors",
+        "visualCheck": "Vrouwtje Rietgors op een tak, met bruine kruin, lichte wenkbrauw en donkere borststrepen.",
+        "verification": "De fotograaf benoemt een vrouwtje op de bestandspagina. De opname in maart laat de bruine kruin en lichte wenkbrauw zien.",
+        "width": 1400,
+        "height": 934,
+        "image": "/assets/species/plumage/sp118-adult_f.webp",
+        "sha1": "967eb350597d013ec6195c0162775c026c9b0ce5",
+        "sourceAudit": "2026-11-12",
+        "sex": "female",
+        "age": "adult"
+      },
+      "juv": {
+        "file": "Reed Bunting Juvenile (4707446668).jpg",
+        "nl": "Rietgors",
+        "latin": "Emberiza schoeniclus",
+        "author": "nottsexminer",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Reed_Bunting_Juvenile_%284707446668%29.jpg",
+        "showSourceLink": true,
+        "alt": "Zeer jonge Rietgors tussen gras met een open snavel en verse bruine en lichte veertjes.",
+        "modifications": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+        "reviewed": "2026-11-12",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/rietgors",
+        "visualCheck": "Zeer jonge Rietgors tussen gras met een open snavel en verse bruine en lichte veertjes.",
+        "verification": "De bron benoemt een juveniele Rietgors. Opname in juni. Open bedelsnavel en deels donsachtige veren zijn zichtbaar. Geslacht onbekend.",
+        "width": 1400,
+        "height": 1050,
+        "image": "/assets/species/plumage/sp118-juv.webp",
+        "sha1": "2560b12ebf82684bff5ef4aac3ef03f590f48e27",
+        "sourceAudit": "2026-11-12",
+        "age": "juvenile"
+      },
+      "adult_m": {
+        "reuseGuidePhoto": true
+      }
+    },
+    "sp143": {
+      "juv": {
+        "file": "iNaturalist photo 714030288",
+        "nl": "Kluut",
+        "latin": "Recurvirostra avosetta",
+        "author": "Mark",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://www.inaturalist.org/photos/714030288",
+        "showSourceLink": true,
+        "alt": "Jonge Kluut langs ondiep water, met bruinere rug- en vleugelbanden, lange poten en een omhooggebogen snavel.",
+        "modifications": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+        "reviewed": "2026-11-12",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kluut",
+        "visualCheck": "Jonge Kluut langs ondiep water, met bruinere rug- en vleugelbanden, lange poten en een omhooggebogen snavel.",
+        "verification": "De research-grade waarneming is geannoteerd als Juvenile. Bruinere veerdelen en lichte randen ondersteunen dit. Geslacht onbekend.",
+        "width": 1400,
+        "height": 1001,
+        "image": "/assets/species/plumage/sp143-juv.webp",
+        "sha1": "851fe75b07381452d276ad884bb98622cc78acc4",
+        "sourceAudit": "2026-11-12",
+        "observation": "https://www.inaturalist.org/observations/389793161",
         "age": "juvenile"
       }
     }
@@ -9204,7 +9326,8 @@
     "sp064": "/assets/species/plumage/sp064-hero-male.webp",
     "sp106": "/assets/species/plumage/sp106-hero-male.webp",
     "sp114": "/assets/species/plumage/sp114-hero-male.webp",
-    "sp115": "/assets/species/plumage/sp115-hero-adult.webp"
+    "sp115": "/assets/species/plumage/sp115-hero-adult.webp",
+    "sp126": "/assets/species/plumage/sp126-hero-male.webp"
   },
   "retired": {
     "sp118": [
