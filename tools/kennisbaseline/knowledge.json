@@ -2189,6 +2189,149 @@
       "checked": "2026-11-12",
       "certainty": "hoog",
       "publisher": "University of Michigan"
+    },
+    "VB_ZWARTKOP": {
+      "register": "NL07",
+      "label": "Vogelbescherming — Zwartkop",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwartkop",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Herkenning, habitat, leefwijze en voorkomen",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_TUINFLUITER": {
+      "register": "NL07",
+      "label": "Vogelbescherming — Tuinfluiter",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/tuinfluiter",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Herkenning, habitat, leefwijze en voorkomen",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_GRASMUS": {
+      "register": "NL07",
+      "label": "Vogelbescherming — Grasmus",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grasmus",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Herkenning, habitat, leefwijze en voorkomen",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_BRAAMSLUIPER": {
+      "register": "NL07",
+      "label": "Vogelbescherming — Braamsluiper",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/braamsluiper",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Herkenning, habitat, leefwijze en voorkomen",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_VUURGOUDHAAN": {
+      "register": "NL07",
+      "label": "Vogelbescherming — Vuurgoudhaan",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/vuurgoudhaan",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Herkenning, habitat, leefwijze en voorkomen",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_GOUDHAAN": {
+      "register": "NL07",
+      "label": "Vogelbescherming — Goudhaantje",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/goudhaan",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Herkenning, habitat, leefwijze en voorkomen",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "SOV_ZWARTKOP": {
+      "register": "nieuw",
+      "label": "Sovon — Zwartkop",
+      "url": "https://stats.sovon.nl/stats/soort/12770/",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Nederlandse verspreiding en broedvogelmonitoring",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Sovon Vogelonderzoek Nederland"
+    },
+    "SOV_GRASMUS": {
+      "register": "nieuw",
+      "label": "Sovon — Grasmus",
+      "url": "https://stats.sovon.nl/stats/soort/12750/",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Nederlandse verspreiding en broedvogelmonitoring",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Sovon Vogelonderzoek Nederland"
+    },
+    "SOV_VUURGOUDHAAN": {
+      "register": "nieuw",
+      "label": "Sovon — Vuurgoudhaan",
+      "url": "https://stats.sovon.nl/stats/soort/13150/",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Nederlandse verspreiding en broedvogelmonitoring",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Sovon Vogelonderzoek Nederland"
+    },
+    "BZH_ZWARTKOP": {
+      "register": "BIO05",
+      "label": "Blasco-Zumeta & Heinze — Blackcap",
+      "url": "https://www.blascozumeta.com/specie_files/12770_Sylvia_atricapilla_E.pdf",
+      "edition": "Online bron",
+      "scope": "Iberisch referentiemateriaal",
+      "confirms": "Lengte, veldkenmerken, leeftijd en geslacht",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Blasco-Zumeta & Heinze"
+    },
+    "BZH_GRASMUS": {
+      "register": "BIO05",
+      "label": "Blasco-Zumeta & Heinze — Common Whitethroat",
+      "url": "https://blascozumeta.wimbitek.com/specie_files/12750_ENG_Curruca_communis_aranzadi.pdf",
+      "edition": "Online bron",
+      "scope": "Iberisch referentiemateriaal",
+      "confirms": "Lengte, veldkenmerken, leeftijd en geslacht",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Blasco-Zumeta & Heinze"
+    },
+    "BZH_VUURGOUDHAAN": {
+      "register": "BIO05",
+      "label": "Blasco-Zumeta & Heinze — Common Firecrest",
+      "url": "https://blascozumeta.com/specie_files/13150_ENG_Regulus_ignicapilla_aranzadi.pdf",
+      "edition": "Online bron",
+      "scope": "Iberisch referentiemateriaal",
+      "confirms": "Lengte, veldkenmerken, leeftijd en geslacht",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Blasco-Zumeta & Heinze"
+    },
+    "RSPB_VUURGOUDHAAN": {
+      "register": "nieuw",
+      "label": "RSPB — Firecrest",
+      "url": "https://www.rspb.org.uk/birds-and-wildlife/firecrest",
+      "edition": "Online bron",
+      "scope": "Verenigd Koninkrijk",
+      "confirms": "Koptekening en geslachtskenmerken",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "RSPB"
     }
   },
   "sp021": {
@@ -12512,6 +12655,518 @@
         ]
       }
     ],
+    "open": []
+  },
+  "sp059": {
+    "summary": {
+      "text": "Grijsbruine zangvogel met een duidelijk petje. Volwassen mannetjes hebben een zwarte kruin, vrouwtjes een roodbruine.",
+      "sources": [
+        "VB_ZWARTKOP",
+        "BZH_ZWARTKOP"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Een volwassen mannetje heeft een zwarte kruin die bij de bovenzijde van het oog eindigt.",
+        "sources": [
+          "VB_ZWARTKOP",
+          "BZH_ZWARTKOP"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Vrouwtjes en juvenielen hebben een bruin petje.",
+        "sources": [
+          "VB_ZWARTKOP",
+          "BZH_ZWARTKOP"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "De zang eindigt vaak met een aantal opvallend heldere fluittonen.",
+        "sources": [
+          "VB_ZWARTKOP"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "caution": {
+      "text": "Een bruin petje komt zowel bij een vrouwtje als bij jonge vogels voor. Gebruik petkleur alleen bij een vogel waarvan de leeftijd voldoende duidelijk is.",
+      "sources": [
+        "VB_ZWARTKOP",
+        "BZH_ZWARTKOP"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Kruin en zang",
+        "where": "Zicht op het hele hoofd of een volledige zangstrofe",
+        "this": "Afgetekend petje. De zang eindigt vaak met luide, heldere fluittonen.",
+        "other": "Egaler hoofd zonder scherp afgetekend petje. De zang gaat doorgaans vloeiender door.",
+        "vs": [
+          "sp060"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Bekijk kop en lichaam in hetzelfde licht en luister naar meerdere volledige strofen.",
+        "exceptions": "Een bruin petje valt minder op in schaduw. Korte zangfragmenten kunnen op elkaar lijken.",
+        "supporting": "Ook bij een vrouwtje Zwartkop is het petje doorgaans zichtbaar.",
+        "sources": [
+          "VB_ZWARTKOP",
+          "VB_TUINFLUITER",
+          "BZH_ZWARTKOP"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp060",
+        "why": "De zang van beide soorten kan op elkaar lijken. Controleer het petje en luister naar het einde van een strofe.",
+        "sources": [
+          "VB_ZWARTKOP",
+          "VB_TUINFLUITER",
+          "BZH_ZWARTKOP"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "text": "Een juveniel lijkt op een vrouwtje. De bruine kruin kan doffer zijn en jonge mannetjes krijgen tijdens de rui zwarte kruinveren.",
+        "sources": [
+          "BZH_ZWARTKOP"
+        ],
+        "topic": "leeftijd"
+      }
+    ],
+    "voice": [
+      {
+        "text": "Gevarieerde zang met heldere, luidere slotfluiten.",
+        "sources": [
+          "VB_ZWARTKOP"
+        ],
+        "kind": "zang"
+      },
+      {
+        "text": "Korte, herhaalde tikkende alarmroep.",
+        "sources": [
+          "VB_ZWARTKOP"
+        ],
+        "kind": "roep"
+      }
+    ],
+    "basis": {
+      "biometrics": [
+        {
+          "field": "length",
+          "unit": "cm",
+          "display": "ca. 14–15 cm",
+          "values": [
+            {
+              "source": "VB_ZWARTKOP",
+              "min": 14,
+              "max": 14
+            },
+            {
+              "source": "BZH_ZWARTKOP",
+              "min": 13,
+              "max": 15
+            }
+          ],
+          "note": "Afgeronde onder- en bovengrens op basis van de twee bronwaarden. Een bron met één maat telt als gelijke onder- en bovengrens."
+        }
+      ]
+    },
+    "habitat": [
+      {
+        "text": "Loof- en gemengd bos met struiken, ook in parken en tuinen met dichte begroeiing.",
+        "sources": [
+          "VB_ZWARTKOP",
+          "SOV_ZWARTKOP"
+        ],
+        "kind": "nederland"
+      }
+    ],
+    "status": [
+      {
+        "text": "Talrijke Nederlandse broedvogel. Doortrekkers en overwinteraars komen ook voor.",
+        "sources": [
+          "VB_ZWARTKOP",
+          "SOV_ZWARTKOP"
+        ],
+        "kind": "voorkomen"
+      }
+    ],
+    "life": [
+      {
+        "text": "Zoekt in de broedtijd veel insecten en eet daarnaast bessen en vruchten.",
+        "sources": [
+          "VB_ZWARTKOP"
+        ],
+        "kind": "voedsel"
+      },
+      {
+        "text": "Maakt een komnest, vaak laag in dicht struweel.",
+        "sources": [
+          "VB_ZWARTKOP",
+          "SOV_ZWARTKOP"
+        ],
+        "kind": "broeden"
+      },
+      {
+        "text": "Veel vogels trekken in de nazomer en herfst weg. Overwinteringsgebieden zijn onder meer Zuid-Engeland en het westelijke Middellandse Zeegebied.",
+        "sources": [
+          "VB_ZWARTKOP"
+        ],
+        "kind": "trek"
+      }
+    ],
+    "discrepancies": [],
+    "open": []
+  },
+  "sp061": {
+    "summary": {
+      "text": "Zangvogel van ruigtes met een witte keel en warme roestbruine veerranden op de vleugel. De zang klinkt vaak krassend.",
+      "sources": [
+        "VB_GRASMUS",
+        "BZH_GRASMUS"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "De witte keel valt op bij vogels in goed zij- of vooraanzicht.",
+        "sources": [
+          "VB_GRASMUS",
+          "BZH_GRASMUS"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Warme roestbruine randen aan de vleugelveren zijn bruikbaar bij vergelijking met Braamsluiper.",
+        "sources": [
+          "VB_GRASMUS",
+          "VB_BRAAMSLUIPER",
+          "BZH_GRASMUS"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Een mannetje in broedkleed heeft vaak een grijze kop en roze tint op de borst.",
+        "sources": [
+          "VB_GRASMUS",
+          "BZH_GRASMUS"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "caution": {
+      "text": "Grasmus en Braamsluiper hebben allebei een witte keel. Bij Grasmus overlappen de kleden van mannetje en vrouwtje, vooral buiten het voorjaar.",
+      "sources": [
+        "VB_GRASMUS",
+        "VB_BRAAMSLUIPER",
+        "BZH_GRASMUS"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Vleugelranden en gezicht",
+        "where": "Een belicht zijaanzicht of duidelijke zang",
+        "this": "Warme roestbruine randen aan de vleugelveren. Zang met een krassend, wisselend verloop.",
+        "other": "Vleugels zonder opvallende roestbruine randen, vaak een donkerder wang. Zang vaak met een ratelende slotreeks.",
+        "vs": [
+          "sp062"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Bekijk de gesloten vleugel van opzij en luister waar mogelijk naar een volledige strofe.",
+        "exceptions": "Schaduw en slijtage kunnen warme vleugelranden minder opvallend maken.",
+        "supporting": "De witte keel is bij beide soorten zichtbaar.",
+        "sources": [
+          "VB_GRASMUS",
+          "VB_BRAAMSLUIPER",
+          "BZH_GRASMUS"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp062",
+        "why": "Beide hebben een lichte keel. Vleugelranden, wang en zang helpen ze uit elkaar te houden.",
+        "sources": [
+          "VB_GRASMUS",
+          "VB_BRAAMSLUIPER",
+          "BZH_GRASMUS"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "text": "In het voorjaar is een volwassen mannetje vaak grijzer op de kop en rozer op de borst. Veel individuen zitten tussen de typische mannetjes- en vrouwtjeskleden in.",
+        "sources": [
+          "BZH_GRASMUS"
+        ],
+        "topic": "geslacht"
+      },
+      {
+        "text": "Een juveniel heeft een bruine kop, verse veren en vaak een grijzige iris. Een bruine kop op zichzelf geeft geen zekere leeftijd.",
+        "sources": [
+          "BZH_GRASMUS"
+        ],
+        "topic": "leeftijd"
+      }
+    ],
+    "voice": [
+      {
+        "text": "Tamelijk scherp, wisselend krassend riedeltje. Mannetjes zingen ook tijdens korte zangvluchten.",
+        "sources": [
+          "VB_GRASMUS"
+        ],
+        "kind": "zang"
+      },
+      {
+        "text": "Onder meer een hees, raspend roepje.",
+        "sources": [
+          "VB_GRASMUS"
+        ],
+        "kind": "roep"
+      }
+    ],
+    "basis": {
+      "biometrics": [
+        {
+          "field": "length",
+          "unit": "cm",
+          "display": "ca. 14–15 cm",
+          "values": [
+            {
+              "source": "VB_GRASMUS",
+              "min": 14,
+              "max": 14
+            },
+            {
+              "source": "BZH_GRASMUS",
+              "min": 13,
+              "max": 15
+            }
+          ],
+          "note": "Afgeronde onder- en bovengrens op basis van de twee bronwaarden. Een bron met één maat telt als gelijke onder- en bovengrens."
+        }
+      ]
+    },
+    "habitat": [
+      {
+        "text": "Lage struiken en ruige vegetatie, onder meer in duinen, op heide en langs landbouwranden.",
+        "sources": [
+          "VB_GRASMUS",
+          "SOV_GRASMUS"
+        ],
+        "kind": "nederland"
+      }
+    ],
+    "status": [
+      {
+        "text": "Nederlandse broedvogel en zomergast. Vanaf half april keren de vogels terug.",
+        "sources": [
+          "VB_GRASMUS",
+          "SOV_GRASMUS"
+        ],
+        "kind": "voorkomen"
+      }
+    ],
+    "life": [
+      {
+        "text": "Eet insecten en andere kleine ongewervelden. Tijdens de trek eet hij meer vruchten.",
+        "sources": [
+          "VB_GRASMUS"
+        ],
+        "kind": "voedsel"
+      },
+      {
+        "text": "Broedt laag in dicht struweel of tussen stevige kruiden.",
+        "sources": [
+          "VB_GRASMUS",
+          "SOV_GRASMUS"
+        ],
+        "kind": "broeden"
+      },
+      {
+        "text": "Nederlandse Grasmussen overwinteren vooral in het westelijke deel van de Sahel. De najaarstrek valt vooral in augustus en september.",
+        "sources": [
+          "VB_GRASMUS"
+        ],
+        "kind": "trek"
+      }
+    ],
+    "discrepancies": [],
+    "open": []
+  },
+  "sp064": {
+    "summary": {
+      "text": "Zeer kleine, olijfgroene vogel met een brede witte wenkbrauw boven een donkere oogstreep.",
+      "sources": [
+        "VB_VUURGOUDHAAN",
+        "BZH_VUURGOUDHAAN",
+        "RSPB_VUURGOUDHAAN"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Bij een volwassen vogel is het gezicht contrastrijk door de witte wenkbrauw en zwarte oogstreep.",
+        "sources": [
+          "VB_VUURGOUDHAAN",
+          "BZH_VUURGOUDHAAN",
+          "RSPB_VUURGOUDHAAN"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "De gekleurde kruinstreep heeft zwarte randen. Bij mannetjes zit er vaak duidelijk oranje in.",
+        "sources": [
+          "VB_VUURGOUDHAAN",
+          "BZH_VUURGOUDHAAN",
+          "RSPB_VUURGOUDHAAN"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Juvenielen missen aanvankelijk de felle kruinstreep.",
+        "sources": [
+          "BZH_VUURGOUDHAAN"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "caution": {
+      "text": "Een deels verborgen kruin kan oranje veertjes aan het zicht onttrekken. Controleer leeftijd, licht en kijkhoek voordat je een geslacht toekent.",
+      "sources": [
+        "BZH_VUURGOUDHAAN",
+        "RSPB_VUURGOUDHAAN"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Wenkbrauw en oogstreep",
+        "where": "Volwassen vogel met het gezicht in profiel",
+        "this": "Brede witte wenkbrauw met donkere oogstreep eronder.",
+        "other": "Rustiger licht oogveld zonder dezelfde brede, contrastrijke wenkbrauw.",
+        "vs": [
+          "sp063"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Gebruik een belicht zijaanzicht en kijk naar de hele koptekening.",
+        "exceptions": "Bij juvenielen kan de tekening minder opvallend zijn. De kruinkleur op zichzelf is geen goed soortkenmerk.",
+        "supporting": "Vuurgoudhaan heeft vaak een geelgroene tot bronskleurige halszijde.",
+        "sources": [
+          "VB_VUURGOUDHAAN",
+          "VB_GOUDHAAN",
+          "BZH_VUURGOUDHAAN",
+          "RSPB_VUURGOUDHAAN"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp063",
+        "why": "Beide zijn klein en hebben een gekleurde kruinstreep. Gezichtstekening en zang helpen ze uit elkaar te houden.",
+        "sources": [
+          "VB_VUURGOUDHAAN",
+          "VB_GOUDHAAN",
+          "BZH_VUURGOUDHAAN"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "text": "De middenkruin is meestal oranje bij een volwassen mannetje en geel bij een vrouwtje. De leeftijd en een goed zicht op de kruin zijn belangrijk.",
+        "sources": [
+          "VB_VUURGOUDHAAN",
+          "BZH_VUURGOUDHAAN",
+          "RSPB_VUURGOUDHAAN"
+        ],
+        "topic": "geslacht"
+      },
+      {
+        "text": "Een jonge vogel mist in vers juveniel kleed de gekleurde kruinstreep. Bepaal het geslacht van een juveniel niet aan de hand van het kleed.",
+        "sources": [
+          "BZH_VUURGOUDHAAN"
+        ],
+        "topic": "leeftijd"
+      }
+    ],
+    "voice": [
+      {
+        "text": "Zeer hoge zang die vaak aanzwelt en versnelt. Het herhaalde patroon van Goudhaantje ontbreekt doorgaans.",
+        "sources": [
+          "VB_VUURGOUDHAAN",
+          "VB_GOUDHAAN"
+        ],
+        "kind": "zang"
+      }
+    ],
+    "basis": {
+      "biometrics": [
+        {
+          "field": "length",
+          "unit": "cm",
+          "display": "ca. 9–10 cm",
+          "values": [
+            {
+              "source": "VB_VUURGOUDHAAN",
+              "min": 9,
+              "max": 10
+            },
+            {
+              "source": "BZH_VUURGOUDHAAN",
+              "min": 9,
+              "max": 10
+            }
+          ],
+          "note": "Afgeronde onder- en bovengrens op basis van de twee bronwaarden. Een bron met één maat telt als gelijke onder- en bovengrens."
+        }
+      ]
+    },
+    "habitat": [
+      {
+        "text": "Vooral naald- en gemengd bos. Soms in parken of tuinen met geschikte bomen.",
+        "sources": [
+          "VB_VUURGOUDHAAN",
+          "SOV_VUURGOUDHAAN"
+        ],
+        "kind": "nederland"
+      }
+    ],
+    "status": [
+      {
+        "text": "Nederlandse broedvogel, doortrekker en wintergast. Broedt vooral in het oosten van het land.",
+        "sources": [
+          "VB_VUURGOUDHAAN",
+          "SOV_VUURGOUDHAAN"
+        ],
+        "kind": "voorkomen"
+      }
+    ],
+    "life": [
+      {
+        "text": "Zoekt kleine insecten, spinnen en andere ongewervelden tussen bladeren en takken.",
+        "sources": [
+          "VB_VUURGOUDHAAN"
+        ],
+        "kind": "voedsel"
+      },
+      {
+        "text": "Bouwt het nest vaak in een conifeer, soms ook in andere dichte begroeiing.",
+        "sources": [
+          "VB_VUURGOUDHAAN",
+          "SOV_VUURGOUDHAAN"
+        ],
+        "kind": "broeden"
+      },
+      {
+        "text": "Trekt over kortere afstanden. De precieze herkomst van veel doortrekkers in Nederland is onzeker.",
+        "sources": [
+          "VB_VUURGOUDHAAN"
+        ],
+        "kind": "trek"
+      }
+    ],
+    "discrepancies": [],
     "open": []
   }
 }

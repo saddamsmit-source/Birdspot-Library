@@ -1,0 +1,132 @@
+{
+  "_meta": {
+    "batch": "M6",
+    "phase": 1,
+    "date": "2026-11-12",
+    "title": "K05 fase 1",
+    "reviewer": "ChatGPT Work",
+    "phaseDates": {
+      "1": "2026-11-12"
+    },
+    "phaseReports": [
+      "../M6_FASE_1_2026-11-12.md"
+    ]
+  },
+  "species": {
+    "sp059": {
+      "assets": {
+        "/assets/species/sp059.webp": {
+          "role": "Hoofdfoto (Mannetje)",
+          "content": "Zwartkop met zwarte kruin op een stengel.",
+          "sexAge": "Het mannetjeskleed is herkenbaar aan de zwarte kruin boven het oog.",
+          "quality": "Volledig zijaanzicht.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp059-adult_f.webp": {
+          "role": "Verenkleed (Vrouwtje)",
+          "content": "Vrouwtje Zwartkop met roodbruine kruin en grijsbruine bovendelen, volledig in zijaanzicht.",
+          "sexAge": "De fotograaf benoemt het individu als vrouwtje. De roodbruine kruin is duidelijk zichtbaar.",
+          "quality": "Kruin, snavel en zijprofiel goed zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp059-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Zwartkop op een tak met bruine kruin en lichtgrijze onderzijde.",
+          "sexAge": "De fotograaf benoemt een juveniel. De bruine kruin is zichtbaar. Geslacht onbekend.",
+          "quality": "Scherpe kop met zicht op de bruine kruin.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Mannetjeslabel onderbouwd. Vrouwtje, juveniel, kennisprofiel en vergelijking met Tuinfluiter toegevoegd."
+      ],
+      "missing": [
+        "Scherpe foto van één Zwartkop in vrije vlucht met bevestigde licentie."
+      ],
+      "wishes": [],
+      "sexPolicy": "Het bruine petje alleen is onvoldoende voor een vrouwtjeslabel. De fotobron maakt het onderscheid met het juveniel.",
+      "uncertain": [],
+      "date": "2026-11-12"
+    },
+    "sp061": {
+      "assets": {
+        "/assets/species/plumage/sp061-hero-male.webp": {
+          "role": "Hoofdfoto (Mannetje)",
+          "content": "Mannetje Grasmus in zijaanzicht, met grijze kop, witte keel, warme vleugelranden en volledige staart.",
+          "sexAge": "De voorjaarswaarneming heeft de annotatie Male. De grijze kop, witte keel en lichte, bruinige iris zijn zichtbaar.",
+          "quality": "Hele vogel en vleugelpatroon zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp061-adult_f.webp": {
+          "role": "Verenkleed (Vrouwtje)",
+          "content": "Vrouwtje Grasmus in ruige begroeiing, met bruine kop, lichte keel en warme vleugelranden.",
+          "sexAge": "De fotograaf benoemt een vrouwtje. De research-grade waarneming heeft Adult en Female als annotatie. Het geslacht is bij deze soort op kleed alleen vaak moeilijk te bepalen.",
+          "quality": "Zijaanzicht tussen stengels; kop en vleugel zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp061-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Grasmus op een stengel, met bruine kop, donkere iris en warme roestbruine vleugelranden.",
+          "sexAge": "De research-grade waarneming heeft de annotatie Juvenile. De bruine kop en verse veerranden zijn zichtbaar. Geslacht onbekend.",
+          "quality": "Rustig zijaanzicht met verse veerranden.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/sp061.webp": {
+          "role": "Overige herkenningsfoto",
+          "content": "Grasmus met insect in de snavel, witte keel en warme vleugelranden.",
+          "sexAge": "Geslacht onbekend.",
+          "quality": "Volledige vogel tegen een rustige achtergrond.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Bronbenoemd mannetje als hoofdfoto. Vrouwtje, juveniel, kennisprofiel en vergelijking met Braamsluiper toegevoegd."
+      ],
+      "missing": [
+        "Scherpe foto van één Grasmus in vrije vlucht met bevestigde licentie."
+      ],
+      "wishes": [],
+      "sexPolicy": "Voorjaarsfoto met mannetjesannotatie en afzonderlijk door de fotograaf benoemd vrouwtje. Geen geslachtslabel bij het juveniel.",
+      "uncertain": [],
+      "date": "2026-11-12"
+    },
+    "sp064": {
+      "assets": {
+        "/assets/species/plumage/sp064-hero-male.webp": {
+          "role": "Hoofdfoto (Mannetje)",
+          "content": "Mannetje Vuurgoudhaan met opvallend witte wenkbrauw, donkere oogstreep en een gekleurde kruin.",
+          "sexAge": "De fotograaf benoemt dit zingende individu als mannetje. Het gekleurde kruinveld en de contrastrijke koptekening zijn zichtbaar.",
+          "quality": "Vrij zicht op kruin, wenkbrauw en lichaam.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp064-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Vuurgoudhaan in zijaanzicht, met lichte vleugelstreep en zonder felle kruinstreep.",
+          "sexAge": "De research-grade waarneming heeft de annotatie Juvenile. De vogel is volledig in beeld en mist de opvallende volwassen kruinstreep. Geslacht onbekend.",
+          "quality": "Hele vogel in zijaanzicht.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/sp064.webp": {
+          "role": "Overige herkenningsfoto",
+          "content": "Vuurgoudhaan op een tak met brede witte wenkbrauw boven donkere oogstreep.",
+          "sexAge": "Geslacht onbekend.",
+          "quality": "Volledig zijaanzicht.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Bronbenoemd mannetje als hoofdfoto. Juvenielenfoto en kennisprofiel toegevoegd. Bestaande beeldvergelijking met Goudhaantje herbeoordeeld."
+      ],
+      "missing": [
+        "Vrouwtjesfoto met betrouwbare geslachtsaanduiding.",
+        "Scherpe foto van één Vuurgoudhaan in vrije vlucht met bevestigde licentie."
+      ],
+      "wishes": [],
+      "sexPolicy": "De hoofdfoto heeft een bronbenoemd mannetje. Gele delen van een deels zichtbare kruin zijn onvoldoende voor een vrouwtjeslabel.",
+      "uncertain": [
+        "Een als vrouwtje geannoteerde kandidaat toont oranje in de kruinstreep. Die foto is niet als vrouwtje opgenomen."
+      ],
+      "date": "2026-11-12"
+    }
+  }
+}

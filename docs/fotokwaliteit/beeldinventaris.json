@@ -4349,6 +4349,86 @@
    "airborne": false,
    "source": "beeldinspectie 12-11-2026",
    "note": "Bonte Strandloper in winterkleed bij het water, met een snavel die aan het uiteinde omlaag buigt."
+  },
+  "/assets/species/plumage/sp059-adult_f.webp": {
+   "refs": [
+    "sp059 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "5a778b5f20e86e875d1734d8546c8e34f946195a",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Vrouwtje Zwartkop met roodbruine kruin en grijsbruine bovendelen, volledig in zijaanzicht."
+  },
+  "/assets/species/plumage/sp059-juv.webp": {
+   "refs": [
+    "sp059 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "1614708cb771f2f10326427bb25eeff20ff33b62",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Zwartkop op een tak met bruine kruin en lichtgrijze onderzijde."
+  },
+  "/assets/species/plumage/sp061-hero-male.webp": {
+   "refs": [
+    "sp061 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "436d67f3e03365141d5e181284b98d1b2b972d99",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Mannetje Grasmus in zijaanzicht, met grijze kop, witte keel, warme vleugelranden en volledige staart."
+  },
+  "/assets/species/plumage/sp061-adult_f.webp": {
+   "refs": [
+    "sp061 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "80acc70dcff797b32f4e4975c097e43f0dce38df",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Vrouwtje Grasmus in ruige begroeiing, met bruine kop, lichte keel en warme vleugelranden."
+  },
+  "/assets/species/plumage/sp061-juv.webp": {
+   "refs": [
+    "sp061 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "a866e9915ea40206d3c4934c44cdb40207c6eea5",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Grasmus op een stengel, met bruine kop, donkere iris en warme roestbruine vleugelranden."
+  },
+  "/assets/species/plumage/sp064-hero-male.webp": {
+   "refs": [
+    "sp064 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "6eb8f9113b0c7153f81dde9965d510da70d69dd6",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Mannetje Vuurgoudhaan met opvallend witte wenkbrauw, donkere oogstreep en een gekleurde kruin."
+  },
+  "/assets/species/plumage/sp064-juv.webp": {
+   "refs": [
+    "sp064 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "730279615ce74e33d2e500ffc7e541b13908fde0",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Vuurgoudhaan in zijaanzicht, met lichte vleugelstreep en zonder felle kruinstreep."
+  },
+  "/assets/species/sp062.webp": {
+   "refs": [
+    "sp062 GUIDE_PHOTOS"
+   ],
+   "sha1": "879f1042fcde0fc4eabbeb8ea5abc41a02005d72",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Braamsluiper met lichte keel, grijze kop en donkerdere wang op een hek."
   }
  }
 }

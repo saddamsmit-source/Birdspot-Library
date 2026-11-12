@@ -1095,6 +1095,22 @@ export const GUIDE_COMPARISONS = [
     ],
     tip: 'Bekijk de snavel volledig van opzij. De achterteen ontbreekt bij de Drieteenstrandloper en is vooral van dichtbij bruikbaar.',
   },
+  {
+    label: 'Zwartkop en Tuinfluiter · kop en zang',
+    birds: [
+      {id: 'sp059', source: 'zwartkop', marks: 'Afgetekend zwart of bruin petje. De zang eindigt vaak met enkele heldere, luide fluittonen.'},
+      {id: 'sp060', source: 'tuinfluiter', marks: 'Egaler hoofd zonder petje. De zang gaat doorgaans vloeiender door.'},
+    ],
+    tip: 'Bekijk de hele kruin in goed licht en luister naar een volledige strofe.',
+  },
+  {
+    label: 'Grasmus en Braamsluiper · vleugel en zang',
+    birds: [
+      {id: 'sp061', source: 'grasmus', plumage: 'adult_m', marks: 'Warme roestbruine randen aan de vleugelveren. Vaak een wisselend, krassend zangriedeltje.'},
+      {id: 'sp062', source: 'braamsluiper', marks: 'Doorgaans grijzere vleugels en een donkerder wang. De zang eindigt vaak in een ratel.'},
+    ],
+    tip: 'Beide soorten hebben een lichte keel. Vergelijk de gevouwen vleugel en luister naar meerdere strofen.',
+  },
 ];
 
 export function comparisonSource(bird) {
