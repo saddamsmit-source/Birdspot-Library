@@ -545,7 +545,7 @@
     "batch": "garden-song-04",
     "modifications": "Resized to max 1600 px and converted to WebP; no crop",
     "reviewed": "2026-11-06",
-    "verification": "Commons identity and license checked against visible field marks in Vogelbescherming.",
+    "verification": "De zwarte kruin eindigt boven het oog. Veldkenmerken ondersteunen het mannetjeslabel in de voorjaarsopname.",
     "visualCheck": "Mannetje zwartkop in zijaanzicht op een tak, met zwarte pet en grijsbruin verenkleed.",
     "alt": "Zwartkop — Mannetje zwartkop in zijaanzicht op een tak, met zwarte pet en grijsbruin verenkleed.",
     "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwartkop",
@@ -2533,5 +2533,27 @@
     "sha1": "f8f84c6b4132946f874588b91c9ae4415b094101",
     "sourceAudit": "2026-11-12",
     "batch": "K04-fase-4-vergelijking"
+  },
+  "sp062": {
+    "file": "Lesser Whitethroat by Sighmanb.jpg",
+    "nl": "Braamsluiper",
+    "latin": "Curruca curruca",
+    "author": "Sighmanb",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Lesser_Whitethroat_by_Sighmanb.jpg",
+    "showSourceLink": true,
+    "alt": "Braamsluiper met lichte keel, grijze kop en donkerdere wang op een hek.",
+    "modifications": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "reviewed": "2026-11-12",
+    "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/braamsluiper",
+    "visualCheck": "Braamsluiper met lichte keel, grijze kop en donkerdere wang op een hek.",
+    "verification": "De bestandspagina benoemt de soort onder de vroegere wetenschappelijke naam Sylvia curruca. Koptekening en lichte keel zijn zichtbaar. Geslacht onbekend.",
+    "width": 1400,
+    "height": 998,
+    "image": "/assets/species/sp062.webp",
+    "sha1": "879f1042fcde0fc4eabbeb8ea5abc41a02005d72",
+    "sourceAudit": "2026-11-12",
+    "batch": "K05-fase-1-vergelijking"
   }
 }
