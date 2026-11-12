@@ -1,5 +1,5 @@
 {
- "sha": "38e3b3c42662dc49be8b769fd9f82a8dde65cad7",
+ "sha": "dfa3dfd5976579121089e69552da8919920d99e4",
  "generated": "2026-11-12",
  "species": [
   {
@@ -2109,9 +2109,89 @@
    "id": "sp032",
    "nameNL": "Glanskop",
    "family": "Mezen",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M7",
+   "date": "2026-11-12",
+   "sha": "dfa3dfd5976579121089e69552da8919920d99e4",
+   "assets": [
+    {
+     "image": "/assets/species/sp032.webp",
+     "role": "Hoofdfoto (Volwassen)",
+     "content": "Glanskop met donkere kap, lichte wang en vrij egale vleugel.",
+     "sexAge": "Volwassen veldkleed. Geslacht onbekend.",
+     "quality": "Volledige vogel met duidelijk zijprofiel.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · PeterRohrbeck",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp032-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge Glanskop in schaduw tussen bladeren. De doffe kap, lichte wang en snavelhoeken zijn zichtbaar.",
+     "sexAge": "Waarneming geannoteerd als juveniel. Geslacht onbekend.",
+     "quality": "Kop en volledige vogel zichtbaar na lichte helderheidscorrectie.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-12: zelfde opname (Uitsnede rond de volledige vogel en lichte correctie van de helderheid. Omgezet naar WebP zonder EXIF, GPS of XMP.), CC BY 4.0 · Dr. Nasser Halaweh",
+      "annotations": [
+       "Onderzoekswaarneming van Poecile palustris in Duitsland, geannoteerd als Juvenile. De foto toont een jonge vogel met doffe kap en zichtbare snavelhoeken."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp032-view.webp",
+     "role": "Overige herkenningsfoto's",
+     "content": "Glanskop van voren met zwarte kap, lichte wangen en een kleine bef.",
+     "sexAge": "Geslacht en leeftijd niet gelabeld.",
+     "quality": "Een tweede hoek voor vergelijking van wang en bef.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Luc Viatour",
+      "annotations": []
+     },
+     "flight": null
+    }
+   ],
+   "corrections": [
+    "Juvenielenfoto en kennisprofiel toegevoegd. Vergelijking met Matkop aangescherpt op roep, snavelbasis en vleugel."
+   ],
+   "missing": [
+    "Scherpe foto van één Glanskop in vrije vlucht met bevestigde hergebruikrechten."
+   ],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "De geslachten lijken sterk op elkaar. Het geslacht is niet op kleed bepaald; juveniel volgt de fotobron.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": false,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Snavelbasis en roep"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
   },
   {
    "id": "sp033",
@@ -2235,9 +2315,73 @@
    "id": "sp034",
    "nameNL": "Staartmees",
    "family": "Staartmezen",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M7",
+   "date": "2026-11-12",
+   "sha": "dfa3dfd5976579121089e69552da8919920d99e4",
+   "assets": [
+    {
+     "image": "/assets/species/sp034.webp",
+     "role": "Hoofdfoto (Volwassen)",
+     "content": "Staartmees in zijaanzicht met lange staart, lichte kop en donkere zijkruinstreep.",
+     "sexAge": "Volwassen veldkleed. Geslacht onbekend.",
+     "quality": "Volledige staart en kop goed zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp034-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge vogel met donker gezicht en bruinere bovendelen op een dunne tak.",
+     "sexAge": "De bestandspagina bevestigt juveniel. Geslacht onbekend.",
+     "quality": "Donkere wang en volledige staart zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp",
+      "annotations": []
+     },
+     "flight": null
+    }
+   ],
+   "corrections": [
+    "Bestaande juvenielenfoto herbeoordeeld. Kennisprofiel en beeldvergelijking met Zwarte Mees toegevoegd."
+   ],
+   "missing": [
+    "Scherpe foto in vrije vlucht van een voor West-Europa representatieve Staartmees met bevestigde hergebruikrechten."
+   ],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "De geslachten lijken sterk op elkaar. Het geslacht is niet op kleed bepaald; juveniel volgt de fotobron.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": false,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Staartlengte en kop"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
   },
   {
    "id": "sp035",
@@ -8556,14 +8700,30 @@
    "audited": true,
    "batch": "M6",
    "date": "2026-11-12",
-   "sha": "38e3b3c42662dc49be8b769fd9f82a8dde65cad7",
+   "sha": "dfa3dfd5976579121089e69552da8919920d99e4",
    "assets": [
     {
+     "image": "/assets/species/sp143-hero-review.webp",
+     "role": "Hoofdfoto (Volwassen)",
+     "content": "Volwassen Kluut in zijaanzicht, met een vrij zichtbare, omhooggebogen snavel, zwart-wit verenkleed en lange poten in ondiep water.",
+     "sexAge": "Volwassen veldkleed. Geslacht onbekend.",
+     "quality": "Scherp zijaanzicht met een vrije snavel, complete vleugeltekening en lange poten. Rustige waterachtergrond.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-12: zelfde opname (Verkleind tot 1600 px zonder uitsnede en omgezet naar WebP zonder EXIF, GPS of XMP.), CC BY-SA 3.0 · Charles J. Sharp",
+      "annotations": [
+       "De bron bevestigt Recurvirostra avosetta. De vogel is van snavel tot staart en poten zichtbaar. Het geslacht van dit individu is niet bevestigd."
+      ]
+     },
+     "flight": null
+    },
+    {
      "image": "/assets/species/plumage/sp143-hero-male.webp",
-     "role": "Hoofdfoto (Mannetje)",
+     "role": "Verenkleed (Mannetje)",
      "content": "Mannetje Kluut op slik in zijaanzicht, met een lange opgewipte snavel, zwart-witte tekening en kleurringen.",
      "sexAge": "De fotograaf benoemt het gemarkeerde individu H60 als mannetje en annoteert de waarneming als Adult en Male.",
-     "quality": "Vogel in natuurlijke houding met zichtbare soortkenmerken.",
+     "quality": "Bronfoto met kleurringen. Bruikbaar om het geslachtslabel te onderbouwen, minder geschikt voor het eerste soortbeeld.",
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
@@ -8653,14 +8813,15 @@
    ],
    "corrections": [
     "Juvenielenfoto en kennisprofiel toegevoegd. Bestaande vluchtfoto en vergelijking met Scholekster gecontroleerd.",
-    "Hoofdfoto van het bronbenoemde mannetje H60 en afzonderlijke vrouwtjesfoto toegevoegd. De eerdere volwassen foto blijft beschikbaar onder overige herkenningsfoto’s."
+    "Hoofdfoto van het bronbenoemde mannetje H60 en afzonderlijke vrouwtjesfoto toegevoegd. De eerdere volwassen foto blijft beschikbaar onder overige herkenningsfoto’s.",
+    "Na eigenaarfeedback de hoofdfoto vervangen door een scherp, vrij zijaanzicht in ondiep water. H60 staat bij Mannetje."
    ],
    "missing": [],
    "wishes": [
     "Een scherper zijaanzicht van een vrouwtje in rust met de snavel vrij in beeld."
    ],
    "uncertain": [],
-   "sexPolicy": "De twee volwassen geslachtslabels volgen bronwaarnemingen van het gemarkeerde mannetje H60 en het door de fotograaf benoemde vrouwtje. Het geslacht van de andere volwassen vogel en de vluchtvogel is onbekend.",
+   "sexPolicy": "Hoofdfoto zonder geslachtslabel. Mannetje H60 en het afzonderlijke vrouwtje hebben brononderbouwde geslachtslabels. Het geslacht van de vluchtvogel is onbekend.",
    "previous": null,
    "status": {
     "technical": "VERIFIED",
@@ -9263,9 +9424,116 @@
    "id": "sp174",
    "nameNL": "Zwarte Mees",
    "family": "Mezen",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M7",
+   "date": "2026-11-12",
+   "sha": "dfa3dfd5976579121089e69552da8919920d99e4",
+   "assets": [
+    {
+     "image": "/assets/species/sp174.webp",
+     "role": "Hoofdfoto (Volwassen)",
+     "content": "Volwassen vogel met zwarte kop, lichte wang en twee vleugelbandjes.",
+     "sexAge": "Volwassen veldkleed. Geslacht onbekend.",
+     "quality": "Hele vogel op een tak. Vleugelbandjes zijn zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp174-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge vogel op een tak. Gele wang, lichte nekvlek en twee lichte vleugelbandjes.",
+     "sexAge": "Waarneming geannoteerd als juveniel. Geslacht onbekend.",
+     "quality": "Rustige achtergrond en goede weergave van het jeugdkleed.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-12: zelfde opname (Volledig kader behouden. Omgezet naar WebP zonder EXIF, GPS of XMP.), CC BY 4.0 · euqirneto",
+      "annotations": [
+       "Onderzoekswaarneming van Periparus ater in Spanje, geannoteerd als Juvenile. Gele wang en doffe kop zijn goed zichtbaar."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp174-flight.webp",
+     "role": "In vlucht",
+     "content": "Zwarte Mees in vlucht tussen dennentakken.",
+     "sexAge": "Geslacht en leeftijd onbekend.",
+     "quality": "Witte wang en lichte nekvlek zichtbaar. De vleugels zijn bewogen.",
+     "verdict": "voorwaardelijk",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) euqirneto, some rights reserved (CC BY)",
+      "annotations": []
+     },
+     "flight": {
+      "n": 77,
+      "id": "sp174",
+      "nameNL": "Zwarte Mees",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "matig",
+      "decision": "voorwaardelijk",
+      "target": null,
+      "newLabel": null,
+      "newNote": "Voorlopige foto: beperkte scherpte.",
+      "reason": "FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): in vlucht ja; kop met witte nekvlek scherp, vleugels bewogen; niet definitief. Vervanging gewenst: scherpere Zwarte Mees in vlucht.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY",
+      "history": [
+       {
+        "class": "vlucht",
+        "quality": "matig",
+        "decision": "voorwaardelijk",
+        "reason": "Echte vlucht, vleugels bewogen. Vervanging gewenst.",
+        "date": "2026-11-10",
+        "round": "vóór FQA-02"
+       }
+      ],
+      "replacement": "gewenst"
+     }
+    }
+   ],
+   "corrections": [
+    "Juvenielenfoto en kennisprofiel toegevoegd. Een beeldvergelijking met Koolmees en Staartmees toegevoegd."
+   ],
+   "missing": [
+    "Definitieve scherpe foto van één Zwarte Mees in vrije vlucht met bevestigde hergebruikrechten."
+   ],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "De geslachten lijken sterk op elkaar. Het geslacht is niet op kleed bepaald; juveniel volgt de fotobron.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": false,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Nekvlek en vleugelbandjes"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
   },
   {
    "id": "sp176",
