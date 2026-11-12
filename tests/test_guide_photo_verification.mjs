@@ -90,19 +90,37 @@ for (const v of verified) {
   assert.equal(bytes.subarray(8, 12).toString(), 'WEBP');
   assert.ok(!bytes.includes('EXIF') && !bytes.includes('XMP '), `Metadata in ${v.target}`);
   if (v.role === 'hero') {
-    const currentHero = archived ? all.find(p => p.image === archived.replacedBy) : active;
+    // sp018 is a documented 12-11 owner-scope quality change: the existing, source-verified
+    // male showcase image is now the hero. Preserve the 09-11 import's historical 'hero'
+    // role and source evidence, but show its original binary only as a second male portrait.
+    const blackWoodpeckerUpgrade = v.species === 'sp018';
+    const currentHero = blackWoodpeckerUpgrade
+      ? GUIDE_PHOTOS.sp018
+      : (archived ? all.find(p => p.image === archived.replacedBy) : active);
     assert.ok(currentHero, `Actuele hoofdfoto ontbreekt: ${v.species}`);
     assert.equal(GUIDE_HEROES[v.species], currentHero.image, `Hoofdfoto niet ingesteld: ${v.species}`);
+    assert.equal(guideHeroPhoto(v.species).image, currentHero.image);
     assert.equal(currentHero.sex, 'male');
     assert.equal(currentHero.latin, byId.get(v.species).nameSci);
-    if (archived) {
+    if (blackWoodpeckerUpgrade) {
+      assert.equal(v.target, '/assets/species/plumage/sp018-hero-male.webp');
+      assert.equal(currentHero.image, '/assets/showcase/sp018.webp');
+      assert.equal(currentHero.author, 'xulescu_g');
+      assert.equal(currentHero.license, 'CC BY-SA 2.0');
+      assert.ok(currentHero.source.includes('Dryocopus_martius'));
+      assert.ok(active && !archived, 'Original imported male portrait must stay in the active registry');
+      assert.notEqual(currentHero.source, active.source, 'Two different source photographs required');
+    } else if (archived) {
       assert.ok(!active && archived.retiredReason, `Vervangen hoofdfoto staat nog actief: ${v.target}`);
       assert.ok(currentHero.source && currentHero.author && currentHero.license);
       assert.match(currentHero.sha1, /^[0-9a-f]{40}$/);
     }
     const male = guidePlumageGroups(byId.get(v.species)).find(g => g.key === 'adult_m');
     assert.ok(male?.photos.length, `Galerij Mannetje leeg na nieuwe hoofdfoto: ${v.species}`);
-    assert.ok(male.photos.every(p => p.image !== currentHero.image));
+    assert.ok(male.photos.every(p => p.image !== currentHero.image), 'Hoofdfoto mag niet in de kleedgalerij worden herhaald');
+    if (blackWoodpeckerUpgrade) {
+      assert.ok(male.photos.some(p => p.image === v.target), 'Imported original must remain visible once under Mannetje');
+    }
     heroes++;
   }
 }
