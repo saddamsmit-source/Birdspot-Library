@@ -1119,6 +1119,18 @@ export const GUIDE_COMPARISONS = [
     ],
     tip: 'Bekijk de keelkleur en snavelvorm. In tegenlicht helpt vooral de verhouding tussen staart en lichaam.',
   },
+  {
+    label: 'Geelgors en Rietgors · kop en stuit',
+    birds: [
+      {id: 'sp117', source: 'geelgors', marks: 'Roodbruine stuit. Bij een volwassen mannetje in broedkleed is de kop doorgaans grotendeels geel.'},
+      {id: 'sp118', source: 'rietgors', marks: 'Volwassen mannetje in broedkleed met zwarte kop en keel en een witte halsband.'},
+    ],
+    rows: [
+      {label: 'Kop in broedkleed', values: ['Volwassen mannetje meestal grotendeels geel', 'Volwassen mannetje zwart met witte halsband']},
+      {label: 'Vaak te vinden', values: ['Akkerrand, heg of bosrand', 'Rietkraag en begroeide slootkant']},
+    ],
+    tip: 'Vrouwtjes en jonge vogels zijn minder uitgesproken. Bekijk ook de stuit en let op de omgeving.',
+  },
 ];
 
 export function comparisonSource(bird) {

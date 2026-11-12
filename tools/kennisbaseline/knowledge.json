@@ -2453,6 +2453,138 @@
       "checked": "2026-11-12",
       "certainty": "hoog",
       "publisher": "Blasco-Zumeta & Heinze"
+    },
+    "VB_BOERENZWALUW": {
+      "register": "NL07",
+      "label": "Vogelbescherming — Boerenzwaluw",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/boerenzwaluw",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Herkenning, habitat, leefwijze en voorkomen",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_HUISZWALUW": {
+      "register": "NL07",
+      "label": "Vogelbescherming — Huiszwaluw",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/huiszwaluw",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Herkenning, habitat, leefwijze en voorkomen",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_GEELGORS": {
+      "register": "NL07",
+      "label": "Vogelbescherming — Geelgors",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/geelgors",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Herkenning, habitat, leefwijze en voorkomen",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_OEVERZWALUW": {
+      "register": "NL07",
+      "label": "Vogelbescherming — Oeverzwaluw",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/oeverzwaluw",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Herkenning, habitat, leefwijze en voorkomen",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_RIETGORS": {
+      "register": "NL07",
+      "label": "Vogelbescherming — Rietgors",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/rietgors",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Herkenning, habitat, leefwijze en voorkomen",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_ZWALUWEN_VERGELIJKING": {
+      "register": "NL07",
+      "label": "Vogelbescherming — Boerenzwaluw en Huiszwaluw",
+      "url": "https://www.vogelbescherming.nl/actueel/bericht/boerenzwaluw-vs-huiszwaluw",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Veldkenmerken en nestverschillen",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "SOV_BOERENZWALUW": {
+      "register": "nieuw",
+      "label": "Sovon — Boerenzwaluw",
+      "url": "https://stats.sovon.nl/stats/soort/9920/",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Nederlandse verspreiding, seizoensvoorkomen en broedvogelmonitoring",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Sovon Vogelonderzoek Nederland"
+    },
+    "SOV_HUISZWALUW": {
+      "register": "nieuw",
+      "label": "Sovon — Huiszwaluw",
+      "url": "https://stats.sovon.nl/stats/soort/10010/",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Nederlandse verspreiding, seizoensvoorkomen en broedvogelmonitoring",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Sovon Vogelonderzoek Nederland"
+    },
+    "SOV_GEELGORS": {
+      "register": "nieuw",
+      "label": "Sovon — Geelgors",
+      "url": "https://stats.sovon.nl/stats/soort/18570/",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Nederlandse verspreiding, seizoensvoorkomen en broedvogelmonitoring",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Sovon Vogelonderzoek Nederland"
+    },
+    "BZH_BOERENZWALUW": {
+      "register": "BIO05",
+      "label": "Blasco-Zumeta & Heinze — Barn Swallow",
+      "url": "https://www.blascozumeta.com/specie_files/09920_ENG_Hirundo_rustica_aranzadi.pdf",
+      "edition": "Online bron",
+      "scope": "Iberisch referentiemateriaal",
+      "confirms": "Lengte, veldkenmerken, leeftijd en geslacht",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Blasco-Zumeta & Heinze"
+    },
+    "BZH_HUISZWALUW": {
+      "register": "BIO05",
+      "label": "Blasco-Zumeta & Heinze — Huiszwaluw (Avión común)",
+      "url": "https://www.blascozumeta.com/specie_files/10010_Delichon_urbicum.pdf",
+      "edition": "Online bron",
+      "scope": "Iberisch referentiemateriaal",
+      "confirms": "Lengte, veldkenmerken, leeftijd en geslacht",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Blasco-Zumeta & Heinze"
+    },
+    "BZH_GEELGORS": {
+      "register": "BIO05",
+      "label": "Blasco-Zumeta & Heinze — Yellowhammer",
+      "url": "https://blascozumeta.com/specie_files/18570_ENG_Emberiza_citrinella_aranzadi.pdf",
+      "edition": "Online bron",
+      "scope": "Iberisch referentiemateriaal",
+      "confirms": "Lengte, veldkenmerken, leeftijd en geslacht",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Blasco-Zumeta & Heinze"
     }
   },
   "sp021": {
@@ -13789,6 +13921,513 @@
         "sources": [
           "VB_PATRIJS",
           "SOV_PATRIJS"
+        ],
+        "kind": "trek"
+      }
+    ],
+    "discrepancies": [],
+    "open": []
+  },
+  "sp114": {
+    "summary": {
+      "text": "Blauwzwarte zwaluw met een roestrood voorhoofd en keel, donkere borstband en diep gevorkte staart. Vangt insecten in vlucht, vaak laag boven land of water.",
+      "sources": [
+        "VB_BOERENZWALUW",
+        "BZH_BOERENZWALUW"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Roestrode keel en donkere borstband boven de lichte onderzijde.",
+        "sources": [
+          "VB_BOERENZWALUW",
+          "VB_ZWALUWEN_VERGELIJKING",
+          "BZH_BOERENZWALUW"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Volwassen vogels hebben verlengde buitenste staartpennen.",
+        "sources": [
+          "VB_BOERENZWALUW",
+          "BZH_BOERENZWALUW"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Jonge vogels hebben kortere buitenste staartpennen en een blekere keel.",
+        "sources": [
+          "VB_BOERENZWALUW",
+          "BZH_BOERENZWALUW"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "caution": {
+      "text": "De buitenste staartpennen van mannetjes zijn gemiddeld langer. Leeftijd, slijtage en afgebroken veren beperken dit kenmerk bij een losse waarneming.",
+      "sources": [
+        "BZH_BOERENZWALUW"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Keel, stuit en staart",
+        "where": "Zijaanzicht of vluchtbeeld met zicht op de stuit",
+        "this": "Roestrode keel, donkere borstband en bij volwassenen een diep gevorkte staart met lange buitenste pennen.",
+        "other": "Witte keel, opvallend witte stuit en een kortere, gevorkte staart.",
+        "vs": [
+          "sp115"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Bekijk in goede belichting de keel en stuit. Neem de staartvorm als ondersteuning.",
+        "exceptions": "Een juveniele Boerenzwaluw heeft een kortere staart en minder opvallend rood aan de keel.",
+        "supporting": "De volwassen Boerenzwaluw heeft donkere bovendelen die doorlopen over de stuit.",
+        "sources": [
+          "VB_BOERENZWALUW",
+          "VB_HUISZWALUW",
+          "VB_ZWALUWEN_VERGELIJKING",
+          "BZH_BOERENZWALUW"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp115",
+        "why": "Let op keel en stuit wanneer het gaat om twee snel vliegende zwaluwen. Het staartverschil is duidelijker bij volwassen vogels.",
+        "sources": [
+          "VB_BOERENZWALUW",
+          "VB_HUISZWALUW",
+          "VB_ZWALUWEN_VERGELIJKING",
+          "BZH_BOERENZWALUW"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "text": "Een volwassen mannetje heeft vaak langere buitenste staartpennen dan een vrouwtje. De kleden overlappen.",
+        "sources": [
+          "BZH_BOERENZWALUW"
+        ],
+        "topic": "geslacht"
+      },
+      {
+        "text": "Een jonge vogel heeft een blekere keel en mist de lange volwassen staartpennen.",
+        "sources": [
+          "VB_BOERENZWALUW",
+          "BZH_BOERENZWALUW"
+        ],
+        "topic": "leeftijd"
+      }
+    ],
+    "voice": [
+      {
+        "text": "Korte roepjes en een snel, kwetterend zangriedeltje.",
+        "sources": [
+          "VB_BOERENZWALUW"
+        ],
+        "kind": "zang"
+      }
+    ],
+    "basis": {
+      "biometrics": [
+        {
+          "field": "length",
+          "unit": "cm",
+          "display": "ca. 17–21 cm",
+          "values": [
+            {
+              "source": "VB_BOERENZWALUW",
+              "min": 17,
+              "max": 21
+            },
+            {
+              "source": "BZH_BOERENZWALUW",
+              "min": 17,
+              "max": 20
+            }
+          ],
+          "note": "Afgeronde onder- en bovengrens op basis van de twee bronwaarden. Een bron met één maat telt als gelijke onder- en bovengrens."
+        }
+      ]
+    },
+    "habitat": [
+      {
+        "text": "Open boerenland en erven met toegankelijke schuren. Jaagt ook boven sloten, plassen en nat grasland.",
+        "sources": [
+          "VB_BOERENZWALUW",
+          "SOV_BOERENZWALUW"
+        ],
+        "kind": "nederland"
+      }
+    ],
+    "status": [
+      {
+        "text": "Nederlandse broedvogel en doortrekker. De eerste vogels keren doorgaans vanaf eind maart terug.",
+        "sources": [
+          "VB_BOERENZWALUW",
+          "SOV_BOERENZWALUW"
+        ],
+        "kind": "voorkomen"
+      }
+    ],
+    "life": [
+      {
+        "text": "Vangt vliegende insecten. Kan vlak boven het wateroppervlak drinken.",
+        "sources": [
+          "VB_BOERENZWALUW"
+        ],
+        "kind": "voedsel"
+      },
+      {
+        "text": "Bouwt een open modderkom op een beschutte plek, vaak binnen in een schuur of stal.",
+        "sources": [
+          "VB_BOERENZWALUW",
+          "VB_ZWALUWEN_VERGELIJKING"
+        ],
+        "kind": "broeden"
+      },
+      {
+        "text": "Nederlandse broedvogels overwinteren in West- en Centraal-Afrika. In september en oktober verzamelen en passeren grote groepen.",
+        "sources": [
+          "VB_BOERENZWALUW",
+          "SOV_BOERENZWALUW"
+        ],
+        "kind": "trek"
+      }
+    ],
+    "discrepancies": [],
+    "open": []
+  },
+  "sp115": {
+    "summary": {
+      "text": "Kleine zwaluw met witte stuit, witte keel en buik, donkere bovendelen en een korte gevorkte staart.",
+      "sources": [
+        "VB_HUISZWALUW",
+        "BZH_HUISZWALUW"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "De witte stuit contrasteert met de donkere rug en staart, vooral zichtbaar in een bocht.",
+        "sources": [
+          "VB_HUISZWALUW",
+          "VB_ZWALUWEN_VERGELIJKING",
+          "BZH_HUISZWALUW"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "De onderzijde is wit en de korte poten zijn licht bevederd.",
+        "sources": [
+          "VB_HUISZWALUW",
+          "BZH_HUISZWALUW"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Een jonge vogel is boven doorgaans doffer en bruiner, met een herkenbaar lichte stuit.",
+        "sources": [
+          "BZH_HUISZWALUW"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "caution": {
+      "text": "Volwassen mannetjes en vrouwtjes lijken in het veld sterk op elkaar. De gids gebruikt daarom een gedeeld volwassen kleed.",
+      "sources": [
+        "BZH_HUISZWALUW"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Stuit, keel en staart",
+        "where": "Vluchtbeeld bij daglicht met zicht op de rug of een profiel",
+        "this": "Witte stuit, witte keel en kortere, gevorkte staart.",
+        "other": "Donkere stuit, roestrode keel en donkere borstband. Volwassen dieren hebben langere buitenste staartpennen.",
+        "vs": [
+          "sp114"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Bekijk de vogel in meerdere bochten voor zicht op de stuit en onderzijde.",
+        "exceptions": "Bij tegenlicht kan keel- en stuitkleur wegvallen. Een jonge Boerenzwaluw heeft een kortere staart.",
+        "supporting": "Oeverzwaluw heeft een bruine borstband en mist de witte stuit.",
+        "sources": [
+          "VB_HUISZWALUW",
+          "VB_BOERENZWALUW",
+          "VB_ZWALUWEN_VERGELIJKING",
+          "VB_OEVERZWALUW",
+          "BZH_HUISZWALUW"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp114",
+        "why": "Beide jagen boven open terrein en water. De witte stuit en keel helpen bij het herkennen van Huiszwaluw.",
+        "sources": [
+          "VB_HUISZWALUW",
+          "VB_BOERENZWALUW",
+          "VB_ZWALUWEN_VERGELIJKING",
+          "BZH_HUISZWALUW"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "text": "De volwassen kleden lijken sterk op elkaar. Subtiele verschillen zijn doorgaans ongeschikt voor een betrouwbaar veldlabel.",
+        "sources": [
+          "BZH_HUISZWALUW"
+        ],
+        "topic": "geslacht"
+      },
+      {
+        "text": "Juvenielen hebben doorgaans doffere, bruinere veren op kop en rug. Lichte veerranden kunnen helpen om het jonge kleed te zien.",
+        "sources": [
+          "BZH_HUISZWALUW"
+        ],
+        "topic": "leeftijd"
+      }
+    ],
+    "voice": [
+      {
+        "text": "Droge, kwetterende roepjes, ook tijdens de vlucht.",
+        "sources": [
+          "VB_HUISZWALUW"
+        ],
+        "kind": "roep"
+      }
+    ],
+    "basis": {
+      "biometrics": [
+        {
+          "field": "length",
+          "unit": "cm",
+          "display": "ca. 13–15 cm",
+          "values": [
+            {
+              "source": "VB_HUISZWALUW",
+              "min": 13.5,
+              "max": 15
+            },
+            {
+              "source": "BZH_HUISZWALUW",
+              "min": 13,
+              "max": 15
+            }
+          ],
+          "note": "Afgeronde onder- en bovengrens op basis van de twee bronwaarden. Een bron met één maat telt als gelijke onder- en bovengrens."
+        }
+      ]
+    },
+    "habitat": [
+      {
+        "text": "Broedt vaak aan gebouwen in dorpen en steden. Jaagt in de omgeving boven open terrein en water.",
+        "sources": [
+          "VB_HUISZWALUW",
+          "SOV_HUISZWALUW"
+        ],
+        "kind": "nederland"
+      }
+    ],
+    "status": [
+      {
+        "text": "Nederlandse broedvogel en doortrekker. Het grootste deel komt aan in april en mei.",
+        "sources": [
+          "VB_HUISZWALUW",
+          "SOV_HUISZWALUW"
+        ],
+        "kind": "voorkomen"
+      }
+    ],
+    "life": [
+      {
+        "text": "Vangt muggen en andere kleine insecten in de lucht.",
+        "sources": [
+          "VB_HUISZWALUW"
+        ],
+        "kind": "voedsel"
+      },
+      {
+        "text": "Maakt een grotendeels gesloten moddernest met een kleine ingang, vaak onder een dakrand en naast andere nesten.",
+        "sources": [
+          "VB_HUISZWALUW",
+          "VB_ZWALUWEN_VERGELIJKING"
+        ],
+        "kind": "broeden"
+      },
+      {
+        "text": "Trekt in de nazomer en herfst richting tropisch Afrika. De voorjaarsintrek bereikt Nederland vooral in april en mei.",
+        "sources": [
+          "VB_HUISZWALUW",
+          "SOV_HUISZWALUW"
+        ],
+        "kind": "trek"
+      }
+    ],
+    "discrepancies": [],
+    "open": []
+  },
+  "sp117": {
+    "summary": {
+      "text": "Gors met een roodbruine stuit en witte buitenste staartpennen. Een volwassen mannetje heeft in broedkleed doorgaans een grotendeels gele kop.",
+      "sources": [
+        "VB_GEELGORS",
+        "BZH_GEELGORS"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Roodbruine stuit, ook bij valer getekende vogels.",
+        "sources": [
+          "VB_GEELGORS",
+          "BZH_GEELGORS"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Een mannetje in broedkleed is meestal duidelijk geel op kop en onderzijde.",
+        "sources": [
+          "VB_GEELGORS",
+          "BZH_GEELGORS"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Vrouwtjes en juvenielen zijn doorgaans sterker gestreept.",
+        "sources": [
+          "VB_GEELGORS",
+          "BZH_GEELGORS"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "caution": {
+      "text": "De hoeveelheid geel varieert per individu, leeftijd en seizoen. Bekijk bij een vale vogel ook stuit en staart, en ken op grond van kleur alleen geen geslacht toe.",
+      "sources": [
+        "VB_GEELGORS",
+        "BZH_GEELGORS"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Stuit, kop en omgeving",
+        "where": "Zijaanzicht met vrij zicht op de stuit of een goed zichtbare volwassen voorjaarsvogel",
+        "this": "Roodbruine stuit. Volwassen voorjaarsmannetje meestal met een overwegend gele kop.",
+        "other": "Voorjaarsmannetje met zwarte kop en keel en witte halsband. Vrouwtje vaak met lichte wenkbrauw en baardstreep.",
+        "vs": [
+          "sp118"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Bekijk kop en stuit in daglicht. De omgeving kan extra steun geven.",
+        "exceptions": "Vrouwtjes en jongen kunnen op elkaar lijken. Geel kan bij Geelgors weinig opvallen.",
+        "supporting": "Een Rietgors wordt vaak in rietkragen gezien. Geelgors zit geregeld aan ruige akker- en bosranden.",
+        "sources": [
+          "VB_GEELGORS",
+          "VB_RIETGORS",
+          "BZH_GEELGORS"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp118",
+        "why": "Valere kleden kunnen op elkaar lijken. Let op de roodbruine stuit en beoordeel koptekening en leefomgeving mee.",
+        "sources": [
+          "VB_GEELGORS",
+          "VB_RIETGORS",
+          "BZH_GEELGORS"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "text": "Een vrouwtje is vaak bruiner en meer gestreept dan het mannetje, maar kan duidelijk geel tonen.",
+        "sources": [
+          "VB_GEELGORS",
+          "BZH_GEELGORS"
+        ],
+        "topic": "geslacht"
+      },
+      {
+        "text": "In vers juveniel kleed zijn keel en borst vaak sterk gestreept. De kop is doorgaans valer dan bij een volwassen broedmannetje.",
+        "sources": [
+          "BZH_GEELGORS"
+        ],
+        "topic": "leeftijd"
+      }
+    ],
+    "voice": [
+      {
+        "text": "Korte reeks herhaalde tonen, vaak gevolgd door een langere slottoon.",
+        "sources": [
+          "VB_GEELGORS"
+        ],
+        "kind": "zang"
+      }
+    ],
+    "basis": {
+      "biometrics": [
+        {
+          "field": "length",
+          "unit": "cm",
+          "display": "ca. 15–18 cm",
+          "values": [
+            {
+              "source": "VB_GEELGORS",
+              "min": 15.5,
+              "max": 17
+            },
+            {
+              "source": "BZH_GEELGORS",
+              "min": 14,
+              "max": 18
+            }
+          ],
+          "note": "Afgeronde onder- en bovengrens op basis van de twee bronwaarden. Een bron met één maat telt als gelijke onder- en bovengrens."
+        }
+      ]
+    },
+    "habitat": [
+      {
+        "text": "Kleinschalig boerenland met hagen en ruigten, bosranden en heide met opslag, vooral in het oosten en zuiden van Nederland.",
+        "sources": [
+          "VB_GEELGORS",
+          "SOV_GEELGORS"
+        ],
+        "kind": "nederland"
+      }
+    ],
+    "status": [
+      {
+        "text": "Nederlandse broedvogel die jaarrond voorkomt. In de winter kunnen groepjes op voedselrijke akkers zitten.",
+        "sources": [
+          "VB_GEELGORS",
+          "SOV_GEELGORS"
+        ],
+        "kind": "voorkomen"
+      }
+    ],
+    "life": [
+      {
+        "text": "Eet zaden, vooral buiten de broedtijd. Jongen krijgen veel insecten.",
+        "sources": [
+          "VB_GEELGORS"
+        ],
+        "kind": "voedsel"
+      },
+      {
+        "text": "Maakt een nest op of laag boven de grond, vaak in dicht gras of struikgewas.",
+        "sources": [
+          "VB_GEELGORS",
+          "SOV_GEELGORS"
+        ],
+        "kind": "broeden"
+      },
+      {
+        "text": "Nederlandse broedvogels blijven grotendeels in eigen land. In het najaar trekken ook vogels uit het noorden en oosten door.",
+        "sources": [
+          "VB_GEELGORS",
+          "SOV_GEELGORS"
         ],
         "kind": "trek"
       }

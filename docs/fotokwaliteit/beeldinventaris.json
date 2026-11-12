@@ -4489,6 +4489,76 @@
    "airborne": false,
    "source": "beeldinspectie 12-11-2026",
    "note": "Bijeneter op een tak met gele keel, blauwgroene onderzijde en licht gebogen snavel."
+  },
+  "/assets/species/plumage/sp114-hero-male.webp": {
+   "refs": [
+    "sp114 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "b235c206cef724bc806acb163b846374e11e2777",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Mannetje Boerenzwaluw op een draad met roestrode keel en voorhoofd, donkere borstband en lichte onderzijde."
+  },
+  "/assets/species/plumage/sp114-adult_f.webp": {
+   "refs": [
+    "sp114 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "8a9d002ceae12aa45ce3a4d4f91658bd2dc1da64",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Vrouwtje Boerenzwaluw in zijaanzicht in de hand, met roestrode keel, donkere borstband en blauwzwarte bovendelen."
+  },
+  "/assets/species/plumage/sp114-juv.webp": {
+   "refs": [
+    "sp114 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "3bdc7fdac4c3347d359fdf0f0deb5226eabba991",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Boerenzwaluw op een tak op Schiermonnikoog, met een blekere keel en donkere borstband."
+  },
+  "/assets/species/plumage/sp115-hero-adult.webp": {
+   "refs": [
+    "sp115 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "468108b592bde6e292e5e3c200fcd58a4a675dd6",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Volwassen Huiszwaluw op een draad in zijaanzicht, met witte keel en buik en een korte gevorkte staart."
+  },
+  "/assets/species/plumage/sp115-juv.webp": {
+   "refs": [
+    "sp115 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "a3afe934462ed1a0552fb9e8aa420913d75f7fb0",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Huiszwaluw op een draad tegen blauwe lucht, met doffe bruine kop en lichte buik."
+  },
+  "/assets/species/plumage/sp117-adult_f.webp": {
+   "refs": [
+    "sp117 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "90e71314f03be120fc757c1ccb2b81b3367d528d",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Vrouwtje Geelgors met zaad in de snavel, een geelbruine kop met donkere streping en een gestreepte borst."
+  },
+  "/assets/species/plumage/sp117-juv.webp": {
+   "refs": [
+    "sp117 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "2da635da325061c04f4f4bb5f65264623ffd0844",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Geelgors van opzij in de hand, met bruine streping op kop en rug en lichte randen aan de vleugelveren."
   }
  }
 }
