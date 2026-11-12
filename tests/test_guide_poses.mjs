@@ -1,5 +1,6 @@
 /** Contract checks for guide photo grouping. Browser interaction is covered separately. */
 import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { readFileSync } from 'node:fs';
@@ -152,3 +153,29 @@ assert.equal(sp018Juvenile.length, 1);
 assert.ok(sp018Juvenile[0].label.includes('kopdetail'), 'Juvenile photo is only head detail');
 console.log('K08 sp017/sp018: photo roles and evidence limits retained');
 console.log(`VERIFIED main photos, retained assets, licensed galleries and comparison order across ${picturedSpecies.size} photographed species`);
+
+// QA-SPECHTEN-BYTES: different paths/URLs are not enough to catch copies
+// saved under a second filename. Compare actual current WebP bytes for the
+// two reviewed spechten. This cannot detect perceptual/edited near-duplicates.
+const reviewedSpechtenHashes = new Map();
+let reviewedSpechtenFiles = 0;
+for (const id of ['sp017', 'sp018']) {
+  const activePhotos = [
+    GUIDE_PHOTOS[id],
+    ...Object.values(GUIDE_PLUMAGE[id] || {}),
+    ...(GUIDE_POSES[id] || []),
+  ].filter(photo => photo?.image);
+  for (const photo of activePhotos) {
+    assert.match(photo.image, /^\/assets\//, `Unexpected photo path: ${id}`);
+    const data = readFileSync(new URL('..' + photo.image, import.meta.url));
+    assert.equal(data.toString('ascii', 0, 4), 'RIFF', `Invalid WebP: ${photo.image}`);
+    assert.equal(data.toString('ascii', 8, 12), 'WEBP', `Invalid WebP: ${photo.image}`);
+    const digest = createHash('sha256').update(data).digest('hex');
+    assert.ok(!reviewedSpechtenHashes.has(digest),
+      `Identical file bytes under separate photo entries: ${reviewedSpechtenHashes.get(digest)} / ${photo.image}`);
+    reviewedSpechtenHashes.set(digest, photo.image);
+    reviewedSpechtenFiles++;
+  }
+}
+assert.ok(reviewedSpechtenFiles >= 8, 'Expected baseline of 8 individually reviewed sp017/sp018 files');
+console.log(`QA-SPECHTEN-BYTES: ${reviewedSpechtenFiles} current files have distinct WebP bytes; near-duplicates NOT PROVEN`);
