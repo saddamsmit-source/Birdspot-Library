@@ -1,5 +1,5 @@
 {
- "sha": "f9017aedc1b8bf254600a2707dc13c64b254aa53",
+ "sha": "a692d987fba980b275b4f6d07f936bfd3260b762",
  "generated": "2026-11-12",
  "species": [
   {
@@ -6517,25 +6517,357 @@
    "id": "sp082",
    "nameNL": "Kleine Zilverreiger",
    "family": "Reigers",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M8",
+   "date": "2026-11-12",
+   "sha": "a692d987fba980b275b4f6d07f936bfd3260b762",
+   "assets": [
+    {
+     "image": "/assets/species/plumage/sp082-portrait.webp",
+     "role": "Hoofdfoto (Volwassen)",
+     "content": "Witte reiger in zijaanzicht aan open water, met fijne donkere snavel en licht afstekende tenen.",
+     "sexAge": "Volwassen veldkleed. Geslacht onbekend.",
+     "quality": "De volledige vogel is scherp en staat vrij van storende begroeiing.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-12: zelfde opname (Verkleind tot maximaal 1600 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.), CC BY-SA 4.0 · Charles J. Sharp",
+      "annotations": [
+       "De fotograaf benoemt Kleine Zilverreiger op Cyprus. Het volwassen veldkleed, de fijne donkere snavel en de lichte tenen zijn zichtbaar. Geslacht onbekend."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp082-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge Kleine Zilverreiger in ondiep water, zonder lange sierveren.",
+     "sexAge": "Juveniel volgens de bestaande bronbeoordeling.",
+     "quality": "Hele vogel, kop en snavel goed herkenbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY SA · (c) Paulo Martins, some rights reserved (CC BY-SA)",
+      "annotations": [
+       "Life Stage: Juvenile",
+       "Alive or Dead: Alive"
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp082-breeding.webp",
+     "role": "Verenkleed (Broedkleed)",
+     "content": "Witte reiger met twee lange kopveren.",
+     "sexAge": "Volwassen veldkleed. Geslacht onbekend.",
+     "quality": "Kopveren zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Donald Davesne, some rights reserved (CC BY)",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp082-winter.webp",
+     "role": "Verenkleed (Winterkleed)",
+     "content": "Witte vogel op een oever met felgele tenen aan donkere poten.",
+     "sexAge": "Volwassen veldkleed. Geslacht onbekend.",
+     "quality": "Tenen, snavel en hele vogel zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Florin Feneru, some rights reserved (CC BY)",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/sp082.webp",
+     "role": "In vlucht",
+     "content": "Vrije vlucht boven riet. Wit verenkleed, donkere snavel en gele tenen.",
+     "sexAge": "Leeftijd en geslacht onbekend.",
+     "quality": "Volledige vogel met herkenbaar vluchtbeeld.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC0 · Hobbyfotowiki",
+      "annotations": []
+     },
+     "flight": {
+      "n": 92,
+      "id": "sp082",
+      "nameNL": "Kleine Zilverreiger",
+      "registry": "GUIDE_PHOTOS",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC0"
+     }
+    }
+   ],
+   "corrections": [
+    "Nieuw staand portret als hoofdfoto. De eerdere hoofdfoto staat nu één keer onder In vlucht. Kennisprofiel en kleedvergelijkingen gecontroleerd."
+   ],
+   "missing": [],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "De geslachten lijken op elkaar in het veld. Volwassen en vliegende vogels krijgen een neutraal label.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Tenen, hals en snavel"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp083",
    "nameNL": "Grote Zilverreiger",
    "family": "Reigers",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M8",
+   "date": "2026-11-12",
+   "sha": "a692d987fba980b275b4f6d07f936bfd3260b762",
+   "assets": [
+    {
+     "image": "/assets/species/sp083.webp",
+     "role": "Hoofdfoto (Volwassen)",
+     "content": "Witte reiger met lange hals en gele snavel tussen riet.",
+     "sexAge": "Volwassen veldkleed. Geslacht onbekend.",
+     "quality": "Herkenbaar zijaanzicht met natuurlijke houding.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · Bernard DUPONT from FRANCE",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp083-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge Grote Zilverreigers in het nest in Californië.",
+     "sexAge": "Nestjongen volgens de bronbeoordeling.",
+     "quality": "Bruikbaar als voorbeeld van nestjongen.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Annette Herz, some rights reserved (CC BY)",
+      "annotations": [
+       "Life Stage: Juvenile",
+       "Alive or Dead: Alive",
+       "Evidence of Presence: Organism",
+       "Evidence of Presence: Construction"
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp083-breeding.webp",
+     "role": "Verenkleed (Broedkleed)",
+     "content": "Vogel met donkere snavel, groene teugel en lange rugsierveren in Frankrijk.",
+     "sexAge": "Volwassen veldkleed. Geslacht onbekend.",
+     "quality": "Sierveren en snavelkleur duidelijk zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Olivier Morel, some rights reserved (CC BY)",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp083-flight.webp",
+     "role": "In vlucht",
+     "content": "Vrij vliegende reiger met ingetrokken hals en witte vleugels.",
+     "sexAge": "Leeftijd en geslacht onbekend.",
+     "quality": "Herkenbaar silhouet en vleugelstand.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp",
+      "annotations": []
+     },
+     "flight": {
+      "n": 91,
+      "id": "sp083",
+      "nameNL": "Grote Zilverreiger",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0"
+     }
+    }
+   ],
+   "corrections": [
+    "Kennisprofiel en broedkleedvergelijking gecontroleerd. Herkomst van de bestaande nestfoto expliciet vermeld."
+   ],
+   "missing": [],
+   "wishes": [
+    "Afzonderlijk Europees juveniel buiten het nest als aanvullend veldreferentiebeeld."
+   ],
+   "uncertain": [],
+   "sexPolicy": "De geslachten lijken op elkaar in het veld. Volwassen en vliegende vogels krijgen een neutraal label.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Hals, bouw en tenen"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp084",
    "nameNL": "Purperreiger",
    "family": "Reigers",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M8",
+   "date": "2026-11-12",
+   "sha": "a692d987fba980b275b4f6d07f936bfd3260b762",
+   "assets": [
+    {
+     "image": "/assets/showcase/sp084.webp",
+     "role": "Hoofdfoto (Volwassen)",
+     "content": "Slanke vogel met lange bruinoranje hals en donkere halsstrepen in oevervegetatie.",
+     "sexAge": "Volwassen veldkleed. Geslacht onbekend.",
+     "quality": "Hele vogel in zijaanzicht met herkenbare bouw.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Bernard Gagnon",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp084-juv-europa.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge vogel in Europees rietland met warmbruin kleed en slanke hals.",
+     "sexAge": "Juveniel volgens fotograaf. Geslacht onbekend.",
+     "quality": "Kop, hals en romp scherp in beeld.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-12: zelfde opname (Verkleind tot maximaal 1400 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.), CC BY 2.0 · Luiz Lapa",
+      "annotations": [
+       "De fotograaf benoemt een juveniele Purperreiger in Portugal. Het bruine kleed, de slanke hals en de snavel zijn duidelijk zichtbaar."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp084-flight.webp",
+     "role": "In vlucht",
+     "content": "Vrije vlucht, met een hoekige ingetrokken hals en ver uitstekende poten.",
+     "sexAge": "Leeftijd en geslacht onbekend.",
+     "quality": "Herkenbare zijaanzichtfoto met geheven vleugels.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
+      "annotations": []
+     },
+     "flight": {
+      "n": 95,
+      "id": "sp084",
+      "nameNL": "Purperreiger",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 4.0"
+     }
+    }
+   ],
+   "corrections": [
+    "Juvenielenfoto uit Portugal toegevoegd als Europees veldvoorbeeld. Eerdere opname uit India blijft met bronbewijs in de repo. Kennisprofiel en vergelijking met Blauwe Reiger gecontroleerd."
+   ],
+   "missing": [],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "De geslachten lijken op elkaar in het veld. Volwassen en vliegende vogels krijgen een neutraal label.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Hals, snavel en vliegbeeld"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp085",
