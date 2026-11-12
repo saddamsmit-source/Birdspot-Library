@@ -1,0 +1,20 @@
+{
+  "species": "sp018",
+  "role": "adult_f",
+  "status": "PENDING_ORIGINAL_BYTES_AND_VISUAL_REVIEW",
+  "photoTitle": "File:2016.08.27.-15-Viernheimer Heide-Viernheim--Schwarzspecht-Weibchen.jpg",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:2016.08.27.-15-Viernheimer_Heide-Viernheim--Schwarzspecht-Weibchen.jpg",
+  "author": "Andreas Eichler",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "sourceSha1": "26a9ab628423781a7b6d9ee99f1c134d748665fc",
+  "sourceBytes": 5869311,
+  "originalWidth": 2196,
+  "originalHeight": 2901,
+  "currentLocalPath": "assets/species/plumage/sp018-female-single.webp",
+  "currentLocalWidth": 500,
+  "currentLocalHeight": 661,
+  "stagingOutputName": "sp018-female-verified-higherres.webp",
+  "checkedAt": "2026-11-12",
+  "limitations": "Original bytes inaccessible in current ChatGPT runtime. Actual image import, image identity and final QA are NOT TESTED."
+}
