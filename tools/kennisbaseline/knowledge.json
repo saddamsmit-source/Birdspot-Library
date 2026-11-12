@@ -3718,6 +3718,72 @@
       "checked": "2026-11-12",
       "certainty": "hoog",
       "publisher": "Sovon Vogelonderzoek Nederland"
+    },
+    "VB_KLEINE_BONTE_SPECHT": {
+      "register": "NL07",
+      "label": "Vogelbescherming Nederland — Kleine bonte specht",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kleine-bonte-specht",
+      "edition": "online soortpagina, gelezen 12-11-2026",
+      "scope": "Nederland",
+      "confirms": "musformaat, horizontale rugbanden, sekseverschil kruin, geen rode onderstaart, golvende vlucht, roep en roffel",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "RSPB_KLEINE_BONTE_SPECHT": {
+      "register": "EU",
+      "label": "RSPB — Lesser Spotted Woodpecker",
+      "url": "https://www.rspb.org.uk/birds-and-wildlife/lesser-spotted-woodpecker",
+      "edition": "online identification page, gelezen 12-11-2026",
+      "scope": "Britse herkenningskenmerken, toegepast op dezelfde soort",
+      "confirms": "klein formaat, zwart-wit gebandeerde rug, rood petje mannetje, geen rood vrouwtje, geen rode onderstaart, golvende vlucht",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Royal Society for the Protection of Birds"
+    },
+    "WT_KLEINE_BONTE_SPECHT": {
+      "register": "EU",
+      "label": "Woodland Trust — British woodpecker identification",
+      "url": "https://www.woodlandtrust.org.uk/blog/british-woodpecker-id/",
+      "edition": "online identification guide, gelezen 12-11-2026",
+      "scope": "Britse herkenning",
+      "confirms": "zwart-witte rugbanden, geen rode onderstaart, grootteverschil ten opzichte van Grote Bonte Specht, jeugdkleed",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Woodland Trust"
+    },
+    "VB_ZWARTE_SPECHT": {
+      "register": "NL07",
+      "label": "Vogelbescherming Nederland — Zwarte specht",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwarte-specht",
+      "edition": "online soortpagina, gelezen 12-11-2026",
+      "scope": "Nederland",
+      "confirms": "grootte, kleur, mannelijke volledig rode kruin, vrouwelijke rode achterkruin, rechte vlucht, geluid, leefgebied, voedsel en broedbiologie",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "NAT_ZWARTE_SPECHT": {
+      "register": "EU11",
+      "label": "Naturalis Birds of Europe 3.1 — Black Woodpecker",
+      "url": "https://birds-europe.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/taxon.php?epi=207&id=130777",
+      "edition": "Birds of Europe 3.1, geraadpleegd 12-11-2026",
+      "scope": "Europese herkenning",
+      "confirms": "grootste Europese specht, zwarte kleur, lichte snavel, roodkruin sekse, vlucht minder golvend, roep, naald- en loofbos",
+      "checked": "2026-11-12",
+      "certainty": "hoog voor basale herkenning; bron is oudere gidseditie",
+      "publisher": "Naturalis"
+    },
+    "JENNI_ZWARTE_SPECHT": {
+      "register": "EU",
+      "label": "Jenni e.a. — Moult, ageing and sexing of woodpeckers (2025)",
+      "url": "https://www.tandfonline.com/doi/full/10.1080/03078698.2025.2573475",
+      "edition": "onderzoekspublicatie 2025, Black Woodpecker sexingsectie gelezen 12-11-2026",
+      "scope": "Europees; leeftijd/geslacht",
+      "confirms": "rode kruin bij man vanaf snavel tot achterhoofd, vrouw rood achter op kruin, juvenielen niet altijd op gewone foto betrouwbaar op leeftijd/geslacht te bepalen",
+      "checked": "2026-11-12",
+      "certainty": "hoog voor aangehaalde kenmerken; figuren niet zelfstandig geaudit",
+      "publisher": "onderzoekers Jenni e.a. / wetenschappelijke publicatie"
     }
   },
   "sp021": {
@@ -20642,5 +20708,360 @@
       }
     ],
     "open": []
+  },
+  "sp017": {
+    "summary": {
+      "text": "Kleine, musgrote bonte specht met opvallende dwarsbanden op de rug en zonder rode onderstaart. Het volwassen mannetje heeft een rode kruin; het vrouwtje mist dat rood.",
+      "sources": [
+        "VB_KLEINE_BONTE_SPECHT",
+        "RSPB_KLEINE_BONTE_SPECHT"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Ongeveer musgroot. Veel kleiner dan Grote Bonte Specht; schijnbare grootte zonder referentie blijft onzeker.",
+        "sources": [
+          "VB_KLEINE_BONTE_SPECHT",
+          "RSPB_KLEINE_BONTE_SPECHT"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Zwart-witte dwarsbanden over de rug in plaats van twee grote, witte schoudervelden.",
+        "sources": [
+          "VB_KLEINE_BONTE_SPECHT",
+          "RSPB_KLEINE_BONTE_SPECHT",
+          "WT_KLEINE_BONTE_SPECHT"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Geen rode onderstaartdekkers; een Grote Bonte Specht toont daar wel een duidelijke rode vlek.",
+        "sources": [
+          "VB_KLEINE_BONTE_SPECHT",
+          "RSPB_KLEINE_BONTE_SPECHT",
+          "VB_GBS"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Volwassen mannetje met rode kruin; volwassen vrouwtje met lichte of zwarte kruin zonder rood.",
+        "sources": [
+          "VB_KLEINE_BONTE_SPECHT",
+          "RSPB_KLEINE_BONTE_SPECHT"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "caution": {
+      "text": "Eén rode kruin is geen zekere determinatie: een jonge Grote Bonte Specht kan ook een rood petje hebben. Controleer rugbandering, onderstaart en formaat samen; een onduidelijke foto blijft onzeker.",
+      "sources": [
+        "VB_GBS",
+        "VB_KLEINE_BONTE_SPECHT",
+        "WT_KLEINE_BONTE_SPECHT"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Rugbandering versus witte schoudervlekken",
+        "where": "Beoordeel op een scherp zij- of rugaanzicht meerdere verenvelden en de onderstaart.",
+        "this": "Fijne lichte dwarsbanden over de donkere rug; geen twee grote, aaneengesloten witte schoudervelden.",
+        "other": "Grote Bonte Specht met twee grote witte schoudervelden en rode onderstaart; juvenielen kunnen op de kop wel rood tonen.",
+        "vs": [
+          "sp016"
+        ],
+        "conditions": "Scherpe opname waarop rug en onderstaart te beoordelen zijn.",
+        "exceptions": "Bij tegenlicht of een niet-zichtbare rug kan het onderscheid op één foto onbeslist blijven.",
+        "supporting": "Formaat, vleugelpatroon en eventueel roffel helpen; grootte alleen is onvoldoende zonder schaal.",
+        "sources": [
+          "VB_KLEINE_BONTE_SPECHT",
+          "RSPB_KLEINE_BONTE_SPECHT",
+          "VB_GBS"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "feature": "Formaat en onderstaart tegenover Middelste Bonte Specht",
+        "where": "Gebruik de lichaamsverhoudingen, rugtekening en onderstaart bij een zijaanzicht.",
+        "this": "Musformaat, dwarsgestreepte rug, geen rode of roze onderstaart.",
+        "other": "Middelste Bonte Specht is beduidend groter en heeft roze/rode onderstaart en een andere lichte koptekening.",
+        "vs": [
+          "sp020"
+        ],
+        "conditions": "Vergelijk kleed en formaat bij een bruikbare opname of veldobservatie.",
+        "exceptions": "Op afstand of zonder schaal kan formaat misleiden; vertrouw niet op één los kenmerk.",
+        "supporting": "De kleine specht toont geen brede, egale witte schoudervelden.",
+        "sources": [
+          "VB_KLEINE_BONTE_SPECHT",
+          "WT_KLEINE_BONTE_SPECHT"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp016",
+        "why": "Jonge Grote Bonte Spechten kunnen een rood petje hebben. De grote witte schoudervlekken en rode onderstaart helpen onderscheiden.",
+        "sources": [
+          "VB_GBS",
+          "VB_KLEINE_BONTE_SPECHT"
+        ]
+      },
+      {
+        "id": "sp020",
+        "why": "Middelste Bonte Specht heeft eveneens een rode kruin maar een ander formaat, schouderpatroon en onderstaartkleur.",
+        "sources": [
+          "VB_KLEINE_BONTE_SPECHT",
+          "WT_KLEINE_BONTE_SPECHT"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "topic": "geslacht",
+        "text": "Bij volwassen Kleine Bonte Spechten heeft het mannetje een rode kruin, het vrouwtje niet.",
+        "sources": [
+          "VB_KLEINE_BONTE_SPECHT",
+          "RSPB_KLEINE_BONTE_SPECHT"
+        ]
+      },
+      {
+        "topic": "leeftijd",
+        "text": "Juvenielen kunnen afwijken van de volwassen vogels. Leg leeftijd niet alleen vast op grond van een eventuele rode kruin.",
+        "sources": [
+          "WT_KLEINE_BONTE_SPECHT",
+          "VB_GBS"
+        ]
+      }
+    ],
+    "voice": [
+      {
+        "kind": "roep",
+        "text": "De hoge, snelle roep klinkt als een herhaalde reeks kie-tonen; hoor- en tekstinterpretaties blijven ondersteunend.",
+        "sources": [
+          "VB_KLEINE_BONTE_SPECHT"
+        ]
+      },
+      {
+        "kind": "roffel",
+        "text": "De roffel duurt doorgaans langer dan die van de Grote Bonte Specht, maar klinkt zachter.",
+        "sources": [
+          "VB_KLEINE_BONTE_SPECHT"
+        ]
+      }
+    ],
+    "habitat": [
+      {
+        "kind": "nederland",
+        "text": "Gebruikt loof- en gemengde bossen met dood of kwijnend hout; vaak hoog in takken en boomkronen.",
+        "sources": [
+          "VB_KLEINE_BONTE_SPECHT",
+          "RSPB_KLEINE_BONTE_SPECHT"
+        ]
+      }
+    ],
+    "status": [
+      {
+        "kind": "voorkomen",
+        "text": "In Nederland een schaarse, jaarrond aanwezige specht; landelijke verspreiding en aantallen moeten tegen de actuele Sovon-editie worden geverifieerd.",
+        "sources": [
+          "VB_KLEINE_BONTE_SPECHT"
+        ]
+      }
+    ],
+    "life": [
+      {
+        "kind": "gedrag",
+        "text": "Zoekt kleine prooien op dunne takken en beweegt behendig tussen takken en stammen.",
+        "sources": [
+          "VB_KLEINE_BONTE_SPECHT",
+          "RSPB_KLEINE_BONTE_SPECHT"
+        ]
+      }
+    ],
+    "basis": {
+      "size": {
+        "text": "Musgrote specht; de huidige weergegeven lengtemaat en spanwijdte zijn nog niet via twee onafhankelijk vergelijkbare maatbronnen opnieuw doorgerekend.",
+        "sources": [
+          "VB_KLEINE_BONTE_SPECHT",
+          "RSPB_KLEINE_BONTE_SPECHT"
+        ]
+      }
+    },
+    "discrepancies": [],
+    "open": [
+      "Een overtuigende foto van een zelfstandig herkenbaar juveniel ontbreekt in de gids.",
+      "De bestaande foto bij de nestholte is geen voldoende scherpe vrijevluchtvergelijking; geen foto kunstmatig als vrije vlucht labelen.",
+      "Gewicht en gecombineerde maatbanden moeten voor eventuele wijziging volgens kwaliteitsnorm §1 apart worden nagezien."
+    ]
+  },
+  "sp018": {
+    "summary": {
+      "text": "Grote, vrijwel geheel zwarte specht met een lange, lichte snavel. De rode kruin loopt bij het mannetje over de hele bovenzijde van de kop; bij het vrouwtje zit rood hoofdzakelijk achter op de kruin.",
+      "sources": [
+        "VB_ZWARTE_SPECHT",
+        "NAT_ZWARTE_SPECHT"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Vrijwel geheel zwart en duidelijk groter dan andere Europese spechten.",
+        "sources": [
+          "VB_ZWARTE_SPECHT",
+          "NAT_ZWARTE_SPECHT"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Lange, opvallend lichte snavel contrasteert met zwarte kop en hals.",
+        "sources": [
+          "VB_ZWARTE_SPECHT",
+          "NAT_ZWARTE_SPECHT"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Mannetje met rood over de kruin, vrouwtje alleen rood op de achterkruin; let op kijkhoek en zichtbaarheid.",
+        "sources": [
+          "VB_ZWARTE_SPECHT",
+          "NAT_ZWARTE_SPECHT",
+          "JENNI_ZWARTE_SPECHT"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Rechtlijnige, flapperende vlucht; veel minder golvend dan bij de Groene Specht.",
+        "sources": [
+          "VB_ZWARTE_SPECHT",
+          "NAT_ZWARTE_SPECHT"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "caution": {
+      "text": "Een kopdetail bewijst niet automatisch het volledige jeugdkleed of het geslacht. Gebruik bij een vogel in vlucht ook silhouet en vleugelslag, niet alleen een rood vlekje.",
+      "sources": [
+        "VB_ZWARTE_SPECHT",
+        "NAT_ZWARTE_SPECHT",
+        "JENNI_ZWARTE_SPECHT"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Zwarte vogel tegenover Groene Specht",
+        "where": "Beoordeel bij voldoende licht het hele lichaam, de stuit en zo mogelijk de vluchtbeweging.",
+        "this": "Overwegend zwart met lichte snavel; lange, relatief rechte, flapperende vlucht.",
+        "other": "Groene Specht is groen met een lichte geelgroene stuit en heeft meer uitgesproken golvende vlucht.",
+        "vs": [
+          "sp019"
+        ],
+        "conditions": "Daglicht en voldoende zicht op de bovendelen of herkenbare vluchtbeweging.",
+        "exceptions": "Zwarte silhouetten in tegenlicht, korte waarnemingen en ontbrekend zicht op de stuit kunnen onzeker blijven.",
+        "supporting": "De roep van een vliegende Zwarte Specht is vaak een herhaald kru-kru-kru; gebruik geluid alleen met passende context.",
+        "sources": [
+          "VB_ZWARTE_SPECHT",
+          "NAT_ZWARTE_SPECHT"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp019",
+        "why": "Groene Specht kan in slecht licht donker lijken, maar toont andere rug- en stuitkleur en een diepere golvende vlucht.",
+        "sources": [
+          "VB_ZWARTE_SPECHT",
+          "NAT_ZWARTE_SPECHT"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "topic": "geslacht",
+        "text": "Bij een goed zichtbare kruin draagt het mannetje rood vanaf de voorzijde tot achter op de kop. Het vrouwtje heeft rood op de achterkruin.",
+        "sources": [
+          "VB_ZWARTE_SPECHT",
+          "NAT_ZWARTE_SPECHT",
+          "JENNI_ZWARTE_SPECHT"
+        ]
+      },
+      {
+        "topic": "leeftijd",
+        "text": "Bij jonge vogels is de rood-zwarte kruintekening variabeler en zijn volledige kleed- of ruikenmerken nodig voor een nauwkeurige leeftijdsbepaling. Een kopfoto alleen blijft beperkt bewijs.",
+        "sources": [
+          "JENNI_ZWARTE_SPECHT"
+        ]
+      }
+    ],
+    "voice": [
+      {
+        "kind": "vluchtroep",
+        "text": "In vlucht klinkt vaak een herhaalde, luide kru-kru-kru-reeks.",
+        "sources": [
+          "VB_ZWARTE_SPECHT",
+          "NAT_ZWARTE_SPECHT"
+        ]
+      },
+      {
+        "kind": "roep in zit",
+        "text": "Vanaf een zitplaats kan een langgerekte, klagende roep worden gehoord.",
+        "sources": [
+          "VB_ZWARTE_SPECHT",
+          "NAT_ZWARTE_SPECHT"
+        ]
+      }
+    ],
+    "habitat": [
+      {
+        "kind": "nederland",
+        "text": "Vooral grotere bossen met oude dikke bomen als nestplaats en houtmieren als belangrijke voedselbron.",
+        "sources": [
+          "VB_ZWARTE_SPECHT",
+          "NAT_ZWARTE_SPECHT"
+        ]
+      }
+    ],
+    "status": [
+      {
+        "kind": "voorkomen",
+        "text": "Standvogel in Nederland; de actuele landelijke aantallen en trends worden afzonderlijk bij Sovon gecontroleerd.",
+        "sources": [
+          "VB_ZWARTE_SPECHT"
+        ]
+      }
+    ],
+    "life": [
+      {
+        "kind": "voedsel",
+        "text": "Eet vooral mieren en insectenlarven die uit dood hout en boomstammen worden gehaald.",
+        "sources": [
+          "VB_ZWARTE_SPECHT",
+          "NAT_ZWARTE_SPECHT"
+        ]
+      },
+      {
+        "kind": "broeden",
+        "text": "Hakt een nestholte in een dikke boom, vaak een oude beuk; bestaand dood hout en grote bomen zijn belangrijk.",
+        "sources": [
+          "VB_ZWARTE_SPECHT"
+        ]
+      }
+    ],
+    "basis": {
+      "size": {
+        "text": "Een grote Europese specht; de in Birdspot bestaande maten blijven staan totdat lengte, spanwijdte en gewicht volgens de tweebronnenmethode zijn beoordeeld.",
+        "sources": [
+          "VB_ZWARTE_SPECHT",
+          "NAT_ZWARTE_SPECHT"
+        ]
+      }
+    },
+    "discrepancies": [],
+    "open": [
+      "Het juveniele gidsbeeld toont uitsluitend de kop; een afzonderlijk volledig jeugdkleedportret ontbreekt.",
+      "De huidige hoofdfoto toont de vogel relatief klein; de reeds aanwezige grotere mannetjesfoto is een kwaliteitskandidaat, maar niet stilzwijgend vervangen wegens bestaande bron-/testcontracten.",
+      "De lokale vrouwtjesfoto is een 500-pixel-voorbeeld; de originele bron heeft een veel hogere resolutie. Een verbeterd bestand vereist afzonderlijke gecontroleerde import.",
+      "Bestaande maten/gewichten zijn niet opnieuw volgens de tweebronnenmethode bevestigd."
+    ]
   }
 }
