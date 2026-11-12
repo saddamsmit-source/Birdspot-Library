@@ -1,0 +1,110 @@
+[
+  {
+    "image": "/assets/species/plumage/sp112-hero-male.webp",
+    "species": "sp112",
+    "source": "https://commons.wikimedia.org/wiki/File:Common_starling_%28Sturnus_vulgaris%29_breeding_male_Marken.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/af/Common_starling_%28Sturnus_vulgaris%29_breeding_male_Marken.jpg",
+    "sourceTitle": "Common starling (Sturnus vulgaris) breeding male Marken.jpg",
+    "sourceAuthor": "Charles J. Sharp",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "f27b2a5e328da9742c0b8c751bcdb2481e7c929a753b47abec2b439ed22e24bc",
+    "sha1": "e6fd37727bc0305bbc2a54a32b3fb5e47b192727",
+    "taxonInSource": "Sturnus vulgaris",
+    "annotations": [
+      "De fotograaf benoemt dit individu als mannetje in broedkleed. De snavel en donkere iris zijn zichtbaar."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp112-adult_f.webp",
+    "species": "sp112",
+    "source": "https://commons.wikimedia.org/wiki/File:Mrs_Starling_%2833673327206%29.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/11/Mrs_Starling_%2833673327206%29.jpg",
+    "sourceTitle": "Mrs Starling (33673327206).jpg",
+    "sourceAuthor": "hedera.baltica",
+    "sourceLicense": "CC BY-SA 2.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "0791618ac176805727e740d2c37ec8c1990871c9c999a298009d0ce0baae6978",
+    "sha1": "e6d144c6b26c24478d5da09935414ca8534fa93f",
+    "taxonInSource": "Sturnus vulgaris",
+    "annotations": [
+      "De fotograaf benoemt dit individu als vrouwtje. De lichte snavelbasis is zichtbaar. Het aantal stippen op zichzelf bepaalt het geslacht niet."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp112-juv.webp",
+    "species": "sp112",
+    "source": "https://commons.wikimedia.org/wiki/File:Common_starling_%28Sturnus_vulgaris%29_juvenile.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/81/Common_starling_%28Sturnus_vulgaris%29_juvenile.jpg",
+    "sourceTitle": "Common starling (Sturnus vulgaris) juvenile.jpg",
+    "sourceAuthor": "Charles J. Sharp",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "eea4272bfb382ee7bab8d10f6a3d73987a1f4d793e81b2f6224ad73a503d2928",
+    "sha1": "28cfadd6586bec7cf9b549e3f43edbae8d6c2946",
+    "taxonInSource": "Sturnus vulgaris",
+    "annotations": [
+      "De fotograaf benoemt een juveniel. De bruine kop en donkere snavel ondersteunen het leeftijdslabel. Geslacht onbekend."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp152-juv.webp",
+    "species": "sp152",
+    "source": "https://www.inaturalist.org/photos/25120626",
+    "originalUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/25120626/large.jpeg",
+    "sourceTitle": "iNaturalist photo 25120626",
+    "sourceAuthor": "carnifex",
+    "sourceLicense": "CC BY 4.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "7265658c95ef8bf6694fbfdd16b151368652f027e247659f4da11719707fd5de",
+    "sha1": "002adcb3069f9bb33f6032a103902ff0dc5a5b61",
+    "taxonInSource": "Calidris alba",
+    "annotations": [
+      "De research-grade waarneming heeft de annotatie Juvenile. De contrastrijke bovenveren zijn zichtbaar. Geslacht onbekend."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp165-juv.webp",
+    "species": "sp165",
+    "source": "https://www.inaturalist.org/photos/731112915",
+    "originalUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/731112915/large.jpg",
+    "sourceTitle": "iNaturalist photo 731112915",
+    "sourceAuthor": "Dave",
+    "sourceLicense": "CC BY 4.0",
+    "sameShot": true,
+    "method": "Uitgesneden rond de vogel en omgezet naar WebP zonder EXIF/GPS/XMP",
+    "sourceSha256": "1dac769cec84fbe1ee556263edaaf8ae31b9eac229edbfded653f6df4afd5dcc",
+    "sha1": "24541ebccd6f9e8d0eb0d3348b0ae8e28115e26b",
+    "taxonInSource": "Sterna hirundo",
+    "annotations": [
+      "De fotograaf benoemt een juveniel en de research-grade waarneming heeft de annotatie Juvenile. De veerranden en koptekening ondersteunen dit. Geslacht onbekend."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/sp153.webp",
+    "species": "sp153",
+    "source": "https://commons.wikimedia.org/wiki/File:Dunlin_%28Calidris_alpina%29_non_breeding_Marken.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Dunlin_%28Calidris_alpina%29_non_breeding_Marken.jpg",
+    "sourceTitle": "Dunlin (Calidris alpina) non breeding Marken.jpg",
+    "sourceAuthor": "Charles J. Sharp",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "fdeb58620022bbab4e4b07d38ab574276a34af29f0805e50d0f58d212fa40291",
+    "sha1": "f8f84c6b4132946f874588b91c9ae4415b094101",
+    "taxonInSource": "Calidris alpina",
+    "annotations": [
+      "De bestandspagina benoemt Bonte Strandloper in winterkleed. De snavelvorm en het kleed zijn zichtbaar. Geslacht onbekend."
+    ],
+    "auditDate": "2026-11-12"
+  }
+]

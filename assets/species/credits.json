@@ -2511,5 +2511,27 @@
     "sha1": "4c58b96f156e55304cca2274a8ffa695d52ea2bb",
     "sourceAudit": "2026-11-12",
     "batch": "K04-fase-3-vergelijking"
+  },
+  "sp153": {
+    "file": "Dunlin (Calidris alpina) non breeding Marken.jpg",
+    "nl": "Bonte Strandloper",
+    "latin": "Calidris alpina",
+    "author": "Charles J. Sharp",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Dunlin_%28Calidris_alpina%29_non_breeding_Marken.jpg",
+    "showSourceLink": true,
+    "alt": "Bonte Strandloper in winterkleed bij het water, met een snavel die aan het uiteinde omlaag buigt.",
+    "modifications": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "reviewed": "2026-11-12",
+    "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bonte-strandloper",
+    "visualCheck": "Bonte Strandloper in winterkleed bij het water, met een snavel die aan het uiteinde omlaag buigt.",
+    "verification": "De bestandspagina benoemt Bonte Strandloper in winterkleed. De snavelvorm en het kleed zijn zichtbaar. Geslacht onbekend.",
+    "width": 1400,
+    "height": 934,
+    "image": "/assets/species/sp153.webp",
+    "sha1": "f8f84c6b4132946f874588b91c9ae4415b094101",
+    "sourceAudit": "2026-11-12",
+    "batch": "K04-fase-4-vergelijking"
   }
 }
