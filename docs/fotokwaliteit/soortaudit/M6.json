@@ -434,17 +434,23 @@
           "sexAge": "De bron benoemt een juveniele Rietgors. Opname in juni. Open bedelsnavel en deels donsachtige veren zijn zichtbaar. Geslacht onbekend.",
           "quality": "Bedelende, zeer jonge vogel. Latere veldkenmerken zijn minder goed zichtbaar.",
           "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp118-juv-later.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Rietgors op een rietstengel, met bruine bovendelen en een gestreepte flank.",
+          "sexAge": "De research-grade waarneming heeft de annotatie Juvenile. De bron gebruikt Schoeniclus schoeniclus voor dezelfde soort.",
+          "quality": "Vogel in natuurlijke houding met zichtbare soortkenmerken.",
+          "verdict": "goedgekeurd"
         }
       },
       "corrections": [
-        "Vrouwtje, zeer jong juveniel en kennisprofiel toegevoegd. Vergelijking met Geelgors gecontroleerd."
+        "Vrouwtje, zeer jong juveniel en kennisprofiel toegevoegd. Vergelijking met Geelgors gecontroleerd.",
+        "Verder uitgegroeid juveniel in riet toegevoegd als tweede leeftijdsvoorbeeld."
       ],
       "missing": [
         "Scherpe foto van één Rietgors in vrije vlucht met bevestigde rechten."
       ],
-      "wishes": [
-        "Aanvullende foto van een verder uitgegroeid juveniel."
-      ],
+      "wishes": [],
       "sexPolicy": "Een bruine kruin komt ook voor bij mannetjes buiten de broedtijd en bij jonge vogels.",
       "uncertain": [],
       "date": "2026-11-12"
@@ -498,8 +504,15 @@
     },
     "sp143": {
       "assets": {
+        "/assets/species/plumage/sp143-hero-male.webp": {
+          "role": "Hoofdfoto (Mannetje)",
+          "content": "Mannetje Kluut op slik in zijaanzicht, met een lange opgewipte snavel, zwart-witte tekening en kleurringen.",
+          "sexAge": "De fotograaf benoemt het gemarkeerde individu H60 als mannetje en annoteert de waarneming als Adult en Male.",
+          "quality": "Vogel in natuurlijke houding met zichtbare soortkenmerken.",
+          "verdict": "goedgekeurd"
+        },
         "/assets/showcase/sp143.webp": {
-          "role": "Hoofdfoto (Volwassen)",
+          "role": "Overige herkenningsfoto",
           "content": "Volwassen Kluut in profiel aan water met zwarte vleugelband en opgebogen snavel.",
           "sexAge": "Geslacht onbekend.",
           "quality": "De hele vogel, snavel en lange poten zijn zichtbaar.",
@@ -518,16 +531,24 @@
           "sexAge": "Geslacht onbekend.",
           "quality": "De volledige vogel is zichtbaar en de poten steken uit achter de staart.",
           "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp143-adult_f.webp": {
+          "role": "Verenkleed (Vrouwtje)",
+          "content": "Vrouwtje Kluut op slik, met zwart-witte tekening, lange poten en een omhooggebogen snavel.",
+          "sexAge": "De fotograaf benoemt dit individu als het vrouwtje dat bij de gemarkeerde vogel H60 hoort. De waarneming heeft de annotaties Adult en Female.",
+          "quality": "Vogel in natuurlijke houding met zichtbare soortkenmerken.",
+          "verdict": "goedgekeurd"
         }
       },
       "corrections": [
-        "Juvenielenfoto en kennisprofiel toegevoegd. Bestaande vluchtfoto en vergelijking met Scholekster gecontroleerd."
+        "Juvenielenfoto en kennisprofiel toegevoegd. Bestaande vluchtfoto en vergelijking met Scholekster gecontroleerd.",
+        "Hoofdfoto van het bronbenoemde mannetje H60 en afzonderlijke vrouwtjesfoto toegevoegd. De eerdere volwassen foto blijft beschikbaar onder overige herkenningsfoto’s."
       ],
       "missing": [],
       "wishes": [
-        "Afzonderlijke, kwalitatief sterke foto’s met betrouwbaar bevestigd geslacht."
+        "Een scherper zijaanzicht van een vrouwtje in rust met de snavel vrij in beeld."
       ],
-      "sexPolicy": "Gebruik Volwassen als gedeelde aanduiding. De huidige foto biedt onvoldoende basis om een geslacht toe te kennen.",
+      "sexPolicy": "De twee volwassen geslachtslabels volgen bronwaarnemingen van het gemarkeerde mannetje H60 en het door de fotograaf benoemde vrouwtje. Het geslacht van de andere volwassen vogel en de vluchtvogel is onbekend.",
       "uncertain": [],
       "date": "2026-11-12"
     }

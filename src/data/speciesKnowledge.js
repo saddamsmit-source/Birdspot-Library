@@ -14941,7 +14941,7 @@ const DATA = {
     }
    ],
    "caution": {
-    "text": "De gids gebruikt een gedeeld volwassen kleed. De beschikbare volwassen beelden hebben geen betrouwbaar bevestigd geslacht.",
+    "text": "De zwart-witte basistekening komt bij beide volwassen geslachten voor. Een losse foto zonder betrouwbare broninformatie biedt beperkte zekerheid over het geslacht.",
     "sources": [
      "VB_KLUUT",
      "WT_KLUUT"
@@ -14980,7 +14980,7 @@ const DATA = {
    ],
    "detail": [
     {
-     "text": "De zwart-witte basis is bij volwassen vogels herkenbaar. Het geslacht van de volwassen fotovogels is onbekend.",
+     "text": "Een volwassen Kluut heeft een zwarte kap, zwarte vleugeltekening, een opgewipte snavel en lange blauwgrijze poten.",
      "sources": [
       "VB_KLUUT",
       "WT_KLUUT"

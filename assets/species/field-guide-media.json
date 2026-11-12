@@ -5258,6 +5258,55 @@
         "sourceAudit": "2026-11-12",
         "observation": "https://www.inaturalist.org/observations/389793161",
         "age": "juvenile"
+      },
+      "adult_m": {
+        "file": "iNaturalist photo 131474425",
+        "nl": "Kluut",
+        "latin": "Recurvirostra avosetta",
+        "author": "Zinogre",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://www.inaturalist.org/photos/131474425",
+        "showSourceLink": true,
+        "alt": "Mannetje Kluut op slik in zijaanzicht, met een lange opgewipte snavel, zwart-witte tekening en kleurringen.",
+        "modifications": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+        "reviewed": "2026-11-12",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kluut",
+        "visualCheck": "Mannetje Kluut op slik in zijaanzicht, met een lange opgewipte snavel, zwart-witte tekening en kleurringen.",
+        "verification": "De fotograaf benoemt het gemarkeerde individu H60 als mannetje en annoteert de waarneming als Adult en Male.",
+        "width": 1024,
+        "height": 768,
+        "image": "/assets/species/plumage/sp143-hero-male.webp",
+        "sha1": "6dda9e3f5ddb7da23377e0ea781df5a895958ef4",
+        "sourceAudit": "2026-11-12",
+        "observation": "https://www.inaturalist.org/observations/80225810",
+        "sex": "male",
+        "age": "adult",
+        "label": "Mannetje"
+      },
+      "adult_f": {
+        "file": "iNaturalist photo 131475532",
+        "nl": "Kluut",
+        "latin": "Recurvirostra avosetta",
+        "author": "Zinogre",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://www.inaturalist.org/photos/131475532",
+        "showSourceLink": true,
+        "alt": "Vrouwtje Kluut op slik, met zwart-witte tekening, lange poten en een omhooggebogen snavel.",
+        "modifications": "Uitsnede rond de vogel en omzetting naar WebP zonder EXIF/GPS/XMP",
+        "reviewed": "2026-11-12",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kluut",
+        "visualCheck": "Vrouwtje Kluut op slik, met zwart-witte tekening, lange poten en een omhooggebogen snavel.",
+        "verification": "De fotograaf benoemt dit individu als het vrouwtje dat bij de gemarkeerde vogel H60 hoort. De waarneming heeft de annotaties Adult en Female.",
+        "width": 640,
+        "height": 535,
+        "image": "/assets/species/plumage/sp143-adult_f.webp",
+        "sha1": "18574e7fc57a00aefbfd28ba84f524c444679226",
+        "sourceAudit": "2026-11-12",
+        "observation": "https://www.inaturalist.org/observations/80226205",
+        "sex": "female",
+        "age": "adult"
       }
     }
   },
@@ -9284,6 +9333,33 @@
         "label": "In vlucht",
         "note": "De vogel vliegt vrij boven water met de lange poten naar achteren. Op deze opname is de hals relatief gestrekt."
       }
+    ],
+    "sp118": [
+      {
+        "file": "iNaturalist photo 435367037",
+        "nl": "Rietgors",
+        "latin": "Emberiza schoeniclus",
+        "author": "Eva Uzdilova",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://www.inaturalist.org/photos/435367037",
+        "showSourceLink": true,
+        "alt": "Jonge Rietgors op een rietstengel, met bruine bovendelen en een gestreepte flank.",
+        "modifications": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+        "reviewed": "2026-11-12",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/rietgors",
+        "visualCheck": "Jonge Rietgors op een rietstengel, met bruine bovendelen en een gestreepte flank.",
+        "verification": "De research-grade waarneming heeft de annotatie Juvenile. De bron gebruikt Schoeniclus schoeniclus voor dezelfde soort.",
+        "width": 1024,
+        "height": 768,
+        "image": "/assets/species/plumage/sp118-juv-later.webp",
+        "sha1": "b6b228abc5062ced3d644fcc7bc4869fb179794c",
+        "sourceAudit": "2026-11-12",
+        "observation": "https://www.inaturalist.org/observations/244094425",
+        "age": "juvenile",
+        "label": "Verder uitgegroeid juveniel",
+        "note": "Zicht op de bruin gestreepte flank en de staart in zijaanzicht."
+      }
     ]
   },
   "heroes": {
@@ -9327,7 +9403,8 @@
     "sp106": "/assets/species/plumage/sp106-hero-male.webp",
     "sp114": "/assets/species/plumage/sp114-hero-male.webp",
     "sp115": "/assets/species/plumage/sp115-hero-adult.webp",
-    "sp126": "/assets/species/plumage/sp126-hero-male.webp"
+    "sp126": "/assets/species/plumage/sp126-hero-male.webp",
+    "sp143": "/assets/species/plumage/sp143-hero-male.webp"
   },
   "retired": {
     "sp118": [

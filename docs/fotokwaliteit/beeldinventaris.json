@@ -4619,6 +4619,36 @@
    "airborne": false,
    "source": "beeldinspectie 12-11-2026",
    "note": "Wilde Zwaan op water met een rechtere hals en grote gele snavelvlek met zwarte punt."
+  },
+  "/assets/species/plumage/sp118-juv-later.webp": {
+   "refs": [
+    "sp118 GUIDE_POSES[0]"
+   ],
+   "sha1": "b6b228abc5062ced3d644fcc7bc4869fb179794c",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K05 fase 4 (2026-11-12)",
+   "note": "Jonge Rietgors op een rietstengel, met bruine bovendelen en een gestreepte flank."
+  },
+  "/assets/species/plumage/sp143-hero-male.webp": {
+   "refs": [
+    "sp143 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "6dda9e3f5ddb7da23377e0ea781df5a895958ef4",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K05 fase 4 (2026-11-12)",
+   "note": "Mannetje Kluut op slik in zijaanzicht, met een lange opgewipte snavel, zwart-witte tekening en kleurringen."
+  },
+  "/assets/species/plumage/sp143-adult_f.webp": {
+   "refs": [
+    "sp143 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "18574e7fc57a00aefbfd28ba84f524c444679226",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K05 fase 4 (2026-11-12)",
+   "note": "Vrouwtje Kluut op slik, met zwart-witte tekening, lange poten en een omhooggebogen snavel."
   }
  }
 }

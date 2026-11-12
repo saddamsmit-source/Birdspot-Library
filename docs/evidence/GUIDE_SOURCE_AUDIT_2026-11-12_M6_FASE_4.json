@@ -106,5 +106,59 @@
       "De fotograaf benoemt de Wilde Zwaan en geeft de opname wereldwijd vrij aan het publieke domein. De snaveltekening is zichtbaar."
     ],
     "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp118-juv-later.webp",
+    "species": "sp118",
+    "source": "https://www.inaturalist.org/photos/435367037",
+    "originalUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/435367037/large.jpeg",
+    "sourceTitle": "iNaturalist photo 435367037",
+    "sourceAuthor": "Eva Uzdilova",
+    "sourceLicense": "CC BY 4.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "f526b8b84e41778c65adbb8ba5f35ec20b0d6450d7a3dae61ef4a1c1c977cc2a",
+    "sha1": "b6b228abc5062ced3d644fcc7bc4869fb179794c",
+    "taxonInSource": "Schoeniclus schoeniclus",
+    "annotations": [
+      "De research-grade waarneming heeft de annotatie Juvenile. De bron gebruikt Schoeniclus schoeniclus voor dezelfde soort."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp143-hero-male.webp",
+    "species": "sp143",
+    "source": "https://www.inaturalist.org/photos/131474425",
+    "originalUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/131474425/large.jpeg",
+    "sourceTitle": "iNaturalist photo 131474425",
+    "sourceAuthor": "Zinogre",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "9395f2702414695b04d6878b76a88c2bcfef373c4349b81766b49a0d64f70221",
+    "sha1": "6dda9e3f5ddb7da23377e0ea781df5a895958ef4",
+    "taxonInSource": "Recurvirostra avosetta",
+    "annotations": [
+      "De fotograaf benoemt het gemarkeerde individu H60 als mannetje en annoteert de waarneming als Adult en Male."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp143-adult_f.webp",
+    "species": "sp143",
+    "source": "https://www.inaturalist.org/photos/131475532",
+    "originalUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/131475532/large.jpeg",
+    "sourceTitle": "iNaturalist photo 131475532",
+    "sourceAuthor": "Zinogre",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sameShot": true,
+    "method": "Uitsnede rond de vogel en omzetting naar WebP zonder EXIF/GPS/XMP",
+    "sourceSha256": "76c069535e45d09821c44f76fa8ad797f26059edc5b5632934be62843847f6c9",
+    "sha1": "18574e7fc57a00aefbfd28ba84f524c444679226",
+    "taxonInSource": "Recurvirostra avosetta",
+    "annotations": [
+      "De fotograaf benoemt dit individu als het vrouwtje dat bij de gemarkeerde vogel H60 hoort. De waarneming heeft de annotaties Adult en Female."
+    ],
+    "auditDate": "2026-11-12"
   }
 ]
