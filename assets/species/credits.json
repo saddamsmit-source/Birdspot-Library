@@ -1573,11 +1573,12 @@
     "batch": "open-coast-08",
     "modifications": "Resized to max 1600 px and converted to WebP; no crop",
     "reviewed": "2026-11-06",
-    "verification": "Commons identity and license checked against visible field marks in the cited species account.",
+    "verification": "De bestandstitel benoemt de nominaatvorm. De voorjaarsopname toont de blauwgrijze kop, lichte wenkbrauw en felgele onderzijde van het mannetje.",
     "visualCheck": "Gele kwikstaart van de nominaatvorm. Felgele onderzijde, blauwgrijze kop, lichte wenkbrauwstreep en lange staart.",
     "alt": "Gele Kwikstaart — Gele kwikstaart van de nominaatvorm. Felgele onderzijde, blauwgrijze kop, lichte wenkbrauwstreep en lange staart.",
     "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/gele-kwikstaart",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "sex": "male"
   },
   "sp070": {
     "file": "Skylark 2, Lake District, England - June 2009.jpg",
@@ -2555,5 +2556,27 @@
     "sha1": "879f1042fcde0fc4eabbeb8ea5abc41a02005d72",
     "sourceAudit": "2026-11-12",
     "batch": "K05-fase-1-vergelijking"
+  },
+  "sp257": {
+    "file": "European bee-eater (Merops apiaster).jpg",
+    "nl": "Bijeneter",
+    "latin": "Merops apiaster",
+    "author": "Charles J. Sharp",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:European_bee-eater_%28Merops_apiaster%29.jpg",
+    "showSourceLink": true,
+    "alt": "Bijeneter op een tak met gele keel, blauwgroene onderzijde en licht gebogen snavel.",
+    "modifications": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "reviewed": "2026-11-12",
+    "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bijeneter",
+    "visualCheck": "Bijeneter op een tak met gele keel, blauwgroene onderzijde en licht gebogen snavel.",
+    "verification": "De fotograaf benoemt Merops apiaster. Keelkleur, snavelvorm en onderzijde zijn zichtbaar. Geslacht onbekend.",
+    "width": 1400,
+    "height": 1400,
+    "image": "/assets/species/sp257.webp",
+    "sha1": "85b3029d8d93627c4c8cb4b463f61c4bc59ed631",
+    "sourceAudit": "2026-11-12",
+    "batch": "K05-fase-2-vergelijking"
   }
 }

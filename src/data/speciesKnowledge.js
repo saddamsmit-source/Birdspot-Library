@@ -2335,6 +2335,127 @@ const DATA = {
    "checked": "2026-11-12",
    "certainty": "hoog",
    "publisher": "RSPB"
+  },
+  "VB_GELE_KWIKSTAART": {
+   "register": "NL07",
+   "label": "Vogelbescherming — Gele Kwikstaart",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/gele-kwikstaart",
+   "edition": "Online bron",
+   "scope": "Nederland",
+   "confirms": "Herkenning, habitat, leefwijze en voorkomen",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "VB_GROTE_GELE_KWIKSTAART": {
+   "register": "NL07",
+   "label": "Vogelbescherming — Grote Gele Kwikstaart",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-gele-kwikstaart",
+   "edition": "Online bron",
+   "scope": "Nederland",
+   "confirms": "Herkenning, habitat, leefwijze en voorkomen",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "VB_IJSVOGEL": {
+   "register": "NL07",
+   "label": "Vogelbescherming — IJsvogel",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/ijsvogel",
+   "edition": "Online bron",
+   "scope": "Nederland",
+   "confirms": "Herkenning, habitat, leefwijze en voorkomen",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "VB_BIJENETER": {
+   "register": "NL07",
+   "label": "Vogelbescherming — Bijeneter",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bijeneter",
+   "edition": "Online bron",
+   "scope": "Nederland",
+   "confirms": "Herkenning, habitat, leefwijze en voorkomen",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "VB_PATRIJS": {
+   "register": "NL07",
+   "label": "Vogelbescherming — Patrijs",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/patrijs",
+   "edition": "Online bron",
+   "scope": "Nederland",
+   "confirms": "Herkenning, habitat, leefwijze en voorkomen",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "SOV_GELE_KWIKSTAART": {
+   "register": "nieuw",
+   "label": "Sovon — Gele Kwikstaart",
+   "url": "https://stats.sovon.nl/stats/soort/10171/",
+   "edition": "Online bron",
+   "scope": "Nederland",
+   "confirms": "Nederlandse verspreiding en broedvogelmonitoring",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "SOV_IJSVOGEL": {
+   "register": "nieuw",
+   "label": "Sovon — IJsvogel",
+   "url": "https://stats.sovon.nl/stats/soort/8310/",
+   "edition": "Online bron",
+   "scope": "Nederland",
+   "confirms": "Nederlandse verspreiding en broedvogelmonitoring",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "SOV_PATRIJS": {
+   "register": "nieuw",
+   "label": "Sovon — Patrijs",
+   "url": "https://stats.sovon.nl/stats/soort/3670/",
+   "edition": "Online bron",
+   "scope": "Nederland",
+   "confirms": "Nederlandse verspreiding en broedvogelmonitoring",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "BZH_GELE_KWIKSTAART": {
+   "register": "BIO05",
+   "label": "Blasco-Zumeta & Heinze — Western Yellow Wagtail",
+   "url": "https://blascozumeta.com/specie_files/10170_ENG_Motacilla_flava_aranzadi.pdf",
+   "edition": "Online bron",
+   "scope": "Iberisch referentiemateriaal",
+   "confirms": "Lengte, veldkenmerken, leeftijd en geslacht",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Blasco-Zumeta & Heinze"
+  },
+  "BZH_IJSVOGEL": {
+   "register": "BIO05",
+   "label": "Blasco-Zumeta & Heinze — Common Kingfisher",
+   "url": "https://www.blascozumeta.com/specie_files/08310_Aldedo_atthis_E.pdf",
+   "edition": "Online bron",
+   "scope": "Iberisch referentiemateriaal",
+   "confirms": "Lengte, veldkenmerken, leeftijd en geslacht",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Blasco-Zumeta & Heinze"
+  },
+  "BZH_PATRIJS": {
+   "register": "BIO05",
+   "label": "Blasco-Zumeta & Heinze — Grey Partridge",
+   "url": "https://blascozumeta.com/specie_files/03670_Perdix%20perdix_E.pdf",
+   "edition": "Online bron",
+   "scope": "Iberisch referentiemateriaal",
+   "confirms": "Lengte, veldkenmerken, leeftijd en geslacht",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Blasco-Zumeta & Heinze"
   }
  },
  "profiles": {
@@ -13166,6 +13287,512 @@ const DATA = {
      "text": "Trekt over kortere afstanden. De precieze herkomst van veel doortrekkers in Nederland is onzeker.",
      "sources": [
       "VB_VUURGOUDHAAN"
+     ],
+     "kind": "trek"
+    }
+   ],
+   "discrepancies": [],
+   "open": []
+  },
+  "sp069": {
+   "summary": {
+    "text": "Slanke kwikstaart van open boerenland met meestal olijfgroene bovendelen en donkere poten. Een mannetje van de nominaatvorm heeft in broedkleed een blauwgrijze kop, lichte wenkbrauw en felgele onderzijde.",
+    "sources": [
+     "VB_GELE_KWIKSTAART",
+     "BZH_GELE_KWIKSTAART"
+    ]
+   },
+   "keyMarks": [
+    {
+     "text": "Donkere poten en een doorgaans olijfgroene mantel helpen bij onderscheid van Grote Gele Kwikstaart.",
+     "sources": [
+      "VB_GELE_KWIKSTAART",
+      "VB_GROTE_GELE_KWIKSTAART",
+      "BZH_GELE_KWIKSTAART"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "De koptekening varieert tussen ondersoorten.",
+     "sources": [
+      "VB_GELE_KWIKSTAART",
+      "BZH_GELE_KWIKSTAART"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Een juveniel heeft vaak weinig geel, met lichte vleugelstrepen en donkere tekening op de bovenborst.",
+     "sources": [
+      "BZH_GELE_KWIKSTAART"
+     ],
+     "reliability": "ondersteunend"
+    }
+   ],
+   "caution": {
+    "text": "Gebruik geel op de onderzijde samen met pootkleur, mantel en staart. Vrouwtjes en jonge vogels kunnen bleek zijn.",
+    "sources": [
+     "VB_GELE_KWIKSTAART",
+     "VB_GROTE_GELE_KWIKSTAART",
+     "BZH_GELE_KWIKSTAART"
+    ]
+   },
+   "critical": [
+    {
+     "feature": "Mantel, poten en staart",
+     "where": "Zijaanzicht met zicht op de poten en de hele staart",
+     "this": "Doorgaans olijfgroene mantel en donkere poten.",
+     "other": "Grijze mantel, bruinroze poten en een opvallend lange staart.",
+     "vs": [
+      "sp288"
+     ],
+     "reliability": "ondersteunend",
+     "conditions": "Vergelijk in daglicht en let op de verhouding van staart tot lichaam.",
+     "exceptions": "Schaduw kan pootkleur verhullen. Beide soorten kunnen een gele onderzijde hebben.",
+     "supporting": "Stromend water ondersteunt Grote Gele Kwikstaart, open boerenland ondersteunt Gele Kwikstaart.",
+     "sources": [
+      "VB_GELE_KWIKSTAART",
+      "VB_GROTE_GELE_KWIKSTAART",
+      "BZH_GELE_KWIKSTAART"
+     ]
+    }
+   ],
+   "similar": [
+    {
+     "id": "sp288",
+     "why": "Beide kunnen geel op de onderzijde tonen. De combinatie van mantel, poten en staart helpt bij het onderscheid.",
+     "sources": [
+      "VB_GELE_KWIKSTAART",
+      "VB_GROTE_GELE_KWIKSTAART",
+      "BZH_GELE_KWIKSTAART"
+     ]
+    }
+   ],
+   "detail": [
+    {
+     "text": "Een volwassen vrouwtje is doorgaans valer dan een mannetje in broedkleed. Intensiteit en koptekening variëren per vorm en individu.",
+     "sources": [
+      "VB_GELE_KWIKSTAART",
+      "BZH_GELE_KWIKSTAART"
+     ],
+     "topic": "geslacht"
+    },
+    {
+     "text": "Vers juveniel kleed kan lichte vleugelstrepen en donkere vlekken op de bovenborst tonen.",
+     "sources": [
+      "BZH_GELE_KWIKSTAART"
+     ],
+     "topic": "leeftijd"
+    }
+   ],
+   "voice": [
+    {
+     "text": "Laat onder meer een korte, scherpe roep horen bij het overvliegen.",
+     "sources": [
+      "VB_GELE_KWIKSTAART"
+     ],
+     "kind": "roep"
+    }
+   ],
+   "basis": {
+    "biometrics": [
+     {
+      "field": "length",
+      "unit": "cm",
+      "display": "ca. 16–17 cm",
+      "values": [
+       {
+        "source": "VB_GELE_KWIKSTAART",
+        "min": 15,
+        "max": 16
+       },
+       {
+        "source": "BZH_GELE_KWIKSTAART",
+        "min": 16,
+        "max": 17
+       }
+      ],
+      "note": "Afgeronde onder- en bovengrens op basis van de twee bronwaarden. Een bron met één maat telt als gelijke onder- en bovengrens."
+     }
+    ]
+   },
+   "habitat": [
+    {
+     "text": "Open grasland en akkers. Foerageert ook op kort gras en in de buurt van grazend vee.",
+     "sources": [
+      "VB_GELE_KWIKSTAART",
+      "SOV_GELE_KWIKSTAART"
+     ],
+     "kind": "nederland"
+    }
+   ],
+   "status": [
+    {
+     "text": "Nederlandse broedvogel en zomergast. Ook op doortrek te zien.",
+     "sources": [
+      "VB_GELE_KWIKSTAART",
+      "SOV_GELE_KWIKSTAART"
+     ],
+     "kind": "voorkomen"
+    }
+   ],
+   "life": [
+    {
+     "text": "Zoekt vooral insecten en andere kleine ongewervelden op of vlak boven de grond.",
+     "sources": [
+      "VB_GELE_KWIKSTAART"
+     ],
+     "kind": "voedsel"
+    },
+    {
+     "text": "Maakt een nest op de grond in dichte lage begroeiing, ook in landbouwgewassen.",
+     "sources": [
+      "VB_GELE_KWIKSTAART"
+     ],
+     "kind": "broeden"
+    },
+    {
+     "text": "Nederlandse vogels trekken in de nazomer en herfst naar Afrika ten zuiden van de Sahara, onder meer naar de Sahel.",
+     "sources": [
+      "VB_GELE_KWIKSTAART"
+     ],
+     "kind": "trek"
+    }
+   ],
+   "discrepancies": [],
+   "open": []
+  },
+  "sp075": {
+   "summary": {
+    "text": "Compacte blauw-oranje vogel met een grote kop, korte staart en lange, rechte snavel. Vliegt vaak laag over het water.",
+    "sources": [
+     "VB_IJSVOGEL",
+     "BZH_IJSVOGEL"
+    ]
+   },
+   "keyMarks": [
+    {
+     "text": "Helderblauwe rug en stuit, oranje onderzijde en witte keel en zijhals.",
+     "sources": [
+      "VB_IJSVOGEL",
+      "BZH_IJSVOGEL"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Volwassen vrouwtjes hebben doorgaans oranje aan de basis van de ondersnavel.",
+     "sources": [
+      "VB_IJSVOGEL",
+      "BZH_IJSVOGEL"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "De vlucht over het water is snel en vaak laag, geregeld met een scherpe hoge roep.",
+     "sources": [
+      "VB_IJSVOGEL"
+     ],
+     "reliability": "ondersteunend"
+    }
+   ],
+   "caution": {
+    "text": "Een jonge IJsvogel kan een donkere ondersnavel hebben. Bekijk de borstveren en bepaal eerst de leeftijd voordat je een geslacht aan het dier toekent.",
+    "sources": [
+     "VB_IJSVOGEL",
+     "BZH_IJSVOGEL"
+    ]
+   },
+   "critical": [
+    {
+     "feature": "Keel, snavel en silhouet",
+     "where": "Goed belicht zijaanzicht",
+     "this": "Witte keel, oranje borst en rechte snavel. Korte staart en gedrongen bouw.",
+     "other": "Gele keel, blauwgroene onderzijde en licht gebogen snavel. Slankere bouw en langere staart.",
+     "vs": [
+      "sp257"
+     ],
+     "reliability": "ondersteunend",
+     "conditions": "Bekijk de keel en snavelvorm samen.",
+     "exceptions": "Tegenlicht kan kleur maskeren. Gebruik dan bouw en staartverhouding.",
+     "supporting": "IJsvogel vliegt vaak laag over water. Bijeneter gebruikt ook zweefvlucht.",
+     "sources": [
+      "VB_IJSVOGEL",
+      "VB_BIJENETER",
+      "BZH_IJSVOGEL"
+     ]
+    }
+   ],
+   "similar": [
+    {
+     "id": "sp257",
+     "why": "Beide zijn opvallend kleurrijk. Keelkleur, snavelvorm en staartverhouding geven het onderscheid.",
+     "sources": [
+      "VB_IJSVOGEL",
+      "VB_BIJENETER",
+      "BZH_IJSVOGEL"
+     ]
+    }
+   ],
+   "detail": [
+    {
+     "text": "Een volwassen mannetje heeft doorgaans een donkere ondersnavel. Bij volwassen vrouwtjes is de basis doorgaans oranjerood.",
+     "sources": [
+      "VB_IJSVOGEL",
+      "BZH_IJSVOGEL"
+     ],
+     "topic": "geslacht"
+    },
+    {
+     "text": "Bij een juveniel kunnen donkere veerranden de borst doffer en geschubd doen lijken. Ook de poten zijn vaak donkerder.",
+     "sources": [
+      "BZH_IJSVOGEL"
+     ],
+     "topic": "leeftijd"
+    }
+   ],
+   "voice": [
+    {
+     "text": "Korte, hoge, scherpe roep, ook hoorbaar tijdens de vlucht.",
+     "sources": [
+      "VB_IJSVOGEL"
+     ],
+     "kind": "roep"
+    }
+   ],
+   "basis": {
+    "biometrics": [
+     {
+      "field": "length",
+      "unit": "cm",
+      "display": "ca. 16–18 cm",
+      "values": [
+       {
+        "source": "VB_IJSVOGEL",
+        "min": 17,
+        "max": 19.5
+       },
+       {
+        "source": "BZH_IJSVOGEL",
+        "min": 15,
+        "max": 17
+       }
+      ],
+      "note": "Afgeronde onder- en bovengrens op basis van de twee bronwaarden. Een bron met één maat telt als gelijke onder- en bovengrens."
+     }
+    ]
+   },
+   "habitat": [
+    {
+     "text": "Visrijk water met geschikte zitposten. Voor broeden zijn afgravingen of steile oevers met geschikt substraat belangrijk.",
+     "sources": [
+      "VB_IJSVOGEL",
+      "SOV_IJSVOGEL"
+     ],
+     "kind": "nederland"
+    }
+   ],
+   "status": [
+    {
+     "text": "Nederlandse broedvogel die het hele jaar kan worden gezien. Aantallen schommelen na strenge winters.",
+     "sources": [
+      "VB_IJSVOGEL",
+      "SOV_IJSVOGEL"
+     ],
+     "kind": "voorkomen"
+    }
+   ],
+   "life": [
+    {
+     "text": "Jaagt vooral op kleine vis. Duikt vanaf een uitkijkpost het water in.",
+     "sources": [
+      "VB_IJSVOGEL"
+     ],
+     "kind": "voedsel"
+    },
+    {
+     "text": "Graafnest met een tunnel naar een nestkamer, bijvoorbeeld in een steile oeverwand.",
+     "sources": [
+      "VB_IJSVOGEL",
+      "SOV_IJSVOGEL"
+     ],
+     "kind": "broeden"
+    },
+    {
+     "text": "Veel volwassen vogels blijven in de buurt van hun broedgebied. Jonge vogels zwerven uit en bij vorst verplaatsen vogels zich naar open water.",
+     "sources": [
+      "VB_IJSVOGEL"
+     ],
+     "kind": "trek"
+    }
+   ],
+   "discrepancies": [
+    {
+     "source": "Vogelbescherming noemt 17–19,5 cm, Blasco-Zumeta & Heinze 15–17 cm. De gids toont een afgeronde schatting uit beide waarden.",
+     "sources": [
+      "VB_IJSVOGEL",
+      "BZH_IJSVOGEL"
+     ]
+    }
+   ],
+   "open": []
+  },
+  "sp106": {
+   "summary": {
+    "text": "Compacte hoendervogel met korte roestrode staart en gebandeerde flanken. Volwassen vogels hebben doorgaans een oranjebruin gezicht en grijze borst.",
+    "sources": [
+     "VB_PATRIJS",
+     "BZH_PATRIJS"
+    ]
+   },
+   "keyMarks": [
+    {
+     "text": "Korte roestrode staart en afgeronde vleugels vallen op bij opvliegen.",
+     "sources": [
+      "VB_PATRIJS",
+      "BZH_PATRIJS"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "De donkere buikvlek is vaak groot bij een mannetje en kan ook voorkomen bij een vrouwtje.",
+     "sources": [
+      "VB_PATRIJS",
+      "BZH_PATRIJS"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Bij goed zicht op de schouderveren van een volwassen vogel kan dwarstekening een vrouwtje ondersteunen.",
+     "sources": [
+      "BZH_PATRIJS"
+     ],
+     "reliability": "ondersteunend"
+    }
+   ],
+   "caution": {
+    "text": "Een hoefijzervormige buikvlek is op zichzelf onvoldoende voor geslachtsbepaling. Bekijk bij een volwassen vogel ook schouder- en vleugeldekveren.",
+    "sources": [
+     "VB_PATRIJS",
+     "BZH_PATRIJS"
+    ]
+   },
+   "critical": [
+    {
+     "feature": "Staart en lichaamsbouw",
+     "where": "Volledig zijaanzicht van een volwassen vogel",
+     "this": "Compacte bouw, korte roestrode staart en bij volwassenen een oranjebruin gezicht.",
+     "other": "De hen is bruin gevlekt met een lange, gebandeerde staart.",
+     "vs": [
+      "sp105"
+     ],
+     "reliability": "ondersteunend",
+     "conditions": "Bekijk de volledige staart en let ook op borst en flanken.",
+     "exceptions": "Een juveniele Fazant kan een kortere staart hebben dan een volwassen hen.",
+     "supporting": "De Patrijs heeft opvallende kastanjebruine dwarsbanden op de flanken.",
+     "sources": [
+      "VB_PATRIJS",
+      "VB_FAZANT",
+      "BZH_PATRIJS"
+     ]
+    }
+   ],
+   "similar": [
+    {
+     "id": "sp105",
+     "why": "Een Fazantenhen lijkt van afstand op een Patrijs. Bouw en staartvorm helpen ze uit elkaar te houden.",
+     "sources": [
+      "VB_PATRIJS",
+      "VB_FAZANT",
+      "BZH_PATRIJS"
+     ]
+    }
+   ],
+   "detail": [
+    {
+     "text": "Bij een volwassen vrouwtje tonen de schouderveren lichte lengtestrepen met lichte dwarsstreepjes. Bij een mannetje overheerst de lichte lengtestreep.",
+     "sources": [
+      "BZH_PATRIJS"
+     ],
+     "topic": "geslacht"
+    },
+    {
+     "text": "Een jonge vogel is bruin en gestreept en mist aanvankelijk de uitgesproken oranjebruine volwassen gezichtstekening.",
+     "sources": [
+      "BZH_PATRIJS"
+     ],
+     "topic": "leeftijd"
+    }
+   ],
+   "voice": [
+    {
+     "text": "Het mannetje laat in de broedtijd een korte, raspend-mechanische roep horen.",
+     "sources": [
+      "VB_PATRIJS"
+     ],
+     "kind": "roep"
+    }
+   ],
+   "basis": {
+    "biometrics": [
+     {
+      "field": "length",
+      "unit": "cm",
+      "display": "ca. 29–30 cm",
+      "values": [
+       {
+        "source": "VB_PATRIJS",
+        "min": 29,
+        "max": 31
+       },
+       {
+        "source": "BZH_PATRIJS",
+        "min": 28,
+        "max": 30
+       }
+      ],
+      "note": "Afgeronde onder- en bovengrens op basis van de twee bronwaarden. Een bron met één maat telt als gelijke onder- en bovengrens."
+     }
+    ]
+   },
+   "habitat": [
+    {
+     "text": "Open agrarisch landschap met dekking, bijvoorbeeld kruidenrijke akkerranden, ruige grasstroken en hagen.",
+     "sources": [
+      "VB_PATRIJS",
+      "SOV_PATRIJS"
+     ],
+     "kind": "nederland"
+    }
+   ],
+   "status": [
+    {
+     "text": "Nederlandse standvogel. De broedpopulatie is sterk afgenomen.",
+     "sources": [
+      "VB_PATRIJS",
+      "SOV_PATRIJS"
+     ],
+     "kind": "voorkomen"
+    }
+   ],
+   "life": [
+    {
+     "text": "Volwassen vogels eten vooral plantaardig voedsel zoals zaden en bladeren. Kuikens zijn in hun eerste weken sterk afhankelijk van insecten.",
+     "sources": [
+      "VB_PATRIJS"
+     ],
+     "kind": "voedsel"
+    },
+    {
+     "text": "Nest op de grond in dichte vegetatie. De kuikens verlaten kort na het uitkomen het nest.",
+     "sources": [
+      "VB_PATRIJS"
+     ],
+     "kind": "broeden"
+    },
+    {
+     "text": "Blijft doorgaans in dezelfde omgeving. Buiten de broedtijd leven Patrijzen vaak in groepjes.",
+     "sources": [
+      "VB_PATRIJS",
+      "SOV_PATRIJS"
      ],
      "kind": "trek"
     }

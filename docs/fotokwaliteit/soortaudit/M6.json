@@ -1,15 +1,17 @@
 {
   "_meta": {
     "batch": "M6",
-    "phase": 1,
+    "phase": 2,
     "date": "2026-11-12",
-    "title": "K05 fase 1",
+    "title": "K05 fase 1 en 2",
     "reviewer": "ChatGPT Work",
     "phaseDates": {
-      "1": "2026-11-12"
+      "1": "2026-11-12",
+      "2": "2026-11-12"
     },
     "phaseReports": [
-      "../M6_FASE_1_2026-11-12.md"
+      "../M6_FASE_1_2026-11-12.md",
+      "../M6_FASE_2_2026-11-12.md"
     ]
   },
   "species": {
@@ -126,6 +128,153 @@
       "uncertain": [
         "Een als vrouwtje geannoteerde kandidaat toont oranje in de kruinstreep. Die foto is niet als vrouwtje opgenomen."
       ],
+      "date": "2026-11-12"
+    },
+    "sp069": {
+      "assets": {
+        "/assets/species/sp069.webp": {
+          "role": "Hoofdfoto (Mannetje)",
+          "content": "Gele Kwikstaart met blauwgrijze kop, lichte wenkbrauw en felgele onderzijde.",
+          "sexAge": "Nominaatvorm volgens de bron. De koptekening en gele onderzijde ondersteunen volwassen mannetje in broedkleed.",
+          "quality": "Hele vogel in zijaanzicht.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp069-adult_f.webp": {
+          "role": "Verenkleed (Vrouwtje)",
+          "content": "Vrouwtje Gele Kwikstaart op een lage verhoging. De bleke wenkbrauw, olijfbruine rug en gele onderzijde zijn zichtbaar.",
+          "sexAge": "De fotograaf annoteert de voorjaarswaarneming als Female. Olijfbruine bovendelen, gele onderzijde en bleke wenkbrauw zijn zichtbaar. Geen ondersoort toegekend.",
+          "quality": "De kop, gevouwen vleugel en onderzijde zijn zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp069-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Gele Kwikstaart in zijaanzicht op een steen, met bleke onderzijde, lichte vleugelstrepen en lange staart.",
+          "sexAge": "De fotograaf annoteert de research-grade waarneming als Juvenile. De bleke onderzijde en lichte vleugelstrepen zijn zichtbaar. Geslacht onbekend.",
+          "quality": "De hele vogel staat in beeld. Lichte vleugelstrepen en staartverhouding zijn zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp069-flight.webp": {
+          "role": "Overige herkenningsfoto",
+          "content": "Gele Kwikstaart bij het landen naast een paal, met de poten naar voren en de gele onderzijde zichtbaar.",
+          "sexAge": "Geslacht onbekend.",
+          "quality": "Poten naar voren bij de paal. Landingshouding zichtbaar.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Mannetjeslabel onderbouwd. Vrouwtje, juveniel en kennisprofiel toegevoegd. Vergelijking met Grote Gele Kwikstaart toont beide vogels."
+      ],
+      "missing": [
+        "Scherpe foto van één Gele Kwikstaart in vrije vlucht met bevestigde rechten."
+      ],
+      "wishes": [],
+      "sexPolicy": "Koptekening en felheid variëren tussen ondersoorten. Het vrouwtje heeft een bronannotatie op de waarneming.",
+      "uncertain": [],
+      "date": "2026-11-12"
+    },
+    "sp075": {
+      "assets": {
+        "/assets/species/plumage/sp075-hero-male.webp": {
+          "role": "Hoofdfoto (Mannetje)",
+          "content": "IJsvogel op een schuine tak, met donkere ondersnavel.",
+          "sexAge": "Fotograaf benoemt een mannetje.",
+          "quality": "Rustige achtergrond en goed zicht op snavel en lichaam.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp075-male-review.webp": {
+          "role": "Verenkleed (Mannetje)",
+          "content": "IJsvogel met donkere ondersnavel op een horizontale tak.",
+          "sexAge": "De bestandstitel benoemt een mannetje.",
+          "quality": "De snavel is in zijaanzicht goed zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp075-female-review.webp": {
+          "role": "Verenkleed (Vrouwtje)",
+          "content": "IJsvogel in zijaanzicht op een stronk, met oranje aan de basis van de ondersnavel.",
+          "sexAge": "Oranjerode snavelbasis bij een volwassen vogel ondersteunt het vrouwtjeslabel.",
+          "quality": "Snavelbasis en borst zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp075-juv-review.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge IJsvogel op een lichte tak met donker gerande borstveren.",
+          "sexAge": "Borsttekening ondersteunt juveniel. Geslacht onbekend.",
+          "quality": "Borst, poten en snavel zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp075-flight.webp": {
+          "role": "In vlucht",
+          "content": "IJsvogel in vrije vlucht met een prooi in de snavel.",
+          "sexAge": "Geslacht onbekend.",
+          "quality": "Lichaam, vleugels en snavel in profiel.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/showcase/sp075.webp": {
+          "role": "Overige herkenningsfoto",
+          "content": "IJsvogel op een tak met helderblauwe bovenzijde en oranje onderdelen.",
+          "sexAge": "Geslacht onbekend.",
+          "quality": "Het portret laat kleurverdeling en vorm zien.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Bestaande zes afzonderlijke foto-opnamen en rollen gecontroleerd. Kennisprofiel en beeldvergelijking met Bijeneter toegevoegd."
+      ],
+      "missing": [],
+      "wishes": [],
+      "sexPolicy": "Gebruik de ondersnavel voor geslachtsbepaling pas wanneer het volwassen kleed duidelijk is.",
+      "uncertain": [
+        "Vogelbescherming noemt 17–19,5 cm, Blasco-Zumeta & Heinze 15–17 cm. De getoonde ca. 16–18 cm volgt de vastgelegde methode met beide bronwaarden."
+      ],
+      "date": "2026-11-12"
+    },
+    "sp106": {
+      "assets": {
+        "/assets/species/plumage/sp106-hero-male.webp": {
+          "role": "Hoofdfoto (Mannetje)",
+          "content": "Mannetje Patrijs met oranjebruin gezicht, grijze borst en gebandeerde flanken in een grasrand.",
+          "sexAge": "De fotograaf benoemt een mannetje op de Commons-bestandspagina. Het oranjebruine gezicht, de grijze borst en lichte lengtestrepen op de schouderveren zijn zichtbaar.",
+          "quality": "Scherp portret met kop en schouderveren. De oude sneeuwfoto toont de volledige staart.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp106-adult_f.webp": {
+          "role": "Verenkleed (Vrouwtje)",
+          "content": "Vrouwtje Patrijs in zijaanzicht tussen gras, met gebandeerde flank en lichte lengte- en dwarstekening op de schouderveren.",
+          "sexAge": "De fotograaf annoteert de opname als Adult en Female. De schoudertekening ondersteunt het label. Het bronbestand is onder CC0 vrijgegeven.",
+          "quality": "Snavel, kop, flank en deel van de schouder zichtbaar. Gras bedekt een deel van de onderzijde.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp106-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Twee jonge Patrijzen op een stenig pad, met bruin gestreepte veren en een gestreepte kop zonder egaal oranjebruin gezicht.",
+          "sexAge": "De research-grade waarneming is geannoteerd als Juvenile en de fotograaf beschrijft een groep met twaalf jongen en twee volwassenen. De afgebeelde vogels tonen beide juveniele kop- en rugtekening. Geslacht onbekend.",
+          "quality": "Kop en gestreepte bovendelen van twee jonge vogels zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp106-flight.webp": {
+          "role": "In vlucht (voorlopig)",
+          "content": "Patrijs vliegt vrij boven een veld met een vleugel omlaag.",
+          "sexAge": "Geslacht onbekend.",
+          "quality": "Silhouet bruikbaar. De zachte foto van 450 px beperkt het veerdetail.",
+          "verdict": "voorwaardelijk"
+        },
+        "/assets/species/sp106.webp": {
+          "role": "Overige herkenningsfoto",
+          "content": "Patrijs in sneeuw, met grijze borst, oranjebruin gezicht en een korte staart.",
+          "sexAge": "Volwassen kleed. Geslacht onbekend.",
+          "quality": "Hele vogel in zijaanzicht.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Bronbenoemd mannetje als hoofdfoto. Vrouwtjesfoto, juvenielenfoto en kennisprofiel toegevoegd. Vergelijking met Fazantenhen herbeoordeeld."
+      ],
+      "missing": [
+        "Scherpere foto van één Patrijs in vrije vlucht met bevestigde rechten."
+      ],
+      "wishes": [],
+      "sexPolicy": "De buikvlek komt ook bij vrouwtjes voor. Gebruik bij volwassen vogels de schouderveren en de onderbouwing op de bronwaarneming.",
+      "uncertain": [],
       "date": "2026-11-12"
     }
   }
