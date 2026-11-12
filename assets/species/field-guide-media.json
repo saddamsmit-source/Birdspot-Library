@@ -3465,7 +3465,9 @@
         "sourceHeight": 2966,
         "sex": "female",
         "age": "adult",
-        "image": "/assets/species/plumage/sp019-female-ground.webp"
+        "image": "/assets/species/plumage/sp019-female-ground.webp",
+        "label": "Op de grond",
+        "note": "Foeragerend op gras. De geheel zwarte snorstreep past bij een vrouwtje; het mannetje heeft rood in die streep."
       },
       "juv": {
         "file": "Picus viridis (juvenile).jpg",
@@ -6144,31 +6146,6 @@
         "label": "Zijaanzicht",
         "note": "Klimmend aan een stam: let op de rode kruin, donkere oogtekening en groene bovendelen. De rode baardstreep bevestigt een mannetje.",
         "sex": "male"
-      },
-      {
-        "file": "European green woodpecker eating.jpg",
-        "nl": "Groene Specht",
-        "latin": "Picus viridis",
-        "author": "Remyymer",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-        "source": "https://commons.wikimedia.org/wiki/File:European_green_woodpecker_eating.jpg",
-        "alt": "Groene Specht — Vrouwtje op de grond, met zwarte snorstreep, rode kruin en groene rug.",
-        "modifications": "Resized to max 1600 px and converted to WebP; no crop",
-        "reviewed": "2026-11-06",
-        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/groene-specht",
-        "visualCheck": "Vrouwtje op de grond, met zwarte snorstreep, rode kruin en groene rug.",
-        "width": 1600,
-        "height": 1599,
-        "verification": "Soort en licentie gecontroleerd op Commons; foto visueel vergeleken met veldkenmerken.",
-        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/6/65/European_green_woodpecker_eating.jpg",
-        "sourceWidth": 2967,
-        "sourceHeight": 2966,
-        "sex": "female",
-        "age": "adult",
-        "image": "/assets/species/plumage/sp019-female-ground.webp",
-        "label": "Op de grond",
-        "note": "Foeragerend op gras. De geheel zwarte snorstreep past bij een vrouwtje; het mannetje heeft rood in die streep."
       },
       {
         "label": "Vrouwtje in vlucht",

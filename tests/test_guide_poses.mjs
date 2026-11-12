@@ -107,4 +107,30 @@ for (const bird of openQueue.openPhotoRoles) {
   assert.ok(bird.filledRoles.every(role => !bird.missingRoles.includes(role)),
     `Conflicting role: ${bird.id}`);
 }
+// Unique active sources — avoid the same underlying bird photo being registered twice
+// as a separate gallery/pose image. Explicit reuseGuidePhoto references have no image
+// and are permitted. This is NOT a perceptual/near-duplicate image audit.
+let uniqueSourceChecks = 0;
+for (const id of new Set([...Object.keys(registry.plumage), ...Object.keys(registry.poses)])) {
+  const entries = [
+    ...Object.values(registry.plumage[id] || {}),
+    ...(registry.poses[id] || []),
+  ].filter(photo => photo?.image);
+  const paths = new Set();
+  const sourceUrls = new Set();
+  for (const photo of entries) {
+    assert.ok(!paths.has(photo.image), `Photo registered twice for ${id}: ${photo.image}`);
+    paths.add(photo.image);
+    const src = photo.source?.trim().replace(/^http:/, 'https:').replace(/\\/$/, '');
+    if (src) {
+      assert.ok(!sourceUrls.has(src), `Photo source registered twice for ${id}: ${src}`);
+      sourceUrls.add(src);
+    }
+    uniqueSourceChecks++;
+  }
+}
+assert.equal(registry.plumage.sp019.adult_f.label, 'Op de grond');
+assert.ok(!registry.poses.sp019.some(photo => photo.image === registry.plumage.sp019.adult_f.image));
+console.log(`VERIFIED ${uniqueSourceChecks} registered gallery/pose images without exact source duplication`);
+
 console.log(`VERIFIED main photos, retained assets, licensed galleries and comparison order across ${picturedSpecies.size} photographed species`);
