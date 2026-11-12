@@ -55,7 +55,11 @@ for (const id of ['sp035', 'sp043', 'sp053', 'sp075', 'sp089', 'sp092']) {
 }
 assert.equal(GUIDE_PHOTOS.sp018.sex, 'male');
 assert.equal(GUIDE_PHOTOS.sp019.sex, 'male');
-assert.deepEqual(photosFor('sp018', 'adult_m'), ['/assets/showcase/sp018.webp']);
+assert.deepEqual(photosFor('sp018', 'adult_m'), ['/assets/species/plumage/sp018-hero-male.webp']);
+assert.equal(guideHeroPhoto('sp018').image, '/assets/showcase/sp018.webp');
+assert.equal(GUIDE_HEROES.sp018, GUIDE_PHOTOS.sp018.image);
+assert.equal(GUIDE_PHOTOS.sp018.sex, 'male');
+assert.ok(recognitionPanel(species.get('sp018')).includes('/assets/species/plumage/sp018-hero-male.webp'), 'Previously approved male portrait retained in adult_m gallery');
 assert.deepEqual(photosFor('sp019', 'adult_m'), ['/assets/species/sp019.webp']);
 assert.ok(photosFor('sp018', 'adult_f').length);
 assert.deepEqual(photosFor('sp018', 'juv'), ['/assets/species/plumage/sp018-juv-review.webp']);
@@ -133,4 +137,18 @@ assert.equal(registry.plumage.sp019.adult_f.label, 'Op de grond');
 assert.ok(!registry.poses.sp019.some(photo => photo.image === registry.plumage.sp019.adult_f.image));
 console.log(`VERIFIED ${uniqueSourceChecks} registered gallery/pose images without exact source duplication`);
 
+// K08 spechten: de foto's moeten unieke rollen houden; een nestholte-opvliegbeeld is niet automatisch een
+// vrije vluchtfoto, en een juveniel kopdetail is geen nieuw geslachtsbewijs.
+assert.equal(guideHeroPhoto('sp017').image, '/assets/species/sp017.webp');
+assert.equal(guidePlumageGroups(species.get('sp017')).find(g => g.key === 'adult_f')?.photos[0]?.image, '/assets/species/plumage/sp017-female.webp');
+assert.ok(!(GUIDE_POSES.sp017 || []).some(p => p.flight), 'Kleine Bonte Specht flight not independently verified');
+assert.ok(!GUIDE_PLUMAGE.sp017?.juv, 'No verified juvenile Lesser Spotted Woodpecker image yet');
+assert.equal(guideHeroPhoto('sp018').image, '/assets/showcase/sp018.webp');
+assert.equal(guideHeroPhoto('sp018').source, GUIDE_PHOTOS.sp018.source);
+assert.equal(GUIDE_POSES.sp018.filter(p => p.image === '/assets/species/plumage/sp018-hero-male.webp').length, 1, 'Original male photo is retained exactly once');
+assert.ok((GUIDE_POSES.sp018 || []).some(p => p.flight && p.image === '/assets/species/plumage/sp018-flight.webp'));
+const sp018Juvenile = (GUIDE_POSES.sp018 || []).filter(p => p.age === 'juvenile');
+assert.equal(sp018Juvenile.length, 1);
+assert.ok(sp018Juvenile[0].label.includes('kopdetail'), 'Juvenile photo is only head detail');
+console.log('K08 sp017/sp018: photo roles and evidence limits retained');
 console.log(`VERIFIED main photos, retained assets, licensed galleries and comparison order across ${picturedSpecies.size} photographed species`);
