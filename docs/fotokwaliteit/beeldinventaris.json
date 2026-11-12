@@ -4429,6 +4429,66 @@
    "airborne": false,
    "source": "beeldinspectie 12-11-2026",
    "note": "Braamsluiper met lichte keel, grijze kop en donkerdere wang op een hek."
+  },
+  "/assets/species/plumage/sp069-adult_f.webp": {
+   "refs": [
+    "sp069 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "5fc7ffbd04905de233c9d5aeb6f2772c0476dcaf",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Vrouwtje Gele Kwikstaart op een lage verhoging. De bleke wenkbrauw, olijfbruine rug en gele onderzijde zijn zichtbaar."
+  },
+  "/assets/species/plumage/sp069-juv.webp": {
+   "refs": [
+    "sp069 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "df2d78107a7d61acab25c4665212e0dbedf0df24",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Gele Kwikstaart in zijaanzicht op een steen, met bleke onderzijde, lichte vleugelstrepen en lange staart."
+  },
+  "/assets/species/plumage/sp106-hero-male.webp": {
+   "refs": [
+    "sp106 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "10b975366cb28d031f4d566ddc0da9a71500f9f8",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Mannetje Patrijs met oranjebruin gezicht, grijze borst en gebandeerde flanken in een grasrand."
+  },
+  "/assets/species/plumage/sp106-adult_f.webp": {
+   "refs": [
+    "sp106 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "869c49048bfa1ed4f5282667852990edd070b4c7",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Vrouwtje Patrijs in zijaanzicht tussen gras, met gebandeerde flank en lichte lengte- en dwarstekening op de schouderveren."
+  },
+  "/assets/species/plumage/sp106-juv.webp": {
+   "refs": [
+    "sp106 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "a9feb5b1bcd4996024a10f2ba0d48476411cb2eb",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Twee jonge Patrijzen op een stenig pad, met bruin gestreepte veren en een gestreepte kop zonder egaal oranjebruin gezicht."
+  },
+  "/assets/species/sp257.webp": {
+   "refs": [
+    "sp257 GUIDE_PHOTOS"
+   ],
+   "sha1": "85b3029d8d93627c4c8cb4b463f61c4bc59ed631",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Bijeneter op een tak met gele keel, blauwgroene onderzijde en licht gebogen snavel."
   }
  }
 }

@@ -199,7 +199,8 @@ def main():
                 page.locator('.sd-tabs').wait_for(timeout=8000)
 
             for name, sid in [("Holenduif", "sp003"), ("Sperwer", "sp006"), ("Buizerd", "sp005"), ("Zilvermeeuw", "sp094"),
-                              ("Havik", "sp007"), ("Wespendief", "sp248"), ("Taigaboomkruiper", "sp067"), ("Ruigpootbuizerd", "sp253")]:
+                              ("Havik", "sp007"), ("Wespendief", "sp248"), ("Taigaboomkruiper", "sp067"), ("Ruigpootbuizerd", "sp253"),
+                              ("Gele Kwikstaart", "sp069"), ("IJsvogel", "sp075"), ("Patrijs", "sp106")]:
                 similar_section(p, name, sid, "390")
                 open_card(p, name, sid)
                 sec = p.locator('#sdPanel-herkenning section.sd-similar')

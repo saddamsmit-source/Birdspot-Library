@@ -782,7 +782,7 @@ export const GUIDE_COMPARISONS = [
     label: 'Grote Gele Kwikstaart en Gele Kwikstaart · volwassen',
     birds: [
       {id: 'sp288', source: 'grote-gele-kwikstaart', plumage: 'adult_m', marks: 'Grijze mantel, opvallend lange staart en bruinroze poten. Vaak aan stromend water.'},
-      {id: 'sp069', source: 'gele-kwikstaart', plumage: 'adult_m', textOnly: true, marks: 'Doorgaans olijfgroene mantel en donkere poten. Vaak op akkers of in open grasland.'},
+      {id: 'sp069', source: 'gele-kwikstaart', plumage: 'adult_m', marks: 'Doorgaans olijfgroene mantel en donkere poten. Vaak op akkers of in open grasland.'},
     ],
     tip: 'Let op mantel, poten en staartverhouding. Gebruik de omgeving als extra aanwijzing.',
   },
@@ -1110,6 +1110,14 @@ export const GUIDE_COMPARISONS = [
       {id: 'sp062', source: 'braamsluiper', marks: 'Doorgaans grijzere vleugels en een donkerder wang. De zang eindigt vaak in een ratel.'},
     ],
     tip: 'Beide soorten hebben een lichte keel. Vergelijk de gevouwen vleugel en luister naar meerdere strofen.',
+  },
+  {
+    label: 'IJsvogel en Bijeneter · keel en snavel',
+    birds: [
+      {id: 'sp075', source: 'ijsvogel', marks: 'Witte keel, roestoranje onderzijde, rechte snavel en korte staart.'},
+      {id: 'sp257', source: 'bijeneter', marks: 'Gele keel, blauwgroene onderzijde, licht gebogen snavel en langere staart.'},
+    ],
+    tip: 'Bekijk de keelkleur en snavelvorm. In tegenlicht helpt vooral de verhouding tussen staart en lichaam.',
   },
 ];
 
