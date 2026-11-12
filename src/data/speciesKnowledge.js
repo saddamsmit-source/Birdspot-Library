@@ -1730,6 +1730,127 @@ const DATA = {
    "checked": "2026-11-11",
    "certainty": "hoog",
    "publisher": "Royal Society for the Protection of Birds"
+  },
+  "VB_ROODBORST": {
+   "register": "NL07",
+   "label": "Vogelbescherming — Roodborst",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/roodborst",
+   "edition": "Online bron",
+   "scope": "Nederland",
+   "confirms": "Volwassen en juveniel kleed, zang en roep, lengte, Nederlands voorkomen en habitat",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "VB_WINTERKONING": {
+   "register": "NL07",
+   "label": "Vogelbescherming — Winterkoning",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/winterkoning",
+   "edition": "Online bron",
+   "scope": "Nederland",
+   "confirms": "Bouw, staart, zang, lengte, Nederlands voorkomen en habitat",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "VB_SCHOLEKSTER": {
+   "register": "NL07",
+   "label": "Vogelbescherming — Scholekster",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/scholekster",
+   "edition": "Online bron",
+   "scope": "Nederland",
+   "confirms": "Veld- en vluchtkenmerken, roep, maten, Nederlands voorkomen en habitat",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "VB_HEGGENMUS": {
+   "register": "NL07",
+   "label": "Vogelbescherming — Heggenmus",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/heggenmus",
+   "edition": "Online bron",
+   "scope": "Nederland",
+   "confirms": "Kop, borst en rug",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "VB_BOOMKRUIPER": {
+   "register": "NL07",
+   "label": "Vogelbescherming — Boomkruiper",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/boomkruiper",
+   "edition": "Online bron",
+   "scope": "Nederland",
+   "confirms": "Snavel, klimhouding en kleed",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "VB_KLUUT": {
+   "register": "NL07",
+   "label": "Vogelbescherming — Kluut",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kluut",
+   "edition": "Online bron",
+   "scope": "Nederland",
+   "confirms": "Snavel, poten, kleed en gedrag",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "BZH_ROODBORST": {
+   "register": "BIO05",
+   "label": "Blasco-Zumeta & Heinze — Robin",
+   "url": "https://blascozumeta.wimbitek.com/specie_files/10990_ENG_Erithacus_rubecula_aranzadi.pdf",
+   "edition": "Online bron",
+   "scope": "Iberisch referentiemateriaal",
+   "confirms": "Lengte, leeftijd en gelijkend kleed van beide geslachten",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Blasco-Zumeta & Heinze"
+  },
+  "BZH_WINTERKONING": {
+   "register": "BIO05",
+   "label": "Blasco-Zumeta & Heinze — Wren",
+   "url": "https://www.blascozumeta.com/specie_files/10660_ENG_Troglodytes_troglodytes_aranzadi.pdf",
+   "edition": "Online bron",
+   "scope": "Iberisch referentiemateriaal",
+   "confirms": "Lengte, juveniele vleugeltekening en gelijkend kleed van beide geslachten",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Blasco-Zumeta & Heinze"
+  },
+  "BTO_SCHOLEKSTER": {
+   "register": "L13",
+   "label": "BTO BirdFacts — Oystercatcher",
+   "url": "https://www.bto.org/learn/about-birds/birdfacts/oystercatcher",
+   "edition": "Online bron",
+   "scope": "Verenigd Koninkrijk",
+   "confirms": "Soortbiologie en Britse referentiewaarden",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "British Trust for Ornithology"
+  },
+  "ARDEA_SCHOLEKSTER_SEX": {
+   "register": "nieuw",
+   "label": "Zwarts e.a. — Discriminating the sex of Oystercatchers",
+   "url": "https://research.rug.nl/en/publications/discriminating-the-sex-of-oystercatchers-ihaematopus-ostralegusi/",
+   "edition": "1996, Ardea 84A, 1–12",
+   "scope": "Onderzoekspopulaties",
+   "confirms": "Geslachtsbepaling vereist biometrie en gaat verder dan een losse veldfoto",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Ardea"
+  },
+  "RSPB_SCHOLEKSTER": {
+   "register": "nieuw",
+   "label": "RSPB — Oystercatcher",
+   "url": "https://www.rspb.org.uk/birds-and-wildlife/oystercatcher/",
+   "edition": "Online bron",
+   "scope": "Verenigd Koninkrijk",
+   "confirms": "Lengte, bouw, kleed en veldkenmerken",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "RSPB"
   }
  },
  "profiles": {
@@ -10583,6 +10704,445 @@ const DATA = {
     }
    ],
    "discrepancies": [],
+   "open": []
+  },
+  "sp050": {
+   "summary": {
+    "text": "Kleine vogel met oranjerood gezicht en borst, een bruine rug en een lichte onderbuik.",
+    "sources": [
+     "VB_ROODBORST",
+     "BZH_ROODBORST"
+    ]
+   },
+   "keyMarks": [
+    {
+     "text": "Bij volwassen vogels loopt het oranjerood van het gezicht door tot over de borst.",
+     "sources": [
+      "VB_ROODBORST",
+      "BZH_ROODBORST"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Een juveniel is bruin met lichte vlekjes en mist de oranjerode borst van de volwassen vogel.",
+     "sources": [
+      "VB_ROODBORST",
+      "BZH_ROODBORST"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "De onderbuik is licht en de rug overwegend bruin.",
+     "sources": [
+      "VB_ROODBORST",
+      "BZH_ROODBORST"
+     ],
+     "reliability": "ondersteunend"
+    }
+   ],
+   "caution": {
+    "text": "Een pas uitgevlogen Roodborst mist de opvallende oranje borst. Kijk bij jonge vogels ook naar de lichte vlekken.",
+    "sources": [
+     "VB_ROODBORST",
+     "BZH_ROODBORST"
+    ]
+   },
+   "critical": [
+    {
+     "feature": "Borst en rug",
+     "where": "Voor- of zijaanzicht",
+     "this": "Oranjerood gezicht en borst bij volwassen Roodborst.",
+     "other": "Blauwgrijze kop en borst, met een bruin gestreepte rug.",
+     "vs": [
+      "sp054"
+     ],
+     "reliability": "ondersteunend",
+     "conditions": "Vergelijk volwassen vogels bij goed licht.",
+     "exceptions": "Het juveniele kleed van de Roodborst heeft nog geen oranje borst.",
+     "supporting": "Een zijaanzicht laat ook de tekening op de rug zien.",
+     "sources": [
+      "VB_ROODBORST",
+      "BZH_ROODBORST",
+      "VB_HEGGENMUS"
+     ]
+    }
+   ],
+   "similar": [
+    {
+     "id": "sp054",
+     "why": "Beide zoeken vaak laag bij begroeiing. Bij volwassen vogels helpt de kleur van kop en borst.",
+     "sources": [
+      "VB_ROODBORST",
+      "VB_HEGGENMUS"
+     ]
+    }
+   ],
+   "detail": [
+    {
+     "text": "Mannetje en vrouwtje hebben hetzelfde zichtbare kleed. Laat het geslacht bij een losse veldfoto open.",
+     "sources": [
+      "VB_ROODBORST",
+      "BZH_ROODBORST"
+     ],
+     "topic": "geslacht"
+    }
+   ],
+   "voice": [
+    {
+     "text": "Heldere, snel wisselende fluittonen in korte strofen.",
+     "sources": [
+      "VB_ROODBORST"
+     ],
+     "kind": "zang"
+    },
+    {
+     "text": "Kort, tikkend contactgeluid.",
+     "sources": [
+      "VB_ROODBORST"
+     ],
+     "kind": "roep"
+    }
+   ],
+   "basis": {
+    "biometrics": [
+     {
+      "field": "length",
+      "unit": "cm",
+      "display": "ca. 13–14 cm",
+      "values": [
+       {
+        "source": "VB_ROODBORST",
+        "min": 12.5,
+        "max": 14
+       },
+       {
+        "source": "BZH_ROODBORST",
+        "min": 13,
+        "max": 14
+       }
+      ],
+      "note": "De Nederlandse bron geeft 12,5–14 cm. De app rondt het gecombineerde formaat af."
+     }
+    ]
+   },
+   "habitat": [
+    {
+     "text": "Bossen met ondergroei, parken en tuinen.",
+     "sources": [
+      "VB_ROODBORST"
+     ],
+     "kind": "nederland"
+    }
+   ],
+   "status": [
+    {
+     "text": "Nederlandse broedvogel en wintergast. Ook vogels uit noordelijker streken overwinteren hier.",
+     "sources": [
+      "VB_ROODBORST"
+     ],
+     "kind": "voorkomen"
+    }
+   ],
+   "life": [
+    {
+     "text": "Foerageert vaak op de grond en eet vooral kleine ongewervelden.",
+     "sources": [
+      "VB_ROODBORST"
+     ],
+     "kind": "voedsel"
+    }
+   ],
+   "discrepancies": [],
+   "open": []
+  },
+  "sp055": {
+   "summary": {
+    "text": "Zeer kleine bruine vogel met een korte, vaak opgerichte staart en een lichte wenkbrauw.",
+    "sources": [
+     "VB_WINTERKONING",
+     "BZH_WINTERKONING"
+    ]
+   },
+   "keyMarks": [
+    {
+     "text": "Korte staart en compacte, ronde bouw.",
+     "sources": [
+      "VB_WINTERKONING",
+      "BZH_WINTERKONING"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Fijne lichte wenkbrauw en een spitse snavel.",
+     "sources": [
+      "VB_WINTERKONING",
+      "BZH_WINTERKONING"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "De bruine vleugels en staart tonen een fijne dwarsstreping.",
+     "sources": [
+      "BZH_WINTERKONING"
+     ],
+     "reliability": "ondersteunend"
+    }
+   ],
+   "caution": {
+    "text": "Jonge vogels lijken sterk op volwassen vogels. Leeftijd vraagt een goed zichtbaar kleed of aanvullende broninformatie.",
+    "sources": [
+     "BZH_WINTERKONING"
+    ]
+   },
+   "critical": [
+    {
+     "feature": "Staart en houding",
+     "where": "Zijaanzicht bij struiken of op een stam",
+     "this": "Korte staart die vaak omhoog wijst.",
+     "other": "Langere staart als steun tegen de stam, met omlaaggebogen snavel.",
+     "vs": [
+      "sp066"
+     ],
+     "reliability": "ondersteunend",
+     "conditions": "Bekijk de hele vogel en de houding.",
+     "exceptions": "Een Winterkoning houdt zijn staart soms omlaag.",
+     "supporting": "Een Boomkruiper zoekt vaak voedsel terwijl hij langs een stam omhoog klimt.",
+     "sources": [
+      "VB_WINTERKONING",
+      "BZH_WINTERKONING",
+      "VB_BOOMKRUIPER"
+     ]
+    }
+   ],
+   "similar": [
+    {
+     "id": "sp066",
+     "why": "Beide zijn klein en bruin. Snavel, staart en houding geven het verschil.",
+     "sources": [
+      "VB_WINTERKONING",
+      "VB_BOOMKRUIPER"
+     ]
+    }
+   ],
+   "detail": [
+    {
+     "text": "Mannetje en vrouwtje hebben hetzelfde zichtbare kleed.",
+     "sources": [
+      "BZH_WINTERKONING"
+     ],
+     "topic": "geslacht"
+    },
+    {
+     "text": "Bij een juveniel kunnen dekveren minder contrastrijk zijn. Een gewone veldfoto laat die details niet altijd zien.",
+     "sources": [
+      "BZH_WINTERKONING"
+     ],
+     "topic": "leeftijd"
+    }
+   ],
+   "voice": [
+    {
+     "text": "Luide zang met heldere tonen en snelle trillers.",
+     "sources": [
+      "VB_WINTERKONING"
+     ],
+     "kind": "zang"
+    }
+   ],
+   "basis": {
+    "biometrics": [
+     {
+      "field": "length",
+      "unit": "cm",
+      "display": "ca. 9–10 cm",
+      "values": [
+       {
+        "source": "VB_WINTERKONING",
+        "min": 9,
+        "max": 10.5
+       },
+       {
+        "source": "BZH_WINTERKONING",
+        "min": 9,
+        "max": 10
+       }
+      ],
+      "note": "De Nederlandse bron geeft 9–10,5 cm. De app rondt het gecombineerde formaat af."
+     }
+    ]
+   },
+   "habitat": [
+    {
+     "text": "Begroeide plekken met dekking, zoals struweel, tuinen en bosondergroei.",
+     "sources": [
+      "VB_WINTERKONING"
+     ],
+     "kind": "nederland"
+    }
+   ],
+   "status": [
+    {
+     "text": "Algemene Nederlandse broedvogel die het hele jaar te zien is.",
+     "sources": [
+      "VB_WINTERKONING"
+     ],
+     "kind": "voorkomen"
+    }
+   ],
+   "life": [
+    {
+     "text": "Zoekt insecten en andere kleine ongewervelden in dichte begroeiing.",
+     "sources": [
+      "VB_WINTERKONING"
+     ],
+     "kind": "voedsel"
+    }
+   ],
+   "discrepancies": [],
+   "open": []
+  },
+  "sp098": {
+   "summary": {
+    "text": "Stevig gebouwde zwart-witte steltloper met lange oranjerode snavel en roze poten.",
+    "sources": [
+     "VB_SCHOLEKSTER"
+    ]
+   },
+   "keyMarks": [
+    {
+     "text": "Bij volwassen vogels zijn kop en borst donker en onderzijde wit.",
+     "sources": [
+      "VB_SCHOLEKSTER"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "In vlucht vallen de witte vleugelstrepen en de zwart-witte staart op.",
+     "sources": [
+      "VB_SCHOLEKSTER"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Volwassen vogels hebben een lange oranjerode snavel en roze poten.",
+     "sources": [
+      "VB_SCHOLEKSTER"
+     ],
+     "reliability": "ondersteunend"
+    }
+   ],
+   "caution": {
+    "text": "Vermeld het geslacht op een losse veldfoto alleen met expliciet bewijs. Betrouwbare geslachtsbepaling gebruikt onder meer snavelmaten en snavelvorm.",
+    "sources": [
+     "ARDEA_SCHOLEKSTER_SEX"
+    ]
+   },
+   "critical": [
+    {
+     "feature": "Snavelvorm en poten",
+     "where": "Goed zijaanzicht",
+     "this": "Lange, rechte oranjerode snavel en kortere roze poten.",
+     "other": "Fijne zwarte, omhooggebogen snavel en lange blauwgrijze poten.",
+     "vs": [
+      "sp143"
+     ],
+     "reliability": "ondersteunend",
+     "conditions": "De snavelvorm moet goed zichtbaar zijn.",
+     "exceptions": "Tegenlicht kan snavel- en pootkleuren verbergen.",
+     "supporting": "Bij een vliegende Kluut kunnen de lange poten achter de staart uitsteken.",
+     "sources": [
+      "VB_SCHOLEKSTER",
+      "VB_KLUUT"
+     ]
+    }
+   ],
+   "similar": [
+    {
+     "id": "sp143",
+     "why": "Beide zijn zwart-witte steltlopers. Vergelijk snavelvorm, vleugeltekening en pootlengte.",
+     "sources": [
+      "VB_SCHOLEKSTER",
+      "VB_KLUUT"
+     ]
+    }
+   ],
+   "detail": [
+    {
+     "text": "Een lichte keelband komt ook bij volwassen vogels in winterkleed voor. Gebruik die band niet als zelfstandig leeftijdskenmerk.",
+     "sources": [
+      "VB_SCHOLEKSTER"
+     ],
+     "topic": "leeftijd"
+    }
+   ],
+   "voice": [
+    {
+     "text": "Hoge, ver dragende piepende roep, ook tijdens vlucht.",
+     "sources": [
+      "VB_SCHOLEKSTER"
+     ],
+     "kind": "roep"
+    }
+   ],
+   "basis": {
+    "biometrics": [
+     {
+      "field": "length",
+      "unit": "cm",
+      "display": "ca. 40–45 cm",
+      "values": [
+       {
+        "source": "VB_SCHOLEKSTER",
+        "min": 39,
+        "max": 44
+       },
+       {
+        "source": "RSPB_SCHOLEKSTER",
+        "min": 40,
+        "max": 45
+       }
+      ],
+      "note": "Nederlandse en Britse bereiken staan in de bronwaarden."
+     }
+    ]
+   },
+   "habitat": [
+    {
+     "text": "Kusten en getijdengebieden. Broedt ook landinwaarts, onder meer in open agrarisch gebied.",
+     "sources": [
+      "VB_SCHOLEKSTER"
+     ],
+     "kind": "nederland"
+    }
+   ],
+   "status": [
+    {
+     "text": "In Nederland broedvogel en wintergast.",
+     "sources": [
+      "VB_SCHOLEKSTER"
+     ],
+     "kind": "voorkomen"
+    }
+   ],
+   "life": [
+    {
+     "text": "Aan de kust onder meer schelpdieren en wormen, landinwaarts onder meer regenwormen.",
+     "sources": [
+      "VB_SCHOLEKSTER"
+     ],
+     "kind": "voedsel"
+    }
+   ],
+   "discrepancies": [
+    {
+     "field": "spanwijdte",
+     "app": "80–86 cm",
+     "source": "Vogelbescherming geeft 72–83 cm. Eén passende bronband bevestigd. De appwaarde blijft staan in afwachting van een tweede onafhankelijke en vergelijkbare bronband.",
+     "sources": [
+      "VB_SCHOLEKSTER"
+     ]
+    }
+   ],
    "open": []
   }
  }

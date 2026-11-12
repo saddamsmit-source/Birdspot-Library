@@ -1,14 +1,19 @@
 {
   "_meta": {
     "batch": "M5",
-    "phase": 1,
+    "phase": 2,
     "date": "2026-11-11",
-    "title": "K04 fase 1 — Vink, Groenling en Putter",
+    "title": "K04 fases 1 en 2",
     "reviewer": "ChatGPT (Codex), beeldinspectie en primaire broncontrole. Onafhankelijke review open.",
     "basis": "M4 fase 4 op 3fbfc7a, K04-batchplan en Birdspot-kwaliteitsnorm",
     "phaseReports": [
-      "../M5_FASE_1_2026-11-11.md"
-    ]
+      "../M5_FASE_1_2026-11-11.md",
+      "../M5_FASE_2_2026-11-12.md"
+    ],
+    "phaseDates": {
+      "1": "2026-11-11",
+      "2": "2026-11-12"
+    }
   },
   "species": {
     "sp035": {
@@ -145,6 +150,104 @@
       ],
       "sexPolicy": "Geslachtslabels volgen de fotobron. Maskeromvang overlapt en is op zichzelf geen zekere bepaling.",
       "uncertain": []
+    },
+    "sp050": {
+      "assets": {
+        "/assets/species/sp050.webp": {
+          "role": "Hoofdfoto",
+          "content": "Volwassen Roodborst op een tak, met oranje gezicht en borst.",
+          "sexAge": "Volwassen kleed, geslacht onbekend.",
+          "quality": "Vogel volledig in beeld.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp050-juv-review.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Roodborst met licht gespikkeld bruin kleed, op het gras.",
+          "sexAge": "Originele fototitel vermeldt juveniel.",
+          "quality": "Volledig zijaanzicht.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp050-flight.webp": {
+          "role": "Overige herkenningsfoto",
+          "content": "Opvliegende Roodborst tussen besneeuwde takken.",
+          "sexAge": "Volwassen kleed, geslacht onbekend.",
+          "quality": "Gespreide vleugel zichtbaar. Takken beperken het zicht op de vlieghouding.",
+          "verdict": "uit-rol"
+        }
+      },
+      "corrections": [
+        "Kennisprofiel en vergelijking met Heggenmus toegevoegd. Bestaande opvliegfoto blijft bij Overige."
+      ],
+      "missing": [
+        "Voldoende scherpe en gelicentieerde foto in vrije vlucht."
+      ],
+      "wishes": [],
+      "sexPolicy": "Mannetje en vrouwtje hebben hetzelfde zichtbare kleed. Gebruik een neutraal label.",
+      "uncertain": [],
+      "date": "2026-11-12"
+    },
+    "sp055": {
+      "assets": {
+        "/assets/species/sp055.webp": {
+          "role": "Hoofdfoto",
+          "content": "Bruine Winterkoning op hout, met korte opgerichte staart en lichte wenkbrauw.",
+          "sexAge": "Volwassen type, geslacht onbekend.",
+          "quality": "Duidelijk zijaanzicht.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp055-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Winterkoning in een boomholte, met een compacte bruine bouw en lichte wenkbrauw.",
+          "sexAge": "De fotograaf benoemt een juveniel in de originele bestandsnaam. Het kleed alleen geeft bij deze soort beperkte zekerheid over de leeftijd.",
+          "quality": "Uitsnede vergroot de vogel. Licht en kijkhoek beperken zicht op de dekveren.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Geverifieerde juvenielenfoto, kennisprofiel en vergelijking met Boomkruiper toegevoegd."
+      ],
+      "missing": [
+        "Voldoende scherpe en gelicentieerde foto in vrije vlucht."
+      ],
+      "wishes": [],
+      "sexPolicy": "Mannetje en vrouwtje hebben hetzelfde zichtbare kleed. Gebruik een neutraal label.",
+      "uncertain": [],
+      "date": "2026-11-12"
+    },
+    "sp098": {
+      "assets": {
+        "/assets/species/sp098.webp": {
+          "role": "Hoofdfoto",
+          "content": "Volwassen Scholekster aan de waterkant met lange rode snavel en roze poten.",
+          "sexAge": "Volwassen kleed. Geslacht niet vastgesteld.",
+          "quality": "Duidelijk zijaanzicht.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp098-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Scholekster in zijaanzicht. Donkerbruine bovendelen, witte buik en oranjerode snavel met donkere punt.",
+          "sexAge": "De fotograaf benoemt een juveniel. De bruine bovendelen, bleke veerranden en donkere snavelpunt zijn zichtbaar. Geslacht onbekend.",
+          "quality": "Volledige vogel in zijaanzicht.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp098-flight.webp": {
+          "role": "In vlucht",
+          "content": "Scholekster vrij boven water met gespreide vleugels.",
+          "sexAge": "Geslacht niet vastgesteld.",
+          "quality": "Snavel, vleugels en witte buik goed zichtbaar.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Juvenielenfoto, kennisprofiel en vergelijking met Kluut toegevoegd. Bestaand vluchtbeeld herbeoordeeld."
+      ],
+      "missing": [],
+      "wishes": [],
+      "sexPolicy": "Neutrale labels bij veldfoto’s. Onderzoek gebruikt onder meer gemeten snavelkenmerken.",
+      "uncertain": [
+        "Spanwijdte verschilt tussen de eerdere gidswaarde en de Nederlandse soortgids. Zie kennisprofiel."
+      ],
+      "date": "2026-11-12"
     }
   }
 }

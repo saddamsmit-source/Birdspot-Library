@@ -19,7 +19,7 @@ export function loadBatches(dir = resolve(ROOT, 'docs/fotokwaliteit/soortaudit')
   const out = {};
   for (const f of readdirSync(dir).filter(f => /^M\d+\.json$/.test(f)).sort()) {
     const b = JSON.parse(readFileSync(resolve(dir, f), 'utf8'));
-    for (const [id, s] of Object.entries(b.species)) out[id] = { ...s, batch: b._meta.batch, date: b._meta.date };
+    for (const [id, s] of Object.entries(b.species)) out[id] = { ...s, batch: b._meta.batch, date: s.date ?? b._meta.date };
   }
   return out;
 }
