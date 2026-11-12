@@ -1,6 +1,6 @@
 {
- "sha": "181688362b2b385e47939e8761586d0288259ede",
- "generated": "2026-11-11",
+ "sha": "8b318dccec0cb8b84a63d9c622cd7ee4eec19bd5",
+ "generated": "2026-11-12",
  "species": [
   {
    "id": "sp002",
@@ -3322,9 +3322,103 @@
    "id": "sp050",
    "nameNL": "Roodborst",
    "family": "Vliegenvangers",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M5",
+   "date": "2026-11-12",
+   "sha": "8b318dccec0cb8b84a63d9c622cd7ee4eec19bd5",
+   "assets": [
+    {
+     "image": "/assets/species/sp050.webp",
+     "role": "Hoofdfoto",
+     "content": "Volwassen Roodborst op een tak, met oranje gezicht en borst.",
+     "sexAge": "Volwassen kleed, geslacht onbekend.",
+     "quality": "Vogel volledig in beeld.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp050-juv-review.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge Roodborst met licht gespikkeld bruin kleed, op het gras.",
+     "sexAge": "Originele fototitel vermeldt juveniel.",
+     "quality": "Volledig zijaanzicht.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · caroline legg",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp050-flight.webp",
+     "role": "Overige herkenningsfoto",
+     "content": "Opvliegende Roodborst tussen besneeuwde takken.",
+     "sexAge": "Volwassen kleed, geslacht onbekend.",
+     "quality": "Gespreide vleugel zichtbaar. Takken beperken het zicht op de vlieghouding.",
+     "verdict": "uit-rol",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Joe Dyer from Buckhurst Hill, England",
+      "annotations": []
+     },
+     "flight": {
+      "n": 136,
+      "id": "sp050",
+      "nameNL": "Roodborst",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "opvliegen",
+      "quality": "goed",
+      "decision": "uit-rol",
+      "target": "overig",
+      "newLabel": "Opvliegend in besneeuwde struik",
+      "newNote": "Oranje borst en vleugelpennen zichtbaar.",
+      "reason": "Tussen besneeuwde takken; niet vrij in de lucht.",
+      "airborne": false,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 2.0"
+     }
+    }
+   ],
+   "corrections": [
+    "Kennisprofiel en vergelijking met Heggenmus toegevoegd. Bestaande opvliegfoto blijft bij Overige."
+   ],
+   "missing": [
+    "Voldoende scherpe en gelicentieerde foto in vrije vlucht."
+   ],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "Mannetje en vrouwtje hebben hetzelfde zichtbare kleed. Gebruik een neutraal label.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": false,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Borst en rug"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
   },
   {
    "id": "sp051",
@@ -3407,9 +3501,75 @@
    "id": "sp055",
    "nameNL": "Winterkoning",
    "family": "Winterkoningen",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M5",
+   "date": "2026-11-12",
+   "sha": "8b318dccec0cb8b84a63d9c622cd7ee4eec19bd5",
+   "assets": [
+    {
+     "image": "/assets/species/sp055.webp",
+     "role": "Hoofdfoto",
+     "content": "Bruine Winterkoning op hout, met korte opgerichte staart en lichte wenkbrauw.",
+     "sexAge": "Volwassen type, geslacht onbekend.",
+     "quality": "Duidelijk zijaanzicht.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp055-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge Winterkoning in een boomholte, met een compacte bruine bouw en lichte wenkbrauw.",
+     "sexAge": "De fotograaf benoemt een juveniel in de originele bestandsnaam. Het kleed alleen geeft bij deze soort beperkte zekerheid over de leeftijd.",
+     "quality": "Uitsnede vergroot de vogel. Licht en kijkhoek beperken zicht op de dekveren.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-12: zelfde opname (Uitgesneden rond de vogel, verkleind tot max. 1400 px en omgezet naar WebP zonder EXIF/GPS/XMP), CC BY 4.0 · caroline legg",
+      "annotations": [
+       "De fotograaf benoemt een juveniel in de originele bestandsnaam. Het kleed alleen geeft bij deze soort beperkte zekerheid over de leeftijd."
+      ]
+     },
+     "flight": null
+    }
+   ],
+   "corrections": [
+    "Geverifieerde juvenielenfoto, kennisprofiel en vergelijking met Boomkruiper toegevoegd."
+   ],
+   "missing": [
+    "Voldoende scherpe en gelicentieerde foto in vrije vlucht."
+   ],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "Mannetje en vrouwtje hebben hetzelfde zichtbare kleed. Gebruik een neutraal label.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": false,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Staart en houding"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
   },
   {
    "id": "sp056",
@@ -5617,9 +5777,105 @@
    "id": "sp098",
    "nameNL": "Scholekster",
    "family": "Scholeksters",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M5",
+   "date": "2026-11-12",
+   "sha": "8b318dccec0cb8b84a63d9c622cd7ee4eec19bd5",
+   "assets": [
+    {
+     "image": "/assets/species/sp098.webp",
+     "role": "Hoofdfoto",
+     "content": "Volwassen Scholekster aan de waterkant met lange rode snavel en roze poten.",
+     "sexAge": "Volwassen kleed. Geslacht niet vastgesteld.",
+     "quality": "Duidelijk zijaanzicht.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC0 · Hobbyfotowiki",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp098-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge Scholekster in zijaanzicht. Donkerbruine bovendelen, witte buik en oranjerode snavel met donkere punt.",
+     "sexAge": "De fotograaf benoemt een juveniel. De bruine bovendelen, bleke veerranden en donkere snavelpunt zijn zichtbaar. Geslacht onbekend.",
+     "quality": "Volledige vogel in zijaanzicht.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-12: zelfde opname (Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY 2.0 · Andrey Gulivanov",
+      "annotations": [
+       "De fotograaf benoemt een juveniel. De bruine bovendelen, bleke veerranden en donkere snavelpunt zijn zichtbaar. Geslacht onbekend."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp098-flight.webp",
+     "role": "In vlucht",
+     "content": "Scholekster vrij boven water met gespreide vleugels.",
+     "sexAge": "Geslacht niet vastgesteld.",
+     "quality": "Snavel, vleugels en witte buik goed zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp",
+      "annotations": []
+     },
+     "flight": {
+      "n": 98,
+      "id": "sp098",
+      "nameNL": "Scholekster",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0"
+     }
+    }
+   ],
+   "corrections": [
+    "Juvenielenfoto, kennisprofiel en vergelijking met Kluut toegevoegd. Bestaand vluchtbeeld herbeoordeeld."
+   ],
+   "missing": [],
+   "wishes": [],
+   "uncertain": [
+    "Spanwijdte verschilt tussen de eerdere gidswaarde en de Nederlandse soortgids. Zie kennisprofiel."
+   ],
+   "sexPolicy": "Neutrale labels bij veldfoto’s. Onderzoek gebruikt onder meer gemeten snavelkenmerken.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Snavelvorm en poten"
+    ],
+    "open": [],
+    "discrepancies": 1
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp099",

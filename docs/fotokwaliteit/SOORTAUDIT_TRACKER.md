@@ -1,6 +1,6 @@
 # Birdspot — soortaudit van de collectie met foto's
 
-Gegenereerd door `tools/fotokwaliteit/build_soortaudit_tracker.py` · status voor commit `181688362b2b385e47939e8761586d0288259ede` · 2026-11-11.
+Gegenereerd door `tools/fotokwaliteit/build_soortaudit_tracker.py` · status voor commit `8b318dccec0cb8b84a63d9c622cd7ee4eec19bd5` · 2026-11-12.
 Statussen: VERIFIED / PARTIALLY TESTED / NOT TESTED / BLOCKED. Een geautomatiseerde rendercontrole telt **niet** als visuele of inhoudelijke controle.
 Beoordeeld volgens `docs/BIRDSPOT_KWALITEITSNORM.md` (biometrie §1, herkenning §2, foto §3). Verbeterwensen zijn voor de latere beoordeling door de eigenaar en blokkeren de batch niet.
 
@@ -9,18 +9,18 @@ Beoordeeld volgens `docs/BIRDSPOT_KWALITEITSNORM.md` (biometrie §1, herkenning 
 | # | Meting | Stand |
 |---|---|---|
 | 1 | Soorten met bestaande gidsfoto's | 134 |
-| 2 | Afzonderlijk (aangescherpt) gecontroleerd | 50 (M1, M2, M3, M4, M5) |
-| 3 | Technisch correct (laden, volgorde, offline-bron, beoordeling = kaart) | 50 van 50 |
-| 4a | Visueel VERIFIED (beeld per foto) | 45 van 50 |
-| 4b | Inhoud (kennisprofiel) VERIFIED | 16 van 50 — alle profielen hebben nog open punten |
+| 2 | Afzonderlijk (aangescherpt) gecontroleerd | 53 (M1, M2, M3, M4, M5) |
+| 3 | Technisch correct (laden, volgorde, offline-bron, beoordeling = kaart) | 53 van 53 |
+| 4a | Visueel VERIFIED (beeld per foto) | 48 van 53 |
+| 4b | Inhoud (kennisprofiel) VERIFIED | 19 van 53 — alle profielen hebben nog open punten |
 | 4c | Onafhankelijk beoordeeld (ChatGPT) | 0 — NOT TESTED |
-| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 52; plus collectiebrede vluchtcontrole: 17 uit de vluchtrol, 8 gearchiveerd |
+| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 55; plus collectiebrede vluchtcontrole: 17 uit de vluchtrol, 8 gearchiveerd |
 | 6 | Afgekeurde vluchtfoto's | 25 (tabel hieronder) |
-| 7 | Ontbrekende foto-/kennisonderdelen | 47 fotoposities in gecontroleerde soorten; 84 fotosoorten zonder kennisprofiel |
-| 8 | Kritische kenmerken niet doorslaggevend onderbouwd | 80 (tabel hieronder) |
+| 7 | Ontbrekende foto-/kennisonderdelen | 49 fotoposities in gecontroleerde soorten; 81 fotosoorten zonder kennisprofiel |
+| 8 | Kritische kenmerken niet doorslaggevend onderbouwd | 83 (tabel hieronder) |
 | 9 | Open bron-/licentieproblemen | 0 in gecontroleerde soorten; collectiebreed blijft het eerder gemelde punt '22 afbeeldingen buiten de bronaudit' open |
 
-Eindoordeel per gecontroleerde soort: PARTIALLY TESTED 35, VERIFIED 15.
+Eindoordeel per gecontroleerde soort: PARTIALLY TESTED 38, VERIFIED 15.
 
 ## Gecontroleerde soorten
 
@@ -870,6 +870,25 @@ Batch M4 · 2026-11-11 · SHA `c1c0f11ab367f35c4efc483ad986a6e726154651` · tech
 - **Onzeker:** —
 - **Volgende actie:** Onafhankelijke review (ChatGPT)
 
+### sp098 Scholekster — PARTIALLY TESTED
+
+Batch M5 · 2026-11-12 · SHA `8b318dccec0cb8b84a63d9c622cd7ee4eec19bd5` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp098.webp` | Hoofdfoto | Volwassen Scholekster aan de waterkant met lange rode snavel en roze poten. | Volwassen kleed. Geslacht niet vastgesteld. | Duidelijk zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC0 · Hobbyfotowiki |
+| `sp098-juv.webp` | Verenkleed (Juveniel) | Jonge Scholekster in zijaanzicht. Donkerbruine bovendelen, witte buik en oranjerode snavel met donkere punt. | De fotograaf benoemt een juveniel. De bruine bovendelen, bleke veerranden en donkere snavelpunt zijn zichtbaar. Geslacht onbekend. | Volledige vogel in zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY 2.0 · Andrey Gulivanov |
+| `sp098-flight.webp` | In vlucht | Scholekster vrij boven water met gespreide vleugels. | Geslacht niet vastgesteld. | Snavel, vleugels en witte buik goed zichtbaar. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp |
+
+- **Correcties:** Juvenielenfoto, kennisprofiel en vergelijking met Kluut toegevoegd. Bestaand vluchtbeeld herbeoordeeld.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Neutrale labels bij veldfoto’s. Onderzoek gebruikt onder meer gemeten snavelkenmerken.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Snavelvorm en poten; open: —; resterende dataverschillen: 1
+- **Browser:** NOT TESTED
+- **Onzeker:** Spanwijdte verschilt tussen de eerdere gidswaarde en de Nederlandse soortgids. Zie kennisprofiel.
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
 ### sp016 Grote Bonte Specht — PARTIALLY TESTED
 
 Batch M2 · 2026-11-10 · SHA `61ad1e3` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
@@ -996,6 +1015,43 @@ Batch M5 · 2026-11-11 · SHA `181688362b2b385e47939e8761586d0288259ede` · tech
 - **Onzeker:** —
 - **Volgende actie:** Onafhankelijke review (ChatGPT)
 
+### sp050 Roodborst — PARTIALLY TESTED
+
+Batch M5 · 2026-11-12 · SHA `8b318dccec0cb8b84a63d9c622cd7ee4eec19bd5` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp050.webp` | Hoofdfoto | Volwassen Roodborst op een tak, met oranje gezicht en borst. | Volwassen kleed, geslacht onbekend. | Vogel volledig in beeld. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours |
+| `sp050-juv-review.webp` | Verenkleed (Juveniel) | Jonge Roodborst met licht gespikkeld bruin kleed, op het gras. | Originele fototitel vermeldt juveniel. | Volledig zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · caroline legg |
+| `sp050-flight.webp` | Overige herkenningsfoto | Opvliegende Roodborst tussen besneeuwde takken. | Volwassen kleed, geslacht onbekend. | Gespreide vleugel zichtbaar. Takken beperken het zicht op de vlieghouding. | uit-rol | opvliegen · uit-rol | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Joe Dyer from Buckhurst Hill, England |
+
+- **Correcties:** Kennisprofiel en vergelijking met Heggenmus toegevoegd. Bestaande opvliegfoto blijft bij Overige.
+- **Ontbreekt:** Voldoende scherpe en gelicentieerde foto in vrije vlucht.
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Mannetje en vrouwtje hebben hetzelfde zichtbare kleed. Gebruik een neutraal label.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Borst en rug; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp055 Winterkoning — PARTIALLY TESTED
+
+Batch M5 · 2026-11-12 · SHA `8b318dccec0cb8b84a63d9c622cd7ee4eec19bd5` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp055.webp` | Hoofdfoto | Bruine Winterkoning op hout, met korte opgerichte staart en lichte wenkbrauw. | Volwassen type, geslacht onbekend. | Duidelijk zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours |
+| `sp055-juv.webp` | Verenkleed (Juveniel) | Jonge Winterkoning in een boomholte, met een compacte bruine bouw en lichte wenkbrauw. | De fotograaf benoemt een juveniel in de originele bestandsnaam. Het kleed alleen geeft bij deze soort beperkte zekerheid over de leeftijd. | Uitsnede vergroot de vogel. Licht en kijkhoek beperken zicht op de dekveren. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Uitgesneden rond de vogel, verkleind tot max. 1400 px en omgezet naar WebP zonder EXIF/GPS/XMP), CC BY 4.0 · caroline legg |
+
+- **Correcties:** Geverifieerde juvenielenfoto, kennisprofiel en vergelijking met Boomkruiper toegevoegd.
+- **Ontbreekt:** Voldoende scherpe en gelicentieerde foto in vrije vlucht.
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Mannetje en vrouwtje hebben hetzelfde zichtbare kleed. Gebruik een neutraal label.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Staart en houding; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
 ## Afgekeurde vluchtfoto's (collectiebreed)
 
 | Soort | Bestand | Uitslag | Klasse | Reden |
@@ -1064,7 +1120,9 @@ Batch M5 · 2026-11-11 · SHA `181688362b2b385e47939e8761586d0288259ede` · tech
 | sp046 Zanglijster | Borstvlekken en ondervleugeldekveren |
 | sp047 Kramsvogel | Kop, stuit en ondervleugel |
 | sp048 Koperwiek | Wenkbrauw en kleur onder de vleugel |
+| sp050 Roodborst | Borst en rug |
 | sp054 Heggenmus | Snavel en kop |
+| sp055 Winterkoning | Staart en houding |
 | sp056 Tjiftjaf | Handpenprojectie |
 | sp056 Tjiftjaf | Staartbeweging |
 | sp056 Tjiftjaf | Poten |
@@ -1100,6 +1158,7 @@ Batch M5 · 2026-11-11 · SHA `181688362b2b385e47939e8761586d0288259ede` · tech
 | sp095 Kleine Mantelmeeuw | Mantel en poten (volwassen) |
 | sp095 Kleine Mantelmeeuw | Tertials eerstejaars |
 | sp096 Stormmeeuw | Snavel, oog en poten |
+| sp098 Scholekster | Snavelvorm en poten |
 | sp099 Kievit | Kuif en rugtekening |
 | sp104 Aalscholver | Broedkleed |
 | sp105 Fazant | Staartlengte en bouw bij bruine vogels |
@@ -1115,5 +1174,5 @@ Batch M5 · 2026-11-11 · SHA `181688362b2b385e47939e8761586d0288259ede` · tech
 
 Deze soorten renderen technisch, maar zijn **niet** foto voor foto opnieuw beoordeeld. Eerdere uitslagen (fotobaseline batch 01) gelden niet automatisch.
 
-sp058 Fluiter, sp128 Bergeend, sp129 Krakeend, sp092 Kuifeend, sp090 Slobeend, sp130 Smient, sp132 Tafeleend, sp188 Zomertaling, sp106 Patrijs, sp117 Geelgors, sp118 Rietgors, sp064 Vuurgoudhaan, sp249 Blauwe Kiekendief, sp251 Grauwe Kiekendief, sp250 Steppekiekendief, sp075 IJsvogel, sp262 Grauwe Klauwier, sp143 Kluut, sp069 Gele Kwikstaart, sp288 Grote Gele Kwikstaart, sp049 Grote Lijster, sp164 Grote Mantelmeeuw, sp097 Kokmeeuw, sp225 Zwartkopmeeuw, sp032 Glanskop, sp033 Kuifmees, sp031 Matkop, sp174 Zwarte Mees, sp044 Ringmus, sp170 Ooievaar, sp146 Bontbekplevier, sp145 Goudplevier, sp147 Kleine Plevier, sp206 Strandplevier, sp144 Zilverplevier, sp083 Grote Zilverreiger, sp082 Kleine Zilverreiger, sp245 Koereiger, sp085 Kwak, sp084 Purperreiger, sp108 Grote Karekiet, sp110 Rietzanger, sp098 Scholekster, sp159 Bosruiter, sp152 Drieteenstrandloper, sp158 Groenpootruiter, sp101 Grutto, sp155 Oeverloper, sp217 Poelruiter, sp150 Steenloper, sp102 Tureluur, sp156 Witgat, sp100 Wulp, sp157 Zwarte Ruiter, sp019 Groene Specht, sp017 Kleine Bonte Specht, sp020 Middelste Bonte Specht, sp018 Zwarte Specht, sp282 Roze Spreeuw, sp112 Spreeuw, sp034 Staartmees, sp167 Grote Stern, sp166 Noordse Stern, sp165 Visdief, sp041 Appelvink, sp040 Goudvink, sp039 Kneu, sp042 Roodmus, sp038 Sijs, sp177 Bonte Vliegenvanger, sp178 Gekraagde Roodstaart, sp176 Grauwe Vliegenvanger, sp050 Roodborst, sp053 Roodborsttapuit, sp051 Zwarte Roodstaart, sp113 Wielewaal, sp055 Winterkoning, sp061 Grasmus, sp060 Tuinfluiter, sp059 Zwartkop, sp114 Boerenzwaluw, sp115 Huiszwaluw, sp116 Oeverzwaluw, sp126 Knobbelzwaan
+sp058 Fluiter, sp128 Bergeend, sp129 Krakeend, sp092 Kuifeend, sp090 Slobeend, sp130 Smient, sp132 Tafeleend, sp188 Zomertaling, sp106 Patrijs, sp117 Geelgors, sp118 Rietgors, sp064 Vuurgoudhaan, sp249 Blauwe Kiekendief, sp251 Grauwe Kiekendief, sp250 Steppekiekendief, sp075 IJsvogel, sp262 Grauwe Klauwier, sp143 Kluut, sp069 Gele Kwikstaart, sp288 Grote Gele Kwikstaart, sp049 Grote Lijster, sp164 Grote Mantelmeeuw, sp097 Kokmeeuw, sp225 Zwartkopmeeuw, sp032 Glanskop, sp033 Kuifmees, sp031 Matkop, sp174 Zwarte Mees, sp044 Ringmus, sp170 Ooievaar, sp146 Bontbekplevier, sp145 Goudplevier, sp147 Kleine Plevier, sp206 Strandplevier, sp144 Zilverplevier, sp083 Grote Zilverreiger, sp082 Kleine Zilverreiger, sp245 Koereiger, sp085 Kwak, sp084 Purperreiger, sp108 Grote Karekiet, sp110 Rietzanger, sp159 Bosruiter, sp152 Drieteenstrandloper, sp158 Groenpootruiter, sp101 Grutto, sp155 Oeverloper, sp217 Poelruiter, sp150 Steenloper, sp102 Tureluur, sp156 Witgat, sp100 Wulp, sp157 Zwarte Ruiter, sp019 Groene Specht, sp017 Kleine Bonte Specht, sp020 Middelste Bonte Specht, sp018 Zwarte Specht, sp282 Roze Spreeuw, sp112 Spreeuw, sp034 Staartmees, sp167 Grote Stern, sp166 Noordse Stern, sp165 Visdief, sp041 Appelvink, sp040 Goudvink, sp039 Kneu, sp042 Roodmus, sp038 Sijs, sp177 Bonte Vliegenvanger, sp178 Gekraagde Roodstaart, sp176 Grauwe Vliegenvanger, sp053 Roodborsttapuit, sp051 Zwarte Roodstaart, sp113 Wielewaal, sp061 Grasmus, sp060 Tuinfluiter, sp059 Zwartkop, sp114 Boerenzwaluw, sp115 Huiszwaluw, sp116 Oeverzwaluw, sp126 Knobbelzwaan
 
