@@ -1,6 +1,6 @@
 # Birdspot — soortaudit van de collectie met foto's
 
-Gegenereerd door `tools/fotokwaliteit/build_soortaudit_tracker.py` · status voor commit `f6f8c4cb5c7c2108a5ab37dbf197a12684d6bf3f` · 2026-11-12.
+Gegenereerd door `tools/fotokwaliteit/build_soortaudit_tracker.py` · status voor commit `f9017aedc1b8bf254600a2707dc13c64b254aa53` · 2026-11-12.
 Statussen: VERIFIED / PARTIALLY TESTED / NOT TESTED / BLOCKED. Een geautomatiseerde rendercontrole telt **niet** als visuele of inhoudelijke controle.
 Beoordeeld volgens `docs/BIRDSPOT_KWALITEITSNORM.md` (biometrie §1, herkenning §2, foto §3). Verbeterwensen zijn voor de latere beoordeling door de eigenaar en blokkeren de batch niet.
 
@@ -1471,7 +1471,7 @@ Batch M5 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · tech
 
 ### sp177 Bonte Vliegenvanger — PARTIALLY TESTED
 
-Batch M8 · 2026-11-12 · SHA `f6f8c4cb5c7c2108a5ab37dbf197a12684d6bf3f` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+Batch M8 · 2026-11-12 · SHA `f9017aedc1b8bf254600a2707dc13c64b254aa53` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -1549,7 +1549,7 @@ Batch M5 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · tech
 
 ### sp053 Roodborsttapuit — PARTIALLY TESTED
 
-Batch M8 · 2026-11-12 · SHA `f6f8c4cb5c7c2108a5ab37dbf197a12684d6bf3f` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+Batch M8 · 2026-11-12 · SHA `f9017aedc1b8bf254600a2707dc13c64b254aa53` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -1569,7 +1569,7 @@ Batch M8 · 2026-11-12 · SHA `f6f8c4cb5c7c2108a5ab37dbf197a12684d6bf3f` · tech
 
 ### sp051 Zwarte Roodstaart — PARTIALLY TESTED
 
-Batch M8 · 2026-11-12 · SHA `f6f8c4cb5c7c2108a5ab37dbf197a12684d6bf3f` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+Batch M8 · 2026-11-12 · SHA `f9017aedc1b8bf254600a2707dc13c64b254aa53` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
