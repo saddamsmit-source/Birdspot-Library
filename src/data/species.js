@@ -1273,7 +1273,7 @@ export const SPECIES = [
     statusExtra:null, months:'mei-sep', frequency:'vrij-algemeen', breeding:'ja', redList:'Gevoelig' },
   { id:'sp177', nameNL:'Bonte Vliegenvanger', nameEN:'European Pied Flycatcher', nameSci:'Ficedula hypoleuca', family:'Vliegenvangers', category:'zomergast', icon:'🐦', regions:['bos'],
     fieldmarks:'Kleine vliegenvanger met een opvallend licht veld op de gevouwen vleugel. De bovendelen zijn zwart, grijsbruin of bruin.',
-    size:{ length:'ca. 13–13 cm', wingspan:'21–24 cm', weight:'12–15 g' },
+    size:{ length:'ca. 12–13 cm', wingspan:'21–24 cm', weight:'12–15 g' },
     plumage:{ adult_m:'Volwassen mannetjes variëren van zwart-wit tot grijsbruin. Een lichte voorhoofdsvlek is vaak zichtbaar in broedkleed.', adult_f:'Het vrouwtje is meestal bruin van boven en licht van onderen, met een licht veld op de gevouwen vleugel.', juv:'Het verse jeugdkleed toont lichte vlekken op de bovenkant.', jaarling:null, breeding:null, winter:null, eclipse:null },
     guideReview:{ date:'2026-11-12', similarSexes:false, dimensions:['length'], sources:[{ label:'Vogelbescherming — Bonte Vliegenvanger', url:'https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bonte-vliegenvanger' }, { label:'Blasco-Zumeta & Heinze — Bonte Vliegenvanger', url:'https://www.blascozumeta.com/specie_files/13490_Ficedula_hypoleuca_E.pdf' }, { label:'Sovon — Bonte Vliegenvanger', url:'https://stats.sovon.nl/stats/soort/13490/' }] },
     distribution:'Loofbossen met oude bomen, vooral Veluwe, Utrechtse Heuvelrug en Drenthe', status:'Zomergast · april–september',

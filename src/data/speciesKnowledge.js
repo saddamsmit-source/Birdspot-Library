@@ -3259,6 +3259,17 @@ const DATA = {
    "checked": "2026-11-12",
    "certainty": "hoog",
    "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "NABU_BONTE_VLIEGENVANGER": {
+   "register": "EU",
+   "label": "NABU — Bonte Vliegenvanger",
+   "url": "https://www.nabu.de/natur-und-artenwissen/voegel/vogelportraets/trauerschnaepper",
+   "edition": "Online soortportret",
+   "scope": "Duitsland",
+   "confirms": "Lichaamslengte 12–13 cm",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Naturschutzbund Deutschland"
   }
  },
  "profiles": {
@@ -18103,7 +18114,7 @@ const DATA = {
      {
       "field": "length",
       "unit": "cm",
-      "display": "ca. 13–13 cm",
+      "display": "ca. 12–13 cm",
       "values": [
        {
         "source": "VB_BONTE_VLIEGENVANGER",
@@ -18112,6 +18123,11 @@ const DATA = {
        },
        {
         "source": "BZH_BONTE_VLIEGENVANGER",
+        "min": 12,
+        "max": 13
+       },
+       {
+        "source": "NABU_BONTE_VLIEGENVANGER",
         "min": 12,
         "max": 13
        }
