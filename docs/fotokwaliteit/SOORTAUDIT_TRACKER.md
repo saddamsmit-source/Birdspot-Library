@@ -1,6 +1,6 @@
 # Birdspot — soortaudit van de collectie met foto's
 
-Gegenereerd door `tools/fotokwaliteit/build_soortaudit_tracker.py` · status voor commit `a4abd8e6a784fd94acc748ada490afde3dfef667` · 2026-11-12.
+Gegenereerd door `tools/fotokwaliteit/build_soortaudit_tracker.py` · status voor commit `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · 2026-11-12.
 Statussen: VERIFIED / PARTIALLY TESTED / NOT TESTED / BLOCKED. Een geautomatiseerde rendercontrole telt **niet** als visuele of inhoudelijke controle.
 Beoordeeld volgens `docs/BIRDSPOT_KWALITEITSNORM.md` (biometrie §1, herkenning §2, foto §3). Verbeterwensen zijn voor de latere beoordeling door de eigenaar en blokkeren de batch niet.
 
@@ -9,24 +9,24 @@ Beoordeeld volgens `docs/BIRDSPOT_KWALITEITSNORM.md` (biometrie §1, herkenning 
 | # | Meting | Stand |
 |---|---|---|
 | 1 | Soorten met bestaande gidsfoto's | 139 |
-| 2 | Afzonderlijk (aangescherpt) gecontroleerd | 65 (M1, M2, M3, M4, M5, M6) |
-| 3 | Technisch correct (laden, volgorde, offline-bron, beoordeling = kaart) | 65 van 65 |
-| 4a | Visueel VERIFIED (beeld per foto) | 60 van 65 |
-| 4b | Inhoud (kennisprofiel) VERIFIED | 31 van 65 — alle profielen hebben nog open punten |
+| 2 | Afzonderlijk (aangescherpt) gecontroleerd | 68 (M1, M2, M3, M4, M5, M6) |
+| 3 | Technisch correct (laden, volgorde, offline-bron, beoordeling = kaart) | 68 van 68 |
+| 4a | Visueel VERIFIED (beeld per foto) | 63 van 68 |
+| 4b | Inhoud (kennisprofiel) VERIFIED | 34 van 68 — alle profielen hebben nog open punten |
 | 4c | Onafhankelijk beoordeeld (ChatGPT) | 0 — NOT TESTED |
-| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 72; plus collectiebrede vluchtcontrole: 17 uit de vluchtrol, 8 gearchiveerd |
+| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 75; plus collectiebrede vluchtcontrole: 17 uit de vluchtrol, 8 gearchiveerd |
 | 6 | Afgekeurde vluchtfoto's | 25 (tabel hieronder) |
-| 7 | Ontbrekende foto-/kennisonderdelen | 55 fotoposities in gecontroleerde soorten; 74 fotosoorten zonder kennisprofiel |
-| 8 | Kritische kenmerken niet doorslaggevend onderbouwd | 95 (tabel hieronder) |
+| 7 | Ontbrekende foto-/kennisonderdelen | 55 fotoposities in gecontroleerde soorten; 71 fotosoorten zonder kennisprofiel |
+| 8 | Kritische kenmerken niet doorslaggevend onderbouwd | 98 (tabel hieronder) |
 | 9 | Open bron-/licentieproblemen | 0 in gecontroleerde soorten; collectiebreed blijft het eerder gemelde punt '22 afbeeldingen buiten de bronaudit' open |
 
-Eindoordeel per gecontroleerde soort: PARTIALLY TESTED 50, VERIFIED 15.
+Eindoordeel per gecontroleerde soort: PARTIALLY TESTED 53, VERIFIED 15.
 
 ## Gecontroleerde soorten
 
 ### sp104 Aalscholver — PARTIALLY TESTED
 
-Batch M2 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M2 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -45,7 +45,7 @@ Batch M2 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp065 Boomklever — PARTIALLY TESTED
 
-Batch M2 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M2 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -63,7 +63,7 @@ Batch M2 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp066 Boomkruiper — PARTIALLY TESTED
 
-Batch M1 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M1 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -80,7 +80,7 @@ Batch M1 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp067 Taigaboomkruiper — PARTIALLY TESTED
 
-Batch M2 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel PARTIALLY TESTED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M2 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel PARTIALLY TESTED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -97,7 +97,7 @@ Batch M2 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp057 Fitis — PARTIALLY TESTED
 
-Batch M1 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M1 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -114,7 +114,7 @@ Batch M1 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp056 Tjiftjaf — PARTIALLY TESTED
 
-Batch M1 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M1 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -133,7 +133,7 @@ Batch M1 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp003 Holenduif — PARTIALLY TESTED
 
-Batch M1 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M1 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -152,7 +152,7 @@ Batch M1 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp002 Houtduif — PARTIALLY TESTED
 
-Batch M1 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M1 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -170,7 +170,7 @@ Batch M1 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp004 Turkse Tortel — PARTIALLY TESTED
 
-Batch M1 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M1 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -188,7 +188,7 @@ Batch M1 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp089 Wilde Eend — PARTIALLY TESTED
 
-Batch M3 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel PARTIALLY TESTED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+Batch M3 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel PARTIALLY TESTED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -210,7 +210,7 @@ Batch M3 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp091 Wintertaling — PARTIALLY TESTED
 
-Batch M3 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M3 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -233,7 +233,7 @@ Batch M3 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp105 Fazant — VERIFIED
 
-Batch M3 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M3 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -253,7 +253,7 @@ Batch M3 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp106 Patrijs — PARTIALLY TESTED
 
-Batch M6 · 2026-11-12 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+Batch M6 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -274,7 +274,7 @@ Batch M6 · 2026-11-12 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp077 Fuut — PARTIALLY TESTED
 
-Batch M3 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+Batch M3 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -292,7 +292,7 @@ Batch M3 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp086 Grauwe Gans — PARTIALLY TESTED
 
-Batch M3 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+Batch M3 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -311,7 +311,7 @@ Batch M3 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp141 Gierzwaluw — VERIFIED
 
-Batch M3 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M3 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -328,9 +328,29 @@ Batch M3 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 - **Onzeker:** De fotograaf vermeldt bij beide vluchtfoto’s geen exacte leeftijd.
 - **Volgende actie:** Onafhankelijke review (ChatGPT)
 
+### sp117 Geelgors — PARTIALLY TESTED
+
+Batch M6 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp117.webp` | Hoofdfoto (Mannetje) | Geelgors op een uitkijkpost, met een gele kop en gele onderzijde. | De fotograaf noemt een mannetje en de koptekening ondersteunt dit. | Volledig profiel met duidelijke kop en borst. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp |
+| `sp117-adult_f.webp` | Verenkleed (Vrouwtje) | Vrouwtje Geelgors met zaad in de snavel, een geelbruine kop met donkere streping en een gestreepte borst. | De fotograaf benoemt een vrouwtje op de research-grade waarneming. De donkere koptekening en streping zijn zichtbaar. Geel kan ook bij vrouwtjes duidelijk aanwezig zijn. | Koptekening, gestreepte borst en stevige snavel goed zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY 4.0 · Dave |
+| `sp117-juv.webp` | Verenkleed (Juveniel) | Jonge Geelgors van opzij in de hand, met bruine streping op kop en rug en lichte randen aan de vleugelveren. | De research-grade waarneming heeft de annotatie Juvenile. De doffe gestreepte kop en het verse kleed zijn zichtbaar. Geslacht onbekend. | Veerranden en streping goed zichtbaar. Foto toont een vogel in de hand. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY 4.0 · Scott Shanks |
+| `sp117-flight.webp` | In vlucht | Geelgors met geheven vleugels en lange staart in vrije vlucht. | Geslacht onbekend. | Silhouet en vleugelvorm zijn voldoende duidelijk. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) William Harland, some rights reserved (CC BY) |
+
+- **Correcties:** Vrouwtje, juveniel, kennisprofiel en beeldvergelijking met Rietgors toegevoegd. Mannetjeshoofdfoto en bestaande vluchtfoto gecontroleerd.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** Een jong in natuurlijke rusthouding zou de opname in de hand aanvullen.
+- **Geslacht:** Hoeveelheid geel is op zichzelf onvoldoende voor een geslachtslabel. De vogel op de vrouwtjesfoto is benoemd door de fotograaf.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Stuit, kop en omgeving; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
 ### sp063 Goudhaantje — PARTIALLY TESTED
 
-Batch M3 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+Batch M3 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -349,7 +369,7 @@ Batch M3 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp064 Vuurgoudhaan — PARTIALLY TESTED
 
-Batch M6 · 2026-11-12 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+Batch M6 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -368,7 +388,7 @@ Batch M6 · 2026-11-12 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp173 Bruine Kiekendief — PARTIALLY TESTED
 
-Batch M2 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M2 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -390,7 +410,7 @@ Batch M2 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp005 Buizerd — PARTIALLY TESTED
 
-Batch M1 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel PARTIALLY TESTED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M1 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel PARTIALLY TESTED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -412,7 +432,7 @@ Batch M1 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp007 Havik — PARTIALLY TESTED
 
-Batch M2 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel PARTIALLY TESTED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M2 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel PARTIALLY TESTED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -434,7 +454,7 @@ Batch M2 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp253 Ruigpootbuizerd — PARTIALLY TESTED
 
-Batch M2 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M2 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -454,7 +474,7 @@ Batch M2 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp006 Sperwer — PARTIALLY TESTED
 
-Batch M1 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M1 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -475,7 +495,7 @@ Batch M1 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp248 Wespendief — PARTIALLY TESTED
 
-Batch M2 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M2 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -495,7 +515,7 @@ Batch M2 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp054 Heggenmus — PARTIALLY TESTED
 
-Batch M3 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+Batch M3 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -512,7 +532,7 @@ Batch M3 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp075 IJsvogel — PARTIALLY TESTED
 
-Batch M6 · 2026-11-12 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+Batch M6 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -534,7 +554,7 @@ Batch M6 · 2026-11-12 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp021 Ekster — PARTIALLY TESTED
 
-Batch M1 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M1 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -552,7 +572,7 @@ Batch M1 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp026 Gaai — PARTIALLY TESTED
 
-Batch M2 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M2 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -570,7 +590,7 @@ Batch M2 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp025 Kauw — PARTIALLY TESTED
 
-Batch M3 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+Batch M3 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -588,7 +608,7 @@ Batch M3 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp022 Zwarte Kraai — PARTIALLY TESTED
 
-Batch M3 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+Batch M3 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -606,7 +626,7 @@ Batch M3 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp069 Gele Kwikstaart — PARTIALLY TESTED
 
-Batch M6 · 2026-11-12 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+Batch M6 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -626,7 +646,7 @@ Batch M6 · 2026-11-12 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp068 Witte Kwikstaart — PARTIALLY TESTED
 
-Batch M3 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+Batch M3 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -644,7 +664,7 @@ Batch M3 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp070 Veldleeuwerik — PARTIALLY TESTED
 
-Batch M3 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+Batch M3 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -662,7 +682,7 @@ Batch M3 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp048 Koperwiek — PARTIALLY TESTED
 
-Batch M4 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M4 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -681,7 +701,7 @@ Batch M4 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp047 Kramsvogel — VERIFIED
 
-Batch M4 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M4 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -700,7 +720,7 @@ Batch M4 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp045 Merel — PARTIALLY TESTED
 
-Batch M4 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M4 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -722,7 +742,7 @@ Batch M4 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp046 Zanglijster — VERIFIED
 
-Batch M4 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M4 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -741,7 +761,7 @@ Batch M4 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp095 Kleine Mantelmeeuw — PARTIALLY TESTED
 
-Batch M2 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M2 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -759,7 +779,7 @@ Batch M2 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp096 Stormmeeuw — PARTIALLY TESTED
 
-Batch M2 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M2 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -777,7 +797,7 @@ Batch M2 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp094 Zilvermeeuw — PARTIALLY TESTED
 
-Batch M1 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M1 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -795,7 +815,7 @@ Batch M1 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp029 Koolmees — VERIFIED
 
-Batch M4 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M4 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -816,7 +836,7 @@ Batch M4 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp030 Pimpelmees — VERIFIED
 
-Batch M4 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M4 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -835,7 +855,7 @@ Batch M4 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp043 Huismus — VERIFIED
 
-Batch M4 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M4 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -856,7 +876,7 @@ Batch M4 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp072 Graspieper — VERIFIED
 
-Batch M4 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M4 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -875,7 +895,7 @@ Batch M4 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp099 Kievit — VERIFIED
 
-Batch M4 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M4 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -896,7 +916,7 @@ Batch M4 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp078 Meerkoet — VERIFIED
 
-Batch M4 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M4 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -916,7 +936,7 @@ Batch M4 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp079 Waterhoen — VERIFIED
 
-Batch M4 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M4 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -935,7 +955,7 @@ Batch M4 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp081 Blauwe Reiger — VERIFIED
 
-Batch M4 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M4 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -954,7 +974,7 @@ Batch M4 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp098 Scholekster — PARTIALLY TESTED
 
-Batch M5 · 2026-11-12 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+Batch M5 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -973,7 +993,7 @@ Batch M5 · 2026-11-12 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp152 Drieteenstrandloper — PARTIALLY TESTED
 
-Batch M5 · 2026-11-12 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+Batch M5 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -992,7 +1012,7 @@ Batch M5 · 2026-11-12 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp101 Grutto — PARTIALLY TESTED
 
-Batch M5 · 2026-11-12 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+Batch M5 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -1012,7 +1032,7 @@ Batch M5 · 2026-11-12 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp102 Tureluur — PARTIALLY TESTED
 
-Batch M5 · 2026-11-12 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+Batch M5 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -1032,7 +1052,7 @@ Batch M5 · 2026-11-12 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp100 Wulp — PARTIALLY TESTED
 
-Batch M5 · 2026-11-12 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+Batch M5 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -1051,7 +1071,7 @@ Batch M5 · 2026-11-12 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp016 Grote Bonte Specht — PARTIALLY TESTED
 
-Batch M2 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M2 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -1072,7 +1092,7 @@ Batch M2 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp112 Spreeuw — PARTIALLY TESTED
 
-Batch M5 · 2026-11-12 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+Batch M5 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -1093,7 +1113,7 @@ Batch M5 · 2026-11-12 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp165 Visdief — PARTIALLY TESTED
 
-Batch M5 · 2026-11-12 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+Batch M5 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -1112,7 +1132,7 @@ Batch M5 · 2026-11-12 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp009 Slechtvalk — PARTIALLY TESTED
 
-Batch M2 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M2 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -1133,7 +1153,7 @@ Batch M2 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp008 Torenvalk — PARTIALLY TESTED
 
-Batch M1 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel PARTIALLY TESTED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M1 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel PARTIALLY TESTED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -1155,7 +1175,7 @@ Batch M1 · 2026-11-10 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp036 Groenling — VERIFIED
 
-Batch M5 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M5 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -1175,7 +1195,7 @@ Batch M5 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp037 Putter — VERIFIED
 
-Batch M5 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M5 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -1196,7 +1216,7 @@ Batch M5 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp035 Vink — VERIFIED
 
-Batch M5 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M5 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -1217,7 +1237,7 @@ Batch M5 · 2026-11-11 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp050 Roodborst — PARTIALLY TESTED
 
-Batch M5 · 2026-11-12 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+Batch M5 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -1236,7 +1256,7 @@ Batch M5 · 2026-11-12 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp055 Winterkoning — PARTIALLY TESTED
 
-Batch M5 · 2026-11-12 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+Batch M5 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -1254,7 +1274,7 @@ Batch M5 · 2026-11-12 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp061 Grasmus — PARTIALLY TESTED
 
-Batch M6 · 2026-11-12 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+Batch M6 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -1274,7 +1294,7 @@ Batch M6 · 2026-11-12 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 ### sp059 Zwartkop — PARTIALLY TESTED
 
-Batch M6 · 2026-11-12 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+Batch M6 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -1290,6 +1310,47 @@ Batch M6 · 2026-11-12 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 - **Browser:** NOT TESTED
 - **Onzeker:** —
 - **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp114 Boerenzwaluw — PARTIALLY TESTED
+
+Batch M6 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp114-hero-male.webp` | Hoofdfoto (Mannetje) | Mannetje Boerenzwaluw op een draad met roestrode keel en voorhoofd, donkere borstband en lichte onderzijde. | De fotograaf benoemt een mannetje en annoteert de voorjaarswaarneming als Male. Het volwassen kleed is zichtbaar. | Scherpe kop, borstband en kleuren. De oude herkenningsfoto geeft vrij zicht op de diepe staartvork. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY 4.0 · SteveM4560 |
+| `sp114-adult_f.webp` | Verenkleed (Vrouwtje) | Vrouwtje Boerenzwaluw in zijaanzicht in de hand, met roestrode keel, donkere borstband en blauwzwarte bovendelen. | De fotograaf benoemt een vrouwtje en annoteert de waarneming als Female. Het volwassen kleed is zichtbaar; de kortere staartpennen zijn ondersteunend. | Kop, keel, borstband en vleugel duidelijk zichtbaar. Foto toont een vogel in de hand. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY 4.0 · SteveM4560 |
+| `sp114-juv.webp` | Verenkleed (Juveniel) | Jonge Boerenzwaluw op een tak op Schiermonnikoog, met een blekere keel en donkere borstband. | De fotograaf noemt de soort en het juveniele kleed op de bestandspagina. De opname toont de doffere kop en bleke keel. Geslacht onbekend. | Doffe kop en keel goed zichtbaar in driekwartaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY 2.0 · Frank Vassen |
+| `sp114-flight.webp` | In vlucht | Een Boerenzwaluw in vrije vlucht met donkere borstband en lange staartpennen. | Geslacht onbekend. | Volledige vogel met zicht op de staartvork en de vleugels. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Rudolphous |
+| `sp114.webp` | Overige herkenningsfoto | Boerenzwaluw met roestrode keel en lange staartpennen op een tak. | Volwassen kleed. Geslacht onbekend. | Helder zijaanzicht van het volledige silhouet. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Andy Morffew from Itchen Abbas, Hampshire, UK |
+
+- **Correcties:** Hoofdfoto met bronbenoemd mannetje, afzonderlijke vrouwtjesfoto, juvenielenfoto en kennisprofiel toegevoegd. Vergelijking met Huiszwaluw en bestaande vluchtvergelijkingen gecontroleerd.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** Een vrouwtje in natuurlijke rusthouding zou de opname in de hand aanvullen.
+- **Geslacht:** De veldkleden overlappen. Gebruik voor fotolabels de expliciete bronvermelding in combinatie met zichtbare kenmerken.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Keel, stuit en staart; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp115 Huiszwaluw — PARTIALLY TESTED
+
+Batch M6 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp115-hero-adult.webp` | Hoofdfoto (Volwassen) | Volwassen Huiszwaluw op een draad in zijaanzicht, met witte keel en buik en een korte gevorkte staart. | De research-grade waarneming is geannoteerd als Adult. De rechter vogel staat afzonderlijk in deze uitsnede. Geslacht onbekend. | Eén vogel, met hele staart, witte keel en buik. De witte stuit is het duidelijkst in de vluchtfoto. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Uitgesneden rond de vogel en omgezet naar WebP zonder EXIF/GPS/XMP), CC BY 4.0 · SteveM4560 |
+| `sp115-juv.webp` | Verenkleed (Juveniel) | Jonge Huiszwaluw op een draad tegen blauwe lucht, met doffe bruine kop en lichte buik. | De fotograaf benoemt een juveniel en annoteert de waarneming als Juvenile. Doffe kop en bovendelen ondersteunen het leeftijdslabel. Geslacht onbekend. | Hele vogel tegen een rustige lucht. Doffe kop en veren duidelijk zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY 4.0 · SteveM4560 |
+| `sp115-flight.webp` | In vlucht | Huiszwaluw in vrije vlucht met witte stuit, witte onderzijde en geheven vleugels. | Geslacht onbekend. | Vogel in zijaanzicht. Witte stuit en korte staart duidelijk. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Billy Lindblom |
+| `sp115.webp` | Overige herkenningsfoto | Twee Huiszwaluwen verzamelen modder op een oever. | Volwassen kleed. Geslacht onbekend. | Bruikbare opname van gedrag en lichte onderzijde. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC0 · Estormiz |
+
+- **Correcties:** Hoofdfoto van één volwassen vogel, juvenielenfoto en kennisprofiel toegevoegd. De bestaande modderfoto toont gedrag. Beeldvergelijking met Boerenzwaluw behouden.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** De kleden van beide geslachten zijn sterk gelijk in het veld. Gebruik Volwassen als gedeelde aanduiding.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Stuit, keel en staart; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
 
 ## Afgekeurde vluchtfoto's (collectiebreed)
 
@@ -1411,6 +1472,9 @@ Batch M6 · 2026-11-12 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 | sp105 Fazant | Staartlengte en bouw bij bruine vogels |
 | sp106 Patrijs | Staart en lichaamsbouw |
 | sp112 Spreeuw | Staart en kleed |
+| sp114 Boerenzwaluw | Keel, stuit en staart |
+| sp115 Huiszwaluw | Stuit, keel en staart |
+| sp117 Geelgors | Stuit, kop en omgeving |
 | sp141 Gierzwaluw | Vleugelvorm, onderzijde en staart in vlucht |
 | sp152 Drieteenstrandloper | Snavelvorm en winterkleed |
 | sp165 Visdief | Snavel, poten en vleugels |
@@ -1425,5 +1489,5 @@ Batch M6 · 2026-11-12 · SHA `a4abd8e6a784fd94acc748ada490afde3dfef667` · tech
 
 Deze soorten renderen technisch, maar zijn **niet** foto voor foto opnieuw beoordeeld. Eerdere uitslagen (fotobaseline batch 01) gelden niet automatisch.
 
-sp257 Bijeneter, sp058 Fluiter, sp128 Bergeend, sp129 Krakeend, sp092 Kuifeend, sp090 Slobeend, sp130 Smient, sp132 Tafeleend, sp188 Zomertaling, sp117 Geelgors, sp118 Rietgors, sp249 Blauwe Kiekendief, sp251 Grauwe Kiekendief, sp250 Steppekiekendief, sp262 Grauwe Klauwier, sp143 Kluut, sp288 Grote Gele Kwikstaart, sp049 Grote Lijster, sp164 Grote Mantelmeeuw, sp097 Kokmeeuw, sp225 Zwartkopmeeuw, sp032 Glanskop, sp033 Kuifmees, sp031 Matkop, sp174 Zwarte Mees, sp044 Ringmus, sp170 Ooievaar, sp146 Bontbekplevier, sp145 Goudplevier, sp147 Kleine Plevier, sp206 Strandplevier, sp144 Zilverplevier, sp083 Grote Zilverreiger, sp082 Kleine Zilverreiger, sp245 Koereiger, sp085 Kwak, sp084 Purperreiger, sp108 Grote Karekiet, sp110 Rietzanger, sp153 Bonte Strandloper, sp159 Bosruiter, sp158 Groenpootruiter, sp155 Oeverloper, sp217 Poelruiter, sp148 Regenwulp, sp149 Rosse Grutto, sp150 Steenloper, sp156 Witgat, sp157 Zwarte Ruiter, sp019 Groene Specht, sp017 Kleine Bonte Specht, sp020 Middelste Bonte Specht, sp018 Zwarte Specht, sp282 Roze Spreeuw, sp034 Staartmees, sp167 Grote Stern, sp166 Noordse Stern, sp041 Appelvink, sp040 Goudvink, sp039 Kneu, sp042 Roodmus, sp038 Sijs, sp177 Bonte Vliegenvanger, sp178 Gekraagde Roodstaart, sp176 Grauwe Vliegenvanger, sp053 Roodborsttapuit, sp051 Zwarte Roodstaart, sp113 Wielewaal, sp062 Braamsluiper, sp060 Tuinfluiter, sp114 Boerenzwaluw, sp115 Huiszwaluw, sp116 Oeverzwaluw, sp126 Knobbelzwaan
+sp257 Bijeneter, sp058 Fluiter, sp128 Bergeend, sp129 Krakeend, sp092 Kuifeend, sp090 Slobeend, sp130 Smient, sp132 Tafeleend, sp188 Zomertaling, sp118 Rietgors, sp249 Blauwe Kiekendief, sp251 Grauwe Kiekendief, sp250 Steppekiekendief, sp262 Grauwe Klauwier, sp143 Kluut, sp288 Grote Gele Kwikstaart, sp049 Grote Lijster, sp164 Grote Mantelmeeuw, sp097 Kokmeeuw, sp225 Zwartkopmeeuw, sp032 Glanskop, sp033 Kuifmees, sp031 Matkop, sp174 Zwarte Mees, sp044 Ringmus, sp170 Ooievaar, sp146 Bontbekplevier, sp145 Goudplevier, sp147 Kleine Plevier, sp206 Strandplevier, sp144 Zilverplevier, sp083 Grote Zilverreiger, sp082 Kleine Zilverreiger, sp245 Koereiger, sp085 Kwak, sp084 Purperreiger, sp108 Grote Karekiet, sp110 Rietzanger, sp153 Bonte Strandloper, sp159 Bosruiter, sp158 Groenpootruiter, sp155 Oeverloper, sp217 Poelruiter, sp148 Regenwulp, sp149 Rosse Grutto, sp150 Steenloper, sp156 Witgat, sp157 Zwarte Ruiter, sp019 Groene Specht, sp017 Kleine Bonte Specht, sp020 Middelste Bonte Specht, sp018 Zwarte Specht, sp282 Roze Spreeuw, sp034 Staartmees, sp167 Grote Stern, sp166 Noordse Stern, sp041 Appelvink, sp040 Goudvink, sp039 Kneu, sp042 Roodmus, sp038 Sijs, sp177 Bonte Vliegenvanger, sp178 Gekraagde Roodstaart, sp176 Grauwe Vliegenvanger, sp053 Roodborsttapuit, sp051 Zwarte Roodstaart, sp113 Wielewaal, sp062 Braamsluiper, sp060 Tuinfluiter, sp116 Oeverzwaluw, sp126 Knobbelzwaan
 
