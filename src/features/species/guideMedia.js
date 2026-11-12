@@ -5694,6 +5694,116 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "sourceAudit": "2026-11-12",
       "age": "juvenile"
     }
+  },
+  "sp051": {
+    "adult_m": {
+      "file": "Rabiruivo-preto, macho, Black Redstart, male (51131070116).jpg",
+      "nl": "Zwarte Roodstaart",
+      "latin": "Phoenicurus ochruros",
+      "author": "Luiz Lapa",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Rabiruivo-preto%2C_macho%2C_Black_Redstart%2C_male_%2851131070116%29.jpg",
+      "showSourceLink": true,
+      "alt": "Volwassen mannetje Zwarte Roodstaart volledig in zijaanzicht, met donkere borst, lichte vleugelvlek en roestrode staart.",
+      "note": "Volwassen mannetje Zwarte Roodstaart volledig in zijaanzicht, met donkere borst, lichte vleugelvlek en roestrode staart.",
+      "modifications": "Zo nodig verkleind tot maximaal 1600 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.",
+      "reviewed": "2026-11-12",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwarte-roodstaart",
+      "visualCheck": "Volwassen mannetje Zwarte Roodstaart volledig in zijaanzicht, met donkere borst, lichte vleugelvlek en roestrode staart.",
+      "verification": "De fotograaf benoemt een mannetje Zwarte Roodstaart in Portugal. Het volwassen donkere kleed en de roestrode staart zijn zichtbaar.",
+      "width": 1600,
+      "height": 1092,
+      "image": "/assets/species/plumage/sp051-hero-male.webp",
+      "sha1": "82f86293d1ac7aa612be53b37f1835c146ba9ae0",
+      "sourceAudit": "2026-11-12",
+      "sex": "male",
+      "age": "adult"
+    },
+    "juv": {
+      "file": "Phoenicurus ochruros juvenile Chastel 20190512 t130014.jpg",
+      "nl": "Zwarte Roodstaart",
+      "latin": "Phoenicurus ochruros",
+      "author": "Marie-Lan Taÿ Pamart",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Phoenicurus_ochruros_juvenile_Chastel_20190512_t130014.jpg",
+      "showSourceLink": true,
+      "alt": "Jonge Zwarte Roodstaart op een stenen rand met een grijsbruine borst en roestrode staart.",
+      "note": "Jonge Zwarte Roodstaart op een stenen rand met een grijsbruine borst en roestrode staart.",
+      "modifications": "Zo nodig verkleind tot maximaal 1400 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.",
+      "reviewed": "2026-11-12",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwarte-roodstaart",
+      "visualCheck": "Jonge Zwarte Roodstaart op een stenen rand met een grijsbruine borst en roestrode staart.",
+      "verification": "De fotograaf benoemt een juveniele Zwarte Roodstaart. Het grijsbruine kleed, de roestrode staart en de lichte snavelhoek passen daarbij.",
+      "width": 1400,
+      "height": 933,
+      "image": "/assets/species/plumage/sp051-juv.webp",
+      "sha1": "0184c0c6b638be643bf08b6c434368c0b9a3c457",
+      "sourceAudit": "2026-11-12",
+      "age": "juvenile"
+    },
+    "adult_f": {
+      "reuseGuidePhoto": true
+    }
+  },
+  "sp177": {
+    "adult_f": {
+      "file": "Ficedula hypoleuca-F-Iski morost.jpg",
+      "nl": "Bonte Vliegenvanger",
+      "latin": "Ficedula hypoleuca",
+      "author": "Jernej Polajnar",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Ficedula_hypoleuca-F-Iski_morost.jpg",
+      "showSourceLink": true,
+      "alt": "Vrouwtje Bonte Vliegenvanger in zijaanzicht met bruine bovendelen, een licht vleugelveld en lichte onderzijde.",
+      "note": "Vrouwtje Bonte Vliegenvanger in zijaanzicht met bruine bovendelen, een licht vleugelveld en lichte onderzijde.",
+      "modifications": "Zo nodig verkleind tot maximaal 1400 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.",
+      "reviewed": "2026-11-12",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bonte-vliegenvanger",
+      "visualCheck": "Vrouwtje Bonte Vliegenvanger in zijaanzicht met bruine bovendelen, een licht vleugelveld en lichte onderzijde.",
+      "verification": "De fotograaf benoemt een vrouwtje uit Slovenië. Het licht op de gevouwen vleugel en de lichte onderzijde zijn zichtbaar.",
+      "width": 1400,
+      "height": 943,
+      "image": "/assets/species/plumage/sp177-adult_f.webp",
+      "sha1": "d4b50b9f34d10ddd844013bf08f5446f28d0215e",
+      "sourceAudit": "2026-11-12",
+      "sex": "female",
+      "age": "adult"
+    },
+    "juv": {
+      "file": "iNaturalist photo 695650368",
+      "nl": "Bonte Vliegenvanger",
+      "latin": "Ficedula hypoleuca",
+      "author": "Andrei Orekhov",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://www.inaturalist.org/photos/695650368",
+      "showSourceLink": true,
+      "alt": "Jonge Bonte Vliegenvanger met een lichte vleugeltekening en gevlekte kop en bovendelen, volledig in zijaanzicht.",
+      "note": "Jonge Bonte Vliegenvanger met een lichte vleugeltekening en gevlekte kop en bovendelen, volledig in zijaanzicht.",
+      "modifications": "Zo nodig verkleind tot maximaal 1400 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.",
+      "reviewed": "2026-11-12",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bonte-vliegenvanger",
+      "visualCheck": "Jonge Bonte Vliegenvanger met een lichte vleugeltekening en gevlekte kop en bovendelen, volledig in zijaanzicht.",
+      "verification": "De iNaturalist-onderzoekswaarneming bevestigt de soort en is geannoteerd als juveniel. Het gevlekte kleed is zichtbaar.",
+      "width": 640,
+      "height": 800,
+      "image": "/assets/species/plumage/sp177-juv.webp",
+      "sha1": "12aca2498f3c60ca490f0c5c2495f5a343a8369f",
+      "sourceAudit": "2026-11-12",
+      "age": "juvenile",
+      "observation": "https://www.inaturalist.org/observations/380250332"
+    },
+    "adult_m": {
+      "reuseGuidePhoto": true
+    }
+  },
+  "sp053": {
+    "adult_m": {
+      "reuseGuidePhoto": true
+    }
   }
 });
 export const GUIDE_HEROES = Object.freeze({
@@ -5737,7 +5847,8 @@ export const GUIDE_HEROES = Object.freeze({
   "sp106": "/assets/species/plumage/sp106-hero-male.webp",
   "sp114": "/assets/species/plumage/sp114-hero-male.webp",
   "sp115": "/assets/species/plumage/sp115-hero-adult.webp",
-  "sp126": "/assets/species/plumage/sp126-hero-male.webp"
+  "sp126": "/assets/species/plumage/sp126-hero-male.webp",
+  "sp051": "/assets/species/plumage/sp051-hero-male.webp"
 });
 export const GUIDE_POSES = Object.freeze({
   "sp008": [

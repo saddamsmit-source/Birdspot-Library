@@ -2955,7 +2955,7 @@
       "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bonte-vliegenvanger",
       "edition": "Online bron",
       "scope": "Nederland",
-      "confirms": "Herkenning voor de vergelijking",
+      "confirms": "Herkenning, geluid, leefgebied en leefwijze",
       "checked": "2026-11-12",
       "certainty": "hoog",
       "publisher": "Vogelbescherming Nederland"
@@ -2966,7 +2966,7 @@
       "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwarte-roodstaart",
       "edition": "Online bron",
       "scope": "Nederland",
-      "confirms": "Herkenning voor de vergelijking",
+      "confirms": "Herkenning, geluid, leefgebied en leefwijze",
       "checked": "2026-11-12",
       "certainty": "hoog",
       "publisher": "Vogelbescherming Nederland"
@@ -3168,6 +3168,105 @@
       "checked": "2026-11-12",
       "certainty": "hoog",
       "publisher": "Sovon Vogelonderzoek Nederland"
+    },
+    "VB_PAAPJE": {
+      "register": "NL07",
+      "label": "Vogelbescherming — Paapje",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/paapje",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Herkenning voor de vergelijking",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "BZH_ZWARTE_ROODSTAART": {
+      "register": "EU07",
+      "label": "Blasco-Zumeta & Heinze — Zwarte Roodstaart",
+      "url": "https://www.blascozumeta.com/specie_files/11210_Phoenicurus_ochruros_E.pdf",
+      "edition": "Online bron",
+      "scope": "Europa",
+      "confirms": "Lengte, herkenning en leeftijdskleden",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Blasco-Zumeta & Heinze"
+    },
+    "SOV_ZWARTE_ROODSTAART": {
+      "register": "NL01",
+      "label": "Sovon — Zwarte Roodstaart",
+      "url": "https://stats.sovon.nl/stats/soort/11210/",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Verspreiding en seizoensvoorkomen",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Sovon Vogelonderzoek Nederland"
+    },
+    "VB_ROODBORSTTAPUIT": {
+      "register": "NL07",
+      "label": "Vogelbescherming — Roodborsttapuit",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/roodborsttapuit",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Herkenning, geluid, leefgebied en leefwijze",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "BZH_ROODBORSTTAPUIT": {
+      "register": "EU07",
+      "label": "Blasco-Zumeta & Heinze — Roodborsttapuit",
+      "url": "https://www.blascozumeta.com/specie_files/11393_ENG_Saxicola_rubicola_aranzadi.pdf",
+      "edition": "Online bron",
+      "scope": "Europa",
+      "confirms": "Lengte, leeftijdskleden en onderscheid met Paapje",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Blasco-Zumeta & Heinze"
+    },
+    "SOV_ROODBORSTTAPUIT": {
+      "register": "NL01",
+      "label": "Sovon — Roodborsttapuit",
+      "url": "https://stats.sovon.nl/stats/soort/11390/",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Verspreiding en seizoensvoorkomen",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Sovon Vogelonderzoek Nederland"
+    },
+    "BZH_BONTE_VLIEGENVANGER": {
+      "register": "EU07",
+      "label": "Blasco-Zumeta & Heinze — Bonte Vliegenvanger",
+      "url": "https://www.blascozumeta.com/specie_files/13490_Ficedula_hypoleuca_E.pdf",
+      "edition": "Online bron",
+      "scope": "Europa",
+      "confirms": "Lengte, leeftijd, geslacht en variatie van het mannetjeskleed",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Blasco-Zumeta & Heinze"
+    },
+    "SOV_BONTE_VLIEGENVANGER": {
+      "register": "NL01",
+      "label": "Sovon — Bonte Vliegenvanger",
+      "url": "https://stats.sovon.nl/stats/soort/13490/",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Verspreiding en seizoensvoorkomen",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Sovon Vogelonderzoek Nederland"
+    },
+    "NABU_BONTE_VLIEGENVANGER": {
+      "register": "EU",
+      "label": "NABU — Bonte Vliegenvanger",
+      "url": "https://www.nabu.de/natur-und-artenwissen/voegel/vogelportraets/trauerschnaepper",
+      "edition": "Online soortportret",
+      "scope": "Duitsland",
+      "confirms": "Lichaamslengte 12–13 cm",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Naturschutzbund Deutschland"
     }
   },
   "sp021": {
@@ -17537,6 +17636,541 @@
         "text": "Veel Nederlandse vogels blijven in de omgeving. In het najaar trekken ook vogels uit andere delen van Europa door.",
         "sources": [
           "VB_APPELVINK"
+        ],
+        "kind": "trek"
+      }
+    ],
+    "discrepancies": [],
+    "open": []
+  },
+  "sp051": {
+    "summary": {
+      "text": "Slanke roodstaart met een roestrode staart. Het volwassen mannetje heeft doorgaans een donkergrijze tot zwarte kop en borst.",
+      "sources": [
+        "VB_ZWARTE_ROODSTAART",
+        "BZH_ZWARTE_ROODSTAART"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Roestrode staart met donkere middelste staartveren.",
+        "sources": [
+          "VB_ZWARTE_ROODSTAART",
+          "BZH_ZWARTE_ROODSTAART"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Volwassen mannetje met donker gezicht en borst, vaak met een licht vleugelveld.",
+        "sources": [
+          "VB_ZWARTE_ROODSTAART",
+          "BZH_ZWARTE_ROODSTAART"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Vrouwtje met koele grijsbruine bovendelen en onderzijde.",
+        "sources": [
+          "VB_ZWARTE_ROODSTAART",
+          "BZH_ZWARTE_ROODSTAART"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "caution": {
+      "text": "De roestrode staart komt ook bij Gekraagde Roodstaart voor. Een jong mannetje kan grijsbruin zijn en op een vrouwtje lijken.",
+      "sources": [
+        "VB_ZWARTE_ROODSTAART",
+        "BZH_ZWARTE_ROODSTAART"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Voorhoofd en onderzijde",
+        "where": "Bekijk kop en onderzijde bij egaal daglicht.",
+        "this": "Volwassen mannetje donker op kop en borst. Een vrouwtje oogt doorgaans koeler grijsbruin.",
+        "other": "Voorjaarsmannetje met wit voorhoofd en oranjerode borst. Vrouwtje doorgaans warmer beige.",
+        "vs": [
+          "sp178"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Vergelijk vogels van hetzelfde geslacht en kijk bij bruine vogels naar meerdere kenmerken.",
+        "exceptions": "Jonge mannetjes kunnen bruin zijn. Beide soorten hebben een roestrode staart.",
+        "supporting": "Gebruik bij twijfel de zang en het leefgebied.",
+        "sources": [
+          "VB_ZWARTE_ROODSTAART",
+          "BZH_ZWARTE_ROODSTAART",
+          "VB_GEKRAAGDE_ROODSTAART"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp178",
+        "why": "Bij bruine vogels helpt vooral de tint van de onderzijde samen met andere kenmerken.",
+        "sources": [
+          "VB_ZWARTE_ROODSTAART",
+          "VB_GEKRAAGDE_ROODSTAART"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "text": "Het volwassen mannetje is doorgaans donkergrijs tot zwart op kop en borst, met een roestrode staart en vaak een licht vleugelveld.",
+        "sources": [
+          "VB_ZWARTE_ROODSTAART",
+          "BZH_ZWARTE_ROODSTAART"
+        ],
+        "topic": "geslacht"
+      },
+      {
+        "text": "Een juveniele vogel is grijsbruin met een roestrode staart. Leeftijd en geslacht vragen bij latere bruine kleden extra voorzichtigheid.",
+        "sources": [
+          "VB_ZWARTE_ROODSTAART",
+          "BZH_ZWARTE_ROODSTAART"
+        ],
+        "topic": "leeftijd"
+      },
+      {
+        "text": "Het vrouwtje is overwegend koel grijsbruin, met een roestrode staart.",
+        "sources": [
+          "VB_ZWARTE_ROODSTAART",
+          "BZH_ZWARTE_ROODSTAART"
+        ],
+        "topic": "geslacht"
+      }
+    ],
+    "voice": [
+      {
+        "text": "Zang met knarsende tonen, vaak vanaf een hoge post op een gebouw.",
+        "sources": [
+          "VB_ZWARTE_ROODSTAART"
+        ],
+        "kind": "zang"
+      }
+    ],
+    "basis": {
+      "biometrics": [
+        {
+          "field": "length",
+          "unit": "cm",
+          "display": "ca. 13–15 cm",
+          "values": [
+            {
+              "source": "VB_ZWARTE_ROODSTAART",
+              "min": 13,
+              "max": 14.5
+            },
+            {
+              "source": "BZH_ZWARTE_ROODSTAART",
+              "min": 13,
+              "max": 15
+            }
+          ],
+          "note": "Afgeronde onder- en bovengrens op basis van de twee bronwaarden."
+        }
+      ]
+    },
+    "habitat": [
+      {
+        "text": "Droge, open plekken met stenige structuren, zoals industriegebieden, nieuwbouw en boerenerven. In het oorspronkelijke leefgebied ook rotsachtig terrein.",
+        "sources": [
+          "VB_ZWARTE_ROODSTAART",
+          "SOV_ZWARTE_ROODSTAART"
+        ],
+        "kind": "nederland"
+      }
+    ],
+    "status": [
+      {
+        "text": "Nederlandse broedvogel en doortrekker. In zachte winters blijven enkele vogels aanwezig.",
+        "sources": [
+          "VB_ZWARTE_ROODSTAART",
+          "SOV_ZWARTE_ROODSTAART"
+        ],
+        "kind": "voorkomen"
+      }
+    ],
+    "life": [
+      {
+        "text": "Eet vooral insecten en spinnen. In de herfst ook zaden, bessen en ander fruit.",
+        "sources": [
+          "VB_ZWARTE_ROODSTAART"
+        ],
+        "kind": "voedsel"
+      },
+      {
+        "text": "Broedt op beschutte richels en in holten van gebouwen, muren en andere stenige structuren.",
+        "sources": [
+          "VB_ZWARTE_ROODSTAART"
+        ],
+        "kind": "broeden"
+      },
+      {
+        "text": "Vogels uit Noordwest-Europa trekken vooral van augustus tot oktober naar Zuidwest-Europa en Noord-Afrika. In maart en april keren ze terug.",
+        "sources": [
+          "VB_ZWARTE_ROODSTAART"
+        ],
+        "kind": "trek"
+      }
+    ],
+    "discrepancies": [],
+    "open": []
+  },
+  "sp053": {
+    "summary": {
+      "text": "Compacte vogel van open terrein. Het mannetje heeft in broedkleed een zwarte kop, witte zijhals en oranje borst.",
+      "sources": [
+        "VB_ROODBORSTTAPUIT",
+        "BZH_ROODBORSTTAPUIT"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Vaak rechtop op een lage uitkijkpost, zoals een stengel of struikpunt.",
+        "sources": [
+          "VB_ROODBORSTTAPUIT",
+          "BZH_ROODBORSTTAPUIT"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Mannetje in broedkleed met zwarte kop en witte zijhals.",
+        "sources": [
+          "VB_ROODBORSTTAPUIT",
+          "BZH_ROODBORSTTAPUIT"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Vrouwtje bruiner, met een minder opvallende oranje borst.",
+        "sources": [
+          "VB_ROODBORSTTAPUIT",
+          "BZH_ROODBORSTTAPUIT"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "caution": {
+      "text": "Gebruik bij een bruine vogel ook de wenkbrauw en staartbasis. Een vrouwtje of juveniel kan op een Paapje lijken.",
+      "sources": [
+        "VB_ROODBORSTTAPUIT",
+        "BZH_ROODBORSTTAPUIT"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Wenkbrauw en staartbasis",
+        "where": "Bekijk de kop van opzij en let op de staart wanneer deze opent.",
+        "this": "Bij vrouwtjes doorgaans een zwakkere wenkbrauw. De staart heeft geen brede witte zijvelden aan de basis.",
+        "other": "Lichte wenkbrauw en wit aan de basis van de buitenste staartveren.",
+        "vs": [
+          "sp286"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Beoordeel de wenkbrauw en het staartpatroon samen bij goed zicht.",
+        "exceptions": "De staartbasis is in rust vaak bedekt. Juveniele vogels zijn lastiger te onderscheiden.",
+        "supporting": "Een rechtopstaande houding op een paaltje komt bij beide soorten voor.",
+        "sources": [
+          "VB_ROODBORSTTAPUIT",
+          "BZH_ROODBORSTTAPUIT",
+          "VB_PAAPJE"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp286",
+        "why": "Bij bruine vogels zijn wenkbrauw en staarttekening bruikbaarder dan de kleur van de borst alleen.",
+        "sources": [
+          "VB_ROODBORSTTAPUIT",
+          "VB_PAAPJE"
+        ]
+      },
+      {
+        "id": "sp050",
+        "why": "Bij een oranje borst helpen de vorm van het oranje vlak en het kopprofiel.",
+        "sources": [
+          "VB_ROODBORSTTAPUIT",
+          "VB_ROODBORST"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "text": "Het mannetje heeft in broedkleed een zwarte kop, witte zijhals en oranje borst.",
+        "sources": [
+          "VB_ROODBORSTTAPUIT",
+          "BZH_ROODBORSTTAPUIT"
+        ],
+        "topic": "geslacht"
+      },
+      {
+        "text": "Jonge vogels zijn bruiner en lichter getekend dan het volwassen mannetje. De lichte veerranden geven het verse kleed een gespikkeld uiterlijk.",
+        "sources": [
+          "VB_ROODBORSTTAPUIT",
+          "BZH_ROODBORSTTAPUIT"
+        ],
+        "topic": "leeftijd"
+      },
+      {
+        "text": "Het vrouwtje heeft een bruin getekende kop en rug, met een minder felle oranje borst dan het mannetje.",
+        "sources": [
+          "VB_ROODBORSTTAPUIT",
+          "BZH_ROODBORSTTAPUIT"
+        ],
+        "topic": "geslacht"
+      }
+    ],
+    "voice": [
+      {
+        "text": "Hoge roep gevolgd door droge tikken die klinken als twee steentjes tegen elkaar.",
+        "sources": [
+          "VB_ROODBORSTTAPUIT"
+        ],
+        "kind": "roep"
+      }
+    ],
+    "basis": {
+      "biometrics": [
+        {
+          "field": "length",
+          "unit": "cm",
+          "display": "ca. 12–14 cm",
+          "values": [
+            {
+              "source": "VB_ROODBORSTTAPUIT",
+              "min": 11.5,
+              "max": 13
+            },
+            {
+              "source": "BZH_ROODBORSTTAPUIT",
+              "min": 13,
+              "max": 15
+            }
+          ],
+          "note": "Afgeronde onder- en bovengrens op basis van de twee bronwaarden."
+        }
+      ]
+    },
+    "habitat": [
+      {
+        "text": "Structuurrijk open terrein met lage uitkijkposten, zoals heide, duin, ruige bermen en halfopen boerenland.",
+        "sources": [
+          "VB_ROODBORSTTAPUIT",
+          "SOV_ROODBORSTTAPUIT"
+        ],
+        "kind": "nederland"
+      }
+    ],
+    "status": [
+      {
+        "text": "Nederlandse broedvogel. Vooral in zachte winters blijft een deel van de vogels aanwezig.",
+        "sources": [
+          "VB_ROODBORSTTAPUIT",
+          "SOV_ROODBORSTTAPUIT"
+        ],
+        "kind": "voorkomen"
+      }
+    ],
+    "life": [
+      {
+        "text": "Vangt vooral insecten en eet ook andere kleine ongewervelden, zaden en bessen.",
+        "sources": [
+          "VB_ROODBORSTTAPUIT"
+        ],
+        "kind": "voedsel"
+      },
+      {
+        "text": "Bouwt een verborgen nest laag in dichte begroeiing, vlak bij de grond.",
+        "sources": [
+          "VB_ROODBORSTTAPUIT"
+        ],
+        "kind": "broeden"
+      },
+      {
+        "text": "Veel vogels vertrekken in september en oktober naar zuidwestelijk Europa of Noord-Afrika. De eerste keren vanaf februari terug.",
+        "sources": [
+          "VB_ROODBORSTTAPUIT"
+        ],
+        "kind": "trek"
+      }
+    ],
+    "discrepancies": [],
+    "open": []
+  },
+  "sp177": {
+    "summary": {
+      "text": "Kleine vliegenvanger met een opvallend licht veld op de gevouwen vleugel. De bovendelen zijn zwart, grijsbruin of bruin.",
+      "sources": [
+        "VB_BONTE_VLIEGENVANGER",
+        "BZH_BONTE_VLIEGENVANGER"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Duidelijk licht vleugelveld, ook zichtbaar bij veel bruine vogels.",
+        "sources": [
+          "VB_BONTE_VLIEGENVANGER",
+          "BZH_BONTE_VLIEGENVANGER"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Lichte keel en onderzijde. Een donker mannetje kan een lichte voorhoofdsvlek hebben.",
+        "sources": [
+          "VB_BONTE_VLIEGENVANGER",
+          "BZH_BONTE_VLIEGENVANGER"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Jaagt op insecten vanaf een zitpost en keert daar vaak terug.",
+        "sources": [
+          "VB_BONTE_VLIEGENVANGER",
+          "BZH_BONTE_VLIEGENVANGER"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "caution": {
+      "text": "Mannetjes in Nederland zijn vaak grijsbruin. Donkere bovendelen alleen zijn onvoldoende om het geslacht te bepalen.",
+      "sources": [
+        "VB_BONTE_VLIEGENVANGER",
+        "BZH_BONTE_VLIEGENVANGER"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Licht vleugelveld en streping",
+        "where": "Bekijk de gevouwen vleugel, kruin en borst.",
+        "this": "Duidelijk licht vleugelveld, ook bij bruine vogels. Borst doorgaans betrekkelijk egaal.",
+        "other": "Vleugel zonder opvallend wit veld. Volwassen vogels hebben fijne streping op kruin en borst.",
+        "vs": [
+          "sp176"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Gebruik de vleugeltekening samen met kruin en borst.",
+        "exceptions": "Beide soorten jagen vanaf een uitkijkpost. Bij jonge vogels kan lichte vlekking het onderscheid lastiger maken.",
+        "supporting": "Grauwe Vliegenvanger oogt doorgaans slanker.",
+        "sources": [
+          "VB_BONTE_VLIEGENVANGER",
+          "BZH_BONTE_VLIEGENVANGER",
+          "VB_GRAUWE_VLIEGENVANGER"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp176",
+        "why": "Het verschil in vleugeltekening helpt ook bij grijsbruine Bonte Vliegenvangers.",
+        "sources": [
+          "VB_BONTE_VLIEGENVANGER",
+          "VB_GRAUWE_VLIEGENVANGER"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "text": "Volwassen mannetjes variëren van zwart-wit tot grijsbruin. Een lichte voorhoofdsvlek is vaak zichtbaar in broedkleed.",
+        "sources": [
+          "VB_BONTE_VLIEGENVANGER",
+          "BZH_BONTE_VLIEGENVANGER"
+        ],
+        "topic": "geslacht"
+      },
+      {
+        "text": "Jonge vogels in vers jeugdkleed hebben een gevlekt uiterlijk. Bekijk de vleugeltekening en de bouw om verwarring met andere jonge vliegenvangers te beperken.",
+        "sources": [
+          "VB_BONTE_VLIEGENVANGER",
+          "BZH_BONTE_VLIEGENVANGER"
+        ],
+        "topic": "leeftijd"
+      },
+      {
+        "text": "Het vrouwtje is meestal bruin van boven en licht van onderen, met een licht veld op de gevouwen vleugel.",
+        "sources": [
+          "VB_BONTE_VLIEGENVANGER",
+          "BZH_BONTE_VLIEGENVANGER"
+        ],
+        "topic": "geslacht"
+      }
+    ],
+    "voice": [
+      {
+        "text": "Een oplopende contactroep. De zang begint met heldere tonen die in hoogte wisselen.",
+        "sources": [
+          "VB_BONTE_VLIEGENVANGER"
+        ],
+        "kind": "roep"
+      }
+    ],
+    "basis": {
+      "biometrics": [
+        {
+          "field": "length",
+          "unit": "cm",
+          "display": "ca. 12–13 cm",
+          "values": [
+            {
+              "source": "VB_BONTE_VLIEGENVANGER",
+              "min": 13,
+              "max": 13
+            },
+            {
+              "source": "BZH_BONTE_VLIEGENVANGER",
+              "min": 12,
+              "max": 13
+            },
+            {
+              "source": "NABU_BONTE_VLIEGENVANGER",
+              "min": 12,
+              "max": 13
+            }
+          ],
+          "note": "Afgeronde onder- en bovengrens op basis van de twee bronwaarden."
+        }
+      ]
+    },
+    "habitat": [
+      {
+        "text": "Broedt in open loof- of gemengd bos, parken en tuinen met geschikte holten of nestkasten.",
+        "sources": [
+          "VB_BONTE_VLIEGENVANGER",
+          "SOV_BONTE_VLIEGENVANGER"
+        ],
+        "kind": "nederland"
+      }
+    ],
+    "status": [
+      {
+        "text": "Nederlandse broedvogel en doortrekker. De soort overwintert in tropisch West-Afrika.",
+        "sources": [
+          "VB_BONTE_VLIEGENVANGER",
+          "SOV_BONTE_VLIEGENVANGER"
+        ],
+        "kind": "voorkomen"
+      }
+    ],
+    "life": [
+      {
+        "text": "Vangt insecten vanuit een zitpost, onder meer vliegen, muggen en vlinders.",
+        "sources": [
+          "VB_BONTE_VLIEGENVANGER"
+        ],
+        "kind": "voedsel"
+      },
+      {
+        "text": "Broedt in boomholten of nestkasten.",
+        "sources": [
+          "VB_BONTE_VLIEGENVANGER"
+        ],
+        "kind": "broeden"
+      },
+      {
+        "text": "Trekt via West-Europa en het Iberisch Schiereiland naar tropisch West-Afrika. Voorjaarstrek in Nederland vooral van half april tot begin juni.",
+        "sources": [
+          "VB_BONTE_VLIEGENVANGER"
         ],
         "kind": "trek"
       }
