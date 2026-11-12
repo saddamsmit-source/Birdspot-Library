@@ -4526,6 +4526,31 @@
         "age": "juvenile",
         "observation": "https://www.inaturalist.org/observations/316748914",
         "note": "Jonge Grutto in ondiep water. Warme halskleur en lichte randen aan de donkere bovenveren."
+      },
+      "adult_m": {
+        "file": "Black-tailed godwit (Limosa limosa) male breeding.jpg",
+        "nl": "Grutto",
+        "latin": "Limosa limosa",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Black-tailed_godwit_%28Limosa_limosa%29_male_breeding.jpg",
+        "showSourceLink": true,
+        "alt": "Grutto in zijaanzicht met lange vrijwel rechte snavel. Mannetje in broedkleed volgens de fotograaf.",
+        "note": "Mannetje in broedkleed volgens fotograaf Charles J. Sharp.",
+        "label": "Mannetje",
+        "modifications": "Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+        "reviewed": "2026-11-12",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grutto",
+        "visualCheck": "Grutto in zijaanzicht met lange vrijwel rechte snavel. Mannetje in broedkleed volgens de fotograaf.",
+        "verification": "De fotograaf duidt dit individuele exemplaar aan als mannetje in broedkleed. Opname in mei. De foto toont de snavel, lichaamsbouw en het kleed.",
+        "width": 1400,
+        "height": 933,
+        "image": "/assets/species/plumage/sp101-hero-male.webp",
+        "sha1": "7eaee6dc1bff268b7de6a412fd57c39bc2d777cf",
+        "sourceAudit": "2026-11-12",
+        "age": "adult",
+        "sex": "male"
       }
     }
   },
@@ -8587,7 +8612,8 @@
     "sp251": "/assets/species/plumage/sp251-hero-male.webp",
     "sp029": "/assets/species/plumage/sp029-adult_m.webp",
     "sp099": "/assets/species/plumage/sp099-adult_m.webp",
-    "sp037": "/assets/species/plumage/sp037-adult_m.webp"
+    "sp037": "/assets/species/plumage/sp037-adult_m.webp",
+    "sp101": "/assets/species/plumage/sp101-hero-male.webp"
   },
   "retired": {
     "sp118": [

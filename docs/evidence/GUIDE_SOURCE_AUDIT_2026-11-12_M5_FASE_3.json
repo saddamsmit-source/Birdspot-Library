@@ -70,5 +70,23 @@
       "Soort en licentie bevestigd op de Commons-bestandspagina. Bouw en snavelvorm visueel getoetst. Geslacht onbekend."
     ],
     "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp101-hero-male.webp",
+    "species": "sp101",
+    "source": "https://commons.wikimedia.org/wiki/File:Black-tailed_godwit_%28Limosa_limosa%29_male_breeding.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/82/Black-tailed_godwit_%28Limosa_limosa%29_male_breeding.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+    "sourceTitle": "Black-tailed godwit (Limosa limosa) male breeding.jpg",
+    "sourceAuthor": "Charles J. Sharp",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sameShot": true,
+    "method": "Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "72914024e0535162c44515143eaf650a90f5770f456720d68a841bb949ae4f51",
+    "sha1": "7eaee6dc1bff268b7de6a412fd57c39bc2d777cf",
+    "taxonInSource": "Limosa limosa",
+    "annotations": [
+      "De fotograaf duidt dit individuele exemplaar aan als mannetje in broedkleed. Opname in mei. De foto toont de snavel, lichaamsbouw en het kleed."
+    ],
+    "auditDate": "2026-11-12"
   }
 ]

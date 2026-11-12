@@ -4279,6 +4279,16 @@
    "airborne": false,
    "source": "beeldinspectie 12-11-2026",
    "note": "Rosse Grutto staat bij de waterlijn."
+  },
+  "/assets/species/plumage/sp101-hero-male.webp": {
+   "refs": [
+    "sp101 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "7eaee6dc1bff268b7de6a412fd57c39bc2d777cf",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Staande Grutto in ondiep water."
   }
  }
 }

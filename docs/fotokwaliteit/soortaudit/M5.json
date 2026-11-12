@@ -290,8 +290,15 @@
     },
     "sp101": {
       "assets": {
+        "/assets/species/plumage/sp101-hero-male.webp": {
+          "role": "Hoofdfoto (Mannetje)",
+          "content": "Grutto in zijaanzicht met lange vrijwel rechte snavel. Mannetje in broedkleed volgens de fotograaf.",
+          "sexAge": "De fotograaf duidt dit individuele exemplaar aan als mannetje in broedkleed. Opname in mei. De foto toont de snavel, lichaamsbouw en het kleed.",
+          "quality": "Volledig, rustig zijaanzicht met zicht op snavel en kleed.",
+          "verdict": "goedgekeurd"
+        },
         "/assets/species/sp101.webp": {
-          "role": "Hoofdfoto",
+          "role": "Overige herkenningsfoto",
           "content": "Grutto in gras met lange vrijwel rechte snavel en warme hals.",
           "sexAge": "Volwassen type. Geslacht onbekend.",
           "quality": "Volledige vogel in een rustig zijaanzicht.",
@@ -313,16 +320,17 @@
         }
       },
       "corrections": [
-        "Kennisprofiel, juvenielenfoto en vergelijking met Rosse Grutto toegevoegd. Spanwijdte uit twee bronbereiken berekend."
+        "Kennisprofiel, juvenielenfoto en vergelijking met Rosse Grutto toegevoegd. Spanwijdte uit twee bronbereiken berekend.",
+        "Volwassen mannetje volgens de oorspronkelijke fotograaf als hoofdfoto. Het vorige portret staat bij Overige."
       ],
       "missing": [
-        "Foto van een met bronbewijs bevestigd volwassen mannetje.",
         "Foto van een met bronbewijs bevestigd volwassen vrouwtje."
       ],
       "wishes": [],
-      "sexPolicy": "Roodintensiteit en afmetingen overlappen. Gebruik neutrale labels voor de huidige foto’s.",
+      "sexPolicy": "De hoofdfoto heeft een geslachtsaanduiding van de fotograaf. Andere foto’s houden een neutraal label.",
       "uncertain": [
-        "Voor de lengte is één vergelijkbare bronband opgenomen. Het eerdere bereik is behouden en het verschil staat in het profiel."
+        "Voor de lengte is één vergelijkbare bronband opgenomen. Het eerdere bereik is behouden en het verschil staat in het profiel.",
+        "Bekeken vrouwtjeskandidaten hebben onvoldoende bewijs voor het geslacht van het afgebeelde individu."
       ],
       "date": "2026-11-12"
     },
