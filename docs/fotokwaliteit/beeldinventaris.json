@@ -4559,6 +4559,96 @@
    "airborne": false,
    "source": "beeldinspectie 12-11-2026",
    "note": "Jonge Geelgors van opzij in de hand, met bruine streping op kop en rug en lichte randen aan de vleugelveren."
+  },
+  "/assets/species/plumage/sp118-adult_f.webp": {
+   "refs": [
+    "sp118 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "967eb350597d013ec6195c0162775c026c9b0ce5",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Vrouwtje Rietgors op een tak, met bruine kruin, lichte wenkbrauw en donkere borststrepen."
+  },
+  "/assets/species/plumage/sp118-juv.webp": {
+   "refs": [
+    "sp118 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "2560b12ebf82684bff5ef4aac3ef03f590f48e27",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Zeer jonge Rietgors tussen gras met een open snavel en verse bruine en lichte veertjes."
+  },
+  "/assets/species/plumage/sp126-hero-male.webp": {
+   "refs": [
+    "sp126 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "6e63d6c1b49d1e03b6693db4a52010279dbe8ce7",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Mannetje Knobbelzwaan in zijaanzicht op rustig water, met witte veren, oranjerode snavel en zwarte knobbel."
+  },
+  "/assets/species/plumage/sp126-adult_f.webp": {
+   "refs": [
+    "sp126 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "35d43de80042f5d51d3f032887f4839cd2e7cb29",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Vrouwtje Knobbelzwaan tussen lage bloemen en grassen, met witte hals, oranjerode snavel en zwarte snavelbasis."
+  },
+  "/assets/species/plumage/sp143-juv.webp": {
+   "refs": [
+    "sp143 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "851fe75b07381452d276ad884bb98622cc78acc4",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Kluut langs ondiep water, met bruinere rug- en vleugelbanden, lange poten en een omhooggebogen snavel."
+  },
+  "/assets/species/sp187.webp": {
+   "refs": [
+    "sp187 GUIDE_PHOTOS"
+   ],
+   "sha1": "7391f3ae249ad643d2cfd379e40aa9caaaa911f3",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Wilde Zwaan op water met een rechtere hals en grote gele snavelvlek met zwarte punt."
+  },
+  "/assets/species/plumage/sp118-juv-later.webp": {
+   "refs": [
+    "sp118 GUIDE_POSES[0]"
+   ],
+   "sha1": "b6b228abc5062ced3d644fcc7bc4869fb179794c",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K05 fase 4 (2026-11-12)",
+   "note": "Jonge Rietgors op een rietstengel, met bruine bovendelen en een gestreepte flank."
+  },
+  "/assets/species/plumage/sp143-hero-male.webp": {
+   "refs": [
+    "sp143 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "6dda9e3f5ddb7da23377e0ea781df5a895958ef4",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K05 fase 4 (2026-11-12)",
+   "note": "Mannetje Kluut op slik in zijaanzicht, met een lange opgewipte snavel, zwart-witte tekening en kleurringen."
+  },
+  "/assets/species/plumage/sp143-adult_f.webp": {
+   "refs": [
+    "sp143 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "18574e7fc57a00aefbfd28ba84f524c444679226",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K05 fase 4 (2026-11-12)",
+   "note": "Vrouwtje Kluut op slik, met zwart-witte tekening, lange poten en een omhooggebogen snavel."
   }
  }
 }

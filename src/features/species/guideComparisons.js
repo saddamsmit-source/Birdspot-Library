@@ -1131,6 +1131,18 @@ export const GUIDE_COMPARISONS = [
     ],
     tip: 'Vrouwtjes en jonge vogels zijn minder uitgesproken. Bekijk ook de stuit en let op de omgeving.',
   },
+  {
+    label: 'Knobbelzwaan en Wilde Zwaan · snavel en hals',
+    birds: [
+      {id: 'sp126', source: 'knobbelzwaan', marks: 'Oranjerode snavel met een zwarte knobbel aan de basis. Bij rustig zwemmen vaak een gebogen hals.'},
+      {id: 'sp187', source: 'wilde-zwaan', marks: 'Grote driehoekige gele snavelvlek en zwarte punt. Bij zwemmen doorgaans een rechtere hals.'},
+    ],
+    rows: [
+      {label: 'Snavel', values: ['Oranjerood met zwarte knobbel', 'Geel met zwarte punt']},
+      {label: 'Houding', values: ['Hals vaak gebogen', 'Hals doorgaans rechter']},
+    ],
+    tip: 'Bekijk bij een volwassen vogel de hele snavel van opzij. Gebruik halshouding als extra aanwijzing.',
+  },
 ];
 
 export function comparisonSource(bird) {

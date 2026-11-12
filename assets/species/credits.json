@@ -2578,5 +2578,27 @@
     "sha1": "85b3029d8d93627c4c8cb4b463f61c4bc59ed631",
     "sourceAudit": "2026-11-12",
     "batch": "K05-fase-2-vergelijking"
+  },
+  "sp187": {
+    "file": "WhooperSwan1.jpg",
+    "nl": "Wilde Zwaan",
+    "latin": "Cygnus cygnus",
+    "author": "Andrew Lee",
+    "license": "Public domain",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-self",
+    "source": "https://commons.wikimedia.org/wiki/File:WhooperSwan1.jpg",
+    "showSourceLink": true,
+    "alt": "Wilde Zwaan op water met een rechtere hals en grote gele snavelvlek met zwarte punt.",
+    "modifications": "Uitgesneden rond de vogel en omgezet naar WebP zonder EXIF/GPS/XMP",
+    "reviewed": "2026-11-12",
+    "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wilde-zwaan",
+    "visualCheck": "Wilde Zwaan op water met een rechtere hals en grote gele snavelvlek met zwarte punt.",
+    "verification": "De fotograaf benoemt de Wilde Zwaan en geeft de opname wereldwijd vrij aan het publieke domein. De snaveltekening is zichtbaar.",
+    "width": 1335,
+    "height": 710,
+    "image": "/assets/species/sp187.webp",
+    "sha1": "7391f3ae249ad643d2cfd379e40aa9caaaa911f3",
+    "sourceAudit": "2026-11-12",
+    "batch": "K05-fase-4-vergelijking"
   }
 }
