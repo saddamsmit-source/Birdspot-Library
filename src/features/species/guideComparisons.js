@@ -843,10 +843,10 @@ export const GUIDE_COMPARISONS = [
   {
     label: 'Visdief en Noordse Stern · broedkleed',
     birds: [
-      {id: 'sp165', source: 'visdief', plumage: 'breeding', marks: 'Langere oranjerode snavel, meestal met zwarte punt. De poten zijn langer.'},
-      {id: 'sp166', source: 'noordse-stern', plumage: 'breeding', marks: 'Kortere, doorgaans geheel bloedrode snavel en zeer korte poten.'},
+      {id: 'sp165', source: 'visdief', plumage: 'breeding', marks: 'Langere oranjerode snavel, meestal met zwarte punt. In zit langere poten. In vlucht vaak een donkere wig op de buitenste handpennen.'},
+      {id: 'sp166', source: 'noordse-stern', plumage: 'breeding', marks: 'Kortere, doorgaans geheel bloedrode snavel en zeer korte poten. In vlucht bij goed licht meer doorschijnende handpennen.'},
     ],
-    tip: 'Gebruik snavel en poten samen. Buiten het broedkleed veranderen kleuren en werkt deze combinatie minder goed.',
+    tip: 'Gebruik snavel en poten in zit. Bekijk in vlucht de handpennen. De lichtval bepaalt hoeveel doorschijnendheid je ziet.',
   },
   {
     label: 'Grote Stern en Visdief · broedkleed',
@@ -1078,6 +1078,22 @@ export const GUIDE_COMPARISONS = [
       {id: 'sp149', source: 'rosse-grutto', marks: 'Licht omhooggebogen snavel. In vlucht een gebandeerde staart en geen brede witte vleugelstreep.'},
     ],
     tip: 'Bij een staande vogel helpt de snavelvorm. Bekijk in vlucht ook de staart en vleugels.',
+  },
+  {
+    label: 'Spreeuw en Merel · volwassen',
+    birds: [
+      {id: 'sp112', source: 'spreeuw', plumage: 'adult_m', marks: 'Korte staart en spitse snavel. Het donkere kleed heeft vaak metaalglans of lichte spikkels.'},
+      {id: 'sp045', source: 'merel', plumage: 'adult_m', marks: 'Langere staart. Het mannetje is effen zwart, met een opvallende gele tot oranje oogring.'},
+    ],
+    tip: 'Vergelijk staartlengte en oogring. Tegenlicht kan de glans van een Spreeuw verhullen.',
+  },
+  {
+    label: 'Drieteenstrandloper en Bonte Strandloper · winterkleed',
+    birds: [
+      {id: 'sp152', source: 'drieteenstrandloper', marks: 'Compact, doorgaans bleek, met een korte, vrijwel rechte snavel en vaak een donkere schoudervlek.'},
+      {id: 'sp153', source: 'bonte-strandloper', marks: 'Vaak grijzer bruin. De relatief lange snavel buigt aan het uiteinde omlaag.'},
+    ],
+    tip: 'Bekijk de snavel volledig van opzij. De achterteen ontbreekt bij de Drieteenstrandloper en is vooral van dichtbij bruikbaar.',
   },
 ];
 

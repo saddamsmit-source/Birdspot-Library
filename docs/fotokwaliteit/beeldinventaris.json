@@ -4289,6 +4289,66 @@
    "airborne": false,
    "source": "beeldinspectie 12-11-2026",
    "note": "Staande Grutto in ondiep water."
+  },
+  "/assets/species/plumage/sp112-hero-male.webp": {
+   "refs": [
+    "sp112 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "e6fd37727bc0305bbc2a54a32b3fb5e47b192727",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Mannetje Spreeuw in broedkleed in zijaanzicht, met een korte staart, gele snavel en metaalglans."
+  },
+  "/assets/species/plumage/sp112-adult_f.webp": {
+   "refs": [
+    "sp112 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "e6d144c6b26c24478d5da09935414ca8534fa93f",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Vrouwtje Spreeuw op een boomwortel, met lichte spikkels en gele snavel."
+  },
+  "/assets/species/plumage/sp112-juv.webp": {
+   "refs": [
+    "sp112 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "28cfadd6586bec7cf9b549e3f43edbae8d6c2946",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Spreeuw met grijsbruine kop, donkere snavel en een weinig contrastrijk kleed."
+  },
+  "/assets/species/plumage/sp152-juv.webp": {
+   "refs": [
+    "sp152 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "002adcb3069f9bb33f6032a103902ff0dc5a5b61",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Drieteenstrandloper op kiezels met donkere bovenveren, lichte veerranden en een korte zwarte snavel."
+  },
+  "/assets/species/plumage/sp165-juv.webp": {
+   "refs": [
+    "sp165 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "24541ebccd6f9e8d0eb0d3348b0ae8e28115e26b",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Visdief op een paal met licht voorhoofd, donkere achterkap en bruin getekende bovendelen."
+  },
+  "/assets/species/sp153.webp": {
+   "refs": [
+    "sp153 GUIDE_PHOTOS"
+   ],
+   "sha1": "f8f84c6b4132946f874588b91c9ae4415b094101",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Bonte Strandloper in winterkleed bij het water, met een snavel die aan het uiteinde omlaag buigt."
   }
  }
 }

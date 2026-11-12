@@ -80,7 +80,7 @@ console.log('SA-05 OK — geen verzonnen statussen (onafhankelijk NOT TESTED, on
 // SA-06
 const notAudited = result.filter(r => !r.audited);
 assert.ok(notAudited.every(r => r.verdict === 'NOT TESTED'));
-const newComparisonSpecies = ['sp148', 'sp149'];
+const newComparisonSpecies = ['sp148', 'sp149', 'sp153'];
 for (const id of newComparisonSpecies) assert.ok(result.some(r => r.id === id), `SA-06 ${id} ontbreekt in de fotocollectie`);
 assert.equal(result.length, 134 + newComparisonSpecies.length, `SA-06 onverwacht aantal soorten met gidsfoto's: ${result.length}`);
 console.log(`SA-06 OK — ${notAudited.length} van ${result.length} fotosoorten nog NOT TESTED; rendercontrole telt niet als audit`);
