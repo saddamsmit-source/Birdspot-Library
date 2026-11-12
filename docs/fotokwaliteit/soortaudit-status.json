@@ -1,5 +1,5 @@
 {
- "sha": "e024af25a0f03e387b5adae8fa159947de55d79b",
+ "sha": "b86b1269b01e1de41831290a1ecd8e0113e3a3b0",
  "generated": "2026-11-12",
  "species": [
   {
@@ -2928,9 +2928,119 @@
    "id": "sp038",
    "nameNL": "Sijs",
    "family": "Vinken",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M7",
+   "date": "2026-11-12",
+   "sha": "b86b1269b01e1de41831290a1ecd8e0113e3a3b0",
+   "assets": [
+    {
+     "image": "/assets/species/sp038.webp",
+     "role": "Hoofdfoto (Mannetje)",
+     "content": "Mannetje Sijs met zwarte kruin en geel in vleugel en staart.",
+     "sexAge": "Volwassen mannetje volgens de bestaande bron.",
+     "quality": "Veldkenmerken en silhouet duidelijk zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp038-adult_f.webp",
+     "role": "Verenkleed (Vrouwtje)",
+     "content": "Vrouwtje Sijs op een tak, met een fijne snavel, donkere flankstrepen en geel op de gevouwen vleugel.",
+     "sexAge": "Volwassen vrouwtje volgens fotobron en kleed.",
+     "quality": "Scherp zijaanzicht en leesbare veldkenmerken.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.), CC BY-SA 4.0 · Charles J. Sharp",
+      "annotations": [
+       "De fotograaf benoemt een vrouwtje Sijs in Polen. De fijne snavel en flankstrepen zijn zichtbaar."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp038-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge Sijs bij water, met gestreepte kop en onderzijde en gele accenten op de vleugel.",
+     "sexAge": "Bron bevestigt juveniel. Geslacht onbekend.",
+     "quality": "Kop, snavel en relevante verenkleedkenmerken zijn zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.), CC BY 2.0 · Luiz Lapa",
+      "annotations": [
+       "De fotograaf benoemt een juveniele Sijs uit Portugal onder het synoniem Carduelis spinus. Streping en gele vleugeltekening zijn zichtbaar."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp038-flight.webp",
+     "role": "In vlucht (Mannetje)",
+     "content": "Mannetje in vlucht met zwarte kruin en gele vleugelband.",
+     "sexAge": "Mannetje, volgens de bestaande vluchtbron en het veldkleed.",
+     "quality": "Vrije vlucht. De vleugel is licht bewegingsonscherp.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · john.purvis",
+      "annotations": []
+     },
+     "flight": {
+      "n": 131,
+      "id": "sp038",
+      "nameNL": "Sijs",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": "male",
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 2.0"
+     }
+    }
+   ],
+   "corrections": [
+    "Vrouwtjes- en juvenielenfoto toegevoegd. Kennisprofiel en beeldvergelijking bijgewerkt. De bestaande vluchtfoto is herbeoordeeld."
+   ],
+   "missing": [],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "De geslachtslabels van volwassen vogels volgen bron en zichtbaar verenkleed. Bij juvenielen is het geslacht onbekend.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Snavel, flank en vleugel"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp039",
@@ -2944,17 +3054,250 @@
    "id": "sp040",
    "nameNL": "Goudvink",
    "family": "Vinken",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M7",
+   "date": "2026-11-12",
+   "sha": "b86b1269b01e1de41831290a1ecd8e0113e3a3b0",
+   "assets": [
+    {
+     "image": "/assets/species/sp040.webp",
+     "role": "Hoofdfoto (Mannetje)",
+     "content": "Mannetje Goudvink met zwarte kap, rode wangen en borst.",
+     "sexAge": "Volwassen mannetje volgens de bestaande bron.",
+     "quality": "Veldkenmerken en silhouet duidelijk zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Francis Franklin",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp040-adult_f.webp",
+     "role": "Verenkleed (Vrouwtje)",
+     "content": "Vrouwtje Goudvink op een tak, met een zwarte kap, korte zwarte snavel, beigegrijze onderzijde en witte stuit.",
+     "sexAge": "Volwassen vrouwtje volgens fotobron en kleed.",
+     "quality": "Scherp zijaanzicht en leesbare veldkenmerken.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.), CC BY-SA 3.0 · Francis C. Franklin",
+      "annotations": [
+       "De fotograaf benoemt een vrouwtje Goudvink. Kap, snavel en beigegrijze onderzijde zijn herkenbaar."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp040-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge Goudvink op een tak, met een bruingrijze kop zonder zwarte kap en een lichte vleugelstreep.",
+     "sexAge": "Bron bevestigt juveniel. Geslacht onbekend.",
+     "quality": "Kop, snavel en relevante verenkleedkenmerken zijn zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.), CC BY 4.0 · Andrei Orekhov",
+      "annotations": [
+       "De onderzoekswaarneming heeft de annotatie Juvenile. De kap ontbreekt en de korte dikke snavel is zichtbaar."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp040-flight.webp",
+     "role": "In vlucht (Mannetje)",
+     "content": "Mannetje in vrije vlucht, met rode borst, donkere kop en witte stuit.",
+     "sexAge": "Mannetje, herkenbaar aan de rode onderzijde en zwarte kap.",
+     "quality": "Volledig zijaanzicht in de lucht, inclusief de staart.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Holger Uwe Schmitt",
+      "annotations": []
+     },
+     "flight": {
+      "n": 126,
+      "id": "sp040",
+      "nameNL": "Goudvink",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": "male",
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0"
+     }
+    }
+   ],
+   "corrections": [
+    "Vrouwtjes- en juvenielenfoto toegevoegd. Kennisprofiel en beeldvergelijking bijgewerkt. De bestaande vluchtfoto is herbeoordeeld."
+   ],
+   "missing": [],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "De geslachtslabels van volwassen vogels volgen bron en zichtbaar verenkleed. Bij juvenielen is het geslacht onbekend.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Kap, snavel en vleugelstrepen"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp041",
    "nameNL": "Appelvink",
    "family": "Vinken",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M7",
+   "date": "2026-11-12",
+   "sha": "b86b1269b01e1de41831290a1ecd8e0113e3a3b0",
+   "assets": [
+    {
+     "image": "/assets/species/sp041.webp",
+     "role": "Hoofdfoto (Mannetje)",
+     "content": "Mannetje Appelvink met grote kop, donkere keelvlek en zware snavel.",
+     "sexAge": "Volwassen mannetje volgens de bestaande bron.",
+     "quality": "Veldkenmerken en silhouet duidelijk zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp041-adult_f.webp",
+     "role": "Verenkleed (Vrouwtje)",
+     "content": "Vrouwtje Appelvink in zijaanzicht op hout, met een forse snavel, grijze nek en een grijs vleugelveld.",
+     "sexAge": "Volwassen vrouwtje volgens fotobron en kleed.",
+     "quality": "Scherp zijaanzicht en leesbare veldkenmerken.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.), CC BY 2.0 · Andy Morffew",
+      "annotations": [
+       "De fotograaf benoemt een vrouwtje Appelvink in Hongarije. De forse snavel en grijze slagpennen zijn zichtbaar."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp041-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge Appelvink met een gelige keel, gevlekte onderzijde en zware snavel.",
+     "sexAge": "Bron bevestigt juveniel. Geslacht onbekend.",
+     "quality": "Kop, snavel en relevante verenkleedkenmerken zijn zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.), CC BY-SA 4.0 · Charles J. Sharp",
+      "annotations": [
+       "De fotograaf benoemt een juveniele Appelvink in Hongarije. Gevlekte onderzijde en forse snavel zijn goed zichtbaar."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp041-flight.webp",
+     "role": "In vlucht",
+     "content": "Vliegende Appelvink van opzij met een brede lichte vleugelband.",
+     "sexAge": "Geslacht en leeftijd onbekend.",
+     "quality": "Vrije vlucht. De bestaande uitsnede van 330 px is voorlopig bruikbaar.",
+     "verdict": "voorwaardelijk",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Codrin Bucur, some rights reserved (CC BY)",
+      "annotations": []
+     },
+     "flight": {
+      "n": 125,
+      "id": "sp041",
+      "nameNL": "Appelvink",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "matig",
+      "decision": "voorwaardelijk",
+      "target": null,
+      "newLabel": null,
+      "newNote": "Voorlopige foto: beperkte scherpte.",
+      "reason": "FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): in vlucht ja; 330 px, maar witte vleugelband en snavel herkenbaar; niet definitief. Vervanging gewenst: grotere opname.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY",
+      "history": [
+       {
+        "class": "vlucht",
+        "quality": "matig",
+        "decision": "voorwaardelijk",
+        "reason": "Echte vlucht met zichtbare vleugeltekening, maar 330 px. Vervanging gewenst.",
+        "date": "2026-11-10",
+        "round": "vóór FQA-02"
+       }
+      ],
+      "replacement": "gewenst"
+     }
+    }
+   ],
+   "corrections": [
+    "Vrouwtjes- en juvenielenfoto toegevoegd. Kennisprofiel en beeldvergelijking bijgewerkt. De bestaande vluchtfoto is herbeoordeeld."
+   ],
+   "missing": [
+    "Scherpe grotere foto in vrije vlucht, bij voorkeur een bronbevestigd mannetje."
+   ],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "De geslachtslabels van volwassen vogels volgen bron en zichtbaar verenkleed. Bij juvenielen is het geslacht onbekend.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": false,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Snavel en kopverhouding"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
   },
   {
    "id": "sp042",
