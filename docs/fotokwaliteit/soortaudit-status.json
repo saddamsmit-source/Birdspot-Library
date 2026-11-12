@@ -1,5 +1,5 @@
 {
- "sha": "dfa3dfd5976579121089e69552da8919920d99e4",
+ "sha": "e024af25a0f03e387b5adae8fa159947de55d79b",
  "generated": "2026-11-12",
  "species": [
   {
@@ -2101,9 +2101,105 @@
    "id": "sp031",
    "nameNL": "Matkop",
    "family": "Mezen",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M7",
+   "date": "2026-11-12",
+   "sha": "e024af25a0f03e387b5adae8fa159947de55d79b",
+   "assets": [
+    {
+     "image": "/assets/species/sp031.webp",
+     "role": "Hoofdfoto (Volwassen)",
+     "content": "Matkop met zwarte kap, lichte wang en licht vleugelveld.",
+     "sexAge": "Volwassen veldkleed. Geslacht onbekend.",
+     "quality": "Volledig zijaanzicht met een goed zichtbare gevouwen vleugel.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Francis Franklin",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp031-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge Matkop tussen bladeren. Lichte snavelhoeken en donkere kap.",
+     "sexAge": "Fotograaf benoemt een juveniel. Geslacht onbekend.",
+     "quality": "Kop en snavelhoeken scherp in beeld.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.), CC BY-SA 4.0 · Wald1siedel",
+      "annotations": [
+       "De fotograaf benoemt een juveniele Matkop buiten de nestholte in Oostenrijk. De lichte snavelhoeken zijn zichtbaar."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp031-flight.webp",
+     "role": "Overige herkenningsfoto's",
+     "content": "Matkop vlak boven de sneeuw, met geopende vleugels.",
+     "sexAge": "Geslacht en leeftijd niet gelabeld.",
+     "quality": "Opvliegbeeld. Alleen als aanvullend beeld bruikbaar.",
+     "verdict": "uit-rol",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC0 · Estormiz",
+      "annotations": []
+     },
+     "flight": {
+      "n": 75,
+      "id": "sp031",
+      "nameNL": "Matkop",
+      "registry": "GUIDE_POSES[1]",
+      "sexLabel": null,
+      "class": "opvliegen",
+      "quality": "goed",
+      "decision": "uit-rol",
+      "target": "overig",
+      "newLabel": "Opvliegend boven sneeuw",
+      "newNote": "Toont het lichte vleugelpaneel.",
+      "reason": "Poten naar beneden vlak boven de sneeuw: afzetten of neerstrijken.",
+      "airborne": false,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC0"
+     }
+    }
+   ],
+   "corrections": [
+    "Bronbevestigde juvenielenfoto en kennisprofiel toegevoegd. Vergelijking met Glanskop gecontroleerd."
+   ],
+   "missing": [
+    "Scherpe vrije-vluchtfoto met bevestigde hergebruikrechten."
+   ],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "De geslachten lijken op elkaar in het veld. Het geslacht is niet op kleed bepaald; juveniel volgt de fotobron.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": false,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Roep, vleugelveld en snavelbasis"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
   },
   {
    "id": "sp032",
@@ -9539,9 +9635,103 @@
    "id": "sp176",
    "nameNL": "Grauwe Vliegenvanger",
    "family": "Vliegenvangers",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M7",
+   "date": "2026-11-12",
+   "sha": "e024af25a0f03e387b5adae8fa159947de55d79b",
+   "assets": [
+    {
+     "image": "/assets/species/sp176.webp",
+     "role": "Hoofdfoto (Volwassen)",
+     "content": "Grauwe Vliegenvanger in zijaanzicht, met grijsbruine bovendelen en fijne borststreping.",
+     "sexAge": "Volwassen veldkleed. Geslacht onbekend.",
+     "quality": "Volledige vogel in beeld.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Бусел В.А.",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp176-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge vogel op een dennentak met lichte vlekken op rug en vleugeldekveren.",
+     "sexAge": "De waarneming is geannoteerd als juveniel. Geslacht onbekend.",
+     "quality": "Herkenbaar kleed en volledige vogel tussen enkele dennennaalden.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.), CC BY 4.0 · Andrejus Gaidamavičius",
+      "annotations": [
+       "De onderzoekswaarneming uit Litouwen heeft de annotatie Juvenile. Lichte vlekken op rug en vleugeldekveren zijn zichtbaar."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp176-flight.webp",
+     "role": "In vlucht",
+     "content": "Vrij vliegende vogel tegen blauwe lucht. Lange staart en slanke snavel zichtbaar.",
+     "sexAge": "Geslacht en leeftijd niet gelabeld.",
+     "quality": "Bruikbaar zijaanzicht in vrije vlucht.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Zeynel Cebeci",
+      "annotations": []
+     },
+     "flight": {
+      "n": 135,
+      "id": "sp176",
+      "nameNL": "Grauwe Vliegenvanger",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0"
+     }
+    }
+   ],
+   "corrections": [
+    "Juvenielenfoto en kennisprofiel toegevoegd. Vergelijking met Bonte Vliegenvanger toegevoegd en de vluchtfoto herbeoordeeld."
+   ],
+   "missing": [],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "De geslachten lijken op elkaar in het veld. Het geslacht is niet op kleed bepaald; juveniel volgt de fotobron.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Kruin, borst en vleugel"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp177",
@@ -9555,9 +9745,132 @@
    "id": "sp178",
    "nameNL": "Gekraagde Roodstaart",
    "family": "Vliegenvangers",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M7",
+   "date": "2026-11-12",
+   "sha": "e024af25a0f03e387b5adae8fa159947de55d79b",
+   "assets": [
+    {
+     "image": "/assets/species/sp178.webp",
+     "role": "Hoofdfoto (Mannetje)",
+     "content": "Mannetje met wit voorhoofd, zwart gezicht, oranje borst en roestrode staart.",
+     "sexAge": "Volwassen mannetje, herkenbaar aan het broedkleed.",
+     "quality": "Volledige vogel op plant met duidelijk kopprofiel.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Jerzy Strzelecki",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp178-adult_f.webp",
+     "role": "Verenkleed (Vrouwtje)",
+     "content": "Vrouwtje op hek met beige onderzijde en roestrode staart.",
+     "sexAge": "Waarneming geannoteerd als Adult en Female.",
+     "quality": "Scherp zijaanzicht met rustige achtergrond.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.), CC BY 4.0 · Сергей Неклюдов",
+      "annotations": [
+       "De onderzoekswaarneming heeft de annotaties Adult en Female. Het zijaanzicht toont de warme beige onderzijde."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp178-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge Gekraagde Roodstaart op een draad, met gespikkeld kleed en rode staart.",
+     "sexAge": "Afzonderlijke waarneming met annotatie Juvenile. Geslacht onbekend.",
+     "quality": "Scherp zijaanzicht van rug en borst.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.), CC BY 4.0 · Сергей Неклюдов",
+      "annotations": [
+       "Een afzonderlijke onderzoekswaarneming heeft de annotatie Juvenile. Het jeugdkleed en de roodachtige staart zijn zichtbaar."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp178-flight.webp",
+     "role": "Overige herkenningsfoto's",
+     "content": "Gekraagde Roodstaart met geopende vleugels vlak bij takken.",
+     "sexAge": "Geslacht en leeftijd niet vastgesteld.",
+     "quality": "De rode staart is zichtbaar. Beeld blijft buiten de vluchtsectie.",
+     "verdict": "uit-rol",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Paolo Zucca, some rights reserved (CC BY)",
+      "annotations": []
+     },
+     "flight": {
+      "n": 134,
+      "id": "sp178",
+      "nameNL": "Gekraagde Roodstaart",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "opvliegen",
+      "quality": "matig",
+      "decision": "uit-rol",
+      "target": "overig",
+      "newLabel": "Vliegend vlak bij takken",
+      "newNote": "Mogelijk net afgezet; geen definitieve vluchtfoto.",
+      "reason": "FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): luchtgedragen, maar poten hangen en takken vlakbij: vermoedelijk kort na het afzetten; korrelig. Vluchtstatus niet uit dit ene frame te bewijzen (REVIEW REQUIRED); daarom niet in de definitieve vluchtrol. Vluchtpositie ontbreekt.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY",
+      "history": [
+       {
+        "class": "vlucht",
+        "quality": "matig",
+        "decision": "voorwaardelijk",
+        "reason": "Luchtgedragen kort na afzetten (poot hangt), korrelig. Vervanging gewenst.",
+        "date": "2026-11-10",
+        "round": "vóór FQA-02"
+       }
+      ],
+      "replacement": "gewenst"
+     }
+    }
+   ],
+   "corrections": [
+    "Vrouwtjesfoto, juvenielenfoto, kennisprofiel en vergelijking met Zwarte Roodstaart toegevoegd. Alternatieve tekst van het opvliegbeeld afgestemd op de eerdere vluchtbeoordeling."
+   ],
+   "missing": [
+    "Scherpe vrije-vluchtfoto met bevestigde hergebruikrechten."
+   ],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "Mannetje volgt het bronportret en herkenbaar broedkleed. Vrouwtje en juveniel volgen afzonderlijke bronwaarnemingen.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": false,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Voorhoofd en onderzijde"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
   },
   {
    "id": "sp187",
