@@ -167,7 +167,7 @@ def main():
                   const card = document.querySelector('.sight-card[data-id="' + id + '"]');
                   const images = card ? [...card.querySelectorAll('img')] : [];
                   return images.some(i => i.complete && i.naturalWidth === 24);
-                }""", sighting_id, timeout=15000)
+                }""", arg=sighting_id, timeout=15000)
                 card.click()
                 page.locator("#detailSightingSheet").wait_for(state="visible", timeout=12000)
                 assert NOTE in page.locator("#detailSightingSheet").inner_text()
