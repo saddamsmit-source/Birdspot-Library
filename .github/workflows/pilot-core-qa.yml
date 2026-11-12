@@ -1,13 +1,5 @@
 name: Birdspot S1 Pilot Core Offline QA
 on:
-  push:
-    branches:
-      - qa/birdspot-pilot-core-offline-20261112
-    paths:
-      - 'tests/test_pilot_offline_new_sighting.py'
-      - '.github/workflows/pilot-core-qa.yml'
-      - 'src/**'
-      - 'sw.js'
   pull_request:
     paths:
       - 'tests/test_pilot_offline_new_sighting.py'
