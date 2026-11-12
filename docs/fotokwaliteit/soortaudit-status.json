@@ -1,5 +1,5 @@
 {
- "sha": "ba87378fea76b9fa9aead8592afe6aa83f211645",
+ "sha": "2eb0a4a143bef53c48530ad88355e4752c3dd7cb",
  "generated": "2026-11-12",
  "species": [
   {
@@ -9718,17 +9718,247 @@
    "id": "sp129",
    "nameNL": "Krakeend",
    "family": "Eenden",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M8",
+   "date": "2026-11-12",
+   "sha": "2eb0a4a143bef53c48530ad88355e4752c3dd7cb",
+   "assets": [
+    {
+     "image": "/assets/species/plumage/sp129-hero-male.webp",
+     "role": "Hoofdfoto (Mannetje)",
+     "content": "Grijs mannetje op blauw water, met donkere snavel en zwart achterlijf.",
+     "sexAge": "Volwassen mannetje volgens bron en kleed.",
+     "quality": "Volledig zijprofiel en fijne borsttekening.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "geverifieerde import 09-11 (SHA-1 c0a14edeee…), CC BY-SA 4.0 · Rhododendrites",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/sp129.webp",
+     "role": "Verenkleed (Mannetje)",
+     "content": "Tweede opname met de vogel langs een rietrand.",
+     "sexAge": "Volwassen mannetje volgens bron en kleed.",
+     "quality": "Volledige vogel met zicht op het achterlijf.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Luiz Lapa from Oeiras, Portugal",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp129-adult_f.webp",
+     "role": "Verenkleed (Vrouwtje)",
+     "content": "Bruine eend bij riet, met oranje zijkanten aan de snavel.",
+     "sexAge": "Vrouwtje volgens bron en kleed.",
+     "quality": "Zijaanzicht met scherpe snavel en mantel.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Andrey Gulivanov",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp129-juv-europa.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge Krakeend in bruin getekend kleed, zwemmend in Wales.",
+     "sexAge": "Onderzoekswaarneming met annotatie Juvenile.",
+     "quality": "Volledige vogel in zijaanzicht.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-12: zelfde opname (Verkleind tot maximaal 1400 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.), CC BY 4.0 · Phil James",
+      "annotations": [
+       "iNaturalist-onderzoekswaarneming uit Wales met de leeftijdsannotatie Juvenile. De opname toont één vogel."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp129-flight.webp",
+     "role": "In vlucht (Mannetje)",
+     "content": "Geheven vleugel met witte spiegel naast kastanjebruin veld. Zwart achterlijf.",
+     "sexAge": "Volwassen mannetje volgens bron en kleed.",
+     "quality": "Volledig lichaam en herkenbare vleugeltekening.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Luiz Lapa from Oeiras, Portugal",
+      "annotations": []
+     },
+     "flight": {
+      "n": 10,
+      "id": "sp129",
+      "nameNL": "Krakeend",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": "male",
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 2.0"
+     }
+    }
+   ],
+   "corrections": [
+    "De ringfoto maakt op de kaart plaats voor een vrij zwemmende juveniel. Vergelijking van vrouwtjes met Smient gebruikt nu de vrouwtjesfoto van Krakeend en twee kenmerkenrijen."
+   ],
+   "missing": [],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "Volwassen labels volgen bron en kleed. Juvenielen blijven neutraal gelabeld.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Snavel en vleugelspiegel"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp130",
    "nameNL": "Smient",
    "family": "Eenden",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M8",
+   "date": "2026-11-12",
+   "sha": "2eb0a4a143bef53c48530ad88355e4752c3dd7cb",
+   "assets": [
+    {
+     "image": "/assets/species/sp130.webp",
+     "role": "Hoofdfoto (Mannetje)",
+     "content": "Mannetje op gras met kastanjebruine kop, lichte bles en grijs lichaam.",
+     "sexAge": "Volwassen mannetje volgens bron en kleed.",
+     "quality": "Volledig zijaanzicht.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.5 · Andreas Trepte",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp130-adult-f.webp",
+     "role": "Verenkleed (Vrouwtje)",
+     "content": "Rossig vrouwtje op een steen, met korte blauwgrijze snavel.",
+     "sexAge": "Vrouwtje volgens bron en kleed.",
+     "quality": "Volledige vogel met zichtbare snavel.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Daniel106",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp130-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge Smient met rossigbruin kleed, ronde kop en korte blauwgrijze snavel.",
+     "sexAge": "Onderzoekswaarneming met annotatie Juvenile.",
+     "quality": "Enkele vogel, scherp beeld van kop, snavel en borst.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-12: zelfde opname (Verkleind tot maximaal 1400 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.), CC BY 4.0 · Наталья Усова",
+      "annotations": [
+       "iNaturalist-onderzoekswaarneming uit de regio Jaroslavl met de leeftijdsannotatie Juvenile. De opname toont één vogel."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp130-flight.webp",
+     "role": "In vlucht (Mannetje)",
+     "content": "Mannetje met lichte bles, groot wit vleugelveld en groene spiegel.",
+     "sexAge": "Volwassen mannetje volgens bron en kleed.",
+     "quality": "Volledige vogel in vrije vlucht.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · Imran Shah from Islamabad, Pakistan",
+      "annotations": []
+     },
+     "flight": {
+      "n": 13,
+      "id": "sp130",
+      "nameNL": "Smient",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": "male",
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0"
+     }
+    }
+   ],
+   "corrections": [
+    "Juvenielenfoto toegevoegd. De vergelijking met Krakeend toont beide vrouwtjes naast elkaar met aandacht voor snavel en bouw."
+   ],
+   "missing": [],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "Volwassen labels volgen bron en kleed. Juvenielen blijven neutraal gelabeld.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Snavelvorm en snavelkleur"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp132",
@@ -11195,9 +11425,131 @@
    "id": "sp188",
    "nameNL": "Zomertaling",
    "family": "Eenden",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M8",
+   "date": "2026-11-12",
+   "sha": "2eb0a4a143bef53c48530ad88355e4752c3dd7cb",
+   "assets": [
+    {
+     "image": "/assets/species/plumage/sp188-hero-male.webp",
+     "role": "Hoofdfoto (Mannetje)",
+     "content": "Zwemmend mannetje met brede witte oogboog en afhangende schouderveren.",
+     "sexAge": "Volwassen mannetje volgens bron en kleed.",
+     "quality": "Volledige vogel met duidelijke koptekening.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "geverifieerde import 09-11 (SHA-1 bf5b3e3dc2…), CC BY 4.0 · YedidyaPopper",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/sp188.webp",
+     "role": "Verenkleed (Mannetje)",
+     "content": "Mannetje met oogboog, bruine borst en grijze flanken.",
+     "sexAge": "Volwassen mannetje volgens bron en kleed.",
+     "quality": "Tweede beeld met helder zijaanzicht.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp188-adult_f.webp",
+     "role": "Verenkleed (Vrouwtje)",
+     "content": "Vrouwtje op ondiep water met donkere oogstreep en lichte keel.",
+     "sexAge": "Vrouwtje volgens bron en kleed.",
+     "quality": "Volledig zijaanzicht met herkenbare koptekening.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · michael clarke stuff",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp188-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge Zomertaling op groen water met contrastrijke lichte kopstrepen.",
+     "sexAge": "Juveniel volgens bestaande bronbeoordeling.",
+     "quality": "Volledige vogel, kop en snavel zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Stefan Berndtsson",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp188-eclipse.webp",
+     "role": "In vlucht (Mannetje in eclipskleed)",
+     "content": "Mannetje in vrije vlucht met bruin eclipskleed en licht blauwgrijze voorvleugel.",
+     "sexAge": "Mannetje in eclipskleed volgens Commons-bron en bestaande vluchtcontrole.",
+     "quality": "Volledige vogel met duidelijk zicht op voorvleugel en kop.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · Frankie Chu from Hong Kong香港",
+      "annotations": []
+     },
+     "flight": {
+      "n": 17,
+      "id": "sp188",
+      "nameNL": "Zomertaling",
+      "registry": "GUIDE_PLUMAGE.eclipse",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0"
+     }
+    }
+   ],
+   "corrections": [
+    "Kennisprofiel en vergelijking met Wintertaling nagekeken. Bron bevestigt het eclipskleed van het mannetje op de vluchtfoto."
+   ],
+   "missing": [],
+   "wishes": [
+    "Een scherpe vluchtfoto van een mannetje in prachtkleed voor vergelijking met het eclipskleed."
+   ],
+   "uncertain": [],
+   "sexPolicy": "Volwassen labels volgen bron en kleed. Juvenielen blijven neutraal gelabeld.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Wenkbrauw, oogstreep en keel"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp206",
