@@ -1,5 +1,5 @@
 {
- "sha": "2eb0a4a143bef53c48530ad88355e4752c3dd7cb",
+ "sha": "1429709b680d2960117022df9bb0c9baef27c9f5",
  "generated": "2026-11-12",
  "species": [
   {
@@ -11771,25 +11771,502 @@
    "id": "sp249",
    "nameNL": "Blauwe Kiekendief",
    "family": "Haviken",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M9",
+   "date": "2026-11-12",
+   "sha": "1429709b680d2960117022df9bb0c9baef27c9f5",
+   "assets": [
+    {
+     "image": "/assets/species/plumage/sp249-hero-male.webp",
+     "role": "Hoofdfoto (Mannetje)",
+     "content": "Blauwgrijs mannetje in frontale vlucht boven gras, met gespreide zwarte vleugelpunten.",
+     "sexAge": "Volwassen mannetje volgens bron en kleed.",
+     "quality": "Vogel volledig in beeld met herkenbare kop, vleugels en houding.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "geverifieerde import 09-11 (SHA-1 64776ff45b…), CC BY-SA 4.0 · Maurice.dekens",
+      "annotations": []
+     },
+     "flight": {
+      "n": 28,
+      "id": "sp249",
+      "nameNL": "Blauwe Kiekendief",
+      "registry": "GUIDE_POSES[1]",
+      "sexLabel": "male",
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "NOT TESTED",
+      "rightsNote": "buiten bronaudit 09-11"
+     }
+    },
+    {
+     "image": "/assets/species/plumage/sp249-male-rest.webp",
+     "role": "Verenkleed (Mannetje)",
+     "content": "Mannetje op de grond met grijze kop en lichte grijze bovendelen.",
+     "sexAge": "Volwassen mannetje volgens bron en kleed.",
+     "quality": "Zijaanzicht in gras. De lichte grijze delen zijn zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Sofia Voynovskaya, some rights reserved (CC BY)",
+      "annotations": [
+       "Life Stage: Adult",
+       "Sex: Male"
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/sp249.webp",
+     "role": "In vlucht (Mannetje)",
+     "content": "Mannetje in vrije vlucht met witte stuit en donkere vleugelpunten.",
+     "sexAge": "Volwassen mannetje volgens bron en kleed.",
+     "quality": "Volledige vogel, andere hoek dan de hoofdfoto.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · caroline legg",
+      "annotations": []
+     },
+     "flight": {
+      "n": 25,
+      "id": "sp249",
+      "nameNL": "Blauwe Kiekendief",
+      "registry": "GUIDE_PHOTOS",
+      "sexLabel": "male",
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 2.0"
+     }
+    },
+    {
+     "image": "/assets/species/plumage/sp249-adult_f.webp",
+     "role": "In vlucht (Vrouwtje)",
+     "content": "Bruin vrouwtje in een draai met gebandeerde vleugels en gespreide staart.",
+     "sexAge": "Vrouwtje volgens bron en kleed.",
+     "quality": "Volledige vogel en donkere banden goed zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Maurice.dekens",
+      "annotations": []
+     },
+     "flight": {
+      "n": 26,
+      "id": "sp249",
+      "nameNL": "Blauwe Kiekendief",
+      "registry": "GUIDE_PLUMAGE.adult_f",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0"
+     }
+    },
+    {
+     "image": "/assets/species/plumage/sp249-juv.webp",
+     "role": "In vlucht (Juveniel)",
+     "content": "Jonge Blauwe Kiekendief boven gras, met donkere vleugelbanden en witte stuit.",
+     "sexAge": "Juveniel volgens bron en zichtbaar kleed.",
+     "quality": "Hele vogel met beide vleugels zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Rob Zweers",
+      "annotations": []
+     },
+     "flight": {
+      "n": 27,
+      "id": "sp249",
+      "nameNL": "Blauwe Kiekendief",
+      "registry": "GUIDE_PLUMAGE.juv",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 2.0"
+     }
+    }
+   ],
+   "corrections": [
+    "Vleugelbreedte, stuit en bandering uitgewerkt voor vergelijking met Grauwe en Steppekiekendief."
+   ],
+   "missing": [],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "Volwassen labels volgen bron en zichtbaar kleed. Juvenielen blijven neutraal gelabeld.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Vleugelsilhouet en armpatroon"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp250",
    "nameNL": "Steppekiekendief",
    "family": "Haviken",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M9",
+   "date": "2026-11-12",
+   "sha": "1429709b680d2960117022df9bb0c9baef27c9f5",
+   "assets": [
+    {
+     "image": "/assets/species/plumage/sp250-hero-male.webp",
+     "role": "Hoofdfoto (Mannetje)",
+     "content": "Bleekgrijs mannetje op een paal, met lichte kop en borst en een lange staart.",
+     "sexAge": "Volwassen mannetje volgens bron en kleed.",
+     "quality": "Volledige vogel, rustige achtergrond.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "geverifieerde import 09-11 (SHA-1 181df22271…), CC BY 2.0 · Luiz Lapa from Oeiras, Portugal",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp250-male-rest.webp",
+     "role": "Verenkleed (Mannetje)",
+     "content": "Mannetje in droog gras met lichte bovendelen en donkere vleugelpunt.",
+     "sexAge": "Volwassen mannetje volgens bron en kleed.",
+     "quality": "Andere houding en kijkhoek dan de hoofdfoto.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Jan Ebr & Ivana Ebrová, some rights reserved (CC BY)",
+      "annotations": [
+       "Life Stage: Adult",
+       "Sex: Male",
+       "Alive or Dead: Alive",
+       "Evidence of Presence: Organism"
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/sp250.webp",
+     "role": "In vlucht (Mannetje)",
+     "content": "Mannetje met bleke onderzijde en zwarte wig aan de vleugelpunt.",
+     "sexAge": "Volwassen mannetje volgens bron en kleed.",
+     "quality": "Volledig silhouet tegen rustige achtergrond.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Hari K Patibanda",
+      "annotations": []
+     },
+     "flight": {
+      "n": 45,
+      "id": "sp250",
+      "nameNL": "Steppekiekendief",
+      "registry": "GUIDE_PHOTOS",
+      "sexLabel": "male",
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 2.0"
+     }
+    },
+    {
+     "image": "/assets/species/plumage/sp250-adult_f.webp",
+     "role": "In vlucht (Vrouwtje)",
+     "content": "Vrouwtje in vrije vlucht met gestreepte onderzijde en gebandeerde vleugels.",
+     "sexAge": "Vrouwtje volgens bron en kleed.",
+     "quality": "Volledige vogel, beide ondervleugels zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Tejas M, some rights reserved (CC BY)",
+      "annotations": [
+       "Life Stage: Adult",
+       "Sex: Female",
+       "Alive or Dead: Alive",
+       "Evidence of Presence: Organism"
+      ]
+     },
+     "flight": {
+      "n": 46,
+      "id": "sp250",
+      "nameNL": "Steppekiekendief",
+      "registry": "GUIDE_PLUMAGE.adult_f",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY"
+     }
+    },
+    {
+     "image": "/assets/species/plumage/sp250-juv.webp",
+     "role": "In vlucht (Juveniel)",
+     "content": "Jonge vogel met warme onderzijde, lichte halsring en donkere halsvlek.",
+     "sexAge": "Juveniel volgens bron en zichtbaar kleed.",
+     "quality": "Volledige vogel. Zijaanzicht met zicht op kop en ondervleugel.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Bogomaz Mykhailo",
+      "annotations": []
+     },
+     "flight": {
+      "n": 47,
+      "id": "sp250",
+      "nameNL": "Steppekiekendief",
+      "registry": "GUIDE_PLUMAGE.juv",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0"
+     }
+    }
+   ],
+   "corrections": [
+    "Herkenning van vrouwtjes en juvenielen gecontroleerd tegen Forsman. Afwijkende bronwaarden voor spanwijdte opgenomen bij de bronverantwoording."
+   ],
+   "missing": [],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "Volwassen labels volgen bron en zichtbaar kleed. Juvenielen blijven neutraal gelabeld.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Koptekening en handpennen"
+    ],
+    "open": [],
+    "discrepancies": 1
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp251",
    "nameNL": "Grauwe Kiekendief",
    "family": "Haviken",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M9",
+   "date": "2026-11-12",
+   "sha": "1429709b680d2960117022df9bb0c9baef27c9f5",
+   "assets": [
+    {
+     "image": "/assets/species/plumage/sp251-portrait.webp",
+     "role": "Hoofdfoto (Mannetje)",
+     "content": "Volwassen mannetje in droog gras, met grijs verenkleed en gele ogen.",
+     "sexAge": "Volwassen mannetje volgens bron en kleed.",
+     "quality": "Scherp portret met de vogel groot in beeld en zichtbaar vleugelprofiel.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-12: zelfde opname (Verkleind tot 1600 px, omgezet naar WebP zonder uitsnede of EXIF, GPS en XMP. Fotograafvermelding in het beeld behouden.), CC BY 2.0 · Hari K Patibanda",
+      "annotations": [
+       "De fotograaf benoemt soort en mannetje in de bron. Het volwassen grijze kleed is zichtbaar. De Commons-licentie is gecontroleerd tegen Flickr.",
+       "Twee bijna identieke foto’s van hetzelfde mannetje met elf seconden verschil volgens de bronbestanden. Vervangen door een scherper portret van een andere opname."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp251-adult_f.webp",
+     "role": "Verenkleed (Vrouwtje)",
+     "content": "Bruin gestreept vrouwtje met neerhangende poten en gebandeerde vleugel.",
+     "sexAge": "Vrouwtje volgens bron en kleed.",
+     "quality": "Veren en staart herkenbaar. De foto toont een remmende houding.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Hari K Patibanda",
+      "annotations": []
+     },
+     "flight": {
+      "n": 37,
+      "id": "sp251",
+      "nameNL": "Grauwe Kiekendief",
+      "registry": "GUIDE_PLUMAGE.adult_f",
+      "sexLabel": null,
+      "class": "landen",
+      "quality": "goed",
+      "decision": "uit-rol",
+      "target": "kleed",
+      "newLabel": "Vrouwtje, remmend met hangende poten",
+      "newNote": "Bruin gestreept vrouwtje met witte stuit en gebandeerde staart.",
+      "reason": "Vleugels hoog opgeslagen, poten omlaag: neerstrijken/remmen, geen herkenbare vlieghouding.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 2.0"
+     }
+    },
+    {
+     "image": "/assets/species/plumage/sp251-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge vogel boven droog gras met roestbruine onderzijde en gebandeerde slagpennen.",
+     "sexAge": "Juveniel volgens bron en zichtbaar kleed.",
+     "quality": "Kleed en slagpennen herkenbaar tijdens het landen.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Rodrigo de Almeida from Marco de Canaveses, Portugal",
+      "annotations": []
+     },
+     "flight": {
+      "n": 38,
+      "id": "sp251",
+      "nameNL": "Grauwe Kiekendief",
+      "registry": "GUIDE_PLUMAGE.juv",
+      "sexLabel": null,
+      "class": "landen",
+      "quality": "goed",
+      "decision": "uit-rol",
+      "target": "kleed",
+      "newLabel": "Juveniel, landend",
+      "newNote": "Roestbruine onderzijde en gebandeerde slagpennen.",
+      "reason": "Landt boven gras met uitgestrekte poten.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 2.0"
+     }
+    },
+    {
+     "image": "/assets/species/sp251.webp",
+     "role": "In vlucht (Mannetje)",
+     "content": "Mannetje in vrije vlucht met grijze kop en donkere armvleugelband.",
+     "sexAge": "Volwassen mannetje volgens bron en kleed.",
+     "quality": "Hele vogel zichtbaar in vrije vlucht, scherpe vleugeltekening.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Hari K Patibanda",
+      "annotations": []
+     },
+     "flight": {
+      "n": 36,
+      "id": "sp251",
+      "nameNL": "Grauwe Kiekendief",
+      "registry": "GUIDE_PHOTOS",
+      "sexLabel": "male",
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 2.0"
+     }
+    }
+   ],
+   "corrections": [
+    "Hoofdfoto vervangen door een scherp mannetjesportret. Twee bijna identieke oude foto’s met herkomst gearchiveerd. De aparte mannetjesvluchtfoto blijft beschikbaar.",
+    "Vergelijking met Steppekiekendief uitgewerkt op armvleugelband en ondervleugelpatroon."
+   ],
+   "missing": [],
+   "wishes": [
+    "Afzonderlijke opname van een vrouwtje of juveniel in vrije vlucht voor vergelijking van de ondervleugel."
+   ],
+   "uncertain": [],
+   "sexPolicy": "Volwassen labels volgen bron en zichtbaar kleed. Juvenielen blijven neutraal gelabeld.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Armvleugel en ondervleugel"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp253",
