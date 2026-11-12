@@ -4749,6 +4749,107 @@
    "airborne": false,
    "source": "Visuele controle K06 fase 3 (2026-11-12)",
    "note": "Jonge Gekraagde Roodstaart op een draad, met een gevlekte rug, gespikkelde borst en roodachtige staart."
+  },
+  "/assets/species/plumage/sp038-adult_f.webp": {
+   "refs": [
+    "sp038 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "1d88e9e3859ded0037dabd4d1c9093ece3258bc1",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 4 (2026-11-12)",
+   "note": "Vrouwtje Sijs op een tak, met een fijne snavel, donkere flankstrepen en geel op de gevouwen vleugel."
+  },
+  "/assets/species/plumage/sp038-juv.webp": {
+   "refs": [
+    "sp038 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "41c0ea3317655c1eb696a90d8697e6fb74636280",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 4 (2026-11-12)",
+   "note": "Jonge Sijs bij water, met gestreepte kop en onderzijde en gele accenten op de vleugel."
+  },
+  "/assets/species/plumage/sp040-adult_f.webp": {
+   "refs": [
+    "sp040 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "859f08d97915ae8e4e328caf6341a8b01a783869",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 4 (2026-11-12)",
+   "note": "Vrouwtje Goudvink op een tak, met een zwarte kap, korte zwarte snavel, beigegrijze onderzijde en witte stuit."
+  },
+  "/assets/species/plumage/sp040-juv.webp": {
+   "refs": [
+    "sp040 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "4b3a798d0685dc55da0a02705f32bf9247668174",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 4 (2026-11-12)",
+   "note": "Jonge Goudvink op een tak, met een bruingrijze kop zonder zwarte kap en een lichte vleugelstreep."
+  },
+  "/assets/species/plumage/sp041-adult_f.webp": {
+   "refs": [
+    "sp041 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "22a99810316c9d7ce8d14ed426d020044ffce48a",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 4 (2026-11-12)",
+   "note": "Vrouwtje Appelvink in zijaanzicht op hout, met een forse snavel, grijze nek en een grijs vleugelveld."
+  },
+  "/assets/species/plumage/sp041-juv.webp": {
+   "refs": [
+    "sp041 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "b8eeae2699bd46fddddef55fc26e5e36d16a12ce",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 4 (2026-11-12)",
+   "note": "Jonge Appelvink met een gelige keel, gevlekte onderzijde en zware snavel."
+  },
+  "/assets/species/plumage/sp051-hero-male.webp": {
+   "refs": [
+    "sp051 GUIDE_PLUMAGE.adult_m",
+    "sp051 GUIDE_HEROES"
+   ],
+   "sha1": "82f86293d1ac7aa612be53b37f1835c146ba9ae0",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K07 fase 1 (2026-11-12)",
+   "note": "Volwassen mannetje Zwarte Roodstaart volledig in zijaanzicht, met donkere borst, lichte vleugelvlek en roestrode staart."
+  },
+  "/assets/species/plumage/sp051-juv.webp": {
+   "refs": [
+    "sp051 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "0184c0c6b638be643bf08b6c434368c0b9a3c457",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K07 fase 1 (2026-11-12)",
+   "note": "Jonge Zwarte Roodstaart op een stenen rand met een grijsbruine borst en roestrode staart."
+  },
+  "/assets/species/plumage/sp177-adult_f.webp": {
+   "refs": [
+    "sp177 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "d4b50b9f34d10ddd844013bf08f5446f28d0215e",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K07 fase 1 (2026-11-12)",
+   "note": "Vrouwtje Bonte Vliegenvanger in zijaanzicht met bruine bovendelen, een licht vleugelveld en lichte onderzijde."
+  },
+  "/assets/species/plumage/sp177-juv.webp": {
+   "refs": [
+    "sp177 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "12aca2498f3c60ca490f0c5c2495f5a343a8369f",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K07 fase 1 (2026-11-12)",
+   "note": "Jonge Bonte Vliegenvanger met een lichte vleugeltekening en gevlekte kop en bovendelen, volledig in zijaanzicht."
   }
  }
 }

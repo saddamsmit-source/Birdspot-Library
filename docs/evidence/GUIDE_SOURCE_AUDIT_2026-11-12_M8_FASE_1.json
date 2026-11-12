@@ -1,0 +1,75 @@
+[
+  {
+    "image": "/assets/species/plumage/sp051-hero-male.webp",
+    "species": "sp051",
+    "source": "https://commons.wikimedia.org/wiki/File:Rabiruivo-preto%2C_macho%2C_Black_Redstart%2C_male_%2851131070116%29.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Rabiruivo-preto%2C_macho%2C_Black_Redstart%2C_male_%2851131070116%29.jpg",
+    "sourceTitle": "Rabiruivo-preto, macho, Black Redstart, male (51131070116).jpg",
+    "sourceAuthor": "Luiz Lapa",
+    "sourceLicense": "CC BY 2.0",
+    "sameShot": true,
+    "method": "Zo nodig verkleind tot maximaal 1600 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.",
+    "sourceSha256": "bf437d1be4b4d1ee2975de764fab20595e93cb2a23b8bd94f2d91348fbd2a20f",
+    "sha1": "82f86293d1ac7aa612be53b37f1835c146ba9ae0",
+    "taxonInSource": "Phoenicurus ochruros",
+    "annotations": [
+      "De fotograaf benoemt een mannetje Zwarte Roodstaart in Portugal. Het volwassen donkere kleed en de roestrode staart zijn zichtbaar."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp051-juv.webp",
+    "species": "sp051",
+    "source": "https://commons.wikimedia.org/wiki/File:Phoenicurus_ochruros_juvenile_Chastel_20190512_t130014.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/18/Phoenicurus_ochruros_juvenile_Chastel_20190512_t130014.jpg",
+    "sourceTitle": "Phoenicurus ochruros juvenile Chastel 20190512 t130014.jpg",
+    "sourceAuthor": "Marie-Lan Taÿ Pamart",
+    "sourceLicense": "CC BY 4.0",
+    "sameShot": true,
+    "method": "Zo nodig verkleind tot maximaal 1400 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.",
+    "sourceSha256": "11943d92fa2163a432e7ddbc0e4bafc64a4c74ab41940ff3787c36439fb5422e",
+    "sha1": "0184c0c6b638be643bf08b6c434368c0b9a3c457",
+    "taxonInSource": "Phoenicurus ochruros",
+    "annotations": [
+      "De fotograaf benoemt een juveniele Zwarte Roodstaart. Het grijsbruine kleed, de roestrode staart en de lichte snavelhoek passen daarbij."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp177-adult_f.webp",
+    "species": "sp177",
+    "source": "https://commons.wikimedia.org/wiki/File:Ficedula_hypoleuca-F-Iski_morost.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/18/Ficedula_hypoleuca-F-Iski_morost.jpg",
+    "sourceTitle": "Ficedula hypoleuca-F-Iski morost.jpg",
+    "sourceAuthor": "Jernej Polajnar",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sameShot": true,
+    "method": "Zo nodig verkleind tot maximaal 1400 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.",
+    "sourceSha256": "c5c72d144dafcd9c11533dabb43ce676946290885852ea8e7ab6dfc09d20982f",
+    "sha1": "d4b50b9f34d10ddd844013bf08f5446f28d0215e",
+    "taxonInSource": "Ficedula hypoleuca",
+    "annotations": [
+      "De fotograaf benoemt een vrouwtje uit Slovenië. Het licht op de gevouwen vleugel en de lichte onderzijde zijn zichtbaar."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp177-juv.webp",
+    "species": "sp177",
+    "source": "https://www.inaturalist.org/photos/695650368",
+    "originalUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/695650368/original.jpg",
+    "sourceTitle": "iNaturalist photo 695650368",
+    "sourceAuthor": "Andrei Orekhov",
+    "sourceLicense": "CC BY 4.0",
+    "sameShot": true,
+    "method": "Zo nodig verkleind tot maximaal 1400 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.",
+    "sourceSha256": "318710fa8357379df361f6546e5d1cca993025cdb0fc12d5267aba9358a71174",
+    "sha1": "12aca2498f3c60ca490f0c5c2495f5a343a8369f",
+    "taxonInSource": "Ficedula hypoleuca",
+    "annotations": [
+      "De iNaturalist-onderzoekswaarneming bevestigt de soort en is geannoteerd als juveniel. Het gevlekte kleed is zichtbaar."
+    ],
+    "auditDate": "2026-11-12",
+    "observation": "https://www.inaturalist.org/observations/380250332"
+  }
+]

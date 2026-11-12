@@ -1,0 +1,111 @@
+[
+  {
+    "image": "/assets/species/plumage/sp038-adult_f.webp",
+    "species": "sp038",
+    "source": "https://commons.wikimedia.org/wiki/File:Eurasian_siskin_%28Spinus_spinus%29_female_Biebrzanski.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Eurasian_siskin_%28Spinus_spinus%29_female_Biebrzanski.jpg",
+    "sourceTitle": "Eurasian siskin (Spinus spinus) female Biebrzanski.jpg",
+    "sourceAuthor": "Charles J. Sharp",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.",
+    "sourceSha256": "2e77c7e97b391c6a11f7056193da1035702c602a0c02a51ca1de257cef9cb9f6",
+    "sha1": "1d88e9e3859ded0037dabd4d1c9093ece3258bc1",
+    "taxonInSource": "Spinus spinus",
+    "annotations": [
+      "De fotograaf benoemt een vrouwtje Sijs in Polen. De fijne snavel en flankstrepen zijn zichtbaar."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp038-juv.webp",
+    "species": "sp038",
+    "source": "https://commons.wikimedia.org/wiki/File:Lugre%2C_%28Pintassilgo-verde%29%2C_juvenil%2C_Eurasian_Siskin%2C_juvenile_%2852676736906%29.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Lugre%2C_%28Pintassilgo-verde%29%2C_juvenil%2C_Eurasian_Siskin%2C_juvenile_%2852676736906%29.jpg",
+    "sourceTitle": "Lugre, (Pintassilgo-verde), juvenil, Eurasian Siskin, juvenile (52676736906).jpg",
+    "sourceAuthor": "Luiz Lapa",
+    "sourceLicense": "CC BY 2.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.",
+    "sourceSha256": "96ec64ad0e773c8469a453e2a198bff2691d74d6178141e52ea1d3de7b9c04c2",
+    "sha1": "41c0ea3317655c1eb696a90d8697e6fb74636280",
+    "taxonInSource": "Spinus spinus",
+    "annotations": [
+      "De fotograaf benoemt een juveniele Sijs uit Portugal onder het synoniem Carduelis spinus. Streping en gele vleugeltekening zijn zichtbaar."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp040-adult_f.webp",
+    "species": "sp040",
+    "source": "https://commons.wikimedia.org/wiki/File:Pyrrhula_pyrrhula_female_1.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/76/Pyrrhula_pyrrhula_female_1.jpg",
+    "sourceTitle": "Pyrrhula pyrrhula female 1.jpg",
+    "sourceAuthor": "Francis C. Franklin",
+    "sourceLicense": "CC BY-SA 3.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.",
+    "sourceSha256": "f7de7047ed2404edd3c3f82744c76501eea5508b09ce69189b8931f6985f5595",
+    "sha1": "859f08d97915ae8e4e328caf6341a8b01a783869",
+    "taxonInSource": "Pyrrhula pyrrhula",
+    "annotations": [
+      "De fotograaf benoemt een vrouwtje Goudvink. Kap, snavel en beigegrijze onderzijde zijn herkenbaar."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp040-juv.webp",
+    "species": "sp040",
+    "source": "https://www.inaturalist.org/photos/706514268",
+    "originalUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/706514268/original.jpg",
+    "sourceTitle": "iNaturalist photo 706514268",
+    "sourceAuthor": "Andrei Orekhov",
+    "sourceLicense": "CC BY 4.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.",
+    "sourceSha256": "73462326f5098ed8686c4efba73566140e40c0f80e451ca52897916693932c8d",
+    "sha1": "4b3a798d0685dc55da0a02705f32bf9247668174",
+    "taxonInSource": "Pyrrhula pyrrhula",
+    "annotations": [
+      "De onderzoekswaarneming heeft de annotatie Juvenile. De kap ontbreekt en de korte dikke snavel is zichtbaar."
+    ],
+    "auditDate": "2026-11-12",
+    "observation": "https://www.inaturalist.org/observations/385897923"
+  },
+  {
+    "image": "/assets/species/plumage/sp041-adult_f.webp",
+    "species": "sp041",
+    "source": "https://commons.wikimedia.org/wiki/File:Hawfinch_%28Female%29_%2848163370781%29.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Hawfinch_%28Female%29_%2848163370781%29.jpg",
+    "sourceTitle": "Hawfinch (Female) (48163370781).jpg",
+    "sourceAuthor": "Andy Morffew",
+    "sourceLicense": "CC BY 2.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.",
+    "sourceSha256": "dac4586b293fb39f4f65eb0358f02c9ec98c0b17d1b558523b35f638a42951e7",
+    "sha1": "22a99810316c9d7ce8d14ed426d020044ffce48a",
+    "taxonInSource": "Coccothraustes coccothraustes",
+    "annotations": [
+      "De fotograaf benoemt een vrouwtje Appelvink in Hongarije. De forse snavel en grijze slagpennen zijn zichtbaar."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp041-juv.webp",
+    "species": "sp041",
+    "source": "https://commons.wikimedia.org/wiki/File:Hawfinch_%28Coccothraustes_coccothraustes%29_juvenile_2.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Hawfinch_%28Coccothraustes_coccothraustes%29_juvenile_2.jpg",
+    "sourceTitle": "Hawfinch (Coccothraustes coccothraustes) juvenile 2.jpg",
+    "sourceAuthor": "Charles J. Sharp",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.",
+    "sourceSha256": "dde421b83ea84e8451f779b490f7f77394e6344dd41afb03ae95c803096a4323",
+    "sha1": "b8eeae2699bd46fddddef55fc26e5e36d16a12ce",
+    "taxonInSource": "Coccothraustes coccothraustes",
+    "annotations": [
+      "De fotograaf benoemt een juveniele Appelvink in Hongarije. Gevlekte onderzijde en forse snavel zijn goed zichtbaar."
+    ],
+    "auditDate": "2026-11-12"
+  }
+]

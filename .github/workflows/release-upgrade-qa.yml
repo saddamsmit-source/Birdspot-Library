@@ -37,6 +37,8 @@ jobs:
         baseline:
           - name: 1.14.0-main
             ref: 5bf67043e830e977749f0ee593cf9f41f0e2822b
+          - name: 1.27.5-pages
+            ref: a3f77ad86ce3e27c3a0f186e089c8d4e8df23bb5
           - name: 1.27.4-pages
             ref: e07b5ae532614e77d214de7013e84204da3421bd
           - name: 1.27.3-pages
