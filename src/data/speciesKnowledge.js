@@ -3391,6 +3391,116 @@ const DATA = {
    "checked": "2026-11-12",
    "certainty": "hoog",
    "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "VB_WILDE_EEND": {
+   "register": "NL07",
+   "label": "Vogelbescherming — Wilde Eend",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wilde-eend",
+   "edition": "Online bron",
+   "scope": "Nederland",
+   "confirms": "Snavelvorm en herkenning van vrouwtjes",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "VB_SLOBEEND": {
+   "register": "NL07",
+   "label": "Vogelbescherming — Slobeend",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/slobeend",
+   "edition": "Online bron",
+   "scope": "Nederland",
+   "confirms": "Herkenning, geluid en leefwijze",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "BZH_SLOBEEND": {
+   "register": "EU07",
+   "label": "Blasco-Zumeta & Heinze — Slobeend",
+   "url": "https://blascozumeta.com/specie_files/01940_ENG_Spatula_clypeata_aranzadi.pdf",
+   "edition": "Online bron",
+   "scope": "Europa",
+   "confirms": "Lengte, snavelbouw, kleed en leeftijd",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Blasco-Zumeta & Heinze"
+  },
+  "SOV_SLOBEEND": {
+   "register": "NL01",
+   "label": "Sovon — Slobeend",
+   "url": "https://stats.sovon.nl/stats/soort/1940/",
+   "edition": "Online bron",
+   "scope": "Nederland",
+   "confirms": "Verspreiding en seizoensvoorkomen",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "VB_KUIFEEND": {
+   "register": "NL07",
+   "label": "Vogelbescherming — Kuifeend",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kuifeend",
+   "edition": "Online bron",
+   "scope": "Nederland",
+   "confirms": "Herkenning, geluid en leefwijze",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "BZH_KUIFEEND": {
+   "register": "EU07",
+   "label": "Blasco-Zumeta & Heinze — Kuifeend",
+   "url": "https://blascozumeta.com/specie_files/02030_Aythya_fuligula_E.pdf",
+   "edition": "Online bron",
+   "scope": "Europa",
+   "confirms": "Lengte, geslacht, leeftijd en vleugeltekening",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Blasco-Zumeta & Heinze"
+  },
+  "SOV_KUIFEEND": {
+   "register": "NL01",
+   "label": "Sovon — Kuifeend",
+   "url": "https://stats.sovon.nl/stats/soort/2030/",
+   "edition": "Online bron",
+   "scope": "Nederland",
+   "confirms": "Verspreiding en seizoensvoorkomen",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "VB_TAFELEEND": {
+   "register": "NL07",
+   "label": "Vogelbescherming — Tafeleend",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/tafeleend",
+   "edition": "Online bron",
+   "scope": "Nederland",
+   "confirms": "Herkenning, geluid en leefwijze",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "BZH_TAFELEEND": {
+   "register": "EU07",
+   "label": "Blasco-Zumeta & Heinze — Tafeleend",
+   "url": "https://blascozumeta.com/specie_files/01980_ENG_Aythya_ferina_aranzadi.pdf",
+   "edition": "Online bron",
+   "scope": "Europa",
+   "confirms": "Lengte, kop- en snavelpatroon, kleed en leeftijd",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Blasco-Zumeta & Heinze"
+  },
+  "SOV_TAFELEEND": {
+   "register": "NL01",
+   "label": "Sovon — Tafeleend",
+   "url": "https://stats.sovon.nl/stats/soort/1980/",
+   "edition": "Online bron",
+   "scope": "Nederland",
+   "confirms": "Verspreiding en seizoensvoorkomen",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Sovon Vogelonderzoek Nederland"
   }
  },
  "profiles": {
@@ -18797,6 +18907,507 @@ const DATA = {
      "text": "Trekt vooral in augustus en september naar Afrika. Voorjaarstrek vindt van maart tot in mei plaats.",
      "sources": [
       "VB_PURPERREIGER"
+     ],
+     "kind": "trek"
+    }
+   ],
+   "discrepancies": [],
+   "open": []
+  },
+  "sp090": {
+   "summary": {
+    "text": "Grondeleend met een lange, platte snavel die aan het uiteinde breed uitloopt. Die vorm is bij beide geslachten en in alle kleden bruikbaar.",
+    "sources": [
+     "VB_SLOBEEND",
+     "BZH_SLOBEEND"
+    ]
+   },
+   "keyMarks": [
+    {
+     "text": "Brede, lepelvormige snavel die van opzij lang en plat oogt.",
+     "sources": [
+      "VB_SLOBEEND",
+      "BZH_SLOBEEND"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Mannetje in prachtkleed met groene kop, witte borst en kastanjebruine flanken.",
+     "sources": [
+      "VB_SLOBEEND",
+      "BZH_SLOBEEND"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "In vlucht kan de lichtblauwe voorvleugel opvallen.",
+     "sources": [
+      "VB_SLOBEEND",
+      "BZH_SLOBEEND"
+     ],
+     "reliability": "ondersteunend"
+    }
+   ],
+   "caution": {
+    "text": "Een bruine Slobeend kan op een vrouwtje Wilde Eend lijken. Bekijk de snavelvorm en bij goed zicht de vleugeltekening.",
+    "sources": [
+     "VB_SLOBEEND",
+     "BZH_SLOBEEND",
+     "VB_WILDE_EEND"
+    ]
+   },
+   "critical": [
+    {
+     "feature": "Snavelvorm",
+     "where": "Bekijk een zijaanzicht en zo mogelijk de snavel van boven.",
+     "this": "De snavel is lang, plat en aan het uiteinde opvallend breed.",
+     "other": "De snavel is relatief smaller en loopt minder breed uit.",
+     "vs": [
+      "sp089"
+     ],
+     "conditions": "Beoordeel de vorm bij vrij zicht.",
+     "exceptions": "Een snavel die deels onder water ligt kan op het eerste gezicht smaller lijken.",
+     "supporting": "Het verschil is ook bij bruine vogels bruikbaar.",
+     "sources": [
+      "VB_SLOBEEND",
+      "BZH_SLOBEEND",
+      "VB_WILDE_EEND"
+     ],
+     "reliability": "ondersteunend"
+    }
+   ],
+   "similar": [
+    {
+     "id": "sp089",
+     "why": "Bruine vogels kunnen op elkaar lijken. De brede snavel geeft bij Slobeend het beste zichtbare onderscheid.",
+     "sources": [
+      "VB_SLOBEEND",
+      "VB_WILDE_EEND"
+     ]
+    }
+   ],
+   "detail": [
+    {
+     "text": "Het mannetje krijgt na de broedtijd een bruiner eclipskleed. De lange, brede snavel blijft herkenbaar.",
+     "sources": [
+      "VB_SLOBEEND",
+      "BZH_SLOBEEND"
+     ],
+     "topic": "geslacht"
+    },
+    {
+     "text": "Het jeugdkleed is bruin en kan sterk op dat van een vrouwtje lijken. Leeftijd is op afstand moeilijk vast te stellen.",
+     "sources": [
+      "VB_SLOBEEND",
+      "BZH_SLOBEEND"
+     ],
+     "topic": "leeftijd"
+    }
+   ],
+   "voice": [
+    {
+     "text": "Het mannetje maakt lage keelgeluiden. Het vrouwtje laat een korte dubbele kwaak horen.",
+     "sources": [
+      "VB_SLOBEEND"
+     ],
+     "kind": "roep"
+    }
+   ],
+   "basis": {
+    "biometrics": [
+     {
+      "field": "length",
+      "unit": "cm",
+      "display": "ca. 45–50 cm",
+      "values": [
+       {
+        "source": "VB_SLOBEEND",
+        "min": 44,
+        "max": 52
+       },
+       {
+        "source": "BZH_SLOBEEND",
+        "min": 44,
+        "max": 52
+       }
+      ],
+      "note": "Afgeronde onder- en bovengrens op basis van de twee bronwaarden."
+     }
+    ]
+   },
+   "habitat": [
+    {
+     "text": "Vooral ondiep, voedselrijk zoet water in open grasland en moeras. In de winter ook brakke lagunes en getijdengebieden.",
+     "sources": [
+      "VB_SLOBEEND",
+      "SOV_SLOBEEND"
+     ],
+     "kind": "nederland"
+    }
+   ],
+   "status": [
+    {
+     "text": "Broedvogel in Nederland. Buiten de broedtijd komen er trekkende en overwinterende vogels bij.",
+     "sources": [
+      "VB_SLOBEEND",
+      "SOV_SLOBEEND"
+     ],
+     "kind": "voorkomen"
+    }
+   ],
+   "life": [
+    {
+     "text": "Filtert plankton, kleine ongewervelden en zaden uit het water met de brede snavel.",
+     "sources": [
+      "VB_SLOBEEND"
+     ],
+     "kind": "voedsel"
+    },
+    {
+     "text": "Maakt een nest op de grond, beschut in dichte vegetatie.",
+     "sources": [
+      "VB_SLOBEEND"
+     ],
+     "kind": "broeden"
+    },
+    {
+     "text": "Een deel van de vogels trekt in het najaar naar zuidelijker gebieden. Vanaf maart keren vogels terug naar hun broedgebieden.",
+     "sources": [
+      "VB_SLOBEEND"
+     ],
+     "kind": "trek"
+    }
+   ],
+   "discrepancies": [],
+   "open": []
+  },
+  "sp092": {
+   "summary": {
+    "text": "Compacte duikeend. Het mannetje heeft zwarte bovendelen, witte flanken en een afhangende kuif. Het vrouwtje is bruin met een kortere kuif.",
+    "sources": [
+     "VB_KUIFEEND",
+     "BZH_KUIFEEND"
+    ]
+   },
+   "keyMarks": [
+    {
+     "text": "Kuif aan de achterkant van de kop, bij het mannetje doorgaans langer.",
+     "sources": [
+      "VB_KUIFEEND",
+      "BZH_KUIFEEND"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Volwassen vogels hebben vaak een opvallend geel oog.",
+     "sources": [
+      "VB_KUIFEEND",
+      "BZH_KUIFEEND"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "In vlucht loopt een witte baan over de slagpennen.",
+     "sources": [
+      "VB_KUIFEEND",
+      "BZH_KUIFEEND"
+     ],
+     "reliability": "ondersteunend"
+    }
+   ],
+   "caution": {
+    "text": "Bij een bruine vogel kan de kuif platliggen. Kijk ook naar de oogkleur en het profiel van kop en snavel.",
+    "sources": [
+     "VB_KUIFEEND",
+     "BZH_KUIFEEND",
+     "VB_TAFELEEND"
+    ]
+   },
+   "critical": [
+    {
+     "feature": "Kuif, oog en kopprofiel",
+     "where": "Bekijk kop en flanken in zijaanzicht bij goed licht.",
+     "this": "Vaak een zichtbare kuif en een geel oog. Mannetje met witte flanken.",
+     "other": "Kop zonder kuif en met een aflopend voorhoofd. Mannetje met rood oog en grijze flanken.",
+     "vs": [
+      "sp132"
+     ],
+     "conditions": "Combineer kopprofiel met oog- en flankkleur.",
+     "exceptions": "Bij jonge vogels kan de oogkleur doffer zijn. De kuif kan platliggen.",
+     "supporting": "Vrouwtje Tafeleend heeft vaak lichte tekening op wang en keel.",
+     "sources": [
+      "VB_KUIFEEND",
+      "BZH_KUIFEEND",
+      "VB_TAFELEEND"
+     ],
+     "reliability": "ondersteunend"
+    }
+   ],
+   "similar": [
+    {
+     "id": "sp132",
+     "why": "Bij duikeenden in gemengde groepen helpen oogkleur, kopprofiel en flankkleur bij het onderscheid.",
+     "sources": [
+      "VB_KUIFEEND",
+      "VB_TAFELEEND"
+     ]
+    }
+   ],
+   "detail": [
+    {
+     "text": "Bij een vrouwtje kan een lichte rand aan de snavelbasis zichtbaar zijn. De kuif is korter dan bij een mannetje.",
+     "sources": [
+      "VB_KUIFEEND",
+      "BZH_KUIFEEND"
+     ],
+     "topic": "geslacht"
+    },
+    {
+     "text": "Jonge vogels zijn bruin en lijken op vrouwtjes. Kuiflengte alleen is onvoldoende om de leeftijd te bepalen.",
+     "sources": [
+      "VB_KUIFEEND",
+      "BZH_KUIFEEND"
+     ],
+     "topic": "leeftijd"
+    }
+   ],
+   "voice": [
+    {
+     "text": "Het vrouwtje heeft een lage, rauwe roep. Het mannetje laat tijdens de balts hoge fluitende en trillende geluiden horen.",
+     "sources": [
+      "VB_KUIFEEND"
+     ],
+     "kind": "roep"
+    }
+   ],
+   "basis": {
+    "biometrics": [
+     {
+      "field": "length",
+      "unit": "cm",
+      "display": "ca. 40–45 cm",
+      "values": [
+       {
+        "source": "VB_KUIFEEND",
+        "min": 40,
+        "max": 47
+       },
+       {
+        "source": "BZH_KUIFEEND",
+        "min": 40,
+        "max": 47
+       }
+      ],
+      "note": "Afgeronde onder- en bovengrens op basis van de twee bronwaarden."
+     }
+    ]
+   },
+   "habitat": [
+    {
+     "text": "Meren, vijvers, rustige rivieren, sloten en vaarten. Broedt bij water met geschikte beschutting aan de oevers.",
+     "sources": [
+      "VB_KUIFEEND",
+      "SOV_KUIFEEND"
+     ],
+     "kind": "nederland"
+    }
+   ],
+   "status": [
+    {
+     "text": "Jaarrond in Nederland. In de winter zijn ook vogels uit Centraal- en Noord-Europa aanwezig.",
+     "sources": [
+      "VB_KUIFEEND",
+      "SOV_KUIFEEND"
+     ],
+     "kind": "voorkomen"
+    }
+   ],
+   "life": [
+    {
+     "text": "Duikt onder water naar onder meer schelpdieren en andere ongewervelden. Eet ook plantaardig voedsel.",
+     "sources": [
+      "VB_KUIFEEND"
+     ],
+     "kind": "voedsel"
+    },
+    {
+     "text": "Maakt een verborgen nest in oeverbegroeiing. De jongen verlaten het nest kort na uitkomen.",
+     "sources": [
+      "VB_KUIFEEND"
+     ],
+     "kind": "broeden"
+    },
+    {
+     "text": "Een deel van de Nederlandse broedvogels overwintert verder naar het zuiden of westen.",
+     "sources": [
+      "VB_KUIFEEND"
+     ],
+     "kind": "trek"
+    }
+   ],
+   "discrepancies": [],
+   "open": []
+  },
+  "sp132": {
+   "summary": {
+    "text": "Duikeend met een aflopend voorhoofd. Het mannetje heeft in prachtkleed een roodbruine kop, een zwarte borst en lichtgrijze flanken.",
+    "sources": [
+     "VB_TAFELEEND",
+     "BZH_TAFELEEND"
+    ]
+   },
+   "keyMarks": [
+    {
+     "text": "Bij volwassen mannetjes vallen de roodbruine kop en het rode oog op.",
+     "sources": [
+      "VB_TAFELEEND",
+      "BZH_TAFELEEND"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Vrouwtje is bruin met vaak een lichtere wang en keel.",
+     "sources": [
+      "VB_TAFELEEND",
+      "BZH_TAFELEEND"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "De kop loopt af naar de snavel en heeft geen kuif.",
+     "sources": [
+      "VB_TAFELEEND",
+      "BZH_TAFELEEND"
+     ],
+     "reliability": "ondersteunend"
+    }
+   ],
+   "caution": {
+    "text": "Een bruine Tafeleend kan op andere duikeenden lijken. Bekijk kopprofiel, wangtekening en snavel samen.",
+    "sources": [
+     "VB_TAFELEEND",
+     "BZH_TAFELEEND",
+     "VB_KUIFEEND"
+    ]
+   },
+   "critical": [
+    {
+     "feature": "Kopprofiel, oog en flanken",
+     "where": "Bekijk het voorhoofd, het oog en de flank bij goed licht.",
+     "this": "Zonder kuif, met aflopend voorhoofd. Mannetje met rood oog en grijze flanken.",
+     "other": "Vaak een kuif en een geel oog. Mannetje met witte flanken.",
+     "vs": [
+      "sp092"
+     ],
+     "conditions": "Vergelijk vogels in hetzelfde kleed en kijk naar meerdere kenmerken.",
+     "exceptions": "Jonge vogels en mannetjes in eclipskleed zijn minder contrastrijk.",
+     "supporting": "Bij bruine vogels kan lichte wangtekening helpen.",
+     "sources": [
+      "VB_TAFELEEND",
+      "BZH_TAFELEEND",
+      "VB_KUIFEEND"
+     ],
+     "reliability": "ondersteunend"
+    }
+   ],
+   "similar": [
+    {
+     "id": "sp092",
+     "why": "Beide duiken vaak in dezelfde groepen. Gebruik kopprofiel, oog en flanken samen.",
+     "sources": [
+      "VB_TAFELEEND",
+      "VB_KUIFEEND"
+     ]
+    }
+   ],
+   "detail": [
+    {
+     "text": "Mannetjes zijn in eclipskleed doffer en minder contrastrijk. Vrouwtjes hebben doorgaans een bruinere kop en grijsbruine romp.",
+     "sources": [
+      "VB_TAFELEEND",
+      "BZH_TAFELEEND"
+     ],
+     "topic": "geslacht"
+    },
+    {
+     "text": "Jonge vogels lijken op vrouwtjes. Verse juveniele dekveren en staartveren kunnen helpen als die van dichtbij zichtbaar zijn.",
+     "sources": [
+      "VB_TAFELEEND",
+      "BZH_TAFELEEND"
+     ],
+     "topic": "leeftijd"
+    }
+   ],
+   "voice": [
+    {
+     "text": "Het vrouwtje heeft een lage kwakende roep. Het mannetje maakt tijdens de balts een oplopend geluid.",
+     "sources": [
+      "VB_TAFELEEND"
+     ],
+     "kind": "roep"
+    }
+   ],
+   "basis": {
+    "biometrics": [
+     {
+      "field": "length",
+      "unit": "cm",
+      "display": "ca. 40–50 cm",
+      "values": [
+       {
+        "source": "VB_TAFELEEND",
+        "min": 42,
+        "max": 49
+       },
+       {
+        "source": "BZH_TAFELEEND",
+        "min": 42,
+        "max": 49
+       }
+      ],
+      "note": "Afgeronde onder- en bovengrens op basis van de twee bronwaarden."
+     }
+    ]
+   },
+   "habitat": [
+    {
+     "text": "Meren, moerassen en langzaam stromend water met begroeide oevers. In de winter ook groter, open water.",
+     "sources": [
+      "VB_TAFELEEND",
+      "SOV_TAFELEEND"
+     ],
+     "kind": "nederland"
+    }
+   ],
+   "status": [
+    {
+     "text": "Nederlandse broedvogel en wintergast. In het najaar komen er vogels uit noordelijker gebieden bij.",
+     "sources": [
+      "VB_TAFELEEND",
+      "SOV_TAFELEEND"
+     ],
+     "kind": "voorkomen"
+    }
+   ],
+   "life": [
+    {
+     "text": "Duikt naar waterplanten, wortels, zaden en kleine waterdieren.",
+     "sources": [
+      "VB_TAFELEEND"
+     ],
+     "kind": "voedsel"
+    },
+    {
+     "text": "Nestelt dicht bij water in riet en andere begroeiing.",
+     "sources": [
+      "VB_TAFELEEND"
+     ],
+     "kind": "broeden"
+    },
+    {
+     "text": "Nederlandse broedvogels zijn grotendeels standvogels. Bij koude kan een deel zuidwestwaarts trekken.",
+     "sources": [
+      "VB_TAFELEEND"
      ],
      "kind": "trek"
     }

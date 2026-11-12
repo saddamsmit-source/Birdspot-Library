@@ -4871,6 +4871,36 @@
    "airborne": false,
    "source": "Visuele controle K07 fase 2 (2026-11-12)",
    "note": "Jonge Purperreiger in zijaanzicht tussen rietstengels, met geelbruine veren en een lange, smalle hals."
+  },
+  "/assets/species/plumage/sp090-juv.webp": {
+   "refs": [
+    "sp090 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "a590c76cc7b4c31e054221d3816e840f6cc73046",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K07 fase 3 (2026-11-12)",
+   "note": "Jonge Slobeend in zijaanzicht, met bruingevlekt lichaam en lange, brede snavel op groen water."
+  },
+  "/assets/species/plumage/sp092-juv.webp": {
+   "refs": [
+    "sp092 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "ac7663f9870fbc13d001121943e727b22841cd8f",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K07 fase 3 (2026-11-12)",
+   "note": "Jonge Kuifeend in volledig bruin kleed op open water, met korte kuif en een dofgeel oog."
+  },
+  "/assets/species/plumage/sp132-juv.webp": {
+   "refs": [
+    "sp132 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "47aad9c03f31d11bbdf0d4b4816a1253df2589c0",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K07 fase 3 (2026-11-12)",
+   "note": "Jonge Tafeleend linksachter een grotere Tafeleend op helder water. Het jonge dier heeft een bruingevlekte rug en lichte wang."
   }
  }
 }

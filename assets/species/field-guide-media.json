@@ -3834,6 +3834,30 @@
         "height": 1067,
         "originalURL": "https://upload.wikimedia.org/wikipedia/commons/5/57/Northern_Shoveler-Anas_clypeata_female.jpg",
         "image": "/assets/species/plumage/sp090-adult_f.webp"
+      },
+      "juv": {
+        "file": "iNaturalist photo 760982120",
+        "nl": "Slobeend",
+        "latin": "Spatula clypeata",
+        "author": "Hal",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://www.inaturalist.org/photos/760982120",
+        "showSourceLink": true,
+        "alt": "Jonge Slobeend in zijaanzicht, met bruingevlekt lichaam en lange, brede snavel op groen water.",
+        "note": "Jonge Slobeend in bruin kleed. De brede snavel is goed zichtbaar. De foto is gemaakt in de Verenigde Staten.",
+        "modifications": "Verkleind tot maximaal 1400 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.",
+        "reviewed": "2026-11-12",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/slobeend",
+        "visualCheck": "Jonge Slobeend in zijaanzicht, met bruingevlekt lichaam en lange, brede snavel op groen water.",
+        "verification": "iNaturalist-onderzoekswaarneming van Slobeend uit de Verenigde Staten met de leeftijdsannotatie Juvenile.",
+        "width": 1400,
+        "height": 933,
+        "image": "/assets/species/plumage/sp090-juv.webp",
+        "sha1": "a590c76cc7b4c31e054221d3816e840f6cc73046",
+        "sourceAudit": "2026-11-12",
+        "age": "juvenile",
+        "observation": "https://www.inaturalist.org/observations/413466461"
       }
     },
     "sp092": {
@@ -3858,6 +3882,30 @@
         "height": 1200,
         "originalURL": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Aythya_fuligula_%28female%29.jpg",
         "image": "/assets/species/plumage/sp092-adult_f.webp"
+      },
+      "juv": {
+        "file": "iNaturalist photo 736323053",
+        "nl": "Kuifeend",
+        "latin": "Aythya fuligula",
+        "author": "SkippingShoe",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://www.inaturalist.org/photos/736323053",
+        "showSourceLink": true,
+        "alt": "Jonge Kuifeend in volledig bruin kleed op open water, met korte kuif en een dofgeel oog.",
+        "note": "Jonge Kuifeend in bruin verenkleed, met een korte kuif. De tweede foto in dit vak toont een jonger stadium.",
+        "modifications": "Verkleind tot maximaal 1400 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.",
+        "reviewed": "2026-11-12",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kuifeend",
+        "visualCheck": "Jonge Kuifeend in volledig bruin kleed op open water, met korte kuif en een dofgeel oog.",
+        "verification": "iNaturalist-onderzoekswaarneming van Kuifeend uit het Verenigd Koninkrijk met de leeftijdsannotatie Juvenile.",
+        "width": 1400,
+        "height": 933,
+        "image": "/assets/species/plumage/sp092-juv.webp",
+        "sha1": "ac7663f9870fbc13d001121943e727b22841cd8f",
+        "sourceAudit": "2026-11-12",
+        "age": "juvenile",
+        "observation": "https://www.inaturalist.org/observations/401186884"
       }
     },
     "sp126": {
@@ -3958,6 +4006,30 @@
         "height": 1200,
         "originalURL": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Aythya_ferina_%28female%29%2C_Krasnodar%2C_Russia.jpg",
         "image": "/assets/species/plumage/sp132-adult_f.webp"
+      },
+      "juv": {
+        "file": "iNaturalist photo 681580697",
+        "nl": "Tafeleend",
+        "latin": "Aythya ferina",
+        "author": "James Heal",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://www.inaturalist.org/photos/681580697",
+        "showSourceLink": true,
+        "alt": "Jonge Tafeleend linksachter een grotere Tafeleend op helder water. Het jonge dier heeft een bruingevlekte rug en lichte wang.",
+        "note": "De kleinere Tafeleend linksachter is de juveniel. De grotere vogel staat op de voorgrond.",
+        "modifications": "Verkleind tot maximaal 1400 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.",
+        "reviewed": "2026-11-12",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/tafeleend",
+        "visualCheck": "Jonge Tafeleend linksachter een grotere Tafeleend op helder water. Het jonge dier heeft een bruingevlekte rug en lichte wang.",
+        "verification": "De fotograaf benoemt een begeleidende juveniel in de iNaturalist-onderzoekswaarneming. De kleinere vogel linksachter toont het jonge kleed.",
+        "width": 1400,
+        "height": 933,
+        "image": "/assets/species/plumage/sp132-juv.webp",
+        "sha1": "47aad9c03f31d11bbdf0d4b4816a1253df2589c0",
+        "sourceAudit": "2026-11-12",
+        "age": "juvenile",
+        "observation": "https://www.inaturalist.org/observations/372974505"
       }
     },
     "sp104": {
