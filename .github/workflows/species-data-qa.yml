@@ -4,15 +4,18 @@ on:
     paths:
       - "src/data/species.js"
       - "src/features/species/**"
+      - "src/features/sightings/speciesPicker.js"
       - "docs/data/**"
       - "tools/species/**"
       - "tests/test_species_data.py"
       - "tests/test_season_filter.py"
+      - "tests/test_species_groups_az.py"
       - "src/data/seasons.js"
       - "src/features/map/**"
       - "tests/test_species_detail.py"
       - "styles/species.css"
       - "tests/fixtures/species_ids_*.json"
+      - "src/features/profile/stats.js"
       - ".github/workflows/species-data-qa.yml"
 jobs:
   species-data:
@@ -45,6 +48,8 @@ jobs:
           git diff --exit-code src/data/speciesLife.js
       - name: Species detail tabs QA
         run: python tests/test_species_detail.py
+      - name: Soortgroepen A-Z QA (Soorten-pagina + soortkiezer bij loggen)
+        run: python tests/test_species_groups_az.py
       - name: Showcase build is idempotent (showcaseData.js matches photos)
         run: |
           python tools/showcase/build.py
@@ -59,12 +64,19 @@ jobs:
         run: python tests/test_map_k4.py
       - name: Map K5 QA (search by place, links)
         run: python tests/test_map_k5.py
+      - name: Map K6 QA (season clouds, legend filters, notable, best months)
+        run: python tests/test_map_k6.py
       - name: Profile and backup QA
         run: python tests/test_profile_backup.py
+      - name: Profile K7 QA (lists, CSV export, settings)
+        run: python tests/test_profile_k7.py
       - name: Upload screenshot evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: birdspot-species-data-screenshots
-          path: tests/screenshots/species_i*.png
+          path: |
+            tests/screenshots/species_i*.png
+            tests/screenshots/species_groups_az*.png
+            tests/screenshots/species_picker_groups_az*.png
           if-no-files-found: ignore

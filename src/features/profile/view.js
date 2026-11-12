@@ -1,6 +1,8 @@
 /**
  * Profiel & instellingen — Stap 7 (Fase F)
  *
+ * K7: lijsten (soortenlijst, jaarlijst, nieuwe soorten, topplekken), CSV-export en snelinstellingen.
+ *
  * Back-up & herstel UI:
  *   - "Alles bewaren" → ZIP export
  *   - "Herstellen" → ZIP import met samenvoegen
@@ -17,11 +19,27 @@ import {
   restoreFromSafetyCopy,
 } from '../../storage/backup.js';
 import { getSightings } from '../../data/sightings.js';
+import { SPECIES } from '../../data/species.js';
+import { loadPlaces } from '../../data/places.js';
+import { loadSettings, saveSetting, BACKUP_REMINDER_OPTIONS } from '../../data/settings.js';
+import { LAYERS, savedLayer, saveLayer } from '../map/centerPin.js';
+import { profileLists, groupSpeciesByFamily } from './stats.js';
+import { downloadCsv } from './exportCsv.js';
+
+const SPECIES_BY_ID = new Map(SPECIES.map(s => [s.id, s]));
+const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const dayLabel = d => {
+  const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(d || ''));
+  return m ? new Date(Date.UTC(+m[1], +m[2] - 1, +m[3])).toLocaleDateString('nl-NL', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }) : '';
+};
 
 export async function renderProfile(el) {
-  const sightings   = await getSightings();
+  const sightings   = (await getSightings()).filter(Boolean);
   const backupStatus = getBackupStatus();
   const safetyCopy  = hasSafetyCopy();
+  const places      = loadPlaces();
+  const settings    = loadSettings();
+  const lists       = profileLists(sightings, { places, speciesById: SPECIES_BY_ID });
 
   el.innerHTML = `
     <div class="profile-screen">
@@ -40,13 +58,15 @@ export async function renderProfile(el) {
 
       ${renderOverview(sightings)}
 
+      ${renderLists(lists)}
+
       <!-- Back-up sectie -->
       <section class="profile-section" aria-labelledby="backupHeading">
         <h2 class="profile-section__title" id="backupHeading">Back-up & herstel</h2>
 
         <!-- Status -->
         <div class="backup-status" id="backupStatus" aria-live="polite">
-          ${renderBackupStatus(backupStatus, sightings.length)}
+          ${renderBackupStatus(backupStatus, sightings.length, settings.backupReminderDays)}
         </div>
 
         <!-- Alles bewaren -->
@@ -96,6 +116,35 @@ export async function renderProfile(el) {
         </div>
       </section>
 
+      <!-- Exporteren (K7) -->
+      <section class="profile-section" aria-labelledby="exportHeading">
+        <h2 class="profile-section__title" id="exportHeading">Exporteren</h2>
+        <div class="profile-card">
+          <div class="profile-card__info">
+            <div class="profile-card__label">Waarnemingen als CSV</div>
+            <div class="profile-card__desc">Alle waarnemingen met datum, soort, aantal, coördinaten en plek. Voor waarneming.nl of een spreadsheet.</div>
+          </div>
+          <button class="btn btn--secondary" id="btnCsv" ${sightings.length ? '' : 'disabled'}>CSV</button>
+        </div>
+      </section>
+
+      <!-- Instellingen (K7) -->
+      <section class="profile-section" aria-labelledby="settingsHeading">
+        <h2 class="profile-section__title" id="settingsHeading">Instellingen</h2>
+        <div class="profile-setting">
+          <div class="profile-card__label" id="layerLabel">Standaard kaartlaag</div>
+          <div class="profile-segment" role="radiogroup" aria-labelledby="layerLabel">
+            ${Object.entries(LAYERS).map(([key, l]) => `<button type="button" role="radio" data-layer="${key}" aria-checked="${savedLayer() === key}">${esc(l.label)}</button>`).join('')}
+          </div>
+        </div>
+        <div class="profile-setting">
+          <div class="profile-card__label" id="reminderLabel">Back-upherinnering</div>
+          <div class="profile-segment" role="radiogroup" aria-labelledby="reminderLabel">
+            ${BACKUP_REMINDER_OPTIONS.map(d => `<button type="button" role="radio" data-reminder="${d}" aria-checked="${settings.backupReminderDays === d}">${d ? `Na ${d} dagen` : 'Uit'}</button>`).join('')}
+          </div>
+        </div>
+      </section>
+
       <!-- App-info -->
       <section class="profile-section" aria-labelledby="infoHeading">
         <h2 class="profile-section__title" id="infoHeading">Over de app</h2>
@@ -122,19 +171,23 @@ export async function renderProfile(el) {
     </div>
   `;
 
+  attachEvents(el, sightings, places, lists);
+
   // Versie ophalen bij de service worker (enige versiebron, L-027)
   const versionEl = el.querySelector('#appVersion');
-  const version = await askVersion();
-  versionEl.textContent = version
-    ? `Versie ${version} · werkt offline`
-    : 'Versie onbekend · offline-modus nog niet actief';
-
-  attachEvents(el);
+  const info = await askVersion();
+  if (!info) {
+    versionEl.textContent = 'Versie onbekend · offline-modus nog niet actief';
+    return;
+  }
+  const offlineStatus = info.offlineReady === true ? 'basis offline beschikbaar'
+    : info.offlineReady === false ? 'offlinebasis onvolledig' : 'offlinebasis onbevestigd';
+  versionEl.textContent = `Versie ${info.version} · ${offlineStatus}`;
 }
 
 // ── Event handlers ─────────────────────────────────────────────────────────
 
-function attachEvents(el) {
+function attachEvents(el, sightings = [], places = [], lists = null) {
   // Export
   el.querySelector('#btnExport').addEventListener('click', () => handleExport(el));
 
@@ -148,6 +201,52 @@ function attachEvents(el) {
 
   // Terugzetten
   el.querySelector('#btnRestore').addEventListener('click', () => handleRestore(el));
+
+  // K7: CSV-export
+  el.querySelector('#btnCsv')?.addEventListener('click', () => {
+    try {
+      const r = downloadCsv(sightings, { speciesById: SPECIES_BY_ID, places });
+      showToast(`CSV opgeslagen: ${r.count} ${r.count === 1 ? 'waarneming' : 'waarnemingen'}`);
+    } catch (e) {
+      showToast(`CSV maken mislukt: ${e.message}`, 'error');
+    }
+  });
+
+  // K7: instellingen (direct opgeslagen)
+  el.querySelectorAll('[data-layer]').forEach(btn => btn.addEventListener('click', () => {
+    saveLayer(btn.dataset.layer);
+    el.querySelectorAll('[data-layer]').forEach(b => b.setAttribute('aria-checked', String(b === btn)));
+    showToast(`Kaart opent voortaan met ${btn.textContent.toLowerCase()}`);
+  }));
+  el.querySelectorAll('[data-reminder]').forEach(btn => btn.addEventListener('click', () => {
+    const days = Number(btn.dataset.reminder);
+    saveSetting('backupReminderDays', days);
+    el.querySelectorAll('[data-reminder]').forEach(b => b.setAttribute('aria-checked', String(b === btn)));
+    updateStatus(el, getBackupStatus(), sightings.length);
+  }));
+
+  el.querySelector('[data-insights]')?.addEventListener('click', () =>
+    import('../../app.js').then(({ navigate }) => navigate('insights')));
+
+  // K7: van lijst naar soort of plek
+  el.addEventListener('click', e => {
+    const sp = e.target.closest('[data-open-species]');
+    const pl = e.target.closest('[data-open-place]');
+    if (!sp && !pl) return;
+    try {
+      if (sp) sessionStorage.setItem('birdspot-open-species', sp.dataset.openSpecies);
+      if (pl) sessionStorage.setItem('birdspot-map-place', pl.dataset.openPlace);
+    } catch (_) { /* zonder sessionStorage opent alleen het scherm */ }
+    import('../../app.js').then(({ navigate }) => navigate(sp ? 'species' : 'map', { force: true }));
+  });
+
+  // K7: volledige soortenlijst pas opbouwen bij openen (L-053)
+  const all = el.querySelector('#profileAllSpecies');
+  all?.addEventListener('toggle', () => {
+    if (!all.open || all.dataset.built) return;
+    all.dataset.built = '1';
+    all.querySelector('.profile-list').innerHTML = speciesRowsGrouped(lists?.list || [], SPECIES_BY_ID);
+  });
 }
 
 // ── Export ─────────────────────────────────────────────────────────────────
@@ -159,7 +258,7 @@ async function handleExport(el) {
 
   try {
     const result = await exportBackup();
-    updateStatus(el, getBackupStatus());
+    updateStatus(el, getBackupStatus(), getBackupStatus()?.sightingCount ?? 0);
     showToast(`Back-up opgeslagen: ${result.sightingCount} waarnemingen, ${result.photoCount} foto's`);
   } catch (e) {
     showToast(`Back-up mislukt: ${e.message}`, 'error');
@@ -201,7 +300,7 @@ async function handleImport(el, file) {
 
     // Terugzetten-knop tonen (er is nu een veiligheidskopie)
     const restoreCard = el.querySelector('#restoreCard');
-    if (restoreCard) restoreCard.classList.remove('profile-card--hidden');
+    restoreCard?.classList.toggle('profile-card--hidden', !hasSafetyCopy());
 
     showToast(`Hersteld: ${result.merged} waarnemingen in je bibliotheek`);
 
@@ -275,13 +374,17 @@ function showConfirm(el, html) {
 // ── Versie via MessageChannel; null als er (nog) geen service worker is ──────
 async function askVersion() {
   try {
-    const reg = await navigator.serviceWorker?.getRegistration?.();
-    const sw = reg?.active;
+    const sw = navigator.serviceWorker?.controller;
     if (!sw) return null;
     return await new Promise(resolve => {
       const ch = new MessageChannel();
-      const timer = setTimeout(() => resolve(null), 1500);
-      ch.port1.onmessage = e => { clearTimeout(timer); resolve(e.data?.version || null); };
+      const finish = info => {
+        clearTimeout(timer);
+        ch.port1.close();
+        resolve(info);
+      };
+      const timer = setTimeout(() => finish(null), 1500);
+      ch.port1.onmessage = e => finish(e.data?.version ? e.data : null);
       sw.postMessage({ type: 'get-version' }, [ch.port2]);
     });
   } catch (_) { return null; }
@@ -290,7 +393,8 @@ async function askVersion() {
 // ── Overzicht: tegels met aantallen; 0-tegels krijgen uitleg (D11) ─────────
 export function overviewStats(sightings) {
   const species = new Set(sightings.map(s => s.speciesId).filter(Boolean));
-  const places = new Set(sightings.map(s => (s.locationName || '').trim()).filter(Boolean));
+  // Vaste plek (K4) telt op id; zonder vaste plek telt de vrije plaatsnaam (zelfde regel als Topplekken)
+  const places = new Set(sightings.map(s => s.placeId ? `id:${s.placeId}` : (s.locationName || '').trim().toLowerCase()).filter(Boolean));
   const photos = sightings.reduce((n, s) => n + (Array.isArray(s.photoIds) ? s.photoIds.length : 0), 0);
   return { sightings: sightings.length, species: species.size, places: places.size, photos };
 }
@@ -315,16 +419,68 @@ function renderOverview(sightings) {
   </section>`;
 }
 
-// ── Back-upstatus bijwerken ────────────────────────────────────────────────
-
-function updateStatus(el, status) {
-  const statusEl = el.querySelector('#backupStatus');
-  if (statusEl) statusEl.innerHTML = renderBackupStatus(status, status?.sightingCount ?? 0);
+// ── K7: lijsten ─────────────────────────────────────────────────────────────
+function speciesRows(rows) {
+  return rows.map(r => `<li><button type="button" class="profile-row" data-open-species="${esc(r.speciesId)}">
+      <span class="profile-row__name">${esc(r.name)}</span>
+      <span class="profile-row__meta">${r.count}× · sinds ${esc(dayLabel(r.first))}</span>
+    </button></li>`).join('');
 }
 
-const BACKUP_MAX_AGE_DAYS = 30;
+// "Alle soorten": zelfde rijen/telling/klikgedrag als speciesRows(), alleen
+// gegroepeerd op soortgroep (familie) A-Z met de naam A-Z binnen de groep.
+function speciesRowsGrouped(list, speciesById) {
+  return groupSpeciesByFamily(list, speciesById).map(({ family, rows }) =>
+    `<li class="profile-group-label" role="presentation">${esc(family)}</li>${speciesRows(rows)}`
+  ).join('');
+}
 
-function renderBackupStatus(status, currentCount = 0) {
+function renderLists(l) {
+  if (!l.list.length) {
+    return l.skipped
+      ? `<section class="profile-section" aria-labelledby="listsHeading">
+          <h2 class="profile-section__title" id="listsHeading">Mijn lijsten</h2>
+          <p class="profile-empty">${l.skipped} ${l.skipped === 1 ? 'waarneming is' : 'waarnemingen zijn'} nog onzeker (mogelijk of een niet-gecontroleerde Merlin-suggestie) en ${l.skipped === 1 ? 'telt' : 'tellen'} niet mee.</p>
+        </section>` : '';
+  }
+  const tile = (n, label) => `<div class="profile-stat"><strong>${n}</strong><span>${label}</span></div>`;
+  const newRows = l.newThisYear.slice(0, 5);
+  return `<section class="profile-section" aria-labelledby="listsHeading">
+    <h2 class="profile-section__title" id="listsHeading">Mijn lijsten</h2>
+    <div class="profile-stats profile-stats--lists">
+      ${tile(l.list.length, l.list.length === 1 ? 'soort op je lijst' : 'soorten op je lijst')}
+      ${l.yearSpecies ? tile(l.yearSpecies, `jaarlijst ${l.year}`) : ''}
+      ${l.newThisYear.length ? tile(l.newThisYear.length, `nieuw in ${l.year}`) : ''}
+    </div>
+    ${newRows.length ? `<h3 class="profile-subtitle">Nieuwe soorten in ${l.year}</h3>
+      <ul class="profile-list">${speciesRows(newRows)}</ul>` : ''}
+    ${l.top.length ? `<h3 class="profile-subtitle">Topplekken</h3>
+      <ol class="profile-list profile-list--places">${l.top.map(t => {
+        const meta = `${t.sightings} ${t.sightings === 1 ? 'waarneming' : 'waarnemingen'} · ${t.species} ${t.species === 1 ? 'soort' : 'soorten'}`;
+        return t.placeId
+          ? `<li><button type="button" class="profile-row" data-open-place="${esc(t.placeId)}"><span class="profile-row__name">${esc(t.name)}</span><span class="profile-row__meta">${meta}</span></button></li>`
+          : `<li><div class="profile-row"><span class="profile-row__name">${esc(t.name)}</span><span class="profile-row__meta">${meta}</span></div></li>`;
+      }).join('')}</ol>` : ''}
+    ${l.years.length > 1 ? `<h3 class="profile-subtitle">Jaarlijsten</h3>
+      <table class="profile-years"><thead><tr><th scope="col">Jaar</th><th scope="col">Soorten</th></tr></thead>
+        <tbody>${l.years.map(y => `<tr><td>${y.year}</td><td>${y.species}</td></tr>`).join('')}</tbody></table>` : ''}
+    <details class="profile-all" id="profileAllSpecies">
+      <summary>Alle soorten <span>(${l.list.length})</span></summary>
+      <ul class="profile-list"></ul>
+    </details>
+    ${l.skipped ? `<p class="profile-note">${l.skipped} onzekere ${l.skipped === 1 ? 'waarneming telt' : 'waarnemingen tellen'} niet mee (mogelijk, of Merlin-suggestie zonder eigen controle).</p>` : ''}
+    <button type="button" class="profile-link" data-insights>Meer per jaar in Mijn Inzichten ↗</button>
+  </section>`;
+}
+
+// ── Back-upstatus bijwerken ────────────────────────────────────────────────
+
+function updateStatus(el, status, currentCount = status?.sightingCount ?? 0) {
+  const statusEl = el.querySelector('#backupStatus');
+  if (statusEl) statusEl.innerHTML = renderBackupStatus(status, currentCount, loadSettings().backupReminderDays);
+}
+
+function renderBackupStatus(status, currentCount = 0, reminderDays = 30) {
   if (!status?.lastBackup) {
     return currentCount
       ? `<p class="backup-status__warn">Nog geen back-up. Bewaar je ${currentCount} ${currentCount === 1 ? 'waarneming' : 'waarnemingen'} met "Bewaren".</p>`
@@ -334,7 +490,7 @@ function renderBackupStatus(status, currentCount = 0) {
   const newSince = Math.max(0, currentCount - (status.sightingCount ?? currentCount));
   const reminder = newSince
     ? `<p class="backup-status__warn">${newSince} ${newSince === 1 ? 'nieuwe waarneming' : 'nieuwe waarnemingen'} sinds de laatste back-up.</p>`
-    : ageDays > BACKUP_MAX_AGE_DAYS
+    : reminderDays && ageDays > reminderDays
       ? `<p class="backup-status__warn">Laatste back-up is ${ageDays} dagen oud.</p>` : '';
 
   const date = new Date(status.lastBackup).toLocaleString('nl-NL', {

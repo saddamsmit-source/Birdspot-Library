@@ -1,0 +1,77 @@
+[
+  {
+    "image": "/assets/species/plumage/sp031-juv.webp",
+    "species": "sp031",
+    "source": "https://commons.wikimedia.org/wiki/File:Poecile_montanus%2C_Willow_Tit%2C_Weidenmeise.JPG",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Poecile_montanus%2C_Willow_Tit%2C_Weidenmeise.JPG",
+    "sourceTitle": "Poecile montanus, Willow Tit, Weidenmeise.JPG",
+    "sourceAuthor": "Wald1siedel",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.",
+    "sourceSha256": "d81ec493f5bca49aae833e00c6f52e7e05685f7b47eb988fa58ac09f42f26c2a",
+    "sha1": "1e07367acd6f5eaf574815e1984bf254643a17c2",
+    "taxonInSource": "Poecile montanus",
+    "annotations": [
+      "De fotograaf benoemt een juveniele Matkop buiten de nestholte in Oostenrijk. De lichte snavelhoeken zijn zichtbaar."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp176-juv.webp",
+    "species": "sp176",
+    "source": "https://www.inaturalist.org/photos/561527545",
+    "originalUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/561527545/original.jpg",
+    "sourceTitle": "iNaturalist photo 561527545",
+    "sourceAuthor": "Andrejus Gaidamavičius",
+    "sourceLicense": "CC BY 4.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.",
+    "sourceSha256": "1bc6636ecafa919f2903621528b98c51f49790c93199c4eac8febf156b0e34f5",
+    "sha1": "7fb1549e2e94cf3e220a7b99c8f3272c4ff21dc4",
+    "taxonInSource": "Muscicapa striata",
+    "annotations": [
+      "De onderzoekswaarneming uit Litouwen heeft de annotatie Juvenile. Lichte vlekken op rug en vleugeldekveren zijn zichtbaar."
+    ],
+    "auditDate": "2026-11-12",
+    "observation": "https://www.inaturalist.org/observations/311094817"
+  },
+  {
+    "image": "/assets/species/plumage/sp178-adult_f.webp",
+    "species": "sp178",
+    "source": "https://www.inaturalist.org/photos/686068567",
+    "originalUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/686068567/original.jpg",
+    "sourceTitle": "iNaturalist photo 686068567",
+    "sourceAuthor": "Сергей Неклюдов",
+    "sourceLicense": "CC BY 4.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.",
+    "sourceSha256": "ef875395c449aa1699e84c4e11fa084f8571e09af9e1863afdbe0fe313ab6339",
+    "sha1": "59198ea2c4c46c5310278594be6546afeb1c3e89",
+    "taxonInSource": "Phoenicurus phoenicurus",
+    "annotations": [
+      "De onderzoekswaarneming heeft de annotaties Adult en Female. Het zijaanzicht toont de warme beige onderzijde."
+    ],
+    "auditDate": "2026-11-12",
+    "observation": "https://www.inaturalist.org/observations/375299471"
+  },
+  {
+    "image": "/assets/species/plumage/sp178-juv.webp",
+    "species": "sp178",
+    "source": "https://www.inaturalist.org/photos/686068572",
+    "originalUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/686068572/original.jpg",
+    "sourceTitle": "iNaturalist photo 686068572",
+    "sourceAuthor": "Сергей Неклюдов",
+    "sourceLicense": "CC BY 4.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.",
+    "sourceSha256": "bad6308834f3201b4c10a335da5c94b57f06d92e0b452cd61d25710c306395d7",
+    "sha1": "93119a52a396c13ab93420949e2d3d0a54bdfc2c",
+    "taxonInSource": "Phoenicurus phoenicurus",
+    "annotations": [
+      "Een afzonderlijke onderzoekswaarneming heeft de annotatie Juvenile. Het jeugdkleed en de roodachtige staart zijn zichtbaar."
+    ],
+    "auditDate": "2026-11-12",
+    "observation": "https://www.inaturalist.org/observations/375299473"
+  }
+]

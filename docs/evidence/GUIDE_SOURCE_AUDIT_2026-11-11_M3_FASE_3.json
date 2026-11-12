@@ -1,0 +1,35 @@
+[
+ {
+  "image": "/assets/species/plumage/sp089-free-flight.webp",
+  "species": "sp089",
+  "source": "https://commons.wikimedia.org/wiki/File:Mallard_duck_in_flight.jpg",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Mallard_duck_in_flight.jpg",
+  "sourceTitle": "File:Mallard duck in flight.jpg",
+  "sourceAuthor": "Bert de Tilly",
+  "sourceLicense": "CC BY-SA 4.0",
+  "sameShot": true,
+  "method": "directe WebP-conversie van de originele Commons-JPEG",
+  "sourceSha256": "a34e141fb0b1a316fe83f68eafa04ebf0f56cd5e19447d736d38300afae12335",
+  "sha1": "3a1b881977d401ef2b7a18fa9edfc445338be7f7",
+  "taxonInSource": "Mallard drake",
+  "annotations": [
+   "Mannetje in prachtkleed",
+   "Vrije vlucht"
+  ],
+  "auditDate": "2026-11-11"
+ },
+ {
+  "image": "/assets/species/plumage/sp089-flight.webp",
+  "species": "sp089",
+  "source": "https://commons.wikimedia.org/wiki/File:Mallard_male_in_flight.jpg",
+  "sourceTitle": "File:Mallard male in flight.jpg",
+  "sourceAuthor": "VJAnderson",
+  "sourceLicense": "CC BY-SA 4.0",
+  "sameShot": true,
+  "method": "originele JPEG opnieuw gedownload en vergeleken na verkleinen; licentie uit de bronaudit van 09-11",
+  "sourceSha256": "1f65cc72e224bfda67c7aa5aa76258d63249b1ea4dba518a6bf30fcd3f3ea1e7",
+  "sha1": "0d71c694397180edb91762e0249dccbff23ca129",
+  "auditDate": "2026-11-11",
+  "licenseEvidence": "GUIDE_SOURCE_AUDIT_2026-11-09.json; primaire licentiepagina niet opnieuw bereikbaar"
+ }
+]

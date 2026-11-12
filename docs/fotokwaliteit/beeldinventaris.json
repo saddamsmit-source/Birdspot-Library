@@ -1,0 +1,4855 @@
+{
+ "_meta": {
+  "date": "2026-11-10",
+  "reviewer": "Claude (Opus 5.5) — contactsheets en vergrotingen; geen onafhankelijke certificering",
+  "classes": [
+   "bidden",
+   "grond",
+   "landen",
+   "opvliegen",
+   "stilstaand",
+   "vleugels-strekken",
+   "vlucht"
+  ],
+  "rule": "airborne (vlucht/bidden/zweven) ⇔ flight:true in het register; elk getoond beeld heeft een beoordeling met actuele SHA-1."
+ },
+ "images": {
+  "/assets/showcase/sp009.webp": {
+   "refs": [
+    "sp009 GUIDE_PHOTOS",
+    "sp009 GUIDE_POSES[1]"
+   ],
+   "sha1": "7818bd8f040fbf8fb87b8f1a70b252deb0001753",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/showcase/sp018.webp": {
+   "refs": [
+    "sp018 GUIDE_PHOTOS"
+   ],
+   "sha1": "2ec9c72532079816420d3b31ccf69fab8b7376dc",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/showcase/sp042.webp": {
+   "refs": [
+    "sp042 GUIDE_PHOTOS"
+   ],
+   "sha1": "6720c164689c8aa023d85ea3aef3cc8f403fdb9f",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/showcase/sp075.webp": {
+   "refs": [
+    "sp075 GUIDE_PHOTOS"
+   ],
+   "sha1": "d2eed6c075af80d70773840e69da6bc2fb5effc5",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/showcase/sp084.webp": {
+   "refs": [
+    "sp084 GUIDE_PHOTOS"
+   ],
+   "sha1": "d9129b8f98d3eed02c4cc8da86f62d006d4ee74a",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/showcase/sp085.webp": {
+   "refs": [
+    "sp085 GUIDE_PHOTOS"
+   ],
+   "sha1": "77c20d9881d0b795d9ee6f363c6856f35e5f7e34",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/showcase/sp108.webp": {
+   "refs": [
+    "sp108 GUIDE_PHOTOS"
+   ],
+   "sha1": "4445b68dc027ac36845e45a5c622a1e832c2c797",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/showcase/sp113.webp": {
+   "refs": [
+    "sp113 GUIDE_PHOTOS"
+   ],
+   "sha1": "3d5f2bfb20b6c9ed31d44cffd8089f9bdf2568c0",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/showcase/sp143.webp": {
+   "refs": [
+    "sp143 GUIDE_POSES[1]"
+   ],
+   "sha1": "b5b4f2c2f70e661e744b6b4554aff9657ce88d16",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/showcase/sp262.webp": {
+   "refs": [
+    "sp262 GUIDE_PHOTOS"
+   ],
+   "sha1": "76ef3a5d92dedc4cf47e638cdae75f2cbdb1a963",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/showcase/sp282.webp": {
+   "refs": [
+    "sp282 GUIDE_PHOTOS"
+   ],
+   "sha1": "d1eb3bdcac62eb4f3574f525aee1eec4583ab854",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp002-flight.webp": {
+   "refs": [
+    "sp002 GUIDE_POSES[0]"
+   ],
+   "sha1": "165934d868ed883470b2433e11a8edc1cd96180d",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp003-flight.webp": {
+   "refs": [
+    "sp003 GUIDE_POSES[0]"
+   ],
+   "sha1": "c7d5598c7c9968cc08a2907bfaf687540f1c16b3",
+   "class": "opvliegen",
+   "airborne": false,
+   "source": "vluchtcontrole",
+   "decision": "uit-rol",
+   "note": "Poten raken nog de grond; vogel zet af. Ook laag opgelost (485 px)."
+  },
+  "/assets/species/plumage/sp004-flight.webp": {
+   "refs": [
+    "sp004 GUIDE_POSES[0]"
+   ],
+   "sha1": "d0203013764955be0ece035d08105f22ee20b9de",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp005-adult_m.webp": {
+   "refs": [
+    "sp005 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "2b30cc24c303c714ebd57af5ed929d69dd2425db",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp005-female-flight.webp": {
+   "refs": [
+    "sp005 GUIDE_POSES[2]"
+   ],
+   "sha1": "00b61a1c24012daf1ab7b056bdd5f21a5a4a5feb",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp005-juv.webp": {
+   "refs": [
+    "sp005 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "37605b154172913b6e7af89defcf2e918e66627c",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "FQA-01 beeldinventaris 10-11-2026: stond niet als vlucht geregistreerd maar toont echte vrije vlucht. Juveniel (bron: iNaturalist Life Stage: Juvenile); zweeft "
+  },
+  "/assets/species/plumage/sp005-male-flight.webp": {
+   "refs": [
+    "sp005 GUIDE_POSES[1]"
+   ],
+   "sha1": "f7460be6bc3f1bd6168a9cebf4306110e88e9385",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "voorwaardelijk",
+   "note": "FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): in vlucht ja; licht onscherp, vogel klei"
+  },
+  "/assets/species/plumage/sp005-male-rest.webp": {
+   "refs": [
+    "sp005 GUIDE_POSES[0]"
+   ],
+   "sha1": "2552f048d76b515a87e57f51e410c2984038018a",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp006-adult_f.webp": {
+   "refs": [
+    "sp006 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "a24d4b12be56fd881a07e528c468cd97f6f12a4b",
+   "class": "vleugels-strekken",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": "Zit op stronk met gespreide vleugels; geen vlucht."
+  },
+  "/assets/species/plumage/sp006-flight.webp": {
+   "refs": [
+    "sp006 GUIDE_POSES[0]"
+   ],
+   "sha1": "88e317963e107eb7cffb3f11413740e0fa8a6741",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp006-hero-male.webp": {
+   "refs": [
+    "sp006 GUIDE_POSES[1]"
+   ],
+   "sha1": "0f194fa4f429c0709f81800f114c7bb2d0e441ae",
+   "class": "vleugels-strekken",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": "Zit op stronk met geheven vleugels; geen vlucht."
+  },
+  "/assets/species/plumage/sp006-juv.webp": {
+   "refs": [
+    "sp006 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "295858c5c215089e7ec9d4a19eb4ef81cdadb705",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp007-adult_f.webp": {
+   "refs": [
+    "sp007 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "a826eaf401b5200d95d2e778d18bd29941179cfb",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp007-flight.webp": {
+   "refs": [
+    "sp007 GUIDE_POSES[0]"
+   ],
+   "sha1": "2d5d38d77f0c26cff29c44d01040855fd29794b5",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp007-hero-male.webp": {
+   "refs": [
+    "sp007 GUIDE_POSES[2]"
+   ],
+   "sha1": "44651592f140033e4acf10b1ff34c4e6fd0aca74",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp007-juv.webp": {
+   "refs": [
+    "sp007 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "893aae119caf96a320c61c81c25e9a34038add79",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp007-male-flight.webp": {
+   "refs": [
+    "sp007 GUIDE_POSES[1]"
+   ],
+   "sha1": "7441b89ead3a40302fca2eb53e04ca4c13032b6b",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp008-adult_f.webp": {
+   "refs": [
+    "sp008 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "bdf7d2ba78dac9493ed4188037b85e65cb296183",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp008-flight.webp": {
+   "refs": [
+    "sp008 GUIDE_POSES[1]"
+   ],
+   "sha1": "b56bf15f79d3b78afcbabc89f83924e3492e2fe4",
+   "class": "bidden",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Biddend in de lucht; typerende houding voor deze soort."
+  },
+  "/assets/species/plumage/sp008-hero-male.webp": {
+   "refs": [
+    "sp008 GUIDE_POSES[3]"
+   ],
+   "sha1": "290c5a3ea0ed281ad336c98258483c84daaa8d6c",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp008-juv.webp": {
+   "refs": [
+    "sp008 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "823457eef16cde27966c6593b48943ce5e9e4bfd",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp008-male-flight.webp": {
+   "refs": [
+    "sp008 GUIDE_POSES[2]"
+   ],
+   "sha1": "89d3c8371d57bad49772ee6fe4b7c6b3bece8e16",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp009-juv.webp": {
+   "refs": [
+    "sp009 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "a397620bfa88423b9a68a772841afda96ff19ab2",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp009-male-flight.webp": {
+   "refs": [
+    "sp009 GUIDE_POSES[3]"
+   ],
+   "sha1": "1c43d686a60e7c95ea4846e9b838223465852385",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp009-male-rest.webp": {
+   "refs": [
+    "sp009 GUIDE_POSES[2]"
+   ],
+   "sha1": "fbfde3001394e1f8d7009e41c16d97cee716e83a",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp009-perched.webp": {
+   "refs": [
+    "sp009 GUIDE_POSES[0]"
+   ],
+   "sha1": "fdc6e51287dc14f8565910e209d0d791a1f3b73d",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp016-flight.webp": {
+   "refs": [
+    "sp016 GUIDE_POSES[0]"
+   ],
+   "sha1": "9c11ff53911b71aa9f4047352fb2541d801ad19b",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp016-hero-male.webp": {
+   "refs": [
+    "sp016 GUIDE_POSES[1]"
+   ],
+   "sha1": "ac3ae52172fb70de6152ca44ac9fefbbbecfb900",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp016-juv.webp": {
+   "refs": [
+    "sp016 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "e838dca7e744dfcacb003f3dc49bbc5cf995ec56",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp016-male.webp": {
+   "refs": [
+    "sp016 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "9b6623a350fc6296b47b54cfbb77823c70c051f2",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp017-female.webp": {
+   "refs": [
+    "sp017 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "4fd6f80e956a512fdf9c3cfe47c528e2141a1be7",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp017-flight.webp": {
+   "refs": [
+    "sp017 GUIDE_POSES[0]"
+   ],
+   "sha1": "e3512dd596ae4b7cfaeead1b212d94c9d2d24b1f",
+   "class": "opvliegen",
+   "airborne": false,
+   "source": "vluchtcontrole",
+   "decision": "uit-rol",
+   "note": "Zet af van de stam bij de nestholte; staart nog tegen de bast."
+  },
+  "/assets/species/plumage/sp018-female-single.webp": {
+   "refs": [
+    "sp018 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "a849dabfcc5c1d8441abfd6a8455ab8abe8d25de",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp018-flight.webp": {
+   "refs": [
+    "sp018 GUIDE_POSES[0]"
+   ],
+   "sha1": "ca273b450d4b9f033857cc0c92171552e5cff358",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp018-hero-male.webp": {
+   "refs": [
+    "sp018 GUIDE_POSES[2]"
+   ],
+   "sha1": "9e2e56b0e74ed0b5ecf814580bf674dd4ae4ac9a",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp018-juv-review.webp": {
+   "refs": [
+    "sp018 GUIDE_POSES[1]"
+   ],
+   "sha1": "6b9c783e343b827e7f0962068559cb0065be2ad9",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp019-female-ground.webp": {
+   "refs": [
+    "sp019 GUIDE_PLUMAGE.adult_f",
+    "sp019 GUIDE_POSES[1]"
+   ],
+   "sha1": "db3913fd05d3e93882e751e7cf00857636b23e12",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp019-flight.webp": {
+   "refs": [
+    "sp019 GUIDE_POSES[2]"
+   ],
+   "sha1": "9467c115539856a36c87bce4f969a4af1ffe7796",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp019-hero-male.webp": {
+   "refs": [
+    "sp019 GUIDE_POSES[3]"
+   ],
+   "sha1": "76881fbefbdc3f946d8240e46d9088d4bcdca559",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp019-juv.webp": {
+   "refs": [
+    "sp019 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "7f6759cfdedb63e7274c19d0ce0a209fd12da689",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp020-flight.webp": {
+   "refs": [
+    "sp020 GUIDE_POSES[2]"
+   ],
+   "sha1": "6b0447203a19243e31d4cfa69e07f64a1e64b3b0",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp020-male.webp": {
+   "refs": [
+    "sp020 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "030bbe6981f12a9c84fb90f20e3b71830cee398b",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp020-pose.webp": {
+   "refs": [
+    "sp020 GUIDE_POSES[1]"
+   ],
+   "sha1": "0bbde9d98582b161f46326bf3285f77dcdff3038",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp021-flight.webp": {
+   "refs": [
+    "sp021 GUIDE_POSES[0]"
+   ],
+   "sha1": "7d5b3ac21495bb81848b0f91a7e41691d22bf584",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp022-flight.webp": {
+   "refs": [
+    "sp022 GUIDE_POSES[0]"
+   ],
+   "sha1": "3dfd2a74f140b91c8b706604f2a25a08574bd1d5",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp025-flight.webp": {
+   "refs": [
+    "sp025 GUIDE_POSES[0]"
+   ],
+   "sha1": "c0ec6a161928a0130a2fc23fcad0e0ef39de477b",
+   "class": "landen",
+   "airborne": false,
+   "source": "vluchtcontrole",
+   "decision": "uit-rol",
+   "note": "Frontale landingsnadering met poten naar voren en gespreide staart."
+  },
+  "/assets/species/plumage/sp026-flight.webp": {
+   "refs": [
+    "sp026 GUIDE_POSES[0]"
+   ],
+   "sha1": "9a0a57f5e793e8f7f1aa582c5e03e51dffdc2ce6",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp029-flight.webp": {
+   "refs": [
+    "sp029 GUIDE_POSES[0]"
+   ],
+   "sha1": "ec27e2c30ee4a27be850cf9309f707d2fa9f7f1a",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp030-flight.webp": {
+   "refs": [
+    "sp030 GUIDE_POSES[0]"
+   ],
+   "sha1": "c26338f09ae57c068b51f5497c182546d2a8b860",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp030-juv2.webp": {
+   "refs": [
+    "sp030 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "a66e965bd24513412e351d51606a5d1e70bfd429",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp031-flight.webp": {
+   "refs": [
+    "sp031 GUIDE_POSES[1]"
+   ],
+   "sha1": "02c8e4699d58a0bdc587f17362efa99fe21cd8ef",
+   "class": "opvliegen",
+   "airborne": false,
+   "source": "vluchtcontrole",
+   "decision": "uit-rol",
+   "note": "Poten naar beneden vlak boven de sneeuw: afzetten of neerstrijken."
+  },
+  "/assets/species/plumage/sp032-view.webp": {
+   "refs": [
+    "sp032 GUIDE_POSES[1]"
+   ],
+   "sha1": "9ffaf0e3ba1d8a851216db081e61d2df8d900217",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp033-flight.webp": {
+   "refs": [
+    "sp033 GUIDE_POSES[2]"
+   ],
+   "sha1": "edc08a3e3792fe39d1c9b77424a3277e16d1d38e",
+   "class": "grond",
+   "airborne": false,
+   "source": "vluchtcontrole",
+   "decision": "uit-rol",
+   "note": "Staat met de poten op de sneeuw met geheven vleugels."
+  },
+  "/assets/species/plumage/sp033-view.webp": {
+   "refs": [
+    "sp033 GUIDE_POSES[1]"
+   ],
+   "sha1": "7d3beb978d5616da9ca99583bbab63d83f94afba",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp034-juv.webp": {
+   "refs": [
+    "sp034 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "33d0b76926fda6ab0c4ed9b8736ebce0f4c9875b",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp035-adult_f.webp": {
+   "refs": [
+    "sp035 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "366b170891b2adfb0eadae0ef1216f1f68db65f8",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp035-flight.webp": {
+   "refs": [
+    "sp035 GUIDE_POSES[0]"
+   ],
+   "sha1": "2cd4f386e24f9420d6974dad5092429455c1cb16",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp035-hero-male.webp": {
+   "refs": [
+    "sp035 GUIDE_POSES[2]"
+   ],
+   "sha1": "8031a296a94ccbc1b667377171be95d17a2fbc26",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp035-juv-review.webp": {
+   "refs": [
+    "sp035 GUIDE_POSES[1]"
+   ],
+   "sha1": "3d49cfd51ac2ff491226352cd04a7adb669cccc9",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp036-flight.webp": {
+   "refs": [
+    "sp036 GUIDE_POSES[0]"
+   ],
+   "sha1": "559536b8be2fdba4e8676dfce12f1595db393c6a",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp037-flight.webp": {
+   "refs": [
+    "sp037 GUIDE_POSES[0]"
+   ],
+   "sha1": "cb0315c87e18bea4c4ac46f88a31206cf2c3ee67",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp038-flight.webp": {
+   "refs": [
+    "sp038 GUIDE_POSES[0]"
+   ],
+   "sha1": "47fb95453bae3932add8204dd9b137da5ebe1145",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp039-flight.webp": {
+   "refs": [
+    "sp039 GUIDE_POSES[0]"
+   ],
+   "sha1": "19ba6477c1b130cfb8752359b2813be14c022b78",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "voorwaardelijk",
+   "note": "FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): in vlucht ja; twee vogels klein in beeld"
+  },
+  "/assets/species/plumage/sp040-flight.webp": {
+   "refs": [
+    "sp040 GUIDE_POSES[0]"
+   ],
+   "sha1": "3bfda596a68a73b13beaac5232ff15af62f0cf79",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp041-flight.webp": {
+   "refs": [
+    "sp041 GUIDE_POSES[0]"
+   ],
+   "sha1": "96e231c3f77eb8470ab00774df4bbcd2a8ae8b3d",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "voorwaardelijk",
+   "note": "FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): in vlucht ja; 330 px, maar witte vleugel"
+  },
+  "/assets/species/plumage/sp043-adult_m.webp": {
+   "refs": [
+    "sp043 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "97a2d669b314d5a0c1a5ad2fe699d70e8d4d041a",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp043-flight.webp": {
+   "refs": [
+    "sp043 GUIDE_POSES[0]"
+   ],
+   "sha1": "fd95621d9711a45b931d2a3df432ffba7a9632d5",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp043-hero-male.webp": {
+   "refs": [
+    "sp043 GUIDE_POSES[2]"
+   ],
+   "sha1": "eed3f1c42848d4a101e4046ad7cfbbd67e5e3b80",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp043-juv-review.webp": {
+   "refs": [
+    "sp043 GUIDE_POSES[1]"
+   ],
+   "sha1": "84a9d8ed70e79dafad23fe61e0c4d0ff7b84f98c",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp044-flight.webp": {
+   "refs": [
+    "sp044 GUIDE_POSES[0]"
+   ],
+   "sha1": "d7acdd5d10aabbc4bbd4dd98cf9dc104bd9395a0",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp045-adult_f.webp": {
+   "refs": [
+    "sp045 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "f0f5a411dea61b6111f7681bf5addd3bb9f11b62",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp045-flight.webp": {
+   "refs": [
+    "sp045 GUIDE_POSES[0]"
+   ],
+   "sha1": "094a1d70844ec64415d1142f03208b69ca0ad8e9",
+   "class": "landen",
+   "airborne": false,
+   "source": "vluchtcontrole",
+   "decision": "uit-rol",
+   "note": "Poten naar voren gestrekt: landingshouding."
+  },
+  "/assets/species/plumage/sp045-hero-male.webp": {
+   "refs": [
+    "sp045 GUIDE_POSES[1]"
+   ],
+   "sha1": "3faded1d4a0d54214d0e5dafaf0d1450aa8a3ad4",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp045-juv.webp": {
+   "refs": [
+    "sp045 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "d050ca4e744b3ba7e65d76e6cc5fa351aa5ff367",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp046-flight.webp": {
+   "refs": [
+    "sp046 GUIDE_POSES[0]"
+   ],
+   "sha1": "382f1510366a9ac40a571632357208bf2d39e124",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp047-flight.webp": {
+   "refs": [
+    "sp047 GUIDE_POSES[0]"
+   ],
+   "sha1": "e8d6161308fa68434a6749d3330695043b252fea",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp048-flight.webp": {
+   "refs": [
+    "sp048 GUIDE_POSES[0]"
+   ],
+   "sha1": "053074d967c62af0d31f50f8b64971d50347b53b",
+   "class": "opvliegen",
+   "airborne": false,
+   "source": "vluchtcontrole",
+   "decision": "uit-rol",
+   "note": "Tussen planten met half geopende vleugels; niet vrij in de lucht."
+  },
+  "/assets/species/plumage/sp050-flight.webp": {
+   "refs": [
+    "sp050 GUIDE_POSES[0]"
+   ],
+   "sha1": "785c7f6cd6cca4eb4fe7a920eeec0364da0ade08",
+   "class": "opvliegen",
+   "airborne": false,
+   "source": "vluchtcontrole",
+   "decision": "uit-rol",
+   "note": "Tussen besneeuwde takken; niet vrij in de lucht."
+  },
+  "/assets/species/plumage/sp050-juv-review.webp": {
+   "refs": [
+    "sp050 GUIDE_POSES[1]"
+   ],
+   "sha1": "8292a882e8e13e20070ab54014c5f1301d285233",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp053-female-review.webp": {
+   "refs": [
+    "sp053 GUIDE_POSES[0]"
+   ],
+   "sha1": "bc39ab1fd07517342081802baff3772d06b0b75b",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp053-hero-male.webp": {
+   "refs": [
+    "sp053 GUIDE_POSES[2]"
+   ],
+   "sha1": "eea51687dcb06b58cff180597aeb867a67835090",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp053-juv-review.webp": {
+   "refs": [
+    "sp053 GUIDE_POSES[1]"
+   ],
+   "sha1": "fed29e5dff720f3597b9a19e19acdc0b18545fe2",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp056-flight.webp": {
+   "refs": [
+    "sp056 GUIDE_POSES[0]"
+   ],
+   "sha1": "e92cb7cae37895084bffa36a420533f46f801983",
+   "class": "opvliegen",
+   "airborne": false,
+   "source": "vluchtcontrole",
+   "decision": "uit-rol",
+   "note": "Mijlpaal 1 (aangescherpt): fladderend tussen rietstengels valt onder de eigen klasse \"opvliegen / tussen planten\"; contact met de stengels niet uit te sluiten. "
+  },
+  "/assets/species/plumage/sp058-flight.webp": {
+   "refs": [
+    "sp058 GUIDE_POSES[0]"
+   ],
+   "sha1": "c72bd0862144d35d724a99e18c4d631dc194cf3f",
+   "class": "landen",
+   "airborne": false,
+   "source": "vluchtcontrole",
+   "decision": "uit-rol",
+   "note": "Fladdert met uitgestrekte poten vlak bij blad: neerstrijken, geen vrije vlucht."
+  },
+  "/assets/species/plumage/sp063-flight.webp": {
+   "refs": [
+    "sp063 GUIDE_POSES[0]"
+   ],
+   "sha1": "d879198133c3fc5aca33e5ce1adb964bc2615006",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp063-juv.webp": {
+   "refs": [
+    "sp063 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "5da7fbfc4fbb2fd395e24b7bd319ebe7e5c73e3c",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp065-flight.webp": {
+   "refs": [
+    "sp065 GUIDE_POSES[0]"
+   ],
+   "sha1": "28cece48915c5dd8e500e32ce876fa65a0dc2bc6",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp068-flight.webp": {
+   "refs": [
+    "sp068 GUIDE_POSES[0]"
+   ],
+   "sha1": "88e72bf1a69679532780df30724685f0cfb3fc51",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp069-flight.webp": {
+   "refs": [
+    "sp069 GUIDE_POSES[0]"
+   ],
+   "sha1": "c857a167d1caa38ff7bcec28560b8e0ee1287c4f",
+   "class": "landen",
+   "airborne": false,
+   "source": "vluchtcontrole",
+   "decision": "uit-rol",
+   "note": "Poten uitgestrekt naar de paal; neerstrijken."
+  },
+  "/assets/species/plumage/sp070-flight.webp": {
+   "refs": [
+    "sp070 GUIDE_POSES[0]"
+   ],
+   "sha1": "37fe477bce26dfa017e1254d56f7c32452722d9b",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp072-flight.webp": {
+   "refs": [
+    "sp072 GUIDE_POSES[0]"
+   ],
+   "sha1": "51bd1e3bcf50131a441ed9dce3b91b5715a9e9b8",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp075-female-review.webp": {
+   "refs": [
+    "sp075 GUIDE_POSES[1]"
+   ],
+   "sha1": "595389f2dd333c4fa69d72e0f874b946cbd05bab",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp075-flight.webp": {
+   "refs": [
+    "sp075 GUIDE_POSES[0]"
+   ],
+   "sha1": "8316a4f592991615e0af7d70fbed848bc66114ff",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp075-hero-male.webp": {
+   "refs": [
+    "sp075 GUIDE_POSES[4]"
+   ],
+   "sha1": "4be62803b78061b279165a28664eb82f541ab2e0",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp075-juv-review.webp": {
+   "refs": [
+    "sp075 GUIDE_POSES[2]"
+   ],
+   "sha1": "7052ca7db1769df24ceed44682f75820c955ccaf",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp075-male-review.webp": {
+   "refs": [
+    "sp075 GUIDE_POSES[3]"
+   ],
+   "sha1": "1436453b087b2107741d64fe56fd7ab7e11e60af",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp077-juv.webp": {
+   "refs": [
+    "sp077 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "cffee1e1b416cb6085b4e2bc9c93dc4cdbcb7e1b",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp078-flight.webp": {
+   "refs": [
+    "sp078 GUIDE_POSES[0]"
+   ],
+   "sha1": "7de61592f1e9359a461bdde3fc2940c4966b8f71",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp078-juv-grown.webp": {
+   "refs": [
+    "sp078 GUIDE_POSES[2]"
+   ],
+   "sha1": "44726ff2d91feb161f75d62df1aea3bb7c136800",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp078-juv.webp": {
+   "refs": [
+    "sp078 GUIDE_POSES[1]"
+   ],
+   "sha1": "a2b4af27124f1711d54929ea3f6edca99d6242e0",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp079-flight.webp": {
+   "refs": [
+    "sp079 GUIDE_POSES[0]"
+   ],
+   "sha1": "1d30935f6334ea68a5decdcd96af30230ecc4f86",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp079-juv.webp": {
+   "refs": [
+    "sp079 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "e3fe3c6b72dd38aec06adc135a2d43fd9cb8a0f0",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp081-juv.webp": {
+   "refs": [
+    "sp081 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "002c0cda56afdb374be5b3d32e44f6fde15104b6",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp082-breeding.webp": {
+   "refs": [
+    "sp082 GUIDE_PLUMAGE.breeding"
+   ],
+   "sha1": "4af186ab57cff96983fd094d3fd0d7ea56797802",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp082-juv.webp": {
+   "refs": [
+    "sp082 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "5de95c6e130efcf8ee1558740ef265db2b6c8298",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp082-winter.webp": {
+   "refs": [
+    "sp082 GUIDE_PLUMAGE.winter"
+   ],
+   "sha1": "baaaae5d3cd049f3c93a2625af056d80d409d056",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp083-breeding.webp": {
+   "refs": [
+    "sp083 GUIDE_PLUMAGE.breeding"
+   ],
+   "sha1": "a7a25ea409f01c03b458dd933713704f90ae7c5b",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp083-flight.webp": {
+   "refs": [
+    "sp083 GUIDE_POSES[0]"
+   ],
+   "sha1": "e077d8e9df596f1bca36c31fba5faa6e563599ea",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp083-juv.webp": {
+   "refs": [
+    "sp083 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "7264b3f1566a98e77ab90798ae3caeb7d9702557",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": "Juvenielen op het nest; één met geheven vleugels, niet vliegend."
+  },
+  "/assets/species/plumage/sp084-flight.webp": {
+   "refs": [
+    "sp084 GUIDE_POSES[0]"
+   ],
+   "sha1": "4860f1aac7474e408042f92e4fe2b5c14443119d",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp084-juv.webp": {
+   "refs": [
+    "sp084 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "d3161b05be37b241f38abfc6b34c8fb079f5dbf0",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp085-flight.webp": {
+   "refs": [
+    "sp085 GUIDE_POSES[0]"
+   ],
+   "sha1": "c1f3f8f187cc835554bb1b4f4f6d876c2d7a707a",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp085-juv.webp": {
+   "refs": [
+    "sp085 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "bf98b3b6eba1525c052d8a114b82e5d9f646d69f",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp086-flight.webp": {
+   "refs": [
+    "sp086 GUIDE_POSES[0]"
+   ],
+   "sha1": "c0e42c1cd47f70d50c9281b078b7d347418eb59a",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp086-juv.webp": {
+   "refs": [
+    "sp086 GUIDE_POSES[1]"
+   ],
+   "sha1": "19ece251659a0657d86a88eb45232337912b08f2",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp089-adult_f.webp": {
+   "refs": [
+    "sp089 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "eb012646065b9313a98d8efe014d72fed8174b6b",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp089-eclipse.webp": {
+   "refs": [
+    "sp089 GUIDE_PLUMAGE.eclipse"
+   ],
+   "sha1": "268ace076380ff3695dd82c2bac722dc4eba7c10",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp089-flight.webp": {
+   "refs": [
+    "sp089 GUIDE_POSES[0]"
+   ],
+   "sha1": "0d71c694397180edb91762e0249dccbff23ca129",
+   "class": "landen",
+   "airborne": false,
+   "source": "vluchtcontrole",
+   "decision": "uit-rol",
+   "note": "Luchtgedragen met uitgestrekte poten omlaag, passend bij landingshouding. Vrije vlucht is niet bevestigd voor dit beeld."
+  },
+  "/assets/species/plumage/sp089-juv-review.webp": {
+   "refs": [
+    "sp089 GUIDE_POSES[1]"
+   ],
+   "sha1": "524548bcc1401bb668e3042a454165a769fd83f1",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp090-adult_f.webp": {
+   "refs": [
+    "sp090 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "3de41456e02c9ac65e8376db71d50052e166c4a6",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp090-flight.webp": {
+   "refs": [
+    "sp090 GUIDE_POSES[0]"
+   ],
+   "sha1": "3c01ddeb1b37df58554c5f0fffd90e14793375ba",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp091-adult_f.webp": {
+   "refs": [
+    "sp091 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "cc456eb94b1076191e352c286e55567132c17e26",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp091-adult_m.webp": {
+   "refs": [
+    "sp091 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "30f88a0041b4f2363462ec6a239e7756f091596e",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp091-eclipse.webp": {
+   "refs": [
+    "sp091 GUIDE_PLUMAGE.eclipse"
+   ],
+   "sha1": "de8721109572b35ad26acdfe4b96b6c8192ff0c7",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp091-flight.webp": {
+   "refs": [
+    "sp091 GUIDE_POSES[0]"
+   ],
+   "sha1": "566647603ca189589bb1ace8b89c5f9933e76e2c",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp091-hero-male.webp": {
+   "refs": [
+    "sp091 GUIDE_POSES[1]"
+   ],
+   "sha1": "584a32a8d2726af8ab33ebf42ab8ca38b398e956",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp091-juv.webp": {
+   "refs": [
+    "sp091 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "4bcf2d78e8b413e1a80f721afd80b3e41a4e6edc",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp092-adult_f.webp": {
+   "refs": [
+    "sp092 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "6a4ccf7f0f867b81d9733acc876cb057f9483fd4",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp092-flight.webp": {
+   "refs": [
+    "sp092 GUIDE_POSES[0]"
+   ],
+   "sha1": "5e731c6fcdb38523972a711bfbe721b488fbfe76",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp092-hero-male.webp": {
+   "refs": [
+    "sp092 GUIDE_POSES[2]"
+   ],
+   "sha1": "9b2dfb5a59865b3d7a3b0a720e5a94eeba60f61d",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp092-juv-review.webp": {
+   "refs": [
+    "sp092 GUIDE_POSES[1]"
+   ],
+   "sha1": "da9db18028f93e4b09c361f1477dca678de06c23",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp094-flight.webp": {
+   "refs": [
+    "sp094 GUIDE_POSES[0]"
+   ],
+   "sha1": "e9536c0df38b1e45d31a7b3810475c5e17a6229e",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp095-flight.webp": {
+   "refs": [
+    "sp095 GUIDE_POSES[0]"
+   ],
+   "sha1": "2c381c5c2c8c74732c1c12536b28bad1d8765279",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp096-flight.webp": {
+   "refs": [
+    "sp096 GUIDE_POSES[0]"
+   ],
+   "sha1": "0961f1d109fc2ef87ed78abd8aa489f85458bb4d",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp097-flight.webp": {
+   "refs": [
+    "sp097 GUIDE_POSES[0]"
+   ],
+   "sha1": "71466564e7ae4489b4319a5bfb0a0bff0eb38913",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp097-winter.webp": {
+   "refs": [
+    "sp097 GUIDE_PLUMAGE.winter"
+   ],
+   "sha1": "ba9ba29bdfd15df2b571a245e8a1633cc05b114f",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp098-flight.webp": {
+   "refs": [
+    "sp098 GUIDE_POSES[0]"
+   ],
+   "sha1": "53d4f41143b8e49de2a617f03252dc521081395b",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp099-flight.webp": {
+   "refs": [
+    "sp099 GUIDE_POSES[0]"
+   ],
+   "sha1": "9855badf18c955186b06b7798781fdc290f04927",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp100-flight.webp": {
+   "refs": [
+    "sp100 GUIDE_POSES[0]"
+   ],
+   "sha1": "f1b6f136de1715d44b14f6eeb4f80b3a01c4f43e",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp101-flight.webp": {
+   "refs": [
+    "sp101 GUIDE_POSES[0]"
+   ],
+   "sha1": "c7dac833a2394c099e7938f6e8d23d5901008bc7",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp102-breeding.webp": {
+   "refs": [
+    "sp102 GUIDE_PLUMAGE.breeding"
+   ],
+   "sha1": "fc443abe15bd8d4e915e184f3a0929ff3550813f",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp102-flight.webp": {
+   "refs": [
+    "sp102 GUIDE_POSES[0]"
+   ],
+   "sha1": "82eb389561dd782a258c268e74c33992880e226e",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp102-juv.webp": {
+   "refs": [
+    "sp102 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "d48cb765fd1adc7e21000873461ee33dcaca4602",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp104-flight.webp": {
+   "refs": [
+    "sp104 GUIDE_POSES[0]"
+   ],
+   "sha1": "bc40026a5e7684cfd9573ce4621aa8d9a86615b7",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp104-jaarling.webp": {
+   "refs": [
+    "sp104 GUIDE_PLUMAGE.jaarling"
+   ],
+   "sha1": "393b7cb65a1c805b6ed57f351e8813443c5b3c3e",
+   "class": "vleugels-strekken",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": "Staat met gespreide vleugels te drogen; geen vlucht."
+  },
+  "/assets/species/plumage/sp105-flight.webp": {
+   "refs": [
+    "sp105 GUIDE_POSES[0]"
+   ],
+   "sha1": "dcb9ca16e5d7f569a1c2aadeee2310de57aeab88",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp106-flight.webp": {
+   "refs": [
+    "sp106 GUIDE_POSES[0]"
+   ],
+   "sha1": "965bcb160aaa69cf47444651ec176947b35d5661",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "voorwaardelijk",
+   "note": "FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): in vlucht ja; zacht en 450 px; niet defi"
+  },
+  "/assets/species/plumage/sp108-flight.webp": {
+   "refs": [
+    "sp108 GUIDE_POSES[0]"
+   ],
+   "sha1": "611efcc62e15abc20f9ff262e1b8d3e6c5098b63",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "voorwaardelijk",
+   "note": "FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): in vlucht ja; zacht maar silhouet en wen"
+  },
+  "/assets/species/plumage/sp110-flight.webp": {
+   "refs": [
+    "sp110 GUIDE_POSES[0]"
+   ],
+   "sha1": "1bdf268045377e90222d8196a22174afe2af1348",
+   "class": "opvliegen",
+   "airborne": false,
+   "source": "vluchtcontrole",
+   "decision": "uit-rol",
+   "note": "Tussen takken van een struik met bewogen vleugels; niet vrij in de lucht."
+  },
+  "/assets/species/plumage/sp112-flight.webp": {
+   "refs": [
+    "sp112 GUIDE_POSES[0]"
+   ],
+   "sha1": "77fd36c9a983d7339f04c9fd3e0a7a8cfa99419c",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp113-flight.webp": {
+   "refs": [
+    "sp113 GUIDE_POSES[0]"
+   ],
+   "sha1": "3901af7cecce913c8b19212e82c359bb8485d9d3",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp114-flight.webp": {
+   "refs": [
+    "sp114 GUIDE_POSES[0]"
+   ],
+   "sha1": "6b7927bc02766338794b5ba36b5e183449fca0c0",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp115-flight.webp": {
+   "refs": [
+    "sp115 GUIDE_POSES[0]"
+   ],
+   "sha1": "73457dad54ace1b8cf7a8f7460831e47a7ea0d72",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp116-flight.webp": {
+   "refs": [
+    "sp116 GUIDE_POSES[1]"
+   ],
+   "sha1": "c7c76266824d0356d28b3a1c4910d329fdb98d2b",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp116-nestwand.webp": {
+   "refs": [
+    "sp116 GUIDE_POSES[0]"
+   ],
+   "sha1": "5e721bb70cbebe4088983c49bee4f72a46a3785d",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp117-flight.webp": {
+   "refs": [
+    "sp117 GUIDE_POSES[0]"
+   ],
+   "sha1": "b84bc0877d56eea3e5cf44983f03fa1bb77a73bd",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp126-flight.webp": {
+   "refs": [
+    "sp126 GUIDE_POSES[0]"
+   ],
+   "sha1": "6b8d64c6d8da2bddeece6e8bc730de7a46fb24a2",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp126-juv.webp": {
+   "refs": [
+    "sp126 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "1cecbd4b308d6c026de187dbc28a3d495682299f",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp128-female-review.webp": {
+   "refs": [
+    "sp128 GUIDE_POSES[1]"
+   ],
+   "sha1": "7a35412f7c1d99e747f5de4bf069e73bd717232f",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp128-flight.webp": {
+   "refs": [
+    "sp128 GUIDE_POSES[0]"
+   ],
+   "sha1": "0c0644d8f31861e34c2996be98e0c35a4962b0eb",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp128-juv-grown.webp": {
+   "refs": [
+    "sp128 GUIDE_POSES[3]"
+   ],
+   "sha1": "23b3bcd88cfa8fc372d2d66677e7f1c0f94a8ada",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp128-juv.webp": {
+   "refs": [
+    "sp128 GUIDE_POSES[2]"
+   ],
+   "sha1": "9b952428aefbb46965b7ec14aa973b287c6c6e5e",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp129-adult_f.webp": {
+   "refs": [
+    "sp129 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "50aafa02cfa5b60a2eb471ab46e5ea35a2583d89",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp129-flight.webp": {
+   "refs": [
+    "sp129 GUIDE_POSES[0]"
+   ],
+   "sha1": "e398fd61bd66ae6ee2749bcc0b259e539dc29037",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp129-hero-male.webp": {
+   "refs": [
+    "sp129 GUIDE_POSES[1]"
+   ],
+   "sha1": "4f597c8bb8049cef5e196c7a8f10595dca29acdb",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp129-juv.webp": {
+   "refs": [
+    "sp129 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "eaca9e4847b8300cb16347ab11475f5b51f349c8",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": "Close-up van een eend in een onnatuurlijke setting (vermoedelijk in de hand).",
+   "flag": "REVIEW REQUIRED: setting en leeftijd"
+  },
+  "/assets/species/plumage/sp130-adult-f.webp": {
+   "refs": [
+    "sp130 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "cc3bd56cfb45abaa1752ae6814c200e64637a496",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp130-flight.webp": {
+   "refs": [
+    "sp130 GUIDE_POSES[0]"
+   ],
+   "sha1": "448308412dd184fe4b3ca97778d62b778384daad",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp132-adult_f.webp": {
+   "refs": [
+    "sp132 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "9d368e873e25bdb6e34349be0d1295c8f6b1955a",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp132-flight.webp": {
+   "refs": [
+    "sp132 GUIDE_POSES[0]"
+   ],
+   "sha1": "de985f5e5f0953545140a665cf45aff92b02b9df",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp141-adult.webp": {
+   "refs": [
+    "sp141 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "921531546b772a9fd542ce7f2a4f28a29f6d9ba2",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp143-flight.webp": {
+   "refs": [
+    "sp143 GUIDE_POSES[0]"
+   ],
+   "sha1": "9a754188ddb7dc009b0f7419d2b909f50d3811f4",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp144-flight.webp": {
+   "refs": [
+    "sp144 GUIDE_POSES[0]"
+   ],
+   "sha1": "d72a19fdc3fd8d03f75abf8494834fa78aea4093",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp144-juv.webp": {
+   "refs": [
+    "sp144 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "3a902345b62f2a26940376b972ca7bbaaf76ce61",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp144-winter.webp": {
+   "refs": [
+    "sp144 GUIDE_PLUMAGE.winter"
+   ],
+   "sha1": "b4f5a814de352857d7b32f1f24f9bb5603ff44ba",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp145-flight.webp": {
+   "refs": [
+    "sp145 GUIDE_POSES[0]"
+   ],
+   "sha1": "8b02bdf53b7f76c332fe58052832168109ad1568",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp145-juv.webp": {
+   "refs": [
+    "sp145 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "e4e9f4d1eca0e32bee9559988356bf4d6e270ee2",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": "Juveniele Goudplevier; tekst van de maker in het beeld.",
+   "flag": "kwaliteit: tekst in beeld"
+  },
+  "/assets/species/plumage/sp145-winter.webp": {
+   "refs": [
+    "sp145 GUIDE_PLUMAGE.winter"
+   ],
+   "sha1": "8e19dd9db96745a3cbb53013b40470b20db091d7",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp146-flight.webp": {
+   "refs": [
+    "sp146 GUIDE_POSES[0]"
+   ],
+   "sha1": "ed1d67846cbfeb5e2e980ecc48760d1815827186",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp146-juv.webp": {
+   "refs": [
+    "sp146 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "1d8583accba3d4e1f446f8280364903565eee4a6",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp146-winter.webp": {
+   "refs": [
+    "sp146 GUIDE_PLUMAGE.winter"
+   ],
+   "sha1": "ab22580a158514d3994bcedab2eb3abfc9cfedf8",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp147-flight.webp": {
+   "refs": [
+    "sp147 GUIDE_POSES[0]"
+   ],
+   "sha1": "7a297c896016d6a3f20722f2715929bcea19429d",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp147-juv.webp": {
+   "refs": [
+    "sp147 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "431b1433c439a17abfd6f4560ebf472da1efe1ed",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp147-winter.webp": {
+   "refs": [
+    "sp147 GUIDE_PLUMAGE.winter"
+   ],
+   "sha1": "949f9839e58513769006897856f489e7f1675139",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp150-flight.webp": {
+   "refs": [
+    "sp150 GUIDE_POSES[0]"
+   ],
+   "sha1": "12d3c47d2520108b4c5674e4a97565d44028d83f",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp152-flight.webp": {
+   "refs": [
+    "sp152 GUIDE_POSES[0]"
+   ],
+   "sha1": "6837b9da716058118267d8815e543a9d21499c69",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp155-flight.webp": {
+   "refs": [
+    "sp155 GUIDE_POSES[0]"
+   ],
+   "sha1": "3ef61c434d4a982198796673ef28022a95cb29b2",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp155-juv.webp": {
+   "refs": [
+    "sp155 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "1abf1c5b71449fbc09a0e8eda5f0f91782cbd783",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp155-winter.webp": {
+   "refs": [
+    "sp155 GUIDE_PLUMAGE.winter"
+   ],
+   "sha1": "aad93fa16818dc4282a1e337a6375f25e87ccc96",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp156-flight.webp": {
+   "refs": [
+    "sp156 GUIDE_POSES[0]"
+   ],
+   "sha1": "3556c8c5eeea9d6e99076c8492f653263b4ab9d8",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp156-juv.webp": {
+   "refs": [
+    "sp156 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "a93d328b90862439a0f8424282aa73340efe67f1",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": "Klein en onscherp.",
+   "flag": "kwaliteit: onscherp"
+  },
+  "/assets/species/plumage/sp156-winter.webp": {
+   "refs": [
+    "sp156 GUIDE_PLUMAGE.winter"
+   ],
+   "sha1": "8df48567cf3f43651967d68e5b0be81c2c93eea0",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp157-flight.webp": {
+   "refs": [
+    "sp157 GUIDE_POSES[0]"
+   ],
+   "sha1": "00605200fb404fb335293dcbfffd76cf81287c7d",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp157-juv.webp": {
+   "refs": [
+    "sp157 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "0247f956f85cdfec3d2181f30ebcd547c07e36f3",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp157-winter.webp": {
+   "refs": [
+    "sp157 GUIDE_PLUMAGE.winter"
+   ],
+   "sha1": "23ebb0c70f73efdab0928dccec81dea61e3fd77a",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp158-flight.webp": {
+   "refs": [
+    "sp158 GUIDE_POSES[0]"
+   ],
+   "sha1": "6779ac937a3c361fdc9477c3bdbbf7237ec73272",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp158-juv.webp": {
+   "refs": [
+    "sp158 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "e16663e18b128c503d880d992c8a06868100e88a",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp158-winter.webp": {
+   "refs": [
+    "sp158 GUIDE_PLUMAGE.winter"
+   ],
+   "sha1": "d98ef44154e65bf28ba616379dcba21e2b4d12e2",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp159-flight.webp": {
+   "refs": [
+    "sp159 GUIDE_POSES[0]"
+   ],
+   "sha1": "339f59344e807e6f75eae2160a3fc4c502759d20",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp159-juv.webp": {
+   "refs": [
+    "sp159 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "d179fb93915d52070d9cef362e5a240b56be1681",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp159-winter.webp": {
+   "refs": [
+    "sp159 GUIDE_PLUMAGE.winter"
+   ],
+   "sha1": "1ca15a8b1b050b60a98c16071c3861a6af20fc06",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp164-adult.webp": {
+   "refs": [
+    "sp164 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "4912e0f690b67f85a7c04539f2cc8cd437cc2dd5",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp164-flight.webp": {
+   "refs": [
+    "sp164 GUIDE_POSES[0]"
+   ],
+   "sha1": "05df2d9118ae29bf5a39325fb983b20ac57d6d28",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp165-adult.webp": {
+   "refs": [
+    "sp165 GUIDE_PLUMAGE.breeding"
+   ],
+   "sha1": "654c8cfc249512b880b20cfefa1358631c806a80",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp165-flight.webp": {
+   "refs": [
+    "sp165 GUIDE_POSES[0]"
+   ],
+   "sha1": "be020f0ce73b9d89794b8175bdabb7140c1676c1",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp166-adult.webp": {
+   "refs": [
+    "sp166 GUIDE_PLUMAGE.breeding"
+   ],
+   "sha1": "b72843372d984c6d100f554652f3cf63bb722159",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp167-adult.webp": {
+   "refs": [
+    "sp167 GUIDE_PLUMAGE.breeding"
+   ],
+   "sha1": "bdbe349e80ffc40c496ef883f2b257c3d2d82559",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp173-adult_f.webp": {
+   "refs": [
+    "sp173 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "e4e5d993f02c6fd76b6493be771eb194acc57590",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "FQA-01 beeldinventaris 10-11-2026: stond niet als vlucht geregistreerd maar toont echte vrije vlucht. Vrouwtje (bron: Commons-titel \"female\"); vliegt vrij, vleu"
+  },
+  "/assets/species/plumage/sp173-female-rest.webp": {
+   "refs": [
+    "sp173 GUIDE_POSES[0]"
+   ],
+   "sha1": "ff65045de0edda6d538de51087ad9058bead2a6b",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp173-hero-male.webp": {
+   "refs": [
+    "sp173 GUIDE_POSES[1]"
+   ],
+   "sha1": "39f3794cc68385c4823a18cd3062eaedd8073b06",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp173-juv.webp": {
+   "refs": [
+    "sp173 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "e78a3077dc3ec536378f30449e4b0cbe372c1ca5",
+   "class": "landen",
+   "airborne": false,
+   "source": "vluchtcontrole",
+   "decision": "uit-rol",
+   "note": "Strijkt met hangende poten neer in het riet; geen vrije vlucht."
+  },
+  "/assets/species/plumage/sp173-male-2.webp": {
+   "refs": [
+    "sp173 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "06756e8d6bbe844edae8b81a392509c50956ae67",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp174-flight.webp": {
+   "refs": [
+    "sp174 GUIDE_POSES[0]"
+   ],
+   "sha1": "2810d75131b9dfb11cdeeb883212601ffc1311df",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "voorwaardelijk",
+   "note": "FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): in vlucht ja; kop met witte nekvlek sche"
+  },
+  "/assets/species/plumage/sp176-flight.webp": {
+   "refs": [
+    "sp176 GUIDE_POSES[0]"
+   ],
+   "sha1": "ec3e04df1510e4e1b4bac3f2b53389e5b36b1371",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp177-flight.webp": {
+   "refs": [
+    "sp177 GUIDE_POSES[0]"
+   ],
+   "sha1": "ca5a65c77c5d2e7816516c5485dc83ea8508f7f2",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp178-flight.webp": {
+   "refs": [
+    "sp178 GUIDE_POSES[0]"
+   ],
+   "sha1": "464003ecf4e1fcefa359e5d175fa4b4f43080474",
+   "class": "opvliegen",
+   "airborne": false,
+   "source": "vluchtcontrole",
+   "decision": "uit-rol",
+   "note": "FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): luchtgedragen, maar poten hangen en takk"
+  },
+  "/assets/species/plumage/sp188-adult_f.webp": {
+   "refs": [
+    "sp188 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "69b6a9bd34b7a60e9eebe76e67743ba670510ab3",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp188-eclipse.webp": {
+   "refs": [
+    "sp188 GUIDE_PLUMAGE.eclipse"
+   ],
+   "sha1": "b349c1d31957b9d0d7ce9e8c5f562ab846bf600d",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp188-hero-male.webp": {
+   "refs": [
+    "sp188 GUIDE_POSES[0]"
+   ],
+   "sha1": "42a833eaa648d1382f365d8dc109a75d3f221d78",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp188-juv.webp": {
+   "refs": [
+    "sp188 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "2d0ae608c8f337f85f93e805ae6fc6d40b54f100",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp206-adult_f.webp": {
+   "refs": [
+    "sp206 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "3aac28daf6c5f92be6a3296c681877729f98496f",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp206-flight.webp": {
+   "refs": [
+    "sp206 GUIDE_POSES[0]"
+   ],
+   "sha1": "89b494b1d28529a3686f65296a288e64a72fd2ac",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp206-juv.webp": {
+   "refs": [
+    "sp206 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "14105fab497d651a0b73d7b4b8c572b83e0b517b",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp206-winter.webp": {
+   "refs": [
+    "sp206 GUIDE_PLUMAGE.winter"
+   ],
+   "sha1": "cb9362d960415521da59759f97c112451d1f11db",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": "Vogel zeer klein in beeld.",
+   "flag": "kwaliteit: klein in beeld"
+  },
+  "/assets/species/plumage/sp217-flight.webp": {
+   "refs": [
+    "sp217 GUIDE_POSES[0]"
+   ],
+   "sha1": "179a284578c16dff4ac607a2e2de5d205bfc6273",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp217-juv.webp": {
+   "refs": [
+    "sp217 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "98d10a51855af93c074719b41b28bb9be182ca6f",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp217-winter.webp": {
+   "refs": [
+    "sp217 GUIDE_PLUMAGE.winter"
+   ],
+   "sha1": "77c240b0ae91543207521b0546cd9f3aeb979b1b",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp225-flight.webp": {
+   "refs": [
+    "sp225 GUIDE_POSES[0]"
+   ],
+   "sha1": "948244f533a583f65d4fdd3f35fa00698afbf720",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp225-winter.webp": {
+   "refs": [
+    "sp225 GUIDE_PLUMAGE.winter"
+   ],
+   "sha1": "83716e8bd61930a148a0f229a6e2df997abb096d",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp245-breeding.webp": {
+   "refs": [
+    "sp245 GUIDE_PLUMAGE.breeding"
+   ],
+   "sha1": "dc62fffe933fbb35dbbbeae635aa77e18e8e2f14",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp245-flight.webp": {
+   "refs": [
+    "sp245 GUIDE_POSES[0]"
+   ],
+   "sha1": "07a996432d16b61ba2c74b405b2435ea738a076e",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp245-juv.webp": {
+   "refs": [
+    "sp245 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "063f10adecb8a767e473454c60071addcb44830e",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp245-winter.webp": {
+   "refs": [
+    "sp245 GUIDE_PLUMAGE.winter"
+   ],
+   "sha1": "f17946032614c98dd9c1f446bd38a36fb48dc274",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp248-adult_f.webp": {
+   "refs": [
+    "sp248 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "92cc03b6a0cd9effabac8df5b764f9c1b5187e22",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp248-juv.webp": {
+   "refs": [
+    "sp248 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "6d71287ebaaed60e3f77deec214325f68b0fe70d",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp248-male-rest.webp": {
+   "refs": [
+    "sp248 GUIDE_POSES[0]"
+   ],
+   "sha1": "d006dfc99bf38e9c006b19161b998a439c7fd3e7",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp249-adult_f.webp": {
+   "refs": [
+    "sp249 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "f2625dac61b5b224a0cbd8a16ddd3236f9265552",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp249-hero-male.webp": {
+   "refs": [
+    "sp249 GUIDE_POSES[1]"
+   ],
+   "sha1": "0834787ddce20e9147ffc8388571a32d6737f735",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp249-juv.webp": {
+   "refs": [
+    "sp249 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "64d53e2e33fad8629c76785b1ed37950c73d7acd",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp249-male-rest.webp": {
+   "refs": [
+    "sp249 GUIDE_POSES[0]"
+   ],
+   "sha1": "529b22b83cc341bbec212663d7dd004aa720291a",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": "Op de grond; onscherp.",
+   "flag": "kwaliteit: onscherp"
+  },
+  "/assets/species/plumage/sp250-adult_f.webp": {
+   "refs": [
+    "sp250 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "ffb0a8b073e4445f2f78306099e6b4f0ae4d7c58",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp250-hero-male.webp": {
+   "refs": [
+    "sp250 GUIDE_POSES[1]"
+   ],
+   "sha1": "7b2562ac3249852b2418df6879b7915237de753c",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp250-juv.webp": {
+   "refs": [
+    "sp250 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "9edb99a38bcc90514adbd4293c0a7fdc9694d60f",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp250-male-rest.webp": {
+   "refs": [
+    "sp250 GUIDE_POSES[0]"
+   ],
+   "sha1": "73a4eec7556d1d48b2858ef083d72c3f891766aa",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp251-adult_f.webp": {
+   "refs": [
+    "sp251 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "0a6cb53310dbae5458aa28257f60da751e6ea0bd",
+   "class": "landen",
+   "airborne": false,
+   "source": "vluchtcontrole",
+   "decision": "uit-rol",
+   "note": "Vleugels hoog opgeslagen, poten omlaag: neerstrijken/remmen, geen herkenbare vlieghouding."
+  },
+  "/assets/species/plumage/sp251-hero-male.webp": {
+   "refs": [
+    "sp251 GUIDE_POSES[1]"
+   ],
+   "sha1": "2e46c298c9115a75d792a32fcf82bc2b0f86a175",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp251-juv.webp": {
+   "refs": [
+    "sp251 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "e102322d73c832af43f353184ddef67efc61e113",
+   "class": "landen",
+   "airborne": false,
+   "source": "vluchtcontrole",
+   "decision": "uit-rol",
+   "note": "Landt boven gras met uitgestrekte poten."
+  },
+  "/assets/species/plumage/sp251-male-rest.webp": {
+   "refs": [
+    "sp251 GUIDE_POSES[0]"
+   ],
+   "sha1": "ee217457b7f7ed19cf1efe7bc1ff9a3a30893af3",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp253-juv.webp": {
+   "refs": [
+    "sp253 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "883bc7dd0ce0c0adb83118e56014ccfec3116d46",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "FQA-01 beeldinventaris 10-11-2026: stond niet als vlucht geregistreerd maar toont echte vrije vlucht. Juveniel (bron: iNaturalist Life Stage: Juvenile); vrij in"
+  },
+  "/assets/species/plumage/sp253-male-flight.webp": {
+   "refs": [
+    "sp253 GUIDE_POSES[1]"
+   ],
+   "sha1": "2f719af61687bf175fafc26d36737e252df58b86",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp253-male-rest.webp": {
+   "refs": [
+    "sp253 GUIDE_POSES[0]"
+   ],
+   "sha1": "7e809f5cc428e8b8738b938a6152cbb3139dfbfc",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/plumage/sp282-flight.webp": {
+   "refs": [
+    "sp282 GUIDE_POSES[0]"
+   ],
+   "sha1": "60a85466e6390112fde83d335805050a84802445",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp288-adult.webp": {
+   "refs": [
+    "sp288 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "bf5fd7317571386f6b184f758a98b2707f77f197",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": "Vogel klein in beeld.",
+   "flag": "kwaliteit: klein in beeld"
+  },
+  "/assets/species/plumage/sp288-flight.webp": {
+   "refs": [
+    "sp288 GUIDE_POSES[0]"
+   ],
+   "sha1": "811bb19c7876f57fffbb933192d63bdd5b52b0ed",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/sp002.webp": {
+   "refs": [
+    "sp002 GUIDE_PHOTOS"
+   ],
+   "sha1": "5e7c8af158d058e976a502bc8083b0e02a9c5ee7",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp003.webp": {
+   "refs": [
+    "sp003 GUIDE_PHOTOS"
+   ],
+   "sha1": "24744a2726721f4fd51000537939f8722903a630",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp004.webp": {
+   "refs": [
+    "sp004 GUIDE_PHOTOS"
+   ],
+   "sha1": "6d26b8bf93d8c7843a3437a2d4716f481e57ffae",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp005.webp": {
+   "refs": [
+    "sp005 GUIDE_PHOTOS"
+   ],
+   "sha1": "53467d2c33af71b3d6a41c37c7cb901a0f1de912",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp006.webp": {
+   "refs": [
+    "sp006 GUIDE_PHOTOS"
+   ],
+   "sha1": "b43fbb27df96b2f66c47df3024e3f8da936633a0",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp007.webp": {
+   "refs": [
+    "sp007 GUIDE_PHOTOS"
+   ],
+   "sha1": "979241b8d100104e3fc18f132e78b4eed8c906e9",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp008.webp": {
+   "refs": [
+    "sp008 GUIDE_PHOTOS",
+    "sp008 GUIDE_POSES[0]"
+   ],
+   "sha1": "03a99916018e25b13b9d467ad8ea1179ecbe11a9",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp016.webp": {
+   "refs": [
+    "sp016 GUIDE_PHOTOS"
+   ],
+   "sha1": "69abf617426dc5d46d86720e1cd8d8a290f98d83",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp017.webp": {
+   "refs": [
+    "sp017 GUIDE_PHOTOS"
+   ],
+   "sha1": "62075b2f600e032386cc88f887871e67932f3703",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp019.webp": {
+   "refs": [
+    "sp019 GUIDE_PHOTOS",
+    "sp019 GUIDE_POSES[0]"
+   ],
+   "sha1": "d3dfc0a70995a498b5c1b5c3630e72a5d627109a",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp020.webp": {
+   "refs": [
+    "sp020 GUIDE_PHOTOS",
+    "sp020 GUIDE_POSES[0]"
+   ],
+   "sha1": "a1702055da6fe3292aa8a3efc2610de6f3dd7b03",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp021.webp": {
+   "refs": [
+    "sp021 GUIDE_PHOTOS"
+   ],
+   "sha1": "eaa8f283d97a36212e7b92c35df8a82eb59c5452",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp022.webp": {
+   "refs": [
+    "sp022 GUIDE_PHOTOS"
+   ],
+   "sha1": "272425fb618986b39140ae7bd171237d04e562b9",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp025.webp": {
+   "refs": [
+    "sp025 GUIDE_PHOTOS"
+   ],
+   "sha1": "1b3eb7342fa5c8cf5a12d0cf8be47fc05fa5c21c",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp026.webp": {
+   "refs": [
+    "sp026 GUIDE_PHOTOS"
+   ],
+   "sha1": "387642b09f1fdd17a1f0a14b39e0c2506def9216",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp029.webp": {
+   "refs": [
+    "sp029 GUIDE_PHOTOS"
+   ],
+   "sha1": "4f36ce8d6bab5620aef99439be40847961db3442",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp030.webp": {
+   "refs": [
+    "sp030 GUIDE_PHOTOS"
+   ],
+   "sha1": "2ddd82cc41bee8226a87c3fe6e95faff16469f0a",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp031.webp": {
+   "refs": [
+    "sp031 GUIDE_PHOTOS",
+    "sp031 GUIDE_POSES[0]"
+   ],
+   "sha1": "7325534870ae35dd56545160897687e113bc3bb1",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp032.webp": {
+   "refs": [
+    "sp032 GUIDE_PHOTOS",
+    "sp032 GUIDE_POSES[0]"
+   ],
+   "sha1": "6154b407d2528754f2b263ef49a269a02216b8b8",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp033.webp": {
+   "refs": [
+    "sp033 GUIDE_PHOTOS",
+    "sp033 GUIDE_POSES[0]"
+   ],
+   "sha1": "6e6a2c783485bca9595cdabbae3c23e360348eb9",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp034.webp": {
+   "refs": [
+    "sp034 GUIDE_PHOTOS"
+   ],
+   "sha1": "0f6198891c44432d251e10d95e824433b8c622f3",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp035.webp": {
+   "refs": [
+    "sp035 GUIDE_PHOTOS"
+   ],
+   "sha1": "dc44e4fb7f373446bdc1f72d1018dba1ebf18dc2",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp036.webp": {
+   "refs": [
+    "sp036 GUIDE_PHOTOS"
+   ],
+   "sha1": "b034aec50b54c406fb2ade050ac3bb8de162eb5c",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp037.webp": {
+   "refs": [
+    "sp037 GUIDE_PHOTOS"
+   ],
+   "sha1": "800bcf75f6750d645d84aaa0e406540abd958781",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp038.webp": {
+   "refs": [
+    "sp038 GUIDE_PHOTOS"
+   ],
+   "sha1": "503884556130c2aab2fd6d6b57f0a50e673b5628",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp039.webp": {
+   "refs": [
+    "sp039 GUIDE_PHOTOS"
+   ],
+   "sha1": "90cd2d3bf70a660028d6dc1a22b970e06a071489",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp040.webp": {
+   "refs": [
+    "sp040 GUIDE_PHOTOS"
+   ],
+   "sha1": "7fc713a88db43e41492697487dab6431a3daf4ba",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp041.webp": {
+   "refs": [
+    "sp041 GUIDE_PHOTOS"
+   ],
+   "sha1": "d85b8e342182ae56127ba2c448e7e82adb49f3f8",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp043.webp": {
+   "refs": [
+    "sp043 GUIDE_PHOTOS"
+   ],
+   "sha1": "d9a270a5f76e9620be95cf3d29519ed6576123c4",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": "Vrouwtje Huismus; sterke groen/gele kleurzweem.",
+   "flag": "kwaliteit: kleurzweem"
+  },
+  "/assets/species/sp044.webp": {
+   "refs": [
+    "sp044 GUIDE_PHOTOS"
+   ],
+   "sha1": "d24ed79ac69e9b764112431bd6d50184dd16a362",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp045.webp": {
+   "refs": [
+    "sp045 GUIDE_PHOTOS"
+   ],
+   "sha1": "87956082c70c5b1733588ce77e056e55c3d16308",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp046.webp": {
+   "refs": [
+    "sp046 GUIDE_PHOTOS"
+   ],
+   "sha1": "83333aacf51afbf8f0d76157b9229b2654159fc6",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp047.webp": {
+   "refs": [
+    "sp047 GUIDE_PHOTOS"
+   ],
+   "sha1": "25f84d113362e2eb6995c709bd8169dd41a55180",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp048.webp": {
+   "refs": [
+    "sp048 GUIDE_PHOTOS"
+   ],
+   "sha1": "fbb31bf847f0046019576eca39fa6dcdcf92d463",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp049.webp": {
+   "refs": [
+    "sp049 GUIDE_PHOTOS"
+   ],
+   "sha1": "040539c664635d5ece9ac2fe9cddb4193b6f7d3f",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp050.webp": {
+   "refs": [
+    "sp050 GUIDE_PHOTOS"
+   ],
+   "sha1": "26274bc8481f68bbe04dc9c541d35a3f8c22b2bb",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp051.webp": {
+   "refs": [
+    "sp051 GUIDE_PHOTOS"
+   ],
+   "sha1": "4fc87f216daa3b14daee7b10580f69ec3ce8b4ec",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp053.webp": {
+   "refs": [
+    "sp053 GUIDE_PHOTOS"
+   ],
+   "sha1": "22978a919a41137f1b3a857071b15372300d66d0",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp054.webp": {
+   "refs": [
+    "sp054 GUIDE_PHOTOS"
+   ],
+   "sha1": "9cfa4794a02dfa21d8da54656ec841a5d606d79f",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp055.webp": {
+   "refs": [
+    "sp055 GUIDE_PHOTOS"
+   ],
+   "sha1": "3cf81335db8e8239f58363b02ca09909a25a46f5",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp056.webp": {
+   "refs": [
+    "sp056 GUIDE_PHOTOS"
+   ],
+   "sha1": "564d56ce881f88bbad232eecb92869f24b6117ae",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp057.webp": {
+   "refs": [
+    "sp057 GUIDE_PHOTOS"
+   ],
+   "sha1": "7d63b24de1bb65d7f9becd7903aefc17920a5667",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp058.webp": {
+   "refs": [
+    "sp058 GUIDE_PHOTOS"
+   ],
+   "sha1": "2d909b317cf72fcf9074471cf0a737d14a5a0ccd",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp059.webp": {
+   "refs": [
+    "sp059 GUIDE_PHOTOS"
+   ],
+   "sha1": "aed6617b2ed6d550c4b9d1d167f0cc87a08fb3af",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp060.webp": {
+   "refs": [
+    "sp060 GUIDE_PHOTOS"
+   ],
+   "sha1": "2745d0ad988c47ee24dcc635b4ee746b08fd1963",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp061.webp": {
+   "refs": [
+    "sp061 GUIDE_PHOTOS"
+   ],
+   "sha1": "afb837a5c4935b7af169513912b5bbcbb7bb902c",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp063.webp": {
+   "refs": [
+    "sp063 GUIDE_PHOTOS"
+   ],
+   "sha1": "7515103091025269f8b0aa8fca4bb39d393086ee",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp064.webp": {
+   "refs": [
+    "sp064 GUIDE_PHOTOS"
+   ],
+   "sha1": "364ade5c66c2a47f655bd8e5a78c07751c515691",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp065.webp": {
+   "refs": [
+    "sp065 GUIDE_PHOTOS"
+   ],
+   "sha1": "60b7b3b75338e2980d8a79c472168f9a5d6ea6a4",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp066.webp": {
+   "refs": [
+    "sp066 GUIDE_PHOTOS"
+   ],
+   "sha1": "5b3ab89c4ac88864d1ecf12efae120c6e88313ca",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp067.webp": {
+   "refs": [
+    "sp067 GUIDE_PHOTOS"
+   ],
+   "sha1": "136c08e7b7a04dde3993bf2d5f4644a19cd637ed",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp068.webp": {
+   "refs": [
+    "sp068 GUIDE_PHOTOS"
+   ],
+   "sha1": "c611c39cfe882228a04fabb7a3893ba6f377641d",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp069.webp": {
+   "refs": [
+    "sp069 GUIDE_PHOTOS"
+   ],
+   "sha1": "d9ae059286fa6dc8d6a651a4c8cafbd819ba1d5e",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp070.webp": {
+   "refs": [
+    "sp070 GUIDE_PHOTOS"
+   ],
+   "sha1": "0241111e2054e9b7ec348cc42c27a3789a684f1b",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp072.webp": {
+   "refs": [
+    "sp072 GUIDE_PHOTOS"
+   ],
+   "sha1": "9ac1f7ad0bc91e1ebb2d499962f89680b2ed3aa5",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp077.webp": {
+   "refs": [
+    "sp077 GUIDE_PHOTOS"
+   ],
+   "sha1": "7e22556c4a81b09d741be9e10b6de60a627091dc",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp078.webp": {
+   "refs": [
+    "sp078 GUIDE_PHOTOS"
+   ],
+   "sha1": "0b9fb66f776650b9cc0fed9d67aa06a62abe6734",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp079.webp": {
+   "refs": [
+    "sp079 GUIDE_PHOTOS"
+   ],
+   "sha1": "955eec9f2c78e466bdccdbeabf1971994b594dec",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp081.webp": {
+   "refs": [
+    "sp081 GUIDE_POSES[0]"
+   ],
+   "sha1": "3687ecef4652e3798e38c3ccef7a1171b07114cb",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/sp082.webp": {
+   "refs": [
+    "sp082 GUIDE_PHOTOS"
+   ],
+   "sha1": "8bb7c3d5e39d8c485ffc7b29807b42edcd81e698",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/sp083.webp": {
+   "refs": [
+    "sp083 GUIDE_PHOTOS"
+   ],
+   "sha1": "367062fde4e1ff602011cbe5102458ba23efc9d2",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp086.webp": {
+   "refs": [
+    "sp086 GUIDE_PHOTOS"
+   ],
+   "sha1": "52c6e5c10ea20f230315b925e0d57e94807f7f1d",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp089.webp": {
+   "refs": [
+    "sp089 GUIDE_PHOTOS"
+   ],
+   "sha1": "61f0dbd27d69202c72ca9c31201e577a67cda463",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp090.webp": {
+   "refs": [
+    "sp090 GUIDE_PHOTOS"
+   ],
+   "sha1": "06c5d61109796a9197a417f1f52c788f280bdb23",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp091.webp": {
+   "refs": [
+    "sp091 GUIDE_PHOTOS"
+   ],
+   "sha1": "bf123e5230f63961e5c37669ef02d5e81dd62aca",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp092.webp": {
+   "refs": [
+    "sp092 GUIDE_PHOTOS"
+   ],
+   "sha1": "2261a8a3d1a9df7b65f30fee074ef0a3d6960ef0",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp094.webp": {
+   "refs": [
+    "sp094 GUIDE_PHOTOS"
+   ],
+   "sha1": "4ac46c9dd2b136b24a3c0874925d3df7022435a4",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp095.webp": {
+   "refs": [
+    "sp095 GUIDE_PHOTOS"
+   ],
+   "sha1": "8cc5010f9275009c9e45b6bf16445de9e27a820a",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp096.webp": {
+   "refs": [
+    "sp096 GUIDE_PHOTOS"
+   ],
+   "sha1": "761b9db1c9a0345eefa28da9c44cd177930d5aee",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp097.webp": {
+   "refs": [
+    "sp097 GUIDE_PHOTOS"
+   ],
+   "sha1": "dc9ddfdfad98884f552eff7fb1944839a314162c",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp098.webp": {
+   "refs": [
+    "sp098 GUIDE_PHOTOS"
+   ],
+   "sha1": "f58151a163d79405f451169c2eb50d2ca87d7893",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp099.webp": {
+   "refs": [
+    "sp099 GUIDE_PHOTOS"
+   ],
+   "sha1": "e52a5fd840eeefae0d4c62ac7edf82eba107ce31",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp100.webp": {
+   "refs": [
+    "sp100 GUIDE_PHOTOS"
+   ],
+   "sha1": "175c45139b1a85851193f60307f2f30d8f89b849",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp101.webp": {
+   "refs": [
+    "sp101 GUIDE_PHOTOS"
+   ],
+   "sha1": "08010f1bf61816d72c9290988304b3d02c44ddbd",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp102.webp": {
+   "refs": [
+    "sp102 GUIDE_PHOTOS"
+   ],
+   "sha1": "f206e88aac35f7442f96d25a1c9b22ef694b4b05",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp104.webp": {
+   "refs": [
+    "sp104 GUIDE_PHOTOS"
+   ],
+   "sha1": "4e7f6b614be7bdde47c9f358cc8be7dce4940cc9",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp105.webp": {
+   "refs": [
+    "sp105 GUIDE_PHOTOS"
+   ],
+   "sha1": "12b40ca2f56e0f3263214e2b436799ba12953199",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp106.webp": {
+   "refs": [
+    "sp106 GUIDE_PHOTOS"
+   ],
+   "sha1": "076a4f8206f593172dac5b47f4e1633092c61e98",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp110.webp": {
+   "refs": [
+    "sp110 GUIDE_PHOTOS"
+   ],
+   "sha1": "b5ed846c8da494a38c80daaec2437621d903fff1",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp112.webp": {
+   "refs": [
+    "sp112 GUIDE_PHOTOS"
+   ],
+   "sha1": "16cad158278721e6997d0715d538d0d5f3ba2100",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp114.webp": {
+   "refs": [
+    "sp114 GUIDE_PHOTOS"
+   ],
+   "sha1": "256eb95bdbe27a52d511e751bd7ce714a7d20d56",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp115.webp": {
+   "refs": [
+    "sp115 GUIDE_PHOTOS"
+   ],
+   "sha1": "c8e0273125427a5d02d042657be0b1475a6bf30e",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp117.webp": {
+   "refs": [
+    "sp117 GUIDE_PHOTOS"
+   ],
+   "sha1": "073f45d699f17b4fe7b43ca8a2af46e017be284f",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp118.webp": {
+   "refs": [
+    "sp118 GUIDE_PHOTOS"
+   ],
+   "sha1": "f0f82f3a85af8f6eeaa955a632ccce8b413d8a0c",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp126.webp": {
+   "refs": [
+    "sp126 GUIDE_PHOTOS"
+   ],
+   "sha1": "124528c83fcc032183f2e4c8127f628af2b09b49",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp128.webp": {
+   "refs": [
+    "sp128 GUIDE_PHOTOS"
+   ],
+   "sha1": "e512c7d0b4f61b04aeeebb33f7b491273e5b9aac",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp129.webp": {
+   "refs": [
+    "sp129 GUIDE_PHOTOS"
+   ],
+   "sha1": "d0ee022364292da14847db116ebd33e49c30fbc9",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp130.webp": {
+   "refs": [
+    "sp130 GUIDE_PHOTOS"
+   ],
+   "sha1": "56a9b23a6f8f1f20a1c3387f233915c5c4588ca6",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp132.webp": {
+   "refs": [
+    "sp132 GUIDE_PHOTOS"
+   ],
+   "sha1": "80940208a0865d4f35a770cfd6c5728ce0cdc790",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp144.webp": {
+   "refs": [
+    "sp144 GUIDE_PHOTOS"
+   ],
+   "sha1": "d6c8d76708eda636b5d213fa48dd4603a2283cae",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp145.webp": {
+   "refs": [
+    "sp145 GUIDE_PHOTOS"
+   ],
+   "sha1": "33d9056a8cd9a875a33f592f9dd52596a3612be2",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp146.webp": {
+   "refs": [
+    "sp146 GUIDE_PHOTOS"
+   ],
+   "sha1": "3d3e98d1db044958346b7f3818d051b204a0f50e",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp147.webp": {
+   "refs": [
+    "sp147 GUIDE_PHOTOS"
+   ],
+   "sha1": "feecea88cb35b9810f3d4d948754846d19fdb23b",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp150.webp": {
+   "refs": [
+    "sp150 GUIDE_PHOTOS"
+   ],
+   "sha1": "dfdc67bfb6e7b25696e4beb8563311d6dfe96cf9",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp152.webp": {
+   "refs": [
+    "sp152 GUIDE_PHOTOS"
+   ],
+   "sha1": "7abec9b7611c2ce3994ff3221dcf25b26142beea",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp155.webp": {
+   "refs": [
+    "sp155 GUIDE_PHOTOS"
+   ],
+   "sha1": "9c2a739c6682d15e0fc75a4e24d9d6a8ccc36e0b",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp156.webp": {
+   "refs": [
+    "sp156 GUIDE_PHOTOS"
+   ],
+   "sha1": "65b70ee68990674df1ec51dd828f91a1b79b0186",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp157.webp": {
+   "refs": [
+    "sp157 GUIDE_PHOTOS"
+   ],
+   "sha1": "62be40a87f5ce930f29895a3b5fba86824ead9cd",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp158.webp": {
+   "refs": [
+    "sp158 GUIDE_PHOTOS"
+   ],
+   "sha1": "302080e469f9f8750063b9fecd7df4ec7810445b",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp159.webp": {
+   "refs": [
+    "sp159 GUIDE_PHOTOS"
+   ],
+   "sha1": "d102198b1d2d125f6cf5daa98ed8cc9cb1f873c3",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp170.webp": {
+   "refs": [
+    "sp170 GUIDE_PHOTOS"
+   ],
+   "sha1": "7640ef2cec5e340601734444b38a7740dfa5bd56",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/sp173.webp": {
+   "refs": [
+    "sp173 GUIDE_PHOTOS"
+   ],
+   "sha1": "895267c3e23ec4b14fd91fc45ade155b28051a83",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/sp174.webp": {
+   "refs": [
+    "sp174 GUIDE_PHOTOS"
+   ],
+   "sha1": "44a9a5c1b111c5e7f485eed547bd0fc8d1acf79b",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp176.webp": {
+   "refs": [
+    "sp176 GUIDE_PHOTOS"
+   ],
+   "sha1": "7cd390bd62f0903791b37baeb2ad106dedc77fb3",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp177.webp": {
+   "refs": [
+    "sp177 GUIDE_PHOTOS"
+   ],
+   "sha1": "a7afccc38d51164f2212d990fe808daaf9a941f4",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp178.webp": {
+   "refs": [
+    "sp178 GUIDE_PHOTOS"
+   ],
+   "sha1": "26ba86bcd340c83854c390be8dfb427c9ffbe7a9",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp188.webp": {
+   "refs": [
+    "sp188 GUIDE_PHOTOS"
+   ],
+   "sha1": "daecc79924126a32912eec7a9eb71717709a1f3a",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp206.webp": {
+   "refs": [
+    "sp206 GUIDE_PHOTOS"
+   ],
+   "sha1": "97410547f26565be43021dbbc90163f9ace5df67",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp217.webp": {
+   "refs": [
+    "sp217 GUIDE_PHOTOS"
+   ],
+   "sha1": "07d910e3c42bde357097cb6dc2afd85a64ec59a4",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp225.webp": {
+   "refs": [
+    "sp225 GUIDE_PHOTOS"
+   ],
+   "sha1": "d6893301b19e82880962a1f91dbc22e230e78e8d",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp245.webp": {
+   "refs": [
+    "sp245 GUIDE_PHOTOS"
+   ],
+   "sha1": "1be9005f7b1945d985650fcde69c73b28b339535",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "contactsheet 10-11-2026",
+   "note": ""
+  },
+  "/assets/species/sp248.webp": {
+   "refs": [
+    "sp248 GUIDE_PHOTOS"
+   ],
+   "sha1": "2a0b5f8f1f4659bdfecb21870647a9db227d033f",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/sp249.webp": {
+   "refs": [
+    "sp249 GUIDE_PHOTOS"
+   ],
+   "sha1": "5f1f195724dee4b82142a164f1cc895daed57984",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/sp250.webp": {
+   "refs": [
+    "sp250 GUIDE_PHOTOS"
+   ],
+   "sha1": "f91b993bc6ed75ff4af7158cecf6270cf414b7de",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/sp251.webp": {
+   "refs": [
+    "sp251 GUIDE_PHOTOS"
+   ],
+   "sha1": "3c06bbed8096b25e4ca9cf875d80681816b4c94c",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/sp253.webp": {
+   "refs": [
+    "sp253 GUIDE_PHOTOS"
+   ],
+   "sha1": "3ea98fd49e12c3bec476182a82d8bb333ac63858",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp089-free-flight.webp": {
+   "refs": [
+    "sp089 GUIDE_POSES[2]"
+   ],
+   "sha1": "3a1b881977d401ef2b7a18fa9edfc445338be7f7",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, met voorwaarts gestrekte hals en ingetrokken poten. De groene kop en gele snavel bevestigen een mannetje in prachtkleed."
+  },
+  "/assets/species/plumage/sp105-adult_f.webp": {
+   "refs": [
+    "sp105 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "85071d1d286688aba5b9db55323c0a54c166f3a7",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M3-fase 4",
+   "decision": "goedgekeurd",
+   "note": "Vrouwtje Fazant op Texel, met donkere vlekken op het bruine kleed en een lange gebandeerde staart."
+  },
+  "/assets/species/plumage/sp105-juv.webp": {
+   "refs": [
+    "sp105 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "617a552d2e813c7223e8d7231b7ab64f04fce796",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M3-fase 4",
+   "decision": "goedgekeurd",
+   "note": "Jonge Fazant in Finland, met een bruin gevlekt kleed en een nog korte staart."
+  },
+  "/assets/species/plumage/sp141-juv.webp": {
+   "refs": [
+    "sp141 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "329bd54779414abb93c31cebd7d3d1b2169e9a30",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M3-fase 4",
+   "decision": "goedgekeurd",
+   "note": "Juveniele Gierzwaluw tijdens opvang na redding, met lichte veerranden op kop en vleugels."
+  },
+  "/assets/species/plumage/sp141-flight.webp": {
+   "refs": [
+    "sp141 GUIDE_POSES[0]"
+   ],
+   "sha1": "c70b8bd9869dd7cedbe5fee70a6be78693830596",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Gierzwaluw in vrije vlucht, met lange, smalle vleugels en een gespreide gevorkte staart."
+  },
+  "/assets/species/plumage/sp029-adult_m.webp": {
+   "refs": [
+    "sp029 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "fdd5f978ff7b1af1d16c13dbc5e3217f3fd36b3e",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M4-fase 1",
+   "decision": "goedgekeurd",
+   "note": "Mannetje Koolmees met zwarte kop, witte wang en brede donkere buikstreep."
+  },
+  "/assets/species/plumage/sp029-adult_f.webp": {
+   "refs": [
+    "sp029 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "50108909b3b49c08582855b3e2372cfc58914c97",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M4-fase 1",
+   "decision": "goedgekeurd",
+   "note": "Vrouwtje Koolmees met witte wangen en een smalle, onderbroken donkere buikstreep."
+  },
+  "/assets/species/plumage/sp029-juv.webp": {
+   "refs": [
+    "sp029 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "ef2814e8f25fee6a21c0ac9dda43ac4e86c09f52",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M4-fase 1",
+   "decision": "goedgekeurd",
+   "note": "Juveniele Koolmees met doffe kap, lichte wang en lichte mondhoek."
+  },
+  "/assets/species/plumage/sp045-free-flight.webp": {
+   "refs": [
+    "sp045 GUIDE_POSES[2]"
+   ],
+   "sha1": "d9e9c39d5adba501f9cb93d48b3d0267a4471ff1",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "voorwaardelijk",
+   "note": "Voorlopige foto: mannetje Merel in vrije vlucht. De staart is deels afgedekt en de vleugels zijn deels onscherp."
+  },
+  "/assets/species/plumage/sp046-juv.webp": {
+   "refs": [
+    "sp046 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "729d0cee694eb155ee2760a23221cbc44ec56c6b",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M4-fase 2",
+   "decision": "goedgekeurd",
+   "note": "Juveniele Zanglijster met lichte tekening op de bovenzijde en een gevlekte borst."
+  },
+  "/assets/species/plumage/sp047-juv.webp": {
+   "refs": [
+    "sp047 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "c98102528e7451cf0d962063d2dbec0491c70a42",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M4-fase 2",
+   "decision": "goedgekeurd",
+   "note": "Juveniele Kramsvogel met gevlekte borst, bruingrijze kop en minder sterk contrast tussen kop en rug."
+  },
+  "/assets/species/plumage/sp048-juv.webp": {
+   "refs": [
+    "sp048 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "070d035c1a3b20a8779dde602da55aee260fd7a7",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M4-fase 3",
+   "decision": "goedgekeurd",
+   "note": "iNaturalist-waarneming van onderzoekskwaliteit, taxon Turdus iliacus, leeftijdsannotatie Juvenile. Geslacht onbekend."
+  },
+  "/assets/species/plumage/sp072-juv.webp": {
+   "refs": [
+    "sp072 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "e26ec91749dca6e45d73d8053cbdbbb8d74c0026",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M4-fase 3",
+   "decision": "goedgekeurd",
+   "note": "De fotograaf vermeldt een juveniel. Lichte veerranden en borststreping zichtbaar. Geslacht onbekend."
+  },
+  "/assets/species/plumage/sp081-portrait.webp": {
+   "refs": [
+    "sp081 GUIDE_PHOTOS"
+   ],
+   "sha1": "ddefc7d3dd31e7ab49fcffd68f27b69fb2055400",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M4-fase 4",
+   "decision": "goedgekeurd",
+   "note": "Bron bevestigt Ardea cinerea. De volwassen koptekening en stevige snavel zijn zichtbaar. Geslacht onbekend."
+  },
+  "/assets/species/plumage/sp099-adult_m.webp": {
+   "refs": [
+    "sp099 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "28531cfdd01870144d7474f951cee3a1aee1f108",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M4-fase 4",
+   "decision": "goedgekeurd",
+   "note": "Audubon benoemt dezelfde opname als volwassen mannetje in broedkleed. De lange kuif en donkere keel zijn zichtbaar."
+  },
+  "/assets/species/plumage/sp099-adult_f.webp": {
+   "refs": [
+    "sp099 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "e49a32d38cb5e3a920c7dc2ea4305b207019e8d7",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M4-fase 4",
+   "decision": "goedgekeurd",
+   "note": "De fotograaf benoemt een baltsend vrouwtje bij Marken. Het beeld toont een volwassen vogel in baltspositie."
+  },
+  "/assets/species/plumage/sp099-juv.webp": {
+   "refs": [
+    "sp099 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "e44b49a0b447a025da6b5cd27fc55543a256c2b5",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M4-fase 4",
+   "decision": "goedgekeurd",
+   "note": "Commons categoriseert de opname als juveniel. Korte kuif, bruin kleed en brede lichte veerranden ondersteunen het label. Geslacht onbekend."
+  },
+  "/assets/species/plumage/sp036-adult_f.webp": {
+   "refs": [
+    "sp036 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "eb489f1cf65881d186d598620ce52630385802a2",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M5-fase 1",
+   "decision": "goedgekeurd",
+   "note": "De fotograaf benoemt een vrouwtje. Het grijsgroene kleed en de gele vleugelrand zijn zichtbaar."
+  },
+  "/assets/species/plumage/sp036-juv.webp": {
+   "refs": [
+    "sp036 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "5e733dd05a2e542b6c32ba045e68bb4e9ef3f1a7",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M5-fase 1",
+   "decision": "goedgekeurd",
+   "note": "De fotograaf benoemt een juveniel. Stevige snavel en donkere streping zichtbaar. Geslacht onbekend."
+  },
+  "/assets/species/plumage/sp037-adult_m.webp": {
+   "refs": [
+    "sp037 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "e77aa4956ce5eaa2dc32b10079d2dedc3b79e7a5",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M5-fase 1",
+   "decision": "goedgekeurd",
+   "note": "De fotograaf benoemt een mannetje. Het rode masker reikt achter het oog."
+  },
+  "/assets/species/plumage/sp037-adult_f.webp": {
+   "refs": [
+    "sp037 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "d7723bfae4910c2e619ec30de489ab01b09b2505",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M5-fase 1",
+   "decision": "goedgekeurd",
+   "note": "De oorspronkelijke bestandsnaam van fotograaf Francesco Canu noemt femmina (vrouwtje). Het zichtbare masker is relatief beperkt. Maskergrootte alleen geeft geen zekere geslachtsbepaling."
+  },
+  "/assets/species/plumage/sp037-juv.webp": {
+   "refs": [
+    "sp037 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "fab2ba3414543ae8865db0190be163ca04cc1419",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "M5-fase 1",
+   "decision": "goedgekeurd",
+   "note": "De fotograaf benoemt een juveniel. Bruine kop en gele vleugelband zijn zichtbaar. Geslacht onbekend."
+  },
+  "/assets/species/plumage/sp055-juv.webp": {
+   "refs": [
+    "sp055 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "8654d84186034474a27df5bba95e09a20c5455b2",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Beeldinspectie 12-11-2026",
+   "note": "Juveniel op hout, uitgesneden voor leesbaarheid."
+  },
+  "/assets/species/plumage/sp098-juv.webp": {
+   "refs": [
+    "sp098 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "e0ff5fcd747cde990fa8c888208d5ae79c23f693",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Beeldinspectie 12-11-2026",
+   "note": "Juveniel in zijaanzicht aan de waterkant."
+  },
+  "/assets/species/plumage/sp100-juv.webp": {
+   "refs": [
+    "sp100 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "71d6b7af3774d80e6261d714caf7ee9d50d3c894",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Wulp in gras, zonder vlieghouding."
+  },
+  "/assets/species/plumage/sp101-juv.webp": {
+   "refs": [
+    "sp101 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "245abcbc612797bf1f2139d572dde175bf804482",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Grutto staat in ondiep water."
+  },
+  "/assets/species/sp148.webp": {
+   "refs": [
+    "sp148 GUIDE_PHOTOS"
+   ],
+   "sha1": "4b80a4771650896e577dd87bd59de9daba48c591",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Regenwulp staat op een steen."
+  },
+  "/assets/species/sp149.webp": {
+   "refs": [
+    "sp149 GUIDE_PHOTOS"
+   ],
+   "sha1": "4c58b96f156e55304cca2274a8ffa695d52ea2bb",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Rosse Grutto staat bij de waterlijn."
+  },
+  "/assets/species/plumage/sp101-hero-male.webp": {
+   "refs": [
+    "sp101 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "7eaee6dc1bff268b7de6a412fd57c39bc2d777cf",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Staande Grutto in ondiep water."
+  },
+  "/assets/species/plumage/sp112-hero-male.webp": {
+   "refs": [
+    "sp112 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "e6fd37727bc0305bbc2a54a32b3fb5e47b192727",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Mannetje Spreeuw in broedkleed in zijaanzicht, met een korte staart, gele snavel en metaalglans."
+  },
+  "/assets/species/plumage/sp112-adult_f.webp": {
+   "refs": [
+    "sp112 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "e6d144c6b26c24478d5da09935414ca8534fa93f",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Vrouwtje Spreeuw op een boomwortel, met lichte spikkels en gele snavel."
+  },
+  "/assets/species/plumage/sp112-juv.webp": {
+   "refs": [
+    "sp112 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "28cfadd6586bec7cf9b549e3f43edbae8d6c2946",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Spreeuw met grijsbruine kop, donkere snavel en een weinig contrastrijk kleed."
+  },
+  "/assets/species/plumage/sp152-juv.webp": {
+   "refs": [
+    "sp152 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "002adcb3069f9bb33f6032a103902ff0dc5a5b61",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Drieteenstrandloper op kiezels met donkere bovenveren, lichte veerranden en een korte zwarte snavel."
+  },
+  "/assets/species/plumage/sp165-juv.webp": {
+   "refs": [
+    "sp165 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "24541ebccd6f9e8d0eb0d3348b0ae8e28115e26b",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Visdief op een paal met licht voorhoofd, donkere achterkap en bruin getekende bovendelen."
+  },
+  "/assets/species/sp153.webp": {
+   "refs": [
+    "sp153 GUIDE_PHOTOS"
+   ],
+   "sha1": "f8f84c6b4132946f874588b91c9ae4415b094101",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Bonte Strandloper in winterkleed bij het water, met een snavel die aan het uiteinde omlaag buigt."
+  },
+  "/assets/species/plumage/sp059-adult_f.webp": {
+   "refs": [
+    "sp059 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "5a778b5f20e86e875d1734d8546c8e34f946195a",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Vrouwtje Zwartkop met roodbruine kruin en grijsbruine bovendelen, volledig in zijaanzicht."
+  },
+  "/assets/species/plumage/sp059-juv.webp": {
+   "refs": [
+    "sp059 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "1614708cb771f2f10326427bb25eeff20ff33b62",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Zwartkop op een tak met bruine kruin en lichtgrijze onderzijde."
+  },
+  "/assets/species/plumage/sp061-hero-male.webp": {
+   "refs": [
+    "sp061 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "436d67f3e03365141d5e181284b98d1b2b972d99",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Mannetje Grasmus in zijaanzicht, met grijze kop, witte keel, warme vleugelranden en volledige staart."
+  },
+  "/assets/species/plumage/sp061-adult_f.webp": {
+   "refs": [
+    "sp061 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "80acc70dcff797b32f4e4975c097e43f0dce38df",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Vrouwtje Grasmus in ruige begroeiing, met bruine kop, lichte keel en warme vleugelranden."
+  },
+  "/assets/species/plumage/sp061-juv.webp": {
+   "refs": [
+    "sp061 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "a866e9915ea40206d3c4934c44cdb40207c6eea5",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Grasmus op een stengel, met bruine kop, donkere iris en warme roestbruine vleugelranden."
+  },
+  "/assets/species/plumage/sp064-hero-male.webp": {
+   "refs": [
+    "sp064 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "6eb8f9113b0c7153f81dde9965d510da70d69dd6",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Mannetje Vuurgoudhaan met opvallend witte wenkbrauw, donkere oogstreep en een gekleurde kruin."
+  },
+  "/assets/species/plumage/sp064-juv.webp": {
+   "refs": [
+    "sp064 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "730279615ce74e33d2e500ffc7e541b13908fde0",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Vuurgoudhaan in zijaanzicht, met lichte vleugelstreep en zonder felle kruinstreep."
+  },
+  "/assets/species/sp062.webp": {
+   "refs": [
+    "sp062 GUIDE_PHOTOS"
+   ],
+   "sha1": "879f1042fcde0fc4eabbeb8ea5abc41a02005d72",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Braamsluiper met lichte keel, grijze kop en donkerdere wang op een hek."
+  },
+  "/assets/species/plumage/sp069-adult_f.webp": {
+   "refs": [
+    "sp069 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "5fc7ffbd04905de233c9d5aeb6f2772c0476dcaf",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Vrouwtje Gele Kwikstaart op een lage verhoging. De bleke wenkbrauw, olijfbruine rug en gele onderzijde zijn zichtbaar."
+  },
+  "/assets/species/plumage/sp069-juv.webp": {
+   "refs": [
+    "sp069 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "df2d78107a7d61acab25c4665212e0dbedf0df24",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Gele Kwikstaart in zijaanzicht op een steen, met bleke onderzijde, lichte vleugelstrepen en lange staart."
+  },
+  "/assets/species/plumage/sp106-hero-male.webp": {
+   "refs": [
+    "sp106 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "10b975366cb28d031f4d566ddc0da9a71500f9f8",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Mannetje Patrijs met oranjebruin gezicht, grijze borst en gebandeerde flanken in een grasrand."
+  },
+  "/assets/species/plumage/sp106-adult_f.webp": {
+   "refs": [
+    "sp106 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "869c49048bfa1ed4f5282667852990edd070b4c7",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Vrouwtje Patrijs in zijaanzicht tussen gras, met gebandeerde flank en lichte lengte- en dwarstekening op de schouderveren."
+  },
+  "/assets/species/plumage/sp106-juv.webp": {
+   "refs": [
+    "sp106 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "a9feb5b1bcd4996024a10f2ba0d48476411cb2eb",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Twee jonge Patrijzen op een stenig pad, met bruin gestreepte veren en een gestreepte kop zonder egaal oranjebruin gezicht."
+  },
+  "/assets/species/sp257.webp": {
+   "refs": [
+    "sp257 GUIDE_PHOTOS"
+   ],
+   "sha1": "85b3029d8d93627c4c8cb4b463f61c4bc59ed631",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Bijeneter op een tak met gele keel, blauwgroene onderzijde en licht gebogen snavel."
+  },
+  "/assets/species/plumage/sp114-hero-male.webp": {
+   "refs": [
+    "sp114 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "b235c206cef724bc806acb163b846374e11e2777",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Mannetje Boerenzwaluw op een draad met roestrode keel en voorhoofd, donkere borstband en lichte onderzijde."
+  },
+  "/assets/species/plumage/sp114-adult_f.webp": {
+   "refs": [
+    "sp114 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "8a9d002ceae12aa45ce3a4d4f91658bd2dc1da64",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Vrouwtje Boerenzwaluw in zijaanzicht in de hand, met roestrode keel, donkere borstband en blauwzwarte bovendelen."
+  },
+  "/assets/species/plumage/sp114-juv.webp": {
+   "refs": [
+    "sp114 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "3bdc7fdac4c3347d359fdf0f0deb5226eabba991",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Boerenzwaluw op een tak op Schiermonnikoog, met een blekere keel en donkere borstband."
+  },
+  "/assets/species/plumage/sp115-hero-adult.webp": {
+   "refs": [
+    "sp115 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "468108b592bde6e292e5e3c200fcd58a4a675dd6",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Volwassen Huiszwaluw op een draad in zijaanzicht, met witte keel en buik en een korte gevorkte staart."
+  },
+  "/assets/species/plumage/sp115-juv.webp": {
+   "refs": [
+    "sp115 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "a3afe934462ed1a0552fb9e8aa420913d75f7fb0",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Huiszwaluw op een draad tegen blauwe lucht, met doffe bruine kop en lichte buik."
+  },
+  "/assets/species/plumage/sp117-adult_f.webp": {
+   "refs": [
+    "sp117 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "90e71314f03be120fc757c1ccb2b81b3367d528d",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Vrouwtje Geelgors met zaad in de snavel, een geelbruine kop met donkere streping en een gestreepte borst."
+  },
+  "/assets/species/plumage/sp117-juv.webp": {
+   "refs": [
+    "sp117 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "2da635da325061c04f4f4bb5f65264623ffd0844",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Geelgors van opzij in de hand, met bruine streping op kop en rug en lichte randen aan de vleugelveren."
+  },
+  "/assets/species/plumage/sp118-adult_f.webp": {
+   "refs": [
+    "sp118 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "967eb350597d013ec6195c0162775c026c9b0ce5",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Vrouwtje Rietgors op een tak, met bruine kruin, lichte wenkbrauw en donkere borststrepen."
+  },
+  "/assets/species/plumage/sp118-juv.webp": {
+   "refs": [
+    "sp118 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "2560b12ebf82684bff5ef4aac3ef03f590f48e27",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Zeer jonge Rietgors tussen gras met een open snavel en verse bruine en lichte veertjes."
+  },
+  "/assets/species/plumage/sp126-hero-male.webp": {
+   "refs": [
+    "sp126 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "6e63d6c1b49d1e03b6693db4a52010279dbe8ce7",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Mannetje Knobbelzwaan in zijaanzicht op rustig water, met witte veren, oranjerode snavel en zwarte knobbel."
+  },
+  "/assets/species/plumage/sp126-adult_f.webp": {
+   "refs": [
+    "sp126 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "35d43de80042f5d51d3f032887f4839cd2e7cb29",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Vrouwtje Knobbelzwaan tussen lage bloemen en grassen, met witte hals, oranjerode snavel en zwarte snavelbasis."
+  },
+  "/assets/species/plumage/sp143-juv.webp": {
+   "refs": [
+    "sp143 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "851fe75b07381452d276ad884bb98622cc78acc4",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Kluut langs ondiep water, met bruinere rug- en vleugelbanden, lange poten en een omhooggebogen snavel."
+  },
+  "/assets/species/sp187.webp": {
+   "refs": [
+    "sp187 GUIDE_PHOTOS"
+   ],
+   "sha1": "7391f3ae249ad643d2cfd379e40aa9caaaa911f3",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Wilde Zwaan op water met een rechtere hals en grote gele snavelvlek met zwarte punt."
+  },
+  "/assets/species/plumage/sp118-juv-later.webp": {
+   "refs": [
+    "sp118 GUIDE_POSES[0]"
+   ],
+   "sha1": "b6b228abc5062ced3d644fcc7bc4869fb179794c",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K05 fase 4 (2026-11-12)",
+   "note": "Jonge Rietgors op een rietstengel, met bruine bovendelen en een gestreepte flank."
+  },
+  "/assets/species/plumage/sp143-hero-male.webp": {
+   "refs": [
+    "sp143 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "6dda9e3f5ddb7da23377e0ea781df5a895958ef4",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K05 fase 4 (2026-11-12)",
+   "note": "Mannetje Kluut op slik in zijaanzicht, met een lange opgewipte snavel, zwart-witte tekening en kleurringen."
+  },
+  "/assets/species/plumage/sp143-adult_f.webp": {
+   "refs": [
+    "sp143 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "18574e7fc57a00aefbfd28ba84f524c444679226",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K05 fase 4 (2026-11-12)",
+   "note": "Vrouwtje Kluut op slik, met zwart-witte tekening, lange poten en een omhooggebogen snavel."
+  },
+  "/assets/species/plumage/sp033-juv.webp": {
+   "refs": [
+    "sp033 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "26da657ef80d5914ed2459a5a4a3928a620429e8",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 1 (2026-11-12)",
+   "note": "Jonge Kuifmees op een tak met een korte zwart-witte kuif, zwarte wangboog en gele snavelhoeken."
+  },
+  "/assets/species/plumage/sp044-juv.webp": {
+   "refs": [
+    "sp044 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "a2d0ab1c044047ce9d51f419dc3efb9d642c506a",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 1 (2026-11-12)",
+   "note": "Jonge Ringmus op een hek bij bramen. De donkere wangvlek steekt zacht af tegen de lichte wang."
+  },
+  "/assets/species/plumage/sp049-juv.webp": {
+   "refs": [
+    "sp049 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "4e960ebc68db7630bd96eaeee3be4a4aec63990d",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 1 (2026-11-12)",
+   "note": "Uitgevlogen jonge Grote Lijster in het gras met lichte vlekken en strepen op rug en vleugel."
+  },
+  "/assets/species/sp143-hero-review.webp": {
+   "refs": [
+    "sp143 GUIDE_PHOTOS"
+   ],
+   "sha1": "7612c8ab325589c6f547ecd70e20526994ce0e93",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle na eigenaarfeedback Kluut (2026-11-12)",
+   "note": "Volwassen Kluut in zijaanzicht, met een vrij zichtbare, omhooggebogen snavel, zwart-wit verenkleed en lange poten in ondiep water."
+  },
+  "/assets/species/plumage/sp174-juv.webp": {
+   "refs": [
+    "sp174 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "9223991044e2f2a7159a20e635085a0cdaaae2f3",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 2 (2026-11-12)",
+   "note": "Jonge Zwarte Mees op een tak met een gelige wang, lichte nekvlek en twee lichte vleugelbandjes."
+  },
+  "/assets/species/plumage/sp032-juv.webp": {
+   "refs": [
+    "sp032 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "7cfa17b50496f8de5fc8ff242a8f848c2db478f8",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 2 (2026-11-12)",
+   "note": "Jonge Glanskop op een tak tussen bladeren, met een doffe donkere kap, lichte wang en kleine keelvlek."
+  },
+  "/assets/species/plumage/sp031-juv.webp": {
+   "refs": [
+    "sp031 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "1e07367acd6f5eaf574815e1984bf254643a17c2",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 3 (2026-11-12)",
+   "note": "Jonge Matkop op een tak, met een donkere kap, lichte wang en gelige snavelhoeken."
+  },
+  "/assets/species/plumage/sp176-juv.webp": {
+   "refs": [
+    "sp176 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "7fb1549e2e94cf3e220a7b99c8f3272c4ff21dc4",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 3 (2026-11-12)",
+   "note": "Jonge Grauwe Vliegenvanger op een tak tussen dennennaalden. De rug en gevouwen vleugel hebben lichte vlekken."
+  },
+  "/assets/species/plumage/sp178-adult_f.webp": {
+   "refs": [
+    "sp178 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "59198ea2c4c46c5310278594be6546afeb1c3e89",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 3 (2026-11-12)",
+   "note": "Vrouwtje Gekraagde Roodstaart op een hek, met een warme beige borst, bruine rug en een roestrode staart."
+  },
+  "/assets/species/plumage/sp178-juv.webp": {
+   "refs": [
+    "sp178 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "93119a52a396c13ab93420949e2d3d0a54bdfc2c",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 3 (2026-11-12)",
+   "note": "Jonge Gekraagde Roodstaart op een draad, met een gevlekte rug, gespikkelde borst en roodachtige staart."
+  },
+  "/assets/species/plumage/sp038-adult_f.webp": {
+   "refs": [
+    "sp038 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "1d88e9e3859ded0037dabd4d1c9093ece3258bc1",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 4 (2026-11-12)",
+   "note": "Vrouwtje Sijs op een tak, met een fijne snavel, donkere flankstrepen en geel op de gevouwen vleugel."
+  },
+  "/assets/species/plumage/sp038-juv.webp": {
+   "refs": [
+    "sp038 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "41c0ea3317655c1eb696a90d8697e6fb74636280",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 4 (2026-11-12)",
+   "note": "Jonge Sijs bij water, met gestreepte kop en onderzijde en gele accenten op de vleugel."
+  },
+  "/assets/species/plumage/sp040-adult_f.webp": {
+   "refs": [
+    "sp040 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "859f08d97915ae8e4e328caf6341a8b01a783869",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 4 (2026-11-12)",
+   "note": "Vrouwtje Goudvink op een tak, met een zwarte kap, korte zwarte snavel, beigegrijze onderzijde en witte stuit."
+  },
+  "/assets/species/plumage/sp040-juv.webp": {
+   "refs": [
+    "sp040 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "4b3a798d0685dc55da0a02705f32bf9247668174",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 4 (2026-11-12)",
+   "note": "Jonge Goudvink op een tak, met een bruingrijze kop zonder zwarte kap en een lichte vleugelstreep."
+  },
+  "/assets/species/plumage/sp041-adult_f.webp": {
+   "refs": [
+    "sp041 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "22a99810316c9d7ce8d14ed426d020044ffce48a",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 4 (2026-11-12)",
+   "note": "Vrouwtje Appelvink in zijaanzicht op hout, met een forse snavel, grijze nek en een grijs vleugelveld."
+  },
+  "/assets/species/plumage/sp041-juv.webp": {
+   "refs": [
+    "sp041 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "b8eeae2699bd46fddddef55fc26e5e36d16a12ce",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 4 (2026-11-12)",
+   "note": "Jonge Appelvink met een gelige keel, gevlekte onderzijde en zware snavel."
+  },
+  "/assets/species/plumage/sp051-hero-male.webp": {
+   "refs": [
+    "sp051 GUIDE_PLUMAGE.adult_m",
+    "sp051 GUIDE_HEROES"
+   ],
+   "sha1": "82f86293d1ac7aa612be53b37f1835c146ba9ae0",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K07 fase 1 (2026-11-12)",
+   "note": "Volwassen mannetje Zwarte Roodstaart volledig in zijaanzicht, met donkere borst, lichte vleugelvlek en roestrode staart."
+  },
+  "/assets/species/plumage/sp051-juv.webp": {
+   "refs": [
+    "sp051 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "0184c0c6b638be643bf08b6c434368c0b9a3c457",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K07 fase 1 (2026-11-12)",
+   "note": "Jonge Zwarte Roodstaart op een stenen rand met een grijsbruine borst en roestrode staart."
+  },
+  "/assets/species/plumage/sp177-adult_f.webp": {
+   "refs": [
+    "sp177 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "d4b50b9f34d10ddd844013bf08f5446f28d0215e",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K07 fase 1 (2026-11-12)",
+   "note": "Vrouwtje Bonte Vliegenvanger in zijaanzicht met bruine bovendelen, een licht vleugelveld en lichte onderzijde."
+  },
+  "/assets/species/plumage/sp177-juv.webp": {
+   "refs": [
+    "sp177 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "12aca2498f3c60ca490f0c5c2495f5a343a8369f",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K07 fase 1 (2026-11-12)",
+   "note": "Jonge Bonte Vliegenvanger met een lichte vleugeltekening en gevlekte kop en bovendelen, volledig in zijaanzicht."
+  }
+ }
+}

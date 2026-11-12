@@ -1,0 +1,102 @@
+# Birdspot — kennisbaseline en kennisprofiel v0.1
+
+Status: **proef** · 8 van 597 soorten · branch `feat/kennisbaseline-proef` · eerste profielcommit `456c891` · 10-11-2026.
+Inhoudelijke status van alle profielen: **NOT TESTED** (onafhankelijk). Broncontrole door Claude is geen inhoudelijke QA.
+
+## 1. Bestanden
+
+| Pad | Rol |
+|---|---|
+| `tools/kennisbaseline/knowledge.json` | Bron van waarheid: `_contract`, `_sources`, één profiel per Birdspot-ID |
+| `tools/kennisbaseline/build_knowledge.py` | Valideert en genereert `src/data/speciesKnowledge.js`; `--check` in CI |
+| `src/data/speciesKnowledge.js` | Gegenereerd, niet met de hand wijzigen |
+| `src/features/species/knowledgeSections.js` | Weergave Niveau 1 en Niveau 2 |
+| `tools/kennisbaseline/coverage.mjs` | Dekkingsmatrix → `coverage.json`, `DEKKINGSMATRIX.md` |
+| `tools/kennisbaseline/build_tracker.py` | Voortgangsregister + batchplan → `tracker.json`, `KENNIS_TRACKER.md` |
+| `docs/kennisbaseline/reviews.json` | (nog aan te maken) onafhankelijke reviewuitslag per ID |
+| `docs/kennisbaseline/screenshots/` | Selectie bewijs 390 px en 1280 px |
+
+## 2. Datacontract (compact)
+
+Profielsleutel = bestaand Birdspot-ID (`spNNN`). Elke bewering is `{text, sources[]}`; `sources` verwijst naar `_sources`.
+
+| Sectie | Veld | Inhoud | Verplicht |
+|---|---|---|---|
+| A Basis | `basis.size` | maten met bron | nee |
+| | `basis.biometrics[]` | circa-band per maat: `field, unit, display, values[{source,min,max}], excluded[{…,reason}], note` (kwaliteitsnorm §1) | nee |
+| B Herkenning | `summary` | 1–2 zinnen, eigen tekst | ja |
+| | `keyMarks[]` | 3–5 kenmerken + `reliability` | ja |
+| | `caution` | waarschuwing voor de valkuil | nee |
+| | `detail[]` | `topic`: bouw, kleed, gedrag, variatie, geslacht, leeftijd, vlucht | nee |
+| C Kritisch | `critical[]` | `feature, where, this, other, vs[], reliability, conditions, exceptions, supporting, sources` | ≥1 |
+| D Vergelijken | `similar[]` | `{id, why, sources}`; lege `sources` = bestaande Birdspot-vergelijking, zo getoond | nee |
+| E Geluid | `voice[]` | `kind`: zang, roep, alarm, vlucht | nee |
+| F Leefgebied | `habitat[]` | `kind`: voorkeur, nederland, jacht | nee |
+| G Leefwijze | `life[]` | `kind`: voedsel, broeden, nest, trek | nee |
+| H Status | `status[]` | `kind`: voorkomen, aantal, trend, rodelijst, bescherming | nee |
+| Controle | `discrepancies[]` | `{field, app, source, sources}`: verschil met bestaande Birdspot-data, **niet** stil gecorrigeerd | nee |
+| | `open[]` | wat nog niet uit een bron is vastgesteld | nee |
+
+`reliability`: `doorslaggevend` (UI "Doorslaggevend") · `ondersteunend` ("Helpt") · `onbetrouwbaar-alleen` ("Niet alleen op vertrouwen").
+
+Bron (`_sources.KEY`): `label, url (https), edition, scope, confirms, checked (YYYY-MM-DD), certainty`.
+
+Validator weigert ook (sinds 10-11-2026): doorslaggevend zonder twee uitgevers, context en onderbouwing (KV-11/12); een circa-band met minder dan twee uitgevers, een afwijkende berekening of een uitsluiting zonder reden (KV-13); een circa-band die niet gelijk is aan de getoonde maat in `species.js` (KV-14).
+
+Validator weigert: onbekend ID, bewering zonder bron, onbekende bronsleutel, ongeldige betrouwbaarheid, `vs`/`similar` naar zichzelf of onbestaand ID, <3 of >5 keyMarks, leeg verplicht veld in `critical`, onvolledige bron, handmatig gewijzigde gegenereerde module.
+
+Inhoudelijke regels: **`docs/BIRDSPOT_KWALITEITSNORM.md`** (biometrie §1, betrouwbaarheid §2, foto §3) is leidend; deze README herhaalt ze niet.
+
+Regels: eigen tekst, geen brontekst kopiëren; ontbrekend = weglaten of in `open`, nooit verzinnen; verschil met bestaande data → `discrepancies`, eigenaar beslist over correctie.
+
+## 3. Weergave
+
+- **Niveau 1 "Snel herkennen"** (tab Herkenning, onder de maten, vóór Verenkleed): samenvatting → kritisch kenmerk (met vergelijkingssoort en betrouwbaarheid) → 3–5 veldkenmerken → gelijkende soorten (chips, navigeren naar partner) → let op.
+- **Niveau 2** als ingeklapte `<details>`: Herkenning "Determinatie in detail" (alle kritische kenmerken, uitgebreide herkenning, man/vrouw/juveniel, vlucht, zang en roep, vergelijkbare soorten) · Leefwijze "Kennisprofiel" (status, leefwijze, bronnen en controle met verschillen en open punten) · Waar "Leefgebied in detail".
+- Fotovolgorde blijft Hoofdfoto → Mannetje → Vrouwtje → Juveniel → In vlucht → Vergelijkingen.
+- Soorten zonder profiel: kaart ongewijzigd (getest over alle 589).
+
+## 4. Werkwijze per batch
+
+1. Batch uit `KENNIS_TRACKER.md` nemen (12 soorten, één familiecluster).
+2. Per soort ≥1 primaire NL-bron (Vogelbescherming/Sovon) + determinatiebron voor elk kritisch kenmerk; bron eerst in `_sources`.
+3. Profiel schrijven; verschillen met bestaande data in `discrepancies`; gaten in `open`.
+4. `python3 -I tools/kennisbaseline/build_knowledge.py` → `node tests/test_kennisbaseline.mjs` → fixture toevoegen in KB-04 voor elk nieuw verwisselbaar paar → `python tests/test_kennisbaseline_browser.py` (proefsoortenlijst uitbreiden indien representatief).
+5. `coverage.mjs` + `build_tracker.py --sha <commit>`; commit; ChatGPT-QA op die SHA; uitslag in `reviews.json`.
+
+## 5. Tests
+
+| Test | Dekt |
+|---|---|
+| `tests/test_kennisbaseline.mjs` | KB-01..11 (KB-10 doorslaggevend-review, KB-11 circa-banden); oorspronkelijk KB-01..09: ID's, bron per bewering (171), geldige vergelijkings-ID's, 12 anti-verwisselfixtures + 4 paren, Niveau 1 vóór foto's, Niveau 2 ingeklapt, bronnen gelinkt, 589 soorten zonder kb-markup, 597 renderen, negatieve scenario's, precache |
+| `tests/test_kennisbaseline_validator.py` | KV-01..14 (KV-11/12 doorslaggevend, KV-13/14 biometrie); oorspronkelijk KV-01..10: validator weigert 13 ongeldige varianten; `--check` vangt handwijziging |
+| `tests/test_kennisbaseline_browser.py` | KBB-01..08: 390 px + 1280 px, kritisch kenmerk binnen eerste scherm, accordion klik/Enter, chipnavigatie heen/terug, bronlinks, zoom/audio/tabs/sluiten, soort zonder profiel, geen horizontale scroll, geen paginafouten |
+| `.github/workflows/kennisbaseline-qa.yml` | alle bovenstaande + bestaande foto/volgorde-contracten |
+
+## 6. Capabilityregistratie (delta, voor de catalogus)
+
+- **CAP-BIRD-012 Soortkaart/gids** — nieuw: kennisprofiel per soort met Niveau 1/2, betrouwbaarheidslabels, kritische kenmerken, bron per bewering, verschillen- en open-lijst. Knoppen: chip "Gelijkende soorten" (navigeert), accordions (klik/Enter). Geen opslag, geen gebruikersdata, offline via precache.
+- **CAP-BIRD-015 Vergelijken** — nieuw: kritische kenmerken met `vs`-soort en "Vergelijkbare soorten" met reden; navigatie via bestaande `data-compare-species`.
+- **Tooling** — contractvalidator + generator, dekkingsmatrix, voortgangsregister, anti-verwisselfixtures. Herbruikbaar voor elke app met gegenereerde, bronvermelde inhoud.
+- Learning (kandidaat): een nieuwe kop die een bestaande teststring bevat (`>Lijkt op<`) breekt indexOf-gebaseerde volgordetests; nieuwe UI-labels uniek kiezen in plaats van tests aanpassen.
+
+## 7. App-README
+
+De app-README bestaat alleen in open PR #117 en niet op deze base. Toe te voegen regel zodra die PR landt: *"Kennisprofielen: zie `docs/kennisbaseline/README.md`; bron `tools/kennisbaseline/knowledge.json`, nooit `src/data/speciesKnowledge.js` met de hand wijzigen."*
+
+## 8. Wijzigingen na ChatGPT-QA M1 (10-11-2026, `dd5da6b`)
+
+- `doorslaggevend` alleen bij een kritisch kenmerk met context, ≥2 uitgevers én `diagnostic` (onderbouwing); nooit bij een veldkenmerk (KV-12). Iedere doorslaggevende claim staat in `docs/kennisbaseline/doorslaggevend-review.json` (KB-10).
+- Weergave: kritische kenmerken mét vergelijkingssoort staan uitklapbaar onder "Lijkt op" (`criticalDetails`); de overige onder "Determinatie in detail".
+- "Lijkt op" is één sectie met één kaart per gelijkende soort; kleed- en vluchtvergelijking zijn tabbladen in die kaart.
+- Capabilitydelta: CAP-BIRD-015 Vergelijken — vluchtvergelijking als tabblad, geen eigen sectie meer. CAP-BIRD-012 Soortkaart — kleedkaart verwijst naar "In vlucht" wanneer de enige foto van dat kleed een vluchtfoto is; voorlopige foto's tonen hun status. Fotokwaliteit-tooling — beeldinventaris met SHA-1 per foto (VC-07).
+- Learning (kandidaat): een controle die alleen geregistreerde labels inventariseert (`flight:true`) mist precies de fouten die ze moet vinden; inventariseer altijd de hele populatie en koppel een visueel oordeel aan de bestandshash.
+
+## 9. Kwaliteitsnorm v1.0 (eigenaarbesluit 10-11-2026)
+
+- De drie blijvende Birdspot-regels (biometrie, betrouwbaarheid van herkenningsinformatie, foto's) staan in `docs/BIRDSPOT_KWALITEITSNORM.md`. Bij strijdigheid gaat dat document voor op §2–§8 hierboven.
+- **Biometrie:** maatverschillen tussen bronnen zijn geen `discrepancies` meer zodra twee uitgevers een circa-band onderbouwen. De band staat in `basis.biometrics` en in `species.js` (KV-13/14, KB-11). Eerst toegepast op Kleine Mantelmeeuw (lengte, spanwijdte), Stormmeeuw (lengte; Vogelbescherming 40–60 cm uitgesloten als uitschieter) en Houtduif (lengte).
+- Een maatverschil met één bron of één uitgever blijft een `discrepancy`; de bestaande waarde blijft staan.
+- Weergave: Kennisprofiel → Bronnen en controle → "Maten: berekening", met bronwaarden, uitsluitingen en methode.
+- Capabilitydelta: CAP-BIRD-012 Soortkaart: maattegels kunnen een circa-band tonen, met de berekening in het profiel. Tooling: biometrievalidator (KV-13/14).
+- Learning (kandidaat, scope U): **variabele meetwaarden niet laten blokkeren.** Toon bij natuurlijke variatie een afgeronde band uit meerdere uitgevers en bewaar de ruwe waarden en de methode als bewijs, met een validator die de band herberekent. Behandel één afwijkende bron als uitschieter met reden, niet als blokkade. Koppelt aan L-018/L-019 (niets verzinnen) en Handbook §6A.

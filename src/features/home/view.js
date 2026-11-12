@@ -11,12 +11,13 @@
 
 import { getDB }                          from '../../data/db.js';
 import { getSightings }                   from '../../data/sightings.js';
+import { escHtml } from '../../utils/html.js';
 import { getPhotoUrl, revokePhotoUrl }    from '../../utils/photoUrl.js';
 import { initFeaturedCarousel } from './featuredCarousel.js';
+import { bindAppSearch, searchMarkup } from '../search/index.js';
 import { buildAmbientBackdrop,initAmbientBackdrop } from './ambientBackdrop.js';
 
 // ── Constanten ─────────────────────────────────────────────
-const SLIDESHOW_INTERVAL = 3500;
 const FALLBACK_LAT = 52.3676;
 const FALLBACK_LON = 4.9041;
 
@@ -24,22 +25,31 @@ const FALLBACK_LON = 4.9041;
 /**
  * renderHome retourneert een cleanup-functie.
  * app.js roept cleanup() aan vóór elke routewissel zodat:
- *   1. De slideshow-timer stopt.
- *   2. Alle openstaande blob-URL's worden vrijgegeven.
- *   3. Async-callbacks die nog lopen een stale-flag checken en stil stoppen.
+ *   1. Alle openstaande blob-URL's worden vrijgegeven.
+ *   2. Async-callbacks die nog lopen een stale-flag checken en stil stoppen.
  */
-export function renderHome(el) {
+export function renderHome(el, { onSearchSelect } = {}) {
   // Gedeelde destroyed-vlag: alle async functies checken deze vóór DOM-mutaties.
   const ctx = { destroyed: false };
 
   el.innerHTML = buildSkeleton();
   // New signature shortcuts use existing router; no parallel navigation state.
   const onSignatureClick = e => {
-    const button = e.target.closest('[data-signature-route]');
+    const button = e.target.closest('[data-signature-route], [data-home-sighting], [data-featured-species]');
     if (!button) return;
-    import('../../app.js').then(({ navigate }) => navigate(button.dataset.signatureRoute));
+    if (button.hasAttribute('data-featured-species')) {
+      onSearchSelect?.({ route: 'species', speciesId: button.dataset.featuredSpecies || undefined });
+      return;
+    }
+    const sightingId = button.dataset.homeSighting;
+    if (sightingId) {
+      onSearchSelect?.({ route: 'sightings', sightingId });
+      return;
+    }
+    onSearchSelect?.({ route: button.dataset.signatureRoute });
   };
   el.addEventListener('click', onSignatureClick);
+  const disposeSearch = bindAppSearch(el, onSearchSelect);
   const disposeFeatured = initFeaturedCarousel(el,ctx);
   const disposeHabitat = initAmbientBackdrop(el,ctx);
   loadStats(el, ctx);
@@ -52,15 +62,10 @@ export function renderHome(el) {
   return function cleanup() {
     ctx.destroyed = true;
     el.removeEventListener('click', onSignatureClick);
+    disposeSearch();
     disposeFeatured();
     disposeHabitat();
-    // Stop timer
-    if (_slideshowTimer !== null) {
-      clearInterval(_slideshowTimer);
-      _slideshowTimer = null;
-    }
-    // Geef alle openstaande blob-URL's vrij (slideshow + recent-thumbnails)
-    _revokeSlideshowUrls();
+    // Geef alle openstaande blob-URL's vrij (recent-thumbnails)
     _revokeRecentThumbUrls();
   };
 }
@@ -81,41 +86,43 @@ function buildSkeleton() {
         <span class="app-header__title">Birdspot Library</span>
       </div>
 
-      <div class="app-header__search">
-        <svg class="app-header__search-icon" viewBox="0 0 24 24" fill="none"
-             stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <circle cx="11" cy="11" r="8"/>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-        </svg>
-        <input class="app-header__search-input" type="search"
-               id="homeSearch" placeholder="Zoek soort of locatie…"
-               aria-label="Zoek soort of locatie">
-      </div>
-
-      <button class="app-header__avatar" aria-label="Profiel">
+      <button type="button" class="app-header__avatar" aria-label="Profiel" data-signature-route="profile">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
           <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
           <circle cx="12" cy="7" r="4"/>
         </svg>
       </button>
+      ${searchMarkup()}
     </header>
 
     <!-- Diashow: elke 30 s een bijzondere Nederlandse vogel; hervat waar hij was. -->
     <section class="slideshow featured-birds" id="slideshow" aria-label="Bijzondere vogel in beeld">
       <div class="featured-birds__media">
         <div class="featured-birds__fallback" id="featuredBirdFallback" aria-hidden="true"><span>✦</span></div>
-        <img id="featuredBirdImage" class="featured-birds__photo" alt=""
-          decoding="async">
+        <img id="featuredBirdImage" class="featured-birds__photo" alt="" decoding="async">
       </div>
-      <div class="featured-birds__shade" aria-hidden="true"></div>
+      <button type="button" id="featuredBirdZoom" aria-label="Vergroot foto"></button>
+      <span class="field-photo-label">Gidsfoto</span>
+      <button type="button" id="featuredBirdMotion" aria-label="Diashow pauzeren" aria-pressed="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path class="featured-motion-pause" d="M6 4h4v16H6z M14 4h4v16h-4z"/>
+          <path class="featured-motion-play" d="M8 4v16l12-8z"/>
+        </svg>
+      </button>
+      <div id="featuredBirdCredit" class="featured-photo-info"></div>
       <div class="featured-birds__caption">
+        <p class="field-eyebrow">Vandaag in beeld</p>
         <span class="featured-birds__group" id="featuredBirdGroup"></span>
         <h2 id="featuredBirdName"></h2>
         <em id="featuredBirdLatin"></em>
-        <p id="featuredBirdWhere"></p>
-        <p class="featured-birds__presence" id="featuredBirdPresence"></p>
-        <a id="featuredBirdCredit" class="featured-birds__credit"
-          rel="noopener noreferrer" target="_blank" href="https://commons.wikimedia.org/">Fotobron</a>
+        <div class="field-featured-actions">
+          <button type="button" class="field-action" data-featured-species><span data-featured-label>Bekijk soortkaart</span> <span aria-hidden="true">›</span></button>
+          <details class="field-featured-notes">
+            <summary>Veldkenmerken</summary>
+            <p id="featuredBirdWhere"></p>
+            <p class="featured-birds__presence" id="featuredBirdPresence"></p>
+          </details>
+        </div>
       </div>
     </section>
 
@@ -130,8 +137,8 @@ function buildSkeleton() {
     <!-- Recente waarnemingen -->
     <section class="dash-section" id="recentSection">
       <div class="section-head">
-        <span class="section-head__title">Recente waarnemingen</span>
-        <button class="section-head__link" id="allSightingsBtn" aria-label="Alle waarnemingen">
+        <span class="section-head__title">Mijn waarnemingen</span>
+        <button class="section-head__link" id="allSightingsBtn" aria-label="Alle waarnemingen" data-signature-route="sightings">
           Alles
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
             <polyline points="9 18 15 12 9 6"/>
@@ -145,7 +152,7 @@ function buildSkeleton() {
       </div>
     </section>
 
-    <!-- Accessible secondary features: stays collapsed beneath the primary KPI row. -->
+    <!-- Accessible secondary features: stays collapsed beneath recent sightings. -->
     <details class="signature-home-intro signature-quick-access" id="homeMoreFeatures">
       <summary class="signature-quick-access__summary">
         <span class="signature-quick-access__icon" aria-hidden="true">✦</span>
@@ -212,20 +219,6 @@ function buildSkeleton() {
 }
 
 
-// ══════════════════════════════════════════════════════════
-// DIASHOW
-// ══════════════════════════════════════════════════════════
-let _slideshowTimer = null;
-let _slideIndex     = 0;
-let _slides         = [];
-// Bijhouden van blob-URL's zodat ze ingetrokken worden bij re-render
-let _slideshowUrls  = [];
-
-function _revokeSlideshowUrls() {
-  _slideshowUrls.forEach(revokePhotoUrl);
-  _slideshowUrls = [];
-}
-
 // ── Recente waarnemingen thumbnail-URLs ─────────────────────
 // Bijhouden zodat cleanup() ze kan vrijgeven ook als load/error
 // event al gevuurd was vóór de listener werd gekoppeld.
@@ -236,94 +229,12 @@ function _revokeRecentThumbUrls() {
   _recentThumbUrls = [];
 }
 
-async function initSlideshow(el, ctx) {
-  // Ruim vorige URL's op vóór een nieuwe initialisatie
-  _revokeSlideshowUrls();
-
-  try {
-    const db = await getDB();
-    const tx = db.transaction('photos', 'readonly');
-    const all = await txAll(tx.objectStore('photos'));
-    _slides = shuffleArray(all);
-  } catch (_) {
-    _slides = [];
-  }
-
-  // Guard: scherm al verlaten vóórdat IDB terugkwam
-  if (ctx.destroyed) { _revokeSlideshowUrls(); return; }
-
-  const inner = el.querySelector('#slideshowInner');
-  const dots  = el.querySelector('#slideshowDots');
-  if (!inner) return;
-  if (_slides.length === 0) return;
-
-  // Pre-filter: genereer URL's en behoud alleen records met bruikbare blob.
-  // Zo lopen slide-index, slide-elementen en dots altijd 1:1 synchroon.
-  const validSlides = [];
-  for (const photo of _slides) {
-    const url = getPhotoUrl(photo);
-    if (url) validSlides.push({ photo, url });
-  }
-
-  if (validSlides.length === 0) return; // geen bruikbare blobs
-
-  _slides = validSlides.map(vs => vs.photo); // update module-state
-  validSlides.forEach(vs => _slideshowUrls.push(vs.url));
-
-  inner.innerHTML = '';
-  dots.innerHTML  = '';
-  _slideIndex = 0;
-
-  validSlides.forEach(({ photo, url }, i) => {
-    const slide = document.createElement('div');
-    slide.className = 'slideshow__slide' + (i === 0 ? ' active' : '');
-    slide.style.backgroundImage = `url(${url})`;
-    slide.setAttribute('aria-hidden', i !== 0 ? 'true' : 'false');
-
-    const caption = document.createElement('div');
-    caption.className = 'slideshow__caption';
-    caption.textContent = photo.speciesName || '';
-    slide.appendChild(caption);
-    inner.appendChild(slide);
-
-    const dot = document.createElement('button');
-    dot.className = 'slideshow__dot' + (i === 0 ? ' active' : '');
-    dot.setAttribute('aria-label', `Foto ${i + 1}`);
-    dot.addEventListener('click', () => {
-      if (!ctx.destroyed) goToSlide(i, inner, dots);
-    });
-    dots.appendChild(dot);
-  });
-
-  clearInterval(_slideshowTimer);
-  _slideshowTimer = setInterval(() => {
-    if (ctx.destroyed) {
-      clearInterval(_slideshowTimer);
-      _slideshowTimer = null;
-      return;
-    }
-    _slideIndex = (_slideIndex + 1) % _slides.length;
-    goToSlide(_slideIndex, inner, dots);
-  }, SLIDESHOW_INTERVAL);
-}
-
-function goToSlide(idx, inner, dots) {
-  _slideIndex = idx;
-  inner.querySelectorAll('.slideshow__slide').forEach((s, i) => {
-    s.classList.toggle('active', i === idx);
-    s.setAttribute('aria-hidden', i !== idx ? 'true' : 'false');
-  });
-  dots.querySelectorAll('.slideshow__dot').forEach((d, i) => {
-    d.classList.toggle('active', i === idx);
-  });
-}
-
 // ══════════════════════════════════════════════════════════
 // STATISTIEKEN
 // ══════════════════════════════════════════════════════════
 async function loadStats(el, ctx) {
   try {
-    const sightings  = await getSightings();
+    const sightings  = (await getSightings()).filter(Boolean);
     if (ctx.destroyed) return;
     const speciesSet = new Set(sightings.map(s => s.speciesId));
     const photoCount = sightings.reduce((n, s) => n + (s.photoIds?.length || 0), 0);
@@ -348,14 +259,30 @@ function setStatVal(el, id, val) {
 // ══════════════════════════════════════════════════════════
 // ZON / GOLDEN HOUR  (SunCalc.js)
 // ══════════════════════════════════════════════════════════
+function getSunCalc() {
+  if (window.SunCalc) return Promise.resolve(window.SunCalc);
+  const script = document.getElementById('sunCalcScript');
+  if (!script) return Promise.resolve(null);
+  return new Promise(resolve => {
+    const finish = () => {
+      clearTimeout(timer);
+      script.removeEventListener('load', finish);
+      script.removeEventListener('error', finish);
+      resolve(window.SunCalc);
+    };
+    const timer = setTimeout(finish, 3500);
+    script.addEventListener('load', finish);
+    script.addEventListener('error', finish);
+  });
+}
+
 async function loadSunInfo(el, ctx) {
   const section = el.querySelector('#sunSection');
   if (!section) return;
 
-  const { lat, lon } = await getLocation();
+  const [{ lat, lon }, SC] = await Promise.all([getLocation(), getSunCalc()]);
   if (ctx.destroyed) return;
-  const now  = new Date();
-  const SC   = window.SunCalc;
+  const now = new Date();
 
   if (!SC) {
     section.querySelector('.dash-section__loading').outerHTML =
@@ -417,19 +344,23 @@ const WMO_CODES = {
   0:'Helder', 1:'Overwegend helder', 2:'Gedeeltelijk bewolkt', 3:'Bewolkt',
   45:'Mist', 48:'Rijpmist',
   51:'Lichte motregen', 53:'Matige motregen', 55:'Dichte motregen',
+  56:'Lichte aanvriezende motregen', 57:'Dichte aanvriezende motregen',
   61:'Lichte regen', 63:'Matige regen', 65:'Zware regen',
-  71:'Lichte sneeuw', 73:'Matige sneeuw', 75:'Zware sneeuw',
+  66:'Lichte ijsregen', 67:'Zware ijsregen',
+  71:'Lichte sneeuw', 73:'Matige sneeuw', 75:'Zware sneeuw', 77:'Motsneeuw',
   80:'Lichte buien', 81:'Matige buien', 82:'Zware buien',
+  85:'Lichte sneeuwbuien', 86:'Zware sneeuwbuien',
   95:'Onweer', 96:'Onweer met hagel', 99:'Zwaar onweer',
 };
 
 const WMO_ICON = {
   0:'☀️', 1:'🌤', 2:'⛅', 3:'☁️',
   45:'🌫', 48:'🌫',
-  51:'🌦', 53:'🌦', 55:'🌧',
+  51:'🌦', 53:'🌦', 55:'🌧', 56:'🌧', 57:'🌧',
   61:'🌧', 63:'🌧', 65:'🌧',
-  71:'❄️', 73:'❄️', 75:'❄️',
-  80:'🌦', 81:'🌧', 82:'⛈',
+  66:'🌧', 67:'🌧',
+  71:'❄️', 73:'❄️', 75:'❄️', 77:'❄️',
+  80:'🌦', 81:'🌧', 82:'🌧', 85:'❄️', 86:'❄️',
   95:'⛈', 96:'⛈', 99:'⛈',
 };
 
@@ -443,16 +374,18 @@ async function loadWeather(el, ctx) {
     const { lat, lon } = await getLocation();
     if (ctx.destroyed) return;
     const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}` +
-      `&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m,relative_humidity_2m` +
+      `&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m,relative_humidity_2m,is_day` +
       `&wind_speed_unit=ms&timezone=auto`;
 
     const res  = await fetch(url);
+    if (!res.ok) throw new Error('Weerdata niet beschikbaar');
     const data = await res.json();
     if (ctx.destroyed) return;
     const c    = data.current;
     const code = c.weather_code;
-    const icon = WMO_ICON[code]  || '🌡';
+    const icon = (code === 0 || code === 1) && c.is_day === 0 ? '🌙' : WMO_ICON[code] || '🌡';
     const desc = WMO_CODES[code] || 'Onbekend';
+    const [summary, ...tips] = weatherBirdTips(code, c.wind_speed_10m, c.is_day);
 
     if (loader) {
       loader.outerHTML = `
@@ -469,7 +402,10 @@ async function loadWeather(el, ctx) {
             <span>💨 ${c.wind_speed_10m} m/s</span>
             <span>💧 ${c.relative_humidity_2m}%</span>
           </div>
-          <div class="weather-tip">${weatherBirdTip(code, c.wind_speed_10m)}</div>
+          <div class="weather-tip">
+            <strong><span aria-hidden="true">${iconBird()}</span>${summary}</strong>
+            ${tips.length ? `<ul>${tips.map(tip => `<li>${tip}</li>`).join('')}</ul>` : ''}
+          </div>
         </div>
       `;
     }
@@ -479,17 +415,38 @@ async function loadWeather(el, ctx) {
   }
 }
 
-function weatherBirdTip(code, wind) {
-  if (code === 0 || code === 1) {
-    if (wind < 3) return '🐦 Ideale omstandigheden — weinig wind, helder licht';
-    if (wind < 6) return '🐦 Goed vogelweer — let op beweging in bomen';
-    return '🐦 Helder maar winderig — vogels zoeken beschutting';
-  }
-  if (code === 2 || code === 3) return '🐦 Bewolking dempt licht — ISO omhoog';
-  if (code >= 61 && code <= 65) return '🌧 Regen — vogels minder actief';
-  if (code >= 80 && code <= 82) return '🌦 Buiig — actief voor en na bui';
-  if (code >= 95) return '⛈ Onweer — niet aanbevolen';
-  return '📷 Check licht voor vertrek';
+function weatherBirdTips(code, wind, isDay) {
+  if ([95, 96, 99].includes(code)) return ['Onweer · stel fotograferen uit', 'Schuil in een gebouw of gesloten auto.'];
+  if ([56, 57, 66, 67].includes(code)) return ['Kans op gladheid · stel fotograferen uit.'];
+  if (isDay === 0) return ['Donker · wacht op daglicht', 'Laat flitslicht uit bij wilde vogels.'];
+
+  const windTip = 'Veel wind? Zoek beschutting en verkort de sluitertijd.';
+  if (code === 0 || code === 1) return [
+    'Helder licht · let op lichte veren',
+    'Controleer het histogram op uitgebeten wit.',
+    wind >= 6 ? windTip : 'Zacht ochtend- of avondlicht geeft minder harde schaduwen.',
+  ];
+  if (code === 2 || code === 3) return [
+    'Bewolking dempt licht · Auto ISO',
+    'Probeer 1/800 s op een zitplek of 1/2000 s in vlucht.',
+    wind >= 6 ? windTip : 'Open het diafragma voor meer licht.',
+  ];
+  if (code === 45 || code === 48) return [
+    'Mist · weinig contrast',
+    'Gebruik een klein scherpstelpunt op kop of oog.',
+    'Controleer of een lichte mistachtergrond te donker uitvalt.',
+  ];
+  if ([51, 53, 55, 61, 63, 65, 80, 81, 82].includes(code)) return [
+    'Regen of buien · fotografeer beschut',
+    'Probeer 1/1000 s met Auto ISO bij een actieve vogel.',
+    'Gebruik een zonnekap en bescherm camera en lens tegen regen.',
+  ];
+  if ([71, 73, 75, 77, 85, 86].includes(code)) return [
+    'Sneeuw · let op de belichting',
+    'Oogt sneeuw grijs? Probeer positieve belichtingscompensatie.',
+    'Controleer daarna of er nog detail zit in de lichte delen.',
+  ];
+  return ['Controleer het licht ter plekke', 'Kies je sluitertijd op basis van de beweging van de vogel.'];
 }
 
 // ══════════════════════════════════════════════════════════
@@ -503,7 +460,7 @@ async function loadRecentSightings(el, ctx) {
   _revokeRecentThumbUrls();
 
   try {
-    const all = await getSightings();
+    const all = (await getSightings()).filter(Boolean);
     if (ctx.destroyed) return;
     const recent = [...all]
       .sort((a, b) => new Date(b.date) - new Date(a.date))
@@ -515,7 +472,7 @@ async function loadRecentSightings(el, ctx) {
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
             <path d="M3 12 Q6 6 12 8 Q16 5 21 3 Q19 11 13 12 Q9 13 7 18Z"/>
           </svg>
-          <p>Nog geen waarnemingen — tik + om te beginnen</p>
+          <p>Hier komen de vogels die je zelf hebt gezien of gehoord.</p>
         </div>
       `;
       return;
@@ -569,11 +526,15 @@ async function buildRecentItem(s) {
     try {
       const db = await getDB();
       const tx = db.transaction('photos', 'readonly');
-      const photo = await txGet(tx.objectStore('photos'), s.photoIds[0]);
-      const url = getPhotoUrl(photo);
-      if (url) {
-        blobUrl   = url;
-        thumbHtml = `<img src="${url}" alt="${s.speciesName || ''}" loading="lazy">`;
+      const photos = tx.objectStore('photos');
+      for (const id of s.photoIds) {
+        const photo = await txGet(photos, id);
+        if (!(photo?.blob?.type || photo?.type || '').startsWith('image/')) continue;
+        const url = getPhotoUrl(photo);
+        if (!url) continue;
+        blobUrl = url;
+        thumbHtml = `<img src="${url}" alt="" loading="lazy" decoding="async">`;
+        break;
       }
     } catch (_) {}
   }
@@ -589,16 +550,16 @@ async function buildRecentItem(s) {
   const badge = certBadge(s.certainty);
 
   const html = `
-    <div class="recent-item">
-      <div class="${thumbClass}">${thumbContent}</div>
-      <div class="recent-item__body">
-        <div class="recent-item__name">${s.speciesName || 'Onbekend'}</div>
-        <div class="recent-item__meta">
-          ${fmtDate(s.date)}${s.locationName ? ` · ${s.locationName}` : ''}
-        </div>
-      </div>
-      ${badge ? `<div class="recent-item__badge">${badge}</div>` : ''}
-    </div>
+    <button type="button" class="recent-item" data-home-sighting="${escHtml(String(s.id))}">
+      <span class="${thumbClass}">${thumbContent}</span>
+      <span class="recent-item__body">
+        <span class="recent-item__name">${escHtml(s.speciesName || 'Onbekend')}</span>
+        <span class="recent-item__meta">
+          ${fmtDate(s.date)}${s.locationName ? ` · ${escHtml(s.locationName)}` : ''}
+        </span>
+      </span>
+      ${badge ? `<span class="recent-item__badge">${badge}</span>` : ''}
+    </button>
   `;
 
   return { html, blobUrl };
@@ -630,7 +591,7 @@ async function loadMonthlyChart(el, ctx) {
   const loader = section.querySelector('.dash-section__loading');
 
   try {
-    const sightings = await getSightings();
+    const sightings = (await getSightings()).filter(Boolean);
     if (ctx.destroyed) return;
 
     // Bouw bucket: laatste 12 maanden
@@ -727,7 +688,7 @@ async function loadHotspotsMap(el, ctx) {
   const loader = section.querySelector('.dash-section__loading');
 
   try {
-    const sightings = await getSightings();
+    const sightings = (await getSightings()).filter(Boolean);
     if (ctx.destroyed) return;
 
     // Alleen waarnemingen met werkelijke GPS-coördinaten
@@ -838,23 +799,6 @@ function fmtTime(date) {
 function fmtDate(dateStr) {
   if (!dateStr) return '';
   return new Date(dateStr).toLocaleDateString('nl-NL', { day: 'numeric', month: 'short' });
-}
-
-function shuffleArray(arr) {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
-
-function txAll(store) {
-  return new Promise((resolve, reject) => {
-    const req = store.getAll();
-    req.onsuccess = () => resolve(req.result);
-    req.onerror   = () => reject(req.error);
-  });
 }
 
 function txGet(store, key) {

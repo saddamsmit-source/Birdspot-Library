@@ -12,118 +12,174 @@
  *   birdspot-media           — foto's/IDB-exports (permanent)
  */
 
-const APP_VERSION = '1.14.0-map-k5-links';
+const APP_VERSION = '1.27.6';
 const APP_CACHE   = `birdspot-app-v${APP_VERSION}`;
 const MEDIA_CACHE = 'birdspot-media';
+
+// ── Scope-relatief in plaats van vast aan domeinroot ───────────────────────
+// Deze SW moet zonder wijziging werken op elk pad waarop hij draait: lokaal
+// op "/", maar ook op een GitHub Pages-projectpagina zoals
+// "/Birdspot-Library/". SCOPE_PATH is het pad van de map waarin sw.js zelf
+// staat; alle precache- en fetch-vergelijkingen gaan via dat pad, nooit via
+// een vast "/..." (L-027: één bron, hier de locatie van de SW zelf).
+const SCOPE_PATH = new URL('./', self.location).pathname;
+const atScope = path => SCOPE_PATH + path;
 
 // ── Bestanden die offline beschikbaar moeten zijn ──────────────────────────
 // Suncalc wordt via CDN geladen; als het offline niet beschikbaar is,
 // degradeert de app graceful (geen sunrise/sunset, rest werkt wel).
-const PRECACHE_URLS = [
-  '/',
-  '/index.html',
-  '/manifest.webmanifest',
+const PRECACHE_PATHS = [
+  '',
+  'index.html',
+  'manifest.webmanifest',
+  'assets/species/field-guide-media.json',
+  'assets/species/credits.json',
+  'assets/showcase/credits.json',
 
   // Stylesheets
-  '/styles/tokens.css',
-  '/styles/shell.css',
-  '/styles/dashboard.css',
-  '/styles/species.css',
-  '/styles/sightings.css',
-  '/styles/map.css',
-  '/styles/profile.css',
-  '/styles/signature.css',
-  '/styles/signature-phase2.css',
-  '/styles/signature-phase3.css',
-  '/styles/signature-phase4.css',
-  '/styles/observations-evidence.css',
-  '/styles/explorer-status-map.css',
-  '/styles/startup-splash.css',
-  '/styles/mobile-field-editorial.css',
-  '/styles/cinematic-wetland.css',
-  '/styles/map-explorer.css',
-  '/assets/birdspot-ijsvogel-splash.avif',
+  'styles/tokens.css',
+  'styles/shell.css',
+  'styles/dashboard.css',
+  'styles/species.css',
+  'styles/sightings.css',
+  'styles/map.css',
+  'styles/profile.css',
+  'styles/signature.css',
+  'styles/signature-phase2.css',
+  'styles/signature-phase3.css',
+  'styles/signature-phase4.css',
+  'styles/observations-evidence.css',
+  'styles/explorer-status-map.css',
+  'styles/startup-splash.css',
+  'styles/mobile-field-editorial.css',
+  'styles/cinematic-wetland.css',
+  'styles/map-explorer.css',
+  'styles/field-experience.css',
+  'assets/birdspot-ijsvogel-splash.avif',
 
   // JS — app root
-  '/src/app.js',
-  '/src/services/startup-splash.js',
+  'src/app.js',
+  'src/services/navigation.js',
+  'src/services/gestures.js',
+  'src/services/startup-splash.js',
 
   // JS — features
-  '/src/features/home/view.js',
-  '/src/features/home/featuredCarousel.js',
-  '/src/features/home/ambientBackdrop.js',
-  '/src/features/home/specialBirds.js',
-  '/src/features/home/showcaseData.js',
-  '/src/features/species/view.js',
-  '/src/features/species/detailSections.js',
-  '/src/features/sightings/view.js',
-  '/src/features/sightings/addSheet.js',
-  '/src/features/sightings/evidence.js',
-  '/src/features/sightings/pinPicker.js',
-  '/src/features/sightings/editSheet.js',
-  '/src/features/sightings/detailSheet.js',
-  '/src/features/map/view.js',
-  '/src/features/map/centerPin.js',
-  '/src/features/map/placePrompt.js',
-  '/src/data/places.js',
-  '/src/features/map/visualization.js',
-  '/src/features/profile/view.js',
-  '/src/features/media/view.js',
-  '/src/features/journal/view.js',
-  '/src/features/insights/view.js',
-  '/src/features/insights/analytics.js',
-  '/src/features/film/view.js',
-  '/src/features/film/renderer.js',
+  'src/features/home/view.js',
+  'src/features/search/index.js',
+  'src/features/home/featuredCarousel.js',
+  'src/features/home/ambientBackdrop.js',
+  'src/features/home/specialBirds.js',
+  'src/features/home/showcaseData.js',
+  'src/features/species/view.js',
+  'src/features/species/guidePhotos.js',
+  'src/features/species/guideComparisons.js',
+  'src/features/species/guideMedia.js',
+  'src/features/species/detailSections.js',
+  'src/features/species/knowledgeSections.js',
+  'src/features/sightings/view.js',
+  'src/features/sightings/addSheet.js',
+  'src/features/sightings/speciesPicker.js',
+  'src/features/sightings/evidence.js',
+  'src/features/sightings/pinPicker.js',
+  'src/features/sightings/detailSheet.js',
+  'src/features/map/view.js',
+  'src/features/map/centerPin.js',
+  'src/features/map/placePrompt.js',
+  'src/features/map/insights.js',
+  'src/data/places.js',
+  'src/features/map/visualization.js',
+  'src/features/profile/view.js',
+  'src/features/profile/stats.js',
+  'src/features/profile/exportCsv.js',
+  'src/data/settings.js',
+  'src/features/media/view.js',
+  'src/features/journal/view.js',
+  'src/features/insights/view.js',
+  'src/features/insights/analytics.js',
+  'src/features/film/view.js',
+  'src/features/film/renderer.js',
 
   // JS — data
-  '/src/data/sightings.js',
-  '/src/data/species.js',
-  '/src/data/speciesLife.js',
-  '/src/data/seasons.js',
+  'src/data/sightings.js',
+  'src/data/db.js',
+  'src/data/species.js',
+  'src/data/speciesLife.js',
+  'src/data/speciesKnowledge.js',
+  'src/data/speciesDistribution.js',
+  'src/data/seasons.js',
 
   // JS — storage
-  '/src/storage/backup.js',
-  '/src/storage/collections.js',
+  'src/storage/backup.js',
+  'src/storage/collections.js',
 
   // JS — services
-  '/src/services/sw-register.js',
+  'src/services/sw-register.js',
 
   // JS — utils (voeg toe als ze bestaan)
-  '/src/utils/date.js',
-  '/src/utils/search.js',
+  'src/utils/html.js',
+  'src/utils/photoInfo.js',
+  'src/utils/photoViewer.js',
+  'src/utils/photoUrl.js',
+  'src/utils/assetUrl.js',
+  'src/utils/validateMedia.js',
 ];
+const PRECACHE_URLS = PRECACHE_PATHS.map(atScope);
 
 // ── Install: precache atomair ──────────────────────────────────────────────
 self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open(APP_CACHE).then(async cache => {
-      // Probeer elk bestand apart; sla ontbrekende utils over (allSettled)
-      const results = await Promise.allSettled(
-        PRECACHE_URLS.map(url =>
-          cache.add(url).catch(err => {
-            // Utils-bestanden zijn optioneel; log maar blokkeer niet
-            console.warn(`[SW] precache skip: ${url}`, err.message);
-          })
-        )
-      );
-      // Diashowfoto's (F): eenmalig in de media-cache, die releases overleeft (L-052)
-      await precacheShowcase();
-      const failed = results.filter(r => r.status === 'rejected');
-      if (failed.length) {
-        console.warn(`[SW] ${failed.length} precache-verzoeken overgeslagen`);
-      }
-    })
-  );
-  // Activeer direct (geen wachten op bestaande clients)
-  self.skipWaiting();
+  event.waitUntil((async () => {
+    const cache = await caches.open(APP_CACHE);
+    await cache.addAll(PRECACHE_URLS.map(url => new Request(url, { cache: 'reload' })));
+    await Promise.all([precacheShowcase(), precacheGuidePhotos(), precacheFieldGuideMedia()]);
+    // Releasegate 1.27.0 (RU-02): een service worker van vóór 1.18.0 kent het 'apply-update'-bericht niet en
+    // haalt zijn app-shell network-first via de HTTP-cache op. Laat de nieuwe versie dan direct actief worden,
+    // anders kan die oude worker oude en nieuwe modules door elkaar serveren en start de app niet.
+    if (await legacyWorkerActive()) {
+      legacyUpgrade = true;
+      await self.skipWaiting();
+    }
+  })());
 });
+
+let legacyUpgrade = false;
+
+async function legacyWorkerActive() {
+  if (!self.registration.active) return false;
+  const keys = await caches.keys();
+  return keys.some(key => {
+    const m = /^birdspot-app-v(\d+)\.(\d+)\./.exec(key);
+    return key !== APP_CACHE && m && (Number(m[1]) < 1 || (Number(m[1]) === 1 && Number(m[2]) < 18));
+  });
+}
+
+async function precacheGuidePhotos() {
+  try {
+    const media = await caches.open(MEDIA_CACHE);
+    const credits = await (await fetch(atScope('assets/species/credits.json'), {cache:'no-cache'})).json();
+    await Promise.allSettled(Object.values(credits).map(async photo => {
+      if (!(await media.match(photo.image))) await media.add(photo.image);
+    }));
+  } catch (err) { console.warn('[SW] gidsfoto’s niet vooraf geladen', err?.message); }
+}
+
+async function precacheFieldGuideMedia() {
+  try {
+    const media = await caches.open(MEDIA_CACHE);
+    const data = await (await fetch(atScope('assets/species/field-guide-media.json'), {cache:'no-cache'})).json();
+    const variants = [...Object.values(data.plumage).flatMap(cards => Object.values(cards)), ...Object.values(data.poses || {}).flat()];
+    const urls = [...variants.map(photo => photo.image), ...Object.values(data.audio).flat().map(clip => clip.audio)];
+    await Promise.allSettled(urls.filter(Boolean).map(async url => {
+      if (!(await media.match(url))) await media.add(url);
+    }));
+  } catch (err) { console.warn('[SW] gidsmedia niet vooraf geladen', err?.message); }
+}
 
 async function precacheShowcase() {
   try {
     const media = await caches.open(MEDIA_CACHE);
-    const credits = await (await fetch('/assets/showcase/credits.json', { cache: 'no-cache' })).json();
+    const credits = await (await fetch(atScope('assets/showcase/credits.json'), { cache: 'no-cache' })).json();
     await Promise.allSettled(Object.keys(credits).map(async id => {
-      const url = `/assets/showcase/${id}.webp`;
+      const url = atScope(`assets/showcase/${id}.webp`);
       if (!(await media.match(url))) await media.add(url);
     }));
   } catch (err) {
@@ -143,22 +199,34 @@ self.addEventListener('activate', event => {
         }
       }
       // Neem meteen beheer over alle open tabs
-      return self.clients.claim();
+      await self.clients.claim();
+      // Een pagina van vóór 1.18.0 toont zijn updatemelding op dit bericht.
+      if (legacyUpgrade) {
+        for (const client of await self.clients.matchAll({ type: 'window' })) {
+          client.postMessage({ type: 'new-version', version: APP_VERSION });
+        }
+      }
     })
   );
 
-  // Stuur update-notificatie naar alle open clients
-  self.clients.matchAll({ type: 'window' }).then(clients => {
-    clients.forEach(client => {
-      client.postMessage({ type: 'new-version', version: APP_VERSION });
-    });
-  });
 });
 
-// ── Versie opvragen (profielpagina) ────────────────────────────────────────
+async function reportVersion(port) {
+  let offlineReady = false;
+  try {
+    const cache = await caches.open(APP_CACHE);
+    const required = await Promise.all(PRECACHE_URLS.map(url => cache.match(url)));
+    offlineReady = required.every(response => response?.ok);
+  } catch (_) { /* opslag niet beschikbaar */ }
+  port.postMessage({ type: 'version', version: APP_VERSION, offlineReady });
+}
+
 self.addEventListener('message', event => {
-  if (event.data?.type === 'get-version') {
-    event.ports?.[0]?.postMessage({ type: 'version', version: APP_VERSION });
+  if (event.data?.type === 'apply-update') {
+    event.waitUntil(self.skipWaiting());
+  }
+  if (event.data?.type === 'get-version' && event.ports[0]) {
+    event.waitUntil(reportVersion(event.ports[0]));
   }
 });
 
@@ -171,11 +239,22 @@ self.addEventListener('fetch', event => {
   if (request.method !== 'GET') return;
   if (url.origin !== self.location.origin) return;
 
+  if (url.pathname.startsWith(atScope('assets/species/audio/'))) {
+    event.respondWith(guideAudioResponse(request));
+    return;
+  }
+
+  // Houd de actieve shell consistent tijdens een wachtende update.
+  if (PRECACHE_URLS.includes(url.pathname)) {
+    event.respondWith(serveAppShell(request, url.pathname));
+    return;
+  }
+
   // Media: afbeeldingen uit de app-eigen upload-flow → media-cache
   // (In deze app slaan we binaire foto's in IndexedDB op; blob-URLs
   //  worden niet via fetch geladen. Deze tak is een vangnet voor toekomstig
   //  gebruik of directe img src-verwijzingen.)
-  if (url.pathname.startsWith('/photos/') ||
+  if (url.pathname.startsWith(atScope('photos/')) ||
       request.destination === 'image') {
     event.respondWith(cacheFirstMedia(request));
     return;
@@ -184,6 +263,12 @@ self.addEventListener('fetch', event => {
   // App-shell: network-first met 3 s time-out
   event.respondWith(networkFirstWithTimeout(request, 3000));
 });
+
+async function serveAppShell(request, path) {
+  const cache = await caches.open(APP_CACHE);
+  const cached = await cache.match(path);
+  return cached || networkFirstWithTimeout(request, 3000);
+}
 
 // ── Network-first met time-out ─────────────────────────────────────────────
 async function networkFirstWithTimeout(request, timeoutMs) {
@@ -210,7 +295,7 @@ async function networkFirstWithTimeout(request, timeoutMs) {
 
     // Geen cache: probeer index.html als fallback (SPA-navigatie)
     if (request.mode === 'navigate') {
-      const indexCached = await cache.match('/index.html');
+      const indexCached = await cache.match(atScope('index.html'));
       if (indexCached) return indexCached;
     }
 
@@ -225,7 +310,7 @@ async function networkFirstWithTimeout(request, timeoutMs) {
 // ── Cache-first voor media ─────────────────────────────────────────────────
 async function cacheFirstMedia(request) {
   const cache  = await caches.open(MEDIA_CACHE);
-  const cached = await cache.match(request);
+  const cached = await cache.match(request) || await caches.match(request, {cacheName: APP_CACHE});
   if (cached) return cached;
 
   try {
@@ -238,4 +323,27 @@ async function cacheFirstMedia(request) {
       headers: { 'Content-Type': 'text/plain; charset=utf-8' },
     });
   }
+}
+
+async function guideAudioResponse(request) {
+  // Cache de hele korte opname, zodat zoeken in de clip ook offline werkt.
+  const response = await cacheFirstMedia(request.url);
+  const range = request.headers.get('Range');
+  if (!range || !response.ok) return response;
+  const blob = await response.blob();
+  const match = /^bytes=(\d*)-(\d*)$/.exec(range);
+  const start = match?.[1] ? Number(match[1]) : Math.max(0, blob.size - Number(match?.[2]));
+  const end = match?.[1] && match[2] ? Math.min(blob.size - 1, Number(match[2])) : blob.size - 1;
+  if (!match || start > end || start >= blob.size) {
+    return new Response(null, {status:416, headers:{'Content-Range':`bytes */${blob.size}`}});
+  }
+  return new Response(blob.slice(start, end + 1, blob.type), {
+    status:206,
+    headers:{
+      'Content-Type':blob.type,
+      'Accept-Ranges':'bytes',
+      'Content-Length':String(end - start + 1),
+      'Content-Range':`bytes ${start}-${end}/${blob.size}`,
+    },
+  });
 }

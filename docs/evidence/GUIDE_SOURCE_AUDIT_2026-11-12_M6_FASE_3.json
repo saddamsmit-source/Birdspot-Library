@@ -1,0 +1,128 @@
+[
+  {
+    "image": "/assets/species/plumage/sp114-hero-male.webp",
+    "species": "sp114",
+    "source": "https://www.inaturalist.org/photos/375110519",
+    "originalUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/375110519/original.jpg",
+    "sourceTitle": "iNaturalist photo 375110519",
+    "sourceAuthor": "SteveM4560",
+    "sourceLicense": "CC BY 4.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "021a63700eff0401d764920166c7e0613eb6653ef453e1e629022e9b21b66a6d",
+    "sha1": "b235c206cef724bc806acb163b846374e11e2777",
+    "taxonInSource": "Hirundo rustica",
+    "annotations": [
+      "De fotograaf benoemt een mannetje en annoteert de voorjaarswaarneming als Male. Het volwassen kleed is zichtbaar."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp114-adult_f.webp",
+    "species": "sp114",
+    "source": "https://www.inaturalist.org/photos/366904409",
+    "originalUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/366904409/original.jpg",
+    "sourceTitle": "iNaturalist photo 366904409",
+    "sourceAuthor": "SteveM4560",
+    "sourceLicense": "CC BY 4.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "a00d3a0c0441f763fb9ffd8c3b8ffc42d4b545657561a90546764735a32ca3b4",
+    "sha1": "8a9d002ceae12aa45ce3a4d4f91658bd2dc1da64",
+    "taxonInSource": "Hirundo rustica",
+    "annotations": [
+      "De fotograaf benoemt een vrouwtje en annoteert de waarneming als Female. Het volwassen kleed is zichtbaar; de kortere staartpennen zijn ondersteunend."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp114-juv.webp",
+    "species": "sp114",
+    "source": "https://commons.wikimedia.org/wiki/File:Juvenile_Barn_Swallow_%28Hirundo_rustica%29%2C_Schiermonnikoog%2C_Netherlands.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Juvenile_Barn_Swallow_%28Hirundo_rustica%29%2C_Schiermonnikoog%2C_Netherlands.jpg",
+    "sourceTitle": "Juvenile Barn Swallow (Hirundo rustica), Schiermonnikoog, Netherlands.jpg",
+    "sourceAuthor": "Frank Vassen",
+    "sourceLicense": "CC BY 2.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "e42478b13c538449b5a80d5351683b72220b64ccdb503859d958483805c98503",
+    "sha1": "3bdc7fdac4c3347d359fdf0f0deb5226eabba991",
+    "taxonInSource": "Hirundo rustica",
+    "annotations": [
+      "De fotograaf noemt de soort en het juveniele kleed op de bestandspagina. De opname toont de doffere kop en bleke keel. Geslacht onbekend."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp115-hero-adult.webp",
+    "species": "sp115",
+    "source": "https://www.inaturalist.org/photos/500944231",
+    "originalUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/500944231/original.jpeg",
+    "sourceTitle": "iNaturalist photo 500944231",
+    "sourceAuthor": "SteveM4560",
+    "sourceLicense": "CC BY 4.0",
+    "sameShot": true,
+    "method": "Uitgesneden rond de vogel en omgezet naar WebP zonder EXIF/GPS/XMP",
+    "sourceSha256": "a5a1ddf330d54b9e5d963e4a3a8cc2d54b727391512de390170229e9967648c6",
+    "sha1": "468108b592bde6e292e5e3c200fcd58a4a675dd6",
+    "taxonInSource": "Delichon urbicum",
+    "annotations": [
+      "De research-grade waarneming is geannoteerd als Adult. De rechter vogel staat afzonderlijk in deze uitsnede. Geslacht onbekend."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp115-juv.webp",
+    "species": "sp115",
+    "source": "https://www.inaturalist.org/photos/558901368",
+    "originalUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/558901368/original.jpg",
+    "sourceTitle": "iNaturalist photo 558901368",
+    "sourceAuthor": "SteveM4560",
+    "sourceLicense": "CC BY 4.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "5a9934a3b269656d0f7121e5d73aecbcc09870b56ca22636a0bdb573e2d88de0",
+    "sha1": "a3afe934462ed1a0552fb9e8aa420913d75f7fb0",
+    "taxonInSource": "Delichon urbicum",
+    "annotations": [
+      "De fotograaf benoemt een juveniel en annoteert de waarneming als Juvenile. Doffe kop en bovendelen ondersteunen het leeftijdslabel. Geslacht onbekend."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp117-adult_f.webp",
+    "species": "sp117",
+    "source": "https://www.inaturalist.org/photos/265126274",
+    "originalUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/265126274/large.jpg",
+    "sourceTitle": "iNaturalist photo 265126274",
+    "sourceAuthor": "Dave",
+    "sourceLicense": "CC BY 4.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "aee71378cb70ab5fdad391f99bceff1b26ed44a749c5b80b77feb6c60e227f2a",
+    "sha1": "90e71314f03be120fc757c1ccb2b81b3367d528d",
+    "taxonInSource": "Emberiza citrinella",
+    "annotations": [
+      "De fotograaf benoemt een vrouwtje op de research-grade waarneming. De donkere koptekening en streping zijn zichtbaar. Geel kan ook bij vrouwtjes duidelijk aanwezig zijn."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp117-juv.webp",
+    "species": "sp117",
+    "source": "https://www.inaturalist.org/photos/522379888",
+    "originalUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/522379888/original.jpg",
+    "sourceTitle": "iNaturalist photo 522379888",
+    "sourceAuthor": "Scott Shanks",
+    "sourceLicense": "CC BY 4.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "b90eaa6ffa9d342cb9db8b9d36faf381b7bcd4f249b07d6293f94190a5431c67",
+    "sha1": "2da635da325061c04f4f4bb5f65264623ffd0844",
+    "taxonInSource": "Emberiza citrinella",
+    "annotations": [
+      "De research-grade waarneming heeft de annotatie Juvenile. De doffe gestreepte kop en het verse kleed zijn zichtbaar. Geslacht onbekend."
+    ],
+    "auditDate": "2026-11-12"
+  }
+]
