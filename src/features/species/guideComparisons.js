@@ -190,6 +190,10 @@ export const GUIDE_COMPARISONS = [
       {id: 'sp249', source: 'blauwe-kiekendief', plumage: 'adult_f', marks: 'Forsere vleugels. Bij goed gespreide vleugelpunten zijn doorgaans vijf vingertoppen zichtbaar.'},
       {id: 'sp251', source: 'grauwe-kiekendief', plumage: 'adult_f', marks: 'Slanker, met smallere vleugels. Doorgaans vier zichtbare vingertoppen bij goed gespreide vleugels.'},
     ],
+    rows: [
+      {label: 'Vleugelvorm', values: ['Relatief breed.', 'Slanker en puntiger.']},
+      {label: 'Vingertoppen', values: ['Meestal vijf bij een goed gespreide vleugelpunt.', 'Meestal vier bij een goed gespreide vleugelpunt.']},
+    ],
     tip: 'Gebruik vleugelvorm én vlucht. Het aantal zichtbare vingers kan wisselen door houding, rui en kijkhoek.',
   },
   {
@@ -197,6 +201,10 @@ export const GUIDE_COMPARISONS = [
     birds: [
       {id: 'sp249', source: 'blauwe-kiekendief', plumage: 'adult_m', marks: 'Bredere vleugel, met een relatief groot zwart uiteinde en een donkere achterrand van de bovenvleugel.'},
       {id: 'sp250', source: 'steppekiekendief', plumage: 'adult_m', marks: 'Bleker met smallere vleugels en een kleinere, wigvormige zwarte tekening op de handpennen.'},
+    ],
+    rows: [
+      {label: 'Vleugelpunt', values: ['Breder zwart veld.', 'Smalle zwarte wig.']},
+      {label: 'Bovenvleugel', values: ['Relatief breed met donkere achterrand.', 'Slank en opvallend bleek.']},
     ],
     tip: 'Vergelijk de vorm van het zwart aan de vleugelpunt en de breedte van de vleugel samen.',
   },
@@ -206,6 +214,10 @@ export const GUIDE_COMPARISONS = [
       {id: 'sp251', source: 'grauwe-kiekendief', plumage: 'adult_m', marks: 'Donkerder grijs, met zwarte vleugelpunten en donkere banden over de armvleugel.'},
       {id: 'sp250', source: 'steppekiekendief', plumage: 'adult_m', marks: 'Bleker lijf en een smalle zwarte wig aan het uiteinde van de vleugel.'},
     ],
+    rows: [
+      {label: 'Armvleugel', values: ['Donkere band over de bovenvleugel.', 'Geen vergelijkbare donkere band bij het volwassen mannetje.']},
+      {label: 'Vleugelpunt', values: ['Zwart aan de top.', 'Smalle zwarte wig aan de top.']},
+    ],
     tip: 'Kijk naar de armvleugel, het deel tussen het lijf en de handpennen. Bij de Grauwe vallen daar donkere banden op.',
   },
   {
@@ -213,6 +225,10 @@ export const GUIDE_COMPARISONS = [
     birds: [
       {id: 'sp251', source: 'grauwe-kiekendief', plumage: 'adult_f', marks: 'Meestal een grotere lichte zone rond het oog en duidelijkere lichte banden op de onderzijde van de armvleugel.'},
       {id: 'sp250', source: 'steppekiekendief', plumage: 'adult_f', marks: 'Let op de lichte halsring, donkere oorstreek en smalle, vaak minder scherp begrensde banden op de ondervleugel.'},
+    ],
+    rows: [
+      {label: 'Kop', values: ['Vaak grotere lichte zone rond het oog.', 'Vaak lichte halsring en donkere oorstreek.']},
+      {label: 'Ondervleugel', values: ['De banden over de armvleugel zijn vaak duidelijker.', 'De armvleugel oogt vaak donkerder en de lichte banden smaller.']},
     ],
     tip: 'Dit is een lastige vergelijking. Combineer koptekening en ondervleugel, liefst op meerdere scherpe vluchtfoto’s.',
   },

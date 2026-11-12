@@ -20,6 +20,7 @@ import { guideHeroPhoto, guidePlumageGroups, recognitionPanel } from '../src/fea
 const root = new URL('../', import.meta.url);
 const byId = new Map(SPECIES.map(s => [s.id, s]));
 const verified = JSON.parse(readFileSync(new URL('tools/species/verified_heroes_2026-11-09.json', root)));
+const media = JSON.parse(readFileSync(new URL('assets/species/field-guide-media.json', root)));
 const pictured = new Set([...Object.keys(GUIDE_PHOTOS), ...Object.keys(GUIDE_POSES), ...Object.keys(GUIDE_PLUMAGE)]);
 
 // V-01
@@ -76,7 +77,9 @@ console.log('V-04 OK — Bruine Kiekendief mannetje bevestigd');
 let heroes = 0;
 for (const v of verified) {
   const all = [...(GUIDE_POSES[v.species] || []), ...Object.values(GUIDE_PLUMAGE[v.species] || {})];
-  const e = all.find(p => p.image === v.target);
+  const active = all.find(p => p.image === v.target);
+  const archived = media.retired[v.species]?.find(p => p.image === v.target);
+  const e = active || archived;
   assert.ok(e, `Geïmporteerde foto niet geregistreerd: ${v.target}`);
   assert.equal(e.sex, 'male'); assert.equal(e.source, v.source); assert.equal(e.author, v.author); assert.equal(e.license, v.license);
   assert.match(e.sha1, /^[0-9a-f]{40}$/); assert.match(e.verification, /mannetje/i);
@@ -87,10 +90,19 @@ for (const v of verified) {
   assert.equal(bytes.subarray(8, 12).toString(), 'WEBP');
   assert.ok(!bytes.includes('EXIF') && !bytes.includes('XMP '), `Metadata in ${v.target}`);
   if (v.role === 'hero') {
-    assert.equal(GUIDE_HEROES[v.species], v.target, `Hoofdfoto niet ingesteld: ${v.species}`);
+    const currentHero = archived ? all.find(p => p.image === archived.replacedBy) : active;
+    assert.ok(currentHero, `Actuele hoofdfoto ontbreekt: ${v.species}`);
+    assert.equal(GUIDE_HEROES[v.species], currentHero.image, `Hoofdfoto niet ingesteld: ${v.species}`);
+    assert.equal(currentHero.sex, 'male');
+    assert.equal(currentHero.latin, byId.get(v.species).nameSci);
+    if (archived) {
+      assert.ok(!active && archived.retiredReason, `Vervangen hoofdfoto staat nog actief: ${v.target}`);
+      assert.ok(currentHero.source && currentHero.author && currentHero.license);
+      assert.match(currentHero.sha1, /^[0-9a-f]{40}$/);
+    }
     const male = guidePlumageGroups(byId.get(v.species)).find(g => g.key === 'adult_m');
     assert.ok(male?.photos.length, `Galerij Mannetje leeg na nieuwe hoofdfoto: ${v.species}`);
-    assert.ok(male.photos.every(p => p.image !== v.target));
+    assert.ok(male.photos.every(p => p.image !== currentHero.image));
     heroes++;
   }
 }
