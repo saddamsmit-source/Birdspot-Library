@@ -504,11 +504,18 @@
     },
     "sp143": {
       "assets": {
+        "/assets/species/sp143-hero-review.webp": {
+          "role": "Hoofdfoto (Volwassen)",
+          "content": "Volwassen Kluut in zijaanzicht, met een vrij zichtbare, omhooggebogen snavel, zwart-wit verenkleed en lange poten in ondiep water.",
+          "sexAge": "Volwassen veldkleed. Geslacht onbekend.",
+          "quality": "Scherp zijaanzicht met een vrije snavel, complete vleugeltekening en lange poten. Rustige waterachtergrond.",
+          "verdict": "goedgekeurd"
+        },
         "/assets/species/plumage/sp143-hero-male.webp": {
-          "role": "Hoofdfoto (Mannetje)",
+          "role": "Verenkleed (Mannetje)",
           "content": "Mannetje Kluut op slik in zijaanzicht, met een lange opgewipte snavel, zwart-witte tekening en kleurringen.",
           "sexAge": "De fotograaf benoemt het gemarkeerde individu H60 als mannetje en annoteert de waarneming als Adult en Male.",
-          "quality": "Vogel in natuurlijke houding met zichtbare soortkenmerken.",
+          "quality": "Bronfoto met kleurringen. Bruikbaar om het geslachtslabel te onderbouwen, minder geschikt voor het eerste soortbeeld.",
           "verdict": "goedgekeurd"
         },
         "/assets/showcase/sp143.webp": {
@@ -542,13 +549,14 @@
       },
       "corrections": [
         "Juvenielenfoto en kennisprofiel toegevoegd. Bestaande vluchtfoto en vergelijking met Scholekster gecontroleerd.",
-        "Hoofdfoto van het bronbenoemde mannetje H60 en afzonderlijke vrouwtjesfoto toegevoegd. De eerdere volwassen foto blijft beschikbaar onder overige herkenningsfoto’s."
+        "Hoofdfoto van het bronbenoemde mannetje H60 en afzonderlijke vrouwtjesfoto toegevoegd. De eerdere volwassen foto blijft beschikbaar onder overige herkenningsfoto’s.",
+        "Na eigenaarfeedback de hoofdfoto vervangen door een scherp, vrij zijaanzicht in ondiep water. H60 staat bij Mannetje."
       ],
       "missing": [],
       "wishes": [
         "Een scherper zijaanzicht van een vrouwtje in rust met de snavel vrij in beeld."
       ],
-      "sexPolicy": "De twee volwassen geslachtslabels volgen bronwaarnemingen van het gemarkeerde mannetje H60 en het door de fotograaf benoemde vrouwtje. Het geslacht van de andere volwassen vogel en de vluchtvogel is onbekend.",
+      "sexPolicy": "Hoofdfoto zonder geslachtslabel. Mannetje H60 en het afzonderlijke vrouwtje hebben brononderbouwde geslachtslabels. Het geslacht van de vluchtvogel is onbekend.",
       "uncertain": [],
       "date": "2026-11-12"
     }

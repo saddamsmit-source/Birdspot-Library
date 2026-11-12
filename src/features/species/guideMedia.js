@@ -3529,6 +3529,29 @@ export const GUIDE_PLUMAGE = Object.freeze({
   "sp032": {
     "adult_m": {
       "reuseGuidePhoto": true
+    },
+    "juv": {
+      "file": "iNaturalist photo 18594803",
+      "nl": "Glanskop",
+      "latin": "Poecile palustris",
+      "author": "Dr. Nasser Halaweh",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://www.inaturalist.org/photos/18594803",
+      "showSourceLink": true,
+      "alt": "Jonge Glanskop op een tak tussen bladeren, met een doffe donkere kap, lichte wang en kleine keelvlek.",
+      "modifications": "Uitsnede rond de volledige vogel en lichte correctie van de helderheid. Omgezet naar WebP zonder EXIF, GPS of XMP.",
+      "reviewed": "2026-11-12",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/glanskop",
+      "visualCheck": "Jonge Glanskop op een tak tussen bladeren, met een doffe donkere kap, lichte wang en kleine keelvlek.",
+      "verification": "Onderzoekswaarneming van Poecile palustris in Duitsland, geannoteerd als Juvenile. De foto toont een jonge vogel met doffe kap en zichtbare snavelhoeken.",
+      "width": 1260,
+      "height": 890,
+      "image": "/assets/species/plumage/sp032-juv.webp",
+      "sha1": "7cfa17b50496f8de5fc8ff242a8f848c2db478f8",
+      "sourceAudit": "2026-11-12",
+      "observation": "https://www.inaturalist.org/observations/12820201",
+      "age": "juvenile"
     }
   },
   "sp033": {
@@ -5384,6 +5407,34 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "sourceAudit": "2026-11-12",
       "age": "juvenile"
     }
+  },
+  "sp174": {
+    "adult_m": {
+      "reuseGuidePhoto": true
+    },
+    "juv": {
+      "file": "iNaturalist photo 690152866",
+      "nl": "Zwarte Mees",
+      "latin": "Periparus ater",
+      "author": "euqirneto",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://www.inaturalist.org/photos/690152866",
+      "showSourceLink": true,
+      "alt": "Jonge Zwarte Mees op een tak met een gelige wang, lichte nekvlek en twee lichte vleugelbandjes.",
+      "modifications": "Volledig kader behouden. Omgezet naar WebP zonder EXIF, GPS of XMP.",
+      "reviewed": "2026-11-12",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwarte-mees",
+      "visualCheck": "Jonge Zwarte Mees op een tak met een gelige wang, lichte nekvlek en twee lichte vleugelbandjes.",
+      "verification": "Onderzoekswaarneming van Periparus ater in Spanje, geannoteerd als Juvenile. Gele wang en doffe kop zijn goed zichtbaar.",
+      "width": 1307,
+      "height": 1307,
+      "image": "/assets/species/plumage/sp174-juv.webp",
+      "sha1": "9223991044e2f2a7159a20e635085a0cdaaae2f3",
+      "sourceAudit": "2026-11-12",
+      "observation": "https://www.inaturalist.org/observations/377407055",
+      "age": "juvenile"
+    }
   }
 });
 export const GUIDE_HEROES = Object.freeze({
@@ -5427,8 +5478,7 @@ export const GUIDE_HEROES = Object.freeze({
   "sp106": "/assets/species/plumage/sp106-hero-male.webp",
   "sp114": "/assets/species/plumage/sp114-hero-male.webp",
   "sp115": "/assets/species/plumage/sp115-hero-adult.webp",
-  "sp126": "/assets/species/plumage/sp126-hero-male.webp",
-  "sp143": "/assets/species/plumage/sp143-hero-male.webp"
+  "sp126": "/assets/species/plumage/sp126-hero-male.webp"
 });
 export const GUIDE_POSES = Object.freeze({
   "sp008": [
@@ -8480,6 +8530,27 @@ export const GUIDE_POSES = Object.freeze({
       "height": 853,
       "image": "/assets/species/plumage/sp143-flight.webp",
       "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+    },
+    {
+      "file": "Avocette élégante060 Thyna.jpg",
+      "author": "El Golli Mohamed",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Avocette_%C3%A9l%C3%A9gante060_Thyna.jpg",
+      "width": 1600,
+      "height": 1200,
+      "nl": "Kluut",
+      "latin": "Recurvirostra avosetta",
+      "image": "/assets/showcase/sp143.webp",
+      "batch": "open-coast-08",
+      "modifications": "Existing local showcase WebP; reused without further crop",
+      "reviewed": "2026-11-06",
+      "verification": "Commons identity and license checked against visible field marks in the cited species account.",
+      "visualCheck": "Volledige vogel aan de waterkant. Slanke omhooggebogen snavel, zwart-wit verenkleed en lange blauwgrijze poten.",
+      "alt": "Kluut — Volledige vogel aan de waterkant. Slanke omhooggebogen snavel, zwart-wit verenkleed en lange blauwgrijze poten.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kluut",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "label": "Soortportret",
+      "note": "Aan de waterkant zijn de lange poten en de omhooggebogen snavel goed zichtbaar."
     }
   ],
   "sp144": [

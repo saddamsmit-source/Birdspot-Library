@@ -98,7 +98,7 @@
   },
   "/assets/showcase/sp143.webp": {
    "refs": [
-    "sp143 GUIDE_PHOTOS"
+    "sp143 GUIDE_POSES[1]"
    ],
    "sha1": "b5b4f2c2f70e661e744b6b4554aff9657ce88d16",
    "class": "stilstaand",
@@ -4679,6 +4679,36 @@
    "airborne": false,
    "source": "Visuele controle K06 fase 1 (2026-11-12)",
    "note": "Uitgevlogen jonge Grote Lijster in het gras met lichte vlekken en strepen op rug en vleugel."
+  },
+  "/assets/species/sp143-hero-review.webp": {
+   "refs": [
+    "sp143 GUIDE_PHOTOS"
+   ],
+   "sha1": "7612c8ab325589c6f547ecd70e20526994ce0e93",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle na eigenaarfeedback Kluut (2026-11-12)",
+   "note": "Volwassen Kluut in zijaanzicht, met een vrij zichtbare, omhooggebogen snavel, zwart-wit verenkleed en lange poten in ondiep water."
+  },
+  "/assets/species/plumage/sp174-juv.webp": {
+   "refs": [
+    "sp174 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "9223991044e2f2a7159a20e635085a0cdaaae2f3",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 2 (2026-11-12)",
+   "note": "Jonge Zwarte Mees op een tak met een gelige wang, lichte nekvlek en twee lichte vleugelbandjes."
+  },
+  "/assets/species/plumage/sp032-juv.webp": {
+   "refs": [
+    "sp032 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "7cfa17b50496f8de5fc8ff242a8f848c2db478f8",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 2 (2026-11-12)",
+   "note": "Jonge Glanskop op een tak tussen bladeren, met een doffe donkere kap, lichte wang en kleine keelvlek."
   }
  }
 }
