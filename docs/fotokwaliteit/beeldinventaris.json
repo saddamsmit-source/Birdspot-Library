@@ -4901,6 +4901,26 @@
    "airborne": false,
    "source": "Visuele controle K07 fase 3 (2026-11-12)",
    "note": "Jonge Tafeleend linksachter een grotere Tafeleend op helder water. Het jonge dier heeft een bruingevlekte rug en lichte wang."
+  },
+  "/assets/species/plumage/sp129-juv-europa.webp": {
+   "refs": [
+    "sp129 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "5d482e9406869fdf4ef2c3ba1def736627c9d64e",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K07 fase 4 (2026-11-12)",
+   "note": "Jonge Krakeend in zijaanzicht met oranje langs de snavel en bruin getekende veren."
+  },
+  "/assets/species/plumage/sp130-juv.webp": {
+   "refs": [
+    "sp130 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "10a6016ca0d5fa3d8606f7e3ba37d2a7b041d33d",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K07 fase 4 (2026-11-12)",
+   "note": "Jonge Smient op het water met ronde kop, korte blauwgrijze snavel en rossigbruin verenkleed."
   }
  }
 }

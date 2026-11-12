@@ -804,7 +804,11 @@ export const GUIDE_COMPARISONS = [
     label: 'Smient en Krakeend · vrouwtjes',
     birds: [
       {id: 'sp130', source: 'smient', plumage: 'adult_f', marks: 'Korte blauwgrijze snavel en variabel rossig of grijsbruin verenkleed.'},
-      {id: 'sp129', source: 'krakeend', marks: 'Oranje langs de zijkant van de snavel en een witte spiegel die in vlucht goed opvalt.'},
+      {id: 'sp129', source: 'krakeend', plumage: 'adult_f', marks: 'Oranje langs de zijkant van de snavel en een witte spiegel die in vlucht goed opvalt.'},
+    ],
+    rows: [
+      {label: 'Snavel', values: ['Kort, blauwgrijs met donkere punt.', 'Langer, donker van boven met oranje zijkanten.']},
+      {label: 'Kop en bouw', values: ['Rondere kop en compacte bouw.', 'Minder ronde kop en langgerekter profiel.']},
     ],
     tip: 'Bekijk eerst de snavelkleur en wacht zo nodig op een beter zij- of vleugelaanzicht.',
   },
