@@ -703,6 +703,10 @@ export const GUIDE_COMPARISONS = [
         "plumage": "adult_f"
       }
     ],
+    "rows": [
+      {"label": "Snavelvorm", "values": ["Relatief smal en minder breed uitlopend", "Lang, breed en lepelvormig"]},
+      {"label": "Vleugelspiegel", "values": ["Blauwpaars met witte randen", "Groen zonder brede witte achterrand"]}
+    ],
     "tip": "Begin met de snavelvorm. De spiegel kan onder de gevouwen vleugel verborgen zijn."
   },
   {
@@ -721,6 +725,11 @@ export const GUIDE_COMPARISONS = [
         "plumage": "adult_m"
       }
     ],
+    "rows": [
+      {"label": "Kop", "values": ["Zwart met afhangende kuif", "Roodbruin zonder kuif"]},
+      {"label": "Oog", "values": ["Geel", "Rood"]},
+      {"label": "Flanken", "values": ["Wit", "Lichtgrijs"]}
+    ],
     "tip": "Vergelijk kopkleur, flankkleur en oog samen. Mannetjes zien er in eclipskleed minder contrastrijk uit."
   },
   {
@@ -738,6 +747,11 @@ export const GUIDE_COMPARISONS = [
         "marks": "Grijsbruiner met een lichtere wang en keel, donker oog en een langere, aflopende kopvorm.",
         "plumage": "adult_f"
       }
+    ],
+    "rows": [
+      {"label": "Kopprofiel", "values": ["Ronde kop, vaak met korte kuif", "Aflopend voorhoofd, zonder kuif"]},
+      {"label": "Oog", "values": ["Meestal geel", "Doorgaans donker"]},
+      {"label": "Lichte tekening", "values": ["Soms bij de snavelbasis", "Vaak op wang en keel"]}
     ],
     "tip": "Een kleine kuif kan platliggen of slecht zichtbaar zijn. Gebruik ook oogkleur, kopvorm en wangtekening."
   },

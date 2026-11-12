@@ -1,17 +1,19 @@
 {
   "_meta": {
     "batch": "M8",
-    "phase": 2,
+    "phase": 3,
     "date": "2026-11-12",
-    "title": "K07 fase 1 en 2",
+    "title": "K07 fase 1 tot en met 3",
     "reviewer": "ChatGPT Codex",
     "phaseDates": {
       "1": "2026-11-12",
-      "2": "2026-11-12"
+      "2": "2026-11-12",
+      "3": "2026-11-12"
     },
     "phaseReports": [
       "../M8_FASE_1_2026-11-12.md",
-      "../M8_FASE_2_2026-11-12.md"
+      "../M8_FASE_2_2026-11-12.md",
+      "../M8_FASE_3_2026-11-12.md"
     ]
   },
   "species": {
@@ -253,6 +255,140 @@
       "uncertain": [],
       "date": "2026-11-12",
       "sexPolicy": "De geslachten lijken op elkaar in het veld. Volwassen en vliegende vogels krijgen een neutraal label."
+    },
+    "sp090": {
+      "assets": {
+        "/assets/species/sp090.webp": {
+          "role": "Hoofdfoto (Mannetje)",
+          "content": "Mannetje in ondiep water, met groene kop, lichte borst en brede snavel.",
+          "sexAge": "Volwassen mannetje volgens bron en kleed.",
+          "quality": "Volledig zijaanzicht.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp090-adult_f.webp": {
+          "role": "Verenkleed (Vrouwtje)",
+          "content": "Bruin vrouwtje met brede lepelvormige snavel.",
+          "sexAge": "Vrouwtje volgens bron en kleed.",
+          "quality": "De vorm van de snavel is goed zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp090-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Slobeend in bruin kleed met brede snavel, zwemmend in de Verenigde Staten.",
+          "sexAge": "Onderzoekswaarneming met annotatie Juvenile.",
+          "quality": "Kop, snavel en lichaam goed zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp090-flight.webp": {
+          "role": "In vlucht (Mannetje)",
+          "content": "Mannetje met brede snavel, lichtblauwe voorvleugel en groene spiegel.",
+          "sexAge": "Volwassen mannetje volgens bron en kleed.",
+          "quality": "Herkenbare volledige vogel in vrije vlucht.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Bronbevestigde juvenielenfoto toegevoegd. Kennisprofiel en vergelijking met Wilde Eend op snavel en vleugeltekening uitgewerkt."
+      ],
+      "missing": [],
+      "wishes": [],
+      "uncertain": [],
+      "date": "2026-11-12",
+      "sexPolicy": "Volwassen labels volgen bron en kleed. Juvenielen blijven neutraal gelabeld."
+    },
+    "sp092": {
+      "assets": {
+        "/assets/species/plumage/sp092-hero-male.webp": {
+          "role": "Hoofdfoto (Mannetje)",
+          "content": "Mannetje met afhangende kuif, wit flankveld en geel oog.",
+          "sexAge": "Volwassen mannetje volgens bron en kleed.",
+          "quality": "Scherpe kop en herkenbare houding.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/sp092.webp": {
+          "role": "Verenkleed (Mannetje)",
+          "content": "Tweede opname van zwemmend mannetje met lange kuif, gele iris en witte flanken.",
+          "sexAge": "Volwassen mannetje volgens bron en kleed.",
+          "quality": "Volledig profiel uit een andere opname.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp092-adult_f.webp": {
+          "role": "Verenkleed (Vrouwtje)",
+          "content": "Donkerbruin vrouwtje met lichtere flanken en korte kuif.",
+          "sexAge": "Vrouwtje volgens bron en kleed.",
+          "quality": "Kopprofiel, snavel en flank zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp092-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Kuifeend met bruin verenkleed en korte kuif.",
+          "sexAge": "Onderzoekswaarneming met annotatie Juvenile.",
+          "quality": "Volledig zijaanzicht, duidelijke kop en snavel.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp092-juv-review.webp": {
+          "role": "Verenkleed (Juveniel, jonger stadium)",
+          "content": "Bruine jonge Kuifeend met nog deels donzig kleed.",
+          "sexAge": "Juveniel volgens bestaande bronbeoordeling.",
+          "quality": "Eerder verenkleedstadium, herkenbaar naast de nieuwe opname.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp092-flight.webp": {
+          "role": "In vlucht (Mannetje)",
+          "content": "Mannetje met gele iris en lichte vleugelbaan.",
+          "sexAge": "Volwassen mannetje volgens bron en kleed.",
+          "quality": "Vrije vlucht boven water, vleugelbaan goed zichtbaar.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Een volledig bevederde juveniel toegevoegd naast de bestaande opname van een jonger stadium. Vergelijking met Tafeleend op kop, oog en flanken uitgewerkt."
+      ],
+      "missing": [],
+      "wishes": [],
+      "uncertain": [],
+      "date": "2026-11-12",
+      "sexPolicy": "Volwassen labels volgen bron en kleed. Juvenielen blijven neutraal gelabeld."
+    },
+    "sp132": {
+      "assets": {
+        "/assets/species/sp132.webp": {
+          "role": "Hoofdfoto (Mannetje)",
+          "content": "Roodbruine kop, rood oog, donkere borst en grijze romp.",
+          "sexAge": "Volwassen mannetje volgens bron en kleed.",
+          "quality": "Helder zijaanzicht en zichtbare iris.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp132-adult_f.webp": {
+          "role": "Verenkleed (Vrouwtje)",
+          "content": "Bruine kop met lichte wangtekening en grijsbruine flanken.",
+          "sexAge": "Vrouwtje volgens bron en kleed.",
+          "quality": "Kopprofiel, wang en flank duidelijk zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp132-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Tafeleend linksachter een grotere soortgenoot.",
+          "sexAge": "De fotograaf benoemt een begeleidende juveniel.",
+          "quality": "Beide vogels zijn zichtbaar en de juveniel is aangeduid in de fototekst.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp132-flight.webp": {
+          "role": "In vlucht (Mannetje)",
+          "content": "Roodbruine kop, donkere borst en lichtgrijze vleugelbaan.",
+          "sexAge": "Volwassen mannetje volgens bron en kleed.",
+          "quality": "Volledig silhouet in vrije vlucht.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Juvenielenfoto toegevoegd met uitleg welke vogel de juveniel is. Vergelijking met Kuifeend voor beide geslachten uitgewerkt."
+      ],
+      "missing": [],
+      "wishes": [],
+      "uncertain": [],
+      "date": "2026-11-12",
+      "sexPolicy": "Volwassen labels volgen bron en kleed. Juvenielen blijven neutraal gelabeld."
     }
   }
 }
