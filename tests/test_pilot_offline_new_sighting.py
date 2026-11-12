@@ -121,6 +121,7 @@ def main():
                 page.locator("#speciesPickerOverlay").wait_for(state="detached", timeout=10000)
                 assert page.locator("#addSightingSheet").is_visible()
                 page.locator("#sightLocation").fill("Testlocatie offline (fictief)")
+                page.locator("#sightingMore summary").click()
                 page.locator("#sightNotes").fill(NOTE)
 
                 # An actual File is selected; app itself decodes and stores it.
