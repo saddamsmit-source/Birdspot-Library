@@ -98,7 +98,7 @@
   },
   "/assets/showcase/sp143.webp": {
    "refs": [
-    "sp143 GUIDE_PHOTOS"
+    "sp143 GUIDE_POSES[1]"
    ],
    "sha1": "b5b4f2c2f70e661e744b6b4554aff9657ce88d16",
    "class": "stilstaand",
@@ -4489,6 +4489,266 @@
    "airborne": false,
    "source": "beeldinspectie 12-11-2026",
    "note": "Bijeneter op een tak met gele keel, blauwgroene onderzijde en licht gebogen snavel."
+  },
+  "/assets/species/plumage/sp114-hero-male.webp": {
+   "refs": [
+    "sp114 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "b235c206cef724bc806acb163b846374e11e2777",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Mannetje Boerenzwaluw op een draad met roestrode keel en voorhoofd, donkere borstband en lichte onderzijde."
+  },
+  "/assets/species/plumage/sp114-adult_f.webp": {
+   "refs": [
+    "sp114 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "8a9d002ceae12aa45ce3a4d4f91658bd2dc1da64",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Vrouwtje Boerenzwaluw in zijaanzicht in de hand, met roestrode keel, donkere borstband en blauwzwarte bovendelen."
+  },
+  "/assets/species/plumage/sp114-juv.webp": {
+   "refs": [
+    "sp114 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "3bdc7fdac4c3347d359fdf0f0deb5226eabba991",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Boerenzwaluw op een tak op Schiermonnikoog, met een blekere keel en donkere borstband."
+  },
+  "/assets/species/plumage/sp115-hero-adult.webp": {
+   "refs": [
+    "sp115 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "468108b592bde6e292e5e3c200fcd58a4a675dd6",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Volwassen Huiszwaluw op een draad in zijaanzicht, met witte keel en buik en een korte gevorkte staart."
+  },
+  "/assets/species/plumage/sp115-juv.webp": {
+   "refs": [
+    "sp115 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "a3afe934462ed1a0552fb9e8aa420913d75f7fb0",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Huiszwaluw op een draad tegen blauwe lucht, met doffe bruine kop en lichte buik."
+  },
+  "/assets/species/plumage/sp117-adult_f.webp": {
+   "refs": [
+    "sp117 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "90e71314f03be120fc757c1ccb2b81b3367d528d",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Vrouwtje Geelgors met zaad in de snavel, een geelbruine kop met donkere streping en een gestreepte borst."
+  },
+  "/assets/species/plumage/sp117-juv.webp": {
+   "refs": [
+    "sp117 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "2da635da325061c04f4f4bb5f65264623ffd0844",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Geelgors van opzij in de hand, met bruine streping op kop en rug en lichte randen aan de vleugelveren."
+  },
+  "/assets/species/plumage/sp118-adult_f.webp": {
+   "refs": [
+    "sp118 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "967eb350597d013ec6195c0162775c026c9b0ce5",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Vrouwtje Rietgors op een tak, met bruine kruin, lichte wenkbrauw en donkere borststrepen."
+  },
+  "/assets/species/plumage/sp118-juv.webp": {
+   "refs": [
+    "sp118 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "2560b12ebf82684bff5ef4aac3ef03f590f48e27",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Zeer jonge Rietgors tussen gras met een open snavel en verse bruine en lichte veertjes."
+  },
+  "/assets/species/plumage/sp126-hero-male.webp": {
+   "refs": [
+    "sp126 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "6e63d6c1b49d1e03b6693db4a52010279dbe8ce7",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Mannetje Knobbelzwaan in zijaanzicht op rustig water, met witte veren, oranjerode snavel en zwarte knobbel."
+  },
+  "/assets/species/plumage/sp126-adult_f.webp": {
+   "refs": [
+    "sp126 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "35d43de80042f5d51d3f032887f4839cd2e7cb29",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Vrouwtje Knobbelzwaan tussen lage bloemen en grassen, met witte hals, oranjerode snavel en zwarte snavelbasis."
+  },
+  "/assets/species/plumage/sp143-juv.webp": {
+   "refs": [
+    "sp143 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "851fe75b07381452d276ad884bb98622cc78acc4",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Kluut langs ondiep water, met bruinere rug- en vleugelbanden, lange poten en een omhooggebogen snavel."
+  },
+  "/assets/species/sp187.webp": {
+   "refs": [
+    "sp187 GUIDE_PHOTOS"
+   ],
+   "sha1": "7391f3ae249ad643d2cfd379e40aa9caaaa911f3",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Wilde Zwaan op water met een rechtere hals en grote gele snavelvlek met zwarte punt."
+  },
+  "/assets/species/plumage/sp118-juv-later.webp": {
+   "refs": [
+    "sp118 GUIDE_POSES[0]"
+   ],
+   "sha1": "b6b228abc5062ced3d644fcc7bc4869fb179794c",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K05 fase 4 (2026-11-12)",
+   "note": "Jonge Rietgors op een rietstengel, met bruine bovendelen en een gestreepte flank."
+  },
+  "/assets/species/plumage/sp143-hero-male.webp": {
+   "refs": [
+    "sp143 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "6dda9e3f5ddb7da23377e0ea781df5a895958ef4",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K05 fase 4 (2026-11-12)",
+   "note": "Mannetje Kluut op slik in zijaanzicht, met een lange opgewipte snavel, zwart-witte tekening en kleurringen."
+  },
+  "/assets/species/plumage/sp143-adult_f.webp": {
+   "refs": [
+    "sp143 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "18574e7fc57a00aefbfd28ba84f524c444679226",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K05 fase 4 (2026-11-12)",
+   "note": "Vrouwtje Kluut op slik, met zwart-witte tekening, lange poten en een omhooggebogen snavel."
+  },
+  "/assets/species/plumage/sp033-juv.webp": {
+   "refs": [
+    "sp033 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "26da657ef80d5914ed2459a5a4a3928a620429e8",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 1 (2026-11-12)",
+   "note": "Jonge Kuifmees op een tak met een korte zwart-witte kuif, zwarte wangboog en gele snavelhoeken."
+  },
+  "/assets/species/plumage/sp044-juv.webp": {
+   "refs": [
+    "sp044 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "a2d0ab1c044047ce9d51f419dc3efb9d642c506a",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 1 (2026-11-12)",
+   "note": "Jonge Ringmus op een hek bij bramen. De donkere wangvlek steekt zacht af tegen de lichte wang."
+  },
+  "/assets/species/plumage/sp049-juv.webp": {
+   "refs": [
+    "sp049 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "4e960ebc68db7630bd96eaeee3be4a4aec63990d",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 1 (2026-11-12)",
+   "note": "Uitgevlogen jonge Grote Lijster in het gras met lichte vlekken en strepen op rug en vleugel."
+  },
+  "/assets/species/sp143-hero-review.webp": {
+   "refs": [
+    "sp143 GUIDE_PHOTOS"
+   ],
+   "sha1": "7612c8ab325589c6f547ecd70e20526994ce0e93",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle na eigenaarfeedback Kluut (2026-11-12)",
+   "note": "Volwassen Kluut in zijaanzicht, met een vrij zichtbare, omhooggebogen snavel, zwart-wit verenkleed en lange poten in ondiep water."
+  },
+  "/assets/species/plumage/sp174-juv.webp": {
+   "refs": [
+    "sp174 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "9223991044e2f2a7159a20e635085a0cdaaae2f3",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 2 (2026-11-12)",
+   "note": "Jonge Zwarte Mees op een tak met een gelige wang, lichte nekvlek en twee lichte vleugelbandjes."
+  },
+  "/assets/species/plumage/sp032-juv.webp": {
+   "refs": [
+    "sp032 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "7cfa17b50496f8de5fc8ff242a8f848c2db478f8",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 2 (2026-11-12)",
+   "note": "Jonge Glanskop op een tak tussen bladeren, met een doffe donkere kap, lichte wang en kleine keelvlek."
+  },
+  "/assets/species/plumage/sp031-juv.webp": {
+   "refs": [
+    "sp031 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "1e07367acd6f5eaf574815e1984bf254643a17c2",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 3 (2026-11-12)",
+   "note": "Jonge Matkop op een tak, met een donkere kap, lichte wang en gelige snavelhoeken."
+  },
+  "/assets/species/plumage/sp176-juv.webp": {
+   "refs": [
+    "sp176 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "7fb1549e2e94cf3e220a7b99c8f3272c4ff21dc4",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 3 (2026-11-12)",
+   "note": "Jonge Grauwe Vliegenvanger op een tak tussen dennennaalden. De rug en gevouwen vleugel hebben lichte vlekken."
+  },
+  "/assets/species/plumage/sp178-adult_f.webp": {
+   "refs": [
+    "sp178 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "59198ea2c4c46c5310278594be6546afeb1c3e89",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 3 (2026-11-12)",
+   "note": "Vrouwtje Gekraagde Roodstaart op een hek, met een warme beige borst, bruine rug en een roestrode staart."
+  },
+  "/assets/species/plumage/sp178-juv.webp": {
+   "refs": [
+    "sp178 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "93119a52a396c13ab93420949e2d3d0a54bdfc2c",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 3 (2026-11-12)",
+   "note": "Jonge Gekraagde Roodstaart op een draad, met een gevlekte rug, gespikkelde borst en roodachtige staart."
   }
  }
 }

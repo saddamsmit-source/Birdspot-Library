@@ -1,17 +1,21 @@
 {
   "_meta": {
     "batch": "M6",
-    "phase": 2,
+    "phase": 4,
     "date": "2026-11-12",
-    "title": "K05 fase 1 en 2",
+    "title": "K05 fase 1 tot en met 4",
     "reviewer": "ChatGPT Work",
     "phaseDates": {
       "1": "2026-11-12",
-      "2": "2026-11-12"
+      "2": "2026-11-12",
+      "3": "2026-11-12",
+      "4": "2026-11-12"
     },
     "phaseReports": [
       "../M6_FASE_1_2026-11-12.md",
-      "../M6_FASE_2_2026-11-12.md"
+      "../M6_FASE_2_2026-11-12.md",
+      "../M6_FASE_3_2026-11-12.md",
+      "../M6_FASE_4_2026-11-12.md"
     ]
   },
   "species": {
@@ -274,6 +278,285 @@
       ],
       "wishes": [],
       "sexPolicy": "De buikvlek komt ook bij vrouwtjes voor. Gebruik bij volwassen vogels de schouderveren en de onderbouwing op de bronwaarneming.",
+      "uncertain": [],
+      "date": "2026-11-12"
+    },
+    "sp114": {
+      "assets": {
+        "/assets/species/plumage/sp114-hero-male.webp": {
+          "role": "Hoofdfoto (Mannetje)",
+          "content": "Mannetje Boerenzwaluw op een draad met roestrode keel en voorhoofd, donkere borstband en lichte onderzijde.",
+          "sexAge": "De fotograaf benoemt een mannetje en annoteert de voorjaarswaarneming als Male. Het volwassen kleed is zichtbaar.",
+          "quality": "Scherpe kop, borstband en kleuren. De oude herkenningsfoto geeft vrij zicht op de diepe staartvork.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp114-adult_f.webp": {
+          "role": "Verenkleed (Vrouwtje)",
+          "content": "Vrouwtje Boerenzwaluw in zijaanzicht in de hand, met roestrode keel, donkere borstband en blauwzwarte bovendelen.",
+          "sexAge": "De fotograaf benoemt een vrouwtje en annoteert de waarneming als Female. Het volwassen kleed is zichtbaar; de kortere staartpennen zijn ondersteunend.",
+          "quality": "Kop, keel, borstband en vleugel duidelijk zichtbaar. Foto toont een vogel in de hand.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp114-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Boerenzwaluw op een tak op Schiermonnikoog, met een blekere keel en donkere borstband.",
+          "sexAge": "De fotograaf noemt de soort en het juveniele kleed op de bestandspagina. De opname toont de doffere kop en bleke keel. Geslacht onbekend.",
+          "quality": "Doffe kop en keel goed zichtbaar in driekwartaanzicht.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp114-flight.webp": {
+          "role": "In vlucht",
+          "content": "Een Boerenzwaluw in vrije vlucht met donkere borstband en lange staartpennen.",
+          "sexAge": "Geslacht onbekend.",
+          "quality": "Volledige vogel met zicht op de staartvork en de vleugels.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/sp114.webp": {
+          "role": "Overige herkenningsfoto",
+          "content": "Boerenzwaluw met roestrode keel en lange staartpennen op een tak.",
+          "sexAge": "Volwassen kleed. Geslacht onbekend.",
+          "quality": "Helder zijaanzicht van het volledige silhouet.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Hoofdfoto met bronbenoemd mannetje, afzonderlijke vrouwtjesfoto, juvenielenfoto en kennisprofiel toegevoegd. Vergelijking met Huiszwaluw en bestaande vluchtvergelijkingen gecontroleerd."
+      ],
+      "missing": [],
+      "wishes": [
+        "Een vrouwtje in natuurlijke rusthouding zou de opname in de hand aanvullen."
+      ],
+      "sexPolicy": "De veldkleden overlappen. Gebruik voor fotolabels de expliciete bronvermelding in combinatie met zichtbare kenmerken.",
+      "uncertain": [],
+      "date": "2026-11-12"
+    },
+    "sp115": {
+      "assets": {
+        "/assets/species/plumage/sp115-hero-adult.webp": {
+          "role": "Hoofdfoto (Volwassen)",
+          "content": "Volwassen Huiszwaluw op een draad in zijaanzicht, met witte keel en buik en een korte gevorkte staart.",
+          "sexAge": "De research-grade waarneming is geannoteerd als Adult. De rechter vogel staat afzonderlijk in deze uitsnede. Geslacht onbekend.",
+          "quality": "Eén vogel, met hele staart, witte keel en buik. De witte stuit is het duidelijkst in de vluchtfoto.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp115-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Huiszwaluw op een draad tegen blauwe lucht, met doffe bruine kop en lichte buik.",
+          "sexAge": "De fotograaf benoemt een juveniel en annoteert de waarneming als Juvenile. Doffe kop en bovendelen ondersteunen het leeftijdslabel. Geslacht onbekend.",
+          "quality": "Hele vogel tegen een rustige lucht. Doffe kop en veren duidelijk zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp115-flight.webp": {
+          "role": "In vlucht",
+          "content": "Huiszwaluw in vrije vlucht met witte stuit, witte onderzijde en geheven vleugels.",
+          "sexAge": "Geslacht onbekend.",
+          "quality": "Vogel in zijaanzicht. Witte stuit en korte staart duidelijk.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/sp115.webp": {
+          "role": "Overige herkenningsfoto",
+          "content": "Twee Huiszwaluwen verzamelen modder op een oever.",
+          "sexAge": "Volwassen kleed. Geslacht onbekend.",
+          "quality": "Bruikbare opname van gedrag en lichte onderzijde.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Hoofdfoto van één volwassen vogel, juvenielenfoto en kennisprofiel toegevoegd. De bestaande modderfoto toont gedrag. Beeldvergelijking met Boerenzwaluw behouden."
+      ],
+      "missing": [],
+      "wishes": [],
+      "sexPolicy": "De kleden van beide geslachten zijn sterk gelijk in het veld. Gebruik Volwassen als gedeelde aanduiding.",
+      "uncertain": [],
+      "date": "2026-11-12"
+    },
+    "sp117": {
+      "assets": {
+        "/assets/species/sp117.webp": {
+          "role": "Hoofdfoto (Mannetje)",
+          "content": "Geelgors op een uitkijkpost, met een gele kop en gele onderzijde.",
+          "sexAge": "De fotograaf noemt een mannetje en de koptekening ondersteunt dit.",
+          "quality": "Volledig profiel met duidelijke kop en borst.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp117-adult_f.webp": {
+          "role": "Verenkleed (Vrouwtje)",
+          "content": "Vrouwtje Geelgors met zaad in de snavel, een geelbruine kop met donkere streping en een gestreepte borst.",
+          "sexAge": "De fotograaf benoemt een vrouwtje op de research-grade waarneming. De donkere koptekening en streping zijn zichtbaar. Geel kan ook bij vrouwtjes duidelijk aanwezig zijn.",
+          "quality": "Koptekening, gestreepte borst en stevige snavel goed zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp117-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Geelgors van opzij in de hand, met bruine streping op kop en rug en lichte randen aan de vleugelveren.",
+          "sexAge": "De research-grade waarneming heeft de annotatie Juvenile. De doffe gestreepte kop en het verse kleed zijn zichtbaar. Geslacht onbekend.",
+          "quality": "Veerranden en streping goed zichtbaar. Foto toont een vogel in de hand.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp117-flight.webp": {
+          "role": "In vlucht",
+          "content": "Geelgors met geheven vleugels en lange staart in vrije vlucht.",
+          "sexAge": "Geslacht onbekend.",
+          "quality": "Silhouet en vleugelvorm zijn voldoende duidelijk.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Vrouwtje, juveniel, kennisprofiel en beeldvergelijking met Rietgors toegevoegd. Mannetjeshoofdfoto en bestaande vluchtfoto gecontroleerd."
+      ],
+      "missing": [],
+      "wishes": [
+        "Een jong in natuurlijke rusthouding zou de opname in de hand aanvullen."
+      ],
+      "sexPolicy": "Hoeveelheid geel is op zichzelf onvoldoende voor een geslachtslabel. De vogel op de vrouwtjesfoto is benoemd door de fotograaf.",
+      "uncertain": [],
+      "date": "2026-11-12"
+    },
+    "sp118": {
+      "assets": {
+        "/assets/species/sp118.webp": {
+          "role": "Hoofdfoto (Mannetje)",
+          "content": "Mannetje Rietgors op een tak met een zwarte kop en witte halsband.",
+          "sexAge": "De bron benoemt een mannetje. Zwarte kop en lichte halsband ondersteunen het label.",
+          "quality": "De hele vogel en de koptekening zijn zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp118-adult_f.webp": {
+          "role": "Verenkleed (Vrouwtje)",
+          "content": "Vrouwtje Rietgors op een tak, met bruine kruin, lichte wenkbrauw en donkere borststrepen.",
+          "sexAge": "De fotograaf benoemt een vrouwtje op de bestandspagina. De opname in maart laat de bruine kruin en lichte wenkbrauw zien.",
+          "quality": "Scherp zijaanzicht met goede zichtbaarheid van de wenkbrauw en borst.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp118-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Zeer jonge Rietgors tussen gras met een open snavel en verse bruine en lichte veertjes.",
+          "sexAge": "De bron benoemt een juveniele Rietgors. Opname in juni. Open bedelsnavel en deels donsachtige veren zijn zichtbaar. Geslacht onbekend.",
+          "quality": "Bedelende, zeer jonge vogel. Latere veldkenmerken zijn minder goed zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp118-juv-later.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Rietgors op een rietstengel, met bruine bovendelen en een gestreepte flank.",
+          "sexAge": "De research-grade waarneming heeft de annotatie Juvenile. De bron gebruikt Schoeniclus schoeniclus voor dezelfde soort.",
+          "quality": "Vogel in natuurlijke houding met zichtbare soortkenmerken.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Vrouwtje, zeer jong juveniel en kennisprofiel toegevoegd. Vergelijking met Geelgors gecontroleerd.",
+        "Verder uitgegroeid juveniel in riet toegevoegd als tweede leeftijdsvoorbeeld."
+      ],
+      "missing": [
+        "Scherpe foto van één Rietgors in vrije vlucht met bevestigde rechten."
+      ],
+      "wishes": [],
+      "sexPolicy": "Een bruine kruin komt ook voor bij mannetjes buiten de broedtijd en bij jonge vogels.",
+      "uncertain": [],
+      "date": "2026-11-12"
+    },
+    "sp126": {
+      "assets": {
+        "/assets/species/plumage/sp126-hero-male.webp": {
+          "role": "Hoofdfoto (Mannetje)",
+          "content": "Mannetje Knobbelzwaan in zijaanzicht op rustig water, met witte veren, oranjerode snavel en zwarte knobbel.",
+          "sexAge": "De fotograaf annoteert de voorjaarswaarneming als Adult en Male. Het oorspronkelijke bijschrift duidt het dier als M. Snavel en knobbel zijn zichtbaar.",
+          "quality": "Hele vogel in zijaanzicht. Snavelknobbel duidelijk zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp126-adult_f.webp": {
+          "role": "Verenkleed (Vrouwtje)",
+          "content": "Vrouwtje Knobbelzwaan tussen lage bloemen en grassen, met witte hals, oranjerode snavel en zwarte snavelbasis.",
+          "sexAge": "De fotograaf annoteert de waarneming als Adult en Female. De vogel is van opzij te zien. De veldkenmerken alleen zijn onvoldoende voor het geslachtslabel.",
+          "quality": "Hele hals en snavel in profiel. Lage begroeiing bedekt de onderkant.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp126-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Knobbelzwaan met grijsbruin kleed en donkere snavel op water.",
+          "sexAge": "De fotograaf benoemt een juveniel. Geslacht onbekend.",
+          "quality": "Gehele vogel scherp, kop en rug zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp126-flight.webp": {
+          "role": "In vlucht",
+          "content": "Knobbelzwaan in vrije vlucht, met gestrekte hals en twee gespreide witte vleugels.",
+          "sexAge": "Geslacht onbekend.",
+          "quality": "Volledige vogel tegen blauwe lucht.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/sp126.webp": {
+          "role": "Overige herkenningsfoto",
+          "content": "Volwassen Knobbelzwaan op water, met gebogen hals en oranjerode snavel.",
+          "sexAge": "Geslacht onbekend.",
+          "quality": "Volledige vogel met goed zicht op de hals.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Mannetje en vrouwtje met bronannotatie, kennisprofiel en beeldvergelijking met Wilde Zwaan toegevoegd. Juveniel- en vluchtfoto opnieuw gecontroleerd."
+      ],
+      "missing": [],
+      "wishes": [],
+      "sexPolicy": "De labels steunen op afzonderlijke bronannotaties. Grootte en snavelknobbel zijn ondersteunend en variëren.",
+      "uncertain": [],
+      "date": "2026-11-12"
+    },
+    "sp143": {
+      "assets": {
+        "/assets/species/sp143-hero-review.webp": {
+          "role": "Hoofdfoto (Volwassen)",
+          "content": "Volwassen Kluut in zijaanzicht, met een vrij zichtbare, omhooggebogen snavel, zwart-wit verenkleed en lange poten in ondiep water.",
+          "sexAge": "Volwassen veldkleed. Geslacht onbekend.",
+          "quality": "Scherp zijaanzicht met een vrije snavel, complete vleugeltekening en lange poten. Rustige waterachtergrond.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp143-hero-male.webp": {
+          "role": "Verenkleed (Mannetje)",
+          "content": "Mannetje Kluut op slik in zijaanzicht, met een lange opgewipte snavel, zwart-witte tekening en kleurringen.",
+          "sexAge": "De fotograaf benoemt het gemarkeerde individu H60 als mannetje en annoteert de waarneming als Adult en Male.",
+          "quality": "Bronfoto met kleurringen. Bruikbaar om het geslachtslabel te onderbouwen, minder geschikt voor het eerste soortbeeld.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/showcase/sp143.webp": {
+          "role": "Overige herkenningsfoto",
+          "content": "Volwassen Kluut in profiel aan water met zwarte vleugelband en opgebogen snavel.",
+          "sexAge": "Geslacht onbekend.",
+          "quality": "De hele vogel, snavel en lange poten zijn zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp143-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Kluut langs ondiep water, met bruinere rug- en vleugelbanden, lange poten en een omhooggebogen snavel.",
+          "sexAge": "De research-grade waarneming is geannoteerd als Juvenile. Bruinere veerdelen en lichte randen ondersteunen dit. Geslacht onbekend.",
+          "quality": "Scherpe, volledige vogel van opzij. Bruinere banden en lichtere randen zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp143-flight.webp": {
+          "role": "In vlucht",
+          "content": "Kluut in vrije vlucht met opgebogen snavel, gespreide vleugels en gestrekte poten.",
+          "sexAge": "Geslacht onbekend.",
+          "quality": "De volledige vogel is zichtbaar en de poten steken uit achter de staart.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp143-adult_f.webp": {
+          "role": "Verenkleed (Vrouwtje)",
+          "content": "Vrouwtje Kluut op slik, met zwart-witte tekening, lange poten en een omhooggebogen snavel.",
+          "sexAge": "De fotograaf benoemt dit individu als het vrouwtje dat bij de gemarkeerde vogel H60 hoort. De waarneming heeft de annotaties Adult en Female.",
+          "quality": "Vogel in natuurlijke houding met zichtbare soortkenmerken.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Juvenielenfoto en kennisprofiel toegevoegd. Bestaande vluchtfoto en vergelijking met Scholekster gecontroleerd.",
+        "Hoofdfoto van het bronbenoemde mannetje H60 en afzonderlijke vrouwtjesfoto toegevoegd. De eerdere volwassen foto blijft beschikbaar onder overige herkenningsfoto’s.",
+        "Na eigenaarfeedback de hoofdfoto vervangen door een scherp, vrij zijaanzicht in ondiep water. H60 staat bij Mannetje."
+      ],
+      "missing": [],
+      "wishes": [
+        "Een scherper zijaanzicht van een vrouwtje in rust met de snavel vrij in beeld."
+      ],
+      "sexPolicy": "Hoofdfoto zonder geslachtslabel. Mannetje H60 en het afzonderlijke vrouwtje hebben brononderbouwde geslachtslabels. Het geslacht van de vluchtvogel is onbekend.",
       "uncertain": [],
       "date": "2026-11-12"
     }

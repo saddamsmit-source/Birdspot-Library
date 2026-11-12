@@ -200,7 +200,12 @@ def main():
 
             for name, sid in [("Holenduif", "sp003"), ("Sperwer", "sp006"), ("Buizerd", "sp005"), ("Zilvermeeuw", "sp094"),
                               ("Havik", "sp007"), ("Wespendief", "sp248"), ("Taigaboomkruiper", "sp067"), ("Ruigpootbuizerd", "sp253"),
-                              ("Gele Kwikstaart", "sp069"), ("IJsvogel", "sp075"), ("Patrijs", "sp106")]:
+                              ("Gele Kwikstaart", "sp069"), ("IJsvogel", "sp075"), ("Patrijs", "sp106"),
+                              ("Boerenzwaluw", "sp114"), ("Huiszwaluw", "sp115"), ("Geelgors", "sp117"),
+                              ("Rietgors", "sp118"), ("Knobbelzwaan", "sp126"), ("Kluut", "sp143"),
+                              ("Kuifmees", "sp033"), ("Ringmus", "sp044"), ("Grote Lijster", "sp049"),
+                              ("Zwarte Mees", "sp174"), ("Staartmees", "sp034"), ("Glanskop", "sp032"),
+                              ("Matkop", "sp031"), ("Grauwe Vliegenvanger", "sp176"), ("Gekraagde Roodstaart", "sp178")]:
                 similar_section(p, name, sid, "390")
                 open_card(p, name, sid)
                 sec = p.locator('#sdPanel-herkenning section.sd-similar')
@@ -209,7 +214,7 @@ def main():
                 target = btn.get_attribute('data-compare-species')
                 btn.click()
                 expect(p.locator('.signature-species-detail-overlay')).to_have_count(1)
-                expect(p.locator(f'.signature-species-detail-sheet [data-kb], .signature-species-detail-sheet h2')).not_to_have_count(0)
+                expect(p.locator('.signature-species-detail-sheet h2').first).to_have_text(nm[target])
                 results.setdefault(sid, {})["lijktOp"] = "SAB-09 OK (390 px)"
                 print(f"SAB-09 {sid} {name}: één sectie Lijkt op, geen dubbele foto's, knop naar {target} werkt")
             dctx = browser.new_context(viewport={"width": 1280, "height": 900}, reduced_motion="reduce", service_workers="block")
