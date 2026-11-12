@@ -1,0 +1,20 @@
+[
+  {
+    "image": "/assets/species/sp143-hero-review.webp",
+    "species": "sp143",
+    "source": "https://commons.wikimedia.org/wiki/File:Avocet_%28Recurvirostra_avosetta%29.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/60/Avocet_%28Recurvirostra_avosetta%29.jpg",
+    "sourceTitle": "Avocet (Recurvirostra avosetta).jpg",
+    "sourceAuthor": "Charles J. Sharp",
+    "sourceLicense": "CC BY-SA 3.0",
+    "sameShot": true,
+    "method": "Verkleind tot 1600 px zonder uitsnede en omgezet naar WebP zonder EXIF, GPS of XMP.",
+    "sourceSha256": "62aef75825415ea529b1009975f22d9339db1814e37c442f103ef262ec5cbce7",
+    "sha1": "7612c8ab325589c6f547ecd70e20526994ce0e93",
+    "taxonInSource": "Recurvirostra avosetta",
+    "annotations": [
+      "De bron bevestigt Recurvirostra avosetta. De vogel is van snavel tot staart en poten zichtbaar. Het geslacht van dit individu is niet bevestigd."
+    ],
+    "auditDate": "2026-11-12"
+  }
+]

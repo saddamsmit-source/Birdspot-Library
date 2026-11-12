@@ -98,7 +98,7 @@
   },
   "/assets/showcase/sp143.webp": {
    "refs": [
-    "sp143 GUIDE_PHOTOS"
+    "sp143 GUIDE_POSES[1]"
    ],
    "sha1": "b5b4f2c2f70e661e744b6b4554aff9657ce88d16",
    "class": "stilstaand",
@@ -4679,6 +4679,16 @@
    "airborne": false,
    "source": "Visuele controle K06 fase 1 (2026-11-12)",
    "note": "Uitgevlogen jonge Grote Lijster in het gras met lichte vlekken en strepen op rug en vleugel."
+  },
+  "/assets/species/sp143-hero-review.webp": {
+   "refs": [
+    "sp143 GUIDE_PHOTOS"
+   ],
+   "sha1": "7612c8ab325589c6f547ecd70e20526994ce0e93",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle na eigenaarfeedback Kluut (2026-11-12)",
+   "note": "Volwassen Kluut in zijaanzicht, met een vrij zichtbare, omhooggebogen snavel, zwart-wit verenkleed en lange poten in ondiep water."
   }
  }
 }

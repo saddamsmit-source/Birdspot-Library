@@ -8436,6 +8436,27 @@
         "height": 853,
         "image": "/assets/species/plumage/sp143-flight.webp",
         "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+      },
+      {
+        "file": "Avocette élégante060 Thyna.jpg",
+        "author": "El Golli Mohamed",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Avocette_%C3%A9l%C3%A9gante060_Thyna.jpg",
+        "width": 1600,
+        "height": 1200,
+        "nl": "Kluut",
+        "latin": "Recurvirostra avosetta",
+        "image": "/assets/showcase/sp143.webp",
+        "batch": "open-coast-08",
+        "modifications": "Existing local showcase WebP; reused without further crop",
+        "reviewed": "2026-11-06",
+        "verification": "Commons identity and license checked against visible field marks in the cited species account.",
+        "visualCheck": "Volledige vogel aan de waterkant. Slanke omhooggebogen snavel, zwart-wit verenkleed en lange blauwgrijze poten.",
+        "alt": "Kluut — Volledige vogel aan de waterkant. Slanke omhooggebogen snavel, zwart-wit verenkleed en lange blauwgrijze poten.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kluut",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "label": "Soortportret",
+        "note": "Aan de waterkant zijn de lange poten en de omhooggebogen snavel goed zichtbaar."
       }
     ],
     "sp144": [
@@ -9479,8 +9500,7 @@
     "sp106": "/assets/species/plumage/sp106-hero-male.webp",
     "sp114": "/assets/species/plumage/sp114-hero-male.webp",
     "sp115": "/assets/species/plumage/sp115-hero-adult.webp",
-    "sp126": "/assets/species/plumage/sp126-hero-male.webp",
-    "sp143": "/assets/species/plumage/sp143-hero-male.webp"
+    "sp126": "/assets/species/plumage/sp126-hero-male.webp"
   },
   "retired": {
     "sp118": [
