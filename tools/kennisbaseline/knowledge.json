@@ -2713,7 +2713,7 @@
       "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/matkop",
       "edition": "Online bron",
       "scope": "Nederland",
-      "confirms": "Veldherkenning voor de vergelijking",
+      "confirms": "Herkenning, geluid, leefgebied en leefwijze",
       "checked": "2026-11-12",
       "certainty": "hoog",
       "publisher": "Vogelbescherming Nederland"
@@ -2942,6 +2942,138 @@
       "register": "NL01",
       "label": "Sovon — Glanskop",
       "url": "https://stats.sovon.nl/stats/soort/14400/",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Verspreiding en seizoensvoorkomen",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Sovon Vogelonderzoek Nederland"
+    },
+    "VB_BONTE_VLIEGENVANGER": {
+      "register": "NL07",
+      "label": "Vogelbescherming — Bonte Vliegenvanger",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bonte-vliegenvanger",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Herkenning voor de vergelijking",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_ZWARTE_ROODSTAART": {
+      "register": "NL07",
+      "label": "Vogelbescherming — Zwarte Roodstaart",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwarte-roodstaart",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Herkenning voor de vergelijking",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "MATKOP_JEUGDFOTO": {
+      "register": "FOTO",
+      "label": "Wald1siedel — juveniele Matkop",
+      "url": "https://commons.wikimedia.org/wiki/File:Poecile_montanus,_Willow_Tit,_Weidenmeise.JPG",
+      "edition": "Online bron",
+      "scope": "Oostenrijk",
+      "confirms": "Bronbenoemde juveniele Matkop buiten de nestholte",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Wald1siedel"
+    },
+    "BTO_MATKOP": {
+      "register": "EU",
+      "label": "BTO — Matkop",
+      "url": "https://www.bto.org/learn/about-birds/birdfacts/willow-tit",
+      "edition": "Online bron",
+      "scope": "Verenigd Koninkrijk",
+      "confirms": "Herkenning op roep, habitat en broedgedrag",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "British Trust for Ornithology"
+    },
+    "WT_MATKOP": {
+      "register": "EU",
+      "label": "The Wildlife Trusts — Matkop",
+      "url": "https://www.wildlifetrusts.org/wildlife-explorer/birds/tits-crests-and-warblers/willow-tit",
+      "edition": "Online bron",
+      "scope": "Verenigd Koninkrijk",
+      "confirms": "Lengte, algemene veldherkenning en leefgebied",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "The Wildlife Trusts"
+    },
+    "SOV_MATKOP": {
+      "register": "NL01",
+      "label": "Sovon — Matkop",
+      "url": "https://stats.sovon.nl/stats/soort/14420/",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Verspreiding en seizoensvoorkomen",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Sovon Vogelonderzoek Nederland"
+    },
+    "VB_GRAUWE_VLIEGENVANGER": {
+      "register": "NL07",
+      "label": "Vogelbescherming — Grauwe Vliegenvanger",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grauwe-vliegenvanger",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Herkenning, geluid, leefgebied en leefwijze",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "BZH_GRAUWE_VLIEGENVANGER": {
+      "register": "EU07",
+      "label": "Blasco-Zumeta & Heinze — Grauwe Vliegenvanger",
+      "url": "https://www.blascozumeta.com/specie_files/13350_ENG_Muscicapa_striata_aranzadi.pdf",
+      "edition": "Online bron",
+      "scope": "Europa",
+      "confirms": "Veldkenmerken, leeftijd, geslacht en lengte",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Blasco-Zumeta & Heinze"
+    },
+    "SOV_GRAUWE_VLIEGENVANGER": {
+      "register": "NL01",
+      "label": "Sovon — Grauwe Vliegenvanger",
+      "url": "https://stats.sovon.nl/stats/soort/13350/",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Verspreiding en seizoensvoorkomen",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Sovon Vogelonderzoek Nederland"
+    },
+    "VB_GEKRAAGDE_ROODSTAART": {
+      "register": "NL07",
+      "label": "Vogelbescherming — Gekraagde Roodstaart",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/gekraagde-roodstaart",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Herkenning, geluid, leefgebied en leefwijze",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "BZH_GEKRAAGDE_ROODSTAART": {
+      "register": "EU07",
+      "label": "Blasco-Zumeta & Heinze — Gekraagde Roodstaart",
+      "url": "https://www.blascozumeta.com/specie_files/11220_ENG_Phoenicurus_phoenicurus_aranzadi.pdf",
+      "edition": "Online bron",
+      "scope": "Europa",
+      "confirms": "Veldkenmerken, leeftijd, geslacht en lengte",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Blasco-Zumeta & Heinze"
+    },
+    "SOV_GEKRAAGDE_ROODSTAART": {
+      "register": "NL01",
+      "label": "Sovon — Gekraagde Roodstaart",
+      "url": "https://stats.sovon.nl/stats/soort/11220/",
       "edition": "Online bron",
       "scope": "Nederland",
       "confirms": "Verspreiding en seizoensvoorkomen",
@@ -16292,6 +16424,509 @@
         "text": "Blijft vooral in de buurt van het broedgebied. Buiten de broedtijd komt plaatselijke dispersie voor.",
         "sources": [
           "VB_GLANSKOP"
+        ],
+        "kind": "trek"
+      }
+    ],
+    "discrepancies": [],
+    "open": []
+  },
+  "sp031": {
+    "summary": {
+      "text": "Bruingrijze mees met zwarte kap en lichte wang. Een licht vleugelveld en een langgerekte nasale roep helpen bij herkenning.",
+      "sources": [
+        "VB_MATKOP",
+        "WT_MATKOP"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Licht veld op de gevouwen vleugel, vooral zichtbaar van opzij.",
+        "sources": [
+          "VB_MATKOP",
+          "WT_MATKOP"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Lichte wang en een relatief grote donkere keelvlek.",
+        "sources": [
+          "VB_MATKOP",
+          "WT_MATKOP"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Zwarte kap, bruingrijze bovendelen en lichte onderzijde.",
+        "sources": [
+          "VB_MATKOP",
+          "WT_MATKOP"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "caution": {
+      "text": "Kapglans en keelvlek zijn wisselend. Luister bij twijfel naar de roep en bekijk de snavelbasis en gevouwen vleugel.",
+      "sources": [
+        "VB_MATKOP",
+        "BTO_MATKOP"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Roep, vleugelveld en snavelbasis",
+        "where": "Luister naar de contactroep en bekijk de kop en vleugel van opzij",
+        "this": "Nasale, langgerekte roep; vaak een licht vleugelveld en een donkere bovensnavelbasis.",
+        "other": "Korte, explosieve roep; vleugel meestal egaler en vaak een lichte vlek aan de bovensnavelbasis.",
+        "vs": [
+          "sp032"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Bekijk de snavelbasis bij egaal licht en wacht op een duidelijke roepreeks.",
+        "exceptions": "Slijtage en licht veranderen de vleugeltekening. Jonge vogels zijn op zicht extra lastig.",
+        "supporting": "Matkop zit vaak in vochtiger jong bos.",
+        "sources": [
+          "VB_MATKOP",
+          "WT_MATKOP",
+          "VB_GLANSKOP"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp032",
+        "why": "Matkop en Glanskop lijken sterk op elkaar. Roep en meerdere kenmerken samen geven het beste onderscheid.",
+        "sources": [
+          "VB_MATKOP",
+          "VB_GLANSKOP"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "text": "Volwassen mannetjes en vrouwtjes hebben een vergelijkbaar veldkleed met donkere kap, lichte wang en bruingrijze rug.",
+        "sources": [
+          "VB_MATKOP",
+          "WT_MATKOP"
+        ],
+        "topic": "geslacht"
+      },
+      {
+        "text": "De juvenielenfoto toont de doffe kap en lichte snavelhoeken van een pas uitgevlogen jong.",
+        "sources": [
+          "MATKOP_JEUGDFOTO"
+        ],
+        "topic": "leeftijd"
+      }
+    ],
+    "voice": [
+      {
+        "text": "Een langgerekte, nasale dèh-roep, soms voorafgegaan door kortere tonen.",
+        "sources": [
+          "VB_MATKOP"
+        ],
+        "kind": "roep"
+      }
+    ],
+    "basis": {
+      "biometrics": [
+        {
+          "field": "length",
+          "unit": "cm",
+          "display": "ca. 12–13 cm",
+          "values": [
+            {
+              "source": "VB_MATKOP",
+              "min": 12,
+              "max": 13
+            },
+            {
+              "source": "WT_MATKOP",
+              "min": 12,
+              "max": 12
+            }
+          ],
+          "note": "Afgeronde onder- en bovengrens op basis van de twee bronwaarden."
+        }
+      ]
+    },
+    "habitat": [
+      {
+        "text": "Vochtig jong loofbos, moerasbos en opslag met wilgen, berken en zacht dood hout.",
+        "sources": [
+          "VB_MATKOP",
+          "SOV_MATKOP"
+        ],
+        "kind": "nederland"
+      }
+    ],
+    "status": [
+      {
+        "text": "In Nederland standvogel. Matkop is het hele jaar in geschikt leefgebied te vinden.",
+        "sources": [
+          "VB_MATKOP",
+          "SOV_MATKOP"
+        ],
+        "kind": "voorkomen"
+      }
+    ],
+    "life": [
+      {
+        "text": "Eet veel kleine insecten en andere ongewervelden. Buiten de broedtijd ook zaden en vruchten.",
+        "sources": [
+          "VB_MATKOP"
+        ],
+        "kind": "voedsel"
+      },
+      {
+        "text": "Hakt een nestholte uit in zacht, rottend hout, bijvoorbeeld in een dode stam.",
+        "sources": [
+          "VB_MATKOP"
+        ],
+        "kind": "broeden"
+      },
+      {
+        "text": "Blijft doorgaans in de buurt van het broedgebied. Buiten de broedtijd kunnen vogels lokaal in groepjes rondzwerven.",
+        "sources": [
+          "VB_MATKOP"
+        ],
+        "kind": "trek"
+      }
+    ],
+    "discrepancies": [],
+    "open": []
+  },
+  "sp176": {
+    "summary": {
+      "text": "Slanke grijsbruine vliegenvanger met fijne donkere strepen op kruin en borst. Jaagt vaak vanaf een vaste uitkijkpost.",
+      "sources": [
+        "VB_GRAUWE_VLIEGENVANGER",
+        "BZH_GRAUWE_VLIEGENVANGER"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Fijne donkere strepen op voorhoofd en kruin.",
+        "sources": [
+          "VB_GRAUWE_VLIEGENVANGER",
+          "BZH_GRAUWE_VLIEGENVANGER"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Vuilwitte onderzijde met fijne streping op borst en keelzijden.",
+        "sources": [
+          "VB_GRAUWE_VLIEGENVANGER",
+          "BZH_GRAUWE_VLIEGENVANGER"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Slank silhouet met relatief lange vleugels en staart.",
+        "sources": [
+          "VB_GRAUWE_VLIEGENVANGER",
+          "BZH_GRAUWE_VLIEGENVANGER"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "caution": {
+      "text": "Jonge vogels kunnen veel sterker getekend zijn dan volwassenen. Gebruik het patroon op rug en vleugel samen met de bouw.",
+      "sources": [
+        "VB_GRAUWE_VLIEGENVANGER",
+        "BZH_GRAUWE_VLIEGENVANGER"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Kruin, borst en vleugel",
+        "where": "Zijaanzicht en, zo mogelijk, zicht op kruin en borst",
+        "this": "Fijne strepen op kruin en borst; geen opvallend wit vleugelveld.",
+        "other": "Opvallend licht vleugelveld. De bovendelen kunnen zwart of bruin zijn.",
+        "vs": [
+          "sp177"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Controleer de tekening van de gevouwen vleugel en de kruin.",
+        "exceptions": "Bonte Vliegenvanger kan bruin zijn. Beide soorten vangen insecten vanuit een zitpost.",
+        "supporting": "De slanke, langgerekte bouw ondersteunt Grauwe Vliegenvanger.",
+        "sources": [
+          "VB_GRAUWE_VLIEGENVANGER",
+          "BZH_GRAUWE_VLIEGENVANGER",
+          "VB_BONTE_VLIEGENVANGER"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp177",
+        "why": "Vleugelveld en streping helpen ook als de Bonte Vliegenvanger een bruin kleed heeft.",
+        "sources": [
+          "VB_GRAUWE_VLIEGENVANGER",
+          "VB_BONTE_VLIEGENVANGER"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "text": "Mannetje en vrouwtje hebben hetzelfde veldkleed. Kruin en borst zijn fijn gestreept.",
+        "sources": [
+          "VB_GRAUWE_VLIEGENVANGER",
+          "BZH_GRAUWE_VLIEGENVANGER"
+        ],
+        "topic": "geslacht"
+      },
+      {
+        "text": "In vers jeugdkleed hebben de bovendelen en vleugeldekveren brede lichte vlekken.",
+        "sources": [
+          "BZH_GRAUWE_VLIEGENVANGER"
+        ],
+        "topic": "leeftijd"
+      }
+    ],
+    "voice": [
+      {
+        "text": "Een hoog, kort tsiet. In de zang worden de tonen vaker herhaald.",
+        "sources": [
+          "VB_GRAUWE_VLIEGENVANGER"
+        ],
+        "kind": "roep"
+      }
+    ],
+    "basis": {
+      "biometrics": [
+        {
+          "field": "length",
+          "unit": "cm",
+          "display": "ca. 13–15 cm",
+          "values": [
+            {
+              "source": "VB_GRAUWE_VLIEGENVANGER",
+              "min": 13.5,
+              "max": 15
+            },
+            {
+              "source": "BZH_GRAUWE_VLIEGENVANGER",
+              "min": 13,
+              "max": 14
+            }
+          ],
+          "note": "Afgeronde onder- en bovengrens op basis van de twee bronwaarden."
+        }
+      ]
+    },
+    "habitat": [
+      {
+        "text": "Open bossen, bosranden, parken en tuinen met vrije uitkijkposten.",
+        "sources": [
+          "VB_GRAUWE_VLIEGENVANGER",
+          "SOV_GRAUWE_VLIEGENVANGER"
+        ],
+        "kind": "nederland"
+      }
+    ],
+    "status": [
+      {
+        "text": "Nederlandse zomergast en broedvogel die vooral van mei tot september te zien is.",
+        "sources": [
+          "VB_GRAUWE_VLIEGENVANGER",
+          "SOV_GRAUWE_VLIEGENVANGER"
+        ],
+        "kind": "voorkomen"
+      }
+    ],
+    "life": [
+      {
+        "text": "Vangt veel vliegende insecten door vanaf een zitpost kort uit te vliegen en terug te keren.",
+        "sources": [
+          "VB_GRAUWE_VLIEGENVANGER"
+        ],
+        "kind": "voedsel"
+      },
+      {
+        "text": "Maakt een nest op een beschutte richel, in een ondiepe holte of in een halfopen nestkast.",
+        "sources": [
+          "VB_GRAUWE_VLIEGENVANGER"
+        ],
+        "kind": "broeden"
+      },
+      {
+        "text": "Trekt vanaf de nazomer naar Afrika ten zuiden van de Sahara. De eerste vogels keren in het voorjaar doorgaans vanaf eind april terug.",
+        "sources": [
+          "VB_GRAUWE_VLIEGENVANGER"
+        ],
+        "kind": "trek"
+      }
+    ],
+    "discrepancies": [],
+    "open": []
+  },
+  "sp178": {
+    "summary": {
+      "text": "Roodstaart met een roestrode staart. Het mannetje in broedkleed heeft een wit voorhoofd, zwarte keel en oranjerode borst.",
+      "sources": [
+        "VB_GEKRAAGDE_ROODSTAART",
+        "BZH_GEKRAAGDE_ROODSTAART"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Roestrode staart bij beide geslachten, vaak bewegend op een zitplaats.",
+        "sources": [
+          "VB_GEKRAAGDE_ROODSTAART",
+          "BZH_GEKRAAGDE_ROODSTAART"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Mannetje in broedkleed met wit voorhoofd en zwart gezicht.",
+        "sources": [
+          "VB_GEKRAAGDE_ROODSTAART",
+          "BZH_GEKRAAGDE_ROODSTAART"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Vrouwtje meestal met grijsbruine rug en een warme, beige onderzijde.",
+        "sources": [
+          "VB_GEKRAAGDE_ROODSTAART",
+          "BZH_GEKRAAGDE_ROODSTAART"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "caution": {
+      "text": "Beide roodstaartsoorten hebben een roestrode staart. Gebruik bij bruine vogels ook de onderzijde, het vleugelbeeld en zo mogelijk de zang.",
+      "sources": [
+        "VB_GEKRAAGDE_ROODSTAART",
+        "BZH_GEKRAAGDE_ROODSTAART"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Voorhoofd en onderzijde",
+        "where": "Kop en borst in goed daglicht",
+        "this": "Voorjaarsmannetje met wit voorhoofd, zwarte keel en oranje borst; vrouwtje vaak warmer beige.",
+        "other": "Vrouwtje doorgaans koeler grijsbruin. Volwassen mannetje vaak donkergrijs tot zwart op kop en borst.",
+        "vs": [
+          "sp051"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Bekijk kop en borst samen.",
+        "exceptions": "Vrouwtjes en jonge vogels kunnen op elkaar lijken. Een rode staart is bij beide soorten mogelijk.",
+        "supporting": "Zang en leefgebied kunnen extra steun geven.",
+        "sources": [
+          "VB_GEKRAAGDE_ROODSTAART",
+          "BZH_GEKRAAGDE_ROODSTAART",
+          "VB_ZWARTE_ROODSTAART"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp051",
+        "why": "Beide hebben een roodachtige staart. Bekijk vooral kop en onderzijde en luister bij twijfel.",
+        "sources": [
+          "VB_GEKRAAGDE_ROODSTAART",
+          "VB_ZWARTE_ROODSTAART"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "text": "Het mannetje in broedkleed heeft een wit voorhoofd, zwart gezicht en keel, grijze rug en een oranjerode borst en staart.",
+        "sources": [
+          "VB_GEKRAAGDE_ROODSTAART",
+          "BZH_GEKRAAGDE_ROODSTAART"
+        ],
+        "topic": "geslacht"
+      },
+      {
+        "text": "Het jeugdkleed is gespikkeld. Kijk ook naar de roodachtige staart; alleen de borsttekening is onvoldoende voor determinatie.",
+        "sources": [
+          "BZH_GEKRAAGDE_ROODSTAART"
+        ],
+        "topic": "leeftijd"
+      },
+      {
+        "text": "Het vrouwtje is grijsbruin van boven en warmer beige aan de onderzijde. Ook zij heeft een roestrode staart.",
+        "sources": [
+          "VB_GEKRAAGDE_ROODSTAART",
+          "BZH_GEKRAAGDE_ROODSTAART"
+        ],
+        "topic": "geslacht"
+      }
+    ],
+    "voice": [
+      {
+        "text": "Gevarieerde zang met een kenmerkend begin. Luister bij twijfel naar meerdere volledige zangfrasen.",
+        "sources": [
+          "VB_GEKRAAGDE_ROODSTAART"
+        ],
+        "kind": "roep"
+      }
+    ],
+    "basis": {
+      "biometrics": [
+        {
+          "field": "length",
+          "unit": "cm",
+          "display": "ca. 13–15 cm",
+          "values": [
+            {
+              "source": "VB_GEKRAAGDE_ROODSTAART",
+              "min": 13,
+              "max": 14.5
+            },
+            {
+              "source": "BZH_GEKRAAGDE_ROODSTAART",
+              "min": 13,
+              "max": 15
+            }
+          ],
+          "note": "Afgeronde onder- en bovengrens op basis van de twee bronwaarden."
+        }
+      ]
+    },
+    "habitat": [
+      {
+        "text": "Oude gemengde of parkachtige bossen met open plekken en voldoende boomholten. Ook oude boomgaarden en boomrijke erven.",
+        "sources": [
+          "VB_GEKRAAGDE_ROODSTAART",
+          "SOV_GEKRAAGDE_ROODSTAART"
+        ],
+        "kind": "nederland"
+      }
+    ],
+    "status": [
+      {
+        "text": "Nederlandse broedvogel en doortrekker. De soort vertrekt doorgaans in de nazomer en herfst.",
+        "sources": [
+          "VB_GEKRAAGDE_ROODSTAART",
+          "SOV_GEKRAAGDE_ROODSTAART"
+        ],
+        "kind": "voorkomen"
+      }
+    ],
+    "life": [
+      {
+        "text": "Zoekt insecten op en nabij de grond en vangt soms insecten vanuit een zitpost. Eet in het najaar ook bessen.",
+        "sources": [
+          "VB_GEKRAAGDE_ROODSTAART"
+        ],
+        "kind": "voedsel"
+      },
+      {
+        "text": "Broedt in boomholten en gebruikt ook geschikte nestkasten.",
+        "sources": [
+          "VB_GEKRAAGDE_ROODSTAART"
+        ],
+        "kind": "broeden"
+      },
+      {
+        "text": "Nederlandse broedvogels overwinteren grotendeels in de Sahel. In het voorjaar is er ook doortrek.",
+        "sources": [
+          "VB_GEKRAAGDE_ROODSTAART"
         ],
         "kind": "trek"
       }

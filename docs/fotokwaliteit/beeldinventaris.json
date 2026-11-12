@@ -4709,6 +4709,46 @@
    "airborne": false,
    "source": "Visuele controle K06 fase 2 (2026-11-12)",
    "note": "Jonge Glanskop op een tak tussen bladeren, met een doffe donkere kap, lichte wang en kleine keelvlek."
+  },
+  "/assets/species/plumage/sp031-juv.webp": {
+   "refs": [
+    "sp031 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "1e07367acd6f5eaf574815e1984bf254643a17c2",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 3 (2026-11-12)",
+   "note": "Jonge Matkop op een tak, met een donkere kap, lichte wang en gelige snavelhoeken."
+  },
+  "/assets/species/plumage/sp176-juv.webp": {
+   "refs": [
+    "sp176 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "7fb1549e2e94cf3e220a7b99c8f3272c4ff21dc4",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 3 (2026-11-12)",
+   "note": "Jonge Grauwe Vliegenvanger op een tak tussen dennennaalden. De rug en gevouwen vleugel hebben lichte vlekken."
+  },
+  "/assets/species/plumage/sp178-adult_f.webp": {
+   "refs": [
+    "sp178 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "59198ea2c4c46c5310278594be6546afeb1c3e89",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 3 (2026-11-12)",
+   "note": "Vrouwtje Gekraagde Roodstaart op een hek, met een warme beige borst, bruine rug en een roestrode staart."
+  },
+  "/assets/species/plumage/sp178-juv.webp": {
+   "refs": [
+    "sp178 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "93119a52a396c13ab93420949e2d3d0a54bdfc2c",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 3 (2026-11-12)",
+   "note": "Jonge Gekraagde Roodstaart op een draad, met een gevlekte rug, gespikkelde borst en roodachtige staart."
   }
  }
 }

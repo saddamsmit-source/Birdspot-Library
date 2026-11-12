@@ -1,6 +1,6 @@
 # Birdspot — soortaudit van de collectie met foto's
 
-Gegenereerd door `tools/fotokwaliteit/build_soortaudit_tracker.py` · status voor commit `dfa3dfd5976579121089e69552da8919920d99e4` · 2026-11-12.
+Gegenereerd door `tools/fotokwaliteit/build_soortaudit_tracker.py` · status voor commit `e024af25a0f03e387b5adae8fa159947de55d79b` · 2026-11-12.
 Statussen: VERIFIED / PARTIALLY TESTED / NOT TESTED / BLOCKED. Een geautomatiseerde rendercontrole telt **niet** als visuele of inhoudelijke controle.
 Beoordeeld volgens `docs/BIRDSPOT_KWALITEITSNORM.md` (biometrie §1, herkenning §2, foto §3). Verbeterwensen zijn voor de latere beoordeling door de eigenaar en blokkeren de batch niet.
 
@@ -9,18 +9,18 @@ Beoordeeld volgens `docs/BIRDSPOT_KWALITEITSNORM.md` (biometrie §1, herkenning 
 | # | Meting | Stand |
 |---|---|---|
 | 1 | Soorten met bestaande gidsfoto's | 140 |
-| 2 | Afzonderlijk (aangescherpt) gecontroleerd | 77 (M1, M2, M3, M4, M5, M6, M7) |
-| 3 | Technisch correct (laden, volgorde, offline-bron, beoordeling = kaart) | 77 van 77 |
-| 4a | Visueel VERIFIED (beeld per foto) | 72 van 77 |
-| 4b | Inhoud (kennisprofiel) VERIFIED | 43 van 77 — alle profielen hebben nog open punten |
+| 2 | Afzonderlijk (aangescherpt) gecontroleerd | 80 (M1, M2, M3, M4, M5, M6, M7) |
+| 3 | Technisch correct (laden, volgorde, offline-bron, beoordeling = kaart) | 80 van 80 |
+| 4a | Visueel VERIFIED (beeld per foto) | 75 van 80 |
+| 4b | Inhoud (kennisprofiel) VERIFIED | 46 van 80 — alle profielen hebben nog open punten |
 | 4c | Onafhankelijk beoordeeld (ChatGPT) | 0 — NOT TESTED |
-| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 87; plus collectiebrede vluchtcontrole: 17 uit de vluchtrol, 8 gearchiveerd |
+| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 90; plus collectiebrede vluchtcontrole: 17 uit de vluchtrol, 8 gearchiveerd |
 | 6 | Afgekeurde vluchtfoto's | 25 (tabel hieronder) |
-| 7 | Ontbrekende foto-/kennisonderdelen | 61 fotoposities in gecontroleerde soorten; 63 fotosoorten zonder kennisprofiel |
-| 8 | Kritische kenmerken niet doorslaggevend onderbouwd | 107 (tabel hieronder) |
+| 7 | Ontbrekende foto-/kennisonderdelen | 63 fotoposities in gecontroleerde soorten; 60 fotosoorten zonder kennisprofiel |
+| 8 | Kritische kenmerken niet doorslaggevend onderbouwd | 110 (tabel hieronder) |
 | 9 | Open bron-/licentieproblemen | 0 in gecontroleerde soorten; collectiebreed blijft het eerder gemelde punt '22 afbeeldingen buiten de bronaudit' open |
 
-Eindoordeel per gecontroleerde soort: PARTIALLY TESTED 62, VERIFIED 15.
+Eindoordeel per gecontroleerde soort: PARTIALLY TESTED 65, VERIFIED 15.
 
 ## Gecontroleerde soorten
 
@@ -933,6 +933,25 @@ Batch M7 · 2026-11-12 · SHA `38e3b3c42662dc49be8b769fd9f82a8dde65cad7` · tech
 - **Onzeker:** —
 - **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
 
+### sp031 Matkop — PARTIALLY TESTED
+
+Batch M7 · 2026-11-12 · SHA `e024af25a0f03e387b5adae8fa159947de55d79b` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp031.webp` | Hoofdfoto (Volwassen) | Matkop met zwarte kap, lichte wang en licht vleugelveld. | Volwassen veldkleed. Geslacht onbekend. | Volledig zijaanzicht met een goed zichtbare gevouwen vleugel. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Francis Franklin |
+| `sp031-juv.webp` | Verenkleed (Juveniel) | Jonge Matkop tussen bladeren. Lichte snavelhoeken en donkere kap. | Fotograaf benoemt een juveniel. Geslacht onbekend. | Kop en snavelhoeken scherp in beeld. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.), CC BY-SA 4.0 · Wald1siedel |
+| `sp031-flight.webp` | Overige herkenningsfoto's | Matkop vlak boven de sneeuw, met geopende vleugels. | Geslacht en leeftijd niet gelabeld. | Opvliegbeeld. Alleen als aanvullend beeld bruikbaar. | uit-rol | opvliegen · uit-rol | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC0 · Estormiz |
+
+- **Correcties:** Bronbevestigde juvenielenfoto en kennisprofiel toegevoegd. Vergelijking met Glanskop gecontroleerd.
+- **Ontbreekt:** Scherpe vrije-vluchtfoto met bevestigde hergebruikrechten.
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** De geslachten lijken op elkaar in het veld. Het geslacht is niet op kleed bepaald; juveniel volgt de fotobron.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Roep, vleugelveld en snavelbasis; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
 ### sp030 Pimpelmees — VERIFIED
 
 Batch M4 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
@@ -1390,6 +1409,45 @@ Batch M5 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · tech
 - **Onzeker:** —
 - **Volgende actie:** Onafhankelijke review (ChatGPT)
 
+### sp178 Gekraagde Roodstaart — PARTIALLY TESTED
+
+Batch M7 · 2026-11-12 · SHA `e024af25a0f03e387b5adae8fa159947de55d79b` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp178.webp` | Hoofdfoto (Mannetje) | Mannetje met wit voorhoofd, zwart gezicht, oranje borst en roestrode staart. | Volwassen mannetje, herkenbaar aan het broedkleed. | Volledige vogel op plant met duidelijk kopprofiel. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Jerzy Strzelecki |
+| `sp178-adult_f.webp` | Verenkleed (Vrouwtje) | Vrouwtje op hek met beige onderzijde en roestrode staart. | Waarneming geannoteerd als Adult en Female. | Scherp zijaanzicht met rustige achtergrond. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.), CC BY 4.0 · Сергей Неклюдов |
+| `sp178-juv.webp` | Verenkleed (Juveniel) | Jonge Gekraagde Roodstaart op een draad, met gespikkeld kleed en rode staart. | Afzonderlijke waarneming met annotatie Juvenile. Geslacht onbekend. | Scherp zijaanzicht van rug en borst. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.), CC BY 4.0 · Сергей Неклюдов |
+| `sp178-flight.webp` | Overige herkenningsfoto's | Gekraagde Roodstaart met geopende vleugels vlak bij takken. | Geslacht en leeftijd niet vastgesteld. | De rode staart is zichtbaar. Beeld blijft buiten de vluchtsectie. | uit-rol | opvliegen · uit-rol | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Paolo Zucca, some rights reserved (CC BY) |
+
+- **Correcties:** Vrouwtjesfoto, juvenielenfoto, kennisprofiel en vergelijking met Zwarte Roodstaart toegevoegd. Alternatieve tekst van het opvliegbeeld afgestemd op de eerdere vluchtbeoordeling.
+- **Ontbreekt:** Scherpe vrije-vluchtfoto met bevestigde hergebruikrechten.
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Mannetje volgt het bronportret en herkenbaar broedkleed. Vrouwtje en juveniel volgen afzonderlijke bronwaarnemingen.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Voorhoofd en onderzijde; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp176 Grauwe Vliegenvanger — PARTIALLY TESTED
+
+Batch M7 · 2026-11-12 · SHA `e024af25a0f03e387b5adae8fa159947de55d79b` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp176.webp` | Hoofdfoto (Volwassen) | Grauwe Vliegenvanger in zijaanzicht, met grijsbruine bovendelen en fijne borststreping. | Volwassen veldkleed. Geslacht onbekend. | Volledige vogel in beeld. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Бусел В.А. |
+| `sp176-juv.webp` | Verenkleed (Juveniel) | Jonge vogel op een dennentak met lichte vlekken op rug en vleugeldekveren. | De waarneming is geannoteerd als juveniel. Geslacht onbekend. | Herkenbaar kleed en volledige vogel tussen enkele dennennaalden. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.), CC BY 4.0 · Andrejus Gaidamavičius |
+| `sp176-flight.webp` | In vlucht | Vrij vliegende vogel tegen blauwe lucht. Lange staart en slanke snavel zichtbaar. | Geslacht en leeftijd niet gelabeld. | Bruikbaar zijaanzicht in vrije vlucht. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Zeynel Cebeci |
+
+- **Correcties:** Juvenielenfoto en kennisprofiel toegevoegd. Vergelijking met Bonte Vliegenvanger toegevoegd en de vluchtfoto herbeoordeeld.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** De geslachten lijken op elkaar in het veld. Het geslacht is niet op kleed bepaald; juveniel volgt de fotobron.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Kruin, borst en vleugel; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
 ### sp050 Roodborst — PARTIALLY TESTED
 
 Batch M5 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
@@ -1587,6 +1645,7 @@ Batch M6 · 2026-11-12 · SHA `38e3b3c42662dc49be8b769fd9f82a8dde65cad7` · tech
 | sp026 Gaai | Kleedpatroon |
 | sp029 Koolmees | Kap, oogstreek en middenstreep |
 | sp030 Pimpelmees | Koptekening en onderzijde |
+| sp031 Matkop | Roep, vleugelveld en snavelbasis |
 | sp032 Glanskop | Snavelbasis en roep |
 | sp033 Kuifmees | Kuif en wangboog |
 | sp034 Staartmees | Staartlengte en kop |
@@ -1665,6 +1724,8 @@ Batch M6 · 2026-11-12 · SHA `38e3b3c42662dc49be8b769fd9f82a8dde65cad7` · tech
 | sp173 Bruine Kiekendief | Silhouet en vleugelhouding |
 | sp173 Bruine Kiekendief | Geslacht en leeftijd |
 | sp174 Zwarte Mees | Nekvlek en vleugelbandjes |
+| sp176 Grauwe Vliegenvanger | Kruin, borst en vleugel |
+| sp178 Gekraagde Roodstaart | Voorhoofd en onderzijde |
 | sp248 Wespendief | Kop en staart |
 | sp248 Wespendief | Vleugelhouding |
 | sp253 Ruigpootbuizerd | Staartcontrast |
@@ -1674,5 +1735,5 @@ Batch M6 · 2026-11-12 · SHA `38e3b3c42662dc49be8b769fd9f82a8dde65cad7` · tech
 
 Deze soorten renderen technisch, maar zijn **niet** foto voor foto opnieuw beoordeeld. Eerdere uitslagen (fotobaseline batch 01) gelden niet automatisch.
 
-sp257 Bijeneter, sp058 Fluiter, sp128 Bergeend, sp129 Krakeend, sp092 Kuifeend, sp090 Slobeend, sp130 Smient, sp132 Tafeleend, sp188 Zomertaling, sp249 Blauwe Kiekendief, sp251 Grauwe Kiekendief, sp250 Steppekiekendief, sp262 Grauwe Klauwier, sp288 Grote Gele Kwikstaart, sp164 Grote Mantelmeeuw, sp097 Kokmeeuw, sp225 Zwartkopmeeuw, sp031 Matkop, sp170 Ooievaar, sp146 Bontbekplevier, sp145 Goudplevier, sp147 Kleine Plevier, sp206 Strandplevier, sp144 Zilverplevier, sp083 Grote Zilverreiger, sp082 Kleine Zilverreiger, sp245 Koereiger, sp085 Kwak, sp084 Purperreiger, sp108 Grote Karekiet, sp110 Rietzanger, sp153 Bonte Strandloper, sp159 Bosruiter, sp158 Groenpootruiter, sp155 Oeverloper, sp217 Poelruiter, sp148 Regenwulp, sp149 Rosse Grutto, sp150 Steenloper, sp156 Witgat, sp157 Zwarte Ruiter, sp019 Groene Specht, sp017 Kleine Bonte Specht, sp020 Middelste Bonte Specht, sp018 Zwarte Specht, sp282 Roze Spreeuw, sp167 Grote Stern, sp166 Noordse Stern, sp041 Appelvink, sp040 Goudvink, sp039 Kneu, sp042 Roodmus, sp038 Sijs, sp177 Bonte Vliegenvanger, sp178 Gekraagde Roodstaart, sp176 Grauwe Vliegenvanger, sp053 Roodborsttapuit, sp051 Zwarte Roodstaart, sp113 Wielewaal, sp062 Braamsluiper, sp060 Tuinfluiter, sp116 Oeverzwaluw, sp187 Wilde Zwaan
+sp257 Bijeneter, sp058 Fluiter, sp128 Bergeend, sp129 Krakeend, sp092 Kuifeend, sp090 Slobeend, sp130 Smient, sp132 Tafeleend, sp188 Zomertaling, sp249 Blauwe Kiekendief, sp251 Grauwe Kiekendief, sp250 Steppekiekendief, sp262 Grauwe Klauwier, sp288 Grote Gele Kwikstaart, sp164 Grote Mantelmeeuw, sp097 Kokmeeuw, sp225 Zwartkopmeeuw, sp170 Ooievaar, sp146 Bontbekplevier, sp145 Goudplevier, sp147 Kleine Plevier, sp206 Strandplevier, sp144 Zilverplevier, sp083 Grote Zilverreiger, sp082 Kleine Zilverreiger, sp245 Koereiger, sp085 Kwak, sp084 Purperreiger, sp108 Grote Karekiet, sp110 Rietzanger, sp153 Bonte Strandloper, sp159 Bosruiter, sp158 Groenpootruiter, sp155 Oeverloper, sp217 Poelruiter, sp148 Regenwulp, sp149 Rosse Grutto, sp150 Steenloper, sp156 Witgat, sp157 Zwarte Ruiter, sp019 Groene Specht, sp017 Kleine Bonte Specht, sp020 Middelste Bonte Specht, sp018 Zwarte Specht, sp282 Roze Spreeuw, sp167 Grote Stern, sp166 Noordse Stern, sp041 Appelvink, sp040 Goudvink, sp039 Kneu, sp042 Roodmus, sp038 Sijs, sp177 Bonte Vliegenvanger, sp053 Roodborsttapuit, sp051 Zwarte Roodstaart, sp113 Wielewaal, sp062 Braamsluiper, sp060 Tuinfluiter, sp116 Oeverzwaluw, sp187 Wilde Zwaan
 
