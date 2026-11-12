@@ -1,5 +1,5 @@
 {
- "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+ "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
  "generated": "2026-11-12",
  "species": [
   {
@@ -9,7 +9,7 @@
    "audited": true,
    "batch": "M1",
    "date": "2026-11-10",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp002.webp",
@@ -111,7 +111,7 @@
    "audited": true,
    "batch": "M1",
    "date": "2026-11-10",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp003.webp",
@@ -218,7 +218,7 @@
    "audited": true,
    "batch": "M1",
    "date": "2026-11-10",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp004.webp",
@@ -326,7 +326,7 @@
    "audited": true,
    "batch": "M1",
    "date": "2026-11-10",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/plumage/sp005-male-rest.webp",
@@ -578,7 +578,7 @@
    "audited": true,
    "batch": "M1",
    "date": "2026-11-10",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/plumage/sp006-hero-male.webp",
@@ -727,7 +727,7 @@
    "audited": true,
    "batch": "M2",
    "date": "2026-11-10",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/plumage/sp007-hero-male.webp",
@@ -928,7 +928,7 @@
    "audited": true,
    "batch": "M1",
    "date": "2026-11-10",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/plumage/sp008-hero-male.webp",
@@ -1103,7 +1103,7 @@
    "audited": true,
    "batch": "M2",
    "date": "2026-11-10",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/plumage/sp009-male-rest.webp",
@@ -1267,7 +1267,7 @@
    "audited": true,
    "batch": "M2",
    "date": "2026-11-10",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/plumage/sp016-hero-male.webp",
@@ -1441,7 +1441,7 @@
    "audited": true,
    "batch": "M1",
    "date": "2026-11-10",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp021.webp",
@@ -1545,7 +1545,7 @@
    "audited": true,
    "batch": "M3",
    "date": "2026-11-11",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp022.webp",
@@ -1636,7 +1636,7 @@
    "audited": true,
    "batch": "M3",
    "date": "2026-11-11",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp025.webp",
@@ -1729,7 +1729,7 @@
    "audited": true,
    "batch": "M2",
    "date": "2026-11-10",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp026.webp",
@@ -1831,7 +1831,7 @@
    "audited": true,
    "batch": "M4",
    "date": "2026-11-11",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/plumage/sp029-adult_m.webp",
@@ -1985,7 +1985,7 @@
    "audited": true,
    "batch": "M4",
    "date": "2026-11-11",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp030.webp",
@@ -2136,7 +2136,7 @@
    "audited": true,
    "batch": "M5",
    "date": "2026-11-11",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/plumage/sp035-hero-male.webp",
@@ -2286,7 +2286,7 @@
    "audited": true,
    "batch": "M5",
    "date": "2026-11-11",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp036.webp",
@@ -2424,7 +2424,7 @@
    "audited": true,
    "batch": "M5",
    "date": "2026-11-11",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/plumage/sp037-adult_m.webp",
@@ -2621,7 +2621,7 @@
    "audited": true,
    "batch": "M4",
    "date": "2026-11-11",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/plumage/sp043-hero-male.webp",
@@ -2777,7 +2777,7 @@
    "audited": true,
    "batch": "M4",
    "date": "2026-11-11",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/plumage/sp045-hero-male.webp",
@@ -2963,7 +2963,7 @@
    "audited": true,
    "batch": "M4",
    "date": "2026-11-11",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp046.webp",
@@ -3084,7 +3084,7 @@
    "audited": true,
    "batch": "M4",
    "date": "2026-11-11",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp047.webp",
@@ -3205,7 +3205,7 @@
    "audited": true,
    "batch": "M4",
    "date": "2026-11-11",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp048.webp",
@@ -3338,7 +3338,7 @@
    "audited": true,
    "batch": "M5",
    "date": "2026-11-12",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp050.webp",
@@ -3456,7 +3456,7 @@
    "audited": true,
    "batch": "M3",
    "date": "2026-11-11",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp054.webp",
@@ -3517,7 +3517,7 @@
    "audited": true,
    "batch": "M5",
    "date": "2026-11-12",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp055.webp",
@@ -3591,7 +3591,7 @@
    "audited": true,
    "batch": "M1",
    "date": "2026-11-10",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp056.webp",
@@ -3708,7 +3708,7 @@
    "audited": true,
    "batch": "M1",
    "date": "2026-11-10",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp057.webp",
@@ -3815,7 +3815,7 @@
    "audited": true,
    "batch": "M3",
    "date": "2026-11-11",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp063.webp",
@@ -3933,7 +3933,7 @@
    "audited": true,
    "batch": "M2",
    "date": "2026-11-10",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp065.webp",
@@ -4034,7 +4034,7 @@
    "audited": true,
    "batch": "M1",
    "date": "2026-11-10",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp066.webp",
@@ -4113,7 +4113,7 @@
    "audited": true,
    "batch": "M2",
    "date": "2026-11-10",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp067.webp",
@@ -4188,7 +4188,7 @@
    "audited": true,
    "batch": "M3",
    "date": "2026-11-11",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp068.webp",
@@ -4291,7 +4291,7 @@
    "audited": true,
    "batch": "M3",
    "date": "2026-11-11",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp070.webp",
@@ -4384,7 +4384,7 @@
    "audited": true,
    "batch": "M4",
    "date": "2026-11-11",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp072.webp",
@@ -4516,7 +4516,7 @@
    "audited": true,
    "batch": "M3",
    "date": "2026-11-11",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp077.webp",
@@ -4590,7 +4590,7 @@
    "audited": true,
    "batch": "M4",
    "date": "2026-11-11",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp078.webp",
@@ -4728,7 +4728,7 @@
    "audited": true,
    "batch": "M4",
    "date": "2026-11-11",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp079.webp",
@@ -4848,7 +4848,7 @@
    "audited": true,
    "batch": "M4",
    "date": "2026-11-11",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/plumage/sp081-portrait.webp",
@@ -5002,7 +5002,7 @@
    "audited": true,
    "batch": "M3",
    "date": "2026-11-11",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp086.webp",
@@ -5106,7 +5106,7 @@
    "audited": true,
    "batch": "M3",
    "date": "2026-11-11",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp089.webp",
@@ -5286,7 +5286,7 @@
    "audited": true,
    "batch": "M3",
    "date": "2026-11-11",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/plumage/sp091-hero-male.webp",
@@ -5482,7 +5482,7 @@
    "audited": true,
    "batch": "M1",
    "date": "2026-11-10",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp094.webp",
@@ -5592,7 +5592,7 @@
    "audited": true,
    "batch": "M2",
    "date": "2026-11-10",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp095.webp",
@@ -5694,7 +5694,7 @@
    "audited": true,
    "batch": "M2",
    "date": "2026-11-10",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp096.webp",
@@ -5803,7 +5803,7 @@
    "audited": true,
    "batch": "M5",
    "date": "2026-11-12",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp098.webp",
@@ -5907,7 +5907,7 @@
    "audited": true,
    "batch": "M4",
    "date": "2026-11-11",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/plumage/sp099-adult_m.webp",
@@ -6063,7 +6063,7 @@
    "audited": true,
    "batch": "M5",
    "date": "2026-11-12",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp100.webp",
@@ -6169,11 +6169,27 @@
    "audited": true,
    "batch": "M5",
    "date": "2026-11-12",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
+     "image": "/assets/species/plumage/sp101-hero-male.webp",
+     "role": "Hoofdfoto (Mannetje)",
+     "content": "Grutto in zijaanzicht met lange vrijwel rechte snavel. Mannetje in broedkleed volgens de fotograaf.",
+     "sexAge": "De fotograaf duidt dit individuele exemplaar aan als mannetje in broedkleed. Opname in mei. De foto toont de snavel, lichaamsbouw en het kleed.",
+     "quality": "Volledig, rustig zijaanzicht met zicht op snavel en kleed.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-12: zelfde opname (Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY-SA 4.0 · Charles J. Sharp",
+      "annotations": [
+       "De fotograaf duidt dit individuele exemplaar aan als mannetje in broedkleed. Opname in mei. De foto toont de snavel, lichaamsbouw en het kleed."
+      ]
+     },
+     "flight": null
+    },
+    {
      "image": "/assets/species/sp101.webp",
-     "role": "Hoofdfoto",
+     "role": "Overige herkenningsfoto",
      "content": "Grutto in gras met lange vrijwel rechte snavel en warme hals.",
      "sexAge": "Volwassen type. Geslacht onbekend.",
      "quality": "Volledige vogel in een rustig zijaanzicht.",
@@ -6233,17 +6249,18 @@
     }
    ],
    "corrections": [
-    "Kennisprofiel, juvenielenfoto en vergelijking met Rosse Grutto toegevoegd. Spanwijdte uit twee bronbereiken berekend."
+    "Kennisprofiel, juvenielenfoto en vergelijking met Rosse Grutto toegevoegd. Spanwijdte uit twee bronbereiken berekend.",
+    "Volwassen mannetje volgens de oorspronkelijke fotograaf als hoofdfoto. Het vorige portret staat bij Overige."
    ],
    "missing": [
-    "Foto van een met bronbewijs bevestigd volwassen mannetje.",
     "Foto van een met bronbewijs bevestigd volwassen vrouwtje."
    ],
    "wishes": [],
    "uncertain": [
-    "Voor de lengte is één vergelijkbare bronband opgenomen. Het eerdere bereik is behouden en het verschil staat in het profiel."
+    "Voor de lengte is één vergelijkbare bronband opgenomen. Het eerdere bereik is behouden en het verschil staat in het profiel.",
+    "Bekeken vrouwtjeskandidaten hebben onvoldoende bewijs voor het geslacht van het afgebeelde individu."
    ],
-   "sexPolicy": "Roodintensiteit en afmetingen overlappen. Gebruik neutrale labels voor de huidige foto’s.",
+   "sexPolicy": "De hoofdfoto heeft een geslachtsaanduiding van de fotograaf. Andere foto’s houden een neutraal label.",
    "previous": null,
    "status": {
     "technical": "VERIFIED",
@@ -6276,7 +6293,7 @@
    "audited": true,
    "batch": "M5",
    "date": "2026-11-12",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp102.webp",
@@ -6392,7 +6409,7 @@
    "audited": true,
    "batch": "M2",
    "date": "2026-11-10",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp104.webp",
@@ -6506,7 +6523,7 @@
    "audited": true,
    "batch": "M3",
    "date": "2026-11-11",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp105.webp",
@@ -6763,7 +6780,7 @@
    "audited": true,
    "batch": "M3",
    "date": "2026-11-11",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/plumage/sp141-adult.webp",
@@ -7059,7 +7076,7 @@
    "audited": true,
    "batch": "M2",
    "date": "2026-11-10",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/plumage/sp173-hero-male.webp",
@@ -7360,7 +7377,7 @@
    "audited": true,
    "batch": "M2",
    "date": "2026-11-10",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/sp248.webp",
@@ -7568,7 +7585,7 @@
    "audited": true,
    "batch": "M2",
    "date": "2026-11-10",
-   "sha": "35b8c9a16b6cbcab24d3afe66e81080e17d19d60",
+   "sha": "35a44d48cadb0c646567885e88f3f4b9bd3542c9",
    "assets": [
     {
      "image": "/assets/species/plumage/sp253-male-rest.webp",
