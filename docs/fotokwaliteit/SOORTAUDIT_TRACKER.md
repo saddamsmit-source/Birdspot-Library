@@ -1,6 +1,6 @@
 # Birdspot — soortaudit van de collectie met foto's
 
-Gegenereerd door `tools/fotokwaliteit/build_soortaudit_tracker.py` · status voor commit `2eb0a4a143bef53c48530ad88355e4752c3dd7cb` · 2026-11-12.
+Gegenereerd door `tools/fotokwaliteit/build_soortaudit_tracker.py` · status voor commit `1429709b680d2960117022df9bb0c9baef27c9f5` · 2026-11-12.
 Statussen: VERIFIED / PARTIALLY TESTED / NOT TESTED / BLOCKED. Een geautomatiseerde rendercontrole telt **niet** als visuele of inhoudelijke controle.
 Beoordeeld volgens `docs/BIRDSPOT_KWALITEITSNORM.md` (biometrie §1, herkenning §2, foto §3). Verbeterwensen zijn voor de latere beoordeling door de eigenaar en blokkeren de batch niet.
 
@@ -9,18 +9,18 @@ Beoordeeld volgens `docs/BIRDSPOT_KWALITEITSNORM.md` (biometrie §1, herkenning 
 | # | Meting | Stand |
 |---|---|---|
 | 1 | Soorten met bestaande gidsfoto's | 140 |
-| 2 | Afzonderlijk (aangescherpt) gecontroleerd | 95 (M1, M2, M3, M4, M5, M6, M7, M8) |
-| 3 | Technisch correct (laden, volgorde, offline-bron, beoordeling = kaart) | 95 van 95 |
-| 4a | Visueel VERIFIED (beeld per foto) | 90 van 95 |
-| 4b | Inhoud (kennisprofiel) VERIFIED | 61 van 95 — alle profielen hebben nog open punten |
+| 2 | Afzonderlijk (aangescherpt) gecontroleerd | 98 (M1, M2, M3, M4, M5, M6, M7, M8, M9) |
+| 3 | Technisch correct (laden, volgorde, offline-bron, beoordeling = kaart) | 98 van 98 |
+| 4a | Visueel VERIFIED (beeld per foto) | 93 van 98 |
+| 4b | Inhoud (kennisprofiel) VERIFIED | 64 van 98 — alle profielen hebben nog open punten |
 | 4c | Onafhankelijk beoordeeld (ChatGPT) | 0 — NOT TESTED |
-| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 105; plus collectiebrede vluchtcontrole: 17 uit de vluchtrol, 8 gearchiveerd |
+| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 109; plus collectiebrede vluchtcontrole: 17 uit de vluchtrol, 8 gearchiveerd |
 | 6 | Afgekeurde vluchtfoto's | 25 (tabel hieronder) |
-| 7 | Ontbrekende foto-/kennisonderdelen | 66 fotoposities in gecontroleerde soorten; 45 fotosoorten zonder kennisprofiel |
-| 8 | Kritische kenmerken niet doorslaggevend onderbouwd | 125 (tabel hieronder) |
+| 7 | Ontbrekende foto-/kennisonderdelen | 66 fotoposities in gecontroleerde soorten; 42 fotosoorten zonder kennisprofiel |
+| 8 | Kritische kenmerken niet doorslaggevend onderbouwd | 128 (tabel hieronder) |
 | 9 | Open bron-/licentieproblemen | 0 in gecontroleerde soorten; collectiebreed blijft het eerder gemelde punt '22 afbeeldingen buiten de bronaudit' open |
 
-Eindoordeel per gecontroleerde soort: PARTIALLY TESTED 80, VERIFIED 15.
+Eindoordeel per gecontroleerde soort: PARTIALLY TESTED 83, VERIFIED 15.
 
 ## Gecontroleerde soorten
 
@@ -530,6 +530,27 @@ Batch M6 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · tech
 - **Onzeker:** Een als vrouwtje geannoteerde kandidaat toont oranje in de kruinstreep. Die foto is niet als vrouwtje opgenomen.
 - **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
 
+### sp249 Blauwe Kiekendief — PARTIALLY TESTED
+
+Batch M9 · 2026-11-12 · SHA `1429709b680d2960117022df9bb0c9baef27c9f5` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp249-hero-male.webp` | Hoofdfoto (Mannetje) | Blauwgrijs mannetje in frontale vlucht boven gras, met gespreide zwarte vleugelpunten. | Volwassen mannetje volgens bron en kleed. | Vogel volledig in beeld met herkenbare kop, vleugels en houding. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: geverifieerde import 09-11 (SHA-1 64776ff45b…), CC BY-SA 4.0 · Maurice.dekens |
+| `sp249-male-rest.webp` | Verenkleed (Mannetje) | Mannetje op de grond met grijze kop en lichte grijze bovendelen. | Volwassen mannetje volgens bron en kleed. | Zijaanzicht in gras. De lichte grijze delen zijn zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Sofia Voynovskaya, some rights reserved (CC BY) |
+| `sp249.webp` | In vlucht (Mannetje) | Mannetje in vrije vlucht met witte stuit en donkere vleugelpunten. | Volwassen mannetje volgens bron en kleed. | Volledige vogel, andere hoek dan de hoofdfoto. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · caroline legg |
+| `sp249-adult_f.webp` | In vlucht (Vrouwtje) | Bruin vrouwtje in een draai met gebandeerde vleugels en gespreide staart. | Vrouwtje volgens bron en kleed. | Volledige vogel en donkere banden goed zichtbaar. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Maurice.dekens |
+| `sp249-juv.webp` | In vlucht (Juveniel) | Jonge Blauwe Kiekendief boven gras, met donkere vleugelbanden en witte stuit. | Juveniel volgens bron en zichtbaar kleed. | Hele vogel met beide vleugels zichtbaar. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Rob Zweers |
+
+- **Correcties:** Vleugelbreedte, stuit en bandering uitgewerkt voor vergelijking met Grauwe en Steppekiekendief.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Volwassen labels volgen bron en zichtbaar kleed. Juvenielen blijven neutraal gelabeld.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Vleugelsilhouet en armpatroon; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
 ### sp173 Bruine Kiekendief — PARTIALLY TESTED
 
 Batch M2 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
@@ -573,6 +594,26 @@ Batch M1 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · tech
 - **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
 - **Onzeker:** Registersleutels 'adult_m' en bestandsnamen 'male/female' suggereren geslacht; de kaart toont dat niet. Hernoemen is cosmetisch en niet uitgevoerd.; ChatGPT-QA markeerde de Buizerd als REVIEW REQUIRED tot het rolconflict juveniel/vlucht is opgelost; opgelost in deze herstelronde, onafhankelijke hercontrole open.
 - **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp251 Grauwe Kiekendief — PARTIALLY TESTED
+
+Batch M9 · 2026-11-12 · SHA `1429709b680d2960117022df9bb0c9baef27c9f5` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp251-portrait.webp` | Hoofdfoto (Mannetje) | Volwassen mannetje in droog gras, met grijs verenkleed en gele ogen. | Volwassen mannetje volgens bron en kleed. | Scherp portret met de vogel groot in beeld en zichtbaar vleugelprofiel. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind tot 1600 px, omgezet naar WebP zonder uitsnede of EXIF, GPS en XMP. Fotograafvermelding in het beeld behouden.), CC BY 2.0 · Hari K Patibanda |
+| `sp251-adult_f.webp` | Verenkleed (Vrouwtje) | Bruin gestreept vrouwtje met neerhangende poten en gebandeerde vleugel. | Vrouwtje volgens bron en kleed. | Veren en staart herkenbaar. De foto toont een remmende houding. | goedgekeurd | landen · uit-rol | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Hari K Patibanda |
+| `sp251-juv.webp` | Verenkleed (Juveniel) | Jonge vogel boven droog gras met roestbruine onderzijde en gebandeerde slagpennen. | Juveniel volgens bron en zichtbaar kleed. | Kleed en slagpennen herkenbaar tijdens het landen. | goedgekeurd | landen · uit-rol | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Rodrigo de Almeida from Marco de Canaveses, Portugal |
+| `sp251.webp` | In vlucht (Mannetje) | Mannetje in vrije vlucht met grijze kop en donkere armvleugelband. | Volwassen mannetje volgens bron en kleed. | Hele vogel zichtbaar in vrije vlucht, scherpe vleugeltekening. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Hari K Patibanda |
+
+- **Correcties:** Hoofdfoto vervangen door een scherp mannetjesportret. Twee bijna identieke oude foto’s met herkomst gearchiveerd. De aparte mannetjesvluchtfoto blijft beschikbaar.; Vergelijking met Steppekiekendief uitgewerkt op armvleugelband en ondervleugelpatroon.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** Afzonderlijke opname van een vrouwtje of juveniel in vrije vlucht voor vergelijking van de ondervleugel.
+- **Geslacht:** Volwassen labels volgen bron en zichtbaar kleed. Juvenielen blijven neutraal gelabeld.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Armvleugel en ondervleugel; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
 
 ### sp007 Havik — PARTIALLY TESTED
 
@@ -636,6 +677,27 @@ Batch M1 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · tech
 - **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
 - **Onzeker:** —
 - **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp250 Steppekiekendief — PARTIALLY TESTED
+
+Batch M9 · 2026-11-12 · SHA `1429709b680d2960117022df9bb0c9baef27c9f5` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp250-hero-male.webp` | Hoofdfoto (Mannetje) | Bleekgrijs mannetje op een paal, met lichte kop en borst en een lange staart. | Volwassen mannetje volgens bron en kleed. | Volledige vogel, rustige achtergrond. | goedgekeurd | — | VERIFIED: geverifieerde import 09-11 (SHA-1 181df22271…), CC BY 2.0 · Luiz Lapa from Oeiras, Portugal |
+| `sp250-male-rest.webp` | Verenkleed (Mannetje) | Mannetje in droog gras met lichte bovendelen en donkere vleugelpunt. | Volwassen mannetje volgens bron en kleed. | Andere houding en kijkhoek dan de hoofdfoto. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Jan Ebr & Ivana Ebrová, some rights reserved (CC BY) |
+| `sp250.webp` | In vlucht (Mannetje) | Mannetje met bleke onderzijde en zwarte wig aan de vleugelpunt. | Volwassen mannetje volgens bron en kleed. | Volledig silhouet tegen rustige achtergrond. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Hari K Patibanda |
+| `sp250-adult_f.webp` | In vlucht (Vrouwtje) | Vrouwtje in vrije vlucht met gestreepte onderzijde en gebandeerde vleugels. | Vrouwtje volgens bron en kleed. | Volledige vogel, beide ondervleugels zichtbaar. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Tejas M, some rights reserved (CC BY) |
+| `sp250-juv.webp` | In vlucht (Juveniel) | Jonge vogel met warme onderzijde, lichte halsring en donkere halsvlek. | Juveniel volgens bron en zichtbaar kleed. | Volledige vogel. Zijaanzicht met zicht op kop en ondervleugel. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Bogomaz Mykhailo |
+
+- **Correcties:** Herkenning van vrouwtjes en juvenielen gecontroleerd tegen Forsman. Afwijkende bronwaarden voor spanwijdte opgenomen bij de bronverantwoording.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Volwassen labels volgen bron en zichtbaar kleed. Juvenielen blijven neutraal gelabeld.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Koptekening en handpennen; open: —; resterende dataverschillen: 1
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
 
 ### sp248 Wespendief — PARTIALLY TESTED
 
@@ -2046,6 +2108,9 @@ Batch M6 · 2026-11-12 · SHA `38e3b3c42662dc49be8b769fd9f82a8dde65cad7` · tech
 | sp188 Zomertaling | Wenkbrauw, oogstreep en keel |
 | sp248 Wespendief | Kop en staart |
 | sp248 Wespendief | Vleugelhouding |
+| sp249 Blauwe Kiekendief | Vleugelsilhouet en armpatroon |
+| sp250 Steppekiekendief | Koptekening en handpennen |
+| sp251 Grauwe Kiekendief | Armvleugel en ondervleugel |
 | sp253 Ruigpootbuizerd | Staartcontrast |
 | sp253 Ruigpootbuizerd | Geslacht en leeftijd |
 
@@ -2053,5 +2118,5 @@ Batch M6 · 2026-11-12 · SHA `38e3b3c42662dc49be8b769fd9f82a8dde65cad7` · tech
 
 Deze soorten renderen technisch, maar zijn **niet** foto voor foto opnieuw beoordeeld. Eerdere uitslagen (fotobaseline batch 01) gelden niet automatisch.
 
-sp257 Bijeneter, sp058 Fluiter, sp128 Bergeend, sp249 Blauwe Kiekendief, sp251 Grauwe Kiekendief, sp250 Steppekiekendief, sp262 Grauwe Klauwier, sp288 Grote Gele Kwikstaart, sp164 Grote Mantelmeeuw, sp097 Kokmeeuw, sp225 Zwartkopmeeuw, sp170 Ooievaar, sp146 Bontbekplevier, sp145 Goudplevier, sp147 Kleine Plevier, sp206 Strandplevier, sp144 Zilverplevier, sp245 Koereiger, sp085 Kwak, sp108 Grote Karekiet, sp110 Rietzanger, sp153 Bonte Strandloper, sp159 Bosruiter, sp158 Groenpootruiter, sp155 Oeverloper, sp217 Poelruiter, sp148 Regenwulp, sp149 Rosse Grutto, sp150 Steenloper, sp156 Witgat, sp157 Zwarte Ruiter, sp019 Groene Specht, sp017 Kleine Bonte Specht, sp020 Middelste Bonte Specht, sp018 Zwarte Specht, sp282 Roze Spreeuw, sp167 Grote Stern, sp166 Noordse Stern, sp039 Kneu, sp042 Roodmus, sp113 Wielewaal, sp062 Braamsluiper, sp060 Tuinfluiter, sp116 Oeverzwaluw, sp187 Wilde Zwaan
+sp257 Bijeneter, sp058 Fluiter, sp128 Bergeend, sp262 Grauwe Klauwier, sp288 Grote Gele Kwikstaart, sp164 Grote Mantelmeeuw, sp097 Kokmeeuw, sp225 Zwartkopmeeuw, sp170 Ooievaar, sp146 Bontbekplevier, sp145 Goudplevier, sp147 Kleine Plevier, sp206 Strandplevier, sp144 Zilverplevier, sp245 Koereiger, sp085 Kwak, sp108 Grote Karekiet, sp110 Rietzanger, sp153 Bonte Strandloper, sp159 Bosruiter, sp158 Groenpootruiter, sp155 Oeverloper, sp217 Poelruiter, sp148 Regenwulp, sp149 Rosse Grutto, sp150 Steenloper, sp156 Witgat, sp157 Zwarte Ruiter, sp019 Groene Specht, sp017 Kleine Bonte Specht, sp020 Middelste Bonte Specht, sp018 Zwarte Specht, sp282 Roze Spreeuw, sp167 Grote Stern, sp166 Noordse Stern, sp039 Kneu, sp042 Roodmus, sp113 Wielewaal, sp062 Braamsluiper, sp060 Tuinfluiter, sp116 Oeverzwaluw, sp187 Wilde Zwaan
 

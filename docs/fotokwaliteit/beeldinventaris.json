@@ -2714,7 +2714,8 @@
    "class": "stilstaand",
    "airborne": false,
    "source": "contactsheet 10-11-2026",
-   "note": ""
+   "note": "Twee bijna identieke foto’s van hetzelfde mannetje met elf seconden verschil volgens de bronbestanden. Vervangen door een scherper portret van een andere opname.",
+   "decision": "archief"
   },
   "/assets/species/plumage/sp251-juv.webp": {
    "refs": [
@@ -2735,7 +2736,8 @@
    "class": "stilstaand",
    "airborne": false,
    "source": "contactsheet 10-11-2026",
-   "note": ""
+   "note": "Twee bijna identieke foto’s van hetzelfde mannetje met elf seconden verschil volgens de bronbestanden. Vervangen door een scherper portret van een andere opname.",
+   "decision": "archief"
   },
   "/assets/species/plumage/sp253-juv.webp": {
    "refs": [
@@ -4921,6 +4923,16 @@
    "airborne": false,
    "source": "Visuele controle K07 fase 4 (2026-11-12)",
    "note": "Jonge Smient op het water met ronde kop, korte blauwgrijze snavel en rossigbruin verenkleed."
+  },
+  "/assets/species/plumage/sp251-portrait.webp": {
+   "refs": [
+    "sp251 GUIDE_POSES[0]"
+   ],
+   "sha1": "ecc1b5fb81a137b9104c024bb689763a7da501c9",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K08 fase 1 (2026-11-12)",
+   "note": "Mannetje Grauwe Kiekendief in droog gras. Grijze veren en gele ogen zijn scherp zichtbaar."
   }
  }
 }
