@@ -1,19 +1,21 @@
 {
   "_meta": {
     "batch": "M7",
-    "phase": 3,
+    "phase": 4,
     "date": "2026-11-12",
-    "title": "K06 fase 1 tot en met 3",
+    "title": "K06 fase 1 tot en met 4",
     "reviewer": "ChatGPT Codex",
     "phaseDates": {
       "1": "2026-11-12",
       "2": "2026-11-12",
-      "3": "2026-11-12"
+      "3": "2026-11-12",
+      "4": "2026-11-12"
     },
     "phaseReports": [
       "../M7_FASE_1_2026-11-12.md",
       "../M7_FASE_2_2026-11-12.md",
-      "../M7_FASE_3_2026-11-12.md"
+      "../M7_FASE_3_2026-11-12.md",
+      "../M7_FASE_4_2026-11-12.md"
     ]
   },
   "species": {
@@ -327,6 +329,128 @@
       ],
       "wishes": [],
       "sexPolicy": "Mannetje volgt het bronportret en herkenbaar broedkleed. Vrouwtje en juveniel volgen afzonderlijke bronwaarnemingen.",
+      "uncertain": [],
+      "date": "2026-11-12"
+    },
+    "sp038": {
+      "assets": {
+        "/assets/species/sp038.webp": {
+          "role": "Hoofdfoto (Mannetje)",
+          "content": "Mannetje Sijs met zwarte kruin en geel in vleugel en staart.",
+          "sexAge": "Volwassen mannetje volgens de bestaande bron.",
+          "quality": "Veldkenmerken en silhouet duidelijk zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp038-adult_f.webp": {
+          "role": "Verenkleed (Vrouwtje)",
+          "content": "Vrouwtje Sijs op een tak, met een fijne snavel, donkere flankstrepen en geel op de gevouwen vleugel.",
+          "sexAge": "Volwassen vrouwtje volgens fotobron en kleed.",
+          "quality": "Scherp zijaanzicht en leesbare veldkenmerken.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp038-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Sijs bij water, met gestreepte kop en onderzijde en gele accenten op de vleugel.",
+          "sexAge": "Bron bevestigt juveniel. Geslacht onbekend.",
+          "quality": "Kop, snavel en relevante verenkleedkenmerken zijn zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp038-flight.webp": {
+          "role": "In vlucht (Mannetje)",
+          "content": "Mannetje in vlucht met zwarte kruin en gele vleugelband.",
+          "sexAge": "Mannetje, volgens de bestaande vluchtbron en het veldkleed.",
+          "quality": "Vrije vlucht. De vleugel is licht bewegingsonscherp.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Vrouwtjes- en juvenielenfoto toegevoegd. Kennisprofiel en beeldvergelijking bijgewerkt. De bestaande vluchtfoto is herbeoordeeld."
+      ],
+      "missing": [],
+      "wishes": [],
+      "sexPolicy": "De geslachtslabels van volwassen vogels volgen bron en zichtbaar verenkleed. Bij juvenielen is het geslacht onbekend.",
+      "uncertain": [],
+      "date": "2026-11-12"
+    },
+    "sp040": {
+      "assets": {
+        "/assets/species/sp040.webp": {
+          "role": "Hoofdfoto (Mannetje)",
+          "content": "Mannetje Goudvink met zwarte kap, rode wangen en borst.",
+          "sexAge": "Volwassen mannetje volgens de bestaande bron.",
+          "quality": "Veldkenmerken en silhouet duidelijk zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp040-adult_f.webp": {
+          "role": "Verenkleed (Vrouwtje)",
+          "content": "Vrouwtje Goudvink op een tak, met een zwarte kap, korte zwarte snavel, beigegrijze onderzijde en witte stuit.",
+          "sexAge": "Volwassen vrouwtje volgens fotobron en kleed.",
+          "quality": "Scherp zijaanzicht en leesbare veldkenmerken.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp040-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Goudvink op een tak, met een bruingrijze kop zonder zwarte kap en een lichte vleugelstreep.",
+          "sexAge": "Bron bevestigt juveniel. Geslacht onbekend.",
+          "quality": "Kop, snavel en relevante verenkleedkenmerken zijn zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp040-flight.webp": {
+          "role": "In vlucht (Mannetje)",
+          "content": "Mannetje in vrije vlucht, met rode borst, donkere kop en witte stuit.",
+          "sexAge": "Mannetje, herkenbaar aan de rode onderzijde en zwarte kap.",
+          "quality": "Volledig zijaanzicht in de lucht, inclusief de staart.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Vrouwtjes- en juvenielenfoto toegevoegd. Kennisprofiel en beeldvergelijking bijgewerkt. De bestaande vluchtfoto is herbeoordeeld."
+      ],
+      "missing": [],
+      "wishes": [],
+      "sexPolicy": "De geslachtslabels van volwassen vogels volgen bron en zichtbaar verenkleed. Bij juvenielen is het geslacht onbekend.",
+      "uncertain": [],
+      "date": "2026-11-12"
+    },
+    "sp041": {
+      "assets": {
+        "/assets/species/sp041.webp": {
+          "role": "Hoofdfoto (Mannetje)",
+          "content": "Mannetje Appelvink met grote kop, donkere keelvlek en zware snavel.",
+          "sexAge": "Volwassen mannetje volgens de bestaande bron.",
+          "quality": "Veldkenmerken en silhouet duidelijk zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp041-adult_f.webp": {
+          "role": "Verenkleed (Vrouwtje)",
+          "content": "Vrouwtje Appelvink in zijaanzicht op hout, met een forse snavel, grijze nek en een grijs vleugelveld.",
+          "sexAge": "Volwassen vrouwtje volgens fotobron en kleed.",
+          "quality": "Scherp zijaanzicht en leesbare veldkenmerken.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp041-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Appelvink met een gelige keel, gevlekte onderzijde en zware snavel.",
+          "sexAge": "Bron bevestigt juveniel. Geslacht onbekend.",
+          "quality": "Kop, snavel en relevante verenkleedkenmerken zijn zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp041-flight.webp": {
+          "role": "In vlucht",
+          "content": "Vliegende Appelvink van opzij met een brede lichte vleugelband.",
+          "sexAge": "Geslacht en leeftijd onbekend.",
+          "quality": "Vrije vlucht. De bestaande uitsnede van 330 px is voorlopig bruikbaar.",
+          "verdict": "voorwaardelijk"
+        }
+      },
+      "corrections": [
+        "Vrouwtjes- en juvenielenfoto toegevoegd. Kennisprofiel en beeldvergelijking bijgewerkt. De bestaande vluchtfoto is herbeoordeeld."
+      ],
+      "missing": [
+        "Scherpe grotere foto in vrije vlucht, bij voorkeur een bronbevestigd mannetje."
+      ],
+      "wishes": [],
+      "sexPolicy": "De geslachtslabels van volwassen vogels volgen bron en zichtbaar verenkleed. Bij juvenielen is het geslacht onbekend.",
       "uncertain": [],
       "date": "2026-11-12"
     }

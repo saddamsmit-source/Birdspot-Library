@@ -1113,6 +1113,42 @@ export const GUIDE_COMPARISONS = [
     tip: 'Vergelijk de onderzijde bij egaal daglicht. Luister bij twijfel ook naar de zang.',
   },
   {
+    label: 'Sijs en Groenling · vrouwtje',
+    birds: [
+      {id: 'sp038', source: 'sijs', plumage: 'adult_f', marks: 'Fijne, puntige snavel en donkere flankstrepen.'},
+      {id: 'sp036', source: 'groenling', plumage: 'adult_f', marks: 'Forse kegelsnavel en grijsgroen kleed met geel langs de buitenste vleugelpennen.'},
+    ],
+    rows: [
+      {label: 'Snavel', values: ['Fijn en puntig', 'Breed en stevig']},
+      {label: 'Vleugel en flank', values: ['Gele band en donkere flankstrepen', 'Gele vleugelrand en meestal egalere flank']},
+    ],
+    tip: 'Bekijk de snavel en flank samen. Een jonge Groenling kan ook gestreept zijn.',
+  },
+  {
+    label: 'Goudvink en Vink · mannetje',
+    birds: [
+      {id: 'sp040', source: 'goudvink', plumage: 'adult_m', marks: 'Zwarte kap, korte zwarte snavel en roze-rode onderzijde.'},
+      {id: 'sp035', source: 'vink', plumage: 'adult_m', marks: 'Blauwgrijze kruin in broedkleed en twee lichte vleugelstrepen.'},
+    ],
+    rows: [
+      {label: 'Kruin', values: ['Zwart', 'Blauwgrijs in broedkleed']},
+      {label: 'Vleugel', values: ['Eén lichte dwarsband', 'Twee lichte strepen']},
+    ],
+    tip: 'Beide mannetjes hebben een warme borst. Vergelijk ook kruin, snavel en vleugeltekening.',
+  },
+  {
+    label: 'Appelvink en Vink · mannetje',
+    birds: [
+      {id: 'sp041', source: 'appelvink', plumage: 'adult_m', marks: 'Zware driehoekige snavel, grote kop en brede lichte vleugelband.'},
+      {id: 'sp035', source: 'vink', plumage: 'adult_m', marks: 'Kleinere kegelsnavel, slankere kop en twee lichte vleugelstrepen.'},
+    ],
+    rows: [
+      {label: 'Snavel', values: ['Zeer fors en driehoekig', 'Korte, kleinere kegel']},
+      {label: 'Vleugel', values: ['Brede lichte band', 'Twee lichte strepen']},
+    ],
+    tip: 'De kleur van de Appelvinksnavel kan per seizoen verschillen. Vergelijk de vorm in zijaanzicht.',
+  },
+  {
     label: 'Scholekster en Kluut · veldkenmerken',
     birds: [
       {id: 'sp098', source: 'scholekster', marks: 'Lange, rechte oranjerode snavel. Zwarte kop en borst, roze poten.'},

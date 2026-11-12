@@ -172,6 +172,12 @@ def main():
                 if flight_tab.count():
                     flight_tab.evaluate("el => { const d = el.closest('details'); if (d) d.open = true; }")
                     flight_tab.click()
+                    if sid == "sp038":
+                        expect(sec.locator('[data-cmp-flight]:visible').first).to_be_visible()
+                        female_tab = sec.get_by_role("button", name="Vrouwtje", exact=True)
+                        female_tab.click()
+                        expect(female_tab).to_have_attribute("aria-selected", "true")
+                        expect(sec.locator('.sd-cmp-panel:visible img[src*="sp036-adult_f.webp"]')).to_be_visible()
                 for d in sec.locator('details.sd-cmp-more').all():
                     d.evaluate("el => el.open = true")
                 loaded = sec.locator('img').evaluate_all("""async els => { const out = []; for (const e of els) { e.loading = 'eager';
@@ -205,7 +211,8 @@ def main():
                               ("Rietgors", "sp118"), ("Knobbelzwaan", "sp126"), ("Kluut", "sp143"),
                               ("Kuifmees", "sp033"), ("Ringmus", "sp044"), ("Grote Lijster", "sp049"),
                               ("Zwarte Mees", "sp174"), ("Staartmees", "sp034"), ("Glanskop", "sp032"),
-                              ("Matkop", "sp031"), ("Grauwe Vliegenvanger", "sp176"), ("Gekraagde Roodstaart", "sp178")]:
+                              ("Matkop", "sp031"), ("Grauwe Vliegenvanger", "sp176"), ("Gekraagde Roodstaart", "sp178"),
+                              ("Sijs", "sp038"), ("Goudvink", "sp040"), ("Appelvink", "sp041")]:
                 similar_section(p, name, sid, "390")
                 open_card(p, name, sid)
                 sec = p.locator('#sdPanel-herkenning section.sd-similar')

@@ -1645,12 +1645,12 @@ const DATA = {
   },
   "VB_SIJS": {
    "register": "NL07",
-   "label": "Vogelbescherming Nederland — Sijs",
+   "label": "Vogelbescherming — Sijs",
    "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/sijs",
-   "edition": "Online geraadpleegd 11-11-2026",
+   "edition": "Online bron",
    "scope": "Nederland",
-   "confirms": "bouw, kruin en vleugeltekening",
-   "checked": "2026-11-11",
+   "confirms": "Herkenning, geluid, leefgebied en leefwijze",
+   "checked": "2026-11-12",
    "certainty": "hoog",
    "publisher": "Vogelbescherming Nederland"
   },
@@ -3077,6 +3077,94 @@ const DATA = {
    "register": "NL01",
    "label": "Sovon — Gekraagde Roodstaart",
    "url": "https://stats.sovon.nl/stats/soort/11220/",
+   "edition": "Online bron",
+   "scope": "Nederland",
+   "confirms": "Verspreiding en seizoensvoorkomen",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "BZH_SIJS": {
+   "register": "EU07",
+   "label": "Blasco-Zumeta & Heinze — Sijs",
+   "url": "https://www.blascozumeta.com/specie_files/16540_ENG_Spinus_spinus_aranzadi.pdf",
+   "edition": "Online bron",
+   "scope": "Europa",
+   "confirms": "Lengte, herkenning, geslacht en leeftijd",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Blasco-Zumeta & Heinze"
+  },
+  "SOV_SIJS": {
+   "register": "NL01",
+   "label": "Sovon — Sijs",
+   "url": "https://stats.sovon.nl/stats/soort/16540/",
+   "edition": "Online bron",
+   "scope": "Nederland",
+   "confirms": "Verspreiding en seizoensvoorkomen",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "VB_GOUDVINK": {
+   "register": "NL07",
+   "label": "Vogelbescherming — Goudvink",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/goudvink",
+   "edition": "Online bron",
+   "scope": "Nederland",
+   "confirms": "Herkenning, geluid, leefgebied en leefwijze",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "WT_GOUDVINK": {
+   "register": "EU",
+   "label": "The Wildlife Trusts — Goudvink",
+   "url": "https://www.wildlifetrusts.org/wildlife-explorer/birds/finches-and-buntings/bullfinch",
+   "edition": "Online bron",
+   "scope": "Verenigd Koninkrijk",
+   "confirms": "Lengte, bouw en leefgebied",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "The Wildlife Trusts"
+  },
+  "SOV_GOUDVINK": {
+   "register": "NL01",
+   "label": "Sovon — Goudvink",
+   "url": "https://stats.sovon.nl/stats/soort/17100/",
+   "edition": "Online bron",
+   "scope": "Nederland",
+   "confirms": "Verspreiding en seizoensvoorkomen",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "VB_APPELVINK": {
+   "register": "NL07",
+   "label": "Vogelbescherming — Appelvink",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/appelvink",
+   "edition": "Online bron",
+   "scope": "Nederland",
+   "confirms": "Herkenning, geluid, leefgebied en leefwijze",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "NAT_APPELVINK": {
+   "register": "EU",
+   "label": "Naturalis — Appelvink",
+   "url": "https://birds-europe.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/taxon.php?id=131045",
+   "edition": "Online bron",
+   "scope": "Europa",
+   "confirms": "Lengte, snavel, vleugelpatroon en leeftijdskleden",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Naturalis"
+  },
+  "SOV_APPELVINK": {
+   "register": "NL01",
+   "label": "Sovon — Appelvink",
+   "url": "https://stats.sovon.nl/stats/soort/17170/",
    "edition": "Online bron",
    "scope": "Nederland",
    "confirms": "Verspreiding en seizoensvoorkomen",
@@ -16931,6 +17019,528 @@ const DATA = {
      "text": "Nederlandse broedvogels overwinteren grotendeels in de Sahel. In het voorjaar is er ook doortrek.",
      "sources": [
       "VB_GEKRAAGDE_ROODSTAART"
+     ],
+     "kind": "trek"
+    }
+   ],
+   "discrepancies": [],
+   "open": []
+  },
+  "sp038": {
+   "summary": {
+    "text": "Kleine vink met fijne snavel, gestreepte flanken en geel op vleugel en staart. Volwassen mannetjes hebben meestal een zwarte kruin.",
+    "sources": [
+     "VB_SIJS",
+     "BZH_SIJS"
+    ]
+   },
+   "keyMarks": [
+    {
+     "text": "Fijne, puntige snavel en een compact lichaam.",
+     "sources": [
+      "VB_SIJS",
+      "BZH_SIJS"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Geel op de gevouwen vleugel en bij de staartbasis.",
+     "sources": [
+      "VB_SIJS",
+      "BZH_SIJS"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Donkere lengtestrepen op de flanken, opvallend bij vrouwtjes en juvenielen.",
+     "sources": [
+      "VB_SIJS",
+      "BZH_SIJS"
+     ],
+     "reliability": "ondersteunend"
+    }
+   ],
+   "caution": {
+    "text": "Geel op vleugel en staart komt ook bij Groenling voor. Vergelijk de snavel en flanktekening bij gelijk licht.",
+    "sources": [
+     "VB_SIJS",
+     "BZH_SIJS"
+    ]
+   },
+   "critical": [
+    {
+     "feature": "Snavel, flank en vleugel",
+     "where": "Bekijk de kop en gevouwen vleugel van opzij",
+     "this": "Fijne, puntige snavel, duidelijke flankstrepen en een gele vleugelband.",
+     "other": "Forse kegelsnavel en geel vooral langs de buitenrand van de handpennen.",
+     "vs": [
+      "sp036"
+     ],
+     "reliability": "ondersteunend",
+     "conditions": "Gebruik bij voorkeur hetzelfde kleed en vergelijk de snavel bij goed zijlicht.",
+     "exceptions": "Beide soorten hebben geel aan vleugel en staart. Ook een jonge Groenling kan gestreept zijn.",
+     "supporting": "Sijs oogt kleiner en lichter gebouwd.",
+     "sources": [
+      "VB_SIJS",
+      "BZH_SIJS",
+      "VB_GROENLING"
+     ]
+    }
+   ],
+   "similar": [
+    {
+     "id": "sp036",
+     "why": "Vrouwtjes zijn beide groengeel. De snavelbouw en plaats van het geel helpen bij het onderscheid.",
+     "sources": [
+      "VB_SIJS",
+      "VB_GROENLING"
+     ]
+    }
+   ],
+   "detail": [
+    {
+     "text": "Volwassen mannetjes hebben meestal een zwarte kruin en keelvlek, met heldergele accenten.",
+     "sources": [
+      "VB_SIJS",
+      "BZH_SIJS"
+     ],
+     "topic": "geslacht"
+    },
+    {
+     "text": "Jonge vogels hebben een gestreepte kop en onderzijde. De volwassen zwarte kruin van het mannetje ontbreekt.",
+     "sources": [
+      "VB_SIJS",
+      "BZH_SIJS"
+     ],
+     "topic": "leeftijd"
+    },
+    {
+     "text": "Volwassen vrouwtjes missen de zwarte kap van het mannetje. De lichtgroene tot grijzige onderzijde heeft duidelijke donkere strepen.",
+     "sources": [
+      "VB_SIJS",
+      "BZH_SIJS"
+     ],
+     "topic": "geslacht"
+    }
+   ],
+   "voice": [
+    {
+     "text": "Hoge, korte contactroepjes, vaak ook van overtrekkende groepjes.",
+     "sources": [
+      "VB_SIJS"
+     ],
+     "kind": "roep"
+    }
+   ],
+   "basis": {
+    "biometrics": [
+     {
+      "field": "length",
+      "unit": "cm",
+      "display": "ca. 11–12 cm",
+      "values": [
+       {
+        "source": "VB_SIJS",
+        "min": 11,
+        "max": 12
+       },
+       {
+        "source": "BZH_SIJS",
+        "min": 11,
+        "max": 12
+       }
+      ],
+      "note": "Afgeronde onder- en bovengrens op basis van de twee bronwaarden."
+     }
+    ]
+   },
+   "habitat": [
+    {
+     "text": "In de winter vooral bij elzen en berken in bos, parken en open polderland. Broedt vooral bij naaldbomen.",
+     "sources": [
+      "VB_SIJS",
+      "SOV_SIJS"
+     ],
+     "kind": "nederland"
+    }
+   ],
+   "status": [
+    {
+     "text": "In Nederland vooral talrijk als doortrekker en wintergast. Het aantal broedvogels wisselt per jaar.",
+     "sources": [
+      "VB_SIJS",
+      "SOV_SIJS"
+     ],
+     "kind": "voorkomen"
+    }
+   ],
+   "life": [
+    {
+     "text": "Eet kleine zaden, vooral van elzen, berken en naaldbomen. Hangt geregeld ondersteboven aan elzenproppen.",
+     "sources": [
+      "VB_SIJS"
+     ],
+     "kind": "voedsel"
+    },
+    {
+     "text": "Maakt een klein komnest in een boom, vaak hoog in een naaldboom.",
+     "sources": [
+      "VB_SIJS"
+     ],
+     "kind": "broeden"
+    },
+    {
+     "text": "In herfst en winter kunnen veel vogels uit noordelijke en oostelijke broedgebieden Nederland aandoen. Aantallen wisselen sterk.",
+     "sources": [
+      "VB_SIJS"
+     ],
+     "kind": "trek"
+    }
+   ],
+   "discrepancies": [],
+   "open": []
+  },
+  "sp040": {
+   "summary": {
+    "text": "Stevig gebouwde vink met korte, dikke snavel, witte stuit en donkere staart. Bij volwassen vogels valt de zwarte kap op.",
+    "sources": [
+     "VB_GOUDVINK",
+     "WT_GOUDVINK"
+    ]
+   },
+   "keyMarks": [
+    {
+     "text": "Volwassen vogels hebben een zwarte kap en korte, donkere snavel.",
+     "sources": [
+      "VB_GOUDVINK",
+      "WT_GOUDVINK"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Witte stuit contrasteert met de donkere staart en vleugels.",
+     "sources": [
+      "VB_GOUDVINK",
+      "WT_GOUDVINK"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Mannetje met roze-rode wangen en onderzijde. Vrouwtje met een beigegrijze onderzijde.",
+     "sources": [
+      "VB_GOUDVINK",
+      "WT_GOUDVINK"
+     ],
+     "reliability": "ondersteunend"
+    }
+   ],
+   "caution": {
+    "text": "Bij een jonge Goudvink ontbreekt de zwarte kap. Bekijk dan de bouw, snavel en witte stuit als die zichtbaar is.",
+    "sources": [
+     "VB_GOUDVINK",
+     "WT_GOUDVINK"
+    ]
+   },
+   "critical": [
+    {
+     "feature": "Kap, snavel en vleugelstrepen",
+     "where": "Bekijk kop en gevouwen vleugel",
+     "this": "Volwassen vogel met zwarte kap, korte zwarte snavel en één lichte dwarsband op de vleugel.",
+     "other": "Volwassen mannetje met blauwgrijze kruin. Bij beide geslachten vallen twee lichte vleugelstrepen op.",
+     "vs": [
+      "sp035"
+     ],
+     "reliability": "ondersteunend",
+     "conditions": "Vergelijk kap en snavelkleur samen met de vleugelstrepen.",
+     "exceptions": "Een juveniele Goudvink mist de zwarte kap. Een mannetje Vink kan ook een warme borst hebben.",
+     "supporting": "De witte stuit van Goudvink helpt in vlucht.",
+     "sources": [
+      "VB_GOUDVINK",
+      "WT_GOUDVINK",
+      "VB_VINK"
+     ]
+    }
+   ],
+   "similar": [
+    {
+     "id": "sp035",
+     "why": "Beide mannetjes hebben een warme onderzijde. Kop en vleugeltekening bieden meer houvast dan de borstkleur alleen.",
+     "sources": [
+      "VB_GOUDVINK",
+      "VB_VINK"
+     ]
+    }
+   ],
+   "detail": [
+    {
+     "text": "Het mannetje heeft een zwarte kap en roze-rode wangen, borst en buik.",
+     "sources": [
+      "VB_GOUDVINK",
+      "WT_GOUDVINK"
+     ],
+     "topic": "geslacht"
+    },
+    {
+     "text": "Juvenielen lijken in lichaamskleur op vrouwtjes. De grijsbruine kop krijgt pas na de rui een zwarte kap.",
+     "sources": [
+      "VB_GOUDVINK",
+      "WT_GOUDVINK"
+     ],
+     "topic": "leeftijd"
+    },
+    {
+     "text": "Het vrouwtje heeft een zwarte kap, een grijze rug en een beigegrijze onderzijde.",
+     "sources": [
+      "VB_GOUDVINK",
+      "WT_GOUDVINK"
+     ],
+     "topic": "geslacht"
+    }
+   ],
+   "voice": [
+    {
+     "text": "Een zacht, kort fluitje dat tussen de begroeiing vaak eerder opvalt dan de vogel zelf.",
+     "sources": [
+      "VB_GOUDVINK"
+     ],
+     "kind": "roep"
+    }
+   ],
+   "basis": {
+    "biometrics": [
+     {
+      "field": "length",
+      "unit": "cm",
+      "display": "ca. 15–16 cm",
+      "values": [
+       {
+        "source": "VB_GOUDVINK",
+        "min": 14.5,
+        "max": 16
+       },
+       {
+        "source": "WT_GOUDVINK",
+        "min": 16,
+        "max": 16
+       }
+      ],
+      "note": "Afgeronde onder- en bovengrens op basis van de twee bronwaarden."
+     }
+    ]
+   },
+   "habitat": [
+    {
+     "text": "Bos, bosranden, parken en grote tuinen met dicht struweel.",
+     "sources": [
+      "VB_GOUDVINK",
+      "SOV_GOUDVINK"
+     ],
+     "kind": "nederland"
+    }
+   ],
+   "status": [
+    {
+     "text": "Nederlandse standvogel die buiten de broedtijd vaak in paren of kleine groepjes rondtrekt.",
+     "sources": [
+      "VB_GOUDVINK",
+      "SOV_GOUDVINK"
+     ],
+     "kind": "voorkomen"
+    }
+   ],
+   "life": [
+    {
+     "text": "Eet zaden, vruchten en knoppen. In het voorjaar vallen foeragerende vogels op bij uitlopende knoppen.",
+     "sources": [
+      "VB_GOUDVINK"
+     ],
+     "kind": "voedsel"
+    },
+    {
+     "text": "Bouwt een nest van takjes in dichte struiken of bomen, vaak goed verscholen.",
+     "sources": [
+      "VB_GOUDVINK"
+     ],
+     "kind": "broeden"
+    },
+    {
+     "text": "Nederlandse broedvogels zijn grotendeels standvogels en kunnen buiten de broedtijd lokaal rondzwerven.",
+     "sources": [
+      "VB_GOUDVINK"
+     ],
+     "kind": "trek"
+    }
+   ],
+   "discrepancies": [],
+   "open": []
+  },
+  "sp041": {
+   "summary": {
+    "text": "Grote, compacte vink met een opvallend zware driehoekige snavel, een grote kop en een korte staart.",
+    "sources": [
+     "VB_APPELVINK",
+     "NAT_APPELVINK"
+    ]
+   },
+   "keyMarks": [
+    {
+     "text": "Zware driehoekige snavel met donkere omranding bij volwassen vogels.",
+     "sources": [
+      "VB_APPELVINK",
+      "NAT_APPELVINK"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Grote kop met een grijze nek en een donkere keelvlek bij volwassen vogels.",
+     "sources": [
+      "VB_APPELVINK",
+      "NAT_APPELVINK"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Brede lichte vleugelband en een korte staart met een lichte eindzone.",
+     "sources": [
+      "VB_APPELVINK",
+      "NAT_APPELVINK"
+     ],
+     "reliability": "ondersteunend"
+    }
+   ],
+   "caution": {
+    "text": "Snavelkleur verandert met het seizoen. Bij jonge vogels valt vooral de snavelvorm in combinatie met de kopgrootte op.",
+    "sources": [
+     "VB_APPELVINK",
+     "NAT_APPELVINK"
+    ]
+   },
+   "critical": [
+    {
+     "feature": "Snavel en kopverhouding",
+     "where": "Bekijk de kop, snavel en gevouwen vleugel van opzij",
+     "this": "Zeer diepe driehoekige snavel, grote kop, korte staart en een brede lichte vleugelband.",
+     "other": "Veel kleinere kegelsnavel, slankere kopverhouding en twee lichte vleugelstrepen.",
+     "vs": [
+      "sp035"
+     ],
+     "reliability": "ondersteunend",
+     "conditions": "Vergelijk de snavel van opzij en bekijk hoeveel van de kop deze inneemt.",
+     "exceptions": "De snavelkleur van Appelvink varieert met het seizoen. Gebruik vooral de vorm.",
+     "supporting": "De dikke nek en korte staart maken Appelvink compacter.",
+     "sources": [
+      "VB_APPELVINK",
+      "NAT_APPELVINK",
+      "VB_VINK"
+     ]
+    }
+   ],
+   "similar": [
+    {
+     "id": "sp035",
+     "why": "Op afstand lijken beide op een vink met lichte vleugeltekening. In zijaanzicht is het verschil in snavelbouw groot.",
+     "sources": [
+      "VB_APPELVINK",
+      "VB_VINK"
+     ]
+    }
+   ],
+   "detail": [
+    {
+     "text": "Het mannetje heeft een warme bruine kop, donkere keelvlek en donkere slagpennen.",
+     "sources": [
+      "VB_APPELVINK",
+      "NAT_APPELVINK"
+     ],
+     "topic": "geslacht"
+    },
+    {
+     "text": "Een juveniel heeft een gelige keel en gevlekte of gebandeerde onderzijde. De kop en snavel zijn al opvallend fors.",
+     "sources": [
+      "VB_APPELVINK",
+      "NAT_APPELVINK"
+     ],
+     "topic": "leeftijd"
+    },
+    {
+     "text": "Het vrouwtje is doorgaans valer, met grijs op de gevouwen slagpennen waar die bij het mannetje donkerder ogen.",
+     "sources": [
+      "VB_APPELVINK",
+      "NAT_APPELVINK"
+     ],
+     "topic": "geslacht"
+    }
+   ],
+   "voice": [
+    {
+     "text": "Een korte, scherpe tik die ook klinkt wanneer de vogel overvliegt.",
+     "sources": [
+      "VB_APPELVINK"
+     ],
+     "kind": "roep"
+    }
+   ],
+   "basis": {
+    "biometrics": [
+     {
+      "field": "length",
+      "unit": "cm",
+      "display": "ca. 17–18 cm",
+      "values": [
+       {
+        "source": "VB_APPELVINK",
+        "min": 16,
+        "max": 18
+       },
+       {
+        "source": "NAT_APPELVINK",
+        "min": 18,
+        "max": 18
+       }
+      ],
+      "note": "Afgeronde onder- en bovengrens op basis van de twee bronwaarden."
+     }
+    ]
+   },
+   "habitat": [
+    {
+     "text": "Oud loofbos en gemengd bos, boomrijke parken en andere plekken met hoge bomen en voldoende zaden.",
+     "sources": [
+      "VB_APPELVINK",
+      "SOV_APPELVINK"
+     ],
+     "kind": "nederland"
+    }
+   ],
+   "status": [
+    {
+     "text": "Nederlandse broedvogel en deels standvogel. In het voor- en najaar komt ook doortrek voor.",
+     "sources": [
+      "VB_APPELVINK",
+      "SOV_APPELVINK"
+     ],
+     "kind": "voorkomen"
+    }
+   ],
+   "life": [
+    {
+     "text": "Eet vooral harde zaden en pitten. Ook bessen, knoppen en in het broedseizoen insecten.",
+     "sources": [
+      "VB_APPELVINK"
+     ],
+     "kind": "voedsel"
+    },
+    {
+     "text": "Maakt een komnest van takjes in een boom, vaak op een zijtak of in een takvork.",
+     "sources": [
+      "VB_APPELVINK"
+     ],
+     "kind": "broeden"
+    },
+    {
+     "text": "Veel Nederlandse vogels blijven in de omgeving. In het najaar trekken ook vogels uit andere delen van Europa door.",
+     "sources": [
+      "VB_APPELVINK"
      ],
      "kind": "trek"
     }
