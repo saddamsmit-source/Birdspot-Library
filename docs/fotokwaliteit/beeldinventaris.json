@@ -4809,6 +4809,47 @@
    "airborne": false,
    "source": "Visuele controle K06 fase 4 (2026-11-12)",
    "note": "Jonge Appelvink met een gelige keel, gevlekte onderzijde en zware snavel."
+  },
+  "/assets/species/plumage/sp051-hero-male.webp": {
+   "refs": [
+    "sp051 GUIDE_PLUMAGE.adult_m",
+    "sp051 GUIDE_HEROES"
+   ],
+   "sha1": "82f86293d1ac7aa612be53b37f1835c146ba9ae0",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K07 fase 1 (2026-11-12)",
+   "note": "Volwassen mannetje Zwarte Roodstaart volledig in zijaanzicht, met donkere borst, lichte vleugelvlek en roestrode staart."
+  },
+  "/assets/species/plumage/sp051-juv.webp": {
+   "refs": [
+    "sp051 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "0184c0c6b638be643bf08b6c434368c0b9a3c457",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K07 fase 1 (2026-11-12)",
+   "note": "Jonge Zwarte Roodstaart op een stenen rand met een grijsbruine borst en roestrode staart."
+  },
+  "/assets/species/plumage/sp177-adult_f.webp": {
+   "refs": [
+    "sp177 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "d4b50b9f34d10ddd844013bf08f5446f28d0215e",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K07 fase 1 (2026-11-12)",
+   "note": "Vrouwtje Bonte Vliegenvanger in zijaanzicht met bruine bovendelen, een licht vleugelveld en lichte onderzijde."
+  },
+  "/assets/species/plumage/sp177-juv.webp": {
+   "refs": [
+    "sp177 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "12aca2498f3c60ca490f0c5c2495f5a343a8369f",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K07 fase 1 (2026-11-12)",
+   "note": "Jonge Bonte Vliegenvanger met een lichte vleugeltekening en gevlekte kop en bovendelen, volledig in zijaanzicht."
   }
  }
 }

@@ -1104,7 +1104,7 @@ export const GUIDE_COMPARISONS = [
     label: 'Gekraagde en Zwarte Roodstaart · vrouwtje',
     birds: [
       {id: 'sp178', source: 'gekraagde-roodstaart', plumage: 'adult_f', marks: 'Grijsbruine rug en doorgaans warmere beige onderzijde.'},
-      {id: 'sp051', source: 'zwarte-roodstaart', marks: 'Koeler grijsbruin kleed, doorgaans met minder warme onderzijde.'},
+      {id: 'sp051', source: 'zwarte-roodstaart', plumage: 'adult_f', marks: 'Koeler grijsbruin kleed, doorgaans met minder warme onderzijde.'},
     ],
     rows: [
       {label: 'Onderzijde', values: ['Vaak warmer beige', 'Meestal koeler grijsbruin']},
@@ -1147,6 +1147,18 @@ export const GUIDE_COMPARISONS = [
       {label: 'Vleugel', values: ['Brede lichte band', 'Twee lichte strepen']},
     ],
     tip: 'De kleur van de Appelvinksnavel kan per seizoen verschillen. Vergelijk de vorm in zijaanzicht.',
+  },
+  {
+    label: 'Roodborsttapuit en Roodborst · volwassen',
+    birds: [
+      {id: 'sp053', source: 'roodborsttapuit', plumage: 'adult_m', marks: 'Mannetje met donkere kop, witte zijhals en oranje borst.'},
+      {id: 'sp050', source: 'roodborst', marks: 'Oranje loopt door over keel en gezicht. Bovendelen bruin.'},
+    ],
+    rows: [
+      {label: 'Oranje vlak', values: ['Vooral op de borst', 'Borst, keel en gezicht']},
+      {label: 'Kop en hals', values: ['Zwarte kop en witte zijhals bij het mannetje in broedkleed', 'Oranje gezicht met bruinige kruin']},
+    ],
+    tip: 'Kijk bij een oranje borst ook naar het gezicht en de zijhals.',
   },
   {
     label: 'Scholekster en Kluut · veldkenmerken',
