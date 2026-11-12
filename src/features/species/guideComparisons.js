@@ -22,7 +22,37 @@ export const GUIDE_COMPARISONS = [
         "marks": "Lichte vlek aan de bovensnavelbasis; vleugel meestal egaler. Roep explosief pstie-toe; zang korter en metaalachtig tiu-tiu."
       }
     ],
-    "tip": "Luister naar roep of zang en controleer meerdere details. Kapglans en grootte van de keelvlek zijn op zichzelf onbetrouwbaar; bij pas uitgevlogen vogels zijn sommige snavel- en kopkenmerken nog minder bruikbaar."
+    rows: [
+      {label: 'Bovensnavelbasis', values: ['Meestal geheel donker', 'Vaak een lichte vlek aan de basis']},
+      {label: 'Gevouwen vleugel', values: ['Vaak een licht vleugelveld', 'Meestal vrij egaal']},
+      {label: 'Contactroep', values: ['Nasaal en langgerekt', 'Kort, explosief en dalend']},
+    ],
+    "tip": "Luister naar de roep en bekijk de bovensnavelbasis bij egaal licht. Bij pas uitgevlogen vogels kunnen snavel- en kopkenmerken minder duidelijk zijn."
+  },
+  {
+    label: 'Zwarte Mees en Koolmees · nek en vleugel',
+    birds: [
+      {id: 'sp174', source: 'zwarte-mees', marks: 'Klein, met een lichte nekvlek en twee lichte vleugelbandjes.'},
+      {id: 'sp029', source: 'koolmees', plumage: 'adult_m', marks: 'Gele onderzijde met donkere lengtestreep en één lichte vleugelband.'},
+    ],
+    rows: [
+      {label: 'Nek', values: ['Opvallende lichte nekvlek', 'Geen vergelijkbare witte nekvlek']},
+      {label: 'Vleugel', values: ['Twee lichte bandjes', 'Eén lichte band']},
+      {label: 'Onderzijde', values: ['Bleek, zonder doorlopende donkere middenstreep', 'Geel met donkere middenstreep']},
+    ],
+    tip: 'Bekijk de nek schuin van achteren. Op een frontale foto is de nekvlek soms verborgen.',
+  },
+  {
+    label: 'Staartmees en Zwarte Mees · staart en kop',
+    birds: [
+      {id: 'sp034', source: 'staartmees', marks: 'Zeer lange staart en lichte kop met meestal donkere zijkruinstrepen.'},
+      {id: 'sp174', source: 'zwarte-mees', marks: 'Kortere staart, zwarte kop en een duidelijke lichte nekvlek.'},
+    ],
+    rows: [
+      {label: 'Staart', values: ['Langer dan het lichaam', 'Duidelijk korter']},
+      {label: 'Kop', values: ['Overwegend licht, vaak met donkere zijkruinstrepen', 'Zwarte kap, lichte wang en lichte nekvlek']},
+    ],
+    tip: 'Kijk in zijaanzicht naar de hele staart. Van voren lijkt die veel korter.',
   },
   {
     label: 'Ringmus en Huismus · kruin en wang',

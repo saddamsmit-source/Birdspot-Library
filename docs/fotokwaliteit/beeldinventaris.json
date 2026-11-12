@@ -4689,6 +4689,26 @@
    "airborne": false,
    "source": "Visuele controle na eigenaarfeedback Kluut (2026-11-12)",
    "note": "Volwassen Kluut in zijaanzicht, met een vrij zichtbare, omhooggebogen snavel, zwart-wit verenkleed en lange poten in ondiep water."
+  },
+  "/assets/species/plumage/sp174-juv.webp": {
+   "refs": [
+    "sp174 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "9223991044e2f2a7159a20e635085a0cdaaae2f3",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 2 (2026-11-12)",
+   "note": "Jonge Zwarte Mees op een tak met een gelige wang, lichte nekvlek en twee lichte vleugelbandjes."
+  },
+  "/assets/species/plumage/sp032-juv.webp": {
+   "refs": [
+    "sp032 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "7cfa17b50496f8de5fc8ff242a8f848c2db478f8",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 2 (2026-11-12)",
+   "note": "Jonge Glanskop op een tak tussen bladeren, met een doffe donkere kap, lichte wang en kleine keelvlek."
   }
  }
 }
