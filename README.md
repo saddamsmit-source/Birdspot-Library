@@ -132,7 +132,7 @@ als naslagwerk erbij.
 - **Openbare reviewversie**: [Birdspot op GitHub Pages](https://saddamsmit-source.github.io/Birdspot-Library/)
   wordt gepubliceerd vanaf `preview/birdspot-review`. De appversie komt uit
   `APP_VERSION` in `sw.js`. Vercel Git-deploys zijn uitgeschakeld. Zie de
-  [releasenotities voor 1.27.5](docs/release/RELEASE_1.27.5.md).
+  [releasenotities voor 1.27.6](docs/release/RELEASE_1.27.6.md).
 - **Geen accounts, geen betaalde diensten, geen eigen backend.**
 - Fotobronnen voor de gids: diverse, per foto vastgelegd met auteur, licentie
   en bron-SHA-1 (zie de bronaudit-commits in de git-historie).
