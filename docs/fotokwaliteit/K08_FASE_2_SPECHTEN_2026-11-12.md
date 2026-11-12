@@ -4,7 +4,7 @@ Datum: 12 november 2026 · bronniveau: PR #163 op `54c939d6b351800ba5dc20fb6cdcc
 **Status: PARTIALLY TESTED / CONCEPT. Geen release of volledige soortvrijgave.**
 
 ## Reikwijdte en methode
-Deze ronde beperkt zich uitdrukkelijk tot `sp017` Kleine Bonte Specht en `sp018` Zwarte Specht. De inhoud van de 7 lokale beeldbestanden is op de exacte referentie-SHA afzonderlijk zichtbaar geopend. De gidsregistratie is uit `assets/species/credits.json` en `assets/species/field-guide-media.json` gelezen. De kennisprofielen komen uitsluitend uit inhoudelijk geraadpleegde soortbronnen, niet uit alleen een foto- of bestandsnaam. Onzekere eigenschappen blijven ondersteunend of open. De echte Android-PWA, lokale browser en totaalzicht per kaart zijn in deze ronde niet opnieuw bediend.
+Deze ronde beperkt zich uitdrukkelijk tot `sp017` Kleine Bonte Specht en `sp018` Zwarte Specht. De inhoud van de 8 lokale beeldbestanden is op de exacte referentie-SHA afzonderlijk zichtbaar geopend. De gidsregistratie is uit `assets/species/credits.json` en `assets/species/field-guide-media.json` gelezen. De kennisprofielen komen uitsluitend uit inhoudelijk geraadpleegde soortbronnen, niet uit alleen een foto- of bestandsnaam. Onzekere eigenschappen blijven ondersteunend of open. De echte Android-PWA, lokale browser en totaalzicht per kaart zijn in deze ronde niet opnieuw bediend.
 
 ## Kleine Bonte Specht — sp017
 | Lokaal bestand | Rol | Directe beeldobservatie | Bron/rechten | Beoordeling |
