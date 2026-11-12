@@ -129,11 +129,9 @@ als naslagwerk erbij.
 
 - **CDN (alleen online nodig)**: cdnjs — Leaflet, Leaflet.markercluster,
   Suncalc.
-- **Hosting/deploy**: nog niet definitief gekozen. Een `vercel.json` met
-  `git.deploymentEnabled: false` staat al klaar in de K7-featurelijn (bewust
-  geen automatische git-deploys); Kevin test tot nu toe lokaal
-  (`localhost`, testprofiel, fictieve data) en beslist zelf wanneer er voor
-  het eerst online getest of live gegaan wordt.
+- **Openbare reviewversie**: [Birdspot op GitHub Pages](https://saddamsmit-source.github.io/Birdspot-Library/)
+  wordt gepubliceerd vanaf `preview/birdspot-review`. De appversie komt uit
+  `APP_VERSION` in `sw.js`. Vercel Git-deploys zijn uitgeschakeld.
 - **Geen accounts, geen betaalde diensten, geen eigen backend.**
 - Fotobronnen voor de gids: diverse, per foto vastgelegd met auteur, licentie
   en bron-SHA-1 (zie de bronaudit-commits in de git-historie).
@@ -179,8 +177,9 @@ als naslagwerk erbij.
   op basis van gewijzigde paden (`.github/workflows/*.yml`).
 - Visuele controle: screenshots op 390 px (`tests/screenshots/`), bijgewerkt
   per relevante testrun.
-- Livegang: alleen na Kevins expliciete "zet live" (Handbook §1.6); tot die
-  tijd blijft alles op featurebranches met pull requests richting `main`.
+- Livegang vereist Kevins expliciete "zet live" en groene releasecontroles.
+  Wijzigingen voor de openbare reviewversie gaan via een release-PR naar
+  `preview/birdspot-review`. Een release naar `main` heeft eigen productiecriteria.
 
 ## Draaien en testen
 
@@ -211,4 +210,4 @@ Geen bekende afwijkingen op dit moment.
   Index en de werkelijke repo-status (Handbook §4.11) is nog niet apart
   uitgevoerd.
 - Supportmatrix (browsers/toestellen, Handbook §4.5) nog niet vastgelegd.
-- Hostingkeuze en livegang-moment: nog niet bepaald, ligt bij Kevin.
+- Definitieve productiehosting en de fysieke toesteltest staan open.

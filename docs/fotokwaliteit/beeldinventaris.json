@@ -4239,6 +4239,256 @@
    "airborne": false,
    "source": "Beeldinspectie 12-11-2026",
    "note": "Juveniel in zijaanzicht aan de waterkant."
+  },
+  "/assets/species/plumage/sp100-juv.webp": {
+   "refs": [
+    "sp100 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "71d6b7af3774d80e6261d714caf7ee9d50d3c894",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Wulp in gras, zonder vlieghouding."
+  },
+  "/assets/species/plumage/sp101-juv.webp": {
+   "refs": [
+    "sp101 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "245abcbc612797bf1f2139d572dde175bf804482",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Grutto staat in ondiep water."
+  },
+  "/assets/species/sp148.webp": {
+   "refs": [
+    "sp148 GUIDE_PHOTOS"
+   ],
+   "sha1": "4b80a4771650896e577dd87bd59de9daba48c591",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Regenwulp staat op een steen."
+  },
+  "/assets/species/sp149.webp": {
+   "refs": [
+    "sp149 GUIDE_PHOTOS"
+   ],
+   "sha1": "4c58b96f156e55304cca2274a8ffa695d52ea2bb",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Rosse Grutto staat bij de waterlijn."
+  },
+  "/assets/species/plumage/sp101-hero-male.webp": {
+   "refs": [
+    "sp101 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "7eaee6dc1bff268b7de6a412fd57c39bc2d777cf",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Staande Grutto in ondiep water."
+  },
+  "/assets/species/plumage/sp112-hero-male.webp": {
+   "refs": [
+    "sp112 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "e6fd37727bc0305bbc2a54a32b3fb5e47b192727",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Mannetje Spreeuw in broedkleed in zijaanzicht, met een korte staart, gele snavel en metaalglans."
+  },
+  "/assets/species/plumage/sp112-adult_f.webp": {
+   "refs": [
+    "sp112 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "e6d144c6b26c24478d5da09935414ca8534fa93f",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Vrouwtje Spreeuw op een boomwortel, met lichte spikkels en gele snavel."
+  },
+  "/assets/species/plumage/sp112-juv.webp": {
+   "refs": [
+    "sp112 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "28cfadd6586bec7cf9b549e3f43edbae8d6c2946",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Spreeuw met grijsbruine kop, donkere snavel en een weinig contrastrijk kleed."
+  },
+  "/assets/species/plumage/sp152-juv.webp": {
+   "refs": [
+    "sp152 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "002adcb3069f9bb33f6032a103902ff0dc5a5b61",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Drieteenstrandloper op kiezels met donkere bovenveren, lichte veerranden en een korte zwarte snavel."
+  },
+  "/assets/species/plumage/sp165-juv.webp": {
+   "refs": [
+    "sp165 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "24541ebccd6f9e8d0eb0d3348b0ae8e28115e26b",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Visdief op een paal met licht voorhoofd, donkere achterkap en bruin getekende bovendelen."
+  },
+  "/assets/species/sp153.webp": {
+   "refs": [
+    "sp153 GUIDE_PHOTOS"
+   ],
+   "sha1": "f8f84c6b4132946f874588b91c9ae4415b094101",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Bonte Strandloper in winterkleed bij het water, met een snavel die aan het uiteinde omlaag buigt."
+  },
+  "/assets/species/plumage/sp059-adult_f.webp": {
+   "refs": [
+    "sp059 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "5a778b5f20e86e875d1734d8546c8e34f946195a",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Vrouwtje Zwartkop met roodbruine kruin en grijsbruine bovendelen, volledig in zijaanzicht."
+  },
+  "/assets/species/plumage/sp059-juv.webp": {
+   "refs": [
+    "sp059 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "1614708cb771f2f10326427bb25eeff20ff33b62",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Zwartkop op een tak met bruine kruin en lichtgrijze onderzijde."
+  },
+  "/assets/species/plumage/sp061-hero-male.webp": {
+   "refs": [
+    "sp061 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "436d67f3e03365141d5e181284b98d1b2b972d99",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Mannetje Grasmus in zijaanzicht, met grijze kop, witte keel, warme vleugelranden en volledige staart."
+  },
+  "/assets/species/plumage/sp061-adult_f.webp": {
+   "refs": [
+    "sp061 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "80acc70dcff797b32f4e4975c097e43f0dce38df",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Vrouwtje Grasmus in ruige begroeiing, met bruine kop, lichte keel en warme vleugelranden."
+  },
+  "/assets/species/plumage/sp061-juv.webp": {
+   "refs": [
+    "sp061 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "a866e9915ea40206d3c4934c44cdb40207c6eea5",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Grasmus op een stengel, met bruine kop, donkere iris en warme roestbruine vleugelranden."
+  },
+  "/assets/species/plumage/sp064-hero-male.webp": {
+   "refs": [
+    "sp064 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "6eb8f9113b0c7153f81dde9965d510da70d69dd6",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Mannetje Vuurgoudhaan met opvallend witte wenkbrauw, donkere oogstreep en een gekleurde kruin."
+  },
+  "/assets/species/plumage/sp064-juv.webp": {
+   "refs": [
+    "sp064 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "730279615ce74e33d2e500ffc7e541b13908fde0",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Vuurgoudhaan in zijaanzicht, met lichte vleugelstreep en zonder felle kruinstreep."
+  },
+  "/assets/species/sp062.webp": {
+   "refs": [
+    "sp062 GUIDE_PHOTOS"
+   ],
+   "sha1": "879f1042fcde0fc4eabbeb8ea5abc41a02005d72",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Braamsluiper met lichte keel, grijze kop en donkerdere wang op een hek."
+  },
+  "/assets/species/plumage/sp069-adult_f.webp": {
+   "refs": [
+    "sp069 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "5fc7ffbd04905de233c9d5aeb6f2772c0476dcaf",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Vrouwtje Gele Kwikstaart op een lage verhoging. De bleke wenkbrauw, olijfbruine rug en gele onderzijde zijn zichtbaar."
+  },
+  "/assets/species/plumage/sp069-juv.webp": {
+   "refs": [
+    "sp069 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "df2d78107a7d61acab25c4665212e0dbedf0df24",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Gele Kwikstaart in zijaanzicht op een steen, met bleke onderzijde, lichte vleugelstrepen en lange staart."
+  },
+  "/assets/species/plumage/sp106-hero-male.webp": {
+   "refs": [
+    "sp106 GUIDE_PLUMAGE.adult_m"
+   ],
+   "sha1": "10b975366cb28d031f4d566ddc0da9a71500f9f8",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Mannetje Patrijs met oranjebruin gezicht, grijze borst en gebandeerde flanken in een grasrand."
+  },
+  "/assets/species/plumage/sp106-adult_f.webp": {
+   "refs": [
+    "sp106 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "869c49048bfa1ed4f5282667852990edd070b4c7",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Vrouwtje Patrijs in zijaanzicht tussen gras, met gebandeerde flank en lichte lengte- en dwarstekening op de schouderveren."
+  },
+  "/assets/species/plumage/sp106-juv.webp": {
+   "refs": [
+    "sp106 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "a9feb5b1bcd4996024a10f2ba0d48476411cb2eb",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Twee jonge Patrijzen op een stenig pad, met bruin gestreepte veren en een gestreepte kop zonder egaal oranjebruin gezicht."
+  },
+  "/assets/species/sp257.webp": {
+   "refs": [
+    "sp257 GUIDE_PHOTOS"
+   ],
+   "sha1": "85b3029d8d93627c4c8cb4b463f61c4bc59ed631",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Bijeneter op een tak met gele keel, blauwgroene onderzijde en licht gebogen snavel."
   }
  }
 }

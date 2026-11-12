@@ -782,7 +782,7 @@ export const GUIDE_COMPARISONS = [
     label: 'Grote Gele Kwikstaart en Gele Kwikstaart · volwassen',
     birds: [
       {id: 'sp288', source: 'grote-gele-kwikstaart', plumage: 'adult_m', marks: 'Grijze mantel, opvallend lange staart en bruinroze poten. Vaak aan stromend water.'},
-      {id: 'sp069', source: 'gele-kwikstaart', plumage: 'adult_m', textOnly: true, marks: 'Doorgaans olijfgroene mantel en donkere poten. Vaak op akkers of in open grasland.'},
+      {id: 'sp069', source: 'gele-kwikstaart', plumage: 'adult_m', marks: 'Doorgaans olijfgroene mantel en donkere poten. Vaak op akkers of in open grasland.'},
     ],
     tip: 'Let op mantel, poten en staartverhouding. Gebruik de omgeving als extra aanwijzing.',
   },
@@ -843,10 +843,10 @@ export const GUIDE_COMPARISONS = [
   {
     label: 'Visdief en Noordse Stern · broedkleed',
     birds: [
-      {id: 'sp165', source: 'visdief', plumage: 'breeding', marks: 'Langere oranjerode snavel, meestal met zwarte punt. De poten zijn langer.'},
-      {id: 'sp166', source: 'noordse-stern', plumage: 'breeding', marks: 'Kortere, doorgaans geheel bloedrode snavel en zeer korte poten.'},
+      {id: 'sp165', source: 'visdief', plumage: 'breeding', marks: 'Langere oranjerode snavel, meestal met zwarte punt. In zit langere poten. In vlucht vaak een donkere wig op de buitenste handpennen.'},
+      {id: 'sp166', source: 'noordse-stern', plumage: 'breeding', marks: 'Kortere, doorgaans geheel bloedrode snavel en zeer korte poten. In vlucht bij goed licht meer doorschijnende handpennen.'},
     ],
-    tip: 'Gebruik snavel en poten samen. Buiten het broedkleed veranderen kleuren en werkt deze combinatie minder goed.',
+    tip: 'Gebruik snavel en poten in zit. Bekijk in vlucht de handpennen. De lichtval bepaalt hoeveel doorschijnendheid je ziet.',
   },
   {
     label: 'Grote Stern en Visdief · broedkleed',
@@ -1062,6 +1062,62 @@ export const GUIDE_COMPARISONS = [
       {id: 'sp143', source: 'kluut', marks: 'Dunne, omhooggebogen donkere snavel. Overwegend wit met zwarte tekening en lange poten.'},
     ],
     tip: 'Vergelijk de snavelvorm en pootlengte. De kleuren zijn lastiger bij tegenlicht.',
+  },
+  {
+    label: 'Wulp en Regenwulp · kop en snavel',
+    birds: [
+      {id: 'sp100', source: 'wulp', marks: 'Relatief egale kruin en een lange, gelijkmatig gebogen snavel.'},
+      {id: 'sp148', source: 'regenwulp', marks: 'Opvallende lichte middenkruinstreep tussen donkere kruinbanden. Kortere snavel met sterkere kromming bij de punt.'},
+    ],
+    tip: 'Kijk naar koptekening én snavel. Bij jonge Wulpen is de snavel vaak korter.',
+  },
+  {
+    label: 'Grutto en Rosse Grutto · veldkenmerken',
+    birds: [
+      {id: 'sp101', source: 'grutto', marks: 'Bijna rechte snavel en doorgaans langere poten. Brede witte vleugelstreep en zwarte staartband in vlucht.'},
+      {id: 'sp149', source: 'rosse-grutto', marks: 'Licht omhooggebogen snavel. In vlucht een gebandeerde staart en geen brede witte vleugelstreep.'},
+    ],
+    tip: 'Bij een staande vogel helpt de snavelvorm. Bekijk in vlucht ook de staart en vleugels.',
+  },
+  {
+    label: 'Spreeuw en Merel · volwassen',
+    birds: [
+      {id: 'sp112', source: 'spreeuw', plumage: 'adult_m', marks: 'Korte staart en spitse snavel. Het donkere kleed heeft vaak metaalglans of lichte spikkels.'},
+      {id: 'sp045', source: 'merel', plumage: 'adult_m', marks: 'Langere staart. Het mannetje is effen zwart, met een opvallende gele tot oranje oogring.'},
+    ],
+    tip: 'Vergelijk staartlengte en oogring. Tegenlicht kan de glans van een Spreeuw verhullen.',
+  },
+  {
+    label: 'Drieteenstrandloper en Bonte Strandloper · winterkleed',
+    birds: [
+      {id: 'sp152', source: 'drieteenstrandloper', marks: 'Compact, doorgaans bleek, met een korte, vrijwel rechte snavel en vaak een donkere schoudervlek.'},
+      {id: 'sp153', source: 'bonte-strandloper', marks: 'Vaak grijzer bruin. De relatief lange snavel buigt aan het uiteinde omlaag.'},
+    ],
+    tip: 'Bekijk de snavel volledig van opzij. De achterteen ontbreekt bij de Drieteenstrandloper en is vooral van dichtbij bruikbaar.',
+  },
+  {
+    label: 'Zwartkop en Tuinfluiter · kop en zang',
+    birds: [
+      {id: 'sp059', source: 'zwartkop', marks: 'Afgetekend zwart of bruin petje. De zang eindigt vaak met enkele heldere, luide fluittonen.'},
+      {id: 'sp060', source: 'tuinfluiter', marks: 'Egaler hoofd zonder petje. De zang gaat doorgaans vloeiender door.'},
+    ],
+    tip: 'Bekijk de hele kruin in goed licht en luister naar een volledige strofe.',
+  },
+  {
+    label: 'Grasmus en Braamsluiper · vleugel en zang',
+    birds: [
+      {id: 'sp061', source: 'grasmus', plumage: 'adult_m', marks: 'Warme roestbruine randen aan de vleugelveren. Vaak een wisselend, krassend zangriedeltje.'},
+      {id: 'sp062', source: 'braamsluiper', marks: 'Doorgaans grijzere vleugels en een donkerder wang. De zang eindigt vaak in een ratel.'},
+    ],
+    tip: 'Beide soorten hebben een lichte keel. Vergelijk de gevouwen vleugel en luister naar meerdere strofen.',
+  },
+  {
+    label: 'IJsvogel en Bijeneter · keel en snavel',
+    birds: [
+      {id: 'sp075', source: 'ijsvogel', marks: 'Witte keel, roestoranje onderzijde, rechte snavel en korte staart.'},
+      {id: 'sp257', source: 'bijeneter', marks: 'Gele keel, blauwgroene onderzijde, licht gebogen snavel en langere staart.'},
+    ],
+    tip: 'Bekijk de keelkleur en snavelvorm. In tegenlicht helpt vooral de verhouding tussen staart en lichaam.',
   },
 ];
 

@@ -1,18 +1,22 @@
 {
   "_meta": {
     "batch": "M5",
-    "phase": 2,
+    "phase": 4,
     "date": "2026-11-11",
-    "title": "K04 fases 1 en 2",
+    "title": "K04 fases 1 tot en met 4",
     "reviewer": "ChatGPT (Codex), beeldinspectie en primaire broncontrole. Onafhankelijke review open.",
     "basis": "M4 fase 4 op 3fbfc7a, K04-batchplan en Birdspot-kwaliteitsnorm",
     "phaseReports": [
       "../M5_FASE_1_2026-11-11.md",
-      "../M5_FASE_2_2026-11-12.md"
+      "../M5_FASE_2_2026-11-12.md",
+      "../M5_FASE_3_2026-11-12.md",
+      "../M5_FASE_4_2026-11-12.md"
     ],
     "phaseDates": {
       "1": "2026-11-11",
-      "2": "2026-11-12"
+      "2": "2026-11-12",
+      "3": "2026-11-12",
+      "4": "2026-11-12"
     }
   },
   "species": {
@@ -246,6 +250,247 @@
       "sexPolicy": "Neutrale labels bij veldfoto’s. Onderzoek gebruikt onder meer gemeten snavelkenmerken.",
       "uncertain": [
         "Spanwijdte verschilt tussen de eerdere gidswaarde en de Nederlandse soortgids. Zie kennisprofiel."
+      ],
+      "date": "2026-11-12"
+    },
+    "sp100": {
+      "assets": {
+        "/assets/species/sp100.webp": {
+          "role": "Hoofdfoto",
+          "content": "Wulp in ondiep water met lange gebogen snavel en gestreept kleed.",
+          "sexAge": "Volwassen type. Geslacht onbekend.",
+          "quality": "Volledig zijaanzicht.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp100-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Wulp in gras, met gestreepte bovendelen en een korte snavel.",
+          "sexAge": "Research-grade waarneming met annotatie Juvenile. Kenmerken in het bestand visueel getoetst. Geslacht onbekend.",
+          "quality": "Jonge vogel met korte snavel. De kop is minder scherp dan de rug.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp100-flight.webp": {
+          "role": "In vlucht",
+          "content": "Wulp vrij boven water, met opgeheven vleugels en neerwaarts gebogen snavel.",
+          "sexAge": "Geslacht onbekend.",
+          "quality": "Snavel, zijprofiel en getekende vleugel zichtbaar.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Kennisprofiel, juvenielenfoto en vergelijking met Regenwulp toegevoegd. Spanwijdte uit twee bronbereiken berekend."
+      ],
+      "missing": [],
+      "wishes": [
+        "Scherper juveniel zijaanzicht met zicht op alle poten."
+      ],
+      "sexPolicy": "Gebruik neutrale fotolabels. Vrouwtjes hebben gemiddeld langere snavels, met overlap.",
+      "uncertain": [
+        "Lengtebereiken van Vogelbescherming en Naturalis verschillen. Het eerdere Nederlandse bereik is behouden."
+      ],
+      "date": "2026-11-12"
+    },
+    "sp101": {
+      "assets": {
+        "/assets/species/plumage/sp101-hero-male.webp": {
+          "role": "Hoofdfoto (Mannetje)",
+          "content": "Grutto in zijaanzicht met lange vrijwel rechte snavel. Mannetje in broedkleed volgens de fotograaf.",
+          "sexAge": "De fotograaf duidt dit individuele exemplaar aan als mannetje in broedkleed. Opname in mei. De foto toont de snavel, lichaamsbouw en het kleed.",
+          "quality": "Volledig, rustig zijaanzicht met zicht op snavel en kleed.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/sp101.webp": {
+          "role": "Overige herkenningsfoto",
+          "content": "Grutto in gras met lange vrijwel rechte snavel en warme hals.",
+          "sexAge": "Volwassen type. Geslacht onbekend.",
+          "quality": "Volledige vogel in een rustig zijaanzicht.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp101-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Grutto in ondiep water. Warme halskleur en lichte randen aan de donkere bovenveren.",
+          "sexAge": "Research-grade waarneming met annotatie Juvenile. Kenmerken in het bestand visueel getoetst. Geslacht onbekend.",
+          "quality": "Snavel, veerranden en poten vrij zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp101-flight.webp": {
+          "role": "In vlucht",
+          "content": "Grutto vrij in de lucht met brede witte vleugelstrepen en zwarte staartband.",
+          "sexAge": "Geslacht onbekend.",
+          "quality": "Diagnostische vleugel- en staartkenmerken zichtbaar.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Kennisprofiel, juvenielenfoto en vergelijking met Rosse Grutto toegevoegd. Spanwijdte uit twee bronbereiken berekend.",
+        "Volwassen mannetje volgens de oorspronkelijke fotograaf als hoofdfoto. Het vorige portret staat bij Overige."
+      ],
+      "missing": [
+        "Foto van een met bronbewijs bevestigd volwassen vrouwtje."
+      ],
+      "wishes": [],
+      "sexPolicy": "De hoofdfoto heeft een geslachtsaanduiding van de fotograaf. Andere foto’s houden een neutraal label.",
+      "uncertain": [
+        "Voor de lengte is één vergelijkbare bronband opgenomen. Het eerdere bereik is behouden en het verschil staat in het profiel.",
+        "Bekeken vrouwtjeskandidaten hebben onvoldoende bewijs voor het geslacht van het afgebeelde individu."
+      ],
+      "date": "2026-11-12"
+    },
+    "sp102": {
+      "assets": {
+        "/assets/species/sp102.webp": {
+          "role": "Hoofdfoto",
+          "content": "Tureluur in ondiep water met roodoranje poten en rode snavelbasis.",
+          "sexAge": "Volwassen winterkleed. Geslacht onbekend.",
+          "quality": "Rustig zijaanzicht met zicht op de poten.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp102-breeding.webp": {
+          "role": "Verenkleed (Broedkleed)",
+          "content": "Tureluur op paal met bruin getekende rug en roodoranje poten.",
+          "sexAge": "Broedkleed. Geslacht onbekend.",
+          "quality": "Vogel zichtbaar in zijaanzicht.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp102-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Tureluur met lichtere veerranden en gelig oranje poten.",
+          "sexAge": "iNaturalist-waarneming heeft de annotatie Juvenile. Geslacht onbekend.",
+          "quality": "Potenkleur is goed zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp102-flight.webp": {
+          "role": "In vlucht",
+          "content": "IJslandse Tureluur vrij in de lucht met zichtbare witte vleugelachterrand en roodoranje poten.",
+          "sexAge": "Ondersoort robusta volgens fotobron. Geslacht onbekend.",
+          "quality": "Volledige vogel tegen rustige blauwe lucht.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Kennisprofiel en vergelijkingskenmerken toegevoegd. Eerdere vergelijkingstabbladen en vier beelden gecontroleerd."
+      ],
+      "missing": [],
+      "wishes": [],
+      "sexPolicy": "Mannetje en vrouwtje lijken sterk op elkaar. Gebruik neutrale labels.",
+      "uncertain": [],
+      "date": "2026-11-12"
+    },
+    "sp112": {
+      "assets": {
+        "/assets/species/plumage/sp112-hero-male.webp": {
+          "role": "Hoofdfoto (Mannetje)",
+          "content": "Mannetje Spreeuw in broedkleed in zijaanzicht, met een korte staart, gele snavel en metaalglans.",
+          "sexAge": "De fotograaf benoemt dit individu als mannetje in broedkleed. De snavel en donkere iris zijn zichtbaar.",
+          "quality": "Volledig zijaanzicht in natuurlijk licht.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp112-adult_f.webp": {
+          "role": "Verenkleed (Vrouwtje)",
+          "content": "Vrouwtje Spreeuw op een boomwortel, met lichte spikkels en gele snavel.",
+          "sexAge": "De fotograaf benoemt dit individu als vrouwtje. De lichte snavelbasis is zichtbaar. Het aantal stippen op zichzelf bepaalt het geslacht niet.",
+          "quality": "Volledig zijaanzicht met zicht op snavel en poten.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp112-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Spreeuw met grijsbruine kop, donkere snavel en een weinig contrastrijk kleed.",
+          "sexAge": "De fotograaf benoemt een juveniel. De bruine kop en donkere snavel ondersteunen het leeftijdslabel. Geslacht onbekend.",
+          "quality": "Kop en snavel duidelijk in beeld.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp112-flight.webp": {
+          "role": "In vlucht",
+          "content": "Eén Spreeuw met gespreide spitse vleugels en korte staart.",
+          "sexAge": "Geslacht onbekend.",
+          "quality": "Vrije vlucht tegen een blauwe lucht.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/sp112.webp": {
+          "role": "Overige herkenningsfoto",
+          "content": "Volwassen Spreeuw op tak met gele snavel en glanzend kleed.",
+          "sexAge": "Volwassen type, geslacht niet vastgesteld.",
+          "quality": "Ouder portret met zicht op borst en keel.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Hoofdfoto van een mannetje, foto van vrouwtje, juvenielenfoto, kennisprofiel en vergelijking met Merel toegevoegd.",
+        "De snavelkleur van een juveniel gecorrigeerd."
+      ],
+      "missing": [],
+      "wishes": [],
+      "sexPolicy": "Geslachtslabels voor twee bronbenoemde individuen. De bestaande vluchtfoto heeft een neutraal label.",
+      "uncertain": [],
+      "date": "2026-11-12"
+    },
+    "sp152": {
+      "assets": {
+        "/assets/species/sp152.webp": {
+          "role": "Hoofdfoto",
+          "content": "Lichtgekleurde Drieteenstrandloper op strand met korte zwarte snavel.",
+          "sexAge": "Licht kleed, geslacht onbekend.",
+          "quality": "Helder zijaanzicht.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp152-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Drieteenstrandloper op kiezels met donkere bovenveren, lichte veerranden en een korte zwarte snavel.",
+          "sexAge": "De research-grade waarneming heeft de annotatie Juvenile. De contrastrijke bovenveren zijn zichtbaar. Geslacht onbekend.",
+          "quality": "Vogel in zijaanzicht, veerranden en snavel goed zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp152-flight.webp": {
+          "role": "In vlucht",
+          "content": "Meerdere Drieteenstrandlopers boven water met brede witte vleugelstrepen.",
+          "sexAge": "De fotograaf benoemt onvolwassen vogels. Geslachten onbekend.",
+          "quality": "Vrije vlucht. De foto toont een groep, met enkele overlappende vogels.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Juvenielenfoto, kennisprofiel en beeldvergelijking met Bonte Strandloper toegevoegd."
+      ],
+      "missing": [],
+      "wishes": [
+        "Gelicentieerde vluchtfoto van één volledig zichtbare Drieteenstrandloper."
+      ],
+      "sexPolicy": "Geslacht van de afgebeelde individuen is onbekend. De foto’s hebben neutrale labels.",
+      "uncertain": [],
+      "date": "2026-11-12"
+    },
+    "sp165": {
+      "assets": {
+        "/assets/species/plumage/sp165-adult.webp": {
+          "role": "Hoofdfoto",
+          "content": "Volwassen Visdief in broedkleed met oranjerode snavel en zwarte punt.",
+          "sexAge": "Broedkleed. Geslacht onbekend.",
+          "quality": "Volledig zijaanzicht met goed zicht op de poten.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp165-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Visdief op een paal met licht voorhoofd, donkere achterkap en bruin getekende bovendelen.",
+          "sexAge": "De fotograaf benoemt een juveniel en de research-grade waarneming heeft de annotatie Juvenile. De veerranden en koptekening ondersteunen dit. Geslacht onbekend.",
+          "quality": "Uitsnede toont snavel, kop, rug, poten en staart.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp165-flight.webp": {
+          "role": "In vlucht",
+          "content": "Eén Visdief in vrije vlucht met zwarte kap, gevorkte staart en donkerdere handpennen.",
+          "sexAge": "Volwassen type, geslacht onbekend.",
+          "quality": "Snavel, staart en vleugels vrij zichtbaar.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Juvenielenfoto en kennisprofiel toegevoegd. Vergelijking met Noordse Stern uitgebreid met vliegkenmerken."
+      ],
+      "missing": [],
+      "wishes": [],
+      "sexPolicy": "Mannetje en vrouwtje hebben gelijkend kleed. Gebruik neutrale labels.",
+      "uncertain": [
+        "Vogelbescherming en WWT geven verschillende maten. De Nederlandse waarden blijven staan en de afwijking is vermeld."
       ],
       "date": "2026-11-12"
     }

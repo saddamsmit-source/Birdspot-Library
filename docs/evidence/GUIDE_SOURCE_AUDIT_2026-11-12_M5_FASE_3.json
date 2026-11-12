@@ -1,0 +1,92 @@
+[
+  {
+    "image": "/assets/species/plumage/sp100-juv.webp",
+    "species": "sp100",
+    "source": "https://www.inaturalist.org/photos/397021184",
+    "originalUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/397021184/large.jpeg",
+    "sourceTitle": "iNaturalist photo 397021184",
+    "sourceAuthor": "Jo Roberts",
+    "sourceLicense": "CC BY 4.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "6d51e967f6badd36fbef7547f50c26d03bc63a294c30c8a6d687927efb366e43",
+    "sha1": "71d6b7af3774d80e6261d714caf7ee9d50d3c894",
+    "taxonInSource": "Numenius arquata",
+    "annotations": [
+      "Research-grade waarneming met annotatie Juvenile. Kenmerken in het bestand visueel getoetst. Geslacht onbekend."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp101-juv.webp",
+    "species": "sp101",
+    "source": "https://www.inaturalist.org/photos/572308003",
+    "originalUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/572308003/large.jpg",
+    "sourceTitle": "iNaturalist photo 572308003",
+    "sourceAuthor": "Phil James",
+    "sourceLicense": "CC BY 4.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "6dd6c3fd0b80b91f5201765ea26ba9bd23c2dbab490a35d396994af391e3c83d",
+    "sha1": "245abcbc612797bf1f2139d572dde175bf804482",
+    "taxonInSource": "Limosa limosa",
+    "annotations": [
+      "Research-grade waarneming met annotatie Juvenile. Kenmerken in het bestand visueel getoetst. Geslacht onbekend."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/sp148.webp",
+    "species": "sp148",
+    "source": "https://commons.wikimedia.org/wiki/File:Whimbrel_%28Numenius_phaeopus%29_Dalvikurbyggd.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/49/Whimbrel_%28Numenius_phaeopus%29_Dalvikurbyggd.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+    "sourceTitle": "Whimbrel (Numenius phaeopus) Dalvikurbyggd.jpg",
+    "sourceAuthor": "Charles J. Sharp",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "be89db1fc415722e2f641c09e5e313e859fa5507c57e10c2236b73bcefef1caf",
+    "sha1": "4b80a4771650896e577dd87bd59de9daba48c591",
+    "taxonInSource": "Numenius phaeopus",
+    "annotations": [
+      "Soort en licentie bevestigd op de Commons-bestandspagina. Bouw en snavelvorm visueel getoetst. Geslacht onbekend."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/sp149.webp",
+    "species": "sp149",
+    "source": "https://commons.wikimedia.org/wiki/File:Bar-tailed_Godwit_%28Limosa_lapponica%29.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Bar-tailed_Godwit_%28Limosa_lapponica%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+    "sourceTitle": "Bar-tailed Godwit (Limosa lapponica).jpg",
+    "sourceAuthor": "Ron Knight",
+    "sourceLicense": "CC BY 2.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "30ef1bd1dedcb2da29e5566f6864543e0000ce6e9c0fa22d58fa31b8045f599a",
+    "sha1": "4c58b96f156e55304cca2274a8ffa695d52ea2bb",
+    "taxonInSource": "Limosa lapponica",
+    "annotations": [
+      "Soort en licentie bevestigd op de Commons-bestandspagina. Bouw en snavelvorm visueel getoetst. Geslacht onbekend."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp101-hero-male.webp",
+    "species": "sp101",
+    "source": "https://commons.wikimedia.org/wiki/File:Black-tailed_godwit_%28Limosa_limosa%29_male_breeding.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/82/Black-tailed_godwit_%28Limosa_limosa%29_male_breeding.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+    "sourceTitle": "Black-tailed godwit (Limosa limosa) male breeding.jpg",
+    "sourceAuthor": "Charles J. Sharp",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sameShot": true,
+    "method": "Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "72914024e0535162c44515143eaf650a90f5770f456720d68a841bb949ae4f51",
+    "sha1": "7eaee6dc1bff268b7de6a412fd57c39bc2d777cf",
+    "taxonInSource": "Limosa limosa",
+    "annotations": [
+      "De fotograaf duidt dit individuele exemplaar aan als mannetje in broedkleed. Opname in mei. De foto toont de snavel, lichaamsbouw en het kleed."
+    ],
+    "auditDate": "2026-11-12"
+  }
+]
