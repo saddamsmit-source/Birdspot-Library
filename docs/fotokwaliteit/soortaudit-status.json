@@ -1,5 +1,5 @@
 {
- "sha": "1429709b680d2960117022df9bb0c9baef27c9f5",
+ "sha": "2e20f1d5f44fa27f1a84b7ced9f04fba533255fa",
  "generated": "2026-11-12",
  "species": [
   {
@@ -1406,17 +1406,283 @@
    "id": "sp017",
    "nameNL": "Kleine Bonte Specht",
    "family": "Spechten",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen",
+   "batch": "M10",
+   "date": "2026-11-12",
+   "sha": "2e20f1d5f44fa27f1a84b7ced9f04fba533255fa",
+   "assets": [
+    {
+     "image": "/assets/species/sp017.webp",
+     "role": "Hoofdfoto (Mannetje)",
+     "content": "Mannetje van Kleine Bonte Specht aan stam, rode kruin, zwart-witte tekening en bes in snavel.",
+     "sexAge": "Mannetje volgens bron en zichtbare rode kruin; leeftijd niet apart afgeleid.",
+     "quality": "Goed en scherp; rugbandering niet vanuit deze hoek volledig te zien.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Maurizio Carlini",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp017-female.webp",
+     "role": "Verenkleed (Vrouwtje)",
+     "content": "Vrouwtje op tak, lichte kruin zonder rood, zwart-wit dwarsgestreepte rug.",
+     "sexAge": "Vrouwtje volgens Commons-bron en zichtbare kruintekening.",
+     "quality": "Goed; de kop en rugbandering zijn zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp017-flight.webp",
+     "role": "Verenkleed (Vrouwtje; niet echte vrije vlucht)",
+     "content": "Vogel naast nestholte met geopende vleugels tijdens wegvliegen; staart tegen de stam of zeer dicht erbij.",
+     "sexAge": "Vrouwtje volgens bron; precieze leeftijd niet vastgesteld.",
+     "quality": "Bruikbaar als context, deels bewegingsonscherp; ongeschikt voor betrouwbare vrije vluchtvergelijking.",
+     "verdict": "uit-rol",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · blondinrikard",
+      "annotations": []
+     },
+     "flight": {
+      "n": 112,
+      "id": "sp017",
+      "nameNL": "Kleine Bonte Specht",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": "female",
+      "class": "opvliegen",
+      "quality": "goed",
+      "decision": "uit-rol",
+      "target": "kleed",
+      "newLabel": "Vrouwtje, wegvliegend bij nestholte",
+      "newNote": "Vrouwtje zonder rode kruin, gebandeerde rug.",
+      "reason": "Zet af van de stam bij de nestholte; staart nog tegen de bast.",
+      "airborne": false,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 2.0"
+     }
+    }
+   ],
+   "corrections": [
+    "Alle drie bestaande gidsfoto's visueel gecontroleerd tegen hun rol; bron, maker en originele pixels behouden.",
+    "Nestholtefoto blijft in Vrouwtje, niet in In vlucht. Geen fictieve flight-claim."
+   ],
+   "missing": [
+    "Juvenielenfoto met controleerbare leeftijd.",
+    "Scherpe foto van de gehele vogel in aantoonbare vrije vlucht."
+   ],
+   "wishes": [
+    "Optionele hoofdfoto waarop de dwarsbandering op de rug nog duidelijker zichtbaar is."
+   ],
+   "uncertain": [
+    "Onafhankelijke ornithologische second opinion op individuele foto's ontbreekt."
+   ],
+   "sexPolicy": "Volwassen mannetje met rode kruin, vrouwtje zonder rode kruin; juveniel niet op kopkleur alleen toeschrijven.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "PARTIALLY TESTED",
+    "browser": "VERIFIED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": false,
+   "knowledge": {
+    "profile": true,
+    "critical": 2,
+    "decisive": 0,
+    "notDecisive": [
+     "Rugbandering versus witte schoudervlekken",
+     "Formaat en onderstaart tegenover Middelste Bonte Specht"
+    ],
+    "open": [
+     "Een overtuigende foto van een zelfstandig herkenbaar juveniel ontbreekt in de gids.",
+     "De bestaande foto bij de nestholte is geen voldoende scherpe vrijevluchtvergelijking; geen foto kunstmatig als vrije vlucht labelen.",
+     "Gewicht en gecombineerde maatbanden moeten voor eventuele wijziging volgens kwaliteitsnorm §1 apart worden nagezien."
+    ],
+    "discrepancies": 0
+   },
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium (Playwright)",
+    "photos": 3,
+    "sections": [
+     "Hoofdfoto",
+     "Verenkleed"
+    ],
+    "flight": [],
+    "checks": "SAB-01..07",
+    "runSha": "2e20f1d5f44fa27f1a84b7ced9f04fba533255fa",
+    "evidence": "https://github.com/saddamsmit-source/Birdspot-Library/actions/runs/43287607724"
+   },
+   "errors": []
   },
   {
    "id": "sp018",
    "nameNL": "Zwarte Specht",
    "family": "Spechten",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen",
+   "batch": "M10",
+   "date": "2026-11-12",
+   "sha": "2e20f1d5f44fa27f1a84b7ced9f04fba533255fa",
+   "assets": [
+    {
+     "image": "/assets/showcase/sp018.webp",
+     "role": "Hoofdfoto (Mannetje)",
+     "content": "Zwarte Specht groot in beeld langs stam, volledige rode kruin en lichte lange snavel.",
+     "sexAge": "Mannetje volgens Commons-beschrijving en rode kruin; exacte leeftijd niet onafhankelijk beoordeeld.",
+     "quality": "Goed, scherp en duidelijk voor herkenning.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · xulescu_g",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp018-hero-male.webp",
+     "role": "Verenkleed (Mannetje; eerdere hoofdfoto)",
+     "content": "Zwarte Specht met rode kruin in bos bij omgevallen boom; andere opname en fotograaf.",
+     "sexAge": "Mannetje volgens geverifieerde oorspronkelijke import.",
+     "quality": "Goed voor aanvullend beeld; vogel kleiner in beeld dan huidige hoofdfoto.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "geverifieerde import 09-11 (SHA-1 305a08246e…), CC BY 2.0 · Frank Vassen from Brussels, Belgium",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp018-female-single.webp",
+     "role": "Verenkleed (Vrouwtje)",
+     "content": "Vrouwtje schuin van achteren met rode achterkruin op donkere kop.",
+     "sexAge": "Vrouwtje volgens originele Wikimedia-bron van Andreas Eichler.",
+     "quality": "Voorwaardelijk: lokale uitsnede slechts 500×661 px; zoomkwaliteit onvoldoende voor gedetailleerd profiel.",
+     "verdict": "voorwaardelijk",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Andreas Eichler",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp018-juv-review.webp",
+     "role": "Verenkleed (Juveniel; uitsluitend kopdetail)",
+     "content": "Kopdetail met lichte snavel, donkere veren en rood kruindeel; lichaam en vleugel ontbreken.",
+     "sexAge": "Originele Commons-bron zegt juveniel; geslacht onbekend; volledig jeugdkleed niet verifieerbaar.",
+     "quality": "Scherp kopdetail, maar niet bruikbaar als volledig juvenielportret.",
+     "verdict": "voorwaardelijk",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 1.0 · ",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp018-flight.webp",
+     "role": "In vlucht (geslacht onbekend)",
+     "content": "Zwarte Specht vrij vliegend met geheven vleugel, lichte snavel en rode kruin; onderzijde aan rand beeld.",
+     "sexAge": "Geslacht niet vastgesteld en niet afgeleid.",
+     "quality": "Echte vlucht; benedenrand snijdt delen van het lijf of de staart af; betere kadervullende vluchtfoto wenselijk.",
+     "verdict": "voorwaardelijk",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Janus Mosbacher",
+      "annotations": []
+     },
+     "flight": {
+      "n": 114,
+      "id": "sp018",
+      "nameNL": "Zwarte Specht",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0"
+     }
+    }
+   ],
+   "corrections": [
+    "De scherpere, reeds aanwezige mannetjesfoto wordt als hoofdfoto gebruikt; eerdere geïmporteerde hoofdfoto blijft één keer onder Mannetje.",
+    "Vijf eigen bestanden per rol gecontroleerd. Geslacht van vlucht en juveniel wordt niet verzonnen."
+   ],
+   "missing": [
+    "Volledige juvenielenfoto met controleerbare leeftijd.",
+    "Hogeresolutie-versie van bestaande vrouwtjesfoto, pas na originele bronimport met bewezen rechten."
+   ],
+   "wishes": [
+    "Compleet gekadreerde vluchtfoto met hele vogel.",
+    "Fysieke mobiele visuele eindcontrole."
+   ],
+   "uncertain": [
+    "REVIEW REQUIRED: de juveniel-leeftijd steunt op Commons-beschrijving, niet op een volledig getoond jeugdkleed.",
+    "Commons toont voor het juveniel kopdetail nu CC BY 1.0; de oorspronkelijke upload bevat een ouder CC BY-SA-sjabloon. Bij herpublicatie licentiehistorie opnieuw controleren."
+   ],
+   "sexPolicy": "Mannetje geheel rode kruin; vrouwtje achterkruin rood. Geen automatisch geslachtslabel voor vlucht of juveniel.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "PARTIALLY TESTED",
+    "rights": "VERIFIED",
+    "knowledge": "PARTIALLY TESTED",
+    "browser": "VERIFIED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": false,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Zwarte vogel tegenover Groene Specht"
+    ],
+    "open": [
+     "Het juveniele gidsbeeld toont uitsluitend de kop; een afzonderlijk volledig jeugdkleedportret ontbreekt.",
+     "De lokale vrouwtjesfoto is een 500-pixel-voorbeeld; de originele bron heeft een veel hogere resolutie. Een verbeterd bestand vereist afzonderlijke gecontroleerde import.",
+     "Bestaande maten/gewichten zijn niet opnieuw volgens de tweebronnenmethode bevestigd."
+    ],
+    "discrepancies": 0
+   },
+   "browser": {
+    "ok": true,
+    "viewport": "390x844 Chromium (Playwright)",
+    "photos": 5,
+    "sections": [
+     "Hoofdfoto",
+     "Verenkleed",
+     "In vlucht"
+    ],
+    "flight": [
+     "/assets/species/plumage/sp018-flight.webp"
+    ],
+    "checks": "SAB-01..07",
+    "runSha": "2e20f1d5f44fa27f1a84b7ced9f04fba533255fa",
+    "evidence": "https://github.com/saddamsmit-source/Birdspot-Library/actions/runs/43287607724"
+   },
+   "errors": []
   },
   {
    "id": "sp019",

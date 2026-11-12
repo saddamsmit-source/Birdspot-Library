@@ -119,4 +119,18 @@ badFlight.rendered = badFlight.rendered.map(x => x.image === '/assets/species/pl
 assert.ok(checkSpecies(badFlight,batches.sp017,flight).length > 0, 'SA-08 must fail with wrong flight role');
 console.log('SA-08 OK: 2 birds, 8 registered images match rendered roles; missing images remain open');
 
-console.log('Soortaudit: alle controles geslaagd (SA-01..SA-08)');
+// SA-09: persisted tracker & status represent this same actual photo audit.
+const persisted = JSON.parse(readFileSync(new URL('../docs/fotokwaliteit/soortaudit-status.json', import.meta.url), 'utf8'));
+const tracker = readFileSync(new URL('../docs/fotokwaliteit/SOORTAUDIT_TRACKER.md', import.meta.url), 'utf8');
+assert.equal(persisted.species.filter(r => r.audited).length, audited.length, 'SA-09 status file drift');
+for (const id of ['sp017', 'sp018']) {
+  const saved = persisted.species.find(r => r.id === id);
+  assert.equal(saved.batch, 'M10');
+  assert.equal(saved.status.independent, 'NOT TESTED');
+  assert.equal(saved.photoComplete, false);
+  assert.deepEqual(new Set(saved.assets.map(a => a.image)), new Set(Object.keys(batches[id].assets)));
+}
+assert.ok(tracker.includes(`| 2 | Afzonderlijk (aangescherpt) gecontroleerd | ${audited.length} (`), 'SA-09 tracker drift');
+console.log('SA-09 OK — persistent audit status and tracker aligned');
+
+console.log('Soortaudit: alle controles geslaagd (SA-01..SA-09)');
