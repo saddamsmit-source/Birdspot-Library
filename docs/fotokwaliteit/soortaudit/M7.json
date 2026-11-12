@@ -1,0 +1,122 @@
+{
+  "_meta": {
+    "batch": "M7",
+    "phase": 1,
+    "date": "2026-11-12",
+    "title": "K06 fase 1",
+    "reviewer": "ChatGPT Codex",
+    "phaseDates": {
+      "1": "2026-11-12"
+    },
+    "phaseReports": [
+      "../M7_FASE_1_2026-11-12.md"
+    ]
+  },
+  "species": {
+    "sp033": {
+      "assets": {
+        "/assets/species/sp033.webp": {
+          "role": "Hoofdfoto (Volwassen)",
+          "content": "Kuifmees in zijaanzicht tussen dennennaalden.",
+          "sexAge": "Volwassen veldkleed met spitse kuif. Geslacht onbekend.",
+          "quality": "Hele vogel in beeld met duidelijk kopprofiel.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp033-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Kuifmees op een tak, met korte kuif en gele snavelhoeken.",
+          "sexAge": "Fotograaf en waarnemingsannotatie bevestigen juveniel. Geslacht onbekend.",
+          "quality": "Kop en wangboog duidelijk zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp033-view.webp": {
+          "role": "Overige herkenningsfoto's",
+          "content": "Kuif en donkere wangboog op schuine tak.",
+          "sexAge": "Geslacht en leeftijd niet gelabeld.",
+          "quality": "Scherp kopprofiel vanuit een tweede hoek.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp033-flight.webp": {
+          "role": "Overige herkenningsfoto's",
+          "content": "Kuifmees met geheven vleugels op de sneeuw.",
+          "sexAge": "Geslacht en leeftijd niet gelabeld.",
+          "quality": "Kop en vleugelpennen zichtbaar. Volgens vluchtcontrole staat de vogel op de sneeuw.",
+          "verdict": "uit-rol"
+        }
+      },
+      "corrections": [
+        "Juvenielenfoto en kennisprofiel toegevoegd. De vergelijking met Matkop en het bijschrift van de sneeuwfoto gecontroleerd."
+      ],
+      "missing": [
+        "Scherpe foto van één Kuifmees in vrije vlucht met bevestigde hergebruikrechten."
+      ],
+      "wishes": [],
+      "sexPolicy": "Mannetje en vrouwtje hebben gelijk veldkleed. Leeftijd is alleen gelabeld als die wordt ondersteund door de bron.",
+      "uncertain": [],
+      "date": "2026-11-12"
+    },
+    "sp044": {
+      "assets": {
+        "/assets/species/sp044.webp": {
+          "role": "Hoofdfoto (Volwassen)",
+          "content": "Ringmus in zijaanzicht met bruine kruin, donkere wangvlek en lichte nekrand.",
+          "sexAge": "Volwassen veldkleed. Geslacht onbekend.",
+          "quality": "Scherp zijaanzicht met de volledige vogel.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp044-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Ringmus op een hek met een minder contrastrijke koptekening.",
+          "sexAge": "Fotograaf en waarnemingsannotatie bevestigen juveniel. Geslacht onbekend.",
+          "quality": "Kop en vleugeltekening zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp044-flight.webp": {
+          "role": "In vlucht",
+          "content": "Twee Ringmussen in vrije vlucht. Wangvlek en kastanjebruine kruin zijn zichtbaar.",
+          "sexAge": "Geslacht en leeftijd niet gelabeld.",
+          "quality": "Goed herkenbare koptekening en vleugels; twee vogels in beeld.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Juvenielenfoto en kennisprofiel toegevoegd. De kleed- en vluchtvergelijking met Huismus gecontroleerd."
+      ],
+      "missing": [],
+      "wishes": [
+        "Een scherpe vrije-vluchtfoto met één Ringmus in beeld heeft de voorkeur."
+      ],
+      "sexPolicy": "Mannetje en vrouwtje hebben gelijk veldkleed. Leeftijd is alleen gelabeld als die wordt ondersteund door de bron.",
+      "uncertain": [],
+      "date": "2026-11-12"
+    },
+    "sp049": {
+      "assets": {
+        "/assets/species/sp049.webp": {
+          "role": "Hoofdfoto (Volwassen)",
+          "content": "Grote Lijster in zijaanzicht bij bessen, met ronde donkere vlekken en een lange staart.",
+          "sexAge": "Volwassen veldkleed. Geslacht onbekend.",
+          "quality": "Houding en vlektekening zichtbaar tussen dunne takken.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp049-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Uitgevlogen jong in gras met lichte rugvlekken en vleugelstrepen.",
+          "sexAge": "De fotobron benoemt een uitgevlogen jong. Geslacht onbekend.",
+          "quality": "Rug, vleugeldekveren en wang goed zichtbaar.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Juvenielenfoto en kennisprofiel toegevoegd. De vergelijking met Zanglijster gecontroleerd."
+      ],
+      "missing": [
+        "Scherpe foto van één Grote Lijster in vrije vlucht met bevestigde hergebruikrechten."
+      ],
+      "wishes": [],
+      "sexPolicy": "Mannetje en vrouwtje hebben gelijk veldkleed. Leeftijd is alleen gelabeld als die wordt ondersteund door de bron.",
+      "uncertain": [],
+      "date": "2026-11-12"
+    }
+  }
+}

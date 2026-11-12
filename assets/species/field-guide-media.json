@@ -3534,6 +3534,28 @@
     "sp033": {
       "adult_m": {
         "reuseGuidePhoto": true
+      },
+      "juv": {
+        "file": "iNaturalist photo 384784000",
+        "nl": "Kuifmees",
+        "latin": "Lophophanes cristatus",
+        "author": "Micha Baum",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://www.inaturalist.org/photos/384784000",
+        "showSourceLink": true,
+        "alt": "Jonge Kuifmees op een tak met een korte zwart-witte kuif, zwarte wangboog en gele snavelhoeken.",
+        "modifications": "Verkleind tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP",
+        "reviewed": "2026-11-12",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kuifmees",
+        "visualCheck": "Jonge Kuifmees op een tak met een korte zwart-witte kuif, zwarte wangboog en gele snavelhoeken.",
+        "verification": "De fotograaf beschrijft de aanwezige jongen die worden gevoerd. De waarneming is geannoteerd als Juvenile. Korte kuif en gele snavelhoeken zichtbaar.",
+        "width": 1400,
+        "height": 1311,
+        "image": "/assets/species/plumage/sp033-juv.webp",
+        "sha1": "26da657ef80d5914ed2459a5a4a3928a620429e8",
+        "sourceAudit": "2026-11-12",
+        "age": "juvenile"
       }
     },
     "sp034": {
@@ -5308,6 +5330,60 @@
         "sex": "female",
         "age": "adult"
       }
+    },
+    "sp044": {
+      "adult_m": {
+        "reuseGuidePhoto": true
+      },
+      "juv": {
+        "file": "iNaturalist photo 213361930",
+        "nl": "Ringmus",
+        "latin": "Passer montanus",
+        "author": "Codrin Bucur",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://www.inaturalist.org/photos/213361930",
+        "showSourceLink": true,
+        "alt": "Jonge Ringmus op een hek bij bramen. De donkere wangvlek steekt zacht af tegen de lichte wang.",
+        "modifications": "Uitsnede rond de volledige vogel. Omgezet naar WebP zonder EXIF, GPS of XMP",
+        "reviewed": "2026-11-12",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/ringmus",
+        "visualCheck": "Jonge Ringmus op een hek bij bramen. De donkere wangvlek steekt zacht af tegen de lichte wang.",
+        "verification": "De fotograaf benoemt een juveniele Ringmus en de waarneming draagt de annotatie Juvenile. Het kopkleed is minder contrastrijk dan bij de volwassen hoofdfoto.",
+        "width": 1090,
+        "height": 750,
+        "image": "/assets/species/plumage/sp044-juv.webp",
+        "sha1": "a2d0ab1c044047ce9d51f419dc3efb9d642c506a",
+        "sourceAudit": "2026-11-12",
+        "age": "juvenile"
+      }
+    },
+    "sp049": {
+      "adult_m": {
+        "reuseGuidePhoto": true
+      },
+      "juv": {
+        "file": "Fledgling mistle thrush.jpg",
+        "nl": "Grote Lijster",
+        "latin": "Turdus viscivorus",
+        "author": "treehouse1977",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Fledgling_mistle_thrush.jpg",
+        "showSourceLink": true,
+        "alt": "Uitgevlogen jonge Grote Lijster in het gras met lichte vlekken en strepen op rug en vleugel.",
+        "modifications": "Verkleind tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP",
+        "reviewed": "2026-11-12",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-lijster",
+        "visualCheck": "Uitgevlogen jonge Grote Lijster in het gras met lichte vlekken en strepen op rug en vleugel.",
+        "verification": "De bestandspagina benoemt een uitgevlogen Grote Lijster. Lichte vlekken op de rug en smalle lichte lengtestrepen op de vleugeldekveren zijn zichtbaar.",
+        "width": 1400,
+        "height": 933,
+        "image": "/assets/species/plumage/sp049-juv.webp",
+        "sha1": "4e960ebc68db7630bd96eaeee3be4a4aec63990d",
+        "sourceAudit": "2026-11-12",
+        "age": "juvenile"
+      }
     }
   },
   "poses": {
@@ -5799,9 +5875,9 @@
         "note": "Kijk naar de spitse kuif en de gebogen zwarte lijn achter de wang. Vergroot de foto om de koptekening te bekijken."
       },
       {
-        "label": "Opvliegend vanaf sneeuw",
+        "label": "Vleugels geheven op de sneeuw",
         "flight": false,
-        "note": "Kuif en kopkleed goed zichtbaar.",
+        "note": "De vogel heeft de vleugels geheven. De kuif en wangtekening zijn zichtbaar.",
         "file": "Haubenmeise Abflug.JPG",
         "nl": "Kuifmees",
         "latin": "Lophophanes cristatus",
@@ -5810,11 +5886,11 @@
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
         "source": "https://commons.wikimedia.org/wiki/File:Haubenmeise_Abflug.JPG",
         "showSourceLink": false,
-        "alt": "Kuifmees vliegt op boven de sneeuw, met geheven vleugels, een spitse kuif en zwart-witte koptekening.",
+        "alt": "Kuifmees met geheven vleugels en de poten bij de sneeuw, met spitse kuif en donkere wangboog.",
         "modifications": "Omgezet naar WebP zonder extra uitsnede",
         "reviewed": "2026-11-07",
         "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kuifmees",
-        "visualCheck": "Kuifmees vliegt op boven de sneeuw, met geheven vleugels, een spitse kuif en zwart-witte koptekening.",
+        "visualCheck": "Kuifmees met geheven vleugels en de poten bij de sneeuw, met spitse kuif en donkere wangboog.",
         "width": 960,
         "height": 720,
         "image": "/assets/species/plumage/sp033-flight.webp",

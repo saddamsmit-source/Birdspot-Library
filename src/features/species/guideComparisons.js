@@ -25,11 +25,16 @@ export const GUIDE_COMPARISONS = [
     "tip": "Luister naar roep of zang en controleer meerdere details. Kapglans en grootte van de keelvlek zijn op zichzelf onbetrouwbaar; bij pas uitgevlogen vogels zijn sommige snavel- en kopkenmerken nog minder bruikbaar."
   },
   {
+    label: 'Ringmus en Huismus · kruin en wang',
     birds: [
-      {id: 'sp043', source: 'huismus', plumage: 'adult_m', marks: 'Mannetje heeft een grijze kruin en donkere bef. Een afzonderlijke zwarte wangvlek ontbreekt.'},
-      {id: 'sp044', source: 'ringmus', marks: 'Bruine kruin, zwarte wangvlek en lichte nekrand bij mannetje én vrouwtje.'},
+      {id: 'sp043', source: 'huismus', plumage: 'adult_m', marks: 'Het mannetje heeft een grijze kruin en een donkere bef. Het vrouwtje is bruiner en heeft een lichte wenkbrauw.'},
+      {id: 'sp044', source: 'ringmus', marks: 'Kastanjebruine kruin, een donkere wangvlek en een lichte nekrand bij beide geslachten.'},
     ],
-    tip: 'Kijk eerst naar de donkere vlek op de lichte wang van de Ringmus.',
+    rows: [
+      {label: 'Kruin', values: ['Grijs bij mannetje, bruin bij vrouwtje', 'Kastanjebruin bij volwassen vogels']},
+      {label: 'Wang', values: ['Zonder losse donkere wangvlek', 'Donkere vlek op lichte wang']},
+    ],
+    tip: 'Kijk bij een jonge Ringmus ook naar kruin en nekrand. De wangvlek kan dan veel minder opvallen.',
   },
   {
     birds: [
@@ -525,19 +530,16 @@ export const GUIDE_COMPARISONS = [
     "tip": "Kijk naar de hele koptekening. Een blauwe kruin met smalle oogstreep wijst op Pimpelmees; Koolmees heeft een veel groter zwart kopvlak."
   },
   {
-    "birds": [
-      {
-        "id": "sp033",
-        "source": "kuifmees",
-        "marks": "Zwart-witte spitse kuif en een gebogen zwarte lijn achter de wang."
-      },
-      {
-        "id": "sp031",
-        "source": "matkop",
-        "marks": "Zwarte gesloten kap zonder gespikkelde kuif; lichtere, minder getekende zijkop."
-      }
+    label: 'Kuifmees en Matkop · koptekening',
+    birds: [
+      {id: 'sp033', source: 'kuifmees', marks: 'Zwart-witte spitse kuif en een gebogen zwarte lijn achter de wang.'},
+      {id: 'sp031', source: 'matkop', marks: 'Egaal zwarte kap en een lichtere, minder getekende kopzijde.'},
     ],
-    "tip": "Bekijk de kop ook als de kuif platligt: de Kuifmees behoudt zijn zwart-witte kuifveren en sterke wangtekening."
+    rows: [
+      {label: 'Kruin', values: ['Zwart-wit getekend, soms plat gehouden', 'Egaal zwart']},
+      {label: 'Wang', values: ['Donkere boog achter de wang', 'Lichte wang zonder donkere boog']},
+    ],
+    tip: 'Bij een juveniele Kuifmees kan de kuif kort zijn. Bekijk de wangboog en kuifveren samen.',
   },
   {
     "label": "Goudhaantje en Vuurgoudhaan · koptekening",
@@ -979,8 +981,9 @@ export const GUIDE_COMPARISONS = [
     rows: [
       {label: 'Borstvlekken', values: ['Vaak pijlpuntig', 'Doorgaans ronder']},
       {label: 'Bovendelen', values: ['Warmbruin', 'Bleker en grijzer']},
+      {label: 'Ondervleugeldekveren', values: ['Warmbeige', 'Wit']},
     ],
-    tip: 'Bekijk de vorm van meerdere vlekken. In vlucht helpt ook de blekere ondervleugel van Grote Lijster.',
+    tip: 'Bekijk meerdere borstvlekken en het postuur. De ondervleugel is vooral bruikbaar in daglicht zonder sterk tegenlicht.',
   },
   {
     label: 'Kramsvogel en Koperwiek · volwassen',
