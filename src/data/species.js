@@ -353,10 +353,10 @@ export const SPECIES = [
 
   // ── VLIEGENVANGERS & ROODSTAARTEN ────────────────────────────
   { id:'sp050', nameNL:'Roodborst',           nameEN:'European Robin',            nameSci:'Erithacus rubecula',         family:'Vliegenvangers',  category:'standvogel', icon:'🐦', regions:['bos','stedelijk','struweel'],
-    fieldmarks:'Oranjerood gezicht en borst. Bruine rug, lichte onderbuik.',
-    size:{ length:'12,5–14 cm', wingspan:'20–22 cm', weight:'14–21 g' },
+    fieldmarks:'Volwassen vogel met oranjerood gezicht en borst, bruine rug en lichte onderbuik. Juveniel bruin met lichte vlekken.',
+    size:{ length:'ca. 13–14 cm', wingspan:'20–22 cm', weight:'14–21 g' },
     plumage:{ adult_m:'Oranjerode borst en gezicht, met bruine bovenzijde.', adult_f:null, juv:'Bruin met lichte vlekjes, zonder oranje borst.', jaarling:null, breeding:null, winter:null, eclipse:null },
-    guideReview:{"date":"2026-11-06","dimensions":["length"],"sources":[{"label":"Vogelbescherming","url":"https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/roodborst"}],"similarSexes":true},
+    guideReview:{"date":"2026-11-12","dimensions":["length"],"sources":[{"label":"Vogelbescherming","url":"https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/roodborst"}],"similarSexes":true},
     distribution:'Bossen met ondergroei, parken en tuinen. In de winter ook in stadstuinen.', status:'Standvogel, ook wintergast · jaarrond',
     statusExtra:'wintergast', months:'jan-dec', frequency:'algemeen', breeding:'ja', redList:null },
   { id:'sp051', nameNL:'Zwarte Roodstaart',   nameEN:'Black Redstart',            nameSci:'Phoenicurus ochruros',       family:'Vliegenvangers',  category:'zomergast', icon:'🐦', regions:['stedelijk','kust','agrarisch'],
@@ -388,9 +388,10 @@ export const SPECIES = [
 
   // ── WINTERKONING ─────────────────────────────────────────────
   { id:'sp055', nameNL:'Winterkoning',        nameEN:'Eurasian Wren',             nameSci:'Troglodytes troglodytes',    family:'Winterkoningen',  category:'standvogel', icon:'🐦', regions:['bos','struweel','moeras','stedelijk'],
-    fieldmarks:'Piepklein, roodbruin, opstaart, enorm luid voor zijn formaat.',
-    size:{ length:'9–10 cm', wingspan:'13–17 cm', weight:'7–12 g' },
-    plumage:{ adult_m:'Roodbruin met fijne dwarsstreep; korte opgestikte staart; bleke wenkbrauwstreep', adult_f:null, juv:'Iets doffer bruin', jaarling:null, breeding:null, winter:null, eclipse:null },
+    fieldmarks:'Zeer klein en bruin, met korte opgerichte staart en lichte wenkbrauw. Opvallend luide zang.',
+    size:{ length:'ca. 9–10 cm', wingspan:'13–17 cm', weight:'7–12 g' },
+    plumage:{ adult_m:'Warmbruin met fijne dwarsstreping en lichte wenkbrauw.', adult_f:null, juv:'Lijkt sterk op volwassen vogels. Dekveren kunnen minder contrastrijk zijn.', jaarling:null, breeding:null, winter:null, eclipse:null },
+    guideReview:{"date":"2026-11-12","dimensions":["length"],"sources":[{"label":"Vogelbescherming","url":"https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/winterkoning"}],"similarSexes":true},
     distribution:'Heel Nederland in bossen, tuinen, rietkragen en struweel', status:'Standvogel · jaarrond',
     statusExtra:null, months:'jan-dec', frequency:'algemeen', breeding:'ja', redList:null },
 
@@ -711,10 +712,11 @@ export const SPECIES = [
 
   // ── STELTLOPERS ──────────────────────────────────────────────
   { id:'sp098', nameNL:'Scholekster',         nameEN:'Eurasian Oystercatcher',    nameSci:'Haematopus ostralegus',      family:'Scholeksters',    category:'standvogel', icon:'🐦', regions:['kust','wad','polder'],
-    fieldmarks:'Zwart-wit, oranjerode snavel en ogen.',
-    size:{ length:'40–45 cm', wingspan:'80–86 cm', weight:'400–700 g' },
-    plumage:{ adult_m:'Zwarte kop-borst-rug; wit onderzijde; oranje-rode snavel; roze poten; rode oogring', adult_f:null, juv:'Bruinzwart; witte keelband; blekere snavel', jaarling:null, breeding:'Geheel zwarte hals', winter:'Witte keelband', eclipse:null },
-    distribution:'Kust, Wadden, en polders; NL largest WE populatie', status:'Standvogel, ook wintergast · jaarrond',
+    fieldmarks:'Zwart-wit met lange, rechte oranjerode snavel en roze poten. In vlucht een brede witte vleugelstreep.',
+    size:{ length:'ca. 40–45 cm', wingspan:'80–86 cm', weight:'400–700 g' },
+    plumage:{ adult_m:'Donkere kop, borst en rug, witte buik, lange oranjerode snavel en roze poten.', adult_f:null, juv:'Doorgaans bruiner met bleke veerranden en een doffere snavel.', jaarling:null, breeding:'Geheel donkere keel bij een volwassen vogel in broedkleed.', winter:'Volwassen vogels kunnen een witte keelband hebben.', eclipse:null },
+    guideReview:{"date":"2026-11-12","dimensions":["length"],"sources":[{"label":"Vogelbescherming","url":"https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/scholekster"}],"similarSexes":true},
+    distribution:'Aan de kust, op het wad en in open gebieden landinwaarts.', status:'Standvogel, ook wintergast · jaarrond',
     statusExtra:'wintergast', months:'jan-dec', frequency:'algemeen', breeding:'ja', redList:null },
   { id:'sp099', nameNL:'Kievit',              nameEN:'Northern Lapwing',          nameSci:'Vanellus vanellus',          family:'Plevieren',       category:'standvogel', icon:'🐦', regions:['agrarisch','polder','moeras'],
     fieldmarks:'Groene glans, lange kuif, ronde vleugels met breed zwart-wit patroon.',

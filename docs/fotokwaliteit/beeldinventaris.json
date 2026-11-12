@@ -4219,6 +4219,26 @@
    "source": "M5-fase 1",
    "decision": "goedgekeurd",
    "note": "De fotograaf benoemt een juveniel. Bruine kop en gele vleugelband zijn zichtbaar. Geslacht onbekend."
+  },
+  "/assets/species/plumage/sp055-juv.webp": {
+   "refs": [
+    "sp055 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "8654d84186034474a27df5bba95e09a20c5455b2",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Beeldinspectie 12-11-2026",
+   "note": "Juveniel op hout, uitgesneden voor leesbaarheid."
+  },
+  "/assets/species/plumage/sp098-juv.webp": {
+   "refs": [
+    "sp098 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "e0ff5fcd747cde990fa8c888208d5ae79c23f693",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Beeldinspectie 12-11-2026",
+   "note": "Juveniel in zijaanzicht aan de waterkant."
   }
  }
 }

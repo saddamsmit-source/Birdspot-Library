@@ -1,0 +1,38 @@
+[
+  {
+    "image": "/assets/species/plumage/sp055-juv.webp",
+    "species": "sp055",
+    "source": "https://commons.wikimedia.org/wiki/File:Wren_-_Troglodytes_troglodytes_-_Juvenile1.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Wren_-_Troglodytes_troglodytes_-_Juvenile1.jpg",
+    "sourceTitle": "File:Wren - Troglodytes troglodytes - Juvenile1.jpg",
+    "sourceAuthor": "caroline legg",
+    "sourceLicense": "CC BY 4.0",
+    "sameShot": true,
+    "method": "Uitgesneden rond de vogel, verkleind tot max. 1400 px en omgezet naar WebP zonder EXIF/GPS/XMP",
+    "sourceSha256": "bf0bc0dcbba7227c7049b4a6703adbb7bdaf5d0653024ea8782ae0e00b044482",
+    "sha1": "8654d84186034474a27df5bba95e09a20c5455b2",
+    "taxonInSource": "Troglodytes troglodytes",
+    "annotations": [
+      "De fotograaf benoemt een juveniel in de originele bestandsnaam. Het kleed alleen geeft bij deze soort beperkte zekerheid over de leeftijd."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp098-juv.webp",
+    "species": "sp098",
+    "source": "https://commons.wikimedia.org/wiki/File:Juvenile_oystercatcher_%2852310150796%29.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/82/Juvenile_oystercatcher_%2852310150796%29.jpg",
+    "sourceTitle": "File:Juvenile oystercatcher (52310150796).jpg",
+    "sourceAuthor": "Andrey Gulivanov",
+    "sourceLicense": "CC BY 2.0",
+    "sameShot": true,
+    "method": "Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "a55c3c4e9f807e107de5822bf2ed9a1c18821b527f0ec323a99d5de6b5c0121b",
+    "sha1": "e0ff5fcd747cde990fa8c888208d5ae79c23f693",
+    "taxonInSource": "Haematopus ostralegus",
+    "annotations": [
+      "De fotograaf benoemt een juveniel. De bruine bovendelen, bleke veerranden en donkere snavelpunt zijn zichtbaar. Geslacht onbekend."
+    ],
+    "auditDate": "2026-11-12"
+  }
+]

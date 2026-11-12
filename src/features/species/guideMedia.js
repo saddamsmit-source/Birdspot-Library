@@ -4425,6 +4425,56 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "sourceAudit": "2026-11-11",
       "age": "juvenile"
     }
+  },
+  "sp055": {
+    "juv": {
+      "file": "Wren - Troglodytes troglodytes - Juvenile1.jpg",
+      "nl": "Winterkoning",
+      "latin": "Troglodytes troglodytes",
+      "author": "caroline legg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Wren_-_Troglodytes_troglodytes_-_Juvenile1.jpg",
+      "showSourceLink": true,
+      "alt": "Jonge Winterkoning in een boomholte, met een compacte bruine bouw en lichte wenkbrauw.",
+      "note": "Jonge Winterkoning in een boomholte, met een compacte bruine bouw en lichte wenkbrauw.",
+      "modifications": "Uitgesneden rond de vogel, verkleind tot max. 1400 px en omgezet naar WebP zonder EXIF/GPS/XMP",
+      "reviewed": "2026-11-12",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/winterkoning",
+      "visualCheck": "Jonge Winterkoning in een boomholte, met een compacte bruine bouw en lichte wenkbrauw.",
+      "verification": "De fotograaf benoemt een juveniel in de originele bestandsnaam. Het kleed alleen geeft bij deze soort beperkte zekerheid over de leeftijd.",
+      "width": 1400,
+      "height": 1083,
+      "image": "/assets/species/plumage/sp055-juv.webp",
+      "sha1": "8654d84186034474a27df5bba95e09a20c5455b2",
+      "sourceAudit": "2026-11-12",
+      "age": "juvenile"
+    }
+  },
+  "sp098": {
+    "juv": {
+      "file": "Juvenile oystercatcher (52310150796).jpg",
+      "nl": "Scholekster",
+      "latin": "Haematopus ostralegus",
+      "author": "Andrey Gulivanov",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Juvenile_oystercatcher_%2852310150796%29.jpg",
+      "showSourceLink": true,
+      "alt": "Jonge Scholekster in zijaanzicht. Donkerbruine bovendelen, witte buik en oranjerode snavel met donkere punt.",
+      "note": "Jonge Scholekster in zijaanzicht. Donkerbruine bovendelen, witte buik en oranjerode snavel met donkere punt.",
+      "modifications": "Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+      "reviewed": "2026-11-12",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/scholekster",
+      "visualCheck": "Jonge Scholekster in zijaanzicht. Donkerbruine bovendelen, witte buik en oranjerode snavel met donkere punt.",
+      "verification": "De fotograaf benoemt een juveniel. De bruine bovendelen, bleke veerranden en donkere snavelpunt zijn zichtbaar. Geslacht onbekend.",
+      "width": 1400,
+      "height": 933,
+      "image": "/assets/species/plumage/sp098-juv.webp",
+      "sha1": "e0ff5fcd747cde990fa8c888208d5ae79c23f693",
+      "sourceAudit": "2026-11-12",
+      "age": "juvenile"
+    }
   }
 });
 export const GUIDE_HEROES = Object.freeze({

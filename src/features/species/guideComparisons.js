@@ -1039,6 +1039,30 @@ export const GUIDE_COMPARISONS = [
     ],
     tip: 'Vergelijk de kleur van de ondervleugels en kijk ook naar de staart. Tegenlicht kan lichte veren donkerder laten lijken.',
   },
+  {
+    label: 'Roodborst en Heggenmus · volwassen',
+    birds: [
+      {id: 'sp050', source: 'roodborst', marks: 'Oranjerood gezicht en borst, met een overwegend effen bruine rug.'},
+      {id: 'sp054', source: 'heggenmus', marks: 'Blauwgrijze kop en borst, met bruin gestreepte rug.'},
+    ],
+    tip: 'Bekijk borst en rug samen. Een juveniele Roodborst heeft nog geen oranjerode borst.',
+  },
+  {
+    label: 'Winterkoning en Boomkruiper · veldkenmerken',
+    birds: [
+      {id: 'sp055', source: 'winterkoning', marks: 'Zeer klein en compact met een korte, vaak opgewipte staart.'},
+      {id: 'sp066', source: 'boomkruiper', marks: 'Langere staart, gebogen snavel en witte onderzijde. Klimt langs de stam omhoog.'},
+    ],
+    tip: 'Kijk naar snavel en houding. Beide vogels hebben bruine bovendelen.',
+  },
+  {
+    label: 'Scholekster en Kluut · veldkenmerken',
+    birds: [
+      {id: 'sp098', source: 'scholekster', marks: 'Lange, rechte oranjerode snavel. Zwarte kop en borst, roze poten.'},
+      {id: 'sp143', source: 'kluut', marks: 'Dunne, omhooggebogen donkere snavel. Overwegend wit met zwarte tekening en lange poten.'},
+    ],
+    tip: 'Vergelijk de snavelvorm en pootlengte. De kleuren zijn lastiger bij tegenlicht.',
+  },
 ];
 
 export function comparisonSource(bird) {
