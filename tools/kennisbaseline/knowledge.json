@@ -2706,6 +2706,138 @@
       "checked": "2026-11-12",
       "certainty": "hoog",
       "publisher": "Basismonitoring Wadden"
+    },
+    "VB_MATKOP": {
+      "register": "NL07",
+      "label": "Vogelbescherming — Matkop",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/matkop",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Veldherkenning voor de vergelijking",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_HUISMUS": {
+      "register": "NL07",
+      "label": "Vogelbescherming — Huismus",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/huismus",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Veldherkenning voor de vergelijking",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_ZANGLIJSTER": {
+      "register": "NL07",
+      "label": "Vogelbescherming — Zanglijster",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zanglijster",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Veldherkenning voor de vergelijking",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_KUIFMEES": {
+      "register": "NL07",
+      "label": "Vogelbescherming — Kuifmees",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kuifmees",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Herkenning, geluid, leefgebied en leefwijze",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "BZH_KUIFMEES": {
+      "register": "EU07",
+      "label": "Blasco-Zumeta & Heinze — Kuifmees",
+      "url": "https://www.blascozumeta.com/specie_files/14540_ENG_Lophophanes_cristatus_aranzadi.pdf",
+      "edition": "Online bron",
+      "scope": "Europa",
+      "confirms": "Veldkenmerken, leeftijd, geslacht en lengte",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Blasco-Zumeta & Heinze"
+    },
+    "SOV_KUIFMEES": {
+      "register": "NL01",
+      "label": "Sovon — Kuifmees",
+      "url": "https://stats.sovon.nl/stats/soort/14540/",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Verspreiding en seizoensvoorkomen",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Sovon Vogelonderzoek Nederland"
+    },
+    "VB_RINGMUS": {
+      "register": "NL07",
+      "label": "Vogelbescherming — Ringmus",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/ringmus",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Herkenning, geluid, leefgebied en leefwijze",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "BZH_RINGMUS": {
+      "register": "EU07",
+      "label": "Blasco-Zumeta & Heinze — Ringmus",
+      "url": "https://www.blascozumeta.com/specie_files/15980_ENG_Passer_montanus_aranzadi.pdf",
+      "edition": "Online bron",
+      "scope": "Europa",
+      "confirms": "Veldkenmerken, leeftijd, geslacht en lengte",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Blasco-Zumeta & Heinze"
+    },
+    "SOV_RINGMUS": {
+      "register": "NL01",
+      "label": "Sovon — Ringmus",
+      "url": "https://stats.sovon.nl/stats/soort/15980/",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Verspreiding en seizoensvoorkomen",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Sovon Vogelonderzoek Nederland"
+    },
+    "VB_GROTE_LIJSTER": {
+      "register": "NL07",
+      "label": "Vogelbescherming — Grote Lijster",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-lijster",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Herkenning, geluid, leefgebied en leefwijze",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "BZH_GROTE_LIJSTER": {
+      "register": "EU07",
+      "label": "Blasco-Zumeta & Heinze — Grote Lijster",
+      "url": "https://www.blascozumeta.com/specie_files/12020_Turdus_viscivorus_E.pdf",
+      "edition": "Online bron",
+      "scope": "Europa",
+      "confirms": "Veldkenmerken, leeftijd, geslacht en lengte",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Blasco-Zumeta & Heinze"
+    },
+    "SOV_GROTE_LIJSTER": {
+      "register": "NL01",
+      "label": "Sovon — Grote Lijster",
+      "url": "https://stats.sovon.nl/stats/soort/12020/",
+      "edition": "Online bron",
+      "scope": "Nederland",
+      "confirms": "Verspreiding en seizoensvoorkomen",
+      "checked": "2026-11-12",
+      "certainty": "hoog",
+      "publisher": "Sovon Vogelonderzoek Nederland"
     }
   },
   "sp021": {
@@ -15077,6 +15209,495 @@
         ]
       }
     ],
+    "open": []
+  },
+  "sp033": {
+    "summary": {
+      "text": "Kleine mees met een spitse zwart-witte kuif, een gebogen zwarte lijn achter de lichte wang en een donkere keel.",
+      "sources": [
+        "VB_KUIFMEES",
+        "BZH_KUIFMEES"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Spitse kuif met donkere veren en lichte randen.",
+        "sources": [
+          "VB_KUIFMEES",
+          "BZH_KUIFMEES"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Donkere wangboog en zwarte keel tegen lichte kopzijden.",
+        "sources": [
+          "VB_KUIFMEES",
+          "BZH_KUIFMEES"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Bruingrijze bovenzijde en lichte onderzijde.",
+        "sources": [
+          "VB_KUIFMEES",
+          "BZH_KUIFMEES"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "caution": {
+      "text": "Een korte kuif kan bij een jonge vogel passen. Controleer de kuifhouding, de iris en waar zichtbaar de staartpunten voordat je leeftijd toekent.",
+      "sources": [
+        "BZH_KUIFMEES"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Kuif en wangboog",
+        "where": "Kop in zijaanzicht",
+        "this": "Gespikkelde kuif met een zwarte wangboog.",
+        "other": "Egaal donkere kap en een minder sterk getekende zijkop.",
+        "vs": [
+          "sp031"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Bekijk beide kenmerken bij voldoende licht.",
+        "exceptions": "De kuif kan platliggen of kort zijn bij een juveniel.",
+        "supporting": "Een scherp trillende roep helpt bij een korte waarneming.",
+        "sources": [
+          "VB_KUIFMEES",
+          "BZH_KUIFMEES",
+          "VB_MATKOP"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp031",
+        "why": "Een bruingrijze mees kan bij vluchtig zicht op Matkop lijken. Bekijk kuif en wang samen.",
+        "sources": [
+          "VB_KUIFMEES",
+          "VB_MATKOP"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "text": "Mannetje en vrouwtje hebben hetzelfde veldkleed. De lichte wang, zwarte wangboog en kuif zijn bij beide zichtbaar.",
+        "sources": [
+          "BZH_KUIFMEES"
+        ],
+        "topic": "geslacht"
+      },
+      {
+        "text": "In vers juveniel kleed is de kuif korter, de iris bruingrijs en zijn de staartpunten spitser dan bij volwassen vogels.",
+        "sources": [
+          "BZH_KUIFMEES"
+        ],
+        "topic": "leeftijd"
+      }
+    ],
+    "voice": [
+      {
+        "text": "De roep klinkt scherp en trillend, vaak als een korte ratel.",
+        "sources": [
+          "VB_KUIFMEES"
+        ],
+        "kind": "roep"
+      }
+    ],
+    "basis": {
+      "biometrics": [
+        {
+          "field": "length",
+          "unit": "cm",
+          "display": "ca. 11–12 cm",
+          "values": [
+            {
+              "source": "VB_KUIFMEES",
+              "min": 10.5,
+              "max": 12
+            },
+            {
+              "source": "BZH_KUIFMEES",
+              "min": 11,
+              "max": 12
+            }
+          ],
+          "note": "Afgeronde onder- en bovengrens op basis van de twee bronwaarden."
+        }
+      ]
+    },
+    "habitat": [
+      {
+        "text": "Vooral in dennenrijke naaldbossen en gemengde bossen met veel naaldbomen.",
+        "sources": [
+          "VB_KUIFMEES",
+          "SOV_KUIFMEES"
+        ],
+        "kind": "nederland"
+      }
+    ],
+    "status": [
+      {
+        "text": "Nederlandse broedvogel die het hele jaar in geschikt bos voorkomt.",
+        "sources": [
+          "VB_KUIFMEES",
+          "SOV_KUIFMEES"
+        ],
+        "kind": "voorkomen"
+      }
+    ],
+    "life": [
+      {
+        "text": "Eet vooral insecten en andere ongewervelden en in de winter ook zaden van naaldbomen.",
+        "sources": [
+          "VB_KUIFMEES"
+        ],
+        "kind": "voedsel"
+      },
+      {
+        "text": "Het vrouwtje hakt vaak een nestholte uit in zacht, vermolmd hout.",
+        "sources": [
+          "VB_KUIFMEES"
+        ],
+        "kind": "broeden"
+      },
+      {
+        "text": "Volwassen vogels blijven doorgaans in hun broedgebied. Jonge vogels kunnen na de broedtijd en in de winter rondzwerven.",
+        "sources": [
+          "VB_KUIFMEES"
+        ],
+        "kind": "trek"
+      }
+    ],
+    "discrepancies": [],
+    "open": []
+  },
+  "sp044": {
+    "summary": {
+      "text": "Mus met kastanjebruine kruin, een donkere vlek op de lichte wang en een smalle lichte nekrand.",
+      "sources": [
+        "VB_RINGMUS",
+        "BZH_RINGMUS"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Kastanjebruine kruin bij volwassen vogels.",
+        "sources": [
+          "VB_RINGMUS",
+          "BZH_RINGMUS"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Donkere wangvlek op een lichte kopzijde.",
+        "sources": [
+          "VB_RINGMUS",
+          "BZH_RINGMUS"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Kleine donkere bef onder de snavel.",
+        "sources": [
+          "VB_RINGMUS",
+          "BZH_RINGMUS"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "caution": {
+      "text": "Een jonge Ringmus is valer getekend. Na de volledige rui zijn jonge en oudere vogels aan het kleedpatroon niet betrouwbaar te onderscheiden.",
+      "sources": [
+        "BZH_RINGMUS"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Kruin en wangvlek",
+        "where": "Kop van opzij",
+        "this": "Bruine kruin met een losse donkere vlek op de lichte wang.",
+        "other": "Volwassen mannetje met grijze kruin; vrouwtje met een lichte wenkbrauw.",
+        "vs": [
+          "sp043"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Controleer kruin, wang en nekrand samen.",
+        "exceptions": "De wangvlek kan bij jonge Ringmussen veel minder uitgesproken zijn.",
+        "supporting": "Bij een volwassen vogel helpt de kleine donkere bef als aanvullend kenmerk.",
+        "sources": [
+          "VB_RINGMUS",
+          "BZH_RINGMUS",
+          "VB_HUISMUS"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp043",
+        "why": "Beide zijn bruine mussen. Controleer de wangvlek en kruin, vooral in groepen.",
+        "sources": [
+          "VB_RINGMUS",
+          "VB_HUISMUS"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "text": "Mannetje en vrouwtje hebben hetzelfde veldkleed, met bruine kruin, lichte wang en donkere wangvlek.",
+        "sources": [
+          "BZH_RINGMUS"
+        ],
+        "topic": "geslacht"
+      },
+      {
+        "text": "Juvenielen hebben minder kleurcontrast dan volwassen vogels en beige uiteinden aan middelste en grote vleugeldekveren.",
+        "sources": [
+          "BZH_RINGMUS"
+        ],
+        "topic": "leeftijd"
+      }
+    ],
+    "voice": [
+      {
+        "text": "Vaak een kort, nasaal tsjep. De zang is een reeks tjilpende geluiden.",
+        "sources": [
+          "VB_RINGMUS"
+        ],
+        "kind": "roep"
+      }
+    ],
+    "basis": {
+      "biometrics": [
+        {
+          "field": "length",
+          "unit": "cm",
+          "display": "ca. 12–14 cm",
+          "values": [
+            {
+              "source": "VB_RINGMUS",
+              "min": 12.5,
+              "max": 14
+            },
+            {
+              "source": "BZH_RINGMUS",
+              "min": 12,
+              "max": 14
+            }
+          ],
+          "note": "Afgeronde onder- en bovengrens op basis van de twee bronwaarden."
+        }
+      ]
+    },
+    "habitat": [
+      {
+        "text": "Kleinschalig boerenland en dorpen met struiken, erven en nestholten.",
+        "sources": [
+          "VB_RINGMUS",
+          "SOV_RINGMUS"
+        ],
+        "kind": "nederland"
+      }
+    ],
+    "status": [
+      {
+        "text": "Broedvogel die in Nederland jaarrond voorkomt. Ook doortrek en overwintering van vogels van elders.",
+        "sources": [
+          "VB_RINGMUS",
+          "SOV_RINGMUS"
+        ],
+        "kind": "voorkomen"
+      }
+    ],
+    "life": [
+      {
+        "text": "Eet graan, zaden van wilde planten en insecten.",
+        "sources": [
+          "VB_RINGMUS"
+        ],
+        "kind": "voedsel"
+      },
+      {
+        "text": "Broedt in holten, bijvoorbeeld in oude bomen of nestkasten.",
+        "sources": [
+          "VB_RINGMUS"
+        ],
+        "kind": "broeden"
+      },
+      {
+        "text": "Na de broedtijd zwerven Ringmussen rond. In de winter komen er ook vogels uit Noord- en Oost-Europa bij.",
+        "sources": [
+          "VB_RINGMUS"
+        ],
+        "kind": "trek"
+      }
+    ],
+    "discrepancies": [],
+    "open": []
+  },
+  "sp049": {
+    "summary": {
+      "text": "Grote, bleke lijster met ronde donkere vlekken op de onderzijde, een vrij lange staart en lichte ondervleugels.",
+      "sources": [
+        "VB_GROTE_LIJSTER",
+        "BZH_GROTE_LIJSTER"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Ronde donkere vlekken lopen door over borst en buik.",
+        "sources": [
+          "VB_GROTE_LIJSTER",
+          "BZH_GROTE_LIJSTER"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Grijsbruine bovendelen en een lichte oorstreek.",
+        "sources": [
+          "VB_GROTE_LIJSTER",
+          "BZH_GROTE_LIJSTER"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Witte ondervleugeldekveren en lichte buitenste staartveren.",
+        "sources": [
+          "VB_GROTE_LIJSTER",
+          "BZH_GROTE_LIJSTER"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "caution": {
+      "text": "Gebruik bij jonge vogels de combinatie van postuur, ondervleugel en tekening. Vlekvorm en grootte kunnen op afstand of bij tegenlicht misleiden.",
+      "sources": [
+        "BZH_GROTE_LIJSTER"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Vlekken en ondervleugel",
+        "where": "Borst en flanken van opzij of ondervleugel van onderen",
+        "this": "Doorgaans rondere vlekken en witte ondervleugeldekveren.",
+        "other": "Vaak pijlpuntige vlekken en warmbeige ondervleugeldekveren.",
+        "vs": [
+          "sp046"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Bekijk meerdere vlekken en gebruik voor de ondervleugel daglicht zonder sterk tegenlicht.",
+        "exceptions": "De vlekvorm varieert en een lichte ondervleugel kan bij tegenlicht verkeerd worden ingeschat.",
+        "supporting": "De grotere bouw en relatief lange staart helpen als tweede aanwijzing.",
+        "sources": [
+          "VB_GROTE_LIJSTER",
+          "BZH_GROTE_LIJSTER",
+          "VB_ZANGLIJSTER"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp046",
+        "why": "Een gevlekte lijster is vaak lastig op afstand. Kijk naar de vlekvorm, het postuur en zo mogelijk de ondervleugel.",
+        "sources": [
+          "VB_GROTE_LIJSTER",
+          "VB_ZANGLIJSTER"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "text": "Mannetje en vrouwtje hebben hetzelfde veldkleed. De ronde donkere vlekken vallen op tegen de bleke onderzijde.",
+        "sources": [
+          "BZH_GROTE_LIJSTER"
+        ],
+        "topic": "geslacht"
+      },
+      {
+        "text": "Een juveniel toont veel lichte vlekken op de rug en smalle lichte lengtestreepjes op de vleugeldekveren.",
+        "sources": [
+          "BZH_GROTE_LIJSTER"
+        ],
+        "topic": "leeftijd"
+      }
+    ],
+    "voice": [
+      {
+        "text": "De roep is een harde ratel. De luide, rollende zang doet denken aan Merel.",
+        "sources": [
+          "VB_GROTE_LIJSTER"
+        ],
+        "kind": "roep"
+      }
+    ],
+    "basis": {
+      "biometrics": [
+        {
+          "field": "length",
+          "unit": "cm",
+          "display": "ca. 27–28 cm",
+          "values": [
+            {
+              "source": "VB_GROTE_LIJSTER",
+              "min": 27,
+              "max": 28
+            },
+            {
+              "source": "BZH_GROTE_LIJSTER",
+              "min": 26,
+              "max": 27
+            }
+          ],
+          "note": "Afgeronde onder- en bovengrens op basis van de twee bronwaarden."
+        }
+      ]
+    },
+    "habitat": [
+      {
+        "text": "Loofbomen bij open grasland, bijvoorbeeld in parkachtig landschap en bosranden.",
+        "sources": [
+          "VB_GROTE_LIJSTER",
+          "SOV_GROTE_LIJSTER"
+        ],
+        "kind": "nederland"
+      }
+    ],
+    "status": [
+      {
+        "text": "Nederlandse broedvogel die jaarrond te zien is, met daarnaast voor- en najaarstrek.",
+        "sources": [
+          "VB_GROTE_LIJSTER",
+          "SOV_GROTE_LIJSTER"
+        ],
+        "kind": "voorkomen"
+      }
+    ],
+    "life": [
+      {
+        "text": "Zoekt regenwormen en andere ongewervelden in grasland. In herfst en winter eet hij ook bessen.",
+        "sources": [
+          "VB_GROTE_LIJSTER"
+        ],
+        "kind": "voedsel"
+      },
+      {
+        "text": "Bouwt vaak hoog in een boom een komvormig nest waarin modder plantaardig materiaal bijeenhoudt.",
+        "sources": [
+          "VB_GROTE_LIJSTER"
+        ],
+        "kind": "broeden"
+      },
+      {
+        "text": "Een deel blijft in het broedgebied. Andere vogels trekken in het najaar weg; in voor- en najaar is er doortrek.",
+        "sources": [
+          "VB_GROTE_LIJSTER"
+        ],
+        "kind": "trek"
+      }
+    ],
+    "discrepancies": [],
     "open": []
   }
 }

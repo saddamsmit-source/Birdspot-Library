@@ -4649,6 +4649,36 @@
    "airborne": false,
    "source": "Visuele controle K05 fase 4 (2026-11-12)",
    "note": "Vrouwtje Kluut op slik, met zwart-witte tekening, lange poten en een omhooggebogen snavel."
+  },
+  "/assets/species/plumage/sp033-juv.webp": {
+   "refs": [
+    "sp033 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "26da657ef80d5914ed2459a5a4a3928a620429e8",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 1 (2026-11-12)",
+   "note": "Jonge Kuifmees op een tak met een korte zwart-witte kuif, zwarte wangboog en gele snavelhoeken."
+  },
+  "/assets/species/plumage/sp044-juv.webp": {
+   "refs": [
+    "sp044 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "a2d0ab1c044047ce9d51f419dc3efb9d642c506a",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 1 (2026-11-12)",
+   "note": "Jonge Ringmus op een hek bij bramen. De donkere wangvlek steekt zacht af tegen de lichte wang."
+  },
+  "/assets/species/plumage/sp049-juv.webp": {
+   "refs": [
+    "sp049 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "4e960ebc68db7630bd96eaeee3be4a4aec63990d",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K06 fase 1 (2026-11-12)",
+   "note": "Uitgevlogen jonge Grote Lijster in het gras met lichte vlekken en strepen op rug en vleugel."
   }
  }
 }
