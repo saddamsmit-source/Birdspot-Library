@@ -1,17 +1,19 @@
 {
   "_meta": {
     "batch": "M7",
-    "phase": 2,
+    "phase": 3,
     "date": "2026-11-12",
-    "title": "K06 fase 1 en 2",
+    "title": "K06 fase 1 tot en met 3",
     "reviewer": "ChatGPT Codex",
     "phaseDates": {
       "1": "2026-11-12",
-      "2": "2026-11-12"
+      "2": "2026-11-12",
+      "3": "2026-11-12"
     },
     "phaseReports": [
       "../M7_FASE_1_2026-11-12.md",
-      "../M7_FASE_2_2026-11-12.md"
+      "../M7_FASE_2_2026-11-12.md",
+      "../M7_FASE_3_2026-11-12.md"
     ]
   },
   "species": {
@@ -215,6 +217,116 @@
       ],
       "wishes": [],
       "sexPolicy": "De geslachten lijken sterk op elkaar. Het geslacht is niet op kleed bepaald; juveniel volgt de fotobron.",
+      "uncertain": [],
+      "date": "2026-11-12"
+    },
+    "sp031": {
+      "assets": {
+        "/assets/species/sp031.webp": {
+          "role": "Hoofdfoto (Volwassen)",
+          "content": "Matkop met zwarte kap, lichte wang en licht vleugelveld.",
+          "sexAge": "Volwassen veldkleed. Geslacht onbekend.",
+          "quality": "Volledig zijaanzicht met een goed zichtbare gevouwen vleugel.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp031-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Matkop tussen bladeren. Lichte snavelhoeken en donkere kap.",
+          "sexAge": "Fotograaf benoemt een juveniel. Geslacht onbekend.",
+          "quality": "Kop en snavelhoeken scherp in beeld.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp031-flight.webp": {
+          "role": "Overige herkenningsfoto's",
+          "content": "Matkop vlak boven de sneeuw, met geopende vleugels.",
+          "sexAge": "Geslacht en leeftijd niet gelabeld.",
+          "quality": "Opvliegbeeld. Alleen als aanvullend beeld bruikbaar.",
+          "verdict": "uit-rol"
+        }
+      },
+      "corrections": [
+        "Bronbevestigde juvenielenfoto en kennisprofiel toegevoegd. Vergelijking met Glanskop gecontroleerd."
+      ],
+      "missing": [
+        "Scherpe vrije-vluchtfoto met bevestigde hergebruikrechten."
+      ],
+      "wishes": [],
+      "sexPolicy": "De geslachten lijken op elkaar in het veld. Het geslacht is niet op kleed bepaald; juveniel volgt de fotobron.",
+      "uncertain": [],
+      "date": "2026-11-12"
+    },
+    "sp176": {
+      "assets": {
+        "/assets/species/sp176.webp": {
+          "role": "Hoofdfoto (Volwassen)",
+          "content": "Grauwe Vliegenvanger in zijaanzicht, met grijsbruine bovendelen en fijne borststreping.",
+          "sexAge": "Volwassen veldkleed. Geslacht onbekend.",
+          "quality": "Volledige vogel in beeld.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp176-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge vogel op een dennentak met lichte vlekken op rug en vleugeldekveren.",
+          "sexAge": "De waarneming is geannoteerd als juveniel. Geslacht onbekend.",
+          "quality": "Herkenbaar kleed en volledige vogel tussen enkele dennennaalden.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp176-flight.webp": {
+          "role": "In vlucht",
+          "content": "Vrij vliegende vogel tegen blauwe lucht. Lange staart en slanke snavel zichtbaar.",
+          "sexAge": "Geslacht en leeftijd niet gelabeld.",
+          "quality": "Bruikbaar zijaanzicht in vrije vlucht.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Juvenielenfoto en kennisprofiel toegevoegd. Vergelijking met Bonte Vliegenvanger toegevoegd en de vluchtfoto herbeoordeeld."
+      ],
+      "missing": [],
+      "wishes": [],
+      "sexPolicy": "De geslachten lijken op elkaar in het veld. Het geslacht is niet op kleed bepaald; juveniel volgt de fotobron.",
+      "uncertain": [],
+      "date": "2026-11-12"
+    },
+    "sp178": {
+      "assets": {
+        "/assets/species/sp178.webp": {
+          "role": "Hoofdfoto (Mannetje)",
+          "content": "Mannetje met wit voorhoofd, zwart gezicht, oranje borst en roestrode staart.",
+          "sexAge": "Volwassen mannetje, herkenbaar aan het broedkleed.",
+          "quality": "Volledige vogel op plant met duidelijk kopprofiel.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp178-adult_f.webp": {
+          "role": "Verenkleed (Vrouwtje)",
+          "content": "Vrouwtje op hek met beige onderzijde en roestrode staart.",
+          "sexAge": "Waarneming geannoteerd als Adult en Female.",
+          "quality": "Scherp zijaanzicht met rustige achtergrond.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp178-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Gekraagde Roodstaart op een draad, met gespikkeld kleed en rode staart.",
+          "sexAge": "Afzonderlijke waarneming met annotatie Juvenile. Geslacht onbekend.",
+          "quality": "Scherp zijaanzicht van rug en borst.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp178-flight.webp": {
+          "role": "Overige herkenningsfoto's",
+          "content": "Gekraagde Roodstaart met geopende vleugels vlak bij takken.",
+          "sexAge": "Geslacht en leeftijd niet vastgesteld.",
+          "quality": "De rode staart is zichtbaar. Beeld blijft buiten de vluchtsectie.",
+          "verdict": "uit-rol"
+        }
+      },
+      "corrections": [
+        "Vrouwtjesfoto, juvenielenfoto, kennisprofiel en vergelijking met Zwarte Roodstaart toegevoegd. Alternatieve tekst van het opvliegbeeld afgestemd op de eerdere vluchtbeoordeling."
+      ],
+      "missing": [
+        "Scherpe vrije-vluchtfoto met bevestigde hergebruikrechten."
+      ],
+      "wishes": [],
+      "sexPolicy": "Mannetje volgt het bronportret en herkenbaar broedkleed. Vrouwtje en juveniel volgen afzonderlijke bronwaarnemingen.",
       "uncertain": [],
       "date": "2026-11-12"
     }

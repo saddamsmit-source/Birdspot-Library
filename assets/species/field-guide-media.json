@@ -3524,6 +3524,28 @@
     "sp031": {
       "adult_m": {
         "reuseGuidePhoto": true
+      },
+      "juv": {
+        "file": "Poecile montanus, Willow Tit, Weidenmeise.JPG",
+        "nl": "Matkop",
+        "latin": "Poecile montanus",
+        "author": "Wald1siedel",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Poecile_montanus%2C_Willow_Tit%2C_Weidenmeise.JPG",
+        "showSourceLink": true,
+        "alt": "Jonge Matkop op een tak, met een donkere kap, lichte wang en gelige snavelhoeken.",
+        "modifications": "Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.",
+        "reviewed": "2026-11-12",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/matkop",
+        "visualCheck": "Jonge Matkop op een tak, met een donkere kap, lichte wang en gelige snavelhoeken.",
+        "verification": "De fotograaf benoemt een juveniele Matkop buiten de nestholte in Oostenrijk. De lichte snavelhoeken zijn zichtbaar.",
+        "width": 1400,
+        "height": 864,
+        "image": "/assets/species/plumage/sp031-juv.webp",
+        "sha1": "1e07367acd6f5eaf574815e1984bf254643a17c2",
+        "sourceAudit": "2026-11-12",
+        "age": "juvenile"
       }
     },
     "sp032": {
@@ -5434,6 +5456,86 @@
         "sourceAudit": "2026-11-12",
         "observation": "https://www.inaturalist.org/observations/377407055",
         "age": "juvenile"
+      }
+    },
+    "sp176": {
+      "adult_m": {
+        "reuseGuidePhoto": true
+      },
+      "juv": {
+        "file": "iNaturalist photo 561527545",
+        "nl": "Grauwe Vliegenvanger",
+        "latin": "Muscicapa striata",
+        "author": "Andrejus Gaidamavičius",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://www.inaturalist.org/photos/561527545",
+        "showSourceLink": true,
+        "alt": "Jonge Grauwe Vliegenvanger op een tak tussen dennennaalden. De rug en gevouwen vleugel hebben lichte vlekken.",
+        "modifications": "Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.",
+        "reviewed": "2026-11-12",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grauwe-vliegenvanger",
+        "visualCheck": "Jonge Grauwe Vliegenvanger op een tak tussen dennennaalden. De rug en gevouwen vleugel hebben lichte vlekken.",
+        "verification": "De onderzoekswaarneming uit Litouwen heeft de annotatie Juvenile. Lichte vlekken op rug en vleugeldekveren zijn zichtbaar.",
+        "width": 883,
+        "height": 814,
+        "image": "/assets/species/plumage/sp176-juv.webp",
+        "sha1": "7fb1549e2e94cf3e220a7b99c8f3272c4ff21dc4",
+        "sourceAudit": "2026-11-12",
+        "age": "juvenile",
+        "observation": "https://www.inaturalist.org/observations/311094817"
+      }
+    },
+    "sp178": {
+      "adult_m": {
+        "reuseGuidePhoto": true
+      },
+      "adult_f": {
+        "file": "iNaturalist photo 686068567",
+        "nl": "Gekraagde Roodstaart",
+        "latin": "Phoenicurus phoenicurus",
+        "author": "Сергей Неклюдов",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://www.inaturalist.org/photos/686068567",
+        "showSourceLink": true,
+        "alt": "Vrouwtje Gekraagde Roodstaart op een hek, met een warme beige borst, bruine rug en een roestrode staart.",
+        "modifications": "Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.",
+        "reviewed": "2026-11-12",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/gekraagde-roodstaart",
+        "visualCheck": "Vrouwtje Gekraagde Roodstaart op een hek, met een warme beige borst, bruine rug en een roestrode staart.",
+        "verification": "De onderzoekswaarneming heeft de annotaties Adult en Female. Het zijaanzicht toont de warme beige onderzijde.",
+        "width": 1400,
+        "height": 1050,
+        "image": "/assets/species/plumage/sp178-adult_f.webp",
+        "sha1": "59198ea2c4c46c5310278594be6546afeb1c3e89",
+        "sourceAudit": "2026-11-12",
+        "age": "adult",
+        "sex": "female",
+        "observation": "https://www.inaturalist.org/observations/375299471"
+      },
+      "juv": {
+        "file": "iNaturalist photo 686068572",
+        "nl": "Gekraagde Roodstaart",
+        "latin": "Phoenicurus phoenicurus",
+        "author": "Сергей Неклюдов",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://www.inaturalist.org/photos/686068572",
+        "showSourceLink": true,
+        "alt": "Jonge Gekraagde Roodstaart op een draad, met een gevlekte rug, gespikkelde borst en roodachtige staart.",
+        "modifications": "Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.",
+        "reviewed": "2026-11-12",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/gekraagde-roodstaart",
+        "visualCheck": "Jonge Gekraagde Roodstaart op een draad, met een gevlekte rug, gespikkelde borst en roodachtige staart.",
+        "verification": "Een afzonderlijke onderzoekswaarneming heeft de annotatie Juvenile. Het jeugdkleed en de roodachtige staart zijn zichtbaar.",
+        "width": 1400,
+        "height": 1050,
+        "image": "/assets/species/plumage/sp178-juv.webp",
+        "sha1": "93119a52a396c13ab93420949e2d3d0a54bdfc2c",
+        "sourceAudit": "2026-11-12",
+        "age": "juvenile",
+        "observation": "https://www.inaturalist.org/observations/375299473"
       }
     }
   },
@@ -8884,11 +8986,11 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
         "source": "https://www.inaturalist.org/photos/50225292",
         "showSourceLink": true,
-        "alt": "Gekraagde Roodstaart in vrije vlucht, met geheven vleugels en een roestoranje staart tegen een lichte lucht.",
+        "alt": "Gekraagde Roodstaart met geopende vleugels vlak bij takken en een zichtbare roestoranje staart.",
         "modifications": "Bijgesneden en omgezet naar WebP",
         "reviewed": "2026-11-08",
         "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/gekraagde-roodstaart",
-        "visualCheck": "Gekraagde Roodstaart in vrije vlucht, met geheven vleugels en een roestoranje staart tegen een lichte lucht.",
+        "visualCheck": "Gekraagde Roodstaart met geopende vleugels vlak bij takken en een zichtbare roestoranje staart.",
         "width": 830,
         "height": 740,
         "image": "/assets/species/plumage/sp178-flight.webp",

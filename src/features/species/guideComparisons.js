@@ -1089,6 +1089,30 @@ export const GUIDE_COMPARISONS = [
     tip: 'Kijk naar snavel en houding. Beide vogels hebben bruine bovendelen.',
   },
   {
+    label: 'Grauwe en Bonte Vliegenvanger · vleugel en borst',
+    birds: [
+      {id: 'sp176', source: 'grauwe-vliegenvanger', marks: 'Fijne donkere streping op kruin en borst, met een betrekkelijk egaal bruine vleugel.'},
+      {id: 'sp177', source: 'bonte-vliegenvanger', marks: 'Duidelijk licht vleugelveld. Het mannetje op de foto heeft donkere bovendelen.'},
+    ],
+    rows: [
+      {label: 'Gevouwen vleugel', values: ['Vrij egaal, zonder opvallend wit veld', 'Duidelijk licht vleugelveld']},
+      {label: 'Kruin en borst', values: ['Fijne donkere streping', 'Doorgaans zonder vergelijkbare fijne streping']},
+    ],
+    tip: 'Bekijk de vleugel ook bij een bruine Bonte Vliegenvanger. Beide soorten jagen vanuit een zitpost.',
+  },
+  {
+    label: 'Gekraagde en Zwarte Roodstaart · vrouwtje',
+    birds: [
+      {id: 'sp178', source: 'gekraagde-roodstaart', plumage: 'adult_f', marks: 'Grijsbruine rug en doorgaans warmere beige onderzijde.'},
+      {id: 'sp051', source: 'zwarte-roodstaart', marks: 'Koeler grijsbruin kleed, doorgaans met minder warme onderzijde.'},
+    ],
+    rows: [
+      {label: 'Onderzijde', values: ['Vaak warmer beige', 'Meestal koeler grijsbruin']},
+      {label: 'Staart', values: ['Roestrood', 'Ook roestrood']},
+    ],
+    tip: 'Vergelijk de onderzijde bij egaal daglicht. Luister bij twijfel ook naar de zang.',
+  },
+  {
     label: 'Scholekster en Kluut · veldkenmerken',
     birds: [
       {id: 'sp098', source: 'scholekster', marks: 'Lange, rechte oranjerode snavel. Zwarte kop en borst, roze poten.'},
