@@ -1,5 +1,5 @@
 {
- "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+ "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
  "generated": "2026-11-12",
  "species": [
   {
@@ -9,7 +9,7 @@
    "audited": true,
    "batch": "M1",
    "date": "2026-11-10",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp002.webp",
@@ -111,7 +111,7 @@
    "audited": true,
    "batch": "M1",
    "date": "2026-11-10",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp003.webp",
@@ -218,7 +218,7 @@
    "audited": true,
    "batch": "M1",
    "date": "2026-11-10",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp004.webp",
@@ -326,7 +326,7 @@
    "audited": true,
    "batch": "M1",
    "date": "2026-11-10",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/plumage/sp005-male-rest.webp",
@@ -578,7 +578,7 @@
    "audited": true,
    "batch": "M1",
    "date": "2026-11-10",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/plumage/sp006-hero-male.webp",
@@ -727,7 +727,7 @@
    "audited": true,
    "batch": "M2",
    "date": "2026-11-10",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/plumage/sp007-hero-male.webp",
@@ -928,7 +928,7 @@
    "audited": true,
    "batch": "M1",
    "date": "2026-11-10",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/plumage/sp008-hero-male.webp",
@@ -1103,7 +1103,7 @@
    "audited": true,
    "batch": "M2",
    "date": "2026-11-10",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/plumage/sp009-male-rest.webp",
@@ -1267,7 +1267,7 @@
    "audited": true,
    "batch": "M2",
    "date": "2026-11-10",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/plumage/sp016-hero-male.webp",
@@ -1441,7 +1441,7 @@
    "audited": true,
    "batch": "M1",
    "date": "2026-11-10",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp021.webp",
@@ -1545,7 +1545,7 @@
    "audited": true,
    "batch": "M3",
    "date": "2026-11-11",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp022.webp",
@@ -1636,7 +1636,7 @@
    "audited": true,
    "batch": "M3",
    "date": "2026-11-11",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp025.webp",
@@ -1729,7 +1729,7 @@
    "audited": true,
    "batch": "M2",
    "date": "2026-11-10",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp026.webp",
@@ -1831,7 +1831,7 @@
    "audited": true,
    "batch": "M4",
    "date": "2026-11-11",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/plumage/sp029-adult_m.webp",
@@ -1985,7 +1985,7 @@
    "audited": true,
    "batch": "M4",
    "date": "2026-11-11",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp030.webp",
@@ -2136,7 +2136,7 @@
    "audited": true,
    "batch": "M5",
    "date": "2026-11-11",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/plumage/sp035-hero-male.webp",
@@ -2286,7 +2286,7 @@
    "audited": true,
    "batch": "M5",
    "date": "2026-11-11",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp036.webp",
@@ -2424,7 +2424,7 @@
    "audited": true,
    "batch": "M5",
    "date": "2026-11-11",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/plumage/sp037-adult_m.webp",
@@ -2621,7 +2621,7 @@
    "audited": true,
    "batch": "M4",
    "date": "2026-11-11",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/plumage/sp043-hero-male.webp",
@@ -2777,7 +2777,7 @@
    "audited": true,
    "batch": "M4",
    "date": "2026-11-11",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/plumage/sp045-hero-male.webp",
@@ -2963,7 +2963,7 @@
    "audited": true,
    "batch": "M4",
    "date": "2026-11-11",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp046.webp",
@@ -3084,7 +3084,7 @@
    "audited": true,
    "batch": "M4",
    "date": "2026-11-11",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp047.webp",
@@ -3205,7 +3205,7 @@
    "audited": true,
    "batch": "M4",
    "date": "2026-11-11",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp048.webp",
@@ -3338,7 +3338,7 @@
    "audited": true,
    "batch": "M5",
    "date": "2026-11-12",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp050.webp",
@@ -3456,7 +3456,7 @@
    "audited": true,
    "batch": "M3",
    "date": "2026-11-11",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp054.webp",
@@ -3517,7 +3517,7 @@
    "audited": true,
    "batch": "M5",
    "date": "2026-11-12",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp055.webp",
@@ -3591,7 +3591,7 @@
    "audited": true,
    "batch": "M1",
    "date": "2026-11-10",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp056.webp",
@@ -3708,7 +3708,7 @@
    "audited": true,
    "batch": "M1",
    "date": "2026-11-10",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp057.webp",
@@ -3791,7 +3791,7 @@
    "audited": true,
    "batch": "M6",
    "date": "2026-11-12",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp059.webp",
@@ -3889,7 +3889,7 @@
    "audited": true,
    "batch": "M6",
    "date": "2026-11-12",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/plumage/sp061-hero-male.webp",
@@ -4003,7 +4003,7 @@
    "audited": true,
    "batch": "M3",
    "date": "2026-11-11",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp063.webp",
@@ -4113,7 +4113,7 @@
    "audited": true,
    "batch": "M6",
    "date": "2026-11-12",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/plumage/sp064-hero-male.webp",
@@ -4206,7 +4206,7 @@
    "audited": true,
    "batch": "M2",
    "date": "2026-11-10",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp065.webp",
@@ -4307,7 +4307,7 @@
    "audited": true,
    "batch": "M1",
    "date": "2026-11-10",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp066.webp",
@@ -4386,7 +4386,7 @@
    "audited": true,
    "batch": "M2",
    "date": "2026-11-10",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp067.webp",
@@ -4461,7 +4461,7 @@
    "audited": true,
    "batch": "M3",
    "date": "2026-11-11",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp068.webp",
@@ -4553,9 +4553,121 @@
    "id": "sp069",
    "nameNL": "Gele Kwikstaart",
    "family": "Kwikstaarten",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M6",
+   "date": "2026-11-12",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
+   "assets": [
+    {
+     "image": "/assets/species/sp069.webp",
+     "role": "Hoofdfoto (Mannetje)",
+     "content": "Gele Kwikstaart met blauwgrijze kop, lichte wenkbrauw en felgele onderzijde.",
+     "sexAge": "Nominaatvorm volgens de bron. De koptekening en gele onderzijde ondersteunen volwassen mannetje in broedkleed.",
+     "quality": "Hele vogel in zijaanzicht.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Stephan Sprinz",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp069-adult_f.webp",
+     "role": "Verenkleed (Vrouwtje)",
+     "content": "Vrouwtje Gele Kwikstaart op een lage verhoging. De bleke wenkbrauw, olijfbruine rug en gele onderzijde zijn zichtbaar.",
+     "sexAge": "De fotograaf annoteert de voorjaarswaarneming als Female. Olijfbruine bovendelen, gele onderzijde en bleke wenkbrauw zijn zichtbaar. Geen ondersoort toegekend.",
+     "quality": "De kop, gevouwen vleugel en onderzijde zijn zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY 4.0 · Donald Davesne",
+      "annotations": [
+       "De fotograaf annoteert de voorjaarswaarneming als Female. Olijfbruine bovendelen, gele onderzijde en bleke wenkbrauw zijn zichtbaar. Geen ondersoort toegekend."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp069-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge Gele Kwikstaart in zijaanzicht op een steen, met bleke onderzijde, lichte vleugelstrepen en lange staart.",
+     "sexAge": "De fotograaf annoteert de research-grade waarneming als Juvenile. De bleke onderzijde en lichte vleugelstrepen zijn zichtbaar. Geslacht onbekend.",
+     "quality": "De hele vogel staat in beeld. Lichte vleugelstrepen en staartverhouding zijn zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY 4.0 · euqirneto",
+      "annotations": [
+       "De fotograaf annoteert de research-grade waarneming als Juvenile. De bleke onderzijde en lichte vleugelstrepen zijn zichtbaar. Geslacht onbekend."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp069-flight.webp",
+     "role": "Overige herkenningsfoto",
+     "content": "Gele Kwikstaart bij het landen naast een paal, met de poten naar voren en de gele onderzijde zichtbaar.",
+     "sexAge": "Geslacht onbekend.",
+     "quality": "Poten naar voren bij de paal. Landingshouding zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Ralf Hüsges",
+      "annotations": []
+     },
+     "flight": {
+      "n": 57,
+      "id": "sp069",
+      "nameNL": "Gele Kwikstaart",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "landen",
+      "quality": "goed",
+      "decision": "uit-rol",
+      "target": "overig",
+      "newLabel": "Landend bij een paal",
+      "newNote": "Gele onderzijde en kopkleed goed zichtbaar.",
+      "reason": "Poten uitgestrekt naar de paal; neerstrijken.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 4.0"
+     }
+    }
+   ],
+   "corrections": [
+    "Mannetjeslabel onderbouwd. Vrouwtje, juveniel en kennisprofiel toegevoegd. Vergelijking met Grote Gele Kwikstaart toont beide vogels."
+   ],
+   "missing": [
+    "Scherpe foto van één Gele Kwikstaart in vrije vlucht met bevestigde rechten."
+   ],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "Koptekening en felheid variëren tussen ondersoorten. Het vrouwtje heeft een bronannotatie op de waarneming.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": false,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Mantel, poten en staart"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
   },
   {
    "id": "sp070",
@@ -4564,7 +4676,7 @@
    "audited": true,
    "batch": "M3",
    "date": "2026-11-11",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp070.webp",
@@ -4657,7 +4769,7 @@
    "audited": true,
    "batch": "M4",
    "date": "2026-11-11",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp072.webp",
@@ -4778,9 +4890,145 @@
    "id": "sp075",
    "nameNL": "IJsvogel",
    "family": "IJsvogels",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M6",
+   "date": "2026-11-12",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
+   "assets": [
+    {
+     "image": "/assets/species/plumage/sp075-hero-male.webp",
+     "role": "Hoofdfoto (Mannetje)",
+     "content": "IJsvogel op een schuine tak, met donkere ondersnavel.",
+     "sexAge": "Fotograaf benoemt een mannetje.",
+     "quality": "Rustige achtergrond en goed zicht op snavel en lichaam.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "geverifieerde import 09-11 (SHA-1 673f306001…), CC BY 2.0 · Luiz Lapa from Oeiras, Portugal",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp075-male-review.webp",
+     "role": "Verenkleed (Mannetje)",
+     "content": "IJsvogel met donkere ondersnavel op een horizontale tak.",
+     "sexAge": "De bestandstitel benoemt een mannetje.",
+     "quality": "De snavel is in zijaanzicht goed zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Andy Morffew from Itchen Abbas, Hampshire, UK",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp075-female-review.webp",
+     "role": "Verenkleed (Vrouwtje)",
+     "content": "IJsvogel in zijaanzicht op een stronk, met oranje aan de basis van de ondersnavel.",
+     "sexAge": "Oranjerode snavelbasis bij een volwassen vogel ondersteunt het vrouwtjeslabel.",
+     "quality": "Snavelbasis en borst zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Roland Riedel",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp075-juv-review.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge IJsvogel op een lichte tak met donker gerande borstveren.",
+     "sexAge": "Borsttekening ondersteunt juveniel. Geslacht onbekend.",
+     "quality": "Borst, poten en snavel zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp075-flight.webp",
+     "role": "In vlucht",
+     "content": "IJsvogel in vrije vlucht met een prooi in de snavel.",
+     "sexAge": "Geslacht onbekend.",
+     "quality": "Lichaam, vleugels en snavel in profiel.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp",
+      "annotations": []
+     },
+     "flight": {
+      "n": 51,
+      "id": "sp075",
+      "nameNL": "IJsvogel",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0"
+     }
+    },
+    {
+     "image": "/assets/showcase/sp075.webp",
+     "role": "Overige herkenningsfoto",
+     "content": "IJsvogel op een tak met helderblauwe bovenzijde en oranje onderdelen.",
+     "sexAge": "Geslacht onbekend.",
+     "quality": "Het portret laat kleurverdeling en vorm zien.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.5 · Andreas Trepte",
+      "annotations": []
+     },
+     "flight": null
+    }
+   ],
+   "corrections": [
+    "Bestaande zes afzonderlijke foto-opnamen en rollen gecontroleerd. Kennisprofiel en beeldvergelijking met Bijeneter toegevoegd."
+   ],
+   "missing": [],
+   "wishes": [],
+   "uncertain": [
+    "Vogelbescherming noemt 17–19,5 cm, Blasco-Zumeta & Heinze 15–17 cm. De getoonde ca. 16–18 cm volgt de vastgelegde methode met beide bronwaarden."
+   ],
+   "sexPolicy": "Gebruik de ondersnavel voor geslachtsbepaling pas wanneer het volwassen kleed duidelijk is.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": true,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Keel, snavel en silhouet"
+    ],
+    "open": [],
+    "discrepancies": 1
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp077",
@@ -4789,7 +5037,7 @@
    "audited": true,
    "batch": "M3",
    "date": "2026-11-11",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp077.webp",
@@ -4863,7 +5111,7 @@
    "audited": true,
    "batch": "M4",
    "date": "2026-11-11",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp078.webp",
@@ -5001,7 +5249,7 @@
    "audited": true,
    "batch": "M4",
    "date": "2026-11-11",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp079.webp",
@@ -5121,7 +5369,7 @@
    "audited": true,
    "batch": "M4",
    "date": "2026-11-11",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/plumage/sp081-portrait.webp",
@@ -5275,7 +5523,7 @@
    "audited": true,
    "batch": "M3",
    "date": "2026-11-11",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp086.webp",
@@ -5379,7 +5627,7 @@
    "audited": true,
    "batch": "M3",
    "date": "2026-11-11",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp089.webp",
@@ -5559,7 +5807,7 @@
    "audited": true,
    "batch": "M3",
    "date": "2026-11-11",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/plumage/sp091-hero-male.webp",
@@ -5755,7 +6003,7 @@
    "audited": true,
    "batch": "M1",
    "date": "2026-11-10",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp094.webp",
@@ -5865,7 +6113,7 @@
    "audited": true,
    "batch": "M2",
    "date": "2026-11-10",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp095.webp",
@@ -5967,7 +6215,7 @@
    "audited": true,
    "batch": "M2",
    "date": "2026-11-10",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp096.webp",
@@ -6076,7 +6324,7 @@
    "audited": true,
    "batch": "M5",
    "date": "2026-11-12",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp098.webp",
@@ -6180,7 +6428,7 @@
    "audited": true,
    "batch": "M4",
    "date": "2026-11-11",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/plumage/sp099-adult_m.webp",
@@ -6336,7 +6584,7 @@
    "audited": true,
    "batch": "M5",
    "date": "2026-11-12",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp100.webp",
@@ -6442,7 +6690,7 @@
    "audited": true,
    "batch": "M5",
    "date": "2026-11-12",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/plumage/sp101-hero-male.webp",
@@ -6566,7 +6814,7 @@
    "audited": true,
    "batch": "M5",
    "date": "2026-11-12",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp102.webp",
@@ -6682,7 +6930,7 @@
    "audited": true,
    "batch": "M2",
    "date": "2026-11-10",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp104.webp",
@@ -6796,7 +7044,7 @@
    "audited": true,
    "batch": "M3",
    "date": "2026-11-11",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp105.webp",
@@ -6930,9 +7178,148 @@
    "id": "sp106",
    "nameNL": "Patrijs",
    "family": "Fazanten",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M6",
+   "date": "2026-11-12",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
+   "assets": [
+    {
+     "image": "/assets/species/plumage/sp106-hero-male.webp",
+     "role": "Hoofdfoto (Mannetje)",
+     "content": "Mannetje Patrijs met oranjebruin gezicht, grijze borst en gebandeerde flanken in een grasrand.",
+     "sexAge": "De fotograaf benoemt een mannetje op de Commons-bestandspagina. Het oranjebruine gezicht, de grijze borst en lichte lengtestrepen op de schouderveren zijn zichtbaar.",
+     "quality": "Scherp portret met kop en schouderveren. De oude sneeuwfoto toont de volledige staart.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY 4.0 · TRinaud",
+      "annotations": [
+       "De fotograaf benoemt een mannetje op de Commons-bestandspagina. Het oranjebruine gezicht, de grijze borst en lichte lengtestrepen op de schouderveren zijn zichtbaar."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp106-adult_f.webp",
+     "role": "Verenkleed (Vrouwtje)",
+     "content": "Vrouwtje Patrijs in zijaanzicht tussen gras, met gebandeerde flank en lichte lengte- en dwarstekening op de schouderveren.",
+     "sexAge": "De fotograaf annoteert de opname als Adult en Female. De schoudertekening ondersteunt het label. Het bronbestand is onder CC0 vrijgegeven.",
+     "quality": "Snavel, kop, flank en deel van de schouder zichtbaar. Gras bedekt een deel van de onderzijde.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC0 1.0 · maxverheij",
+      "annotations": [
+       "De fotograaf annoteert de opname als Adult en Female. De schoudertekening ondersteunt het label. Het bronbestand is onder CC0 vrijgegeven."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp106-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Twee jonge Patrijzen op een stenig pad, met bruin gestreepte veren en een gestreepte kop zonder egaal oranjebruin gezicht.",
+     "sexAge": "De research-grade waarneming is geannoteerd als Juvenile en de fotograaf beschrijft een groep met twaalf jongen en twee volwassenen. De afgebeelde vogels tonen beide juveniele kop- en rugtekening. Geslacht onbekend.",
+     "quality": "Kop en gestreepte bovendelen van twee jonge vogels zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 2026-11-12: zelfde opname (Uitgesneden rond de vogel en omgezet naar WebP zonder EXIF/GPS/XMP), CC BY 4.0 · Aurelijus Narbutas",
+      "annotations": [
+       "De research-grade waarneming is geannoteerd als Juvenile en de fotograaf beschrijft een groep met twaalf jongen en twee volwassenen. De afgebeelde vogels tonen beide juveniele kop- en rugtekening. Geslacht onbekend."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp106-flight.webp",
+     "role": "In vlucht (voorlopig)",
+     "content": "Patrijs vliegt vrij boven een veld met een vleugel omlaag.",
+     "sexAge": "Geslacht onbekend.",
+     "quality": "Silhouet bruikbaar. De zachte foto van 450 px beperkt het veerdetail.",
+     "verdict": "voorwaardelijk",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Safina Rezeda, some rights reserved (CC BY)",
+      "annotations": []
+     },
+     "flight": {
+      "n": 19,
+      "id": "sp106",
+      "nameNL": "Patrijs",
+      "registry": "GUIDE_POSES[0]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "matig",
+      "decision": "voorwaardelijk",
+      "target": null,
+      "newLabel": null,
+      "newNote": "Voorlopige foto: beperkte scherpte.",
+      "reason": "FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): in vlucht ja; zacht en 450 px; niet definitief. Vervanging gewenst: scherpe Patrijs in vlucht, zijaanzicht.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY",
+      "history": [
+       {
+        "class": "vlucht",
+        "quality": "matig",
+        "decision": "voorwaardelijk",
+        "reason": "Echte vlucht, maar klein (450 px) en zacht. Vervanging gewenst.",
+        "date": "2026-11-10",
+        "round": "vóór FQA-02"
+       }
+      ],
+      "replacement": "gewenst"
+     }
+    },
+    {
+     "image": "/assets/species/sp106.webp",
+     "role": "Overige herkenningsfoto",
+     "content": "Patrijs in sneeuw, met grijze borst, oranjebruin gezicht en een korte staart.",
+     "sexAge": "Volwassen kleed. Geslacht onbekend.",
+     "quality": "Hele vogel in zijaanzicht.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · K.Pitk",
+      "annotations": []
+     },
+     "flight": null
+    }
+   ],
+   "corrections": [
+    "Bronbenoemd mannetje als hoofdfoto. Vrouwtjesfoto, juvenielenfoto en kennisprofiel toegevoegd. Vergelijking met Fazantenhen herbeoordeeld."
+   ],
+   "missing": [
+    "Scherpere foto van één Patrijs in vrije vlucht met bevestigde rechten."
+   ],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "De buikvlek komt ook bij vrouwtjes voor. Gebruik bij volwassen vogels de schouderveren en de onderbouwing op de bronwaarneming.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": false,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Staart en lichaamsbouw"
+    ],
+    "open": [],
+    "discrepancies": 0
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
   },
   {
    "id": "sp108",
@@ -6957,7 +7344,7 @@
    "audited": true,
    "batch": "M5",
    "date": "2026-11-12",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/plumage/sp112-hero-male.webp",
@@ -7180,7 +7567,7 @@
    "audited": true,
    "batch": "M3",
    "date": "2026-11-11",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/plumage/sp141-adult.webp",
@@ -7388,7 +7775,7 @@
    "audited": true,
    "batch": "M5",
    "date": "2026-11-12",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp152.webp",
@@ -7548,7 +7935,7 @@
    "audited": true,
    "batch": "M5",
    "date": "2026-11-12",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/plumage/sp165-adult.webp",
@@ -7676,7 +8063,7 @@
    "audited": true,
    "batch": "M2",
    "date": "2026-11-10",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/plumage/sp173-hero-male.webp",
@@ -7977,7 +8364,7 @@
    "audited": true,
    "batch": "M2",
    "date": "2026-11-10",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/sp248.webp",
@@ -8185,7 +8572,7 @@
    "audited": true,
    "batch": "M2",
    "date": "2026-11-10",
-   "sha": "9ef827c223d7fca7da67fc0869ca27171865d279",
+   "sha": "a4abd8e6a784fd94acc748ada490afde3dfef667",
    "assets": [
     {
      "image": "/assets/species/plumage/sp253-male-rest.webp",
@@ -8351,6 +8738,14 @@
    "errors": [],
    "verdict": "PARTIALLY TESTED",
    "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
+  },
+  {
+   "id": "sp257",
+   "nameNL": "Bijeneter",
+   "family": "Bijeneters",
+   "audited": false,
+   "verdict": "NOT TESTED",
+   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
   },
   {
    "id": "sp262",
