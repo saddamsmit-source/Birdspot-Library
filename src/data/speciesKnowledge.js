@@ -3270,6 +3270,127 @@ const DATA = {
    "checked": "2026-11-12",
    "certainty": "hoog",
    "publisher": "Naturschutzbund Deutschland"
+  },
+  "VB_BLAUWE_REIGER": {
+   "register": "NL07",
+   "label": "Vogelbescherming — Blauwe Reiger",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/blauwe-reiger",
+   "edition": "Online bron",
+   "scope": "Nederland",
+   "confirms": "Bouw, tekening en vliegbeeld",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "VB_ZILVERREIGERS": {
+   "register": "NL07",
+   "label": "Vogelbescherming — Grote en Kleine Zilverreiger",
+   "url": "https://www.vogelbescherming.nl/actueel/bericht/grote-vs-kleine-zilverreiger",
+   "edition": "Online bron",
+   "scope": "Nederland",
+   "confirms": "Vergelijking van grootte, snavelkleur en tenenkleur",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "VB_KLEINE_ZILVERREIGER": {
+   "register": "NL07",
+   "label": "Vogelbescherming — Kleine Zilverreiger",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kleine-zilverreiger",
+   "edition": "Online bron",
+   "scope": "Nederland",
+   "confirms": "Herkenning, geluid en leefwijze",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "BLC_KLEINE_ZILVERREIGER": {
+   "register": "EU",
+   "label": "BirdLife Cyprus — Kleine Zilverreiger",
+   "url": "https://birdlifecyprus.org/little-egret/",
+   "edition": "Online bron",
+   "scope": "Europa",
+   "confirms": "Lengte, slanke bouw en gele tenen",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "BirdLife Cyprus"
+  },
+  "SOV_KLEINE_ZILVERREIGER": {
+   "register": "NL01",
+   "label": "Sovon — Kleine Zilverreiger",
+   "url": "https://stats.sovon.nl/stats/soort/1190/",
+   "edition": "Online bron",
+   "scope": "Nederland",
+   "confirms": "Verspreiding en seizoensvoorkomen",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "VB_GROTE_ZILVERREIGER": {
+   "register": "NL07",
+   "label": "Vogelbescherming — Grote Zilverreiger",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-zilverreiger",
+   "edition": "Online bron",
+   "scope": "Nederland",
+   "confirms": "Herkenning, geluid en leefwijze",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "BZH_GROTE_ZILVERREIGER": {
+   "register": "EU07",
+   "label": "Blasco-Zumeta & Heinze — Grote Zilverreiger",
+   "url": "https://blascozumeta.com/specie_files/01210_ENG_Ardea_alba_aranzadi.pdf",
+   "edition": "Online bron",
+   "scope": "Westelijke populatie",
+   "confirms": "Lengte, verenkleed, seizoen en leeftijd",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Blasco-Zumeta & Heinze"
+  },
+  "SOV_GROTE_ZILVERREIGER": {
+   "register": "NL01",
+   "label": "Sovon — Grote Zilverreiger",
+   "url": "https://stats.sovon.nl/stats/soort/1210/",
+   "edition": "Online bron",
+   "scope": "Nederland",
+   "confirms": "Verspreiding en seizoensvoorkomen",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "VB_PURPERREIGER": {
+   "register": "NL07",
+   "label": "Vogelbescherming — Purperreiger",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/purperreiger",
+   "edition": "Online bron",
+   "scope": "Nederland",
+   "confirms": "Herkenning, geluid en leefwijze",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "BZH_PURPERREIGER": {
+   "register": "EU07",
+   "label": "Blasco-Zumeta & Heinze — Purperreiger",
+   "url": "https://blascozumeta.com/specie_files/01240_ENG_Ardea_purpurea_aranzadi.pdf",
+   "edition": "Online bron",
+   "scope": "Europa",
+   "confirms": "Lengte, leeftijd en lichaamsbouw",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Blasco-Zumeta & Heinze"
+  },
+  "SOV_PURPERREIGER": {
+   "register": "NL01",
+   "label": "Sovon — Purperreiger",
+   "url": "https://stats.sovon.nl/stats/soort/1240/",
+   "edition": "Online bron",
+   "scope": "Nederland",
+   "confirms": "Verspreiding en seizoensvoorkomen",
+   "checked": "2026-11-12",
+   "certainty": "hoog",
+   "publisher": "Sovon Vogelonderzoek Nederland"
   }
  },
  "profiles": {
@@ -18175,6 +18296,507 @@ const DATA = {
      "text": "Trekt via West-Europa en het Iberisch Schiereiland naar tropisch West-Afrika. Voorjaarstrek in Nederland vooral van half april tot begin juni.",
      "sources": [
       "VB_BONTE_VLIEGENVANGER"
+     ],
+     "kind": "trek"
+    }
+   ],
+   "discrepancies": [],
+   "open": []
+  },
+  "sp082": {
+   "summary": {
+    "text": "Slanke witte reiger met een fijne donkere snavel. Gele tenen aan donkere poten en een relatief korte hals helpen bij herkenning.",
+    "sources": [
+     "VB_KLEINE_ZILVERREIGER",
+     "BLC_KLEINE_ZILVERREIGER"
+    ]
+   },
+   "keyMarks": [
+    {
+     "text": "Bij volwassen vogels vallen de gele tenen op, vooral op een open oever of tijdens de vlucht.",
+     "sources": [
+      "VB_KLEINE_ZILVERREIGER",
+      "BLC_KLEINE_ZILVERREIGER"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Fijne, doorgaans donkere dolksnavel.",
+     "sources": [
+      "VB_KLEINE_ZILVERREIGER",
+      "BLC_KLEINE_ZILVERREIGER"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Duidelijk kleiner en fijner gebouwd dan Grote Zilverreiger.",
+     "sources": [
+      "VB_KLEINE_ZILVERREIGER",
+      "BLC_KLEINE_ZILVERREIGER"
+     ],
+     "reliability": "ondersteunend"
+    }
+   ],
+   "caution": {
+    "text": "Tenen kunnen onder water of in modder verborgen zijn. Bekijk dan de hals, de snavelbouw en de grootte samen.",
+    "sources": [
+     "VB_KLEINE_ZILVERREIGER",
+     "BLC_KLEINE_ZILVERREIGER",
+     "VB_ZILVERREIGERS"
+    ]
+   },
+   "critical": [
+    {
+     "feature": "Tenen, hals en snavel",
+     "where": "Bekijk een vogel op een ondiepe oever of in vrije vlucht.",
+     "this": "Kleiner en fijner gebouwd, met gele tenen en doorgaans donkere snavel.",
+     "other": "Veel groter met langere hals en donkere tenen. De snavel is meestal geel buiten het broedkleed.",
+     "vs": [
+      "sp083"
+     ],
+     "conditions": "Gebruik verschillende kenmerken bij een goede kijkhoek.",
+     "exceptions": "Grote Zilverreiger kan tijdelijk een donkere snavel hebben. Water kan de tenen verbergen.",
+     "supporting": "In vlucht kunnen de tenen en lichaamsverhoudingen goed zichtbaar zijn.",
+     "sources": [
+      "VB_KLEINE_ZILVERREIGER",
+      "BLC_KLEINE_ZILVERREIGER",
+      "VB_ZILVERREIGERS"
+     ],
+     "reliability": "ondersteunend"
+    }
+   ],
+   "similar": [
+    {
+     "id": "sp083",
+     "why": "Beide soorten zijn wit. Tenenkleur en lichaamsverhoudingen helpen wanneer de snavelkleur afwijkt.",
+     "sources": [
+      "VB_KLEINE_ZILVERREIGER",
+      "VB_ZILVERREIGERS"
+     ]
+    }
+   ],
+   "detail": [
+    {
+     "text": "Jonge vogels hebben geen lange sierveren. Hun poten en tenen kunnen doffer of groener ogen.",
+     "sources": [
+      "VB_KLEINE_ZILVERREIGER",
+      "BLC_KLEINE_ZILVERREIGER"
+     ],
+     "topic": "leeftijd"
+    },
+    {
+     "text": "In broedkleed kunnen twee smalle, lange kopveren en lossere sierveren zichtbaar zijn.",
+     "sources": [
+      "VB_KLEINE_ZILVERREIGER",
+      "BLC_KLEINE_ZILVERREIGER"
+     ],
+     "topic": "kleed"
+    }
+   ],
+   "voice": [
+    {
+     "text": "Meestal stil. Kan een rauwe, hese reigerroep laten horen.",
+     "sources": [
+      "VB_KLEINE_ZILVERREIGER"
+     ],
+     "kind": "roep"
+    }
+   ],
+   "basis": {
+    "biometrics": [
+     {
+      "field": "length",
+      "unit": "cm",
+      "display": "ca. 55–65 cm",
+      "values": [
+       {
+        "source": "VB_KLEINE_ZILVERREIGER",
+        "min": 55,
+        "max": 65
+       },
+       {
+        "source": "BLC_KLEINE_ZILVERREIGER",
+        "min": 55,
+        "max": 65
+       }
+      ],
+      "note": "Afgeronde onder- en bovengrens op basis van de twee bronwaarden."
+     }
+    ]
+   },
+   "habitat": [
+    {
+     "text": "Ondiep zoet en zout water, onder meer moerasoevers, sloten, geulen en prielen. In Nederland vooral in de Delta en op de Wadden.",
+     "sources": [
+      "VB_KLEINE_ZILVERREIGER",
+      "SOV_KLEINE_ZILVERREIGER"
+     ],
+     "kind": "nederland"
+    }
+   ],
+   "status": [
+    {
+     "text": "Schaarse Nederlandse broedvogel. Na de broedtijd lopen de aantallen op. In milde winters blijven enkele vogels.",
+     "sources": [
+      "VB_KLEINE_ZILVERREIGER",
+      "SOV_KLEINE_ZILVERREIGER"
+     ],
+     "kind": "voorkomen"
+    }
+   ],
+   "life": [
+    {
+     "text": "Vangt vooral kleine vissen en ook amfibieën en waterinsecten. Aan zee zoekt hij ook garnalen en kleine kreeftachtigen.",
+     "sources": [
+      "VB_KLEINE_ZILVERREIGER"
+     ],
+     "kind": "voedsel"
+    },
+    {
+     "text": "Nestelt vaak in kolonies. Bouwt een takkennest in bomen, struiken, riet of op de grond.",
+     "sources": [
+      "VB_KLEINE_ZILVERREIGER"
+     ],
+     "kind": "broeden"
+    },
+    {
+     "text": "Trekt vaak overdag in kleine groepen. De meeste vogels overwinteren zuidelijker.",
+     "sources": [
+      "VB_KLEINE_ZILVERREIGER"
+     ],
+     "kind": "trek"
+    }
+   ],
+   "discrepancies": [],
+   "open": []
+  },
+  "sp083": {
+   "summary": {
+    "text": "Grote witte reiger met een lange, dunne hals en lange poten. Buiten de broedtijd valt meestal de lange gele snavel op.",
+    "sources": [
+     "VB_GROTE_ZILVERREIGER",
+     "BZH_GROTE_ZILVERREIGER"
+    ]
+   },
+   "keyMarks": [
+    {
+     "text": "Langgerekte bouw en een lange, slanke hals.",
+     "sources": [
+      "VB_GROTE_ZILVERREIGER",
+      "BZH_GROTE_ZILVERREIGER"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Snavel buiten de broedtijd meestal geel.",
+     "sources": [
+      "VB_GROTE_ZILVERREIGER",
+      "BZH_GROTE_ZILVERREIGER"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Poten doorgaans donker, met donkere tenen.",
+     "sources": [
+      "VB_GROTE_ZILVERREIGER",
+      "BZH_GROTE_ZILVERREIGER"
+     ],
+     "reliability": "ondersteunend"
+    }
+   ],
+   "caution": {
+    "text": "Rond de broedtijd kan de snavel donker worden. Vergelijk dan ook de lengte van hals en poten en de kleur van de tenen.",
+    "sources": [
+     "VB_GROTE_ZILVERREIGER",
+     "BZH_GROTE_ZILVERREIGER",
+     "VB_ZILVERREIGERS"
+    ]
+   },
+   "critical": [
+    {
+     "feature": "Hals, bouw en tenen",
+     "where": "Bekijk een vogel van opzij in ondiep water of in vlucht.",
+     "this": "Lange hals, relatief forse bouw en donkere tenen.",
+     "other": "Kleiner, met kortere hals en meestal gele tenen.",
+     "vs": [
+      "sp082"
+     ],
+     "conditions": "Vergelijk lichaamsverhoudingen en controleer de tenen wanneer zichtbaar.",
+     "exceptions": "Snavelkleur varieert in het broedseizoen. Afstand kan grootteverschillen vertekenen.",
+     "supporting": "De snavel is buiten de broedtijd doorgaans geel.",
+     "sources": [
+      "VB_GROTE_ZILVERREIGER",
+      "BZH_GROTE_ZILVERREIGER",
+      "VB_ZILVERREIGERS"
+     ],
+     "reliability": "ondersteunend"
+    }
+   ],
+   "similar": [
+    {
+     "id": "sp082",
+     "why": "Beide soorten zijn wit. Halslengte en tenen geven meer houvast dan de snavelkleur alleen.",
+     "sources": [
+      "VB_GROTE_ZILVERREIGER",
+      "VB_ZILVERREIGERS"
+     ]
+    }
+   ],
+   "detail": [
+    {
+     "text": "Volwassen mannetjes en vrouwtjes hebben een vergelijkbaar verenkleed.",
+     "sources": [
+      "VB_GROTE_ZILVERREIGER",
+      "BZH_GROTE_ZILVERREIGER"
+     ],
+     "topic": "geslacht"
+    },
+    {
+     "text": "Jonge vogels missen de lange rugsierveren en lijken na het uitvliegen op volwassen vogels buiten broedkleed.",
+     "sources": [
+      "VB_GROTE_ZILVERREIGER",
+      "BZH_GROTE_ZILVERREIGER"
+     ],
+     "topic": "leeftijd"
+    }
+   ],
+   "voice": [
+    {
+     "text": "Vooral bij broedkolonies is een rollende, rauwe roep te horen.",
+     "sources": [
+      "VB_GROTE_ZILVERREIGER"
+     ],
+     "kind": "roep"
+    }
+   ],
+   "basis": {
+    "biometrics": [
+     {
+      "field": "length",
+      "unit": "cm",
+      "display": "ca. 85–100 cm",
+      "values": [
+       {
+        "source": "VB_GROTE_ZILVERREIGER",
+        "min": 80,
+        "max": 102
+       },
+       {
+        "source": "BZH_GROTE_ZILVERREIGER",
+        "min": 85,
+        "max": 102
+       }
+      ],
+      "note": "Afgeronde onder- en bovengrens op basis van de twee bronwaarden."
+     }
+    ]
+   },
+   "habitat": [
+    {
+     "text": "Rietmoerassen en ooibossen in de broedtijd. Buiten de broedtijd ook in sloten, polders en uiterwaarden.",
+     "sources": [
+      "VB_GROTE_ZILVERREIGER",
+      "SOV_GROTE_ZILVERREIGER"
+     ],
+     "kind": "nederland"
+    }
+   ],
+   "status": [
+    {
+     "text": "Jaarrond in Nederland. In het najaar en de winter komen er vogels uit andere delen van Europa bij.",
+     "sources": [
+      "VB_GROTE_ZILVERREIGER",
+      "SOV_GROTE_ZILVERREIGER"
+     ],
+     "kind": "voorkomen"
+    }
+   ],
+   "life": [
+    {
+     "text": "Zoekt vooral vis in ondiep water. Vangt ook amfibieën en in grasland soms muizen.",
+     "sources": [
+      "VB_GROTE_ZILVERREIGER"
+     ],
+     "kind": "voedsel"
+    },
+    {
+     "text": "Broedt vaak in kolonies en nestelt in oud riet of wilgen.",
+     "sources": [
+      "VB_GROTE_ZILVERREIGER"
+     ],
+     "kind": "broeden"
+    },
+    {
+     "text": "Na de broedtijd verspreiden de vogels zich. Vorst of sneeuw kan verplaatsing naar het zuiden veroorzaken.",
+     "sources": [
+      "VB_GROTE_ZILVERREIGER"
+     ],
+     "kind": "trek"
+    }
+   ],
+   "discrepancies": [],
+   "open": []
+  },
+  "sp084": {
+   "summary": {
+    "text": "Slanke reiger met een lange bruinoranje hals en donkere halsstrepen. In vlucht vallen de hoekige halsknik en ver uitstekende tenen op.",
+    "sources": [
+     "VB_PURPERREIGER",
+     "BZH_PURPERREIGER"
+    ]
+   },
+   "keyMarks": [
+    {
+     "text": "Lange, dunne hals met donkere lengtestrepen bij volwassen vogels.",
+     "sources": [
+      "VB_PURPERREIGER",
+      "BZH_PURPERREIGER"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Warme bruine tinten op hals en flanken.",
+     "sources": [
+      "VB_PURPERREIGER",
+      "BZH_PURPERREIGER"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "In vlucht steken de lange tenen achter het lichaam uit.",
+     "sources": [
+      "VB_PURPERREIGER",
+      "BZH_PURPERREIGER"
+     ],
+     "reliability": "ondersteunend"
+    }
+   ],
+   "caution": {
+    "text": "Bij tegenlicht is de warme kleur lastig te zien. Gebruik de dunne hals, de snavelvorm en het silhouet samen.",
+    "sources": [
+     "VB_PURPERREIGER",
+     "BZH_PURPERREIGER",
+     "VB_BLAUWE_REIGER"
+    ]
+   },
+   "critical": [
+    {
+     "feature": "Hals, snavel en vliegbeeld",
+     "where": "Bekijk de hals en snavel van opzij. Let in vlucht op de halsknik en poten.",
+     "this": "Dunnere hals en snavel, vaak een warm bruinoranje hals met donkere strepen.",
+     "other": "Robuustere bouw, grijzere bovenzijde en een relatief zware snavel.",
+     "vs": [
+      "sp081"
+     ],
+     "conditions": "Combineer bouw, kleur en houding.",
+     "exceptions": "Bij weinig licht is kleur minder bruikbaar. Jonge vogels missen een deel van de volwassen tekening.",
+     "supporting": "De ver uitstekende tenen ondersteunen herkenning in vlucht.",
+     "sources": [
+      "VB_PURPERREIGER",
+      "BZH_PURPERREIGER",
+      "VB_BLAUWE_REIGER"
+     ],
+     "reliability": "ondersteunend"
+    }
+   ],
+   "similar": [
+    {
+     "id": "sp081",
+     "why": "Beide vliegen met ingetrokken hals. Slankere bouw, halskleur en halsknik helpen bij onderscheid.",
+     "sources": [
+      "VB_PURPERREIGER",
+      "VB_BLAUWE_REIGER"
+     ]
+    }
+   ],
+   "detail": [
+    {
+     "text": "Mannetje en vrouwtje lijken sterk op elkaar. Een veldfoto krijgt daarom een neutraal label.",
+     "sources": [
+      "VB_PURPERREIGER",
+      "BZH_PURPERREIGER"
+     ],
+     "topic": "geslacht"
+    },
+    {
+     "text": "Een juveniel is warm geelbruin met minder uitgesproken volwassen kop- en halsstrepen.",
+     "sources": [
+      "VB_PURPERREIGER",
+      "BZH_PURPERREIGER"
+     ],
+     "topic": "leeftijd"
+    }
+   ],
+   "voice": [
+    {
+     "text": "Een hese reigerroep, doorgaans minder zwaar dan die van Blauwe Reiger.",
+     "sources": [
+      "VB_PURPERREIGER"
+     ],
+     "kind": "roep"
+    }
+   ],
+   "basis": {
+    "biometrics": [
+     {
+      "field": "length",
+      "unit": "cm",
+      "display": "ca. 75–90 cm",
+      "values": [
+       {
+        "source": "VB_PURPERREIGER",
+        "min": 78,
+        "max": 90
+       },
+       {
+        "source": "BZH_PURPERREIGER",
+        "min": 70,
+        "max": 90
+       }
+      ],
+      "note": "Afgeronde onder- en bovengrens op basis van de twee bronwaarden."
+     }
+    ]
+   },
+   "habitat": [
+    {
+     "text": "Uitgestrekte rietmoerassen, begroeide oevers en poldersloten met ondiep water.",
+     "sources": [
+      "VB_PURPERREIGER",
+      "SOV_PURPERREIGER"
+     ],
+     "kind": "nederland"
+    }
+   ],
+   "status": [
+    {
+     "text": "Nederlandse zomergast en broedvogel, vooral in rietrijke gebieden.",
+     "sources": [
+      "VB_PURPERREIGER",
+      "SOV_PURPERREIGER"
+     ],
+     "kind": "voorkomen"
+    }
+   ],
+   "life": [
+    {
+     "text": "Vangt vooral kleine vissen, en daarnaast onder meer kikkers, waterinsecten en kreeftachtigen.",
+     "sources": [
+      "VB_PURPERREIGER"
+     ],
+     "kind": "voedsel"
+    },
+    {
+     "text": "Maakt een takkennest in kolonies in uitgestrekt oud riet of in wilgenstruiken.",
+     "sources": [
+      "VB_PURPERREIGER"
+     ],
+     "kind": "broeden"
+    },
+    {
+     "text": "Trekt vooral in augustus en september naar Afrika. Voorjaarstrek vindt van maart tot in mei plaats.",
+     "sources": [
+      "VB_PURPERREIGER"
      ],
      "kind": "trek"
     }

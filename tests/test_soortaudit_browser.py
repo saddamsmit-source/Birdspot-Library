@@ -213,7 +213,8 @@ def main():
                               ("Zwarte Mees", "sp174"), ("Staartmees", "sp034"), ("Glanskop", "sp032"),
                               ("Matkop", "sp031"), ("Grauwe Vliegenvanger", "sp176"), ("Gekraagde Roodstaart", "sp178"),
                               ("Sijs", "sp038"), ("Goudvink", "sp040"), ("Appelvink", "sp041"),
-                              ("Zwarte Roodstaart", "sp051"), ("Roodborsttapuit", "sp053"), ("Bonte Vliegenvanger", "sp177")]:
+                              ("Zwarte Roodstaart", "sp051"), ("Roodborsttapuit", "sp053"), ("Bonte Vliegenvanger", "sp177"),
+                              ("Kleine Zilverreiger", "sp082"), ("Grote Zilverreiger", "sp083"), ("Purperreiger", "sp084")]:
                 similar_section(p, name, sid, "390")
                 open_card(p, name, sid)
                 sec = p.locator('#sdPanel-herkenning section.sd-similar')

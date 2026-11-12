@@ -1,15 +1,17 @@
 {
   "_meta": {
     "batch": "M8",
-    "phase": 1,
+    "phase": 2,
     "date": "2026-11-12",
-    "title": "K07 fase 1",
+    "title": "K07 fase 1 en 2",
     "reviewer": "ChatGPT Codex",
     "phaseDates": {
-      "1": "2026-11-12"
+      "1": "2026-11-12",
+      "2": "2026-11-12"
     },
     "phaseReports": [
-      "../M8_FASE_1_2026-11-12.md"
+      "../M8_FASE_1_2026-11-12.md",
+      "../M8_FASE_2_2026-11-12.md"
     ]
   },
   "species": {
@@ -129,6 +131,128 @@
       "uncertain": [],
       "date": "2026-11-12",
       "sexPolicy": "De volwassen labels volgen de fotobron en het zichtbare kleed. Geslacht van juvenielen is onbekend."
+    },
+    "sp082": {
+      "assets": {
+        "/assets/species/plumage/sp082-portrait.webp": {
+          "role": "Hoofdfoto (Volwassen)",
+          "content": "Witte reiger in zijaanzicht aan open water, met fijne donkere snavel en licht afstekende tenen.",
+          "sexAge": "Volwassen veldkleed. Geslacht onbekend.",
+          "quality": "De volledige vogel is scherp en staat vrij van storende begroeiing.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp082-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Kleine Zilverreiger in ondiep water, zonder lange sierveren.",
+          "sexAge": "Juveniel volgens de bestaande bronbeoordeling.",
+          "quality": "Hele vogel, kop en snavel goed herkenbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp082-breeding.webp": {
+          "role": "Verenkleed (Broedkleed)",
+          "content": "Witte reiger met twee lange kopveren.",
+          "sexAge": "Volwassen veldkleed. Geslacht onbekend.",
+          "quality": "Kopveren zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp082-winter.webp": {
+          "role": "Verenkleed (Winterkleed)",
+          "content": "Witte vogel op een oever met felgele tenen aan donkere poten.",
+          "sexAge": "Volwassen veldkleed. Geslacht onbekend.",
+          "quality": "Tenen, snavel en hele vogel zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/sp082.webp": {
+          "role": "In vlucht",
+          "content": "Vrije vlucht boven riet. Wit verenkleed, donkere snavel en gele tenen.",
+          "sexAge": "Leeftijd en geslacht onbekend.",
+          "quality": "Volledige vogel met herkenbaar vluchtbeeld.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Nieuw staand portret als hoofdfoto. De eerdere hoofdfoto staat nu één keer onder In vlucht. Kennisprofiel en kleedvergelijkingen gecontroleerd."
+      ],
+      "missing": [],
+      "wishes": [],
+      "uncertain": [],
+      "date": "2026-11-12",
+      "sexPolicy": "De geslachten lijken op elkaar in het veld. Volwassen en vliegende vogels krijgen een neutraal label."
+    },
+    "sp083": {
+      "assets": {
+        "/assets/species/sp083.webp": {
+          "role": "Hoofdfoto (Volwassen)",
+          "content": "Witte reiger met lange hals en gele snavel tussen riet.",
+          "sexAge": "Volwassen veldkleed. Geslacht onbekend.",
+          "quality": "Herkenbaar zijaanzicht met natuurlijke houding.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp083-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Grote Zilverreigers in het nest in Californië.",
+          "sexAge": "Nestjongen volgens de bronbeoordeling.",
+          "quality": "Bruikbaar als voorbeeld van nestjongen.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp083-breeding.webp": {
+          "role": "Verenkleed (Broedkleed)",
+          "content": "Vogel met donkere snavel, groene teugel en lange rugsierveren in Frankrijk.",
+          "sexAge": "Volwassen veldkleed. Geslacht onbekend.",
+          "quality": "Sierveren en snavelkleur duidelijk zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp083-flight.webp": {
+          "role": "In vlucht",
+          "content": "Vrij vliegende reiger met ingetrokken hals en witte vleugels.",
+          "sexAge": "Leeftijd en geslacht onbekend.",
+          "quality": "Herkenbaar silhouet en vleugelstand.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Kennisprofiel en broedkleedvergelijking gecontroleerd. Herkomst van de bestaande nestfoto expliciet vermeld."
+      ],
+      "missing": [],
+      "wishes": [
+        "Afzonderlijk Europees juveniel buiten het nest als aanvullend veldreferentiebeeld."
+      ],
+      "uncertain": [],
+      "date": "2026-11-12",
+      "sexPolicy": "De geslachten lijken op elkaar in het veld. Volwassen en vliegende vogels krijgen een neutraal label."
+    },
+    "sp084": {
+      "assets": {
+        "/assets/showcase/sp084.webp": {
+          "role": "Hoofdfoto (Volwassen)",
+          "content": "Slanke vogel met lange bruinoranje hals en donkere halsstrepen in oevervegetatie.",
+          "sexAge": "Volwassen veldkleed. Geslacht onbekend.",
+          "quality": "Hele vogel in zijaanzicht met herkenbare bouw.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp084-juv-europa.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge vogel in Europees rietland met warmbruin kleed en slanke hals.",
+          "sexAge": "Juveniel volgens fotograaf. Geslacht onbekend.",
+          "quality": "Kop, hals en romp scherp in beeld.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp084-flight.webp": {
+          "role": "In vlucht",
+          "content": "Vrije vlucht, met een hoekige ingetrokken hals en ver uitstekende poten.",
+          "sexAge": "Leeftijd en geslacht onbekend.",
+          "quality": "Herkenbare zijaanzichtfoto met geheven vleugels.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Juvenielenfoto uit Portugal toegevoegd als Europees veldvoorbeeld. Eerdere opname uit India blijft met bronbewijs in de repo. Kennisprofiel en vergelijking met Blauwe Reiger gecontroleerd."
+      ],
+      "missing": [],
+      "wishes": [],
+      "uncertain": [],
+      "date": "2026-11-12",
+      "sexPolicy": "De geslachten lijken op elkaar in het veld. Volwassen en vliegende vogels krijgen een neutraal label."
     }
   }
 }
