@@ -121,7 +121,7 @@ for (const id of new Set([...Object.keys(registry.plumage), ...Object.keys(regis
   for (const photo of entries) {
     assert.ok(!paths.has(photo.image), `Photo registered twice for ${id}: ${photo.image}`);
     paths.add(photo.image);
-    const src = photo.source?.trim().replace(/^http:/, 'https:').replace(/\\/$/, '');
+    const src = photo.source?.trim().replace(/^http:/, 'https:').replace(/\/$/, '');
     if (src) {
       assert.ok(!sourceUrls.has(src), `Photo source registered twice for ${id}: ${src}`);
       sourceUrls.add(src);
