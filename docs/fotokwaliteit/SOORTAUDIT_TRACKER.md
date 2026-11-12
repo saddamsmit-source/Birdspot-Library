@@ -1,6 +1,6 @@
 # Birdspot — soortaudit van de collectie met foto's
 
-Gegenereerd door `tools/fotokwaliteit/build_soortaudit_tracker.py` · status voor commit `1429709b680d2960117022df9bb0c9baef27c9f5` · 2026-11-12.
+Gegenereerd door `tools/fotokwaliteit/build_soortaudit_tracker.py` · status voor commit `2e20f1d5f44fa27f1a84b7ced9f04fba533255fa` · 2026-11-12.
 Statussen: VERIFIED / PARTIALLY TESTED / NOT TESTED / BLOCKED. Een geautomatiseerde rendercontrole telt **niet** als visuele of inhoudelijke controle.
 Beoordeeld volgens `docs/BIRDSPOT_KWALITEITSNORM.md` (biometrie §1, herkenning §2, foto §3). Verbeterwensen zijn voor de latere beoordeling door de eigenaar en blokkeren de batch niet.
 
@@ -9,18 +9,18 @@ Beoordeeld volgens `docs/BIRDSPOT_KWALITEITSNORM.md` (biometrie §1, herkenning 
 | # | Meting | Stand |
 |---|---|---|
 | 1 | Soorten met bestaande gidsfoto's | 140 |
-| 2 | Afzonderlijk (aangescherpt) gecontroleerd | 98 (M1, M2, M3, M4, M5, M6, M7, M8, M9) |
-| 3 | Technisch correct (laden, volgorde, offline-bron, beoordeling = kaart) | 98 van 98 |
-| 4a | Visueel VERIFIED (beeld per foto) | 93 van 98 |
-| 4b | Inhoud (kennisprofiel) VERIFIED | 64 van 98 — alle profielen hebben nog open punten |
+| 2 | Afzonderlijk (aangescherpt) gecontroleerd | 100 (M1, M10, M2, M3, M4, M5, M6, M7, M8, M9) |
+| 3 | Technisch correct (laden, volgorde, offline-bron, beoordeling = kaart) | 100 van 100 |
+| 4a | Visueel VERIFIED (beeld per foto) | 94 van 100 |
+| 4b | Inhoud (kennisprofiel) VERIFIED | 64 van 100 — alle profielen hebben nog open punten |
 | 4c | Onafhankelijk beoordeeld (ChatGPT) | 0 — NOT TESTED |
-| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 109; plus collectiebrede vluchtcontrole: 17 uit de vluchtrol, 8 gearchiveerd |
+| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 113; plus collectiebrede vluchtcontrole: 17 uit de vluchtrol, 8 gearchiveerd |
 | 6 | Afgekeurde vluchtfoto's | 25 (tabel hieronder) |
-| 7 | Ontbrekende foto-/kennisonderdelen | 66 fotoposities in gecontroleerde soorten; 42 fotosoorten zonder kennisprofiel |
-| 8 | Kritische kenmerken niet doorslaggevend onderbouwd | 128 (tabel hieronder) |
+| 7 | Ontbrekende foto-/kennisonderdelen | 70 fotoposities in gecontroleerde soorten; 40 fotosoorten zonder kennisprofiel |
+| 8 | Kritische kenmerken niet doorslaggevend onderbouwd | 131 (tabel hieronder) |
 | 9 | Open bron-/licentieproblemen | 0 in gecontroleerde soorten; collectiebreed blijft het eerder gemelde punt '22 afbeeldingen buiten de bronaudit' open |
 
-Eindoordeel per gecontroleerde soort: PARTIALLY TESTED 83, VERIFIED 15.
+Eindoordeel per gecontroleerde soort: PARTIALLY TESTED 85, VERIFIED 15.
 
 ## Gecontroleerde soorten
 
@@ -1492,6 +1492,46 @@ Batch M2 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · tech
 - **Onzeker:** —
 - **Volgende actie:** Onafhankelijke review (ChatGPT)
 
+### sp017 Kleine Bonte Specht — PARTIALLY TESTED
+
+Batch M10 · 2026-11-12 · SHA `2e20f1d5f44fa27f1a84b7ced9f04fba533255fa` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp017.webp` | Hoofdfoto (Mannetje) | Mannetje van Kleine Bonte Specht aan stam, rode kruin, zwart-witte tekening en bes in snavel. | Mannetje volgens bron en zichtbare rode kruin; leeftijd niet apart afgeleid. | Goed en scherp; rugbandering niet vanuit deze hoek volledig te zien. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Maurizio Carlini |
+| `sp017-female.webp` | Verenkleed (Vrouwtje) | Vrouwtje op tak, lichte kruin zonder rood, zwart-wit dwarsgestreepte rug. | Vrouwtje volgens Commons-bron en zichtbare kruintekening. | Goed; de kop en rugbandering zijn zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp |
+| `sp017-flight.webp` | Verenkleed (Vrouwtje; niet echte vrije vlucht) | Vogel naast nestholte met geopende vleugels tijdens wegvliegen; staart tegen de stam of zeer dicht erbij. | Vrouwtje volgens bron; precieze leeftijd niet vastgesteld. | Bruikbaar als context, deels bewegingsonscherp; ongeschikt voor betrouwbare vrije vluchtvergelijking. | uit-rol | opvliegen · uit-rol | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · blondinrikard |
+
+- **Correcties:** Alle drie bestaande gidsfoto's visueel gecontroleerd tegen hun rol; bron, maker en originele pixels behouden.; Nestholtefoto blijft in Vrouwtje, niet in In vlucht. Geen fictieve flight-claim.
+- **Ontbreekt:** Juvenielenfoto met controleerbare leeftijd.; Scherpe foto van de gehele vogel in aantoonbare vrije vlucht.
+- **Verbeterwensen (eigenaar beoordeelt later):** Optionele hoofdfoto waarop de dwarsbandering op de rug nog duidelijker zichtbaar is.
+- **Geslacht:** Volwassen mannetje met rode kruin, vrouwtje zonder rode kruin; juveniel niet op kopkleur alleen toeschrijven.
+- **Kennisprofiel:** 2 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Rugbandering versus witte schoudervlekken, Formaat en onderstaart tegenover Middelste Bonte Specht; open: Een overtuigende foto van een zelfstandig herkenbaar juveniel ontbreekt in de gids.; De bestaande foto bij de nestholte is geen voldoende scherpe vrijevluchtvergelijking; geen foto kunstmatig als vrije vlucht labelen.; Gewicht en gecombineerde maatbanden moeten voor eventuele wijziging volgens kwaliteitsnorm §1 apart worden nagezien.; resterende dataverschillen: 0
+- **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
+- **Onzeker:** Onafhankelijke ornithologische second opinion op individuele foto's ontbreekt.
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp018 Zwarte Specht — PARTIALLY TESTED
+
+Batch M10 · 2026-11-12 · SHA `2e20f1d5f44fa27f1a84b7ced9f04fba533255fa` · technisch VERIFIED · visueel PARTIALLY TESTED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp018.webp` | Hoofdfoto (Mannetje) | Zwarte Specht groot in beeld langs stam, volledige rode kruin en lichte lange snavel. | Mannetje volgens Commons-beschrijving en rode kruin; exacte leeftijd niet onafhankelijk beoordeeld. | Goed, scherp en duidelijk voor herkenning. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · xulescu_g |
+| `sp018-hero-male.webp` | Verenkleed (Mannetje; eerdere hoofdfoto) | Zwarte Specht met rode kruin in bos bij omgevallen boom; andere opname en fotograaf. | Mannetje volgens geverifieerde oorspronkelijke import. | Goed voor aanvullend beeld; vogel kleiner in beeld dan huidige hoofdfoto. | goedgekeurd | — | VERIFIED: geverifieerde import 09-11 (SHA-1 305a08246e…), CC BY 2.0 · Frank Vassen from Brussels, Belgium |
+| `sp018-female-single.webp` | Verenkleed (Vrouwtje) | Vrouwtje schuin van achteren met rode achterkruin op donkere kop. | Vrouwtje volgens originele Wikimedia-bron van Andreas Eichler. | Voorwaardelijk: lokale uitsnede slechts 500×661 px; zoomkwaliteit onvoldoende voor gedetailleerd profiel. | voorwaardelijk | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Andreas Eichler |
+| `sp018-juv-review.webp` | Verenkleed (Juveniel; uitsluitend kopdetail) | Kopdetail met lichte snavel, donkere veren en rood kruindeel; lichaam en vleugel ontbreken. | Originele Commons-bron zegt juveniel; geslacht onbekend; volledig jeugdkleed niet verifieerbaar. | Scherp kopdetail, maar niet bruikbaar als volledig juvenielportret. | voorwaardelijk | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 1.0 ·  |
+| `sp018-flight.webp` | In vlucht (geslacht onbekend) | Zwarte Specht vrij vliegend met geheven vleugel, lichte snavel en rode kruin; onderzijde aan rand beeld. | Geslacht niet vastgesteld en niet afgeleid. | Echte vlucht; benedenrand snijdt delen van het lijf of de staart af; betere kadervullende vluchtfoto wenselijk. | voorwaardelijk | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Janus Mosbacher |
+
+- **Correcties:** De scherpere, reeds aanwezige mannetjesfoto wordt als hoofdfoto gebruikt; eerdere geïmporteerde hoofdfoto blijft één keer onder Mannetje.; Vijf eigen bestanden per rol gecontroleerd. Geslacht van vlucht en juveniel wordt niet verzonnen.
+- **Ontbreekt:** Volledige juvenielenfoto met controleerbare leeftijd.; Hogeresolutie-versie van bestaande vrouwtjesfoto, pas na originele bronimport met bewezen rechten.
+- **Verbeterwensen (eigenaar beoordeelt later):** Compleet gekadreerde vluchtfoto met hele vogel.; Fysieke mobiele visuele eindcontrole.
+- **Geslacht:** Mannetje geheel rode kruin; vrouwtje achterkruin rood. Geen automatisch geslachtslabel voor vlucht of juveniel.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Zwarte vogel tegenover Groene Specht; open: Het juveniele gidsbeeld toont uitsluitend de kop; een afzonderlijk volledig jeugdkleedportret ontbreekt.; De lokale vrouwtjesfoto is een 500-pixel-voorbeeld; de originele bron heeft een veel hogere resolutie. Een verbeterd bestand vereist afzonderlijke gecontroleerde import.; Bestaande maten/gewichten zijn niet opnieuw volgens de tweebronnenmethode bevestigd.; resterende dataverschillen: 0
+- **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
+- **Onzeker:** REVIEW REQUIRED: de juveniel-leeftijd steunt op Commons-beschrijving, niet op een volledig getoond jeugdkleed.; Commons toont voor het juveniel kopdetail nu CC BY 1.0; de oorspronkelijke upload bevat een ouder CC BY-SA-sjabloon. Bij herpublicatie licentiehistorie opnieuw controleren.
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
 ### sp112 Spreeuw — PARTIALLY TESTED
 
 Batch M5 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
@@ -2004,6 +2044,9 @@ Batch M6 · 2026-11-12 · SHA `38e3b3c42662dc49be8b769fd9f82a8dde65cad7` · tech
 | sp009 Slechtvalk | Bouw en kopkap |
 | sp016 Grote Bonte Specht | Koppatroon |
 | sp016 Grote Bonte Specht | Grootte en rug |
+| sp017 Kleine Bonte Specht | Rugbandering versus witte schoudervlekken |
+| sp017 Kleine Bonte Specht | Formaat en onderstaart tegenover Middelste Bonte Specht |
+| sp018 Zwarte Specht | Zwarte vogel tegenover Groene Specht |
 | sp021 Ekster | Kleedpatroon en staart |
 | sp022 Zwarte Kraai | Snavelbasis |
 | sp025 Kauw | Iris en achterhoofd |
@@ -2118,5 +2161,5 @@ Batch M6 · 2026-11-12 · SHA `38e3b3c42662dc49be8b769fd9f82a8dde65cad7` · tech
 
 Deze soorten renderen technisch, maar zijn **niet** foto voor foto opnieuw beoordeeld. Eerdere uitslagen (fotobaseline batch 01) gelden niet automatisch.
 
-sp257 Bijeneter, sp058 Fluiter, sp128 Bergeend, sp262 Grauwe Klauwier, sp288 Grote Gele Kwikstaart, sp164 Grote Mantelmeeuw, sp097 Kokmeeuw, sp225 Zwartkopmeeuw, sp170 Ooievaar, sp146 Bontbekplevier, sp145 Goudplevier, sp147 Kleine Plevier, sp206 Strandplevier, sp144 Zilverplevier, sp245 Koereiger, sp085 Kwak, sp108 Grote Karekiet, sp110 Rietzanger, sp153 Bonte Strandloper, sp159 Bosruiter, sp158 Groenpootruiter, sp155 Oeverloper, sp217 Poelruiter, sp148 Regenwulp, sp149 Rosse Grutto, sp150 Steenloper, sp156 Witgat, sp157 Zwarte Ruiter, sp019 Groene Specht, sp017 Kleine Bonte Specht, sp020 Middelste Bonte Specht, sp018 Zwarte Specht, sp282 Roze Spreeuw, sp167 Grote Stern, sp166 Noordse Stern, sp039 Kneu, sp042 Roodmus, sp113 Wielewaal, sp062 Braamsluiper, sp060 Tuinfluiter, sp116 Oeverzwaluw, sp187 Wilde Zwaan
+sp257 Bijeneter, sp058 Fluiter, sp128 Bergeend, sp262 Grauwe Klauwier, sp288 Grote Gele Kwikstaart, sp164 Grote Mantelmeeuw, sp097 Kokmeeuw, sp225 Zwartkopmeeuw, sp170 Ooievaar, sp146 Bontbekplevier, sp145 Goudplevier, sp147 Kleine Plevier, sp206 Strandplevier, sp144 Zilverplevier, sp245 Koereiger, sp085 Kwak, sp108 Grote Karekiet, sp110 Rietzanger, sp153 Bonte Strandloper, sp159 Bosruiter, sp158 Groenpootruiter, sp155 Oeverloper, sp217 Poelruiter, sp148 Regenwulp, sp149 Rosse Grutto, sp150 Steenloper, sp156 Witgat, sp157 Zwarte Ruiter, sp019 Groene Specht, sp020 Middelste Bonte Specht, sp282 Roze Spreeuw, sp167 Grote Stern, sp166 Noordse Stern, sp039 Kneu, sp042 Roodmus, sp113 Wielewaal, sp062 Braamsluiper, sp060 Tuinfluiter, sp116 Oeverzwaluw, sp187 Wilde Zwaan
 
