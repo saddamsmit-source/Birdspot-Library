@@ -6,15 +6,15 @@ Birdspot Library — Soortgroepen alfabetisch A-Z (Opdracht 2, 2026-11-10)
          zowel ongefilterd als na een zoekopdracht
   SG-03  Profiel -> Mijn lijsten -> Alle soorten: bestaande A-Z-groepering
          (groupSpeciesByFamily) blijft intact (regressie, geen nieuwe code)
-  SG-04  Individuele vogelkaarten binnen een groep zijn niet herordend t.o.v.
-         de brondata (alleen de groepsvolgorde is gewijzigd)
+  SG-04  Vogelkaarten staan onder de juiste soortgroep volgens de brondata
   SG-05  Favorieten, zoeken, seizoenfilter en navigatie blijven werken na de
          sorteerwijziging (lichte rooktest; volledige dekking in andere tests)
 
 Niveau 2 — individuele vogels A-Z binnen de soortgroep (Opdracht 3, 2026-11-10)
   SG-06  Soorten-pagina: binnen elke soortgroep staan de vogelnamen
          (species-row__name) A-Z op Nederlandse naam, voor "Alle", een losse
-         categorie, na zoeken, en (voor zover zichtbaar) na "Toon alle"
+         categorie en na zoeken; de eerste 60 vogels zijn het begin van de
+         volledige A-Z-lijst die na "Toon alle" verschijnt
   SG-07  Soortkiezer: binnen elke groep staan de vogelnamen A-Z, zowel
          ongefilterd als na zoeken
 
@@ -120,8 +120,7 @@ def main():
                 "SG-01 dubbele groepslabels op 'Alle'"
             page.screenshot(path=str(SHOTS / "species_groups_az_alle_390.png"))
 
-            # SG-04: vogelkaarten binnen elke groep ongewijzigd (zelfde set id's
-            # als de brondata voor die familie, binnen de getoonde pagina-limiet)
+            # SG-04: iedere vogelkaart staat onder de groep uit de brondata.
             groups_dom = page.eval_on_selector_all(
                 "#speciesList .species-group",
                 """els => els.map(g => ({
@@ -138,21 +137,23 @@ def main():
             assert_groups_az(name_groups, "Soorten-pagina, Alle")
             total_before = sum(len(g) for g in name_groups)
 
-            # Paginering/"Toon meer" mag de A-Z-volgorde niet verstoren (expliciet gevraagd,
-            # Opdracht 3 §2): als de knop zichtbaar is, klik 'm en herhaal de check.
+            # Controleer de eerste pagina tegen de volledige lijst in DOM-volgorde.
+            rows = page.locator("#speciesList .species-row")
+            ids_before = rows.evaluate_all("els => els.map(row => row.dataset.id)")
             show_all = page.locator("#speciesShowAll")
-            if show_all.count():
-                show_all.click()
-                page.wait_for_function(
-                    "() => !document.querySelector('#speciesShowAll')", timeout=8000)
-                name_groups_all = groups_with_names(page, "#speciesList .species-group", ".species-row__name")
-                assert_groups_az(name_groups_all, "Soorten-pagina, Alle, na 'Toon alle'")
-                total_after = sum(len(g) for g in name_groups_all)
-                assert total_after >= total_before, "SG-06 'Toon alle' toont minder vogels dan voor de klik"
-                print(f"SG-06 OK — vogelnamen A-Z binnen {len(name_groups)} groepen, "
-                      f"ook na 'Toon alle' ({total_before} -> {total_after} vogels)")
-            else:
-                print(f"SG-06 OK — vogelnamen A-Z binnen {len(name_groups)} groepen ('Toon alle' niet nodig)")
+            assert total_before == 60 and show_all.count() == 1, "SG-06 eerste pagina mist de limiet of knop"
+            show_all.click()
+            show_all.wait_for(state="detached", timeout=8000)
+            name_groups_all = groups_with_names(page, "#speciesList .species-group", ".species-row__name")
+            assert_groups_az(name_groups_all, "Soorten-pagina, Alle, na 'Toon alle'")
+            labels_all = page.locator("#speciesList .species-group__label").all_text_contents()
+            assert labels_all == nl_sorted(labels_all), "SG-06 groepen niet A-Z na 'Toon alle'"
+            ids_all = rows.evaluate_all("els => els.map(row => row.dataset.id)")
+            assert len(ids_all) == len(families_by_id) and set(ids_all) == set(families_by_id), \
+                "SG-06 'Toon alle' toont niet iedere soort precies één keer"
+            assert ids_before == ids_all[:total_before], \
+                "SG-06 eerste 60 vogels zijn niet de eerste 60 van de volledige A-Z-lijst"
+            print(f"SG-06 OK — groepen en vogels A-Z, ook na 'Toon alle' ({total_before} -> {len(ids_all)} vogels)")
 
             # ── SG-01b: Soorten-pagina, één losse categorie ─────────────
             cat = data["active"][0]

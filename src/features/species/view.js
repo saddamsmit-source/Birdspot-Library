@@ -306,7 +306,8 @@ function renderList(el, seenIds, ctx = _speciesCtx) {
   const results = searchSpecies(_searchQuery, _currentCategory === ALL ? null : _currentCategory, _currentRegion)
     .filter(species => !_onlyFavorites || favorites.has(species.id))
     .filter(species => presentIn(species, period))
-    .filter(species => !(period && _hideYearRound && isYearRound(species)));
+    .filter(species => !(period && _hideYearRound && isYearRound(species)))
+    .sort((a, b) => a.family.localeCompare(b.family, 'nl') || a.nameNL.localeCompare(b.nameNL, 'nl'));
   const generation = ctx ? ++ctx.listGeneration : 0;
   const list    = el.querySelector('#speciesList');
   if (!list) return;
@@ -344,7 +345,7 @@ function renderList(el, seenIds, ctx = _speciesCtx) {
     return;
   }
 
-  // Groepeer op familie
+  // Neem de eerste vogels uit de volledige A-Z-lijst en behoud die volgorde per familie.
   const shown = results.slice(0, _listLimit);
   const hidden = results.length - shown.length;
   const byFamily = {};
@@ -353,17 +354,11 @@ function renderList(el, seenIds, ctx = _speciesCtx) {
     byFamily[s.family].push(s);
   });
 
-  // Soortgroepen A-Z op Nederlandse groepsnaam (Opdracht 2, 2026-11-10).
-  // Niveau 2 (Opdracht 3, 2026-11-10): binnen iedere soortgroep ook de individuele vogels A-Z op
-  // Nederlandse naam — niet langer op database-volgorde, ID, waarnemingsdatum of wetenschappelijke
-  // naam. Werkt ook correct door bij "Toon meer": elke nieuw zichtbare pagina wordt hier opnieuw
-  // per groep gesorteerd, dus de getoonde volgorde klopt altijd, wat er ook al zichtbaar was.
   list.innerHTML = Object.entries(byFamily)
-    .sort((a, b) => a[0].localeCompare(b[0], 'nl'))
     .map(([family, birds]) => `
     <div class="species-group">
       <div class="species-group__label">${escHtml(family)}</div>
-      ${[...birds].sort((a, b) => a.nameNL.localeCompare(b.nameNL, 'nl')).map(s => speciesRow(s, seenIds, favorites)).join('')}
+      ${birds.map(s => speciesRow(s, seenIds, favorites)).join('')}
     </div>`).join('') + (hidden > 0 ? `
     <button type="button" class="species-show-all" id="speciesShowAll">Toon alle ${results.length} soorten (+${hidden})</button>` : '');
 
