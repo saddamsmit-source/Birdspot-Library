@@ -667,7 +667,7 @@ export const GUIDE_COMPARISONS = [
         "plumage": "juv"
       }
     ],
-    "tip": "Bij beide ontbreekt de volledige volwassen koptekening. De Purperreigerfoto is uit India; tinten kunnen geografisch verschillen."
+    "tip": "Bij beide ontbreekt de volledige volwassen koptekening. De Purperreigerfoto toont een juveniel in Europees rietland."
   },
   {
     "label": "Kwak en Blauwe Reiger · jonge vogels",

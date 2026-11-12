@@ -4850,6 +4850,27 @@
    "airborne": false,
    "source": "Visuele controle K07 fase 1 (2026-11-12)",
    "note": "Jonge Bonte Vliegenvanger met een lichte vleugeltekening en gevlekte kop en bovendelen, volledig in zijaanzicht."
+  },
+  "/assets/species/plumage/sp082-portrait.webp": {
+   "refs": [
+    "sp082 GUIDE_PLUMAGE.adult_m",
+    "sp082 GUIDE_HEROES"
+   ],
+   "sha1": "07ddbb1334a87c58ffc50faf484fb3df7b2da23b",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K07 fase 2 (2026-11-12)",
+   "note": "Volwassen Kleine Zilverreiger loopt van opzij langs open water, met een donkere snavel, donkere poten en geelgroene tenen."
+  },
+  "/assets/species/plumage/sp084-juv-europa.webp": {
+   "refs": [
+    "sp084 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "7c740dec520be5a9c57a4e51ecf709bce20f0bb8",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K07 fase 2 (2026-11-12)",
+   "note": "Jonge Purperreiger in zijaanzicht tussen rietstengels, met geelbruine veren en een lange, smalle hals."
   }
  }
 }

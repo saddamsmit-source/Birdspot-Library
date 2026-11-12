@@ -2478,6 +2478,29 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "alt": "Kleine Zilverreiger — Jonge Kleine Zilverreiger aan een ondiepe oever in Portugal, met een slanke snavel en zonder lange sierveren.",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "observation": "https://www.inaturalist.org/observations/57964762"
+    },
+    "adult_m": {
+      "file": "Little egret (Egretta garzetta) Cyprus.jpg",
+      "nl": "Kleine Zilverreiger",
+      "latin": "Egretta garzetta",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Little_egret_%28Egretta_garzetta%29_Cyprus.jpg",
+      "showSourceLink": true,
+      "alt": "Volwassen Kleine Zilverreiger loopt van opzij langs open water, met een donkere snavel, donkere poten en geelgroene tenen.",
+      "note": "Volwassen Kleine Zilverreiger loopt van opzij langs open water, met een donkere snavel, donkere poten en geelgroene tenen.",
+      "modifications": "Verkleind tot maximaal 1600 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.",
+      "reviewed": "2026-11-12",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kleine-zilverreiger",
+      "visualCheck": "Volwassen Kleine Zilverreiger loopt van opzij langs open water, met een donkere snavel, donkere poten en geelgroene tenen.",
+      "verification": "De fotograaf benoemt Kleine Zilverreiger op Cyprus. Het volwassen veldkleed, de fijne donkere snavel en de lichte tenen zijn zichtbaar. Geslacht onbekend.",
+      "width": 1600,
+      "height": 1067,
+      "image": "/assets/species/plumage/sp082-portrait.webp",
+      "sha1": "07ddbb1334a87c58ffc50faf484fb3df7b2da23b",
+      "sourceAudit": "2026-11-12",
+      "age": "adult"
     }
   },
   "sp083": {
@@ -3734,23 +3757,27 @@ export const GUIDE_PLUMAGE = Object.freeze({
   },
   "sp084": {
     "juv": {
-      "file": "Purple Heron (Immature) I IMG 8123.jpg",
+      "file": "Garça-vermelha, juvenil, Purple Heron, juvenile (50904679921).jpg",
       "nl": "Purperreiger",
       "latin": "Ardea purpurea",
-      "author": "J.M.Garg",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-      "source": "https://commons.wikimedia.org/wiki/File:Purple_Heron_%28Immature%29_I_IMG_8123.jpg",
-      "alt": "Jonge Purperreiger met warmbruin kleed en een lange, dunne hals.",
-      "modifications": "Verkleind en omgezet naar WebP zonder extra uitsnede",
-      "reviewed": "2026-11-07",
+      "author": "Luiz Lapa",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Gar%C3%A7a-vermelha%2C_juvenil%2C_Purple_Heron%2C_juvenile_%2850904679921%29.jpg",
+      "showSourceLink": true,
+      "alt": "Jonge Purperreiger in zijaanzicht tussen rietstengels, met geelbruine veren en een lange, smalle hals.",
+      "note": "Jonge Purperreiger in zijaanzicht tussen rietstengels, met geelbruine veren en een lange, smalle hals.",
+      "modifications": "Verkleind tot maximaal 1400 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.",
+      "reviewed": "2026-11-12",
       "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/purperreiger",
-      "visualCheck": "Bron benoemt immature; warmbruine kleur en fijne bouw visueel gecontroleerd. Foto uit Bharatpur, India; geografische variatie mogelijk.",
-      "verification": "Bron benoemt immature; warmbruine kleur en fijne bouw visueel gecontroleerd. Foto uit Bharatpur, India; geografische variatie mogelijk.",
-      "width": 840,
-      "height": 630,
-      "originalURL": "https://upload.wikimedia.org/wikipedia/commons/3/37/Purple_Heron_%28Immature%29_I_IMG_8123.jpg",
-      "image": "/assets/species/plumage/sp084-juv.webp"
+      "visualCheck": "Jonge Purperreiger in zijaanzicht tussen rietstengels, met geelbruine veren en een lange, smalle hals.",
+      "verification": "De fotograaf benoemt een juveniele Purperreiger in Portugal. Het bruine kleed, de slanke hals en de snavel zijn duidelijk zichtbaar.",
+      "width": 1400,
+      "height": 1029,
+      "image": "/assets/species/plumage/sp084-juv-europa.webp",
+      "sha1": "7c740dec520be5a9c57a4e51ecf709bce20f0bb8",
+      "sourceAudit": "2026-11-12",
+      "age": "juvenile"
     },
     "adult_m": {
       "reuseGuidePhoto": true
@@ -5848,7 +5875,8 @@ export const GUIDE_HEROES = Object.freeze({
   "sp114": "/assets/species/plumage/sp114-hero-male.webp",
   "sp115": "/assets/species/plumage/sp115-hero-adult.webp",
   "sp126": "/assets/species/plumage/sp126-hero-male.webp",
-  "sp051": "/assets/species/plumage/sp051-hero-male.webp"
+  "sp051": "/assets/species/plumage/sp051-hero-male.webp",
+  "sp082": "/assets/species/plumage/sp082-portrait.webp"
 });
 export const GUIDE_POSES = Object.freeze({
   "sp008": [
