@@ -1,18 +1,20 @@
 {
   "_meta": {
     "batch": "M5",
-    "phase": 2,
+    "phase": 3,
     "date": "2026-11-11",
-    "title": "K04 fases 1 en 2",
+    "title": "K04 fases 1 tot en met 3",
     "reviewer": "ChatGPT (Codex), beeldinspectie en primaire broncontrole. Onafhankelijke review open.",
     "basis": "M4 fase 4 op 3fbfc7a, K04-batchplan en Birdspot-kwaliteitsnorm",
     "phaseReports": [
       "../M5_FASE_1_2026-11-11.md",
-      "../M5_FASE_2_2026-11-12.md"
+      "../M5_FASE_2_2026-11-12.md",
+      "../M5_FASE_3_2026-11-12.md"
     ],
     "phaseDates": {
       "1": "2026-11-11",
-      "2": "2026-11-12"
+      "2": "2026-11-12",
+      "3": "2026-11-12"
     }
   },
   "species": {
@@ -247,6 +249,121 @@
       "uncertain": [
         "Spanwijdte verschilt tussen de eerdere gidswaarde en de Nederlandse soortgids. Zie kennisprofiel."
       ],
+      "date": "2026-11-12"
+    },
+    "sp100": {
+      "assets": {
+        "/assets/species/sp100.webp": {
+          "role": "Hoofdfoto",
+          "content": "Wulp in ondiep water met lange gebogen snavel en gestreept kleed.",
+          "sexAge": "Volwassen type. Geslacht onbekend.",
+          "quality": "Volledig zijaanzicht.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp100-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Wulp in gras, met gestreepte bovendelen en een korte snavel.",
+          "sexAge": "Research-grade waarneming met annotatie Juvenile. Kenmerken in het bestand visueel getoetst. Geslacht onbekend.",
+          "quality": "Jonge vogel met korte snavel. De kop is minder scherp dan de rug.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp100-flight.webp": {
+          "role": "In vlucht",
+          "content": "Wulp vrij boven water, met opgeheven vleugels en neerwaarts gebogen snavel.",
+          "sexAge": "Geslacht onbekend.",
+          "quality": "Snavel, zijprofiel en getekende vleugel zichtbaar.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Kennisprofiel, juvenielenfoto en vergelijking met Regenwulp toegevoegd. Spanwijdte uit twee bronbereiken berekend."
+      ],
+      "missing": [],
+      "wishes": [
+        "Scherper juveniel zijaanzicht met zicht op alle poten."
+      ],
+      "sexPolicy": "Gebruik neutrale fotolabels. Vrouwtjes hebben gemiddeld langere snavels, met overlap.",
+      "uncertain": [
+        "Lengtebereiken van Vogelbescherming en Naturalis verschillen. Het eerdere Nederlandse bereik is behouden."
+      ],
+      "date": "2026-11-12"
+    },
+    "sp101": {
+      "assets": {
+        "/assets/species/sp101.webp": {
+          "role": "Hoofdfoto",
+          "content": "Grutto in gras met lange vrijwel rechte snavel en warme hals.",
+          "sexAge": "Volwassen type. Geslacht onbekend.",
+          "quality": "Volledige vogel in een rustig zijaanzicht.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp101-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Grutto in ondiep water. Warme halskleur en lichte randen aan de donkere bovenveren.",
+          "sexAge": "Research-grade waarneming met annotatie Juvenile. Kenmerken in het bestand visueel getoetst. Geslacht onbekend.",
+          "quality": "Snavel, veerranden en poten vrij zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp101-flight.webp": {
+          "role": "In vlucht",
+          "content": "Grutto vrij in de lucht met brede witte vleugelstrepen en zwarte staartband.",
+          "sexAge": "Geslacht onbekend.",
+          "quality": "Diagnostische vleugel- en staartkenmerken zichtbaar.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Kennisprofiel, juvenielenfoto en vergelijking met Rosse Grutto toegevoegd. Spanwijdte uit twee bronbereiken berekend."
+      ],
+      "missing": [
+        "Foto van een met bronbewijs bevestigd volwassen mannetje.",
+        "Foto van een met bronbewijs bevestigd volwassen vrouwtje."
+      ],
+      "wishes": [],
+      "sexPolicy": "Roodintensiteit en afmetingen overlappen. Gebruik neutrale labels voor de huidige foto’s.",
+      "uncertain": [
+        "Voor de lengte is één vergelijkbare bronband opgenomen. Het eerdere bereik is behouden en het verschil staat in het profiel."
+      ],
+      "date": "2026-11-12"
+    },
+    "sp102": {
+      "assets": {
+        "/assets/species/sp102.webp": {
+          "role": "Hoofdfoto",
+          "content": "Tureluur in ondiep water met roodoranje poten en rode snavelbasis.",
+          "sexAge": "Volwassen winterkleed. Geslacht onbekend.",
+          "quality": "Rustig zijaanzicht met zicht op de poten.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp102-breeding.webp": {
+          "role": "Verenkleed (Broedkleed)",
+          "content": "Tureluur op paal met bruin getekende rug en roodoranje poten.",
+          "sexAge": "Broedkleed. Geslacht onbekend.",
+          "quality": "Vogel zichtbaar in zijaanzicht.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp102-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Tureluur met lichtere veerranden en gelig oranje poten.",
+          "sexAge": "iNaturalist-waarneming heeft de annotatie Juvenile. Geslacht onbekend.",
+          "quality": "Potenkleur is goed zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp102-flight.webp": {
+          "role": "In vlucht",
+          "content": "IJslandse Tureluur vrij in de lucht met zichtbare witte vleugelachterrand en roodoranje poten.",
+          "sexAge": "Ondersoort robusta volgens fotobron. Geslacht onbekend.",
+          "quality": "Volledige vogel tegen rustige blauwe lucht.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Kennisprofiel en vergelijkingskenmerken toegevoegd. Eerdere vergelijkingstabbladen en vier beelden gecontroleerd."
+      ],
+      "missing": [],
+      "wishes": [],
+      "sexPolicy": "Mannetje en vrouwtje lijken sterk op elkaar. Gebruik neutrale labels.",
+      "uncertain": [],
       "date": "2026-11-12"
     }
   }

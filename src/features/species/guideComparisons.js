@@ -1063,6 +1063,22 @@ export const GUIDE_COMPARISONS = [
     ],
     tip: 'Vergelijk de snavelvorm en pootlengte. De kleuren zijn lastiger bij tegenlicht.',
   },
+  {
+    label: 'Wulp en Regenwulp · kop en snavel',
+    birds: [
+      {id: 'sp100', source: 'wulp', marks: 'Relatief egale kruin en een lange, gelijkmatig gebogen snavel.'},
+      {id: 'sp148', source: 'regenwulp', marks: 'Opvallende lichte middenkruinstreep tussen donkere kruinbanden. Kortere snavel met sterkere kromming bij de punt.'},
+    ],
+    tip: 'Kijk naar koptekening én snavel. Bij jonge Wulpen is de snavel vaak korter.',
+  },
+  {
+    label: 'Grutto en Rosse Grutto · veldkenmerken',
+    birds: [
+      {id: 'sp101', source: 'grutto', marks: 'Bijna rechte snavel en doorgaans langere poten. Brede witte vleugelstreep en zwarte staartband in vlucht.'},
+      {id: 'sp149', source: 'rosse-grutto', marks: 'Licht omhooggebogen snavel. In vlucht een gebandeerde staart en geen brede witte vleugelstreep.'},
+    ],
+    tip: 'Bij een staande vogel helpt de snavelvorm. Bekijk in vlucht ook de staart en vleugels.',
+  },
 ];
 
 export function comparisonSource(bird) {

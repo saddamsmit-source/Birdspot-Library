@@ -4475,6 +4475,58 @@
         "sourceAudit": "2026-11-12",
         "age": "juvenile"
       }
+    },
+    "sp100": {
+      "juv": {
+        "file": "iNaturalist photo 397021184",
+        "nl": "Wulp",
+        "latin": "Numenius arquata",
+        "author": "Jo Roberts",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://www.inaturalist.org/photos/397021184",
+        "showSourceLink": true,
+        "alt": "Jonge Wulp in gras, met gestreepte bovendelen en een korte snavel.",
+        "modifications": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+        "reviewed": "2026-11-12",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wulp",
+        "visualCheck": "Jonge Wulp in gras, met gestreepte bovendelen en een korte snavel.",
+        "verification": "Research-grade waarneming met annotatie Juvenile. Kenmerken in het bestand visueel getoetst. Geslacht onbekend.",
+        "width": 1024,
+        "height": 768,
+        "image": "/assets/species/plumage/sp100-juv.webp",
+        "sha1": "71d6b7af3774d80e6261d714caf7ee9d50d3c894",
+        "sourceAudit": "2026-11-12",
+        "age": "juvenile",
+        "observation": "https://www.inaturalist.org/observations/224037226",
+        "note": "Jonge Wulp in gras, met gestreepte bovendelen en een korte snavel."
+      }
+    },
+    "sp101": {
+      "juv": {
+        "file": "iNaturalist photo 572308003",
+        "nl": "Grutto",
+        "latin": "Limosa limosa",
+        "author": "Phil James",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://www.inaturalist.org/photos/572308003",
+        "showSourceLink": true,
+        "alt": "Jonge Grutto in ondiep water. Warme halskleur en lichte randen aan de donkere bovenveren.",
+        "modifications": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+        "reviewed": "2026-11-12",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grutto",
+        "visualCheck": "Jonge Grutto in ondiep water. Warme halskleur en lichte randen aan de donkere bovenveren.",
+        "verification": "Research-grade waarneming met annotatie Juvenile. Kenmerken in het bestand visueel getoetst. Geslacht onbekend.",
+        "width": 1024,
+        "height": 768,
+        "image": "/assets/species/plumage/sp101-juv.webp",
+        "sha1": "245abcbc612797bf1f2139d572dde175bf804482",
+        "sourceAudit": "2026-11-12",
+        "age": "juvenile",
+        "observation": "https://www.inaturalist.org/observations/316748914",
+        "note": "Jonge Grutto in ondiep water. Warme halskleur en lichte randen aan de donkere bovenveren."
+      }
     }
   },
   "poses": {

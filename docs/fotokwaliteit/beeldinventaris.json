@@ -4239,6 +4239,46 @@
    "airborne": false,
    "source": "Beeldinspectie 12-11-2026",
    "note": "Juveniel in zijaanzicht aan de waterkant."
+  },
+  "/assets/species/plumage/sp100-juv.webp": {
+   "refs": [
+    "sp100 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "71d6b7af3774d80e6261d714caf7ee9d50d3c894",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Wulp in gras, zonder vlieghouding."
+  },
+  "/assets/species/plumage/sp101-juv.webp": {
+   "refs": [
+    "sp101 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "245abcbc612797bf1f2139d572dde175bf804482",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Jonge Grutto staat in ondiep water."
+  },
+  "/assets/species/sp148.webp": {
+   "refs": [
+    "sp148 GUIDE_PHOTOS"
+   ],
+   "sha1": "4b80a4771650896e577dd87bd59de9daba48c591",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Regenwulp staat op een steen."
+  },
+  "/assets/species/sp149.webp": {
+   "refs": [
+    "sp149 GUIDE_PHOTOS"
+   ],
+   "sha1": "4c58b96f156e55304cca2274a8ffa695d52ea2bb",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "beeldinspectie 12-11-2026",
+   "note": "Rosse Grutto staat bij de waterlijn."
   }
  }
 }
