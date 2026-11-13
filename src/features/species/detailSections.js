@@ -170,14 +170,26 @@ export function guidePlumageGroups(s) {
   return groups;
 }
 
-function plumageCard({key, icon: iconName, title, text, badge, photos, heroRef, flightRef}) {
+function plumageCard({key, icon: iconName, title, text, badge, photos, heroRef, flightRef}, compact = false) {
   const gallery = photos.map(photo => {
     const label = photo.label || (photo.flight ? 'In vlucht' : '');
-    return `<figure class="sd-plumage-photo">${fieldPhoto(photo)}${label ? `<figcaption>${esc(label)}</figcaption>` : ''}${photo.note ? `<p>${esc(photo.note)}</p>` : ''}</figure>`;
+    // Source-backed notes remain available in the single explicit details
+    // control when cards are placed side-by-side, not lost or duplicated.
+    return `<figure class="sd-plumage-photo">${fieldPhoto(photo)}${label ? `<figcaption>${esc(label)}</figcaption>` : ''}${!compact && photo.note ? `<p>${esc(photo.note)}</p>` : ''}</figure>`;
   });
-  // Visual first for comparing male/female/juvenile plumages; never duplicate
-  // the hero and never claim a flight/sex/age role that is not source-backed.
-  return `<div class="sd-plumage" data-plumage="${key}">${icon(iconName)}<div><strong>${esc(title)}${badge ? `<span class="sd-badge">${esc(badge)}</span>` : ''}</strong>${gallery.length ? `<div class="sd-plumage-gallery">${gallery.join('')}</div>` : ''}${heroRef ? '<p class="sd-hero-ref">Foto: de hoofdfoto bovenaan deze kaart.</p>' : ''}${flightRef ? '<p class="sd-hero-ref" data-flight-ref>Foto: zie In vlucht hieronder.</p>' : ''}${text ? `<p class="sd-plumage-description">${esc(text)}</p>` : ''}</div></div>`;
+  const notes = [];
+  if (text) notes.push(`<p class="sd-plumage-description">${esc(text)}</p>`);
+  for (const photo of photos) {
+    if (!photo.note) continue;
+    const label = photo.label || (photo.flight ? 'In vlucht' : 'Foto');
+    notes.push(`<p><b>${esc(label)}:</b> ${esc(photo.note)}</p>`);
+  }
+  const description = compact
+    ? (notes.length ? `<details class="sd-plumage-more"><summary>Kenmerken</summary><div>${notes.join('')}</div></details>` : '')
+    : (text ? `<p class="sd-plumage-description">${esc(text)}</p>` : '');
+  // Only the visual two-role mode collapses long prose. All other cards and
+  // flight cards retain their original readable notes and source information.
+  return `<div class="sd-plumage" data-plumage="${key}">${icon(iconName)}<div><strong>${esc(title)}${badge ? `<span class="sd-badge">${esc(badge)}</span>` : ''}</strong>${gallery.length ? `<div class="sd-plumage-gallery">${gallery.join('')}</div>` : ''}${heroRef ? '<p class="sd-hero-ref">Foto: de hoofdfoto bovenaan deze kaart.</p>' : ''}${flightRef ? '<p class="sd-hero-ref" data-flight-ref>Foto: zie In vlucht hieronder.</p>' : ''}${description}</div></div>`;
 }
 
 function flightPhoto(id) {
@@ -213,7 +225,7 @@ function posesPanel(photos) {
  * leeftijd-label uit die groep) met neutrale vluchtfoto's zonder vastgesteld geslacht (eigen, neutrale
  * kaart — geen geslacht verzinnen). Hergebruikt plumageCard voor dezelfde visuele taal als Verenkleed. */
 function flightSection(entries) {
-  const cards = entries.filter(entry => entry.photos.length).map(plumageCard);
+  const cards = entries.filter(entry => entry.photos.length).map(entry => plumageCard(entry));
   if (!cards.length) return '';
   return `<section class="sd-flight" aria-label="In vlucht"><h3 class="sd-h">In vlucht</h3><div class="sd-plumage-list">${cards.join('')}</div></section>`;
 }
@@ -406,9 +418,19 @@ export function recognitionPanel(s, life = null) {
     // A side-by-side comparison is only useful with two different, actual
     // non-flight role photos. A hero reference or text-only placeholder must
     // not be mistaken for a second comparable image (e.g. sp017).
-    const comparableRoles = groups.filter(group => group.photos.length > 0).length;
-    const layout = comparableRoles >= 2 ? ' data-layout="compare"' : '';
-    out.push('<h3 class="sd-h">Verenkleed</h3><div class="sd-plumage-list"' + layout + '>' + groups.map(plumageCard).join('') + '</div>');
+    const withPhotos = groups.filter(group => group.photos.length > 0);
+    const compare = withPhotos.length >= 2;
+    if (compare) {
+      const withoutPhotos = groups.filter(group => !group.photos.length);
+      out.push('<h3 class="sd-h">Verenkleed</h3><div class="sd-plumage-list" data-layout="compare">' +
+        withPhotos.map(group => plumageCard(group, true)).join('') + '</div>');
+      // Text-only seasonal/age roles must not take up the same picture grid.
+      // Keep every historical fieldmark and hero reference one tap away.
+      if (withoutPhotos.length) out.push(`<details class="sd-plumage-other"><summary>Andere kleden (${withoutPhotos.length})</summary><div class="sd-plumage-list">${withoutPhotos.map(group => plumageCard(group)).join('')}</div></details>`);
+    } else {
+      out.push('<h3 class="sd-h">Verenkleed</h3><div class="sd-plumage-list">' +
+        groups.map(group => plumageCard(group)).join('') + '</div>');
+    }
   }
 
   takePhoto(guideHeroPhoto(s.id));
