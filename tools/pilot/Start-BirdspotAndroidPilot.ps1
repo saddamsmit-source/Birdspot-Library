@@ -61,11 +61,13 @@ if (-not (Test-Path -LiteralPath $checkout)) {
 if (-not (Test-Path -LiteralPath (Join-Path $checkout '.git'))) {
     throw 'An existing checkout path is not a Git repository. Refusing to overwrite it.'
 }
-$actualRemote = [string]((& git -C $checkout remote get-url origin | Select-Object -First 1))
+$remoteLines = @(& git -C $checkout remote get-url origin)
 Check-LastExit 'Git remote check'
+$actualRemote = [string]$remoteLines[0]
 if ($actualRemote.Trim() -ne $RepoUrl) { throw 'Existing checkout has an unexpected remote. Refusing to reuse it.' }
-$actualSha = [string]((& git -C $checkout rev-parse HEAD | Select-Object -First 1))
+$headLines = @(& git -C $checkout rev-parse HEAD)
 Check-LastExit 'Git HEAD check'
+$actualSha = [string]$headLines[0]
 if ($actualSha.Trim() -ne $ExpectedSha) {
     throw "Source HEAD $actualSha differs from pinned candidate $ExpectedSha. STOP - do not test an unverified version."
 }
