@@ -10,8 +10,8 @@
     "progressMethod": "Count 100 canonical audited items plus unique individually first-pass-reviewed canonical audited:false IDs; no duplicates. expectedFirstPass/expectedRemaining are cross-checks and must be updated together.",
     "nextGate": "When all 140 have initial documented review, independently and comprehensively reverify ALL 140; only afterwards work on species outside the group of 140.",
     "limits": "No source, license, age/sex or complete audit is promoted by this index. Do not alter canonical audited/verdict fields based on progress alone.",
-    "expectedFirstPass": 120,
-    "expectedRemaining": 20
+    "expectedFirstPass": 123,
+    "expectedRemaining": 17
   },
   "additionalFirstPass": [
     {
@@ -293,6 +293,48 @@
       "independentSexAge": "NOT TESTED",
       "fullKnowledgeReview": "NOT TESTED",
       "firstPassScope": "Actual one local WebP individually opened; original source registry, flight-versus-hero role and secondary morphology checked, original JPEG matching and complete license/sex-age/knowledge review remain open"
+    },
+    {
+      "id": "sp019",
+      "nameNL": "Groene Specht",
+      "batch": "M19",
+      "photosSeen": 5,
+      "reviewDocument": "docs/fotokwaliteit/M19_DRIE_JUVENIELEN_EN_FOTOKWALITEIT_2026-11-13_DRAFT.md",
+      "reviewPR": null,
+      "evidenceCommit": "53c35a7df57e96f8c2db56fd498dce7842b958a0",
+      "status": "PARTIALLY TESTED",
+      "originalRights": "NOT TESTED",
+      "independentSexAge": "NOT TESTED",
+      "fullKnowledgeReview": "NOT TESTED",
+      "firstPassScope": "All distinct local WebPs visually opened, actual juvenile morphology and original source where accessible checked. Missing feet not automatic rejection under norm 1.1; complete original image match, rights, and individual age/sex for all photos remain open"
+    },
+    {
+      "id": "sp085",
+      "nameNL": "Kwak",
+      "batch": "M19",
+      "photosSeen": 3,
+      "reviewDocument": "docs/fotokwaliteit/M19_DRIE_JUVENIELEN_EN_FOTOKWALITEIT_2026-11-13_DRAFT.md",
+      "reviewPR": null,
+      "evidenceCommit": "53c35a7df57e96f8c2db56fd498dce7842b958a0",
+      "status": "PARTIALLY TESTED",
+      "originalRights": "NOT TESTED",
+      "independentSexAge": "NOT TESTED",
+      "fullKnowledgeReview": "NOT TESTED",
+      "firstPassScope": "All distinct local WebPs visually opened, actual juvenile morphology and original source where accessible checked. Missing feet not automatic rejection under norm 1.1; complete original image match, rights, and individual age/sex for all photos remain open"
+    },
+    {
+      "id": "sp245",
+      "nameNL": "Koereiger",
+      "batch": "M19",
+      "photosSeen": 5,
+      "reviewDocument": "docs/fotokwaliteit/M19_DRIE_JUVENIELEN_EN_FOTOKWALITEIT_2026-11-13_DRAFT.md",
+      "reviewPR": null,
+      "evidenceCommit": "53c35a7df57e96f8c2db56fd498dce7842b958a0",
+      "status": "PARTIALLY TESTED",
+      "originalRights": "NOT TESTED",
+      "independentSexAge": "NOT TESTED",
+      "fullKnowledgeReview": "NOT TESTED",
+      "firstPassScope": "All distinct local WebPs visually opened, actual juvenile morphology and original source where accessible checked. Missing feet not automatic rejection under norm 1.1; complete original image match, rights, and individual age/sex for all photos remain open"
     }
   ]
 }
