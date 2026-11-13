@@ -226,8 +226,7 @@ def mobile_ui():
                             others = panel.locator("section.sd-poses .sd-field-photo img")
                             expect(others).to_have_count(len(bird["others"]))
                             for path in bird["others"]:
-                                img = others.filter(has=page.locator("foo-never-match")) if False else others
-                                found = img.evaluate_all("""(imgs, path)=>
+                                found = others.evaluate_all("""(imgs, path)=>
                                   imgs.filter(i => (i.currentSrc||i.getAttribute('src')||'').endsWith(path)).length
                                 """, path)
                                 assert found == 1, (sid,path,found)
