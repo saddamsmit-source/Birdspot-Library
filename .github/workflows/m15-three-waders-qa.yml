@@ -5,7 +5,7 @@ on:
       - 'tests/test_m15_three_waders_first_pass.py'
       - '.github/workflows/m15-three-waders-qa.yml'
       - 'docs/fotokwaliteit/F1_VOORTGANG_TOT_140.json'
-      - 'docs/fotokwaliteit/M15_DRIE_RUITERS_2026-11-13_DRAFT.md'
+      - 'docs/fotokwaliteit/M15_DRIE_STELTLOPERS_2026-11-13_DRAFT.md'
       - 'assets/species/**'
       - 'src/features/species/**'
   workflow_dispatch:
