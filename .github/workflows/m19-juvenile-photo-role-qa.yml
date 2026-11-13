@@ -1,0 +1,40 @@
+name: Birdspot M19 Juvenile Photo Quality and Source QA
+on:
+  pull_request:
+    paths:
+      - 'tests/test_m19_juvenile_roles_first_pass.py'
+      - '.github/workflows/m19-juvenile-photo-role-qa.yml'
+      - 'docs/BIRDSPOT_KWALITEITSNORM.md'
+      - 'docs/fotokwaliteit/F1_VOORTGANG_TOT_140.json'
+      - 'docs/fotokwaliteit/M19_DRIE_JUVENIELEN_EN_FOTOKWALITEIT_2026-11-13_DRAFT.md'
+      - 'assets/species/**'
+      - 'src/features/species/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  three-juvenile-role-audit:
+    name: F1 123/140 + 13 actual WebPs + foot-visibility role policy + six Chromium routes
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r tests/requirements.txt
+      - run: python -m playwright install --with-deps chromium
+      - name: Check 13 local photo bytes, F1 role/credits, proportional juvenile quality and mobile UI
+        shell: bash
+        run: |
+          set -o pipefail
+          python tests/test_m19_juvenile_roles_first_pass.py 2>&1 | tee m19-juveniles.log
+      - name: Keep synthetic technical test log, no private photos
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: birdspot-m19-first-pass-log
+          path: m19-juveniles.log
+          if-no-files-found: warn
