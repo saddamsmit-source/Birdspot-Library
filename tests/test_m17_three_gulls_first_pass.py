@@ -58,12 +58,13 @@ def check_progress():
     assert len(pending) == first["_meta"]["expectedCanonicalUnreviewed"] == 40
     additional = first["additionalFirstPass"]
     ids = [x["id"] for x in additional]
-    assert len(additional) == 17 and len(set(ids)) == len(ids)
+    assert len(additional) >= 17 and len(set(ids)) == len(ids)
     assert set(ids) <= pending and not (set(ids) & audited)
     assert {x["batch"] for x in additional} >= {"M12", "M13", "M14", "M15", "M16", "M17"}
     assert {x["id"] for x in additional if x["batch"] == "M17"} == set(SPECIES)
-    assert len(audited) + len(additional) == first["_meta"]["expectedFirstPass"] == 117
-    assert first["_meta"]["expectedRemaining"] == 23
+    count = len(audited) + len(additional)
+    assert count >= 117 and count == first["_meta"]["expectedFirstPass"]
+    assert first["_meta"]["expectedRemaining"] == 140 - count
     assert "reverify ALL 140" in first["_meta"]["nextGate"]
     for entry in additional:
         assert entry["status"] == "PARTIALLY TESTED"
@@ -72,7 +73,7 @@ def check_progress():
         assert entry["fullKnowledgeReview"] == "NOT TESTED"
         assert (ROOT / entry["reviewDocument"]).is_file()
     assert (ROOT / DOC).is_file()
-    print("M17 F1-PROGRESS PASS: 100 official audited + 17 first-pass = 117/140; 23 open")
+    print(f"M17 F1-REGRESSION PASS: {len(audited)} official audited + {len(additional)} first-pass = {count}/140; {140-count} open; M17 records preserved")
 
 
 def webp_sha(path):

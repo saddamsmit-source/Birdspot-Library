@@ -40,9 +40,10 @@ def test_f1_count_and_authority():
     assert len(set(ids)) == len(ids), "No duplicated first-pass species"
     assert set(ids).issubset(pending), "Do not re-add audited species"
     assert {x["id"] for x in items if x["batch"] == "M16"} == set(SPECIES)
-    assert len(items) == 14, "11 preexisting additional + 3 M16"
-    assert len(audited) + len(items) == ledger["_meta"]["expectedFirstPass"] == 114
-    assert ledger["_meta"]["expectedRemaining"] == 26
+    assert len(items) >= 14, "Historical M16 entries must remain"
+    count = len(audited) + len(items)
+    assert count >= 114 and count == ledger["_meta"]["expectedFirstPass"]
+    assert ledger["_meta"]["expectedRemaining"] == 140 - count
     assert "reverify ALL 140" in ledger["_meta"]["nextGate"]
     for entry in items:
         assert entry["status"] == "PARTIALLY TESTED"
@@ -51,7 +52,7 @@ def test_f1_count_and_authority():
         assert entry["fullKnowledgeReview"] == "NOT TESTED"
         assert (ROOT / entry["reviewDocument"]).exists()
     assert "PARTIALLY TESTED" in REPORT.read_text(encoding="utf-8")
-    print("M16 F1 PASS: 100 canonical + 14 supplemental = 114/140, 26 open; canonical unchanged")
+    print(f"M16 F1-REGRESSION PASS: {len(audited)} canonical + {len(items)} supplemental = {count}/140; {140-count} open; M16 records preserved")
 
 
 def webp_fingerprint(relative_path):
@@ -187,4 +188,4 @@ if __name__ == "__main__":
     test_f1_count_and_authority()
     test_four_actual_local_images_and_sparse_roles()
     test_real_mobile_browser()
-    print("M16 done — F1 114/140; no F2, origin-byte rights, device or production PASS")
+    print("M16 photo/browser regression done; ledger progress is dynamic, no F2, rights, device or production PASS")
