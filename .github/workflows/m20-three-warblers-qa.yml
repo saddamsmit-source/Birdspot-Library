@@ -1,0 +1,47 @@
+name: Birdspot M20 Three Warblers Photo and Policy QA
+on:
+  pull_request:
+    paths:
+      - 'tests/test_m20_three_warblers_first_pass.py'
+      - 'tests/test_m19_juvenile_roles_first_pass.py'
+      - '.github/workflows/m20-three-warblers-qa.yml'
+      - 'docs/BIRDSPOT_KWALITEITSNORM.md'
+      - 'docs/fotokwaliteit/F1_VOORTGANG_TOT_140.json'
+      - 'docs/fotokwaliteit/M20_DRIE_ZANGVOGELS_2026-11-14_DRAFT.md'
+      - 'assets/species/**'
+      - 'src/features/species/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  three-warblers-first-pass:
+    name: F1 126/140 + four local WebPs + old rules plus juvenile add-on + six Chromium screens
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r tests/requirements.txt
+      - run: python -m playwright install --with-deps chromium
+      - name: Rebuild media module from authoritative source; no generated drift
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/species/build.py
+          git diff --exit-code -- src/features/species/guidePhotos.js src/features/species/guideMedia.js
+      - name: Real WebPs, provenance/role, original quality rules and mobile browser
+        shell: bash
+        run: |
+          set -o pipefail
+          python tests/test_m20_three_warblers_first_pass.py 2>&1 | tee m20-three-warblers.log
+      - name: Retain privacy-safe synthetic QA log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: birdspot-m20-first-pass-log
+          path: m20-three-warblers.log
+          if-no-files-found: warn
