@@ -992,6 +992,45 @@
   overflow-wrap: anywhere;
 }
 
+/* A single 44px disclosure per photographic role keeps long identification
+   notes accessible without forcing two narrow cards to become tall essays. */
+.sd-plumage-list[data-layout="compare"] .sd-plumage-more {
+  margin-top: var(--space-4);
+  border-top: 1px solid var(--line);
+}
+.sd-plumage-more > summary {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--brand-mid);
+  font-size: var(--fs-meta);
+  font-weight: 650;
+  cursor: pointer;
+}
+.sd-plumage-more > div { min-width: 0; overflow-wrap: anywhere; }
+.sd-plumage-more p {
+  margin: var(--space-4) 0 var(--space-8);
+  font-size: var(--fs-meta);
+  line-height: 1.5;
+}
+.sd-plumage-other {
+  margin-top: var(--space-8);
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  background: var(--surface-2);
+}
+.sd-plumage-other > summary {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 var(--space-12);
+  color: var(--brand-mid);
+  font-size: var(--fs-body);
+  font-weight: 650;
+  cursor: pointer;
+}
+.sd-plumage-other > .sd-plumage-list { padding: var(--space-8); }
+
 /* "Lijkt op" — vergelijkingskaart (Ontwerp A) */
 .sd-cmp-card {
   display: grid; gap: var(--space-12); padding: var(--space-12);
