@@ -175,7 +175,9 @@ function plumageCard({key, icon: iconName, title, text, badge, photos, heroRef, 
     const label = photo.label || (photo.flight ? 'In vlucht' : '');
     return `<figure class="sd-plumage-photo">${fieldPhoto(photo)}${label ? `<figcaption>${esc(label)}</figcaption>` : ''}${photo.note ? `<p>${esc(photo.note)}</p>` : ''}</figure>`;
   });
-  return `<div class="sd-plumage" data-plumage="${key}">${icon(iconName)}<div><strong>${esc(title)}${badge ? `<span class="sd-badge">${esc(badge)}</span>` : ''}</strong>${text ? `<p>${esc(text)}</p>` : ''}${gallery.length ? `<div class="sd-plumage-gallery">${gallery.join('')}</div>` : ''}${heroRef ? '<p class="sd-hero-ref">Foto: de hoofdfoto bovenaan deze kaart.</p>' : ''}${flightRef ? '<p class="sd-hero-ref" data-flight-ref>Foto: zie In vlucht hieronder.</p>' : ''}</div></div>`;
+  // Visual first for comparing male/female/juvenile plumages; never duplicate
+  // the hero and never claim a flight/sex/age role that is not source-backed.
+  return `<div class="sd-plumage" data-plumage="${key}">${icon(iconName)}<div><strong>${esc(title)}${badge ? `<span class="sd-badge">${esc(badge)}</span>` : ''}</strong>${gallery.length ? `<div class="sd-plumage-gallery">${gallery.join('')}</div>` : ''}${heroRef ? '<p class="sd-hero-ref">Foto: de hoofdfoto bovenaan deze kaart.</p>' : ''}${flightRef ? '<p class="sd-hero-ref" data-flight-ref>Foto: zie In vlucht hieronder.</p>' : ''}${text ? `<p class="sd-plumage-description">${esc(text)}</p>` : ''}</div></div>`;
 }
 
 function flightPhoto(id) {
@@ -400,7 +402,14 @@ export function recognitionPanel(s, life = null) {
     // In vlucht (met behoud van het label); de kleedkaart verwijst ernaar in plaats van de foto te herhalen.
     return {...group, photos: restPhotos, heroRef, flightRef: !heroRef && !restPhotos.length && flightPhotos.length > 0};
   });
-  if (groups.length) out.push('<h3 class="sd-h">Verenkleed</h3><div class="sd-plumage-list">' + groups.map(plumageCard).join('') + '</div>');
+  if (groups.length) {
+    // A side-by-side comparison is only useful with two different, actual
+    // non-flight role photos. A hero reference or text-only placeholder must
+    // not be mistaken for a second comparable image (e.g. sp017).
+    const comparableRoles = groups.filter(group => group.photos.length > 0).length;
+    const layout = comparableRoles >= 2 ? ' data-layout="compare"' : '';
+    out.push('<h3 class="sd-h">Verenkleed</h3><div class="sd-plumage-list"' + layout + '>' + groups.map(plumageCard).join('') + '</div>');
+  }
 
   takePhoto(guideHeroPhoto(s.id));
   const neutral = neutralPhotos(s.id, takePhoto);
