@@ -101,7 +101,10 @@ def run_one(browser, base, width, errors):
             open_species(p, "Kleine Bonte Specht", "sp017")
             # One actual role image plus hero reference must NOT claim a two-photo comparison.
             assert p.locator('#sdPanel-herkenning .sd-plumage-list[data-layout="compare"]').count() == 0
-            expect(p.locator('#sdPanel-herkenning .sd-plumage-list > .sd-plumage[data-plumage="adult_f"] .sd-field-photo')).to_have_count(1)
+            female_photos = p.locator('#sdPanel-herkenning .sd-plumage-list > .sd-plumage[data-plumage="adult_f"] .sd-field-photo')
+            assert female_photos.count() >= 1, "Existing female photos must not disappear"
+            paths = female_photos.evaluate_all("buttons => buttons.map(b => b.dataset.guideImage)")
+            assert len(paths) == len(set(paths)), "A second female photo must not be mistaken for another plumage role"
             assert p.locator('#sdPanel-herkenning section.sd-flight').count() == 0
             print("R10 NEGATIVE PASS — sp017 does not fabricate male/flight/juvenile compare")
         print(f"R10 {width}px PASS — 2-up male/female; {len(decoded)} decoded photos, zoom and no overflow")
