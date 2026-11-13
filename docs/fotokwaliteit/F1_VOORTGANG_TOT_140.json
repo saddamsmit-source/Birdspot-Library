@@ -10,8 +10,8 @@
     "progressMethod": "Count 100 canonical audited items plus unique individually first-pass-reviewed canonical audited:false IDs; no duplicates. expectedFirstPass/expectedRemaining are cross-checks and must be updated together.",
     "nextGate": "When all 140 have initial documented review, independently and comprehensively reverify ALL 140; only afterwards work on species outside the group of 140.",
     "limits": "No source, license, age/sex or complete audit is promoted by this index. Do not alter canonical audited/verdict fields based on progress alone.",
-    "expectedFirstPass": 117,
-    "expectedRemaining": 23
+    "expectedFirstPass": 120,
+    "expectedRemaining": 20
   },
   "additionalFirstPass": [
     {
@@ -251,6 +251,48 @@
       "independentSexAge": "NOT TESTED",
       "fullKnowledgeReview": "NOT TESTED",
       "firstPassScope": "Exact local WebPs independently viewed; original-source per-photo credits checked where accessible (1/3 Commons file pages read; original flight lacks adult label, neutral correction proposed); local-original binary match, all derivative rights, sex/age and full knowledge remain open"
+    },
+    {
+      "id": "sp153",
+      "nameNL": "Bonte Strandloper",
+      "batch": "M18",
+      "photosSeen": 1,
+      "reviewDocument": "docs/fotokwaliteit/M18_STRANDLOPER_STERNS_2026-11-13_DRAFT.md",
+      "reviewPR": null,
+      "evidenceCommit": "965f1d37bd05856ae5bb99c1fdeab604137de7ca",
+      "status": "PARTIALLY TESTED",
+      "originalRights": "NOT TESTED",
+      "independentSexAge": "NOT TESTED",
+      "fullKnowledgeReview": "NOT TESTED",
+      "firstPassScope": "Actual one local WebP individually opened; original source registry, flight-versus-hero role and secondary morphology checked, original JPEG matching and complete license/sex-age/knowledge review remain open"
+    },
+    {
+      "id": "sp166",
+      "nameNL": "Noordse Stern",
+      "batch": "M18",
+      "photosSeen": 1,
+      "reviewDocument": "docs/fotokwaliteit/M18_STRANDLOPER_STERNS_2026-11-13_DRAFT.md",
+      "reviewPR": null,
+      "evidenceCommit": "965f1d37bd05856ae5bb99c1fdeab604137de7ca",
+      "status": "PARTIALLY TESTED",
+      "originalRights": "NOT TESTED",
+      "independentSexAge": "NOT TESTED",
+      "fullKnowledgeReview": "NOT TESTED",
+      "firstPassScope": "Actual one local WebP individually opened; original source registry, flight-versus-hero role and secondary morphology checked, original JPEG matching and complete license/sex-age/knowledge review remain open"
+    },
+    {
+      "id": "sp167",
+      "nameNL": "Grote Stern",
+      "batch": "M18",
+      "photosSeen": 1,
+      "reviewDocument": "docs/fotokwaliteit/M18_STRANDLOPER_STERNS_2026-11-13_DRAFT.md",
+      "reviewPR": null,
+      "evidenceCommit": "965f1d37bd05856ae5bb99c1fdeab604137de7ca",
+      "status": "PARTIALLY TESTED",
+      "originalRights": "NOT TESTED",
+      "independentSexAge": "NOT TESTED",
+      "fullKnowledgeReview": "NOT TESTED",
+      "firstPassScope": "Actual one local WebP individually opened; original source registry, flight-versus-hero role and secondary morphology checked, original JPEG matching and complete license/sex-age/knowledge review remain open"
     }
   ]
 }
