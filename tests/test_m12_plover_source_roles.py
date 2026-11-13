@@ -104,7 +104,7 @@ def check_browser():
                         actual = two.locator(":scope > .sd-plumage").evaluate_all(
                             "els => els.map(e => e.dataset.plumage)"
                         )
-                        assert actual == ["winter", "juv"], (id_, actual)
+                        assert actual == ["juv", "winter"], (id_, actual)  # Fixed Birdspot role priority, not season priority
                         # Do not misrepresent the adult breeding hero as a male.
                         assert two.locator('[data-plumage="adult_m"]').count() == 0, id_
                         imgs = two.locator(".sd-field-photo img")
