@@ -1,0 +1,45 @@
+name: Birdspot M21 Reed Warblers and Sand Martin F1 QA
+on:
+  pull_request:
+    paths:
+      - 'tests/test_m21_reed_warblers_martin_f1.py'
+      - '.github/workflows/m21-reed-warbler-martin-qa.yml'
+      - 'docs/fotokwaliteit/F1_VOORTGANG_TOT_140.json'
+      - 'docs/fotokwaliteit/M21_RIETVOGELS_OEVERZWALUW_2026-11-14_DRAFT.md'
+      - 'assets/species/**'
+      - 'src/features/species/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  three-species-first-pass:
+    name: F1 129/140, six WebPs, conditional flight, six Chromium screens
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r tests/requirements.txt
+      - run: python -m playwright install --with-deps chromium
+      - name: Check source-to-generator equality
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/species/build.py
+          git diff --exit-code -- src/features/species/guidePhotos.js src/features/species/guideMedia.js
+      - name: Validate existing images, nuanced photo roles and mobile UI
+        shell: bash
+        run: |
+          set -o pipefail
+          python tests/test_m21_reed_warblers_martin_f1.py 2>&1 | tee m21-photo-qa.log
+      - name: Upload privacy-safe synthetic test log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: birdspot-m21-f1-log
+          path: m21-photo-qa.log
+          if-no-files-found: warn
