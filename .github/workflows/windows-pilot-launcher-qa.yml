@@ -40,8 +40,8 @@ jobs:
         run: |
           from pathlib import Path
           text = Path('tools/pilot/Start-BirdspotAndroidPilot.ps1').read_text(encoding='utf-8')
-          assert "83c117447126b705cae1899f71e66d070a6084b9" in text
-          assert "qa/birdspot-release-candidate-1.27.7-20261113" in text
+          assert "d03e371612baa95f3ba3a5a558905f8d5786b2f5" in text
+          assert "qa/birdspot-release-candidate-1.27.8-20261113" in text
           assert "http.server" in text and "127.0.0.1" in text
           assert "git clone" in text and "git -C $checkout archive" in text
           assert "git push" not in text and "git reset --hard" not in text
@@ -57,19 +57,19 @@ jobs:
         shell: powershell
         run: |
           .\tools\pilot\Start-BirdspotAndroidPilot.ps1 -PrepareOnly
-      - name: Check staged snapshot has 1.27.7 and no Git metadata
+      - name: Check staged snapshot has 1.27.8 and no Git metadata
         shell: powershell
         run: |
           $root = Join-Path ([Environment]::GetFolderPath('LocalApplicationData')) 'Birdspot-Pilot'
-          $source = Join-Path $root 'source-83c117447126'
+          $source = Join-Path $root 'source-d03e371612ba'
           if (!(Test-Path (Join-Path $source '.git'))) { throw 'Verified checkout is missing.' }
           $head = (& git -C $source rev-parse HEAD).Trim()
-          if ($head -ne '83c117447126b705cae1899f71e66d070a6084b9') { throw 'Wrong source commit.' }
+          if ($head -ne 'd03e371612baa95f3ba3a5a558905f8d5786b2f5') { throw 'Wrong source commit.' }
           $sites = @(Get-ChildItem -LiteralPath $root -Directory | Where-Object { $_.Name -like 'site-*' })
           if ($sites.Count -ne 1) { throw 'Expected exactly one clean staging snapshot.' }
           $site = $sites[0].FullName
           if (Test-Path (Join-Path $site '.git')) { throw 'Sensitive Git metadata exposed by server root.' }
           if (!(Test-Path (Join-Path $site 'index.html'))) { throw 'App shell missing.' }
           $sw = Get-Content (Join-Path $site 'sw.js') -Raw
-          if (!$sw.Contains("const APP_VERSION = '1.27.7';")) { throw 'Wrong serviceworker version.' }
-          Write-Output 'PASS exact pinned Windows source and separate clean 1.27.7 snapshot; server/device NOT STARTED.'
+          if (!$sw.Contains("const APP_VERSION = '1.27.8';")) { throw 'Wrong serviceworker version.' }
+          Write-Output 'PASS exact pinned Windows source and separate clean 1.27.8 snapshot; server/device NOT STARTED.'
