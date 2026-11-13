@@ -10,7 +10,7 @@
 
 **Doel:** op een 360–430px telefoonscherm duidelijker **tegelijk** twee beschikbare, verschillende kleedfoto's kunnen zien. Houd labels, beschrijving en vergroting bereikbaar, bron/licentie/credits beschikbaar en de gebruiker weg van foutief gevulde rollen.
 
-**Non-goals:** nieuwe vogelfoto's, AI-gegenereerde dieren, nieuw geslacht of juvenielenleeftijd afleiden, een geforceerde vluchtfoto, wijzigen van gidsbronnen, een heel nieuwe galerijrouter, accounts, backend, livegang. Een enkele foto/hero-verwijzing is géén twee-fotovergelijking.
+**Non-goals:** nieuwe vogelfoto's, AI-gegenereerde dieren, nieuw geslacht of juvenielenleeftijd afleiden, een geforceerde vluchtfoto, wijzigen van gidsbronnen, een heel nieuwe galerijrouter, accounts, backend, livegang. Meerdere foto's binnen één geslachtsrol plus een verwijzing naar de hoofdfoto gelden niet als een vergelijking van twee fotografisch gevulde rollen.
 
 ## UX-scope en gemaakte keuzes
 
