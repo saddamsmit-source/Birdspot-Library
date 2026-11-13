@@ -84,6 +84,21 @@ def run_one(browser, base, width, errors):
         assert not p.evaluate("document.documentElement.scrollWidth > innerWidth + 2"), (
             f"{width}px horizontal page overflow"
         )
+        # Photo-first means the long source-backed fieldmarks must be readable
+        # via one clearly labeled disclosure, not crammed into narrow columns.
+        female_info = grid.locator('[data-plumage="adult_f"] details.sd-plumage-more')
+        expect(female_info).to_have_count(1)
+        assert female_info.get_attribute("open") is None, "Details should start collapsed"
+        female_info.locator("summary").click()
+        assert female_info.locator("p:visible").count() >= 1, "Plumage explanation must remain accessible"
+        female_info.locator("summary").click()
+        assert female_info.get_attribute("open") is None
+        other = p.locator('#sdPanel-herkenning details.sd-plumage-other')
+        expect(other).to_have_count(1)
+        assert other.get_attribute("open") is None, "Text-only plumages must not crowd paired photos"
+        other.locator("summary").click()
+        expect(other.locator('[data-plumage="jaarling"]')).to_be_visible()
+        other.locator("summary").click()
         # Real zoom UI and Escape must remain functional after visual CSS changes.
         photo_button = grid.locator(".sd-field-photo").first
         expect(photo_button).to_be_visible()
