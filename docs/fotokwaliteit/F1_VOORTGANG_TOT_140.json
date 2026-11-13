@@ -7,9 +7,11 @@
     "canonicalTracker": "docs/fotokwaliteit/soortaudit-status.json",
     "baselineAudited": 100,
     "expectedCanonicalUnreviewed": 40,
-    "progressMethod": "Count canonical audited items + individually first-pass-reviewed IDs that are still canonical audited:false; never count an ID twice.",
+    "progressMethod": "Count 100 canonical audited items plus unique individually first-pass-reviewed canonical audited:false IDs; no duplicates. expectedFirstPass/expectedRemaining are cross-checks and must be updated together.",
     "nextGate": "When all 140 have initial documented review, independently and comprehensively reverify ALL 140; only afterwards work on species outside the group of 140.",
-    "limits": "No source, license, age/sex or complete audit is promoted by this index. Do not alter canonical audited/verdict fields based on progress alone."
+    "limits": "No source, license, age/sex or complete audit is promoted by this index. Do not alter canonical audited/verdict fields based on progress alone.",
+    "expectedFirstPass": 111,
+    "expectedRemaining": 29
   },
   "additionalFirstPass": [
     {
@@ -123,6 +125,48 @@
       "independentSexAge": "NOT TESTED",
       "fullKnowledgeReview": "NOT TESTED",
       "firstPassScope": "Local images opened; individual roles/pose, source registrations and intended UI reviewed; open items retained"
+    },
+    {
+      "id": "sp155",
+      "nameNL": "Oeverloper",
+      "batch": "M15",
+      "photosSeen": 4,
+      "reviewDocument": "docs/fotokwaliteit/M15_DRIE_STELTLOPERS_2026-11-13_DRAFT.md",
+      "reviewPR": 180,
+      "evidenceCommit": "ca6e5c5e1d2ebe6ab6864a0c82d4784ff9ebb026",
+      "status": "PARTIALLY TESTED",
+      "originalRights": "NOT TESTED",
+      "independentSexAge": "NOT TESTED",
+      "fullKnowledgeReview": "NOT TESTED",
+      "firstPassScope": "All four actual local Birdspot WebP photos individually viewed; role/flight/source registry checked; individual age, origin rights and knowledge still open"
+    },
+    {
+      "id": "sp156",
+      "nameNL": "Witgat",
+      "batch": "M15",
+      "photosSeen": 4,
+      "reviewDocument": "docs/fotokwaliteit/M15_DRIE_STELTLOPERS_2026-11-13_DRAFT.md",
+      "reviewPR": 180,
+      "evidenceCommit": "ca6e5c5e1d2ebe6ab6864a0c82d4784ff9ebb026",
+      "status": "PARTIALLY TESTED",
+      "originalRights": "NOT TESTED",
+      "independentSexAge": "NOT TESTED",
+      "fullKnowledgeReview": "NOT TESTED",
+      "firstPassScope": "All four actual local Birdspot WebP photos individually viewed; role/flight/source registry checked; individual age, origin rights and knowledge still open"
+    },
+    {
+      "id": "sp217",
+      "nameNL": "Poelruiter",
+      "batch": "M15",
+      "photosSeen": 4,
+      "reviewDocument": "docs/fotokwaliteit/M15_DRIE_STELTLOPERS_2026-11-13_DRAFT.md",
+      "reviewPR": 180,
+      "evidenceCommit": "ca6e5c5e1d2ebe6ab6864a0c82d4784ff9ebb026",
+      "status": "PARTIALLY TESTED",
+      "originalRights": "NOT TESTED",
+      "independentSexAge": "NOT TESTED",
+      "fullKnowledgeReview": "NOT TESTED",
+      "firstPassScope": "All four actual local Birdspot WebP photos individually viewed; role/flight/source registry checked; individual age, origin rights and knowledge still open"
     }
   ]
 }
