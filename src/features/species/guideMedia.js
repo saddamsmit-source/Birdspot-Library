@@ -9057,7 +9057,7 @@ export const GUIDE_POSES = Object.freeze({
     {
       "label": "In vlucht",
       "flight": true,
-      "note": "De gebogen vliegstand laat de goudgele spikkels op rug en bovenvleugel zien, met een lichte streep langs de flank.",
+      "note": "De gebogen vliegstand laat de goudgele spikkels op rug en bovenvleugel zien. De witte oksels zijn in dit boven- en zijaanzicht niet zichtbaar: voor dat determinatiekenmerk is een ondervleugelbeeld nodig.",
       "file": "European golden plover (Pluvialis apricaria) in flight.jpg",
       "nl": "Goudplevier",
       "latin": "Pluvialis apricaria",
