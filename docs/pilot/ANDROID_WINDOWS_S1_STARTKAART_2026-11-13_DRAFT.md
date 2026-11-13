@@ -1,12 +1,12 @@
 # Birdspot — Windows + Android localhost-startkaart (S1 praktijkpilot)
 
-**13 november 2026 · v0.1 DRAFT · toestelresultaten NOT TESTED · geen release of publicatie.**
+**13 november 2026 · v0.2 DRAFT · toestelresultaten NOT TESTED · geen release of publicatie.**
 
 ## Doel en releasebron
 
-Deze startkaart maakt de fysieke Android-proef uit `docs/pilot/ANDROID_S1_FYSIEKE_PILOT_v0.1_DRAFT.md` eenvoudiger. Alleen **Birdspot 1.27.7-kandidaat uit PR #171**, exacte commit `83c117447126b705cae1899f71e66d070a6084b9`, mag getest worden. Het PowerShell-script in `tools/pilot/Start-BirdspotAndroidPilot.ps1` kloont de **publieke** bron via HTTPS, controleert branch/commit en maakt een **schone afzonderlijke snapshot zonder `.git`** in de lokale Windows-appdatamap. Het start uitsluitend een localhost-server en, indien uitdrukkelijk gekozen, ADB reverse forwarding.
+Deze startkaart maakt de fysieke Android-proef uit `docs/pilot/ANDROID_S1_FYSIEKE_PILOT_v0.1_DRAFT.md` eenvoudiger. Alleen **Birdspot 1.27.8-kandidaat uit PR #183**, exacte commit `d03e371612baa95f3ba3a5a558905f8d5786b2f5`, mag getest worden. Het PowerShell-script in `tools/pilot/Start-BirdspotAndroidPilot.ps1` kloont de **publieke** bron via HTTPS, controleert branch/commit en maakt een **schone afzonderlijke snapshot zonder `.git`** in de lokale Windows-appdatamap. Het start uitsluitend een localhost-server en, indien uitdrukkelijk gekozen, ADB reverse forwarding.
 
-**Afzonderlijke bronverschillen:** PR #172/173 voegen browser-QA toe maar géén andere appcode. Deze startkaart gaat daarom doelbewust uit van de releasekandidaat uit PR #171, niet van een verschuivende laatste PR of een reeds gepubliceerde GitHub Pages-versie. Dit voorkomt verwarring tussen de twee testbronnen.
+**Afzonderlijke bronverschillen:** PR #172/173 voegen browser-QA toe maar géén andere appcode. Deze startkaart gaat daarom doelbewust uit van de releasekandidaat uit PR #183, niet van een verschuivende laatste PR of een reeds gepubliceerde GitHub Pages-versie. Dit voorkomt verwarring tussen de twee testbronnen.
 
 ## Eenmalige voorbereiding
 
@@ -35,7 +35,7 @@ Als PowerShell-scriptuitvoering is geblokkeerd: controleer het bestand en de lok
 
 ## Op de Android-telefoon — minimale ronde
 
-1. Open Chrome op `http://localhost:8765/`, wanneer USB-forwarding actief is. Bevestig dat Birdspot **1.27.7** toont en dat app/gids daadwerkelijk werken.
+1. Open Chrome op `http://localhost:8765/`, wanneer USB-forwarding actief is. Bevestig dat Birdspot **1.27.8** toont en dat app/gids daadwerkelijk werken.
 2. Voeg een **fictieve** Koolmees-waarneming toe met een onschuldige JPEG uit de echte telefoonbestandskiezer, controleer de foto en sla op. Sluit en open opnieuw, zoek de waarneming terug.
 3. Trek de USB-kabel los, zet Wi-Fi én mobiele data uit. Open Birdspot offline en voeg een **tweede nieuwe** fictieve waarneming toe. Sluit en heropen. Controleer beide foto's.
 4. Test Android Terug in soortkiezer en invoerscherm, annuleren, geweigerde GPS en handmatig plaatslabel; bestaande data moet intact blijven.
@@ -48,9 +48,9 @@ De technische ADB-reverse aanpak is bevestigd door <https://developer.android.co
 
 | Signaal | Risico | Maatregel | Laatst bewezen checkpoint |
 |---|---|---|---|
-| Git SHA verschilt bij clone | Onbedoeld andere release testen | Script stopt; geen branch overschrijven of force-push | PR #171 `83c11744` |
+| Git SHA verschilt bij clone | Onbedoeld andere release testen | Script stopt; geen branch overschrijven of force-push | PR #183 `83c11744` |
 | USB niet geautoriseerd of meerdere toestellen | Verkeerd toestel/privacystoring | Script weigert automatische forwarding; eigenaar controleert ADB | PR #169 Android-testkaart |
-| Offline laadt gids/foto niet | Serviceworker/cache/asset of opslagfout | Foto, netwerkstatus, exacte SHA en stappen privé vastleggen; STOP bij dataverlies | PR #171, 13/13 CI |
+| Offline laadt gids/foto niet | Serviceworker/cache/asset of opslagfout | Foto, netwerkstatus, exacte SHA en stappen privé vastleggen; STOP bij dataverlies | PR #183, 13/13 CI |
 | ZIP-import mislukt op tweede telefoon | Dataherstel niet bewezen | Bewaar bron-ZIP en testdata, geen handmatige localStorage-reset; AND-08 FAIL/BLOCKED | PR #172, browserprofiel 8/8 PASS |
 | PWA-installatie/camerakiezer ontbreekt | Fysiek toestelgedrag onbekend | Noteer precieze toestel/OS/Chrome-versie; geen gesimuleerde PASS | PR #173, JPEG 6/6 browser PASS |
 
@@ -59,3 +59,6 @@ De technische ADB-reverse aanpak is bevestigd door <https://developer.android.co
 **Kennisdelta:** geen nieuwe algemene regel; hergebruik §1.7A, §3.6, §4 QA, CAP-BIRD-040 en de bestaande Android-veldtestprocedure. De launcher zelf is alleen een hulpmiddel. **CI-selfcheck != fysieke Android-PASS.**
 
 **Releasebesluit:** kandidaat klaar voor fysieke S1-proef, **geen merge, openbare preview of livegang**.
+## Vervolg ronde live-opdracht / testverantwoording
+
+De eigenaar heeft op 13 november 2026 expliciet 'Zet live en ga verder' opgedragen. Deze startkaart richt zich op exact Birdspot **1.27.8** kandidaat PR #183 (`d03e371612baa95f3ba3a5a558905f8d5786b2f5`, 28/28 GitHub-workflows success). Dit is een testbare lokaal geëxporteerde bron en **geen live/Android-bewijs**. De originele broncode op kandidaat-HEAD wordt niet gewijzigd. Bij nieuwe HEAD eerst de pin herbeoordelen en het Windows-startpakket opnieuw testen; STOP bij een onbekende of verschoven commit. Bewaar foto's, ZIP's, locatiebewijzen en technische schermafbeeldingen privé buiten deze openbare GitHub-repo. Fysiek AND-01..09 en tweede-toestel-restore blijven open.
