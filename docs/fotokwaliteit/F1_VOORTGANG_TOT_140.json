@@ -10,8 +10,8 @@
     "progressMethod": "Count 100 canonical audited items plus unique individually first-pass-reviewed canonical audited:false IDs; no duplicates. expectedFirstPass/expectedRemaining are cross-checks and must be updated together.",
     "nextGate": "When all 140 have initial documented review, independently and comprehensively reverify ALL 140; only afterwards work on species outside the group of 140.",
     "limits": "No source, license, age/sex or complete audit is promoted by this index. Do not alter canonical audited/verdict fields based on progress alone.",
-    "expectedFirstPass": 114,
-    "expectedRemaining": 26
+    "expectedFirstPass": 117,
+    "expectedRemaining": 23
   },
   "additionalFirstPass": [
     {
@@ -209,6 +209,48 @@
       "independentSexAge": "NOT TESTED",
       "fullKnowledgeReview": "NOT TESTED",
       "firstPassScope": "Actual registered local Birdspot WebP(s) independently viewed; corresponding Commons file page credited author/license reviewed; original image binary/crop match, age/sex, full knowledge and physical device still open"
+    },
+    {
+      "id": "sp097",
+      "nameNL": "Kokmeeuw",
+      "batch": "M17",
+      "photosSeen": 3,
+      "reviewDocument": "docs/fotokwaliteit/M17_DRIE_MEEUWEN_2026-11-13_DRAFT.md",
+      "reviewPR": null,
+      "evidenceCommit": "7f76250f364a7b0a54308e74d253da0b20b6c5ef",
+      "status": "PARTIALLY TESTED",
+      "originalRights": "NOT TESTED",
+      "independentSexAge": "NOT TESTED",
+      "fullKnowledgeReview": "NOT TESTED",
+      "firstPassScope": "Exact local WebPs independently viewed; original-source per-photo credits checked where accessible (3/3 Commons file pages read independently); local-original binary match, all derivative rights, sex/age and full knowledge remain open"
+    },
+    {
+      "id": "sp164",
+      "nameNL": "Grote Mantelmeeuw",
+      "batch": "M17",
+      "photosSeen": 2,
+      "reviewDocument": "docs/fotokwaliteit/M17_DRIE_MEEUWEN_2026-11-13_DRAFT.md",
+      "reviewPR": null,
+      "evidenceCommit": "7f76250f364a7b0a54308e74d253da0b20b6c5ef",
+      "status": "PARTIALLY TESTED",
+      "originalRights": "NOT TESTED",
+      "independentSexAge": "NOT TESTED",
+      "fullKnowledgeReview": "NOT TESTED",
+      "firstPassScope": "Exact local WebPs independently viewed; original-source per-photo credits checked where accessible (1/2 Commons file pages independently read; flight origin not fully readable); local-original binary match, all derivative rights, sex/age and full knowledge remain open"
+    },
+    {
+      "id": "sp225",
+      "nameNL": "Zwartkopmeeuw",
+      "batch": "M17",
+      "photosSeen": 3,
+      "reviewDocument": "docs/fotokwaliteit/M17_DRIE_MEEUWEN_2026-11-13_DRAFT.md",
+      "reviewPR": null,
+      "evidenceCommit": "7f76250f364a7b0a54308e74d253da0b20b6c5ef",
+      "status": "PARTIALLY TESTED",
+      "originalRights": "NOT TESTED",
+      "independentSexAge": "NOT TESTED",
+      "fullKnowledgeReview": "NOT TESTED",
+      "firstPassScope": "Exact local WebPs independently viewed; original-source per-photo credits checked where accessible (1/3 Commons file pages read; original flight lacks adult label, neutral correction proposed); local-original binary match, all derivative rights, sex/age and full knowledge remain open"
     }
   ]
 }
