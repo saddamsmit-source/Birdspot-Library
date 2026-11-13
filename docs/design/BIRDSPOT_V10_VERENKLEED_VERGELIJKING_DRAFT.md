@@ -15,8 +15,8 @@
 ## UX-scope en gemaakte keuzes
 
 1. Behoud alle bestaande Birdspot-thema-tokens en de bestaande soortdetailtab `Herkenning`. Alleen wanneer **minstens twee afzonderlijke bestaande niet-vluchtfoto's** in de kleedgroepen staan, activeert de Verenkleed-lijst `data-layout="compare"`.
-2. Toon dan de kleedrollen in **twee rustige kaarten naast elkaar**. Rolnaam bovenaan, foto direct daaronder, bijschrift/verschiltekst daarna. De foto's blijven zonder crop (`object-fit:contain`), bron-/licentie-info en fotozoom gebruiken dezelfde mechanismen.
-3. Een soort met slechts één aanwezige kleedfoto en een hoofdfotoverwijzing houdt de **bestaande verticale weergave**. Voorbeeld Kleine Bonte Specht `sp017`: mannelijke hoofdfoto boven, vrouwelijk beeld onder Verenkleed, geen extra juveniel/echte vluchtclaim.
+2. Toon dan de kleedrollen in **twee rustige kaarten naast elkaar**. Rolnaam bovenaan, foto direct daaronder, kort bijschrift zichtbaar. De volledige oorspronkelijke veldkenmerken en fotonotities blijven per kaart bereikbaar onder één toetsbare uitklapper **Kenmerken** (tikdoel minstens 44px). De foto's blijven zonder crop (`object-fit:contain`), bron-/licentie-info en fotozoom gebruiken dezelfde mechanismen.
+3. Een soort met foto's uit slechts één kleedrol en een hoofdfotoverwijzing houdt de **bestaande verticale weergave**. Bij soorten met echte vergelijkbare rolbeelden verhuizen tekst-only rollen (bijvoorbeeld Jaarling, zonder foto) naar de aparte uitklapper **Andere kleden**; hun volledige bronuitleg blijft beschikbaar. Voorbeeld Kleine Bonte Specht `sp017`: mannelijke hoofdfoto boven, vrouwelijk beeld onder Verenkleed, geen extra juveniel/echte vluchtclaim.
 4. Zwarte Specht `sp018` is de **visuele proefsoort**: verschillende volwassen mannetjes-, vrouwtjes- en juveniel-kopdetailbeelden naast elkaar, de bestaande echte vluchtfoto in de afzonderlijke sectie In vlucht. Dit verandert **niet** de eerder voorwaardelijke foto-oordelen: vrouwtje perspectief/500px, juveniel enkel kopdetail en gedeeltelijk afgesneden vlucht.
 5. Focus en bediening blijven toegankelijk via de **bestaande foto-knop**. Bij 360/390/430/1280 mag geen horizontale pagina-overloop ontstaan. Op iedere echte bronfoto blijft zoomen/sluiten mogelijk.
 6. Geen tweede bronbestand, ontdubbeling via bron/afbeeldings-ID blijft conform `tests/test_guide_poses.mjs`. Het fotosjabloon verandert niet het aantal foto's, de brongegevens of soortdeterminatielabels.
@@ -42,3 +42,7 @@
 **Kosten-/opschalingsregister:** bestaande GitHub Actions / Playwright, gratis/betaald afhankelijk van actuele accountquota; werkelijke minuten/kosten en stoplimieten UNKNOWN; bij limiet lokaal gericht testen, geen betaald plan of publicatie zonder eigenaarbesluit.
 
 **Kennisdelta:** hergebruik Handbook §2.1–2.6, CAP-BIRD-012/015 en L-019/L-062. Nieuw productdetail in app-PR, géén extra algemene norm. Document-DRAFT ≠ app-PASS of publieke release.
+
+### Aanvullende screenshot-review (eigenaarssmaak nog niet bewezen)
+
+De eerste 390px GitHub Actions-screenshot is daadwerkelijk geopend. De 2-kolomsweergave bevatte te lange, altijd zichtbare tekst en een tekst-only Jaarling-kaart; dit was nog onrustig. De vervolgbatch toont daarom eerst alleen rol/foto/kort bijschrift. Volledige tekst zit in één toegankelijk details-paneel per rol; tekst-only rollen onder Andere kleden. Deze verbetering is nog geen door eigenaar geaccepteerde visuele referentie; de nieuwe screenshot en zoom/terugactie moeten opnieuw beoordeeld worden. Geen claim van een subjectief design-PASS door alleen CSS of groene CI.
