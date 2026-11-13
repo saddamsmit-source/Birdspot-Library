@@ -152,6 +152,27 @@ const sp018Juvenile = (GUIDE_POSES.sp018 || []).filter(p => p.age === 'juvenile'
 assert.equal(sp018Juvenile.length, 1);
 assert.ok(sp018Juvenile[0].label.includes('kopdetail'), 'Juvenile photo is only head detail');
 console.log('K08 sp017/sp018: photo roles and evidence limits retained');
+const sp018VisualCompare = recognitionPanel(species.get('sp018'));
+const sp017SinglePhoto = recognitionPanel(species.get('sp017'));
+// Never advertise a comparison based on text-only or a reference to the hero;
+// display the gallery side-by-side only for two actual, distinct role images.
+assert.ok(sp018VisualCompare.includes('class="sd-plumage-list" data-layout="compare"'),
+  'Zwarte Specht: male/female/juvenile photo comparison must opt into two-up layout');
+assert.ok(!sp017SinglePhoto.includes('class="sd-plumage-list" data-layout="compare"'),
+  'Kleine Bonte Specht: one actual plumage photo plus hero ref is not a two-photo comparison');
+const femaleStart = sp018VisualCompare.indexOf('data-plumage="adult_f"');
+const juvenileStart = sp018VisualCompare.indexOf('data-plumage="juv"', femaleStart);
+const femaleCardHtml = sp018VisualCompare.slice(femaleStart, juvenileStart);
+assert.ok(femaleStart >= 0 && juvenileStart > femaleStart, 'Role order must be male / female / juvenile');
+assert.ok(femaleCardHtml.indexOf('class="sd-plumage-gallery"') > 0,
+  'Female role retains original source image / zoom control');
+assert.ok(femaleCardHtml.indexOf('class="sd-plumage-gallery"') <
+  femaleCardHtml.indexOf('class="sd-plumage-description"'),
+  'Photo must appear before longer description in the compact comparison');
+assert.ok(sp018VisualCompare.includes('aria-label="In vlucht"'),
+  'Flight images remain in their own section with no fabricated role');
+console.log('R10 visual comparison: two source-backed role photos required; photo-first, flight and credits retained');
+
 console.log(`VERIFIED main photos, retained assets, licensed galleries and comparison order across ${picturedSpecies.size} photographed species`);
 
 // QA-SPECHTEN-BYTES: different paths/URLs are not enough to catch copies
