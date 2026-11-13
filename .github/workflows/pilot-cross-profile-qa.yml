@@ -1,0 +1,41 @@
+name: Birdspot Cross-Profile ZIP Restore QA
+on:
+  pull_request:
+    paths:
+      - 'tests/test_pilot_cross_profile_zip.py'
+      - '.github/workflows/pilot-cross-profile-qa.yml'
+      - 'src/storage/backup.js'
+      - 'src/features/profile/**'
+      - 'src/features/sightings/**'
+      - 'sw.js'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  cross-profile:
+    name: Fresh second browser profile, exact ZIP bytes and offline reopen
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install existing test requirements and Chromium
+        run: |
+          python -m pip install -r tests/requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: CROSS-01..08 actual UI export/import across isolated storage contexts
+        shell: bash
+        run: |
+          set -o pipefail
+          python tests/test_pilot_cross_profile_zip.py 2>&1 | tee cross-profile.log
+      - name: Preserve test logs (synthetic data only)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: birdspot-cross-profile-test-log
+          path: cross-profile.log
+          if-no-files-found: warn
