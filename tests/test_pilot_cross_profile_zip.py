@@ -242,7 +242,17 @@ def main():
                 assert len(current(destination)) == 1 and count_photos(destination) == 1
                 print("CROSS-07 PASS — repeated ZIP import creates no duplicate record or photo")
 
-                # CROSS-08 — safety restore on destination only.
+                # CROSS-08 — unchanged second import must leave the ORIGINAL
+                # safety copy intact. Restoring means going back to BEFORE
+                # the first import: a completely empty destination profile,
+                # not the state after the first import. This is exactly the
+                # documented behavior of backup.js and existing BR-06 test.
+                safety = destination.evaluate("""() => {
+                  const raw = localStorage.getItem('birdspot-safety-copy');
+                  return raw ? JSON.parse(raw) : null;
+                }""")
+                assert safety is not None and safety["storage"]["birdspot-sightings"] is None
+                assert safety["importedMediaIds"] == [photo_id], safety
                 destination.reload(wait_until="domcontentloaded")
                 destination.locator("#birdspotSplash").wait_for(state="detached", timeout=25000)
                 profile(destination)
@@ -251,14 +261,15 @@ def main():
                 destination.locator("#confirmOverlay").wait_for(state="visible")
                 destination.locator("#confirmOk").click()
                 destination.wait_for_function(
-                    "() => !document.querySelector('#btnRestore').disabled", timeout=15000
+                    "() => !localStorage.getItem('birdspot-sightings')", timeout=18000
                 )
-                assert len(current(destination)) == 1 and count_photos(destination) == 1, (
-                    "Rollback after duplicate import should preserve pre-import data"
+                assert not current(destination) and count_photos(destination) == 0, (
+                    "Safety restore must remove data and media from the FIRST import"
                 )
+                assert not destination.evaluate("localStorage.getItem('birdspot-safety-copy')")
                 assert len(current(source)) == 1 and count_photos(source) == 1
                 assert not errors, errors
-                print("CROSS-08 PASS — destination rollback preserves pre-duplicate data; source untouched")
+                print("CROSS-08 PASS — original safety copy rolls clean profile back to empty, source untouched")
                 print("S1 CROSS-01..08 PASS (simulated second device only; physical second device NOT TESTED)")
             finally:
                 source_context.close()
