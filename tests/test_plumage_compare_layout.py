@@ -70,7 +70,16 @@ def run_one(browser, base, width, errors):
         assert layout["cols"] == 2, layout
         assert abs(layout["female"]["y"] - layout["male"]["y"]) < 5, layout
         assert layout["female"]["x"] > layout["male"]["x"], layout
-        assert layout["scrollWidth"] <= layout["clientWidth"] + 2, layout
+        if layout["scrollWidth"] > layout["clientWidth"] + 2:
+            offenders = grid.evaluate("""el => {
+              const boundary = el.getBoundingClientRect().right;
+              return [...el.querySelectorAll('*')].map(n => {
+                const b = n.getBoundingClientRect();
+                return {tag:n.tagName, className: String(n.className?.baseVal || n.className || '').slice(0, 90),
+                        right: Math.round(b.right), width:Math.round(b.width)};
+              }).filter(n => n.right > boundary + 2).slice(0, 14);
+            }""")
+            raise AssertionError(f"Grid overflow: {layout}; offending elements: {offenders}")
         assert layout["exactImageCount"] == layout["uniqueImageCount"], layout
         assert not p.evaluate("document.documentElement.scrollWidth > innerWidth + 2"), (
             f"{width}px horizontal page overflow"
