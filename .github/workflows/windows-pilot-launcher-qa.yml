@@ -1,0 +1,48 @@
+name: Birdspot Windows Pilot Launcher (no device)
+
+on:
+  pull_request:
+    paths:
+      - 'tools/pilot/Start-BirdspotAndroidPilot.ps1'
+      - 'docs/pilot/ANDROID_WINDOWS_S1_STARTKAART_2026-11-13_DRAFT.md'
+      - '.github/workflows/windows-pilot-launcher-qa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  static-launcher:
+    name: Parse PowerShell and run read-only self-check; Android NOT TESTED
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate PowerShell syntax without downloading or opening ports
+        shell: pwsh
+        run: |
+          $tokens = $null
+          $errorsFound = $null
+          [System.Management.Automation.Language.Parser]::ParseFile(
+            'tools/pilot/Start-BirdspotAndroidPilot.ps1',
+            [ref]$tokens, [ref]$errorsFound
+          ) | Out-Null
+          if ($errorsFound.Count -ne 0) {
+            $errorsFound | Format-List | Out-String | Write-Output
+            throw 'PowerShell syntax invalid'
+          }
+      - name: Pinned candidate self-check: no clone, USB, network or publish
+        shell: pwsh
+        run: |
+          ./tools/pilot/Start-BirdspotAndroidPilot.ps1 -SelfCheck
+      - name: Confirm test script never calls deployment or destructive git operations
+        shell: python
+        run: |
+          from pathlib import Path
+          text = Path('tools/pilot/Start-BirdspotAndroidPilot.ps1').read_text(encoding='utf-8')
+          assert "83c117447126b705cae1899f71e66d070a6084b9" in text
+          assert "qa/birdspot-release-candidate-1.27.7-20261113" in text
+          assert "http.server" in text and "127.0.0.1" in text
+          assert "git clone" in text and "git -C $checkout archive" in text
+          assert "git push" not in text and "git reset --hard" not in text
+          print('PASS: pinned offline-only launcher contract. Physical Android NOT TESTED.')
