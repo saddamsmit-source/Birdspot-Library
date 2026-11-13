@@ -244,3 +244,12 @@ Geen bekende afwijkingen op dit moment.
   uitgevoerd.
 - Supportmatrix (browsers/toestellen, Handbook §4.5) nog niet vastgelegd.
 - Definitieve productiehosting en de fysieke toesteltest staan open.
+
+## Releasekandidaat 1.27.8 — eigenaar vraagt live (13 november 2026)
+
+- **Live-instructie:** eigenaar gaf expliciet 'Zet live en ga verder'; daarmee is de **autorisatievoorwaarde** ingevuld, niet automatisch de technische releasegates.
+- **Kandidaat:** aparte `qa/birdspot-release-candidate-1.27.8-20261113` vanaf M17 `965f1d37bd05856ae5bb99c1fdeab604137de7ca`; gerichte nieuwe `APP_VERSION = '1.27.8'`. Ook de originele 1.27.6-review wordt in upgradeproeven meegenomen. In de RU-08-test blijven bronmedia en actuele modules bij latere kandidaatversies verplicht; niet alleen voor exacte 1.27.7.
+- **Publicatiecontract:** één samenhangende kandidaat en CI op één SHA vóór merge naar `preview/birdspot-review`; daarna praktijkpilot. `main`/productie pas na verplichte gates. Geen Vercel-deploy (auto-Git-deploys zijn uitgeschakeld) of merge als de gates niet gehaald zijn.
+- **Open harde gaten:** echte Android/PWA-installatie, GPS/camera/Back/offline/update, ZIP-herstel op tweede toestel, totale fotorechten/licentie-/broncontrole en actuele hosting-/privacy-/kostencheck zijn nog niet bewezen. F1 staat op 117/140, canonieke negenpunts-audit op 100/140, F2 nog niet voltooid. Overblijvende autorisatie alleen is geen release-PASS.
+- **Herstel:** `preview/birdspot-review` op `21ce9060f789103cfbba98fa78f6b53f4b9cea5b`, `main` op `5bf67043e830e977749f0ee593cf9f41f0e2822b` als laatste gecontroleerde bestaande branches. Code-rollback wist geen lokale IDB/waarnemingen; afzonderlijke ZIP-herstelcontrole vereist.
+- **Bewijs/status:** zie `docs/release/RELEASE_1.27.8_CANDIDATE.md`; werkelijke CI-minuten, hostingkosten, fysiek-toestelresultaat en onafhankelijke mediarechten blijven UNKNOWN/NOT TESTED tot feitelijke controle.
