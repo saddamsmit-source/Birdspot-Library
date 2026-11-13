@@ -159,7 +159,7 @@ const sp017SinglePhoto = recognitionPanel(species.get('sp017'));
 assert.ok(sp018VisualCompare.includes('class="sd-plumage-list" data-layout="compare"'),
   'Zwarte Specht: male/female/juvenile photo comparison must opt into two-up layout');
 assert.ok(!sp017SinglePhoto.includes('class="sd-plumage-list" data-layout="compare"'),
-  'Kleine Bonte Specht: one actual plumage photo plus hero ref is not a two-photo comparison');
+  'Kleine Bonte Specht: photos of the same female role plus male hero ref are not two different plumage roles');
 const femaleStart = sp018VisualCompare.indexOf('data-plumage="adult_f"');
 const juvenileStart = sp018VisualCompare.indexOf('data-plumage="juv"', femaleStart);
 const femaleCardHtml = sp018VisualCompare.slice(femaleStart, juvenileStart);
@@ -171,7 +171,7 @@ assert.ok(femaleCardHtml.indexOf('class="sd-plumage-gallery"') <
   'Photo must appear before longer description in the compact comparison');
 assert.ok(sp018VisualCompare.includes('aria-label="In vlucht"'),
   'Flight images remain in their own section with no fabricated role');
-console.log('R10 visual comparison: two source-backed role photos required; photo-first, flight and credits retained');
+console.log('R10 visual comparison: two distinct source-backed photographed roles required; photo-first, flight and credits retained');
 
 console.log(`VERIFIED main photos, retained assets, licensed galleries and comparison order across ${picturedSpecies.size} photographed species`);
 
