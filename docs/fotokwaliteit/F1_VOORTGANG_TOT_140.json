@@ -10,8 +10,8 @@
     "progressMethod": "Count 100 canonical audited items plus unique individually first-pass-reviewed canonical audited:false IDs; no duplicates. expectedFirstPass/expectedRemaining are cross-checks and must be updated together.",
     "nextGate": "When all 140 have initial documented review, independently and comprehensively reverify ALL 140; only afterwards work on species outside the group of 140.",
     "limits": "No source, license, age/sex or complete audit is promoted by this index. Do not alter canonical audited/verdict fields based on progress alone.",
-    "expectedFirstPass": 126,
-    "expectedRemaining": 14
+    "expectedFirstPass": 129,
+    "expectedRemaining": 11
   },
   "additionalFirstPass": [
     {
@@ -377,6 +377,48 @@
       "independentSexAge": "NOT TESTED",
       "fullKnowledgeReview": "NOT TESTED",
       "firstPassScope": "Opened and individually visually checked actual local WebP(s); independently read three primary Commons file page credit/licenses, but image-to-origin pixel match and complete derivative rights not proven; Fluiter extra pose intentionally not free flight; no age or sex fabricated"
+    },
+    {
+      "id": "sp108",
+      "nameNL": "Grote Karekiet",
+      "batch": "M21",
+      "photosSeen": 2,
+      "reviewDocument": "docs/fotokwaliteit/M21_RIETVOGELS_OEVERZWALUW_2026-11-14_DRAFT.md",
+      "reviewPR": null,
+      "evidenceCommit": "7630a515ebea5016bfb73809e375e5a91b0548d6",
+      "status": "PARTIALLY TESTED",
+      "originalRights": "NOT TESTED",
+      "independentSexAge": "NOT TESTED",
+      "fullKnowledgeReview": "NOT TESTED",
+      "firstPassScope": "Two distinct actual local WebP files independently opened/visually inspected per species; recorded source/flight/hero roles and original license where accessible; exact original pixel matching, all derivative rights, sex/age and full knowledge remain open"
+    },
+    {
+      "id": "sp110",
+      "nameNL": "Rietzanger",
+      "batch": "M21",
+      "photosSeen": 2,
+      "reviewDocument": "docs/fotokwaliteit/M21_RIETVOGELS_OEVERZWALUW_2026-11-14_DRAFT.md",
+      "reviewPR": null,
+      "evidenceCommit": "7630a515ebea5016bfb73809e375e5a91b0548d6",
+      "status": "PARTIALLY TESTED",
+      "originalRights": "NOT TESTED",
+      "independentSexAge": "NOT TESTED",
+      "fullKnowledgeReview": "NOT TESTED",
+      "firstPassScope": "Two distinct actual local WebP files independently opened/visually inspected per species; recorded source/flight/hero roles and original license where accessible; exact original pixel matching, all derivative rights, sex/age and full knowledge remain open"
+    },
+    {
+      "id": "sp116",
+      "nameNL": "Oeverzwaluw",
+      "batch": "M21",
+      "photosSeen": 2,
+      "reviewDocument": "docs/fotokwaliteit/M21_RIETVOGELS_OEVERZWALUW_2026-11-14_DRAFT.md",
+      "reviewPR": null,
+      "evidenceCommit": "7630a515ebea5016bfb73809e375e5a91b0548d6",
+      "status": "PARTIALLY TESTED",
+      "originalRights": "NOT TESTED",
+      "independentSexAge": "NOT TESTED",
+      "fullKnowledgeReview": "NOT TESTED",
+      "firstPassScope": "Two distinct actual local WebP files independently opened/visually inspected per species; recorded source/flight/hero roles and original license where accessible; exact original pixel matching, all derivative rights, sex/age and full knowledge remain open"
     }
   ]
 }
