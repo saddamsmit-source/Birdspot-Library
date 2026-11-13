@@ -41,12 +41,14 @@ def read(path):
 
 def test_policy_and_progress():
     norm = (ROOT / "docs/BIRDSPOT_KWALITEITSNORM.md").read_text(encoding="utf-8")
-    assert "Versie | 1.1 · 13-11-2026" in norm
-    assert "pootzichtbaarheid" not in norm.lower() or "pootzichtbaarheid is geen" in norm.lower()
-    assert "**Specifiek bij een juveniel mogen de poten ontbreken**" in norm
-    assert "**Ontbrekende poten zijn op zichzelf nooit een afkeur- of stopreden.**" in norm
-    assert "oorspronkelijke individuele foto" in norm
-    assert "PARTIALLY TESTED / open" in norm
+    # M19's 1.1 decision must survive clarifying versions; require its history,
+    # not a permanently pinned document header that breaks later F1 batches.
+    assert "| 1.1 | 13-11-2026 |" in norm
+    assert "**Aanvullende regel uitsluitend voor juvenielen — geen vervanging van bestaande eisen.**" in norm
+    assert "**Onzichtbare poten op zichzelf zijn geen STOP of afkeurreden.**" in norm
+    assert "individuele originele foto" in norm
+    assert "open/PARTIALLY TESTED" in norm
+    assert "Alle bestaande regels uit §§1–4 blijven ongewijzigd" in norm
     assert "afwezig" not in REPORT.read_text(encoding="utf-8").split("## 1.")[0].lower()
 
     # Synthetic decision CONTRACT only: this does NOT adjudicate any bird.
