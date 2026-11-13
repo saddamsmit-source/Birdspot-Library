@@ -1,0 +1,39 @@
+name: Birdspot M16 Sparse Coastal Waders QA
+on:
+  pull_request:
+    paths:
+      - 'tests/test_m16_sparse_coastal_waders.py'
+      - '.github/workflows/m16-sparse-coastal-waders-qa.yml'
+      - 'docs/fotokwaliteit/F1_VOORTGANG_TOT_140.json'
+      - 'docs/fotokwaliteit/M16_REGENWULP_ROSSE_GRUTTO_STEENLOPER_2026-11-13_DRAFT.md'
+      - 'assets/species/**'
+      - 'src/features/species/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sparse-coastal-waders:
+    name: 114-of-140 F1, four WebPs and 360/390px live UI
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r tests/requirements.txt
+      - run: python -m playwright install --with-deps chromium
+      - name: Validate real assets, roles, comparisons, zoom and progress
+        shell: bash
+        run: |
+          set -o pipefail
+          python tests/test_m16_sparse_coastal_waders.py 2>&1 | tee m16-sparse-photos.log
+      - name: Upload synthetic-only QA log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: birdspot-m16-f1-log
+          path: m16-sparse-photos.log
+          if-no-files-found: warn
