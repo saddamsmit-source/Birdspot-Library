@@ -1,7 +1,7 @@
 {
   "_meta": {
     "name": "Birdspot F1 progress to 140 photographed species",
-    "date": "2026-11-13",
+    "date": "2026-11-14",
     "target": 140,
     "authority": "User-approved sequencing 2026-11-13. This is a progress index, NOT the canonical 9-point status.",
     "canonicalTracker": "docs/fotokwaliteit/soortaudit-status.json",
@@ -10,8 +10,8 @@
     "progressMethod": "Count 100 canonical audited items plus unique individually first-pass-reviewed canonical audited:false IDs; no duplicates. expectedFirstPass/expectedRemaining are cross-checks and must be updated together.",
     "nextGate": "When all 140 have initial documented review, independently and comprehensively reverify ALL 140; only afterwards work on species outside the group of 140.",
     "limits": "No source, license, age/sex or complete audit is promoted by this index. Do not alter canonical audited/verdict fields based on progress alone.",
-    "expectedFirstPass": 123,
-    "expectedRemaining": 17
+    "expectedFirstPass": 126,
+    "expectedRemaining": 14
   },
   "additionalFirstPass": [
     {
@@ -335,6 +335,48 @@
       "independentSexAge": "NOT TESTED",
       "fullKnowledgeReview": "NOT TESTED",
       "firstPassScope": "All distinct local WebPs visually opened, actual juvenile morphology and original source where accessible checked. Missing feet not automatic rejection under norm 1.1; complete original image match, rights, and individual age/sex for all photos remain open"
+    },
+    {
+      "id": "sp058",
+      "nameNL": "Fluiter",
+      "batch": "M20",
+      "photosSeen": 2,
+      "reviewDocument": "docs/fotokwaliteit/M20_DRIE_ZANGVOGELS_2026-11-14_DRAFT.md",
+      "reviewPR": null,
+      "evidenceCommit": "c9dd16b6879afedc38180ebe5faea01edce75f4a",
+      "status": "PARTIALLY TESTED",
+      "originalRights": "NOT TESTED",
+      "independentSexAge": "NOT TESTED",
+      "fullKnowledgeReview": "NOT TESTED",
+      "firstPassScope": "Opened and individually visually checked actual local WebP(s); independently read three primary Commons file page credit/licenses, but image-to-origin pixel match and complete derivative rights not proven; Fluiter extra pose intentionally not free flight; no age or sex fabricated"
+    },
+    {
+      "id": "sp060",
+      "nameNL": "Tuinfluiter",
+      "batch": "M20",
+      "photosSeen": 1,
+      "reviewDocument": "docs/fotokwaliteit/M20_DRIE_ZANGVOGELS_2026-11-14_DRAFT.md",
+      "reviewPR": null,
+      "evidenceCommit": "c9dd16b6879afedc38180ebe5faea01edce75f4a",
+      "status": "PARTIALLY TESTED",
+      "originalRights": "NOT TESTED",
+      "independentSexAge": "NOT TESTED",
+      "fullKnowledgeReview": "NOT TESTED",
+      "firstPassScope": "Opened and individually visually checked actual local WebP(s); independently read three primary Commons file page credit/licenses, but image-to-origin pixel match and complete derivative rights not proven; Fluiter extra pose intentionally not free flight; no age or sex fabricated"
+    },
+    {
+      "id": "sp062",
+      "nameNL": "Braamsluiper",
+      "batch": "M20",
+      "photosSeen": 1,
+      "reviewDocument": "docs/fotokwaliteit/M20_DRIE_ZANGVOGELS_2026-11-14_DRAFT.md",
+      "reviewPR": null,
+      "evidenceCommit": "c9dd16b6879afedc38180ebe5faea01edce75f4a",
+      "status": "PARTIALLY TESTED",
+      "originalRights": "NOT TESTED",
+      "independentSexAge": "NOT TESTED",
+      "fullKnowledgeReview": "NOT TESTED",
+      "firstPassScope": "Opened and individually visually checked actual local WebP(s); independently read three primary Commons file page credit/licenses, but image-to-origin pixel match and complete derivative rights not proven; Fluiter extra pose intentionally not free flight; no age or sex fabricated"
     }
   ]
 }
