@@ -32,6 +32,9 @@ from playwright.sync_api import sync_playwright
 ROOT = Path(__file__).resolve().parent.parent
 BASE_REF = sys.argv[sys.argv.index("--base") + 1] if "--base" in sys.argv else "5bf6704"
 NEW_VERSION = re.search(r"const APP_VERSION = '([^']+)'", (ROOT / "sw.js").read_text(encoding="utf-8")).group(1)
+version_match = re.match(r"^(\d+)\.(\d+)\.(\d+)", NEW_VERSION)
+assert version_match, f"Unknown candidate version: {NEW_VERSION}"
+RUN_RU08 = tuple(map(int, version_match.groups())) >= (1, 27, 7)
 SERVE = {"dir": None}
 
 SEED_LS = {
@@ -186,12 +189,68 @@ def main():
             p.wait_for_function("""() => [...document.querySelectorAll('img')].some(i => /sp094/.test(i.currentSrc || i.src) && i.complete && i.naturalWidth > 0)""", timeout=10000)
             assert snapshot(p)["ls"]["birdspot-sightings"] == before["ls"]["birdspot-sightings"], "RU-06 data offline anders"
             print("RU-06 OK — offline gestart na update; soortkaart Zilvermeeuw met gedecodeerde gidsfoto; gegevens gelijk")
+
+            # RU-08 (release candidates >= 1.27.7): validate post-1.27.6 media,
+            # not present in the old review revision, is physically precached
+            # and decodes OFFLINE. Also prove two changed JS modules are the
+            # exact current candidate bytes (not stale 1.27.6 code).
+            if RUN_RU08:
+                import hashlib
+                new_media = [
+                    "/assets/species/plumage/sp082-portrait.webp",
+                    "/assets/species/plumage/sp084-juv-europa.webp",
+                ]
+                registry = (ROOT / "assets/species/field-guide-media.json").read_text(encoding="utf-8")
+                for media_path in new_media:
+                    assert media_path in registry and (ROOT / media_path.lstrip("/")).is_file(), (
+                        f"RU-08 new guide image not registered: {media_path}"
+                    )
+                media_result = p.evaluate("""async paths => {
+                    const mediaCache = await caches.open('birdspot-media');
+                    const checked = [];
+                    for (const path of paths) {
+                        const cached = await mediaCache.match(path);
+                        const img = new Image();
+                        img.src = path;
+                        let error = null;
+                        try { await img.decode(); } catch (e) { error = String(e); }
+                        checked.push({path, cached: !!cached?.ok,
+                                      decoded: !error && img.complete && img.naturalWidth > 0,
+                                      width: img.naturalWidth, height: img.naturalHeight, error});
+                    }
+                    return checked;
+                }""", new_media)
+                assert all(item["cached"] and item["decoded"] for item in media_result), (
+                    f"RU-08 new guide images unavailable offline: {media_result}"
+                )
+                modules = ["src/data/speciesKnowledge.js", "src/features/species/guideMedia.js"]
+                module_result = p.evaluate("""async paths => {
+                    const result = [];
+                    for (const path of paths) {
+                        const response = await fetch('/' + path);
+                        if (!response.ok) throw new Error('Missing offline module: ' + path);
+                        const bytes = await response.arrayBuffer();
+                        const digest = await crypto.subtle.digest('SHA-256', bytes);
+                        const sha = Array.from(new Uint8Array(digest))
+                          .map(b => b.toString(16).padStart(2, '0')).join('');
+                        result.push({path, sha});
+                    }
+                    return result;
+                }""", modules)
+                for item in module_result:
+                    expected = hashlib.sha256((ROOT / item["path"]).read_bytes()).hexdigest()
+                    assert item["sha"] == expected, (
+                        f"RU-08 stale/mismatched module {item['path']}: {item['sha']} != {expected}"
+                    )
+                print("RU-08 OK — twee nieuwe gids-WebP's vooraf gecachet en gedecodeerd offline; "
+                      "twee veranderde modules byte-identiek aan deze releasekandidaat")
             ctx.set_offline(False)
             browser.close()
         srv.shutdown()
     assert not errors, f"RU-07 paginafouten: {errors}"
     print("RU-07 OK — geen paginafouten")
-    print(f"Releasegate upgrade {BASE_REF} → {NEW_VERSION}: alle controles geslaagd (RU-01..RU-07)")
+    print(f"Releasegate upgrade {BASE_REF} → {NEW_VERSION}: RU-01..07 PASS" +
+          (" + RU-08 PASS (new offline images and exact JS)" if RUN_RU08 else ""))
 
 
 if __name__ == "__main__":

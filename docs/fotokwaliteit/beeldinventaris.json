@@ -2714,7 +2714,8 @@
    "class": "stilstaand",
    "airborne": false,
    "source": "contactsheet 10-11-2026",
-   "note": ""
+   "note": "Twee bijna identieke foto’s van hetzelfde mannetje met elf seconden verschil volgens de bronbestanden. Vervangen door een scherper portret van een andere opname.",
+   "decision": "archief"
   },
   "/assets/species/plumage/sp251-juv.webp": {
    "refs": [
@@ -2735,7 +2736,8 @@
    "class": "stilstaand",
    "airborne": false,
    "source": "contactsheet 10-11-2026",
-   "note": ""
+   "note": "Twee bijna identieke foto’s van hetzelfde mannetje met elf seconden verschil volgens de bronbestanden. Vervangen door een scherper portret van een andere opname.",
+   "decision": "archief"
   },
   "/assets/species/plumage/sp253-juv.webp": {
    "refs": [
@@ -4850,6 +4852,87 @@
    "airborne": false,
    "source": "Visuele controle K07 fase 1 (2026-11-12)",
    "note": "Jonge Bonte Vliegenvanger met een lichte vleugeltekening en gevlekte kop en bovendelen, volledig in zijaanzicht."
+  },
+  "/assets/species/plumage/sp082-portrait.webp": {
+   "refs": [
+    "sp082 GUIDE_PLUMAGE.adult_m",
+    "sp082 GUIDE_HEROES"
+   ],
+   "sha1": "07ddbb1334a87c58ffc50faf484fb3df7b2da23b",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K07 fase 2 (2026-11-12)",
+   "note": "Volwassen Kleine Zilverreiger loopt van opzij langs open water, met een donkere snavel, donkere poten en geelgroene tenen."
+  },
+  "/assets/species/plumage/sp084-juv-europa.webp": {
+   "refs": [
+    "sp084 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "7c740dec520be5a9c57a4e51ecf709bce20f0bb8",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K07 fase 2 (2026-11-12)",
+   "note": "Jonge Purperreiger in zijaanzicht tussen rietstengels, met geelbruine veren en een lange, smalle hals."
+  },
+  "/assets/species/plumage/sp090-juv.webp": {
+   "refs": [
+    "sp090 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "a590c76cc7b4c31e054221d3816e840f6cc73046",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K07 fase 3 (2026-11-12)",
+   "note": "Jonge Slobeend in zijaanzicht, met bruingevlekt lichaam en lange, brede snavel op groen water."
+  },
+  "/assets/species/plumage/sp092-juv.webp": {
+   "refs": [
+    "sp092 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "ac7663f9870fbc13d001121943e727b22841cd8f",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K07 fase 3 (2026-11-12)",
+   "note": "Jonge Kuifeend in volledig bruin kleed op open water, met korte kuif en een dofgeel oog."
+  },
+  "/assets/species/plumage/sp132-juv.webp": {
+   "refs": [
+    "sp132 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "47aad9c03f31d11bbdf0d4b4816a1253df2589c0",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K07 fase 3 (2026-11-12)",
+   "note": "Jonge Tafeleend linksachter een grotere Tafeleend op helder water. Het jonge dier heeft een bruingevlekte rug en lichte wang."
+  },
+  "/assets/species/plumage/sp129-juv-europa.webp": {
+   "refs": [
+    "sp129 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "5d482e9406869fdf4ef2c3ba1def736627c9d64e",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K07 fase 4 (2026-11-12)",
+   "note": "Jonge Krakeend in zijaanzicht met oranje langs de snavel en bruin getekende veren."
+  },
+  "/assets/species/plumage/sp130-juv.webp": {
+   "refs": [
+    "sp130 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "10a6016ca0d5fa3d8606f7e3ba37d2a7b041d33d",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K07 fase 4 (2026-11-12)",
+   "note": "Jonge Smient op het water met ronde kop, korte blauwgrijze snavel en rossigbruin verenkleed."
+  },
+  "/assets/species/plumage/sp251-portrait.webp": {
+   "refs": [
+    "sp251 GUIDE_POSES[0]"
+   ],
+   "sha1": "ecc1b5fb81a137b9104c024bb689763a7da501c9",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K08 fase 1 (2026-11-12)",
+   "note": "Mannetje Grauwe Kiekendief in droog gras. Grijze veren en gele ogen zijn scherp zichtbaar."
   }
  }
 }

@@ -98,4 +98,39 @@ for (const s of SPECIES) {
 assert.ok(!recognitionPanel(SPECIES.find(s => s.id === 'sp003'), null).includes('↑ zie in vlucht'), 'SA-07 Holenduif');
 console.log(`SA-07 OK — ${refs} kaarten met vluchtvergelijking; geen verwijzing naar een ontbrekende eigen vluchtfoto`);
 
-console.log('Soortaudit: alle controles geslaagd (SA-01..SA-07)');
+// SA-08: only these two species; assert current UI media = independently enumerated audit.
+// Missing roles must not be silently promoted to VERIFIED.
+for (const [sid, total] of [['sp017', 3], ['sp018', 5]]) {
+  assert.ok(batches[sid], `SA-08 ${sid}: M10 audit missing`);
+  const row = rowOf(sid);
+  const own = row.rendered.filter(x => x.image && ['Hoofdfoto','Verenkleed','In vlucht',"Overige herkenningsfoto's"].includes(x.section)).map(x => x.image);
+  assert.equal(own.length, total, `SA-08 ${sid}: number of rendered images differs`);
+  assert.equal(new Set(own).size, total, `SA-08 ${sid}: same image displayed twice`);
+  assert.deepEqual(new Set(own), new Set(Object.keys(batches[sid].assets)), `SA-08 ${sid}: visible images not identical to audited set`);
+  assert.deepEqual(checkSpecies(row, batches[sid], flight), [], `SA-08 ${sid}: audit failed`);
+  assert.equal(result.find(x => x.id === sid).photoComplete, false, `SA-08 ${sid}: missing photo roles exist`);
+  assert.notEqual(result.find(x => x.id === sid).verdict, 'VERIFIED', `SA-08 ${sid}: incomplete set cannot be fully verified`);
+}
+assert.equal(flight['/assets/species/plumage/sp017-flight.webp']?.decision, 'uit-rol');
+assert.equal(batches.sp017.assets['/assets/species/plumage/sp017-flight.webp'].verdict, 'uit-rol');
+assert.equal(rowOf('sp018').heroImage, '/assets/showcase/sp018.webp');
+const badFlight = clone(rowOf('sp017'));
+badFlight.rendered = badFlight.rendered.map(x => x.image === '/assets/species/plumage/sp017-flight.webp' ? {...x, section:'In vlucht',slot:'neutral'} : x);
+assert.ok(checkSpecies(badFlight,batches.sp017,flight).length > 0, 'SA-08 must fail with wrong flight role');
+console.log('SA-08 OK: 2 birds, 8 registered images match rendered roles; missing images remain open');
+
+// SA-09: persisted tracker & status represent this same actual photo audit.
+const persisted = JSON.parse(readFileSync(new URL('../docs/fotokwaliteit/soortaudit-status.json', import.meta.url), 'utf8'));
+const tracker = readFileSync(new URL('../docs/fotokwaliteit/SOORTAUDIT_TRACKER.md', import.meta.url), 'utf8');
+assert.equal(persisted.species.filter(r => r.audited).length, audited.length, 'SA-09 status file drift');
+for (const id of ['sp017', 'sp018']) {
+  const saved = persisted.species.find(r => r.id === id);
+  assert.equal(saved.batch, 'M10');
+  assert.equal(saved.status.independent, 'NOT TESTED');
+  assert.equal(saved.photoComplete, false);
+  assert.deepEqual(new Set(saved.assets.map(a => a.image)), new Set(Object.keys(batches[id].assets)));
+}
+assert.ok(tracker.includes(`| 2 | Afzonderlijk (aangescherpt) gecontroleerd | ${audited.length} (`), 'SA-09 tracker drift');
+console.log('SA-09 OK — persistent audit status and tracker aligned');
+
+console.log('Soortaudit: alle controles geslaagd (SA-01..SA-09)');

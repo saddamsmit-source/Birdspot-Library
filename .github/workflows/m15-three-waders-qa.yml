@@ -1,0 +1,39 @@
+name: Birdspot M15 First Pass Three Waders QA
+on:
+  pull_request:
+    paths:
+      - 'tests/test_m15_three_waders_first_pass.py'
+      - '.github/workflows/m15-three-waders-qa.yml'
+      - 'docs/fotokwaliteit/F1_VOORTGANG_TOT_140.json'
+      - 'docs/fotokwaliteit/M15_DRIE_STELTLOPERS_2026-11-13_DRAFT.md'
+      - 'assets/species/**'
+      - 'src/features/species/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  first-pass-3-waders:
+    name: 111-of-140 progress and 12 local photo/role/browser checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r tests/requirements.txt
+      - run: python -m playwright install --with-deps chromium
+      - name: Real local WebP, 360/390px roles, free flight, comparisons and progress
+        shell: bash
+        run: |
+          set -o pipefail
+          python tests/test_m15_three_waders_first_pass.py 2>&1 | tee m15-three-waders.log
+      - name: Retain synthetic-only test log, not private photos
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: birdspot-m15-first-pass-log
+          path: m15-three-waders.log
+          if-no-files-found: warn

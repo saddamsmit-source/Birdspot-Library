@@ -691,6 +691,47 @@
    },
    "testedOn": "181688362b2b385e47939e8761586d0288259ede",
    "date": "2026-11-11"
+  },
+  "sp017": {
+   "ok": true,
+   "viewport": "390x844 Chromium (Playwright)",
+   "photos": 3,
+   "sections": [
+    "Hoofdfoto",
+    "Verenkleed"
+   ],
+   "flight": [],
+   "checks": "SAB-01..07",
+   "runSha": "2e20f1d5f44fa27f1a84b7ced9f04fba533255fa",
+   "evidence": "https://github.com/saddamsmit-source/Birdspot-Library/actions/runs/43287607724"
+  },
+  "sp018": {
+   "ok": true,
+   "viewport": "390x844 Chromium (Playwright)",
+   "photos": 5,
+   "sections": [
+    "Hoofdfoto",
+    "Verenkleed",
+    "In vlucht"
+   ],
+   "flight": [
+    "/assets/species/plumage/sp018-flight.webp"
+   ],
+   "checks": "SAB-01..07",
+   "runSha": "2e20f1d5f44fa27f1a84b7ced9f04fba533255fa",
+   "evidence": "https://github.com/saddamsmit-source/Birdspot-Library/actions/runs/43287607724"
   }
- }
+ },
+ "testRuns": [
+  {
+   "sha": "2e20f1d5f44fa27f1a84b7ced9f04fba533255fa",
+   "date": "2026-11-12",
+   "source": "https://github.com/saddamsmit-source/Birdspot-Library/actions/runs/43287607724",
+   "scope": [
+    "sp017",
+    "sp018"
+   ],
+   "checks": "SAB-01..07 (per soort), SA-08 en volledige M10-browserpass"
+  }
+ ]
 }

@@ -3,6 +3,9 @@ on:
   pull_request:
     paths:
       - 'tools/kennisbaseline/**'
+      - 'tools/species/prepare_verified_sp018_female.py'
+      - 'tests/test_sp018_female_preflight.py'
+      - 'tests/test_sp018_female_prepare_offline.py'
       - 'src/data/speciesKnowledge.js'
       - 'src/data/species.js'
       - 'src/data/speciesLife.js'
@@ -28,6 +31,11 @@ jobs:
           python-version: '3.12'
       - run: pip install -r tests/requirements.txt
       - run: python -m playwright install --with-deps chromium
+      - name: sp018 photo source preflight (no remote download)
+        run: |
+          python3 tools/species/prepare_verified_sp018_female.py --check
+          python3 tests/test_sp018_female_preflight.py
+          python3 tests/test_sp018_female_prepare_offline.py
       - name: Kennisprofielen geldig en gegenereerde module gelijk aan de bron
         run: python3 -I tools/kennisbaseline/build_knowledge.py --check
       - name: Validator weigert ongeldige profielen

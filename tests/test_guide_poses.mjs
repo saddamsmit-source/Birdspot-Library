@@ -1,5 +1,6 @@
 /** Contract checks for guide photo grouping. Browser interaction is covered separately. */
 import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { readFileSync } from 'node:fs';
@@ -55,7 +56,11 @@ for (const id of ['sp035', 'sp043', 'sp053', 'sp075', 'sp089', 'sp092']) {
 }
 assert.equal(GUIDE_PHOTOS.sp018.sex, 'male');
 assert.equal(GUIDE_PHOTOS.sp019.sex, 'male');
-assert.deepEqual(photosFor('sp018', 'adult_m'), ['/assets/showcase/sp018.webp']);
+assert.deepEqual(photosFor('sp018', 'adult_m'), ['/assets/species/plumage/sp018-hero-male.webp']);
+assert.equal(guideHeroPhoto('sp018').image, '/assets/showcase/sp018.webp');
+assert.equal(GUIDE_HEROES.sp018, GUIDE_PHOTOS.sp018.image);
+assert.equal(GUIDE_PHOTOS.sp018.sex, 'male');
+assert.ok(recognitionPanel(species.get('sp018')).includes('/assets/species/plumage/sp018-hero-male.webp'), 'Previously approved male portrait retained in adult_m gallery');
 assert.deepEqual(photosFor('sp019', 'adult_m'), ['/assets/species/sp019.webp']);
 assert.ok(photosFor('sp018', 'adult_f').length);
 assert.deepEqual(photosFor('sp018', 'juv'), ['/assets/species/plumage/sp018-juv-review.webp']);
@@ -107,4 +112,97 @@ for (const bird of openQueue.openPhotoRoles) {
   assert.ok(bird.filledRoles.every(role => !bird.missingRoles.includes(role)),
     `Conflicting role: ${bird.id}`);
 }
+// Unique active sources — avoid the same underlying bird photo being registered twice
+// as a separate gallery/pose image. Explicit reuseGuidePhoto references have no image
+// and are permitted. This is NOT a perceptual/near-duplicate image audit.
+let uniqueSourceChecks = 0;
+for (const id of new Set([...Object.keys(registry.plumage), ...Object.keys(registry.poses)])) {
+  const entries = [
+    ...Object.values(registry.plumage[id] || {}),
+    ...(registry.poses[id] || []),
+  ].filter(photo => photo?.image);
+  const paths = new Set();
+  const sourceUrls = new Set();
+  for (const photo of entries) {
+    assert.ok(!paths.has(photo.image), `Photo registered twice for ${id}: ${photo.image}`);
+    paths.add(photo.image);
+    const src = photo.source?.trim().replace(/^http:/, 'https:').replace(/\/$/, '');
+    if (src) {
+      assert.ok(!sourceUrls.has(src), `Photo source registered twice for ${id}: ${src}`);
+      sourceUrls.add(src);
+    }
+    uniqueSourceChecks++;
+  }
+}
+assert.equal(registry.plumage.sp019.adult_f.label, 'Op de grond');
+assert.ok(!registry.poses.sp019.some(photo => photo.image === registry.plumage.sp019.adult_f.image));
+console.log(`VERIFIED ${uniqueSourceChecks} registered gallery/pose images without exact source duplication`);
+
+// K08 spechten: de foto's moeten unieke rollen houden; een nestholte-opvliegbeeld is niet automatisch een
+// vrije vluchtfoto, en een juveniel kopdetail is geen nieuw geslachtsbewijs.
+assert.equal(guideHeroPhoto('sp017').image, '/assets/species/sp017.webp');
+assert.equal(guidePlumageGroups(species.get('sp017')).find(g => g.key === 'adult_f')?.photos[0]?.image, '/assets/species/plumage/sp017-female.webp');
+assert.ok(!(GUIDE_POSES.sp017 || []).some(p => p.flight), 'Kleine Bonte Specht flight not independently verified');
+assert.ok(!GUIDE_PLUMAGE.sp017?.juv, 'No verified juvenile Lesser Spotted Woodpecker image yet');
+assert.equal(guideHeroPhoto('sp018').image, '/assets/showcase/sp018.webp');
+assert.equal(guideHeroPhoto('sp018').source, GUIDE_PHOTOS.sp018.source);
+assert.equal(GUIDE_POSES.sp018.filter(p => p.image === '/assets/species/plumage/sp018-hero-male.webp').length, 1, 'Original male photo is retained exactly once');
+assert.ok((GUIDE_POSES.sp018 || []).some(p => p.flight && p.image === '/assets/species/plumage/sp018-flight.webp'));
+const sp018Juvenile = (GUIDE_POSES.sp018 || []).filter(p => p.age === 'juvenile');
+assert.equal(sp018Juvenile.length, 1);
+assert.ok(sp018Juvenile[0].label.includes('kopdetail'), 'Juvenile photo is only head detail');
+console.log('K08 sp017/sp018: photo roles and evidence limits retained');
+const sp018VisualCompare = recognitionPanel(species.get('sp018'));
+const sp017SinglePhoto = recognitionPanel(species.get('sp017'));
+// Never advertise a comparison based on text-only or a reference to the hero;
+// display the gallery side-by-side only for two actual, distinct role images.
+assert.ok(sp018VisualCompare.includes('class="sd-plumage-list" data-layout="compare"'),
+  'Zwarte Specht: male/female/juvenile photo comparison must opt into two-up layout');
+assert.ok(!sp017SinglePhoto.includes('class="sd-plumage-list" data-layout="compare"'),
+  'Kleine Bonte Specht: photos of the same female role plus male hero ref are not two different plumage roles');
+const femaleStart = sp018VisualCompare.indexOf('data-plumage="adult_f"');
+const juvenileStart = sp018VisualCompare.indexOf('data-plumage="juv"', femaleStart);
+const femaleCardHtml = sp018VisualCompare.slice(femaleStart, juvenileStart);
+assert.ok(femaleStart >= 0 && juvenileStart > femaleStart, 'Role order must be male / female / juvenile');
+assert.ok(femaleCardHtml.indexOf('class="sd-plumage-gallery"') > 0,
+  'Female role retains original source image / zoom control');
+assert.ok(femaleCardHtml.indexOf('class="sd-plumage-gallery"') <
+  femaleCardHtml.indexOf('class="sd-plumage-description"'),
+  'Photo must appear before longer description in the compact comparison');
+assert.ok(sp018VisualCompare.includes('aria-label="In vlucht"'),
+  'Flight images remain in their own section with no fabricated role');
+assert.ok(sp018VisualCompare.includes('class="sd-plumage-more"'),
+  'Photographic comparison keeps full fieldmark explanations in accessible details');
+assert.ok(sp018VisualCompare.includes('class="sd-plumage-other"'),
+  'Text-only plumages are retained one tap away rather than consuming photo columns');
+assert.ok(sp018VisualCompare.includes('data-plumage="jaarling"'),
+  'Black Woodpecker yearling explanation must not be deleted from the guide');
+console.log('R10 visual comparison: two distinct source-backed photographed roles required; photo-first, flight and credits retained');
+
 console.log(`VERIFIED main photos, retained assets, licensed galleries and comparison order across ${picturedSpecies.size} photographed species`);
+
+// QA-SPECHTEN-BYTES: different paths/URLs are not enough to catch copies
+// saved under a second filename. Compare actual current WebP bytes for the
+// two reviewed spechten. This cannot detect perceptual/edited near-duplicates.
+const reviewedSpechtenHashes = new Map();
+let reviewedSpechtenFiles = 0;
+for (const id of ['sp017', 'sp018']) {
+  const activePhotos = [
+    GUIDE_PHOTOS[id],
+    ...Object.values(GUIDE_PLUMAGE[id] || {}),
+    ...(GUIDE_POSES[id] || []),
+  ].filter(photo => photo?.image);
+  for (const photo of activePhotos) {
+    assert.match(photo.image, /^\/assets\//, `Unexpected photo path: ${id}`);
+    const data = readFileSync(new URL('..' + photo.image, import.meta.url));
+    assert.equal(data.toString('ascii', 0, 4), 'RIFF', `Invalid WebP: ${photo.image}`);
+    assert.equal(data.toString('ascii', 8, 12), 'WEBP', `Invalid WebP: ${photo.image}`);
+    const digest = createHash('sha256').update(data).digest('hex');
+    assert.ok(!reviewedSpechtenHashes.has(digest),
+      `Identical file bytes under separate photo entries: ${reviewedSpechtenHashes.get(digest)} / ${photo.image}`);
+    reviewedSpechtenHashes.set(digest, photo.image);
+    reviewedSpechtenFiles++;
+  }
+}
+assert.ok(reviewedSpechtenFiles >= 8, 'Expected baseline of 8 individually reviewed sp017/sp018 files');
+console.log(`QA-SPECHTEN-BYTES: ${reviewedSpechtenFiles} current files have distinct WebP bytes; near-duplicates NOT PROVEN`);

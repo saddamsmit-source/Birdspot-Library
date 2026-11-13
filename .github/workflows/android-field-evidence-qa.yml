@@ -1,0 +1,30 @@
+name: Birdspot Android Field Pilot Evidence QA
+
+on:
+  pull_request:
+    paths:
+      - 'tools/pilot/android_field_report.py'
+      - 'tests/test_android_field_report.py'
+      - 'docs/pilot/ANDROID_S1_FYSIEKE_PILOT_v0.1_DRAFT.md'
+      - '.github/workflows/android-field-evidence-qa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  report-schema-only:
+    name: Report privacy and gate guards (not device verification)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Syntax
+        run: python -m py_compile tools/pilot/android_field_report.py tests/test_android_field_report.py
+      - name: Guard report against fabricated physical PASS and public evidence writes
+        run: python tests/test_android_field_report.py
+      - name: Preflight is read-only; physical device NOT TESTED
+        run: python tools/pilot/android_field_report.py --preflight
