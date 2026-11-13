@@ -69,6 +69,10 @@ def check_original_files():
             all_sources[src] = (id_, role)
             if role == "In vlucht":
                 assert photo["flight"] is True and "flightReview" in photo, (id_, role)
+                if id_ == "sp145":
+                    assert "witte oksels" in photo["note"] and "niet zichtbaar" in photo["note"], (
+                        "Goudplevier photo does not depict the axillary diagnostic; the UI must disclose this"
+                    )
             else:
                 assert not photo.get("flight"), (id_, role)
         assert not any(p.get("sex") in ("male", "female") for _, p in files), (
