@@ -961,8 +961,9 @@
 }
 .sd-plumage-list[data-layout="compare"] .sd-field-photo { margin-top: 0; }
 .sd-plumage-list[data-layout="compare"] .sd-field-photo img {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: auto;
   width: 100%;
+  height: clamp(172px, 28vw, 260px);
   max-height: none;
   object-fit: contain;
 }
@@ -972,7 +973,20 @@
   font-size: var(--fs-meta);
   line-height: 1.5;
 }
-.sd-plumage-list[data-layout="compare"] .sd-plumage-photo { min-width: 0; }
+.sd-plumage-list[data-layout="compare"] .sd-plumage-gallery,
+.sd-plumage-list[data-layout="compare"] .sd-plumage-photo,
+.sd-plumage-list[data-layout="compare"] .photo-info-frame {
+  min-width: 0;
+  max-width: 100%;
+}
+.sd-plumage-list[data-layout="compare"] .sd-plumage-description,
+.sd-plumage-list[data-layout="compare"] .sd-hero-ref {
+  overflow-wrap: anywhere;
+}
+.sd-plumage-list[data-layout="compare"] .photo-info__panel {
+  max-width: 100%;
+  box-sizing: border-box;
+}
 .sd-plumage-list[data-layout="compare"] .sd-plumage-photo figcaption {
   margin-top: var(--space-4);
   overflow-wrap: anywhere;
