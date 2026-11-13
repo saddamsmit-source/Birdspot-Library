@@ -10,8 +10,8 @@
     "progressMethod": "Count 100 canonical audited items plus unique individually first-pass-reviewed canonical audited:false IDs; no duplicates. expectedFirstPass/expectedRemaining are cross-checks and must be updated together.",
     "nextGate": "When all 140 have initial documented review, independently and comprehensively reverify ALL 140; only afterwards work on species outside the group of 140.",
     "limits": "No source, license, age/sex or complete audit is promoted by this index. Do not alter canonical audited/verdict fields based on progress alone.",
-    "expectedFirstPass": 111,
-    "expectedRemaining": 29
+    "expectedFirstPass": 114,
+    "expectedRemaining": 26
   },
   "additionalFirstPass": [
     {
@@ -167,6 +167,48 @@
       "independentSexAge": "NOT TESTED",
       "fullKnowledgeReview": "NOT TESTED",
       "firstPassScope": "All four actual local Birdspot WebP photos individually viewed; role/flight/source registry checked; individual age, origin rights and knowledge still open"
+    },
+    {
+      "id": "sp148",
+      "nameNL": "Regenwulp",
+      "batch": "M16",
+      "photosSeen": 1,
+      "reviewDocument": "docs/fotokwaliteit/M16_REGENWULP_ROSSE_GRUTTO_STEENLOPER_2026-11-13_DRAFT.md",
+      "reviewPR": null,
+      "evidenceCommit": "e5bfb1ad874f1aa383fcc17db6073407e733f9f7",
+      "status": "PARTIALLY TESTED",
+      "originalRights": "NOT TESTED",
+      "independentSexAge": "NOT TESTED",
+      "fullKnowledgeReview": "NOT TESTED",
+      "firstPassScope": "Actual registered local Birdspot WebP(s) independently viewed; corresponding Commons file page credited author/license reviewed; original image binary/crop match, age/sex, full knowledge and physical device still open"
+    },
+    {
+      "id": "sp149",
+      "nameNL": "Rosse Grutto",
+      "batch": "M16",
+      "photosSeen": 1,
+      "reviewDocument": "docs/fotokwaliteit/M16_REGENWULP_ROSSE_GRUTTO_STEENLOPER_2026-11-13_DRAFT.md",
+      "reviewPR": null,
+      "evidenceCommit": "e5bfb1ad874f1aa383fcc17db6073407e733f9f7",
+      "status": "PARTIALLY TESTED",
+      "originalRights": "NOT TESTED",
+      "independentSexAge": "NOT TESTED",
+      "fullKnowledgeReview": "NOT TESTED",
+      "firstPassScope": "Actual registered local Birdspot WebP(s) independently viewed; corresponding Commons file page credited author/license reviewed; original image binary/crop match, age/sex, full knowledge and physical device still open"
+    },
+    {
+      "id": "sp150",
+      "nameNL": "Steenloper",
+      "batch": "M16",
+      "photosSeen": 2,
+      "reviewDocument": "docs/fotokwaliteit/M16_REGENWULP_ROSSE_GRUTTO_STEENLOPER_2026-11-13_DRAFT.md",
+      "reviewPR": null,
+      "evidenceCommit": "e5bfb1ad874f1aa383fcc17db6073407e733f9f7",
+      "status": "PARTIALLY TESTED",
+      "originalRights": "NOT TESTED",
+      "independentSexAge": "NOT TESTED",
+      "fullKnowledgeReview": "NOT TESTED",
+      "firstPassScope": "Actual registered local Birdspot WebP(s) independently viewed; corresponding Commons file page credited author/license reviewed; original image binary/crop match, age/sex, full knowledge and physical device still open"
     }
   ]
 }
