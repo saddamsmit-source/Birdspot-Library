@@ -141,8 +141,14 @@ def test_real_mobile_browser():
                             assert info["ok"] and info["alt"] and f"{sid}.webp" in info["src"], (sid, info)
                             panel = page.locator("#sdPanel-herkenning")
                             expect(panel).to_have_count(1)
-                            assert panel.locator(".sd-plumage-gallery img").count() == 0, (
-                                sid, "Do not show invented plumage photographs"
+                            # A flight card intentionally reuses the sd-plumage-gallery
+                            # CSS component; only galleries OUTSIDE section.sd-flight
+                            # would incorrectly claim an absent non-flight plumage photo.
+                            false_gallery_count = panel.locator(".sd-plumage-gallery img").evaluate_all(
+                                "imgs => imgs.filter(img => !img.closest('section.sd-flight')).length"
+                            )
+                            assert false_gallery_count == 0, (
+                                sid, "Do not show invented non-flight plumage photographs", false_gallery_count
                             )
                             flight = panel.locator("section.sd-flight .sd-field-photo img")
                             if sid == "sp150":
