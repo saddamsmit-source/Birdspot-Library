@@ -1,0 +1,35 @@
+name: Birdspot Independent Plumage Accessibility QA
+on:
+  pull_request:
+    paths:
+      - 'tests/test_plumage_keyboard_credits.py'
+      - '.github/workflows/plumage-independent-accessibility-qa.yml'
+      - 'src/features/species/**'
+      - 'styles/species.css'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  keyboard-credits-narrow:
+    name: Chromium 320/390px, keyboard zoom and source credits
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r tests/requirements.txt
+      - run: python -m playwright install --with-deps chromium
+      - name: Independently test keyboard and photo provenance in real DOM
+        shell: bash
+        run: |
+          set -o pipefail
+          python tests/test_plumage_keyboard_credits.py 2>&1 | tee plumage-independent.log
+      - name: Preserve synthetic-only log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: plumage-independent-keyboard-log
+          path: plumage-independent.log
+          if-no-files-found: warn
