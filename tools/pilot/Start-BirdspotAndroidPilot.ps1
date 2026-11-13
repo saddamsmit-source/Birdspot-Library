@@ -67,7 +67,7 @@ if ($actualRemote.Trim() -ne $RepoUrl) { throw 'Existing checkout has an unexpec
 $actualSha = [string]((& git -C $checkout rev-parse HEAD | Select-Object -First 1))
 Check-LastExit 'Git HEAD check'
 if ($actualSha.Trim() -ne $ExpectedSha) {
-    throw "Source HEAD $actualSha differs from pinned candidate $ExpectedSha. STOP — do not test an unverified version."
+    throw "Source HEAD $actualSha differs from pinned candidate $ExpectedSha. STOP - do not test an unverified version."
 }
 $dirty = @(& git -C $checkout status --porcelain)
 Check-LastExit 'Checkout cleanliness check'
