@@ -31,7 +31,7 @@ jobs:
             $errorsFound | Format-List | Out-String | Write-Output
             throw 'PowerShell syntax invalid'
           }
-      - name: Pinned candidate self-check: no clone, USB, network or publish
+      - name: "Pinned candidate self-check: no clone, USB, network or publish"
         shell: pwsh
         run: |
           ./tools/pilot/Start-BirdspotAndroidPilot.ps1 -SelfCheck
