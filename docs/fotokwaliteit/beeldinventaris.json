@@ -4984,6 +4984,46 @@
    "source": "F2 · directe beeldinspectie 14-11-2026",
    "decision": "goedgekeurd",
    "note": "Vrij in de lucht tegen open hemel. Het zijaanzicht toont vleugel, kop en staart voldoende scherp voor vergelijking."
+  },
+  "/assets/species/plumage/sp066-wing.webp": {
+   "refs": [
+    "sp066 GUIDE_POSES[0]"
+   ],
+   "sha1": "2cb5d6d9df1b16f3b4993a416e0e1a27ed01a240",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "origineel en WebP 14-11-2026",
+   "note": "Fotograaf beschrijft Certhia brachydactyla brachydactyla. Zijaanzicht met vrije gevouwen vleugel. Leeftijd en geslacht open."
+  },
+  "/assets/species/plumage/sp067-wing.webp": {
+   "refs": [
+    "sp067 GUIDE_POSES[0]"
+   ],
+   "sha1": "387807d9d7ccac2ae6f5f3cae7658d87d6402b5f",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "origineel en WebP 14-11-2026",
+   "note": "Fotograaf benoemt Certhia familiaris. De gevouwen vleugel en witte onderzijde zijn zichtbaar. Ondersoort, leeftijd en geslacht open."
+  },
+  "/assets/species/plumage/sp066-juv-fed.webp": {
+   "refs": [
+    "sp066 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "6036e472f4c9c4267c59f9b9c027b9df4155a59f",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "origineel en WebP 14-11-2026",
+   "note": "De bron identificeert Certhia brachydactyla en benoemt de jonge vogel links en de ouder rechts. Beide vogels staan los van het nest op de stam."
+  },
+  "/assets/species/plumage/sp063-adult-f.webp": {
+   "refs": [
+    "sp063 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "7a2007fc03d7284823d315659da356e6753cc542",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "origineel en WebP 14-11-2026",
+   "note": "De fotograaf benoemt een vrouwtje Regulus regulus. Het kleed toont een ontwikkelde gele kruinstreep."
   }
  }
 }

@@ -201,6 +201,12 @@ def main():
                     expect(viewer).to_have_count(0)
                 for d in sec.locator('details.sd-cmp-more').all():
                     d.evaluate("el => el.open = true")
+                if sid in ("sp066", "sp067"):
+                    wing_pair = sec.locator('.sd-cmp-panel:visible').filter(
+                        has=page.locator('img[src$="sp066-wing.webp"]'))
+                    expect(wing_pair.locator('img')).to_have_count(2)
+                    expect(wing_pair.locator('img[src$="sp067-wing.webp"]')).to_be_visible()
+                    expect(wing_pair.locator('.sd-cmp-row b')).to_have_text(["Vleugelband", "Flank", "Geluid"])
                 loaded = sec.locator('img').evaluate_all("""async els => { const out = []; for (const e of els) { e.loading = 'eager';
                   try { await e.decode(); } catch (x) {} out.push([e.getAttribute('src'), e.naturalWidth > 0]); } return out; }""")
                 assert all(ok for _, ok in loaded), f"SAB-09 {sid}: vergelijkingsfoto laadt niet: {[s for s, ok in loaded if not ok]}"
@@ -227,7 +233,8 @@ def main():
                 page.locator('.sd-tabs').wait_for(timeout=8000)
 
             for name, sid in [("Holenduif", "sp003"), ("Sperwer", "sp006"), ("Buizerd", "sp005"), ("Zilvermeeuw", "sp094"),
-                              ("Havik", "sp007"), ("Wespendief", "sp248"), ("Taigaboomkruiper", "sp067"), ("Ruigpootbuizerd", "sp253"),
+                              ("Havik", "sp007"), ("Wespendief", "sp248"), ("Boomkruiper", "sp066"),
+                              ("Taigaboomkruiper", "sp067"), ("Ruigpootbuizerd", "sp253"),
                               ("Gele Kwikstaart", "sp069"), ("IJsvogel", "sp075"), ("Patrijs", "sp106"),
                               ("Boerenzwaluw", "sp114"), ("Huiszwaluw", "sp115"), ("Geelgors", "sp117"),
                               ("Rietgors", "sp118"), ("Knobbelzwaan", "sp126"), ("Kluut", "sp143"),

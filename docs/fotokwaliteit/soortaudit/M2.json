@@ -173,12 +173,14 @@
     },
     "sp067": {
       "assets": {
-        "/assets/species/sp067.webp": {"role": "Hoofdfoto", "content": "Boomkruiper tegen dennenstam; witte onderdelen en flanken, duidelijke witte wenkbrauw.", "sexAge": "niet vast te stellen", "quality": "goed; vleugelpatroon (kritisch kenmerk) slecht zichtbaar", "verdict": "voorwaardelijk"}
+        "/assets/species/sp067.webp": {"role": "Hoofdfoto", "content": "Boomkruiper tegen dennenstam; witte onderdelen en flanken, duidelijke witte wenkbrauw.", "sexAge": "niet vast te stellen", "quality": "goed; voor de vleugelband wordt het afzonderlijke zijaanzicht gebruikt", "verdict": "goedgekeurd"},
+        "/assets/species/plumage/sp067-wing.webp": {"role": "Overige herkenningsfoto's", "content": "Taigaboomkruiper met de kop omhoog op een bemoste stam, zichtbare lichte flank en gevouwen vleugel.", "sexAge": "Bron bevestigt de soort. Leeftijd, ondersoort en geslacht staan open.", "quality": "Scherp vergelijkbaar zijaanzicht met zichtbare vleugelband.", "verdict": "goedgekeurd"}
       },
-      "corrections": [],
-      "missing": ["In vlucht", "Juveniel", "Foto waarop het vleugelbandpatroon leesbaar is"],
+      "corrections": ["Originele hoofdfoto naast het appbestand gelegd. Scherp vleugelbeeld toegevoegd voor de vergelijking op een stam. Afmetingen naast MME gelegd."],
+      "missing": ["In vlucht", "Juveniel"],
       "sexPolicy": "Geslachten gelijk.",
-      "uncertain": ["Soortbepaling steunt op de bron (Commons, Certhia familiaris); witte flanken en wenkbrauw passen, maar het vleugelpatroon is niet te beoordelen (REVIEW REQUIRED voor onafhankelijke bevestiging)."]
+      "uncertain": ["De fotograaf benoemt Certhia familiaris. De hoofdfoto biedt beperkt zicht op de vleugelband. Beide foto's houden de ondersoort open."],
+      "date": "2026-11-14"
     },
     "sp095": {
       "assets": {

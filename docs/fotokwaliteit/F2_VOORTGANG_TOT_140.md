@@ -109,3 +109,15 @@ Basis [PR #209 op 0b65613](https://github.com/saddamsmit-source/Birdspot-Library
 Basis [PR #211 op 1028846](https://github.com/saddamsmit-source/Birdspot-Library/pull/211), 24/24 workflows. [Bronregistratie voor de acht bestaande foto’s en het nieuwe bestand](../evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_13.json), CAP-BIRD-012 en CAP-BIRD-015. Een gedeelde omgeving maakt het makkelijker om te zien welke fysieke kenmerken en houdingen de foto's daadwerkelijk tonen. Herstel via sluiten van de concept-PR of terugdraaien op de integratiebranch.
 
 **Teller:** 30 van 140 soorten opgepakt in F2. **Volgende batch:** Boomkruiper (sp066), Taigaboomkruiper (sp067) en Goudhaantje (sp063).
+
+## F2-14 · Boomkruiper, Taigaboomkruiper en Goudhaantje
+
+| Soort | Hercontrole | Open |
+|---|---|---|
+| sp066 Boomkruiper | Hoofdfoto en bron herbevestigd. Scherpe stamfoto voor de gevouwen vleugel toegevoegd. De fotograaf identificeert het jong dat links op de stam wordt gevoerd. Soortkaart aangevuld met Nederlandse broedstand, maten en het verschil in geluid. | Bronbevestigde vrije-vluchtfoto. |
+| sp067 Taigaboomkruiper | Hoofdfoto naast het origineel gelegd. Scherp zijaanzicht op een stam naast Boomkruiper geplaatst. De uitleg behandelt vleugelband, flank en geluid. | Vrije-vluchtfoto, juvenielenfoto en ondersoort van de getoonde vogels. |
+| sp063 Goudhaantje | Drie bestaande foto’s gematcht. Vrouwtje toegevoegd op basis van het bronbijschrift, met de opgegeven fotocredit naast het beeld. De vergelijking met Vuurgoudhaan heeft afzonderlijke regels voor wenkbrauw en oogstreek. | Afzonderlijke mannetjesfoto en scherp Europees vluchtbeeld. Japanse foto blijft voorlopig. |
+
+Basis [PR #213 op ff721fb](https://github.com/saddamsmit-source/Birdspot-Library/pull/213), 24/24 workflows. [Brondossier voor vijf bestaande en vier nieuwe foto’s](../evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_14.json), CAP-BIRD-012 en CAP-BIRD-015. Een scherp zijaanzicht met dezelfde houding maakt verschillen in de gevouwen vleugel beter leesbaar. Beide boomkruiperkaarten verwijzen naar de aanwezige geluidsfragmenten. Herstel via sluiten van de concept-PR of terugdraaien op de integratiebranch.
+
+**Teller:** 33 van 140 soorten opgepakt in F2. **Volgende batch:** Vuurgoudhaan (sp064), Vink (sp035) en Groenling (sp036).

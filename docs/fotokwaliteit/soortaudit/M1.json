@@ -401,20 +401,35 @@
           "role": "Hoofdfoto",
           "content": "Boomkruiper tegen stam; gestreepte bruine rug, gebogen snavel, steunstaart.",
           "sexAge": "niet vast te stellen",
-          "quality": "matig: vogel klein in beeld en wat zacht; vleugelband (kritisch kenmerk) niet scherp",
-          "verdict": "voorwaardelijk"
+          "quality": "Herkenbare houding, snavel en steunstaart. De scherpere tweede foto toont de vleugelband beter.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp066-wing.webp": {
+          "role": "Overige herkenningsfoto's",
+          "content": "Zittend op stam met gevouwen vleugel en lichte, puntige veerranden.",
+          "sexAge": "Leeftijd en geslacht open.",
+          "quality": "Scherpe vleugelband in passend zijaanzicht.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp066-juv-fed.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jong links neemt voedsel aan van ouder rechts.",
+          "sexAge": "De fotograaf vermeldt welke vogel juveniel is. Geslacht open.",
+          "quality": "Beide vogels en voerhandeling zichtbaar.",
+          "verdict": "goedgekeurd"
         }
       },
-      "corrections": [],
+      "corrections": [
+        "Originele hoofdfoto gecontroleerd. Twee bronfoto’s toegevoegd, één voor de vleugelband en één van een gevoerd jong. Nederlandse populatie en geluidsvergelijking onderbouwd."
+      ],
       "missing": [
-        "In vlucht",
-        "Juveniel",
-        "Hoofdfoto waarop het vleugelbandpatroon leesbaar is"
+        "Een bronbevestigde vrije-vluchtfoto."
       ],
       "sexPolicy": "Geslachten gelijk.",
       "uncertain": [
-        "Boomkruiper en Taigaboomkruiper zijn op deze foto niet zelfstandig te onderscheiden; soortbepaling steunt op de bron (Commons-titel 'Gartenbaumläufer')."
-      ]
+        "Het oorspronkelijke portret houdt de bronbepaling 'Gartenbaumläufer'. Gebruik het nieuwe vleugelbeeld en geluid voor het onderscheid."
+      ],
+      "date": "2026-11-14"
     },
     "sp094": {
       "assets": {
