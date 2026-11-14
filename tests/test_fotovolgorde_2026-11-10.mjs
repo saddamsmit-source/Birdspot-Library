@@ -94,7 +94,12 @@ for (const s of SPECIES) {
   }
 }
 assert.ok(checked >= 590 && flightSections >= 10);
-assert.equal(GUIDE_COMPARISONS.filter(e => e.birds.filter(b => b.plumage === 'juv').length >= 2).length, 21);
+const verifiedJuvenileComparisonEntries = GUIDE_COMPARISONS.filter(e => e.birds.filter(b => b.plumage === 'juv').length >= 2);
+assert.equal(verifiedJuvenileComparisonEntries.length, 22, 'FV-06: expected juvenile comparison count including F2-15');
+assert.ok(verifiedJuvenileComparisonEntries.some(entry => entry.label === 'Goudhaantje en Vuurgoudhaan · juvenielen' &&
+  entry.birds.some(b => b.id === 'sp063' && b.plumage === 'juv') &&
+  entry.birds.some(b => b.id === 'sp064' && b.plumage === 'juv')),
+  'FV-06: F2-15 juvenielenpaar ontbreekt in de actuele telling');
 const youngTits = GUIDE_COMPARISONS.find(entry => entry.label === 'Matkop en Glanskop · jonge vogels');
 assert.deepEqual(youngTits.birds.map(({id, plumage}) => [id, plumage]), [['sp031', 'juv'], ['sp032', 'juv']]);
 for (const id of ['sp031', 'sp032']) {

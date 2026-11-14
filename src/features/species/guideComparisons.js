@@ -656,6 +656,18 @@ export const GUIDE_COMPARISONS = [
     "tip": "Begin bij de wenkbrauw en oogstreek. Bij beide soorten kan de kruin geel of oranje tonen."
   },
   {
+    label: 'Goudhaantje en Vuurgoudhaan · juvenielen',
+    birds: [
+      {id: 'sp063', source: 'goudhaan', plumage: 'juv', marks: 'Jong Goudhaantje zonder de volwassen gekleurde kruinstreep en zonder lichte wenkbrauw.'},
+      {id: 'sp064', source: 'vuurgoudhaan', plumage: 'juv', marks: 'Jonge Vuurgoudhaan zonder de volwassen gekleurde kruinstreep, maar met een lichte wenkbrauw.'},
+    ],
+    rows: [
+      {label: 'Wenkbrauw', values: ['Lichte wenkbrauw ontbreekt.', 'Lichte wenkbrauw aanwezig.']},
+      {label: 'Kruin', values: ['Nog zonder opvallende gekleurde kruinstreep.', 'Nog zonder opvallende gekleurde kruinstreep.']},
+    ],
+    tip: 'Bij beide jonge soorten ontbreekt de volwassen kruinstreep aanvankelijk. Vergelijk vooral een scherp zijaanzicht van de wenkbrauw; bij onvoldoende zicht blijft de determinatie onzeker.',
+  },
+  {
     "label": "Boomklever en Boomkruiper · bouw en beweging",
     "birds": [
       {
