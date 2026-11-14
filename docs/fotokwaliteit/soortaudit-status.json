@@ -2222,8 +2222,8 @@
    "family": "Mezen",
    "audited": true,
    "batch": "M4",
-   "date": "2026-11-11",
-   "sha": "9ddb3d984262f8e95bae5a056431ef80bbde73bb",
+   "date": "2026-11-14",
+   "sha": null,
    "assets": [
     {
      "image": "/assets/species/sp030.webp",
@@ -2234,7 +2234,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Alexis Lours",
       "annotations": []
      },
      "flight": null
@@ -2248,7 +2248,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · caroline legg",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 2.0 · caroline legg",
       "annotations": []
      },
      "flight": null
@@ -2262,7 +2262,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Joe Dyer from Buckhurst Hill, England",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 2.0 · Joe Dyer",
       "annotations": []
      },
      "flight": {
@@ -2285,7 +2285,8 @@
     }
    ],
    "corrections": [
-    "Jeugdfoto voorzien van zichtbare aanwijzing bij wang en kruin. De bestaande neutrale foto-indeling blijft bruikbaar."
+    "Jeugdfoto voorzien van zichtbare aanwijzing bij wang en kruin. De bestaande neutrale foto-indeling blijft bruikbaar.",
+    "Drie originele foto’s gematcht. Jeugd- en vluchtlabel bevestigd. Lengte naast The Wildlife Trusts gelegd."
    ],
    "missing": [],
    "wishes": [],
@@ -2341,8 +2342,8 @@
    "family": "Mezen",
    "audited": true,
    "batch": "M7",
-   "date": "2026-11-12",
-   "sha": "e024af25a0f03e387b5adae8fa159947de55d79b",
+   "date": "2026-11-14",
+   "sha": null,
    "assets": [
     {
      "image": "/assets/species/sp031.webp",
@@ -2352,8 +2353,8 @@
      "quality": "Volledig zijaanzicht met een goed zichtbare gevouwen vleugel.",
      "verdict": "goedgekeurd",
      "rights": {
-      "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Francis Franklin",
+      "status": "PARTIALLY TESTED",
+      "note": "Commons vermeldt © Francis C. Franklin / CC-BY-SA-3.0. De zichtbare creditcorrectie staat in PR #210 op 4f46f98.",
       "annotations": []
      },
      "flight": null
@@ -2367,10 +2368,8 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.), CC BY-SA 4.0 · Wald1siedel",
-      "annotations": [
-       "De fotograaf benoemt een juveniele Matkop buiten de nestholte in Oostenrijk. De lichte snavelhoeken zijn zichtbaar."
-      ]
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Wald1siedel",
+      "annotations": []
      },
      "flight": null
     },
@@ -2383,7 +2382,7 @@
      "verdict": "uit-rol",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC0 · Estormiz",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC0 1.0 · Estormiz",
       "annotations": []
      },
      "flight": {
@@ -2406,7 +2405,8 @@
     }
    ],
    "corrections": [
-    "Bronbevestigde juvenielenfoto en kennisprofiel toegevoegd. Vergelijking met Glanskop gecontroleerd."
+    "Bronbevestigde juvenielenfoto en kennisprofiel toegevoegd. Vergelijking met Glanskop gecontroleerd.",
+    "Drie originele foto’s gematcht. Bron noemt het jong expliciet. De vergelijking toont het naast een jonge Glanskop. Uitgeschreven makercredit voorbereid in PR #210."
    ],
    "missing": [
     "Scherpe vrije-vluchtfoto met bevestigde hergebruikrechten."
@@ -2418,8 +2418,8 @@
    "status": {
     "technical": "VERIFIED",
     "visual": "VERIFIED",
-    "rights": "VERIFIED",
-    "knowledge": "VERIFIED",
+    "rights": "PARTIALLY TESTED",
+    "knowledge": "PARTIALLY TESTED",
     "browser": "NOT TESTED",
     "independent": "NOT TESTED"
    },
@@ -2431,7 +2431,9 @@
     "notDecisive": [
      "Roep, vleugelveld en snavelbasis"
     ],
-    "open": [],
+    "open": [
+     "Een scherpe, bronbevestigde foto in vrije vlucht ontbreekt."
+    ],
     "discrepancies": 0
    },
    "browser": null,
@@ -2445,8 +2447,8 @@
    "family": "Mezen",
    "audited": true,
    "batch": "M7",
-   "date": "2026-11-12",
-   "sha": "dfa3dfd5976579121089e69552da8919920d99e4",
+   "date": "2026-11-14",
+   "sha": null,
    "assets": [
     {
      "image": "/assets/species/sp032.webp",
@@ -2457,7 +2459,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · PeterRohrbeck",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · PeterRohrbeck",
       "annotations": []
      },
      "flight": null
@@ -2471,9 +2473,9 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 2026-11-12: zelfde opname (Uitsnede rond de volledige vogel en lichte correctie van de helderheid. Omgezet naar WebP zonder EXIF, GPS of XMP.), CC BY 4.0 · Dr. Nasser Halaweh",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast origineel vergeleken. Oorspronkelijke SHA-256 gelijk aan de M7-import.), CC BY 4.0 · Dr. Nasser Halaweh",
       "annotations": [
-       "Onderzoekswaarneming van Poecile palustris in Duitsland, geannoteerd als Juvenile. De foto toont een jonge vogel met doffe kap en zichtbare snavelhoeken."
+       "Life Stage: Juvenile (iNaturalist attribute 1, value 8)."
       ]
      },
      "flight": null
@@ -2486,15 +2488,16 @@
      "quality": "Een tweede hoek voor vergelijking van wang en bef.",
      "verdict": "goedgekeurd",
      "rights": {
-      "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Luc Viatour",
+      "status": "PARTIALLY TESTED",
+      "note": "Luc Viatour vraagt om zijn naam en website naast de afbeelding. De zichtbare creditcorrectie staat in PR #210 op 4f46f98.",
       "annotations": []
      },
      "flight": null
     }
    ],
    "corrections": [
-    "Juvenielenfoto en kennisprofiel toegevoegd. Vergelijking met Matkop aangescherpt op roep, snavelbasis en vleugel."
+    "Juvenielenfoto en kennisprofiel toegevoegd. Vergelijking met Matkop aangescherpt op roep, snavelbasis en vleugel.",
+    "Drie originele foto’s gematcht. Waarneming en juvenielenannotatie herbevestigd. Uitgeschreven makercredit bij vooraanzicht voorbereid in PR #210."
    ],
    "missing": [
     "Scherpe foto van één Glanskop in vrije vlucht met bevestigde hergebruikrechten."
@@ -2506,8 +2509,8 @@
    "status": {
     "technical": "VERIFIED",
     "visual": "VERIFIED",
-    "rights": "VERIFIED",
-    "knowledge": "VERIFIED",
+    "rights": "PARTIALLY TESTED",
+    "knowledge": "PARTIALLY TESTED",
     "browser": "NOT TESTED",
     "independent": "NOT TESTED"
    },
@@ -2519,7 +2522,9 @@
     "notDecisive": [
      "Snavelbasis en roep"
     ],
-    "open": [],
+    "open": [
+     "Een scherpe, bronbevestigde foto in vrije vlucht ontbreekt."
+    ],
     "discrepancies": 0
    },
    "browser": null,
@@ -12692,6 +12697,12 @@
    "scope": "F2 · sp025 sp026 sp029",
    "basis": "7d0e0f2e654f25ff76cdd3629c8bb201e1825515",
    "evidence": "docs/evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_11.json"
+  },
+  {
+   "date": "2026-11-14",
+   "scope": "F2 · sp030 sp031 sp032",
+   "basis": "0b6561363b24a840fcfadcd2d877d88b83a0721c",
+   "evidence": "docs/evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_12.json"
   }
  ]
 }

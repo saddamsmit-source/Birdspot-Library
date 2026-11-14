@@ -4227,6 +4227,28 @@ const DATA = {
    "checked": "2026-11-14",
    "certainty": "hoog",
    "publisher": "RSPB"
+  },
+  "WT_PIMPEL": {
+   "register": "NL07",
+   "label": "The Wildlife Trusts — Pimpelmees",
+   "url": "https://www.wildlifetrusts.org/wildlife-explorer/birds/tits-crests-and-warblers/blue-tit",
+   "edition": "online bron, geraadpleegd 14-11-2026",
+   "scope": "Nederland",
+   "confirms": "typische lengte 12 cm, spanwijdte 18 cm en herkenning",
+   "checked": "2026-11-14",
+   "certainty": "hoog",
+   "publisher": "The Wildlife Trusts"
+  },
+  "BB_MATGLANS": {
+   "register": "NL07",
+   "label": "Broughton (2009) — Matkop en Glanskop in Britain",
+   "url": "https://britishbirds.co.uk/sites/default/files/V102_N11_P604-616_A001.pdf",
+   "edition": "online bron, geraadpleegd 14-11-2026",
+   "scope": "Nederland",
+   "confirms": "rol van roep, snavelvlek, beperkingen van kapglans en vleugelveld; jeugdkenmerken",
+   "checked": "2026-11-14",
+   "certainty": "hoog",
+   "publisher": "British Birds"
   }
  },
  "profiles": {
@@ -11507,9 +11529,10 @@ const DATA = {
    ],
    "basis": {
     "size": {
-     "text": "Vogelbescherming noemt 10,5–12 cm lichaamslengte.",
+     "text": "Vogelbescherming noemt 10,5–12 cm lengte. The Wildlife Trusts geeft 12 cm lengte en 18 cm spanwijdte als typische veldwaarden.",
      "sources": [
-      "VB_PIMPEL"
+      "VB_PIMPEL",
+      "WT_PIMPEL"
      ]
     }
    },
@@ -18035,13 +18058,14 @@ const DATA = {
       "sp031"
      ],
      "reliability": "ondersteunend",
-     "conditions": "Bekijk de snavel bij egaal licht en luister naar een reeks roepen.",
-     "exceptions": "Een lichtreflectie kan op een lichte snavelvlek lijken. Bij pas uitgevlogen vogels kan het kenmerk minder goed bruikbaar zijn.",
+     "conditions": "Luister naar een duidelijke roepreeks. Bekijk de bovensnavelbasis van opzij bij egaal licht.",
+     "exceptions": "Kapglans verandert met het licht. Beide soorten kunnen als juveniel een doffe kap hebben. Vleugelveld en snavelbasis vragen goed zicht.",
      "supporting": "Een egale vleugel ondersteunt Glanskop; kapglans op zichzelf is weinig bruikbaar.",
      "sources": [
       "VB_GLANSKOP",
       "BZH_GLANSKOP",
-      "VB_MATKOP"
+      "VB_MATKOP",
+      "BB_MATGLANS"
      ]
     }
    ],
@@ -18146,7 +18170,9 @@ const DATA = {
     }
    ],
    "discrepancies": [],
-   "open": []
+   "open": [
+    "Een scherpe, bronbevestigde foto in vrije vlucht ontbreekt."
+   ]
   },
   "sp031": {
    "summary": {
@@ -18199,13 +18225,14 @@ const DATA = {
       "sp032"
      ],
      "reliability": "ondersteunend",
-     "conditions": "Bekijk de snavelbasis bij egaal licht en wacht op een duidelijke roepreeks.",
-     "exceptions": "Slijtage en licht veranderen de vleugeltekening. Jonge vogels zijn op zicht extra lastig.",
+     "conditions": "Luister naar een duidelijke roepreeks. Bekijk de bovensnavelbasis van opzij bij egaal licht.",
+     "exceptions": "Kapglans verandert met het licht. Beide soorten kunnen als juveniel een doffe kap hebben. Vleugelveld en snavelbasis vragen goed zicht.",
      "supporting": "Matkop zit vaak in vochtiger jong bos.",
      "sources": [
       "VB_MATKOP",
       "WT_MATKOP",
-      "VB_GLANSKOP"
+      "VB_GLANSKOP",
+      "BB_MATGLANS"
      ]
     }
    ],
@@ -18311,7 +18338,9 @@ const DATA = {
     }
    ],
    "discrepancies": [],
-   "open": []
+   "open": [
+    "Een scherpe, bronbevestigde foto in vrije vlucht ontbreekt."
+   ]
   },
   "sp176": {
    "summary": {

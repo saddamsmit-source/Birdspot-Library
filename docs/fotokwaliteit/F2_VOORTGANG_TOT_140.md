@@ -85,3 +85,15 @@ Basis [PR #205 op a0219b8](https://github.com/saddamsmit-source/Birdspot-Library
 Basis [PR #207 op 7d0e0f2](https://github.com/saddamsmit-source/Birdspot-Library/pull/207). [Brondossier met negen originele foto’s](../evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_11.json), CAP-BIRD-012 en CAP-BIRD-015. Het bestaande bron- en beeldbewijs behoudt bij iedere foto een afzonderlijke rol. Herstel via sluiten van de concept-PR of terugdraaien op de integratiebranch.
 
 **Teller:** 24 van 140 soorten opgepakt in F2. **Volgende batch:** Pimpelmees (sp030), Matkop (sp031) en Glanskop (sp032).
+
+## F2-12 · Pimpelmees, Matkop en Glanskop
+
+| Soort | Hercontrole | Open |
+|---|---|---|
+| sp030 Pimpelmees | Drie appfoto’s komen overeen met de bronbestanden. De fotograaf bevestigt het juveniele kleed en de afzonderlijke vluchtfoto. Lengte en spanwijdte getoetst aan The Wildlife Trusts. De vergelijking met Koolmees benoemt de overlap in wangkleur van jonge vogels. | De fysieke toestelproef is uitgesteld op verzoek van de eigenaar. |
+| sp031 Matkop | Drie appfoto’s komen overeen met de bronbestanden. De fotograaf bevestigt het juveniele kleed. De foto vlak boven de sneeuw blijft bij de overige herkenningsfoto’s. Het nieuwe juvenieltabblad vergelijkt twee bronbevestigde jonge vogels. | Scherpe foto in vrije vlucht. De aangepaste naamsvermelding staat in [PR #210](https://github.com/saddamsmit-source/Birdspot-Library/pull/210). |
+| sp032 Glanskop | Drie appfoto’s komen overeen met de bronbestanden. Het iNaturalist-fotonummer, de soort en de juvenielenannotatie komen overeen. De vergelijking geeft roep en snavelbasis voorrang, met het vleugelveld als extra aanwijzing. | Scherpe foto in vrije vlucht. De zichtbare credit bij het vooraanzicht staat in [PR #210](https://github.com/saddamsmit-source/Birdspot-Library/pull/210). |
+
+Basis [PR #209 op 0b65613](https://github.com/saddamsmit-source/Birdspot-Library/pull/209), 24/24 workflows. [Brondossier met negen originele foto’s](../evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_12.json), CAP-BIRD-012 en CAP-BIRD-015. Commons-afbeeldingen die eerst alleen als miniatuur konden worden geopend, zijn via de officiële bestandsverwijzing op oorspronkelijke resolutie vergeleken. Herstel via sluiten van de concept-PR of terugdraaien op de integratiebranch.
+
+**Teller:** 27 van 140 soorten opgepakt in F2. **Volgende batch:** Kuifmees (sp033), Staartmees (sp034) en Boomklever (sp065).

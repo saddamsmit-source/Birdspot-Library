@@ -181,6 +181,14 @@ def main():
                         female_tab.click()
                         expect(female_tab).to_have_attribute("aria-selected", "true")
                         expect(sec.locator('.sd-cmp-panel:visible img[src*="sp036-adult_f.webp"]')).to_be_visible()
+                if sid in ("sp031", "sp032"):
+                    juvenile_tab = sec.get_by_role("button", name="Juveniel", exact=True)
+                    juvenile_tab.click()
+                    expect(juvenile_tab).to_have_attribute("aria-selected", "true")
+                    juveniles = sec.locator('.sd-cmp-panel:visible').filter(
+                        has=page.locator('img[src$="sp031-juv.webp"]'))
+                    expect(juveniles.locator('img')).to_have_count(2)
+                    expect(juveniles.locator('img[src$="sp032-juv.webp"]')).to_be_visible()
                 for d in sec.locator('details.sd-cmp-more').all():
                     d.evaluate("el => el.open = true")
                 loaded = sec.locator('img').evaluate_all("""async els => { const out = []; for (const e of els) { e.loading = 'eager';
