@@ -66,7 +66,7 @@ console.log('SA-03 OK — opvliegende Holenduif en fladderende Tjiftjaf terug in
 // SA-04
 {
   const row = clone(rowOf('sp002'));
-  const img = '/assets/species/plumage/sp002-flight.webp';
+  const img = '/assets/species/plumage/sp002-flight-wingband.webp';
   const e = checkSpecies(row, batches.sp002, { ...flight, [img]: { ...flight[img], decision: 'uit-rol' } });
   assert.ok(e.some(x => x.includes('zonder goedgekeurde vluchtbeoordeling')), 'SA-04 niet geweigerd');
   console.log('SA-04 OK — "In vlucht" zonder goedgekeurde vluchtbeoordeling wordt geweigerd');

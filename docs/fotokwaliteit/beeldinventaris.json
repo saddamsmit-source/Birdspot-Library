@@ -126,16 +126,16 @@
    "source": "contactsheet 10-11-2026",
    "note": ""
   },
-  "/assets/species/plumage/sp002-flight.webp": {
+  "/assets/species/plumage/sp002-flight-wingband.webp": {
    "refs": [
     "sp002 GUIDE_POSES[0]"
    ],
-   "sha1": "165934d868ed883470b2433e11a8edc1cd96180d",
+   "sha1": "ce463789abd25e6b12fe60e8b9919cd3ac40f642",
    "class": "vlucht",
    "airborne": true,
    "source": "vluchtcontrole",
    "decision": "goedgekeurd",
-   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+   "note": "Vrij in de lucht. Witte band over de dichtstbijzijnde bovenvleugel, witte halsvlek en het volledige silhouet zichtbaar."
   },
   "/assets/species/plumage/sp002-juv.webp": {
    "refs": [

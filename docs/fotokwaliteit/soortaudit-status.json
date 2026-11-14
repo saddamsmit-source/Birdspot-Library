@@ -26,19 +26,19 @@
      "flight": null
     },
     {
-     "image": "/assets/species/plumage/sp002-flight.webp",
+     "image": "/assets/species/plumage/sp002-flight-wingband.webp",
      "role": "In vlucht",
-     "content": "Vrij in de lucht, frontaal van onderen; vleugels gespreid, witte vleugelrand zichtbaar.",
-     "sexAge": "niet vastgesteld (neutraal label)",
-     "quality": "goed",
+     "content": "Vrij in de lucht. Witte band over de dichtstbijzijnde bovenvleugel, witte halsvlek en het volledige silhouet zichtbaar.",
+     "sexAge": "Geslacht niet vastgesteld; de witte halsvlek past bij volwassen kleed.",
+     "quality": "Goed binnen herkenningsdoel. Volledige vogel, 901 × 731 px.",
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Stefan Berndtsson",
+      "note": "bronaudit 14-11-2026: zelfde opname (Rechtstreeks omgezet uit het oorspronkelijke bronbestand van 901 × 731 px, zonder uitsnede; één bovenvleugel duidelijk zichtbaar, schuin zijaanzicht.), CC BY-SA 2.0 · Pierre-Marie Epiney",
       "annotations": []
      },
      "flight": {
-      "n": 6,
+      "n": 149,
       "id": "sp002",
       "nameNL": "Houtduif",
       "registry": "GUIDE_POSES[0]",
@@ -49,10 +49,11 @@
       "target": null,
       "newLabel": null,
       "newNote": null,
-      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "reason": "Vrij in de lucht. Witte band over de dichtstbijzijnde bovenvleugel, witte halsvlek en het volledige silhouet zichtbaar.",
       "airborne": true,
       "rights": "VERIFIED",
-      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 2.0"
+      "rightsNote": "Rechtstreeks uit het originele bestand (SHA-1 vastgelegd); Wikimedia Commons en de gecontroleerde Flickr-bron vermelden CC BY-SA 2.0.",
+      "date": "2026-11-14"
      }
     },
     {
@@ -75,11 +76,10 @@
    "corrections": [
     "FQA-04: kritisch kenmerk 'Halsvlek en iris' gesplitst; 'Witte halsvlek' (alleen volwassen) blijft doorslaggevend, iris alleen ondersteunend.",
     "F2: afzonderlijke brongeverifieerde juvenielenfoto toegevoegd.",
-    "F2-hercontrole: bij Volwassen is zichtbaar dat man en vrouw op elkaar lijken."
+    "F2-hercontrole: bij Volwassen is zichtbaar dat man en vrouw op elkaar lijken.",
+    "F2: nieuw vluchtbeeld met duidelijke band op één bovenvleugel; vorige frontale foto gearchiveerd."
    ],
-   "missing": [
-    "Vluchtfoto van boven met volledige witte vleugelband (wenselijk)"
-   ],
+   "missing": [],
    "wishes": [],
    "uncertain": [],
    "sexPolicy": "Mannetje en vrouwtje lijken sterk op elkaar. Het geslacht volgt bij deze opnamen niet op kleed. Bron: Blasco-Zumeta en Heinze.",
@@ -92,7 +92,7 @@
     "browser": "NOT TESTED",
     "independent": "NOT TESTED"
    },
-   "photoComplete": false,
+   "photoComplete": true,
    "knowledge": {
     "profile": true,
     "critical": 2,
@@ -104,7 +104,7 @@
    "browser": null,
    "errors": [],
    "verdict": "PARTIALLY TESTED",
-   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp003",
@@ -294,7 +294,8 @@
     "sp004.webp: voorwaardelijk → goedgekeurd na kwaliteitsnorm §3.3 (klein in beeld is geen afkeurgrond)",
     "F2: afzonderlijke brongeverifieerde juvenielenfoto toegevoegd.",
     "F2-hercontrole: bij Volwassen is zichtbaar dat man en vrouw op elkaar lijken.",
-    "F2-hercontrole: meer beeldruimte voor de hele vogel door een uitsnede uit het bronbestand."
+    "F2-hercontrole: meer beeldruimte voor de hele vogel door een uitsnede uit het bronbestand.",
+    "F2: spanwijdte ca. 45–55 cm en gewicht ca. 150–220 g, afgeronde veldgidsbanden uit twee verschillende uitgevers."
    ],
    "missing": [],
    "wishes": [],
@@ -305,7 +306,7 @@
     "technical": "VERIFIED",
     "visual": "VERIFIED",
     "rights": "VERIFIED",
-    "knowledge": "PARTIALLY TESTED",
+    "knowledge": "VERIFIED",
     "browser": "NOT TESTED",
     "independent": "NOT TESTED"
    },
@@ -318,9 +319,7 @@
      "Staart in vlucht",
      "Roep en vleugeltoppen"
     ],
-    "open": [
-     "Spanwijdte en gewicht niet in de geraadpleegde Nederlandse bron."
-    ],
+    "open": [],
     "discrepancies": 0
    },
    "browser": null,

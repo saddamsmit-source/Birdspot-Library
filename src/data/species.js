@@ -33,7 +33,7 @@ export const SPECIES = [
     statusExtra:null, months:'jan-dec', frequency:'vrij-algemeen', breeding:'ja', redList:null },
   { id:'sp004', nameNL:'Turkse Tortel',        nameEN:'Eurasian Collared Dove',    nameSci:'Streptopelia decaocto',      family:'Duiven',          category:'standvogel', icon:'🕊', regions:['stedelijk','agrarisch'],
     fieldmarks:'Zanderig beige, zwart halsbandtje, lange staart met witte rand.',
-    size:{ length:'31–33 cm', wingspan:'47–55 cm', weight:'125–240 g' },
+    size:{ length:'31–33 cm', wingspan:'ca. 45–55 cm', weight:'ca. 150–220 g' },
     plumage:{ adult_m:'Zanderig beige; smalle zwarte halsband met witte rand; witte staartpunt zichtbaar bij landen', adult_f:null, juv:'Zonder halsband; matter beige', jaarling:null, breeding:null, winter:null, eclipse:null },
     similarSexes:true,
     distribution:'Stedelijke en agrarische gebieden heel Nederland; sterk uitgebreid na 1950', status:'Standvogel · jaarrond',

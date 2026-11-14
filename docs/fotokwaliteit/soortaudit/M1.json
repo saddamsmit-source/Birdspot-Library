@@ -32,6 +32,11 @@
         "date": "2026-11-14",
         "round": "F2 · duiven herkennen en Holenduif-vlucht",
         "changes": "Nieuwe brongeverifieerde vrije-vluchtfoto bij Holenduif. Open vergelijkingsvragen voor Houtduif, Holenduif en Turkse Tortel verwerkt in hun kennisprofielen."
+      },
+      {
+        "date": "2026-11-14",
+        "round": "F2 · bovenvleugel Houtduif en maten Turkse Tortel",
+        "changes": "Vluchtfoto Houtduif vervangen door schuin zijaanzicht met een duidelijke witte band op de bovenvleugel. Spanwijdte en gewicht Turkse Tortel geverifieerd volgens de biometrienorm."
       }
     ]
   },
@@ -45,11 +50,11 @@
           "quality": "goed: scherp, vogel groot in beeld",
           "verdict": "goedgekeurd"
         },
-        "/assets/species/plumage/sp002-flight.webp": {
+        "/assets/species/plumage/sp002-flight-wingband.webp": {
           "role": "In vlucht",
-          "content": "Vrij in de lucht, frontaal van onderen; vleugels gespreid, witte vleugelrand zichtbaar.",
-          "sexAge": "niet vastgesteld (neutraal label)",
-          "quality": "goed",
+          "content": "Vrij in de lucht. Witte band over de dichtstbijzijnde bovenvleugel, witte halsvlek en het volledige silhouet zichtbaar.",
+          "sexAge": "Geslacht niet vastgesteld; de witte halsvlek past bij volwassen kleed.",
+          "quality": "Goed binnen herkenningsdoel. Volledige vogel, 901 × 731 px.",
           "verdict": "goedgekeurd"
         },
         "/assets/species/plumage/sp002-juv.webp": {
@@ -63,11 +68,10 @@
       "corrections": [
         "FQA-04: kritisch kenmerk 'Halsvlek en iris' gesplitst; 'Witte halsvlek' (alleen volwassen) blijft doorslaggevend, iris alleen ondersteunend.",
         "F2: afzonderlijke brongeverifieerde juvenielenfoto toegevoegd.",
-        "F2-hercontrole: bij Volwassen is zichtbaar dat man en vrouw op elkaar lijken."
+        "F2-hercontrole: bij Volwassen is zichtbaar dat man en vrouw op elkaar lijken.",
+        "F2: nieuw vluchtbeeld met duidelijke band op één bovenvleugel; vorige frontale foto gearchiveerd."
       ],
-      "missing": [
-        "Vluchtfoto van boven met volledige witte vleugelband (wenselijk)"
-      ],
+      "missing": [],
       "sexPolicy": "Mannetje en vrouwtje lijken sterk op elkaar. Het geslacht volgt bij deze opnamen niet op kleed. Bron: Blasco-Zumeta en Heinze.",
       "uncertain": [],
       "date": "2026-11-14"
@@ -142,7 +146,8 @@
         "sp004.webp: voorwaardelijk → goedgekeurd na kwaliteitsnorm §3.3 (klein in beeld is geen afkeurgrond)",
         "F2: afzonderlijke brongeverifieerde juvenielenfoto toegevoegd.",
         "F2-hercontrole: bij Volwassen is zichtbaar dat man en vrouw op elkaar lijken.",
-        "F2-hercontrole: meer beeldruimte voor de hele vogel door een uitsnede uit het bronbestand."
+        "F2-hercontrole: meer beeldruimte voor de hele vogel door een uitsnede uit het bronbestand.",
+        "F2: spanwijdte ca. 45–55 cm en gewicht ca. 150–220 g, afgeronde veldgidsbanden uit twee verschillende uitgevers."
       ],
       "missing": [],
       "sexPolicy": "Mannetje en vrouwtje lijken sterk op elkaar. Het geslacht volgt bij deze opnamen niet op kleed. Bron: Blasco-Zumeta en Heinze.",

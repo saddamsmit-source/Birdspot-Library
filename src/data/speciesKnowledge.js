@@ -3842,6 +3842,28 @@ const DATA = {
    "checked": "2026-11-14",
    "certainty": "hoog",
    "publisher": "Cornell Lab of Ornithology"
+  },
+  "ON_CD": {
+   "register": "nieuw (biometrie Turkse Tortel)",
+   "label": "Oiseaux.net — Turkse Tortel",
+   "url": "https://www.oiseaux.net/en/oiseaux/eurasian.collared.dove.html",
+   "edition": "online soortfiche, rubriek Morphology, geraadpleegd 14-11-2026",
+   "scope": "Europese soortbeschrijving; meetpopulatie niet gespecificeerd",
+   "confirms": "Spanwijdte 47–55 cm, gewicht 150–225 g",
+   "checked": "2026-11-14",
+   "certainty": "voldoende voor veldgidsband",
+   "publisher": "Oiseaux.net"
+  },
+  "ELO_CD": {
+   "register": "nieuw (biometrie Turkse Tortel)",
+   "label": "European Landowners’ Organization — Small Wildlife of Fields",
+   "url": "https://www.friendsofthecountryside.org/wp-content/uploads/2021/03/Small-wildlife-EN-LR-1.pdf#page=131",
+   "edition": "gedrukte pp. 130–131, noot 313 verwijst voor de maten naar Hume p. 235; geraadpleegd 14-11-2026",
+   "scope": "Europese soortbeschrijving; meetpopulatie niet gespecificeerd",
+   "confirms": "Spanwijdte 47–55 cm, gewicht 150–220 g",
+   "checked": "2026-11-14",
+   "certainty": "voldoende voor veldgidsband",
+   "publisher": "European Landowners’ Organization"
   }
  },
  "profiles": {
@@ -6361,11 +6383,51 @@ const DATA = {
    ],
    "basis": {
     "size": {
-     "text": "Lengte 31–33 cm.",
+     "text": "Lengte 31–33 cm. Spanwijdte ca. 45–55 cm en gewicht ca. 150–220 g zijn afgeronde veldgidsbanden.",
      "sources": [
-      "VB_TT"
+      "VB_TT",
+      "ON_CD",
+      "ELO_CD"
      ]
-    }
+    },
+    "biometrics": [
+     {
+      "field": "wingspan",
+      "unit": "cm",
+      "display": "ca. 45–55 cm",
+      "values": [
+       {
+        "source": "ON_CD",
+        "min": 47,
+        "max": 55
+       },
+       {
+        "source": "ELO_CD",
+        "min": 47,
+        "max": 55
+       }
+      ],
+      "note": "Twee veldgidsbanden van verschillende uitgevers. De metingen en populaties achter de opgaven zijn niet gespecificeerd."
+     },
+     {
+      "field": "weight",
+      "unit": "g",
+      "display": "ca. 150–220 g",
+      "values": [
+       {
+        "source": "ON_CD",
+        "min": 150,
+        "max": 225
+       },
+       {
+        "source": "ELO_CD",
+        "min": 150,
+        "max": 220
+       }
+      ],
+      "note": "Twee veldgidsbanden van verschillende uitgevers. De metingen en populaties achter de opgaven zijn niet gespecificeerd."
+     }
+    ]
    },
    "habitat": [
     {
@@ -6423,9 +6485,7 @@ const DATA = {
     }
    ],
    "discrepancies": [],
-   "open": [
-    "Spanwijdte en gewicht niet in de geraadpleegde Nederlandse bron."
-   ]
+   "open": []
   },
   "sp007": {
    "summary": {

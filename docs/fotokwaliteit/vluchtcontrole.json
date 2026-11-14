@@ -155,14 +155,35 @@
    "sexLabel": null,
    "class": "vlucht",
    "quality": "goed",
-   "decision": "goedgekeurd",
+   "decision": "archief",
    "target": null,
    "newLabel": null,
    "newNote": null,
-   "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+   "reason": "Vervangen door een zijaanzicht waarop de witte band op de bovenvleugel duidelijker is. De frontale vluchtfoto blijft in het bronarchief.",
    "airborne": true,
    "rights": "VERIFIED",
-   "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 2.0"
+   "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 2.0",
+   "history": [
+    {
+     "n": 6,
+     "id": "sp002",
+     "nameNL": "Houtduif",
+     "registry": "GUIDE_POSES[0]",
+     "sexLabel": null,
+     "class": "vlucht",
+     "quality": "goed",
+     "decision": "goedgekeurd",
+     "target": null,
+     "newLabel": null,
+     "newNote": null,
+     "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+     "airborne": true,
+     "rights": "VERIFIED",
+     "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 2.0",
+     "date": "2026-11-10",
+     "round": "vluchtcontrole ronde 1"
+    }
+   ]
   },
   "/assets/species/plumage/sp004-flight.webp": {
    "n": 7,
@@ -2713,6 +2734,24 @@
    "airborne": true,
    "rights": "VERIFIED",
    "rightsNote": "Individuele iNaturalist-foto 757637556, CC BY 4.0 · andygpos",
+   "date": "2026-11-14"
+  },
+  "/assets/species/plumage/sp002-flight-wingband.webp": {
+   "n": 149,
+   "id": "sp002",
+   "nameNL": "Houtduif",
+   "registry": "GUIDE_POSES[0]",
+   "sexLabel": null,
+   "class": "vlucht",
+   "quality": "goed",
+   "decision": "goedgekeurd",
+   "target": null,
+   "newLabel": null,
+   "newNote": null,
+   "reason": "Vrij in de lucht. Witte band over de dichtstbijzijnde bovenvleugel, witte halsvlek en het volledige silhouet zichtbaar.",
+   "airborne": true,
+   "rights": "VERIFIED",
+   "rightsNote": "Rechtstreeks uit het originele bestand (SHA-1 vastgelegd); Wikimedia Commons en de gecontroleerde Flickr-bron vermelden CC BY-SA 2.0.",
    "date": "2026-11-14"
   }
  }
