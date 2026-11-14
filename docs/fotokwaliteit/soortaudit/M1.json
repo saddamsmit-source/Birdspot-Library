@@ -245,17 +245,20 @@
         "/assets/species/plumage/sp006-flight.webp": {
           "role": "In vlucht",
           "content": "Vrij in de lucht van onderen; korte brede vleugels, gebandeerde staart met rechte hoeken, roestige onderzijde.",
-          "sexAge": "niet vastgesteld op de kaart (neutraal label)",
+          "sexAge": "mannetje bevestigd in de beschrijving van de fotograaf",
           "quality": "goed",
           "verdict": "goedgekeurd"
         }
       },
-      "corrections": [],
+      "corrections": [
+        "F2: Alle vijf actieve bronbeelden en rechten herbevestigd. Bronvermelding van mannetje in vrije vlucht, leeftijdspatroon onderzijde en maten gecontroleerd."
+      ],
       "missing": [
-        "Vrouwtje in vlucht (wenselijk)"
+        "Vrouwtje in vrije vlucht (wenselijk). Voor het vrouwtje in rust blijft de foto op een zitplaats beschikbaar."
       ],
       "sexPolicy": "Geslachten verschillen duidelijk (VB_SPERWER_MV); mannetje en vrouwtje getoond met bronbevestiging.",
-      "uncertain": []
+      "uncertain": [],
+      "date": "2026-11-14"
     },
     "sp008": {
       "assets": {
@@ -290,7 +293,7 @@
         "/assets/species/plumage/sp008-male-flight.webp": {
           "role": "In vlucht (Mannetje)",
           "content": "Vrij in de lucht van onderen; spitse vleugels, grijze ongebandeerde staart met brede zwarte eindband.",
-          "sexAge": "mannetje: visueel (grijze ongebandeerde staart met zwarte eindband); bron noemt geen geslacht",
+          "sexAge": "mannetje volgens de fotograaf, met grijze staart zonder regelmatige dwarsbanden en brede donkere eindband",
           "quality": "goed",
           "verdict": "goedgekeurd"
         },
@@ -302,12 +305,17 @@
           "verdict": "goedgekeurd"
         }
       },
-      "corrections": [],
-      "missing": [],
+      "corrections": [
+        "F2: Alle zes actieve bronbeelden en rechten herbevestigd. Fotograaf beschrijft het mannetje in vlucht expliciet. Op de foto zijn de grijze staart zonder regelmatige dwarsbanden en de brede donkere eindband zichtbaar. Leeftijdstekst, maten en herkenning naast Boomvalk en Smelleken aangescherpt."
+      ],
+      "missing": [
+        "Vergelijkingsfoto’s voor Boomvalk en Smelleken ontbreken in de gids."
+      ],
       "sexPolicy": "Geslachten verschillen (VB_TOREN, EB_KES); mannetje en vrouwtje getoond.",
       "uncertain": [
-        "Geslacht van de mannetje-vluchtfoto steunt op beeldkenmerken, niet op de bron (REVIEW REQUIRED voor onafhankelijke bevestiging)."
-      ]
+        "Algemene bidfoto bevat geen bevestigd geslacht en heeft een neutraal label."
+      ],
+      "date": "2026-11-14"
     },
     "sp021": {
       "assets": {

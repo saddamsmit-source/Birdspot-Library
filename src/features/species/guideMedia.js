@@ -6514,7 +6514,7 @@ export const GUIDE_POSES = Object.freeze({
   ],
   "sp006": [
     {
-      "label": "In vlucht",
+      "label": "Mannetje in vlucht",
       "flight": true,
       "note": "Let op de relatief korte vleugels, de kleine kop en de lange staart.",
       "file": "Eurasian sparrowhawk 2023 12 31 01.jpg",
@@ -6525,15 +6525,16 @@ export const GUIDE_POSES = Object.freeze({
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
       "source": "https://commons.wikimedia.org/wiki/File:Eurasian_sparrowhawk_2023_12_31_01.jpg",
       "showSourceLink": false,
-      "alt": "Volwassen man Sperwer in vlucht met korte brede vleugels, gebandeerde staart en roestkleurige onderzijde.",
+      "alt": "Sperwermannetje in vlucht met korte brede vleugels, gebandeerde staart en roestkleurige onderzijde.",
       "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
       "reviewed": "2026-11-07",
       "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/sperwer",
-      "visualCheck": "Volwassen man Sperwer in vlucht met korte brede vleugels, gebandeerde staart en roestkleurige onderzijde.",
+      "visualCheck": "Mannetje volgens de fotograaf. Vrij in de lucht; let op roesttint, korte brede vleugels en de lange, gebandeerde staart.",
       "width": 1400,
       "height": 933,
       "image": "/assets/species/plumage/sp006-flight.webp",
-      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "sex": "male"
     },
     {
       "label": "Mannetje",
