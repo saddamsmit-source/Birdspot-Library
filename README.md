@@ -173,7 +173,7 @@ als naslagwerk erbij.
 ## Reviewmethode
 
 - Automatische controles: Playwright-gebaseerde Python- en Node-testsuites in
-  `tests/` (24 bestanden), uitgevoerd via `python tests/<bestand>.py`
+  `tests/` (controleer de actuele inventaris in `tests/`), uitgevoerd via `python tests/<bestand>.py`
   respectievelijk `node tests/<bestand>.mjs`; CI draait relevante suites per PR
   op basis van gewijzigde paden (`.github/workflows/*.yml`).
 - Visuele controle: screenshots op 390 px (`tests/screenshots/`), bijgewerkt
@@ -199,6 +199,39 @@ node tests/test_guide_poses.mjs            # voorbeeld; zie tests/ voor alle sui
 # Soortendata bijwerken vanuit de bron
 python3 tools/species/apply_status.py
 ```
+
+## Actuele S1-releasekandidaat · 14 november 2026
+
+- App- en gidsbasis is concept-PR #203 op `95c1998` met het F2-checkpoint 15/140.
+- Serviceworkerversie 1.27.10 staat op een aparte kandidaatbranch. Het [releasedossier](docs/release/RELEASE_1.27.10_CANDIDATE.md) bevat de upgradeproeven, open releasevoorwaarden en rollback.
+- Bekende publieke baselines zijn GitHub Pages 1.27.6 op `21ce9060` en productiebranch `main` op `5bf67043`.
+
+### Kostenregister — S1 basis, bewijs- en beslisgrenzen
+
+| Provider / onderdeel | Gratis of betaald | Laag/normaal/piek en werkelijke kosten | Waarschuwing/stop | Fallback |
+|---|---|---|---|---|
+| GitHub repository en Actions | Bestaand account; actuele quota/voorwaarden opnieuw controleren | Gebruik en daadwerkelijke kosten **UNKNOWN** | Waarschuw bij naderend account-/CI-limiet; betaalupgrade alleen na eigenaarbesluit; harde drempel **UNKNOWN** | Tests lokaal uitvoeren en CI-batches verkleinen |
+| Lokale Python/Playwright/Chromium/Node | Bestaande open tooling | Werkelijke tijd/kosten **UNKNOWN**, geen eigen abonnementsclaim | Vermijd dubbele runs, grote media-batches of onbegrensde herpogingen | Kleinste gerichte test plus vastgezette bron-SHA |
+| Vercel / publieke app | `git.deploymentEnabled = false` in deze kandidaat | Huidige werkelijke hostingkosten/voorwaarden **UNKNOWN** | Geen wijziging van abonnement of deployment zonder eigenaarbesluit | Offline localhost/PWA-test in S1 |
+| Kaarttegels en externe bronnen/CDN | Licentie, quota en commercieel gebruik per bron controleren | Bedragen en pieklast **UNKNOWN** | Externe verzoeken beperken; geen herpublicatie zonder rechten | Kaart offline begrensd; eigen logboek en gecachete gids blijven bruikbaar |
+
+Deelcategorieën en drempels worden vóór een betaalde dienst of schaalfase vanuit echte Usage-gegevens ingevuld. Geen omzet- of kostenbesparingsclaim zonder meting.
+
+## Vogelfoto-audit: volgorde vastgesteld op 13 november 2026
+
+Op eigenaarbesluit geldt deze uitvoeringsvolgorde voor de **140 soorten met bestaande gidsfoto's**:
+
+1. **Fase F1:** eerst alle 140 soorten een **individuele eerste beoordeling** geven, in afzonderlijk toetsbare batches van maximaal drie soorten. Foto's openen, identiteit/rol/vlucht en bronregistratie beoordelen; open punten, ontbrekende rollen en verbeterwensen vastleggen. Een eerste beoordeling kan PARTIALLY TESTED blijven.
+2. **Fase F2:** zodra alle 140 aan bod kwamen, **alle 140 opnieuw volledig en onafhankelijk verifiëren** tegen `docs/BIRDSPOT_KWALITEITSNORM.md`: originele fotograaf/licentie/herpublicatierechten, soortidentiteit, individuele leeftijd/geslacht, vlucht, kwaliteit, kennisclaims, biometrie, vergelijking, source-to-app-continuïteit en browserbediening. Niets op VERIFIED promoveren zonder bijbehorend bewijs.
+3. **Daarna pas** nieuwe of overige nog niet behandelde soorten buiten deze 140 oppakken. Geen voortijdige brede fotoimport of publieke release.
+
+**Tellers expliciet gescheiden houden:** `docs/fotokwaliteit/soortaudit-status.json` en `SOORTAUDIT_TRACKER.md` zijn de canonieke negenpunts-audit; zij melden momenteel 100/140. Het aparte, bewijsgebonden **eerste-beoordelingregister** `docs/fotokwaliteit/F1_VOORTGANG_TOT_140.json` telt al behandelde overige soorten uit M12 en later zonder de canonieke status onterecht te veranderen. De actuele F1-teller komt uit die registercontrole, niet uit losse chatclaims. Een volledige onafhankelijke F2-PASS volgt pas in F2.
+
+**Hervatten in F2.** Zie [F2-voortgang](docs/fotokwaliteit/F2_VOORTGANG_TOT_140.md) voor per soort uitgevoerde hercontroles, bewijs, open punten en het volgende batchcheckpoint. Een technische scan over 140 kaarten telt niet als 140 handmatige controles.
+
+**Fotovergelijking (14-11-2026).** Een vergelijking onder ‘Lijkt op’ toont beide vogels naast elkaar, ook op mobiel, en mag passende gidsfoto’s hergebruiken. De eigen hoofd-, kleed- en vluchtsecties blijven vrij van dubbele opnamen. De herkenningstest controleert expliciet twee volwassen en twee juveniele vluchtfoto’s bij Buizerd en Ruigpootbuizerd, twee rustfoto’s bij Fitis en Tjiftjaf en het openlaten van een ontbrekende foto. Zie de fotonorm §3.3.
+
+De eigenaar gaf op 14 november 2026 opdracht tot livegang. De fysieke Android- en toestelherstelproeven en de publieke rechtencontrole staan open. Zie het releasedossier voor de status per controle.
 
 ## Afwijkingen van het Handbook
 

@@ -80,16 +80,11 @@ const rows = [];
 for (const s of SPECIES.filter(sp => hasAny(sp.id))) {
   const items = registryItems(s);
   const { seq, html } = renderedSequence(s);
-  const images = seq.filter(x => x.image).map(x => x.image);
   const ownImages = seq.filter(x => x.image && x.slot !== 'cmp').map(x => x.image);
   const groups = DS.guidePlumageGroups(s);
   const sharedAdult = Boolean(s.plumage?.adult_m && !s.plumage?.adult_f);
   const flights = items.filter(p => p.flight).map(p => ({ from: p.from, label: p.label || '', sex: p.sex || null, image: p.image }));
   const cmp = GUIDE_COMPARISONS.filter(e => e.birds.some(b => b.id === s.id));
-  const cmpHiddenJuv = cmp.filter(e => {
-    const f = e.birds.find(b => b.id === s.id);
-    return f.plumage === 'juv' && e.birds.some(b => b.id !== s.id && b.plumage === 'juv');
-  }).length;
   const meta = items.filter(p => !p.reuse).map(p => {
     const miss = ['author', 'license', 'licenseUrl', 'source'].filter(k => !p[k]);
     return { from: p.from, image: p.image, file: p.file, author: p.author, license: p.license, source: p.source,
@@ -97,14 +92,14 @@ for (const s of SPECIES.filter(sp => hasAny(sp.id))) {
       offline: precached.has(p.image), sex: p.sex || null, age: p.age || null, flight: Boolean(p.flight),
       label: p.label || '', visualCheck: p.visualCheck || '', declared: [p.width, p.height] };
   });
-  const dupImages = images.filter((im, i) => images.indexOf(im) !== i);
+  const dupImages = ownImages.filter((im, i) => ownImages.indexOf(im) !== i);
   const sources = meta.map(p => p.source).filter(Boolean);
   rows.push({
     id: s.id, nameNL: s.nameNL, nameSci: s.nameSci, family: s.family, sharedAdult,
     heroImage: GUIDE_HEROES[s.id] || GUIDE_PHOTOS[s.id]?.image || null,
     heroFrom: GUIDE_HEROES[s.id] ? 'GUIDE_HEROES' : (GUIDE_PHOTOS[s.id] ? 'GUIDE_PHOTOS' : null),
     groups: groups.map(g => ({ key: g.key, photos: g.photos.length, heroRef: g.heroRef })),
-    flights, comparisons: cmp.length, comparisonsHiddenJuvJuv: cmpHiddenJuv,
+    flights, comparisons: cmp.length,
     rendered: seq, renderedOwnCount: ownImages.length, orderIssues: orderCheck(seq),
     exactDuplicatesRendered: [...new Set(dupImages)],
     duplicateSourcesInRegistry: [...new Set(sources.filter((x, i) => sources.indexOf(x) !== i))],

@@ -1,0 +1,113 @@
+{
+  "_meta": {
+    "batch": "M10",
+    "phase": 1,
+    "date": "2026-11-12",
+    "title": "K08 nauwkeurige audit, uitsluitend twee spechten",
+    "reviewer": "ChatGPT GPT-6 — lokale beelden individueel geïnspecteerd; controle van andere ornitholoog nog open",
+    "sourceSHA": "6e3e504ed269749c05c0d619ec468ce58e20fe6a",
+    "phaseReports": [
+      "../M10_SPECHTEN_2026-11-12.md"
+    ]
+  },
+  "species": {
+    "sp017": {
+      "assets": {
+        "/assets/species/sp017.webp": {
+          "role": "Hoofdfoto (Mannetje)",
+          "content": "Mannetje van Kleine Bonte Specht aan stam, rode kruin, zwart-witte tekening en bes in snavel.",
+          "sexAge": "Mannetje volgens bron en zichtbare rode kruin; leeftijd niet apart afgeleid.",
+          "quality": "Goed en scherp; rugbandering niet vanuit deze hoek volledig te zien.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp017-female.webp": {
+          "role": "Verenkleed (Vrouwtje)",
+          "content": "Vrouwtje op tak, lichte kruin zonder rood, zwart-wit dwarsgestreepte rug.",
+          "sexAge": "Vrouwtje volgens Commons-bron en zichtbare kruintekening.",
+          "quality": "Goed; de kop en rugbandering zijn zichtbaar.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp017-flight.webp": {
+          "role": "Verenkleed (Vrouwtje; niet echte vrije vlucht)",
+          "content": "Vogel naast nestholte met geopende vleugels tijdens wegvliegen; staart tegen de stam of zeer dicht erbij.",
+          "sexAge": "Vrouwtje volgens bron; precieze leeftijd niet vastgesteld.",
+          "quality": "Bruikbaar als context, deels bewegingsonscherp; ongeschikt voor betrouwbare vrije vluchtvergelijking.",
+          "verdict": "uit-rol"
+        }
+      },
+      "corrections": [
+        "Alle drie bestaande gidsfoto's visueel gecontroleerd tegen hun rol; bron, maker en originele pixels behouden.",
+        "Nestholtefoto blijft in Vrouwtje, niet in In vlucht. Geen fictieve flight-claim."
+      ],
+      "missing": [
+        "Juvenielenfoto met controleerbare leeftijd.",
+        "Scherpe foto van de gehele vogel in aantoonbare vrije vlucht."
+      ],
+      "wishes": [
+        "Optionele hoofdfoto waarop de dwarsbandering op de rug nog duidelijker zichtbaar is."
+      ],
+      "uncertain": [
+        "Onafhankelijke ornithologische second opinion op individuele foto's ontbreekt."
+      ],
+      "sexPolicy": "Volwassen mannetje met rode kruin, vrouwtje zonder rode kruin; juveniel niet op kopkleur alleen toeschrijven.",
+      "date": "2026-11-12"
+    },
+    "sp018": {
+      "assets": {
+        "/assets/showcase/sp018.webp": {
+          "role": "Hoofdfoto (Mannetje)",
+          "content": "Zwarte Specht groot in beeld langs stam, volledige rode kruin en lichte lange snavel.",
+          "sexAge": "Mannetje volgens Commons-beschrijving en rode kruin; exacte leeftijd niet onafhankelijk beoordeeld.",
+          "quality": "Goed, scherp en duidelijk voor herkenning.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp018-hero-male.webp": {
+          "role": "Verenkleed (Mannetje; eerdere hoofdfoto)",
+          "content": "Zwarte Specht met rode kruin in bos bij omgevallen boom; andere opname en fotograaf.",
+          "sexAge": "Mannetje volgens geverifieerde oorspronkelijke import.",
+          "quality": "Goed voor aanvullend beeld; vogel kleiner in beeld dan huidige hoofdfoto.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp018-female-single.webp": {
+          "role": "Verenkleed (Vrouwtje)",
+          "content": "Vrouwtje schuin van achteren met rode achterkruin op donkere kop.",
+          "sexAge": "Vrouwtje volgens originele Wikimedia-bron van Andreas Eichler.",
+          "quality": "Voorwaardelijk: lokale uitsnede slechts 500×661 px; zoomkwaliteit onvoldoende voor gedetailleerd profiel.",
+          "verdict": "voorwaardelijk"
+        },
+        "/assets/species/plumage/sp018-juv-review.webp": {
+          "role": "Verenkleed (Juveniel; uitsluitend kopdetail)",
+          "content": "Kopdetail met lichte snavel, donkere veren en rood kruindeel; lichaam en vleugel ontbreken.",
+          "sexAge": "Originele Commons-bron zegt juveniel; geslacht onbekend; volledig jeugdkleed niet verifieerbaar.",
+          "quality": "Scherp kopdetail, maar niet bruikbaar als volledig juvenielportret.",
+          "verdict": "voorwaardelijk"
+        },
+        "/assets/species/plumage/sp018-flight.webp": {
+          "role": "In vlucht (geslacht onbekend)",
+          "content": "Zwarte Specht vrij vliegend met geheven vleugel, lichte snavel en rode kruin; onderzijde aan rand beeld.",
+          "sexAge": "Geslacht niet vastgesteld en niet afgeleid.",
+          "quality": "Echte vlucht; benedenrand snijdt delen van het lijf of de staart af; betere kadervullende vluchtfoto wenselijk.",
+          "verdict": "voorwaardelijk"
+        }
+      },
+      "corrections": [
+        "De scherpere, reeds aanwezige mannetjesfoto wordt als hoofdfoto gebruikt; eerdere geïmporteerde hoofdfoto blijft één keer onder Mannetje.",
+        "Vijf eigen bestanden per rol gecontroleerd. Geslacht van vlucht en juveniel wordt niet verzonnen."
+      ],
+      "missing": [
+        "Volledige juvenielenfoto met controleerbare leeftijd.",
+        "Hogeresolutie-versie van bestaande vrouwtjesfoto, pas na originele bronimport met bewezen rechten."
+      ],
+      "wishes": [
+        "Compleet gekadreerde vluchtfoto met hele vogel.",
+        "Fysieke mobiele visuele eindcontrole."
+      ],
+      "uncertain": [
+        "REVIEW REQUIRED: de juveniel-leeftijd steunt op Commons-beschrijving, niet op een volledig getoond jeugdkleed.",
+        "Commons toont voor het juveniel kopdetail nu CC BY 1.0; de oorspronkelijke upload bevat een ouder CC BY-SA-sjabloon. Bij herpublicatie licentiehistorie opnieuw controleren."
+      ],
+      "sexPolicy": "Mannetje geheel rode kruin; vrouwtje achterkruin rood. Geen automatisch geslachtslabel voor vlucht of juveniel.",
+      "date": "2026-11-12"
+    }
+  }
+}

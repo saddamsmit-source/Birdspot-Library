@@ -190,29 +190,65 @@ export const GUIDE_COMPARISONS = [
       {id: 'sp249', source: 'blauwe-kiekendief', plumage: 'adult_f', marks: 'Forsere vleugels. Bij goed gespreide vleugelpunten zijn doorgaans vijf vingertoppen zichtbaar.'},
       {id: 'sp251', source: 'grauwe-kiekendief', plumage: 'adult_f', marks: 'Slanker, met smallere vleugels. Doorgaans vier zichtbare vingertoppen bij goed gespreide vleugels.'},
     ],
+    rows: [
+      {label: 'Vleugelvorm', values: ['Relatief breed.', 'Slanker en puntiger.']},
+      {label: 'Vingertoppen', values: ['Meestal vijf bij een goed gespreide vleugelpunt.', 'Meestal vier bij een goed gespreide vleugelpunt.']},
+    ],
     tip: 'Gebruik vleugelvorm én vlucht. Het aantal zichtbare vingers kan wisselen door houding, rui en kijkhoek.',
   },
   {
     label: 'Blauwe en Steppe · volwassen mannetjes',
+    flight: true,
     birds: [
       {id: 'sp249', source: 'blauwe-kiekendief', plumage: 'adult_m', marks: 'Bredere vleugel, met een relatief groot zwart uiteinde en een donkere achterrand van de bovenvleugel.'},
       {id: 'sp250', source: 'steppekiekendief', plumage: 'adult_m', marks: 'Bleker met smallere vleugels en een kleinere, wigvormige zwarte tekening op de handpennen.'},
     ],
+    rows: [
+      {label: 'Vleugelpunt', values: ['Breder zwart veld.', 'Smalle zwarte wig.']},
+      {label: 'Bovenvleugel', values: ['Relatief breed met donkere achterrand.', 'Slank en opvallend bleek.']},
+    ],
     tip: 'Vergelijk de vorm van het zwart aan de vleugelpunt en de breedte van de vleugel samen.',
   },
   {
+    label: 'Blauwe en Steppe · volwassen vrouwtjes',
+    flight: true,
+    birds: [
+      {id: 'sp249', source: 'blauwe-kiekendief', plumage: 'adult_f', marks: 'Relatief brede vleugels, met een gebandeerde ondervleugel en staart.'},
+      {id: 'sp250', source: 'steppekiekendief', plumage: 'adult_f', marks: 'Slankere vleugels. Let op de lichte halsring, donkere oorstreek en tekening van de ondervleugel.'},
+    ],
+    tip: 'Bekijk de combinatie van vleugelvorm, koptekening en ondervleugel. Een witte stuit komt bij beide voor.',
+  },
+  {
+    label: 'Blauwe en Steppe · jonge vogels',
+    flight: true,
+    birds: [
+      {id: 'sp249', source: 'blauwe-kiekendief', plumage: 'juv', marks: 'Bruin met lengtestrepen op de onderzijde en banden op staart en ondervleugels.'},
+      {id: 'sp250', source: 'steppekiekendief', plumage: 'juv', marks: 'Vaak egaal roestoranje onder. Let op de lichte halsring en de donkere vlek ernaast.'},
+    ],
+    tip: 'Combineer borsttekening met kop en ondervleugel. Laat de soort open als de foto te weinig details toont.',
+  },
+  {
     label: 'Grauwe en Steppe · volwassen mannetjes',
+    flight: true,
     birds: [
       {id: 'sp251', source: 'grauwe-kiekendief', plumage: 'adult_m', marks: 'Donkerder grijs, met zwarte vleugelpunten en donkere banden over de armvleugel.'},
       {id: 'sp250', source: 'steppekiekendief', plumage: 'adult_m', marks: 'Bleker lijf en een smalle zwarte wig aan het uiteinde van de vleugel.'},
     ],
-    tip: 'Kijk naar de armvleugel, het deel tussen het lijf en de handpennen. Bij de Grauwe vallen daar donkere banden op.',
+    rows: [
+      {label: 'Armvleugel', values: ['Donkere band over de bovenvleugel.', 'Geen vergelijkbare donkere band bij het volwassen mannetje.']},
+      {label: 'Vleugelpunt', values: ['Zwart aan de top.', 'Smalle zwarte wig aan de top.']},
+    ],
+    tip: 'Bekijk bij de Grauwe de donkere band over de armvleugel en bij de Steppe het kleinere zwarte veld aan de punt. De foto’s tonen verschillende kijkhoeken.',
   },
   {
     label: 'Grauwe en Steppe · volwassen vrouwtjes',
     birds: [
       {id: 'sp251', source: 'grauwe-kiekendief', plumage: 'adult_f', marks: 'Meestal een grotere lichte zone rond het oog en duidelijkere lichte banden op de onderzijde van de armvleugel.'},
       {id: 'sp250', source: 'steppekiekendief', plumage: 'adult_f', marks: 'Let op de lichte halsring, donkere oorstreek en smalle, vaak minder scherp begrensde banden op de ondervleugel.'},
+    ],
+    rows: [
+      {label: 'Kop', values: ['Vaak grotere lichte zone rond het oog.', 'Vaak lichte halsring en donkere oorstreek.']},
+      {label: 'Ondervleugel', values: ['De banden over de armvleugel zijn vaak duidelijker.', 'De armvleugel oogt vaak donkerder en de lichte banden smaller.']},
     ],
     tip: 'Dit is een lastige vergelijking. Combineer koptekening en ondervleugel, liefst op meerdere scherpe vluchtfoto’s.',
   },
@@ -250,6 +286,7 @@ export const GUIDE_COMPARISONS = [
   },
   {
     label: 'Buizerd en Ruigpootbuizerd · volwassen in vlucht',
+    flight: true,
     birds: [
       {id: 'sp005', source: 'buizerd', plumage: 'adult_m', marks: 'De relatief korte, bruingrijze staart heeft doorgaans meerdere smalle dwarsbanden. Ook lichte Buizerds kunnen donkere polsvlekken hebben.'},
       {id: 'sp253', source: 'Ruigpootbuizerd', plumage: 'adult_f', marks: 'Een brede witte staartbasis met donkere bandering, samen met grote donkere polsvlekken. Dit vrouwtje heeft ook een donker buikschild.'},
@@ -258,6 +295,7 @@ export const GUIDE_COMPARISONS = [
   },
   {
     label: 'Buizerd en Ruigpootbuizerd · jonge vogels',
+    flight: true,
     birds: [
       {id: 'sp005', source: 'buizerd', plumage: 'juv', marks: 'Een lichte Buizerd kan een vrijwel witte buik en donkere polsvlekken tonen. Bekijk ook de fijne bandering over de staart.'},
       {id: 'sp253', source: 'Ruigpootbuizerd', plumage: 'juv', marks: 'Vaak een lichte borst met een donker buikschild en opvallende polsvlekken. De witte staartbasis kan bij tegenlicht lastig te zien zijn.'},
@@ -266,6 +304,7 @@ export const GUIDE_COMPARISONS = [
   },
   {
     label: 'Buizerd en Wespendief · volwassen in vlucht',
+    flight: true,
     birds: [
       {id: 'sp005', source: 'buizerd', plumage: 'adult_m', marks: 'Brede vleugels, kleine afstand van kop tot vleugelvoorrand en een relatief korte staart met meerdere fijne banden.'},
       {id: 'sp248', source: 'wespendief', plumage: 'adult_m', marks: 'Verder uitstekende kop en langere staart. Bij dit mannetje zijn de brede donkere eindband en banden dichter bij het lijf te zien.'},
@@ -273,7 +312,18 @@ export const GUIDE_COMPARISONS = [
     tip: 'Begin met de verhouding tussen staart, vleugelbreedte en kop. Gebruik daarna de staartbanden om je indruk te toetsen.',
   },
   {
+    label: 'Buizerd en Wespendief · vrouwtje Wespendief in vlucht',
+    flight: true,
+    tabLabel: 'In vlucht · Wespendief-vrouwtje',
+    birds: [
+      {id: 'sp005', source: 'buizerd', plumage: 'adult_m', marks: 'Brede vleugels met een vrij korte staart. Let op de fijne dwarsbanden over de staart.'},
+      {id: 'sp248', source: 'wespendief', plumage: 'adult_f', marks: 'Verder uitstekende kop, langere staart en donkere banden op de ondervleugel.'},
+    ],
+    tip: 'Vergelijk eerst kop en staart. Gebruik de vleugelbanden als extra aanwijzing wanneer de onderzijde goed zichtbaar is.',
+  },
+  {
     label: 'Buizerd en Wespendief · jonge vogels',
+    flight: true,
     birds: [
       {id: 'sp005', source: 'buizerd', plumage: 'juv', marks: 'Relatief korte staart met veel fijne banden. Jonge vogels hebben vaak een lichte iris en een gestreepte borst.'},
       {id: 'sp248', source: 'wespendief', plumage: 'juv', marks: 'Langere staart en een verder uitstekende kop. Op een scherpe foto van de kop kunnen de donkere iris en gele snavelbasis opvallen.'},
@@ -465,12 +515,14 @@ export const GUIDE_COMPARISONS = [
     tip: 'Bekijk de kop, borstzijde en pootlengte samen. Let bij een foeragerende vogel ook op de houding en beweging.',
   },
   {
-    label: 'Torenvalk en Slechtvalk · volwassen',
+    label: 'Torenvalk en Slechtvalk · volwassen in vlucht',
+    flight: true,
+    tabLabel: 'In vlucht · Volwassen',
     birds: [
-      {id: 'sp008', source: 'torenvalk', plumage: 'adult_m', marks: 'Lange staart en roestbruine rug. Dit mannetje heeft een grijze kop en bovenstaart.'},
-      {id: 'sp009', source: 'slechtvalk', plumage: 'adult_m', marks: 'Zware borst, brede donkere baardstreep en relatief korte staart. Blauwgrijze bovenzijde.'},
+      {id: 'sp008', source: 'torenvalk', plumage: 'adult_m', marks: 'Lange staart met donkere eindband. Slanker gebouwd, met spitse vleugels.'},
+      {id: 'sp009', source: 'slechtvalk', photo: '/assets/species/plumage/sp009-male-flight.webp', marks: 'Zware borst, brede donkere baardstreep en relatief korte staart. De spitse vleugels hebben een brede basis.'},
     ],
-    tip: 'Vergelijk de verhoudingen van kop, vleugels en staart. Gebruik kleur bij goed licht; de foto’s zijn niet op dezelfde schaal.',
+    tip: 'Vergelijk de lengte van de staart ten opzichte van de vleugelbasis. De foto’s zijn niet op dezelfde schaal.',
   },
   {
     label: 'Torenvalk en Slechtvalk · juveniel',
@@ -667,7 +719,7 @@ export const GUIDE_COMPARISONS = [
         "plumage": "juv"
       }
     ],
-    "tip": "Bij beide ontbreekt de volledige volwassen koptekening. De Purperreigerfoto is uit India; tinten kunnen geografisch verschillen."
+    "tip": "Bij beide ontbreekt de volledige volwassen koptekening. De Purperreigerfoto toont een juveniel in Europees rietland."
   },
   {
     "label": "Kwak en Blauwe Reiger · jonge vogels",
@@ -703,6 +755,10 @@ export const GUIDE_COMPARISONS = [
         "plumage": "adult_f"
       }
     ],
+    "rows": [
+      {"label": "Snavelvorm", "values": ["Relatief smal en minder breed uitlopend", "Lang, breed en lepelvormig"]},
+      {"label": "Vleugelspiegel", "values": ["Blauwpaars met witte randen", "Groen zonder brede witte achterrand"]}
+    ],
     "tip": "Begin met de snavelvorm. De spiegel kan onder de gevouwen vleugel verborgen zijn."
   },
   {
@@ -721,6 +777,11 @@ export const GUIDE_COMPARISONS = [
         "plumage": "adult_m"
       }
     ],
+    "rows": [
+      {"label": "Kop", "values": ["Zwart met afhangende kuif", "Roodbruin zonder kuif"]},
+      {"label": "Oog", "values": ["Geel", "Rood"]},
+      {"label": "Flanken", "values": ["Wit", "Lichtgrijs"]}
+    ],
     "tip": "Vergelijk kopkleur, flankkleur en oog samen. Mannetjes zien er in eclipskleed minder contrastrijk uit."
   },
   {
@@ -738,6 +799,11 @@ export const GUIDE_COMPARISONS = [
         "marks": "Grijsbruiner met een lichtere wang en keel, donker oog en een langere, aflopende kopvorm.",
         "plumage": "adult_f"
       }
+    ],
+    "rows": [
+      {"label": "Kopprofiel", "values": ["Ronde kop, vaak met korte kuif", "Aflopend voorhoofd, zonder kuif"]},
+      {"label": "Oog", "values": ["Meestal geel", "Doorgaans donker"]},
+      {"label": "Lichte tekening", "values": ["Soms bij de snavelbasis", "Vaak op wang en keel"]}
     ],
     "tip": "Een kleine kuif kan platliggen of slecht zichtbaar zijn. Gebruik ook oogkleur, kopvorm en wangtekening."
   },
@@ -790,7 +856,11 @@ export const GUIDE_COMPARISONS = [
     label: 'Smient en Krakeend · vrouwtjes',
     birds: [
       {id: 'sp130', source: 'smient', plumage: 'adult_f', marks: 'Korte blauwgrijze snavel en variabel rossig of grijsbruin verenkleed.'},
-      {id: 'sp129', source: 'krakeend', marks: 'Oranje langs de zijkant van de snavel en een witte spiegel die in vlucht goed opvalt.'},
+      {id: 'sp129', source: 'krakeend', plumage: 'adult_f', marks: 'Oranje langs de zijkant van de snavel en een witte spiegel die in vlucht goed opvalt.'},
+    ],
+    rows: [
+      {label: 'Snavel', values: ['Kort, blauwgrijs met donkere punt.', 'Langer, donker van boven met oranje zijkanten.']},
+      {label: 'Kop en bouw', values: ['Rondere kop en compacte bouw.', 'Minder ronde kop en langgerekter profiel.']},
     ],
     tip: 'Bekijk eerst de snavelkleur en wacht zo nodig op een beter zij- of vleugelaanzicht.',
   },
@@ -903,7 +973,7 @@ export const GUIDE_COMPARISONS = [
     flight: true,
     birds: [
       {id: 'sp002', source: 'houtduif', marks: 'Brede witte vleugelbanden. Volwassen vogels hebben ook een witte halsvlek.'},
-      {id: 'sp003', source: 'holenduif', photoMissing: 'vluchtcontrole 2026-11-10: geen geschikte vluchtfoto', marks: 'Grijze vleugels met donkere randen. Een brede witte vleugelband ontbreekt.'},
+      {id: 'sp003', source: 'holenduif', marks: 'Grijze vleugels met donkere randen. Een brede witte vleugelband ontbreekt.'},
       {id: 'sp004', source: 'turkse-tortel', marks: 'Lichte vleugelvelden en een lange staart met lichte buitenste staartpennen.'},
     ],
     tip: 'Vergelijk de vleugeltekening en de staart. De foto’s tonen verschillende hoeken en afstanden.',

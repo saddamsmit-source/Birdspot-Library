@@ -7,7 +7,7 @@ Voor iedere soort in docs/fotokwaliteit/soortaudit/M*.json, op 390 px (Chromium)
   SAB-03  Geen eigen foto twee keer op de kaart.
   SAB-04  Volgorde: Hoofdfoto boven Verenkleed boven In vlucht boven Overige; secties visueel in die volgorde.
   SAB-05  In "In vlucht" staan alleen foto's met een goedgekeurde/voorwaardelijke vluchtbeoordeling;
-          uit-rol-foto's staan er niet in. Negatief: Holenduif sp003 en Tjiftjaf sp056 hebben géén "In vlucht".
+          uit-rol-foto's staan er niet in. Holenduif sp003 heeft één gevalideerde vluchtfoto. Tjiftjaf sp056 heeft géén "In vlucht".
   SAB-06  Kaartlabels tonen geen geslacht bij soorten waarvan de audit zegt dat geslacht niet op kleed te zien is.
   SAB-07  Zoomviewer opent en sluit op de hoofdfoto.
   SAB-08  Volledige kaart als screenshot; uitslag per soort in docs/fotokwaliteit/soortaudit/browser.json.
@@ -132,7 +132,10 @@ def main():
                 for s in fl:
                     assert FLIGHT.get(s, {}).get("decision") in ("goedgekeurd", "voorwaardelijk"), f"SAB-05 {sid}: {s} in In vlucht zonder goedkeuring"
                     assert entry["assets"][s]["verdict"] != "uit-rol", f"SAB-05 {sid}: uit-rol-foto in In vlucht"
-                if sid in ("sp003", "sp056"):
+                if sid == "sp003":
+                    assert fl == ["/assets/species/plumage/sp003-flight-open-sky.webp"]
+                    assert "/assets/species/plumage/sp003-flight.webp" not in srcs
+                if sid == "sp056":
                     assert not fl, f"SAB-05 {sid}: mag geen In vlucht-foto meer hebben"
                 # SAB-06
                 if "niet op kleed" in entry.get("sexPolicy", "") or "gelijk" in entry.get("sexPolicy", ""):
@@ -183,8 +186,9 @@ def main():
                 loaded = sec.locator('img').evaluate_all("""async els => { const out = []; for (const e of els) { e.loading = 'eager';
                   try { await e.decode(); } catch (x) {} out.push([e.getAttribute('src'), e.naturalWidth > 0]); } return out; }""")
                 assert all(ok for _, ok in loaded), f"SAB-09 {sid}: vergelijkingsfoto laadt niet: {[s for s, ok in loaded if not ok]}"
-                srcs = [s for s, _ in loaded]
-                assert len(srcs) == len(set(srcs)), f"SAB-09 {sid}: dubbele foto in Lijkt op"
+                for panel in sec.locator('[data-cmp-panel]').all():
+                    photos = panel.locator('img').evaluate_all("images => images.map(img => img.getAttribute('src'))")
+                    assert len(photos) <= 2 and len(photos) == len(set(photos)), f"SAB-09 {sid}: dubbele foto binnen één paar"
                 # Vaste hoogte van de sheet tijdelijk opheffen (zoals SAB-08), anders knipt de scrollcontainer de sectie af.
                 page.evaluate("""() => { for (const sel of ['.signature-species-detail-overlay', '.signature-species-detail-sheet']) {
                   const el = document.querySelector(sel); if (!el) continue;
@@ -213,7 +217,11 @@ def main():
                               ("Zwarte Mees", "sp174"), ("Staartmees", "sp034"), ("Glanskop", "sp032"),
                               ("Matkop", "sp031"), ("Grauwe Vliegenvanger", "sp176"), ("Gekraagde Roodstaart", "sp178"),
                               ("Sijs", "sp038"), ("Goudvink", "sp040"), ("Appelvink", "sp041"),
-                              ("Zwarte Roodstaart", "sp051"), ("Roodborsttapuit", "sp053"), ("Bonte Vliegenvanger", "sp177")]:
+                              ("Zwarte Roodstaart", "sp051"), ("Roodborsttapuit", "sp053"), ("Bonte Vliegenvanger", "sp177"),
+                              ("Kleine Zilverreiger", "sp082"), ("Grote Zilverreiger", "sp083"), ("Purperreiger", "sp084"),
+                              ("Slobeend", "sp090"), ("Kuifeend", "sp092"), ("Tafeleend", "sp132"),
+                              ("Krakeend", "sp129"), ("Smient", "sp130"), ("Zomertaling", "sp188"),
+                              ("Blauwe Kiekendief", "sp249"), ("Grauwe Kiekendief", "sp251"), ("Steppekiekendief", "sp250")]:
                 similar_section(p, name, sid, "390")
                 open_card(p, name, sid)
                 sec = p.locator('#sdPanel-herkenning section.sd-similar')

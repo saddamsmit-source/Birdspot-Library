@@ -1,0 +1,108 @@
+name: Birdspot S1 Pilot Core Offline QA
+on:
+  pull_request:
+    paths:
+      - 'tests/test_pilot_offline_new_sighting.py'
+      - '.github/workflows/pilot-core-qa.yml'
+      - 'src/**'
+      - 'sw.js'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-new-sighting:
+    name: Real offline new sighting, PNG, close and reopen
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r tests/requirements.txt
+      - run: python -m playwright install --with-deps chromium
+      - name: PILOT-01..04 real service worker and UI offline
+        shell: bash
+        run: |
+          set -o pipefail
+          python tests/test_pilot_offline_new_sighting.py 2>&1 | tee pilot-offline.log
+      - name: Preserve logs and image evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: birdspot-pilot-offline-ui
+          path: |
+            pilot-offline.log
+            tests/screenshots/pilot_core/*.png
+          if-no-files-found: warn
+
+  zip-and-navigation:
+    name: Existing ZIP restore and navigation regressions
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r tests/requirements.txt
+      - run: python -m playwright install --with-deps chromium
+      - name: Actual UI ZIP export, cancel, corruption, restore, repeat and rollback
+        shell: bash
+        run: |
+          set -o pipefail
+          python tests/test_release_backup_roundtrip.py 2>&1 | tee pilot-zip.log
+      - name: Back/forward, popup and source retention
+        shell: bash
+        run: |
+          set -o pipefail
+          python tests/test_navigation_recovery.py 2>&1 | tee pilot-navigation.log
+      - name: Preserve evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: birdspot-pilot-zip-navigation
+          path: |
+            pilot-zip.log
+            pilot-navigation.log
+          if-no-files-found: warn
+
+  upgrade:
+    name: Upgrade baseline ${{ matrix.baseline.name }} without user-data loss
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        baseline:
+          - name: 1.14-main
+            sha: 5bf67043e830e977749f0ee593cf9f41f0e2822b
+          - name: 1.27.5-review
+            sha: a3f77ad86ce3e27c3a0f186e089c8d4e8df23bb5
+          - name: 1.27.6-review
+            sha: 21ce9060f789103cfbba98fa78f6b53f4b9cea5b
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r tests/requirements.txt
+      - run: python -m playwright install --with-deps chromium
+      - name: Confirm exact ancestor present before upgrade
+        run: git cat-file -e "${{ matrix.baseline.sha }}^{commit}"
+      - name: RU-01..07 real old SW to candidate with exact localStorage and IDB preservation
+        shell: bash
+        run: |
+          set -o pipefail
+          python tests/test_release_upgrade.py --base "${{ matrix.baseline.sha }}" 2>&1 | tee "pilot-upgrade-${{ matrix.baseline.name }}.log"
+      - name: Preserve upgrade evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: birdspot-pilot-upgrade-${{ matrix.baseline.name }}
+          path: pilot-upgrade-*.log
+          if-no-files-found: warn

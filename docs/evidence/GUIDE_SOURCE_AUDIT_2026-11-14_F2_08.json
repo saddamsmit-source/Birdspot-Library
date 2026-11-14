@@ -1,0 +1,306 @@
+[
+ {
+  "image": "/assets/species/sp016.webp",
+  "species": "sp016",
+  "source": "https://commons.wikimedia.org/wiki/File:2015.05.08.-04-Kaefertaler_Wald-Mannheim--Buntspecht-Weibchen.jpg",
+  "sourceTitle": "File:2015.05.08.-04-Kaefertaler Wald-Mannheim--Buntspecht-Weibchen.jpg - Wikimedia Commons",
+  "sourceAuthor": "Andreas Eichler",
+  "sourceLicense": "CC BY-SA 4.0",
+  "taxonInSource": "Soortnaam bevestigd op de fotopagina of gekoppelde waarneming",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Lokaal beeld visueel naast de beschikbare bronminiatuur vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "69abf617426dc5d46d86720e1cd8d8a290f98d83",
+  "sourceImageSha1": "01c163c8f00d585784008b11ae9a91c09358261e",
+  "sourceImageSize": [
+   960,
+   1081
+  ],
+  "visualRoleCheck": "Vrouwtje langs de boomstam. De bron vermeldt vrouwtje en er is geen rode nekvlek zichtbaar."
+ },
+ {
+  "image": "/assets/species/plumage/sp016-juv.webp",
+  "species": "sp016",
+  "source": "https://commons.wikimedia.org/wiki/File:Juvenile_great_spotted_woodpecker_(52200334398).jpg",
+  "sourceTitle": "File:Juvenile great spotted woodpecker (52200334398).jpg - Wikimedia Commons",
+  "sourceAuthor": "Andrey Gulivanov",
+  "sourceLicense": "CC BY 2.0",
+  "taxonInSource": "Soortnaam bevestigd op de fotopagina of gekoppelde waarneming",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Lokaal beeld visueel naast de beschikbare bronminiatuur vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "e838dca7e744dfcacb003f3dc49bbc5cf995ec56",
+  "sourceImageSha1": "09c4eeccff4d7ca54517c5a8264fea2e219c4682",
+  "sourceImageSize": [
+   960,
+   720
+  ],
+  "visualRoleCheck": "Juveniel op berk, met rode voorkruin en zwarte rand. De fotograaf vermeldt juveniel."
+ },
+ {
+  "image": "/assets/species/plumage/sp016-male.webp",
+  "species": "sp016",
+  "source": "https://commons.wikimedia.org/wiki/File:Great_spotted_woodpecker_(Dendrocopos_major)_male_Drenthe.jpg",
+  "sourceTitle": "File:Great spotted woodpecker (Dendrocopos major) male Drenthe.jpg - Wikimedia Commons",
+  "sourceAuthor": "Charles J. Sharp",
+  "sourceLicense": "CC BY-SA 4.0",
+  "taxonInSource": "Soortnaam bevestigd op de fotopagina of gekoppelde waarneming",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "9b6623a350fc6296b47b54cfbb77823c70c051f2",
+  "sourceImageSha1": "51f27429c6a9211146db0bcde9627b46c58244bd",
+  "sourceImageSize": [
+   6328,
+   4218
+  ],
+  "visualRoleCheck": "Mannetje op stronk, met de rode vlek achter op de kop."
+ },
+ {
+  "image": "/assets/species/plumage/sp016-flight.webp",
+  "species": "sp016",
+  "source": "https://commons.wikimedia.org/wiki/File:Dendrocopos_major_(51546452028).jpg",
+  "sourceTitle": "File:Dendrocopos major (51546452028).jpg - Wikimedia Commons",
+  "sourceAuthor": "caroline legg",
+  "sourceLicense": "CC BY 2.0",
+  "taxonInSource": "Soortnaam bevestigd op de fotopagina of gekoppelde waarneming",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "9c11ff53911b71aa9f4047352fb2541d801ad19b",
+  "sourceImageSha1": "a80269d1a0df4346700fa6d5626ae0abb53a2b71",
+  "sourceImageSize": [
+   3389,
+   2259
+  ],
+  "visualRoleCheck": "Vrij vliegend met voedsel in de snavel en witte schoudervlek. Leeftijd en geslacht blijven neutraal."
+ },
+ {
+  "image": "/assets/species/plumage/sp016-hero-male.webp",
+  "species": "sp016",
+  "source": "https://commons.wikimedia.org/wiki/File%3AGreat_Spotted_Woodpecker_-_Dendrocopos_major_-_Male_%2852580093933%29.jpg",
+  "sourceTitle": "File:Great Spotted Woodpecker - Dendrocopos major - Male (52580093933).jpg - Wikimedia Commons",
+  "sourceAuthor": "caroline legg",
+  "sourceLicense": "CC BY 2.0",
+  "taxonInSource": "Soortnaam bevestigd op de fotopagina of gekoppelde waarneming",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "ac3ae52172fb70de6152ca44ac9fefbbbecfb900",
+  "sourceImageSha1": "eb15a906daa107613ad83f13b2f93b709da92bc5",
+  "sourceImageSize": [
+   5099,
+   3642
+  ],
+  "visualRoleCheck": "Mannetje op tak, met rode vlek achter op de kop. Andere opname dan de kleedfoto."
+ },
+ {
+  "image": "/assets/species/sp173.webp",
+  "species": "sp173",
+  "source": "https://commons.wikimedia.org/wiki/File:An_Eurasian_Marsh_Harrier_-_Adult_Male_in_flight_(50572292483).jpg",
+  "sourceTitle": "File:An Eurasian Marsh Harrier - Adult Male in flight (50572292483).jpg - Wikimedia Commons",
+  "sourceAuthor": "Hari K Patibanda",
+  "sourceLicense": "CC BY 2.0",
+  "taxonInSource": "Soortnaam bevestigd op de fotopagina of gekoppelde waarneming",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "895267c3e23ec4b14fd91fc45ade155b28051a83",
+  "sourceImageSha1": "7087599582341e6ca3cbe3d075f02d9c6148574f",
+  "sourceImageSize": [
+   2506,
+   1671
+  ],
+  "visualRoleCheck": "Vrije vlucht van opzij. Bron noemt een volwassen mannetje, maar grijze velden zijn onvoldoende duidelijk. Neutraal gidslabel behouden."
+ },
+ {
+  "image": "/assets/species/plumage/sp173-male-2.webp",
+  "species": "sp173",
+  "source": "https://commons.wikimedia.org/wiki/File%3AMarsh_harrier_%28Circus_aeruginosus%29_male_in_flight_Norfolk.jpg",
+  "sourceTitle": "File:Marsh harrier (Circus aeruginosus) male in flight Norfolk.jpg - Wikimedia Commons",
+  "sourceAuthor": "Charles J. Sharp",
+  "sourceLicense": "CC BY-SA 4.0",
+  "taxonInSource": "Soortnaam bevestigd op de fotopagina of gekoppelde waarneming",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "06756e8d6bbe844edae8b81a392509c50956ae67",
+  "sourceImageSha1": "064e8f9728836eed3aeebf2f77196f185f1c3a09",
+  "sourceImageSize": [
+   6920,
+   4613
+  ],
+  "visualRoleCheck": "Mannetje in vrije vlucht. Grijze vleugelvelden, zwarte uiteinden en grijze staart."
+ },
+ {
+  "image": "/assets/species/plumage/sp173-adult_f.webp",
+  "species": "sp173",
+  "source": "https://commons.wikimedia.org/wiki/File:Circus_aeruginosus_female_Oulu_Finland_2021-04-21.jpg",
+  "sourceTitle": "File:Circus aeruginosus female Oulu Finland 2021-04-21.jpg - Wikimedia Commons",
+  "sourceAuthor": "Matti Virtala",
+  "sourceLicense": "CC0",
+  "taxonInSource": "Soortnaam bevestigd op de fotopagina of gekoppelde waarneming",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "e4e5d993f02c6fd76b6493be771eb194acc57590",
+  "sourceImageSha1": "4f4da9416238fab6de9f65cd6be81fca00d3ab01",
+  "sourceImageSize": [
+   2504,
+   1732
+  ],
+  "visualRoleCheck": "Vrouwtje in vrije vlucht, met lichte kruin en donkere ondervleugel."
+ },
+ {
+  "image": "/assets/species/plumage/sp173-juv.webp",
+  "species": "sp173",
+  "source": "https://www.inaturalist.org/photos/229518401",
+  "sourceTitle": "Photo 229518401, (c) Codrin Bucur, some rights reserved (CC BY), uploaded by Codrin Bucur · iNaturalist",
+  "sourceAuthor": "Codrin Bucur",
+  "sourceLicense": "CC BY 4.0",
+  "taxonInSource": "Soortnaam bevestigd op de fotopagina of gekoppelde waarneming",
+  "annotations": [
+   "juveniel"
+  ],
+  "sameShot": true,
+  "method": "Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "e78a3077dc3ec536378f30449e4b0cbe372c1ca5",
+  "sourceImageSha1": "0dd5f1cfeb5fbdfce9b4fb16f57578b36d2562a3",
+  "sourceImageSize": [
+   1109,
+   739
+  ],
+  "visualRoleCheck": "Juveniele Bruine Kiekendief strijkt neer boven riet. Waarneming bevestigt juveniel.",
+  "observation": "https://www.inaturalist.org/observations/134634395",
+  "qualityGrade": "research"
+ },
+ {
+  "image": "/assets/species/plumage/sp173-female-rest.webp",
+  "species": "sp173",
+  "source": "https://commons.wikimedia.org/wiki/File:2017.07.19.-05-Grosser_Glubigsee-Wendisch_Rietz--Rohrweihe-Weibchen.jpg",
+  "sourceTitle": "File:2017.07.19.-05-Grosser Glubigsee-Wendisch Rietz--Rohrweihe-Weibchen.jpg - Wikimedia Commons",
+  "sourceAuthor": "Andreas Eichler",
+  "sourceLicense": "CC BY-SA 4.0",
+  "taxonInSource": "Soortnaam bevestigd op de fotopagina of gekoppelde waarneming",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "ff65045de0edda6d538de51087ad9058bead2a6b",
+  "sourceImageSha1": "3c0a7e39537c0bfe441f7ea8e00dfa53ba783a88",
+  "sourceImageSize": [
+   1681,
+   2301
+  ],
+  "visualRoleCheck": "Vrouwtje zittend in een boom. Lichte kruin en keel."
+ },
+ {
+  "image": "/assets/species/plumage/sp173-hero-male.webp",
+  "species": "sp173",
+  "source": "https://commons.wikimedia.org/wiki/File%3AM%C3%A4nnliche_Rohrweihe_im_Flug_04.jpg",
+  "sourceTitle": "File:Männliche Rohrweihe im Flug 04.jpg - Wikimedia Commons",
+  "sourceAuthor": "Stephan Sprinz",
+  "sourceLicense": "CC BY 4.0",
+  "taxonInSource": "Soortnaam bevestigd op de fotopagina of gekoppelde waarneming",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Lokaal beeld visueel naast de beschikbare bronminiatuur vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "39f3794cc68385c4823a18cd3062eaedd8073b06",
+  "sourceImageSha1": "690069067885d5cfa0b133c34dda8ee4054b5fea",
+  "sourceImageSize": [
+   960,
+   640
+  ],
+  "visualRoleCheck": "Mannetje tijdens de jachtvlucht. Grote open vleugels met grijs en zwart."
+ },
+ {
+  "image": "/assets/species/sp251.webp",
+  "species": "sp251",
+  "source": "https://commons.wikimedia.org/wiki/File:Beautiful_Montagu%27s_Harrier_in_Flight_(51042548717).jpg",
+  "sourceTitle": "File:Beautiful Montagu's Harrier in Flight (51042548717).jpg - Wikimedia Commons",
+  "sourceAuthor": "Hari K Patibanda",
+  "sourceLicense": "CC BY 2.0",
+  "taxonInSource": "Soortnaam bevestigd op de fotopagina of gekoppelde waarneming",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Lokaal beeld visueel naast de beschikbare bronminiatuur vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "3c06bbed8096b25e4ca9cf875d80681816b4c94c",
+  "sourceImageSha1": "cacf7b68654dc5c6f3f2f38cf0f77636e0cce534",
+  "sourceImageSize": [
+   960,
+   640
+  ],
+  "visualRoleCheck": "Volwassen mannetje in vrije vlucht. Fotograaf beschrijft de vluchtcirkel. Armvleugelband zichtbaar."
+ },
+ {
+  "image": "/assets/species/plumage/sp251-adult_f.webp",
+  "species": "sp251",
+  "source": "https://commons.wikimedia.org/wiki/File:A_Montagu%27s_Harrier_Taking_Flight_(51621854680).jpg",
+  "sourceTitle": "File:A Montagu's Harrier Taking Flight (51621854680).jpg - Wikimedia Commons",
+  "sourceAuthor": "Hari K Patibanda",
+  "sourceLicense": "CC BY 2.0",
+  "taxonInSource": "Soortnaam bevestigd op de fotopagina of gekoppelde waarneming",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "0a6cb53310dbae5458aa28257f60da751e6ea0bd",
+  "sourceImageSha1": "5132ec06f672835f2421f5f2875ac631824b1405",
+  "sourceImageSize": [
+   2981,
+   1677
+  ],
+  "visualRoleCheck": "Vrouwtje met hangende poten na het vertrek van een paal. Bron wijst op opvliegen."
+ },
+ {
+  "image": "/assets/species/plumage/sp251-juv.webp",
+  "species": "sp251",
+  "source": "https://commons.wikimedia.org/wiki/File:Circus_pygargus_juvenile_flight.jpg",
+  "sourceTitle": "File:Circus pygargus juvenile flight.jpg - Wikimedia Commons",
+  "sourceAuthor": "Rodrigo de Almeida from Marco de Canaveses, Portugal",
+  "sourceLicense": "CC BY 2.0",
+  "taxonInSource": "Soortnaam bevestigd op de fotopagina of gekoppelde waarneming",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Lokaal beeld visueel naast de beschikbare bronminiatuur vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "e102322d73c832af43f353184ddef67efc61e113",
+  "sourceImageSha1": "9a489ffc94c9cc73baf7614785d78c35217d32a2",
+  "sourceImageSize": [
+   960,
+   699
+  ],
+  "visualRoleCheck": "Juveniel tijdens het neerstrijken. De bron vermeldt het jeugdkleed."
+ },
+ {
+  "image": "/assets/species/plumage/sp251-portrait.webp",
+  "species": "sp251",
+  "source": "https://commons.wikimedia.org/wiki/File:A_Montagu%27s_Harrier_male_roosting_for_the_night_%2850971610728%29.jpg",
+  "sourceTitle": "File:A Montagu's Harrier male roosting for the night (50971610728).jpg - Wikimedia Commons",
+  "sourceAuthor": "Hari K Patibanda",
+  "sourceLicense": "CC BY 2.0",
+  "taxonInSource": "Soortnaam bevestigd op de fotopagina of gekoppelde waarneming",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Lokaal beeld visueel naast de beschikbare bronminiatuur vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "ecc1b5fb81a137b9104c024bb689763a7da501c9",
+  "sourceImageSha1": "63cf24f73164f0df1029c9b72105f83067f70990",
+  "sourceImageSize": [
+   960,
+   640
+  ],
+  "visualRoleCheck": "Grijs mannetje in droog gras. Bron vermeldt een mannetje."
+ }
+]
