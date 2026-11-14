@@ -1273,7 +1273,7 @@ export const GUIDE_COMPARISONS = [
       {label: 'Bovendelen', values: ['Lichte vlekjes op bruine veren', 'Valere tint en minder contrasterende kop/rug']},
       {label: 'Gehele bouw', values: ['Doorgaans kleiner en compacter', 'Doorgaans groter en forser']},
     ],
-    tip: 'Een jeugdkleed kan soorten meer op elkaar laten lijken. Combineer kop, bouw, borst en context; de twee oorspronkelijke foto's zijn bronbenoemd als juveniel.',
+    tip: 'Een jeugdkleed kan soorten meer op elkaar laten lijken. Combineer kop, bouw, borst en context; de twee oorspronkelijke opnamen zijn door hun fotografen als juveniel beschreven.',
   },
   {
     label: 'Zanglijster en Kramsvogel · in vlucht',

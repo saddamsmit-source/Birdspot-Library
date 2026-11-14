@@ -230,5 +230,14 @@
     "newPhotoPASS": 0
   },
   "restore": "Close F2-19 draft PR; verified F2-18 parent c1befa8a stays immutable. No main/preview/product changes.",
-  "nextBatch": "To determine by read-only F2 tracker vs source photo registry after current CI."
+  "nextBatch": "To determine by read-only F2 tracker vs source photo registry after current CI.",
+  "ciLearning": {
+    "initialSha": "8b28fbd9ce542ca9ab31d598f52303fa7085eac2",
+    "issue": "An unescaped apostrophe in a single-quoted guideComparisons.js tip contained 'foto's', causing JavaScript SyntaxError: Unexpected identifier 's' before test suites could run.",
+    "evidence": "GitHub Actions Plumage Comparison UX QA run 43644472555, job 132599043280, line 1276 SyntaxError (14 November 2026).",
+    "fix": "Replace only the problematic narrative wording with 'de twee oorspronkelijke opnamen zijn door hun fotografen als juveniel beschreven', preserving source claims and tests.",
+    "prevent": "Check generated/inserted JavaScript string literals for quotation and run a parse/syntax gate before costly browser suites.",
+    "status": "RETEST_REQUIRED",
+    "photoPassUnchanged": true
+  }
 }
