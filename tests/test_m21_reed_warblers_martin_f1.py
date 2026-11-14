@@ -207,7 +207,7 @@ def browser_test():
                             if sid=="sp116":
                                 # A flight that is already the hero may NOT be displayed as a
                                 # second independent image, regardless of section CSS.
-                                repeated=panel.locator(".sd-field-photo img").evaluate_all(
+                                repeated=panel.locator(".sd-field-photo:not(.sd-similar *) img").evaluate_all(
                                     """(imgs,path)=>imgs.filter(img=>
                                        (img.currentSrc||img.getAttribute('src')||'').endsWith(path)).length""",
                                     bird["hero"])

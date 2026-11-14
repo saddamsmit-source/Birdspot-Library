@@ -16,11 +16,8 @@
  *          sex/age-registratie krijgt nooit het label "Mannetje"/"Vrouwtje"/"Juveniel" en staat
  *          nooit met data-plumage="adult_m|adult_f|juv" (bewezen op sp008 Torenvalk: een bevestigd
  *          mannetje-in-vlucht naast een neutrale "In vlucht"-kaart zonder geslachtslabel).
- *   FV-05  Geen enkele foto komt dubbel voor binnen één kaart (ook niet na het verplaatsen van
- *          vluchtfoto's naar de nieuwe sectie).
- *   FV-06  Geen juveniel-tegen-juvenielvergelijking komt nog ergens voor (0 van de 19 bestaande
- *          gevallen in GUIDE_COMPARISONS), en de onderliggende data van die 19 gevallen is
- *          onaangeroerd (niet gewist) — alleen het tonen is verborgen.
+ *   FV-05  Hoofdfoto, Verenkleed en In vlucht bevatten samen unieke foto's.
+ *   FV-06  In Lijkt op is hergebruik toegestaan en mogen passende juvenielparen terugkomen.
  *   FV-07  Representatieve soorten (opzettelijk gekozen voor man/vrouw-verschil, meerdere
  *          vluchtfoto's, incomplete fotodekking en relevante vergelijkingen): sp173 Bruine
  *          Kiekendief, sp249 Blauwe Kiekendief, sp253 Ruigpootbuizerd, sp059 Zwartkop (geen
@@ -36,9 +33,19 @@
 import assert from 'node:assert/strict';
 import { SPECIES } from '../src/data/species.js';
 import { GUIDE_COMPARISONS } from '../src/features/species/guideComparisons.js';
-import { recognitionPanel } from '../src/features/species/detailSections.js';
+import { guideHeroPhoto, recognitionPanel } from '../src/features/species/detailSections.js';
+import { GUIDE_PLUMAGE, GUIDE_POSES } from '../src/features/species/guideMedia.js';
+import { GUIDE_PHOTOS } from '../src/features/species/guidePhotos.js';
 
 const byId = new Map(SPECIES.map(s => [s.id, s]));
+const media = new Map();
+for (const photo of [
+  ...Object.values(GUIDE_PHOTOS),
+  ...Object.values(GUIDE_PLUMAGE).flatMap(group => Object.values(group)),
+  ...Object.values(GUIDE_POSES).flat(),
+]) {
+  if (photo.image) media.set(photo.image, Boolean(photo.flight) || media.get(photo.image) || false);
+}
 
 // ── FV-01 / FV-02 / FV-05 / FV-06 : over de volledige dataset ──────────────
 let checked = 0;
@@ -68,29 +75,30 @@ for (const s of SPECIES) {
     assert.ok(html.indexOf('aria-label="Overige herkenningsfoto') !== vlucht, `FV-02 ${s.id}`);
   }
 
-  // FV-05: geen enkele foto dubbel binnen de hele Herkenning-kaart.
-  const images = [...html.matchAll(/data-guide-image="([^"]+)"/g)].map(m => m[1]);
-  assert.equal(images.length, new Set(images).size, `FV-05 dubbele foto binnen één kaart: ${s.id}`);
+  const [own, comparisons = ''] = html.split('<section class="sd-similar"');
+  const hero = guideHeroPhoto(s.id)?.image;
+  const images = [...own.matchAll(/data-guide-image="([^"]+)"/g)].map(m => m[1]);
+  if (hero) images.push(hero);
+  assert.equal(images.length, new Set(images).size, `FV-05 dubbele gidsfoto: ${s.id}`);
 
-  // FV-06: geen enkele vergelijkingskaart toont nog Juveniel tegenover Juveniel.
-  if (lijktOp >= 0) {
-    const section = html.slice(lijktOp);
-    const panels = [...section.matchAll(/<div class="sd-cmp-panel"[^>]*>([\s\S]*?)<\/div>\s*(?:<p class="sd-cmp-tip")?/g)];
-    for (const panel of panels) {
-      const smalls = [...panel[1].matchAll(/<small>([^<]*)</g)].map(m => m[1]);
-      assert.ok(!(smalls.length === 2 && smalls[0] === 'Juveniel' && smalls[1] === 'Juveniel'),
-        `FV-06 Juveniel-tegen-Juveniel nog zichtbaar: ${s.id}`);
+  for (const panel of comparisons.split('<div class="sd-cmp-panel"').slice(1)) {
+    const head = panel.split('<div class="sd-cmp-rows"')[0].split('<div class="sd-cmp-foot"')[0];
+    const photos = [...head.matchAll(/data-guide-image="([^"]+)"/g)].map(m => m[1]);
+    assert.ok(photos.length <= 2, `FV-06 te veel foto's: ${s.id}`);
+    assert.equal(photos.length, new Set(photos).size, `FV-06 dubbel in hetzelfde paar: ${s.id}`);
+    const inFlight = panel.startsWith(' data-cmp-panel data-cmp-flight');
+    for (const path of photos) {
+      assert.ok(media.has(path), `FV-06 ongeregistreerde foto: ${path}`);
+      assert.equal(media.get(path), inFlight, `FV-06 verkeerde houding: ${s.id} ${path}`);
     }
   }
 }
-assert.ok(checked >= 590, `te weinig soorten gecontroleerd: ${checked}`);
-assert.ok(flightSections >= 10, `te weinig soorten met een "In vlucht"-sectie om FV-02/03 te bewijzen: ${flightSections}`);
-console.log(`FV-01/02/05/06 OK — ${checked} soorten, ${flightSections} met een eigen "In vlucht"-sectie, geen enkele dubbele foto of Juveniel-tegen-Juveniel`);
-
-// FV-06 vervolg: de 19 bestaande gevallen bestaan nog gewoon in de brondata (niet gewist).
-const juvPairs = GUIDE_COMPARISONS.filter(e => e.birds.filter(b => b.plumage === 'juv').length >= 2);
-assert.equal(juvPairs.length, 19, `FV-06 onderliggende data gewijzigd — verwacht nog 19 Juveniel-paren, nu ${juvPairs.length}`);
-console.log('FV-06 OK — alle 19 onderliggende Juveniel-paren staan nog intact in GUIDE_COMPARISONS (alleen verborgen, niet gewist)');
+assert.ok(checked >= 590 && flightSections >= 10);
+assert.equal(GUIDE_COMPARISONS.filter(e => e.birds.filter(b => b.plumage === 'juv').length >= 2).length, 19);
+const buzzard = recognitionPanel(byId.get('sp005')).split('<section class="sd-similar"')[1];
+assert.ok(buzzard.includes('In vlucht · Juveniel') && buzzard.includes('sp005-juv.webp') && buzzard.includes('sp253-juv.webp'));
+assert.ok(buzzard.includes('In vlucht · Volwassen') && buzzard.includes('sp005-adult_m.webp') && buzzard.includes('sp253.webp'));
+console.log(`FV-01/02/05/06 OK — ${checked} soorten, gidsfoto's uniek en vergelijkingsfoto's per houding gecontroleerd`);
 
 // ── FV-07: representatieve soorten, exact bewijs per gekozen situatie ──────
 function flightTitlesAndImages(html) {
@@ -136,7 +144,7 @@ function flightTitlesAndImages(html) {
 }
 
 // sp253 Ruigpootbuizerd — relevante soortvergelijking (met sp005 Buizerd) blijft bestaan,
-// alleen de juveniele kant daarvan is verborgen; eigen Mannetje+Vrouwtje in vlucht.
+// twee verschillende juveniele vluchtfoto’s staan ook onder Lijkt op.
 {
   const html = recognitionPanel(byId.get('sp253'));
   const flight = flightTitlesAndImages(html);

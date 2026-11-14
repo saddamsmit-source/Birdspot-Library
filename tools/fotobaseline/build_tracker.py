@@ -147,7 +147,7 @@ for b in batches:
             ('Hoofdfoto + geschiktheid', f"`{fname(r['heroImage'])}` ({r['heroFrom']}) — {rv['hero']}"),
             ('Mannetje / vrouwtje / juveniel', mf),
             ('Vluchtfoto\'s', flights),
-            ('Vergelijkingen', f"{r['comparisons']} entries" + (f", waarvan {r['comparisonsHiddenJuvJuv']} juv-juv verborgen" if r['comparisonsHiddenJuvJuv'] else '')),
+            ('Vergelijkingen', f"{r['comparisons']} bronentries"),
             ('Volgorde (§6.B)', ('conform: ' if not r['orderIssues'] else 'AFWIJKING ' + '; '.join(r['orderIssues']) + ': ') + order),
             ('Duplicaten', dup),
             ('Geslacht-/leeftijdslabels', rv['labels']),

@@ -101,8 +101,9 @@ for (const s of SPECIES) {
 const stockDove = recognitionPanel(SPECIES.find(s => s.id === 'sp003'), null);
 const stockDoveFlight = stockDove.match(/aria-label="In vlucht"[\s\S]*?<\/section>/)?.[0];
 assert.ok(stockDoveFlight?.includes('sp003-flight-open-sky.webp'));
-assert.ok(stockDove.includes('↑ zie in vlucht'), 'SA-07 Holenduif: verwijzing naar de nieuwe vluchtsectie ontbreekt');
-assert.ok(!stockDove.includes('Nog geen geschikte vluchtfoto'), 'SA-07 Holenduif: verouderde melding');
+const stockPanels = stockDove.split('<div class="sd-cmp-panel"').slice(1).filter(part => part.startsWith(' data-cmp-panel data-cmp-flight'));
+assert.ok(stockPanels.some(panel => panel.includes('sp003-flight-open-sky.webp') && panel.includes('sp002-flight-wingband.webp')),
+  'SA-07 Holenduif: de vliegbeelden van Holenduif en Houtduif staan niet samen');
 console.log(`SA-07 OK — ${refs} kaarten met vluchtvergelijking; geen verwijzing naar een ontbrekende eigen vluchtfoto`);
 
 // SA-08: only these two species; assert current UI media = independently enumerated audit.

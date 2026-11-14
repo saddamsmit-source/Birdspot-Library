@@ -186,8 +186,9 @@ def main():
                 loaded = sec.locator('img').evaluate_all("""async els => { const out = []; for (const e of els) { e.loading = 'eager';
                   try { await e.decode(); } catch (x) {} out.push([e.getAttribute('src'), e.naturalWidth > 0]); } return out; }""")
                 assert all(ok for _, ok in loaded), f"SAB-09 {sid}: vergelijkingsfoto laadt niet: {[s for s, ok in loaded if not ok]}"
-                srcs = [s for s, _ in loaded]
-                assert len(srcs) == len(set(srcs)), f"SAB-09 {sid}: dubbele foto in Lijkt op"
+                for panel in sec.locator('[data-cmp-panel]').all():
+                    photos = panel.locator('img').evaluate_all("images => images.map(img => img.getAttribute('src'))")
+                    assert len(photos) <= 2 and len(photos) == len(set(photos)), f"SAB-09 {sid}: dubbele foto binnen één paar"
                 # Vaste hoogte van de sheet tijdelijk opheffen (zoals SAB-08), anders knipt de scrollcontainer de sectie af.
                 page.evaluate("""() => { for (const sel of ['.signature-species-detail-overlay', '.signature-species-detail-sheet']) {
                   const el = document.querySelector(sel); if (!el) continue;

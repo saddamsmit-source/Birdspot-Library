@@ -202,7 +202,7 @@ def browser_checks():
                             panel=page.locator("#sdPanel-herkenning")
                             expect(panel).to_have_count(1)
                             # Never count a source metadata reference as a second image.
-                            shown=panel.locator(".sd-field-photo img").evaluate_all(
+                            shown=panel.locator(".sd-field-photo:not(.sd-similar *) img").evaluate_all(
                                 """imgs=>imgs.map(img=>img.currentSrc||img.getAttribute('src'))"""
                             )
                             assert not any(src.endswith(bird["hero"]) for src in shown), (

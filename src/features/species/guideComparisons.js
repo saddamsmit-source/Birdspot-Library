@@ -266,6 +266,7 @@ export const GUIDE_COMPARISONS = [
   },
   {
     label: 'Buizerd en Ruigpootbuizerd · volwassen in vlucht',
+    flight: true,
     birds: [
       {id: 'sp005', source: 'buizerd', plumage: 'adult_m', marks: 'De relatief korte, bruingrijze staart heeft doorgaans meerdere smalle dwarsbanden. Ook lichte Buizerds kunnen donkere polsvlekken hebben.'},
       {id: 'sp253', source: 'Ruigpootbuizerd', plumage: 'adult_f', marks: 'Een brede witte staartbasis met donkere bandering, samen met grote donkere polsvlekken. Dit vrouwtje heeft ook een donker buikschild.'},
@@ -274,6 +275,7 @@ export const GUIDE_COMPARISONS = [
   },
   {
     label: 'Buizerd en Ruigpootbuizerd · jonge vogels',
+    flight: true,
     birds: [
       {id: 'sp005', source: 'buizerd', plumage: 'juv', marks: 'Een lichte Buizerd kan een vrijwel witte buik en donkere polsvlekken tonen. Bekijk ook de fijne bandering over de staart.'},
       {id: 'sp253', source: 'Ruigpootbuizerd', plumage: 'juv', marks: 'Vaak een lichte borst met een donker buikschild en opvallende polsvlekken. De witte staartbasis kan bij tegenlicht lastig te zien zijn.'},
@@ -282,6 +284,7 @@ export const GUIDE_COMPARISONS = [
   },
   {
     label: 'Buizerd en Wespendief · volwassen in vlucht',
+    flight: true,
     birds: [
       {id: 'sp005', source: 'buizerd', plumage: 'adult_m', marks: 'Brede vleugels, kleine afstand van kop tot vleugelvoorrand en een relatief korte staart met meerdere fijne banden.'},
       {id: 'sp248', source: 'wespendief', plumage: 'adult_m', marks: 'Verder uitstekende kop en langere staart. Bij dit mannetje zijn de brede donkere eindband en banden dichter bij het lijf te zien.'},
@@ -290,6 +293,7 @@ export const GUIDE_COMPARISONS = [
   },
   {
     label: 'Buizerd en Wespendief · jonge vogels',
+    flight: true,
     birds: [
       {id: 'sp005', source: 'buizerd', plumage: 'juv', marks: 'Relatief korte staart met veel fijne banden. Jonge vogels hebben vaak een lichte iris en een gestreepte borst.'},
       {id: 'sp248', source: 'wespendief', plumage: 'juv', marks: 'Langere staart en een verder uitstekende kop. Op een scherpe foto van de kop kunnen de donkere iris en gele snavelbasis opvallen.'},
