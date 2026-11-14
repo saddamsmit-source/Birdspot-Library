@@ -93,7 +93,8 @@
         "/assets/species/plumage/sp016-juv.webp": {"role": "Juveniel", "content": "Jonge specht tegen berk; volledig rode kruin.", "sexAge": "juveniel (rood petje; bron juvenile)", "quality": "goed", "verdict": "goedgekeurd"},
         "/assets/species/plumage/sp016-flight.webp": {"role": "In vlucht", "content": "Vliegend met voedsel in de snavel; witte schoudervlekken zichtbaar.", "sexAge": "niet vastgesteld", "quality": "voldoende: licht bewogen vleugels", "verdict": "goedgekeurd"}
       },
-      "corrections": [],
+      "corrections": ["Vijf beelden en individuele bronrechten opnieuw gecontroleerd. Lengte en spanwijdte opnieuw onderbouwd."],
+      "date": "2026-11-14",
       "missing": [],
       "sexPolicy": "Geslachten verschillen (rode nekvlek man); labels door beeld bevestigd.",
       "uncertain": []
@@ -168,7 +169,8 @@
         "/assets/species/sp173.webp": {"role": "In vlucht", "content": "Vrij in de lucht van opzij; bruine vogel.", "sexAge": "bron noemt 'adult male', maar grijze vleugelvelden ontbreken op het beeld: terecht zonder geslachtslabel (bronaudit 09-11)", "quality": "goed; watermerk maker", "verdict": "goedgekeurd"}
       },
       "corrections": ["FQA-01 (eerder in deze PR): vrouwtje in vlucht naar In vlucht met label Vrouwtje."],
-      "missing": ["Mannetje zittend"],
+      "missing": ["Mannetje zittend", "Juveniel in vrije vlucht"],
+      "date": "2026-11-14",
       "sexPolicy": "Geslachten verschillen duidelijk (VB_BRK); labels door beeld en bron bevestigd.",
       "uncertain": ["Hoofdfoto is een vluchtfoto (open eigenaarsbesluit over hoofdfoto's die vluchtfoto zijn)."]
     },

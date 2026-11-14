@@ -229,6 +229,7 @@ export const GUIDE_COMPARISONS = [
   },
   {
     label: 'Grauwe en Steppe · volwassen mannetjes',
+    flight: true,
     birds: [
       {id: 'sp251', source: 'grauwe-kiekendief', plumage: 'adult_m', marks: 'Donkerder grijs, met zwarte vleugelpunten en donkere banden over de armvleugel.'},
       {id: 'sp250', source: 'steppekiekendief', plumage: 'adult_m', marks: 'Bleker lijf en een smalle zwarte wig aan het uiteinde van de vleugel.'},
@@ -237,7 +238,7 @@ export const GUIDE_COMPARISONS = [
       {label: 'Armvleugel', values: ['Donkere band over de bovenvleugel.', 'Geen vergelijkbare donkere band bij het volwassen mannetje.']},
       {label: 'Vleugelpunt', values: ['Zwart aan de top.', 'Smalle zwarte wig aan de top.']},
     ],
-    tip: 'Kijk naar de armvleugel, het deel tussen het lijf en de handpennen. Bij de Grauwe vallen daar donkere banden op.',
+    tip: 'Bekijk bij de Grauwe de donkere band over de armvleugel en bij de Steppe het kleinere zwarte veld aan de punt. De foto’s tonen verschillende kijkhoeken.',
   },
   {
     label: 'Grauwe en Steppe · volwassen vrouwtjes',

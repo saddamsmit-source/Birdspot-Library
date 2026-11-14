@@ -4081,6 +4081,50 @@
       "edition": "BRIS, soortbeschrijving en Dunning (1993), geraadpleegd 14-11-2026",
       "checked": "2026-11-14",
       "certainty": "hoog"
+    },
+    "NAT_BRK": {
+      "register": "F2 · roofvogels",
+      "label": "Naturalis BRIS — Bruine Kiekendief",
+      "publisher": "Naturalis Biodiversity Center",
+      "url": "https://bris.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/taxon.php?id=112245",
+      "scope": "Europa",
+      "confirms": "lengte, spanwijdte, gewicht en veldkenmerken",
+      "edition": "online soortpagina, geraadpleegd 14-11-2026",
+      "checked": "2026-11-14",
+      "certainty": "hoog"
+    },
+    "NAT_GRAUWK": {
+      "register": "F2 · roofvogels",
+      "label": "Naturalis — Grauwe Kiekendief",
+      "publisher": "Naturalis Biodiversity Center",
+      "url": "https://vogels-europa.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/taxon.php?epi=6&id=5698",
+      "scope": "Europa",
+      "confirms": "lengte, spanwijdte en veldkenmerken",
+      "edition": "online soortpagina, geraadpleegd 14-11-2026",
+      "checked": "2026-11-14",
+      "certainty": "hoog"
+    },
+    "WT_GBS": {
+      "register": "F2 · roofvogels",
+      "label": "The Wildlife Trusts — Grote Bonte Specht",
+      "publisher": "The Wildlife Trusts",
+      "url": "https://www.wildlifetrusts.org/wildlife-explorer/birds/woodpeckers-cuckoo-kingfisher-and-waxwing/great-spotted-woodpecker",
+      "scope": "Europa",
+      "confirms": "lengte 21–23 cm, spanwijdte 36 cm en herkenning",
+      "edition": "online soortpagina, geraadpleegd 14-11-2026",
+      "checked": "2026-11-14",
+      "certainty": "hoog"
+    },
+    "DK_GBS": {
+      "register": "F2 · roofvogels",
+      "label": "RSPB Complete Birds of Britain and Europe — Grote Bonte Specht",
+      "publisher": "Dorling Kindersley",
+      "url": "https://opencourses.ionio.gr/modules/document/file.php/TFP120/%CE%91%CE%9D%CE%91%CE%93%CE%9D%CE%A9%CE%A3%CE%97%20%CE%91%CE%A0%CE%9F%20%CE%A0%CE%95%CE%94%CE%99%CE%9F%20%CE%A0%CE%A4%CE%97%CE%9D%CE%A9%CE%9D/RSPB_Complete_Birds_of_Britain_and_Europe.pdf",
+      "scope": "Europa",
+      "confirms": "lengte 22–23 cm, spanwijdte 34–39 cm en veldkenmerken",
+      "edition": "online soortpagina, geraadpleegd 14-11-2026",
+      "checked": "2026-11-14",
+      "certainty": "hoog"
     }
   },
   "sp021": {
@@ -7486,11 +7530,51 @@
     ],
     "basis": {
       "size": {
-        "text": "Lengte 23–26 cm.",
+        "text": "Lengte ca. 22–25 cm. Spanwijdte ca. 35–40 cm. The Wildlife Trusts noemt 36 cm als indicatie.",
         "sources": [
-          "VB_GBS"
+          "VB_GBS",
+          "WT_GBS",
+          "DK_GBS"
         ]
-      }
+      },
+      "biometrics": [
+        {
+          "field": "length",
+          "unit": "cm",
+          "display": "ca. 22–25 cm",
+          "values": [
+            {
+              "source": "VB_GBS",
+              "min": 23,
+              "max": 26
+            },
+            {
+              "source": "WT_GBS",
+              "min": 21,
+              "max": 23
+            }
+          ],
+          "note": "Afgeronde veldindicatie uit twee soortbeschrijvingen. De meetpopulaties zijn niet gespecificeerd."
+        },
+        {
+          "field": "wingspan",
+          "unit": "cm",
+          "display": "ca. 35–40 cm",
+          "values": [
+            {
+              "source": "WT_GBS",
+              "min": 36,
+              "max": 36
+            },
+            {
+              "source": "DK_GBS",
+              "min": 34,
+              "max": 39
+            }
+          ],
+          "note": "The Wildlife Trusts geeft een puntwaarde van 36 cm. De RSPB-veldgids geeft een bereik van 34–39 cm. De app toont een afgeronde veldindicatie."
+        }
+      ]
     },
     "habitat": [
       {
@@ -7534,9 +7618,7 @@
       }
     ],
     "discrepancies": [],
-    "open": [
-      "Spanwijdte niet in de geraadpleegde bron; Birdspot-waarde (34–39 cm) niet opnieuw gecontroleerd."
-    ]
+    "open": []
   },
   "sp026": {
     "summary": {
@@ -8716,11 +8798,50 @@
     ],
     "basis": {
       "size": {
-        "text": "Lengte 43–54 cm, spanwijdte 115–145 cm.",
+        "text": "Lengte ca. 45–55 cm, spanwijdte ca. 115–135 cm. Naturalis geeft gemiddeld 492 g voor het mannetje en 763 g voor het vrouwtje.",
         "sources": [
-          "VB_BRK"
+          "VB_BRK",
+          "NAT_BRK"
         ]
-      }
+      },
+      "biometrics": [
+        {
+          "field": "length",
+          "unit": "cm",
+          "display": "ca. 45–55 cm",
+          "values": [
+            {
+              "source": "VB_BRK",
+              "min": 43,
+              "max": 54
+            },
+            {
+              "source": "NAT_BRK",
+              "min": 48,
+              "max": 56
+            }
+          ],
+          "note": "Afgeronde veldindicatie uit twee soortbeschrijvingen. De meetpopulaties zijn niet gespecificeerd."
+        },
+        {
+          "field": "wingspan",
+          "unit": "cm",
+          "display": "ca. 115–135 cm",
+          "values": [
+            {
+              "source": "VB_BRK",
+              "min": 115,
+              "max": 145
+            },
+            {
+              "source": "NAT_BRK",
+              "min": 110,
+              "max": 125
+            }
+          ],
+          "note": "Afgeronde veldindicatie uit twee soortbeschrijvingen. De meetpopulaties zijn niet gespecificeerd."
+        }
+      ]
     },
     "habitat": [
       {
@@ -8780,7 +8901,8 @@
     "discrepancies": [],
     "open": [
       "Hoofdfoto is een vluchtfoto (eigenaarsbesluit 'hoofdfoto als enige vluchtfoto' open).",
-      "Geen zittende foto van een mannetje."
+      "Geen zittende foto van een mannetje.",
+      "Een juveniel in vrije vlucht ontbreekt. De huidige juvenielenfoto toont neerstrijken."
     ]
   },
   "sp248": {
@@ -21229,6 +21351,24 @@
             }
           ],
           "note": "Afgeronde onder- en bovengrens op basis van de twee bronwaarden."
+        },
+        {
+          "field": "wingspan",
+          "unit": "cm",
+          "display": "ca. 100–115 cm",
+          "values": [
+            {
+              "source": "VB_GRAUWE_KIEKENDIEF",
+              "min": 102,
+              "max": 123
+            },
+            {
+              "source": "NAT_GRAUWK",
+              "min": 98,
+              "max": 110
+            }
+          ],
+          "note": "Afgeronde veldindicatie uit twee soortbeschrijvingen. De meetpopulaties zijn niet gespecificeerd."
         }
       ]
     },
@@ -21276,7 +21416,9 @@
       }
     ],
     "discrepancies": [],
-    "open": []
+    "open": [
+      "Vrouwtje en juveniel in vrije vlucht ontbreken. Opvliegen en landen worden bij het kleed getoond."
+    ]
   },
   "sp250": {
     "summary": {

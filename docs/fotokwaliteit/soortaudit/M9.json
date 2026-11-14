@@ -76,7 +76,7 @@
           "role": "Verenkleed (Vrouwtje)",
           "content": "Bruin gestreept vrouwtje met neerhangende poten en gebandeerde vleugel.",
           "sexAge": "Vrouwtje volgens bron en kleed.",
-          "quality": "Veren en staart herkenbaar. De foto toont een remmende houding.",
+          "quality": "Veren en staart herkenbaar. Fotograaf bevestigt dat de vogel opvliegt.",
           "verdict": "goedgekeurd"
         },
         "/assets/species/plumage/sp251-juv.webp": {
@@ -96,14 +96,18 @@
       },
       "corrections": [
         "Hoofdfoto vervangen door een scherp mannetjesportret. Twee bijna identieke oude foto’s met herkomst gearchiveerd. De aparte mannetjesvluchtfoto blijft beschikbaar.",
-        "Vergelijking met Steppekiekendief uitgewerkt op armvleugelband en ondervleugelpatroon."
+        "Vergelijking met Steppekiekendief uitgewerkt op armvleugelband en ondervleugelpatroon.",
+        "Vrouwtje is volgens de fotograaf opvliegend. Kleedfoto behouden. De volwassen mannetjes van Grauwe en Steppe staan naast elkaar in vrije vlucht."
       ],
-      "missing": [],
+      "missing": [
+        "Vrouwtje in vrije vlucht",
+        "Juveniel in vrije vlucht"
+      ],
       "wishes": [
         "Afzonderlijke opname van een vrouwtje of juveniel in vrije vlucht voor vergelijking van de ondervleugel."
       ],
       "uncertain": [],
-      "date": "2026-11-12",
+      "date": "2026-11-14",
       "sexPolicy": "Volwassen labels volgen bron en zichtbaar kleed. Juvenielen blijven neutraal gelabeld."
     },
     "sp250": {
