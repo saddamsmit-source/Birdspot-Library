@@ -55,7 +55,10 @@ def load(path):
 
 def validate_f1_policy():
     norm = (ROOT / "docs/BIRDSPOT_KWALITEITSNORM.md").read_text(encoding="utf-8")
-    assert "| Versie | 1.4 · 14-11-2026 |" in norm
+    assert "| Versie | 1.5 · 14-11-2026 |" in norm
+    assert "| 1.4 | 14-11-2026 |" in norm, "Earlier source-verification policy must remain in history"
+    assert "**Toon geen bronvermeldingen waar dat niet verplicht is.**" in norm
+    assert "**Verplichte attributies behouden:**" in norm
     assert "| 1.3 | 14-11-2026 |" in norm, "V1.3 historical owner decision must remain"
     assert "### 2.1 Voorkeursbronnen voor soortherkenning" in norm
     assert "Start met Vogelbescherming Nederland en de ANWB-vogelgids" in norm
