@@ -6655,6 +6655,30 @@ export const GUIDE_POSES = Object.freeze({
       "height": 746,
       "image": "/assets/species/plumage/sp002-flight.webp",
       "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+    },
+    {
+      "label": "Juveniel",
+      "age": "juvenile",
+      "flight": false,
+      "note": "Bij deze jonge Houtduif is de witte vleugeltekening al zichtbaar. De witte halsvlek ontstaat later.",
+      "file": "Columba palumbus (juvenile).JPG",
+      "nl": "Houtduif",
+      "latin": "Columba palumbus",
+      "author": "Roland Gromes",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Columba_palumbus_(juvenile).JPG",
+      "showSourceLink": false,
+      "alt": "Jonge Houtduif op de grond, met witte vleugeltekening en een hals zonder witte vlek.",
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede en zonder EXIF/GPS/XMP",
+      "reviewed": "2026-11-14",
+      "sourceAudit": "2026-11-14",
+      "sourceSha1": "29ab2af935d1deb894ef3c5200cc73fa0e31ab4c",
+      "verificationSource": "https://www.bto.org/sites/default/files/shared_documents/gbw/associated_files/bird-table-64-pigeon-identification.pdf",
+      "visualCheck": "De fotograaf documenteert het juveniele kleed. Witte vleugeltekening, bruine veerranden en het ontbreken van de witte halsvlek ondersteunen de identificatie.",
+      "width": 1100,
+      "height": 841,
+      "image": "/assets/species/plumage/sp002-juv.webp"
     }
   ],
   "sp003": [
@@ -6679,6 +6703,30 @@ export const GUIDE_POSES = Object.freeze({
       "height": 325,
       "image": "/assets/species/plumage/sp003-flight.webp",
       "flightReview": "uit-rol 2026-11-10: Poten raken nog de grond; vogel zet af. Ook laag opgelost (485 px)."
+    },
+    {
+      "label": "Juveniel",
+      "age": "juvenile",
+      "flight": false,
+      "note": "Let op het donkere oog en de korte donkere vleugeltekening. De groene halsglans van een volwassen vogel ontbreekt.",
+      "file": "iNaturalist-foto 725640198",
+      "nl": "Holenduif",
+      "latin": "Columba oenas",
+      "author": "Paul Lewis",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://www.inaturalist.org/photos/725640198",
+      "showSourceLink": false,
+      "alt": "Jonge Holenduif op een tak, met een donker oog en korte donkere tekeningen op de gevouwen vleugel.",
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede en zonder EXIF/GPS/XMP",
+      "reviewed": "2026-11-14",
+      "sourceAudit": "2026-11-14",
+      "sourceSha1": "9d6707637169df115b15686d09b7f04390adf907",
+      "verificationSource": "https://www.bto.org/sites/default/files/shared_documents/gbw/associated_files/bird-table-64-pigeon-identification.pdf",
+      "visualCheck": "De waarneming 395731472 benoemt en annoteert het juveniele kleed. Donker oog, korte donkere vleugeltekening en hals zonder groene glans passen bij jonge Holenduif.",
+      "width": 1100,
+      "height": 804,
+      "image": "/assets/species/plumage/sp003-juv.webp"
     }
   ],
   "sp004": [
@@ -6703,6 +6751,30 @@ export const GUIDE_POSES = Object.freeze({
       "height": 1053,
       "image": "/assets/species/plumage/sp004-flight.webp",
       "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+    },
+    {
+      "label": "Juveniel",
+      "age": "juvenile",
+      "flight": false,
+      "note": "De lange staart en lichte lichaamskleur vallen al op. De zwarte halsband van de volwassen vogel is nog niet ontwikkeld.",
+      "file": "Streptopelia decaocto juvenile 2.jpg",
+      "nl": "Turkse Tortel",
+      "latin": "Streptopelia decaocto",
+      "author": "Kreuzschnabel/Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Streptopelia_decaocto_juvenile_2.jpg",
+      "showSourceLink": false,
+      "alt": "Jonge Turkse Tortel in zijaanzicht, met lange staart, smalle donkere snavel en zonder zwarte halsband.",
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede en zonder EXIF/GPS/XMP",
+      "reviewed": "2026-11-14",
+      "sourceAudit": "2026-11-14",
+      "sourceSha1": "945c7658aae2e673aa99925b86c094038c90e148",
+      "verificationSource": "https://www.allaboutbirds.org/guide/Eurasian_Collared-Dove/id",
+      "visualCheck": "De oorspronkelijke fotobeschrijving identificeert juveniele Turkse Tortel. De lange staart, donkere handpennen, lichte lichaamskleur en afwezige halsband zijn zichtbaar.",
+      "width": 1100,
+      "height": 825,
+      "image": "/assets/species/plumage/sp004-juv.webp"
     }
   ],
   "sp016": [

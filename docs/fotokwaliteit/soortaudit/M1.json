@@ -17,6 +17,11 @@
         "date": "2026-11-10",
         "round": "FQA-herstel na ChatGPT-QA (PR #127, comment 6776090974)",
         "changes": "FQA-01 Buizerd-juveniel naar In vlucht; FQA-02 Buizerd donkere vluchtfoto voorlopig; FQA-03 één sectie Lijkt op; FQA-04 doorslaggevend herbeoordeeld (keyMarks nooit doorslaggevend, Houtduif halsvlek los van iris, Turkse Tortel tweede bron + uitzondering juvenielen)."
+      },
+      {
+        "date": "2026-11-14",
+        "round": "F2 · eerste herstelbatch",
+        "changes": "Brongeverifieerde juvenielenfoto’s bij sp002, sp003 en sp004 toegevoegd. Vluchtpositie sp003 blijft open. Oudere browseruitslagen horen bij de vorige beeldset."
       }
     ]
   },
@@ -36,17 +41,25 @@
           "sexAge": "niet vastgesteld (neutraal label)",
           "quality": "goed",
           "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp002-juv.webp": {
+          "role": "Juveniel",
+          "content": "Jonge Houtduif op de grond, met witte vleugeltekening en een hals zonder witte vlek.",
+          "sexAge": "Juveniel volgens individuele foto of waarneming en zichtbare kleedkenmerken.",
+          "quality": "Bruikbaar zijaanzicht · 1100 × 841 px.",
+          "verdict": "goedgekeurd"
         }
       },
       "corrections": [
-        "FQA-04: kritisch kenmerk 'Halsvlek en iris' gesplitst; 'Witte halsvlek' (alleen volwassen) blijft doorslaggevend, iris alleen ondersteunend."
+        "FQA-04: kritisch kenmerk 'Halsvlek en iris' gesplitst; 'Witte halsvlek' (alleen volwassen) blijft doorslaggevend, iris alleen ondersteunend.",
+        "F2: afzonderlijke brongeverifieerde juvenielenfoto toegevoegd."
       ],
       "missing": [
-        "Juveniel (zonder halsvlek, wel vleugelband)",
         "Vluchtfoto van boven met volledige witte vleugelband (wenselijk)"
       ],
       "sexPolicy": "Geslachten gelijk; geen Mannetje/Vrouwtje-vakken (bron: VB_HOUT).",
-      "uncertain": []
+      "uncertain": [],
+      "date": "2026-11-14"
     },
     "sp003": {
       "assets": {
@@ -63,21 +76,29 @@
           "sexAge": "niet vastgesteld",
           "quality": "matig: 485 px, zacht",
           "verdict": "uit-rol"
+        },
+        "/assets/species/plumage/sp003-juv.webp": {
+          "role": "Juveniel",
+          "content": "Jonge Holenduif op een tak, met een donker oog en korte donkere tekeningen op de gevouwen vleugel.",
+          "sexAge": "Juveniel volgens individuele foto of waarneming en zichtbare kleedkenmerken.",
+          "quality": "Bruikbaar zijaanzicht · 1100 × 804 px.",
+          "verdict": "goedgekeurd"
         }
       },
       "corrections": [
         "Opvliegende foto uit 'In vlucht' (eigenaarsmelding) — label 'Opvliegend vanaf de grond' (vluchtcontrole ronde 1).",
         "Veldkenmerken en kleedtekst: \"zwarte vleugelpunten\" → geen wit in hals/vleugel, twee korte zwarte vleugelstrepen, brede zwarte staartband (VB_HOLEN, RSPB_SD).",
         "Zang: \"oe-oe-oe steeds sneller\" → eentonige reeks tweelettergrepige roepen (VB_HVH).",
-        "Lengte 30–33 → 28–32 cm; broedduur 16–18 → 16–17 dagen; nestjongen 27–28 → ca. 24 dagen (VB_HOLEN)."
+        "Lengte 30–33 → 28–32 cm; broedduur 16–18 → 16–17 dagen; nestjongen 27–28 → ca. 24 dagen (VB_HOLEN).",
+        "F2: afzonderlijke brongeverifieerde juvenielenfoto toegevoegd."
       ],
       "missing": [
-        "In vlucht (geen echte vluchtfoto)",
-        "Juveniel"
+        "In vlucht (geen echte vluchtfoto)"
       ],
       "sexPolicy": "Geslachten gelijk; geen Mannetje/Vrouwtje-vakken (bron: VB_HOLEN).",
       "uncertain": [],
-      "previous": "Fotobaseline batch 01 gaf VERIFIED inclusief de opvliegende vluchtfoto; die uitslag is vervallen."
+      "previous": "Fotobaseline batch 01 gaf VERIFIED inclusief de opvliegende vluchtfoto; die uitslag is vervallen.",
+      "date": "2026-11-14"
     },
     "sp004": {
       "assets": {
@@ -95,19 +116,27 @@
           "sexAge": "niet vastgesteld",
           "quality": "goed",
           "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp004-juv.webp": {
+          "role": "Juveniel",
+          "content": "Jonge Turkse Tortel in zijaanzicht, met lange staart, smalle donkere snavel en zonder zwarte halsband.",
+          "sexAge": "Juveniel volgens individuele foto of waarneming en zichtbare kleedkenmerken.",
+          "quality": "Bruikbaar zijaanzicht · 1100 × 825 px.",
+          "verdict": "goedgekeurd"
         }
       },
       "corrections": [
         "Broedsels per jaar 3–5 → 2–5 (VB_TT).",
         "FQA-04: tweede onafhankelijke bron voor de Zomertortel-kant (eBird, birdspot.co.uk) en uitzondering voor juvenielen zonder halstekening.",
-        "sp004.webp: voorwaardelijk → goedgekeurd na kwaliteitsnorm §3.3 (klein in beeld is geen afkeurgrond)"
+        "sp004.webp: voorwaardelijk → goedgekeurd na kwaliteitsnorm §3.3 (klein in beeld is geen afkeurgrond)",
+        "F2: afzonderlijke brongeverifieerde juvenielenfoto toegevoegd."
       ],
       "missing": [
-        "Juveniel (zonder of met vage halsband)",
         "Hoofdfoto met grotere vogel (wenselijk)"
       ],
       "sexPolicy": "Geslacht vaak niet op kleed te bepalen (BZ_CD); geen geslachtsvakken.",
-      "uncertain": []
+      "uncertain": [],
+      "date": "2026-11-14"
     },
     "sp005": {
       "assets": {

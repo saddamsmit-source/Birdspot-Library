@@ -137,6 +137,16 @@
    "decision": "goedgekeurd",
    "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
   },
+  "/assets/species/plumage/sp002-juv.webp": {
+   "refs": [
+    "sp002 GUIDE_POSES[1]"
+   ],
+   "sha1": "85db39b670ed5abeac3ee1c8569f5fc3f405f4d5",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "F2 ronde 1 · directe beeldinspectie 14-11-2026",
+   "note": "Juveniele Houtduif staat op de grond."
+  },
   "/assets/species/plumage/sp003-flight.webp": {
    "refs": [
     "sp003 GUIDE_POSES[0]"
@@ -148,6 +158,16 @@
    "decision": "uit-rol",
    "note": "Poten raken nog de grond; vogel zet af. Ook laag opgelost (485 px)."
   },
+  "/assets/species/plumage/sp003-juv.webp": {
+   "refs": [
+    "sp003 GUIDE_POSES[1]"
+   ],
+   "sha1": "c90e0aebad77bfaace67989854b0e5f6718935ab",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "F2 ronde 1 · directe beeldinspectie 14-11-2026",
+   "note": "Juveniele Holenduif zit op een tak."
+  },
   "/assets/species/plumage/sp004-flight.webp": {
    "refs": [
     "sp004 GUIDE_POSES[0]"
@@ -158,6 +178,16 @@
    "source": "vluchtcontrole",
    "decision": "goedgekeurd",
    "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp004-juv.webp": {
+   "refs": [
+    "sp004 GUIDE_POSES[1]"
+   ],
+   "sha1": "d3bc629dae398080e91c89926f96f0dfcad76fc1",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "F2 ronde 1 · directe beeldinspectie 14-11-2026",
+   "note": "Juveniele Turkse Tortel staat op een railing."
   },
   "/assets/species/plumage/sp005-adult_m.webp": {
    "refs": [

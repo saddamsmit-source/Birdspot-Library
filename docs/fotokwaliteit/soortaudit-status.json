@@ -8,8 +8,8 @@
    "family": "Duiven",
    "audited": true,
    "batch": "M1",
-   "date": "2026-11-10",
-   "sha": "9ddb3d984262f8e95bae5a056431ef80bbde73bb",
+   "date": "2026-11-14",
+   "sha": null,
    "assets": [
     {
      "image": "/assets/species/sp002.webp",
@@ -54,13 +54,29 @@
       "rights": "VERIFIED",
       "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 2.0"
      }
+    },
+    {
+     "image": "/assets/species/plumage/sp002-juv.webp",
+     "role": "Juveniel",
+     "content": "Jonge Houtduif op de grond, met witte vleugeltekening en een hals zonder witte vlek.",
+     "sexAge": "Juveniel volgens individuele foto of waarneming en zichtbare kleedkenmerken.",
+     "quality": "Bruikbaar zijaanzicht · 1100 × 841 px.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 14-11-2026: zelfde opname (rechtstreekse conversie van de gecontroleerde bronopname), CC BY-SA 4.0 · Roland Gromes",
+      "annotations": [
+       "Juveniel"
+      ]
+     },
+     "flight": null
     }
    ],
    "corrections": [
-    "FQA-04: kritisch kenmerk 'Halsvlek en iris' gesplitst; 'Witte halsvlek' (alleen volwassen) blijft doorslaggevend, iris alleen ondersteunend."
+    "FQA-04: kritisch kenmerk 'Halsvlek en iris' gesplitst; 'Witte halsvlek' (alleen volwassen) blijft doorslaggevend, iris alleen ondersteunend.",
+    "F2: afzonderlijke brongeverifieerde juvenielenfoto toegevoegd."
    ],
    "missing": [
-    "Juveniel (zonder halsvlek, wel vleugelband)",
     "Vluchtfoto van boven met volledige witte vleugelband (wenselijk)"
    ],
    "wishes": [],
@@ -72,7 +88,7 @@
     "visual": "VERIFIED",
     "rights": "VERIFIED",
     "knowledge": "PARTIALLY TESTED",
-    "browser": "VERIFIED",
+    "browser": "NOT TESTED",
     "independent": "NOT TESTED"
    },
    "photoComplete": false,
@@ -82,24 +98,11 @@
     "decisive": 2,
     "notDecisive": [],
     "open": [
-     "Juveniel- en vluchtvergelijking met Stadsduif nog niet uit een Nederlandse bron uitgewerkt.",
-     "Geen gidsfoto van een juveniel (positie ontbreekt)."
+     "Juveniel- en vluchtvergelijking met Stadsduif nog niet uit een Nederlandse bron uitgewerkt."
     ],
     "discrepancies": 0
    },
-   "browser": {
-    "ok": true,
-    "viewport": "390x844 Chromium (Playwright)",
-    "photos": 2,
-    "sections": [
-     "Hoofdfoto",
-     "In vlucht"
-    ],
-    "flight": [
-     "/assets/species/plumage/sp002-flight.webp"
-    ],
-    "checks": "SAB-01..07"
-   },
+   "browser": null,
    "errors": [],
    "verdict": "PARTIALLY TESTED",
    "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
@@ -110,8 +113,8 @@
    "family": "Duiven",
    "audited": true,
    "batch": "M1",
-   "date": "2026-11-10",
-   "sha": "9ddb3d984262f8e95bae5a056431ef80bbde73bb",
+   "date": "2026-11-14",
+   "sha": null,
    "assets": [
     {
      "image": "/assets/species/sp003.webp",
@@ -156,17 +159,33 @@
       "rights": "VERIFIED",
       "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 2.0"
      }
+    },
+    {
+     "image": "/assets/species/plumage/sp003-juv.webp",
+     "role": "Juveniel",
+     "content": "Jonge Holenduif op een tak, met een donker oog en korte donkere tekeningen op de gevouwen vleugel.",
+     "sexAge": "Juveniel volgens individuele foto of waarneming en zichtbare kleedkenmerken.",
+     "quality": "Bruikbaar zijaanzicht · 1100 × 804 px.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 14-11-2026: zelfde opname (rechtstreekse conversie van de gecontroleerde bronopname), CC BY 4.0 · Paul Lewis",
+      "annotations": [
+       "Juveniel"
+      ]
+     },
+     "flight": null
     }
    ],
    "corrections": [
     "Opvliegende foto uit 'In vlucht' (eigenaarsmelding) — label 'Opvliegend vanaf de grond' (vluchtcontrole ronde 1).",
     "Veldkenmerken en kleedtekst: \"zwarte vleugelpunten\" → geen wit in hals/vleugel, twee korte zwarte vleugelstrepen, brede zwarte staartband (VB_HOLEN, RSPB_SD).",
     "Zang: \"oe-oe-oe steeds sneller\" → eentonige reeks tweelettergrepige roepen (VB_HVH).",
-    "Lengte 30–33 → 28–32 cm; broedduur 16–18 → 16–17 dagen; nestjongen 27–28 → ca. 24 dagen (VB_HOLEN)."
+    "Lengte 30–33 → 28–32 cm; broedduur 16–18 → 16–17 dagen; nestjongen 27–28 → ca. 24 dagen (VB_HOLEN).",
+    "F2: afzonderlijke brongeverifieerde juvenielenfoto toegevoegd."
    ],
    "missing": [
-    "In vlucht (geen echte vluchtfoto)",
-    "Juveniel"
+    "In vlucht (geen echte vluchtfoto)"
    ],
    "wishes": [],
    "uncertain": [],
@@ -177,7 +196,7 @@
     "visual": "VERIFIED",
     "rights": "VERIFIED",
     "knowledge": "PARTIALLY TESTED",
-    "browser": "VERIFIED",
+    "browser": "NOT TESTED",
     "independent": "NOT TESTED"
    },
    "photoComplete": false,
@@ -190,23 +209,11 @@
     ],
     "open": [
      "Geen goede vluchtfoto: de vorige 'vluchtfoto' toonde een opvliegende vogel en is uit de vluchtrol gehaald (positie ontbreekt).",
-     "Geen gidsfoto van een juveniel.",
      "Kleedvariatie van stadsduiven maakt de stuit niet doorslaggevend."
     ],
     "discrepancies": 0
    },
-   "browser": {
-    "ok": true,
-    "viewport": "390x844 Chromium (Playwright)",
-    "photos": 2,
-    "sections": [
-     "Hoofdfoto",
-     "Overige herkenningsfoto's"
-    ],
-    "flight": [],
-    "checks": "SAB-01..07",
-    "lijktOp": "SAB-09 OK (390 px)"
-   },
+   "browser": null,
    "errors": [],
    "verdict": "PARTIALLY TESTED",
    "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
@@ -217,8 +224,8 @@
    "family": "Duiven",
    "audited": true,
    "batch": "M1",
-   "date": "2026-11-10",
-   "sha": "9ddb3d984262f8e95bae5a056431ef80bbde73bb",
+   "date": "2026-11-14",
+   "sha": null,
    "assets": [
     {
      "image": "/assets/species/sp004.webp",
@@ -264,15 +271,31 @@
       "rights": "VERIFIED",
       "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0"
      }
+    },
+    {
+     "image": "/assets/species/plumage/sp004-juv.webp",
+     "role": "Juveniel",
+     "content": "Jonge Turkse Tortel in zijaanzicht, met lange staart, smalle donkere snavel en zonder zwarte halsband.",
+     "sexAge": "Juveniel volgens individuele foto of waarneming en zichtbare kleedkenmerken.",
+     "quality": "Bruikbaar zijaanzicht · 1100 × 825 px.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 14-11-2026: zelfde opname (rechtstreekse conversie van de gecontroleerde bronopname), CC BY-SA 3.0 · Kreuzschnabel/Wikimedia Commons",
+      "annotations": [
+       "Juveniel"
+      ]
+     },
+     "flight": null
     }
    ],
    "corrections": [
     "Broedsels per jaar 3–5 → 2–5 (VB_TT).",
     "FQA-04: tweede onafhankelijke bron voor de Zomertortel-kant (eBird, birdspot.co.uk) en uitzondering voor juvenielen zonder halstekening.",
-    "sp004.webp: voorwaardelijk → goedgekeurd na kwaliteitsnorm §3.3 (klein in beeld is geen afkeurgrond)"
+    "sp004.webp: voorwaardelijk → goedgekeurd na kwaliteitsnorm §3.3 (klein in beeld is geen afkeurgrond)",
+    "F2: afzonderlijke brongeverifieerde juvenielenfoto toegevoegd."
    ],
    "missing": [
-    "Juveniel (zonder of met vage halsband)",
     "Hoofdfoto met grotere vogel (wenselijk)"
    ],
    "wishes": [],
@@ -284,7 +307,7 @@
     "visual": "VERIFIED",
     "rights": "VERIFIED",
     "knowledge": "PARTIALLY TESTED",
-    "browser": "VERIFIED",
+    "browser": "NOT TESTED",
     "independent": "NOT TESTED"
    },
    "photoComplete": false,
@@ -298,23 +321,11 @@
     "open": [
      "Onderscheid met Lachduif (ontsnapte vogels) nog uit een bron uitwerken.",
      "Spanwijdte en gewicht niet in de geraadpleegde Nederlandse bron.",
-     "Geen gidsfoto van een juveniel; hoofdfoto toont de vogel vrij klein in beeld."
+     "De hoofdfoto toont de vogel vrij klein in beeld."
     ],
     "discrepancies": 0
    },
-   "browser": {
-    "ok": true,
-    "viewport": "390x844 Chromium (Playwright)",
-    "photos": 2,
-    "sections": [
-     "Hoofdfoto",
-     "In vlucht"
-    ],
-    "flight": [
-     "/assets/species/plumage/sp004-flight.webp"
-    ],
-    "checks": "SAB-01..07"
-   },
+   "browser": null,
    "errors": [],
    "verdict": "PARTIALLY TESTED",
    "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
@@ -12739,6 +12750,14 @@
    "audited": false,
    "verdict": "NOT TESTED",
    "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+  }
+ ],
+ "updates": [
+  {
+   "date": "2026-11-14",
+   "scope": "F2 · sp002 sp003 sp004",
+   "basis": "e1f9a37d366809754d487b27787079872e01075c",
+   "evidence": "docs/fotokwaliteit/F2_01_DRIE_DUIVEN_2026-11-14.md"
   }
  ]
 }
