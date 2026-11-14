@@ -5898,8 +5898,7 @@ const DATA = {
     }
    ],
    "open": [
-    "Juveniel- en vluchtvergelijking met Stadsduif nog niet uit een Nederlandse bron uitgewerkt.",
-    "Geen gidsfoto van een juveniel (positie ontbreekt)."
+    "Juveniel- en vluchtvergelijking met Stadsduif nog niet uit een Nederlandse bron uitgewerkt."
    ]
   },
   "sp003": {
@@ -6128,7 +6127,6 @@ const DATA = {
    "discrepancies": [],
    "open": [
     "Geen goede vluchtfoto: de vorige 'vluchtfoto' toonde een opvliegende vogel en is uit de vluchtrol gehaald (positie ontbreekt).",
-    "Geen gidsfoto van een juveniel.",
     "Kleedvariatie van stadsduiven maakt de stuit niet doorslaggevend."
    ]
   },
@@ -6346,7 +6344,7 @@ const DATA = {
    "open": [
     "Onderscheid met Lachduif (ontsnapte vogels) nog uit een bron uitwerken.",
     "Spanwijdte en gewicht niet in de geraadpleegde Nederlandse bron.",
-    "Geen gidsfoto van een juveniel; hoofdfoto toont de vogel vrij klein in beeld."
+    "De hoofdfoto toont de vogel vrij klein in beeld."
    ]
   },
   "sp007": {

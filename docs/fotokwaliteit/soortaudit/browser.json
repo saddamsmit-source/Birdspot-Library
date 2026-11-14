@@ -2,44 +2,6 @@
  "testedOn": "61ad1e3",
  "date": "2026-11-10",
  "species": {
-  "sp002": {
-   "ok": true,
-   "viewport": "390x844 Chromium (Playwright)",
-   "photos": 2,
-   "sections": [
-    "Hoofdfoto",
-    "In vlucht"
-   ],
-   "flight": [
-    "/assets/species/plumage/sp002-flight.webp"
-   ],
-   "checks": "SAB-01..07"
-  },
-  "sp003": {
-   "ok": true,
-   "viewport": "390x844 Chromium (Playwright)",
-   "photos": 2,
-   "sections": [
-    "Hoofdfoto",
-    "Overige herkenningsfoto's"
-   ],
-   "flight": [],
-   "checks": "SAB-01..07",
-   "lijktOp": "SAB-09 OK (390 px)"
-  },
-  "sp004": {
-   "ok": true,
-   "viewport": "390x844 Chromium (Playwright)",
-   "photos": 2,
-   "sections": [
-    "Hoofdfoto",
-    "In vlucht"
-   ],
-   "flight": [
-    "/assets/species/plumage/sp004-flight.webp"
-   ],
-   "checks": "SAB-01..07"
-  },
   "sp005": {
    "ok": true,
    "viewport": "390x844 Chromium (Playwright)",

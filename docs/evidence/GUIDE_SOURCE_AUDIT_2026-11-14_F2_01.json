@@ -1,0 +1,63 @@
+[
+ {
+  "image": "/assets/species/plumage/sp002-juv.webp",
+  "species": "sp002",
+  "source": "https://commons.wikimedia.org/wiki/File:Columba_palumbus_(juvenile).JPG",
+  "sourceTitle": "Columba palumbus (juvenile).JPG",
+  "sourceAuthor": "Roland Gromes",
+  "sourceLicense": "CC BY-SA 4.0",
+  "sourceSha1": "29ab2af935d1deb894ef3c5200cc73fa0e31ab4c",
+  "taxonInSource": "Columba palumbus",
+  "qualityGrade": null,
+  "annotations": [
+   "Juveniel"
+  ],
+  "sameShot": true,
+  "method": "rechtstreekse conversie van de gecontroleerde bronopname",
+  "auditDate": "14-11-2026",
+  "sourceAgeWords": [
+   "juvenile"
+  ]
+ },
+ {
+  "image": "/assets/species/plumage/sp003-juv.webp",
+  "species": "sp003",
+  "source": "https://www.inaturalist.org/photos/725640198",
+  "sourceTitle": "iNaturalist-foto 725640198",
+  "sourceAuthor": "Paul Lewis",
+  "sourceLicense": "CC BY 4.0",
+  "sourceSha1": "9d6707637169df115b15686d09b7f04390adf907",
+  "taxonInSource": "Columba oenas",
+  "qualityGrade": "research",
+  "annotations": [
+   "Juveniel"
+  ],
+  "sameShot": true,
+  "method": "rechtstreekse conversie van de gecontroleerde bronopname",
+  "auditDate": "14-11-2026",
+  "sourceAgeWords": [
+   "juvenile"
+  ],
+  "observation": "https://www.inaturalist.org/observations/395731472"
+ },
+ {
+  "image": "/assets/species/plumage/sp004-juv.webp",
+  "species": "sp004",
+  "source": "https://commons.wikimedia.org/wiki/File:Streptopelia_decaocto_juvenile_2.jpg",
+  "sourceTitle": "Streptopelia decaocto juvenile 2.jpg",
+  "sourceAuthor": "Kreuzschnabel/Wikimedia Commons",
+  "sourceLicense": "CC BY-SA 3.0",
+  "sourceSha1": "945c7658aae2e673aa99925b86c094038c90e148",
+  "taxonInSource": "Streptopelia decaocto",
+  "qualityGrade": null,
+  "annotations": [
+   "Juveniel"
+  ],
+  "sameShot": true,
+  "method": "rechtstreekse conversie van de gecontroleerde bronopname",
+  "auditDate": "14-11-2026",
+  "sourceAgeWords": [
+   "juvenile"
+  ]
+ }
+]
