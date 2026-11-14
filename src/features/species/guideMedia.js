@@ -6408,6 +6408,7 @@ export const GUIDE_POSES = Object.freeze({
       "nl": "Kuifmees",
       "latin": "Lophophanes cristatus",
       "author": "Luc Viatour / https://Lucnix.be",
+      "visibleCredit": "Luc Viatour / https://Lucnix.be",
       "license": "CC BY-SA 3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
       "source": "https://commons.wikimedia.org/wiki/File:Lophophanes_cristatus_Luc_Viatour_1.jpg",

@@ -55,9 +55,9 @@ def main():
       assert credit.get_by_role('link',name='CC BY-SA 3.0').get_attribute('href') == photo['licenseUrl']
       assert credit.get_by_role('link',name='Open fotobron').get_attribute('href') == photo['source']
       p.keyboard.press('Escape')
-     if sid == 'sp032':
+     if sid in ('sp032', 'sp033'):
       frame=p.locator('#sdPanel-herkenning .photo-info-frame').filter(
-          has=p.locator('img[src$="sp032-view.webp"]'))
+          has=p.locator(f'img[src$="{sid}-view.webp"]'))
       caption=frame.locator('.photo-visible-credit')
       assert caption.is_visible() and caption.inner_text() == 'Luc Viatour / https://Lucnix.be'
       frame.locator('[data-guide-image]').click()
