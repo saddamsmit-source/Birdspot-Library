@@ -32,6 +32,9 @@ from playwright.sync_api import sync_playwright
 ROOT = Path(__file__).resolve().parent.parent
 BASE_REF = sys.argv[sys.argv.index("--base") + 1] if "--base" in sys.argv else "5bf6704"
 NEW_VERSION = re.search(r"const APP_VERSION = '([^']+)'", (ROOT / "sw.js").read_text(encoding="utf-8")).group(1)
+version_match = re.match(r"^(\d+)\.(\d+)\.(\d+)", NEW_VERSION)
+assert version_match, f"Unknown candidate version: {NEW_VERSION}"
+RUN_RU08 = tuple(map(int, version_match.groups())) >= (1, 27, 7)
 SERVE = {"dir": None}
 
 SEED_LS = {
@@ -187,11 +190,11 @@ def main():
             assert snapshot(p)["ls"]["birdspot-sightings"] == before["ls"]["birdspot-sightings"], "RU-06 data offline anders"
             print("RU-06 OK — offline gestart na update; soortkaart Zilvermeeuw met gedecodeerde gidsfoto; gegevens gelijk")
 
-            # RU-08 (1.27.7 release candidate): validate that new post-1.27.6 media,
+            # RU-08 (release candidates >= 1.27.7): validate post-1.27.6 media,
             # not present in the old review revision, is physically precached
             # and decodes OFFLINE. Also prove two changed JS modules are the
             # exact current candidate bytes (not stale 1.27.6 code).
-            if NEW_VERSION == "1.27.7":
+            if RUN_RU08:
                 import hashlib
                 new_media = [
                     "/assets/species/plumage/sp082-portrait.webp",
@@ -247,7 +250,7 @@ def main():
     assert not errors, f"RU-07 paginafouten: {errors}"
     print("RU-07 OK — geen paginafouten")
     print(f"Releasegate upgrade {BASE_REF} → {NEW_VERSION}: RU-01..07 PASS" +
-          (" + RU-08 PASS (new offline images and exact JS)" if NEW_VERSION == "1.27.7" else ""))
+          (" + RU-08 PASS (new offline images and exact JS)" if RUN_RU08 else ""))
 
 
 if __name__ == "__main__":
