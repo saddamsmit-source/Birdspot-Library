@@ -10,8 +10,8 @@
     "progressMethod": "Count 100 canonical audited items plus unique individually first-pass-reviewed canonical audited:false IDs; no duplicates. expectedFirstPass/expectedRemaining are cross-checks and must be updated together.",
     "nextGate": "When all 140 have initial documented review, independently and comprehensively reverify ALL 140; only afterwards work on species outside the group of 140.",
     "limits": "No source, license, age/sex or complete audit is promoted by this index. Do not alter canonical audited/verdict fields based on progress alone.",
-    "expectedFirstPass": 129,
-    "expectedRemaining": 11
+    "expectedFirstPass": 132,
+    "expectedRemaining": 8
   },
   "additionalFirstPass": [
     {
@@ -419,6 +419,48 @@
       "independentSexAge": "NOT TESTED",
       "fullKnowledgeReview": "NOT TESTED",
       "firstPassScope": "Two distinct actual local WebP files independently opened/visually inspected per species; recorded source/flight/hero roles and original license where accessible; exact original pixel matching, all derivative rights, sex/age and full knowledge remain open"
+    },
+    {
+      "id": "sp020",
+      "nameNL": "Middelste Bonte Specht",
+      "batch": "M22",
+      "photosSeen": 4,
+      "reviewDocument": "docs/fotokwaliteit/M22_SPECHT_EN_TWEE_VINKEN_2026-11-14_DRAFT.md",
+      "reviewPR": null,
+      "evidenceCommit": "6533f2f3e9fe74ef831af75807ec15f1b98b43e1",
+      "status": "PARTIALLY TESTED",
+      "originalRights": "NOT TESTED",
+      "independentSexAge": "NOT TESTED",
+      "fullKnowledgeReview": "NOT TESTED",
+      "firstPassScope": "Individually visually checked existing local Birdspot-WebP files; 4 of 7 corresponding Commons original pages inspected directly for creator/license; remaining originals/rights/pixel match and full biology/individual sex-age still open"
+    },
+    {
+      "id": "sp039",
+      "nameNL": "Kneu",
+      "batch": "M22",
+      "photosSeen": 2,
+      "reviewDocument": "docs/fotokwaliteit/M22_SPECHT_EN_TWEE_VINKEN_2026-11-14_DRAFT.md",
+      "reviewPR": null,
+      "evidenceCommit": "6533f2f3e9fe74ef831af75807ec15f1b98b43e1",
+      "status": "PARTIALLY TESTED",
+      "originalRights": "NOT TESTED",
+      "independentSexAge": "NOT TESTED",
+      "fullKnowledgeReview": "NOT TESTED",
+      "firstPassScope": "Individually visually checked existing local Birdspot-WebP files; 4 of 7 corresponding Commons original pages inspected directly for creator/license; remaining originals/rights/pixel match and full biology/individual sex-age still open"
+    },
+    {
+      "id": "sp042",
+      "nameNL": "Roodmus",
+      "batch": "M22",
+      "photosSeen": 1,
+      "reviewDocument": "docs/fotokwaliteit/M22_SPECHT_EN_TWEE_VINKEN_2026-11-14_DRAFT.md",
+      "reviewPR": null,
+      "evidenceCommit": "6533f2f3e9fe74ef831af75807ec15f1b98b43e1",
+      "status": "PARTIALLY TESTED",
+      "originalRights": "NOT TESTED",
+      "independentSexAge": "NOT TESTED",
+      "fullKnowledgeReview": "NOT TESTED",
+      "firstPassScope": "Individually visually checked existing local Birdspot-WebP files; 4 of 7 corresponding Commons original pages inspected directly for creator/license; remaining originals/rights/pixel match and full biology/individual sex-age still open"
     }
   ]
 }
