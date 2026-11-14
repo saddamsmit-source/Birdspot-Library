@@ -5280,8 +5280,8 @@
    "family": "Goudhaantjes",
    "audited": true,
    "batch": "M3",
-   "date": "2026-11-11",
-   "sha": "9ddb3d984262f8e95bae5a056431ef80bbde73bb",
+   "date": "2026-11-14",
+   "sha": null,
    "assets": [
     {
      "image": "/assets/species/sp063.webp",
@@ -5292,7 +5292,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Alexis Lours",
       "annotations": []
      },
      "flight": null
@@ -5306,7 +5306,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Silmethule",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Silmethule",
       "annotations": []
      },
      "flight": null
@@ -5320,7 +5320,7 @@
      "verdict": "voorwaardelijk",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Alpsdake",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 3.0 · Alpsdake",
       "annotations": []
      },
      "flight": {
@@ -5341,15 +5341,29 @@
       "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0",
       "replacement": "gewenst"
      }
+    },
+    {
+     "image": "/assets/species/plumage/sp063-adult-f.webp",
+     "role": "Verenkleed (Vrouwtje)",
+     "content": "Zijaanzicht met gele kruinstreep op een tak.",
+     "sexAge": "Vrouwtje volgens de fotograaf.",
+     "quality": "Volledige vogel, herkenbare kop en vleugelstrepen.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 14-11-2026: zelfde opname (Verkleind tot maximaal 1600 px en omgezet naar WebP zonder uitsnede. Metadata verwijderd.), CC BY-SA 3.0 · Francis C. Franklin",
+      "annotations": []
+     },
+     "flight": null
     }
    ],
    "corrections": [
     "Vluchtfoto blijft in de vluchtsectie met de aanduiding Voorlopige foto. De ondersoort staat zichtbaar in het bijschrift.",
-    "Kennisprofiel vergelijkt het gezicht met Vuurgoudhaan en vermeldt de beperking van een gele kruin voor geslachtsbepaling."
+    "Kennisprofiel vergelijkt het gezicht met Vuurgoudhaan en vermeldt de beperking van een gele kruin voor geslachtsbepaling.",
+    "Drie foto’s naast de originelen gelegd. Een vierde foto toont een door de fotograaf bevestigd vrouwtje. De opgave van de fotograaf blijft bepalend voor dat label."
    ],
    "missing": [
     "Afzonderlijke mannetjesfoto",
-    "Afzonderlijke vrouwtjesfoto",
     "Scherpe Europese vluchtfoto"
    ],
    "wishes": [],
@@ -5375,7 +5389,7 @@
      "Wenkbrauw en oogstreep"
     ],
     "open": [
-     "De hoofdfoto heeft geen bevestigd geslachtslabel. Afzonderlijke mannetjes- en vrouwtjesfoto’s en een scherpere Europese vluchtfoto ontbreken."
+     "Een bronbevestigde mannetjesfoto en een scherpe Europese vluchtfoto ontbreken. De aanwezige Japanse vluchtfoto is voorlopig."
     ],
     "discrepancies": 0
    },
@@ -5599,33 +5613,61 @@
    "family": "Boomkruipers",
    "audited": true,
    "batch": "M1",
-   "date": "2026-11-10",
-   "sha": "9ddb3d984262f8e95bae5a056431ef80bbde73bb",
+   "date": "2026-11-14",
+   "sha": null,
    "assets": [
     {
      "image": "/assets/species/sp066.webp",
      "role": "Hoofdfoto",
      "content": "Boomkruiper tegen stam; gestreepte bruine rug, gebogen snavel, steunstaart.",
      "sexAge": "niet vast te stellen",
-     "quality": "matig: vogel klein in beeld en wat zacht; vleugelband (kritisch kenmerk) niet scherp",
-     "verdict": "voorwaardelijk",
+     "quality": "Herkenbare houding, snavel en steunstaart. De scherpere tweede foto toont de vleugelband beter.",
+     "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Jan Matthies",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Jan Matthies",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp066-wing.webp",
+     "role": "Overige herkenningsfoto's",
+     "content": "Zittend op stam met gevouwen vleugel en lichte, puntige veerranden.",
+     "sexAge": "Leeftijd en geslacht open.",
+     "quality": "Scherpe vleugelband in passend zijaanzicht.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 14-11-2026: zelfde opname (Verkleind tot maximaal 1600 px en omgezet naar WebP zonder uitsnede. Metadata verwijderd.), CC BY-SA 4.0 · Charles J. Sharp",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp066-juv-fed.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jong links neemt voedsel aan van ouder rechts.",
+     "sexAge": "De fotograaf vermeldt welke vogel juveniel is. Geslacht open.",
+     "quality": "Beide vogels en voerhandeling zichtbaar.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 14-11-2026: zelfde opname (Omgezet naar WebP zonder uitsnede. Metadata verwijderd.), CC BY-SA 2.0 · hedera.baltica",
       "annotations": []
      },
      "flight": null
     }
    ],
-   "corrections": [],
+   "corrections": [
+    "Originele hoofdfoto gecontroleerd. Twee bronfoto’s toegevoegd, één voor de vleugelband en één van een gevoerd jong. Nederlandse populatie en geluidsvergelijking onderbouwd."
+   ],
    "missing": [
-    "In vlucht",
-    "Juveniel",
-    "Hoofdfoto waarop het vleugelbandpatroon leesbaar is"
+    "Een bronbevestigde vrije-vluchtfoto."
    ],
    "wishes": [],
    "uncertain": [
-    "Boomkruiper en Taigaboomkruiper zijn op deze foto niet zelfstandig te onderscheiden; soortbepaling steunt op de bron (Commons-titel 'Gartenbaumläufer')."
+    "Het oorspronkelijke portret houdt de bronbepaling 'Gartenbaumläufer'. Gebruik het nieuwe vleugelbeeld en geluid voor het onderscheid."
    ],
    "sexPolicy": "Geslachten gelijk.",
    "previous": null,
@@ -5634,7 +5676,7 @@
     "visual": "VERIFIED",
     "rights": "VERIFIED",
     "knowledge": "PARTIALLY TESTED",
-    "browser": "VERIFIED",
+    "browser": "NOT TESTED",
     "independent": "NOT TESTED"
    },
    "photoComplete": false,
@@ -5651,23 +5693,12 @@
      "Snavel en achternagel"
     ],
     "open": [
-     "Nederlandse status en aantallen niet opnieuw gecontroleerd (Sovon/Vogelbescherming).",
-     "Roep en zang van de Taigaboomkruiper nog uit een bron beschrijven.",
-     "Hoofdfoto toont de vleugelband niet scherp; soortbepaling van die foto steunt op bronmetadata (fotobaseline batch 01).",
-     "Volledige tekst van het British Birds-artikel niet gelezen."
+     "Een bronbevestigde vrije-vluchtfoto ontbreekt. De soortkaart gebruikt een aanvullend scherp vleugelbeeld in Lijkt op.",
+     "De volledige tekst van de aangehaalde British Birds-studie is nog niet beoordeeld."
     ],
     "discrepancies": 0
    },
-   "browser": {
-    "ok": true,
-    "viewport": "390x844 Chromium (Playwright)",
-    "photos": 1,
-    "sections": [
-     "Hoofdfoto"
-    ],
-    "flight": [],
-    "checks": "SAB-01..07"
-   },
+   "browser": null,
    "errors": [],
    "verdict": "PARTIALLY TESTED",
    "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
@@ -5678,42 +5709,57 @@
    "family": "Boomkruipers",
    "audited": true,
    "batch": "M2",
-   "date": "2026-11-10",
-   "sha": "9ddb3d984262f8e95bae5a056431ef80bbde73bb",
+   "date": "2026-11-14",
+   "sha": null,
    "assets": [
     {
      "image": "/assets/species/sp067.webp",
      "role": "Hoofdfoto",
      "content": "Boomkruiper tegen dennenstam; witte onderdelen en flanken, duidelijke witte wenkbrauw.",
      "sexAge": "niet vast te stellen",
-     "quality": "goed; vleugelpatroon (kritisch kenmerk) slecht zichtbaar",
-     "verdict": "voorwaardelijk",
+     "quality": "goed; voor de vleugelband wordt het afzonderlijke zijaanzicht gebruikt",
+     "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Bengt Nyman from Vaxholm, Sweden",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 2.0 · Bengt Nyman from Vaxholm, Sweden",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp067-wing.webp",
+     "role": "Overige herkenningsfoto's",
+     "content": "Taigaboomkruiper met de kop omhoog op een bemoste stam, zichtbare lichte flank en gevouwen vleugel.",
+     "sexAge": "Bron bevestigt de soort. Leeftijd, ondersoort en geslacht staan open.",
+     "quality": "Scherp vergelijkbaar zijaanzicht met zichtbare vleugelband.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 14-11-2026: zelfde opname (Verkleind tot maximaal 1600 px en omgezet naar WebP zonder uitsnede. Metadata verwijderd.), CC BY 2.0 · caroline legg",
       "annotations": []
      },
      "flight": null
     }
    ],
-   "corrections": [],
+   "corrections": [
+    "Originele hoofdfoto naast het appbestand gelegd. Scherp vleugelbeeld toegevoegd voor de vergelijking op een stam. Afmetingen naast MME gelegd."
+   ],
    "missing": [
     "In vlucht",
-    "Juveniel",
-    "Foto waarop het vleugelbandpatroon leesbaar is"
+    "Juveniel"
    ],
    "wishes": [],
    "uncertain": [
-    "Soortbepaling steunt op de bron (Commons, Certhia familiaris); witte flanken en wenkbrauw passen, maar het vleugelpatroon is niet te beoordelen (REVIEW REQUIRED voor onafhankelijke bevestiging)."
+    "De fotograaf benoemt Certhia familiaris. De hoofdfoto biedt beperkt zicht op de vleugelband. Beide foto's houden de ondersoort open."
    ],
    "sexPolicy": "Geslachten gelijk.",
    "previous": null,
    "status": {
     "technical": "VERIFIED",
-    "visual": "PARTIALLY TESTED",
+    "visual": "VERIFIED",
     "rights": "VERIFIED",
     "knowledge": "PARTIALLY TESTED",
-    "browser": "VERIFIED",
+    "browser": "NOT TESTED",
     "independent": "NOT TESTED"
    },
    "photoComplete": false,
@@ -5727,22 +5773,12 @@
      "Flanken en wenkbrauw"
     ],
     "open": [
-     "De hoofdfoto laat het vleugelpatroon niet goed zien; soortbepaling steunt op de bron (Commons, Certhia familiaris).",
-     "Welke vorm (nominaat of kortsnavel) de hoofdfoto toont, is niet uit de bron vast te stellen."
+     "De hoofdfoto en het aanvullende zijaanzicht hebben een bronbevestigde soortnaam. Welke ondersoort zij tonen staat open.",
+     "Afzonderlijke bronbevestigde foto’s van een juveniel en een vogel in vrije vlucht ontbreken."
     ],
     "discrepancies": 0
    },
-   "browser": {
-    "ok": true,
-    "viewport": "390x844 Chromium (Playwright)",
-    "photos": 1,
-    "sections": [
-     "Hoofdfoto"
-    ],
-    "flight": [],
-    "checks": "SAB-01..07",
-    "lijktOp": "SAB-09 OK (390 px)"
-   },
+   "browser": null,
    "errors": [],
    "verdict": "PARTIALLY TESTED",
    "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
@@ -12730,6 +12766,12 @@
    "scope": "F2 · sp033 sp034 sp065",
    "basis": "10288467a6d4db7fd52d5e5635bd7083e95a5373",
    "evidence": "docs/evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_13.json"
+  },
+  {
+   "date": "2026-11-14",
+   "scope": "F2 · sp063 sp066 sp067",
+   "basis": "ff721fbddc37cd5e03fdfe9892716ffc37dddf98",
+   "evidence": "docs/evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_14.json"
   }
  ]
 }

@@ -3676,11 +3676,53 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "verification": "Fotograaf beschrijft expliciet een juveniel; ontbrekende gekleurde kruinstreep en licht gezicht visueel gecontroleerd.",
       "originalURL": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Juvenile_goldcrest.jpg",
       "image": "/assets/species/plumage/sp063-juv.webp"
+    },
+    "adult_f": {
+      "file": "Goldcrest 1.jpg",
+      "nl": "Goudhaantje",
+      "latin": "Regulus regulus",
+      "author": "Francis C. Franklin",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Goldcrest_1.jpg",
+      "alt": "Vrouwtje Goudhaantje in zijaanzicht op een tak, met gele kruinstreep en een vrij egaal gezicht.",
+      "modifications": "Verkleind tot maximaal 1600 px en omgezet naar WebP zonder uitsnede",
+      "reviewed": "2026-11-14",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/goudhaan",
+      "width": 1600,
+      "height": 1200,
+      "image": "/assets/species/plumage/sp063-adult-f.webp",
+      "verification": "De fotograaf benoemt een vrouwtje Regulus regulus. Het kleed toont een ontwikkelde gele kruinstreep.",
+      "label": "Vrouwtje",
+      "note": "De fotograaf noemt een vrouwtje. Op deze foto is de kruinstreep geel.",
+      "age": "adult",
+      "sex": "female",
+      "visibleCredit": "© Francis C. Franklin / CC-BY-SA-3.0"
     }
   },
   "sp066": {
     "adult_m": {
       "reuseGuidePhoto": true
+    },
+    "juv": {
+      "file": "Feed me! (20741323391).jpg",
+      "nl": "Boomkruiper",
+      "latin": "Certhia brachydactyla",
+      "author": "hedera.baltica",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Feed_me!_(20741323391).jpg",
+      "alt": "Twee Boomkruipers op dezelfde stam. Het jong links neemt voedsel aan van de ouder rechts.",
+      "modifications": "Omgezet naar WebP zonder uitsnede",
+      "reviewed": "2026-11-14",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/boomkruiper",
+      "width": 1000,
+      "height": 779,
+      "image": "/assets/species/plumage/sp066-juv-fed.webp",
+      "verification": "De bron identificeert Certhia brachydactyla en benoemt de jonge vogel links en de ouder rechts. Beide vogels staan los van het nest op de stam.",
+      "label": "Jong links, ouder rechts",
+      "note": "Het jong links krijgt voedsel. De gele snavelhoeken zijn zichtbaar.",
+      "age": "juvenile"
     }
   },
   "sp067": {
@@ -10078,6 +10120,48 @@ export const GUIDE_POSES = Object.freeze({
       "age": "juvenile",
       "label": "Verder uitgegroeid juveniel",
       "note": "Zicht op de bruin gestreepte flank en de staart in zijaanzicht."
+    }
+  ],
+  "sp066": [
+    {
+      "file": "Short-toed treecreeper (Certhia brachydactyla brachydactyla).jpg",
+      "nl": "Boomkruiper",
+      "latin": "Certhia brachydactyla",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Short-toed_treecreeper_(Certhia_brachydactyla_brachydactyla).jpg",
+      "alt": "Boomkruiper op een stam met de kop omhoog. De gevouwen vleugel en haar lichte, puntige randen zijn zichtbaar.",
+      "modifications": "Verkleind tot maximaal 1600 px en omgezet naar WebP zonder uitsnede",
+      "reviewed": "2026-11-14",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/boomkruiper",
+      "width": 1066,
+      "height": 1600,
+      "image": "/assets/species/plumage/sp066-wing.webp",
+      "verification": "Fotograaf beschrijft Certhia brachydactyla brachydactyla. Zijaanzicht met vrije gevouwen vleugel. Leeftijd en geslacht open.",
+      "label": "Vleugelband op de stam",
+      "note": "Let op de lichte, puntige randen in de gevouwen vleugel."
+    }
+  ],
+  "sp067": [
+    {
+      "file": "Eurasian Treecreeper - Certhia familiaris (54192274817).jpg",
+      "nl": "Taigaboomkruiper",
+      "latin": "Certhia familiaris",
+      "author": "caroline legg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Eurasian_Treecreeper_-_Certhia_familiaris_(54192274817).jpg",
+      "alt": "Taigaboomkruiper met de kop omhoog op een bemoste stam. Lichte flank en gevouwen vleugel zijn zichtbaar.",
+      "modifications": "Verkleind tot maximaal 1600 px en omgezet naar WebP zonder uitsnede",
+      "reviewed": "2026-11-14",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/taigaboomkruiper",
+      "width": 1143,
+      "height": 1600,
+      "image": "/assets/species/plumage/sp067-wing.webp",
+      "verification": "Fotograaf benoemt Certhia familiaris. De gevouwen vleugel en witte onderzijde zijn zichtbaar. Ondersoort, leeftijd en geslacht open.",
+      "label": "Vleugelband op de stam",
+      "note": "Bekijk de verspringende lichte baan op de gevouwen vleugel en de lichte flank."
     }
   ]
 });

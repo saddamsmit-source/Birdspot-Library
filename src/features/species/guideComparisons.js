@@ -649,7 +649,11 @@ export const GUIDE_COMPARISONS = [
         "marks": "Brede witte wenkbrauw boven een zwarte oogstreep; duidelijk contrastrijker gezicht."
       }
     ],
-    "tip": "Begin bij het gezicht, niet bij de kleur van de kruin. Beide soorten kunnen geel én oranje op de kruin tonen."
+    rows: [
+      {label: 'Wenkbrauw', values: ['Geen brede witte wenkbrauw.', 'Brede witte wenkbrauw.']},
+      {label: 'Oogstreek', values: ['Donker oog in een vrij egaal gezicht.', 'Donkere oogstreep met meer contrast rond het oog.']},
+    ],
+    "tip": "Begin bij de wenkbrauw en oogstreek. Bij beide soorten kan de kruin geel of oranje tonen."
   },
   {
     "label": "Boomklever en Boomkruiper · bouw en beweging",
@@ -674,20 +678,27 @@ export const GUIDE_COMPARISONS = [
     "tip": "Vergelijk eerst snavel en staart. Let bij een bewegende vogel ook op de klimrichting."
   },
   {
-    "label": "Boomkruiper en Taigaboomkruiper · combineer beeld en geluid",
+    "label": "Boomkruiper en Taigaboomkruiper · op een stam",
     "birds": [
       {
         "id": "sp066",
         "source": "boomkruiper",
+        "photo": "/assets/species/plumage/sp066-wing.webp",
         "marks": "Vaak warmere flanken, minder opvallende wenkbrauw en een gelijkmatiger verloop van de lichte vleugelband."
       },
       {
         "id": "sp067",
         "source": "taigaboomkruiper",
+        "photo": "/assets/species/plumage/sp067-wing.webp",
         "marks": "Vaak witter onderaan en achter het oog. Het precieze patroon van de lichte vleugelband helpt, maar vraagt een scherp zijaanzicht."
       }
     ],
-    "tip": "Luister naar volledige zangstrofen en vergelijk meerdere beelden. Kleur, snavellengte of één witte streep alleen is onvoldoende; ondersoorten en kijkhoek beïnvloeden het beeld."
+    rows: [
+      {label: 'Vleugelband', values: ['Lichte punten met een geleidelijk verloop.', 'Lichte baan met een inkeping en een steilere sprong.']},
+      {label: 'Flank', values: ['Vaak warmer bruin.', 'Op deze foto lichter. De tint verschilt per ondersoort.']},
+      {label: 'Geluid', values: ['Typische zang stijgt. De roep is vaak doordringend.', 'Typische zang begint hoog en daalt. De roep is vaak dunner.']},
+    ],
+    "tip": "Luister via Geluid op beide kaarten naar een hele zangstrofe. Vergelijk daarna de gevouwen vleugel op een scherp zijaanzicht. Mengzang komt voor."
   },
   {
     "label": "Meerkoet en Waterhoen · volwassen",

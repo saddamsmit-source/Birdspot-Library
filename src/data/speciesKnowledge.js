@@ -4293,6 +4293,72 @@ const DATA = {
    "checked": "2026-11-14",
    "certainty": "hoog",
    "publisher": "British Trust for Ornithology"
+  },
+  "MME_STT": {
+   "register": "NL07",
+   "label": "MME BirdLife Hungary — Boomkruiper",
+   "url": "https://mme.hu/en/magyarorszagmadarai/madaradatbazis-cerbra",
+   "edition": "Online geraadpleegd 14-11-2026",
+   "scope": "Nederland",
+   "confirms": "lengte 12 cm, spanwijdte 17–21 cm",
+   "checked": "2026-11-14",
+   "certainty": "hoog",
+   "publisher": "MME BirdLife Hungary"
+  },
+  "MME_TAIGA": {
+   "register": "NL07",
+   "label": "MME BirdLife Hungary — Taigaboomkruiper",
+   "url": "https://mme.hu/en/magyarorszagmadarai/madaradatbazis-cerfam",
+   "edition": "Online geraadpleegd 14-11-2026",
+   "scope": "Nederland",
+   "confirms": "lengte 12–13 cm, spanwijdte 17–21 cm",
+   "checked": "2026-11-14",
+   "certainty": "hoog",
+   "publisher": "MME BirdLife Hungary"
+  },
+  "SOV_STT": {
+   "register": "NL07",
+   "label": "Sovon — Boomkruiper",
+   "url": "https://stats.sovon.nl/stats/soort/14870",
+   "edition": "Online geraadpleegd 14-11-2026",
+   "scope": "Nederland",
+   "confirms": "broedpopulatie 2018–2020, jaarrond",
+   "checked": "2026-11-14",
+   "certainty": "hoog",
+   "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "WT_GH": {
+   "register": "nieuwe soortreferentie",
+   "label": "The Wildlife Trusts — Goudhaantje",
+   "url": "https://www.wildlifetrusts.org/wildlife-explorer/birds/tits-crests-and-warblers/goldcrest",
+   "edition": "Online geraadpleegd 14-11-2026",
+   "scope": "West-Europa",
+   "confirms": "typische lengte van 9 cm en spanwijdte van 14 cm",
+   "checked": "2026-11-14",
+   "certainty": "hoog",
+   "publisher": "The Wildlife Trusts"
+  },
+  "GH_VROUWTJE": {
+   "register": "nieuwe soortreferentie",
+   "label": "Francis C. Franklin — Goudhaantje vrouwtje",
+   "url": "https://commons.wikimedia.org/wiki/File:Goldcrest_1.jpg",
+   "edition": "Online geraadpleegd 14-11-2026",
+   "scope": "West-Europa",
+   "confirms": "vrouwtje in het fotobijschrift",
+   "checked": "2026-11-14",
+   "certainty": "hoog",
+   "publisher": "Francis C. Franklin"
+  },
+  "STT_JEUGDFOTO": {
+   "register": "NL07",
+   "label": "hedera.baltica — Boomkruiper met jong",
+   "url": "https://commons.wikimedia.org/wiki/File:Feed_me!_(20741323391).jpg",
+   "edition": "Online geraadpleegd 14-11-2026",
+   "scope": "Nederland",
+   "confirms": "soort en positie van de juveniele vogel links",
+   "checked": "2026-11-14",
+   "certainty": "hoog",
+   "publisher": "hedera.baltica"
   }
  },
  "profiles": {
@@ -5075,7 +5141,7 @@ const DATA = {
      "feature": "Roep",
      "where": "Geluid",
      "this": "Doordringend 'tuut', vaak herhaald als 'tie tie tie'",
-     "other": "Taigaboomkruiper: andere roep (in de geraadpleegde bronnen niet beschreven)",
+     "other": "Taigaboomkruiper geeft doorgaans een dunnere, ijlere roep.",
      "vs": [
       "sp067"
      ],
@@ -5085,14 +5151,15 @@ const DATA = {
      "supporting": "Vleugelband, flanken",
      "sources": [
       "EB_STT",
-      "NAT_STT"
+      "NAT_STT",
+      "VB_TAIGA"
      ]
     },
     {
      "feature": "Zang",
      "where": "Geluid",
      "this": "Korte, stijgende frase",
-     "other": "Taigaboomkruiper: andere zang (niet beschreven in de geraadpleegde bronnen)",
+     "other": "De typische zang van Taigaboomkruiper begint hoog en daalt daarna twee keer.",
      "vs": [
       "sp067"
      ],
@@ -5103,7 +5170,8 @@ const DATA = {
      "sources": [
       "NAT_STT",
       "RSPB_STT",
-      "BB_STT"
+      "BB_STT",
+      "VB_TAIGA"
      ]
     },
     {
@@ -5206,6 +5274,13 @@ const DATA = {
       "NAT_STT",
       "EB_STT"
      ]
+    },
+    {
+     "topic": "leeftijd",
+     "text": "Op de stamfoto zit het jong links. De gele snavelhoeken zijn zichtbaar terwijl de ouder voedsel aanreikt.",
+     "sources": [
+      "STT_JEUGDFOTO"
+     ]
     }
    ],
    "voice": [
@@ -5225,7 +5300,15 @@ const DATA = {
      ]
     }
    ],
-   "basis": {},
+   "basis": {
+    "size": {
+     "text": "Vogelbescherming noemt 12–13,5 cm lichaamslengte. MME geeft 12 cm en 17–21 cm spanwijdte.",
+     "sources": [
+      "VB_BOOMKRUIPER",
+      "MME_STT"
+     ]
+    }
+   },
    "habitat": [
     {
      "kind": "voorkeur",
@@ -5235,14 +5318,21 @@ const DATA = {
      ]
     }
    ],
-   "status": [],
+   "status": [
+    {
+     "kind": "Nederland",
+     "text": "Nederlandse standvogel. Sovon schat 135.000–180.000 broedparen voor 2018–2020.",
+     "sources": [
+      "VB_BOOMKRUIPER",
+      "SOV_STT"
+     ]
+    }
+   ],
    "life": [],
    "discrepancies": [],
    "open": [
-    "Nederlandse status en aantallen niet opnieuw gecontroleerd (Sovon/Vogelbescherming).",
-    "Roep en zang van de Taigaboomkruiper nog uit een bron beschrijven.",
-    "Hoofdfoto toont de vleugelband niet scherp; soortbepaling van die foto steunt op bronmetadata (fotobaseline batch 01).",
-    "Volledige tekst van het British Birds-artikel niet gelezen."
+    "Een bronbevestigde vrije-vluchtfoto ontbreekt. De soortkaart gebruikt een aanvullend scherp vleugelbeeld in Lijkt op.",
+    "De volledige tekst van de aangehaalde British Birds-studie is nog niet beoordeeld."
    ]
   },
   "sp008": {
@@ -8289,9 +8379,10 @@ const DATA = {
    ],
    "basis": {
     "size": {
-     "text": "Lengte 12,5 cm.",
+     "text": "Vogelbescherming noemt een lichaamslengte van 12,5 cm. MME noemt 12–13 cm lengte en 17–21 cm spanwijdte.",
      "sources": [
-      "VB_TAIGA"
+      "VB_TAIGA",
+      "MME_TAIGA"
      ]
     }
    },
@@ -8338,8 +8429,8 @@ const DATA = {
    ],
    "discrepancies": [],
    "open": [
-    "De hoofdfoto laat het vleugelpatroon niet goed zien; soortbepaling steunt op de bron (Commons, Certhia familiaris).",
-    "Welke vorm (nominaat of kortsnavel) de hoofdfoto toont, is niet uit de bron vast te stellen."
+    "De hoofdfoto en het aanvullende zijaanzicht hebben een bronbevestigde soortnaam. Welke ondersoort zij tonen staat open.",
+    "Afzonderlijke bronbevestigde foto’s van een juveniel en een vogel in vrije vlucht ontbreken."
    ]
   },
   "sp095": {
@@ -10157,6 +10248,14 @@ const DATA = {
       "AV_GH_JPN"
      ],
      "topic": "vlucht"
+    },
+    {
+     "topic": "geslacht",
+     "text": "De fotograaf benoemt het vrouwtje op de afzonderlijke kleedfoto. Op de hoofdfoto blijft het geslacht open, omdat een mannetje het oranje in de kruin kan verbergen.",
+     "sources": [
+      "GH_VROUWTJE",
+      "RSPB_GH"
+     ]
     }
    ],
    "voice": [
@@ -10177,9 +10276,10 @@ const DATA = {
    ],
    "basis": {
     "size": {
-     "text": "Vogelbescherming noemt 8,5–9,5 cm lengte.",
+     "text": "Vogelbescherming noemt 8,5–9,5 cm lichaamslengte. The Wildlife Trusts geeft 9 cm lengte en 14 cm spanwijdte als typische waarden.",
      "sources": [
-      "VB_GH"
+      "VB_GH",
+      "WT_GH"
      ]
     }
    },
@@ -10212,7 +10312,7 @@ const DATA = {
    ],
    "discrepancies": [],
    "open": [
-    "De hoofdfoto heeft geen bevestigd geslachtslabel. Afzonderlijke mannetjes- en vrouwtjesfoto’s en een scherpere Europese vluchtfoto ontbreken."
+    "Een bronbevestigde mannetjesfoto en een scherpe Europese vluchtfoto ontbreken. De aanwezige Japanse vluchtfoto is voorlopig."
    ]
   },
   "sp068": {

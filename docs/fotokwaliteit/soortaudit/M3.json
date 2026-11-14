@@ -116,21 +116,29 @@
           "sexAge": "Geen geslacht of exacte leeftijd bevestigd door de fotobron.",
           "quality": "Bewegingsonscherpte beperkt de herkenningsdetails.",
           "verdict": "voorwaardelijk"
+        },
+        "/assets/species/plumage/sp063-adult-f.webp": {
+          "role": "Verenkleed (Vrouwtje)",
+          "content": "Zijaanzicht met gele kruinstreep op een tak.",
+          "sexAge": "Vrouwtje volgens de fotograaf.",
+          "quality": "Volledige vogel, herkenbare kop en vleugelstrepen.",
+          "verdict": "goedgekeurd"
         }
       },
       "corrections": [
         "Vluchtfoto blijft in de vluchtsectie met de aanduiding Voorlopige foto. De ondersoort staat zichtbaar in het bijschrift.",
-        "Kennisprofiel vergelijkt het gezicht met Vuurgoudhaan en vermeldt de beperking van een gele kruin voor geslachtsbepaling."
+        "Kennisprofiel vergelijkt het gezicht met Vuurgoudhaan en vermeldt de beperking van een gele kruin voor geslachtsbepaling.",
+        "Drie foto’s naast de originelen gelegd. Een vierde foto toont een door de fotograaf bevestigd vrouwtje. De opgave van de fotograaf blijft bepalend voor dat label."
       ],
       "missing": [
         "Afzonderlijke mannetjesfoto",
-        "Afzonderlijke vrouwtjesfoto",
         "Scherpe Europese vluchtfoto"
       ],
       "sexPolicy": "Oranje kan bij mannetjes verborgen zijn. De hoofdfoto en de vluchtfoto krijgen zonder bronbewijs een neutraal label.",
       "uncertain": [
         "De fotograaf van de hoofdfoto noemt geen geslacht. De zichtbare gele kruin is onvoldoende voor het label Vrouwtje."
-      ]
+      ],
+      "date": "2026-11-14"
     },
     "sp068": {
       "assets": {
