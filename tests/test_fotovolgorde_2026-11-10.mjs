@@ -150,6 +150,30 @@ for (const [label, ids, images] of [
   }
 }
 
+// F2-22: exactly three paired, source-registered resting photos of the three Phylloscopus
+// species are used in reciprocal comparisons; flight positions stay unclaimed.
+for (const [label, ids, paths] of [
+  ['Fitis en Tjiftjaf · rustbeeld en zang', ['sp057', 'sp056'], ['sp057.webp', 'sp056.webp']],
+  ['Fitis en Fluiter · in rust', ['sp057', 'sp058'], ['sp057.webp', 'sp058.webp']],
+  ['Tjiftjaf en Fluiter · in rust', ['sp056', 'sp058'], ['sp056.webp', 'sp058.webp']],
+]) {
+  const matches = GUIDE_COMPARISONS.filter(pair => pair.label === label);
+  assert.equal(matches.length, 1, `F2-22 missing/duplicated comparison ${label}`);
+  assert.deepEqual(matches[0].birds.map(bird => bird.id), ids,
+    `F2-22 incorrect pair of species for ${label}`);
+  assert.equal(Boolean(matches[0].flight), false, `F2-22 may not promote an uncertain flight photo: ${label}`);
+  for (const id of ids) {
+    const html = recognitionPanel(byId.get(id));
+    const panels = html.split('<div class="sd-cmp-panel"').slice(1);
+    assert.ok(panels.some(panel => !panel.startsWith(' data-cmp-panel data-cmp-flight') &&
+      paths.every(path => panel.includes(path))),
+      `F2-22 expected both distinct resting photographs in ${id} for ${label}`);
+  }
+}
+assert.ok(byId.get('sp058').fieldmarks.includes('helderwitte buik'));
+assert.equal(byId.get('sp058').plumage.juv, null,
+  'F2-22: unverified Wood Warbler juvenile plumage must remain unknown');
+
 const youngTits = GUIDE_COMPARISONS.find(entry => entry.label === 'Matkop en Glanskop · jonge vogels');
 assert.deepEqual(youngTits.birds.map(({id, plumage}) => [id, plumage]), [['sp031', 'juv'], ['sp032', 'juv']]);
 for (const id of ['sp031', 'sp032']) {
