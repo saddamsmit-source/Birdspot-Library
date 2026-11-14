@@ -12,13 +12,13 @@ Beoordeeld volgens `docs/BIRDSPOT_KWALITEITSNORM.md` (biometrie §1, herkenning 
 | 2 | Afzonderlijk (aangescherpt) gecontroleerd | 101 (M1, M10, M2, M3, M4, M5, M6, M7, M8, M9) |
 | 3 | Technisch correct (laden, volgorde, offline-bron, beoordeling = kaart) | 101 van 101 |
 | 4a | Visueel VERIFIED (beeld per foto) | 97 van 101 |
-| 4b | Inhoud (kennisprofiel) VERIFIED | 71 van 101 — alle profielen hebben nog open punten |
+| 4b | Inhoud (kennisprofiel) VERIFIED | 69 van 101 — alle profielen hebben nog open punten |
 | 4c | Onafhankelijk beoordeeld (ChatGPT) | 0 — NOT TESTED |
-| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 144; plus collectiebrede vluchtcontrole: 16 uit de vluchtrol, 11 gearchiveerd |
+| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 147; plus collectiebrede vluchtcontrole: 16 uit de vluchtrol, 11 gearchiveerd |
 | 6 | Afgekeurde vluchtfoto's | 27 (tabel hieronder) |
 | 7 | Ontbrekende foto-/kennisonderdelen | 70 fotoposities in gecontroleerde soorten; 39 fotosoorten zonder kennisprofiel |
 | 8 | Kritische kenmerken niet doorslaggevend onderbouwd | 135 (tabel hieronder) |
-| 9 | Open bron-/licentieproblemen | 1 in gecontroleerde soorten; collectiebreed blijft het eerder gemelde punt '22 afbeeldingen buiten de bronaudit' open |
+| 9 | Open bron-/licentieproblemen | 3 in gecontroleerde soorten; collectiebreed blijft het eerder gemelde punt '22 afbeeldingen buiten de bronaudit' open |
 
 Eindoordeel per gecontroleerde soort: PARTIALLY TESTED 86, VERIFIED 15.
 
@@ -1064,19 +1064,19 @@ Batch M1 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · tech
 
 ### sp032 Glanskop — PARTIALLY TESTED
 
-Batch M7 · 2026-11-12 · SHA `dfa3dfd5976579121089e69552da8919920d99e4` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+Batch M7 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten PARTIALLY TESTED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
-| `sp032.webp` | Hoofdfoto (Volwassen) | Glanskop met donkere kap, lichte wang en vrij egale vleugel. | Volwassen veldkleed. Geslacht onbekend. | Volledige vogel met duidelijk zijprofiel. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · PeterRohrbeck |
-| `sp032-juv.webp` | Verenkleed (Juveniel) | Jonge Glanskop in schaduw tussen bladeren. De doffe kap, lichte wang en snavelhoeken zijn zichtbaar. | Waarneming geannoteerd als juveniel. Geslacht onbekend. | Kop en volledige vogel zichtbaar na lichte helderheidscorrectie. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Uitsnede rond de volledige vogel en lichte correctie van de helderheid. Omgezet naar WebP zonder EXIF, GPS of XMP.), CC BY 4.0 · Dr. Nasser Halaweh |
-| `sp032-view.webp` | Overige herkenningsfoto's | Glanskop van voren met zwarte kap, lichte wangen en een kleine bef. | Geslacht en leeftijd niet gelabeld. | Een tweede hoek voor vergelijking van wang en bef. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Luc Viatour |
+| `sp032.webp` | Hoofdfoto (Volwassen) | Glanskop met donkere kap, lichte wang en vrij egale vleugel. | Volwassen veldkleed. Geslacht onbekend. | Volledige vogel met duidelijk zijprofiel. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · PeterRohrbeck |
+| `sp032-juv.webp` | Verenkleed (Juveniel) | Jonge Glanskop in schaduw tussen bladeren. De doffe kap, lichte wang en snavelhoeken zijn zichtbaar. | Waarneming geannoteerd als juveniel. Geslacht onbekend. | Kop en volledige vogel zichtbaar na lichte helderheidscorrectie. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast origineel vergeleken. Oorspronkelijke SHA-256 gelijk aan de M7-import.), CC BY 4.0 · Dr. Nasser Halaweh |
+| `sp032-view.webp` | Overige herkenningsfoto's | Glanskop van voren met zwarte kap, lichte wangen en een kleine bef. | Geslacht en leeftijd niet gelabeld. | Een tweede hoek voor vergelijking van wang en bef. | goedgekeurd | — | PARTIALLY TESTED: Luc Viatour vraagt om zijn naam en website naast de afbeelding. De zichtbare creditcorrectie staat in PR #210 op 4f46f98. |
 
-- **Correcties:** Juvenielenfoto en kennisprofiel toegevoegd. Vergelijking met Matkop aangescherpt op roep, snavelbasis en vleugel.
+- **Correcties:** Juvenielenfoto en kennisprofiel toegevoegd. Vergelijking met Matkop aangescherpt op roep, snavelbasis en vleugel.; Drie originele foto’s gematcht. Waarneming en juvenielenannotatie herbevestigd. Uitgeschreven makercredit bij vooraanzicht voorbereid in PR #210.
 - **Ontbreekt:** Scherpe foto van één Glanskop in vrije vlucht met bevestigde hergebruikrechten.
 - **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** De geslachten lijken sterk op elkaar. Het geslacht is niet op kleed bepaald; juveniel volgt de fotobron.
-- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Snavelbasis en roep; open: —; resterende dataverschillen: 0
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Snavelbasis en roep; open: Een scherpe, bronbevestigde foto in vrije vlucht ontbreekt.; resterende dataverschillen: 0
 - **Browser:** NOT TESTED
 - **Onzeker:** —
 - **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
@@ -1124,34 +1124,34 @@ Batch M7 · 2026-11-12 · SHA `38e3b3c42662dc49be8b769fd9f82a8dde65cad7` · tech
 
 ### sp031 Matkop — PARTIALLY TESTED
 
-Batch M7 · 2026-11-12 · SHA `e024af25a0f03e387b5adae8fa159947de55d79b` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+Batch M7 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten PARTIALLY TESTED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
-| `sp031.webp` | Hoofdfoto (Volwassen) | Matkop met zwarte kap, lichte wang en licht vleugelveld. | Volwassen veldkleed. Geslacht onbekend. | Volledig zijaanzicht met een goed zichtbare gevouwen vleugel. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Francis Franklin |
-| `sp031-juv.webp` | Verenkleed (Juveniel) | Jonge Matkop tussen bladeren. Lichte snavelhoeken en donkere kap. | Fotograaf benoemt een juveniel. Geslacht onbekend. | Kop en snavelhoeken scherp in beeld. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.), CC BY-SA 4.0 · Wald1siedel |
-| `sp031-flight.webp` | Overige herkenningsfoto's | Matkop vlak boven de sneeuw, met geopende vleugels. | Geslacht en leeftijd niet gelabeld. | Opvliegbeeld. Alleen als aanvullend beeld bruikbaar. | uit-rol | opvliegen · uit-rol | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC0 · Estormiz |
+| `sp031.webp` | Hoofdfoto (Volwassen) | Matkop met zwarte kap, lichte wang en licht vleugelveld. | Volwassen veldkleed. Geslacht onbekend. | Volledig zijaanzicht met een goed zichtbare gevouwen vleugel. | goedgekeurd | — | PARTIALLY TESTED: Commons vermeldt © Francis C. Franklin / CC-BY-SA-3.0. De zichtbare creditcorrectie staat in PR #210 op 4f46f98. |
+| `sp031-juv.webp` | Verenkleed (Juveniel) | Jonge Matkop tussen bladeren. Lichte snavelhoeken en donkere kap. | Fotograaf benoemt een juveniel. Geslacht onbekend. | Kop en snavelhoeken scherp in beeld. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Wald1siedel |
+| `sp031-flight.webp` | Overige herkenningsfoto's | Matkop vlak boven de sneeuw, met geopende vleugels. | Geslacht en leeftijd niet gelabeld. | Opvliegbeeld. Alleen als aanvullend beeld bruikbaar. | uit-rol | opvliegen · uit-rol | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC0 1.0 · Estormiz |
 
-- **Correcties:** Bronbevestigde juvenielenfoto en kennisprofiel toegevoegd. Vergelijking met Glanskop gecontroleerd.
+- **Correcties:** Bronbevestigde juvenielenfoto en kennisprofiel toegevoegd. Vergelijking met Glanskop gecontroleerd.; Drie originele foto’s gematcht. Bron noemt het jong expliciet. De vergelijking toont het naast een jonge Glanskop. Uitgeschreven makercredit voorbereid in PR #210.
 - **Ontbreekt:** Scherpe vrije-vluchtfoto met bevestigde hergebruikrechten.
 - **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** De geslachten lijken op elkaar in het veld. Het geslacht is niet op kleed bepaald; juveniel volgt de fotobron.
-- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Roep, vleugelveld en snavelbasis; open: —; resterende dataverschillen: 0
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Roep, vleugelveld en snavelbasis; open: Een scherpe, bronbevestigde foto in vrije vlucht ontbreekt.; resterende dataverschillen: 0
 - **Browser:** NOT TESTED
 - **Onzeker:** —
 - **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
 
 ### sp030 Pimpelmees — VERIFIED
 
-Batch M4 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M4 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
-| `sp030.webp` | Hoofdfoto | Pimpelmees op een twijg, met blauwe kruin, witte wangen en donkere oogstreep. | Volwassen kleed als herkenningsvoorbeeld. Geslacht onbekend. | Helder zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours |
-| `sp030-juv2.webp` | Verenkleed (Juveniel) | Jonge Pimpelmees met bleekgele wang en doffe blauwgrijze kruin. | Fotograaf noemt een juveniel. Geslacht onbekend. | Kop goed zichtbaar, kleine vogel in staand beeld. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · caroline legg |
-| `sp030-flight.webp` | In vlucht | Vrij in de lucht met gespreide staart en vleugels. Blauwe bovenzijde en oogstreep zichtbaar. | Geslacht onbekend. | Vleugels en staart zichtbaar van bovenaf. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Joe Dyer from Buckhurst Hill, England |
+| `sp030.webp` | Hoofdfoto | Pimpelmees op een twijg, met blauwe kruin, witte wangen en donkere oogstreep. | Volwassen kleed als herkenningsvoorbeeld. Geslacht onbekend. | Helder zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Alexis Lours |
+| `sp030-juv2.webp` | Verenkleed (Juveniel) | Jonge Pimpelmees met bleekgele wang en doffe blauwgrijze kruin. | Fotograaf noemt een juveniel. Geslacht onbekend. | Kop goed zichtbaar, kleine vogel in staand beeld. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 2.0 · caroline legg |
+| `sp030-flight.webp` | In vlucht | Vrij in de lucht met gespreide staart en vleugels. Blauwe bovenzijde en oogstreep zichtbaar. | Geslacht onbekend. | Vleugels en staart zichtbaar van bovenaf. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 2.0 · Joe Dyer |
 
-- **Correcties:** Jeugdfoto voorzien van zichtbare aanwijzing bij wang en kruin. De bestaande neutrale foto-indeling blijft bruikbaar.
+- **Correcties:** Jeugdfoto voorzien van zichtbare aanwijzing bij wang en kruin. De bestaande neutrale foto-indeling blijft bruikbaar.; Drie originele foto’s gematcht. Jeugd- en vluchtlabel bevestigd. Lengte naast The Wildlife Trusts gelegd.
 - **Ontbreekt:** niets
 - **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** De kenmerken voor beide geslachten overlappen. Op deze beelden is het geslacht niet op kleed vastgesteld.

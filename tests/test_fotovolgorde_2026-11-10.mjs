@@ -94,7 +94,16 @@ for (const s of SPECIES) {
   }
 }
 assert.ok(checked >= 590 && flightSections >= 10);
-assert.equal(GUIDE_COMPARISONS.filter(e => e.birds.filter(b => b.plumage === 'juv').length >= 2).length, 20);
+assert.equal(GUIDE_COMPARISONS.filter(e => e.birds.filter(b => b.plumage === 'juv').length >= 2).length, 21);
+const youngTits = GUIDE_COMPARISONS.find(entry => entry.label === 'Matkop en Glanskop · jonge vogels');
+assert.deepEqual(youngTits.birds.map(({id, plumage}) => [id, plumage]), [['sp031', 'juv'], ['sp032', 'juv']]);
+for (const id of ['sp031', 'sp032']) {
+  const html = recognitionPanel(byId.get(id));
+  const panel = html.split('<div class="sd-cmp-panel"').slice(1)
+    .find(part => !part.startsWith(' data-cmp-panel data-cmp-flight') &&
+      part.includes('sp031-juv.webp') && part.includes('sp032-juv.webp'));
+  assert.ok(panel, `FV-06 jong Matkop/Glanskop-paar ontbreekt: ${id}`);
+}
 assert.equal(GUIDE_POSES.sp009.some(photo => photo.source === GUIDE_PHOTOS.sp009.source), false);
 const buzzard = recognitionPanel(byId.get('sp005')).split('<section class="sd-similar"')[1];
 assert.ok(buzzard.includes('In vlucht · Juveniel') && buzzard.includes('sp005-juv.webp') && buzzard.includes('sp253-juv.webp'));

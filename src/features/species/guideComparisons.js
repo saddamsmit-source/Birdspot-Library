@@ -27,7 +27,19 @@ export const GUIDE_COMPARISONS = [
       {label: 'Gevouwen vleugel', values: ['Vaak een licht vleugelveld', 'Meestal vrij egaal']},
       {label: 'Contactroep', values: ['Nasaal en langgerekt', 'Kort, explosief en dalend']},
     ],
-    "tip": "Luister naar de roep en bekijk de bovensnavelbasis bij egaal licht. Bij pas uitgevlogen vogels kunnen snavel- en kopkenmerken minder duidelijk zijn."
+    "tip": "Luister eerst naar een duidelijke roepreeks. Bekijk daarna de bovensnavelbasis van opzij bij egaal licht. Gebruik het vleugelveld als extra aanwijzing."
+  },
+  {
+    label: 'Matkop en Glanskop · jonge vogels',
+    birds: [
+      {id: 'sp031', source: 'matkop', plumage: 'juv', marks: 'Op deze foto een doffe kap en lichte snavelhoeken.'},
+      {id: 'sp032', source: 'glanskop', plumage: 'juv', marks: 'Op deze foto een doffe kap, lichte wang en lichte snavelhoeken.'},
+    ],
+    rows: [
+      {label: 'Kap', values: ['Dof bij jonge vogels.', 'Ook dof bij jonge vogels.']},
+      {label: 'Snavelhoeken', values: ['De lichte hoeken vallen op in dit beeld.', 'De lichte hoek is subtieler zichtbaar door de schaduw.']},
+    ],
+    tip: 'De doffe kap en lichte snavelhoeken kunnen bij beide soorten voorkomen. Luister bij twijfel naar de roep of laat de soort open.',
   },
   {
     label: 'Zwarte Mees en Koolmees · nek en vleugel',
@@ -609,7 +621,7 @@ export const GUIDE_COMPARISONS = [
         "marks": "Grotere mees met zwarte kop, witte wang en een zwarte lengtestreep midden over de gele buik."
       }
     ],
-    "tip": "Kijk naar de hele koptekening. Een blauwe kruin met smalle oogstreep wijst op Pimpelmees; Koolmees heeft een veel groter zwart kopvlak."
+    "tip": "Kijk naar de hele koptekening en de buikstreep. Bij jonge vogels van beide soorten kan de wang gelig zijn."
   },
   {
     label: 'Kuifmees en Matkop · koptekening',
