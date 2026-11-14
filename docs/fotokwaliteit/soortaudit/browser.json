@@ -2,44 +2,6 @@
  "testedOn": "61ad1e3",
  "date": "2026-11-10",
  "species": {
-  "sp002": {
-   "ok": true,
-   "viewport": "390x844 Chromium (Playwright)",
-   "photos": 2,
-   "sections": [
-    "Hoofdfoto",
-    "In vlucht"
-   ],
-   "flight": [
-    "/assets/species/plumage/sp002-flight.webp"
-   ],
-   "checks": "SAB-01..07"
-  },
-  "sp003": {
-   "ok": true,
-   "viewport": "390x844 Chromium (Playwright)",
-   "photos": 2,
-   "sections": [
-    "Hoofdfoto",
-    "Overige herkenningsfoto's"
-   ],
-   "flight": [],
-   "checks": "SAB-01..07",
-   "lijktOp": "SAB-09 OK (390 px)"
-  },
-  "sp004": {
-   "ok": true,
-   "viewport": "390x844 Chromium (Playwright)",
-   "photos": 2,
-   "sections": [
-    "Hoofdfoto",
-    "In vlucht"
-   ],
-   "flight": [
-    "/assets/species/plumage/sp004-flight.webp"
-   ],
-   "checks": "SAB-01..07"
-  },
   "sp005": {
    "ok": true,
    "viewport": "390x844 Chromium (Playwright)",
@@ -691,6 +653,47 @@
    },
    "testedOn": "181688362b2b385e47939e8761586d0288259ede",
    "date": "2026-11-11"
+  },
+  "sp017": {
+   "ok": true,
+   "viewport": "390x844 Chromium (Playwright)",
+   "photos": 3,
+   "sections": [
+    "Hoofdfoto",
+    "Verenkleed"
+   ],
+   "flight": [],
+   "checks": "SAB-01..07",
+   "runSha": "2e20f1d5f44fa27f1a84b7ced9f04fba533255fa",
+   "evidence": "https://github.com/saddamsmit-source/Birdspot-Library/actions/runs/43287607724"
+  },
+  "sp018": {
+   "ok": true,
+   "viewport": "390x844 Chromium (Playwright)",
+   "photos": 5,
+   "sections": [
+    "Hoofdfoto",
+    "Verenkleed",
+    "In vlucht"
+   ],
+   "flight": [
+    "/assets/species/plumage/sp018-flight.webp"
+   ],
+   "checks": "SAB-01..07",
+   "runSha": "2e20f1d5f44fa27f1a84b7ced9f04fba533255fa",
+   "evidence": "https://github.com/saddamsmit-source/Birdspot-Library/actions/runs/43287607724"
   }
- }
+ },
+ "testRuns": [
+  {
+   "sha": "2e20f1d5f44fa27f1a84b7ced9f04fba533255fa",
+   "date": "2026-11-12",
+   "source": "https://github.com/saddamsmit-source/Birdspot-Library/actions/runs/43287607724",
+   "scope": [
+    "sp017",
+    "sp018"
+   ],
+   "checks": "SAB-01..07 (per soort), SA-08 en volledige M10-browserpass"
+  }
+ ]
 }

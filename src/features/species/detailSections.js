@@ -160,7 +160,8 @@ export function guidePlumageGroups(s) {
   if (sharedAdult) {
     const variant = plumagePhoto(id, 'adult_m');
     const photos = variant && !photoRole(variant) && variant.image !== heroImage ? [variant] : [];
-    const badge = s.guideReview?.similarSexes ? 'Man en vrouw lijken op elkaar' : '';
+    const similarSexes = s.similarSexes ?? s.guideReview?.similarSexes;
+    const badge = similarSexes ? 'Man en vrouw lijken op elkaar' : '';
     const index = groups.findIndex(group => !['adult_m', 'adult_f'].includes(group.key));
     groups.splice(index < 0 ? groups.length : index, 0, {
       key: 'adult', icon: 'equal', title: 'Volwassen', text: plumage.adult_m, badge, photos,
@@ -170,21 +171,26 @@ export function guidePlumageGroups(s) {
   return groups;
 }
 
-function plumageCard({key, icon: iconName, title, text, badge, photos, heroRef, flightRef}) {
+function plumageCard({key, icon: iconName, title, text, badge, photos, heroRef, flightRef}, compact = false) {
   const gallery = photos.map(photo => {
     const label = photo.label || (photo.flight ? 'In vlucht' : '');
-    return `<figure class="sd-plumage-photo">${fieldPhoto(photo)}${label ? `<figcaption>${esc(label)}</figcaption>` : ''}${photo.note ? `<p>${esc(photo.note)}</p>` : ''}</figure>`;
+    // Source-backed notes remain available in the single explicit details
+    // control when cards are placed side-by-side, not lost or duplicated.
+    return `<figure class="sd-plumage-photo">${fieldPhoto(photo)}${label ? `<figcaption>${esc(label)}</figcaption>` : ''}${!compact && photo.note ? `<p>${esc(photo.note)}</p>` : ''}</figure>`;
   });
-  return `<div class="sd-plumage" data-plumage="${key}">${icon(iconName)}<div><strong>${esc(title)}${badge ? `<span class="sd-badge">${esc(badge)}</span>` : ''}</strong>${text ? `<p>${esc(text)}</p>` : ''}${gallery.length ? `<div class="sd-plumage-gallery">${gallery.join('')}</div>` : ''}${heroRef ? '<p class="sd-hero-ref">Foto: de hoofdfoto bovenaan deze kaart.</p>' : ''}${flightRef ? '<p class="sd-hero-ref" data-flight-ref>Foto: zie In vlucht hieronder.</p>' : ''}</div></div>`;
-}
-
-function flightPhoto(id) {
-  const pose = GUIDE_POSES[id]?.find(photo => photo.flight);
-  if (pose) return pose;
-  if (GUIDE_PHOTOS[id]?.flight) return null;
-  const variants = GUIDE_PLUMAGE[id];
-  return ['adult_m', 'adult_f', 'breeding', 'winter', 'eclipse', 'juv', 'jaarling']
-    .map(kind => variants?.[kind]).find(photo => photo?.flight);
+  const notes = [];
+  if (text) notes.push(`<p class="sd-plumage-description">${esc(text)}</p>`);
+  for (const photo of photos) {
+    if (!photo.note) continue;
+    const label = photo.label || (photo.flight ? 'In vlucht' : 'Foto');
+    notes.push(`<p><b>${esc(label)}:</b> ${esc(photo.note)}</p>`);
+  }
+  const description = compact
+    ? (notes.length ? `<details class="sd-plumage-more"><summary>Kenmerken</summary><div>${notes.join('')}</div></details>` : '')
+    : (text ? `<p class="sd-plumage-description">${esc(text)}</p>` : '');
+  // Only the visual two-role mode collapses long prose. All other cards and
+  // flight cards retain their original readable notes and source information.
+  return `<div class="sd-plumage" data-plumage="${key}">${icon(iconName)}<div><strong>${esc(title)}${badge ? `<span class="sd-badge">${esc(badge)}</span>` : ''}</strong>${gallery.length ? `<div class="sd-plumage-gallery">${gallery.join('')}</div>` : ''}${heroRef ? '<p class="sd-hero-ref">Foto: de hoofdfoto bovenaan deze kaart.</p>' : ''}${flightRef ? '<p class="sd-hero-ref" data-flight-ref>Foto: zie In vlucht hieronder.</p>' : ''}${description}</div></div>`;
 }
 
 /** Foto's zonder vastgesteld geslacht/leeftijd (niet in een kleedgroep van guidePlumageGroups).
@@ -193,8 +199,6 @@ function flightPhoto(id) {
 function neutralPhotos(id, takePhoto) {
   const main = GUIDE_PHOTOS[id];
   const original = main && main !== guideHeroPhoto(id) ? [main] : [];
-  // Een vluchtfoto die ook in een vergelijkingskaart meedoet wordt daar nooit herhaald (dashed verwijzing
-  // in plaats van de foto zelf), dus hoort hij hier altijd te staan — niet uitgesloten zoals vóór de redesign.
   return [...(GUIDE_POSES[id] || []), ...original].filter(photo => !photoRole(photo) && takePhoto(photo));
 }
 
@@ -211,28 +215,49 @@ function posesPanel(photos) {
  * leeftijd-label uit die groep) met neutrale vluchtfoto's zonder vastgesteld geslacht (eigen, neutrale
  * kaart — geen geslacht verzinnen). Hergebruikt plumageCard voor dezelfde visuele taal als Verenkleed. */
 function flightSection(entries) {
-  const cards = entries.filter(entry => entry.photos.length).map(plumageCard);
+  const cards = entries.filter(entry => entry.photos.length).map(entry => plumageCard(entry));
   if (!cards.length) return '';
-  return `<section class="sd-flight" aria-label="In vlucht"><h3 class="sd-h">In vlucht</h3><div class="sd-plumage-list">${cards.join('')}</div></section>`;
+  return `<section class="sd-flight" aria-label="In vlucht"><h3 class="sd-h">In vlucht</h3><div class="sd-plumage-list"${cards.length > 1 ? ' data-flight-layout="compare"' : ''}>${cards.join('')}</div></section>`;
 }
 
-/** Titel van het kleed dat een vergelijking toont, voor de tab, de "eigen kleed"-verwijzing en de badge. */
-/** Tablabel: een vluchtvergelijking heet altijd "In vlucht" (eventueel met geslacht), zodat hij in één kaart naast
- * de kleedtabs (Mannetje/Vrouwtje/…) niet verward kan worden (FQA-03). */
-function cmpTabLabel(entry, bird) {
-  const title = cmpPlumageTitle(entry, bird);
-  return entry.flight && title !== 'In vlucht' ? `In vlucht · ${title}` : title;
+export function comparisonPhoto(bird, inFlight) {
+  if (bird.textOnly || bird.photoMissing) return null;
+  const {id, plumage} = bird;
+  const poses = GUIDE_POSES[id] || [];
+  const portraits = [guideHeroPhoto(id), GUIDE_PHOTOS[id]];
+  const variants = Object.values(GUIDE_PLUMAGE[id] || {});
+  const airborneSources = new Set([...poses, ...portraits, ...variants].filter(photo => photo?.flight).map(photo => photo.source));
+  const candidates = plumage
+    ? [plumagePhoto(id, plumage), ...poses.filter(photo => photoRole(photo) === plumage),
+      ...portraits.filter(photo => photo && photoRole(photo) === plumage)]
+    : inFlight ? [...poses, ...portraits, ...variants]
+      : [...portraits, ...poses].filter(photo => photo && photoRole(photo) !== 'juv');
+  return candidates.find(photo =>
+    photo?.image && photo.author && photo.license && photo.source && Boolean(photo.flight) === inFlight &&
+    (!bird.photo || photo.image === bird.photo) &&
+    (inFlight || !airborneSources.has(photo.source)) &&
+    !/^(uit-rol|archief)/.test(photo.flightReview || '') &&
+    (!plumage || !photoRole(photo) || photoRole(photo) === plumage)) || null;
 }
 
-function cmpPlumageTitle(entry, bird) {
-  if (entry.flight) {
-    const photo = flightPhoto(bird.id);
-    return photo?.sex ? photo.label : 'In vlucht';
-  }
+function comparisonImages(entry, focal, partner) {
+  const flight = [comparisonPhoto(focal, true), comparisonPhoto(partner, true)];
+  const resting = [comparisonPhoto(focal, false), comparisonPhoto(partner, false)];
+  // One posture per panel. An explicitly flight-based comparison never falls back to a perched bird.
+  const inFlight = Boolean(entry.flight || (!resting.every(Boolean) &&
+    (flight.every(Boolean) || (!resting.some(Boolean) && flight.some(Boolean)))));
+  const [ownPhoto, partnerPhoto] = inFlight ? flight : resting;
+  const sameImage = ownPhoto && partnerPhoto &&
+    (ownPhoto.image === partnerPhoto.image || ownPhoto.source === partnerPhoto.source);
+  return { inFlight, ownPhoto, partnerPhoto: sameImage ? null : partnerPhoto };
+}
+
+function cmpPlumageTitle(entry, bird, photo, inFlight) {
   const species = speciesById.get(bird.id);
-  const adult = bird.plumage === 'adult_m' && !species.plumage?.adult_f;
-  if (adult) return 'Volwassen';
-  const fromPlumage = PLUMAGE.find(([key]) => key === bird.plumage)?.[2];
+  const role = bird.plumage || (photo && photoRole(photo));
+  const adult = role === 'adult_m' && !species.plumage?.adult_f && photoRole(photo || {}) !== 'adult_m';
+  const fromPlumage = adult ? 'Volwassen' : PLUMAGE.find(([key]) => key === role)?.[2];
+  if (inFlight) return fromPlumage ? `${fromPlumage} in vlucht` : 'In vlucht';
   if (fromPlumage) return fromPlumage;
   const suffix = entry.label?.split('·').pop()?.trim();
   return suffix ? suffix[0].toUpperCase() + suffix.slice(1) : 'Volwassen';
@@ -269,64 +294,57 @@ function groupComparisonsByPartner(id, comparisons) {
     if (!focal) continue;
     for (const partner of entry.birds) {
       if (partner.id === id) continue;
-      // Opdracht 3 (10-11-2026): geen juveniel-tegen-juvenielvergelijkingen meer — maakt de kaart te
-      // druk. De onderliggende GUIDE_COMPARISONS-data blijft ongewijzigd; alleen het tonen is verborgen.
-      if (focal.plumage === 'juv' && partner.plumage === 'juv') continue;
+      const images = comparisonImages(entry, focal, partner);
+      // Een extra juvenieltab heeft alleen waarde met twee passende foto's.
+      if (focal.plumage === 'juv' && partner.plumage === 'juv' && !(images.ownPhoto && images.partnerPhoto)) continue;
       if (!groups.has(partner.id)) groups.set(partner.id, {partnerId: partner.id, pairings: []});
-      groups.get(partner.id).pairings.push({entry, focal, partner});
+      groups.get(partner.id).pairings.push({entry, focal, partner, ...images});
     }
   }
   return [...groups.values()].sort((a, b) => b.pairings.length - a.pairings.length);
 }
 
-function comparisonCard(id, group, takePhoto) {
+function comparisonCard(id, group) {
   const {pairings} = group;
   const own = speciesById.get(id).nameNL;
   const partnerSpecies = speciesById.get(group.partnerId);
   const tabs = pairings.length > 1;
   const panels = pairings.map((pairing, i) => {
-    const {entry, focal, partner} = pairing;
-    const title = cmpPlumageTitle(entry, focal);
-    const partnerTitle = cmpPlumageTitle(entry, partner);
-    const photo = partner.textOnly ? null : entry.flight ? flightPhoto(partner.id) : plumagePhoto(partner.id, partner.plumage);
-    const showPhoto = takePhoto(photo);
+    const {entry, focal, partner, ownPhoto, partnerPhoto, inFlight} = pairing;
+    const title = cmpPlumageTitle(entry, focal, ownPhoto, inFlight);
+    const partnerTitle = cmpPlumageTitle(entry, partner, partnerPhoto, inFlight);
     const rows = cmpRows(pairing).map(row =>
       `<div class="sd-cmp-row">${row.label ? `<b>${esc(row.label)}</b>` : ''}<span>${esc(row.own)}</span><span>${esc(row.other)}</span></div>`
     ).join('');
-    const refLabel = focal.plumage || entry.flight ? title.toLowerCase() : 'hoofdfoto';
-    // Mijlpaal 1 (10-11-2026): geen verwijzing naar een "In vlucht"-sectie die er niet (meer) is.
-    const ownMissing = entry.flight && (focal.photoMissing || !flightPhoto(focal.id));
-    let ownRef = `↑ zie ${refLabel}`;
-    if (ownMissing) ownRef = 'Nog geen geschikte vluchtfoto';
-    else if (focal.textOnly) ownRef = 'Nog geen foto';
-    return `<div class="sd-cmp-panel" data-cmp-panel${entry.flight ? ' data-cmp-flight' : ''}${i === 0 ? '' : ' hidden'}>
+    const missing = `<span class="sd-cmp-ref">${inFlight ? 'Nog geen passende vluchtfoto' : 'Nog geen passende foto'}</span>`;
+    return `<div class="sd-cmp-panel" data-cmp-panel${inFlight ? ' data-cmp-flight' : ''}${i === 0 ? '' : ' hidden'}>
       <div class="sd-cmp-head">
-        <div class="sd-cmp-who"><strong>${esc(own)}</strong><small>${esc(title)}</small><div class="sd-cmp-ref">${esc(ownRef)}</div></div>
-        <div class="sd-cmp-who"><strong>${esc(partnerSpecies.nameNL)}</strong><small>${esc(partnerTitle)}</small>${showPhoto ? fieldPhoto(photo) : '<div class="sd-cmp-ref">Nog geen foto</div>'}</div>
+        <div class="sd-cmp-who"><strong>${esc(own)}</strong><small>${esc(title)}</small>${ownPhoto ? fieldPhoto(ownPhoto) : missing}</div>
+        <div class="sd-cmp-who"><strong>${esc(partnerSpecies.nameNL)}</strong><small>${esc(partnerTitle)}</small>${partnerPhoto ? fieldPhoto(partnerPhoto) : missing}</div>
       </div>
       ${rows ? `<div class="sd-cmp-rows">${rows}</div>` : ''}
       ${entry.tip ? `<p class="sd-cmp-tip">Tip: ${esc(entry.tip)}</p>` : ''}
       <div class="sd-cmp-foot">
-        <span>${showPhoto ? `Bron: <a href="${esc(comparisonSource(partner))}" target="_blank" rel="noopener noreferrer">Vogelbescherming</a>` : `Nog geen foto van ${esc(partnerSpecies.nameNL)} in dit kleed.`}</span>
+        <span>Kenmerken: <a href="${esc(comparisonSource(partner))}" target="_blank" rel="noopener noreferrer">Vogelbescherming</a></span>
         <button type="button" class="sd-compare-open" data-compare-species="${esc(partner.id)}">Open ${esc(partnerSpecies.nameNL)}<span aria-hidden="true"> →</span></button>
       </div>
     </div>`;
   }).join('');
-  const tabBar = tabs ? `<div class="sd-cmp-tabs" role="tablist">${pairings.map(({entry, focal}, i) =>
-    `<button type="button" class="sd-cmp-tab${i === 0 ? ' is-active' : ''}" data-cmp-tab aria-selected="${i === 0}">${esc(cmpTabLabel(entry, focal))}</button>`
-  ).join('')}</div>` : '';
+  const tabBar = tabs ? `<div class="sd-cmp-tabs" role="tablist">${pairings.map(({entry, focal, ownPhoto, inFlight}, i) => {
+    const title = cmpPlumageTitle(entry, focal, ownPhoto, inFlight);
+    const label = entry.tabLabel || (inFlight && title !== 'In vlucht' ? `In vlucht · ${title.replace(/ in vlucht$/, '')}` : title);
+    return `<button type="button" class="sd-cmp-tab${i === 0 ? ' is-active' : ''}" data-cmp-tab aria-selected="${i === 0}">${esc(label)}</button>`;
+  }).join('')}</div>` : '';
   return `<div class="sd-cmp-card">${tabBar}${panels}</div>`;
 }
 
-function comparisonsSection(id, comparisons, takePhoto) {
-  if (!comparisons.length) return '';
-  const groups = groupComparisonsByPartner(id, comparisons);
+function comparisonsSection(id, groups) {
   if (!groups.length) return '';
   const [primary, ...rest] = groups;
-  const primaryCard = comparisonCard(id, primary, takePhoto);
+  const primaryCard = comparisonCard(id, primary);
   if (!rest.length) return primaryCard;
   const names = rest.map(group => speciesById.get(group.partnerId).nameNL);
-  const moreCards = rest.map(group => comparisonCard(id, group, takePhoto)).join('');
+  const moreCards = rest.map(group => comparisonCard(id, group)).join('');
   return primaryCard + `<details class="sd-cmp-more"><summary>Nog ${rest.length} ${rest.length === 1 ? 'soort' : 'soorten'}: ${names.map(esc).join(' · ')}</summary>${moreCards}</details>`;
 }
 
@@ -367,6 +385,7 @@ export function recognitionPanel(s, life = null) {
   const comparisons = GUIDE_COMPARISONS.filter(pair => pair.birds.some(bird => bird.id === s.id));
   const regular = comparisons.filter(pair => !pair.flight);
   const flight = comparisons.filter(pair => pair.flight);
+  const comparisonGroups = groupComparisonsByPartner(s.id, [...regular, ...flight]);
   if (s.size) {
     const dimensions = [['length', 'ruler', 'Lengte'], ['wingspan', 'wingspan', 'Spanwijdte'], ['weight', 'weight', 'Gewicht']]
       .filter(([key]) => s.size[key] && (!s.guideReview || s.guideReview.dimensions.includes(key)));
@@ -389,6 +408,7 @@ export function recognitionPanel(s, life = null) {
   // leeg is en de hoofdfoto dat kleed toont, verwijst de kaart naar de hoofdfoto (§6.B: referentie
   // in plaats van dezelfde opname opnieuw). Zelfde rolregel als guidePlumageGroups().
   const hero = guideHeroPhoto(s.id);
+  takePhoto(hero);
   const heroShows = key => Boolean(hero) && (key === 'adult' ? !photoRole(hero) : photoRole(hero) === key);
   const groups = guidePlumageGroups(s).map(group => {
     const kept = group.photos.filter(takePhoto);
@@ -400,9 +420,25 @@ export function recognitionPanel(s, life = null) {
     // In vlucht (met behoud van het label); de kleedkaart verwijst ernaar in plaats van de foto te herhalen.
     return {...group, photos: restPhotos, heroRef, flightRef: !heroRef && !restPhotos.length && flightPhotos.length > 0};
   });
-  if (groups.length) out.push('<h3 class="sd-h">Verenkleed</h3><div class="sd-plumage-list">' + groups.map(plumageCard).join('') + '</div>');
+  if (groups.length) {
+    // A side-by-side comparison is only useful with two different, actual
+    // non-flight role photos. A hero reference or text-only placeholder must
+    // not be mistaken for a second comparable image (e.g. sp017).
+    const withPhotos = groups.filter(group => group.photos.length > 0);
+    const compare = withPhotos.length >= 2;
+    if (compare) {
+      const withoutPhotos = groups.filter(group => !group.photos.length);
+      out.push('<h3 class="sd-h">Verenkleed</h3><div class="sd-plumage-list" data-layout="compare">' +
+        withPhotos.map(group => plumageCard(group, true)).join('') + '</div>');
+      // Text-only seasonal/age roles must not take up the same picture grid.
+      // Keep every historical fieldmark and hero reference one tap away.
+      if (withoutPhotos.length) out.push(`<details class="sd-plumage-other"><summary>Andere kleden (${withoutPhotos.length})</summary><div class="sd-plumage-list">${withoutPhotos.map(group => plumageCard(group)).join('')}</div></details>`);
+    } else {
+      out.push('<h3 class="sd-h">Verenkleed</h3><div class="sd-plumage-list">' +
+        groups.map(group => plumageCard(group)).join('') + '</div>');
+    }
+  }
 
-  takePhoto(guideHeroPhoto(s.id));
   const neutral = neutralPhotos(s.id, takePhoto);
   const neutralFlight = neutral.filter(photo => photo.flight);
   const neutralRest = neutral.filter(photo => !photo.flight);
@@ -416,13 +452,9 @@ export function recognitionPanel(s, life = null) {
   out.push(flightSection(flightEntries));
   out.push(posesPanel(neutralRest));
   // FQA-03 (10-11-2026): één sectie "Lijkt op" met één kaart per gelijkende soort. Kleed- en vluchtvergelijking
-  // van dezelfde soort staan als tabbladen in die ene kaart (kleed eerst, dan "In vlucht"), zodat geen soortnaam,
-  // foto of uitleg dubbel verschijnt. Daarna gelijkende soorten uit het kennisprofiel zonder eigen kaart en de
-  // kritische determinatieverschillen (uitklapbaar). Alle bestaande vergelijkingsdata blijven.
-  const cardsHtml = comparisonsSection(s.id, [...regular, ...flight], takePhoto);
-  // Alleen soorten die werkelijk een kaart krijgen tellen als 'gedekt' (verborgen juveniel-paren niet), anders
-  // verdwijnt een gelijkende soort uit het kennisprofiel zonder kaart én zonder knop.
-  const covered = new Set(groupComparisonsByPartner(s.id, [...regular, ...flight]).map(group => group.partnerId));
+  // van dezelfde soort staan als tabbladen in die ene kaart. De vergelijking mag gidsfoto's hergebruiken.
+  const cardsHtml = comparisonsSection(s.id, comparisonGroups);
+  const covered = new Set(comparisonGroups.map(group => group.partnerId));
   const extra = similarExtra(s, covered);
   const critical = criticalDetails(s);
   if (cardsHtml || extra || critical) {

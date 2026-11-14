@@ -1,0 +1,15 @@
+# Birdspot — Holenduif in vlucht en drie herkenningsvergelijkingen
+
+14 november 2026 · basis [PR #194](https://github.com/saddamsmit-source/Birdspot-Library/pull/194), `47728bc2e2e93ada22d265e5d11dc78b68769e7a`. De basis had 25 geslaagde GitHub-controles.
+
+| Soort | Verwerkt |
+|---|---|
+| Holenduif | Eén foto in vrije vlucht. De volledige vogel is zichtbaar, met grijze vleugels, een donker oog en donkere staartpunt. De beeldhoek laat de bovenvleugel beperkt zien. Leeftijd en geslacht zijn op dit beeld onbevestigd. De foto staat ook in de bestaande vergelijkingen vanuit Houtduif en Turkse Tortel. De vergelijking met Stadsduif noemt de korte vleugelstrepen en behandelt de stuitkleur als aanwijzing. [Fotobron](https://www.inaturalist.org/photos/757637556) · [Soortidentificatie](https://www.inaturalist.org/observations/411812206) · [BTO](https://www.bto.org/sites/default/files/shared_documents/gbw/associated_files/bird-table-64-pigeon-identification.pdf) |
+| Houtduif | De vergelijking met Stadsduif beschrijft de brede witte vleugelband, ook bij jonge Houtduiven, en de kleurvariatie van Stadsduif. [Houtduif](https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/houtduif) · [Stadsduif](https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/stadsduif) · [BTO](https://www.bto.org/sites/default/files/shared_documents/gbw/associated_files/bird-table-64-pigeon-identification.pdf) |
+| Turkse Tortel | Lachduif toegevoegd onder ‘Lijkt op’. Het typische gekoer helpt, ook wanneer beide vogels een donkere halsband tonen. Vleugeltoppen zijn ondersteunend en kleurvormen vragen voorzichtigheid. [LICG](https://www.licg.nl/vogels/lachduif/) · [Cornell FeederWatch](https://feederwatch.org/learn/tricky-bird-ids/common-doves/) · [Vogelbescherming](https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/turkse-tortel) |
+
+De individuele fotopagina bevestigt andygpos en CC BY 4.0. De originele JPEG is vergeleken met de opname in de bijbehorende waarneming met twee overeenstemmende soortidentificaties. Uitsnede 680 × 595 px, hele vogel behouden, bron- en lokale hashes in het [bronbewijs](../evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_03.json) en de [beeldinventaris](beeldinventaris.json). De zachte afzetfoto blijft in het bronarchief. Onder de andere vrije-vluchtkandidaten vielen onderbelichte silhouetten, bewegingsonscherpte en beelden van vlak boven de grond af.
+
+Zes lokale Node-suites en de kennisgenerator zijn geslaagd. Een gerichte renderproef bevestigt dat de foto één keer zichtbaar is per relevante kaart, met maker, licentie en fotobron. De Playwright-soortaudit controleert precies één vrije-vluchtfoto voor Holenduif en afwezigheid van de afgekeurde opname. Het appresultaat en een fysieke Android-test blijven afzonderlijke bewijsniveaus.
+
+Open in deze groep zijn onder meer het gewenste bovenaanzicht van de Houtduif en de ijking van spanwijdte en gewicht van Turkse Tortel aan vergelijkbare bronwaarden. De collectie telt 140 soorten met hoofdfoto. Eerst volgt de herstelcontrole van de bestaande collectie. Herstelpunt is PR #194 op bovenstaande SHA.

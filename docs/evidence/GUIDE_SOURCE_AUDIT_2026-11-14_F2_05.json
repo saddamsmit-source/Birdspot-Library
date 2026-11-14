@@ -1,0 +1,382 @@
+[
+ {
+  "image": "/assets/species/plumage/sp005-adult_m.webp",
+  "species": "sp005",
+  "source": "https://www.inaturalist.org/photos/309645414",
+  "sourceTitle": "iNaturalist 177992598",
+  "sourceAuthor": "(c) Roy Lowry, some rights reserved (CC BY)",
+  "sourceLicense": "CC BY 4.0",
+  "taxonInSource": "Buteo buteo",
+  "qualityGrade": "research",
+  "annotations": [
+   "Life Stage: Adult",
+   "Alive or Dead: Alive"
+  ],
+  "sameShot": true,
+  "method": "Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.",
+  "sourceSexWords": [],
+  "sourceAgeWords": [
+   "adult"
+  ],
+  "sourceSha1": "1797633b0700df51e69798b9f24d4db75f75bd70",
+  "assetSha1": "2b30cc24c303c714ebd57af5ed929d69dd2425db",
+  "auditDate": "14-11-2026",
+  "earlierMatch": {
+   "inliers": 2590,
+   "method": "ORB+RANSAC, bronaudit 09-11-2026"
+  },
+  "observation": "https://www.inaturalist.org/observations/177992598"
+ },
+ {
+  "image": "/assets/species/plumage/sp005-female-flight.webp",
+  "species": "sp005",
+  "source": "https://www.inaturalist.org/photos/112563573",
+  "sourceTitle": "iNaturalist 69384882",
+  "sourceAuthor": "(c) Simone Bocca, some rights reserved (CC BY-SA)",
+  "sourceLicense": "CC BY-SA 4.0",
+  "taxonInSource": "Buteo buteo",
+  "qualityGrade": "research",
+  "annotations": [
+   "Life Stage: Adult",
+   "Sex: Female",
+   "Alive or Dead: Alive"
+  ],
+  "sameShot": true,
+  "method": "Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.",
+  "sourceSexWords": [
+   "female"
+  ],
+  "sourceAgeWords": [
+   "adult"
+  ],
+  "sourceSha1": "d7097200d0cbefe82594174c2b9b49ce87480b71",
+  "assetSha1": "00b61a1c24012daf1ab7b056bdd5f21a5a4a5feb",
+  "auditDate": "14-11-2026",
+  "earlierMatch": {
+   "inliers": 1075,
+   "method": "ORB+RANSAC, bronaudit 09-11-2026"
+  },
+  "observation": "https://www.inaturalist.org/observations/69384882"
+ },
+ {
+  "image": "/assets/species/plumage/sp005-juv.webp",
+  "species": "sp005",
+  "source": "https://www.inaturalist.org/photos/147178882",
+  "sourceTitle": "iNaturalist 89145381",
+  "sourceAuthor": "(c) rober025, some rights reserved (CC BY)",
+  "sourceLicense": "CC BY 4.0",
+  "taxonInSource": "Buteo buteo",
+  "qualityGrade": "research",
+  "annotations": [
+   "Life Stage: Juvenile"
+  ],
+  "sameShot": true,
+  "method": "Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.",
+  "sourceSexWords": [],
+  "sourceAgeWords": [
+   "juvenile"
+  ],
+  "sourceSha1": "043839faf00decc6e6a1e738fd1848dbd898d609",
+  "assetSha1": "37605b154172913b6e7af89defcf2e918e66627c",
+  "auditDate": "14-11-2026",
+  "earlierMatch": {
+   "inliers": 1936,
+   "method": "ORB+RANSAC, bronaudit 09-11-2026"
+  },
+  "observation": "https://www.inaturalist.org/observations/89145381"
+ },
+ {
+  "image": "/assets/species/plumage/sp005-male-rest.webp",
+  "species": "sp005",
+  "source": "https://www.inaturalist.org/photos/291739391",
+  "sourceTitle": "iNaturalist 168347110",
+  "sourceAuthor": "(c) Gianluca Congi🪶🦆🌲, some rights reserved (CC BY-SA)",
+  "sourceLicense": "CC BY-SA 4.0",
+  "taxonInSource": "Buteo buteo",
+  "qualityGrade": "research",
+  "annotations": [
+   "Life Stage: Adult",
+   "Sex: Male",
+   "Alive or Dead: Alive",
+   "Evidence of Presence: Organism"
+  ],
+  "sameShot": true,
+  "method": "Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.",
+  "sourceSexWords": [
+   "male"
+  ],
+  "sourceAgeWords": [
+   "adult"
+  ],
+  "sourceSha1": "b3ee1c58e97570bfa85d4aa78c8a38627fcf18c5",
+  "assetSha1": "2552f048d76b515a87e57f51e410c2984038018a",
+  "auditDate": "14-11-2026",
+  "earlierMatch": {
+   "inliers": 2514,
+   "method": "ORB+RANSAC, bronaudit 09-11-2026"
+  },
+  "observation": "https://www.inaturalist.org/observations/168347110"
+ },
+ {
+  "image": "/assets/species/plumage/sp248-adult_f.webp",
+  "species": "sp248",
+  "source": "https://www.inaturalist.org/photos/678848182",
+  "sourceTitle": "iNaturalist 371545998",
+  "sourceAuthor": "(c) Donald Davesne, some rights reserved (CC BY)",
+  "sourceLicense": "CC BY 4.0",
+  "taxonInSource": "Pernis apivorus",
+  "qualityGrade": "research",
+  "annotations": [
+   "Life Stage: Adult",
+   "Sex: Female"
+  ],
+  "sameShot": true,
+  "method": "Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.",
+  "sourceSexWords": [
+   "female"
+  ],
+  "sourceAgeWords": [
+   "adult"
+  ],
+  "sourceSha1": "88a91e0ac2d5a10a22a120454d0e05984d5bb5b5",
+  "assetSha1": "92cc03b6a0cd9effabac8df5b764f9c1b5187e22",
+  "auditDate": "14-11-2026",
+  "earlierMatch": {
+   "inliers": 2476,
+   "method": "ORB+RANSAC, bronaudit 09-11-2026"
+  },
+  "observation": "https://www.inaturalist.org/observations/371545998"
+ },
+ {
+  "image": "/assets/species/plumage/sp248-juv.webp",
+  "species": "sp248",
+  "source": "https://commons.wikimedia.org/wiki/File:Juvenile_honey_buzzard_(52499563661).jpg",
+  "sourceTitle": "File:Juvenile honey buzzard (52499563661).jpg",
+  "sourceAuthor": "Andrey Gulivanov",
+  "sourceLicense": "CC BY 2.0",
+  "taxonInSource": "naam in titel/categorie",
+  "qualityGrade": null,
+  "annotations": [],
+  "sameShot": true,
+  "method": "Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.",
+  "sourceSexWords": [],
+  "sourceAgeWords": [
+   "juvenile"
+  ],
+  "sourceSha1": "dacf1663ec5ee942898f8e715dbd0f57b8bd888d",
+  "assetSha1": "6d71287ebaaed60e3f77deec214325f68b0fe70d",
+  "auditDate": "14-11-2026",
+  "earlierMatch": {
+   "inliers": 2716,
+   "method": "ORB+RANSAC, bronaudit 09-11-2026"
+  }
+ },
+ {
+  "image": "/assets/species/plumage/sp248-male-rest.webp",
+  "species": "sp248",
+  "source": "https://www.inaturalist.org/photos/610450616",
+  "sourceTitle": "iNaturalist 335975132",
+  "sourceAuthor": "(c) Павел Кунгуров, some rights reserved (CC BY)",
+  "sourceLicense": "CC BY 4.0",
+  "taxonInSource": "Pernis apivorus",
+  "qualityGrade": "research",
+  "annotations": [
+   "Life Stage: Adult",
+   "Sex: Male"
+  ],
+  "sameShot": true,
+  "method": "Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.",
+  "sourceSexWords": [
+   "male"
+  ],
+  "sourceAgeWords": [
+   "adult"
+  ],
+  "sourceSha1": "a344abeb098e763bd107f0ca86b90090c67c7118",
+  "assetSha1": "d006dfc99bf38e9c006b19161b998a439c7fd3e7",
+  "auditDate": "14-11-2026",
+  "earlierMatch": {
+   "inliers": 482,
+   "method": "ORB+RANSAC, bronaudit 09-11-2026"
+  },
+  "observation": "https://www.inaturalist.org/observations/335975132"
+ },
+ {
+  "image": "/assets/species/plumage/sp253-juv.webp",
+  "species": "sp253",
+  "source": "https://www.inaturalist.org/photos/113794458",
+  "sourceTitle": "iNaturalist 70044579",
+  "sourceAuthor": "(c) Radek Ošlejšek, some rights reserved (CC BY)",
+  "sourceLicense": "CC BY 4.0",
+  "taxonInSource": "Buteo lagopus",
+  "qualityGrade": "research",
+  "annotations": [
+   "Life Stage: Juvenile"
+  ],
+  "sameShot": true,
+  "method": "Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.",
+  "sourceSexWords": [],
+  "sourceAgeWords": [
+   "juvenile"
+  ],
+  "sourceSha1": "2a5d3f9c488f45447e57808f12e93c37c85e620f",
+  "assetSha1": "883bc7dd0ce0c0adb83118e56014ccfec3116d46",
+  "auditDate": "14-11-2026",
+  "earlierMatch": {
+   "inliers": 2207,
+   "method": "ORB+RANSAC, bronaudit 09-11-2026"
+  },
+  "observation": "https://www.inaturalist.org/observations/70044579"
+ },
+ {
+  "image": "/assets/species/plumage/sp253-male-flight.webp",
+  "species": "sp253",
+  "source": "https://www.inaturalist.org/photos/30000101",
+  "sourceTitle": "iNaturalist 19496287",
+  "sourceAuthor": "(c) psweet, some rights reserved (CC BY-SA)",
+  "sourceLicense": "CC BY-SA 4.0",
+  "taxonInSource": "Buteo lagopus",
+  "qualityGrade": "research",
+  "annotations": [
+   "Sex: Male"
+  ],
+  "sameShot": true,
+  "method": "Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.",
+  "sourceSexWords": [
+   "male"
+  ],
+  "sourceAgeWords": [],
+  "sourceSha1": "dd15f528cb17bec7f774af97ee6fb0178fa1bc16",
+  "assetSha1": "2f719af61687bf175fafc26d36737e252df58b86",
+  "auditDate": "14-11-2026",
+  "earlierMatch": {
+   "inliers": 1639,
+   "method": "ORB+RANSAC, bronaudit 09-11-2026"
+  },
+  "observation": "https://www.inaturalist.org/observations/19496287"
+ },
+ {
+  "image": "/assets/species/plumage/sp253-male-rest.webp",
+  "species": "sp253",
+  "source": "https://www.inaturalist.org/photos/349699219",
+  "sourceTitle": "iNaturalist 198409972",
+  "sourceAuthor": "(c) Spencer Hurt, some rights reserved (CC BY)",
+  "sourceLicense": "CC BY 4.0",
+  "taxonInSource": "Buteo lagopus",
+  "qualityGrade": "research",
+  "annotations": [
+   "Sex: Male",
+   "Alive or Dead: Alive",
+   "Evidence of Presence: Organism"
+  ],
+  "sameShot": true,
+  "method": "Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.",
+  "sourceSexWords": [
+   "male"
+  ],
+  "sourceAgeWords": [],
+  "sourceSha1": "13f021d8ba52187019354521a277c89f5e1ea4c0",
+  "assetSha1": "7e809f5cc428e8b8738b938a6152cbb3139dfbfc",
+  "auditDate": "14-11-2026",
+  "earlierMatch": {
+   "inliers": 2557,
+   "method": "ORB+RANSAC, bronaudit 09-11-2026"
+  },
+  "observation": "https://www.inaturalist.org/observations/198409972"
+ },
+ {
+  "image": "/assets/species/sp005.webp",
+  "species": "sp005",
+  "source": "https://commons.wikimedia.org/wiki/File:Common_buzzard_2024-01-20.jpg",
+  "sourceTitle": "File:Common buzzard 2024-01-20.jpg",
+  "sourceAuthor": "Alexis Lours",
+  "sourceLicense": "CC BY 4.0",
+  "taxonInSource": "naam in titel/categorie",
+  "qualityGrade": null,
+  "annotations": [],
+  "sameShot": true,
+  "method": "Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.",
+  "sourceSexWords": [],
+  "sourceAgeWords": [],
+  "sourceSha1": "72d78c0753e96d9f4042fdb2a63e2527d1d35bb7",
+  "assetSha1": "53467d2c33af71b3d6a41c37c7cb901a0f1de912",
+  "auditDate": "14-11-2026",
+  "earlierMatch": {
+   "inliers": 2130,
+   "method": "ORB+RANSAC, bronaudit 09-11-2026"
+  }
+ },
+ {
+  "image": "/assets/species/sp248.webp",
+  "species": "sp248",
+  "source": "https://www.inaturalist.org/photos/204335214",
+  "sourceTitle": "iNaturalist 120788543",
+  "sourceAuthor": "(c) Gianluca Congi🪶🦆🌲, some rights reserved (CC BY-SA)",
+  "sourceLicense": "CC BY-SA 4.0",
+  "taxonInSource": "Pernis apivorus",
+  "qualityGrade": "research",
+  "annotations": [
+   "Life Stage: Adult",
+   "Sex: Male",
+   "Alive or Dead: Alive",
+   "Evidence of Presence: Organism"
+  ],
+  "sameShot": true,
+  "method": "Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.",
+  "sourceSexWords": [
+   "male"
+  ],
+  "sourceAgeWords": [
+   "adult"
+  ],
+  "sourceSha1": "2093bce889dc96463c2edb94418d37cd839aa27a",
+  "assetSha1": "2a0b5f8f1f4659bdfecb21870647a9db227d033f",
+  "auditDate": "14-11-2026",
+  "earlierMatch": {
+   "inliers": 2436,
+   "method": "ORB+RANSAC, bronaudit 09-11-2026"
+  },
+  "observation": "https://www.inaturalist.org/observations/120788543"
+ },
+ {
+  "image": "/assets/species/sp253.webp",
+  "species": "sp253",
+  "source": "https://commons.wikimedia.org/wiki/File:Rough-legged_Hawk,_female_(29534397942).jpg",
+  "sourceTitle": "File:Rough-legged Hawk, female (29534397942).jpg",
+  "sourceAuthor": "dfaulder",
+  "sourceLicense": "CC BY 2.0",
+  "taxonInSource": "naam in titel/categorie",
+  "qualityGrade": null,
+  "annotations": [],
+  "sameShot": true,
+  "method": "Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.",
+  "sourceSexWords": [
+   "female"
+  ],
+  "sourceAgeWords": [],
+  "sourceSha1": "27c807a2d352589fb631898ec791add1caa433d6",
+  "assetSha1": "3ea98fd49e12c3bec476182a82d8bb333ac63858",
+  "auditDate": "14-11-2026",
+  "earlierMatch": {
+   "inliers": 2828,
+   "method": "ORB+RANSAC, bronaudit 09-11-2026"
+  }
+ },
+ {
+  "image": "/assets/species/plumage/sp005-flight-dark.webp",
+  "species": "sp005",
+  "source": "https://commons.wikimedia.org/wiki/File:Common_buzzard_(Buteo_buteo_buteo)_in_flight.jpg",
+  "sourceTitle": "Common buzzard (Buteo buteo buteo) in flight.jpg",
+  "sourceAuthor": "Charles J. Sharp",
+  "sourceLicense": "CC BY-SA 4.0",
+  "taxonInSource": "Buteo buteo buteo",
+  "sourceSha1": "a1ec627483d9fe53a1704761eb8ee31a660625f4",
+  "assetSha1": "b99e563f018cf9b426f2023b7eabecf0c94063e9",
+  "auditDate": "14-11-2026",
+  "sameShot": true,
+  "annotations": [],
+  "sourceSexWords": [],
+  "sourceAgeWords": [],
+  "method": "Rechtstreeks afgeleid van de fotograafupload op Commons. Oorspronkelijk beeld en WebP vergeleken."
+ }
+]

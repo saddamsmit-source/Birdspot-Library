@@ -1,0 +1,39 @@
+[
+  {
+    "image": "/assets/species/plumage/sp082-portrait.webp",
+    "species": "sp082",
+    "source": "https://commons.wikimedia.org/wiki/File:Little_egret_%28Egretta_garzetta%29_Cyprus.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Little_egret_%28Egretta_garzetta%29_Cyprus.jpg",
+    "sourceTitle": "Little egret (Egretta garzetta) Cyprus.jpg",
+    "sourceAuthor": "Charles J. Sharp",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sameShot": true,
+    "method": "Verkleind tot maximaal 1600 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.",
+    "sourceSha256": "8c70ccf4ea298808af4eda37712c7908c2e73f11bdeeed35ea6abf0a98514d52",
+    "sha1": "07ddbb1334a87c58ffc50faf484fb3df7b2da23b",
+    "taxonInSource": "Egretta garzetta",
+    "annotations": [
+      "De fotograaf benoemt Kleine Zilverreiger op Cyprus. Het volwassen veldkleed, de fijne donkere snavel en de lichte tenen zijn zichtbaar. Geslacht onbekend."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp084-juv-europa.webp",
+    "species": "sp084",
+    "source": "https://commons.wikimedia.org/wiki/File:Gar%C3%A7a-vermelha%2C_juvenil%2C_Purple_Heron%2C_juvenile_%2850904679921%29.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/Gar%C3%A7a-vermelha%2C_juvenil%2C_Purple_Heron%2C_juvenile_%2850904679921%29.jpg",
+    "sourceTitle": "Garça-vermelha, juvenil, Purple Heron, juvenile (50904679921).jpg",
+    "sourceAuthor": "Luiz Lapa",
+    "sourceLicense": "CC BY 2.0",
+    "sameShot": true,
+    "method": "Verkleind tot maximaal 1400 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.",
+    "sourceSha256": "e5b2cec62a7f38f1f80608e46e88e563750a9bd2443f75c3af35b022bd8528ba",
+    "sha1": "7c740dec520be5a9c57a4e51ecf709bce20f0bb8",
+    "taxonInSource": "Ardea purpurea",
+    "annotations": [
+      "De fotograaf benoemt een juveniele Purperreiger in Portugal. Het bruine kleed, de slanke hals en de snavel zijn duidelijk zichtbaar."
+    ],
+    "auditDate": "2026-11-12",
+    "replaces": "/assets/species/plumage/sp084-juv.webp"
+  }
+]

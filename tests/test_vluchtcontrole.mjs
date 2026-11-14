@@ -46,8 +46,8 @@ console.log(`VC-01 OK — ${live.length} vluchtfoto's, alle met vastgelegde visu
 // VC-02 negatieve gevallen
 {
   const bad = clone(registers);
-  const p = bad.poses.sp003.find(x => x.image.endsWith('sp003-flight.webp'));
-  p.flight = true;
+  const archivedTakeoff = media.retired.sp003.find(x => x.image.endsWith('sp003-flight.webp'));
+  bad.poses.sp003.push({ ...archivedTakeoff, flight: true });
   const e = checkFlight(bad, review, media.retired);
   assert.ok(e.some(x => x.includes('sp003') && x.includes('opvliegen')), 'VC-02 opvliegende Holenduif niet geweigerd: ' + e.join(' | '));
 
@@ -115,7 +115,10 @@ for (const e of GUIDE_COMPARISONS.filter(x => x.flight)) for (const b of e.birds
   assert.ok(b.marks, `VC-06 ${b.id} vergelijkingstekst verdwenen`);
   const other = e.birds.find(x => x.id !== b.id);
   const html = recognitionPanel(byId.get(other.id));
-  assert.ok(html.includes(`Nog geen foto van ${byId.get(b.id).nameNL}`), `VC-06 ${other.id}: ontbrekende foto van ${b.id} niet als zodanig getoond`);
+  const panels = html.split('<div class="sd-cmp-panel"').slice(1).filter(part => part.startsWith(' data-cmp-panel data-cmp-flight'));
+  const name = byId.get(b.id).nameNL;
+  assert.ok(panels.some(part => part.includes(`<strong>${name}</strong>`) && part.includes('Nog geen passende vluchtfoto')),
+    `VC-06 ${other.id}: ontbrekende foto van ${b.id} niet als zodanig getoond`);
 }
 console.log('VC-06 OK — vergelijkingen met ontbrekende vluchtfoto behouden hun tekst en melden "Nog geen foto"');
 // VC-07 — beeldinhoud ⇔ vluchtlabel over álle gidsfoto's (FQA-01)
@@ -147,8 +150,8 @@ console.log('VC-06 OK — vergelijkingen met ontbrekende vluchtfoto behouden hun
   neg(r => { delete r.plumage.sp005.juv.flight; }, 'zonder flight:true', 'Buizerd-juveniel zonder vluchtlabel');
   neg(r => { delete r.plumage.sp173.adult_f.flight; }, 'zonder flight:true', 'Bruine Kiekendief-vrouwtje zonder vluchtlabel');
   neg(r => { r.plumage.sp006.adult_f.flight = true; }, 'toont vleugels-strekken', 'zittende Sperwer met gespreide vleugels als vlucht');
-  neg(r => { r.poses.sp003 = [{ ...(r.poses.sp003?.[0] || {}), image: '/assets/species/plumage/sp003-flight.webp', flight: true }]; }, 'toont opvliegen', 'opvliegende Holenduif terug als vlucht');
-  neg((r, inv) => { inv.images['/assets/species/plumage/sp002-flight.webp'].sha1 = '0'.repeat(40); }, 'SHA-1 wijkt af', 'gewijzigd beeldbestand');
+  neg(r => { r.poses.sp003.push({ image: '/assets/species/plumage/sp003-flight.webp', flight: true }); }, 'toont opvliegen', 'opvliegende Holenduif terug als vlucht');
+  neg((r, inv) => { inv.images['/assets/species/plumage/sp002-flight-wingband.webp'].sha1 = '0'.repeat(40); }, 'SHA-1 wijkt af', 'gewijzigd beeldbestand');
   neg((r, inv) => { delete inv.images['/assets/species/sp066.webp']; }, 'geen visuele beeldbeoordeling', 'foto zonder beoordeling');
   console.log(`VC-07 OK — ${n} gidsfoto's met beeldbeoordeling op SHA-1; vrij vliegend ⇔ flight:true; 6 negatieve gevallen geweigerd`);
 }
