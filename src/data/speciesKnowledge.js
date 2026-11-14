@@ -4194,6 +4194,39 @@ const DATA = {
    "checked": "2026-11-14",
    "certainty": "hoog",
    "publisher": "Sociedad de Ciencias Aranzadi"
+  },
+  "KWT_KAUW": {
+   "register": "NL07",
+   "label": "Kent Wildlife Trust — Kauw",
+   "url": "https://www.kentwildlifetrust.org.uk/wildlife-explorer/birds/crows-and-shrikes/jackdaw",
+   "edition": "online bron, geraadpleegd 14-11-2026",
+   "scope": "Nederland",
+   "confirms": "lengte 33–34 cm, spanwijdte 70 cm en volwassen koptekening",
+   "checked": "2026-11-14",
+   "certainty": "hoog",
+   "publisher": "Kent Wildlife Trust"
+  },
+  "TWT_GAAI": {
+   "register": "NL07",
+   "label": "The Wildlife Trusts — Gaai",
+   "url": "https://www.wildlifetrusts.org/wildlife-explorer/birds/crows-and-shrikes/jay",
+   "edition": "online bron, geraadpleegd 14-11-2026",
+   "scope": "Nederland",
+   "confirms": "lengte 34 cm, spanwijdte 55 cm en veldkenmerken",
+   "checked": "2026-11-14",
+   "certainty": "hoog",
+   "publisher": "The Wildlife Trusts"
+  },
+  "RSPB_KOOL": {
+   "register": "NL07",
+   "label": "RSPB — Koolmees",
+   "url": "https://www.rspb.org.uk/birds-and-wildlife/great-tit",
+   "edition": "online bron, geraadpleegd 14-11-2026",
+   "scope": "Nederland",
+   "confirms": "lengte 14 cm, spanwijdte 24 cm, gewicht 18 g en veldkenmerken",
+   "checked": "2026-11-14",
+   "certainty": "hoog",
+   "publisher": "RSPB"
   }
  },
  "profiles": {
@@ -7811,8 +7844,11 @@ const DATA = {
     },
     {
      "id": "sp021",
-     "why": "Bestaande vluchtvergelijking in Birdspot (kraaiachtige)",
-     "sources": []
+     "why": "Let op de relatief korte staart en het blauw-zwart gebandeerde vleugelveld van de Gaai. De Ekster heeft een langere staart en brede witte vleugelvelden.",
+     "sources": [
+      "VB_GAAI",
+      "VB_EKSTER"
+     ]
     }
    ],
    "detail": [
@@ -7842,9 +7878,10 @@ const DATA = {
    ],
    "basis": {
     "size": {
-     "text": "Lengte 32–36 cm, spanwijdte 50–60 cm.",
+     "text": "Vogelbescherming noemt 32–36 cm lengte en 50–60 cm spanwijdte. The Wildlife Trusts geeft 34 cm en 55 cm als typische veldwaarden.",
      "sources": [
-      "VB_GAAI"
+      "VB_GAAI",
+      "TWT_GAAI"
      ]
     }
    },
@@ -9770,9 +9807,10 @@ const DATA = {
    ],
    "basis": {
     "size": {
-     "text": "Vogelbescherming noemt 30–34 cm lengte en 64–73 cm spanwijdte.",
+     "text": "Vogelbescherming noemt 30–34 cm lengte en 64–73 cm spanwijdte. Kent Wildlife Trust noemt 33–34 cm en een spanwijdte van 70 cm.",
      "sources": [
-      "VB_KAUW"
+      "VB_KAUW",
+      "KWT_KAUW"
      ]
     }
    },
@@ -9812,7 +9850,7 @@ const DATA = {
    ],
    "discrepancies": [],
    "open": [
-    "Een afzonderlijke juvenielenfoto, een vrije-vluchtfoto en een eigen geluidsopname voor de gids ontbreken."
+    "Een bronbevestigde juvenielenfoto, een foto in vrije vlucht en een eigen geluidsopname ontbreken. De frontale landingsnadering blijft bij de overige herkenningsfoto’s."
    ]
   },
   "sp054": {
@@ -11306,6 +11344,13 @@ const DATA = {
       "BZH_KOOL"
      ],
      "topic": "geslacht"
+    },
+    {
+     "topic": "leeftijd",
+     "text": "Jonge Koolmezen hebben vaak gelig getinte wangen en een doffere kop dan volwassen vogels. Bij twijfel blijft het geslacht open.",
+     "sources": [
+      "BZH_KOOL"
+     ]
     }
    ],
    "voice": [
@@ -11319,9 +11364,10 @@ const DATA = {
    ],
    "basis": {
     "size": {
-     "text": "Vogelbescherming noemt 13,5–15 cm lichaamslengte.",
+     "text": "Vogelbescherming noemt 13,5–15 cm lengte. RSPB geeft 14 cm en een spanwijdte van 24 cm als typische waarden.",
      "sources": [
-      "VB_KOOL"
+      "VB_KOOL",
+      "RSPB_KOOL"
      ]
     }
    },

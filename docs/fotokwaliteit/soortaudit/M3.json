@@ -61,7 +61,8 @@
         }
       },
       "corrections": [
-        "De bestaande landingsfoto blijft buiten In vlucht. Het kennisprofiel maakt het leeftijdsvoorbehoud bij oogkleur expliciet."
+        "De bestaande landingsfoto blijft buiten In vlucht. Het kennisprofiel maakt het leeftijdsvoorbehoud bij oogkleur expliciet.",
+        "Twee originele foto’s gematcht. De landingsnadering blijft bij de overige foto’s. Maten naast Kent Wildlife Trust gelegd."
       ],
       "missing": [
         "Afzonderlijke juvenielenfoto",
@@ -70,7 +71,8 @@
       "sexPolicy": "Geslachten zijn uiterlijk gelijkend. De kaart houdt beide foto’s neutraal.",
       "uncertain": [
         "De fotobron noemt het beeld in algemene zin “in flight”. De zichtbare poten en houding ondersteunen de specifiekere Birdspot-indeling als landingshouding."
-      ]
+      ],
+      "date": "2026-11-14"
     },
     "sp054": {
       "assets": {
