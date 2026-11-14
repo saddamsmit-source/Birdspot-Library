@@ -275,13 +275,18 @@ for (const id of ['sp041', 'sp035']) {
   const html = recognitionPanel(species.get(id));
   assert.ok(html.includes('sp041-adult_f.webp') && html.includes('sp035-adult_f.webp'),
     'F2-17: female pair missing for ' + id);
-  assert.ok(html.includes('sp041-juv.webp') && html.includes('sp035-juv.webp'),
+  assert.ok(html.includes('sp041-juv.webp') && html.includes('sp035-juv-review.webp'),
     'F2-17: juvenile pair missing for ' + id);
 }
 assert.match(species.get('sp039').fieldmarks, /vrouwtjes en jongen/);
 assert.match(species.get('sp041').fieldmarks, /zware kegelsnavel/);
 assert.match(species.get('sp042').fieldmarks, /onvolwassen mannetje/);
 assert.match(species.get('sp042').distribution, /Hollandse kust/);
+const vinkJuvenilePose = GUIDE_POSES.sp035?.find(p => p.age === 'juvenile' && !p.flight);
+assert.ok(vinkJuvenilePose?.image === '/assets/species/plumage/sp035-juv-review.webp',
+  'F2-17: must refer to the actual registered Vink juvenile pose photo');
+assert.ok(vinkJuvenilePose?.author && vinkJuvenilePose?.license && vinkJuvenilePose?.source,
+  'F2-17: juveniele pose moet oorspronkelijke fotograaf, licentie en bron hebben');
 console.log('F2-17: three paired resting comparisons and VBN text; original-to-WebP inspection remains NOT TESTED');
 
 console.log(`QA-SPECHTEN-BYTES: ${reviewedSpechtenFiles} current files have distinct WebP bytes; near-duplicates NOT PROVEN`);

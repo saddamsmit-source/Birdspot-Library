@@ -179,7 +179,8 @@
     "Kneu missing distinct female and juvenile portraits; Roodmus missing female, juvenile and flight portraits.",
     "Kneu flight and Appelvink flight historically conditional; don't force new flight image. Verify present display quality before deciding to remove or retain.",
     "ANWB bird-guide species passages for three species not accessible/read, so NOT TESTED rather than fabricated independent source.",
-    "Actual browser mobile check (CI pending), physical Android, ZIP restore, production deploy, integrated release QA NOT TESTED."
+    "Actual browser mobile check (CI pending), physical Android, ZIP restore, production deploy, integrated release QA NOT TESTED.",
+    "The Vink juvenile comparison uses the already registered photo /assets/species/plumage/sp035-juv-review.webp under GUIDE_POSES; its original-to-WebP pixel match remains NOT TESTED."
   ],
   "correction": {
     "file": "F2_16_BRON_EN_LIMIETEN.json",
@@ -197,5 +198,17 @@
   },
   "nextBatch": "UNKNOWN until current F2 register and credited photo species are checked",
   "rollback": "Close draft PR or revert own two F2-17 commits; PR217 unchanged.",
-  "qaOnNewSha": "PENDING"
+  "qaOnNewSha": "PENDING",
+  "ciLearning": {
+    "issue": "F2-17 sp035 juvenile image exists under GUIDE_POSES, not GUIDE_PLUMAGE; old guide_coverage validator assumed all age-matched comparison images were GUIDE_PLUMAGE entries, generating undefined.",
+    "firstObservedHead": "5537a19c7edec6354287248945f5ec1ee6f73267",
+    "failedWorkflows": [
+      43639298283,
+      43639298281,
+      43639298109
+    ],
+    "fix": "Use comparisonPhoto for a named role without a GUIDE_PLUMAGE entry to check the actual registered pose and its original author, license, source and file; preserve strict checkPhoto. Correct targeted regression from imagined sp035-juv.webp to real sp035-juv-review.webp.",
+    "status": "RETEST_REQUIRED",
+    "prevention": "Use the same source-resolver in actual UI and independent code coverage when a role can be provided by a pose image."
+  }
 }
