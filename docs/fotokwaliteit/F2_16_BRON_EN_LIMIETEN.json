@@ -215,5 +215,12 @@
     "sp041 Appelvink",
     "sp042 Kneu"
   ],
-  "proposedNextBatchNote": "Verify these are next still-unreviewed photographed species against the current F2 register before starting."
+  "proposedNextBatchNote": "Verify these are next still-unreviewed photographed species against the current F2 register before starting.",
+  "ciLearning": {
+    "issue": "Four pre-F2-16 regression tests encoded the old v1.2 string as the only allowed norm version, although the Project Owner authorized additive v1.3.",
+    "evidence": "First F2-16 head 5d0872ff: GitHub Actions M20 run 43632556898, M21 run 43632556826, M22 run 43632557026, M23 run 43632556877 all failed on exact old-version assertion; original six photo checks remained intact.",
+    "fix": "Update those four tests to require v1.3 plus the preserved v1.2 history, new small-bird rule and all six original photo verifications. Do not loosen any existing role/flight/file assertions.",
+    "status": "RETEST_REQUIRED",
+    "prevention": "Version assertions should explicitly check current norm and retained historical rules, instead of pinning one irreversible version."
+  }
 }

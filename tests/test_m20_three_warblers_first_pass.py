@@ -47,7 +47,10 @@ def load(path):
 
 def check_existing_policy_preserved():
     norm = (ROOT / "docs/BIRDSPOT_KWALITEITSNORM.md").read_text(encoding="utf-8")
-    assert "| Versie | 1.2 · 14-11-2026 |" in norm
+    assert "| Versie | 1.3 · 14-11-2026 |" in norm
+    assert "| 1.2 | 14-11-2026 |" in norm, "Previous photo norm history must remain intact"
+    assert "**Kleine vogels: herkenbare rustfoto's vóór een moeilijke vluchtfoto" in norm
+    assert "De zes controles van §3.2 blijven voor **elke wél geplaatste foto** verplicht." in norm
     assert "| 1.0 | 10-11-2026 |" in norm
     assert "| 1.1 | 13-11-2026 |" in norm
     # These seven existing 1.0 rules must NOT be silently replaced by

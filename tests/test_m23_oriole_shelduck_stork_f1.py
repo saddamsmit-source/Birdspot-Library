@@ -74,7 +74,10 @@ def check_progress_and_policy():
         assert item["fullKnowledgeReview"] == "NOT TESTED"
         assert (ROOT / item["reviewDocument"]).is_file()
     assert REPORT.is_file()
-    assert "| Versie | 1.2 · 14-11-2026 |" in norm
+    assert "| Versie | 1.3 · 14-11-2026 |" in norm
+    assert "| 1.2 | 14-11-2026 |" in norm, "Previous photo norm history must remain intact"
+    assert "**Kleine vogels: herkenbare rustfoto's vóór een moeilijke vluchtfoto" in norm
+    assert "De zes controles van §3.2 blijven voor **elke wél geplaatste foto** verplicht." in norm
     for old_rule in ('- **Klein in beeld mag.**','- **Echte vlucht voor "In vlucht".**',
                      "- **Geen verzonnen geslachtslabels.**",
                      "- **Een ontbrekende positie blijft open.**",
