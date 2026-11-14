@@ -472,11 +472,13 @@ def main():
 
             open_species("Houtduif", "sp002")
             stock_dove_card = cmp_card("Holenduif", flight=True)
-            # Vluchtcontrole 10-11-2026 (eigenaarsbesluit): de Holenduif-'vluchtfoto' toonde een opvliegende vogel
-            # en is uit de vluchtrol gehaald. De vergelijking blijft (tekst + navigatie) maar toont eerlijk dat de foto
-            # ontbreekt; een andere foto mag die plek niet vullen.
-            expect(stock_dove_card.locator('.sd-cmp-panel:visible .sd-field-photo')).to_have_count(0)
-            expect(stock_dove_card.locator('.sd-cmp-panel:visible .sd-cmp-ref', has_text="Nog geen foto")).to_have_count(1)
+            stock_dove_panel = stock_dove_card.locator('.sd-cmp-panel:visible')
+            stock_dove_photo = stock_dove_panel.locator('.sd-field-photo')
+            expect(stock_dove_photo).to_have_count(1)
+            expect(stock_dove_photo).to_have_attribute(
+                'data-guide-image', re.compile(r'/sp003-flight-open-sky[.]webp$'))
+            check_comparison_photo(stock_dove_photo)
+            expect(stock_dove_panel.get_by_text("Nog geen foto", exact=True)).to_have_count(0)
             expect(stock_dove_card.locator('.sd-cmp-panel:visible .sd-compare-open')).to_have_text(re.compile(r"Open Holenduif"))
             expect(p.locator('#sdPanel-herkenning section.sd-similar .sd-cmp-more > summary'))\
                 .to_have_text("Nog 1 soort: Turkse Tortel")

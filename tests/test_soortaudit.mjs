@@ -98,7 +98,11 @@ for (const s of SPECIES) {
   if (!hasOwnFlight && flightCmp.includes('↑ zie in vlucht')) assert.fail(`SA-07 ${s.id} verwijst naar ontbrekende eigen vluchtfoto`);
   if (flightCmp) refs++;
 }
-assert.ok(!recognitionPanel(SPECIES.find(s => s.id === 'sp003'), null).includes('↑ zie in vlucht'), 'SA-07 Holenduif');
+const stockDove = recognitionPanel(SPECIES.find(s => s.id === 'sp003'), null);
+const stockDoveFlight = stockDove.match(/aria-label="In vlucht"[\s\S]*?<\/section>/)?.[0];
+assert.ok(stockDoveFlight?.includes('sp003-flight-open-sky.webp'));
+assert.ok(stockDove.includes('↑ zie in vlucht'), 'SA-07 Holenduif: verwijzing naar de nieuwe vluchtsectie ontbreekt');
+assert.ok(!stockDove.includes('Nog geen geschikte vluchtfoto'), 'SA-07 Holenduif: verouderde melding');
 console.log(`SA-07 OK — ${refs} kaarten met vluchtvergelijking; geen verwijzing naar een ontbrekende eigen vluchtfoto`);
 
 // SA-08: only these two species; assert current UI media = independently enumerated audit.

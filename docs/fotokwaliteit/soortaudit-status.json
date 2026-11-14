@@ -88,7 +88,7 @@
     "technical": "VERIFIED",
     "visual": "VERIFIED",
     "rights": "VERIFIED",
-    "knowledge": "PARTIALLY TESTED",
+    "knowledge": "VERIFIED",
     "browser": "NOT TESTED",
     "independent": "NOT TESTED"
    },
@@ -98,9 +98,7 @@
     "critical": 2,
     "decisive": 2,
     "notDecisive": [],
-    "open": [
-     "Juveniel- en vluchtvergelijking met Stadsduif nog niet uit een Nederlandse bron uitgewerkt."
-    ],
+    "open": [],
     "discrepancies": 0
    },
    "browser": null,
@@ -146,6 +144,37 @@
       ]
      },
      "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp003-flight-open-sky.webp",
+     "role": "In vlucht",
+     "content": "Holenduif vrij in de lucht tegen blauwe lucht. Grijze vleugels zonder brede witte dwarsband, donker oog en donkere staartpunt.",
+     "sexAge": "Geen leeftijds- of geslachtslabel",
+     "quality": "Goed binnen herkenningsdoel. Volledige vogel, 680 × 595 px.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 14-11-2026: zelfde opname (uitsnede rechtstreeks uit gecontroleerd origineel (145,160)-(825,755)), CC BY 4.0 · andygpos",
+      "annotations": []
+     },
+     "flight": {
+      "n": 148,
+      "id": "sp003",
+      "nameNL": "Holenduif",
+      "registry": "GUIDE_POSES[1]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht tegen open hemel. Het zijaanzicht toont vleugel, kop en staart voldoende scherp voor vergelijking.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "Individuele iNaturalist-foto 757637556, CC BY 4.0 · andygpos",
+      "date": "2026-11-14"
+     }
     }
    ],
    "corrections": [
@@ -155,11 +184,10 @@
     "Lengte 30–33 → 28–32 cm; broedduur 16–18 → 16–17 dagen; nestjongen 27–28 → ca. 24 dagen (VB_HOLEN).",
     "F2: afzonderlijke brongeverifieerde juvenielenfoto toegevoegd.",
     "F2-hercontrole: bij Volwassen is zichtbaar dat man en vrouw op elkaar lijken.",
-    "F2-hercontrole: zachte afzetfoto uit de kaart gehaald en met herkomst gearchiveerd."
+    "F2-hercontrole: zachte afzetfoto uit de kaart gehaald en met herkomst gearchiveerd.",
+    "F2: foto van Holenduif in vrije vlucht toegevoegd en aangesloten op de bestaande vluchtvergelijkingen."
    ],
-   "missing": [
-    "In vlucht (geen echte vluchtfoto)"
-   ],
+   "missing": [],
    "wishes": [],
    "uncertain": [],
    "sexPolicy": "Mannetje en vrouwtje lijken sterk op elkaar. Het geslacht volgt bij deze opnamen niet op kleed. Bron: Blasco-Zumeta en Heinze.",
@@ -168,11 +196,11 @@
     "technical": "VERIFIED",
     "visual": "VERIFIED",
     "rights": "VERIFIED",
-    "knowledge": "PARTIALLY TESTED",
+    "knowledge": "VERIFIED",
     "browser": "NOT TESTED",
     "independent": "NOT TESTED"
    },
-   "photoComplete": false,
+   "photoComplete": true,
    "knowledge": {
     "profile": true,
     "critical": 2,
@@ -180,16 +208,13 @@
     "notDecisive": [
      "Stuit"
     ],
-    "open": [
-     "Een scherpe foto in vrije vlucht ontbreekt. De zachte afzetfoto is gearchiveerd.",
-     "Kleedvariatie van stadsduiven maakt de stuit niet doorslaggevend."
-    ],
+    "open": [],
     "discrepancies": 0
    },
    "browser": null,
    "errors": [],
    "verdict": "PARTIALLY TESTED",
-   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp004",
@@ -287,13 +312,13 @@
    "photoComplete": true,
    "knowledge": {
     "profile": true,
-    "critical": 2,
+    "critical": 3,
     "decisive": 1,
     "notDecisive": [
-     "Staart in vlucht"
+     "Staart in vlucht",
+     "Roep en vleugeltoppen"
     ],
     "open": [
-     "Onderscheid met Lachduif (ontsnapte vogels) nog uit een bron uitwerken.",
      "Spanwijdte en gewicht niet in de geraadpleegde Nederlandse bron."
     ],
     "discrepancies": 0
@@ -12737,6 +12762,12 @@
    "scope": "F2 · hercontrole sp002 sp003 sp004",
    "basis": "d528bf4704d8e8422a87e04b805fca566aeb9a0d",
    "evidence": "docs/fotokwaliteit/F2_02_HERCONTROLE_DUIVEN_2026-11-14.md"
+  },
+  {
+   "date": "2026-11-14",
+   "scope": "F2 · duiven vergelijken en Holenduif in vrije vlucht",
+   "basis": "47728bc2e2e93ada22d265e5d11dc78b68769e7a",
+   "evidence": "docs/fotokwaliteit/F2_03_DUIVEN_HERKENNING_2026-11-14.md"
   }
  ]
 }

@@ -2696,6 +2696,24 @@
    "rights": "VERIFIED",
    "rightsNote": "CC0 1.0 op Commons. Uitsnede uit de originele JPEG met bron- en bestandshash.",
    "replacement": "gewenst"
+  },
+  "/assets/species/plumage/sp003-flight-open-sky.webp": {
+   "n": 148,
+   "id": "sp003",
+   "nameNL": "Holenduif",
+   "registry": "GUIDE_POSES[1]",
+   "sexLabel": null,
+   "class": "vlucht",
+   "quality": "goed",
+   "decision": "goedgekeurd",
+   "target": null,
+   "newLabel": null,
+   "newNote": null,
+   "reason": "Vrij in de lucht tegen open hemel. Het zijaanzicht toont vleugel, kop en staart voldoende scherp voor vergelijking.",
+   "airborne": true,
+   "rights": "VERIFIED",
+   "rightsNote": "Individuele iNaturalist-foto 757637556, CC BY 4.0 · andygpos",
+   "date": "2026-11-14"
   }
  }
 }
