@@ -50,4 +50,14 @@ Doel is per soort de eigen foto’s, rollen, bronrechten, determinatie, maten en
 - De lokale structurele controle, aangevulde kennisprofielen en zes Node-suites testen de kandidaat. De extra mobiele browserasserties controleren de twee mannetjesfoto’s en de lege vluchtpositie van het Grauwe vrouwtje. Herstel door de concept-PR te sluiten of de wijziging op een integratiebranch terug te draaien.
 - Teller 15 van 140 soorten opgepakt in F2. Fysieke toestelcontrole en open beeldposities blijven afzonderlijk geregistreerd.
 
-**Volgende batch:** Kleine Bonte Specht (sp017), Zwarte Specht (sp018) en Groene Specht (sp019). Werk pas aan de 457 soorten zonder bestaande gidsfoto nadat de 140 opnieuw zijn doorlopen.
+## F2-09 · drie spechten
+
+| Soort | Hercontrole | Open |
+|---|---|---|
+| sp017 Kleine Bonte Specht | Drie foto’s naast de originele bron gelegd. De foto bij de nestholte toont het wegvliegen en blijft bij het vrouwtjeskleed. Lengte en spanwijdte vergeleken met twee uitgevers. | Passende juvenielenfoto, volledige vrije vlucht en gewicht. |
+| sp018 Zwarte Specht | Vijf foto’s naast de originele bron gelegd. Lengte en spanwijdte opnieuw berekend. | Volledige juvenielenfoto, scherpere vrouwtjesfoto, ruimer gekaderde vluchtfoto en gewicht. Bij het juveniele kopdetail blijft de licentiehistorie open. |
+| sp019 Groene Specht | Vijf foto’s naast de originele bron gelegd. De fotograaf bevestigt het vrouwtje in vlucht. Spanwijdte wordt nu getoond met bronverwijzingen. De vluchtvergelijking met Zwarte Specht benoemt wat de twee foto's en wat een langere waarneming tonen. | Geen extra foto toegevoegd. De toets op een fysiek toestel staat open. |
+
+Basis [PR #203 op 95c1998](https://github.com/saddamsmit-source/Birdspot-Library/pull/203), 24/24 GitHub-workflows. Codex op afzonderlijke F2-09-branch. [Brondossier met 13 oorspronkelijke foto’s](../evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_09.json), [bestaande M10-audit](soortaudit/M10.json), capabilities CAP-BIRD-012 en CAP-BIRD-015. Een visuele bronmatch alleen sluit een open licentiehistorie niet af. De renderaudit en Node-suites testen de kandidaat. Herstel via sluiten van de concept-PR of terugdraaien op de integratiebranch.
+
+**Teller:** 18 van 140 soorten opgepakt in F2. **Volgende batch:** Middelste Bonte Specht (sp020), Ekster (sp021) en Zwarte Kraai (sp022). Werk pas aan de 457 soorten zonder bestaande gidsfoto nadat de 140 opnieuw zijn doorlopen.

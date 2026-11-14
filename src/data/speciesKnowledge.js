@@ -4128,6 +4128,28 @@ const DATA = {
    "edition": "online soortpagina, geraadpleegd 14-11-2026",
    "checked": "2026-11-14",
    "certainty": "hoog"
+  },
+  "ZTL_KLEINE_SPECHT": {
+   "register": "EU11",
+   "label": "Zootierliste — Kleine Bonte Specht",
+   "url": "https://www.zootierliste.de/en/index.php?art=21103156&familie=24109&klasse=2&ordnung=241&subhaltungen=2",
+   "edition": "online soortpagina, geraadpleegd 14-11-2026",
+   "scope": "Europa",
+   "confirms": "lengte 14–16 cm en spanwijdte 24–28 cm",
+   "checked": "2026-11-14",
+   "certainty": "hoog voor basale herkenning; bron is oudere gidseditie",
+   "publisher": "Zootierliste"
+  },
+  "ZTL_ZWARTE_SPECHT": {
+   "register": "EU11",
+   "label": "Zootierliste — Zwarte Specht",
+   "url": "https://www.zootierliste.de/en/?art=2210306&familie=24109&klasse=2&ordnung=241",
+   "edition": "online soortpagina, geraadpleegd 14-11-2026",
+   "scope": "Europa",
+   "confirms": "lengte 45–55 cm en spanwijdte 67–73 cm",
+   "checked": "2026-11-14",
+   "certainty": "hoog voor basale herkenning; bron is oudere gidseditie",
+   "publisher": "Zootierliste"
   }
  },
  "profiles": {
@@ -21792,18 +21814,56 @@ const DATA = {
    ],
    "basis": {
     "size": {
-     "text": "Musgrote specht; de huidige weergegeven lengtemaat en spanwijdte zijn nog niet via twee onafhankelijk vergelijkbare maatbronnen opnieuw doorgerekend.",
+     "text": "Lengte ca. 14–16 cm, spanwijdte ca. 25–27 cm.",
      "sources": [
       "VB_KLEINE_BONTE_SPECHT",
-      "RSPB_KLEINE_BONTE_SPECHT"
+      "ZTL_KLEINE_SPECHT"
      ]
-    }
+    },
+    "biometrics": [
+     {
+      "field": "length",
+      "unit": "cm",
+      "display": "ca. 14–16 cm",
+      "values": [
+       {
+        "source": "VB_KLEINE_BONTE_SPECHT",
+        "min": 14,
+        "max": 16
+       },
+       {
+        "source": "ZTL_KLEINE_SPECHT",
+        "min": 14,
+        "max": 16
+       }
+      ],
+      "note": "Afgeronde veldindicatie. Beide bronwaarden blijven zichtbaar."
+     },
+     {
+      "field": "wingspan",
+      "unit": "cm",
+      "display": "ca. 25–27 cm",
+      "values": [
+       {
+        "source": "VB_KLEINE_BONTE_SPECHT",
+        "min": 26,
+        "max": 26
+       },
+       {
+        "source": "ZTL_KLEINE_SPECHT",
+        "min": 24,
+        "max": 28
+       }
+      ],
+      "note": "Afgeronde veldindicatie. Beide bronwaarden blijven zichtbaar."
+     }
+    ]
    },
    "discrepancies": [],
    "open": [
     "Een overtuigende foto van een zelfstandig herkenbaar juveniel ontbreekt in de gids.",
     "De bestaande foto bij de nestholte is geen voldoende scherpe vrijevluchtvergelijking; geen foto kunstmatig als vrije vlucht labelen.",
-    "Gewicht en gecombineerde maatbanden moeten voor eventuele wijziging volgens kwaliteitsnorm §1 apart worden nagezien."
+    "Gewicht vraagt nog een eigen vergelijking van twee passende bronnen."
    ]
   },
   "sp018": {
@@ -21960,18 +22020,56 @@ const DATA = {
    ],
    "basis": {
     "size": {
-     "text": "Een grote Europese specht; de in Birdspot bestaande maten blijven staan totdat lengte, spanwijdte en gewicht volgens de tweebronnenmethode zijn beoordeeld.",
+     "text": "Lengte ca. 45–55 cm, spanwijdte ca. 65–70 cm.",
      "sources": [
       "VB_ZWARTE_SPECHT",
-      "NAT_ZWARTE_SPECHT"
+      "ZTL_ZWARTE_SPECHT"
      ]
-    }
+    },
+    "biometrics": [
+     {
+      "field": "length",
+      "unit": "cm",
+      "display": "ca. 45–55 cm",
+      "values": [
+       {
+        "source": "VB_ZWARTE_SPECHT",
+        "min": 45,
+        "max": 55
+       },
+       {
+        "source": "ZTL_ZWARTE_SPECHT",
+        "min": 45,
+        "max": 55
+       }
+      ],
+      "note": "Afgeronde veldindicatie. Beide bronwaarden blijven zichtbaar."
+     },
+     {
+      "field": "wingspan",
+      "unit": "cm",
+      "display": "ca. 65–70 cm",
+      "values": [
+       {
+        "source": "VB_ZWARTE_SPECHT",
+        "min": 64,
+        "max": 68
+       },
+       {
+        "source": "ZTL_ZWARTE_SPECHT",
+        "min": 67,
+        "max": 73
+       }
+      ],
+      "note": "Afgeronde veldindicatie. Beide bronwaarden blijven zichtbaar."
+     }
+    ]
    },
    "discrepancies": [],
    "open": [
     "Het juveniele gidsbeeld toont uitsluitend de kop; een afzonderlijk volledig jeugdkleedportret ontbreekt.",
     "De lokale vrouwtjesfoto is een 500-pixel-voorbeeld; de originele bron heeft een veel hogere resolutie. Een verbeterd bestand vereist afzonderlijke gecontroleerde import.",
-    "Bestaande maten/gewichten zijn niet opnieuw volgens de tweebronnenmethode bevestigd."
+    "Gewicht vraagt nog een eigen vergelijking van twee passende bronnen."
    ]
   }
  }

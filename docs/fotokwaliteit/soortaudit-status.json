@@ -1306,11 +1306,9 @@
    "nameNL": "Kleine Bonte Specht",
    "family": "Spechten",
    "audited": true,
-   "verdict": "PARTIALLY TESTED",
-   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen",
    "batch": "M10",
-   "date": "2026-11-12",
-   "sha": "2e20f1d5f44fa27f1a84b7ced9f04fba533255fa",
+   "date": "2026-11-14",
+   "sha": null,
    "assets": [
     {
      "image": "/assets/species/sp017.webp",
@@ -1321,7 +1319,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Maurizio Carlini",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel vergeleken met oorspronkelijk bronbeeld), CC BY-SA 4.0 · Maurizio Carlini",
       "annotations": []
      },
      "flight": null
@@ -1335,7 +1333,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel vergeleken met oorspronkelijk bronbeeld), CC BY-SA 4.0 · Charles J. Sharp",
       "annotations": []
      },
      "flight": null
@@ -1349,7 +1347,7 @@
      "verdict": "uit-rol",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · blondinrikard",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel vergeleken met oorspronkelijk bronbeeld), CC BY 2.0 · blondinrikard",
       "annotations": []
      },
      "flight": {
@@ -1373,7 +1371,8 @@
    ],
    "corrections": [
     "Alle drie bestaande gidsfoto's visueel gecontroleerd tegen hun rol; bron, maker en originele pixels behouden.",
-    "Nestholtefoto blijft in Vrouwtje, niet in In vlucht. Geen fictieve flight-claim."
+    "Nestholtefoto blijft in Vrouwtje, niet in In vlucht. Geen fictieve flight-claim.",
+    "Alle eigen foto’s naast de oorspronkelijke bronbeelden bekeken. Lengte en spanwijdte zijn vergeleken met een tweede uitgever."
    ],
    "missing": [
     "Juvenielenfoto met controleerbare leeftijd.",
@@ -1392,7 +1391,7 @@
     "visual": "VERIFIED",
     "rights": "VERIFIED",
     "knowledge": "PARTIALLY TESTED",
-    "browser": "VERIFIED",
+    "browser": "NOT TESTED",
     "independent": "NOT TESTED"
    },
    "photoComplete": false,
@@ -1407,35 +1406,23 @@
     "open": [
      "Een overtuigende foto van een zelfstandig herkenbaar juveniel ontbreekt in de gids.",
      "De bestaande foto bij de nestholte is geen voldoende scherpe vrijevluchtvergelijking; geen foto kunstmatig als vrije vlucht labelen.",
-     "Gewicht en gecombineerde maatbanden moeten voor eventuele wijziging volgens kwaliteitsnorm §1 apart worden nagezien."
+     "Gewicht vraagt nog een eigen vergelijking van twee passende bronnen."
     ],
     "discrepancies": 0
    },
-   "browser": {
-    "ok": true,
-    "viewport": "390x844 Chromium (Playwright)",
-    "photos": 3,
-    "sections": [
-     "Hoofdfoto",
-     "Verenkleed"
-    ],
-    "flight": [],
-    "checks": "SAB-01..07",
-    "runSha": "2e20f1d5f44fa27f1a84b7ced9f04fba533255fa",
-    "evidence": "https://github.com/saddamsmit-source/Birdspot-Library/actions/runs/43287607724"
-   },
-   "errors": []
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
   },
   {
    "id": "sp018",
    "nameNL": "Zwarte Specht",
    "family": "Spechten",
    "audited": true,
-   "verdict": "PARTIALLY TESTED",
-   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen",
    "batch": "M10",
-   "date": "2026-11-12",
-   "sha": "2e20f1d5f44fa27f1a84b7ced9f04fba533255fa",
+   "date": "2026-11-14",
+   "sha": null,
    "assets": [
     {
      "image": "/assets/showcase/sp018.webp",
@@ -1446,7 +1433,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · xulescu_g",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel vergeleken met oorspronkelijk bronbeeld), CC BY-SA 2.0 · xulescu_g",
       "annotations": []
      },
      "flight": null
@@ -1460,7 +1447,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "geverifieerde import 09-11 (SHA-1 305a08246e…), CC BY 2.0 · Frank Vassen from Brussels, Belgium",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel vergeleken met oorspronkelijk bronbeeld), CC BY 2.0 · Frank Vassen from Brussels, Belgium",
       "annotations": []
      },
      "flight": null
@@ -1474,7 +1461,7 @@
      "verdict": "voorwaardelijk",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Andreas Eichler",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel vergeleken met oorspronkelijk bronbeeld), CC BY-SA 4.0 · Andreas Eichler",
       "annotations": []
      },
      "flight": null
@@ -1487,8 +1474,8 @@
      "quality": "Scherp kopdetail, maar niet bruikbaar als volledig juvenielportret.",
      "verdict": "voorwaardelijk",
      "rights": {
-      "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 1.0 · ",
+      "status": "PARTIALLY TESTED",
+      "note": "De huidige bestandspagina vermeldt CC BY 1.0. Oudere licentieverwijzing blijft een afzonderlijk te toetsen punt volgens M10.",
       "annotations": []
      },
      "flight": null
@@ -1502,7 +1489,7 @@
      "verdict": "voorwaardelijk",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Janus Mosbacher",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel vergeleken met oorspronkelijk bronbeeld), CC BY-SA 4.0 · Janus Mosbacher",
       "annotations": []
      },
      "flight": {
@@ -1526,7 +1513,8 @@
    ],
    "corrections": [
     "De scherpere, reeds aanwezige mannetjesfoto wordt als hoofdfoto gebruikt; eerdere geïmporteerde hoofdfoto blijft één keer onder Mannetje.",
-    "Vijf eigen bestanden per rol gecontroleerd. Geslacht van vlucht en juveniel wordt niet verzonnen."
+    "Vijf eigen bestanden per rol gecontroleerd. Geslacht van vlucht en juveniel wordt niet verzonnen.",
+    "Alle eigen foto’s naast de oorspronkelijke bronbeelden bekeken. Lengte en spanwijdte zijn vergeleken met een tweede uitgever."
    ],
    "missing": [
     "Volledige juvenielenfoto met controleerbare leeftijd.",
@@ -1545,9 +1533,9 @@
    "status": {
     "technical": "VERIFIED",
     "visual": "PARTIALLY TESTED",
-    "rights": "VERIFIED",
+    "rights": "PARTIALLY TESTED",
     "knowledge": "PARTIALLY TESTED",
-    "browser": "VERIFIED",
+    "browser": "NOT TESTED",
     "independent": "NOT TESTED"
    },
    "photoComplete": false,
@@ -1561,27 +1549,14 @@
     "open": [
      "Het juveniele gidsbeeld toont uitsluitend de kop; een afzonderlijk volledig jeugdkleedportret ontbreekt.",
      "De lokale vrouwtjesfoto is een 500-pixel-voorbeeld; de originele bron heeft een veel hogere resolutie. Een verbeterd bestand vereist afzonderlijke gecontroleerde import.",
-     "Bestaande maten/gewichten zijn niet opnieuw volgens de tweebronnenmethode bevestigd."
+     "Gewicht vraagt nog een eigen vergelijking van twee passende bronnen."
     ],
     "discrepancies": 0
    },
-   "browser": {
-    "ok": true,
-    "viewport": "390x844 Chromium (Playwright)",
-    "photos": 5,
-    "sections": [
-     "Hoofdfoto",
-     "Verenkleed",
-     "In vlucht"
-    ],
-    "flight": [
-     "/assets/species/plumage/sp018-flight.webp"
-    ],
-    "checks": "SAB-01..07",
-    "runSha": "2e20f1d5f44fa27f1a84b7ced9f04fba533255fa",
-    "evidence": "https://github.com/saddamsmit-source/Birdspot-Library/actions/runs/43287607724"
-   },
-   "errors": []
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
   },
   {
    "id": "sp019",

@@ -37,7 +37,8 @@
       },
       "corrections": [
         "Alle drie bestaande gidsfoto's visueel gecontroleerd tegen hun rol; bron, maker en originele pixels behouden.",
-        "Nestholtefoto blijft in Vrouwtje, niet in In vlucht. Geen fictieve flight-claim."
+        "Nestholtefoto blijft in Vrouwtje, niet in In vlucht. Geen fictieve flight-claim.",
+        "Alle eigen foto’s naast de oorspronkelijke bronbeelden bekeken. Lengte en spanwijdte zijn vergeleken met een tweede uitgever."
       ],
       "missing": [
         "Juvenielenfoto met controleerbare leeftijd.",
@@ -50,7 +51,7 @@
         "Onafhankelijke ornithologische second opinion op individuele foto's ontbreekt."
       ],
       "sexPolicy": "Volwassen mannetje met rode kruin, vrouwtje zonder rode kruin; juveniel niet op kopkleur alleen toeschrijven.",
-      "date": "2026-11-12"
+      "date": "2026-11-14"
     },
     "sp018": {
       "assets": {
@@ -92,7 +93,8 @@
       },
       "corrections": [
         "De scherpere, reeds aanwezige mannetjesfoto wordt als hoofdfoto gebruikt; eerdere geïmporteerde hoofdfoto blijft één keer onder Mannetje.",
-        "Vijf eigen bestanden per rol gecontroleerd. Geslacht van vlucht en juveniel wordt niet verzonnen."
+        "Vijf eigen bestanden per rol gecontroleerd. Geslacht van vlucht en juveniel wordt niet verzonnen.",
+        "Alle eigen foto’s naast de oorspronkelijke bronbeelden bekeken. Lengte en spanwijdte zijn vergeleken met een tweede uitgever."
       ],
       "missing": [
         "Volledige juvenielenfoto met controleerbare leeftijd.",
@@ -107,7 +109,7 @@
         "Commons toont voor het juveniel kopdetail nu CC BY 1.0; de oorspronkelijke upload bevat een ouder CC BY-SA-sjabloon. Bij herpublicatie licentiehistorie opnieuw controleren."
       ],
       "sexPolicy": "Mannetje geheel rode kruin; vrouwtje achterkruin rood. Geen automatisch geslachtslabel voor vlucht of juveniel.",
-      "date": "2026-11-12"
+      "date": "2026-11-14"
     }
   }
 }

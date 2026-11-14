@@ -992,10 +992,10 @@ export const GUIDE_COMPARISONS = [
     label: 'Groene en Zwarte Specht · in vlucht',
     flight: true,
     birds: [
-      {id: 'sp019', source: 'groene-specht', marks: 'Groene bovendelen, lichte geelgroene stuit en een diep golvende vlucht.'},
-      {id: 'sp018', source: 'zwarte-specht', marks: 'Vrijwel geheel zwart met een rode kruin en lichte snavel. De vlucht is doorgaans rechter.'},
+      {id: 'sp019', source: 'groene-specht', marks: 'Groene bovendelen en een geelgroene stuit. In doorvlucht maakt de soort duidelijke golven.'},
+      {id: 'sp018', source: 'zwarte-specht', marks: 'Vrijwel geheel zwart met rood op de kop en een lichte snavel. De slagvlucht is rechter.'},
     ],
-    tip: 'Let op de stuitkleur en kijk, als je de vogel langer ziet, naar het verloop van de vlucht.',
+    tip: 'Vergelijk op de foto’s het zijaanzicht en de stuitkleur. Beoordeel een rechte of golvende vlucht pas als je de vogel langer ziet vliegen.',
   },
   {
     label: 'Zwarte Kraai en Kauw · in vlucht',
