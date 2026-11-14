@@ -200,14 +200,11 @@ node tests/test_guide_poses.mjs            # voorbeeld; zie tests/ voor alle sui
 python3 tools/species/apply_status.py
 ```
 
-## Actuele S1-releasekandidaat — 13 november 2026 (GEEN publicatie)
+## Actuele S1-releasekandidaat · 14 november 2026
 
-- **Actuele ontwikkelfase:** S1 praktijkpilot; een ontwikkelbatch of CI-PASS is geen productie-PASS.
-- **Baselines:** `main` `5bf67043e830e977749f0ee593cf9f41f0e2822b` en bestaande reviewbranch `21ce9060f789103cfbba98fa78f6b53f4b9cea5b` blijven behouden.
-- **Nieuwe kandidaat:** op afzonderlijke QA-branch met **`APP_VERSION = '1.27.7'`**, alleen voor niet-gepubliceerde integratietesten; exacte eind-SHA, CI en owner-besluit vastleggen in `docs/release/RELEASE_1.27.7_CANDIDATE.md`.
-- **Verplichte releaseproef:** echte 1.27.6-review → 1.27.7 serviceworker-upgrade op dezelfde origin, exacte lokale gebruikersdata/IDB behouden, nieuwe media en JS offline beschikbaar, plus bestaande 1.14/1.27.5 regressies.
-- **Nog niet vrijgegeven:** fysieke Android/PWA, camerabestandskiezer, tweede toestel ZIP-herstel, latere release/privacy/hostingchecks. Geen merge, GitHub Pages-update of Vercel-deploy.
-- **Herstel:** huidige publieke review `21ce9060` als code-/cachebaseline behouden. Een code-rollback wist of herstelt geen gebruikersgegevens: ZIP-back-up en herstel zijn afzonderlijke acties.
+- App- en gidsbasis is concept-PR #203 op `95c1998` met het F2-checkpoint 15/140.
+- Serviceworkerversie 1.27.10 staat op een aparte kandidaatbranch. Het [releasedossier](docs/release/RELEASE_1.27.10_CANDIDATE.md) bevat de upgradeproeven, open releasevoorwaarden en rollback.
+- Bekende publieke baselines zijn GitHub Pages 1.27.6 op `21ce9060` en productiebranch `main` op `5bf67043`.
 
 ### Kostenregister — S1 basis, bewijs- en beslisgrenzen
 
@@ -234,7 +231,7 @@ Op eigenaarbesluit geldt deze uitvoeringsvolgorde voor de **140 soorten met best
 
 **Fotovergelijking (14-11-2026).** Een vergelijking onder ‘Lijkt op’ toont beide vogels naast elkaar, ook op mobiel, en mag passende gidsfoto’s hergebruiken. De eigen hoofd-, kleed- en vluchtsecties blijven vrij van dubbele opnamen. De herkenningstest controleert expliciet twee volwassen en twee juveniele vluchtfoto’s bij Buizerd en Ruigpootbuizerd, twee rustfoto’s bij Fitis en Tjiftjaf en het openlaten van een ontbrekende foto. Zie de fotonorm §3.3.
 
-De fysieke Android-praktijkpilot is door de eigenaar uitgesteld en blijft NOT TESTED; geen merge, GitHub Pages-/Vercel-deploy of livegang zonder apart eigenaarbesluit.
+De eigenaar gaf op 14 november 2026 opdracht tot livegang. De fysieke Android- en toestelherstelproeven en de publieke rechtencontrole staan open. Zie het releasedossier voor de status per controle.
 
 ## Afwijkingen van het Handbook
 
