@@ -1,7 +1,7 @@
 # Birdspot F2 — register open punten en uitgesteld fotoonderzoek
 
 **Eigenaarbesluit 14 november 2026 · Werkdocument (DRAFT, geen foto-PASS)**
-**Historische basis:** F2-15 `bccd09599a2b9fd7fb23771b3f6c262542b4c08a`; F2-20 voortzetting op PR #221 `fa05d08d203f656c5c7bce328c6deec6d3961632`, historische F2-19-bevindingen behouden. **Reikwijdte:** 51/140 soorten die individueel in F2 zijn opgepakt. Voor de andere 89 soorten geldt **NOT TESTED in F2** tot de afzonderlijke ronde start. Dit register is een index op de bestaande per-batch brondossiers, niet een vervanging van de canonieke 9-punts-audit.
+**Historische basis:** F2-15 `bccd09599a2b9fd7fb23771b3f6c262542b4c08a`; F2-20 voortzetting op PR #221 `fa05d08d203f656c5c7bce328c6deec6d3961632`, historische F2-19-bevindingen behouden. **Actuele reikwijdte (F2-23):** 60/140 soorten individueel opgepakt, 80/140 nog **NOT TESTED in F2**; het historische basischeckpoint van 51/140 uit F2-20 blijft in de onderliggende brondossiers bewaard. Geen van deze aantallen is gelijk aan een foto-PASS. Dit register is een index op de bestaande per-batch brondossiers, niet een vervanging van de canonieke 9-punts-audit.
 
 ## Hoe vervolgonderzoek te sturen
 
@@ -82,11 +82,17 @@ De tekst in de kolom 'Open uit bronronde' is overgenomen uit de laatste F2-voort
 
 **Visueel F2-22-checkpoint:** drie hoofd-WebP's (sp056/sp057/sp058) en twee eerder uit de vrije-vluchtrol gehaalde beelden (sp056/sp058) op echte repositoryblobs geopend via GitHub `encoding=base64`. De hoofdbeelden zijn visueel voldoende als herkenningsreferentie; het onduidelijke riet-/landingsbeeld blijft **niet vrij vliegend**. SHA's en per-foto bevinding in [F2_22_BRON_EN_LIMIETEN.json](F2_22_BRON_EN_LIMIETEN.json). Onafhankelijke biologische beoordeling, origineel-WebP-pixelpariteit en toestelrender blijven open.
 
+| sp059 Zwartkop | F2-23 | Zwarte mannetjes- en bruine vrouwtjeskruin bronbevestigd. Lokale hoofd- (Alexis Lours CC BY 4.0), vrouwtjes- (Caroline Legg CC BY 2.0) en juvenielen-WebP op daadwerkelijke beelden bekeken; blob-SHA's in [F2-23-dossier](F2_23_BRON_EN_LIMIETEN.json). Twee wederkerige rustparen met Tuinfluiter. Juvenielenleeftijd en oorspronkelijke jeugdfotopagina **NOT TESTED**; geen geslacht afleiden uit bruin petje. Originele JPEG/WebP-pixelmatch, rechten en mobiel blijven open. |
+| sp060 Tuinfluiter | F2-23 | Hoofdfoto uit oorspronkelijke Commons-bron **Victor Scharnhorst CC BY-SA 4.0** en lokale WebP visueel beoordeeld. Vogel kleiner in bloeiende struik; leesbaarheid bij 360/390px plus zoom **NOT TESTED**. Onbewezen juvenieltekst 'Als adult' verwijderd; man/vrouw niet automatisch verschillend. Rustvergelijking met Grasmus en twee varianten met Zwartkop. Origineel-WebP-pixelmatch/credits open. |
+| sp061 Grasmus | F2-23 | Hoofdfoto **Alexis Lours CC BY 4.0** en lokale man/vrouw/juveniel-WebP visueel bekeken; mannetjesfoto toont grijze kop en warmgerande vleugel. Nieuw tweefoto-rustpaar met Tuinfluiter; bestaande vergelijking met Braamsluiper uitgebreid. Individuele iNaturalist-kleed-/geslachtsbron, annotaties en licenties **NOT TESTED** in deze ronde; vrouwelijke vogel relatief klein in beeld. Geen extra vluchtrol. |
+
+**Visueel F2-23-checkpoint:** acht concrete app-WebP-bestanden op originele GitHub-blob-SHA's geopend, niet alleen bestandsnamen. De mannetjes-/vrouwtjes-/jeugdfotoregistraties blijven dezelfde als voor deze ronde; ontbrekende of onvoldoende bewezen beeldrollen zijn **niet** automatisch afgetekend. Commons-soortfoto's en artiest-/CC-rechten zijn op afzonderlijke originele pagina's gelezen voor vier beelden; original-to-local pixel/EXIF-controle blijft open. Alle oorspronkelijke URL's, nieuwe bronvergelijkingen, beeldobservaties en beperkingen staan in [F2_23_BRON_EN_LIMIETEN.json](F2_23_BRON_EN_LIMIETEN.json).
+
 ## Vervolgcontrole en aftekening
 
 1. Bij een volgende F2-ronde: controleer alleen de drie gekozen soorten op oorspronkelijke bestanden/CC-rechten, soort/rol, fotokwaliteit, twee passende vergelijkingbeelden en browserbediening; noteer de individuele status en bronlinks.
 2. Werk dit register additief bij: verander een open punt pas in **VERIFIED** na herhaalbare nieuwe bron-/beeld- en uitvoerbewijzen. Laat historische onzekerheid staan met datum en reden; geen stille aftekening op basis van 140 kaart-renders.
-3. **Niet gereviewd in F2:** 83 soorten. De individuele F2-controle omvat 57 van de oorspronkelijke 140 fotokaarten; een aparte bron-/WebP-/toestel-PASS blijft per soort nodig. Volgorde na F2-16 opnieuw afleiden uit de 140-fotolijst en F2-voortgang; geen ongeteste soorten starten vóór een passende batch.
+3. **Niet gereviewd in F2:** 80 soorten. De individuele F2-controle omvat 60 van de oorspronkelijke 140 fotokaarten; een aparte bron-/WebP-/toestel-PASS blijft per soort nodig. Volgorde na F2-16 opnieuw afleiden uit de 140-fotolijst en F2-voortgang; geen ongeteste soorten starten vóór een passende batch.
 4. Later diepgaand fotoonderzoek: per open beeldtype minimaal soortnaam/wetenschappelijke naam, doelkleed, foto-oorsprong, ondertitel, auteur, licentie, bronbestand/versie, vrijgave voor herpublicatie en indien passend exacte oorspronkelijke pixels. Bij twijfel lege positie laten staan.
 
 ## Live-/release-gate — aparte status

@@ -174,6 +174,37 @@ assert.ok(byId.get('sp058').fieldmarks.includes('helderwitte buik'));
 assert.equal(byId.get('sp058').plumage.juv, null,
   'F2-22: unverified Wood Warbler juvenile plumage must remain unknown');
 
+// F2-23: adult male/female Blackcap + Garden Warbler, Whitethroat/Braamsluiper.
+// Assert registered resting images appear on BOTH species cards; no flight fallback.
+for (const [label, ids, images] of [
+  ['Zwartkop en Tuinfluiter · kop en zang', ['sp059', 'sp060'], ['sp059.webp', 'sp060.webp']],
+  ['Zwartkop en Tuinfluiter · vrouwtje in rust', ['sp059', 'sp060'], ['sp059-adult_f.webp', 'sp060.webp']],
+  ['Grasmus en Tuinfluiter · rustbeeld', ['sp061', 'sp060'], ['sp061.webp', 'sp060.webp']],
+  ['Grasmus en Braamsluiper · vleugel en zang', ['sp061', 'sp062'], ['sp061-hero-male.webp', 'sp062.webp']],
+]) {
+  const entries = GUIDE_COMPARISONS.filter(pair => pair.label === label);
+  assert.equal(entries.length, 1, `F2-23 missing/duplicated comparison: ${label}`);
+  const [entry] = entries;
+  assert.deepEqual(entry.birds.map(bird => bird.id), ids, `F2-23 wrong partner order: ${label}`);
+  assert.equal(Boolean(entry.flight), false, `F2-23 must not invent flight image: ${label}`);
+  assert.equal(entry.rows?.length, 3, `F2-23 requires three grounded fieldmarks: ${label}`);
+  for (const id of ids) {
+    const html = recognitionPanel(byId.get(id));
+    const panels = html.split('<div class="sd-cmp-panel"').slice(1);
+    assert.ok(panels.some(panel => !panel.startsWith(' data-cmp-panel data-cmp-flight') &&
+      images.every(image => panel.includes(image))),
+    `F2-23 two distinct resting photos required from ${id}: ${label}`);
+  }
+}
+const blackcapFemale = GUIDE_COMPARISONS.find(entry =>
+  entry.label === 'Zwartkop en Tuinfluiter · vrouwtje in rust');
+assert.equal(blackcapFemale.birds[0].plumage, 'adult_f',
+  'F2-23 female Blackcap pair must use source-registered female, not juvenile');
+assert.equal(byId.get('sp060').plumage.juv, null,
+  'F2-23 Garden Warbler juvenile age not independently proven');
+assert.ok(byId.get('sp060').fieldmarks.includes('zonder afgetekend petje'),
+  'F2-23 Garden Warbler lacks strongly marked cap');
+
 const youngTits = GUIDE_COMPARISONS.find(entry => entry.label === 'Matkop en Glanskop · jonge vogels');
 assert.deepEqual(youngTits.birds.map(({id, plumage}) => [id, plumage]), [['sp031', 'juv'], ['sp032', 'juv']]);
 for (const id of ['sp031', 'sp032']) {

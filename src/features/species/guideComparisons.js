@@ -1577,18 +1577,54 @@ export const GUIDE_COMPARISONS = [
   {
     label: 'Zwartkop en Tuinfluiter · kop en zang',
     birds: [
-      {id: 'sp059', source: 'zwartkop', marks: 'Afgetekend zwart of bruin petje. De zang eindigt vaak met enkele heldere, luide fluittonen.'},
-      {id: 'sp060', source: 'tuinfluiter', marks: 'Egaler hoofd zonder petje. De zang gaat doorgaans vloeiender door.'},
+      {id: 'sp059', source: 'zwartkop', marks: 'Volwassen mannetje met zwarte kruin en grijze kopzijden. De zang eindigt vaak met heldere, hoge fluittonen.'},
+      {id: 'sp060', source: 'tuinfluiter', marks: 'Effen bruingrijze kruin zonder afgetekend petje. De snelle, vloeiende zang mist meestal de heldere eindfluitjes.'},
     ],
-    tip: 'Bekijk de hele kruin in goed licht en luister naar een volledige strofe.',
+    rows: [
+      {label: 'Kruin', values: ['Mannetje: duidelijk zwart petje', 'Egaal bruingrijs zonder afgetekend petje']},
+      {label: 'Zang', values: ['Vaak duidelijke heldere, luide eindfluitjes', 'Vloeiend, zonder dezelfde uitgesproken heldere afsluiting']},
+      {label: 'Kop', values: ['Grijzig met een scherp afgebakend kruinveld', 'Onopvallend bruingrijs met lichte oogring en grijzige halszijde']},
+    ],
+    tip: 'Luister naar een volledige strofe. Bruine-kruinvogels vragen extra aandacht: vrouwtjes en jonge Zwartkoppen kunnen een bruin petje hebben.',
+  },
+  {
+    label: 'Zwartkop en Tuinfluiter · vrouwtje in rust',
+    birds: [
+      {id: 'sp059', source: 'zwartkop', plumage: 'adult_f', marks: 'Vrouwtje Zwartkop: duidelijk kastanjebruine kruin boven de grijsbruine kopzijden.'},
+      {id: 'sp060', source: 'tuinfluiter', marks: 'Egaal bruingrijs zonder scherp afgetekend bruin petje; ook man en vrouw lijken op elkaar.'},
+    ],
+    rows: [
+      {label: 'Kruin', values: ['Afgetekende roodbruine kruin', 'Egaal bruingrijs zonder duidelijke begrenzing']},
+      {label: 'Zijkop', values: ['Grijzig onder het bruine petje', 'Subtiele grijzige halszijde, geen petje']},
+      {label: 'Zang', values: ['Heldere fluittonen in de afsluiting zijn een aanwijzing', 'Meer doorlopende, gelijkmatige zang zonder zulke eindfluitjes']},
+    ],
+    tip: 'De vrouwtjesfoto is een eerder geregistreerde opname. Een jong Zwartkopmannetje kan ook een bruine kruin hebben: bepaal het geslacht niet uitsluitend op petkleur.',
+  },
+  {
+    label: 'Grasmus en Tuinfluiter · rustbeeld',
+    birds: [
+      {id: 'sp061', source: 'grasmus', photo: '/assets/species/sp061.webp', marks: 'Grasmus met duidelijk lichte keel, vaak warme roestbruine vleugelranden en een langere staart.'},
+      {id: 'sp060', source: 'tuinfluiter', marks: 'Effen grijsbruin en grijswit met weinig contrast aan kop en vleugels.'},
+    ],
+    rows: [
+      {label: 'Keel', values: ['Opvallend wit, contrasteert met zijkop', 'Grijswit, vaak minder contrastrijk']},
+      {label: 'Vleugel', values: ['Warme roestbruine veerranden', 'Overwegend egaal bruingrijs']},
+      {label: 'Zang', values: ['Krasachtig, variabel riedeltje', 'Rijk en doorlopend als een snelle Merel']},
+    ],
+    tip: 'Op deze twee rustfoto’s staat de vogel anders in beeld. Vergelijk dus de vleugelranden, keel en kop, niet de afmeting op de foto.',
   },
   {
     label: 'Grasmus en Braamsluiper · vleugel en zang',
     birds: [
-      {id: 'sp061', source: 'grasmus', plumage: 'adult_m', marks: 'Warme roestbruine randen aan de vleugelveren. Vaak een wisselend, krassend zangriedeltje.'},
-      {id: 'sp062', source: 'braamsluiper', marks: 'Doorgaans grijzere vleugels en een donkerder wang. De zang eindigt vaak in een ratel.'},
+      {id: 'sp061', source: 'grasmus', plumage: 'adult_m', marks: 'Volwassen mannetje Grasmus: warme roestbruine vleugelranden, lichtere grijze kruin en vaak zachtroze borst.'},
+      {id: 'sp062', source: 'braamsluiper', marks: 'Braamsluiper met grijze kop en donkerdere oorstreek; vleugels minder roestkleurig.'},
     ],
-    tip: 'Beide soorten hebben een lichte keel. Vergelijk de gevouwen vleugel en luister naar meerdere strofen.',
+    rows: [
+      {label: 'Vleugel', values: ['Warme roestbruine veerranden', 'Gelijkmatiger grijsbruin, zonder vergelijkbaar roest']},
+      {label: 'Kop en keel', values: ['Lichtere grijze kruin en witte keel; bij man vaak roze borst', 'Donkerdere grijze oorstreek met witte keel']},
+      {label: 'Zang', values: ['Variabel en wat krassend', 'Korte snelle klepperende ratel']},
+    ],
+    tip: 'Beide soorten hebben een lichte keel, dus kijk vooral naar de vleugelranden. Hier staat een eerder geregistreerd Grasmus-mannetje naast een sekseneutrale Braamsluiperfoto.',
   },
   {
     label: 'IJsvogel en Bijeneter · keel en snavel',

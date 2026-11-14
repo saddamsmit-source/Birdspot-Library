@@ -1,0 +1,244 @@
+{
+  "schema": "birdspot-f2-23-source-photo-and-limits-v1",
+  "date": "2026-11-15",
+  "basePR": 224,
+  "baseSHA": "d3be8f15be20ce09a12ad7a327cdd8008a84b818",
+  "scope": [
+    "sp059 Zwartkop",
+    "sp060 Tuinfluiter",
+    "sp061 Grasmus"
+  ],
+  "status": "PARTIALLY TESTED",
+  "noNewMedia": true,
+  "sourceFacts": [
+    {
+      "id": "sp059",
+      "name": "Zwartkop",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwartkop",
+      "read": "verified page text",
+      "facts": "Male black cap; female rust-brown cap; juvenile may have brown cap; song with prominent clear notes at end; do not infer sex solely from juvenile cap"
+    },
+    {
+      "id": "sp060",
+      "name": "Tuinfluiter",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/tuinfluiter",
+      "read": "verified page text",
+      "facts": "Uniform grey-brown back and grey-white belly, grey patch at neck side, short blunt bill, fast fluid song without strong clear blackcap-like terminal whistles"
+    },
+    {
+      "id": "sp061",
+      "name": "Grasmus",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grasmus",
+      "read": "verified page text",
+      "facts": "White throat, warm rusty wing edges, grey cap and pinkish breast in breeding male; somewhat scratchy variable song"
+    },
+    {
+      "id": "comparison_sp062",
+      "name": "Braamsluiper",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/braamsluiper",
+      "read": "verified page text",
+      "facts": "Grey head and dark ear coverts, clear white throat, absence of same warm rust on wings; rattling song"
+    }
+  ],
+  "originalPhotoPages": [
+    {
+      "id": "sp059",
+      "role": "main male",
+      "source": "https://commons.wikimedia.org/wiki/File:Eurasian_Blackcap_2025_04_05.jpg",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "checked": "original Commons page read incl. author/license/scientific species; local WebP visually inspected; exact JPEG/WebP pixel/hash parity NOT TESTED"
+    },
+    {
+      "id": "sp060",
+      "role": "neutral main",
+      "source": "https://commons.wikimedia.org/wiki/File:Garden_warbler_(Sylvia_borin)_at_the_UNESCO_Biosphere_Reserve_Swabian_Alb.jpg",
+      "author": "Victor Scharnhorst",
+      "license": "CC BY-SA 4.0",
+      "checked": "original Commons page read incl. author/license/scientific species; local WebP visually inspected; exact JPEG/WebP pixel/hash parity NOT TESTED"
+    },
+    {
+      "id": "sp061",
+      "role": "neutral main",
+      "source": "https://commons.wikimedia.org/wiki/File:Common_whitethroat_2025_05_25.jpg",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "checked": "original Commons page read incl. author/license/scientific species; local WebP visually inspected; exact JPEG/WebP pixel/hash parity NOT TESTED"
+    },
+    {
+      "id": "sp059",
+      "role": "female",
+      "source": "https://commons.wikimedia.org/wiki/File:Female_Blackcap_-_Sylvia_atricapilla_(49979484338).jpg",
+      "author": "Caroline Legg",
+      "license": "CC BY 2.0",
+      "checked": "original Commons page read with 2023 Flickr licensing verification; local female WebP visually inspected; biological sex not independently certified by image alone"
+    }
+  ],
+  "registeredAdditionalPhotos": [
+    {
+      "id": "sp059",
+      "role": "juvenile",
+      "path": "/assets/species/plumage/sp059-juv.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Svarth%C3%A4tta_%28Sylvia_atricapilla%29_juvenil_i_h%C3%A4gg_i_V%C3%A4smestorp_2023-06-17_%284302%29.jpg",
+      "author": "Gunnar Creutz",
+      "licenseRegistered": "CC BY-SA 4.0",
+      "sourcePageNewlyRead": false,
+      "notes": "Local juvenile image looks fluffy with brown cap and pale gape. Photograph title calls juvenile; independent age evidence/rights and exact derivative mapping NOT TESTED"
+    },
+    {
+      "id": "sp061",
+      "role": "male",
+      "path": "/assets/species/plumage/sp061-hero-male.webp",
+      "source": "https://www.inaturalist.org/photos/128098779",
+      "author": "Donald Davesne",
+      "licenseRegistered": "CC BY 4.0",
+      "sourcePageNewlyRead": false,
+      "notes": "Grey head, white throat and rusty wing margins clearly visible. Previous annotation Male; new independent sex/source/rights check NOT TESTED"
+    },
+    {
+      "id": "sp061",
+      "role": "female",
+      "path": "/assets/species/plumage/sp061-adult_f.webp",
+      "source": "https://www.inaturalist.org/photos/295574541",
+      "author": "Roy Lowry",
+      "licenseRegistered": "CC BY 4.0",
+      "sourcePageNewlyRead": false,
+      "notes": "Small bird in plants with brown head, pale throat and brown wing. Readability on mobile and independent sex/source license NOT TESTED"
+    },
+    {
+      "id": "sp061",
+      "role": "juvenile",
+      "path": "/assets/species/plumage/sp061-juv.webp",
+      "source": "https://www.inaturalist.org/photos/517714670",
+      "author": "John Ashburner",
+      "licenseRegistered": "CC BY 4.0",
+      "sourcePageNewlyRead": false,
+      "notes": "Brown cap, buff gape and young plumage visible. Age attribution from previous iNaturalist observation unverified in this run; no new role approval"
+    }
+  ],
+  "actualLocalWebPInspection": {
+    "method": "GitHub connector fetch_file(encoding=base64), decoded image visual review, read-only against F2-22 parent SHA",
+    "status": "VERIFIED for visually observed content of 8 repo WebP blobs only; not original-JPEG matching",
+    "photos": [
+      {
+        "id": "sp059",
+        "role": "male hero",
+        "blob": "7e9c81735c7c6d122ba0b9ef1353926b65484719",
+        "path": "/assets/species/sp059.webp",
+        "observed": "Sharp whole black-capped singing-looking bird on upright twig, grey-brown body, source morphology consistent"
+      },
+      {
+        "id": "sp060",
+        "role": "neutral hero",
+        "blob": "338e896e8593bade7b69e2a8096640df123a02bd",
+        "path": "/assets/species/sp060.webp",
+        "observed": "Garden Warbler fully visible, relatively small within blossoming shrub; brown-grey cap without black patch, light belly; verify mobile readability"
+      },
+      {
+        "id": "sp061",
+        "role": "neutral guide photo",
+        "blob": "8d70210777094c531fedaf37690164ad720564eb",
+        "path": "/assets/species/sp061.webp",
+        "observed": "Perched bird carrying insect, pale throat and warm wing margins readable; sex/age kept neutral"
+      },
+      {
+        "id": "sp059",
+        "role": "female",
+        "blob": "e5f27349591797b5cbfc553a4fabbc6ec2e4523f",
+        "path": "/assets/species/plumage/sp059-adult_f.webp",
+        "observed": "Clear red-brown cap and grey-brown under/head, sharp side view; previous female source label retained"
+      },
+      {
+        "id": "sp059",
+        "role": "juvenile",
+        "blob": "70cb9c5e49460367bae426e94f927da4bc317473",
+        "path": "/assets/species/plumage/sp059-juv.webp",
+        "observed": "Full immature-looking bird with light gape and brown cap; somewhat grainy; age/sex not independently certified"
+      },
+      {
+        "id": "sp061",
+        "role": "male",
+        "blob": "591648911fdc11db5ae4fcafb6242f811ef0667e",
+        "path": "/assets/species/plumage/sp061-hero-male.webp",
+        "observed": "Clear grey head, white throat, chestnut warm wing edges, tail; source Male label previously recorded"
+      },
+      {
+        "id": "sp061",
+        "role": "female",
+        "blob": "16024ed95d347914ebcb73d3f5325e4e140b6aa3",
+        "path": "/assets/species/plumage/sp061-adult_f.webp",
+        "observed": "Smaller relatively distant pale-brown bird between stems; picture less sharp; role and mobile legibility remain open"
+      },
+      {
+        "id": "sp061",
+        "role": "juvenile",
+        "blob": "430a4096029e985310b5ce56880863a9fe4604c5",
+        "path": "/assets/species/plumage/sp061-juv.webp",
+        "observed": "Brown head, pale gape, orange wing edges visible; previous juvenile label not newly independently proved"
+      }
+    ]
+  },
+  "comparisons": [
+    {
+      "name": "Zwartkop en Tuinfluiter · kop en zang",
+      "ids": [
+        "sp059",
+        "sp060"
+      ],
+      "paths": [
+        "/assets/species/sp059.webp",
+        "/assets/species/sp060.webp"
+      ],
+      "status": "existing two-image adult photo comparison expanded to 3 rows"
+    },
+    {
+      "name": "Zwartkop en Tuinfluiter · vrouwtje in rust",
+      "ids": [
+        "sp059",
+        "sp060"
+      ],
+      "paths": [
+        "/assets/species/plumage/sp059-adult_f.webp",
+        "/assets/species/sp060.webp"
+      ],
+      "status": "new adult female Brown-cap Blackcap vs neutral Garden Warbler, both reciprocal"
+    },
+    {
+      "name": "Grasmus en Tuinfluiter · rustbeeld",
+      "ids": [
+        "sp061",
+        "sp060"
+      ],
+      "paths": [
+        "/assets/species/sp061.webp",
+        "/assets/species/sp060.webp"
+      ],
+      "status": "new neutral Whitethroat vs neutral Garden Warbler, both reciprocal"
+    },
+    {
+      "name": "Grasmus en Braamsluiper · vleugel en zang",
+      "ids": [
+        "sp061",
+        "sp062"
+      ],
+      "paths": [
+        "/assets/species/plumage/sp061-hero-male.webp",
+        "/assets/species/sp062.webp"
+      ],
+      "status": "existing comparison expanded to 3 grounded rows; comparator sp062 not counted as new F2 species"
+    }
+  ],
+  "anwb": "NOT TESTED: no actually opened ANWB species passages with exact edition, pages",
+  "audio": "GUIDE_AUDIO contains no actual audio records for sp059, sp060 or sp061; songs are textual only; don't invent license or playback.",
+  "flight": "No new confirmed true free-flight images for sp059 sp060 sp061 in this F2 batch. Do not invent flight or mix flapping/landing photos.",
+  "taxonomy": "Vogelbescherming Grasmus page uses historic Sylvia communis while app uses Curruca communis; identity mapping not separately taxonomically audited in F2-23.",
+  "noChangedMedia": "All 8 examined local WebP byte files and original media author/license metadata unchanged",
+  "open": [
+    "Original Wikimedia JPEG-to-local-WebP pixel/hash equivalence and EXIF/GPS/transform stripping not independently verified; existing source metadata not a full derivative proof.",
+    "Zwartkop juvenile source page and Grasmus iNaturalist original/observation records (male/female/juvenile) were not newly opened; individual age/sex/license correctness requires independent validation.",
+    "Tuinfluiter photographed small among branches; actual 360/390px mobile visual identification and zoom/pan not tested.",
+    "No recorded audio clips for these 3 species; song references text only; adding licensed sound is separate later work.",
+    "No relevant ANWB species pages directly read: preference cannot be claimed as second independent source.",
+    "Real Android offline recording, save/close/reopen, ZIP restore second device, integrated release-SHA, preview/private data and rollback remain NOT TESTED; release gate BLOCKED."
+  ]
+}
