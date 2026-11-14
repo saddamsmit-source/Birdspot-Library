@@ -53,10 +53,13 @@ console.log(`SA-01 OK — ${audited.length} soorten: getoonde foto's = beoordeel
 // SA-03
 for (const [sid, img] of [['sp003', '/assets/species/plumage/sp003-flight.webp'], ['sp056', '/assets/species/plumage/sp056-flight.webp']]) {
   const row = clone(rowOf(sid));
-  row.rendered = row.rendered.map(r => (r.image === img ? { ...r, section: 'In vlucht', slot: 'neutral' } : r));
+  const fakeFlight = { image: img, section: 'In vlucht', slot: 'neutral' };
+  if (sid === 'sp003') row.rendered.push(fakeFlight);
+  else row.rendered = row.rendered.map(r => (r.image === img ? { ...r, ...fakeFlight } : r));
   const forgotten = { ...flight, [img]: { ...flight[img], decision: 'goedgekeurd', class: 'vlucht' } };
   const e = checkSpecies(row, batches[sid], forgotten);
-  assert.ok(e.some(x => x.includes('uit-rol beoordeeld maar nog in "In vlucht"')), `SA-03 ${sid} terug in vlucht niet geweigerd`);
+  const expected = sid === 'sp003' ? 'getoond maar niet visueel beoordeeld' : 'uit-rol beoordeeld maar nog in "In vlucht"';
+  assert.ok(e.some(x => x.includes(expected)), `SA-03 ${sid} terug in vlucht niet geweigerd`);
 }
 console.log('SA-03 OK — opvliegende Holenduif en fladderende Tjiftjaf terug in "In vlucht" worden geweigerd');
 

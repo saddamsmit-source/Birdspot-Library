@@ -117,14 +117,35 @@
    "sexLabel": null,
    "class": "opvliegen",
    "quality": "matig",
-   "decision": "uit-rol",
-   "target": "overig",
-   "newLabel": "Opvliegend vanaf de grond",
-   "newNote": "Toont de grijze vleugels met donkere randen, zonder brede witte vleugelband.",
-   "reason": "Poten raken nog de grond; vogel zet af. Ook laag opgelost (485 px).",
+   "decision": "archief",
+   "target": null,
+   "newLabel": null,
+   "newNote": null,
+   "reason": "Onscherpe afzetfoto van 485 px met weinig herkenningsdetail. Het bronarchief bewaart de opname; een goede vrije vluchtfoto blijft open.",
    "airborne": false,
    "rights": "VERIFIED",
-   "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 2.0"
+   "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 2.0",
+   "history": [
+    {
+     "n": 5,
+     "id": "sp003",
+     "nameNL": "Holenduif",
+     "registry": "GUIDE_POSES[0]",
+     "sexLabel": null,
+     "class": "opvliegen",
+     "quality": "matig",
+     "decision": "uit-rol",
+     "target": "overig",
+     "newLabel": "Opvliegend vanaf de grond",
+     "newNote": "Toont de grijze vleugels met donkere randen, zonder brede witte vleugelband.",
+     "reason": "Poten raken nog de grond; vogel zet af. Ook laag opgelost (485 px).",
+     "airborne": false,
+     "rights": "VERIFIED",
+     "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 2.0",
+     "date": "2026-11-10",
+     "round": "vluchtcontrole ronde 1"
+    }
+   ]
   },
   "/assets/species/plumage/sp002-flight.webp": {
    "n": 6,

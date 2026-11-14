@@ -22,6 +22,11 @@
         "date": "2026-11-14",
         "round": "F2 · eerste herstelbatch",
         "changes": "Brongeverifieerde juvenielenfoto’s bij sp002, sp003 en sp004 toegevoegd. Vluchtpositie sp003 blijft open. Oudere browseruitslagen horen bij de vorige beeldset."
+      },
+      {
+        "date": "2026-11-14",
+        "round": "F2 · hercontrole door eigenaar gevraagd",
+        "changes": "Uitgesneden hoofdfoto Turkse Tortel, zachte opname van Holenduif uit de gids en uitleg bij Volwassen op drie kaarten."
       }
     ]
   },
@@ -52,12 +57,13 @@
       },
       "corrections": [
         "FQA-04: kritisch kenmerk 'Halsvlek en iris' gesplitst; 'Witte halsvlek' (alleen volwassen) blijft doorslaggevend, iris alleen ondersteunend.",
-        "F2: afzonderlijke brongeverifieerde juvenielenfoto toegevoegd."
+        "F2: afzonderlijke brongeverifieerde juvenielenfoto toegevoegd.",
+        "F2-hercontrole: bij Volwassen is zichtbaar dat man en vrouw op elkaar lijken."
       ],
       "missing": [
         "Vluchtfoto van boven met volledige witte vleugelband (wenselijk)"
       ],
-      "sexPolicy": "Geslachten gelijk; geen Mannetje/Vrouwtje-vakken (bron: VB_HOUT).",
+      "sexPolicy": "Mannetje en vrouwtje lijken sterk op elkaar. Het geslacht volgt bij deze opnamen niet op kleed. Bron: Blasco-Zumeta en Heinze.",
       "uncertain": [],
       "date": "2026-11-14"
     },
@@ -69,13 +75,6 @@
           "sexAge": "volwassen-ogend; geslacht niet op kleed",
           "quality": "goed",
           "verdict": "goedgekeurd"
-        },
-        "/assets/species/plumage/sp003-flight.webp": {
-          "role": "Overige herkenningsfoto's (was: In vlucht)",
-          "content": "Vogel zet af vanaf de grond; poten raken nog de grond. Vleugelpatroon wel zichtbaar.",
-          "sexAge": "niet vastgesteld",
-          "quality": "matig: 485 px, zacht",
-          "verdict": "uit-rol"
         },
         "/assets/species/plumage/sp003-juv.webp": {
           "role": "Juveniel",
@@ -90,25 +89,26 @@
         "Veldkenmerken en kleedtekst: \"zwarte vleugelpunten\" → geen wit in hals/vleugel, twee korte zwarte vleugelstrepen, brede zwarte staartband (VB_HOLEN, RSPB_SD).",
         "Zang: \"oe-oe-oe steeds sneller\" → eentonige reeks tweelettergrepige roepen (VB_HVH).",
         "Lengte 30–33 → 28–32 cm; broedduur 16–18 → 16–17 dagen; nestjongen 27–28 → ca. 24 dagen (VB_HOLEN).",
-        "F2: afzonderlijke brongeverifieerde juvenielenfoto toegevoegd."
+        "F2: afzonderlijke brongeverifieerde juvenielenfoto toegevoegd.",
+        "F2-hercontrole: bij Volwassen is zichtbaar dat man en vrouw op elkaar lijken.",
+        "F2-hercontrole: zachte afzetfoto uit de kaart gehaald en met herkomst gearchiveerd."
       ],
       "missing": [
         "In vlucht (geen echte vluchtfoto)"
       ],
-      "sexPolicy": "Geslachten gelijk; geen Mannetje/Vrouwtje-vakken (bron: VB_HOLEN).",
+      "sexPolicy": "Mannetje en vrouwtje lijken sterk op elkaar. Het geslacht volgt bij deze opnamen niet op kleed. Bron: Blasco-Zumeta en Heinze.",
       "uncertain": [],
       "previous": "Fotobaseline batch 01 gaf VERIFIED inclusief de opvliegende vluchtfoto; die uitslag is vervallen.",
       "date": "2026-11-14"
     },
     "sp004": {
       "assets": {
-        "/assets/species/sp004.webp": {
+        "/assets/species/plumage/sp004-adult-crop.webp": {
           "role": "Hoofdfoto",
-          "content": "Turkse Tortel op sparrentop tegen blauwe lucht; zwarte halsband, rood oog.",
-          "sexAge": "volwassen (scherpe halsband); geslacht niet vast te stellen",
-          "quality": "goed: scherp; vogel kleiner in beeld, halsband, oog en kleed goed zichtbaar",
-          "verdict": "goedgekeurd",
-          "reassessed": "Herbeoordeeld 10-11-2026 volgens kwaliteitsnorm §3.3 (klein in beeld mag als de vogel goed zichtbaar en herkenbaar is); was voorwaardelijk."
+          "content": "Volwassen Turkse Tortel op een sparrentop, met rood oog, zwarte halsband en lange staart.",
+          "sexAge": "Volwassen volgens halsband, rood oog en kleed.",
+          "quality": "Goed: volledige vogel groter in beeld · 1100 × 969 px.",
+          "verdict": "goedgekeurd"
         },
         "/assets/species/plumage/sp004-flight.webp": {
           "role": "In vlucht",
@@ -129,12 +129,12 @@
         "Broedsels per jaar 3–5 → 2–5 (VB_TT).",
         "FQA-04: tweede onafhankelijke bron voor de Zomertortel-kant (eBird, birdspot.co.uk) en uitzondering voor juvenielen zonder halstekening.",
         "sp004.webp: voorwaardelijk → goedgekeurd na kwaliteitsnorm §3.3 (klein in beeld is geen afkeurgrond)",
-        "F2: afzonderlijke brongeverifieerde juvenielenfoto toegevoegd."
+        "F2: afzonderlijke brongeverifieerde juvenielenfoto toegevoegd.",
+        "F2-hercontrole: bij Volwassen is zichtbaar dat man en vrouw op elkaar lijken.",
+        "F2-hercontrole: meer beeldruimte voor de hele vogel door een uitsnede uit het bronbestand."
       ],
-      "missing": [
-        "Hoofdfoto met grotere vogel (wenselijk)"
-      ],
-      "sexPolicy": "Geslacht vaak niet op kleed te bepalen (BZ_CD); geen geslachtsvakken.",
+      "missing": [],
+      "sexPolicy": "Mannetje en vrouwtje lijken sterk op elkaar. Het geslacht volgt bij deze opnamen niet op kleed. Bron: Blasco-Zumeta en Heinze.",
       "uncertain": [],
       "date": "2026-11-14"
     },

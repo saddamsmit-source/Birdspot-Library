@@ -6683,28 +6683,6 @@ export const GUIDE_POSES = Object.freeze({
   ],
   "sp003": [
     {
-      "label": "Opvliegend vanaf de grond",
-      "flight": false,
-      "note": "Toont de grijze vleugels met donkere randen, zonder brede witte vleugelband.",
-      "file": "Skogsduva Stock Dove (19730362773).jpg",
-      "nl": "Holenduif",
-      "latin": "Columba oenas",
-      "author": "Åsa Berndtsson",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
-      "source": "https://commons.wikimedia.org/wiki/File:Skogsduva_Stock_Dove_(19730362773).jpg",
-      "showSourceLink": false,
-      "alt": "Holenduif vlak boven de grond met geheven grijze vleugels en donkere vleugelranden.",
-      "modifications": "Uitgesneden en omgezet naar WebP",
-      "reviewed": "2026-11-07",
-      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/holenduif",
-      "visualCheck": "Holenduif vlak boven de grond met geheven grijze vleugels en donkere vleugelranden.",
-      "width": 485,
-      "height": 325,
-      "image": "/assets/species/plumage/sp003-flight.webp",
-      "flightReview": "uit-rol 2026-11-10: Poten raken nog de grond; vogel zet af. Ook laag opgelost (485 px)."
-    },
-    {
       "label": "Juveniel",
       "age": "juvenile",
       "flight": false,

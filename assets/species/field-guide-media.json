@@ -6638,28 +6638,6 @@
     ],
     "sp003": [
       {
-        "label": "Opvliegend vanaf de grond",
-        "flight": false,
-        "note": "Toont de grijze vleugels met donkere randen, zonder brede witte vleugelband.",
-        "file": "Skogsduva Stock Dove (19730362773).jpg",
-        "nl": "Holenduif",
-        "latin": "Columba oenas",
-        "author": "Åsa Berndtsson",
-        "license": "CC BY 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
-        "source": "https://commons.wikimedia.org/wiki/File:Skogsduva_Stock_Dove_(19730362773).jpg",
-        "showSourceLink": false,
-        "alt": "Holenduif vlak boven de grond met geheven grijze vleugels en donkere vleugelranden.",
-        "modifications": "Uitgesneden en omgezet naar WebP",
-        "reviewed": "2026-11-07",
-        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/holenduif",
-        "visualCheck": "Holenduif vlak boven de grond met geheven grijze vleugels en donkere vleugelranden.",
-        "width": 485,
-        "height": 325,
-        "image": "/assets/species/plumage/sp003-flight.webp",
-        "flightReview": "uit-rol 2026-11-10: Poten raken nog de grond; vogel zet af. Ook laag opgelost (485 px)."
-      },
-      {
         "label": "Juveniel",
         "age": "juvenile",
         "flight": false,
@@ -10353,6 +10331,58 @@
         "retiredReason": "Twee bijna identieke foto’s van hetzelfde mannetje met elf seconden verschil volgens de bronbestanden. Vervangen door een scherper portret van een andere opname.",
         "retiredFrom": "poses.sp251.1",
         "replacedBy": "/assets/species/plumage/sp251-portrait.webp"
+      }
+    ],
+    "sp003": [
+      {
+        "label": "Opvliegend vanaf de grond",
+        "flight": false,
+        "note": "Toont de grijze vleugels met donkere randen, zonder brede witte vleugelband.",
+        "file": "Skogsduva Stock Dove (19730362773).jpg",
+        "nl": "Holenduif",
+        "latin": "Columba oenas",
+        "author": "Åsa Berndtsson",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Skogsduva_Stock_Dove_(19730362773).jpg",
+        "showSourceLink": false,
+        "alt": "Holenduif vlak boven de grond met geheven grijze vleugels en donkere vleugelranden.",
+        "modifications": "Uitgesneden en omgezet naar WebP",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/holenduif",
+        "visualCheck": "Holenduif vlak boven de grond met geheven grijze vleugels en donkere vleugelranden.",
+        "width": 485,
+        "height": 325,
+        "image": "/assets/species/plumage/sp003-flight.webp",
+        "flightReview": "uit-rol 2026-11-10: Poten raken nog de grond; vogel zet af. Ook laag opgelost (485 px).",
+        "retiredOn": "2026-11-14",
+        "retiredReason": "Onscherpe afzetfoto van 485 px met weinig herkenningsdetail. Het bronarchief bewaart de opname; een goede vrije vluchtfoto blijft open.",
+        "retiredFrom": "poses.sp003.0"
+      }
+    ],
+    "sp004": [
+      {
+        "file": "Sierpówka zwyczajna w Rżuchowie w województwie świętokrzyskim, 20250421 0903 4128.jpg",
+        "author": "Jakub Hałun",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Sierp%C3%B3wka_zwyczajna_w_R%C5%BCuchowie_w_wojew%C3%B3dztwie_%C5%9Bwi%C4%99tokrzyskim,_20250421_0903_4128.jpg",
+        "width": 1600,
+        "height": 1064,
+        "nl": "Turkse Tortel",
+        "latin": "Streptopelia decaocto",
+        "image": "/assets/species/sp004.webp",
+        "batch": "garden-song-04",
+        "modifications": "Resized to max 1600 px and converted to WebP; no crop",
+        "reviewed": "2026-11-06",
+        "verification": "Commons identity and license checked against visible field marks in Vogelbescherming.",
+        "visualCheck": "Beigegrijze tortel met zwarte nekband op de top van een naaldboom.",
+        "alt": "Turkse Tortel — Beigegrijze tortel met zwarte nekband op de top van een naaldboom.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/turkse-tortel",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "retiredOn": "2026-11-14",
+        "retiredReason": "Vervangen door een ruim uitgesneden versie van dezelfde originele opname met de hele vogel groter in beeld.",
+        "retiredFrom": "credits.sp004",
+        "replacedBy": "/assets/species/plumage/sp004-adult-crop.webp"
       }
     ]
   }

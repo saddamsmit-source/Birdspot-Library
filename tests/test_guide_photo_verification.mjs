@@ -44,7 +44,18 @@ for (const id of ['sp005', 'sp009', 'sp020']) {
   const html = recognitionPanel(byId.get(id));
   assert.ok(!/data-plumage="adult_[mf]"/.test(html), `Galerij Mannetje/Vrouwtje bij ${id}`);
 }
-console.log('V-02 OK — geen geslachtslabels bij Buizerd, Slechtvalk en Middelste Bonte Specht');
+for (const id of ['sp002', 'sp003', 'sp004']) {
+  const bird = byId.get(id);
+  const groups = guidePlumageGroups(bird);
+  const adult = groups.find(group => group.key === 'adult');
+  assert.ok(adult?.heroRef, `${id}: verwijzing naar volwassen hoofdfoto ontbreekt`);
+  assert.equal(adult.badge, 'Man en vrouw lijken op elkaar');
+  assert.equal(groups.find(group => group.key === 'juv')?.photos.length, 1);
+  assert.ok(!groups.some(group => ['adult_m', 'adult_f'].includes(group.key)));
+}
+assert.equal(guideHeroPhoto('sp004').image, '/assets/species/plumage/sp004-adult-crop.webp');
+assert.ok(!recognitionPanel(byId.get('sp003')).includes('/assets/species/plumage/sp003-flight.webp'));
+console.log('V-02 OK — neutrale volwassen gidsrollen, zonder verzonnen geslachtslabels');
 
 // V-03
 for (const [id, label] of [['sp078', 'Donsjong'], ['sp086', 'Donsjong'], ['sp128', 'Donsjongen']]) {
