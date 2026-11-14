@@ -221,6 +221,15 @@
     "evidence": "First F2-16 head 5d0872ff: GitHub Actions M20 run 43632556898, M21 run 43632556826, M22 run 43632557026, M23 run 43632556877 all failed on exact old-version assertion; original six photo checks remained intact.",
     "fix": "Update those four tests to require v1.3 plus the preserved v1.2 history, new small-bird rule and all six original photo verifications. Do not loosen any existing role/flight/file assertions.",
     "status": "RETEST_REQUIRED",
-    "prevention": "Version assertions should explicitly check current norm and retained historical rules, instead of pinning one irreversible version."
+    "prevention": "Version assertions should explicitly check current norm and retained historical rules, instead of pinning one irreversible version.",
+    "additionalBrowserFailure": {
+      "firstObservedOnHead": "29d2b9fda6f621d3387224fb4978edc71763e8c0",
+      "workflowRun": 43632843890,
+      "jobId": 132563038713,
+      "assertion": "SAB-09 sp038 timed out clicking global Vrouwtje tab because Groenling comparison moved into collapsed details when Putter gained more pairings.",
+      "fix": "Sijs browser test now scopes juvenile Putter and female/flight Groenling to their respective partner cards, expands the details before interaction and proves both images actually display.",
+      "status": "RETEST_REQUIRED",
+      "notAProductRegressionClaim": "Existing UI card behavior was not altered. This is a selector/interaction-path update after the new comparison group changed sort order."
+    }
   }
 }
