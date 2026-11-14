@@ -95,7 +95,7 @@ for (const s of SPECIES) {
 }
 assert.ok(checked >= 590 && flightSections >= 10);
 const verifiedJuvenileComparisonEntries = GUIDE_COMPARISONS.filter(e => e.birds.filter(b => b.plumage === 'juv').length >= 2);
-assert.equal(verifiedJuvenileComparisonEntries.length, 24, 'FV-06: juvenile comparisons including F2-17');
+assert.equal(verifiedJuvenileComparisonEntries.length, 26, 'FV-06: expected juvenile comparisons including both F2-18 pairs');
 assert.ok(verifiedJuvenileComparisonEntries.some(entry => entry.label === 'Goudhaantje en Vuurgoudhaan · juvenielen' &&
   entry.birds.some(b => b.id === 'sp063' && b.plumage === 'juv') &&
   entry.birds.some(b => b.id === 'sp064' && b.plumage === 'juv')),
@@ -108,6 +108,14 @@ assert.ok(verifiedJuvenileComparisonEntries.some(entry => entry.label === 'Appel
   entry.birds.some(b => b.id === 'sp041' && b.plumage === 'juv') &&
   entry.birds.some(b => b.id === 'sp035' && b.plumage === 'juv')),
   'FV-06: F2-17 juveniele Appelvink/Vink vergelijking ontbreekt');
+for (const [label, ids] of [
+  ['Huismus en Ringmus · juvenielen in rust', ['sp043', 'sp044']],
+  ['Merel en Zanglijster · juvenielen in rust', ['sp045', 'sp046']],
+]) {
+  assert.ok(verifiedJuvenileComparisonEntries.some(entry => entry.label === label &&
+    ids.every(id => entry.birds.some(b => b.id === id && b.plumage === 'juv'))),
+    'FV-06: F2-18 requires both registered juvenile photos for ' + label);
+}
 const youngTits = GUIDE_COMPARISONS.find(entry => entry.label === 'Matkop en Glanskop · jonge vogels');
 assert.deepEqual(youngTits.birds.map(({id, plumage}) => [id, plumage]), [['sp031', 'juv'], ['sp032', 'juv']]);
 for (const id of ['sp031', 'sp032']) {

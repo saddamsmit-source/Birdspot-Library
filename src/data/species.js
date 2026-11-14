@@ -312,13 +312,13 @@ export const SPECIES = [
 
   // ── MUSSEN ───────────────────────────────────────────────────
   { id:'sp043', nameNL:'Huismus',             nameEN:'House Sparrow',             nameSci:'Passer domesticus',          family:'Mussen',          category:'standvogel', icon:'🐦', regions:['stedelijk','agrarisch'],
-    fieldmarks:'Stevige mus. Mannetje met grijze kruin, kastanjebruine kopzijden en zwarte bef. Vrouwtje met lichte wenkbrauwstreep.',
+    fieldmarks:'Stevige mus met forse snavel. Mannetje grijze kruin, kastanjebruine kopzijden en zwarte bef; vrouwtje overwegend lichtbruin met duidelijke lichte wenkbrauw. Juveniel lijkt op vrouwtje.',
     size:{ length:'14–16 cm', wingspan:'21–25 cm', weight:'24–40 g' },
     plumage:{ adult_m:'Grijze kruin, kastanjebruine kopzijden en zwarte bef. De rug is bruin gestreept.', adult_f:'Lichtbruin kleed met een lichte wenkbrauwstreep en gestreepte rug.', juv:'Lijkt op het vrouwtje, met een weinig contrastrijk bruin kleed.', jaarling:null, breeding:'Mannetje met grote zwarte bef en zwarte snavel', winter:'Kleinere grijzige bef; gelige snavel', eclipse:null },
     distribution:'Heel Nederland rondom bebouwing; steden, dorpen en boerderijen', status:'Standvogel · jaarrond',
     statusExtra:null, months:'jan-dec', frequency:'algemeen', breeding:'ja', redList:'Gevoelig' },
   { id:'sp044', nameNL:'Ringmus',             nameEN:'Eurasian Tree Sparrow',     nameSci:'Passer montanus',            family:'Mussen',          category:'standvogel', icon:'🐦', regions:['agrarisch','stedelijk','bos'],
-    fieldmarks:'Mus met kastanjebruine kruin, een donkere vlek op de lichte wang en een smalle lichte nekrand.',
+    fieldmarks:'Mus met kastanjebruine kruin, losse zwarte wangvlek, klein zwart befje en lichte nekring. Mannetje en vrouwtje zien er hetzelfde uit; bij juvenielen kan de wangvlek minder contrasteren.',
     size:{ length:'ca. 12–14 cm', wingspan:'20–22 cm', weight:'19–25 g' },
     plumage:{ adult_m:'Mannetje en vrouwtje hebben hetzelfde veldkleed, met bruine kruin, lichte wang en donkere wangvlek.', adult_f:null, juv:'Een juveniel is valer en minder contrastrijk. De wangvlek kan zwak afsteken en de toppen van vleugeldekveren zijn vaak beige.', jaarling:null, breeding:null, winter:null, eclipse:null },
     guideReview:{ date:'2026-11-12', similarSexes:true, dimensions:['length'], sources:[{ label:'Vogelbescherming — Ringmus', url:'https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/ringmus' }, { label:'Blasco-Zumeta & Heinze — Ringmus', url:'https://www.blascozumeta.com/specie_files/15980_ENG_Passer_montanus_aranzadi.pdf' }, { label:'Sovon — Ringmus', url:'https://stats.sovon.nl/stats/soort/15980/' }] },
@@ -327,7 +327,7 @@ export const SPECIES = [
 
   // ── LIJSTERS ─────────────────────────────────────────────────
   { id:'sp045', nameNL:'Merel',               nameEN:'Common Blackbird',          nameSci:'Turdus merula',              family:'Lijsters',        category:'standvogel', icon:'🐦', regions:['bos','stedelijk','agrarisch'],
-    fieldmarks:'Man zwart met opvallend gele tot oranje snavel. Vrouw donkerbruin.',
+    fieldmarks:'Mannetje zwart met gele tot oranje snavel en vaak gele oogring; vrouwtje donkerbruin met lichtere, gestreepte borst. Jonge Merel is bruin en vaak lichter gevlekt, maar kan op lijsters lijken.',
     size:{ length:'23,5–29 cm', wingspan:'34–38 cm', weight:'80–125 g' },
     plumage:{ adult_m:'Zwart verenkleed, gele tot oranje snavel.', adult_f:'Donkerbruin, met een lichtere gestreepte borst. Snavel geelachtig tot bruin.', juv:'Lijkt op het vrouwtje. Vaak warmer bruin met lichte vlekjes en strepen op rug en vleugels.', jaarling:null, breeding:null, winter:null, eclipse:null },
     guideReview:{"date":"2026-11-06","dimensions":["length","wingspan"],"sources":[{"label":"Vogelbescherming","url":"https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/merel"}]},
