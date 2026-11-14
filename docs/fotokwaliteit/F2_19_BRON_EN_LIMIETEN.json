@@ -238,6 +238,16 @@
     "fix": "Replace only the problematic narrative wording with 'de twee oorspronkelijke opnamen zijn door hun fotografen als juveniel beschreven', preserving source claims and tests.",
     "prevent": "Check generated/inserted JavaScript string literals for quotation and run a parse/syntax gate before costly browser suites.",
     "status": "RETEST_REQUIRED",
-    "photoPassUnchanged": true
+    "photoPassUnchanged": true,
+    "statusSourceIssue": {
+      "initialF2Head": "6da65955f9a978aa8ab1656174b2edaa1c3e2e1e",
+      "workflowRun": 43644599693,
+      "jobId": 132599442248,
+      "failedStep": "Status-script is idempotent (species.js matches source)",
+      "rootCause": "F2-19 corrected sp048 species status/months to September-May, but the canonical docs/data/vogellijst-nederland.json still had okt-apr. Running tools/species/apply_status.py rewrote the card to the old source and the CI idempotency check failed.",
+      "fix": "Change only Koperwiek (Turdus iliacus) in canonical JSON to sep-mei and preserve its breeding/source historical note, now additionally annotating the 2026-11-14 Vogelbescherming date; current species.js matches source.",
+      "prevention": "When changing any generated field (category/statusExtra/months/frequency/breeding/redList/status), update its authoritative source before editing src/data/species.js; require apply_status.py idempotency in CI.",
+      "status": "RETEST_REQUIRED"
+    }
   }
 }
