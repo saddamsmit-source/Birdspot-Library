@@ -94,7 +94,8 @@ for (const s of SPECIES) {
   }
 }
 assert.ok(checked >= 590 && flightSections >= 10);
-assert.equal(GUIDE_COMPARISONS.filter(e => e.birds.filter(b => b.plumage === 'juv').length >= 2).length, 19);
+assert.equal(GUIDE_COMPARISONS.filter(e => e.birds.filter(b => b.plumage === 'juv').length >= 2).length, 20);
+assert.equal(GUIDE_POSES.sp009.some(photo => photo.source === GUIDE_PHOTOS.sp009.source), false);
 const buzzard = recognitionPanel(byId.get('sp005')).split('<section class="sd-similar"')[1];
 assert.ok(buzzard.includes('In vlucht · Juveniel') && buzzard.includes('sp005-juv.webp') && buzzard.includes('sp253-juv.webp'));
 assert.ok(buzzard.includes('In vlucht · Volwassen') && buzzard.includes('sp005-adult_m.webp') && buzzard.includes('sp253.webp'));

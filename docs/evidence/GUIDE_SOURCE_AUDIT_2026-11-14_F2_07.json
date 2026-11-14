@@ -1,0 +1,342 @@
+[
+ {
+  "image": "/assets/showcase/sp009.webp",
+  "species": "sp009",
+  "source": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_in_flight_(17659253649).jpg",
+  "sourceTitle": "File:Falco peregrinus in flight (17659253649).jpg - Wikimedia Commons",
+  "sourceAuthor": "john581",
+  "sourceLicense": "CC BY 2.0",
+  "taxonInSource": "Soortnaam in titel, beschrijving of categorie van de fotopagina",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "7818bd8f040fbf8fb87b8f1a70b252deb0001753",
+  "sourceImageSha1": "cbdcd25f769e5675e356c702a8b78784ac1ea6eb",
+  "sourceImageSize": [
+   2048,
+   1634
+  ],
+  "visualRoleCheck": "Volwassen-ogende vogel in vrije vlucht van opzij. Het geslacht is niet vastgesteld. Watermerk aanwezig."
+ },
+ {
+  "image": "/assets/species/plumage/sp009-juv.webp",
+  "species": "sp009",
+  "source": "https://commons.wikimedia.org/wiki/File:PeregrineFalconperched.jpg",
+  "sourceTitle": "File:PeregrineFalconperched.jpg - Wikimedia Commons",
+  "sourceAuthor": "Teddy Llovet",
+  "sourceLicense": "CC BY 2.0",
+  "taxonInSource": "Soortnaam in titel, beschrijving of categorie van de fotopagina",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "a397620bfa88423b9a68a772841afda96ff19ab2",
+  "sourceImageSha1": "a0591ff540c28641abaa343d0e1a9546c506c9c0",
+  "sourceImageSize": [
+   1576,
+   1169
+  ],
+  "visualRoleCheck": "Op een rots, bruine bovenzijde en bruine lengtestrepen. Commons-categorie vermeldt juveniel."
+ },
+ {
+  "image": "/assets/species/plumage/sp009-perched.webp",
+  "species": "sp009",
+  "source": "https://commons.wikimedia.org/wiki/File:Peregrine_falcon_portrait.jpg",
+  "sourceTitle": "File:Peregrine falcon portrait.jpg - Wikimedia Commons",
+  "sourceAuthor": "Dhairya dixit",
+  "sourceLicense": "CC BY-SA 4.0",
+  "taxonInSource": "Soortnaam in titel, beschrijving of categorie van de fotopagina",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "fdc6e51287dc14f8565910e209d0d791a1f3b73d",
+  "sourceImageSha1": "8de343eacfe4acaf22e0b8eee3c11b1303deb6a5",
+  "sourceImageSize": [
+   1547,
+   2010
+  ],
+  "visualRoleCheck": "Volwassen vogel op een tak van voren. De bron vermeldt vrouwtje en ondersoort calidus."
+ },
+ {
+  "image": "/assets/species/plumage/sp009-male-rest.webp",
+  "species": "sp009",
+  "source": "https://commons.wikimedia.org/wiki/File:Peregrine_Falcon_(male)_cropped.jpg",
+  "sourceTitle": "File:Peregrine Falcon (male) cropped.jpg - Wikimedia Commons",
+  "sourceAuthor": "Sumeet Moghe",
+  "sourceLicense": "CC BY-SA 4.0",
+  "taxonInSource": "Soortnaam in titel, beschrijving of categorie van de fotopagina",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "fbfde3001394e1f8d7009e41c16d97cee716e83a",
+  "sourceImageSha1": "5f03de1c486ce82c41b79314e903c4fd6c2fd390",
+  "sourceImageSize": [
+   2772,
+   2808
+  ],
+  "visualRoleCheck": "Volwassen vogel op de grond, zijaanzicht. Bron vermeldt mannetje. De gids toont volwassen kleed zonder geslachtslabel."
+ },
+ {
+  "image": "/assets/species/plumage/sp009-male-flight.webp",
+  "species": "sp009",
+  "source": "https://www.inaturalist.org/photos/9819028",
+  "sourceTitle": "Photo 9819028, (c) Jonathan Tollin, some rights reserved (CC BY), uploaded by Jonathan Tollin · iNaturalist",
+  "sourceAuthor": "Jonathan Tollin",
+  "sourceLicense": "CC BY 4.0",
+  "taxonInSource": "Falco peregrinus",
+  "annotations": [
+   "volwassen",
+   "mannetje"
+  ],
+  "sameShot": true,
+  "method": "Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "1c43d686a60e7c95ea4846e9b838223465852385",
+  "sourceImageSha1": "d7dc8d1661a07d255648e6cf2ce74a0d343ff71e",
+  "sourceImageSize": [
+   1609,
+   1073
+  ],
+  "visualRoleCheck": "Volwassen vogel in vrije vlucht van onderen. In het vergelijkingspaneel zijn vleugelbasis en korte staart zichtbaar.",
+  "observation": "https://www.inaturalist.org/observations/7528897",
+  "qualityGrade": "research"
+ },
+ {
+  "image": "/assets/species/sp249.webp",
+  "species": "sp249",
+  "source": "https://commons.wikimedia.org/wiki/File:Hen_Harrier_-_Male.jpg",
+  "sourceTitle": "File:Hen Harrier - Male.jpg - Wikimedia Commons",
+  "sourceAuthor": "caroline legg",
+  "sourceLicense": "CC BY 2.0",
+  "taxonInSource": "Soortnaam in titel, beschrijving of categorie van de fotopagina",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "5f1f195724dee4b82142a164f1cc895daed57984",
+  "sourceImageSha1": "d26537a5aa24dbbc6ac1e56bb681f07be8347afb",
+  "sourceImageSize": [
+   2315,
+   1544
+  ],
+  "visualRoleCheck": "Grijs mannetje in vrije vlucht van opzij. Brede vleugel met donkere vleugelpunt en lichte stuit."
+ },
+ {
+  "image": "/assets/species/plumage/sp249-adult_f.webp",
+  "species": "sp249",
+  "source": "https://commons.wikimedia.org/wiki/File:Blauwe_kiekendief_fem.jpg",
+  "sourceTitle": "File:Blauwe kiekendief fem.jpg - Wikimedia Commons",
+  "sourceAuthor": "Maurice.dekens",
+  "sourceLicense": "CC BY-SA 4.0",
+  "taxonInSource": "Soortnaam in titel, beschrijving of categorie van de fotopagina",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "f2625dac61b5b224a0cbd8a16ddd3236f9265552",
+  "sourceImageSha1": "271d54aaca28120f5c98603bcced33326f18547f",
+  "sourceImageSize": [
+   1974,
+   1316
+  ],
+  "visualRoleCheck": "Vrouwtje in vrije vlucht van onderen. Bandering en brede vleugels zichtbaar."
+ },
+ {
+  "image": "/assets/species/plumage/sp249-juv.webp",
+  "species": "sp249",
+  "source": "https://commons.wikimedia.org/wiki/File:Blauwe_Kiekendief.jpg",
+  "sourceTitle": "File:Blauwe Kiekendief.jpg - Wikimedia Commons",
+  "sourceAuthor": "Rob Zweers",
+  "sourceLicense": "CC BY 2.0",
+  "taxonInSource": "Soortnaam in titel, beschrijving of categorie van de fotopagina",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "64d53e2e33fad8629c76785b1ed37950c73d7acd",
+  "sourceImageSha1": "915f329f1f92e5abca5e74eaf191d3a5304184af",
+  "sourceImageSize": [
+   1920,
+   1080
+  ],
+  "visualRoleCheck": "Jonge vogel in vrije vlucht van opzij. Bron vermeldt juveniel vrouwtje. De gids toont juveniel als leeftijd."
+ },
+ {
+  "image": "/assets/species/plumage/sp249-male-rest.webp",
+  "species": "sp249",
+  "source": "https://www.inaturalist.org/photos/728343078",
+  "sourceTitle": "Photo 728343078, (c) Sofia Voynovskaya, some rights reserved (CC BY), uploaded by Sofia Voynovskaya · iNaturalist",
+  "sourceAuthor": "Sofia Voynovskaya",
+  "sourceLicense": "CC BY 4.0",
+  "taxonInSource": "Circus cyaneus",
+  "annotations": [
+   "volwassen",
+   "mannetje"
+  ],
+  "sameShot": true,
+  "method": "Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "529b22b83cc341bbec212663d7dd004aa720291a",
+  "sourceImageSha1": "a54d56bf2b217edb1cf2f3d6610bd6fffb7dec3c",
+  "sourceImageSize": [
+   1440,
+   1018
+  ],
+  "visualRoleCheck": "Mannetje op de grond. Uitsnede toont het grijze kleed, maar een deel van het lichaam valt weg in het gras.",
+  "observation": "https://www.inaturalist.org/observations/397126880",
+  "qualityGrade": "research"
+ },
+ {
+  "image": "/assets/species/plumage/sp249-hero-male.webp",
+  "species": "sp249",
+  "source": "https://commons.wikimedia.org/wiki/File%3ABlauwe_kiekendief_masc.jpg",
+  "sourceTitle": "File:Blauwe kiekendief masc.jpg - Wikimedia Commons",
+  "sourceAuthor": "Maurice.dekens",
+  "sourceLicense": "CC BY-SA 4.0",
+  "taxonInSource": "Soortnaam in titel, beschrijving of categorie van de fotopagina",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "0834787ddce20e9147ffc8388571a32d6737f735",
+  "sourceImageSha1": "64776ff45b35448cccaa999dce89231a010f3e0b",
+  "sourceImageSize": [
+   1830,
+   1220
+  ],
+  "visualRoleCheck": "Mannetje in frontale vlucht met zwarte uiteinden aan beide vleugels."
+ },
+ {
+  "image": "/assets/species/sp250.webp",
+  "species": "sp250",
+  "source": "https://commons.wikimedia.org/wiki/File:A_male_Pallid_Harrier_flying_away_from_us_early_morning_(50536689517).jpg",
+  "sourceTitle": "File:A male Pallid Harrier flying away from us early morning (50536689517).jpg - Wikimedia Commons",
+  "sourceAuthor": "Hari K Patibanda",
+  "sourceLicense": "CC BY 2.0",
+  "taxonInSource": "Soortnaam in titel, beschrijving of categorie van de fotopagina",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "f91b993bc6ed75ff4af7158cecf6270cf414b7de",
+  "sourceImageSha1": "97b353b46cce62195a116521868be8622244b71e",
+  "sourceImageSize": [
+   2557,
+   1705
+  ],
+  "visualRoleCheck": "Bleek mannetje met een donkere wig aan de vleugelpunt, vrij in de lucht, van opzij."
+ },
+ {
+  "image": "/assets/species/plumage/sp250-adult_f.webp",
+  "species": "sp250",
+  "source": "https://www.inaturalist.org/photos/626654808",
+  "sourceTitle": "Photo 626654808, (c) Tejas M, some rights reserved (CC BY), uploaded by Tejas M · iNaturalist",
+  "sourceAuthor": "Tejas M",
+  "sourceLicense": "CC BY 4.0",
+  "taxonInSource": "Circus macrourus",
+  "annotations": [
+   "volwassen",
+   "vrouwtje"
+  ],
+  "sameShot": true,
+  "method": "Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "ffb0a8b073e4445f2f78306099e6b4f0ae4d7c58",
+  "sourceImageSha1": "970ce7054698c315c50af3ac2b5eaf396f5f1b57",
+  "sourceImageSize": [
+   1787,
+   1236
+  ],
+  "visualRoleCheck": "Vrouwtje in vrije vlucht van onderen. Slanke vleugels en bandering zichtbaar.",
+  "observation": "https://www.inaturalist.org/observations/343960250",
+  "qualityGrade": "research"
+ },
+ {
+  "image": "/assets/species/plumage/sp250-juv.webp",
+  "species": "sp250",
+  "source": "https://commons.wikimedia.org/wiki/File:%D0%9B%D1%83%D0%BD%D1%8C_%D1%81%D1%82%D0%B5%D0%BF%D0%BE%D0%B2%D0%B8%D0%B9_Circus_macrourus,_%D0%BD%D0%B0_%D0%BE._%D0%94%D0%B6%D0%B0%D1%80%D0%B8%D0%BB%D0%B3%D0%B0%D1%87.jpg",
+  "sourceTitle": "File:Лунь степовий Circus macrourus, на о. Джарилгач.jpg - Wikimedia Commons",
+  "sourceAuthor": "Bogomaz Mykhailo",
+  "sourceLicense": "CC BY-SA 4.0",
+  "taxonInSource": "Soortnaam in titel, beschrijving of categorie van de fotopagina",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "9edb99a38bcc90514adbd4293c0a7fdc9694d60f",
+  "sourceImageSha1": "16c0bafbca0c816a6106ff635facd9579d7528ef",
+  "sourceImageSize": [
+   2373,
+   1582
+  ],
+  "visualRoleCheck": "Jonge vogel in vrije vlucht, schuin van onderen. Warme onderzijde en lichte halsring."
+ },
+ {
+  "image": "/assets/species/plumage/sp250-male-rest.webp",
+  "species": "sp250",
+  "source": "https://www.inaturalist.org/photos/506883636",
+  "sourceTitle": "Photo 506883636, (c) Jan Ebr & Ivana Ebrová, some rights reserved (CC BY), uploaded by Jan Ebr & Ivana Ebrová · iNaturalist",
+  "sourceAuthor": "Jan Ebr & Ivana Ebrová",
+  "sourceLicense": "CC BY 4.0",
+  "taxonInSource": "Circus macrourus",
+  "annotations": [
+   "volwassen",
+   "mannetje"
+  ],
+  "sameShot": true,
+  "method": "Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "73a4eec7556d1d48b2858ef083d72c3f891766aa",
+  "sourceImageSha1": "ec03591b671a2e02d25fb7032b1067d642c388ca",
+  "sourceImageSize": [
+   448,
+   448
+  ],
+  "visualRoleCheck": "Bleek mannetje tussen droog gras. Kleine bronfoto van 448 × 448 pixels.",
+  "observation": "https://www.inaturalist.org/observations/72514102",
+  "qualityGrade": "research"
+ },
+ {
+  "image": "/assets/species/plumage/sp250-hero-male.webp",
+  "species": "sp250",
+  "source": "https://commons.wikimedia.org/wiki/File%3ATartaranh%C3%A3o-_p%C3%A1lido%2C_macho%2C_Pallid_Harrier%2C_male_%2849237959991%29.jpg",
+  "sourceTitle": "File:Tartaranhão- pálido, macho, Pallid Harrier, male (49237959991).jpg - Wikimedia Commons",
+  "sourceAuthor": "Luiz Lapa from Oeiras, Portugal",
+  "sourceLicense": "CC BY 2.0",
+  "taxonInSource": "Soortnaam in titel, beschrijving of categorie van de fotopagina",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "7b2562ac3249852b2418df6879b7915237de753c",
+  "sourceImageSha1": "181df22271372fc80fd064d0337a4a4e83f04a52",
+  "sourceImageSize": [
+   1770,
+   2392
+  ],
+  "visualRoleCheck": "Mannetje in rust op een paaltje. Bleke kop, lange staart."
+ },
+ {
+  "image": "/assets/species/plumage/sp008-male-flight.webp",
+  "species": "sp008",
+  "source": "https://commons.wikimedia.org/wiki/File:Falco_tinnunculus_-_Common_kestrel_20.jpg",
+  "sourceTitle": "File:Falco tinnunculus - Common kestrel 20.jpg - Wikimedia Commons",
+  "sourceAuthor": "Zeynel Cebeci",
+  "sourceLicense": "CC BY-SA 4.0",
+  "taxonInSource": "Soortnaam in titel, beschrijving of categorie van de fotopagina",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "89d3c8371d57bad49772ee6fe4b7c6b3bece8e16",
+  "sourceImageSha1": "0801e85f403acc625b2819c147b84cdeb1856d43",
+  "sourceImageSize": [
+   2050,
+   1537
+  ],
+  "visualRoleCheck": "Torenvalk in vrije vlucht van onderen, met zichtbare lange staart en donkere eindband. Fotograaf vermeldt mannetje."
+ }
+]

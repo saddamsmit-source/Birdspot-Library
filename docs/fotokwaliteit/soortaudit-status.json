@@ -933,7 +933,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 14-11-2026: zelfde opname (Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.), CC BY-SA 4.0 · Zeynel Cebeci",
+      "note": "bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Zeynel Cebeci",
       "annotations": []
      },
      "flight": {
@@ -1029,8 +1029,8 @@
    "family": "Valken",
    "audited": true,
    "batch": "M2",
-   "date": "2026-11-10",
-   "sha": "9ddb3d984262f8e95bae5a056431ef80bbde73bb",
+   "date": "2026-11-14",
+   "sha": null,
    "assets": [
     {
      "image": "/assets/species/plumage/sp009-male-rest.webp",
@@ -1041,7 +1041,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Sumeet Moghe",
+      "note": "bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Sumeet Moghe",
       "annotations": []
      },
      "flight": null
@@ -1055,7 +1055,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Teddy Llovet",
+      "note": "bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY 2.0 · Teddy Llovet",
       "annotations": []
      },
      "flight": null
@@ -1069,7 +1069,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · john581",
+      "note": "bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY 2.0 · john581",
       "annotations": []
      },
      "flight": {
@@ -1099,17 +1099,17 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Jonathan Tollin, some rights reserved (CC BY)",
+      "note": "bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Jonathan Tollin",
       "annotations": [
-       "Life Stage: Adult",
-       "Sex: Male"
+       "volwassen",
+       "mannetje"
       ]
      },
      "flight": {
       "n": 122,
       "id": "sp009",
       "nameNL": "Slechtvalk",
-      "registry": "GUIDE_POSES[3]",
+      "registry": "GUIDE_POSES[2]",
       "sexLabel": null,
       "class": "vlucht",
       "quality": "goed",
@@ -1132,29 +1132,31 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Dhairya dixit",
+      "note": "bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Dhairya dixit",
       "annotations": []
      },
      "flight": null
     }
    ],
-   "corrections": [],
-   "missing": [],
-   "wishes": [],
-   "uncertain": [
-    "Dezelfde opname staat twee keer in het register (GUIDE_PHOTOS /assets/showcase/sp009.webp en POSES[1] /assets/species/sp009.webp) en wordt één keer getoond; opschonen is cosmetisch."
+   "corrections": [
+    "Vijf gidsbeelden opnieuw naast het bronbestand gelegd. Dubbele fotoregistratie samengevoegd. Vluchtvergelijking met Torenvalk gebruikt beelden van beide volwassen vogels van onderen."
    ],
-   "sexPolicy": "Geslachten alleen in grootte verschillend (VB_SLECHT); geen geslachtslabels.",
+   "missing": [
+    "Afzonderlijke foto van een juveniele Slechtvalk in vrije vlucht."
+   ],
+   "wishes": [],
+   "uncertain": [],
+   "sexPolicy": "Geslachten verschillen in grootte (Vogelbescherming). Geen geslachtslabels op het verenkleed.",
    "previous": null,
    "status": {
     "technical": "VERIFIED",
     "visual": "VERIFIED",
     "rights": "VERIFIED",
-    "knowledge": "PARTIALLY TESTED",
-    "browser": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "NOT TESTED",
     "independent": "NOT TESTED"
    },
-   "photoComplete": true,
+   "photoComplete": false,
    "knowledge": {
     "profile": true,
     "critical": 1,
@@ -1162,30 +1164,13 @@
     "notDecisive": [
      "Bouw en kopkap"
     ],
-    "open": [
-     "Onderscheid met Boomvalk en Smelleken nog uit een bron uitwerken."
-    ],
+    "open": [],
     "discrepancies": 0
    },
-   "browser": {
-    "ok": true,
-    "viewport": "390x844 Chromium (Playwright)",
-    "photos": 5,
-    "sections": [
-     "Hoofdfoto",
-     "Verenkleed",
-     "In vlucht",
-     "Overige herkenningsfoto's"
-    ],
-    "flight": [
-     "/assets/showcase/sp009.webp",
-     "/assets/species/plumage/sp009-male-flight.webp"
-    ],
-    "checks": "SAB-01..07"
-   },
+   "browser": null,
    "errors": [],
    "verdict": "PARTIALLY TESTED",
-   "next": "Onafhankelijke review (ChatGPT)"
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
   },
   {
    "id": "sp016",
@@ -11947,8 +11932,8 @@
    "family": "Haviken",
    "audited": true,
    "batch": "M9",
-   "date": "2026-11-12",
-   "sha": "1429709b680d2960117022df9bb0c9baef27c9f5",
+   "date": "2026-11-14",
+   "sha": null,
    "assets": [
     {
      "image": "/assets/species/plumage/sp249-hero-male.webp",
@@ -11959,7 +11944,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "geverifieerde import 09-11 (SHA-1 64776ff45b…), CC BY-SA 4.0 · Maurice.dekens",
+      "note": "bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Maurice.dekens",
       "annotations": []
      },
      "flight": {
@@ -11989,10 +11974,10 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Sofia Voynovskaya, some rights reserved (CC BY)",
+      "note": "bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Sofia Voynovskaya",
       "annotations": [
-       "Life Stage: Adult",
-       "Sex: Male"
+       "volwassen",
+       "mannetje"
       ]
      },
      "flight": null
@@ -12006,7 +11991,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · caroline legg",
+      "note": "bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY 2.0 · caroline legg",
       "annotations": []
      },
      "flight": {
@@ -12036,7 +12021,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Maurice.dekens",
+      "note": "bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Maurice.dekens",
       "annotations": []
      },
      "flight": {
@@ -12066,7 +12051,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Rob Zweers",
+      "note": "bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY 2.0 · Rob Zweers",
       "annotations": []
      },
      "flight": {
@@ -12089,10 +12074,13 @@
     }
    ],
    "corrections": [
-    "Vleugelbreedte, stuit en bandering uitgewerkt voor vergelijking met Grauwe en Steppekiekendief."
+    "Vleugelbreedte, stuit en bandering uitgewerkt voor vergelijking met Grauwe en Steppekiekendief.",
+    "Vijf gidsbeelden naast het oorspronkelijke bronbestand gecontroleerd. De vergelijking Blauwe–Steppe toont drie vluchtparen per kleed."
    ],
    "missing": [],
-   "wishes": [],
+   "wishes": [
+    "Vrouwtje en juveniel ook afzonderlijk in rust. Beide kleden zijn al zichtbaar in vlucht."
+   ],
    "uncertain": [],
    "sexPolicy": "Volwassen labels volgen bron en zichtbaar kleed. Juvenielen blijven neutraal gelabeld.",
    "previous": null,
@@ -12126,8 +12114,8 @@
    "family": "Haviken",
    "audited": true,
    "batch": "M9",
-   "date": "2026-11-12",
-   "sha": "1429709b680d2960117022df9bb0c9baef27c9f5",
+   "date": "2026-11-14",
+   "sha": null,
    "assets": [
     {
      "image": "/assets/species/plumage/sp250-hero-male.webp",
@@ -12138,7 +12126,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "geverifieerde import 09-11 (SHA-1 181df22271…), CC BY 2.0 · Luiz Lapa from Oeiras, Portugal",
+      "note": "bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY 2.0 · Luiz Lapa from Oeiras, Portugal",
       "annotations": []
      },
      "flight": null
@@ -12152,12 +12140,10 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Jan Ebr & Ivana Ebrová, some rights reserved (CC BY)",
+      "note": "bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Jan Ebr & Ivana Ebrová",
       "annotations": [
-       "Life Stage: Adult",
-       "Sex: Male",
-       "Alive or Dead: Alive",
-       "Evidence of Presence: Organism"
+       "volwassen",
+       "mannetje"
       ]
      },
      "flight": null
@@ -12171,7 +12157,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Hari K Patibanda",
+      "note": "bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY 2.0 · Hari K Patibanda",
       "annotations": []
      },
      "flight": {
@@ -12201,12 +12187,10 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Tejas M, some rights reserved (CC BY)",
+      "note": "bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Tejas M",
       "annotations": [
-       "Life Stage: Adult",
-       "Sex: Female",
-       "Alive or Dead: Alive",
-       "Evidence of Presence: Organism"
+       "volwassen",
+       "vrouwtje"
       ]
      },
      "flight": {
@@ -12236,7 +12220,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Bogomaz Mykhailo",
+      "note": "bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Bogomaz Mykhailo",
       "annotations": []
      },
      "flight": {
@@ -12259,10 +12243,13 @@
     }
    ],
    "corrections": [
-    "Herkenning van vrouwtjes en juvenielen gecontroleerd tegen Forsman. Afwijkende bronwaarden voor spanwijdte opgenomen bij de bronverantwoording."
+    "Herkenning van vrouwtjes en juvenielen gecontroleerd tegen Forsman. Afwijkende bronwaarden voor spanwijdte opgenomen bij de bronverantwoording.",
+    "Vijf gidsbeelden naast het oorspronkelijke bronbestand gecontroleerd. De vergelijking Blauwe–Steppe toont drie vluchtparen per kleed."
    ],
    "missing": [],
-   "wishes": [],
+   "wishes": [
+    "Vrouwtje en juveniel ook afzonderlijk in rust. Beide kleden zijn al zichtbaar in vlucht."
+   ],
    "uncertain": [],
    "sexPolicy": "Volwassen labels volgen bron en zichtbaar kleed. Juvenielen blijven neutraal gelabeld.",
    "previous": null,
