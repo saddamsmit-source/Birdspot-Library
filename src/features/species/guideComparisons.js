@@ -3,11 +3,43 @@ const vogelgids = 'https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vog
 
 export const GUIDE_COMPARISONS = [
   {
+    label: 'Fitis en Tjiftjaf · rustbeeld en zang',
     birds: [
-      {id: 'sp057', source: 'fitis', marks: 'Aflopend zangriedeltje. Vaak lichtbruine poten en relatief lange vleugels.'},
-      {id: 'sp056', source: 'tjiftjaf', marks: 'Herhaalt “tjif-tjaf”. Vaak donkere poten en kortere vleugels.'},
+      {id: 'sp057', source: 'fitis', marks: 'Fitis met melodieus aflopend zangriedeltje, doorgaans langere vleugelpunt en vaak lichtbruine poten.'},
+      {id: 'sp056', source: 'tjiftjaf', marks: 'Tjiftjaf met herhaald tjif-tjaf, doorgaans kortere vleugelpunt en vaak donkere poten.'},
     ],
-    tip: 'Luister eerst naar de zang. Gebruik pootkleur alleen als extra aanwijzing.',
+    rows: [
+      {label: 'Zang', values: ['Melodieus en duidelijk aflopend riedeltje', 'Steeds herhaald tjif-tjaf']},
+      {label: 'Vleugelpunt', values: ['Doorgaans langer voorbij de gevouwen vleugelveren', 'Doorgaans korter; verschil vraagt goed zijaanzicht']},
+      {label: 'Poten', values: ['Vaak bruinroze of licht', 'Vaak donker; geen sluitend kenmerk']},
+    ],
+    tip: 'Deze rustfoto’s zijn voor herkennen, niet voor het vergelijken van lichaamsgrootte. Zang is hier veel betrouwbaarder dan pootkleur of één stilstaande foto.',
+  },
+  {
+    label: 'Fitis en Fluiter · in rust',
+    birds: [
+      {id: 'sp057', source: 'fitis', marks: 'Fitis: lichtbruine tot olijfgroene vogel met geelwitte keel en borst, een zachte aflopende zang.'},
+      {id: 'sp058', source: 'fluiter', marks: 'Fluiter: duidelijke citroengele keel, bovenborst en wenkbrauw boven een contrasterend helderwitte buik.'},
+    ],
+    rows: [
+      {label: 'Onderzijde', values: ['Geelwit tot bleek zonder sterk contrast', 'Citroengele keel en bovenborst, helderwitte buik']},
+      {label: 'Kop', values: ['Lichte wenkbrauw en bruinige wangen', 'Opvallend citroengeel gezicht en wenkbrauw']},
+      {label: 'Zang', values: ['Melodieus dalend riedeltje', 'Versnellend geratel als een rollend muntje, ook fluittonen']},
+    ],
+    tip: 'Gebruik vooral kleurverdeling én zang. De achtergrond, foto-uitsnede en belichting verschillen; concludeer niet alleen op basis van hoe groen één foto oogt.',
+  },
+  {
+    label: 'Tjiftjaf en Fluiter · in rust',
+    birds: [
+      {id: 'sp056', source: 'tjiftjaf', marks: 'Tjiftjaf: overwegend grijsgroen, relatief weinig kleurcontrast en herhaald tjif-tjaf.'},
+      {id: 'sp058', source: 'fluiter', marks: 'Fluiter: gele keel en bovenborst, opvallend witte buik en ratelende zang.'},
+    ],
+    rows: [
+      {label: 'Zang', values: ['Gelijkmatig herhaald tjif-tjaf', 'Versnellende ratel en afzonderlijke fluittonen']},
+      {label: 'Borst en buik', values: ['Vaalgrijzig tot geelachtig, subtiele overgang', 'Citroengele bovenborst naast helderwitte buik']},
+      {label: 'Kop en bouw', values: ['Minder uitgesproken wenkbrauw en relatief korte vleugelpunt', 'Gele wenkbrauw en gemiddeld langgerektere bouw']},
+    ],
+    tip: 'Een zingende vogel biedt het meeste houvast. Bij een stille vogel helpen kleurverdeling en vleugelprojectie alleen samen met het volledige beeld.',
   },
   {
     "birds": [
