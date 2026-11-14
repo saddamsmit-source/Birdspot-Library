@@ -10,8 +10,8 @@
     "progressMethod": "Count 100 canonical audited items plus unique individually first-pass-reviewed canonical audited:false IDs; no duplicates. expectedFirstPass/expectedRemaining are cross-checks and must be updated together.",
     "nextGate": "When all 140 have initial documented review, independently and comprehensively reverify ALL 140; only afterwards work on species outside the group of 140.",
     "limits": "No source, license, age/sex or complete audit is promoted by this index. Do not alter canonical audited/verdict fields based on progress alone.",
-    "expectedFirstPass": 132,
-    "expectedRemaining": 8
+    "expectedFirstPass": 135,
+    "expectedRemaining": 5
   },
   "additionalFirstPass": [
     {
@@ -461,6 +461,48 @@
       "independentSexAge": "NOT TESTED",
       "fullKnowledgeReview": "NOT TESTED",
       "firstPassScope": "Individually visually checked existing local Birdspot-WebP files; 4 of 7 corresponding Commons original pages inspected directly for creator/license; remaining originals/rights/pixel match and full biology/individual sex-age still open"
+    },
+    {
+      "id": "sp113",
+      "nameNL": "Wielewaal",
+      "batch": "M23",
+      "photosSeen": 2,
+      "reviewDocument": "docs/fotokwaliteit/M23_WIELEWAAL_BERGEEND_OOIEVAAR_2026-11-14_DRAFT.md",
+      "reviewPR": null,
+      "evidenceCommit": "4405c3f0eb4abec320b16637dbf1e5389cb917ce",
+      "status": "PARTIALLY TESTED",
+      "originalRights": "NOT TESTED",
+      "independentSexAge": "NOT TESTED",
+      "fullKnowledgeReview": "NOT TESTED",
+      "firstPassScope": "All actual registered Birdspot local WebPs were individually opened and visually reviewed; four original Commons photo pages separately supported their license/author; role checks limited; all other originals/pixel and derivative rights and full biology remain open."
+    },
+    {
+      "id": "sp128",
+      "nameNL": "Bergeend",
+      "batch": "M23",
+      "photosSeen": 5,
+      "reviewDocument": "docs/fotokwaliteit/M23_WIELEWAAL_BERGEEND_OOIEVAAR_2026-11-14_DRAFT.md",
+      "reviewPR": null,
+      "evidenceCommit": "4405c3f0eb4abec320b16637dbf1e5389cb917ce",
+      "status": "PARTIALLY TESTED",
+      "originalRights": "NOT TESTED",
+      "independentSexAge": "NOT TESTED",
+      "fullKnowledgeReview": "NOT TESTED",
+      "firstPassScope": "All actual registered Birdspot local WebPs were individually opened and visually reviewed; four original Commons photo pages separately supported their license/author; role checks limited; all other originals/pixel and derivative rights and full biology remain open."
+    },
+    {
+      "id": "sp170",
+      "nameNL": "Ooievaar",
+      "batch": "M23",
+      "photosSeen": 1,
+      "reviewDocument": "docs/fotokwaliteit/M23_WIELEWAAL_BERGEEND_OOIEVAAR_2026-11-14_DRAFT.md",
+      "reviewPR": null,
+      "evidenceCommit": "4405c3f0eb4abec320b16637dbf1e5389cb917ce",
+      "status": "PARTIALLY TESTED",
+      "originalRights": "NOT TESTED",
+      "independentSexAge": "NOT TESTED",
+      "fullKnowledgeReview": "NOT TESTED",
+      "firstPassScope": "All actual registered Birdspot local WebPs were individually opened and visually reviewed; four original Commons photo pages separately supported their license/author; role checks limited; all other originals/pixel and derivative rights and full biology remain open."
     }
   ]
 }
