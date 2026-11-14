@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| Versie | 1.3 · 14-11-2026 |
+| Versie | 1.4 · 14-11-2026 |
 | Status | Vastgesteld eigenaarbesluit (Kevin Smit, Project Owner). Onafhankelijke documentreview: open |
 | Herkomst | Eigenaaropdracht "Nieuwe eigenaarbesluiten, livegang en batch M3" (10-11-2026) en het vastgelegde besluit op PR #127 ([comment 6779875047](https://github.com/saddamsmit-source/Birdspot-Library/pull/127#issuecomment-6779875047)) |
 | Geldt voor | Alle soortkaarten van Birdspot Library: soortdata (`src/data/species.js`), kennisprofielen (`tools/kennisbaseline/knowledge.json`), gidsfoto's en soortaudit |
@@ -111,6 +111,20 @@ Verder geldt:
 
 ---
 
+### 2.1 Voorkeursbronnen voor soortherkenning en de beoordeling van gevonden foto's (eigenaarbesluit 14-11-2026)
+
+**Start met Vogelbescherming Nederland en de ANWB-vogelgids als voorkeursreferenties voor de inhoud.** Dit betreft het **verifiëren van vogelkenmerken en uitleg**, niet het verplicht overnemen van afbeeldingen van deze bronnen. Bij de beoordeling van foto's die Birdspot elders heeft gevonden, geldt:
+
+1. **Per soort raadplegen.** Lees eerst de toegankelijke, toepasselijke soortbeschrijving van [Vogelbescherming Nederland](https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids) en de soortpassage uit een passende **ANWB-vogelgids** wanneer die inhoud daadwerkelijk kan worden ingezien. Vergelijk wetenschappelijke naam/ondersoort, uiterlijke herkenning, soortverschillen, mannetje/vrouwtje, juveniel/volwassen, seizoen, levensgebied en waar relevant gedrag en geluid. Leg de directe soortlink of voor ANWB de boektitel, auteur, editie en paginanummer vast. Een ANWB-webwinkelpagina **bewijst alleen het bestaan van de gids**, niet wat er over een concrete soort in staat.
+2. **Eigen gevonden foto beoordelen, niet bronfoto kopiëren.** Open het *oorspronkelijke bestand* van de kandidaatfoto en vergelijk de zichtbare kop, snavel, vleugel, staart, kleuren, lichaamsbouw en houding met de genoemde soortkenmerken. Beoordeel afzonderlijk wat het beeld echt toont en welke leeftijd/sekse/ondersoort daaruit wel of niet volgt. Ook een voorbeeldfoto bij een betrouwbare gids is geen automatische determinatie van **een andere** foto.
+3. **Ontbrekende of conflicterende kenmerken.** Als de twee voorkeursbronnen onvoldoende detail, geen beschikbare passage of een inhoudelijk conflict hebben, raadpleeg een passende andere bron (bijv. BTO, Naturalis of een vakspecialist). Voor Nederlandse aantallen, trends en formele status blijven Sovon, CDNA/CSNA en de bevoegde wet- of lijstbron primair; prioriteit voor herkenning vervangt hun gezag niet. Een claim die niet overtuigend te onderbouwen is blijft **open** en mag geen vals VERIFIED-label krijgen.
+4. **Afzonderlijke fotoherkomst- en rechtencontrole.** Alleen de oorspronkelijke bestandspagina en relevante licentie-/auteursgegevens kunnen herpublicatierechten, verplichte zichtbare credit, afbeeldingswijzigingen en broncontinuïteit onderbouwen. ANWB/Vogelbescherming maken een externe gevonden foto niet vrij te gebruiken. Alle zes controles uit §3.2 blijven verplicht voor iedere geplaatste foto.
+5. **Bewijs en open punten bewaren.** Registreer per gecontroleerde soort welke voorkeursbron feitelijk is gelezen, welke kenmerken zijn getoetst, uitkomst en onzekerheid, datum en eventuele extra bronnen in het bestaande F2-brondossier/openpuntenregister. Bij twijfel over een kleedrol blijft het label neutraal, een ongefundeerde foto weg en het open punt voor later onderzoek bewaard.
+
+**Bewijsgrens:** beide voorkeursbronnen zijn deskundige naslagwerken, maar niet onfeilbaar en niet altijd direct toegankelijk. Een 'bronvoorkeur' geldt alleen bij daadwerkelijk gelezen passende informatie en is nooit zelfstandig foto-PASS. De app beschrijft feiten in eigen woorden; originele ANWB-/Vogelbeschermingfoto's of beschermde tekst worden niet zonder geldige toestemming hergebruikt.
+
+---
+
 ## 3. Fotokwaliteit en indeling
 
 ### 3.1 Vaste posities per soortkaart
@@ -170,3 +184,4 @@ De uitkomst per foto staat in `docs/fotokwaliteit/soortaudit/M*.json` en `SOORTA
 | 1.1 | 13-11-2026 | Eigenaar verduidelijkt: ontbrekende poten/andere niet-beslissende delen zijn geen automatische stop; met overtuigende leeftijds-/soortkenmerken én volledige bron-, rechten- en fotobevestiging mag een juvenielenfoto worden geplaatst. Onvoldoende herkenningskenmerken of bronbewijs blijven open. Geen normwijziging voor echte vlucht, aantoonbare leeftijd of bronrechten (§3.2). |
 | 1.2 | 14-11-2026 | Eigenaarprecisering: alle eerdere fotoregels en zes bron-/rolcontroles blijven volledig van kracht. De versoepeling 'onzichtbare poten = geen zelfstandige STOP' is slechts een **aanvullende juvenielenregel**, geen algemene vrijstelling voor andere soorten/rollen en geen verkorting van bron- of rechtencontrole. Historie 1.0/1.1 behouden. |
 | 1.3 | 14-11-2026 | Eigenaar legt prioriteit op rustfoto’s en vergelijkingen voor kleine vogels: vlucht alleen wanneer herkenbaar; slechte of ontbrekende vlucht als uitgesteld fotoonderzoek registreren. Bronnen-, rechten-, determinatie- en bestaande vluchtdefinities ongewijzigd. Openpuntenregister aangemaakt voor latere volledigheid. |
+| 1.4 | 14-11-2026 | Eigenaar verduidelijkt bronvoorrang: soortinformatie van Vogelbescherming Nederland en daadwerkelijk ingeziene ANWB-vogelgids als eerste referentie om **zelf gevonden** foto's, kleden en verklarende tekst te controleren. Niet verplicht bronfoto's te gebruiken. ANWB-productpagina is geen soortbewijs; bestand-, rechten- en zespuntscontrole blijven apart. |
