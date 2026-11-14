@@ -1295,6 +1295,19 @@ export const GUIDE_COMPARISONS = [
     tip: 'Beide mannetjes hebben een warme borst. Vergelijk ook kruin, snavel en vleugeltekening.',
   },
   {
+    label: 'Kneu en Roodmus · mannetjes in rust',
+    birds: [
+      {id: 'sp039', source: 'kneu', marks: 'Mannetje met grijze nek, bruinige rug en karmijnrood op voorhoofd en borst; kleinere grijze snavel.'},
+      {id: 'sp042', source: 'roodmus', marks: 'Volwassen mannetje met rood op kop, borst en stuit en een korte, duidelijk forse grijze snavel.'},
+    ],
+    rows: [
+      {label: 'Roodverdeling', values: ['Voorhoofd en borst, grijze nek zichtbaar', 'Kop, borst en stuit nadrukkelijk rood']},
+      {label: 'Snavel', values: ['Kleine grijze kegelsnavel', 'Kort, dik en opvallend zwaar']},
+      {label: 'Rug en bouw', values: ['Warmbruin en kleiner', 'Steviger postuur en bruinige vleugels']},
+    ],
+    tip: 'De rode tekening helpt vooral bij volwassen mannetjes in passend seizoen. Vrouwtjes en onvolwassen Roodmussen zijn niet rood; combineer snavel, houding en geluid.',
+  },
+  {
     label: 'Appelvink en Vink · mannetje',
     birds: [
       {id: 'sp041', source: 'appelvink', plumage: 'adult_m', marks: 'Zware driehoekige snavel, grote kop en brede lichte vleugelband.'},
@@ -1305,6 +1318,32 @@ export const GUIDE_COMPARISONS = [
       {label: 'Vleugel', values: ['Brede lichte band', 'Twee lichte strepen']},
     ],
     tip: 'De kleur van de Appelvinksnavel kan per seizoen verschillen. Vergelijk de vorm in zijaanzicht.',
+  },
+  {
+    label: 'Appelvink en Vink · vrouwtjes in rust',
+    birds: [
+      {id: 'sp041', source: 'appelvink', plumage: 'adult_f', marks: 'Vrouwtje met forse snavel, dikke kop en nek, grijs vleugelveld en lichte vleugelband.'},
+      {id: 'sp035', source: 'vink', plumage: 'adult_f', marks: 'Vrouwtje met kleinere kegelsnavel en twee duidelijke lichte vleugelstrepen.'},
+    ],
+    rows: [
+      {label: 'Snavel', values: ['Zeer zwaar en driehoekig', 'Duidelijk kleiner en fijner']},
+      {label: 'Kop', values: ['Groot, met stevige nek', 'Slanker, minder massief']},
+      {label: 'Vleugel', values: ['Breed licht veld', 'Twee lichte strepen']},
+    ],
+    tip: 'Bekijk het profiel en de snavelvorm in dezelfde rusthouding. Kleurverschillen door seizoen en licht mogen de snavel niet overrulen.',
+  },
+  {
+    label: 'Appelvink en Vink · juvenielen in rust',
+    birds: [
+      {id: 'sp041', source: 'appelvink', plumage: 'juv', marks: 'Jonge Appelvink met zware snavel, gelige keel en donkere vlekjes op de onderzijde.'},
+      {id: 'sp035', source: 'vink', plumage: 'juv', marks: 'Jonge Vink met kleinere kegelsnavel en twee lichte vleugelstrepen.'},
+    ],
+    rows: [
+      {label: 'Snavel', values: ['Uitzonderlijk fors voor een vink', 'Veel kleiner en subtieler']},
+      {label: 'Onderzijde', values: ['Gelige keel en gevlekte borst', 'Bruiniger zonder typische Appelvink-jeugdvlekken']},
+      {label: 'Vleugel', values: ['Brede lichte band', 'Twee lichte vleugelstrepen']},
+    ],
+    tip: 'Jonge vinken lijken soms op elkaar. Combineer snavelvorm en leeftijdskenmerken; een bronbenoemd juveniel is nog geen onafhankelijke foto-PASS.',
   },
   {
     label: 'Roodborsttapuit en Roodborst · volwassen',
