@@ -11,13 +11,13 @@ Beoordeeld volgens `docs/BIRDSPOT_KWALITEITSNORM.md` (biometrie §1, herkenning 
 | 1 | Soorten met bestaande gidsfoto's | 140 |
 | 2 | Afzonderlijk (aangescherpt) gecontroleerd | 100 (M1, M10, M2, M3, M4, M5, M6, M7, M8, M9) |
 | 3 | Technisch correct (laden, volgorde, offline-bron, beoordeling = kaart) | 100 van 100 |
-| 4a | Visueel VERIFIED (beeld per foto) | 94 van 100 |
-| 4b | Inhoud (kennisprofiel) VERIFIED | 67 van 100 — alle profielen hebben nog open punten |
+| 4a | Visueel VERIFIED (beeld per foto) | 95 van 100 |
+| 4b | Inhoud (kennisprofiel) VERIFIED | 69 van 100 — alle profielen hebben nog open punten |
 | 4c | Onafhankelijk beoordeeld (ChatGPT) | 0 — NOT TESTED |
-| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 124; plus collectiebrede vluchtcontrole: 16 uit de vluchtrol, 10 gearchiveerd |
-| 6 | Afgekeurde vluchtfoto's | 26 (tabel hieronder) |
+| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 127; plus collectiebrede vluchtcontrole: 16 uit de vluchtrol, 11 gearchiveerd |
+| 6 | Afgekeurde vluchtfoto's | 27 (tabel hieronder) |
 | 7 | Ontbrekende foto-/kennisonderdelen | 64 fotoposities in gecontroleerde soorten; 40 fotosoorten zonder kennisprofiel |
-| 8 | Kritische kenmerken niet doorslaggevend onderbouwd | 132 (tabel hieronder) |
+| 8 | Kritische kenmerken niet doorslaggevend onderbouwd | 134 (tabel hieronder) |
 | 9 | Open bron-/licentieproblemen | 0 in gecontroleerde soorten; collectiebreed blijft het eerder gemelde punt '22 afbeeldingen buiten de bronaudit' open |
 
 Eindoordeel per gecontroleerde soort: PARTIALLY TESTED 85, VERIFIED 15.
@@ -578,24 +578,24 @@ Batch M2 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · tech
 
 ### sp005 Buizerd — PARTIALLY TESTED
 
-Batch M1 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel PARTIALLY TESTED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M1 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
-| `sp005-male-rest.webp` | Hoofdfoto | Lichte Buizerd op kabel, frontaal; donkere iris, gestreepte borst. Watermerk van de maker in beeld. | volwassen (donkere iris; bron: Life Stage Adult). Bron noemt 'Male', maar geslacht niet op kleed te zien: terecht zonder geslachtslabel. | goed | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY SA · (c) Gianluca Congi🪶🦆🌲, some rights reserved (CC BY-SA) |
-| `sp005.webp` | Overige herkenningsfoto's | Donker gekleurde Buizerd op tak; laat de kleedvariatie zien. | niet vastgesteld | goed | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours |
-| `sp005-juv.webp` | In vlucht (Juveniel) | Jonge Buizerd zweeft vrij met volledig gespreide vleugels, van onderen; lichte iris, gelijkmatig gebandeerde staart. | juveniel (bron: iNaturalist Life Stage Juvenile; lichte iris consistent); label Juveniel blijft in de vluchtsectie | goed | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) rober025, some rights reserved (CC BY) |
-| `sp005-adult_m.webp` | In vlucht (Volwassen) | Vrij in de lucht van onderen; brede vleugels, gebandeerde staart met donkerder eindband. | volwassen (bron: Life Stage Adult); kaart toont geen geslacht ondanks registersleutel adult_m | goed | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Roy Lowry, some rights reserved (CC BY) |
-| `sp005-male-flight.webp` | In vlucht | Donkere Buizerd vrij in de lucht, schuin van onderen. | volwassen volgens bron (Life Stage Adult); niet uit beeld te bevestigen | matig: licht onscherp, vogel klein; toont wel de donkere variant. Voorlopige status zichtbaar in de kaart; vervanging gewenst | voorwaardelijk | vlucht · voorwaardelijk | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY SA · (c) Simone Bocca, some rights reserved (CC BY-SA) |
-| `sp005-female-flight.webp` | In vlucht | Lichte Buizerd vrij in de lucht van onderen; brede donkere achterrand van de vleugel. | volwassen (bron: Life Stage Adult; donkere achterrand consistent) | voldoende | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY SA · (c) Simone Bocca, some rights reserved (CC BY-SA) |
+| `sp005-male-rest.webp` | Hoofdfoto | Lichte Buizerd op kabel, frontaal; donkere iris, gestreepte borst. Watermerk van de maker in beeld. | volwassen (donkere iris; bron: Life Stage Adult). Bron noemt 'Male', maar geslacht niet op kleed te zien: terecht zonder geslachtslabel. | goed | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY-SA 4.0 · (c) Gianluca Congi🪶🦆🌲, some rights reserved (CC BY-SA) |
+| `sp005.webp` | Overige herkenningsfoto's | Donker gekleurde Buizerd op tak; laat de kleedvariatie zien. | niet vastgesteld | goed | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY 4.0 · Alexis Lours |
+| `sp005-juv.webp` | In vlucht (Juveniel) | Jonge Buizerd zweeft vrij met volledig gespreide vleugels, van onderen; lichte iris, gelijkmatig gebandeerde staart. | juveniel (bron: iNaturalist Life Stage Juvenile; lichte iris consistent); label Juveniel blijft in de vluchtsectie | goed | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY 4.0 · (c) rober025, some rights reserved (CC BY) |
+| `sp005-adult_m.webp` | In vlucht (Volwassen) | Vrij in de lucht van onderen; brede vleugels, gebandeerde staart met donkerder eindband. | volwassen (bron: Life Stage Adult); kaart toont geen geslacht ondanks registersleutel adult_m | goed | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY 4.0 · (c) Roy Lowry, some rights reserved (CC BY) |
+| `sp005-flight-dark.webp` | In vlucht | Vrij vliegende Buizerd van onderen. Donker kleed, brede vleugels en korte gebandeerde staart zichtbaar. Leeftijd en geslacht onbevestigd. | Geen leeftijds- of geslachtslabel. | Goed. Volledige vogel en fijne staarttekening, 1150 × 1150 px. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Rechtstreeks afgeleid van de fotograafupload op Commons. Oorspronkelijk beeld en WebP vergeleken.), CC BY-SA 4.0 · Charles J. Sharp |
+| `sp005-female-flight.webp` | In vlucht | Lichte Buizerd vrij in de lucht van onderen; brede donkere achterrand van de vleugel. | volwassen (bron: Life Stage Adult; donkere achterrand consistent) | voldoende | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY-SA 4.0 · (c) Simone Bocca, some rights reserved (CC BY-SA) |
 
-- **Correcties:** FQA-01: juveniele foto toont echte vlucht maar stond zonder vluchtlabel onder Juveniel. Nu flight:true, één keer onder In vlucht met label Juveniel; de Juveniel-kaart verwijst ernaar.
-- **Ontbreekt:** Definitieve (scherpe) donkere Buizerd in vlucht
+- **Correcties:** FQA-01: juveniele foto toont echte vlucht maar stond zonder vluchtlabel onder Juveniel. Nu flight:true, één keer onder In vlucht met label Juveniel; de Juveniel-kaart verwijst ernaar.; F2: donkere vluchtfoto vervangen, bronbeelden opnieuw naast de appbeelden gecontroleerd. Leefgebied, maten en verschillen met de Ruigpootbuizerd onderbouwd.
+- **Ontbreekt:** Afzonderlijke juveniele foto in rust; juveniel is al geverifieerd in vrije vlucht.
 - **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** Geslacht niet op kleed te zien; alle foto's zonder geslachtslabel (bronaudit 09-11).
-- **Kennisprofiel:** 6 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Kop, Vleugelhouding en -slag, Staart, Iris, Kleur, Geluid; open: Onderscheid met Ruigpootbuizerd uit een bron uitwerken.; Leefgebied niet opnieuw gecontroleerd.; resterende dataverschillen: 1
-- **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
-- **Onzeker:** Registersleutels 'adult_m' en bestandsnamen 'male/female' suggereren geslacht; de kaart toont dat niet. Hernoemen is cosmetisch en niet uitgevoerd.; ChatGPT-QA markeerde de Buizerd als REVIEW REQUIRED tot het rolconflict juveniel/vlucht is opgelost; opgelost in deze herstelronde, onafhankelijke hercontrole open.
+- **Kennisprofiel:** 7 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Staartbasis en bandering, Kop, Vleugelhouding en -slag, Staart, Iris, Kleur, Geluid; open: —; resterende dataverschillen: 1
+- **Browser:** NOT TESTED
+- **Onzeker:** De lichte buizerd op de hoofdfoto en de gearchiveerde donkere vluchtfoto zijn bij iNaturalist als mannetje geannoteerd. Individueel geslacht volgt niet betrouwbaar uit dit verenkleed. De app gebruikt het gedeelde volwassen label.
 - **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
 
 ### sp251 Grauwe Kiekendief — PARTIALLY TESTED
@@ -642,22 +642,22 @@ Batch M2 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · tech
 
 ### sp253 Ruigpootbuizerd — PARTIALLY TESTED
 
-Batch M2 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M2 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
-| `sp253-male-rest.webp` | Hoofdfoto | Ruigpootbuizerd op paal in sneeuwlandschap; lichte kop, donkere flanken/buik. | iNaturalist: Male; geen label op de hoofdfoto | goed | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Spencer Hurt, some rights reserved (CC BY) |
-| `sp253-male-flight.webp` | In vlucht (Mannetje) | Vrij in de lucht met zicht op donkere borst en gevlekte vleugels. De staart is gedeeltelijk zichtbaar. | Mannetje volgens de vastgelegde iNaturalist-annotatie. Houding en uitsnede beperken de zelfstandige controle van de volledige staartbandering. | voldoende: licht zacht | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY SA · (c) psweet, some rights reserved (CC BY-SA) |
-| `sp253.webp` | In vlucht (Vrouwtje) | Vrij in de lucht van onderen; lichte kop, donker buikschild, witte staartbasis met één brede eindband. | vrouwtje (bron: 'female'; buikschild en één eindband passen bij VB_BVR) | goed | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · dfaulder |
-| `sp253-juv.webp` | In vlucht (Juveniel) | Jonge vogel vrij in de lucht; gespreide vleugels en staart. | juveniel (iNaturalist: Life Stage Juvenile) | goed; watermerk maker | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Radek Ošlejšek, some rights reserved (CC BY) |
+| `sp253-male-rest.webp` | Hoofdfoto | Ruigpootbuizerd op paal in sneeuwlandschap; lichte kop, donkere flanken/buik. | iNaturalist: Male; geen label op de hoofdfoto | goed | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY 4.0 · (c) Spencer Hurt, some rights reserved (CC BY) |
+| `sp253-male-flight.webp` | In vlucht (Mannetje) | Vrij in de lucht met zicht op donkere borst en gevlekte vleugels. De staart is gedeeltelijk zichtbaar. | Mannetje volgens de vastgelegde iNaturalist-annotatie. Houding en uitsnede beperken de zelfstandige controle van de volledige staartbandering. | voldoende: licht zacht | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY-SA 4.0 · (c) psweet, some rights reserved (CC BY-SA) |
+| `sp253.webp` | In vlucht (Vrouwtje) | Vrij in de lucht van onderen; lichte kop, donker buikschild, witte staartbasis met één brede eindband. | vrouwtje (bron: 'female'; buikschild en één eindband passen bij VB_BVR) | goed | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY 2.0 · dfaulder |
+| `sp253-juv.webp` | In vlucht (Juveniel) | Jonge vogel vrij in de lucht; gespreide vleugels en staart. | juveniel (iNaturalist: Life Stage Juvenile) | goed; watermerk maker | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY 4.0 · (c) Radek Ošlejšek, some rights reserved (CC BY) |
 
-- **Correcties:** FQA-01 (eerder in deze PR): juveniel in vlucht naar In vlucht met label Juveniel.; 11-11-2026: vier eigen foto’s onafhankelijk visueel herbekeken. Verschil tussen lichte vrouwtjes en juvenielen in het kennisprofiel als ondersteunend beschreven met Europese en Noord-Amerikaanse bronnen.
+- **Correcties:** FQA-01 (eerder in deze PR): juveniel in vlucht naar In vlucht met label Juveniel.; 11-11-2026: vier eigen foto’s onafhankelijk visueel herbekeken. Verschil tussen lichte vrouwtjes en juvenielen in het kennisprofiel als ondersteunend beschreven met Europese en Noord-Amerikaanse bronnen.; F2: alle vier originele opnamen en rechten herbevestigd, inclusief drie iNaturalist-fotopagina’s en hun waarnemingen. Verschillen met Buizerd en de maten gecontroleerd.
 - **Ontbreekt:** Afzonderlijke rustfoto van vrouwtje; Afzonderlijke rustfoto van juveniel
 - **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** De kleden kunnen in de buik- en staarttekening verschillen en deels overlappen. Foto-annotaties en waarneembare kenmerken worden samen gelezen.
-- **Kennisprofiel:** 2 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Staartcontrast, Geslacht en leeftijd; open: De drie iNaturalist-bronpagina’s konden tijdens de hercontrole niet opnieuw worden geopend. De fotolabels steunen op het vastgelegde bronbewijs van 9 november en zijn niet opnieuw tegen de oorspronkelijke annotaties bevestigd.; resterende dataverschillen: 0
-- **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
-- **Onzeker:** De drie iNaturalist-foto’s zijn gekoppeld aan de geverifieerde opname en annotaties uit de bronaudit van 9 november. De actuele primaire fotopagina’s en waarnemingen waren bij de hercontrole niet bereikbaar.
+- **Kennisprofiel:** 2 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Staartcontrast, Geslacht en leeftijd; open: Er is nog geen gelicentieerd referentiegeluid aan deze kaart gekoppeld.; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
 - **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
 
 ### sp006 Sperwer — PARTIALLY TESTED
@@ -704,22 +704,22 @@ Batch M9 · 2026-11-12 · SHA `1429709b680d2960117022df9bb0c9baef27c9f5` · tech
 
 ### sp248 Wespendief — PARTIALLY TESTED
 
-Batch M2 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M2 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
-| `sp248.webp` | Hoofdfoto | Wespendief in vlucht van onderen; smalle kop, staart met brede banden, gebandeerde ondervleugel. | volwassen mannetje volgens iNaturalist (Adult, Male); geen label op de hoofdfoto | goed; watermerk maker | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY SA · (c) Gianluca Congi🪶🦆🌲, some rights reserved (CC BY-SA) |
-| `sp248-male-rest.webp` | Mannetje | Wespendief zittend in boom; grijsbruine kop, geel-oranje oog. | volwassen mannetje (iNaturalist: Adult, Male) | goed | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Павел Кунгуров, some rights reserved (CC BY) |
-| `sp248-adult_f.webp` | In vlucht (Vrouwtje) | Vrij in de lucht van onderen; bruin gebandeerd, staartbanden zichtbaar. | volwassen vrouwtje (iNaturalist: Adult, Female) | goed: vogel kleiner in beeld; smalle kop, staartbanden en gebandeerde ondervleugel goed zichtbaar | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Donald Davesne, some rights reserved (CC BY) |
-| `sp248-juv.webp` | In vlucht (Juveniel) | Jonge Wespendief vrij in de lucht van onderen; bruine onderzijde. | juveniel (bron: 'Juvenile honey buzzard') | goed | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Andrey Gulivanov |
+| `sp248.webp` | Hoofdfoto | Wespendief in vlucht van onderen; smalle kop, staart met brede banden, gebandeerde ondervleugel. | volwassen mannetje volgens iNaturalist (Adult, Male); geen label op de hoofdfoto | goed; watermerk maker | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY-SA 4.0 · (c) Gianluca Congi🪶🦆🌲, some rights reserved (CC BY-SA) |
+| `sp248-male-rest.webp` | Mannetje | Wespendief zittend in boom; grijsbruine kop, geel-oranje oog. | volwassen mannetje (iNaturalist: Adult, Male) | goed | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY 4.0 · (c) Павел Кунгуров, some rights reserved (CC BY) |
+| `sp248-adult_f.webp` | In vlucht (Vrouwtje) | Vrij in de lucht van onderen; bruin gebandeerd, staartbanden zichtbaar. | volwassen vrouwtje (iNaturalist: Adult, Female) | goed: vogel kleiner in beeld; smalle kop, staartbanden en gebandeerde ondervleugel goed zichtbaar | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY 4.0 · (c) Donald Davesne, some rights reserved (CC BY) |
+| `sp248-juv.webp` | In vlucht (Juveniel) | Jonge Wespendief vrij in de lucht van onderen; bruine onderzijde. | juveniel (bron: 'Juvenile honey buzzard') | goed | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY 2.0 · Andrey Gulivanov |
 
-- **Correcties:** sp248-adult_f.webp: voorwaardelijk → goedgekeurd na kwaliteitsnorm §3.3 (klein in beeld is geen afkeurgrond)
+- **Correcties:** sp248-adult_f.webp: voorwaardelijk → goedgekeurd na kwaliteitsnorm §3.3 (klein in beeld is geen afkeurgrond); F2: oorspronkelijke beelden en rechten herbevestigd. Geslacht, leeftijd, seizoentekst en maten nader onderbouwd, vrouwelijke vluchtfoto als extra vergelijking opgenomen.
 - **Ontbreekt:** Vrouwtje zittend
 - **Verbeterwensen (eigenaar beoordeelt later):** Scherpere/grotere vrouwtje-vluchtfoto (geen gebrek; voor latere beoordeling door de eigenaar)
 - **Geslacht:** Geslachten verschillen; labels steunen op iNaturalist-annotaties.
-- **Kennisprofiel:** 2 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Kop en staart, Vleugelhouding; open: Geslachtskenmerken (grijze kop man, oogkleur) nog uit een tweede bron vastleggen.; Vrouwtje in vlucht klein in beeld; vervanging gewenst.; resterende dataverschillen: 0
-- **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
-- **Onzeker:** Geslachtskenmerken van Wespendief nog niet uit een tweede bron vastgelegd (zie kennisprofiel).
+- **Kennisprofiel:** 3 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Kop en staart, Vleugelhouding, Oog en snavelbasis; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
 - **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
 
 ### sp054 Heggenmus — PARTIALLY TESTED
@@ -2000,6 +2000,7 @@ Batch M6 · 2026-11-12 · SHA `38e3b3c42662dc49be8b769fd9f82a8dde65cad7` · tech
 |---|---|---|---|---|
 | sp002 Houtduif | `sp002-flight.webp` | archief | vlucht | Vervangen door een zijaanzicht waarop de witte band op de bovenvleugel duidelijker is. De frontale vluchtfoto blijft in het bronarchief. |
 | sp003 Holenduif | `sp003-flight.webp` | archief | opvliegen | Onscherpe afzetfoto van 485 px met weinig herkenningsdetail. Het bronarchief bewaart de opname; een goede vrije vluchtfoto blijft open. |
+| sp005 Buizerd | `sp005-male-flight.webp` | archief | vlucht | Vervangen door een scherpere opname van een donkere Buizerd in vrije vlucht. De eerdere opname en bronvermelding blijven in het archief. |
 | sp017 Kleine Bonte Specht | `sp017-flight.webp` | uit-rol | opvliegen | Zet af van de stam bij de nestholte; staart nog tegen de bast. |
 | sp025 Kauw | `sp025-flight.webp` | uit-rol | landen | Frontale landingsnadering met poten naar voren en gespreide staart. |
 | sp031 Matkop | `sp031-flight.webp` | uit-rol | opvliegen | Poten naar beneden vlak boven de sneeuw: afzetten of neerstrijken. |
@@ -2032,6 +2033,7 @@ Batch M6 · 2026-11-12 · SHA `38e3b3c42662dc49be8b769fd9f82a8dde65cad7` · tech
 | sp003 Holenduif | Stuit |
 | sp004 Turkse Tortel | Staart in vlucht |
 | sp004 Turkse Tortel | Roep en vleugeltoppen |
+| sp005 Buizerd | Staartbasis en bandering |
 | sp005 Buizerd | Kop |
 | sp005 Buizerd | Vleugelhouding en -slag |
 | sp005 Buizerd | Staart |
@@ -2156,6 +2158,7 @@ Batch M6 · 2026-11-12 · SHA `38e3b3c42662dc49be8b769fd9f82a8dde65cad7` · tech
 | sp188 Zomertaling | Wenkbrauw, oogstreep en keel |
 | sp248 Wespendief | Kop en staart |
 | sp248 Wespendief | Vleugelhouding |
+| sp248 Wespendief | Oog en snavelbasis |
 | sp249 Blauwe Kiekendief | Vleugelsilhouet en armpatroon |
 | sp250 Steppekiekendief | Koptekening en handpennen |
 | sp251 Grauwe Kiekendief | Armvleugel en ondervleugel |

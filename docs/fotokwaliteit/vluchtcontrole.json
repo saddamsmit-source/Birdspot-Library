@@ -664,10 +664,9 @@
    "sexLabel": null,
    "class": "vlucht",
    "quality": "matig",
-   "decision": "voorwaardelijk",
+   "decision": "archief",
    "target": null,
-   "newNote": "Voorlopige foto: beperkte scherpte.",
-   "reason": "FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): in vlucht ja; licht onscherp, vogel klein; laat wel de donkere kleedvariant zien. Vervanging gewenst: scherpe donkere Buizerd van onderen.",
+   "reason": "Vervangen door een scherpere opname van een donkere Buizerd in vrije vlucht. De eerdere opname en bronvermelding blijven in het archief.",
    "airborne": true,
    "rights": "VERIFIED",
    "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY SA",
@@ -687,9 +686,25 @@
      "reason": "Mijlpaal 1 (aangescherpt): echte vlucht, maar onscherp bij vergroting; vervanging gewenst. Leeftijd \"volwassen\" steunt op de iNaturalist-annotatie (Life Stage: Adult, bronaudit 09-11); label blijft.",
      "date": "2026-11-10",
      "round": "vóór FQA-02"
+    },
+    {
+     "n": 34,
+     "id": "sp005",
+     "nameNL": "Buizerd",
+     "registry": "GUIDE_POSES[1]",
+     "sexLabel": null,
+     "class": "vlucht",
+     "quality": "matig",
+     "decision": "voorwaardelijk",
+     "target": null,
+     "newNote": "Voorlopige foto: beperkte scherpte.",
+     "reason": "FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): in vlucht ja; licht onscherp, vogel klein; laat wel de donkere kleedvariant zien. Vervanging gewenst: scherpe donkere Buizerd van onderen.",
+     "airborne": true,
+     "rights": "VERIFIED",
+     "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY SA",
+     "replacement": "gewenst"
     }
-   ],
-   "replacement": "gewenst"
+   ]
   },
   "/assets/species/plumage/sp005-female-flight.webp": {
    "n": 35,
@@ -2752,6 +2767,24 @@
    "airborne": true,
    "rights": "VERIFIED",
    "rightsNote": "Rechtstreeks uit het originele bestand (SHA-1 vastgelegd); Wikimedia Commons en de gecontroleerde Flickr-bron vermelden CC BY-SA 2.0.",
+   "date": "2026-11-14"
+  },
+  "/assets/species/plumage/sp005-flight-dark.webp": {
+   "n": 150,
+   "id": "sp005",
+   "nameNL": "Buizerd",
+   "registry": "GUIDE_POSES[1]",
+   "sexLabel": null,
+   "class": "vlucht",
+   "quality": "goed",
+   "decision": "goedgekeurd",
+   "target": null,
+   "newLabel": null,
+   "newNote": null,
+   "reason": "Vrij vliegende Buizerd van onderen. Donker kleed, brede vleugels en korte gebandeerde staart zichtbaar. Leeftijd en geslacht onbevestigd.",
+   "airborne": true,
+   "rights": "VERIFIED",
+   "rightsNote": "Rechtstreeks uit het Commons-origineel met bron-SHA-1, Charles J. Sharp, CC BY-SA 4.0.",
    "date": "2026-11-14"
   }
  }

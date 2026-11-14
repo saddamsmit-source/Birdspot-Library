@@ -184,12 +184,12 @@
           "quality": "goed",
           "verdict": "goedgekeurd"
         },
-        "/assets/species/plumage/sp005-male-flight.webp": {
+        "/assets/species/plumage/sp005-flight-dark.webp": {
           "role": "In vlucht",
-          "content": "Donkere Buizerd vrij in de lucht, schuin van onderen.",
-          "sexAge": "volwassen volgens bron (Life Stage Adult); niet uit beeld te bevestigen",
-          "quality": "matig: licht onscherp, vogel klein; toont wel de donkere variant. Voorlopige status zichtbaar in de kaart; vervanging gewenst",
-          "verdict": "voorwaardelijk"
+          "content": "Vrij vliegende Buizerd van onderen. Donker kleed, brede vleugels en korte gebandeerde staart zichtbaar. Leeftijd en geslacht onbevestigd.",
+          "sexAge": "Geen leeftijds- of geslachtslabel.",
+          "quality": "Goed. Volledige vogel en fijne staarttekening, 1150 × 1150 px.",
+          "verdict": "goedgekeurd"
         },
         "/assets/species/plumage/sp005-female-flight.webp": {
           "role": "In vlucht",
@@ -200,16 +200,17 @@
         }
       },
       "corrections": [
-        "FQA-01: juveniele foto toont echte vlucht maar stond zonder vluchtlabel onder Juveniel. Nu flight:true, één keer onder In vlucht met label Juveniel; de Juveniel-kaart verwijst ernaar."
+        "FQA-01: juveniele foto toont echte vlucht maar stond zonder vluchtlabel onder Juveniel. Nu flight:true, één keer onder In vlucht met label Juveniel; de Juveniel-kaart verwijst ernaar.",
+        "F2: donkere vluchtfoto vervangen, bronbeelden opnieuw naast de appbeelden gecontroleerd. Leefgebied, maten en verschillen met de Ruigpootbuizerd onderbouwd."
       ],
       "missing": [
-        "Definitieve (scherpe) donkere Buizerd in vlucht"
+        "Afzonderlijke juveniele foto in rust; juveniel is al geverifieerd in vrije vlucht."
       ],
       "sexPolicy": "Geslacht niet op kleed te zien; alle foto's zonder geslachtslabel (bronaudit 09-11).",
       "uncertain": [
-        "Registersleutels 'adult_m' en bestandsnamen 'male/female' suggereren geslacht; de kaart toont dat niet. Hernoemen is cosmetisch en niet uitgevoerd.",
-        "ChatGPT-QA markeerde de Buizerd als REVIEW REQUIRED tot het rolconflict juveniel/vlucht is opgelost; opgelost in deze herstelronde, onafhankelijke hercontrole open."
-      ]
+        "De lichte buizerd op de hoofdfoto en de gearchiveerde donkere vluchtfoto zijn bij iNaturalist als mannetje geannoteerd. Individueel geslacht volgt niet betrouwbaar uit dit verenkleed. De app gebruikt het gedeelde volwassen label."
+      ],
+      "date": "2026-11-14"
     },
     "sp006": {
       "assets": {

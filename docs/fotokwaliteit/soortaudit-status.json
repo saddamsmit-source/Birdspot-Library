@@ -333,8 +333,8 @@
    "family": "Haviken",
    "audited": true,
    "batch": "M1",
-   "date": "2026-11-10",
-   "sha": "9ddb3d984262f8e95bae5a056431ef80bbde73bb",
+   "date": "2026-11-14",
+   "sha": null,
    "assets": [
     {
      "image": "/assets/species/plumage/sp005-male-rest.webp",
@@ -345,7 +345,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY SA · (c) Gianluca Congi🪶🦆🌲, some rights reserved (CC BY-SA)",
+      "note": "bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY-SA 4.0 · (c) Gianluca Congi🪶🦆🌲, some rights reserved (CC BY-SA)",
       "annotations": [
        "Life Stage: Adult",
        "Sex: Male",
@@ -364,7 +364,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
+      "note": "bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY 4.0 · Alexis Lours",
       "annotations": []
      },
      "flight": null
@@ -378,7 +378,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) rober025, some rights reserved (CC BY)",
+      "note": "bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY 4.0 · (c) rober025, some rights reserved (CC BY)",
       "annotations": [
        "Life Stage: Juvenile"
       ]
@@ -406,7 +406,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Roy Lowry, some rights reserved (CC BY)",
+      "note": "bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY 4.0 · (c) Roy Lowry, some rights reserved (CC BY)",
       "annotations": [
        "Life Stage: Adult",
        "Alive or Dead: Alive"
@@ -431,55 +431,34 @@
      }
     },
     {
-     "image": "/assets/species/plumage/sp005-male-flight.webp",
+     "image": "/assets/species/plumage/sp005-flight-dark.webp",
      "role": "In vlucht",
-     "content": "Donkere Buizerd vrij in de lucht, schuin van onderen.",
-     "sexAge": "volwassen volgens bron (Life Stage Adult); niet uit beeld te bevestigen",
-     "quality": "matig: licht onscherp, vogel klein; toont wel de donkere variant. Voorlopige status zichtbaar in de kaart; vervanging gewenst",
-     "verdict": "voorwaardelijk",
+     "content": "Vrij vliegende Buizerd van onderen. Donker kleed, brede vleugels en korte gebandeerde staart zichtbaar. Leeftijd en geslacht onbevestigd.",
+     "sexAge": "Geen leeftijds- of geslachtslabel.",
+     "quality": "Goed. Volledige vogel en fijne staarttekening, 1150 × 1150 px.",
+     "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY SA · (c) Simone Bocca, some rights reserved (CC BY-SA)",
-      "annotations": [
-       "Life Stage: Adult",
-       "Sex: Male",
-       "Alive or Dead: Alive"
-      ]
+      "note": "bronaudit 14-11-2026: zelfde opname (Rechtstreeks afgeleid van de fotograafupload op Commons. Oorspronkelijk beeld en WebP vergeleken.), CC BY-SA 4.0 · Charles J. Sharp",
+      "annotations": []
      },
      "flight": {
-      "n": 34,
+      "n": 150,
       "id": "sp005",
       "nameNL": "Buizerd",
       "registry": "GUIDE_POSES[1]",
       "sexLabel": null,
       "class": "vlucht",
-      "quality": "matig",
-      "decision": "voorwaardelijk",
+      "quality": "goed",
+      "decision": "goedgekeurd",
       "target": null,
-      "newNote": "Voorlopige foto: beperkte scherpte.",
-      "reason": "FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): in vlucht ja; licht onscherp, vogel klein; laat wel de donkere kleedvariant zien. Vervanging gewenst: scherpe donkere Buizerd van onderen.",
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij vliegende Buizerd van onderen. Donker kleed, brede vleugels en korte gebandeerde staart zichtbaar. Leeftijd en geslacht onbevestigd.",
       "airborne": true,
       "rights": "VERIFIED",
-      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY SA",
-      "history": [
-       {
-        "class": "vlucht",
-        "quality": "goed",
-        "decision": "goedgekeurd",
-        "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
-        "date": "2026-11-10",
-        "round": "vluchtcontrole ronde 1"
-       },
-       {
-        "class": "vlucht",
-        "quality": "matig",
-        "decision": "voorwaardelijk",
-        "reason": "Mijlpaal 1 (aangescherpt): echte vlucht, maar onscherp bij vergroting; vervanging gewenst. Leeftijd \"volwassen\" steunt op de iNaturalist-annotatie (Life Stage: Adult, bronaudit 09-11); label blijft.",
-        "date": "2026-11-10",
-        "round": "vóór FQA-02"
-       }
-      ],
-      "replacement": "gewenst"
+      "rightsNote": "Rechtstreeks uit het Commons-origineel met bron-SHA-1, Charles J. Sharp, CC BY-SA 4.0.",
+      "date": "2026-11-14"
      }
     },
     {
@@ -491,7 +470,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY SA · (c) Simone Bocca, some rights reserved (CC BY-SA)",
+      "note": "bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY-SA 4.0 · (c) Simone Bocca, some rights reserved (CC BY-SA)",
       "annotations": [
        "Life Stage: Adult",
        "Sex: Female",
@@ -518,32 +497,33 @@
     }
    ],
    "corrections": [
-    "FQA-01: juveniele foto toont echte vlucht maar stond zonder vluchtlabel onder Juveniel. Nu flight:true, één keer onder In vlucht met label Juveniel; de Juveniel-kaart verwijst ernaar."
+    "FQA-01: juveniele foto toont echte vlucht maar stond zonder vluchtlabel onder Juveniel. Nu flight:true, één keer onder In vlucht met label Juveniel; de Juveniel-kaart verwijst ernaar.",
+    "F2: donkere vluchtfoto vervangen, bronbeelden opnieuw naast de appbeelden gecontroleerd. Leefgebied, maten en verschillen met de Ruigpootbuizerd onderbouwd."
    ],
    "missing": [
-    "Definitieve (scherpe) donkere Buizerd in vlucht"
+    "Afzonderlijke juveniele foto in rust; juveniel is al geverifieerd in vrije vlucht."
    ],
    "wishes": [],
    "uncertain": [
-    "Registersleutels 'adult_m' en bestandsnamen 'male/female' suggereren geslacht; de kaart toont dat niet. Hernoemen is cosmetisch en niet uitgevoerd.",
-    "ChatGPT-QA markeerde de Buizerd als REVIEW REQUIRED tot het rolconflict juveniel/vlucht is opgelost; opgelost in deze herstelronde, onafhankelijke hercontrole open."
+    "De lichte buizerd op de hoofdfoto en de gearchiveerde donkere vluchtfoto zijn bij iNaturalist als mannetje geannoteerd. Individueel geslacht volgt niet betrouwbaar uit dit verenkleed. De app gebruikt het gedeelde volwassen label."
    ],
    "sexPolicy": "Geslacht niet op kleed te zien; alle foto's zonder geslachtslabel (bronaudit 09-11).",
    "previous": null,
    "status": {
     "technical": "VERIFIED",
-    "visual": "PARTIALLY TESTED",
+    "visual": "VERIFIED",
     "rights": "VERIFIED",
-    "knowledge": "PARTIALLY TESTED",
-    "browser": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "NOT TESTED",
     "independent": "NOT TESTED"
    },
    "photoComplete": false,
    "knowledge": {
     "profile": true,
-    "critical": 6,
+    "critical": 7,
     "decisive": 0,
     "notDecisive": [
+     "Staartbasis en bandering",
      "Kop",
      "Vleugelhouding en -slag",
      "Staart",
@@ -551,30 +531,10 @@
      "Kleur",
      "Geluid"
     ],
-    "open": [
-     "Onderscheid met Ruigpootbuizerd uit een bron uitwerken.",
-     "Leefgebied niet opnieuw gecontroleerd."
-    ],
+    "open": [],
     "discrepancies": 1
    },
-   "browser": {
-    "ok": true,
-    "viewport": "390x844 Chromium (Playwright)",
-    "photos": 6,
-    "sections": [
-     "Hoofdfoto",
-     "In vlucht",
-     "Overige herkenningsfoto's"
-    ],
-    "flight": [
-     "/assets/species/plumage/sp005-adult_m.webp",
-     "/assets/species/plumage/sp005-juv.webp",
-     "/assets/species/plumage/sp005-male-flight.webp",
-     "/assets/species/plumage/sp005-female-flight.webp"
-    ],
-    "checks": "SAB-01..07",
-    "lijktOp": "SAB-09 OK (390 px)"
-   },
+   "browser": null,
    "errors": [],
    "verdict": "PARTIALLY TESTED",
    "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
@@ -11863,8 +11823,8 @@
    "family": "Haviken",
    "audited": true,
    "batch": "M2",
-   "date": "2026-11-10",
-   "sha": "9ddb3d984262f8e95bae5a056431ef80bbde73bb",
+   "date": "2026-11-14",
+   "sha": null,
    "assets": [
     {
      "image": "/assets/species/sp248.webp",
@@ -11875,7 +11835,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY SA · (c) Gianluca Congi🪶🦆🌲, some rights reserved (CC BY-SA)",
+      "note": "bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY-SA 4.0 · (c) Gianluca Congi🪶🦆🌲, some rights reserved (CC BY-SA)",
       "annotations": [
        "Life Stage: Adult",
        "Sex: Male",
@@ -11910,7 +11870,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Павел Кунгуров, some rights reserved (CC BY)",
+      "note": "bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY 4.0 · (c) Павел Кунгуров, some rights reserved (CC BY)",
       "annotations": [
        "Life Stage: Adult",
        "Sex: Male"
@@ -11928,7 +11888,7 @@
      "reassessed": "Herbeoordeeld 10-11-2026 volgens kwaliteitsnorm §3.3 (klein in beeld mag als de vogel goed zichtbaar en herkenbaar is); was voorwaardelijk.",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Donald Davesne, some rights reserved (CC BY)",
+      "note": "bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY 4.0 · (c) Donald Davesne, some rights reserved (CC BY)",
       "annotations": [
        "Life Stage: Adult",
        "Sex: Female"
@@ -11961,7 +11921,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Andrey Gulivanov",
+      "note": "bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY 2.0 · Andrey Gulivanov",
       "annotations": []
      },
      "flight": {
@@ -11984,7 +11944,8 @@
     }
    ],
    "corrections": [
-    "sp248-adult_f.webp: voorwaardelijk → goedgekeurd na kwaliteitsnorm §3.3 (klein in beeld is geen afkeurgrond)"
+    "sp248-adult_f.webp: voorwaardelijk → goedgekeurd na kwaliteitsnorm §3.3 (klein in beeld is geen afkeurgrond)",
+    "F2: oorspronkelijke beelden en rechten herbevestigd. Geslacht, leeftijd, seizoentekst en maten nader onderbouwd, vrouwelijke vluchtfoto als extra vergelijking opgenomen."
    ],
    "missing": [
     "Vrouwtje zittend"
@@ -11992,51 +11953,31 @@
    "wishes": [
     "Scherpere/grotere vrouwtje-vluchtfoto (geen gebrek; voor latere beoordeling door de eigenaar)"
    ],
-   "uncertain": [
-    "Geslachtskenmerken van Wespendief nog niet uit een tweede bron vastgelegd (zie kennisprofiel)."
-   ],
+   "uncertain": [],
    "sexPolicy": "Geslachten verschillen; labels steunen op iNaturalist-annotaties.",
    "previous": null,
    "status": {
     "technical": "VERIFIED",
     "visual": "VERIFIED",
     "rights": "VERIFIED",
-    "knowledge": "PARTIALLY TESTED",
-    "browser": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "NOT TESTED",
     "independent": "NOT TESTED"
    },
    "photoComplete": false,
    "knowledge": {
     "profile": true,
-    "critical": 2,
+    "critical": 3,
     "decisive": 0,
     "notDecisive": [
      "Kop en staart",
-     "Vleugelhouding"
+     "Vleugelhouding",
+     "Oog en snavelbasis"
     ],
-    "open": [
-     "Geslachtskenmerken (grijze kop man, oogkleur) nog uit een tweede bron vastleggen.",
-     "Vrouwtje in vlucht klein in beeld; vervanging gewenst."
-    ],
+    "open": [],
     "discrepancies": 0
    },
-   "browser": {
-    "ok": true,
-    "viewport": "390x844 Chromium (Playwright)",
-    "photos": 4,
-    "sections": [
-     "Hoofdfoto",
-     "Verenkleed",
-     "In vlucht"
-    ],
-    "flight": [
-     "/assets/species/plumage/sp248-adult_f.webp",
-     "/assets/species/plumage/sp248-juv.webp"
-    ],
-    "checks": "SAB-01..07",
-    "lijktOp": "SAB-09 OK (390 px)",
-    "lijktOpDesktop": "SAB-09 OK (1280 px)"
-   },
+   "browser": null,
    "errors": [],
    "verdict": "PARTIALLY TESTED",
    "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
@@ -12548,8 +12489,8 @@
    "family": "Haviken",
    "audited": true,
    "batch": "M2",
-   "date": "2026-11-10",
-   "sha": "9ddb3d984262f8e95bae5a056431ef80bbde73bb",
+   "date": "2026-11-14",
+   "sha": null,
    "assets": [
     {
      "image": "/assets/species/plumage/sp253-male-rest.webp",
@@ -12560,7 +12501,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Spencer Hurt, some rights reserved (CC BY)",
+      "note": "bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY 4.0 · (c) Spencer Hurt, some rights reserved (CC BY)",
       "annotations": [
        "Sex: Male",
        "Alive or Dead: Alive",
@@ -12578,7 +12519,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY SA · (c) psweet, some rights reserved (CC BY-SA)",
+      "note": "bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY-SA 4.0 · (c) psweet, some rights reserved (CC BY-SA)",
       "annotations": [
        "Sex: Male"
       ]
@@ -12610,7 +12551,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · dfaulder",
+      "note": "bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY 2.0 · dfaulder",
       "annotations": []
      },
      "flight": {
@@ -12640,7 +12581,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Radek Ošlejšek, some rights reserved (CC BY)",
+      "note": "bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY 4.0 · (c) Radek Ošlejšek, some rights reserved (CC BY)",
       "annotations": [
        "Life Stage: Juvenile"
       ]
@@ -12662,16 +12603,15 @@
    ],
    "corrections": [
     "FQA-01 (eerder in deze PR): juveniel in vlucht naar In vlucht met label Juveniel.",
-    "11-11-2026: vier eigen foto’s onafhankelijk visueel herbekeken. Verschil tussen lichte vrouwtjes en juvenielen in het kennisprofiel als ondersteunend beschreven met Europese en Noord-Amerikaanse bronnen."
+    "11-11-2026: vier eigen foto’s onafhankelijk visueel herbekeken. Verschil tussen lichte vrouwtjes en juvenielen in het kennisprofiel als ondersteunend beschreven met Europese en Noord-Amerikaanse bronnen.",
+    "F2: alle vier originele opnamen en rechten herbevestigd, inclusief drie iNaturalist-fotopagina’s en hun waarnemingen. Verschillen met Buizerd en de maten gecontroleerd."
    ],
    "missing": [
     "Afzonderlijke rustfoto van vrouwtje",
     "Afzonderlijke rustfoto van juveniel"
    ],
    "wishes": [],
-   "uncertain": [
-    "De drie iNaturalist-foto’s zijn gekoppeld aan de geverifieerde opname en annotaties uit de bronaudit van 9 november. De actuele primaire fotopagina’s en waarnemingen waren bij de hercontrole niet bereikbaar."
-   ],
+   "uncertain": [],
    "sexPolicy": "De kleden kunnen in de buik- en staarttekening verschillen en deels overlappen. Foto-annotaties en waarneembare kenmerken worden samen gelezen.",
    "previous": null,
    "status": {
@@ -12679,7 +12619,7 @@
     "visual": "VERIFIED",
     "rights": "VERIFIED",
     "knowledge": "PARTIALLY TESTED",
-    "browser": "VERIFIED",
+    "browser": "NOT TESTED",
     "independent": "NOT TESTED"
    },
    "photoComplete": false,
@@ -12692,26 +12632,11 @@
      "Geslacht en leeftijd"
     ],
     "open": [
-     "De drie iNaturalist-bronpagina’s konden tijdens de hercontrole niet opnieuw worden geopend. De fotolabels steunen op het vastgelegde bronbewijs van 9 november en zijn niet opnieuw tegen de oorspronkelijke annotaties bevestigd."
+     "Er is nog geen gelicentieerd referentiegeluid aan deze kaart gekoppeld."
     ],
     "discrepancies": 0
    },
-   "browser": {
-    "ok": true,
-    "viewport": "390x844 Chromium (Playwright)",
-    "photos": 4,
-    "sections": [
-     "Hoofdfoto",
-     "In vlucht"
-    ],
-    "flight": [
-     "/assets/species/plumage/sp253-male-flight.webp",
-     "/assets/species/sp253.webp",
-     "/assets/species/plumage/sp253-juv.webp"
-    ],
-    "checks": "SAB-01..07",
-    "lijktOp": "SAB-09 OK (390 px)"
-   },
+   "browser": null,
    "errors": [],
    "verdict": "PARTIALLY TESTED",
    "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"

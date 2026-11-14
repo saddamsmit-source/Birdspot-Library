@@ -331,7 +331,7 @@ function comparisonCard(id, group) {
   }).join('');
   const tabBar = tabs ? `<div class="sd-cmp-tabs" role="tablist">${pairings.map(({entry, focal, ownPhoto, inFlight}, i) => {
     const title = cmpPlumageTitle(entry, focal, ownPhoto, inFlight);
-    const label = inFlight && title !== 'In vlucht' ? `In vlucht · ${title.replace(/ in vlucht$/, '')}` : title;
+    const label = entry.tabLabel || (inFlight && title !== 'In vlucht' ? `In vlucht · ${title.replace(/ in vlucht$/, '')}` : title);
     return `<button type="button" class="sd-cmp-tab${i === 0 ? ' is-active' : ''}" data-cmp-tab aria-selected="${i === 0}">${esc(label)}</button>`;
   }).join('')}</div>` : '';
   return `<div class="sd-cmp-card">${tabBar}${panels}</div>`;
