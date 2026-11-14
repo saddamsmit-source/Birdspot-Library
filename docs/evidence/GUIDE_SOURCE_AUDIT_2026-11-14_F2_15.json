@@ -1,0 +1,198 @@
+{
+  "title": "Birdspot F2-15 — sources, existing media registry and verification limits",
+  "date": "2026-11-14",
+  "baseSha": "5e1bf339a3a5d389dff073ac981d7ef166d346f5",
+  "status": "PARTIALLY TESTED",
+  "comparisonRule": "Same-age images only, existing licensed gallery photos reused under Lijkt op; missing roles stay empty.",
+  "evidenceScope": "Source content and existing repository text metadata; not an independent inspection of app WebP pixel data. Do not promote image identity or sex/age into newly verified.",
+  "limitations": [
+    "GitHub file connector cannot return binary WebP assets (UnicodeDecodeError on blob retrieval); source-to-WebP visual match NOT TESTED in this round.",
+    "Original producer pages and all photo binaries have not been comprehensively reopened for each file. Previous source audits are retained as historical evidence, not replayed as new observations.",
+    "Browser interaction, Android device and physical offline tests NOT TESTED on this new commit.",
+    "Any existing annotated flight/photo or iNaturalist labels remain prior review states, not independently reapproved."
+  ],
+  "species": [
+    {
+      "id": "sp064",
+      "name": "Vuurgoudhaan",
+      "taxon": "Regulus ignicapilla",
+      "registeredPhotoCount": 3,
+      "registeredPhotos": [
+        {
+          "image": "/assets/species/sp064.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Common_firecrest_Franconville_03.jpg",
+          "authorRecorded": "Alexis Lours",
+          "licenseRecorded": "CC BY 4.0",
+          "roleRecorded": "unspecified",
+          "wasReviewed": "2026-11-06",
+          "sha1Recorded": null,
+          "freshOriginalPageAndBinaryMatch": "NOT TESTED"
+        },
+        {
+          "image": "/assets/species/plumage/sp064-hero-male.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Firecrest_2024_01_28_01.jpg",
+          "authorRecorded": "Alexis Lours",
+          "licenseRecorded": "CC BY 4.0",
+          "roleRecorded": "Mannetje",
+          "wasReviewed": "2026-11-12",
+          "sha1Recorded": "6eb8f9113b0c7153f81dde9965d510da70d69dd6",
+          "freshOriginalPageAndBinaryMatch": "NOT TESTED"
+        },
+        {
+          "image": "/assets/species/plumage/sp064-juv.webp",
+          "source": "https://www.inaturalist.org/photos/298756944",
+          "authorRecorded": "euqirneto",
+          "licenseRecorded": "CC BY 4.0",
+          "roleRecorded": "juvenile",
+          "wasReviewed": "2026-11-12",
+          "sha1Recorded": "730279615ce74e33d2e500ffc7e541b13908fde0",
+          "freshOriginalPageAndBinaryMatch": "NOT TESTED"
+        }
+      ],
+      "sourcePagesUsedForText": [
+        "https://www.vogelbescherming.nl/actueel/bericht/goudhaan-vs-vuurgoudhaan",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/vuurgoudhaan"
+      ],
+      "change": "Juvenielenfoto's naast elkaar vergelijken, met brongebonden wenkbrauw- en kruinkenmerken",
+      "remaining": [
+        "vrouwtjesfoto ontbreekt",
+        "vrije vluchtfoto ontbreekt",
+        "individuele iNaturalist-leeftijd niet opnieuw geopend"
+      ]
+    },
+    {
+      "id": "sp035",
+      "name": "Vink",
+      "taxon": "Fringilla coelebs",
+      "registeredPhotoCount": 5,
+      "registeredPhotos": [
+        {
+          "image": "/assets/species/sp035.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Fringilla_coelebs_on_branch.jpg",
+          "authorRecorded": "Martin Kunz",
+          "licenseRecorded": "CC BY 3.0",
+          "roleRecorded": "male",
+          "wasReviewed": "2026-11-05",
+          "sha1Recorded": null,
+          "freshOriginalPageAndBinaryMatch": "NOT TESTED"
+        },
+        {
+          "image": "/assets/species/plumage/sp035-adult_f.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Common_chaffinch_(Fringilla_coelebs)_female_Drenthe.jpg",
+          "authorRecorded": "Charles J. Sharp",
+          "licenseRecorded": "CC BY-SA 4.0",
+          "roleRecorded": "unspecified",
+          "wasReviewed": "2026-11-06",
+          "sha1Recorded": null,
+          "freshOriginalPageAndBinaryMatch": "NOT TESTED"
+        },
+        {
+          "image": "/assets/species/plumage/sp035-flight.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Fringilla_coelebs_-Lochwinnoch,_Renfrewshire,_Scotland_-flying-8.jpg",
+          "authorRecorded": "Mark Medcalf",
+          "licenseRecorded": "CC BY 2.0",
+          "roleRecorded": "Mannetje in vlucht",
+          "wasReviewed": "2026-11-07",
+          "sha1Recorded": null,
+          "freshOriginalPageAndBinaryMatch": "NOT TESTED"
+        },
+        {
+          "image": "/assets/species/plumage/sp035-juv-review.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Fringilla_coelebs_juvenile_Sigy_20180510_t170526.jpg",
+          "authorRecorded": "Marie-Lan Taÿ Pamart",
+          "licenseRecorded": "CC BY 4.0",
+          "roleRecorded": "Juveniel",
+          "wasReviewed": "2026-11-08",
+          "sha1Recorded": null,
+          "freshOriginalPageAndBinaryMatch": "NOT TESTED"
+        },
+        {
+          "image": "/assets/species/plumage/sp035-hero-male.webp",
+          "source": "https://commons.wikimedia.org/wiki/File%3ACommon_chaffinch_%28Fringilla_coelebs%29_breeding_male_Drenthe.jpg",
+          "authorRecorded": "Charles J. Sharp",
+          "licenseRecorded": "CC BY-SA 4.0",
+          "roleRecorded": "Mannetje",
+          "wasReviewed": "2026-11-09",
+          "sha1Recorded": "04c9fd7979ee5a62b6975b56e3c995baa7cf7ccd",
+          "freshOriginalPageAndBinaryMatch": "NOT TESTED"
+        }
+      ],
+      "sourcePagesUsedForText": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/vink",
+        "https://www.natuurmonumenten.nl/dieren/vogels/vink"
+      ],
+      "change": "Veldkenmerken gelden voor beide geslachten, leeftijdskleed genuanceerd",
+      "remaining": [
+        "vluchtgeslacht nader bevestigen op individuele originele bronpagina"
+      ]
+    },
+    {
+      "id": "sp036",
+      "name": "Groenling",
+      "taxon": "Chloris chloris",
+      "registeredPhotoCount": 4,
+      "registeredPhotos": [
+        {
+          "image": "/assets/species/sp036.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Chloris_chloris_(profile).jpg",
+          "authorRecorded": "Martin Kunz",
+          "licenseRecorded": "CC BY 4.0",
+          "roleRecorded": "male",
+          "wasReviewed": "2026-11-05",
+          "sha1Recorded": null,
+          "freshOriginalPageAndBinaryMatch": "NOT TESTED"
+        },
+        {
+          "image": "/assets/species/plumage/sp036-adult_f.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Chloris_chloris_female.jpg",
+          "authorRecorded": "Francis C. Franklin",
+          "licenseRecorded": "CC BY-SA 3.0",
+          "roleRecorded": "female",
+          "wasReviewed": "2026-11-11",
+          "sha1Recorded": "eb489f1cf65881d186d598620ce52630385802a2",
+          "freshOriginalPageAndBinaryMatch": "NOT TESTED"
+        },
+        {
+          "image": "/assets/species/plumage/sp036-juv.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Verdilh%C3%A3o%2C_juvenil%2C_European_Greenfinch%2C_juvenile_(50375120742).jpg",
+          "authorRecorded": "Luiz Lapa from Oeiras, Portugal",
+          "licenseRecorded": "CC BY 2.0",
+          "roleRecorded": "juvenile",
+          "wasReviewed": "2026-11-11",
+          "sha1Recorded": "5e733dd05a2e542b6c32ba045e68bb4e9ef3f1a7",
+          "freshOriginalPageAndBinaryMatch": "NOT TESTED"
+        },
+        {
+          "image": "/assets/species/plumage/sp036-flight.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:NZ7_6126_(51832454526).jpg",
+          "authorRecorded": "Bengt Nyman",
+          "licenseRecorded": "CC BY-SA 2.0",
+          "roleRecorded": "In vlucht",
+          "wasReviewed": "2026-11-07",
+          "sha1Recorded": null,
+          "freshOriginalPageAndBinaryMatch": "NOT TESTED"
+        }
+      ],
+      "sourcePagesUsedForText": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/Groenling"
+      ],
+      "change": "Veldkenmerken voor mannetje, vrouwtje en juveniel onderscheiden",
+      "remaining": [
+        "onafhankelijke controle dat vluchtfoto daadwerkelijk vrij in vlucht is"
+      ]
+    }
+  ],
+  "testsExpected": [
+    "Previously registered images unchanged; no new media and no license-field mutation.",
+    "Guide comparisons include a juvenile pair only where sp063 and sp064 both have juvenile images.",
+    "Juvenile comparison renders from both guide cards, separately from flight.",
+    "No duplicated own-hero images; existing mandatory credits persist.",
+    "F2-15 commit requires its own CI evidence; previous 24/24 workflows do not count for this commit."
+  ],
+  "nextSpecies": [
+    "sp037 Putter",
+    "sp038 Sijs",
+    "sp040 Goudvink"
+  ],
+  "restore": "Close draft PR; original F2-14 head is immutable base, production and preview unchanged."
+}

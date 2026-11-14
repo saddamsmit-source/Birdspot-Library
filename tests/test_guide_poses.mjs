@@ -7,6 +7,7 @@ import { readFileSync } from 'node:fs';
 import { SPECIES } from '../src/data/species.js';
 import { GUIDE_AUDIO, GUIDE_HEROES, GUIDE_PLUMAGE, GUIDE_POSES } from '../src/features/species/guideMedia.js';
 import { GUIDE_PHOTOS } from '../src/features/species/guidePhotos.js';
+import { GUIDE_COMPARISONS } from '../src/features/species/guideComparisons.js';
 import { escHtml } from '../src/utils/html.js';
 import { guideHeroPhoto, guidePlumageGroups, recognitionPanel, wherePanel } from '../src/features/species/detailSections.js';
 
@@ -207,4 +208,23 @@ for (const id of ['sp017', 'sp018']) {
   }
 }
 assert.ok(reviewedSpechtenFiles >= 8, 'Expected baseline of 8 individually reviewed sp017/sp018 files');
+
+const f215Juveniles = GUIDE_COMPARISONS.find(entry => entry.label === 'Goudhaantje en Vuurgoudhaan · juvenielen');
+assert.ok(f215Juveniles, 'F2-15: juvenielenvergelijking ontbreekt');
+assert.deepEqual(f215Juveniles.birds.map(bird => [bird.id, bird.plumage]), [
+  ['sp063', 'juv'], ['sp064', 'juv'],
+]);
+for (const id of ['sp063', 'sp064']) {
+  const f215Markup = recognitionPanel(species.get(id));
+  assert.ok(f215Markup.includes('sp063-juv.webp'), `F2-15: Goudhaantje-juveniel niet zichtbaar vanaf ${id}`);
+  assert.ok(f215Markup.includes('sp064-juv.webp'), `F2-15: Vuurgoudhaan-juveniel niet zichtbaar vanaf ${id}`);
+  assert.ok(!f215Markup.includes('data-cmp-tab aria-selected="true">In vlucht · Juveniel'),
+    `F2-15: juvenielvergelijking onterecht als vlucht geclassificeerd bij ${id}`);
+}
+assert.match(species.get('sp035').fieldmarks, /Twee lichte vleugelstrepen/);
+assert.match(species.get('sp035').fieldmarks, /vrouwtje en jong/);
+assert.match(species.get('sp036').fieldmarks, /Stevige kegelvormige snavel/);
+assert.match(species.get('sp036').fieldmarks, /juveniel grijzer/);
+console.log('F2-15: juveniele vergelijking beide richtingen, portretten en kleedneutrale kenmerken structureel gecontroleerd; visuele bronverificatie blijft apart');
+
 console.log(`QA-SPECHTEN-BYTES: ${reviewedSpechtenFiles} current files have distinct WebP bytes; near-duplicates NOT PROVEN`);

@@ -259,13 +259,13 @@ export const SPECIES = [
 
   // ── VINKEN ───────────────────────────────────────────────────
   { id:'sp035', nameNL:'Vink',                nameEN:'Common Chaffinch',          nameSci:'Fringilla coelebs',          family:'Vinken',          category:'standvogel', icon:'🐦', regions:['bos','stedelijk','agrarisch'],
-    fieldmarks:'Mannetje roze borst, blauwgrijs hoofd, witte vleugelbanden.',
+    fieldmarks:'Twee lichte vleugelstrepen en witte buitenste staartpennen. Mannetje in broedkleed met blauwgrijze kruin en oranjerode borst; vrouwtje en jong zijn bruiner.',
     size:{ length:'ca. 14–16 cm', wingspan:'ca. 25–28 cm', weight:'18–29 g' },
     plumage:{ adult_m:'Blauwgrijs hoofd; roze-rode borst; groen-bruine rug; twee witte vleugelbanden; witte buitenstaartpennen', adult_f:'Grijsbruin met twee lichte vleugelstrepen en witte buitenste staartpennen.', juv:'Bruin kleed met lichte vleugelstrepen. Lijkt op een vrouwtje.', jaarling:null, breeding:'Mannetje met blauwgrijze kruin en nek en roze-oranje borst; blauwgrijze snavel', winter:'Doffer met bruingetinte kruin; lichte snavel', eclipse:null },
     distribution:'Heel Nederland; loofbos, parken, tuinen en akkers', status:'Standvogel, ook wintergast · jaarrond',
     statusExtra:'wintergast', months:'jan-dec', frequency:'algemeen', breeding:'ja', redList:null },
   { id:'sp036', nameNL:'Groenling',           nameEN:'European Greenfinch',       nameSci:'Chloris chloris',            family:'Vinken',          category:'standvogel', icon:'🐦', regions:['stedelijk','agrarisch','struweel'],
-    fieldmarks:'Geelgroen, gele vleugelranden, stevige snavel.',
+    fieldmarks:'Stevige kegelvormige snavel, forse bouw en geel langs de vleugel- en buitenstaartpennen. Mannetje helder groen, vrouwtje grijsgroen; juveniel grijzer en sterker gestreept.',
     size:{ length:'ca. 14–16 cm', wingspan:'24–28 cm', weight:'22–34 g' },
     plumage:{ adult_m:'Geelgroen; gele randen op vleugelpennen en staart; grijs vleugeldekveren; roze snavel', adult_f:'Grijsgroen met minder opvallend geel langs de vleugel en aan de staart.', juv:'Grijzer met duidelijke donkere streping op borst en buik.', jaarling:null, breeding:null, winter:null, eclipse:null },
     distribution:'Heel Nederland; struwelen, parken, tuinen en akkers', status:'Standvogel · jaarrond',
