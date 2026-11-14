@@ -99,6 +99,50 @@
       "sexPolicy": "Geslachten verschillen (rode nekvlek man); labels door beeld bevestigd.",
       "uncertain": []
     },
+    "sp020": {
+      "assets": {
+        "/assets/species/plumage/sp020-male.webp": {
+          "role": "Hoofdfoto",
+          "content": "Volwassen vogel tegen stam met lichte kop en roze onderstaart.",
+          "sexAge": "Fotograaf noemt een mannetje. Neutraal weergegeven vanwege overlap in verenkleed.",
+          "quality": "Bruikbaar, bronminiatuur van 500 px beperkt zoom.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/sp020.webp": {
+          "role": "Overige herkenningsfoto's",
+          "content": "Zijaanzicht op stronk met rode kruin, wit gezicht en gestreepte flanken.",
+          "sexAge": "Leeftijd en geslacht open.",
+          "quality": "Goede uitsnede van volledige vogel.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp020-pose.webp": {
+          "role": "Overige herkenningsfoto's",
+          "content": "Foerageert op een stam. Flankstrepen en roze onderstaart zichtbaar.",
+          "sexAge": "Leeftijd en geslacht open.",
+          "quality": "Scherpe andere kijkhoek.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp020-flight.webp": {
+          "role": "In vlucht",
+          "content": "Vrij in de lucht. Gebandeerde slagpennen, flankstrepen en roze onderstaart zichtbaar.",
+          "sexAge": "Leeftijd en geslacht open.",
+          "quality": "Bruikbaar voor de onderzijde en vleugeltekening, bronbestand 725 × 483 px.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Vier foto’s naast de oorspronkelijke bestanden bekeken en de bronvermelding gecontroleerd. Lengte, spanwijdte en kennisprofiel onderbouwd."
+      ],
+      "missing": [
+        "Juvenielenfoto met door bron en beeld ondersteunde leeftijd."
+      ],
+      "wishes": [
+        "Scherper portret uit origineel en ruimer vluchtbeeld."
+      ],
+      "uncertain": [],
+      "sexPolicy": "Kleedkenmerken overlappen. De hoofd-, overige en vluchtfoto krijgen neutrale labels.",
+      "date": "2026-11-14"
+    },
     "sp026": {
       "assets": {
         "/assets/species/sp026.webp": {"role": "Hoofdfoto", "content": "Gaai op tak met eikel; blauw vleugelveld en baardstreep.", "sexAge": "niet vast te stellen", "quality": "goed", "verdict": "goedgekeurd"},

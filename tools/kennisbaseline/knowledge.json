@@ -4147,6 +4147,50 @@
       "checked": "2026-11-14",
       "certainty": "hoog voor basale herkenning; bron is oudere gidseditie",
       "publisher": "Zootierliste"
+    },
+    "VB_MBS": {
+      "register": "NL07",
+      "label": "Vogelbescherming — Middelste Bonte Specht",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/middelste-bonte-specht",
+      "edition": "online bron, geraadpleegd 14-11-2026",
+      "scope": "Europa",
+      "confirms": "herkenning, leefgebied, lengte en spanwijdte",
+      "checked": "2026-11-14",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "CH_MBS": {
+      "register": "NL07",
+      "label": "Schweizerische Vogelwarte — Middelste Bonte Specht",
+      "url": "https://www.vogelwarte.ch/en/birds-of-switzerland/middle-spotted-woodpecker/",
+      "edition": "online bron, geraadpleegd 14-11-2026",
+      "scope": "Europa",
+      "confirms": "lengte, spanwijdte, gewicht en habitat",
+      "checked": "2026-11-14",
+      "certainty": "hoog",
+      "publisher": "Schweizerische Vogelwarte"
+    },
+    "MME_EKSTER": {
+      "register": "NL07",
+      "label": "MME — Ekster",
+      "url": "https://mme.hu/en/magyarorszagmadarai/madaradatbazis-picpic",
+      "edition": "online bron, geraadpleegd 14-11-2026",
+      "scope": "Europa",
+      "confirms": "lengte 44–46 cm, spanwijdte 52–60 cm",
+      "checked": "2026-11-14",
+      "certainty": "hoog",
+      "publisher": "MME BirdLife Hungary"
+    },
+    "BZH_EKSTER": {
+      "register": "NL07",
+      "label": "Blasco-Zumeta en Heinze — Ekster",
+      "url": "https://blascozumeta.wimbitek.com/specie_files/15490_ENG_Pica_pica_aranzadi.pdf",
+      "edition": "online bron, geraadpleegd 14-11-2026",
+      "scope": "Europa",
+      "confirms": "jeugdkenmerken, ruigrens en leeftijds- en geslachtsbeleid",
+      "checked": "2026-11-14",
+      "certainty": "hoog",
+      "publisher": "Sociedad de Ciencias Aranzadi"
     }
   },
   "sp021": {
@@ -4215,8 +4259,11 @@
       },
       {
         "id": "sp026",
-        "why": "Bestaande vluchtvergelijking in Birdspot (kraaiachtige)",
-        "sources": []
+        "why": "Gaai heeft een beigebruin lichaam, blauw-zwart vleugelveld en witte stuit. Ekster toont witte handvleugels en een lange staart.",
+        "sources": [
+          "VB_EKSTER",
+          "VB_GAAI"
+        ]
       }
     ],
     "detail": [
@@ -4232,6 +4279,13 @@
         "text": "De witte handvleugel springt in vlucht duidelijk in het oog.",
         "sources": [
           "VB_EKSTER"
+        ]
+      },
+      {
+        "topic": "leeftijd",
+        "text": "Een jonge Ekster heeft een blauwgrijze iris en vaak zichtbare blauwgrijze huid rond het oog.",
+        "sources": [
+          "BZH_EKSTER"
         ]
       }
     ],
@@ -4253,11 +4307,50 @@
     ],
     "basis": {
       "size": {
-        "text": "Lengte 46–50 cm, spanwijdte 52–60 cm.",
+        "text": "Lengte ca. 45–50 cm, spanwijdte ca. 50–60 cm.",
         "sources": [
-          "VB_EKSTER"
+          "VB_EKSTER",
+          "MME_EKSTER"
         ]
-      }
+      },
+      "biometrics": [
+        {
+          "field": "length",
+          "unit": "cm",
+          "display": "ca. 45–50 cm",
+          "values": [
+            {
+              "source": "VB_EKSTER",
+              "min": 46,
+              "max": 50
+            },
+            {
+              "source": "MME_EKSTER",
+              "min": 44,
+              "max": 46
+            }
+          ],
+          "note": "Afgeronde veldindicatie uit twee soortbeschrijvingen. De bronwaarden blijven zichtbaar."
+        },
+        {
+          "field": "wingspan",
+          "unit": "cm",
+          "display": "ca. 50–60 cm",
+          "values": [
+            {
+              "source": "VB_EKSTER",
+              "min": 52,
+              "max": 60
+            },
+            {
+              "source": "MME_EKSTER",
+              "min": 52,
+              "max": 60
+            }
+          ],
+          "note": "Afgeronde veldindicatie uit twee soortbeschrijvingen. De bronwaarden blijven zichtbaar."
+        }
+      ]
     },
     "status": [
       {
@@ -4301,9 +4394,7 @@
     "habitat": [],
     "discrepancies": [],
     "open": [
-      "Juveniel kleed en leefgebied niet opnieuw gecontroleerd tegen een bron.",
-      "Vergelijking met Gaai is bestaande Birdspot-inhoud, niet opnieuw gecontroleerd.",
-      "Kleedpatroon is in Nederland vrijwel onmiskenbaar, maar staat op \"Helpt\" tot een tweede, onafhankelijke bron is vastgelegd (regel doorslaggevend, 10-11-2026)."
+      "Een brongeverifieerde juvenielenfoto ontbreekt. Gewicht en geluidsdekking staan open."
     ]
   },
   "sp057": {
@@ -22066,6 +22157,126 @@
       "Het juveniele gidsbeeld toont uitsluitend de kop; een afzonderlijk volledig jeugdkleedportret ontbreekt.",
       "De lokale vrouwtjesfoto is een 500-pixel-voorbeeld; de originele bron heeft een veel hogere resolutie. Een verbeterd bestand vereist afzonderlijke gecontroleerde import.",
       "Gewicht vraagt nog een eigen vergelijking van twee passende bronnen."
+    ]
+  },
+  "sp020": {
+    "summary": {
+      "text": "Bonte specht met een lichte kop, rode kruin en roze onderstaart. Let ook op de fijne strepen op de flanken.",
+      "sources": [
+        "VB_MBS"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Het oog ligt in het lichte gezicht.",
+        "sources": [
+          "VB_MBS",
+          "VB_GBS_MBS"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "De rode kruin mist doorgaans de zwarte begrenzing van de jeugdkruin van Grote Bonte Specht.",
+        "sources": [
+          "VB_MBS",
+          "VB_GBS_MBS"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Fijne flankstrepen en roze onderstaart.",
+        "sources": [
+          "VB_MBS",
+          "VB_GBS_MBS"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "caution": {
+      "text": "Een rode kruin komt ook voor bij een jonge Grote Bonte Specht. Zoek een zijaanzicht waarop ook de hals en flanken zichtbaar zijn.",
+      "sources": [
+        "VB_GBS_MBS"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Kop- en halstekening",
+        "where": "Zijaanzicht van kop en hals",
+        "this": "Veel wit rond het oog en een rode kruin zonder duidelijke zwarte onderrand.",
+        "other": "Een jonge Grote Bonte Specht toont een duidelijker donkere begrenzing langs de kop.",
+        "vs": [
+          "sp016"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Volledige kopzijde zichtbaar, met voldoende licht.",
+        "exceptions": "In ongunstige hoek kunnen donkere randen of flankstrepen wegvallen.",
+        "supporting": "Controleer ook de roze onderstaart en fijne flankstrepen.",
+        "sources": [
+          "VB_MBS",
+          "VB_GBS_MBS"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp016",
+        "why": "Vergelijk de donkere begrenzing van het rode petje met de lichte kop van de Middelste Bonte Specht.",
+        "sources": [
+          "VB_GBS_MBS"
+        ]
+      }
+    ],
+    "basis": {
+      "size": {
+        "text": "Lengte ca. 21–23 cm. Beide bronpagina’s geven een spanwijdte van 33–34 cm.",
+        "sources": [
+          "VB_MBS",
+          "CH_MBS"
+        ]
+      },
+      "biometrics": [
+        {
+          "field": "length",
+          "unit": "cm",
+          "display": "ca. 21–23 cm",
+          "values": [
+            {
+              "source": "VB_MBS",
+              "min": 22,
+              "max": 24
+            },
+            {
+              "source": "CH_MBS",
+              "min": 20,
+              "max": 22
+            }
+          ],
+          "note": "Afgeronde veldindicatie uit twee soortbeschrijvingen. De bronwaarden blijven zichtbaar."
+        }
+      ]
+    },
+    "habitat": [
+      {
+        "topic": "leefgebied",
+        "text": "Oud loofbos met veel oude eiken en ruwe bast.",
+        "sources": [
+          "VB_MBS",
+          "CH_MBS"
+        ]
+      }
+    ],
+    "open": [
+      "Een verifieerbare juvenielenfoto ontbreekt. Scherper vluchtbeeld en hoofdfoto met meer bronpixels zijn verbeterwensen."
+    ],
+    "detail": [
+      {
+        "topic": "leeftijd",
+        "text": "Middelste Bonte Specht heeft in alle kleden rood op de kruin. Zoek voor leeftijdsbepaling extra kenmerken in plaats van alleen de hoeveelheid rood.",
+        "sources": [
+          "VB_MBS",
+          "VB_GBS_MBS"
+        ]
+      }
     ]
   }
 }
