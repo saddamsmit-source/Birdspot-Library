@@ -1,0 +1,162 @@
+{
+  "schema": "birdspot-f2-22-proof-and-limitations-v1",
+  "date": "2026-11-14",
+  "parentPR": 223,
+  "baseSha": "16016bcc128a5937e484063fac5817f1af49ba7c",
+  "scope": [
+    "sp056 Tjiftjaf",
+    "sp057 Fitis",
+    "sp058 Fluiter"
+  ],
+  "status": "PARTIALLY TESTED",
+  "sourcePolicy": "Vogelbescherming Nederland per soort; ANWB alleen indien de exacte soortpassage toegankelijk is; originele Commons-bestandspagina apart voor rechten. Kennisclaims geen licentie voor foto's.",
+  "facts": [
+    {
+      "id": "sp056",
+      "species": "Tjiftjaf",
+      "scientificName": "Phylloscopus collybita",
+      "checked": "read",
+      "source": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/tjiftjaf",
+      "facts": "Herhaalde tjif-tjaf-zang; donkere poten en kortere vleugels dan Fitis helpen maar zijn niet afzonderlijk beslissend",
+      "independent": "https://www.bto.org/learn/about-birds/birdfacts/chiffchaff"
+    },
+    {
+      "id": "sp057",
+      "species": "Fitis",
+      "scientificName": "Phylloscopus trochilus",
+      "checked": "read",
+      "source": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/fitis",
+      "facts": "Melodieus aflopend riedeltje; vaak lichtbruine poten en langere vleugels dan Tjiftjaf"
+    },
+    {
+      "id": "sp058",
+      "species": "Fluiter",
+      "scientificName": "Phylloscopus sibilatrix",
+      "checked": "read",
+      "source": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/fluiter",
+      "facts": "Mosgroene bovenzijde, citroengele keel en bovenborst, contrasterend witte buik, gele wenkbrauw; versneld ratelende zang; man en vrouw gelijkend"
+    }
+  ],
+  "existingMainPhotos": [
+    {
+      "id": "sp056",
+      "image": "/assets/species/sp056.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Common_Chiffchaff_2025_04_04_01.jpg",
+      "author": "Alexis Lours",
+      "registeredLicense": "CC BY 4.0",
+      "originalPageRead": true,
+      "identity": "Author identifies Common Chiffchaff; Commons quality/featured image recognition is not an independent local WebP audit.",
+      "localWebPPixels": "NOT TESTED"
+    },
+    {
+      "id": "sp057",
+      "image": "/assets/species/sp057.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Willow_Warbler_Phylloscopus_trochilus.jpg",
+      "author": "Andreas Trepte",
+      "registeredLicense": "CC BY-SA 2.5",
+      "originalPageRead": true,
+      "identity": "Original file describes Phylloscopus trochilus, adult age/sex not independently determined.",
+      "localWebPPixels": "NOT TESTED",
+      "licenseCaution": "On the original page photographer requests credit as Andreas Trepte, website www.avi-fauna.info, and expects email with usage details. The photographer also warns about social-platform terms. Confirm compliance/possible extra use permissions before promotion; no claim that a CC license itself is withdrawn."
+    },
+    {
+      "id": "sp058",
+      "image": "/assets/species/sp058.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Phylloscopus_sibilatrix_Wood_Warbler_WOWA_Waldlaubs%C3%A4nger_MD284.jpg",
+      "author": "Mike Duchstein",
+      "registeredLicense": "CC BY-SA 4.0",
+      "originalPageRead": true,
+      "identity": "Original file page identifies Phylloscopus sibilatrix and names Mike Duchstein.",
+      "localWebPPixels": "NOT TESTED"
+    }
+  ],
+  "poseAndAudio": {
+    "sp056": {
+      "existingFlightImage": "/assets/species/plumage/sp056-flight.webp",
+      "flight": false,
+      "reason": "Fladderend tussen rietstengels, afzetten/contact niet uitgesloten; eerdere uit-rol niet teruggedraaid.",
+      "audioRegistered": [
+        "zang",
+        "roep"
+      ],
+      "audioNewListening": "NOT TESTED"
+    },
+    "sp057": {
+      "existingFlightImage": null,
+      "flight": false,
+      "reason": "Geen bewezen vrije-vluchtrol in de gidsregistratie; niet ingevuld.",
+      "audioRegistered": [
+        "zang",
+        "roep"
+      ],
+      "audioNewListening": "NOT TESTED"
+    },
+    "sp058": {
+      "existingFlightImage": "/assets/species/plumage/sp058-flight.webp",
+      "flight": false,
+      "reason": "Poten voorwaarts naar bladeren, landings-/fladderbeeld; eerdere uit-rol niet teruggedraaid.",
+      "audioRegistered": [],
+      "audioNewListening": "NOT TESTED",
+      "juvenile": "Old unsourced 'Als adult' placeholder removed (null); age remains unverified and no juvenile portrait is claimed"
+    }
+  },
+  "comparisons": [
+    {
+      "label": "Fitis en Tjiftjaf · rustbeeld en zang",
+      "ids": [
+        "sp057",
+        "sp056"
+      ],
+      "registeredPaths": [
+        "/assets/species/sp057.webp",
+        "/assets/species/sp056.webp"
+      ],
+      "change": "Existing comparison improved with song, wing projection, non-decisive leg color",
+      "posture": "rest"
+    },
+    {
+      "label": "Fitis en Fluiter · in rust",
+      "ids": [
+        "sp057",
+        "sp058"
+      ],
+      "registeredPaths": [
+        "/assets/species/sp057.webp",
+        "/assets/species/sp058.webp"
+      ],
+      "change": "New paired images and three identification rows",
+      "posture": "rest"
+    },
+    {
+      "label": "Tjiftjaf en Fluiter · in rust",
+      "ids": [
+        "sp056",
+        "sp058"
+      ],
+      "registeredPaths": [
+        "/assets/species/sp056.webp",
+        "/assets/species/sp058.webp"
+      ],
+      "change": "New paired images and three identification rows",
+      "posture": "rest"
+    }
+  ],
+  "anwb": "NOT TESTED: no exact accessible ANWB species passage/edition/page for these three species",
+  "newMediaFiles": 0,
+  "changes": [
+    "src/features/species/guideComparisons.js: two new pairs, enrich existing Fitis/Tjiftjaf resting comparison",
+    "src/data/species.js: Fluiter fieldmarks rephrased, unsupported juvenile placeholder set null",
+    "tests/test_fotovolgorde_2026-11-10.mjs: reciprocal paired-photos and pose-contract checks",
+    "F2 registers: add three IDs, keep older findings"
+  ],
+  "open": [
+    "Original Wikimedia page identity and license text were read. Local app WebP bytes cannot be decoded through current GitHub text connector, so original-to-WebP pixel identity, crop/quality/size and exact displayed attribution are NOT TESTED.",
+    "CC BY-SA share-alike and attribution requirements need distribution-specific compliance verification before release; photographer-specific usage notices on Fitis require attention before promotional distribution.",
+    "No independent ornithologist has verified each local image's individual identity, molt, age or sex. All three main photos are sex- and age-neutral.",
+    "ANWB per-species reference passages and exact age determination are NOT TESTED.",
+    "Fluiter reference audio not registered in current GUIDE_AUDIO; no assumed sound file; investigate licensed recording later.",
+    "Real-device Android/iOS interaction, offline new sightings, ZIP restore second phone, integrated PR stack, public preview, privacy and rollback NOT TESTED / release BLOCKED."
+  ],
+  "scopeGuard": "No binary media, audio, local keys, storage, serviceworker, GPS handling, photo attribution or main branch altered.",
+  "evidenceInterpretation": "Code/CI can verify registered photos, layout, source fields and tests, but cannot independently certify zoological photo identity, rights compliance or a physical-device user flow."
+}
