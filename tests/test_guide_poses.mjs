@@ -289,4 +289,33 @@ assert.ok(vinkJuvenilePose?.author && vinkJuvenilePose?.license && vinkJuvenileP
   'F2-17: juveniele pose moet oorspronkelijke fotograaf, licentie en bron hebben');
 console.log('F2-17: three paired resting comparisons and VBN text; original-to-WebP inspection remains NOT TESTED');
 
+
+const f218Pairs = [
+  ['Huismusvrouwtje en Ringmus · in rust', [['sp043', 'adult_f'], ['sp044', undefined]]],
+  ['Huismus en Ringmus · juvenielen in rust', [['sp043', 'juv'], ['sp044', 'juv']]],
+  ['Merel en Zanglijster · juvenielen in rust', [['sp045', 'juv'], ['sp046', 'juv']]],
+];
+for (const [label, roles] of f218Pairs) {
+  const entry = GUIDE_COMPARISONS.find(c => c.label === label);
+  assert.ok(entry && !entry.flight, 'F2-18: comparison must use resting photos: ' + label);
+  assert.deepEqual(entry.birds.map(b => [b.id, b.plumage]), roles, label);
+  assert.ok(entry.rows?.length >= 2 && entry.birds.length === 2);
+}
+for (const id of ['sp043', 'sp044']) {
+  const html = recognitionPanel(species.get(id));
+  assert.ok(html.includes('sp043.webp') && html.includes('sp044.webp'), 'F2-18: paired female House Sparrow and non-sexed Tree Sparrow photo missing');
+  assert.ok(html.includes('sp043-juv-review.webp') && html.includes('sp044-juv.webp'), 'F2-18: juvenile sparrow resting pair missing');
+}
+for (const id of ['sp045', 'sp046']) {
+  const html = recognitionPanel(species.get(id));
+  assert.ok(html.includes('sp045-juv.webp') && html.includes('sp046-juv.webp'), 'F2-18: juvenile Blackbird/Song Thrush pair missing');
+}
+const f218MerelFlights = (GUIDE_POSES.sp045 || []).filter(p => p.flight);
+assert.ok(f218MerelFlights.every(p => /^voorwaardelijk/.test(p.flightReview || '')),
+  'F2-18: pre-existing Merel free-flight not independently promoted to approved');
+assert.match(species.get('sp043').fieldmarks, /Juveniel lijkt op vrouwtje/);
+assert.match(species.get('sp044').fieldmarks, /Mannetje en vrouwtje zien er hetzelfde uit/);
+assert.match(species.get('sp045').fieldmarks, /Jonge Merel/);
+console.log('F2-18: two juvenile/rest pairs plus female House Sparrow/Tree Sparrow; no new or re-approved flight photo');
+
 console.log(`QA-SPECHTEN-BYTES: ${reviewedSpechtenFiles} current files have distinct WebP bytes; near-duplicates NOT PROVEN`);

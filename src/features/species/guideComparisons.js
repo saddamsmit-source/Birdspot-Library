@@ -1127,6 +1127,32 @@ export const GUIDE_COMPARISONS = [
     tip: 'Bekijk de vleugel samen met kop en staart. Bij een juveniele Putter is het rode masker nog afwezig.',
   },
   {
+    label: 'Huismusvrouwtje en Ringmus · in rust',
+    birds: [
+      {id: 'sp043', source: 'huismus', plumage: 'adult_f', marks: 'Vrouwtje Huismus met vrijwel effen bruine kop, lichte wenkbrauwstreep en zonder afzonderlijke zwarte wangvlek.'},
+      {id: 'sp044', source: 'ringmus', marks: 'Ringmus met kastanjebruine kruin, opvallende zwarte wangvlek en lichte nekring. Mannetje en vrouwtje hebben hetzelfde kleed.'},
+    ],
+    rows: [
+      {label: 'Wang', values: ['Geen afzonderlijke zwarte wangvlek', 'Zwarte wangvlek op lichte wang']},
+      {label: 'Kruin', values: ['Licht- tot grijzerbruin', 'Duidelijk kastanjebruin']},
+      {label: 'Nek', values: ['Geen gesloten witte nekring', 'Lichte nekring']},
+    ],
+    tip: 'De Ringmus op de foto is niet op uiterlijk als mannetje of vrouwtje te bepalen. Vergelijk de zwarte wangvlek en het kopprofiel.',
+  },
+  {
+    label: 'Huismus en Ringmus · juvenielen in rust',
+    birds: [
+      {id: 'sp043', source: 'huismus', plumage: 'juv', marks: 'Jonge Huismus overwegend bruin, lichte snavelbasis en geen losse donkere wangvlek.'},
+      {id: 'sp044', source: 'ringmus', plumage: 'juv', marks: 'Jonge Ringmus bruine kruin en zachtere, vaak minder contrastrijke donkere wangvlek.'},
+    ],
+    rows: [
+      {label: 'Wang', values: ['Geen kenmerkende losse zwarte wangvlek', 'Kan minder opvallend zijn dan bij adult']},
+      {label: 'Kruin', values: ['Overwegend lichtbruin', 'Bruin; koptekening ontwikkelt zich']},
+      {label: 'Ondersteuning', values: ['Let ook op snavelbasis en oudervogels', 'Let ook op nekring en contactroep']},
+    ],
+    tip: 'Een juveniel met weinig contrast is niet uitsluitend op de wangvlek vast te stellen. Dit paar is een hulpmiddel, geen zelfstandig zekere determinatie.',
+  },
+  {
     label: 'Huismus en Ringmus · in vlucht',
     flight: true,
     birds: [
@@ -1134,6 +1160,19 @@ export const GUIDE_COMPARISONS = [
       {id: 'sp044', source: 'ringmus', marks: 'Roodbruine kruin en een zwarte vlek op de lichte wang.'},
     ],
     tip: 'Kijk bij een goed zicht op de kop eerst naar de kruin en de wang. Bij de Huismus op de foto ontbreekt een losse wangvlek.',
+  },
+  {
+    label: 'Merel en Zanglijster · juvenielen in rust',
+    birds: [
+      {id: 'sp045', source: 'merel', plumage: 'juv', marks: 'Jonge Merel met bruin verenkleed, bruinig gevlekte borst, langere staart en relatief forse bouw.'},
+      {id: 'sp046', source: 'zanglijster', plumage: 'juv', marks: 'Jonge Zanglijster met lichtere onderzijde, donkerdere pijlpuntige borsttekening en kortere staart.'},
+    ],
+    rows: [
+      {label: 'Grondkleur borst', values: ['Overwegend bruin', 'Veel lichter/crème met contrasterende vlekken']},
+      {label: 'Borsttekening', values: ['Minder regelmatige vlekking op bruine grond', 'Vaak donkere, pijlpuntige vlekken']},
+      {label: 'Bouw', values: ['Relatief groot, langere staart', 'Compacter, kortere staart']},
+    ],
+    tip: 'Bij verse juvenielen kunnen patronen overlappen. Kijk naar volledige vogel, grondkleur en staart, niet naar één enkel vlekje.',
   },
   {
     label: 'Merel en Zanglijster · volwassen',
