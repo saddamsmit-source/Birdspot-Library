@@ -447,9 +447,9 @@ export const SPECIES = [
     distribution:'Open struweel, heide en agrarische randen heel NL', status:'Zomergast · april–september',
     statusExtra:null, months:'apr-sep', frequency:'algemeen', breeding:'ja', redList:null },
   { id:'sp062', nameNL:'Braamsluiper',        nameEN:'Lesser Whitethroat',        nameSci:'Curruca curruca',             family:'Zangers',         category:'zomergast', icon:'🐦', regions:['struweel','agrarisch','duinen'],
-    fieldmarks:'Grijsbruin, donkerder oor, droge ratelende zang.',
+    fieldmarks:'Grijze kopkap met donkergrijze oorstreek, scherpe witte keel en grijsbruine rug. Mannetje en vrouwtje lijken op elkaar; zang vaak een klepperende ratel.',
     size:{ length:'12–14 cm', wingspan:'17–21 cm', weight:'10–16 g' },
-    plumage:{ adult_m:'Grijze kop met donkere oorvlek; grijsbruin rug; witte onderzijde', adult_f:null, juv:'Bruiner', jaarling:null, breeding:null, winter:null, eclipse:null },
+    plumage:{ adult_m:'Mannetje en vrouwtje lijken op elkaar: grijze kop, donkerder oorstreek, witte keel en grijsbruine rug.', adult_f:null, juv:null, jaarling:null, breeding:null, winter:null, eclipse:null },
     distribution:'Struweel en houtwallen; verspreiding over heel NL', status:'Zomergast · april–september',
     statusExtra:null, months:'apr-sep', frequency:'vrij-algemeen', breeding:'ja', redList:null },
 
