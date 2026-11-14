@@ -584,6 +584,12 @@ def main():
                 panel = cmp_tab(blue_card, f"In vlucht · {label}")
                 assert panel.locator('.sd-cmp-who small').all_text_contents() == [f"{label} in vlucht"] * 2
                 assert_photo_pair(panel, [steppe, blue], in_flight=True)
+            grauwe_card = cmp_card("Grauwe Kiekendief", flight=True)
+            grauwe_panel = cmp_tab(grauwe_card, "In vlucht · Mannetje")
+            assert_photo_pair(grauwe_panel, ["sp250.webp", "sp251.webp"], in_flight=True)
+            female_panel = cmp_tab(grauwe_card, "In vlucht · Vrouwtje")
+            expect(female_panel.get_by_text("Nog geen passende vluchtfoto", exact=True)).to_have_count(1)
+            expect(female_panel.locator('[data-guide-image$="sp251-adult_f.webp"]')).to_have_count(0)
             tab("status")
             assert p.get_by_text("Incidentele broedgevallen in Nederland.", exact=True).is_visible()
             p.get_by_text("Incidentele broedgevallen in Nederland, onder meer in 2017 en 2019", exact=True).wait_for()
