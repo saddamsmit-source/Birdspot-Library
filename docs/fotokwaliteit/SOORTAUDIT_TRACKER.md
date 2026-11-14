@@ -1114,7 +1114,7 @@ Batch M7 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED �
 | `sp033-view.webp` | Overige herkenningsfoto's | Kuif en donkere wangboog op schuine tak. | Geslacht en leeftijd niet gelabeld. | Scherp kopprofiel vanuit een tweede hoek. | goedgekeurd | — | PARTIALLY TESTED: De maker vraagt zichtbare naamsvermelding en website bij het beeld. Aanpassing in PR #212 op e296f8d. |
 | `sp033-flight.webp` | Overige herkenningsfoto's | Kuifmees met geheven vleugels op de sneeuw. | Geslacht en leeftijd niet gelabeld. | Kop en vleugelpennen zichtbaar. Volgens vluchtcontrole staat de vogel op de sneeuw. | uit-rol | grond · uit-rol | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 3.0 · Sgbeer |
 
-- **Correcties:** Juvenielenfoto en kennisprofiel toegevoegd. De vergelijking met Matkop en het bijschrift van de sneeuwfoto gecontroleerd.; Vier originele foto’s gematcht. Juniwaarneming en juvenielenannotatie herbevestigd. De sneeuwfoto blijft bij de overige foto’s. De zichtbare makercredit staat in PR #212.
+- **Correcties:** Juvenielenfoto en kennisprofiel toegevoegd. De vergelijking met Matkop en het bijschrift van de sneeuwfoto gecontroleerd.; Vier originele foto’s gematcht. Waarneming en juvenielenannotatie herbevestigd. De sneeuwfoto blijft bij de overige foto’s. De zichtbare makercredit staat in PR #212.
 - **Ontbreekt:** Scherpe foto van één Kuifmees in vrije vlucht met bevestigde hergebruikrechten.
 - **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** Mannetje en vrouwtje hebben gelijk veldkleed. Leeftijd is alleen gelabeld als die wordt ondersteund door de bron.
