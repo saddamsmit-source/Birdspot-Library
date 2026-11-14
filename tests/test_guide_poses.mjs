@@ -377,4 +377,43 @@ assert.ok(protectedMapCredit.includes('eBird via GBIF') &&
   'Owner source visibility: external distribution map data attribution must remain visible');
 console.log('Owner source visibility: optional bird information citations hidden; mandatory photo/audio/map credits preserved');
 
+
+const f220Pairs = [
+  ['Zanglijster en Grote Lijster · juvenielen in rust', [['sp046', 'juv'], ['sp049', 'juv']]],
+  ['Roodborst en Roodborsttapuit · juvenielen in rust', [['sp050', 'juv'], ['sp053', 'juv']]],
+  ['Zwarte en Gekraagde Roodstaart · mannetjes in rust', [['sp051', 'adult_m'], ['sp178', 'adult_m']]],
+];
+for (const [label, expectedBirds] of f220Pairs) {
+  const cmp = GUIDE_COMPARISONS.find(entry => entry.label === label);
+  assert.ok(cmp, 'F2-20: missing paired comparison: ' + label);
+  assert.ok(!cmp.flight && cmp.rows?.length === 3, 'F2-20: three resting fieldmark rows required: ' + label);
+  assert.deepEqual(cmp.birds.map(b => [b.id, b.plumage]), expectedBirds, label);
+}
+for (const id of ['sp046', 'sp049']) {
+  const html = recognitionPanel(species.get(id));
+  assert.ok(html.includes('sp046-juv.webp') && html.includes('sp049-juv.webp'),
+    'F2-20: original juvenile Song/Mistle Thrush pair must be available from ' + id);
+}
+for (const id of ['sp050', 'sp053']) {
+  const html = recognitionPanel(species.get(id));
+  assert.ok(html.includes('sp050-juv-review.webp') && html.includes('sp053-juv-review.webp'),
+    'F2-20: age-specific Robin/Stonechat photos must appear together from ' + id);
+}
+for (const id of ['sp051', 'sp178']) {
+  const html = recognitionPanel(species.get(id));
+  assert.ok(html.includes('sp051-hero-male.webp') && html.includes('sp178.webp'),
+    'F2-20: source-registered adult male Black/Common Redstart photos must appear together from ' + id);
+}
+const femaleRedstart = GUIDE_COMPARISONS.find(e => e.label === 'Gekraagde en Zwarte Roodstaart · vrouwtje');
+assert.ok(femaleRedstart?.rows.some(row => row.label === 'Staart' &&
+  row.values.every(value => value.includes('niet diagnostisch'))),
+  'F2-20: shared rust-red tail must not be described as sufficient female distinction');
+assert.match(species.get('sp049').fieldmarks, /witte hoekjes/);
+assert.match(species.get('sp050').fieldmarks, /mannetje en vrouwtje zien er hetzelfde uit/);
+assert.match(species.get('sp051').fieldmarks, /Gekraagde Roodstaart/);
+assert.equal((GUIDE_POSES.sp049 || []).filter(photo => photo.flight).length, 0);
+assert.equal((GUIDE_POSES.sp050 || []).filter(photo => photo.flight).length, 0);
+assert.equal((GUIDE_POSES.sp051 || []).filter(photo => photo.flight).length, 0);
+console.log('F2-20: three registered resting pairs, accurate plumage/sex labels, no newly accepted flight photos');
+
 console.log(`QA-SPECHTEN-BYTES: ${reviewedSpechtenFiles} current files have distinct WebP bytes; near-duplicates NOT PROVEN`);

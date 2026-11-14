@@ -1,7 +1,7 @@
 # Birdspot F2 — register open punten en uitgesteld fotoonderzoek
 
 **Eigenaarbesluit 14 november 2026 · Werkdocument (DRAFT, geen foto-PASS)**
-**Historische basis:** F2-15 `bccd09599a2b9fd7fb23771b3f6c262542b4c08a`; actuele F2-19 via PR #219 `c1befa8aaba15634f79e3b401942a0e82ffc8ecd` op eigen, herstelbare vervolgbranch. **Reikwijdte:** 48/140 soorten die individueel in F2 zijn opgepakt. Voor de andere 92 soorten geldt **NOT TESTED in F2** tot de afzonderlijke ronde start. Dit register is een index op de bestaande per-batch brondossiers, niet een vervanging van de canonieke 9-punts-audit.
+**Historische basis:** F2-15 `bccd09599a2b9fd7fb23771b3f6c262542b4c08a`; F2-20 voortzetting op PR #221 `fa05d08d203f656c5c7bce328c6deec6d3961632`, historische F2-19-bevindingen behouden. **Reikwijdte:** 51/140 soorten die individueel in F2 zijn opgepakt. Voor de andere 89 soorten geldt **NOT TESTED in F2** tot de afzonderlijke ronde start. Dit register is een index op de bestaande per-batch brondossiers, niet een vervanging van de canonieke 9-punts-audit.
 
 ## Hoe vervolgonderzoek te sturen
 
@@ -68,11 +68,15 @@ De tekst in de kolom 'Open uit bronronde' is overgenomen uit de laatste F2-voort
 | sp047 Kramsvogel | F2-19 | Originele juvenielenbron **hedera.baltica, CC BY-SA 2.0** en juvenielstatus opnieuw gelezen; originele pixelvergelijking en overige foto-/licentiegegevens niet onafhankelijk opnieuw gecheckt. Historische vluchtgoedkeuring blijft ongewijzigd. |
 | sp048 Koperwiek | F2-19 | **In vlucht: geen foto** — oude opvliegfoto `sp048-flight.webp` blijft als niet-vluchtrol geregistreerd. Geen bronzekere nieuwe vluchtfoto toevoegen. iNaturalist-juvenielwaarneming/bronrechterlijke licentie en lokaal WebP opnieuw **NOT TESTED**; latere fotoverificatie alleen bij duidelijk beeld nodig. |
 
+| sp049 Grote Lijster | F2-20 | Fledgling originele Commons-bron **treehouse1977 CC BY-SA 2.0** geopend. Hoofdfoto geslachtsneutraal, oude sterk onscherpe vlucht in archief. Bron-naar-WebP-pixels en overige credits **NOT TESTED**. |
+| sp050 Roodborst | F2-20 | Juvenielenbron **Caroline Legg CC BY 2.0** en vergelijkings-juveniel Roodborsttapuit **Vcebollada CC BY-SA 4.0** geopend. Roodborst-opvliegfoto blijft niet-vlucht. De twee lokale WebP-rollen zijn **NOT TESTED op originele pixels/individuen**; jongen niet op één vlek determineren. |
+| sp051 Zwarte Roodstaart | F2-20 | Mannetje **Luiz Lapa CC BY 2.0**, juveniel **Marie-Lan Taÿ Pamart CC BY 4.0** originele pagina nagezien. Oude vlucht archief, vrouwtje/juveniel apart geregistreerd. Gekraagde-mannetjefoto in vergelijking en alle lokale WebP's vereisen nog individuele pixel-/creditcontrole. |
+
 ## Vervolgcontrole en aftekening
 
 1. Bij een volgende F2-ronde: controleer alleen de drie gekozen soorten op oorspronkelijke bestanden/CC-rechten, soort/rol, fotokwaliteit, twee passende vergelijkingbeelden en browserbediening; noteer de individuele status en bronlinks.
 2. Werk dit register additief bij: verander een open punt pas in **VERIFIED** na herhaalbare nieuwe bron-/beeld- en uitvoerbewijzen. Laat historische onzekerheid staan met datum en reden; geen stille aftekening op basis van 140 kaart-renders.
-3. **Niet gereviewd in F2:** 92 soorten. Volgorde na F2-16 opnieuw afleiden uit de 140-fotolijst en F2-voortgang; geen ongeteste soorten starten vóór een passende batch.
+3. **Niet gereviewd in F2:** 89 soorten. Volgorde na F2-16 opnieuw afleiden uit de 140-fotolijst en F2-voortgang; geen ongeteste soorten starten vóór een passende batch.
 4. Later diepgaand fotoonderzoek: per open beeldtype minimaal soortnaam/wetenschappelijke naam, doelkleed, foto-oorsprong, ondertitel, auteur, licentie, bronbestand/versie, vrijgave voor herpublicatie en indien passend exacte oorspronkelijke pixels. Bij twijfel lege positie laten staan.
 
 ## Live-/release-gate — aparte status
