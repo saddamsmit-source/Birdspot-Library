@@ -234,7 +234,7 @@ def main():
 
             open_species("Roodborst", "sp050")
             assert p.locator('#sdPanel-herkenning .sd-badge').filter(has_text="Man en vrouw lijken op elkaar").count() == 1
-            assert p.locator('#sdPanel-herkenning .sd-source a').get_attribute("href").endswith("/roodborst")
+            assert p.locator("#sdPanel-herkenning .sd-source, #sdPanel-herkenning .kb-src").count() == 0
             assert p.locator('#sdPanel-herkenning .sd-tile').count() == 1
             close_detail()
 
@@ -291,8 +291,8 @@ def main():
             expect(voice).to_have_count(len(expected_voice))
             for i, entry in enumerate(expected_voice):
                 expect(voice.nth(i)).to_contain_text(entry["text"])
-                labels = [KNOWLEDGE_SRC["_sources"][key]["label"].split(" — ")[0] for key in entry["sources"]]
-                expect(voice.nth(i).locator('.kb-src')).to_have_text("Bron: " + " · ".join(dict.fromkeys(labels)))
+                assert entry["sources"], "H3-02 bronbewijs moet wel in kennisdata blijven"
+                expect(voice.nth(i).locator(".kb-src")).to_have_count(0)
             expect(p.locator('#sdPanel-herkenning .sd-voice')).to_have_count(0)
             tab("status")
             vals = p.eval_on_selector_all('#sdPanel-status .sd-breed .sd-tile__value', 'els => els.map(e => e.innerText)')
@@ -494,7 +494,8 @@ def main():
             card = cmp_card("Tjiftjaf")
             whos = card.locator('.sd-cmp-panel:visible .sd-cmp-who')
             assert whos.locator('strong').all_text_contents() == ["Fitis", "Tjiftjaf"]
-            assert card.get_by_role("link", name="Vogelbescherming").count() == 1
+            assert card.get_by_role("link", name="Vogelbescherming").count() == 0
+            expect(card.locator(".sd-cmp-foot .sd-compare-open")).to_have_count(1)
             assert_photo_pair(card.locator(".sd-cmp-panel:visible"), ["sp057.webp", "sp056.webp"])
             photo = p.get_by_role("button", name="Vergroot hoofdfoto")
             photo.scroll_into_view_if_needed()

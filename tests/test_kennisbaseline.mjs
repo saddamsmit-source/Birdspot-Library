@@ -11,7 +11,7 @@
  *   KB-03  vs- en similar-ID's bestaan, zijn niet de soort zelf en worden als navigeerbare chip getoond.
  *   KB-04  Geen verwisselde inhoud tussen gelijkende soorten (vaste feitenfixtures per paar).
  *   KB-05  Proefsoorten: Niveau 1 staat vóór Verenkleed, kritisch kenmerk zichtbaar in Niveau 1,
- *          Niveau 2 als ingeklapte <details>, bronnen gelinkt met de echte URL.
+ *          Niveau 2 als ingeklapte <details>, bronbewijzen intern zonder optionele publiekslinks.
  *   KB-06  Soorten zonder profiel: geen enkele kb-markup, bestaande veldkenmerken-callout blijft.
  *   KB-07  Alle 597 soorten renderen in Herkenning, Leefwijze en Waar zonder fout.
  *   KB-08  Negatieve scenario's: onbekend ID, soort zonder fieldmarks, lege life.
@@ -182,23 +182,36 @@ for (const id of ids) {
     const sec = html.match(/<section class="sd-similar"[\s\S]*?<\/section>/)?.[0] || '';
     assert.ok(sec.includes('data-kb-section="kritisch"'), `KB-05 ${id} kritische verschillen niet binnen "Lijkt op"`);
   }
-  const life = statusPanel(s, LIFE[id] || null);
-  assert.ok(life.includes('aria-label="Kennisprofiel"'), `KB-05 ${id} Kennisprofiel ontbreekt in Leefwijze`);
-  const kbLife = lifeDetails(s);
-  assert.ok(life.includes(kbLife), `KB-05 ${id} kennisprofiel niet in Leefwijze-tab`);
-  for (const href of [...kbLife.matchAll(/<a href="([^"]+)"/g)].map(m => m[1].replace(/&amp;/g, '&'))) {
-    if (!href.startsWith('http')) continue;
-    assert.ok(Object.values(KNOWLEDGE_SOURCES).some(src => src.url === href), `KB-05 ${id} onbekende link ${href}`);
-  }
-  const used = new Set();
   const k = KNOWLEDGE[id];
+  const life = statusPanel(s, LIFE[id] || null);
+  const kbLife = lifeDetails(s);
+  const hasPublicProfileContent = Boolean(k.status?.length || k.life?.length);
+  if (hasPublicProfileContent) {
+    assert.ok(life.includes('aria-label="Kennisprofiel"'),
+      `KB-05 ${id}: status/leefwijze gegevens mogen niet verdwijnen door bronbeleid`);
+    assert.ok(life.includes(kbLife), `KB-05 ${id}: kennisprofiel niet in Leefwijze-tab`);
+  } else {
+    assert.equal(kbLife, '', `KB-05 ${id}: lege bron-only sectie mag niet in publiekskaart`);
+    assert.ok(!life.includes('aria-label="Kennisprofiel"'),
+      `KB-05 ${id}: geen leeg bronnenpaneel toevoegen zonder publiek inhoudelijke gegevens`);
+  }
+  // Owner's UI rule: verify every cited claim in the source data, but show no
+  // optional bibliography, per-claim label or review log on the user card.
+  const used = new Set();
   [k.summary, k.caution, k.basis?.size, ...k.keyMarks, ...k.critical, ...(k.similar || []), ...(k.detail || []),
-    ...(k.voice || []), ...(k.habitat || []), ...(k.status || []), ...(k.life || [])].forEach(x => (x?.sources || []).forEach(r => used.add(r)));
-  for (const r of used) assert.ok(life.includes(`href="${esc(KNOWLEDGE_SOURCES[r].url)}"`), `KB-05 ${id} bron ${r} niet gelinkt`);
-  assert.ok(life.includes('onafhankelijke controle nog open'), `KB-05 ${id} reviewstatus ontbreekt`);
+    ...(k.voice || []), ...(k.habitat || []), ...(k.status || []), ...(k.life || [])].forEach(x =>
+    (x?.sources || []).forEach(r => used.add(r)));
+  assert.ok(used.size > 0, `KB-05 ${id}: no internal source evidence`);
+  for (const r of used) assert.ok(KNOWLEDGE_SOURCES[r]?.url?.startsWith('https://'),
+    `KB-05 ${id}: missing persisted source evidence ${r}`);
+  assert.ok(!/data-kb-section="bronnen"|kb-src|kb-sources|kb-review/.test(kbLife),
+    `KB-05 ${id}: optional source or audit UI still rendered`);
+  assert.ok(!kbLife.includes('href="'), `KB-05 ${id}: reference links in public knowledge panel`);
+  assert.ok(!html.includes('Broncontrole van deze gidskaart volgt'),
+    `KB-05 ${id}: optional source placeholder rendered`);
   if (k.habitat?.length) assert.ok(wherePanel(s).includes('data-kb-section="leefgebied"'), `KB-05 ${id} leefgebied ontbreekt`);
 }
-console.log(`KB-05 OK — ${ids.length} proefsoorten: Niveau 1 vóór de foto's, Niveau 2 ingeklapt, bronnen gelinkt`);
+console.log(`KB-05 OK — ${ids.length} proefsoorten: profielen en betrouwbaarheid intact, interne bronbewijzen, geen publieke bronverwijzingen`);
 
 // ── KB-06 / KB-07 ───────────────────────────────────────────────────────────
 let without = 0;
@@ -269,19 +282,26 @@ console.log('KB-09 OK — kennismodules in de service-worker-precache');
       const s = byId.get(id);
       assert.equal(s.size?.[b.field], b.display, `KB-11 ${id} species.js size.${b.field} ≠ ${b.display}`);
       assert.match(b.display, /^ca\. \d+–\d+ (cm|g)$/, `KB-11 ${id} display zonder "ca."`);
-      const html = lifeDetails(s);
-      assert.ok(html.includes(`${LABEL[b.field]} ${esc(b.display)}`), `KB-11 ${id} berekening niet getoond`);
-      for (const v of [...b.values, ...(b.excluded || [])]) assert.ok(html.includes(`${v.min}–${v.max} ${b.unit}`), `KB-11 ${id} bronwaarde ${v.source} niet getoond`);
-      if (b.excluded?.length) assert.ok(html.includes('niet meegeteld'), `KB-11 ${id} uitgesloten waarde niet zichtbaar`);
-      assert.ok(!/volledige variatie/.test(html) || /niet de volledige variatie/.test(html), `KB-11 ${id} band als volledige variatie gepresenteerd`);
+      const publicDetails = lifeDetails(s);
+      assert.ok(!/Maten: berekening|kb-sources|data-kb-bio|niet meegeteld/.test(publicDetails),
+        `KB-11 ${id}: internal biometric source values should not be shown as public citations`);
+      assert.ok(Array.isArray(b.values) && b.values.length >= 2, `KB-11 ${id} no basis values retained`);
+      for (const v of [...b.values, ...(b.excluded || [])]) {
+        assert.ok(KNOWLEDGE_SOURCES[v.source]?.url?.startsWith('https://'),
+          `KB-11 ${id}: source ${v.source} missing after UI policy`);
+        assert.ok(Number.isFinite(v.min) && Number.isFinite(v.max) && v.min <= v.max,
+          `KB-11 ${id}: invalid retained source range ${v.source}`);
+      }
+      for (const x of b.excluded || [])
+        assert.ok(x.reason?.trim(), `KB-11 ${id}: excluded outlier lost reason`);
       assert.ok(!(KNOWLEDGE[id].discrepancies || []).some(d => d.field === `species.size.${b.field}` || d.field === 'species.size'),
-        `KB-11 ${id} opgelost maatverschil staat nog in discrepancies`);
+        `KB-11 ${id} previously resolved difference returned`);
       const tile = recognitionPanel(s);
       assert.ok(tile.includes(esc(b.display)), `KB-11 ${id} maattegel toont de circa-band niet`);
     }
   }
   assert.ok(n >= 4, `KB-11 verwacht minstens 4 circa-banden, kreeg ${n}`);
-  console.log(`KB-11 OK — ${n} circa-banden: gelijk aan species.js, met bronwaarden, uitsluitingen en methode op de kaart`);
+  console.log(`KB-11 OK — ${n} circa-banden: getoond in soortenkaart, bronwaarden/uitsluitingen/methode alleen in databron behouden`);
 }
 
 console.log('Kennisbaseline proef: alle controles geslaagd (KB-01..KB-11)');

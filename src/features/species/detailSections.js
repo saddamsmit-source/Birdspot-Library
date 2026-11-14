@@ -9,7 +9,7 @@ import { observedVisually, observedBySound, validPin } from '../sightings/eviden
 import { CATEGORY_BADGES, SPECIES } from '../../data/species.js';
 import { monthSet, MONTH_NAMES } from '../../data/seasons.js';
 import { DISTRIBUTION, GBIF_YEARS, MAP_CELL, MAP_COLUMNS, MAP_MIN_RECORDS, MAP_PATHS, MAP_VIEW_BOX } from '../../data/speciesDistribution.js';
-import { GUIDE_COMPARISONS, comparisonSource } from './guideComparisons.js';
+import { GUIDE_COMPARISONS } from './guideComparisons.js';
 import { GUIDE_PHOTOS } from './guidePhotos.js';
 import { GUIDE_AUDIO, GUIDE_HEROES, GUIDE_PLUMAGE, GUIDE_POSES } from './guideMedia.js';
 import { photoInfoMarkup } from '../../utils/photoInfo.js';
@@ -325,7 +325,6 @@ function comparisonCard(id, group) {
       ${rows ? `<div class="sd-cmp-rows">${rows}</div>` : ''}
       ${entry.tip ? `<p class="sd-cmp-tip">Tip: ${esc(entry.tip)}</p>` : ''}
       <div class="sd-cmp-foot">
-        <span>Kenmerken: <a href="${esc(comparisonSource(partner))}" target="_blank" rel="noopener noreferrer">Vogelbescherming</a></span>
         <button type="button" class="sd-compare-open" data-compare-species="${esc(partner.id)}">Open ${esc(partnerSpecies.nameNL)}<span aria-hidden="true"> →</span></button>
       </div>
     </div>`;
@@ -364,12 +363,6 @@ export function voicePanel(s, voice, sourced = '') {
   return `<h3 class="sd-h">Zang en roep</h3><div class="sd-voice-text">${sourced || (voice ? voiceText(voice) : '')}</div>${players.join('')}`;
 }
 
-function guideSources(review) {
-  if (!review) return '<p class="sd-source">Broncontrole van deze gidskaart volgt.</p>';
-  const links = review.sources.map(source =>
-    `<a href="${esc(source.url)}" target="_blank" rel="noopener noreferrer">${esc(source.label)}</a>`);
-  return `<p class="sd-source">Gidsbronnen · ${links.join(' · ')}</p>`;
-}
 
 /** Tab 1 — Herkenning: maten, kenmerken, verenkleed (incl. broed-, winter- en eclipskleed), zang en roep. */
 export function recognitionPanel(s, life = null) {
@@ -467,10 +460,7 @@ export function recognitionPanel(s, life = null) {
   if (s.compact) {
     out.push(`<p class="sd-note">${icon('info')}Zeldzame dwaalgast: een uitgebreide beschrijving volgt nog.</p>`);
   }
-  // Soorten met kennisprofiel: bronnen staan per bewering; geen "Broncontrole volgt" meer.
-  out.push(!s.guideReview && knowledgeFor(s.id)
-    ? '<p class="sd-source">Bronnen staan per bewering hierboven en volledig onder Leefwijze › Kennisprofiel.</p>'
-    : guideSources(s.guideReview));
+  // Soort- en determinatiebronnen blijven in de interne datasets en audits, niet op de publiekskaart.
   return out.join('');
 }
 
@@ -558,7 +548,6 @@ export function statusPanel(s, life = null) {
     out.push('<div class="sd-facts">' + rows.map(([ic, label, text]) =>
       `<div class="sd-fact">${icon(ic)}<div><strong>${label}</strong><p>${esc(text)}</p></div></div>`).join('') + '</div>');
   }
-  if (s.guideReview) out.push(guideSources(s.guideReview));
   out.push(lifeDetails(s));
   return out.join('');
 }

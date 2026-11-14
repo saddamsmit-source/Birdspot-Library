@@ -195,23 +195,21 @@ def main():
             open_species(p, "Fitis", "sp057")
             print("KBB-03b OK — Zilvermeeuw: Geelpootmeeuw onder Lijkt op, navigeert")
 
-            # ── KBB-04: Leefwijze-tab, bronnen ──────────────────────────────────────
+            # ── KBB-04: knowledge UI has no optional source labels ──────────
             p.locator("#sdTab-status").click()
             prof = p.locator('#sdPanel-status section[aria-label="Kennisprofiel"]')
             expect(prof).to_be_visible()
-            prof.locator('details[data-kb-section="bronnen"] > summary').click()
-            links = prof.locator(".kb-sources a")
-            assert links.count() >= 2
-            for i in range(links.count()):
-                a = links.nth(i)
-                assert re.match(r"^https://", a.get_attribute("href"))
-                assert a.get_attribute("target") == "_blank" and "noopener" in a.get_attribute("rel")
-            expect(prof.locator(".kb-review")).to_contain_text("onafhankelijke controle nog open")
+            expect(prof.locator('details[data-kb-section="status"]')).to_have_count(1)
+            expect(prof.locator('details[data-kb-section="leefwijze"]')).to_have_count(1)
+            expect(prof.locator('details[data-kb-section="bronnen"]')).to_have_count(0)
+            expect(prof.locator(".kb-sources, .kb-src, .kb-review")).to_have_count(0)
+            assert "Gidsbronnen" not in prof.inner_text()
             p.locator("#sdTab-waar").click()
             expect(p.locator('#sdPanel-waar details[data-kb-section="leefgebied"]')).to_have_count(1)
             p.locator("#sdTab-herkenning").click()
             expect(p.locator("#sdPanel-herkenning")).to_be_visible()
-            print(f"KBB-04 OK — Leefwijze toont kennisprofiel met {links.count()} gelinkte bronnen; tabwissel werkt")
+            expect(p.locator("#sdPanel-herkenning .kb-src, #sdPanel-herkenning .sd-source")).to_have_count(0)
+            print("KBB-04 OK — Leefwijze zonder optionele bronvermeldingen; relevante tabwissels blijven werken")
 
             # ── KBB-06: bestaande functies op een proefsoort ────────────────────────
             hero = p.locator(".sd-hero-photo")

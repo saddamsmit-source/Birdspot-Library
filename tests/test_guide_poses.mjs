@@ -351,4 +351,30 @@ assert.equal(species.get('sp048').months, 'sep-mei');
 assert.equal(species.get('sp048').breeding, 'nee');
 console.log('F2-19: two resting adult/juvenile pairs, two refined comparisons and no new flight claims');
 
+
+const sourceVisibilitySpecies = ['sp057', 'sp045', 'sp050', 'sp046'];
+for (const id of sourceVisibilitySpecies) {
+  const card = recognitionPanel(species.get(id));
+  assert.ok(!card.includes('class="sd-source"') && !card.includes('Kenmerken: <a'),
+    'Owner source visibility: unexpected optional source label in recognition card ' + id);
+  assert.ok(!card.includes('Broncontrole van deze gidskaart volgt'),
+    'Owner source visibility: source placeholder visible for ' + id);
+}
+const protectedPhotoCredit = recognitionPanel(species.get('sp045'));
+assert.ok(protectedPhotoCredit.includes('photo-info__panel') &&
+  protectedPhotoCredit.includes('Maker:') &&
+  protectedPhotoCredit.includes('Licentie:') &&
+  protectedPhotoCredit.includes('Open fotobron'),
+  'Owner source visibility: mandatory photo author, licence and original reference must remain accessible');
+const protectedAudioCredit = recognitionPanel(species.get('sp057'));
+assert.ok(protectedAudioCredit.includes('sd-media-credit') &&
+  protectedAudioCredit.includes('creativecommons.org'),
+  'Owner source visibility: recorded audio licence/creator attribution must remain available');
+const protectedMapCredit = wherePanel(species.get('sp057'));
+assert.ok(protectedMapCredit.includes('eBird via GBIF') &&
+  protectedMapCredit.includes('CC BY 4.0') &&
+  protectedMapCredit.includes('Natural Earth'),
+  'Owner source visibility: external distribution map data attribution must remain visible');
+console.log('Owner source visibility: optional bird information citations hidden; mandatory photo/audio/map credits preserved');
+
 console.log(`QA-SPECHTEN-BYTES: ${reviewedSpechtenFiles} current files have distinct WebP bytes; near-duplicates NOT PROVEN`);
