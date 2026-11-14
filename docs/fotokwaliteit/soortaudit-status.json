@@ -74,14 +74,15 @@
    ],
    "corrections": [
     "FQA-04: kritisch kenmerk 'Halsvlek en iris' gesplitst; 'Witte halsvlek' (alleen volwassen) blijft doorslaggevend, iris alleen ondersteunend.",
-    "F2: afzonderlijke brongeverifieerde juvenielenfoto toegevoegd."
+    "F2: afzonderlijke brongeverifieerde juvenielenfoto toegevoegd.",
+    "F2-hercontrole: bij Volwassen is zichtbaar dat man en vrouw op elkaar lijken."
    ],
    "missing": [
     "Vluchtfoto van boven met volledige witte vleugelband (wenselijk)"
    ],
    "wishes": [],
    "uncertain": [],
-   "sexPolicy": "Geslachten gelijk; geen Mannetje/Vrouwtje-vakken (bron: VB_HOUT).",
+   "sexPolicy": "Mannetje en vrouwtje lijken sterk op elkaar. Het geslacht volgt bij deze opnamen niet op kleed. Bron: Blasco-Zumeta en Heinze.",
    "previous": null,
    "status": {
     "technical": "VERIFIED",
@@ -131,36 +132,6 @@
      "flight": null
     },
     {
-     "image": "/assets/species/plumage/sp003-flight.webp",
-     "role": "Overige herkenningsfoto's (was: In vlucht)",
-     "content": "Vogel zet af vanaf de grond; poten raken nog de grond. Vleugelpatroon wel zichtbaar.",
-     "sexAge": "niet vastgesteld",
-     "quality": "matig: 485 px, zacht",
-     "verdict": "uit-rol",
-     "rights": {
-      "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Åsa Berndtsson",
-      "annotations": []
-     },
-     "flight": {
-      "n": 5,
-      "id": "sp003",
-      "nameNL": "Holenduif",
-      "registry": "GUIDE_POSES[0]",
-      "sexLabel": null,
-      "class": "opvliegen",
-      "quality": "matig",
-      "decision": "uit-rol",
-      "target": "overig",
-      "newLabel": "Opvliegend vanaf de grond",
-      "newNote": "Toont de grijze vleugels met donkere randen, zonder brede witte vleugelband.",
-      "reason": "Poten raken nog de grond; vogel zet af. Ook laag opgelost (485 px).",
-      "airborne": false,
-      "rights": "VERIFIED",
-      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 2.0"
-     }
-    },
-    {
      "image": "/assets/species/plumage/sp003-juv.webp",
      "role": "Juveniel",
      "content": "Jonge Holenduif op een tak, met een donker oog en korte donkere tekeningen op de gevouwen vleugel.",
@@ -182,14 +153,16 @@
     "Veldkenmerken en kleedtekst: \"zwarte vleugelpunten\" → geen wit in hals/vleugel, twee korte zwarte vleugelstrepen, brede zwarte staartband (VB_HOLEN, RSPB_SD).",
     "Zang: \"oe-oe-oe steeds sneller\" → eentonige reeks tweelettergrepige roepen (VB_HVH).",
     "Lengte 30–33 → 28–32 cm; broedduur 16–18 → 16–17 dagen; nestjongen 27–28 → ca. 24 dagen (VB_HOLEN).",
-    "F2: afzonderlijke brongeverifieerde juvenielenfoto toegevoegd."
+    "F2: afzonderlijke brongeverifieerde juvenielenfoto toegevoegd.",
+    "F2-hercontrole: bij Volwassen is zichtbaar dat man en vrouw op elkaar lijken.",
+    "F2-hercontrole: zachte afzetfoto uit de kaart gehaald en met herkomst gearchiveerd."
    ],
    "missing": [
     "In vlucht (geen echte vluchtfoto)"
    ],
    "wishes": [],
    "uncertain": [],
-   "sexPolicy": "Geslachten gelijk; geen Mannetje/Vrouwtje-vakken (bron: VB_HOLEN).",
+   "sexPolicy": "Mannetje en vrouwtje lijken sterk op elkaar. Het geslacht volgt bij deze opnamen niet op kleed. Bron: Blasco-Zumeta en Heinze.",
    "previous": "Fotobaseline batch 01 gaf VERIFIED inclusief de opvliegende vluchtfoto; die uitslag is vervallen.",
    "status": {
     "technical": "VERIFIED",
@@ -208,7 +181,7 @@
      "Stuit"
     ],
     "open": [
-     "Geen goede vluchtfoto: de vorige 'vluchtfoto' toonde een opvliegende vogel en is uit de vluchtrol gehaald (positie ontbreekt).",
+     "Een scherpe foto in vrije vlucht ontbreekt. De zachte afzetfoto is gearchiveerd.",
      "Kleedvariatie van stadsduiven maakt de stuit niet doorslaggevend."
     ],
     "discrepancies": 0
@@ -228,17 +201,18 @@
    "sha": null,
    "assets": [
     {
-     "image": "/assets/species/sp004.webp",
+     "image": "/assets/species/plumage/sp004-adult-crop.webp",
      "role": "Hoofdfoto",
-     "content": "Turkse Tortel op sparrentop tegen blauwe lucht; zwarte halsband, rood oog.",
-     "sexAge": "volwassen (scherpe halsband); geslacht niet vast te stellen",
-     "quality": "goed: scherp; vogel kleiner in beeld, halsband, oog en kleed goed zichtbaar",
+     "content": "Volwassen Turkse Tortel op een sparrentop, met rood oog, zwarte halsband en lange staart.",
+     "sexAge": "Volwassen volgens halsband, rood oog en kleed.",
+     "quality": "Goed: volledige vogel groter in beeld · 1100 × 969 px.",
      "verdict": "goedgekeurd",
-     "reassessed": "Herbeoordeeld 10-11-2026 volgens kwaliteitsnorm §3.3 (klein in beeld mag als de vogel goed zichtbaar en herkenbaar is); was voorwaardelijk.",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Jakub Hałun",
-      "annotations": []
+      "note": "bronaudit 14-11-2026: zelfde opname (uitsnede rechtstreeks uit de gecontroleerde bronopname (640,140)-(1980,1320)), CC BY 4.0 · Jakub Hałun",
+      "annotations": [
+       "Volwassen op basis van kleed"
+      ]
      },
      "flight": null
     },
@@ -293,14 +267,14 @@
     "Broedsels per jaar 3–5 → 2–5 (VB_TT).",
     "FQA-04: tweede onafhankelijke bron voor de Zomertortel-kant (eBird, birdspot.co.uk) en uitzondering voor juvenielen zonder halstekening.",
     "sp004.webp: voorwaardelijk → goedgekeurd na kwaliteitsnorm §3.3 (klein in beeld is geen afkeurgrond)",
-    "F2: afzonderlijke brongeverifieerde juvenielenfoto toegevoegd."
+    "F2: afzonderlijke brongeverifieerde juvenielenfoto toegevoegd.",
+    "F2-hercontrole: bij Volwassen is zichtbaar dat man en vrouw op elkaar lijken.",
+    "F2-hercontrole: meer beeldruimte voor de hele vogel door een uitsnede uit het bronbestand."
    ],
-   "missing": [
-    "Hoofdfoto met grotere vogel (wenselijk)"
-   ],
+   "missing": [],
    "wishes": [],
    "uncertain": [],
-   "sexPolicy": "Geslacht vaak niet op kleed te bepalen (BZ_CD); geen geslachtsvakken.",
+   "sexPolicy": "Mannetje en vrouwtje lijken sterk op elkaar. Het geslacht volgt bij deze opnamen niet op kleed. Bron: Blasco-Zumeta en Heinze.",
    "previous": null,
    "status": {
     "technical": "VERIFIED",
@@ -310,7 +284,7 @@
     "browser": "NOT TESTED",
     "independent": "NOT TESTED"
    },
-   "photoComplete": false,
+   "photoComplete": true,
    "knowledge": {
     "profile": true,
     "critical": 2,
@@ -320,15 +294,14 @@
     ],
     "open": [
      "Onderscheid met Lachduif (ontsnapte vogels) nog uit een bron uitwerken.",
-     "Spanwijdte en gewicht niet in de geraadpleegde Nederlandse bron.",
-     "De hoofdfoto toont de vogel vrij klein in beeld."
+     "Spanwijdte en gewicht niet in de geraadpleegde Nederlandse bron."
     ],
     "discrepancies": 0
    },
    "browser": null,
    "errors": [],
    "verdict": "PARTIALLY TESTED",
-   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp005",
@@ -12758,6 +12731,12 @@
    "scope": "F2 · sp002 sp003 sp004",
    "basis": "e1f9a37d366809754d487b27787079872e01075c",
    "evidence": "docs/fotokwaliteit/F2_01_DRIE_DUIVEN_2026-11-14.md"
+  },
+  {
+   "date": "2026-11-14",
+   "scope": "F2 · hercontrole sp002 sp003 sp004",
+   "basis": "d528bf4704d8e8422a87e04b805fca566aeb9a0d",
+   "evidence": "docs/fotokwaliteit/F2_02_HERCONTROLE_DUIVEN_2026-11-14.md"
   }
  ]
 }

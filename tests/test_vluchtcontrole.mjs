@@ -46,8 +46,8 @@ console.log(`VC-01 OK — ${live.length} vluchtfoto's, alle met vastgelegde visu
 // VC-02 negatieve gevallen
 {
   const bad = clone(registers);
-  const p = bad.poses.sp003.find(x => x.image.endsWith('sp003-flight.webp'));
-  p.flight = true;
+  const archivedTakeoff = media.retired.sp003.find(x => x.image.endsWith('sp003-flight.webp'));
+  bad.poses.sp003.push({ ...archivedTakeoff, flight: true });
   const e = checkFlight(bad, review, media.retired);
   assert.ok(e.some(x => x.includes('sp003') && x.includes('opvliegen')), 'VC-02 opvliegende Holenduif niet geweigerd: ' + e.join(' | '));
 
@@ -147,7 +147,7 @@ console.log('VC-06 OK — vergelijkingen met ontbrekende vluchtfoto behouden hun
   neg(r => { delete r.plumage.sp005.juv.flight; }, 'zonder flight:true', 'Buizerd-juveniel zonder vluchtlabel');
   neg(r => { delete r.plumage.sp173.adult_f.flight; }, 'zonder flight:true', 'Bruine Kiekendief-vrouwtje zonder vluchtlabel');
   neg(r => { r.plumage.sp006.adult_f.flight = true; }, 'toont vleugels-strekken', 'zittende Sperwer met gespreide vleugels als vlucht');
-  neg(r => { r.poses.sp003 = [{ ...(r.poses.sp003?.[0] || {}), image: '/assets/species/plumage/sp003-flight.webp', flight: true }]; }, 'toont opvliegen', 'opvliegende Holenduif terug als vlucht');
+  neg(r => { r.poses.sp003.push({ image: '/assets/species/plumage/sp003-flight.webp', flight: true }); }, 'toont opvliegen', 'opvliegende Holenduif terug als vlucht');
   neg((r, inv) => { inv.images['/assets/species/plumage/sp002-flight.webp'].sha1 = '0'.repeat(40); }, 'SHA-1 wijkt af', 'gewijzigd beeldbestand');
   neg((r, inv) => { delete inv.images['/assets/species/sp066.webp']; }, 'geen visuele beeldbeoordeling', 'foto zonder beoordeling');
   console.log(`VC-07 OK — ${n} gidsfoto's met beeldbeoordeling op SHA-1; vrij vliegend ⇔ flight:true; 6 negatieve gevallen geweigerd`);

@@ -6126,7 +6126,7 @@ const DATA = {
    ],
    "discrepancies": [],
    "open": [
-    "Geen goede vluchtfoto: de vorige 'vluchtfoto' toonde een opvliegende vogel en is uit de vluchtrol gehaald (positie ontbreekt).",
+    "Een scherpe foto in vrije vlucht ontbreekt. De zachte afzetfoto is gearchiveerd.",
     "Kleedvariatie van stadsduiven maakt de stuit niet doorslaggevend."
    ]
   },
@@ -6343,8 +6343,7 @@ const DATA = {
    "discrepancies": [],
    "open": [
     "Onderscheid met Lachduif (ontsnapte vogels) nog uit een bron uitwerken.",
-    "Spanwijdte en gewicht niet in de geraadpleegde Nederlandse bron.",
-    "De hoofdfoto toont de vogel vrij klein in beeld."
+    "Spanwijdte en gewicht niet in de geraadpleegde Nederlandse bron."
    ]
   },
   "sp007": {

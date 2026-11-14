@@ -155,12 +155,12 @@
    "class": "opvliegen",
    "airborne": false,
    "source": "vluchtcontrole",
-   "decision": "uit-rol",
-   "note": "Poten raken nog de grond; vogel zet af. Ook laag opgelost (485 px)."
+   "decision": "archief",
+   "note": "Onscherpe afzetfoto van 485 px met weinig herkenningsdetail. Het bronarchief bewaart de opname; een goede vrije vluchtfoto blijft open."
   },
   "/assets/species/plumage/sp003-juv.webp": {
    "refs": [
-    "sp003 GUIDE_POSES[1]"
+    "sp003 GUIDE_POSES[0]"
    ],
    "sha1": "c90e0aebad77bfaace67989854b0e5f6718935ab",
    "class": "stilstaand",
@@ -2854,15 +2854,15 @@
    "source": "contactsheet 10-11-2026",
    "note": ""
   },
-  "/assets/species/sp004.webp": {
+  "/assets/species/plumage/sp004-adult-crop.webp": {
    "refs": [
     "sp004 GUIDE_PHOTOS"
    ],
-   "sha1": "6d26b8bf93d8c7843a3437a2d4716f481e57ffae",
+   "sha1": "ca88a629319c9fe04ecd0a3dfa5cae3cb05fdf26",
    "class": "stilstaand",
    "airborne": false,
-   "source": "contactsheet 10-11-2026",
-   "note": ""
+   "source": "F2 hercontrole · directe beeldinspectie 14-11-2026",
+   "note": "Zittende volwassen Turkse Tortel. Uitsnede van de bronopname, volledige vogel."
   },
   "/assets/species/sp005.webp": {
    "refs": [

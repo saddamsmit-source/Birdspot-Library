@@ -14,9 +14,9 @@ Beoordeeld volgens `docs/BIRDSPOT_KWALITEITSNORM.md` (biometrie §1, herkenning 
 | 4a | Visueel VERIFIED (beeld per foto) | 94 van 100 |
 | 4b | Inhoud (kennisprofiel) VERIFIED | 64 van 100 — alle profielen hebben nog open punten |
 | 4c | Onafhankelijk beoordeeld (ChatGPT) | 0 — NOT TESTED |
-| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 116; plus collectiebrede vluchtcontrole: 17 uit de vluchtrol, 8 gearchiveerd |
+| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 121; plus collectiebrede vluchtcontrole: 16 uit de vluchtrol, 9 gearchiveerd |
 | 6 | Afgekeurde vluchtfoto's | 25 (tabel hieronder) |
-| 7 | Ontbrekende foto-/kennisonderdelen | 67 fotoposities in gecontroleerde soorten; 40 fotosoorten zonder kennisprofiel |
+| 7 | Ontbrekende foto-/kennisonderdelen | 66 fotoposities in gecontroleerde soorten; 40 fotosoorten zonder kennisprofiel |
 | 8 | Kritische kenmerken niet doorslaggevend onderbouwd | 131 (tabel hieronder) |
 | 9 | Open bron-/licentieproblemen | 0 in gecontroleerde soorten; collectiebreed blijft het eerder gemelde punt '22 afbeeldingen buiten de bronaudit' open |
 
@@ -138,14 +138,13 @@ Batch M1 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED �
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
 | `sp003.webp` | Hoofdfoto | Holenduif in gras, zijaanzicht; groen glanzende halsvlek, korte zwarte vleugelstrepen, donker oog. | volwassen-ogend; geslacht niet op kleed | goed | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Chris Cant from Cumbria, UK |
-| `sp003-flight.webp` | Overige herkenningsfoto's (was: In vlucht) | Vogel zet af vanaf de grond; poten raken nog de grond. Vleugelpatroon wel zichtbaar. | niet vastgesteld | matig: 485 px, zacht | uit-rol | opvliegen · uit-rol | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Åsa Berndtsson |
 | `sp003-juv.webp` | Juveniel | Jonge Holenduif op een tak, met een donker oog en korte donkere tekeningen op de gevouwen vleugel. | Juveniel volgens individuele foto of waarneming en zichtbare kleedkenmerken. | Bruikbaar zijaanzicht · 1100 × 804 px. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (rechtstreekse conversie van de gecontroleerde bronopname), CC BY 4.0 · Paul Lewis |
 
-- **Correcties:** Opvliegende foto uit 'In vlucht' (eigenaarsmelding) — label 'Opvliegend vanaf de grond' (vluchtcontrole ronde 1).; Veldkenmerken en kleedtekst: "zwarte vleugelpunten" → geen wit in hals/vleugel, twee korte zwarte vleugelstrepen, brede zwarte staartband (VB_HOLEN, RSPB_SD).; Zang: "oe-oe-oe steeds sneller" → eentonige reeks tweelettergrepige roepen (VB_HVH).; Lengte 30–33 → 28–32 cm; broedduur 16–18 → 16–17 dagen; nestjongen 27–28 → ca. 24 dagen (VB_HOLEN).; F2: afzonderlijke brongeverifieerde juvenielenfoto toegevoegd.
+- **Correcties:** Opvliegende foto uit 'In vlucht' (eigenaarsmelding) — label 'Opvliegend vanaf de grond' (vluchtcontrole ronde 1).; Veldkenmerken en kleedtekst: "zwarte vleugelpunten" → geen wit in hals/vleugel, twee korte zwarte vleugelstrepen, brede zwarte staartband (VB_HOLEN, RSPB_SD).; Zang: "oe-oe-oe steeds sneller" → eentonige reeks tweelettergrepige roepen (VB_HVH).; Lengte 30–33 → 28–32 cm; broedduur 16–18 → 16–17 dagen; nestjongen 27–28 → ca. 24 dagen (VB_HOLEN).; F2: afzonderlijke brongeverifieerde juvenielenfoto toegevoegd.; F2-hercontrole: bij Volwassen is zichtbaar dat man en vrouw op elkaar lijken.; F2-hercontrole: zachte afzetfoto uit de kaart gehaald en met herkomst gearchiveerd.
 - **Ontbreekt:** In vlucht (geen echte vluchtfoto)
 - **Verbeterwensen (eigenaar beoordeelt later):** —
-- **Geslacht:** Geslachten gelijk; geen Mannetje/Vrouwtje-vakken (bron: VB_HOLEN).
-- **Kennisprofiel:** 2 kritische kenmerken (1 doorslaggevend); niet doorslaggevend: Stuit; open: Geen goede vluchtfoto: de vorige 'vluchtfoto' toonde een opvliegende vogel en is uit de vluchtrol gehaald (positie ontbreekt).; Kleedvariatie van stadsduiven maakt de stuit niet doorslaggevend.; resterende dataverschillen: 0
+- **Geslacht:** Mannetje en vrouwtje lijken sterk op elkaar. Het geslacht volgt bij deze opnamen niet op kleed. Bron: Blasco-Zumeta en Heinze.
+- **Kennisprofiel:** 2 kritische kenmerken (1 doorslaggevend); niet doorslaggevend: Stuit; open: Een scherpe foto in vrije vlucht ontbreekt. De zachte afzetfoto is gearchiveerd.; Kleedvariatie van stadsduiven maakt de stuit niet doorslaggevend.; resterende dataverschillen: 0
 - **Browser:** NOT TESTED
 - **Onzeker:** —
 - **Eerdere uitslag:** Fotobaseline batch 01 gaf VERIFIED inclusief de opvliegende vluchtfoto; die uitslag is vervallen.
@@ -161,10 +160,10 @@ Batch M1 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED �
 | `sp002-flight.webp` | In vlucht | Vrij in de lucht, frontaal van onderen; vleugels gespreid, witte vleugelrand zichtbaar. | niet vastgesteld (neutraal label) | goed | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Stefan Berndtsson |
 | `sp002-juv.webp` | Juveniel | Jonge Houtduif op de grond, met witte vleugeltekening en een hals zonder witte vlek. | Juveniel volgens individuele foto of waarneming en zichtbare kleedkenmerken. | Bruikbaar zijaanzicht · 1100 × 841 px. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (rechtstreekse conversie van de gecontroleerde bronopname), CC BY-SA 4.0 · Roland Gromes |
 
-- **Correcties:** FQA-04: kritisch kenmerk 'Halsvlek en iris' gesplitst; 'Witte halsvlek' (alleen volwassen) blijft doorslaggevend, iris alleen ondersteunend.; F2: afzonderlijke brongeverifieerde juvenielenfoto toegevoegd.
+- **Correcties:** FQA-04: kritisch kenmerk 'Halsvlek en iris' gesplitst; 'Witte halsvlek' (alleen volwassen) blijft doorslaggevend, iris alleen ondersteunend.; F2: afzonderlijke brongeverifieerde juvenielenfoto toegevoegd.; F2-hercontrole: bij Volwassen is zichtbaar dat man en vrouw op elkaar lijken.
 - **Ontbreekt:** Vluchtfoto van boven met volledige witte vleugelband (wenselijk)
 - **Verbeterwensen (eigenaar beoordeelt later):** —
-- **Geslacht:** Geslachten gelijk; geen Mannetje/Vrouwtje-vakken (bron: VB_HOUT).
+- **Geslacht:** Mannetje en vrouwtje lijken sterk op elkaar. Het geslacht volgt bij deze opnamen niet op kleed. Bron: Blasco-Zumeta en Heinze.
 - **Kennisprofiel:** 2 kritische kenmerken (2 doorslaggevend); niet doorslaggevend: —; open: Juveniel- en vluchtvergelijking met Stadsduif nog niet uit een Nederlandse bron uitgewerkt.; resterende dataverschillen: 0
 - **Browser:** NOT TESTED
 - **Onzeker:** —
@@ -176,18 +175,18 @@ Batch M1 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED �
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
-| `sp004.webp` | Hoofdfoto | Turkse Tortel op sparrentop tegen blauwe lucht; zwarte halsband, rood oog. | volwassen (scherpe halsband); geslacht niet vast te stellen | goed: scherp; vogel kleiner in beeld, halsband, oog en kleed goed zichtbaar | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Jakub Hałun |
+| `sp004-adult-crop.webp` | Hoofdfoto | Volwassen Turkse Tortel op een sparrentop, met rood oog, zwarte halsband en lange staart. | Volwassen volgens halsband, rood oog en kleed. | Goed: volledige vogel groter in beeld · 1100 × 969 px. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (uitsnede rechtstreeks uit de gecontroleerde bronopname (640,140)-(1980,1320)), CC BY 4.0 · Jakub Hałun |
 | `sp004-flight.webp` | In vlucht | Vrij in de lucht, zijaanzicht van onderen; staartpatroon (donkere basis, witte eindrand) zichtbaar. | niet vastgesteld | goed | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Florian Pépellin |
 | `sp004-juv.webp` | Juveniel | Jonge Turkse Tortel in zijaanzicht, met lange staart, smalle donkere snavel en zonder zwarte halsband. | Juveniel volgens individuele foto of waarneming en zichtbare kleedkenmerken. | Bruikbaar zijaanzicht · 1100 × 825 px. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (rechtstreekse conversie van de gecontroleerde bronopname), CC BY-SA 3.0 · Kreuzschnabel/Wikimedia Commons |
 
-- **Correcties:** Broedsels per jaar 3–5 → 2–5 (VB_TT).; FQA-04: tweede onafhankelijke bron voor de Zomertortel-kant (eBird, birdspot.co.uk) en uitzondering voor juvenielen zonder halstekening.; sp004.webp: voorwaardelijk → goedgekeurd na kwaliteitsnorm §3.3 (klein in beeld is geen afkeurgrond); F2: afzonderlijke brongeverifieerde juvenielenfoto toegevoegd.
-- **Ontbreekt:** Hoofdfoto met grotere vogel (wenselijk)
+- **Correcties:** Broedsels per jaar 3–5 → 2–5 (VB_TT).; FQA-04: tweede onafhankelijke bron voor de Zomertortel-kant (eBird, birdspot.co.uk) en uitzondering voor juvenielen zonder halstekening.; sp004.webp: voorwaardelijk → goedgekeurd na kwaliteitsnorm §3.3 (klein in beeld is geen afkeurgrond); F2: afzonderlijke brongeverifieerde juvenielenfoto toegevoegd.; F2-hercontrole: bij Volwassen is zichtbaar dat man en vrouw op elkaar lijken.; F2-hercontrole: meer beeldruimte voor de hele vogel door een uitsnede uit het bronbestand.
+- **Ontbreekt:** niets
 - **Verbeterwensen (eigenaar beoordeelt later):** —
-- **Geslacht:** Geslacht vaak niet op kleed te bepalen (BZ_CD); geen geslachtsvakken.
-- **Kennisprofiel:** 2 kritische kenmerken (1 doorslaggevend); niet doorslaggevend: Staart in vlucht; open: Onderscheid met Lachduif (ontsnapte vogels) nog uit een bron uitwerken.; Spanwijdte en gewicht niet in de geraadpleegde Nederlandse bron.; De hoofdfoto toont de vogel vrij klein in beeld.; resterende dataverschillen: 0
+- **Geslacht:** Mannetje en vrouwtje lijken sterk op elkaar. Het geslacht volgt bij deze opnamen niet op kleed. Bron: Blasco-Zumeta en Heinze.
+- **Kennisprofiel:** 2 kritische kenmerken (1 doorslaggevend); niet doorslaggevend: Staart in vlucht; open: Onderscheid met Lachduif (ontsnapte vogels) nog uit een bron uitwerken.; Spanwijdte en gewicht niet in de geraadpleegde Nederlandse bron.; resterende dataverschillen: 0
 - **Browser:** NOT TESTED
 - **Onzeker:** —
-- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
 
 ### sp129 Krakeend — PARTIALLY TESTED
 
@@ -1998,7 +1997,7 @@ Batch M6 · 2026-11-12 · SHA `38e3b3c42662dc49be8b769fd9f82a8dde65cad7` · tech
 
 | Soort | Bestand | Uitslag | Klasse | Reden |
 |---|---|---|---|---|
-| sp003 Holenduif | `sp003-flight.webp` | uit-rol | opvliegen | Poten raken nog de grond; vogel zet af. Ook laag opgelost (485 px). |
+| sp003 Holenduif | `sp003-flight.webp` | archief | opvliegen | Onscherpe afzetfoto van 485 px met weinig herkenningsdetail. Het bronarchief bewaart de opname; een goede vrije vluchtfoto blijft open. |
 | sp017 Kleine Bonte Specht | `sp017-flight.webp` | uit-rol | opvliegen | Zet af van de stam bij de nestholte; staart nog tegen de bast. |
 | sp025 Kauw | `sp025-flight.webp` | uit-rol | landen | Frontale landingsnadering met poten naar voren en gespreide staart. |
 | sp031 Matkop | `sp031-flight.webp` | uit-rol | opvliegen | Poten naar beneden vlak boven de sneeuw: afzetten of neerstrijken. |
