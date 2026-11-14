@@ -97,3 +97,15 @@ Basis [PR #207 op 7d0e0f2](https://github.com/saddamsmit-source/Birdspot-Library
 Basis [PR #209 op 0b65613](https://github.com/saddamsmit-source/Birdspot-Library/pull/209), 24/24 workflows. [Brondossier met negen originele foto’s](../evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_12.json), CAP-BIRD-012 en CAP-BIRD-015. Commons-afbeeldingen die eerst alleen als miniatuur konden worden geopend, zijn via de officiële bestandsverwijzing op oorspronkelijke resolutie vergeleken. Herstel via sluiten van de concept-PR of terugdraaien op de integratiebranch.
 
 **Teller:** 27 van 140 soorten opgepakt in F2. **Volgende batch:** Kuifmees (sp033), Staartmees (sp034) en Boomklever (sp065).
+
+## F2-13 · Kuifmees, Staartmees en Boomklever
+
+| Soort | Hercontrole | Open |
+|---|---|---|
+| sp033 Kuifmees | Vier gidsfoto’s naast de originele bestanden gelegd. De waarnemer en de iNaturalist-annotatie bevestigen het juveniel. Het beeld bij de afzet vanaf de sneeuw blijft bij de overige herkenningsfoto’s. De spanwijdte komt ook terug in de RSPB-bron. | Scherpe vrije-vluchtfoto. De door Luc Viatour gevraagde credit staat in [PR #212](https://github.com/saddamsmit-source/Birdspot-Library/pull/212). |
+| sp034 Staartmees | Beide gidsfoto’s naast het origineel gelegd. De fotograaf benoemt het jong. De eerdere vluchtfoto van [Martin Cooper](https://commons.wikimedia.org/wiki/File:Long-tailed_Tit_in_flight_(8644086215).jpg) blijft gearchiveerd. Een [andere CC BY 2.0-opname](https://commons.wikimedia.org/wiki/File:Long-tailed_Tit_-_Aegithalos_caudatus_(54296622863).jpg) toont de lange staart maar bevat zichtbare takjes en bewegingsonscherpte in de vleugels. | Scherpe vrije-vluchtfoto. |
+| sp065 Boomklever | Beide gidsfoto’s naast hun originelen gelegd. Een [stamfoto van hedera.baltica](https://commons.wikimedia.org/wiki/File:Eurasian_nuthatch_(50430565526).jpg) toont de Boomklever met de kop omlaag, naast een Boomkruiper op een stam. De kaart vergelijkt snavel, staart en klimhouding. De gids vermeldt de maatbron en de Britse broedgegevens met bronverwijzing. | Bronbevestigde juvenielenfoto. |
+
+Basis [PR #211 op 1028846](https://github.com/saddamsmit-source/Birdspot-Library/pull/211), 24/24 workflows. [Bronregistratie voor de acht bestaande foto’s en het nieuwe bestand](../evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_13.json), CAP-BIRD-012 en CAP-BIRD-015. Een gedeelde omgeving maakt het makkelijker om te zien welke fysieke kenmerken en houdingen de foto's daadwerkelijk tonen. Herstel via sluiten van de concept-PR of terugdraaien op de integratiebranch.
+
+**Teller:** 30 van 140 soorten opgepakt in F2. **Volgende batch:** Boomkruiper (sp066), Taigaboomkruiper (sp067) en Goudhaantje (sp063).

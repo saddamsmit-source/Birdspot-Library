@@ -4246,6 +4246,50 @@
       "checked": "2026-11-14",
       "certainty": "hoog",
       "publisher": "British Birds"
+    },
+    "RSPB_KUIFMEES": {
+      "register": "NL07",
+      "label": "RSPB — Kuifmees",
+      "url": "https://www.rspb.org.uk/birds-and-wildlife/crested-tit/",
+      "edition": "online bron, geraadpleegd 14-11-2026",
+      "scope": "Nederland",
+      "confirms": "lengte 11,5 cm en spanwijdte 17–20 cm; koptekening",
+      "checked": "2026-11-14",
+      "certainty": "hoog",
+      "publisher": "RSPB"
+    },
+    "RSPB_STAARTMEES": {
+      "register": "NL07",
+      "label": "RSPB — Staartmees",
+      "url": "https://www.rspb.org.uk/birds-and-wildlife/long-tailed-tit",
+      "edition": "online bron, geraadpleegd 14-11-2026",
+      "scope": "Nederland",
+      "confirms": "lengte 14 cm, spanwijdte 16–19 cm, groepsgedrag",
+      "checked": "2026-11-14",
+      "certainty": "hoog",
+      "publisher": "RSPB"
+    },
+    "WT_KLEVER": {
+      "register": "NL07",
+      "label": "The Wildlife Trusts — Boomklever",
+      "url": "https://www.wildlifetrusts.org/wildlife-explorer/birds/thrushes-chats-flycatchers-starling-dipper-and-wren/nuthatch",
+      "edition": "online bron, geraadpleegd 14-11-2026",
+      "scope": "Nederland",
+      "confirms": "lengte 14 cm, spanwijdte 24 cm, korte staart en gedrongen bouw",
+      "checked": "2026-11-14",
+      "certainty": "hoog",
+      "publisher": "The Wildlife Trusts"
+    },
+    "BTO_KLEVER": {
+      "register": "NL07",
+      "label": "BTO — Boomklever",
+      "url": "https://www.bto.org/learn/about-birds/birdfacts/nuthatch",
+      "edition": "online bron, geraadpleegd 14-11-2026",
+      "scope": "Nederland",
+      "confirms": "Britse nestgegevens, gebruikelijke broedduur en nestjongenduur",
+      "checked": "2026-11-14",
+      "certainty": "hoog",
+      "publisher": "British Trust for Ornithology"
     }
   },
   "sp021": {
@@ -7982,28 +8026,31 @@
     "caution": null,
     "critical": [
       {
-        "feature": "Kleur en gedrag",
-        "where": "Hele vogel op de stam",
-        "this": "Blauwgrijs met oranjebruine onderzijde; kan kopje-onder",
-        "other": "Boomkruiper: bruin gestreept, kromme snavel, kruipt alleen omhoog",
+        "feature": "Snavel, staart en klimrichting",
+        "where": "Hele vogel van opzij op een stam",
+        "this": "Blauwgrijze rug, vrij rechte snavel en korte staart. Kan ook met de kop omlaag langs de stam.",
+        "other": "Boomkruiper: bruingevlekte rug, gebogen snavel en lange steunstaart. Zoekt meestal omhoog klimmend naar voedsel.",
         "vs": [
           "sp066"
         ],
         "reliability": "ondersteunend",
-        "conditions": "Vogel op een stam",
-        "exceptions": "—",
-        "supporting": "Geluid",
+        "conditions": "Bekijk snavel en staart in zijaanzicht. Volg de bewegingsrichting bij een langere waarneming.",
+        "exceptions": "Een stilstaand beeld laat de houding zien. De bewegingsrichting vraagt een reeks beelden of een waarneming.",
+        "supporting": "Een donkere oogstreep en warme onderzijde ondersteunen Boomklever.",
         "sources": [
-          "VB_KLEVER"
+          "VB_KLEVER",
+          "VB_BOOMKRUIPER",
+          "WT_KLEVER"
         ]
       }
     ],
     "similar": [
       {
         "id": "sp066",
-        "why": "Door de bron als gelijkende soort genoemd (beide langs stammen)",
+        "why": "Beide zoeken voedsel langs stammen. Snavelvorm, staart en klimhouding helpen om ze uit elkaar te houden.",
         "sources": [
-          "VB_KLEVER"
+          "VB_KLEVER",
+          "VB_BOOMKRUIPER"
         ]
       }
     ],
@@ -8027,9 +8074,10 @@
     ],
     "basis": {
       "size": {
-        "text": "Lengte 12–14,5 cm.",
+        "text": "Vogelbescherming noemt 12–14,5 cm lichaamslengte. The Wildlife Trusts geeft 14 cm en een spanwijdte van 24 cm als typische veldwaarden.",
         "sources": [
-          "VB_KLEVER"
+          "VB_KLEVER",
+          "WT_KLEVER"
         ]
       }
     },
@@ -8072,12 +8120,18 @@
         "sources": [
           "VB_KLEVER"
         ]
+      },
+      {
+        "kind": "broeden",
+        "text": "In de Britse nestgegevens van BTO duurt het broeden doorgaans 16–17 dagen en vliegen de jongen doorgaans na circa 24–25 dagen uit.",
+        "sources": [
+          "BTO_KLEVER"
+        ]
       }
     ],
     "discrepancies": [],
     "open": [
-      "Broedduur en nestjongenduur niet in de geraadpleegde bron; Birdspot-waarden niet opnieuw gecontroleerd.",
-      "Geen gidsfoto van een juveniel."
+      "Een bronbevestigde gidsfoto van een juveniel ontbreekt."
     ]
   },
   "sp067": {
@@ -17304,7 +17358,15 @@
           ],
           "note": "Afgeronde onder- en bovengrens op basis van de twee bronwaarden."
         }
-      ]
+      ],
+      "size": {
+        "text": "RSPB vermeldt 11,5 cm lengte en 17–20 cm spanwijdte. De twee bronwaarden voor de lengteraming staan hieronder.",
+        "sources": [
+          "RSPB_KUIFMEES",
+          "VB_KUIFMEES",
+          "BZH_KUIFMEES"
+        ]
+      }
     },
     "habitat": [
       {
@@ -17350,7 +17412,9 @@
       }
     ],
     "discrepancies": [],
-    "open": []
+    "open": [
+      "Een scherpe foto in vrije vlucht met bevestigde herkomst ontbreekt."
+    ]
   },
   "sp044": {
     "summary": {
@@ -17956,7 +18020,15 @@
           ],
           "note": "Afgeronde onder- en bovengrens op basis van de twee bronwaarden."
         }
-      ]
+      ],
+      "size": {
+        "text": "RSPB vermeldt 14 cm lengte en 16–19 cm spanwijdte. Beide bronnen voor de lengteraming noemen 13–15 cm.",
+        "sources": [
+          "RSPB_STAARTMEES",
+          "VB_STAARTMEES",
+          "BZH_STAARTMEES"
+        ]
+      }
     },
     "habitat": [
       {
@@ -18002,7 +18074,9 @@
       }
     ],
     "discrepancies": [],
-    "open": []
+    "open": [
+      "Een scherpe foto in vrije vlucht van een voor West-Europa representatieve Staartmees ontbreekt."
+    ]
   },
   "sp032": {
     "summary": {
