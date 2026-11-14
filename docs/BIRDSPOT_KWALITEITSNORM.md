@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| Versie | 1.4 · 14-11-2026 |
+| Versie | 1.5 · 14-11-2026 |
 | Status | Vastgesteld eigenaarbesluit (Kevin Smit, Project Owner). Onafhankelijke documentreview: open |
 | Herkomst | Eigenaaropdracht "Nieuwe eigenaarbesluiten, livegang en batch M3" (10-11-2026) en het vastgelegde besluit op PR #127 ([comment 6779875047](https://github.com/saddamsmit-source/Birdspot-Library/pull/127#issuecomment-6779875047)) |
 | Geldt voor | Alle soortkaarten van Birdspot Library: soortdata (`src/data/species.js`), kennisprofielen (`tools/kennisbaseline/knowledge.json`), gidsfoto's en soortaudit |
@@ -81,7 +81,7 @@ De validator `tools/kennisbaseline/build_knowledge.py` controleert:
 | KV-13 | Minstens twee waarden van verschillende uitgevers. `display` moet exact uit de methode van §1.1 volgen en met "ca." beginnen. Een uitgesloten waarde heeft een reden |
 | KV-14 | De getoonde maat in `src/data/species.js` (`size.<field>`) is gelijk aan `display` |
 
-De kaart toont onder **Kennisprofiel → Bronnen en controle** de bronwaarden, de uitgesloten waarden en de methode.
+De publiekskaart toont uitsluitend de onderbouwde, afgeronde maatbanden. De oorspronkelijke bronwaarden, uitgesloten waarden en rekenmethode blijven in `basis.biometrics`, het bronregister en de validator controleerbaar, maar verschijnen niet als niet-verplichte bronlijst in de app (§2.2).
 
 ---
 
@@ -122,6 +122,19 @@ Verder geldt:
 5. **Bewijs en open punten bewaren.** Registreer per gecontroleerde soort welke voorkeursbron feitelijk is gelezen, welke kenmerken zijn getoetst, uitkomst en onzekerheid, datum en eventuele extra bronnen in het bestaande F2-brondossier/openpuntenregister. Bij twijfel over een kleedrol blijft het label neutraal, een ongefundeerde foto weg en het open punt voor later onderzoek bewaard.
 
 **Bewijsgrens:** beide voorkeursbronnen zijn deskundige naslagwerken, maar niet onfeilbaar en niet altijd direct toegankelijk. Een 'bronvoorkeur' geldt alleen bij daadwerkelijk gelezen passende informatie en is nooit zelfstandig foto-PASS. De app beschrijft feiten in eigen woorden; originele ANWB-/Vogelbeschermingfoto's of beschermde tekst worden niet zonder geldige toestemming hergebruikt.
+
+---
+
+### 2.2 Bronvermeldingen in de gebruikersinterface (eigenaarbesluit 14-11-2026)
+
+**Toon geen bronvermeldingen waar dat niet verplicht is.** Dit geldt voor de soortbeschrijving, maat- en gedragsuitleg, herkenningskenmerken, vergelijkingspanelen, kennisprofiel, zangbeschrijvingen en de daaruit afgeleide status/leefwijze. Verwijder ook publieksmeldingen zoals 'Broncontrole volgt' en vrijblijvende bronlinks bij vogelvergelijkingen.
+
+- **Verificatie blijft verplicht intern:** elke feitelijke claim houdt het geregistreerde bronbewijs, directe URL, bronuitgever, controledatum, onderlinge onafhankelijkheid, rekenmethode, onzekerheden en revisiehistorie in de canonieke dataset en QA-dossiers. Bronverwijzingen verdwijnen alleen uit de normale gebruikersweergave; geen bewijseis versoepelen, geen niet-geverifieerde claim als zeker tonen.
+- **Verplichte attributies behouden:** bij foto's en geluidsopnamen de vereiste naam van de maker, licentie, bronlink en eventuele bewerkingsmelding volgens de specifieke licentie; bij kaarten of externe datasets de benodigde toeschrijving. Houd deze informatie bereikbaar en leesbaar op mobiel en toetsenbord. Dit mag via een bestaand foto-informatiepaneel als de desbetreffende licentie dat toelaat. Is de verplichte vermelding niet mogelijk, publiceer het materiaal niet.
+- **Geen stilzwijgende kopie:** Vogelbescherming Nederland en ANWB blijven voorkeursbronnen voor inhoudelijke verificatie volgens §2.1; hun illustraties en teksten worden niet automatisch vrij herbruikbaar.
+- **Herstel en QA:** tests verifiëren dat optionele bronlabels en -links verdwijnen uit soort- en kennispanelen **en** dat attributies voor daadwerkelijk gebruikte media en kaartdata intact blijven. De uitgebreide bronlijst blijft uitsluitend in de controlebestanden.
+
+Deze afspraak gaat over Birdspot en laat eventuele wettelijke informatieverplichtingen elders in de app onverlet.
 
 ---
 
@@ -185,3 +198,4 @@ De uitkomst per foto staat in `docs/fotokwaliteit/soortaudit/M*.json` en `SOORTA
 | 1.2 | 14-11-2026 | Eigenaarprecisering: alle eerdere fotoregels en zes bron-/rolcontroles blijven volledig van kracht. De versoepeling 'onzichtbare poten = geen zelfstandige STOP' is slechts een **aanvullende juvenielenregel**, geen algemene vrijstelling voor andere soorten/rollen en geen verkorting van bron- of rechtencontrole. Historie 1.0/1.1 behouden. |
 | 1.3 | 14-11-2026 | Eigenaar legt prioriteit op rustfoto’s en vergelijkingen voor kleine vogels: vlucht alleen wanneer herkenbaar; slechte of ontbrekende vlucht als uitgesteld fotoonderzoek registreren. Bronnen-, rechten-, determinatie- en bestaande vluchtdefinities ongewijzigd. Openpuntenregister aangemaakt voor latere volledigheid. |
 | 1.4 | 14-11-2026 | Eigenaar verduidelijkt bronvoorrang: soortinformatie van Vogelbescherming Nederland en daadwerkelijk ingeziene ANWB-vogelgids als eerste referentie om **zelf gevonden** foto's, kleden en verklarende tekst te controleren. Niet verplicht bronfoto's te gebruiken. ANWB-productpagina is geen soortbewijs; bestand-, rechten- en zespuntscontrole blijven apart. |
+| 1.5 | 14-11-2026 | Eigenaar bepaalt dat niet-verplichte bronvermeldingen verdwijnen uit de gebruikersweergave, zonder achterliggende broncontroles te verwijderen. Verplichte foto-, audio- en data-attributies blijven intact en toegankelijk. |

@@ -4,9 +4,9 @@
  * betrouwbaarheid en een waarschuwing. Gelijkende soorten staan op één plek: onder "Lijkt op" (similarExtra).
  * Niveau 2: uitklapbare secties.
  * Pure render-functies; soorten zonder profiel krijgen niets (de bestaande kaart blijft ongewijzigd).
- * Iedere getoonde bewering draagt haar eigen bronvermelding; ontbrekende inhoud staat onder "Nog open".
+ * Bronnen blijven intern per bewering traceerbaar; alleen verplichte credits worden in andere UI-onderdelen getoond.
  */
-import { KNOWLEDGE, KNOWLEDGE_SOURCES } from '../../data/speciesKnowledge.js';
+import { KNOWLEDGE } from '../../data/speciesKnowledge.js';
 import { SPECIES } from '../../data/species.js';
 
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -16,16 +16,9 @@ const REL = {
   'ondersteunend': ['Helpt', 'support'],
   'onbetrouwbaar-alleen': ['Niet alleen op vertrouwen', 'weak'],
 };
-const short = key => (KNOWLEDGE_SOURCES[key]?.label || key).split(' — ')[0];
 
 export const knowledgeFor = id => KNOWLEDGE[id] || null;
 
-function srcLine(refs) {
-  const list = [...new Set(refs || [])];
-  if (!list.length) return '<small class="kb-src">Bestaande Birdspot-inhoud, niet opnieuw gecontroleerd</small>';
-  // Twee artikelen van dezelfde uitgever tonen één keer de uitgeversnaam (de bronlijst onder Leefwijze noemt ze apart).
-  return `<small class="kb-src">Bron: ${[...new Set(list.map(short))].map(esc).join(' · ')}</small>`;
-}
 
 function relPill(rel) {
   const [label, kind] = REL[rel] || [rel, 'support'];
@@ -47,7 +40,7 @@ export function similarExtra(s, covered = new Set()) {
   const list = (k?.similar || []).filter(x => !covered.has(x.id));
   if (!list.length) return '';
   return `<div class="kb-similar" data-kb-similar>${list.map(x => `<div class="kb-similar__item">
-      <div><strong>${esc(name(x.id))}</strong><p>${esc(x.why)}</p>${srcLine(x.sources)}</div>
+      <div><strong>${esc(name(x.id))}</strong><p>${esc(x.why)}</p></div>
       <button type="button" class="sd-compare-open" data-compare-species="${esc(x.id)}">Open ${esc(name(x.id))}<span aria-hidden="true"> →</span></button>
     </div>`).join('')}</div>`;
 }
@@ -103,7 +96,7 @@ function acc(id, title, body, count) {
 function items(list, labels = {}) {
   if (!list?.length) return '';
   return '<ul class="kb-list">' + list.map(it =>
-    `<li>${labels[it.kind || it.topic] ? `<b>${esc(labels[it.kind || it.topic])}</b> ` : ''}${esc(it.text)}${srcLine(it.sources)}</li>`).join('') + '</ul>';
+    `<li>${labels[it.kind || it.topic] ? `<b>${esc(labels[it.kind || it.topic])}</b> ` : ''}${esc(it.text)}</li>`).join('') + '</ul>';
 }
 
 function criticalCards(k, filter = () => true) {
@@ -119,7 +112,7 @@ function criticalCards(k, filter = () => true) {
       <dt>Uitzonderingen</dt><dd>${esc(c.exceptions)}</dd>
       <dt>Maakt sterker</dt><dd>${esc(c.supporting)}</dd>
     </dl>
-    ${srcLine(c.sources)}
+    
   </article>`).join('');
 }
 
@@ -158,43 +151,17 @@ export function voiceDetails(s) {
   return `<div class="kb-voice" data-kb-voice>${items(k.voice, { zang: 'Zang', roep: 'Roep', alarm: 'Alarm', vlucht: 'Vluchtroep' })}</div>`;
 }
 
-const BIO_LABEL = { length: 'Lengte', wingspan: 'Spanwijdte', weight: 'Gewicht' };
-
-/** Niveau 2, tab Leefwijze — status, leefwijze en de bronverantwoording. */
+/** Niveau 2, tab Leefwijze — uitsluitend inhoudelijke soortgegevens in de publieksweergave.
+ * Bewijs, bron-URL's, maatberekeningen en onzekerheidsdossiers blijven volledig bewaard in
+ * KNOWLEDGE, KNOWLEDGE_SOURCES en de audits; zij worden niet als optionele bronlijst getoond. */
 export function lifeDetails(s) {
   const k = knowledgeFor(s.id);
   if (!k) return '';
-  const used = new Set();
-  const collect = x => (x?.sources || []).forEach(r => used.add(r));
-  [k.summary, k.caution, k.basis?.size, ...(k.keyMarks || []), ...(k.critical || []), ...(k.similar || []),
-    ...(k.detail || []), ...(k.voice || []), ...(k.habitat || []), ...(k.status || []), ...(k.life || [])].forEach(collect);
-  (k.basis?.biometrics || []).forEach(b => b.values.forEach(v => used.add(v.source)));
-  const sources = [...used].map(key => {
-    const src = KNOWLEDGE_SOURCES[key];
-    return `<li><a href="${esc(src.url)}" target="_blank" rel="noopener noreferrer">${esc(src.label)}</a>
-      <small>${esc(src.edition)} · ${esc(src.scope)} · bevestigt: ${esc(src.confirms)} · zekerheid ${esc(src.certainty)}</small></li>`;
-  }).join('');
-  const disc = (k.discrepancies || []).map(d =>
-    `<li><b>${esc(d.field)}</b> Birdspot: ${esc(d.app)} · bron: ${esc(d.source)}${srcLine(d.sources)}</li>`).join('');
-  const open = (k.open || []).map(o => `<li>${esc(o)}</li>`).join('');
-  const size = k.basis?.size ? `<p class="kb-basis">${esc(k.basis.size.text)}${srcLine(k.basis.size.sources)}</p>` : '';
-  const bio = (k.basis?.biometrics || []).map(b => {
-    const val = v => `${esc(KNOWLEDGE_SOURCES[v.source]?.label?.split(' — ')[0] || v.source)} ${v.min}–${v.max} ${esc(b.unit)}`;
-    const excl = (b.excluded || []).map(x => ` · niet meegeteld: ${val(x)} — ${esc(x.reason)}`).join('');
-    return `<li data-kb-bio="${esc(b.field)}"><b>${esc(BIO_LABEL[b.field] || b.field)} ${esc(b.display)}</b> uit ${b.values.map(val).join(' en ')}${excl}. ` +
-      `Gemiddelde van onder- en bovengrenzen, afgerond.${b.note ? ' ' + esc(b.note) : ''}</li>`;
-  }).join('');
-  const accountability = `${size}` +
-    (bio ? `<h4 class="kb-sub">Maten: berekening</h4><ul class="kb-list">${bio}</ul>` : '') +
-    `<h4 class="kb-sub">Gebruikte bronnen</h4><ol class="kb-sources">${sources}</ol>` +
-    (disc ? `<h4 class="kb-sub">Verschillen met bestaande gegevens</h4><ul class="kb-list">${disc}</ul>` : '') +
-    (open ? `<h4 class="kb-sub">Nog open</h4><ul class="kb-list kb-list--open">${open}</ul>` : '') +
-    '<p class="kb-review">Kennisprofiel v0.1 · proef · broncontrole door Claude op 10-11-2026 · onafhankelijke controle nog open.</p>';
   const parts = [
     acc('status', 'Status en trend', items(k.status, { voorkomen: 'Voorkomen', aantal: 'Aantal', trend: 'Trend', rodelijst: 'Rode Lijst', bescherming: 'Bescherming' })),
     acc('leefwijze', 'Voedsel, broeden en trek', items(k.life, { voedsel: 'Voedsel', broeden: 'Broeden', nest: 'Nest', trek: 'Trek' })),
-    acc('bronnen', 'Bronnen en controle', accountability, used.size),
   ].join('');
+  if (!parts) return '';
   return `<section class="kb-more" aria-label="Kennisprofiel"><h3 class="sd-h">Kennisprofiel</h3>${parts}</section>`;
 }
 
