@@ -253,4 +253,40 @@ for (const id of ['sp040', 'sp035']) {
 }
 console.log('F2-16: adult and juvenile perched Putter/Sijs, female Goudvink/Vink both directions present, flight optional without fake images');
 
+
+const f217Pairs = [
+  ['Kneu en Roodmus · mannetjes in rust', [['sp039', undefined], ['sp042', undefined]]],
+  ['Appelvink en Vink · vrouwtjes in rust', [['sp041', 'adult_f'], ['sp035', 'adult_f']]],
+  ['Appelvink en Vink · juvenielen in rust', [['sp041', 'juv'], ['sp035', 'juv']]],
+];
+for (const [label, expected] of f217Pairs) {
+  const entry = GUIDE_COMPARISONS.find(c => c.label === label);
+  assert.ok(entry && !entry.flight, 'F2-17 missing perched comparison: ' + label);
+  assert.deepEqual(entry.birds.map(b => [b.id, b.plumage]), expected, label);
+  assert.equal(entry.birds.length, 2, 'F2-17: both photos required: ' + label);
+  assert.ok(entry.rows?.length >= 2, 'F2-17: paired field marks required: ' + label);
+}
+for (const id of ['sp039', 'sp042']) {
+  const html = recognitionPanel(species.get(id));
+  assert.ok(html.includes('sp039.webp') && html.includes('sp042.webp'),
+    'F2-17: two registered male portraits missing for ' + id);
+}
+for (const id of ['sp041', 'sp035']) {
+  const html = recognitionPanel(species.get(id));
+  assert.ok(html.includes('sp041-adult_f.webp') && html.includes('sp035-adult_f.webp'),
+    'F2-17: female pair missing for ' + id);
+  assert.ok(html.includes('sp041-juv.webp') && html.includes('sp035-juv-review.webp'),
+    'F2-17: juvenile pair missing for ' + id);
+}
+assert.match(species.get('sp039').fieldmarks, /vrouwtjes en jongen/);
+assert.match(species.get('sp041').fieldmarks, /zware kegelsnavel/);
+assert.match(species.get('sp042').fieldmarks, /onvolwassen mannetje/);
+assert.match(species.get('sp042').distribution, /Hollandse kust/);
+const vinkJuvenilePose = GUIDE_POSES.sp035?.find(p => p.age === 'juvenile' && !p.flight);
+assert.ok(vinkJuvenilePose?.image === '/assets/species/plumage/sp035-juv-review.webp',
+  'F2-17: must refer to the actual registered Vink juvenile pose photo');
+assert.ok(vinkJuvenilePose?.author && vinkJuvenilePose?.license && vinkJuvenilePose?.source,
+  'F2-17: juveniele pose moet oorspronkelijke fotograaf, licentie en bron hebben');
+console.log('F2-17: three paired resting comparisons and VBN text; original-to-WebP inspection remains NOT TESTED');
+
 console.log(`QA-SPECHTEN-BYTES: ${reviewedSpechtenFiles} current files have distinct WebP bytes; near-duplicates NOT PROVEN`);

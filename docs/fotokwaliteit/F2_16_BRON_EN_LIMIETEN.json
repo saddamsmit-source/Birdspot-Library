@@ -211,9 +211,9 @@
   ],
   "restore": "Keep F2-15 base unchanged. Revert or close this draft PR on its isolated branch without touching main or preview.",
   "nextBatch": [
-    "sp039 Keep",
+    "sp039 Kneu",
     "sp041 Appelvink",
-    "sp042 Kneu"
+    "sp042 Roodmus"
   ],
   "proposedNextBatchNote": "Verify these are next still-unreviewed photographed species against the current F2 register before starting.",
   "ciLearning": {
@@ -231,5 +231,21 @@
       "status": "RETEST_REQUIRED",
       "notAProductRegressionClaim": "Existing UI card behavior was not altered. This is a selector/interaction-path update after the new comparison group changed sort order."
     }
+  },
+  "nextBatchCorrection": {
+    "date": "2026-11-14",
+    "old": [
+      "sp039 Keep",
+      "sp041 Appelvink",
+      "sp042 Kneu"
+    ],
+    "new": [
+      "sp039 Kneu",
+      "sp041 Appelvink",
+      "sp042 Roodmus"
+    ],
+    "evidence": "assets/species/credits.json, sp039/sp041/sp042",
+    "status": "CORRECTED",
+    "note": "Keep historic mislabel as provenance; no changed species IDs or photos."
   }
 }

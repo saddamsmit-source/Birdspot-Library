@@ -65,7 +65,11 @@ for (const {birds, tip, flight} of GUIDE_COMPARISONS) {
     }
     if (bird.textOnly === true) continue;
     const photo = GUIDE_PLUMAGE[id]?.[plumage];
-    checkPhoto(id, !plumage || photo?.reuseGuidePhoto ? GUIDE_PHOTOS[id] : photo);
+    // Some real, source-registered age photos are held under GUIDE_POSES, not
+    // GUIDE_PLUMAGE (sp035 juvenile). Resolve the actual image used by the UI
+    // and apply the same strict local-file, author, licence and source checks.
+    const resolvedPose = plumage && !photo ? comparisonPhoto(bird, false) : null;
+    checkPhoto(id, !plumage || photo?.reuseGuidePhoto ? GUIDE_PHOTOS[id] : (photo || resolvedPose));
   }
 }
 
