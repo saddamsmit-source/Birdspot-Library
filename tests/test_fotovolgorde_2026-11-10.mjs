@@ -205,6 +205,41 @@ assert.equal(byId.get('sp060').plumage.juv, null,
 assert.ok(byId.get('sp060').fieldmarks.includes('zonder afgetekend petje'),
   'F2-23 Garden Warbler lacks strongly marked cap');
 
+// F2-24: compare only actual resting images in two-way panels, not adult photos passed off as juveniles.
+for (const [label, ids, images] of [
+  ['Braamsluiper en Tuinfluiter · kop en zang in rust', ['sp062', 'sp060'], ['sp062.webp', 'sp060.webp']],
+  ['Witte en Gele Kwikstaart · volwassen in rust', ['sp068', 'sp069'], ['sp068.webp', 'sp069.webp']],
+]) {
+  const entries = GUIDE_COMPARISONS.filter(e => e.label === label);
+  assert.equal(entries.length, 1, `F2-24 missing/duplicated pair: ${label}`);
+  assert.deepEqual(entries[0].birds.map(bird => bird.id), ids, `F2-24 wrong partner IDs: ${label}`);
+  assert.equal(entries[0].rows?.length, 3, `F2-24 three useful distinction rows required: ${label}`);
+  for (const id of ids) {
+    const html = recognitionPanel(byId.get(id));
+    const panels = html.split('<div class="sd-cmp-panel"').slice(1);
+    assert.ok(panels.some(panel =>
+      !panel.startsWith(' data-cmp-panel data-cmp-flight') &&
+      images.every(image => panel.includes(image))),
+      `F2-24 two registered resting photos required from ${id}: ${label}`);
+  }
+}
+const youngWagtails = GUIDE_COMPARISONS.find(e => e.label === 'Witte en Gele Kwikstaart · jonge vogels');
+assert.ok(youngWagtails?.birds.every(bird => bird.photoMissing),
+  'F2-24 no source-verified White/Yellow Wagtail juveniles pair: do not show adult photos as young');
+for (const id of ['sp068', 'sp069']) {
+  const html = recognitionPanel(byId.get(id));
+  const panels = html.split('<div class="sd-cmp-panel"').slice(1);
+  assert.ok(panels.some(panel => panel.includes('Nog geen passende foto') &&
+    panel.includes('Witte Kwikstaart') && panel.includes('Gele Kwikstaart')),
+    `F2-24 age comparisons must clearly indicate missing juvenile photos: ${id}`);
+}
+assert.equal(byId.get('sp062').plumage.juv, null,
+  'F2-24 no independently verified Lesser Whitethroat juvenile detail');
+assert.ok((GUIDE_POSES.sp068 || []).some(photo => photo.flight),
+  'F2-24 previously verified White Wagtail flight must remain');
+assert.ok(!(GUIDE_POSES.sp069 || []).some(photo => photo.flight),
+  'F2-24 Yellow Wagtail landing photo cannot enter true-flight role');
+
 const youngTits = GUIDE_COMPARISONS.find(entry => entry.label === 'Matkop en Glanskop · jonge vogels');
 assert.deepEqual(youngTits.birds.map(({id, plumage}) => [id, plumage]), [['sp031', 'juv'], ['sp032', 'juv']]);
 for (const id of ['sp031', 'sp032']) {
