@@ -166,7 +166,8 @@
     "No independent ornithologist has verified each local image's individual identity, molt, age or sex. All three main photos are sex- and age-neutral.",
     "ANWB per-species reference passages and exact age determination are NOT TESTED.",
     "Fluiter reference audio not registered in current GUIDE_AUDIO; no assumed sound file; investigate licensed recording later.",
-    "Real-device Android/iOS interaction, offline new sightings, ZIP restore second phone, integrated PR stack, public preview, privacy and rollback NOT TESTED / release BLOCKED."
+    "Real-device Android/iOS interaction, offline new sightings, ZIP restore second phone, integrated PR stack, public preview, privacy and rollback NOT TESTED / release BLOCKED.",
+    "New 2026-11-14 source-visual comparison: sp056 original 960px preview and sp057 original JPEG show same photographic scenes as local WebPs. sp058 source-to-local visual identity still open. None establishes original-to-WebP pixel/hash parity or image rights release."
   ],
   "scopeGuard": "No binary media, audio, local keys, storage, serviceworker, GPS handling, photo attribution or main branch altered.",
   "evidenceInterpretation": "Code/CI can verify registered photos, layout, source fields and tests, but cannot independently certify zoological photo identity, rights compliance or a physical-device user flow.",
@@ -199,6 +200,36 @@
       "sp056-flight.webp",
       "sp058-flight.webp"
     ],
-    "note": "Read-only binary inspection worked using GitHub fetch_file(base64). This supersedes the earlier assumption that the connector can inspect UTF-8 only. Source JPEG file was not independently opened as pixels and WebP-transformation/hash parity is still open."
+    "note": "Read-only binary inspection worked using GitHub fetch_file(base64). This supersedes the earlier assumption that the connector can inspect UTF-8 only. Source JPEG file was not independently opened as pixels and WebP-transformation/hash parity is still open.",
+    "sourceSceneComparison": {
+      "status": "PARTIALLY TESTED — photograph-scene correspondence seen on visually inspected source JPEG or Wikimedia JPEG thumbnail; exact original-to-processed-WebP pixel equivalence, derivative transform and byte/hash parity remain NOT TESTED",
+      "observations": [
+        {
+          "id": "sp056",
+          "local": "/assets/species/sp056.webp",
+          "originalPage": "https://commons.wikimedia.org/wiki/File:Common_Chiffchaff_2025_04_04_01.jpg",
+          "sourceSeen": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Common_Chiffchaff_2025_04_04_01.jpg/960px-Common_Chiffchaff_2025_04_04_01.jpg",
+          "sourceKind": "960px Wikimedia JPEG thumbnail",
+          "result": "Visually same perched bird, orientation, twig and background as sp056.webp; not full original-byte/pixel parity"
+        },
+        {
+          "id": "sp057",
+          "local": "/assets/species/sp057.webp",
+          "originalPage": "https://commons.wikimedia.org/wiki/File:Willow_Warbler_Phylloscopus_trochilus.jpg",
+          "sourceSeen": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Willow_Warbler_Phylloscopus_trochilus.jpg",
+          "sourceKind": "original source JPEG displayed",
+          "result": "Visually same singing bird, blue sky, branches and pose as sp057.webp; exact derivative/crop/hash parity not computed"
+        },
+        {
+          "id": "sp058",
+          "local": "/assets/species/sp058.webp",
+          "originalPage": "https://commons.wikimedia.org/wiki/File:Phylloscopus_sibilatrix_Wood_Warbler_WOWA_Waldlaubs%C3%A4nger_MD284.jpg",
+          "sourceSeen": null,
+          "sourceKind": "source metadata page only",
+          "result": "Original image scene not visually compared with local WebP; exact content identity NOT TESTED"
+        }
+      ],
+      "limitation": "Photographs identified by metadata may be misidentified; these observations do not provide independent biological age/sex verification or licensing compliance."
+    }
   }
 }
