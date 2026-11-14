@@ -115,7 +115,10 @@ for (const e of GUIDE_COMPARISONS.filter(x => x.flight)) for (const b of e.birds
   assert.ok(b.marks, `VC-06 ${b.id} vergelijkingstekst verdwenen`);
   const other = e.birds.find(x => x.id !== b.id);
   const html = recognitionPanel(byId.get(other.id));
-  assert.ok(html.includes(`Nog geen foto van ${byId.get(b.id).nameNL}`), `VC-06 ${other.id}: ontbrekende foto van ${b.id} niet als zodanig getoond`);
+  const panels = html.split('<div class="sd-cmp-panel"').slice(1).filter(part => part.startsWith(' data-cmp-panel data-cmp-flight'));
+  const name = byId.get(b.id).nameNL;
+  assert.ok(panels.some(part => part.includes(`<strong>${name}</strong>`) && part.includes('Nog geen passende vluchtfoto')),
+    `VC-06 ${other.id}: ontbrekende foto van ${b.id} niet als zodanig getoond`);
 }
 console.log('VC-06 OK — vergelijkingen met ontbrekende vluchtfoto behouden hun tekst en melden "Nog geen foto"');
 // VC-07 — beeldinhoud ⇔ vluchtlabel over álle gidsfoto's (FQA-01)

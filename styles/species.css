@@ -1043,12 +1043,17 @@
 }
 .sd-cmp-tab.is-active { background: var(--brand-mid); border-color: var(--brand-mid); color: var(--on-brand); }
 .sd-cmp-head {
-  display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-12);
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-12);
 }
-.sd-cmp-who { display: grid; align-content: start; gap: 2px; min-width: 0; }
+.sd-cmp-who {
+  display: grid; grid-template-rows: subgrid; grid-row: span 3;
+  align-content: start; row-gap: 2px; min-width: 0; overflow-wrap: anywhere;
+}
 .sd-cmp-who strong { color: var(--ink); font-size: var(--fs-body); }
 .sd-cmp-who small { color: var(--ink-2); font-size: var(--fs-meta); }
-.sd-cmp-who .sd-field-photo { margin-top: var(--space-8); }
+.sd-cmp-who .photo-info-frame { min-width: 0; margin-top: var(--space-8); }
+.sd-cmp-who .sd-field-photo { width: 100%; margin: 0; }
+.sd-cmp-who .photo-info__panel { max-width: 100%; overflow-wrap: anywhere; }
 .sd-cmp-ref {
   display: grid; place-items: center; min-height: 80px; margin-top: var(--space-8); padding: var(--space-8);
   border: 1px dashed var(--line); border-radius: var(--r-sm); color: var(--ink-2); font-size: var(--fs-meta);
@@ -1056,8 +1061,9 @@
 }
 .sd-cmp-rows { display: grid; gap: var(--space-8); }
 .sd-cmp-row {
-  display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8) var(--space-12);
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-8) var(--space-12);
   padding: var(--space-8) 0; border-top: 1px solid var(--line); font-size: var(--fs-meta); color: var(--ink);
+  overflow-wrap: anywhere;
 }
 .sd-cmp-row b { grid-column: 1 / -1; color: var(--ink-2); font-weight: 650; font-size: var(--fs-label); }
 .sd-cmp-tip {
@@ -1075,9 +1081,14 @@
   color: var(--ink-2); font-size: var(--fs-meta); font-weight: 600; cursor: pointer;
 }
 .sd-cmp-more > .sd-cmp-card { margin-top: var(--space-8); }
-@media (max-width: 420px) {
-  .sd-cmp-head { grid-template-columns: 1fr; }
+.sd-flight [data-flight-layout="compare"] {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-8);
 }
+.sd-flight [data-flight-layout="compare"] > .sd-plumage { display: block; min-width: 0; padding: var(--space-8); }
+.sd-flight [data-flight-layout="compare"] > .sd-plumage > svg { display: none; }
+.sd-flight [data-flight-layout="compare"] .sd-plumage-gallery { display: grid; grid-template-columns: minmax(0, 1fr); }
+.sd-flight [data-flight-layout="compare"] :is(.sd-plumage-photo, .photo-info-frame) { min-width: 0; }
+.sd-flight [data-flight-layout="compare"] .photo-info__panel { max-width: 100%; overflow-wrap: anywhere; }
 
 /* ── Kennisbaseline (proef 10-11-2026): Snel herkennen + Determinatie in detail ───────── */
 .kb-quick {

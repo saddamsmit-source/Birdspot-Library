@@ -18,10 +18,12 @@ const picturedSpecies = new Set([...Object.keys(GUIDE_PHOTOS), ...Object.keys(GU
 for (const s of SPECIES) {
   const {id} = s;
   const html = recognitionPanel(s);
-  const images = [...html.matchAll(/data-guide-image="([^"]+)"/g)].map(match => match[1]);
-  assert.equal(images.length, new Set(images).size, `Duplicate image within Herkenning: ${id}`);
+  const ownGuide = html.split('<section class="sd-similar"')[0];
+  const images = [...ownGuide.matchAll(/data-guide-image="([^"]+)"/g)].map(match => match[1]);
+  assert.equal(images.length, new Set(images).size, `Duplicate image in own guide sections: ${id}`);
   if (!picturedSpecies.has(id)) continue;
   const hero = guideHeroPhoto(id);
+  assert.ok(!images.includes(hero.image), `Hero repeated in own guide sections: ${id}`);
   assert.equal(hero?.latin, s.nameSci, `Wrong or missing main photo: ${id}`);
   const registered = [GUIDE_PHOTOS[id], ...Object.values(GUIDE_PLUMAGE[id] || {}), ...(GUIDE_POSES[id] || [])].filter(photo => photo?.image);
   const shown = new Set([hero.image, ...images]);
