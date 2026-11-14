@@ -1207,9 +1207,10 @@ export const GUIDE_COMPARISONS = [
     ],
     rows: [
       {label: 'Kop', values: ['Overwegend grijs bij volwassen vogels', 'Duidelijke lichte wenkbrauwstreep']},
-      {label: 'Flank en ondervleugel', values: ['Lichte ondervleugeldekveren', 'Roestrode flanken en ondervleugeldekveren']},
+      {label: 'Borstgrondkleur', values: ['Oranjegele tint met donkere vlekken', 'Witachtige grondkleur met donkere streping']},
+      {label: 'Flank', values: ['Geen opvallend koperrode flank', 'Duidelijke koperrode flank']},
     ],
-    tip: 'Controleer kop en flank samen. Bij een jonge Kramsvogel is de kop minder duidelijk grijs.',
+    tip: 'Controleer kop, borstgrondkleur en flank op de rustfoto. Jonge Kramsvogels zijn minder contrastrijk; ondervleugel is hier geen verplicht zichtbaar kenmerk.',
   },
   {
     label: 'Koperwiek en Zanglijster · volwassen',
@@ -1218,10 +1219,11 @@ export const GUIDE_COMPARISONS = [
       {id: 'sp046', source: 'zanglijster', marks: 'Minder opvallende wenkbrauw en donkere vlekken op de lichte onderzijde.'},
     ],
     rows: [
-      {label: 'Boven het oog', values: ['Brede lichte wenkbrauwstreep', 'Geen brede, opvallende lichte wenkbrauwstreep']},
-      {label: 'Flanken', values: ['Roestrode veerpartij', 'Licht met donkere vlekken']},
+      {label: 'Kop', values: ['Brede roomwitte wenkbrauw- en lichte mondstreep', 'Geen opvallend lichte oog- en mondstrepen']},
+      {label: 'Flanken', values: ['Koperrood, ook in rust vaak zichtbaar', 'Geen koperrode flankvlek']},
+      {label: 'Borst', values: ['Witachtig met sterke donkere streping', 'Lichte onderzijde met pijlpuntige vlekken']},
     ],
-    tip: 'Bekijk kop en flank samen. Bij een foto met tegenlicht kan de flankkleur moeilijk zichtbaar zijn.',
+    tip: 'Gebruik een scherpe zijfoto van kop én flank; de koperrode ondervleugel is geen vereiste voor determinatie in rust.',
   },
   {
     label: 'Kievit en Zilverplevier · volwassen',
@@ -1246,6 +1248,32 @@ export const GUIDE_COMPARISONS = [
       {label: 'Achternagel', values: ['Doorgaans langer', 'Doorgaans korter']},
     ],
     tip: 'Begin bij de flankstreping. Een scherpe zijfoto kan de nagel tonen. Bij twijfel helpt een duidelijke roep of zang.',
+  },
+  {
+    label: 'Zanglijster en Kramsvogel · volwassen in rust',
+    birds: [
+      {id: 'sp046', source: 'zanglijster', marks: 'Warmbruin van boven met een vrij egaal bruine kop, lichte borst en donkere, vaak pijlpuntige vlekken.'},
+      {id: 'sp047', source: 'kramsvogel', marks: 'Overwegend grijze kop en stuit, kastanjebruine mantel en oranjegele, gevlekte borst.'},
+    ],
+    rows: [
+      {label: 'Kop', values: ['Bruin zonder lichtgrijze kap', 'Grijs, contrasterend met de rug']},
+      {label: 'Borst', values: ['Licht met donkere pijlpuntige vlekken', 'Oranjegeel getint met donkere vlekken']},
+      {label: 'Rug en stuit', values: ['Egaal bruin', 'Bruine mantel en grijze stuit']},
+    ],
+    tip: 'Beoordeel de volledige vogel van opzij. Bij juvenielen zijn de kopkleuren minder uitgesproken; gebruik dan een apart jeugdvergelijkingspaar.',
+  },
+  {
+    label: 'Zanglijster en Kramsvogel · juvenielen in rust',
+    birds: [
+      {id: 'sp046', source: 'zanglijster', plumage: 'juv', marks: 'Jonge Zanglijster met warme bruine kop, lichte vlekken op rug en vleugeldekveren en gevlekte onderzijde.'},
+      {id: 'sp047', source: 'kramsvogel', plumage: 'juv', marks: 'Jonge Kramsvogel op tak met minder contrasterende grijsbruine kop, vale mantel en gevlekte borst.'},
+    ],
+    rows: [
+      {label: 'Kop', values: ['Vrij egaal warmbruin', 'Grijsbruin, minder uitgesproken dan adult']},
+      {label: 'Bovendelen', values: ['Lichte vlekjes op bruine veren', 'Valere tint en minder contrasterende kop/rug']},
+      {label: 'Gehele bouw', values: ['Doorgaans kleiner en compacter', 'Doorgaans groter en forser']},
+    ],
+    tip: 'Een jeugdkleed kan soorten meer op elkaar laten lijken. Combineer kop, bouw, borst en context; de twee oorspronkelijke foto's zijn bronbenoemd als juveniel.',
   },
   {
     label: 'Zanglijster en Kramsvogel · in vlucht',

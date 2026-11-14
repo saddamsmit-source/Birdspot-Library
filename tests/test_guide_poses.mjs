@@ -318,4 +318,37 @@ assert.match(species.get('sp044').fieldmarks, /Mannetje en vrouwtje zien er hetz
 assert.match(species.get('sp045').fieldmarks, /Jonge Merel/);
 console.log('F2-18: two juvenile/rest pairs plus female House Sparrow/Tree Sparrow; no new or re-approved flight photo');
 
+
+const f219Pairs = [
+  ['Zanglijster en Kramsvogel · volwassen in rust', [['sp046', undefined], ['sp047', undefined]]],
+  ['Zanglijster en Kramsvogel · juvenielen in rust', [['sp046', 'juv'], ['sp047', 'juv']]],
+];
+for (const [label, expected] of f219Pairs) {
+  const cmp = GUIDE_COMPARISONS.find(pair => pair.label === label);
+  assert.ok(cmp && cmp.flight !== true, 'F2-19: rustfotovergelijking ontbreekt: ' + label);
+  assert.deepEqual(cmp.birds.map(b => [b.id, b.plumage]), expected, label);
+  assert.equal(cmp.birds.length, 2, 'F2-19: two independent photos per pair required: ' + label);
+  assert.equal(cmp.rows?.length, 3, 'F2-19: three grounded contrast rows required: ' + label);
+}
+for (const id of ['sp046', 'sp047']) {
+  const html = recognitionPanel(species.get(id));
+  assert.ok(html.includes('sp046.webp') && html.includes('sp047.webp'),
+    'F2-19 adult Zanglijster/Kramsvogel resting pair must contain both registered photos, from ' + id);
+  assert.ok(html.includes('sp046-juv.webp') && html.includes('sp047-juv.webp'),
+    'F2-19 juvenile Zanglijster/Kramsvogel resting pair must contain both registered images, from ' + id);
+}
+const kop = GUIDE_COMPARISONS.find(e => e.label === 'Kramsvogel en Koperwiek · volwassen');
+const zg = GUIDE_COMPARISONS.find(e => e.label === 'Koperwiek en Zanglijster · volwassen');
+assert.ok(kop?.rows.some(r => r.label === 'Borstgrondkleur'));
+assert.ok(zg?.rows.some(r => r.label === 'Flanken'));
+assert.equal((GUIDE_POSES.sp048 || []).filter(p => p.flight).length, 0,
+  'F2-19: opvliegende Koperwiek mag niet als vrij-vluchtfoto worden gepresenteerd');
+assert.ok((GUIDE_POSES.sp046 || []).some(p => p.flight && /^goedgekeurd/.test(p.flightReview || '')));
+assert.ok((GUIDE_POSES.sp047 || []).some(p => p.flight && /^goedgekeurd/.test(p.flightReview || '')));
+assert.match(species.get('sp046').fieldmarks, /pijlpuntige/);
+assert.match(species.get('sp047').size.length, /22–27/);
+assert.equal(species.get('sp048').months, 'sep-mei');
+assert.equal(species.get('sp048').breeding, 'nee');
+console.log('F2-19: two resting adult/juvenile pairs, two refined comparisons and no new flight claims');
+
 console.log(`QA-SPECHTEN-BYTES: ${reviewedSpechtenFiles} current files have distinct WebP bytes; near-duplicates NOT PROVEN`);
