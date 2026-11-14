@@ -10,8 +10,8 @@
     "progressMethod": "Count 100 canonical audited items plus unique individually first-pass-reviewed canonical audited:false IDs; no duplicates. expectedFirstPass/expectedRemaining are cross-checks and must be updated together.",
     "nextGate": "When all 140 have initial documented review, independently and comprehensively reverify ALL 140; only afterwards work on species outside the group of 140.",
     "limits": "No source, license, age/sex or complete audit is promoted by this index. Do not alter canonical audited/verdict fields based on progress alone.",
-    "expectedFirstPass": 135,
-    "expectedRemaining": 5
+    "expectedFirstPass": 138,
+    "expectedRemaining": 2
   },
   "additionalFirstPass": [
     {
@@ -503,6 +503,48 @@
       "independentSexAge": "NOT TESTED",
       "fullKnowledgeReview": "NOT TESTED",
       "firstPassScope": "All actual registered Birdspot local WebPs were individually opened and visually reviewed; four original Commons photo pages separately supported their license/author; role checks limited; all other originals/pixel and derivative rights and full biology remain open."
+    },
+    {
+      "id": "sp187",
+      "nameNL": "Wilde Zwaan",
+      "batch": "M24",
+      "photosSeen": 1,
+      "reviewDocument": "docs/fotokwaliteit/M24_ZWAAN_BIJENETER_KLAUWIER_2026-11-14_DRAFT.md",
+      "reviewPR": null,
+      "evidenceCommit": "800227c7edd47949e802bf5983d7df428ddd8949",
+      "status": "PARTIALLY TESTED",
+      "originalRights": "NOT TESTED",
+      "independentSexAge": "NOT TESTED",
+      "fullKnowledgeReview": "NOT TESTED",
+      "firstPassScope": "One guide hero per species visually compared with the corresponding original, and original author/license declarations read; an additional distinct Bijeneter Home-only source was inspected outside the guide photo count. Full reuse/credit UI, independent sex/age and knowledge checks remain open."
+    },
+    {
+      "id": "sp257",
+      "nameNL": "Bijeneter",
+      "batch": "M24",
+      "photosSeen": 1,
+      "reviewDocument": "docs/fotokwaliteit/M24_ZWAAN_BIJENETER_KLAUWIER_2026-11-14_DRAFT.md",
+      "reviewPR": null,
+      "evidenceCommit": "800227c7edd47949e802bf5983d7df428ddd8949",
+      "status": "PARTIALLY TESTED",
+      "originalRights": "NOT TESTED",
+      "independentSexAge": "NOT TESTED",
+      "fullKnowledgeReview": "NOT TESTED",
+      "firstPassScope": "One guide hero per species visually compared with the corresponding original, and original author/license declarations read; an additional distinct Bijeneter Home-only source was inspected outside the guide photo count. Full reuse/credit UI, independent sex/age and knowledge checks remain open."
+    },
+    {
+      "id": "sp262",
+      "nameNL": "Grauwe Klauwier",
+      "batch": "M24",
+      "photosSeen": 1,
+      "reviewDocument": "docs/fotokwaliteit/M24_ZWAAN_BIJENETER_KLAUWIER_2026-11-14_DRAFT.md",
+      "reviewPR": null,
+      "evidenceCommit": "800227c7edd47949e802bf5983d7df428ddd8949",
+      "status": "PARTIALLY TESTED",
+      "originalRights": "NOT TESTED",
+      "independentSexAge": "NOT TESTED",
+      "fullKnowledgeReview": "NOT TESTED",
+      "firstPassScope": "One guide hero per species visually compared with the corresponding original, and original author/license declarations read; an additional distinct Bijeneter Home-only source was inspected outside the guide photo count. Full reuse/credit UI, independent sex/age and knowledge checks remain open."
     }
   ]
 }
