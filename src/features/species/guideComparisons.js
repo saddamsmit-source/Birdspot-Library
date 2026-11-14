@@ -1311,12 +1311,50 @@ export const GUIDE_COMPARISONS = [
     tip: 'Twee gespikkelde jonge vogels zijn niet altijd met één foto zeker te onderscheiden. Gebruik snavel, vleugel, hele bouw en eventueel oudervogels of geluid; leefgebied alleen is onvoldoende.',
   },
   {
+    label: 'Roodborsttapuit en Roodborst · vrouwtje en volwassen vogel in rust',
+    birds: [
+      {id: 'sp053', source: 'roodborsttapuit', plumage: 'adult_f', marks: 'Vrouwtje Roodborsttapuit met bruine kop, oranje borst en een lichte vleugeltekening.'},
+      {id: 'sp050', source: 'roodborst', marks: 'Volwassen Roodborst met oranjerood gezicht én borst; man en vrouw hebben hetzelfde kleed.'},
+    ],
+    rows: [
+      {label: 'Oranje', values: ['Vooral op de borst, bruin gezicht', 'Ook op het hele gezicht en de keel']},
+      {label: 'Vleugel', values: ['Witte vleugelvlekjes bij het vrouwtje', 'Effen bruine vleugel zonder dezelfde opvallende vlekjes']},
+    ],
+    tip: 'De oranje borst alleen is onvoldoende. Kijk naar het gezicht en de gevouwen vleugel; deze vergelijking gebruikt bestaande rustfoto’s.',
+  },
+  {
     label: 'Roodborst en Heggenmus · volwassen',
     birds: [
       {id: 'sp050', source: 'roodborst', marks: 'Oranjerood gezicht en borst, met een overwegend effen bruine rug.'},
       {id: 'sp054', source: 'heggenmus', marks: 'Blauwgrijze kop en borst, met bruin gestreepte rug.'},
     ],
     tip: 'Bekijk borst en rug samen. Een juveniele Roodborst heeft nog geen oranjerode borst.',
+  },
+  {
+    label: 'Heggenmus en Huismus · vrouwtje Huismus in rust',
+    birds: [
+      {id: 'sp054', source: 'heggenmus', marks: 'Fijne, spitse snavel en blauwgrijze kop en borst. De gestreepte bruine rug is geen onderscheid op zichzelf.'},
+      {id: 'sp043', source: 'huismus', plumage: 'adult_f', marks: 'Vrouwtje met forse kegelsnavel, lichtbruine kop en zichtbare lichte wenkbrauwstreep.'},
+    ],
+    rows: [
+      {label: 'Snavel', values: ['Smalle, puntige insecteneterssnavel', 'Stevige, korte kegelvormige zaadeterssnavel']},
+      {label: 'Kop', values: ['Blauwgrijs bij volwassen vogels', 'Lichtbruin met lichte wenkbrauwstreep']},
+      {label: 'Rug', values: ['Bruin gestreept', 'Ook bruin gestreept: niet doorslaggevend']},
+    ],
+    tip: 'Vergelijk vooral de snavel van opzij. De twee rustfoto’s mogen niet op afbeeldingsschaal worden vergeleken.',
+  },
+  {
+    label: 'Winterkoning en Heggenmus · in rust',
+    birds: [
+      {id: 'sp055', source: 'winterkoning', marks: 'Zeer compact, warmbruin en met een korte, vaak opgeheven staart en lichte wenkbrauw.'},
+      {id: 'sp054', source: 'heggenmus', marks: 'Slanker met blauwgrijze kop en borst, bruin gestreepte rug en langer ogende staart.'},
+    ],
+    rows: [
+      {label: 'Staart', values: ['Kort, vaak opvallend opgericht', 'Relatief langer, meestal niet recht omhoog']},
+      {label: 'Kop en borst', values: ['Warmbruin, lichte wenkbrauw', 'Overwegend grijzige kop en borst']},
+      {label: 'Bouw', values: ['Rond en zeer compact', 'Slanker en groter']},
+    ],
+    tip: 'Beoordeel een vogel aan houding, kop en staart; foto-uitsnedes zijn geen betrouwbare maatvergelijking.',
   },
   {
     label: 'Winterkoning en Boomkruiper · veldkenmerken',

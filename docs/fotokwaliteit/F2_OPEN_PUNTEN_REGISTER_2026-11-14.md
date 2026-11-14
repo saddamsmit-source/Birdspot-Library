@@ -72,11 +72,15 @@ De tekst in de kolom 'Open uit bronronde' is overgenomen uit de laatste F2-voort
 | sp050 Roodborst | F2-20 | Juvenielenbron **Caroline Legg CC BY 2.0** en vergelijkings-juveniel Roodborsttapuit **Vcebollada CC BY-SA 4.0** geopend. Roodborst-opvliegfoto blijft niet-vlucht. De twee lokale WebP-rollen zijn **NOT TESTED op originele pixels/individuen**; jongen niet op één vlek determineren. |
 | sp051 Zwarte Roodstaart | F2-20 | Mannetje **Luiz Lapa CC BY 2.0**, juveniel **Marie-Lan Taÿ Pamart CC BY 4.0** originele pagina nagezien. Oude vlucht archief, vrouwtje/juveniel apart geregistreerd. Gekraagde-mannetjefoto in vergelijking en alle lokale WebP's vereisen nog individuele pixel-/creditcontrole. |
 
+| sp053 Roodborsttapuit | F2-21 | Originele Commons-metadata vrouw **Caroline Legg CC BY 2.0** en juveniel **Vcebollada CC BY-SA 4.0** gecontroleerd; lokaal WebP-pixelbeeld, mannetjesbron, onafhankelijke geslachts-/juvenielidentificatie, overige mediarechten en echte toestelweergave **NOT TESTED**. ANWB-passage niet beschikbaar. Nieuw rustpaar vrouw tegenover volwassen Roodborst heeft twee geregistreerde foto's. |
+| sp054 Heggenmus | F2-21 | Originele Commons-metadata hoofdfoto **Hobbyfotowiki CC0**; lokale WebP-match en alle leeftijd-/geslachtslabels **NOT TESTED**. Bestaande neutrale hoofdfoto getoond naast vrouwtje Huismus en Winterkoning, zonder nieuwe geslachts-/vluchtclaim. |
+| sp055 Winterkoning | F2-21 | Originele Commons-metadata hoofdfoto **Alexis Lours CC BY 4.0**, juveniel **Caroline Legg CC BY 4.0** (leeftijd fotograaf), lokale WebP-match en onafhankelijke leeftijds-/kwaliteitscontrole **NOT TESTED**. Nieuw rustpaar met Heggenmus; geen nieuwe vluchtfoto. |
+
 ## Vervolgcontrole en aftekening
 
 1. Bij een volgende F2-ronde: controleer alleen de drie gekozen soorten op oorspronkelijke bestanden/CC-rechten, soort/rol, fotokwaliteit, twee passende vergelijkingbeelden en browserbediening; noteer de individuele status en bronlinks.
 2. Werk dit register additief bij: verander een open punt pas in **VERIFIED** na herhaalbare nieuwe bron-/beeld- en uitvoerbewijzen. Laat historische onzekerheid staan met datum en reden; geen stille aftekening op basis van 140 kaart-renders.
-3. **Niet gereviewd in F2:** 89 soorten. Volgorde na F2-16 opnieuw afleiden uit de 140-fotolijst en F2-voortgang; geen ongeteste soorten starten vóór een passende batch.
+3. **Niet gereviewd in F2:** 86 soorten. De individuele F2-controle omvat 54 van de oorspronkelijke 140 fotokaarten; een aparte bron-/WebP-/toestel-PASS blijft per soort nodig. Volgorde na F2-16 opnieuw afleiden uit de 140-fotolijst en F2-voortgang; geen ongeteste soorten starten vóór een passende batch.
 4. Later diepgaand fotoonderzoek: per open beeldtype minimaal soortnaam/wetenschappelijke naam, doelkleed, foto-oorsprong, ondertitel, auteur, licentie, bronbestand/versie, vrijgave voor herpublicatie en indien passend exacte oorspronkelijke pixels. Bij twijfel lege positie laten staan.
 
 ## Live-/release-gate — aparte status
