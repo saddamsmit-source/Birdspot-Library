@@ -10,6 +10,7 @@ import hashlib
 import json
 import threading
 from playwright.sync_api import expect, sync_playwright
+from birdspot_f1_progress import historical_audit_status
 from test_pilot_offline_new_sighting import ROOT, Quiet, Server, boot
 from test_plumage_compare_layout import open_species
 
@@ -49,10 +50,7 @@ def check_progress_and_policy():
     index = read("docs/fotokwaliteit/F1_VOORTGANG_TOT_140.json")
     norm = (ROOT / "docs/BIRDSPOT_KWALITEITSNORM.md").read_text(encoding="utf-8")
     assert len(canon["species"]) == 140
-    previously = {x["id"] for x in canon["species"] if x["audited"]}
-    pending = {x["id"] for x in canon["species"] if not x["audited"]}
-    assert len(previously) == index["_meta"]["baselineAudited"] == 100
-    assert len(pending) == index["_meta"]["expectedCanonicalUnreviewed"] == 40
+    previously, pending = historical_audit_status(canon["species"], index)
     f1 = index["additionalFirstPass"]
     ids = [x["id"] for x in f1]
     assert len(f1) >= 35 and len(ids) == len(set(ids))
@@ -89,7 +87,7 @@ def check_progress_and_policy():
               "3. werkelijke houding", "4. herkomst en fotograaf;",
               "5. licentie en herpublicatierechten;", "6. voldoende kwaliteit"):
         assert x in norm
-    print(f"M23 F1 PASS: {count}/140 initial, {140-count} open, canon 100/140 untouched; all original photo rules retained")
+    print(f"M23 F1 PASS: {count}/140 initial, {140-count} open, historical baseline 100/140; all original photo rules retained")
 
 
 def webp_digest(path):

@@ -11,6 +11,7 @@ import json
 import threading
 
 from playwright.sync_api import expect, sync_playwright
+from birdspot_f1_progress import historical_audit_status
 from test_pilot_offline_new_sighting import ROOT, Quiet, Server, boot
 from test_plumage_compare_layout import open_species
 
@@ -76,10 +77,7 @@ def check_f1():
     official = load("docs/fotokwaliteit/soortaudit-status.json")
     ledger = load("docs/fotokwaliteit/F1_VOORTGANG_TOT_140.json")
     assert len(official["species"]) == 140
-    audited = {x["id"] for x in official["species"] if x["audited"]}
-    unreviewed = {x["id"] for x in official["species"] if not x["audited"]}
-    assert len(audited) == ledger["_meta"]["baselineAudited"] == 100
-    assert len(unreviewed) == ledger["_meta"]["expectedCanonicalUnreviewed"] == 40
+    audited, unreviewed = historical_audit_status(official["species"], ledger)
     additional = ledger["additionalFirstPass"]
     ids = [x["id"] for x in additional]
     assert len(additional) >= 26 and len(ids) == len(set(ids))
@@ -102,7 +100,7 @@ def check_f1():
     assert {x["id"]:x["photosSeen"] for x in additional if x["batch"]=="M20"} == {
         "sp058":2,"sp060":1,"sp062":1
     }
-    print(f"M20 F1 PASS: {count}/140 initial reviews, {140-count} open; official audit still 100/140")
+    print(f"M20 F1 PASS: {count}/140 initial reviews, {140-count} open; historical baseline 100/140")
 
 
 def fingerprint(path):

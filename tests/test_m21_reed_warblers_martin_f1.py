@@ -9,6 +9,7 @@ import json
 import threading
 
 from playwright.sync_api import expect, sync_playwright
+from birdspot_f1_progress import historical_audit_status
 from test_pilot_offline_new_sighting import ROOT, Quiet, Server, boot
 from test_plumage_compare_layout import open_species
 
@@ -58,10 +59,7 @@ def check_f1_and_original_rules():
                      "6. voldoende kwaliteit"):
         assert required in norm
     assert len(canon["species"]) == 140
-    audited = {x["id"] for x in canon["species"] if x["audited"]}
-    pending = {x["id"] for x in canon["species"] if not x["audited"]}
-    assert len(audited) == ledger["_meta"]["baselineAudited"] == 100
-    assert len(pending) == ledger["_meta"]["expectedCanonicalUnreviewed"] == 40
+    audited, pending = historical_audit_status(canon["species"], ledger)
     added = ledger["additionalFirstPass"]
     ids = [x["id"] for x in added]
     assert len(added) >= 29 and len(ids) == len(set(ids))
@@ -84,7 +82,7 @@ def check_f1_and_original_rules():
     assert {x["id"]: x["photosSeen"] for x in added if x["batch"] == "M21"} == {
         "sp108":2,"sp110":2,"sp116":2
     }
-    print(f"M21 F1 PASS: {count}/140 initial reviews, {140-count} remaining; official 9-point audit still 100/140")
+    print(f"M21 F1 PASS: {count}/140 initial reviews, {140-count} remaining; historical baseline 100/140")
 
 
 def webp_sha(path):

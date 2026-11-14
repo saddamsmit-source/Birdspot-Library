@@ -8,6 +8,7 @@ import hashlib
 import json
 import threading
 from playwright.sync_api import expect, sync_playwright
+from birdspot_f1_progress import historical_audit_status
 
 from test_pilot_offline_new_sighting import ROOT, Quiet, Server, boot
 from test_plumage_compare_layout import open_species
@@ -47,10 +48,7 @@ def check_f1():
     ledger = data("docs/fotokwaliteit/F1_VOORTGANG_TOT_140.json")
     rows = official["species"]
     assert len(rows) == 140
-    audited = {x["id"] for x in rows if x["audited"]}
-    pending = {x["id"] for x in rows if not x["audited"]}
-    assert len(audited) == ledger["_meta"]["baselineAudited"] == 100
-    assert len(pending) == ledger["_meta"]["expectedCanonicalUnreviewed"] == 40
+    audited, pending = historical_audit_status(rows, ledger)
     entries = ledger["additionalFirstPass"]
     ids = [x["id"] for x in entries]
     assert len(entries) >= 20 and len(ids) == len(set(ids))

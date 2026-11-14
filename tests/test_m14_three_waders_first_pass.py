@@ -10,6 +10,7 @@ import json
 import threading
 from pathlib import Path
 from playwright.sync_api import sync_playwright, expect
+from birdspot_f1_progress import historical_audit_status
 
 from test_pilot_offline_new_sighting import ROOT, Quiet, Server, boot
 from test_plumage_compare_layout import open_species
@@ -31,10 +32,7 @@ def first_pass_progress():
     ledger = json.loads(FIRST_PASS.read_text(encoding="utf-8"))
     rows = status["species"]
     assert len(rows) == 140
-    audited = {row["id"] for row in rows if row["audited"]}
-    pending = {row["id"] for row in rows if not row["audited"]}
-    assert len(audited) == ledger["_meta"]["baselineAudited"] == 100
-    assert len(pending) == ledger["_meta"]["expectedCanonicalUnreviewed"] == 40
+    audited, pending = historical_audit_status(rows, ledger)
     entries = ledger["additionalFirstPass"]
     additional = [item["id"] for item in entries]
     assert len(additional) == ledger["_meta"]["expectedFirstPass"] - len(audited) and len(set(additional)) == len(additional)
@@ -54,7 +52,7 @@ def first_pass_progress():
     assert first_pass_count == ledger["_meta"]["expectedFirstPass"]
     assert 140 - first_pass_count == ledger["_meta"]["expectedRemaining"]
     assert "reverify ALL 140" in ledger["_meta"]["nextGate"]
-    print(f"M14 F1-PROGRESS PASS: {len(audited)} canonical audits + {len(additional)} separate first passes = {first_pass_count}/140 initially reviewed, {140-first_pass_count} remaining; full 9-point status unchanged")
+    print(f"M14 F1-PROGRESS PASS: {len(audited)} canonical audits + {len(additional)} separate first passes = {first_pass_count}/140 initially reviewed, {140-first_pass_count} remaining; historical baseline preserved")
 
 
 def check_assets():

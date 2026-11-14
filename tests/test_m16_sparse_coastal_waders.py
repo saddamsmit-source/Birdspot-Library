@@ -9,6 +9,7 @@ import json
 import threading
 from pathlib import Path
 from playwright.sync_api import expect, sync_playwright
+from birdspot_f1_progress import historical_audit_status
 
 from test_pilot_offline_new_sighting import ROOT, Quiet, Server, boot
 from test_plumage_compare_layout import open_species
@@ -31,10 +32,7 @@ def test_f1_count_and_authority():
     ledger = json.loads(F1.read_text(encoding="utf-8"))
     rows = official["species"]
     assert len(rows) == 140, "Canonical scope must stay at 140"
-    audited = {x["id"] for x in rows if x["audited"]}
-    pending = {x["id"] for x in rows if not x["audited"]}
-    assert len(audited) == ledger["_meta"]["baselineAudited"] == 100
-    assert len(pending) == ledger["_meta"]["expectedCanonicalUnreviewed"] == 40
+    audited, pending = historical_audit_status(rows, ledger)
     items = ledger["additionalFirstPass"]
     ids = [x["id"] for x in items]
     assert len(set(ids)) == len(ids), "No duplicated first-pass species"
