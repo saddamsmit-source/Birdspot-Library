@@ -16,9 +16,9 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
 $RepoUrl = 'https://github.com/saddamsmit-source/Birdspot-Library.git'
-$CandidateBranch = 'qa/birdspot-release-candidate-1.27.7-20261113'
-$ExpectedSha = '83c117447126b705cae1899f71e66d070a6084b9'
-$ExpectedVersion = '1.27.7'
+$CandidateBranch = 'qa/birdspot-release-candidate-1.27.10-20261114'
+$ExpectedSha = '1137f6f85de0624031c93835c4a5a79c821a0c82'
+$ExpectedVersion = '1.27.10'
 $Port = 8765
 
 function Assert-Tool([string]$Name) {
@@ -35,8 +35,8 @@ function Check-LastExit([string]$Operation) {
 
 if ($SelfCheck) {
     if ($ExpectedSha -notmatch '^[0-9a-f]{40}$') { throw 'Pinned commit must be exactly 40 hex characters.' }
-    if ($ExpectedVersion -ne '1.27.7') { throw 'Unexpected candidate version.' }
-    if ($CandidateBranch -ne 'qa/birdspot-release-candidate-1.27.7-20261113') { throw 'Unexpected test branch.' }
+    if ($ExpectedVersion -ne '1.27.10') { throw 'Unexpected candidate version.' }
+    if ($CandidateBranch -ne 'qa/birdspot-release-candidate-1.27.10-20261114') { throw 'Unexpected test branch.' }
     if ($Port -ne 8765) { throw 'Unexpected local test port.' }
     Write-Output 'PASS: pinned SHA, version and port; self-check made no network or filesystem changes.'
     exit 0
