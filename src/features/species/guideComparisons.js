@@ -292,6 +292,16 @@ export const GUIDE_COMPARISONS = [
     tip: 'Begin met de verhouding tussen staart, vleugelbreedte en kop. Gebruik daarna de staartbanden om je indruk te toetsen.',
   },
   {
+    label: 'Buizerd en Wespendief · vrouwtje Wespendief in vlucht',
+    flight: true,
+    tabLabel: 'In vlucht · Wespendief-vrouwtje',
+    birds: [
+      {id: 'sp005', source: 'buizerd', plumage: 'adult_m', marks: 'Brede vleugels met een vrij korte staart. Let op de fijne dwarsbanden over de staart.'},
+      {id: 'sp248', source: 'wespendief', plumage: 'adult_f', marks: 'Verder uitstekende kop, langere staart en donkere banden op de ondervleugel.'},
+    ],
+    tip: 'Vergelijk eerst kop en staart. Gebruik de vleugelbanden als extra aanwijzing wanneer de onderzijde goed zichtbaar is.',
+  },
+  {
     label: 'Buizerd en Wespendief · jonge vogels',
     flight: true,
     birds: [

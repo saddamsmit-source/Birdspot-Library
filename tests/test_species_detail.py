@@ -608,6 +608,11 @@ def main():
             print("H4-04 OK — jonge Sperwer/Havik (tab Juveniel, juiste borsttekening), vluchtvergelijking met Havik en Torenvalk")
 
             open_species("Buizerd", "sp005")
+            dark = p.locator('.sd-flight [data-guide-image$="sp005-flight-dark.webp"] img')
+            expect(dark).to_have_count(1)
+            dark.scroll_into_view_if_needed()
+            dark.evaluate("img => img.decode()")
+            expect(p.locator('[data-guide-image$="sp005-male-flight.webp"]')).to_have_count(0)
             regular_cards = p.locator('#sdPanel-herkenning section.sd-similar .sd-cmp-card')
             assert regular_cards.count() == 2
             rough_card = cmp_card("Ruigpootbuizerd")
@@ -627,6 +632,8 @@ def main():
             assert_photo_once("/assets/species/plumage/sp005-adult_m.webp")
             assert_photo_once("/assets/species/plumage/sp005-juv.webp")
             honey_card = cmp_card("Wespendief")
+            female_honey = cmp_tab(honey_card, "In vlucht · Wespendief-vrouwtje")
+            assert_photo_pair(female_honey, ["sp005-adult_m.webp", "sp248-adult_f.webp"], in_flight=True)
             young_honey = cmp_tab(honey_card, "In vlucht · Juveniel")
             assert_photo_pair(young_honey, ["sp005-juv.webp", "sp248-juv.webp"], in_flight=True)
             assert p.get_by_label("Alarmroep van Buizerd").count() == 1

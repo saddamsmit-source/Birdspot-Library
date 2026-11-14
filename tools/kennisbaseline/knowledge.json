@@ -3861,6 +3861,105 @@
       "checked": "2026-11-14",
       "certainty": "voldoende voor veldgidsband",
       "publisher": "European Landowners’ Organization"
+    },
+    "NAT_BUZ": {
+      "register": "F2 · roofvogels",
+      "label": "Naturalis — Buizerd",
+      "publisher": "Naturalis Biodiversity Center",
+      "url": "https://bris.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/nsr_taxon.php?cat=TAB_DESCRIPTION&id=112253",
+      "scope": "Europa",
+      "confirms": "lichaamslengte en spanwijdte; gewicht per geslacht (Dunning 1993)",
+      "edition": "Online gecontroleerd 14-11-2026",
+      "checked": "2026-11-14",
+      "certainty": "hoog"
+    },
+    "NAT_RPBUZ": {
+      "register": "F2 · roofvogels",
+      "label": "Naturalis — Ruigpootbuizerd",
+      "publisher": "Naturalis Biodiversity Center",
+      "url": "https://birds-europe.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/nsr_taxon.php?id=130493",
+      "scope": "Europa",
+      "confirms": "lengte, spanwijdte, witte staartbasis, donkere polsvlekken en bevederde poten",
+      "edition": "Online gecontroleerd 14-11-2026",
+      "checked": "2026-11-14",
+      "certainty": "hoog"
+    },
+    "NAT_WESPD": {
+      "register": "F2 · roofvogels",
+      "label": "Naturalis — Wespendief",
+      "publisher": "Naturalis Biodiversity Center",
+      "url": "https://bris.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/nsr_taxon.php?cat=TAB_DESCRIPTION&id=112235",
+      "scope": "Europa",
+      "confirms": "lichaamslengte en spanwijdte; gewicht per geslacht (Dunning 1993); vliegbeeld",
+      "edition": "Online gecontroleerd 14-11-2026",
+      "checked": "2026-11-14",
+      "certainty": "hoog"
+    },
+    "BTO_RPBUZ": {
+      "register": "F2 · roofvogels",
+      "label": "BTO — Ruigpootbuizerd",
+      "publisher": "British Trust for Ornithology",
+      "url": "https://www.bto.org/learn/about-birds/birdfacts/rough-legged-buzzard",
+      "scope": "Groot-Brittannië",
+      "confirms": "indicatief gewicht 1,1 kg; witte staartbasis, lichte kop en donkere buik bij lichte vogels",
+      "edition": "Online gecontroleerd 14-11-2026",
+      "checked": "2026-11-14",
+      "certainty": "hoog"
+    },
+    "BZ_BUZ": {
+      "register": "F2 · roofvogels",
+      "label": "Blasco-Zumeta & Heinze — Buizerd",
+      "publisher": "Sociedad de Ciencias Aranzadi",
+      "url": "https://www.blascozumeta.com/specie_files/02870_ENG_Buteo_buteo_aranzadi.pdf",
+      "scope": "Europa; veld- en ringkenmerken",
+      "confirms": "variabel kleed, vergelijkbare verenkleden van beide geslachten, leeftijd en iris",
+      "edition": "Online gecontroleerd 14-11-2026",
+      "checked": "2026-11-14",
+      "certainty": "hoog"
+    },
+    "BZ_WESPD": {
+      "register": "F2 · roofvogels",
+      "label": "Blasco-Zumeta & Heinze — Wespendief",
+      "publisher": "Sociedad de Ciencias Aranzadi",
+      "url": "https://blascozumeta.com/specie_files/02310_ENG_Pernis_apivorus_aranzadi.pdf",
+      "scope": "Europa; veld- en ringkenmerken",
+      "confirms": "kopkleur, geslachtsgebonden tekening, leeftijd, iris, snavelbasis en variabele staartbanden",
+      "edition": "Online gecontroleerd 14-11-2026",
+      "checked": "2026-11-14",
+      "certainty": "hoog"
+    },
+    "VS_WESPD": {
+      "register": "F2 · roofvogels",
+      "label": "Vogelskijken — Wespendief",
+      "publisher": "Pixfactory",
+      "url": "https://vogelskijken.nl/vogels-herkennen/zo-herken-je-de-wespendief/",
+      "scope": "Nederland",
+      "confirms": "kop, gele iris volwassen vogels, juveniele oogkleur en snavelbasis, ondervleugel en geslacht",
+      "edition": "Online gecontroleerd 14-11-2026",
+      "checked": "2026-11-14",
+      "certainty": "hoog"
+    },
+    "SOV_WESPD": {
+      "register": "F2 · roofvogels",
+      "label": "Sovon — Wespendief",
+      "publisher": "Sovon Vogelonderzoek Nederland",
+      "url": "https://stats.sovon.nl/stats/soort/2310",
+      "scope": "Nederland",
+      "confirms": "doortrek tot begin oktober, broedvoorkomen en nazomer",
+      "edition": "Online gecontroleerd 14-11-2026",
+      "checked": "2026-11-14",
+      "certainty": "hoog"
+    },
+    "VB_BW": {
+      "register": "F2 · roofvogels",
+      "label": "Vogelbescherming — Buizerd en Wespendief vergelijken",
+      "publisher": "Vogelbescherming Nederland",
+      "url": "https://www.vogelbescherming.nl/actueel/bericht/vogels-herkennen-buizerd-vs-wespendief",
+      "scope": "Nederland",
+      "confirms": "vleugelvorm, kop, staartverhouding en overlap bij jonge vogels",
+      "edition": "Online gecontroleerd 14-11-2026",
+      "checked": "2026-11-14",
+      "certainty": "hoog"
     }
   },
   "sp021": {
@@ -5515,6 +5614,24 @@
     },
     "critical": [
       {
+        "feature": "Staartbasis en bandering",
+        "where": "Onderzijde van de gespreide staart",
+        "this": "Meestal meerdere fijne dwarsbanden over een groot deel van de staart",
+        "other": "Ruigpootbuizerd: bij lichte vogels vormt de witte basis een duidelijk contrast met de donkere band(en) richting de punt",
+        "vs": [
+          "sp253"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Staart goed belicht en gespreid, vooral bij lichte vogels",
+        "exceptions": "Kleedvariatie, tegenlicht en een gesloten staart kunnen het patroon onduidelijk maken",
+        "supporting": "Vleugelslag, polsvlekken en bevedering van het loopbeen",
+        "sources": [
+          "VB_BVR",
+          "NAT_RPBUZ",
+          "BTO_RPBUZ"
+        ]
+      },
+      {
         "feature": "Kop",
         "where": "Kop in vlucht",
         "this": "Kort, breed en stomp",
@@ -5626,9 +5743,10 @@
       },
       {
         "id": "sp253",
-        "why": "Lichte buizerds worden vaak voor Ruigpootbuizerd aangezien; onderscheid nog niet uit bron uitgewerkt",
+        "why": "Vergelijk de verdeling van wit en de bandering over de hele staart. Kijk ook naar de vleugelslag.",
         "sources": [
-          "VB_BUIZ"
+          "VB_BVR",
+          "NAT_RPBUZ"
         ]
       },
       {
@@ -5667,13 +5785,60 @@
     ],
     "basis": {
       "size": {
-        "text": "Lengte 40–52 cm, spanwijdte 109–136 cm.",
+        "text": "Lengte ca. 45–55 cm, spanwijdte ca. 110–130 cm. Mannetje gemiddeld ca. 780 g en vrouwtje ca. 970 g (Naturalis, Dunning).",
+        "sources": [
+          "VB_BUIZ",
+          "NAT_BUZ"
+        ]
+      },
+      "biometrics": [
+        {
+          "field": "length",
+          "unit": "cm",
+          "display": "ca. 45–55 cm",
+          "values": [
+            {
+              "source": "VB_BUIZ",
+              "min": 40,
+              "max": 52
+            },
+            {
+              "source": "NAT_BUZ",
+              "min": 51,
+              "max": 57
+            }
+          ],
+          "note": "Afgeronde indicatie uit twee soortbeschrijvingen. De afbakening van de meetpopulatie is niet apart vermeld."
+        },
+        {
+          "field": "wingspan",
+          "unit": "cm",
+          "display": "ca. 110–130 cm",
+          "values": [
+            {
+              "source": "VB_BUIZ",
+              "min": 109,
+              "max": 136
+            },
+            {
+              "source": "NAT_BUZ",
+              "min": 113,
+              "max": 128
+            }
+          ],
+          "note": "Afgeronde indicatie uit twee soortbeschrijvingen. De afbakening van de meetpopulatie is niet apart vermeld."
+        }
+      ]
+    },
+    "habitat": [
+      {
+        "text": "Vaak in afwisselend landschap met bomen om te broeden en open land om te jagen. Ook in moerasbos, duinstruweel en stedelijk groen.",
         "sources": [
           "VB_BUIZ"
-        ]
+        ],
+        "kind": "voorkeur"
       }
-    },
-    "habitat": [],
+    ],
     "status": [
       {
         "kind": "voorkomen",
@@ -5711,6 +5876,13 @@
         "sources": [
           "VB_BUIZ"
         ]
+      },
+      {
+        "text": "Nederlandse broedvogels blijven veelal in eigen land. In de winter komen daar noordelijke vogels bij.",
+        "sources": [
+          "VB_BUIZ"
+        ],
+        "kind": "trek"
       }
     ],
     "discrepancies": [
@@ -5724,10 +5896,7 @@
         ]
       }
     ],
-    "open": [
-      "Onderscheid met Ruigpootbuizerd uit een bron uitwerken.",
-      "Leefgebied niet opnieuw gecontroleerd."
-    ]
+    "open": []
   },
   "sp002": {
     "summary": {
@@ -8310,7 +8479,7 @@
   },
   "sp248": {
     "summary": {
-      "text": "Buizerdachtige roofvogel met smalle, ver uitstekende kop en langere staart met drie dwarsbanden; zomergast die wespennesten uitgraaft.",
+      "text": "Zomergast die wespennesten uitgraaft. In silhouet vallen de smalle, uitstekende kop en lange staart op.",
       "sources": [
         "VB_WD",
         "BG_BUZZ"
@@ -8326,11 +8495,12 @@
         ]
       },
       {
-        "text": "Langere staart met drie dwarsbanden (vier bij jongen).",
-        "reliability": "ondersteunend",
+        "text": "Lange staart met donkere banden. De bandering kan vooral bij jonge vogels variëren.",
         "sources": [
-          "VB_WD"
-        ]
+          "VB_WD",
+          "BZ_WESPD"
+        ],
+        "reliability": "ondersteunend"
       },
       {
         "text": "Zweeft met vlakke, niet in een V gehouden vleugels; soepele slagen.",
@@ -8365,11 +8535,13 @@
         ],
         "reliability": "ondersteunend",
         "conditions": "Volwassen vogel in vlucht, goed zicht",
-        "exceptions": "Jonge Wespendieven hebben vier staartbanden en minder duidelijke tekening",
+        "exceptions": "Jonge vogels lijken sterker op Buizerd. De staartbanden van jonge Wespendieven kunnen talrijk zijn of zwak afsteken.",
         "supporting": "Vleugelhouding, iris (volwassen geel)",
         "sources": [
           "VB_WD",
-          "BG_BUZZ"
+          "BG_BUZZ",
+          "VB_BW",
+          "BZ_WESPD"
         ]
       },
       {
@@ -8387,6 +8559,24 @@
         "sources": [
           "VB_WD",
           "BG_BUZZ"
+        ]
+      },
+      {
+        "feature": "Oog en snavelbasis",
+        "where": "Kop van dichtbij of op een scherpe foto",
+        "this": "Volwassen man en vrouw hebben een gele iris. Bij juvenielen is de iris donker en is de snavelbasis vaak opvallend geel.",
+        "other": "Volwassen Buizerd: iris doorgaans bruin. Jonge Buizerds hebben vaak een lichtere iris.",
+        "vs": [
+          "sp005"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Oog en snavelbasis goed zichtbaar. Schat leeftijd mee.",
+        "exceptions": "Kopkleur en zicht op de iris hangen ook af van licht en kijkhoek.",
+        "supporting": "Kopvorm, ondervleugel, staart en verhoudingen combineren.",
+        "sources": [
+          "BZ_WESPD",
+          "VS_WESPD",
+          "BZ_BUZ"
         ]
       }
     ],
@@ -8414,6 +8604,13 @@
         "sources": [
           "VB_WD"
         ]
+      },
+      {
+        "text": "Bij volwassen mannetjes is de kop vaak blauwgrijs. Vrouwtjes hebben doorgaans een bruiner hoofd en een andere bandering op de ondervleugel. Gebruik meerdere kenmerken. Bij juvenielen is het geslacht niet betrouwbaar uit het kleed af te leiden.",
+        "sources": [
+          "BZ_WESPD",
+          "VS_WESPD"
+        ]
       }
     ],
     "voice": [
@@ -8427,11 +8624,50 @@
     ],
     "basis": {
       "size": {
-        "text": "Lengte 52–60 cm, spanwijdte 118–150 cm.",
+        "text": "Lengte ca. 50–60 cm, spanwijdte ca. 125–150 cm. Mannetje gemiddeld ca. 685 g en vrouwtje ca. 830 g (Naturalis, Dunning).",
         "sources": [
-          "VB_WD"
+          "VB_WD",
+          "NAT_WESPD"
         ]
-      }
+      },
+      "biometrics": [
+        {
+          "field": "length",
+          "unit": "cm",
+          "display": "ca. 50–60 cm",
+          "values": [
+            {
+              "source": "VB_WD",
+              "min": 52,
+              "max": 60
+            },
+            {
+              "source": "NAT_WESPD",
+              "min": 52,
+              "max": 60
+            }
+          ],
+          "note": "Afgeronde indicatie uit twee soortbeschrijvingen. De afbakening van de meetpopulatie is niet apart vermeld."
+        },
+        {
+          "field": "wingspan",
+          "unit": "cm",
+          "display": "ca. 125–150 cm",
+          "values": [
+            {
+              "source": "VB_WD",
+              "min": 118,
+              "max": 150
+            },
+            {
+              "source": "NAT_WESPD",
+              "min": 135,
+              "max": 150
+            }
+          ],
+          "note": "Afgeronde indicatie uit twee soortbeschrijvingen. De afbakening van de meetpopulatie is niet apart vermeld."
+        }
+      ]
     },
     "habitat": [
       {
@@ -8444,11 +8680,12 @@
     ],
     "status": [
       {
-        "kind": "voorkomen",
-        "text": "Zomergast; voorjaarstrek eind april–begin juni, najaarstrek eind juli–half september naar Afrika ten zuiden van de Sahara.",
+        "text": "Zomergast. De voorjaarstrek valt vooral in mei. De najaarstrek begint al in juli en kan in Nederland doorlopen tot begin oktober.",
         "sources": [
-          "VB_WD"
-        ]
+          "VB_WD",
+          "SOV_WESPD"
+        ],
+        "kind": "voorkomen"
       },
       {
         "kind": "aantal",
@@ -8479,13 +8716,18 @@
         "sources": [
           "VB_WD"
         ]
+      },
+      {
+        "text": "Overwintert ten zuiden van de Sahara. In Nederland kan najaarstrek tot begin oktober voorkomen.",
+        "sources": [
+          "VB_WD",
+          "SOV_WESPD"
+        ],
+        "kind": "trek"
       }
     ],
     "discrepancies": [],
-    "open": [
-      "Geslachtskenmerken (grijze kop man, oogkleur) nog uit een tweede bron vastleggen.",
-      "Vrouwtje in vlucht klein in beeld; vervanging gewenst."
-    ]
+    "open": []
   },
   "sp253": {
     "summary": {
@@ -8552,7 +8794,9 @@
         "supporting": "Polsvlekken, buikschild, bevederde poten, soepele vleugelslag",
         "sources": [
           "VB_BVR",
-          "VB_RPB"
+          "VB_RPB",
+          "NAT_RPBUZ",
+          "BTO_RPBUZ"
         ]
       },
       {
@@ -8616,20 +8860,60 @@
     ],
     "voice": [
       {
-        "kind": "roep",
-        "text": "Miauwende roep die lijkt op die van Buizerd. Vogelbescherming beschrijft de roep als in Nederland niet te horen.",
+        "text": "Miauwende roep die lijkt op de roep van Buizerd. In Nederlandse winterwaarnemingen is geluid doorgaans geen praktisch herkenningskenmerk.",
         "sources": [
           "VB_RPB"
-        ]
+        ],
+        "kind": "roep"
       }
     ],
     "basis": {
       "size": {
-        "text": "Lengte 45–63 cm, spanwijdte 120–153 cm.",
+        "text": "Lengte ca. 50–60 cm, spanwijdte ca. 120–150 cm. BTO geeft ca. 1,1 kg als algemene veldgidswaarde.",
         "sources": [
-          "VB_RPB"
+          "VB_RPB",
+          "NAT_RPBUZ",
+          "BTO_RPBUZ"
         ]
-      }
+      },
+      "biometrics": [
+        {
+          "field": "length",
+          "unit": "cm",
+          "display": "ca. 50–60 cm",
+          "values": [
+            {
+              "source": "VB_RPB",
+              "min": 45,
+              "max": 63
+            },
+            {
+              "source": "NAT_RPBUZ",
+              "min": 50,
+              "max": 60
+            }
+          ],
+          "note": "Afgeronde indicatie uit twee soortbeschrijvingen. De afbakening van de meetpopulatie is niet apart vermeld."
+        },
+        {
+          "field": "wingspan",
+          "unit": "cm",
+          "display": "ca. 120–150 cm",
+          "values": [
+            {
+              "source": "VB_RPB",
+              "min": 120,
+              "max": 153
+            },
+            {
+              "source": "NAT_RPBUZ",
+              "min": 120,
+              "max": 150
+            }
+          ],
+          "note": "Afgeronde indicatie uit twee soortbeschrijvingen. De afbakening van de meetpopulatie is niet apart vermeld."
+        }
+      ]
     },
     "habitat": [
       {
@@ -8675,7 +8959,7 @@
     ],
     "discrepancies": [],
     "open": [
-      "De drie iNaturalist-bronpagina’s konden tijdens de hercontrole niet opnieuw worden geopend. De fotolabels steunen op het vastgelegde bronbewijs van 9 november en zijn niet opnieuw tegen de oorspronkelijke annotaties bevestigd."
+      "Er is nog geen gelicentieerd referentiegeluid aan deze kaart gekoppeld."
     ]
   },
   "sp022": {

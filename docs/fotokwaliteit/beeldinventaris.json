@@ -222,16 +222,16 @@
    "decision": "goedgekeurd",
    "note": "FQA-01 beeldinventaris 10-11-2026: stond niet als vlucht geregistreerd maar toont echte vrije vlucht. Juveniel (bron: iNaturalist Life Stage: Juvenile); zweeft "
   },
-  "/assets/species/plumage/sp005-male-flight.webp": {
+  "/assets/species/plumage/sp005-flight-dark.webp": {
    "refs": [
     "sp005 GUIDE_POSES[1]"
    ],
-   "sha1": "f7460be6bc3f1bd6168a9cebf4306110e88e9385",
+   "sha1": "b99e563f018cf9b426f2023b7eabecf0c94063e9",
    "class": "vlucht",
    "airborne": true,
    "source": "vluchtcontrole",
-   "decision": "voorwaardelijk",
-   "note": "FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): in vlucht ja; licht onscherp, vogel klei"
+   "decision": "goedgekeurd",
+   "note": "Vrij vliegende Buizerd van onderen. Donker kleed, brede vleugels en korte gebandeerde staart zichtbaar. Leeftijd en geslacht onbevestigd."
   },
   "/assets/species/plumage/sp005-male-rest.webp": {
    "refs": [
