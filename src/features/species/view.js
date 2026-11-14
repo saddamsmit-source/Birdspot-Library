@@ -15,7 +15,7 @@ import { assetUrl } from '../../utils/assetUrl.js';
 import { getCollectionIds, toggleCollectionItem } from '../../storage/collections.js';
 
 import { GUIDE_PHOTOS } from './guidePhotos.js';
-import { closePhotoInfo, photoInfoMarkup } from '../../utils/photoInfo.js';
+import { closePhotoInfo, photoInfoMarkup, visiblePhotoCredit } from '../../utils/photoInfo.js';
 import { openPhotoViewer } from '../../utils/photoViewer.js';
 
 import { BREEDING_BEHAVIORS, methodLabel, sourceLabel } from '../sightings/evidence.js';
@@ -251,6 +251,7 @@ export function renderSpecies(el, { speciesId } = {}) {
               <span>${s.icon}</span>
             </span>
             <span class="species-recent-chip__name">${escHtml(s.nameNL)}</span>
+            ${visiblePhotoCredit(GUIDE_PHOTOS[s.id])}
           </button>`;
         }).join('')}
       </div>
@@ -396,6 +397,7 @@ function speciesRow(s, seenIds, favorites = getCollectionIds("species")) {
       <div class="species-row__body">
         <button class="species-row__name" type="button">${escHtml(s.nameNL)}</button>
         <div class="species-row__sci">${escHtml(s.nameSci)}</div>
+        ${visiblePhotoCredit(GUIDE_PHOTOS[s.id])}
       </div>
       <span class="species-row__rarity ${secondary ? 'signature-species-category' : rm?.cls || 'signature-species-category'}">${escHtml(badge)}</span>
       <button class="signature-species-star ${favorites.has(s.id) ? "is-on" : ""}"

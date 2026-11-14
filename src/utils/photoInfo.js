@@ -14,13 +14,20 @@ function link(url, label) {
     escHtml(label);
 }
 
+export function visiblePhotoCredit(photo) {
+  return photo?.visibleCredit ?
+    `<small class="photo-visible-credit">${escHtml(photo.visibleCredit)}</small>` : '';
+}
+
 export function photoInfoMarkup(photo) {
   if (!photo?.author || !photo.license) return '';
   const changes = photo.modifications?.startsWith('Resized to max') ?
     (photo.modifications.includes('no crop') ? 'Verkleind en omgezet naar WebP zonder uitsnede' :
       'Verkleind en omgezet naar WebP') : photo.modifications;
   return `<details class="photo-info">
-    <summary title="Foto-informatie" aria-label="Foto-informatie"><span aria-hidden="true">i</span></summary>
+    <summary title="Foto-informatie" aria-label="Foto-informatie${photo.visibleCredit ? ': ' + escHtml(photo.visibleCredit) : ''}">
+      <span aria-hidden="true">i</span>${visiblePhotoCredit(photo)}
+    </summary>
     <div class="photo-info__panel">
       <span class="photo-info__title">Foto-informatie</span>
       ${photo.file ? `<span>${escHtml(photo.file)}</span>` : ''}

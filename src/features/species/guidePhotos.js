@@ -1967,6 +1967,7 @@ export const GUIDE_PHOTOS = Object.freeze({
     "alt": "Ooievaar — Volledige vogel in vlucht. Witte romp, zwarte slagpennen, lange hals en rode snavel en poten.",
     "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/ooievaar",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "visibleCredit": "Carlos Delgado; CC-BY-SA",
     "flight": true
   },
   "sp225": {
