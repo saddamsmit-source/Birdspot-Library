@@ -194,5 +194,12 @@
     "sp038 Sijs",
     "sp040 Goudvink"
   ],
-  "restore": "Close draft PR; original F2-14 head is immutable base, production and preview unchanged."
+  "restore": "Close draft PR; original F2-14 head is immutable base, production and preview unchanged.",
+  "ciLearning": {
+    "symptom": "CI failure on first F2-15 head c371445b: tests/test_fotovolgorde_2026-11-10.mjs:97 expected 21 juvenile comparison entries, observed 22.",
+    "cause": "A hard-coded coverage assertion was not updated when adding a legitimate new juvenile pair.",
+    "fix": "Set exact expected count to 22 and explicitly assert that the additional sp063/sp064 juvenile pair has both correct IDs and roles. Keep all original per-card photo/pose assertions.",
+    "proof": "GitHub workflow run 43630519538 completed failure at initial SHA. Retest must run on the new SHA; no PASS claimed from the initial run.",
+    "prevention": "When adding approved comparisons, update exact-count coverage and tie new count to a specific evidence-backed comparison; keep negative photo/pose checks unchanged."
+  }
 }
