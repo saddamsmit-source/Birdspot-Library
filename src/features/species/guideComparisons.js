@@ -1092,6 +1092,32 @@ export const GUIDE_COMPARISONS = [
     tip: 'Vergelijk snavelvorm en vleugeltekening. De opnamen zijn op verschillende afstanden gemaakt.',
   },
   {
+    label: 'Putter en Sijs · mannetjes in rust',
+    birds: [
+      {id: 'sp037', source: 'putter', plumage: 'adult_m', marks: 'Zwart-witte kop met rood masker, en een brede gele vleugelbaan op de gevouwen vleugel.'},
+      {id: 'sp038', source: 'sijs', plumage: 'adult_m', marks: 'Zwarte kruin en kin, groen-gele borst en een scherp afgetekende gele vleugelstreep.'},
+    ],
+    rows: [
+      {label: 'Kop', values: ['Rood masker met zwart-wit', 'Zwarte kruin en kin bij dit mannetje']},
+      {label: 'Vleugel', values: ['Brede gele band op zwarte vleugel', 'Gele vleugelstreep op zwarte vleugel']},
+      {label: 'Bouw', values: ['Stevigere, spits-driehoekige snavel', 'Kleinere, fijnere snavel']},
+    ],
+    tip: 'Begin bij kop en snavel op de rustfoto’s. Het rode masker van Putter ontbreekt bij jonge vogels.',
+  },
+  {
+    label: 'Putter en Sijs · juvenielen in rust',
+    birds: [
+      {id: 'sp037', source: 'putter', plumage: 'juv', marks: 'Jonge Putter met grijsbruine kop zonder volwassen rode masker, maar al een brede gele vleugelband.'},
+      {id: 'sp038', source: 'sijs', plumage: 'juv', marks: 'Jonge Sijs met gestreepte kop en onderzijde, gele vleugeltekening en fijnere snavel.'},
+    ],
+    rows: [
+      {label: 'Kop', values: ['Grijsbruin, zonder rode masker', 'Bruinig en duidelijk gestreept']},
+      {label: 'Vleugel', values: ['Brede gele band op donkere vleugel', 'Gele streep met donkere tekening']},
+      {label: 'Snavel', values: ['Spitse zaadsnavel', 'Fijner en smaller']},
+    ],
+    tip: 'Bij jonge vogels is kleur alleen niet voldoende. Gebruik een duidelijk zijaanzicht van snavel, vleugel én flank, en luister indien mogelijk.',
+  },
+  {
     label: 'Putter en Sijs · in vlucht',
     flight: true,
     birds: [
@@ -1242,6 +1268,19 @@ export const GUIDE_COMPARISONS = [
       {label: 'Vleugel en flank', values: ['Gele band en donkere flankstrepen', 'Gele vleugelrand en meestal egalere flank']},
     ],
     tip: 'Bekijk de snavel en flank samen. Een jonge Groenling kan ook gestreept zijn.',
+  },
+  {
+    label: 'Goudvink en Vink · vrouwtjes in rust',
+    birds: [
+      {id: 'sp040', source: 'goudvink', plumage: 'adult_f', marks: 'Zwarte kopkap, korte dikke zwarte snavel, beigegrijze onderzijde en witte vleugelband.'},
+      {id: 'sp035', source: 'vink', plumage: 'adult_f', marks: 'Grijsbruine kop zonder zwarte kap, kleinere kegelsnavel en twee lichte vleugelstrepen.'},
+    ],
+    rows: [
+      {label: 'Kop', values: ['Zwarte kap', 'Geen zwarte kap']},
+      {label: 'Snavel', values: ['Kort en fors', 'Kleiner, kegelvormig']},
+      {label: 'Vleugel', values: ['Eén lichte band', 'Twee lichte strepen']},
+    ],
+    tip: 'Vergelijk de vleugel en snavel in hetzelfde rustaanzicht. Kleurtinten kunnen bij slecht licht misleiden.',
   },
   {
     label: 'Goudvink en Vink · mannetje',
