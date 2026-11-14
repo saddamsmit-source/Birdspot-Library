@@ -335,13 +335,16 @@
         }
       },
       "corrections": [
-        "Lengte 44–46 → 46–50 cm; broedduur 17–18 → 17–24 dagen; nestjongen 24–30 → 22–30 dagen (VB_EKSTER)."
+        "Lengte 44–46 → 46–50 cm; broedduur 17–18 → 17–24 dagen; nestjongen 24–30 → 22–30 dagen (VB_EKSTER).",
+        "Hoofdfoto en vluchtfoto naast de oorspronkelijke bronbestanden bekeken. Neutrale labels behouden.",
+        "Lengte en spanwijdte met een tweede uitgever berekend, en vergelijking met Gaai onderbouwd."
       ],
       "missing": [
-        "Juveniel (kortere staart)"
+        "Juvenielenfoto met door de bron ondersteunde leeftijd."
       ],
       "sexPolicy": "Geslachten gelijk; geen geslachtsvakken.",
-      "uncertain": []
+      "uncertain": [],
+      "date": "2026-11-14"
     },
     "sp056": {
       "assets": {

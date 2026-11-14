@@ -1013,6 +1013,10 @@ export const GUIDE_COMPARISONS = [
       {id: 'sp026', source: 'gaai', marks: 'Rozegrijs lichaam en blauw-zwart gebandeerd vleugelveld. Van achteren valt de witte stuit op.'},
       {id: 'sp021', source: 'ekster', marks: 'Zwart-wit met brede witte vleugelvelden en een lange, smalle staart.'},
     ],
+    rows: [
+      {label: 'Vleugel', values: ['Klein blauw veld met donkere dwarsbandjes.', 'Breed wit veld in de handvleugel.']},
+      {label: 'Silhouet', values: ['Kortere zwarte staart en witte stuit.', 'Lange, smalle staart die ver achter het lichaam uitsteekt.']},
+    ],
     tip: 'Kijk eerst naar staartlengte en vleugeltekening. De witte stuit van de Gaai is het best van achteren te zien.',
   },
   {

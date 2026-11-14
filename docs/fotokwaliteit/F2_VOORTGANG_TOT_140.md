@@ -60,4 +60,16 @@ Doel is per soort de eigen foto’s, rollen, bronrechten, determinatie, maten en
 
 Basis [PR #203 op 95c1998](https://github.com/saddamsmit-source/Birdspot-Library/pull/203), 24/24 GitHub-workflows. Codex op afzonderlijke F2-09-branch. [Brondossier met 13 oorspronkelijke foto’s](../evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_09.json), [bestaande M10-audit](soortaudit/M10.json), capabilities CAP-BIRD-012 en CAP-BIRD-015. Een visuele bronmatch alleen sluit een open licentiehistorie niet af. De renderaudit en Node-suites testen de kandidaat. Herstel via sluiten van de concept-PR of terugdraaien op de integratiebranch.
 
-**Teller:** 18 van 140 soorten opgepakt in F2. **Volgende batch:** Middelste Bonte Specht (sp020), Ekster (sp021) en Zwarte Kraai (sp022). Werk pas aan de 457 soorten zonder bestaande gidsfoto nadat de 140 opnieuw zijn doorlopen.
+**Teller na F2-09:** 18 van 140 soorten opgepakt.
+
+## F2-10 · Middelste Bonte Specht, Ekster en Zwarte Kraai
+
+| Soort | Hercontrole | Open |
+|---|---|---|
+| sp020 Middelste Bonte Specht | Vier foto’s naast de originele bestanden gelegd. Nieuw kennisprofiel voor kop- en halstekening, leeftijdsvalkuil en vergelijking met Grote Bonte Specht. Lengte volgt de twee bronnen. De bronpagina’s geven beide een spanwijdte van 33–34 cm. | Bronbevestigde juvenielenfoto, ruimer vluchtbeeld en scherpere hoofdfoto. |
+| sp021 Ekster | Twee foto’s naast de originele bestanden gelegd. Jeugdkenmerken en maten onderbouwd. De bestaande vluchtvergelijking met Gaai legt vleugelpatroon, stuit en staart onder elkaar uit bij twee foto's. | Bronbevestigde juvenielenfoto, gewicht en geluidsdekking. De fotograaf beschrijft vertrek vanaf de rots. Op de foto is de vogel los met gespreide vleugels. Een frame uit de voorafgaande afzetfase is onbekend. |
+| sp022 Zwarte Kraai | Twee foto’s naast de originele bestanden gelegd. Hoofdfoto toont de bevederde snavelbasis. Vluchtfoto toont silhouet en gespreide handpennen. Leeftijd en geslacht blijven neutraal. | Bronbevestigde juvenielenfoto en eigen referentiegeluid. |
+
+Basis [PR #205 op a0219b8](https://github.com/saddamsmit-source/Birdspot-Library/pull/205), 24/24 GitHub-workflows. [Bronregistratie van acht foto’s](../evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_10.json). CAP-BIRD-012 en CAP-BIRD-015. Herstel via sluiten van de concept-PR of terugdraaien op de integratiebranch. De mobiele browsercontrole draait via GitHub Actions.
+
+**Teller:** 21 van 140 soorten opgepakt in F2. **Volgende batch:** Kauw (sp025), Gaai (sp026) en Koolmees (sp029). Werk pas aan de 457 soorten zonder bestaande gidsfoto nadat de 140 opnieuw zijn doorlopen.

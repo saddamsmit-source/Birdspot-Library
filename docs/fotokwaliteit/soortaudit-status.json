@@ -1570,9 +1570,121 @@
    "id": "sp020",
    "nameNL": "Middelste Bonte Specht",
    "family": "Spechten",
-   "audited": false,
-   "verdict": "NOT TESTED",
-   "next": "Aangescherpte soortaudit (foto per foto + kennisprofiel)"
+   "audited": true,
+   "batch": "M2",
+   "date": "2026-11-14",
+   "sha": null,
+   "assets": [
+    {
+     "image": "/assets/species/plumage/sp020-male.webp",
+     "role": "Hoofdfoto",
+     "content": "Volwassen vogel tegen stam met lichte kop en roze onderstaart.",
+     "sexAge": "Fotograaf noemt een mannetje. Neutraal weergegeven vanwege overlap in verenkleed.",
+     "quality": "Bruikbaar, bronminiatuur van 500 px beperkt zoom.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Charles J. Sharp",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/sp020.webp",
+     "role": "Overige herkenningsfoto's",
+     "content": "Zijaanzicht op stronk met rode kruin, wit gezicht en gestreepte flanken.",
+     "sexAge": "Leeftijd en geslacht open.",
+     "quality": "Goede uitsnede van volledige vogel.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 2.0 · Frank Vassen from Brussels, Belgium",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp020-pose.webp",
+     "role": "Overige herkenningsfoto's",
+     "content": "Foerageert op een stam. Flankstrepen en roze onderstaart zichtbaar.",
+     "sexAge": "Leeftijd en geslacht open.",
+     "quality": "Scherpe andere kijkhoek.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Mikes Makro",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp020-flight.webp",
+     "role": "In vlucht",
+     "content": "Vrij in de lucht. Gebandeerde slagpennen, flankstrepen en roze onderstaart zichtbaar.",
+     "sexAge": "Leeftijd en geslacht open.",
+     "quality": "Bruikbaar voor de onderzijde en vleugeltekening, bronbestand 725 × 483 px.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 2.0 · Yves Hoebeke",
+      "annotations": []
+     },
+     "flight": {
+      "n": 113,
+      "id": "sp020",
+      "nameNL": "Middelste Bonte Specht",
+      "registry": "GUIDE_POSES[2]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0"
+     }
+    }
+   ],
+   "corrections": [
+    "Vier foto’s naast de oorspronkelijke bestanden bekeken en de bronvermelding gecontroleerd. Lengte, spanwijdte en kennisprofiel onderbouwd."
+   ],
+   "missing": [
+    "Juvenielenfoto met door bron en beeld ondersteunde leeftijd."
+   ],
+   "wishes": [
+    "Scherper portret uit origineel en ruimer vluchtbeeld."
+   ],
+   "uncertain": [],
+   "sexPolicy": "Kleedkenmerken overlappen. De hoofd-, overige en vluchtfoto krijgen neutrale labels.",
+   "previous": null,
+   "status": {
+    "technical": "VERIFIED",
+    "visual": "VERIFIED",
+    "rights": "VERIFIED",
+    "knowledge": "PARTIALLY TESTED",
+    "browser": "NOT TESTED",
+    "independent": "NOT TESTED"
+   },
+   "photoComplete": false,
+   "knowledge": {
+    "profile": true,
+    "critical": 1,
+    "decisive": 0,
+    "notDecisive": [
+     "Kop- en halstekening"
+    ],
+    "open": [
+     "Een verifieerbare juvenielenfoto ontbreekt. Scherper vluchtbeeld en hoofdfoto met meer bronpixels zijn verbeterwensen."
+    ],
+    "discrepancies": 0
+   },
+   "browser": null,
+   "errors": [],
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
   },
   {
    "id": "sp021",
@@ -1580,8 +1692,8 @@
    "family": "Kraaien",
    "audited": true,
    "batch": "M1",
-   "date": "2026-11-10",
-   "sha": "9ddb3d984262f8e95bae5a056431ef80bbde73bb",
+   "date": "2026-11-14",
+   "sha": null,
    "assets": [
     {
      "image": "/assets/species/sp021.webp",
@@ -1592,7 +1704,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Alexis Lours",
       "annotations": []
      },
      "flight": null
@@ -1606,7 +1718,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Alexis Lours",
       "annotations": []
      },
      "flight": {
@@ -1629,10 +1741,12 @@
     }
    ],
    "corrections": [
-    "Lengte 44–46 → 46–50 cm; broedduur 17–18 → 17–24 dagen; nestjongen 24–30 → 22–30 dagen (VB_EKSTER)."
+    "Lengte 44–46 → 46–50 cm; broedduur 17–18 → 17–24 dagen; nestjongen 24–30 → 22–30 dagen (VB_EKSTER).",
+    "Hoofdfoto en vluchtfoto naast de oorspronkelijke bronbestanden bekeken. Neutrale labels behouden.",
+    "Lengte en spanwijdte met een tweede uitgever berekend, en vergelijking met Gaai onderbouwd."
    ],
    "missing": [
-    "Juveniel (kortere staart)"
+    "Juvenielenfoto met door de bron ondersteunde leeftijd."
    ],
    "wishes": [],
    "uncertain": [],
@@ -1643,7 +1757,7 @@
     "visual": "VERIFIED",
     "rights": "VERIFIED",
     "knowledge": "PARTIALLY TESTED",
-    "browser": "VERIFIED",
+    "browser": "NOT TESTED",
     "independent": "NOT TESTED"
    },
    "photoComplete": false,
@@ -1655,25 +1769,11 @@
      "Kleedpatroon en staart"
     ],
     "open": [
-     "Juveniel kleed en leefgebied niet opnieuw gecontroleerd tegen een bron.",
-     "Vergelijking met Gaai is bestaande Birdspot-inhoud, niet opnieuw gecontroleerd.",
-     "Kleedpatroon is in Nederland vrijwel onmiskenbaar, maar staat op \"Helpt\" tot een tweede, onafhankelijke bron is vastgelegd (regel doorslaggevend, 10-11-2026)."
+     "Een brongeverifieerde juvenielenfoto ontbreekt. Gewicht en geluidsdekking staan open."
     ],
     "discrepancies": 0
    },
-   "browser": {
-    "ok": true,
-    "viewport": "390x844 Chromium (Playwright)",
-    "photos": 2,
-    "sections": [
-     "Hoofdfoto",
-     "In vlucht"
-    ],
-    "flight": [
-     "/assets/species/plumage/sp021-flight.webp"
-    ],
-    "checks": "SAB-01..07"
-   },
+   "browser": null,
    "errors": [],
    "verdict": "PARTIALLY TESTED",
    "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
@@ -1684,8 +1784,8 @@
    "family": "Kraaien",
    "audited": true,
    "batch": "M3",
-   "date": "2026-11-11",
-   "sha": "9ddb3d984262f8e95bae5a056431ef80bbde73bb",
+   "date": "2026-11-14",
+   "sha": null,
    "assets": [
     {
      "image": "/assets/species/sp022.webp",
@@ -1696,7 +1796,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Alexis Lours",
       "annotations": []
      },
      "flight": null
@@ -1710,7 +1810,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Marie-Lan Taÿ Pamart",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Marie-Lan Taÿ Pamart",
       "annotations": []
      },
      "flight": {
@@ -1734,7 +1834,8 @@
    ],
    "corrections": [
     "Bronprofiel met vergelijking met Roek en Kauw. De snavelbasis is bij jonge Roeken geen betrouwbaar enkelvoudig onderscheid.",
-    "Lengte en spanwijdte als indicatieve band berekend met Vogelbescherming en RSPB."
+    "Lengte en spanwijdte als indicatieve band berekend met Vogelbescherming en RSPB.",
+    "Hoofdfoto en vluchtfoto naast de oorspronkelijke bronbestanden bekeken. Neutrale labels behouden."
    ],
    "missing": [
     "Afzonderlijke juvenielenfoto"

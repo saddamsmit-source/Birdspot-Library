@@ -11,6 +11,7 @@ import threading
 from pathlib import Path
 
 from playwright.sync_api import expect, sync_playwright
+from birdspot_f1_progress import historical_audit_status
 
 from test_pilot_offline_new_sighting import ROOT, Quiet, Server, boot
 from test_plumage_compare_layout import open_species
@@ -52,10 +53,7 @@ def check_progress():
     official = load("docs/fotokwaliteit/soortaudit-status.json")
     first = load("docs/fotokwaliteit/F1_VOORTGANG_TOT_140.json")
     assert len(official["species"]) == 140
-    audited = {x["id"] for x in official["species"] if x["audited"]}
-    pending = {x["id"] for x in official["species"] if not x["audited"]}
-    assert len(audited) == first["_meta"]["baselineAudited"] == 100
-    assert len(pending) == first["_meta"]["expectedCanonicalUnreviewed"] == 40
+    audited, pending = historical_audit_status(official["species"], first)
     additional = first["additionalFirstPass"]
     ids = [x["id"] for x in additional]
     assert len(additional) >= 17 and len(set(ids)) == len(ids)

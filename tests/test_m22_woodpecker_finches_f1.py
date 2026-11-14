@@ -10,6 +10,7 @@ import json
 import threading
 
 from playwright.sync_api import expect, sync_playwright
+from birdspot_f1_progress import historical_audit_status
 from test_pilot_offline_new_sighting import ROOT, Quiet, Server, boot
 from test_plumage_compare_layout import open_species
 
@@ -75,10 +76,7 @@ def validate_f1_policy():
     canonical = load("docs/fotokwaliteit/soortaudit-status.json")
     f1 = load("docs/fotokwaliteit/F1_VOORTGANG_TOT_140.json")
     assert len(canonical["species"]) == 140
-    audited = {r["id"] for r in canonical["species"] if r["audited"]}
-    pending = {r["id"] for r in canonical["species"] if not r["audited"]}
-    assert len(audited) == f1["_meta"]["baselineAudited"] == 100
-    assert len(pending) == f1["_meta"]["expectedCanonicalUnreviewed"] == 40
+    audited, pending = historical_audit_status(canonical["species"], f1)
     entries = f1["additionalFirstPass"]
     unique_ids = [r["id"] for r in entries]
     assert len(entries) >= 32 and len(set(unique_ids)) == len(unique_ids)
@@ -128,8 +126,15 @@ def validate_bird_media():
     seen_sha, seen_sources = {}, {}
     for sid,bird in BIRDS.items():
         status = next(x for x in canonical["species"] if x["id"] == sid)
-        assert not status["audited"] and status["verdict"] == "NOT TESTED"
-        assert sid not in knowledge
+        if sid == "sp020":
+            assert status["audited"] and status["verdict"] == "PARTIALLY TESTED"
+            assert sid in knowledge
+            assert {asset["image"] for asset in status["assets"]} == {
+                bird["hero"], *bird["others"], bird["flight"],
+            }
+        else:
+            assert not status["audited"] and status["verdict"] == "NOT TESTED"
+            assert sid not in knowledge
         cr = credits[sid]
         poses = media["poses"].get(sid, [])
         variants = media["plumage"].get(sid, {})
