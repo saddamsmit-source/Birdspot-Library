@@ -227,4 +227,30 @@ assert.match(species.get('sp036').fieldmarks, /Stevige kegelvormige snavel/);
 assert.match(species.get('sp036').fieldmarks, /juveniel grijzer/);
 console.log('F2-15: juveniele vergelijking beide richtingen, portretten en kleedneutrale kenmerken structureel gecontroleerd; visuele bronverificatie blijft apart');
 
+
+const expectedF216 = [
+  ['Putter en Sijs · mannetjes in rust', [['sp037', 'adult_m'], ['sp038', 'adult_m']]],
+  ['Putter en Sijs · juvenielen in rust', [['sp037', 'juv'], ['sp038', 'juv']]],
+  ['Goudvink en Vink · vrouwtjes in rust', [['sp040', 'adult_f'], ['sp035', 'adult_f']]],
+];
+for (const [label, expectedBirds] of expectedF216) {
+  const cmp = GUIDE_COMPARISONS.find(entry => entry.label === label);
+  assert.ok(cmp, `F2-16 comparison missing: ${label}`);
+  assert.deepEqual(cmp.birds.map(bird => [bird.id, bird.plumage]), expectedBirds, label);
+  assert.ok(!cmp.flight, `F2-16 comparison must use perched/resting photographs: ${label}`);
+}
+for (const id of ['sp037', 'sp038']) {
+  const html = recognitionPanel(species.get(id));
+  assert.ok(html.includes('sp037-juv.webp') && html.includes('sp038-juv.webp'),
+    `F2-16 juvenile portraits must appear side by side from ${id}`);
+  assert.ok(html.includes('sp037-adult_m.webp') && html.includes('sp038.webp'),
+    `F2-16 adult perched comparison must use registered images from ${id}`);
+}
+for (const id of ['sp040', 'sp035']) {
+  const html = recognitionPanel(species.get(id));
+  assert.ok(html.includes('sp040-adult_f.webp') && html.includes('sp035-adult_f.webp'),
+    `F2-16 female comparison must use two original registered photo references: ${id}`);
+}
+console.log('F2-16: adult and juvenile perched Putter/Sijs, female Goudvink/Vink both directions present, flight optional without fake images');
+
 console.log(`QA-SPECHTEN-BYTES: ${reviewedSpechtenFiles} current files have distinct WebP bytes; near-duplicates NOT PROVEN`);

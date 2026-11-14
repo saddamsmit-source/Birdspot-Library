@@ -176,11 +176,30 @@ def main():
                     flight_tab.evaluate("el => { const d = el.closest('details'); if (d) d.open = true; }")
                     flight_tab.click()
                     if sid == "sp038":
+                        # F2-16 adds a Putter/Sijs juvenile and adult comparison; those have
+                        # their own tabs. The older Groenling comparison may be inside
+                        # the expandable "other species" group. Keep testing both partners.
                         expect(sec.locator('[data-cmp-flight]:visible').first).to_be_visible()
-                        female_tab = sec.get_by_role("button", name="Vrouwtje", exact=True)
+                        putter_card = sec.locator('.sd-cmp-card').filter(
+                            has=page.locator('.sd-cmp-who strong', has_text="Putter")).first
+                        expect(putter_card).to_have_count(1)
+                        young_tab = putter_card.get_by_role("button", name="Juveniel", exact=True)
+                        young_tab.click()
+                        expect(young_tab).to_have_attribute("aria-selected", "true")
+                        expect(putter_card.locator('.sd-cmp-panel:visible img[src*="sp037-juv.webp"]')).to_be_visible()
+                        expect(putter_card.locator('.sd-cmp-panel:visible img[src*="sp038-juv.webp"]')).to_be_visible()
+
+                        green_card = sec.locator('.sd-cmp-card').filter(
+                            has=page.locator('.sd-cmp-who strong', has_text="Groenling")).first
+                        expect(green_card).to_have_count(1)
+                        green_card.evaluate("el => { const d = el.closest('details.sd-cmp-more'); if (d) d.open = true; }")
+                        green_flight = green_card.locator('.sd-cmp-tab', has_text=re.compile(r'^In vlucht')).first
+                        green_flight.click()
+                        expect(green_card.locator('[data-cmp-flight]:visible')).to_be_visible()
+                        female_tab = green_card.get_by_role("button", name="Vrouwtje", exact=True)
                         female_tab.click()
                         expect(female_tab).to_have_attribute("aria-selected", "true")
-                        expect(sec.locator('.sd-cmp-panel:visible img[src*="sp036-adult_f.webp"]')).to_be_visible()
+                        expect(green_card.locator('.sd-cmp-panel:visible img[src*="sp036-adult_f.webp"]')).to_be_visible()
                 if sid in ("sp031", "sp032"):
                     juvenile_tab = sec.get_by_role("button", name="Juveniel", exact=True)
                     juvenile_tab.click()
