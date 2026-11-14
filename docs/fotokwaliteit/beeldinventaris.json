@@ -4963,6 +4963,17 @@
    "airborne": false,
    "source": "Visuele controle K08 fase 1 (2026-11-12)",
    "note": "Mannetje Grauwe Kiekendief in droog gras. Grijze veren en gele ogen zijn scherp zichtbaar."
+  },
+  "/assets/species/plumage/sp003-flight-open-sky.webp": {
+   "refs": [
+    "sp003 GUIDE_POSES[1]"
+   ],
+   "sha1": "ba57156780432b3f93fcacc703a6994a506644fa",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "F2 · directe beeldinspectie 14-11-2026",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht tegen open hemel. Het zijaanzicht toont vleugel, kop en staart voldoende scherp voor vergelijking."
   }
  }
 }

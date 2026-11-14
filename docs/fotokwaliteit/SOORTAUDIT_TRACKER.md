@@ -12,12 +12,12 @@ Beoordeeld volgens `docs/BIRDSPOT_KWALITEITSNORM.md` (biometrie §1, herkenning 
 | 2 | Afzonderlijk (aangescherpt) gecontroleerd | 100 (M1, M10, M2, M3, M4, M5, M6, M7, M8, M9) |
 | 3 | Technisch correct (laden, volgorde, offline-bron, beoordeling = kaart) | 100 van 100 |
 | 4a | Visueel VERIFIED (beeld per foto) | 94 van 100 |
-| 4b | Inhoud (kennisprofiel) VERIFIED | 64 van 100 — alle profielen hebben nog open punten |
+| 4b | Inhoud (kennisprofiel) VERIFIED | 66 van 100 — alle profielen hebben nog open punten |
 | 4c | Onafhankelijk beoordeeld (ChatGPT) | 0 — NOT TESTED |
-| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 121; plus collectiebrede vluchtcontrole: 16 uit de vluchtrol, 9 gearchiveerd |
+| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 122; plus collectiebrede vluchtcontrole: 16 uit de vluchtrol, 9 gearchiveerd |
 | 6 | Afgekeurde vluchtfoto's | 25 (tabel hieronder) |
-| 7 | Ontbrekende foto-/kennisonderdelen | 66 fotoposities in gecontroleerde soorten; 40 fotosoorten zonder kennisprofiel |
-| 8 | Kritische kenmerken niet doorslaggevend onderbouwd | 131 (tabel hieronder) |
+| 7 | Ontbrekende foto-/kennisonderdelen | 65 fotoposities in gecontroleerde soorten; 40 fotosoorten zonder kennisprofiel |
+| 8 | Kritische kenmerken niet doorslaggevend onderbouwd | 132 (tabel hieronder) |
 | 9 | Open bron-/licentieproblemen | 0 in gecontroleerde soorten; collectiebreed blijft het eerder gemelde punt '22 afbeeldingen buiten de bronaudit' open |
 
 Eindoordeel per gecontroleerde soort: PARTIALLY TESTED 85, VERIFIED 15.
@@ -133,26 +133,27 @@ Batch M1 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · tech
 
 ### sp003 Holenduif — PARTIALLY TESTED
 
-Batch M1 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+Batch M1 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
 | `sp003.webp` | Hoofdfoto | Holenduif in gras, zijaanzicht; groen glanzende halsvlek, korte zwarte vleugelstrepen, donker oog. | volwassen-ogend; geslacht niet op kleed | goed | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Chris Cant from Cumbria, UK |
 | `sp003-juv.webp` | Juveniel | Jonge Holenduif op een tak, met een donker oog en korte donkere tekeningen op de gevouwen vleugel. | Juveniel volgens individuele foto of waarneming en zichtbare kleedkenmerken. | Bruikbaar zijaanzicht · 1100 × 804 px. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (rechtstreekse conversie van de gecontroleerde bronopname), CC BY 4.0 · Paul Lewis |
+| `sp003-flight-open-sky.webp` | In vlucht | Holenduif vrij in de lucht tegen blauwe lucht. Grijze vleugels zonder brede witte dwarsband, donker oog en donkere staartpunt. | Geen leeftijds- of geslachtslabel | Goed binnen herkenningsdoel. Volledige vogel, 680 × 595 px. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (uitsnede rechtstreeks uit gecontroleerd origineel (145,160)-(825,755)), CC BY 4.0 · andygpos |
 
-- **Correcties:** Opvliegende foto uit 'In vlucht' (eigenaarsmelding) — label 'Opvliegend vanaf de grond' (vluchtcontrole ronde 1).; Veldkenmerken en kleedtekst: "zwarte vleugelpunten" → geen wit in hals/vleugel, twee korte zwarte vleugelstrepen, brede zwarte staartband (VB_HOLEN, RSPB_SD).; Zang: "oe-oe-oe steeds sneller" → eentonige reeks tweelettergrepige roepen (VB_HVH).; Lengte 30–33 → 28–32 cm; broedduur 16–18 → 16–17 dagen; nestjongen 27–28 → ca. 24 dagen (VB_HOLEN).; F2: afzonderlijke brongeverifieerde juvenielenfoto toegevoegd.; F2-hercontrole: bij Volwassen is zichtbaar dat man en vrouw op elkaar lijken.; F2-hercontrole: zachte afzetfoto uit de kaart gehaald en met herkomst gearchiveerd.
-- **Ontbreekt:** In vlucht (geen echte vluchtfoto)
+- **Correcties:** Opvliegende foto uit 'In vlucht' (eigenaarsmelding) — label 'Opvliegend vanaf de grond' (vluchtcontrole ronde 1).; Veldkenmerken en kleedtekst: "zwarte vleugelpunten" → geen wit in hals/vleugel, twee korte zwarte vleugelstrepen, brede zwarte staartband (VB_HOLEN, RSPB_SD).; Zang: "oe-oe-oe steeds sneller" → eentonige reeks tweelettergrepige roepen (VB_HVH).; Lengte 30–33 → 28–32 cm; broedduur 16–18 → 16–17 dagen; nestjongen 27–28 → ca. 24 dagen (VB_HOLEN).; F2: afzonderlijke brongeverifieerde juvenielenfoto toegevoegd.; F2-hercontrole: bij Volwassen is zichtbaar dat man en vrouw op elkaar lijken.; F2-hercontrole: zachte afzetfoto uit de kaart gehaald en met herkomst gearchiveerd.; F2: foto van Holenduif in vrije vlucht toegevoegd en aangesloten op de bestaande vluchtvergelijkingen.
+- **Ontbreekt:** niets
 - **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** Mannetje en vrouwtje lijken sterk op elkaar. Het geslacht volgt bij deze opnamen niet op kleed. Bron: Blasco-Zumeta en Heinze.
-- **Kennisprofiel:** 2 kritische kenmerken (1 doorslaggevend); niet doorslaggevend: Stuit; open: Een scherpe foto in vrije vlucht ontbreekt. De zachte afzetfoto is gearchiveerd.; Kleedvariatie van stadsduiven maakt de stuit niet doorslaggevend.; resterende dataverschillen: 0
+- **Kennisprofiel:** 2 kritische kenmerken (1 doorslaggevend); niet doorslaggevend: Stuit; open: —; resterende dataverschillen: 0
 - **Browser:** NOT TESTED
 - **Onzeker:** —
 - **Eerdere uitslag:** Fotobaseline batch 01 gaf VERIFIED inclusief de opvliegende vluchtfoto; die uitslag is vervallen.
-- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
 
 ### sp002 Houtduif — PARTIALLY TESTED
 
-Batch M1 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+Batch M1 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -164,7 +165,7 @@ Batch M1 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED �
 - **Ontbreekt:** Vluchtfoto van boven met volledige witte vleugelband (wenselijk)
 - **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** Mannetje en vrouwtje lijken sterk op elkaar. Het geslacht volgt bij deze opnamen niet op kleed. Bron: Blasco-Zumeta en Heinze.
-- **Kennisprofiel:** 2 kritische kenmerken (2 doorslaggevend); niet doorslaggevend: —; open: Juveniel- en vluchtvergelijking met Stadsduif nog niet uit een Nederlandse bron uitgewerkt.; resterende dataverschillen: 0
+- **Kennisprofiel:** 2 kritische kenmerken (2 doorslaggevend); niet doorslaggevend: —; open: —; resterende dataverschillen: 0
 - **Browser:** NOT TESTED
 - **Onzeker:** —
 - **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
@@ -183,7 +184,7 @@ Batch M1 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED �
 - **Ontbreekt:** niets
 - **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** Mannetje en vrouwtje lijken sterk op elkaar. Het geslacht volgt bij deze opnamen niet op kleed. Bron: Blasco-Zumeta en Heinze.
-- **Kennisprofiel:** 2 kritische kenmerken (1 doorslaggevend); niet doorslaggevend: Staart in vlucht; open: Onderscheid met Lachduif (ontsnapte vogels) nog uit een bron uitwerken.; Spanwijdte en gewicht niet in de geraadpleegde Nederlandse bron.; resterende dataverschillen: 0
+- **Kennisprofiel:** 3 kritische kenmerken (1 doorslaggevend); niet doorslaggevend: Staart in vlucht, Roep en vleugeltoppen; open: Spanwijdte en gewicht niet in de geraadpleegde Nederlandse bron.; resterende dataverschillen: 0
 - **Browser:** NOT TESTED
 - **Onzeker:** —
 - **Volgende actie:** Onafhankelijke review (ChatGPT)
@@ -2029,6 +2030,7 @@ Batch M6 · 2026-11-12 · SHA `38e3b3c42662dc49be8b769fd9f82a8dde65cad7` · tech
 |---|---|
 | sp003 Holenduif | Stuit |
 | sp004 Turkse Tortel | Staart in vlucht |
+| sp004 Turkse Tortel | Roep en vleugeltoppen |
 | sp005 Buizerd | Kop |
 | sp005 Buizerd | Vleugelhouding en -slag |
 | sp005 Buizerd | Staart |

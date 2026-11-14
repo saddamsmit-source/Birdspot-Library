@@ -6660,6 +6660,29 @@
         "width": 1100,
         "height": 804,
         "image": "/assets/species/plumage/sp003-juv.webp"
+      },
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Let op de grijze vleugels zonder brede witte dwarsband en de donkere staartpunt.",
+        "file": "iNaturalist-foto 757637556",
+        "nl": "Holenduif",
+        "latin": "Columba oenas",
+        "author": "andygpos",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://www.inaturalist.org/photos/757637556",
+        "alt": "Holenduif vrij in de lucht tegen blauwe lucht. Grijze vleugels zonder brede witte dwarsband, donker oog en donkere staartpunt.",
+        "modifications": "Uitgesneden en omgezet naar WebP zonder EXIF/GPS/XMP",
+        "reviewed": "2026-11-14",
+        "sourceAudit": "2026-11-14",
+        "sourceSha1": "296f271105d94432c6b647221d3c55afa9a91f48",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/holenduif",
+        "visualCheck": "Holenduif vrij in de lucht tegen blauwe lucht. Grijze vleugels zonder brede witte dwarsband, donker oog en donkere staartpunt.",
+        "width": 680,
+        "height": 595,
+        "image": "/assets/species/plumage/sp003-flight-open-sky.webp",
+        "flightReview": "goedgekeurd 2026-11-14: vrij in de lucht, vogel volledig in beeld met bruikbaar zijaanzicht en zicht op vleugel en staart."
       }
     ],
     "sp004": [

@@ -7,7 +7,7 @@ Voor iedere soort in docs/fotokwaliteit/soortaudit/M*.json, op 390 px (Chromium)
   SAB-03  Geen eigen foto twee keer op de kaart.
   SAB-04  Volgorde: Hoofdfoto boven Verenkleed boven In vlucht boven Overige; secties visueel in die volgorde.
   SAB-05  In "In vlucht" staan alleen foto's met een goedgekeurde/voorwaardelijke vluchtbeoordeling;
-          uit-rol-foto's staan er niet in. Negatief: Holenduif sp003 en Tjiftjaf sp056 hebben géén "In vlucht".
+          uit-rol-foto's staan er niet in. Holenduif sp003 heeft één gevalideerde vluchtfoto. Tjiftjaf sp056 heeft géén "In vlucht".
   SAB-06  Kaartlabels tonen geen geslacht bij soorten waarvan de audit zegt dat geslacht niet op kleed te zien is.
   SAB-07  Zoomviewer opent en sluit op de hoofdfoto.
   SAB-08  Volledige kaart als screenshot; uitslag per soort in docs/fotokwaliteit/soortaudit/browser.json.
@@ -132,7 +132,10 @@ def main():
                 for s in fl:
                     assert FLIGHT.get(s, {}).get("decision") in ("goedgekeurd", "voorwaardelijk"), f"SAB-05 {sid}: {s} in In vlucht zonder goedkeuring"
                     assert entry["assets"][s]["verdict"] != "uit-rol", f"SAB-05 {sid}: uit-rol-foto in In vlucht"
-                if sid in ("sp003", "sp056"):
+                if sid == "sp003":
+                    assert fl == ["/assets/species/plumage/sp003-flight-open-sky.webp"]
+                    assert "/assets/species/plumage/sp003-flight.webp" not in srcs
+                if sid == "sp056":
                     assert not fl, f"SAB-05 {sid}: mag geen In vlucht-foto meer hebben"
                 # SAB-06
                 if "niet op kleed" in entry.get("sexPolicy", "") or "gelijk" in entry.get("sexPolicy", ""):

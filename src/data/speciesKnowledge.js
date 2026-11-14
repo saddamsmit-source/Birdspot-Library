@@ -3787,6 +3787,61 @@ const DATA = {
    "checked": "2026-11-12",
    "certainty": "hoog voor aangehaalde kenmerken; figuren niet zelfstandig geaudit",
    "publisher": "onderzoekers Jenni e.a. / wetenschappelijke publicatie"
+  },
+  "VB_STADSDUIF": {
+   "register": "F2 · duiven",
+   "label": "Vogelbescherming — Stadsduif",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/stadsduif",
+   "edition": "Online bron",
+   "scope": "Nederland",
+   "confirms": "Sterke kleurvariatie bij Stadsduif",
+   "checked": "2026-11-14",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "BTO_DUIVEN": {
+   "register": "F2 · duiven",
+   "label": "BTO — Pigeon identification",
+   "url": "https://www.bto.org/sites/default/files/shared_documents/gbw/associated_files/bird-table-64-pigeon-identification.pdf",
+   "edition": "Online bron",
+   "scope": "West-Europa",
+   "confirms": "Juveniele Houtduif heeft een witte vleugelband zonder witte halsvlek; Holenduif heeft korte zwarte banden; blauwgrijze Stadsduif vaak bredere banden",
+   "checked": "2026-11-14",
+   "certainty": "hoog",
+   "publisher": "British Trust for Ornithology"
+  },
+  "LICG_LACHDUIF": {
+   "register": "F2 · duiven",
+   "label": "LICG — Lachduif",
+   "url": "https://www.licg.nl/vogels/lachduif/",
+   "edition": "Online bron",
+   "scope": "Nederland, gehouden vorm",
+   "confirms": "Kleurvariatie bij Lachduif, lachende roep en sterke uiterlijke gelijkenis met Turkse Tortel",
+   "checked": "2026-11-14",
+   "certainty": "hoog",
+   "publisher": "Landelijk InformatieCentrum Gezelschapsdieren"
+  },
+  "CL_DUIVEN": {
+   "register": "F2 · duiven",
+   "label": "Cornell Lab — Common Doves",
+   "url": "https://feederwatch.org/learn/tricky-bird-ids/common-doves/",
+   "edition": "Online bron",
+   "scope": "Noord-Amerika, inclusief gehouden vormen",
+   "confirms": "Driedelig gekoer bij Turkse Tortel tegenover rollend geluid bij Lachduif en verwante Afrikaanse tortels",
+   "checked": "2026-11-14",
+   "certainty": "hoog",
+   "publisher": "Cornell Lab of Ornithology"
+  },
+  "CL_TURKSETORTEL": {
+   "register": "F2 · duiven",
+   "label": "Cornell Lab — Eurasian Collared-Dove Identification",
+   "url": "https://www.allaboutbirds.org/guide/Eurasian_Collared-Dove/id",
+   "edition": "Online bron",
+   "scope": "Noord-Amerika, geïntroduceerde populatie",
+   "confirms": "Donkere handpennen, grijze onderstaartdekveren en drielettergrepig gekoer",
+   "checked": "2026-11-14",
+   "certainty": "hoog",
+   "publisher": "Cornell Lab of Ornithology"
   }
  },
  "profiles": {
@@ -5754,9 +5809,12 @@ const DATA = {
     },
     {
      "id": "sp001",
-     "why": "Houtduif is groter dan Rotsduif/stadsduif",
+     "why": "Zoek in vlucht naar de brede witte dwarsband op de vleugel van de Houtduif. Ook een jonge Houtduif heeft die band al. Een blauwgrijze Stadsduif heeft vaak brede donkere strepen en er bestaan veel andere kleurvormen.",
      "sources": [
-      "CL_WP"
+      "VB_HOUT",
+      "VB_HVH",
+      "VB_STADSDUIF",
+      "BTO_DUIVEN"
      ]
     },
     {
@@ -5897,9 +5955,7 @@ const DATA = {
      "kind": "trek"
     }
    ],
-   "open": [
-    "Juveniel- en vluchtvergelijking met Stadsduif nog niet uit een Nederlandse bron uitgewerkt."
-   ]
+   "open": []
   },
   "sp003": {
    "summary": {
@@ -5974,18 +6030,19 @@ const DATA = {
     {
      "feature": "Stuit",
      "where": "Onderrug, het best in vlucht van boven",
-     "this": "Niet licht; even grijs als de rug",
-     "other": "Rotsduif en veel stadsduiven: lichte stuit",
+     "this": "Meestal grijs. Kan iets lichter zijn dan de bovenrug.",
+     "other": "Bij veel blauwgrijze stadsduiven is de stuit opvallend licht.",
      "vs": [
       "sp001"
      ],
      "reliability": "ondersteunend",
      "conditions": "Vogel van boven of in vlucht",
-     "exceptions": "Stadsduiven zijn sterk variabel; niet elke stadsduif heeft een lichte stuit",
+     "exceptions": "Stadsduiven hebben veel kleurvormen. Gebruik stuitkleur samen met de vleugeltekening.",
      "supporting": "Zwarte vleugelstrepen bij Holenduif kort en minder duidelijk dan bij Rotsduif",
      "sources": [
       "RSPB_SD",
-      "GB_SD"
+      "BTO_DUIVEN",
+      "VB_STADSDUIF"
      ]
     }
    ],
@@ -5999,11 +6056,11 @@ const DATA = {
     },
     {
      "id": "sp001",
-     "why": "Ongeveer even groot; stadsduif vaak met lichte stuit en langere vleugelstrepen",
+     "why": "Kijk eerst naar de vleugelstrepen. Bij Holenduif zijn ze kort en vaak onopvallend. Bij een blauwgrijze Stadsduif zijn ze meestal breder. Stadsduiven variëren sterk in kleur, dus kijk ook naar bouw en stuit.",
      "sources": [
       "VB_HOLEN",
-      "RSPB_SD",
-      "GB_SD"
+      "VB_STADSDUIF",
+      "BTO_DUIVEN"
      ]
     },
     {
@@ -6125,10 +6182,7 @@ const DATA = {
     }
    ],
    "discrepancies": [],
-   "open": [
-    "Een scherpe foto in vrije vlucht ontbreekt. De zachte afzetfoto is gearchiveerd.",
-    "Kleedvariatie van stadsduiven maakt de stuit niet doorslaggevend."
-   ]
+   "open": []
   },
   "sp004": {
    "summary": {
@@ -6217,6 +6271,25 @@ const DATA = {
       "VB_ZT",
       "BZ_CD"
      ]
+    },
+    {
+     "feature": "Roep en vleugeltoppen",
+     "where": "Herhaald gekoer of goed zicht op de buitenste slagpennen",
+     "this": "Vaak drie duidelijk gescheiden klanken. Buitenste slagpennen steken donker af tegen de rest van de vleugel.",
+     "other": "Lachduif: rollend gekoer en soms een lachende roep. Buitenste slagpennen ogen in de lichte vorm vaak minder contrastrijk.",
+     "vs": [
+      "sp340"
+     ],
+     "reliability": "ondersteunend",
+     "conditions": "Kan helpen bij herhaald typisch gekoer of een goede blik op de vleugel.",
+     "exceptions": "Lachduiven komen in verschillende kleurvormen voor. Een enkele foto of onduidelijk geluid kan onvoldoende zijn.",
+     "supporting": "De halsband kan bij beide voorkomen.",
+     "sources": [
+      "VB_TT",
+      "LICG_LACHDUIF",
+      "CL_DUIVEN",
+      "CL_TURKSETORTEL"
+     ]
     }
    ],
    "similar": [
@@ -6227,6 +6300,15 @@ const DATA = {
       "VB_TT",
       "VB_ZT",
       "EB_ETD"
+     ]
+    },
+    {
+     "id": "sp340",
+     "why": "Luister bij twijfel. De Turkse Tortel koert vaak in drie duidelijke delen. De Lachduif kan een rollende of lachende roep laten horen. Een zwarte halsband kan bij beide voorkomen.",
+     "sources": [
+      "VB_TT",
+      "LICG_LACHDUIF",
+      "CL_DUIVEN"
      ]
     },
     {
@@ -6342,7 +6424,6 @@ const DATA = {
    ],
    "discrepancies": [],
    "open": [
-    "Onderscheid met Lachduif (ontsnapte vogels) nog uit een bron uitwerken.",
     "Spanwijdte en gewicht niet in de geraadpleegde Nederlandse bron."
    ]
   },

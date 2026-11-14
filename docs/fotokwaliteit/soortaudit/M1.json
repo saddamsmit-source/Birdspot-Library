@@ -27,6 +27,11 @@
         "date": "2026-11-14",
         "round": "F2 · hercontrole door eigenaar gevraagd",
         "changes": "Uitgesneden hoofdfoto Turkse Tortel, zachte opname van Holenduif uit de gids en uitleg bij Volwassen op drie kaarten."
+      },
+      {
+        "date": "2026-11-14",
+        "round": "F2 · duiven herkennen en Holenduif-vlucht",
+        "changes": "Nieuwe brongeverifieerde vrije-vluchtfoto bij Holenduif. Open vergelijkingsvragen voor Houtduif, Holenduif en Turkse Tortel verwerkt in hun kennisprofielen."
       }
     ]
   },
@@ -82,6 +87,13 @@
           "sexAge": "Juveniel volgens individuele foto of waarneming en zichtbare kleedkenmerken.",
           "quality": "Bruikbaar zijaanzicht · 1100 × 804 px.",
           "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp003-flight-open-sky.webp": {
+          "role": "In vlucht",
+          "content": "Holenduif vrij in de lucht tegen blauwe lucht. Grijze vleugels zonder brede witte dwarsband, donker oog en donkere staartpunt.",
+          "sexAge": "Geen leeftijds- of geslachtslabel",
+          "quality": "Goed binnen herkenningsdoel. Volledige vogel, 680 × 595 px.",
+          "verdict": "goedgekeurd"
         }
       },
       "corrections": [
@@ -91,11 +103,10 @@
         "Lengte 30–33 → 28–32 cm; broedduur 16–18 → 16–17 dagen; nestjongen 27–28 → ca. 24 dagen (VB_HOLEN).",
         "F2: afzonderlijke brongeverifieerde juvenielenfoto toegevoegd.",
         "F2-hercontrole: bij Volwassen is zichtbaar dat man en vrouw op elkaar lijken.",
-        "F2-hercontrole: zachte afzetfoto uit de kaart gehaald en met herkomst gearchiveerd."
+        "F2-hercontrole: zachte afzetfoto uit de kaart gehaald en met herkomst gearchiveerd.",
+        "F2: foto van Holenduif in vrije vlucht toegevoegd en aangesloten op de bestaande vluchtvergelijkingen."
       ],
-      "missing": [
-        "In vlucht (geen echte vluchtfoto)"
-      ],
+      "missing": [],
       "sexPolicy": "Mannetje en vrouwtje lijken sterk op elkaar. Het geslacht volgt bij deze opnamen niet op kleed. Bron: Blasco-Zumeta en Heinze.",
       "uncertain": [],
       "previous": "Fotobaseline batch 01 gaf VERIFIED inclusief de opvliegende vluchtfoto; die uitslag is vervallen.",
