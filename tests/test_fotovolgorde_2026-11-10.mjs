@@ -95,7 +95,7 @@ for (const s of SPECIES) {
 }
 assert.ok(checked >= 590 && flightSections >= 10);
 const verifiedJuvenileComparisonEntries = GUIDE_COMPARISONS.filter(e => e.birds.filter(b => b.plumage === 'juv').length >= 2);
-assert.equal(verifiedJuvenileComparisonEntries.length, 27, 'FV-06: expected juvenile comparisons including F2-19 Zanglijster/Kramsvogel');
+assert.equal(verifiedJuvenileComparisonEntries.length, 29, 'FV-06: expected 29 juvenile comparisons including both F2-20 resting pairs');
 assert.ok(verifiedJuvenileComparisonEntries.some(entry => entry.label === 'Goudhaantje en Vuurgoudhaan · juvenielen' &&
   entry.birds.some(b => b.id === 'sp063' && b.plumage === 'juv') &&
   entry.birds.some(b => b.id === 'sp064' && b.plumage === 'juv')),
@@ -119,6 +119,14 @@ for (const [label, ids] of [
 assert.ok(verifiedJuvenileComparisonEntries.some(entry => entry.label === 'Zanglijster en Kramsvogel · juvenielen in rust' &&
   ['sp046','sp047'].every(id => entry.birds.some(b => b.id === id && b.plumage === 'juv'))),
   'FV-06: F2-19 requires two registered juvenile Song Thrush/Fieldfare photos');
+for (const [label, ids] of [
+  ['Zanglijster en Grote Lijster · juvenielen in rust', ['sp046', 'sp049']],
+  ['Roodborst en Roodborsttapuit · juvenielen in rust', ['sp050', 'sp053']],
+]) {
+  assert.ok(verifiedJuvenileComparisonEntries.some(entry =>
+    entry.label === label && ids.every(id => entry.birds.some(b => b.id === id && b.plumage === 'juv'))),
+    'FV-06: F2-20 must contain real registered paired juvenile photographs: ' + label);
+}
 const youngTits = GUIDE_COMPARISONS.find(entry => entry.label === 'Matkop en Glanskop · jonge vogels');
 assert.deepEqual(youngTits.birds.map(({id, plumage}) => [id, plumage]), [['sp031', 'juv'], ['sp032', 'juv']]);
 for (const id of ['sp031', 'sp032']) {

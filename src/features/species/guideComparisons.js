@@ -1187,6 +1187,19 @@ export const GUIDE_COMPARISONS = [
     tip: 'Kijk bij een bruine vogel naar de grondkleur onder de vlekken. Ook een jonge Merel kan sterk gevlekt zijn.',
   },
   {
+    label: 'Zanglijster en Grote Lijster · juvenielen in rust',
+    birds: [
+      {id: 'sp046', source: 'zanglijster', plumage: 'juv', marks: 'Jonge Zanglijster met warmbruine rug en opvallend lichte vlekjes op de bovendelen, donkere borstvlekken en relatief compacte bouw.'},
+      {id: 'sp049', source: 'grote-lijster', plumage: 'juv', marks: 'Jonge Grote Lijster met lichte vlekken op de rug, smalle lichte lengtestreepjes op de vleugeldekveren en doorgaans forsere bouw.'},
+    ],
+    rows: [
+      {label: 'Bovendelen', values: ['Warmbruine rug met lichte vlekjes', 'Lichter getekend op rug en vleugeldekveren']},
+      {label: 'Borst', values: ['Donkere vlekken, vaak pijlpuntiger', 'Donkere vlekken op relatief bleke grond']},
+      {label: 'Bouw', values: ['Doorgaans compacter', 'Doorgaans groter en forser']},
+    ],
+    tip: 'Een enkele vlek is bij jonge lijsters niet beslissend. Vergelijk de complete vogel en wees voorzichtig met leeftijds- en soortlabels als de kenmerken niet goed zichtbaar zijn.',
+  },
+  {
     label: 'Zanglijster en Grote Lijster · volwassen',
     birds: [
       {id: 'sp046', source: 'zanglijster', marks: 'Warmbruin van boven, vaak pijlpuntige borstvlekken.'},
@@ -1285,6 +1298,19 @@ export const GUIDE_COMPARISONS = [
     tip: 'Vergelijk de kleur van de ondervleugels en kijk ook naar de staart. Tegenlicht kan lichte veren donkerder laten lijken.',
   },
   {
+    label: 'Roodborst en Roodborsttapuit · juvenielen in rust',
+    birds: [
+      {id: 'sp050', source: 'roodborst', plumage: 'juv', marks: 'Jonge Roodborst is bruin en lichtgevlekt zonder de oranjerode borst van een volwassen vogel.'},
+      {id: 'sp053', source: 'roodborsttapuit', plumage: 'juv', marks: 'Jonge Roodborsttapuit is lichtbruin en gespikkeld, vaak met meer contrast aan de vleugeldekveren en een andere lichaamsbouw.'},
+    ],
+    rows: [
+      {label: 'Rode borst', values: ['Ontbreekt bij jonge vogels', 'Ook hier geen volwassen oranje borst verwachten']},
+      {label: 'Vleugels', values: ['Bruin met lichte spikkels', 'Lichte vlekjes en meer contrasterende dekveren']},
+      {label: 'Context', values: ['Vaak beschut bij bos of tuin', 'Vaak op een zichtbare uitkijkpost in open terrein']},
+    ],
+    tip: 'Twee gespikkelde jonge vogels zijn niet altijd met één foto zeker te onderscheiden. Gebruik snavel, vleugel, hele bouw en eventueel oudervogels of geluid; leefgebied alleen is onvoldoende.',
+  },
+  {
     label: 'Roodborst en Heggenmus · volwassen',
     birds: [
       {id: 'sp050', source: 'roodborst', marks: 'Oranjerood gezicht en borst, met een overwegend effen bruine rug.'},
@@ -1313,16 +1339,30 @@ export const GUIDE_COMPARISONS = [
     tip: 'Bekijk de vleugel ook bij een bruine Bonte Vliegenvanger. Beide soorten jagen vanuit een zitpost.',
   },
   {
+    label: 'Zwarte en Gekraagde Roodstaart · mannetjes in rust',
+    birds: [
+      {id: 'sp051', source: 'zwarte-roodstaart', plumage: 'adult_m', marks: 'Volwassen mannetje met antracietgrijze tot zwarte borst, lichte vleugelvlek en roestrode staart.'},
+      {id: 'sp178', source: 'gekraagde-roodstaart', plumage: 'adult_m', marks: 'Volwassen mannetje met oranjerode borst en buik, grijze kruin, witte voorhoofdsvlek, zwarte keel en roestrode staart.'},
+    ],
+    rows: [
+      {label: 'Borst', values: ['Donkergrijs tot zwart', 'Oranjerood']},
+      {label: 'Kop', values: ['Donker, geen helder wit voorhoofd', 'Wit voorhoofd boven zwart gezicht']},
+      {label: 'Vleugel', values: ['Vaak een lichte vleugelvlek', 'Geen vergelijkbare witte vleugelvlek']},
+    ],
+    tip: 'Beoordeel beide volwassen mannetjes op een duidelijke rustfoto. In overgangskleed of bij jonge vogels werkt dit kleurverschil niet altijd; laat dan leeftijd en geslacht open.',
+  },
+  {
     label: 'Gekraagde en Zwarte Roodstaart · vrouwtje',
     birds: [
       {id: 'sp178', source: 'gekraagde-roodstaart', plumage: 'adult_f', marks: 'Grijsbruine rug en doorgaans warmere beige onderzijde.'},
       {id: 'sp051', source: 'zwarte-roodstaart', plumage: 'adult_f', marks: 'Koeler grijsbruin kleed, doorgaans met minder warme onderzijde.'},
     ],
     rows: [
-      {label: 'Onderzijde', values: ['Vaak warmer beige', 'Meestal koeler grijsbruin']},
-      {label: 'Staart', values: ['Roestrood', 'Ook roestrood']},
+      {label: 'Onderzijde', values: ['Vaak warm lichtbeige', 'Doorgaans koeler en meer egaal grijsbruin']},
+      {label: 'Bovendelen', values: ['Warm grijsbruin met licht gezicht', 'Vrij egaal koel grijsbruin']},
+      {label: 'Staart', values: ['Roestrood; op zichzelf niet diagnostisch', 'Ook roestrood; op zichzelf niet diagnostisch']},
     ],
-    tip: 'Vergelijk de onderzijde bij egaal daglicht. Luister bij twijfel ook naar de zang.',
+    tip: 'Vrouwtjes kunnen sterk op elkaar lijken. Vergelijk warme of koele onderzijde in egaal licht en controleer ook roep en omgeving; de staartkleur alleen beslist niet.',
   },
   {
     label: 'Sijs en Groenling · vrouwtje',
