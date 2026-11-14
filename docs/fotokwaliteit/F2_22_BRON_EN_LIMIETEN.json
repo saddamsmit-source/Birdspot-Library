@@ -46,7 +46,7 @@
       "registeredLicense": "CC BY 4.0",
       "originalPageRead": true,
       "identity": "Author identifies Common Chiffchaff; Commons quality/featured image recognition is not an independent local WebP audit.",
-      "localWebPPixels": "NOT TESTED"
+      "localWebPPixels": "VISUALLY INSPECTED by ChatGPT at exact GitHub blob 3e19ea864b650a5d5368652f363b636d96bf4110; original-JPEG-to-WebP pixel identity remains NOT TESTED"
     },
     {
       "id": "sp057",
@@ -56,7 +56,7 @@
       "registeredLicense": "CC BY-SA 2.5",
       "originalPageRead": true,
       "identity": "Original file describes Phylloscopus trochilus, adult age/sex not independently determined.",
-      "localWebPPixels": "NOT TESTED",
+      "localWebPPixels": "VISUALLY INSPECTED by ChatGPT at exact GitHub blob 05f8d3986fd3898b8b09e36b5178a08ddbd4b302; original-JPEG-to-WebP pixel identity remains NOT TESTED",
       "licenseCaution": "On the original page photographer requests credit as Andreas Trepte, website www.avi-fauna.info, and expects email with usage details. The photographer also warns about social-platform terms. Confirm compliance/possible extra use permissions before promotion; no claim that a CC license itself is withdrawn."
     },
     {
@@ -67,7 +67,7 @@
       "registeredLicense": "CC BY-SA 4.0",
       "originalPageRead": true,
       "identity": "Original file page identifies Phylloscopus sibilatrix and names Mike Duchstein.",
-      "localWebPPixels": "NOT TESTED"
+      "localWebPPixels": "VISUALLY INSPECTED by ChatGPT at exact GitHub blob a2037d58cc2e890c6caf67033e178ccda7bb67c1; original-JPEG-to-WebP pixel identity remains NOT TESTED"
     }
   ],
   "poseAndAudio": {
@@ -79,7 +79,12 @@
         "zang",
         "roep"
       ],
-      "audioNewListening": "NOT TESTED"
+      "audioNewListening": "NOT TESTED",
+      "visualPoseReview": {
+        "blobSha": "7dada8e4e3ddcbd705b32efe14ce432875f30494",
+        "observed": "Wings extended while among reed stalks, near vegetation; origin/contact not established in still frame",
+        "verdict": "Keep out of certified free-flight role"
+      }
     },
     "sp057": {
       "existingFlightImage": null,
@@ -97,7 +102,12 @@
       "reason": "Poten voorwaarts naar bladeren, landings-/fladderbeeld; eerdere uit-rol niet teruggedraaid.",
       "audioRegistered": [],
       "audioNewListening": "NOT TESTED",
-      "juvenile": "Old unsourced 'Als adult' placeholder removed (null); age remains unverified and no juvenile portrait is claimed"
+      "juvenile": "Old unsourced 'Als adult' placeholder removed (null); age remains unverified and no juvenile portrait is claimed",
+      "visualPoseReview": {
+        "blobSha": "48f46c58502e17915b5e81edd88b4cca623c4258",
+        "observed": "Feet extended toward leaves and bird very near plant, compatible with landing or flapping",
+        "verdict": "Keep out of certified free-flight role"
+      }
     }
   },
   "comparisons": [
@@ -147,10 +157,11 @@
     "src/features/species/guideComparisons.js: two new pairs, enrich existing Fitis/Tjiftjaf resting comparison",
     "src/data/species.js: Fluiter fieldmarks rephrased, unsupported juvenile placeholder set null",
     "tests/test_fotovolgorde_2026-11-10.mjs: reciprocal paired-photos and pose-contract checks",
-    "F2 registers: add three IDs, keep older findings"
+    "F2 registers: add three IDs, keep older findings",
+    "F2-22 late visual audit: directly display five existing WebP binaries via GitHub fetch_file(base64), record blob SHAs and preserve original identity/release limits"
   ],
   "open": [
-    "Original Wikimedia page identity and license text were read. Local app WebP bytes cannot be decoded through current GitHub text connector, so original-to-WebP pixel identity, crop/quality/size and exact displayed attribution are NOT TESTED.",
+    "Local GitHub WebP images (three main + two out-of-flight pose files) were visually displayed and reviewed via GitHub base64 in F2-22. Exact original Wikimedia JPEG-to-local-WebP pixel identity, crop/hash parity, physical-device rendering, and final attribution are NOT TESTED.",
     "CC BY-SA share-alike and attribution requirements need distribution-specific compliance verification before release; photographer-specific usage notices on Fitis require attention before promotional distribution.",
     "No independent ornithologist has verified each local image's individual identity, molt, age or sex. All three main photos are sex- and age-neutral.",
     "ANWB per-species reference passages and exact age determination are NOT TESTED.",
@@ -158,5 +169,36 @@
     "Real-device Android/iOS interaction, offline new sightings, ZIP restore second phone, integrated PR stack, public preview, privacy and rollback NOT TESTED / release BLOCKED."
   ],
   "scopeGuard": "No binary media, audio, local keys, storage, serviceworker, GPS handling, photo attribution or main branch altered.",
-  "evidenceInterpretation": "Code/CI can verify registered photos, layout, source fields and tests, but cannot independently certify zoological photo identity, rights compliance or a physical-device user flow."
+  "evidenceInterpretation": "Code/CI can verify registered photos, layout, source fields and tests, but cannot independently certify zoological photo identity, rights compliance or a physical-device user flow.",
+  "visualInspection": {
+    "date": "2026-11-14",
+    "host": "ChatGPT/GPT-6 via connected GitHub fetch_file encoding base64; whitespace removed; decoded images visually inspected inline",
+    "appCommitAtInspection": "568008433d829b40f5e2ee193d44c7d57aef3e92",
+    "status": "PARTIALLY TESTED — direct local WebP display VERIFIED; original-to-WebP exact matching and physical phone rendering NOT TESTED",
+    "mainPhotos": [
+      {
+        "id": "sp056",
+        "sha": "3e19ea864b650a5d5368652f363b636d96bf4110",
+        "verdict": "VISUALLY SUITABLE for resting ID reference",
+        "observed": "Bird fully visible on diagonal twig; sharp eye, slender bill, dark legs, wing and tail visible. Grey-olive and buff plumage; adequate recognizing details."
+      },
+      {
+        "id": "sp057",
+        "sha": "05f8d3986fd3898b8b09e36b5178a08ddbd4b302",
+        "verdict": "VISUALLY SUITABLE for resting ID reference",
+        "observed": "Full perched bird with open bill, visible legs, extended folded wing and tail; bright image, head and feather detail readable. No gender/age conclusion."
+      },
+      {
+        "id": "sp058",
+        "sha": "a2037d58cc2e890c6caf67033e178ccda7bb67c1",
+        "verdict": "VISUALLY SUITABLE for resting ID reference",
+        "observed": "Full Wood Warbler on broken branch, yellowish head and throat against pale-white belly; eye and feather detail visible despite dark background; no gender/age conclusion."
+      }
+    ],
+    "roleImages": [
+      "sp056-flight.webp",
+      "sp058-flight.webp"
+    ],
+    "note": "Read-only binary inspection worked using GitHub fetch_file(base64). This supersedes the earlier assumption that the connector can inspect UTF-8 only. Source JPEG file was not independently opened as pixels and WebP-transformation/hash parity is still open."
+  }
 }
