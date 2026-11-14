@@ -161,7 +161,7 @@ def browser():
                             assert bird["similar"] in panel.inner_text(), (sid,"comparison missing")
                             # A flight-as-hero must not be duplicated as a second
                             # file in the same species' plumage/flight galleries.
-                            own_repeat=panel.locator(".sd-field-photo img").evaluate_all(
+                            own_repeat=panel.locator(".sd-field-photo:not(.sd-similar *) img").evaluate_all(
                                 """(imgs,path)=>imgs.filter(x=>
                                   (x.currentSrc||x.getAttribute('src')||'').endsWith(path)).length""",
                                 bird["hero"]

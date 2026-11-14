@@ -225,13 +225,16 @@ export function comparisonPhoto(bird, inFlight) {
   const {id, plumage} = bird;
   const poses = GUIDE_POSES[id] || [];
   const portraits = [guideHeroPhoto(id), GUIDE_PHOTOS[id]];
+  const variants = Object.values(GUIDE_PLUMAGE[id] || {});
+  const airborneSources = new Set([...poses, ...portraits, ...variants].filter(photo => photo?.flight).map(photo => photo.source));
   const candidates = plumage
     ? [plumagePhoto(id, plumage), ...poses.filter(photo => photoRole(photo) === plumage),
       ...portraits.filter(photo => photo && photoRole(photo) === plumage)]
-    : inFlight ? [...poses, ...portraits, ...Object.values(GUIDE_PLUMAGE[id] || {})]
+    : inFlight ? [...poses, ...portraits, ...variants]
       : [...portraits, ...poses].filter(photo => photo && photoRole(photo) !== 'juv');
   return candidates.find(photo =>
     photo?.image && photo.author && photo.license && photo.source && Boolean(photo.flight) === inFlight &&
+    (inFlight || !airborneSources.has(photo.source)) &&
     !/^(uit-rol|archief)/.test(photo.flightReview || '') &&
     (!plumage || !photoRole(photo) || photoRole(photo) === plumage)) || null;
 }
