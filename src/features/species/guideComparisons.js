@@ -1026,6 +1026,10 @@ export const GUIDE_COMPARISONS = [
       {id: 'sp029', source: 'koolmees', marks: 'Zwarte kop met witte wangen. Op de gele onderzijde loopt een donkere middenstreep.'},
       {id: 'sp030', source: 'pimpelmees', marks: 'Blauwe kruin en een donkere oogstreep door het witte gezicht.'},
     ],
+    rows: [
+      {label: 'Kop', values: ['Zwarte kop met één groot wit wangveld.', 'Blauwe kruin en donkere oogstreep door het witte gezicht.']},
+      {label: 'Buik', values: ['Gele buik met een donkere middenstreep.', 'Gele buik, doorgaans zonder doorlopende donkere middenstreep.']},
+    ],
     tip: 'Beide hebben een gele buik. Kijk naar de koptekening als de vogel dicht genoeg langs vliegt.',
   },
   {

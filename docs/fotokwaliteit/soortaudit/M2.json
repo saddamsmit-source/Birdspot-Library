@@ -148,10 +148,16 @@
         "/assets/species/sp026.webp": {"role": "Hoofdfoto", "content": "Gaai op tak met eikel; blauw vleugelveld en baardstreep.", "sexAge": "niet vast te stellen", "quality": "goed", "verdict": "goedgekeurd"},
         "/assets/species/plumage/sp026-flight.webp": {"role": "In vlucht", "content": "Vrij in de lucht laag boven grasland; blauw-zwart gebandeerde vleugels, witte stuit; poten ingetrokken.", "sexAge": "niet vastgesteld", "quality": "goed", "verdict": "goedgekeurd"}
       },
-      "corrections": ["Maten en broedgegevens naar de bron: lengte 32–36 cm, spanwijdte 50–60 cm, 5–7 eieren, broedduur 16–21 dagen, nestjongen 19–21 dagen (VB_GAAI)."],
-      "missing": ["Juveniel"],
+      "corrections": [
+        "Maten en broedgegevens naar de bron: lengte 32–36 cm, spanwijdte 50–60 cm, 5–7 eieren, broedduur 16–21 dagen, nestjongen 19–21 dagen (VB_GAAI).",
+        "Twee originele foto’s gematcht. Maten en de vergelijking met Ekster onderbouwd. De bestaande fotoinformatie vermeldt de door de maker gevraagde website en linkt de licentie."
+      ],
+      "missing": [
+        "Juveniel"
+      ],
       "sexPolicy": "Geslachten gelijk; geen geslachtsvakken.",
-      "uncertain": []
+      "uncertain": [],
+      "date": "2026-11-14"
     },
     "sp065": {
       "assets": {

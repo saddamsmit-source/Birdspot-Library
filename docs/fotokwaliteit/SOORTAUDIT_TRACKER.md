@@ -14,7 +14,7 @@ Beoordeeld volgens `docs/BIRDSPOT_KWALITEITSNORM.md` (biometrie §1, herkenning 
 | 4a | Visueel VERIFIED (beeld per foto) | 97 van 101 |
 | 4b | Inhoud (kennisprofiel) VERIFIED | 71 van 101 — alle profielen hebben nog open punten |
 | 4c | Onafhankelijk beoordeeld (ChatGPT) | 0 — NOT TESTED |
-| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 141; plus collectiebrede vluchtcontrole: 16 uit de vluchtrol, 11 gearchiveerd |
+| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 144; plus collectiebrede vluchtcontrole: 16 uit de vluchtrol, 11 gearchiveerd |
 | 6 | Afgekeurde vluchtfoto's | 27 (tabel hieronder) |
 | 7 | Ontbrekende foto-/kennisonderdelen | 70 fotoposities in gecontroleerde soorten; 39 fotosoorten zonder kennisprofiel |
 | 8 | Kritische kenmerken niet doorslaggevend onderbouwd | 135 (tabel hieronder) |
@@ -803,14 +803,14 @@ Batch M1 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED �
 
 ### sp026 Gaai — PARTIALLY TESTED
 
-Batch M2 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M2 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
-| `sp026.webp` | Hoofdfoto | Gaai op tak met eikel; blauw vleugelveld en baardstreep. | niet vast te stellen | goed | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Hwbund |
-| `sp026-flight.webp` | In vlucht | Vrij in de lucht laag boven grasland; blauw-zwart gebandeerde vleugels, witte stuit; poten ingetrokken. | niet vastgesteld | goed | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Giles Laurent |
+| `sp026.webp` | Hoofdfoto | Gaai op tak met eikel; blauw vleugelveld en baardstreep. | niet vast te stellen | goed | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Hwbund |
+| `sp026-flight.webp` | In vlucht | Vrij in de lucht laag boven grasland; blauw-zwart gebandeerde vleugels, witte stuit; poten ingetrokken. | niet vastgesteld | goed | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Giles Laurent (gileslaurent.com) |
 
-- **Correcties:** Maten en broedgegevens naar de bron: lengte 32–36 cm, spanwijdte 50–60 cm, 5–7 eieren, broedduur 16–21 dagen, nestjongen 19–21 dagen (VB_GAAI).
+- **Correcties:** Maten en broedgegevens naar de bron: lengte 32–36 cm, spanwijdte 50–60 cm, 5–7 eieren, broedduur 16–21 dagen, nestjongen 19–21 dagen (VB_GAAI).; Twee originele foto’s gematcht. Maten en de vergelijking met Ekster onderbouwd. De bestaande fotoinformatie vermeldt de door de maker gevraagde website en linkt de licentie.
 - **Ontbreekt:** Juveniel
 - **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** Geslachten gelijk; geen geslachtsvakken.
@@ -821,18 +821,18 @@ Batch M2 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · tech
 
 ### sp025 Kauw — PARTIALLY TESTED
 
-Batch M3 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+Batch M3 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
-| `sp025.webp` | Hoofdfoto | Kauw in zijaanzicht op een tak. Lichte iris, grijze nek en de korte donkere snavel zijn zichtbaar. | Fotobron bevestigt de soort. Leeftijd en geslacht zijn niet expliciet geannoteerd. | Scherpe, goed leesbare kop. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours |
-| `sp025-flight.webp` | Overige herkenningsfoto’s (landingshouding) | Frontaal beeld met uitgespreide staart en vooruitgestoken poten tussen takken. | Leeftijd en geslacht zijn niet bevestigd door de fotobron. | Bruikbaar als aanvullende herkenningsfoto. | uit-rol | landen · uit-rol | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · hedera.baltica from Wrocław, Poland |
+| `sp025.webp` | Hoofdfoto | Kauw in zijaanzicht op een tak. Lichte iris, grijze nek en de korte donkere snavel zijn zichtbaar. | Fotobron bevestigt de soort. Leeftijd en geslacht zijn niet expliciet geannoteerd. | Scherpe, goed leesbare kop. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Alexis Lours |
+| `sp025-flight.webp` | Overige herkenningsfoto’s (landingshouding) | Frontaal beeld met uitgespreide staart en vooruitgestoken poten tussen takken. | Leeftijd en geslacht zijn niet bevestigd door de fotobron. | Bruikbaar als aanvullende herkenningsfoto. | uit-rol | landen · uit-rol | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 2.0 · hedera.baltica |
 
-- **Correcties:** De bestaande landingsfoto blijft buiten In vlucht. Het kennisprofiel maakt het leeftijdsvoorbehoud bij oogkleur expliciet.
+- **Correcties:** De bestaande landingsfoto blijft buiten In vlucht. Het kennisprofiel maakt het leeftijdsvoorbehoud bij oogkleur expliciet.; Twee originele foto’s gematcht. De landingsnadering blijft bij de overige foto’s. Maten naast Kent Wildlife Trust gelegd.
 - **Ontbreekt:** Afzonderlijke juvenielenfoto; Vrije-vluchtfoto
 - **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** Geslachten zijn uiterlijk gelijkend. De kaart houdt beide foto’s neutraal.
-- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Iris en achterhoofd; open: Een afzonderlijke juvenielenfoto, een vrije-vluchtfoto en een eigen geluidsopname voor de gids ontbreken.; resterende dataverschillen: 0
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Iris en achterhoofd; open: Een bronbevestigde juvenielenfoto, een foto in vrije vlucht en een eigen geluidsopname ontbreken. De frontale landingsnadering blijft bij de overige herkenningsfoto’s.; resterende dataverschillen: 0
 - **Browser:** NOT TESTED
 - **Onzeker:** De fotobron noemt het beeld in algemene zin “in flight”. De zichtbare poten en houding ondersteunen de specifiekere Birdspot-indeling als landingshouding.
 - **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
@@ -1083,17 +1083,17 @@ Batch M7 · 2026-11-12 · SHA `dfa3dfd5976579121089e69552da8919920d99e4` · tech
 
 ### sp029 Koolmees — VERIFIED
 
-Batch M4 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M4 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
-| `sp029-adult_m.webp` | Hoofdfoto (Mannetje) | Mannetje Koolmees met zwarte kop, witte wang en brede donkere buikstreep. | Fotograaf vermeldt een mannetje. Brede buikstreep zichtbaar. | Herkenbare kop en onderzijde. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY-SA 4.0 · Charles J. Sharp |
-| `sp029-adult_f.webp` | Verenkleed (Vrouwtje) | Vrouwtje Koolmees met witte wangen en een smalle, onderbroken donkere buikstreep. | Fotograaf vermeldt een vrouwtje. Smalle, onderbroken buikstreep zichtbaar. | Vooraanzicht toont de streep goed. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY-SA 4.0 · Evas-naturfotografie |
-| `sp029-juv.webp` | Verenkleed (Juveniel) | Juveniele Koolmees met doffe kap, lichte wang en lichte mondhoek. | Fotograaf vermeldt een juveniel. Geslacht onbekend. | Scherpe kop en mondhoek. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY 2.0 · caroline legg |
-| `sp029-flight.webp` | In vlucht | Vrij in de lucht met uitgespreide vleugel. Zwarte kop, lichte wang en gele onderzijde zichtbaar. | Geen betrouwbaar geslachts- of leeftijdslabel bij deze kijkhoek. | Goed voor herkenning van vleugel en lichaam. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Holger Uwe Schmitt |
-| `sp029.webp` | Overige herkenningsfoto's | Koolmees zijwaarts op een tak, met gele buik, witte wang en lichte vleugelstreep. | Geslacht niet vastgesteld op deze foto. | Aanvullend zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Rhododendrites |
+| `sp029-adult_m.webp` | Hoofdfoto (Mannetje) | Mannetje Koolmees met zwarte kop, witte wang en brede donkere buikstreep. | Fotograaf vermeldt een mannetje. Brede buikstreep zichtbaar. | Herkenbare kop en onderzijde. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Charles J. Sharp |
+| `sp029-adult_f.webp` | Verenkleed (Vrouwtje) | Vrouwtje Koolmees met witte wangen en een smalle, onderbroken donkere buikstreep. | Fotograaf vermeldt een vrouwtje. Smalle, onderbroken buikstreep zichtbaar. | Vooraanzicht toont de streep goed. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Evas-naturfotografie |
+| `sp029-juv.webp` | Verenkleed (Juveniel) | Juveniele Koolmees met doffe kap, lichte wang en lichte mondhoek. | Fotograaf vermeldt een juveniel. Geslacht onbekend. | Scherpe kop en mondhoek. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 2.0 · caroline legg |
+| `sp029-flight.webp` | In vlucht | Vrij in de lucht met uitgespreide vleugel. Zwarte kop, lichte wang en gele onderzijde zichtbaar. | Geen betrouwbaar geslachts- of leeftijdslabel bij deze kijkhoek. | Goed voor herkenning van vleugel en lichaam. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Holger Uwe Schmitt |
+| `sp029.webp` | Overige herkenningsfoto's | Koolmees zijwaarts op een tak, met gele buik, witte wang en lichte vleugelstreep. | Geslacht niet vastgesteld op deze foto. | Aanvullend zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Rhododendrites |
 
-- **Correcties:** Brongeverifieerd mannetje als hoofdfoto, met verwijzing vanuit Mannetje. Vrouwtje en juveniel toegevoegd. Oud hoofdbeeld blijft als aanvullend portret.
+- **Correcties:** Brongeverifieerd mannetje als hoofdfoto, met verwijzing vanuit Mannetje. Vrouwtje en juveniel toegevoegd. Oud hoofdbeeld blijft als aanvullend portret.; Alle vijf beelden naast de originelen gelegd. Leeftijd en geslacht van de kleedfoto’s met de bron gecontroleerd. Lengte en spanwijdte via RSPB getoetst.
 - **Ontbreekt:** niets
 - **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** Volwassen geslachtslabels alleen als bron en zichtbaar buikpatroon overeenstemmen. Vluchtfoto en juveniel zonder geslachtslabel.

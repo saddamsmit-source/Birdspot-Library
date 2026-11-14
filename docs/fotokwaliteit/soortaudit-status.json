@@ -1876,8 +1876,8 @@
    "family": "Kraaien",
    "audited": true,
    "batch": "M3",
-   "date": "2026-11-11",
-   "sha": "9ddb3d984262f8e95bae5a056431ef80bbde73bb",
+   "date": "2026-11-14",
+   "sha": null,
    "assets": [
     {
      "image": "/assets/species/sp025.webp",
@@ -1888,7 +1888,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Alexis Lours",
       "annotations": []
      },
      "flight": null
@@ -1902,7 +1902,7 @@
      "verdict": "uit-rol",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · hedera.baltica from Wrocław, Poland",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 2.0 · hedera.baltica",
       "annotations": []
      },
      "flight": {
@@ -1925,7 +1925,8 @@
     }
    ],
    "corrections": [
-    "De bestaande landingsfoto blijft buiten In vlucht. Het kennisprofiel maakt het leeftijdsvoorbehoud bij oogkleur expliciet."
+    "De bestaande landingsfoto blijft buiten In vlucht. Het kennisprofiel maakt het leeftijdsvoorbehoud bij oogkleur expliciet.",
+    "Twee originele foto’s gematcht. De landingsnadering blijft bij de overige foto’s. Maten naast Kent Wildlife Trust gelegd."
    ],
    "missing": [
     "Afzonderlijke juvenielenfoto",
@@ -1954,7 +1955,7 @@
      "Iris en achterhoofd"
     ],
     "open": [
-     "Een afzonderlijke juvenielenfoto, een vrije-vluchtfoto en een eigen geluidsopname voor de gids ontbreken."
+     "Een bronbevestigde juvenielenfoto, een foto in vrije vlucht en een eigen geluidsopname ontbreken. De frontale landingsnadering blijft bij de overige herkenningsfoto’s."
     ],
     "discrepancies": 0
    },
@@ -1969,8 +1970,8 @@
    "family": "Kraaien",
    "audited": true,
    "batch": "M2",
-   "date": "2026-11-10",
-   "sha": "9ddb3d984262f8e95bae5a056431ef80bbde73bb",
+   "date": "2026-11-14",
+   "sha": null,
    "assets": [
     {
      "image": "/assets/species/sp026.webp",
@@ -1981,7 +1982,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Hwbund",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Hwbund",
       "annotations": []
      },
      "flight": null
@@ -1995,7 +1996,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Giles Laurent",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Giles Laurent (gileslaurent.com)",
       "annotations": []
      },
      "flight": {
@@ -2018,7 +2019,8 @@
     }
    ],
    "corrections": [
-    "Maten en broedgegevens naar de bron: lengte 32–36 cm, spanwijdte 50–60 cm, 5–7 eieren, broedduur 16–21 dagen, nestjongen 19–21 dagen (VB_GAAI)."
+    "Maten en broedgegevens naar de bron: lengte 32–36 cm, spanwijdte 50–60 cm, 5–7 eieren, broedduur 16–21 dagen, nestjongen 19–21 dagen (VB_GAAI).",
+    "Twee originele foto’s gematcht. Maten en de vergelijking met Ekster onderbouwd. De bestaande fotoinformatie vermeldt de door de maker gevraagde website en linkt de licentie."
    ],
    "missing": [
     "Juveniel"
@@ -2071,8 +2073,8 @@
    "family": "Mezen",
    "audited": true,
    "batch": "M4",
-   "date": "2026-11-11",
-   "sha": "9ddb3d984262f8e95bae5a056431ef80bbde73bb",
+   "date": "2026-11-14",
+   "sha": null,
    "assets": [
     {
      "image": "/assets/species/plumage/sp029-adult_m.webp",
@@ -2083,10 +2085,8 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY-SA 4.0 · Charles J. Sharp",
-      "annotations": [
-       "De fotograaf vermeldt een mannetje. De brede donkere buikstreep ondersteunt dat label."
-      ]
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Charles J. Sharp",
+      "annotations": []
      },
      "flight": null
     },
@@ -2099,10 +2099,8 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY-SA 4.0 · Evas-naturfotografie",
-      "annotations": [
-       "De fotograaf vermeldt een vrouwtje. Het vooraanzicht toont de smallere buikstreep."
-      ]
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Evas-naturfotografie",
+      "annotations": []
      },
      "flight": null
     },
@@ -2115,10 +2113,8 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY 2.0 · caroline legg",
-      "annotations": [
-       "De fotograaf benoemt een juveniel. De doffe kap en lichte mondhoek ondersteunen de leeftijd. Geslacht niet vastgesteld."
-      ]
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 2.0 · caroline legg",
+      "annotations": []
      },
      "flight": null
     },
@@ -2131,7 +2127,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Holger Uwe Schmitt",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Holger Uwe Schmitt",
       "annotations": []
      },
      "flight": {
@@ -2161,14 +2157,15 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Rhododendrites",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Rhododendrites",
       "annotations": []
      },
      "flight": null
     }
    ],
    "corrections": [
-    "Brongeverifieerd mannetje als hoofdfoto, met verwijzing vanuit Mannetje. Vrouwtje en juveniel toegevoegd. Oud hoofdbeeld blijft als aanvullend portret."
+    "Brongeverifieerd mannetje als hoofdfoto, met verwijzing vanuit Mannetje. Vrouwtje en juveniel toegevoegd. Oud hoofdbeeld blijft als aanvullend portret.",
+    "Alle vijf beelden naast de originelen gelegd. Leeftijd en geslacht van de kleedfoto’s met de bron gecontroleerd. Lengte en spanwijdte via RSPB getoetst."
    ],
    "missing": [],
    "wishes": [],
@@ -12689,6 +12686,12 @@
    "scope": "F2 · duiven vergelijken en Holenduif in vrije vlucht",
    "basis": "47728bc2e2e93ada22d265e5d11dc78b68769e7a",
    "evidence": "docs/fotokwaliteit/F2_03_DUIVEN_HERKENNING_2026-11-14.md"
+  },
+  {
+   "date": "2026-11-14",
+   "scope": "F2 · sp025 sp026 sp029",
+   "basis": "7d0e0f2e654f25ff76cdd3629c8bb201e1825515",
+   "evidence": "docs/evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_11.json"
   }
  ]
 }
