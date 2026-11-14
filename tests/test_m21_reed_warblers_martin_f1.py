@@ -44,7 +44,11 @@ def check_f1_and_original_rules():
     canon = read("docs/fotokwaliteit/soortaudit-status.json")
     ledger = read("docs/fotokwaliteit/F1_VOORTGANG_TOT_140.json")
     norm = (ROOT / "docs/BIRDSPOT_KWALITEITSNORM.md").read_text(encoding="utf-8")
-    assert "| Versie | 1.3 · 14-11-2026 |" in norm
+    assert "| Versie | 1.4 · 14-11-2026 |" in norm
+    assert "| 1.3 | 14-11-2026 |" in norm, "V1.3 historical owner decision must remain"
+    assert "### 2.1 Voorkeursbronnen voor soortherkenning" in norm
+    assert "Start met Vogelbescherming Nederland en de ANWB-vogelgids" in norm
+    assert "Alle zes controles uit §3.2 blijven verplicht" in norm
     assert "| 1.2 | 14-11-2026 |" in norm, "Previous photo norm history must remain intact"
     assert "**Kleine vogels: herkenbare rustfoto's vóór een moeilijke vluchtfoto" in norm
     assert "De zes controles van §3.2 blijven voor **elke wél geplaatste foto** verplicht." in norm
