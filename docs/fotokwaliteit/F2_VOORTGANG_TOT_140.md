@@ -11,6 +11,10 @@ Doel is per soort de eigen foto’s, rollen, bronrechten, determinatie, maten en
 | sp248 Wespendief | Vier foto’s en rechten herbevestigd. Maten, seizoen en kleedkenmerken aangescherpt. Vrouwtje in vlucht als extra vergelijking naast een volwassen Buizerd. | [Brondossier F2-05](../evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_05.json), [M2](soortaudit/M2.json). Afzonderlijke foto vrouwtje in rust blijft open. Een groter vluchtbeeld blijft een wens. |
 | sp253 Ruigpootbuizerd | Vier foto’s en rechten herbevestigd. De drie eerder onbereikbare iNaturalist-fotopagina’s en gekoppelde waarnemingen zijn gecontroleerd. Maten en onderscheid met Buizerd onderbouwd. | [Brondossier F2-05](../evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_05.json), [M2](soortaudit/M2.json). Rustfoto’s voor vrouwtje en juveniel en een gelicentieerde referentieroep staan open. |
 
+| sp006 Sperwer | Vijf bestaande beelden en licenties herbevestigd. Het bronbevestigde mannetje krijgt een eigen label in vlucht. Leeftijd in vlucht, maten en verschil in gewichtsbronnen uitgewerkt. | [Brondossier F2-06](../evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_06.json), [M1](soortaudit/M1.json). Een passende foto van het vrouwtje in vrije vlucht blijft open. |
+| sp007 Havik | Zes bestaande beelden en licenties herbevestigd. Leeftijd, geslachtskenmerken, maten en synoniem gecontroleerd. | [Brondossier F2-06](../evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_06.json), [M2](soortaudit/M2.json). Een aparte rustfoto van het vrouwtje blijft open. De algemene vluchtfoto behoudt een neutraal label. |
+| sp008 Torenvalk | Zes bestaande beelden en licenties herbevestigd. De fotograaf beschrijft het mannetje in vlucht expliciet. Gidsuitleg voor juveniel kleed, maten, leefgebied en vergelijking met Boomvalk en Smelleken aangevuld. | [Brondossier F2-06](../evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_06.json), [M1](soortaudit/M1.json). Vergelijkingsfoto’s van Boomvalk en Smelleken blijven open. |
+
 ## F2-05 · controle en herstel
 
 - Basis [PR #197 op 4f0cab0](https://github.com/saddamsmit-source/Birdspot-Library/pull/197), 25/25 controles op die basis. CAP-BIRD-012 en CAP-BIRD-015.
@@ -20,4 +24,11 @@ Doel is per soort de eigen foto’s, rollen, bronrechten, determinatie, maten en
 - De lokale collectiecontrole bevestigt 140 soorten met geregistreerde beelden. Alle geregistreerde gidsbeelden in de controle hebben een bestaand bestand, passende soortmetadata, creditvelden en een offline-cachebron. De eigen secties hebben geen exact dubbele getoonde foto’s. Dit bewijst structurele dekking. Bron- en beeldverificatie gaan in de volgende batches door.
 - Controleer de CI op de HEAD van de vervolgbatch. De eerdere browservastlegging bij de gemuteerde rijen is geen bewijs voor de nieuwe inhoud. De fysieke Android-test blijft een aparte releasecontrole.
 
-**Volgende batch:** Sperwer (sp006), Havik (sp007) en Torenvalk (sp008). Begin met vrije vlucht, leeftijdslabels en beschikbare foto’s voor het vrouwtje. Werk pas aan de 457 soorten zonder bestaande gidsfoto nadat de 140 opnieuw zijn doorlopen.
+## F2-06 · controle en herstel
+
+- Basis [PR #198 op 52954f4](https://github.com/saddamsmit-source/Birdspot-Library/pull/198), 25/25 controles op die basis. CAP-BIRD-012 en CAP-BIRD-015.
+- Zeventien actieve gidsbeelden naast de bron bekeken. De oudere originele bestandshash van de hoofdfoto van Torenvalk blijft bewaard. In deze ronde is de kopie van 960 × 640 pixels naast het beeld in de app bekeken. Geen foto's vervangen. De bronbeschrijving bevestigt de vluchtrol bij Sperwer en Torenvalk.
+- Controleer naast de titel en categorie ook de beschrijving van de fotograaf. Leg vast of nieuwe beeldverificatie tegen het origineel of een bronminiatuur liep. Dit levert aanvullend bewijs bij de werkinslag uit L-080.
+- Teller: 9 van 140 soorten in F2 opgepakt. Open veldkenmerken en ontbrekende foto’s staan per soort in de audit. De fysieke Android-test blijft een aparte releasecontrole.
+
+**Volgende batch:** Slechtvalk (sp009), Blauwe Kiekendief (sp249) en Steppekiekendief (sp250). Werk pas aan de 457 soorten zonder bestaande gidsfoto nadat de 140 opnieuw zijn doorlopen.

@@ -864,17 +864,17 @@
    "id": "sp006",
    "nameNL": "Sperwer",
    "registry": "GUIDE_POSES[0]",
-   "sexLabel": null,
+   "sexLabel": "male",
    "class": "vlucht",
    "quality": "goed",
    "decision": "goedgekeurd",
    "target": null,
-   "newLabel": null,
+   "newLabel": "Mannetje in vlucht",
    "newNote": null,
    "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
    "airborne": true,
    "rights": "VERIFIED",
-   "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 4.0"
+   "rightsNote": "zelfde opname en licentie CC BY 4.0 opnieuw gecontroleerd 14-11. Fotograaf bevestigt mannetje."
   },
   "/assets/species/sp250.webp": {
    "n": 45,

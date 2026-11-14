@@ -545,8 +545,8 @@
    "family": "Haviken",
    "audited": true,
    "batch": "M1",
-   "date": "2026-11-10",
-   "sha": "9ddb3d984262f8e95bae5a056431ef80bbde73bb",
+   "date": "2026-11-14",
+   "sha": null,
    "assets": [
     {
      "image": "/assets/species/plumage/sp006-hero-male.webp",
@@ -557,7 +557,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "geverifieerde import 09-11 (SHA-1 c6bec5e043…), CC BY 2.0 · caroline legg",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.), CC BY 2.0 · caroline legg",
       "annotations": []
      },
      "flight": null
@@ -571,7 +571,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · caroline legg",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.), CC BY 2.0 · caroline legg",
       "annotations": []
      },
      "flight": null
@@ -585,7 +585,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · caroline legg",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.), CC BY 2.0 · caroline legg",
       "annotations": []
      },
      "flight": null
@@ -599,7 +599,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · caroline legg",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.), CC BY 2.0 · caroline legg",
       "annotations": []
      },
      "flight": null
@@ -608,12 +608,12 @@
      "image": "/assets/species/plumage/sp006-flight.webp",
      "role": "In vlucht",
      "content": "Vrij in de lucht van onderen; korte brede vleugels, gebandeerde staart met rechte hoeken, roestige onderzijde.",
-     "sexAge": "niet vastgesteld op de kaart (neutraal label)",
+     "sexAge": "mannetje bevestigd in de beschrijving van de fotograaf",
      "quality": "goed",
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.), CC BY 4.0 · Alexis Lours",
       "annotations": []
      },
      "flight": {
@@ -621,23 +621,25 @@
       "id": "sp006",
       "nameNL": "Sperwer",
       "registry": "GUIDE_POSES[0]",
-      "sexLabel": null,
+      "sexLabel": "male",
       "class": "vlucht",
       "quality": "goed",
       "decision": "goedgekeurd",
       "target": null,
-      "newLabel": null,
+      "newLabel": "Mannetje in vlucht",
       "newNote": null,
       "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
       "airborne": true,
       "rights": "VERIFIED",
-      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 4.0"
+      "rightsNote": "zelfde opname en licentie CC BY 4.0 opnieuw gecontroleerd 14-11. Fotograaf bevestigt mannetje."
      }
     }
    ],
-   "corrections": [],
+   "corrections": [
+    "F2: Alle vijf actieve bronbeelden en rechten herbevestigd. Bronvermelding van mannetje in vrije vlucht, leeftijdspatroon onderzijde en maten gecontroleerd."
+   ],
    "missing": [
-    "Vrouwtje in vlucht (wenselijk)"
+    "Vrouwtje in vrije vlucht (wenselijk). Voor het vrouwtje in rust blijft de foto op een zitplaats beschikbaar."
    ],
    "wishes": [],
    "uncertain": [],
@@ -647,8 +649,8 @@
     "technical": "VERIFIED",
     "visual": "VERIFIED",
     "rights": "VERIFIED",
-    "knowledge": "PARTIALLY TESTED",
-    "browser": "VERIFIED",
+    "knowledge": "VERIFIED",
+    "browser": "NOT TESTED",
     "independent": "NOT TESTED"
    },
    "photoComplete": false,
@@ -663,27 +665,10 @@
      "Roep",
      "Grootte"
     ],
-    "open": [
-     "Leeftijdsbepaling in vlucht nog uit een bron beschrijven."
-    ],
+    "open": [],
     "discrepancies": 1
    },
-   "browser": {
-    "ok": true,
-    "viewport": "390x844 Chromium (Playwright)",
-    "photos": 5,
-    "sections": [
-     "Hoofdfoto",
-     "Verenkleed",
-     "In vlucht"
-    ],
-    "flight": [
-     "/assets/species/plumage/sp006-flight.webp"
-    ],
-    "checks": "SAB-01..07",
-    "lijktOp": "SAB-09 OK (390 px)",
-    "lijktOpDesktop": "SAB-09 OK (1280 px)"
-   },
+   "browser": null,
    "errors": [],
    "verdict": "PARTIALLY TESTED",
    "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
@@ -694,8 +679,8 @@
    "family": "Haviken",
    "audited": true,
    "batch": "M2",
-   "date": "2026-11-10",
-   "sha": "9ddb3d984262f8e95bae5a056431ef80bbde73bb",
+   "date": "2026-11-14",
+   "sha": null,
    "assets": [
     {
      "image": "/assets/species/plumage/sp007-hero-male.webp",
@@ -706,7 +691,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "geverifieerde import 09-11 (SHA-1 7d6ecbe1e4…), CC BY 2.0 · Andrey Gulivanov",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.), CC BY 2.0 · Andrey Gulivanov",
       "annotations": []
      },
      "flight": null
@@ -720,7 +705,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Andrey Gulivanov",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.), CC BY 2.0 · Andrey Gulivanov",
       "annotations": []
      },
      "flight": null
@@ -734,7 +719,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Andrey Gulivanov",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.), CC BY 2.0 · Andrey Gulivanov",
       "annotations": []
      },
      "flight": null
@@ -748,7 +733,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Вячеслав Юсупов, some rights reserved (CC BY)",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.), CC BY 4.0 · (c) Вячеслав Юсупов, some rights reserved (CC BY)",
       "annotations": [
        "Sex: Male"
       ]
@@ -780,7 +765,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) WATANABE Hitoshi 渡辺仁, some rights reserved (CC BY)",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.), CC BY 4.0 · (c) WATANABE Hitoshi 渡辺仁, some rights reserved (CC BY)",
       "annotations": [
        "Life Stage: Adult",
        "Sex: Female"
@@ -807,13 +792,13 @@
     {
      "image": "/assets/species/plumage/sp007-flight.webp",
      "role": "In vlucht",
-     "content": "Vrij in de lucht van opzij; bruinig met lengtestrepen onder — oogt als jonge vogel.",
-     "sexAge": "niet vastgesteld; lijkt juveniel, bron zegt het niet (REVIEW REQUIRED, label blijft neutraal)",
+     "content": "Vrij in de lucht van opzij; brede vleugel en gebandeerde staart. Onderzijde ongeschikt om de leeftijd zeker toe te kennen.",
+     "sexAge": "leeftijd en geslacht onbeslist; label blijft neutraal",
      "quality": "voldoende: vogel klein in beeld",
      "verdict": "review",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Ken Billington",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.), CC BY-SA 3.0 · Ken Billington",
       "annotations": []
      },
      "flight": {
@@ -835,13 +820,15 @@
      }
     }
    ],
-   "corrections": [],
+   "corrections": [
+    "F2: Alle zes actieve bronbeelden en rechten herbevestigd. ITIS bevestigt Astur gentilis en Accipiter gentilis als namen voor dezelfde soort. Geslachtsverschillen, leeftijd en maten gecontroleerd."
+   ],
    "missing": [
-    "Vrouwtje zittend (alleen in vlucht aanwezig; Vrouwtje-kaart verwijst naar In vlucht)"
+    "Vrouwtje in rust. Er is al een brongeverifieerd volwassen vrouwtje in vrije vlucht."
    ],
    "wishes": [],
    "uncertain": [
-    "Neutrale vluchtfoto oogt juveniel; leeftijd niet uit de bron vast te stellen (REVIEW REQUIRED)."
+    "Algemene vluchtfoto zonder onderbouwde leeftijd of bevestigd geslacht."
    ],
    "sexPolicy": "Geslachten verschillen vooral in grootte; labels Mannetje/Vrouwtje steunen op de foto-bron.",
    "previous": null,
@@ -850,7 +837,7 @@
     "visual": "PARTIALLY TESTED",
     "rights": "VERIFIED",
     "knowledge": "PARTIALLY TESTED",
-    "browser": "VERIFIED",
+    "browser": "NOT TESTED",
     "independent": "NOT TESTED"
    },
    "photoComplete": false,
@@ -863,28 +850,11 @@
      "Grootte"
     ],
     "open": [
-     "Geslachtsverschil in kleed niet uit een bron vastgelegd; Birdspot-labels Mannetje/Vrouwtje steunen op de foto-bron (Commons/iNaturalist).",
-     "Neutrale vluchtfoto (sp007-flight) lijkt een jonge vogel; leeftijd niet uit de bron vast te stellen (REVIEW REQUIRED)."
+     "Leeftijd en geslacht van de algemene vluchtfoto zijn niet beschreven bij de bron. De kaart toont deze foto met een neutraal label."
     ],
     "discrepancies": 0
    },
-   "browser": {
-    "ok": true,
-    "viewport": "390x844 Chromium (Playwright)",
-    "photos": 6,
-    "sections": [
-     "Hoofdfoto",
-     "Verenkleed",
-     "In vlucht"
-    ],
-    "flight": [
-     "/assets/species/plumage/sp007-male-flight.webp",
-     "/assets/species/plumage/sp007-adult_f.webp",
-     "/assets/species/plumage/sp007-flight.webp"
-    ],
-    "checks": "SAB-01..07",
-    "lijktOp": "SAB-09 OK (390 px)"
-   },
+   "browser": null,
    "errors": [],
    "verdict": "PARTIALLY TESTED",
    "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
@@ -895,8 +865,8 @@
    "family": "Valken",
    "audited": true,
    "batch": "M1",
-   "date": "2026-11-10",
-   "sha": "9ddb3d984262f8e95bae5a056431ef80bbde73bb",
+   "date": "2026-11-14",
+   "sha": null,
    "assets": [
     {
      "image": "/assets/species/plumage/sp008-hero-male.webp",
@@ -907,7 +877,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "geverifieerde import 09-11 (SHA-1 9041286b8d…), CC BY 4.0 · Marie-Lan Taÿ Pamart",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.), CC BY 4.0 · Marie-Lan Taÿ Pamart",
       "annotations": []
      },
      "flight": null
@@ -921,7 +891,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Jakub Hałun",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.), CC BY 4.0 · Jakub Hałun",
       "annotations": []
      },
      "flight": null
@@ -935,7 +905,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.), CC BY 4.0 · Alexis Lours",
       "annotations": []
      },
      "flight": null
@@ -949,7 +919,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · caroline legg",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.), CC BY 4.0 · caroline legg",
       "annotations": []
      },
      "flight": null
@@ -958,12 +928,12 @@
      "image": "/assets/species/plumage/sp008-male-flight.webp",
      "role": "In vlucht (Mannetje)",
      "content": "Vrij in de lucht van onderen; spitse vleugels, grijze ongebandeerde staart met brede zwarte eindband.",
-     "sexAge": "mannetje: visueel (grijze ongebandeerde staart met zwarte eindband); bron noemt geen geslacht",
+     "sexAge": "mannetje volgens de fotograaf, met grijze staart zonder regelmatige dwarsbanden en brede donkere eindband",
      "quality": "goed",
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Zeynel Cebeci",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.), CC BY-SA 4.0 · Zeynel Cebeci",
       "annotations": []
      },
      "flight": {
@@ -993,7 +963,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Rolf Dietrich Brecher from Germany",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.), CC BY 2.0 · Rolf Dietrich Brecher from Germany",
       "annotations": []
      },
      "flight": {
@@ -1015,23 +985,27 @@
      }
     }
    ],
-   "corrections": [],
-   "missing": [],
+   "corrections": [
+    "F2: Alle zes actieve bronbeelden en rechten herbevestigd. Fotograaf beschrijft het mannetje in vlucht expliciet. Op de foto zijn de grijze staart zonder regelmatige dwarsbanden en de brede donkere eindband zichtbaar. Leeftijdstekst, maten en herkenning naast Boomvalk en Smelleken aangescherpt."
+   ],
+   "missing": [
+    "Vergelijkingsfoto’s voor Boomvalk en Smelleken ontbreken in de gids."
+   ],
    "wishes": [],
    "uncertain": [
-    "Geslacht van de mannetje-vluchtfoto steunt op beeldkenmerken, niet op de bron (REVIEW REQUIRED voor onafhankelijke bevestiging)."
+    "Algemene bidfoto bevat geen bevestigd geslacht en heeft een neutraal label."
    ],
    "sexPolicy": "Geslachten verschillen (VB_TOREN, EB_KES); mannetje en vrouwtje getoond.",
    "previous": null,
    "status": {
     "technical": "VERIFIED",
-    "visual": "PARTIALLY TESTED",
+    "visual": "VERIFIED",
     "rights": "VERIFIED",
     "knowledge": "PARTIALLY TESTED",
-    "browser": "VERIFIED",
+    "browser": "NOT TESTED",
     "independent": "NOT TESTED"
    },
-   "photoComplete": true,
+   "photoComplete": false,
    "knowledge": {
     "profile": true,
     "critical": 2,
@@ -1040,29 +1014,14 @@
      "Silhouet en jachtgedrag"
     ],
     "open": [
-     "Juveniel kleed en het onderscheid juveniel/vrouwtje uit een bron beschrijven.",
-     "Uitgewerkte vergelijking met Boomvalk en Smelleken ontbreekt."
+     "Voor Boomvalk en Smelleken is er nu een tekstvergelijking. Fotovergelijking wacht op passende gidsbeelden van deze soorten."
     ],
     "discrepancies": 0
    },
-   "browser": {
-    "ok": true,
-    "viewport": "390x844 Chromium (Playwright)",
-    "photos": 6,
-    "sections": [
-     "Hoofdfoto",
-     "Verenkleed",
-     "In vlucht"
-    ],
-    "flight": [
-     "/assets/species/plumage/sp008-male-flight.webp",
-     "/assets/species/plumage/sp008-flight.webp"
-    ],
-    "checks": "SAB-01..07"
-   },
+   "browser": null,
    "errors": [],
    "verdict": "PARTIALLY TESTED",
-   "next": "Onafhankelijke review (ChatGPT)"
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
   },
   {
    "id": "sp009",

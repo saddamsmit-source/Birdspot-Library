@@ -16,17 +16,60 @@
   "species": {
     "sp007": {
       "assets": {
-        "/assets/species/plumage/sp007-hero-male.webp": {"role": "Hoofdfoto", "content": "Volwassen Havik in naaldboom; donkergrijze rug, fijn gebandeerde borst, oranjerood oog, lichte wenkbrauw.", "sexAge": "volwassen (bron: 'Male northern goshawk'); geslacht niet als label getoond op de hoofdfoto", "quality": "goed", "verdict": "goedgekeurd"},
-        "/assets/species/sp007.webp": {"role": "Mannetje", "content": "Volwassen Havik op tak tegen lichte lucht; grijs, fijn dwars gebandeerd.", "sexAge": "mannetje (bron: 'Male northern goshawk'; kleed past bij volwassen vogel)", "quality": "goed", "verdict": "goedgekeurd"},
-        "/assets/species/plumage/sp007-juv.webp": {"role": "Juveniel", "content": "Jonge Havik op tak; bruin van boven, onderzijde in de lengte gestreept.", "sexAge": "juveniel (bron: 'Juvenile northern goshawk'; lengtestrepen bevestigen)", "quality": "goed", "verdict": "goedgekeurd"},
-        "/assets/species/plumage/sp007-male-flight.webp": {"role": "In vlucht (Mannetje)", "content": "Vrij in de lucht van opzij-onder; grijs gebandeerd, witte onderstaartdekveren.", "sexAge": "mannetje (iNaturalist: Sex Male)", "quality": "goed", "verdict": "goedgekeurd"},
-        "/assets/species/plumage/sp007-adult_f.webp": {"role": "In vlucht (Vrouwtje)", "content": "Vrij in de lucht van onderen; brede vleugels, gebandeerde onderzijde, afgeronde staart.", "sexAge": "volwassen vrouwtje (iNaturalist: Life Stage Adult, Sex Female)", "quality": "goed", "verdict": "goedgekeurd"},
-        "/assets/species/plumage/sp007-flight.webp": {"role": "In vlucht", "content": "Vrij in de lucht van opzij; bruinig met lengtestrepen onder — oogt als jonge vogel.", "sexAge": "niet vastgesteld; lijkt juveniel, bron zegt het niet (REVIEW REQUIRED, label blijft neutraal)", "quality": "voldoende: vogel klein in beeld", "verdict": "review"}
+        "/assets/species/plumage/sp007-hero-male.webp": {
+          "role": "Hoofdfoto",
+          "content": "Volwassen Havik in naaldboom; donkergrijze rug, fijn gebandeerde borst, oranjerood oog, lichte wenkbrauw.",
+          "sexAge": "volwassen (bron: 'Male northern goshawk'); geslacht niet als label getoond op de hoofdfoto",
+          "quality": "goed",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/sp007.webp": {
+          "role": "Mannetje",
+          "content": "Volwassen Havik op tak tegen lichte lucht; grijs, fijn dwars gebandeerd.",
+          "sexAge": "mannetje (bron: 'Male northern goshawk'; kleed past bij volwassen vogel)",
+          "quality": "goed",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp007-juv.webp": {
+          "role": "Juveniel",
+          "content": "Jonge Havik op tak; bruin van boven, onderzijde in de lengte gestreept.",
+          "sexAge": "juveniel (bron: 'Juvenile northern goshawk'; lengtestrepen bevestigen)",
+          "quality": "goed",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp007-male-flight.webp": {
+          "role": "In vlucht (Mannetje)",
+          "content": "Vrij in de lucht van opzij-onder; grijs gebandeerd, witte onderstaartdekveren.",
+          "sexAge": "mannetje (iNaturalist: Sex Male)",
+          "quality": "goed",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp007-adult_f.webp": {
+          "role": "In vlucht (Vrouwtje)",
+          "content": "Vrij in de lucht van onderen; brede vleugels, gebandeerde onderzijde, afgeronde staart.",
+          "sexAge": "volwassen vrouwtje (iNaturalist: Life Stage Adult, Sex Female)",
+          "quality": "goed",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp007-flight.webp": {
+          "role": "In vlucht",
+          "content": "Vrij in de lucht van opzij; brede vleugel en gebandeerde staart. Onderzijde ongeschikt om de leeftijd zeker toe te kennen.",
+          "sexAge": "leeftijd en geslacht onbeslist; label blijft neutraal",
+          "quality": "voldoende: vogel klein in beeld",
+          "verdict": "review"
+        }
       },
-      "corrections": [],
-      "missing": ["Vrouwtje zittend (alleen in vlucht aanwezig; Vrouwtje-kaart verwijst naar In vlucht)"],
+      "corrections": [
+        "F2: Alle zes actieve bronbeelden en rechten herbevestigd. ITIS bevestigt Astur gentilis en Accipiter gentilis als namen voor dezelfde soort. Geslachtsverschillen, leeftijd en maten gecontroleerd."
+      ],
+      "missing": [
+        "Vrouwtje in rust. Er is al een brongeverifieerd volwassen vrouwtje in vrije vlucht."
+      ],
       "sexPolicy": "Geslachten verschillen vooral in grootte; labels Mannetje/Vrouwtje steunen op de foto-bron.",
-      "uncertain": ["Neutrale vluchtfoto oogt juveniel; leeftijd niet uit de bron vast te stellen (REVIEW REQUIRED)."]
+      "uncertain": [
+        "Algemene vluchtfoto zonder onderbouwde leeftijd of bevestigd geslacht."
+      ],
+      "date": "2026-11-14"
     },
     "sp009": {
       "assets": {

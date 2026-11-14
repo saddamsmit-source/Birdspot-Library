@@ -599,6 +599,8 @@ def main():
             assert flight_falcon_panel.locator('.sd-cmp-who strong').all_text_contents() == ["Sperwer", "Torenvalk"]
             for sid in ("sp006", "sp007", "sp008"):
                 assert_photo_once(f"/assets/species/plumage/{sid}-flight.webp")
+            sparrow_in_flight = p.locator('#sdPanel-herkenning section[aria-label="In vlucht"]')
+            expect(sparrow_in_flight.get_by_text("Mannetje in vlucht", exact=True)).to_have_count(1)
             assert p.get_by_label("Roep vrouwtje van Sperwer").count() == 1
             flight_hawk_panel.get_by_role("button", name="Open Havik").click()
             assert p.get_by_role("dialog", name="Havik", exact=True).count() == 1
@@ -606,6 +608,15 @@ def main():
             assert p.get_by_label("Bedelroep jong van Havik").count() == 1
             close_detail()
             print("H4-04 OK — jonge Sperwer/Havik (tab Juveniel, juiste borsttekening), vluchtvergelijking met Havik en Torenvalk")
+
+            open_species("Torenvalk", "sp008")
+            text_comparisons = p.locator('#sdPanel-herkenning .kb-similar')
+            expect(text_comparisons.get_by_text("Boomvalk: lange spitse vleugels", exact=False)).to_be_visible()
+            expect(text_comparisons.get_by_text("Smelleken: brede vleugelbasis", exact=False)).to_be_visible()
+            expect(text_comparisons.locator('img')).to_have_count(0)
+            text_comparisons.get_by_role("button", name="Open Boomvalk").click()
+            expect(p.get_by_role("dialog", name="Boomvalk", exact=True)).to_be_visible()
+            close_detail()
 
             open_species("Buizerd", "sp005")
             dark = p.locator('.sd-flight [data-guide-image$="sp005-flight-dark.webp"] img')
