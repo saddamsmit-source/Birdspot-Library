@@ -1,7 +1,7 @@
 # Birdspot F2 — register open punten en uitgesteld fotoonderzoek
 
 **Eigenaarbesluit 14 november 2026 · Werkdocument (DRAFT, geen foto-PASS)**
-**Basis:** F2-15 `bccd09599a2b9fd7fb23771b3f6c262542b4c08a`, F2-16 op eigen branch. **Reikwijdte:** 42/140 soorten die individueel in F2 zijn opgepakt. Voor de andere 98 soorten geldt **NOT TESTED in F2** tot de afzonderlijke ronde start. Dit register is een index op de bestaande per-batch brondossiers, niet een vervanging van de canonieke 9-punts-audit.
+**Basis:** F2-15 `bccd09599a2b9fd7fb23771b3f6c262542b4c08a`, F2-16 op eigen branch. **Reikwijdte:** 45/140 soorten die individueel in F2 zijn opgepakt. Voor de andere 95 soorten geldt **NOT TESTED in F2** tot de afzonderlijke ronde start. Dit register is een index op de bestaande per-batch brondossiers, niet een vervanging van de canonieke 9-punts-audit.
 
 ## Hoe vervolgonderzoek te sturen
 
@@ -60,11 +60,15 @@ De tekst in de kolom 'Open uit bronronde' is overgenomen uit de laatste F2-voort
 | sp041 Appelvink | F2-17 | Vrouw-/juvenielportretten zijn geregistreerd maar de individuele originele foto's, de leeftijd/sekse-identiteit en de lokale WebP's niet opnieuw geopend. De 330×275-vlucht is voorwaardelijk; later optioneel onderzoek, geen geforceerde extra foto. |
 | sp042 Roodmus | F2-17 | Geen vrouwtjes-, juvenielen- of vluchtfoto; juiste rustfoto voor mannenvergelijking hergebruikt. Originele bestandslicentie, fotocredit en exacte WebP-match **NOT TESTED**. ANWB-soortpassage **NOT TESTED**. |
 
+| sp043 Huismus | F2-18 | Individuele juvenielbron bij meerdere vogels, exacte leeftijdsrol, bron-WEBP-match en licentiedetails **NOT TESTED** in deze ronde. Bestaande vlucht eerder goedgekeurd; geen nieuwe vlucht gezocht. |
+| sp044 Ringmus | F2-18 | Man en vrouw gelijk: volwassen hoofdfoto nooit geslacht toekennen zonder bron. Individuele iNaturalist-juvenielannotatie, exact WebP-bestand en voorwaarden licentie **NOT TESTED**. ANWB-inkijk bevestigt alleen het onderscheid zwarte wangvlek; niet dit specifieke beeld. |
+| sp045 Merel | F2-18 | Oud landingsbeeld al uit vlucht; tweede voorlopige vrije-vluchtfoto blijft **voorwaardelijk / kwaliteit matig** en is **NIET** opnieuw goedgekeurd. Voor effectieve nieuwe publicatie echte kijkproef: bij onvoldoende herkenbaarheid weglaten, niet forceren. Juveniele Merel versus Zanglijster op originele WebP/bronfoto onafhankelijk nog **NOT TESTED**. |
+
 ## Vervolgcontrole en aftekening
 
 1. Bij een volgende F2-ronde: controleer alleen de drie gekozen soorten op oorspronkelijke bestanden/CC-rechten, soort/rol, fotokwaliteit, twee passende vergelijkingbeelden en browserbediening; noteer de individuele status en bronlinks.
 2. Werk dit register additief bij: verander een open punt pas in **VERIFIED** na herhaalbare nieuwe bron-/beeld- en uitvoerbewijzen. Laat historische onzekerheid staan met datum en reden; geen stille aftekening op basis van 140 kaart-renders.
-3. **Niet gereviewd in F2:** 98 soorten. Volgorde na F2-16 opnieuw afleiden uit de 140-fotolijst en F2-voortgang; geen ongeteste soorten starten vóór een passende batch.
+3. **Niet gereviewd in F2:** 95 soorten. Volgorde na F2-16 opnieuw afleiden uit de 140-fotolijst en F2-voortgang; geen ongeteste soorten starten vóór een passende batch.
 4. Later diepgaand fotoonderzoek: per open beeldtype minimaal soortnaam/wetenschappelijke naam, doelkleed, foto-oorsprong, ondertitel, auteur, licentie, bronbestand/versie, vrijgave voor herpublicatie en indien passend exacte oorspronkelijke pixels. Bij twijfel lege positie laten staan.
 
 ## Live-/release-gate — aparte status
