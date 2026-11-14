@@ -150,6 +150,22 @@
 }
 .photo-info > summary::-webkit-details-marker { display: none; }
 .photo-info[open] > summary > span { background: var(--selected-gold); color: #10271f; }
+.photo-visible-credit {
+  display: block;
+  color: var(--ink-2);
+  font: 600 .6875rem/1.25 var(--font-body, system-ui);
+}
+.photo-info > summary .photo-visible-credit {
+  position: absolute;
+  inset-block-start: 12px;
+  inset-inline-start: 8px;
+  max-width: calc(100% - var(--hit-field) - 8px);
+  padding: 4px 6px;
+  border-radius: var(--r-sm);
+  background: #102d23;
+  color: #fff;
+  pointer-events: none;
+}
 .photo-info__panel {
   display: grid;
   gap: 4px;

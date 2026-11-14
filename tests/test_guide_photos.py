@@ -41,6 +41,20 @@ def main():
      credit=p.locator(f'#detailThumb-{sid} .photo-info')
      assert credit.locator('summary').is_visible()
      assert not credit.locator('.photo-info__panel').is_visible()
+     if sid == 'sp170':
+      expected_credit = 'Carlos Delgado; CC-BY-SA'
+      assert row.locator('.photo-visible-credit').inner_text() == expected_credit
+      assert credit.locator('.photo-visible-credit').is_visible()
+      assert credit.locator('.photo-visible-credit').inner_text() == expected_credit
+      p.get_by_role('button',name='Vergroot hoofdfoto',exact=True).click()
+      viewer=p.get_by_role('dialog',name='Vogelfoto bekijken',exact=True)
+      zoom_credit=viewer.locator('.photo-visible-credit')
+      assert zoom_credit.is_visible() and zoom_credit.inner_text() == expected_credit
+      viewer.get_by_role('button',name='Sluit foto',exact=True).click()
+      credit.locator('summary').click()
+      assert credit.get_by_role('link',name='CC BY-SA 3.0').get_attribute('href') == photo['licenseUrl']
+      assert credit.get_by_role('link',name='Open fotobron').get_attribute('href') == photo['source']
+      p.keyboard.press('Escape')
      if sid == 'sp045':
       credit.locator('summary').click()
       shown=by_path.get(hero_paths.get(sid), photo)  # sinds de bronaudit van 9-11 heeft sp045 een aparte hoofdfoto
