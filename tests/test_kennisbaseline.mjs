@@ -182,13 +182,21 @@ for (const id of ids) {
     const sec = html.match(/<section class="sd-similar"[\s\S]*?<\/section>/)?.[0] || '';
     assert.ok(sec.includes('data-kb-section="kritisch"'), `KB-05 ${id} kritische verschillen niet binnen "Lijkt op"`);
   }
+  const k = KNOWLEDGE[id];
   const life = statusPanel(s, LIFE[id] || null);
-  assert.ok(life.includes('aria-label="Kennisprofiel"'), `KB-05 ${id} Kennisprofiel ontbreekt in Leefwijze`);
   const kbLife = lifeDetails(s);
-  assert.ok(life.includes(kbLife), `KB-05 ${id} kennisprofiel niet in Leefwijze-tab`);
+  const hasPublicProfileContent = Boolean(k.status?.length || k.life?.length);
+  if (hasPublicProfileContent) {
+    assert.ok(life.includes('aria-label="Kennisprofiel"'),
+      `KB-05 ${id}: status/leefwijze gegevens mogen niet verdwijnen door bronbeleid`);
+    assert.ok(life.includes(kbLife), `KB-05 ${id}: kennisprofiel niet in Leefwijze-tab`);
+  } else {
+    assert.equal(kbLife, '', `KB-05 ${id}: lege bron-only sectie mag niet in publiekskaart`);
+    assert.ok(!life.includes('aria-label="Kennisprofiel"'),
+      `KB-05 ${id}: geen leeg bronnenpaneel toevoegen zonder publiek inhoudelijke gegevens`);
+  }
   // Owner's UI rule: verify every cited claim in the source data, but show no
   // optional bibliography, per-claim label or review log on the user card.
-  const k = KNOWLEDGE[id];
   const used = new Set();
   [k.summary, k.caution, k.basis?.size, ...k.keyMarks, ...k.critical, ...(k.similar || []), ...(k.detail || []),
     ...(k.voice || []), ...(k.habitat || []), ...(k.status || []), ...(k.life || [])].forEach(x =>
