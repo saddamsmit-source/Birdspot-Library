@@ -200,6 +200,14 @@
     "cause": "A hard-coded coverage assertion was not updated when adding a legitimate new juvenile pair.",
     "fix": "Set exact expected count to 22 and explicitly assert that the additional sp063/sp064 juvenile pair has both correct IDs and roles. Keep all original per-card photo/pose assertions.",
     "proof": "GitHub workflow run 43630519538 completed failure at initial SHA. Retest must run on the new SHA; no PASS claimed from the initial run.",
-    "prevention": "When adding approved comparisons, update exact-count coverage and tie new count to a specific evidence-backed comparison; keep negative photo/pose checks unchanged."
-  }
+    "prevention": "When adding approved comparisons, update exact-count coverage and tie new count to a specific evidence-backed comparison; keep negative photo/pose checks unchanged.",
+    "secondFailure": {
+      "symptom": "CI on 5e55316 failed with TypeError J(...).map is not a function at tools/fotokwaliteit/soortaudit.mjs:69.",
+      "cause": "The audit loader intentionally requires arrays for every docs/evidence/GUIDE_SOURCE_AUDIT_YYYY-MM-DD*.json. F2-15 stored an overview object under that file pattern.",
+      "fix": "Moved F2-15 overview to docs/fotokwaliteit/F2_15_BRON_EN_LIMIETEN.json; deleted the mismatched docs/evidence audit path. No production loader or validator rules changed.",
+      "proof": "GitHub run 43630709378 failed in soortaudit; retest required on corrected commit.",
+      "prevention": "Only store per-image array records under GUIDE_SOURCE_AUDIT_*.json; place batch summaries/metadata diagnostics under docs/fotokwaliteit."
+    }
+  },
+  "location": "docs/fotokwaliteit/F2_15_BRON_EN_LIMIETEN.json"
 }
