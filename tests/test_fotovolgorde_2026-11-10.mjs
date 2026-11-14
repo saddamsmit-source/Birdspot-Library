@@ -127,6 +127,29 @@ for (const [label, ids] of [
     entry.label === label && ids.every(id => entry.birds.some(b => b.id === id && b.plumage === 'juv'))),
     'FV-06: F2-20 must contain real registered paired juvenile photographs: ' + label);
 }
+// F2-21: matching, source-registered resting portraits are visible on BOTH species cards.
+// The contract checks photo roles/paths, not the biological identity of WebP pixels.
+for (const [label, ids, images] of [
+  ['Roodborsttapuit en Roodborst · vrouwtje en volwassen vogel in rust',
+    ['sp053', 'sp050'], ['sp053-female-review.webp', 'sp050.webp']],
+  ['Heggenmus en Huismus · vrouwtje Huismus in rust',
+    ['sp054', 'sp043'], ['sp054.webp', 'sp043.webp']],
+  ['Winterkoning en Heggenmus · in rust',
+    ['sp055', 'sp054'], ['sp055.webp', 'sp054.webp']],
+]) {
+  const entry = GUIDE_COMPARISONS.find(pair => pair.label === label);
+  assert.ok(entry, `F2-21 pair missing: ${label}`);
+  assert.deepEqual(entry.birds.map(bird => bird.id), ids, `F2-21 wrong partner/order: ${label}`);
+  for (const id of ids) {
+    const html = recognitionPanel(byId.get(id));
+    const panels = html.split('<div class="sd-cmp-panel"').slice(1);
+    assert.ok(panels.some(panel =>
+      !panel.startsWith(' data-cmp-panel data-cmp-flight') &&
+      images.every(image => panel.includes(image))),
+    `F2-21: both resting images must render together on ${id} for ${label}`);
+  }
+}
+
 const youngTits = GUIDE_COMPARISONS.find(entry => entry.label === 'Matkop en Glanskop · jonge vogels');
 assert.deepEqual(youngTits.birds.map(({id, plumage}) => [id, plumage]), [['sp031', 'juv'], ['sp032', 'juv']]);
 for (const id of ['sp031', 'sp032']) {
