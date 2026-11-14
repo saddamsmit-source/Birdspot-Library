@@ -1061,9 +1061,19 @@
    "source": "contactsheet 10-11-2026",
    "note": ""
   },
-  "/assets/species/plumage/sp065-flight.webp": {
+  "/assets/species/plumage/sp065-head-down.webp": {
    "refs": [
     "sp065 GUIDE_POSES[0]"
+   ],
+   "sha1": "5ef1051033df006279ea410419329a02d39df77d",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "origineel en WebP 14-11-2026",
+   "note": "Vogel op stam, kop omlaag. Poten steunen op de schors."
+  },
+  "/assets/species/plumage/sp065-flight.webp": {
+   "refs": [
+    "sp065 GUIDE_POSES[1]"
    ],
    "sha1": "28cece48915c5dd8e500e32ce876fa65a0dc2bc6",
    "class": "vlucht",

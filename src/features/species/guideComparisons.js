@@ -657,6 +657,7 @@ export const GUIDE_COMPARISONS = [
       {
         "id": "sp065",
         "source": "boomklever",
+        "photo": "/assets/species/plumage/sp065-head-down.webp",
         "marks": "Blauwgrijze rug, zwarte oogstreep, rechte snavel en korte staart. Beweegt ook kop omlaag langs de stam."
       },
       {
@@ -665,7 +666,12 @@ export const GUIDE_COMPARISONS = [
         "marks": "Bruin-licht gevlekte rug, dunne kromme snavel en lange stijve staart. Zoekt meestal omhoog klimmend naar voedsel."
       }
     ],
-    "tip": "Combineer kleur en bouw met de richting van klimmen. Een stilzittende vogel is ook zonder gedrag aan deze kenmerken te vergelijken."
+    rows: [
+      {label: 'Snavel', values: ['Vrij recht en spits.', 'Slank en naar beneden gebogen.']},
+      {label: 'Staart', values: ['Kort en vrij van de stam op deze foto.', 'Lang en stijf. Dient als steun tegen de stam.']},
+      {label: 'Houding', values: ['Kan ook met de kop omlaag bewegen.', 'Zoekt meestal omhoog klimmend naar voedsel.']},
+    ],
+    "tip": "Vergelijk eerst snavel en staart. Let bij een bewegende vogel ook op de klimrichting."
   },
   {
     "label": "Boomkruiper en Taigaboomkruiper · combineer beeld en geluid",

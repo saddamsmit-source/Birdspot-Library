@@ -189,6 +189,16 @@ def main():
                         has=page.locator('img[src$="sp031-juv.webp"]'))
                     expect(juveniles.locator('img')).to_have_count(2)
                     expect(juveniles.locator('img[src$="sp032-juv.webp"]')).to_be_visible()
+                if sid == "sp065":
+                    trunk_comparison = sec.locator('.sd-cmp-panel:visible').filter(
+                        has=page.locator('img[src$="sp065-head-down.webp"]'))
+                    expect(trunk_comparison.locator('img')).to_have_count(2)
+                    expect(trunk_comparison.locator('img[src$="sp066.webp"]')).to_be_visible()
+                    trunk_comparison.get_by_role("button", name=re.compile(r"Vergroot foto: Boomklever")).click()
+                    viewer = page.get_by_role("dialog", name="Vogelfoto bekijken")
+                    expect(viewer.locator('img')).to_have_attribute("src", re.compile(r"sp065-head-down\.webp$"))
+                    page.keyboard.press("Escape")
+                    expect(viewer).to_have_count(0)
                 for d in sec.locator('details.sd-cmp-more').all():
                     d.evaluate("el => el.open = true")
                 loaded = sec.locator('img').evaluate_all("""async els => { const out = []; for (const e of els) { e.loading = 'eager';
@@ -223,7 +233,7 @@ def main():
                               ("Rietgors", "sp118"), ("Knobbelzwaan", "sp126"), ("Kluut", "sp143"),
                               ("Kuifmees", "sp033"), ("Ringmus", "sp044"), ("Grote Lijster", "sp049"),
                               ("Zwarte Mees", "sp174"), ("Staartmees", "sp034"), ("Glanskop", "sp032"),
-                              ("Matkop", "sp031"), ("Grauwe Vliegenvanger", "sp176"), ("Gekraagde Roodstaart", "sp178"),
+                              ("Matkop", "sp031"), ("Boomklever", "sp065"), ("Grauwe Vliegenvanger", "sp176"), ("Gekraagde Roodstaart", "sp178"),
                               ("Sijs", "sp038"), ("Goudvink", "sp040"), ("Appelvink", "sp041"),
                               ("Zwarte Roodstaart", "sp051"), ("Roodborsttapuit", "sp053"), ("Bonte Vliegenvanger", "sp177"),
                               ("Kleine Zilverreiger", "sp082"), ("Grote Zilverreiger", "sp083"), ("Purperreiger", "sp084"),

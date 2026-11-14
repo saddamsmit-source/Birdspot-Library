@@ -2538,8 +2538,8 @@
    "family": "Mezen",
    "audited": true,
    "batch": "M7",
-   "date": "2026-11-12",
-   "sha": "38e3b3c42662dc49be8b769fd9f82a8dde65cad7",
+   "date": "2026-11-14",
+   "sha": null,
    "assets": [
     {
      "image": "/assets/species/sp033.webp",
@@ -2550,7 +2550,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Alexis Lours",
       "annotations": []
      },
      "flight": null
@@ -2564,9 +2564,9 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 2026-11-12: zelfde opname (Verkleind tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP), CC BY-SA 4.0 · Micha Baum",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto naast origineel. SHA-256 gelijk aan het eerder ingevoerde oorspronkelijke bestand.), CC BY-SA 4.0 · Micha Baum",
       "annotations": [
-       "De fotograaf beschrijft de aanwezige jongen die worden gevoerd. De waarneming is geannoteerd als Juvenile. Korte kuif en gele snavelhoeken zichtbaar."
+       "De fotograaf beschrijft drie jongen en een ouder die voert. Life Stage: Juvenile (iNaturalist attribute 1, value 8)."
       ]
      },
      "flight": null
@@ -2579,8 +2579,8 @@
      "quality": "Scherp kopprofiel vanuit een tweede hoek.",
      "verdict": "goedgekeurd",
      "rights": {
-      "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Luc Viatour",
+      "status": "PARTIALLY TESTED",
+      "note": "De maker vraagt zichtbare naamsvermelding en website bij het beeld. Aanpassing in PR #212 op e296f8d.",
       "annotations": []
      },
      "flight": null
@@ -2594,7 +2594,7 @@
      "verdict": "uit-rol",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Sgbeer",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 3.0 · Sgbeer",
       "annotations": []
      },
      "flight": {
@@ -2617,7 +2617,8 @@
     }
    ],
    "corrections": [
-    "Juvenielenfoto en kennisprofiel toegevoegd. De vergelijking met Matkop en het bijschrift van de sneeuwfoto gecontroleerd."
+    "Juvenielenfoto en kennisprofiel toegevoegd. De vergelijking met Matkop en het bijschrift van de sneeuwfoto gecontroleerd.",
+    "Vier originele foto’s gematcht. Waarneming en juvenielenannotatie herbevestigd. De sneeuwfoto blijft bij de overige foto’s. De zichtbare makercredit staat in PR #212."
    ],
    "missing": [
     "Scherpe foto van één Kuifmees in vrije vlucht met bevestigde hergebruikrechten."
@@ -2629,8 +2630,8 @@
    "status": {
     "technical": "VERIFIED",
     "visual": "VERIFIED",
-    "rights": "VERIFIED",
-    "knowledge": "VERIFIED",
+    "rights": "PARTIALLY TESTED",
+    "knowledge": "PARTIALLY TESTED",
     "browser": "NOT TESTED",
     "independent": "NOT TESTED"
    },
@@ -2642,7 +2643,9 @@
     "notDecisive": [
      "Kuif en wangboog"
     ],
-    "open": [],
+    "open": [
+     "Een scherpe foto in vrije vlucht met bevestigde herkomst ontbreekt."
+    ],
     "discrepancies": 0
    },
    "browser": null,
@@ -2656,8 +2659,8 @@
    "family": "Staartmezen",
    "audited": true,
    "batch": "M7",
-   "date": "2026-11-12",
-   "sha": "dfa3dfd5976579121089e69552da8919920d99e4",
+   "date": "2026-11-14",
+   "sha": null,
    "assets": [
     {
      "image": "/assets/species/sp034.webp",
@@ -2668,7 +2671,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Alexis Lours",
       "annotations": []
      },
      "flight": null
@@ -2682,14 +2685,15 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Charles J. Sharp",
       "annotations": []
      },
      "flight": null
     }
    ],
    "corrections": [
-    "Bestaande juvenielenfoto herbeoordeeld. Kennisprofiel en beeldvergelijking met Zwarte Mees toegevoegd."
+    "Bestaande juvenielenfoto herbeoordeeld. Kennisprofiel en beeldvergelijking met Zwarte Mees toegevoegd.",
+    "Twee originele gidsfoto’s gematcht. De fotograaf bevestigt juveniel. De extra vluchtkandidaat toont de lange staart maar heeft bewogen vleugels en zichtbare takjes."
    ],
    "missing": [
     "Scherpe foto in vrije vlucht van een voor West-Europa representatieve Staartmees met bevestigde hergebruikrechten."
@@ -2702,7 +2706,7 @@
     "technical": "VERIFIED",
     "visual": "VERIFIED",
     "rights": "VERIFIED",
-    "knowledge": "VERIFIED",
+    "knowledge": "PARTIALLY TESTED",
     "browser": "NOT TESTED",
     "independent": "NOT TESTED"
    },
@@ -2714,7 +2718,9 @@
     "notDecisive": [
      "Staartlengte en kop"
     ],
-    "open": [],
+    "open": [
+     "Een scherpe foto in vrije vlucht van een voor West-Europa representatieve Staartmees ontbreekt."
+    ],
     "discrepancies": 0
    },
    "browser": null,
@@ -5477,8 +5483,8 @@
    "family": "Boomklevers",
    "audited": true,
    "batch": "M2",
-   "date": "2026-11-10",
-   "sha": "9ddb3d984262f8e95bae5a056431ef80bbde73bb",
+   "date": "2026-11-14",
+   "sha": null,
    "assets": [
     {
      "image": "/assets/species/sp065.webp",
@@ -5489,7 +5495,21 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Chme82",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Chme82",
+      "annotations": []
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp065-head-down.webp",
+     "role": "Overige herkenningsfoto's",
+     "content": "Boomklever met de kop omlaag op een stam. Poten op de schors en korte staart vrij.",
+     "sexAge": "Geslacht en leeftijd staan open.",
+     "quality": "Vogel en snavel herkenbaar, voldoende ruimte voor de houding.",
+     "verdict": "goedgekeurd",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 14-11-2026: zelfde opname (Origineel JPEG verkleind zonder uitsnede tot 1400 × 1271. WebP zonder EXIF, GPS of XMP.), CC BY-SA 2.0 · hedera.baltica",
       "annotations": []
      },
      "flight": null
@@ -5503,7 +5523,7 @@
      "verdict": "goedgekeurd",
      "rights": {
       "status": "VERIFIED",
-      "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · C. Robiller / naturlichter.de ( Hyla meridionalis )",
+      "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 3.0 · C. Robiller / naturlichter.de",
       "annotations": []
      },
      "flight": {
@@ -5525,7 +5545,9 @@
      }
     }
    ],
-   "corrections": [],
+   "corrections": [
+    "Beide gidsfoto’s naast de originelen gelegd. Een bronbevestigde stamfoto toegevoegd en naast Boomkruiper gezet. Lengte, spanwijdte en Britse broedgegevens onderbouwd."
+   ],
    "missing": [
     "Juveniel"
    ],
@@ -5547,11 +5569,10 @@
     "critical": 1,
     "decisive": 0,
     "notDecisive": [
-     "Kleur en gedrag"
+     "Snavel, staart en klimrichting"
     ],
     "open": [
-     "Broedduur en nestjongenduur niet in de geraadpleegde bron; Birdspot-waarden niet opnieuw gecontroleerd.",
-     "Geen gidsfoto van een juveniel."
+     "Een bronbevestigde gidsfoto van een juveniel ontbreekt."
     ],
     "discrepancies": 0
    },
@@ -12703,6 +12724,12 @@
    "scope": "F2 · sp030 sp031 sp032",
    "basis": "0b6561363b24a840fcfadcd2d877d88b83a0721c",
    "evidence": "docs/evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_12.json"
+  },
+  {
+   "date": "2026-11-14",
+   "scope": "F2 · sp033 sp034 sp065",
+   "basis": "10288467a6d4db7fd52d5e5635bd7083e95a5373",
+   "evidence": "docs/evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_13.json"
   }
  ]
 }

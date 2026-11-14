@@ -7697,6 +7697,25 @@ export const GUIDE_POSES = Object.freeze({
   ],
   "sp065": [
     {
+      "label": "Kop omlaag op de stam",
+      "note": "Let op de greep van de tenen en de rechte snavel. De korte staart steunt hier niet tegen de stam.",
+      "file": "Eurasian nuthatch (50430565526).jpg",
+      "nl": "Boomklever",
+      "latin": "Sitta europaea",
+      "author": "hedera.baltica",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Eurasian_nuthatch_(50430565526).jpg",
+      "alt": "Boomklever met de kop omlaag op een stam. Blauwe rug, donkere oogstreep en rechte snavel zichtbaar.",
+      "modifications": "Verkleind tot maximaal 1400 px en omgezet naar WebP zonder uitsnede",
+      "reviewed": "2026-11-14",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/boomklever",
+      "width": 1400,
+      "height": 1271,
+      "image": "/assets/species/plumage/sp065-head-down.webp",
+      "verification": "Fotograaf noemt Sitta europaea caesia en foerageren met de kop omlaag. Beide poten steunen op de stam. Leeftijd en geslacht open."
+    },
+    {
       "label": "In vlucht",
       "flight": true,
       "note": "Let op de donkere oogstreep, de blauwgrijze bovenzijde en de korte, gespreide staart.",

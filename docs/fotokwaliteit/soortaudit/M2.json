@@ -162,12 +162,14 @@
     "sp065": {
       "assets": {
         "/assets/species/sp065.webp": {"role": "Hoofdfoto", "content": "Boomklever op rots; blauwgrijze rug, zwarte oogstreep, warme onderzijde.", "sexAge": "niet vast te stellen", "quality": "goed", "verdict": "goedgekeurd"},
+        "/assets/species/plumage/sp065-head-down.webp": {"role": "Overige herkenningsfoto's", "content": "Boomklever met de kop omlaag op een stam. Poten op de schors en korte staart vrij.", "sexAge": "Geslacht en leeftijd staan open.", "quality": "Vogel en snavel herkenbaar, voldoende ruimte voor de houding.", "verdict": "goedgekeurd"},
         "/assets/species/plumage/sp065-flight.webp": {"role": "In vlucht", "content": "Vrij in de lucht met volledig gespreide vleugels en staart; poten tegen de buik (vergroot gecontroleerd, geen landingshouding).", "sexAge": "niet vastgesteld", "quality": "goed (640 px)", "verdict": "goedgekeurd"}
       },
-      "corrections": [],
+      "corrections": ["Beide gidsfoto’s naast de originelen gelegd. Een bronbevestigde stamfoto toegevoegd en naast Boomkruiper gezet. Lengte, spanwijdte en Britse broedgegevens onderbouwd."],
       "missing": ["Juveniel"],
       "sexPolicy": "Geslachtsverschil klein; geen geslachtsvakken.",
-      "uncertain": []
+      "uncertain": [],
+      "date": "2026-11-14"
     },
     "sp067": {
       "assets": {
