@@ -1,7 +1,7 @@
 # Birdspot F2 — register open punten en uitgesteld fotoonderzoek
 
 **Eigenaarbesluit 14 november 2026 · Werkdocument (DRAFT, geen foto-PASS)**
-**Basis:** F2-15 `bccd09599a2b9fd7fb23771b3f6c262542b4c08a`, F2-16 op eigen branch. **Reikwijdte:** 45/140 soorten die individueel in F2 zijn opgepakt. Voor de andere 95 soorten geldt **NOT TESTED in F2** tot de afzonderlijke ronde start. Dit register is een index op de bestaande per-batch brondossiers, niet een vervanging van de canonieke 9-punts-audit.
+**Historische basis:** F2-15 `bccd09599a2b9fd7fb23771b3f6c262542b4c08a`; actuele F2-19 via PR #219 `c1befa8aaba15634f79e3b401942a0e82ffc8ecd` op eigen, herstelbare vervolgbranch. **Reikwijdte:** 48/140 soorten die individueel in F2 zijn opgepakt. Voor de andere 92 soorten geldt **NOT TESTED in F2** tot de afzonderlijke ronde start. Dit register is een index op de bestaande per-batch brondossiers, niet een vervanging van de canonieke 9-punts-audit.
 
 ## Hoe vervolgonderzoek te sturen
 
@@ -64,11 +64,15 @@ De tekst in de kolom 'Open uit bronronde' is overgenomen uit de laatste F2-voort
 | sp044 Ringmus | F2-18 | Man en vrouw gelijk: volwassen hoofdfoto nooit geslacht toekennen zonder bron. Individuele iNaturalist-juvenielannotatie, exact WebP-bestand en voorwaarden licentie **NOT TESTED**. ANWB-inkijk bevestigt alleen het onderscheid zwarte wangvlek; niet dit specifieke beeld. |
 | sp045 Merel | F2-18 | Oud landingsbeeld al uit vlucht; tweede voorlopige vrije-vluchtfoto blijft **voorwaardelijk / kwaliteit matig** en is **NIET** opnieuw goedgekeurd. Voor effectieve nieuwe publicatie echte kijkproef: bij onvoldoende herkenbaarheid weglaten, niet forceren. Juveniele Merel versus Zanglijster op originele WebP/bronfoto onafhankelijk nog **NOT TESTED**. |
 
+| sp046 Zanglijster | F2-19 | Originele juvenielenbron **Frank Vassen, CC BY 2.0** opnieuw gelezen; lokaal WebP-to-original, broncredits en vluchtinhoud niet onafhankelijk zichtbaar. Historische vrije-vluchtgoedkeuring blijft, geen nieuwe foto-PASS. |
+| sp047 Kramsvogel | F2-19 | Originele juvenielenbron **hedera.baltica, CC BY-SA 2.0** en juvenielstatus opnieuw gelezen; originele pixelvergelijking en overige foto-/licentiegegevens niet onafhankelijk opnieuw gecheckt. Historische vluchtgoedkeuring blijft ongewijzigd. |
+| sp048 Koperwiek | F2-19 | **In vlucht: geen foto** — oude opvliegfoto `sp048-flight.webp` blijft als niet-vluchtrol geregistreerd. Geen bronzekere nieuwe vluchtfoto toevoegen. iNaturalist-juvenielwaarneming/bronrechterlijke licentie en lokaal WebP opnieuw **NOT TESTED**; latere fotoverificatie alleen bij duidelijk beeld nodig. |
+
 ## Vervolgcontrole en aftekening
 
 1. Bij een volgende F2-ronde: controleer alleen de drie gekozen soorten op oorspronkelijke bestanden/CC-rechten, soort/rol, fotokwaliteit, twee passende vergelijkingbeelden en browserbediening; noteer de individuele status en bronlinks.
 2. Werk dit register additief bij: verander een open punt pas in **VERIFIED** na herhaalbare nieuwe bron-/beeld- en uitvoerbewijzen. Laat historische onzekerheid staan met datum en reden; geen stille aftekening op basis van 140 kaart-renders.
-3. **Niet gereviewd in F2:** 95 soorten. Volgorde na F2-16 opnieuw afleiden uit de 140-fotolijst en F2-voortgang; geen ongeteste soorten starten vóór een passende batch.
+3. **Niet gereviewd in F2:** 92 soorten. Volgorde na F2-16 opnieuw afleiden uit de 140-fotolijst en F2-voortgang; geen ongeteste soorten starten vóór een passende batch.
 4. Later diepgaand fotoonderzoek: per open beeldtype minimaal soortnaam/wetenschappelijke naam, doelkleed, foto-oorsprong, ondertitel, auteur, licentie, bronbestand/versie, vrijgave voor herpublicatie en indien passend exacte oorspronkelijke pixels. Bij twijfel lege positie laten staan.
 
 ## Live-/release-gate — aparte status
