@@ -964,7 +964,8 @@ export const GUIDE_PHOTOS = Object.freeze({
   },
   "sp031": {
     "file": "Willow Tit Lancashire.jpg",
-    "author": "Francis Franklin",
+    "author": "Francis C. Franklin",
+    "visibleCredit": "© Francis C. Franklin / CC-BY-SA-3.0",
     "license": "CC BY-SA 3.0",
     "source": "https://commons.wikimedia.org/wiki/File:Willow_Tit_Lancashire.jpg",
     "width": 1600,
