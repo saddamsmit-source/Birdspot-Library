@@ -912,10 +912,28 @@ export const GUIDE_COMPARISONS = [
   {
     label: 'Witte en Gele Kwikstaart · jonge vogels',
     birds: [
-      {id: 'sp068', source: 'witte-kwikstaart', marks: 'Valer dan een volwassen vogel, met veel wit op de kop en een smalle donkere borstband.'},
-      {id: 'sp069', source: 'gele-kwikstaart', marks: 'Kan bleek ogen en weinig geel tonen. Bekijk ook de wenkbrauwstreep en luister naar de roep als de vogel opvliegt.'},
+      {id: 'sp068', source: 'witte-kwikstaart', photoMissing: true, marks: 'Jonge Witte Kwikstaart: valer grijs kleed, relatief lichte kop en doorgaans een smallere borstband.'},
+      {id: 'sp069', source: 'gele-kwikstaart', photoMissing: true, marks: 'Jonge Gele Kwikstaart: vaak weinig geel, lichte vleugelstrepen en onregelmatige donkere bovenborsttekening.'},
     ],
-    tip: 'Gebruik de kleur alleen als aanwijzing. Combineer koptekening, borstpatroon en roep. Laat de soort open als de kenmerken elkaar tegenspreken.',
+    rows: [
+      {label: 'Borst', values: ['Smalle donkere borstband boven een lichte buik', 'Bleek met vaak wat donkere bovenborststreping']},
+      {label: 'Kop', values: ['Grijs, relatief veel wit', 'Overwegend bleek met lichte wenkbrauw']},
+      {label: 'Zekerheid', values: ['Gebruik borstband én staartvorm', 'Gebruik vleugelstrepen én roep; ontbrekend geel sluit niet uit']},
+    ],
+    tip: 'Er is nog géén gecontroleerd juvenielen-fotopaar. De volwassen foto’s van deze soorten mogen daarom niet als juvenielen worden getoond.',
+  },
+  {
+    label: 'Witte en Gele Kwikstaart · volwassen in rust',
+    birds: [
+      {id: 'sp068', source: 'witte-kwikstaart', marks: 'Volwassen Witte Kwikstaart in prachtkleed: zwart-witte kop en keel met grijze rug en witte buik.'},
+      {id: 'sp069', source: 'gele-kwikstaart', plumage: 'adult_m', marks: 'Mannetje Gele Kwikstaart van de nominaatvorm: blauwgrijze kop, witte wenkbrauw en felgele onderzijde.'},
+    ],
+    rows: [
+      {label: 'Borst en buik', values: ['Wit en grijs met zwarte keel/bef', 'Grotendeels felgeel in broedkleed']},
+      {label: 'Kop', values: ['Zwart-witte tekening', 'Blauwgrijs met lichte wenkbrauw (nominaatvorm)']},
+      {label: 'Bovenzijde', values: ['Grijze rug', 'Doorgaans olijfgroene rug']},
+    ],
+    tip: 'Beide foto’s tonen rustende vogels. Jonge Gele Kwikstaarten kunnen vrijwel geen geel tonen: gebruik dan de aparte jonge-vogels-kenmerken en blijf bij twijfel voorzichtig.',
   },
   {
     label: 'Stormmeeuw en Zilvermeeuw · volwassen',
@@ -1612,6 +1630,19 @@ export const GUIDE_COMPARISONS = [
       {label: 'Zang', values: ['Krasachtig, variabel riedeltje', 'Rijk en doorlopend als een snelle Merel']},
     ],
     tip: 'Op deze twee rustfoto’s staat de vogel anders in beeld. Vergelijk dus de vleugelranden, keel en kop, niet de afmeting op de foto.',
+  },
+  {
+    label: 'Braamsluiper en Tuinfluiter · kop en zang in rust',
+    birds: [
+      {id: 'sp062', source: 'braamsluiper', marks: 'Braamsluiper met grijze kap en donkergrijze oorstreek die scherp afsteekt tegen de witte keel.'},
+      {id: 'sp060', source: 'tuinfluiter', marks: 'Tuinfluiter is egaler bruingrijs, zonder duidelijk donker oorveld; de zang is vloeiend en rijk.'},
+    ],
+    rows: [
+      {label: 'Oorstreek', values: ['Donkergrijze oorzone tegen witte keel', 'Geen vergelijkbaar donker oorveld']},
+      {label: 'Kop en rug', values: ['Grijze kopkap, grijsbruine rug', 'Vrij egaal bruingrijs, weinig kleurcontrast']},
+      {label: 'Zang', values: ['Klepperende ratel, soms na een brabbelend begin', 'Snelle, melodieuze, doorlopende strofe']},
+    ],
+    tip: 'Bekijk de kop in zijaanzicht en beluister bij twijfel de volledige zang. Geslacht is op deze foto’s niet betrouwbaar aan het verenkleed af te lezen.',
   },
   {
     label: 'Grasmus en Braamsluiper · vleugel en zang',
