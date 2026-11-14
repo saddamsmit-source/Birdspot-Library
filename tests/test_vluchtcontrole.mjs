@@ -148,7 +148,7 @@ console.log('VC-06 OK — vergelijkingen met ontbrekende vluchtfoto behouden hun
   neg(r => { delete r.plumage.sp173.adult_f.flight; }, 'zonder flight:true', 'Bruine Kiekendief-vrouwtje zonder vluchtlabel');
   neg(r => { r.plumage.sp006.adult_f.flight = true; }, 'toont vleugels-strekken', 'zittende Sperwer met gespreide vleugels als vlucht');
   neg(r => { r.poses.sp003.push({ image: '/assets/species/plumage/sp003-flight.webp', flight: true }); }, 'toont opvliegen', 'opvliegende Holenduif terug als vlucht');
-  neg((r, inv) => { inv.images['/assets/species/plumage/sp002-flight.webp'].sha1 = '0'.repeat(40); }, 'SHA-1 wijkt af', 'gewijzigd beeldbestand');
+  neg((r, inv) => { inv.images['/assets/species/plumage/sp002-flight-wingband.webp'].sha1 = '0'.repeat(40); }, 'SHA-1 wijkt af', 'gewijzigd beeldbestand');
   neg((r, inv) => { delete inv.images['/assets/species/sp066.webp']; }, 'geen visuele beeldbeoordeling', 'foto zonder beoordeling');
   console.log(`VC-07 OK — ${n} gidsfoto's met beeldbeoordeling op SHA-1; vrij vliegend ⇔ flight:true; 6 negatieve gevallen geweigerd`);
 }
