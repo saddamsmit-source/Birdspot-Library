@@ -198,6 +198,7 @@ export const GUIDE_COMPARISONS = [
   },
   {
     label: 'Blauwe en Steppe · volwassen mannetjes',
+    flight: true,
     birds: [
       {id: 'sp249', source: 'blauwe-kiekendief', plumage: 'adult_m', marks: 'Bredere vleugel, met een relatief groot zwart uiteinde en een donkere achterrand van de bovenvleugel.'},
       {id: 'sp250', source: 'steppekiekendief', plumage: 'adult_m', marks: 'Bleker met smallere vleugels en een kleinere, wigvormige zwarte tekening op de handpennen.'},
@@ -207,6 +208,24 @@ export const GUIDE_COMPARISONS = [
       {label: 'Bovenvleugel', values: ['Relatief breed met donkere achterrand.', 'Slank en opvallend bleek.']},
     ],
     tip: 'Vergelijk de vorm van het zwart aan de vleugelpunt en de breedte van de vleugel samen.',
+  },
+  {
+    label: 'Blauwe en Steppe · volwassen vrouwtjes',
+    flight: true,
+    birds: [
+      {id: 'sp249', source: 'blauwe-kiekendief', plumage: 'adult_f', marks: 'Relatief brede vleugels, met een gebandeerde ondervleugel en staart.'},
+      {id: 'sp250', source: 'steppekiekendief', plumage: 'adult_f', marks: 'Slankere vleugels. Let op de lichte halsring, donkere oorstreek en tekening van de ondervleugel.'},
+    ],
+    tip: 'Bekijk de combinatie van vleugelvorm, koptekening en ondervleugel. Een witte stuit komt bij beide voor.',
+  },
+  {
+    label: 'Blauwe en Steppe · jonge vogels',
+    flight: true,
+    birds: [
+      {id: 'sp249', source: 'blauwe-kiekendief', plumage: 'juv', marks: 'Bruin met lengtestrepen op de onderzijde en banden op staart en ondervleugels.'},
+      {id: 'sp250', source: 'steppekiekendief', plumage: 'juv', marks: 'Vaak egaal roestoranje onder. Let op de lichte halsring en de donkere vlek ernaast.'},
+    ],
+    tip: 'Combineer borsttekening met kop en ondervleugel. Laat de soort open als de foto te weinig details toont.',
   },
   {
     label: 'Grauwe en Steppe · volwassen mannetjes',
@@ -495,12 +514,14 @@ export const GUIDE_COMPARISONS = [
     tip: 'Bekijk de kop, borstzijde en pootlengte samen. Let bij een foeragerende vogel ook op de houding en beweging.',
   },
   {
-    label: 'Torenvalk en Slechtvalk · volwassen',
+    label: 'Torenvalk en Slechtvalk · volwassen in vlucht',
+    flight: true,
+    tabLabel: 'In vlucht · Volwassen',
     birds: [
-      {id: 'sp008', source: 'torenvalk', plumage: 'adult_m', marks: 'Lange staart en roestbruine rug. Dit mannetje heeft een grijze kop en bovenstaart.'},
-      {id: 'sp009', source: 'slechtvalk', plumage: 'adult_m', marks: 'Zware borst, brede donkere baardstreep en relatief korte staart. Blauwgrijze bovenzijde.'},
+      {id: 'sp008', source: 'torenvalk', plumage: 'adult_m', marks: 'Lange staart met donkere eindband. Slanker gebouwd, met spitse vleugels.'},
+      {id: 'sp009', source: 'slechtvalk', photo: '/assets/species/plumage/sp009-male-flight.webp', marks: 'Zware borst, brede donkere baardstreep en relatief korte staart. De spitse vleugels hebben een brede basis.'},
     ],
-    tip: 'Vergelijk de verhoudingen van kop, vleugels en staart. Gebruik kleur bij goed licht; de foto’s zijn niet op dezelfde schaal.',
+    tip: 'Vergelijk de lengte van de staart ten opzichte van de vleugelbasis. De foto’s zijn niet op dezelfde schaal.',
   },
   {
     label: 'Torenvalk en Slechtvalk · juveniel',

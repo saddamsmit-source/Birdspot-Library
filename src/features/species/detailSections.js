@@ -234,6 +234,7 @@ export function comparisonPhoto(bird, inFlight) {
       : [...portraits, ...poses].filter(photo => photo && photoRole(photo) !== 'juv');
   return candidates.find(photo =>
     photo?.image && photo.author && photo.license && photo.source && Boolean(photo.flight) === inFlight &&
+    (!bird.photo || photo.image === bird.photo) &&
     (inFlight || !airborneSources.has(photo.source)) &&
     !/^(uit-rol|archief)/.test(photo.flightReview || '') &&
     (!plumage || !photoRole(photo) || photoRole(photo) === plumage)) || null;

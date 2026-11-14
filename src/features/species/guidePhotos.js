@@ -2006,7 +2006,10 @@ export const GUIDE_PHOTOS = Object.freeze({
     "visualCheck": "Volledige vogel in vlucht met spitse vleugels, donkere baardstreep en dwarsbandering op de onderzijde.",
     "alt": "Slechtvalk — Volledige vogel in vlucht met spitse vleugels, donkere baardstreep en dwarsbandering op de onderzijde.",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
-    "flight": true
+    "flight": true,
+    "label": "In vlucht",
+    "note": "Relatief korte staart en puntige vleugels met brede basis. De lichte onderzijde heeft bij deze volwassen vogel dwarsbanden.",
+    "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
   },
   "sp084": {
     "file": "Purple heron in Zimbabwe.jpg",

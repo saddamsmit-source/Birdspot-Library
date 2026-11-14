@@ -575,12 +575,30 @@ def main():
             assert p.get_by_label("Roep van Bruine Kiekendief").count() == 1
             close_detail()
             open_species("Steppekiekendief", "sp250")
+            blue_card = cmp_card("Blauwe Kiekendief", flight=True)
+            for label, steppe, blue in (
+                ("Mannetje", "sp250.webp", "sp249.webp"),
+                ("Vrouwtje", "sp250-adult_f.webp", "sp249-adult_f.webp"),
+                ("Juveniel", "sp250-juv.webp", "sp249-juv.webp"),
+            ):
+                panel = cmp_tab(blue_card, f"In vlucht · {label}")
+                assert panel.locator('.sd-cmp-who small').all_text_contents() == [f"{label} in vlucht"] * 2
+                assert_photo_pair(panel, [steppe, blue], in_flight=True)
             tab("status")
             assert p.get_by_text("Incidentele broedgevallen in Nederland.", exact=True).is_visible()
             p.get_by_text("Incidentele broedgevallen in Nederland, onder meer in 2017 en 2019", exact=True).wait_for()
             assert p.locator('#sdPanel-status .sd-month-breeding').count() == 0
             close_detail()
             print("H4-03 OK — Bruine/Blauwe Kiekendief per kleed (tabs, met foto-rotatie en -pan); Steppekiekendief zonder vaste broedmaanden")
+
+            open_species("Slechtvalk", "sp009")
+            kestrel_card = cmp_card("Torenvalk")
+            young_falcons = cmp_tab(kestrel_card, "Juveniel")
+            assert_photo_pair(young_falcons, ["sp009-juv.webp", "sp008-juv.webp"])
+            flying_falcons = cmp_tab(kestrel_card, "In vlucht · Volwassen")
+            assert_photo_pair(flying_falcons, ["sp009-male-flight.webp", "sp008-male-flight.webp"], in_flight=True)
+            assert_photo_once("/assets/showcase/sp009.webp")
+            close_detail()
 
             open_species("Sperwer", "sp006")
             hawk_card = cmp_card("Havik")

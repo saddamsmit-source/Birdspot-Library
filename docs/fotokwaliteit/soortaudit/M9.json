@@ -52,12 +52,15 @@
         }
       },
       "corrections": [
-        "Vleugelbreedte, stuit en bandering uitgewerkt voor vergelijking met Grauwe en Steppekiekendief."
+        "Vleugelbreedte, stuit en bandering uitgewerkt voor vergelijking met Grauwe en Steppekiekendief.",
+        "Vijf gidsbeelden naast het oorspronkelijke bronbestand gecontroleerd. De vergelijking Blauwe–Steppe toont drie vluchtparen per kleed."
       ],
       "missing": [],
-      "wishes": [],
+      "wishes": [
+        "Vrouwtje en juveniel ook afzonderlijk in rust. Beide kleden zijn al zichtbaar in vlucht."
+      ],
       "uncertain": [],
-      "date": "2026-11-12",
+      "date": "2026-11-14",
       "sexPolicy": "Volwassen labels volgen bron en zichtbaar kleed. Juvenielen blijven neutraal gelabeld."
     },
     "sp251": {
@@ -142,12 +145,15 @@
         }
       },
       "corrections": [
-        "Herkenning van vrouwtjes en juvenielen gecontroleerd tegen Forsman. Afwijkende bronwaarden voor spanwijdte opgenomen bij de bronverantwoording."
+        "Herkenning van vrouwtjes en juvenielen gecontroleerd tegen Forsman. Afwijkende bronwaarden voor spanwijdte opgenomen bij de bronverantwoording.",
+        "Vijf gidsbeelden naast het oorspronkelijke bronbestand gecontroleerd. De vergelijking Blauwe–Steppe toont drie vluchtparen per kleed."
       ],
       "missing": [],
-      "wishes": [],
+      "wishes": [
+        "Vrouwtje en juveniel ook afzonderlijk in rust. Beide kleden zijn al zichtbaar in vlucht."
+      ],
       "uncertain": [],
-      "date": "2026-11-12",
+      "date": "2026-11-14",
       "sexPolicy": "Volwassen labels volgen bron en zichtbaar kleed. Juvenielen blijven neutraal gelabeld."
     }
   }

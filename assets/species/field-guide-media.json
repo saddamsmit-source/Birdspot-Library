@@ -6055,28 +6055,6 @@
         "sexNote": "Geslacht volgens de bron, maar bij de Slechtvalk niet aan het verenkleed te zien; daarom zonder geslachtslabel."
       },
       {
-        "label": "In vlucht",
-        "note": "Relatief korte staart en puntige vleugels met brede basis. De lichte onderzijde heeft bij deze volwassen vogel dwarsbanden.",
-        "file": "Falco peregrinus in flight (17659253649).jpg",
-        "author": "john581",
-        "license": "CC BY 2.0",
-        "source": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_in_flight_(17659253649).jpg",
-        "width": 1600,
-        "height": 1277,
-        "image": "/assets/showcase/sp009.webp",
-        "modifications": "Bestaande WebP hergebruikt zonder extra uitsnede",
-        "nl": "Slechtvalk",
-        "latin": "Falco peregrinus",
-        "batch": "field-variants-09",
-        "reviewed": "2026-11-06",
-        "verification": "Commons metadata and visual check against the cited species account.",
-        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/slechtvalk",
-        "visualCheck": "Volledige vogel in vlucht met spitse vleugels, donkere baardstreep en dwarsbandering op de onderzijde.",
-        "alt": "Slechtvalk — Volledige vogel in vlucht met spitse vleugels, donkere baardstreep en dwarsbandering op de onderzijde.",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
-        "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
-      },
-      {
         "label": "Volwassen in rust, van opzij",
         "flight": false,
         "note": "Op de grond. Let op de donkere baardstreep en de dwarsbanden op de onderzijde. Gefotografeerd in India. De fotograaf benoemt het geslacht in de bronbeschrijving.",

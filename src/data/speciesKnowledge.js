@@ -4051,6 +4051,39 @@ const DATA = {
    "edition": "Online gecontroleerd 14-11-2026",
    "checked": "2026-11-14",
    "certainty": "hoog"
+  },
+  "NAT_SLECHT": {
+   "register": "F2 · roofvogels",
+   "label": "Naturalis BRIS — Slechtvalk",
+   "publisher": "Naturalis Biodiversity Center",
+   "url": "https://bris.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/nsr_taxon.php?cat=TAB_DESCRIPTION&id=112274",
+   "scope": "Europa",
+   "confirms": "lichaamslengte, vleugelspanwijdte, gemiddeld gewicht en herkenning",
+   "edition": "BRIS, soortbeschrijving en Dunning (1993), geraadpleegd 14-11-2026",
+   "checked": "2026-11-14",
+   "certainty": "hoog"
+  },
+  "NAT_BLAUW": {
+   "register": "F2 · roofvogels",
+   "label": "Naturalis BRIS — Blauwe Kiekendief",
+   "publisher": "Naturalis Biodiversity Center",
+   "url": "https://bris.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/nsr_taxon.php?cat=TAB_DESCRIPTION&id=112246",
+   "scope": "Europa",
+   "confirms": "lichaamslengte, vleugelspanwijdte, gemiddeld gewicht en herkenning",
+   "edition": "BRIS, soortbeschrijving en Dunning (1993), geraadpleegd 14-11-2026",
+   "checked": "2026-11-14",
+   "certainty": "hoog"
+  },
+  "NAT_STEPPE": {
+   "register": "F2 · roofvogels",
+   "label": "Naturalis BRIS — Steppekiekendief",
+   "publisher": "Naturalis Biodiversity Center",
+   "url": "https://bris.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/nsr_taxon.php?cat=TAB_DESCRIPTION&id=112247",
+   "scope": "Europa",
+   "confirms": "lichaamslengte, vleugelspanwijdte, gemiddeld gewicht en herkenning",
+   "edition": "BRIS, soortbeschrijving en Dunning (1993), geraadpleegd 14-11-2026",
+   "checked": "2026-11-14",
+   "certainty": "hoog"
   }
  },
  "profiles": {
@@ -7146,9 +7179,10 @@ const DATA = {
     }
    ],
    "caution": {
-    "text": "Boomvalk, Smelleken en Torenvalk worden genoemd als gelijkende soorten; de bron werkt de verschillen niet uit.",
+    "text": "Vleugels kunnen in verschillende vluchtfasen smaller lijken. Combineer staartlengte en vleugelbasis met borstbouw en koptekening.",
     "sources": [
-     "VB_SLECHT"
+     "VB_SLECHT",
+     "NAT_SLECHT"
     ]
    },
    "critical": [
@@ -7156,7 +7190,7 @@ const DATA = {
      "feature": "Bouw en kopkap",
      "where": "Silhouet en kop",
      "this": "Zwaar gebouwd; brede zwarte baardstreep met kopkap",
-     "other": "Boomvalk en andere valken: in de bron niet uitgewerkt",
+     "other": "Boomvalk: slankere bouw. Bij volwassen vogels valt het roodbruin rond de poten op.",
      "vs": [
       "sp261"
      ],
@@ -7165,16 +7199,18 @@ const DATA = {
      "exceptions": "Jonge vogels zijn bruin",
      "supporting": "Jachtwijze: stootduik",
      "sources": [
-      "VB_SLECHT"
+      "VB_SLECHT",
+      "VB_BOOMVALK"
      ]
     }
    ],
    "similar": [
     {
      "id": "sp261",
-     "why": "Door de bron genoemd; verschillen niet uitgewerkt",
+     "why": "Boomvalk is kleiner, met lange spitse vleugels en bij volwassen vogels roodbruine veren rond de poten.",
      "sources": [
-      "VB_SLECHT"
+      "VB_SLECHT",
+      "VB_BOOMVALK"
      ]
     },
     {
@@ -7186,9 +7222,10 @@ const DATA = {
     },
     {
      "id": "sp260",
-     "why": "Door de bron genoemd",
+     "why": "Smelleken is kleiner, met een relatief lange staart en minder spitse vleugelpunten.",
      "sources": [
-      "VB_SLECHT"
+      "VB_SLECHT",
+      "VB_SMELLEKEN"
      ]
     },
     {
@@ -7233,11 +7270,50 @@ const DATA = {
    ],
    "basis": {
     "size": {
-     "text": "Lengte 38–45 cm, spanwijdte 79–114 cm.",
+     "text": "Lengte ca. 40–50 cm, spanwijdte ca. 85–115 cm. Gemiddeld gewicht ca. 611 g voor het mannetje en ca. 952 g voor het vrouwtje volgens Naturalis (Dunning).",
      "sources": [
-      "VB_SLECHT"
+      "VB_SLECHT",
+      "NAT_SLECHT"
      ]
-    }
+    },
+    "biometrics": [
+     {
+      "field": "length",
+      "unit": "cm",
+      "display": "ca. 40–50 cm",
+      "values": [
+       {
+        "source": "VB_SLECHT",
+        "min": 38,
+        "max": 45
+       },
+       {
+        "source": "NAT_SLECHT",
+        "min": 39,
+        "max": 50
+       }
+      ],
+      "note": "Afgeronde veldindicatie uit twee soortbeschrijvingen. De meetpopulaties zijn bij deze bereiken niet gespecificeerd."
+     },
+     {
+      "field": "wingspan",
+      "unit": "cm",
+      "display": "ca. 85–115 cm",
+      "values": [
+       {
+        "source": "VB_SLECHT",
+        "min": 79,
+        "max": 114
+       },
+       {
+        "source": "NAT_SLECHT",
+        "min": 95,
+        "max": 115
+       }
+      ],
+      "note": "Afgeronde veldindicatie uit twee soortbeschrijvingen. De meetpopulaties zijn bij deze bereiken niet gespecificeerd."
+     }
+    ]
    },
    "habitat": [
     {
@@ -7288,9 +7364,7 @@ const DATA = {
     }
    ],
    "discrepancies": [],
-   "open": [
-    "Onderscheid met Boomvalk en Smelleken nog uit een bron uitwerken."
-   ]
+   "open": []
   },
   "sp016": {
    "summary": {
@@ -20974,6 +21048,24 @@ const DATA = {
        }
       ],
       "note": "Afgeronde onder- en bovengrens op basis van de twee bronwaarden."
+     },
+     {
+      "field": "wingspan",
+      "unit": "cm",
+      "display": "ca. 100–120 cm",
+      "values": [
+       {
+        "source": "VB_BLAUWE_KIEKENDIEF",
+        "min": 100,
+        "max": 121
+       },
+       {
+        "source": "NAT_BLAUW",
+        "min": 100,
+        "max": 120
+       }
+      ],
+      "note": "Afgeronde veldindicatie uit twee soortbeschrijvingen. De meetpopulaties zijn bij deze bereiken niet gespecificeerd."
      }
     ]
    },
@@ -21308,6 +21400,24 @@ const DATA = {
        }
       ],
       "note": "Afgeronde onder- en bovengrens op basis van de twee bronwaarden."
+     },
+     {
+      "field": "wingspan",
+      "unit": "cm",
+      "display": "ca. 95–110 cm",
+      "values": [
+       {
+        "source": "NAT_STEPPE",
+        "min": 95,
+        "max": 110
+       },
+       {
+        "source": "VOGELSKIJKEN_STEPPEKIEKENDIEF",
+        "min": 95,
+        "max": 110
+       }
+      ],
+      "note": "Naturalis en Vogelskijken.nl vermelden dezelfde band. De hogere onder- en bovengrens bij Vogelbescherming zijn afzonderlijk bewaard bij de bronverschillen."
      }
     ]
    },
@@ -21357,10 +21467,11 @@ const DATA = {
    "discrepancies": [
     {
      "field": "Spanwijdte",
-     "app": "100–121 cm (Vogelbescherming)",
-     "source": "Vogelskijken.nl geeft 95–110 cm. Gebruik spanwijdte als ondersteunend kenmerk.",
+     "app": "ca. 95–110 cm",
+     "source": "Vogelbescherming geeft 100–121 cm. Naturalis en Vogelskijken.nl geven 95–110 cm. Gebruik spanwijdte als ondersteunend veldkenmerk.",
      "sources": [
       "VB_STEPPEKIEKENDIEF",
+      "NAT_STEPPE",
       "VOGELSKIJKEN_STEPPEKIEKENDIEF"
      ]
     }

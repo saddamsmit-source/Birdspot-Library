@@ -79,10 +79,11 @@
         "/assets/species/plumage/sp009-male-flight.webp": {"role": "In vlucht", "content": "Vrij in de lucht van onderen; vleugels gespreid.", "sexAge": "volwassen (iNaturalist: Adult, Male); terecht zonder geslachtslabel", "quality": "goed", "verdict": "goedgekeurd"},
         "/assets/species/plumage/sp009-perched.webp": {"role": "Overige herkenningsfoto's (Volwassen in rust)", "content": "Volwassen frontaal op rots; witte borst, baardstreep, gebandeerde flanken.", "sexAge": "volwassen (bron: 'female adult'); geen geslachtslabel", "quality": "goed", "verdict": "goedgekeurd"}
       },
-      "corrections": [],
-      "missing": [],
-      "sexPolicy": "Geslachten alleen in grootte verschillend (VB_SLECHT); geen geslachtslabels.",
-      "uncertain": ["Dezelfde opname staat twee keer in het register (GUIDE_PHOTOS /assets/showcase/sp009.webp en POSES[1] /assets/species/sp009.webp) en wordt één keer getoond; opschonen is cosmetisch."]
+      "corrections": ["Vijf gidsbeelden opnieuw naast het bronbestand gelegd. Dubbele fotoregistratie samengevoegd. Vluchtvergelijking met Torenvalk gebruikt beelden van beide volwassen vogels van onderen."],
+      "missing": ["Afzonderlijke foto van een juveniele Slechtvalk in vrije vlucht."],
+      "sexPolicy": "Geslachten verschillen in grootte (Vogelbescherming). Geen geslachtslabels op het verenkleed.",
+      "uncertain": [],
+      "date": "2026-11-14"
     },
     "sp016": {
       "assets": {
