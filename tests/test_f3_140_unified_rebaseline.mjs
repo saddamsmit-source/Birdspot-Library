@@ -92,6 +92,7 @@ const counts={
  fifthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R05'),
  sixthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R06'),
  seventhBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R07'),
+ eighthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R08'),
  contentInspected:sum(x=>x.F3.reviewedThisRound===true),
  contentComplete:sum(x=>x.F3.contentStatus==='CONTENT COMPLETE')
 };
@@ -105,6 +106,24 @@ const fourth=rows.filter(x=>x.F3.recheckBatch==='F3-R04');
 const fifth=rows.filter(x=>x.F3.recheckBatch==='F3-R05');
 const sixth=rows.filter(x=>x.F3.recheckBatch==='F3-R06');
 const seventh=rows.filter(x=>x.F3.recheckBatch==='F3-R07');
+const eighth=rows.filter(x=>x.F3.recheckBatch==='F3-R08');
+assert.deepEqual(eighth.map(x=>x.id), ['sp031','sp032','sp033'],'F3-R08 is exactly three existing tits');
+assert.deepEqual(eighth.map(x=>x.F3.photoFilesInspected),[3,3,4]);
+for(const x of eighth) {
+ assert.equal(x.F3.fullPass,false,'Visual review must not certify a complete F3 pass');
+ assert.equal(x.F3.status,'IN CONTENT REVIEW / OPEN POINTS');
+ assert.equal(x.F3.reviewedOriginalAudio,0,'Audio has not been independently verified this round');
+ assert.equal(x.F3.audioSourceMatches.length,0,'No fabricated waveform matches');
+ assert.ok(x.F3.findings.length>=3 && x.F3.sourceReferences.length>=2);
+ assert.equal(x.F3.independence.startsWith('PARTIAL'),true);
+ assert.equal(x.currentAssets.imageSlots.length,x.F3.photoBlobSHAs.length);
+ for(let i=0;i<x.currentAssets.imageSlots.length;i++) {
+  const file=readFileSync(new URL('..'+x.currentAssets.imageSlots[i].path,import.meta.url));
+  const expected=createHash('sha1').update('blob '+file.length+'\0').update(file).digest('hex');
+  assert.equal(x.F3.photoBlobSHAs[i],expected,x.id+' local image changed since visual review');
+ }
+}
+
 assert.deepEqual(third.map(x=>x.id), ['sp006','sp007','sp008']);
 assert.deepEqual(third.map(x=>x.F3.photoFilesInspected),[5,6,6]);
 assert.deepEqual(third.map(x=>x.F3.reviewedOriginalAudio),[2,3,2]);
