@@ -191,10 +191,36 @@ def main():
 
         page.set_viewport_size({'width': 390, 'height': 844})
         info = hero.get_by_text('Veldkenmerken', exact=True)
-        info.click()
+        info.focus()
+        page.keyboard.press('Enter')
         expect(hero.locator('#featuredBirdWhere')).to_be_visible()
-        assert contrast(hero.locator('#featuredBirdWhere'), text_edge=True) >= 4.5
-        info.click()
+        notes = hero.locator('.field-featured-notes')
+        for width in (320, 360, 390, 430, 1280):
+            page.set_viewport_size({'width': width, 'height': 844})
+            spacing = notes.evaluate("""el => {
+              const panel = el.getBoundingClientRect();
+              const title = el.querySelector('summary').getBoundingClientRect();
+              const where = el.querySelector('#featuredBirdWhere').getBoundingClientRect();
+              const presence = el.querySelector('#featuredBirdPresence').getBoundingClientRect();
+              return {
+                inset: Math.min(where.left - panel.left, presence.left - panel.left,
+                  panel.right - where.right, panel.right - presence.right),
+                aligned: Math.abs(where.left - presence.left) <= 1,
+                titleHeight: title.height,
+                titleGap: where.top - title.bottom,
+                textGap: presence.top - where.bottom,
+                bottom: panel.bottom - presence.bottom,
+              };
+            }""")
+            assert spacing['inset'] >= 12 and spacing['aligned'], (width, spacing)
+            assert spacing['titleHeight'] >= 44 and 6 <= spacing['titleGap'] <= 14, (width, spacing)
+            assert 6 <= spacing['textGap'] <= 12 and spacing['bottom'] >= 12, (width, spacing)
+            assert contrast(hero.locator('#featuredBirdWhere'), text_edge=True) >= 4.5
+            if width == 390:
+                notes.screenshot(path=str(SHOTS / 'mobile_owner_fieldnotes_390.png'))
+        page.set_viewport_size({'width': 390, 'height': 844})
+        page.keyboard.press('Enter')
+        expect(hero.locator('#featuredBirdWhere')).to_be_hidden()
         cta.click()
         close_species(page.get_by_role('dialog', name='Wielewaal', exact=True))
 
