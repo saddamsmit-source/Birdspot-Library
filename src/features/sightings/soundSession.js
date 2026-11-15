@@ -79,6 +79,7 @@ export function mountSoundSession(root, onSaved) {
   let stream, recorder, starting = false, finishing = false, timer, started = 0, playbackUrl;
   let stopMonitor, recognition, wakeLock, completion, completeCapture;
   let persistWork = Promise.resolve();
+  let draftRevision = 0;
   let dateEdited = false, timeEdited = false;
 
   function setMoment(now = new Date()) {
@@ -171,14 +172,18 @@ export function mountSoundSession(root, onSaved) {
 
   function persistDraft() {
     if (recorder?.state === 'recording' || finishing || (!clip && !candidates.size)) return Promise.resolve();
+    const revision = ++draftRevision;
+    draftStatus.textContent = 'Sessie wordt bewaard…';
     persistWork = saveSoundDraft({
       id: sessionId, clip, seconds, levels: [...levels], candidates: [...candidates], coordinates,
       date: date.value, time: time.value, name: find('soundPlace').value, notes: find('soundNotes').value,
     }).then(() => {
       draftStored = true;
-      draftStatus.textContent = 'Sessie bewaard op dit toestel.';
+      if (revision === draftRevision) draftStatus.textContent = 'Sessie bewaard op dit toestel.';
     }, () => {
-      draftStatus.textContent = 'Sessie opslaan lukt niet. Houd dit scherm open om je bevindingen te bewaren.';
+      if (revision === draftRevision) {
+        draftStatus.textContent = 'Sessie opslaan lukt niet. Houd dit scherm open om je bevindingen te bewaren.';
+      }
     });
     return persistWork;
   }
@@ -402,7 +407,8 @@ export function mountSoundSession(root, onSaved) {
   discarder.addEventListener('click', async () => {
     root.inert = true;
     try {
-      await deleteSoundDraft(sessionId);
+      await persistWork;
+      if (draftStored) await deleteSoundDraft(sessionId);
       gpsRequest++;
       gps.disabled = false;
       root.querySelector('#soundReview').reset();
