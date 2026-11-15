@@ -18,7 +18,7 @@ assert.equal(new Set(ids).size, 140, 'Every cohort member has a unique ID');
 assert.deepEqual(ledger.species.map(x => x.id), ids, 'Audio ledger matches photo cohort, in same order');
 assert.deepEqual(GUIDE_AUDIO, registry, 'Generated JS audio must match original JSON audio register');
 
-let withAudio=0, clips=0, f2With=0, f2Missing=0;
+let withAudio=0, clips=0, f2With=0, f2Missing=0, fullyVerified=0;
 for (const entry of ledger.species) {
   const bird=speciesById.get(entry.id);
   assert.ok(bird, 'Unknown Birdspot ID ' + entry.id);
@@ -27,9 +27,12 @@ for (const entry of ledger.species) {
   const declared=registry[entry.id] || [];
   assert.equal(entry.mediaCount, declared.length, entry.id + ' registered sound count changed without QA update');
   assert.deepEqual(entry.clips.map(x => x.file), declared.map(x => x.audio));
-  assert.equal(entry.status, declared.length?'REGISTERED_UNVERIFIED':'MISSING');
+  if (!declared.length) assert.equal(entry.status, 'MISSING');
+  else assert.ok(['REGISTERED_UNVERIFIED','PARTIALLY TESTED','VERIFIED'].includes(entry.status),
+    entry.id+' unknown audio QA status');
   if (declared.length) {
     withAudio++;
+    if(entry.status==='VERIFIED') fullyVerified++;
     if(f2Ids.has(entry.id))f2With++;
     const html=voicePanel(bird,null);
     assert.ok(html.includes('sd-audio'), entry.id + ' audio is not rendered in species detail');
@@ -40,9 +43,14 @@ for (const entry of ledger.species) {
       }
       assert.match(c.source, /^https:\/\//);
       assert.ok(html.includes(c.audio), entry.id + ' browser player omits '+c.audio);
-      assert.equal(ev.sourceSpecies,'NOT TESTED', 'No species certification without original-source review');
-      assert.equal(ev.externalRights,'NOT TESTED', 'No commercial rights certification without original-source review');
-      assert.equal(ev.roleAudition,'NOT TESTED', 'No voice-type certification without original-source review');
+      for(const k of ['sourceSpecies','externalRights','roleAudition','independentReview']){
+        assert.ok(['NOT TESTED','PARTIALLY TESTED','VERIFIED'].includes(ev[k]),entry.id+' invalid '+k+' status');
+      }
+      if(entry.status==='VERIFIED'){
+        for(const k of ['sourceSpecies','externalRights','roleAudition','independentReview'])
+          assert.equal(ev[k],'VERIFIED',entry.id+' unverified '+k+' in a VERIFIED bird');
+        assert.ok(entry.reviewEvidence?.length>=1,entry.id+' no original source evidence for VERIFIED result');
+      }
       const local=new URL('..'+c.audio,import.meta.url);
       assert.ok(existsSync(local), entry.id+' local audio missing '+c.audio);
       assert.ok(statSync(local).size>1024,entry.id+' audio too small '+c.audio);
@@ -56,8 +64,8 @@ assert.equal(ledger.counts.withoutRegisteredAudio,140-withAudio);
 assert.equal(clips,ledger.counts.registeredClips);
 assert.equal(f2With,ledger.counts.f2WithAudio);
 assert.equal(f2Missing,ledger.counts.f2WithoutAudio);
-assert.equal(ledger.counts.independentlyApprovedAudio,0,
-  'Registered/licensed does not mean verified original, nor tested against an independent bird sound');
+assert.equal(ledger.counts.independentlyApprovedAudio,fullyVerified,
+  'A verified per-bird sound status must have auditable original-source/review evidence');
 const pilot=['sp045','sp056','sp057'];
 assert.deepEqual([...ledger.selectedPilotIds].sort(),pilot);
 for (const id of pilot) {
