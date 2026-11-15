@@ -246,6 +246,35 @@ assert.ok((GUIDE_POSES.sp068 || []).some(photo => photo.flight),
 assert.ok(!(GUIDE_POSES.sp069 || []).some(photo => photo.flight),
   'F2-24 Yellow Wagtail landing photo cannot enter true-flight role');
 
+// F2-25: correct photographic pairs on BOTH cards, including true flight as a separate tab.
+for (const [label, ids, images, flight] of [
+  ['Veldleeuwerik en Graspieper · in rust', ['sp070', 'sp072'], ['sp070.webp', 'sp072.webp'], false],
+  ['Veldleeuwerik en Graspieper · in vlucht', ['sp070', 'sp072'], ['sp070-flight.webp', 'sp072-flight.webp'], true],
+  ['IJsvogel en Bijeneter · keel en snavel', ['sp075', 'sp257'], ['sp075.webp', 'sp257.webp'], false],
+]) {
+  const pairs = GUIDE_COMPARISONS.filter(entry => entry.label === label);
+  assert.equal(pairs.length, 1, `F2-25 absent or duplicated comparison: ${label}`);
+  const pair = pairs[0];
+  assert.deepEqual(pair.birds.map(b => b.id), ids, `F2-25 unexpected species order: ${label}`);
+  assert.equal(Boolean(pair.flight), flight, `F2-25 photo pose mismatch: ${label}`);
+  assert.equal(pair.rows?.length, 3, `F2-25 requires 3 evidence-based field mark rows: ${label}`);
+  for (const id of ids) {
+    const html = recognitionPanel(byId.get(id));
+    const panels = html.split('<div class="sd-cmp-panel"').slice(1);
+    assert.ok(panels.some(panel =>
+      panel.startsWith(' data-cmp-panel' + (flight ? ' data-cmp-flight' : '')) &&
+      (flight || !panel.startsWith(' data-cmp-panel data-cmp-flight')) &&
+      images.every(path => panel.includes(path))),
+      `F2-25 must show two registered ${flight ? 'flight' : 'rest'} images on ${id}: ${label}`);
+  }
+}
+for (const id of ['sp070', 'sp072', 'sp075']) {
+  assert.ok((GUIDE_POSES[id] || []).some(photo => photo.flight === true),
+    `F2-25 previously registered real flight photo must be preserved for ${id}`);
+}
+assert.equal(byId.get('sp070').plumage.juv, null,
+  'F2-25: do not present unsourced generic Skylark juvenile as individually established');
+
 const youngTits = GUIDE_COMPARISONS.find(entry => entry.label === 'Matkop en Glanskop · jonge vogels');
 assert.deepEqual(youngTits.birds.map(({id, plumage}) => [id, plumage]), [['sp031', 'juv'], ['sp032', 'juv']]);
 for (const id of ['sp031', 'sp032']) {
