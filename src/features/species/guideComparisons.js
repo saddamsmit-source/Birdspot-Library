@@ -995,25 +995,51 @@ export const GUIDE_COMPARISONS = [
     "tip": "Een kleine kuif kan platliggen of slecht zichtbaar zijn. Gebruik ook oogkleur, kopvorm en wangtekening."
   },
   {
+    label: 'Kuifeend en Tafeleend · mannetjes in vrije vlucht',
+    flight: true,
+    birds: [
+      {id: 'sp092', source: 'kuifeend', plumage: 'adult_m', photo: '/assets/species/plumage/sp092-flight.webp', marks: 'Donkere kop en borst, witte flank en een witte baan over de slagpennen.'},
+      {id: 'sp132', source: 'tafeleend', plumage: 'adult_m', photo: '/assets/species/plumage/sp132-flight.webp', marks: 'Roodbruine kop, donker voorlichaam en een lichtgrijze baan over de vleugel.'},
+    ],
+    rows: [
+      {label: 'Kop', values: ['Donker', 'Roodbruin']},
+      {label: 'Vleugelbaan', values: ['Wit en scherp afgetekend', 'Lichtgrijs en minder contrastrijk']},
+    ],
+    tip: 'Gebruik kopkleur en vleugelbaan samen. De vlieghouding bepaalt hoeveel je van de kuif en de vleugel ziet.',
+  },
+  {
     label: 'Zilvermeeuw en Kleine Mantelmeeuw · volwassen',
     birds: [
-      {id: 'sp094', source: 'zilvermeeuw', marks: 'Lichtgrijze mantel en roze poten. De gele snavel heeft een rode vlek.'},
-      {id: 'sp095', source: 'kleine-mantelmeeuw', marks: 'Donkergrijze mantel en gele poten. Oogt doorgaans slanker.'},
+      {id: 'sp094', source: 'zilvermeeuw', photo: '/assets/species/sp094.webp', marks: 'Lichtgrijze mantel en roze poten. De gele snavel heeft een rode vlek.'},
+      {id: 'sp095', source: 'kleine-mantelmeeuw', photo: '/assets/species/sp095.webp', marks: 'Donkergrijze mantel en gele poten. Oogt doorgaans slanker.'},
     ],
     rows: [
       {label: 'Mantel', values: ['Lichtgrijs', 'Donkergrijs']},
       {label: 'Poten', values: ['Roze', 'Geel']},
-      {label: 'Snavel / bouw', values: ['Gele snavel, rode vlek', 'Slanker']},
+      {label: 'Bouw', values: ['Oogt doorgaans forser', 'Oogt doorgaans slanker']},
     ],
     tip: 'Combineer mantelkleur en pootkleur. Licht en schaduw kunnen de mantel donkerder of lichter doen lijken.',
   },
   {
     label: 'Zilvermeeuw en Kleine Mantelmeeuw · eerste winter',
     birds: [
-      {id: 'sp094', source: 'zilvermeeuw', marks: 'De lichte randen van de tertials zijn vaak duidelijk gekarteld.'},
-      {id: 'sp095', source: 'kleine-mantelmeeuw', marks: 'De tertials ogen meestal egaler. In vlucht valt de donkere ondervleugel op.'},
+      {id: 'sp094', source: 'zilvermeeuw', photoMissing: true, marks: 'De lichte randen van de tertials zijn vaak duidelijk gekarteld.'},
+      {id: 'sp095', source: 'kleine-mantelmeeuw', photoMissing: true, marks: 'De tertials ogen meestal egaler. In vlucht valt de donkere ondervleugel op.'},
     ],
     tip: 'Bekijk de binnenste armpennen op een scherp zijaanzicht en controleer zo mogelijk de ondervleugel in vlucht.',
+  },
+  {
+    label: 'Zilvermeeuw en Kleine Mantelmeeuw · volwassen in vrije vlucht',
+    flight: true,
+    birds: [
+      {id: 'sp094', source: 'zilvermeeuw', photo: '/assets/species/plumage/sp094-flight.webp', marks: 'Lichtgrijs vleugelveld met een duidelijk afstekende zwarte vleugeltop.'},
+      {id: 'sp095', source: 'kleine-mantelmeeuw', photo: '/assets/species/plumage/sp095-flight.webp', marks: 'Donkergrijze bovenvleugel, met een geleidelijker overgang naar de zwarte top.'},
+    ],
+    rows: [
+      {label: 'Vleugelveld', values: ['Lichtgrijs', 'Donkergrijs']},
+      {label: 'Vleugeltop', values: ['Zwart steekt duidelijk af', 'Zwart sluit aan op de donkere vleugel']},
+    ],
+    tip: 'Vergelijk vooral het grijs op de bovenzijde. Tegenlicht en een andere vleugelhoek veranderen het zichtbare contrast.',
   },
   {
     label: 'Boerenzwaluw en Huiszwaluw',
@@ -1072,8 +1098,13 @@ export const GUIDE_COMPARISONS = [
   {
     label: 'Grote en Kleine Mantelmeeuw · volwassen',
     birds: [
-      {id: 'sp164', source: 'grote-mantelmeeuw', plumage: 'adult_m', marks: 'Zwaar gebouwd, met roze poten, een forse snavel en een bijna zwarte mantel.'},
-      {id: 'sp095', source: 'kleine-mantelmeeuw', plumage: 'adult_m', textOnly: true, marks: 'Slanker, met gele poten, een fijnere snavel en een donkergrijze mantel.'},
+      {id: 'sp164', source: 'grote-mantelmeeuw', photo: '/assets/species/plumage/sp164-adult.webp', marks: 'Zwaar gebouwd, met roze poten, een forse snavel en een bijna zwarte mantel.'},
+      {id: 'sp095', source: 'kleine-mantelmeeuw', photo: '/assets/species/sp095.webp', marks: 'Slanker, met gele poten, een fijnere snavel en een donkergrijze mantel.'},
+    ],
+    rows: [
+      {label: 'Poten', values: ['Roze', 'Geel']},
+      {label: 'Bouw en snavel', values: ['Zwaar gebouwd met een forse snavel', 'Slanker met een fijnere snavel']},
+      {label: 'Mantel', values: ['Bijna zwart', 'Donkergrijs']},
     ],
     tip: 'Combineer pootkleur met bouw en snavel. Mantelkleur alleen kan door het licht misleiden.',
   },

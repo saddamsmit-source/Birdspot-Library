@@ -744,6 +744,32 @@ def main():
             close_detail()
             print("F2-29 OK — Wilde Eend en Slobeend in rust en in vrije vlucht, wederzijds")
 
+            open_species("Kuifeend", "sp092")
+            pochard_card = cmp_card("Tafeleend")
+            assert_photo_pair(cmp_tab(pochard_card, "Mannetje"), ["sp092.webp", "sp132.webp"])
+            assert_photo_pair(cmp_tab(pochard_card, "Vrouwtje"), ["sp092-adult_f.webp", "sp132-adult_f.webp"])
+            assert_photo_pair(
+                cmp_tab(pochard_card, "In vlucht · Mannetje"), ["sp092-flight.webp", "sp132-flight.webp"], in_flight=True,
+            )
+            close_detail()
+
+            open_species("Zilvermeeuw", "sp094")
+            lesser_gull_card = cmp_card("Kleine Mantelmeeuw")
+            assert lesser_gull_card.locator(".sd-cmp-tab").all_text_contents() == ["Volwassen", "In vlucht"]
+            assert_photo_pair(cmp_tab(lesser_gull_card, "Volwassen"), ["sp094.webp", "sp095.webp"])
+            gull_flight = cmp_tab(lesser_gull_card, "In vlucht")
+            assert_photo_pair(gull_flight, ["sp094-flight.webp", "sp095-flight.webp"], in_flight=True)
+            gull_flight.get_by_role("button", name="Open Kleine Mantelmeeuw").click()
+            expect(p.get_by_role("dialog", name="Kleine Mantelmeeuw", exact=True)).to_be_visible()
+            herring_gull_card = cmp_card("Zilvermeeuw")
+            assert herring_gull_card.locator(".sd-cmp-tab").all_text_contents() == ["Volwassen", "In vlucht"]
+            assert_photo_pair(
+                cmp_tab(herring_gull_card, "In vlucht"), ["sp095-flight.webp", "sp094-flight.webp"], in_flight=True,
+            )
+            assert_photo_pair(cmp_tab(cmp_card("Grote Mantelmeeuw"), "Volwassen"), ["sp095.webp", "sp164-adult.webp"])
+            close_detail()
+            print("F2-30 OK — volwassen rust- en vluchtparen, zonder verkeerde foto’s onder Eerste winter")
+
             open_species("Wintertaling", "sp091")
             teal_card = cmp_card("Zomertaling")
             assert_photo_pair(cmp_tab(teal_card, "Juveniel"), ["sp091-juv.webp", "sp188-juv.webp"])
