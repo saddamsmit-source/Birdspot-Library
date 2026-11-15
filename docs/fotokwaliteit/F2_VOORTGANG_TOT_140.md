@@ -321,3 +321,17 @@ Twaalf beelden van de drie soorten plus drie gebruikte Purperreiger-beelden visu
 Negen eigen beelden plus twee gebruikte Blauwe Reiger-beelden geopend. Tien originele Commons-pagina’s gelezen. Foto’s, rolregistratie en credits zijn behouden. [Beeld- en bronbewijs](F2_28_BRON_EN_LIMIETEN.json).
 
 **Teller** · 75/140 soorten opgepakt, 65 resterend. F2 is PARTIALLY TESTED. Basis [PR #230](https://github.com/saddamsmit-source/Birdspot-Library/pull/230) op `9eb68270d9a0005346e738397daecdf4b7fbe4b4`. CAP-BIRD-012/015. Herstel via de basis-PR. Fysieke Android- en volledige releasecontroles blijven open.
+
+## F2-29 · Wilde Eend, Slobeend en Wintertaling
+
+| Soort | Hercontrole en wijziging | Open |
+|---|---|---|
+| sp089 Wilde Eend | Vrouwtjespaar met Slobeend gekoppeld aan de gecontroleerde rustbeelden. Nieuw wederzijds paar van mannetjes in vrije vlucht, met verschillen in snavel, borst en flank. | Originele landings- en jeugdbron onbereikbaar. Bronteksten bij het eclipsbeeld verschillen. |
+| sp090 Slobeend | Breed uitlopende snavel staat centraal bij de vrouwtjes. Bevestigd vrijevluchtbeeld toont bij het mannetje ook de lichtblauwe voorvleugel. | Hoofd- en jeugdfotobron onbereikbaar. |
+| sp091 Wintertaling | Vergelijking met Zomertaling per kleed verhelderd met koptekening, flank en staartzijde bij de volwassen vogels en de zichtbare verschillen bij juvenielen. | Twee eigen bronpagina’s en de bron van het Zomertaling-vrouwtje onbereikbaar. Bij eclips ontbreekt een paar in dezelfde houding. |
+
+Zeventien eigen beelden en vier relevante Zomertaling-beelden visueel bekeken. Veertien originele bronpagina’s geraadpleegd. Fotobestanden, rolregistratie en credits zijn behouden. [Beeld- en bronbewijs](F2_29_BRON_EN_LIMIETEN.json).
+
+Dwerggans (sp182, Schaarse gasten) en Groene Reiger (sp459, Dwaalgasten) staan al in de Nederlandse soortenlijst. Beide detailkaarten hebben nog geen gidsfoto. De zoekroute heeft regressiedekking voor Nederlandse en wetenschappelijke namen onder **Soorten → Alle**.
+
+**Teller** · 78/140 soorten opgepakt, 62 resterend. F2 is PARTIALLY TESTED. Basis [PR #232](https://github.com/saddamsmit-source/Birdspot-Library/pull/232) op `ab1a35835be5b28dc96de40605616fcff2e7a700`. CAP-BIRD-012/015. Herstel via de basis-PR. Volgende batch: Kuifeend, Zilvermeeuw en Kleine Mantelmeeuw.

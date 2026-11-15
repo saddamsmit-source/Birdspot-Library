@@ -729,6 +729,21 @@ def main():
             close_detail()
             print("F2-28 OK — Kwak tegenover Blauwe Reiger in rust en vlucht en tegenover jonge Purperreiger")
 
+            open_species("Wilde Eend", "sp089")
+            shoveler_card = cmp_card("Slobeend")
+            assert_photo_pair(cmp_tab(shoveler_card, "Vrouwtje"), ["sp089-adult_f.webp", "sp090-adult_f.webp"])
+            flight_panel = cmp_tab(shoveler_card, "In vlucht · Mannetje")
+            assert_photo_pair(flight_panel, ["sp089-free-flight.webp", "sp090-flight.webp"], in_flight=True)
+            expect(flight_panel.get_by_text("Snavel", exact=True)).to_be_visible()
+            flight_panel.get_by_role("button", name="Open Slobeend").click()
+            expect(p.get_by_role("dialog", name="Slobeend", exact=True)).to_be_visible()
+            mallard_card = cmp_card("Wilde Eend")
+            assert_photo_pair(
+                cmp_tab(mallard_card, "In vlucht · Mannetje"), ["sp090-flight.webp", "sp089-free-flight.webp"], in_flight=True,
+            )
+            close_detail()
+            print("F2-29 OK — Wilde Eend en Slobeend in rust en in vrije vlucht, wederzijds")
+
             open_species("Wintertaling", "sp091")
             teal_card = cmp_card("Zomertaling")
             assert_photo_pair(cmp_tab(teal_card, "Juveniel"), ["sp091-juv.webp", "sp188-juv.webp"])
