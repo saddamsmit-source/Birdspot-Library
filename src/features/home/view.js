@@ -122,8 +122,10 @@ function buildSkeleton() {
           <button type="button" class="field-action" data-featured-species><span data-featured-label>Bekijk soortkaart</span> <span aria-hidden="true">›</span></button>
           <details class="field-featured-notes">
             <summary>Veldkenmerken</summary>
-            <p id="featuredBirdWhere"></p>
-            <p class="featured-birds__presence" id="featuredBirdPresence"></p>
+            <div class="field-featured-notes__body">
+              <p id="featuredBirdWhere"></p>
+              <p class="featured-birds__presence" id="featuredBirdPresence"></p>
+            </div>
           </details>
         </div>
       </div>

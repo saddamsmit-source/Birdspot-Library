@@ -4,7 +4,9 @@ on:
     paths:
       - 'src/app.js'
       - 'src/features/sightings/quickAdd.js'
+      - 'src/features/sightings/soundSession.js'
       - 'src/features/sightings/addSheet.js'
+      - 'src/data/sightings.js'
       - 'styles/sightings.css'
       - 'sw.js'
       - 'docs/audio/**'
@@ -24,8 +26,9 @@ jobs:
         with:
           python-version: '3.12'
       - run: node --check src/features/sightings/quickAdd.js
+      - run: node --check src/features/sightings/soundSession.js
       - run: node tests/test_audio_140_contract.mjs
       - run: python -m pip install -r tests/requirements.txt
       - run: python -m playwright install --with-deps chromium
-      - name: Real 320/390px +-menu and Merlin/manual evidence
+      - name: Mobile recording, species selection and private group pins
         run: python tests/test_quick_add_merlin.py

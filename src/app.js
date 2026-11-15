@@ -142,7 +142,14 @@ function openObservationForm(initial = {}) {
 
 // ── De centrale + biedt de twee herkenbare keuzes ──────────
 document.getElementById('fab').addEventListener('click', () => {
-  openQuickAdd({ onChoose: openObservationForm });
+  openQuickAdd({
+    onChoose: openObservationForm,
+    onSoundSaved: sightings => {
+      navigate('map', { force: true, target: { sightingId: sightings[0].id } });
+      const count = sightings.length;
+      showToast(count === 1 ? 'Waarneming gepind' : `${count} waarnemingen gepind`);
+    },
+  });
 });
 
 // ── Toast utility ─────────────────────────────────────────

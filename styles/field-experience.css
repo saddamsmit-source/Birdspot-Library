@@ -221,6 +221,7 @@
   gap: 8px;
   margin-top: 8px;
 }
+.field-featured-notes { --featured-notes-inset: 14px; }
 .field-featured-notes[open] {
   flex-basis: 100%;
   background: rgb(16 39 31 / .72);
@@ -233,7 +234,17 @@
   font-weight: 700;
   cursor: pointer;
 }
-.field-featured-notes p { margin: 0 10px 12px; }
+.field-featured-notes[open] > summary { padding-inline: var(--featured-notes-inset); }
+.field-featured-notes__body {
+  display: grid;
+  gap: 8px;
+  margin-inline: var(--featured-notes-inset);
+  padding-block: 9px 14px;
+  border-top: 1px solid rgb(248 244 232 / .3);
+}
+#slideshow.featured-birds .featured-birds__caption .field-featured-notes__body > p {
+  margin: 0;
+}
 #slideshow .field-featured-actions > .field-action:active {
   background: rgb(16 39 31 / .68);
 }

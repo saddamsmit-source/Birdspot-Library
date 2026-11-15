@@ -12,7 +12,7 @@
  *   birdspot-media           — foto's/IDB-exports (permanent)
  */
 
-const APP_VERSION = '1.27.11';
+const APP_VERSION = '1.27.12';
 const APP_CACHE   = `birdspot-app-v${APP_VERSION}`;
 const MEDIA_CACHE = 'birdspot-media';
 
@@ -80,6 +80,7 @@ const PRECACHE_PATHS = [
   'src/features/sightings/view.js',
   'src/features/sightings/addSheet.js',
   'src/features/sightings/quickAdd.js',
+  'src/features/sightings/soundSession.js',
   'src/features/sightings/speciesPicker.js',
   'src/features/sightings/evidence.js',
   'src/features/sightings/pinPicker.js',

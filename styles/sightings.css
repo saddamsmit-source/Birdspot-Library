@@ -711,15 +711,21 @@
 }
 
 /* Birdspot observatiekeuze — duidelijk, herstelbaar, mobiel en toetsenbordvriendelijk */
-.quick-add-sheet { max-width: 460px; margin-inline: auto; max-height: min(92dvh, 750px); }
-.quick-add-options { padding: 20px 18px calc(16px + env(safe-area-inset-bottom,0px)); display: grid; gap: 12px; }
+.quick-add-sheet { max-width: 460px; margin-inline: auto; max-height: min(92dvh, 750px); padding-bottom: 0; }
+.quick-add-sheet .sheet__header {
+  position: sticky; top: 0; z-index: 1; display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  padding: 10px 16px; border-bottom: 1px solid var(--line); background: var(--surface);
+}
+.quick-add-sheet .sheet__title { font: 700 1.25rem/1.2 var(--font-display, Georgia, serif); }
+.quick-add-options { padding: 16px 16px calc(16px + env(safe-area-inset-bottom,0px)); display: grid; gap: 12px; }
+.quick-add-options > * { min-width: 0; }
 .quick-add-option {
   display:flex; align-items:center; width:100%; gap:14px; text-align:left;
   border:1px solid var(--line); border-radius:16px;
   background:var(--surface-2); color:var(--ink);
   padding:14px 16px; min-height:78px; font:inherit; cursor:pointer;
 }
-.quick-add-option:focus-visible,.quick-add-back:focus-visible,.quick-add-info-link:focus-visible {
+.quick-add-sheet :is(button, input, textarea, summary):focus-visible {
  outline:3px solid var(--brand-light); outline-offset:3px;
 }
 .quick-add-icon { display:grid; place-items:center; width:46px; height:46px; flex-shrink:0;
@@ -727,8 +733,40 @@
 .quick-add-icon svg { width:28px; height:28px; }
 .quick-add-option strong { display:block; font-weight:750; font-size:1rem; }
 .quick-add-option small { display:block; color:var(--muted); font-size:.83rem; line-height:1.4; margin-top:3px; }
-.quick-add-help { color:var(--ink); font-size:.93rem; line-height:1.55; margin:0 0 6px; }
-.quick-add-info-link,.quick-add-back { color:var(--brand-mid); font:inherit; font-weight:700;
- padding:10px; text-decoration:underline; }
-.quick-add-back { justify-self:start; background:none; border:0; cursor:pointer; }
+.quick-add-sheet .btn-close, .quick-add-back, #soundReview .sound-row button, #soundMatches button {
+  min-height: 44px; padding: 8px 12px; border: 1px solid var(--line); border-radius: var(--r-sm);
+  color: var(--ink); background: var(--surface-2); font: inherit; cursor: pointer;
+}
+.quick-add-back { justify-self: start; }
+.sound-capture, .sound-species, #soundReview fieldset {
+  display: grid; gap: 10px; min-width: 0; padding: 12px;
+  border: 1px solid var(--line); border-radius: var(--r-card); background: var(--surface-2);
+}
+.sound-species h3, #soundReview legend { font-weight: 720; }
+.quick-add-options p { color: var(--ink-2); font-size: .875rem; line-height: 1.42; overflow-wrap: anywhere; }
+.sound-row { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+.sound-row > button { flex: 1 1 auto; }
+#soundElapsed { font-variant-numeric: tabular-nums; padding-inline: 4px; }
+#soundPlayback { width: 100%; height: 44px; }
+.quick-add-options :is(#soundRecord, #soundSave) {
+  min-height: 44px; border: 0; border-radius: var(--r-sm); padding: 8px 12px;
+  background: var(--focus-ink); color: var(--focus-light); font: inherit; font-weight: 720; cursor: pointer;
+}
+.quick-add-options button:disabled { opacity: .6; cursor: default; }
+#soundSelection, #soundMatches { padding: 0; list-style: none; }
+#soundSelection label, #soundMatches button { width: 100%; text-align: left; }
+#soundSelection label {
+  display: flex; align-items: center; gap: 8px; min-height: 44px;
+  border-top: 1px solid var(--line); cursor: pointer;
+}
+#soundSelection input { width: 18px; height: 18px; accent-color: var(--brand-mid); }
+.sound-date { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 8px; }
+.quick-add-options :is(input:not([type="checkbox"]), textarea) {
+  display: block; width: 100%; min-width: 0; min-height: 44px; margin-block-start: 4px; padding: 8px;
+  border: 1px solid var(--line); border-radius: var(--r-sm); color: var(--ink); background: var(--surface); font: inherit;
+}
+.sound-details[open] > label { display: block; margin-bottom: 8px; }
+.sound-details > summary { min-height: 44px; align-content: center; cursor: pointer; }
+#soundSaveState:empty { display: none; }
+#soundSave { width: 100%; margin-block-start: 10px; }
 @media (max-width:360px) { .quick-add-options{padding:14px 12px 18px} .quick-add-option{gap:10px;padding:12px} }
