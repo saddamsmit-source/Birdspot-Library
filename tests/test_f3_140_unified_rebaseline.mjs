@@ -2,6 +2,7 @@
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync, statSync } from 'node:fs';
 import { SPECIES } from '../src/data/species.js';
+import { GUIDE_HEROES } from '../src/features/species/guideMedia.js';
 const load = file => JSON.parse(readFileSync(new URL(file,import.meta.url),'utf8'));
 const j=load('../docs/fotokwaliteit/F3_140_HERCONTROLE_V0.1_DRAFT.json');
 const old=load('../docs/fotokwaliteit/soortaudit-status.json');
@@ -70,12 +71,28 @@ const counts={
  audioMissing:sum(x=>!x.currentAssets.existingAudioCount),
  firstBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R01'),
  F3FullPass:sum(x=>x.F3.fullPass),
- nextNotStarted:sum(x=>x.F3.status==='NOT STARTED')
+ nextNotStarted:sum(x=>x.F3.status==='NOT STARTED'),
+ secondBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R02'),
+ contentInspected:sum(x=>x.F3.reviewedThisRound===true),
+ contentComplete:sum(x=>x.F3.contentStatus==='CONTENT COMPLETE')
 };
 assert.deepEqual(j.counts,counts,'F3 summary must be recalculated when a batch advances');
 assert.equal(counts.audioPresent,tracker.counts.withRegisteredAudio);
 assert.equal(counts.audioMissing,tracker.counts.withoutRegisteredAudio);
 const first=rows.filter(x=>x.F3.recheckBatch==='F3-R01');
+const second=rows.filter(x=>x.F3.recheckBatch==='F3-R02');
+assert.deepEqual(second.map(x=>x.id), ['sp005','sp248','sp253']);
+assert.deepEqual(second.map(x=>x.F3.photoFilesInspected),[6,4,4]);
+for(const x of second){
+ assert.equal(x.F3.fullPass,false,'content/UX review cannot falsely claim full media or device PASS');
+ assert.equal(x.F3.status,'IN CONTENT REVIEW / OPEN POINTS');
+ assert.ok(x.F3.functionTests.startsWith('DEFERRED BY OWNER'));
+ assert.equal(x.F3.photoBlobSHAs.length,x.F3.photoFilesInspected);
+}
+assert.equal(GUIDE_HEROES.sp005,'/assets/species/sp005.webp',
+ 'The improved existing CC BY 4.0 branch photo should be the Buizerd hero');
+assert.ok(old.species.find(x=>x.id==='sp005').assets.some(x=>x.image==='/assets/species/plumage/sp005-male-rest.webp'),
+ 'The old wire photo must remain a supplementary guide image');
 assert.deepEqual(first.map(x=>x.id),['sp002','sp003','sp004'],'restart first three birds');
 for(const item of first){
  assert.equal(item.F3.photoFilesInspected,3);
@@ -86,4 +103,4 @@ for(const item of first){
 }
 console.log('F3 140 REBASELINE PASS: 140 IDs preserved, historic F2 '+counts.oldF2Touched+
  ' retained; rechecked first '+first.length+' only; '+counts.audioMissing+
- ' birds still missing registered sound, no fabricated full PASS.');
+ ' birds still missing registered sound, '+counts.contentInspected+' content-inspected, no fabricated full PASS.');
