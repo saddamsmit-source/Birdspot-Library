@@ -6,17 +6,18 @@ from playwright.sync_api import expect, sync_playwright
 from test_species_detail import LEAFLET_STUB, Quiet, Server, SHOTS
 
 
-def contrast(node, background=None):
-    return node.evaluate(r"""(el, background) => {
+def contrast(node, background=None, text_edge=False):
+    return node.evaluate(r"""(el, {background, text_edge}) => {
       const luminance = color => {
         const rgb = color.match(/[\d.]+/g).slice(0, 3).map(n => Number(n) / 255);
         return rgb.map(n => n <= 0.04045 ? n / 12.92 : ((n + 0.055) / 1.055) ** 2.4)
           .reduce((sum, n, i) => sum + n * [0.2126, 0.7152, 0.0722][i], 0);
       };
       const a = luminance(getComputedStyle(el).color);
-      const b = luminance(getComputedStyle(background ? el.closest(background) : el).backgroundColor);
+      const b = luminance(text_edge ? getComputedStyle(el).webkitTextStrokeColor
+        : getComputedStyle(background ? el.closest(background) : el).backgroundColor);
       return (Math.max(a,b) + 0.05) / (Math.min(a,b) + 0.05);
-    }""", background)
+    }""", {'background': background, 'text_edge': text_edge})
 
 
 def open_species(page, name, sid):
@@ -90,12 +91,25 @@ def main():
             page.set_viewport_size({'width': width, 'height': 844})
             result = hero.evaluate("""el => {
               const caption = el.querySelector('.featured-birds__caption');
+              const identification = el.querySelector('.featured-birds__identification');
               const photo = el.querySelector('#featuredBirdImage');
               const rect = photo.getBoundingClientRect();
-              const action = el.querySelector('[data-featured-species]').getBoundingClientRect();
+              const action = el.querySelector('[data-featured-species]');
+              const actionRect = action.getBoundingClientRect();
+              const notes = el.querySelector('.field-featured-notes');
+              const translucent = node => {
+                const alpha = Number(getComputedStyle(node).backgroundColor.split(',')[3]?.trim().replace(')', ''));
+                return alpha > 0 && alpha < .5;
+              };
               return {
-                photoBehindAction: rect.bottom >= action.bottom && rect.left <= action.left && rect.right >= action.right,
+                photoBehindAction: rect.bottom >= actionRect.bottom && rect.left <= actionRect.left &&
+                  rect.right >= actionRect.right && rect.bottom >= notes.getBoundingClientRect().bottom,
                 transparentCaption: getComputedStyle(caption).backgroundColor === 'rgba(0, 0, 0, 0)',
+                transparentIdentification: [identification, identification.querySelector('.featured-birds__group')]
+                  .every(node => getComputedStyle(node).backgroundColor === 'rgba(0, 0, 0, 0)'),
+                transparentControls: translucent(action) && translucent(notes),
+                readableEdges: [identification.querySelector('h2'), action, notes.querySelector('summary')]
+                  .every(node => parseFloat(getComputedStyle(node).webkitTextStrokeWidth) > 0),
                 noPhotoFilter: getComputedStyle(photo).filter === 'none' && getComputedStyle(photo).maskImage === 'none',
                 noCaptionShade: getComputedStyle(caption, '::before').content === 'none' &&
                   getComputedStyle(caption).backgroundImage === 'none' &&
@@ -104,7 +118,8 @@ def main():
               };
             }""")
             assert all(result.values()), (width, result)
-            assert contrast(cta) >= 4.5
+            assert contrast(cta, text_edge=True) >= 4.5
+            assert contrast(hero.locator('h2'), text_edge=True) >= 4.5
             if width == 390:
                 hero.screenshot(path=str(SHOTS / 'mobile_owner_hero_390.png'))
 
@@ -112,10 +127,30 @@ def main():
         info = hero.get_by_text('Veldkenmerken', exact=True)
         info.click()
         expect(hero.locator('#featuredBirdWhere')).to_be_visible()
-        assert contrast(hero.locator('#featuredBirdWhere'), 'details') >= 4.5
+        assert contrast(hero.locator('#featuredBirdWhere'), text_edge=True) >= 4.5
         info.click()
         cta.click()
         close_species(page.get_by_role('dialog', name='Wielewaal', exact=True))
+
+        flute = open_species(page, 'Fluiter', 'sp058')
+        intro = flute.locator('.signature-species-detail-intro')
+        names = intro.locator('.signature-species-detail-names')
+        expect(names.locator('em')).to_have_text('Phylloscopus sibilatrix')
+        expect(names.locator('[lang="en"]')).to_have_text('Wood Warbler')
+        gallery = flute.get_by_role('region', name='Eigen vogelfoto’s')
+        media = gallery.get_by_role('button', name='Open Media Studio')
+        expect(gallery.get_by_text('Nog geen foto bij een waarneming.')).to_be_visible()
+        for width in (320, 390, 430):
+            page.set_viewport_size({'width': width, 'height': 844})
+            assert intro.bounding_box()['height'] < 120
+            assert gallery.bounding_box()['height'] < 95
+            assert media.bounding_box()['height'] >= 44
+            assert intro.evaluate("el => getComputedStyle(el).boxShadow === 'none'")
+        page.set_viewport_size({'width': 390, 'height': 844})
+        intro.screenshot(path=str(SHOTS / 'mobile_owner_species_intro_390.png'))
+        gallery.screenshot(path=str(SHOTS / 'mobile_owner_species_photos_390.png'))
+        media.click()
+        expect(page.get_by_role('heading', name='Wildlife Media Studio')).to_be_visible()
 
         dove = open_species(page, 'Holenduif', 'sp003')
         tip = dove.get_by_text('Tip: Vergelijk de vleugeltekening en de staart.', exact=False).first
@@ -159,6 +194,33 @@ def main():
                 expect(editor.get_by_text('Foto voorstellen aan de beheerder', exact=True)).to_be_visible()
                 editor.get_by_role('button', name='Sluit fotovenster').click()
                 expect(editor).to_have_count(0)
+            close_species(card)
+
+        if catalogue['sample']:
+            name, sid = catalogue['sample'][0]
+            await_fixture = """async ({sid, name}) => {
+              const { guideHeroPhoto } = await import('/src/features/species/detailSections.js');
+              const { savePhoto } = await import('/src/data/db.js');
+              const { addSighting } = await import('/src/data/sightings.js');
+              const blob = await (await fetch(guideHeroPhoto('sp002').image)).blob();
+              await savePhoto({ id: 'compact-photo-fixture', blob, speciesId: sid, sightingId: 'compact-sighting-fixture' });
+              await addSighting({ id: 'compact-sighting-fixture', speciesId: sid, speciesName: name,
+                date: '2026-11-15', photoIds: ['compact-photo-fixture'] });
+            }"""
+            page.evaluate(await_fixture, {'sid': sid, 'name': name})
+            card = open_species(page, name, sid)
+            expect(card.locator('#speciesDetailPhotos img')).to_have_count(1)
+            expect(card.locator('[data-guide-slot="hero"] .sd-guide-stock img')).to_be_visible()
+            card.locator('[data-guide-slot="hero"] .sd-guide-action').click()
+            editor = page.locator('.sd-guide-editor[open]')
+            expect(editor.get_by_role('button', name='Gebruik in mijn gids')).to_be_visible()
+            editor.get_by_role('button', name='Sluit fotovenster').click()
+            gallery_photo = card.get_by_role('button', name=f'Bekijk foto 1 van {name}')
+            gallery_photo.click()
+            viewer = page.get_by_role('dialog', name='Vogelfoto bekijken')
+            expect(viewer).to_be_visible()
+            page.keyboard.press('Escape')
+            expect(viewer).to_be_hidden()
             close_species(card)
 
         page.get_by_role('button', name='Waarneming toevoegen', exact=True).click()

@@ -267,7 +267,9 @@ De afzonderlijke, mobiel bruikbare beoordelingsweergave staat op `feedback-inbox
 
 ## Mobiele review van hoofdfoto, contrast en iconen
 
-De startfoto vult de kaart tot onder **Bekijk soortkaart** en **Veldkenmerken**. De naam, groep, wetenschappelijke naam en acties zitten op compacte bosgroene leesvlakken boven de foto. De foto zelf heeft geen verduisterend verloop, vervaagde rand of kleurfilter. Op een klein scherm snijdt de Home-uitsnede de foto bij. **Vergroot foto** toont het volledige beeld met de bijbehorende maker en licentie.
+De startfoto vult de kaart tot onder **Bekijk soortkaart** en **Veldkenmerken**. Naam, groep en wetenschappelijke naam staan rechtstreeks op het beeld. Een donkere letterrand houdt de tekst leesbaar. De knoppen laten het beeld doorschijnen. Op een klein scherm snijdt de Home-uitsnede de foto bij. **Vergroot foto** toont het volledige beeld met de bijbehorende maker en licentie.
+
+De gedeelde soortkaart gebruikt een compacte kop met de vogelfamilie, Nederlandse naam en een regel voor de wetenschappelijke en Engelse naam. **Media Studio** staat naast **Eigen vogelfoto’s**. Als een waarnemingsfoto de lege hoofdfoto invult, blijft de knop voor een persoonlijke gidsfoto bereikbaar.
 
 De tip bij een vergelijking en het label **Helpt** gebruiken dezelfde bosgroene leesstijl. **Let op** is een inhoudelijke determinatiewaarschuwing en krijgt een warm amberkleurig kader. Kleurparen voor tekst en achtergrond zijn als tokens vastgelegd voor licht, donker en systeemthema. De regressietest opent precies Wielewaal, Holenduif en Steppekiekendief en controleert de foto tot onder de actie, het contrast en de habitatpictogrammen op mobiel.
 
