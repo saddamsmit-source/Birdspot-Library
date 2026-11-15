@@ -267,6 +267,12 @@ De afzonderlijke, mobiel bruikbare beoordelingsweergave staat op `feedback-inbox
 
 **Kosten en herstel.** De preview controleert een grens van 40 voorstellen en een invoergrens van 2,1 MB per bericht. De werkelijke verbruiksstand blijft afzonderlijk te meten. De privéopslag draait in het bestaande previewproject. Bij ontoereikend tegoed kan de gebruiker een voorstel downloaden en de beheerder het bestand openen. Herstel van de appcode via de basis-PR. Voor lokale beelden bieden de slotreset en ZIP-back-up de herstelroute.
 
+## Bronnen en mediacredits via ⓘ — eigenaarbesluit 15 november 2026
+
+De normale vogelgids mag niet vol staan met vrijblijvende bronlabels, technische bestandsnamen of MP3-gegevens. **Broncontrole blijft achter de schermen verplicht** volgens de bestaande normhouder [Birdspot kwaliteit §2.2](docs/BIRDSPOT_KWALITEITSNORM.md). Op de kaart verschijnen nuttige inhoud, foto's en geluidsbediening; voor verplichte informatie is een kleine maar goed toegankelijke **ⓘ-knop** beschikbaar. De foto's gebruiken de bestaande `photoInfoMarkup`, en de Zang/roep-lijst nu eveneens één `ⓘ` met de maker, licentie, oorspronkelijke link en toegestane bewerking. Technische audiobestandsnamen staan alleen in het interne mediaregister en niet in de gebruikersinterface.
+
+**Rechtenuitzondering:** een fotograaf of licentie kan aanvullende direct zichtbare naamsvermelding eisen; laat de ingestelde `visibleCredit` in dat geval zichtbaar. De wens 'alleen via i' is nooit een opdracht om verplichte attributie, consent of veiligheidsinformatie te verbergen. Houd ⓘ toetsenbordbedienbaar en op mobiel minimaal 44 px aanraakbaar. Dit is een globale UI-regel die wordt hergebruikt voor alle soorten, geen 140 losse correcties en geen technische releaseclaim voor nog niet geïntegreerde branches.
+
 ## Mobiele review van hoofdfoto, contrast en iconen
 
 De startfoto vult de kaart tot onder **Bekijk soortkaart** en **Veldkenmerken**. Naam, groep en wetenschappelijke naam staan rechtstreeks op het beeld. Een donkere letterrand houdt de tekst leesbaar. De knoppen laten het beeld doorschijnen. Op een klein scherm snijdt de Home-uitsnede de foto bij. **Vergroot foto** toont het volledige beeld met de bijbehorende maker en licentie.
