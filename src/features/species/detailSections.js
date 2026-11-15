@@ -319,13 +319,19 @@ export function voiceText(voice) {
 export function voicePanel(s, voice, sourced = '') {
   const clips = GUIDE_AUDIO[s.id] || [];
   if (!voice && !clips.length && !sourced) return '';
+  const title = '<h3 class="sd-h">Zang en roep</h3>';
+  const description = `<div class="sd-voice-text">${sourced || (voice ? voiceText(voice) : '')}</div>`;
+  if (!clips.length) return title + description;
   const players = clips.map(clip => `<div class="sd-audio">
-    <strong>${esc(clip.label)}</strong><p>${esc(clip.note)}</p>
+    <strong>${esc(clip.label)}</strong>
     <audio controls preload="none" src="${esc(assetUrl(clip.audio))}" aria-label="${esc(clip.label)} van ${esc(s.nameNL)}"></audio>
     <p class="sd-audio-error" hidden role="status">Deze opname is nu niet beschikbaar.</p>
-    ${mediaCredit(clip)}
   </div>`);
-  return `<h3 class="sd-h">Zang en roep</h3><div class="sd-voice-text">${sourced || (voice ? voiceText(voice) : '')}</div>${players.join('')}`;
+  const credits = clips.map(clip => `<li><strong>${esc(clip.label)}</strong>${clip.file ? `<span>${esc(clip.file)}</span>` : ''}${mediaCredit(clip)}</li>`);
+  return `${title}${players.join('')}<details class="sd-audio-credits">
+    <summary>Opname-informatie en credits</summary>
+    ${description}<ul>${credits.join('')}</ul>
+  </details>`;
 }
 
 
