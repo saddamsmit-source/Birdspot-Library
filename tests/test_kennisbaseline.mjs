@@ -224,6 +224,18 @@ assert.match(lesserSpottedStatus, /5\.800–7\.500 broedparen \(2018–2020\)/);
 assert.doesNotMatch(lesserSpottedStatus, /geverifieerd|https?:\/\//i);
 assert.ok(knowledgeFor('sp017').status.find(item => item.kind === 'aantal').sources.includes('SOV_KLEINE_BONTE_SPECHT'));
 
+const spechtStatus = [
+  ['sp018', /700–1\.100 broedparen \(2018–2020\)/, 'SOV_ZWARTE_SPECHT', ['Vluchtroep', 'Roep in zit', 'Roffel']],
+  ['sp019', /9\.500–11\.500 broedparen \(2018–2020\)/, 'SOV_GROENE_SPECHT', ['Lachende roep', 'Roffel']],
+  ['sp020', /1\.900–2\.400 broedparen \(2020–2022\)/, 'SOV_MIDDELSTE_BONTE_SPECHT', ['Roep', 'Roffel']],
+];
+for (const [id, census, source, labels] of spechtStatus) {
+  assert.match(lifeDetails(byId.get(id)), census);
+  assert.deepEqual(knowledgeFor(id).status.find(item => item.kind === 'aantal').sources, [source]);
+  const sounds = [...voiceDetails(byId.get(id)).matchAll(/<b>([^<]+)<\/b>/g)].map(match => match[1]);
+  assert.deepEqual(sounds, labels, `${id} voice roles must be distinct and visible`);
+}
+
 // ── KB-06 / KB-07 ───────────────────────────────────────────────────────────
 let without = 0;
 for (const s of SPECIES) {

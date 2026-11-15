@@ -32,7 +32,7 @@ De tekst in de kolom 'Open uit bronronde' is overgenomen uit de laatste F2-voort
 | sp251 Grauwe Kiekendief |  | [Brondossier F2-08](../evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_08.json), [M9](soortaudit/M9.json). Vrije vlucht van vrouwtje en juveniel staat open. |
 | sp016 Grote Bonte Specht |  | [Brondossier F2-08](../evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_08.json), [M2](soortaudit/M2.json). |
 | sp017 Kleine Bonte Specht | F2-09 | Passende juvenielenfoto, volledige vrije vlucht en gewicht. |
-| sp018 Zwarte Specht | F2-09 | Volledige juvenielenfoto, scherpere vrouwtjesfoto, ruimer gekaderde vluchtfoto en gewicht. Bij het juveniele kopdetail blijft de licentiehistorie open. |
+| sp018 Zwarte Specht | F2-09 | De vrouwtjesfoto is uit het volledige origineel opnieuw geïmporteerd in [F3-R05](F3_R05_DRIE_SPECHTEN_2026-11-15_DRAFT.md). Een scherp zijaanzicht, volledig juveniel, ruimer vluchtbeeld en gewicht blijven open. Ook de licentiehistorie van het juveniele kopdetail staat open. |
 | sp019 Groene Specht | F2-09 | Geen extra foto toegevoegd. De toets op een fysiek toestel staat open. |
 | sp020 Middelste Bonte Specht | F2-10 | Bronbevestigde juvenielenfoto, ruimer vluchtbeeld en scherpere hoofdfoto. |
 | sp021 Ekster | F2-10 | Bronbevestigde juvenielenfoto, gewicht en geluidsdekking. De fotograaf beschrijft vertrek vanaf de rots. Op de foto is de vogel los met gespreide vleugels. Een frame uit de voorafgaande afzetfase is onbekend. |
