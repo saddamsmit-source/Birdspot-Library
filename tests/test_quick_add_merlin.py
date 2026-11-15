@@ -39,7 +39,7 @@ def check(page, width):
     page.locator('#fab').click()
     page.keyboard.press('Escape')
     assert page.locator('#quickAddSheet').count() == 0
-    assert page.locator('#fab').is_focused()
+    assert page.evaluate("document.activeElement?.id === 'fab'")
     assert page.evaluate('document.documentElement.scrollWidth<=window.innerWidth+2')
     print('PASS quick + choices, manual Merlin, heard evidence, escape and no overflow',width,flush=True)
 
