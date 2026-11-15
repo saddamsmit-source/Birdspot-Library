@@ -219,7 +219,19 @@ def mobile_browser():
                                 # Source slot named adult_m is not an individual male claim.
                                 # Photo is reused as hero and referenced (not duplicated) below.
                                 assert "Foto: de hoofdfoto bovenaan deze kaart" in panel.inner_text()
-                            assert bird["similar"] in panel.inner_text(), (bird_id, "Comparison missing")
+                            # UX v1.6: a one-photo or text-only pair must not create
+                            # a confusing empty photo card. Keep complete photo pairs.
+                            if bird_id == "sp164":
+                                assert bird["similar"] not in panel.inner_text(), (
+                                    bird_id, "Incomplete Mantelmeeuw photo pair still visible")
+                                assert "Nog geen passende foto" not in panel.inner_text()
+                            else:
+                                assert bird["similar"] in panel.inner_text(), (
+                                    bird_id, "Existing species comparison information lost")
+                                # When a photo comparison renders, it has two real images.
+                                for card in panel.locator(".sd-cmp-panel").all():
+                                    assert card.locator(".sd-cmp-who img").count() == 2, (
+                                        bird_id, "Incomplete photograph pair rendered")
                             assert not page.evaluate("document.documentElement.scrollWidth > innerWidth + 2"), (
                                 bird_id, width, "Horizontal overflow"
                             )

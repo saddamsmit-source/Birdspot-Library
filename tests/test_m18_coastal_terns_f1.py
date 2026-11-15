@@ -156,7 +156,19 @@ def browser():
                             assert h["ok"] and h["alt"] and h["src"].endswith(bird["hero"]), (sid,h)
                             panel=page.locator("#sdPanel-herkenning")
                             expect(panel).to_have_count(1)
-                            assert bird["similar"] in panel.inner_text(), (sid,"comparison missing")
+                            # UX v1.6: incomplete photo comparisons are hidden; keep
+                            # source/identification data and all valid paired cards.
+                            if sid == "sp167":
+                                assert bird["similar"] not in panel.inner_text(), (
+                                    sid, "incomplete Grote Stern/Visdief pose pair should not render")
+                                assert "Nog geen passende foto" not in panel.inner_text()
+                            else:
+                                assert bird["similar"] in panel.inner_text(), (sid,"comparison source information missing")
+                                # Some knowledge-only distinctions remain visible as text.
+                                # Any actual photo-comparison panel is required to be complete.
+                                for card in panel.locator(".sd-cmp-panel").all():
+                                    assert card.locator(".sd-cmp-who img").count() == 2, (
+                                        sid, "incomplete photo comparison rendered")
                             # A flight-as-hero must not be duplicated as a second
                             # file in the same species' plumage/flight galleries.
                             own_repeat=panel.locator(".sd-field-photo:not(.sd-similar *) img").evaluate_all(

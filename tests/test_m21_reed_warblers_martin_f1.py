@@ -44,7 +44,10 @@ def check_f1_and_original_rules():
     canon = read("docs/fotokwaliteit/soortaudit-status.json")
     ledger = read("docs/fotokwaliteit/F1_VOORTGANG_TOT_140.json")
     norm = (ROOT / "docs/BIRDSPOT_KWALITEITSNORM.md").read_text(encoding="utf-8")
-    assert "| Versie | 1.5 · 14-11-2026 |" in norm
+    assert "| Versie | 1.6 · 15-11-2026 |" in norm
+    assert "| 1.5 | 14-11-2026 |" in norm, "The previous 1.5 decision must remain in history"
+    assert "Eigenaarbesluit 15-11-2026 — alleen complete vergelijkingsfotoparen tonen" in norm, (
+        "Owner global no-empty-comparison policy must be present")
     assert "| 1.4 | 14-11-2026 |" in norm, "Earlier source-verification policy must remain in history"
     assert "**Toon geen bronvermeldingen waar dat niet verplicht is.**" in norm
     assert "**Verplichte attributies behouden:**" in norm
@@ -220,7 +223,12 @@ def browser_test():
                                        (img.currentSrc||img.getAttribute('src')||'').endsWith(path)).length""",
                                     bird["hero"])
                                 assert repeated == 0, (sid,"hero reused in gallery",repeated)
-                                assert bird["similar"] in panel.inner_text(), (sid,"comparison lost")
+                                # UX v1.6: Oeverzwaluw/Huiszwaluw was intentionally
+                                # text-only in the source register. Do not present
+                                # a two-empty-photo panel as an actual comparison.
+                                assert bird["similar"] not in panel.inner_text(), (
+                                    sid, "incomplete source comparison should stay out of UI")
+                                assert "Nog geen passende foto" not in panel.inner_text()
                                 print(f"M21 UX-OBSERVED sp116 {width}px: real flight is hero, no duplicate flight card")
                             if sid=="sp108":
                                 assert "In vlucht" in panel.inner_text()

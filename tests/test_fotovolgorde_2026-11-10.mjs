@@ -81,10 +81,14 @@ for (const s of SPECIES) {
   if (hero) images.push(hero);
   assert.equal(images.length, new Set(images).size, `FV-05 dubbele gidsfoto: ${s.id}`);
 
+  // Eigenaarregel: nooit lege fotovakken, vluchttekorten of tekst-only vergelijkingstabbladen tonen.
+  assert.ok(!html.includes('Nog geen passende foto') && !html.includes('Nog geen passende vluchtfoto'),
+    `FV-06 verwarrende lege vergelijkingsfoto: ${s.id}`);
+  // Onvolledige fotovergelijkingen blijven uitsluitend in de bronaudit beschikbaar.
   for (const panel of comparisons.split('<div class="sd-cmp-panel"').slice(1)) {
     const head = panel.split('<div class="sd-cmp-rows"')[0].split('<div class="sd-cmp-foot"')[0];
     const photos = [...head.matchAll(/data-guide-image="([^"]+)"/g)].map(m => m[1]);
-    assert.ok(photos.length <= 2, `FV-06 te veel foto's: ${s.id}`);
+    assert.equal(photos.length, 2, `FV-06 elke zichtbare vergelijking vereist twee foto’s: ${s.id}`);
     assert.equal(photos.length, new Set(photos).size, `FV-06 dubbel in hetzelfde paar: ${s.id}`);
     const inFlight = panel.startsWith(' data-cmp-panel data-cmp-flight');
     for (const path of photos) {
@@ -228,10 +232,12 @@ assert.ok(youngWagtails?.birds.every(bird => bird.photoMissing),
   'F2-24 no source-verified White/Yellow Wagtail juveniles pair: do not show adult photos as young');
 for (const id of ['sp068', 'sp069']) {
   const html = recognitionPanel(byId.get(id));
-  const panels = html.split('<div class="sd-cmp-panel"').slice(1);
-  assert.ok(panels.some(panel => panel.includes('Nog geen passende foto') &&
-    panel.includes('Witte Kwikstaart') && panel.includes('Gele Kwikstaart')),
-    `F2-24 age comparisons must clearly indicate missing juvenile photos: ${id}`);
+  assert.ok(!html.includes('Nog geen passende foto'),
+    `Owner UX: avoid missing-image placeholder on Wagtail species ${id}`);
+  assert.ok(html.includes('sp068.webp') && html.includes('sp069.webp'),
+    `Owner UX: preserve adult paired photos for Wagtails ${id}`);
+  assert.ok(!html.includes('Witte en Gele Kwikstaart · jonge vogels'),
+    `Owner UX: no empty juvenile comparison tab for ${id}`);
 }
 assert.equal(byId.get('sp062').plumage.juv, null,
   'F2-24 no independently verified Lesser Whitethroat juvenile detail');
