@@ -240,6 +240,8 @@ Op eigenaarbesluit geldt deze uitvoeringsvolgorde voor de **140 soorten met best
 
 **Fotovergelijking (14-11-2026).** Een vergelijking onder ‘Lijkt op’ toont beide vogels naast elkaar, ook op mobiel, en mag passende gidsfoto’s hergebruiken. De eigen hoofd-, kleed- en vluchtsecties blijven vrij van dubbele opnamen. De herkenningstest controleert expliciet twee volwassen en twee juveniele vluchtfoto’s bij Buizerd en Ruigpootbuizerd, twee rustfoto’s bij Fitis en Tjiftjaf en het openlaten van een ontbrekende foto. Zie de fotonorm §3.3.
 
+**Foto’s en geluid in Herkenning.** Foto’s in één rubriek staan naast elkaar in paren. Een losse laatste foto benut de volle rij. Onder ‘Zang en roep’ staan de opnametitels en spelers onder elkaar. Maker, bron, licentie en bewerking staan per opname onder de lijst in één uitklapbaar onderdeel, samen met eventuele herkenningsuitleg. Bij soorten zonder opname blijft de geluidstekst direct zichtbaar.
+
 De fysieke Android-praktijkpilot is door de eigenaar uitgesteld en blijft NOT TESTED; geen merge, GitHub Pages-/Vercel-deploy of livegang zonder apart eigenaarbesluit.
 
 ## Afwijkingen van het Handbook
