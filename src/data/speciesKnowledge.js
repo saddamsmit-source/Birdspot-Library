@@ -4513,6 +4513,39 @@ const DATA = {
    "checked": "2026-11-15",
    "certainty": "hoog",
    "publisher": "Javier Blasco-Zumeta & Gerd-Michael Heinze"
+  },
+  "VB_TOPPER": {
+   "register": "NL07",
+   "label": "Vogelbescherming — Topper",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/topper",
+   "edition": "Online soortpagina",
+   "scope": "Nederland",
+   "confirms": "Kopprofiel, rugkleur man/vrouw, onderscheid met Kuifeend en seizoensvoorkomen",
+   "checked": "2026-11-15",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "CORNELL_TUFTED": {
+   "register": "EXTERNE REDACTIONELE BRON",
+   "label": "Cornell Lab — Tufted Duck Identification",
+   "url": "https://www.allaboutbirds.org/guide/Tufted_Duck/id",
+   "edition": "Online soortfiche",
+   "scope": "Eurazië / Noord-Amerikaanse waarnemingscontext",
+   "confirms": "Kuif, zwarte rug, variabele witte snavelbasis bij vrouw en witte vleugelbaan",
+   "checked": "2026-11-15",
+   "certainty": "hoog",
+   "publisher": "Cornell Lab of Ornithology"
+  },
+  "CORNELL_GREATER": {
+   "register": "EXTERNE REDACTIONELE BRON",
+   "label": "Cornell Lab — Greater Scaup Identification",
+   "url": "https://www.allaboutbirds.org/guide/Greater_Scaup/id",
+   "edition": "Online soortfiche",
+   "scope": "Soortniveau; ondersoort/regio onderscheiden waar nodig",
+   "confirms": "Ronde kop, fijngetekende lichtgrijze rug, variabele witte snavelbasis en witte vleugelbaan",
+   "checked": "2026-11-15",
+   "certainty": "hoog",
+   "publisher": "Cornell Lab of Ornithology"
   }
  },
  "profiles": {
@@ -20809,10 +20842,11 @@ const DATA = {
   },
   "sp092": {
    "summary": {
-    "text": "Compacte duikeend. Het mannetje heeft zwarte bovendelen, witte flanken en een afhangende kuif. Het vrouwtje is bruin met een kortere kuif.",
+    "text": "Compacte duikeend met donkere rug. Het mannetje heeft witte flanken, een zwarte rug en vaak een lange afhangende kuif. Het bruine vrouwtje heeft meestal een kortere kuif. De verwante topper kan sterk op beide lijken.",
     "sources": [
      "VB_KUIFEEND",
-     "BZH_KUIFEEND"
+     "VB_TOPPER",
+     "CORNELL_TUFTED"
     ]
    },
    "keyMarks": [
@@ -20825,28 +20859,31 @@ const DATA = {
      "reliability": "ondersteunend"
     },
     {
-     "text": "Volwassen vogels hebben vaak een opvallend geel oog.",
+     "text": "Mannetje met zwarte rug, tegenover de lichtgrijze fijngetekende rug van een mannetje topper. Bij vrouwtjes is de donkere rug een aanvullende aanwijzing.",
      "sources": [
       "VB_KUIFEEND",
-      "BZH_KUIFEEND"
+      "VB_TOPPER",
+      "CORNELL_TUFTED"
      ],
      "reliability": "ondersteunend"
     },
     {
-     "text": "In vlucht loopt een witte baan over de slagpennen.",
+     "text": "In vlucht een witte vleugelbaan; ook toppers hebben die. Een witte baan alleen is geen soortonderscheid.",
      "sources": [
       "VB_KUIFEEND",
-      "BZH_KUIFEEND"
+      "CORNELL_TUFTED",
+      "CORNELL_GREATER"
      ],
-     "reliability": "ondersteunend"
+     "reliability": "onbetrouwbaar-alleen"
     }
    ],
    "caution": {
-    "text": "Bij een bruine vogel kan de kuif platliggen. Kijk ook naar de oogkleur en het profiel van kop en snavel.",
+    "text": "Bij vrouwtjes kunnen de kuif en het wit aan de snavelbasis variëren. Ook een kuifeend kan wit rond de snavel hebben. Vergelijk kopprofiel én rugtekening met topper en registreer bij twijfel geen zekere soort.",
     "sources": [
      "VB_KUIFEEND",
-     "BZH_KUIFEEND",
-     "VB_TAFELEEND"
+     "VB_TOPPER",
+     "CORNELL_TUFTED",
+     "CORNELL_GREATER"
     ]
    },
    "critical": [
@@ -20895,6 +20932,16 @@ const DATA = {
       "BZH_KUIFEEND"
      ],
      "topic": "leeftijd"
+    },
+    {
+     "text": "Mannetje kuifeend heeft een zwarte rug; bij mannetje topper is die lichtgrijs met fijne donkere tekening. Bij vrouwtjes zijn kopprofiel, rug en eventueel een korte kuif samen nuttiger dan de witte snavelbasis op zichzelf.",
+     "sources": [
+      "VB_KUIFEEND",
+      "VB_TOPPER",
+      "CORNELL_TUFTED",
+      "CORNELL_GREATER"
+     ],
+     "topic": "variatie"
     }
    ],
    "voice": [
@@ -22962,6 +23009,77 @@ const DATA = {
      "text": "Het aantal broedvogels nam sterk toe sinds 1980 en in de laatste twaalf meetjaren.",
      "sources": [
       "SOV_MIDDELSTE_BONTE_SPECHT"
+     ]
+    }
+   ]
+  },
+  "sp133": {
+   "summary": {
+    "text": "Topper is een wat forsere duikeend die op kuifeend lijkt. Het mannetje heeft een lichtgrijze, fijngetekende rug, witte flanken en een volle ronde kop; het vrouwtje is bruin met vaak een lichte rug en wit bij de snavelbasis.",
+    "sources": [
+     "VB_TOPPER",
+     "CORNELL_GREATER"
+    ]
+   },
+   "keyMarks": [
+    {
+     "text": "Mannetje: lichtgrijze rug met fijne donkere lijntjes, zwarte borst en witte flanken.",
+     "sources": [
+      "VB_TOPPER",
+      "CORNELL_GREATER"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Vrouwtje: bruine kop en vaak een brede witte band rond de snavelbasis; breedte van de band varieert.",
+     "sources": [
+      "VB_TOPPER",
+      "CORNELL_GREATER"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Rond kopprofiel zonder de typische afhangende kuif van de kuifeend; beoordeel ook de rug.",
+     "sources": [
+      "VB_TOPPER",
+      "CORNELL_GREATER",
+      "CORNELL_TUFTED"
+     ],
+     "reliability": "ondersteunend"
+    }
+   ],
+   "caution": {
+    "text": "Topper en kuifeend lijken sterk op elkaar; ook vrouwelijke kuifeenden kunnen wit bij de snavelbasis hebben. De gele ogen en witte vleugelbaan komen bij beide voor. Gebruik meerdere kenmerken en laat onzekere vogels onbepaald.",
+    "sources": [
+     "VB_TOPPER",
+     "VB_KUIFEEND",
+     "CORNELL_GREATER",
+     "CORNELL_TUFTED"
+    ]
+   },
+   "detail": [
+    {
+     "topic": "geslacht",
+     "text": "Mannetje met fijngetekende lichtgrijze rug en ronde kop; vrouwtje bruin met vaak bredere witte snavelbasis en lichter fijngetekende rug.",
+     "sources": [
+      "VB_TOPPER",
+      "CORNELL_GREATER"
+     ]
+    },
+    {
+     "topic": "variatie",
+     "text": "De witte snavelbasis bij een vrouwtje kan smal, breed of beperkt zijn. Ook de groene glans van een mannetjeskop hangt af van het licht. Geen van beide is zelfstandig beslissend.",
+     "sources": [
+      "CORNELL_GREATER",
+      "VB_TOPPER"
+     ]
+    },
+    {
+     "topic": "leeftijd",
+     "text": "Bij jonge of overgangskleden kunnen kenmerken minder uitgesproken zijn. Er is nog geen onafhankelijk bewezen juvenielenfoto voor deze soort in Birdspot.",
+     "sources": [
+      "VB_TOPPER",
+      "CORNELL_GREATER"
      ]
     }
    ]

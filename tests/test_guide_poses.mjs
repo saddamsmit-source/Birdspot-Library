@@ -5,6 +5,7 @@ import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { readFileSync } from 'node:fs';
 import { SPECIES } from '../src/data/species.js';
+import { KNOWLEDGE } from '../src/data/speciesKnowledge.js';
 import { GUIDE_AUDIO, GUIDE_HEROES, GUIDE_PLUMAGE, GUIDE_POSES } from '../src/features/species/guideMedia.js';
 import { GUIDE_PHOTOS } from '../src/features/species/guidePhotos.js';
 import { GUIDE_COMPARISONS } from '../src/features/species/guideComparisons.js';
@@ -472,3 +473,7 @@ if (!scaupHasApprovedMedia) {
     'Without a verified Topper photo the reverse comparison must also stay hidden');
 }
 console.log('Kuifeend/Topper: species IDs, adult plumage pairs, non-diagnostic cautions and incomplete-photo gate checked');
+
+assert.match(KNOWLEDGE.sp092.caution.text, /topper/i, 'Kuifeend knowledge panel must show the topper confusion caution');
+assert.match(KNOWLEDGE.sp133.summary.text, /kuifeend/i, 'Topper must have a sourced initial identification profile');
+assert.ok(KNOWLEDGE.sp133.keyMarks.every(mark => mark.reliability === 'ondersteunend'), 'Topper markers must not be called decisive');
