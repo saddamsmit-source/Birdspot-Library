@@ -417,3 +417,18 @@ assert.equal((GUIDE_POSES.sp051 || []).filter(photo => photo.flight).length, 0);
 console.log('F2-20: three registered resting pairs, accurate plumage/sex labels, no newly accepted flight photos');
 
 console.log(`QA-SPECHTEN-BYTES: ${reviewedSpechtenFiles} current files have distinct WebP bytes; near-duplicates NOT PROVEN`);
+
+// F3-R06: keep the landing image apart and pair the free-flight image with Carrion Crow.
+const kauw = SPECIES.find(species => species.id === 'sp025');
+const crow = SPECIES.find(species => species.id === 'sp022');
+for (const bird of [kauw, crow]) {
+  const html = recognitionPanel(bird);
+  const pair = html.match(/<div class="sd-cmp-panel" data-cmp-panel data-cmp-flight[^>]*>[\s\S]*?<div class="sd-cmp-foot">/)?.[0];
+  assert.ok(pair?.includes('sp025-flight-free.webp') && pair.includes('sp022-flight.webp'));
+  assert.doesNotMatch(pair, /sp025-flight\.webp/);
+}
+const kauwCard = recognitionPanel(kauw);
+const flightSection = kauwCard.match(/<section class="sd-flight"[^>]*>[\s\S]*?<\/section>/)?.[0];
+assert.match(flightSection, /sp025-flight-free\.webp/);
+assert.doesNotMatch(flightSection, /sp025-flight\.webp/);
+assert.ok(kauwCard.includes('Landend tussen takken'));

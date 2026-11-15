@@ -1,0 +1,124 @@
+[
+ {
+  "image": "/assets/species/plumage/sp021-juv-review.webp",
+  "species": "sp021",
+  "source": "https://commons.wikimedia.org/wiki/File:Eurasian_magpie_juvenile_-_Kharkiv_2024.jpg",
+  "sourceTitle": "Eurasian magpie juvenile - Kharkiv 2024.jpg",
+  "sourceAuthor": "Lystopad",
+  "sourceLicense": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "sameShot": true,
+  "method": "Originele JPEG visueel vergeleken. Het WebP is rechtstreeks van dit bestand afgeleid.",
+  "auditDate": "15-11-2026",
+  "assetSha1": "fdf83d678b7bae3c284329071376d4f20ce5a9f6",
+  "sourceImageSha1": "6f67a616588ac4cb047cf0be4089fe4e9be32c45",
+  "sourceImageSha256": "2c11a660567e32007f904e5f963c925cc1e28499cad26696cb668c6d044de91f",
+  "sourceImageSize": [
+   4608,
+   3072
+  ],
+  "originalURL": "https://upload.wikimedia.org/wikipedia/commons/3/39/Eurasian_magpie_juvenile_-_Kharkiv_2024.jpg",
+  "annotations": [
+   "Juveniel volgens het bijschrift van de fotograaf. Lichte huid rond het oog en korte staart zichtbaar."
+  ],
+  "visualRoleCheck": "Jonge Ekster op de grond, met roze mondhoeken, een korte staart en lichte huid rond het oog.",
+  "modifications": "Uitgesneden rond de hele vogel, opgeslagen als WebP, metadata verwijderd",
+  "localSize": [
+   1280,
+   904
+  ],
+  "cropBox": [
+   2400,
+   1390,
+   4100,
+   2590
+  ]
+ },
+ {
+  "image": "/assets/species/plumage/sp022-juv-review.webp",
+  "species": "sp022",
+  "source": "https://commons.wikimedia.org/wiki/File:Corvus_corone_juvenile_begging_JdP_20250722_n1.jpg",
+  "sourceTitle": "Corvus corone juvenile begging JdP 20250722 n1.jpg",
+  "sourceAuthor": "Marie-Lan Taÿ Pamart",
+  "sourceLicense": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "sameShot": true,
+  "method": "Originele JPEG visueel vergeleken. Het WebP is rechtstreeks van dit bestand afgeleid.",
+  "auditDate": "15-11-2026",
+  "assetSha1": "58693dde2ff03b8d14d9bbf55b1b5fab14c05719",
+  "sourceImageSha1": "b25c261d3e8defaadda6a4eac4230efb4b5850df",
+  "sourceImageSha256": "6f2113160046e8543ed41ad142751213aea48db6f53b76043ed04eda4985cd37",
+  "sourceImageSize": [
+   4054,
+   2703
+  ],
+  "originalURL": "https://upload.wikimedia.org/wikipedia/commons/0/08/Corvus_corone_juvenile_begging_JdP_20250722_n1.jpg",
+  "annotations": [
+   "Juveniel volgens de fotograaf. De roze snavelbinnenkant ondersteunt de leeftijd."
+  ],
+  "visualRoleCheck": "Jonge Zwarte Kraai bedelt met geopende snavel en afhangende vleugels. De mond is roze.",
+  "modifications": "Origineel verkleind en opgeslagen als WebP, metadata verwijderd",
+  "localSize": [
+   1280,
+   853
+  ]
+ },
+ {
+  "image": "/assets/species/plumage/sp025-juv-review.webp",
+  "species": "sp025",
+  "source": "https://commons.wikimedia.org/wiki/File:Juvenile_Jackdaw_-_geograph.org.uk_-_4065316.jpg",
+  "sourceTitle": "Juvenile Jackdaw - geograph.org.uk - 4065316.jpg",
+  "sourceAuthor": "Anne Burgess",
+  "sourceLicense": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "sameShot": true,
+  "method": "Originele JPEG visueel vergeleken. Het WebP is rechtstreeks van dit bestand afgeleid.",
+  "auditDate": "15-11-2026",
+  "assetSha1": "64619af48b0bb0c8236a398d837f966b3c209e33",
+  "sourceImageSha1": "c6b6692a4af9c29e91573bf1a6f24b15c6f8baec",
+  "sourceImageSha256": "88b44631fa7331173045f76ceeac8d363f1dcc1bee87efa14c644122041034cc",
+  "sourceImageSize": [
+   640,
+   589
+  ],
+  "originalURL": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Juvenile_Jackdaw_-_geograph.org.uk_-_4065316.jpg",
+  "annotations": [
+   "Juveniel volgens het individuele bijschrift. Donker oog en dof kleed zichtbaar."
+  ],
+  "visualRoleCheck": "Jonge Kauw van opzij op stenen, met dof kleed en een donker oog.",
+  "modifications": "opgeslagen als WebP, metadata verwijderd",
+  "localSize": [
+   640,
+   589
+  ]
+ },
+ {
+  "image": "/assets/species/plumage/sp025-flight-free.webp",
+  "species": "sp025",
+  "source": "https://commons.wikimedia.org/wiki/File:2013_Fliegende_Dohle.JPG",
+  "sourceTitle": "2013 Fliegende Dohle.JPG",
+  "sourceAuthor": "J. Patrick Fischer",
+  "sourceLicense": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "sameShot": true,
+  "method": "Originele JPEG visueel vergeleken. Het WebP is rechtstreeks van dit bestand afgeleid.",
+  "auditDate": "15-11-2026",
+  "assetSha1": "e85405c52b8e822c24e10a5ea2899b1a103ac060",
+  "sourceImageSha1": "872e47eb50d69645436f2af237f7124aa320af7e",
+  "sourceImageSha256": "8dfacd5cf3df9e7f987c922f80aba66c04473a5fd443f06f0845e7e2ba195c2a",
+  "sourceImageSize": [
+   1144,
+   820
+  ],
+  "originalURL": "https://upload.wikimedia.org/wikipedia/commons/7/7e/2013_Fliegende_Dohle.JPG",
+  "annotations": [
+   "Herkenbaar als Kauw op bronvermelding en vorm. Leeftijd en geslacht open."
+  ],
+  "visualRoleCheck": "Kauw in vrije vlucht, met gespreide vleugels en een korte snavel tegen open lucht.",
+  "modifications": "opgeslagen als WebP, metadata verwijderd",
+  "localSize": [
+   1144,
+   820
+  ]
+ }
+]

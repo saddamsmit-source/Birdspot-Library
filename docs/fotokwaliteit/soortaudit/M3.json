@@ -29,19 +29,26 @@
           "sexAge": "Leeftijd en geslacht zijn niet bevestigd door de fotobron.",
           "quality": "Bruikbaar voor silhouet en vleugelvorm.",
           "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp022-juv-review.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Zwarte Kraai bedelt met geopende snavel en afhangende vleugels. De mond is roze.",
+          "sexAge": "Juveniel volgens de fotograaf. De roze snavelbinnenkant ondersteunt de leeftijd.",
+          "quality": "Hele vogel met zichtbaar bedelgedrag en lichte snavelbinnenkant.",
+          "verdict": "goedgekeurd",
+          "addedIn": "F3-R06"
         }
       },
       "corrections": [
         "Bronprofiel met vergelijking met Roek en Kauw. De snavelbasis is bij jonge Roeken geen betrouwbaar enkelvoudig onderscheid.",
         "Lengte en spanwijdte als indicatieve band berekend met Vogelbescherming en RSPB.",
-        "Hoofdfoto en vluchtfoto naast de oorspronkelijke bronbestanden bekeken. Neutrale labels behouden."
+        "Hoofdfoto en vluchtfoto naast de oorspronkelijke bronbestanden bekeken. Neutrale labels behouden.",
+        "F3-R06: Gedocumenteerd jeugdkleed toegevoegd."
       ],
-      "missing": [
-        "Afzonderlijke juvenielenfoto"
-      ],
+      "missing": [],
       "sexPolicy": "Geslachten zijn uiterlijk gelijkend. De kaart houdt deze foto’s neutraal.",
       "uncertain": [],
-      "date": "2026-11-14"
+      "date": "2026-11-15"
     },
     "sp025": {
       "assets": {
@@ -58,21 +65,36 @@
           "sexAge": "Leeftijd en geslacht zijn niet bevestigd door de fotobron.",
           "quality": "Bruikbaar als aanvullende herkenningsfoto.",
           "verdict": "uit-rol"
+        },
+        "/assets/species/plumage/sp025-juv-review.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Kauw van opzij op stenen, met dof kleed en een donker oog.",
+          "sexAge": "Juveniel volgens het individuele bijschrift. Donker oog en dof kleed zichtbaar.",
+          "quality": "Volledige vogel op 640 × 589 px. Het bronformaat beperkt de vergroting.",
+          "verdict": "goedgekeurd",
+          "addedIn": "F3-R06"
+        },
+        "/assets/species/plumage/sp025-flight-free.webp": {
+          "role": "In vlucht",
+          "content": "Kauw in vrije vlucht, met gespreide vleugels en een korte snavel tegen open lucht.",
+          "sexAge": "Herkenbaar als Kauw op bronvermelding en vorm. Leeftijd en geslacht open.",
+          "quality": "Hele vogel in open lucht. Silhouet goed bruikbaar, met weinig detail in de donkere veren.",
+          "verdict": "goedgekeurd",
+          "addedIn": "F3-R06"
         }
       },
       "corrections": [
         "De bestaande landingsfoto blijft buiten In vlucht. Het kennisprofiel maakt het leeftijdsvoorbehoud bij oogkleur expliciet.",
-        "Twee originele foto’s gematcht. De landingsnadering blijft bij de overige foto’s. Maten naast Kent Wildlife Trust gelegd."
+        "Twee originele foto’s gematcht. De landingsnadering blijft bij de overige foto’s. Maten naast Kent Wildlife Trust gelegd.",
+        "F3-R06: Gedocumenteerd jeugdkleed toegevoegd.",
+        "F3-R06: Vrije-vluchtfoto toegevoegd. De landingsfoto blijft aanvullend."
       ],
-      "missing": [
-        "Afzonderlijke juvenielenfoto",
-        "Vrije-vluchtfoto"
-      ],
+      "missing": [],
       "sexPolicy": "Geslachten zijn uiterlijk gelijkend. De kaart houdt beide foto’s neutraal.",
       "uncertain": [
         "De fotobron noemt het beeld in algemene zin “in flight”. De zichtbare poten en houding ondersteunen de specifiekere Birdspot-indeling als landingshouding."
       ],
-      "date": "2026-11-14"
+      "date": "2026-11-15"
     },
     "sp054": {
       "assets": {

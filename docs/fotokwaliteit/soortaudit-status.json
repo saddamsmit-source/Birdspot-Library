@@ -1727,7 +1727,7 @@
    "family": "Kraaien",
    "audited": true,
    "batch": "M1",
-   "date": "2026-11-14",
+   "date": "2026-11-15",
    "sha": null,
    "assets": [
     {
@@ -1773,16 +1773,32 @@
       "rights": "VERIFIED",
       "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 4.0"
      }
+    },
+    {
+     "image": "/assets/species/plumage/sp021-juv-review.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge Ekster op de grond, met roze mondhoeken, een korte staart en lichte huid rond het oog.",
+     "sexAge": "Juveniel volgens het bijschrift van de fotograaf. Lichte huid rond het oog en korte staart zichtbaar.",
+     "quality": "De hele vogel blijft in de uitsnede. De mondhoeken en de staart zijn zichtbaar.",
+     "verdict": "goedgekeurd",
+     "addedIn": "F3-R06",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 15-11-2026: zelfde opname (Originele JPEG visueel vergeleken. Het WebP is rechtstreeks van dit bestand afgeleid.), CC BY-SA 4.0 · Lystopad",
+      "annotations": [
+       "Juveniel volgens het bijschrift van de fotograaf. Lichte huid rond het oog en korte staart zichtbaar."
+      ]
+     },
+     "flight": null
     }
    ],
    "corrections": [
     "Lengte 44–46 → 46–50 cm; broedduur 17–18 → 17–24 dagen; nestjongen 24–30 → 22–30 dagen (VB_EKSTER).",
     "Hoofdfoto en vluchtfoto naast de oorspronkelijke bronbestanden bekeken. Neutrale labels behouden.",
-    "Lengte en spanwijdte met een tweede uitgever berekend, en vergelijking met Gaai onderbouwd."
+    "Lengte en spanwijdte met een tweede uitgever berekend, en vergelijking met Gaai onderbouwd.",
+    "F3-R06: Gedocumenteerd jeugdkleed toegevoegd."
    ],
-   "missing": [
-    "Juvenielenfoto met door de bron ondersteunde leeftijd."
-   ],
+   "missing": [],
    "wishes": [],
    "uncertain": [],
    "sexPolicy": "Geslachten gelijk; geen geslachtsvakken.",
@@ -1795,7 +1811,7 @@
     "browser": "NOT TESTED",
     "independent": "NOT TESTED"
    },
-   "photoComplete": false,
+   "photoComplete": true,
    "knowledge": {
     "profile": true,
     "critical": 1,
@@ -1804,14 +1820,14 @@
      "Kleedpatroon en staart"
     ],
     "open": [
-     "Een brongeverifieerde juvenielenfoto ontbreekt. Gewicht en geluidsdekking staan open."
+     "Gewicht en een afzonderlijk voorbeeld van de zachte zang blijven open."
     ],
     "discrepancies": 0
    },
    "browser": null,
    "errors": [],
    "verdict": "PARTIALLY TESTED",
-   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp022",
@@ -1819,7 +1835,7 @@
    "family": "Kraaien",
    "audited": true,
    "batch": "M3",
-   "date": "2026-11-14",
+   "date": "2026-11-15",
    "sha": null,
    "assets": [
     {
@@ -1865,16 +1881,32 @@
       "rights": "VERIFIED",
       "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 4.0"
      }
+    },
+    {
+     "image": "/assets/species/plumage/sp022-juv-review.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge Zwarte Kraai bedelt met geopende snavel en afhangende vleugels. De mond is roze.",
+     "sexAge": "Juveniel volgens de fotograaf. De roze snavelbinnenkant ondersteunt de leeftijd.",
+     "quality": "Hele vogel met zichtbaar bedelgedrag en lichte snavelbinnenkant.",
+     "verdict": "goedgekeurd",
+     "addedIn": "F3-R06",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 15-11-2026: zelfde opname (Originele JPEG visueel vergeleken. Het WebP is rechtstreeks van dit bestand afgeleid.), CC BY 4.0 · Marie-Lan Taÿ Pamart",
+      "annotations": [
+       "Juveniel volgens de fotograaf. De roze snavelbinnenkant ondersteunt de leeftijd."
+      ]
+     },
+     "flight": null
     }
    ],
    "corrections": [
     "Bronprofiel met vergelijking met Roek en Kauw. De snavelbasis is bij jonge Roeken geen betrouwbaar enkelvoudig onderscheid.",
     "Lengte en spanwijdte als indicatieve band berekend met Vogelbescherming en RSPB.",
-    "Hoofdfoto en vluchtfoto naast de oorspronkelijke bronbestanden bekeken. Neutrale labels behouden."
+    "Hoofdfoto en vluchtfoto naast de oorspronkelijke bronbestanden bekeken. Neutrale labels behouden.",
+    "F3-R06: Gedocumenteerd jeugdkleed toegevoegd."
    ],
-   "missing": [
-    "Afzonderlijke juvenielenfoto"
-   ],
+   "missing": [],
    "wishes": [],
    "uncertain": [],
    "sexPolicy": "Geslachten zijn uiterlijk gelijkend. De kaart houdt deze foto’s neutraal.",
@@ -1883,11 +1915,11 @@
     "technical": "VERIFIED",
     "visual": "VERIFIED",
     "rights": "VERIFIED",
-    "knowledge": "PARTIALLY TESTED",
+    "knowledge": "VERIFIED",
     "browser": "NOT TESTED",
     "independent": "NOT TESTED"
    },
-   "photoComplete": false,
+   "photoComplete": true,
    "knowledge": {
     "profile": true,
     "critical": 1,
@@ -1895,15 +1927,13 @@
     "notDecisive": [
      "Snavelbasis"
     ],
-    "open": [
-     "Een afzonderlijke juvenielenfoto en een eigen geluidsopname voor de gids ontbreken."
-    ],
+    "open": [],
     "discrepancies": 0
    },
    "browser": null,
    "errors": [],
    "verdict": "PARTIALLY TESTED",
-   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp025",
@@ -1911,7 +1941,7 @@
    "family": "Kraaien",
    "audited": true,
    "batch": "M3",
-   "date": "2026-11-14",
+   "date": "2026-11-15",
    "sha": null,
    "assets": [
     {
@@ -1957,16 +1987,66 @@
       "rights": "VERIFIED",
       "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0"
      }
+    },
+    {
+     "image": "/assets/species/plumage/sp025-juv-review.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge Kauw van opzij op stenen, met dof kleed en een donker oog.",
+     "sexAge": "Juveniel volgens het individuele bijschrift. Donker oog en dof kleed zichtbaar.",
+     "quality": "Volledige vogel op 640 × 589 px. Het bronformaat beperkt de vergroting.",
+     "verdict": "goedgekeurd",
+     "addedIn": "F3-R06",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 15-11-2026: zelfde opname (Originele JPEG visueel vergeleken. Het WebP is rechtstreeks van dit bestand afgeleid.), CC BY-SA 2.0 · Anne Burgess",
+      "annotations": [
+       "Juveniel volgens het individuele bijschrift. Donker oog en dof kleed zichtbaar."
+      ]
+     },
+     "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp025-flight-free.webp",
+     "role": "In vlucht",
+     "content": "Kauw in vrije vlucht, met gespreide vleugels en een korte snavel tegen open lucht.",
+     "sexAge": "Herkenbaar als Kauw op bronvermelding en vorm. Leeftijd en geslacht open.",
+     "quality": "Hele vogel in open lucht. Silhouet goed bruikbaar, met weinig detail in de donkere veren.",
+     "verdict": "goedgekeurd",
+     "addedIn": "F3-R06",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 15-11-2026: zelfde opname (Originele JPEG visueel vergeleken. Het WebP is rechtstreeks van dit bestand afgeleid.), CC BY-SA 3.0 · J. Patrick Fischer",
+      "annotations": [
+       "Herkenbaar als Kauw op bronvermelding en vorm. Leeftijd en geslacht open."
+      ]
+     },
+     "flight": {
+      "n": 152,
+      "id": "sp025",
+      "nameNL": "Kauw",
+      "registry": "GUIDE_POSES[1]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in open lucht zonder zichtbare afzet- of landingshouding. Hele vogel en gespreide handpennen zichtbaar.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "Individuele fotopagina en origineel, J. Patrick Fischer, CC BY-SA 3.0.",
+      "reviewed": "2026-11-15"
+     }
     }
    ],
    "corrections": [
     "De bestaande landingsfoto blijft buiten In vlucht. Het kennisprofiel maakt het leeftijdsvoorbehoud bij oogkleur expliciet.",
-    "Twee originele foto’s gematcht. De landingsnadering blijft bij de overige foto’s. Maten naast Kent Wildlife Trust gelegd."
+    "Twee originele foto’s gematcht. De landingsnadering blijft bij de overige foto’s. Maten naast Kent Wildlife Trust gelegd.",
+    "F3-R06: Gedocumenteerd jeugdkleed toegevoegd.",
+    "F3-R06: Vrije-vluchtfoto toegevoegd. De landingsfoto blijft aanvullend."
    ],
-   "missing": [
-    "Afzonderlijke juvenielenfoto",
-    "Vrije-vluchtfoto"
-   ],
+   "missing": [],
    "wishes": [],
    "uncertain": [
     "De fotobron noemt het beeld in algemene zin “in flight”. De zichtbare poten en houding ondersteunen de specifiekere Birdspot-indeling als landingshouding."
@@ -1981,7 +2061,7 @@
     "browser": "NOT TESTED",
     "independent": "NOT TESTED"
    },
-   "photoComplete": false,
+   "photoComplete": true,
    "knowledge": {
     "profile": true,
     "critical": 1,
@@ -1990,14 +2070,14 @@
      "Iris en achterhoofd"
     ],
     "open": [
-     "Een bronbevestigde juvenielenfoto, een foto in vrije vlucht en een eigen geluidsopname ontbreken. De frontale landingsnadering blijft bij de overige herkenningsfoto’s."
+     "Een close-up met meer detail van de jonge vogel en een afzonderlijke alarmroep kunnen de kaart verder aanvullen."
     ],
     "discrepancies": 0
    },
    "browser": null,
    "errors": [],
    "verdict": "PARTIALLY TESTED",
-   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp026",

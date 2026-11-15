@@ -35,9 +35,9 @@ De tekst in de kolom 'Open uit bronronde' is overgenomen uit de laatste F2-voort
 | sp018 Zwarte Specht | F2-09 | De vrouwtjesfoto is uit het volledige origineel opnieuw geïmporteerd in [F3-R05](F3_R05_DRIE_SPECHTEN_2026-11-15_DRAFT.md). Een scherp zijaanzicht, volledig juveniel, ruimer vluchtbeeld en gewicht blijven open. Ook de licentiehistorie van het juveniele kopdetail staat open. |
 | sp019 Groene Specht | F2-09 | Geen extra foto toegevoegd. De toets op een fysiek toestel staat open. |
 | sp020 Middelste Bonte Specht | F2-10 | Bronbevestigde juvenielenfoto, ruimer vluchtbeeld en scherpere hoofdfoto. |
-| sp021 Ekster | F2-10 | Bronbevestigde juvenielenfoto, gewicht en geluidsdekking. De fotograaf beschrijft vertrek vanaf de rots. Op de foto is de vogel los met gespreide vleugels. Een frame uit de voorafgaande afzetfase is onbekend. |
-| sp022 Zwarte Kraai | F2-10 | Bronbevestigde juvenielenfoto en eigen referentiegeluid. |
-| sp025 Kauw | F2-11 | Vrije-vluchtfoto, juvenielenfoto en eigen geluidsopname. |
+| sp021 Ekster | F2-10 | Juvenielenfoto en eerste roep toegevoegd in [F3-R06](F3_R06_EKSTER_KRAAI_KAUW_2026-11-15_DRAFT.md). Gewicht en voorbeeld van de zachte zang staan open. Fotograaf beschrijft vertrek vanaf de rots. Op de foto is de vogel los met gespreide vleugels. |
+| sp022 Zwarte Kraai | F2-10 | Juvenielenfoto en eerste eigen referentieroep toegevoegd in [F3-R06](F3_R06_EKSTER_KRAAI_KAUW_2026-11-15_DRAFT.md). Onafhankelijke beoordeling staat open. |
+| sp025 Kauw | F2-11 | Vrije-vluchtfoto, juvenielenfoto en eigen contactroep toegevoegd in [F3-R06](F3_R06_EKSTER_KRAAI_KAUW_2026-11-15_DRAFT.md). Scherper juvenielenbeeld en afzonderlijke alarmroep blijven verbeterwensen. |
 | sp026 Gaai | F2-11 | Een bronbevestigde juvenielenfoto. |
 | sp029 Koolmees | F2-11 | Browsercontrole op deze commit en fysieke toesteltoets. |
 | sp030 Pimpelmees | F2-12 | De fysieke toestelproef is uitgesteld op verzoek van de eigenaar. |

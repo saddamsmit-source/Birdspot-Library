@@ -90,6 +90,7 @@ const counts={
  thirdBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R03'),
  fourthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R04'),
  fifthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R05'),
+ sixthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R06'),
  contentInspected:sum(x=>x.F3.reviewedThisRound===true),
  contentComplete:sum(x=>x.F3.contentStatus==='CONTENT COMPLETE')
 };
@@ -101,6 +102,7 @@ const second=rows.filter(x=>x.F3.recheckBatch==='F3-R02');
 const third=rows.filter(x=>x.F3.recheckBatch==='F3-R03');
 const fourth=rows.filter(x=>x.F3.recheckBatch==='F3-R04');
 const fifth=rows.filter(x=>x.F3.recheckBatch==='F3-R05');
+const sixth=rows.filter(x=>x.F3.recheckBatch==='F3-R06');
 assert.deepEqual(third.map(x=>x.id), ['sp006','sp007','sp008']);
 assert.deepEqual(third.map(x=>x.F3.photoFilesInspected),[5,6,6]);
 assert.deepEqual(third.map(x=>x.F3.reviewedOriginalAudio),[2,3,2]);
@@ -118,9 +120,32 @@ for (const { currentAssets, F3: review } of fifth) {
   assert.match(photo.source,/^https:\/\/commons\.wikimedia\.org\//);
  }
 }
+assert.deepEqual(sixth.map(row=>row.id), ['sp021','sp022','sp025']);
+assert.deepEqual(sixth.map(row=>row.F3.photoFilesInspected), [3,3,4]);
+assert.deepEqual(sixth.map(row=>row.F3.reviewedOriginalAudio), [1,1,1]);
+assert.deepEqual(sixth.map(row=>audio.audio[row.id][0].label), ['Roep','Roep','Contactroep']);
+assert.deepEqual(sixth.flatMap(row=>row.currentAssets.imageSlots.filter(
+ item=>item.addedIn==='F3-R06').map(item=>item.path)), [
+ '/assets/species/plumage/sp021-juv-review.webp',
+ '/assets/species/plumage/sp022-juv-review.webp',
+ '/assets/species/plumage/sp025-juv-review.webp',
+ '/assets/species/plumage/sp025-flight-free.webp'
+]);
+for (const { currentAssets, F3: review } of sixth) {
+ const current = review.photoSourceMatches.map(photo=>photo.path);
+ const historic = review.priorPhotoMatches.map(photo=>photo.path);
+ const paths = currentAssets.imageSlots.map(photo=>photo.path);
+ assert.deepEqual([...current,...historic].sort(), [...paths].sort());
+ assert.equal(new Set([...current,...historic]).size, paths.length);
+ for (const match of review.priorPhotoMatches) {
+  const bytes = readFileSync(new URL('..'+match.path,import.meta.url));
+  assert.equal(match.localSha1,createHash('sha1').update(bytes).digest('hex'));
+  assert.ok(existsSync(new URL('../'+match.reference,import.meta.url)));
+ }
+}
 const newPeregrine = '/assets/species/plumage/sp009-juv-flight.webp';
 assert.deepEqual(fourth.flatMap(x=>x.currentAssets.imageSlots.filter(y=>y.addedIn==='F3-R04').map(y=>y.path)), [newPeregrine]);
-for (const row of [...third, ...fourth, ...fifth]) {
+for (const row of [...third, ...fourth, ...fifth, ...sixth]) {
  const { F3: review, currentAssets } = row;
  assert.equal(review.fullPass, false);
  assert.equal(review.status, 'IN CONTENT REVIEW / OPEN POINTS');

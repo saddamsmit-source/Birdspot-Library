@@ -1244,11 +1244,19 @@ export const GUIDE_COMPARISONS = [
     tip: 'Vergelijk op de foto’s het zijaanzicht en de stuitkleur. Beoordeel een rechte of golvende vlucht pas als je de vogel langer ziet vliegen.',
   },
   {
+    label: 'Zwarte Kraai en Kauw · in rust',
+    birds: [
+      {id: 'sp022', source: 'zwarte-kraai', marks: 'Geheel zwarte kop met een stevige, langere snavel.'},
+      {id: 'sp025', source: 'kauw', marks: 'Kortere snavel en grijs achterhoofd. Bij volwassen vogels valt het lichte oog vaak op.'},
+    ],
+    tip: 'Vergelijk het zijaanzicht van de kop. Bij jonge Kauwen is de iris doorgaans donkerder.',
+  },
+  {
     label: 'Zwarte Kraai en Kauw · in vlucht',
     flight: true,
     birds: [
       {id: 'sp022', source: 'zwarte-kraai', marks: 'Geheel zwart, met een stevige snavel en brede vleugels met gespreide punten.'},
-      {id: 'sp025', source: 'kauw', photoMissing: 'vluchtcontrole 2026-11-10: geen geschikte vluchtfoto', marks: 'Compactere bouw, kortere snavel en grijze nek. Van dichtbij valt het lichte oog op.'},
+      {id: 'sp025', source: 'kauw', marks: 'Compactere bouw, kortere snavel en grijze nek. Van dichtbij valt het lichte oog op.'},
     ],
     tip: 'Vergelijk kop en snavel. Tegen fel tegenlicht kan de grijze nek van de Kauw donker lijken.',
   },

@@ -12,11 +12,11 @@ Beoordeeld volgens `docs/BIRDSPOT_KWALITEITSNORM.md` (biometrie §1, herkenning 
 | 2 | Afzonderlijk (aangescherpt) gecontroleerd | 101 (M1, M10, M2, M3, M4, M5, M6, M7, M8, M9) |
 | 3 | Technisch correct (laden, volgorde, offline-bron, beoordeling = kaart) | 101 van 101 |
 | 4a | Visueel VERIFIED (beeld per foto) | 98 van 101 |
-| 4b | Inhoud (kennisprofiel) VERIFIED | 67 van 101 — alle profielen hebben nog open punten |
+| 4b | Inhoud (kennisprofiel) VERIFIED | 68 van 101 — alle profielen hebben nog open punten |
 | 4c | Onafhankelijk beoordeeld (ChatGPT) | 0 — NOT TESTED |
-| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 155; plus collectiebrede vluchtcontrole: 16 uit de vluchtrol, 11 gearchiveerd |
+| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 159; plus collectiebrede vluchtcontrole: 16 uit de vluchtrol, 11 gearchiveerd |
 | 6 | Afgekeurde vluchtfoto's | 27 (tabel hieronder) |
-| 7 | Ontbrekende foto-/kennisonderdelen | 65 fotoposities in gecontroleerde soorten; 39 fotosoorten zonder kennisprofiel |
+| 7 | Ontbrekende foto-/kennisonderdelen | 61 fotoposities in gecontroleerde soorten; 39 fotosoorten zonder kennisprofiel |
 | 8 | Kritische kenmerken niet doorslaggevend onderbouwd | 135 (tabel hieronder) |
 | 9 | Open bron-/licentieproblemen | 4 in gecontroleerde soorten; collectiebreed blijft het eerder gemelde punt '22 afbeeldingen buiten de bronaudit' open |
 
@@ -790,21 +790,22 @@ Batch M6 · 2026-11-12 · SHA `dfa3dfd5976579121089e69552da8919920d99e4` · tech
 
 ### sp021 Ekster — PARTIALLY TESTED
 
-Batch M1 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+Batch M1 · 2026-11-15 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
 | `sp021.webp` | Hoofdfoto | Ekster op tak; zwart-wit kleed, glanzende staart en blauwe vleugelglans. | volwassen-ogend; geslachten gelijk | goed | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Alexis Lours |
 | `sp021-flight.webp` | In vlucht | Vrij in de lucht boven water; gespreide zwart-witte vleugels met witte handvleugel, lange staart. Geen contact met de steen rechtsonder. | niet vastgesteld | goed | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Alexis Lours |
+| `sp021-juv-review.webp` | Verenkleed (Juveniel) | Jonge Ekster op de grond, met roze mondhoeken, een korte staart en lichte huid rond het oog. | Juveniel volgens het bijschrift van de fotograaf. Lichte huid rond het oog en korte staart zichtbaar. | De hele vogel blijft in de uitsnede. De mondhoeken en de staart zijn zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 15-11-2026: zelfde opname (Originele JPEG visueel vergeleken. Het WebP is rechtstreeks van dit bestand afgeleid.), CC BY-SA 4.0 · Lystopad |
 
-- **Correcties:** Lengte 44–46 → 46–50 cm; broedduur 17–18 → 17–24 dagen; nestjongen 24–30 → 22–30 dagen (VB_EKSTER).; Hoofdfoto en vluchtfoto naast de oorspronkelijke bronbestanden bekeken. Neutrale labels behouden.; Lengte en spanwijdte met een tweede uitgever berekend, en vergelijking met Gaai onderbouwd.
-- **Ontbreekt:** Juvenielenfoto met door de bron ondersteunde leeftijd.
+- **Correcties:** Lengte 44–46 → 46–50 cm; broedduur 17–18 → 17–24 dagen; nestjongen 24–30 → 22–30 dagen (VB_EKSTER).; Hoofdfoto en vluchtfoto naast de oorspronkelijke bronbestanden bekeken. Neutrale labels behouden.; Lengte en spanwijdte met een tweede uitgever berekend, en vergelijking met Gaai onderbouwd.; F3-R06: Gedocumenteerd jeugdkleed toegevoegd.
+- **Ontbreekt:** niets
 - **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** Geslachten gelijk; geen geslachtsvakken.
-- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Kleedpatroon en staart; open: Een brongeverifieerde juvenielenfoto ontbreekt. Gewicht en geluidsdekking staan open.; resterende dataverschillen: 0
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Kleedpatroon en staart; open: Gewicht en een afzonderlijk voorbeeld van de zachte zang blijven open.; resterende dataverschillen: 0
 - **Browser:** NOT TESTED
 - **Onzeker:** —
-- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
 
 ### sp026 Gaai — PARTIALLY TESTED
 
@@ -826,39 +827,42 @@ Batch M2 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED �
 
 ### sp025 Kauw — PARTIALLY TESTED
 
-Batch M3 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+Batch M3 · 2026-11-15 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
 | `sp025.webp` | Hoofdfoto | Kauw in zijaanzicht op een tak. Lichte iris, grijze nek en de korte donkere snavel zijn zichtbaar. | Fotobron bevestigt de soort. Leeftijd en geslacht zijn niet expliciet geannoteerd. | Scherpe, goed leesbare kop. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Alexis Lours |
 | `sp025-flight.webp` | Overige herkenningsfoto’s (landingshouding) | Frontaal beeld met uitgespreide staart en vooruitgestoken poten tussen takken. | Leeftijd en geslacht zijn niet bevestigd door de fotobron. | Bruikbaar als aanvullende herkenningsfoto. | uit-rol | landen · uit-rol | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 2.0 · hedera.baltica |
+| `sp025-juv-review.webp` | Verenkleed (Juveniel) | Jonge Kauw van opzij op stenen, met dof kleed en een donker oog. | Juveniel volgens het individuele bijschrift. Donker oog en dof kleed zichtbaar. | Volledige vogel op 640 × 589 px. Het bronformaat beperkt de vergroting. | goedgekeurd | — | VERIFIED: bronaudit 15-11-2026: zelfde opname (Originele JPEG visueel vergeleken. Het WebP is rechtstreeks van dit bestand afgeleid.), CC BY-SA 2.0 · Anne Burgess |
+| `sp025-flight-free.webp` | In vlucht | Kauw in vrije vlucht, met gespreide vleugels en een korte snavel tegen open lucht. | Herkenbaar als Kauw op bronvermelding en vorm. Leeftijd en geslacht open. | Hele vogel in open lucht. Silhouet goed bruikbaar, met weinig detail in de donkere veren. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 15-11-2026: zelfde opname (Originele JPEG visueel vergeleken. Het WebP is rechtstreeks van dit bestand afgeleid.), CC BY-SA 3.0 · J. Patrick Fischer |
 
-- **Correcties:** De bestaande landingsfoto blijft buiten In vlucht. Het kennisprofiel maakt het leeftijdsvoorbehoud bij oogkleur expliciet.; Twee originele foto’s gematcht. De landingsnadering blijft bij de overige foto’s. Maten naast Kent Wildlife Trust gelegd.
-- **Ontbreekt:** Afzonderlijke juvenielenfoto; Vrije-vluchtfoto
+- **Correcties:** De bestaande landingsfoto blijft buiten In vlucht. Het kennisprofiel maakt het leeftijdsvoorbehoud bij oogkleur expliciet.; Twee originele foto’s gematcht. De landingsnadering blijft bij de overige foto’s. Maten naast Kent Wildlife Trust gelegd.; F3-R06: Gedocumenteerd jeugdkleed toegevoegd.; F3-R06: Vrije-vluchtfoto toegevoegd. De landingsfoto blijft aanvullend.
+- **Ontbreekt:** niets
 - **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** Geslachten zijn uiterlijk gelijkend. De kaart houdt beide foto’s neutraal.
-- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Iris en achterhoofd; open: Een bronbevestigde juvenielenfoto, een foto in vrije vlucht en een eigen geluidsopname ontbreken. De frontale landingsnadering blijft bij de overige herkenningsfoto’s.; resterende dataverschillen: 0
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Iris en achterhoofd; open: Een close-up met meer detail van de jonge vogel en een afzonderlijke alarmroep kunnen de kaart verder aanvullen.; resterende dataverschillen: 0
 - **Browser:** NOT TESTED
 - **Onzeker:** De fotobron noemt het beeld in algemene zin “in flight”. De zichtbare poten en houding ondersteunen de specifiekere Birdspot-indeling als landingshouding.
-- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
 
 ### sp022 Zwarte Kraai — PARTIALLY TESTED
 
-Batch M3 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+Batch M3 · 2026-11-15 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
 | `sp022.webp` | Hoofdfoto | Zwarte kraai in zijaanzicht op een tak. De krachtige snavel, kop en het zwarte kleed zijn zichtbaar. | Leeftijd en geslacht zijn niet bevestigd door de fotobron. | Scherp zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Alexis Lours |
 | `sp022-flight.webp` | In vlucht | Vogel vrij in de lucht met gespreide vleugels. De foto en bronbeschrijving tonen dezelfde vluchtrol. | Leeftijd en geslacht zijn niet bevestigd door de fotobron. | Bruikbaar voor silhouet en vleugelvorm. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Marie-Lan Taÿ Pamart |
+| `sp022-juv-review.webp` | Verenkleed (Juveniel) | Jonge Zwarte Kraai bedelt met geopende snavel en afhangende vleugels. De mond is roze. | Juveniel volgens de fotograaf. De roze snavelbinnenkant ondersteunt de leeftijd. | Hele vogel met zichtbaar bedelgedrag en lichte snavelbinnenkant. | goedgekeurd | — | VERIFIED: bronaudit 15-11-2026: zelfde opname (Originele JPEG visueel vergeleken. Het WebP is rechtstreeks van dit bestand afgeleid.), CC BY 4.0 · Marie-Lan Taÿ Pamart |
 
-- **Correcties:** Bronprofiel met vergelijking met Roek en Kauw. De snavelbasis is bij jonge Roeken geen betrouwbaar enkelvoudig onderscheid.; Lengte en spanwijdte als indicatieve band berekend met Vogelbescherming en RSPB.; Hoofdfoto en vluchtfoto naast de oorspronkelijke bronbestanden bekeken. Neutrale labels behouden.
-- **Ontbreekt:** Afzonderlijke juvenielenfoto
+- **Correcties:** Bronprofiel met vergelijking met Roek en Kauw. De snavelbasis is bij jonge Roeken geen betrouwbaar enkelvoudig onderscheid.; Lengte en spanwijdte als indicatieve band berekend met Vogelbescherming en RSPB.; Hoofdfoto en vluchtfoto naast de oorspronkelijke bronbestanden bekeken. Neutrale labels behouden.; F3-R06: Gedocumenteerd jeugdkleed toegevoegd.
+- **Ontbreekt:** niets
 - **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** Geslachten zijn uiterlijk gelijkend. De kaart houdt deze foto’s neutraal.
-- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Snavelbasis; open: Een afzonderlijke juvenielenfoto en een eigen geluidsopname voor de gids ontbreken.; resterende dataverschillen: 0
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Snavelbasis; open: —; resterende dataverschillen: 0
 - **Browser:** NOT TESTED
 - **Onzeker:** —
-- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
 
 ### sp069 Gele Kwikstaart — PARTIALLY TESTED
 

@@ -15,7 +15,8 @@
     "firstBatch": "docs/fotokwaliteit/F3_R01_DUIVEN_HERCONTROLE_2026-11-15_DRAFT.md",
     "thirdBatch": "docs/fotokwaliteit/F3_R03_SPERWER_HAVIK_TORENVALK_2026-11-15_DRAFT.md",
     "fourthBatch": "docs/fotokwaliteit/F3_R04_SLECHTVALK_EN_BONTE_SPECHTEN_2026-11-15_DRAFT.md",
-    "fifthBatch": "docs/fotokwaliteit/F3_R05_DRIE_SPECHTEN_2026-11-15_DRAFT.md"
+    "fifthBatch": "docs/fotokwaliteit/F3_R05_DRIE_SPECHTEN_2026-11-15_DRAFT.md",
+    "sixthBatch": "docs/fotokwaliteit/F3_R06_EKSTER_KRAAI_KAUW_2026-11-15_DRAFT.md"
   },
   "requiredChecks": [
     "photoOriginalIdentity",
@@ -42,17 +43,18 @@
     "oldF2Touched": 84,
     "oldAudited": 101,
     "oldNinePointVerified": 15,
-    "audioPresent": 59,
-    "audioMissing": 81,
+    "audioPresent": 62,
+    "audioMissing": 78,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 125,
+    "nextNotStarted": 122,
     "secondBatchStarted": 3,
-    "contentInspected": 15,
+    "contentInspected": 18,
     "contentComplete": 0,
     "thirdBatchStarted": 3,
     "fourthBatchStarted": 3,
-    "fifthBatchStarted": 3
+    "fifthBatchStarted": 3,
+    "sixthBatchStarted": 3
   },
   "records": [
     {
@@ -1810,43 +1812,132 @@
             "role": "In vlucht",
             "path": "/assets/species/plumage/sp021-flight.webp",
             "oldRights": "VERIFIED"
+          },
+          {
+            "role": "Verenkleed (Juveniel)",
+            "path": "/assets/species/plumage/sp021-juv-review.webp",
+            "oldRights": "NOT TESTED",
+            "addedIn": "F3-R06"
           }
         ],
-        "existingAudioCount": 0,
-        "existingAudioPaths": []
+        "existingAudioCount": 1,
+        "existingAudioPaths": [
+          "/assets/species/audio/sp021-call-app.mp3"
+        ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R06",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (3 current files checked against original; 0 retained F2 match; second review pending)",
+          "photoIndividualRights": "PARTIALLY TESTED (individual Commons files and licenses recorded; independent review pending)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (juvenile and flight roles checked against the source and visible fieldmarks; see findings)",
+          "photoPairComparisons": "PARTIALLY TESTED (paired comparisons targeted in Chromium at 360 and 390 px)",
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (360 and 390 px Chromium; physical device pending)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (compact players and credits disclosure checked in mobile emulation)",
+          "audioRecordingsAuthenticity": "PARTIALLY TESTED (complete local decode and original signal comparison; independent acoustic review pending)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (individual source and attribution documented; second review pending)",
+          "soundRolesSongCall": "PARTIALLY TESTED (proper visible call label, separated from unrecorded other sound roles)",
+          "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (local files decoded and played; integrated offline phase deferred)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (original Vogelbescherming species page read; printed ANWB passage pending)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (app descriptions and Dutch status checked; some biological details remain open)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (national breeding estimate, period and trends confirmed in the primary source)",
+          "ebirdDistributionAndBias": "PARTIALLY TESTED (Cornell taxon codes checked; direct distribution and seasonal data inaccessible)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "endToEndGuideUI": "PARTIALLY TESTED (targeted mobile browser emulation; integrated physical device session pending)",
+          "independentSecondReview": "NOT TESTED (second reviewer pending)"
         },
         "findings": [
-          "Juvenielenfoto met door de bron ondersteunde leeftijd.",
-          "Geen lokaal geregistreerde zang of roep"
+          "Volledige juveniele Ekster met zichtbare mondhoeken, relatief korte staart en lichte huid rond het oog toegevoegd.",
+          "Bestaand vluchtbeeld toont de vogel los van de rots. De fotograaf beschrijft vertrek vanaf de rots. Het is onduidelijk hoe kort na de afzet het beeld is gemaakt.",
+          "Eerste eigen roepopname uit de British Library. Gewicht en een afzonderlijk voorbeeld van zachte zang blijven open."
         ],
-        "sourceReferences": [],
-        "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/ekster",
+          "https://stats.sovon.nl/stats/soort/15490",
+          "https://science.ebird.org/en/status-and-trends/species/eurmag1/range-map",
+          "docs/fotokwaliteit/F3_R06_EKSTER_KRAAI_KAUW_2026-11-15_DRAFT.md",
+          "docs/evidence/GUIDE_SOURCE_AUDIT_2026-11-15_F3_R06.json"
+        ],
+        "reviewedOriginalAudio": 1,
+        "showcasePreview": "LOCAL BROWSER at 360 and 390 px: targeted guide and media review",
+        "independence": "PARTIAL / independent ornithological and acoustic review outstanding",
+        "fullPass": false,
+        "photoFilesInspected": 3,
+        "scientificName": "Pica pica",
+        "ebirdSpeciesCode": "eurmag1",
+        "photoBlobSHAs": [
+          "185282225c44a773208e2d24545e16393b8c4400",
+          "5f0006f49a11e918ed631106cf071ae176e590ce",
+          "2b97db7f8ba6132e7b3b093f4510821de849d860"
+        ],
+        "photoSourceMatches": [
+          {
+            "path": "/assets/species/sp021.webp",
+            "source": "https://commons.wikimedia.org/wiki/File:Eurasian_magpie_2022_05_03.jpg",
+            "localSize": [
+              1600,
+              1067
+            ],
+            "author": "Alexis Lours",
+            "license": "CC BY 4.0",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Eurasian_magpie_2022_05_03.jpg",
+            "originalSha256": "08e5254ae770a378853ca49f63a0df0809752ed6412fc41b8bc9c0e1b64bee83",
+            "sourceSize": [
+              5078,
+              3385
+            ],
+            "comparison": "Actueel appbeeld en origineel visueel naast elkaar gelegd."
+          },
+          {
+            "path": "/assets/species/plumage/sp021-flight.webp",
+            "source": "https://commons.wikimedia.org/wiki/File:Eurasian_Magpie_2023-10-16_01.jpg",
+            "localSize": [
+              1400,
+              933
+            ],
+            "author": "Alexis Lours",
+            "license": "CC BY 4.0",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/2/24/Eurasian_Magpie_2023-10-16_01.jpg",
+            "originalSha256": "be163e0134abcec7badc7b3e414dda447da3a4168679eff9d6825b72c8a041bb",
+            "sourceSize": [
+              5453,
+              3635
+            ],
+            "comparison": "Actueel appbeeld en origineel visueel naast elkaar gelegd."
+          },
+          {
+            "path": "/assets/species/plumage/sp021-juv-review.webp",
+            "source": "https://commons.wikimedia.org/wiki/File:Eurasian_magpie_juvenile_-_Kharkiv_2024.jpg",
+            "localSize": [
+              1280,
+              904
+            ],
+            "author": "Lystopad",
+            "license": "CC BY-SA 4.0",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/3/39/Eurasian_magpie_juvenile_-_Kharkiv_2024.jpg",
+            "originalSha256": "2c11a660567e32007f904e5f963c925cc1e28499cad26696cb668c6d044de91f",
+            "sourceSize": [
+              4608,
+              3072
+            ],
+            "comparison": "Afgeleid van het gecontroleerde individuele origineel."
+          }
+        ],
+        "priorPhotoMatches": [],
+        "audioSourceMatches": [
+          {
+            "path": "/assets/species/audio/sp021-call-app.mp3",
+            "source": "https://commons.wikimedia.org/wiki/File:Eurasian_Magpie_(Pica_pica)_(W1CDR0001537_BD28).ogg",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Eurasian_Magpie_%28Pica_pica%29_%28W1CDR0001537_BD28%29.ogg",
+            "windows": 3,
+            "minimumNormalizedCorrelation": 0.987,
+            "originalSha256": "0865ea6c517e92fab4405efe3fe65070fa62f833d7c31ec28fb925ed566b9b87"
+          }
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (photos, Dutch status, paired mobile UI, recordings and selected primary sources reviewed)",
+        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed."
       }
     },
     {
@@ -1872,43 +1963,131 @@
             "role": "In vlucht",
             "path": "/assets/species/plumage/sp022-flight.webp",
             "oldRights": "VERIFIED"
+          },
+          {
+            "role": "Verenkleed (Juveniel)",
+            "path": "/assets/species/plumage/sp022-juv-review.webp",
+            "oldRights": "NOT TESTED",
+            "addedIn": "F3-R06"
           }
         ],
-        "existingAudioCount": 0,
-        "existingAudioPaths": []
+        "existingAudioCount": 1,
+        "existingAudioPaths": [
+          "/assets/species/audio/sp022-call-app.mp3"
+        ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R06",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (3 current files checked against original; 0 retained F2 match; second review pending)",
+          "photoIndividualRights": "PARTIALLY TESTED (individual Commons files and licenses recorded; independent review pending)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (juvenile and flight roles checked against the source and visible fieldmarks; see findings)",
+          "photoPairComparisons": "PARTIALLY TESTED (paired comparisons targeted in Chromium at 360 and 390 px)",
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (360 and 390 px Chromium; physical device pending)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (compact players and credits disclosure checked in mobile emulation)",
+          "audioRecordingsAuthenticity": "PARTIALLY TESTED (complete local decode and original signal comparison; independent acoustic review pending)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (individual source and attribution documented; second review pending)",
+          "soundRolesSongCall": "PARTIALLY TESTED (proper visible call label, separated from unrecorded other sound roles)",
+          "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (local files decoded and played; integrated offline phase deferred)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (original Vogelbescherming species page read; printed ANWB passage pending)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (app descriptions and Dutch status checked; some biological details remain open)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (national breeding estimate, period and trends confirmed in the primary source)",
+          "ebirdDistributionAndBias": "PARTIALLY TESTED (Cornell taxon codes checked; direct distribution and seasonal data inaccessible)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "endToEndGuideUI": "PARTIALLY TESTED (targeted mobile browser emulation; integrated physical device session pending)",
+          "independentSecondReview": "NOT TESTED (second reviewer pending)"
         },
         "findings": [
-          "Afzonderlijke juvenielenfoto",
-          "Geen lokaal geregistreerde zang of roep"
+          "Jonge Zwarte Kraai toegevoegd uit de individuele bronopname met zichtbaar bedelgedrag en roze snavelbinnenkant.",
+          "Eerste eigen lage roep uit de British Library. Rust- en vluchtbeelden te vergelijken met Kauw."
         ],
-        "sourceReferences": [],
-        "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwarte-kraai",
+          "https://stats.sovon.nl/stats/soort/15671",
+          "https://science.ebird.org/en/status-and-trends/species/carcro1/range-map",
+          "docs/fotokwaliteit/F3_R06_EKSTER_KRAAI_KAUW_2026-11-15_DRAFT.md",
+          "docs/evidence/GUIDE_SOURCE_AUDIT_2026-11-15_F3_R06.json"
+        ],
+        "reviewedOriginalAudio": 1,
+        "showcasePreview": "LOCAL BROWSER at 360 and 390 px: targeted guide and media review",
+        "independence": "PARTIAL / independent ornithological and acoustic review outstanding",
+        "fullPass": false,
+        "photoFilesInspected": 3,
+        "scientificName": "Corvus corone",
+        "ebirdSpeciesCode": "carcro1",
+        "photoBlobSHAs": [
+          "fa13ed47e9ecad27b88cfc2439b88d78713c4572",
+          "02e994e4d32ea05a415363b2aafb62731eae546e",
+          "5b867268710d20bf1a0529585f6e1c1b616dbb8e"
+        ],
+        "photoSourceMatches": [
+          {
+            "path": "/assets/species/sp022.webp",
+            "source": "https://commons.wikimedia.org/wiki/File:Carrion_crow_perched_on_a_branch_01.jpg",
+            "localSize": [
+              1600,
+              1039
+            ],
+            "author": "Alexis Lours",
+            "license": "CC BY 4.0",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Carrion_crow_perched_on_a_branch_01.jpg",
+            "originalSha256": "c5cb3e125e8da75c48c449b732f1ca3ba7c05f69e4179ac89c1400de4744a291",
+            "sourceSize": [
+              5071,
+              3294
+            ],
+            "comparison": "Actueel appbeeld en origineel visueel naast elkaar gelegd."
+          },
+          {
+            "path": "/assets/species/plumage/sp022-flight.webp",
+            "source": "https://commons.wikimedia.org/wiki/File:Corvus_corone_in_flight_JdP_20191213_t160752.jpg",
+            "localSize": [
+              1400,
+              933
+            ],
+            "author": "Marie-Lan Taÿ Pamart",
+            "license": "CC BY 4.0",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Corvus_corone_in_flight_JdP_20191213_t160752.jpg",
+            "originalSha256": "45f46b1e87705cad5988d337acc56b13c20d127bd6397b080cbe9561cc5b4e41",
+            "sourceSize": [
+              4500,
+              3000
+            ],
+            "comparison": "Actueel appbeeld en origineel visueel naast elkaar gelegd."
+          },
+          {
+            "path": "/assets/species/plumage/sp022-juv-review.webp",
+            "source": "https://commons.wikimedia.org/wiki/File:Corvus_corone_juvenile_begging_JdP_20250722_n1.jpg",
+            "localSize": [
+              1280,
+              853
+            ],
+            "author": "Marie-Lan Taÿ Pamart",
+            "license": "CC BY 4.0",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/0/08/Corvus_corone_juvenile_begging_JdP_20250722_n1.jpg",
+            "originalSha256": "6f2113160046e8543ed41ad142751213aea48db6f53b76043ed04eda4985cd37",
+            "sourceSize": [
+              4054,
+              2703
+            ],
+            "comparison": "Afgeleid van het gecontroleerde individuele origineel."
+          }
+        ],
+        "priorPhotoMatches": [],
+        "audioSourceMatches": [
+          {
+            "path": "/assets/species/audio/sp022-call-app.mp3",
+            "source": "https://commons.wikimedia.org/wiki/File:Carrion_Crow_(Corvus_corone)_(W1CDR0001425_BD18).ogg",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Carrion_Crow_%28Corvus_corone%29_%28W1CDR0001425_BD18%29.ogg",
+            "windows": 3,
+            "minimumNormalizedCorrelation": 0.9855,
+            "originalSha256": "fbff030012f82aee1fbc02dfdf4cd1bea53abe86f305deaedbb5619bbcaa51ae"
+          }
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (photos, Dutch status, paired mobile UI, recordings and selected primary sources reviewed)",
+        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed."
       }
     },
     {
@@ -1934,45 +2113,155 @@
             "role": "Overige herkenningsfoto’s (landingshouding)",
             "path": "/assets/species/plumage/sp025-flight.webp",
             "oldRights": "VERIFIED"
+          },
+          {
+            "role": "Verenkleed (Juveniel)",
+            "path": "/assets/species/plumage/sp025-juv-review.webp",
+            "oldRights": "NOT TESTED",
+            "addedIn": "F3-R06"
+          },
+          {
+            "role": "In vlucht",
+            "path": "/assets/species/plumage/sp025-flight-free.webp",
+            "oldRights": "NOT TESTED",
+            "addedIn": "F3-R06"
           }
         ],
-        "existingAudioCount": 0,
-        "existingAudioPaths": []
+        "existingAudioCount": 1,
+        "existingAudioPaths": [
+          "/assets/species/audio/sp025-contact-call-app.mp3"
+        ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R06",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (3 current files checked against original; 1 retained F2 match; second review pending)",
+          "photoIndividualRights": "PARTIALLY TESTED (individual Commons files and licenses recorded; independent review pending)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (juvenile and flight roles checked against the source and visible fieldmarks; see findings)",
+          "photoPairComparisons": "PARTIALLY TESTED (paired comparisons targeted in Chromium at 360 and 390 px)",
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (360 and 390 px Chromium; physical device pending)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (compact players and credits disclosure checked in mobile emulation)",
+          "audioRecordingsAuthenticity": "PARTIALLY TESTED (complete local decode and original signal comparison; independent acoustic review pending)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (individual source and attribution documented; second review pending)",
+          "soundRolesSongCall": "PARTIALLY TESTED (proper visible call label, separated from unrecorded other sound roles)",
+          "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (local files decoded and played; integrated offline phase deferred)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (original Vogelbescherming species page read; printed ANWB passage pending)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (app descriptions and Dutch status checked; some biological details remain open)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (national breeding estimate, period and trends confirmed in the primary source)",
+          "ebirdDistributionAndBias": "PARTIALLY TESTED (Cornell taxon codes checked; direct distribution and seasonal data inaccessible)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "endToEndGuideUI": "PARTIALLY TESTED (targeted mobile browser emulation; integrated physical device session pending)",
+          "independentSecondReview": "NOT TESTED (second reviewer pending)"
         },
         "findings": [
-          "Afzonderlijke juvenielenfoto",
-          "Vrije-vluchtfoto",
-          "De fotobron noemt het beeld in algemene zin “in flight”. De zichtbare poten en houding ondersteunen de specifiekere Birdspot-indeling als landingshouding.",
-          "Geen lokaal geregistreerde zang of roep"
+          "Juvenielenfoto met een donker oog en dof kleed toegevoegd. Bronformaat 640 × 589 px beperkt vergroting.",
+          "Vrije vlucht als aparte foto toegevoegd. De herkenbare landingshouding blijft bij de overige herkenningsfoto’s.",
+          "Rust- en vluchtvergelijking met Zwarte Kraai en eerste contactroep toegevoegd.",
+          "Van de al aanwezige hoofdfoto was de originele download in deze ronde tijdelijk niet toegankelijk. Dezelfde lokale foto komt overeen met de controlehash van F2 en de originele fotopagina was leesbaar."
         ],
-        "sourceReferences": [],
-        "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kauw",
+          "https://stats.sovon.nl/stats/soort/15600",
+          "https://science.ebird.org/en/status-and-trends/species/eurjac/range-map",
+          "docs/fotokwaliteit/F3_R06_EKSTER_KRAAI_KAUW_2026-11-15_DRAFT.md",
+          "docs/evidence/GUIDE_SOURCE_AUDIT_2026-11-15_F3_R06.json"
+        ],
+        "reviewedOriginalAudio": 1,
+        "showcasePreview": "LOCAL BROWSER at 360 and 390 px: targeted guide and media review",
+        "independence": "PARTIAL / independent ornithological and acoustic review outstanding",
+        "fullPass": false,
+        "photoFilesInspected": 4,
+        "scientificName": "Coloeus monedula",
+        "ebirdSpeciesCode": "eurjac",
+        "photoBlobSHAs": [
+          "680a332cdd3298307e30e33bdd421f55532b4ee4",
+          "672651f3100780942e5bd536908d5a3bc78a69da",
+          "7c36aa005b2a5dd3e66d6c7b401871c436817b0e",
+          "3abb4da73bf9aa9923ae68f6a7eab079fecf24d6"
+        ],
+        "photoSourceMatches": [
+          {
+            "path": "/assets/species/plumage/sp025-flight.webp",
+            "source": "https://commons.wikimedia.org/wiki/File:Jackdaw_(48142024622).jpg",
+            "localSize": [
+              1400,
+              934
+            ],
+            "author": "hedera.baltica",
+            "license": "CC BY-SA 2.0",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Jackdaw_%2848142024622%29.jpg",
+            "originalSha256": "a66aaf8bd2ae58a85ae77efd8ffe126fb86872ff0bceb720d80ae7d787ca7f5e",
+            "sourceSize": [
+              2700,
+              1802
+            ],
+            "comparison": "Actueel appbeeld en origineel visueel naast elkaar gelegd."
+          },
+          {
+            "path": "/assets/species/plumage/sp025-juv-review.webp",
+            "source": "https://commons.wikimedia.org/wiki/File:Juvenile_Jackdaw_-_geograph.org.uk_-_4065316.jpg",
+            "localSize": [
+              640,
+              589
+            ],
+            "author": "Anne Burgess",
+            "license": "CC BY-SA 2.0",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Juvenile_Jackdaw_-_geograph.org.uk_-_4065316.jpg",
+            "originalSha256": "88b44631fa7331173045f76ceeac8d363f1dcc1bee87efa14c644122041034cc",
+            "sourceSize": [
+              640,
+              589
+            ],
+            "comparison": "Afgeleid van het gecontroleerde individuele origineel."
+          },
+          {
+            "path": "/assets/species/plumage/sp025-flight-free.webp",
+            "source": "https://commons.wikimedia.org/wiki/File:2013_Fliegende_Dohle.JPG",
+            "localSize": [
+              1144,
+              820
+            ],
+            "author": "J. Patrick Fischer",
+            "license": "CC BY-SA 3.0",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/7/7e/2013_Fliegende_Dohle.JPG",
+            "originalSha256": "8dfacd5cf3df9e7f987c922f80aba66c04473a5fd443f06f0845e7e2ba195c2a",
+            "sourceSize": [
+              1144,
+              820
+            ],
+            "comparison": "Afgeleid van het gecontroleerde individuele origineel."
+          }
+        ],
+        "priorPhotoMatches": [
+          {
+            "path": "/assets/species/sp025.webp",
+            "source": "https://commons.wikimedia.org/wiki/File:Western_Jackdaw_2025_05_23_03.jpg",
+            "localSize": [
+              1600,
+              1067
+            ],
+            "author": "Alexis Lours",
+            "license": "CC BY 4.0",
+            "reference": "docs/evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_11.json",
+            "originalSha1": "f900e6386211dcb6b9e4718c546a972ab46f5e7a",
+            "localSha1": "1b3eb7342fa5c8cf5a12d0cf8be47fc05fa5c21c",
+            "reason": "Origineel deze ronde HTTP 429. Historische vergelijking inhoudelijk behouden."
+          }
+        ],
+        "audioSourceMatches": [
+          {
+            "path": "/assets/species/audio/sp025-contact-call-app.mp3",
+            "source": "https://commons.wikimedia.org/wiki/File:Corvus_monedula_calls.ogg",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Corvus_monedula_calls.ogg",
+            "windows": 3,
+            "minimumNormalizedCorrelation": 0.9918,
+            "originalSha256": "6f3f4297abe17548cc1b06889a65e3af36fdb011c78e8da38a35509bfb2f322f"
+          }
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (photos, Dutch status, paired mobile UI, recordings and selected primary sources reviewed)",
+        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed."
       }
     },
     {
@@ -10082,6 +10371,6 @@
     "ownerDecision": "UI/UX and complete photo/audio source content first; practical Android, Merlin, offline, ZIP and functional end-to-end QA later on one integrated build. Do not stop the next three-bird media batch while previous species have noted source/media gaps.",
     "boundary": "Content visually reviewed is not media-rights VERIFIED or release PASS. No audio invention, no source attribution hidden where license requires directly visible credit. All ordinary source references behind accessible i.",
     "technicalStage": "DEFERRED, NOT WAIVED",
-    "integratedReviewBase": "PR #254, c0771cd50b150e2830eb598eb8276cc04400d207"
+    "integratedReviewBase": "PR #255, ae3ecf2d2438e829f1a4662853b3ade673b195c5"
   }
 }

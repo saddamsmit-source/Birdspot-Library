@@ -5035,6 +5035,50 @@
    "airborne": false,
    "source": "origineel en WebP 14-11-2026",
    "note": "De fotograaf benoemt een vrouwtje Regulus regulus. Het kleed toont een ontwikkelde gele kruinstreep."
+  },
+  "/assets/species/plumage/sp021-juv-review.webp": {
+   "refs": [
+    "sp021 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "fdf83d678b7bae3c284329071376d4f20ce5a9f6",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "F3-R06",
+   "decision": "goedgekeurd",
+   "note": "Jonge Ekster op de grond, met roze mondhoeken, een korte staart en lichte huid rond het oog."
+  },
+  "/assets/species/plumage/sp022-juv-review.webp": {
+   "refs": [
+    "sp022 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "58693dde2ff03b8d14d9bbf55b1b5fab14c05719",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "F3-R06",
+   "decision": "goedgekeurd",
+   "note": "Jonge Zwarte Kraai bedelt met geopende snavel en afhangende vleugels. De mond is roze."
+  },
+  "/assets/species/plumage/sp025-flight-free.webp": {
+   "refs": [
+    "sp025 GUIDE_POSES[1]"
+   ],
+   "sha1": "e85405c52b8e822c24e10a5ea2899b1a103ac060",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "F3-R06",
+   "decision": "goedgekeurd",
+   "note": "Kauw in vrije vlucht, met gespreide vleugels en een korte snavel tegen open lucht."
+  },
+  "/assets/species/plumage/sp025-juv-review.webp": {
+   "refs": [
+    "sp025 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "64619af48b0bb0c8236a398d837f966b3c209e33",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "F3-R06",
+   "decision": "goedgekeurd",
+   "note": "Jonge Kauw van opzij op stenen, met dof kleed en een donker oog."
   }
  }
 }

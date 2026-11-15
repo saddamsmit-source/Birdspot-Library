@@ -338,19 +338,26 @@
           "sexAge": "niet vastgesteld",
           "quality": "goed",
           "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp021-juv-review.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Ekster op de grond, met roze mondhoeken, een korte staart en lichte huid rond het oog.",
+          "sexAge": "Juveniel volgens het bijschrift van de fotograaf. Lichte huid rond het oog en korte staart zichtbaar.",
+          "quality": "De hele vogel blijft in de uitsnede. De mondhoeken en de staart zijn zichtbaar.",
+          "verdict": "goedgekeurd",
+          "addedIn": "F3-R06"
         }
       },
       "corrections": [
         "Lengte 44–46 → 46–50 cm; broedduur 17–18 → 17–24 dagen; nestjongen 24–30 → 22–30 dagen (VB_EKSTER).",
         "Hoofdfoto en vluchtfoto naast de oorspronkelijke bronbestanden bekeken. Neutrale labels behouden.",
-        "Lengte en spanwijdte met een tweede uitgever berekend, en vergelijking met Gaai onderbouwd."
+        "Lengte en spanwijdte met een tweede uitgever berekend, en vergelijking met Gaai onderbouwd.",
+        "F3-R06: Gedocumenteerd jeugdkleed toegevoegd."
       ],
-      "missing": [
-        "Juvenielenfoto met door de bron ondersteunde leeftijd."
-      ],
+      "missing": [],
       "sexPolicy": "Geslachten gelijk; geen geslachtsvakken.",
       "uncertain": [],
-      "date": "2026-11-14"
+      "date": "2026-11-15"
     },
     "sp056": {
       "assets": {

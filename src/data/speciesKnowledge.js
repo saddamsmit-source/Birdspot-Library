@@ -4436,6 +4436,39 @@ const DATA = {
    "checked": "2026-11-15",
    "certainty": "hoog",
    "publisher": "Vogelbescherming Nederland"
+  },
+  "SOV_EKSTER": {
+   "register": "NL01",
+   "label": "Sovon — Ekster",
+   "url": "https://stats.sovon.nl/stats/soort/15490",
+   "edition": "Online soortpagina",
+   "scope": "Nederland",
+   "confirms": "Broedpopulatie 2018–2020 en landelijke broedtrend",
+   "checked": "2026-11-15",
+   "certainty": "hoog",
+   "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "SOV_ZWARTE_KRAAI": {
+   "register": "NL01",
+   "label": "Sovon — Zwarte Kraai",
+   "url": "https://stats.sovon.nl/stats/soort/15671",
+   "edition": "Online soortpagina",
+   "scope": "Nederland",
+   "confirms": "Broedpopulatie 2018–2020 en landelijke broedtrend",
+   "checked": "2026-11-15",
+   "certainty": "hoog",
+   "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "SOV_KAUW": {
+   "register": "NL01",
+   "label": "Sovon — Kauw",
+   "url": "https://stats.sovon.nl/stats/soort/15600",
+   "edition": "Online soortpagina",
+   "scope": "Nederland",
+   "confirms": "Broedpopulatie 2018–2020 en landelijke broedtrend",
+   "checked": "2026-11-15",
+   "certainty": "hoog",
+   "publisher": "Sovon Vogelonderzoek Nederland"
   }
  },
  "profiles": {
@@ -4603,21 +4636,22 @@ const DATA = {
      "kind": "voorkomen",
      "text": "Talrijke broedvogel, het hele jaar aanwezig.",
      "sources": [
-      "VB_EKSTER"
+      "VB_EKSTER",
+      "SOV_EKSTER"
      ]
     },
     {
      "kind": "aantal",
-     "text": "47.000–68.000 broedparen (2018–2020); maximaal 150.000–250.000 vogels in de winter (2012/13–2014/15).",
+     "text": "47.000–68.000 broedparen (2018–2020). Geschat wintermaximum 150.000–250.000 vogels (2012/13–2014/15).",
      "sources": [
-      "VB_EKSTER"
+      "SOV_EKSTER"
      ]
     },
     {
      "kind": "trend",
-     "text": "Sterke afname vanaf midden jaren tachtig, rond 2000 gestabiliseerd en sindsdien vrijwel stabiel.",
+     "text": "Sinds 1990 nam de broedpopulatie af. In de laatste twaalf meetjaren is geen duidelijke verandering aangetoond.",
      "sources": [
-      "VB_EKSTER"
+      "SOV_EKSTER"
      ]
     }
    ],
@@ -4640,7 +4674,7 @@ const DATA = {
    "habitat": [],
    "discrepancies": [],
    "open": [
-    "Een brongeverifieerde juvenielenfoto ontbreekt. Gewicht en geluidsdekking staan open."
+    "Gewicht en een afzonderlijk voorbeeld van de zachte zang blijven open."
    ]
   },
   "sp057": {
@@ -9939,9 +9973,24 @@ const DATA = {
     {
      "text": "Een algemene broedvogel die jaarrond aanwezig is in Nederland.",
      "sources": [
-      "VB_ZKR"
+      "VB_ZKR",
+      "SOV_ZWARTE_KRAAI"
      ],
      "kind": "voorkomen"
+    },
+    {
+     "kind": "aantal",
+     "text": "57.000–96.000 broedparen (2018–2020).",
+     "sources": [
+      "SOV_ZWARTE_KRAAI"
+     ]
+    },
+    {
+     "kind": "trend",
+     "text": "Sinds 1990 en in de laatste twaalf meetjaren is geen duidelijke verandering in het aantal broedvogels aangetoond.",
+     "sources": [
+      "SOV_ZWARTE_KRAAI"
+     ]
     }
    ],
    "life": [
@@ -9960,10 +10009,7 @@ const DATA = {
      "kind": "voedsel"
     }
    ],
-   "discrepancies": [],
-   "open": [
-    "Een afzonderlijke juvenielenfoto en een eigen geluidsopname voor de gids ontbreken."
-   ]
+   "discrepancies": []
   },
   "sp025": {
    "summary": {
@@ -10050,7 +10096,7 @@ const DATA = {
      "sources": [
       "VB_KAUW"
      ],
-     "kind": "roep"
+     "kind": "contactroep"
     }
    ],
    "basis": {
@@ -10075,9 +10121,24 @@ const DATA = {
     {
      "text": "Talrijke broedvogel en jaarrond aanwezig. In trek- en wintertijd komen extra vogels naar Nederland.",
      "sources": [
-      "VB_KAUW"
+      "VB_KAUW",
+      "SOV_KAUW"
      ],
      "kind": "voorkomen"
+    },
+    {
+     "kind": "aantal",
+     "text": "100.000–150.000 broedparen (2018–2020).",
+     "sources": [
+      "SOV_KAUW"
+     ]
+    },
+    {
+     "kind": "trend",
+     "text": "Het aantal broedvogels nam af sinds 1990 en ook in de laatste twaalf meetjaren.",
+     "sources": [
+      "SOV_KAUW"
+     ]
     }
    ],
    "life": [
@@ -10098,7 +10159,7 @@ const DATA = {
    ],
    "discrepancies": [],
    "open": [
-    "Een bronbevestigde juvenielenfoto, een foto in vrije vlucht en een eigen geluidsopname ontbreken. De frontale landingsnadering blijft bij de overige herkenningsfoto’s."
+    "Een close-up met meer detail van de jonge vogel en een afzonderlijke alarmroep kunnen de kaart verder aanvullen."
    ]
   },
   "sp054": {
