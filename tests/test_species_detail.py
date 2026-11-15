@@ -455,7 +455,13 @@ def main():
                 return card
 
             def cmp_tab(card, label):
-                card.locator('.sd-cmp-tab', has_text=re.compile(rf'^{re.escape(label)}$')).click()
+                match = card.locator('.sd-cmp-tab', has_text=re.compile(rf'^{re.escape(label)}$'))
+                if match.count():
+                    match.click()
+                else:
+                    # UX v1.6: a single surviving complete pair has no tabbar.
+                    assert card.locator('.sd-cmp-tab').count() == 0, (label, "tab missing")
+                    assert card.locator('.sd-cmp-panel').count() == 1, (label, "not a single valid panel")
                 panel = card.locator('.sd-cmp-panel:visible')
                 panel.wait_for(state="visible", timeout=4000)
                 return panel
@@ -588,9 +594,10 @@ def main():
             grauwe_card = cmp_card("Grauwe Kiekendief", flight=True)
             grauwe_panel = cmp_tab(grauwe_card, "In vlucht · Mannetje")
             assert_photo_pair(grauwe_panel, ["sp250.webp", "sp251.webp"], in_flight=True)
-            female_panel = cmp_tab(grauwe_card, "In vlucht · Vrouwtje")
-            expect(female_panel.get_by_text("Nog geen passende vluchtfoto", exact=True)).to_have_count(1)
-            expect(female_panel.locator('[data-guide-image$="sp251-adult_f.webp"]')).to_have_count(0)
+            # De Grauwe Kiekendief-vrouw vliegt hier niet vrij: geen leeg tabblad tonen.
+            expect(grauwe_card.locator('.sd-cmp-tab', has_text="In vlucht · Vrouwtje")).to_have_count(0)
+            assert "Nog geen passende vluchtfoto" not in grauwe_card.inner_text()
+            expect(grauwe_card.locator('[data-guide-image$="sp251-adult_f.webp"]')).to_have_count(0)
             tab("status")
             assert p.get_by_text("Incidentele broedgevallen in Nederland.", exact=True).is_visible()
             p.get_by_text("Incidentele broedgevallen in Nederland, onder meer in 2017 en 2019", exact=True).wait_for()
@@ -611,8 +618,9 @@ def main():
             hawk_card = cmp_card("Havik")
             young_hawks = cmp_tab(hawk_card, "Juveniel")
             assert_photo_pair(young_hawks, ["sp006-juv.webp", "sp007-juv.webp"])
-            hawk_females = cmp_tab(hawk_card, "Vrouwtje")
-            expect(hawk_females.get_by_text("Nog geen passende foto", exact=True)).to_have_count(1)
+            # Zonder twee foto’s van vrouwtjes is de tab niet zichtbaar.
+            expect(hawk_card.locator('.sd-cmp-tab', has_text=re.compile(r'^Vrouwtje$'))).to_have_count(0)
+            assert "Nog geen passende foto" not in hawk_card.inner_text()
             assert_photo_once("/assets/species/plumage/sp006-juv.webp")
             flight_section = p.locator('#sdPanel-herkenning section.sd-similar')
             assert flight_section.evaluate(
@@ -704,15 +712,15 @@ def main():
             teal_card = cmp_card("Zomertaling")
             assert_photo_pair(cmp_tab(teal_card, "Juveniel"), ["sp091-juv.webp", "sp188-juv.webp"])
             assert_photo_once("/assets/species/plumage/sp091-juv.webp")
-            for label, plumage in [('Mannetje', 'adult_m'), ('Vrouwtje', 'adult_f'), ('Eclipskleed', 'eclipse')]:
+            for label, plumage in [('Mannetje', 'adult_m'), ('Vrouwtje', 'adult_f')]:
                 teal_panel = cmp_tab(teal_card, label)
                 assert teal_panel.locator('.sd-cmp-who small').all_text_contents() == [label, label]
                 expected_garganey = '/assets/species/sp188.webp' if plumage == 'adult_m' else f'/assets/species/plumage/sp188-{plumage}.webp'
                 assert_photo_once(f'/assets/species/plumage/sp091-{plumage}.webp')
-                if plumage == 'eclipse':
-                    expect(teal_panel.get_by_text("Nog geen passende foto", exact=True)).to_have_count(1)
-                else:
-                    assert_photo_once(expected_garganey)
+                assert_photo_once(expected_garganey)
+            # Geen leeftijdszuiver eclips-fotopaar: de lege vergelijking is verborgen.
+            expect(teal_card.locator('.sd-cmp-tab', has_text=re.compile(r'^Eclipskleed$'))).to_have_count(0)
+            assert "Nog geen passende foto" not in teal_card.inner_text()
             assert p.get_by_label('Vluchtroep bij Rotterdam van Wintertaling').count() == 1
             p.get_by_role('tab', name='Leefwijze', exact=True).click()
             months = p.get_by_text('Gebruikelijke broedperiode · april, mei, juni, juli', exact=True)
