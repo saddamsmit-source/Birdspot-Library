@@ -729,11 +729,12 @@
 .sd-compare, .sd-audio {
   padding: var(--space-12); border: 1px solid var(--line); border-radius: var(--r-sm); background: var(--surface);
 }
-.sd-compare-grid {
+.sd-compare-grid, .sd-plumage-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--space-8);
 }
+:is(.sd-compare-grid, .sd-plumage-gallery) > :last-child:nth-child(odd) { grid-column: 1 / -1; }
 .sd-compare-label { margin: 0 0 var(--space-8); font-size: var(--fs-body); }
 .sd-compare-card {
   display: grid; align-content: start; gap: var(--space-8); padding: var(--space-8);
@@ -754,8 +755,37 @@
 .sd-compare-card .sd-field-photo { margin-top: 0; }
 .sd-media-credit { display: block; margin-top: 4px; color: var(--ink-2); font-size: var(--fs-meta); overflow-wrap: anywhere; }
 .sd-media-credit a { color: inherit; text-decoration: underline; }
+.sd-audio { display: grid; gap: var(--space-4); }
 .sd-audio audio { display: block; width: 100%; height: 44px; }
-.sd-audio .sd-audio-error { margin-top: var(--space-8); }
+.sd-audio-credits { color: var(--ink-2); font-size: var(--fs-meta); }
+.sd-audio-credits > summary {
+  display: flex; align-items: center; justify-content: center;
+  width: 44px; min-height: 44px; padding: 5px; margin-top: var(--space-4);
+  list-style: none; cursor: pointer; color: var(--brand-mid);
+  border-radius: 50%;
+}
+.sd-audio-credits > summary::-webkit-details-marker { display: none; }
+.sd-audio-credits > summary::marker { content: ''; }
+.sd-audio-credits > summary:focus-visible {
+  outline: 3px solid var(--brand-mid); outline-offset: 2px;
+}
+.sd-audio-info-symbol {
+  display: inline-grid; place-items: center;
+  width: 24px; height: 24px; border: 1.8px solid currentColor;
+  border-radius: 50%; font-family: serif; font-style: italic; font-weight: 800;
+  line-height: 1; font-size: 15px;
+}
+.sd-audio-credits-content {
+  padding: var(--space-8); border: 1px solid var(--line);
+  border-radius: var(--r-sm); background: var(--surface-2);
+}
+.sd-audio-credits-title { display: block; margin-bottom: var(--space-8); }
+.sd-audio-credits > ul {
+  display: grid; gap: var(--space-8); margin: 0; padding: 0 var(--space-8); list-style: none;
+}
+.sd-audio-credits li { overflow-wrap: anywhere; }
+.sd-audio-credits li > span { display: block; }
+.sd-audio-credits :is(.kb-voice, .sd-voice) { margin: 0 var(--space-8) var(--space-12); }
 .sd-breeding-observation::first-letter { text-transform: uppercase; }
 .sd-badge {
   font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: var(--r-pill);
@@ -906,23 +936,22 @@
 .sd-photo-zoom button { min-width:44px; min-height:44px; color:#fff; background:#102a20; border:1px solid #8da99b; border-radius:8px; }
 .sd-photo-zoom button:disabled { opacity:.5; }
 
-.sd-plumage-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
-  gap: var(--space-8);
-}
-.sd-plumage-photo { min-width: 0; margin: 0; }
+.sd-plumage-photo { min-width: 0; margin: 0; overflow-wrap: anywhere; }
+.sd-plumage-photo > p { font-size: var(--fs-meta); }
 .sd-hero-ref { margin-top: var(--space-4); font-size: var(--fs-meta); color: var(--muted); }
 .sd-plumage-photo figcaption { margin-top: 4px; font-size: var(--fs-meta); font-weight: 650; }
 
-/* R10 S1 visual plumage pilot: paired source-backed role photos stay visible
-   side-by-side on mobile. This does NOT apply when there is only one genuine
-   role photograph; hero references remain references and flight stays separate. */
-.sd-plumage-list[data-layout="compare"] {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  align-items: stretch;
-  gap: var(--space-8);
+/* Pair single-photo roles and use a full row when one role has its own photo pair. */
+.sd-plumage-list:is([data-layout="compare"], [data-flight-layout="compare"]) {
+  flex-flow: row wrap;
+}
+.sd-plumage-list:is([data-layout="compare"], [data-flight-layout="compare"]) > .sd-plumage {
+  flex: 1 1 calc((100% - var(--space-8)) / 2);
+  box-sizing: border-box;
+  min-width: 0;
+}
+.sd-plumage-list:is([data-layout="compare"], [data-flight-layout="compare"]) > .sd-plumage:has(.sd-plumage-photo:nth-child(2)) {
+  flex-basis: 100%;
 }
 .sd-plumage-list[data-layout="compare"] > .sd-plumage {
   display: block;
@@ -953,11 +982,6 @@
   width: fit-content;
   margin-top: var(--space-4);
   padding-right: var(--space-8);
-}
-.sd-plumage-list[data-layout="compare"] .sd-plumage-gallery {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: var(--space-8);
 }
 .sd-plumage-list[data-layout="compare"] .sd-field-photo { margin-top: 0; }
 .sd-plumage-list[data-layout="compare"] .sd-field-photo img {
@@ -1081,14 +1105,8 @@
   color: var(--ink-2); font-size: var(--fs-meta); font-weight: 600; cursor: pointer;
 }
 .sd-cmp-more > .sd-cmp-card { margin-top: var(--space-8); }
-.sd-flight [data-flight-layout="compare"] {
-  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-8);
-}
-.sd-flight [data-flight-layout="compare"] > .sd-plumage { display: block; min-width: 0; padding: var(--space-8); }
-.sd-flight [data-flight-layout="compare"] > .sd-plumage > svg { display: none; }
-.sd-flight [data-flight-layout="compare"] .sd-plumage-gallery { display: grid; grid-template-columns: minmax(0, 1fr); }
-.sd-flight [data-flight-layout="compare"] :is(.sd-plumage-photo, .photo-info-frame) { min-width: 0; }
-.sd-flight [data-flight-layout="compare"] .photo-info__panel { max-width: 100%; overflow-wrap: anywhere; }
+.sd-flight .sd-plumage { display: block; min-width: 0; padding: var(--space-8); }
+.sd-flight .sd-plumage > svg { display: none; }
 
 /* ── Kennisbaseline (proef 10-11-2026): Snel herkennen + Determinatie in detail ───────── */
 .kb-quick {

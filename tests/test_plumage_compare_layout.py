@@ -56,10 +56,8 @@ def run_one(browser, base, width, errors):
         layout = grid.evaluate("""el => {
           const male = el.querySelector('[data-plumage="adult_m"]').getBoundingClientRect();
           const female = el.querySelector('[data-plumage="adult_f"]').getBoundingClientRect();
-          const styles = getComputedStyle(el);
           const photos = [...el.querySelectorAll('[data-guide-image]')];
           return {
-            cols: styles.gridTemplateColumns.split(' ').filter(Boolean).length,
             male: {x: male.x, y: male.y, right: male.right, width: male.width},
             female: {x: female.x, y: female.y, right: female.right, width: female.width},
             scrollWidth: el.scrollWidth, clientWidth: el.clientWidth,
@@ -67,9 +65,9 @@ def run_one(browser, base, width, errors):
             uniqueImageCount: new Set(photos.map(p => p.dataset.guideImage)).size,
           };
         }""")
-        assert layout["cols"] == 2, layout
         assert abs(layout["female"]["y"] - layout["male"]["y"]) < 5, layout
-        assert layout["female"]["x"] > layout["male"]["x"], layout
+        assert layout["female"]["x"] >= layout["male"]["right"], layout
+        assert abs(layout["female"]["width"] - layout["male"]["width"]) < 2, layout
         if layout["scrollWidth"] > layout["clientWidth"] + 2:
             offenders = grid.evaluate("""el => {
               const boundary = el.getBoundingClientRect().right;

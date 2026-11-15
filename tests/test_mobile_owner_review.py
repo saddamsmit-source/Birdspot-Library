@@ -34,6 +34,73 @@ def close_species(card):
     expect(card).to_be_hidden()
 
 
+def check_photo_pair(photos):
+    expect(photos).to_have_count(2)
+    result = photos.evaluate_all("""nodes => {
+      const [first, second] = nodes.map(node => node.getBoundingClientRect());
+      const parent = nodes[0].parentElement.getBoundingClientRect();
+      return Math.abs(first.top - second.top) <= 1 && first.right <= second.left &&
+        Math.abs(first.width - second.width) <= 1 && Math.abs(parent.right - second.right) <= 1;
+    }""")
+    assert result, 'Both photos must fill the same row'
+
+
+def check_recognition_media(page):
+    buzzard = open_species(page, 'Buizerd', 'sp005')
+    flight = buzzard.get_by_role('region', name='In vlucht')
+    flight_pair = flight.locator('[data-plumage="neutral"] .sd-plumage-photo')
+    for width in (320, 390, 430, 1280):
+        page.set_viewport_size({'width': width, 'height': 844})
+        check_photo_pair(flight_pair)
+        assert abs(flight_pair.last.bounding_box()['x'] + flight_pair.last.bounding_box()['width'] -
+                   flight.bounding_box()['x'] - flight.bounding_box()['width']) < 12
+    page.set_viewport_size({'width': 390, 'height': 844})
+    flight_pair.last.locator('.sd-field-photo').click()
+    viewer = page.get_by_role('dialog', name='Vogelfoto bekijken')
+    expect(viewer).to_be_visible()
+    page.keyboard.press('Escape')
+    expect(viewer).to_be_hidden()
+    flight.locator('[data-plumage="neutral"]').screenshot(path=str(SHOTS / 'mobile_owner_buizerd_flight_390.png'))
+
+    sounds = buzzard.locator('#sdVoice')
+    rows = sounds.locator('.sd-audio')
+    expect(rows.locator('strong')).to_have_text(['Roep', 'Alarmroep', 'Roep, tweede voorbeeld'])
+    expect(rows.locator('audio[controls]')).to_have_count(3)
+    expect(rows.locator('p:visible, .sd-media-credit')).to_have_count(0)
+    credits = sounds.locator('.sd-audio-credits > summary')
+    expect(credits).to_have_attribute('aria-label', 'Informatie en bronvermelding bij deze geluidsopnamen')
+    byline = sounds.get_by_text('Benoît Van Hecke', exact=False)
+    voice_description = sounds.locator('[data-kb-voice]')
+    expect(byline).to_be_hidden()
+    expect(voice_description).to_be_hidden()
+    credits.focus()
+    page.keyboard.press('Enter')
+    expect(byline).to_be_visible()
+    expect(voice_description).to_be_visible()
+    expect(sounds.get_by_role('link', name='CC BY-SA 3.0')).to_have_count(1)
+    expect(sounds.get_by_role('link', name='Bron', exact=True)).to_have_count(3)
+    page.keyboard.press('Enter')
+    expect(byline).to_be_hidden()
+    first = rows.nth(0).locator('audio')
+    second = rows.nth(1).locator('audio')
+    first.evaluate('audio => audio.play()')
+    expect(first).to_have_js_property('paused', False)
+    second.evaluate('audio => audio.play()')
+    expect(first).to_have_js_property('paused', True)
+    expect(second).to_have_js_property('paused', False)
+    sounds.screenshot(path=str(SHOTS / 'mobile_owner_buizerd_audio_390.png'))
+    close_species(buzzard)
+
+    for name, sid, selector in (
+        ('Kleine Bonte Specht', 'sp017', '[data-plumage="adult_f"] .sd-plumage-photo'),
+        ('Merel', 'sp045', '[data-layout="compare"] > [data-plumage="adult_m"] .sd-plumage-photo'),
+        ('Kuifmees', 'sp033', '.sd-poses .sd-compare-card'),
+    ):
+        card = open_species(page, name, sid)
+        check_photo_pair(card.locator(selector))
+        close_species(card)
+
+
 def main():
     with Server(("127.0.0.1", 0), Quiet) as server, sync_playwright() as pw:
         threading.Thread(target=server.serve_forever, daemon=True).start()
@@ -125,10 +192,36 @@ def main():
 
         page.set_viewport_size({'width': 390, 'height': 844})
         info = hero.get_by_text('Veldkenmerken', exact=True)
-        info.click()
+        info.focus()
+        page.keyboard.press('Enter')
         expect(hero.locator('#featuredBirdWhere')).to_be_visible()
-        assert contrast(hero.locator('#featuredBirdWhere'), text_edge=True) >= 4.5
-        info.click()
+        notes = hero.locator('.field-featured-notes')
+        for width in (320, 360, 390, 430, 1280):
+            page.set_viewport_size({'width': width, 'height': 844})
+            spacing = notes.evaluate("""el => {
+              const panel = el.getBoundingClientRect();
+              const title = el.querySelector('summary').getBoundingClientRect();
+              const where = el.querySelector('#featuredBirdWhere').getBoundingClientRect();
+              const presence = el.querySelector('#featuredBirdPresence').getBoundingClientRect();
+              return {
+                inset: Math.min(where.left - panel.left, presence.left - panel.left,
+                  panel.right - where.right, panel.right - presence.right),
+                aligned: Math.abs(where.left - presence.left) <= 1,
+                titleHeight: title.height,
+                titleGap: where.top - title.bottom,
+                textGap: presence.top - where.bottom,
+                bottom: panel.bottom - presence.bottom,
+              };
+            }""")
+            assert spacing['inset'] >= 12 and spacing['aligned'], (width, spacing)
+            assert spacing['titleHeight'] >= 44 and 6 <= spacing['titleGap'] <= 14, (width, spacing)
+            assert 6 <= spacing['textGap'] <= 12 and spacing['bottom'] >= 12, (width, spacing)
+            assert contrast(hero.locator('#featuredBirdWhere'), text_edge=True) >= 4.5
+            if width == 390:
+                notes.screenshot(path=str(SHOTS / 'mobile_owner_fieldnotes_390.png'))
+        page.set_viewport_size({'width': 390, 'height': 844})
+        page.keyboard.press('Enter')
+        expect(hero.locator('#featuredBirdWhere')).to_be_hidden()
         cta.click()
         close_species(page.get_by_role('dialog', name='Wielewaal', exact=True))
 
@@ -151,6 +244,8 @@ def main():
         gallery.screenshot(path=str(SHOTS / 'mobile_owner_species_photos_390.png'))
         media.click()
         expect(page.get_by_role('heading', name='Wildlife Media Studio')).to_be_visible()
+
+        check_recognition_media(page)
 
         dove = open_species(page, 'Holenduif', 'sp003')
         tip = dove.get_by_text('Tip: Vergelijk de vleugeltekening en de staart.', exact=False).first
