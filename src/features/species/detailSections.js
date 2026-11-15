@@ -295,8 +295,10 @@ function groupComparisonsByPartner(id, comparisons) {
     for (const partner of entry.birds) {
       if (partner.id === id) continue;
       const images = comparisonImages(entry, focal, partner);
-      // Een extra juvenieltab heeft alleen waarde met twee passende foto's.
-      if (focal.plumage === 'juv' && partner.plumage === 'juv' && !(images.ownPhoto && images.partnerPhoto)) continue;
+      // Eigenaarbesluit: toon uitsluitend complete, vergelijkbare fotoparen.
+      // Ontbrekende of afgewezen foto (ook bij vlucht/juveniel) blijft intern open,
+      // maar veroorzaakt geen verwarrend leeg vak of tekst-only vergelijkingskaart.
+      if (!images.ownPhoto || !images.partnerPhoto) continue;
       if (!groups.has(partner.id)) groups.set(partner.id, {partnerId: partner.id, pairings: []});
       groups.get(partner.id).pairings.push({entry, focal, partner, ...images});
     }
@@ -316,11 +318,10 @@ function comparisonCard(id, group) {
     const rows = cmpRows(pairing).map(row =>
       `<div class="sd-cmp-row">${row.label ? `<b>${esc(row.label)}</b>` : ''}<span>${esc(row.own)}</span><span>${esc(row.other)}</span></div>`
     ).join('');
-    const missing = `<span class="sd-cmp-ref">${inFlight ? 'Nog geen passende vluchtfoto' : 'Nog geen passende foto'}</span>`;
     return `<div class="sd-cmp-panel" data-cmp-panel${inFlight ? ' data-cmp-flight' : ''}${i === 0 ? '' : ' hidden'}>
       <div class="sd-cmp-head">
-        <div class="sd-cmp-who"><strong>${esc(own)}</strong><small>${esc(title)}</small>${ownPhoto ? fieldPhoto(ownPhoto) : missing}</div>
-        <div class="sd-cmp-who"><strong>${esc(partnerSpecies.nameNL)}</strong><small>${esc(partnerTitle)}</small>${partnerPhoto ? fieldPhoto(partnerPhoto) : missing}</div>
+        <div class="sd-cmp-who"><strong>${esc(own)}</strong><small>${esc(title)}</small>${fieldPhoto(ownPhoto)}</div>
+        <div class="sd-cmp-who"><strong>${esc(partnerSpecies.nameNL)}</strong><small>${esc(partnerTitle)}</small>${fieldPhoto(partnerPhoto)}</div>
       </div>
       ${rows ? `<div class="sd-cmp-rows">${rows}</div>` : ''}
       ${entry.tip ? `<p class="sd-cmp-tip">Tip: ${esc(entry.tip)}</p>` : ''}
