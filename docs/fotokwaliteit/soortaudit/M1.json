@@ -37,6 +37,11 @@
         "date": "2026-11-14",
         "round": "F2 · bovenvleugel Houtduif en maten Turkse Tortel",
         "changes": "Vluchtfoto Houtduif vervangen door schuin zijaanzicht met een duidelijke witte band op de bovenvleugel. Spanwijdte en gewicht Turkse Tortel geverifieerd volgens de biometrienorm."
+      },
+      {
+        "date": "2026-11-15",
+        "round": "F3-R02 / UX-hoofdfoto met bronbehoud",
+        "changes": "F3-R02 15-11-2026: betere natuurlijke CC BY 4.0 Buizerd-foto van Alexis Lours is nu de hoofdfoto; kabelbeeld van Gianluca Congi blijft aanvullend volwassen rustbeeld; originele rechten en F2-historie behouden."
       }
     ]
   },
@@ -157,14 +162,14 @@
     "sp005": {
       "assets": {
         "/assets/species/plumage/sp005-male-rest.webp": {
-          "role": "Hoofdfoto",
+          "role": "Overige herkenningsfoto's",
           "content": "Lichte Buizerd op kabel, frontaal; donkere iris, gestreepte borst. Watermerk van de maker in beeld.",
           "sexAge": "volwassen (donkere iris; bron: Life Stage Adult). Bron noemt 'Male', maar geslacht niet op kleed te zien: terecht zonder geslachtslabel.",
           "quality": "goed",
           "verdict": "goedgekeurd"
         },
         "/assets/species/sp005.webp": {
-          "role": "Overige herkenningsfoto's",
+          "role": "Hoofdfoto",
           "content": "Donker gekleurde Buizerd op tak; laat de kleedvariatie zien.",
           "sexAge": "niet vastgesteld",
           "quality": "goed",
@@ -201,14 +206,15 @@
       },
       "corrections": [
         "FQA-01: juveniele foto toont echte vlucht maar stond zonder vluchtlabel onder Juveniel. Nu flight:true, één keer onder In vlucht met label Juveniel; de Juveniel-kaart verwijst ernaar.",
-        "F2: donkere vluchtfoto vervangen, bronbeelden opnieuw naast de appbeelden gecontroleerd. Leefgebied, maten en verschillen met de Ruigpootbuizerd onderbouwd."
+        "F2: donkere vluchtfoto vervangen, bronbeelden opnieuw naast de appbeelden gecontroleerd. Leefgebied, maten en verschillen met de Ruigpootbuizerd onderbouwd.",
+        "F3-R02 15-11-2026: betere natuurlijke CC BY 4.0 Buizerd-foto van Alexis Lours is nu de hoofdfoto; kabelbeeld van Gianluca Congi blijft aanvullend volwassen rustbeeld; originele rechten en F2-historie behouden."
       ],
       "missing": [
         "Afzonderlijke juveniele foto in rust; juveniel is al geverifieerd in vrije vlucht."
       ],
       "sexPolicy": "Geslacht niet op kleed te zien; alle foto's zonder geslachtslabel (bronaudit 09-11).",
       "uncertain": [
-        "De lichte buizerd op de hoofdfoto en de gearchiveerde donkere vluchtfoto zijn bij iNaturalist als mannetje geannoteerd. Individueel geslacht volgt niet betrouwbaar uit dit verenkleed. De app gebruikt het gedeelde volwassen label."
+        "De lichte buizerd op de vroegere hoofdfoto en de gearchiveerde donkere vluchtfoto zijn bij iNaturalist als mannetje geannoteerd. Individueel geslacht volgt niet betrouwbaar uit dit verenkleed. De app gebruikt het gedeelde volwassen label."
       ],
       "date": "2026-11-14"
     },
