@@ -1301,6 +1301,33 @@ export const GUIDE_COMPARISONS = [
     tip: 'Kijk naar kop en rug samen. Een jonge Kievit heeft een korte kuif en een doffer, bruiner kleed.',
   },
   {
+    label: 'Veldleeuwerik en Graspieper · in rust',
+    birds: [
+      {id: 'sp070', source: 'veldleeuwerik', marks: 'Robuuste bruingestreepte leeuwerik met korte soms opgerichte kuif, relatief stevige snavel en duidelijk gestreepte bovenborst.'},
+      {id: 'sp072', source: 'graspieper', marks: 'Slankere bruingestreepte pieper met fijne snavel, duidelijke lichte oogring en zware streping langs de flanken.'},
+    ],
+    rows: [
+      {label: 'Kop en snavel', values: ['Soms korte, stompe kuif en relatief forse snavel', 'Geen kuif, fijne snavel en lichte oogring']},
+      {label: 'Borst en flanken', values: ['Bruine borststrepen boven een overwegend lichte buik', 'Donkere strepen lopen nadrukkelijk door over de flanken']},
+      {label: 'Geluid', values: ['Zeer gevarieerde, lang aangehouden zangvlucht', 'Korter, hoog aflopend zangriedeltje en hoge psiep-roep']},
+    ],
+    tip: 'Twee echte rustfoto’s. Vergelijk oogring, kuif en flankstreping; foto-uitsnedes zijn geen betrouwbare maatvergelijking.',
+  },
+  {
+    label: 'Veldleeuwerik en Graspieper · in vlucht',
+    flight: true,
+    birds: [
+      {id: 'sp070', source: 'veldleeuwerik', marks: 'Lang volgehouden hoge zangvlucht. In goed licht lichte achterrand van de vleugel en witte staartzijden.'},
+      {id: 'sp072', source: 'graspieper', marks: 'Kleinere gestreepte pieper met stijgende of dalende zangvlucht en hoge herhaalde roep.'},
+    ],
+    rows: [
+      {label: 'Zangvlucht', values: ['Langdurig, hoog en zeer gevarieerd', 'Kortere zangvlucht met een reeks hoge, aflopende tonen']},
+      {label: 'Vleugel', values: ['Relatief brede vleugel en smalle lichte vleugelachterrand', 'Slanker vliegbeeld met zichtbare vleugelstrepen']},
+      {label: 'Staart', values: ['Witte buitenste staartpennen bij goed zicht', 'Ook witte buitenste staartpennen; dus niet op dit kenmerk alleen determineren']},
+    ],
+    tip: 'Beide beelden tonen bewezen vrije vlucht. Bepaal de soort vooral via vluchtpatroon, geluid en meerdere kenmerken; niet via de schijnbare grootte van de foto’s.',
+  },
+  {
     label: 'Graspieper en Boompieper · veldkenmerken',
     birds: [
       {id: 'sp072', source: 'graspieper', marks: 'Fijne snavel. De borst- en flankstrepen zijn ongeveer even breed.'},
@@ -1660,10 +1687,15 @@ export const GUIDE_COMPARISONS = [
   {
     label: 'IJsvogel en Bijeneter · keel en snavel',
     birds: [
-      {id: 'sp075', source: 'ijsvogel', marks: 'Witte keel, roestoranje onderzijde, rechte snavel en korte staart.'},
-      {id: 'sp257', source: 'bijeneter', marks: 'Gele keel, blauwgroene onderzijde, licht gebogen snavel en langere staart.'},
+      {id: 'sp075', source: 'ijsvogel', photo: '/assets/showcase/sp075.webp', marks: 'Compacte IJsvogel met witte keel en zijhals, roestoranje onderzijde, rechte puntige snavel en korte staart.'},
+      {id: 'sp257', source: 'bijeneter', marks: 'Langgerekte Bijeneter met gele keel, blauwgroene onderzijde, zwarte oogstreep, licht gebogen snavel en lange staart.'},
     ],
-    tip: 'Bekijk de keelkleur en snavelvorm. In tegenlicht helpt vooral de verhouding tussen staart en lichaam.',
+    rows: [
+      {label: 'Keel', values: ['Wit met een witte zijhalsvlek', 'Felgeel en omrand door een donkere oog-/keeltekening']},
+      {label: 'Snavel', values: ['Lang, smal en recht', 'Langer ogend en licht neerwaarts gebogen']},
+      {label: 'Lichaam en staart', values: ['Compact met korte staart en oranje buik', 'Langgerekter met langere staart en blauwgroene onderzijde']},
+    ],
+    tip: 'De twee bestaande rustfoto’s tonen de herkenbare verschillen. Kijk naar keel, snavel en staart in plaats van alleen naar de blauwe kleur.',
   },
   {
     label: 'Geelgors en Rietgors · kop en stuit',
