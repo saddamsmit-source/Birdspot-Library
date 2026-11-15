@@ -50,6 +50,14 @@ Volgens het **feitelijke** `assets/species/field-guide-media.json` hebben alle d
 
 **Verplicht vervolg per soort:** eerst toegestane en echt beluisterde zang/roep/koer voor de soort; originele auteur, soort-ID, type, hergebruik/commercieel/offline, bron-URL, licentie/credits, eventuele uitsnede en afspeelbaarheid; maximaal drie soorten per geluids-/media-batch. Geen ontbrekende naam of rol verzinnen. Als niet rechtmatig of biologisch verantwoord beschikbaar: open issue met reden, niet valselijk `VERIFIED`.
 
+### Verdere licentievergelijking van de kandidaten (niet geïmporteerd)
+
+- **Holenduif XC489891:** een aanvullende <https://eol.org/pages/45509375/media?subcategory=sound> catalogusregistratie noemt **Hannu Varkki**, `song`, en `CC BY-SA 3.0` bij exact XC489891 (Helsinki, 8 juni 2019). Dit is **secundair** metadata-bewijs. De individuele oorspronkelijke Commons-/Xeno-canto-pagina, echte geluidsinhoud, bewerking/credit en sublicentievereisten zijn **niet zelfstandig afgetekend**.
+- **Turkse Tortel XC82758:** een direct leesbare tweede Commons-pagina <https://commons.wikimedia.org/wiki/File:JMJ-20110703-070858-000380-USA-IA-DordtPrairie-MODO.ogg> bevestigt auteur **Jonathon Jongsma** en `CC BY-SA 3.0` voor een bronopname die verwijst naar **XC82758**. De bijbehorende oorspronkelijke geluidsidentiteit, geüploade bestanden en echte luistercontrole moeten nog door de volledige media- en creditsroute voordat Birdspot deze als zang mag publiceren. **Geen** download-/distributiehandeling uitgevoerd.
+- **Houtduif:** <https://commons.wikimedia.org/wiki/File:Columba_palumbus_birdsong.ogg> beschrijft bij het PD-fragment expliciet **Ekster op de achtergrond**. Die akoestische vermenging is ongeschikt als onvoorwaardelijk 'zuivere Houtduif'-testfixture. Zoek/luister een schoner rechtmatig voorbeeld of markeer achtergrondvogel duidelijk; geen automatische modeltraining op basis van deze bronclaim.
+
+**Door deze aanvullende checks wordt geen enkele F3 audio-gate VERFIED**: bronrechten moeten toepasselijk voor de afgeleide appbestanden en geplande toekomstige commerciële distributie worden bewezen; een titelsnippet van een openbare site is daarvoor onvoldoende.
+
 ## 4. Verspreiding en biologie
 
 **Sovon NL-bronnen:** Houtduif https://stats.sovon.nl/stats/soort/6700 ; Holenduif https://stats.sovon.nl/stats/soort/6680 ; Turkse Tortel https://stats.sovon.nl/stats/soort/6840 . Deze soortpagina's zijn door zoek/open-beschrijvingen in deze ronde geraadpleegd; jaartal en bronmethode expliciet tonen bij overgenomen cijfers. Geen kaart/bronmateriaal kopiëren zonder rechten.
