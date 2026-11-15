@@ -1,0 +1,58 @@
+name: Birdspot Home Hotspots and Live Sound QA
+
+on:
+  push:
+    branches:
+      - fix/birdspot-hotspots-recognition-20261116
+    paths:
+      - 'src/features/home/**'
+      - 'src/features/sightings/soundRecognition.js'
+      - 'styles/dashboard.css'
+      - 'sw.js'
+      - 'tests/test_hotspots_and_recognition.mjs'
+      - 'tests/test_home_hotspots.py'
+      - '.github/workflows/home-hotspots-sound-qa.yml'
+  pull_request:
+    branches:
+      - release/birdspot-integrated-1-27-20-20261115
+      - preview/birdspot-review
+    paths:
+      - 'src/features/home/**'
+      - 'src/features/sightings/soundRecognition.js'
+      - 'styles/dashboard.css'
+      - 'sw.js'
+      - 'tests/test_hotspots_and_recognition.mjs'
+      - 'tests/test_home_hotspots.py'
+      - '.github/workflows/home-hotspots-sound-qa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  home-hotspots-sound:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Hotspots group identifiers and 3-second audio-stream progression
+        run: node tests/test_hotspots_and_recognition.mjs
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Chromium
+        run: |
+          python -m pip install -r tests/requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: Real Home browser route, mobile and offline fallback
+        run: python tests/test_home_hotspots.py
+      - name: Save non-sensitive test screenshot
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: birdspot-hotspots-390px
+          path: tests/screenshots/cinematic_wetland/home_hotspots_offline_390.png
+          if-no-files-found: ignore
