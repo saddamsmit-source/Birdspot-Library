@@ -1687,7 +1687,7 @@ export const GUIDE_COMPARISONS = [
   {
     label: 'IJsvogel en Bijeneter · keel en snavel',
     birds: [
-      {id: 'sp075', source: 'ijsvogel', marks: 'Compacte IJsvogel met witte keel en zijhals, roestoranje onderzijde, rechte puntige snavel en korte staart.'},
+      {id: 'sp075', source: 'ijsvogel', photo: '/assets/showcase/sp075.webp', marks: 'Compacte IJsvogel met witte keel en zijhals, roestoranje onderzijde, rechte puntige snavel en korte staart.'},
       {id: 'sp257', source: 'bijeneter', marks: 'Langgerekte Bijeneter met gele keel, blauwgroene onderzijde, zwarte oogstreep, licht gebogen snavel en lange staart.'},
     ],
     rows: [
