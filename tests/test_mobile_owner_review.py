@@ -224,6 +224,7 @@ def main():
             close_species(card)
 
         page.get_by_role('button', name='Waarneming toevoegen', exact=True).click()
+        page.locator('[data-quick-action="seen"]').click()
         methods = page.locator('#sightMethodGroup')
         expect(methods.locator('[data-icon="eye"]')).to_have_count(1)
         expect(methods.locator('[data-icon="heard"]')).to_have_count(1)
