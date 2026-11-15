@@ -88,6 +88,15 @@
       "licenseRegistered": "CC BY-SA 4.0",
       "originalPageRead": false,
       "notes": "Exact source page not retrievable this round; repository record carried forward, not an independent license check"
+    },
+    {
+      "id": "sp075",
+      "role": "separate male hero",
+      "source": "https://commons.wikimedia.org/wiki/File%3AGuarda-rios-comum%2C_macho%2C_Common_Kingfisher%2C_male_%2854530531861%29.jpg",
+      "author": "Luiz Lapa from Oeiras, Portugal",
+      "licenseRegistered": "CC BY 2.0",
+      "originalPageRead": false,
+      "notes": "Existing source registration and male caption; source original was not opened; visual local WebP looked suitable but independent sex/provenance/rights remain open"
     }
   ],
   "inspectedLocalWebPs": {
@@ -170,6 +179,13 @@
         "path": "/assets/species/sp257.webp",
         "blob": "15ae7f392f35fdcf95105535771645997d8657b0",
         "observed": "Full multicolored bee-eater with yellow throat, curved bill, longer tail, on branches; appropriate rested comparison with kingfisher"
+      },
+      {
+        "id": "sp075",
+        "role": "registered male hero (not neutral photo chosen for paired comparison)",
+        "path": "/assets/species/plumage/sp075-hero-male.webp",
+        "blob": "b10006ea164891ab5ac0b8597ecf410e51404ccd",
+        "observed": "Visible Kingfisher in rest with dark lower mandible on branch; source registers male. Selected as app hero by GUIDE_HEROES but the explicit neutral comparison photo now uses existing showcase/sp075.webp; individual sex rights not independently certified"
       }
     ]
   },
@@ -208,7 +224,7 @@
         "sp075.webp",
         "sp257.webp"
       ],
-      "status": "Existing valid reciprocal rest pair enriched with 3 explicit rows"
+      "status": "Existing valid reciprocal rest pair enriched with 3 explicit rows. App's guideHeroPhoto would otherwise pick a distinct registered male hero. The comparison explicitly pins the sex-neutral showcase sp075.webp; both linked images still carry their original registered source/credit."
     }
   ],
   "speciesDataChange": "sp070 unsupported generic juvenile plumage 'Geschubd bruin' replaced with null; adult note applies equally to males/females, without guessing individual sexes.",
@@ -224,6 +240,13 @@
     "The Kingfisher main photographer Andreas Trepte's requested attribution, web credit and contact/social-platform notice must be assessed before additional public/social promotional use; a CC license does not automatically vanish.",
     "IJsvogel sex-specific photos and young Kingfisher / juvenile Graspieper labels remain individual source-age/sex verification items, not independent ornithology PASS.",
     "No direct ANWB species guide pages inspected in this batch.",
-    "Physical Android view/open/save/close/reopen/offline, second phone ZIP restore, integrated stacked PR release SHA and rollback NOT TESTED; public production remains BLOCKED."
-  ]
+    "Physical Android view/open/save/close/reopen/offline, second phone ZIP restore, integrated stacked PR release SHA and rollback NOT TESTED; public production remains BLOCKED.",
+    "The originally uninspected separate Kingfisher male hero photo was read during render-debug; its original source and individual sex rights were not independently checked."
+  ],
+  "renderSelection": {
+    "status": "FIXED IN CODE / CI RECHECK PENDING",
+    "finding": "F2-25 first CI on 04cea0ef failed pairing test because GUIDE_HEROES.sp075 selects the separate male hero sp075-hero-male.webp by default, not /assets/showcase/sp075.webp; this was a legitimate selected photo but not the neutral image specified in the comparison proof",
+    "fix": "The IJsvogel comparison bird now explicitly sets photo:/assets/showcase/sp075.webp (existing GUIDE_PHOTOS record). Keeps sex-neutral photo in comparison without changing media or hero display; test continues to require exact paired photographs",
+    "regressionGate": "CI on the new final head required, 04cea0ef failure is not a PASS"
+  }
 }
