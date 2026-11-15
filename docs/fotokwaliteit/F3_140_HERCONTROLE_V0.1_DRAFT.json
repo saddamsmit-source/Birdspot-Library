@@ -13,7 +13,8 @@
     "readme": "README.md",
     "newUI": "PR #241 and #244; not on base SHA",
     "firstBatch": "docs/fotokwaliteit/F3_R01_DUIVEN_HERCONTROLE_2026-11-15_DRAFT.md",
-    "thirdBatch": "docs/fotokwaliteit/F3_R03_SPERWER_HAVIK_TORENVALK_2026-11-15_DRAFT.md"
+    "thirdBatch": "docs/fotokwaliteit/F3_R03_SPERWER_HAVIK_TORENVALK_2026-11-15_DRAFT.md",
+    "fourthBatch": "docs/fotokwaliteit/F3_R04_SLECHTVALK_EN_BONTE_SPECHTEN_2026-11-15_DRAFT.md"
   },
   "requiredChecks": [
     "photoOriginalIdentity",
@@ -44,11 +45,12 @@
     "audioMissing": 81,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 131,
+    "nextNotStarted": 128,
     "secondBatchStarted": 3,
-    "contentInspected": 9,
+    "contentInspected": 12,
     "contentComplete": 0,
-    "thirdBatchStarted": 3
+    "thirdBatchStarted": 3,
+    "fourthBatchStarted": 3
   },
   "records": [
     {
@@ -839,7 +841,7 @@
             "oldRights": "VERIFIED"
           },
           {
-            "role": "In vlucht",
+            "role": "In vlucht (Volwassen)",
             "path": "/assets/species/plumage/sp009-male-flight.webp",
             "oldRights": "VERIFIED"
           },
@@ -847,6 +849,12 @@
             "role": "Overige herkenningsfoto's (Volwassen in rust)",
             "path": "/assets/species/plumage/sp009-perched.webp",
             "oldRights": "VERIFIED"
+          },
+          {
+            "role": "In vlucht (Juveniel)",
+            "path": "/assets/species/plumage/sp009-juv-flight.webp",
+            "oldRights": "N/A - added during F3",
+            "addedIn": "F3-R04"
           }
         ],
         "existingAudioCount": 1,
@@ -855,36 +863,107 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R04",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (6 actual local files opened, 6 matched to original files in this round)",
+          "photoIndividualRights": "PARTIALLY TESTED (existing per-photo credits preserved; new image license and individual file page confirmed where applicable)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (visible resting, flight and age roles reviewed; unresolved evidence kept)",
+          "photoPairComparisons": "PARTIALLY TESTED (matching image pairs checked at 360 and 390 px; selected roles and entries retain source evidence)",
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (360 and 390 px Chromium; physical device phase later)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (targeted ⓘ and compact player checks in desktop Chromium; full release audit later)",
+          "audioRecordingsAuthenticity": "PARTIALLY TESTED (all registered recordings match the primary audio signal; independent acoustic review pending)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (individual original recording files matched and registered credits retained; second rights review pending)",
+          "soundRolesSongCall": "PARTIALLY TESTED (information distinguishes drumming and calls; individual precise Peregrine call context absent)",
+          "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (every local audio file decoded and played in browser; offline phase deferred)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (original Vogelbescherming species pages read; printed ANWB passage pending)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (app statements and baseline measurements cross-checked where available)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (checked against individual Dutch Sovon species titles and updated stated data and trends)",
+          "ebirdDistributionAndBias": "PARTIALLY TESTED (Cornell species and distribution references, no raw data imported)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "endToEndGuideUI": "PARTIALLY TESTED (targeted mobile browser emulation; full device phase deferred)",
+          "independentSecondReview": "NOT TESTED (second independent review pending)"
         },
         "findings": [
-          "Afzonderlijke foto van een juveniele Slechtvalk in vrije vlucht."
+          "Afzonderlijke juveniele vrije vluchtfoto toegevoegd. Leeftijd in bron geannoteerd, lengtestrepen ondersteunen dit. Geslacht onbekend.",
+          "Oorspronkelijke vijf foto’s blijven beschikbaar. Oud browserbewijs voor vijf beelden bewaard bij superseded.",
+          "Broedtrend sinds 1990 en kortere broed- en wintertrends onderscheiden met Sovon.",
+          "Bevestigde volwassen foto van onderen aangesloten op de gedeelde volwassen vluchtgroep. Beide beelden delen op mobiel één rij."
         ],
-        "sourceReferences": [],
-        "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/slechtvalk",
+          "https://stats.sovon.nl/stats/soort/3200",
+          "https://science.ebird.org/en/status-and-trends/species/perfal/range-map",
+          "docs/fotokwaliteit/F3_R04_SLECHTVALK_EN_BONTE_SPECHTEN_2026-11-15_DRAFT.md",
+          "docs/evidence/GUIDE_SOURCE_AUDIT_2026-11-15_F3_R04.json"
+        ],
+        "reviewedOriginalAudio": 1,
+        "showcasePreview": "LOCAL BROWSER at 360 and 390 px: targeted guide and media review",
+        "independence": "PARTIAL / independent ornithological and acoustic review outstanding",
+        "fullPass": false,
+        "resolvedFindings": [
+          {
+            "finding": "Afzonderlijke foto van een juveniele Slechtvalk in vrije vlucht.",
+            "evidence": "docs/evidence/GUIDE_SOURCE_AUDIT_2026-11-15_F3_R04.json",
+            "path": "/assets/species/plumage/sp009-juv-flight.webp"
+          }
+        ],
+        "photoFilesInspected": 6,
+        "scientificName": "Falco peregrinus",
+        "ebirdSpeciesCode": "perfal",
+        "photoBlobSHAs": [
+          "a8576c0ad6cb519e1afd685b935c63145e02e7cc",
+          "9520672365ffb96f331440fd933da9e2840292b8",
+          "c6674f5dc4317784a7aa57979d3b4f2c2b0bcb11",
+          "4783c810bae514019186dcccfc1e9a764a84bbc3",
+          "4fa140112b2a9d5117d8734259fbb73cfede57bd",
+          "24e0053e70e7843eb74fd96c4fbd98d651e13ac6"
+        ],
+        "photoSourceMatches": [
+          {
+            "path": "/assets/species/plumage/sp009-male-rest.webp",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/9/94/Peregrine_Falcon_%28male%29_cropped.jpg",
+            "originalSha256": "6cbff9f3531a88fed9faa1410bbb4e0cb5dd6729deaf14d021ab2757ea9cf354"
+          },
+          {
+            "path": "/assets/species/plumage/sp009-juv.webp",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/7/75/PeregrineFalconperched.jpg",
+            "originalSha256": "686e8fba6fe37fe5bd90da6305ad241a26351a35e6d4949367d219ef94c70d12"
+          },
+          {
+            "path": "/assets/showcase/sp009.webp",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Falco_peregrinus_in_flight_%2817659253649%29.jpg",
+            "originalSha256": "cfdea7057c7d38f0c128e3fc05fe4c9b69a20cb0ef1c1ae62655ee4350ac39e5"
+          },
+          {
+            "path": "/assets/species/plumage/sp009-male-flight.webp",
+            "sourceFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/9819028/original.jpg",
+            "originalSha256": "16fa41ad915355b055646570c940fc0da880f5d7dad1f1aaa857e7cc3c6c7247"
+          },
+          {
+            "path": "/assets/species/plumage/sp009-perched.webp",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Peregrine_falcon_portrait.jpg",
+            "originalSha256": "47ae4fadc6887554f5370c53340fe6baa7aa7a398f051c3b5f86df3ba8031783"
+          },
+          {
+            "path": "/assets/species/plumage/sp009-juv-flight.webp",
+            "sourceFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/251479995/original.jpg",
+            "originalSha256": "aaa00e315d84a2eadc455bebf9cf592ae07b6a916070e69a8bd1046b9f350198"
+          }
+        ],
+        "audioSourceMatches": [
+          {
+            "path": "/assets/species/audio/sp009-call.mp3",
+            "source": "https://commons.wikimedia.org/wiki/File:Halcón_peregrino.ogg",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Halc%C3%B3n_peregrino.ogg",
+            "windows": 3,
+            "minimumNormalizedCorrelation": 0.9999,
+            "originalSha256": "008ff445061636d850820d4334b6153d98830f0e7a438af49a8065a4cdd5d9d0"
+          }
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (photos, Dutch status, paired mobile UI, recordings and selected primary sources reviewed)",
+        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed."
       }
     },
     {
@@ -934,34 +1013,89 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R04",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (5 actual local files opened, 3 matched to original files in this round)",
+          "photoIndividualRights": "PARTIALLY TESTED (existing per-photo credits preserved; new image license and individual file page confirmed where applicable)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (visible resting, flight and age roles reviewed; unresolved evidence kept)",
+          "photoPairComparisons": "PARTIALLY TESTED (matching image pairs checked at 360 and 390 px; selected roles and entries retain source evidence)",
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (360 and 390 px Chromium; physical device phase later)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (targeted ⓘ and compact player checks in desktop Chromium; full release audit later)",
+          "audioRecordingsAuthenticity": "PARTIALLY TESTED (all registered recordings match the primary audio signal; independent acoustic review pending)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (individual original recording files matched and registered credits retained; second rights review pending)",
+          "soundRolesSongCall": "PARTIALLY TESTED (information distinguishes drumming and calls; individual precise Peregrine call context absent)",
+          "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (every local audio file decoded and played in browser; offline phase deferred)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (original Vogelbescherming species pages read; printed ANWB passage pending)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (app statements and baseline measurements cross-checked where available)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (checked against individual Dutch Sovon species titles and updated stated data and trends)",
+          "ebirdDistributionAndBias": "PARTIALLY TESTED (Cornell species and distribution references, no raw data imported)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "endToEndGuideUI": "PARTIALLY TESTED (targeted mobile browser emulation; full device phase deferred)",
+          "independentSecondReview": "NOT TESTED (second independent review pending)"
         },
-        "findings": [],
-        "sourceReferences": [],
-        "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "findings": [
+          "Mannetje met rode nek, vrouwtje zonder rode nekvlek, juveniel met rode kruin.",
+          "Roffel van zanglabel naar Roffel verplaatst; roep en roffel blijven apart afspeelbaar."
+        ],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-bonte-specht",
+          "https://stats.sovon.nl/stats/soort/8760",
+          "https://science.ebird.org/status-and-trends/species/grswoo/range-map",
+          "docs/fotokwaliteit/F3_R04_SLECHTVALK_EN_BONTE_SPECHTEN_2026-11-15_DRAFT.md"
+        ],
+        "reviewedOriginalAudio": 2,
+        "showcasePreview": "LOCAL BROWSER at 360 and 390 px: targeted guide and media review",
+        "independence": "PARTIAL / independent ornithological and acoustic review outstanding",
+        "fullPass": false,
+        "photoFilesInspected": 5,
+        "scientificName": "Dendrocopos major",
+        "ebirdSpeciesCode": "grswoo",
+        "photoBlobSHAs": [
+          "d8d636ba0175e121ea82517ddbcf196b81eb4061",
+          "d413dc650bcd0f0d6ccc2649396ff6d598a0fbb3",
+          "2bd57c291f0766fb86ab4cdd1f0234d5004d5a7e",
+          "d9c01e298740d126bf23bbbd167483212de42038",
+          "549ac36b8eed9340e0db99e4e607d808939e9965"
+        ],
+        "photoSourceMatches": [
+          {
+            "path": "/assets/species/plumage/sp016-male.webp",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/d/df/Great_spotted_woodpecker_%28Dendrocopos_major%29_male_Drenthe.jpg",
+            "originalSha256": "1c04a02c2cd699d0ee3d3d5ea182119c4a27f3a62c32dd35c35e02a99ee4fb2d"
+          },
+          {
+            "path": "/assets/species/sp016.webp",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/8/80/2015.05.08.-04-Kaefertaler_Wald-Mannheim--Buntspecht-Weibchen.jpg",
+            "originalSha256": "dd3cc759a10ff8e31b564579cbd6749fae0df34bdeb211b9abee707d98fb76b8"
+          },
+          {
+            "path": "/assets/species/plumage/sp016-flight.webp",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Dendrocopos_major_%2851546452028%29.jpg",
+            "originalSha256": "ca25871c6026f3e08f1d099a5d12207e1a8e0cdc7bc56df38f0f9b58dd4f5990"
+          }
+        ],
+        "audioSourceMatches": [
+          {
+            "path": "/assets/species/audio/sp016-call-app.mp3",
+            "source": "https://commons.wikimedia.org/wiki/File:Dendrocopos_major_-_Great_Spotted_Woodpecker_XC542957.mp3",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Dendrocopos_major_-_Great_Spotted_Woodpecker_XC542957.mp3",
+            "windows": 3,
+            "minimumNormalizedCorrelation": 0.9975,
+            "originalSha256": "1722ee107e139b272e4d5dc5bea38f92744b5c40678cbafb4fbfedfd39a16fbd"
+          },
+          {
+            "path": "/assets/species/audio/sp016-drum-app.mp3",
+            "source": "https://commons.wikimedia.org/wiki/File:Dendrocopos_major.ogg",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Dendrocopos_major.ogg",
+            "windows": 3,
+            "minimumNormalizedCorrelation": 0.9996,
+            "originalSha256": "09806998b369513b83b752f12a2da088548a3853675c4dd6bf8e00e2179b0c06"
+          }
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (photos, Dutch status, paired mobile UI, recordings and selected primary sources reviewed)",
+        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed."
       }
     },
     {
@@ -1001,38 +1135,75 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R04",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (3 actual local files opened, 0 matched to original files in this round)",
+          "photoIndividualRights": "PARTIALLY TESTED (existing per-photo credits preserved; new image license and individual file page confirmed where applicable)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (visible resting, flight and age roles reviewed; unresolved evidence kept)",
+          "photoPairComparisons": "PARTIALLY TESTED (matching image pairs checked at 360 and 390 px; selected roles and entries retain source evidence)",
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (360 and 390 px Chromium; physical device phase later)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (targeted ⓘ and compact player checks in desktop Chromium; full release audit later)",
+          "audioRecordingsAuthenticity": "PARTIALLY TESTED (all registered recordings match the primary audio signal; independent acoustic review pending)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (individual original recording files matched and registered credits retained; second rights review pending)",
+          "soundRolesSongCall": "PARTIALLY TESTED (information distinguishes drumming and calls; individual precise Peregrine call context absent)",
+          "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (every local audio file decoded and played in browser; offline phase deferred)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (original Vogelbescherming species pages read; printed ANWB passage pending)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (app statements and baseline measurements cross-checked where available)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (checked against individual Dutch Sovon species titles and updated stated data and trends)",
+          "ebirdDistributionAndBias": "PARTIALLY TESTED (Cornell species and distribution references, no raw data imported)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "endToEndGuideUI": "PARTIALLY TESTED (targeted mobile browser emulation; full device phase deferred)",
+          "independentSecondReview": "NOT TESTED (second independent review pending)"
         },
         "findings": [
           "Juvenielenfoto met controleerbare leeftijd.",
           "Scherpe foto van de gehele vogel in aantoonbare vrije vlucht.",
-          "Onafhankelijke ornithologische second opinion op individuele foto's ontbreekt."
+          "Onafhankelijke ornithologische second opinion op individuele foto's ontbreekt.",
+          "Geen van de drie bekeken jeugdkandidaten toegevoegd. Foto in de vrije natuur toont de leeftijd onvoldoende, twee andere zijn ringersbeelden in de hand.",
+          "Bestaande foto bij nestholte blijft bij Vrouwtje. Vrije vlucht blijft open.",
+          "Voor de publiekskaart jaarrondstatus en gedateerd aantal 5.800–7.500 broedparen uit Sovon. Roffel is benoemd."
         ],
-        "sourceReferences": [],
-        "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kleine-bonte-specht",
+          "https://stats.sovon.nl/stats/soort/8870",
+          "https://science.ebird.org/status-and-trends/species/leswoo1/abundance-map",
+          "docs/fotokwaliteit/F3_R04_SLECHTVALK_EN_BONTE_SPECHTEN_2026-11-15_DRAFT.md"
+        ],
+        "reviewedOriginalAudio": 2,
+        "showcasePreview": "LOCAL BROWSER at 360 and 390 px: targeted guide and media review",
+        "independence": "PARTIAL / independent ornithological and acoustic review outstanding",
+        "fullPass": false,
+        "photoFilesInspected": 3,
+        "scientificName": "Dryobates minor",
+        "ebirdSpeciesCode": "leswoo1",
+        "photoBlobSHAs": [
+          "0c6437bc810dc11ac99e258c069ac8b3830573e6",
+          "297e384d205d94fa62a20b364ae54771871289dc",
+          "5b9c837b6a52ef55b678a1f2a0706252d85ecc37"
+        ],
+        "photoSourceMatches": [],
+        "audioSourceMatches": [
+          {
+            "path": "/assets/species/audio/sp017-call-app.mp3",
+            "source": "https://commons.wikimedia.org/wiki/File:Dryobates_minor_-_Lesser_Spotted_Woodpecker_XC538968.mp3",
+            "sourceFile": "https://xeno-canto.org/538968/download",
+            "windows": 3,
+            "minimumNormalizedCorrelation": 0.9999,
+            "originalSha256": "b1d11a34ae8448200be18b841dfe7568fac33ae27a0568cd715c023c598a16f7"
+          },
+          {
+            "path": "/assets/species/audio/sp017-drum-app.mp3",
+            "source": "https://commons.wikimedia.org/wiki/File:Dryobates_minor_-_Lesser_Spotted_Woodpecker_XC470657.mp3",
+            "sourceFile": "https://xeno-canto.org/470657/download",
+            "windows": 3,
+            "minimumNormalizedCorrelation": 0.9934,
+            "originalSha256": "ab961ad768b1164daa967e73c0d8f4505c58da5f3a713ed33c03a12752fbd876"
+          }
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (photos, Dutch status, paired mobile UI, recordings and selected primary sources reviewed)",
+        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed."
       }
     },
     {
@@ -9537,6 +9708,6 @@
     "ownerDecision": "UI/UX and complete photo/audio source content first; practical Android, Merlin, offline, ZIP and functional end-to-end QA later on one integrated build. Do not stop the next three-bird media batch while previous species have noted source/media gaps.",
     "boundary": "Content visually reviewed is not media-rights VERIFIED or release PASS. No audio invention, no source attribution hidden where license requires directly visible credit. All ordinary source references behind accessible i.",
     "technicalStage": "DEFERRED, NOT WAIVED",
-    "integratedReviewBase": "PR #252, 1dd5843789c625de9c682c8b7c194d8136138d9d"
+    "integratedReviewBase": "PR #253, 392629c9d14b75ee5661c4b917001e85a6291f6a"
   }
 }

@@ -148,7 +148,7 @@ export function criticalDetails(s) {
 export function voiceDetails(s) {
   const k = knowledgeFor(s.id);
   if (!k?.voice?.length) return '';
-  return `<div class="kb-voice" data-kb-voice>${items(k.voice, { zang: 'Zang', roep: 'Roep', alarm: 'Alarm', vlucht: 'Vluchtroep' })}</div>`;
+  return `<div class="kb-voice" data-kb-voice>${items(k.voice, { zang: 'Zang', roep: 'Roep', alarm: 'Alarm', vlucht: 'Vluchtroep', roffel: 'Roffel' })}</div>`;
 }
 
 /** Niveau 2, tab Leefwijze — uitsluitend inhoudelijke soortgegevens in de publieksweergave.

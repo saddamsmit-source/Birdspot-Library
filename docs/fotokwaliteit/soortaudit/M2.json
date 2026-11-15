@@ -76,14 +76,15 @@
         "/assets/species/plumage/sp009-male-rest.webp": {"role": "Hoofdfoto", "content": "Volwassen Slechtvalk staand op de grond; kopkap, baardstreep, gebandeerde flanken.", "sexAge": "volwassen; bron noemt 'male' maar geslachten alleen in grootte verschillend — geen geslachtslabel", "quality": "goed", "verdict": "goedgekeurd"},
         "/assets/species/plumage/sp009-juv.webp": {"role": "Juveniel", "content": "Jonge Slechtvalk op rots; bruin, gestreept van onderen.", "sexAge": "juveniel (bron: Commons-categorie juvenile; kleed bevestigt)", "quality": "goed", "verdict": "goedgekeurd"},
         "/assets/showcase/sp009.webp": {"role": "In vlucht (Volwassen)", "content": "Vrij in de lucht van opzij; spitse vleugels, gebandeerde onderzijde.", "sexAge": "volwassen-ogend; geslacht niet vastgesteld", "quality": "goed; watermerk maker in beeld", "verdict": "goedgekeurd"},
-        "/assets/species/plumage/sp009-male-flight.webp": {"role": "In vlucht", "content": "Vrij in de lucht van onderen; vleugels gespreid.", "sexAge": "volwassen (iNaturalist: Adult, Male); terecht zonder geslachtslabel", "quality": "goed", "verdict": "goedgekeurd"},
-        "/assets/species/plumage/sp009-perched.webp": {"role": "Overige herkenningsfoto's (Volwassen in rust)", "content": "Volwassen frontaal op rots; witte borst, baardstreep, gebandeerde flanken.", "sexAge": "volwassen (bron: 'female adult'); geen geslachtslabel", "quality": "goed", "verdict": "goedgekeurd"}
+        "/assets/species/plumage/sp009-male-flight.webp": {"role": "In vlucht (Volwassen)", "content": "Vrij in de lucht van onderen; vleugels gespreid.", "sexAge": "volwassen (iNaturalist: Adult, Male); terecht zonder geslachtslabel", "quality": "goed", "verdict": "goedgekeurd"},
+        "/assets/species/plumage/sp009-perched.webp": {"role": "Overige herkenningsfoto's (Volwassen in rust)", "content": "Volwassen frontaal op rots; witte borst, baardstreep, gebandeerde flanken.", "sexAge": "volwassen (bron: 'female adult'); geen geslachtslabel", "quality": "goed", "verdict": "goedgekeurd"},
+        "/assets/species/plumage/sp009-juv-flight.webp": {"role": "In vlucht (Juveniel)", "content": "Jonge Slechtvalk in vrije vlucht van opzij, met lengtestrepen op de borst, donkere baardstreep en spitse vleugels.", "sexAge": "Juveniel op basis van bronwaarneming en lengtestrepen op de lichte onderzijde. Geslacht open.", "quality": "goed: het silhouet, de onderzijde en baardstreep zijn zichtbaar", "verdict": "goedgekeurd", "addedIn": "F3-R04"}
       },
-      "corrections": ["Vijf gidsbeelden opnieuw naast het bronbestand gelegd. Dubbele fotoregistratie samengevoegd. Vluchtvergelijking met Torenvalk gebruikt beelden van beide volwassen vogels van onderen."],
-      "missing": ["Afzonderlijke foto van een juveniele Slechtvalk in vrije vlucht."],
+      "corrections": ["Vijf gidsbeelden opnieuw naast het bronbestand gelegd. Dubbele fotoregistratie samengevoegd. Vluchtvergelijking met Torenvalk gebruikt beelden van beide volwassen vogels van onderen.", "F3-R04: originele foto van een juveniele Slechtvalk in vrije vlucht toegevoegd. Bestaande rust- en vluchtbeelden behouden."],
+      "missing": [],
       "sexPolicy": "Geslachten verschillen in grootte (Vogelbescherming). Geen geslachtslabels op het verenkleed.",
       "uncertain": [],
-      "date": "2026-11-14"
+      "date": "2026-11-15"
     },
     "sp016": {
       "assets": {

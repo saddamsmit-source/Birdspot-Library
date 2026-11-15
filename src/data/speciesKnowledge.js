@@ -4359,6 +4359,39 @@ const DATA = {
    "checked": "2026-11-14",
    "certainty": "hoog",
    "publisher": "hedera.baltica"
+  },
+  "SOV_SLECHTVALK": {
+   "register": "NL01",
+   "label": "Sovon — Slechtvalk",
+   "url": "https://stats.sovon.nl/stats/soort/3200",
+   "edition": "Online soortpagina",
+   "scope": "Nederland",
+   "confirms": "Broedparen in 2025, winteraantallen, landelijke broed- en niet-broedtrend",
+   "checked": "2026-11-15",
+   "certainty": "hoog",
+   "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "SOV_GROTE_BONTE_SPECHT": {
+   "register": "NL01",
+   "label": "Sovon — Grote Bonte Specht",
+   "url": "https://stats.sovon.nl/stats/soort/8760",
+   "edition": "Online soortpagina",
+   "scope": "Nederland",
+   "confirms": "Broedparen in 2018–2020 en landelijke broedtrend",
+   "checked": "2026-11-15",
+   "certainty": "hoog",
+   "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "SOV_KLEINE_BONTE_SPECHT": {
+   "register": "NL01",
+   "label": "Sovon — Kleine Bonte Specht",
+   "url": "https://stats.sovon.nl/stats/soort/8870",
+   "edition": "Online soortpagina",
+   "scope": "Nederland",
+   "confirms": "Jaarrond aanwezig, Nederlandse broedverspreiding, broedparen in 2018–2020 en trend",
+   "checked": "2026-11-15",
+   "certainty": "hoog",
+   "publisher": "Sovon Vogelonderzoek Nederland"
   }
  },
  "profiles": {
@@ -7675,14 +7708,16 @@ const DATA = {
      "kind": "aantal",
      "text": "150–180 broedparen (2025); maximaal 500–650 vogels in de winter (2016/17–2020/21).",
      "sources": [
-      "VB_SLECHT"
+      "VB_SLECHT",
+      "SOV_SLECHTVALK"
      ]
     },
     {
      "kind": "trend",
-     "text": "Sterk toegenomen als broedvogel; als wintergast recent weer afgenomen, waarschijnlijk door vogelgriep.",
+     "text": "Het aantal broedvogels is sinds 1990 sterk toegenomen. In de laatste twaalf meetjaren was er geen duidelijke verandering in de broedtrend en namen de aantallen buiten het broedseizoen af. Vogelgriep is een waarschijnlijke oorzaak van de afname in recente winters.",
      "sources": [
-      "VB_SLECHT"
+      "VB_SLECHT",
+      "SOV_SLECHTVALK"
      ]
     },
     {
@@ -7827,8 +7862,8 @@ const DATA = {
      ]
     },
     {
-     "kind": "zang",
-     "text": "Luide maar vrij korte roffel.",
+     "kind": "roffel",
+     "text": "Luid en vrij kort.",
      "sources": [
       "VB_GBS"
      ]
@@ -7896,14 +7931,16 @@ const DATA = {
      "kind": "aantal",
      "text": "97.000–130.000 broedparen (2018–2020).",
      "sources": [
-      "VB_GBS"
+      "VB_GBS",
+      "SOV_GROTE_BONTE_SPECHT"
      ]
     },
     {
      "kind": "trend",
-     "text": "Langdurig toenemend.",
+     "text": "Het aantal broedvogels neemt sinds 1990 toe.",
      "sources": [
-      "VB_GBS"
+      "VB_GBS",
+      "SOV_GROTE_BONTE_SPECHT"
      ]
     }
    ],
@@ -22110,14 +22147,14 @@ const DATA = {
    "voice": [
     {
      "kind": "roep",
-     "text": "De hoge, snelle roep klinkt als een herhaalde reeks kie-tonen; hoor- en tekstinterpretaties blijven ondersteunend.",
+     "text": "Een hoge, snelle reeks herhaalde kie-tonen.",
      "sources": [
       "VB_KLEINE_BONTE_SPECHT"
      ]
     },
     {
      "kind": "roffel",
-     "text": "De roffel duurt doorgaans langer dan die van de Grote Bonte Specht, maar klinkt zachter.",
+     "text": "Doorgaans langer en zachter dan bij de Grote Bonte Specht.",
      "sources": [
       "VB_KLEINE_BONTE_SPECHT"
      ]
@@ -22136,9 +22173,24 @@ const DATA = {
    "status": [
     {
      "kind": "voorkomen",
-     "text": "In Nederland een schaarse, jaarrond aanwezige specht; landelijke verspreiding en aantallen moeten tegen de actuele Sovon-editie worden geverifieerd.",
+     "text": "Jaarrond in Nederland. Broedt onder meer in de duinstreek, het rivierengebied en op de zandgronden.",
      "sources": [
-      "VB_KLEINE_BONTE_SPECHT"
+      "VB_KLEINE_BONTE_SPECHT",
+      "SOV_KLEINE_BONTE_SPECHT"
+     ]
+    },
+    {
+     "kind": "aantal",
+     "text": "5.800–7.500 broedparen (2018–2020).",
+     "sources": [
+      "SOV_KLEINE_BONTE_SPECHT"
+     ]
+    },
+    {
+     "kind": "trend",
+     "text": "Het aantal broedvogels neemt sinds 1990 toe.",
+     "sources": [
+      "SOV_KLEINE_BONTE_SPECHT"
      ]
     }
    ],

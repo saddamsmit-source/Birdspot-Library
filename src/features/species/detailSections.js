@@ -116,7 +116,9 @@ export function guidePlumageGroups(s) {
   });
   if (sharedAdult) {
     const variant = plumagePhoto(id, 'adult_m');
-    const photos = variant && !photoRole(variant) && variant.image !== heroImage ? [variant] : [];
+    const adultPoses = [variant, ...poses.filter(photo => photo.age === 'adult')];
+    const photos = adultPoses.filter((photo, index) => photo?.image && photo.image !== heroImage && !photoRole(photo) &&
+      adultPoses.findIndex(candidate => candidate?.image === photo.image) === index);
     const similarSexes = s.similarSexes ?? s.guideReview?.similarSexes;
     const badge = similarSexes ? 'Man en vrouw lijken op elkaar' : '';
     const index = groups.findIndex(group => !['adult_m', 'adult_f'].includes(group.key));

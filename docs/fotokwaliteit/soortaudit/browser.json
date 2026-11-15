@@ -126,22 +126,6 @@
    "checks": "SAB-01..07",
    "lijktOp": "SAB-09 OK (390 px)"
   },
-  "sp009": {
-   "ok": true,
-   "viewport": "390x844 Chromium (Playwright)",
-   "photos": 5,
-   "sections": [
-    "Hoofdfoto",
-    "Verenkleed",
-    "In vlucht",
-    "Overige herkenningsfoto's"
-   ],
-   "flight": [
-    "/assets/showcase/sp009.webp",
-    "/assets/species/plumage/sp009-male-flight.webp"
-   ],
-   "checks": "SAB-01..07"
-  },
   "sp016": {
    "ok": true,
    "viewport": "390x844 Chromium (Playwright)",
@@ -695,5 +679,28 @@
    ],
    "checks": "SAB-01..07 (per soort), SA-08 en volledige M10-browserpass"
   }
- ]
+ ],
+ "superseded": {
+  "sp009": {
+   "testedOn": "61ad1e3",
+   "date": "2026-11-10",
+   "reason": "F3-R04 voegt een zesde gidsfoto toe. Dit verslag beschrijft de eerdere set van vijf.",
+   "result": {
+    "ok": true,
+    "viewport": "390x844 Chromium (Playwright)",
+    "photos": 5,
+    "sections": [
+     "Hoofdfoto",
+     "Verenkleed",
+     "In vlucht",
+     "Overige herkenningsfoto's"
+    ],
+    "flight": [
+     "/assets/showcase/sp009.webp",
+     "/assets/species/plumage/sp009-male-flight.webp"
+    ],
+    "checks": "SAB-01..07"
+   }
+  }
+ }
 }

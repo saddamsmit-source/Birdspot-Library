@@ -25,7 +25,7 @@ De tekst in de kolom 'Open uit bronronde' is overgenomen uit de laatste F2-voort
 | sp006 Sperwer |  | [Brondossier F2-06](../evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_06.json), [M1](soortaudit/M1.json). Een passende foto van het vrouwtje in vrije vlucht blijft open. |
 | sp007 Havik |  | [Brondossier F2-06](../evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_06.json), [M2](soortaudit/M2.json). Een aparte rustfoto van het vrouwtje blijft open. De algemene vluchtfoto behoudt een neutraal label. |
 | sp008 Torenvalk |  | [Brondossier F2-06](../evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_06.json), [M1](soortaudit/M1.json). Vergelijkingsfoto’s van Boomvalk en Smelleken blijven open. |
-| sp009 Slechtvalk |  | [Brondossier F2-07](../evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_07.json), [M2](soortaudit/M2.json). Een juveniele vluchtfoto blijft open. |
+| sp009 Slechtvalk |  | [Brondossier F2-07](../evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_07.json), [M2](soortaudit/M2.json). In F2 stond de juveniele vluchtfoto open. Deze foto is toegevoegd en getoetst in [F3-R04](F3_R04_SLECHTVALK_EN_BONTE_SPECHTEN_2026-11-15_DRAFT.md). |
 | sp249 Blauwe Kiekendief |  | [Brondossier F2-07](../evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_07.json), [M9](soortaudit/M9.json). Rustfoto’s van vrouwtje en juveniel blijven open. |
 | sp250 Steppekiekendief |  | [Brondossier F2-07](../evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_07.json), [M9](soortaudit/M9.json). Rustfoto’s van vrouwtje en juveniel blijven open. |
 | sp173 Bruine Kiekendief |  | [Brondossier F2-08](../evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_08.json), [M2](soortaudit/M2.json). Rustfoto van mannetje en juveniel in vrije vlucht staan open. |

@@ -399,6 +399,17 @@
    "source": "contactsheet 10-11-2026",
    "note": ""
   },
+  "/assets/species/plumage/sp009-juv-flight.webp": {
+   "refs": [
+    "sp009 GUIDE_POSES[3]"
+   ],
+   "sha1": "8f68f4977d11f556df66186c52cf03a0159c9144",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht in zijaanzicht. Lengtestrepen en donkere baardstreep zichtbaar. Herkenbaar als juveniel."
+  },
   "/assets/species/plumage/sp009-male-flight.webp": {
    "refs": [
     "sp009 GUIDE_POSES[3]"
