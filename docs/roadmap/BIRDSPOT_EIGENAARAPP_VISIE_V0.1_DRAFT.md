@@ -52,6 +52,12 @@ Dit is een **voorlopige kandidatenlijst**, geen verplichting om alles tegelijk t
 
 Daarna alleen op bewijs van behoefte en beheerbaarheid uitbreiden naar communitymoderatie, pakketbeheer, betaling en campagnes.
 
+### Nieuwe kandidaat: fotobijdragen en beloningen (15 november 2026)
+
+**Pas na start van de eigenaarapp** kan de eigenaar in dezelfde app, naast alle normale Birdspot-functies, een afgeschermde wachtrij beheren voor vrijwillig aangeboden gebruikersfoto's, waaronder ontbrekende hoofdfoto's, man/vrouw, juveniel, vlucht en betere vervangingskandidaten. Maak visuele soort-/rol-/rechtencontrole, goedkeuren/afwijzen, credits, status, communicatie en log zichtbaar. Voeg pas later, bij een afzonderlijk beloningsbesluit, puntenmutaties, afgewezen/gedupliceerde bijdragen, tegoeden, toegekende kortingen of gratis pakketten toe. De eigenaar beheert **geen** privéfoto's die een gebruiker slechts als eigen gidsfoto heeft ingesteld. Persoonlijke foto-override blijft lokaal/privé totdat afzonderlijk bewust een inzending is verstuurd.
+
+De kandidaat-functies voor betaalde Media Studio, film-/diashowtemplates en geïntegreerde vogelgeluidsherkenning zijn uitvoerings-/betaalonderdelen van de gebruikersapp, **geen** aanleiding om de eigenaarapp nu eerder te starten. De toekomstige eigenaarapp kan later wel overzichten van deze aankopen, uitgiften, restituties en kosten tonen, mits rechten/gegevensuitwisseling goed zijn getest. Zie [Birdspot eigen foto's, bijdrages, beloningen en Media/Sound Plus v0.1](BIRDSPOT_EIGEN_FOTOS_BIJDRAGEN_BELONINGEN_MEDIA_PLUS_V0.1_DRAFT.md).
+
 ## 4. Architectuurkeuzes — uitgesteld
 
 - **Nu:** Birdspot S1 alleen ontwikkelen/reviewen; geen extra eigenaarapp of verbinding.
