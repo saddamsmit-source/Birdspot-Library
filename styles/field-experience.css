@@ -5,6 +5,8 @@
   box-shadow: 0 0 0 5px var(--focus-ink);
 }
 
+.ui-icon { flex: none; vertical-align: -.2em; }
+
 .app-header {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -61,42 +63,46 @@
   height: auto;
   min-height: 0;
   margin-inline: 16px;
-  --featured-photo-height: clamp(218px, 37vw, 390px);
+  --featured-photo-height: clamp(224px, 55vw, 360px);
   padding-top: var(--featured-photo-height);
   background: #10271f;
   border: 1px solid var(--line);
   border-radius: var(--r-card);
-  box-shadow: var(--shadow-card);
 }
 #slideshow.featured-birds .featured-birds__photo {
+  z-index: 1;
   height: 100%;
+  object-fit: cover;
+  object-position: center;
+  animation: none;
   filter: none;
-  mask-image: none;
 }
 #slideshow.featured-birds .featured-birds__caption {
   position: relative;
   inset: auto;
   z-index: 1;
   padding: clamp(16px, 3vw, 28px);
-  color: #fff;
-  background: linear-gradient(180deg, rgba(5, 20, 15, .79), rgba(7, 26, 19, .91));
+  color: var(--focus-light);
   overflow-wrap: anywhere;
 }
-#slideshow.featured-birds .featured-birds__caption::before {
-  content: '';
-  position: absolute;
-  inset: -52px 0 auto;
-  height: 52px;
-  background: linear-gradient(transparent, rgba(5, 20, 15, .79));
-  pointer-events: none;
+.featured-birds__identification,
+.field-featured-notes,
+.field-featured-actions > .field-action {
+  background: var(--focus-ink);
+  color: var(--focus-light);
+  border: 1px solid var(--field-selected);
+  border-radius: var(--r-sm);
 }
-@media (max-width: 599px) {
-  #slideshow.featured-birds .featured-birds__photo { object-position: center 20%; }
+.featured-birds__identification {
+  width: fit-content;
+  max-width: 100%;
+  padding: 8px 12px;
 }
 #slideshow.featured-birds .featured-birds__caption :is(p, em) {
-  color: #fff;
+  color: var(--focus-light);
   font-size: .875rem;
   line-height: 1.45;
+  text-shadow: none;
 }
 #slideshow.featured-birds .featured-birds__caption .field-eyebrow {
   margin: 0 0 6px;
@@ -104,8 +110,9 @@
 }
 #slideshow.featured-birds .featured-birds__caption h2 {
   margin: 4px 0 2px;
-  color: #fff;
+  color: var(--focus-light);
   font-size: clamp(1.625rem, 5vw, 3.25rem);
+  text-shadow: none;
 }
 #slideshow.featured-birds .featured-birds__group {
   margin: 0;
@@ -205,17 +212,22 @@
   display: flex;
   align-items: start;
   flex-wrap: wrap;
-  gap: 0 12px;
+  gap: 8px;
   margin-top: 8px;
 }
 .field-featured-notes[open] { flex-basis: 100%; }
 .field-featured-notes summary {
   display: list-item;
   min-height: var(--hit-field);
-  padding: 11px 4px;
+  padding: 11px 10px;
   font-size: .875rem;
   font-weight: 700;
   cursor: pointer;
+}
+.field-featured-notes p { margin: 0 10px 12px; }
+#slideshow .field-featured-actions > .field-action:active {
+  background: var(--field-selected);
+  color: var(--focus-ink);
 }
 .field-photo-label,
 #screen-media .signature-media-type {

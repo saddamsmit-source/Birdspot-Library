@@ -8,6 +8,7 @@
  * - Thumbnail uit IndexedDB (eerste foto/video van de waarneming)
  */
 
+import { appIcon, observationIcon } from '../../utils/icons.js';
 import { getSightings }     from '../../data/sightings.js';
 import { SPECIES }          from '../../data/species.js';
 import { getPhoto }         from '../../data/db.js';
@@ -111,8 +112,8 @@ function buildCard(s, thumbUrl) {
         ${s.locationName
           ? `<span class="sight-card__sep">·</span>${svgPin()} ${escHtml(s.locationName)}`
           : ''}
-        ${method ? `<span class="sighting-observed-pill ${s.observationMethod === 'heard' ? 'is-heard' : ''}">${s.observationMethod === 'heard' ? '♪' : '◈'} ${escHtml(method)}</span>` : ''}
-        ${merlin ? `<span class="sighting-merlin-pill">♪ Merlin${s.merlinVerification !== 'checked' ? ' · suggestie' : ''}</span>` : ''}
+        ${method ? `<span class="sighting-observed-pill ${s.observationMethod === 'heard' ? 'is-heard' : ''}">${observationIcon(s.observationMethod)} ${escHtml(method)}</span>` : ''}
+        ${merlin ? `<span class="sighting-merlin-pill">${appIcon('soundwave')} Merlin${s.merlinVerification !== 'checked' ? ' · suggestie' : ''}</span>` : ''}
         ${hasMedia
           ? `<span class="sight-card__sep">·</span>
              ${svgPhoto()}

@@ -5,6 +5,7 @@
  * Favorites and Film shortlist are optional, sidecar ID collections.
  * No thumbnails are modified or deleted; duplicate hints are non-destructive.
  */
+import { appIcon } from '../../utils/icons.js';
 import { getDB, isPersonalGuidePhoto } from '../../data/db.js';
 import { getSightings } from '../../data/sightings.js';
 import { SPECIES } from '../../data/species.js';
@@ -71,7 +72,7 @@ export function renderMedia(el, { mediaId, onSearchSelect } = {}) {
         '<button class="signature-filter" data-media-filter="photo" aria-pressed="false">Foto’s</button>' +
         '<button class="signature-filter" data-media-filter="video" aria-pressed="false">Video’s</button>' +
         '<button class="signature-filter" data-media-filter="favorites" aria-pressed="false">★ Favorieten</button>' +
-        '<button class="signature-filter" data-media-filter="film" aria-pressed="false">✦ Mijn film</button>' +
+        '<button class="signature-filter" data-media-filter="film" aria-pressed="false">'+appIcon('film')+' Mijn film</button>' +
       '</div>' +
       '<div id="mediaFeedback" class="signature-media-feedback" role="status" aria-live="polite"></div>' +
       '<div id="mediaDupHint" class="signature-dup-note" hidden></div>' +
@@ -83,7 +84,7 @@ export function renderMedia(el, { mediaId, onSearchSelect } = {}) {
         '<h3>Jouw mooiste vogelmomenten, één verhaal.</h3>' +
         '<p id="mediaFilmInfo">Kies je favoriete foto’s en video’s met de filmknop bij elk bestand.</p>' +
         '<small>Jouw filmselectie wordt op dit apparaat bewaard en blijft ook in de ZIP-back-up staan.</small>' +
-        '<button type="button" class="film-studio-media-launch" id="mediaOpenFilmStudio">✦ Open Wildlife Film Studio ↗</button>' +
+        '<button type="button" class="film-studio-media-launch" id="mediaOpenFilmStudio">'+appIcon('film')+' Open Wildlife Film Studio ↗</button>' +
       '</section>' +
     '</div>';
 
@@ -176,7 +177,7 @@ export function renderMedia(el, { mediaId, onSearchSelect } = {}) {
           '</div><div class="signature-media-meta"><strong>'+name+'</strong><span>'+where+(date?' · '+date:'')+'</span></div>' +
           '<div class="signature-media-actions">' +
           '<button type="button" data-media-fav="'+id+'" aria-pressed="'+loved+'" aria-label="'+(loved?'Verwijder favoriet':'Markeer als favoriet')+': '+name+'" class="'+(loved?'is-on':'')+'"><span aria-hidden="true">'+(loved?'★':'☆')+'</span> Favoriet</button>' +
-          '<button type="button" data-media-film="'+id+'" aria-pressed="'+selected+'" aria-label="'+(selected?'Haal uit filmselectie':'Voeg toe aan filmselectie')+': '+name+'" class="'+(selected?'is-on':'')+'"><span aria-hidden="true">'+(selected?'✓':'✦')+'</span> Film</button>' +
+          '<button type="button" data-media-film="'+id+'" aria-pressed="'+selected+'" aria-label="'+(selected?'Haal uit filmselectie':'Voeg toe aan filmselectie')+': '+name+'" class="'+(selected?'is-on':'')+'"><span aria-hidden="true">'+(selected?'✓':appIcon('film'))+'</span> Film</button>' +
           '</div></article>';
       }).join('');
     }

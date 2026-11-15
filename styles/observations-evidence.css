@@ -25,7 +25,8 @@
 .sighting-method-choice input {
   position:absolute;inset:0;opacity:0;width:100%;height:100%;cursor:pointer;
 }
-.sighting-method-choice>span {font-size:23px;line-height:1;color:#bc9860;}
+.sighting-method-choice>.ui-icon {width:24px;height:24px;color:var(--icon-ink);}
+.sighting-method-choice.is-selected>.ui-icon {color:var(--selected-gold);}
 .sighting-method-choice strong {font-size:11px;line-height:1.3;font-weight:750;}
 .sighting-method-choice.is-selected {
   color:#f6efdf;background:linear-gradient(125deg,#214d40,#12392f);
@@ -66,8 +67,9 @@
   border-radius:999px;padding:3px 8px;font-size:10px;font-weight:780;
   line-height:1.3;
 }
-.sighting-observed-pill {background:rgba(60,139,107,.11);color:var(--brand-mid);border:1px solid rgba(60,139,107,.22);}
-.sighting-observed-pill.is-heard {background:rgba(204,167,107,.12);color:#9c763a;border-color:rgba(204,167,107,.34);}
+.sighting-observed-pill {background:var(--info-soft);color:var(--info-ink);border:1px solid var(--line);}
+.sighting-observed-pill.is-heard {background:var(--warn-soft);color:var(--warn-ink);border-color:var(--line);}
+.sighting-observed-pill .ui-icon,.sighting-merlin-pill .ui-icon {width:14px;height:14px;}
 .sighting-merlin-pill {background:rgba(49,157,151,.10);color:var(--brand-mid);border:1px solid rgba(49,157,151,.27);}
 .sighting-evidence-detail,.sighting-merlin-detail {
   display:inline-flex;padding:6px 11px;border-radius:9px;

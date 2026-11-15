@@ -9,6 +9,7 @@
  * - Geen onnodige re-init bij terugkeren naar het scherm
  */
 
+import { appIcon, observationIcon } from '../../utils/icons.js';
 import { getSightings }    from '../../data/sightings.js';
 import { SPECIES }         from '../../data/species.js';
 import { openDetailSheet } from '../sightings/detailSheet.js';
@@ -839,10 +840,10 @@ function fmtDate(iso) {
 
 // K3: druppelpin in de kleur van gezien/gehoord/beide met een lijnicoon; punt = exacte plek.
 const PIN_GLYPH={
-  seen:'<svg viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="2.6"/></svg>',
-  heard:'<svg viewBox="0 0 24 24"><path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></svg>',
-  merlin:'<svg viewBox="0 0 24 24"><path d="M4 12h2l2-5 3 10 3-12 3 9 2-2h1"/></svg>',
-  both:'<svg viewBox="0 0 24 24"><path d="M1.5 12s3-5 7.5-5 7.5 5 7.5 5-3 5-7.5 5-7.5-5-7.5-5z"/><circle cx="9" cy="12" r="1.8"/><path d="M19 5v9"/><circle cx="20.5" cy="15.5" r="1.6"/></svg>',
+  seen:observationIcon('seen'),
+  heard:observationIcon('heard'),
+  merlin:appIcon('soundwave'),
+  both:observationIcon('both'),
   unknown:'<b>?</b>',
 };
 function makeBirdIcon(_emoji,status,speciesName,count=1,notable=false) {

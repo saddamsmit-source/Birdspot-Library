@@ -14,64 +14,20 @@ import { GUIDE_PHOTOS } from './guidePhotos.js';
 import { GUIDE_AUDIO, GUIDE_HEROES, GUIDE_PLUMAGE, GUIDE_POSES } from './guideMedia.js';
 import { photoInfoMarkup } from '../../utils/photoInfo.js';
 import { assetUrl } from '../../utils/assetUrl.js';
+import { appIcon } from '../../utils/icons.js';
 import { personalGuideSlot } from './personalGuide.js';
 import { knowledgeFor, quickPanel, recognitionDetails, criticalDetails, lifeDetails, whereDetails, similarExtra, voiceDetails } from './knowledgeSections.js';
 
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
-// ── Lijniconen (24×24, stroke = currentColor) ─────────────────
-const P = {
-  ruler:   '<path d="M3 15 15 3l6 6L9 21z"/><path d="m7 11 2 2M10 8l2 2M13 5l2 2"/>',
-  wingspan:'<path d="M2 4h20M5 2 2 4l3 2m14-4 3 2-3 2"/><path d="M12 12c-3-3-7-4-10-4 1 5 3.5 8 8 9l2 4 2-4c4.5-1 7-4 8-9-3 0-7 1-10 4Z"/><path d="m4 12 4 1m12-1-4 1"/>',
-  weight:  '<circle cx="12" cy="5" r="2.5"/><path d="M7 8h10l4 12H3z"/><path d="M8 17h8"/>',
-  eye:     '<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
-  male:    '<circle cx="10" cy="14" r="5"/><path d="M14 10l6-6M15 4h5v5"/>',
-  female:  '<circle cx="12" cy="9" r="5"/><path d="M12 14v7M9 18h6"/>',
-  equal:   '<circle cx="12" cy="12" r="9"/><path d="M8 10h8M8 14h8"/>',
-  sun:     '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',
-  snow:    '<path d="M12 2v20M4 6l16 12M20 6 4 18"/><path d="m9 3 3 2 3-2M9 21l3-2 3 2"/>',
-  moon:    '<path d="M20 14.5A8 8 0 1 1 9.5 4 6.5 6.5 0 0 0 20 14.5z"/>',
-  chick:   '<circle cx="12" cy="13" r="6"/><circle cx="10" cy="11.5" r=".8"/><path d="M14 13h3"/><path d="M9 4c1 1 2 1.5 3 1.5S14 5 15 4"/>',
-  year:    '<path d="M12 3a9 9 0 1 0 9 9"/><path d="M12 7v5l3 2"/><path d="m17 3 4 0 0 4"/>',
-  calendar:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',
-  freq:    '<path d="M4 20V14M9 20V10M14 20V6M19 20V3"/>',
-  nest:    '<path d="M3 12c2 5 16 5 18 0"/><path d="M5 14c2 3 12 3 14 0"/><ellipse cx="9.5" cy="10" rx="2" ry="2.6"/><ellipse cx="14" cy="10" rx="2" ry="2.6"/>',
-  shield:  '<path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="M12 8v5M12 16h.01"/>',
-  status:  '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/>',
-  pin:     '<path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/>',
-  map:     '<path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/>',
-  count:   '<path d="M4 7h16M4 12h16M4 17h10"/>',
-  first:   '<path d="M5 21V4"/><path d="M5 4h11l-2 4 2 4H5"/>',
-  last:    '<circle cx="12" cy="12" r="9"/><path d="M12 7v5h4"/>',
-  info:    '<circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/>',
-  tree:    '<path d="M12 3 6 12h3l-3 5h12l-3-5h3z"/><path d="M12 17v4"/>',
-  water:   '<path d="M2 9c2 0 2-1.5 4-1.5S8 9 10 9s2-1.5 4-1.5S16 9 18 9s2-1.5 4-1.5M2 14c2 0 2-1.5 4-1.5S8 14 10 14s2-1.5 4-1.5S16 14 18 14s2-1.5 4-1.5M2 19c2 0 2-1.5 4-1.5S8 19 10 19s2-1.5 4-1.5S16 19 18 19s2-1.5 4-1.5"/>',
-  reed:    '<path d="M6 21V8M12 21V4M18 21V9"/><ellipse cx="6" cy="6" rx="1.4" ry="2.6"/><ellipse cx="12" cy="3" rx="1.4" ry="2.4"/><ellipse cx="18" cy="7" rx="1.4" ry="2.6"/>',
-  city:    '<path d="M3 21h18M5 21V9l5-3v15M10 21V4l9 4v13"/><path d="M13 10h3M13 14h3M13 18h3"/>',
-  field:   '<path d="M3 20c4-8 14-8 18 0"/><path d="M3 15c5-5 13-5 18 0"/><path d="M12 4v6M9 6l3-2 3 2"/>',
-  heath:   '<path d="M4 20h16"/><path d="M7 20c0-4 1-6 3-8M12 20c0-5 1-8 3-10M17 20c0-3 .5-5 2-6"/><circle cx="10" cy="11" r="1"/><circle cx="15" cy="9" r="1"/><circle cx="19" cy="13" r="1"/>',
-  dune:    '<path d="M2 18c3-6 7-8 10-8s6 3 10 8z"/><path d="M14 8c1-2 2-3 3-3"/>',
-  wave:    '<path d="M2 14c3 0 3-4 6-4s3 4 6 4 3-4 6-4 2 2 2 2"/><path d="M2 19h20"/>',
-  bush:    '<circle cx="8" cy="13" r="4"/><circle cx="15" cy="12" r="5"/><path d="M4 21h16"/>',
-  river:   '<path d="M6 3c4 4-4 8 0 12s-2 6 0 6M14 3c4 4-4 8 0 12s-2 6 0 6"/>',
-  camera:  '<path d="M4 8h3l2-3h6l2 3h3v12H4z"/><circle cx="12" cy="13" r="3.5"/>',
-  lifestyle:'<path d="M3 17h7a6 6 0 0 0 6-6V9l4-2-4-1a3 3 0 0 0-5-1L6 11l-4 4h4m1 6h15m-11-4v4m8 0 3-4"/><path d="M13.5 7h.01m-5 7 3-2"/>',
-  egg:     '<path d="M12 3c3.5 0 6 5.5 6 10a6 6 0 0 1-12 0c0-4.5 2.5-10 6-10z"/>',
-  timer:   '<circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6"/>',
-  repeat:  '<path d="M4 9a7 7 0 0 1 12-3l3 3"/><path d="M19 4v5h-5"/><path d="M20 15a7 7 0 0 1-12 3l-3-3"/><path d="M5 20v-5h5"/>',
-  food:    '<path d="M6 3v8M4 3v5a2 2 0 0 0 4 0V3M6 11v10"/><path d="M17 3c-2 0-3 3-3 7h3v11"/>',
-  behaviour:'<path d="M4 18c3-1 4-4 4-7a4 4 0 0 1 8 0c0 3 1 6 4 7"/><circle cx="12" cy="6" r="1"/><path d="M8 21h8"/>',
-  migrate: '<path d="M3 17c4-6 10-9 18-10"/><path d="m16 4 5 3-3 5"/><path d="M3 21h6"/>',
-  note:    '<path d="M9 18V5l11-2v13"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/>',
-};
 export function icon(name, cls = '') {
-  return `<svg class="sd-icon ${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${P[name] || P.info}</svg>`;
+  return appIcon(name, cls ? `sd-icon ${cls}` : 'sd-icon');
 }
 
 const HABITAT = {
-  bos: ['tree', 'Bos'], stedelijk: ['city', 'Stad en dorp'], agrarisch: ['field', 'Boerenland'], polder: ['field', 'Polder'],
-  heide: ['heath', 'Heide'], duinen: ['dune', 'Duinen'], kust: ['wave', 'Kust'], zee: ['wave', 'Zee'], wad: ['wave', 'Wad'],
-  water: ['water', 'Open water en oevers'], moeras: ['water', 'Moeras'], rietland: ['reed', 'Rietland'],
+  bos: ['tree', 'Bos'], stedelijk: ['city', 'Stad en dorp'], agrarisch: ['field', 'Boerenland'], polder: ['polder', 'Polder'],
+  heide: ['heath', 'Heide'], duinen: ['dune', 'Duinen'], kust: ['coast', 'Kust'], zee: ['wave', 'Zee'], wad: ['mudflat', 'Wad'],
+  water: ['water', 'Open water en oevers'], moeras: ['marsh', 'Moeras'], rietland: ['reed', 'Rietland'],
   rivierengebied: ['river', 'Rivieren'], struweel: ['bush', 'Struweel'],
 };
 const FREQ = { 'algemeen': [5, 'Algemeen'], 'vrij-algemeen': [4, 'Vrij algemeen'], 'schaars': [3, 'Schaars'], 'zeldzaam': [2, 'Zeldzaam'], 'zeer-zeldzaam': [1, 'Zeer zeldzaam'] };
@@ -82,7 +38,7 @@ export const TABS = [
   ['herkenning', 'Herkenning', 'eye'],
   ['status', 'Leefwijze', 'lifestyle'],
   ['waar', 'Waar', 'pin'],
-  ['mijn', 'Waarnemingen', 'camera'],
+  ['mijn', 'Waarnemingen', 'observations'],
 ];
 
 export function tabBar(active = 'herkenning') {
@@ -99,8 +55,8 @@ const PLUMAGE = [
   ['adult_m', 'male', 'Mannetje'], ['adult_f', 'female', 'Vrouwtje'], ['juv', 'chick', 'Juveniel'],
   ['breeding', 'sun', 'Broedkleed', 'voorjaar en zomer'],
   ['winter', 'snow', 'Winterkleed', 'najaar en winter'],
-  ['eclipse', 'moon', 'Eclipskleed', 'zomerrui'],
-  ['jaarling', 'chick', 'Jaarling'],
+  ['eclipse', 'feather', 'Eclipskleed', 'zomerrui'],
+  ['jaarling', 'year', 'Jaarling'],
 ];
 const speciesById = new Map(SPECIES.map(bird => [bird.id, bird]));
 
@@ -448,7 +404,7 @@ export function recognitionPanel(s, life = null, personal = false) {
   const neutralFlight = neutral.filter(photo => photo.flight);
   const neutralRest = neutral.filter(photo => !photo.flight);
   if (neutralFlight.length) {
-    flightEntries.push({key: 'neutral', icon: 'wingspan', title: 'In vlucht', text: null, badge: '', photos: neutralFlight, heroRef: false});
+    flightEntries.push({key: 'neutral', icon: 'flight', title: 'In vlucht', text: null, badge: '', photos: neutralFlight, heroRef: false});
   }
   // Vaste slotvolgorde binnen In vlucht, gelijk aan Verenkleed: mannetje → volwassen → vrouwtje → juveniel → … → neutraal.
   const FLIGHT_SLOTS = ['adult_m', 'adult', 'adult_f', 'juv', 'breeding', 'winter', 'eclipse', 'jaarling', 'neutral'];
@@ -554,7 +510,7 @@ export function statusPanel(s, life = null) {
       tile('repeat', 'Broedsels per jaar', esc(b.broods)) + '</div>' +
       `<div class="sd-callout">${icon('nest')}<p>${esc(b.nest)}</p></div>`);
   }
-  const rows = [['food', 'Voedsel', life.diet], ['behaviour', 'Gedrag', life.behaviour], ['migrate', 'Trek', life.migration]]
+  const rows = [['food', 'Voedsel', life.diet], ['lifestyle', 'Gedrag', life.behaviour], ['migrate', 'Trek', life.migration]]
     .filter(r => r[2]);
   if (rows.length) {
     out.push('<div class="sd-facts">' + rows.map(([ic, label, text]) =>

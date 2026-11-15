@@ -3,6 +3,7 @@
  * The user's existing sightings are the one source of truth.
  * All photo links are to IndexedDB media, never stock/AI imagery.
  */
+import { appIcon } from '../../utils/icons.js';
 import { getSightings } from '../../data/sightings.js';
 import { getPhoto } from '../../data/db.js';
 import { openDetailSheet } from '../sightings/detailSheet.js';
@@ -90,12 +91,12 @@ export function renderJournal(el) {
       typeof s.locationName==='string'?s.locationName.trim().toLocaleLowerCase('nl'):'').filter(Boolean));
     const media=filtered.filter(s=>Array.isArray(s.photoIds)&&s.photoIds.length).length;
     milestones.innerHTML=[
-      [species.size,'Vogelsoorten','✦'],
-      [filtered.length,'Waarnemingen','⌖'],
-      [places.size,'Locaties','◈'],
-      [media,'Met media','▣'],
+      [species.size,'Vogelsoorten','bird'],
+      [filtered.length,'Waarnemingen','observations'],
+      [places.size,'Locaties','pin'],
+      [media,'Met media','media'],
     ].map(([number,label,icon])=>
-      '<div class="signature-milestone phase3-journal-milestone"><span aria-hidden="true">'+icon+'</span>'+
+      '<div class="signature-milestone phase3-journal-milestone"><span aria-hidden="true">'+appIcon(icon)+'</span>'+
         '<strong>'+number+'</strong><small>'+label+'</small></div>').join('');
   }
 
