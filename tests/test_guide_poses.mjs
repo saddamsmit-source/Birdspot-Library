@@ -5,6 +5,7 @@ import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { readFileSync } from 'node:fs';
 import { SPECIES } from '../src/data/species.js';
+import { KNOWLEDGE } from '../src/data/speciesKnowledge.js';
 import { GUIDE_AUDIO, GUIDE_HEROES, GUIDE_PLUMAGE, GUIDE_POSES } from '../src/features/species/guideMedia.js';
 import { GUIDE_PHOTOS } from '../src/features/species/guidePhotos.js';
 import { GUIDE_COMPARISONS } from '../src/features/species/guideComparisons.js';
@@ -441,3 +442,38 @@ for (const id of ['sp029','sp030']) {
  assert.ok(panels.some(panel => panel.includes('sp029-juv.webp') && panel.includes('sp030-juv2.webp')));
  assert.match(html, /data-cmp-tab aria-selected="false">Juveniel<\/button>/);
 }
+
+
+// Birdspot identification QA — Kuifeend and Topper (15-11-2026)
+const tufted = species.get('sp092'), greaterScaup = species.get('sp133');
+assert.equal(tufted?.nameSci, 'Aythya fuligula', 'Kuifeend must retain scientific identity');
+assert.equal(greaterScaup?.nameSci, 'Aythya marila', 'Topper must retain scientific identity');
+const duckPairings = GUIDE_COMPARISONS.filter(pair =>
+  pair.birds.length === 2 && ['sp092', 'sp133'].every(id => pair.birds.some(bird => bird.id === id)));
+assert.equal(duckPairings.length, 2, 'Both adult male and female identification comparisons must be defined');
+assert.deepEqual(new Set(duckPairings.map(pair => pair.birds[0].plumage)),
+  new Set(['adult_m', 'adult_f']), 'Male and female comparisons need separate matching plumages');
+for (const pair of duckPairings) {
+  assert.ok(pair.birds.every(bird => bird.source && bird.marks && bird.plumage),
+    'Comparative species must have provenance keys, explicit plumage and field marks');
+  assert.ok(pair.rows?.length >= 2 && pair.rows.length <= 3, 'Use at most 3 useful comparison traits');
+  assert.ok(pair.rows.every(row => row.values?.length === 2 && row.values.every(Boolean)),
+    'Each field trait must describe both species');
+}
+assert.match(tufted.fieldmarks, /topper/i);
+assert.match(greaterScaup.fieldmarks, /kuifeend/i);
+assert.match(greaterScaup.fieldmarks, /lichtgrij/i);
+const scaupHasApprovedMedia = Boolean(GUIDE_PHOTOS.sp133 ||
+  Object.values(GUIDE_PLUMAGE.sp133 || {}).some(photo => photo?.image) ||
+  (GUIDE_POSES.sp133 || []).some(photo => photo?.image));
+if (!scaupHasApprovedMedia) {
+  assert.doesNotMatch(recognitionPanel(tufted), /data-compare-species="sp133"/,
+    'Without a verified Topper photo no misleading incomplete Kuifeend–Topper card may appear');
+  assert.doesNotMatch(recognitionPanel(greaterScaup), /data-compare-species="sp092"/,
+    'Without a verified Topper photo the reverse comparison must also stay hidden');
+}
+console.log('Kuifeend/Topper: species IDs, adult plumage pairs, non-diagnostic cautions and incomplete-photo gate checked');
+
+assert.match(KNOWLEDGE.sp092.caution.text, /topper/i, 'Kuifeend knowledge panel must show the topper confusion caution');
+assert.ok(!KNOWLEDGE.sp133, 'KB-01 forbids knowledge profiles for unphotographed species');
+assert.match(recognitionPanel(greaterScaup), /lichtgrijze rug/i, 'Topper must remain recognizable via the public species summary');

@@ -964,6 +964,32 @@ export const GUIDE_COMPARISONS = [
     tip: 'Beide mannetjes hebben een groene kop. Begin met de snavel en borst. Bij Slobeend zie je op deze foto ook de lichtblauwe voorvleugel.',
   },
   {
+    label: 'Kuifeend en Topper · mannetjes in rust',
+    birds: [
+      {id: 'sp092', source: 'kuifeend', plumage: 'adult_m', marks: 'Zwarte rug, witte flanken en vaak een afhangende kuif.'},
+      {id: 'sp133', source: 'topper', plumage: 'adult_m', photoMissing: true, marks: 'Fijngetekende lichtgrijze rug en ronde kop zonder afhangende kuif.'},
+    ],
+    rows: [
+      {label: 'Rug', values: ['Zwart', 'Lichtgrijs, fijn donker getekend']},
+      {label: 'Kop', values: ['Vaak met afhangende kuif', 'Ronder; zonder afhangende kuif']},
+      {label: 'Kopglans', values: ['Kan paarsachtig of groenig lijken', 'Kan groenig lijken; licht beïnvloedt beide']},
+    ],
+    tip: 'Vergelijk de rugtekening en het kopprofiel bij hetzelfde kleed en vergelijkbare houding. Kopglans en alleen een onzichtbare kuif zijn niet voldoende.',
+  },
+  {
+    label: 'Kuifeend en Topper · vrouwtjes in rust',
+    birds: [
+      {id: 'sp092', source: 'kuifeend', plumage: 'adult_f', marks: 'Bruin; vaak een korte kuif en soms wit rond de snavelbasis.'},
+      {id: 'sp133', source: 'topper', plumage: 'adult_f', photoMissing: true, marks: 'Bruin; vaak een bredere witte snavelbasis en een rond kopprofiel.'},
+    ],
+    rows: [
+      {label: 'Kopprofiel', values: ['Soms een korte kuif', 'Rond, zonder duidelijke kuif']},
+      {label: 'Snavelbasis', values: ['Wit kan voorkomen', 'Vaak uitgebreider wit, maar variabel']},
+      {label: 'Rug', values: ['Doorgaans donkerder en egaler', 'Vaak lichter, met fijnere tekening']},
+    ],
+    tip: 'Bij vrouwtjes en jonge vogels overlappen meerdere kenmerken. De witte snavelbasis alléén bepaalt de soort niet; bij twijfel geen zekere determinatie. Sluit ook Kleine Topper niet op één kenmerk uit.',
+  },
+  {
     "label": "Kuifeend en Tafeleend · mannetjes in prachtkleed",
     "birds": [
       {
