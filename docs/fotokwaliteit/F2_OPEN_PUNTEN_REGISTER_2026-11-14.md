@@ -1,7 +1,7 @@
 # Birdspot F2 — register open punten en uitgesteld fotoonderzoek
 
 **Eigenaarbesluit 14 november 2026 · Werkdocument (DRAFT, geen foto-PASS)**
-**Historische basis:** F2-15 `bccd09599a2b9fd7fb23771b3f6c262542b4c08a`; F2-20 voortzetting op PR #221 `fa05d08d203f656c5c7bce328c6deec6d3961632`, historische F2-19-bevindingen behouden. **Actuele reikwijdte (F2-24, 15 november 2026):** 63/140 soorten individueel opgepakt, 77/140 nog **NOT TESTED in F2**; het historische basischeckpoint van 51/140 uit F2-20 blijft in de onderliggende brondossiers bewaard. Geen van deze aantallen is gelijk aan een foto-PASS. Dit register is een index op de bestaande per-batch brondossiers, niet een vervanging van de canonieke 9-punts-audit.
+**Historische basis:** F2-15 `bccd09599a2b9fd7fb23771b3f6c262542b4c08a`; F2-20 voortzetting op PR #221 `fa05d08d203f656c5c7bce328c6deec6d3961632`, historische F2-19-bevindingen behouden. **Actuele reikwijdte (F2-25, 15 november 2026):** 66/140 soorten individueel opgepakt, 74/140 nog **NOT TESTED in F2**; het historische basischeckpoint van 51/140 uit F2-20 blijft in de onderliggende brondossiers bewaard. Geen van deze aantallen is gelijk aan een foto-PASS. Dit register is een index op de bestaande per-batch brondossiers, niet een vervanging van de canonieke 9-punts-audit.
 
 ## Hoe vervolgonderzoek te sturen
 
@@ -94,11 +94,17 @@ De tekst in de kolom 'Open uit bronronde' is overgenomen uit de laatste F2-voort
 
 **F2-24 bron-/beeldcheckpoint:** 7 echte GitHub-WebP's met exacte blobhashes en bijbehorende fotoherkomst in [F2_24_BRON_EN_LIMIETEN.json](F2_24_BRON_EN_LIMIETEN.json). Leeftijdsvergelijking zonder twee oorspronkelijke jeugdbeelden **niet** forceren; inhoud/kwaliteit, rechten, locatiegevoeligheid en mobiele bediening blijven afzonderlijke controles.
 
+| sp070 Veldleeuwerik | F2-25 | Hoofdfoto `sp070.webp` en bestaande goedgekeurde vrije-vluchtfoto `sp070-flight.webp` rechtstreeks visueel geopend; beide herkenbaar. Vogelbescherming bevestigt kuif/streep/zangvlucht. Originele Commons-foto **Diliff CC BY-SA 3.0** benoemt geslacht **onbekend**. Onderbouwde soortkenmerken en nieuwe rust- plus vluchtfotoparen met Graspieper op beide kaarten. Algemeen `juv: Geschubd bruin` zonder per-individu-bron vervangen door `null`; geen juveniele foto verzonnen. Origineel→WebP byte/pixel, volledige credit, echte mobiele inspectie **NOT TESTED**. |
+| sp072 Graspieper | F2-25 | Hoofd-`sp072.webp`, `sp072-flight.webp` en `sp072-juv.webp` visueel beoordeeld. Vliegbeeld toont echte vrije vlucht, en flankstreping en oogring zijn in hoofdfoto zichtbaar. Bronregistratie **Charles J. Sharp CC BY-SA 4.0** (hoofdfoto) en **Caroline Legg CC BY 2.0** (jeugdbeeld), maar exacte Commons-pagina’s niet bereikbaar, rechten en individuele leeftijd **NOT TESTED**. Twee wederkerige complete fotovergelijkingen met Veldleeuwerik. Geen passende Boompieperfoto: bestaande tekstkenmerken intern behouden, géén leeg gebruikerspaneel. |
+| sp075 IJsvogel | F2-25 | Hoofd-`sp075.webp`, `sp075-flight.webp`, `sp075-female-review.webp`, `sp075-male-review.webp` en `sp075-juv-review.webp` als echte WebP geopend, plus bestaande Bijenetervergelijkingsfoto; oorsprong/rol in [F2-25-dossier](F2_25_BRON_EN_LIMIETEN.json). Bestaand IJsvogel/Bijeneter-rustfotopaar scherper uitgelegd (gele/witte keel, snavelvorm, staart). Commons-hoofdfoto **Andreas Trepte CC BY-SA 2.5** bevat extra makerwensen rond websitecredit/contact en socialmediagebruik; rechten-/attributie-PASS **OPEN**. Bestaande geslacht-/juvenielfoto’s niet als onafhankelijke leeftijd/sekse-PASS afgetekend. |
+
+**F2-25 beeld-/broncheckpoint:** 11 lokale WebP-bestanden visueel geïnspecteerd en blob-SHA’s geregistreerd; Vogelbescherming-soortpagina’s Veldleeuwerik, Graspieper, IJsvogel en Bijeneter daadwerkelijk gelezen. De oorspronkelijke exacte Commons-pagina’s van Graspieper/juveniel/Bijeneter waren in deze ronde niet toegankelijk; originele foto-to-WebP-identiteit en alle rechten blijven open. In [F2_25_BRON_EN_LIMIETEN.json](F2_25_BRON_EN_LIMIETEN.json) blijven deze beperkingen per bestand traceerbaar.
+
 ## Vervolgcontrole en aftekening
 
 1. Bij een volgende F2-ronde: controleer alleen de drie gekozen soorten op oorspronkelijke bestanden/CC-rechten, soort/rol, fotokwaliteit, twee passende vergelijkingbeelden en browserbediening; noteer de individuele status en bronlinks.
 2. Werk dit register additief bij: verander een open punt pas in **VERIFIED** na herhaalbare nieuwe bron-/beeld- en uitvoerbewijzen. Laat historische onzekerheid staan met datum en reden; geen stille aftekening op basis van 140 kaart-renders.
-3. **Niet gereviewd in F2:** 77 soorten. De individuele F2-controle omvat 63 van de oorspronkelijke 140 fotokaarten; een aparte bron-/WebP-/toestel-PASS blijft per soort nodig. Volgorde na F2-16 opnieuw afleiden uit de 140-fotolijst en F2-voortgang; geen ongeteste soorten starten vóór een passende batch.
+3. **Niet gereviewd in F2:** 74 soorten. De individuele F2-controle omvat 66 van de oorspronkelijke 140 fotokaarten; een aparte bron-/WebP-/toestel-PASS blijft per soort nodig. Volgorde na F2-16 opnieuw afleiden uit de 140-fotolijst en F2-voortgang; geen ongeteste soorten starten vóór een passende batch.
 4. Later diepgaand fotoonderzoek: per open beeldtype minimaal soortnaam/wetenschappelijke naam, doelkleed, foto-oorsprong, ondertitel, auteur, licentie, bronbestand/versie, vrijgave voor herpublicatie en indien passend exacte oorspronkelijke pixels. Bij twijfel lege positie laten staan.
 
 ## Live-/release-gate — aparte status
