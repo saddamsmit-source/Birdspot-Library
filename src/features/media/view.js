@@ -5,7 +5,7 @@
  * Favorites and Film shortlist are optional, sidecar ID collections.
  * No thumbnails are modified or deleted; duplicate hints are non-destructive.
  */
-import { getDB } from '../../data/db.js';
+import { getDB, isPersonalGuidePhoto } from '../../data/db.js';
 import { getSightings } from '../../data/sightings.js';
 import { SPECIES } from '../../data/species.js';
 import { getPhotoUrl, revokePhotoUrl } from '../../utils/photoUrl.js';
@@ -272,7 +272,7 @@ export function renderMedia(el, { mediaId, onSearchSelect } = {}) {
       const bySighting=new Map(sightings.map(s=>[s.id,s]));
       const byPhoto=new Map();
       for(const s of sightings) for(const id of (s.photoIds||[])) byPhoto.set(id,s);
-      state.items=photos.filter(p=>p?.blob instanceof Blob && (imageType(p.blob.type||p.type)||videoType(p.blob.type||p.type)))
+      state.items=photos.filter(p=>p?.blob instanceof Blob && !isPersonalGuidePhoto(p) && (imageType(p.blob.type||p.type)||videoType(p.blob.type||p.type)))
         .map(photo=>{
           const s=bySighting.get(photo.sightingId)||byPhoto.get(photo.id);
           const speciesId=s?.speciesId||photo.speciesId||'';
