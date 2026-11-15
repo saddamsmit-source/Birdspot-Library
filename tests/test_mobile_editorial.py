@@ -87,7 +87,7 @@ def main():
       capture(p,'mobile_cinematic_wetland_390.png')
 
       # New sheet: navigation and actions must remain within the viewport.
-      p.locator('#fab').click()
+      p.locator('#fab').click();p.locator('[data-quick-action="seen"]').click()
       p.locator('#addSightingSheet.open').wait_for(timeout=9000)
       for width in (320,360,390,430):
         p.set_viewport_size({"width":width,"height":844})
@@ -127,7 +127,7 @@ def main():
       assert p.locator('.signature-species-detail-actions').count()==0
       capture(p,'mobile_species_information_390.png')
       p.locator('.signature-species-detail-close').click()
-      p.locator('#fab').click()
+      p.locator('#fab').click();p.locator('[data-quick-action="seen"]').click()
       p.locator('#addSightingSheet.open').wait_for(timeout=9000)
       p.locator('#speciesPickerBtn').click()
       p.locator('#spPickerList .species-row[data-id="sp002"]').click()
@@ -156,8 +156,8 @@ def main():
       p.locator('#detailClose').click()
       p.locator('#detailSightingSheet').wait_for(state='detached')
 
-      # Existing FAB stays a normal observation (regression).
-      p.locator('#fab').click()
+      # FAB plus explicit Seen choice still opens a normal observation (regression).
+      p.locator('#fab').click();p.locator('[data-quick-action="seen"]').click()
       p.locator('#addSightingSheet.open').wait_for(timeout=9000)
       assert p.locator('#sightMethodGroup input[value="seen"]').is_checked()
       p.locator('#addSheetCancel').click()
