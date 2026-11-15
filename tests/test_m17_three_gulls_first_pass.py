@@ -219,7 +219,16 @@ def mobile_browser():
                                 # Source slot named adult_m is not an individual male claim.
                                 # Photo is reused as hero and referenced (not duplicated) below.
                                 assert "Foto: de hoofdfoto bovenaan deze kaart" in panel.inner_text()
-                            assert bird["similar"] in panel.inner_text(), (bird_id, "Comparison missing")
+                            # UX v1.6: an all-text or one-photo source pair must not generate
+                        # a confusing empty photo panel. Complete Kokmeeuw/Zwartkopmeeuw
+                        # comparisons remain visible and are tested below.
+                        if bird_id == "sp164":
+                            assert bird["similar"] not in panel.inner_text(), (
+                                bird_id, "Text-only Grote/Kleine Mantelmeeuw comparison should be hidden")
+                            assert "Nog geen passende foto" not in panel.inner_text()
+                        else:
+                            assert bird["similar"] in panel.inner_text(), (bird_id, "Complete comparison lost")
+                            assert panel.locator(".sd-cmp-panel").count() >= 1
                             assert not page.evaluate("document.documentElement.scrollWidth > innerWidth + 2"), (
                                 bird_id, width, "Horizontal overflow"
                             )
