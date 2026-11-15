@@ -272,6 +272,14 @@ De eigenaarapp mag **niet** automatisch privéwaarnemingen, exacte GPS of origin
 
 **Uitwerking (DRAFT, geen appwijziging):** [Eigen foto's, bijdrages, beloningen en Media/Sound Plus v0.1](docs/roadmap/BIRDSPOT_EIGEN_FOTOS_BIJDRAGEN_BELONINGEN_MEDIA_PLUS_V0.1_DRAFT.md). Eerdere LOCKS voor gidsbijdragen en credits blijven ongewijzigd; alleen nieuwe productwensen zijn toegevoegd.
 
+## Snel waarnemen via de centrale + knop en Merlin — eigenaarbesluit 15 november 2026
+
+**Gewenste kern-UX (DRAFT implementatie, nog niet gebouwd):** achter de bestaande centrale **+ / Waarnemen**-knop komt een duidelijke tweekeuze: **`Vogel gezien / waarneming toevoegen`** of **`Geluid herkennen met Merlin`**. De eerste keuze opent zonder Merlin de huidige Birdspot-waarnemingsroute; de tweede laat de gebruiker Merlin Bird ID als **gratis externe herkenningshulp** gebruiken en daarna via dezelfde Birdspot-formulier-/kaartpinroute een soort **zelf bevestigen en registreren**. Dit moet op het hoofdscherm direct werken en mag de bestaande appbrede + functie, datum/locatie, Gezien/Gehoord/Beide, persoonlijke kaart, offline opslag, ZIP-herstel, terugnavigatie of bronstatus niet verstoren.
+
+**Bewijsgrens:** de huidige code heeft al `seen/heard/both`, `identificationSource=merlin`, handmatige `merlinVerification` en `openPinPicker`, maar **de + knop geeft nu geen keuze**, en de huidige waarnemingsbestandskiezer accepteert **foto/video, geen audio**. Merlin ondersteunt bestandsdelen/importeren; een **officieel automatische resultaat-API, direct openen naar Sound ID of terugkeer met soort-ID naar Birdspot** is niet aangetoond. Ontwerp daarom eerst **veilige handmatige terugkeer/soortkeuze**, met expliciete status `suggestie` tegenover `zelf gecontroleerd`. Alleen een daadwerkelijk **geziene** vogel mag als `Gezien` worden geteld; na uitsluitend gehoord geluid blijft het `Gehoord`. Een privépin komt uitsluitend van Birdspot/GPS/gebruikerskeuze, niet uit Merlin.
+
+De gratis externe Merlin-route wordt **niet achter een paywall geplaatst**. Een later zelfstandig, commercieel gelicentieerd Birdspot Sound Plus is een ander kandidaatproduct. **Uitvoering in aparte kleine, toetsbare batches** na remote writer-/HEAD-check en actuele F2-afweging; geen koppeling, opname-import of release claimen vóór fysieke Android/iOS- en offline/restoretests. [Uitwerking en acceptatiecriteria: Birdspot + / Merlin Snelwaarnemen v0.1 DRAFT](docs/roadmap/BIRDSPOT_PLUS_MERLIN_SNELWAARNEMEN_V0.1_DRAFT.md).
+
 ## Afwijkingen van het Handbook
 
 Geen bekende afwijkingen op dit moment.

@@ -73,6 +73,8 @@ De mogelijke **Birdspot Sound Plus**-functie is een optioneel geïntegreerd herk
 
 Een **kleine eenmalige betaling** is een prijs**hypothese**, geen besluit; bij doorlopende providerkosten kan een gebruikslimiet of abonnement realistischer zijn. Vergelijk steeds met gratis Merlin, zodat Birdspot geen onduidelijke betaalmuur vóór bestaande gratis functies creëert.
 
+**Nieuw gekoppeld eigenaarbesluit 15-11-2026 — gratis Merlin via centrale +:** de gebruiker moet met de centrale `Waarnemen +`-knop snel kunnen kiezen tussen onmiddellijk zelf een vogel registreren en via de **gratis externe Merlin-app** geluid herkennen. Na eigen bevestiging volgt de bestaande Birdspot-waarnemings- en pinroute. Dit is **een gratis kern-UX-wens, geen onderdeel van betaalde Sound Plus**. Onbewezen automatische API/deep-link, de huidige ontbrekende audiobijlage in addSheet en toestel-/offlinegates staan in de aparte [Snelwaarnemen + / Merlin-brief](BIRDSPOT_PLUS_MERLIN_SNELWAARNEMEN_V0.1_DRAFT.md). Alle bestaande Premium-opties in dit hoofdstuk blijven kandidaten voor **latere eigen gelicentieerde functies**.
+
 ## 7. Digitale aankopen en platformgrenzen
 
 Bij distributie als app via Google Play of Apple's App Store gelden specifieke digitale-content-/in-app-purchase-regels en uitzonderingen per platform/regio. Vastlegging 15-11-2026, niet als technische implementatiebesluit:
