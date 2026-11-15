@@ -298,6 +298,18 @@ Naast de F2-fotocontrole geldt voortaan per soort ook bronvast **geluids- en ver
 
 **Pilot:** maximaal drie soorten Merel, Tjiftjaf en Fitis; geregistreerde zang en roep met juiste bron en rechten controleren, Chrome offline afspelen testen, vervolgens modellicentie en herkenningsprestatie gescheiden op echte telefoon testen. Een bestaand geluidsfragment is niet hetzelfde als een automatisch herkennend model. Onzekere soort of vergunning blijft expliciet open; nooit vervangen door een gok.
 
+## F3-herijking van de eerste 140 — eigenaarbesluit 15 november 2026
+
+De eigenaar wil **opnieuw controleren vanaf de eerste van de bestaande 140 vogelsoorten** totdat de kaarten daadwerkelijk voldoen aan **alle laatst bevestigde afspraken**. **Geen nieuwe foto-/geluidsuitbreidingen voor soorten buiten deze 140**, inclusief bestaande soorten 141–597, vóórdat de eerste groep volledig volgens het bijgewerkte bewijscontract is afgetekend. Dit verbiedt geen correctie van een kritieke bug elders, maar stelt de inhoudelijke groeivolgorde vast.
+
+**Herijking ≠ eerdere successen weggooien.** Behoud de bestaande F1/F2-bron- en auditregistraties, originele media, credits en historie. De oude F2-teller **84/140 opgepakt**, eerdere 101 `audited:true` en 15 oude `VERIFIED` zijn historische bewijsstanden, **geen nieuwe F3-FULL PASS**. Begin de nieuwe afzonderlijke F3-gate bij **0/140 volledig opnieuw afgetekend**, en doorloop de soorten vanaf `sp002` in kleine, onafhankelijke batches van maximaal drie; recheck eerder bewezen onderdelen alleen waar de bron/regel, vergelijkingsfoto, rechten of gebruikersweergave dat vereist.
+
+**Alle relevante controles per soort:** herkomst/licentie/daadwerkelijke soort en rol van originele foto's, hoofdfoto/kleden/vlucht, correcte man/vrouw/juveniel-evidentie, complete twee-fotopaar-vergelijkingen, compacte foto's naast elkaar, rustig zang-/roepblok (met verplichte credits bereikbaar), audio herkomst/soort/rol/recht en offline speler, Vogelbescherming en werkelijk gelezen ANWB-passage, biometrie, Sovon en eBird met waarnemingsbias, persoonlijke vervangfoto/feedback, echte mobiele schermroute, bronnenbehoud en onafhankelijke hercontrole. Geen verkeerd zang-/roepfragment, veronderstelde toestemming of denkbeeldig geslachts-/leeftijdsetiket om een kaart compleet te verklaren; biologische niet-toepasselijkheid kan alleen met onderbouwd en controleerbaar uitzonderingsbesluit.
+
+**Status en vindplaats:** [F3-140 nieuwe checklist](docs/fotokwaliteit/F3_140_HERCONTROLE_V0.1_DRAFT.json), [eerste batch sp002/003/004](docs/fotokwaliteit/F3_R01_DUIVEN_HERCONTROLE_2026-11-15_DRAFT.md) en bestaand [geluids-/eBird-protocol](docs/audio/BIRDSPOT_EBIRD_SOVON_AUDIO_BRONPROTOCOL_V0.1_DRAFT.md). **F3-R01 (Houtduif, Holenduif, Turkse Tortel) is IN REVIEW / BLOCKED** omdat geluidsopnamen ontbreken en bron-/UX-/toestelbewijzen openstaan. PR #241 (foto's naast elkaar, één rustige audio-creditsuitklap) en PR #244 (Home-afstanden) zijn niet onderdeel van de geïntegreerde kandidaat-PR #242; voeg niet stilzwijgend losse CI-scores samen tot één app-PASS. Dat is een integratie-/preview- en releasegate.
+
+**Releasegrens:** document- en F3-register-PASS of een groene CI betekent nog niet dat de actuele kandidaten publiek live zijn. Openbare review 1.27.6 blijft een andere SHA; werkelijke Android/PWA, offline/dataherstel, publicatierechten, beveiligde feedback/backend en gebruikersreview vallen onder de bestaande releasegates. `main`, preview en gebruikersdata worden niet zonder afzonderlijke gecontroleerde release gemuteerd.
+
 ## Afwijkingen van het Handbook
 
 Geen bekende afwijkingen op dit moment.

@@ -1,0 +1,22 @@
+name: Birdspot F3 140 Unified Rebaseline QA
+on:
+  pull_request:
+    paths:
+      - 'docs/fotokwaliteit/F3_140_HERCONTROLE_V0.1_DRAFT.json'
+      - 'docs/fotokwaliteit/F3_R01_DUIVEN_HERCONTROLE_2026-11-15_DRAFT.md'
+      - 'docs/audio/**'
+      - 'tests/test_f3_140_unified_rebaseline.mjs'
+      - '.github/workflows/f3-140-unified-review-qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  f3-cohort:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: All 140 existing photo assets, audio source indices, prior status and F3 gates
+        run: node tests/test_f3_140_unified_rebaseline.mjs
+      - name: Preserve prior 140 audio-source compatibility
+        run: node tests/test_audio_140_contract.mjs
