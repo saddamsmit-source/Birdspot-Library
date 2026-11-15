@@ -144,7 +144,10 @@ export function mountPersonalGuide(sheet, species) {
   }
 
   dialog.addEventListener('keydown', event => {
-    if (event.key === 'Escape') event.stopPropagation();
+    if (event.key !== 'Escape') return;
+    event.preventDefault();
+    event.stopPropagation();
+    closeEditor();
   });
   dialog.addEventListener('cancel', event => {
     if (busy) event.preventDefault();

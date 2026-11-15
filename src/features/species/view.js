@@ -659,9 +659,14 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
   if (ctx) ctx.detailCleanup = close;
 
   function keyHandler(e) {
-    if (e.key === 'Escape') {
-      if (!closePhotoInfo(sheet)) close();
+    if (e.key !== 'Escape' || e.defaultPrevented) return;
+    const editor = sheet.querySelector('.sd-guide-editor[open]');
+    if (editor) {
+      e.preventDefault();
+      editor.querySelector('.sd-guide-close').click();
+      return;
     }
+    if (!closePhotoInfo(sheet)) close();
   }
   document.addEventListener('keydown',keyHandler);
   sheet.addEventListener('click',e => {
