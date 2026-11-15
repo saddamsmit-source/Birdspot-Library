@@ -182,6 +182,16 @@ als naslagwerk erbij.
   Wijzigingen voor de openbare reviewversie gaan via een release-PR naar
   `preview/birdspot-review`. Een release naar `main` heeft eigen productiecriteria.
 
+### Interactieve app-preview en eigenaarreview — 15 november 2026
+
+**Eigenaarbesluit / Birdspot-werkafspraak.** Bij iedere relevante zichtbare of functionele update ontvangt de eigenaar een **direct te openen, werkende Birdspot-app-preview** in dezelfde compacte kaart-/knopvorm als de door de eigenaar goedgekeurde ChatGPT-weergave **'Birdspot Library — Open app-preview'**. Geen losse screenshot als vervanging van echte bediening. Een reviewlink moet aantoonbaar naar de **geteste, actuele kandidaat-SHA** verwijzen; noem daarnaast appversie, gewijzigde functies/soorten en teststatus. Een verouderde publieke preview is **geen** bewijs van de nieuwste wijzigingen; documentatie-only werk hoeft niet als nieuw appdeployment te worden voorgesteld.
+
+- Test zo mogelijk op een **afgeschermde staging-preview** met onafhankelijke toegangscontrole en geïsoleerde test-/gebruikersdata; controleer de URL en SHA vóór aanbieden. Kan een passende interactieve preview niet worden gemaakt of geopend: meld **BLOCKED / NOT TESTED**, toon de bestaande preview uitsluitend met het expliciete label **oudere versie**, en lever niet enkel screenshots als equivalent.
+- Bij review test de eigenaar zelf de volledige route **openen → zoeken/navigeren → betreffende vogel/feature → foto/vergelijking/handeling → terug/annuleren → waar relevant opslaan/heropenen**. CI en screenshots zijn aanvullend bewijs, geen vervanging van eigenaarreview/fysieke toesteltest.
+- Verzamel opmerkingen direct per **soort-ID, foto-/rolslot, feature, versie/SHA, verwachte en feitelijke uitkomst**. Koppel correcties aan één issue/PR, herstel herhaalbare gedeelde componenten of regels op één plek en hertest relevante gevallen. Zo hoeven eerder behandelde soorten **niet van vooraf aan opnieuw**; laat dezelfde geteste verbetering ook gelden voor latere soorten en controleer bestaande soorten met gerichte regressie. Bestaande bron-, rechten- en volledigheidsgates blijven staan.
+- Een tussentijdse wijziging kan een nieuwe **reviewkandidaat** opleveren zonder volledige F1/F2-rondes opnieuw te doen, maar de **geïntegreerde releasegate** blijft vereist voor publieke release. De eigenaar beoordeelt het werkende resultaat; geen automatische merge/livegang.
+- Deze afspraak is specifiek Birdspot-reviewgedrag en werkt de algemene previewregel (Handbook L-068 / §§3.12, 4.11) uit, zonder een tweede algemene norm te maken.
+
 ## Draaien en testen
 
 ```bash
@@ -241,6 +251,16 @@ Op eigenaarbesluit geldt deze uitvoeringsvolgorde voor de **140 soorten met best
 **Fotovergelijking (14-11-2026).** Een vergelijking onder ‘Lijkt op’ toont beide vogels naast elkaar, ook op mobiel, en mag passende gidsfoto’s hergebruiken. De eigen hoofd-, kleed- en vluchtsecties blijven vrij van dubbele opnamen. De herkenningstest controleert expliciet twee volwassen en twee juveniele vluchtfoto’s bij Buizerd en Ruigpootbuizerd, twee rustfoto’s bij Fitis en Tjiftjaf en het openlaten van een ontbrekende foto. Zie de fotonorm §3.3.
 
 De fysieke Android-praktijkpilot is door de eigenaar uitgesteld en blijft NOT TESTED; geen merge, GitHub Pages-/Vercel-deploy of livegang zonder apart eigenaarbesluit.
+
+## Toekomstige eigenaarapp / hoofdapp — pas na volwassen gebruikerskern
+
+**Vastgelegd eigenaarbesluit 15 november 2026:** **nu niet ontwikkelen en nu niet koppelen**. Zodra de huidige Birdspot-gebruikersapp volgens de eigenaar redelijk af en stabiel is, volgt een **aparte kickoff** voor een persoonlijke **eigenaarapp**. Die start als een **volwaardige kopie van de dan geteste gebruikersapp**: dezelfde vogelgids, kaarten, waarnemingen, media, collecties, navigatie, uitstraling en alle overige gebruikersfuncties, **plus** afzonderlijke beheermogelijkheden. Geen los dashboard dat de gebruikersfunctionaliteit vervangt.
+
+Beheerkandidaten: feedback ontvangen en opvolgen; positieve/negatieve feedback in tabellen/diagrammen en trends; contact bij toestemming; bug-/verbeterregister per soort/versie; privacybewuste gebruiksstatistieken; moderatie van community-bijdragen; overzicht van optionele landenpakketten (o.a. Frankrijk/Duitsland); later prijzen, aankopen, omzet, kosten en restituties; campagnes, aanbiedingen en opt-in pushmeldingen; release-/incident-/hersteloverzicht. Niet elk voorstel is al goedgekeurd als uitvoeringsscope: kies later een kleine feedbackbeheerroute als eerste pilot. Accounts, datakoppelingen, providerkeuze en betaalfunctionaliteit blijven **OPEN** tot de latere fase.
+
+De eigenaarapp mag **niet** automatisch privéwaarnemingen, exacte GPS of originele klantfoto's inzien. Scheid eigenaarrechten van gebruikersrechten; bij toekomstige gedeelde data zijn server-side A/B-autorisatie, auditlogs, privacy, herstel, moderatie en kosten harde gates. Ontwerp een onderhoudbare manier om gebruikersfuncties later consistent te houden, maar kies **nu geen technische app-/codekoppeling**.
+
+**Uitwerking en backlog (DRAFT, geen code of release):** [Toekomstige Birdspot-eigenaarapp v0.1](docs/roadmap/BIRDSPOT_EIGENAARAPP_VISIE_V0.1_DRAFT.md).
 
 ## Afwijkingen van het Handbook
 
