@@ -56,7 +56,7 @@ Volgens het **feitelijke** `assets/species/field-guide-media.json` hebben alle d
 - **Turkse Tortel XC82758:** een direct leesbare tweede Commons-pagina <https://commons.wikimedia.org/wiki/File:JMJ-20110703-070858-000380-USA-IA-DordtPrairie-MODO.ogg> bevestigt auteur **Jonathon Jongsma** en `CC BY-SA 3.0` voor een bronopname die verwijst naar **XC82758**. De bijbehorende oorspronkelijke geluidsidentiteit, geüploade bestanden en echte luistercontrole moeten nog door de volledige media- en creditsroute voordat Birdspot deze als zang mag publiceren. **Geen** download-/distributiehandeling uitgevoerd.
 - **Houtduif:** <https://commons.wikimedia.org/wiki/File:Columba_palumbus_birdsong.ogg> beschrijft bij het PD-fragment expliciet **Ekster op de achtergrond**. Die akoestische vermenging is ongeschikt als onvoorwaardelijk 'zuivere Houtduif'-testfixture. Zoek/luister een schoner rechtmatig voorbeeld of markeer achtergrondvogel duidelijk; geen automatische modeltraining op basis van deze bronclaim.
 
-**Door deze aanvullende checks wordt geen enkele F3 audio-gate VERFIED**: bronrechten moeten toepasselijk voor de afgeleide appbestanden en geplande toekomstige commerciële distributie worden bewezen; een titelsnippet van een openbare site is daarvoor onvoldoende.
+**Door deze aanvullende checks wordt geen enkele F3-audiocontrole VERIFIED**: bronrechten moeten toepasselijk voor de afgeleide appbestanden en geplande toekomstige commerciële distributie worden bewezen; een titelsnippet van een openbare site is daarvoor onvoldoende.
 
 ## 4. Verspreiding en biologie
 
