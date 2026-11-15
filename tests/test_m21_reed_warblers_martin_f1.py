@@ -223,7 +223,12 @@ def browser_test():
                                        (img.currentSrc||img.getAttribute('src')||'').endsWith(path)).length""",
                                     bird["hero"])
                                 assert repeated == 0, (sid,"hero reused in gallery",repeated)
-                                assert bird["similar"] in panel.inner_text(), (sid,"comparison lost")
+                                # UX v1.6: Oeverzwaluw/Huiszwaluw was intentionally
+                                # text-only in the source register. Do not present
+                                # a two-empty-photo panel as an actual comparison.
+                                assert bird["similar"] not in panel.inner_text(), (
+                                    sid, "incomplete source comparison should stay out of UI")
+                                assert "Nog geen passende foto" not in panel.inner_text()
                                 print(f"M21 UX-OBSERVED sp116 {width}px: real flight is hero, no duplicate flight card")
                             if sid=="sp108":
                                 assert "In vlucht" in panel.inner_text()
