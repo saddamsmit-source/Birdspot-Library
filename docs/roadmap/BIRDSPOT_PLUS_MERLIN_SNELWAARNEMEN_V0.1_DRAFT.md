@@ -83,3 +83,12 @@ Cornell adviseert expliciet dat een Merlin-voorspelling **slechts een suggestie*
 - Current F2 foto-audit in de codeketen loopt afzonderlijk, maximaal 3 soorten per batch. Deze documentatietaak wijzigde geen waarnemingsdata, soortfoto's of appsoftware.
 
 **Handoff:** bewaar base/head-SHA en CI-bewijs bij aparte code-PR; lees dan de nieuwste PR #236 (of opvolger), schrijf niet op de bestaande F2- of foto-inboxbranch en hertest de effectieve + handler, addSheet, pinpicker, offline/ZIP op de gecombineerde kandidaat.
+
+
+## 8. Vervolgidee: Veldluistermodus met meerdere soorten (15-11-2026)
+
+**Naast de bestaande gratis Merlin-handoff** wil de eigenaar later een eigen Birdspot-**Veldluistermodus**: bewust starten, tijdens één sessie meerdere soortsuggesties verzamelen, deze herkennen als `nog niet geregistreerd` of `al gehoord maar nog niet gezien`, en **na eigen controle** meerdere soorten in één handeling als afzonderlijke persoonlijke waarnemingen/kaartpinnen opslaan. Deze functie heeft een **afzonderlijk, juridisch getoetst herkenningsmodel** nodig; de bestaande gidsaudio en de externe Merlin-app sturen niet automatisch soortresultaten naar Birdspot.
+
+**UI-relatie:** de eerder afgesproken **twee keuzes** direct achter de centrale + blijven de snelle hoofdroute. Een toekomstige langdurige Veldluistermodus is een onderliggende optie bij `Geluid` en wordt pas na prototype-/eigenaarreview aan het scherm toegevoegd. Scherm-uit-/achtergrondluisteren is met de huidige PWA **NOT PROVEN** en wordt niet beloofd. Verifieer modellicentie, offline prestatie, microfoonrechten, eigen privacy, batterij en fysieke Android/iOS apart.
+
+**Uitgebreid onderzoeks- en acceptatiedossier:** [Birdspot Veldluistermodus v0.1 DRAFT](BIRDSPOT_VELDLUISTERMODUS_V0.1_DRAFT_2026-11-15.md). Gratis Merlin behouden; betaalde zelfstandige Sound Plus blijft een aparte latere kandidaat.
