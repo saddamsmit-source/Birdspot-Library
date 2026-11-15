@@ -35,6 +35,8 @@ jobs:
       fail-fast: false
       matrix:
         baseline:
+          - name: 1.27.6-current-review
+            ref: 21ce9060f789103cfbba98fa78f6b53f4b9cea5b
           - name: 1.14.0-main
             ref: 5bf67043e830e977749f0ee593cf9f41f0e2822b
           - name: 1.27.5-pages
