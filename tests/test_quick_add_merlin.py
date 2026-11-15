@@ -43,6 +43,9 @@ def check(page, width):
 
     sheet = open_sound(page)
     expect(sheet.locator('#soundSave')).to_be_disabled()
+    expect(sheet.locator('#soundMoment')).to_have_text('15-11-2026 · 14:42')
+    expect(sheet.locator('#soundPosition')).to_contain_text('51.92440, 4.47770')
+    expect(sheet.locator('#soundDate')).to_be_hidden()
     assert sheet.evaluate('el => el.scrollWidth <= el.clientWidth + 1')
     sheet.get_by_role('button', name='Terug naar keuzes').click()
     expect(page.get_by_role('heading', name='Wat wil je vastleggen?')).to_be_visible()
@@ -100,7 +103,7 @@ def check(page, width):
         expect(sheet.get_by_role('checkbox', name=name, exact=True)).to_be_checked()
     for name in BIRDS[len(use):]:
         expect(sheet.get_by_role('checkbox', name=name, exact=True)).not_to_be_checked()
-    sheet.get_by_text('Details toevoegen', exact=True).click()
+    sheet.get_by_text('Details aanpassen', exact=True).click()
     sheet.get_by_label('Pleknaam').fill('Testplek aan het water')
     sheet.get_by_label('Notitie voor deze vogels').fill('Samen gehoord tijdens de opname')
     expect(sheet.locator('#soundSave')).to_have_text(f'Pin {len(use)} waarnemingen')
@@ -149,6 +152,7 @@ def check(page, width):
     add_species(sheet, ['Buizerd', 'Roodborst'])
     if width == 320:
         sheet.get_by_role('checkbox', name='Roodborst').uncheck()
+    sheet.get_by_text('Details aanpassen', exact=True).click()
     sheet.get_by_role('button', name='Gebruik mijn locatie').click()
     expect(sheet.locator('#soundPosition')).to_contain_text('GPS is niet beschikbaar')
     expect(sheet.locator('#soundSave')).to_be_disabled()
@@ -162,6 +166,76 @@ def check(page, width):
     expected = 1 if width == 320 else 2
     assert len([item for item in rows(page) if item['lat'] == 52.1 and item['lon'] == 5.1]) == expected
     print(f'PASS {width}px: waveform, restored audio and choices, GPS, {len(use)} species with storage retry, and {expected} species with manual pin', flush=True)
+
+
+def check_existing_pins(page):
+    page.locator('#birdspotSplashSkip').click()
+    page.evaluate("""() => localStorage.setItem('birdspot-sightings', JSON.stringify({
+      schemaVersion: 2, sightings: [{id: 'legacy-pin', speciesId: 'sp045', speciesName: 'Merel',
+        date: '2026-11-14', lat: 51.92454, lon: 4.4777, locationName: 'Vijverpad', photoIds: []}]
+    }))""")
+    page.clock.set_fixed_time(DATE)
+    sheet = open_sound(page)
+    expect(sheet.locator('#soundPosition')).to_have_text('Bestaande pin · Vijverpad')
+    expect(sheet.locator('#soundMoment')).to_have_text('15-11-2026 · 14:42')
+    expect(sheet.locator('#soundPlaceOptions')).to_be_hidden()
+    page.clock.set_fixed_time(DATE.replace(minute=43))
+    sheet.get_by_role('button', name='Start opname').click()
+    expect(sheet.locator('#soundMoment')).to_have_text('15-11-2026 · 14:43')
+    expect(sheet.locator('#soundElapsed')).to_have_text('00:01')
+    sheet.get_by_role('button', name='Stop opname').click()
+    add_species(sheet, ['Fitis', 'Tjiftjaf'])
+    expect(sheet.locator('#soundPosition')).to_have_text('Bestaande pin · Vijverpad')
+    sheet.locator('#soundSave').click()
+    expect(page.locator('#mapSheetName')).to_have_text('Vijverpad', timeout=15000)
+    expect(page.locator('.place-sightings button')).to_have_count(3)
+    items = rows(page)
+    assert len(items) == 3 and len({item['placeId'] for item in items}) == 1, items
+    new_items = [item for item in items if item['id'] != 'legacy-pin']
+    assert all(item['lat'] == 51.9244 and item['time'] == '14:43' for item in new_items), new_items
+    page.locator('#mapSheetClose').click()
+
+    page.evaluate("""() => {
+      const key = 'birdspot-places';
+      const data = JSON.parse(localStorage.getItem(key));
+      data.places.push({id: 'opposite-bank', name: 'Overkant', lat: 51.92425, lon: 4.4777});
+      localStorage.setItem(key, JSON.stringify(data));
+    }""")
+    sheet = open_sound(page)
+    expect(sheet.locator('#soundPosition')).to_contain_text('Kies een kaartpin')
+    expect(sheet.get_by_role('button', name='Vijverpad', exact=False)).to_be_visible()
+    add_species(sheet, ['Buizerd'])
+    expect(sheet.locator('#soundSave')).to_be_disabled()
+    sheet.get_by_role('button', name='Overkant', exact=False).click()
+    expect(sheet.locator('#soundPosition')).to_have_text('Bestaande pin · Overkant')
+    sheet.locator('#soundSave').click()
+    expect(page.locator('#mapSheetName')).to_have_text('Overkant', timeout=15000)
+    expect(page.locator('.place-sightings button')).to_have_count(1)
+    assert next(item for item in rows(page) if item['speciesName'] == 'Buizerd')['placeId'] == 'opposite-bank'
+    assert page.evaluate("JSON.parse(localStorage.getItem('birdspot-places')).places.length") == 2
+    page.locator('#mapSheetClose').click()
+
+    sheet = open_sound(page)
+    expect(sheet.locator('#soundPosition')).to_contain_text('Kies een kaartpin')
+    add_species(sheet, ['Pimpelmees'])
+    sheet.get_by_role('button', name='Gebruik een nieuwe pin').click()
+    page.evaluate("""() => {
+      const original = Storage.prototype.setItem;
+      Storage.prototype.setItem = function(key, value) {
+        if (key === 'birdspot-sightings') {
+          Storage.prototype.setItem = original;
+          throw new DOMException('Testopslag vol', 'QuotaExceededError');
+        }
+        return original.call(this, key, value);
+      };
+    }""")
+    sheet.locator('#soundSave').click()
+    expect(sheet.locator('#soundSaveState')).to_contain_text('Opslaan mislukt')
+    assert page.evaluate("JSON.parse(localStorage.getItem('birdspot-places')).places.length") == 2
+    sheet.locator('#soundSave').click()
+    expect(page.locator('.place-sightings button')).to_have_count(1, timeout=15000)
+    assert page.evaluate("JSON.parse(localStorage.getItem('birdspot-places')).places.length") == 3
+    print('PASS: automatic moment + GPS, shifted GPS at a legacy pin, explicit pin choice and new-pin rollback', flush=True)
 
 
 def main():
@@ -192,6 +266,10 @@ def main():
                 page.clock.set_fixed_time(DATE)
                 page.goto(url, wait_until='domcontentloaded')
                 check(page, width)
+                if width == 390:
+                    page.evaluate("localStorage.clear()")
+                    page.reload(wait_until='domcontentloaded')
+                    check_existing_pins(page)
                 assert not errors, errors
                 ctx.close()
             browser.close()

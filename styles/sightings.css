@@ -733,7 +733,7 @@
 .quick-add-icon svg { width:28px; height:28px; }
 .quick-add-option strong { display:block; font-weight:750; font-size:1rem; }
 .quick-add-option small { display:block; color:var(--muted); font-size:.83rem; line-height:1.4; margin-top:3px; }
-.quick-add-sheet .btn-close, .quick-add-back, #soundReview .sound-row button, #soundMatches button {
+.quick-add-sheet .btn-close, .quick-add-back, #soundReview .sound-row button, #soundMatches button, #soundPlaceOptions button {
   min-height: 44px; padding: 8px 12px; border: 1px solid var(--line); border-radius: var(--r-sm);
   color: var(--ink); background: var(--surface-2); font: inherit; cursor: pointer;
 }
@@ -774,11 +774,16 @@
 #soundSelection input { width: 18px; height: 18px; accent-color: var(--brand-mid); }
 #soundSelection small { display: block; color: var(--ink-2); font-size: .75rem; }
 .sound-date { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 8px; }
+#soundMoment { color: var(--ink); font-weight: 700; font-variant-numeric: tabular-nums; }
+#soundPlaceOptions { padding: 0; list-style: none; }
+#soundPlaceOptions li + li { margin-block-start: 6px; }
+#soundPlaceOptions button { width: 100%; text-align: start; overflow-wrap: anywhere; }
+.sound-details > :is(.sound-date, .sound-row) { margin-block-end: 10px; }
 .quick-add-options :is(input:not([type="checkbox"]), textarea) {
   display: block; width: 100%; min-width: 0; min-height: 44px; margin-block-start: 4px; padding: 8px;
   border: 1px solid var(--line); border-radius: var(--r-sm); color: var(--ink); background: var(--surface); font: inherit;
 }
-.sound-details[open] > label { display: block; margin-bottom: 8px; }
+.sound-details[open] > label:not([hidden]) { display: block; margin-bottom: 8px; }
 .sound-details > summary { min-height: 44px; align-content: center; cursor: pointer; }
 #soundSaveState:empty { display: none; }
 #soundSave { width: 100%; margin-block-start: 10px; }
