@@ -4,7 +4,7 @@ on:
     paths:
       - 'src/app.js'
       - 'src/features/sightings/quickAdd.js'
-      - 'src/features/sightings/soundSession.js'
+      - 'src/features/sightings/sound*.js'
       - 'src/features/sightings/addSheet.js'
       - 'src/data/sightings.js'
       - 'styles/sightings.css'

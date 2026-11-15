@@ -737,6 +737,10 @@
   min-height: 44px; padding: 8px 12px; border: 1px solid var(--line); border-radius: var(--r-sm);
   color: var(--ink); background: var(--surface-2); font: inherit; cursor: pointer;
 }
+#soundDiscard {
+  min-height: 44px; padding: 8px 12px; border: 1px solid var(--line); border-radius: var(--r-sm);
+  justify-self: start; color: var(--ink); background: var(--surface); font: inherit; cursor: pointer;
+}
 .quick-add-back { justify-self: start; }
 .sound-capture, .sound-species, #soundReview fieldset {
   display: grid; gap: 10px; min-width: 0; padding: 12px;
@@ -747,6 +751,14 @@
 .sound-row { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
 .sound-row > button { flex: 1 1 auto; }
 #soundElapsed { font-variant-numeric: tabular-nums; padding-inline: 4px; }
+#soundTimeline {
+  padding: 7px 8px 4px; border: 1px solid var(--line); border-radius: var(--r-sm);
+  background: var(--surface);
+}
+#soundWaveform { display: block; width: 100%; height: 62px; color: var(--ink-2); --sound-hit: #b58a34; }
+.sound-ruler { display: flex; justify-content: space-between; color: var(--ink-2); font-size: .75rem; font-variant-numeric: tabular-nums; }
+#soundLatestMatch { color: var(--ink); font-weight: 700; }
+:is(#soundLatestMatch, #soundRecognitionState, #soundDraftState):empty { display: none; }
 #soundPlayback { width: 100%; height: 44px; }
 .quick-add-options :is(#soundRecord, #soundSave) {
   min-height: 44px; border: 0; border-radius: var(--r-sm); padding: 8px 12px;
@@ -760,6 +772,7 @@
   border-top: 1px solid var(--line); cursor: pointer;
 }
 #soundSelection input { width: 18px; height: 18px; accent-color: var(--brand-mid); }
+#soundSelection small { display: block; color: var(--ink-2); font-size: .75rem; }
 .sound-date { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 8px; }
 .quick-add-options :is(input:not([type="checkbox"]), textarea) {
   display: block; width: 100%; min-width: 0; min-height: 44px; margin-block-start: 4px; padding: 8px;
