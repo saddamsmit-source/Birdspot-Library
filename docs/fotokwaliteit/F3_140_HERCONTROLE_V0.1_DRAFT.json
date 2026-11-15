@@ -17,7 +17,8 @@
     "fourthBatch": "docs/fotokwaliteit/F3_R04_SLECHTVALK_EN_BONTE_SPECHTEN_2026-11-15_DRAFT.md",
     "fifthBatch": "docs/fotokwaliteit/F3_R05_DRIE_SPECHTEN_2026-11-15_DRAFT.md",
     "sixthBatch": "docs/fotokwaliteit/F3_R06_EKSTER_KRAAI_KAUW_2026-11-15_DRAFT.md",
-    "seventhBatch": "docs/fotokwaliteit/F3_R07_GAAI_EN_MEZEN_2026-11-15_DRAFT.md"
+    "seventhBatch": "docs/fotokwaliteit/F3_R07_GAAI_EN_MEZEN_2026-11-15_DRAFT.md",
+    "eighthBatch": "docs/fotokwaliteit/F3_R08_MATKOP_GLANSKOP_KUIFMEES_2026-11-16_DRAFT.md"
   },
   "requiredChecks": [
     "photoOriginalIdentity",
@@ -48,15 +49,16 @@
     "audioMissing": 76,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 119,
+    "nextNotStarted": 116,
     "secondBatchStarted": 3,
-    "contentInspected": 21,
+    "contentInspected": 24,
     "contentComplete": 0,
     "thirdBatchStarted": 3,
     "fourthBatchStarted": 3,
     "fifthBatchStarted": 3,
     "sixthBatchStarted": 3,
-    "seventhBatchStarted": 3
+    "seventhBatchStarted": 3,
+    "eighthBatchStarted": 3
   },
   "records": [
     {
@@ -2412,9 +2414,9 @@
             "windows": 3,
             "minimumNormalizedCorrelation": 0.9694,
             "offsetsSeconds": [
-              0.0,
-              0.0,
-              0.0
+              0,
+              0,
+              0
             ],
             "duration": 8.15
           }
@@ -2616,9 +2618,9 @@
             "windows": 3,
             "minimumNormalizedCorrelation": 0.9906,
             "offsetsSeconds": [
-              0.0,
-              0.0,
-              0.0
+              0,
+              0,
+              0
             ],
             "duration": 11.45
           },
@@ -2634,7 +2636,7 @@
               8.3,
               8.3
             ],
-            "duration": 4.0
+            "duration": 4
           }
         ],
         "unmatchedAudio": [],
@@ -2843,36 +2845,54 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R08",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (existing local WebP visually inspected; not yet independently matched to original source files)",
+          "photoIndividualRights": "PARTIALLY TESTED (existing maker, license, source metadata reviewed; original individual files and reuse rights NOT independently rechecked)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (existing hero, juvenile and other-pose imagery visually inspected; no new free-flight proof)",
+          "photoPairComparisons": "PARTIALLY TESTED (existing adult/juvenile Matkop–Glanskop source panel inspected; full matching UI pair NOT TESTED)",
+          "responsiveLayoutAndZoom": "NOT TESTED (F3-R08 targeted browser/physical mobile review pending)",
+          "creditsAndCleanAudioUI": "NOT TESTED (F3-R08 playback/accessible attribution UI pending; existing media credits remain unchanged)",
+          "audioRecordingsAuthenticity": "NOT TESTED (original audio signal not listened or waveform compared)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (pre-existing audio maker/license/source metadata read; original record not independently reverified)",
+          "soundRolesSongCall": "PARTIALLY TESTED (only pre-existing song labelled; separate calls/roep not yet available)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (F3-R08 offline playback pending)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (primary Vogelbescherming species page read; ANWB passage NOT TESTED)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (selected fieldmarks compared to primary sources; biometric data/underlying methodology not fully rechecked)",
+          "sovonNetherlandsStatus": "NOT TESTED (F3-R08 individual Dutch estimates/trend periods not re-read)",
+          "ebirdDistributionAndBias": "NOT TESTED (F3-R08 seasonal maps and effort bias not checked)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred to integrated user/device phase)",
+          "endToEndGuideUI": "NOT TESTED (F3-R08 targeted Chromium interaction not yet executed)",
+          "independentSecondReview": "NOT TESTED (second independent ornithological and acoustic review pending)"
         },
         "findings": [
-          "Scherpe vrije-vluchtfoto met bevestigde hergebruikrechten."
+          "Hoofdfoto toont matzwarte kop en licht vleugelveld; beschikbare lokale WebP scherp maar origineel-fotovergelijking ontbreekt.",
+          "Jonge vogel toont lichte snavelhoeken; oorspronkelijke leeftijds-/soortidentiteit nog onafhankelijk beoordelen.",
+          "sp031-flight.webp toont vleugels wijd boven sneeuw: historische rol 'Overige herkenningsfoto's' behouden; echte vrije vlucht niet zelfstandig bewezen.",
+          "Bestaande Zang sp031-song.mp3 gevonden; contactroep ontbreekt als afzonderlijk geverifieerd voorbeeld."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/matkop",
+          "https://www.vogelbescherming.nl/actueel/bericht/matkop-vs-glanskop-en-vv",
+          "docs/fotokwaliteit/F3_R08_MATKOP_GLANSKOP_KUIFMEES_2026-11-16_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED F3-R08 (documentation-only; existing 1.27.21 preview unchanged)",
+        "independence": "PARTIAL / visual inspection by current reviewer; independent source and ornithological review pending",
+        "fullPass": false,
+        "photoFilesInspected": 3,
+        "photoBlobSHAs": [
+          "4ee9d5a298394a5aa53e213b7c123a3d1c01fb63",
+          "7a92625623299e8524e7cdd4ffababb887c74eaa",
+          "b6918a8c322e4bd127a739eaf5c38f019bd063df"
+        ],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [],
+        "scientificName": "Poecile montanus",
+        "contentStatus": "PARTIALLY REVIEWED (all 3 local WebPs opened; original photographer files, audio and device not fully inspected)",
+        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. F3-R08 targeted guide browser test NOT TESTED."
       }
     },
     {
@@ -2911,36 +2931,54 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R08",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (existing local WebP visually inspected; not yet independently matched to original source files)",
+          "photoIndividualRights": "PARTIALLY TESTED (existing maker, license, source metadata reviewed; original individual files and reuse rights NOT independently rechecked)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (existing hero, juvenile and other-pose imagery visually inspected; no new free-flight proof)",
+          "photoPairComparisons": "PARTIALLY TESTED (existing adult/juvenile Matkop–Glanskop source panel inspected; full matching UI pair NOT TESTED)",
+          "responsiveLayoutAndZoom": "NOT TESTED (F3-R08 targeted browser/physical mobile review pending)",
+          "creditsAndCleanAudioUI": "NOT TESTED (F3-R08 playback/accessible attribution UI pending; existing media credits remain unchanged)",
+          "audioRecordingsAuthenticity": "NOT TESTED (original audio signal not listened or waveform compared)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (pre-existing audio maker/license/source metadata read; original record not independently reverified)",
+          "soundRolesSongCall": "PARTIALLY TESTED (only pre-existing song labelled; separate calls/roep not yet available)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (F3-R08 offline playback pending)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (primary Vogelbescherming species page read; ANWB passage NOT TESTED)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (selected fieldmarks compared to primary sources; biometric data/underlying methodology not fully rechecked)",
+          "sovonNetherlandsStatus": "NOT TESTED (F3-R08 individual Dutch estimates/trend periods not re-read)",
+          "ebirdDistributionAndBias": "NOT TESTED (F3-R08 seasonal maps and effort bias not checked)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred to integrated user/device phase)",
+          "endToEndGuideUI": "NOT TESTED (F3-R08 targeted Chromium interaction not yet executed)",
+          "independentSecondReview": "NOT TESTED (second independent ornithological and acoustic review pending)"
         },
         "findings": [
-          "Scherpe foto van één Glanskop in vrije vlucht met bevestigde hergebruikrechten."
+          "Hoofdfoto toont donkere kap, vrij egaal vleugelveld, kleine donkere keelvlek. Snavelbasis kan niet als afzonderlijk doorslaggevend kenmerk dienen.",
+          "Het juvenielenbeeld is donker; exacte originele leeftijds-/soorttoewijzing en scherpte voor snaveldetail nog open.",
+          "Overig beeld toont de vogel klein en frontaal: weinig extra waarde voor onderscheid met Matkop.",
+          "Bestaande Zang sp032-song.mp3 gevonden; contactroep ontbreekt."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/glanskop",
+          "https://www.vogelbescherming.nl/actueel/bericht/matkop-vs-glanskop-en-vv",
+          "docs/fotokwaliteit/F3_R08_MATKOP_GLANSKOP_KUIFMEES_2026-11-16_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED F3-R08 (documentation-only; existing 1.27.21 preview unchanged)",
+        "independence": "PARTIAL / visual inspection by current reviewer; independent source and ornithological review pending",
+        "fullPass": false,
+        "photoFilesInspected": 3,
+        "photoBlobSHAs": [
+          "3699926c371cd48e789472307993b570517fa04c",
+          "48820287b28b166d4d511a6efab6560ae867df18",
+          "be7f8232d01e60fed986f67f36c83abd10833c5f"
+        ],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [],
+        "scientificName": "Poecile palustris",
+        "contentStatus": "PARTIALLY REVIEWED (all 3 local WebPs opened; original photographer files, audio and device not fully inspected)",
+        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. F3-R08 targeted guide browser test NOT TESTED."
       }
     },
     {
@@ -2984,36 +3022,54 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R08",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (existing local WebP visually inspected; not yet independently matched to original source files)",
+          "photoIndividualRights": "PARTIALLY TESTED (existing maker, license, source metadata reviewed; original individual files and reuse rights NOT independently rechecked)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (existing hero, juvenile and other-pose imagery visually inspected; no new free-flight proof)",
+          "photoPairComparisons": "NOT TESTED (no new targeted pair; preserve existing compare gate)",
+          "responsiveLayoutAndZoom": "NOT TESTED (F3-R08 targeted browser/physical mobile review pending)",
+          "creditsAndCleanAudioUI": "NOT TESTED (F3-R08 playback/accessible attribution UI pending; existing media credits remain unchanged)",
+          "audioRecordingsAuthenticity": "NOT TESTED (original audio signal not listened or waveform compared)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (pre-existing audio maker/license/source metadata read; original record not independently reverified)",
+          "soundRolesSongCall": "PARTIALLY TESTED (only pre-existing song labelled; separate calls/roep not yet available)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (F3-R08 offline playback pending)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (primary Vogelbescherming species page read; ANWB passage NOT TESTED)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (selected fieldmarks compared to primary sources; biometric data/underlying methodology not fully rechecked)",
+          "sovonNetherlandsStatus": "NOT TESTED (F3-R08 individual Dutch estimates/trend periods not re-read)",
+          "ebirdDistributionAndBias": "NOT TESTED (F3-R08 seasonal maps and effort bias not checked)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred to integrated user/device phase)",
+          "endToEndGuideUI": "NOT TESTED (F3-R08 targeted Chromium interaction not yet executed)",
+          "independentSecondReview": "NOT TESTED (second independent ornithological and acoustic review pending)"
         },
         "findings": [
-          "Scherpe foto van één Kuifmees in vrije vlucht met bevestigde hergebruikrechten."
+          "Hoofdfoto en zijaanzicht tonen de spitse zwart-witte kuif, wangboog en donkere keel duidelijk.",
+          "Juvenielenbeeld heeft kortere kuif en lichte snavelhoeken, maar originele leeftijdsbron moet nog worden getoetst.",
+          "sp033-flight.webp toont opstijgen vanaf sneeuw; behoud als historische 'Overige herkenningsfoto', niet als bewezen echte vrije vlucht.",
+          "Bestaande Zang sp033-song.mp3 gevonden; separate roep met onafhankelijke bron ontbreekt."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kuifmees",
+          "docs/fotokwaliteit/F3_R08_MATKOP_GLANSKOP_KUIFMEES_2026-11-16_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED F3-R08 (documentation-only; existing 1.27.21 preview unchanged)",
+        "independence": "PARTIAL / visual inspection by current reviewer; independent source and ornithological review pending",
+        "fullPass": false,
+        "photoFilesInspected": 4,
+        "photoBlobSHAs": [
+          "ab4608d7632748abddc6311c3141bd5a56abc648",
+          "ffbd9ce4c4a682cf6eb5df12e6e16beffc7dfa71",
+          "f363ccc88957b411d52e2b8e7258295dcee71f53",
+          "bbda1b1651f2711c112624c4c03cb4d172292003"
+        ],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [],
+        "scientificName": "Lophophanes cristatus",
+        "contentStatus": "PARTIALLY REVIEWED (all 4 local WebPs opened; original photographer files, audio and device not fully inspected)",
+        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. F3-R08 targeted guide browser test NOT TESTED."
       }
     },
     {
