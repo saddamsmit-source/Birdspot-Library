@@ -277,7 +277,9 @@ De eigenaarapp mag **niet** automatisch privéwaarnemingen, exacte GPS of origin
 
 ## Waarnemen en vogelgeluid opnemen
 
-Via **+ / Waarnemen** zijn er twee ingangen. **Waarneming toevoegen** opent het gewone waarnemingsformulier, waar Gezien, Gehoord en Beide beschikbaar blijven. **Geluid herkennen** opent één geluidsessie voor opnemen, terugluisteren en aanvinken van meerdere zelf herkende soorten. Deze route vraagt om de microfoon wanneer de opname wordt gestart, zet de plaatselijke datum en tijd en probeert de GPS-plek vast te leggen. Bij ontbrekende GPS is de bestaande handmatige kaartkiezer beschikbaar. Pleknaam en notitie gelden voor alle gekozen soorten.
+Via **+ / Waarnemen** zijn er twee ingangen. **Waarneming toevoegen** opent het gewone waarnemingsformulier, waar Gezien, Gehoord en Beide beschikbaar blijven. **Geluid herkennen** opent één geluidsessie voor opnemen, terugluisteren en aanvinken van meerdere soorten. Birdspot toont de plaatselijke datum, tijd en GPS-plek automatisch bij een nieuwe sessie. De start van de opname bepaalt de datum en tijd, tenzij de gebruiker die zelf aanpast. **Details aanpassen** bevat de datum-/tijdvelden, GPS, handmatige kaartkiezer en een gezamenlijke notitie. Een heropende sessie houdt haar eigen tijd en plek.
+
+**Bestaande pin hergebruiken.** Bij één ondubbelzinnige bekende plek binnen de bestaande 50-meterregel koppelt de geluidsessie de nieuwe waarnemingen aan die pin. De afstand en eventuele GPS-onzekerheid tellen mee. Bij meerdere kandidaten of een onnauwkeurige meting kiest de gebruiker. Iedere waarneming bewaart de gemeten coördinaten naast de gedeelde plek-ID. De bestaande plek-migratie geeft ook oudere kaartwaarnemingen een plek-ID.
 
 **Tijdens het opnemen:** de tijdbalk groeit met de opname en toont het gemeten geluidsniveau. Live herkenning verwerkt stukken van drie seconden op het toestel. Een gevonden soort verschijnt één keer als nog niet aangevinkte suggestie met het eerste detectiemoment. Een gebruiker kan ook zelf een soort toevoegen. Het scherm vraagt tijdens de opname een wake lock aan. De opname stopt als de app naar de achtergrond verdwijnt.
 

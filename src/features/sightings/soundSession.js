@@ -1,5 +1,6 @@
 import { SPECIES } from '../../data/species.js';
 import { addSightings } from '../../data/sightings.js';
+import { addPlace, ensurePlaces, loadPlaces, matchSoundPlace, savePlaces } from '../../data/places.js';
 import { escHtml } from '../../utils/html.js';
 import { validPin } from './evidence.js';
 import { openPinPicker } from './pinPicker.js';
@@ -45,18 +46,20 @@ export function mountSoundSession(root, onSaved) {
     <form id="soundReview">
       <fieldset>
         <legend>Datum, tijd en plek</legend>
-        <div class="sound-date">
-          <label>Datum <input type="date" id="soundDate" required></label>
-          <label>Tijd <input type="time" id="soundTime" required></label>
-        </div>
-        <p id="soundPosition" role="status">Start een opname voor GPS, of kies zelf de plek.</p>
-        <div class="sound-row">
-          <button type="button" id="soundGps">Gebruik mijn locatie</button>
-          <button type="button" id="soundPin">Kies plek op kaart</button>
-        </div>
+        <p id="soundMoment"></p>
+        <p id="soundPosition" role="status" tabindex="-1">Plek bepalen…</p>
+        <ul id="soundPlaceOptions" aria-label="Beschikbare kaartpinnen" hidden></ul>
         <details class="sound-details">
-          <summary>Details toevoegen</summary>
-          <label>Pleknaam <input id="soundPlace" maxlength="120"></label>
+          <summary>Details aanpassen</summary>
+          <div class="sound-date">
+            <label>Datum <input type="date" id="soundDate" required></label>
+            <label>Tijd <input type="time" id="soundTime" required></label>
+          </div>
+          <div class="sound-row">
+            <button type="button" id="soundGps">Gebruik mijn locatie</button>
+            <button type="button" id="soundPin">Kies plek op kaart</button>
+          </div>
+          <label id="soundPlaceNameField">Pleknaam <input id="soundPlace" maxlength="120"></label>
           <label>Notitie voor deze vogels <textarea id="soundNotes" rows="2" maxlength="1000"></textarea></label>
         </details>
       </fieldset>
@@ -68,6 +71,7 @@ export function mountSoundSession(root, onSaved) {
   const captureStatus = find('soundCaptureState'), playback = find('soundPlayback');
   const search = find('soundSpeciesSearch'), matches = find('soundMatches'), selection = find('soundSelection');
   const date = find('soundDate'), time = find('soundTime'), pinStatus = find('soundPosition');
+  const placeOptions = find('soundPlaceOptions'), locationName = find('soundPlace');
   const gps = find('soundGps'), pin = find('soundPin'), save = find('soundSave');
   const candidates = new Map();
   const levels = [];
@@ -76,6 +80,7 @@ export function mountSoundSession(root, onSaved) {
   const draftStatus = find('soundDraftState');
   let sessionId = crypto.randomUUID(), draftStored = false, seconds = 0, clip = null;
   let coordinates, gpsRequest = 0, closePicker, closed = false;
+  let positionOrigin, placeChoice, matchedPlace, locationPending = false, needsPlaceChoice = false;
   let stream, recorder, starting = false, finishing = false, timer, started = 0, playbackUrl;
   let stopMonitor, recognition, wakeLock, completion, completeCapture;
   let persistWork = Promise.resolve();
@@ -85,11 +90,17 @@ export function mountSoundSession(root, onSaved) {
   function setMoment(now = new Date()) {
     if (!dateEdited) date.value = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
     if (!timeEdited) time.value = `${pad(now.getHours())}:${pad(now.getMinutes())}`;
+    showMoment();
+  }
+  function showMoment() {
+    find('soundMoment').textContent = date.value && time.value
+      ? `${date.value.split('-').reverse().join('-')} · ${time.value}`
+      : 'Vul datum en tijd aan bij Details aanpassen.';
   }
   setMoment();
-  date.addEventListener('change', () => { dateEdited = true; persistDraft(); });
-  time.addEventListener('change', () => { timeEdited = true; persistDraft(); });
-  find('soundPlace').addEventListener('input', persistDraft);
+  date.addEventListener('change', () => { dateEdited = true; showMoment(); updateSelection(); persistDraft(); });
+  time.addEventListener('change', () => { timeEdited = true; showMoment(); updateSelection(); persistDraft(); });
+  locationName.addEventListener('input', persistDraft);
   find('soundNotes').addEventListener('input', persistDraft);
 
   function stopTracks() {
@@ -166,7 +177,8 @@ export function mountSoundSession(root, onSaved) {
     find('soundSelectionCount').textContent = selected
       ? `${selected} ${selected === 1 ? 'soort geselecteerd' : 'soorten geselecteerd'}`
       : 'Geen soorten geselecteerd';
-    save.disabled = !selected || !coordinates || starting || finishing || recorder?.state === 'recording';
+    save.disabled = !selected || !date.value || !time.value || !coordinates || locationPending ||
+      needsPlaceChoice || starting || finishing || recorder?.state === 'recording';
     save.textContent = selected > 1 ? `Pin ${selected} waarnemingen` : 'Pin je waarneming';
   }
 
@@ -175,8 +187,8 @@ export function mountSoundSession(root, onSaved) {
     const revision = ++draftRevision;
     draftStatus.textContent = 'Sessie wordt bewaard…';
     persistWork = saveSoundDraft({
-      id: sessionId, clip, seconds, levels: [...levels], candidates: [...candidates], coordinates,
-      date: date.value, time: time.value, name: find('soundPlace').value, notes: find('soundNotes').value,
+      id: sessionId, clip, seconds, levels: [...levels], candidates: [...candidates], coordinates, positionOrigin, placeChoice,
+      date: date.value, time: time.value, name: locationName.value, notes: find('soundNotes').value,
     }).then(() => {
       draftStored = true;
       if (revision === draftRevision) draftStatus.textContent = 'Sessie bewaard op dit toestel.';
@@ -188,34 +200,64 @@ export function mountSoundSession(root, onSaved) {
     return persistWork;
   }
 
+  function showPlace() {
+    if (!coordinates) return;
+    const places = loadPlaces();
+    const chosen = placeChoice?.id && places.find(place => place.id === placeChoice.id);
+    if (placeChoice?.id && !chosen) placeChoice = null;
+    const match = chosen || placeChoice?.newPin
+      ? { place: chosen, alternatives: [], needsChoice: false }
+      : matchSoundPlace(places, coordinates, positionOrigin === 'GPS');
+    matchedPlace = match.place;
+    needsPlaceChoice = match.needsChoice;
+    find('soundPlaceNameField').hidden = Boolean(matchedPlace);
+    placeOptions.hidden = !needsPlaceChoice;
+    placeOptions.innerHTML = needsPlaceChoice ? match.alternatives.map(({ place, distance }) =>
+      `<li><button type="button" data-sound-place="${escHtml(place.id)}">${escHtml(place.name)} · ${Math.round(distance)} m</button></li>`
+    ).join('') + '<li><button type="button" data-sound-new-pin>Gebruik een nieuwe pin</button></li>' : '';
+    const { lat, lon, pinAccuracyM } = coordinates;
+    const accuracy = positionOrigin === 'GPS' && pinAccuracyM !== null ? ` · ±${pinAccuracyM} m` : '';
+    if (matchedPlace) pinStatus.textContent = `Bestaande pin · ${matchedPlace.name}`;
+    else if (needsPlaceChoice) pinStatus.textContent = match.alternatives.length
+      ? 'Kies een kaartpin of pas de plek aan bij Details aanpassen.'
+      : 'GPS is onnauwkeurig. Controleer de plek bij Details aanpassen.';
+    else pinStatus.textContent = `Nieuwe pin · ${lat.toFixed(5)}, ${lon.toFixed(5)}${accuracy}`;
+    updateSelection();
+  }
+
   function setPosition(lat, lon, accuracyM, origin, remember = true) {
     if (!validPin(lat, lon)) return false;
     coordinates = { lat, lon, pinAccuracyM: Number.isFinite(accuracyM) ? Math.round(accuracyM) : null };
-    const accuracy = origin === 'GPS' && coordinates.pinAccuracyM !== null ? ` · ±${coordinates.pinAccuracyM} m` : '';
-    pinStatus.textContent = `${origin} · ${lat.toFixed(5)}, ${lon.toFixed(5)}${accuracy}`;
-    updateSelection();
+    positionOrigin = origin;
+    if (remember) placeChoice = null;
+    showPlace();
     if (remember) persistDraft();
     return true;
   }
 
   function locate() {
     if (!navigator.geolocation) {
-      pinStatus.textContent = 'GPS is niet beschikbaar. Kies een plek op de kaart.';
+      pinStatus.textContent = 'GPS is niet beschikbaar. Kies een plek via Details aanpassen.';
       return;
     }
     const request = ++gpsRequest;
     gps.disabled = true;
+    locationPending = true;
     pinStatus.textContent = 'GPS-locatie wordt opgehaald…';
+    updateSelection();
     const unavailable = () => {
       if (closed || request !== gpsRequest) return;
       gps.disabled = false;
+      locationPending = false;
       pinStatus.textContent = coordinates
-        ? 'GPS is niet beschikbaar. De gekozen plek blijft staan.'
-        : 'GPS is niet beschikbaar. Kies een plek op de kaart.';
+        ? 'GPS bijwerken lukt niet. De eerder gevonden plek blijft staan.'
+        : 'GPS is niet beschikbaar. Kies een plek via Details aanpassen.';
+      updateSelection();
     };
     navigator.geolocation.getCurrentPosition(({ coords }) => {
       if (closed || request !== gpsRequest) return;
       gps.disabled = false;
+      locationPending = false;
       if (!setPosition(coords.latitude, coords.longitude, coords.accuracy, 'GPS')) unavailable();
     }, unavailable, { enableHighAccuracy: true, maximumAge: 0, timeout: 12000 });
   }
@@ -282,7 +324,7 @@ export function mountSoundSession(root, onSaved) {
       timer = setInterval(updateElapsed, 1000);
       captureStatus.textContent = 'Opname loopt. Houd dit scherm open.';
       record.textContent = 'Stop opname';
-      if (!coordinates && !gps.disabled) locate();
+      if ((!coordinates || (positionOrigin === 'GPS' && !placeChoice)) && !locationPending) locate();
       try {
         stopMonitor = createSoundMonitor(input, {
           onLevel: level => { levels.push(level); paintTimeline(); },
@@ -352,9 +394,19 @@ export function mountSoundSession(root, onSaved) {
   });
 
   gps.addEventListener('click', locate);
+  placeOptions.addEventListener('click', event => {
+    const button = event.target.closest('button');
+    if (!button) return;
+    placeChoice = button.dataset.soundPlace ? { id: button.dataset.soundPlace } : { newPin: true };
+    showPlace();
+    pinStatus.focus();
+    persistDraft();
+  });
   pin.addEventListener('click', () => {
     gpsRequest++;
     gps.disabled = false;
+    locationPending = false;
+    updateSelection();
     if (!coordinates) pinStatus.textContent = 'Kies de plek voor deze waarnemingen.';
     closePicker = openPinPicker({
       lat: coordinates?.lat ?? null,
@@ -366,31 +418,45 @@ export function mountSoundSession(root, onSaved) {
   find('soundReview').addEventListener('submit', async event => {
     event.preventDefault();
     if (save.disabled) return;
+    showPlace();
+    if (save.disabled) return;
     save.disabled = true;
     root.inert = true;
     const ids = [...candidates].filter(([, entry]) => entry.checked).map(([id]) => id);
     const now = new Date().toISOString();
     const shared = {
       ...coordinates,
+      placeId: matchedPlace?.id ?? null,
       date: date.value, time: time.value,
-      locationName: find('soundPlace').value.trim() || null,
+      locationName: matchedPlace?.name || locationName.value.trim() || null,
       notes: find('soundNotes').value.trim() || null,
       observationMethod: 'heard', identificationSource: 'self', merlinVerification: null,
       certainty: 'certain', count: 1, photoIds: [], soundSessionId: sessionId,
       createdAt: now, updatedAt: now,
     };
-    const sightings = ids.map(id => ({
-      ...shared, id: `${sessionId}-${id}`, speciesId: id, speciesName: speciesById.get(id).nameNL,
-      ...(candidates.get(id).match ? { soundSuggestion: { model: 'BirdNET+ V3.0', ...candidates.get(id).match } } : {}),
-    }));
+    let sightings, newPlace;
     try {
+      if (!matchedPlace && placeChoice?.newPin) {
+        newPlace = addPlace({ lat: shared.lat, lon: shared.lon, name: shared.locationName });
+        shared.placeId = newPlace.id;
+        shared.locationName = newPlace.name;
+      }
+      sightings = ids.map(id => ({
+        ...shared, id: `${sessionId}-${id}`, speciesId: id, speciesName: speciesById.get(id).nameNL,
+        ...(candidates.get(id).match ? { soundSuggestion: { model: 'BirdNET+ V3.0', ...candidates.get(id).match } } : {}),
+      }));
       await addSightings(sightings);
     } catch (_) {
+      if (newPlace) {
+        try { savePlaces(loadPlaces().filter(place => place.id !== newPlace.id)); }
+        catch (_) { /* Waarnemingen zijn nog niet gepind. */ }
+      }
       find('soundSaveState').textContent = 'Opslaan mislukt. Je selectie staat nog klaar.';
       root.inert = false;
       updateSelection();
       return;
     }
+    if (newPlace) { placeChoice = { id: newPlace.id }; persistDraft(); }
     await persistWork;
     if (draftStored) {
       try { await deleteSoundDraft(sessionId); }
@@ -411,6 +477,11 @@ export function mountSoundSession(root, onSaved) {
       if (draftStored) await deleteSoundDraft(sessionId);
       gpsRequest++;
       gps.disabled = false;
+      locationPending = needsPlaceChoice = false;
+      matchedPlace = placeChoice = positionOrigin = null;
+      placeOptions.replaceChildren();
+      placeOptions.hidden = true;
+      find('soundPlaceNameField').hidden = false;
       root.querySelector('#soundReview').reset();
       sessionId = crypto.randomUUID();
       draftStored = false;
@@ -427,11 +498,12 @@ export function mountSoundSession(root, onSaved) {
       record.disabled = false;
       record.textContent = 'Start opname';
       captureStatus.textContent = 'Je opname blijft op dit toestel.';
-      pinStatus.textContent = 'Start een opname voor GPS, of kies zelf de plek.';
+      pinStatus.textContent = 'Plek bepalen…';
       find('soundSaveState').textContent = latestMatch.textContent = '';
       draftStatus.textContent = 'Sessie verwijderd.';
       paintTimeline();
       updateSelection();
+      locate();
     } catch (_) {
       draftStatus.textContent = 'Sessie verwijderen lukt niet. Probeer het opnieuw.';
     } finally {
@@ -441,17 +513,24 @@ export function mountSoundSession(root, onSaved) {
   });
 
   root.inert = true;
-  pendingFinalization.then(loadSoundDraft).then(draft => {
-    if (closed || !draft) return;
+  pendingFinalization.then(async () => {
+    await ensurePlaces().catch(() => {});
+    return loadSoundDraft();
+  }).then(draft => {
+    if (closed) return;
+    if (!draft) { locate(); return; }
     sessionId = draft.id;
     draftStored = true;
-    [date.value, time.value, find('soundPlace').value, find('soundNotes').value] = [draft.date, draft.time, draft.name, draft.notes];
+    [date.value, time.value, locationName.value, find('soundNotes').value] = [draft.date, draft.time, draft.name, draft.notes];
     dateEdited = timeEdited = true;
+    showMoment();
     clip = draft.clip;
     seconds = draft.seconds;
     levels.push(...draft.levels);
     for (const [id, entry] of draft.candidates) addCandidate(id, entry.match, entry.checked);
-    if (draft.coordinates) setPosition(draft.coordinates.lat, draft.coordinates.lon, draft.coordinates.pinAccuracyM, 'Bewaarde plek', false);
+    placeChoice = draft.placeChoice;
+    if (draft.coordinates) setPosition(draft.coordinates.lat, draft.coordinates.lon, draft.coordinates.pinAccuracyM, draft.positionOrigin ?? 'Bewaarde plek', false);
+    else pinStatus.textContent = 'Deze sessie heeft nog geen plek. Kies er een via Details aanpassen.';
     if (clip) {
       setPlayback(clip);
       timeline.hidden = false;
@@ -464,6 +543,7 @@ export function mountSoundSession(root, onSaved) {
     draftStatus.textContent = 'Bewaarde sessie geopend.';
   }).catch(() => {
     draftStatus.textContent = 'Bewaarde sessie is nu niet beschikbaar.';
+    if (!closed) locate();
   }).finally(() => { if (!closed) { root.inert = false; updateSelection(); } });
 
   updateSelection();
