@@ -1,6 +1,7 @@
 /** F3: protect the original 140 cohort, prior evidence, and the new no-false-PASS gate. */
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync, statSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { SPECIES } from '../src/data/species.js';
 import { GUIDE_HEROES } from '../src/features/species/guideMedia.js';
 const load = file => JSON.parse(readFileSync(new URL(file,import.meta.url),'utf8'));
@@ -73,6 +74,7 @@ const counts={
  F3FullPass:sum(x=>x.F3.fullPass),
  nextNotStarted:sum(x=>x.F3.status==='NOT STARTED'),
  secondBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R02'),
+ thirdBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R03'),
  contentInspected:sum(x=>x.F3.reviewedThisRound===true),
  contentComplete:sum(x=>x.F3.contentStatus==='CONTENT COMPLETE')
 };
@@ -81,6 +83,28 @@ assert.equal(counts.audioPresent,tracker.counts.withRegisteredAudio);
 assert.equal(counts.audioMissing,tracker.counts.withoutRegisteredAudio);
 const first=rows.filter(x=>x.F3.recheckBatch==='F3-R01');
 const second=rows.filter(x=>x.F3.recheckBatch==='F3-R02');
+const third=rows.filter(x=>x.F3.recheckBatch==='F3-R03');
+assert.deepEqual(third.map(x=>x.id), ['sp006','sp007','sp008']);
+assert.deepEqual(third.map(x=>x.F3.photoFilesInspected),[5,6,6]);
+assert.deepEqual(third.map(x=>x.F3.reviewedOriginalAudio),[2,3,2]);
+for (const row of third) {
+ const { F3: review, currentAssets } = row;
+ assert.equal(review.fullPass, false);
+ assert.equal(review.status, 'IN CONTENT REVIEW / OPEN POINTS');
+ assert.ok(review.functionTests.startsWith('DEFERRED BY OWNER'));
+ assert.equal(review.photoFilesInspected, currentAssets.imageSlots.length);
+ const photoBlobs = currentAssets.imageSlots.map(({ path }) => {
+  const photo = readFileSync(new URL('..' + path, import.meta.url));
+  return createHash('sha1').update('blob ' + photo.length + '\0').update(photo).digest('hex');
+ });
+ assert.deepEqual(review.photoBlobSHAs, photoBlobs, row.id + ' review must match the inspected image files');
+ assert.deepEqual(review.audioSourceMatches.map(clip => [clip.path, clip.source]),
+  audio.audio[row.id].map(clip => [clip.audio, clip.source]), row.id + ' recorded audio sources changed');
+ for (const match of review.audioSourceMatches) {
+  assert.equal(match.windows, 3);
+  assert.ok(match.minimumNormalizedCorrelation >= 0.9 && match.minimumNormalizedCorrelation <= 1);
+ }
+}
 assert.deepEqual(second.map(x=>x.id), ['sp005','sp248','sp253']);
 assert.deepEqual(second.map(x=>x.F3.photoFilesInspected),[6,4,4]);
 for(const x of second){
@@ -102,5 +126,5 @@ for(const item of first){
  assert.equal(item.F3.status,'IN REVIEW / BLOCKED');
 }
 console.log('F3 140 REBASELINE PASS: 140 IDs preserved, historic F2 '+counts.oldF2Touched+
- ' retained; rechecked first '+first.length+' only; '+counts.audioMissing+
+ ' retained; '+counts.audioMissing+
  ' birds still missing registered sound, '+counts.contentInspected+' content-inspected, no fabricated full PASS.');
