@@ -1,5 +1,7 @@
 # Birdspot — Veldluistermodus en meerdere akoestische waarnemingen
 
+**Opvolgend eigenaarbesluit.** De centrale knop **Geluid herkennen** opent direct één geluidsessie, zonder leverancierstekst en zonder extra route voor één vogel. De eerste appkandidaat neemt voorgrondgeluid op, laat het tijdelijk terugluisteren en kan één of meerdere zelf herkende soorten gezamenlijk privé pinnen. De oudere schermindeling hieronder is historische context. Automatische suggesties, validatie door een herkenner en hun bron-/bewijsvelden zijn vervolgstappen. Zie de actuele [productroute in de README](../../README.md#waarnemen-en-vogelgeluid-opnemen).
+
 | Veld | Status / waarde |
 |---|---|
 | Versie | v0.1 DRAFT · 15 november 2026 |
