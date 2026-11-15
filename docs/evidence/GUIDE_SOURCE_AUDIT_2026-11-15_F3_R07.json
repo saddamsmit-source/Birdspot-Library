@@ -1,0 +1,33 @@
+[
+ {
+  "image": "/assets/species/plumage/sp026-juv-review.webp",
+  "species": "sp026",
+  "source": "https://www.inaturalist.org/photos/290699043",
+  "observation": "https://www.inaturalist.org/observations/167784207",
+  "sourceTitle": "iNaturalist-foto 290699043 bij waarneming 167784207",
+  "sourceAuthor": "Tim",
+  "sourceLicense": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "taxonInSource": "Garrulus glandarius",
+  "annotations": [
+   "Levensstadium juveniel geannoteerd in de bronwaarneming. Ook de minder getekende kruin en het zachte kleed zijn zichtbaar. Geslacht open."
+  ],
+  "sameShot": true,
+  "method": "Individuele foto en originele JPEG bekeken. Het lokale WebP is uit dezelfde opname afgeleid.",
+  "auditDate": "15-11-2026",
+  "assetSha1": "3c4e8a8b1ab15031b4f0372a185f4cf69e93c203",
+  "sourceImageSha1": "5e0834b0a88c18d10beefdf84f0dc3124322a039",
+  "sourceImageSha256": "f08ad30bda3268dab456ff578ce06848aaf93200364ff1153798e3d3371ecb46",
+  "sourceImageSize": [
+   1536,
+   2048
+  ],
+  "localSize": [
+   960,
+   1280
+  ],
+  "originalURL": "https://inaturalist-open-data.s3.amazonaws.com/photos/290699043/original.jpeg",
+  "visualRoleCheck": "Jonge Gaai van dichtbij, met een bruine kruin, zacht ogend kleed en blauw gebandeerde vleugeldekveren.",
+  "modifications": "Origineel verkleind en omgezet naar WebP. Bestandsmetadata verwijderd."
+ }
+]

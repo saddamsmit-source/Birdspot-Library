@@ -684,6 +684,7 @@ export const GUIDE_COMPARISONS = [
     "tip": "Beide kunnen lachen. Combineer geluid met kleur en vlucht."
   },
   {
+    "tabLabel": "Volwassen",
     "birds": [
       {
         "id": "sp030",
@@ -697,6 +698,15 @@ export const GUIDE_COMPARISONS = [
       }
     ],
     "tip": "Kijk naar de hele koptekening en de buikstreep. Bij jonge vogels van beide soorten kan de wang gelig zijn."
+  },
+  {
+    label: 'Koolmees en Pimpelmees · juveniel',
+    tabLabel: 'Juveniel',
+    birds: [
+      {id: 'sp029', source: 'koolmees', plumage: 'juv', marks: 'Donkere kap en keel rond de lichtgele wang. Op de buik kan een donkere lengtestreep zichtbaar zijn.'},
+      {id: 'sp030', source: 'pimpelmees', plumage: 'juv', marks: 'Doffe kruin en een donkere lijn door het oog. De wangen zijn vaak lichtgeel.'},
+    ],
+    tip: 'De wangen kunnen bij beide geel zijn. Kijk naar de kap, de keel en de lijn door het oog.',
   },
   {
     label: 'Kuifmees en Matkop · koptekening',

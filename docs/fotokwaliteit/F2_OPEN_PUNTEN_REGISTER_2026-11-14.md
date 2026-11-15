@@ -38,9 +38,9 @@ De tekst in de kolom 'Open uit bronronde' is overgenomen uit de laatste F2-voort
 | sp021 Ekster | F2-10 | Juvenielenfoto en eerste roep toegevoegd in [F3-R06](F3_R06_EKSTER_KRAAI_KAUW_2026-11-15_DRAFT.md). Gewicht en voorbeeld van de zachte zang staan open. Fotograaf beschrijft vertrek vanaf de rots. Op de foto is de vogel los met gespreide vleugels. |
 | sp022 Zwarte Kraai | F2-10 | Juvenielenfoto en eerste eigen referentieroep toegevoegd in [F3-R06](F3_R06_EKSTER_KRAAI_KAUW_2026-11-15_DRAFT.md). Onafhankelijke beoordeling staat open. |
 | sp025 Kauw | F2-11 | Vrije-vluchtfoto, juvenielenfoto en eigen contactroep toegevoegd in [F3-R06](F3_R06_EKSTER_KRAAI_KAUW_2026-11-15_DRAFT.md). Scherper juvenielenbeeld en afzonderlijke alarmroep blijven verbeterwensen. |
-| sp026 Gaai | F2-11 | Een bronbevestigde juvenielenfoto. |
-| sp029 Koolmees | F2-11 | Browsercontrole op deze commit en fysieke toesteltoets. |
-| sp030 Pimpelmees | F2-12 | De fysieke toestelproef is uitgesteld op verzoek van de eigenaar. |
+| sp026 Gaai | F2-11 | Juvenielenfoto en roep toegevoegd in [F3-R07](F3_R07_GAAI_EN_MEZEN_2026-11-15_DRAFT.md). Een apart voorbeeld van de zachte zang staat open. |
+| sp029 Koolmees | F2-11 | Zang, roep en vergelijking van beide jonge mezen gecontroleerd in [F3-R07](F3_R07_GAAI_EN_MEZEN_2026-11-15_DRAFT.md). De fysieke toesteltoets staat open. |
+| sp030 Pimpelmees | F2-12 | Roep toegevoegd in [F3-R07](F3_R07_GAAI_EN_MEZEN_2026-11-15_DRAFT.md). Opnieuw vergelijken met het origineel van de oude zang en de juvenielenfoto staat open. De fysieke toestelproef is uitgesteld op verzoek van de eigenaar. |
 | sp031 Matkop | F2-12 | Scherpe foto in vrije vlucht. De aangepaste naamsvermelding staat in [PR #210](https://github.com/saddamsmit-source/Birdspot-Library/pull/210). |
 | sp032 Glanskop | F2-12 | Scherpe foto in vrije vlucht. De zichtbare credit bij het vooraanzicht staat in [PR #210](https://github.com/saddamsmit-source/Birdspot-Library/pull/210). |
 | sp033 Kuifmees | F2-13 | Scherpe vrije-vluchtfoto. De door Luc Viatour gevraagde credit staat in [PR #212](https://github.com/saddamsmit-source/Birdspot-Library/pull/212). |

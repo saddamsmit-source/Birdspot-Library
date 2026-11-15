@@ -91,6 +91,7 @@ const counts={
  fourthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R04'),
  fifthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R05'),
  sixthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R06'),
+ seventhBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R07'),
  contentInspected:sum(x=>x.F3.reviewedThisRound===true),
  contentComplete:sum(x=>x.F3.contentStatus==='CONTENT COMPLETE')
 };
@@ -103,6 +104,7 @@ const third=rows.filter(x=>x.F3.recheckBatch==='F3-R03');
 const fourth=rows.filter(x=>x.F3.recheckBatch==='F3-R04');
 const fifth=rows.filter(x=>x.F3.recheckBatch==='F3-R05');
 const sixth=rows.filter(x=>x.F3.recheckBatch==='F3-R06');
+const seventh=rows.filter(x=>x.F3.recheckBatch==='F3-R07');
 assert.deepEqual(third.map(x=>x.id), ['sp006','sp007','sp008']);
 assert.deepEqual(third.map(x=>x.F3.photoFilesInspected),[5,6,6]);
 assert.deepEqual(third.map(x=>x.F3.reviewedOriginalAudio),[2,3,2]);
@@ -143,9 +145,30 @@ for (const { currentAssets, F3: review } of sixth) {
   assert.ok(existsSync(new URL('../'+match.reference,import.meta.url)));
  }
 }
+assert.deepEqual(seventh.map(row=>row.id), ['sp026','sp029','sp030']);
+assert.deepEqual(seventh.map(row=>row.F3.photoFilesInspected), [3,5,3]);
+assert.deepEqual(seventh.map(row=>row.F3.reviewedOriginalAudio), [1,2,1]);
+assert.deepEqual(seventh.map(row=>audio.audio[row.id].map(clip=>clip.label)), [['Roep'],['Zang','Roep'],['Zang','Roep']]);
+assert.deepEqual(seventh.flatMap(row=>row.currentAssets.imageSlots.filter(
+ photo=>photo.addedIn==='F3-R07').map(photo=>photo.path)), ['/assets/species/plumage/sp026-juv-review.webp']);
+const unmatchedPimpelSong = seventh[2].F3.unmatchedAudio;
+assert.deepEqual(seventh.flatMap(row=>row.F3.unmatchedAudio.map(clip=>clip.path)), ['/assets/species/audio/sp030-song.mp3']);
+const song = readFileSync(new URL('..'+unmatchedPimpelSong[0].path,import.meta.url));
+assert.equal(unmatchedPimpelSong[0].localSha256,createHash('sha256').update(song).digest('hex'));
+assert.equal(unmatchedPimpelSong[0].source,audio.audio.sp030[0].source);
+assert.equal(unmatchedPimpelSong[0].path,audio.audio.sp030[0].audio);
+for (const { currentAssets, F3: review } of seventh) {
+ const proof = [...review.photoSourceMatches,...review.priorPhotoMatches];
+ assert.deepEqual(proof.map(photo=>photo.path).sort(), currentAssets.imageSlots.map(photo=>photo.path).sort());
+ for (const photo of review.priorPhotoMatches) {
+  const file = readFileSync(new URL('..'+photo.path,import.meta.url));
+  assert.equal(photo.localSha1,createHash('sha1').update(file).digest('hex'));
+  assert.ok(existsSync(new URL('../'+photo.reference,import.meta.url)));
+ }
+}
 const newPeregrine = '/assets/species/plumage/sp009-juv-flight.webp';
 assert.deepEqual(fourth.flatMap(x=>x.currentAssets.imageSlots.filter(y=>y.addedIn==='F3-R04').map(y=>y.path)), [newPeregrine]);
-for (const row of [...third, ...fourth, ...fifth, ...sixth]) {
+for (const row of [...third, ...fourth, ...fifth, ...sixth, ...seventh]) {
  const { F3: review, currentAssets } = row;
  assert.equal(review.fullPass, false);
  assert.equal(review.status, 'IN CONTENT REVIEW / OPEN POINTS');
@@ -157,7 +180,8 @@ for (const row of [...third, ...fourth, ...fifth, ...sixth]) {
  });
  assert.deepEqual(review.photoBlobSHAs, photoBlobs, row.id + ' review must match the inspected image files');
  assert.deepEqual(review.audioSourceMatches.map(clip => [clip.path, clip.source]),
-  audio.audio[row.id].map(clip => [clip.audio, clip.source]), row.id + ' recorded audio sources changed');
+  audio.audio[row.id].filter(clip => !review.unmatchedAudio?.some(item => item.path === clip.audio))
+   .map(clip => [clip.audio, clip.source]), row.id + ' recorded audio sources changed');
  for (const match of review.audioSourceMatches) {
   assert.equal(match.windows, 3);
   assert.ok(match.minimumNormalizedCorrelation >= 0.9 && match.minimumNormalizedCorrelation <= 1);

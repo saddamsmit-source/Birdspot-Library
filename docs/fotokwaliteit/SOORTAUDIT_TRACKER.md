@@ -14,9 +14,9 @@ Beoordeeld volgens `docs/BIRDSPOT_KWALITEITSNORM.md` (biometrie §1, herkenning 
 | 4a | Visueel VERIFIED (beeld per foto) | 98 van 101 |
 | 4b | Inhoud (kennisprofiel) VERIFIED | 68 van 101 — alle profielen hebben nog open punten |
 | 4c | Onafhankelijk beoordeeld (ChatGPT) | 0 — NOT TESTED |
-| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 159; plus collectiebrede vluchtcontrole: 16 uit de vluchtrol, 11 gearchiveerd |
+| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 160; plus collectiebrede vluchtcontrole: 16 uit de vluchtrol, 11 gearchiveerd |
 | 6 | Afgekeurde vluchtfoto's | 27 (tabel hieronder) |
-| 7 | Ontbrekende foto-/kennisonderdelen | 61 fotoposities in gecontroleerde soorten; 39 fotosoorten zonder kennisprofiel |
+| 7 | Ontbrekende foto-/kennisonderdelen | 60 fotoposities in gecontroleerde soorten; 39 fotosoorten zonder kennisprofiel |
 | 8 | Kritische kenmerken niet doorslaggevend onderbouwd | 135 (tabel hieronder) |
 | 9 | Open bron-/licentieproblemen | 4 in gecontroleerde soorten; collectiebreed blijft het eerder gemelde punt '22 afbeeldingen buiten de bronaudit' open |
 
@@ -809,21 +809,22 @@ Batch M1 · 2026-11-15 · SHA `None` · technisch VERIFIED · visueel VERIFIED �
 
 ### sp026 Gaai — PARTIALLY TESTED
 
-Batch M2 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M2 · 2026-11-15 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
 | `sp026.webp` | Hoofdfoto | Gaai op tak met eikel; blauw vleugelveld en baardstreep. | niet vast te stellen | goed | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Hwbund |
 | `sp026-flight.webp` | In vlucht | Vrij in de lucht laag boven grasland; blauw-zwart gebandeerde vleugels, witte stuit; poten ingetrokken. | niet vastgesteld | goed | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Giles Laurent (gileslaurent.com) |
+| `sp026-juv-review.webp` | Verenkleed (Juveniel) | Jonge Gaai van dichtbij, met een bruine kruin, zacht ogend kleed en blauw gebandeerde vleugeldekveren. | Levensstadium juveniel geannoteerd in de bronwaarneming. Ook de minder getekende kruin en het zachte kleed zijn zichtbaar. Geslacht open. | Goed voor herkenning van kop en kleed. De linker rand snijdt een deel van de staart af. | goedgekeurd | — | VERIFIED: bronaudit 15-11-2026: zelfde opname (Individuele foto en originele JPEG bekeken. Het lokale WebP is uit dezelfde opname afgeleid.), CC BY 4.0 · Tim |
 
-- **Correcties:** Maten en broedgegevens naar de bron: lengte 32–36 cm, spanwijdte 50–60 cm, 5–7 eieren, broedduur 16–21 dagen, nestjongen 19–21 dagen (VB_GAAI).; Twee originele foto’s gematcht. Maten en de vergelijking met Ekster onderbouwd. De bestaande fotoinformatie vermeldt de door de maker gevraagde website en linkt de licentie.
-- **Ontbreekt:** Juveniel
+- **Correcties:** Maten en broedgegevens naar de bron: lengte 32–36 cm, spanwijdte 50–60 cm, 5–7 eieren, broedduur 16–21 dagen, nestjongen 19–21 dagen (VB_GAAI).; Twee originele foto’s gematcht. Maten en de vergelijking met Ekster onderbouwd. De bestaande fotoinformatie vermeldt de door de maker gevraagde website en linkt de licentie.; F3-R07: juveniele Gaai met bronannotatie en zichtbaar jeugdkleed toegevoegd.
+- **Ontbreekt:** niets
 - **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** Geslachten gelijk; geen geslachtsvakken.
-- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Kleedpatroon; open: Juveniel kleed niet uit een bron beschreven; geen gidsfoto van een juveniel.; resterende dataverschillen: 0
-- **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Kleedpatroon; open: Een afzonderlijk opnamevoorbeeld van de zachte zang met imitaties staat open.; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
 - **Onzeker:** —
-- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
 
 ### sp025 Kauw — PARTIALLY TESTED
 
