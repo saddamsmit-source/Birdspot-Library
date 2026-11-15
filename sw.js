@@ -12,7 +12,7 @@
  *   birdspot-media           — foto's/IDB-exports (permanent)
  */
 
-const APP_VERSION = '1.27.20';
+const APP_VERSION = '1.27.21';
 const APP_CACHE   = `birdspot-app-v${APP_VERSION}`;
 const MEDIA_CACHE = 'birdspot-media';
 
@@ -65,6 +65,7 @@ const PRECACHE_PATHS = [
 
   // JS — features
   'src/features/home/view.js',
+  'src/features/home/hotspots.js',
   'src/features/search/index.js',
   'src/features/home/featuredCarousel.js',
   'src/features/home/ambientBackdrop.js',

@@ -37,20 +37,27 @@ export function startSoundRecognition(onStatus, onResults) {
   onStatus('Herkenning laden… De eerste keer wordt circa 82 MB gedownload.');
   return {
     push(frame) {
-      if (closed) return;
-      const available = Math.min(WINDOW - offset, frame.length);
-      buffer.set(frame.subarray(0, available), offset);
-      offset += available;
-      sampled += frame.length;
-      if (offset !== WINDOW) return;
-      if (ready && !busy) {
-        busy = true;
-        const second = Math.max(0, Math.floor(sampled / 32000) - 3);
-        worker.postMessage({ samples: buffer, second }, [buffer.buffer]);
+      if (closed || !frame?.length) return;
+      let read = 0;
+      // Always advance the timeline, including while the ~82 MB model is still loading
+      // or inference is busy. Old full windows must NEVER be replayed as fresh audio.
+      while (read < frame.length) {
+        const amount = Math.min(WINDOW - offset, frame.length - read);
+        buffer.set(frame.subarray(read, read + amount), offset);
+        offset += amount;
+        read += amount;
+        if (offset !== WINDOW) continue;
+        if (ready && !busy) {
+          busy = true;
+          const second = Math.max(0, Math.floor((sampled + read) / 32000) - 3);
+          worker.postMessage({ samples: buffer, second }, [buffer.buffer]);
+        }
+        // Drop the just-finished window when not ready/busy; keep collecting
+        // the next real-time slice instead of resending stale, misleading audio.
         buffer = new Float32Array(WINDOW);
+        offset = 0;
       }
-      offset = frame.length - available;
-      if (offset) buffer.set(frame.subarray(available), 0);
+      sampled += frame.length;
     },
     stop,
   };

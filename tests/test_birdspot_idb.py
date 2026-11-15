@@ -177,7 +177,10 @@ with sync_playwright() as pw:
     page.add_init_script("window.__errs = []; window.onerror = (m,s,l,c,e) => window.__errs.push(m);")
 
     # Initiële lading — zorg dat DB-schema bestaat
-    page.goto(BASE_URL, wait_until="networkidle")
+    # Home contains streaming/background network requests; networkidle is not a reliable readiness contract.
+    # Wait for the actual route and retain the strict decode/Blob assertions below.
+    page.goto(BASE_URL, wait_until="domcontentloaded")
+    page.locator("#screen-home").wait_for(state="attached", timeout=15000)
     page.wait_for_timeout(1000)
     print("App geladen. Start IDB-injectietests.\n")
 
