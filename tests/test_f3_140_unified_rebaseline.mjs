@@ -44,6 +44,12 @@ for(let i=0;i<rows.length;i++){
     x.id+' invalid gate status '+key+'='+v);
  }
  if(x.F3.fullPass){
+  if(x.currentAssets.existingAudioCount===0){
+   assert.equal(x.F3.audioException?.ownerApproved,true,
+      x.id+' no recorded bird sound: explicit owner decision needed for exceptional F3 full pass');
+   assert.ok(x.F3.audioException?.reason?.length>25,
+      x.id+' exceptional missing audio needs biological/licensing evidence');
+  }
   assert.equal(x.F3.status,'VERIFIED',x.id+' cannot be full pass in an incomplete state');
   for(const key of req){
    const value=x.F3.checks[key];
