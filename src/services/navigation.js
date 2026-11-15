@@ -6,6 +6,8 @@ let lastRootBack = 0;
 let sequence = 0;
 const visible = el => el && !el.hidden && el.getClientRects().length > 0;
 function closeTopLayer() {
+  const photoEditor = document.querySelector('.sd-guide-editor[open]');
+  if (photoEditor) { photoEditor.querySelector('.sd-guide-close').click(); return true; }
   const search = document.querySelector('#appSearchDialog[open]');
   if (search) { search.querySelector('.app-search-close').click(); return true; }
   // Reverse DOM order breaks equal-z-index ties in the same way as painting.

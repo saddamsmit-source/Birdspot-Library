@@ -15,6 +15,7 @@ import { assetUrl } from '../../utils/assetUrl.js';
 import { getCollectionIds, toggleCollectionItem } from '../../storage/collections.js';
 
 import { GUIDE_PHOTOS } from './guidePhotos.js';
+import { mountPersonalGuide, personalGuideSlot } from './personalGuide.js';
 import { closePhotoInfo, photoInfoMarkup } from '../../utils/photoInfo.js';
 import { openPhotoViewer } from '../../utils/photoViewer.js';
 
@@ -556,6 +557,10 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
   const photoList = [];
   let closed = false;
   let closeViewer;
+  const stockHero = guidePhoto
+    ? '<button type="button" class="sd-hero-photo" data-guide-image="' + escHtml(assetUrl(guidePhoto.image)) + '" aria-label="Vergroot hoofdfoto">' +
+      '<img class="species-guide-photo" data-src="' + escHtml(assetUrl(guidePhoto.image)) + '" alt="' + escHtml(guidePhoto.alt) + '"></button>' + photoInfoMarkup(guidePhoto)
+    : '<span aria-hidden="true">' + escHtml(s.icon) + '</span>';
 
   const sheet = document.createElement('div');
   sheet.className = 'sheet-overlay signature-species-detail-overlay';
@@ -569,9 +574,7 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
       '<div class="sheet__content">' +
         '<div class="signature-species-detail-hero' + (guidePhoto ? ' has-guide-photo' : '') + '">' +
           '<div id="detailThumb-' + escHtml(s.id) + '" class="signature-species-detail-image">' +
-            (guidePhoto ? '<button type="button" class="sd-hero-photo" data-guide-image="' + escHtml(assetUrl(guidePhoto.image)) + '" aria-label="Vergroot hoofdfoto">' +
-              '<img class="species-guide-photo" data-src="' + escHtml(assetUrl(guidePhoto.image)) + '" alt="' + escHtml(guidePhoto.alt) + '"></button>' + photoInfoMarkup(guidePhoto) :
-              '<span aria-hidden="true">' + escHtml(s.icon) + '</span>') + '</div>' +
+            personalGuideSlot('hero', 'Hoofdfoto', stockHero) + '</div>' +
           '<div class="signature-species-detail-intro"><span class="signature-eyebrow">' + escHtml(s.family) + '</span>' +
             '<h2>' + escHtml(s.nameNL) + '</h2>' +
             '<p><em>' + escHtml(s.nameSci) + '</em></p>' +
@@ -583,7 +586,7 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
           '<button type="button" class="signature-species-media-link" id="speciesDetailMedia">Open Media Studio ↗</button>' +
         '</div>' +
         tabBar('herkenning') +
-        '<div class="sd-panel" id="sdPanel-herkenning" role="tabpanel" aria-labelledby="sdTab-herkenning">' + recognitionPanel(s) + '</div>' +
+        '<div class="sd-panel" id="sdPanel-herkenning" role="tabpanel" aria-labelledby="sdTab-herkenning">' + recognitionPanel(s, null, true) + '</div>' +
         '<div class="sd-panel" id="sdPanel-status" role="tabpanel" aria-labelledby="sdTab-status" hidden>' + statusPanel(s) + '</div>' +
         '<div class="sd-panel" id="sdPanel-waar" role="tabpanel" aria-labelledby="sdTab-waar" hidden>' + wherePanel(s) + '</div>' +
         '<div class="sd-panel" id="sdPanel-mijn" role="tabpanel" aria-labelledby="sdTab-mijn" hidden>' +
@@ -601,6 +604,7 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
     guideImage.src = guideImage.dataset.src;
   }
   document.body.appendChild(sheet);
+  const unmountPersonalGuide = mountPersonalGuide(sheet, s);
   const panel = sheet.querySelector('.sheet');
   sheet.classList.add('open'); // Immediately interactive, also before the first animation frame.
   sheet.querySelector('.sd-tabs')?.addEventListener('click', e => {
@@ -630,6 +634,7 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
   function close(animate = true) {
     if (closed) return;
     closed = true;
+    unmountPersonalGuide();
     sheet.querySelectorAll('.sd-audio audio').forEach(audio => audio.pause());
     closeViewer?.(false);
     document.removeEventListener('keydown',keyHandler);
@@ -654,9 +659,14 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
   if (ctx) ctx.detailCleanup = close;
 
   function keyHandler(e) {
-    if (e.key === 'Escape') {
-      if (!closePhotoInfo(sheet)) close();
+    if (e.key !== 'Escape' || e.defaultPrevented) return;
+    const editor = sheet.querySelector('.sd-guide-editor[open]');
+    if (editor) {
+      e.preventDefault();
+      editor.querySelector('.sd-guide-close').click();
+      return;
     }
+    if (!closePhotoInfo(sheet)) close();
   }
   document.addEventListener('keydown',keyHandler);
   sheet.addEventListener('click',e => {

@@ -254,3 +254,13 @@ Geen bekende afwijkingen op dit moment.
   uitgevoerd.
 - Supportmatrix (browsers/toestellen, Handbook §4.5) nog niet vastgelegd.
 - Definitieve productiehosting en de fysieke toesteltest staan open.
+
+## Eigen gidsfoto’s en fotovoorstellen
+
+Een vogelaar kan op de soortkaart via **Eigen foto** zelfgemaakte beelden toevoegen aan de hoofdfoto, een getoond kleed of een vluchtrol. De ingreep is per slot en zichtbaar op dit toestel. **Herstel standaardfoto** verwijdert de voorkeur. De bestaande voorraadfoto en verplichte credits blijven beschikbaar. De app bewaart de verkleinde JPEG zonder originele bestandsnaam of camerametadata in de bestaande IndexedDB-mediaopslag. ZIP-back-ups nemen de foto mee en kunnen die terugzetten naar een leeg profiel. Persoonlijke gidsfoto’s zijn geen waarnemingen, worden niet gedeeld met andere gebruikers en verschijnen niet als bronfoto in vergelijkingen.
+
+Via **Foto voorstellen aan de beheerder** kiest de maker bewust voor insturen. Het voorstel bevat de soort, het beelddoel, de opgeschoonde foto en een optionele toelichting. Er is geen automatische overdracht van accountgegevens, waarnemingen, GPS of contactinfo. Een voorstel wordt pas bevestigd na een succesvolle opslagreactie. Bij een onzekere ontvangst kan de gebruiker opnieuw proberen met dezelfde melding-ID of het fotovoorstel als bestand downloaden. Insturen geeft toestemming voor beoordeling. Publicatie blijft een afzonderlijke beslissing over determinatie en rechten.
+
+De afzonderlijke, mobiel bruikbare beoordelingsweergave staat op `feedback-inbox.html`. Voor de afgeschermde preview gebruikt `/api/photo-feedback` een private Vercel Blob-store in Parijs. De API is uitsluitend ingeschakeld in de previewomgeving. Lijst en foto’s vereisen de versleuteld geconfigureerde `BIRDSPOT_FEEDBACK_OWNER_KEY`; leestoegang en cachegedrag worden apart getest. De sleutel is uitsluitend beschikbaar in de instellingen van het beschermde previewproject. De beheerder kan ook een gedownload voorstel openen zonder server. Een voorstel wijzigt nooit automatisch de centrale gids. De volledige eigenaarapp en publieke ontvangst blijven aan de bestaande releasegates onderworpen.
+
+**Kosten en herstel.** De preview controleert een grens van 40 voorstellen en een invoergrens van 2,1 MB per bericht. De werkelijke verbruiksstand blijft afzonderlijk te meten. De privéopslag draait in het bestaande previewproject. Bij ontoereikend tegoed kan de gebruiker een voorstel downloaden en de beheerder het bestand openen. Herstel van de appcode via de basis-PR. Voor lokale beelden bieden de slotreset en ZIP-back-up de herstelroute.

@@ -74,6 +74,7 @@ const PRECACHE_PATHS = [
   'src/features/species/guidePhotos.js',
   'src/features/species/guideComparisons.js',
   'src/features/species/guideMedia.js',
+  'src/features/species/personalGuide.js',
   'src/features/species/detailSections.js',
   'src/features/species/knowledgeSections.js',
   'src/features/sightings/view.js',
@@ -238,6 +239,7 @@ self.addEventListener('fetch', event => {
   // Sla niet-GET en externe verzoeken over (bijv. Leaflet CDN, OpenStreetMap tiles)
   if (request.method !== 'GET') return;
   if (url.origin !== self.location.origin) return;
+  if (url.pathname.startsWith(atScope('api/'))) return;
 
   if (url.pathname.startsWith(atScope('assets/species/audio/'))) {
     event.respondWith(guideAudioResponse(request));

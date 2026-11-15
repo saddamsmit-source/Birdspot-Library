@@ -14,6 +14,7 @@ import { GUIDE_PHOTOS } from './guidePhotos.js';
 import { GUIDE_AUDIO, GUIDE_HEROES, GUIDE_PLUMAGE, GUIDE_POSES } from './guideMedia.js';
 import { photoInfoMarkup } from '../../utils/photoInfo.js';
 import { assetUrl } from '../../utils/assetUrl.js';
+import { personalGuideSlot } from './personalGuide.js';
 import { knowledgeFor, quickPanel, recognitionDetails, criticalDetails, lifeDetails, whereDetails, similarExtra, voiceDetails } from './knowledgeSections.js';
 
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -171,7 +172,7 @@ export function guidePlumageGroups(s) {
   return groups;
 }
 
-function plumageCard({key, icon: iconName, title, text, badge, photos, heroRef, flightRef}, compact = false) {
+function plumageCard({key, icon: iconName, title, text, badge, photos, heroRef, flightRef}, compact = false, personalSlot = '') {
   const gallery = photos.map(photo => {
     const label = photo.label || (photo.flight ? 'In vlucht' : '');
     // Source-backed notes remain available in the single explicit details
@@ -190,7 +191,11 @@ function plumageCard({key, icon: iconName, title, text, badge, photos, heroRef, 
     : (text ? `<p class="sd-plumage-description">${esc(text)}</p>` : '');
   // Only the visual two-role mode collapses long prose. All other cards and
   // flight cards retain their original readable notes and source information.
-  return `<div class="sd-plumage" data-plumage="${key}">${icon(iconName)}<div><strong>${esc(title)}${badge ? `<span class="sd-badge">${esc(badge)}</span>` : ''}</strong>${gallery.length ? `<div class="sd-plumage-gallery">${gallery.join('')}</div>` : ''}${heroRef ? '<p class="sd-hero-ref">Foto: de hoofdfoto bovenaan deze kaart.</p>' : ''}${flightRef ? '<p class="sd-hero-ref" data-flight-ref>Foto: zie In vlucht hieronder.</p>' : ''}${description}</div></div>`;
+  const stock = (gallery.length ? `<div class="sd-plumage-gallery">${gallery.join('')}</div>` : '') +
+    (heroRef ? '<p class="sd-hero-ref">Foto: de hoofdfoto bovenaan deze kaart.</p>' : '') +
+    (flightRef ? '<p class="sd-hero-ref" data-flight-ref>Foto: zie In vlucht hieronder.</p>' : '');
+  const label = personalSlot.startsWith('flight-') && title !== 'In vlucht' ? `${title} · in vlucht` : title;
+  return `<div class="sd-plumage" data-plumage="${key}">${icon(iconName)}<div><strong>${esc(title)}${badge ? `<span class="sd-badge">${esc(badge)}</span>` : ''}</strong>${personalSlot ? personalGuideSlot(personalSlot, label, stock) : stock}${description}</div></div>`;
 }
 
 /** Foto's zonder vastgesteld geslacht/leeftijd (niet in een kleedgroep van guidePlumageGroups).
@@ -214,9 +219,12 @@ function posesPanel(photos) {
  * 10-11-2026). Combineert vluchtfoto's die uit de kleed-/geslachtsgroepen zijn gehaald (met geslacht/
  * leeftijd-label uit die groep) met neutrale vluchtfoto's zonder vastgesteld geslacht (eigen, neutrale
  * kaart — geen geslacht verzinnen). Hergebruikt plumageCard voor dezelfde visuele taal als Verenkleed. */
-function flightSection(entries) {
-  const cards = entries.filter(entry => entry.photos.length).map(entry => plumageCard(entry));
-  if (!cards.length) return '';
+function flightSection(entries, personal) {
+  const cards = entries.filter(entry => entry.photos.length)
+    .map(entry => plumageCard(entry, false, personal ? `flight-${entry.key}` : ''));
+  if (!cards.length) {
+    return personal ? `<div class="sd-guide-empty"><strong>In vlucht</strong>${personalGuideSlot('flight-neutral', 'In vlucht')}</div>` : '';
+  }
   return `<section class="sd-flight" aria-label="In vlucht"><h3 class="sd-h">In vlucht</h3><div class="sd-plumage-list"${cards.length > 1 ? ' data-flight-layout="compare"' : ''}>${cards.join('')}</div></section>`;
 }
 
@@ -366,7 +374,7 @@ export function voicePanel(s, voice, sourced = '') {
 
 
 /** Tab 1 — Herkenning: maten, kenmerken, verenkleed (incl. broed-, winter- en eclipskleed), zang en roep. */
-export function recognitionPanel(s, life = null) {
+export function recognitionPanel(s, life = null, personal = false) {
   const out = [];
   const displayed = new Set();
   const takePhoto = photo => {
@@ -415,6 +423,7 @@ export function recognitionPanel(s, life = null) {
     return {...group, photos: restPhotos, heroRef, flightRef: !heroRef && !restPhotos.length && flightPhotos.length > 0};
   });
   if (groups.length) {
+    const card = (group, compact = false) => plumageCard(group, compact, personal ? group.key : '');
     // A side-by-side comparison is only useful with two different, actual
     // non-flight role photos. A hero reference or text-only placeholder must
     // not be mistaken for a second comparable image (e.g. sp017).
@@ -423,14 +432,16 @@ export function recognitionPanel(s, life = null) {
     if (compare) {
       const withoutPhotos = groups.filter(group => !group.photos.length);
       out.push('<h3 class="sd-h">Verenkleed</h3><div class="sd-plumage-list" data-layout="compare">' +
-        withPhotos.map(group => plumageCard(group, true)).join('') + '</div>');
+        withPhotos.map(group => card(group, true)).join('') + '</div>');
       // Text-only seasonal/age roles must not take up the same picture grid.
       // Keep every historical fieldmark and hero reference one tap away.
-      if (withoutPhotos.length) out.push(`<details class="sd-plumage-other"><summary>Andere kleden (${withoutPhotos.length})</summary><div class="sd-plumage-list">${withoutPhotos.map(group => plumageCard(group)).join('')}</div></details>`);
+      if (withoutPhotos.length) out.push(`<details class="sd-plumage-other"><summary>Andere kleden (${withoutPhotos.length})</summary><div class="sd-plumage-list">${withoutPhotos.map(group => card(group)).join('')}</div></details>`);
     } else {
       out.push('<h3 class="sd-h">Verenkleed</h3><div class="sd-plumage-list">' +
-        groups.map(group => plumageCard(group)).join('') + '</div>');
+        groups.map(group => card(group)).join('') + '</div>');
     }
+  } else if (personal) {
+    out.push(`<details class="sd-plumage-other"><summary>Verenkleed</summary><div class="sd-guide-empty"><strong>Volwassen</strong>${personalGuideSlot('adult', 'Volwassen')}<strong>Juveniel</strong>${personalGuideSlot('juv', 'Juveniel')}</div></details>`);
   }
 
   const neutral = neutralPhotos(s.id, takePhoto);
@@ -443,7 +454,7 @@ export function recognitionPanel(s, life = null) {
   const FLIGHT_SLOTS = ['adult_m', 'adult', 'adult_f', 'juv', 'breeding', 'winter', 'eclipse', 'jaarling', 'neutral'];
   const slotRank = key => (FLIGHT_SLOTS.includes(key) ? FLIGHT_SLOTS.indexOf(key) : FLIGHT_SLOTS.length - 1);
   flightEntries.sort((a, b) => slotRank(a.key) - slotRank(b.key));
-  out.push(flightSection(flightEntries));
+  out.push(flightSection(flightEntries, personal));
   out.push(posesPanel(neutralRest));
   // FQA-03 (10-11-2026): één sectie "Lijkt op" met één kaart per gelijkende soort. Kleed- en vluchtvergelijking
   // van dezelfde soort staan als tabbladen in die ene kaart. De vergelijking mag gidsfoto's hergebruiken.

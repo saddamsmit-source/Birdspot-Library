@@ -347,3 +347,15 @@ Dwerggans (sp182, Schaarse gasten) en Groene Reiger (sp459, Dwaalgasten) staan a
 Tien eigen beelden en vier gebruikte partnerbeelden beoordeeld. Negen originele bestandspagina’s geraadpleegd. De audit gebruikt voor expliciet gekozen foto's dezelfde resolver als de app. [Beeld- en bronbewijs](F2_30_BRON_EN_LIMIETEN.json).
 
 **Teller** · 81/140 soorten opgepakt, 59 resterend. F2 is PARTIALLY TESTED. Basis [PR #233](https://github.com/saddamsmit-source/Birdspot-Library/pull/233) op `5226a043c98d49251830371d34c4f980fedb64f0`. CAP-BIRD-012/015. Herstel via de basis-PR. Volgende batch: Stormmeeuw, Kokmeeuw en Scholekster.
+
+## F2-31 · Stormmeeuw, Kokmeeuw en Scholekster
+
+| Soort | Hercontrole en wijziging | Open |
+|---|---|---|
+| sp096 Stormmeeuw | Twee eigen foto's nagekeken. Het volwassen rustpaar met Zilvermeeuw toont oog, poten en snavel naast elkaar. | Winterbeeld ontbreekt voor het paar met Kokmeeuw. |
+| sp097 Kokmeeuw | Broed-, winter- en vluchtfoto herbeoordeeld. Vergelijking in broedkleed met Zwartkopmeeuw verduidelijkt kap, snavel en gevouwen vleugelpunt. | Originele pagina van de partnerfoto onbereikbaar. |
+| sp098 Scholekster | Rust-, jeugd- en vluchtfoto herbeoordeeld. Vergelijking met Kluut toont snavelvorm, borst en poten. | Originele jeugd- en vluchtpagina's onbereikbaar. |
+
+Acht eigen en drie partnerbeelden bekeken. Acht bronpagina’s heropend. [Brondossier F2-31](F2_31_BRON_EN_LIMIETEN.json).
+
+**Teller** · 84/140 soorten opgepakt, 56 resterend. F2 is PARTIALLY TESTED. Basis [PR #234](https://github.com/saddamsmit-source/Birdspot-Library/pull/234) op `328f147574d2bbf16d3bf19cc5c6e9d08184f38f`. CAP-BIRD-012/015.

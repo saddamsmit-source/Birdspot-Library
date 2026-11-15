@@ -204,6 +204,11 @@ export const GUIDE_COMPARISONS = [
       {id: 'sp097', source: 'kokmeeuw', plumage: 'breeding', marks: 'Volwassen vogel heeft in broedkleed een chocoladebruine kap. In vlucht is de voorrand van de vleugel wit.'},
       {id: 'sp225', source: 'zwartkopmeeuw', plumage: 'breeding', marks: 'Volwassen vogel heeft een zwarte broedkap, een dikkere rode snavel en witte slagpennen.'},
     ],
+    rows: [
+      {label: 'Kap', values: ['Chocoladebruin', 'Zwart, ook op het achterhoofd']},
+      {label: 'Snavel', values: ['Relatief fijn', 'Dikker en korter van indruk']},
+      {label: 'Vleugelpunten in rust', values: ['Donkere punten zichtbaar', 'Bij volwassen vogels overwegend wit']},
+    ],
     tip: 'Vergelijk volwassen vogels. Jonge Zwartkopmeeuwen kunnen donkere vleugelpunten hebben.',
   },
   {
@@ -1081,6 +1086,11 @@ export const GUIDE_COMPARISONS = [
       {id: 'sp096', source: 'stormmeeuw', marks: 'Kleiner, met een fijnere snavel, donker oog en geelgroene poten.'},
       {id: 'sp094', source: 'zilvermeeuw', marks: 'Groter, met een stevige gele snavel, licht oog en roze poten.'},
     ],
+    rows: [
+      {label: 'Oog', values: ['Donker', 'Licht']},
+      {label: 'Poten', values: ['Geelgroen', 'Roze']},
+      {label: 'Snavel', values: ['Fijn', 'Stevig met rode vlek op de ondersnavel']},
+    ],
     tip: 'Kijk naar oog, poten en snavel samen. Formaat helpt vooral als beide vogels even ver weg staan.',
   },
   {
@@ -1729,6 +1739,11 @@ export const GUIDE_COMPARISONS = [
     birds: [
       {id: 'sp098', source: 'scholekster', marks: 'Lange, rechte oranjerode snavel. Zwarte kop en borst, roze poten.'},
       {id: 'sp143', source: 'kluut', marks: 'Dunne, omhooggebogen donkere snavel. Overwegend wit met zwarte tekening en lange poten.'},
+    ],
+    rows: [
+      {label: 'Snavel', values: ['Lang, recht en oranjerood', 'Dun, donker en omhooggebogen']},
+      {label: 'Borst', values: ['Zwart', 'Wit']},
+      {label: 'Poten', values: ['Roze', 'Lang en grijsblauw']},
     ],
     tip: 'Vergelijk de snavelvorm en pootlengte. De kleuren zijn lastiger bij tegenlicht.',
   },
