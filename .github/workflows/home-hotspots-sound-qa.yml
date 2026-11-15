@@ -54,5 +54,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: birdspot-hotspots-390px
-          path: tests/screenshots/cinematic_wetland/home_hotspots_offline_390.png
+          path: tests/screenshots/home_hotspots_offline_390.png
           if-no-files-found: ignore
