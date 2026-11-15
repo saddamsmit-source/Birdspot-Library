@@ -14,7 +14,8 @@
     "newUI": "PR #241 and #244; not on base SHA",
     "firstBatch": "docs/fotokwaliteit/F3_R01_DUIVEN_HERCONTROLE_2026-11-15_DRAFT.md",
     "thirdBatch": "docs/fotokwaliteit/F3_R03_SPERWER_HAVIK_TORENVALK_2026-11-15_DRAFT.md",
-    "fourthBatch": "docs/fotokwaliteit/F3_R04_SLECHTVALK_EN_BONTE_SPECHTEN_2026-11-15_DRAFT.md"
+    "fourthBatch": "docs/fotokwaliteit/F3_R04_SLECHTVALK_EN_BONTE_SPECHTEN_2026-11-15_DRAFT.md",
+    "fifthBatch": "docs/fotokwaliteit/F3_R05_DRIE_SPECHTEN_2026-11-15_DRAFT.md"
   },
   "requiredChecks": [
     "photoOriginalIdentity",
@@ -45,12 +46,13 @@
     "audioMissing": 81,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 128,
+    "nextNotStarted": 125,
     "secondBatchStarted": 3,
-    "contentInspected": 12,
+    "contentInspected": 15,
     "contentComplete": 0,
     "thirdBatchStarted": 3,
-    "fourthBatchStarted": 3
+    "fourthBatchStarted": 3,
+    "fifthBatchStarted": 3
   },
   "records": [
     {
@@ -1253,39 +1255,161 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R05",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (5 local files visually matched to original files; second review pending)",
+          "photoIndividualRights": "PARTIALLY TESTED (registered per-photo author and license sourced; any unresolved file history remains in findings)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (adult, juvenile and flight roles assessed, gaps documented)",
+          "photoPairComparisons": "PARTIALLY TESTED (paired comparisons in Chromium at 360 and 390 px)",
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (360 and 390 px Chromium, physical device pending)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (compact players and accessible credits disclosure checked in Chromium)",
+          "audioRecordingsAuthenticity": "PARTIALLY TESTED (every local recording matched to its original signal, independent acoustic review pending)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (individual source and credits checked; second review pending)",
+          "soundRolesSongCall": "PARTIALLY TESTED (individual source recording context and distinct visible call roles checked)",
+          "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (local files decoded and played; offline phase deferred)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming original species page consulted, printed ANWB passage pending)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (source-backed identification, call descriptions and Dutch status; full biometry review pending)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (national breeding estimate, period and trends checked against primary Sovon page)",
+          "ebirdDistributionAndBias": "PARTIALLY TESTED (Cornell taxon code checked; direct distribution and seasonal data inaccessible)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "endToEndGuideUI": "PARTIALLY TESTED (targeted mobile browser emulation; integrated physical device phase deferred)",
+          "independentSecondReview": "NOT TESTED (second independent review pending)"
         },
         "findings": [
-          "Volledige juvenielenfoto met controleerbare leeftijd.",
-          "Hogeresolutie-versie van bestaande vrouwtjesfoto, pas na originele bronimport met bewezen rechten.",
-          "REVIEW REQUIRED: de juveniel-leeftijd steunt op Commons-beschrijving, niet op een volledig getoond jeugdkleed.",
-          "Commons toont voor het juveniel kopdetail nu CC BY 1.0; de oorspronkelijke upload bevat een ouder CC BY-SA-sjabloon. Bij herpublicatie licentiehistorie opnieuw controleren."
+          "Voorgaand bronbestand op 500 × 661 px vervangen door 1211 × 1600 px uit dezelfde volledige JPEG.",
+          "Vrouwtje blijft een schuine achteraanblik, met zichtbare rode achterkruin. Een vrij zijaanzicht blijft een verbeterwens.",
+          "Juvenielenbeeld toont uitsluitend de kop. Een volledig juvenielenportret ontbreekt. Het huidige Commons-licentieveld noemt CC BY 1.0, het uploadcommentaar een CC BY-SA-template.",
+          "Vluchtroep en zitroep afzonderlijk herkenbaar. Harde, lange roffel beschreven. Broedaantal gedateerd en tegengestelde korte en lange trends onderscheiden."
         ],
-        "sourceReferences": [],
-        "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwarte-specht",
+          "https://stats.sovon.nl/stats/soort/8630",
+          "https://birdnet.cornell.edu/taxonomy/species/Dryocopus%20martius",
+          "docs/fotokwaliteit/F3_R05_DRIE_SPECHTEN_2026-11-15_DRAFT.md"
+        ],
+        "reviewedOriginalAudio": 2,
+        "showcasePreview": "LOCAL BROWSER at 360 and 390 px: targeted guide and media review",
+        "independence": "PARTIAL / independent ornithological and acoustic review outstanding",
+        "fullPass": false,
+        "photoFilesInspected": 5,
+        "scientificName": "Dryocopus martius",
+        "ebirdSpeciesCode": "blawoo1",
+        "photoBlobSHAs": [
+          "5e6fd5ed07b51e5b02b07d01b7056df6bf1d0dce",
+          "d55b9dce51c5a7705501b3c84e7ceab8c6fda023",
+          "8ba9f8d39c7ffbb5824fcdf5159bd5f98084c400",
+          "1ea547cee352fd1ed80ad838dfb0e712f388c8f3",
+          "dba789e52c21b2b5d100886f16616683113285ee"
+        ],
+        "photoSourceMatches": [
+          {
+            "path": "/assets/showcase/sp018.webp",
+            "source": "https://commons.wikimedia.org/wiki/File:Dryocopus_martius,_Perersberg,_Brasov,_Romania_0_(cropped).jpg",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Dryocopus_martius%2C_Perersberg%2C_Brasov%2C_Romania_0_%28cropped%29.jpg",
+            "originalSha256": "8f85f31be90d14fbbf0e46700735f2ab5f4e1aa2148bba8eb892ea5db105a469",
+            "sourceSize": [
+              1817,
+              2400
+            ],
+            "localSize": [
+              1211,
+              1600
+            ],
+            "author": "xulescu_g",
+            "license": "CC BY-SA 2.0",
+            "comparison": "Beeldinhoud visueel vergeleken met origineel."
+          },
+          {
+            "path": "/assets/species/plumage/sp018-hero-male.webp",
+            "source": "https://commons.wikimedia.org/wiki/File%3ABlack_Woodpecker_%28Dryocopus_martius%29%2C_Parc_de_Woluw%C3%A9%2C_Brussels_1.jpg",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/5/51/Black_Woodpecker_%28Dryocopus_martius%29%2C_Parc_de_Woluw%C3%A9%2C_Brussels_1.jpg",
+            "originalSha256": "526bc83ef0590542f81905b285568156c6bb78447a37173a6a6e912be3efffa1",
+            "sourceSize": [
+              2624,
+              1714
+            ],
+            "localSize": [
+              1600,
+              1045
+            ],
+            "author": "Frank Vassen from Brussels, Belgium",
+            "license": "CC BY 2.0",
+            "comparison": "Beeldinhoud visueel vergeleken met origineel."
+          },
+          {
+            "path": "/assets/species/plumage/sp018-female-single.webp",
+            "source": "https://commons.wikimedia.org/wiki/File:2016.08.27.-15-Viernheimer_Heide-Viernheim--Schwarzspecht-Weibchen.jpg",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/9/94/2016.08.27.-15-Viernheimer_Heide-Viernheim--Schwarzspecht-Weibchen.jpg",
+            "originalSha256": "510355652e5c896814ed2ee4ec5bed266e49f270ed9d765da0f4cbc822275adc",
+            "sourceSize": [
+              2196,
+              2901
+            ],
+            "localSize": [
+              1211,
+              1600
+            ],
+            "author": "Andreas Eichler",
+            "license": "CC BY-SA 4.0",
+            "comparison": "Beeldinhoud visueel vergeleken met origineel."
+          },
+          {
+            "path": "/assets/species/plumage/sp018-juv-review.webp",
+            "source": "https://commons.wikimedia.org/wiki/File:Dryocopus_martius_03.jpg",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Dryocopus_martius_03.jpg",
+            "originalSha256": "a44012712d6f24372c291a066ff56e3a4a666e030e3984b3b65b72a7a00f350f",
+            "sourceSize": [
+              1000,
+              550
+            ],
+            "localSize": [
+              1000,
+              550
+            ],
+            "author": "Philippe Kurlapski",
+            "license": "CC BY 1.0",
+            "comparison": "Beeldinhoud visueel vergeleken met origineel."
+          },
+          {
+            "path": "/assets/species/plumage/sp018-flight.webp",
+            "source": "https://commons.wikimedia.org/wiki/File:Schwarzspecht_(Dryocopus_martius).jpg",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/4/47/Schwarzspecht_%28Dryocopus_martius%29.jpg",
+            "originalSha256": "3675b718b37734bc71398646be22de5a20022b4e193f5d3e921efb2e2626f657",
+            "sourceSize": [
+              4928,
+              3264
+            ],
+            "localSize": [
+              1400,
+              1085
+            ],
+            "author": "Janus Mosbacher",
+            "license": "CC BY-SA 4.0",
+            "comparison": "Uitsnede visueel op originele opname teruggevonden."
+          }
+        ],
+        "audioSourceMatches": [
+          {
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/2/22/Black_woodpecker_Dryocopus_martius%2C_flying_call.ogg",
+            "windows": 3,
+            "minimumNormalizedCorrelation": 0.9996,
+            "originalSha256": "6045245e5badf699045436989bc3c0f02ad5195f3fd767e05a9e71d1899259ff",
+            "path": "/assets/species/audio/sp018-flight-call-app.mp3",
+            "source": "https://commons.wikimedia.org/wiki/File:Black_woodpecker_Dryocopus_martius,_flying_call.ogg"
+          },
+          {
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Dryocopus_martius_call_at_sitting_Kjeee.ogg",
+            "windows": 3,
+            "minimumNormalizedCorrelation": 0.999,
+            "originalSha256": "c265ae9489024d4fe6ad4857165a4be8626e9d8349a258e983faf3c13a7af888",
+            "path": "/assets/species/audio/sp018-sit-call-app.mp3",
+            "source": "https://commons.wikimedia.org/wiki/File:Dryocopus_martius_call_at_sitting_Kjeee.ogg"
+          }
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (photos, Dutch status, paired mobile UI, recordings and selected primary sources reviewed)",
+        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed."
       }
     },
     {
@@ -1301,43 +1425,195 @@
         "oldClaimsKeptNotReapproved": true
       },
       "currentAssets": {
-        "imageSlots": [],
-        "existingAudioCount": 1,
+        "imageSlots": [
+          {
+            "role": "Hoofdfoto (Mannetje)",
+            "path": "/assets/species/plumage/sp019-hero-male.webp",
+            "oldRights": "NOT TESTED"
+          },
+          {
+            "role": "Verenkleed (Mannetje)",
+            "path": "/assets/species/sp019.webp",
+            "oldRights": "NOT TESTED"
+          },
+          {
+            "role": "Verenkleed (Vrouwtje op de grond)",
+            "path": "/assets/species/plumage/sp019-female-ground.webp",
+            "oldRights": "NOT TESTED"
+          },
+          {
+            "role": "Verenkleed (Juveniel)",
+            "path": "/assets/species/plumage/sp019-juv.webp",
+            "oldRights": "NOT TESTED"
+          },
+          {
+            "role": "In vlucht (Vrouwtje)",
+            "path": "/assets/species/plumage/sp019-flight.webp",
+            "oldRights": "NOT TESTED"
+          }
+        ],
+        "existingAudioCount": 2,
         "existingAudioPaths": [
+          "/assets/species/audio/sp019-laugh-call-app.mp3",
           "/assets/species/audio/sp019-call-app.mp3"
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R05",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (5 local files visually matched to original files; second review pending)",
+          "photoIndividualRights": "PARTIALLY TESTED (registered per-photo author and license sourced; any unresolved file history remains in findings)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (adult, juvenile and flight roles assessed, gaps documented)",
+          "photoPairComparisons": "PARTIALLY TESTED (paired comparisons in Chromium at 360 and 390 px)",
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (360 and 390 px Chromium, physical device pending)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (compact players and accessible credits disclosure checked in Chromium)",
+          "audioRecordingsAuthenticity": "PARTIALLY TESTED (every local recording matched to its original signal, independent acoustic review pending)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (individual source and credits checked; second review pending)",
+          "soundRolesSongCall": "PARTIALLY TESTED (individual source recording context and distinct visible call roles checked)",
+          "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (local files decoded and played; offline phase deferred)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming original species page consulted, printed ANWB passage pending)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (source-backed identification, call descriptions and Dutch status; full biometry review pending)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (national breeding estimate, period and trends checked against primary Sovon page)",
+          "ebirdDistributionAndBias": "PARTIALLY TESTED (Cornell taxon code checked; direct distribution and seasonal data inaccessible)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "endToEndGuideUI": "PARTIALLY TESTED (targeted mobile browser emulation; integrated physical device phase deferred)",
+          "independentSecondReview": "NOT TESTED (second independent review pending)"
         },
         "findings": [
-          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
+          "Vijf actieve foto’s voor het eerst in F3 geregistreerd, met het oude auditregister historisch intact.",
+          "Twee mannetjesopnamen, vrouwtje op de grond, gevlekt juveniel en vrouwtje in vrije vlucht. De hoofdkaarten tonen elk bronbeeld één keer.",
+          "Lachende roep uit de British Library toegevoegd als eigen opname. De oorspronkelijke alarmroep blijft afzonderlijk.",
+          "Herkenning, kleed, stuit in vlucht, geluid en Nederlandse status in een brononderbouwd kennisprofiel vastgelegd."
         ],
-        "sourceReferences": [],
-        "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/groene-specht",
+          "https://stats.sovon.nl/stats/soort/8560",
+          "https://birdnet.cornell.edu/taxonomy/species/Picus%20viridis",
+          "docs/fotokwaliteit/F3_R05_DRIE_SPECHTEN_2026-11-15_DRAFT.md"
+        ],
+        "reviewedOriginalAudio": 2,
+        "showcasePreview": "LOCAL BROWSER at 360 and 390 px: targeted guide and media review",
+        "independence": "PARTIAL / independent ornithological and acoustic review outstanding",
+        "fullPass": false,
+        "photoFilesInspected": 5,
+        "scientificName": "Picus viridis",
+        "ebirdSpeciesCode": "eugwoo2",
+        "photoBlobSHAs": [
+          "cfc3124b0e05dc98fd38ef490b4ef28323c64fbc",
+          "1fdc803171e0e163e03ce42cebd8639479cfd0d3",
+          "0d1030f94d48258b0bd9db743514c22bf1e959de",
+          "8b105c2f179e8f378c830d2329a493923857d2a6",
+          "cd667891a302483c9a49db65b90e832d73d70bde"
+        ],
+        "photoSourceMatches": [
+          {
+            "path": "/assets/species/plumage/sp019-hero-male.webp",
+            "source": "https://commons.wikimedia.org/wiki/File%3AEuropean_green_woodpecker_%28Picus_viridis%29_male.JPG",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/4/42/European_green_woodpecker_%28Picus_viridis%29_male.JPG",
+            "originalSha256": "76fa9f7e7e0ecb67efd9049687e2a00a1eae72982d0fcdebb99287b66798469a",
+            "sourceSize": [
+              3461,
+              2308
+            ],
+            "localSize": [
+              1600,
+              1067
+            ],
+            "author": "Charles J. Sharp",
+            "license": "CC BY-SA 4.0",
+            "comparison": "Beeldinhoud visueel vergeleken met origineel."
+          },
+          {
+            "path": "/assets/species/sp019.webp",
+            "source": "https://commons.wikimedia.org/wiki/File:Green_woodpecker_Franconville_2022_01_21_2.jpg",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Green_woodpecker_Franconville_2022_01_21_2.jpg",
+            "originalSha256": "bbda73859af03b5fac7ed58734660ca1c3df7bd3acc3b9b3dbf6549304a4c8ea",
+            "sourceSize": [
+              4225,
+              2817
+            ],
+            "localSize": [
+              1600,
+              1067
+            ],
+            "author": "Alexis Lours",
+            "license": "CC BY 4.0",
+            "comparison": "Beeldinhoud visueel vergeleken met origineel."
+          },
+          {
+            "path": "/assets/species/plumage/sp019-female-ground.webp",
+            "source": "https://commons.wikimedia.org/wiki/File:European_green_woodpecker_eating.jpg",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/6/65/European_green_woodpecker_eating.jpg",
+            "originalSha256": "662e473f635384e4b09cec2dad66b92c78600144d146796bd971f7a9303396cb",
+            "sourceSize": [
+              2967,
+              2966
+            ],
+            "localSize": [
+              1600,
+              1599
+            ],
+            "author": "Remyymer",
+            "license": "CC BY-SA 4.0",
+            "comparison": "Beeldinhoud visueel vergeleken met origineel."
+          },
+          {
+            "path": "/assets/species/plumage/sp019-juv.webp",
+            "source": "https://commons.wikimedia.org/wiki/File:Picus_viridis_(juvenile).jpg",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/0/03/Picus_viridis_%28juvenile%29.jpg",
+            "originalSha256": "8d19a9f3a75c706bb0883a7324c1c0a271b509190432c90c743b556c65592f03",
+            "sourceSize": [
+              2732,
+              2049
+            ],
+            "localSize": [
+              1600,
+              1200
+            ],
+            "author": "Hans Hillewaert",
+            "license": "CC BY-SA 3.0",
+            "comparison": "Beeldinhoud visueel vergeleken met origineel."
+          },
+          {
+            "path": "/assets/species/plumage/sp019-flight.webp",
+            "source": "https://commons.wikimedia.org/wiki/File:Female_green_woodpecker_in_flight.jpg",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/6/69/Female_green_woodpecker_in_flight.jpg",
+            "originalSha256": "0f2e2cb2527240f230868d09f35fa25262c3b5f7c4e5aecc19e3f7c8012d2826",
+            "sourceSize": [
+              3697,
+              2465
+            ],
+            "localSize": [
+              1400,
+              1050
+            ],
+            "author": "Alexis Lours",
+            "license": "CC BY 4.0",
+            "comparison": "Uitsnede visueel op originele opname teruggevonden."
+          }
+        ],
+        "audioSourceMatches": [
+          {
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/2/25/Green_Woodpecker_%28Picus_viridis%29_%28W1CDR0001497_BD6%29.ogg",
+            "windows": 3,
+            "minimumNormalizedCorrelation": 0.9885,
+            "originalSha256": "bb7b2655acf9e5eff06b2f3facf438c6fdb30074cac44b26a8ea434f3910a161",
+            "path": "/assets/species/audio/sp019-laugh-call-app.mp3",
+            "source": "https://commons.wikimedia.org/wiki/File:Green_Woodpecker_(Picus_viridis)_(W1CDR0001497_BD6).ogg"
+          },
+          {
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Picus_viridis_-_European_Green_Woodpecker_XC416424.mp3",
+            "windows": 3,
+            "minimumNormalizedCorrelation": 0.9713,
+            "originalSha256": "bdb4f70e45dc8dd248337dc0ba391166c77959f4bbd60fee1d2ef35737e72ab8",
+            "path": "/assets/species/audio/sp019-call-app.mp3",
+            "source": "https://commons.wikimedia.org/wiki/File:Picus_viridis_-_European_Green_Woodpecker_XC416424.mp3"
+          }
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (photos, Dutch status, paired mobile UI, recordings and selected primary sources reviewed)",
+        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed."
       }
     },
     {
@@ -1381,36 +1657,134 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R05",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (4 local files visually matched to original files; second review pending)",
+          "photoIndividualRights": "PARTIALLY TESTED (registered per-photo author and license sourced; any unresolved file history remains in findings)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (adult, juvenile and flight roles assessed, gaps documented)",
+          "photoPairComparisons": "PARTIALLY TESTED (paired comparisons in Chromium at 360 and 390 px)",
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (360 and 390 px Chromium, physical device pending)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (compact players and accessible credits disclosure checked in Chromium)",
+          "audioRecordingsAuthenticity": "PARTIALLY TESTED (every local recording matched to its original signal, independent acoustic review pending)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (individual source and credits checked; second review pending)",
+          "soundRolesSongCall": "PARTIALLY TESTED (individual source recording context and distinct visible call roles checked)",
+          "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (local files decoded and played; offline phase deferred)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming original species page consulted, printed ANWB passage pending)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (source-backed identification, call descriptions and Dutch status; full biometry review pending)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (national breeding estimate, period and trends checked against primary Sovon page)",
+          "ebirdDistributionAndBias": "PARTIALLY TESTED (Cornell taxon code checked; direct distribution and seasonal data inaccessible)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "endToEndGuideUI": "PARTIALLY TESTED (targeted mobile browser emulation; integrated physical device phase deferred)",
+          "independentSecondReview": "NOT TESTED (second independent review pending)"
         },
         "findings": [
-          "Juvenielenfoto met door bron en beeld ondersteunde leeftijd."
+          "Vier actieve beelden herleid tot de originelen. De echte vluchtfoto blijft bruikbaar op 725 × 483 px.",
+          "Jeugdkleedportret ontbreekt. Hogere resolutie voor de hoofdfoto en een scherper beeld van de onderzijde in vlucht blijven verbeterwensen.",
+          "Alarmopname intact. Uitleg onderscheidt territoriale roep, korte zeldzame roffel en de opgenomen alarmroep. Jaarrondstatus, gedateerde broedschatting en trends toegevoegd."
         ],
-        "sourceReferences": [],
-        "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/middelste-bonte-specht",
+          "https://stats.sovon.nl/stats/soort/8830",
+          "https://birdnet.cornell.edu/taxonomy/species/Dendrocoptes%20medius",
+          "docs/fotokwaliteit/F3_R05_DRIE_SPECHTEN_2026-11-15_DRAFT.md"
+        ],
+        "reviewedOriginalAudio": 1,
+        "showcasePreview": "LOCAL BROWSER at 360 and 390 px: targeted guide and media review",
+        "independence": "PARTIAL / independent ornithological and acoustic review outstanding",
+        "fullPass": false,
+        "photoFilesInspected": 4,
+        "scientificName": "Dendrocoptes medius",
+        "ebirdSpeciesCode": "miswoo1",
+        "photoBlobSHAs": [
+          "5b97492bdb2cbcb2f0db5d3d82fff2b211b49560",
+          "5e70acf4b18a5902e6ca1771416c227106a76085",
+          "04a0bdaf9a5d90f87378bfa36e7d78c19f1fa53f",
+          "094d565cd995f5ab0122e55b67e8f9543a397aaa"
+        ],
+        "photoSourceMatches": [
+          {
+            "path": "/assets/species/plumage/sp020-male.webp",
+            "source": "https://commons.wikimedia.org/wiki/File:Middle_spotted_woodpecker_(Dendrocoptes_medius_medius)_male.jpg",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Middle_spotted_woodpecker_%28Dendrocoptes_medius_medius%29_male.jpg",
+            "originalSha256": "d29ac5c7da77c78177cd4bd2caeef1a19af3f5625c7a2fad0c95ce4d35f74627",
+            "sourceSize": [
+              1438,
+              2157
+            ],
+            "localSize": [
+              500,
+              750
+            ],
+            "author": "Charles J. Sharp",
+            "license": "CC BY-SA 4.0",
+            "comparison": "Beeldinhoud visueel vergeleken met origineel."
+          },
+          {
+            "path": "/assets/species/sp020.webp",
+            "source": "https://commons.wikimedia.org/wiki/File:Middle-spotted_woodpecker_(Dendrocopos_medius),_Parc_du_Rouge-Clo%C3%AEtre,_Brussels_(49179578882)_(cropped).jpg",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Middle-spotted_woodpecker_%28Dendrocopos_medius%29%2C_Parc_du_Rouge-Clo%C3%AEtre%2C_Brussels_%2849179578882%29_%28cropped%29.jpg",
+            "originalSha256": "34cad784f244e46deaefd3bd568cde395773a75cb110d79060dfe5d4595fed50",
+            "sourceSize": [
+              2782,
+              2808
+            ],
+            "localSize": [
+              1585,
+              1600
+            ],
+            "author": "Frank Vassen from Brussels, Belgium",
+            "license": "CC BY 2.0",
+            "comparison": "Beeldinhoud visueel vergeleken met origineel."
+          },
+          {
+            "path": "/assets/species/plumage/sp020-pose.webp",
+            "source": "https://commons.wikimedia.org/wiki/File:Mittelspecht_bei_der_Nahrungssuche.jpg",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/2/22/Mittelspecht_bei_der_Nahrungssuche.jpg",
+            "originalSha256": "944fe3ad5e464e1d5bbe91a80c3d7dabdd21a38de15b5212389e4b10ae44a838",
+            "sourceSize": [
+              3445,
+              3736
+            ],
+            "localSize": [
+              1475,
+              1600
+            ],
+            "author": "Mikes Makro",
+            "license": "CC BY-SA 4.0",
+            "comparison": "Beeldinhoud visueel vergeleken met origineel."
+          },
+          {
+            "path": "/assets/species/plumage/sp020-flight.webp",
+            "source": "https://commons.wikimedia.org/wiki/File:Middelste-bonte-specht-1_(28031708853).jpg",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Middelste-bonte-specht-1_%2828031708853%29.jpg",
+            "originalSha256": "f16e04b8e44312ae9bee6dad3fdda6503a13ead575249f896babf928f7edd3f1",
+            "sourceSize": [
+              725,
+              483
+            ],
+            "localSize": [
+              725,
+              483
+            ],
+            "author": "Yves Hoebeke",
+            "license": "CC BY-SA 2.0",
+            "comparison": "Beeldinhoud visueel vergeleken met origineel."
+          }
+        ],
+        "audioSourceMatches": [
+          {
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Alarmroep_Middelste_bonte_specht.mp3",
+            "windows": 3,
+            "minimumNormalizedCorrelation": 0.978,
+            "originalSha256": "1f955b206891989c1c5bd44320461f8c5348651e1c1035bb83332ffc72a3f662",
+            "path": "/assets/species/audio/sp020-alarm-app.mp3",
+            "source": "https://commons.wikimedia.org/wiki/File:Alarmroep_Middelste_bonte_specht.mp3"
+          }
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (photos, Dutch status, paired mobile UI, recordings and selected primary sources reviewed)",
+        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed."
       }
     },
     {
@@ -9708,6 +10082,6 @@
     "ownerDecision": "UI/UX and complete photo/audio source content first; practical Android, Merlin, offline, ZIP and functional end-to-end QA later on one integrated build. Do not stop the next three-bird media batch while previous species have noted source/media gaps.",
     "boundary": "Content visually reviewed is not media-rights VERIFIED or release PASS. No audio invention, no source attribution hidden where license requires directly visible credit. All ordinary source references behind accessible i.",
     "technicalStage": "DEFERRED, NOT WAIVED",
-    "integratedReviewBase": "PR #253, 392629c9d14b75ee5661c4b917001e85a6291f6a"
+    "integratedReviewBase": "PR #254, c0771cd50b150e2830eb598eb8276cc04400d207"
   }
 }

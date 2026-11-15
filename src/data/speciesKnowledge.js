@@ -4157,7 +4157,7 @@ const DATA = {
    "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/middelste-bonte-specht",
    "edition": "online bron, geraadpleegd 14-11-2026",
    "scope": "Europa",
-   "confirms": "herkenning, leefgebied, lengte en spanwijdte",
+   "confirms": "Herkenning, territoriale roep, roffel, leefgebied, lengte en spanwijdte",
    "checked": "2026-11-14",
    "certainty": "hoog",
    "publisher": "Vogelbescherming Nederland"
@@ -4392,6 +4392,50 @@ const DATA = {
    "checked": "2026-11-15",
    "certainty": "hoog",
    "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "SOV_ZWARTE_SPECHT": {
+   "register": "NL01",
+   "label": "Sovon — Zwarte Specht",
+   "url": "https://stats.sovon.nl/stats/soort/8630",
+   "edition": "Online soortpagina",
+   "scope": "Nederland",
+   "confirms": "Jaarrond aanwezig, broedparen in 2018–2020 en landelijke broedtrend",
+   "checked": "2026-11-15",
+   "certainty": "hoog",
+   "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "SOV_GROENE_SPECHT": {
+   "register": "NL01",
+   "label": "Sovon — Groene Specht",
+   "url": "https://stats.sovon.nl/stats/soort/8560",
+   "edition": "Online soortpagina",
+   "scope": "Nederland",
+   "confirms": "Jaarrond aanwezig, broedparen in 2018–2020 en landelijke broedtrend",
+   "checked": "2026-11-15",
+   "certainty": "hoog",
+   "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "SOV_MIDDELSTE_BONTE_SPECHT": {
+   "register": "NL01",
+   "label": "Sovon — Middelste Bonte Specht",
+   "url": "https://stats.sovon.nl/stats/soort/8830",
+   "edition": "Online soortpagina",
+   "scope": "Nederland",
+   "confirms": "Jaarrond aanwezig, broedparen in 2020–2022 en landelijke broedtrend",
+   "checked": "2026-11-15",
+   "certainty": "hoog",
+   "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "VB_GROENE_SPECHT": {
+   "register": "NL07",
+   "label": "Vogelbescherming Nederland — Groene Specht",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/groene-specht",
+   "edition": "Online soortpagina",
+   "scope": "Nederland",
+   "confirms": "Koptekening, jeugdkleed, stuitkleur, vlucht, geluid, leefgebied en voedsel",
+   "checked": "2026-11-15",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
   }
  },
  "profiles": {
@@ -22358,7 +22402,7 @@ const DATA = {
    ],
    "voice": [
     {
-     "kind": "vluchtroep",
+     "kind": "vlucht",
      "text": "In vlucht klinkt vaak een herhaalde, luide kru-kru-kru-reeks.",
      "sources": [
       "VB_ZWARTE_SPECHT",
@@ -22366,11 +22410,18 @@ const DATA = {
      ]
     },
     {
-     "kind": "roep in zit",
+     "kind": "zitroep",
      "text": "Vanaf een zitplaats kan een langgerekte, klagende roep worden gehoord.",
      "sources": [
       "VB_ZWARTE_SPECHT",
       "NAT_ZWARTE_SPECHT"
+     ]
+    },
+    {
+     "kind": "roffel",
+     "text": "Lange, harde en zware roffel.",
+     "sources": [
+      "VB_ZWARTE_SPECHT"
      ]
     }
    ],
@@ -22387,9 +22438,23 @@ const DATA = {
    "status": [
     {
      "kind": "voorkomen",
-     "text": "Standvogel in Nederland; de actuele landelijke aantallen en trends worden afzonderlijk bij Sovon gecontroleerd.",
+     "text": "Broedvogel, jaarrond aanwezig in Nederland.",
      "sources": [
-      "VB_ZWARTE_SPECHT"
+      "SOV_ZWARTE_SPECHT"
+     ]
+    },
+    {
+     "kind": "aantal",
+     "text": "700–1.100 broedparen (2018–2020).",
+     "sources": [
+      "SOV_ZWARTE_SPECHT"
+     ]
+    },
+    {
+     "kind": "trend",
+     "text": "Het aantal broedvogels nam sinds 1990 af. In de laatste twaalf meetjaren nam het toe.",
+     "sources": [
+      "SOV_ZWARTE_SPECHT"
      ]
     }
    ],
@@ -22460,8 +22525,139 @@ const DATA = {
    "discrepancies": [],
    "open": [
     "Het juveniele gidsbeeld toont uitsluitend de kop; een afzonderlijk volledig jeugdkleedportret ontbreekt.",
-    "De lokale vrouwtjesfoto is een 500-pixel-voorbeeld; de originele bron heeft een veel hogere resolutie. Een verbeterd bestand vereist afzonderlijke gecontroleerde import.",
+    "De vrouwtjesfoto toont de rode achterkruin schuin van achteren. Een scherp zijaanzicht met vrij zicht op de kop blijft een verbetering.",
     "Gewicht vraagt nog een eigen vergelijking van twee passende bronnen."
+   ]
+  },
+  "sp019": {
+   "summary": {
+    "text": "Groene specht met een rood petje en een opvallende geelgroene stuit. Zoekt vaak op de grond naar mieren.",
+    "sources": [
+     "VB_GROENE_SPECHT"
+    ]
+   },
+   "keyMarks": [
+    {
+     "text": "Olijfgroene rug en rode kruin.",
+     "sources": [
+      "VB_GROENE_SPECHT"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Bij volwassen vogels een zwart oogmasker. In de zwarte baardstreep van het mannetje zit rood.",
+     "sources": [
+      "VB_GROENE_SPECHT"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Jonge vogels zijn sterk gevlekt, vooral op kop en onderzijde.",
+     "sources": [
+      "VB_GROENE_SPECHT"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "In golvende vlucht valt de lichte geelgroene stuit op.",
+     "sources": [
+      "VB_GROENE_SPECHT"
+     ],
+     "reliability": "ondersteunend"
+    }
+   ],
+   "critical": [
+    {
+     "feature": "Stuit en vluchtbeweging",
+     "where": "Let op de stuit en de beweging tijdens een langere vlucht.",
+     "this": "Geelgroene stuit en uitgesproken golvende vlucht.",
+     "other": "Zwarte Specht is vrijwel geheel zwart en vliegt rechter.",
+     "vs": [
+      "sp018"
+     ],
+     "reliability": "ondersteunend",
+     "conditions": "Zicht op de bovenzijde in voldoende licht.",
+     "exceptions": "Tegenlicht kan de groen- en geeltinten weg laten vallen.",
+     "supporting": "Controleer ook de groene rug en rode kruin als die zichtbaar zijn.",
+     "sources": [
+      "VB_GROENE_SPECHT",
+      "VB_ZWARTE_SPECHT"
+     ]
+    }
+   ],
+   "detail": [
+    {
+     "topic": "geslacht",
+     "text": "Bij volwassen mannetjes zit rood in de zwarte baardstreep. Bij vrouwtjes is die streep zwart.",
+     "sources": [
+      "VB_GROENE_SPECHT"
+     ]
+    },
+    {
+     "topic": "leeftijd",
+     "text": "Jonge vogels hebben een duidelijk gevlekte onderzijde en kop.",
+     "sources": [
+      "VB_GROENE_SPECHT"
+     ]
+    }
+   ],
+   "voice": [
+    {
+     "kind": "lachroep",
+     "text": "Een luide, lachende reeks, vooral te horen in de late winter en het voorjaar.",
+     "sources": [
+      "VB_GROENE_SPECHT"
+     ]
+    },
+    {
+     "kind": "roffel",
+     "text": "Roffelt zelden.",
+     "sources": [
+      "VB_GROENE_SPECHT"
+     ]
+    }
+   ],
+   "habitat": [
+    {
+     "topic": "leefgebied",
+     "text": "Bosranden, duinen en kleinschalig landschap met oude bomen en open plekken om mieren te zoeken.",
+     "sources": [
+      "VB_GROENE_SPECHT",
+      "SOV_GROENE_SPECHT"
+     ]
+    }
+   ],
+   "status": [
+    {
+     "kind": "voorkomen",
+     "text": "Broedvogel, jaarrond aanwezig in Nederland.",
+     "sources": [
+      "SOV_GROENE_SPECHT"
+     ]
+    },
+    {
+     "kind": "aantal",
+     "text": "9.500–11.500 broedparen (2018–2020).",
+     "sources": [
+      "SOV_GROENE_SPECHT"
+     ]
+    },
+    {
+     "kind": "trend",
+     "text": "Het aantal broedvogels nam toe sinds 1990 en in de laatste twaalf meetjaren.",
+     "sources": [
+      "SOV_GROENE_SPECHT"
+     ]
+    }
+   ],
+   "life": [
+    {
+     "kind": "voedsel",
+     "text": "Zoekt vooral mieren op de grond.",
+     "sources": [
+      "VB_GROENE_SPECHT"
+     ]
+    }
    ]
   },
   "sp020": {
@@ -22580,6 +22776,45 @@ const DATA = {
      "sources": [
       "VB_MBS",
       "VB_GBS_MBS"
+     ]
+    }
+   ],
+   "voice": [
+    {
+     "kind": "roep",
+     "text": "De territoriale roep klinkt klagend.",
+     "sources": [
+      "VB_MBS"
+     ]
+    },
+    {
+     "kind": "roffel",
+     "text": "Roffelt zelden. De roffel is kort.",
+     "sources": [
+      "VB_MBS"
+     ]
+    }
+   ],
+   "status": [
+    {
+     "kind": "voorkomen",
+     "text": "Broedvogel, jaarrond aanwezig in Nederland.",
+     "sources": [
+      "SOV_MIDDELSTE_BONTE_SPECHT"
+     ]
+    },
+    {
+     "kind": "aantal",
+     "text": "1.900–2.400 broedparen (2020–2022).",
+     "sources": [
+      "SOV_MIDDELSTE_BONTE_SPECHT"
+     ]
+    },
+    {
+     "kind": "trend",
+     "text": "Het aantal broedvogels nam sterk toe sinds 1980 en in de laatste twaalf meetjaren.",
+     "sources": [
+      "SOV_MIDDELSTE_BONTE_SPECHT"
      ]
     }
    ]

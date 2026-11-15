@@ -19,7 +19,7 @@
     "photoSpecies": 140,
     "withRegisteredAudio": 59,
     "withoutRegisteredAudio": 81,
-    "registeredClips": 120,
+    "registeredClips": 121,
     "f2PhotoVisited": 84,
     "f2WithAudio": 40,
     "f2WithoutAudio": 44,
@@ -477,10 +477,19 @@
       "id": "sp019",
       "nameNL": "Groene Specht",
       "f2PhotoVisited": true,
-      "mediaCount": 1,
+      "mediaCount": 2,
       "pilot": false,
-      "status": "REGISTERED_UNVERIFIED",
+      "status": "PARTIALLY TESTED",
       "clips": [
+        {
+          "file": "/assets/species/audio/sp019-laugh-call-app.mp3",
+          "label": "Lachende roep",
+          "reference": "https://commons.wikimedia.org/wiki/File:Green_Woodpecker_(Picus_viridis)_(W1CDR0001497_BD6).ogg",
+          "externalRights": "PARTIALLY TESTED",
+          "sourceSpecies": "PARTIALLY TESTED",
+          "roleAudition": "PARTIALLY TESTED",
+          "independentReview": "NOT TESTED"
+        },
         {
           "file": "/assets/species/audio/sp019-call-app.mp3",
           "label": "Alarmroep",
@@ -491,7 +500,9 @@
           "independentReview": "NOT TESTED"
         }
       ],
-      "reviewEvidence": [],
+      "reviewEvidence": [
+        "docs/fotokwaliteit/F3_R05_DRIE_SPECHTEN_2026-11-15_DRAFT.md"
+      ],
       "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
       "sourceChecks": {
         "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",

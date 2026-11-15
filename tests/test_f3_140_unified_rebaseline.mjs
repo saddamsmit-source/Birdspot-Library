@@ -4,6 +4,7 @@ import { readFileSync, existsSync, statSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { SPECIES } from '../src/data/species.js';
 import { GUIDE_HEROES } from '../src/features/species/guideMedia.js';
+import { guideHeroPhoto, recognitionPanel } from '../src/features/species/detailSections.js';
 const load = file => JSON.parse(readFileSync(new URL(file,import.meta.url),'utf8'));
 const j=load('../docs/fotokwaliteit/F3_140_HERCONTROLE_V0.1_DRAFT.json');
 const old=load('../docs/fotokwaliteit/soortaudit-status.json');
@@ -32,8 +33,19 @@ for(let i=0;i<rows.length;i++){
  assert.equal(x.historic.oldF2Visited,f2Set.has(x.id),x.id+' previous F2 evidence drift');
  assert.equal(x.currentAssets.existingAudioCount,registered.length);
  assert.deepEqual(x.currentAssets.existingAudioPaths,registered.map(y=>y.audio));
- assert.deepEqual(x.currentAssets.imageSlots.map(y=>y.path),(o.assets||[]).map(y=>y.image));
- assert.deepEqual(x.currentAssets.imageSlots.map(y=>y.addedIn),(o.assets||[]).map(y=>y.addedIn));
+ const paths=x.currentAssets.imageSlots.map(y=>y.path);
+ if (o.audited || !x.F3.reviewedThisRound) {
+  assert.deepEqual(paths,(o.assets||[]).map(y=>y.image));
+  assert.deepEqual(x.currentAssets.imageSlots.map(y=>y.addedIn),(o.assets||[]).map(y=>y.addedIn));
+ } else {
+  // An F3 review can register live photos that were absent from the historic audit.
+  const ownGallery=recognitionPanel(s).split('<section class="sd-similar"')[0];
+  const current=[guideHeroPhoto(x.id)?.image, ...Array.from(
+   ownGallery.matchAll(/data-guide-image="([^"]+)"/g), match=>match[1]
+  )].filter(Boolean);
+  assert.equal(new Set(current).size,current.length);
+  assert.deepEqual(paths,current,x.id+' reviewed live photos must match the own gallery');
+ }
  for(const part of x.currentAssets.imageSlots){
   assert.ok(part.path?.startsWith('/assets/'),x.id+' image outside local assets');
   const file=new URL('..'+part.path,import.meta.url);
@@ -77,6 +89,7 @@ const counts={
  secondBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R02'),
  thirdBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R03'),
  fourthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R04'),
+ fifthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R05'),
  contentInspected:sum(x=>x.F3.reviewedThisRound===true),
  contentComplete:sum(x=>x.F3.contentStatus==='CONTENT COMPLETE')
 };
@@ -87,15 +100,27 @@ const first=rows.filter(x=>x.F3.recheckBatch==='F3-R01');
 const second=rows.filter(x=>x.F3.recheckBatch==='F3-R02');
 const third=rows.filter(x=>x.F3.recheckBatch==='F3-R03');
 const fourth=rows.filter(x=>x.F3.recheckBatch==='F3-R04');
+const fifth=rows.filter(x=>x.F3.recheckBatch==='F3-R05');
 assert.deepEqual(third.map(x=>x.id), ['sp006','sp007','sp008']);
 assert.deepEqual(third.map(x=>x.F3.photoFilesInspected),[5,6,6]);
 assert.deepEqual(third.map(x=>x.F3.reviewedOriginalAudio),[2,3,2]);
 assert.deepEqual(fourth.map(x=>x.id), ['sp009','sp016','sp017']);
 assert.deepEqual(fourth.map(x=>x.F3.photoFilesInspected),[6,5,3]);
 assert.deepEqual(fourth.map(x=>x.F3.reviewedOriginalAudio),[1,2,2]);
+assert.deepEqual(fifth.map(x=>x.id), ['sp018','sp019','sp020']);
+assert.deepEqual(fifth.map(x=>x.F3.photoFilesInspected),[5,5,4]);
+assert.deepEqual(fifth.map(x=>x.F3.reviewedOriginalAudio),[2,2,1]);
+assert.deepEqual(audio.audio.sp019.map(clip=>clip.label),['Lachende roep','Alarmroep']);
+for (const { currentAssets, F3: review } of fifth) {
+ assert.deepEqual(review.photoSourceMatches.map(photo=>photo.path),currentAssets.imageSlots.map(photo=>photo.path));
+ for (const photo of review.photoSourceMatches) {
+  assert.match(photo.originalSha256,/^[0-9a-f]{64}$/);
+  assert.match(photo.source,/^https:\/\/commons\.wikimedia\.org\//);
+ }
+}
 const newPeregrine = '/assets/species/plumage/sp009-juv-flight.webp';
 assert.deepEqual(fourth.flatMap(x=>x.currentAssets.imageSlots.filter(y=>y.addedIn==='F3-R04').map(y=>y.path)), [newPeregrine]);
-for (const row of [...third, ...fourth]) {
+for (const row of [...third, ...fourth, ...fifth]) {
  const { F3: review, currentAssets } = row;
  assert.equal(review.fullPass, false);
  assert.equal(review.status, 'IN CONTENT REVIEW / OPEN POINTS');

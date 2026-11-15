@@ -51,7 +51,7 @@ try:
             prepared.load()
             assert prepared.format == "WEBP"
             assert prepared.width <= 1600 and prepared.height <= 1600
-            assert min(prepared.size) > min(meta["currentLocalWidth"], meta["currentLocalHeight"])
+            assert min(prepared.size) > min(meta["previousLocalWidth"], meta["previousLocalHeight"])
             assert not prepared.getexif()
             assert "exif" not in prepared.info
         try:

@@ -24,7 +24,8 @@ def candidate():
 def validate_metadata(m):
     expected = {
         "species": "sp018", "role": "adult_f",
-        "status": "PENDING_ORIGINAL_BYTES_AND_VISUAL_REVIEW",
+        "status": "SOURCE_MATCHED_AND_UPDATED_IN_F3_R05",
+        "previousLocalWidth": 500, "previousLocalHeight": 661,
         "author": "Andreas Eichler", "license": "CC BY-SA 4.0",
         "sourceSha1": SHA1, "sourceBytes": 5869311,
         "originalWidth": 2196, "originalHeight": 2901,
@@ -53,6 +54,8 @@ def validate_local(m):
     raw = (ROOT / m["currentLocalPath"]).read_bytes()
     if raw[:4] != b"RIFF" or raw[8:12] != b"WEBP":
         raise ValueError("Existing image not WebP")
+    if hashlib.sha256(raw).hexdigest() != m["currentLocalSha256"]:
+        raise ValueError("Existing WebP does not match the visually reviewed file")
 
 def validate_api(info, m):
     for key, expected in [
@@ -112,7 +115,7 @@ def prepare(directory, m):
     im = ImageOps.exif_transpose(source).convert("RGB")
     im.info.clear()
     im.thumbnail((1600, 1600), Image.Resampling.LANCZOS)
-    if min(im.size) <= min(m["currentLocalWidth"], m["currentLocalHeight"]):
+    if min(im.size) <= min(m["previousLocalWidth"], m["previousLocalHeight"]):
         raise ValueError("No real resolution improvement")
     dest.mkdir(parents=True, exist_ok=False)
     path = dest / m["stagingOutputName"]
@@ -156,7 +159,7 @@ def main():
     validate_metadata(m)
     validate_local(m)
     if a.check:
-        print("PASS metadata/preflight only; original bytes and visual import NOT TESTED")
+        print("PASS staged-source metadata and reviewed WebP match; no network or local writes")
     else:
         prepare(a.prepare, m)
 

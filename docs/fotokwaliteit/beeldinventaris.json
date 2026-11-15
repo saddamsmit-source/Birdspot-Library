@@ -507,11 +507,11 @@
    "refs": [
     "sp018 GUIDE_PLUMAGE.adult_f"
    ],
-   "sha1": "a849dabfcc5c1d8441abfd6a8455ab8abe8d25de",
+   "sha1": "0f1cc4cad2bec33ba482ae592feb521eb63fd2d4",
    "class": "stilstaand",
    "airborne": false,
-   "source": "contactsheet 10-11-2026",
-   "note": ""
+   "source": "F3-R05, visuele vergelijking met dezelfde originele opname, 15-11-2026",
+   "note": "Stilstaand vrouwtje op stam, schuin van achteren. Rode achterkruin zichtbaar."
   },
   "/assets/species/plumage/sp018-flight.webp": {
    "refs": [
