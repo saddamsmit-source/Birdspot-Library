@@ -9,6 +9,7 @@
  *   - Open-Meteo REST API (geen key)
  */
 
+import { appIcon } from '../../utils/icons.js';
 import { getDB }                          from '../../data/db.js';
 import { getSightings }                   from '../../data/sightings.js';
 import { escHtml } from '../../utils/html.js';
@@ -111,10 +112,12 @@ function buildSkeleton() {
       </button>
       <div id="featuredBirdCredit" class="featured-photo-info"></div>
       <div class="featured-birds__caption">
-        <p class="field-eyebrow">Vandaag in beeld</p>
-        <span class="featured-birds__group" id="featuredBirdGroup"></span>
-        <h2 id="featuredBirdName"></h2>
-        <em id="featuredBirdLatin"></em>
+        <div class="featured-birds__identification">
+          <p class="field-eyebrow">Vandaag in beeld</p>
+          <span class="featured-birds__group" id="featuredBirdGroup"></span>
+          <h2 id="featuredBirdName"></h2>
+          <em id="featuredBirdLatin"></em>
+        </div>
         <div class="field-featured-actions">
           <button type="button" class="field-action" data-featured-species><span data-featured-label>Bekijk soortkaart</span> <span aria-hidden="true">›</span></button>
           <details class="field-featured-notes">
@@ -128,10 +131,10 @@ function buildSkeleton() {
 
     <!-- Stat tiles — 4 kolommen -->
     <div class="stats-row" id="statsRow">
-      ${statTile('stat-species', '—', 'Soorten',     iconBird())}
-      ${statTile('stat-total',   '—', 'Waarnemingen', iconEye())}
-      ${statTile('stat-photos',  '—', "Media",        iconPhoto())}
-      ${statTile('stat-hotspot', '—', 'Hotspots',    iconMap())}
+      ${statTile('stat-species', '—', 'Soorten',     appIcon('bird'))}
+      ${statTile('stat-total',   '—', 'Waarnemingen', appIcon('observations'))}
+      ${statTile('stat-photos',  '—', "Media",        appIcon('media'))}
+      ${statTile('stat-hotspot', '—', 'Hotspots',    appIcon('pin'))}
     </div>
 
     <!-- Recente waarnemingen -->
@@ -160,10 +163,10 @@ function buildSkeleton() {
         <span class="signature-quick-access__chevron" aria-hidden="true">⌄</span>
       </summary>
       <div class="signature-home-links signature-quick-access__links">
-        <button data-signature-route="journal" class="signature-home-link" type="button">✦ &nbsp; Birding Journal <span aria-hidden="true">↗</span></button>
-        <button data-signature-route="insights" class="signature-home-link" type="button">▥ &nbsp; Mijn Inzichten <span aria-hidden="true">↗</span></button>
-        <button data-signature-route="film" class="signature-home-link signature-home-link--film" type="button">✦ &nbsp; Wildlife Film Studio <span aria-hidden="true">↗</span></button>
-        <button data-signature-route="map" class="signature-home-link" type="button">⌖ &nbsp; Explorer Map <span aria-hidden="true">↗</span></button>
+        <button data-signature-route="journal" class="signature-home-link" type="button">${appIcon('book')} Birding Journal <span aria-hidden="true">↗</span></button>
+        <button data-signature-route="insights" class="signature-home-link" type="button">${appIcon('freq')} Mijn Inzichten <span aria-hidden="true">↗</span></button>
+        <button data-signature-route="film" class="signature-home-link signature-home-link--film" type="button">${appIcon('film')} Wildlife Film Studio <span aria-hidden="true">↗</span></button>
+        <button data-signature-route="map" class="signature-home-link" type="button">${appIcon('map')} Explorer Map <span aria-hidden="true">↗</span></button>
       </div>
     </details>
 
@@ -810,20 +813,6 @@ function txGet(store, key) {
 }
 
 // ── SVG icon helpers ───────────────────────────────────────
-function iconBird() {
-  return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12 Q6 6 12 8 Q16 5 21 3 Q19 11 13 12 Q9 13 7 18Z"/></svg>`;
-}
-function iconEye() {
-  return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>`;
-}
-function iconPhoto() {
-  return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>`;
-}
-function iconMap() {
-  return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>`;
-}
-
-// ── HTML helper ────────────────────────────────────────────
 function statTile(id, value, label, iconSvg) {
   const route = { 'stat-species':'species','stat-total':'sightings',
     'stat-photos':'media','stat-hotspot':'map' }[id] || 'home';

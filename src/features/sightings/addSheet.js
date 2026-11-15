@@ -29,6 +29,7 @@
  *   - Stale-context guard: ctx.destroyed check na elke await
  */
 
+import { appIcon, observationIcon } from '../../utils/icons.js';
 import { SPECIES } from '../../data/species.js';
 import { openPinPicker } from './pinPicker.js';
 import { normalizeEvidence, validPin, OBSERVATION_METHODS, BREEDING_BEHAVIORS } from './evidence.js';
@@ -240,7 +241,7 @@ function _renderFormBody() {
         ${Object.entries(OBSERVATION_METHODS).map(([value,label]) =>
           `<label class="sighting-method-choice${_state.observationMethod === value ? ' is-selected' : ''}">
             <input type="radio" name="observationMethod" value="${value}" ${_state.observationMethod === value ? 'checked' : ''}>
-            <span>${value === 'heard' ? '♪' : (value === 'both' ? '◉' : '◈')}</span><strong>${label}</strong>
+            ${observationIcon(value)}<strong>${label}</strong>
           </label>`).join('')}
       </div>
       ${!_state.observationMethod ? '<p class="form-hint">Bij deze oudere waarneming is de manier van waarnemen niet vastgelegd. Selecteer die als je hem weet.</p>' : ''}
@@ -305,7 +306,7 @@ function _renderFormBody() {
       </div>
       ${_state.identificationSource === 'merlin' ? `
         <div class="sighting-merlin-panel">
-          <strong>♪ Merlin Sound ID</strong>
+          <strong>${appIcon('soundwave')} Merlin Sound ID</strong>
           <p>Een suggestie van Merlin is niet automatisch een bevestigde soort. Controleer de vogel zelf via het geluid, de omgeving of de soortbeschrijving.</p>
           <label class="sighting-merlin-reviewed">
             <input id="sightMerlinChecked" type="checkbox" ${_state.merlinVerification === 'checked' ? 'checked' : ''}>

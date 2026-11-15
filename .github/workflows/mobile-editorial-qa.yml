@@ -9,6 +9,10 @@ on:
       - "index.html"
       - "sw.js"
       - "tests/test_mobile_editorial.py"
+      - "tests/test_mobile_owner_review.py"
+      - "src/utils/icons.js"
+      - "styles/field-experience.css"
+      - "styles/tokens.css"
       - ".github/workflows/mobile-editorial-qa.yml"
 jobs:
   mobile-field-qa:
@@ -25,6 +29,8 @@ jobs:
           python -m playwright install --with-deps chromium
       - name: Validate mobile form, species observation shortcuts, editorial rotation and motion
         run: python tests/test_mobile_editorial.py
+      - name: Validate mobile photo coverage, readability and icon meaning
+        run: python tests/test_mobile_owner_review.py
       - name: Upload mobile screenshots
         if: always()
         uses: actions/upload-artifact@v4

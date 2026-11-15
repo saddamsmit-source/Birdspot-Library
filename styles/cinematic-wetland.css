@@ -231,24 +231,6 @@
 }
 #slideshow.featured-birds::before,
 #slideshow.featured-birds::after{display:none!important;content:none!important;}
-#slideshow.featured-birds .featured-birds__shade {
-  background:linear-gradient(180deg,rgba(4,21,17,.02) 0%,
-    rgba(5,22,18,.04) 34%,rgba(4,20,15,.4) 55%,
-    rgba(4,19,15,.87) 82%,rgba(3,17,14,.97) 100%)!important;
-}
-/* F: de vogel moet helemaal in beeld: hele foto bovenin (contain), vervaagde kopie als achtergrond */
-#slideshow.featured-birds .featured-birds__media {overflow:hidden;}
-#slideshow.featured-birds .featured-birds__media::before {
-  content:"";position:absolute;inset:-40px;z-index:0;
-  background:var(--bird-bg, none) center/cover no-repeat;
-  filter:blur(28px) saturate(.9) brightness(.55);transform:scale(1.1);
-}
-#slideshow.featured-birds .featured-birds__photo {
-  position:absolute;z-index:1;left:0;right:0;top:0;width:100%;height:68%;
-  object-fit:contain;object-position:50% 50%;animation:none;transform:none;
-  -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 7%,#000 93%,transparent 100%);
-  mask-image:linear-gradient(180deg,transparent 0,#000 7%,#000 93%,transparent 100%);
-}
 #slideshow.featured-birds.has-photo .featured-birds__fallback {opacity:0;}
 #slideshow.featured-birds .featured-birds__caption {
   left:21px;right:20px;bottom:19px;

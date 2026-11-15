@@ -15,6 +15,9 @@
   --accent:       #4895EF;   /* hemelsblauw */
   --accent-soft:  #D6EAFF;   /* lichtblauw tint */
   --accent-ink:   #1A4D8A;   /* donkerblauw tekst op licht */
+  --info-soft:    #E1EDDF;
+  --info-ink:     #204833;
+  --icon-ink:     #2D6A4F;
 
   /* ── Neutraal ─────────────────────────────────────── */
   --bg:           #F8F4E8;   /* licht ivoor-groen */
@@ -30,7 +33,8 @@
 
   /* ── Status ───────────────────────────────────────── */
   --warn:         #F4A261;
-  --warn-soft:    #FFF0E0;
+  --warn-soft:    #F5E8D1;
+  --warn-ink:     #55370E;
   --danger:       #E76F51;
   --positive:     #52B788;
 
@@ -103,6 +107,11 @@
     --ink-2:     #A8C9AF;
     --muted:     #A8C9AF;
     --accent-soft: #1A3560;
+    --info-soft: #263F31;
+    --info-ink: #E0F0E2;
+    --icon-ink: #B7E4C7;
+    --warn-soft: #382C1F;
+    --warn-ink: #F3DBAB;
     --guide-month-breed: #FF5548;
     --field-border: #8CA998;
     --field-cta: var(--field-selected);
@@ -119,6 +128,11 @@
   --ink-2:     #A8C9AF;
   --muted:     #A8C9AF;
   --accent-soft: #1A3560;
+  --info-soft: #263F31;
+  --info-ink: #E0F0E2;
+  --icon-ink: #B7E4C7;
+  --warn-soft: #382C1F;
+  --warn-ink: #F3DBAB;
   --guide-month-breed: #FF5548;
   --field-border: #8CA998;
   --field-cta: var(--field-selected);

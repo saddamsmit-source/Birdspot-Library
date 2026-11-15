@@ -63,8 +63,6 @@ export function initFeaturedCarousel(el, ctx) {
     stage.classList.remove('has-photo');
     photo.alt = bird.nl + (bird.pose === 'vlucht' ? ' in vlucht' : '');
     photo.src = assetUrl(bird.image);
-    // hele foto in beeld (contain); dezelfde foto vervaagd als achtergrond vult de rest
-    stage.style.setProperty('--bird-bg', `url("${assetUrl(bird.image)}")`);
     if (group) group.textContent = bird.groupLabel;
     name.textContent = bird.nl;
     latin.textContent = bird.latin;

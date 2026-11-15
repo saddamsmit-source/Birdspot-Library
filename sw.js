@@ -118,6 +118,7 @@ const PRECACHE_PATHS = [
 
   // JS — utils (voeg toe als ze bestaan)
   'src/utils/html.js',
+  'src/utils/icons.js',
   'src/utils/photoInfo.js',
   'src/utils/photoViewer.js',
   'src/utils/photoUrl.js',
