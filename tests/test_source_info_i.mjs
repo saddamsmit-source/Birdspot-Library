@@ -31,7 +31,7 @@ for(const s of SPECIES){
    assert.ok(disclosure.includes(clip.license),s.id+' license text lost');
    assert.ok(disclosure.includes(clip.licenseUrl),s.id+' license URL lost');
    assert.ok(disclosure.includes(clip.source),s.id+' original source URL lost');
-   assert.ok(!disclosure.includes(clip.file),s.id+' technical filename need not be displayed even inside ⓘ');
+   assert.ok(!disclosure.includes('>'+clip.file+'</span>'),s.id+' technical filename must not be a separate visible label inside ⓘ; source URL is kept intact');
  }
 }
 const photo=photoInfoMarkup({file:'photo.webp',author:'Test Photographer',license:'CC BY 4.0',licenseUrl:'https://creativecommons.org/licenses/by/4.0/',source:'https://example.com/photo',modifications:'Test crop'});
