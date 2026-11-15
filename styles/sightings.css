@@ -709,3 +709,26 @@
   border-color: var(--brand-light);
   color:        var(--ink);
 }
+
+/* Birdspot observatiekeuze — duidelijk, herstelbaar, mobiel en toetsenbordvriendelijk */
+.quick-add-sheet { max-width: 460px; margin-inline: auto; max-height: min(92dvh, 750px); }
+.quick-add-options { padding: 20px 18px calc(16px + env(safe-area-inset-bottom,0px)); display: grid; gap: 12px; }
+.quick-add-option {
+  display:flex; align-items:center; width:100%; gap:14px; text-align:left;
+  border:1px solid var(--line); border-radius:16px;
+  background:var(--surface-2); color:var(--ink);
+  padding:14px 16px; min-height:78px; font:inherit; cursor:pointer;
+}
+.quick-add-option:focus-visible,.quick-add-back:focus-visible,.quick-add-info-link:focus-visible {
+ outline:3px solid var(--brand-light); outline-offset:3px;
+}
+.quick-add-icon { display:grid; place-items:center; width:46px; height:46px; flex-shrink:0;
+ border-radius:12px; background:var(--brand-mid); color:white; }
+.quick-add-icon svg { width:28px; height:28px; }
+.quick-add-option strong { display:block; font-weight:750; font-size:1rem; }
+.quick-add-option small { display:block; color:var(--muted); font-size:.83rem; line-height:1.4; margin-top:3px; }
+.quick-add-help { color:var(--ink); font-size:.93rem; line-height:1.55; margin:0 0 6px; }
+.quick-add-info-link,.quick-add-back { color:var(--brand-mid); font:inherit; font-weight:700;
+ padding:10px; text-decoration:underline; }
+.quick-add-back { justify-self:start; background:none; border:0; cursor:pointer; }
+@media (max-width:360px) { .quick-add-options{padding:14px 12px 18px} .quick-add-option{gap:10px;padding:12px} }
