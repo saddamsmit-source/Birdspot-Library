@@ -21,7 +21,7 @@ export function openQuickAdd({onChoose}={}) {
   closed=true;document.removeEventListener('keydown',onKey);overlay.remove();
   if(restoreFocus&&trigger?.isConnected)trigger.focus({preventScroll:true});
  };
- const go=initial=>{close(false);onChoose?.(initial);};
+ const go=initial=>{close(true);onChoose?.(initial);};
  const soundPage=()=>{
   title().textContent='Geluid herkennen';
   overlay.querySelector('#quickAddOptions').innerHTML=[
