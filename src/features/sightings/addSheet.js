@@ -143,7 +143,14 @@ export function openEditSheet(sighting, { onSaved } = {}) {
 
 // ── Interne implementatie ─────────────────────────────────
 function _openSightingForm(mode, initialState, { onSaved, editId } = {}) {
-  if (document.getElementById('addSightingSheet')) return;
+  // An already closed sheet lingers for 300ms for its exit animation.
+  // Allow immediate reopening; never let a stale overlay silently drop the new route.
+  const previous = document.getElementById('addSightingSheet');
+  if (previous) {
+    if (!previous.inert) return;
+    previous.remove();
+    document.getElementById('sightingMediaInput')?.remove();
+  }
   const trigger = document.activeElement;
   _state = initialState;
 
