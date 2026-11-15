@@ -137,18 +137,42 @@ export const GUIDE_COMPARISONS = [
   {
     label: 'Kleine en Grote Zilverreiger · buiten broedkleed',
     birds: [
-      {id: 'sp082', source: 'kleine-zilverreiger', plumage: 'winter', marks: 'Slank en klein met een donkere snavel. Bij volwassen vogels vallen de gele tenen op.'},
-      {id: 'sp083', source: 'grote-zilverreiger', plumage: 'winter', marks: 'Veel groter, met een langere hals, een lange gele snavel en donkere tenen.'},
+      {id: 'sp082', source: 'kleine-zilverreiger', plumage: 'winter', photo: '/assets/species/plumage/sp082-winter.webp', marks: 'Kleine, slanke reiger met fijne donkere snavel en gele tenen.'},
+      {id: 'sp083', source: 'grote-zilverreiger', plumage: 'winter', photo: '/assets/species/sp083.webp', marks: 'Veel groter, met een langere hals en meestal een gele snavel buiten de broedtijd.'},
     ],
-    tip: 'Kijk naar de tenen als die zichtbaar zijn. Beoordeel ook de verhouding tussen hals en lichaam.',
+    rows: [
+      {label: 'Snavel', values: ['Fijn en donker.', 'Lang en op deze foto geel.']},
+      {label: 'Tenen', values: ['Geel aan donkere poten.', 'Op deze foto niet zichtbaar in het water.']},
+      {label: 'Bouw', values: ['Kleiner met een relatief korte hals.', 'Groter met een langere hals.']},
+    ],
+    tip: 'Kijk naar de tenen als ze zichtbaar zijn. Gebruik daarnaast de verhouding van hals tot lichaam. De foto’s zijn niet op dezelfde schaal.',
   },
   {
     label: 'Kleine en Grote Zilverreiger · broedkleed',
     birds: [
-      {id: 'sp082', source: 'kleine-zilverreiger', plumage: 'breeding', marks: 'Twee lange sierveren in de nek, kleinere bouw en meestal gele tenen.'},
-      {id: 'sp083', source: 'grote-zilverreiger', plumage: 'breeding', marks: 'Zeer lange hals en sierveren op de rug. De snavel kan tijdelijk grotendeels zwart worden.'},
+      {id: 'sp082', source: 'kleine-zilverreiger', plumage: 'breeding', photo: '/assets/species/plumage/sp082-breeding.webp', marks: 'Twee lange sierveren achter de kop, met een slanke donkere snavel.'},
+      {id: 'sp083', source: 'grote-zilverreiger', plumage: 'breeding', photo: '/assets/species/plumage/sp083-breeding.webp', marks: 'Lange hals en rugsierveren. De snavel kan tijdelijk donker worden.'},
     ],
-    tip: 'Een donkere snavel komt in dit kleed bij beide voor. Let ook op formaat, halslengte en nekveren.',
+    rows: [
+      {label: 'Kop', values: ['Lange, smalle sierveren achter de kop.', 'Zonder de twee lange nekveren van de Kleine Zilverreiger.']},
+      {label: 'Snavel', values: ['Smalle, donkere snavel.', 'Langer. Kan in de broedtijd tijdelijk donker worden.']},
+      {label: 'Hals', values: ['Relatief kort.', 'Lang en slank.']},
+    ],
+    tip: 'Een donkere snavel komt in dit kleed bij beide voor. Let ook op de nekveren en halslengte.',
+  },
+  {
+    label: 'Kleine en Grote Zilverreiger · in vlucht',
+    flight: true,
+    birds: [
+      {id: 'sp082', source: 'kleine-zilverreiger', photo: '/assets/species/sp082.webp', marks: 'Gele tenen steken af tegen de donkere poten. Fijne donkere snavel.'},
+      {id: 'sp083', source: 'grote-zilverreiger', photo: '/assets/species/plumage/sp083-flight.webp', marks: 'Langere, op deze foto gele snavel, met lange poten achter het lichaam.'},
+    ],
+    rows: [
+      {label: 'Voeten', values: ['Gele tenen steken duidelijk af.', 'Op deze foto geen opvallend gele tenen.']},
+      {label: 'Snavel', values: ['Fijn en donker.', 'Lang en op deze foto geel.']},
+      {label: 'Bouw', values: ['Kleinere witte reiger.', 'Grotere witte reiger met lang uitstekende poten.']},
+    ],
+    tip: 'Begin bij de tenen en controleer daarna de snavel. Gebruik formaat alleen als je een betrouwbare vergelijking hebt.',
   },
   {
     label: 'Kleine Zilverreiger en Koereiger · buiten broedkleed',
@@ -793,38 +817,44 @@ export const GUIDE_COMPARISONS = [
     "tip": "Gebruik de flankstreep samen met de koptekening. Jonge vogels missen de opvallende bles van volwassen vogels."
   },
   {
-    "label": "Blauwe Reiger en Purperreiger · volwassen",
-    "birds": [
-      {
-        "id": "sp081",
-        "source": "blauwe-reiger",
-        "marks": "Robuuster met grijze rug, lichte hals en een relatief zware dolksnavel."
-      },
-      {
-        "id": "sp084",
-        "source": "purperreiger",
-        "marks": "Slanker met een dunne hals, kastanjebruine tinten en donkere halsstrepen."
-      }
+    label: 'Blauwe Reiger en Purperreiger · volwassen',
+    birds: [
+      {id: 'sp081', source: 'blauwe-reiger', photo: '/assets/species/plumage/sp081-portrait.webp', marks: 'Grijze mantel, lichte hals en een stevige dolksnavel.'},
+      {id: 'sp084', source: 'purperreiger', photo: '/assets/showcase/sp084.webp', marks: 'Slanker, met een bruinoranje hals en donkere halsstrepen.'},
     ],
-    "tip": "Vergelijk bouw en hals naast kleur. Houd rekening met licht en houding; de foto’s zijn niet op dezelfde schaal."
+    rows: [
+      {label: 'Halskleur', values: ['Licht, met donkere streping op de voorhals.', 'Bruinoranje met donkere lengtestrepen.']},
+      {label: 'Snavel', values: ['Stevige dolksnavel.', 'Slankere, puntige snavel.']},
+      {label: 'Bouw', values: ['Forser.', 'Fijner gebouwd met een dunne hals.']},
+    ],
+    tip: 'Kijk eerst naar de kleur en tekening van de hals. De foto’s zijn niet op dezelfde schaal.',
   },
   {
-    "label": "Blauwe Reiger en Purperreiger · jonge vogels",
-    "birds": [
-      {
-        "id": "sp081",
-        "source": "blauwe-reiger",
-        "marks": "Grijzer en robuuster, met donkere kruin en een stevige snavel.",
-        "plumage": "juv"
-      },
-      {
-        "id": "sp084",
-        "source": "purperreiger",
-        "marks": "Warmer bruin, fijner gebouwd en met een relatief dunne hals en snavel.",
-        "plumage": "juv"
-      }
+    label: 'Blauwe Reiger en Purperreiger · jonge vogels',
+    birds: [
+      {id: 'sp081', source: 'blauwe-reiger', plumage: 'juv', photo: '/assets/species/plumage/sp081-juv.webp', marks: 'Grijze kruin, grijzere rug en bovensnavel donkerder dan bij een volwassene.'},
+      {id: 'sp084', source: 'purperreiger', plumage: 'juv', photo: '/assets/species/plumage/sp084-juv-europa.webp', marks: 'Warmbruin kleed met licht gerande vleugeldekveren en een slanke hals.'},
     ],
-    "tip": "Bij beide ontbreekt de volledige volwassen koptekening. De Purperreigerfoto toont een juveniel in Europees rietland."
+    rows: [
+      {label: 'Kruin', values: ['Grijs.', 'Warmbruin.']},
+      {label: 'Vleugel', values: ['Overwegend grijs.', 'Bruin met lichte veerranden.']},
+      {label: 'Snavel', values: ['Stevig, met een donkere bovensnavel.', 'Fijn en spits.']},
+    ],
+    tip: 'Vergelijk kruin en vleugel samen. De ingetrokken hals op de foto van de Blauwe Reiger maakt halslengte hier lastig te vergelijken.',
+  },
+  {
+    label: 'Blauwe Reiger en Purperreiger · in vlucht',
+    flight: true,
+    birds: [
+      {id: 'sp081', source: 'blauwe-reiger', photo: '/assets/species/sp081.webp', marks: 'Brede vleugels, lichte kop en hals en een stevige snavel.'},
+      {id: 'sp084', source: 'purperreiger', photo: '/assets/species/plumage/sp084-flight.webp', marks: 'Warmere halstint, hoekige keelzak en ver uitstekende tenen.'},
+    ],
+    rows: [
+      {label: 'Hals', values: ['Lichte, ingetrokken hals.', 'Warmere hals met een hoekiger knik.']},
+      {label: 'Vleugel', values: ['Brede vleugels met lichtere dekveren.', 'Donkerder vleugelbeeld.']},
+      {label: 'Poten en tenen', values: ['Poten steken achter het lichaam uit.', 'Lange tenen steken opvallend ver uit.']},
+    ],
+    tip: 'Vergelijk de halsknik en tenen samen. De precieze vleugelstand wisselt per vleugelslag.',
   },
   {
     "label": "Kwak en Blauwe Reiger · jonge vogels",

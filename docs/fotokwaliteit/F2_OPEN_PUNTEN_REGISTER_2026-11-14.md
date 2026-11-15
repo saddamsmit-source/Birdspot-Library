@@ -1,7 +1,7 @@
 # Birdspot F2 — register open punten en uitgesteld fotoonderzoek
 
 **Eigenaarbesluit 14 november 2026 · Werkdocument (DRAFT, geen foto-PASS)**
-**Historische basis:** F2-15 `bccd09599a2b9fd7fb23771b3f6c262542b4c08a`; F2-20 voortzetting op PR #221 `fa05d08d203f656c5c7bce328c6deec6d3961632`, historische F2-19-bevindingen behouden. **Actuele reikwijdte (F2-26, 15 november 2026):** 69/140 soorten individueel opgepakt, 71/140 nog **NOT TESTED in F2**; het historische basischeckpoint van 51/140 uit F2-20 blijft in de onderliggende brondossiers bewaard. Geen van deze aantallen is gelijk aan een foto-PASS. Dit register is een index op de bestaande per-batch brondossiers, niet een vervanging van de canonieke 9-punts-audit.
+**Historische basis:** F2-15 `bccd09599a2b9fd7fb23771b3f6c262542b4c08a`; F2-20 voortzetting op PR #221 `fa05d08d203f656c5c7bce328c6deec6d3961632`, historische F2-19-bevindingen behouden. **Actuele reikwijdte (F2-27, 15 november 2026):** 72/140 soorten individueel opgepakt, 68/140 nog **NOT TESTED in F2**; het historische basischeckpoint van 51/140 uit F2-20 blijft in de onderliggende brondossiers bewaard. Geen van deze aantallen is gelijk aan een foto-PASS. Dit register is een index op de bestaande per-batch brondossiers, niet een vervanging van de canonieke 9-punts-audit.
 
 ## Hoe vervolgonderzoek te sturen
 
@@ -106,7 +106,7 @@ De tekst in de kolom 'Open uit bronronde' is overgenomen uit de laatste F2-voort
 
 1. Bij een volgende F2-ronde: controleer alleen de drie gekozen soorten op oorspronkelijke bestanden/CC-rechten, soort/rol, fotokwaliteit, twee passende vergelijkingbeelden en browserbediening; noteer de individuele status en bronlinks.
 2. Werk dit register additief bij: verander een open punt pas in **VERIFIED** na herhaalbare nieuwe bron-/beeld- en uitvoerbewijzen. Laat historische onzekerheid staan met datum en reden; geen stille aftekening op basis van 140 kaart-renders.
-3. **Niet gereviewd in F2:** 74 soorten. De individuele F2-controle omvat 66 van de oorspronkelijke 140 fotokaarten; een aparte bron-/WebP-/toestel-PASS blijft per soort nodig. Volgorde na F2-16 opnieuw afleiden uit de 140-fotolijst en F2-voortgang; geen ongeteste soorten starten vóór een passende batch.
+3. **Voor het actuele aantal** geldt de reikwijdte bovenaan dit register. Een aparte bron-, beeld- en toestelcontrole blijft per soort nodig. Volgorde na F2-16 opnieuw afleiden uit de 140-fotolijst en F2-voortgang; geen ongeteste soorten starten vóór een passende batch.
 4. Later diepgaand fotoonderzoek: per open beeldtype minimaal soortnaam/wetenschappelijke naam, doelkleed, foto-oorsprong, ondertitel, auteur, licentie, bronbestand/versie, vrijgave voor herpublicatie en indien passend exacte oorspronkelijke pixels. Bij twijfel lege positie laten staan.
 
 ## Live-/release-gate — aparte status
@@ -123,3 +123,14 @@ De tekst in de kolom 'Open uit bronronde' is overgenomen uit de laatste F2-voort
 | sp079 Waterhoen | F2-26 | Bron van vluchtfoto gevonden. Het bruine kleed past bij een jong, de maker noemt geen leeftijd. Vlucht blijft op de eigen kaart. Een passend even oud vluchtpaar ontbreekt. |
 
 [Beeldbewijs, bronnen en hashes](F2_26_BRON_EN_LIMIETEN.json). ANWB-soortpassages en origineel-WebP-pixelvergelijking blijven open.
+
+
+### F2-27 · Blauwe Reiger, Kleine Zilverreiger en Grote Zilverreiger
+
+| Soort | Batch | Open uit bronronde |
+|---|---|---|
+| sp081 Blauwe Reiger | F2-27 | Originele juvenielpagina nu onbereikbaar. Eerder vastgelegde bronmatch en visuele juvenielcontrole aanwezig. |
+| sp082 Kleine Zilverreiger | F2-27 | Drie iNaturalist-fotopagina’s voor broedkleed, buiten broedkleed en juveniel waren niet opnieuw bereikbaar. Eerder beeldmatchbewijs blijft beschikbaar. |
+| sp083 Grote Zilverreiger | F2-27 | Twee iNaturalist-fotopagina’s voor broedkleed en juveniel waren niet opnieuw bereikbaar. Het nestbeeld blijft een afzonderlijk leeftijdsvoorbeeld. Europese oudere juveniel in vergelijkbare houding blijft een open beeldwens. |
+
+[Brondossier met foto’s, herkomst, SHA-256 en grenzen](F2_27_BRON_EN_LIMIETEN.json). Nieuwe origineel-WebP-vergelijking en ANWB-soortpassages blijven open.

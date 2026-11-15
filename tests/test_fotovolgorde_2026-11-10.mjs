@@ -300,6 +300,38 @@ const greatCrestedGrebe = recognitionPanel(byId.get('sp077'));
 assert.ok(greatCrestedGrebe.includes('sp077-juv.webp'));
 assert.ok(!greatCrestedGrebe.includes('data-cmp-panel') && !greatCrestedGrebe.includes('aria-label="In vlucht"'));
 
+// F2-27: one registered, reciprocal photo pair per season, age or posture.
+for (const [label, ids, photos, flight] of [
+  ['Kleine en Grote Zilverreiger · buiten broedkleed', ['sp082', 'sp083'],
+    ['/assets/species/plumage/sp082-winter.webp', '/assets/species/sp083.webp'], false],
+  ['Kleine en Grote Zilverreiger · broedkleed', ['sp082', 'sp083'],
+    ['/assets/species/plumage/sp082-breeding.webp', '/assets/species/plumage/sp083-breeding.webp'], false],
+  ['Kleine en Grote Zilverreiger · in vlucht', ['sp082', 'sp083'],
+    ['/assets/species/sp082.webp', '/assets/species/plumage/sp083-flight.webp'], true],
+  ['Blauwe Reiger en Purperreiger · volwassen', ['sp081', 'sp084'],
+    ['/assets/species/plumage/sp081-portrait.webp', '/assets/showcase/sp084.webp'], false],
+  ['Blauwe Reiger en Purperreiger · jonge vogels', ['sp081', 'sp084'],
+    ['/assets/species/plumage/sp081-juv.webp', '/assets/species/plumage/sp084-juv-europa.webp'], false],
+  ['Blauwe Reiger en Purperreiger · in vlucht', ['sp081', 'sp084'],
+    ['/assets/species/sp081.webp', '/assets/species/plumage/sp084-flight.webp'], true],
+]) {
+  const entries = GUIDE_COMPARISONS.filter(entry => entry.label === label);
+  assert.equal(entries.length, 1, `F2-27 absent or duplicated pair: ${label}`);
+  const [entry] = entries;
+  assert.deepEqual(entry.birds.map(({id, photo}) => [id, photo]), ids.map((id, i) => [id, photos[i]]));
+  assert.equal(Boolean(entry.flight), flight);
+  assert.equal(entry.rows.length, 3);
+  for (const id of ids) {
+    const panels = recognitionPanel(byId.get(id)).split('<div class="sd-cmp-panel"').slice(1);
+    const matches = panels.filter(panel =>
+      panel.startsWith(' data-cmp-panel data-cmp-flight') === flight &&
+      photos.every(photo => panel.includes(`data-guide-image="${photo}"`)));
+    assert.equal(matches.length, 1, `F2-27 wrong rendered pair: ${id} ${label}`);
+    assert.ok(panels.every(panel => !panel.includes('sp083-juv.webp')),
+      `F2-27 nest-stage image must remain outside comparison: ${id}`);
+  }
+}
+
 const youngTits = GUIDE_COMPARISONS.find(entry => entry.label === 'Matkop en Glanskop · jonge vogels');
 assert.deepEqual(youngTits.birds.map(({id, plumage}) => [id, plumage]), [['sp031', 'juv'], ['sp032', 'juv']]);
 for (const id of ['sp031', 'sp032']) {

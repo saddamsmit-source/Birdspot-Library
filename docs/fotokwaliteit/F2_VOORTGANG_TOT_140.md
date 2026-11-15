@@ -295,3 +295,16 @@ Ook de reeds uitgesloten `sp056-flight.webp` (blob `7dada8e`) en `sp058-flight.w
 Negen WebP’s geopend, acht originele bestandspagina’s gelezen. [Brondossier met rollen, makers, licenties en SHA-256](F2_26_BRON_EN_LIMIETEN.json). Foto’s van dezelfde leeftijd vergelijken. Bij Meerkoet verwijst het bronwoord ‘juveniel’ bij de foto van Charles J. Sharp naar een zichtbaar donsjong. De vergelijking gebruikt het oudere juveniel van Alexis Lours. De bestaande individuele vluchtfoto’s zijn beschikbaar bij de twee soorten. Een gezamenlijk vluchtpaar met verschillende leeftijdskleden is achterwege gelaten.
 
 **Teller** · 69/140 soorten opgepakt, 71/140 resterend. F2 is PARTIALLY TESTED. Basis [PR #228](https://github.com/saddamsmit-source/Birdspot-Library/pull/228) op `78b3ec66b93bd493d9879b2114bba87cb2447f87`. CAP-BIRD-012/015. Herstel via de basis-PR. De fysieke Android- en volledige releasecontroles blijven open.
+
+
+## F2-27 · Blauwe Reiger, Kleine Zilverreiger en Grote Zilverreiger
+
+| Soort | Hercontrole en wijziging | Open |
+|---|---|---|
+| sp081 Blauwe Reiger | Volwassen rustbeeld, juveniel en vrije vlucht beoordeeld. Drie wederkerige fotoparen met Purperreiger, elk met drie herkenningskenmerken. | Originele Commons-pagina van de Blauwe Reiger-juveniel niet opnieuw bereikbaar. |
+| sp082 Kleine Zilverreiger | Vijf bestaande beelden bekeken. Vergelijking met Grote Zilverreiger toont afzonderlijk buiten broedkleed, broedkleed en vrije vlucht. Gele tenen, donkere fijne snavel en halsverhouding hebben elk een eigen vergelijking. | Individuele actuele originele iNaturalist-pagina’s voor de drie kleedbeelden. |
+| sp083 Grote Zilverreiger | Vier bestaande beelden bekeken. Vergelijking belicht dat de snavel tijdelijk donker kan zijn in broedkleed. Het Noord-Amerikaanse nestbeeld blijft op de eigen soortkaart als leeftijdsvoorbeeld. | Twee originele iNaturalist-pagina’s en een vergelijkbaar Europees beeld van een oudere juveniel. |
+
+Twaalf beelden van de drie soorten plus drie gebruikte Purperreiger-beelden visueel gecontroleerd. Negen originele Commons-pagina’s gelezen. Voor de overige zes is het eerdere bronmatchbewijs vastgelegd in [het brondossier](F2_27_BRON_EN_LIMIETEN.json). Het gekozen vluchtbeeld en de drie weergaven zijn op beide soortkaarten controleerbaar. Bestanden, geregistreerde rollen en fotocredits zijn behouden. De Kleine en Grote Zilverreiger krijgen geen juvenielpaar met verschillende ontwikkelingsstadia.
+
+**Teller** · 72/140 soorten opgepakt, 68 resterend. F2 is PARTIALLY TESTED. Basis [PR #229](https://github.com/saddamsmit-source/Birdspot-Library/pull/229) op `21f16dd0c0a531e435939c6c9c6051e80e149c35`. CAP-BIRD-012/015. Herstel via de basis-PR. De fysieke Android- en volledige releasecontroles blijven open.
