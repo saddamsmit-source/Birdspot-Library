@@ -455,7 +455,2217 @@ def main():
                 return card
 
             def cmp_tab(card, label):
-                card.locator('.sd-cmp-tab', has_text=re.compile(rf'^{re.escape(label)}$')).click()
+                match = card.locator('.sd-cmp-tab', has_text=re.compile(rf'^{re.escape(label)}
+
+            def assert_photo_pair(panel, files, in_flight=False):
+                pictures = panel.locator('.sd-cmp-head .sd-field-photo')
+                expect(pictures).to_have_count(2)
+                boxes = []
+                for picture, file in zip(pictures.all(), files):
+                    expect(picture).to_have_attribute("data-guide-image", re.compile(re.escape("/" + file) + "$"))
+                    picture.scroll_into_view_if_needed()
+                    picture.locator('img').evaluate("image => image.decode()")
+                    boxes.append(picture.bounding_box())
+                    expect(picture.locator('..').get_by_label("Foto-informatie")).to_have_count(1)
+                left, right = boxes
+                assert left["x"] + left["width"] <= right["x"], boxes
+                assert abs(left["width"] - right["width"]) < 2, boxes
+                assert abs(left["y"] - right["y"]) < 2, boxes
+                assert left["x"] >= 0 and right["x"] + right["width"] <= p.viewport_size["width"], boxes
+                assert (panel.get_attribute("data-cmp-flight") is not None) == in_flight
+
+            open_species("Houtduif", "sp002")
+            stock_dove_card = cmp_card("Holenduif", flight=True)
+            stock_dove_panel = stock_dove_card.locator('.sd-cmp-panel:visible')
+            assert_photo_pair(stock_dove_panel, ["sp002-flight-wingband.webp", "sp003-flight-open-sky.webp"], in_flight=True)
+            check_comparison_photo(stock_dove_panel.locator('.sd-field-photo').last)
+            expect(stock_dove_panel.get_by_text("Nog geen foto", exact=True)).to_have_count(0)
+            expect(stock_dove_card.locator('.sd-cmp-panel:visible .sd-compare-open')).to_have_text(re.compile(r"Open Holenduif"))
+            expect(p.locator('#sdPanel-herkenning section.sd-similar .sd-cmp-more > summary'))\
+                .to_have_text("Nog 1 soort: Turkse Tortel")
+            turtle_dove_card = cmp_card("Turkse Tortel", flight=True)
+            check_comparison_photo(turtle_dove_card.locator('.sd-cmp-panel:visible .sd-field-photo'))
+            close_detail()
+
+            open_species("Fitis", "sp057")
+            card = cmp_card("Tjiftjaf")
+            whos = card.locator('.sd-cmp-panel:visible .sd-cmp-who')
+            assert whos.locator('strong').all_text_contents() == ["Fitis", "Tjiftjaf"]
+            assert card.get_by_role("link", name="Vogelbescherming").count() == 0
+            expect(card.locator(".sd-cmp-foot .sd-compare-open")).to_have_count(1)
+            assert_photo_pair(card.locator(".sd-cmp-panel:visible"), ["sp057.webp", "sp056.webp"])
+            photo = p.get_by_role("button", name="Vergroot hoofdfoto")
+            photo.scroll_into_view_if_needed()
+            photo.locator('img').evaluate("img => img.decode()")
+            photo.click()
+            zoomed = p.locator('.signature-lightbox img')
+            zoomed.evaluate("img => img.decode()")
+            expect(zoomed).to_be_visible()
+            initial = zoomed.bounding_box()["width"]
+            p.get_by_role("button", name="Inzoomen", exact=True).click()
+            p.wait_for_function("width => document.querySelector('.signature-lightbox img').getBoundingClientRect().width > width", arg=initial)
+            p.get_by_role("button", name="Zoom herstellen").click()
+            p.wait_for_function("width => Math.abs(document.querySelector('.signature-lightbox img').getBoundingClientRect().width - width) < 2", arg=initial)
+            p.keyboard.press("Escape")
+            expect(p.locator('.signature-lightbox')).to_have_count(0)
+            expect(photo).to_be_focused()
+            audio = p.get_by_label("Zang van Fitis")
+            audio.evaluate("el => el.play()")
+            p.wait_for_function("document.querySelector('.sd-audio audio').currentTime > 0.15")
+            p.get_by_label("Roep van Fitis").evaluate("el => el.play()")
+            assert audio.evaluate("el => el.paused")
+            tab("status")
+            assert p.get_by_label("Roep van Fitis").evaluate("el => el.paused")
+            tab("herkenning")
+            card.get_by_role("button", name="Open Tjiftjaf").click()
+            assert p.get_by_role("dialog", name="Tjiftjaf", exact=True).count() == 1
+            reverse_whos = cmp_card("Fitis").locator('.sd-cmp-panel:visible .sd-cmp-who')
+            assert reverse_whos.locator('strong').all_text_contents() == ["Tjiftjaf", "Fitis"]
+            close_detail()
+            print("H4-01 OK — Fitis/Tjiftjaf: vergelijkingskaart, foto vergroten, navigatie en afspelen van zang en roep")
+
+            open_species("Grote Bonte Specht", "sp016")
+            # De nieuwere vluchtvergelijking staat vóór de vergelijkingen per kleed.
+            specht_own = cmp_card("Middelste Bonte Specht").locator('.sd-cmp-panel:visible .sd-cmp-who').first
+            assert specht_own.locator('small').inner_text() == "Juveniel"
+            assert_photo_once("/assets/species/plumage/sp016-juv.webp")
+            close_detail()
+            open_species("Kokmeeuw", "sp097")
+            gull_panel = cmp_card("Zwartkopmeeuw").locator('.sd-cmp-panel:visible')
+            assert gull_panel.locator('.sd-cmp-who small').all_text_contents() == ["Broedkleed", "Broedkleed"]
+            assert_photo_once("/assets/species/sp097.webp")
+            assert_photo_once("/assets/species/sp225.webp")
+            winter = p.locator('.sd-plumage').filter(has_text="Winterkleed")
+            # src is sinds de subpad-fix een opgeloste absolute URL (assetUrl.js), geen
+            # ruw root-relatief pad meer — vergelijk daarom op het einde van de waarde.
+            assert winter.locator('img').get_attribute("src").endswith("/assets/species/plumage/sp097-winter.webp")
+            close_detail()
+            open_species("Wilde Eend", "sp089")
+            eclipse = p.locator('.sd-plumage').filter(has_text="Eclipskleed")
+            assert eclipse.locator('img').get_attribute("src").endswith("/assets/species/plumage/sp089-eclipse.webp")
+            close_detail()
+            print("H4-02 OK — jonge specht (vergelijkingskaart), Kokmeeuw/Zwartkopmeeuw in broedkleed, Wilde Eend in eclipskleed")
+
+            open_species("Bruine Kiekendief", "sp173")
+            harrier_card = cmp_card("Blauwe Kiekendief")
+            for label, blue_path, brown_path in (
+                ("Mannetje", "/assets/species/sp249.webp", "/assets/species/plumage/sp173-male-2.webp"),
+                ("Vrouwtje", "/assets/species/plumage/sp249-adult_f.webp", "/assets/species/plumage/sp173-adult_f.webp"),
+            ):
+                panel = cmp_tab(harrier_card, f"In vlucht · {label}")
+                assert panel.locator('.sd-cmp-who small').all_text_contents() == [f"{label} in vlucht"] * 2
+                assert_photo_pair(panel, [brown_path.rsplit("/", 1)[-1], blue_path.rsplit("/", 1)[-1]], in_flight=True)
+                assert_photo_once(blue_path)
+                assert_photo_once(brown_path)
+                check_comparison_photo(panel.locator('.sd-field-photo'), thorough=(label == "Mannetje"))
+            # Een landende Bruine Kiekendief vormt geen paar met een vrij vliegende Blauwe.
+            expect(harrier_card.locator('.sd-cmp-tab', has_text=re.compile(r'^Juveniel$'))).to_have_count(0)
+            flight_section = p.locator('#sdPanel-herkenning section[aria-label="In vlucht"]')
+            expect(flight_section).to_have_count(1)
+            # Vluchtcontrole 10-11-2026: de juveniele foto toont een neerstrijkende vogel (landen) en staat daarom
+            # niet meer in "In vlucht" maar in de Juveniel-kaart; zichtbaar gebleven, niet verwijderd.
+            expect(flight_section.locator('[data-guide-image$="sp173-juv.webp"]')).to_have_count(0)
+            expect(p.locator('#sdPanel-herkenning [data-plumage="juv"] [data-guide-image$="sp173-juv.webp"]')).to_have_count(1)
+            rest = p.locator('[data-plumage="adult_f"] .sd-field-photo').filter(has=p.locator('img[src$="sp173-female-rest.webp"]'))
+            expect(p.locator('[data-plumage="adult_f"] .sd-field-photo')).to_have_count(2)
+            assert rest.locator('..').get_by_label("Foto-informatie").count() == 1
+            check_comparison_photo(rest)
+            assert p.get_by_label("Roep van Bruine Kiekendief").count() == 1
+            close_detail()
+            open_species("Steppekiekendief", "sp250")
+            blue_card = cmp_card("Blauwe Kiekendief", flight=True)
+            for label, steppe, blue in (
+                ("Mannetje", "sp250.webp", "sp249.webp"),
+                ("Vrouwtje", "sp250-adult_f.webp", "sp249-adult_f.webp"),
+                ("Juveniel", "sp250-juv.webp", "sp249-juv.webp"),
+            ):
+                panel = cmp_tab(blue_card, f"In vlucht · {label}")
+                assert panel.locator('.sd-cmp-who small').all_text_contents() == [f"{label} in vlucht"] * 2
+                assert_photo_pair(panel, [steppe, blue], in_flight=True)
+            grauwe_card = cmp_card("Grauwe Kiekendief", flight=True)
+            grauwe_panel = cmp_tab(grauwe_card, "In vlucht · Mannetje")
+            assert_photo_pair(grauwe_panel, ["sp250.webp", "sp251.webp"], in_flight=True)
+            # Grauwe Kiekendief-vrouwtje is opvliegend en heeft geen geschikt
+            # bronzeker vrij-vliegend paar. De incomplete tab hoort niet in UI.
+            expect(grauwe_card.locator('.sd-cmp-tab', has_text="In vlucht · Vrouwtje")).to_have_count(0)
+            assert "Nog geen passende vluchtfoto" not in grauwe_card.inner_text()
+            expect(grauwe_card.locator('[data-guide-image$="sp251-adult_f.webp"]')).to_have_count(0)
+            tab("status")
+            assert p.get_by_text("Incidentele broedgevallen in Nederland.", exact=True).is_visible()
+            p.get_by_text("Incidentele broedgevallen in Nederland, onder meer in 2017 en 2019", exact=True).wait_for()
+            assert p.locator('#sdPanel-status .sd-month-breeding').count() == 0
+            close_detail()
+            print("H4-03 OK — Bruine/Blauwe Kiekendief per kleed (tabs, met foto-rotatie en -pan); Steppekiekendief zonder vaste broedmaanden")
+
+            open_species("Slechtvalk", "sp009")
+            kestrel_card = cmp_card("Torenvalk")
+            young_falcons = cmp_tab(kestrel_card, "Juveniel")
+            assert_photo_pair(young_falcons, ["sp009-juv.webp", "sp008-juv.webp"])
+            flying_falcons = cmp_tab(kestrel_card, "In vlucht · Volwassen")
+            assert_photo_pair(flying_falcons, ["sp009-male-flight.webp", "sp008-male-flight.webp"], in_flight=True)
+            assert_photo_once("/assets/showcase/sp009.webp")
+            close_detail()
+
+            open_species("Sperwer", "sp006")
+            hawk_card = cmp_card("Havik")
+            young_hawks = cmp_tab(hawk_card, "Juveniel")
+            assert_photo_pair(young_hawks, ["sp006-juv.webp", "sp007-juv.webp"])
+            # Zonder twee passende vrouwelijke portretten geen leeg fototabblad.
+            expect(hawk_card.locator('.sd-cmp-tab', has_text=re.compile(r'^Vrouwtje
+            assert_photo_once("/assets/species/plumage/sp006-juv.webp")
+            flight_section = p.locator('#sdPanel-herkenning section.sd-similar')
+            assert flight_section.evaluate(
+                "el => Boolean(el.compareDocumentPosition(document.querySelector('.sd-plumage-list')) & Node.DOCUMENT_POSITION_PRECEDING)")
+            flight_hawk_panel = cmp_card("Havik", flight=True).locator('.sd-cmp-panel:visible')
+            assert flight_hawk_panel.locator('.sd-cmp-who strong').all_text_contents() == ["Sperwer", "Havik"]
+            expect(flight_section.locator('.sd-cmp-more > summary')).to_have_text("Nog 1 soort: Torenvalk")
+            flight_falcon_panel = cmp_card("Torenvalk", flight=True).locator('.sd-cmp-panel:visible')
+            assert flight_falcon_panel.locator('.sd-cmp-who strong').all_text_contents() == ["Sperwer", "Torenvalk"]
+            for sid in ("sp006", "sp007", "sp008"):
+                assert_photo_once(f"/assets/species/plumage/{sid}-flight.webp")
+            sparrow_in_flight = p.locator('#sdPanel-herkenning section[aria-label="In vlucht"]')
+            expect(sparrow_in_flight.get_by_text("Mannetje in vlucht", exact=True)).to_have_count(1)
+            assert p.get_by_label("Roep vrouwtje van Sperwer").count() == 1
+            flight_hawk_panel.get_by_role("button", name="Open Havik").click()
+            assert p.get_by_role("dialog", name="Havik", exact=True).count() == 1
+            assert p.get_by_label("Alarmroep vrouwtje van Havik").count() == 1
+            assert p.get_by_label("Bedelroep jong van Havik").count() == 1
+            close_detail()
+            print("H4-04 OK — jonge Sperwer/Havik (tab Juveniel, juiste borsttekening), vluchtvergelijking met Havik en Torenvalk")
+
+            open_species("Torenvalk", "sp008")
+            text_comparisons = p.locator('#sdPanel-herkenning .kb-similar')
+            expect(text_comparisons.get_by_text("Boomvalk: lange spitse vleugels", exact=False)).to_be_visible()
+            expect(text_comparisons.get_by_text("Smelleken: brede vleugelbasis", exact=False)).to_be_visible()
+            expect(text_comparisons.locator('img')).to_have_count(0)
+            text_comparisons.get_by_role("button", name="Open Boomvalk").click()
+            expect(p.get_by_role("dialog", name="Boomvalk", exact=True)).to_be_visible()
+            close_detail()
+
+            open_species("Buizerd", "sp005")
+            dark = p.locator('.sd-flight [data-guide-image$="sp005-flight-dark.webp"] img')
+            expect(dark).to_have_count(1)
+            dark.scroll_into_view_if_needed()
+            dark.evaluate("img => img.decode()")
+            expect(p.locator('[data-guide-image$="sp005-male-flight.webp"]')).to_have_count(0)
+            regular_cards = p.locator('#sdPanel-herkenning section.sd-similar .sd-cmp-card')
+            assert regular_cards.count() == 2
+            rough_card = cmp_card("Ruigpootbuizerd")
+            for width in (360, 390, 430):
+                p.set_viewport_size({"width": width, "height": 844})
+                adult_panel = cmp_tab(rough_card, "In vlucht · Volwassen")
+                assert adult_panel.locator('.sd-cmp-who small').all_text_contents() == ["Volwassen in vlucht", "Vrouwtje in vlucht"]
+                assert_photo_pair(adult_panel, ["sp005-adult_m.webp", "sp253.webp"], in_flight=True)
+                if width == 390:
+                    adult_panel.screenshot(path=str(SHOTS / "species_i_buizerd_ruigpoot_volwassen_390.png"))
+                young_panel = cmp_tab(rough_card, "In vlucht · Juveniel")
+                assert_photo_pair(young_panel, ["sp005-juv.webp", "sp253-juv.webp"], in_flight=True)
+                if width == 390:
+                    young_panel.screenshot(path=str(SHOTS / "species_i_buizerd_ruigpoot_juveniel_390.png"))
+            p.set_viewport_size({"width": 390, "height": 844})
+            check_comparison_photo(young_panel.locator('.sd-field-photo').last)
+            assert_photo_once("/assets/species/plumage/sp005-adult_m.webp")
+            assert_photo_once("/assets/species/plumage/sp005-juv.webp")
+            honey_card = cmp_card("Wespendief")
+            female_honey = cmp_tab(honey_card, "In vlucht · Wespendief-vrouwtje")
+            assert_photo_pair(female_honey, ["sp005-adult_m.webp", "sp248-adult_f.webp"], in_flight=True)
+            young_honey = cmp_tab(honey_card, "In vlucht · Juveniel")
+            assert_photo_pair(young_honey, ["sp005-juv.webp", "sp248-juv.webp"], in_flight=True)
+            assert p.get_by_label("Alarmroep van Buizerd").count() == 1
+            young_honey.get_by_role("button", name="Open Wespendief").click()
+            assert p.get_by_role("dialog", name="Wespendief", exact=True).count() == 1
+            assert p.get_by_label("Vluchtroep van Wespendief").count() == 1
+            close_detail()
+            print("H4-05 OK — Buizerd, Ruigpootbuizerd en Wespendief, vluchtparen naast elkaar op 360/390/430 px")
+
+            open_species("Kleine Zilverreiger", "sp082")
+            heron_card = cmp_card("Grote Zilverreiger")
+            breeding_panel = cmp_tab(heron_card, "Broedkleed")
+            assert breeding_panel.locator('.sd-cmp-who small').all_text_contents() == ["Broedkleed", "Broedkleed"]
+            for path in ("/assets/species/plumage/sp082-breeding.webp", "/assets/species/plumage/sp083-breeding.webp"):
+                assert_photo_once(path)
+            cattle_card = cmp_card("Koereiger")
+            assert_photo_pair(cmp_tab(cattle_card, "Juveniel"), ["sp082-juv.webp", "sp245-juv.webp"])
+            assert p.get_by_label("Vluchtroep van Kleine Zilverreiger").count() == 1
+            p.get_by_role('tab', name='Leefwijze', exact=True).click()
+            assert p.locator('.sd-month-breeding .is-breeding').count() == 2
+            expect(p.get_by_text('Gebruikelijke broedperiode · mei, juni', exact=True)).to_be_visible()
+            p.get_by_role('tab', name='Herkenning', exact=True).click()
+            cattle_card.get_by_role("button", name="Open Koereiger").click()
+            assert p.get_by_role("dialog", name="Koereiger", exact=True).count() == 1
+            assert p.get_by_label("Roepen bij de kolonie van Koereiger").count() == 1
+            p.get_by_role('tab', name='Leefwijze', exact=True).click()
+            expect(p.get_by_text('Gebruikelijke broedperiode · april, mei, juni', exact=True)).to_be_visible()
+            close_detail()
+            print("H4-06 OK — witte reigers per kleed (tabs), bronfoto's, roepen en broedmaanden")
+
+            open_species("Wintertaling", "sp091")
+            teal_card = cmp_card("Zomertaling")
+            assert_photo_pair(cmp_tab(teal_card, "Juveniel"), ["sp091-juv.webp", "sp188-juv.webp"])
+            assert_photo_once("/assets/species/plumage/sp091-juv.webp")
+            for label, plumage in [('Mannetje', 'adult_m'), ('Vrouwtje', 'adult_f')]:
+                teal_panel = cmp_tab(teal_card, label)
+                assert teal_panel.locator('.sd-cmp-who small').all_text_contents() == [label, label]
+                expected_garganey = '/assets/species/sp188.webp' if plumage == 'adult_m' else f'/assets/species/plumage/sp188-{plumage}.webp'
+                assert_photo_once(f'/assets/species/plumage/sp091-{plumage}.webp')
+                assert_photo_once(expected_garganey)
+            # Niet beide eclipskleden zijn gefotografeerd; geen lege vergelijking tonen.
+            expect(teal_card.locator('.sd-cmp-tab', has_text=re.compile(r'^Eclipskleed
+            assert p.get_by_label('Vluchtroep bij Rotterdam van Wintertaling').count() == 1
+            p.get_by_role('tab', name='Leefwijze', exact=True).click()
+            months = p.get_by_text('Gebruikelijke broedperiode · april, mei, juni, juli', exact=True)
+            expect(months).to_be_visible()
+            p.get_by_role('tab', name='Herkenning', exact=True).click()
+            teal_panel.get_by_role('button', name='Open Zomertaling').click()
+            assert p.get_by_role('dialog', name='Zomertaling', exact=True).count() == 1
+            assert p.get_by_label('Ratel van het mannetje van Zomertaling').count() == 1
+            p.get_by_role('tab', name='Leefwijze', exact=True).click()
+            expect(months).to_be_visible()
+            close_detail()
+            print("H4-07 OK — talingen per kleed (4 tabs), lokale roepen en broedmaanden")
+
+            open_species("Bontbekplevier", "sp146")
+            expect(p.get_by_label("Nachtelijke vluchtroep van Bontbekplevier")).to_have_count(1)
+            little_plover_card = cmp_card("Kleine Plevier")
+            assert_photo_pair(cmp_tab(little_plover_card, "Juveniel"), ["sp146-juv.webp", "sp147-juv.webp"])
+            assert_photo_once("/assets/species/plumage/sp146-juv.webp")
+            kentish_plover_card = cmp_card("Strandplevier")
+            assert_photo_pair(cmp_tab(kentish_plover_card, "Juveniel"), ["sp146-juv.webp", "sp206-juv.webp"])
+            winter_panel = cmp_tab(kentish_plover_card, 'Winterkleed')
+            assert winter_panel.locator('.sd-cmp-who small').all_text_contents() == ["Winterkleed", "Winterkleed"]
+            for path in ("/assets/species/plumage/sp146-winter.webp", "/assets/species/plumage/sp206-winter.webp"):
+                assert_photo_once(path)
+            little_plover_card.locator(".sd-cmp-panel:visible").get_by_role("button", name="Open Kleine Plevier").click()
+            expect(p.get_by_label("Zang en vluchtroep van Kleine Plevier")).to_have_count(1)
+            breeding_panel2 = cmp_card("Strandplevier").locator('.sd-cmp-panel:visible')
+            assert breeding_panel2.locator('.sd-cmp-who small').all_text_contents() == ["Broedkleed", "Mannetje"]
+            breeding_panel2.get_by_role("button", name="Open Strandplevier").click()
+            expect(p.get_by_label("Alarmroep van Strandplevier")).to_have_count(1)
+            expect(p.locator('.sd-plumage img[src$="sp206-adult_f.webp"]')).to_have_count(1)
+            tab("status")
+            expect(p.get_by_text('Gebruikelijke broedperiode · mei', exact=True)).to_be_visible()
+            expect(p.get_by_text('Jongen vliegvlug', exact=True)).to_be_visible()
+            assert p.locator('.sd-month-breeding .is-breeding').count() == 1
+            close_detail()
+            print("H4-08 OK — plevieren per kleed (tabs), bronfoto's, roepen en broedmaanden")
+
+            open_species("Goudplevier", "sp145")
+            plover_card = cmp_card("Zilverplevier")
+            assert_photo_pair(cmp_tab(plover_card, "Juveniel"), ["sp145-juv.webp", "sp144-juv.webp"])
+            assert_photo_once("/assets/species/plumage/sp145-juv.webp")
+            plover_panel = None
+            for label, suffix in [("Broedkleed", ""), ("Winterkleed", "-winter")]:
+                plover_panel = cmp_tab(plover_card, label)
+                assert plover_panel.locator('.sd-cmp-who small').all_text_contents() == [label, label]
+                for sid in ("sp145", "sp144"):
+                    folder = "/assets/species/plumage" if suffix else "/assets/species"
+                    assert_photo_once(f"{folder}/{sid}{suffix}.webp")
+            plover_panel.get_by_role("button", name="Open Zilverplevier").click()
+            expect(p.get_by_label("Nachtelijke vluchtroep van Zilverplevier")).to_have_count(1)
+            tab("waar")
+            expect(p.locator(".sd-photo-tip")).to_contain_text("1/2000 s")
+            expect(p.get_by_role("heading", name="Leefgebied")).to_be_visible()
+            tab("status")
+            expect(p.locator(".sd-month-breeding .is-breeding")).to_have_count(0)
+            close_detail()
+            open_species("Merel", "sp045")
+            tab("waar")
+            expect(p.locator(".sd-photo-tip")).to_have_count(0)
+            close_detail()
+            print("H4-09 OK — Goudplevier/Zilverplevier in drie kleden (tabs) en fotografietip bij geselecteerde soorten")
+
+            open_species("Witgat", "sp156")
+            sandpiper_card = cmp_card("Bosruiter")
+            assert_photo_pair(cmp_tab(sandpiper_card, "Juveniel"), ["sp156-juv.webp", "sp159-juv.webp"])
+            assert_photo_once("/assets/species/plumage/sp156-juv.webp")
+            sandpiper_panel = None
+            for label, suffix in [("Broedkleed", ""), ("Winterkleed", "-winter")]:
+                sandpiper_panel = cmp_tab(sandpiper_card, label)
+                for sid in ("sp156", "sp159"):
+                    folder = "/assets/species/plumage" if suffix else "/assets/species"
+                    assert_photo_once(f"{folder}/{sid}{suffix}.webp")
+            expect(p.locator(".sd-audio audio")).to_have_count(4)
+            tab("status")
+            expect(p.get_by_text("Jaarrond in Nederland", exact=True)).to_be_visible()
+            expect(p.locator(".sd-month-breeding")).to_have_count(0)
+            tab("herkenning")
+            sandpiper_panel.get_by_role("button", name="Open Bosruiter").click()
+            expect(p.locator(".sd-audio audio")).to_have_count(4)
+            tab("status")
+            expect(p.get_by_text("Incidentele broedgevallen in Nederland.", exact=True)).to_be_visible()
+            expect(p.get_by_text("Doorgaans mei tot half juli in het reguliere broedgebied", exact=True)).to_be_visible()
+            expect(p.locator(".sd-month-breeding")).to_have_count(0)
+            tab("waar")
+            expect(p.locator(".sd-photo-tip")).to_contain_text("lange wenkbrauw")
+            close_detail()
+            print("H4-10 OK — Witgat/Bosruiter per kleed (tabs), vier roepen per soort en afzonderlijke Nederlandse broedstatus")
+
+            waders = [
+                ("Tureluur", "sp102", 4, "Zwarte Ruiter", "april, mei, juni, juli"),
+                ("Zwarte Ruiter", "sp157", 3, "Tureluur", None),
+                ("Groenpootruiter", "sp158", 3, "Poelruiter", None),
+                ("Poelruiter", "sp217", 2, "Groenpootruiter", None),
+                ("Oeverloper", "sp155", 3, None, "mei, juni"),
+            ]
+            for name, sid, recording_count, partner, breeding_months in waders:
+                open_species(name, sid)
+                expect(p.locator(".sd-audio audio")).to_have_count(recording_count)
+                assert_photo_once(f"/assets/species/{sid}.webp")
+                alternate = "breeding" if sid == "sp102" else "winter"
+                assert_photo_once(f"/assets/species/plumage/{sid}-{alternate}.webp")
+                assert_photo_once(f"/assets/species/plumage/{sid}-juv.webp")
+                if partner:
+                    wader_card = cmp_card(partner)
+                    partner_id = {"sp102": "sp157", "sp157": "sp102", "sp158": "sp217", "sp217": "sp158"}[sid]
+                    assert_photo_pair(cmp_tab(wader_card, "Juveniel"), [f"{sid}-juv.webp", f"{partner_id}-juv.webp"])
+                    for label in ("Broedkleed", "Winterkleed"):
+                        wader_panel = cmp_tab(wader_card, label)
+                        for picture in wader_panel.locator("img").all():
+                            picture.scroll_into_view_if_needed()
+                            picture.evaluate("img => img.decode()")
+                else:
+                    assert_photo_pair(cmp_card("Witgat").locator('.sd-cmp-panel:visible'), ["sp155-winter.webp", "sp156-winter.webp"])
+                    assert_photo_pair(cmp_card("Bosruiter").locator('.sd-cmp-panel:visible'), ["sp155-juv.webp", "sp159-juv.webp"])
+                tab("waar")
+                expect(p.locator(".sd-photo-tip")).to_be_visible()
+                tab("status")
+                if breeding_months:
+                    expect(p.get_by_text(f"Gebruikelijke broedperiode · {breeding_months}", exact=True)).to_be_visible()
+                    expect(p.locator(".sd-month-breeding .is-breeding")).to_have_count(len(breeding_months.split(", ")))
+                else:
+                    expect(p.locator(".sd-month-breeding")).to_have_count(0)
+                close_detail()
+            print("H4-11 OK — vijf steltlopers, kleedfoto’s en opnamen, vergelijkingskaarten met tabs, twee broedlijnen")
+
+            assert not errors, f"H2-08 paginafouten: {errors}"
+            print("H2-08 OK — geen paginafouten")
+            browser.close()
+    print("H2–H4: alle controles geslaagd")
+
+
+if __name__ == "__main__":
+    main()
+))
+                if match.count():
+                    match.click()
+                else:
+                    # UX v1.6: only one complete image pair may remain after
+                    # hiding incomplete tabs; do not require a tabbar in that case.
+                    assert card.locator('.sd-cmp-tab').count() == 0, (
+                        label, "requested tab missing from a multi-tab comparison")
+                    assert card.locator('.sd-cmp-panel').count() == 1, (
+                        label, "expected exactly one surviving complete comparison")
+                panel = card.locator('.sd-cmp-panel:visible')
+                panel.wait_for(state="visible", timeout=4000)
+                return panel
+
+            def assert_photo_pair(panel, files, in_flight=False):
+                pictures = panel.locator('.sd-cmp-head .sd-field-photo')
+                expect(pictures).to_have_count(2)
+                boxes = []
+                for picture, file in zip(pictures.all(), files):
+                    expect(picture).to_have_attribute("data-guide-image", re.compile(re.escape("/" + file) + "$"))
+                    picture.scroll_into_view_if_needed()
+                    picture.locator('img').evaluate("image => image.decode()")
+                    boxes.append(picture.bounding_box())
+                    expect(picture.locator('..').get_by_label("Foto-informatie")).to_have_count(1)
+                left, right = boxes
+                assert left["x"] + left["width"] <= right["x"], boxes
+                assert abs(left["width"] - right["width"]) < 2, boxes
+                assert abs(left["y"] - right["y"]) < 2, boxes
+                assert left["x"] >= 0 and right["x"] + right["width"] <= p.viewport_size["width"], boxes
+                assert (panel.get_attribute("data-cmp-flight") is not None) == in_flight
+
+            open_species("Houtduif", "sp002")
+            stock_dove_card = cmp_card("Holenduif", flight=True)
+            stock_dove_panel = stock_dove_card.locator('.sd-cmp-panel:visible')
+            assert_photo_pair(stock_dove_panel, ["sp002-flight-wingband.webp", "sp003-flight-open-sky.webp"], in_flight=True)
+            check_comparison_photo(stock_dove_panel.locator('.sd-field-photo').last)
+            expect(stock_dove_panel.get_by_text("Nog geen foto", exact=True)).to_have_count(0)
+            expect(stock_dove_card.locator('.sd-cmp-panel:visible .sd-compare-open')).to_have_text(re.compile(r"Open Holenduif"))
+            expect(p.locator('#sdPanel-herkenning section.sd-similar .sd-cmp-more > summary'))\
+                .to_have_text("Nog 1 soort: Turkse Tortel")
+            turtle_dove_card = cmp_card("Turkse Tortel", flight=True)
+            check_comparison_photo(turtle_dove_card.locator('.sd-cmp-panel:visible .sd-field-photo'))
+            close_detail()
+
+            open_species("Fitis", "sp057")
+            card = cmp_card("Tjiftjaf")
+            whos = card.locator('.sd-cmp-panel:visible .sd-cmp-who')
+            assert whos.locator('strong').all_text_contents() == ["Fitis", "Tjiftjaf"]
+            assert card.get_by_role("link", name="Vogelbescherming").count() == 0
+            expect(card.locator(".sd-cmp-foot .sd-compare-open")).to_have_count(1)
+            assert_photo_pair(card.locator(".sd-cmp-panel:visible"), ["sp057.webp", "sp056.webp"])
+            photo = p.get_by_role("button", name="Vergroot hoofdfoto")
+            photo.scroll_into_view_if_needed()
+            photo.locator('img').evaluate("img => img.decode()")
+            photo.click()
+            zoomed = p.locator('.signature-lightbox img')
+            zoomed.evaluate("img => img.decode()")
+            expect(zoomed).to_be_visible()
+            initial = zoomed.bounding_box()["width"]
+            p.get_by_role("button", name="Inzoomen", exact=True).click()
+            p.wait_for_function("width => document.querySelector('.signature-lightbox img').getBoundingClientRect().width > width", arg=initial)
+            p.get_by_role("button", name="Zoom herstellen").click()
+            p.wait_for_function("width => Math.abs(document.querySelector('.signature-lightbox img').getBoundingClientRect().width - width) < 2", arg=initial)
+            p.keyboard.press("Escape")
+            expect(p.locator('.signature-lightbox')).to_have_count(0)
+            expect(photo).to_be_focused()
+            audio = p.get_by_label("Zang van Fitis")
+            audio.evaluate("el => el.play()")
+            p.wait_for_function("document.querySelector('.sd-audio audio').currentTime > 0.15")
+            p.get_by_label("Roep van Fitis").evaluate("el => el.play()")
+            assert audio.evaluate("el => el.paused")
+            tab("status")
+            assert p.get_by_label("Roep van Fitis").evaluate("el => el.paused")
+            tab("herkenning")
+            card.get_by_role("button", name="Open Tjiftjaf").click()
+            assert p.get_by_role("dialog", name="Tjiftjaf", exact=True).count() == 1
+            reverse_whos = cmp_card("Fitis").locator('.sd-cmp-panel:visible .sd-cmp-who')
+            assert reverse_whos.locator('strong').all_text_contents() == ["Tjiftjaf", "Fitis"]
+            close_detail()
+            print("H4-01 OK — Fitis/Tjiftjaf: vergelijkingskaart, foto vergroten, navigatie en afspelen van zang en roep")
+
+            open_species("Grote Bonte Specht", "sp016")
+            # De nieuwere vluchtvergelijking staat vóór de vergelijkingen per kleed.
+            specht_own = cmp_card("Middelste Bonte Specht").locator('.sd-cmp-panel:visible .sd-cmp-who').first
+            assert specht_own.locator('small').inner_text() == "Juveniel"
+            assert_photo_once("/assets/species/plumage/sp016-juv.webp")
+            close_detail()
+            open_species("Kokmeeuw", "sp097")
+            gull_panel = cmp_card("Zwartkopmeeuw").locator('.sd-cmp-panel:visible')
+            assert gull_panel.locator('.sd-cmp-who small').all_text_contents() == ["Broedkleed", "Broedkleed"]
+            assert_photo_once("/assets/species/sp097.webp")
+            assert_photo_once("/assets/species/sp225.webp")
+            winter = p.locator('.sd-plumage').filter(has_text="Winterkleed")
+            # src is sinds de subpad-fix een opgeloste absolute URL (assetUrl.js), geen
+            # ruw root-relatief pad meer — vergelijk daarom op het einde van de waarde.
+            assert winter.locator('img').get_attribute("src").endswith("/assets/species/plumage/sp097-winter.webp")
+            close_detail()
+            open_species("Wilde Eend", "sp089")
+            eclipse = p.locator('.sd-plumage').filter(has_text="Eclipskleed")
+            assert eclipse.locator('img').get_attribute("src").endswith("/assets/species/plumage/sp089-eclipse.webp")
+            close_detail()
+            print("H4-02 OK — jonge specht (vergelijkingskaart), Kokmeeuw/Zwartkopmeeuw in broedkleed, Wilde Eend in eclipskleed")
+
+            open_species("Bruine Kiekendief", "sp173")
+            harrier_card = cmp_card("Blauwe Kiekendief")
+            for label, blue_path, brown_path in (
+                ("Mannetje", "/assets/species/sp249.webp", "/assets/species/plumage/sp173-male-2.webp"),
+                ("Vrouwtje", "/assets/species/plumage/sp249-adult_f.webp", "/assets/species/plumage/sp173-adult_f.webp"),
+            ):
+                panel = cmp_tab(harrier_card, f"In vlucht · {label}")
+                assert panel.locator('.sd-cmp-who small').all_text_contents() == [f"{label} in vlucht"] * 2
+                assert_photo_pair(panel, [brown_path.rsplit("/", 1)[-1], blue_path.rsplit("/", 1)[-1]], in_flight=True)
+                assert_photo_once(blue_path)
+                assert_photo_once(brown_path)
+                check_comparison_photo(panel.locator('.sd-field-photo'), thorough=(label == "Mannetje"))
+            # Een landende Bruine Kiekendief vormt geen paar met een vrij vliegende Blauwe.
+            expect(harrier_card.locator('.sd-cmp-tab', has_text=re.compile(r'^Juveniel$'))).to_have_count(0)
+            flight_section = p.locator('#sdPanel-herkenning section[aria-label="In vlucht"]')
+            expect(flight_section).to_have_count(1)
+            # Vluchtcontrole 10-11-2026: de juveniele foto toont een neerstrijkende vogel (landen) en staat daarom
+            # niet meer in "In vlucht" maar in de Juveniel-kaart; zichtbaar gebleven, niet verwijderd.
+            expect(flight_section.locator('[data-guide-image$="sp173-juv.webp"]')).to_have_count(0)
+            expect(p.locator('#sdPanel-herkenning [data-plumage="juv"] [data-guide-image$="sp173-juv.webp"]')).to_have_count(1)
+            rest = p.locator('[data-plumage="adult_f"] .sd-field-photo').filter(has=p.locator('img[src$="sp173-female-rest.webp"]'))
+            expect(p.locator('[data-plumage="adult_f"] .sd-field-photo')).to_have_count(2)
+            assert rest.locator('..').get_by_label("Foto-informatie").count() == 1
+            check_comparison_photo(rest)
+            assert p.get_by_label("Roep van Bruine Kiekendief").count() == 1
+            close_detail()
+            open_species("Steppekiekendief", "sp250")
+            blue_card = cmp_card("Blauwe Kiekendief", flight=True)
+            for label, steppe, blue in (
+                ("Mannetje", "sp250.webp", "sp249.webp"),
+                ("Vrouwtje", "sp250-adult_f.webp", "sp249-adult_f.webp"),
+                ("Juveniel", "sp250-juv.webp", "sp249-juv.webp"),
+            ):
+                panel = cmp_tab(blue_card, f"In vlucht · {label}")
+                assert panel.locator('.sd-cmp-who small').all_text_contents() == [f"{label} in vlucht"] * 2
+                assert_photo_pair(panel, [steppe, blue], in_flight=True)
+            grauwe_card = cmp_card("Grauwe Kiekendief", flight=True)
+            grauwe_panel = cmp_tab(grauwe_card, "In vlucht · Mannetje")
+            assert_photo_pair(grauwe_panel, ["sp250.webp", "sp251.webp"], in_flight=True)
+            female_panel = cmp_tab(grauwe_card, "In vlucht · Vrouwtje")
+            expect(female_panel.get_by_text("Nog geen passende vluchtfoto", exact=True)).to_have_count(1)
+            expect(female_panel.locator('[data-guide-image$="sp251-adult_f.webp"]')).to_have_count(0)
+            tab("status")
+            assert p.get_by_text("Incidentele broedgevallen in Nederland.", exact=True).is_visible()
+            p.get_by_text("Incidentele broedgevallen in Nederland, onder meer in 2017 en 2019", exact=True).wait_for()
+            assert p.locator('#sdPanel-status .sd-month-breeding').count() == 0
+            close_detail()
+            print("H4-03 OK — Bruine/Blauwe Kiekendief per kleed (tabs, met foto-rotatie en -pan); Steppekiekendief zonder vaste broedmaanden")
+
+            open_species("Slechtvalk", "sp009")
+            kestrel_card = cmp_card("Torenvalk")
+            young_falcons = cmp_tab(kestrel_card, "Juveniel")
+            assert_photo_pair(young_falcons, ["sp009-juv.webp", "sp008-juv.webp"])
+            flying_falcons = cmp_tab(kestrel_card, "In vlucht · Volwassen")
+            assert_photo_pair(flying_falcons, ["sp009-male-flight.webp", "sp008-male-flight.webp"], in_flight=True)
+            assert_photo_once("/assets/showcase/sp009.webp")
+            close_detail()
+
+            open_species("Sperwer", "sp006")
+            hawk_card = cmp_card("Havik")
+            young_hawks = cmp_tab(hawk_card, "Juveniel")
+            assert_photo_pair(young_hawks, ["sp006-juv.webp", "sp007-juv.webp"])
+            hawk_females = cmp_tab(hawk_card, "Vrouwtje")
+            expect(hawk_females.get_by_text("Nog geen passende foto", exact=True)).to_have_count(1)
+            assert_photo_once("/assets/species/plumage/sp006-juv.webp")
+            flight_section = p.locator('#sdPanel-herkenning section.sd-similar')
+            assert flight_section.evaluate(
+                "el => Boolean(el.compareDocumentPosition(document.querySelector('.sd-plumage-list')) & Node.DOCUMENT_POSITION_PRECEDING)")
+            flight_hawk_panel = cmp_card("Havik", flight=True).locator('.sd-cmp-panel:visible')
+            assert flight_hawk_panel.locator('.sd-cmp-who strong').all_text_contents() == ["Sperwer", "Havik"]
+            expect(flight_section.locator('.sd-cmp-more > summary')).to_have_text("Nog 1 soort: Torenvalk")
+            flight_falcon_panel = cmp_card("Torenvalk", flight=True).locator('.sd-cmp-panel:visible')
+            assert flight_falcon_panel.locator('.sd-cmp-who strong').all_text_contents() == ["Sperwer", "Torenvalk"]
+            for sid in ("sp006", "sp007", "sp008"):
+                assert_photo_once(f"/assets/species/plumage/{sid}-flight.webp")
+            sparrow_in_flight = p.locator('#sdPanel-herkenning section[aria-label="In vlucht"]')
+            expect(sparrow_in_flight.get_by_text("Mannetje in vlucht", exact=True)).to_have_count(1)
+            assert p.get_by_label("Roep vrouwtje van Sperwer").count() == 1
+            flight_hawk_panel.get_by_role("button", name="Open Havik").click()
+            assert p.get_by_role("dialog", name="Havik", exact=True).count() == 1
+            assert p.get_by_label("Alarmroep vrouwtje van Havik").count() == 1
+            assert p.get_by_label("Bedelroep jong van Havik").count() == 1
+            close_detail()
+            print("H4-04 OK — jonge Sperwer/Havik (tab Juveniel, juiste borsttekening), vluchtvergelijking met Havik en Torenvalk")
+
+            open_species("Torenvalk", "sp008")
+            text_comparisons = p.locator('#sdPanel-herkenning .kb-similar')
+            expect(text_comparisons.get_by_text("Boomvalk: lange spitse vleugels", exact=False)).to_be_visible()
+            expect(text_comparisons.get_by_text("Smelleken: brede vleugelbasis", exact=False)).to_be_visible()
+            expect(text_comparisons.locator('img')).to_have_count(0)
+            text_comparisons.get_by_role("button", name="Open Boomvalk").click()
+            expect(p.get_by_role("dialog", name="Boomvalk", exact=True)).to_be_visible()
+            close_detail()
+
+            open_species("Buizerd", "sp005")
+            dark = p.locator('.sd-flight [data-guide-image$="sp005-flight-dark.webp"] img')
+            expect(dark).to_have_count(1)
+            dark.scroll_into_view_if_needed()
+            dark.evaluate("img => img.decode()")
+            expect(p.locator('[data-guide-image$="sp005-male-flight.webp"]')).to_have_count(0)
+            regular_cards = p.locator('#sdPanel-herkenning section.sd-similar .sd-cmp-card')
+            assert regular_cards.count() == 2
+            rough_card = cmp_card("Ruigpootbuizerd")
+            for width in (360, 390, 430):
+                p.set_viewport_size({"width": width, "height": 844})
+                adult_panel = cmp_tab(rough_card, "In vlucht · Volwassen")
+                assert adult_panel.locator('.sd-cmp-who small').all_text_contents() == ["Volwassen in vlucht", "Vrouwtje in vlucht"]
+                assert_photo_pair(adult_panel, ["sp005-adult_m.webp", "sp253.webp"], in_flight=True)
+                if width == 390:
+                    adult_panel.screenshot(path=str(SHOTS / "species_i_buizerd_ruigpoot_volwassen_390.png"))
+                young_panel = cmp_tab(rough_card, "In vlucht · Juveniel")
+                assert_photo_pair(young_panel, ["sp005-juv.webp", "sp253-juv.webp"], in_flight=True)
+                if width == 390:
+                    young_panel.screenshot(path=str(SHOTS / "species_i_buizerd_ruigpoot_juveniel_390.png"))
+            p.set_viewport_size({"width": 390, "height": 844})
+            check_comparison_photo(young_panel.locator('.sd-field-photo').last)
+            assert_photo_once("/assets/species/plumage/sp005-adult_m.webp")
+            assert_photo_once("/assets/species/plumage/sp005-juv.webp")
+            honey_card = cmp_card("Wespendief")
+            female_honey = cmp_tab(honey_card, "In vlucht · Wespendief-vrouwtje")
+            assert_photo_pair(female_honey, ["sp005-adult_m.webp", "sp248-adult_f.webp"], in_flight=True)
+            young_honey = cmp_tab(honey_card, "In vlucht · Juveniel")
+            assert_photo_pair(young_honey, ["sp005-juv.webp", "sp248-juv.webp"], in_flight=True)
+            assert p.get_by_label("Alarmroep van Buizerd").count() == 1
+            young_honey.get_by_role("button", name="Open Wespendief").click()
+            assert p.get_by_role("dialog", name="Wespendief", exact=True).count() == 1
+            assert p.get_by_label("Vluchtroep van Wespendief").count() == 1
+            close_detail()
+            print("H4-05 OK — Buizerd, Ruigpootbuizerd en Wespendief, vluchtparen naast elkaar op 360/390/430 px")
+
+            open_species("Kleine Zilverreiger", "sp082")
+            heron_card = cmp_card("Grote Zilverreiger")
+            breeding_panel = cmp_tab(heron_card, "Broedkleed")
+            assert breeding_panel.locator('.sd-cmp-who small').all_text_contents() == ["Broedkleed", "Broedkleed"]
+            for path in ("/assets/species/plumage/sp082-breeding.webp", "/assets/species/plumage/sp083-breeding.webp"):
+                assert_photo_once(path)
+            cattle_card = cmp_card("Koereiger")
+            assert_photo_pair(cmp_tab(cattle_card, "Juveniel"), ["sp082-juv.webp", "sp245-juv.webp"])
+            assert p.get_by_label("Vluchtroep van Kleine Zilverreiger").count() == 1
+            p.get_by_role('tab', name='Leefwijze', exact=True).click()
+            assert p.locator('.sd-month-breeding .is-breeding').count() == 2
+            expect(p.get_by_text('Gebruikelijke broedperiode · mei, juni', exact=True)).to_be_visible()
+            p.get_by_role('tab', name='Herkenning', exact=True).click()
+            cattle_card.get_by_role("button", name="Open Koereiger").click()
+            assert p.get_by_role("dialog", name="Koereiger", exact=True).count() == 1
+            assert p.get_by_label("Roepen bij de kolonie van Koereiger").count() == 1
+            p.get_by_role('tab', name='Leefwijze', exact=True).click()
+            expect(p.get_by_text('Gebruikelijke broedperiode · april, mei, juni', exact=True)).to_be_visible()
+            close_detail()
+            print("H4-06 OK — witte reigers per kleed (tabs), bronfoto's, roepen en broedmaanden")
+
+            open_species("Wintertaling", "sp091")
+            teal_card = cmp_card("Zomertaling")
+            assert_photo_pair(cmp_tab(teal_card, "Juveniel"), ["sp091-juv.webp", "sp188-juv.webp"])
+            assert_photo_once("/assets/species/plumage/sp091-juv.webp")
+            for label, plumage in [('Mannetje', 'adult_m'), ('Vrouwtje', 'adult_f'), ('Eclipskleed', 'eclipse')]:
+                teal_panel = cmp_tab(teal_card, label)
+                assert teal_panel.locator('.sd-cmp-who small').all_text_contents() == [label, label]
+                expected_garganey = '/assets/species/sp188.webp' if plumage == 'adult_m' else f'/assets/species/plumage/sp188-{plumage}.webp'
+                assert_photo_once(f'/assets/species/plumage/sp091-{plumage}.webp')
+                if plumage == 'eclipse':
+                    expect(teal_panel.get_by_text("Nog geen passende foto", exact=True)).to_have_count(1)
+                else:
+                    assert_photo_once(expected_garganey)
+            assert p.get_by_label('Vluchtroep bij Rotterdam van Wintertaling').count() == 1
+            p.get_by_role('tab', name='Leefwijze', exact=True).click()
+            months = p.get_by_text('Gebruikelijke broedperiode · april, mei, juni, juli', exact=True)
+            expect(months).to_be_visible()
+            p.get_by_role('tab', name='Herkenning', exact=True).click()
+            teal_panel.get_by_role('button', name='Open Zomertaling').click()
+            assert p.get_by_role('dialog', name='Zomertaling', exact=True).count() == 1
+            assert p.get_by_label('Ratel van het mannetje van Zomertaling').count() == 1
+            p.get_by_role('tab', name='Leefwijze', exact=True).click()
+            expect(months).to_be_visible()
+            close_detail()
+            print("H4-07 OK — talingen per kleed (4 tabs), lokale roepen en broedmaanden")
+
+            open_species("Bontbekplevier", "sp146")
+            expect(p.get_by_label("Nachtelijke vluchtroep van Bontbekplevier")).to_have_count(1)
+            little_plover_card = cmp_card("Kleine Plevier")
+            assert_photo_pair(cmp_tab(little_plover_card, "Juveniel"), ["sp146-juv.webp", "sp147-juv.webp"])
+            assert_photo_once("/assets/species/plumage/sp146-juv.webp")
+            kentish_plover_card = cmp_card("Strandplevier")
+            assert_photo_pair(cmp_tab(kentish_plover_card, "Juveniel"), ["sp146-juv.webp", "sp206-juv.webp"])
+            winter_panel = cmp_tab(kentish_plover_card, 'Winterkleed')
+            assert winter_panel.locator('.sd-cmp-who small').all_text_contents() == ["Winterkleed", "Winterkleed"]
+            for path in ("/assets/species/plumage/sp146-winter.webp", "/assets/species/plumage/sp206-winter.webp"):
+                assert_photo_once(path)
+            little_plover_card.locator(".sd-cmp-panel:visible").get_by_role("button", name="Open Kleine Plevier").click()
+            expect(p.get_by_label("Zang en vluchtroep van Kleine Plevier")).to_have_count(1)
+            breeding_panel2 = cmp_card("Strandplevier").locator('.sd-cmp-panel:visible')
+            assert breeding_panel2.locator('.sd-cmp-who small').all_text_contents() == ["Broedkleed", "Mannetje"]
+            breeding_panel2.get_by_role("button", name="Open Strandplevier").click()
+            expect(p.get_by_label("Alarmroep van Strandplevier")).to_have_count(1)
+            expect(p.locator('.sd-plumage img[src$="sp206-adult_f.webp"]')).to_have_count(1)
+            tab("status")
+            expect(p.get_by_text('Gebruikelijke broedperiode · mei', exact=True)).to_be_visible()
+            expect(p.get_by_text('Jongen vliegvlug', exact=True)).to_be_visible()
+            assert p.locator('.sd-month-breeding .is-breeding').count() == 1
+            close_detail()
+            print("H4-08 OK — plevieren per kleed (tabs), bronfoto's, roepen en broedmaanden")
+
+            open_species("Goudplevier", "sp145")
+            plover_card = cmp_card("Zilverplevier")
+            assert_photo_pair(cmp_tab(plover_card, "Juveniel"), ["sp145-juv.webp", "sp144-juv.webp"])
+            assert_photo_once("/assets/species/plumage/sp145-juv.webp")
+            plover_panel = None
+            for label, suffix in [("Broedkleed", ""), ("Winterkleed", "-winter")]:
+                plover_panel = cmp_tab(plover_card, label)
+                assert plover_panel.locator('.sd-cmp-who small').all_text_contents() == [label, label]
+                for sid in ("sp145", "sp144"):
+                    folder = "/assets/species/plumage" if suffix else "/assets/species"
+                    assert_photo_once(f"{folder}/{sid}{suffix}.webp")
+            plover_panel.get_by_role("button", name="Open Zilverplevier").click()
+            expect(p.get_by_label("Nachtelijke vluchtroep van Zilverplevier")).to_have_count(1)
+            tab("waar")
+            expect(p.locator(".sd-photo-tip")).to_contain_text("1/2000 s")
+            expect(p.get_by_role("heading", name="Leefgebied")).to_be_visible()
+            tab("status")
+            expect(p.locator(".sd-month-breeding .is-breeding")).to_have_count(0)
+            close_detail()
+            open_species("Merel", "sp045")
+            tab("waar")
+            expect(p.locator(".sd-photo-tip")).to_have_count(0)
+            close_detail()
+            print("H4-09 OK — Goudplevier/Zilverplevier in drie kleden (tabs) en fotografietip bij geselecteerde soorten")
+
+            open_species("Witgat", "sp156")
+            sandpiper_card = cmp_card("Bosruiter")
+            assert_photo_pair(cmp_tab(sandpiper_card, "Juveniel"), ["sp156-juv.webp", "sp159-juv.webp"])
+            assert_photo_once("/assets/species/plumage/sp156-juv.webp")
+            sandpiper_panel = None
+            for label, suffix in [("Broedkleed", ""), ("Winterkleed", "-winter")]:
+                sandpiper_panel = cmp_tab(sandpiper_card, label)
+                for sid in ("sp156", "sp159"):
+                    folder = "/assets/species/plumage" if suffix else "/assets/species"
+                    assert_photo_once(f"{folder}/{sid}{suffix}.webp")
+            expect(p.locator(".sd-audio audio")).to_have_count(4)
+            tab("status")
+            expect(p.get_by_text("Jaarrond in Nederland", exact=True)).to_be_visible()
+            expect(p.locator(".sd-month-breeding")).to_have_count(0)
+            tab("herkenning")
+            sandpiper_panel.get_by_role("button", name="Open Bosruiter").click()
+            expect(p.locator(".sd-audio audio")).to_have_count(4)
+            tab("status")
+            expect(p.get_by_text("Incidentele broedgevallen in Nederland.", exact=True)).to_be_visible()
+            expect(p.get_by_text("Doorgaans mei tot half juli in het reguliere broedgebied", exact=True)).to_be_visible()
+            expect(p.locator(".sd-month-breeding")).to_have_count(0)
+            tab("waar")
+            expect(p.locator(".sd-photo-tip")).to_contain_text("lange wenkbrauw")
+            close_detail()
+            print("H4-10 OK — Witgat/Bosruiter per kleed (tabs), vier roepen per soort en afzonderlijke Nederlandse broedstatus")
+
+            waders = [
+                ("Tureluur", "sp102", 4, "Zwarte Ruiter", "april, mei, juni, juli"),
+                ("Zwarte Ruiter", "sp157", 3, "Tureluur", None),
+                ("Groenpootruiter", "sp158", 3, "Poelruiter", None),
+                ("Poelruiter", "sp217", 2, "Groenpootruiter", None),
+                ("Oeverloper", "sp155", 3, None, "mei, juni"),
+            ]
+            for name, sid, recording_count, partner, breeding_months in waders:
+                open_species(name, sid)
+                expect(p.locator(".sd-audio audio")).to_have_count(recording_count)
+                assert_photo_once(f"/assets/species/{sid}.webp")
+                alternate = "breeding" if sid == "sp102" else "winter"
+                assert_photo_once(f"/assets/species/plumage/{sid}-{alternate}.webp")
+                assert_photo_once(f"/assets/species/plumage/{sid}-juv.webp")
+                if partner:
+                    wader_card = cmp_card(partner)
+                    partner_id = {"sp102": "sp157", "sp157": "sp102", "sp158": "sp217", "sp217": "sp158"}[sid]
+                    assert_photo_pair(cmp_tab(wader_card, "Juveniel"), [f"{sid}-juv.webp", f"{partner_id}-juv.webp"])
+                    for label in ("Broedkleed", "Winterkleed"):
+                        wader_panel = cmp_tab(wader_card, label)
+                        for picture in wader_panel.locator("img").all():
+                            picture.scroll_into_view_if_needed()
+                            picture.evaluate("img => img.decode()")
+                else:
+                    assert_photo_pair(cmp_card("Witgat").locator('.sd-cmp-panel:visible'), ["sp155-winter.webp", "sp156-winter.webp"])
+                    assert_photo_pair(cmp_card("Bosruiter").locator('.sd-cmp-panel:visible'), ["sp155-juv.webp", "sp159-juv.webp"])
+                tab("waar")
+                expect(p.locator(".sd-photo-tip")).to_be_visible()
+                tab("status")
+                if breeding_months:
+                    expect(p.get_by_text(f"Gebruikelijke broedperiode · {breeding_months}", exact=True)).to_be_visible()
+                    expect(p.locator(".sd-month-breeding .is-breeding")).to_have_count(len(breeding_months.split(", ")))
+                else:
+                    expect(p.locator(".sd-month-breeding")).to_have_count(0)
+                close_detail()
+            print("H4-11 OK — vijf steltlopers, kleedfoto’s en opnamen, vergelijkingskaarten met tabs, twee broedlijnen")
+
+            assert not errors, f"H2-08 paginafouten: {errors}"
+            print("H2-08 OK — geen paginafouten")
+            browser.close()
+    print("H2–H4: alle controles geslaagd")
+
+
+if __name__ == "__main__":
+    main()
+))).to_have_count(0)
+            assert "Nog geen passende foto" not in hawk_card.inner_text()
+            assert_photo_once("/assets/species/plumage/sp006-juv.webp")
+            flight_section = p.locator('#sdPanel-herkenning section.sd-similar')
+            assert flight_section.evaluate(
+                "el => Boolean(el.compareDocumentPosition(document.querySelector('.sd-plumage-list')) & Node.DOCUMENT_POSITION_PRECEDING)")
+            flight_hawk_panel = cmp_card("Havik", flight=True).locator('.sd-cmp-panel:visible')
+            assert flight_hawk_panel.locator('.sd-cmp-who strong').all_text_contents() == ["Sperwer", "Havik"]
+            expect(flight_section.locator('.sd-cmp-more > summary')).to_have_text("Nog 1 soort: Torenvalk")
+            flight_falcon_panel = cmp_card("Torenvalk", flight=True).locator('.sd-cmp-panel:visible')
+            assert flight_falcon_panel.locator('.sd-cmp-who strong').all_text_contents() == ["Sperwer", "Torenvalk"]
+            for sid in ("sp006", "sp007", "sp008"):
+                assert_photo_once(f"/assets/species/plumage/{sid}-flight.webp")
+            sparrow_in_flight = p.locator('#sdPanel-herkenning section[aria-label="In vlucht"]')
+            expect(sparrow_in_flight.get_by_text("Mannetje in vlucht", exact=True)).to_have_count(1)
+            assert p.get_by_label("Roep vrouwtje van Sperwer").count() == 1
+            flight_hawk_panel.get_by_role("button", name="Open Havik").click()
+            assert p.get_by_role("dialog", name="Havik", exact=True).count() == 1
+            assert p.get_by_label("Alarmroep vrouwtje van Havik").count() == 1
+            assert p.get_by_label("Bedelroep jong van Havik").count() == 1
+            close_detail()
+            print("H4-04 OK — jonge Sperwer/Havik (tab Juveniel, juiste borsttekening), vluchtvergelijking met Havik en Torenvalk")
+
+            open_species("Torenvalk", "sp008")
+            text_comparisons = p.locator('#sdPanel-herkenning .kb-similar')
+            expect(text_comparisons.get_by_text("Boomvalk: lange spitse vleugels", exact=False)).to_be_visible()
+            expect(text_comparisons.get_by_text("Smelleken: brede vleugelbasis", exact=False)).to_be_visible()
+            expect(text_comparisons.locator('img')).to_have_count(0)
+            text_comparisons.get_by_role("button", name="Open Boomvalk").click()
+            expect(p.get_by_role("dialog", name="Boomvalk", exact=True)).to_be_visible()
+            close_detail()
+
+            open_species("Buizerd", "sp005")
+            dark = p.locator('.sd-flight [data-guide-image$="sp005-flight-dark.webp"] img')
+            expect(dark).to_have_count(1)
+            dark.scroll_into_view_if_needed()
+            dark.evaluate("img => img.decode()")
+            expect(p.locator('[data-guide-image$="sp005-male-flight.webp"]')).to_have_count(0)
+            regular_cards = p.locator('#sdPanel-herkenning section.sd-similar .sd-cmp-card')
+            assert regular_cards.count() == 2
+            rough_card = cmp_card("Ruigpootbuizerd")
+            for width in (360, 390, 430):
+                p.set_viewport_size({"width": width, "height": 844})
+                adult_panel = cmp_tab(rough_card, "In vlucht · Volwassen")
+                assert adult_panel.locator('.sd-cmp-who small').all_text_contents() == ["Volwassen in vlucht", "Vrouwtje in vlucht"]
+                assert_photo_pair(adult_panel, ["sp005-adult_m.webp", "sp253.webp"], in_flight=True)
+                if width == 390:
+                    adult_panel.screenshot(path=str(SHOTS / "species_i_buizerd_ruigpoot_volwassen_390.png"))
+                young_panel = cmp_tab(rough_card, "In vlucht · Juveniel")
+                assert_photo_pair(young_panel, ["sp005-juv.webp", "sp253-juv.webp"], in_flight=True)
+                if width == 390:
+                    young_panel.screenshot(path=str(SHOTS / "species_i_buizerd_ruigpoot_juveniel_390.png"))
+            p.set_viewport_size({"width": 390, "height": 844})
+            check_comparison_photo(young_panel.locator('.sd-field-photo').last)
+            assert_photo_once("/assets/species/plumage/sp005-adult_m.webp")
+            assert_photo_once("/assets/species/plumage/sp005-juv.webp")
+            honey_card = cmp_card("Wespendief")
+            female_honey = cmp_tab(honey_card, "In vlucht · Wespendief-vrouwtje")
+            assert_photo_pair(female_honey, ["sp005-adult_m.webp", "sp248-adult_f.webp"], in_flight=True)
+            young_honey = cmp_tab(honey_card, "In vlucht · Juveniel")
+            assert_photo_pair(young_honey, ["sp005-juv.webp", "sp248-juv.webp"], in_flight=True)
+            assert p.get_by_label("Alarmroep van Buizerd").count() == 1
+            young_honey.get_by_role("button", name="Open Wespendief").click()
+            assert p.get_by_role("dialog", name="Wespendief", exact=True).count() == 1
+            assert p.get_by_label("Vluchtroep van Wespendief").count() == 1
+            close_detail()
+            print("H4-05 OK — Buizerd, Ruigpootbuizerd en Wespendief, vluchtparen naast elkaar op 360/390/430 px")
+
+            open_species("Kleine Zilverreiger", "sp082")
+            heron_card = cmp_card("Grote Zilverreiger")
+            breeding_panel = cmp_tab(heron_card, "Broedkleed")
+            assert breeding_panel.locator('.sd-cmp-who small').all_text_contents() == ["Broedkleed", "Broedkleed"]
+            for path in ("/assets/species/plumage/sp082-breeding.webp", "/assets/species/plumage/sp083-breeding.webp"):
+                assert_photo_once(path)
+            cattle_card = cmp_card("Koereiger")
+            assert_photo_pair(cmp_tab(cattle_card, "Juveniel"), ["sp082-juv.webp", "sp245-juv.webp"])
+            assert p.get_by_label("Vluchtroep van Kleine Zilverreiger").count() == 1
+            p.get_by_role('tab', name='Leefwijze', exact=True).click()
+            assert p.locator('.sd-month-breeding .is-breeding').count() == 2
+            expect(p.get_by_text('Gebruikelijke broedperiode · mei, juni', exact=True)).to_be_visible()
+            p.get_by_role('tab', name='Herkenning', exact=True).click()
+            cattle_card.get_by_role("button", name="Open Koereiger").click()
+            assert p.get_by_role("dialog", name="Koereiger", exact=True).count() == 1
+            assert p.get_by_label("Roepen bij de kolonie van Koereiger").count() == 1
+            p.get_by_role('tab', name='Leefwijze', exact=True).click()
+            expect(p.get_by_text('Gebruikelijke broedperiode · april, mei, juni', exact=True)).to_be_visible()
+            close_detail()
+            print("H4-06 OK — witte reigers per kleed (tabs), bronfoto's, roepen en broedmaanden")
+
+            open_species("Wintertaling", "sp091")
+            teal_card = cmp_card("Zomertaling")
+            assert_photo_pair(cmp_tab(teal_card, "Juveniel"), ["sp091-juv.webp", "sp188-juv.webp"])
+            assert_photo_once("/assets/species/plumage/sp091-juv.webp")
+            for label, plumage in [('Mannetje', 'adult_m'), ('Vrouwtje', 'adult_f'), ('Eclipskleed', 'eclipse')]:
+                teal_panel = cmp_tab(teal_card, label)
+                assert teal_panel.locator('.sd-cmp-who small').all_text_contents() == [label, label]
+                expected_garganey = '/assets/species/sp188.webp' if plumage == 'adult_m' else f'/assets/species/plumage/sp188-{plumage}.webp'
+                assert_photo_once(f'/assets/species/plumage/sp091-{plumage}.webp')
+                if plumage == 'eclipse':
+                    expect(teal_panel.get_by_text("Nog geen passende foto", exact=True)).to_have_count(1)
+                else:
+                    assert_photo_once(expected_garganey)
+            assert p.get_by_label('Vluchtroep bij Rotterdam van Wintertaling').count() == 1
+            p.get_by_role('tab', name='Leefwijze', exact=True).click()
+            months = p.get_by_text('Gebruikelijke broedperiode · april, mei, juni, juli', exact=True)
+            expect(months).to_be_visible()
+            p.get_by_role('tab', name='Herkenning', exact=True).click()
+            teal_panel.get_by_role('button', name='Open Zomertaling').click()
+            assert p.get_by_role('dialog', name='Zomertaling', exact=True).count() == 1
+            assert p.get_by_label('Ratel van het mannetje van Zomertaling').count() == 1
+            p.get_by_role('tab', name='Leefwijze', exact=True).click()
+            expect(months).to_be_visible()
+            close_detail()
+            print("H4-07 OK — talingen per kleed (4 tabs), lokale roepen en broedmaanden")
+
+            open_species("Bontbekplevier", "sp146")
+            expect(p.get_by_label("Nachtelijke vluchtroep van Bontbekplevier")).to_have_count(1)
+            little_plover_card = cmp_card("Kleine Plevier")
+            assert_photo_pair(cmp_tab(little_plover_card, "Juveniel"), ["sp146-juv.webp", "sp147-juv.webp"])
+            assert_photo_once("/assets/species/plumage/sp146-juv.webp")
+            kentish_plover_card = cmp_card("Strandplevier")
+            assert_photo_pair(cmp_tab(kentish_plover_card, "Juveniel"), ["sp146-juv.webp", "sp206-juv.webp"])
+            winter_panel = cmp_tab(kentish_plover_card, 'Winterkleed')
+            assert winter_panel.locator('.sd-cmp-who small').all_text_contents() == ["Winterkleed", "Winterkleed"]
+            for path in ("/assets/species/plumage/sp146-winter.webp", "/assets/species/plumage/sp206-winter.webp"):
+                assert_photo_once(path)
+            little_plover_card.locator(".sd-cmp-panel:visible").get_by_role("button", name="Open Kleine Plevier").click()
+            expect(p.get_by_label("Zang en vluchtroep van Kleine Plevier")).to_have_count(1)
+            breeding_panel2 = cmp_card("Strandplevier").locator('.sd-cmp-panel:visible')
+            assert breeding_panel2.locator('.sd-cmp-who small').all_text_contents() == ["Broedkleed", "Mannetje"]
+            breeding_panel2.get_by_role("button", name="Open Strandplevier").click()
+            expect(p.get_by_label("Alarmroep van Strandplevier")).to_have_count(1)
+            expect(p.locator('.sd-plumage img[src$="sp206-adult_f.webp"]')).to_have_count(1)
+            tab("status")
+            expect(p.get_by_text('Gebruikelijke broedperiode · mei', exact=True)).to_be_visible()
+            expect(p.get_by_text('Jongen vliegvlug', exact=True)).to_be_visible()
+            assert p.locator('.sd-month-breeding .is-breeding').count() == 1
+            close_detail()
+            print("H4-08 OK — plevieren per kleed (tabs), bronfoto's, roepen en broedmaanden")
+
+            open_species("Goudplevier", "sp145")
+            plover_card = cmp_card("Zilverplevier")
+            assert_photo_pair(cmp_tab(plover_card, "Juveniel"), ["sp145-juv.webp", "sp144-juv.webp"])
+            assert_photo_once("/assets/species/plumage/sp145-juv.webp")
+            plover_panel = None
+            for label, suffix in [("Broedkleed", ""), ("Winterkleed", "-winter")]:
+                plover_panel = cmp_tab(plover_card, label)
+                assert plover_panel.locator('.sd-cmp-who small').all_text_contents() == [label, label]
+                for sid in ("sp145", "sp144"):
+                    folder = "/assets/species/plumage" if suffix else "/assets/species"
+                    assert_photo_once(f"{folder}/{sid}{suffix}.webp")
+            plover_panel.get_by_role("button", name="Open Zilverplevier").click()
+            expect(p.get_by_label("Nachtelijke vluchtroep van Zilverplevier")).to_have_count(1)
+            tab("waar")
+            expect(p.locator(".sd-photo-tip")).to_contain_text("1/2000 s")
+            expect(p.get_by_role("heading", name="Leefgebied")).to_be_visible()
+            tab("status")
+            expect(p.locator(".sd-month-breeding .is-breeding")).to_have_count(0)
+            close_detail()
+            open_species("Merel", "sp045")
+            tab("waar")
+            expect(p.locator(".sd-photo-tip")).to_have_count(0)
+            close_detail()
+            print("H4-09 OK — Goudplevier/Zilverplevier in drie kleden (tabs) en fotografietip bij geselecteerde soorten")
+
+            open_species("Witgat", "sp156")
+            sandpiper_card = cmp_card("Bosruiter")
+            assert_photo_pair(cmp_tab(sandpiper_card, "Juveniel"), ["sp156-juv.webp", "sp159-juv.webp"])
+            assert_photo_once("/assets/species/plumage/sp156-juv.webp")
+            sandpiper_panel = None
+            for label, suffix in [("Broedkleed", ""), ("Winterkleed", "-winter")]:
+                sandpiper_panel = cmp_tab(sandpiper_card, label)
+                for sid in ("sp156", "sp159"):
+                    folder = "/assets/species/plumage" if suffix else "/assets/species"
+                    assert_photo_once(f"{folder}/{sid}{suffix}.webp")
+            expect(p.locator(".sd-audio audio")).to_have_count(4)
+            tab("status")
+            expect(p.get_by_text("Jaarrond in Nederland", exact=True)).to_be_visible()
+            expect(p.locator(".sd-month-breeding")).to_have_count(0)
+            tab("herkenning")
+            sandpiper_panel.get_by_role("button", name="Open Bosruiter").click()
+            expect(p.locator(".sd-audio audio")).to_have_count(4)
+            tab("status")
+            expect(p.get_by_text("Incidentele broedgevallen in Nederland.", exact=True)).to_be_visible()
+            expect(p.get_by_text("Doorgaans mei tot half juli in het reguliere broedgebied", exact=True)).to_be_visible()
+            expect(p.locator(".sd-month-breeding")).to_have_count(0)
+            tab("waar")
+            expect(p.locator(".sd-photo-tip")).to_contain_text("lange wenkbrauw")
+            close_detail()
+            print("H4-10 OK — Witgat/Bosruiter per kleed (tabs), vier roepen per soort en afzonderlijke Nederlandse broedstatus")
+
+            waders = [
+                ("Tureluur", "sp102", 4, "Zwarte Ruiter", "april, mei, juni, juli"),
+                ("Zwarte Ruiter", "sp157", 3, "Tureluur", None),
+                ("Groenpootruiter", "sp158", 3, "Poelruiter", None),
+                ("Poelruiter", "sp217", 2, "Groenpootruiter", None),
+                ("Oeverloper", "sp155", 3, None, "mei, juni"),
+            ]
+            for name, sid, recording_count, partner, breeding_months in waders:
+                open_species(name, sid)
+                expect(p.locator(".sd-audio audio")).to_have_count(recording_count)
+                assert_photo_once(f"/assets/species/{sid}.webp")
+                alternate = "breeding" if sid == "sp102" else "winter"
+                assert_photo_once(f"/assets/species/plumage/{sid}-{alternate}.webp")
+                assert_photo_once(f"/assets/species/plumage/{sid}-juv.webp")
+                if partner:
+                    wader_card = cmp_card(partner)
+                    partner_id = {"sp102": "sp157", "sp157": "sp102", "sp158": "sp217", "sp217": "sp158"}[sid]
+                    assert_photo_pair(cmp_tab(wader_card, "Juveniel"), [f"{sid}-juv.webp", f"{partner_id}-juv.webp"])
+                    for label in ("Broedkleed", "Winterkleed"):
+                        wader_panel = cmp_tab(wader_card, label)
+                        for picture in wader_panel.locator("img").all():
+                            picture.scroll_into_view_if_needed()
+                            picture.evaluate("img => img.decode()")
+                else:
+                    assert_photo_pair(cmp_card("Witgat").locator('.sd-cmp-panel:visible'), ["sp155-winter.webp", "sp156-winter.webp"])
+                    assert_photo_pair(cmp_card("Bosruiter").locator('.sd-cmp-panel:visible'), ["sp155-juv.webp", "sp159-juv.webp"])
+                tab("waar")
+                expect(p.locator(".sd-photo-tip")).to_be_visible()
+                tab("status")
+                if breeding_months:
+                    expect(p.get_by_text(f"Gebruikelijke broedperiode · {breeding_months}", exact=True)).to_be_visible()
+                    expect(p.locator(".sd-month-breeding .is-breeding")).to_have_count(len(breeding_months.split(", ")))
+                else:
+                    expect(p.locator(".sd-month-breeding")).to_have_count(0)
+                close_detail()
+            print("H4-11 OK — vijf steltlopers, kleedfoto’s en opnamen, vergelijkingskaarten met tabs, twee broedlijnen")
+
+            assert not errors, f"H2-08 paginafouten: {errors}"
+            print("H2-08 OK — geen paginafouten")
+            browser.close()
+    print("H2–H4: alle controles geslaagd")
+
+
+if __name__ == "__main__":
+    main()
+))
+                if match.count():
+                    match.click()
+                else:
+                    # UX v1.6: only one complete image pair may remain after
+                    # hiding incomplete tabs; do not require a tabbar in that case.
+                    assert card.locator('.sd-cmp-tab').count() == 0, (
+                        label, "requested tab missing from a multi-tab comparison")
+                    assert card.locator('.sd-cmp-panel').count() == 1, (
+                        label, "expected exactly one surviving complete comparison")
+                panel = card.locator('.sd-cmp-panel:visible')
+                panel.wait_for(state="visible", timeout=4000)
+                return panel
+
+            def assert_photo_pair(panel, files, in_flight=False):
+                pictures = panel.locator('.sd-cmp-head .sd-field-photo')
+                expect(pictures).to_have_count(2)
+                boxes = []
+                for picture, file in zip(pictures.all(), files):
+                    expect(picture).to_have_attribute("data-guide-image", re.compile(re.escape("/" + file) + "$"))
+                    picture.scroll_into_view_if_needed()
+                    picture.locator('img').evaluate("image => image.decode()")
+                    boxes.append(picture.bounding_box())
+                    expect(picture.locator('..').get_by_label("Foto-informatie")).to_have_count(1)
+                left, right = boxes
+                assert left["x"] + left["width"] <= right["x"], boxes
+                assert abs(left["width"] - right["width"]) < 2, boxes
+                assert abs(left["y"] - right["y"]) < 2, boxes
+                assert left["x"] >= 0 and right["x"] + right["width"] <= p.viewport_size["width"], boxes
+                assert (panel.get_attribute("data-cmp-flight") is not None) == in_flight
+
+            open_species("Houtduif", "sp002")
+            stock_dove_card = cmp_card("Holenduif", flight=True)
+            stock_dove_panel = stock_dove_card.locator('.sd-cmp-panel:visible')
+            assert_photo_pair(stock_dove_panel, ["sp002-flight-wingband.webp", "sp003-flight-open-sky.webp"], in_flight=True)
+            check_comparison_photo(stock_dove_panel.locator('.sd-field-photo').last)
+            expect(stock_dove_panel.get_by_text("Nog geen foto", exact=True)).to_have_count(0)
+            expect(stock_dove_card.locator('.sd-cmp-panel:visible .sd-compare-open')).to_have_text(re.compile(r"Open Holenduif"))
+            expect(p.locator('#sdPanel-herkenning section.sd-similar .sd-cmp-more > summary'))\
+                .to_have_text("Nog 1 soort: Turkse Tortel")
+            turtle_dove_card = cmp_card("Turkse Tortel", flight=True)
+            check_comparison_photo(turtle_dove_card.locator('.sd-cmp-panel:visible .sd-field-photo'))
+            close_detail()
+
+            open_species("Fitis", "sp057")
+            card = cmp_card("Tjiftjaf")
+            whos = card.locator('.sd-cmp-panel:visible .sd-cmp-who')
+            assert whos.locator('strong').all_text_contents() == ["Fitis", "Tjiftjaf"]
+            assert card.get_by_role("link", name="Vogelbescherming").count() == 0
+            expect(card.locator(".sd-cmp-foot .sd-compare-open")).to_have_count(1)
+            assert_photo_pair(card.locator(".sd-cmp-panel:visible"), ["sp057.webp", "sp056.webp"])
+            photo = p.get_by_role("button", name="Vergroot hoofdfoto")
+            photo.scroll_into_view_if_needed()
+            photo.locator('img').evaluate("img => img.decode()")
+            photo.click()
+            zoomed = p.locator('.signature-lightbox img')
+            zoomed.evaluate("img => img.decode()")
+            expect(zoomed).to_be_visible()
+            initial = zoomed.bounding_box()["width"]
+            p.get_by_role("button", name="Inzoomen", exact=True).click()
+            p.wait_for_function("width => document.querySelector('.signature-lightbox img').getBoundingClientRect().width > width", arg=initial)
+            p.get_by_role("button", name="Zoom herstellen").click()
+            p.wait_for_function("width => Math.abs(document.querySelector('.signature-lightbox img').getBoundingClientRect().width - width) < 2", arg=initial)
+            p.keyboard.press("Escape")
+            expect(p.locator('.signature-lightbox')).to_have_count(0)
+            expect(photo).to_be_focused()
+            audio = p.get_by_label("Zang van Fitis")
+            audio.evaluate("el => el.play()")
+            p.wait_for_function("document.querySelector('.sd-audio audio').currentTime > 0.15")
+            p.get_by_label("Roep van Fitis").evaluate("el => el.play()")
+            assert audio.evaluate("el => el.paused")
+            tab("status")
+            assert p.get_by_label("Roep van Fitis").evaluate("el => el.paused")
+            tab("herkenning")
+            card.get_by_role("button", name="Open Tjiftjaf").click()
+            assert p.get_by_role("dialog", name="Tjiftjaf", exact=True).count() == 1
+            reverse_whos = cmp_card("Fitis").locator('.sd-cmp-panel:visible .sd-cmp-who')
+            assert reverse_whos.locator('strong').all_text_contents() == ["Tjiftjaf", "Fitis"]
+            close_detail()
+            print("H4-01 OK — Fitis/Tjiftjaf: vergelijkingskaart, foto vergroten, navigatie en afspelen van zang en roep")
+
+            open_species("Grote Bonte Specht", "sp016")
+            # De nieuwere vluchtvergelijking staat vóór de vergelijkingen per kleed.
+            specht_own = cmp_card("Middelste Bonte Specht").locator('.sd-cmp-panel:visible .sd-cmp-who').first
+            assert specht_own.locator('small').inner_text() == "Juveniel"
+            assert_photo_once("/assets/species/plumage/sp016-juv.webp")
+            close_detail()
+            open_species("Kokmeeuw", "sp097")
+            gull_panel = cmp_card("Zwartkopmeeuw").locator('.sd-cmp-panel:visible')
+            assert gull_panel.locator('.sd-cmp-who small').all_text_contents() == ["Broedkleed", "Broedkleed"]
+            assert_photo_once("/assets/species/sp097.webp")
+            assert_photo_once("/assets/species/sp225.webp")
+            winter = p.locator('.sd-plumage').filter(has_text="Winterkleed")
+            # src is sinds de subpad-fix een opgeloste absolute URL (assetUrl.js), geen
+            # ruw root-relatief pad meer — vergelijk daarom op het einde van de waarde.
+            assert winter.locator('img').get_attribute("src").endswith("/assets/species/plumage/sp097-winter.webp")
+            close_detail()
+            open_species("Wilde Eend", "sp089")
+            eclipse = p.locator('.sd-plumage').filter(has_text="Eclipskleed")
+            assert eclipse.locator('img').get_attribute("src").endswith("/assets/species/plumage/sp089-eclipse.webp")
+            close_detail()
+            print("H4-02 OK — jonge specht (vergelijkingskaart), Kokmeeuw/Zwartkopmeeuw in broedkleed, Wilde Eend in eclipskleed")
+
+            open_species("Bruine Kiekendief", "sp173")
+            harrier_card = cmp_card("Blauwe Kiekendief")
+            for label, blue_path, brown_path in (
+                ("Mannetje", "/assets/species/sp249.webp", "/assets/species/plumage/sp173-male-2.webp"),
+                ("Vrouwtje", "/assets/species/plumage/sp249-adult_f.webp", "/assets/species/plumage/sp173-adult_f.webp"),
+            ):
+                panel = cmp_tab(harrier_card, f"In vlucht · {label}")
+                assert panel.locator('.sd-cmp-who small').all_text_contents() == [f"{label} in vlucht"] * 2
+                assert_photo_pair(panel, [brown_path.rsplit("/", 1)[-1], blue_path.rsplit("/", 1)[-1]], in_flight=True)
+                assert_photo_once(blue_path)
+                assert_photo_once(brown_path)
+                check_comparison_photo(panel.locator('.sd-field-photo'), thorough=(label == "Mannetje"))
+            # Een landende Bruine Kiekendief vormt geen paar met een vrij vliegende Blauwe.
+            expect(harrier_card.locator('.sd-cmp-tab', has_text=re.compile(r'^Juveniel$'))).to_have_count(0)
+            flight_section = p.locator('#sdPanel-herkenning section[aria-label="In vlucht"]')
+            expect(flight_section).to_have_count(1)
+            # Vluchtcontrole 10-11-2026: de juveniele foto toont een neerstrijkende vogel (landen) en staat daarom
+            # niet meer in "In vlucht" maar in de Juveniel-kaart; zichtbaar gebleven, niet verwijderd.
+            expect(flight_section.locator('[data-guide-image$="sp173-juv.webp"]')).to_have_count(0)
+            expect(p.locator('#sdPanel-herkenning [data-plumage="juv"] [data-guide-image$="sp173-juv.webp"]')).to_have_count(1)
+            rest = p.locator('[data-plumage="adult_f"] .sd-field-photo').filter(has=p.locator('img[src$="sp173-female-rest.webp"]'))
+            expect(p.locator('[data-plumage="adult_f"] .sd-field-photo')).to_have_count(2)
+            assert rest.locator('..').get_by_label("Foto-informatie").count() == 1
+            check_comparison_photo(rest)
+            assert p.get_by_label("Roep van Bruine Kiekendief").count() == 1
+            close_detail()
+            open_species("Steppekiekendief", "sp250")
+            blue_card = cmp_card("Blauwe Kiekendief", flight=True)
+            for label, steppe, blue in (
+                ("Mannetje", "sp250.webp", "sp249.webp"),
+                ("Vrouwtje", "sp250-adult_f.webp", "sp249-adult_f.webp"),
+                ("Juveniel", "sp250-juv.webp", "sp249-juv.webp"),
+            ):
+                panel = cmp_tab(blue_card, f"In vlucht · {label}")
+                assert panel.locator('.sd-cmp-who small').all_text_contents() == [f"{label} in vlucht"] * 2
+                assert_photo_pair(panel, [steppe, blue], in_flight=True)
+            grauwe_card = cmp_card("Grauwe Kiekendief", flight=True)
+            grauwe_panel = cmp_tab(grauwe_card, "In vlucht · Mannetje")
+            assert_photo_pair(grauwe_panel, ["sp250.webp", "sp251.webp"], in_flight=True)
+            female_panel = cmp_tab(grauwe_card, "In vlucht · Vrouwtje")
+            expect(female_panel.get_by_text("Nog geen passende vluchtfoto", exact=True)).to_have_count(1)
+            expect(female_panel.locator('[data-guide-image$="sp251-adult_f.webp"]')).to_have_count(0)
+            tab("status")
+            assert p.get_by_text("Incidentele broedgevallen in Nederland.", exact=True).is_visible()
+            p.get_by_text("Incidentele broedgevallen in Nederland, onder meer in 2017 en 2019", exact=True).wait_for()
+            assert p.locator('#sdPanel-status .sd-month-breeding').count() == 0
+            close_detail()
+            print("H4-03 OK — Bruine/Blauwe Kiekendief per kleed (tabs, met foto-rotatie en -pan); Steppekiekendief zonder vaste broedmaanden")
+
+            open_species("Slechtvalk", "sp009")
+            kestrel_card = cmp_card("Torenvalk")
+            young_falcons = cmp_tab(kestrel_card, "Juveniel")
+            assert_photo_pair(young_falcons, ["sp009-juv.webp", "sp008-juv.webp"])
+            flying_falcons = cmp_tab(kestrel_card, "In vlucht · Volwassen")
+            assert_photo_pair(flying_falcons, ["sp009-male-flight.webp", "sp008-male-flight.webp"], in_flight=True)
+            assert_photo_once("/assets/showcase/sp009.webp")
+            close_detail()
+
+            open_species("Sperwer", "sp006")
+            hawk_card = cmp_card("Havik")
+            young_hawks = cmp_tab(hawk_card, "Juveniel")
+            assert_photo_pair(young_hawks, ["sp006-juv.webp", "sp007-juv.webp"])
+            hawk_females = cmp_tab(hawk_card, "Vrouwtje")
+            expect(hawk_females.get_by_text("Nog geen passende foto", exact=True)).to_have_count(1)
+            assert_photo_once("/assets/species/plumage/sp006-juv.webp")
+            flight_section = p.locator('#sdPanel-herkenning section.sd-similar')
+            assert flight_section.evaluate(
+                "el => Boolean(el.compareDocumentPosition(document.querySelector('.sd-plumage-list')) & Node.DOCUMENT_POSITION_PRECEDING)")
+            flight_hawk_panel = cmp_card("Havik", flight=True).locator('.sd-cmp-panel:visible')
+            assert flight_hawk_panel.locator('.sd-cmp-who strong').all_text_contents() == ["Sperwer", "Havik"]
+            expect(flight_section.locator('.sd-cmp-more > summary')).to_have_text("Nog 1 soort: Torenvalk")
+            flight_falcon_panel = cmp_card("Torenvalk", flight=True).locator('.sd-cmp-panel:visible')
+            assert flight_falcon_panel.locator('.sd-cmp-who strong').all_text_contents() == ["Sperwer", "Torenvalk"]
+            for sid in ("sp006", "sp007", "sp008"):
+                assert_photo_once(f"/assets/species/plumage/{sid}-flight.webp")
+            sparrow_in_flight = p.locator('#sdPanel-herkenning section[aria-label="In vlucht"]')
+            expect(sparrow_in_flight.get_by_text("Mannetje in vlucht", exact=True)).to_have_count(1)
+            assert p.get_by_label("Roep vrouwtje van Sperwer").count() == 1
+            flight_hawk_panel.get_by_role("button", name="Open Havik").click()
+            assert p.get_by_role("dialog", name="Havik", exact=True).count() == 1
+            assert p.get_by_label("Alarmroep vrouwtje van Havik").count() == 1
+            assert p.get_by_label("Bedelroep jong van Havik").count() == 1
+            close_detail()
+            print("H4-04 OK — jonge Sperwer/Havik (tab Juveniel, juiste borsttekening), vluchtvergelijking met Havik en Torenvalk")
+
+            open_species("Torenvalk", "sp008")
+            text_comparisons = p.locator('#sdPanel-herkenning .kb-similar')
+            expect(text_comparisons.get_by_text("Boomvalk: lange spitse vleugels", exact=False)).to_be_visible()
+            expect(text_comparisons.get_by_text("Smelleken: brede vleugelbasis", exact=False)).to_be_visible()
+            expect(text_comparisons.locator('img')).to_have_count(0)
+            text_comparisons.get_by_role("button", name="Open Boomvalk").click()
+            expect(p.get_by_role("dialog", name="Boomvalk", exact=True)).to_be_visible()
+            close_detail()
+
+            open_species("Buizerd", "sp005")
+            dark = p.locator('.sd-flight [data-guide-image$="sp005-flight-dark.webp"] img')
+            expect(dark).to_have_count(1)
+            dark.scroll_into_view_if_needed()
+            dark.evaluate("img => img.decode()")
+            expect(p.locator('[data-guide-image$="sp005-male-flight.webp"]')).to_have_count(0)
+            regular_cards = p.locator('#sdPanel-herkenning section.sd-similar .sd-cmp-card')
+            assert regular_cards.count() == 2
+            rough_card = cmp_card("Ruigpootbuizerd")
+            for width in (360, 390, 430):
+                p.set_viewport_size({"width": width, "height": 844})
+                adult_panel = cmp_tab(rough_card, "In vlucht · Volwassen")
+                assert adult_panel.locator('.sd-cmp-who small').all_text_contents() == ["Volwassen in vlucht", "Vrouwtje in vlucht"]
+                assert_photo_pair(adult_panel, ["sp005-adult_m.webp", "sp253.webp"], in_flight=True)
+                if width == 390:
+                    adult_panel.screenshot(path=str(SHOTS / "species_i_buizerd_ruigpoot_volwassen_390.png"))
+                young_panel = cmp_tab(rough_card, "In vlucht · Juveniel")
+                assert_photo_pair(young_panel, ["sp005-juv.webp", "sp253-juv.webp"], in_flight=True)
+                if width == 390:
+                    young_panel.screenshot(path=str(SHOTS / "species_i_buizerd_ruigpoot_juveniel_390.png"))
+            p.set_viewport_size({"width": 390, "height": 844})
+            check_comparison_photo(young_panel.locator('.sd-field-photo').last)
+            assert_photo_once("/assets/species/plumage/sp005-adult_m.webp")
+            assert_photo_once("/assets/species/plumage/sp005-juv.webp")
+            honey_card = cmp_card("Wespendief")
+            female_honey = cmp_tab(honey_card, "In vlucht · Wespendief-vrouwtje")
+            assert_photo_pair(female_honey, ["sp005-adult_m.webp", "sp248-adult_f.webp"], in_flight=True)
+            young_honey = cmp_tab(honey_card, "In vlucht · Juveniel")
+            assert_photo_pair(young_honey, ["sp005-juv.webp", "sp248-juv.webp"], in_flight=True)
+            assert p.get_by_label("Alarmroep van Buizerd").count() == 1
+            young_honey.get_by_role("button", name="Open Wespendief").click()
+            assert p.get_by_role("dialog", name="Wespendief", exact=True).count() == 1
+            assert p.get_by_label("Vluchtroep van Wespendief").count() == 1
+            close_detail()
+            print("H4-05 OK — Buizerd, Ruigpootbuizerd en Wespendief, vluchtparen naast elkaar op 360/390/430 px")
+
+            open_species("Kleine Zilverreiger", "sp082")
+            heron_card = cmp_card("Grote Zilverreiger")
+            breeding_panel = cmp_tab(heron_card, "Broedkleed")
+            assert breeding_panel.locator('.sd-cmp-who small').all_text_contents() == ["Broedkleed", "Broedkleed"]
+            for path in ("/assets/species/plumage/sp082-breeding.webp", "/assets/species/plumage/sp083-breeding.webp"):
+                assert_photo_once(path)
+            cattle_card = cmp_card("Koereiger")
+            assert_photo_pair(cmp_tab(cattle_card, "Juveniel"), ["sp082-juv.webp", "sp245-juv.webp"])
+            assert p.get_by_label("Vluchtroep van Kleine Zilverreiger").count() == 1
+            p.get_by_role('tab', name='Leefwijze', exact=True).click()
+            assert p.locator('.sd-month-breeding .is-breeding').count() == 2
+            expect(p.get_by_text('Gebruikelijke broedperiode · mei, juni', exact=True)).to_be_visible()
+            p.get_by_role('tab', name='Herkenning', exact=True).click()
+            cattle_card.get_by_role("button", name="Open Koereiger").click()
+            assert p.get_by_role("dialog", name="Koereiger", exact=True).count() == 1
+            assert p.get_by_label("Roepen bij de kolonie van Koereiger").count() == 1
+            p.get_by_role('tab', name='Leefwijze', exact=True).click()
+            expect(p.get_by_text('Gebruikelijke broedperiode · april, mei, juni', exact=True)).to_be_visible()
+            close_detail()
+            print("H4-06 OK — witte reigers per kleed (tabs), bronfoto's, roepen en broedmaanden")
+
+            open_species("Wintertaling", "sp091")
+            teal_card = cmp_card("Zomertaling")
+            assert_photo_pair(cmp_tab(teal_card, "Juveniel"), ["sp091-juv.webp", "sp188-juv.webp"])
+            assert_photo_once("/assets/species/plumage/sp091-juv.webp")
+            for label, plumage in [('Mannetje', 'adult_m'), ('Vrouwtje', 'adult_f'), ('Eclipskleed', 'eclipse')]:
+                teal_panel = cmp_tab(teal_card, label)
+                assert teal_panel.locator('.sd-cmp-who small').all_text_contents() == [label, label]
+                expected_garganey = '/assets/species/sp188.webp' if plumage == 'adult_m' else f'/assets/species/plumage/sp188-{plumage}.webp'
+                assert_photo_once(f'/assets/species/plumage/sp091-{plumage}.webp')
+                if plumage == 'eclipse':
+                    expect(teal_panel.get_by_text("Nog geen passende foto", exact=True)).to_have_count(1)
+                else:
+                    assert_photo_once(expected_garganey)
+            assert p.get_by_label('Vluchtroep bij Rotterdam van Wintertaling').count() == 1
+            p.get_by_role('tab', name='Leefwijze', exact=True).click()
+            months = p.get_by_text('Gebruikelijke broedperiode · april, mei, juni, juli', exact=True)
+            expect(months).to_be_visible()
+            p.get_by_role('tab', name='Herkenning', exact=True).click()
+            teal_panel.get_by_role('button', name='Open Zomertaling').click()
+            assert p.get_by_role('dialog', name='Zomertaling', exact=True).count() == 1
+            assert p.get_by_label('Ratel van het mannetje van Zomertaling').count() == 1
+            p.get_by_role('tab', name='Leefwijze', exact=True).click()
+            expect(months).to_be_visible()
+            close_detail()
+            print("H4-07 OK — talingen per kleed (4 tabs), lokale roepen en broedmaanden")
+
+            open_species("Bontbekplevier", "sp146")
+            expect(p.get_by_label("Nachtelijke vluchtroep van Bontbekplevier")).to_have_count(1)
+            little_plover_card = cmp_card("Kleine Plevier")
+            assert_photo_pair(cmp_tab(little_plover_card, "Juveniel"), ["sp146-juv.webp", "sp147-juv.webp"])
+            assert_photo_once("/assets/species/plumage/sp146-juv.webp")
+            kentish_plover_card = cmp_card("Strandplevier")
+            assert_photo_pair(cmp_tab(kentish_plover_card, "Juveniel"), ["sp146-juv.webp", "sp206-juv.webp"])
+            winter_panel = cmp_tab(kentish_plover_card, 'Winterkleed')
+            assert winter_panel.locator('.sd-cmp-who small').all_text_contents() == ["Winterkleed", "Winterkleed"]
+            for path in ("/assets/species/plumage/sp146-winter.webp", "/assets/species/plumage/sp206-winter.webp"):
+                assert_photo_once(path)
+            little_plover_card.locator(".sd-cmp-panel:visible").get_by_role("button", name="Open Kleine Plevier").click()
+            expect(p.get_by_label("Zang en vluchtroep van Kleine Plevier")).to_have_count(1)
+            breeding_panel2 = cmp_card("Strandplevier").locator('.sd-cmp-panel:visible')
+            assert breeding_panel2.locator('.sd-cmp-who small').all_text_contents() == ["Broedkleed", "Mannetje"]
+            breeding_panel2.get_by_role("button", name="Open Strandplevier").click()
+            expect(p.get_by_label("Alarmroep van Strandplevier")).to_have_count(1)
+            expect(p.locator('.sd-plumage img[src$="sp206-adult_f.webp"]')).to_have_count(1)
+            tab("status")
+            expect(p.get_by_text('Gebruikelijke broedperiode · mei', exact=True)).to_be_visible()
+            expect(p.get_by_text('Jongen vliegvlug', exact=True)).to_be_visible()
+            assert p.locator('.sd-month-breeding .is-breeding').count() == 1
+            close_detail()
+            print("H4-08 OK — plevieren per kleed (tabs), bronfoto's, roepen en broedmaanden")
+
+            open_species("Goudplevier", "sp145")
+            plover_card = cmp_card("Zilverplevier")
+            assert_photo_pair(cmp_tab(plover_card, "Juveniel"), ["sp145-juv.webp", "sp144-juv.webp"])
+            assert_photo_once("/assets/species/plumage/sp145-juv.webp")
+            plover_panel = None
+            for label, suffix in [("Broedkleed", ""), ("Winterkleed", "-winter")]:
+                plover_panel = cmp_tab(plover_card, label)
+                assert plover_panel.locator('.sd-cmp-who small').all_text_contents() == [label, label]
+                for sid in ("sp145", "sp144"):
+                    folder = "/assets/species/plumage" if suffix else "/assets/species"
+                    assert_photo_once(f"{folder}/{sid}{suffix}.webp")
+            plover_panel.get_by_role("button", name="Open Zilverplevier").click()
+            expect(p.get_by_label("Nachtelijke vluchtroep van Zilverplevier")).to_have_count(1)
+            tab("waar")
+            expect(p.locator(".sd-photo-tip")).to_contain_text("1/2000 s")
+            expect(p.get_by_role("heading", name="Leefgebied")).to_be_visible()
+            tab("status")
+            expect(p.locator(".sd-month-breeding .is-breeding")).to_have_count(0)
+            close_detail()
+            open_species("Merel", "sp045")
+            tab("waar")
+            expect(p.locator(".sd-photo-tip")).to_have_count(0)
+            close_detail()
+            print("H4-09 OK — Goudplevier/Zilverplevier in drie kleden (tabs) en fotografietip bij geselecteerde soorten")
+
+            open_species("Witgat", "sp156")
+            sandpiper_card = cmp_card("Bosruiter")
+            assert_photo_pair(cmp_tab(sandpiper_card, "Juveniel"), ["sp156-juv.webp", "sp159-juv.webp"])
+            assert_photo_once("/assets/species/plumage/sp156-juv.webp")
+            sandpiper_panel = None
+            for label, suffix in [("Broedkleed", ""), ("Winterkleed", "-winter")]:
+                sandpiper_panel = cmp_tab(sandpiper_card, label)
+                for sid in ("sp156", "sp159"):
+                    folder = "/assets/species/plumage" if suffix else "/assets/species"
+                    assert_photo_once(f"{folder}/{sid}{suffix}.webp")
+            expect(p.locator(".sd-audio audio")).to_have_count(4)
+            tab("status")
+            expect(p.get_by_text("Jaarrond in Nederland", exact=True)).to_be_visible()
+            expect(p.locator(".sd-month-breeding")).to_have_count(0)
+            tab("herkenning")
+            sandpiper_panel.get_by_role("button", name="Open Bosruiter").click()
+            expect(p.locator(".sd-audio audio")).to_have_count(4)
+            tab("status")
+            expect(p.get_by_text("Incidentele broedgevallen in Nederland.", exact=True)).to_be_visible()
+            expect(p.get_by_text("Doorgaans mei tot half juli in het reguliere broedgebied", exact=True)).to_be_visible()
+            expect(p.locator(".sd-month-breeding")).to_have_count(0)
+            tab("waar")
+            expect(p.locator(".sd-photo-tip")).to_contain_text("lange wenkbrauw")
+            close_detail()
+            print("H4-10 OK — Witgat/Bosruiter per kleed (tabs), vier roepen per soort en afzonderlijke Nederlandse broedstatus")
+
+            waders = [
+                ("Tureluur", "sp102", 4, "Zwarte Ruiter", "april, mei, juni, juli"),
+                ("Zwarte Ruiter", "sp157", 3, "Tureluur", None),
+                ("Groenpootruiter", "sp158", 3, "Poelruiter", None),
+                ("Poelruiter", "sp217", 2, "Groenpootruiter", None),
+                ("Oeverloper", "sp155", 3, None, "mei, juni"),
+            ]
+            for name, sid, recording_count, partner, breeding_months in waders:
+                open_species(name, sid)
+                expect(p.locator(".sd-audio audio")).to_have_count(recording_count)
+                assert_photo_once(f"/assets/species/{sid}.webp")
+                alternate = "breeding" if sid == "sp102" else "winter"
+                assert_photo_once(f"/assets/species/plumage/{sid}-{alternate}.webp")
+                assert_photo_once(f"/assets/species/plumage/{sid}-juv.webp")
+                if partner:
+                    wader_card = cmp_card(partner)
+                    partner_id = {"sp102": "sp157", "sp157": "sp102", "sp158": "sp217", "sp217": "sp158"}[sid]
+                    assert_photo_pair(cmp_tab(wader_card, "Juveniel"), [f"{sid}-juv.webp", f"{partner_id}-juv.webp"])
+                    for label in ("Broedkleed", "Winterkleed"):
+                        wader_panel = cmp_tab(wader_card, label)
+                        for picture in wader_panel.locator("img").all():
+                            picture.scroll_into_view_if_needed()
+                            picture.evaluate("img => img.decode()")
+                else:
+                    assert_photo_pair(cmp_card("Witgat").locator('.sd-cmp-panel:visible'), ["sp155-winter.webp", "sp156-winter.webp"])
+                    assert_photo_pair(cmp_card("Bosruiter").locator('.sd-cmp-panel:visible'), ["sp155-juv.webp", "sp159-juv.webp"])
+                tab("waar")
+                expect(p.locator(".sd-photo-tip")).to_be_visible()
+                tab("status")
+                if breeding_months:
+                    expect(p.get_by_text(f"Gebruikelijke broedperiode · {breeding_months}", exact=True)).to_be_visible()
+                    expect(p.locator(".sd-month-breeding .is-breeding")).to_have_count(len(breeding_months.split(", ")))
+                else:
+                    expect(p.locator(".sd-month-breeding")).to_have_count(0)
+                close_detail()
+            print("H4-11 OK — vijf steltlopers, kleedfoto’s en opnamen, vergelijkingskaarten met tabs, twee broedlijnen")
+
+            assert not errors, f"H2-08 paginafouten: {errors}"
+            print("H2-08 OK — geen paginafouten")
+            browser.close()
+    print("H2–H4: alle controles geslaagd")
+
+
+if __name__ == "__main__":
+    main()
+))).to_have_count(0)
+            assert "Nog geen passende foto" not in teal_card.inner_text()
+            assert p.get_by_label('Vluchtroep bij Rotterdam van Wintertaling').count() == 1
+            p.get_by_role('tab', name='Leefwijze', exact=True).click()
+            months = p.get_by_text('Gebruikelijke broedperiode · april, mei, juni, juli', exact=True)
+            expect(months).to_be_visible()
+            p.get_by_role('tab', name='Herkenning', exact=True).click()
+            teal_panel.get_by_role('button', name='Open Zomertaling').click()
+            assert p.get_by_role('dialog', name='Zomertaling', exact=True).count() == 1
+            assert p.get_by_label('Ratel van het mannetje van Zomertaling').count() == 1
+            p.get_by_role('tab', name='Leefwijze', exact=True).click()
+            expect(months).to_be_visible()
+            close_detail()
+            print("H4-07 OK — talingen per kleed (4 tabs), lokale roepen en broedmaanden")
+
+            open_species("Bontbekplevier", "sp146")
+            expect(p.get_by_label("Nachtelijke vluchtroep van Bontbekplevier")).to_have_count(1)
+            little_plover_card = cmp_card("Kleine Plevier")
+            assert_photo_pair(cmp_tab(little_plover_card, "Juveniel"), ["sp146-juv.webp", "sp147-juv.webp"])
+            assert_photo_once("/assets/species/plumage/sp146-juv.webp")
+            kentish_plover_card = cmp_card("Strandplevier")
+            assert_photo_pair(cmp_tab(kentish_plover_card, "Juveniel"), ["sp146-juv.webp", "sp206-juv.webp"])
+            winter_panel = cmp_tab(kentish_plover_card, 'Winterkleed')
+            assert winter_panel.locator('.sd-cmp-who small').all_text_contents() == ["Winterkleed", "Winterkleed"]
+            for path in ("/assets/species/plumage/sp146-winter.webp", "/assets/species/plumage/sp206-winter.webp"):
+                assert_photo_once(path)
+            little_plover_card.locator(".sd-cmp-panel:visible").get_by_role("button", name="Open Kleine Plevier").click()
+            expect(p.get_by_label("Zang en vluchtroep van Kleine Plevier")).to_have_count(1)
+            breeding_panel2 = cmp_card("Strandplevier").locator('.sd-cmp-panel:visible')
+            assert breeding_panel2.locator('.sd-cmp-who small').all_text_contents() == ["Broedkleed", "Mannetje"]
+            breeding_panel2.get_by_role("button", name="Open Strandplevier").click()
+            expect(p.get_by_label("Alarmroep van Strandplevier")).to_have_count(1)
+            expect(p.locator('.sd-plumage img[src$="sp206-adult_f.webp"]')).to_have_count(1)
+            tab("status")
+            expect(p.get_by_text('Gebruikelijke broedperiode · mei', exact=True)).to_be_visible()
+            expect(p.get_by_text('Jongen vliegvlug', exact=True)).to_be_visible()
+            assert p.locator('.sd-month-breeding .is-breeding').count() == 1
+            close_detail()
+            print("H4-08 OK — plevieren per kleed (tabs), bronfoto's, roepen en broedmaanden")
+
+            open_species("Goudplevier", "sp145")
+            plover_card = cmp_card("Zilverplevier")
+            assert_photo_pair(cmp_tab(plover_card, "Juveniel"), ["sp145-juv.webp", "sp144-juv.webp"])
+            assert_photo_once("/assets/species/plumage/sp145-juv.webp")
+            plover_panel = None
+            for label, suffix in [("Broedkleed", ""), ("Winterkleed", "-winter")]:
+                plover_panel = cmp_tab(plover_card, label)
+                assert plover_panel.locator('.sd-cmp-who small').all_text_contents() == [label, label]
+                for sid in ("sp145", "sp144"):
+                    folder = "/assets/species/plumage" if suffix else "/assets/species"
+                    assert_photo_once(f"{folder}/{sid}{suffix}.webp")
+            plover_panel.get_by_role("button", name="Open Zilverplevier").click()
+            expect(p.get_by_label("Nachtelijke vluchtroep van Zilverplevier")).to_have_count(1)
+            tab("waar")
+            expect(p.locator(".sd-photo-tip")).to_contain_text("1/2000 s")
+            expect(p.get_by_role("heading", name="Leefgebied")).to_be_visible()
+            tab("status")
+            expect(p.locator(".sd-month-breeding .is-breeding")).to_have_count(0)
+            close_detail()
+            open_species("Merel", "sp045")
+            tab("waar")
+            expect(p.locator(".sd-photo-tip")).to_have_count(0)
+            close_detail()
+            print("H4-09 OK — Goudplevier/Zilverplevier in drie kleden (tabs) en fotografietip bij geselecteerde soorten")
+
+            open_species("Witgat", "sp156")
+            sandpiper_card = cmp_card("Bosruiter")
+            assert_photo_pair(cmp_tab(sandpiper_card, "Juveniel"), ["sp156-juv.webp", "sp159-juv.webp"])
+            assert_photo_once("/assets/species/plumage/sp156-juv.webp")
+            sandpiper_panel = None
+            for label, suffix in [("Broedkleed", ""), ("Winterkleed", "-winter")]:
+                sandpiper_panel = cmp_tab(sandpiper_card, label)
+                for sid in ("sp156", "sp159"):
+                    folder = "/assets/species/plumage" if suffix else "/assets/species"
+                    assert_photo_once(f"{folder}/{sid}{suffix}.webp")
+            expect(p.locator(".sd-audio audio")).to_have_count(4)
+            tab("status")
+            expect(p.get_by_text("Jaarrond in Nederland", exact=True)).to_be_visible()
+            expect(p.locator(".sd-month-breeding")).to_have_count(0)
+            tab("herkenning")
+            sandpiper_panel.get_by_role("button", name="Open Bosruiter").click()
+            expect(p.locator(".sd-audio audio")).to_have_count(4)
+            tab("status")
+            expect(p.get_by_text("Incidentele broedgevallen in Nederland.", exact=True)).to_be_visible()
+            expect(p.get_by_text("Doorgaans mei tot half juli in het reguliere broedgebied", exact=True)).to_be_visible()
+            expect(p.locator(".sd-month-breeding")).to_have_count(0)
+            tab("waar")
+            expect(p.locator(".sd-photo-tip")).to_contain_text("lange wenkbrauw")
+            close_detail()
+            print("H4-10 OK — Witgat/Bosruiter per kleed (tabs), vier roepen per soort en afzonderlijke Nederlandse broedstatus")
+
+            waders = [
+                ("Tureluur", "sp102", 4, "Zwarte Ruiter", "april, mei, juni, juli"),
+                ("Zwarte Ruiter", "sp157", 3, "Tureluur", None),
+                ("Groenpootruiter", "sp158", 3, "Poelruiter", None),
+                ("Poelruiter", "sp217", 2, "Groenpootruiter", None),
+                ("Oeverloper", "sp155", 3, None, "mei, juni"),
+            ]
+            for name, sid, recording_count, partner, breeding_months in waders:
+                open_species(name, sid)
+                expect(p.locator(".sd-audio audio")).to_have_count(recording_count)
+                assert_photo_once(f"/assets/species/{sid}.webp")
+                alternate = "breeding" if sid == "sp102" else "winter"
+                assert_photo_once(f"/assets/species/plumage/{sid}-{alternate}.webp")
+                assert_photo_once(f"/assets/species/plumage/{sid}-juv.webp")
+                if partner:
+                    wader_card = cmp_card(partner)
+                    partner_id = {"sp102": "sp157", "sp157": "sp102", "sp158": "sp217", "sp217": "sp158"}[sid]
+                    assert_photo_pair(cmp_tab(wader_card, "Juveniel"), [f"{sid}-juv.webp", f"{partner_id}-juv.webp"])
+                    for label in ("Broedkleed", "Winterkleed"):
+                        wader_panel = cmp_tab(wader_card, label)
+                        for picture in wader_panel.locator("img").all():
+                            picture.scroll_into_view_if_needed()
+                            picture.evaluate("img => img.decode()")
+                else:
+                    assert_photo_pair(cmp_card("Witgat").locator('.sd-cmp-panel:visible'), ["sp155-winter.webp", "sp156-winter.webp"])
+                    assert_photo_pair(cmp_card("Bosruiter").locator('.sd-cmp-panel:visible'), ["sp155-juv.webp", "sp159-juv.webp"])
+                tab("waar")
+                expect(p.locator(".sd-photo-tip")).to_be_visible()
+                tab("status")
+                if breeding_months:
+                    expect(p.get_by_text(f"Gebruikelijke broedperiode · {breeding_months}", exact=True)).to_be_visible()
+                    expect(p.locator(".sd-month-breeding .is-breeding")).to_have_count(len(breeding_months.split(", ")))
+                else:
+                    expect(p.locator(".sd-month-breeding")).to_have_count(0)
+                close_detail()
+            print("H4-11 OK — vijf steltlopers, kleedfoto’s en opnamen, vergelijkingskaarten met tabs, twee broedlijnen")
+
+            assert not errors, f"H2-08 paginafouten: {errors}"
+            print("H2-08 OK — geen paginafouten")
+            browser.close()
+    print("H2–H4: alle controles geslaagd")
+
+
+if __name__ == "__main__":
+    main()
+))
+                if match.count():
+                    match.click()
+                else:
+                    # UX v1.6: only one complete image pair may remain after
+                    # hiding incomplete tabs; do not require a tabbar in that case.
+                    assert card.locator('.sd-cmp-tab').count() == 0, (
+                        label, "requested tab missing from a multi-tab comparison")
+                    assert card.locator('.sd-cmp-panel').count() == 1, (
+                        label, "expected exactly one surviving complete comparison")
+                panel = card.locator('.sd-cmp-panel:visible')
+                panel.wait_for(state="visible", timeout=4000)
+                return panel
+
+            def assert_photo_pair(panel, files, in_flight=False):
+                pictures = panel.locator('.sd-cmp-head .sd-field-photo')
+                expect(pictures).to_have_count(2)
+                boxes = []
+                for picture, file in zip(pictures.all(), files):
+                    expect(picture).to_have_attribute("data-guide-image", re.compile(re.escape("/" + file) + "$"))
+                    picture.scroll_into_view_if_needed()
+                    picture.locator('img').evaluate("image => image.decode()")
+                    boxes.append(picture.bounding_box())
+                    expect(picture.locator('..').get_by_label("Foto-informatie")).to_have_count(1)
+                left, right = boxes
+                assert left["x"] + left["width"] <= right["x"], boxes
+                assert abs(left["width"] - right["width"]) < 2, boxes
+                assert abs(left["y"] - right["y"]) < 2, boxes
+                assert left["x"] >= 0 and right["x"] + right["width"] <= p.viewport_size["width"], boxes
+                assert (panel.get_attribute("data-cmp-flight") is not None) == in_flight
+
+            open_species("Houtduif", "sp002")
+            stock_dove_card = cmp_card("Holenduif", flight=True)
+            stock_dove_panel = stock_dove_card.locator('.sd-cmp-panel:visible')
+            assert_photo_pair(stock_dove_panel, ["sp002-flight-wingband.webp", "sp003-flight-open-sky.webp"], in_flight=True)
+            check_comparison_photo(stock_dove_panel.locator('.sd-field-photo').last)
+            expect(stock_dove_panel.get_by_text("Nog geen foto", exact=True)).to_have_count(0)
+            expect(stock_dove_card.locator('.sd-cmp-panel:visible .sd-compare-open')).to_have_text(re.compile(r"Open Holenduif"))
+            expect(p.locator('#sdPanel-herkenning section.sd-similar .sd-cmp-more > summary'))\
+                .to_have_text("Nog 1 soort: Turkse Tortel")
+            turtle_dove_card = cmp_card("Turkse Tortel", flight=True)
+            check_comparison_photo(turtle_dove_card.locator('.sd-cmp-panel:visible .sd-field-photo'))
+            close_detail()
+
+            open_species("Fitis", "sp057")
+            card = cmp_card("Tjiftjaf")
+            whos = card.locator('.sd-cmp-panel:visible .sd-cmp-who')
+            assert whos.locator('strong').all_text_contents() == ["Fitis", "Tjiftjaf"]
+            assert card.get_by_role("link", name="Vogelbescherming").count() == 0
+            expect(card.locator(".sd-cmp-foot .sd-compare-open")).to_have_count(1)
+            assert_photo_pair(card.locator(".sd-cmp-panel:visible"), ["sp057.webp", "sp056.webp"])
+            photo = p.get_by_role("button", name="Vergroot hoofdfoto")
+            photo.scroll_into_view_if_needed()
+            photo.locator('img').evaluate("img => img.decode()")
+            photo.click()
+            zoomed = p.locator('.signature-lightbox img')
+            zoomed.evaluate("img => img.decode()")
+            expect(zoomed).to_be_visible()
+            initial = zoomed.bounding_box()["width"]
+            p.get_by_role("button", name="Inzoomen", exact=True).click()
+            p.wait_for_function("width => document.querySelector('.signature-lightbox img').getBoundingClientRect().width > width", arg=initial)
+            p.get_by_role("button", name="Zoom herstellen").click()
+            p.wait_for_function("width => Math.abs(document.querySelector('.signature-lightbox img').getBoundingClientRect().width - width) < 2", arg=initial)
+            p.keyboard.press("Escape")
+            expect(p.locator('.signature-lightbox')).to_have_count(0)
+            expect(photo).to_be_focused()
+            audio = p.get_by_label("Zang van Fitis")
+            audio.evaluate("el => el.play()")
+            p.wait_for_function("document.querySelector('.sd-audio audio').currentTime > 0.15")
+            p.get_by_label("Roep van Fitis").evaluate("el => el.play()")
+            assert audio.evaluate("el => el.paused")
+            tab("status")
+            assert p.get_by_label("Roep van Fitis").evaluate("el => el.paused")
+            tab("herkenning")
+            card.get_by_role("button", name="Open Tjiftjaf").click()
+            assert p.get_by_role("dialog", name="Tjiftjaf", exact=True).count() == 1
+            reverse_whos = cmp_card("Fitis").locator('.sd-cmp-panel:visible .sd-cmp-who')
+            assert reverse_whos.locator('strong').all_text_contents() == ["Tjiftjaf", "Fitis"]
+            close_detail()
+            print("H4-01 OK — Fitis/Tjiftjaf: vergelijkingskaart, foto vergroten, navigatie en afspelen van zang en roep")
+
+            open_species("Grote Bonte Specht", "sp016")
+            # De nieuwere vluchtvergelijking staat vóór de vergelijkingen per kleed.
+            specht_own = cmp_card("Middelste Bonte Specht").locator('.sd-cmp-panel:visible .sd-cmp-who').first
+            assert specht_own.locator('small').inner_text() == "Juveniel"
+            assert_photo_once("/assets/species/plumage/sp016-juv.webp")
+            close_detail()
+            open_species("Kokmeeuw", "sp097")
+            gull_panel = cmp_card("Zwartkopmeeuw").locator('.sd-cmp-panel:visible')
+            assert gull_panel.locator('.sd-cmp-who small').all_text_contents() == ["Broedkleed", "Broedkleed"]
+            assert_photo_once("/assets/species/sp097.webp")
+            assert_photo_once("/assets/species/sp225.webp")
+            winter = p.locator('.sd-plumage').filter(has_text="Winterkleed")
+            # src is sinds de subpad-fix een opgeloste absolute URL (assetUrl.js), geen
+            # ruw root-relatief pad meer — vergelijk daarom op het einde van de waarde.
+            assert winter.locator('img').get_attribute("src").endswith("/assets/species/plumage/sp097-winter.webp")
+            close_detail()
+            open_species("Wilde Eend", "sp089")
+            eclipse = p.locator('.sd-plumage').filter(has_text="Eclipskleed")
+            assert eclipse.locator('img').get_attribute("src").endswith("/assets/species/plumage/sp089-eclipse.webp")
+            close_detail()
+            print("H4-02 OK — jonge specht (vergelijkingskaart), Kokmeeuw/Zwartkopmeeuw in broedkleed, Wilde Eend in eclipskleed")
+
+            open_species("Bruine Kiekendief", "sp173")
+            harrier_card = cmp_card("Blauwe Kiekendief")
+            for label, blue_path, brown_path in (
+                ("Mannetje", "/assets/species/sp249.webp", "/assets/species/plumage/sp173-male-2.webp"),
+                ("Vrouwtje", "/assets/species/plumage/sp249-adult_f.webp", "/assets/species/plumage/sp173-adult_f.webp"),
+            ):
+                panel = cmp_tab(harrier_card, f"In vlucht · {label}")
+                assert panel.locator('.sd-cmp-who small').all_text_contents() == [f"{label} in vlucht"] * 2
+                assert_photo_pair(panel, [brown_path.rsplit("/", 1)[-1], blue_path.rsplit("/", 1)[-1]], in_flight=True)
+                assert_photo_once(blue_path)
+                assert_photo_once(brown_path)
+                check_comparison_photo(panel.locator('.sd-field-photo'), thorough=(label == "Mannetje"))
+            # Een landende Bruine Kiekendief vormt geen paar met een vrij vliegende Blauwe.
+            expect(harrier_card.locator('.sd-cmp-tab', has_text=re.compile(r'^Juveniel$'))).to_have_count(0)
+            flight_section = p.locator('#sdPanel-herkenning section[aria-label="In vlucht"]')
+            expect(flight_section).to_have_count(1)
+            # Vluchtcontrole 10-11-2026: de juveniele foto toont een neerstrijkende vogel (landen) en staat daarom
+            # niet meer in "In vlucht" maar in de Juveniel-kaart; zichtbaar gebleven, niet verwijderd.
+            expect(flight_section.locator('[data-guide-image$="sp173-juv.webp"]')).to_have_count(0)
+            expect(p.locator('#sdPanel-herkenning [data-plumage="juv"] [data-guide-image$="sp173-juv.webp"]')).to_have_count(1)
+            rest = p.locator('[data-plumage="adult_f"] .sd-field-photo').filter(has=p.locator('img[src$="sp173-female-rest.webp"]'))
+            expect(p.locator('[data-plumage="adult_f"] .sd-field-photo')).to_have_count(2)
+            assert rest.locator('..').get_by_label("Foto-informatie").count() == 1
+            check_comparison_photo(rest)
+            assert p.get_by_label("Roep van Bruine Kiekendief").count() == 1
+            close_detail()
+            open_species("Steppekiekendief", "sp250")
+            blue_card = cmp_card("Blauwe Kiekendief", flight=True)
+            for label, steppe, blue in (
+                ("Mannetje", "sp250.webp", "sp249.webp"),
+                ("Vrouwtje", "sp250-adult_f.webp", "sp249-adult_f.webp"),
+                ("Juveniel", "sp250-juv.webp", "sp249-juv.webp"),
+            ):
+                panel = cmp_tab(blue_card, f"In vlucht · {label}")
+                assert panel.locator('.sd-cmp-who small').all_text_contents() == [f"{label} in vlucht"] * 2
+                assert_photo_pair(panel, [steppe, blue], in_flight=True)
+            grauwe_card = cmp_card("Grauwe Kiekendief", flight=True)
+            grauwe_panel = cmp_tab(grauwe_card, "In vlucht · Mannetje")
+            assert_photo_pair(grauwe_panel, ["sp250.webp", "sp251.webp"], in_flight=True)
+            female_panel = cmp_tab(grauwe_card, "In vlucht · Vrouwtje")
+            expect(female_panel.get_by_text("Nog geen passende vluchtfoto", exact=True)).to_have_count(1)
+            expect(female_panel.locator('[data-guide-image$="sp251-adult_f.webp"]')).to_have_count(0)
+            tab("status")
+            assert p.get_by_text("Incidentele broedgevallen in Nederland.", exact=True).is_visible()
+            p.get_by_text("Incidentele broedgevallen in Nederland, onder meer in 2017 en 2019", exact=True).wait_for()
+            assert p.locator('#sdPanel-status .sd-month-breeding').count() == 0
+            close_detail()
+            print("H4-03 OK — Bruine/Blauwe Kiekendief per kleed (tabs, met foto-rotatie en -pan); Steppekiekendief zonder vaste broedmaanden")
+
+            open_species("Slechtvalk", "sp009")
+            kestrel_card = cmp_card("Torenvalk")
+            young_falcons = cmp_tab(kestrel_card, "Juveniel")
+            assert_photo_pair(young_falcons, ["sp009-juv.webp", "sp008-juv.webp"])
+            flying_falcons = cmp_tab(kestrel_card, "In vlucht · Volwassen")
+            assert_photo_pair(flying_falcons, ["sp009-male-flight.webp", "sp008-male-flight.webp"], in_flight=True)
+            assert_photo_once("/assets/showcase/sp009.webp")
+            close_detail()
+
+            open_species("Sperwer", "sp006")
+            hawk_card = cmp_card("Havik")
+            young_hawks = cmp_tab(hawk_card, "Juveniel")
+            assert_photo_pair(young_hawks, ["sp006-juv.webp", "sp007-juv.webp"])
+            hawk_females = cmp_tab(hawk_card, "Vrouwtje")
+            expect(hawk_females.get_by_text("Nog geen passende foto", exact=True)).to_have_count(1)
+            assert_photo_once("/assets/species/plumage/sp006-juv.webp")
+            flight_section = p.locator('#sdPanel-herkenning section.sd-similar')
+            assert flight_section.evaluate(
+                "el => Boolean(el.compareDocumentPosition(document.querySelector('.sd-plumage-list')) & Node.DOCUMENT_POSITION_PRECEDING)")
+            flight_hawk_panel = cmp_card("Havik", flight=True).locator('.sd-cmp-panel:visible')
+            assert flight_hawk_panel.locator('.sd-cmp-who strong').all_text_contents() == ["Sperwer", "Havik"]
+            expect(flight_section.locator('.sd-cmp-more > summary')).to_have_text("Nog 1 soort: Torenvalk")
+            flight_falcon_panel = cmp_card("Torenvalk", flight=True).locator('.sd-cmp-panel:visible')
+            assert flight_falcon_panel.locator('.sd-cmp-who strong').all_text_contents() == ["Sperwer", "Torenvalk"]
+            for sid in ("sp006", "sp007", "sp008"):
+                assert_photo_once(f"/assets/species/plumage/{sid}-flight.webp")
+            sparrow_in_flight = p.locator('#sdPanel-herkenning section[aria-label="In vlucht"]')
+            expect(sparrow_in_flight.get_by_text("Mannetje in vlucht", exact=True)).to_have_count(1)
+            assert p.get_by_label("Roep vrouwtje van Sperwer").count() == 1
+            flight_hawk_panel.get_by_role("button", name="Open Havik").click()
+            assert p.get_by_role("dialog", name="Havik", exact=True).count() == 1
+            assert p.get_by_label("Alarmroep vrouwtje van Havik").count() == 1
+            assert p.get_by_label("Bedelroep jong van Havik").count() == 1
+            close_detail()
+            print("H4-04 OK — jonge Sperwer/Havik (tab Juveniel, juiste borsttekening), vluchtvergelijking met Havik en Torenvalk")
+
+            open_species("Torenvalk", "sp008")
+            text_comparisons = p.locator('#sdPanel-herkenning .kb-similar')
+            expect(text_comparisons.get_by_text("Boomvalk: lange spitse vleugels", exact=False)).to_be_visible()
+            expect(text_comparisons.get_by_text("Smelleken: brede vleugelbasis", exact=False)).to_be_visible()
+            expect(text_comparisons.locator('img')).to_have_count(0)
+            text_comparisons.get_by_role("button", name="Open Boomvalk").click()
+            expect(p.get_by_role("dialog", name="Boomvalk", exact=True)).to_be_visible()
+            close_detail()
+
+            open_species("Buizerd", "sp005")
+            dark = p.locator('.sd-flight [data-guide-image$="sp005-flight-dark.webp"] img')
+            expect(dark).to_have_count(1)
+            dark.scroll_into_view_if_needed()
+            dark.evaluate("img => img.decode()")
+            expect(p.locator('[data-guide-image$="sp005-male-flight.webp"]')).to_have_count(0)
+            regular_cards = p.locator('#sdPanel-herkenning section.sd-similar .sd-cmp-card')
+            assert regular_cards.count() == 2
+            rough_card = cmp_card("Ruigpootbuizerd")
+            for width in (360, 390, 430):
+                p.set_viewport_size({"width": width, "height": 844})
+                adult_panel = cmp_tab(rough_card, "In vlucht · Volwassen")
+                assert adult_panel.locator('.sd-cmp-who small').all_text_contents() == ["Volwassen in vlucht", "Vrouwtje in vlucht"]
+                assert_photo_pair(adult_panel, ["sp005-adult_m.webp", "sp253.webp"], in_flight=True)
+                if width == 390:
+                    adult_panel.screenshot(path=str(SHOTS / "species_i_buizerd_ruigpoot_volwassen_390.png"))
+                young_panel = cmp_tab(rough_card, "In vlucht · Juveniel")
+                assert_photo_pair(young_panel, ["sp005-juv.webp", "sp253-juv.webp"], in_flight=True)
+                if width == 390:
+                    young_panel.screenshot(path=str(SHOTS / "species_i_buizerd_ruigpoot_juveniel_390.png"))
+            p.set_viewport_size({"width": 390, "height": 844})
+            check_comparison_photo(young_panel.locator('.sd-field-photo').last)
+            assert_photo_once("/assets/species/plumage/sp005-adult_m.webp")
+            assert_photo_once("/assets/species/plumage/sp005-juv.webp")
+            honey_card = cmp_card("Wespendief")
+            female_honey = cmp_tab(honey_card, "In vlucht · Wespendief-vrouwtje")
+            assert_photo_pair(female_honey, ["sp005-adult_m.webp", "sp248-adult_f.webp"], in_flight=True)
+            young_honey = cmp_tab(honey_card, "In vlucht · Juveniel")
+            assert_photo_pair(young_honey, ["sp005-juv.webp", "sp248-juv.webp"], in_flight=True)
+            assert p.get_by_label("Alarmroep van Buizerd").count() == 1
+            young_honey.get_by_role("button", name="Open Wespendief").click()
+            assert p.get_by_role("dialog", name="Wespendief", exact=True).count() == 1
+            assert p.get_by_label("Vluchtroep van Wespendief").count() == 1
+            close_detail()
+            print("H4-05 OK — Buizerd, Ruigpootbuizerd en Wespendief, vluchtparen naast elkaar op 360/390/430 px")
+
+            open_species("Kleine Zilverreiger", "sp082")
+            heron_card = cmp_card("Grote Zilverreiger")
+            breeding_panel = cmp_tab(heron_card, "Broedkleed")
+            assert breeding_panel.locator('.sd-cmp-who small').all_text_contents() == ["Broedkleed", "Broedkleed"]
+            for path in ("/assets/species/plumage/sp082-breeding.webp", "/assets/species/plumage/sp083-breeding.webp"):
+                assert_photo_once(path)
+            cattle_card = cmp_card("Koereiger")
+            assert_photo_pair(cmp_tab(cattle_card, "Juveniel"), ["sp082-juv.webp", "sp245-juv.webp"])
+            assert p.get_by_label("Vluchtroep van Kleine Zilverreiger").count() == 1
+            p.get_by_role('tab', name='Leefwijze', exact=True).click()
+            assert p.locator('.sd-month-breeding .is-breeding').count() == 2
+            expect(p.get_by_text('Gebruikelijke broedperiode · mei, juni', exact=True)).to_be_visible()
+            p.get_by_role('tab', name='Herkenning', exact=True).click()
+            cattle_card.get_by_role("button", name="Open Koereiger").click()
+            assert p.get_by_role("dialog", name="Koereiger", exact=True).count() == 1
+            assert p.get_by_label("Roepen bij de kolonie van Koereiger").count() == 1
+            p.get_by_role('tab', name='Leefwijze', exact=True).click()
+            expect(p.get_by_text('Gebruikelijke broedperiode · april, mei, juni', exact=True)).to_be_visible()
+            close_detail()
+            print("H4-06 OK — witte reigers per kleed (tabs), bronfoto's, roepen en broedmaanden")
+
+            open_species("Wintertaling", "sp091")
+            teal_card = cmp_card("Zomertaling")
+            assert_photo_pair(cmp_tab(teal_card, "Juveniel"), ["sp091-juv.webp", "sp188-juv.webp"])
+            assert_photo_once("/assets/species/plumage/sp091-juv.webp")
+            for label, plumage in [('Mannetje', 'adult_m'), ('Vrouwtje', 'adult_f'), ('Eclipskleed', 'eclipse')]:
+                teal_panel = cmp_tab(teal_card, label)
+                assert teal_panel.locator('.sd-cmp-who small').all_text_contents() == [label, label]
+                expected_garganey = '/assets/species/sp188.webp' if plumage == 'adult_m' else f'/assets/species/plumage/sp188-{plumage}.webp'
+                assert_photo_once(f'/assets/species/plumage/sp091-{plumage}.webp')
+                if plumage == 'eclipse':
+                    expect(teal_panel.get_by_text("Nog geen passende foto", exact=True)).to_have_count(1)
+                else:
+                    assert_photo_once(expected_garganey)
+            assert p.get_by_label('Vluchtroep bij Rotterdam van Wintertaling').count() == 1
+            p.get_by_role('tab', name='Leefwijze', exact=True).click()
+            months = p.get_by_text('Gebruikelijke broedperiode · april, mei, juni, juli', exact=True)
+            expect(months).to_be_visible()
+            p.get_by_role('tab', name='Herkenning', exact=True).click()
+            teal_panel.get_by_role('button', name='Open Zomertaling').click()
+            assert p.get_by_role('dialog', name='Zomertaling', exact=True).count() == 1
+            assert p.get_by_label('Ratel van het mannetje van Zomertaling').count() == 1
+            p.get_by_role('tab', name='Leefwijze', exact=True).click()
+            expect(months).to_be_visible()
+            close_detail()
+            print("H4-07 OK — talingen per kleed (4 tabs), lokale roepen en broedmaanden")
+
+            open_species("Bontbekplevier", "sp146")
+            expect(p.get_by_label("Nachtelijke vluchtroep van Bontbekplevier")).to_have_count(1)
+            little_plover_card = cmp_card("Kleine Plevier")
+            assert_photo_pair(cmp_tab(little_plover_card, "Juveniel"), ["sp146-juv.webp", "sp147-juv.webp"])
+            assert_photo_once("/assets/species/plumage/sp146-juv.webp")
+            kentish_plover_card = cmp_card("Strandplevier")
+            assert_photo_pair(cmp_tab(kentish_plover_card, "Juveniel"), ["sp146-juv.webp", "sp206-juv.webp"])
+            winter_panel = cmp_tab(kentish_plover_card, 'Winterkleed')
+            assert winter_panel.locator('.sd-cmp-who small').all_text_contents() == ["Winterkleed", "Winterkleed"]
+            for path in ("/assets/species/plumage/sp146-winter.webp", "/assets/species/plumage/sp206-winter.webp"):
+                assert_photo_once(path)
+            little_plover_card.locator(".sd-cmp-panel:visible").get_by_role("button", name="Open Kleine Plevier").click()
+            expect(p.get_by_label("Zang en vluchtroep van Kleine Plevier")).to_have_count(1)
+            breeding_panel2 = cmp_card("Strandplevier").locator('.sd-cmp-panel:visible')
+            assert breeding_panel2.locator('.sd-cmp-who small').all_text_contents() == ["Broedkleed", "Mannetje"]
+            breeding_panel2.get_by_role("button", name="Open Strandplevier").click()
+            expect(p.get_by_label("Alarmroep van Strandplevier")).to_have_count(1)
+            expect(p.locator('.sd-plumage img[src$="sp206-adult_f.webp"]')).to_have_count(1)
+            tab("status")
+            expect(p.get_by_text('Gebruikelijke broedperiode · mei', exact=True)).to_be_visible()
+            expect(p.get_by_text('Jongen vliegvlug', exact=True)).to_be_visible()
+            assert p.locator('.sd-month-breeding .is-breeding').count() == 1
+            close_detail()
+            print("H4-08 OK — plevieren per kleed (tabs), bronfoto's, roepen en broedmaanden")
+
+            open_species("Goudplevier", "sp145")
+            plover_card = cmp_card("Zilverplevier")
+            assert_photo_pair(cmp_tab(plover_card, "Juveniel"), ["sp145-juv.webp", "sp144-juv.webp"])
+            assert_photo_once("/assets/species/plumage/sp145-juv.webp")
+            plover_panel = None
+            for label, suffix in [("Broedkleed", ""), ("Winterkleed", "-winter")]:
+                plover_panel = cmp_tab(plover_card, label)
+                assert plover_panel.locator('.sd-cmp-who small').all_text_contents() == [label, label]
+                for sid in ("sp145", "sp144"):
+                    folder = "/assets/species/plumage" if suffix else "/assets/species"
+                    assert_photo_once(f"{folder}/{sid}{suffix}.webp")
+            plover_panel.get_by_role("button", name="Open Zilverplevier").click()
+            expect(p.get_by_label("Nachtelijke vluchtroep van Zilverplevier")).to_have_count(1)
+            tab("waar")
+            expect(p.locator(".sd-photo-tip")).to_contain_text("1/2000 s")
+            expect(p.get_by_role("heading", name="Leefgebied")).to_be_visible()
+            tab("status")
+            expect(p.locator(".sd-month-breeding .is-breeding")).to_have_count(0)
+            close_detail()
+            open_species("Merel", "sp045")
+            tab("waar")
+            expect(p.locator(".sd-photo-tip")).to_have_count(0)
+            close_detail()
+            print("H4-09 OK — Goudplevier/Zilverplevier in drie kleden (tabs) en fotografietip bij geselecteerde soorten")
+
+            open_species("Witgat", "sp156")
+            sandpiper_card = cmp_card("Bosruiter")
+            assert_photo_pair(cmp_tab(sandpiper_card, "Juveniel"), ["sp156-juv.webp", "sp159-juv.webp"])
+            assert_photo_once("/assets/species/plumage/sp156-juv.webp")
+            sandpiper_panel = None
+            for label, suffix in [("Broedkleed", ""), ("Winterkleed", "-winter")]:
+                sandpiper_panel = cmp_tab(sandpiper_card, label)
+                for sid in ("sp156", "sp159"):
+                    folder = "/assets/species/plumage" if suffix else "/assets/species"
+                    assert_photo_once(f"{folder}/{sid}{suffix}.webp")
+            expect(p.locator(".sd-audio audio")).to_have_count(4)
+            tab("status")
+            expect(p.get_by_text("Jaarrond in Nederland", exact=True)).to_be_visible()
+            expect(p.locator(".sd-month-breeding")).to_have_count(0)
+            tab("herkenning")
+            sandpiper_panel.get_by_role("button", name="Open Bosruiter").click()
+            expect(p.locator(".sd-audio audio")).to_have_count(4)
+            tab("status")
+            expect(p.get_by_text("Incidentele broedgevallen in Nederland.", exact=True)).to_be_visible()
+            expect(p.get_by_text("Doorgaans mei tot half juli in het reguliere broedgebied", exact=True)).to_be_visible()
+            expect(p.locator(".sd-month-breeding")).to_have_count(0)
+            tab("waar")
+            expect(p.locator(".sd-photo-tip")).to_contain_text("lange wenkbrauw")
+            close_detail()
+            print("H4-10 OK — Witgat/Bosruiter per kleed (tabs), vier roepen per soort en afzonderlijke Nederlandse broedstatus")
+
+            waders = [
+                ("Tureluur", "sp102", 4, "Zwarte Ruiter", "april, mei, juni, juli"),
+                ("Zwarte Ruiter", "sp157", 3, "Tureluur", None),
+                ("Groenpootruiter", "sp158", 3, "Poelruiter", None),
+                ("Poelruiter", "sp217", 2, "Groenpootruiter", None),
+                ("Oeverloper", "sp155", 3, None, "mei, juni"),
+            ]
+            for name, sid, recording_count, partner, breeding_months in waders:
+                open_species(name, sid)
+                expect(p.locator(".sd-audio audio")).to_have_count(recording_count)
+                assert_photo_once(f"/assets/species/{sid}.webp")
+                alternate = "breeding" if sid == "sp102" else "winter"
+                assert_photo_once(f"/assets/species/plumage/{sid}-{alternate}.webp")
+                assert_photo_once(f"/assets/species/plumage/{sid}-juv.webp")
+                if partner:
+                    wader_card = cmp_card(partner)
+                    partner_id = {"sp102": "sp157", "sp157": "sp102", "sp158": "sp217", "sp217": "sp158"}[sid]
+                    assert_photo_pair(cmp_tab(wader_card, "Juveniel"), [f"{sid}-juv.webp", f"{partner_id}-juv.webp"])
+                    for label in ("Broedkleed", "Winterkleed"):
+                        wader_panel = cmp_tab(wader_card, label)
+                        for picture in wader_panel.locator("img").all():
+                            picture.scroll_into_view_if_needed()
+                            picture.evaluate("img => img.decode()")
+                else:
+                    assert_photo_pair(cmp_card("Witgat").locator('.sd-cmp-panel:visible'), ["sp155-winter.webp", "sp156-winter.webp"])
+                    assert_photo_pair(cmp_card("Bosruiter").locator('.sd-cmp-panel:visible'), ["sp155-juv.webp", "sp159-juv.webp"])
+                tab("waar")
+                expect(p.locator(".sd-photo-tip")).to_be_visible()
+                tab("status")
+                if breeding_months:
+                    expect(p.get_by_text(f"Gebruikelijke broedperiode · {breeding_months}", exact=True)).to_be_visible()
+                    expect(p.locator(".sd-month-breeding .is-breeding")).to_have_count(len(breeding_months.split(", ")))
+                else:
+                    expect(p.locator(".sd-month-breeding")).to_have_count(0)
+                close_detail()
+            print("H4-11 OK — vijf steltlopers, kleedfoto’s en opnamen, vergelijkingskaarten met tabs, twee broedlijnen")
+
+            assert not errors, f"H2-08 paginafouten: {errors}"
+            print("H2-08 OK — geen paginafouten")
+            browser.close()
+    print("H2–H4: alle controles geslaagd")
+
+
+if __name__ == "__main__":
+    main()
+))).to_have_count(0)
+            assert "Nog geen passende foto" not in hawk_card.inner_text()
+            assert_photo_once("/assets/species/plumage/sp006-juv.webp")
+            flight_section = p.locator('#sdPanel-herkenning section.sd-similar')
+            assert flight_section.evaluate(
+                "el => Boolean(el.compareDocumentPosition(document.querySelector('.sd-plumage-list')) & Node.DOCUMENT_POSITION_PRECEDING)")
+            flight_hawk_panel = cmp_card("Havik", flight=True).locator('.sd-cmp-panel:visible')
+            assert flight_hawk_panel.locator('.sd-cmp-who strong').all_text_contents() == ["Sperwer", "Havik"]
+            expect(flight_section.locator('.sd-cmp-more > summary')).to_have_text("Nog 1 soort: Torenvalk")
+            flight_falcon_panel = cmp_card("Torenvalk", flight=True).locator('.sd-cmp-panel:visible')
+            assert flight_falcon_panel.locator('.sd-cmp-who strong').all_text_contents() == ["Sperwer", "Torenvalk"]
+            for sid in ("sp006", "sp007", "sp008"):
+                assert_photo_once(f"/assets/species/plumage/{sid}-flight.webp")
+            sparrow_in_flight = p.locator('#sdPanel-herkenning section[aria-label="In vlucht"]')
+            expect(sparrow_in_flight.get_by_text("Mannetje in vlucht", exact=True)).to_have_count(1)
+            assert p.get_by_label("Roep vrouwtje van Sperwer").count() == 1
+            flight_hawk_panel.get_by_role("button", name="Open Havik").click()
+            assert p.get_by_role("dialog", name="Havik", exact=True).count() == 1
+            assert p.get_by_label("Alarmroep vrouwtje van Havik").count() == 1
+            assert p.get_by_label("Bedelroep jong van Havik").count() == 1
+            close_detail()
+            print("H4-04 OK — jonge Sperwer/Havik (tab Juveniel, juiste borsttekening), vluchtvergelijking met Havik en Torenvalk")
+
+            open_species("Torenvalk", "sp008")
+            text_comparisons = p.locator('#sdPanel-herkenning .kb-similar')
+            expect(text_comparisons.get_by_text("Boomvalk: lange spitse vleugels", exact=False)).to_be_visible()
+            expect(text_comparisons.get_by_text("Smelleken: brede vleugelbasis", exact=False)).to_be_visible()
+            expect(text_comparisons.locator('img')).to_have_count(0)
+            text_comparisons.get_by_role("button", name="Open Boomvalk").click()
+            expect(p.get_by_role("dialog", name="Boomvalk", exact=True)).to_be_visible()
+            close_detail()
+
+            open_species("Buizerd", "sp005")
+            dark = p.locator('.sd-flight [data-guide-image$="sp005-flight-dark.webp"] img')
+            expect(dark).to_have_count(1)
+            dark.scroll_into_view_if_needed()
+            dark.evaluate("img => img.decode()")
+            expect(p.locator('[data-guide-image$="sp005-male-flight.webp"]')).to_have_count(0)
+            regular_cards = p.locator('#sdPanel-herkenning section.sd-similar .sd-cmp-card')
+            assert regular_cards.count() == 2
+            rough_card = cmp_card("Ruigpootbuizerd")
+            for width in (360, 390, 430):
+                p.set_viewport_size({"width": width, "height": 844})
+                adult_panel = cmp_tab(rough_card, "In vlucht · Volwassen")
+                assert adult_panel.locator('.sd-cmp-who small').all_text_contents() == ["Volwassen in vlucht", "Vrouwtje in vlucht"]
+                assert_photo_pair(adult_panel, ["sp005-adult_m.webp", "sp253.webp"], in_flight=True)
+                if width == 390:
+                    adult_panel.screenshot(path=str(SHOTS / "species_i_buizerd_ruigpoot_volwassen_390.png"))
+                young_panel = cmp_tab(rough_card, "In vlucht · Juveniel")
+                assert_photo_pair(young_panel, ["sp005-juv.webp", "sp253-juv.webp"], in_flight=True)
+                if width == 390:
+                    young_panel.screenshot(path=str(SHOTS / "species_i_buizerd_ruigpoot_juveniel_390.png"))
+            p.set_viewport_size({"width": 390, "height": 844})
+            check_comparison_photo(young_panel.locator('.sd-field-photo').last)
+            assert_photo_once("/assets/species/plumage/sp005-adult_m.webp")
+            assert_photo_once("/assets/species/plumage/sp005-juv.webp")
+            honey_card = cmp_card("Wespendief")
+            female_honey = cmp_tab(honey_card, "In vlucht · Wespendief-vrouwtje")
+            assert_photo_pair(female_honey, ["sp005-adult_m.webp", "sp248-adult_f.webp"], in_flight=True)
+            young_honey = cmp_tab(honey_card, "In vlucht · Juveniel")
+            assert_photo_pair(young_honey, ["sp005-juv.webp", "sp248-juv.webp"], in_flight=True)
+            assert p.get_by_label("Alarmroep van Buizerd").count() == 1
+            young_honey.get_by_role("button", name="Open Wespendief").click()
+            assert p.get_by_role("dialog", name="Wespendief", exact=True).count() == 1
+            assert p.get_by_label("Vluchtroep van Wespendief").count() == 1
+            close_detail()
+            print("H4-05 OK — Buizerd, Ruigpootbuizerd en Wespendief, vluchtparen naast elkaar op 360/390/430 px")
+
+            open_species("Kleine Zilverreiger", "sp082")
+            heron_card = cmp_card("Grote Zilverreiger")
+            breeding_panel = cmp_tab(heron_card, "Broedkleed")
+            assert breeding_panel.locator('.sd-cmp-who small').all_text_contents() == ["Broedkleed", "Broedkleed"]
+            for path in ("/assets/species/plumage/sp082-breeding.webp", "/assets/species/plumage/sp083-breeding.webp"):
+                assert_photo_once(path)
+            cattle_card = cmp_card("Koereiger")
+            assert_photo_pair(cmp_tab(cattle_card, "Juveniel"), ["sp082-juv.webp", "sp245-juv.webp"])
+            assert p.get_by_label("Vluchtroep van Kleine Zilverreiger").count() == 1
+            p.get_by_role('tab', name='Leefwijze', exact=True).click()
+            assert p.locator('.sd-month-breeding .is-breeding').count() == 2
+            expect(p.get_by_text('Gebruikelijke broedperiode · mei, juni', exact=True)).to_be_visible()
+            p.get_by_role('tab', name='Herkenning', exact=True).click()
+            cattle_card.get_by_role("button", name="Open Koereiger").click()
+            assert p.get_by_role("dialog", name="Koereiger", exact=True).count() == 1
+            assert p.get_by_label("Roepen bij de kolonie van Koereiger").count() == 1
+            p.get_by_role('tab', name='Leefwijze', exact=True).click()
+            expect(p.get_by_text('Gebruikelijke broedperiode · april, mei, juni', exact=True)).to_be_visible()
+            close_detail()
+            print("H4-06 OK — witte reigers per kleed (tabs), bronfoto's, roepen en broedmaanden")
+
+            open_species("Wintertaling", "sp091")
+            teal_card = cmp_card("Zomertaling")
+            assert_photo_pair(cmp_tab(teal_card, "Juveniel"), ["sp091-juv.webp", "sp188-juv.webp"])
+            assert_photo_once("/assets/species/plumage/sp091-juv.webp")
+            for label, plumage in [('Mannetje', 'adult_m'), ('Vrouwtje', 'adult_f'), ('Eclipskleed', 'eclipse')]:
+                teal_panel = cmp_tab(teal_card, label)
+                assert teal_panel.locator('.sd-cmp-who small').all_text_contents() == [label, label]
+                expected_garganey = '/assets/species/sp188.webp' if plumage == 'adult_m' else f'/assets/species/plumage/sp188-{plumage}.webp'
+                assert_photo_once(f'/assets/species/plumage/sp091-{plumage}.webp')
+                if plumage == 'eclipse':
+                    expect(teal_panel.get_by_text("Nog geen passende foto", exact=True)).to_have_count(1)
+                else:
+                    assert_photo_once(expected_garganey)
+            assert p.get_by_label('Vluchtroep bij Rotterdam van Wintertaling').count() == 1
+            p.get_by_role('tab', name='Leefwijze', exact=True).click()
+            months = p.get_by_text('Gebruikelijke broedperiode · april, mei, juni, juli', exact=True)
+            expect(months).to_be_visible()
+            p.get_by_role('tab', name='Herkenning', exact=True).click()
+            teal_panel.get_by_role('button', name='Open Zomertaling').click()
+            assert p.get_by_role('dialog', name='Zomertaling', exact=True).count() == 1
+            assert p.get_by_label('Ratel van het mannetje van Zomertaling').count() == 1
+            p.get_by_role('tab', name='Leefwijze', exact=True).click()
+            expect(months).to_be_visible()
+            close_detail()
+            print("H4-07 OK — talingen per kleed (4 tabs), lokale roepen en broedmaanden")
+
+            open_species("Bontbekplevier", "sp146")
+            expect(p.get_by_label("Nachtelijke vluchtroep van Bontbekplevier")).to_have_count(1)
+            little_plover_card = cmp_card("Kleine Plevier")
+            assert_photo_pair(cmp_tab(little_plover_card, "Juveniel"), ["sp146-juv.webp", "sp147-juv.webp"])
+            assert_photo_once("/assets/species/plumage/sp146-juv.webp")
+            kentish_plover_card = cmp_card("Strandplevier")
+            assert_photo_pair(cmp_tab(kentish_plover_card, "Juveniel"), ["sp146-juv.webp", "sp206-juv.webp"])
+            winter_panel = cmp_tab(kentish_plover_card, 'Winterkleed')
+            assert winter_panel.locator('.sd-cmp-who small').all_text_contents() == ["Winterkleed", "Winterkleed"]
+            for path in ("/assets/species/plumage/sp146-winter.webp", "/assets/species/plumage/sp206-winter.webp"):
+                assert_photo_once(path)
+            little_plover_card.locator(".sd-cmp-panel:visible").get_by_role("button", name="Open Kleine Plevier").click()
+            expect(p.get_by_label("Zang en vluchtroep van Kleine Plevier")).to_have_count(1)
+            breeding_panel2 = cmp_card("Strandplevier").locator('.sd-cmp-panel:visible')
+            assert breeding_panel2.locator('.sd-cmp-who small').all_text_contents() == ["Broedkleed", "Mannetje"]
+            breeding_panel2.get_by_role("button", name="Open Strandplevier").click()
+            expect(p.get_by_label("Alarmroep van Strandplevier")).to_have_count(1)
+            expect(p.locator('.sd-plumage img[src$="sp206-adult_f.webp"]')).to_have_count(1)
+            tab("status")
+            expect(p.get_by_text('Gebruikelijke broedperiode · mei', exact=True)).to_be_visible()
+            expect(p.get_by_text('Jongen vliegvlug', exact=True)).to_be_visible()
+            assert p.locator('.sd-month-breeding .is-breeding').count() == 1
+            close_detail()
+            print("H4-08 OK — plevieren per kleed (tabs), bronfoto's, roepen en broedmaanden")
+
+            open_species("Goudplevier", "sp145")
+            plover_card = cmp_card("Zilverplevier")
+            assert_photo_pair(cmp_tab(plover_card, "Juveniel"), ["sp145-juv.webp", "sp144-juv.webp"])
+            assert_photo_once("/assets/species/plumage/sp145-juv.webp")
+            plover_panel = None
+            for label, suffix in [("Broedkleed", ""), ("Winterkleed", "-winter")]:
+                plover_panel = cmp_tab(plover_card, label)
+                assert plover_panel.locator('.sd-cmp-who small').all_text_contents() == [label, label]
+                for sid in ("sp145", "sp144"):
+                    folder = "/assets/species/plumage" if suffix else "/assets/species"
+                    assert_photo_once(f"{folder}/{sid}{suffix}.webp")
+            plover_panel.get_by_role("button", name="Open Zilverplevier").click()
+            expect(p.get_by_label("Nachtelijke vluchtroep van Zilverplevier")).to_have_count(1)
+            tab("waar")
+            expect(p.locator(".sd-photo-tip")).to_contain_text("1/2000 s")
+            expect(p.get_by_role("heading", name="Leefgebied")).to_be_visible()
+            tab("status")
+            expect(p.locator(".sd-month-breeding .is-breeding")).to_have_count(0)
+            close_detail()
+            open_species("Merel", "sp045")
+            tab("waar")
+            expect(p.locator(".sd-photo-tip")).to_have_count(0)
+            close_detail()
+            print("H4-09 OK — Goudplevier/Zilverplevier in drie kleden (tabs) en fotografietip bij geselecteerde soorten")
+
+            open_species("Witgat", "sp156")
+            sandpiper_card = cmp_card("Bosruiter")
+            assert_photo_pair(cmp_tab(sandpiper_card, "Juveniel"), ["sp156-juv.webp", "sp159-juv.webp"])
+            assert_photo_once("/assets/species/plumage/sp156-juv.webp")
+            sandpiper_panel = None
+            for label, suffix in [("Broedkleed", ""), ("Winterkleed", "-winter")]:
+                sandpiper_panel = cmp_tab(sandpiper_card, label)
+                for sid in ("sp156", "sp159"):
+                    folder = "/assets/species/plumage" if suffix else "/assets/species"
+                    assert_photo_once(f"{folder}/{sid}{suffix}.webp")
+            expect(p.locator(".sd-audio audio")).to_have_count(4)
+            tab("status")
+            expect(p.get_by_text("Jaarrond in Nederland", exact=True)).to_be_visible()
+            expect(p.locator(".sd-month-breeding")).to_have_count(0)
+            tab("herkenning")
+            sandpiper_panel.get_by_role("button", name="Open Bosruiter").click()
+            expect(p.locator(".sd-audio audio")).to_have_count(4)
+            tab("status")
+            expect(p.get_by_text("Incidentele broedgevallen in Nederland.", exact=True)).to_be_visible()
+            expect(p.get_by_text("Doorgaans mei tot half juli in het reguliere broedgebied", exact=True)).to_be_visible()
+            expect(p.locator(".sd-month-breeding")).to_have_count(0)
+            tab("waar")
+            expect(p.locator(".sd-photo-tip")).to_contain_text("lange wenkbrauw")
+            close_detail()
+            print("H4-10 OK — Witgat/Bosruiter per kleed (tabs), vier roepen per soort en afzonderlijke Nederlandse broedstatus")
+
+            waders = [
+                ("Tureluur", "sp102", 4, "Zwarte Ruiter", "april, mei, juni, juli"),
+                ("Zwarte Ruiter", "sp157", 3, "Tureluur", None),
+                ("Groenpootruiter", "sp158", 3, "Poelruiter", None),
+                ("Poelruiter", "sp217", 2, "Groenpootruiter", None),
+                ("Oeverloper", "sp155", 3, None, "mei, juni"),
+            ]
+            for name, sid, recording_count, partner, breeding_months in waders:
+                open_species(name, sid)
+                expect(p.locator(".sd-audio audio")).to_have_count(recording_count)
+                assert_photo_once(f"/assets/species/{sid}.webp")
+                alternate = "breeding" if sid == "sp102" else "winter"
+                assert_photo_once(f"/assets/species/plumage/{sid}-{alternate}.webp")
+                assert_photo_once(f"/assets/species/plumage/{sid}-juv.webp")
+                if partner:
+                    wader_card = cmp_card(partner)
+                    partner_id = {"sp102": "sp157", "sp157": "sp102", "sp158": "sp217", "sp217": "sp158"}[sid]
+                    assert_photo_pair(cmp_tab(wader_card, "Juveniel"), [f"{sid}-juv.webp", f"{partner_id}-juv.webp"])
+                    for label in ("Broedkleed", "Winterkleed"):
+                        wader_panel = cmp_tab(wader_card, label)
+                        for picture in wader_panel.locator("img").all():
+                            picture.scroll_into_view_if_needed()
+                            picture.evaluate("img => img.decode()")
+                else:
+                    assert_photo_pair(cmp_card("Witgat").locator('.sd-cmp-panel:visible'), ["sp155-winter.webp", "sp156-winter.webp"])
+                    assert_photo_pair(cmp_card("Bosruiter").locator('.sd-cmp-panel:visible'), ["sp155-juv.webp", "sp159-juv.webp"])
+                tab("waar")
+                expect(p.locator(".sd-photo-tip")).to_be_visible()
+                tab("status")
+                if breeding_months:
+                    expect(p.get_by_text(f"Gebruikelijke broedperiode · {breeding_months}", exact=True)).to_be_visible()
+                    expect(p.locator(".sd-month-breeding .is-breeding")).to_have_count(len(breeding_months.split(", ")))
+                else:
+                    expect(p.locator(".sd-month-breeding")).to_have_count(0)
+                close_detail()
+            print("H4-11 OK — vijf steltlopers, kleedfoto’s en opnamen, vergelijkingskaarten met tabs, twee broedlijnen")
+
+            assert not errors, f"H2-08 paginafouten: {errors}"
+            print("H2-08 OK — geen paginafouten")
+            browser.close()
+    print("H2–H4: alle controles geslaagd")
+
+
+if __name__ == "__main__":
+    main()
+))
+                if match.count():
+                    match.click()
+                else:
+                    # UX v1.6: only one complete image pair may remain after
+                    # hiding incomplete tabs; do not require a tabbar in that case.
+                    assert card.locator('.sd-cmp-tab').count() == 0, (
+                        label, "requested tab missing from a multi-tab comparison")
+                    assert card.locator('.sd-cmp-panel').count() == 1, (
+                        label, "expected exactly one surviving complete comparison")
                 panel = card.locator('.sd-cmp-panel:visible')
                 panel.wait_for(state="visible", timeout=4000)
                 return panel
