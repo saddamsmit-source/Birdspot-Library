@@ -17,12 +17,12 @@
   "evidenceBoundary": "REGISTERED_UNVERIFIED is not a provenance, individual-species, role or commercial-license PASS. Existing Chromium audio test only checks file decode/offline, not source identity.",
   "counts": {
     "photoSpecies": 140,
-    "withRegisteredAudio": 59,
-    "withoutRegisteredAudio": 81,
-    "registeredClips": 121,
+    "withRegisteredAudio": 62,
+    "withoutRegisteredAudio": 78,
+    "registeredClips": 124,
     "f2PhotoVisited": 84,
-    "f2WithAudio": 40,
-    "f2WithoutAudio": 44,
+    "f2WithAudio": 43,
+    "f2WithoutAudio": 41,
     "independentlyApprovedAudio": 0
   },
   "species": [
@@ -560,12 +560,24 @@
       "id": "sp021",
       "nameNL": "Ekster",
       "f2PhotoVisited": true,
-      "mediaCount": 0,
+      "mediaCount": 1,
       "pilot": false,
-      "status": "MISSING",
-      "clips": [],
-      "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "status": "PARTIALLY TESTED",
+      "clips": [
+        {
+          "file": "/assets/species/audio/sp021-call-app.mp3",
+          "label": "Roep",
+          "reference": "https://commons.wikimedia.org/wiki/File:Eurasian_Magpie_(Pica_pica)_(W1CDR0001537_BD28).ogg",
+          "externalRights": "PARTIALLY TESTED",
+          "sourceSpecies": "PARTIALLY TESTED",
+          "roleAudition": "PARTIALLY TESTED",
+          "independentReview": "NOT TESTED"
+        }
+      ],
+      "reviewEvidence": [
+        "docs/fotokwaliteit/F3_R06_EKSTER_KRAAI_KAUW_2026-11-15_DRAFT.md"
+      ],
+      "next": "Beoordeel de opname onafhankelijk en controleer offline afspelen tijdens de geïntegreerde praktijktest.",
       "sourceChecks": {
         "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
         "anwbSpeciesPassage": "NOT TESTED",
@@ -586,12 +598,24 @@
       "id": "sp022",
       "nameNL": "Zwarte Kraai",
       "f2PhotoVisited": true,
-      "mediaCount": 0,
+      "mediaCount": 1,
       "pilot": false,
-      "status": "MISSING",
-      "clips": [],
-      "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "status": "PARTIALLY TESTED",
+      "clips": [
+        {
+          "file": "/assets/species/audio/sp022-call-app.mp3",
+          "label": "Roep",
+          "reference": "https://commons.wikimedia.org/wiki/File:Carrion_Crow_(Corvus_corone)_(W1CDR0001425_BD18).ogg",
+          "externalRights": "PARTIALLY TESTED",
+          "sourceSpecies": "PARTIALLY TESTED",
+          "roleAudition": "PARTIALLY TESTED",
+          "independentReview": "NOT TESTED"
+        }
+      ],
+      "reviewEvidence": [
+        "docs/fotokwaliteit/F3_R06_EKSTER_KRAAI_KAUW_2026-11-15_DRAFT.md"
+      ],
+      "next": "Beoordeel de opname onafhankelijk en controleer offline afspelen tijdens de geïntegreerde praktijktest.",
       "sourceChecks": {
         "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
         "anwbSpeciesPassage": "NOT TESTED",
@@ -612,12 +636,24 @@
       "id": "sp025",
       "nameNL": "Kauw",
       "f2PhotoVisited": true,
-      "mediaCount": 0,
+      "mediaCount": 1,
       "pilot": false,
-      "status": "MISSING",
-      "clips": [],
-      "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "status": "PARTIALLY TESTED",
+      "clips": [
+        {
+          "file": "/assets/species/audio/sp025-contact-call-app.mp3",
+          "label": "Contactroep",
+          "reference": "https://commons.wikimedia.org/wiki/File:Corvus_monedula_calls.ogg",
+          "externalRights": "PARTIALLY TESTED",
+          "sourceSpecies": "PARTIALLY TESTED",
+          "roleAudition": "PARTIALLY TESTED",
+          "independentReview": "NOT TESTED"
+        }
+      ],
+      "reviewEvidence": [
+        "docs/fotokwaliteit/F3_R06_EKSTER_KRAAI_KAUW_2026-11-15_DRAFT.md"
+      ],
+      "next": "Beoordeel de opname onafhankelijk en controleer offline afspelen tijdens de geïntegreerde praktijktest.",
       "sourceChecks": {
         "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
         "anwbSpeciesPassage": "NOT TESTED",

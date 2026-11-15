@@ -1732,6 +1732,68 @@
         "originalURL": "https://upload.wikimedia.org/wikipedia/commons/1/13/Tufted_Duck.ogg",
         "audio": "/assets/species/audio/sp092-a1.mp3"
       }
+    ],
+    "sp021": [
+      {
+        "file": "Eurasian Magpie (Pica pica) (W1CDR0001537 BD28).ogg",
+        "label": "Roep",
+        "note": "Schorre, krassende roep.",
+        "author": "Aubrey John Williams / The British Library Board",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Eurasian_Magpie_(Pica_pica)_(W1CDR0001537_BD28).ogg",
+        "modifications": "Fragment 0:05,3–0:12,9, omgezet naar MP3 (mono)",
+        "reviewed": "2026-11-15",
+        "taxon": "Pica pica",
+        "verification": "Soort en roep bepaald met de individuele bronvermelding. Lokale audio volledig gedecodeerd en met het originele signaal vergeleken.",
+        "duration": 7.6,
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Eurasian_Magpie_%28Pica_pica%29_%28W1CDR0001537_BD28%29.ogg",
+        "sourceNote": "British Library W1CDR0001537 BD28, opgenomen in Pinbury Park, Gloucestershire.",
+        "date": "1975-05-31",
+        "type": "call",
+        "audio": "/assets/species/audio/sp021-call-app.mp3"
+      }
+    ],
+    "sp022": [
+      {
+        "file": "Carrion Crow (Corvus corone) (W1CDR0001425 BD18).ogg",
+        "label": "Roep",
+        "note": "Lage, krassende roep.",
+        "author": "Lawrence Shove / The British Library Board",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Carrion_Crow_(Corvus_corone)_(W1CDR0001425_BD18).ogg",
+        "modifications": "Fragment 0:19,9–0:24,8, omgezet naar MP3 (mono)",
+        "reviewed": "2026-11-15",
+        "taxon": "Corvus corone",
+        "verification": "Soort en roep bepaald met de individuele bronvermelding. Lokale audio volledig gedecodeerd en met het originele signaal vergeleken.",
+        "duration": 4.9,
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Carrion_Crow_%28Corvus_corone%29_%28W1CDR0001425_BD18%29.ogg",
+        "sourceNote": "British Library W1CDR0001425 BD18, opgenomen bij Exeter, Devon.",
+        "date": "1961-04-02",
+        "type": "call",
+        "audio": "/assets/species/audio/sp022-call-app.mp3"
+      }
+    ],
+    "sp025": [
+      {
+        "file": "Corvus monedula calls.ogg",
+        "label": "Contactroep",
+        "note": "Korte, scherpe ka-roepen.",
+        "author": "Veljo Runnel",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Corvus_monedula_calls.ogg",
+        "modifications": "Volledige opname omgezet naar MP3 (mono)",
+        "reviewed": "2026-11-15",
+        "taxon": "Coloeus monedula",
+        "verification": "Soort en roep bepaald met de individuele bronvermelding. Lokale audio volledig gedecodeerd en met het originele signaal vergeleken.",
+        "duration": 13.09,
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Corvus_monedula_calls.ogg",
+        "sourceNote": "De maker omschrijft de kenmerkende roep als chyak. Opgenomen in Tartu, Estland.",
+        "type": "contact call",
+        "audio": "/assets/species/audio/sp025-contact-call-app.mp3"
+      }
     ]
   },
   "plumage": {
@@ -5995,6 +6057,78 @@
       "adult_m": {
         "reuseGuidePhoto": true
       }
+    },
+    "sp021": {
+      "juv": {
+        "file": "Eurasian magpie juvenile - Kharkiv 2024.jpg",
+        "nl": "Ekster",
+        "latin": "Pica pica",
+        "author": "Lystopad",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Eurasian_magpie_juvenile_-_Kharkiv_2024.jpg",
+        "showSourceLink": true,
+        "alt": "Jonge Ekster op de grond, met roze mondhoeken, een korte staart en lichte huid rond het oog.",
+        "modifications": "Uitgesneden rond de hele vogel, opgeslagen als WebP, metadata verwijderd",
+        "reviewed": "2026-11-15",
+        "verification": "Juveniel volgens het bijschrift van de fotograaf. Lichte huid rond het oog en korte staart zichtbaar.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/ekster",
+        "visualCheck": "Jonge Ekster op de grond, met roze mondhoeken, een korte staart en lichte huid rond het oog.",
+        "width": 1280,
+        "height": 904,
+        "image": "/assets/species/plumage/sp021-juv-review.webp",
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/3/39/Eurasian_magpie_juvenile_-_Kharkiv_2024.jpg",
+        "note": "Let op de relatief korte staart en de lichte huid rond het oog.",
+        "age": "juvenile"
+      }
+    },
+    "sp022": {
+      "juv": {
+        "file": "Corvus corone juvenile begging JdP 20250722 n1.jpg",
+        "nl": "Zwarte Kraai",
+        "latin": "Corvus corone",
+        "author": "Marie-Lan Taÿ Pamart",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Corvus_corone_juvenile_begging_JdP_20250722_n1.jpg",
+        "showSourceLink": true,
+        "alt": "Jonge Zwarte Kraai bedelt met geopende snavel en afhangende vleugels. De mond is roze.",
+        "modifications": "Origineel verkleind en opgeslagen als WebP, metadata verwijderd",
+        "reviewed": "2026-11-15",
+        "verification": "Juveniel volgens de fotograaf. De roze snavelbinnenkant ondersteunt de leeftijd.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwarte-kraai",
+        "visualCheck": "Jonge Zwarte Kraai bedelt met geopende snavel en afhangende vleugels. De mond is roze.",
+        "width": 1280,
+        "height": 853,
+        "image": "/assets/species/plumage/sp022-juv-review.webp",
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/0/08/Corvus_corone_juvenile_begging_JdP_20250722_n1.jpg",
+        "note": "De roze snavelbinnenkant is zichtbaar bij deze bedelende jonge vogel.",
+        "age": "juvenile"
+      }
+    },
+    "sp025": {
+      "juv": {
+        "file": "Juvenile Jackdaw - geograph.org.uk - 4065316.jpg",
+        "nl": "Kauw",
+        "latin": "Coloeus monedula",
+        "author": "Anne Burgess",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Juvenile_Jackdaw_-_geograph.org.uk_-_4065316.jpg",
+        "showSourceLink": true,
+        "alt": "Jonge Kauw van opzij op stenen, met dof kleed en een donker oog.",
+        "modifications": "opgeslagen als WebP, metadata verwijderd",
+        "reviewed": "2026-11-15",
+        "verification": "Juveniel volgens het individuele bijschrift. Donker oog en dof kleed zichtbaar.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kauw",
+        "visualCheck": "Jonge Kauw van opzij op stenen, met dof kleed en een donker oog.",
+        "width": 640,
+        "height": 589,
+        "image": "/assets/species/plumage/sp025-juv-review.webp",
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Juvenile_Jackdaw_-_geograph.org.uk_-_4065316.jpg",
+        "note": "Het donkere oog contrasteert minder met de kop dan op de hoofdfoto.",
+        "age": "juvenile"
+      }
     }
   },
   "poses": {
@@ -7017,6 +7151,30 @@
         "height": 934,
         "image": "/assets/species/plumage/sp025-flight.webp",
         "flightReview": "uit-rol 2026-11-10: Frontale landingsnadering met poten naar voren en gespreide staart."
+      },
+      {
+        "file": "2013 Fliegende Dohle.JPG",
+        "nl": "Kauw",
+        "latin": "Coloeus monedula",
+        "author": "J. Patrick Fischer",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:2013_Fliegende_Dohle.JPG",
+        "showSourceLink": true,
+        "alt": "Kauw in vrije vlucht, met gespreide vleugels en een korte snavel tegen open lucht.",
+        "modifications": "opgeslagen als WebP, metadata verwijderd",
+        "reviewed": "2026-11-15",
+        "verification": "Herkenbaar als Kauw op bronvermelding en vorm. Leeftijd en geslacht open.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kauw",
+        "visualCheck": "Kauw in vrije vlucht, met gespreide vleugels en een korte snavel tegen open lucht.",
+        "width": 1144,
+        "height": 820,
+        "image": "/assets/species/plumage/sp025-flight-free.webp",
+        "originalURL": "https://upload.wikimedia.org/wikipedia/commons/7/7e/2013_Fliegende_Dohle.JPG",
+        "note": "Let in zijaanzicht op de compacte bouw, korte snavel en gespreide handpennen.",
+        "label": "Vrije vlucht",
+        "flight": true,
+        "flightReview": "goedgekeurd 2026-11-15: Vrij in open lucht zonder zichtbare afzet- of landingshouding. Hele vogel en gespreide handpennen zichtbaar."
       }
     ],
     "sp026": [

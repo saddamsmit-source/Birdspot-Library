@@ -2804,6 +2804,24 @@
    "rights": "VERIFIED",
    "rightsNote": "Origineel en individuele fotopagina gecontroleerd op 2026-11-15. Josh Boe, CC BY 4.0.",
    "reviewed": "2026-11-15"
+  },
+  "/assets/species/plumage/sp025-flight-free.webp": {
+   "n": 152,
+   "id": "sp025",
+   "nameNL": "Kauw",
+   "registry": "GUIDE_POSES[1]",
+   "sexLabel": null,
+   "class": "vlucht",
+   "quality": "goed",
+   "decision": "goedgekeurd",
+   "target": null,
+   "newLabel": null,
+   "newNote": null,
+   "reason": "Vrij in open lucht zonder zichtbare afzet- of landingshouding. Hele vogel en gespreide handpennen zichtbaar.",
+   "airborne": true,
+   "rights": "VERIFIED",
+   "rightsNote": "Individuele fotopagina en origineel, J. Patrick Fischer, CC BY-SA 3.0.",
+   "reviewed": "2026-11-15"
   }
  }
 }

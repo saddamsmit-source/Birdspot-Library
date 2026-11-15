@@ -51,19 +51,6 @@
    ],
    "checks": "SAB-01..07"
   },
-  "sp021": {
-   "ok": true,
-   "viewport": "390x844 Chromium (Playwright)",
-   "photos": 2,
-   "sections": [
-    "Hoofdfoto",
-    "In vlucht"
-   ],
-   "flight": [
-    "/assets/species/plumage/sp021-flight.webp"
-   ],
-   "checks": "SAB-01..07"
-  },
   "sp056": {
    "ok": true,
    "viewport": "390x844 Chromium (Playwright)",

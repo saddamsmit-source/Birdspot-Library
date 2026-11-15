@@ -148,7 +148,7 @@ export function criticalDetails(s) {
 export function voiceDetails(s) {
   const k = knowledgeFor(s.id);
   if (!k?.voice?.length) return '';
-  return `<div class="kb-voice" data-kb-voice>${items(k.voice, { zang: 'Zang', roep: 'Roep', alarm: 'Alarm', vlucht: 'Vluchtroep', zitroep: 'Roep in zit', lachroep: 'Lachende roep', roffel: 'Roffel' })}</div>`;
+  return `<div class="kb-voice" data-kb-voice>${items(k.voice, { zang: 'Zang', roep: 'Roep', contactroep: 'Contactroep', alarm: 'Alarm', vlucht: 'Vluchtroep', zitroep: 'Roep in zit', lachroep: 'Lachende roep', roffel: 'Roffel' })}</div>`;
 }
 
 /** Niveau 2, tab Leefwijze — uitsluitend inhoudelijke soortgegevens in de publieksweergave.
