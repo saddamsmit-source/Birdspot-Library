@@ -262,6 +262,16 @@ De eigenaarapp mag **niet** automatisch privéwaarnemingen, exacte GPS of origin
 
 **Uitwerking en backlog (DRAFT, geen code of release):** [Toekomstige Birdspot-eigenaarapp v0.1](docs/roadmap/BIRDSPOT_EIGENAARAPP_VISIE_V0.1_DRAFT.md).
 
+## Eigen gidsfoto's, bijdragen en betaalde extra's — richting 15 november 2026
+
+**Gewenst productgedrag, nog niet gebouwd:** gebruikers moeten later **voor zichzelf** een eigen foto kunnen kiezen voor een bestaande gidspositie (hoofdfoto, mannetje, vrouwtje, juveniel of vlucht waar toepasselijk) zonder de officiële gidsbron, overige gebruikersmedia of andermans weergave te veranderen. `Herstel originele foto` blijft mogelijk. Een gebruiker moet bovendien **afzonderlijk, vrijwillig** een eigen betere foto kunnen aanbieden aan Birdspot voor beoordeling; geen automatische upload van privéfoto's, locatie of EXIF. Soort, leeftijd, geslacht, rechten, credit en echte vlucht worden vóór centrale publicatie beoordeeld volgens `docs/BIRDSPOT_KWALITEITSNORM.md`. Een niet-gecontroleerde privéfoto krijgt geen officiële kwaliteitsclaim.
+
+**Toekomstkandidaten:** eerlijk punten-/bedanksysteem voor daadwerkelijk goedgekeurde/gepubliceerde, originele inzendingen, mogelijk inwisselbaar voor korting of een gratis land-/mediapakket; aparte betaalde geavanceerde diashow- en filmtemplates/renderopties; mogelijk betaalde geïntegreerde Merlin-achtige **geluidsherkenning met eigen rechtmatig gelicentieerde technologie**. Geen punten voor ruwe uploadvolumes of positieve appreviews. Bestaande gratis Media/Film Studio-, waarnemings-, ZIP-/restore- en Merlin-bestandsdeelroutes niet stilzwijgend beperken. De exacte free/Plus-afbakening, techniek, licenties, terugkerende kosten, beloningswaarden, prijzen, betaalprovider en startfase zijn **OPEN/CANDIDATE**.
+
+**Volgorde:** huidige F2-vogelcontrole en S1-kernroute eerst; daarna eventueel een kleine offline privéfoto-override; inzendingen pas met veilige ontvangst/moderatie; betalingen en beloningen uitsluitend bij latere S4-gates en eigenaarbesluit. De toekomstige eigenaarapp blijft **niet gestart/niet gekoppeld** en krijgt pas later beheer van inzendingen en beloningen bovenop een volledige gebruikersapp-kopie.
+
+**Uitwerking (DRAFT, geen appwijziging):** [Eigen foto's, bijdrages, beloningen en Media/Sound Plus v0.1](docs/roadmap/BIRDSPOT_EIGEN_FOTOS_BIJDRAGEN_BELONINGEN_MEDIA_PLUS_V0.1_DRAFT.md). Eerdere LOCKS voor gidsbijdragen en credits blijven ongewijzigd; alleen nieuwe productwensen zijn toegevoegd.
+
 ## Afwijkingen van het Handbook
 
 Geen bekende afwijkingen op dit moment.
