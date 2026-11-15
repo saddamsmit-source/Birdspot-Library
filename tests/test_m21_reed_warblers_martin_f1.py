@@ -44,7 +44,10 @@ def check_f1_and_original_rules():
     canon = read("docs/fotokwaliteit/soortaudit-status.json")
     ledger = read("docs/fotokwaliteit/F1_VOORTGANG_TOT_140.json")
     norm = (ROOT / "docs/BIRDSPOT_KWALITEITSNORM.md").read_text(encoding="utf-8")
-    assert "| Versie | 1.5 · 14-11-2026 |" in norm
+    assert "| Versie | 1.6 · 15-11-2026 |" in norm
+    assert "| 1.5 | 14-11-2026 |" in norm, "The previous 1.5 decision must remain in history"
+    assert "Eigenaarbesluit 15-11-2026 — alleen complete vergelijkingsfotoparen tonen" in norm, (
+        "Owner global no-empty-comparison policy must be present")
     assert "| 1.4 | 14-11-2026 |" in norm, "Earlier source-verification policy must remain in history"
     assert "**Toon geen bronvermeldingen waar dat niet verplicht is.**" in norm
     assert "**Verplichte attributies behouden:**" in norm
