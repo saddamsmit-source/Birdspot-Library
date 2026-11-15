@@ -985,7 +985,7 @@ export const GUIDE_COMPARISONS = [
     rows: [
       {label: 'Kopprofiel', values: ['Soms een korte kuif', 'Rond, zonder duidelijke kuif']},
       {label: 'Snavelbasis', values: ['Wit kan voorkomen', 'Vaak uitgebreider wit, maar variabel']},
-      {label: 'Algemene bouw', values: ['Doorgaans compacter', 'Doorgaans forser']},
+      {label: 'Rug', values: ['Doorgaans donkerder en egaler', 'Vaak lichter, met fijnere tekening']},
     ],
     tip: 'Bij vrouwtjes en jonge vogels overlappen meerdere kenmerken. De witte snavelbasis alléén bepaalt de soort niet; bij twijfel geen zekere determinatie. Sluit ook Kleine Topper niet op één kenmerk uit.',
   },
