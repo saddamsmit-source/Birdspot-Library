@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| Versie | 1.5 · 14-11-2026 |
+| Versie | 1.6 · 15-11-2026 |
 | Status | Vastgesteld eigenaarbesluit (Kevin Smit, Project Owner). Onafhankelijke documentreview: open |
 | Herkomst | Eigenaaropdracht "Nieuwe eigenaarbesluiten, livegang en batch M3" (10-11-2026) en het vastgelegde besluit op PR #127 ([comment 6779875047](https://github.com/saddamsmit-source/Birdspot-Library/pull/127#issuecomment-6779875047)) |
 | Geldt voor | Alle soortkaarten van Birdspot Library: soortdata (`src/data/species.js`), kennisprofielen (`tools/kennisbaseline/knowledge.json`), gidsfoto's en soortaudit |
@@ -144,6 +144,8 @@ Deze afspraak gaat over Birdspot en laat eventuele wettelijke informatieverplich
 
 Hoofdfoto → Mannetje → Vrouwtje → Juveniel → In vlucht → Vergelijkingen ("Lijkt op").
 
+**Eigenaarbesluit 15-11-2026 — alleen complete vergelijkingsfotoparen tonen (alle soorten).** In "Lijkt op" verschijnt een paneel of tab uitsluitend wanneer **beide** soorten een geregistreerde, passende foto in dezelfde relevante houding hebben. Laat nooit een leeg fotovak of melding "Nog geen passende (vlucht)foto" in de publieksinterface zien. Als één van de twee foto's ontbreekt of wordt afgekeurd, blijft het vergelijkingspaar **intern** in de dataset en het openpuntenregister staan maar wordt het hele onvolledige paneel uit de weergave gelaten. Bewaar wel de complete, bruikbare tabbladen en andere soortvergelijkingen; geen onjuiste rust/vlucht- of leeftijdskleden invullen om een paneel compleet te maken. Dit geldt voor **alle soortkaarten**, niet alleen de Witte/Gele Kwikstaart. Toets datasetbreed, inclusief beide kanten van vergelijkingen, voordat de preview wordt bijgewerkt.
+
 ### 3.2 Verificatie per foto
 
 Elke getoonde foto staat bij de juiste soort, leeftijd, geslacht en rol, en is gecontroleerd op:
@@ -199,3 +201,4 @@ De uitkomst per foto staat in `docs/fotokwaliteit/soortaudit/M*.json` en `SOORTA
 | 1.3 | 14-11-2026 | Eigenaar legt prioriteit op rustfoto’s en vergelijkingen voor kleine vogels: vlucht alleen wanneer herkenbaar; slechte of ontbrekende vlucht als uitgesteld fotoonderzoek registreren. Bronnen-, rechten-, determinatie- en bestaande vluchtdefinities ongewijzigd. Openpuntenregister aangemaakt voor latere volledigheid. |
 | 1.4 | 14-11-2026 | Eigenaar verduidelijkt bronvoorrang: soortinformatie van Vogelbescherming Nederland en daadwerkelijk ingeziene ANWB-vogelgids als eerste referentie om **zelf gevonden** foto's, kleden en verklarende tekst te controleren. Niet verplicht bronfoto's te gebruiken. ANWB-productpagina is geen soortbewijs; bestand-, rechten- en zespuntscontrole blijven apart. |
 | 1.5 | 14-11-2026 | Eigenaar bepaalt dat niet-verplichte bronvermeldingen verdwijnen uit de gebruikersweergave, zonder achterliggende broncontroles te verwijderen. Verplichte foto-, audio- en data-attributies blijven intact en toegankelijk. |
+| 1.6 | 15-11-2026 | Eigenaar laat onvolledige fotoparen en lege "Nog geen passende foto"-vakken **bij alle soorten** uit "Lijkt op" verdwijnen. Alleen complete twee-fotopanelen tonen; brondata, openpunten, eerdere vlucht-/leeftijdsafkeuringen en werkende fotovergelijkingen behouden. |
