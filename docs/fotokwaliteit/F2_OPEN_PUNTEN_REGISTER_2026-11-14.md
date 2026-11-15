@@ -1,7 +1,7 @@
 # Birdspot F2 — register open punten en uitgesteld fotoonderzoek
 
 **Eigenaarbesluit 14 november 2026 · Werkdocument (DRAFT, geen foto-PASS)**
-**Historische basis:** F2-15 `bccd09599a2b9fd7fb23771b3f6c262542b4c08a`; F2-20 voortzetting op PR #221 `fa05d08d203f656c5c7bce328c6deec6d3961632`, historische F2-19-bevindingen behouden. **Actuele reikwijdte (F2-28, 15 november 2026):** 75/140 soorten individueel opgepakt, 65/140 nog **NOT TESTED in F2**; het historische basischeckpoint van 51/140 uit F2-20 blijft in de onderliggende brondossiers bewaard. Geen van deze aantallen is gelijk aan een foto-PASS. Dit register is een index op de bestaande per-batch brondossiers, niet een vervanging van de canonieke 9-punts-audit.
+**Historische basis:** F2-15 `bccd09599a2b9fd7fb23771b3f6c262542b4c08a`; F2-20 voortzetting op PR #221 `fa05d08d203f656c5c7bce328c6deec6d3961632`, historische F2-19-bevindingen behouden. **Actuele reikwijdte (F2-29, 15 november 2026):** 78/140 soorten individueel opgepakt, 62/140 nog **NOT TESTED in F2**; het historische basischeckpoint van 51/140 uit F2-20 blijft in de onderliggende brondossiers bewaard. Geen van deze aantallen is gelijk aan een foto-PASS. Dit register is een index op de bestaande per-batch brondossiers, niet een vervanging van de canonieke 9-punts-audit.
 
 ## Hoe vervolgonderzoek te sturen
 
@@ -145,3 +145,13 @@ De tekst in de kolom 'Open uit bronronde' is overgenomen uit de laatste F2-voort
 | sp086 Grauwe Gans | F2-28 | Drie bronpagina’s herlezen. Donsjong blijft apart. Geschikt beeld van een ouder juveniel en passend fotopaar met Kolgans blijven open. |
 
 [Brondossier met makers, licenties en SHA-256 per foto](F2_28_BRON_EN_LIMIETEN.json). ANWB-soortpassages, nieuwe bronbeeldmatch en onafhankelijke toestelcontrole blijven open.
+
+### F2-29 · Wilde Eend, Slobeend en Wintertaling
+
+| Soort | Batch | Open uit bronronde |
+|---|---|---|
+| sp089 Wilde Eend | F2-29 | Originele landings- en jeugdbron onbereikbaar. Beschrijvingen van het eclipsbeeld spreken elkaar tegen. Het vluchtpaar gebruikt het bevestigde vrijevluchtbeeld. |
+| sp090 Slobeend | F2-29 | Hoofd- en jeugdfotobron onbereikbaar. Eerdere matches en bronannotatie blijven gedocumenteerd. |
+| sp091 Wintertaling | F2-29 | Juveniel en ruifoto leunen op eerder bewijs. Bron van de Zomertaling-vrouwtjesfoto onbereikbaar. Er is nog geen gelijkwaardig fotopaar in eclipskleed. |
+
+[Brondossier met makers, licenties en SHA-256 per foto](F2_29_BRON_EN_LIMIETEN.json). ANWB-soortpassages, nieuwe bronbeeldmatch en fysieke Android-test blijven open.

@@ -404,6 +404,11 @@ export const GUIDE_COMPARISONS = [
       {id: 'sp091', source: 'wintertaling', plumage: 'adult_m', marks: 'Kastanjebruine kop met breed groen oogveld. Horizontale witte flankstreep en gele vlek naast de staart.'},
       {id: 'sp188', source: 'zomertaling', plumage: 'adult_m', marks: 'Brede witte oogboog die doorloopt naar het achterhoofd. Bruine borst en lange, afhangende schouderveren.'},
     ],
+    rows: [
+      {label: 'Kop', values: ['Breed groen oogveld op kastanjebruine kop', 'Brede witte oogboog tot aan het achterhoofd']},
+      {label: 'Flank en schouder', values: ['Horizontale witte flankstreep', 'Lange, afhangende zwart-witte schouderveren']},
+      {label: 'Staartzijde', values: ['Gele vlek met zwarte rand', 'Bruin en fijn getekend']},
+    ],
     tip: 'Begin met de kop. De droge ratel van het mannetje Zomertaling klinkt anders dan het hoge fluitje van Wintertaling.',
   },
   {
@@ -412,13 +417,22 @@ export const GUIDE_COMPARISONS = [
       {id: 'sp091', source: 'wintertaling', plumage: 'adult_f', marks: 'Vaak minder contrast rond het oog, met een lichte vlek aan de staartzijde. Bij een geopende vleugel kan de groene spiegel oplichten.'},
       {id: 'sp188', source: 'zomertaling', plumage: 'adult_f', marks: 'Donkere oogstreep, lichte wenkbrauw en lichte keel. Vaak ook een licht vlekje aan de snavelbasis.'},
     ],
-    tip: 'Vergelijk oogstreep, keel en staartzijde samen. Een glanzende spiegel kan door de kijkhoek donker lijken.',
+    rows: [
+      {label: 'Oogstreep', values: ['Op deze foto weinig contrast rond het oog', 'Donkere oogstreep tussen lichte kopstrepen']},
+      {label: 'Keel', values: ['Lichtbruin en fijn getekend op deze foto', 'Lichte keel die afsteekt tegen de kopstrepen']},
+      {label: 'Staartzijde', values: ['Vaak een lichte vlek bij de staart', 'Zonder kenmerkende lichte vlek bij de staart']},
+    ],
+    tip: 'Begin met het contrast op de kop. Kijk bij een goed zijaanzicht ook naar de staartzijde. De vleugelspiegel is op deze rustfoto’s maar beperkt te zien.',
   },
   {
     label: 'Wintertaling en Zomertaling · jonge vogels',
     birds: [
       {id: 'sp091', source: 'wintertaling', plumage: 'juv', marks: 'Bruine vogel die sterk op een vrouwtje lijkt. Bij deze vogel is de groene vleugelspiegel zichtbaar.'},
       {id: 'sp188', source: 'zomertaling', plumage: 'juv', marks: 'Lijkt ook sterk op het eigen vrouwtje. Let op het contrast tussen de donkere oogstreep en de lichte keel en wenkbrauw.'},
+    ],
+    rows: [
+      {label: 'Oogstreep', values: ['Subtiel op deze donkere kop', 'Donker met een lichte wenkbrauw en wang']},
+      {label: 'Gevouwen vleugel', values: ['Een stukje groene spiegel is zichtbaar', 'Spiegel ligt weggevouwen']},
     ],
     tip: 'Kop- en vleugeltekening helpen om de soort te bepalen. Laat de leeftijd open als de details ontbreken.',
   },
@@ -903,20 +917,36 @@ export const GUIDE_COMPARISONS = [
         "id": "sp089",
         "source": "wilde-eend",
         "marks": "Bruine eend met een gewone, relatief smalle eendensnavel en blauw-paarse spiegel.",
+        "photo": "/assets/species/plumage/sp089-adult_f.webp",
         "plumage": "adult_f"
       },
       {
         "id": "sp090",
         "source": "slobeend",
         "marks": "Eveneens bruin, maar met een opvallend lange snavel die naar het uiteinde breed uitloopt.",
+        "photo": "/assets/species/plumage/sp090-adult_f.webp",
         "plumage": "adult_f"
       }
     ],
     "rows": [
       {"label": "Snavelvorm", "values": ["Relatief smal en minder breed uitlopend", "Lang, breed en lepelvormig"]},
-      {"label": "Vleugelspiegel", "values": ["Blauwpaars met witte randen", "Groen zonder brede witte achterrand"]}
+      {"label": "Vleugelspiegel", "values": ["Blauwpaars met witte randen als de vleugel opengaat", "Groen zonder brede witte achterrand als de vleugel opengaat"]}
     ],
     "tip": "Begin met de snavelvorm. De spiegel kan onder de gevouwen vleugel verborgen zijn."
+  },
+  {
+    label: 'Wilde Eend en Slobeend · mannetjes in vrije vlucht',
+    flight: true,
+    birds: [
+      {id: 'sp089', source: 'wilde-eend', plumage: 'adult_m', photo: '/assets/species/plumage/sp089-free-flight.webp', marks: 'Gele snavel, smalle witte halsring, donkere borst en grijs lichaam.'},
+      {id: 'sp090', source: 'slobeend', plumage: 'adult_m', photo: '/assets/species/plumage/sp090-flight.webp', marks: 'Lange donkere lepelvormige snavel, witte borst, kastanjebruine flank en lichtblauwe voorvleugel.'},
+    ],
+    rows: [
+      {label: 'Snavel', values: ['Geel en gelijkmatiger van breedte', 'Donker, lang en aan de punt lepelvormig']},
+      {label: 'Borst', values: ['Donkere borst onder een smalle witte halsring', 'Opvallend witte borst']},
+      {label: 'Flank', values: ['Lichtgrijs', 'Kastanjebruin']},
+    ],
+    tip: 'Beide mannetjes hebben een groene kop. Begin met de snavel en borst. Bij Slobeend zie je op deze foto ook de lichtblauwe voorvleugel.',
   },
   {
     "label": "Kuifeend en Tafeleend · mannetjes in prachtkleed",
