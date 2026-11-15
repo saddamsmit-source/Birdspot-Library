@@ -689,6 +689,8 @@ def main():
 
             open_species("Kleine Zilverreiger", "sp082")
             heron_card = cmp_card("Grote Zilverreiger")
+            assert_photo_pair(cmp_tab(heron_card, "Winterkleed"), ["sp082-winter.webp", "sp083.webp"])
+            assert_photo_pair(cmp_tab(heron_card, "In vlucht"), ["sp082.webp", "sp083-flight.webp"], in_flight=True)
             breeding_panel = cmp_tab(heron_card, "Broedkleed")
             assert breeding_panel.locator('.sd-cmp-who small').all_text_contents() == ["Broedkleed", "Broedkleed"]
             for path in ("/assets/species/plumage/sp082-breeding.webp", "/assets/species/plumage/sp083-breeding.webp"):
@@ -707,6 +709,14 @@ def main():
             expect(p.get_by_text('Gebruikelijke broedperiode · april, mei, juni', exact=True)).to_be_visible()
             close_detail()
             print("H4-06 OK — witte reigers per kleed (tabs), bronfoto's, roepen en broedmaanden")
+
+            open_species("Blauwe Reiger", "sp081")
+            purple_heron_card = cmp_card("Purperreiger")
+            assert_photo_pair(cmp_tab(purple_heron_card, "Volwassen"), ["sp081-portrait.webp", "sp084.webp"])
+            assert_photo_pair(cmp_tab(purple_heron_card, "Juveniel"), ["sp081-juv.webp", "sp084-juv-europa.webp"])
+            assert_photo_pair(cmp_tab(purple_heron_card, "In vlucht"), ["sp081.webp", "sp084-flight.webp"], in_flight=True)
+            close_detail()
+            print("F2-27 OK — complete volwassen, juveniele en vluchtparen van Blauwe Reiger en Purperreiger")
 
             open_species("Wintertaling", "sp091")
             teal_card = cmp_card("Zomertaling")
