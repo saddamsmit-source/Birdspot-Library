@@ -35,7 +35,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp003",
@@ -46,7 +61,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp004",
@@ -57,7 +87,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp005",
@@ -96,7 +141,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp006",
@@ -126,7 +186,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp007",
@@ -165,7 +240,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp008",
@@ -195,7 +285,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp009",
@@ -216,7 +321,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp016",
@@ -246,7 +366,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp017",
@@ -276,7 +411,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp018",
@@ -306,7 +456,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp019",
@@ -327,7 +492,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp020",
@@ -348,7 +528,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp021",
@@ -359,7 +554,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp022",
@@ -370,7 +580,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp025",
@@ -381,7 +606,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp026",
@@ -392,7 +632,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp029",
@@ -403,7 +658,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp030",
@@ -424,7 +694,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp031",
@@ -445,7 +730,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp032",
@@ -466,7 +766,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp033",
@@ -487,7 +802,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp034",
@@ -508,7 +838,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp035",
@@ -538,7 +883,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp036",
@@ -549,7 +909,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp037",
@@ -560,7 +935,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp038",
@@ -571,7 +961,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp039",
@@ -582,7 +987,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp040",
@@ -593,7 +1013,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp041",
@@ -604,7 +1039,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp042",
@@ -615,7 +1065,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp043",
@@ -626,7 +1091,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp044",
@@ -637,7 +1117,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp045",
@@ -667,7 +1162,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp046",
@@ -678,7 +1188,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp047",
@@ -689,7 +1214,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp048",
@@ -700,7 +1240,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp049",
@@ -711,7 +1266,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp050",
@@ -722,7 +1292,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp051",
@@ -733,7 +1318,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp053",
@@ -744,7 +1344,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp054",
@@ -755,7 +1370,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp055",
@@ -766,7 +1396,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp056",
@@ -796,7 +1441,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp057",
@@ -826,7 +1486,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp058",
@@ -837,7 +1512,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp059",
@@ -848,7 +1538,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp060",
@@ -859,7 +1564,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp061",
@@ -870,7 +1590,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp062",
@@ -881,7 +1616,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp063",
@@ -902,7 +1652,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp064",
@@ -932,7 +1697,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp065",
@@ -962,7 +1742,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp066",
@@ -992,7 +1787,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp067",
@@ -1022,7 +1832,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp068",
@@ -1033,7 +1858,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp069",
@@ -1044,7 +1884,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp070",
@@ -1055,7 +1910,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp072",
@@ -1066,7 +1936,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp075",
@@ -1077,7 +1962,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp077",
@@ -1098,7 +1998,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp078",
@@ -1128,7 +2043,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp079",
@@ -1158,7 +2088,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp081",
@@ -1188,7 +2133,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp082",
@@ -1209,7 +2169,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp083",
@@ -1239,7 +2214,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp084",
@@ -1269,7 +2259,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp085",
@@ -1299,7 +2304,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp086",
@@ -1329,7 +2349,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp089",
@@ -1359,7 +2394,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp090",
@@ -1380,7 +2430,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp091",
@@ -1437,7 +2502,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp092",
@@ -1458,7 +2538,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp094",
@@ -1469,7 +2564,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp095",
@@ -1480,7 +2590,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp096",
@@ -1491,7 +2616,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp097",
@@ -1502,7 +2642,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp098",
@@ -1513,7 +2668,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp099",
@@ -1524,7 +2694,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp100",
@@ -1535,7 +2720,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp101",
@@ -1546,7 +2746,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp102",
@@ -1594,7 +2809,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp104",
@@ -1615,7 +2845,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp105",
@@ -1626,7 +2871,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp106",
@@ -1637,7 +2897,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp108",
@@ -1648,7 +2923,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp110",
@@ -1659,7 +2949,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp112",
@@ -1670,7 +2975,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp113",
@@ -1681,7 +3001,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp114",
@@ -1692,7 +3027,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp115",
@@ -1703,7 +3053,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp116",
@@ -1714,7 +3079,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp117",
@@ -1725,7 +3105,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp118",
@@ -1736,7 +3131,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp126",
@@ -1757,7 +3167,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp128",
@@ -1787,7 +3212,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp129",
@@ -1808,7 +3248,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp130",
@@ -1819,7 +3274,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp132",
@@ -1849,7 +3319,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp141",
@@ -1860,7 +3345,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp143",
@@ -1871,7 +3371,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp144",
@@ -1910,7 +3425,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp145",
@@ -1949,7 +3479,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp146",
@@ -1979,7 +3524,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp147",
@@ -2009,7 +3569,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp148",
@@ -2020,7 +3595,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp149",
@@ -2031,7 +3621,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp150",
@@ -2042,7 +3647,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp152",
@@ -2053,7 +3673,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp153",
@@ -2064,7 +3699,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp155",
@@ -2103,7 +3753,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp156",
@@ -2151,7 +3816,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp157",
@@ -2190,7 +3870,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp158",
@@ -2229,7 +3924,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp159",
@@ -2277,7 +3987,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp164",
@@ -2288,7 +4013,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp165",
@@ -2299,7 +4039,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp166",
@@ -2310,7 +4065,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp167",
@@ -2321,7 +4091,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp170",
@@ -2332,7 +4117,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp173",
@@ -2353,7 +4153,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp174",
@@ -2364,7 +4179,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp176",
@@ -2375,7 +4205,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp177",
@@ -2386,7 +4231,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp178",
@@ -2397,7 +4257,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp187",
@@ -2408,7 +4283,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp188",
@@ -2447,7 +4337,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp206",
@@ -2495,7 +4400,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp217",
@@ -2525,7 +4445,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp225",
@@ -2536,7 +4471,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp245",
@@ -2575,7 +4525,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp248",
@@ -2605,7 +4570,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp249",
@@ -2626,7 +4606,22 @@
         }
       ],
       "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon"
+      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp250",
@@ -2637,7 +4632,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp251",
@@ -2648,7 +4658,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp253",
@@ -2659,7 +4684,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp257",
@@ -2670,7 +4710,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp262",
@@ -2681,7 +4736,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp282",
@@ -2692,7 +4762,22 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     },
     {
       "id": "sp288",
@@ -2703,7 +4788,26 @@
       "status": "MISSING",
       "clips": [],
       "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING"
+      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "sourceChecks": {
+        "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
+        "anwbSpeciesPassage": "NOT TESTED",
+        "sovonNLStatus": "NOT TESTED",
+        "ebirdSpeciesAndSeason": "NOT TESTED",
+        "ebirdReportingBias": "NOT TESTED",
+        "eBirdSpeciesCode": null,
+        "ebirdSourceURLs": [],
+        "ebirdSourceDates": [],
+        "rightsForAppUse": "NOT AUTHORIZED",
+        "macaulaySampleComparison": "NOT TESTED",
+        "macaulayReuse": "NOT AUTHORIZED",
+        "next": "Review eBird occurrence/season and media samples alongside Vogelbescherming/ANWB and Sovon; cite and record taxon code/date; do not copy protected raw data/audio."
+      },
+      "crossSourceConsistency": "NOT TESTED"
     }
-  ]
+  ],
+  "dataSourceProtocol": "docs/audio/BIRDSPOT_EBIRD_SOVON_AUDIO_BRONPROTOCOL_V0.1_DRAFT.md",
+  "eBirdPolicy": "eBird sightings/Status-and-Trends are reference-only; NO commercial eBird API/data ingestion, copies of maps, or public raw-data republication without prior explicit permission. Macaulay media require separate rights/license, not blanket free download.",
+  "sourceHierarchy": "Vogelbescherming + actual ANWB species passages for first morphology references; Sovon for NL status; eBird additional detection/distribution/season evidence; originals and licenses for each audio. Don't infer birds are absent from unreported areas.",
+  "reviewGateBeforeOtherSpecies": "Complete the 140 cohort across media/provenance/voice-type/distribution fields before expanding photo/audio work to outside-140 species. Individual exceptions allowed only with recorded unavailable-rights/biology evidence and owner's review; no fake media."
 }
