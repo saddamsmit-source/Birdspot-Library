@@ -1,0 +1,217 @@
+{
+  "schema": "birdspot-f2-28-proof-and-limitations-v1",
+  "date": "2026-11-15",
+  "basePR": 230,
+  "baseSha": "9eb68270d9a0005346e738397daecdf4b7fbe4b4",
+  "status": "PARTIALLY TESTED",
+  "scope": [
+    "sp084 Purperreiger",
+    "sp085 Kwak",
+    "sp086 Grauwe Gans"
+  ],
+  "comparisonPartner": "sp081 Blauwe Reiger, alleen de twee gebruikte foto’s herbeoordeeld.",
+  "sourceFacts": [
+    {
+      "species": "sp084",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/purperreiger",
+      "claims": "Slanke bouw, bruinoranje nek met donkere strepen, ver uitstekende tenen in vlucht en geelbruin jeugdkleed."
+    },
+    {
+      "species": "sp085",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kwak",
+      "claims": "Volwassen donker op kruin en rug met rood oog. Jonge vogels hebben bruine bovendelen met lichte druppelvlekken."
+    },
+    {
+      "species": "sp086",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grauwe-gans",
+      "claims": "Stevige oranjeroze snavel en een lichte voorzijde van de ondervleugel tegenover de donkere rest."
+    },
+    {
+      "species": "sp086",
+      "url": "https://blascozumeta.wimbitek.com/specie_files/01610_ENG_Anser_anser_aranzadi.pdf",
+      "claims": "Eerste najaar en tweede voorjaar: smalle jeugdlijke vleugeldekveren met beige uiteinden en geen buikstreping."
+    },
+    {
+      "species": "sp081",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/blauwe-reiger",
+      "claims": "Grijze vogel, lange lichte hals en forse snavel. In vlucht ingetrokken hals en uitstekende poten."
+    },
+    {
+      "species": "sp084",
+      "url": "https://blascozumeta.wimbitek.com/specie_files/01240_ENG_Ardea_purpurea_aranzadi.pdf",
+      "claims": "Jonge Purperreiger heeft donkere vleugeldekveren met brede lichte randen."
+    },
+    {
+      "species": "sp121",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kolgans",
+      "claims": "Volwassen witte kol en zwarte buikstrepen; bij jonge vogels ontbreken die grotendeels. Binnen de app bestaat tekstadvies, er is geen passende geregistreerde foto."
+    }
+  ],
+  "images": [
+    {
+      "species": "sp084",
+      "image": "/assets/showcase/sp084.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Purple_heron_in_Zimbabwe.jpg",
+      "registeredAuthor": "Bernard Gagnon",
+      "registeredLicense": "CC BY-SA 4.0",
+      "originalPageRead": true,
+      "sha256": "26ab813016d3f8da78398c189b3c78d6e24cce64c78e7f8e235bbdad18769d01",
+      "dimensions": [
+        1600,
+        1067
+      ],
+      "visualReview": "Bruinoranje hals met donkere lengtestrepen en slanke snavel. Rustbeeld uit Zimbabwe. Geslacht niet vastgesteld."
+    },
+    {
+      "species": "sp084",
+      "image": "/assets/species/plumage/sp084-juv-europa.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Gar%C3%A7a-vermelha%2C_juvenil%2C_Purple_Heron%2C_juvenile_%2850904679921%29.jpg",
+      "registeredAuthor": "Luiz Lapa",
+      "registeredLicense": "CC BY 2.0",
+      "originalPageRead": true,
+      "sha256": "5963f706d48d33e247be93c2243d79989ab63b8a8a82ee09eebd5ee7ca4adb54",
+      "dimensions": [
+        1400,
+        1029
+      ],
+      "visualReview": "Lichte randen om bruine vleugeldekveren, warmbruin jeugdkleed. Fotograaf noemt juveniel. Portugal."
+    },
+    {
+      "species": "sp084",
+      "image": "/assets/species/plumage/sp084-flight.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Purple_heron_in_flight_01.jpg",
+      "registeredAuthor": "Alexis Lours",
+      "registeredLicense": "CC BY 4.0",
+      "originalPageRead": true,
+      "sha256": "21f40d9e6f2da308af556897ab744ff79eb3ac872660f068ee5a524df3ad7240",
+      "dimensions": [
+        1400,
+        933
+      ],
+      "visualReview": "Vrije vlucht in Frankrijk, met hoekige halsbocht en ver uitstekende tenen. Geslacht en leeftijd niet gelabeld."
+    },
+    {
+      "species": "sp085",
+      "image": "/assets/showcase/sp085.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Nycticorax_nycticorax_5.jpg",
+      "registeredAuthor": "Mike & Chris",
+      "registeredLicense": "CC BY-SA 2.0",
+      "originalPageRead": true,
+      "sha256": "45638825d39cef05f342aedd748a79e7199d4eacb1e47177e19cc2fb538a690b",
+      "dimensions": [
+        1600,
+        1598
+      ],
+      "visualReview": "Volwassen rustbeeld uit New Jersey. Rood oog, zwarte kruin en mantel, grijze vleugel en lichte onderzijde. De fotograaf noemt volwassen."
+    },
+    {
+      "species": "sp085",
+      "image": "/assets/species/plumage/sp085-juv.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Nycticorax_nycticorax_young.jpg",
+      "registeredAuthor": "Matteo Sorrentino",
+      "registeredLicense": "CC BY-SA 3.0",
+      "originalPageRead": true,
+      "sha256": "bc66f27c73378394dc26aafe81d0a2c0f7d03d6985b27fcf0df58735e7d0ad20",
+      "dimensions": [
+        482,
+        720
+      ],
+      "visualReview": "Rustbeeld met losse lichte druppelvlekken op bruine vleugel en gestreepte borst. Bron noemt een jong."
+    },
+    {
+      "species": "sp085",
+      "image": "/assets/species/plumage/sp085-flight.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Black-crowned_night_heron_(Nycticorax_nycticorax)_in_flight.jpg",
+      "registeredAuthor": "Charles J. Sharp",
+      "registeredLicense": "CC BY-SA 4.0",
+      "originalPageRead": true,
+      "sha256": "b82b7cb156ce355e8594a945fa6d1eb01aced27042372616c85be6877b7f6cf3",
+      "dimensions": [
+        1400,
+        1267
+      ],
+      "visualReview": "Vrije vlucht bij Cyprus. Compact silhouet, korte hals, donkere snavel. Geen geslachtslabel."
+    },
+    {
+      "species": "sp086",
+      "image": "/assets/species/sp086.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Greylag_Goose_-_St_James%27s_Park,_London_-_Nov_2006.jpg",
+      "registeredAuthor": "David Iliff (Diliff)",
+      "registeredLicense": "CC BY-SA 3.0",
+      "originalPageRead": true,
+      "sha256": "c49a44cca5f6a8e3b4c3fd788c4f42994de8cf7bb9c3a3584bb665c96a9a88cf",
+      "dimensions": [
+        1600,
+        1318
+      ],
+      "visualReview": "Rustbeeld met forse oranje snavel, roze poten en bruingrijs verenkleed. Geslacht onbekend. Bron vermeldt verplichte naamsvermelding."
+    },
+    {
+      "species": "sp086",
+      "image": "/assets/species/plumage/sp086-flight.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Greylag_goose_(Anser_anser)_in_flight_Marken.jpg",
+      "registeredAuthor": "Charles J. Sharp",
+      "registeredLicense": "CC BY-SA 4.0",
+      "originalPageRead": true,
+      "sha256": "6c1a5847b4b5275862229c086614ad1b44a7d0076a8aa670512921196fc157a1",
+      "dimensions": [
+        1400,
+        933
+      ],
+      "visualReview": "Vrije vlucht bij Marken. De lichtgrijze voorzijde van de ondervleugel contrasteert met de donkere slagpennen. Oranje snavel zichtbaar."
+    },
+    {
+      "species": "sp086",
+      "image": "/assets/species/plumage/sp086-juv.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Graugans-Jungtier-Schwalm-Nette-2013-01.jpg",
+      "registeredAuthor": "Tuxyso / Wikimedia Commons",
+      "registeredLicense": "CC BY-SA 3.0",
+      "originalPageRead": true,
+      "sha256": "153f3a03a05b582443c14b4f048579ac9a605f1d561b0edb0482d6336aa10a4e",
+      "dimensions": [
+        1600,
+        1188
+      ],
+      "visualReview": "Donsjong met beginnende veren. De Commons-omschrijving noemt algemeen een jonge vogel. De lokale foto toont specifiek het donsstadium. Maker vraagt een herkenbare credit direct bij het beeld of elders met een duidelijke koppeling."
+    },
+    {
+      "species": "sp081",
+      "image": "/assets/species/plumage/sp081-juv.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Ardea_cinerea_juvenile_v2.jpg",
+      "registeredAuthor": "Ralf Hüsges",
+      "registeredLicense": "CC BY 2.0",
+      "originalPageRead": false,
+      "sha256": "a534fadb84a7ce0a2c1798754370500e48aecf67523e6ff7ca92b806e31d6177",
+      "dimensions": [
+        1600,
+        1376
+      ],
+      "visualReview": "Overwegend grijze kruin en vleugels zonder losse druppelvlekken. Opname past bij juveniel. Huidige bronpagina niet bereikbaar. Eerdere match en licentieregistratie aanwezig.",
+      "priorSourceMatch": {
+        "date": "2026-11-09",
+        "report": "docs/evidence/GUIDE_SOURCE_AUDIT_2026-11-09.json",
+        "inliers": 2039,
+        "recordedLicense": "CC BY 2.0"
+      }
+    },
+    {
+      "species": "sp081",
+      "image": "/assets/species/sp081.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Ardea_cinerea_in_flight.jpg",
+      "registeredAuthor": "Dinkum",
+      "registeredLicense": "CC0",
+      "originalPageRead": true,
+      "sha256": "37b731dfa5a617633c32d12314f665a1d2cde53442990dc8bcd2557af0ae679d",
+      "dimensions": [
+        1600,
+        862
+      ],
+      "visualReview": "Vrije vlucht. Lichte halsbocht, geeloranje snavel en naar achteren uitstekende poten. Bron bevestigt CC0."
+    }
+  ],
+  "open": [
+    "Actuele bron- en licentiehercontrole van sp081-juv.webp. Originele bestandspagina nu onbereikbaar.",
+    "Grauwe Gans: ouder juveniel en passende geregistreerde Kolgans-foto blijven open.",
+    "ANWB-soortpassages, nieuwe vergelijking origineel met WebP en fysieke Android-test blijven open."
+  ]
+}

@@ -857,22 +857,44 @@ export const GUIDE_COMPARISONS = [
     tip: 'Vergelijk de halsknik en tenen samen. De precieze vleugelstand wisselt per vleugelslag.',
   },
   {
-    "label": "Kwak en Blauwe Reiger · jonge vogels",
-    "birds": [
-      {
-        "id": "sp085",
-        "source": "kwak",
-        "marks": "Compact met opvallende lichte druppelvlekken op de bruine vleugels en lengtestrepen op de borst.",
-        "plumage": "juv"
-      },
-      {
-        "id": "sp081",
-        "source": "blauwe-reiger",
-        "marks": "Langer en grijzer, met een lange hals en zonder de duidelijke lichte druppelvlekken op de vleugels.",
-        "plumage": "juv"
-      }
+    label: 'Kwak en Blauwe Reiger · jonge vogels',
+    birds: [
+      {id: 'sp085', source: 'kwak', plumage: 'juv', photo: '/assets/species/plumage/sp085-juv.webp', marks: 'Compact met lichte druppelvlekken op de bruine vleugel en donkere lengtestrepen op de borst.'},
+      {id: 'sp081', source: 'blauwe-reiger', plumage: 'juv', photo: '/assets/species/plumage/sp081-juv.webp', marks: 'Grijze kruin en overwegend grijze vleugels zonder lichte druppelvlekken.'},
     ],
-    "tip": "Een ingetrokken hals maakt ook een Blauwe Reiger compact. Controleer daarom vooral het patroon op rug en vleugels."
+    rows: [
+      {label: 'Vleugel', values: ['Bruin, met losse lichte druppelvlekken.', 'Overwegend grijs, zonder die losse druppelvlekken.']},
+      {label: 'Kruin', values: ['Bruin, met lichte streepjes.', 'Overwegend grijs.']},
+      {label: 'Bouw', values: ['Compact.', 'Langere hals, op deze foto ingetrokken.']},
+    ],
+    tip: 'Een ingetrokken hals maakt ook een Blauwe Reiger compact. Kijk daarom eerst naar het vleugelpatroon.',
+  },
+  {
+    label: 'Kwak en Blauwe Reiger · in vlucht',
+    flight: true,
+    birds: [
+      {id: 'sp085', source: 'kwak', photo: '/assets/species/plumage/sp085-flight.webp', marks: 'Compact silhouet, donkere snavel en korte hals.'},
+      {id: 'sp081', source: 'blauwe-reiger', photo: '/assets/species/sp081.webp', marks: 'Forse reiger met een lichte halsbocht, gele dolksnavel en ver uitstekende poten.'},
+    ],
+    rows: [
+      {label: 'Hals', values: ['Korte hals dicht tegen het lichaam.', 'Langere, lichte hals die ook in vlucht ingetrokken is.']},
+      {label: 'Snavel', values: ['Op deze foto donker.', 'Op deze foto lang en geeloranje.']},
+      {label: 'Poten', values: ['Steken op deze foto kort uit achter de staart.', 'Steken duidelijk achter het lichaam uit.']},
+    ],
+    tip: 'Vergelijk het silhouet en de uitstekende poten. De foto’s zijn niet op dezelfde schaal.',
+  },
+  {
+    label: 'Kwak en Purperreiger · jonge vogels',
+    birds: [
+      {id: 'sp085', source: 'kwak', plumage: 'juv', photo: '/assets/species/plumage/sp085-juv.webp', marks: 'Gedrongen met losse lichte druppelvlekken op de bruine vleugel.'},
+      {id: 'sp084', source: 'purperreiger', plumage: 'juv', photo: '/assets/species/plumage/sp084-juv-europa.webp', marks: 'Slanker, met lichte randen rond bruine vleugeldekveren.'},
+    ],
+    rows: [
+      {label: 'Vleugel', values: ['Losse lichte druppelvlekken.', 'Lichte randen rondom de afzonderlijke veren.']},
+      {label: 'Hals', values: ['Kort en op deze foto ingetrokken.', 'Lang en slank.']},
+      {label: 'Snavel', values: ['Relatief kort en stevig.', 'Lang en fijn gepunt.']},
+    ],
+    tip: 'Beide jonge vogels zijn bruin. Begin bij het verschil tussen druppelvlekken en lichte veerranden.',
   },
   {
     "label": "Wilde Eend en Slobeend · vrouwtjes",

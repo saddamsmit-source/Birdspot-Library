@@ -718,6 +718,17 @@ def main():
             close_detail()
             print("F2-27 OK — complete volwassen, juveniele en vluchtparen van Blauwe Reiger en Purperreiger")
 
+            open_species("Kwak", "sp085")
+            grey_heron_card = cmp_card("Blauwe Reiger")
+            assert_photo_pair(cmp_tab(grey_heron_card, "Juveniel"), ["sp085-juv.webp", "sp081-juv.webp"])
+            assert_photo_pair(
+                cmp_tab(grey_heron_card, "In vlucht"), ["sp085-flight.webp", "sp081.webp"], in_flight=True,
+            )
+            purple_heron_card = cmp_card("Purperreiger")
+            assert_photo_pair(cmp_tab(purple_heron_card, "Juveniel"), ["sp085-juv.webp", "sp084-juv-europa.webp"])
+            close_detail()
+            print("F2-28 OK — Kwak tegenover Blauwe Reiger in rust en vlucht en tegenover jonge Purperreiger")
+
             open_species("Wintertaling", "sp091")
             teal_card = cmp_card("Zomertaling")
             assert_photo_pair(cmp_tab(teal_card, "Juveniel"), ["sp091-juv.webp", "sp188-juv.webp"])

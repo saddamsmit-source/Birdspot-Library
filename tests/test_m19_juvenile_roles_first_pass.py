@@ -224,7 +224,9 @@ def test_actual_mobile_cards():
                             assert f["ok"] and f["alt"] and f["src"].endswith(bird["flight"]), (sid,"flight",f)
                             assert len({img["src"],actual["src"],f["src"]})==3
                             if sid=="sp085":
-                                comparison = panel.locator(".sd-cmp-panel").filter(has_text="Blauwe Reiger")
+                                comparison = panel.locator(".sd-cmp-panel").filter(
+                                    has=page.locator('img[src$="sp081-juv.webp"]')
+                                )
                                 expect(comparison.locator(".sd-cmp-who small")).to_have_text(["Juveniel", "Juveniel"])
                                 expect(comparison.locator('img[src$="sp085-juv.webp"]')).to_have_count(1)
                                 expect(comparison.locator('img[src$="sp081-juv.webp"]')).to_have_count(1)
