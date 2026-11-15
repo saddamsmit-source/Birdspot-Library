@@ -163,8 +163,12 @@ def browser():
                                     sid, "incomplete Grote Stern/Visdief pose pair should not render")
                                 assert "Nog geen passende foto" not in panel.inner_text()
                             else:
-                                assert bird["similar"] in panel.inner_text(), (sid,"complete comparison missing")
-                                assert panel.locator(".sd-cmp-panel").count() >= 1
+                                assert bird["similar"] in panel.inner_text(), (sid,"comparison source information missing")
+                                # Some knowledge-only distinctions remain visible as text.
+                                # Any actual photo-comparison panel is required to be complete.
+                                for card in panel.locator(".sd-cmp-panel").all():
+                                    assert card.locator(".sd-cmp-who img").count() == 2, (
+                                        sid, "incomplete photo comparison rendered")
                             # A flight-as-hero must not be duplicated as a second
                             # file in the same species' plumage/flight galleries.
                             own_repeat=panel.locator(".sd-field-photo:not(.sd-similar *) img").evaluate_all(
