@@ -967,7 +967,7 @@ export const GUIDE_COMPARISONS = [
     label: 'Kuifeend en Topper · mannetjes in rust',
     birds: [
       {id: 'sp092', source: 'kuifeend', plumage: 'adult_m', marks: 'Zwarte rug, witte flanken en vaak een afhangende kuif.'},
-      {id: 'sp133', source: 'topper', plumage: 'adult_m', marks: 'Fijngetekende lichtgrijze rug en ronde kop zonder afhangende kuif.'},
+      {id: 'sp133', source: 'topper', plumage: 'adult_m', photoMissing: true, marks: 'Fijngetekende lichtgrijze rug en ronde kop zonder afhangende kuif.'},
     ],
     rows: [
       {label: 'Rug', values: ['Zwart', 'Lichtgrijs, fijn donker getekend']},
@@ -980,7 +980,7 @@ export const GUIDE_COMPARISONS = [
     label: 'Kuifeend en Topper · vrouwtjes in rust',
     birds: [
       {id: 'sp092', source: 'kuifeend', plumage: 'adult_f', marks: 'Bruin; vaak een korte kuif en soms wit rond de snavelbasis.'},
-      {id: 'sp133', source: 'topper', plumage: 'adult_f', marks: 'Bruin; vaak een bredere witte snavelbasis en een rond kopprofiel.'},
+      {id: 'sp133', source: 'topper', plumage: 'adult_f', photoMissing: true, marks: 'Bruin; vaak een bredere witte snavelbasis en een rond kopprofiel.'},
     ],
     rows: [
       {label: 'Kopprofiel', values: ['Soms een korte kuif', 'Rond, zonder duidelijke kuif']},
