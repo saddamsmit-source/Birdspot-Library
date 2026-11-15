@@ -1,0 +1,132 @@
+{
+  "schema": "birdspot-f2-26-proof-and-limitations-v1",
+  "date": "2026-11-15",
+  "basePR": 228,
+  "baseSha": "78b3ec66b93bd493d9879b2114bba87cb2447f87",
+  "status": "PARTIALLY TESTED",
+  "scope": [
+    "sp077 Fuut",
+    "sp078 Meerkoet",
+    "sp079 Waterhoen"
+  ],
+  "sourceFacts": [
+    {
+      "species": "sp077",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/fuut",
+      "claims": "Zomerkleed met roodbruine kraag, zwarte kopveren, gestreepte jongen; gelijkend kleed bij beide geslachten."
+    },
+    {
+      "species": "sp078",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/meerkoet",
+      "claims": "Donkergrijze vogel, witte snavel en bles; rode iris bij volwassen vogels."
+    },
+    {
+      "species": "sp079",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/waterhoen",
+      "claims": "Rode bles, snavel met gele punt en witte flanktekening; jong bruiner, zonder opvallend rood."
+    },
+    {
+      "species": "sp078/sp079",
+      "url": "https://commons.wikimedia.org/wiki/File:Eurasian_coot_2025_06_18.jpg",
+      "claims": "Fotograaf bevestigt oudere juveniele Meerkoet. De rijen over kleurverschillen bij jonge vogels beschrijven de daadwerkelijk getoonde foto’s."
+    }
+  ],
+  "images": [
+    {
+      "species": "sp077",
+      "image": "/assets/species/sp077.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Great_crested_grebe_swimming_2022-02-27.jpg",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "originalPageRead": true,
+      "sha256": "37ce905165a9a43927be5de5c6f272545c1d17c2b85cd56b7a8dc147a321d9c7",
+      "visualReview": "Fuut in zomerkleed. Zwarte kuif, roodbruine kraag en spitse snavel. Geslacht onbekend."
+    },
+    {
+      "species": "sp077",
+      "image": "/assets/species/plumage/sp077-juv.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Great_crested_grebe_%28Podiceps_cristatus%29_juvenile_France.jpg",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "originalPageRead": true,
+      "sha256": "1c52e308f3d2935ee604bbf6d5aac893043afdc0cd356601cb46a110c9ff8b9e",
+      "visualReview": "Zwemmend juveniel met zichtbare kopstrepen. De bron noemt juveniel expliciet."
+    },
+    {
+      "species": "sp078",
+      "image": "/assets/species/sp078.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Eurasian_Coot_2025_11_30_03.jpg",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "originalPageRead": true,
+      "sha256": "11d4d984deabaa4416c95a561eadb419d92a64b5602e4891d51cdf67ede3db35",
+      "visualReview": "Volwassen kleed, witte snavel en bles op donkere kop. Geslacht onbekend."
+    },
+    {
+      "species": "sp078",
+      "image": "/assets/species/plumage/sp078-flight.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Galeir%C3%A3o,_Coot_(50501136202).jpg",
+      "author": "Luiz Lapa",
+      "license": "CC BY 2.0",
+      "originalPageRead": false,
+      "sha256": "544868f94f0b42f1e31cbad88539b97b2ff08860126ebc0661774bd6ac4660d3",
+      "visualReview": "Vrije vlucht met witte snavel en bles en donkere vogel. De originele bestandspagina en Flickr-verwijzing waren niet leesbaar. Maker en licentie hieronder komen uit de bestaande registratie."
+    },
+    {
+      "species": "sp078",
+      "image": "/assets/species/plumage/sp078-juv.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Eurasian_coot_%28Fulica_atra%29_juvenile.jpg",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "originalPageRead": true,
+      "sha256": "3b6bfa849261fb215a813152c56cd15cb9a569d486c556bf4504f29eeba66c62",
+      "visualReview": "Donsjong met rood-oranje kop en zwart dons. Het bronwoord juveniel is algemeen; voor de kaart is dit een donsjong en geen partner voor het oudere jonge Waterhoen."
+    },
+    {
+      "species": "sp078",
+      "image": "/assets/species/plumage/sp078-juv-grown.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Eurasian_coot_2025_06_18.jpg",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "originalPageRead": true,
+      "sha256": "0600f701a8884bc6b83fba2abc2b0f3138bf649e4ab90005ffad9b1872824677",
+      "visualReview": "Ouder juveniel, lichte wang en keel. De bron noemt juveniel expliciet."
+    },
+    {
+      "species": "sp079",
+      "image": "/assets/species/sp079.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Common_moorhen_(Gallinula_chloropus)_France.jpg",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "originalPageRead": true,
+      "sha256": "c783c39f3b19b5fa88b0ed97c0c1b2aac4ffd0580a60fe87bd871460afa75f7f",
+      "visualReview": "Volwassen kleed, rode snavel met gele punt, rode bles en witte flankstreep. Geslacht onbekend."
+    },
+    {
+      "species": "sp079",
+      "image": "/assets/species/plumage/sp079-juv.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Common_Moorhen_%28Gallinula_chloropus%29_juvenile.jpg",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 3.0",
+      "originalPageRead": true,
+      "sha256": "6bd1c600f08d8b67e7f1f20b6b75ff8f26a6d396afe56810abdddd6338b57a50",
+      "visualReview": "Bruin jeugdkleed met lichte keel en witte flankstreep. De bron noemt juveniel expliciet."
+    },
+    {
+      "species": "sp079",
+      "image": "/assets/species/plumage/sp079-flight.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Common_Moorhen_(Gallinula_chloropus)_(49249725853).jpg",
+      "author": "Imran Shah",
+      "license": "CC BY-SA 2.0",
+      "originalPageRead": true,
+      "sha256": "0440ca50510bcd3b00ccb4dc7409f4f560536e5ef565a262537cda3928a30d3f",
+      "visualReview": "Vrije vlucht. Bruinig kleed en weinig rood passen bij een jonge vogel, zoals het bestaande bijschrift aangeeft. De bron geeft geen individuele leeftijd. Niet combineren met de Meerkoet in volwassen kleed."
+    }
+  ],
+  "open": [
+    "Meerkoet-vlucht: actuele originele bron- en licentiehercontrole open. Geen mediabestand of licentie gewijzigd.",
+    "Waterhoen-vlucht: individuele leeftijd niet door fotograaf vastgesteld. Het bestaande jonge kleedlabel is visueel passend.",
+    "Fuut: geen geregistreerd vluchtbeeld en geen passende tweede foto bij een vergelijkingspartner.",
+    "ANWB-soortpassages, origineel-WebP-pixelvergelijking, volledige rechtenaftekening en fysiek Android blijven open."
+  ]
+}

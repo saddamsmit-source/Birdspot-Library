@@ -1,7 +1,7 @@
 # Birdspot F2 — register open punten en uitgesteld fotoonderzoek
 
 **Eigenaarbesluit 14 november 2026 · Werkdocument (DRAFT, geen foto-PASS)**
-**Historische basis:** F2-15 `bccd09599a2b9fd7fb23771b3f6c262542b4c08a`; F2-20 voortzetting op PR #221 `fa05d08d203f656c5c7bce328c6deec6d3961632`, historische F2-19-bevindingen behouden. **Actuele reikwijdte (F2-25, 15 november 2026):** 66/140 soorten individueel opgepakt, 74/140 nog **NOT TESTED in F2**; het historische basischeckpoint van 51/140 uit F2-20 blijft in de onderliggende brondossiers bewaard. Geen van deze aantallen is gelijk aan een foto-PASS. Dit register is een index op de bestaande per-batch brondossiers, niet een vervanging van de canonieke 9-punts-audit.
+**Historische basis:** F2-15 `bccd09599a2b9fd7fb23771b3f6c262542b4c08a`; F2-20 voortzetting op PR #221 `fa05d08d203f656c5c7bce328c6deec6d3961632`, historische F2-19-bevindingen behouden. **Actuele reikwijdte (F2-26, 15 november 2026):** 69/140 soorten individueel opgepakt, 71/140 nog **NOT TESTED in F2**; het historische basischeckpoint van 51/140 uit F2-20 blijft in de onderliggende brondossiers bewaard. Geen van deze aantallen is gelijk aan een foto-PASS. Dit register is een index op de bestaande per-batch brondossiers, niet een vervanging van de canonieke 9-punts-audit.
 
 ## Hoe vervolgonderzoek te sturen
 
@@ -112,3 +112,14 @@ De tekst in de kolom 'Open uit bronronde' is overgenomen uit de laatste F2-voort
 ## Live-/release-gate — aparte status
 
 **Owner live-autorisatie aanwezig op 14-11-2026**, maar dat maakt een technische gate niet automatisch PASS. Publieke reviewbranch `21ce9060` en `main` `5bf67043` zijn de laatste rechtstreeks gelezen refs. De nieuwste F2-keten zit in open DRAFT-PR’s. **Open voordat deze updates publiek worden gezet:** onafhankelijk mobiel veldgebruik, ZIP-herstel op tweede toestel, update/rollback, fotorechten/credits, review van de gecombineerde release-SHA en controle van de effectieve hosting (GitHub Pages review vs. Vercel gekozen voor later). Zie het release-gatedossier voor het bewijs per stap. Werkelijke publicatie: **NOT DONE**; terugvalbasis behouden.
+
+
+### F2-26 · Fuut, Meerkoet en Waterhoen
+
+| Soort | Batch | Open uit bronronde |
+|---|---|---|
+| sp077 Fuut | F2-26 | Hoofdfoto en juveniel met bron en rollen herbeoordeeld. Nog geen geregistreerde vrije vlucht of volledige fotovergelijking met een verwante soort. |
+| sp078 Meerkoet | F2-26 | Leeftijdsvergelijking gebruikt het oudere juveniel. Donsjong blijft apart. Vrije vlucht visueel bevestigd, actuele bron-/licentiecheck bij die specifieke opname open. |
+| sp079 Waterhoen | F2-26 | Bron van vluchtfoto gevonden. Het bruine kleed past bij een jong, de maker noemt geen leeftijd. Vlucht blijft op de eigen kaart. Een passend even oud vluchtpaar ontbreekt. |
+
+[Beeldbewijs, bronnen en hashes](F2_26_BRON_EN_LIMIETEN.json). ANWB-soortpassages en origineel-WebP-pixelvergelijking blijven open.
