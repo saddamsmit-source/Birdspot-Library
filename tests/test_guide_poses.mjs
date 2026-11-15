@@ -475,5 +475,6 @@ if (!scaupHasApprovedMedia) {
 console.log('Kuifeend/Topper: species IDs, adult plumage pairs, non-diagnostic cautions and incomplete-photo gate checked');
 
 assert.match(KNOWLEDGE.sp092.caution.text, /topper/i, 'Kuifeend knowledge panel must show the topper confusion caution');
-assert.match(KNOWLEDGE.sp133.summary.text, /kuifeend/i, 'Topper must have a sourced initial identification profile');
+assert.ok(!KNOWLEDGE.sp133, 'KB-01 forbids knowledge profiles for unphotographed species');
+assert.match(recognitionPanel(greaterScaup), /lichtgrijze rug/i, 'Topper must remain recognizable via the public species summary');
 assert.ok(KNOWLEDGE.sp133.keyMarks.every(mark => mark.reliability === 'ondersteunend'), 'Topper markers must not be called decisive');
