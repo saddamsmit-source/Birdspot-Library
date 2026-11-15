@@ -40,7 +40,7 @@ def main():
    assert p.locator('#speciesSearch').input_value()==''
    p.locator('#speciesSearch').fill('Winterkoning')
    # Nested picker Back closes only the top layer; form values survive.
-   p.locator('#fab').click();p.locator('#sightLocation').fill('Terugtest')
+   p.locator('#fab').click();p.locator('[data-quick-action="seen"]').click();p.locator('#sightLocation').fill('Terugtest')
    p.locator('#speciesPickerBtn').click();p.go_back()
    p.locator('#speciesPickerOverlay').wait_for(state='detached')
    assert p.locator('#addSightingSheet').is_visible()

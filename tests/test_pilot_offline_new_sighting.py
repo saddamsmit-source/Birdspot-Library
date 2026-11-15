@@ -111,7 +111,7 @@ def main():
                 page.on("pageerror", lambda e: errors.append(str(e)))
                 boot(page, url)
                 assert page.evaluate("!navigator.onLine")
-                page.locator("#fab").click()
+                page.locator("#fab").click();page.locator('[data-quick-action="seen"]').click()
                 page.locator("#addSightingSheet").wait_for(state="visible", timeout=12000)
                 page.locator("#speciesPickerBtn").click()
                 page.locator("#spPickerSearch").fill("Koolmees")

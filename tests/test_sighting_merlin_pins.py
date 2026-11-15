@@ -73,7 +73,7 @@ def main():
             page=context.new_page();errors=[]
             page.on("pageerror",lambda e:errors.append(str(e)))
             page.goto("http://127.0.0.1:"+str(server.server_address[1])+"/",wait_until="domcontentloaded")
-            page.locator("#fab").click()
+            page.locator("#fab").click();page.locator('[data-quick-action="seen"]').click()
             page.locator("#addSightingSheet.open").wait_for(timeout=9000)
             select_species(page)
             page.locator('#sightingMore summary').click()
@@ -123,7 +123,7 @@ def main():
             assert all(f["sightingId"]==heard["id"] for f in files),files
 
             # Another observation of the very same species, now seen in Limburg.
-            page.locator("#fab").click()
+            page.locator("#fab").click();page.locator('[data-quick-action="seen"]').click()
             select_species(page)
             page.locator("#sightLocation").fill("Limburg testbos")
             page.locator('#sightingMore summary').click()
@@ -140,7 +140,7 @@ def main():
             assert page.evaluate("""() => JSON.parse(localStorage.getItem('birdspot-sightings')).sightings.some(s=>s.speciesId==='sp001' && ['seen','both'].includes(s.observationMethod))""")
 
             # Third sighting preserves the earlier visual evidence.
-            page.locator("#fab").click()
+            page.locator("#fab").click();page.locator('[data-quick-action="seen"]').click()
             select_species(page)
             third=save(page)
             assert len(third)==3
