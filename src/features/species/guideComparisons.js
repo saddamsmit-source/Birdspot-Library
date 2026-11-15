@@ -750,15 +750,47 @@ export const GUIDE_COMPARISONS = [
       {
         "id": "sp078",
         "source": "meerkoet",
-        "marks": "Witte snavel en witte voorhoofdsplaat; vrijwel geheel donker lichaam."
+        "photo": "/assets/species/sp078.webp",
+        "marks": "Witte snavel en bles, donker lichaam en zwarte kop."
       },
       {
         "id": "sp079",
         "source": "waterhoen",
-        "marks": "Rode snavel met gele punt, rood voorhoofd en een witte streep op de flank."
+        "photo": "/assets/species/sp079.webp",
+        "marks": "Rode snavel met gele punt en rode bles. Duidelijke witte flankstreep."
       }
     ],
-    "tip": "Bekijk vooral snavel en voorhoofd. Jonge vogels hebben deze volwassen kleuren nog niet."
+    rows: [
+      {label: 'Snavel', values: ['Wit.', 'Rood met een gele punt.']},
+      {label: 'Bles', values: ['Groot wit schild op het voorhoofd.', 'Rood schild boven de snavel.']},
+      {label: 'Flank', values: ['Donkergrijs zonder witte lengtestreep.', 'Witte lengtestreep langs de zij.']},
+    ],
+    "tip": "Begin bij de snavel en bles. Gebruik de flankstreep als extra kenmerk."
+  },
+  {
+    "label": "Meerkoet en Waterhoen · jonge vogels",
+    "birds": [
+      {
+        "id": "sp078",
+        "source": "meerkoet",
+        "plumage": "juv",
+        "photo": "/assets/species/plumage/sp078-juv-grown.webp",
+        "marks": "Op deze foto lichtgrijze wangen en keel. Een groot wit voorhoofdsschild ontbreekt nog."
+      },
+      {
+        "id": "sp079",
+        "source": "waterhoen",
+        "plumage": "juv",
+        "photo": "/assets/species/plumage/sp079-juv.webp",
+        "marks": "Bruine bovenzijde, lichte keel en witte flankstreep. Het voorhoofd heeft nog geen opvallende rode bles."
+      }
+    ],
+    rows: [
+      {label: 'Kop', values: ['Op deze foto zijn wang en keel lichtgrijs.', 'Op deze foto is de kop donkerder, met een lichtere keel.']},
+      {label: 'Bovenzijde', values: ['Op deze foto grijsbruin.', 'Op deze foto warmer bruin.']},
+      {label: 'Flank', values: ['Geen witte lengtestreep.', 'Witte lengtestreep zichtbaar.']},
+    ],
+    "tip": "Gebruik de flankstreep samen met de koptekening. Jonge vogels missen de opvallende bles van volwassen vogels."
   },
   {
     "label": "Blauwe Reiger en Purperreiger · volwassen",

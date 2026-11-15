@@ -282,3 +282,16 @@ Ook de reeds uitgesloten `sp056-flight.webp` (blob `7dada8e`) en `sp058-flight.w
 **Teller:** **66/140 unieke F2-soorten opgepakt; 74/140 nog niet individueel F2-gereviewd**. Dat is niet hetzelfde als 66 onafhankelijke volledige foto-PASS. Deze batch bewerkt uitsluitend de **eigen code-/test- en F2-registerbestanden**; alle bestaande WebP-, audio-, CC-/bronvelden, gebruikeropslag, serviceworker en publieke app ongewijzigd. De eigenaarregel uit norm v1.6 blijft van kracht: uitsluitend complete, houdingsjuiste fotoparen in `Lijkt op`.
 
 **Herstelbaar checkpoint:** basis [PR #227](https://github.com/saddamsmit-source/Birdspot-Library/pull/227) HEAD `bba81858ad7d22c378477b42c1fcca9f710ab47a` (25/25 historische CI-workflows groen). F2-25 blijft eigen DRAFT-PR en krijgt CI op de **eigen finale HEAD**, zonder merge naar `main`. Fysieke Android-invoer/opslag, offline, ZIP tweede toestel, rechten, geïntegreerde release en rollback blijven aparte gates; oude beveiligde preview niet vervangen vóór nieuwe CI.
+
+
+## F2-26 · Fuut, Meerkoet en Waterhoen
+
+| Soort | Hercontrole en wijziging | Open |
+|---|---|---|
+| sp077 Fuut | Zomerkleed en juveniel naast de soortgids en hun twee originele bestandspagina’s beoordeeld. | Vluchtbeeld en passend fotopaar met een verwante soort. |
+| sp078 Meerkoet | Volwassen foto, donsjong, ouder juveniel en vrije vlucht visueel gecontroleerd. Vergelijking met Waterhoen toont volwassenen en oudere juvenielen in aparte tabs. | Originele bestandspagina van de vluchtfoto niet bereikbaar tijdens deze batch. |
+| sp079 Waterhoen | Volwassen foto, juveniel en vlucht bekeken en drie originele bronpagina’s gelezen. Wederkerig fotopaar met Meerkoet, met drie kenmerken per leeftijdsgroep. | De bron vermeldt de leeftijd van de vliegende vogel niet. De vluchtfoto gebruikt de bestaande beschrijving op de eigen soortkaart. |
+
+Negen WebP’s geopend, acht originele bestandspagina’s gelezen. [Brondossier met rollen, makers, licenties en SHA-256](F2_26_BRON_EN_LIMIETEN.json). Foto’s van dezelfde leeftijd vergelijken. Bij Meerkoet verwijst het bronwoord ‘juveniel’ bij de foto van Charles J. Sharp naar een zichtbaar donsjong. De vergelijking gebruikt het oudere juveniel van Alexis Lours. De bestaande individuele vluchtfoto’s zijn beschikbaar bij de twee soorten. Een gezamenlijk vluchtpaar met verschillende leeftijdskleden is achterwege gelaten.
+
+**Teller** · 69/140 soorten opgepakt, 71/140 resterend. F2 is PARTIALLY TESTED. Basis [PR #228](https://github.com/saddamsmit-source/Birdspot-Library/pull/228) op `78b3ec66b93bd493d9879b2114bba87cb2447f87`. CAP-BIRD-012/015. Herstel via de basis-PR. De fysieke Android- en volledige releasecontroles blijven open.

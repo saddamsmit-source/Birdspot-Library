@@ -99,7 +99,7 @@ for (const s of SPECIES) {
 }
 assert.ok(checked >= 590 && flightSections >= 10);
 const verifiedJuvenileComparisonEntries = GUIDE_COMPARISONS.filter(e => e.birds.filter(b => b.plumage === 'juv').length >= 2);
-assert.equal(verifiedJuvenileComparisonEntries.length, 29, 'FV-06: expected 29 juvenile comparisons including both F2-20 resting pairs');
+assert.equal(verifiedJuvenileComparisonEntries.length, 30, 'FV-06: expected 30 juvenile comparisons including the F2-26 resting pair');
 assert.ok(verifiedJuvenileComparisonEntries.some(entry => entry.label === 'Goudhaantje en Vuurgoudhaan · juvenielen' &&
   entry.birds.some(b => b.id === 'sp063' && b.plumage === 'juv') &&
   entry.birds.some(b => b.id === 'sp064' && b.plumage === 'juv')),
@@ -274,6 +274,31 @@ for (const id of ['sp070', 'sp072', 'sp075']) {
 }
 assert.equal(byId.get('sp070').plumage.juv, null,
   'F2-25: do not present unsourced generic Skylark juvenile as individually established');
+
+// F2-26: compare matching age groups, with the older juvenile rather than the coot chick.
+for (const [label, images, plumage] of [
+  ['Meerkoet en Waterhoen · volwassen', ['sp078.webp', 'sp079.webp'], undefined],
+  ['Meerkoet en Waterhoen · jonge vogels', ['sp078-juv-grown.webp', 'sp079-juv.webp'], 'juv'],
+]) {
+  const pair = GUIDE_COMPARISONS.find(entry => entry.label === label);
+  assert.deepEqual(pair.birds.map(bird => [bird.id, bird.plumage]), [
+    ['sp078', plumage], ['sp079', plumage],
+  ]);
+  assert.equal(pair.rows.length, 3);
+  for (const id of ['sp078', 'sp079']) {
+    const panels = recognitionPanel(byId.get(id)).split('<div class="sd-cmp-panel"').slice(1);
+    assert.ok(panels.some(panel => !panel.startsWith(' data-cmp-panel data-cmp-flight') &&
+      images.every(image => panel.includes(image))), `F2-26 missing age-matched pair: ${id} ${label}`);
+  }
+}
+for (const id of ['sp078', 'sp079']) {
+  const html = recognitionPanel(byId.get(id));
+  assert.ok(html.includes('aria-label="In vlucht"'), `F2-26 existing separate flight photo missing: ${id}`);
+  assert.ok(!html.includes('data-cmp-panel data-cmp-flight'), `F2-26 must not pair differently aged flight photos: ${id}`);
+}
+const greatCrestedGrebe = recognitionPanel(byId.get('sp077'));
+assert.ok(greatCrestedGrebe.includes('sp077-juv.webp'));
+assert.ok(!greatCrestedGrebe.includes('data-cmp-panel') && !greatCrestedGrebe.includes('aria-label="In vlucht"'));
 
 const youngTits = GUIDE_COMPARISONS.find(entry => entry.label === 'Matkop en Glanskop · jonge vogels');
 assert.deepEqual(youngTits.birds.map(({id, plumage}) => [id, plumage]), [['sp031', 'juv'], ['sp032', 'juv']]);
