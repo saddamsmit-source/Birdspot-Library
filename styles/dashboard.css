@@ -588,7 +588,6 @@
   isolation: isolate;
   touch-action: pan-y;
 }
-.hotspot-map--live .leaflet-pane { z-index: 200; }
 .hotspot-map--live .leaflet-control-container { position: relative; z-index: 500; }
 .hotspot-map--live .leaflet-control-attribution {
   font-size: 10px;
