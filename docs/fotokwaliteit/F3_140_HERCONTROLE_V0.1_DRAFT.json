@@ -103,16 +103,35 @@
           "independentSecondReview": "NOT TESTED (F3)"
         },
         "findings": [
-          "Geen lokaal geregistreerde zang of roep"
+          "Geen lokaal geregistreerde zang of roep",
+          "Sovon en eBird links en vogelbescherming soortreferentie opgezocht; geen volledige datum-/model- of datarechtenclaim"
         ],
         "sourceReferences": [
           "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/houtduif",
-          "docs/fotokwaliteit/F3_R01_DUIVEN_HERCONTROLE_2026-11-15_DRAFT.md"
+          "docs/fotokwaliteit/F3_R01_DUIVEN_HERCONTROLE_2026-11-15_DRAFT.md",
+          "https://stats.sovon.nl/stats/soort/6700",
+          "https://science.ebird.org/en/status-and-trends/species/cowpig1/range-map",
+          "https://commons.wikimedia.org/wiki/File:Columba_palumbus_birdsong.ogg"
         ],
         "reviewedOriginalAudio": 0,
         "showcasePreview": "NOT TESTED ON F3",
         "independence": "NOT VERIFIED",
-        "fullPass": false
+        "fullPass": false,
+        "photoFilesInspected": 3,
+        "photoBlobSHAs": [
+          "cef01c89dc5f2ca790d45e7c5e8cf7c7792bc250",
+          "e8ab1b91733e8beffae29931be3719416f62a6a7",
+          "125332074f2ded4fc51633075196f56d3e013a36"
+        ],
+        "speciesLatin": "Columba palumbus",
+        "ebirdSpeciesCode": "cowpig1",
+        "audioCandidate": {
+          "uri": "https://commons.wikimedia.org/wiki/File:Columba_palumbus_birdsong.ogg",
+          "sourceRole": "SONG_OR_CALL_NOT_YET_AUDITIONED",
+          "rights": "NOT VERIFIED FOR BIRDSPOT",
+          "issue": "Bron noemt Ekster in achtergrond: mag geen vervuild voorbeeld worden zonder beluisteren/keuze",
+          "imported": false
+        }
       }
     },
     {
@@ -173,16 +192,36 @@
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
-          "Individuele oorsprong / determinatie van licht ogende vlucht-ondervleugel opnieuw vergelijken met origineel"
+          "Individuele oorsprong / determinatie van licht ogende vlucht-ondervleugel opnieuw vergelijken met origineel",
+          "Sovon en eBird links en vogelbescherming soortreferentie opgezocht; geen volledige datum-/model- of datarechtenclaim",
+          "Commons Columba_oenas1.jpg: Chris Cant, CC BY 2.0 metadata in deze ronde gelezen, afgeleide WebP-bytegelijkheid niet zelfstandig bevestigd"
         ],
         "sourceReferences": [
           "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/holenduif",
-          "docs/fotokwaliteit/F3_R01_DUIVEN_HERCONTROLE_2026-11-15_DRAFT.md"
+          "docs/fotokwaliteit/F3_R01_DUIVEN_HERCONTROLE_2026-11-15_DRAFT.md",
+          "https://stats.sovon.nl/stats/soort/6680",
+          "https://science.ebird.org/en/status-and-trends/species/stodov1/range-map",
+          "https://commons.wikimedia.org/wiki/File:Columba_oenas_-_Stock_Dove_XC489891.mp3"
         ],
         "reviewedOriginalAudio": 0,
         "showcasePreview": "NOT TESTED ON F3",
         "independence": "NOT VERIFIED",
-        "fullPass": false
+        "fullPass": false,
+        "photoFilesInspected": 3,
+        "photoBlobSHAs": [
+          "fc0ad25936f2f8c16205eac84fec582e362a18c1",
+          "c916463cace41ffeb2cebbb9e49ae35d5b3dd0e1",
+          "228927819c2ebed7bbd206049ed8868d455619f6"
+        ],
+        "speciesLatin": "Columba oenas",
+        "ebirdSpeciesCode": "stodov1",
+        "audioCandidate": {
+          "uri": "https://commons.wikimedia.org/wiki/File:Columba_oenas_-_Stock_Dove_XC489891.mp3",
+          "sourceRole": "SONG_OR_CALL_NOT_YET_AUDITIONED",
+          "rights": "NOT VERIFIED FOR BIRDSPOT",
+          "issue": "Specifieke originele opnamepagina/maker/licentie/akoestische zuiverheid nog NOT TESTED",
+          "imported": false
+        }
       }
     },
     {
@@ -242,16 +281,35 @@
           "independentSecondReview": "NOT TESTED (F3)"
         },
         "findings": [
-          "Geen lokaal geregistreerde zang of roep"
+          "Geen lokaal geregistreerde zang of roep",
+          "Sovon en eBird links en vogelbescherming soortreferentie opgezocht; geen volledige datum-/model- of datarechtenclaim"
         ],
         "sourceReferences": [
           "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/turkse-tortel",
-          "docs/fotokwaliteit/F3_R01_DUIVEN_HERCONTROLE_2026-11-15_DRAFT.md"
+          "docs/fotokwaliteit/F3_R01_DUIVEN_HERCONTROLE_2026-11-15_DRAFT.md",
+          "https://stats.sovon.nl/stats/soort/6840",
+          "https://science.ebird.org/en/status-and-trends/species/eucdov/abundance-map",
+          "https://commons.wikimedia.org/wiki/File:Streptopelia_decaocto_-_Eurasian_Collared_Dove_-_XC82758.ogg"
         ],
         "reviewedOriginalAudio": 0,
         "showcasePreview": "NOT TESTED ON F3",
         "independence": "NOT VERIFIED",
-        "fullPass": false
+        "fullPass": false,
+        "photoFilesInspected": 3,
+        "photoBlobSHAs": [
+          "97d6e4c864bef1d17c220daa7fce92a9846cf0bf",
+          "75d863d8053e0f542e0a3b7a7b5fdb2681560bf5",
+          "b96d2a4697ac833d76e49e4e8119c2dd5575799b"
+        ],
+        "speciesLatin": "Streptopelia decaocto",
+        "ebirdSpeciesCode": "eucdov",
+        "audioCandidate": {
+          "uri": "https://commons.wikimedia.org/wiki/File:Streptopelia_decaocto_-_Eurasian_Collared_Dove_-_XC82758.ogg",
+          "sourceRole": "SONG_OR_CALL_NOT_YET_AUDITIONED",
+          "rights": "NOT VERIFIED FOR BIRDSPOT",
+          "issue": "Bronlocatie/soort bekend, maar licentie, gehoorcontrole en bruikbare fragmentkeuze nog NIET onafhankelijk bevestigd",
+          "imported": false
+        }
       }
     },
     {
