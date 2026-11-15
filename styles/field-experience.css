@@ -83,26 +83,32 @@
   z-index: 1;
   padding: clamp(16px, 3vw, 28px);
   color: var(--focus-light);
+  --featured-text-edge: #10271f;
+  --featured-action-fill: rgb(16 39 31 / .30);
   overflow-wrap: anywhere;
 }
-.featured-birds__identification,
 .field-featured-notes,
 .field-featured-actions > .field-action {
-  background: var(--focus-ink);
+  background: var(--featured-action-fill);
   color: var(--focus-light);
-  border: 1px solid var(--field-selected);
+  border: 1px solid rgb(248 244 232 / .75);
   border-radius: var(--r-sm);
 }
 .featured-birds__identification {
   width: fit-content;
   max-width: 100%;
-  padding: 8px 12px;
+  padding: 9px 0;
+}
+#slideshow.featured-birds .featured-birds__caption :is(h2, p, em, .featured-birds__group, summary, .field-action) {
+  -webkit-text-stroke: 2px var(--featured-text-edge);
+  paint-order: stroke fill;
+  text-shadow: 0 1px 2px var(--featured-text-edge);
 }
 #slideshow.featured-birds .featured-birds__caption :is(p, em) {
   color: var(--focus-light);
   font-size: .875rem;
   line-height: 1.45;
-  text-shadow: none;
+  opacity: 1;
 }
 #slideshow.featured-birds .featured-birds__caption .field-eyebrow {
   margin: 0 0 6px;
@@ -112,14 +118,14 @@
   margin: 4px 0 2px;
   color: var(--focus-light);
   font-size: clamp(1.625rem, 5vw, 3.25rem);
-  text-shadow: none;
+  -webkit-text-stroke-width: 3px;
 }
 #slideshow.featured-birds .featured-birds__group {
   margin: 0;
-  padding: 3px 8px;
-  background: var(--field-selected);
+  padding: 3px 0;
+  background: transparent;
   border: none;
-  color: var(--brand);
+  color: var(--focus-light);
   font-size: .8125rem;
   text-transform: none;
   letter-spacing: 0;
@@ -215,7 +221,10 @@
   gap: 8px;
   margin-top: 8px;
 }
-.field-featured-notes[open] { flex-basis: 100%; }
+.field-featured-notes[open] {
+  flex-basis: 100%;
+  background: rgb(16 39 31 / .72);
+}
 .field-featured-notes summary {
   display: list-item;
   min-height: var(--hit-field);
@@ -226,8 +235,7 @@
 }
 .field-featured-notes p { margin: 0 10px 12px; }
 #slideshow .field-featured-actions > .field-action:active {
-  background: var(--field-selected);
-  color: var(--focus-ink);
+  background: rgb(16 39 31 / .68);
 }
 .field-photo-label,
 #screen-media .signature-media-type {
@@ -405,8 +413,7 @@
 }
 #screen-species .signature-species-hero :is(.signature-kicker, p),
 #screen-media .signature-page-hero :is(.signature-kicker, p),
-.profile-header .profile-header__sub,
-.signature-species-detail-intro .signature-eyebrow { color: var(--ink-2); font-size: .875rem; }
+.profile-header .profile-header__sub { color: var(--ink-2); font-size: .875rem; }
 .profile-header .profile-header__title { color: var(--ink); }
 .profile-screen .btn {
   min-height: var(--hit-field);
@@ -433,7 +440,6 @@
 #screen-species .species-search::placeholder { color: var(--muted); opacity: 1; }
 #screen-species .signature-species-hero-actions span { color: var(--ink-2); }
 #screen-species .signature-species-hero-actions button,
-.signature-species-detail-sheet .signature-species-media-link,
 #screen-media .film-studio-media-launch {
   min-height: var(--hit-field);
   background: var(--surface);

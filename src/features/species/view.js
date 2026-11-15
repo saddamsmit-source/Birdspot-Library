@@ -577,14 +577,16 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
             personalGuideSlot('hero', 'Hoofdfoto', stockHero) + '</div>' +
           '<div class="signature-species-detail-intro"><span class="signature-eyebrow">' + escHtml(s.family) + '</span>' +
             '<h2>' + escHtml(s.nameNL) + '</h2>' +
-            '<p><em>' + escHtml(s.nameSci) + '</em></p>' +
-            '<p>' + escHtml(s.nameEN || '') + '</p></div>' +
+            '<p class="signature-species-detail-names"><em lang="la">' + escHtml(s.nameSci) + '</em>' +
+            (s.nameEN ? '<span><span aria-hidden="true">· </span><span lang="en">' + escHtml(s.nameEN) + '</span></span>' : '') +
+            '</p></div>' +
         '</div>' +
-        '<div class="detail-section sd-photos"><div class="detail-section__label">Eigen vogelfoto’s</div>' +
+        '<section class="detail-section sd-photos" aria-labelledby="speciesPhotosTitle">' +
+          '<div class="sd-photos-head"><h3 class="detail-section__label" id="speciesPhotosTitle">Eigen vogelfoto’s</h3>' +
+          '<button type="button" class="signature-species-media-link" id="speciesDetailMedia" aria-label="Open Media Studio">Media Studio <span aria-hidden="true">↗</span></button></div>' +
           '<div class="signature-species-photo-grid" id="speciesDetailPhotos">' +
             '<div class="detail-photos-loading"><span class="spinner" aria-hidden="true"></span></div></div>' +
-          '<button type="button" class="signature-species-media-link" id="speciesDetailMedia">Open Media Studio ↗</button>' +
-        '</div>' +
+        '</section>' +
         tabBar('herkenning') +
         '<div class="sd-panel" id="sdPanel-herkenning" role="tabpanel" aria-labelledby="sdTab-herkenning">' + recognitionPanel(s, null, true) + '</div>' +
         '<div class="sd-panel" id="sdPanel-status" role="tabpanel" aria-labelledby="sdTab-status" hidden>' + statusPanel(s) + '</div>' +
@@ -747,7 +749,7 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
         (p.blob.type||p.type||'').startsWith('image/'));
       const gallery=sheet.querySelector('#speciesDetailPhotos');
       if(!imagePhotos.length) {
-        gallery.innerHTML='<div class="signature-species-empty-photo">Nog geen eigen foto’s van deze soort. Voeg bij een waarneming een foto toe.</div>';
+        gallery.innerHTML='<p class="signature-species-empty-photo">Nog geen foto bij een waarneming.</p>';
       } else {
         imagePhotos.forEach(photo=>{
           const url=getPhotoUrl(photo);
@@ -767,8 +769,8 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
           gallery.appendChild(button);
         });
         gallery.querySelector('.detail-photos-loading')?.remove();
-        const hero=sheet.querySelector('#detailThumb-'+speciesId);
-        if(hero && photoList[0] && !guidePhoto) {
+        const stock=sheet.querySelector('[data-guide-slot="hero"] .sd-guide-stock');
+        if(stock && photoList[0] && !guidePhoto) {
           const img=document.createElement('img');
           img.alt=s.nameNL;
           img.src=photoList[0].url;
@@ -778,8 +780,8 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
           button.dataset.guideImage = photoList[0].url;
           button.setAttribute('aria-label', 'Vergroot hoofdfoto');
           button.appendChild(img);
-          hero.closest('.signature-species-detail-hero').classList.add('has-guide-photo');
-          hero.replaceChildren(button);
+          stock.closest('.signature-species-detail-hero').classList.add('has-guide-photo');
+          stock.replaceChildren(button);
         }
       }
       const stats=sightingStats(matches, loadPlaces());
