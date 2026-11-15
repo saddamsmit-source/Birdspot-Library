@@ -30,7 +30,7 @@ Profielsleutel = bestaand Birdspot-ID (`spNNN`). Elke bewering is `{text, source
 | | `detail[]` | `topic`: bouw, kleed, gedrag, variatie, geslacht, leeftijd, vlucht | nee |
 | C Kritisch | `critical[]` | `feature, where, this, other, vs[], reliability, conditions, exceptions, supporting, sources` | ≥1 |
 | D Vergelijken | `similar[]` | `{id, why, sources}`; lege `sources` = bestaande Birdspot-vergelijking, zo getoond | nee |
-| E Geluid | `voice[]` | `kind`: zang, roep, alarm, vlucht | nee |
+| E Geluid | `voice[]` | `kind`: zang, roep, alarm, vlucht, roffel | nee |
 | F Leefgebied | `habitat[]` | `kind`: voorkeur, nederland, jacht | nee |
 | G Leefwijze | `life[]` | `kind`: voedsel, broeden, nest, trek | nee |
 | H Status | `status[]` | `kind`: voorkomen, aantal, trend, rodelijst, bescherming | nee |

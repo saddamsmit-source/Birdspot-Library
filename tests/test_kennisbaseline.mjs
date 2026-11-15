@@ -28,7 +28,7 @@ import { GUIDE_PHOTOS } from '../src/features/species/guidePhotos.js';
 import { GUIDE_COMPARISONS } from '../src/features/species/guideComparisons.js';
 import { GUIDE_HEROES, GUIDE_PLUMAGE, GUIDE_POSES } from '../src/features/species/guideMedia.js';
 import { recognitionPanel, statusPanel, wherePanel } from '../src/features/species/detailSections.js';
-import { knowledgeFor, quickPanel, recognitionDetails, criticalDetails, lifeDetails, whereDetails } from '../src/features/species/knowledgeSections.js';
+import { knowledgeFor, quickPanel, recognitionDetails, criticalDetails, lifeDetails, voiceDetails, whereDetails } from '../src/features/species/knowledgeSections.js';
 
 const byId = new Map(SPECIES.map(s => [s.id, s]));
 const ids = Object.keys(KNOWLEDGE);
@@ -212,6 +212,17 @@ for (const id of ids) {
   if (k.habitat?.length) assert.ok(wherePanel(s).includes('data-kb-section="leefgebied"'), `KB-05 ${id} leefgebied ontbreekt`);
 }
 console.log(`KB-05 OK — ${ids.length} proefsoorten: profielen en betrouwbaarheid intact, interne bronbewijzen, geen publieke bronverwijzingen`);
+
+for (const id of ['sp016', 'sp017']) {
+  const sound = voiceDetails(byId.get(id));
+  assert.match(sound, /<b>Roep<\/b>/, `${id} must show the call description`);
+  assert.match(sound, /<b>Roffel<\/b>/, `${id} must label drumming separately`);
+  assert.doesNotMatch(sound, /<b>Zang<\/b>/, `${id} must not label drumming as song`);
+}
+const lesserSpottedStatus = lifeDetails(byId.get('sp017'));
+assert.match(lesserSpottedStatus, /5\.800–7\.500 broedparen \(2018–2020\)/);
+assert.doesNotMatch(lesserSpottedStatus, /geverifieerd|https?:\/\//i);
+assert.ok(knowledgeFor('sp017').status.find(item => item.kind === 'aantal').sources.includes('SOV_KLEINE_BONTE_SPECHT'));
 
 // ── KB-06 / KB-07 ───────────────────────────────────────────────────────────
 let without = 0;

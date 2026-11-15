@@ -28,11 +28,12 @@ for(let i=0;i<rows.length;i++){
  assert.equal(x.seq,i+1);
  assert.equal(x.historic.audited,o.audited);
  assert.equal(x.historic.oldVerdict,o.verdict);
- assert.equal(x.historic.oldAssetCount,o.assets?.length||0);
+ assert.equal(x.historic.oldAssetCount,(o.assets||[]).filter(asset=>!asset.addedIn?.startsWith('F3-')).length);
  assert.equal(x.historic.oldF2Visited,f2Set.has(x.id),x.id+' previous F2 evidence drift');
  assert.equal(x.currentAssets.existingAudioCount,registered.length);
  assert.deepEqual(x.currentAssets.existingAudioPaths,registered.map(y=>y.audio));
  assert.deepEqual(x.currentAssets.imageSlots.map(y=>y.path),(o.assets||[]).map(y=>y.image));
+ assert.deepEqual(x.currentAssets.imageSlots.map(y=>y.addedIn),(o.assets||[]).map(y=>y.addedIn));
  for(const part of x.currentAssets.imageSlots){
   assert.ok(part.path?.startsWith('/assets/'),x.id+' image outside local assets');
   const file=new URL('..'+part.path,import.meta.url);
@@ -75,6 +76,7 @@ const counts={
  nextNotStarted:sum(x=>x.F3.status==='NOT STARTED'),
  secondBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R02'),
  thirdBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R03'),
+ fourthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R04'),
  contentInspected:sum(x=>x.F3.reviewedThisRound===true),
  contentComplete:sum(x=>x.F3.contentStatus==='CONTENT COMPLETE')
 };
@@ -84,10 +86,16 @@ assert.equal(counts.audioMissing,tracker.counts.withoutRegisteredAudio);
 const first=rows.filter(x=>x.F3.recheckBatch==='F3-R01');
 const second=rows.filter(x=>x.F3.recheckBatch==='F3-R02');
 const third=rows.filter(x=>x.F3.recheckBatch==='F3-R03');
+const fourth=rows.filter(x=>x.F3.recheckBatch==='F3-R04');
 assert.deepEqual(third.map(x=>x.id), ['sp006','sp007','sp008']);
 assert.deepEqual(third.map(x=>x.F3.photoFilesInspected),[5,6,6]);
 assert.deepEqual(third.map(x=>x.F3.reviewedOriginalAudio),[2,3,2]);
-for (const row of third) {
+assert.deepEqual(fourth.map(x=>x.id), ['sp009','sp016','sp017']);
+assert.deepEqual(fourth.map(x=>x.F3.photoFilesInspected),[6,5,3]);
+assert.deepEqual(fourth.map(x=>x.F3.reviewedOriginalAudio),[1,2,2]);
+const newPeregrine = '/assets/species/plumage/sp009-juv-flight.webp';
+assert.deepEqual(fourth.flatMap(x=>x.currentAssets.imageSlots.filter(y=>y.addedIn==='F3-R04').map(y=>y.path)), [newPeregrine]);
+for (const row of [...third, ...fourth]) {
  const { F3: review, currentAssets } = row;
  assert.equal(review.fullPass, false);
  assert.equal(review.status, 'IN CONTENT REVIEW / OPEN POINTS');
@@ -105,6 +113,7 @@ for (const row of third) {
   assert.ok(match.minimumNormalizedCorrelation >= 0.9 && match.minimumNormalizedCorrelation <= 1);
  }
 }
+assert.ok(fourth[0].F3.resolvedFindings.some(finding=>finding.path===newPeregrine));
 assert.deepEqual(second.map(x=>x.id), ['sp005','sp248','sp253']);
 assert.deepEqual(second.map(x=>x.F3.photoFilesInspected),[6,4,4]);
 for(const x of second){

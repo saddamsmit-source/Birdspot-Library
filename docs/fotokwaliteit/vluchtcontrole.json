@@ -2786,6 +2786,24 @@
    "rights": "VERIFIED",
    "rightsNote": "Rechtstreeks uit het Commons-origineel met bron-SHA-1, Charles J. Sharp, CC BY-SA 4.0.",
    "date": "2026-11-14"
+  },
+  "/assets/species/plumage/sp009-juv-flight.webp": {
+   "n": 151,
+   "id": "sp009",
+   "nameNL": "Slechtvalk",
+   "registry": "GUIDE_POSES[3]",
+   "sexLabel": null,
+   "class": "vlucht",
+   "quality": "goed",
+   "decision": "goedgekeurd",
+   "target": null,
+   "newLabel": null,
+   "newNote": null,
+   "reason": "Vrij in de lucht in zijaanzicht. Lengtestrepen en donkere baardstreep zichtbaar. Herkenbaar als juveniel.",
+   "airborne": true,
+   "rights": "VERIFIED",
+   "rightsNote": "Origineel en individuele fotopagina gecontroleerd op 2026-11-15. Josh Boe, CC BY 4.0.",
+   "reviewed": "2026-11-15"
   }
  }
 }

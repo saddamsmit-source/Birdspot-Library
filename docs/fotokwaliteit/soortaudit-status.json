@@ -1030,7 +1030,7 @@
    "family": "Valken",
    "audited": true,
    "batch": "M2",
-   "date": "2026-11-14",
+   "date": "2026-11-15",
    "sha": null,
    "assets": [
     {
@@ -1093,7 +1093,7 @@
     },
     {
      "image": "/assets/species/plumage/sp009-male-flight.webp",
-     "role": "In vlucht",
+     "role": "In vlucht (Volwassen)",
      "content": "Vrij in de lucht van onderen; vleugels gespreid.",
      "sexAge": "volwassen (iNaturalist: Adult, Male); terecht zonder geslachtslabel",
      "quality": "goed",
@@ -1137,14 +1137,48 @@
       "annotations": []
      },
      "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp009-juv-flight.webp",
+     "role": "In vlucht (Juveniel)",
+     "content": "Jonge Slechtvalk in vrije vlucht van opzij, met lengtestrepen op de borst, donkere baardstreep en spitse vleugels.",
+     "sexAge": "Juveniel op basis van bronwaarneming en lengtestrepen op de lichte onderzijde. Geslacht open.",
+     "quality": "goed: het silhouet, de onderzijde en baardstreep zijn zichtbaar",
+     "verdict": "goedgekeurd",
+     "addedIn": "F3-R04",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 15-11-2026: zelfde opname (Originele JPEG visueel getoetst; het lokale WebP komt direct en zonder andere uitsnede uit die JPEG.), CC BY 4.0 · Josh Boe",
+      "annotations": [
+       "Levensstadium juveniel",
+       "Geslacht niet aangegeven"
+      ]
+     },
+     "flight": {
+      "n": 151,
+      "id": "sp009",
+      "nameNL": "Slechtvalk",
+      "registry": "GUIDE_POSES[3]",
+      "sexLabel": null,
+      "class": "vlucht",
+      "quality": "goed",
+      "decision": "goedgekeurd",
+      "target": null,
+      "newLabel": null,
+      "newNote": null,
+      "reason": "Vrij in de lucht in zijaanzicht. Lengtestrepen en donkere baardstreep zichtbaar. Herkenbaar als juveniel.",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "Origineel en individuele fotopagina gecontroleerd op 2026-11-15. Josh Boe, CC BY 4.0.",
+      "reviewed": "2026-11-15"
+     }
     }
    ],
    "corrections": [
-    "Vijf gidsbeelden opnieuw naast het bronbestand gelegd. Dubbele fotoregistratie samengevoegd. Vluchtvergelijking met Torenvalk gebruikt beelden van beide volwassen vogels van onderen."
+    "Vijf gidsbeelden opnieuw naast het bronbestand gelegd. Dubbele fotoregistratie samengevoegd. Vluchtvergelijking met Torenvalk gebruikt beelden van beide volwassen vogels van onderen.",
+    "F3-R04: originele foto van een juveniele Slechtvalk in vrije vlucht toegevoegd. Bestaande rust- en vluchtbeelden behouden."
    ],
-   "missing": [
-    "Afzonderlijke foto van een juveniele Slechtvalk in vrije vlucht."
-   ],
+   "missing": [],
    "wishes": [],
    "uncertain": [],
    "sexPolicy": "Geslachten verschillen in grootte (Vogelbescherming). Geen geslachtslabels op het verenkleed.",
@@ -1157,7 +1191,7 @@
     "browser": "NOT TESTED",
     "independent": "NOT TESTED"
    },
-   "photoComplete": false,
+   "photoComplete": true,
    "knowledge": {
     "profile": true,
     "critical": 1,
@@ -1171,7 +1205,7 @@
    "browser": null,
    "errors": [],
    "verdict": "PARTIALLY TESTED",
-   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
+   "next": "Onafhankelijke review (ChatGPT)"
   },
   {
    "id": "sp016",

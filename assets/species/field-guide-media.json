@@ -6122,7 +6122,7 @@
       {
         "label": "Volwassen in vlucht",
         "flight": true,
-        "note": "Van onderen, met gespreide staart en spitse vleugels tegen de lucht. Het geslacht is geregistreerd in iNaturalist-waarneming 7528897.",
+        "note": "Van onderen, met gespreide staart en spitse vleugels tegen de lucht.",
         "file": "iNaturalist photo 9819028",
         "nl": "Slechtvalk",
         "latin": "Falco peregrinus",
@@ -6141,7 +6141,34 @@
         "image": "/assets/species/plumage/sp009-male-flight.webp",
         "sourceAudit": "2026-11-09",
         "sexNote": "Geslacht volgens de bron, maar bij de Slechtvalk niet aan het verenkleed te zien; daarom zonder geslachtslabel.",
-        "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+        "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+        "age": "adult",
+        "observation": "https://www.inaturalist.org/observations/7528897"
+      },
+      {
+        "label": "Juveniel in vlucht",
+        "age": "juvenile",
+        "flight": true,
+        "note": "Let op de donkere lengtestrepen op de lichte onderzijde en de brede donkere baardstreep.",
+        "file": "iNaturalist photo 251479995",
+        "nl": "Slechtvalk",
+        "latin": "Falco peregrinus",
+        "author": "Josh Boe",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://www.inaturalist.org/photos/251479995",
+        "showSourceLink": true,
+        "alt": "Jonge Slechtvalk in vrije vlucht van opzij, met lengtestrepen op de borst, donkere baardstreep en spitse vleugels.",
+        "modifications": "Omgezet naar WebP met behoud van de uitsnede. Bestandsmetadata verwijderd.",
+        "reviewed": "2026-11-15",
+        "verification": "Origineel bestand en iNaturalist-bron gecontroleerd. De waarneming is als juveniel geannoteerd en zichtbare lengtestrepen bevestigen de rol.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/slechtvalk",
+        "observation": "https://www.inaturalist.org/observations/146294458",
+        "visualCheck": "Jonge Slechtvalk in vrije vlucht van opzij, met lengtestrepen op de borst, donkere baardstreep en spitse vleugels.",
+        "width": 1238,
+        "height": 1105,
+        "image": "/assets/species/plumage/sp009-juv-flight.webp",
+        "flightReview": "goedgekeurd 2026-11-15: Vrij in de lucht in zijaanzicht. Lengtestrepen en donkere baardstreep zichtbaar. Herkenbaar als juveniel."
       }
     ],
     "sp019": [
