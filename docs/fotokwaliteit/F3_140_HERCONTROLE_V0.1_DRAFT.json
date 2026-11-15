@@ -43,7 +43,10 @@
     "audioMissing": 81,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 137
+    "nextNotStarted": 134,
+    "secondBatchStarted": 3,
+    "contentInspected": 6,
+    "contentComplete": 0
   },
   "records": [
     {
@@ -389,37 +392,61 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R02",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
+          "photoOriginalIdentity": "PARTIALLY TESTED (actual local photo files visually viewed; original upload pixel match not rechecked)",
+          "photoIndividualRights": "PARTIALLY TESTED (historic F2 credits + one Commons recheck; full individual legal signoff later)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (actual rest/free-flight/age images reviewed, role uncertainties logged)",
           "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "responsiveLayoutAndZoom": "NOT TESTED (later combined app UX/release test)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (separate PR #250 i UI tests PASS; not integrated with F3 base)",
+          "audioRecordingsAuthenticity": "NOT TESTED (registered media exists; original individual audio clips not independently auditioned)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (old author/license/source metadata retained; no new commercial signoff)",
+          "soundRolesSongCall": "PARTIALLY TESTED (labels and original source IDs reviewed, audio acoustics not independently reviewed)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (owner scheduled later)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming original online field facts checked; ANWB printed passage NOT TESTED)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (source-derived field diagnostics reviewed; biometrics not newly recalculated)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon original species pages checked; no new numerical imports)",
+          "ebirdDistributionAndBias": "PARTIALLY TESTED (eBird taxon + status/range reference checked; data not downloaded/copied)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (owner scheduled later)",
+          "endToEndGuideUI": "NOT TESTED (owner scheduled later)",
+          "independentSecondReview": "NOT TESTED (formal independent rights/age/audio review pending)"
         },
         "findings": [
           "Afzonderlijke juveniele foto in rust; juveniel is al geverifieerd in vrije vlucht.",
-          "De lichte buizerd op de hoofdfoto en de gearchiveerde donkere vluchtfoto zijn bij iNaturalist als mannetje geannoteerd. Individueel geslacht volgt niet betrouwbaar uit dit verenkleed. De app gebruikt het gedeelde volwassen label."
+          "De lichte buizerd op de hoofdfoto en de gearchiveerde donkere vluchtfoto zijn bij iNaturalist als mannetje geannoteerd. Individueel geslacht volgt niet betrouwbaar uit dit verenkleed. De app gebruikt het gedeelde volwassen label.",
+          "Zittende juveniel ontbreekt; juveniele vluchtfoto blijft correct onder vrije vlucht",
+          "Natuurlijke takfoto van Alexis Lours CC BY 4.0 bestaande, oude kabel-/watermerkfoto bewaard als extra rustbeeld",
+          "Mannelijke iNaturalist bronannotaties zijn niet hetzelfde als zelfstandig visueel bewezen mannelijke kleedrol; neutrale label handhaven"
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/buizerd",
+          "https://stats.sovon.nl/stats/soort/2870",
+          "https://science.ebird.org/en/status-and-trends/species/combuz1/range-map",
+          "docs/fotokwaliteit/F3_R02_DRIE_ROOFVOGELS_2026-11-15_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
         "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "independence": "PARTIAL / formal second independent rights+audio review outstanding",
+        "fullPass": false,
+        "photoFilesInspected": 6,
+        "photoBlobSHAs": [
+          "1585193a49bdbac3d11e85ec8ebe87b9b129e457",
+          "20260ecfdc850860291a93b8c27b089f76df964e",
+          "4bab071b236c7016ece2898153e23c26f883b381",
+          "032c10170ad5a8935ffb0778ba23a8a2a5e90bf3",
+          "5c91fb86d0289fe136e588ff584788dc42eeea73",
+          "f4a8e7a7e90870aa0475ab992f7336fb971fb9dd"
+        ],
+        "scientificName": "Buteo buteo",
+        "ebirdSpeciesCode": "combuz1",
+        "contentStatus": "PARTIALLY REVIEWED (visual photo/field facts; open gaps remain; not FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER until 140 CONTENT + UI/UX complete; test gate not waived",
+        "selectedHero": "/assets/species/sp005.webp",
+        "heroSource": "https://commons.wikimedia.org/wiki/File:Common_buzzard_2024-01-20.jpg",
+        "heroRights": "CC BY 4.0; actual Commons page checked; original WebP pixel identity old F2 evidence"
       }
     },
     {
@@ -8822,36 +8849,55 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R02",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
+          "photoOriginalIdentity": "PARTIALLY TESTED (actual local photo files visually viewed; original upload pixel match not rechecked)",
+          "photoIndividualRights": "PARTIALLY TESTED (historic F2 credits + one Commons recheck; full individual legal signoff later)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (actual rest/free-flight/age images reviewed, role uncertainties logged)",
           "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "responsiveLayoutAndZoom": "NOT TESTED (later combined app UX/release test)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (separate PR #250 i UI tests PASS; not integrated with F3 base)",
+          "audioRecordingsAuthenticity": "NOT TESTED (registered media exists; original individual audio clips not independently auditioned)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (old author/license/source metadata retained; no new commercial signoff)",
+          "soundRolesSongCall": "PARTIALLY TESTED (labels and original source IDs reviewed, audio acoustics not independently reviewed)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (owner scheduled later)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming original online field facts checked; ANWB printed passage NOT TESTED)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (source-derived field diagnostics reviewed; biometrics not newly recalculated)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon original species pages checked; no new numerical imports)",
+          "ebirdDistributionAndBias": "PARTIALLY TESTED (eBird taxon + status/range reference checked; data not downloaded/copied)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (owner scheduled later)",
+          "endToEndGuideUI": "NOT TESTED (owner scheduled later)",
+          "independentSecondReview": "NOT TESTED (formal independent rights/age/audio review pending)"
         },
         "findings": [
-          "Vrouwtje zittend"
+          "Vrouwtje zittend",
+          "Vrouwtje in rust ontbreekt; vrouwelijk vluchtbeeld klein maar geschikt om vleugel/staartvorm te zien",
+          "Huidige bron-hoofdfoto is feitelijk in vrije vlucht en bevat makerswatermerk; bronrechten behouden",
+          "Twee geluidsitems beide vluchtroep, geen onafhankelijke zang- of man/vrouw-geluidsclaim"
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wespendief",
+          "https://stats.sovon.nl/stats/soort/2310",
+          "https://science.ebird.org/en/status-and-trends/species/euhbuz1/downloads",
+          "docs/fotokwaliteit/F3_R02_DRIE_ROOFVOGELS_2026-11-15_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
         "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "independence": "PARTIAL / formal second independent rights+audio review outstanding",
+        "fullPass": false,
+        "photoFilesInspected": 4,
+        "photoBlobSHAs": [
+          "dc6ac75afefd412d6a30d76aa94496bf1c130bfc",
+          "1a6516b2b4d2fb86cde8dab7f313905d13da0ef6",
+          "208e7daedb8f6221244fea23b1c554e91d253344",
+          "350a1d96de8071bf06c04b8afb1c75b9d379351a"
+        ],
+        "scientificName": "Pernis apivorus",
+        "ebirdSpeciesCode": "euhbuz1",
+        "contentStatus": "PARTIALLY REVIEWED (visual photo/field facts; open gaps remain; not FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER until 140 CONTENT + UI/UX complete; test gate not waived"
       }
     },
     {
@@ -9118,38 +9164,57 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R02",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
+          "photoOriginalIdentity": "PARTIALLY TESTED (actual local photo files visually viewed; original upload pixel match not rechecked)",
+          "photoIndividualRights": "PARTIALLY TESTED (historic F2 credits + one Commons recheck; full individual legal signoff later)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (actual rest/free-flight/age images reviewed, role uncertainties logged)",
           "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "responsiveLayoutAndZoom": "NOT TESTED (later combined app UX/release test)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (separate PR #250 i UI tests PASS; not integrated with F3 base)",
+          "audioRecordingsAuthenticity": "BLOCKED (no licensed audio source registered)",
+          "audioLicenseAndAttribution": "NOT TESTED (no clip)",
+          "soundRolesSongCall": "NOT TESTED (no clip)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (owner scheduled later)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming original online field facts checked; ANWB printed passage NOT TESTED)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (source-derived field diagnostics reviewed; biometrics not newly recalculated)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon original species pages checked; no new numerical imports)",
+          "ebirdDistributionAndBias": "PARTIALLY TESTED (eBird taxon + status/range reference checked; data not downloaded/copied)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (owner scheduled later)",
+          "endToEndGuideUI": "NOT TESTED (owner scheduled later)",
+          "independentSecondReview": "NOT TESTED (formal independent rights/age/audio review pending)"
         },
         "findings": [
           "Afzonderlijke rustfoto van vrouwtje",
           "Afzonderlijke rustfoto van juveniel",
-          "Geen lokaal geregistreerde zang of roep"
+          "Geen lokaal geregistreerde zang of roep",
+          "Vrouwtje in rust en juveniel in rust ontbreken",
+          "Mannetje-vluchtbeeld toont deels gebogen vleugels en zachte definitie; markeer gewenste scherpere open-vluchtfoto",
+          "Geen enkele geregistreerde geluidsopname; Vogelbescherming noemt geluid in Nederland ongebruikelijk, geen willekeurige audiokopie of schijn-PASS"
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/ruigpootbuizerd",
+          "https://stats.sovon.nl/stats/soort/2900",
+          "https://science.ebird.org/en/status-and-trends/species/rolhaw/range-map",
+          "docs/fotokwaliteit/F3_R02_DRIE_ROOFVOGELS_2026-11-15_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
         "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "independence": "PARTIAL / formal second independent rights+audio review outstanding",
+        "fullPass": false,
+        "photoFilesInspected": 4,
+        "photoBlobSHAs": [
+          "132a97ab60600dca857edd82eadddc5b4e8d8a7a",
+          "a05f96336f02b34ce3baa263ec46672126c675aa",
+          "f55f27faf9eb7566245bf5b1e008b9fb1ac879f2",
+          "a89c54bc718b84faa4c2050e7ef0d89ae7a6a44a"
+        ],
+        "scientificName": "Buteo lagopus",
+        "ebirdSpeciesCode": "rolhaw",
+        "contentStatus": "PARTIALLY REVIEWED (visual photo/field facts; open gaps remain; not FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER until 140 CONTENT + UI/UX complete; test gate not waived"
       }
     },
     {
@@ -9356,5 +9421,11 @@
         "fullPass": false
       }
     }
-  ]
+  ],
+  "executionPolicyUpdate": {
+    "date": "2026-11-15",
+    "ownerDecision": "UI/UX and complete photo/audio source content first; practical Android, Merlin, offline, ZIP and functional end-to-end QA later on one integrated build. Do not stop the next three-bird media batch while previous species have noted source/media gaps.",
+    "boundary": "Content visually reviewed is not media-rights VERIFIED or release PASS. No audio invention, no source attribution hidden where license requires directly visible credit. All ordinary source references behind accessible i.",
+    "technicalStage": "DEFERRED, NOT WAIVED"
+  }
 }
