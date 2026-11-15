@@ -327,10 +327,16 @@ export function voicePanel(s, voice, sourced = '') {
     <audio controls preload="none" src="${esc(assetUrl(clip.audio))}" aria-label="${esc(clip.label)} van ${esc(s.nameNL)}"></audio>
     <p class="sd-audio-error" hidden role="status">Deze opname is nu niet beschikbaar.</p>
   </div>`);
-  const credits = clips.map(clip => `<li><strong>${esc(clip.label)}</strong>${clip.file ? `<span>${esc(clip.file)}</span>` : ''}${mediaCredit(clip)}</li>`);
+  // The visible player contains only the useful voice type. Original filenames,
+  // author, license, source and editing notes remain in the canonical media registry.
+  const credits = clips.map(clip => `<li><strong>${esc(clip.label)}</strong>${mediaCredit(clip)}</li>`);
   return `${title}${players.join('')}<details class="sd-audio-credits">
-    <summary>Opname-informatie en credits</summary>
-    ${description}<ul>${credits.join('')}</ul>
+    <summary aria-label="Informatie en bronvermelding bij deze geluidsopnamen"
+      title="Informatie over de opnamen"><span class="sd-audio-info-symbol" aria-hidden="true">i</span></summary>
+    <div class="sd-audio-credits-content">
+      <strong class="sd-audio-credits-title">Opname-informatie en credits</strong>
+      ${description}<ul>${credits.join('')}</ul>
+    </div>
   </details>`;
 }
 
