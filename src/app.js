@@ -22,6 +22,7 @@ import { renderJournal }    from './features/journal/view.js';
 import { renderInsights }   from './features/insights/view.js';
 import { renderFilmStudio } from './features/film/view.js';
 import { openAddSheet }     from './features/sightings/addSheet.js';
+import { openQuickAdd }      from './features/sightings/quickAdd.js';
 
 // ── Routes ────────────────────────────────────────────────
 const ROUTES = {
@@ -127,19 +128,17 @@ document.getElementById('app-nav').addEventListener('click', e => {
   navigate(btn.dataset.route);
 });
 
-// ── FAB-klik → waarneming toevoegen ───────────────────────
+// ── FAB-klik → kiezen tussen direct waarnemen en gratis Merlin ──────────
 document.getElementById('fab').addEventListener('click', () => {
-  openAddSheet({
-    onSaved: () => {
-      // Als we op home staan: herlaad home zodat recentSightings bijgewerkt is.
-      // Als we op sightings staan (of ergens anders): navigeer naar sightings.
-      if (currentRoute === 'home') {
-        navigate('home', { force: true });
-      } else {
-        navigate('sightings', { force: true });
-      }
-    },
-  });
+  openQuickAdd({ onChoose: initial => {
+    openAddSheet({
+      initial,
+      onSaved: () => {
+        if (currentRoute === 'home') navigate('home', { force: true });
+        else navigate('sightings', { force: true });
+      },
+    });
+  }});
 });
 
 // ── Toast utility ─────────────────────────────────────────
