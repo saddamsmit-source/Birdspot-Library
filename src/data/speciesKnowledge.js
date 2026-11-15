@@ -4469,6 +4469,50 @@ const DATA = {
    "checked": "2026-11-15",
    "certainty": "hoog",
    "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "SOV_GAAI": {
+   "register": "NL01",
+   "label": "Sovon — Gaai",
+   "url": "https://stats.sovon.nl/stats/soort/15390",
+   "edition": "Online soortpagina",
+   "scope": "Nederland",
+   "confirms": "Broedparen in 2018–2020 en landelijke broedtrend",
+   "checked": "2026-11-15",
+   "certainty": "hoog",
+   "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "SOV_KOOLMEES": {
+   "register": "NL01",
+   "label": "Sovon — Koolmees",
+   "url": "https://stats.sovon.nl/stats/soort/14640",
+   "edition": "Online soortpagina",
+   "scope": "Nederland",
+   "confirms": "Broedparen in 2018–2020 en landelijke broedtrend",
+   "checked": "2026-11-15",
+   "certainty": "hoog",
+   "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "SOV_PIMPELMEES": {
+   "register": "NL01",
+   "label": "Sovon — Pimpelmees",
+   "url": "https://stats.sovon.nl/stats/soort/14620",
+   "edition": "Online soortpagina",
+   "scope": "Nederland",
+   "confirms": "Broedparen in 2018–2020 en landelijke broedtrend",
+   "checked": "2026-11-15",
+   "certainty": "hoog",
+   "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "BZH_GAAI": {
+   "register": "nieuwe soortreferentie",
+   "label": "Blasco-Zumeta & Heinze — Eurasian Jay",
+   "url": "https://blascozumeta.wimbitek.com/specie_files/15390_ENG_Garrulus_glandarius_aranzadi.pdf",
+   "edition": "Online soortprofiel",
+   "scope": "Europa",
+   "confirms": "Jeugdkleed, kruintekening en uiterlijke overeenkomst van de geslachten",
+   "checked": "2026-11-15",
+   "certainty": "hoog",
+   "publisher": "Javier Blasco-Zumeta & Gerd-Michael Heinze"
   }
  },
  "profiles": {
@@ -8125,9 +8169,16 @@ const DATA = {
    "detail": [
     {
      "topic": "geslacht",
-     "text": "De bron beschrijft geen verschil tussen man, vrouw of jong; Birdspot toont geen geslachtslabels.",
+     "text": "Mannetje en vrouwtje lijken op elkaar.",
      "sources": [
-      "VB_GAAI"
+      "BZH_GAAI"
+     ]
+    },
+    {
+     "topic": "leeftijd",
+     "text": "Jonge Gaaien lijken al op volwassen vogels. De kruin is vaak minder gestreept en het kleed kan zachter ogen.",
+     "sources": [
+      "BZH_GAAI"
      ]
     }
    ],
@@ -8167,17 +8218,24 @@ const DATA = {
    ],
    "status": [
     {
-     "kind": "aantal",
-     "text": "47.000–68.000 broedparen (2018–2020); in het najaar soms invasies uit Oost- en Noord-Europa.",
+     "kind": "voorkomen",
+     "text": "Nederlandse Gaaien zijn jaarrond aanwezig. In het najaar zijn er soms invasies uit Oost-, Midden- of Noord-Europa.",
      "sources": [
-      "VB_GAAI"
+      "SOV_GAAI"
+     ]
+    },
+    {
+     "kind": "aantal",
+     "text": "47.000–68.000 broedparen (2018–2020).",
+     "sources": [
+      "SOV_GAAI"
      ]
     },
     {
      "kind": "trend",
-     "text": "Sinds 1990 geen significante verandering.",
+     "text": "Het aantal broedvogels nam toe sinds 1990. In de laatste twaalf meetjaren is geen duidelijke verandering aangetoond.",
      "sources": [
-      "VB_GAAI"
+      "SOV_GAAI"
      ]
     }
    ],
@@ -8199,7 +8257,7 @@ const DATA = {
    ],
    "discrepancies": [],
    "open": [
-    "Juveniel kleed niet uit een bron beschreven; geen gidsfoto van een juveniel."
+    "Een afzonderlijk opnamevoorbeeld van de zachte zang met imitaties staat open."
    ]
   },
   "sp065": {
@@ -11705,6 +11763,20 @@ const DATA = {
       "VB_KOOL"
      ],
      "kind": "voorkomen"
+    },
+    {
+     "kind": "aantal",
+     "text": "400.000–700.000 broedparen (2018–2020).",
+     "sources": [
+      "SOV_KOOLMEES"
+     ]
+    },
+    {
+     "kind": "trend",
+     "text": "Het aantal broedvogels nam toe sinds 1990 en ook in de laatste twaalf meetjaren.",
+     "sources": [
+      "SOV_KOOLMEES"
+     ]
     }
    ],
    "life": [
@@ -11848,6 +11920,20 @@ const DATA = {
       "VB_PIMPEL"
      ],
      "kind": "voorkomen"
+    },
+    {
+     "kind": "aantal",
+     "text": "250.000–400.000 broedparen (2018–2020).",
+     "sources": [
+      "SOV_PIMPELMEES"
+     ]
+    },
+    {
+     "kind": "trend",
+     "text": "Het aantal broedvogels nam toe sinds 1990 en ook in de laatste twaalf meetjaren.",
+     "sources": [
+      "SOV_PIMPELMEES"
+     ]
     }
    ],
    "life": [

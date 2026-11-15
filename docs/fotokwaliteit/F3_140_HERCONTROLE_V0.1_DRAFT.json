@@ -16,7 +16,8 @@
     "thirdBatch": "docs/fotokwaliteit/F3_R03_SPERWER_HAVIK_TORENVALK_2026-11-15_DRAFT.md",
     "fourthBatch": "docs/fotokwaliteit/F3_R04_SLECHTVALK_EN_BONTE_SPECHTEN_2026-11-15_DRAFT.md",
     "fifthBatch": "docs/fotokwaliteit/F3_R05_DRIE_SPECHTEN_2026-11-15_DRAFT.md",
-    "sixthBatch": "docs/fotokwaliteit/F3_R06_EKSTER_KRAAI_KAUW_2026-11-15_DRAFT.md"
+    "sixthBatch": "docs/fotokwaliteit/F3_R06_EKSTER_KRAAI_KAUW_2026-11-15_DRAFT.md",
+    "seventhBatch": "docs/fotokwaliteit/F3_R07_GAAI_EN_MEZEN_2026-11-15_DRAFT.md"
   },
   "requiredChecks": [
     "photoOriginalIdentity",
@@ -43,18 +44,19 @@
     "oldF2Touched": 84,
     "oldAudited": 101,
     "oldNinePointVerified": 15,
-    "audioPresent": 62,
-    "audioMissing": 78,
+    "audioPresent": 64,
+    "audioMissing": 76,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 122,
+    "nextNotStarted": 119,
     "secondBatchStarted": 3,
-    "contentInspected": 18,
+    "contentInspected": 21,
     "contentComplete": 0,
     "thirdBatchStarted": 3,
     "fourthBatchStarted": 3,
     "fifthBatchStarted": 3,
-    "sixthBatchStarted": 3
+    "sixthBatchStarted": 3,
+    "seventhBatchStarted": 3
   },
   "records": [
     {
@@ -2287,43 +2289,139 @@
             "role": "In vlucht",
             "path": "/assets/species/plumage/sp026-flight.webp",
             "oldRights": "VERIFIED"
+          },
+          {
+            "role": "Verenkleed (Juveniel)",
+            "path": "/assets/species/plumage/sp026-juv-review.webp",
+            "oldRights": "NOT TESTED",
+            "addedIn": "F3-R07"
           }
         ],
-        "existingAudioCount": 0,
-        "existingAudioPaths": []
+        "existingAudioCount": 1,
+        "existingAudioPaths": [
+          "/assets/species/audio/sp026-call-app.mp3"
+        ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R07",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (3 compared to the current original file; 0 retained F2 matches)",
+          "photoIndividualRights": "PARTIALLY TESTED (individual source and license evidence documented, separate second review pending)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (actual resting, juvenile and flight roles checked; caption and visible features compared)",
+          "photoPairComparisons": "PARTIALLY TESTED (targeted Chromium comparison at 360 and 390 px)",
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium at 360 and 390 px; phone pending)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (players and accessible credits disclosure checked in Chromium)",
+          "audioRecordingsAuthenticity": "PARTIALLY TESTED (1 signal matches and 0 source without signal match; see evidence)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (individual attribution and linked license checked; independent review pending)",
+          "soundRolesSongCall": "PARTIALLY TESTED (individual recording labels verified against primary sources)",
+          "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (local audio played in Chromium; integrated offline test pending)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (original Vogelbescherming species page consulted; printed ANWB passage pending)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (visible recognition and national trends updated; complete biometry recheck pending)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon individual Dutch breeding estimates and trend windows checked)",
+          "ebirdDistributionAndBias": "PARTIALLY TESTED (Cornell species codes checked; full seasonal maps not directly available)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "endToEndGuideUI": "PARTIALLY TESTED (targeted Chromium on 360 and 390 px; integrated device phase pending)",
+          "independentSecondReview": "NOT TESTED (second reviewer pending)"
         },
         "findings": [
-          "Juveniel",
-          "Geen lokaal geregistreerde zang of roep"
+          "Juvenielenfoto toegevoegd vanuit iNaturalist-waarneming 167784207. De vogel heeft zachter ogend kleed en een minder getekende kruin. De linker fotokant snijdt een deel van de staart af.",
+          "Eerste roepopname toegevoegd. Het bestand is afgezet tegen dezelfde auteursopname XC334851 die de Commons-bron vermeldt.",
+          "Sovon vermeldt toename van de broedpopulatie sinds 1990 en geen duidelijke verandering in de laatste twaalf meetjaren."
         ],
-        "sourceReferences": [],
-        "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/gaai",
+          "https://stats.sovon.nl/stats/soort/15390",
+          "https://science.ebird.org/en/status-and-trends/species/eurjay1/range-map",
+          "docs/fotokwaliteit/F3_R07_GAAI_EN_MEZEN_2026-11-15_DRAFT.md",
+          "docs/evidence/GUIDE_SOURCE_AUDIT_2026-11-15_F3_R07.json"
+        ],
+        "reviewedOriginalAudio": 1,
+        "showcasePreview": "LOCAL BROWSER at 360 and 390 px: targeted guide and media review",
+        "independence": "PARTIAL / independent ornithological and acoustic review outstanding",
+        "fullPass": false,
+        "photoFilesInspected": 3,
+        "scientificName": "Garrulus glandarius",
+        "ebirdSpeciesCode": "eurjay1",
+        "photoBlobSHAs": [
+          "6851a2ebbd35f8d02aa7552d7a9cd0cc4d253c59",
+          "71f6e92481749ea364b04fc1e09e4c789832a265",
+          "53e9d1b58f069e774488f8ef4b6c27d0c162c7ad"
+        ],
+        "photoSourceMatches": [
+          {
+            "path": "/assets/species/sp026.webp",
+            "source": "https://commons.wikimedia.org/wiki/File:Eichelh%C3%A4her_mit_Eichel_im_Schnabel_im_Geo-Naturpark_Bergstra%C3%9Fe-Odenwald.jpg",
+            "localSize": [
+              1600,
+              1067
+            ],
+            "author": "Hwbund",
+            "license": "CC BY-SA 4.0",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Eichelh%C3%A4her_mit_Eichel_im_Schnabel_im_Geo-Naturpark_Bergstra%C3%9Fe-Odenwald.jpg",
+            "originalSha256": "598c6e81b1011786ce0bb2d426ef8ea2a76b6b3b73da9cf60c79b344b47ef406",
+            "sourceSize": [
+              5400,
+              3600
+            ],
+            "comparison": "Bestaande appfoto visueel met de originele opname vergeleken."
+          },
+          {
+            "path": "/assets/species/plumage/sp026-flight.webp",
+            "source": "https://commons.wikimedia.org/wiki/File:075_Wild_Eurasian_jay_in_flight_at_the_Parc_naturel_r%C3%A9gional_Jura_vaudois_Photo_by_Giles_Laurent.jpg",
+            "localSize": [
+              1400,
+              933
+            ],
+            "author": "Giles Laurent (gileslaurent.com)",
+            "license": "CC BY-SA 4.0",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/a/aa/075_Wild_Eurasian_jay_in_flight_at_the_Parc_naturel_r%C3%A9gional_Jura_vaudois_Photo_by_Giles_Laurent.jpg",
+            "originalSha256": "09f9253153fdbeef120b6bc40238a541e3bb9f813785f5f116fda1b73e5d3283",
+            "sourceSize": [
+              2525,
+              1683
+            ],
+            "comparison": "Bestaande appfoto visueel met de originele opname vergeleken."
+          },
+          {
+            "path": "/assets/species/plumage/sp026-juv-review.webp",
+            "source": "https://www.inaturalist.org/photos/290699043",
+            "localSize": [
+              960,
+              1280
+            ],
+            "author": "Tim",
+            "license": "CC BY 4.0",
+            "sourceFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/290699043/original.jpeg",
+            "originalSha256": "f08ad30bda3268dab456ff578ce06848aaf93200364ff1153798e3d3371ecb46",
+            "sourceSize": [
+              1536,
+              2048
+            ],
+            "comparison": "Afgeleid van de individueel gecontroleerde JPEG."
+          }
+        ],
+        "priorPhotoMatches": [],
+        "audioSourceMatches": [
+          {
+            "path": "/assets/species/audio/sp026-call-app.mp3",
+            "source": "https://commons.wikimedia.org/wiki/File:DM550GarrulusGlandariusCallSlovakia.ogg",
+            "sourceFile": "https://xeno-canto.org/334851/download",
+            "originalSha256": "ba6a3d48257555135b1ed553c7943d599bf32962c64c369b713b952ddd8739b5",
+            "windows": 3,
+            "minimumNormalizedCorrelation": 0.9694,
+            "offsetsSeconds": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "duration": 8.15
+          }
+        ],
+        "unmatchedAudio": [],
+        "contentStatus": "PARTIALLY REVIEWED (photos, Dutch status, paired mobile UI, recordings and selected primary sources reviewed)",
+        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed."
       }
     },
     {
@@ -2366,40 +2464,182 @@
             "oldRights": "VERIFIED"
           }
         ],
-        "existingAudioCount": 0,
-        "existingAudioPaths": []
+        "existingAudioCount": 2,
+        "existingAudioPaths": [
+          "/assets/species/audio/sp029-song-app.mp3",
+          "/assets/species/audio/sp029-call-app.mp3"
+        ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R07",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (5 compared to the current original file; 0 retained F2 matches)",
+          "photoIndividualRights": "PARTIALLY TESTED (individual source and license evidence documented, separate second review pending)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (actual resting, juvenile and flight roles checked; caption and visible features compared)",
+          "photoPairComparisons": "PARTIALLY TESTED (targeted Chromium comparison at 360 and 390 px)",
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium at 360 and 390 px; phone pending)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (players and accessible credits disclosure checked in Chromium)",
+          "audioRecordingsAuthenticity": "PARTIALLY TESTED (2 signal matches and 0 source without signal match; see evidence)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (individual attribution and linked license checked; independent review pending)",
+          "soundRolesSongCall": "PARTIALLY TESTED (individual recording labels verified against primary sources)",
+          "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (local audio played in Chromium; integrated offline test pending)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (original Vogelbescherming species page consulted; printed ANWB passage pending)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (visible recognition and national trends updated; complete biometry recheck pending)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon individual Dutch breeding estimates and trend windows checked)",
+          "ebirdDistributionAndBias": "PARTIALLY TESTED (Cornell species codes checked; full seasonal maps not directly available)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "endToEndGuideUI": "PARTIALLY TESTED (targeted Chromium on 360 and 390 px; integrated device phase pending)",
+          "independentSecondReview": "NOT TESTED (second reviewer pending)"
         },
         "findings": [
-          "Geen lokaal geregistreerde zang of roep"
+          "Vijf bestaande beelden naast de originele bestanden gecontroleerd, waaronder mannetje, vrouwtje en juveniel.",
+          "Zang en roep zijn als afzonderlijke opnamen toegevoegd. Het roepfragment volgt de territoriale roepen die de auteur beschrijft.",
+          "Naast volwassen- en vluchttab heeft de vergelijking met Pimpelmees nu een tab met de twee bestaande juvenielenfoto’s."
         ],
-        "sourceReferences": [],
-        "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/koolmees",
+          "https://stats.sovon.nl/stats/soort/14640",
+          "https://science.ebird.org/en/status-and-trends/species/gretit1/range-map",
+          "docs/fotokwaliteit/F3_R07_GAAI_EN_MEZEN_2026-11-15_DRAFT.md",
+          "docs/evidence/GUIDE_SOURCE_AUDIT_2026-11-15_F3_R07.json"
+        ],
+        "reviewedOriginalAudio": 2,
+        "showcasePreview": "LOCAL BROWSER at 360 and 390 px: targeted guide and media review",
+        "independence": "PARTIAL / independent ornithological and acoustic review outstanding",
+        "fullPass": false,
+        "photoFilesInspected": 5,
+        "scientificName": "Parus major",
+        "ebirdSpeciesCode": "gretit1",
+        "photoBlobSHAs": [
+          "8f379d5405c2570b4853e79d236ca42511909330",
+          "9669dbaaa08669942aeee5953a69c4936b4091a5",
+          "a05486e347dec11b836077aa6d3299008bce091a",
+          "3642093ce9543362e208c99acb5aa57126075a96",
+          "bc6b77f7da86e0d12626971ddae94afc5a0d4702"
+        ],
+        "photoSourceMatches": [
+          {
+            "path": "/assets/species/plumage/sp029-adult_m.webp",
+            "source": "https://commons.wikimedia.org/wiki/File:Great_tit_%28Parus_major%29_male.jpg",
+            "localSize": [
+              1400,
+              933
+            ],
+            "author": "Charles J. Sharp",
+            "license": "CC BY-SA 4.0",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Great_tit_%28Parus_major%29_male.jpg",
+            "originalSha256": "10974c373893c70a12e6c03683d0276d5c5b65dacb38086209bdcb82e4dd0548",
+            "sourceSize": [
+              3282,
+              2188
+            ],
+            "comparison": "Bestaande appfoto visueel met de originele opname vergeleken."
+          },
+          {
+            "path": "/assets/species/plumage/sp029-adult_f.webp",
+            "source": "https://commons.wikimedia.org/wiki/File:Female_Great_tit.jpg",
+            "localSize": [
+              1400,
+              1050
+            ],
+            "author": "Evas-naturfotografie",
+            "license": "CC BY-SA 4.0",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Female_Great_tit.jpg",
+            "originalSha256": "f4d76659fb63a425477dc18445d4f78434c2b599f18907fa5ddca0f5badf31a9",
+            "sourceSize": [
+              4000,
+              3000
+            ],
+            "comparison": "Bestaande appfoto visueel met de originele opname vergeleken."
+          },
+          {
+            "path": "/assets/species/plumage/sp029-juv.webp",
+            "source": "https://commons.wikimedia.org/wiki/File:Great_tit_-_Juvenile_-_Parus_major_%2853034153829%29.jpg",
+            "localSize": [
+              1400,
+              1000
+            ],
+            "author": "caroline legg",
+            "license": "CC BY 2.0",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Great_tit_-_Juvenile_-_Parus_major_%2853034153829%29.jpg",
+            "originalSha256": "d67c8ce760d0736136d97c4d4ab2e9ec9c2fbcfb0ab382c9084fb3f372759f1a",
+            "sourceSize": [
+              2859,
+              2042
+            ],
+            "comparison": "Bestaande appfoto visueel met de originele opname vergeleken."
+          },
+          {
+            "path": "/assets/species/plumage/sp029-flight.webp",
+            "source": "https://commons.wikimedia.org/wiki/File:13_bis_15_Zentimeter_wird_eine_Kohlmeise_lang._01.jpg",
+            "localSize": [
+              1400,
+              1077
+            ],
+            "author": "Holger Uwe Schmitt",
+            "license": "CC BY-SA 4.0",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/f/fe/13_bis_15_Zentimeter_wird_eine_Kohlmeise_lang._01.jpg",
+            "originalSha256": "a4b641f6f9d81be956c97036fb52fc55f8dd7a942e555a76476976e30132b04e",
+            "sourceSize": [
+              3071,
+              2362
+            ],
+            "comparison": "Bestaande appfoto visueel met de originele opname vergeleken."
+          },
+          {
+            "path": "/assets/species/sp029.webp",
+            "source": "https://commons.wikimedia.org/wiki/File:Great_tit_on_Djurgarden_(52306).jpg",
+            "localSize": [
+              1600,
+              1344
+            ],
+            "author": "Rhododendrites",
+            "license": "CC BY-SA 4.0",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Great_tit_on_Djurgarden_%2852306%29.jpg",
+            "originalSha256": "073e9fb3dfadbae0f5bbe1b0c45dfbb0a90eda1c8ef620aebd45fac17f14a477",
+            "sourceSize": [
+              2276,
+              1912
+            ],
+            "comparison": "Bestaande appfoto visueel met de originele opname vergeleken."
+          }
+        ],
+        "priorPhotoMatches": [],
+        "audioSourceMatches": [
+          {
+            "path": "/assets/species/audio/sp029-song-app.mp3",
+            "source": "https://commons.wikimedia.org/wiki/File:Parus_major_-_Great_Tit_XC402093.mp3",
+            "sourceFile": "https://xeno-canto.org/402093/download",
+            "originalSha256": "b4b352a94d70ce962c2910e5666be081a454c46803e8faad8d4a217d5103f2b3",
+            "windows": 3,
+            "minimumNormalizedCorrelation": 0.9906,
+            "offsetsSeconds": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "duration": 11.45
+          },
+          {
+            "path": "/assets/species/audio/sp029-call-app.mp3",
+            "source": "https://commons.wikimedia.org/wiki/File:Great_Tit_(Parus_major)_territorial_calls_-_B%C3%A6rum%2C_Norway_2021-03-15.mp3",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/1/15/Great_Tit_%28Parus_major%29_territorial_calls_-_B%C3%A6rum%2C_Norway_2021-03-15.mp3",
+            "originalSha256": "1c7229c329cf22c4bb05d0ad52002005438e021ef3c2b35c6c69ae02e8cda6ea",
+            "windows": 3,
+            "minimumNormalizedCorrelation": 0.9646,
+            "offsetsSeconds": [
+              8.3,
+              8.3,
+              8.3
+            ],
+            "duration": 4.0
+          }
+        ],
+        "unmatchedAudio": [],
+        "contentStatus": "PARTIALLY REVIEWED (photos, Dutch status, paired mobile UI, recordings and selected primary sources reviewed)",
+        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed."
       }
     },
     {
@@ -2432,40 +2672,139 @@
             "oldRights": "VERIFIED"
           }
         ],
-        "existingAudioCount": 1,
+        "existingAudioCount": 2,
         "existingAudioPaths": [
-          "/assets/species/audio/sp030-song.mp3"
+          "/assets/species/audio/sp030-song.mp3",
+          "/assets/species/audio/sp030-call-app.mp3"
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R07",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (2 compared to the current original file; 1 retained F2 matches)",
+          "photoIndividualRights": "PARTIALLY TESTED (individual source and license evidence documented, separate second review pending)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (actual resting, juvenile and flight roles checked; caption and visible features compared)",
+          "photoPairComparisons": "PARTIALLY TESTED (targeted Chromium comparison at 360 and 390 px)",
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium at 360 and 390 px; phone pending)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (players and accessible credits disclosure checked in Chromium)",
+          "audioRecordingsAuthenticity": "PARTIALLY TESTED (1 signal matches and 1 source without signal match; see evidence)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (individual attribution and linked license checked; independent review pending)",
+          "soundRolesSongCall": "PARTIALLY TESTED (individual recording labels verified against primary sources)",
+          "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (local audio played in Chromium; integrated offline test pending)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (original Vogelbescherming species page consulted; printed ANWB passage pending)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (visible recognition and national trends updated; complete biometry recheck pending)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon individual Dutch breeding estimates and trend windows checked)",
+          "ebirdDistributionAndBias": "PARTIALLY TESTED (Cornell species codes checked; full seasonal maps not directly available)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "endToEndGuideUI": "PARTIALLY TESTED (targeted Chromium on 360 and 390 px; integrated device phase pending)",
+          "independentSecondReview": "NOT TESTED (second reviewer pending)"
         },
-        "findings": [],
-        "sourceReferences": [],
-        "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "findings": [
+          "Eigen roepopname toegevoegd naast de bestaande zang.",
+          "Hoofd- en vluchtfoto opnieuw met de originele JPEG vergeleken. Van de juvenielenfoto is het F2-bronbewijs aan dezelfde lokale SHA-1 gekoppeld. Download gaf eerst HTTP 429 en daarna een time-out.",
+          "De bestaande zang speelt af en de individuele bron vermeldt dezelfde soort, rol en licentie. Het originele OGG bleef na HTTP 429 en een time-out niet beschikbaar, dus de signaalvergelijking van deze zang blijft open.",
+          "De juvenielenvergelijking gebruikt de bestaande individuele bronfoto’s. Kijk naar oogstreep, keel en kap bij gelig gekleurde wangen."
+        ],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/pimpelmees",
+          "https://stats.sovon.nl/stats/soort/14620",
+          "https://science.ebird.org/en/status-and-trends/species/blutit/range-map",
+          "docs/fotokwaliteit/F3_R07_GAAI_EN_MEZEN_2026-11-15_DRAFT.md",
+          "docs/evidence/GUIDE_SOURCE_AUDIT_2026-11-15_F3_R07.json"
+        ],
+        "reviewedOriginalAudio": 1,
+        "showcasePreview": "LOCAL BROWSER at 360 and 390 px: targeted guide and media review",
+        "independence": "PARTIAL / independent ornithological and acoustic review outstanding",
+        "fullPass": false,
+        "photoFilesInspected": 3,
+        "scientificName": "Cyanistes caeruleus",
+        "ebirdSpeciesCode": "blutit",
+        "photoBlobSHAs": [
+          "cdcac30c4d8ac5310f1a91610ed3155436323cff",
+          "efcce9f251d0f5e23edbcc3fededb517b195349c",
+          "416f116f147b61514a7f30232254e8b98818ba08"
+        ],
+        "photoSourceMatches": [
+          {
+            "path": "/assets/species/sp030.webp",
+            "source": "https://commons.wikimedia.org/wiki/File:Eurasian_Blue_Tit_2025_04_07.jpg",
+            "localSize": [
+              1600,
+              1067
+            ],
+            "author": "Alexis Lours",
+            "license": "CC BY 4.0",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/4/47/Eurasian_Blue_Tit_2025_04_07.jpg",
+            "originalSha256": "9fa5af0fdf5ea4fe6d9a7a467093e027acd3e9044103e24a32b678dec187930b",
+            "sourceSize": [
+              6250,
+              4167
+            ],
+            "comparison": "Bestaande appfoto visueel met de originele opname vergeleken."
+          },
+          {
+            "path": "/assets/species/plumage/sp030-flight.webp",
+            "source": "https://commons.wikimedia.org/wiki/File:Blue_Tit_in_flight_(8360763555).jpg",
+            "localSize": [
+              1400,
+              1050
+            ],
+            "author": "Joe Dyer",
+            "license": "CC BY 2.0",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Blue_Tit_in_flight_%288360763555%29.jpg",
+            "originalSha256": "4483490ac0e00b4cf20cee269cd9a307fcaa5c568637c2e917671089a2d8956d",
+            "sourceSize": [
+              1417,
+              1063
+            ],
+            "comparison": "Bestaande appfoto visueel met de originele opname vergeleken."
+          }
+        ],
+        "priorPhotoMatches": [
+          {
+            "path": "/assets/species/plumage/sp030-juv2.webp",
+            "source": "https://commons.wikimedia.org/wiki/File:Blue_tit_-_Juvenile_-_Cyanistes_caeruleus_%2853079786093%29.jpg",
+            "localSize": [
+              1133,
+              1600
+            ],
+            "author": "caroline legg",
+            "license": "CC BY 2.0",
+            "reference": "docs/evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_12.json",
+            "localSha1": "a66e965bd24513412e351d51606a5d1e70bfd429",
+            "originalSha1": "ddc3d6ca897088ac9614c68cf0320b4daa532ec4",
+            "reason": "Oorspronkelijke JPEG gaf HTTP 429 en daarna een time-out. De oudere vergelijking is aan hetzelfde lokale bestand gekoppeld."
+          }
+        ],
+        "audioSourceMatches": [
+          {
+            "path": "/assets/species/audio/sp030-call-app.mp3",
+            "source": "https://commons.wikimedia.org/wiki/File:Blue_Tit_(Cyanistes_caeruleus)_(W1CDR0001535_BD30).ogg",
+            "sourceFile": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Blue_Tit_%28Cyanistes_caeruleus%29_%28W1CDR0001535_BD30%29.ogg",
+            "originalSha256": "3be7bfd42de52b0a2d1df121a65e769b0bf1c9eb86cea4ce32942a31416340b4",
+            "windows": 3,
+            "minimumNormalizedCorrelation": 0.9919,
+            "offsetsSeconds": [
+              34.5,
+              34.5,
+              34.5
+            ],
+            "duration": 7.3
+          }
+        ],
+        "unmatchedAudio": [
+          {
+            "path": "/assets/species/audio/sp030-song.mp3",
+            "source": "https://commons.wikimedia.org/wiki/File:Cyanistes_caeruleus.ogg",
+            "localSha256": "746485cbf00ec3d4bb85b1154061a71f1ca5fe90fad69062404d9653daa17682",
+            "duration": 9.05,
+            "reason": "Originele OGG niet opgehaald na HTTP 429 en daarna een time-out. De lokale zang is gedecodeerd in Chromium en de bronrol is nagelezen."
+          }
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (photos, Dutch status, paired mobile UI, recordings and selected primary sources reviewed)",
+        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed."
       }
     },
     {
@@ -10371,6 +10710,6 @@
     "ownerDecision": "UI/UX and complete photo/audio source content first; practical Android, Merlin, offline, ZIP and functional end-to-end QA later on one integrated build. Do not stop the next three-bird media batch while previous species have noted source/media gaps.",
     "boundary": "Content visually reviewed is not media-rights VERIFIED or release PASS. No audio invention, no source attribution hidden where license requires directly visible credit. All ordinary source references behind accessible i.",
     "technicalStage": "DEFERRED, NOT WAIVED",
-    "integratedReviewBase": "PR #255, ae3ecf2d2438e829f1a4662853b3ade673b195c5"
+    "integratedReviewBase": "PR #256, aed05b02ccb77ee4284076cfbe88c2a0d9a3a503"
   }
 }

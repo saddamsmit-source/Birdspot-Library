@@ -5079,6 +5079,17 @@
    "source": "F3-R06",
    "decision": "goedgekeurd",
    "note": "Jonge Kauw van opzij op stenen, met dof kleed en een donker oog."
+  },
+  "/assets/species/plumage/sp026-juv-review.webp": {
+   "refs": [
+    "sp026 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "3c4e8a8b1ab15031b4f0372a185f4cf69e93c203",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "F3-R07",
+   "decision": "goedgekeurd",
+   "note": "Jonge Gaai van dichtbij, met een bruine kruin, zacht ogend kleed en blauw gebandeerde vleugeldekveren."
   }
  }
 }

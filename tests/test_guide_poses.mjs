@@ -432,3 +432,12 @@ const flightSection = kauwCard.match(/<section class="sd-flight"[^>]*>[\s\S]*?<\
 assert.match(flightSection, /sp025-flight-free\.webp/);
 assert.doesNotMatch(flightSection, /sp025-flight\.webp/);
 assert.ok(kauwCard.includes('Landend tussen takken'));
+
+// F3-R07: the fledgling comparison must show the two actual juvenile photographs in both directions.
+for (const id of ['sp029','sp030']) {
+ const bird = SPECIES.find(species => species.id === id);
+ const html = recognitionPanel(bird);
+ const panels = html.split('data-cmp-panel').slice(1);
+ assert.ok(panels.some(panel => panel.includes('sp029-juv.webp') && panel.includes('sp030-juv2.webp')));
+ assert.match(html, /data-cmp-tab aria-selected="false">Juveniel<\/button>/);
+}

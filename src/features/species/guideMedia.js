@@ -1078,6 +1078,25 @@ export const GUIDE_AUDIO = Object.freeze({
       "duration": 9.048,
       "originalURL": "https://upload.wikimedia.org/wikipedia/commons/9/91/Cyanistes_caeruleus.ogg",
       "audio": "/assets/species/audio/sp030-song.mp3"
+    },
+    {
+      "file": "Blue Tit (Cyanistes caeruleus) (W1CDR0001535 BD30).ogg",
+      "label": "Roep",
+      "note": "Enkele korte roepen.",
+      "author": "Aubrey John Williams / The British Library Board",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Blue_Tit_(Cyanistes_caeruleus)_(W1CDR0001535_BD30).ogg",
+      "modifications": "Fragment 0:34,5–0:41,8, omgezet naar MP3 (mono)",
+      "reviewed": "2026-11-15",
+      "taxon": "Cyanistes caeruleus",
+      "verification": "Soort en type volgens de individuele bron. Het appbestand is volledig gedecodeerd en met het auteursbestand vergeleken.",
+      "duration": 7.3,
+      "originalURL": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Blue_Tit_%28Cyanistes_caeruleus%29_%28W1CDR0001535_BD30%29.ogg",
+      "sourceNote": "The British Library W1CDR0001535 BD30, opgenomen in Cowley, Gloucestershire.",
+      "date": "1978-05-28",
+      "type": "call",
+      "audio": "/assets/species/audio/sp030-call-app.mp3"
     }
   ],
   "sp031": [
@@ -1793,6 +1812,70 @@ export const GUIDE_AUDIO = Object.freeze({
       "sourceNote": "De maker omschrijft de kenmerkende roep als chyak. Opgenomen in Tartu, Estland.",
       "type": "contact call",
       "audio": "/assets/species/audio/sp025-contact-call-app.mp3"
+    }
+  ],
+  "sp026": [
+    {
+      "file": "DM550GarrulusGlandariusCallSlovakia.ogg",
+      "label": "Roep",
+      "note": "Een hese, schorre roep.",
+      "author": "Alexander Kürthy",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:DM550GarrulusGlandariusCallSlovakia.ogg",
+      "modifications": "Fragment 0:00–0:08,15, omgezet naar MP3 (mono)",
+      "reviewed": "2026-11-15",
+      "taxon": "Garrulus glandarius",
+      "verification": "Soort en type volgens de individuele bron. Het appbestand is volledig gedecodeerd en met het auteursbestand vergeleken.",
+      "duration": 8.15,
+      "originalURL": "https://xeno-canto.org/334851/download",
+      "sourceNote": "Bronvermelding koppelt de opname van Alexander Kürthy aan XC334851. Opgenomen in de omgeving van Horná Potôň, Slowakije.",
+      "date": "2016-09-14",
+      "type": "call",
+      "audio": "/assets/species/audio/sp026-call-app.mp3",
+      "recordingSource": "https://xeno-canto.org/334851"
+    }
+  ],
+  "sp029": [
+    {
+      "file": "Parus major - Great Tit XC402093.mp3",
+      "label": "Zang",
+      "note": "Een ritmische zangreeks.",
+      "author": "Vincent Ollivier",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Parus_major_-_Great_Tit_XC402093.mp3",
+      "modifications": "Volledige opname omgezet naar MP3 (mono)",
+      "reviewed": "2026-11-15",
+      "taxon": "Parus major",
+      "verification": "Soort en type volgens de individuele bron. Het appbestand is volledig gedecodeerd en met het auteursbestand vergeleken.",
+      "duration": 11.45,
+      "originalURL": "https://xeno-canto.org/402093/download",
+      "sourceNote": "XC402093 vermeldt zang bij zonsopgang in Rosny-sous-Bois, Frankrijk.",
+      "date": "2018-02-03",
+      "type": "song",
+      "audio": "/assets/species/audio/sp029-song-app.mp3",
+      "recordingSource": "https://xeno-canto.org/402093"
+    },
+    {
+      "file": "Great Tit (Parus major) territorial calls - Bærum, Norway 2021-03-15.mp3",
+      "label": "Roep",
+      "note": "Een korte reeks roepen.",
+      "author": "Ryan Hodnett",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Great_Tit_(Parus_major)_territorial_calls_-_B%C3%A6rum%2C_Norway_2021-03-15.mp3",
+      "modifications": "Fragment 0:08,3–0:12,3, omgezet naar MP3 (mono)",
+      "reviewed": "2026-11-15",
+      "taxon": "Parus major",
+      "verification": "Soort en type volgens de individuele bron. Het appbestand is volledig gedecodeerd en met het auteursbestand vergeleken.",
+      "duration": 4.0,
+      "originalURL": "https://upload.wikimedia.org/wikipedia/commons/1/15/Great_Tit_%28Parus_major%29_territorial_calls_-_B%C3%A6rum%2C_Norway_2021-03-15.mp3",
+      "sourceNote": "De maker noemt dit territoriale roepen. Opgenomen in Bærum, Noorwegen.",
+      "date": "2021-03-15",
+      "type": "call",
+      "audio": "/assets/species/audio/sp029-call-app.mp3",
+      "recordingSource": "https://www.inaturalist.org/observations/79293569"
     }
   ]
 });
@@ -6127,6 +6210,31 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "image": "/assets/species/plumage/sp025-juv-review.webp",
       "originalURL": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Juvenile_Jackdaw_-_geograph.org.uk_-_4065316.jpg",
       "note": "Het donkere oog contrasteert minder met de kop dan op de hoofdfoto.",
+      "age": "juvenile"
+    }
+  },
+  "sp026": {
+    "juv": {
+      "file": "iNaturalist-foto 290699043",
+      "nl": "Gaai",
+      "latin": "Garrulus glandarius",
+      "author": "Tim",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://www.inaturalist.org/photos/290699043",
+      "showSourceLink": true,
+      "observation": "https://www.inaturalist.org/observations/167784207",
+      "alt": "Jonge Gaai van dichtbij, met een bruine kruin, zacht ogend kleed en blauw gebandeerde vleugeldekveren.",
+      "modifications": "Origineel verkleind en omgezet naar WebP. Bestandsmetadata verwijderd.",
+      "reviewed": "2026-11-15",
+      "verification": "Levensstadium juveniel geannoteerd in de bronwaarneming. Ook de minder getekende kruin en het zachte kleed zijn zichtbaar. Geslacht open.",
+      "verificationSource": "https://blascozumeta.wimbitek.com/specie_files/15390_ENG_Garrulus_glandarius_aranzadi.pdf",
+      "visualCheck": "Jonge Gaai van dichtbij, met een bruine kruin, zacht ogend kleed en blauw gebandeerde vleugeldekveren.",
+      "width": 960,
+      "height": 1280,
+      "image": "/assets/species/plumage/sp026-juv-review.webp",
+      "originalURL": "https://inaturalist-open-data.s3.amazonaws.com/photos/290699043/original.jpeg",
+      "note": "Het blauw gebandeerde vleugelveld is al zichtbaar.",
       "age": "juvenile"
     }
   }

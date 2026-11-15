@@ -17,12 +17,12 @@
   "evidenceBoundary": "REGISTERED_UNVERIFIED is not a provenance, individual-species, role or commercial-license PASS. Existing Chromium audio test only checks file decode/offline, not source identity.",
   "counts": {
     "photoSpecies": 140,
-    "withRegisteredAudio": 62,
-    "withoutRegisteredAudio": 78,
-    "registeredClips": 124,
+    "withRegisteredAudio": 64,
+    "withoutRegisteredAudio": 76,
+    "registeredClips": 128,
     "f2PhotoVisited": 84,
-    "f2WithAudio": 43,
-    "f2WithoutAudio": 41,
+    "f2WithAudio": 45,
+    "f2WithoutAudio": 39,
     "independentlyApprovedAudio": 0
   },
   "species": [
@@ -674,12 +674,24 @@
       "id": "sp026",
       "nameNL": "Gaai",
       "f2PhotoVisited": true,
-      "mediaCount": 0,
+      "mediaCount": 1,
       "pilot": false,
-      "status": "MISSING",
-      "clips": [],
-      "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "status": "PARTIALLY TESTED",
+      "clips": [
+        {
+          "file": "/assets/species/audio/sp026-call-app.mp3",
+          "label": "Roep",
+          "reference": "https://commons.wikimedia.org/wiki/File:DM550GarrulusGlandariusCallSlovakia.ogg",
+          "externalRights": "PARTIALLY TESTED",
+          "sourceSpecies": "PARTIALLY TESTED",
+          "roleAudition": "PARTIALLY TESTED",
+          "independentReview": "NOT TESTED"
+        }
+      ],
+      "reviewEvidence": [
+        "docs/fotokwaliteit/F3_R07_GAAI_EN_MEZEN_2026-11-15_DRAFT.md"
+      ],
+      "next": "Onafhankelijke geluidsbeoordeling en afspelen in de geïntegreerde offline-praktijktest.",
       "sourceChecks": {
         "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
         "anwbSpeciesPassage": "NOT TESTED",
@@ -700,12 +712,33 @@
       "id": "sp029",
       "nameNL": "Koolmees",
       "f2PhotoVisited": true,
-      "mediaCount": 0,
+      "mediaCount": 2,
       "pilot": false,
-      "status": "MISSING",
-      "clips": [],
-      "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "status": "PARTIALLY TESTED",
+      "clips": [
+        {
+          "file": "/assets/species/audio/sp029-song-app.mp3",
+          "label": "Zang",
+          "reference": "https://commons.wikimedia.org/wiki/File:Parus_major_-_Great_Tit_XC402093.mp3",
+          "externalRights": "PARTIALLY TESTED",
+          "sourceSpecies": "PARTIALLY TESTED",
+          "roleAudition": "PARTIALLY TESTED",
+          "independentReview": "NOT TESTED"
+        },
+        {
+          "file": "/assets/species/audio/sp029-call-app.mp3",
+          "label": "Roep",
+          "reference": "https://commons.wikimedia.org/wiki/File:Great_Tit_(Parus_major)_territorial_calls_-_B%C3%A6rum%2C_Norway_2021-03-15.mp3",
+          "externalRights": "PARTIALLY TESTED",
+          "sourceSpecies": "PARTIALLY TESTED",
+          "roleAudition": "PARTIALLY TESTED",
+          "independentReview": "NOT TESTED"
+        }
+      ],
+      "reviewEvidence": [
+        "docs/fotokwaliteit/F3_R07_GAAI_EN_MEZEN_2026-11-15_DRAFT.md"
+      ],
+      "next": "Onafhankelijke geluidsbeoordeling en afspelen in de geïntegreerde offline-praktijktest.",
       "sourceChecks": {
         "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
         "anwbSpeciesPassage": "NOT TESTED",
@@ -726,9 +759,9 @@
       "id": "sp030",
       "nameNL": "Pimpelmees",
       "f2PhotoVisited": true,
-      "mediaCount": 1,
+      "mediaCount": 2,
       "pilot": false,
-      "status": "REGISTERED_UNVERIFIED",
+      "status": "PARTIALLY TESTED",
       "clips": [
         {
           "file": "/assets/species/audio/sp030-song.mp3",
@@ -738,10 +771,21 @@
           "sourceSpecies": "NOT TESTED",
           "roleAudition": "NOT TESTED",
           "independentReview": "NOT TESTED"
+        },
+        {
+          "file": "/assets/species/audio/sp030-call-app.mp3",
+          "label": "Roep",
+          "reference": "https://commons.wikimedia.org/wiki/File:Blue_Tit_(Cyanistes_caeruleus)_(W1CDR0001535_BD30).ogg",
+          "externalRights": "PARTIALLY TESTED",
+          "sourceSpecies": "PARTIALLY TESTED",
+          "roleAudition": "PARTIALLY TESTED",
+          "independentReview": "NOT TESTED"
         }
       ],
-      "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "reviewEvidence": [
+        "docs/fotokwaliteit/F3_R07_GAAI_EN_MEZEN_2026-11-15_DRAFT.md"
+      ],
+      "next": "Onafhankelijke geluidsbeoordeling en afspelen in de geïntegreerde offline-praktijktest.",
       "sourceChecks": {
         "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
         "anwbSpeciesPassage": "NOT TESTED",

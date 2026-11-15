@@ -99,7 +99,10 @@ for (const s of SPECIES) {
 }
 assert.ok(checked >= 590 && flightSections >= 10);
 const verifiedJuvenileComparisonEntries = GUIDE_COMPARISONS.filter(e => e.birds.filter(b => b.plumage === 'juv').length >= 2);
-assert.equal(verifiedJuvenileComparisonEntries.length, 31, 'FV-06: expected 31 juvenile comparisons including the F2-28 pair');
+assert.equal(verifiedJuvenileComparisonEntries.length, 32, 'FV-06: expected 32 juvenile comparisons including Koolmees and Pimpelmees');
+assert.ok(verifiedJuvenileComparisonEntries.some(entry => entry.label === 'Koolmees en Pimpelmees · juveniel' &&
+  ['sp029', 'sp030'].every(id => entry.birds.some(bird => bird.id === id && bird.plumage === 'juv'))),
+  'FV-06: F3-R07 requires both registered juvenile tit photos');
 assert.ok(verifiedJuvenileComparisonEntries.some(entry => entry.label === 'Goudhaantje en Vuurgoudhaan · juvenielen' &&
   entry.birds.some(b => b.id === 'sp063' && b.plumage === 'juv') &&
   entry.birds.some(b => b.id === 'sp064' && b.plumage === 'juv')),
