@@ -55,18 +55,25 @@ def check(page, width):
     sheet = open_sound(page)
     sheet.get_by_role('button', name='Start opname').click()
     expect(sheet.get_by_role('button', name='Stop opname')).to_be_enabled()
+    expect(sheet.locator('#soundElapsed')).to_have_text('00:01')
     sheet.get_by_role('button', name='Sluiten').click()
     expect(sheet).to_have_count(0)
     page.wait_for_function("window.testStream.getAudioTracks().every(track => track.readyState === 'ended')")
     assert not rows(page)
 
     sheet = open_sound(page)
+    expect(sheet.locator('#soundDraftState')).to_have_text('Bewaarde sessie geopend.')
+    expect(sheet.locator('#soundPlayback')).to_be_visible()
+    sheet.get_by_role('button', name='Verwijder sessie').click()
     sheet.get_by_role('button', name='Start opname').click()
     expect(sheet.get_by_role('button', name='Stop opname')).to_be_enabled()
     expect(sheet.locator('#soundPosition')).to_contain_text('51.92440, 4.47770')
     expect(sheet.locator('#soundDate')).to_have_value('2026-11-15')
     expect(sheet.locator('#soundTime')).to_have_value('14:42')
     expect(sheet.locator('#soundElapsed')).to_have_text('00:01')
+    expect(sheet.locator('#soundWaveform')).to_be_visible()
+    expect(sheet.locator('#soundWaveform')).to_have_attribute('data-has-sound', 'true')
+    expect(sheet.locator('#soundRecognitionState')).to_contain_text('niet beschikbaar')
     sheet.get_by_role('button', name='Stop opname').click()
     clip = sheet.locator('#soundPlayback')
     expect(clip).to_be_visible()
@@ -82,6 +89,17 @@ def check(page, width):
     use = BIRDS if width == 390 else BIRDS[:3]
     for name in BIRDS[len(use):]:
         sheet.get_by_role('checkbox', name=name, exact=True).uncheck()
+    expect(sheet.locator('#soundDraftState')).to_have_text('Sessie bewaard op dit toestel.')
+    page.reload(wait_until='domcontentloaded')
+    page.locator('#birdspotSplash').wait_for(state='detached', timeout=15000)
+    sheet = open_sound(page)
+    expect(sheet.locator('#soundDraftState')).to_have_text('Bewaarde sessie geopend.')
+    expect(sheet.locator('#soundPlayback')).to_be_visible()
+    expect(sheet.locator('#soundWaveform')).to_have_attribute('data-has-sound', 'true')
+    for name in use:
+        expect(sheet.get_by_role('checkbox', name=name, exact=True)).to_be_checked()
+    for name in BIRDS[len(use):]:
+        expect(sheet.get_by_role('checkbox', name=name, exact=True)).not_to_be_checked()
     sheet.get_by_text('Details toevoegen', exact=True).click()
     sheet.get_by_label('Pleknaam').fill('Testplek aan het water')
     sheet.get_by_label('Notitie voor deze vogels').fill('Samen gehoord tijdens de opname')
@@ -143,7 +161,7 @@ def check(page, width):
     expect(sheet).to_have_count(0)
     expected = 1 if width == 320 else 2
     assert len([item for item in rows(page) if item['lat'] == 52.1 and item['lon'] == 5.1]) == expected
-    print(f'PASS {width}px: playback, GPS, {len(use)} species with storage retry, and {expected} species with manual pin', flush=True)
+    print(f'PASS {width}px: waveform, restored audio and choices, GPS, {len(use)} species with storage retry, and {expected} species with manual pin', flush=True)
 
 
 def main():
