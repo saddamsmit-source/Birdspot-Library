@@ -308,3 +308,16 @@ Negen WebP’s geopend, acht originele bestandspagina’s gelezen. [Brondossier 
 Twaalf beelden van de drie soorten plus drie gebruikte Purperreiger-beelden visueel gecontroleerd. Negen originele Commons-pagina’s gelezen. Voor de overige zes is het eerdere bronmatchbewijs vastgelegd in [het brondossier](F2_27_BRON_EN_LIMIETEN.json). Het gekozen vluchtbeeld en de drie weergaven zijn op beide soortkaarten controleerbaar. Bestanden, geregistreerde rollen en fotocredits zijn behouden. De Kleine en Grote Zilverreiger krijgen geen juvenielpaar met verschillende ontwikkelingsstadia.
 
 **Teller** · 72/140 soorten opgepakt, 68 resterend. F2 is PARTIALLY TESTED. Basis [PR #229](https://github.com/saddamsmit-source/Birdspot-Library/pull/229) op `21f16dd0c0a531e435939c6c9c6051e80e149c35`. CAP-BIRD-012/015. Herstel via de basis-PR. De fysieke Android- en volledige releasecontroles blijven open.
+
+
+## F2-28 · Purperreiger, Kwak en Grauwe Gans
+
+| Soort | Hercontrole en wijziging | Open |
+|---|---|---|
+| sp084 Purperreiger | Rustbeeld, Europees juveniel en vrije vlucht herbeoordeeld. Nieuwe juvenielvergelijking met Kwak toont het verschil tussen lichte veerranden en losse druppelvlekken. | Geslacht van de foto's onbekend. |
+| sp085 Kwak | Volwassen rustbeeld, juveniel en vrije vlucht herbeoordeeld. Met Blauwe Reiger een juvenielpaar en een apart vrijevluchtpaar, met drie kenmerken per weergave. | Originele pagina van de Blauwe Reiger-juveniel in deze ronde onbereikbaar. Eerder bewijs behouden. |
+| sp086 Grauwe Gans | Hoofdfoto, donsbeeld en vrije vlucht visueel en per bron gecontroleerd. Veldgids onderscheidt het donsjong van het oudere jeugdkleed explicieter. | Een oudere juvenielfoto en een fotovergelijking met Kolgans blijven open. Bestaande tekstuele vergelijking blijft beschikbaar. |
+
+Negen eigen beelden plus twee gebruikte Blauwe Reiger-beelden geopend. Tien originele Commons-pagina’s gelezen. Foto’s, rolregistratie en credits zijn behouden. [Beeld- en bronbewijs](F2_28_BRON_EN_LIMIETEN.json).
+
+**Teller** · 75/140 soorten opgepakt, 65 resterend. F2 is PARTIALLY TESTED. Basis [PR #230](https://github.com/saddamsmit-source/Birdspot-Library/pull/230) op `9eb68270d9a0005346e738397daecdf4b7fbe4b4`. CAP-BIRD-012/015. Herstel via de basis-PR. Fysieke Android- en volledige releasecontroles blijven open.

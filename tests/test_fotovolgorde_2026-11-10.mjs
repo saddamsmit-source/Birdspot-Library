@@ -99,7 +99,7 @@ for (const s of SPECIES) {
 }
 assert.ok(checked >= 590 && flightSections >= 10);
 const verifiedJuvenileComparisonEntries = GUIDE_COMPARISONS.filter(e => e.birds.filter(b => b.plumage === 'juv').length >= 2);
-assert.equal(verifiedJuvenileComparisonEntries.length, 30, 'FV-06: expected 30 juvenile comparisons including the F2-26 resting pair');
+assert.equal(verifiedJuvenileComparisonEntries.length, 31, 'FV-06: expected 31 juvenile comparisons including the F2-28 pair');
 assert.ok(verifiedJuvenileComparisonEntries.some(entry => entry.label === 'Goudhaantje en Vuurgoudhaan · juvenielen' &&
   entry.birds.some(b => b.id === 'sp063' && b.plumage === 'juv') &&
   entry.birds.some(b => b.id === 'sp064' && b.plumage === 'juv')),
@@ -331,6 +331,33 @@ for (const [label, ids, photos, flight] of [
       `F2-27 nest-stage image must remain outside comparison: ${id}`);
   }
 }
+
+// F2-28: match posture and age, with no fabricated goose comparison.
+for (const [label, ids, photos, flight] of [
+  ['Kwak en Blauwe Reiger · jonge vogels', ['sp085', 'sp081'],
+    ['/assets/species/plumage/sp085-juv.webp', '/assets/species/plumage/sp081-juv.webp'], false],
+  ['Kwak en Blauwe Reiger · in vlucht', ['sp085', 'sp081'],
+    ['/assets/species/plumage/sp085-flight.webp', '/assets/species/sp081.webp'], true],
+  ['Kwak en Purperreiger · jonge vogels', ['sp085', 'sp084'],
+    ['/assets/species/plumage/sp085-juv.webp', '/assets/species/plumage/sp084-juv-europa.webp'], false],
+]) {
+  const pair = GUIDE_COMPARISONS.find(entry => entry.label === label);
+  assert.ok(pair, `F2-28 missing comparison: ${label}`);
+  assert.equal(Boolean(pair.flight), flight);
+  assert.equal(pair.rows.length, 3);
+  assert.deepEqual(pair.birds.map(({id, photo, plumage}) => [id, photo, plumage]),
+    ids.map((id, i) => [id, photos[i], flight ? undefined : 'juv']));
+  for (const id of ids) {
+    const panels = recognitionPanel(byId.get(id)).split('<div class="sd-cmp-panel"').slice(1);
+    assert.ok(panels.some(panel =>
+      panel.startsWith(' data-cmp-panel data-cmp-flight') === flight &&
+      photos.every(photo => panel.includes(`data-guide-image="${photo}"`))), `F2-28 missing pair: ${id} ${label}`);
+  }
+}
+const greylagGoose = recognitionPanel(byId.get('sp086'));
+assert.ok(greylagGoose.includes('beige topjes') && greylagGoose.includes('>Donsjong<'));
+assert.ok(!greylagGoose.includes('data-cmp-panel'));
+assert.equal(GUIDE_POSES.sp086.find(photo => photo.image.endsWith('sp086-juv.webp'))?.age, 'chick');
 
 const youngTits = GUIDE_COMPARISONS.find(entry => entry.label === 'Matkop en Glanskop · jonge vogels');
 assert.deepEqual(youngTits.birds.map(({id, plumage}) => [id, plumage]), [['sp031', 'juv'], ['sp032', 'juv']]);
