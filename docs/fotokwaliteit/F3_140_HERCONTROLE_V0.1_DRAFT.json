@@ -12,7 +12,8 @@
     "photoNorm": "docs/BIRDSPOT_KWALITEITSNORM.md",
     "readme": "README.md",
     "newUI": "PR #241 and #244; not on base SHA",
-    "firstBatch": "docs/fotokwaliteit/F3_R01_DUIVEN_HERCONTROLE_2026-11-15_DRAFT.md"
+    "firstBatch": "docs/fotokwaliteit/F3_R01_DUIVEN_HERCONTROLE_2026-11-15_DRAFT.md",
+    "thirdBatch": "docs/fotokwaliteit/F3_R03_SPERWER_HAVIK_TORENVALK_2026-11-15_DRAFT.md"
   },
   "requiredChecks": [
     "photoOriginalIdentity",
@@ -43,10 +44,11 @@
     "audioMissing": 81,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 134,
+    "nextNotStarted": 131,
     "secondBatchStarted": 3,
-    "contentInspected": 6,
-    "contentComplete": 0
+    "contentInspected": 9,
+    "contentComplete": 0,
+    "thirdBatchStarted": 3
   },
   "records": [
     {
@@ -496,36 +498,69 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R03",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (all local images visually reviewed; full individual original pixel matching pending)",
+          "photoIndividualRights": "PARTIALLY TESTED (existing individual photo credits retained; selected files checked at Commons)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (flight, supported perching and plumage visually checked; open slot and role gaps recorded)",
+          "photoPairComparisons": "PARTIALLY TESTED (desktop Chromium at 390 px; relevant photo-pair and role assertions in test_species_detail.py)",
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium at 390 px; physical device and broader gestures later)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (source_info_i passed on integrated runtime; full legal and device check pending)",
+          "audioRecordingsAuthenticity": "PARTIALLY TESTED (all registered original tracks match the local recording signal; independent acoustic ID pending)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (source files download and registered attributions intact; individual license audit incomplete)",
+          "soundRolesSongCall": "PARTIALLY TESTED (roles checked against the field guides and available recording metadata; second review pending)",
+          "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (all local files decode; offline phase deferred)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (actual Vogelbescherming pages checked; ANWB passage pending)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (identification and registered sources checked; measurements not recalculated)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Dutch species pages reviewed; no data import)",
+          "ebirdDistributionAndBias": "PARTIALLY TESTED (Cornell reference reviewed; mapping and reporting bias not fully audited)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "endToEndGuideUI": "PARTIALLY TESTED (targeted content and layout locally; field phase deferred)",
+          "independentSecondReview": "NOT TESTED (formal independent review pending)"
         },
         "findings": [
-          "Vrouwtje in vrije vlucht (wenselijk). Voor het vrouwtje in rust blijft de foto op een zitplaats beschikbaar."
+          "Vrouwtje in vrije vlucht (wenselijk). Voor het vrouwtje in rust blijft de foto op een zitplaats beschikbaar.",
+          "Bestaande rust- en vluchtrollen onderscheiden, inclusief juveniel in het fotopaar met Havik.",
+          "Wikimedia-kandidaat Johnvanvliet is een opvliegend vrouwtje met bewegingsonscherpte. Primaire vluchtrol blijft open."
         ],
-        "sourceReferences": [],
-        "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/sperwer",
+          "https://stats.sovon.nl/stats/soort/2690",
+          "https://science.ebird.org/en/status-and-trends/species/eurspa1/range-map",
+          "docs/fotokwaliteit/F3_R03_SPERWER_HAVIK_TORENVALK_2026-11-15_DRAFT.md"
+        ],
+        "reviewedOriginalAudio": 2,
+        "showcasePreview": "LOCAL BROWSER 390 PX: targeted guide review",
+        "independence": "PARTIAL / independent rights and acoustic review outstanding",
+        "fullPass": false,
+        "photoFilesInspected": 5,
+        "scientificName": "Accipiter nisus",
+        "ebirdSpeciesCode": "eurspa1",
+        "photoBlobSHAs": [
+          "61ae93873f364bcd14fed70719fdfd855d02d3b5",
+          "21e99aa2edf1f7de83cc75dd54209701d382079e",
+          "c9c13ba81d76e9f4abaf7e495f245e298fb6eb77",
+          "a60ffce3f63cfacbaa614fcb1ddc235f63e6835b",
+          "3f54446193cc172db0494cc1e7857d23f4bfa18e"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (photos, paired mobile UI, local media and selected primary sources reviewed)",
+        "audioSourceMatches": [
+          {
+            "source": "https://commons.wikimedia.org/wiki/File:Accipiter_nisus_-_Eurasian_Sparrowhawk_XC467097.mp3",
+            "path": "/assets/species/audio/sp006-nest-call.mp3",
+            "windows": 3,
+            "minimumNormalizedCorrelation": 0.9994
+          },
+          {
+            "source": "https://commons.wikimedia.org/wiki/File:Accipiter_nisus_-_Eurasian_Sparrowhawk_XC234158.mp3",
+            "path": "/assets/species/audio/sp006-begging.mp3",
+            "windows": 3,
+            "minimumNormalizedCorrelation": 0.9892
+          }
+        ],
+        "functionTests": "DEFERRED BY OWNER for integrated field, offline and release QA. Local targeted guide and credit regressions executed."
       }
     },
     {
@@ -581,37 +616,78 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R03",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (all local images visually reviewed; full individual original pixel matching pending)",
+          "photoIndividualRights": "PARTIALLY TESTED (existing individual photo credits retained; selected files checked at Commons)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (flight, supported perching and plumage visually checked; open slot and role gaps recorded)",
+          "photoPairComparisons": "PARTIALLY TESTED (desktop Chromium at 390 px; relevant photo-pair and role assertions in test_species_detail.py)",
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium at 390 px; physical device and broader gestures later)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (source_info_i passed on integrated runtime; full legal and device check pending)",
+          "audioRecordingsAuthenticity": "PARTIALLY TESTED (all registered original tracks match the local recording signal; independent acoustic ID pending)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (source files download and registered attributions intact; individual license audit incomplete)",
+          "soundRolesSongCall": "PARTIALLY TESTED (roles checked against the field guides and available recording metadata; second review pending)",
+          "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (all local files decode; offline phase deferred)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (actual Vogelbescherming pages checked; ANWB passage pending)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (identification and registered sources checked; measurements not recalculated)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Dutch species pages reviewed; no data import)",
+          "ebirdDistributionAndBias": "PARTIALLY TESTED (Cornell reference reviewed; mapping and reporting bias not fully audited)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "endToEndGuideUI": "PARTIALLY TESTED (targeted content and layout locally; field phase deferred)",
+          "independentSecondReview": "NOT TESTED (formal independent review pending)"
         },
         "findings": [
           "Vrouwtje in rust. Er is al een brongeverifieerd volwassen vrouwtje in vrije vlucht.",
-          "Algemene vluchtfoto zonder onderbouwde leeftijd of bevestigd geslacht."
+          "Algemene vluchtfoto zonder onderbouwde leeftijd of bevestigd geslacht.",
+          "Volwassen vrouwtje alleen in de vluchtsectie. Het ontbrekende fotopaar van zittende vrouwtjes wordt verborgen.",
+          "Astur gentilis is de naam bij Sovon en eBird. Birdspot-ID, mediakoppeling en oude naam behouden.",
+          "Euraziatische taxonnaam via Cornell gecontroleerd. eBird-verspreidingskaart blijft open."
         ],
-        "sourceReferences": [],
-        "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/havik",
+          "https://stats.sovon.nl/stats/soort/2670",
+          "https://macaulaylibrary.org/asset/404741851",
+          "docs/fotokwaliteit/F3_R03_SPERWER_HAVIK_TORENVALK_2026-11-15_DRAFT.md"
+        ],
+        "reviewedOriginalAudio": 3,
+        "showcasePreview": "LOCAL BROWSER 390 PX: targeted guide review",
+        "independence": "PARTIAL / independent rights and acoustic review outstanding",
+        "fullPass": false,
+        "photoFilesInspected": 6,
+        "scientificName": "Accipiter gentilis",
+        "ebirdSpeciesCode": "norgos1",
+        "photoBlobSHAs": [
+          "e4ac7e046d0a8c8933747016cf0280d717d1dd47",
+          "bab3b816e1905309c63e78912462a5b7c63f0c73",
+          "c08d80fe567f1812f6babe99f5c143fb23e8e1c0",
+          "a317b9a677764479a83e1f5b9f11edd0eda8d449",
+          "e0ebfc1fc4404f7ea333b6ad17ce183b1e109025",
+          "b9ebdf6f4b99fe33a68b1967a164d4a793c1b5eb"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (photos, paired mobile UI, local media and selected primary sources reviewed)",
+        "audioSourceMatches": [
+          {
+            "source": "https://commons.wikimedia.org/wiki/File:Accipiter_gentilis_-_Northern_Goshawk_XC396289.mp3",
+            "path": "/assets/species/audio/sp007-female-call.mp3",
+            "windows": 3,
+            "minimumNormalizedCorrelation": 0.9944
+          },
+          {
+            "source": "https://commons.wikimedia.org/wiki/File:Accipiter_gentilis_-_Northern_Goshawk_XC396773.mp3",
+            "path": "/assets/species/audio/sp007-alarm.mp3",
+            "windows": 3,
+            "minimumNormalizedCorrelation": 0.9851
+          },
+          {
+            "source": "https://commons.wikimedia.org/wiki/File:Accipiter_gentilis_-_Northern_Goshawk_XC578067.mp3",
+            "path": "/assets/species/audio/sp007-begging.mp3",
+            "windows": 3,
+            "minimumNormalizedCorrelation": 0.9973
+          }
+        ],
+        "functionTests": "DEFERRED BY OWNER for integrated field, offline and release QA. Local targeted guide and credit regressions executed."
       }
     },
     {
@@ -666,37 +742,71 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R03",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (all local images visually reviewed; full individual original pixel matching pending)",
+          "photoIndividualRights": "PARTIALLY TESTED (existing individual photo credits retained; selected files checked at Commons)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (flight, supported perching and plumage visually checked; open slot and role gaps recorded)",
+          "photoPairComparisons": "PARTIALLY TESTED (desktop Chromium at 390 px; relevant photo-pair and role assertions in test_species_detail.py)",
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium at 390 px; physical device and broader gestures later)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (source_info_i passed on integrated runtime; full legal and device check pending)",
+          "audioRecordingsAuthenticity": "PARTIALLY TESTED (all registered original tracks match the local recording signal; independent acoustic ID pending)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (source files download and registered attributions intact; individual license audit incomplete)",
+          "soundRolesSongCall": "PARTIALLY TESTED (roles checked against the field guides and available recording metadata; second review pending)",
+          "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (all local files decode; offline phase deferred)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (actual Vogelbescherming pages checked; ANWB passage pending)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (identification and registered sources checked; measurements not recalculated)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Dutch species pages reviewed; no data import)",
+          "ebirdDistributionAndBias": "PARTIALLY TESTED (Cornell reference reviewed; mapping and reporting bias not fully audited)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "endToEndGuideUI": "PARTIALLY TESTED (targeted content and layout locally; field phase deferred)",
+          "independentSecondReview": "NOT TESTED (formal independent review pending)"
         },
         "findings": [
           "Vergelijkingsfoto’s voor Boomvalk en Smelleken ontbreken in de gids.",
-          "Algemene bidfoto bevat geen bevestigd geslacht en heeft een neutraal label."
+          "Algemene bidfoto bevat geen bevestigd geslacht en heeft een neutraal label.",
+          "Bron noemt mannetje op lantaarn bij Vincennes. Bestaand takportret biedt aanvullend zijaanzicht.",
+          "Een afzonderlijk bevestigde volwassen vrouw in vrije vlucht blijft open."
         ],
-        "sourceReferences": [],
-        "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/torenvalk",
+          "https://stats.sovon.nl/stats/soort/3040",
+          "https://science.ebird.org/en/status-and-trends/species/eurkes/range-map",
+          "docs/fotokwaliteit/F3_R03_SPERWER_HAVIK_TORENVALK_2026-11-15_DRAFT.md"
+        ],
+        "reviewedOriginalAudio": 2,
+        "showcasePreview": "LOCAL BROWSER 390 PX: targeted guide review",
+        "independence": "PARTIAL / independent rights and acoustic review outstanding",
+        "fullPass": false,
+        "photoFilesInspected": 6,
+        "scientificName": "Falco tinnunculus",
+        "ebirdSpeciesCode": "eurkes",
+        "photoBlobSHAs": [
+          "8f9a29629259680f2ffbde8f91f962d5ec15349f",
+          "a936a1b0759a9a7f460493e25bd57a8d349e64fb",
+          "73a315be07ede115eda952812809e1c0693e8bca",
+          "9cb373617c00b552d782d314b6212a06dbb01e31",
+          "a43a30f212b9edcb0fe0f6ab28b26cffe354ad91",
+          "e056d206163a5ef28548181ceb5023a8b64caaf1"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (photos, paired mobile UI, local media and selected primary sources reviewed)",
+        "audioSourceMatches": [
+          {
+            "source": "https://commons.wikimedia.org/wiki/File:Falco_tinnunculus_-_Common_Kestrel_XC463430.mp3",
+            "path": "/assets/species/audio/sp008-pair.mp3",
+            "windows": 3,
+            "minimumNormalizedCorrelation": 0.9995
+          },
+          {
+            "source": "https://commons.wikimedia.org/wiki/File:Falco_tinnunculus_-_Common_Kestrel_XC589714.mp3",
+            "path": "/assets/species/audio/sp008-male-call.mp3",
+            "windows": 3,
+            "minimumNormalizedCorrelation": 0.9992
+          }
+        ],
+        "functionTests": "DEFERRED BY OWNER for integrated field, offline and release QA. Local targeted guide and credit regressions executed."
       }
     },
     {
@@ -9426,6 +9536,7 @@
     "date": "2026-11-15",
     "ownerDecision": "UI/UX and complete photo/audio source content first; practical Android, Merlin, offline, ZIP and functional end-to-end QA later on one integrated build. Do not stop the next three-bird media batch while previous species have noted source/media gaps.",
     "boundary": "Content visually reviewed is not media-rights VERIFIED or release PASS. No audio invention, no source attribution hidden where license requires directly visible credit. All ordinary source references behind accessible i.",
-    "technicalStage": "DEFERRED, NOT WAIVED"
+    "technicalStage": "DEFERRED, NOT WAIVED",
+    "integratedReviewBase": "PR #252, 1dd5843789c625de9c682c8b7c194d8136138d9d"
   }
 }
