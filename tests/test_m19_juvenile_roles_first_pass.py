@@ -110,12 +110,19 @@ def test_real_registered_media():
     media=read("assets/species/field-guide-media.json")
     knowledge=read("tools/kennisbaseline/knowledge.json")
     canonical=read("docs/fotokwaliteit/soortaudit-status.json")
+    later_reviews = {row["id"]: row["F3"] for row in
+                     read("docs/fotokwaliteit/F3_140_HERCONTROLE_V0.1_DRAFT.json")["records"]}
     by_path={}
     by_source={}
     for sid,bird in BIRDS.items():
         entry=next(x for x in canonical["species"] if x["id"]==sid)
         assert not entry["audited"] and entry["verdict"]=="NOT TESTED"
-        assert sid not in knowledge, "F2 knowledge is a separate review"
+        if sid in knowledge:
+            # A later profile needs its own evidence while the historic F1 status remains intact.
+            review = later_reviews[sid]
+            assert review["reviewedThisRound"] and review["recheckBatch"], sid
+            assert review["sourceReferences"], sid
+            assert review["checks"]["biometryAndKnowledge"].startswith(("PARTIALLY TESTED", "VERIFIED")), sid
         assert credits[sid]["nl"]==bird["nl"] and credits[sid]["latin"]==bird["latin"]
         assert media["plumage"][sid]["juv"]["image"]==bird["juv"]
         assert media["plumage"][sid]["juv"].get("sex") not in ("male","female")

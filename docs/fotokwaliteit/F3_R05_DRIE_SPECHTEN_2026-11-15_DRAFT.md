@@ -24,3 +24,5 @@ Alle vijf lokale bestanden zijn volledig gedecodeerd en in drie vensters per opn
 ## Weergave en bewijs
 
 De geslaagde mobiele browsercontrole omvat de eigen fotoreeks, vluchtsectie, beelden naast elkaar in de vergelijkingen, fotovergroting, broninfo via ⓘ, de vijf spelers en de Nederlandse status op 360 en 390 px in Chromium. Voor de vogelstatus zijn de primaire pagina’s van Sovon gebruikt. Internationale eBird-verspreiding en seizoensdata waren niet toegankelijk. De soortcodes zijn `blawoo1`, `eugwoo2` en `miswoo1`. Er zijn geen populatiecijfers of audio uit eBird of Macaulay overgenomen. Een gecontroleerde ANWB-passage, praktijktest op een telefoon, offline-herstel en onafhankelijke soort- en rechtenbeoordeling blijven open. Status van de soortcontrole is PARTIALLY TESTED. Gate voor volledige aftekening is NOT TESTED.
+
+De M19-regressietest voor de eerste fotocontrole verwachtte dat Groene Specht geen kennisprofiel had. De test vereist nu bewijs van een afzonderlijke latere profielcontrole in F3. De oorspronkelijke fotobeoordeling en de controles op bron, kleed en beeld blijven gelden.
