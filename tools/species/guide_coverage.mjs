@@ -63,7 +63,11 @@ for (const {birds, tip, flight} of GUIDE_COMPARISONS) {
       checkPhoto(id, comparisonPhoto(bird, true));
       continue;
     }
-    if (bird.textOnly === true) continue;
+    if (bird.textOnly === true || bird.photoMissing) continue;
+    if (bird.photo) {
+      checkPhoto(id, comparisonPhoto(bird, false));
+      continue;
+    }
     const photo = GUIDE_PLUMAGE[id]?.[plumage];
     // Some real, source-registered age photos are held under GUIDE_POSES, not
     // GUIDE_PLUMAGE (sp035 juvenile). Resolve the actual image used by the UI

@@ -1,7 +1,7 @@
 # Birdspot F2 — register open punten en uitgesteld fotoonderzoek
 
 **Eigenaarbesluit 14 november 2026 · Werkdocument (DRAFT, geen foto-PASS)**
-**Historische basis:** F2-15 `bccd09599a2b9fd7fb23771b3f6c262542b4c08a`; F2-20 voortzetting op PR #221 `fa05d08d203f656c5c7bce328c6deec6d3961632`, historische F2-19-bevindingen behouden. **Actuele reikwijdte (F2-29, 15 november 2026):** 78/140 soorten individueel opgepakt, 62/140 nog **NOT TESTED in F2**; het historische basischeckpoint van 51/140 uit F2-20 blijft in de onderliggende brondossiers bewaard. Geen van deze aantallen is gelijk aan een foto-PASS. Dit register is een index op de bestaande per-batch brondossiers, niet een vervanging van de canonieke 9-punts-audit.
+**Historische basis:** F2-15 `bccd09599a2b9fd7fb23771b3f6c262542b4c08a`; F2-20 voortzetting op PR #221 `fa05d08d203f656c5c7bce328c6deec6d3961632`, historische F2-19-bevindingen behouden. **Actuele reikwijdte (F2-30, 15 november 2026):** 81/140 soorten individueel opgepakt, 59/140 nog **NOT TESTED in F2**; het historische basischeckpoint van 51/140 uit F2-20 blijft in de onderliggende brondossiers bewaard. Geen van deze aantallen is gelijk aan een foto-PASS. Dit register is een index op de bestaande per-batch brondossiers, niet een vervanging van de canonieke 9-punts-audit.
 
 ## Hoe vervolgonderzoek te sturen
 
@@ -155,3 +155,13 @@ De tekst in de kolom 'Open uit bronronde' is overgenomen uit de laatste F2-voort
 | sp091 Wintertaling | F2-29 | Juveniel en ruifoto leunen op eerder bewijs. Bron van de Zomertaling-vrouwtjesfoto onbereikbaar. Er is nog geen gelijkwaardig fotopaar in eclipskleed. |
 
 [Brondossier met makers, licenties en SHA-256 per foto](F2_29_BRON_EN_LIMIETEN.json). ANWB-soortpassages, nieuwe bronbeeldmatch en fysieke Android-test blijven open.
+
+### F2-30 · Kuifeend, Zilvermeeuw en Kleine Mantelmeeuw
+
+| Soort | Batch | Open uit bronronde |
+|---|---|---|
+| sp092 Kuifeend | F2-30 | Exacte bronpagina’s van de twee jeugdfoto’s en beide gebruikte vluchtfoto’s waren onbereikbaar. De Tafeleend-hoofdfoto berust ook op eerder controlebewijs. |
+| sp094 Zilvermeeuw | F2-30 | Een eerste-winterfoto ontbreekt. De bron van de vluchtfoto vermeldt naast de CC-licentie een verzoek van de maker om melding van hergebruik. |
+| sp095 Kleine Mantelmeeuw | F2-30 | Een eerste-winterfoto ontbreekt. Voor het nieuwe volwassen paar met Grote Mantelmeeuw blijft het geslacht open. |
+
+[Brondossier met makers, licenties en SHA-256 per foto](F2_30_BRON_EN_LIMIETEN.json). ANWB-soortpassages, nieuwe bronbeeldmatch en fysieke Android-test blijven open.

@@ -335,3 +335,15 @@ Zeventien eigen beelden en vier relevante Zomertaling-beelden visueel bekeken. V
 Dwerggans (sp182, Schaarse gasten) en Groene Reiger (sp459, Dwaalgasten) staan al in de Nederlandse soortenlijst. Beide detailkaarten hebben nog geen gidsfoto. De zoekroute heeft regressiedekking voor Nederlandse en wetenschappelijke namen onder **Soorten → Alle**.
 
 **Teller** · 78/140 soorten opgepakt, 62 resterend. F2 is PARTIALLY TESTED. Basis [PR #232](https://github.com/saddamsmit-source/Birdspot-Library/pull/232) op `ab1a35835be5b28dc96de40605616fcff2e7a700`. CAP-BIRD-012/015. Herstel via de basis-PR. Volgende batch: Kuifeend, Zilvermeeuw en Kleine Mantelmeeuw.
+
+## F2-30 · Kuifeend, Zilvermeeuw en Kleine Mantelmeeuw
+
+| Soort | Hercontrole en wijziging | Open |
+|---|---|---|
+| sp092 Kuifeend | Zes beelden herbeoordeeld. Nieuw wederzijds vrijevluchtpaar met Tafeleend op kopkleur en vleugelbaan. De twee rustparen blijven beschikbaar. | Twee jeugdbronnen, beide vluchtbronnen en de bron van het Tafeleend-mannetje niet heropend. Eerder bewijs per foto vastgelegd. |
+| sp094 Zilvermeeuw | Onder Eerste winter stonden de twee volwassen foto's opnieuw. Het onvolledige eerste-winterpaar wordt verborgen. Nieuw vrijevluchtpaar met Kleine Mantelmeeuw. | Eerste-winterbeeld ontbreekt. De maker van het vluchtbeeld verzoekt om melding van hergebruik. |
+| sp095 Kleine Mantelmeeuw | Volwassen rust- en vluchtbeeld gecontroleerd. Het nieuwe rustpaar met Grote Mantelmeeuw gebruikt mantel, poten en snavelvorm. | Eerste-winterbeeld ontbreekt. Geslacht van beide vogels in het rustpaar onbekend. |
+
+Tien eigen beelden en vier gebruikte partnerbeelden beoordeeld. Negen originele bestandspagina’s geraadpleegd. De audit gebruikt voor expliciet gekozen foto's dezelfde resolver als de app. [Beeld- en bronbewijs](F2_30_BRON_EN_LIMIETEN.json).
+
+**Teller** · 81/140 soorten opgepakt, 59 resterend. F2 is PARTIALLY TESTED. Basis [PR #233](https://github.com/saddamsmit-source/Birdspot-Library/pull/233) op `5226a043c98d49251830371d34c4f980fedb64f0`. CAP-BIRD-012/015. Herstel via de basis-PR. Volgende batch: Stormmeeuw, Kokmeeuw en Scholekster.
