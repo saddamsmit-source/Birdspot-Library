@@ -104,7 +104,8 @@
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
-          "Sovon en eBird links en vogelbescherming soortreferentie opgezocht; geen volledige datum-/model- of datarechtenclaim"
+          "Sovon en eBird links en vogelbescherming soortreferentie opgezocht; geen volledige datum-/model- of datarechtenclaim",
+          "Metadata van audiozoekkandidaat verder vergeleken; geen app-import of volledige audio-F3 PASS"
         ],
         "sourceReferences": [
           "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/houtduif",
@@ -130,7 +131,14 @@
           "sourceRole": "SONG_OR_CALL_NOT_YET_AUDITIONED",
           "rights": "NOT VERIFIED FOR BIRDSPOT",
           "issue": "Bron noemt Ekster in achtergrond: mag geen vervuild voorbeeld worden zonder beluisteren/keuze",
-          "imported": false
+          "imported": false,
+          "reportedLicense": "Public domain (Commons author/metadata)",
+          "licenseEvidenceStatus": "SOURCE METADATA PARTIALLY CHECKED; background Magpie declared; original media not yet independently auditioned",
+          "licenseReferenceURLs": [
+            "https://commons.wikimedia.org/wiki/File:Columba_palumbus_birdsong.ogg"
+          ],
+          "mediaFileIntegrity": "NOT TESTED",
+          "soundSpeciesAndRole": "NOT TESTED"
         }
       }
     },
@@ -194,7 +202,8 @@
           "Geen lokaal geregistreerde zang of roep",
           "Individuele oorsprong / determinatie van licht ogende vlucht-ondervleugel opnieuw vergelijken met origineel",
           "Sovon en eBird links en vogelbescherming soortreferentie opgezocht; geen volledige datum-/model- of datarechtenclaim",
-          "Commons Columba_oenas1.jpg: Chris Cant, CC BY 2.0 metadata in deze ronde gelezen, afgeleide WebP-bytegelijkheid niet zelfstandig bevestigd"
+          "Commons Columba_oenas1.jpg: Chris Cant, CC BY 2.0 metadata in deze ronde gelezen, afgeleide WebP-bytegelijkheid niet zelfstandig bevestigd",
+          "Metadata van audiozoekkandidaat verder vergeleken; geen app-import of volledige audio-F3 PASS"
         ],
         "sourceReferences": [
           "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/holenduif",
@@ -220,7 +229,14 @@
           "sourceRole": "SONG_OR_CALL_NOT_YET_AUDITIONED",
           "rights": "NOT VERIFIED FOR BIRDSPOT",
           "issue": "Specifieke originele opnamepagina/maker/licentie/akoestische zuiverheid nog NOT TESTED",
-          "imported": false
+          "imported": false,
+          "reportedLicense": "CC BY-SA 3.0 as reported by Encyclopedia of Life",
+          "licenseEvidenceStatus": "SECONDARY METADATA ONLY, primary licensing/actual audio still NOT VERIFIED",
+          "licenseReferenceURLs": [
+            "https://eol.org/pages/45509375/media?subcategory=sound"
+          ],
+          "mediaFileIntegrity": "NOT TESTED",
+          "soundSpeciesAndRole": "NOT TESTED"
         }
       }
     },
@@ -282,7 +298,8 @@
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
-          "Sovon en eBird links en vogelbescherming soortreferentie opgezocht; geen volledige datum-/model- of datarechtenclaim"
+          "Sovon en eBird links en vogelbescherming soortreferentie opgezocht; geen volledige datum-/model- of datarechtenclaim",
+          "Metadata van audiozoekkandidaat verder vergeleken; geen app-import of volledige audio-F3 PASS"
         ],
         "sourceReferences": [
           "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/turkse-tortel",
@@ -308,7 +325,14 @@
           "sourceRole": "SONG_OR_CALL_NOT_YET_AUDITIONED",
           "rights": "NOT VERIFIED FOR BIRDSPOT",
           "issue": "Bronlocatie/soort bekend, maar licentie, gehoorcontrole en bruikbare fragmentkeuze nog NIET onafhankelijk bevestigd",
-          "imported": false
+          "imported": false,
+          "reportedLicense": "CC BY-SA 3.0 on Commons XC82758 linked alias page",
+          "licenseEvidenceStatus": "PRIMARY COMMONS LICENSING READ, actual candidate audio and exact derived file not yet independently auditioned/checked",
+          "licenseReferenceURLs": [
+            "https://commons.wikimedia.org/wiki/File:JMJ-20110703-070858-000380-USA-IA-DordtPrairie-MODO.ogg"
+          ],
+          "mediaFileIntegrity": "NOT TESTED",
+          "soundSpeciesAndRole": "NOT TESTED"
         }
       }
     },
