@@ -30,7 +30,9 @@ def open_card(page, name, sid):
 
 def choose(panel, slot):
     panel.locator(f'[data-guide-slot="{slot}"] .sd-guide-action').click()
-    return panel.locator(".sd-guide-editor")
+    editor = panel.page.locator(".sd-guide-editor")
+    expect(editor).to_be_visible()
+    return editor
 
 
 def own_photo(panel, slot):
