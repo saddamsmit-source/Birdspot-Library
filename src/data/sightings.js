@@ -141,10 +141,16 @@ export async function assignPlaceIds(assign) {
  * @throws {DOMException|Error} bij opslagfout (caller toont foutmelding)
  */
 export async function addSighting(sighting) {
-  const all = await getSightings();
-  all.push(sighting);
-  saveSightings(all);   // gooit bij fout — addSheet.js vangt dit op
+  await addSightings([sighting]);
   return sighting;
+}
+
+/** Append a complete group with one storage write. The caller retains its draft on failure. */
+export async function addSightings(sightings) {
+  const stored = getSightingsSnapshot();
+  const existingIds = new Set(stored.map(sighting => sighting.id));
+  const additions = sightings.filter(sighting => !existingIds.has(sighting.id));
+  if (additions.length) saveSightings([...stored, ...additions]);
 }
 
 // ── Update ─────────────────────────────────────────────────
