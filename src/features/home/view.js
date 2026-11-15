@@ -406,7 +406,7 @@ async function loadWeather(el, ctx) {
             <span>💧 ${c.relative_humidity_2m}%</span>
           </div>
           <div class="weather-tip">
-            <strong><span aria-hidden="true">${iconBird()}</span>${summary}</strong>
+            <strong><span aria-hidden="true">${appIcon('bird')}</span>${summary}</strong>
             ${tips.length ? `<ul>${tips.map(tip => `<li>${tip}</li>`).join('')}</ul>` : ''}
           </div>
         </div>

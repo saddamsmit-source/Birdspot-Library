@@ -44,6 +44,36 @@ def main():
         page = context.new_page()
         page.goto(base, wait_until='domcontentloaded')
         page.locator('#birdspotSplash').wait_for(state='detached', timeout=15000)
+        catalogue = page.evaluate(r"""async () => {
+          const { SPECIES } = await import('/src/data/species.js');
+          const { guideHeroPhoto, recognitionPanel, wherePanel } = await import('/src/features/species/detailSections.js');
+          const known = new Map();
+          const invalid = [];
+          const missing = [];
+          for (const species of SPECIES) {
+            const markup = recognitionPanel(species, null, true);
+            const slots = [...markup.matchAll(/data-guide-slot="([^"]+)"/g)].map(match => match[1]);
+            if (!slots.some(slot => slot.startsWith('flight-')) || slots.length !== new Set(slots).size) {
+              invalid.push(species.id);
+            }
+            if (!guideHeroPhoto(species.id)) missing.push([species.nameNL, species.id, slots.includes('flight-neutral')]);
+            for (const [, icon, label] of wherePanel(species).matchAll(/class="sd-habitat"><svg[^>]*data-icon="([^"]+)"[^>]*>.*?<\/svg>([^<]+)<\/span>/g)) {
+              known.set(label, icon);
+            }
+          }
+          const preferred = ['sp182', 'sp459'];
+          const empty = missing.filter(([, , neutral]) => neutral);
+          const sample = [...empty.filter(([, id]) => preferred.includes(id)),
+                          ...empty.filter(([, id]) => !preferred.includes(id))]
+            .slice(0, 2).map(([name, id]) => [name, id]);
+          return { species: SPECIES.length, missing: missing.length, sample, habitats: [...known], invalid };
+        }""")
+        assert catalogue['species'] > 0, catalogue
+        assert not catalogue['invalid'], catalogue
+        assert len(catalogue['habitats']) == 14, catalogue
+        assert len({icon for _, icon in catalogue['habitats']}) == 14, catalogue
+        print(f"Gidsbrede controle geslaagd: {catalogue['species']} soorten, "
+              f"{catalogue['missing']} zonder gidsfoto en 14 verschillende leefgebiediconen.")
         page.evaluate("""async () => {
           const { FEATURED_BIRDS, POSITION_KEY } = await import('/src/features/home/specialBirds.js');
           const index = FEATURED_BIRDS.findIndex(b => b.nl === 'Wielewaal');
@@ -118,6 +148,18 @@ def main():
         expect(harrier.get_by_role('tab', name='Waarnemingen').locator('[data-icon="observations"]')).to_have_count(1)
         harrier.locator('.sd-habitats').screenshot(path=str(SHOTS / 'mobile_owner_habitat_390.png'))
         close_species(harrier)
+
+        for name, sid in catalogue['sample']:
+            card = open_species(page, name, sid)
+            expect(card.locator('[data-guide-slot="hero"] .species-guide-photo')).to_have_count(0)
+            for slot in ('hero', 'flight-neutral'):
+                card.locator(f'[data-guide-slot="{slot}"] .sd-guide-action').click()
+                editor = page.locator('.sd-guide-editor[open]')
+                expect(editor.get_by_role('button', name='Gebruik in mijn gids')).to_be_visible()
+                expect(editor.get_by_text('Foto voorstellen aan de beheerder', exact=True)).to_be_visible()
+                editor.get_by_role('button', name='Sluit fotovenster').click()
+                expect(editor).to_have_count(0)
+            close_species(card)
 
         page.get_by_role('button', name='Waarneming toevoegen', exact=True).click()
         methods = page.locator('#sightMethodGroup')
