@@ -114,7 +114,7 @@ def main():
                 source = source_context.new_page()
                 source.on("pageerror", lambda error: errors.append("source: " + str(error)))
                 start(source, url)
-                source.locator("#fab").click()
+                source.locator("#fab").click();source.locator('[data-quick-action="seen"]').click()
                 source.locator("#addSightingSheet").wait_for(state="visible")
                 select_species(source)
                 source.locator("#sightLocation").fill(PLACE)
