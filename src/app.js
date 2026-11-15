@@ -115,7 +115,8 @@ function focusSection(screen, id) {
 
 function selectSearchResult({ route, ...target }) {
   if (route === 'add') {
-    document.getElementById('fab').click();
+    // Dedicated shortcuts open the existing form directly; only the central + offers a choice.
+    openObservationForm();
     return;
   }
   navigate(route, { force: Object.keys(target).some(key => target[key] !== undefined), target });
@@ -128,17 +129,20 @@ document.getElementById('app-nav').addEventListener('click', e => {
   navigate(btn.dataset.route);
 });
 
-// ── FAB-klik → kiezen tussen direct waarnemen en gratis Merlin ──────────
+// ── Centrale formule: een opslagroute, ongeacht gekozen ingang ─────
+function openObservationForm(initial = {}) {
+  openAddSheet({
+    initial,
+    onSaved: () => {
+      if (currentRoute === 'home') navigate('home', { force: true });
+      else navigate('sightings', { force: true });
+    },
+  });
+}
+
+// ── De centrale + biedt de twee herkenbare keuzes ──────────
 document.getElementById('fab').addEventListener('click', () => {
-  openQuickAdd({ onChoose: initial => {
-    openAddSheet({
-      initial,
-      onSaved: () => {
-        if (currentRoute === 'home') navigate('home', { force: true });
-        else navigate('sightings', { force: true });
-      },
-    });
-  }});
+  openQuickAdd({ onChoose: openObservationForm });
 });
 
 // ── Toast utility ─────────────────────────────────────────
