@@ -75,3 +75,12 @@ De mogelijkheid om een vogel automatisch te herkennen door BirdNET is **geen** b
 4. **Nog open:** oorspronkelijke foto-/audiorechten per bestand, onafhankelijke soort-, leeftijds- en geluidsdeterminatie, origineelbeeldvergelijking, offline scherm/zoom en echte toestel-/PWA-check. Na originele bronnen opnieuw controleren of een alternatieve betere foto/roep überhaupt nodig is. Geen verzonnen foto, geen uitgezette controles.
 
 **Herstel:** PR/branch afsluiten zonder merge naar publieke versie; exact uitgangspunt PR #262 `84657b88f49f9e24c16d4b0a7d987fd1c4ea93a9`. Updates uit #261 en #262 blijven behouden. Geen nieuwe livego of publicatieopdracht in dit gesprek.
+
+
+## Addendum · Vink/Groenling-vrouwtjes (16-11-2026)
+
+**Vervolg boven op PR #263, zonder eerdere audithistorie te overschrijven.** Extra dubbelganger `LK-007`: Vink `sp035` ↔ Groenling `sp036`, uitsluitend twee bestaande, werkelijk geopende **volwassen vrouwtjesrustfoto's** uit de oorspronkelijke registerrollen. In de Vink-foto zijn twee witte vleugelstrepen zichtbaar; in de Groenling-foto de gele vleugelrand, een bredere kegelsnavel en grijsgroene kleedtoon. Daarom is een extra 2-fotopaar toegevoegd in `guideComparisons.js`, met drie concrete verschillen en de waarschuwing dat bruine/groene kleurtint niet op zichzelf diagnostisch is.
+
+De canonieke `knowledge.json` en de gegenereerde `speciesKnowledge.js` zijn gezamenlijk bijgewerkt zodat beide soorten ook in de herkenningstekst naar elkaar verwijzen. `SOORTVERWARRING_REGISTER_V0.1_DRAFT.json` bevat de expliciete partner-IDs, risicokleed en individuele open foto-/licentie-/kwaliteitsgates. Tests controleren bronvelden, beide navigatierichtingen en mobiele beeldparen. **Geen nieuwe mediabytes**; onafhankelijke visuele controle tegen de originele fotograafbestanden, rechten, volledige mobile test en ornithologisch tweede oordeel blijven OPEN. Telling onveranderd: 27/140 inhoudelijk bekeken, 0 full-PASS.
+
+Relevante herkende kenmerken: [Vogelbescherming Vink](https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/vink), [Vogelbescherming Groenling](https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/groenling) en [RSPB female/juvenile finches](https://www.rspb.org.uk/birds-and-wildlife/identifying-birds/small-brown-birds-you-might-see-in-your-garden). Dit zijn inhoudsbronnen, geen fotoherpublicatievergunningen.
