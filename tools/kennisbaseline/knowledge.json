@@ -13642,29 +13642,48 @@
       }
     ],
     "caution": {
-      "text": "Een jonge Vink lijkt op een vrouwtje. Een bruin kleed alleen geeft geen zekere leeftijd of sekse.",
+      "text": "Let bij vrouwtje of juveniel Vink op de twee lichte vleugelstrepen én de rug: vrouwtje Huismus heeft een duidelijkere wenkbrauw en een gestreepte rug. In gemengde wintergroepen lijkt vooral een vrouwelijke Keep erop: de Keep heeft vaak warm oranje op borst/schouders en een opvallend witte stuit in vlucht. Eén kleur of vleugelband beslist niet.",
       "sources": [
+        "VB_VINK",
+        "VB_HMUS",
+        "VB_KEEP",
         "BZH_VINK"
       ]
     },
     "critical": [
       {
-        "feature": "Vleugelstrepen en borsttekening",
-        "where": "Zijaanzicht met zicht op de gevouwen vleugel",
-        "this": "Twee lichte vleugelstrepen, lichte schoudertekening en witte buitenste staartpennen.",
-        "other": "Vrouwtje Huismus mist die combinatie. Keep heeft vaak een oranje borst die overgaat in een witte buik.",
+        "feature": "Vink of Keep in een wintergroep",
+        "where": "Bekijk borst, gevouwen vleugel en bij opvliegen de stuit",
+        "this": "Vink: twee lichte vleugelstrepen; het vrouwtje is bruiner/grijzer en mist de opvallend witte stuit van Keep.",
+        "other": "Keep: vaak oranje schouder-/borsttinten en een grote witte stuit, vooral zichtbaar bij het opvliegen.",
         "vs": [
-          "sp043",
           "sp181"
         ],
         "reliability": "ondersteunend",
-        "conditions": "Bekijk vleugel en borst samen.",
-        "exceptions": "In tegenlicht zijn lichte veerranden minder zichtbaar. Een juveniele Vink lijkt op een vrouwtje.",
-        "supporting": "Let bij een opvliegende vogel ook op het wit aan de buitenkant van de staart.",
+        "conditions": "Vergelijk een vogel met overeenkomstig geslacht en winterkleed, ook in een gemengde groep.",
+        "exceptions": "De oranje hoeveelheid varieert, licht maakt kleuren onzeker en de witte stuit is niet altijd zichtbaar in rust.",
+        "supporting": "Let op de karakteristieke nasale roep van Keep; geen definitieve determinatie op één teken.",
+        "sources": [
+          "VB_VINK",
+          "VB_KEEP",
+          "BZH_VINK"
+        ]
+      },
+      {
+        "feature": "Vrouwtje Vink of Huismus",
+        "where": "Zijaanzicht met beide gevouwen vleugels, rug en wenkbrauw zichtbaar",
+        "this": "Vrouwtje Vink: twee lichte vleugelstrepen, doorgaans egalere rug en witte buitenste staartveren.",
+        "other": "Vrouwtje Huismus: duidelijker lichte wenkbrauw en meer gestreepte rug, zonder dezelfde twee witte vleugelstrepen.",
+        "vs": [
+          "sp043"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Bruikbaar bij goed zicht op vleugel en rug; vergelijk vrouwtjes en niet een juveniel op basis van alleen kleur.",
+        "exceptions": "Veren kunnen versleten zijn en de vleugelbanden vallen in tegenlicht minder op; juveniele Vinken lijken op vrouwtjes.",
+        "supporting": "Combineer rugtekening met snavel/kop, vleugelstrepen en gedrag.",
         "sources": [
           "VB_VINK",
           "VB_HMUS",
-          "VB_KEEP",
           "BZH_VINK"
         ]
       }
@@ -13680,7 +13699,7 @@
       },
       {
         "id": "sp181",
-        "why": "Let op de combinatie van oranje borst en witte buik bij Keep.",
+        "why": "Keep en Vink zitten vaak samen in wintergroepen. Let vooral op oranje borst/schouders en witte stuit bij Keep; voor zekere determinatie is ook de passende foto/roep nodig.",
         "sources": [
           "VB_VINK",
           "VB_KEEP"
@@ -13780,7 +13799,9 @@
       }
     ],
     "discrepancies": [],
-    "open": []
+    "open": [
+      "Vink/Keep: Keep (sp181) heeft nog geen afzonderlijk geverifieerd gidsfoto-paar; vergelijkingsbeelden blijven intern open en worden niet als compleet paneel getoond."
+    ]
   },
   "sp036": {
     "summary": {
@@ -13817,9 +13838,10 @@
       }
     ],
     "caution": {
-      "text": "De hoeveelheid geel hangt ook af van hoe de vleugel ligt. Kijk bij twijfel tegelijk naar snavel en bouw.",
+      "text": "Vrouwtjes Groenling en Sijs delen groengeel op de vleugel. De Groenling heeft een veel steviger kegelvormige snavel en oogt forser; de Sijs is fijner en heeft vaak duidelijk gestreepte flanken. Jonge Groenlingen kunnen ook sterk gestreept zijn: combineer leeftijd, snavel, flank en vleugel en beslis niet op geel alleen.",
       "sources": [
         "VB_GROENLING",
+        "VB_SIJS",
         "BZH_GROENLING"
       ]
     },
@@ -13846,7 +13868,7 @@
     "similar": [
       {
         "id": "sp038",
-        "why": "Vergelijk de snaveldikte en de positie van het geel op de vleugel.",
+        "why": "Vergelijk bij vrouwtjes de brede snavel van Groenling met de fijne Sijssnavel, de flankstrepen en de plaats van het geel op de vleugel.",
         "sources": [
           "VB_GROENLING",
           "VB_SIJS"
@@ -18301,8 +18323,9 @@
       }
     ],
     "caution": {
-      "text": "Koptekening varieert. Een witte kop alleen is onvoldoende om een ondersoort toe te kennen.",
+      "text": "Staartmezen kunnen een deels of vrijwel geheel witte kop hebben. Een witkoppig exemplaar bewijst niet vanzelf de noordelijke witkop-ondersoort; controleer volledige koptekening, herkomst en passend bronbewijs voordat je een ondersoort noemt.",
       "sources": [
+        "VB_STAARTMEES",
         "BZH_STAARTMEES"
       ]
     },
@@ -18350,6 +18373,14 @@
           "BZH_STAARTMEES"
         ],
         "topic": "leeftijd"
+      },
+      {
+        "topic": "variatie",
+        "text": "De in Nederland gewone koptekening kan lichter of donkerder zijn; ook binnen hetzelfde soortbeeld bestaan witkoppige vogels. Alleen een witte kop is onvoldoende om een noordelijke witkopstaartmees als ondersoort te bewijzen.",
+        "sources": [
+          "VB_STAARTMEES",
+          "BZH_STAARTMEES"
+        ]
       }
     ],
     "voice": [
