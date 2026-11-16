@@ -37,8 +37,8 @@ MIN_REFS = 2
 MIXED = ('calls and song', 'call and song', 'songs and calls', 'song and call', 'calls and songs')
 
 
-def decode(data: bytes, seconds: float = 60.0) -> np.ndarray:
-    out = subprocess.run(["ffmpeg", "-nostdin", "-loglevel", "error", "-i", "pipe:0", "-t", str(seconds),
+def decode(data: bytes, seconds: float = 60.0, start: float = 0.0) -> np.ndarray:
+    out = subprocess.run(["ffmpeg", "-nostdin", "-loglevel", "error", "-i", "pipe:0", "-ss", str(start), "-t", str(seconds),
                           "-ac", "1", "-ar", str(SR), "-f", "s16le", "pipe:1"], input=data, capture_output=True, check=True)
     return np.frombuffer(out.stdout, dtype="<i2").astype(np.float32) / 32768.0
 
@@ -92,11 +92,44 @@ def similarity(a: dict, b: dict) -> float:
     return round(0.5 * cos(pa, pb) + 0.5 * cos(ha, hb), 4)
 
 
-def judge(cand: dict, refs: dict[str, list[dict]], own: str, confusers: list[str] | None = None) -> dict:
-    """refs: soort-ID -> referentiekenmerken (zelfde geluidsoort, andere opnemers). confusers: de verwarringssoorten
-    uit het kennisprofiel; elk daarvan moet >= MIN_REFS referenties hebben. Pure functie voor tests."""
+def independent(refs: list[dict], exclude_author: str | None = None) -> list[dict]:
+    """Eén referentie per opnemer; referenties van de opnemer van de kandidaat tellen niet (geen onafhankelijk bewijs)."""
+    seen, out = set(), []
+    norm = lambda a: " ".join((a or "").split()).casefold()
+    for r in refs:
+        a = norm(r.get("author"))
+        if not a or a in seen or (exclude_author and a == norm(exclude_author)):
+            continue
+        seen.add(a)
+        out.append(r)
+    return out
+
+
+def validate_refs(refs: dict[str, list[dict]]) -> float:
+    """Leave-one-out: elke referentie moet het meest lijken op de overige referenties van haar eigen soort.
+    Zo niet, dan onderscheidt de maat deze soorten niet en mag geen kandidaat 'consistent' heten."""
+    total = ok = 0
+    for sid, rs in refs.items():
+        for k, r in enumerate(rs):
+            scores = {}
+            for sid2, rs2 in refs.items():
+                others = [x for j, x in enumerate(rs2) if not (sid2 == sid and j == k)]
+                if others:
+                    scores[sid2] = float(np.mean([similarity(r, x) for x in others]))
+            if sid in scores and len(scores) > 1:
+                total += 1
+                ok += max(scores, key=scores.get) == sid
+    return ok / total if total else 0.0
+
+
+def judge(cand: dict, refs: dict[str, list[dict]], own: str, confusers: list[str] | None = None,
+          cand_author: str | None = None) -> dict:
+    """refs: soort-ID -> referentiekenmerken (met 'author'; exact dezelfde soort en geluidsoort). confusers: de
+    verwarringssoorten uit het kennisprofiel, elk met >= MIN_REFS onafhankelijke opnemers. De uitkomst is hooguit een
+    akoestische aanwijzing (PARTIALLY TESTED), nooit een soortverificatie. Pure functie voor tests."""
     if confusers is not None:
         refs = {sid: refs.get(sid, []) for sid in [own, *confusers]}
+    refs = {sid: independent(rs, cand_author) for sid, rs in refs.items()}
     if not cand.get("usable"):
         return {"consistent": False, "reason": "te weinig actief geluid"}
     means = {sid: round(float(np.mean([similarity(cand, r) for r in rs])), 4) for sid, rs in refs.items() if rs}
@@ -107,6 +140,12 @@ def judge(cand: dict, refs: dict[str, list[dict]], own: str, confusers: list[str
     thin = sorted(k for k, rs in refs.items() if k != own and len(rs) < MIN_REFS)
     if thin:
         return {"consistent": False, "reason": "verwarringssoort onvoldoende referenties: " + ", ".join(thin), "means": means}
+    if not any(k != own for k in means):
+        return {"consistent": False, "reason": "geen verwarringssoort om tegen te toetsen", "means": means}
+    acc = validate_refs(refs)
+    if acc < 1.0:
+        return {"consistent": False, "reason": f"referenties onderscheiden de soorten niet betrouwbaar (leave-one-out {acc:.2f} < 1,00)",
+                "means": means, "referenceValidation": round(acc, 2)}
     others = {k: v for k, v in means.items() if k != own}
     margin = round(means[own] - max(others.values()), 4) if others else None
     reasons = []
@@ -118,7 +157,9 @@ def judge(cand: dict, refs: dict[str, list[dict]], own: str, confusers: list[str
         reasons.append(f"SNR {cand['snrDb']} dB < {MIN_SNR}")
     if cand["bestFragment"]["active"] < MIN_ACTIVE:
         reasons.append("beste fragment te weinig actief")
-    return {"consistent": not reasons, "means": means, "margin": margin, "reason": "; ".join(reasons) or "ok"}
+    return {"consistent": not reasons, "means": means, "margin": margin, "reason": "; ".join(reasons) or "ok",
+            "referenceValidation": round(acc, 2),
+            "evidenceLevel": "PARTIALLY TESTED (akoestische aanwijzing; geen soortverificatie)" if not reasons else "NOT TESTED"}
 
 
 def reference_ok(info: dict, sci_names: list[str], sound_type: str) -> bool:
@@ -185,7 +226,7 @@ def run(manifest: Path, out: Path) -> None:
     feats = {}
     for i in items:
         info = i.get("info") or infos.get(i["title"])
-        rec = {k: i.get(k) for k in ("id", "speciesId", "role", "soundType", "title", "confusers")}
+        rec = {k: i.get(k) for k in ("id", "speciesId", "role", "soundType", "title", "confusers", "author")}
         if not info:
             rec["error"] = "niet gevonden"; report["recordings"].append(rec); continue
         rec.update({k: info[k] for k in ("page", "sha1", "license", "author", "description", "duration")})
@@ -193,15 +234,23 @@ def run(manifest: Path, out: Path) -> None:
             rec["error"] = "SHA-1 afwijkend"; report["recordings"].append(rec); continue
         if not ci.license_ok(info["license"]):
             rec["error"] = "licentie niet toegestaan"; report["recordings"].append(rec); continue
-        data = ci.get(info["url"], binary=True)
         import hashlib
-        if hashlib.sha1(data).hexdigest() != info["sha1"]:
-            rec["error"] = "download-SHA-1 afwijkend"; report["recordings"].append(rec); continue
-        x = decode(data)
+        if i.get("local"):  # gepubliceerd app-fragment zelf analyseren (bestaande opname): analyse = wat de gebruiker hoort
+            lp = (Path(__file__).resolve().parents[2] / i["local"].lstrip("/")).resolve()
+            data = lp.read_bytes()
+            rec["analysed"] = {"file": i["local"], "sha256": hashlib.sha256(data).hexdigest()}
+        else:
+            data = ci.get(info["url"], binary=True)
+            if hashlib.sha1(data).hexdigest() != info["sha1"]:
+                rec["error"] = "download-SHA-1 afwijkend"; report["recordings"].append(rec); continue
+        start, secs = float(i.get("start", 0)), float(i.get("seconds", 60))
+        x = decode(data, secs, start)
         f = features(x)
+        f["author"] = info["author"]
+        rec["fragment"] = {"start": start, "seconds": round(len(x) / SR, 1)}
         png = f"{i['id']}.png"
         plot(x, out / png, f"{i['id']} · {i.get('speciesId')} · {i.get('role')} · {info['author']}")
-        rec.update({"spectrogram": png, "features": {k: v for k, v in f.items() if k not in ("profile", "domHist")}})
+        rec.update({"spectrogram": png, "features": {k: v for k, v in f.items() if k not in ("profile", "domHist", "author")}})
         feats[i["id"]] = (rec, f)
         report["recordings"].append(rec)
     for cid, (rec, f) in feats.items():
@@ -216,7 +265,7 @@ def run(manifest: Path, out: Path) -> None:
                 refs.setdefault(r2["speciesId"], []).append(f2)
         report["judgements"].append({"id": cid, "speciesId": rec["speciesId"], "soundType": rec["soundType"],
                                      "confusers": rec.get("confusers"),
-                                     **judge(f, refs, rec["speciesId"], rec.get("confusers"))})
+                                     **judge(f, refs, rec["speciesId"], rec.get("confusers"), rec.get("author"))})
     (out / "audiocheck.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("audiocheck:", len(report["recordings"]), "opnamen,", len(report["judgements"]), "oordelen")
 

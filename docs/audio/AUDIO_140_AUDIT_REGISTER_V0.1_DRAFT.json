@@ -1186,10 +1186,10 @@
           "label": "Roep",
           "reference": "https://commons.wikimedia.org/wiki/File:Joseph_Sardin_-_Passer_domesticus_tschilp_call.oga",
           "externalRights": "VERIFIED",
-          "sourceSpecies": "VERIFIED",
+          "sourceSpecies": "PARTIALLY TESTED",
           "roleAudition": "PARTIALLY TESTED",
           "independentReview": "NOT TESTED",
-          "method": "Audiocheck-triangulatie 16-11-2026 (bronlabel, referentievergelijking, spectrogram); niet door mens beluisterd",
+          "method": "Bronlabel + akoestische aanwijzing (audiocheck); geen soortverificatie, niet beluisterd",
           "evidence": "docs/media-intake/2026-11-16/audiocheck-r12/audiocheck.json#sp043_call_cand_1"
         }
       ],
@@ -1252,10 +1252,10 @@
           "label": "Zang",
           "reference": "https://commons.wikimedia.org/wiki/File:Turdus_merula_-_Common_Blackbird_XC26605.mp3",
           "externalRights": "VERIFIED",
-          "sourceSpecies": "VERIFIED",
+          "sourceSpecies": "PARTIALLY TESTED",
           "roleAudition": "PARTIALLY TESTED",
           "independentReview": "NOT TESTED",
-          "method": "Audiocheck-triangulatie 16-11-2026; niet door mens beluisterd",
+          "method": "Bronlabel + akoestische aanwijzing (audiocheck); geen soortverificatie, niet beluisterd",
           "evidence": "docs/media-intake/2026-11-16/audiocheck-r12/audiocheck.json#sp045_song_live"
         },
         {
@@ -1263,7 +1263,7 @@
           "label": "Alarmroep",
           "reference": "https://commons.wikimedia.org/wiki/File:Blackbird_(Turdus_merula)_alarm_calls_-_Oslo,_Norway_2020-11-13.mp3",
           "externalRights": "VERIFIED",
-          "sourceSpecies": "PARTIALLY TESTED",
+          "sourceSpecies": "NOT TESTED",
           "roleAudition": "NOT TESTED",
           "independentReview": "NOT TESTED",
           "method": "Audiocheck 16-11-2026: bronlabel ok, referentievergelijking niet onderscheidend (marge -0,03)",

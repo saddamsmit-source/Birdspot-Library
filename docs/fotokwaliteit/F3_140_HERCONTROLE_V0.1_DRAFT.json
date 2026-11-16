@@ -4027,7 +4027,7 @@
           "photoPairComparisons": "PARTIALLY TESTED (Huismus-Ringmus rest, juvenile and flight pairs; Vink-Huismus female pair)",
           "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium 320/360/390 px via tests/test_lookalike_r12_browser.py; no physical device)",
           "creditsAndCleanAudioUI": "PARTIALLY TESTED (credits present in registry and player HTML; no visual UI audit of attribution)",
-          "audioRecordingsAuthenticity": "PARTIALLY TESTED (new call verified by audiocheck triangulation, not human-listened; song NOT TESTED: no Ringmus song references on Commons)",
+          "audioRecordingsAuthenticity": "PARTIALLY TESTED (call is a candidate: source label + acoustic indication only; not human-listened, not independently verified; song NOT TESTED)",
           "audioLicenseAndAttribution": "VERIFIED (CC0, Joseph Sardin, Commons metadata and SHA-1 pinned)",
           "soundRolesSongCall": "PARTIALLY TESTED (call only; song missing)",
           "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (local files present and in player HTML; offline playback not tested on device)",
@@ -4044,7 +4044,8 @@
           "Vijf lokale foto's tegen het bronbeeld gecontroleerd: alle vijf dezelfde opname (r 0,90-1,00), auteur en licentie gelijk aan Commons.",
           "Rollen kloppen: mannetje (grijze kruin, bef), vrouwtje (effen, lichte wenkbrauw), juveniel (gele mondhoek), vrije vlucht met nestmateriaal.",
           "Nieuwe roep (Joseph Sardin, CC0) na audiocheck-triangulatie gepubliceerd; niet door mens beluisterd. Zang ontbreekt.",
-          "Dubbelganger Ringmus: fotoparen in rust, juveniel en vlucht (LK-016)."
+          "Dubbelganger Ringmus: fotoparen in rust, juveniel en vlucht (LK-016).",
+          "F3-R12b (16-11-2026): audiostatus herzien na onafhankelijke review — audiocheck geldt hooguit als akoestische aanwijzing (PARTIALLY TESTED), niet als soortverificatie; status zichtbaar in de soortkaart."
         ],
         "sourceReferences": [
           "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/huismus",
@@ -4230,7 +4231,7 @@
           "photoPairComparisons": "PARTIALLY TESTED (Merel-Zanglijster juvenile and adult pairs; Spreeuw-Merel pair)",
           "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium 320/360/390 px via tests/test_lookalike_r12_browser.py; no physical device)",
           "creditsAndCleanAudioUI": "PARTIALLY TESTED (credits present in registry and player HTML; no visual UI audit of attribution)",
-          "audioRecordingsAuthenticity": "PARTIALLY TESTED (song verified by audiocheck triangulation, not human-listened; alarm call NOT TESTED: reference comparison not discriminating)",
+          "audioRecordingsAuthenticity": "PARTIALLY TESTED (song: source label + acoustic indication; alarm call NOT TESTED; neither human-listened nor independently verified)",
           "audioLicenseAndAttribution": "VERIFIED (both clips: current Commons licence and author match register)",
           "soundRolesSongCall": "PARTIALLY TESTED (song triangulated; alarm call source-labelled only)",
           "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (local files present and in player HTML; offline playback not tested on device)",
@@ -4247,7 +4248,8 @@
           "Zes lokale foto's tegen het bronbeeld gecontroleerd: alle zes dezelfde opname; auteursnotatie vluchtfoto gelijkgetrokken met Commons ('Bengt Nyman from Vaxholm, Sweden').",
           "Rollen kloppen; landingsfoto stond al buiten de vluchtrol; vrije-vluchtfoto blijft voorwaardelijk.",
           "Bestaande zang via audiocheck-triangulatie bevestigd (marge 0,35); bestaande alarmroep NOT TESTED (niet onderscheidend), behouden maar niet als geverifieerd gemarkeerd.",
-          "Dubbelgangers Zanglijster en Spreeuw: bestaande fotoparen."
+          "Dubbelgangers Zanglijster en Spreeuw: bestaande fotoparen.",
+          "F3-R12b (16-11-2026): audiostatus herzien na onafhankelijke review — audiocheck geldt hooguit als akoestische aanwijzing (PARTIALLY TESTED), niet als soortverificatie; status zichtbaar in de soortkaart."
         ],
         "sourceReferences": [
           "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/merel",

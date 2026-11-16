@@ -331,8 +331,18 @@ export function voicePanel(s, voice, sourced = '') {
   </div>`);
   // The visible player contains only the useful voice type. Original filenames,
   // author, license, source and editing notes remain in the canonical media registry.
-  const credits = clips.map(clip => `<li><strong>${esc(clip.label)}</strong>${mediaCredit(clip)}</li>`);
-  return `${title}${players.join('')}<details class="sd-audio-credits">
+  // F3-R12b (16-11-2026): eerlijke opnamestatus op het scherm zelf. Alleen een expliciet VERIFIED-oordeel geldt als
+  // bevestigd; alle andere opnamen volgen de bronvermelding. Eén korte regel voor het hele blok, details per opname in
+  // de bestaande informatie-uitklap (geen extra knoppen).
+  const checked = clip => String(clip.verification || '').startsWith('VERIFIED');
+  const state = clip => checked(clip) ? 'Bevestigd'
+    : String(clip.verification || '').startsWith('PARTIALLY TESTED')
+      ? 'Gedeeltelijk gecontroleerd: bron en geluidsanalyse passen; niet beluisterd of onafhankelijk bevestigd'
+      : 'Niet gecontroleerd: soort en geluidstype volgen de bronvermelding';
+  const status = clips.every(checked) ? ''
+    : '<p class="sd-audio-status">Soort en geluidstype van deze opnamen zijn nog niet onafhankelijk bevestigd.</p>';
+  const credits = clips.map(clip => `<li><strong>${esc(clip.label)}</strong><span class="sd-audio-state">Status: ${esc(state(clip))}</span>${mediaCredit(clip)}</li>`);
+  return `${title}${status}${players.join('')}<details class="sd-audio-credits">
     <summary aria-label="Informatie en bronvermelding bij deze geluidsopnamen"
       title="Informatie over de opnamen"><span class="sd-audio-info-symbol" aria-hidden="true">i</span></summary>
     <div class="sd-audio-credits-content">

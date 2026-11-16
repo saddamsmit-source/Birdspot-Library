@@ -1,0 +1,173 @@
+{
+  "date": "2026-11-16",
+  "purpose": "F3-R12b: herbeoordeling van de drie gepubliceerde opnamen met de versterkte regels (onafhankelijke opnemers, leave-one-out-validatie, analyse van het gepubliceerde fragment zelf). Uitkomst hooguit PARTIALLY TESTED.",
+  "items": [
+    {
+      "id": "sp043_song_ref",
+      "speciesId": "sp043",
+      "role": "reference",
+      "soundType": "song",
+      "search": "\"Passer domesticus\" song",
+      "pick": 4,
+      "sciNames": [
+        "Passer domesticus"
+      ]
+    },
+    {
+      "id": "sp043_call_ref",
+      "speciesId": "sp043",
+      "role": "reference",
+      "soundType": "call",
+      "search": "\"Passer domesticus\" call",
+      "pick": 4,
+      "sciNames": [
+        "Passer domesticus"
+      ]
+    },
+    {
+      "id": "sp044_song_ref",
+      "speciesId": "sp044",
+      "role": "reference",
+      "soundType": "song",
+      "search": "\"Passer montanus\" song",
+      "pick": 4,
+      "sciNames": [
+        "Passer montanus"
+      ]
+    },
+    {
+      "id": "sp044_call_ref",
+      "speciesId": "sp044",
+      "role": "reference",
+      "soundType": "call",
+      "search": "\"Passer montanus\" call",
+      "pick": 4,
+      "sciNames": [
+        "Passer montanus"
+      ]
+    },
+    {
+      "id": "sp045_song_ref",
+      "speciesId": "sp045",
+      "role": "reference",
+      "soundType": "song",
+      "search": "\"Turdus merula\" song",
+      "pick": 4,
+      "sciNames": [
+        "Turdus merula"
+      ]
+    },
+    {
+      "id": "sp045_call_ref",
+      "speciesId": "sp045",
+      "role": "reference",
+      "soundType": "call",
+      "search": "\"Turdus merula\" call",
+      "pick": 4,
+      "sciNames": [
+        "Turdus merula"
+      ]
+    },
+    {
+      "id": "sp046_song_ref",
+      "speciesId": "sp046",
+      "role": "reference",
+      "soundType": "song",
+      "search": "\"Turdus philomelos\" song",
+      "pick": 4,
+      "sciNames": [
+        "Turdus philomelos"
+      ]
+    },
+    {
+      "id": "sp046_call_ref",
+      "speciesId": "sp046",
+      "role": "reference",
+      "soundType": "call",
+      "search": "\"Turdus philomelos\" call",
+      "pick": 4,
+      "sciNames": [
+        "Turdus philomelos"
+      ]
+    },
+    {
+      "id": "sp112_song_ref",
+      "speciesId": "sp112",
+      "role": "reference",
+      "soundType": "song",
+      "search": "\"Sturnus vulgaris\" song",
+      "pick": 4,
+      "sciNames": [
+        "Sturnus vulgaris"
+      ]
+    },
+    {
+      "id": "sp044_song_refb",
+      "speciesId": "sp044",
+      "role": "reference",
+      "soundType": "song",
+      "search": "\"Passer montanus\" zang OR \"Eurasian Tree Sparrow\" song",
+      "pick": 4,
+      "sciNames": [
+        "Passer montanus"
+      ]
+    },
+    {
+      "id": "sp112_call_ref",
+      "speciesId": "sp112",
+      "role": "reference",
+      "soundType": "call",
+      "search": "\"Sturnus vulgaris\" call",
+      "pick": 4,
+      "sciNames": [
+        "Sturnus vulgaris"
+      ]
+    },
+    {
+      "id": "sp044_call_refb",
+      "speciesId": "sp044",
+      "role": "reference",
+      "soundType": "call",
+      "search": "\"Passer montanus\" roep OR \"Eurasian Tree Sparrow\" call",
+      "pick": 4,
+      "sciNames": [
+        "Passer montanus"
+      ]
+    },
+    {
+      "id": "sp045_song_pub",
+      "speciesId": "sp045",
+      "role": "candidate",
+      "soundType": "song",
+      "title": "File:Turdus merula - Common Blackbird XC26605.mp3",
+      "local": "/assets/species/audio/sp045-song.mp3",
+      "confusers": [
+        "sp046",
+        "sp112"
+      ]
+    },
+    {
+      "id": "sp045_call_pub",
+      "speciesId": "sp045",
+      "role": "candidate",
+      "soundType": "call",
+      "title": "File:Blackbird (Turdus merula) alarm calls - Oslo, Norway 2020-11-13.mp3",
+      "local": "/assets/species/audio/sp045-call.mp3",
+      "confusers": [
+        "sp046",
+        "sp112"
+      ]
+    },
+    {
+      "id": "sp043_call_pub",
+      "speciesId": "sp043",
+      "role": "candidate",
+      "soundType": "call",
+      "title": "File:Joseph Sardin - Passer domesticus tschilp call.oga",
+      "local": "/assets/species/audio/sp043-call.mp3",
+      "confusers": [
+        "sp044"
+      ]
+    }
+  ]
+}

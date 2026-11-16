@@ -59,8 +59,15 @@ export const GUIDE_AUDIO = Object.freeze({
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Turdus_merula_-_Common_Blackbird_XC26605.mp3",
       "modifications": "Fragment, omgezet naar MP3 (mono)",
-      "verification": "VERIFIED (triangulatie 16-11-2026: bronlabel XC 'Type: song', akoestische referentievergelijking marge 0,35 tegen Zanglijster/Spreeuw, visuele spectrogramcontrole; niet door mens beluisterd)",
-      "verificationReport": "docs/media-intake/2026-11-16/audiocheck-r12/audiocheck.json#sp045_song_live"
+      "verification": "PARTIALLY TESTED: bronlabel (xeno-canto 'Type: song') en akoestische aanwijzing passen bij Merel-zang; niet door mens beluisterd en niet onafhankelijk bevestigd.",
+      "verificationReport": "docs/media-intake/2026-11-16/audiocheck-r12/audiocheck.json#sp045_song_live",
+      "verificationHistory": [
+        {
+          "date": "2026-11-16",
+          "status": "VERIFIED (triangulatie 16-11-2026: bronlabel XC 'Type: song', akoestische referentievergelijking marge 0,35 tegen Zanglijster/Spreeuw, visuele spectrogramcontrole; niet door mens beluisterd)",
+          "note": "Herzien na onafhankelijke review 16-11 17:19."
+        }
+      ]
     },
     {
       "file": "Blackbird (Turdus merula) alarm calls - Oslo, Norway 2020-11-13.mp3",
@@ -72,8 +79,15 @@ export const GUIDE_AUDIO = Object.freeze({
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Blackbird_(Turdus_merula)_alarm_calls_-_Oslo,_Norway_2020-11-13.mp3",
       "modifications": "Omgezet naar MP3 (mono)",
-      "verification": "NOT TESTED (audiocheck 16-11-2026: marge -0,03 tegen Spreeuw; referenties van Merel-roepen te gevarieerd). Bestaande opname behouden, niet als geverifieerd gemarkeerd.",
-      "verificationReport": "docs/media-intake/2026-11-16/audiocheck-r12/audiocheck.json#sp045_call_live"
+      "verification": "NOT TESTED: alleen bronlabel ('alarm calls'); akoestische vergelijking niet onderscheidend. Behouden, niet bevestigd.",
+      "verificationReport": "docs/media-intake/2026-11-16/audiocheck-r12/audiocheck.json#sp045_call_live",
+      "verificationHistory": [
+        {
+          "date": "2026-11-16",
+          "status": "NOT TESTED (audiocheck 16-11-2026: marge -0,03 tegen Spreeuw; referenties van Merel-roepen te gevarieerd). Bestaande opname behouden, niet als geverifieerd gemarkeerd.",
+          "note": "Herzien na onafhankelijke review 16-11 17:19."
+        }
+      ]
     }
   ],
   "sp035": [
@@ -1886,7 +1900,7 @@ export const GUIDE_AUDIO = Object.freeze({
     {
       "label": "Roep",
       "note": "Het bekende 'tsjilp' van de Huismus.",
-      "verification": "VERIFIED (triangulatie 16-11-2026: bronlabel, akoestische referentievergelijking, visuele spectrogramcontrole; niet door mens beluisterd)",
+      "verification": "PARTIALLY TESTED (kandidaat): bronlabel en akoestische aanwijzing passen bij Huismus-roep; niet door mens beluisterd en niet onafhankelijk bevestigd.",
       "verificationReport": "docs/media-intake/2026-11-16/audiocheck-r12/audiocheck.json#sp043_call_cand_1",
       "file": "Joseph Sardin - Passer domesticus tschilp call.oga",
       "author": "Joseph Sardin",
@@ -1898,7 +1912,14 @@ export const GUIDE_AUDIO = Object.freeze({
       "reviewed": "2026-11-16",
       "intake": "tools/media/commons_intake.py (GitHub Actions)",
       "audio": "/assets/species/audio/sp043-call.mp3",
-      "modifications": "Fragment 0–6.2 s, omgezet naar MP3 (mono, 96 kbit/s), metadata verwijderd"
+      "modifications": "Fragment 0–6.2 s, omgezet naar MP3 (mono, 96 kbit/s), metadata verwijderd",
+      "verificationHistory": [
+        {
+          "date": "2026-11-16",
+          "status": "VERIFIED (triangulatie 16-11-2026: bronlabel, akoestische referentievergelijking, visuele spectrogramcontrole; niet door mens beluisterd)",
+          "note": "Herzien na onafhankelijke review 16-11 17:19: triangulatie door één agent is geen soortverificatie."
+        }
+      ]
     }
   ]
 });

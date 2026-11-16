@@ -108,6 +108,13 @@ def audiocheck_ok(e: dict, info: dict) -> None:
         raise IntakeError("Audiocheck niet consistent voor " + ac["judgement"])
     if rec.get("sha1") != info["sha1"] or j.get("speciesId") != e["speciesId"] or j.get("soundType") != ac["soundType"]:
         raise IntakeError("Audiocheck hoort bij een ander bestand, andere soort of geluidsoort: " + ac["judgement"])
+    frag = rec.get("fragment") or {}
+    if abs(float(frag.get("start", -1)) - float(e.get("start", 0))) > 0.05 or abs(float(frag.get("seconds", -1)) - float(e.get("seconds", 30))) > 0.15:
+        raise IntakeError("Gecontroleerd fragment wijkt af van het te publiceren fragment: " + ac["judgement"])
+    if not str(j.get("evidenceLevel", "")).startswith("PARTIALLY TESTED"):
+        raise IntakeError("Audiocheck-rapport zonder bewijsplafond (oud formaat): opnieuw controleren: " + ac["judgement"])
+    if str((e.get("register") or {}).get("verification", "")).startswith("VERIFIED"):
+        raise IntakeError("Audiocheck is geen soortverificatie: registreer hooguit PARTIALLY TESTED: " + e["title"])
 
 
 def get(url: str, params: dict | None = None, binary: bool = False):
