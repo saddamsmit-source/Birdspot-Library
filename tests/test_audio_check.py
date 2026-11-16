@@ -41,3 +41,9 @@ print("AUDIO MIN-REFERENCES PASS: single reference and mixed calls/songs recordi
 thin = ac.judge(A(5), {"spA": refs["spA"], "spB": [B(3)]}, "spA"); assert not thin["consistent"] and "verwarringssoort" in thin["reason"], thin
 empty = ac.judge(A(5), {"spA": refs["spA"], "spB": []}, "spA"); assert not empty["consistent"], empty
 print("AUDIO CONFUSER COVERAGE PASS: confuser with <2 references refused")
+C = lambda s: ac.features(song(5200, 600, seed=s))
+three = {"spA": refs["spA"], "spB": refs["spB"], "spC": [C(11)]}
+assert ac.judge(A(5), three, "spA", ["spB"])["consistent"], "irrelevant species C must not block when not a confuser"
+assert not ac.judge(A(5), three, "spA", ["spB", "spC"])["consistent"], "listed confuser with 1 reference must block"
+assert not ac.judge(A(5), three, "spA", ["spD"])["consistent"], "listed confuser without references must block"
+print("AUDIO CONFUSER LIST PASS: only knowledge-profile confusers count, each needs 2 references")

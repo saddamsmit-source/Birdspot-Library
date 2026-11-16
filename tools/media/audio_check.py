@@ -92,8 +92,11 @@ def similarity(a: dict, b: dict) -> float:
     return round(0.5 * cos(pa, pb) + 0.5 * cos(ha, hb), 4)
 
 
-def judge(cand: dict, refs: dict[str, list[dict]], own: str) -> dict:
-    """refs: soort-ID -> referentiekenmerken (zelfde geluidsoort, andere opnemers). Pure functie voor tests."""
+def judge(cand: dict, refs: dict[str, list[dict]], own: str, confusers: list[str] | None = None) -> dict:
+    """refs: soort-ID -> referentiekenmerken (zelfde geluidsoort, andere opnemers). confusers: de verwarringssoorten
+    uit het kennisprofiel; elk daarvan moet >= MIN_REFS referenties hebben. Pure functie voor tests."""
+    if confusers is not None:
+        refs = {sid: refs.get(sid, []) for sid in [own, *confusers]}
     if not cand.get("usable"):
         return {"consistent": False, "reason": "te weinig actief geluid"}
     means = {sid: round(float(np.mean([similarity(cand, r) for r in rs])), 4) for sid, rs in refs.items() if rs}
@@ -182,7 +185,7 @@ def run(manifest: Path, out: Path) -> None:
     feats = {}
     for i in items:
         info = i.get("info") or infos.get(i["title"])
-        rec = {k: i.get(k) for k in ("id", "speciesId", "role", "soundType", "title")}
+        rec = {k: i.get(k) for k in ("id", "speciesId", "role", "soundType", "title", "confusers")}
         if not info:
             rec["error"] = "niet gevonden"; report["recordings"].append(rec); continue
         rec.update({k: info[k] for k in ("page", "sha1", "license", "author", "description", "duration")})
@@ -212,7 +215,8 @@ def run(manifest: Path, out: Path) -> None:
                 seen[r2["speciesId"]].add(r2["sha1"])
                 refs.setdefault(r2["speciesId"], []).append(f2)
         report["judgements"].append({"id": cid, "speciesId": rec["speciesId"], "soundType": rec["soundType"],
-                                     **judge(f, refs, rec["speciesId"])})
+                                     "confusers": rec.get("confusers"),
+                                     **judge(f, refs, rec["speciesId"], rec.get("confusers"))})
     (out / "audiocheck.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("audiocheck:", len(report["recordings"]), "opnamen,", len(report["judgements"]), "oordelen")
 

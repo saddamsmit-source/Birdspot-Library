@@ -7,14 +7,22 @@
       "speciesId": "sp045",
       "role": "candidate",
       "soundType": "song",
-      "title": "File:Turdus merula - Common Blackbird XC26605.mp3"
+      "title": "File:Turdus merula - Common Blackbird XC26605.mp3",
+      "confusers": [
+        "sp046",
+        "sp112"
+      ]
     },
     {
       "id": "sp045_call_live",
       "speciesId": "sp045",
       "role": "candidate",
       "soundType": "call",
-      "title": "File:Blackbird (Turdus merula) alarm calls - Oslo, Norway 2020-11-13.mp3"
+      "title": "File:Blackbird (Turdus merula) alarm calls - Oslo, Norway 2020-11-13.mp3",
+      "confusers": [
+        "sp046",
+        "sp112"
+      ]
     },
     {
       "id": "sp043_song_cand",
@@ -25,6 +33,9 @@
       "pick": 1,
       "sciNames": [
         "Passer domesticus"
+      ],
+      "confusers": [
+        "sp044"
       ]
     },
     {
@@ -36,6 +47,9 @@
       "pick": 1,
       "sciNames": [
         "Passer domesticus"
+      ],
+      "confusers": [
+        "sp044"
       ]
     },
     {
@@ -47,6 +61,9 @@
       "pick": 1,
       "sciNames": [
         "Passer montanus"
+      ],
+      "confusers": [
+        "sp043"
       ]
     },
     {
@@ -58,6 +75,9 @@
       "pick": 1,
       "sciNames": [
         "Passer montanus"
+      ],
+      "confusers": [
+        "sp043"
       ]
     },
     {
@@ -146,6 +166,50 @@
       "pick": 4,
       "sciNames": [
         "Turdus philomelos"
+      ]
+    },
+    {
+      "id": "sp112_song_ref",
+      "speciesId": "sp112",
+      "role": "reference",
+      "soundType": "song",
+      "search": "\"Sturnus vulgaris\" song",
+      "pick": 4,
+      "sciNames": [
+        "Sturnus vulgaris"
+      ]
+    },
+    {
+      "id": "sp044_song_refb",
+      "speciesId": "sp044",
+      "role": "reference",
+      "soundType": "song",
+      "search": "\"Passer montanus\" zang OR \"Eurasian Tree Sparrow\" song",
+      "pick": 4,
+      "sciNames": [
+        "Passer montanus"
+      ]
+    },
+    {
+      "id": "sp112_call_ref",
+      "speciesId": "sp112",
+      "role": "reference",
+      "soundType": "call",
+      "search": "\"Sturnus vulgaris\" call",
+      "pick": 4,
+      "sciNames": [
+        "Sturnus vulgaris"
+      ]
+    },
+    {
+      "id": "sp044_call_refb",
+      "speciesId": "sp044",
+      "role": "reference",
+      "soundType": "call",
+      "search": "\"Passer montanus\" roep OR \"Eurasian Tree Sparrow\" call",
+      "pick": 4,
+      "sciNames": [
+        "Passer montanus"
       ]
     }
   ]
