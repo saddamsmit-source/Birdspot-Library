@@ -1179,17 +1179,17 @@
       "f2PhotoVisited": true,
       "mediaCount": 1,
       "pilot": false,
-      "status": "PARTIALLY TESTED",
+      "status": "REGISTERED_UNVERIFIED",
       "clips": [
         {
           "file": "/assets/species/audio/sp043-call.mp3",
           "label": "Roep",
           "reference": "https://commons.wikimedia.org/wiki/File:Joseph_Sardin_-_Passer_domesticus_tschilp_call.oga",
           "externalRights": "VERIFIED",
-          "sourceSpecies": "PARTIALLY TESTED",
-          "roleAudition": "PARTIALLY TESTED",
+          "sourceSpecies": "NOT TESTED",
+          "roleAudition": "NOT TESTED",
           "independentReview": "NOT TESTED",
-          "method": "Bronlabel + akoestische aanwijzing (audiocheck); geen soortverificatie, niet beluisterd",
+          "method": "Alleen bronlabel; versterkte audiocheck 16-11 kon de soort niet onderscheiden (zie docs/media-intake/2026-11-16/audiocheck-r12b/audiocheck.json)",
           "evidence": "docs/media-intake/2026-11-16/audiocheck-r12/audiocheck.json#sp043_call_cand_1"
         }
       ],
@@ -1245,17 +1245,17 @@
       "f2PhotoVisited": true,
       "mediaCount": 2,
       "pilot": true,
-      "status": "PARTIALLY TESTED",
+      "status": "REGISTERED_UNVERIFIED",
       "clips": [
         {
           "file": "/assets/species/audio/sp045-song.mp3",
           "label": "Zang",
           "reference": "https://commons.wikimedia.org/wiki/File:Turdus_merula_-_Common_Blackbird_XC26605.mp3",
           "externalRights": "VERIFIED",
-          "sourceSpecies": "PARTIALLY TESTED",
-          "roleAudition": "PARTIALLY TESTED",
+          "sourceSpecies": "NOT TESTED",
+          "roleAudition": "NOT TESTED",
           "independentReview": "NOT TESTED",
-          "method": "Bronlabel + akoestische aanwijzing (audiocheck); geen soortverificatie, niet beluisterd",
+          "method": "Alleen bronlabel; versterkte audiocheck 16-11 kon de soort niet onderscheiden (zie docs/media-intake/2026-11-16/audiocheck-r12b/audiocheck.json)",
           "evidence": "docs/media-intake/2026-11-16/audiocheck-r12/audiocheck.json#sp045_song_live"
         },
         {
@@ -1266,7 +1266,7 @@
           "sourceSpecies": "NOT TESTED",
           "roleAudition": "NOT TESTED",
           "independentReview": "NOT TESTED",
-          "method": "Audiocheck 16-11-2026: bronlabel ok, referentievergelijking niet onderscheidend (marge -0,03)",
+          "method": "Alleen bronlabel; versterkte audiocheck 16-11 kon de soort niet onderscheiden (zie docs/media-intake/2026-11-16/audiocheck-r12b/audiocheck.json)",
           "evidence": "docs/media-intake/2026-11-16/audiocheck-r12/audiocheck.json#sp045_call_live"
         }
       ],

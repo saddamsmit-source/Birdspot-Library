@@ -4027,9 +4027,9 @@
           "photoPairComparisons": "PARTIALLY TESTED (Huismus-Ringmus rest, juvenile and flight pairs; Vink-Huismus female pair)",
           "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium 320/360/390 px via tests/test_lookalike_r12_browser.py; no physical device)",
           "creditsAndCleanAudioUI": "PARTIALLY TESTED (credits present in registry and player HTML; no visual UI audit of attribution)",
-          "audioRecordingsAuthenticity": "PARTIALLY TESTED (call is a candidate: source label + acoustic indication only; not human-listened, not independently verified; song NOT TESTED)",
+          "audioRecordingsAuthenticity": "NOT TESTED (call published as source-labelled candidate only; strengthened audiocheck reference validation 0.80 < 1.00, so no acoustic indication; song missing)",
           "audioLicenseAndAttribution": "VERIFIED (CC0, Joseph Sardin, Commons metadata and SHA-1 pinned)",
-          "soundRolesSongCall": "PARTIALLY TESTED (call only; song missing)",
+          "soundRolesSongCall": "NOT TESTED (call source label only; song missing)",
           "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (local files present and in player HTML; offline playback not tested on device)",
           "vogelbeschermingAndANWB": "PARTIALLY TESTED (existing Vogelbescherming-sourced profile; ANWB book NOT read)",
           "biometryAndKnowledge": "PARTIALLY TESTED (existing sourced profile reviewed; biometrics not verified with two publishers)",
@@ -4045,7 +4045,8 @@
           "Rollen kloppen: mannetje (grijze kruin, bef), vrouwtje (effen, lichte wenkbrauw), juveniel (gele mondhoek), vrije vlucht met nestmateriaal.",
           "Nieuwe roep (Joseph Sardin, CC0) na audiocheck-triangulatie gepubliceerd; niet door mens beluisterd. Zang ontbreekt.",
           "Dubbelganger Ringmus: fotoparen in rust, juveniel en vlucht (LK-016).",
-          "F3-R12b (16-11-2026): audiostatus herzien na onafhankelijke review — audiocheck geldt hooguit als akoestische aanwijzing (PARTIALLY TESTED), niet als soortverificatie; status zichtbaar in de soortkaart."
+          "F3-R12b (16-11-2026): audiostatus herzien na onafhankelijke review — audiocheck geldt hooguit als akoestische aanwijzing (PARTIALLY TESTED), niet als soortverificatie; status zichtbaar in de soortkaart.",
+          "F3-R12b: versterkte audiocheck (onafhankelijke opnemers, leave-one-out) toont dat de spectrale maat deze soorten niet betrouwbaar onderscheidt; opnamen alleen nog op bronlabel (NOT TESTED), zichtbaar in de soortkaart."
         ],
         "sourceReferences": [
           "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/huismus",
@@ -4231,9 +4232,9 @@
           "photoPairComparisons": "PARTIALLY TESTED (Merel-Zanglijster juvenile and adult pairs; Spreeuw-Merel pair)",
           "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium 320/360/390 px via tests/test_lookalike_r12_browser.py; no physical device)",
           "creditsAndCleanAudioUI": "PARTIALLY TESTED (credits present in registry and player HTML; no visual UI audit of attribution)",
-          "audioRecordingsAuthenticity": "PARTIALLY TESTED (song: source label + acoustic indication; alarm call NOT TESTED; neither human-listened nor independently verified)",
+          "audioRecordingsAuthenticity": "NOT TESTED (song and alarm call: source label only; strengthened audiocheck could not separate Merel from Zanglijster/Spreeuw, validation 0.60)",
           "audioLicenseAndAttribution": "VERIFIED (both clips: current Commons licence and author match register)",
-          "soundRolesSongCall": "PARTIALLY TESTED (song triangulated; alarm call source-labelled only)",
+          "soundRolesSongCall": "NOT TESTED (source labels only)",
           "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (local files present and in player HTML; offline playback not tested on device)",
           "vogelbeschermingAndANWB": "PARTIALLY TESTED (existing Vogelbescherming-sourced profile; ANWB book NOT read)",
           "biometryAndKnowledge": "PARTIALLY TESTED (existing sourced profile reviewed; biometrics not verified with two publishers)",
@@ -4249,7 +4250,8 @@
           "Rollen kloppen; landingsfoto stond al buiten de vluchtrol; vrije-vluchtfoto blijft voorwaardelijk.",
           "Bestaande zang via audiocheck-triangulatie bevestigd (marge 0,35); bestaande alarmroep NOT TESTED (niet onderscheidend), behouden maar niet als geverifieerd gemarkeerd.",
           "Dubbelgangers Zanglijster en Spreeuw: bestaande fotoparen.",
-          "F3-R12b (16-11-2026): audiostatus herzien na onafhankelijke review — audiocheck geldt hooguit als akoestische aanwijzing (PARTIALLY TESTED), niet als soortverificatie; status zichtbaar in de soortkaart."
+          "F3-R12b (16-11-2026): audiostatus herzien na onafhankelijke review — audiocheck geldt hooguit als akoestische aanwijzing (PARTIALLY TESTED), niet als soortverificatie; status zichtbaar in de soortkaart.",
+          "F3-R12b: versterkte audiocheck (onafhankelijke opnemers, leave-one-out) toont dat de spectrale maat deze soorten niet betrouwbaar onderscheidt; opnamen alleen nog op bronlabel (NOT TESTED), zichtbaar in de soortkaart."
         ],
         "sourceReferences": [
           "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/merel",

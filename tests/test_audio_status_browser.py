@@ -5,7 +5,7 @@ from playwright.sync_api import expect, sync_playwright
 from test_pilot_offline_new_sighting import Quiet, Server, boot
 from test_plumage_compare_layout import open_species
 
-CASES = [('Huismus', 'sp043', 'Gedeeltelijk gecontroleerd'), ('Merel', 'sp045', 'Gedeeltelijk gecontroleerd'), ('Merel', 'sp045', 'Niet gecontroleerd')]
+CASES = [('Huismus', 'sp043', 'Niet gecontroleerd'), ('Merel', 'sp045', 'Niet gecontroleerd')]
 
 def main():
     errors = []
