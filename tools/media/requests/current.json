@@ -1,7 +1,7 @@
 {
-  "mode": "discover",
-  "manifest": "tools/media/intake_queries_2026-11-16_r15.json",
-  "out": "docs/media-intake/2026-11-16/r15-discover",
+  "mode": "import",
+  "manifest": "tools/media/intake_selection_2026-11-16_r15.json",
+  "out": "docs/media-intake/2026-11-16",
   "requestedBy": "Claude (writerclaim PR #278)",
-  "nonce": 22
+  "nonce": 23
 }
