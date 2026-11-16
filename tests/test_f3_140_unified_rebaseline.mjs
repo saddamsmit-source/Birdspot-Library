@@ -221,7 +221,8 @@ for(const item of fourteenth){
  assert.equal(review.fullPass,false); assert.ok(review.checks.photoOriginalIdentity.startsWith('VERIFIED'));
  assert.ok(review.checks.plumageAndTrueFlight.startsWith('PARTIALLY TESTED'),'missing flight photo stays open');
  assert.ok(review.checks.audioRecordingsAuthenticity.startsWith('BLOCKED'));
- assert.ok(review.checks.ebirdDistributionAndBias.startsWith('NOT TESTED'),'eBird not consulted: stays open');
+ assert.ok(!review.checks.ebirdDistributionAndBias.startsWith('VERIFIED'),'eBird checklist is taxonomy only: never VERIFIED');
+ assert.match(review.checks.vogelbeschermingAndANWB,/ANWB-vogelgids NOT TESTED/,'ANWB not accessible: stays visibly open');
  for(let i=0;i<currentAssets.imageSlots.length;i++){
   const bytes=readFileSync(new URL('..'+currentAssets.imageSlots[i].path,import.meta.url));
   assert.equal(review.photoBlobSHAs[i],createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex'),item.id+' image changed since F3-R14 review');
