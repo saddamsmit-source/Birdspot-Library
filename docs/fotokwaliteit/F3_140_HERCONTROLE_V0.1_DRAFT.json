@@ -3614,6 +3614,18 @@
             "addedIn": "F3-R10"
           },
           {
+            "role": "Verenkleed (Vrouwtje)",
+            "path": "/assets/species/plumage/sp039-adult_f.webp",
+            "oldRights": "NEW (Commons, Charles J. Sharp, CC BY-SA 4.0; SHA-1 origineel 2622240c)",
+            "addedIn": "F3-R10-media"
+          },
+          {
+            "role": "Verenkleed (Juveniel)",
+            "path": "/assets/species/plumage/sp039-juv.webp",
+            "oldRights": "NEW (Commons, gailhampshire, CC BY 2.0; SHA-1 origineel 2bd25240)",
+            "addedIn": "F3-R10-media"
+          },
+          {
             "role": "In vlucht",
             "path": "/assets/species/plumage/sp039-flight.webp",
             "oldRights": "REGISTERED (Codrin Bucur, CC BY 4.0; vluchtcontrole: voorwaardelijk)",
@@ -3629,8 +3641,8 @@
         "recheckBatch": "F3-R10",
         "checks": {
           "photoOriginalIdentity": "PARTIALLY TESTED (all current local WebP photos opened in F3-R10; source originals and independent identity NOT compared)",
-          "photoIndividualRights": "PARTIALLY TESTED (existing photographer/license registry read; original individual file rights NOT freshly validated)",
-          "plumageAndTrueFlight": "PARTIALLY TESTED (male hero clearly identifiable; flight image is a distant, unsharp two-bird shot, already conditional since 10-11; female and juvenile photos MISSING)",
+          "photoIndividualRights": "PARTIALLY TESTED (two new photos: Commons licence and original SHA-1 verified at import; existing photos not freshly validated)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (male hero clear; female and juvenile added F3-R10-media and visually checked against photographer labels; flight image distant and unsharp, no better free-flight candidate found on Commons 16-11)",
           "photoPairComparisons": "PARTIALLY TESTED (Kneu-Roodmus male pair exists; Frater and barmsijs pairs missing and hidden)",
           "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium 320/360/390 px comparison, zoom and back via tests/test_lookalike_r10_browser.py; no physical device)",
           "creditsAndCleanAudioUI": "NOT TESTED (no F3-R10 attribution/UI audit beyond existing credits)",
@@ -3652,8 +3664,8 @@
           "F3-register had voor de Kneu geen beeldposities terwijl de app twee foto's toont; posities en blob-SHA's toegevoegd.",
           "Er bestond geen kennisprofiel; nieuw brongedragen profiel met dubbelgangers Frater, barmsijzen en Roodmus toegevoegd.",
           "Statusafwijking: species.js (uit de canonieke vogellijst) noemt 'Standvogel', Vogelbescherming meldt overwintering van Nederlandse broedvogels in Zuidwest-Europa. Geregistreerd als discrepantie; canonieke lijst niet gewijzigd.",
-          "Foto's van vrouwtje en juveniel ontbreken; dit zijn de kritische kleden voor Frater. Media-import in deze sessie BLOCKED.",
-          "Geen geregistreerde zang of roep; route voor nieuwe opname in deze sessie BLOCKED."
+          "Geen geregistreerde zang of roep; route voor nieuwe opname in deze sessie BLOCKED.",
+          "F3-R10-media: vrouwtje en juveniel toegevoegd via Commons-intake in GitHub Actions (SHA-1 van origineel en licentie vastgepind, metadata verwijderd). Visueel gecontroleerd; geslacht en leeftijd volgen het fotograaflabel en de zichtbare kenmerken."
         ],
         "sourceReferences": [
           "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kneu",
@@ -3661,22 +3673,25 @@
           "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-barmsijs",
           "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/roodmus",
           "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
-          "docs/fotokwaliteit/F3_R10_PUTTER_SIJS_KNEU_2026-11-16_DRAFT.md"
+          "docs/fotokwaliteit/F3_R10_PUTTER_SIJS_KNEU_2026-11-16_DRAFT.md",
+          "tools/media/intake_selection_2026-11-16.json"
         ],
         "reviewedOriginalAudio": 0,
         "showcasePreview": "NOT TESTED on physical device; local source/photo review and Chromium only",
         "independence": "PARTIAL / local WebP visual review and Vogelbescherming consulted; originals/rights/acoustic/second reviewer pending",
         "fullPass": false,
-        "photoFilesInspected": 2,
+        "photoFilesInspected": 4,
         "photoBlobSHAs": [
           "cc9a908a09909adc0eafb5de4b535d7689e91cab",
+          "fe08368cf5efff7ef39b66356fe8b37b6f1ea7a2",
+          "33893a2b3cf26c2534db83315b22c3adb58c5e62",
           "bda07b3523d57dd7caa9995cfe7075f7918f31ae"
         ],
         "photoSourceMatches": [],
         "priorPhotoMatches": [],
         "audioSourceMatches": [],
         "unmatchedAudio": [],
-        "contentStatus": "PARTIALLY REVIEWED (2 current local images and critical lookalikes inspected; no media FULL PASS)",
+        "contentStatus": "PARTIALLY REVIEWED (4 current local images incl. 2 new kleden and critical lookalikes inspected; no media FULL PASS)",
         "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R10 node/browser tests run separately."
       }
     },

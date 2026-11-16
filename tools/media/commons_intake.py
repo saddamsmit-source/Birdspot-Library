@@ -91,7 +91,7 @@ def imageinfo(titles: list[str], thumb: int | None = None) -> dict:
         m = lambda k: (meta.get(k) or {}).get("value")
         out[page["title"]] = {
             "title": page["title"],
-            "page": "https://commons.wikimedia.org/wiki/" + urllib.parse.quote(page["title"].replace(" ", "_")),
+            "page": "https://commons.wikimedia.org/wiki/" + urllib.parse.quote(page["title"].replace(" ", "_"), safe=":/(),"),
             "url": ii["url"], "thumb": ii.get("thumburl"), "sha1": ii["sha1"], "size": ii["size"],
             "width": ii.get("width"), "height": ii.get("height"), "mime": ii["mime"],
             "duration": ii.get("duration"),

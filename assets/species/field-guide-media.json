@@ -6253,7 +6253,7 @@
         "author": "Charles J. Sharp",
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "source": "https://commons.wikimedia.org/wiki/File%3ALinnet_%28Linaria_cannabina%29_female.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Linnet_%28Linaria_cannabina%29_female.jpg",
         "showSourceLink": true,
         "sourceSha1": "2622240c3938ae3534a05f178bbfd5b6919030f2",
         "reviewed": "2026-11-16",
@@ -6261,7 +6261,8 @@
         "image": "/assets/species/plumage/sp039-adult_f.webp",
         "width": 1400,
         "height": 1400,
-        "modifications": "Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP"
+        "modifications": "Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+        "sha1": "c5302c39e091299ba7a1415ddc759c49847284c2"
       },
       "juv": {
         "nl": "Kneu",
@@ -6276,7 +6277,7 @@
         "author": "gailhampshire from Cradley, Malvern, U.K",
         "license": "CC BY 2.0",
         "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-        "source": "https://commons.wikimedia.org/wiki/File%3ALinnet_Linaria_cannabina%2C_juvenile%2C_Prees_Heath%2C_Shropshire_1.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Linnet_Linaria_cannabina%2C_juvenile%2C_Prees_Heath%2C_Shropshire_1.jpg",
         "showSourceLink": true,
         "sourceSha1": "2bd252402b2675fe932786877e6e4d14198cd6b5",
         "reviewed": "2026-11-16",
@@ -6284,7 +6285,8 @@
         "image": "/assets/species/plumage/sp039-juv.webp",
         "width": 1400,
         "height": 1184,
-        "modifications": "Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP"
+        "modifications": "Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+        "sha1": "d402798b3afcbc0b33bd40b9d6d3fa05bd58ee4a"
       }
     }
   },
