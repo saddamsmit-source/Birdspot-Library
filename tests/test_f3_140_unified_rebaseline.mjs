@@ -93,6 +93,7 @@ const counts={
  sixthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R06'),
  seventhBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R07'),
  eighthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R08'),
+ ninthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R09'),
  contentInspected:sum(x=>x.F3.reviewedThisRound===true),
  contentComplete:sum(x=>x.F3.contentStatus==='CONTENT COMPLETE')
 };
@@ -107,6 +108,29 @@ const fifth=rows.filter(x=>x.F3.recheckBatch==='F3-R05');
 const sixth=rows.filter(x=>x.F3.recheckBatch==='F3-R06');
 const seventh=rows.filter(x=>x.F3.recheckBatch==='F3-R07');
 const eighth=rows.filter(x=>x.F3.recheckBatch==='F3-R08');
+const ninth=rows.filter(x=>x.F3.recheckBatch==='F3-R09');
+assert.deepEqual(ninth.map(x=>x.id),['sp034','sp035','sp036'],'F3-R09 fixed batch');
+assert.deepEqual(ninth.map(x=>x.F3.photoFilesInspected),[2,5,4]);
+assert.deepEqual(ninth.map(x=>x.currentAssets.imageSlots.length),[2,5,4]);
+for (const row of ninth) {
+ const x=row.F3;
+ assert.equal(x.status,'IN CONTENT REVIEW / OPEN POINTS');
+ assert.equal(x.fullPass,false,'No rights/device/media pass from local image inspection');
+ assert.equal(x.reviewedOriginalAudio,0,'No unperformed acoustic verification');
+ assert.deepEqual(x.audioSourceMatches,[],'No fabricated source audio');
+ assert.ok(Array.isArray(x.confusionPairs) && x.confusionPairs.length,
+   row.id+' must list close-look species and uncertainty');
+ assert.equal(x.photoBlobSHAs.length,row.currentAssets.imageSlots.length);
+ for(let i=0;i<row.currentAssets.imageSlots.length;i++){
+  const image=readFileSync(new URL('..'+row.currentAssets.imageSlots[i].path,import.meta.url));
+  const blobSha=createHash('sha1').update('blob '+image.length+'\\0'.replace('\\0','\0')).update(image).digest('hex');
+  assert.equal(x.photoBlobSHAs[i],blobSha,row.id+' exact inspected local photo bytes must be preserved');
+ }
+}
+assert.deepEqual(ninth.find(x=>x.id==='sp035').F3.confusionPairs.map(x=>x.id),['sp036','sp043','sp181']);
+assert.deepEqual(ninth.find(x=>x.id==='sp036').F3.confusionPairs.map(x=>x.id),['sp035','sp038']);
+assert.equal(ninth.find(x=>x.id==='sp036').currentAssets.existingAudioCount,0);
+
 assert.deepEqual(eighth.map(x=>x.id), ['sp031','sp032','sp033'],'F3-R08 is exactly three existing tits');
 assert.deepEqual(eighth.map(x=>x.F3.photoFilesInspected),[3,3,4]);
 for(const x of eighth) {
