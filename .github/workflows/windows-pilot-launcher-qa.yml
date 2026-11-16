@@ -34,18 +34,29 @@ jobs:
       - name: "Pinned candidate self-check: no clone, USB, network or publish"
         shell: pwsh
         run: |
-          ./tools/pilot/Start-BirdspotAndroidPilot.ps1 -SelfCheck
+          ./tools/pilot/Start-BirdspotAndroidPilot.ps1 -SelfCheck -CandidateBranch 'qa/birdspot-release-candidate-1.27.7-20261113' -ExpectedSha '83c117447126b705cae1899f71e66d070a6084b9' -ExpectedVersion '1.27.7'
+          # Negative: malformed input must stop before any network or disk action.
+          foreach ($bad in @(
+            @{CandidateBranch='main'; ExpectedSha='83c117447126b705cae1899f71e66d070a6084b9'; ExpectedVersion='1.27.7'},
+            @{CandidateBranch='preview/birdspot-review'; ExpectedSha='83c117447126b705cae1899f71e66d070a6084b9'; ExpectedVersion='1.27.7'},
+            @{CandidateBranch='qa/birdspot-release-candidate-1.27.7-20261113'; ExpectedSha='83c11744'; ExpectedVersion='1.27.7'},
+            @{CandidateBranch='qa/birdspot-release-candidate-1.27.7-20261113'; ExpectedSha='83c117447126b705cae1899f71e66d070a6084b9'; ExpectedVersion='latest'})) {
+            $failed = $false
+            try { ./tools/pilot/Start-BirdspotAndroidPilot.ps1 -SelfCheck @bad | Out-Null } catch { $failed = $true }
+            if (-not $failed) { throw "Malformed input accepted: $($bad | ConvertTo-Json -Compress)" }
+          }
+          Write-Output 'PASS: main/preview, short SHA and non-version input are refused.'
       - name: Confirm test script never calls deployment or destructive git operations
         shell: python
         run: |
           from pathlib import Path
           text = Path('tools/pilot/Start-BirdspotAndroidPilot.ps1').read_text(encoding='utf-8')
-          assert "83c117447126b705cae1899f71e66d070a6084b9" in text
-          assert "qa/birdspot-release-candidate-1.27.7-20261113" in text
+          assert "83c117447126b705cae1899f71e66d070a6084b9" not in text, 'no SHA pin inside the script'
+          assert "Mandatory = $true" in text and "ExpectedSha" in text
           assert "http.server" in text and "127.0.0.1" in text
           assert "git clone" in text and "git -C $checkout archive" in text
           assert "git push" not in text and "git reset --hard" not in text
-          print('PASS: pinned offline-only launcher contract. Physical Android NOT TESTED.')
+          print('PASS: parameterised offline-only launcher contract (no in-file pin). Physical Android NOT TESTED.')
 
   windows-preparation:
     name: Actual Windows pinned-source staging (no server, no Android)
@@ -56,7 +67,7 @@ jobs:
       - name: Run Windows PowerShell 5.1 prepare-only path on pinned source
         shell: powershell
         run: |
-          .\tools\pilot\Start-BirdspotAndroidPilot.ps1 -PrepareOnly
+          .\tools\pilot\Start-BirdspotAndroidPilot.ps1 -PrepareOnly -CandidateBranch 'qa/birdspot-release-candidate-1.27.7-20261113' -ExpectedSha '83c117447126b705cae1899f71e66d070a6084b9' -ExpectedVersion '1.27.7'
       - name: Check staged snapshot has 1.27.7 and no Git metadata
         shell: powershell
         run: |

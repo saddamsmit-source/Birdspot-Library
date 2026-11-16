@@ -12,7 +12,7 @@
  *   birdspot-media           — foto's/IDB-exports (permanent)
  */
 
-const APP_VERSION = '1.27.30';
+const APP_VERSION = '1.27.31';
 const APP_CACHE   = `birdspot-app-v${APP_VERSION}`;
 const MEDIA_CACHE = 'birdspot-media';
 
@@ -32,6 +32,9 @@ const PRECACHE_PATHS = [
   '',
   'index.html',
   'manifest.webmanifest',
+  'icons/icon-192.png',
+  'icons/icon-512.png',
+  'icons/icon-512-maskable.png',
   'assets/species/field-guide-media.json',
   'assets/species/credits.json',
   'assets/showcase/credits.json',
