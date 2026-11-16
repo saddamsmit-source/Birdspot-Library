@@ -158,7 +158,7 @@ def discover(manifest: Path, out: Path) -> None:
         res = get(API, {"action": "query", "list": "search", "srnamespace": "6",
                         "srsearch": search, "srlimit": str(q.get("limit", 12))})
         titles = [s["title"] for s in res["query"]["search"]]
-        infos = imageinfo(titles, thumb=None if q["kind"] == "audio" else 360) if titles else {}
+        infos = imageinfo(titles, thumb=None if q["kind"] == "audio" else q.get("thumb", 360)) if titles else {}
         kept, rejected = [], []
         for t in titles:
             info = infos.get(t)

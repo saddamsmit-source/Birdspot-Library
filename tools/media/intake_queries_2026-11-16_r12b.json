@@ -1,0 +1,14 @@
+{
+  "queries": [
+    {
+      "id": "sp044_flight_zoom",
+      "speciesId": "sp044",
+      "role": "flight",
+      "kind": "image",
+      "search": "intitle:\"Eurasian-Tree-Sparrow\" Mildeep",
+      "limit": 5,
+      "keep": 2,
+      "thumb": 1600
+    }
+  ]
+}
