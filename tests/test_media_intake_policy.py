@@ -33,6 +33,22 @@ expect_fail(lambda: intake.check_item({**good, "license": "CC BY 2.0"}, info), "
 expect_fail(lambda: intake.check_item({**good, "sha1": "b" * 40}, info), "SHA-1 gewijzigd")
 expect_fail(lambda: intake.check_item(good, None), "Niet gevonden")
 expect_fail(lambda: intake.check_item({**good, "kind": "audio"}, info), "luistercontrole")
+import json as _j, tempfile as _t, os as _o
+_d = intake.ROOT / "docs/media-intake/_test_audiocheck"; _d.mkdir(parents=True, exist_ok=True)
+_rep = {"recordings": [{"id": "x_call", "sha1": "a" * 40}], "judgements": [{"id": "x_call", "speciesId": "sp043", "soundType": "call", "consistent": True}]}
+(_d / "r.json").write_text(_j.dumps(_rep))
+_ac = {"report": "docs/media-intake/_test_audiocheck/r.json", "judgement": "x_call", "visual": "tsjilp 3-4 kHz", "soundType": "call"}
+_aud = {**good, "kind": "audio", "speciesId": "sp043", "audiocheck": _ac}
+intake.check_item(_aud, info)
+expect_fail(lambda: intake.check_item({**_aud, "speciesId": "sp044"}, info), "ander bestand")
+expect_fail(lambda: intake.check_item({**_aud, "audiocheck": {**_ac, "soundType": "song"}}, info), "ander bestand")
+expect_fail(lambda: intake.check_item({**_aud, "audiocheck": {**_ac, "visual": ""}}, info), "luistercontrole")
+expect_fail(lambda: intake.check_item({**_aud, "audiocheck": {**_ac, "report": "sw.js"}}, info), "buiten docs/media-intake")
+(_d / "r.json").write_text(_j.dumps({**_rep, "judgements": [{**_rep["judgements"][0], "consistent": False}]}))
+expect_fail(lambda: intake.check_item(_aud, info), "niet consistent")
+(_d / "r.json").write_text(_j.dumps({**_rep, "recordings": [{"id": "x_call", "sha1": "c" * 40}]}))
+expect_fail(lambda: intake.check_item(_aud, info), "ander bestand")
+(_d / "r.json").unlink(); _d.rmdir()
 heard = {"by": "Kevin", "date": "2026-11-17", "species": "ja", "soundType": "zang", "quality": "goed"}
 intake.check_item({**good, "kind": "audio", "listened": heard}, info)
 expect_fail(lambda: intake.safe_dest("/assets/species/plumage/../../sw.js", "pose"), "'..'")

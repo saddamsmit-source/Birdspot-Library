@@ -86,8 +86,28 @@ def check_item(e: dict, info: dict | None) -> None:
         raise IntakeError(f"Auteur wijkt af van Commons voor {e['title']}: {info['author']!r} != {e['author']!r}")
     if e["kind"] == "audio":
         heard = e.get("listened") or {}
-        if not all(heard.get(k) for k in ("by", "date", "species", "soundType", "quality")):
-            raise IntakeError("Audio pas importeren na menselijke luistercontrole (soort, geluidsoort, kwaliteit): " + e["title"])
+        if all(heard.get(k) for k in ("by", "date", "species", "soundType", "quality")):
+            return
+        audiocheck_ok(e, info)
+
+
+def audiocheck_ok(e: dict, info: dict) -> None:
+    """Alternatief voor menselijk luisteren (protocol docs/media-intake/AUDIOCHECK_PROTOCOL.md): het audiocheck-rapport
+    moet voor exact dit bestand (SHA-1) een consistent oordeel bevatten met dezelfde soort en geluidsoort, plus een
+    vastgelegde visuele spectrogramcontrole. Anders weigeren."""
+    ac = e.get("audiocheck") or {}
+    if not (ac.get("report") and ac.get("judgement") and ac.get("visual") and ac.get("soundType")):
+        raise IntakeError("Audio pas importeren na menselijke luistercontrole of volledige audiocheck: " + e["title"])
+    path = (ROOT / ac["report"]).resolve()
+    if not str(path).startswith(str((ROOT / "docs/media-intake").resolve())) or not path.exists():
+        raise IntakeError("Audiocheck-rapport ontbreekt of staat buiten docs/media-intake: " + ac["report"])
+    rep = json.loads(path.read_text(encoding="utf-8"))
+    j = next((x for x in rep.get("judgements", []) if x.get("id") == ac["judgement"]), None)
+    rec = next((x for x in rep.get("recordings", []) if x.get("id") == ac["judgement"]), None)
+    if not j or not rec or not j.get("consistent"):
+        raise IntakeError("Audiocheck niet consistent voor " + ac["judgement"])
+    if rec.get("sha1") != info["sha1"] or j.get("speciesId") != e["speciesId"] or j.get("soundType") != ac["soundType"]:
+        raise IntakeError("Audiocheck hoort bij een ander bestand, andere soort of geluidsoort: " + ac["judgement"])
 
 
 def get(url: str, params: dict | None = None, binary: bool = False):
