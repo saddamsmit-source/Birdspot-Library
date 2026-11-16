@@ -75,6 +75,17 @@ assert.match(KNOWLEDGE.sp034.caution.text,/witkop|witte kop/i);
 assert.match(KNOWLEDGE.sp035.caution.text,/Keep/);
 assert.match(KNOWLEDGE.sp035.caution.text,/Huismus/);
 assert.match(KNOWLEDGE.sp036.caution.text,/Sijs/);
+const femaleVinkGroenling=registry.pairs.find(pair=>pair.id==='LK-007');
+assert.deepEqual(femaleVinkGroenling.birds,['sp035','sp036']);
+assert.deepEqual(femaleVinkGroenling.matchingPlumages,['adult_f','adult_f']);
+assert.match(KNOWLEDGE.sp035.caution.text,/Groenling/);
+assert.match(KNOWLEDGE.sp036.caution.text,/Vink/);
+assert.ok(KNOWLEDGE.sp035.similar.some(entry=>entry.id==='sp036'));
+assert.ok(KNOWLEDGE.sp036.similar.some(entry=>entry.id==='sp035'));
+const pairVinkGreen=GUIDE_COMPARISONS.find(c=>c.label==='Vink en Groenling · vrouwtjes in rust');
+assert.equal(pairVinkGreen?.rows.length,3);
+assert.ok(pairVinkGreen?.birds.every(bird=>bird.plumage==='adult_f'));
+
 assert.ok(!GUIDE_PHOTOS.sp181,'A missing Keep photo must never be silently replaced');
 const femaleComparison=GUIDE_COMPARISONS.find(c=>c.label==='Vink en Huismus · vrouwtjes in rust');
 const maleComparison=GUIDE_COMPARISONS.find(c=>c.label==='Groenling en Sijs · volwassen mannetjes in rust');
