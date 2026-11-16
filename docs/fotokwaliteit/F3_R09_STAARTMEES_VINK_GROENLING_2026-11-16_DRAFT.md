@@ -39,7 +39,7 @@ Bestaande oorspronkelijke metadata blijven in `assets/species/field-guide-media.
 | Kleur | Vaak grijsbruin | Doffer groengrijs, gele vleugel-/staartdelen | Belichting varieert; kleur **niet alleen** beslissend |
 
 **Andere belangrijke verwarringspartners:**
-- Vinkvrouw ↔ Huismusvrouw `sp043` (lichte vleugelstrepen, gedrag) en winterse Vink ↔ Keep `sp???` (**exacte Birdspot-ID nog niet gecontroleerd**, dus niet raden of invoeren).
+- Vinkvrouw ↔ Huismusvrouw `sp043` (lichte vleugelstrepen, gedrag) en winterse Vink ↔ Keep `sp181` (Birdspot-ID in de actuele soortenlijst gecontroleerd; seizoens-/kleedvergelijking nog open).
 - Groenlingvrouw/juveniel ↔ Sijs `sp038` (forsere snavel en bouw, gele vleugel; juveniele Groenling kan gestreept zijn). Bestaande `Sijs en Groenling · vrouwtje`-vergelijking behouden.
 - Staartmees `sp034`: de zeer lange staart biedt de beste eerste herkenning. Een opvallend wit gezicht mag **niet op zichzelf** worden vertaald naar ondersoort Witkopstaartmees, omdat gewone Staartmezen ook een zeer witte kop kunnen hebben. Bron + kenmerken + geografische context nodig. Bestaande `Staartmees en Zwarte Mees`-vergelijking behouden.
 
