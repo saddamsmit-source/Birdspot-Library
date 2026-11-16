@@ -32,7 +32,7 @@ for(const pair of registry.pairs) {
   assert.ok(pair.birds.every(id=>catalog.has(id)),'Missing species in lookalike pair');
   assert.equal(pair.matchingPlumages.length,2);
   assert.ok(pair.focus.some(id=>registry.focusSpecies.includes(id)) || pair.id === 'LK-006');
-  pair.focus.forEach(id=>focusUsed.add(id));
+  pair.focus.filter(id=>registry.focusSpecies.includes(id)).forEach(id=>focusUsed.add(id));
   assert.ok(pair.criticalMarks.length>=2 && pair.criticalMarks.length<=3);
   for(const mark of pair.criticalMarks) {
     assert.ok(mark.label.length>2 && mark.values.length===2 && mark.values.every(t=>t.length>12));
