@@ -1,0 +1,34 @@
+{
+  "queries": [
+    {
+      "id": "sp049_flight",
+      "speciesId": "sp049",
+      "role": "flight",
+      "kind": "image",
+      "search": "Turdus viscivorus flight",
+      "limit": 20,
+      "keep": 6,
+      "thumb": 800
+    },
+    {
+      "id": "sp050_flight",
+      "speciesId": "sp050",
+      "role": "flight",
+      "kind": "image",
+      "search": "Erithacus rubecula in flight",
+      "limit": 20,
+      "keep": 6,
+      "thumb": 800
+    },
+    {
+      "id": "sp051_flight",
+      "speciesId": "sp051",
+      "role": "flight",
+      "kind": "image",
+      "search": "Phoenicurus ochruros flight",
+      "limit": 20,
+      "keep": 6,
+      "thumb": 800
+    }
+  ]
+}
