@@ -40,11 +40,13 @@ const hs = media.audio.sp043;
 assert.equal(hs.length, 1);
 assert.equal(hs[0].label, 'Roep');
 assert.ok(judged.sp043_call_cand_1.consistent);
-assert.match(hs[0].verification, /niet door mens beluisterd/);
+assert.match(hs[0].verification, /^NOT TESTED \(kandidaat\)/);
 assert.ok(existsSync(new URL('..' + hs[0].audio, import.meta.url)));
 assert.ok(!media.audio.sp044 || media.audio.sp044.length === 0, 'No Ringmus sound without conclusive audiocheck');
 const [song, call] = media.audio.sp045;
-assert.ok(judged.sp045_song_live.consistent && /^VERIFIED \(triangulatie/.test(song.verification));
+assert.ok(/^NOT TESTED/.test(song.verification), 'strengthened audiocheck: song only source-labelled');
+const r12b = read('../docs/media-intake/2026-11-16/audiocheck-r12b/audiocheck.json');
+assert.ok(r12b.judgements.every(j => !j.consistent), 'no published clip passes the validated rule');
 assert.ok(!judged.sp045_call_live.consistent && /^NOT TESTED/.test(call.verification), 'Failed audiocheck never shown as verified');
 
 console.log('F3-R12 PASS: 14 photos checked against sources, Ringmus flight role corrected, audio published only after consistent audiocheck');

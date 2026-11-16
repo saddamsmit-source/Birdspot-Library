@@ -24,3 +24,15 @@ Vier runs. Elke run maakte een zwakte zichtbaar, en die is telkens met een negat
 4. Een verwarringssoort met één referentie liet een kandidaat door. Nu moet elke verwarringssoort ≥ 2 referenties hebben.
 
 **Resultaat:** 0 van 5 kandidaten publiceerbaar, alle **NOT TESTED**. Bronlabel en visuele spectrogramcontrole passen bij de soort, maar de akoestische referentievergelijking kan niet worden uitgevoerd: er zijn te weinig onafhankelijke referenties voor Sijs en Kneu. Er staat dus geen opname in de app. Details: `docs/media-intake/2026-11-16/audio_candidates_r10.json` en `.../audiocheck/`.
+
+## Herziening na onafhankelijke review — 16-11-2026 17:19 (PR #273)
+
+- **Bewijsplafond:** een consistente audiocheck geldt hooguit als *akoestische aanwijzing* (PARTIALLY TESTED), nooit als soortverificatie. Een audiocheck door dezelfde agent is geen onafhankelijk oordeel. De import weigert een `VERIFIED`-label op basis van een audiocheck.
+- **Versterkt:** één referentie per opnemer, de opnemer van de kandidaat telt niet, exacte soort en geluidstype, verwarringssoorten uit het kennisprofiel met elk ≥ 2 onafhankelijke opnemers, en het geanalyseerde fragment moet gelijk zijn aan het gepubliceerde fragment.
+- **Nieuw: referentievalidatie (leave-one-out).** Elke referentie moet het meest lijken op de andere referenties van haar eigen soort. Alleen bij 100 % mag een kandidaat consistent heten.
+- **Uitkomst op de drie gepubliceerde opnamen:**
+  - Merel/Zanglijster/Spreeuw-zang: validatie 0,60.
+  - Huismus/Ringmus-roep: validatie 0,80.
+  - Merel-alarmroep: te weinig onafhankelijke Zanglijster-referenties.
+  - **Conclusie: de spectrale profielmaat is voor deze soortparen geen betrouwbare detector.** De akoestische lijn is daarmee voorlopig NOT TESTED. Alle opnamen staan op "alleen bronlabel" en dat is zichtbaar in de soortkaart.
+- **Volgende methode (open):** een validatie-eerst-aanpak met een vrij licentieerbare, gevalideerde classifier, of een onafhankelijke menselijke/AI-review. Tot die er is, publiceert de audiocheck niets en verhoogt hij geen status.

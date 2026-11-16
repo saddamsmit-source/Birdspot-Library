@@ -35,11 +35,17 @@ expect_fail(lambda: intake.check_item(good, None), "Niet gevonden")
 expect_fail(lambda: intake.check_item({**good, "kind": "audio"}, info), "luistercontrole")
 import json as _j, tempfile as _t, os as _o
 _d = intake.ROOT / "docs/media-intake/_test_audiocheck"; _d.mkdir(parents=True, exist_ok=True)
-_rep = {"recordings": [{"id": "x_call", "sha1": "a" * 40}], "judgements": [{"id": "x_call", "speciesId": "sp043", "soundType": "call", "consistent": True}]}
+_rep = {"recordings": [{"id": "x_call", "sha1": "a" * 40, "fragment": {"start": 0.0, "seconds": 6.2}}], "judgements": [{"id": "x_call", "speciesId": "sp043", "soundType": "call", "consistent": True, "evidenceLevel": "PARTIALLY TESTED (akoestische aanwijzing)"}]}
 (_d / "r.json").write_text(_j.dumps(_rep))
 _ac = {"report": "docs/media-intake/_test_audiocheck/r.json", "judgement": "x_call", "visual": "tsjilp 3-4 kHz", "soundType": "call"}
-_aud = {**good, "kind": "audio", "speciesId": "sp043", "audiocheck": _ac}
+_aud = {**good, "kind": "audio", "speciesId": "sp043", "audiocheck": _ac, "start": 0, "seconds": 6.2, "register": {"verification": "PARTIALLY TESTED (akoestische aanwijzing)"}}
 intake.check_item(_aud, info)
+expect_fail(lambda: intake.check_item({**_aud, "start": 2.0}, info), "fragment wijkt af")
+expect_fail(lambda: intake.check_item({**_aud, "seconds": 30}, info), "fragment wijkt af")
+expect_fail(lambda: intake.check_item({**_aud, "register": {"verification": "VERIFIED (triangulatie)"}}, info), "geen soortverificatie")
+(_d / "r.json").write_text(_j.dumps({**_rep, "judgements": [{k: v for k, v in _rep["judgements"][0].items() if k != "evidenceLevel"}]}))
+expect_fail(lambda: intake.check_item(_aud, info), "bewijsplafond")
+(_d / "r.json").write_text(_j.dumps(_rep))
 expect_fail(lambda: intake.check_item({**_aud, "speciesId": "sp044"}, info), "ander bestand")
 expect_fail(lambda: intake.check_item({**_aud, "audiocheck": {**_ac, "soundType": "song"}}, info), "ander bestand")
 expect_fail(lambda: intake.check_item({**_aud, "audiocheck": {**_ac, "visual": ""}}, info), "luistercontrole")
