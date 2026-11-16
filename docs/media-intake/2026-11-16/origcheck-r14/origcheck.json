@@ -1,0 +1,232 @@
+{
+  "generated": "2026-11-16T19:05:23Z",
+  "rule": {
+    "sameMinR": 0.9
+  },
+  "items": [
+    {
+      "speciesId": "sp049",
+      "image": "/assets/species/sp049.webp",
+      "title": "File:Turdus viscivorus -England-8.jpg",
+      "author": "jo-h from UK",
+      "license": "CC BY 2.0",
+      "localSize": [
+        1600,
+        1149
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Turdus_viscivorus_-England-8.jpg",
+        "sha1": "905e06563dc9f0877c66dd2b01e53ea4b645e0c3",
+        "license": "CC BY 2.0",
+        "author": "jo-h from UK",
+        "width": 2408,
+        "height": 1729
+      },
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        689
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp049_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp049",
+      "image": "/assets/species/plumage/sp049-juv.webp",
+      "title": "File:Fledgling mistle thrush.jpg",
+      "author": "treehouse1977",
+      "license": "CC BY-SA 2.0",
+      "localSize": [
+        1400,
+        933
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Fledgling_mistle_thrush.jpg",
+        "sha1": "ecc1a05e4051724720de5c6a86a25588b79cf27b",
+        "license": "CC BY-SA 2.0",
+        "author": "Jim Champion from Southampton, UK",
+        "width": 2700,
+        "height": 1800
+      },
+      "rightsMatch": false,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp049-juv_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp050",
+      "image": "/assets/species/sp050.webp",
+      "title": "File:European robin Créteil 2.jpg",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1600,
+        1067
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:European_robin_Cr%C3%A9teil_2.jpg",
+        "sha1": "42cec571c5e26fb3b6897175f666e2c5af571736",
+        "license": "CC BY 4.0",
+        "author": "Alexis Lours",
+        "width": 4654,
+        "height": 3103
+      },
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp050_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp050",
+      "image": "/assets/species/plumage/sp050-juv-review.webp",
+      "title": "File:European Robin - Erithacus rubecula - Juvenile.jpg",
+      "author": "Caroline Legg",
+      "license": "CC BY 2.0",
+      "localSize": [
+        1400,
+        1000
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:European_Robin_-_Erithacus_rubecula_-_Juvenile.jpg",
+        "sha1": "681e6dddf1c85981c57b445a6846d3e6a7291ea2",
+        "license": "CC BY 2.0",
+        "author": "caroline legg",
+        "width": 2627,
+        "height": 1876
+      },
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        686
+      ],
+      "mode": "full",
+      "r": 0.999,
+      "sameShot": true,
+      "sideBySide": "sp050-juv-review_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp050",
+      "image": "/assets/species/plumage/sp050-flight.webp",
+      "title": "File:Robin in Flight (8398860133).jpg",
+      "author": "Joe Dyer",
+      "license": "CC BY 2.0",
+      "localSize": [
+        1400,
+        1050
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Robin_in_Flight_(8398860133).jpg",
+        "sha1": "e5d9383b067a2d5d3df097f8b6d9cbd5f3b73737",
+        "license": "CC BY 2.0",
+        "author": "Joe Dyer from Buckhurst Hill, England",
+        "width": 4362,
+        "height": 3271
+      },
+      "rightsMatch": false,
+      "sourceSize": [
+        960,
+        720
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp050-flight_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp051",
+      "image": "/assets/species/plumage/sp051-hero-male.webp",
+      "title": "File:Rabiruivo-preto, macho, Black Redstart, male (51131070116).jpg",
+      "author": "Luiz Lapa",
+      "license": "CC BY 2.0",
+      "localSize": [
+        1600,
+        1092
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Rabiruivo-preto,_macho,_Black_Redstart,_male_(51131070116).jpg",
+        "sha1": "348009e2d51030a7c8313cde045ff39a78fb6ee9",
+        "license": "CC BY 2.0",
+        "author": "Luiz Lapa from Oeiras, Portugal",
+        "width": 4438,
+        "height": 3029
+      },
+      "rightsMatch": false,
+      "sourceSize": [
+        960,
+        655
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp051-hero-male_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp051",
+      "image": "/assets/species/sp051.webp",
+      "title": "File:Rougequeue noir Douga006.jpg",
+      "author": "El Golli Mohamed",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1600,
+        1067
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Rougequeue_noir_Douga006.jpg",
+        "sha1": "8dddc5ea76182be8fdcc7c0ce1bd738d53cbf47a",
+        "license": "CC BY-SA 4.0",
+        "author": "El Golli Mohamed",
+        "width": 3604,
+        "height": 2403
+      },
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp051_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp051",
+      "image": "/assets/species/plumage/sp051-juv.webp",
+      "title": "File:Phoenicurus ochruros juvenile Chastel 20190512 t130014.jpg",
+      "author": "Marie-Lan Taÿ Pamart",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1400,
+        933
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Phoenicurus_ochruros_juvenile_Chastel_20190512_t130014.jpg",
+        "sha1": "d1aa4bd6cd7ddc1d6c8078c2c945012f3109ad48",
+        "license": "CC BY 4.0",
+        "author": "Marie-Lan Taÿ Pamart",
+        "width": 2000,
+        "height": 1333
+      },
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp051-juv_vs_source.jpg"
+    }
+  ]
+}
