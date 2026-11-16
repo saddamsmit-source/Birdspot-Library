@@ -123,7 +123,7 @@ for (const row of ninth) {
  assert.equal(x.photoBlobSHAs.length,row.currentAssets.imageSlots.length);
  for(let i=0;i<row.currentAssets.imageSlots.length;i++){
   const image=readFileSync(new URL('..'+row.currentAssets.imageSlots[i].path,import.meta.url));
-  const blobSha=createHash('sha1').update('blob '+image.length+'\\0'.replace('\\0','\0')).update(image).digest('hex');
+  const blobSha=createHash('sha1').update('blob '+image.length+'\0').update(image).digest('hex');
   assert.equal(x.photoBlobSHAs[i],blobSha,row.id+' exact inspected local photo bytes must be preserved');
  }
 }
