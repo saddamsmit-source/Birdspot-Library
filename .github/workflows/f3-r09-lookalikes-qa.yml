@@ -2,10 +2,13 @@ name: Birdspot F3-R09 Lookalike Photo & Text QA
 
 on:
   push:
-    branches: [qa/birdspot-f3-r09-lookalikes-20261116]
+    branches:
+      - qa/birdspot-f3-r09-lookalikes-20261116
+      - qa/birdspot-f3-r09-vink-groenling-females-20261116
   pull_request:
     branches:
       - qa/birdspot-f3-r08-matkop-glanskop-kuifmees-20261116
+      - qa/birdspot-f3-r09-lookalikes-20261116
   workflow_dispatch:
 
 permissions:
