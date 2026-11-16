@@ -149,7 +149,11 @@ def validate_bird_media():
             }
         else:
             assert not status["audited"] and status["verdict"] == "NOT TESTED"
-            assert sid not in knowledge
+            if sid == "sp039":
+                # F3-R10 (16-11-2026) added a sourced knowledge profile; the historical F1 audit status stays untouched.
+                assert sid in knowledge and knowledge[sid]["caution"]["sources"], "F3-R10 Kneu profile must stay sourced"
+            else:
+                assert sid not in knowledge
         cr = credits[sid]
         poses = media["poses"].get(sid, [])
         variants = media["plumage"].get(sid, {})
@@ -172,7 +176,13 @@ def validate_bird_media():
             assert cr["source"] == poses[0]["source"]
             all_records = [cr, adult] + poses
         elif sid == "sp039":
-            assert not variants and not media["heroes"].get(sid)
+            # Historical M22 state: hero + conditional flight. F3-R10-media may add ONLY the verified
+            # female and juvenile kleden from the Commons intake, each with pinned original SHA-1.
+            assert not media["heroes"].get(sid)
+            assert set(variants) <= {"adult_f", "juv"}
+            for role, variant in variants.items():
+                assert variant["intake"].startswith("tools/media/commons_intake.py"), role
+                assert len(variant["sourceSha1"]) == 40 and variant["sex" if role == "adult_f" else "age"]
             assert cr["image"] == bird["hero"] and cr["sex"] == "male"
             assert len(poses) == 1
             flight = poses[0]
@@ -180,7 +190,7 @@ def validate_bird_media():
             assert "voorwaardelijk" in flight["flightReview"]
             assert "Vervanging met hoge prioriteit" in flight["flightReview"]
             assert len(cr["source"]) > 0 and cr["author"] == "Joe Pell"
-            all_records = [cr, flight]
+            all_records = [cr, flight] + [variants[r] for r in sorted(variants)]
         else:
             assert sid == "sp042"
             assert not variants and not poses and not media["heroes"].get(sid)
@@ -199,7 +209,8 @@ def validate_bird_media():
                 assert unique_files[path]["source"] == item["source"]
                 continue
             unique_files[path] = item
-        assert len(unique_files) == bird["registeredUnique"], (sid, list(unique_files))
+        extra = len(variants) if sid == "sp039" else 0  # F3-R10-media additions
+        assert len(unique_files) == bird["registeredUnique"] + extra, (sid, list(unique_files))
         for path,item in unique_files.items():
             digest = fingerprint(path)
             original = item["source"].lower().rstrip("/")
@@ -208,8 +219,9 @@ def validate_bird_media():
             seen_sha[digest] = path
             seen_sources[original] = path
         print(f"M22 {sid} MEDIA PASS: {len(unique_files)} distinct WebPs; correct hero/flight/portrait/sex policy")
-    assert len(seen_sha) == len(seen_sources) == 7
-    print("M22 PHOTO PASS: seven unique local WebPs; external original pixel match and rights still open")
+    expected = 7 + len(load("assets/species/field-guide-media.json")["plumage"].get("sp039", {}))
+    assert len(seen_sha) == len(seen_sources) == expected
+    print(f"M22 PHOTO PASS: {expected} unique local WebPs (7 historical + F3-R10-media); external original pixel match and rights still open")
 
 
 def mobile_ui():
