@@ -111,6 +111,26 @@ def main():
                 page.on("pageerror", lambda e: errors.append(str(e)))
                 boot(page, url)
                 assert page.evaluate("!navigator.onLine")
+                decoded_icons = page.evaluate("""async () => {
+                    const manifestUrl = document.querySelector('link[rel="manifest"]').href;
+                    const response = await fetch(manifestUrl);
+                    if (!response.ok) throw new Error(`Manifest unavailable: ${response.status}`);
+                    const manifest = await response.json();
+                    return Promise.all(manifest.icons.map(async icon => {
+                        const image = new Image();
+                        image.src = new URL(icon.src, manifestUrl).href;
+                        try {
+                            await image.decode();
+                        } catch (error) {
+                            throw new Error(`Cannot decode ${icon.src}: ${error.message}`);
+                        }
+                        return [icon.sizes, `${image.naturalWidth}x${image.naturalHeight}`];
+                    }));
+                }""")
+                assert len(decoded_icons) == 3 and all(
+                    declared == decoded for declared, decoded in decoded_icons
+                ), decoded_icons
+                print("PILOT-01 PASS — all three manifest icons decode offline at their declared sizes")
                 page.locator("#fab").click();page.locator('[data-quick-action="seen"]').click()
                 page.locator("#addSightingSheet").wait_for(state="visible", timeout=12000)
                 page.locator("#speciesPickerBtn").click()
