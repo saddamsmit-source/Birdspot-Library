@@ -18,7 +18,9 @@
     "fifthBatch": "docs/fotokwaliteit/F3_R05_DRIE_SPECHTEN_2026-11-15_DRAFT.md",
     "sixthBatch": "docs/fotokwaliteit/F3_R06_EKSTER_KRAAI_KAUW_2026-11-15_DRAFT.md",
     "seventhBatch": "docs/fotokwaliteit/F3_R07_GAAI_EN_MEZEN_2026-11-15_DRAFT.md",
-    "eighthBatch": "docs/fotokwaliteit/F3_R08_MATKOP_GLANSKOP_KUIFMEES_2026-11-16_DRAFT.md"
+    "eighthBatch": "docs/fotokwaliteit/F3_R08_MATKOP_GLANSKOP_KUIFMEES_2026-11-16_DRAFT.md",
+    "ninthBatch": "docs/fotokwaliteit/F3_R09_STAARTMEES_VINK_GROENLING_2026-11-16_DRAFT.md",
+    "lookalikeRegister": "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json"
   },
   "requiredChecks": [
     "photoOriginalIdentity",
@@ -37,7 +39,8 @@
     "ebirdDistributionAndBias",
     "personalPhotoFeedbackAndRestore",
     "endToEndGuideUI",
-    "independentSecondReview"
+    "independentSecondReview",
+    "lookalikePhotoAndText"
   ],
   "gateRule": "F3FullPass only when every required relevant individual item has independent evidence; incomplete biological or legally required items stay BLOCKED; a genuine not-applicable slot must have a reason, not a fabricated image. CI and visual review are different evidence levels.",
   "counts": {
@@ -49,16 +52,17 @@
     "audioMissing": 76,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 116,
+    "nextNotStarted": 113,
     "secondBatchStarted": 3,
-    "contentInspected": 24,
+    "contentInspected": 27,
     "contentComplete": 0,
     "thirdBatchStarted": 3,
     "fourthBatchStarted": 3,
     "fifthBatchStarted": 3,
     "sixthBatchStarted": 3,
     "seventhBatchStarted": 3,
-    "eighthBatchStarted": 3
+    "eighthBatchStarted": 3,
+    "ninthBatchStarted": 3
   },
   "records": [
     {
@@ -115,7 +119,8 @@
           "ebirdDistributionAndBias": "PARTIALLY TESTED (eBird public status/range found, direct local claim and bias verification open)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
@@ -211,7 +216,8 @@
           "ebirdDistributionAndBias": "PARTIALLY TESTED (eBird public status/range found, direct local claim and bias verification open)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
@@ -309,7 +315,8 @@
           "ebirdDistributionAndBias": "PARTIALLY TESTED (eBird public status/range found, direct local claim and bias verification open)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
@@ -424,7 +431,8 @@
           "ebirdDistributionAndBias": "PARTIALLY TESTED (eBird taxon + status/range reference checked; data not downloaded/copied)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (owner scheduled later)",
           "endToEndGuideUI": "NOT TESTED (owner scheduled later)",
-          "independentSecondReview": "NOT TESTED (formal independent rights/age/audio review pending)"
+          "independentSecondReview": "NOT TESTED (formal independent rights/age/audio review pending)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Afzonderlijke juveniele foto in rust; juveniel is al geverifieerd in vrije vlucht.",
@@ -528,7 +536,8 @@
           "ebirdDistributionAndBias": "PARTIALLY TESTED (Cornell reference reviewed; mapping and reporting bias not fully audited)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
           "endToEndGuideUI": "PARTIALLY TESTED (targeted content and layout locally; field phase deferred)",
-          "independentSecondReview": "NOT TESTED (formal independent review pending)"
+          "independentSecondReview": "NOT TESTED (formal independent review pending)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Vrouwtje in vrije vlucht (wenselijk). Voor het vrouwtje in rust blijft de foto op een zitplaats beschikbaar.",
@@ -646,7 +655,8 @@
           "ebirdDistributionAndBias": "PARTIALLY TESTED (Cornell reference reviewed; mapping and reporting bias not fully audited)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
           "endToEndGuideUI": "PARTIALLY TESTED (targeted content and layout locally; field phase deferred)",
-          "independentSecondReview": "NOT TESTED (formal independent review pending)"
+          "independentSecondReview": "NOT TESTED (formal independent review pending)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Vrouwtje in rust. Er is al een brongeverifieerd volwassen vrouwtje in vrije vlucht.",
@@ -772,7 +782,8 @@
           "ebirdDistributionAndBias": "PARTIALLY TESTED (Cornell reference reviewed; mapping and reporting bias not fully audited)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
           "endToEndGuideUI": "PARTIALLY TESTED (targeted content and layout locally; field phase deferred)",
-          "independentSecondReview": "NOT TESTED (formal independent review pending)"
+          "independentSecondReview": "NOT TESTED (formal independent review pending)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Vergelijkingsfoto’s voor Boomvalk en Smelleken ontbreken in de gids.",
@@ -891,7 +902,8 @@
           "ebirdDistributionAndBias": "PARTIALLY TESTED (Cornell species and distribution references, no raw data imported)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
           "endToEndGuideUI": "PARTIALLY TESTED (targeted mobile browser emulation; full device phase deferred)",
-          "independentSecondReview": "NOT TESTED (second independent review pending)"
+          "independentSecondReview": "NOT TESTED (second independent review pending)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Afzonderlijke juveniele vrije vluchtfoto toegevoegd. Leeftijd in bron geannoteerd, lengtestrepen ondersteunen dit. Geslacht onbekend.",
@@ -1041,7 +1053,8 @@
           "ebirdDistributionAndBias": "PARTIALLY TESTED (Cornell species and distribution references, no raw data imported)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
           "endToEndGuideUI": "PARTIALLY TESTED (targeted mobile browser emulation; full device phase deferred)",
-          "independentSecondReview": "NOT TESTED (second independent review pending)"
+          "independentSecondReview": "NOT TESTED (second independent review pending)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Mannetje met rode nek, vrouwtje zonder rode nekvlek, juveniel met rode kruin.",
@@ -1163,7 +1176,8 @@
           "ebirdDistributionAndBias": "PARTIALLY TESTED (Cornell species and distribution references, no raw data imported)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
           "endToEndGuideUI": "PARTIALLY TESTED (targeted mobile browser emulation; full device phase deferred)",
-          "independentSecondReview": "NOT TESTED (second independent review pending)"
+          "independentSecondReview": "NOT TESTED (second independent review pending)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Juvenielenfoto met controleerbare leeftijd.",
@@ -1281,7 +1295,8 @@
           "ebirdDistributionAndBias": "PARTIALLY TESTED (Cornell taxon code checked; direct distribution and seasonal data inaccessible)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
           "endToEndGuideUI": "PARTIALLY TESTED (targeted mobile browser emulation; integrated physical device phase deferred)",
-          "independentSecondReview": "NOT TESTED (second independent review pending)"
+          "independentSecondReview": "NOT TESTED (second independent review pending)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Voorgaand bronbestand op 500 × 661 px vervangen door 1211 × 1600 px uit dezelfde volledige JPEG.",
@@ -1485,7 +1500,8 @@
           "ebirdDistributionAndBias": "PARTIALLY TESTED (Cornell taxon code checked; direct distribution and seasonal data inaccessible)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
           "endToEndGuideUI": "PARTIALLY TESTED (targeted mobile browser emulation; integrated physical device phase deferred)",
-          "independentSecondReview": "NOT TESTED (second independent review pending)"
+          "independentSecondReview": "NOT TESTED (second independent review pending)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Vijf actieve foto’s voor het eerst in F3 geregistreerd, met het oude auditregister historisch intact.",
@@ -1683,7 +1699,8 @@
           "ebirdDistributionAndBias": "PARTIALLY TESTED (Cornell taxon code checked; direct distribution and seasonal data inaccessible)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
           "endToEndGuideUI": "PARTIALLY TESTED (targeted mobile browser emulation; integrated physical device phase deferred)",
-          "independentSecondReview": "NOT TESTED (second independent review pending)"
+          "independentSecondReview": "NOT TESTED (second independent review pending)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Vier actieve beelden herleid tot de originelen. De echte vluchtfoto blijft bruikbaar op 725 × 483 px.",
@@ -1850,7 +1867,8 @@
           "ebirdDistributionAndBias": "PARTIALLY TESTED (Cornell taxon codes checked; direct distribution and seasonal data inaccessible)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
           "endToEndGuideUI": "PARTIALLY TESTED (targeted mobile browser emulation; integrated physical device session pending)",
-          "independentSecondReview": "NOT TESTED (second reviewer pending)"
+          "independentSecondReview": "NOT TESTED (second reviewer pending)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Volledige juveniele Ekster met zichtbare mondhoeken, relatief korte staart en lichte huid rond het oog toegevoegd.",
@@ -2001,7 +2019,8 @@
           "ebirdDistributionAndBias": "PARTIALLY TESTED (Cornell taxon codes checked; direct distribution and seasonal data inaccessible)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
           "endToEndGuideUI": "PARTIALLY TESTED (targeted mobile browser emulation; integrated physical device session pending)",
-          "independentSecondReview": "NOT TESTED (second reviewer pending)"
+          "independentSecondReview": "NOT TESTED (second reviewer pending)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Jonge Zwarte Kraai toegevoegd uit de individuele bronopname met zichtbaar bedelgedrag en roze snavelbinnenkant.",
@@ -2157,7 +2176,8 @@
           "ebirdDistributionAndBias": "PARTIALLY TESTED (Cornell taxon codes checked; direct distribution and seasonal data inaccessible)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
           "endToEndGuideUI": "PARTIALLY TESTED (targeted mobile browser emulation; integrated physical device session pending)",
-          "independentSecondReview": "NOT TESTED (second reviewer pending)"
+          "independentSecondReview": "NOT TESTED (second reviewer pending)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Juvenielenfoto met een donker oog en dof kleed toegevoegd. Bronformaat 640 × 589 px beperkt vergroting.",
@@ -2325,7 +2345,8 @@
           "ebirdDistributionAndBias": "PARTIALLY TESTED (Cornell species codes checked; full seasonal maps not directly available)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
           "endToEndGuideUI": "PARTIALLY TESTED (targeted Chromium on 360 and 390 px; integrated device phase pending)",
-          "independentSecondReview": "NOT TESTED (second reviewer pending)"
+          "independentSecondReview": "NOT TESTED (second reviewer pending)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Juvenielenfoto toegevoegd vanuit iNaturalist-waarneming 167784207. De vogel heeft zachter ogend kleed en een minder getekende kruin. De linker fotokant snijdt een deel van de staart af.",
@@ -2493,7 +2514,8 @@
           "ebirdDistributionAndBias": "PARTIALLY TESTED (Cornell species codes checked; full seasonal maps not directly available)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
           "endToEndGuideUI": "PARTIALLY TESTED (targeted Chromium on 360 and 390 px; integrated device phase pending)",
-          "independentSecondReview": "NOT TESTED (second reviewer pending)"
+          "independentSecondReview": "NOT TESTED (second reviewer pending)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Vijf bestaande beelden naast de originele bestanden gecontroleerd, waaronder mannetje, vrouwtje en juveniel.",
@@ -2701,7 +2723,8 @@
           "ebirdDistributionAndBias": "PARTIALLY TESTED (Cornell species codes checked; full seasonal maps not directly available)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
           "endToEndGuideUI": "PARTIALLY TESTED (targeted Chromium on 360 and 390 px; integrated device phase pending)",
-          "independentSecondReview": "NOT TESTED (second reviewer pending)"
+          "independentSecondReview": "NOT TESTED (second reviewer pending)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Eigen roepopname toegevoegd naast de bestaande zang.",
@@ -2865,7 +2888,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3-R08 seasonal maps and effort bias not checked)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred to integrated user/device phase)",
           "endToEndGuideUI": "NOT TESTED (F3-R08 targeted Chromium interaction not yet executed)",
-          "independentSecondReview": "NOT TESTED (second independent ornithological and acoustic review pending)"
+          "independentSecondReview": "NOT TESTED (second independent ornithological and acoustic review pending)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Hoofdfoto toont matzwarte kop en licht vleugelveld; beschikbare lokale WebP scherp maar origineel-fotovergelijking ontbreekt.",
@@ -2951,7 +2975,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3-R08 seasonal maps and effort bias not checked)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred to integrated user/device phase)",
           "endToEndGuideUI": "NOT TESTED (F3-R08 targeted Chromium interaction not yet executed)",
-          "independentSecondReview": "NOT TESTED (second independent ornithological and acoustic review pending)"
+          "independentSecondReview": "NOT TESTED (second independent ornithological and acoustic review pending)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Hoofdfoto toont donkere kap, vrij egaal vleugelveld, kleine donkere keelvlek. Snavelbasis kan niet als afzonderlijk doorslaggevend kenmerk dienen.",
@@ -3042,7 +3067,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3-R08 seasonal maps and effort bias not checked)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred to integrated user/device phase)",
           "endToEndGuideUI": "NOT TESTED (F3-R08 targeted Chromium interaction not yet executed)",
-          "independentSecondReview": "NOT TESTED (second independent ornithological and acoustic review pending)"
+          "independentSecondReview": "NOT TESTED (second independent ornithological and acoustic review pending)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Hoofdfoto en zijaanzicht tonen de spitse zwart-witte kuif, wangboog en donkere keel duidelijk.",
@@ -3103,36 +3129,62 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R09",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (all current local WebP photos opened; source originals and independent identity NOT fully compared)",
+          "photoIndividualRights": "PARTIALLY TESTED (existing photographer/license registry preserved; original individual file rights NOT freshly validated)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (visible sex/age/pose reviewed, historical free-flight label not independently recertified)",
+          "photoPairComparisons": "PARTIALLY TESTED (lookalike pair code/labels updated; independent original-image comparison and browser proof pending)",
+          "responsiveLayoutAndZoom": "NOT TESTED (F3-R09 targeted real mobile browser and device checks pending)",
+          "creditsAndCleanAudioUI": "NOT TESTED (specific F3-R09 attribution/UI real-world audit pending; existing credits preserved)",
+          "audioRecordingsAuthenticity": "NOT TESTED (no original waveform source comparison this round)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (old audio credit metadata inspected; no new rights certification)",
+          "soundRolesSongCall": "PARTIALLY TESTED (existing labels read, new original call/song not yet independently evaluated)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (F3-R09 physical/offline player pending)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming online species pages and relevant tips read; ANWB book NOT read)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (critical distinguishing marks cross-checked at high level; independent biometrics and completeness pending)",
+          "sovonNetherlandsStatus": "NOT TESTED (individual Dutch estimates / trends not checked in F3-R09)",
+          "ebirdDistributionAndBias": "NOT TESTED (eBird season/effort bias not checked in F3-R09)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred physical/ZIP user workflow)",
+          "endToEndGuideUI": "NOT TESTED (F3-R09 browser QA to run at exact current HEAD)",
+          "independentSecondReview": "NOT TESTED (independent ornithologist/acoustic reviewer pending)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (identified lookalikes, up to 3 brongedragen marks and relevant paired source media; missing Keep pair open; independent image/sex/role confirmation pending)"
         },
         "findings": [
-          "Scherpe foto in vrije vlucht van een voor West-Europa representatieve Staartmees met bevestigde hergebruikrechten."
+          "Volwassen hoofdfoto: volledig lange staart, lichte kop met donkere zijkruin; staartlengte is de bruikbare aanwijzing.",
+          "Juveniel: donkerder bruin op de kopzijden, volledige lange staart zichtbaar; originele leeftijdsmetadata nog verifiëren.",
+          "Witkopstaartmees versus witkoppige Staartmees: niet als afzonderlijke soort of zekere ondersoort bepalen op alleen een witte kop.",
+          "Bestaande Zwarte-Mees-rustvergelijking behouden; oorspronkelijke externe fotos en complete vergelijkingsbeoordeling blijven open.",
+          "Eén geregistreerd algemeen geluidsvoorbeeld zonder onafhankelijk bevestigde zang/roep-rol."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/staartmees",
+          "https://www.vogelbescherming.nl/actueel/bericht/de-9-nederlandse-mezen",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R09_STAARTMEES_VINK_GROENLING_2026-11-16_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on physical device; local source/photo review only",
+        "independence": "PARTIAL / local WebP visual review and VBN consulted; originals/rights/acoustic/second reviewer pending",
+        "fullPass": false,
+        "photoFilesInspected": 2,
+        "photoBlobSHAs": [
+          "b2738f50d11b8e9b2526cae3ece5910fda5cdae2",
+          "99a34bd7f3e67fefd47cc6e622545362209ff15a"
+        ],
+        "photoSourceMatches": [],
+        "priorPhotoMatches": [],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [
+          {
+            "path": "/assets/species/audio/sp034-sound.mp3",
+            "reason": "Original waveform and specific species recording not independently checked in F3-R09"
+          }
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (2 current local images and critical lookalikes inspected; no media FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R09 node/browser tests scheduled independently."
       }
     },
     {
@@ -3182,34 +3234,71 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R09",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (all current local WebP photos opened; source originals and independent identity NOT fully compared)",
+          "photoIndividualRights": "PARTIALLY TESTED (existing photographer/license registry preserved; original individual file rights NOT freshly validated)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (visible sex/age/pose reviewed, historical free-flight label not independently recertified)",
+          "photoPairComparisons": "PARTIALLY TESTED (lookalike pair code/labels updated; independent original-image comparison and browser proof pending)",
+          "responsiveLayoutAndZoom": "NOT TESTED (F3-R09 targeted real mobile browser and device checks pending)",
+          "creditsAndCleanAudioUI": "NOT TESTED (specific F3-R09 attribution/UI real-world audit pending; existing credits preserved)",
+          "audioRecordingsAuthenticity": "NOT TESTED (no original waveform source comparison this round)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (old audio credit metadata inspected; no new rights certification)",
+          "soundRolesSongCall": "PARTIALLY TESTED (existing labels read, new original call/song not yet independently evaluated)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (F3-R09 physical/offline player pending)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming online species pages and relevant tips read; ANWB book NOT read)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (critical distinguishing marks cross-checked at high level; independent biometrics and completeness pending)",
+          "sovonNetherlandsStatus": "NOT TESTED (individual Dutch estimates / trends not checked in F3-R09)",
+          "ebirdDistributionAndBias": "NOT TESTED (eBird season/effort bias not checked in F3-R09)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred physical/ZIP user workflow)",
+          "endToEndGuideUI": "NOT TESTED (F3-R09 browser QA to run at exact current HEAD)",
+          "independentSecondReview": "NOT TESTED (independent ornithologist/acoustic reviewer pending)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (identified lookalikes, up to 3 brongedragen marks and relevant paired source media; missing Keep pair open; independent image/sex/role confirmation pending)"
         },
-        "findings": [],
-        "sourceReferences": [],
+        "findings": [
+          "Vijf huidige lokale WebP's geopend: mannelijk rustbeeld x2, vrouwtje, juveniel en vogel in vlucht; zichtbare vleugelstrepen, kop- en snaveldetails geschikt voor hun doel.",
+          "Vrouwtje Vink versus Huismus: bestaande beelden behouden, comparison rows nu expliciet drie onderscheidende elementen.",
+          "Keep lijkt vooral in winter en bij vrouwtjes sterk; de witte stuit en warm oranje zijn aanvullende aanwijzingen, geen hard solitair kenmerk.",
+          "Keep sp181 heeft geen onafhankelijk geverifieerd foto-paar in de huidige gids. Geen schijnbeeld of lege fotokaart getoond.",
+          "Twee bestaande audio-items zang en roep, originele klanksignalen dit bezoek niet onafhankelijk vergeleken."
+        ],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/vink",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/keep",
+          "https://www.vogelbescherming.nl/tuinvogeltelling/herkenningstips/?tip=6",
+          "https://www.vogelbescherming.nl/tuinvogeltelling/herkenningstips/?tip=3",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R09_STAARTMEES_VINK_GROENLING_2026-11-16_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on physical device; local source/photo review only",
+        "independence": "PARTIAL / local WebP visual review and VBN consulted; originals/rights/acoustic/second reviewer pending",
+        "fullPass": false,
+        "photoFilesInspected": 5,
+        "photoBlobSHAs": [
+          "946e15364a9d21128994c95b98285bb870231926",
+          "1a54fdc6dbb4b00ab6de29494511d0d37355c86a",
+          "f88932b91936f4dd3d1f28a4e59e301e9441364d",
+          "9b30450bf6864f2180b2e538f26a06eb6577fb88",
+          "e418aef12e71893a1a914dc87ddeb465fb4a7b32"
+        ],
+        "photoSourceMatches": [],
+        "priorPhotoMatches": [],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [
+          {
+            "path": "/assets/species/audio/sp035-song.mp3",
+            "reason": "Original waveform and specific species recording not independently checked in F3-R09"
+          },
+          {
+            "path": "/assets/species/audio/sp035-call.mp3",
+            "reason": "Original waveform and specific species recording not independently checked in F3-R09"
+          }
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (5 current local images and critical lookalikes inspected; no media FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R09 node/browser tests scheduled independently."
       }
     },
     {
@@ -3251,36 +3340,60 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R09",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (all current local WebP photos opened; source originals and independent identity NOT fully compared)",
+          "photoIndividualRights": "PARTIALLY TESTED (existing photographer/license registry preserved; original individual file rights NOT freshly validated)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (visible sex/age/pose reviewed, historical free-flight label not independently recertified)",
+          "photoPairComparisons": "PARTIALLY TESTED (lookalike pair code/labels updated; independent original-image comparison and browser proof pending)",
+          "responsiveLayoutAndZoom": "NOT TESTED (F3-R09 targeted real mobile browser and device checks pending)",
+          "creditsAndCleanAudioUI": "NOT TESTED (specific F3-R09 attribution/UI real-world audit pending; existing credits preserved)",
+          "audioRecordingsAuthenticity": "NOT TESTED (no original waveform source comparison this round)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (old audio credit metadata inspected; no new rights certification)",
+          "soundRolesSongCall": "PARTIALLY TESTED (existing labels read, new original call/song not yet independently evaluated)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (F3-R09 physical/offline player pending)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming online species pages and relevant tips read; ANWB book NOT read)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (critical distinguishing marks cross-checked at high level; independent biometrics and completeness pending)",
+          "sovonNetherlandsStatus": "NOT TESTED (individual Dutch estimates / trends not checked in F3-R09)",
+          "ebirdDistributionAndBias": "NOT TESTED (eBird season/effort bias not checked in F3-R09)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred physical/ZIP user workflow)",
+          "endToEndGuideUI": "NOT TESTED (F3-R09 browser QA to run at exact current HEAD)",
+          "independentSecondReview": "NOT TESTED (independent ornithologist/acoustic reviewer pending)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (identified lookalikes, up to 3 brongedragen marks and relevant paired source media; missing Keep pair open; independent image/sex/role confirmation pending)"
         },
         "findings": [
-          "Geen lokaal geregistreerde zang of roep"
+          "Vier bestaande lokale WebP's geopend: mannelijk rustbeeld, vrouwtje, gestreept juveniel en vluchtbeeld.",
+          "Vrouwtje Groenling heeft een veel steviger kegelsnavel dan vrouwtje Sijs; geel alleen is niet betrouwbaar. Vrouwelijke Sijs is sterker gestreept.",
+          "Nieuw mannetjes-rustvergelijkingspaneel met bestaande geslachtsgelabelde fotos en drie brongegronde verschillen.",
+          "Juveniel Groenling is ook gestreept; flanktekening alleen sluit Sijs niet uit.",
+          "Bestaande soort heeft nog geen geregistreerde Zang/Roep, media-aanvulling met originele bron en rechten blijft open."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/groenling",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/sijs",
+          "https://www.vogelbescherming.nl/tuinvogeltelling/herkenningstips/?tip=7",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R09_STAARTMEES_VINK_GROENLING_2026-11-16_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on physical device; local source/photo review only",
+        "independence": "PARTIAL / local WebP visual review and VBN consulted; originals/rights/acoustic/second reviewer pending",
+        "fullPass": false,
+        "photoFilesInspected": 4,
+        "photoBlobSHAs": [
+          "faf75b46be6270f9a8e9467aa159515878995b1f",
+          "0ed843f85caf323154551237fcccfcc28beb29d6",
+          "b392888a923020d1fbe375b90717d2622fb3a344",
+          "b48cf3cff5d231c1e09d8b6f93395f4ef36d5b0c"
+        ],
+        "photoSourceMatches": [],
+        "priorPhotoMatches": [],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [],
+        "contentStatus": "PARTIALLY REVIEWED (4 current local images and critical lookalikes inspected; no media FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R09 node/browser tests scheduled independently."
       }
     },
     {
@@ -3347,7 +3460,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep"
@@ -3418,7 +3532,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep"
@@ -3468,7 +3583,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
@@ -3540,7 +3656,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep"
@@ -3611,7 +3728,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Scherpe grotere foto in vrije vlucht, bij voorkeur een bronbevestigd mannetje.",
@@ -3662,7 +3780,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
@@ -3739,7 +3858,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep"
@@ -3805,7 +3925,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep"
@@ -3889,7 +4010,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "De nieuwe vluchtfoto is bruikbaar als voorlopig voorbeeld, met beperkte zichtbaarheid van de staart en bewegingsonscherpte."
@@ -3955,7 +4077,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep"
@@ -4021,7 +4144,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep"
@@ -4087,7 +4211,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geverifieerde, goed herkenbare foto in vrije vlucht.",
@@ -4150,7 +4275,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Scherpe foto van één Grote Lijster in vrije vlucht met bevestigde hergebruikrechten.",
@@ -4217,7 +4343,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Voldoende scherpe en gelicentieerde foto in vrije vlucht.",
@@ -4284,7 +4411,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Scherpe, herleidbare foto in vrije vlucht, bij voorkeur van een mannetje.",
@@ -4356,7 +4484,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Scherpe, herleidbare foto in vrije vlucht, bij voorkeur van een mannetje.",
@@ -4413,7 +4542,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Afzonderlijke juvenielenfoto",
@@ -4476,7 +4606,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Voldoende scherpe en gelicentieerde foto in vrije vlucht.",
@@ -4541,7 +4672,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "In vlucht",
@@ -4601,7 +4733,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "In vlucht",
@@ -4652,7 +4785,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
@@ -4719,7 +4853,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Scherpe foto van één Zwartkop in vrije vlucht met bevestigde licentie.",
@@ -4770,7 +4905,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
@@ -4842,7 +4978,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Scherpe foto van één Grasmus in vrije vlucht met bevestigde licentie.",
@@ -4893,7 +5030,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
@@ -4967,7 +5105,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Afzonderlijke mannetjesfoto",
@@ -5038,7 +5177,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Vrouwtjesfoto met betrouwbare geslachtsaanduiding.",
@@ -5109,7 +5249,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Juveniel"
@@ -5178,7 +5319,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Een bronbevestigde vrije-vluchtfoto.",
@@ -5243,7 +5385,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "In vlucht",
@@ -5306,7 +5449,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Afzonderlijke mannetjesfoto",
@@ -5381,7 +5525,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Scherpe foto van één Gele Kwikstaart in vrije vlucht met bevestigde rechten.",
@@ -5443,7 +5588,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Afzonderlijke juvenielenfoto",
@@ -5511,7 +5657,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep"
@@ -5592,7 +5739,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Vogelbescherming noemt 17–19,5 cm, Blasco-Zumeta & Heinze 15–17 cm. De getoonde ca. 16–18 cm volgt de vastgelegde methode met beide bronwaarden.",
@@ -5656,7 +5804,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geverifieerde vrije-vluchtfoto"
@@ -5730,7 +5879,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [],
         "sourceReferences": [],
@@ -5797,7 +5947,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [],
         "sourceReferences": [],
@@ -5864,7 +6015,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [],
         "sourceReferences": [],
@@ -5940,7 +6092,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [],
         "sourceReferences": [],
@@ -6012,7 +6165,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [],
         "sourceReferences": [],
@@ -6079,7 +6233,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [],
         "sourceReferences": [],
@@ -6130,7 +6285,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
@@ -6199,7 +6355,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Afzonderlijke foto van een ouder juveniel"
@@ -6283,7 +6440,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Eenduidig bevestigde eclipsfoto",
@@ -6357,7 +6515,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [],
         "sourceReferences": [],
@@ -6447,7 +6606,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "De twee iNaturalist-pagina’s waren op 11 november niet opnieuw bereikbaar. Eerder vastgelegd bronbewijs is gebruikt."
@@ -6530,7 +6690,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [],
         "sourceReferences": [],
@@ -6589,7 +6750,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Juveniel / eerste kalenderjaar",
@@ -6652,7 +6814,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Juveniel / onvolwassen kleden",
@@ -6714,7 +6877,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Juveniel / onvolwassen kleden",
@@ -6765,7 +6929,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
@@ -6832,7 +6997,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Spanwijdte verschilt tussen de eerdere gidswaarde en de Nederlandse soortgids. Zie kennisprofiel.",
@@ -6909,7 +7075,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep"
@@ -6975,7 +7142,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Lengtebereiken van Vogelbescherming en Naturalis verschillen. Het eerdere Nederlandse bereik is behouden.",
@@ -7047,7 +7215,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Foto van een met bronbewijs bevestigd volwassen vrouwtje.",
@@ -7126,7 +7295,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [],
         "sourceReferences": [],
@@ -7192,7 +7362,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [],
         "sourceReferences": [],
@@ -7261,7 +7432,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep"
@@ -7337,7 +7509,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Scherpere foto van één Patrijs in vrije vlucht met bevestigde rechten.",
@@ -7388,7 +7561,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
@@ -7439,7 +7613,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
@@ -7516,7 +7691,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep"
@@ -7566,7 +7742,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
@@ -7643,7 +7820,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep"
@@ -7714,7 +7892,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep"
@@ -7764,7 +7943,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
@@ -7836,7 +8016,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep"
@@ -7907,7 +8088,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Scherpe foto van één Rietgors in vrije vlucht met bevestigde rechten.",
@@ -7986,7 +8168,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [],
         "sourceReferences": [],
@@ -8037,7 +8220,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
@@ -8115,7 +8299,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [],
         "sourceReferences": [],
@@ -8184,7 +8369,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep"
@@ -8258,7 +8444,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [],
         "sourceReferences": [],
@@ -8322,7 +8509,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "De fotograaf vermeldt bij beide vluchtfoto’s geen exacte leeftijd.",
@@ -8404,7 +8592,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep"
@@ -8458,7 +8647,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
@@ -8512,7 +8702,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
@@ -8565,7 +8756,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
@@ -8618,7 +8810,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
@@ -8668,7 +8861,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
@@ -8719,7 +8913,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
@@ -8770,7 +8965,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
@@ -8837,7 +9033,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep"
@@ -8887,7 +9084,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
@@ -8942,7 +9140,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
@@ -8997,7 +9196,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
@@ -9051,7 +9251,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
@@ -9105,7 +9306,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
@@ -9160,7 +9362,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
@@ -9210,7 +9413,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
@@ -9277,7 +9481,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Vogelbescherming en WWT geven verschillende maten. De Nederlandse waarden blijven staan en de afwijking is vermeld.",
@@ -9328,7 +9533,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
@@ -9379,7 +9585,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
@@ -9430,7 +9637,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
@@ -9514,7 +9722,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Mannetje zittend",
@@ -9582,7 +9791,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Definitieve scherpe foto van één Zwarte Mees in vrije vlucht met bevestigde hergebruikrechten.",
@@ -9649,7 +9859,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep"
@@ -9720,7 +9931,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep"
@@ -9791,7 +10003,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Scherpe vrije-vluchtfoto met bevestigde hergebruikrechten.",
@@ -9842,7 +10055,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
@@ -9923,7 +10137,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [],
         "sourceReferences": [],
@@ -9976,7 +10191,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
@@ -10029,7 +10245,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
@@ -10079,7 +10296,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
@@ -10134,7 +10352,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
@@ -10208,7 +10427,8 @@
           "ebirdDistributionAndBias": "PARTIALLY TESTED (eBird taxon + status/range reference checked; data not downloaded/copied)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (owner scheduled later)",
           "endToEndGuideUI": "NOT TESTED (owner scheduled later)",
-          "independentSecondReview": "NOT TESTED (formal independent rights/age/audio review pending)"
+          "independentSecondReview": "NOT TESTED (formal independent rights/age/audio review pending)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Vrouwtje zittend",
@@ -10305,7 +10525,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [],
         "sourceReferences": [],
@@ -10379,7 +10600,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep"
@@ -10450,7 +10672,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Vrouwtje in vrije vlucht",
@@ -10523,7 +10746,8 @@
           "ebirdDistributionAndBias": "PARTIALLY TESTED (eBird taxon + status/range reference checked; data not downloaded/copied)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (owner scheduled later)",
           "endToEndGuideUI": "NOT TESTED (owner scheduled later)",
-          "independentSecondReview": "NOT TESTED (formal independent rights/age/audio review pending)"
+          "independentSecondReview": "NOT TESTED (formal independent rights/age/audio review pending)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Afzonderlijke rustfoto van vrouwtje",
@@ -10594,7 +10818,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
@@ -10645,7 +10870,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
@@ -10696,7 +10922,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
@@ -10747,7 +10974,8 @@
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
           "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "independentSecondReview": "NOT TESTED (F3)",
+          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
