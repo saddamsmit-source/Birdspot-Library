@@ -95,6 +95,7 @@ const counts={
  eighthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R08'),
  ninthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R09'),
  tenthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R10'),
+ eleventhBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R11'),
  contentInspected:sum(x=>x.F3.reviewedThisRound===true),
  contentComplete:sum(x=>x.F3.contentStatus==='CONTENT COMPLETE')
 };
@@ -111,6 +112,7 @@ const seventh=rows.filter(x=>x.F3.recheckBatch==='F3-R07');
 const eighth=rows.filter(x=>x.F3.recheckBatch==='F3-R08');
 const ninth=rows.filter(x=>x.F3.recheckBatch==='F3-R09');
 const tenth=rows.filter(x=>x.F3.recheckBatch==='F3-R10');
+const eleventh=rows.filter(x=>x.F3.recheckBatch==='F3-R11');
 assert.ok(req.includes('lookalikePhotoAndText'),'New owner lookalike rule must be checked for every F3 bird');
 assert.deepEqual(ninth.map(x=>x.id),['sp034','sp035','sp036'],'R09 exactly three species in fixed sequence');
 assert.deepEqual(ninth.map(x=>x.F3.photoFilesInspected),[2,5,4],'All eleven existing local images need individual inspection');
@@ -151,6 +153,28 @@ for(const item of tenth){
   const bytes=readFileSync(new URL('..'+currentAssets.imageSlots[i].path,import.meta.url));
   const blobSha=createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex');
   assert.equal(review.photoBlobSHAs[i],blobSha,item.id+' image file has changed since F3-R10 visual review');
+ }
+ assert.ok(review.sourceReferences.includes('docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json'));
+}
+
+assert.deepEqual(eleventh.map(x=>x.id),['sp040','sp041','sp042'],'R11 exactly Goudvink, Appelvink and Roodmus in fixed sequence');
+assert.deepEqual(eleventh.map(x=>x.F3.photoFilesInspected),[4,4,1],'Nine existing local images individually inspected');
+assert.deepEqual(eleventh.map(x=>x.currentAssets.existingAudioCount),[0,0,0],'Never invent an audio clip');
+for(const item of eleventh){
+ const {F3:review,currentAssets}=item;
+ assert.equal(review.fullPass,false,'Partial visual review is not complete species QA');
+ assert.equal(review.status,'IN CONTENT REVIEW / OPEN POINTS');
+ assert.equal(review.reviewedOriginalAudio,0);
+ assert.equal(review.audioSourceMatches.length,0,'Do not pretend original audio match');
+ assert.ok(review.checks.audioRecordingsAuthenticity.startsWith('BLOCKED'),'Missing audio stays explicitly open');
+ assert.ok(review.checks.lookalikePhotoAndText.startsWith('PARTIALLY TESTED'));
+ assert.ok(review.checks.independentSecondReview.startsWith('NOT TESTED'));
+ assert.ok(review.findings.length>=4 && review.sourceReferences.length>=3);
+ assert.equal(review.photoBlobSHAs.length,currentAssets.imageSlots.length);
+ for(let i=0;i<currentAssets.imageSlots.length;i++){
+  const bytes=readFileSync(new URL('..'+currentAssets.imageSlots[i].path,import.meta.url));
+  const blobSha=createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex');
+  assert.equal(review.photoBlobSHAs[i],blobSha,item.id+' image file has changed since F3-R11 visual review');
  }
  assert.ok(review.sourceReferences.includes('docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json'));
 }

@@ -53,9 +53,9 @@
     "audioMissing": 76,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 110,
+    "nextNotStarted": 107,
     "secondBatchStarted": 3,
-    "contentInspected": 30,
+    "contentInspected": 33,
     "contentComplete": 0,
     "thirdBatchStarted": 3,
     "fourthBatchStarted": 3,
@@ -64,7 +64,8 @@
     "seventhBatchStarted": 3,
     "eighthBatchStarted": 3,
     "ninthBatchStarted": 3,
-    "tenthBatchStarted": 3
+    "tenthBatchStarted": 3,
+    "eleventhBatchStarted": 3
   },
   "records": [
     {
@@ -3744,37 +3745,58 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R11",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (four local WebPs opened in F3-R11; source originals NOT compared)",
+          "photoIndividualRights": "PARTIALLY TESTED (existing credits registered; individual source originals not freshly compared in F3-R11)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (male, female and juvenile match visible field marks; flight photo is true free flight against sky with white rump visible)",
+          "photoPairComparisons": "PARTIALLY TESTED (Goudvink-Vink male and female rest pairs; no flight pair registered)",
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium 320/360/390 px via tests/test_lookalike_r11_browser.py; no physical device)",
+          "creditsAndCleanAudioUI": "NOT TESTED (no F3-R11 attribution/UI audit beyond existing credits)",
+          "audioRecordingsAuthenticity": "BLOCKED (no registered song/call; candidates only after human listening per F3-R10b intake rule)",
+          "audioLicenseAndAttribution": "BLOCKED (no recording to assess)",
+          "soundRolesSongCall": "PARTIALLY TESTED (song described in text from sources; no audio file)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (no audio file)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming species page consulted 16-11-2026; ANWB book NOT read)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (existing profile reviewed; biometrics not verified with two publishers)",
+          "sovonNetherlandsStatus": "NOT TESTED (Sovon trend figures not consulted in F3-R11)",
+          "ebirdDistributionAndBias": "NOT TESTED (eBird not consulted in F3-R11)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "endToEndGuideUI": "PARTIALLY TESTED (Chromium species card and lookalike panels; no device or offline run)",
+          "independentSecondReview": "NOT TESTED (no independent reviewer on F3-R11 yet)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-013 Goudvink-Vink photo pairs pending originals)"
         },
         "findings": [
-          "Geen lokaal geregistreerde zang of roep"
+          "Vier bestaande lokale WebP's geopend: mannetje (zwarte kap, roodroze borst, grijze rug), vrouwtje (zwarte kap, beigegrijze onderzijde), juveniel (zonder zwarte kap, bruinig) en vluchtbeeld.",
+          "Vluchtbeeld: vrij in de lucht tegen de hemel, vleugels geheven, witte stuit zichtbaar; voldoet aan de vrije-vluchtregel (§3.3).",
+          "Dubbelganger Vink: fotoparen mannetjes en vrouwtjes in rust bestaan (LK-013); kenmerken kap, snavel en vleugelband.",
+          "Geen geregistreerde zang of roep; audiokandidaten pas na luistercontrole (intake-regel F3-R10b)."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/goudvink",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/vink",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R11_GOUDVINK_APPELVINK_ROODMUS_2026-11-16_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on physical device; local source/photo review and Chromium only",
+        "independence": "PARTIAL / local WebP visual review and Vogelbescherming consulted; originals/rights/acoustic/second reviewer pending",
+        "fullPass": false,
+        "photoFilesInspected": 4,
+        "photoBlobSHAs": [
+          "2b8b97780edbe4378a79a04c0cb57c1535531bd8",
+          "8d1564353a3c94a75ec125fc5f17774b4ad9c71e",
+          "cf49a8c4e9359b4e1e4337ad735def295dcfc6d4",
+          "ecf3e333df318a1170f10cf71a36e7559fbefe5c"
+        ],
+        "photoSourceMatches": [],
+        "priorPhotoMatches": [],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [],
+        "contentStatus": "PARTIALLY REVIEWED (4 current local images and critical lookalike inspected; no media FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R11 node/browser tests run separately."
       }
     },
     {
@@ -3816,38 +3838,58 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R11",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (four local WebPs opened in F3-R11; source originals NOT compared)",
+          "photoIndividualRights": "PARTIALLY TESTED (existing credits registered; individual source originals not freshly compared in F3-R11)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (male, female and juvenile match visible field marks; flight photo is true free flight but only 330 px, remains voorwaardelijk)",
+          "photoPairComparisons": "PARTIALLY TESTED (Appelvink-Vink male, female and juvenile rest pairs; no flight pair because the flight photo is provisional)",
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium 320/360/390 px via tests/test_lookalike_r11_browser.py; no physical device)",
+          "creditsAndCleanAudioUI": "NOT TESTED (no F3-R11 attribution/UI audit beyond existing credits)",
+          "audioRecordingsAuthenticity": "BLOCKED (no registered song/call; candidates only after human listening per F3-R10b intake rule)",
+          "audioLicenseAndAttribution": "BLOCKED (no recording to assess)",
+          "soundRolesSongCall": "PARTIALLY TESTED (song described in text from sources; no audio file)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (no audio file)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming species page consulted 16-11-2026; ANWB book NOT read)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (existing profile reviewed; biometrics not verified with two publishers)",
+          "sovonNetherlandsStatus": "NOT TESTED (Sovon trend figures not consulted in F3-R11)",
+          "ebirdDistributionAndBias": "NOT TESTED (eBird not consulted in F3-R11)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "endToEndGuideUI": "PARTIALLY TESTED (Chromium species card and lookalike panels; no device or offline run)",
+          "independentSecondReview": "NOT TESTED (no independent reviewer on F3-R11 yet)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-014 Appelvink-Vink photo pairs pending originals)"
         },
         "findings": [
-          "Scherpe grotere foto in vrije vlucht, bij voorkeur een bronbevestigd mannetje.",
-          "Geen lokaal geregistreerde zang of roep"
+          "Vier bestaande lokale WebP's geopend: mannetje (okerkleurige kop, grijze nek, zwarte keelvlek, zware snavel), vrouwtje (doffer, grijzer), juveniel (gelige keel, gevlekte onderzijde) en vluchtbeeld.",
+          "Vluchtbeeld: echte vrije vlucht met witte vleugelvlek en lichte staarteindzone, maar klein (330 px); blijft voorwaardelijk, vervanging gewenst.",
+          "Dubbelganger Vink: fotoparen mannetjes, vrouwtjes en juvenielen in rust bestaan (LK-014); snavel en kopverhouding beslissen.",
+          "Geen geregistreerde zang of roep; audiokandidaten pas na luistercontrole."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/appelvink",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/vink",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R11_GOUDVINK_APPELVINK_ROODMUS_2026-11-16_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on physical device; local source/photo review and Chromium only",
+        "independence": "PARTIAL / local WebP visual review and Vogelbescherming consulted; originals/rights/acoustic/second reviewer pending",
+        "fullPass": false,
+        "photoFilesInspected": 4,
+        "photoBlobSHAs": [
+          "959badacc9a670f951fa82417966bf91d4e6cd6c",
+          "88b532c0e0c00ebdee9c39e344c2d48716f23d99",
+          "0dc15e2f94e9bdde98ee99122519a38cea852ce2",
+          "726fa0fe467a53a039e00b7297719642b3e6ff7d"
+        ],
+        "photoSourceMatches": [],
+        "priorPhotoMatches": [],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [],
+        "contentStatus": "PARTIALLY REVIEWED (4 current local images and critical lookalike inspected; no media FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R11 node/browser tests run separately."
       }
     },
     {
@@ -3863,43 +3905,69 @@
         "oldClaimsKeptNotReapproved": true
       },
       "currentAssets": {
-        "imageSlots": [],
+        "imageSlots": [
+          {
+            "role": "Hoofdfoto (Mannetje)",
+            "path": "/assets/showcase/sp042.webp",
+            "oldRights": "REGISTERED (guidePhotos/credits; rechten niet opnieuw gevalideerd in F3-R11)",
+            "addedIn": "F3-R11"
+          }
+        ],
         "existingAudioCount": 0,
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R11",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (single local showcase WebP opened in F3-R11; source original NOT compared)",
+          "photoIndividualRights": "PARTIALLY TESTED (existing credits registered; individual source originals not freshly compared in F3-R11)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (adult male matches: red head and breast, brown streaked upperparts; female, juvenile and free-flight photos missing; archived blurred take-off photo stays archived)",
+          "photoPairComparisons": "PARTIALLY TESTED (Kneu-Roodmus male rest pair exists; Grauwe Gors text only)",
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium 320/360/390 px via tests/test_lookalike_r11_browser.py; no physical device)",
+          "creditsAndCleanAudioUI": "NOT TESTED (no F3-R11 attribution/UI audit beyond existing credits)",
+          "audioRecordingsAuthenticity": "BLOCKED (no registered song/call; candidates only after human listening per F3-R10b intake rule)",
+          "audioLicenseAndAttribution": "BLOCKED (no recording to assess)",
+          "soundRolesSongCall": "PARTIALLY TESTED (song described in text from sources; no audio file)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (no audio file)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming species page consulted 16-11-2026; ANWB book NOT read)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (new source-backed knowledge profile; biometrics not verified with two publishers)",
+          "sovonNetherlandsStatus": "NOT TESTED (Sovon trend figures not consulted in F3-R11)",
+          "ebirdDistributionAndBias": "NOT TESTED (eBird not consulted in F3-R11)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "endToEndGuideUI": "PARTIALLY TESTED (Chromium species card and lookalike panels; no device or offline run)",
+          "independentSecondReview": "NOT TESTED (no independent reviewer on F3-R11 yet)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-012 Kneu photo pair pending originals; LK-015 Grauwe Gors text only, photo hidden)"
         },
         "findings": [
-          "Geen lokaal geregistreerde zang of roep",
-          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
+          "Eén lokale foto geopend: volwassen mannetje op een tak met rode kop en borst; past bij de soort.",
+          "F3-register had voor de Roodmus geen beeldpositie terwijl de app één foto toont; positie en blob-SHA toegevoegd.",
+          "Er bestond geen kennisprofiel; nieuw brongedragen profiel met dubbelgangers Kneu (fotopaar) en Grauwe Gors (alleen tekst) toegevoegd.",
+          "De gearchiveerde onscherpe opvliegfoto blijft gearchiveerd; vrouwtje, juveniel en vrije vlucht ontbreken (niet verzonnen).",
+          "Geen geregistreerde zang of roep; zang beschreven uit bronnen."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/roodmus",
+          "https://www.rspb.org.uk/birds-and-wildlife/wildlife-guides/bird-a-z/common-rosefinch/",
+          "https://www.vogelbescherming.nl/actueel/bericht/zeldzaam-rood-de-roodmus",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R11_GOUDVINK_APPELVINK_ROODMUS_2026-11-16_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on physical device; local source/photo review and Chromium only",
+        "independence": "PARTIAL / local WebP visual review and Vogelbescherming consulted; originals/rights/acoustic/second reviewer pending",
+        "fullPass": false,
+        "photoFilesInspected": 1,
+        "photoBlobSHAs": [
+          "e5276b734be0351e4b6a5faded69e798c17aed5d"
+        ],
+        "photoSourceMatches": [],
+        "priorPhotoMatches": [],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [],
+        "contentStatus": "PARTIALLY REVIEWED (1 current local image, new knowledge profile and critical lookalikes inspected; no media FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R11 node/browser tests run separately."
       }
     },
     {
