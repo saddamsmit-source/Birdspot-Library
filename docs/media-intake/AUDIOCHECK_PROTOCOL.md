@@ -1,19 +1,34 @@
-# Birdspot audiocontrole zonder menselijk luisteren — protocol v0.1 (16-11-2026)
+# Birdspot audiocontrole zonder menselijk luisteren — protocol v0.2 (16-11-2026)
 
-**Aanleiding:** de eigenaar luistert niet per ronde mee; de Claude-runtime kan geen geluid afspelen. Een opname mag pas als geverifieerde gidsopname in de app als **drie onafhankelijke bewijslijnen** kloppen. Eén lijn alleen (bronlabel, spectrogram of rekenkundige gelijkenis) is nooit genoeg.
+> **Geldende regel (v0.2, vervangt v0.1 na onafhankelijke QA van 16-11-2026):** een automatische audiocheck levert **nooit** een soortverificatie op. Het hoogst haalbare resultaat is **PARTIALLY TESTED** als akoestische aanwijzing. Een opname wordt pas als bevestigd (VERIFIED) geregistreerd na een onafhankelijke menselijke of onafhankelijk gevalideerde controle; die route bestaat op dit moment niet.
+
+**Aanleiding:** de eigenaar luistert niet per ronde mee, en de Claude-runtime kan geen geluid afspelen. Er zijn drie bewijslijnen; samen geven ze hooguit een aanwijzing, geen determinatie.
 
 | # | Bewijslijn | Wat telt | Uitvoering |
 |---|---|---|---|
-| 1 | **Bronlabel** | Soort en geluidsoort (zang/roep) in de oorspronkelijke metadata (bij xeno-canto: opnemer, type, vogel gezien), vrije licentie, SHA-1 van het origineel vastgepind | Commons-metadata via `tools/media/audio_check.py` |
-| 2 | **Akoestische referentievergelijking** | Spectraal profiel en dominante-frequentieverdeling lijken meer op ≥2 referenties van de eigen soort (andere opnemers, zelfde geluidsoort) dan op die van elke verwarringssoort, marge ≥ 0,05; SNR ≥ 15 dB; beste fragment van 10 s ≥ 25 % actief | GitHub Actions, numpy; geen ML-model (BirdNET niet gebruikt: CC BY-NC-SA) |
-| 3 | **Visuele spectrogramcontrole** | Claude vergelijkt het spectrogram met de referenties en met beschrijvingen uit ornithologische bronnen (toonhoogte, elementvorm, ritme, storende geluiden) | Spectrogram-PNG's in `docs/media-intake/<datum>/audiocheck/` |
+| 1 | **Bronlabel** | Soort en geluidsoort (zang of roep) in de oorspronkelijke metadata (bij xeno-canto: opnemer, type, vogel gezien), vrije licentie, SHA-1 van het origineel vastgepind | Commons-metadata via `tools/media/audio_check.py` |
+| 2 | **Akoestische referentievergelijking** | Kandidaat lijkt meer op ≥ 2 onafhankelijke opnemers van de eigen soort (zelfde geluidsoort; opnemer van de kandidaat telt niet) dan op elke verwarringssoort uit het kennisprofiel (elk ≥ 2 opnemers); marge ≥ 0,05; SNR ≥ 15 dB; beste fragment van 10 s ≥ 25 % actief; **referentievalidatie (leave-one-out) = 100 %**; het geanalyseerde fragment is het gepubliceerde fragment | GitHub Actions, numpy; geen ML-model (BirdNET niet gebruikt: CC BY-NC-SA) |
+| 3 | **Visuele spectrogramcontrole** | Claude vergelijkt het spectrogram met de referenties en met ornithologische beschrijvingen; dit is geen onafhankelijk oordeel | Spectrogram-PNG's in `docs/media-intake/<datum>/audiocheck*/` |
 
-**Uitkomst per opname:**
-- Alle drie kloppen → `VERIFIED (triangulatie, niet door mens beluisterd)`; publicatie toegestaan, met dit label in het register.
-- Eén lijn twijfelachtig of niet uitvoerbaar → `NOT TESTED`; **niet publiceren**, open punt registreren, verder zoeken.
+**Uitkomst per opname (geldend):**
+- Alle drie de lijnen kloppen → hooguit `PARTIALLY TESTED (akoestische aanwijzing)`. Dat is geen soortverificatie. De import weigert een `VERIFIED`-label op basis van een audiocheck (`tools/media/commons_intake.py`, `audiocheck_ok`).
+- Eén lijn twijfelachtig of niet uitvoerbaar, of de referentievalidatie is < 100 % → `NOT TESTED`. De opname wordt niet gepubliceerd; een reeds gepubliceerde opname blijft staan als "alleen bronlabel".
 - Een lijn spreekt een andere soort of geluidsoort tegen → `FAIL`; niet publiceren.
+- In de app staat bij elke opname zonder VERIFIED-status zichtbaar: "Soort en geluidstype van deze opnamen zijn nog niet onafhankelijk bevestigd."
+
+**Huidige stand (16-11-2026):** de referentievalidatie haalt voor de geteste soortparen 0,60 en 0,80. De akoestische lijn is daarom voorlopig niet bruikbaar. De Huismus-roep, Merel-zang en Merel-alarmroep staan op `NOT TESTED` (alleen bronlabel).
 
 **Grenzen:** dit is geen menselijke luistercontrole en geen onafhankelijke review. Mengopnamen met meerdere soorten worden alleen gebruikt als het gekozen fragment aantoonbaar één soort bevat; bij twijfel `NOT TESTED`. De drempels zijn proefwaarden en worden in het rondelog gemeten, niet versoepeld om een opname door te laten.
+
+
+## Historie — oorspronkelijke tekst v0.1 (vervangen, niet meer geldig)
+
+De onderstaande uitkomstregel gold van 16-11-2026 16:20 tot de herziening in PR #273/#275. Hij staat hier alleen als audittrail en geldt **niet** meer.
+
+> **Uitkomst per opname:**
+> - Alle drie kloppen → `VERIFIED (triangulatie, niet door mens beluisterd)`; publicatie toegestaan, met dit label in het register.
+> - Eén lijn twijfelachtig of niet uitvoerbaar → `NOT TESTED`; **niet publiceren**, open punt registreren, verder zoeken.
+> - Een lijn spreekt een andere soort of geluidsoort tegen → `FAIL`; niet publiceren.
 
 ## Eerste toepassing — 16-11-2026 (PR #270)
 

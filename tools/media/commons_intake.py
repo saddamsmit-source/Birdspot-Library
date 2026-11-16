@@ -65,7 +65,8 @@ def safe_dest(asset: str, kind: str) -> Path:
         raise IntakeError("Pad met '..' of backslash: " + asset)
     dest = (ROOT / rel).resolve()
     root = ROOT.resolve()
-    if not any(str(dest).startswith(str(root / d)) for d in ALLOWED_DIRS[media]):
+    # Vergelijking op directorygrenzen (QA 16-11): een siblingmap als plumage-extra/ telt niet als plumage/.
+    if not any(dest != (root / d).resolve() and dest.is_relative_to((root / d).resolve()) for d in ALLOWED_DIRS[media]):
         raise IntakeError(f"Uitvoerpad buiten toegestane mediamap: {asset}")
     if dest.suffix != ALLOWED_EXT[media]:
         raise IntakeError(f"Onjuiste extensie voor {media}: {asset}")
@@ -99,7 +100,7 @@ def audiocheck_ok(e: dict, info: dict) -> None:
     if not (ac.get("report") and ac.get("judgement") and ac.get("visual") and ac.get("soundType")):
         raise IntakeError("Audio pas importeren na menselijke luistercontrole of volledige audiocheck: " + e["title"])
     path = (ROOT / ac["report"]).resolve()
-    if not str(path).startswith(str((ROOT / "docs/media-intake").resolve())) or not path.exists():
+    if not path.is_relative_to((ROOT / "docs/media-intake").resolve()) or not path.is_file():
         raise IntakeError("Audiocheck-rapport ontbreekt of staat buiten docs/media-intake: " + ac["report"])
     rep = json.loads(path.read_text(encoding="utf-8"))
     j = next((x for x in rep.get("judgements", []) if x.get("id") == ac["judgement"]), None)
