@@ -1,0 +1,44 @@
+{
+  "queries": [
+    {
+      "id": "sp053_flight",
+      "speciesId": "sp053",
+      "role": "flight",
+      "kind": "image",
+      "search": "Saxicola rubicola flight",
+      "limit": 20,
+      "keep": 6,
+      "thumb": 800
+    },
+    {
+      "id": "sp054_flight",
+      "speciesId": "sp054",
+      "role": "flight",
+      "kind": "image",
+      "search": "Prunella modularis flight",
+      "limit": 20,
+      "keep": 6,
+      "thumb": 800
+    },
+    {
+      "id": "sp054_juv",
+      "speciesId": "sp054",
+      "role": "juv",
+      "kind": "image",
+      "search": "Prunella modularis juvenile",
+      "limit": 20,
+      "keep": 6,
+      "thumb": 800
+    },
+    {
+      "id": "sp055_flight",
+      "speciesId": "sp055",
+      "role": "flight",
+      "kind": "image",
+      "search": "Troglodytes troglodytes flight",
+      "limit": 20,
+      "keep": 6,
+      "thumb": 800
+    }
+  ]
+}

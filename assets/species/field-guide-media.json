@@ -6347,6 +6347,32 @@
         "modifications": "Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
         "sha1": "d402798b3afcbc0b33bd40b9d6d3fa05bd58ee4a"
       }
+    },
+    "sp054": {
+      "juv": {
+        "nl": "Heggenmus",
+        "latin": "Prunella modularis",
+        "label": "Juveniel",
+        "age": "juvenile",
+        "alt": "Jonge Heggenmus op een tak, met gestreepte kop en borst, een fijne spitse snavel en roze poten.",
+        "note": "Jonge vogel: kop en borst gestreept in plaats van grijs, gele mondhoek nog zichtbaar.",
+        "visualCheck": "Jonge Heggenmus in zijaanzicht op schors: dichte bruine streping op kop, borst en flanken, weinig grijs, gele mondhoek, fijne spitse snavel, roze poten; scherp.",
+        "verification": "Commons-titel en categorie 'Prunella modularis (juvenile)'. Gestreepte kop en borst (Blasco-Zumeta & Heinze), minder grijs dan adult (RSPB) en gele mondhoek ondersteunen de leeftijd; fijne snavel past bij Heggenmus, niet bij Huismus.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/heggenmus",
+        "file": "Dunnock - Prunella modularis (Juvenile) (52080230098).jpg",
+        "author": "caroline legg",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Dunnock_-_Prunella_modularis_(Juvenile)_(52080230098).jpg",
+        "showSourceLink": true,
+        "sourceSha1": "b04f9c421f7ca93c86c585f36a565a914571d73d",
+        "reviewed": "2026-11-16",
+        "intake": "tools/media/commons_intake.py (GitHub Actions)",
+        "image": "/assets/species/plumage/sp054-juv.webp",
+        "width": 1400,
+        "height": 1066,
+        "modifications": "Uitsnede rond de vogel (fracties 0.20, 0.10, 0.95, 0.90), verkleind tot max. 1400 px en omgezet naar WebP zonder EXIF/GPS/XMP"
+      }
     }
   },
   "poses": {

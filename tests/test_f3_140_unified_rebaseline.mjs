@@ -99,6 +99,7 @@ const counts={
  twelfthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R12'),
  thirteenthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R13'),
  fourteenthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R14'),
+ fifteenthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R15'),
  contentInspected:sum(x=>x.F3.reviewedThisRound===true),
  contentComplete:sum(x=>x.F3.contentStatus==='CONTENT COMPLETE')
 };
@@ -119,6 +120,7 @@ const eleventh=rows.filter(x=>x.F3.recheckBatch==='F3-R11');
 const twelfth=rows.filter(x=>x.F3.recheckBatch==='F3-R12');
 const thirteenth=rows.filter(x=>x.F3.recheckBatch==='F3-R13');
 const fourteenth=rows.filter(x=>x.F3.recheckBatch==='F3-R14');
+const fifteenth=rows.filter(x=>x.F3.recheckBatch==='F3-R15');
 assert.ok(req.includes('lookalikePhotoAndText'),'New owner lookalike rule must be checked for every F3 bird');
 assert.deepEqual(ninth.map(x=>x.id),['sp034','sp035','sp036'],'R09 exactly three species in fixed sequence');
 assert.deepEqual(ninth.map(x=>x.F3.photoFilesInspected),[2,5,4],'All eleven existing local images need individual inspection');
@@ -226,6 +228,22 @@ for(const item of fourteenth){
  for(let i=0;i<currentAssets.imageSlots.length;i++){
   const bytes=readFileSync(new URL('..'+currentAssets.imageSlots[i].path,import.meta.url));
   assert.equal(review.photoBlobSHAs[i],createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex'),item.id+' image changed since F3-R14 review');
+ }
+}
+
+assert.deepEqual(fifteenth.map(x=>x.id),['sp053','sp054','sp055'],'R15 exactly Roodborsttapuit, Heggenmus and Winterkoning');
+assert.deepEqual(fifteenth.map(x=>x.F3.photoFilesInspected),[4,2,2]);
+for(const item of fifteenth){
+ const {F3:review,currentAssets}=item;
+ assert.equal(review.fullPass,false); assert.ok(review.checks.photoOriginalIdentity.startsWith('VERIFIED'));
+ assert.ok(review.checks.plumageAndTrueFlight.startsWith('PARTIALLY TESTED'),'missing flight photo stays open');
+ assert.ok(review.checks.audioRecordingsAuthenticity.startsWith('BLOCKED'));
+ assert.ok(review.checks.ebirdDistributionAndBias.startsWith('BLOCKED'),'eBird bot-check: parked, never VERIFIED');
+ assert.match(review.checks.vogelbeschermingAndANWB,/ANWB-vogelgids NOT TESTED/,'ANWB not accessible: stays visibly open');
+ assert.equal(review.photoBlobSHAs.length,currentAssets.imageSlots.length);
+ for(let i=0;i<currentAssets.imageSlots.length;i++){
+  const bytes=readFileSync(new URL('..'+currentAssets.imageSlots[i].path,import.meta.url));
+  assert.equal(review.photoBlobSHAs[i],createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex'),item.id+' image changed since F3-R15 review');
  }
 }
 

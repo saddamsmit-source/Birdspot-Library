@@ -104,13 +104,20 @@
           "sexAge": "Fotobron bevestigt de soort. Leeftijd en geslacht zijn niet expliciet geannoteerd.",
           "quality": "Scherp beeld met vrij zicht op de kop en snavel.",
           "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp054-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Heggenmus in zijaanzicht op schors: dichte bruine streping op kop, borst en flanken, weinig grijs, gele mondhoek, fijne spitse snavel.",
+          "sexAge": "Juveniel: gestreepte kop en borst (Blasco-Zumeta & Heinze), minder grijs (RSPB), gele mondhoek; Commons-categorie 'Prunella modularis (juvenile)'. Geslacht onbekend.",
+          "quality": "Scherp, hele vogel in beeld tegen egale achtergrond.",
+          "verdict": "goedgekeurd",
+          "addedIn": "F3-R15-media"
         }
       },
       "corrections": [
         "Bronprofiel met het snavelverschil ten opzichte van Huismus en het leeftijdsvoorbehoud bij de grijze kop en borst."
       ],
       "missing": [
-        "Afzonderlijke juvenielenfoto",
         "Vrije-vluchtfoto"
       ],
       "sexPolicy": "Geslachten zijn uiterlijk gelijkend. De kaart houdt de hoofdfoto neutraal.",

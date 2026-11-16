@@ -1,0 +1,209 @@
+{
+  "generated": "2026-11-16T20:24:43Z",
+  "rule": {
+    "sameMinR": 0.9
+  },
+  "items": [
+    {
+      "speciesId": "sp053",
+      "image": "/assets/species/plumage/sp053-hero-male.webp",
+      "title": "File:Stonechat (Saxicola rubicola) male, Beaulieu, Hampshire.jpg",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1471,
+        1600
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Stonechat_(Saxicola_rubicola)_male,_Beaulieu,_Hampshire.jpg",
+        "sha1": "d955fc880b13363095232f793bb374583761b0f5",
+        "license": "CC BY-SA 4.0",
+        "author": "Charles J. Sharp",
+        "width": 2341,
+        "height": 2546
+      },
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        1044
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp053-hero-male_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp053",
+      "image": "/assets/species/sp053.webp",
+      "title": "File:Saxicola rubicola.006 - A Coruña.jpg",
+      "author": "Fernando Losada Rodríguez",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1600,
+        1200
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Saxicola_rubicola.006_-_A_Coru%C3%B1a.jpg",
+        "sha1": "a52c0f4bf5b53724caf7266a4b686518fa480da0",
+        "license": "CC BY-SA 4.0",
+        "author": "Fernando Losada Rodríguez",
+        "width": 5152,
+        "height": 3864
+      },
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        720
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp053_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp053",
+      "image": "/assets/species/plumage/sp053-female-review.webp",
+      "title": "File:Stonechat - Saxicola rubicola, Female.jpg",
+      "author": "Caroline Legg",
+      "license": "CC BY 2.0",
+      "localSize": [
+        1000,
+        1400
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Stonechat_-_Saxicola_rubicola,_Female.jpg",
+        "sha1": "0506e859455bfaab0566a4fe7099b6e38690b66b",
+        "license": "CC BY 2.0",
+        "author": "caroline legg",
+        "width": 1775,
+        "height": 2484
+      },
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        1343
+      ],
+      "mode": "full",
+      "r": 0.999,
+      "sameShot": true,
+      "sideBySide": "sp053-female-review_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp053",
+      "image": "/assets/species/plumage/sp053-juv-review.webp",
+      "title": "File:Saxicola rubicola juvenile.jpg",
+      "author": "Vcebollada",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1400,
+        933
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Saxicola_rubicola_juvenile.jpg",
+        "sha1": "03651672bf8a4e0611d06baf11a044fc8fc109c0",
+        "license": "CC BY-SA 4.0",
+        "author": "Vcebollada",
+        "width": 4200,
+        "height": 2800
+      },
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp053-juv-review_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp054",
+      "image": "/assets/species/sp054.webp",
+      "title": "File:The dunnock (Prunella modularis).jpg",
+      "author": "Hobbyfotowiki",
+      "license": "CC0",
+      "localSize": [
+        1600,
+        1064
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:The_dunnock_(Prunella_modularis).jpg",
+        "sha1": "0228e774c78e1e78e40b64fd65188e9f5973259d",
+        "license": "CC0",
+        "author": "Hobbyfotowiki Camera location 51° 10′ 43.32″ N, 7° 00′ 23.65″ E View this and other nearby images on: OpenStreetMap 51.178700; 7.006570",
+        "width": 2477,
+        "height": 1647
+      },
+      "rightsMatch": false,
+      "sourceSize": [
+        960,
+        638
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp054_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp055",
+      "image": "/assets/species/sp055.webp",
+      "title": "File:Eurasian wren (Troglodytes troglodytes).jpg",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1600,
+        1056
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Eurasian_wren_(Troglodytes_troglodytes).jpg",
+        "sha1": "8f22816e8b527b99d2f1cef72c1652edeb998875",
+        "license": "CC BY 4.0",
+        "author": "Alexis Lours",
+        "width": 5026,
+        "height": 3317
+      },
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        634
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp055_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp055",
+      "image": "/assets/species/plumage/sp055-juv.webp",
+      "title": "File:Wren - Troglodytes troglodytes - Juvenile1.jpg",
+      "author": "caroline legg",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1400,
+        1083
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Wren_-_Troglodytes_troglodytes_-_Juvenile1.jpg",
+        "sha1": "0bc81c72ab1d35a64febbdb1e5810ab3fc3dc4a3",
+        "license": "CC BY 4.0",
+        "author": "caroline legg",
+        "width": 4263,
+        "height": 3045
+      },
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        686
+      ],
+      "mode": "crop",
+      "r": 0.848,
+      "scale": 0.6,
+      "offset": [
+        0.233,
+        0.26
+      ],
+      "sameShot": false,
+      "sideBySide": "sp055-juv_vs_source.jpg"
+    }
+  ]
+}

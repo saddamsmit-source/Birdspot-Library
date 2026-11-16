@@ -389,10 +389,11 @@ export const SPECIES = [
     statusExtra:'zomergast', months:'jan-dec', frequency:'vrij-algemeen', breeding:'ja', redList:null },
 
   // ── HEGGENMUS ────────────────────────────────────────────────
-  { id:'sp054', nameNL:'Heggenmus',           nameEN:'Dunnock',                   nameSci:'Prunella modularis',         family:'Heggenmus',       category:'standvogel', icon:'🐦', regions:['bos','stedelijk','struweel'],
+  { id:'sp054', nameNL:'Heggenmus',           nameEN:'Dunnock',                   nameSci:'Prunella modularis',         family:'Heggenmussen',    category:'standvogel', icon:'🐦', regions:['bos','stedelijk','struweel'],
     fieldmarks:'Spitse snavel, bruine gestreepte rug en grijzige kop en borst bij volwassen vogels.',
-    size:{ length:'13–14 cm', wingspan:'19–21 cm', weight:'19–24 g' },
-    plumage:{ adult_m:'Grijzige kop en borst, bruine gestreepte rug en een fijne, spitse snavel', adult_f:null, juv:'Minder grijs dan een volwassen vogel', jaarling:null, breeding:null, winter:null, eclipse:null },
+    size:{ length:'ca. 13–15 cm', wingspan:'19–21 cm', weight:'19–24 g' },
+    plumage:{ adult_m:'Grijzige kop en borst, bruine gestreepte rug en een fijne, spitse snavel', adult_f:null, juv:'Minder grijs dan een volwassen vogel, met gestreepte kop en borst.', jaarling:null, breeding:null, winter:null, eclipse:null },
+    guideReview:{ date:'2026-11-16', similarSexes:true, dimensions:['length'], sources:[{ label:'Vogelbescherming — Heggenmus', url:'https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/heggenmus' }, { label:'Blasco-Zumeta & Heinze — Heggenmus', url:'https://www.blascozumeta.com/specie_files/10840_ENG_Prunella_modularis_aranzadi.pdf' }, { label:'RSPB — Dunnock', url:'https://www.rspb.org.uk/birds-and-wildlife/dunnock' }, { label:'Sovon — Heggenmus', url:'https://stats.sovon.nl/stats/soort/10840' }] },
     distribution:'Heel Nederland in heggen, tuinen, bosranden en struweel', status:'Standvogel, ook doortrekker · jaarrond',
     statusExtra:'trekvogel', months:'jan-dec', frequency:'algemeen', breeding:'ja', redList:null },
 

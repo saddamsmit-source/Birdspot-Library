@@ -4939,7 +4939,7 @@
   {
    "id": "sp054",
    "nameNL": "Heggenmus",
-   "family": "Heggenmus",
+   "family": "Heggenmussen",
    "audited": true,
    "batch": "M3",
    "date": "2026-11-11",
@@ -4958,13 +4958,29 @@
       "annotations": []
      },
      "flight": null
+    },
+    {
+     "image": "/assets/species/plumage/sp054-juv.webp",
+     "role": "Verenkleed (Juveniel)",
+     "content": "Jonge Heggenmus in zijaanzicht op schors: dichte bruine streping op kop, borst en flanken, weinig grijs, gele mondhoek, fijne spitse snavel.",
+     "sexAge": "Juveniel: gestreepte kop en borst (Blasco-Zumeta & Heinze), minder grijs (RSPB), gele mondhoek; Commons-categorie 'Prunella modularis (juvenile)'. Geslacht onbekend.",
+     "quality": "Scherp, hele vogel in beeld tegen egale achtergrond.",
+     "verdict": "goedgekeurd",
+     "addedIn": "F3-R15-media",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 16-11-2026: Commons-origineel met vastgepinde SHA-1 b04f9c42 in de intake-workflow geconverteerd met geregistreerde uitsnede, CC BY 2.0 · caroline legg",
+      "annotations": [
+       "Juveniele kenmerken in het beeld zelf zichtbaar: gestreepte kop en borst en gele mondhoek."
+      ]
+     },
+     "flight": null
     }
    ],
    "corrections": [
     "Bronprofiel met het snavelverschil ten opzichte van Huismus en het leeftijdsvoorbehoud bij de grijze kop en borst."
    ],
    "missing": [
-    "Afzonderlijke juvenielenfoto",
     "Vrije-vluchtfoto"
    ],
    "wishes": [],
@@ -4988,7 +5004,7 @@
      "Snavel en kop"
     ],
     "open": [
-     "Een afzonderlijke juvenielenfoto, een vrije-vluchtfoto en een eigen geluidsopname voor de gids ontbreken."
+     "Een vrije-vluchtfoto en een eigen geluidsopname voor de gids ontbreken."
     ],
     "discrepancies": 1
    },

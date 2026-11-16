@@ -1626,7 +1626,7 @@ export const GUIDE_COMPARISONS = [
     tip: 'Bekijk borst en rug samen. Een juveniele Roodborst heeft nog geen oranjerode borst.',
   },
   {
-    label: 'Heggenmus en Huismus · vrouwtje Huismus in rust',
+    label: 'Heggenmus en Huismus · volwassen in rust',
     birds: [
       {id: 'sp054', source: 'heggenmus', marks: 'Fijne, spitse snavel en blauwgrijze kop en borst. De gestreepte bruine rug is geen onderscheid op zichzelf.'},
       {id: 'sp043', source: 'huismus', plumage: 'adult_f', marks: 'Vrouwtje met forse kegelsnavel, lichtbruine kop en zichtbare lichte wenkbrauwstreep.'},
@@ -1655,9 +1655,26 @@ export const GUIDE_COMPARISONS = [
     label: 'Winterkoning en Boomkruiper · veldkenmerken',
     birds: [
       {id: 'sp055', source: 'winterkoning', marks: 'Zeer klein en compact met een korte, vaak opgewipte staart.'},
-      {id: 'sp066', source: 'boomkruiper', marks: 'Langere staart, gebogen snavel en witte onderzijde. Klimt langs de stam omhoog.'},
+      {id: 'sp066', source: 'boomkruiper', marks: 'Langere, stijve staart, omlaaggebogen snavel en roomwitte onderzijde. Klimt langs de stam omhoog.'},
+    ],
+    rows: [
+      {label: 'Snavel', values: ['Kort, recht en spits', 'Spits en duidelijk omlaaggebogen']},
+      {label: 'Staart', values: ['Kort, vaak opgewipt', 'Stijve staartveren als steun tegen de stam']},
+      {label: 'Gedrag', values: ['Laag van struik naar struik', 'Klimt spiraalsgewijs langs een stam omhoog']},
     ],
     tip: 'Kijk naar snavel en houding. Beide vogels hebben bruine bovendelen.',
+  },
+  {
+    label: 'Heggenmus en Ringmus · volwassen in rust',
+    birds: [
+      {id: 'sp054', source: 'heggenmus', marks: 'Blauwgrijze kop en borst met een fijne, spitse snavel.'},
+      {id: 'sp044', source: 'ringmus', marks: 'Roodbruine kruin, lichte wang met donkere wangvlek en een klein zwart befje.'},
+    ],
+    rows: [
+      {label: 'Kop', values: ['Blauwgrijs, zonder wangvlek', 'Roodbruine kruin, lichte wang met donkere vlek']},
+      {label: 'Keel', values: ['Grijs, zonder zwarte vlek', 'Klein zwart befje']},
+    ],
+    tip: 'Een bruine rug hebben beide. Kijk naar kop en keel; bij de Ringmus zijn man en vrouw gelijk.',
   },
   {
     label: 'Grauwe en Bonte Vliegenvanger · vleugel en borst',

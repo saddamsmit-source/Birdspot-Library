@@ -39,3 +39,20 @@ Drie harde gates ontbreken: preview van de exacte SHA, gegevensbehoud bij upgrad
 2. Upgradetest: productieversie met testwaarnemingen → kandidaat → waarnemingen, foto's en instellingen intact; ZIP-export en -herstel.
 3. Android-PWA: installeren, offline openen, GPS, microfoon, terug-navigatie.
 4. Integratie-PR naar `main` met deze SHA; daarna "zet live", publicatie en controle na release (geserveerde SHA, kernroute, offline, herstel).
+
+---
+
+## 4. Actualisatie 16-11-2026 ±22:45 (release-spoor, los van het F3-werk)
+
+| Onderdeel | Feit | Bewijs |
+|---|---|---|
+| Laatst bewezen kandidaat | `af7d100f` (R14b, CI 2/2 groen); R15-head op PR #278 is pas kandidaat na groene CI op exact die SHA | GitHub check-runs |
+| Herstelpunt | `main` = `5bf67043` (ongewijzigd) | `GET branches/main` |
+| Branchbescherming `main` | nog steeds **geen** ("Branch not protected", `protected=false`) | `GET branches/main/protection` |
+| Vercel-route uit §3 punt 1 | **vervalt**: botst met de staande eigenaarsregel (9-11-2026) dat Birdspot nooit aan Vercel wordt gekoppeld | eigenaarbesluit |
+| GitHub Pages (`preview/birdspot-review`) | openbaar, dus **geen afgeschermde preview**; bovendien op oude SHA `21ce9060` | README, Git |
+| Geschikte veilige previewroute | De bestaande lokale launcher `tools/pilot/Start-BirdspotAndroidPilot.ps1` pint een branch op een exacte SHA, draait op `localhost` zonder deploy of GitHub-writes, en kan optioneel via USB een Android-toestel koppelen. Hij staat nog gepind op 1.27.7 (`83c11744`). | broncode launcher, CI-workflow `windows-pilot-launcher-qa.yml` |
+
+**Gewijzigd advies voor §3 punt 1:** de pin van de launcher in een aparte release-PR bijwerken naar de kandidaat-SHA (na groene CI), dan lokaal op Windows starten en via USB op Android openen. Dat dekt preview, upgradetest en de fysieke toesteltest in één lokale sessie, zonder hosting. Preview-gate blijft **NOT TESTED** tot die sessie heeft plaatsgevonden.
+
+**Advies blijft HOLD.** Openstaande harde gates ongewijzigd: interactieve preview van de exacte SHA, upgrade met gegevensbehoud, fysieke Android/PWA-test; daarnaast branchbescherming/required CI en één geïntegreerde regressie op één SHA. Geen merge of livegang zonder "zet live".
