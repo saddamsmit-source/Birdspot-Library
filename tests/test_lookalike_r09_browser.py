@@ -21,7 +21,7 @@ def open_pair(p, other):
     # the accessible 'Nog X soorten' disclosure. Open it, not a hidden DOM stub.
     for details in p.locator('details.sd-cmp-more').all():
         if details.locator(f'[data-compare-species="{other}"]').count() and not details.get_attribute('open'):
-            details.locator('summary').click()
+            details.locator('xpath=./summary').click()
     target=p.locator(f'#sdPanel-herkenning .sd-cmp-panel:has([data-compare-species="{other}"])').first
     expect(target).to_have_count(1)
     if target.get_attribute('hidden') is not None:
