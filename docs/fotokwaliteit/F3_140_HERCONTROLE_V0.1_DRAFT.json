@@ -18,7 +18,8 @@
     "fifthBatch": "docs/fotokwaliteit/F3_R05_DRIE_SPECHTEN_2026-11-15_DRAFT.md",
     "sixthBatch": "docs/fotokwaliteit/F3_R06_EKSTER_KRAAI_KAUW_2026-11-15_DRAFT.md",
     "seventhBatch": "docs/fotokwaliteit/F3_R07_GAAI_EN_MEZEN_2026-11-15_DRAFT.md",
-    "eighthBatch": "docs/fotokwaliteit/F3_R08_MATKOP_GLANSKOP_KUIFMEES_2026-11-16_DRAFT.md"
+    "eighthBatch": "docs/fotokwaliteit/F3_R08_MATKOP_GLANSKOP_KUIFMEES_2026-11-16_DRAFT.md",
+    "ninthBatch": "docs/fotokwaliteit/F3_R09_STAARTMEES_VINK_GROENLING_2026-11-16_DRAFT.md"
   },
   "requiredChecks": [
     "photoOriginalIdentity",
@@ -49,16 +50,17 @@
     "audioMissing": 76,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 116,
+    "nextNotStarted": 113,
     "secondBatchStarted": 3,
-    "contentInspected": 24,
+    "contentInspected": 27,
     "contentComplete": 0,
     "thirdBatchStarted": 3,
     "fourthBatchStarted": 3,
     "fifthBatchStarted": 3,
     "sixthBatchStarted": 3,
     "seventhBatchStarted": 3,
-    "eighthBatchStarted": 3
+    "eighthBatchStarted": 3,
+    "ninthBatchStarted": 3
   },
   "records": [
     {
@@ -3103,36 +3105,64 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R09",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (all local WebP roles visually inspected; originals and independent species/age checks open)",
+          "photoIndividualRights": "PARTIALLY TESTED (existing metadata preserved; original individual source license and modifications not reverified)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (head, sex and juvenile images seen; free-flight and age source proof still open)",
+          "photoPairComparisons": "PARTIALLY TESTED (existing longtail/black-tit pair retained; white-head morph not enough for subspecies)",
+          "responsiveLayoutAndZoom": "NOT TESTED (F3-R09 full 320/360/390 px browser zoom and physical device pending)",
+          "creditsAndCleanAudioUI": "NOT TESTED (F3-R09 media disclosure interactions pending)",
+          "audioRecordingsAuthenticity": "NOT TESTED (no original waveform reviewed in F3-R09)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (existing source/rights metadata reviewed; original individual recording license not rechecked)",
+          "soundRolesSongCall": "PARTIALLY TESTED (existing role labels retained; independent source recording verification open)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (F3-R09 individual offline audio test pending)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (original Vogelbescherming species pages read; printed ANWB passage unavailable)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (selected distinguishing fieldmarks checked; biometry bounds not recomputed)",
+          "sovonNetherlandsStatus": "NOT TESTED (F3-R09 individual annual values not reverified against Sovon)",
+          "ebirdDistributionAndBias": "NOT TESTED (F3-R09 eBird seasonal map and recorder bias not independently reviewed)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (current F3-R09 personal photo/ZIP/second-device test pending)",
+          "endToEndGuideUI": "NOT TESTED (F3-R09 browser photo pair and touchscreen check pending)",
+          "independentSecondReview": "NOT TESTED (independent ornithological and media rights review pending)"
         },
         "findings": [
-          "Scherpe foto in vrije vlucht van een voor West-Europa representatieve Staartmees met bevestigde hergebruikrechten."
+          "Hoofdfoto toont vrijwel complete staart langer dan het lichaam, klein snaveltje en donkere kopzijden.",
+          "Juvenielenfoto toont donkere oog-/kopzijden; leeftijd wordt niet zelfstandig gecertificeerd zonder oorspronkelijke bron.",
+          "Witkoppige gewone staartmezen overlappen met Witkopstaartmees; witte kop op zichzelf is onvoldoende ondersoortbewijs.",
+          "Één bestaand XC114614 geluidsvoorbeeld; zang/roep niet afzonderlijk gecertificeerd."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/staartmees",
+          "docs/fotokwaliteit/F3_R09_STAARTMEES_VINK_GROENLING_2026-11-16_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED (media UI and 320/390 px actual guide session pending)",
+        "independence": "PARTIAL / manual local WebP visual inspection and primary fieldmarks only; no independent image/rights audit",
+        "fullPass": false,
+        "confusionPairs": [
+          {
+            "id": "sp174",
+            "context": "Lange staart en kopprofiel bij kleine mezen; bestaande vergelijking behouden",
+            "status": "PARTIALLY TESTED"
+          },
+          {
+            "id": "sp034",
+            "context": "Variatie witkop / witkoppige staartmees binnen de soort: géén automatische ondersoort-ID",
+            "status": "NOT TESTED (independent geographic and plumage evidence)"
+          }
+        ],
+        "photoFilesInspected": 2,
+        "photoBlobSHAs": [
+          "b2738f50d11b8e9b2526cae3ece5910fda5cdae2",
+          "99a34bd7f3e67fefd47cc6e622545362209ff15a"
+        ],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [],
+        "scientificName": "Aegithalos caudatus",
+        "contentStatus": "PARTIALLY REVIEWED (2 local images actually opened, original files/rights/audio/device still open)",
+        "functionTests": "DEFERRED BY OWNER for integrated physical device and release QA. F3-R09 targeted guide browser evidence not yet verified."
       }
     },
     {
@@ -3182,34 +3212,74 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R09",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (all local WebP roles visually inspected; originals and independent species/age checks open)",
+          "photoIndividualRights": "PARTIALLY TESTED (existing metadata preserved; original individual source license and modifications not reverified)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (head, sex and juvenile images seen; free-flight and age source proof still open)",
+          "photoPairComparisons": "PARTIALLY TESTED (new Vink/Groenling female rest-photo pair built from separate existing licensed registry entries, unit render pending)",
+          "responsiveLayoutAndZoom": "NOT TESTED (F3-R09 full 320/360/390 px browser zoom and physical device pending)",
+          "creditsAndCleanAudioUI": "NOT TESTED (F3-R09 media disclosure interactions pending)",
+          "audioRecordingsAuthenticity": "NOT TESTED (no original waveform reviewed in F3-R09)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (existing source/rights metadata reviewed; original individual recording license not rechecked)",
+          "soundRolesSongCall": "PARTIALLY TESTED (existing role labels retained; independent source recording verification open)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (F3-R09 individual offline audio test pending)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (original Vogelbescherming species pages read; printed ANWB passage unavailable)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (selected distinguishing fieldmarks checked; biometry bounds not recomputed)",
+          "sovonNetherlandsStatus": "NOT TESTED (F3-R09 individual annual values not reverified against Sovon)",
+          "ebirdDistributionAndBias": "NOT TESTED (F3-R09 eBird seasonal map and recorder bias not independently reviewed)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (current F3-R09 personal photo/ZIP/second-device test pending)",
+          "endToEndGuideUI": "NOT TESTED (F3-R09 browser photo pair and touchscreen check pending)",
+          "independentSecondReview": "NOT TESTED (independent ornithological and media rights review pending)"
         },
-        "findings": [],
-        "sourceReferences": [],
+        "findings": [
+          "Alle vijf bestaande WebP-rollen afzonderlijk visueel geopend; oude F2-rechten en bronnen bewaard.",
+          "Vrouwtjesfoto toont twee witte vleugelstrepen op hetzelfde rustprofiel als Groenlingvrouwtje.",
+          "Juveniel duidelijk jong ogend met lichte vleugeltekening; originele soort-/leeftijdsbron open.",
+          "Bestaand vluchtbeeld toont gespreide vleugels en hangende poten: exacte vrije vluchthouding nog onafhankelijk beoordelen.",
+          "Zang en roep staan geregistreerd; exacte originele audiocomparatie nog open."
+        ],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/vink",
+          "docs/fotokwaliteit/F3_R09_STAARTMEES_VINK_GROENLING_2026-11-16_DRAFT.md",
+          "https://www.rspb.org.uk/birds-and-wildlife/identifying-birds/small-brown-birds-you-might-see-in-your-garden"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED (media UI and 320/390 px actual guide session pending)",
+        "independence": "PARTIAL / manual local WebP visual inspection and primary fieldmarks only; no independent image/rights audit",
+        "fullPass": false,
+        "confusionPairs": [
+          {
+            "id": "sp036",
+            "context": "Vrouwtjes: twee witte vleugelstrepen versus gele vleugelrand + zwaardere kegelsnavel",
+            "status": "PARTIALLY TESTED (registered rest-photo pair, direct browser proof pending)"
+          },
+          {
+            "id": "sp043",
+            "context": "Vrouwtje Huismus: witte vleugelstrepen en gedrag",
+            "status": "NOT TESTED (new F3 pair)"
+          },
+          {
+            "id": "sp181",
+            "context": "Winterkleden Vink en Keep: zelfde seizoen/kleden vereist",
+            "status": "NOT TESTED (new F3 pair)"
+          }
+        ],
+        "photoFilesInspected": 5,
+        "photoBlobSHAs": [
+          "946e15364a9d21128994c95b98285bb870231926",
+          "1a54fdc6dbb4b00ab6de29494511d0d37355c86a",
+          "f88932b91936f4dd3d1f28a4e59e301e9441364d",
+          "9b30450bf6864f2180b2e538f26a06eb6577fb88",
+          "e418aef12e71893a1a914dc87ddeb465fb4a7b32"
+        ],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [],
+        "scientificName": "Fringilla coelebs",
+        "contentStatus": "PARTIALLY REVIEWED (5 local images actually opened, original files/rights/audio/device still open)",
+        "functionTests": "DEFERRED BY OWNER for integrated physical device and release QA. F3-R09 targeted guide browser evidence not yet verified."
       }
     },
     {
@@ -3251,36 +3321,68 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R09",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (all local WebP roles visually inspected; originals and independent species/age checks open)",
+          "photoIndividualRights": "PARTIALLY TESTED (existing metadata preserved; original individual source license and modifications not reverified)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (head, sex and juvenile images seen; free-flight and age source proof still open)",
+          "photoPairComparisons": "PARTIALLY TESTED (new Vink/Groenling female rest-photo pair built from separate existing licensed registry entries, unit render pending)",
+          "responsiveLayoutAndZoom": "NOT TESTED (F3-R09 full 320/360/390 px browser zoom and physical device pending)",
+          "creditsAndCleanAudioUI": "NOT TESTED (F3-R09 media disclosure interactions pending)",
+          "audioRecordingsAuthenticity": "NOT TESTED (no original waveform reviewed in F3-R09)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (existing source/rights metadata reviewed; original individual recording license not rechecked)",
+          "soundRolesSongCall": "BLOCKED (Groenling has no registered sound)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (F3-R09 individual offline audio test pending)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (original Vogelbescherming species pages read; printed ANWB passage unavailable)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (selected distinguishing fieldmarks checked; biometry bounds not recomputed)",
+          "sovonNetherlandsStatus": "NOT TESTED (F3-R09 individual annual values not reverified against Sovon)",
+          "ebirdDistributionAndBias": "NOT TESTED (F3-R09 eBird seasonal map and recorder bias not independently reviewed)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (current F3-R09 personal photo/ZIP/second-device test pending)",
+          "endToEndGuideUI": "NOT TESTED (F3-R09 browser photo pair and touchscreen check pending)",
+          "independentSecondReview": "NOT TESTED (independent ornithological and media rights review pending)"
         },
         "findings": [
-          "Geen lokaal geregistreerde zang of roep"
+          "Vier bestaande WebP's geopend: mannetje met geel langs vleugel, vrouwtje grijsgroen met krachtige snavel, juveniel gestreept, vluchtkandidaat.",
+          "Adult-female foto toont gele handpenrand en zware snavel bij dezelfde rusthouding als Vinkvrouw.",
+          "Juvenielenfoto toont streping op borst/buik; die overlapt met andere vinkachtigen.",
+          "Vluchtkandidaat toont gespreide vleugels en poten; flight-rol bronmatig niet opnieuw bewezen.",
+          "Geen geregistreerde audio, dus zang/roep blijven BLOCKED voor F3 full-pass zonder onderbouwde eigenaarsexceptie."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/groenling",
+          "docs/fotokwaliteit/F3_R09_STAARTMEES_VINK_GROENLING_2026-11-16_DRAFT.md",
+          "https://www.vogelbescherming.nl/tuinvogeltelling/herkenningstips/?tip=7"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED (media UI and 320/390 px actual guide session pending)",
+        "independence": "PARTIAL / manual local WebP visual inspection and primary fieldmarks only; no independent image/rights audit",
+        "fullPass": false,
+        "confusionPairs": [
+          {
+            "id": "sp035",
+            "context": "Vrouwtje Vink: gele vleugelrand en brede snavel tegenover witte vinkbanden",
+            "status": "PARTIALLY TESTED (registered rest-photo pair, direct browser proof pending)"
+          },
+          {
+            "id": "sp038",
+            "context": "Vrouwtje Sijs en Groenling, bestaande vergelijking; juvenile streping overlapt",
+            "status": "PARTIALLY TESTED (old pair not independently revisited)"
+          }
+        ],
+        "photoFilesInspected": 4,
+        "photoBlobSHAs": [
+          "faf75b46be6270f9a8e9467aa159515878995b1f",
+          "0ed843f85caf323154551237fcccfcc28beb29d6",
+          "b392888a923020d1fbe375b90717d2622fb3a344",
+          "b48cf3cff5d231c1e09d8b6f93395f4ef36d5b0c"
+        ],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [],
+        "scientificName": "Chloris chloris",
+        "contentStatus": "PARTIALLY REVIEWED (4 local images actually opened, original files/rights/audio/device still open)",
+        "functionTests": "DEFERRED BY OWNER for integrated physical device and release QA. F3-R09 targeted guide browser evidence not yet verified."
       }
     },
     {
