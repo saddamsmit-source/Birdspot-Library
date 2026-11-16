@@ -1,0 +1,41 @@
+{
+  "generated": "2026-11-16T15:38:47Z",
+  "userAgent": "BirdspotLibrary-media-intake/1.0 (https://github.com/saddamsmit-source/Birdspot-Library; build-time license-checked import)",
+  "licensePolicy": "CC0 / publiek domein / CC BY / CC BY-SA; NC en ND uitgesloten",
+  "status": "CANDIDATES ONLY - niet goedgekeurd, niet in de app",
+  "queries": [
+    {
+      "id": "sp044_flight_zoom",
+      "speciesId": "sp044",
+      "role": "flight",
+      "kind": "image",
+      "search": "intitle:\"Eurasian-Tree-Sparrow\" Mildeep filetype:bitmap",
+      "candidates": [
+        {
+          "title": "File:Eurasian-Tree-Sparrow.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Eurasian-Tree-Sparrow.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Eurasian-Tree-Sparrow.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Eurasian-Tree-Sparrow.jpg/1920px-Eurasian-Tree-Sparrow.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "d50be2c413fd35c0ff4d29ce93d1ee48a4f16d68",
+          "size": 13758879,
+          "width": 6585,
+          "height": 4390,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Mildeep",
+          "credit": "Own work",
+          "description": "Eurasian Tree Sparrow in flight.",
+          "date": "2023-07-08 14:56:08",
+          "categories": [
+            "Passer montanus in flight",
+            "Passeridae of Nepal"
+          ],
+          "preview": "sp044_flight_zoom_01.jpg"
+        }
+      ],
+      "rejectedForLicense": []
+    }
+  ]
+}
