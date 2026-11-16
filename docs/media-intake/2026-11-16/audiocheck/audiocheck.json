@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-16T15:14:55Z",
+  "generated": "2026-11-16T15:17:18Z",
   "protocol": "Birdspot audio-check (F3-R11b, 16-11-2026): akoestische controle zonder menselijk luisteren.",
   "rule": {
     "margin": 0.05,
@@ -349,68 +349,6 @@
       }
     },
     {
-      "id": "sp038_song_ref_1",
-      "speciesId": "sp038",
-      "role": "reference",
-      "soundType": "song",
-      "title": "File:Eurasian Siskin (Carduelis spinus) (W1CDR0001494 BD4).ogg",
-      "page": "https://commons.wikimedia.org/wiki/File:Eurasian_Siskin_(Carduelis_spinus)_(W1CDR0001494_BD4).ogg",
-      "sha1": "5be4bf7aa0ee5276d99b7384f8cfc9db82f233d6",
-      "license": "CC BY-SA 4.0",
-      "author": "",
-      "description": "Calls and songs of Eurasian Siskins, recorded on Old Dean Common, Surrey, England",
-      "duration": 123.20759637188209,
-      "spectrogram": "sp038_song_ref_1.png",
-      "features": {
-        "usable": true,
-        "seconds": 60.0,
-        "activeFraction": 0.948,
-        "snrDb": 25.8,
-        "domHz": [
-          3273,
-          4285,
-          5577
-        ],
-        "elementsPerSecond": 2.08,
-        "bestFragment": {
-          "start": 0.5,
-          "seconds": 10.0,
-          "active": 1.0
-        }
-      }
-    },
-    {
-      "id": "sp038_call_ref_1",
-      "speciesId": "sp038",
-      "role": "reference",
-      "soundType": "call",
-      "title": "File:Eurasian Siskin (Carduelis spinus) (W1CDR0001494 BD4).ogg",
-      "page": "https://commons.wikimedia.org/wiki/File:Eurasian_Siskin_(Carduelis_spinus)_(W1CDR0001494_BD4).ogg",
-      "sha1": "5be4bf7aa0ee5276d99b7384f8cfc9db82f233d6",
-      "license": "CC BY-SA 4.0",
-      "author": "",
-      "description": "Calls and songs of Eurasian Siskins, recorded on Old Dean Common, Surrey, England",
-      "duration": 123.20759637188209,
-      "spectrogram": "sp038_call_ref_1.png",
-      "features": {
-        "usable": true,
-        "seconds": 60.0,
-        "activeFraction": 0.948,
-        "snrDb": 25.8,
-        "domHz": [
-          3273,
-          4285,
-          5577
-        ],
-        "elementsPerSecond": 2.08,
-        "bestFragment": {
-          "start": 0.5,
-          "seconds": 10.0,
-          "active": 1.0
-        }
-      }
-    },
-    {
       "id": "sp039_call_ref_1",
       "speciesId": "sp039",
       "role": "reference",
@@ -449,49 +387,43 @@
       "soundType": "song",
       "consistent": false,
       "means": {
-        "sp037": 0.5258,
-        "sp038": 0.8449
+        "sp037": 0.5258
       },
-      "margin": -0.3191,
-      "reason": "marge -0.3191 < 0.05"
+      "margin": null,
+      "reason": "geen verwarringssoort om tegen te toetsen"
     },
     {
       "id": "sp037_call_cand",
       "speciesId": "sp037",
       "soundType": "call",
-      "consistent": false,
+      "consistent": true,
       "means": {
         "sp037": 0.4439,
-        "sp038": 0.5781,
         "sp039": 0.2839
       },
-      "margin": -0.1342,
-      "reason": "marge -0.1342 < 0.05"
+      "margin": 0.16,
+      "reason": "ok"
     },
     {
       "id": "sp038_song_cand",
       "speciesId": "sp038",
       "soundType": "song",
-      "consistent": true,
+      "consistent": false,
+      "reason": "geen referentie van de eigen soort",
       "means": {
-        "sp037": 0.4361,
-        "sp038": 0.8991
-      },
-      "margin": 0.463,
-      "reason": "ok"
+        "sp037": 0.4361
+      }
     },
     {
       "id": "sp038_call_cand",
       "speciesId": "sp038",
       "soundType": "call",
       "consistent": false,
+      "reason": "geen referentie van de eigen soort",
       "means": {
         "sp037": 0.4925,
-        "sp038": 0.8399,
         "sp039": 0.4649
-      },
-      "margin": 0.3474,
-      "reason": "SNR 13.9 dB < 15.0"
+      }
     },
     {
       "id": "sp039_song_cand",
@@ -500,8 +432,7 @@
       "consistent": false,
       "reason": "geen referentie van de eigen soort",
       "means": {
-        "sp037": 0.5019,
-        "sp038": 0.6494
+        "sp037": 0.5019
       }
     }
   ]
