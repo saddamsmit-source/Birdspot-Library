@@ -53,9 +53,9 @@
     "audioMissing": 75,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 95,
+    "nextNotStarted": 92,
     "secondBatchStarted": 3,
-    "contentInspected": 45,
+    "contentInspected": 48,
     "contentComplete": 0,
     "thirdBatchStarted": 3,
     "fourthBatchStarted": 3,
@@ -69,7 +69,8 @@
     "twelfthBatchStarted": 3,
     "thirteenthBatchStarted": 3,
     "fourteenthBatchStarted": 3,
-    "fifteenthBatchStarted": 3
+    "fifteenthBatchStarted": 3,
+    "sixteenthBatchStarted": 3
   },
   "records": [
     {
@@ -5119,38 +5120,58 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R16",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium 320/360/390 px via tests/test_lookalike_r16_browser.py; no physical device)",
+          "endToEndGuideUI": "PARTIALLY TESTED (Chromium species card and lookalike panels; no device or offline run)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "independentSecondReview": "NOT TESTED (own re-inspection is not independent)",
+          "ebirdDistributionAndBias": "BLOCKED (eBird Anubis bot-check in F3-R15; not retried in R16 because new URLs needed owner approval while the owner was away; parked, not bypassed)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (one publisher for length; Blasco-Zumeta & Heinze PDF not opened: request needed owner approval while away; wingspan/weight unverified)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (credits present in registry and player HTML; no visual UI audit of attribution)",
+          "audioRecordingsAuthenticity": "NOT TESTED (song and call: source label only; no reliable automatic method under AUDIOCHECK_PROTOCOL v0.2; not listened to)",
+          "audioLicenseAndAttribution": "VERIFIED (both clips: current Commons licence and author match register; origcheck-r16 audio metadata)",
+          "soundRolesSongCall": "NOT TESTED (source labels only)",
+          "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (local files present and in player HTML; offline playback not tested on device)",
+          "photoOriginalIdentity": "VERIFIED (origcheck 16-11-2026: both shown photos same shot as source, r = 1.00 and 0.952 crop; see docs/media-intake/2026-11-16/origcheck-r16/origcheck.json)",
+          "photoIndividualRights": "VERIFIED (current Commons author and licence match for both photos)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (adult hero matches Vogelbescherming: dark legs, short wing projection; fluttering-in-reeds photo correctly stays out of the flight role; Commons flight candidates were perched or landing with legs forward; no juvenile)",
+          "photoPairComparisons": "PARTIALLY TESTED (Fitis and Fluiter panels with verified photos)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming species page read 16-11-2026: dark legs, shorter wings, tail-wagging vs Fitis, song/call, habitat, numbers; ANWB-vogelgids NOT TESTED: no accessible edition in this environment)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon 16-11-2026: 310,000–500,000 pairs 2018–2020; significant increase since 1990 and last 12 years; winter max. 1000–2000; app status consistent)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-030 Fitis, LK-032 Fluiter; both photos source-matched; independent review open)"
         },
         "findings": [
-          "In vlucht",
-          "Juveniel/najaarsvogel"
+          "Twee lokale foto's tegen het bronbeeld: dezelfde opname (r = 1,00 en 0,952 uitsnede); rechten gelijk aan Commons.",
+          "Hoofdfoto past bij Tjiftjaf: donkere poten, korte vleugelpunt.",
+          "Vluchtkandidaten afgewezen: zittend zingend, of neerstrijkend met poten naar voren.",
+          "Zang en roep: rechten VERIFIED, soort en geluidstype alleen bronlabel (NOT TESTED).",
+          "Sovon-trend en Vogelbescherming-aantallen in lijn met de app."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/tjiftjaf",
+          "https://stats.sovon.nl/stats/soort/13110",
+          "docs/media-intake/2026-11-16/origcheck-r16/origcheck.json",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R16_TJIFTJAF_FITIS_FLUITER_2026-11-16_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on physical device; local source/photo review and Chromium only",
+        "independence": "PARTIAL / origcheck by Claude; no independent reviewer",
+        "fullPass": false,
+        "photoFilesInspected": 2,
+        "photoBlobSHAs": [
+          "3e19ea864b650a5d5368652f363b636d96bf4110",
+          "7dada8e4e3ddcbd705b32efe14ce432875f30494"
+        ],
+        "photoSourceMatches": [],
+        "priorPhotoMatches": [],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [],
+        "contentStatus": "PARTIALLY REVIEWED (all shown photos checked against source images; no flight photo; audio source label only; no FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R16 node/browser tests run separately."
       }
     },
     {
@@ -5180,38 +5201,58 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R16",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium 320/360/390 px via tests/test_lookalike_r16_browser.py; no physical device)",
+          "endToEndGuideUI": "PARTIALLY TESTED (Chromium species card and lookalike panels; no device or offline run)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "independentSecondReview": "NOT TESTED (own re-inspection is not independent)",
+          "ebirdDistributionAndBias": "BLOCKED (eBird Anubis bot-check in F3-R15; not retried in R16 because new URLs needed owner approval while the owner was away; parked, not bypassed)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (one publisher for length; Blasco-Zumeta & Heinze PDF not opened: request needed owner approval while away; wingspan/weight unverified)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (credits present in registry and player HTML; no visual UI audit of attribution)",
+          "audioRecordingsAuthenticity": "NOT TESTED (song and call: source label only; no reliable automatic method under AUDIOCHECK_PROTOCOL v0.2; not listened to)",
+          "audioLicenseAndAttribution": "VERIFIED (both clips: current Commons licence and author match register; origcheck-r16 audio metadata)",
+          "soundRolesSongCall": "NOT TESTED (source labels only)",
+          "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (local files present and in player HTML; offline playback not tested on device)",
+          "photoOriginalIdentity": "VERIFIED (origcheck 16-11-2026: hero same shot, r = 1.00)",
+          "photoIndividualRights": "VERIFIED (current Commons author and licence match)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (adult hero matches Vogelbescherming: pale legs, eyebrow, longer wings; juvenile candidate (Stephan Sprinz, CC BY-SA 4.0) not placed: species support rests on photographer label and leg colour, which the profile marks as unreliable alone; no flight photo found)",
+          "photoPairComparisons": "PARTIALLY TESTED (Tjiftjaf and Fluiter panels with verified photos)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming species page read 16-11-2026: eyebrow, pinkish-brown legs, longer wings, descending song, migratory, decline since 1990; ANWB-vogelgids NOT TESTED: no accessible edition in this environment)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon 16-11-2026: 130,000–220,000 pairs 2018–2020; significant decline since 1990 and last 12 years; no winter estimate; app status consistent)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-030 Tjiftjaf, LK-031 Fluiter; both photos source-matched; independent review open)"
         },
         "findings": [
-          "In vlucht",
-          "Juveniel (gelere najaarsvogel)"
+          "Hoofdfoto tegen het bronbeeld: dezelfde opname (r = 1,00); rechten gelijk aan Commons.",
+          "Hoofdfoto past bij Fitis: lichte poten, duidelijke wenkbrauw, lange vleugelpunt.",
+          "Juveniele kandidaat niet geplaatst: soortbewijs leunt op fotograaflabel en pootkleur (bij dit kritieke paar onvoldoende); open voor onafhankelijke review.",
+          "Zang en roep: rechten VERIFIED, soort en geluidstype alleen bronlabel (NOT TESTED).",
+          "Geen vrije-vluchtfoto gevonden (enige treffer was een historische illustratie)."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/fitis",
+          "https://stats.sovon.nl/stats/soort/13120",
+          "docs/media-intake/2026-11-16/origcheck-r16/origcheck.json",
+          "docs/media-intake/2026-11-16/r16-discover/candidates.json",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R16_TJIFTJAF_FITIS_FLUITER_2026-11-16_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on physical device; local source/photo review and Chromium only",
+        "independence": "PARTIAL / origcheck by Claude; no independent reviewer",
+        "fullPass": false,
+        "photoFilesInspected": 1,
+        "photoBlobSHAs": [
+          "05f8d3986fd3898b8b09e36b5178a08ddbd4b302"
+        ],
+        "photoSourceMatches": [],
+        "priorPhotoMatches": [],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [],
+        "contentStatus": "PARTIALLY REVIEWED (all shown photos checked against source images; no flight photo; audio source label only; no FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R16 node/browser tests run separately."
       }
     },
     {
@@ -5227,43 +5268,75 @@
         "oldClaimsKeptNotReapproved": true
       },
       "currentAssets": {
-        "imageSlots": [],
+        "imageSlots": [
+          {
+            "role": "Hoofdfoto",
+            "path": "/assets/species/sp058.webp",
+            "oldRights": "VERIFIED (origcheck F3-R16: Commons, Mike Duchstein, CC BY-SA 4.0)",
+            "addedIn": "F3-R16-review"
+          },
+          {
+            "role": "Overige herkenningsfoto's (fladderend bij blad; niet echte vrije vlucht)",
+            "path": "/assets/species/plumage/sp058-flight.webp",
+            "oldRights": "VERIFIED (origcheck F3-R16: Commons, Andrey Gulivanov, CC BY 2.0)",
+            "addedIn": "F3-R16-review"
+          }
+        ],
         "existingAudioCount": 0,
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R16",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium 320/360/390 px via tests/test_lookalike_r16_browser.py; no physical device)",
+          "endToEndGuideUI": "PARTIALLY TESTED (Chromium species card and lookalike panels; no device or offline run)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "independentSecondReview": "NOT TESTED (own re-inspection is not independent)",
+          "ebirdDistributionAndBias": "BLOCKED (eBird Anubis bot-check in F3-R15; not retried in R16 because new URLs needed owner approval while the owner was away; parked, not bypassed)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (one publisher for length; Blasco-Zumeta & Heinze PDF not opened: request needed owner approval while away; wingspan/weight unverified)",
+          "creditsAndCleanAudioUI": "NOT TESTED (no audio)",
+          "audioRecordingsAuthenticity": "BLOCKED (no recording; no reliable automatic species-verification method, see AUDIOCHECK_PROTOCOL v0.2)",
+          "audioLicenseAndAttribution": "BLOCKED (no recording)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (no audio file)",
+          "soundRolesSongCall": "PARTIALLY TESTED (text only; song description matches Vogelbescherming)",
+          "photoOriginalIdentity": "VERIFIED (origcheck 16-11-2026: hero r = 1.00; fluttering photo crop r = 0.777 below the automatic threshold, visually the same shot in the side-by-side)",
+          "photoIndividualRights": "VERIFIED (current Commons author and licence match for both photos)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (adult hero matches Vogelbescherming: lemon-yellow throat and breast, white belly; fluttering photo shows extended legs and stays out of the flight role; juvenile candidates were nest photos without author field; no free-flight photo)",
+          "photoPairComparisons": "PARTIALLY TESTED (Fitis and Tjiftjaf panels with verified photos)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming species page read 16-11-2026: plumage, sexes alike, two song types, habitat, numbers, migration; ANWB-vogelgids NOT TESTED: no accessible edition in this environment)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon 16-11-2026: 1500–2600 pairs 2018–2020; significant decline since 1990, no significant change last 12 years; app text 'afnemend' and months apr–aug recorded as discrepancies)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-031 Fitis, LK-032 Tjiftjaf; Spotvogel not yet worked out)"
         },
         "findings": [
-          "Geen lokaal geregistreerde zang of roep",
-          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
+          "Twee lokale foto's: hoofdfoto r = 1,00; fladderfoto uitsnede r = 0,777, visueel dezelfde opname; rechten gelijk aan Commons.",
+          "Nieuw kennisprofiel (Vogelbescherming + Sovon); geen eerdere audit.",
+          "Bronverschillen vastgelegd: lengte 11–13 cm vs 12 cm, maanden apr–aug vs vertrek half september, 'afnemend' vs Sovon laatste 12 jaar stabiel.",
+          "Geen juveniel- of vluchtfoto (kandidaten waren nestfoto's zonder auteur of neerstrijken); geen geluid."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/fluiter",
+          "https://stats.sovon.nl/stats/soort/13080",
+          "docs/media-intake/2026-11-16/origcheck-r16/origcheck.json",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R16_TJIFTJAF_FITIS_FLUITER_2026-11-16_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on physical device; local source/photo review and Chromium only",
+        "independence": "PARTIAL / origcheck by Claude; no independent reviewer",
+        "fullPass": false,
+        "photoFilesInspected": 2,
+        "photoBlobSHAs": [
+          "a2037d58cc2e890c6caf67033e178ccda7bb67c1",
+          "48f46c58502e17915b5e81edd88b4cca623c4258"
+        ],
+        "photoSourceMatches": [],
+        "priorPhotoMatches": [],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [],
+        "contentStatus": "PARTIALLY REVIEWED (all shown photos checked against source images; no flight photo; audio source label only; no FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R16 node/browser tests run separately."
       }
     },
     {

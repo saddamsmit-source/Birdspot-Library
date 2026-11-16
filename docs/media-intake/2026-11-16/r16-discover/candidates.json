@@ -1,0 +1,539 @@
+{
+  "generated": "2026-11-16T21:12:19Z",
+  "userAgent": "BirdspotLibrary-media-intake/1.0 (https://github.com/saddamsmit-source/Birdspot-Library; build-time license-checked import)",
+  "licensePolicy": "CC0 / publiek domein / CC BY / CC BY-SA; NC en ND uitgesloten",
+  "status": "CANDIDATES ONLY - niet goedgekeurd, niet in de app",
+  "queries": [
+    {
+      "id": "sp056_flight",
+      "speciesId": "sp056",
+      "role": "flight",
+      "kind": "image",
+      "search": "Phylloscopus collybita flight filetype:bitmap",
+      "candidates": [
+        {
+          "title": "File:Flight design.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Flight_design.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Flight_design.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Flight_design.jpg/960px-Flight_design.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "f8c63362544c79ad2128e46f0971364712955109",
+          "size": 2769191,
+          "width": 2466,
+          "height": 1638,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Falco2022",
+          "credit": "Own work",
+          "description": "The shot for me represents the agility in floating in the air, based on the perfect conformation that nature has provided. It can be defined as a perfect design. (Close-ups category).",
+          "date": "2008-03-02 09:58:56",
+          "categories": [
+            "Phylloscopidae in Italy",
+            "Phylloscopus collybita"
+          ],
+          "preview": "sp056_flight_01.jpg"
+        },
+        {
+          "title": "File:Chiff Chaff (13324838524).jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Chiff_Chaff_(13324838524).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Chiff_Chaff_%2813324838524%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Chiff_Chaff_%2813324838524%29.jpg/960px-Chiff_Chaff_%2813324838524%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "a13f0ae2e4bbf31c485d9435d5cb68f3127af583",
+          "size": 16324019,
+          "width": 4649,
+          "height": 3036,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "author": "Jacob Spinks from Northamptonshire, England",
+          "credit": "Chiff Chaff",
+          "description": "Taken in my Garden and this image is best viewed large. A small olive-brown warbler which actively flits through trees and shrubs, with a distinctive tail-wagging movement. Less bright than the similar willow warbler and readily distinguished by its song, from where it gets its name. Picks insects from trees and also flies out to snap them up in flight. Status: Green Population: UK Breeding: 1,200",
+          "date": "2014-03-22 09:17",
+          "categories": [
+            "Phylloscopus collybita",
+            "Phylloscopus collybita in England"
+          ],
+          "preview": "sp056_flight_02.jpg"
+        },
+        {
+          "title": "File:Tjif-tjaf-1 (28541592652).jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Tjif-tjaf-1_(28541592652).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Tjif-tjaf-1_%2828541592652%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://upload.wikimedia.org/wikipedia/commons/9/99/Tjif-tjaf-1_%2828541592652%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "sha1": "5b568f983b9784003e7645d9b0100e866f7b183f",
+          "size": 106405,
+          "width": 800,
+          "height": 533,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "author": "yves hoebeke",
+          "credit": "tjif-tjaf-1.jpg",
+          "description": "tjif-tjaf-1.jpg",
+          "date": "2015-06-07 08:07",
+          "categories": [
+            "Birds in June 2015",
+            "Phylloscopus collybita in flight"
+          ],
+          "preview": "sp056_flight_03.jpg"
+        }
+      ],
+      "rejectedForLicense": []
+    },
+    {
+      "id": "sp056_juv",
+      "speciesId": "sp056",
+      "role": "juv",
+      "kind": "image",
+      "search": "Phylloscopus collybita juvenile filetype:bitmap",
+      "candidates": [
+        {
+          "title": "File:Chiffchaff Phylloscopus collybita 1.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Chiffchaff_Phylloscopus_collybita_1.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Chiffchaff_Phylloscopus_collybita_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Chiffchaff_Phylloscopus_collybita_1.jpg/960px-Chiffchaff_Phylloscopus_collybita_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "8014bcf78845282dfeaa86197b411c0f52c08856",
+          "size": 712730,
+          "width": 1357,
+          "height": 905,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+          "author": "mnemo",
+          "credit": "Own work",
+          "description": "A juvenile Chiffchaff (Phylloscopus collybita) sitting in a birch tree in Latikberg, west of Vilhelmina in Sweden. Since I'm not a ornithologist myself I wasn't entirely sure if this was a Chiffchaff or a Willow Warbler but I asked around the Swedish Ornithology Association: http://www.sofnet.org/index.asp?DocID=x&lev=1276&topicID=14006",
+          "date": "2010-07-25",
+          "categories": [
+            "Phylloscopidae in Sweden",
+            "Phylloscopus collybita"
+          ],
+          "preview": "sp056_juv_01.jpg"
+        },
+        {
+          "title": "File:Chiffchaff Phylloscopus collybita 2.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Chiffchaff_Phylloscopus_collybita_2.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Chiffchaff_Phylloscopus_collybita_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Chiffchaff_Phylloscopus_collybita_2.jpg/960px-Chiffchaff_Phylloscopus_collybita_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "13e8d8d9791a40de5a42feed66f2ef51f55a009a",
+          "size": 2242320,
+          "width": 2592,
+          "height": 1729,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+          "author": "mnemo",
+          "credit": "Own work",
+          "description": "A juvenile Chiffchaff (Phylloscopus collybita) sitting in a birch tree in Latikberg, west of Vilhelmina in Sweden. Since I'm not a ornithologist myself I wasn't entirely sure if this was a Chiffchaff or a Willow Warbler but I asked around the Swedish Ornithology Association: http://www.sofnet.org/index.asp?DocID=x&lev=1276&topicID=14006",
+          "date": "2010-07-25",
+          "categories": [
+            "Phylloscopidae in Sweden",
+            "Phylloscopus collybita"
+          ],
+          "preview": "sp056_juv_02.jpg"
+        },
+        {
+          "title": "File:Chiffchaff Phylloscopus collybita 3.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Chiffchaff_Phylloscopus_collybita_3.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Chiffchaff_Phylloscopus_collybita_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Chiffchaff_Phylloscopus_collybita_3.jpg/960px-Chiffchaff_Phylloscopus_collybita_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "150285ab466190f1d1ec906123143aaecc1632a6",
+          "size": 672392,
+          "width": 1413,
+          "height": 941,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+          "author": "mnemo",
+          "credit": "Own work",
+          "description": "A juvenile Chiffchaff (Phylloscopus collybita) sitting in a birch tree in Latikberg, west of Vilhelmina in Sweden. Since I'm not a ornithologist myself I wasn't entirely sure if this was a Chiffchaff or a Willow Warbler but I asked around the Swedish Ornithology Association: http://sofnet.org/index.asp?DocID=x&lev=1276&topicID=14006",
+          "date": "2010-07-25",
+          "categories": [
+            "Phylloscopidae in Sweden",
+            "Phylloscopus collybita"
+          ],
+          "preview": "sp056_juv_03.jpg"
+        },
+        {
+          "title": "File:Naturalis Biodiversity Center - RMNH.AVES.60790 2 - Phylloscopus collybita collybita (Vieillot, 1817) - Sylviidae - bird skin specimen.jpeg",
+          "page": "https://commons.wikimedia.org/wiki/File:Naturalis_Biodiversity_Center_-_RMNH.AVES.60790_2_-_Phylloscopus_collybita_collybita_(Vieillot,_1817)_-_Sylviidae_-_bird_skin_specimen.jpeg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Naturalis_Biodiversity_Center_-_RMNH.AVES.60790_2_-_Phylloscopus_collybita_collybita_%28Vieillot%2C_1817%29_-_Sylviidae_-_bird_skin_specimen.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Naturalis_Biodiversity_Center_-_RMNH.AVES.60790_2_-_Phylloscopus_collybita_collybita_%28Vieillot%2C_1817%29_-_Sylviidae_-_bird_skin_specimen.jpeg/960px-Naturalis_Biodiversity_Center_-_RMNH.AVES.60790_2_-_Phylloscopus_collybita_collybita_%28Vieillot%2C_1817%29_-_Sylviidae_-_bird_skin_specimen.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "75a79be6dc303809c298882fc6965510bf2f053f",
+          "size": 294353,
+          "width": 1920,
+          "height": 1277,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC0",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "author": "Vieillot, 1817",
+          "credit": "Naturalis Biodiversity Center",
+          "description": "Phylloscopus collybita collybita (Vieillot, 1817)",
+          "date": "",
+          "categories": [
+            "Phylloscopus collybita (museum specimens)",
+            "Songbird specimens at Naturalis Biodiversity Center"
+          ],
+          "preview": "sp056_juv_04.jpg"
+        },
+        {
+          "title": "File:Naturalis Biodiversity Center - RMNH.AVES.60790 1 - Phylloscopus collybita collybita (Vieillot, 1817) - Sylviidae - bird skin specimen.jpeg",
+          "page": "https://commons.wikimedia.org/wiki/File:Naturalis_Biodiversity_Center_-_RMNH.AVES.60790_1_-_Phylloscopus_collybita_collybita_(Vieillot,_1817)_-_Sylviidae_-_bird_skin_specimen.jpeg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Naturalis_Biodiversity_Center_-_RMNH.AVES.60790_1_-_Phylloscopus_collybita_collybita_%28Vieillot%2C_1817%29_-_Sylviidae_-_bird_skin_specimen.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Naturalis_Biodiversity_Center_-_RMNH.AVES.60790_1_-_Phylloscopus_collybita_collybita_%28Vieillot%2C_1817%29_-_Sylviidae_-_bird_skin_specimen.jpeg/960px-Naturalis_Biodiversity_Center_-_RMNH.AVES.60790_1_-_Phylloscopus_collybita_collybita_%28Vieillot%2C_1817%29_-_Sylviidae_-_bird_skin_specimen.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "0c985b7776bcd431ef41465a5cf5f05f5712d713",
+          "size": 283768,
+          "width": 1920,
+          "height": 1277,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC0",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "author": "Vieillot, 1817",
+          "credit": "Naturalis Biodiversity Center",
+          "description": "Phylloscopus collybita collybita (Vieillot, 1817)",
+          "date": "",
+          "categories": [
+            "Phylloscopus collybita (museum specimens)",
+            "Songbird specimens at Naturalis Biodiversity Center"
+          ],
+          "preview": "sp056_juv_05.jpg"
+        },
+        {
+          "title": "File:Naturalis Biodiversity Center - RMNH.AVES.58076 2 - Phylloscopus collybita collybita (Vieillot, 1817) - Sylviidae - bird skin specimen.jpeg",
+          "page": "https://commons.wikimedia.org/wiki/File:Naturalis_Biodiversity_Center_-_RMNH.AVES.58076_2_-_Phylloscopus_collybita_collybita_(Vieillot,_1817)_-_Sylviidae_-_bird_skin_specimen.jpeg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Naturalis_Biodiversity_Center_-_RMNH.AVES.58076_2_-_Phylloscopus_collybita_collybita_%28Vieillot%2C_1817%29_-_Sylviidae_-_bird_skin_specimen.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Naturalis_Biodiversity_Center_-_RMNH.AVES.58076_2_-_Phylloscopus_collybita_collybita_%28Vieillot%2C_1817%29_-_Sylviidae_-_bird_skin_specimen.jpeg/960px-Naturalis_Biodiversity_Center_-_RMNH.AVES.58076_2_-_Phylloscopus_collybita_collybita_%28Vieillot%2C_1817%29_-_Sylviidae_-_bird_skin_specimen.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "c2a03a4b42be08a92cd8a01cf0f28da2eff95b35",
+          "size": 320645,
+          "width": 1920,
+          "height": 1277,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC0",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "author": "Vieillot, 1817",
+          "credit": "Naturalis Biodiversity Center",
+          "description": "Phylloscopus collybita collybita (Vieillot, 1817)",
+          "date": "",
+          "categories": [
+            "Collection Piet Hens",
+            "Phylloscopus collybita (museum specimens)",
+            "Songbird specimens at Naturalis Biodiversity Center"
+          ],
+          "preview": "sp056_juv_06.jpg"
+        }
+      ],
+      "rejectedForLicense": []
+    },
+    {
+      "id": "sp057_flight",
+      "speciesId": "sp057",
+      "role": "flight",
+      "kind": "image",
+      "search": "Phylloscopus trochilus flight filetype:bitmap",
+      "candidates": [
+        {
+          "title": "File:Bird Watching (Selous1901) p254.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Bird_Watching_(Selous1901)_p254.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Bird_Watching_%28Selous1901%29_p254.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Bird_Watching_%28Selous1901%29_p254.jpg/960px-Bird_Watching_%28Selous1901%29_p254.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "e5224d36a275caa6cdf2c027105c9dee0207c571",
+          "size": 537236,
+          "width": 1073,
+          "height": 1369,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "Public domain",
+          "licenseUrl": "",
+          "author": "Joseph Smit / Edmund Selous",
+          "credit": "https://archive.org/details/cu31924000160493",
+          "description": "Image on page 254 of Bird Watching by Edmund Selous (1901). Fairy Artillery: Willow-Warbler ( Phylloscopus trochilus ) pecking catkins in flight, by Joseph Smit (djvu page 292.",
+          "date": "1901",
+          "categories": [
+            "Bird Watching (Selous 1901)/Joseph Smit",
+            "Phylloscopus trochilus (illustrations)"
+          ],
+          "preview": "sp057_flight_01.jpg"
+        }
+      ],
+      "rejectedForLicense": []
+    },
+    {
+      "id": "sp057_juv",
+      "speciesId": "sp057",
+      "role": "juv",
+      "kind": "image",
+      "search": "Phylloscopus trochilus juvenile filetype:bitmap",
+      "candidates": [
+        {
+          "title": "File:Juveniler Fitis (Phylloscopus trochilus) - Spiekeroog, Nationalpark Niedersächsisches Wattenmeer.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Juveniler_Fitis_(Phylloscopus_trochilus)_-_Spiekeroog,_Nationalpark_Nieders%C3%A4chsisches_Wattenmeer.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/93/Juveniler_Fitis_%28Phylloscopus_trochilus%29_-_Spiekeroog%2C_Nationalpark_Nieders%C3%A4chsisches_Wattenmeer.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Juveniler_Fitis_%28Phylloscopus_trochilus%29_-_Spiekeroog%2C_Nationalpark_Nieders%C3%A4chsisches_Wattenmeer.jpg/960px-Juveniler_Fitis_%28Phylloscopus_trochilus%29_-_Spiekeroog%2C_Nationalpark_Nieders%C3%A4chsisches_Wattenmeer.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "feb0dd1dcead444e99c9c9a58e6cef6d8459315e",
+          "size": 9568218,
+          "width": 4506,
+          "height": 3004,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Stephan Sprinz",
+          "credit": "Own work",
+          "description": "Juveniler Fitis (Phylloscopus trochilus) - Spiekeroog, Nationalpark Niedersächsisches Wattenmeer",
+          "date": "2018-06-15 12:56:52",
+          "categories": [
+            "Birds of Spiekeroog",
+            "June 2018 in Lower Saxony",
+            "Phylloscopus trochilus"
+          ],
+          "preview": "sp057_juv_01.jpg"
+        },
+        {
+          "title": "File:Naturalis Biodiversity Center - RMNH.AVES.49191 2 - Phylloscopus trochilus trochilus (Linnaeus, 1758) - Sylviidae - bird skin specimen.jpeg",
+          "page": "https://commons.wikimedia.org/wiki/File:Naturalis_Biodiversity_Center_-_RMNH.AVES.49191_2_-_Phylloscopus_trochilus_trochilus_(Linnaeus,_1758)_-_Sylviidae_-_bird_skin_specimen.jpeg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/67/Naturalis_Biodiversity_Center_-_RMNH.AVES.49191_2_-_Phylloscopus_trochilus_trochilus_%28Linnaeus%2C_1758%29_-_Sylviidae_-_bird_skin_specimen.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Naturalis_Biodiversity_Center_-_RMNH.AVES.49191_2_-_Phylloscopus_trochilus_trochilus_%28Linnaeus%2C_1758%29_-_Sylviidae_-_bird_skin_specimen.jpeg/960px-Naturalis_Biodiversity_Center_-_RMNH.AVES.49191_2_-_Phylloscopus_trochilus_trochilus_%28Linnaeus%2C_1758%29_-_Sylviidae_-_bird_skin_specimen.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "a0841fe60b314010bb8f5b8784e157d84f4ead83",
+          "size": 298537,
+          "width": 1920,
+          "height": 1277,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC0",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "author": "Linnaeus, 1758",
+          "credit": "Naturalis Biodiversity Center",
+          "description": "Phylloscopus trochilus trochilus (Linnaeus, 1758)",
+          "date": "",
+          "categories": [
+            "Phylloscopus trochilus (museum specimens)",
+            "Songbird specimens at Naturalis Biodiversity Center"
+          ],
+          "preview": "sp057_juv_02.jpg"
+        },
+        {
+          "title": "File:Naturalis Biodiversity Center - RMNH.AVES.137763 1 - Phylloscopus trochilus trochilus (Linnaeus, 1758) - Sylviidae - bird skin specimen.jpeg",
+          "page": "https://commons.wikimedia.org/wiki/File:Naturalis_Biodiversity_Center_-_RMNH.AVES.137763_1_-_Phylloscopus_trochilus_trochilus_(Linnaeus,_1758)_-_Sylviidae_-_bird_skin_specimen.jpeg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Naturalis_Biodiversity_Center_-_RMNH.AVES.137763_1_-_Phylloscopus_trochilus_trochilus_%28Linnaeus%2C_1758%29_-_Sylviidae_-_bird_skin_specimen.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Naturalis_Biodiversity_Center_-_RMNH.AVES.137763_1_-_Phylloscopus_trochilus_trochilus_%28Linnaeus%2C_1758%29_-_Sylviidae_-_bird_skin_specimen.jpeg/960px-Naturalis_Biodiversity_Center_-_RMNH.AVES.137763_1_-_Phylloscopus_trochilus_trochilus_%28Linnaeus%2C_1758%29_-_Sylviidae_-_bird_skin_specimen.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "f173c3bf88f8a820b3eff6d31dd58c5013ad926e",
+          "size": 322866,
+          "width": 1920,
+          "height": 1277,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC0",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "author": "Linnaeus, 1758",
+          "credit": "Naturalis Biodiversity Center",
+          "description": "Phylloscopus trochilus trochilus (Linnaeus, 1758)",
+          "date": "",
+          "categories": [
+            "Phylloscopus trochilus (museum specimens)",
+            "Songbird specimens at Naturalis Biodiversity Center"
+          ],
+          "preview": "sp057_juv_03.jpg"
+        },
+        {
+          "title": "File:Naturalis Biodiversity Center - RMNH.AVES.6986 1 - Phylloscopus trochilus trochilus (Linnaeus, 1758) - Sylviidae - bird skin specimen.jpeg",
+          "page": "https://commons.wikimedia.org/wiki/File:Naturalis_Biodiversity_Center_-_RMNH.AVES.6986_1_-_Phylloscopus_trochilus_trochilus_(Linnaeus,_1758)_-_Sylviidae_-_bird_skin_specimen.jpeg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Naturalis_Biodiversity_Center_-_RMNH.AVES.6986_1_-_Phylloscopus_trochilus_trochilus_%28Linnaeus%2C_1758%29_-_Sylviidae_-_bird_skin_specimen.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Naturalis_Biodiversity_Center_-_RMNH.AVES.6986_1_-_Phylloscopus_trochilus_trochilus_%28Linnaeus%2C_1758%29_-_Sylviidae_-_bird_skin_specimen.jpeg/960px-Naturalis_Biodiversity_Center_-_RMNH.AVES.6986_1_-_Phylloscopus_trochilus_trochilus_%28Linnaeus%2C_1758%29_-_Sylviidae_-_bird_skin_specimen.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "61bdd11e2d6c5f3d351d0e30a5aa9270e59d849b",
+          "size": 322690,
+          "width": 1920,
+          "height": 1277,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC0",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "author": "Linnaeus, 1758",
+          "credit": "Naturalis Biodiversity Center",
+          "description": "Phylloscopus trochilus trochilus (Linnaeus, 1758)",
+          "date": "",
+          "categories": [
+            "Phylloscopus trochilus (museum specimens)",
+            "Songbird specimens at Naturalis Biodiversity Center"
+          ],
+          "preview": "sp057_juv_04.jpg"
+        },
+        {
+          "title": "File:Naturalis Biodiversity Center - RMNH.AVES.49194 2 - Phylloscopus trochilus trochilus (Linnaeus, 1758) - Sylviidae - bird skin specimen.jpeg",
+          "page": "https://commons.wikimedia.org/wiki/File:Naturalis_Biodiversity_Center_-_RMNH.AVES.49194_2_-_Phylloscopus_trochilus_trochilus_(Linnaeus,_1758)_-_Sylviidae_-_bird_skin_specimen.jpeg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/58/Naturalis_Biodiversity_Center_-_RMNH.AVES.49194_2_-_Phylloscopus_trochilus_trochilus_%28Linnaeus%2C_1758%29_-_Sylviidae_-_bird_skin_specimen.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Naturalis_Biodiversity_Center_-_RMNH.AVES.49194_2_-_Phylloscopus_trochilus_trochilus_%28Linnaeus%2C_1758%29_-_Sylviidae_-_bird_skin_specimen.jpeg/960px-Naturalis_Biodiversity_Center_-_RMNH.AVES.49194_2_-_Phylloscopus_trochilus_trochilus_%28Linnaeus%2C_1758%29_-_Sylviidae_-_bird_skin_specimen.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "4578371e37f95e18f649824a82cc2eda4ccabf2a",
+          "size": 296066,
+          "width": 1920,
+          "height": 1277,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC0",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "author": "Linnaeus, 1758",
+          "credit": "Naturalis Biodiversity Center",
+          "description": "Phylloscopus trochilus trochilus (Linnaeus, 1758)",
+          "date": "",
+          "categories": [
+            "Phylloscopus trochilus (museum specimens)",
+            "Songbird specimens at Naturalis Biodiversity Center"
+          ],
+          "preview": "sp057_juv_05.jpg"
+        },
+        {
+          "title": "File:Naturalis Biodiversity Center - RMNH.AVES.137792 2 - Phylloscopus trochilus trochilus (Linnaeus, 1758) - Sylviidae - bird skin specimen.jpeg",
+          "page": "https://commons.wikimedia.org/wiki/File:Naturalis_Biodiversity_Center_-_RMNH.AVES.137792_2_-_Phylloscopus_trochilus_trochilus_(Linnaeus,_1758)_-_Sylviidae_-_bird_skin_specimen.jpeg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Naturalis_Biodiversity_Center_-_RMNH.AVES.137792_2_-_Phylloscopus_trochilus_trochilus_%28Linnaeus%2C_1758%29_-_Sylviidae_-_bird_skin_specimen.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Naturalis_Biodiversity_Center_-_RMNH.AVES.137792_2_-_Phylloscopus_trochilus_trochilus_%28Linnaeus%2C_1758%29_-_Sylviidae_-_bird_skin_specimen.jpeg/960px-Naturalis_Biodiversity_Center_-_RMNH.AVES.137792_2_-_Phylloscopus_trochilus_trochilus_%28Linnaeus%2C_1758%29_-_Sylviidae_-_bird_skin_specimen.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "7422607204be23275b8c38a5bc412403ff228261",
+          "size": 319718,
+          "width": 1920,
+          "height": 1277,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC0",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "author": "Linnaeus, 1758",
+          "credit": "Naturalis Biodiversity Center",
+          "description": "Phylloscopus trochilus trochilus (Linnaeus, 1758)",
+          "date": "",
+          "categories": [
+            "Phylloscopus trochilus (museum specimens)",
+            "Songbird specimens at Naturalis Biodiversity Center"
+          ],
+          "preview": "sp057_juv_06.jpg"
+        }
+      ],
+      "rejectedForLicense": []
+    },
+    {
+      "id": "sp058_flight",
+      "speciesId": "sp058",
+      "role": "flight",
+      "kind": "image",
+      "search": "Phylloscopus sibilatrix flight filetype:bitmap",
+      "candidates": [
+        {
+          "title": "File:Wood warbler (49979490848).jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Wood_warbler_(49979490848).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Wood_warbler_%2849979490848%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Wood_warbler_%2849979490848%29.jpg/960px-Wood_warbler_%2849979490848%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "fef817b456e50aee45e8061a04de88a17e1d77ca",
+          "size": 7582076,
+          "width": 5336,
+          "height": 3557,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "author": "Andrey Gulivanov",
+          "credit": "Wood warbler",
+          "description": "St Petersburg/Leningrad Oblast. Wood warbler",
+          "date": "Taken on 5 May 2020, 07:22",
+          "categories": [
+            "Phylloscopus sibilatrix in Russia",
+            "Phylloscopus sibilatrix in flight"
+          ],
+          "preview": "sp058_flight_01.jpg"
+        }
+      ],
+      "rejectedForLicense": [
+        {
+          "title": "File:A history of British birds - by the Rev. F. O. Morris (1862) (14752455665).jpg",
+          "license": "No restrictions"
+        }
+      ]
+    },
+    {
+      "id": "sp058_juv",
+      "speciesId": "sp058",
+      "role": "juv",
+      "kind": "image",
+      "search": "Phylloscopus sibilatrix juvenile filetype:bitmap",
+      "candidates": [
+        {
+          "title": "File:Phylloscopus sibilatrix juv..JPG",
+          "page": "https://commons.wikimedia.org/wiki/File:Phylloscopus_sibilatrix_juv..JPG",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/df/Phylloscopus_sibilatrix_juv..JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://upload.wikimedia.org/wikipedia/commons/d/df/Phylloscopus_sibilatrix_juv..JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "sha1": "93eaa92dbfeecc936294e1d7eea6c11c50a853d0",
+          "size": 227825,
+          "width": 861,
+          "height": 687,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "author": "",
+          "credit": "",
+          "description": "",
+          "date": "",
+          "categories": [
+            "Phylloscopidae (juvenile)",
+            "Phylloscopidae nests",
+            "Phylloscopus sibilatrix"
+          ],
+          "preview": "sp058_juv_01.jpg"
+        },
+        {
+          "title": "File:Phylloscopus sibilatrix juv.1.JPG",
+          "page": "https://commons.wikimedia.org/wiki/File:Phylloscopus_sibilatrix_juv.1.JPG",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Phylloscopus_sibilatrix_juv.1.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Phylloscopus_sibilatrix_juv.1.JPG/960px-Phylloscopus_sibilatrix_juv.1.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "828d9eafa6138b9b00d9694c962593d513470b30",
+          "size": 263249,
+          "width": 1042,
+          "height": 730,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "author": "",
+          "credit": "",
+          "description": "",
+          "date": "",
+          "categories": [
+            "Phylloscopidae (juvenile)",
+            "Phylloscopidae nests",
+            "Phylloscopus sibilatrix"
+          ],
+          "preview": "sp058_juv_02.jpg"
+        },
+        {
+          "title": "File:Zaliosios pecialindos jaunikliai.JPG",
+          "page": "https://commons.wikimedia.org/wiki/File:Zaliosios_pecialindos_jaunikliai.JPG",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Zaliosios_pecialindos_jaunikliai.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/04/Zaliosios_pecialindos_jaunikliai.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "sha1": "3d21cbf059c3e080fa61586a3b146586ef8f5503",
+          "size": 227688,
+          "width": 861,
+          "height": 687,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "author": "Algirdas at Lithuanian Wikipedia",
+          "credit": "Transferred from lt.wikipedia to Commons by Hugo.arg using CommonsHelper .",
+          "description": "Šeši žaliosios pečialindos (Phylloscopus sibilatrix) jaunikliai lizde Šeima. Devynbalsiniai (Sylviidae) Foto: Algirdas , 2006 m. birželio 14 d.",
+          "date": "14 June 2006 (original upload date)",
+          "categories": [
+            "Passeriformes of Lithuania",
+            "Phylloscopidae (juvenile)",
+            "Phylloscopidae nests",
+            "Phylloscopus sibilatrix"
+          ],
+          "preview": "sp058_juv_03.jpg"
+        }
+      ],
+      "rejectedForLicense": []
+    }
+  ]
+}

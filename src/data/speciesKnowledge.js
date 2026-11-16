@@ -22,7 +22,7 @@ const DATA = {
    "edition": "online soortpagina, geraadpleegd 10-11-2026",
    "scope": "Nederland",
    "confirms": "zang, roep, poten, vleugellengte, leefgebied, aantallen 2018–2020, trend sinds 1990, broedgegevens, trek",
-   "checked": "2026-11-10",
+   "checked": "2026-11-16",
    "certainty": "hoog",
    "publisher": "Vogelbescherming Nederland"
   },
@@ -33,7 +33,7 @@ const DATA = {
    "edition": "online soortpagina, geraadpleegd 10-11-2026",
    "scope": "Nederland",
    "confirms": "zang, roep, poten, staartbeweging, leefgebied, aantallen, overwintering, broedgegevens, trek",
-   "checked": "2026-11-10",
+   "checked": "2026-11-16",
    "certainty": "hoog",
    "publisher": "Vogelbescherming Nederland"
   },
@@ -4733,6 +4733,50 @@ const DATA = {
    "checked": "2026-11-16",
    "certainty": "hoog",
    "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "VB_FLUITER": {
+   "register": "NL07",
+   "label": "Vogelbescherming — Fluiter",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/fluiter",
+   "edition": "Online geraadpleegd 16-11-2026",
+   "scope": "Nederland",
+   "confirms": "Kleed, zang, leefgebied, aantallen en trek",
+   "checked": "2026-11-16",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "SOV_FLUITER": {
+   "register": "NL01",
+   "label": "Sovon — Fluiter",
+   "url": "https://stats.sovon.nl/stats/soort/13080",
+   "edition": "Online geraadpleegd 16-11-2026",
+   "scope": "Nederland",
+   "confirms": "Broedpopulatie, trend en verspreiding",
+   "checked": "2026-11-16",
+   "certainty": "hoog",
+   "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "SOV_TJIF": {
+   "register": "NL01",
+   "label": "Sovon — Tjiftjaf",
+   "url": "https://stats.sovon.nl/stats/soort/13110",
+   "edition": "Online geraadpleegd 16-11-2026",
+   "scope": "Nederland",
+   "confirms": "Broedpopulatie, broed- en wintertrend",
+   "checked": "2026-11-16",
+   "certainty": "hoog",
+   "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "SOV_FITIS": {
+   "register": "NL01",
+   "label": "Sovon — Fitis",
+   "url": "https://stats.sovon.nl/stats/soort/13120",
+   "edition": "Online geraadpleegd 16-11-2026",
+   "scope": "Nederland",
+   "confirms": "Broedpopulatie en trend",
+   "checked": "2026-11-16",
+   "certainty": "hoog",
+   "publisher": "Sovon Vogelonderzoek Nederland"
   }
  },
  "profiles": {
@@ -5170,7 +5214,8 @@ const DATA = {
      "kind": "trend",
      "text": "Landelijke afname sinds 1990.",
      "sources": [
-      "VB_FITIS"
+      "VB_FITIS",
+      "SOV_FITIS"
      ]
     }
    ],
@@ -5427,7 +5472,8 @@ const DATA = {
      "kind": "trend",
      "text": "Tientallen jaren toename, met tijdelijke dips.",
      "sources": [
-      "VB_TJIF"
+      "VB_TJIF",
+      "SOV_TJIF"
      ]
     }
    ],
@@ -23710,6 +23756,188 @@ const DATA = {
     "Actuele aantallen en trend (Sovon) niet geraadpleegd in F3-R11; het Vogelbeschermingsbericht over aantallen is van circa 2018.",
     "Biometrie niet met twee uitgevers volgens KV-13 gecontroleerd.",
     "Geen foto van vrouwtje, juveniel of vrije vlucht in de app; geen geregistreerde zang of roep."
+   ]
+  },
+  "sp058": {
+   "summary": {
+    "text": "Mosgroen boszangertje met citroengele keel, bovenborst en wenkbrauw boven een helderwitte buik. Zingt in hoog loofbos.",
+    "sources": [
+     "VB_FLUITER"
+    ]
+   },
+   "keyMarks": [
+    {
+     "text": "Citroengele keel, bovenborst, gezicht en wenkbrauw.",
+     "sources": [
+      "VB_FLUITER"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Helderwitte buik die scherp afsteekt tegen de gele borst.",
+     "sources": [
+      "VB_FLUITER"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Bovendelen mosgroen, vaak groener dan bij Fitis en Tjiftjaf.",
+     "sources": [
+      "VB_FLUITER"
+     ],
+     "reliability": "ondersteunend"
+    }
+   ],
+   "caution": {
+    "text": "Tjiftjaf en Fitis lijken in slecht licht op de Fluiter. Let op het contrast tussen gele borst en witte buik en luister naar de zang.",
+    "sources": [
+     "VB_FLUITER"
+    ]
+   },
+   "similar": [
+    {
+     "id": "sp057",
+     "why": "Fitis heeft geelwitte keel en borst zonder scherp contrast met de buik.",
+     "sources": [
+      "VB_FLUITER",
+      "VB_FITIS"
+     ]
+    },
+    {
+     "id": "sp056",
+     "why": "Tjiftjaf is valer, met weinig kleurcontrast en een herhaald tjif-tjaf.",
+     "sources": [
+      "VB_FLUITER",
+      "VB_TJIF"
+     ]
+    }
+   ],
+   "detail": [
+    {
+     "text": "Mannetje en vrouwtje hebben hetzelfde verenkleed.",
+     "sources": [
+      "VB_FLUITER"
+     ],
+     "topic": "geslacht"
+    }
+   ],
+   "voice": [
+    {
+     "text": "Versnellende reeks tikken die eindigt in een ratel, als een munt die rondtolt.",
+     "sources": [
+      "VB_FLUITER"
+     ],
+     "kind": "zang"
+    },
+    {
+     "text": "Tweede zangtype: een reeks van vijf tot zes fluittonen.",
+     "sources": [
+      "VB_FLUITER"
+     ],
+     "kind": "zang"
+    },
+    {
+     "text": "Roep lijkt op één fluittoon uit de tweede zang, meestal enkelvoudig.",
+     "sources": [
+      "VB_FLUITER"
+     ],
+     "kind": "roep"
+    }
+   ],
+   "basis": {
+    "size": {
+     "text": "Vogelbescherming noemt een lengte van 12 cm.",
+     "sources": [
+      "VB_FLUITER"
+     ]
+    }
+   },
+   "habitat": [
+    {
+     "text": "Hoog opgaand loofbos met open bosbodem, in Nederland vooral beukenbos, ook eiken- en gemengd bos.",
+     "sources": [
+      "VB_FLUITER",
+      "SOV_FLUITER"
+     ],
+     "kind": "nederland"
+    }
+   ],
+   "status": [
+    {
+     "text": "Vrij schaarse broedvogel met 1500–2600 paren (2018–2020), vooral op de hoge gronden van Oost-, Midden- en Zuid-Nederland.",
+     "sources": [
+      "VB_FLUITER",
+      "SOV_FLUITER"
+     ],
+     "kind": "voorkomen"
+    },
+    {
+     "text": "Sinds 1990 significante afname; in de laatste twaalf jaar geen significante verandering.",
+     "sources": [
+      "SOV_FLUITER"
+     ],
+     "kind": "voorkomen"
+    }
+   ],
+   "life": [
+    {
+     "text": "Lange-afstandstrekker die overwintert in West-Afrika ten zuiden van de Sahara; aankomst half april tot half mei, vertrek rond half september.",
+     "sources": [
+      "VB_FLUITER"
+     ],
+     "kind": "trek"
+    }
+   ],
+   "discrepancies": [
+    {
+     "field": "lengte",
+     "app": "11–13 cm",
+     "source": "Vogelbescherming noemt 12 cm. Een tweede uitgever met een bereik ontbreekt nog; de bestaande band blijft staan.",
+     "sources": [
+      "VB_FLUITER"
+     ]
+    },
+    {
+     "field": "maanden",
+     "app": "april–augustus (canonieke lijst)",
+     "source": "Vogelbescherming noemt vertrek rond half september. De canonieke lijst blijft ongewijzigd tot een besluit.",
+     "sources": [
+      "VB_FLUITER"
+     ]
+    },
+    {
+     "field": "verspreiding",
+     "app": "'afnemend'",
+     "source": "Sovon: significante afname sinds 1990, maar geen significante verandering in de laatste twaalf jaar.",
+     "sources": [
+      "SOV_FLUITER"
+     ]
+    }
+   ],
+   "open": [
+    "Juvenielenfoto en vrije-vluchtfoto ontbreken (Commons-kandidaten waren nestfoto's of neerstrijken).",
+    "Geen eigen geluidsopname.",
+    "Spotvogel als verwarringssoort nog niet uitgewerkt.",
+    "Lengte, spanwijdte en gewicht zonder tweede uitgever."
+   ],
+   "critical": [
+    {
+     "feature": "Kleurcontrast borst en buik",
+     "where": "Onderzijde van opzij of schuin van voren",
+     "this": "Citroengele keel en bovenborst, scherp begrensd tegen een helderwitte buik.",
+     "other": "Fitis: geelwitte keel en borst die geleidelijk overgaan in de buik, zonder scherp contrast.",
+     "vs": [
+      "sp057"
+     ],
+     "reliability": "ondersteunend",
+     "conditions": "Goed licht en vrij zicht op keel, borst en buik.",
+     "exceptions": "Tegenlicht en bladschaduw kunnen geel en wit vertekenen; jonge Fitissen zijn in het najaar vaak geel van onderen.",
+     "supporting": "De zang (versnellende ratel of reeks fluittonen) bevestigt de soort beter dan één beeld.",
+     "sources": [
+      "VB_FLUITER",
+      "VB_FITIS"
+     ]
+    }
    ]
   }
  }
