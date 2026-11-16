@@ -1,6 +1,6 @@
 {
   "mode": "import",
-  "manifest": "tools/media/intake_selection_2026-11-16.json",
-  "requestedBy": "Claude (writerclaim PR #267)",
-  "nonce": 2
+  "manifest": "tools/media/intake_selection_2026-11-16_r10b.json",
+  "requestedBy": "Claude (writerclaim PR #268)",
+  "nonce": 3
 }

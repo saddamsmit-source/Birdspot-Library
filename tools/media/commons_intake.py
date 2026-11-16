@@ -44,6 +44,50 @@ REGISTRY = ROOT / "assets/species/field-guide-media.json"
 ALLOWED = re.compile(r"^(CC0|CC0 1\.0|Public domain|PD|CC BY(-SA)? \d(\.\d)?( [A-Za-z\-]+)?)$", re.I)
 FORBIDDEN = re.compile(r"\b(NC|ND)\b|noncommercial|no ?deriv", re.I)
 MAX_BYTES = 25_000_000
+# Alleen deze mediamappen mogen door de intake worden beschreven (padbewaking).
+ALLOWED_DIRS = {"image": ("assets/species/plumage/",), "audio": ("assets/species/audio/",)}
+ALLOWED_EXT = {"image": ".webp", "audio": ".mp3"}
+
+
+class IntakeError(ValueError):
+    """Een manifestregel voldoet niet aan bron-, licentie-, pad- of reviewregels."""
+
+
+def norm_name(value: str) -> str:
+    return re.sub(r"\s+", " ", (value or "")).strip().casefold()
+
+
+def safe_dest(asset: str, kind: str) -> Path:
+    """Uitvoerpad moet binnen de toegestane mediamap blijven, juiste extensie hebben en nog niet bestaan."""
+    media = "audio" if kind == "audio" else "image"
+    rel = (asset or "").lstrip("/")
+    if ".." in Path(rel).parts or "\\" in rel:
+        raise IntakeError("Pad met '..' of backslash: " + asset)
+    dest = (ROOT / rel).resolve()
+    root = ROOT.resolve()
+    if not any(str(dest).startswith(str(root / d)) for d in ALLOWED_DIRS[media]):
+        raise IntakeError(f"Uitvoerpad buiten toegestane mediamap: {asset}")
+    if dest.suffix != ALLOWED_EXT[media]:
+        raise IntakeError(f"Onjuiste extensie voor {media}: {asset}")
+    if dest.exists():
+        raise IntakeError("Weiger overschrijven: " + asset)
+    return dest
+
+
+def check_item(e: dict, info: dict | None) -> None:
+    """Controleert één manifestregel tegen de actuele Commons-metadata, zonder netwerk."""
+    if not info:
+        raise IntakeError("Niet gevonden op Commons: " + e.get("title", "?"))
+    if info["sha1"] != e["sha1"]:
+        raise IntakeError(f"SHA-1 gewijzigd voor {e['title']}: {info['sha1']} != {e['sha1']}")
+    if not license_ok(info["license"]) or info["license"] != e["license"]:
+        raise IntakeError(f"Licentie afwijkend voor {e['title']}: {info['license']}")
+    if norm_name(info["author"]) != norm_name(e["author"]):
+        raise IntakeError(f"Auteur wijkt af van Commons voor {e['title']}: {info['author']!r} != {e['author']!r}")
+    if e["kind"] == "audio":
+        heard = e.get("listened") or {}
+        if not all(heard.get(k) for k in ("by", "date", "species", "soundType", "quality")):
+            raise IntakeError("Audio pas importeren na menselijke luistercontrole (soort, geluidsoort, kwaliteit): " + e["title"])
 
 
 def get(url: str, params: dict | None = None, binary: bool = False):
@@ -167,14 +211,9 @@ def do_import(manifest: Path) -> None:
     infos = imageinfo([e["title"] for e in spec["items"]])
     log = []
     for e in spec["items"]:
-        info = infos.get(e["title"]) or sys.exit("Niet gevonden op Commons: " + e["title"])
-        if info["sha1"] != e["sha1"]:
-            sys.exit(f"SHA-1 gewijzigd voor {e['title']}: {info['sha1']} != {e['sha1']}")
-        if not license_ok(info["license"]) or info["license"] != e["license"]:
-            sys.exit(f"Licentie afwijkend voor {e['title']}: {info['license']}")
-        dest = ROOT / e["asset"].lstrip("/")
-        if dest.exists():
-            sys.exit("Weiger overschrijven: " + e["asset"])
+        info = infos.get(e["title"])
+        check_item(e, info)
+        dest = safe_dest(e["asset"], e["kind"])
         data = get(info["url"], binary=True)
         if hashlib.sha1(data).hexdigest() != e["sha1"]:
             sys.exit("Download-SHA-1 klopt niet: " + e["title"])

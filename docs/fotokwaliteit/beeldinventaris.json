@@ -813,11 +813,11 @@
     "sp038 GUIDE_POSES[0]"
    ],
    "sha1": "47fb95453bae3932add8204dd9b137da5ebe1145",
-   "class": "vlucht",
-   "airborne": true,
+   "class": "landen",
+   "airborne": false,
    "source": "vluchtcontrole",
-   "decision": "goedgekeurd",
-   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+   "decision": "uit-rol",
+   "note": "Fotograaf beschrijft 'comes in to land'; beeld toont geheven vleugels en naar voren gestrekte poten met gespreide tenen: neerstrijken, geen vrije vlucht."
   },
   "/assets/species/plumage/sp039-flight.webp": {
    "refs": [
@@ -5110,6 +5110,17 @@
    "airborne": false,
    "source": "Visuele controle F3-R10-media (2026-11-16, Claude; geen onafhankelijke certificering)",
    "note": "Jonge Kneu op een tak tussen bladeren: gestreept, geen rood, grijze snavel."
+  },
+  "/assets/species/plumage/sp037-flight-free.webp": {
+   "refs": [
+    "sp037 GUIDE_POSES[1]"
+   ],
+   "sha1": "52998516016abc36c0909f5cabe4e807ecbf7c10",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "voorwaardelijk",
+   "note": "Vrij in de lucht, poten omlaag; sterke HDR-kleurzweem. Voorlopig."
   }
  }
 }

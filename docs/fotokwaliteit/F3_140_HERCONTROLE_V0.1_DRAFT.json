@@ -48,7 +48,7 @@
     "total": 140,
     "oldF2Touched": 84,
     "oldAudited": 101,
-    "oldNinePointVerified": 15,
+    "oldNinePointVerified": 14,
     "audioPresent": 64,
     "audioMissing": 76,
     "firstBatchStarted": 3,
@@ -3405,10 +3405,11 @@
       "sourceCohort": "docs/fotokwaliteit/soortaudit-status.json",
       "historic": {
         "audited": true,
-        "oldVerdict": "VERIFIED",
+        "oldVerdict": "PARTIALLY TESTED",
         "oldF2Visited": true,
         "oldAssetCount": 5,
-        "oldClaimsKeptNotReapproved": true
+        "oldClaimsKeptNotReapproved": true,
+        "oldVerdictNote": "Was VERIFIED; door F3-R10b (voorwaardelijke extra vluchtfoto) in de soortaudit PARTIALLY TESTED."
       },
       "currentAssets": {
         "imageSlots": [
@@ -3431,6 +3432,12 @@
             "role": "In vlucht",
             "path": "/assets/species/plumage/sp037-flight.webp",
             "oldRights": "VERIFIED"
+          },
+          {
+            "role": "In vlucht (voorwaardelijk)",
+            "path": "/assets/species/plumage/sp037-flight-free.webp",
+            "oldRights": "NEW (Commons, Holger Uwe Schmitt, CC BY-SA 4.0; SHA-1 origineel 1c5eb195)",
+            "addedIn": "F3-R10b-media"
           },
           {
             "role": "Overige herkenningsfoto's",
@@ -3470,7 +3477,8 @@
           "Het rode masker van het vrouwtje is kleiner; geslacht volgt het bestaande fotograaflabel en is niet onafhankelijk vastgesteld.",
           "Vluchtbeeld: vogel los in de lucht met gespreide vleugels maar hangende poten; mogelijk landingsfase. Hercontrole tegen de vrije-vluchtregel (§3.3) open, geen wijziging zonder tweede oordeel.",
           "Dubbelganger Sijs: bestaande paren (mannetjes, juvenielen, vlucht) blijven; jonge Putter zonder rood masker is het kritische geval.",
-          "Geen geregistreerde zang of roep; nieuwe opname zoeken met bron en licentie blijft open (route in deze sessie BLOCKED)."
+          "Geen geregistreerde zang of roep; nieuwe opname zoeken met bron en licentie blijft open (route in deze sessie BLOCKED).",
+          "F3-R10b-media (16-11-2026): extra vrije-vluchtfoto (Holger Uwe Schmitt, CC BY-SA 4.0) via de Commons-intake; auteur, licentie en SHA-1 tegen Commons-metadata gecontroleerd, pixelvergelijking met de Commons-miniatuur bevestigt dezelfde opname. Vogel vrij in de lucht, poten hangen omlaag, sterke HDR-kleurzweem: voorwaardelijk, vervanging gewenst. Bestaande vluchtfoto blijft op eigenaarbesluit."
         ],
         "sourceReferences": [
           "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/putter",
@@ -3482,12 +3490,13 @@
         "showcasePreview": "NOT TESTED on physical device; local source/photo review and Chromium only",
         "independence": "PARTIAL / local WebP visual review and Vogelbescherming consulted; originals/rights/acoustic/second reviewer pending",
         "fullPass": false,
-        "photoFilesInspected": 5,
+        "photoFilesInspected": 6,
         "photoBlobSHAs": [
           "fcf02de6350da104c0ce379497b644f9a94c3195",
           "f31ba469972f96b13c1cc9adffe93b25bad292ac",
           "258bee9890d34f9dc9b13fcdafe6b16999ab7904",
           "9861b3c1356234bdbd4df07d33c0205188b60c6a",
+          "0faf19ac1c10330c01eac8c650075c2b19cb97cc",
           "e7d828aa68d4ad9b6c85a68b2e35eea116af915d"
         ],
         "photoSourceMatches": [],
@@ -3528,7 +3537,7 @@
             "oldRights": "VERIFIED"
           },
           {
-            "role": "In vlucht (Mannetje)",
+            "role": "Verenkleed (Mannetje; neerstrijkend, uit vluchtrol F3-R10b)",
             "path": "/assets/species/plumage/sp038-flight.webp",
             "oldRights": "VERIFIED"
           }
@@ -3565,7 +3574,8 @@
           "Vluchtbeeld: vleugels omhoog en poten naar voren; mogelijk landingsfase. Hercontrole tegen de vrije-vluchtregel (§3.3) open.",
           "Kennisprofiel noemde Putter niet terug als gelijkende soort; symmetrische verwijzing toegevoegd.",
           "Europese kanarie (sp300) als tekstwaarschuwing toegevoegd; geen geregistreerde foto, dus geen fotopaar.",
-          "Geen geregistreerde zang of roep; route voor nieuwe opname in deze sessie BLOCKED."
+          "Geen geregistreerde zang of roep; route voor nieuwe opname in deze sessie BLOCKED.",
+          "F3-R10b (16-11-2026): vluchtbeeld hercontroleerd: fotograaf beschrijft 'comes in to land', poten naar voren met gespreide tenen. Uit de vluchtrol naar Verenkleed (Mannetje); bestand en herkomst behouden. Vluchtvergelijkingen Putter–Sijs en Groenling–Sijs als ontbrekend gemarkeerd (niet als fotopaar getoond). Vrije-vluchtfoto ontbreekt; niet verzonnen."
         ],
         "sourceReferences": [
           "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/sijs",

@@ -1,0 +1,28 @@
+[
+ {
+  "image": "/assets/species/plumage/sp037-flight-free.webp",
+  "species": "sp037",
+  "source": "https://commons.wikimedia.org/wiki/File%3AIst_es_der_Niedernhaller_Distelfink_der_mir_da_vor_die_Kamera_geflogen_ist_%3F%3F%3F_01.jpg",
+  "sourceTitle": "File:Ist es der Niedernhaller Distelfink der mir da vor die Kamera geflogen ist ??? 01.jpg",
+  "sourceAuthor": "Holger Uwe Schmitt",
+  "sourceLicense": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "taxonInSource": "Carduelis carduelis (Commons-categorie 'Carduelis carduelis in flight')",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Commons-origineel met vastgepinde SHA-1 in de intake-workflow geconverteerd (auteur en licentie tegen Commons-metadata gecontroleerd); lokale WebP visueel en per pixel vergeleken met de Commons-miniatuur (gemiddeld verschil 0,9 tegen 62,8 voor een andere opname).",
+  "auditDate": "16-11-2026",
+  "assetSha1": "52998516016abc36c0909f5cabe4e807ecbf7c10",
+  "sourceImageSha1": "1c5eb195f1df8481b38c986f20fe55b87a01f887",
+  "sourceImageSize": [
+   3071,
+   2362
+  ],
+  "localSize": [
+   1400,
+   1077
+  ],
+  "originalURL": "https://upload.wikimedia.org/wikipedia/commons/7/71/Ist_es_der_Niedernhaller_Distelfink_der_mir_da_vor_die_Kamera_geflogen_ist_%3F%3F%3F_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "visualRoleCheck": "Putter vrij in de lucht tegen egale lucht; poten hangen omlaag; sterke HDR-kleurzweem. Vluchtrol voorwaardelijk."
+ }
+]

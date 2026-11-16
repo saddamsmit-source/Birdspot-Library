@@ -134,7 +134,7 @@ for(const item of ninth){
 }
 
 assert.deepEqual(tenth.map(x=>x.id),['sp037','sp038','sp039'],'R10 exactly Putter, Sijs and Kneu in fixed sequence');
-assert.deepEqual(tenth.map(x=>x.F3.photoFilesInspected),[5,4,4],'Eleven existing plus two new Kneu images (F3-R10-media) individually inspected');
+assert.deepEqual(tenth.map(x=>x.F3.photoFilesInspected),[6,4,4],'Eleven existing, two new Kneu (F3-R10-media) and one new Putter flight image (F3-R10b-media) individually inspected');
 assert.deepEqual(tenth.map(x=>x.currentAssets.existingAudioCount),[0,0,0],'Never invent an audio clip');
 for(const item of tenth){
  const {F3:review,currentAssets}=item;
