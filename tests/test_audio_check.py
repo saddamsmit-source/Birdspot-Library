@@ -38,3 +38,6 @@ print("AUDIO REFERENCE SELECTION PASS: related species, unidentified file, wrong
 single = ac.judge(A(5), {"spA": [A(1)], "spB": refs["spB"]}, "spA"); assert not single["consistent"] and "referenties" in single["reason"], single
 assert not ac.reference_ok({**ok_ref, "description": "Calls and songs of Eurasian Siskins"}, ["Spinus spinus"], "song")
 print("AUDIO MIN-REFERENCES PASS: single reference and mixed calls/songs recording refused")
+thin = ac.judge(A(5), {"spA": refs["spA"], "spB": [B(3)]}, "spA"); assert not thin["consistent"] and "verwarringssoort" in thin["reason"], thin
+empty = ac.judge(A(5), {"spA": refs["spA"], "spB": []}, "spA"); assert not empty["consistent"], empty
+print("AUDIO CONFUSER COVERAGE PASS: confuser with <2 references refused")

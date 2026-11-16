@@ -101,6 +101,9 @@ def judge(cand: dict, refs: dict[str, list[dict]], own: str) -> dict:
         return {"consistent": False, "reason": "geen referentie van de eigen soort", "means": means}
     if len(refs[own]) < MIN_REFS:
         return {"consistent": False, "reason": f"minder dan {MIN_REFS} referenties van de eigen soort", "means": means}
+    thin = sorted(k for k, rs in refs.items() if k != own and len(rs) < MIN_REFS)
+    if thin:
+        return {"consistent": False, "reason": "verwarringssoort onvoldoende referenties: " + ", ".join(thin), "means": means}
     others = {k: v for k, v in means.items() if k != own}
     margin = round(means[own] - max(others.values()), 4) if others else None
     reasons = []
@@ -201,7 +204,8 @@ def run(manifest: Path, out: Path) -> None:
     for cid, (rec, f) in feats.items():
         if rec["role"] != "candidate":
             continue
-        refs, seen = {}, {}
+        refs = {sid: [] for sid in {r["speciesId"] for r, _ in feats.values() if r["role"] == "candidate"}}
+        seen = {}
         for rid, (r2, f2) in feats.items():
             if (r2["role"] == "reference" and r2["soundType"] == rec["soundType"] and f2.get("usable")
                     and r2["sha1"] not in seen.setdefault(r2["speciesId"], set())):
