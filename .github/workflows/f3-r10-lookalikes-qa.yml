@@ -1,0 +1,51 @@
+name: Birdspot F3-R10 Lookalike Photo & Text QA
+
+on:
+  push:
+    branches:
+      - qa/birdspot-f3-r10-putter-sijs-kneu-20261116
+  pull_request:
+    branches:
+      - qa/birdspot-f3-r09-vink-groenling-females-20261116
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lookalikes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Check strict source-backed lookalike pairs and hidden missing photo slots
+        run: |
+          node --check src/features/species/guideComparisons.js
+          node tests/test_lookalike_r09.mjs
+          node tests/test_lookalike_r10.mjs
+          node tests/test_f3_140_unified_rebaseline.mjs
+          python3 -I tools/kennisbaseline/build_knowledge.py --check
+          node tests/test_guide_poses.mjs
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Chromium for actual user interface comparisons
+        run: |
+          python -m pip install -r tests/requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: Real paired images, zoom and lookalike text on 320/360/390px
+        run: |
+          python tests/test_lookalike_r09_browser.py
+          python tests/test_lookalike_r10_browser.py
+      - name: Preserve evidence images
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: birdspot-f3-r10-lookalikes-browser
+          path: |
+            tests/screenshots/lookalike_r09/*.png
+            tests/screenshots/lookalike_r10/*.png
+          if-no-files-found: warn

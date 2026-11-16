@@ -13,7 +13,8 @@ const norm = readFileSync(new URL('../docs/BIRDSPOT_KWALITEITSNORM.md',import.me
 const catalog = new Map(SPECIES.map(s => [s.id,s]));
 assert.match(norm,/### 3\.4 Kritieke dubbelgangers/);
 assert.match(norm,/alleen.*twee.*foto|twee.*foto.*alleen|uitsluitend twee.*foto/i);
-assert.deepEqual(registry.focusSpecies,['sp034','sp035','sp036']);
+// F3-R09 focus stays first; later F3 rounds (R10+) append their own focus species and are checked in their own test.
+assert.deepEqual(registry.focusSpecies.slice(0,3),['sp034','sp035','sp036']);
 assert.equal(registry.policy.criticalTraitsMax,3);
 assert.equal(registry.policy.photoPanelOnlyIfBothVerified,true);
 assert.equal(registry.policy.showTextWhenPhotosMissing,true);
