@@ -1,0 +1,24 @@
+{
+  "queries": [
+    {
+      "id": "sp048_flight",
+      "speciesId": "sp048",
+      "role": "flight",
+      "kind": "image",
+      "search": "Turdus iliacus flight",
+      "limit": 20,
+      "keep": 8,
+      "thumb": 800
+    },
+    {
+      "id": "sp048_flight_b",
+      "speciesId": "sp048",
+      "role": "flight",
+      "kind": "image",
+      "search": "Redwing flying",
+      "limit": 20,
+      "keep": 6,
+      "thumb": 800
+    }
+  ]
+}

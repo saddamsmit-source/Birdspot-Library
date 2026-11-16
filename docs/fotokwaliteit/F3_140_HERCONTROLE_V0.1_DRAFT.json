@@ -53,9 +53,9 @@
     "audioMissing": 75,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 104,
+    "nextNotStarted": 101,
     "secondBatchStarted": 3,
-    "contentInspected": 36,
+    "contentInspected": 39,
     "contentComplete": 0,
     "thirdBatchStarted": 3,
     "fourthBatchStarted": 3,
@@ -66,7 +66,8 @@
     "ninthBatchStarted": 3,
     "tenthBatchStarted": 3,
     "eleventhBatchStarted": 3,
-    "twelfthBatchStarted": 3
+    "twelfthBatchStarted": 3,
+    "thirteenthBatchStarted": 3
   },
   "records": [
     {
@@ -4315,37 +4316,57 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R13",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "VERIFIED (origcheck 16-11-2026: Pearson r >= 0.90, deep crops checked side by side as same scene; see docs/media-intake/2026-11-16/origcheck-r13/origcheck.json)",
+          "photoIndividualRights": "VERIFIED (current Commons author and licence equal to register; two author notations aligned with Commons; iNaturalist rights from register)",
+          "plumageAndTrueFlight": "VERIFIED (adult, juvenile and free-flight photo with warm underwing match)",
+          "photoPairComparisons": "PARTIALLY TESTED (pairs with Merel, Grote Lijster, Kramsvogel, Koperwiek)",
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium 320/360/390 px via tests/test_lookalike_r13_browser.py; no physical device)",
+          "creditsAndCleanAudioUI": "NOT TESTED (no audio for this species)",
+          "audioRecordingsAuthenticity": "BLOCKED (no registered song/call; audiocheck method shown not discriminating for thrushes in F3-R12b, so no acoustic route available)",
+          "audioLicenseAndAttribution": "BLOCKED (no recording)",
+          "soundRolesSongCall": "PARTIALLY TESTED (text only)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (no audio file)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (existing Vogelbescherming-sourced profile; ANWB book NOT read)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (existing sourced profile reviewed; biometrics not verified with two publishers)",
+          "sovonNetherlandsStatus": "NOT TESTED (Sovon not consulted in F3-R13)",
+          "ebirdDistributionAndBias": "NOT TESTED (eBird not consulted in F3-R13)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "endToEndGuideUI": "PARTIALLY TESTED (Chromium species card and lookalike panels; no device or offline run)",
+          "independentSecondReview": "NOT TESTED (own re-inspection is not independent)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-017, LK-019, LK-020, LK-022 photo pairs pending partner originals)"
         },
         "findings": [
-          "Geen lokaal geregistreerde zang of roep"
+          "Drie lokale foto's tegen het bronbeeld: alle drie dezelfde opname (r = 1,00); juveniel-auteur gelijkgetrokken met Commons ('Frank Vassen from Brussels, Belgium').",
+          "Rollen kloppen: volwassen met druppelvlekken, juveniel met lichte vlekjes op de vleugeldekveren, vrije vlucht met warm oranjebruine ondervleugel.",
+          "Dubbelgangers Merel (juv), Grote Lijster, Kramsvogel en Koperwiek: bestaande fotoparen, nu geregistreerd.",
+          "Geen geregistreerde zang of roep; audiocheck geeft voor lijsters geen betrouwbare aanwijzing (F3-R12b)."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zanglijster",
+          "docs/media-intake/2026-11-16/origcheck-r13/origcheck.json",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R13_ZANGLIJSTER_KRAMSVOGEL_KOPERWIEK_2026-11-16_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on physical device; local source/photo review and Chromium only",
+        "independence": "PARTIAL / origcheck by Claude; no independent reviewer",
+        "fullPass": false,
+        "photoFilesInspected": 3,
+        "photoBlobSHAs": [
+          "c059f1b7d45dd5adac94504ae31f44eaf96460a1",
+          "3a287dc32770a0f7c42d27007fa4fd4ff5a73283",
+          "1fb2c1b5667c075adb81369dc8099c691c0da4f0"
+        ],
+        "photoSourceMatches": [],
+        "priorPhotoMatches": [],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [],
+        "contentStatus": "PARTIALLY REVIEWED (all shown photos checked against source images; no audio; no FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R13 node/browser tests run separately."
       }
     },
     {
@@ -4382,37 +4403,57 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R13",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "VERIFIED (origcheck 16-11-2026: Pearson r >= 0.90, deep crops checked side by side as same scene; see docs/media-intake/2026-11-16/origcheck-r13/origcheck.json)",
+          "photoIndividualRights": "VERIFIED (current Commons author and licence equal to register; two author notations aligned with Commons; iNaturalist rights from register)",
+          "plumageAndTrueFlight": "VERIFIED (adult and juvenile match; flight photo is free flight between bare twigs, deep crop of the same shot)",
+          "photoPairComparisons": "PARTIALLY TESTED (pairs with Zanglijster and Koperwiek)",
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium 320/360/390 px via tests/test_lookalike_r13_browser.py; no physical device)",
+          "creditsAndCleanAudioUI": "NOT TESTED (no audio for this species)",
+          "audioRecordingsAuthenticity": "BLOCKED (no registered song/call; audiocheck method shown not discriminating for thrushes in F3-R12b, so no acoustic route available)",
+          "audioLicenseAndAttribution": "BLOCKED (no recording)",
+          "soundRolesSongCall": "PARTIALLY TESTED (text only)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (no audio file)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (existing Vogelbescherming-sourced profile; ANWB book NOT read)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (existing sourced profile reviewed; biometrics not verified with two publishers)",
+          "sovonNetherlandsStatus": "NOT TESTED (Sovon not consulted in F3-R13)",
+          "ebirdDistributionAndBias": "NOT TESTED (eBird not consulted in F3-R13)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "endToEndGuideUI": "PARTIALLY TESTED (Chromium species card and lookalike panels; no device or offline run)",
+          "independentSecondReview": "NOT TESTED (own re-inspection is not independent)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-021, LK-022 photo pairs pending partner originals)"
         },
         "findings": [
-          "Geen lokaal geregistreerde zang of roep"
+          "Drie lokale foto's tegen het bronbeeld: volwassen en juveniel r = 1,00; vluchtfoto is een diepe uitsnede (r 0,49), zij-aan-zij dezelfde opname.",
+          "Rollen kloppen: grijze kop en kastanjebruine rug, juveniel valer en gevlekt, vrije vlucht met witte ondervleugel.",
+          "Juveniel-auteur gelijkgetrokken met Commons ('hedera.baltica from Wrocław, Poland').",
+          "Geen geregistreerde zang of roep."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kramsvogel",
+          "docs/media-intake/2026-11-16/origcheck-r13/origcheck.json",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R13_ZANGLIJSTER_KRAMSVOGEL_KOPERWIEK_2026-11-16_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on physical device; local source/photo review and Chromium only",
+        "independence": "PARTIAL / origcheck by Claude; no independent reviewer",
+        "fullPass": false,
+        "photoFilesInspected": 3,
+        "photoBlobSHAs": [
+          "8c4682cfceeee396526292ca4562fc79fb3c66b8",
+          "818ee5529d70518029b4b7f41e3eaad0a77fe37d",
+          "7ddbce9b5dc43baf36a86d064388c795a0fef11b"
+        ],
+        "photoSourceMatches": [],
+        "priorPhotoMatches": [],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [],
+        "contentStatus": "PARTIALLY REVIEWED (all shown photos checked against source images; no audio; no FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R13 node/browser tests run separately."
       }
     },
     {
@@ -4449,39 +4490,57 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R13",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "VERIFIED (origcheck 16-11-2026: Pearson r >= 0.90, deep crops checked side by side as same scene; see docs/media-intake/2026-11-16/origcheck-r13/origcheck.json)",
+          "photoIndividualRights": "VERIFIED (current Commons author and licence equal to register; two author notations aligned with Commons; iNaturalist rights from register)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (adult and juvenile match; only an out-of-role take-off photo, no free-flight photo; Commons search 16-11 found no usable candidate)",
+          "photoPairComparisons": "PARTIALLY TESTED (pairs with Kramsvogel and Zanglijster)",
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium 320/360/390 px via tests/test_lookalike_r13_browser.py; no physical device)",
+          "creditsAndCleanAudioUI": "NOT TESTED (no audio for this species)",
+          "audioRecordingsAuthenticity": "BLOCKED (no registered song/call; audiocheck method shown not discriminating for thrushes in F3-R12b, so no acoustic route available)",
+          "audioLicenseAndAttribution": "BLOCKED (no recording)",
+          "soundRolesSongCall": "PARTIALLY TESTED (text only)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (no audio file)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (existing Vogelbescherming-sourced profile; ANWB book NOT read)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (existing sourced profile reviewed; biometrics not verified with two publishers)",
+          "sovonNetherlandsStatus": "NOT TESTED (Sovon not consulted in F3-R13)",
+          "ebirdDistributionAndBias": "NOT TESTED (eBird not consulted in F3-R13)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "endToEndGuideUI": "PARTIALLY TESTED (Chromium species card and lookalike panels; no device or offline run)",
+          "independentSecondReview": "NOT TESTED (own re-inspection is not independent)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-020, LK-021 photo pairs pending partner originals)"
         },
         "findings": [
-          "Geverifieerde, goed herkenbare foto in vrije vlucht.",
-          "De bestaande opname toont opvliegen tussen planten. Ze blijft in de aanvullende sectie.",
-          "Geen lokaal geregistreerde zang of roep"
+          "Drie lokale foto's tegen het bronbeeld: volwassen en juveniel r ≥ 0,99; opvliegfoto (uit vluchtrol) diepe uitsnede van dezelfde opname.",
+          "Rollen kloppen: lichte wenkbrauwstreep en roestrode flank; juveniel gevlekt met wenkbrauwstreep.",
+          "Vrije-vluchtfoto ontbreekt; Commons-zoektocht 16-11 ('Turdus iliacus flight', 'Redwing flying') leverde alleen de bestaande foto en irrelevante beelden op.",
+          "Geen geregistreerde zang of roep."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/koperwiek",
+          "docs/media-intake/2026-11-16/origcheck-r13/origcheck.json",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R13_ZANGLIJSTER_KRAMSVOGEL_KOPERWIEK_2026-11-16_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on physical device; local source/photo review and Chromium only",
+        "independence": "PARTIAL / origcheck by Claude; no independent reviewer",
+        "fullPass": false,
+        "photoFilesInspected": 3,
+        "photoBlobSHAs": [
+          "9f8d18c8ac89f17d0a8588c64c8fec237754d89f",
+          "76ad0e05c400f6ee7b02bbc79c55d34535be6c08",
+          "14fe5bb2d61c744d26c044ffbe5c4e3763cffada"
+        ],
+        "photoSourceMatches": [],
+        "priorPhotoMatches": [],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [],
+        "contentStatus": "PARTIALLY REVIEWED (all shown photos checked against source images; no audio; no FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R13 node/browser tests run separately."
       }
     },
     {
