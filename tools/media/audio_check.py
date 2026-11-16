@@ -33,6 +33,8 @@ BANDS = np.geomspace(1000, 11000, 49)
 MARGIN = 0.05
 MIN_SNR = 15.0
 MIN_ACTIVE = 0.25
+MIN_REFS = 2
+MIXED = ('calls and song', 'call and song', 'songs and calls', 'song and call', 'calls and songs')
 
 
 def decode(data: bytes, seconds: float = 60.0) -> np.ndarray:
@@ -97,6 +99,8 @@ def judge(cand: dict, refs: dict[str, list[dict]], own: str) -> dict:
     means = {sid: round(float(np.mean([similarity(cand, r) for r in rs])), 4) for sid, rs in refs.items() if rs}
     if own not in means:
         return {"consistent": False, "reason": "geen referentie van de eigen soort", "means": means}
+    if len(refs[own]) < MIN_REFS:
+        return {"consistent": False, "reason": f"minder dan {MIN_REFS} referenties van de eigen soort", "means": means}
     others = {k: v for k, v in means.items() if k != own}
     margin = round(means[own] - max(others.values()), 4) if others else None
     reasons = []
@@ -118,6 +122,8 @@ def reference_ok(info: dict, sci_names: list[str], sound_type: str) -> bool:
     if not sci_names or not any(n.casefold() in hay for n in sci_names):
         return False
     desc = (info.get("description") or "").casefold()
+    if any(x in desc for x in MIXED):
+        return False  # gemengde opname (zang én roep): niet als referentie voor één geluidsoort
     m = __import__("re").search(r"type:\s*([a-z ,/-]+)", desc)
     if m:
         kinds = m.group(1)
@@ -195,9 +201,11 @@ def run(manifest: Path, out: Path) -> None:
     for cid, (rec, f) in feats.items():
         if rec["role"] != "candidate":
             continue
-        refs = {}
+        refs, seen = {}, {}
         for rid, (r2, f2) in feats.items():
-            if r2["role"] == "reference" and r2["soundType"] == rec["soundType"] and f2.get("usable"):
+            if (r2["role"] == "reference" and r2["soundType"] == rec["soundType"] and f2.get("usable")
+                    and r2["sha1"] not in seen.setdefault(r2["speciesId"], set())):
+                seen[r2["speciesId"]].add(r2["sha1"])
                 refs.setdefault(r2["speciesId"], []).append(f2)
         report["judgements"].append({"id": cid, "speciesId": rec["speciesId"], "soundType": rec["soundType"],
                                      **judge(f, refs, rec["speciesId"])})

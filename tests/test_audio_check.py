@@ -35,3 +35,6 @@ assert not ac.reference_ok(ok_ref, ["Spinus spinus"], "call"), "song file must n
 assert not ac.reference_ok({**ok_ref, "description": "Type: call, song"}, ["Spinus spinus"], "song"), "mixed type refused"
 assert ac.reference_ok({**ok_ref, "title": "File:Carduelis spinus.ogg", "description": "Song of Eurasian Siskin"}, ["Spinus spinus", "Carduelis spinus"], "song")
 print("AUDIO REFERENCE SELECTION PASS: related species, unidentified file, wrong and mixed sound type refused")
+single = ac.judge(A(5), {"spA": [A(1)], "spB": refs["spB"]}, "spA"); assert not single["consistent"] and "referenties" in single["reason"], single
+assert not ac.reference_ok({**ok_ref, "description": "Calls and songs of Eurasian Siskins"}, ["Spinus spinus"], "song")
+print("AUDIO MIN-REFERENCES PASS: single reference and mixed calls/songs recording refused")

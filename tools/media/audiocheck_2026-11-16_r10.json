@@ -177,6 +177,98 @@
         "Carduelis cannabina",
         "Acanthis cannabina"
       ]
+    },
+    {
+      "id": "sp038_song_refb",
+      "speciesId": "sp038",
+      "role": "reference",
+      "soundType": "song",
+      "search": "\"Carduelis spinus\" song",
+      "pick": 3,
+      "excludeAuthors": [
+        "Vladimir Yu. Arkhipov, Arkhivov",
+        "Benoît Van Hecke"
+      ],
+      "excludeTitles": [
+        "File:Carduelis carduelis - European Goldfinch XC489911.mp3",
+        "File:Carduelis carduelis - European Goldfinch XC503634.mp3",
+        "File:Carduelis spinus.ogg",
+        "File:Spinus spinus - Eurasian Siskin XC539301.mp3",
+        "File:Carduelis cannabina singing.flac"
+      ],
+      "sciNames": [
+        "Spinus spinus",
+        "Carduelis spinus"
+      ]
+    },
+    {
+      "id": "sp038_call_refb",
+      "speciesId": "sp038",
+      "role": "reference",
+      "soundType": "call",
+      "search": "\"Carduelis spinus\" call",
+      "pick": 3,
+      "excludeAuthors": [
+        "Vladimir Yu. Arkhipov, Arkhivov",
+        "Benoît Van Hecke"
+      ],
+      "excludeTitles": [
+        "File:Carduelis carduelis - European Goldfinch XC489911.mp3",
+        "File:Carduelis carduelis - European Goldfinch XC503634.mp3",
+        "File:Carduelis spinus.ogg",
+        "File:Spinus spinus - Eurasian Siskin XC539301.mp3",
+        "File:Carduelis cannabina singing.flac"
+      ],
+      "sciNames": [
+        "Spinus spinus",
+        "Carduelis spinus"
+      ]
+    },
+    {
+      "id": "sp039_song_refb",
+      "speciesId": "sp039",
+      "role": "reference",
+      "soundType": "song",
+      "search": "\"Carduelis cannabina\" song",
+      "pick": 3,
+      "excludeAuthors": [
+        "Nefronus"
+      ],
+      "excludeTitles": [
+        "File:Carduelis carduelis - European Goldfinch XC489911.mp3",
+        "File:Carduelis carduelis - European Goldfinch XC503634.mp3",
+        "File:Carduelis spinus.ogg",
+        "File:Spinus spinus - Eurasian Siskin XC539301.mp3",
+        "File:Carduelis cannabina singing.flac"
+      ],
+      "sciNames": [
+        "Linaria cannabina",
+        "Carduelis cannabina",
+        "Acanthis cannabina"
+      ]
+    },
+    {
+      "id": "sp039_call_refb",
+      "speciesId": "sp039",
+      "role": "reference",
+      "soundType": "call",
+      "search": "\"Carduelis cannabina\" call",
+      "pick": 3,
+      "excludeAuthors": [
+        "Nefronus"
+      ],
+      "excludeTitles": [
+        "File:Carduelis carduelis - European Goldfinch XC489911.mp3",
+        "File:Carduelis carduelis - European Goldfinch XC503634.mp3",
+        "File:Carduelis spinus.ogg",
+        "File:Spinus spinus - Eurasian Siskin XC539301.mp3",
+        "File:Carduelis cannabina singing.flac"
+      ],
+      "sciNames": [
+        "Linaria cannabina",
+        "Carduelis cannabina",
+        "Acanthis cannabina"
+      ]
     }
   ]
 }
