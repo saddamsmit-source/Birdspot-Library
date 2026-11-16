@@ -1,0 +1,329 @@
+{
+  "schemaVersion": "0.1",
+  "documentVersion": "0.1 DRAFT",
+  "date": "2026-11-16",
+  "status": "INCREMENTAL / PARTIALLY TESTED, NOT A COMPLETE LOOKALIKE CENSUS",
+  "ownerRule": "docs/BIRDSPOT_KWALITEITSNORM.md §3.4 (owner decision 16-11-2026)",
+  "scope": "Critical lookalike sample from F3-R09 with earlier cases retained as reference; expand as each F3 batch is inspected, do not claim all 597 species assessed",
+  "focusSpecies": [
+    "sp034",
+    "sp035",
+    "sp036"
+  ],
+  "policy": {
+    "pairRequiredWhenSimilar": true,
+    "criticalTraitsMin": 2,
+    "criticalTraitsMax": 3,
+    "photoPanelOnlyIfBothVerified": true,
+    "showTextWhenPhotosMissing": true,
+    "verifyBothDirections": true,
+    "independentPhotoAndSoundRights": true,
+    "noFalsePhotoPass": true
+  },
+  "pairs": [
+    {
+      "id": "LK-001",
+      "focus": [
+        "sp035"
+      ],
+      "birds": [
+        "sp035",
+        "sp181"
+      ],
+      "risk": "female and winter",
+      "matchingPlumages": [
+        "adult_f",
+        "adult_f"
+      ],
+      "photoState": "MISSING_VERIFIED_PAIR",
+      "mediaOpen": [
+        "sp181 has no source-registered guide photo"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Borst en vleugel",
+          "values": [
+            "Vink vrouwtje vaak bruingrijs met witte vleugelstrepen",
+            "Keep vaak warme oranje borst/schouders met oranje vleugelband"
+          ]
+        },
+        {
+          "label": "Stuit bij opvliegen",
+          "values": [
+            "Vink geen opvallende witte stuit",
+            "Keep opvallend grote witte stuit"
+          ]
+        },
+        {
+          "label": "Extra aanwijzing",
+          "values": [
+            "Vink vinkenslag en eigen roep",
+            "Keep nasale kèhp-roep in wintergroepen"
+          ]
+        }
+      ],
+      "caution": "Oranje kan variëren bij vrouwelijke en wintervogels; voor deze gids ontbreekt een echt, gelicenseerd Keep-fotopaar. Geen foto-PASS.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/vink",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/keep"
+      ]
+    },
+    {
+      "id": "LK-002",
+      "focus": [
+        "sp035"
+      ],
+      "birds": [
+        "sp035",
+        "sp043"
+      ],
+      "risk": "female",
+      "matchingPlumages": [
+        "adult_f",
+        "adult_f"
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Verify both source originals individually; pair mobile presentation and independent ID audit"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Witte vleugelstrepen",
+          "values": [
+            "Vrouwtje Vink twee duidelijk lichte banden",
+            "Vrouwtje Huismus mist de twee Vink-banden"
+          ]
+        },
+        {
+          "label": "Rug",
+          "values": [
+            "Vink meestal egaler grijsbruin",
+            "Huismus bruiner, rug gestreept"
+          ]
+        },
+        {
+          "label": "Kop",
+          "values": [
+            "Vink meestal egaler",
+            "Huismus vaak duidelijke lichte wenkbrauw"
+          ]
+        }
+      ],
+      "caution": "Juvenielen lijken soms sterk op volwassen vrouwtjes. Kijk naar vleugel en rug samen.",
+      "sources": [
+        "https://www.vogelbescherming.nl/tuinvogeltelling/herkenningstips/?tip=6",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/vink"
+      ]
+    },
+    {
+      "id": "LK-003",
+      "focus": [
+        "sp036"
+      ],
+      "birds": [
+        "sp036",
+        "sp038"
+      ],
+      "risk": "female",
+      "matchingPlumages": [
+        "adult_f",
+        "adult_f"
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Source originals and 320/360/390px side-by-side still require independent review"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Snavel",
+          "values": [
+            "Groenling fors en breed",
+            "Sijs smal en puntig"
+          ]
+        },
+        {
+          "label": "Flank",
+          "values": [
+            "Vrouwtje Groenling meestal minder duidelijk gestreept",
+            "Vrouwtje Sijs sterker gestreept"
+          ]
+        },
+        {
+          "label": "Geel in vleugel",
+          "values": [
+            "Groenling langs buitenste handpennen",
+            "Sijs duidelijke dwarsband"
+          ]
+        }
+      ],
+      "caution": "Jonge Groenling kan ook sterk gestreept zijn; de hoeveelheid geel alleen beslist niet.",
+      "sources": [
+        "https://www.vogelbescherming.nl/tuinvogeltelling/herkenningstips/?tip=7",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/groenling",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/sijs"
+      ]
+    },
+    {
+      "id": "LK-004",
+      "focus": [
+        "sp036"
+      ],
+      "birds": [
+        "sp036",
+        "sp038"
+      ],
+      "risk": "male",
+      "matchingPlumages": [
+        "adult_m",
+        "adult_m"
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Original hero originals and sex labels independently verify; mobile pair/zoom proof"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Snavel",
+          "values": [
+            "Groenling forse kegelsnavel",
+            "Sijs fijnere spitse snavel"
+          ]
+        },
+        {
+          "label": "Kop",
+          "values": [
+            "Groenling geen zwarte kruin",
+            "Sijs mannetje zwarte kruin en keel"
+          ]
+        },
+        {
+          "label": "Vleugeltekening",
+          "values": [
+            "Groenling geel langs vleugelranden",
+            "Sijs gele vleugelband"
+          ]
+        }
+      ],
+      "caution": "Kenmerken voor volwassen mannetjes: niet zomaar overnemen voor vrouwtjes/juvenielen.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/groenling",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/sijs"
+      ]
+    },
+    {
+      "id": "LK-005",
+      "focus": [
+        "sp034"
+      ],
+      "birds": [
+        "sp034",
+        "sp174"
+      ],
+      "risk": "adult unknown sex",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Independent source check matching rest pair and copy of Zwarte Mees source photo"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Staart",
+          "values": [
+            "Staartmees langer dan lichaam",
+            "Zwarte Mees relatief korte staart"
+          ]
+        },
+        {
+          "label": "Kop",
+          "values": [
+            "Staartmees lichte kop met variabele zijkruinstrepen",
+            "Zwarte Mees zwarte kop, lichte wang en nekvlek"
+          ]
+        }
+      ],
+      "caution": "Bij een frontaal beeld is de staart soms verborgen; een witte kop duidt geen aparte soort aan.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/staartmees",
+        "https://www.vogelbescherming.nl/actueel/bericht/de-9-nederlandse-mezen"
+      ]
+    },
+    {
+      "id": "LK-006",
+      "focus": [
+        "sp092",
+        "sp133"
+      ],
+      "birds": [
+        "sp092",
+        "sp133"
+      ],
+      "risk": "male/female",
+      "matchingPlumages": [
+        "adult_m",
+        "adult_m"
+      ],
+      "photoState": "MISSING_VERIFIED_PAIR",
+      "mediaOpen": [
+        "Topper sp133 still lacks a suitable verified guide photo for male and female; no deceptive card"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Mannetje rug",
+          "values": [
+            "Kuifeend zwart",
+            "Topper lichtgrijs fijngetekend"
+          ]
+        },
+        {
+          "label": "Kop",
+          "values": [
+            "Kuifeend kan afhangende kuif hebben",
+            "Topper ronder, zonder typische kuif"
+          ]
+        },
+        {
+          "label": "Vrouwtje snavelbasis",
+          "values": [
+            "Witte basis kan ook voorkomen",
+            "Vaak breder wit, maar variabel"
+          ]
+        }
+      ],
+      "caution": "Zonder vergelijkbaar beeldpaar blijft het paneel in de app verborgen.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kuifeend",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/topper"
+      ]
+    }
+  ],
+  "withinSpeciesVariation": [
+    {
+      "id": "LV-001",
+      "speciesId": "sp034",
+      "variant": "Witkopstaartmees / witkoppige Staartmees",
+      "status": "PARTIALLY TESTED",
+      "text": "Een grotendeels witte kop bewijst op zichzelf niet de noordelijke ondersoort Aegithalos caudatus caudatus: lokaal kunnen ook witkoppige exemplaren van andere herkomst voorkomen. Geen aparte Birdspot-soort op basis van een witte kop.",
+      "photoStatus": "OPEN - no individually verified and regionally assigned subspecies image",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/staartmees"
+      ]
+    }
+  ],
+  "evidence": {
+    "repositoryPhotoRegistry": "assets/species/field-guide-media.json",
+    "comparisonCode": "src/features/species/guideComparisons.js",
+    "knowledgeSource": "tools/kennisbaseline/knowledge.json",
+    "visualReview": "docs/fotokwaliteit/F3_R09_STAARTMEES_VINK_GROENLING_2026-11-16_DRAFT.md",
+    "dataPreservation": "No new image bytes / no removal of existing species"
+  },
+  "gate": "A pair can be labelled COMPLETE only with individual original image/right/sex/age proof, correct side-by-side render both directions and independent second review; structural CI PASS alone is insufficient"
+}
