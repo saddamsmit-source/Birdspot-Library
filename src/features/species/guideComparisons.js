@@ -111,11 +111,17 @@ export const GUIDE_COMPARISONS = [
     tip: 'Kijk bij een jonge Ringmus ook naar kruin en nekrand. De wangvlek kan dan veel minder opvallen.',
   },
   {
+    label: 'Vink en Huismus · vrouwtjes in rust',
     birds: [
-      {id: 'sp035', source: 'vink', plumage: 'adult_f', marks: 'Twee witte vleugelstrepen vallen op, ook bij een vrouwtje.'},
-      {id: 'sp043', source: 'huismus', plumage: 'adult_f', marks: 'Lichte wenkbrauw en bruin gestreepte rug.'},
+      {id: 'sp035', source: 'vink', plumage: 'adult_f', marks: 'Grijsbruin met twee witte vleugelstrepen en witte buitenste staartveren.'},
+      {id: 'sp043', source: 'huismus', plumage: 'adult_f', marks: 'Bruin, opvallende lichte wenkbrauw en bruin gestreepte rug.'},
     ],
-    tip: 'Vergelijk de vrouwtjes. Bekijk bij twijfel de gevouwen vleugel.',
+    rows: [
+      {label: 'Gevouwen vleugel', values: ['Twee lichte vleugelstrepen', 'Geen vergelijkbare twee witte banden']},
+      {label: 'Kop', values: ['Meestal egaler grijsbruin', 'Vaak duidelijker lichte wenkbrauw']},
+      {label: 'Rug en staart', values: ['Meestal egalere rug; witte buitenstaartveren', 'Bruiner en gestreept op de rug']},
+    ],
+    tip: 'Bekijk beide vrouwtjes van opzij: vleugelstrepen én rugtekening samen. Jonge Vinken kunnen op vrouwtjes lijken; zicht en licht bepalen wat bruikbaar is.',
   },
   {
     "label": "Grote of middelste bonte specht?",
@@ -1330,6 +1336,19 @@ export const GUIDE_COMPARISONS = [
       {id: 'sp031', source: 'matkop', photoMissing: 'vluchtcontrole 2026-11-10: geen geschikte vluchtfoto', marks: 'Lijkt sterk op Glanskop. Een licht vleugelveld is vaak bruikbaar bij goed zicht.'},
     ],
     tip: 'Van beide soorten is nog geen geschikte vluchtfoto. Luister bij twijfel naar de roep en bekijk de kop en gevouwen vleugel bij goed licht.',
+  },
+  {
+    label: 'Groenling en Sijs · volwassen mannetjes in rust',
+    birds: [
+      {id: 'sp036', source: 'groenling', plumage: 'adult_m', marks: 'Forse geelgroene vink met stevige brede snavel, geen zwarte pet en geel langs de buitenste handpennen.'},
+      {id: 'sp038', source: 'sijs', plumage: 'adult_m', marks: 'Kleinere fijnsnavelige vogel met zwarte kruin/keel en een contrasterende gele vleugelstreep.'},
+    ],
+    rows: [
+      {label: 'Snavel', values: ['Breed en krachtig', 'Dunner en puntiger']},
+      {label: 'Kop', values: ['Geelgroen zonder zwarte kruin', 'Zwarte kruin en kin bij volwassen mannetje']},
+      {label: 'Geel in vleugel', values: ['Langs buitenste vleugelpennen', 'Duidelijke dwarsband']},
+    ],
+    tip: 'Gebruik bij volwassen mannetjes kop, snavel en vleugel samen; op afstand lijkt geelgroen bij beide soorten aanwezig. Voor vrouwtjes open de aparte rustvergelijking.',
   },
   {
     label: 'Groenling en Sijs · in vlucht',
