@@ -303,6 +303,56 @@
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kuifeend",
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/topper"
       ]
+    },
+    {
+      "id": "LK-007",
+      "focus": [
+        "sp035",
+        "sp036"
+      ],
+      "birds": [
+        "sp035",
+        "sp036"
+      ],
+      "risk": "adult female resting, juvenile resembles female",
+      "matchingPlumages": [
+        "adult_f",
+        "adult_f"
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Both pre-existing CC-licensed individual resting female source images must still be independently checked against original files, current rights and the 320/360/390px rendering; already registered photos are not yet F3 FULL PASS"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Gevouwen vleugel",
+          "values": [
+            "Vink vrouwtje toont twee lichte, meestal witte vleugelstrepen",
+            "Groenling vrouwtje heeft gele rand langs de slagpennen, niet twee witte vinkbanden"
+          ]
+        },
+        {
+          "label": "Snavelvorm",
+          "values": [
+            "Vink doorgaans een minder forse kegelsnavel",
+            "Groenling een bredere en zwaardere kegelsnavel"
+          ]
+        },
+        {
+          "label": "Kleedkleur",
+          "values": [
+            "Vink vooral grijsbruin",
+            "Groenling vaak groengrijs met geel aan vleugel en buitenstaart; licht beïnvloedt indruk"
+          ]
+        }
+      ],
+      "caution": "Vergelijk adult female met adult female en controleer vleugeltekening en snavel in hetzelfde zijaanzicht. Jonge en doffe vogels variëren; kleur alleen beslist niet. Beide originele beelden vereisen nog onafhankelijke fotorechten- en soortcontrole.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/vink",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/groenling",
+        "https://www.rspb.org.uk/birds-and-wildlife/identifying-birds/small-brown-birds-you-might-see-in-your-garden"
+      ]
     }
   ],
   "withinSpeciesVariation": [

@@ -1698,6 +1698,21 @@ export const GUIDE_COMPARISONS = [
     tip: 'Vrouwtjes kunnen sterk op elkaar lijken. Vergelijk warme of koele onderzijde in egaal licht en controleer ook roep en omgeving; de staartkleur alleen beslist niet.',
   },
   {
+    label: 'Vink en Groenling · vrouwtjes in rust',
+    birds: [
+      {id: 'sp035', source: 'vink', plumage: 'adult_f',
+        marks: 'Vrouwtje Vink met twee witte vleugelstrepen, een overwegend grijsbruine kop en een compactere kegelsnavel.'},
+      {id: 'sp036', source: 'groenling', plumage: 'adult_f',
+        marks: 'Vrouwtje Groenling met gele vleugelrand en buitenstaartpennen, groengrijze tint en zwaardere kegelsnavel.'},
+    ],
+    rows: [
+      {label: 'Vleugel', values: ['Twee lichte, meestal witte vleugelstrepen', 'Gele rand langs de slagpennen; geen twee witte vinkstrepen']},
+      {label: 'Snavel', values: ['Kegelvormig en doorgaans minder fors', 'Dikker en breder aan de basis']},
+      {label: 'Kleed', values: ['Overwegend grijsbruin', 'Vaak groengrijs; geel ook bij doffe vogels']},
+    ],
+    tip: 'Vergelijk hetzelfde vrouwtjeskleed en zicht op vleugel én snavel. Verschillen in belichting en seizoen veranderen hoe bruin of groen een vogel lijkt. Jonge vogels kunnen subtieler zijn; één kleur is niet voldoende.',
+  },
+  {
     label: 'Sijs en Groenling · vrouwtje',
     birds: [
       {id: 'sp038', source: 'sijs', plumage: 'adult_f', marks: 'Fijne, puntige snavel en donkere flankstrepen.'},

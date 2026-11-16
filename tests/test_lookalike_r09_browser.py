@@ -11,6 +11,8 @@ SHOTS = ROOT / 'tests' / 'screenshots' / 'lookalike_r09'
 CASES = [
     ('Vink', 'sp035', 'sp043', 'vrouwtjes'),
     ('Huismus', 'sp043', 'sp035', 'vrouwtjes'),
+    ('Vink', 'sp035', 'sp036', 'vrouwtjes'),
+    ('Groenling', 'sp036', 'sp035', 'vrouwtjes'),
     ('Groenling', 'sp036', 'sp038', 'mannetjes'),
     ('Sijs', 'sp038', 'sp036', 'mannetjes'),
     ('Staartmees', 'sp034', 'sp174', 'volwassen'),
