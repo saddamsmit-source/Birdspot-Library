@@ -183,6 +183,9 @@ def main():
                         putter_card = sec.locator('.sd-cmp-card').filter(
                             has=page.locator('.sd-cmp-who strong', has_text="Putter")).first
                         expect(putter_card).to_have_count(1)
+                        # Added comparable species may place Putter in the accessible "Nog soorten" group.
+                        putter_card.evaluate("el => { const detail = el.closest('details.sd-cmp-more'); if (detail) detail.open = true; }")
+                        expect(putter_card).to_be_visible()
                         young_tab = putter_card.get_by_role("button", name="Juveniel", exact=True)
                         young_tab.click()
                         expect(young_tab).to_have_attribute("aria-selected", "true")
