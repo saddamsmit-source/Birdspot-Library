@@ -44,3 +44,8 @@ expect_fail(lambda: intake.safe_dest("/assets/species/plumage/sp039-juv.webp", "
 assert intake.safe_dest("/assets/species/plumage/sp999-test-not-present.webp", "pose").name == "sp999-test-not-present.webp"
 assert intake.safe_dest("/assets/species/audio/sp999-test-not-present.mp3", "audio").suffix == ".mp3"
 print("MEDIA INTAKE NEGATIVE PASS: wrong author/licence/SHA-1, missing file, unheard audio, traversal, outside dir, wrong extension, overwrite all refused")
+assert intake.crop_box((1000, 800), [0.36, 0.12, 0.9, 0.88]) == (360, 96, 900, 704)
+assert intake.crop_box((1000, 800), None) is None
+for bad in ([0.5, 0.1, 0.4, 0.9], [0, 0, 0.1, 1], [-0.1, 0, 1, 1], [0, 0, 1, 1.2]):
+    expect_fail(lambda b=bad: intake.crop_box((1000, 800), b), "Ongeldige uitsnede")
+print("MEDIA INTAKE CROP PASS: valid crop fractions applied; inverted, tiny and out-of-image crops refused")

@@ -178,11 +178,25 @@ def discover(manifest: Path, out: Path) -> None:
     print("discover:", sum(len(q["candidates"]) for q in report["queries"]), "kandidaten")
 
 
-def convert_image(data: bytes, dest: Path) -> tuple[int, int]:
+def crop_box(size: tuple[int, int], crop: list[float] | None) -> tuple[int, int, int, int] | None:
+    """Uitsnede als fracties [x0, y0, x1, y1]; alleen geldig binnen het beeld en minimaal 20 % per zijde."""
+    if not crop:
+        return None
+    x0, y0, x1, y1 = crop
+    if not (0 <= x0 < x1 <= 1 and 0 <= y0 < y1 <= 1) or x1 - x0 < 0.2 or y1 - y0 < 0.2:
+        raise IntakeError(f"Ongeldige uitsnede: {crop}")
+    w, h = size
+    return round(x0 * w), round(y0 * h), round(x1 * w), round(y1 * h)
+
+
+def convert_image(data: bytes, dest: Path, crop: list[float] | None = None) -> tuple[int, int]:
     from PIL import Image, ImageOps
     img = Image.open(io.BytesIO(data))
     img.load()
     img = ImageOps.exif_transpose(img).convert("RGB")
+    box = crop_box(img.size, crop)
+    if box:
+        img = img.crop(box)
     img.thumbnail((1400, 1400))
     dest.parent.mkdir(parents=True, exist_ok=True)
     img.save(dest, "WEBP", quality=85, method=6)
@@ -228,9 +242,11 @@ def do_import(manifest: Path) -> None:
             entry["modifications"] = f"Fragment {e.get('start', 0)}–{e.get('start', 0) + e.get('seconds', 30)} s, omgezet naar MP3 (mono, 96 kbit/s), metadata verwijderd"
             registry["audio"].setdefault(sid, []).append(entry)
         else:
-            w, h = convert_image(data, dest)
+            w, h = convert_image(data, dest, e.get("crop"))
+            mod = ("Uitsnede rond de vogel (fracties " + ", ".join(f"{v:.2f}" for v in e["crop"]) + "), " if e.get("crop")
+                   else "Zonder uitsnede, ")
             entry.update({"image": e["asset"], "width": w, "height": h,
-                          "modifications": "Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP"})
+                          "modifications": mod + "verkleind tot max. 1400 px en omgezet naar WebP zonder EXIF/GPS/XMP"})
             if kind == "plumage":
                 slot = registry["plumage"].setdefault(sid, {})
                 if slot.get(role):
