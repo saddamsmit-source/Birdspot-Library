@@ -59,12 +59,14 @@ assert.ok(KNOWLEDGE.sp037.similar.some(s => s.id === 'sp038'), 'Putter must refe
 for (const key of ['VB_KNEU', 'VB_FRATER', 'VB_GROTE_BARMSIJS', 'VB_EUROKANARIE', 'VB_ROODMUS'])
   assert.ok(KNOWLEDGE_SOURCES[key]?.url?.startsWith('https://'), 'Missing source ' + key);
 
-// 6. Status correction: Dutch breeding Kneu winters in SW Europe; no 'Standvogel' claim.
-assert.doesNotMatch(byId.get('sp039').status, /Standvogel/);
-assert.match(byId.get('sp039').status, /Zuidwest-Europa/);
+// 6. Status discrepancy: species.js is generated from docs/data/vogellijst-nederland.json and stays unchanged;
+//    the conflict with Vogelbescherming (Dutch breeders winter in SW Europe) must be registered, not hidden.
+assert.match(byId.get('sp039').status, /Standvogel/, 'species.js must stay equal to the canonical list');
+assert.ok(kneu.discrepancies.some(x => /Standvogel/.test(x.app) && /Zuidwest-Europa/.test(x.source)), 'Status conflict must be registered');
+assert.ok(kneu.open.some(x => /vogellijst-nederland/.test(x)), 'Status review must stay an open point');
 
 // 7. No audio invented for the three species.
 const audio = JSON.parse(readFileSync(new URL('../assets/species/field-guide-media.json', import.meta.url), 'utf8')).audio;
 for (const id of R10) assert.ok(!audio[id] || audio[id].length === 0, 'Unexpected audio for ' + id);
 
-console.log('LOOKALIKE R10 PASS: Putter, Sijs, Kneu; 5 new pairs (2 photo pairs, 3 text-only with hidden photos); Kneu profile and status corrected; no audio invented');
+console.log('LOOKALIKE R10 PASS: Putter, Sijs, Kneu; 5 new pairs (2 photo pairs, 3 text-only with hidden photos); Kneu profile and status discrepancy registered; no audio invented');

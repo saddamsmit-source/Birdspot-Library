@@ -45,7 +45,7 @@ Bij elk ontbrekend fotopaar staat de waarschuwing wel in de zichtbare herkenning
 
 1. **Nieuw kennisprofiel Kneu** (`knowledge.json` → gegenereerde `speciesKnowledge.js`): samenvatting, vier veldkenmerken, waarschuwing, twee kritische kenmerken (Frater; barmsijzen), gelijkende soorten Frater, Grote en Kleine barmsijs en Roodmus, geslacht/leeftijd/seizoen, roep en zang, leefgebied, status, voedsel, broeden en trek. Elke bewering heeft een bron; niets is als "doorslaggevend" gemarkeerd.
 2. **Sijs:** waarschuwing en gelijkende soorten uitgebreid met Europese kanarie, plus een terugverwijzing naar Putter (die al naar Sijs verwees).
-3. **Statuscorrectie Kneu** in `species.js`: niet langer "Standvogel". Vogelbescherming meldt dat Nederlandse broedvogels in Zuidwest-Europa overwinteren. De filtercategorie `standvogel` is **niet** gewijzigd (effect op seizoensfilters eerst beoordelen); open punt.
+3. **Statusafwijking Kneu geregistreerd:** `species.js` wordt gegenereerd uit `docs/data/vogellijst-nederland.json` en noemt de Kneu "Standvogel, ook wintergast". Vogelbescherming meldt dat Nederlandse broedvogels in Zuidwest-Europa overwinteren. De canonieke lijst is **niet** gewijzigd (status én filtercategorie samen herzien, met effect op seizoensfilters); vastgelegd als discrepantie en open punt in het kennisprofiel.
 4. **Dubbelgangersregister:** focus uitgebreid met `sp037–sp039`, vijf nieuwe paren LK-008 t/m LK-012.
 
 ## Geluid
@@ -68,7 +68,7 @@ Via zoekresultaten van de bronpagina's; volledige pagina's niet integraal geleze
 
 | Test | Uitkomst | Bewijslaag |
 |---|---|---|
-| `tests/test_lookalike_r10.mjs` | PASS; mutatie (oude statustekst terug) wordt gevangen | code |
+| `tests/test_lookalike_r10.mjs` | PASS; mutatie (Kneu-profiel verwijderd uit gegenereerde module) wordt gevangen | code |
 | `tests/test_lookalike_r10_browser.py` | PASS op 320/360/390 px: Putter↔Sijs en Kneu↔Roodmus met twee gedecodeerde foto's naast elkaar, verschillenrijen, zoom en terug; Frater/barmsijs/Europese kanarie alleen als tekst, geen fotopaneel | Chromium, geen fysiek toestel |
 | `tests/test_lookalike_r09.mjs` | PASS (12 paren); focuscontrole aangepast zodat R09 de eerste drie focussoorten blijft bewaken | code |
 | `tests/test_f3_140_unified_rebaseline.mjs` | PASS; 30/140 inhoudelijk bekeken, 110 niet gestart, 0 F3FullPass; R10 blob-SHA's bewaakt | code |
@@ -80,7 +80,7 @@ Via zoekresultaten van de bronpagina's; volledige pagina's niet integraal geleze
 1. Foto's vrouwtje en juveniel Kneu zoeken en volledig verifiëren (§3.2).
 2. Zang/roep voor Putter, Sijs en Kneu met bron en licentie.
 3. Vluchtfoto's Putter en Sijs: onafhankelijk beoordelen of het echte vrije vlucht is; Kneu-vluchtfoto vervangen of weglaten.
-4. Filtercategorie Kneu (`standvogel`) brongedragen herzien en effect op seizoensfilters testen.
+4. Status en filtercategorie Kneu in `docs/data/vogellijst-nederland.json` brongedragen herzien en effect op seizoensfilters testen.
 5. Biometrie Kneu met twee uitgevers (KV-13); Sovon-status en eBird-seizoenspatroon.
 
 **Stand:** 30/140 inhoudelijk bekeken, 0 volledig F3-PASS. Volgende drie volgens de soortenlijst: `sp040` Goudvink, `sp041` Appelvink, `sp042` Roodmus (te verifiëren vóór de start van F3-R11).

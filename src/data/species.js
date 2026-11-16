@@ -287,7 +287,7 @@ export const SPECIES = [
     fieldmarks:'Kleine vink met grijze kegelsnavel en bruinige rug. Mannetje in broedkleed rood op voorhoofd en borst; vrouwtjes en jongen zijn bruingrijs, gestreept en zonder rood.',
     size:{ length:'12–14 cm', wingspan:'21–25 cm', weight:'15–22 g' },
     plumage:{ adult_m:'Kastanjebruin rug; grijs hoofd; rood voorhoofd en borst (broedkleed); witte vleugelranden', adult_f:'Bruingrijs, met lichte streping op kruin en borst; geen rood in het verenkleed.', juv:'Bruin en gestreept, zonder het rode kleed van een broedend mannetje.', jaarling:null, breeding:'Mannetje met karmijnrood voorhoofd en rode borst; grijze kop', winter:'Rood grotendeels verborgen onder bruine veerranden', eclipse:null },
-    distribution:'Heide, duinen en akkerranden; heel NL', status:'Broedvogel; Nederlandse broedvogels overwinteren in Zuidwest-Europa · jaarrond waar te nemen',
+    distribution:'Heide, duinen en akkerranden; heel NL', status:'Standvogel, ook wintergast · jaarrond',
     statusExtra:'wintergast', months:'jan-dec', frequency:'vrij-algemeen', breeding:'ja', redList:'Gevoelig' },
   { id:'sp040', nameNL:'Goudvink',            nameEN:'Eurasian Bullfinch',        nameSci:'Pyrrhula pyrrhula',          family:'Vinken',          category:'standvogel', icon:'🐦', regions:['bos','struweel'],
     fieldmarks:'Stevig gebouwde vink met korte, dikke snavel, witte stuit en donkere staart. Bij volwassen vogels valt de zwarte kap op.',

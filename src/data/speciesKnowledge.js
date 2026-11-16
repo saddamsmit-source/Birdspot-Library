@@ -23418,8 +23418,8 @@ const DATA = {
    "discrepancies": [
     {
      "field": "Status",
-     "app": "species.js noemde de Kneu tot F3-R10 'Standvogel'",
-     "source": "Vogelbescherming: Nederlandse broedvogels overwinteren in Zuidwest-Europa; statustekst in F3-R10 gecorrigeerd, filtercategorie nog open",
+     "app": "species.js (gegenereerd uit docs/data/vogellijst-nederland.json) noemt de Kneu 'Standvogel, ook wintergast'",
+     "source": "Vogelbescherming: Nederlandse broedvogels overwinteren in Zuidwest-Europa. De canonieke vogellijst is in F3-R10 niet gewijzigd; brongedragen herziening van status en filtercategorie staat open.",
      "sources": [
       "VB_KNEU",
       "VB_KNEU_FACTSHEET"
@@ -23429,7 +23429,7 @@ const DATA = {
    "open": [
     "Biometrie (lengte, spanwijdte, gewicht in species.js) nog niet met twee uitgevers volgens KV-13 gecontroleerd.",
     "ANWB-gids, Sovon-trendcijfers en eBird-seizoenspatroon niet geraadpleegd in F3-R10.",
-    "Wintergasten uit Noord-Europa en de filtercategorie 'standvogel' nog brongedragen beoordelen."
+    "Status en filtercategorie in docs/data/vogellijst-nederland.json ('Standvogel') brongedragen herzien, inclusief wintergasten uit Noord-Europa en het effect op seizoensfilters."
    ]
   }
  }
