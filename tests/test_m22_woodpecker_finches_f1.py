@@ -149,9 +149,9 @@ def validate_bird_media():
             }
         else:
             assert not status["audited"] and status["verdict"] == "NOT TESTED"
-            if sid == "sp039":
-                # F3-R10 (16-11-2026) added a sourced knowledge profile; the historical F1 audit status stays untouched.
-                assert sid in knowledge and knowledge[sid]["caution"]["sources"], "F3-R10 Kneu profile must stay sourced"
+            if sid in ("sp039", "sp042"):
+                # F3-R10 (Kneu) and F3-R11 (Roodmus, 16-11-2026) added sourced knowledge profiles; the historical F1 audit status stays untouched.
+                assert sid in knowledge and knowledge[sid]["caution"]["sources"], "F3 knowledge profile must stay sourced"
             else:
                 assert sid not in knowledge
         cr = credits[sid]

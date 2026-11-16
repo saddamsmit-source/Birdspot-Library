@@ -4649,7 +4649,7 @@
       "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/roodmus",
       "edition": "Online geraadpleegd 16-11-2026",
       "scope": "Nederland",
-      "confirms": "korte dikke grijze snavel, rood op kop, borst en stuit bij volwassen mannetje",
+      "confirms": "stevig postuur, korte dikke grijze snavel, rood op kop, borst en stuit bij volwassen mannetje, olijf- tot grijsbruine vrouwtjes en jongen zonder rood, leefgebied duinen en wilgenrijke moerassen",
       "checked": "2026-11-16",
       "certainty": "hoog",
       "publisher": "Vogelbescherming Nederland"
@@ -4664,6 +4664,39 @@
       "checked": "2026-11-16",
       "certainty": "hoog",
       "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_ROODMUS_ZELDZAAM": {
+      "register": "NL07",
+      "label": "Vogelbescherming Nederland — Zeldzaam rood: de roodmus",
+      "url": "https://www.vogelbescherming.nl/actueel/bericht/zeldzaam-rood-de-roodmus",
+      "edition": "Online geraadpleegd 16-11-2026 (bericht uit circa 2018)",
+      "scope": "Nederland",
+      "confirms": "zeldzaam, vooral Waddeneilanden en Hollands-Zeeuwse kust, vaak ongepaarde zingende mannetjes, overwintering in Zuid- en Zuidoost-Azië, struweel in duinvalleien en moerassen",
+      "checked": "2026-11-16",
+      "certainty": "midden",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "VB_MUSSEN": {
+      "register": "NL07",
+      "label": "Vogelbescherming Nederland — Blij met 5 mooie mussen",
+      "url": "https://www.vogelbescherming.nl/actueel/bericht/blij-met-5-mooie-mussen",
+      "edition": "Online geraadpleegd 16-11-2026",
+      "scope": "Nederland",
+      "confirms": "zang van de Roodmus als 'pleased to meet you', zangtijd mei, kansrijk op Waddeneilanden en in de duinen",
+      "checked": "2026-11-16",
+      "certainty": "hoog",
+      "publisher": "Vogelbescherming Nederland"
+    },
+    "RSPB_ROODMUS": {
+      "register": "nieuwe soortreferentie",
+      "label": "Royal Society for the Protection of Birds — Common Rosefinch",
+      "url": "https://www.rspb.org.uk/birds-and-wildlife/wildlife-guides/bird-a-z/common-rosefinch/",
+      "edition": "Online geraadpleegd 16-11-2026",
+      "scope": "Verenigd Koninkrijk",
+      "confirms": "musformaat, gestreepte borst, gevorkte staart; mannetjes ouder dan een jaar met scharlaken kop, borst en stuit; vrouwtjes en jonge mannetjes gestreept bruin, lijken op kleine Grauwe Gors",
+      "checked": "2026-11-16",
+      "certainty": "hoog",
+      "publisher": "Royal Society for the Protection of Birds"
     }
   },
   "sp021": {
@@ -23426,6 +23459,146 @@
       "Biometrie (lengte, spanwijdte, gewicht in species.js) nog niet met twee uitgevers volgens KV-13 gecontroleerd.",
       "ANWB-gids, Sovon-trendcijfers en eBird-seizoenspatroon niet geraadpleegd in F3-R10.",
       "Status en filtercategorie in docs/data/vogellijst-nederland.json ('Standvogel') brongedragen herzien, inclusief wintergasten uit Noord-Europa en het effect op seizoensfilters."
+    ]
+  },
+  "sp042": {
+    "summary": {
+      "text": "Stevige vink met het postuur van een Goudvink en een korte, dikke grijze snavel. Het volwassen mannetje is rood op kop, borst en stuit; vrouwtjes en jongen zijn olijf- tot grijsbruin zonder rood.",
+      "sources": [
+        "VB_ROODMUS",
+        "RSPB_ROODMUS"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Korte, dikke, grijze snavel op een stevig gebouwde vink.",
+        "sources": [
+          "VB_ROODMUS"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Volwassen mannetje: kop, borst en stuit rood, buik licht.",
+        "sources": [
+          "VB_ROODMUS",
+          "RSPB_ROODMUS"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Vrouwtjes en jonge mannetjes zijn gestreept bruin zonder rood en weinig opvallend.",
+        "sources": [
+          "VB_ROODMUS",
+          "RSPB_ROODMUS"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Mannetjes zingen een korte, fluitende strofe die vaak wordt weergegeven als 'pleased to meet you'; je hoort de vogel meestal eerder dan je hem ziet.",
+        "sources": [
+          "VB_MUSSEN",
+          "VB_ROODMUS"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "caution": {
+      "text": "Alleen volwassen mannetjes zijn rood. Vrouwtjes en jonge vogels zijn bruin en gestreept en lijken dan eerder op een kleine Grauwe Gors of een vrouwtje Kneu; let op de korte dikke snavel en de zang. Jonge mannetjes zingen al, maar zijn nog bruin.",
+      "sources": [
+        "VB_ROODMUS",
+        "RSPB_ROODMUS",
+        "VB_KNEU"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Roodverdeling en snavel",
+        "where": "Kop, borst en stuit van een volwassen mannetje",
+        "this": "Rood op kop, borst én stuit; korte, dikke grijze snavel.",
+        "other": "Kneu-mannetje: rood alleen op voorhoofd en borst, grijze kop en kleinere grijze kegelsnavel.",
+        "vs": [
+          "sp039"
+        ],
+        "reliability": "ondersteunend",
+        "conditions": "Alleen bij volwassen mannetjes in broedkleed.",
+        "exceptions": "Vrouwtjes en jongen van beide soorten missen rood; dan helpen snavelbouw, streping en geluid meer.",
+        "supporting": "Roodmus is in Nederland een zeldzame zomergast, vooral aan de kust.",
+        "sources": [
+          "VB_ROODMUS",
+          "RSPB_ROODMUS",
+          "VB_KNEU"
+        ]
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp039",
+        "why": "Het Kneu-mannetje heeft ook rood op voorhoofd en borst, maar een grijze kop, warmbruine rug en kleinere snavel.",
+        "sources": [
+          "VB_ROODMUS",
+          "VB_KNEU"
+        ]
+      },
+      {
+        "id": "sp119",
+        "why": "Vrouwtjes en jonge mannetjes zijn gestreept bruin en lijken dan wat op een kleine Grauwe Gors.",
+        "sources": [
+          "RSPB_ROODMUS"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "text": "Mannetjes krijgen pas na hun eerste levensjaar het rode kleed; jonge mannetjes zijn bruin zoals vrouwtjes.",
+        "sources": [
+          "RSPB_ROODMUS",
+          "VB_ROODMUS"
+        ],
+        "topic": "leeftijd"
+      },
+      {
+        "text": "Jonge vogels hebben lichte vleugelstrepen.",
+        "sources": [
+          "VB_ROODMUS"
+        ],
+        "topic": "leeftijd"
+      }
+    ],
+    "voice": [
+      {
+        "text": "Zang: korte, fluitende strofe, in Nederland vooral in mei te horen; ook onvolwassen mannetjes zingen.",
+        "sources": [
+          "VB_MUSSEN",
+          "VB_ROODMUS"
+        ],
+        "kind": "zang"
+      }
+    ],
+    "habitat": [
+      {
+        "text": "Open gebied met verspreide bomen en struiken, vaak vochtig: in Nederland vooral struweel in duinvalleien en soms wilgenrijke moerassen.",
+        "sources": [
+          "VB_ROODMUS",
+          "VB_ROODMUS_ZELDZAAM"
+        ],
+        "kind": "nederland"
+      }
+    ],
+    "status": [
+      {
+        "text": "Zeldzame zomergast en broedvogel, vooral op de Waddeneilanden en langs de Hollandse en Zeeuwse kust; vaak gaat het om zingende mannetjes zonder vrouwtje. Overwintert in Zuid- en Zuidoost-Azië.",
+        "sources": [
+          "VB_ROODMUS_ZELDZAAM",
+          "VB_MUSSEN"
+        ],
+        "kind": "voorkomen"
+      }
+    ],
+    "discrepancies": [],
+    "open": [
+      "Actuele aantallen en trend (Sovon) niet geraadpleegd in F3-R11; het Vogelbeschermingsbericht over aantallen is van circa 2018.",
+      "Biometrie niet met twee uitgevers volgens KV-13 gecontroleerd.",
+      "Geen foto van vrouwtje, juveniel of vrije vlucht in de app; geen geregistreerde zang of roep."
     ]
   }
 }
