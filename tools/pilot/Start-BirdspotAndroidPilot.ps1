@@ -7,6 +7,10 @@ unless -ConnectUsb is explicitly supplied.
 #>
 [CmdletBinding()]
 param(
+    # Exact candidate, always supplied at run time (no pin inside this file: a self-referencing SHA is impossible).
+    [Parameter(Mandatory = $true)][string]$CandidateBranch,
+    [Parameter(Mandatory = $true)][string]$ExpectedSha,
+    [Parameter(Mandatory = $true)][string]$ExpectedVersion,
     [switch]$PrepareOnly,
     [switch]$ConnectUsb,
     [switch]$SelfCheck
@@ -16,9 +20,6 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
 $RepoUrl = 'https://github.com/saddamsmit-source/Birdspot-Library.git'
-$CandidateBranch = 'qa/birdspot-release-candidate-1.27.7-20261113'
-$ExpectedSha = '83c117447126b705cae1899f71e66d070a6084b9'
-$ExpectedVersion = '1.27.7'
 $Port = 8765
 
 function Assert-Tool([string]$Name) {
@@ -33,12 +34,15 @@ function Check-LastExit([string]$Operation) {
     }
 }
 
+# Input validation before anything touches the network or disk.
+if ($ExpectedSha -notmatch '^[0-9a-f]{40}$') { throw 'ExpectedSha must be the full 40-character lowercase commit SHA.' }
+if ($ExpectedVersion -notmatch '^[0-9]+\.[0-9]+\.[0-9]+([.-][0-9A-Za-z.-]+)?$') { throw 'ExpectedVersion must look like 1.27.31.' }
+if ($CandidateBranch -notmatch '^(qa|fix|release)/birdspot-[0-9A-Za-z._/-]+$' -or $CandidateBranch.Contains('..')) {
+    throw 'CandidateBranch must be a Birdspot qa/, fix/ or release/ branch. main and preview/* are never used for a local pilot.'
+}
+if ($Port -ne 8765) { throw 'Unexpected local test port.' }
 if ($SelfCheck) {
-    if ($ExpectedSha -notmatch '^[0-9a-f]{40}$') { throw 'Pinned commit must be exactly 40 hex characters.' }
-    if ($ExpectedVersion -ne '1.27.7') { throw 'Unexpected candidate version.' }
-    if ($CandidateBranch -ne 'qa/birdspot-release-candidate-1.27.7-20261113') { throw 'Unexpected test branch.' }
-    if ($Port -ne 8765) { throw 'Unexpected local test port.' }
-    Write-Output 'PASS: pinned SHA, version and port; self-check made no network or filesystem changes.'
+    Write-Output "PASS: candidate $CandidateBranch / $ExpectedSha / $ExpectedVersion well-formed; self-check made no network or filesystem changes."
     exit 0
 }
 
@@ -57,6 +61,15 @@ if (-not (Test-Path -LiteralPath $checkout)) {
     Write-Output 'Downloading the read-only, exact-version candidate into a separate local checkout...'
     & git clone --depth 1 --single-branch --branch $CandidateBranch $RepoUrl $checkout
     Check-LastExit 'Git clone'
+    # The branch may have moved on; fetch and detach at the exact pinned commit if it is still reachable.
+    $tipLines = @(& git -C $checkout rev-parse HEAD)
+    Check-LastExit 'Git HEAD check'
+    if (([string]$tipLines[0]).Trim() -ne $ExpectedSha) {
+        & git -C $checkout fetch --depth 1 origin $ExpectedSha
+        Check-LastExit 'Fetch exact pinned commit'
+        & git -C $checkout -c advice.detachedHead=false checkout --detach $ExpectedSha
+        Check-LastExit 'Check out exact pinned commit'
+    }
 }
 if (-not (Test-Path -LiteralPath (Join-Path $checkout '.git'))) {
     throw 'An existing checkout path is not a Git repository. Refusing to overwrite it.'
