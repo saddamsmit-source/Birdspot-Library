@@ -208,7 +208,7 @@ def run(manifest: Path, out: Path) -> None:
         seen = {}
         for rid, (r2, f2) in feats.items():
             if (r2["role"] == "reference" and r2["soundType"] == rec["soundType"] and f2.get("usable")
-                    and r2["sha1"] not in seen.setdefault(r2["speciesId"], set())):
+                    and r2["sha1"] != rec["sha1"] and r2["sha1"] not in seen.setdefault(r2["speciesId"], set())):
                 seen[r2["speciesId"]].add(r2["sha1"])
                 refs.setdefault(r2["speciesId"], []).append(f2)
         report["judgements"].append({"id": cid, "speciesId": rec["speciesId"], "soundType": rec["soundType"],
