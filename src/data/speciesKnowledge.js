@@ -4546,6 +4546,127 @@ const DATA = {
    "checked": "2026-11-15",
    "certainty": "hoog",
    "publisher": "Cornell Lab of Ornithology"
+  },
+  "VB_KNEU": {
+   "register": "NL07",
+   "label": "Vogelbescherming Nederland — Kneu",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kneu",
+   "edition": "Online geraadpleegd 16-11-2026",
+   "scope": "Nederland",
+   "confirms": "herkenning per geslacht/leeftijd, snavel, vlucht en geluid, lengte, leefgebied, trek, bescherming",
+   "checked": "2026-11-16",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "VB_KNEU_FACTSHEET": {
+   "register": "NL07",
+   "label": "Vogelbescherming Nederland — soortfactsheet Kneu (pdf)",
+   "url": "https://www.vogelbescherming.nl/docs/cc8997c1-2bf3-4af2-9c8b-ba46a461611a.pdf",
+   "edition": "Online geraadpleegd 16-11-2026",
+   "scope": "Nederland",
+   "confirms": "leefgebied, voedsel, broedcyclus, zang, terugkeer en overwintering",
+   "checked": "2026-11-16",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "VB_FRATER": {
+   "register": "NL07",
+   "label": "Vogelbescherming Nederland — Frater",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/frater",
+   "edition": "Online geraadpleegd 16-11-2026",
+   "scope": "Nederland",
+   "confirms": "verschil met (onvolwassen) Kneu, gele snavel, roze stuit, wintergast",
+   "checked": "2026-11-16",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "VV_FRATER": {
+   "register": "nieuwe soortreferentie",
+   "label": "Vogelvisie — Frater",
+   "url": "https://www.vogelvisie.nl/soort/frater.php",
+   "edition": "Online geraadpleegd 16-11-2026",
+   "scope": "Nederland",
+   "confirms": "snavel zomer donkergrijs en winter geel, roze stuit mannetje, streping",
+   "checked": "2026-11-16",
+   "certainty": "hoog",
+   "publisher": "Vogelvisie"
+  },
+  "BWI_FRATER": {
+   "register": "nieuwe soortreferentie",
+   "label": "BirdWatch Ireland — Twite",
+   "url": "https://birdwatchireland.ie/birds/twite/",
+   "edition": "Online geraadpleegd 16-11-2026",
+   "scope": "Ierland",
+   "confirms": "gelijkenis met vrouwtje Kneu, snavelvorm, kleden",
+   "checked": "2026-11-16",
+   "certainty": "hoog",
+   "publisher": "BirdWatch Ireland"
+  },
+  "RSPB_KNEU": {
+   "register": "nieuwe soortreferentie",
+   "label": "Royal Society for the Protection of Birds — Linnet",
+   "url": "https://www.rspb.org.uk/birds-and-wildlife/linnet",
+   "edition": "Online geraadpleegd 16-11-2026",
+   "scope": "Verenigd Koninkrijk",
+   "confirms": "rood voorhoofd en borst mannetje, bruinere vrouwtjes, golvende vlucht met gekwetter, wintergroepen",
+   "checked": "2026-11-16",
+   "certainty": "hoog",
+   "publisher": "Royal Society for the Protection of Birds"
+  },
+  "BWI_KNEU": {
+   "register": "nieuwe soortreferentie",
+   "label": "BirdWatch Ireland — Wings (Linnet)",
+   "url": "https://birdwatchireland.ie/app/uploads/2019/02/Wings-Summer-2016-sml.pdf",
+   "edition": "Online geraadpleegd 16-11-2026",
+   "scope": "Ierland",
+   "confirms": "witte vleugelvlek en kastanjetint als kenmerken tegenover Frater en barmsijs; leefgebied",
+   "checked": "2026-11-16",
+   "certainty": "hoog",
+   "publisher": "BirdWatch Ireland"
+  },
+  "VB_GROTE_BARMSIJS": {
+   "register": "NL07",
+   "label": "Vogelbescherming Nederland — Grote barmsijs",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-barmsijs",
+   "edition": "Online geraadpleegd 16-11-2026",
+   "scope": "Nederland",
+   "confirms": "rood voorhoofd, zwarte bef, streping en vleugelstreep",
+   "checked": "2026-11-16",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "BWI_KLEINE_BARMSIJS": {
+   "register": "nieuwe soortreferentie",
+   "label": "BirdWatch Ireland — Lesser Redpoll",
+   "url": "https://www.birdwatchireland.ie/IrelandsBirds/Sparrowsfinchesbuntings/LesserRedpoll/tabid/1056/Default.aspx",
+   "edition": "Online geraadpleegd 16-11-2026",
+   "scope": "Ierland",
+   "confirms": "vrouwtjes/jongen zonder rood op de borst, gelijkende soorten Kneu en Frater, boomzaden",
+   "checked": "2026-11-16",
+   "certainty": "hoog",
+   "publisher": "BirdWatch Ireland"
+  },
+  "VB_ROODMUS": {
+   "register": "NL07",
+   "label": "Vogelbescherming Nederland — Roodmus",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/roodmus",
+   "edition": "Online geraadpleegd 16-11-2026",
+   "scope": "Nederland",
+   "confirms": "korte dikke grijze snavel, rood op kop, borst en stuit bij volwassen mannetje",
+   "checked": "2026-11-16",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "VB_EUROKANARIE": {
+   "register": "NL07",
+   "label": "Vogelbescherming Nederland — Europese kanarie",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/europese-kanarie",
+   "edition": "Online geraadpleegd 16-11-2026",
+   "scope": "Nederland",
+   "confirms": "korte dikke grijze snavel, zware streping, gele stuit en kop bij man, zeldzame broedvogel",
+   "checked": "2026-11-16",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
   }
  },
  "profiles": {
@@ -19205,10 +19326,11 @@ const DATA = {
     }
    ],
    "caution": {
-    "text": "Geel op vleugel en staart komt ook bij Groenling voor. Vergelijk de snavel en flanktekening bij gelijk licht.",
+    "text": "Geel op vleugel en staart komt ook bij Groenling voor. Vergelijk de snavel en flanktekening bij gelijk licht. Europese kanarie is eveneens geel en gestreept, maar heeft een korte, dikke snavel.",
     "sources": [
-     "VB_SIJS",
-     "BZH_SIJS"
+     "BZH_SIJS",
+     "VB_EUROKANARIE",
+     "VB_SIJS"
     ]
    },
    "critical": [
@@ -19238,6 +19360,23 @@ const DATA = {
      "sources": [
       "VB_SIJS",
       "VB_GROENLING"
+     ]
+    },
+    {
+     "id": "sp037",
+     "why": "Jonge Putters missen het rode masker, maar hebben een brede gele vleugelband op een zwarte vleugel en een spitse zaadsnavel.",
+     "sources": [
+      "VB_PUTTER",
+      "BZH_PUTTER",
+      "VB_SIJS"
+     ]
+    },
+    {
+     "id": "sp300",
+     "why": "Europese kanarie is ook geel en gestreept, maar heeft een korte, dikke grijze snavel en een gele stuit zonder gele vleugelband.",
+     "sources": [
+      "VB_EUROKANARIE",
+      "VB_SIJS"
      ]
     }
    ],
@@ -23066,6 +23205,231 @@ const DATA = {
       "SOV_MIDDELSTE_BONTE_SPECHT"
      ]
     }
+   ]
+  },
+  "sp039": {
+   "summary": {
+    "text": "Kleine, slanke vink met grijze kegelsnavel. Het mannetje heeft in broedkleed een karmijnrood voorhoofd en dito borst; vrouwtjes en jongen zijn bruingrijs en licht gestreept, zonder rood.",
+    "sources": [
+     "VB_KNEU",
+     "RSPB_KNEU"
+    ]
+   },
+   "keyMarks": [
+    {
+     "text": "Grijze, kegelvormige snavel.",
+     "sources": [
+      "VB_KNEU"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Mannetje in broedkleed met karmijnrood voorhoofd en borst, grijze kop en warmbruine rug; na de broedtijd is het rood meer roodbruin.",
+     "sources": [
+      "VB_KNEU",
+      "RSPB_KNEU"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Vrouwtjes en jongen hebben geen rood en een zwak gestreepte kruin en borst.",
+     "sources": [
+      "VB_KNEU"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Een kleine witte vlek in de vleugel en een kastanjebruine tint op de bovendelen helpen ook bij doffe vogels.",
+     "sources": [
+      "BWI_KNEU"
+     ],
+     "reliability": "ondersteunend"
+    }
+   ],
+   "caution": {
+    "text": "Vrouwtjes, jongen en wintervogels lijken op Frater en barmsijzen. Frater heeft in de winter een gele snavel, een effen okerkleurige keel en zwaardere streping; barmsijzen hebben een zwarte kin. Combineer snavel, keel en vleugel; één kenmerk is niet genoeg.",
+    "sources": [
+     "VB_FRATER",
+     "VV_FRATER",
+     "BWI_FRATER",
+     "VB_GROTE_BARMSIJS"
+    ]
+   },
+   "critical": [
+    {
+     "feature": "Snavel, keel en streping",
+     "where": "Kop en onderzijde van dichtbij, bij voorkeur in rust",
+     "this": "Grijze snavel; vrouwtje en jong licht gestreept, met een kleine witte vleugelvlek.",
+     "other": "Frater: in de winter een gele snavel, effen okerkleurige keel en een zwaarder gestreept okerbruin lichaam; het mannetje heeft een roze stuit.",
+     "vs": [
+      "sp295"
+     ],
+     "reliability": "ondersteunend",
+     "conditions": "Vooral bij vrouwtjes, jongen en vogels buiten de broedtijd.",
+     "exceptions": "De snavel van Frater is in de zomer donkergrijs; snavelkleur helpt dan niet.",
+     "supporting": "Frater is in Nederland een wintergast, vooral op kwelders en braakliggende akkers.",
+     "sources": [
+      "VB_KNEU",
+      "BWI_KNEU",
+      "VB_FRATER",
+      "VV_FRATER",
+      "BWI_FRATER"
+     ]
+    },
+    {
+     "feature": "Kin en kop",
+     "where": "Kop van voren of schuin opzij",
+     "this": "Geen zwarte kin; het mannetje heeft rood op voorhoofd en borst.",
+     "other": "Barmsijzen hebben een rood voorhoofdje, een zwarte kin of bef en gestreepte flanken.",
+     "vs": [
+      "sp296",
+      "sp297"
+     ],
+     "reliability": "ondersteunend",
+     "conditions": "Bij goed zicht op de kop; bruikbaar in alle seizoenen.",
+     "exceptions": "Vrouwtjes en jongen van barmsijzen missen rood op de borst; let dan vooral op de zwarte kin.",
+     "supporting": "Barmsijzen eten vaak zaden van berk en els.",
+     "sources": [
+      "VB_KNEU",
+      "VB_GROTE_BARMSIJS",
+      "BWI_KLEINE_BARMSIJS"
+     ]
+    }
+   ],
+   "similar": [
+    {
+     "id": "sp295",
+     "why": "Frater lijkt sterk op vrouwtje en jonge Kneu. Let op snavelkleur in de winter, keel en streping.",
+     "sources": [
+      "VB_FRATER",
+      "BWI_FRATER"
+     ]
+    },
+    {
+     "id": "sp296",
+     "why": "Grote barmsijs heeft ook rood aan de kop, maar een zwarte bef en meer streping.",
+     "sources": [
+      "VB_GROTE_BARMSIJS",
+      "BWI_KNEU"
+     ]
+    },
+    {
+     "id": "sp297",
+     "why": "Kleine barmsijs: rood voorhoofdje en zwarte kin; vrouwtjes en jongen zonder rode borst.",
+     "sources": [
+      "BWI_KLEINE_BARMSIJS",
+      "BWI_KNEU"
+     ]
+    },
+    {
+     "id": "sp042",
+     "why": "Mannetjes zijn beide rood. Roodmus heeft een korte, dikke snavel en rood op kop, borst en stuit.",
+     "sources": [
+      "VB_ROODMUS",
+      "VB_KNEU"
+     ]
+    }
+   ],
+   "detail": [
+    {
+     "text": "Mannetjes hebben een grijs achterhoofd; bij vrouwtjes en jongen is dat bruingrijs.",
+     "sources": [
+      "VB_KNEU"
+     ],
+     "topic": "geslacht"
+    },
+    {
+     "text": "Jongen lijken op het vrouwtje: geen rood, met lichte streping op kruin en borst.",
+     "sources": [
+      "VB_KNEU"
+     ],
+     "topic": "leeftijd"
+    },
+    {
+     "text": "Buiten de broedtijd is het rood van het mannetje doffer en meer roodbruin.",
+     "sources": [
+      "VB_KNEU",
+      "RSPB_KNEU"
+     ],
+     "topic": "seizoen"
+    }
+   ],
+   "voice": [
+    {
+     "text": "Vliegt vaak in groepjes met golvende vlucht en druk gekwetter.",
+     "sources": [
+      "VB_KNEU",
+      "RSPB_KNEU"
+     ],
+     "kind": "roep"
+    },
+    {
+     "text": "Mannetjes zingen een vrolijke, kwetterende zang.",
+     "sources": [
+      "VB_KNEU_FACTSHEET"
+     ],
+     "kind": "zang"
+    }
+   ],
+   "habitat": [
+    {
+     "text": "Broedt in lage struiken en struwelen bij kruidenrijke vegetatie in open landschap, vooral in duinen, heide en akkerbouwgebied; ook in groene woonwijken.",
+     "sources": [
+      "VB_KNEU",
+      "VB_KNEU_FACTSHEET"
+     ],
+     "kind": "nederland"
+    }
+   ],
+   "status": [
+    {
+     "text": "Broedvogel. Nederlandse broedvogels overwinteren in Zuidwest-Europa. Staat op de Rode Lijst; de aantallen zijn de afgelopen vijftig jaar sterk afgenomen.",
+     "sources": [
+      "VB_KNEU",
+      "VB_KNEU_FACTSHEET"
+     ],
+     "kind": "voorkomen"
+    }
+   ],
+   "life": [
+    {
+     "text": "Zaadeter van kruidenrijke plekken; ook de nestjongen krijgen zaden.",
+     "sources": [
+      "VB_KNEU_FACTSHEET"
+     ],
+     "kind": "voedsel"
+    },
+    {
+     "text": "Broedt vaak half-kolonievormig, zoekt voedsel ver buiten het territorium en heeft twee tot drie broedsels per jaar.",
+     "sources": [
+      "VB_KNEU",
+      "VB_KNEU_FACTSHEET"
+     ],
+     "kind": "broeden"
+    },
+    {
+     "text": "Keert vanaf ongeveer half maart terug op de broedplaatsen.",
+     "sources": [
+      "VB_KNEU_FACTSHEET"
+     ],
+     "kind": "trek"
+    }
+   ],
+   "discrepancies": [
+    {
+     "field": "Status",
+     "app": "species.js noemde de Kneu tot F3-R10 'Standvogel'",
+     "source": "Vogelbescherming: Nederlandse broedvogels overwinteren in Zuidwest-Europa; statustekst in F3-R10 gecorrigeerd, filtercategorie nog open",
+     "sources": [
+      "VB_KNEU",
+      "VB_KNEU_FACTSHEET"
+     ]
+    }
+   ],
+   "open": [
+    "Biometrie (lengte, spanwijdte, gewicht in species.js) nog niet met twee uitgevers volgens KV-13 gecontroleerd.",
+    "ANWB-gids, Sovon-trendcijfers en eBird-seizoenspatroon niet geraadpleegd in F3-R10.",
+    "Wintergasten uit Noord-Europa en de filtercategorie 'standvogel' nog brongedragen beoordelen."
    ]
   }
  }

@@ -20,7 +20,8 @@
     "seventhBatch": "docs/fotokwaliteit/F3_R07_GAAI_EN_MEZEN_2026-11-15_DRAFT.md",
     "eighthBatch": "docs/fotokwaliteit/F3_R08_MATKOP_GLANSKOP_KUIFMEES_2026-11-16_DRAFT.md",
     "ninthBatch": "docs/fotokwaliteit/F3_R09_STAARTMEES_VINK_GROENLING_2026-11-16_DRAFT.md",
-    "lookalikeRegister": "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json"
+    "lookalikeRegister": "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+    "tenthBatch": "docs/fotokwaliteit/F3_R10_PUTTER_SIJS_KNEU_2026-11-16_DRAFT.md"
   },
   "requiredChecks": [
     "photoOriginalIdentity",
@@ -52,9 +53,9 @@
     "audioMissing": 76,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 113,
+    "nextNotStarted": 110,
     "secondBatchStarted": 3,
-    "contentInspected": 27,
+    "contentInspected": 30,
     "contentComplete": 0,
     "thirdBatchStarted": 3,
     "fourthBatchStarted": 3,
@@ -62,7 +63,8 @@
     "sixthBatchStarted": 3,
     "seventhBatchStarted": 3,
     "eighthBatchStarted": 3,
-    "ninthBatchStarted": 3
+    "ninthBatchStarted": 3,
+    "tenthBatchStarted": 3
   },
   "records": [
     {
@@ -3440,37 +3442,60 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R10",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (all current local WebP photos opened in F3-R10; source originals and independent identity NOT compared)",
+          "photoIndividualRights": "PARTIALLY TESTED (existing photographer/license registry read; original individual file rights NOT freshly validated)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (adult male, female and juvenile labels plausible on visible marks; flight image airborne with spread wings but legs hanging: possible landing approach, independent recheck against free-flight rule open)",
+          "photoPairComparisons": "PARTIALLY TESTED (existing Putter-Sijs male, juvenile and flight pairs rendered in Chromium; originals not compared)",
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium 320/360/390 px comparison, zoom and back via tests/test_lookalike_r10_browser.py; no physical device)",
+          "creditsAndCleanAudioUI": "NOT TESTED (no F3-R10 attribution/UI audit beyond existing credits)",
+          "audioRecordingsAuthenticity": "BLOCKED (no registered song/call; media download route blocked in the F3-R10 Claude session)",
+          "audioLicenseAndAttribution": "BLOCKED (no recording to assess; candidate search and import open)",
+          "soundRolesSongCall": "PARTIALLY TESTED (song/call described in text from sources; no audio file)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (no audio file)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming species page consulted 16-11-2026; ANWB book NOT read)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (existing profile retained; symmetric Sijs reference verified; biometrics not rechecked)",
+          "sovonNetherlandsStatus": "NOT TESTED (Sovon trend figures not consulted in F3-R10)",
+          "ebirdDistributionAndBias": "NOT TESTED (eBird not consulted in F3-R10)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "endToEndGuideUI": "PARTIALLY TESTED (Chromium species card and lookalike panels; no device or offline run)",
+          "independentSecondReview": "NOT TESTED (no independent reviewer on F3-R10 yet)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-008 Putter-Sijs registered; juvenile Putter caution present in text and photo pair)"
         },
         "findings": [
-          "Geen lokaal geregistreerde zang of roep"
+          "Vijf bestaande lokale WebP's geopend: mannetje (hoofdfoto), vrouwtje, juveniel, vluchtbeeld en extra rustbeeld; soort en kleden passen bij de zichtbare kenmerken.",
+          "Het rode masker van het vrouwtje is kleiner; geslacht volgt het bestaande fotograaflabel en is niet onafhankelijk vastgesteld.",
+          "Vluchtbeeld: vogel los in de lucht met gespreide vleugels maar hangende poten; mogelijk landingsfase. Hercontrole tegen de vrije-vluchtregel (§3.3) open, geen wijziging zonder tweede oordeel.",
+          "Dubbelganger Sijs: bestaande paren (mannetjes, juvenielen, vlucht) blijven; jonge Putter zonder rood masker is het kritische geval.",
+          "Geen geregistreerde zang of roep; nieuwe opname zoeken met bron en licentie blijft open (route in deze sessie BLOCKED)."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/putter",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/sijs",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R10_PUTTER_SIJS_KNEU_2026-11-16_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on physical device; local source/photo review and Chromium only",
+        "independence": "PARTIAL / local WebP visual review and Vogelbescherming consulted; originals/rights/acoustic/second reviewer pending",
+        "fullPass": false,
+        "photoFilesInspected": 5,
+        "photoBlobSHAs": [
+          "fcf02de6350da104c0ce379497b644f9a94c3195",
+          "f31ba469972f96b13c1cc9adffe93b25bad292ac",
+          "258bee9890d34f9dc9b13fcdafe6b16999ab7904",
+          "9861b3c1356234bdbd4df07d33c0205188b60c6a",
+          "e7d828aa68d4ad9b6c85a68b2e35eea116af915d"
+        ],
+        "photoSourceMatches": [],
+        "priorPhotoMatches": [],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [],
+        "contentStatus": "PARTIALLY REVIEWED (5 current local images and critical lookalikes inspected; no media FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R10 node/browser tests run separately."
       }
     },
     {
@@ -3512,37 +3537,60 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R10",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (all current local WebP photos opened in F3-R10; source originals and independent identity NOT compared)",
+          "photoIndividualRights": "PARTIALLY TESTED (existing photographer/license registry read; original individual file rights NOT freshly validated)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (male hero, female and streaked juvenile plausible; flight image shows raised wings and legs stretched forward: possible landing, independent recheck against free-flight rule open)",
+          "photoPairComparisons": "PARTIALLY TESTED (Groenling and Putter pairs rendered in Chromium; Europese kanarie pair missing, hidden)",
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium 320/360/390 px comparison, zoom and back via tests/test_lookalike_r10_browser.py; no physical device)",
+          "creditsAndCleanAudioUI": "NOT TESTED (no F3-R10 attribution/UI audit beyond existing credits)",
+          "audioRecordingsAuthenticity": "BLOCKED (no registered song/call; media download route blocked in the F3-R10 Claude session)",
+          "audioLicenseAndAttribution": "BLOCKED (no recording to assess; candidate search and import open)",
+          "soundRolesSongCall": "PARTIALLY TESTED (song/call described in text from sources; no audio file)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (no audio file)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming species page consulted 16-11-2026; ANWB book NOT read)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (profile extended with symmetric Putter and Europese kanarie references; biometrics not rechecked)",
+          "sovonNetherlandsStatus": "NOT TESTED (Sovon trend figures not consulted in F3-R10)",
+          "ebirdDistributionAndBias": "NOT TESTED (eBird not consulted in F3-R10)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "endToEndGuideUI": "PARTIALLY TESTED (Chromium species card and lookalike panels; no device or offline run)",
+          "independentSecondReview": "NOT TESTED (no independent reviewer on F3-R10 yet)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-003/LK-004/LK-008 photo pairs; LK-010 Europese kanarie text only, photo pair missing)"
         },
         "findings": [
-          "Geen lokaal geregistreerde zang of roep"
+          "Vier bestaande lokale WebP's geopend: mannetje met zwarte kruin en kin, gestreept vrouwtje, sterk gestreepte juveniel en vluchtbeeld.",
+          "Vluchtbeeld: vleugels omhoog en poten naar voren; mogelijk landingsfase. Hercontrole tegen de vrije-vluchtregel (§3.3) open.",
+          "Kennisprofiel noemde Putter niet terug als gelijkende soort; symmetrische verwijzing toegevoegd.",
+          "Europese kanarie (sp300) als tekstwaarschuwing toegevoegd; geen geregistreerde foto, dus geen fotopaar.",
+          "Geen geregistreerde zang of roep; route voor nieuwe opname in deze sessie BLOCKED."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/sijs",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/putter",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/europese-kanarie",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R10_PUTTER_SIJS_KNEU_2026-11-16_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on physical device; local source/photo review and Chromium only",
+        "independence": "PARTIAL / local WebP visual review and Vogelbescherming consulted; originals/rights/acoustic/second reviewer pending",
+        "fullPass": false,
+        "photoFilesInspected": 4,
+        "photoBlobSHAs": [
+          "0d6ca6f246dfc931945c2964792653f6daf1eb09",
+          "3ea0ed1faf1726ed3fb5b877d2822c3b1e6926a1",
+          "0f3c991ac3f76f0f32f30351b86a147294c695e3",
+          "c86bfc7849e4447cb5aac5da613c51685f52f41e"
+        ],
+        "photoSourceMatches": [],
+        "priorPhotoMatches": [],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [],
+        "contentStatus": "PARTIALLY REVIEWED (4 current local images and critical lookalikes inspected; no media FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R10 node/browser tests run separately."
       }
     },
     {
@@ -3558,43 +3606,78 @@
         "oldClaimsKeptNotReapproved": true
       },
       "currentAssets": {
-        "imageSlots": [],
+        "imageSlots": [
+          {
+            "role": "Hoofdfoto (Mannetje)",
+            "path": "/assets/species/sp039.webp",
+            "oldRights": "REGISTERED (credits.json: Joe Pell, CC BY 2.0)",
+            "addedIn": "F3-R10"
+          },
+          {
+            "role": "In vlucht",
+            "path": "/assets/species/plumage/sp039-flight.webp",
+            "oldRights": "REGISTERED (Codrin Bucur, CC BY 4.0; vluchtcontrole: voorwaardelijk)",
+            "addedIn": "F3-R10"
+          }
+        ],
         "existingAudioCount": 0,
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R10",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (all current local WebP photos opened in F3-R10; source originals and independent identity NOT compared)",
+          "photoIndividualRights": "PARTIALLY TESTED (existing photographer/license registry read; original individual file rights NOT freshly validated)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (male hero clearly identifiable; flight image is a distant, unsharp two-bird shot, already conditional since 10-11; female and juvenile photos MISSING)",
+          "photoPairComparisons": "PARTIALLY TESTED (Kneu-Roodmus male pair exists; Frater and barmsijs pairs missing and hidden)",
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium 320/360/390 px comparison, zoom and back via tests/test_lookalike_r10_browser.py; no physical device)",
+          "creditsAndCleanAudioUI": "NOT TESTED (no F3-R10 attribution/UI audit beyond existing credits)",
+          "audioRecordingsAuthenticity": "BLOCKED (no registered song/call; media download route blocked in the F3-R10 Claude session)",
+          "audioLicenseAndAttribution": "BLOCKED (no recording to assess; candidate search and import open)",
+          "soundRolesSongCall": "PARTIALLY TESTED (song/call described in text from sources; no audio file)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (no audio file)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming species page consulted 16-11-2026; ANWB book NOT read)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (new source-backed knowledge profile; biometrics not verified with two publishers)",
+          "sovonNetherlandsStatus": "NOT TESTED (Sovon trend figures not consulted in F3-R10)",
+          "ebirdDistributionAndBias": "NOT TESTED (eBird not consulted in F3-R10)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "endToEndGuideUI": "PARTIALLY TESTED (Chromium species card and lookalike panels; no device or offline run)",
+          "independentSecondReview": "NOT TESTED (no independent reviewer on F3-R10 yet)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-009 Frater and LK-011 barmsijs text only; LK-012 Roodmus photo pair pending originals)"
         },
         "findings": [
-          "Geen lokaal geregistreerde zang of roep",
-          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
+          "Twee bestaande lokale WebP's geopend: hoofdfoto van een mannetje met rood voorhoofd en borst en grijze kop; vluchtbeeld met twee kleine, onscherpe vogels.",
+          "F3-register had voor de Kneu geen beeldposities terwijl de app twee foto's toont; posities en blob-SHA's toegevoegd.",
+          "Er bestond geen kennisprofiel; nieuw brongedragen profiel met dubbelgangers Frater, barmsijzen en Roodmus toegevoegd.",
+          "Statustekst 'Standvogel' gecorrigeerd: Nederlandse broedvogels overwinteren in Zuidwest-Europa. Filtercategorie blijft open.",
+          "Foto's van vrouwtje en juveniel ontbreken; dit zijn de kritische kleden voor Frater. Media-import in deze sessie BLOCKED.",
+          "Geen geregistreerde zang of roep; route voor nieuwe opname in deze sessie BLOCKED."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kneu",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/frater",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-barmsijs",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/roodmus",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R10_PUTTER_SIJS_KNEU_2026-11-16_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on physical device; local source/photo review and Chromium only",
+        "independence": "PARTIAL / local WebP visual review and Vogelbescherming consulted; originals/rights/acoustic/second reviewer pending",
+        "fullPass": false,
+        "photoFilesInspected": 2,
+        "photoBlobSHAs": [
+          "cc9a908a09909adc0eafb5de4b535d7689e91cab",
+          "bda07b3523d57dd7caa9995cfe7075f7918f31ae"
+        ],
+        "photoSourceMatches": [],
+        "priorPhotoMatches": [],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [],
+        "contentStatus": "PARTIALLY REVIEWED (2 current local images and critical lookalikes inspected; no media FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R10 node/browser tests run separately."
       }
     },
     {
