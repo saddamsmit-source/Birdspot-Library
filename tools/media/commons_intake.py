@@ -86,8 +86,28 @@ def check_item(e: dict, info: dict | None) -> None:
         raise IntakeError(f"Auteur wijkt af van Commons voor {e['title']}: {info['author']!r} != {e['author']!r}")
     if e["kind"] == "audio":
         heard = e.get("listened") or {}
-        if not all(heard.get(k) for k in ("by", "date", "species", "soundType", "quality")):
-            raise IntakeError("Audio pas importeren na menselijke luistercontrole (soort, geluidsoort, kwaliteit): " + e["title"])
+        if all(heard.get(k) for k in ("by", "date", "species", "soundType", "quality")):
+            return
+        audiocheck_ok(e, info)
+
+
+def audiocheck_ok(e: dict, info: dict) -> None:
+    """Alternatief voor menselijk luisteren (protocol docs/media-intake/AUDIOCHECK_PROTOCOL.md): het audiocheck-rapport
+    moet voor exact dit bestand (SHA-1) een consistent oordeel bevatten met dezelfde soort en geluidsoort, plus een
+    vastgelegde visuele spectrogramcontrole. Anders weigeren."""
+    ac = e.get("audiocheck") or {}
+    if not (ac.get("report") and ac.get("judgement") and ac.get("visual") and ac.get("soundType")):
+        raise IntakeError("Audio pas importeren na menselijke luistercontrole of volledige audiocheck: " + e["title"])
+    path = (ROOT / ac["report"]).resolve()
+    if not str(path).startswith(str((ROOT / "docs/media-intake").resolve())) or not path.exists():
+        raise IntakeError("Audiocheck-rapport ontbreekt of staat buiten docs/media-intake: " + ac["report"])
+    rep = json.loads(path.read_text(encoding="utf-8"))
+    j = next((x for x in rep.get("judgements", []) if x.get("id") == ac["judgement"]), None)
+    rec = next((x for x in rep.get("recordings", []) if x.get("id") == ac["judgement"]), None)
+    if not j or not rec or not j.get("consistent"):
+        raise IntakeError("Audiocheck niet consistent voor " + ac["judgement"])
+    if rec.get("sha1") != info["sha1"] or j.get("speciesId") != e["speciesId"] or j.get("soundType") != ac["soundType"]:
+        raise IntakeError("Audiocheck hoort bij een ander bestand, andere soort of geluidsoort: " + ac["judgement"])
 
 
 def get(url: str, params: dict | None = None, binary: bool = False):
@@ -115,6 +135,11 @@ def clean(value: str | None, limit: int = 400) -> str:
     return re.sub(r"\s+", " ", text).strip()[:limit]
 
 
+def https_license_url(url: str) -> str:
+    """Commons levert soms http://creativecommons.org/...; het register eist https (zelfde document)."""
+    return re.sub(r"^http://(creativecommons\.org/)", r"https://\1", (url or "").strip())
+
+
 def license_ok(short: str) -> bool:
     short = (short or "").strip()
     return bool(ALLOWED.match(short)) and not FORBIDDEN.search(short)
@@ -139,7 +164,7 @@ def imageinfo(titles: list[str], thumb: int | None = None) -> dict:
             "url": ii["url"], "thumb": ii.get("thumburl"), "sha1": ii["sha1"], "size": ii["size"],
             "width": ii.get("width"), "height": ii.get("height"), "mime": ii["mime"],
             "duration": ii.get("duration"),
-            "license": clean(m("LicenseShortName"), 60), "licenseUrl": clean(m("LicenseUrl"), 200),
+            "license": clean(m("LicenseShortName"), 60), "licenseUrl": https_license_url(clean(m("LicenseUrl"), 200)),
             "author": clean(m("Artist"), 160), "credit": clean(m("Credit"), 200),
             "description": clean(m("ImageDescription")), "date": clean(m("DateTimeOriginal"), 40),
             "categories": [c["title"].removeprefix("Category:") for c in page.get("categories", [])][:15],
@@ -158,7 +183,7 @@ def discover(manifest: Path, out: Path) -> None:
         res = get(API, {"action": "query", "list": "search", "srnamespace": "6",
                         "srsearch": search, "srlimit": str(q.get("limit", 12))})
         titles = [s["title"] for s in res["query"]["search"]]
-        infos = imageinfo(titles, thumb=None if q["kind"] == "audio" else 360) if titles else {}
+        infos = imageinfo(titles, thumb=None if q["kind"] == "audio" else q.get("thumb", 360)) if titles else {}
         kept, rejected = [], []
         for t in titles:
             info = infos.get(t)
@@ -178,11 +203,25 @@ def discover(manifest: Path, out: Path) -> None:
     print("discover:", sum(len(q["candidates"]) for q in report["queries"]), "kandidaten")
 
 
-def convert_image(data: bytes, dest: Path) -> tuple[int, int]:
+def crop_box(size: tuple[int, int], crop: list[float] | None) -> tuple[int, int, int, int] | None:
+    """Uitsnede als fracties [x0, y0, x1, y1]; alleen geldig binnen het beeld en minimaal 20 % per zijde."""
+    if not crop:
+        return None
+    x0, y0, x1, y1 = crop
+    if not (0 <= x0 < x1 <= 1 and 0 <= y0 < y1 <= 1) or x1 - x0 < 0.2 or y1 - y0 < 0.2:
+        raise IntakeError(f"Ongeldige uitsnede: {crop}")
+    w, h = size
+    return round(x0 * w), round(y0 * h), round(x1 * w), round(y1 * h)
+
+
+def convert_image(data: bytes, dest: Path, crop: list[float] | None = None) -> tuple[int, int]:
     from PIL import Image, ImageOps
     img = Image.open(io.BytesIO(data))
     img.load()
     img = ImageOps.exif_transpose(img).convert("RGB")
+    box = crop_box(img.size, crop)
+    if box:
+        img = img.crop(box)
     img.thumbnail((1400, 1400))
     dest.parent.mkdir(parents=True, exist_ok=True)
     img.save(dest, "WEBP", quality=85, method=6)
@@ -228,9 +267,11 @@ def do_import(manifest: Path) -> None:
             entry["modifications"] = f"Fragment {e.get('start', 0)}–{e.get('start', 0) + e.get('seconds', 30)} s, omgezet naar MP3 (mono, 96 kbit/s), metadata verwijderd"
             registry["audio"].setdefault(sid, []).append(entry)
         else:
-            w, h = convert_image(data, dest)
+            w, h = convert_image(data, dest, e.get("crop"))
+            mod = ("Uitsnede rond de vogel (fracties " + ", ".join(f"{v:.2f}" for v in e["crop"]) + "), " if e.get("crop")
+                   else "Zonder uitsnede, ")
             entry.update({"image": e["asset"], "width": w, "height": h,
-                          "modifications": "Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP"})
+                          "modifications": mod + "verkleind tot max. 1400 px en omgezet naar WebP zonder EXIF/GPS/XMP"})
             if kind == "plumage":
                 slot = registry["plumage"].setdefault(sid, {})
                 if slot.get(role):

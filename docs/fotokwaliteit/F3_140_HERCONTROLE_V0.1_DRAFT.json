@@ -49,13 +49,13 @@
     "oldF2Touched": 84,
     "oldAudited": 101,
     "oldNinePointVerified": 14,
-    "audioPresent": 64,
-    "audioMissing": 76,
+    "audioPresent": 65,
+    "audioMissing": 75,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 107,
+    "nextNotStarted": 104,
     "secondBatchStarted": 3,
-    "contentInspected": 33,
+    "contentInspected": 36,
     "contentComplete": 0,
     "thirdBatchStarted": 3,
     "fourthBatchStarted": 3,
@@ -65,7 +65,8 @@
     "eighthBatchStarted": 3,
     "ninthBatchStarted": 3,
     "tenthBatchStarted": 3,
-    "eleventhBatchStarted": 3
+    "eleventhBatchStarted": 3,
+    "twelfthBatchStarted": 3
   },
   "records": [
     {
@@ -4010,41 +4011,66 @@
             "oldRights": "VERIFIED"
           }
         ],
-        "existingAudioCount": 0,
-        "existingAudioPaths": []
+        "existingAudioCount": 1,
+        "existingAudioPaths": [
+          "/assets/species/audio/sp043-call.mp3"
+        ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R12",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "VERIFIED (origcheck 16-11-2026: every shown photo matched to its source image, Pearson r >= 0.90 or visual same-scene check for the cropped iNaturalist juvenile; see docs/media-intake/2026-11-16/origcheck-r12/origcheck.json)",
+          "photoIndividualRights": "VERIFIED (current Commons author and licence equal to the register; Merel flight author notation corrected; iNaturalist rights from register, not re-fetched)",
+          "plumageAndTrueFlight": "VERIFIED (male, female, juvenile and flight photo match visible field marks; flight photo is free flight)",
+          "photoPairComparisons": "PARTIALLY TESTED (Huismus-Ringmus rest, juvenile and flight pairs; Vink-Huismus female pair)",
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium 320/360/390 px via tests/test_lookalike_r12_browser.py; no physical device)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (credits present in registry and player HTML; no visual UI audit of attribution)",
+          "audioRecordingsAuthenticity": "PARTIALLY TESTED (new call verified by audiocheck triangulation, not human-listened; song NOT TESTED: no Ringmus song references on Commons)",
+          "audioLicenseAndAttribution": "VERIFIED (CC0, Joseph Sardin, Commons metadata and SHA-1 pinned)",
+          "soundRolesSongCall": "PARTIALLY TESTED (call only; song missing)",
+          "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (local files present and in player HTML; offline playback not tested on device)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (existing Vogelbescherming-sourced profile; ANWB book NOT read)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (existing sourced profile reviewed; biometrics not verified with two publishers)",
+          "sovonNetherlandsStatus": "NOT TESTED (Sovon not consulted in F3-R12)",
+          "ebirdDistributionAndBias": "NOT TESTED (eBird not consulted in F3-R12)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "endToEndGuideUI": "PARTIALLY TESTED (Chromium species card, lookalike panels and audio player markup; no device or offline run)",
+          "independentSecondReview": "NOT TESTED (no independent reviewer on F3-R12 yet; own re-inspection is not independent)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-016 Huismus-Ringmus photo pairs; LK-002 Vink-Huismus pending originals)"
         },
         "findings": [
-          "Geen lokaal geregistreerde zang of roep"
+          "Vijf lokale foto's tegen het bronbeeld gecontroleerd: alle vijf dezelfde opname (r 0,90-1,00), auteur en licentie gelijk aan Commons.",
+          "Rollen kloppen: mannetje (grijze kruin, bef), vrouwtje (effen, lichte wenkbrauw), juveniel (gele mondhoek), vrije vlucht met nestmateriaal.",
+          "Nieuwe roep (Joseph Sardin, CC0) na audiocheck-triangulatie gepubliceerd; niet door mens beluisterd. Zang ontbreekt.",
+          "Dubbelganger Ringmus: fotoparen in rust, juveniel en vlucht (LK-016)."
         ],
-        "sourceReferences": [],
-        "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/huismus",
+          "docs/media-intake/2026-11-16/origcheck-r12/origcheck.json",
+          "docs/media-intake/2026-11-16/audiocheck-r12/audiocheck.json",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R12_HUISMUS_RINGMUS_MEREL_2026-11-16_DRAFT.md"
+        ],
+        "reviewedOriginalAudio": 1,
+        "showcasePreview": "NOT TESTED on physical device; local source/photo review and Chromium only",
+        "independence": "PARTIAL / origcheck and audiocheck by Claude; no independent reviewer",
+        "fullPass": false,
+        "photoFilesInspected": 5,
+        "photoBlobSHAs": [
+          "06dfdc64ee2787bce80c9e4dea251c00310e9d0b",
+          "75f5208a4a33d3975cb3ce777f4210aa875f6621",
+          "350453154667ab20988c26f7f491042f0e6bed99",
+          "66dc25135bbfcb8c8c18ea55d3e9a6a2204e9af3",
+          "5f695065142fb5dc89682ea01092b1e6c7b37b7f"
+        ],
+        "photoSourceMatches": [],
+        "priorPhotoMatches": [],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [],
+        "contentStatus": "PARTIALLY REVIEWED (all shown photos checked against source images; audio triangulated where references allowed; no FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R12 node/browser tests run separately."
       }
     },
     {
@@ -4072,46 +4098,74 @@
             "oldRights": "VERIFIED"
           },
           {
-            "role": "In vlucht",
+            "role": "Overige herkenningsfoto's (luchtgevecht; uit vluchtrol F3-R12)",
             "path": "/assets/species/plumage/sp044-flight.webp",
             "oldRights": "VERIFIED"
+          },
+          {
+            "role": "In vlucht",
+            "path": "/assets/species/plumage/sp044-flight-free.webp",
+            "oldRights": "NEW (Commons, Mildeep, CC BY-SA 4.0; SHA-1 origineel d50be2c4; uitsnede)",
+            "addedIn": "F3-R12-media"
           }
         ],
         "existingAudioCount": 0,
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R12",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "VERIFIED (origcheck 16-11-2026: every shown photo matched to its source image, Pearson r >= 0.90 or visual same-scene check for the cropped iNaturalist juvenile; see docs/media-intake/2026-11-16/origcheck-r12/origcheck.json)",
+          "photoIndividualRights": "VERIFIED (current Commons author and licence equal to the register; Merel flight author notation corrected; iNaturalist rights from register, not re-fetched)",
+          "plumageAndTrueFlight": "VERIFIED (adult and juvenile match; aerial-fight photo moved out of flight role; new free-flight photo imported and visually checked)",
+          "photoPairComparisons": "PARTIALLY TESTED (Huismus-Ringmus pairs incl. flight with the new free-flight photo)",
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium 320/360/390 px via tests/test_lookalike_r12_browser.py; no physical device)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (credits present in registry and player HTML; no visual UI audit of attribution)",
+          "audioRecordingsAuthenticity": "BLOCKED (one candidate call; fewer than 2 independent Ringmus references on Commons, so audiocheck cannot conclude; nothing published)",
+          "audioLicenseAndAttribution": "BLOCKED (no published recording)",
+          "soundRolesSongCall": "PARTIALLY TESTED (text only)",
+          "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (local files present and in player HTML; offline playback not tested on device)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (existing Vogelbescherming-sourced profile; ANWB book NOT read)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (existing sourced profile reviewed; biometrics not verified with two publishers)",
+          "sovonNetherlandsStatus": "NOT TESTED (Sovon not consulted in F3-R12)",
+          "ebirdDistributionAndBias": "NOT TESTED (eBird not consulted in F3-R12)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "endToEndGuideUI": "PARTIALLY TESTED (Chromium species card, lookalike panels and audio player markup; no device or offline run)",
+          "independentSecondReview": "NOT TESTED (no independent reviewer on F3-R12 yet; own re-inspection is not independent)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-016 Huismus-Ringmus photo pairs)"
         },
         "findings": [
-          "Geen lokaal geregistreerde zang of roep"
+          "Drie lokale foto's tegen het bronbeeld gecontroleerd: adult en vlucht r = 1,00; juveniel (iNaturalist-uitsnede) visueel dezelfde scène.",
+          "Vluchtfoto bleek een luchtgevecht met poten naar voren: uit de vluchtrol naar Overige; bestand en historie bewaard.",
+          "Echte vrije-vluchtfoto (Mildeep, CC BY-SA 4.0) gevonden, op 1600 px beoordeeld en met geregistreerde uitsnede geïmporteerd.",
+          "Geen geluid gepubliceerd: te weinig onafhankelijke Ringmus-referenties voor de audiocheck."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/ringmus",
+          "docs/media-intake/2026-11-16/origcheck-r12/origcheck.json",
+          "docs/media-intake/2026-11-16/audiocheck-r12/audiocheck.json",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R12_HUISMUS_RINGMUS_MEREL_2026-11-16_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on physical device; local source/photo review and Chromium only",
+        "independence": "PARTIAL / origcheck and audiocheck by Claude; no independent reviewer",
+        "fullPass": false,
+        "photoFilesInspected": 4,
+        "photoBlobSHAs": [
+          "108503f35f6c83f4eb1695fb5de3ecf72ea29a2a",
+          "e373266c7c253071f5e19cfdf8b92c26bb80c40c",
+          "f4e42c922416c9f4120ee15143b5a6a92a746dc9",
+          "261d433c4d448ca7d36cd5f08469036f27fce1fc"
+        ],
+        "photoSourceMatches": [],
+        "priorPhotoMatches": [],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [],
+        "contentStatus": "PARTIALLY REVIEWED (all shown photos checked against source images; audio triangulated where references allowed; no FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R12 node/browser tests run separately."
       }
     },
     {
@@ -4166,37 +4220,61 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R12",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "VERIFIED (origcheck 16-11-2026: every shown photo matched to its source image, Pearson r >= 0.90 or visual same-scene check for the cropped iNaturalist juvenile; see docs/media-intake/2026-11-16/origcheck-r12/origcheck.json)",
+          "photoIndividualRights": "VERIFIED (current Commons author and licence equal to the register; Merel flight author notation corrected; iNaturalist rights from register, not re-fetched)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (all roles match; landing photo already out of flight role; free-flight photo remains voorwaardelijk, replacement wanted)",
+          "photoPairComparisons": "PARTIALLY TESTED (Merel-Zanglijster juvenile and adult pairs; Spreeuw-Merel pair)",
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium 320/360/390 px via tests/test_lookalike_r12_browser.py; no physical device)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (credits present in registry and player HTML; no visual UI audit of attribution)",
+          "audioRecordingsAuthenticity": "PARTIALLY TESTED (song verified by audiocheck triangulation, not human-listened; alarm call NOT TESTED: reference comparison not discriminating)",
+          "audioLicenseAndAttribution": "VERIFIED (both clips: current Commons licence and author match register)",
+          "soundRolesSongCall": "PARTIALLY TESTED (song triangulated; alarm call source-labelled only)",
+          "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (local files present and in player HTML; offline playback not tested on device)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (existing Vogelbescherming-sourced profile; ANWB book NOT read)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (existing sourced profile reviewed; biometrics not verified with two publishers)",
+          "sovonNetherlandsStatus": "NOT TESTED (Sovon not consulted in F3-R12)",
+          "ebirdDistributionAndBias": "NOT TESTED (eBird not consulted in F3-R12)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "endToEndGuideUI": "PARTIALLY TESTED (Chromium species card, lookalike panels and audio player markup; no device or offline run)",
+          "independentSecondReview": "NOT TESTED (no independent reviewer on F3-R12 yet; own re-inspection is not independent)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-017 Merel-Zanglijster, LK-018 Merel-Spreeuw photo pairs)"
         },
         "findings": [
-          "De nieuwe vluchtfoto is bruikbaar als voorlopig voorbeeld, met beperkte zichtbaarheid van de staart en bewegingsonscherpte."
+          "Zes lokale foto's tegen het bronbeeld gecontroleerd: alle zes dezelfde opname; auteursnotatie vluchtfoto gelijkgetrokken met Commons ('Bengt Nyman from Vaxholm, Sweden').",
+          "Rollen kloppen; landingsfoto stond al buiten de vluchtrol; vrije-vluchtfoto blijft voorwaardelijk.",
+          "Bestaande zang via audiocheck-triangulatie bevestigd (marge 0,35); bestaande alarmroep NOT TESTED (niet onderscheidend), behouden maar niet als geverifieerd gemarkeerd.",
+          "Dubbelgangers Zanglijster en Spreeuw: bestaande fotoparen."
         ],
-        "sourceReferences": [],
-        "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/merel",
+          "docs/media-intake/2026-11-16/origcheck-r12/origcheck.json",
+          "docs/media-intake/2026-11-16/audiocheck-r12/audiocheck.json",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R12_HUISMUS_RINGMUS_MEREL_2026-11-16_DRAFT.md"
+        ],
+        "reviewedOriginalAudio": 2,
+        "showcasePreview": "NOT TESTED on physical device; local source/photo review and Chromium only",
+        "independence": "PARTIAL / origcheck and audiocheck by Claude; no independent reviewer",
+        "fullPass": false,
+        "photoFilesInspected": 6,
+        "photoBlobSHAs": [
+          "9aaf7c72c76cd136dadb23576be0b69acd6d1bbf",
+          "2e9565705682dd9481cf6b9ec27bd8c8ab4f9534",
+          "d85917878cb6e988530fbdb05d8615ce61c5e113",
+          "7f8a80f8e830a6af65b043a349980b24e710bad5",
+          "67597f65577b692eb9bd1cc0934d5dcb5fa3bb61",
+          "67523a04721ff14b35ce102f1f607569614d48dc"
+        ],
+        "photoSourceMatches": [],
+        "priorPhotoMatches": [],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [],
+        "contentStatus": "PARTIALLY REVIEWED (all shown photos checked against source images; audio triangulated where references allowed; no FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R12 node/browser tests run separately."
       }
     },
     {

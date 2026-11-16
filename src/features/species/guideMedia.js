@@ -58,7 +58,9 @@ export const GUIDE_AUDIO = Object.freeze({
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Turdus_merula_-_Common_Blackbird_XC26605.mp3",
-      "modifications": "Fragment, omgezet naar MP3 (mono)"
+      "modifications": "Fragment, omgezet naar MP3 (mono)",
+      "verification": "VERIFIED (triangulatie 16-11-2026: bronlabel XC 'Type: song', akoestische referentievergelijking marge 0,35 tegen Zanglijster/Spreeuw, visuele spectrogramcontrole; niet door mens beluisterd)",
+      "verificationReport": "docs/media-intake/2026-11-16/audiocheck-r12/audiocheck.json#sp045_song_live"
     },
     {
       "file": "Blackbird (Turdus merula) alarm calls - Oslo, Norway 2020-11-13.mp3",
@@ -69,7 +71,9 @@ export const GUIDE_AUDIO = Object.freeze({
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Blackbird_(Turdus_merula)_alarm_calls_-_Oslo,_Norway_2020-11-13.mp3",
-      "modifications": "Omgezet naar MP3 (mono)"
+      "modifications": "Omgezet naar MP3 (mono)",
+      "verification": "NOT TESTED (audiocheck 16-11-2026: marge -0,03 tegen Spreeuw; referenties van Merel-roepen te gevarieerd). Bestaande opname behouden, niet als geverifieerd gemarkeerd.",
+      "verificationReport": "docs/media-intake/2026-11-16/audiocheck-r12/audiocheck.json#sp045_call_live"
     }
   ],
   "sp035": [
@@ -1876,6 +1880,25 @@ export const GUIDE_AUDIO = Object.freeze({
       "type": "call",
       "audio": "/assets/species/audio/sp029-call-app.mp3",
       "recordingSource": "https://www.inaturalist.org/observations/79293569"
+    }
+  ],
+  "sp043": [
+    {
+      "label": "Roep",
+      "note": "Het bekende 'tsjilp' van de Huismus.",
+      "verification": "VERIFIED (triangulatie 16-11-2026: bronlabel, akoestische referentievergelijking, visuele spectrogramcontrole; niet door mens beluisterd)",
+      "verificationReport": "docs/media-intake/2026-11-16/audiocheck-r12/audiocheck.json#sp043_call_cand_1",
+      "file": "Joseph Sardin - Passer domesticus tschilp call.oga",
+      "author": "Joseph Sardin",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source": "https://commons.wikimedia.org/wiki/File:Joseph_Sardin_-_Passer_domesticus_tschilp_call.oga",
+      "showSourceLink": true,
+      "sourceSha1": "46ee39de7b769fb79f6b09532dfba088e6a299eb",
+      "reviewed": "2026-11-16",
+      "intake": "tools/media/commons_intake.py (GitHub Actions)",
+      "audio": "/assets/species/audio/sp043-call.mp3",
+      "modifications": "Fragment 0–6.2 s, omgezet naar MP3 (mono, 96 kbit/s), metadata verwijderd"
     }
   ]
 });
@@ -7768,9 +7791,9 @@ export const GUIDE_POSES = Object.freeze({
   ],
   "sp044": [
     {
-      "label": "In vlucht",
-      "flight": true,
-      "note": "Let op de roodbruine kruin en de afzonderlijke donkere wangvlek.",
+      "label": "Twee Ringmussen in een luchtgevecht",
+      "flight": false,
+      "note": "Kruin en wangvlek van beide vogels zichtbaar; geen vluchtbeeld.",
       "file": "Waltz (31982909).jpeg",
       "nl": "Ringmus",
       "latin": "Passer montanus",
@@ -7787,7 +7810,32 @@ export const GUIDE_POSES = Object.freeze({
       "width": 1400,
       "height": 961,
       "image": "/assets/species/plumage/sp044-flight.webp",
-      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+      "flightReview": "uit-rol 2026-11-16: Twee Ringmussen in een luchtgevecht met poten naar voren; geen vrij vliegende vogel met bruikbaar vluchtsilhouet. Uit de vluchtrol (F3-R12, strikte vrije-vluchtregel §3.3). (eerder: goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.)"
+    },
+    {
+      "nl": "Ringmus",
+      "latin": "Passer montanus",
+      "label": "In vlucht",
+      "flight": true,
+      "alt": "Ringmus in vrije vlucht van achteren gezien, vleugels en staart gespreid; kastanjebruine kruin en zwarte wangvlek zichtbaar.",
+      "note": "Vrije vlucht: let op de kastanjebruine kruin en de zwarte wangvlek op de witte wang.",
+      "visualCheck": "Ringmus vrij in de lucht tegen egale groene achtergrond, vleugels en staart gespreid, geen poten of ondergrond zichtbaar; kruin en wangvlek herkenbaar.",
+      "verification": "Commons-titel en categorie noemen Eurasian tree sparrow; kastanjebruine kruin en zwarte wangvlek bevestigen de soort. Geslachten gelijk.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/ringmus",
+      "file": "Eurasian-Tree-Sparrow.jpg",
+      "author": "Mildeep",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Eurasian-Tree-Sparrow.jpg",
+      "showSourceLink": true,
+      "sourceSha1": "d50be2c413fd35c0ff4d29ce93d1ee48a4f16d68",
+      "reviewed": "2026-11-16",
+      "intake": "tools/media/commons_intake.py (GitHub Actions)",
+      "image": "/assets/species/plumage/sp044-flight-free.webp",
+      "width": 1400,
+      "height": 1314,
+      "modifications": "Uitsnede rond de vogel (fracties 0.36, 0.12, 0.90, 0.88), verkleind tot max. 1400 px en omgezet naar WebP zonder EXIF/GPS/XMP",
+      "flightReview": "goedgekeurd 2026-11-16: vrij in de lucht, geen poten of ondergrond zichtbaar; kruin en wangvlek herkenbaar (F3-R12)."
     }
   ],
   "sp045": [
@@ -7798,7 +7846,7 @@ export const GUIDE_POSES = Object.freeze({
       "file": "NZ7 6931 (51844641169).jpg",
       "nl": "Merel",
       "latin": "Turdus merula",
-      "author": "Bengt Nyman",
+      "author": "Bengt Nyman from Vaxholm, Sweden",
       "license": "CC BY-SA 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
       "source": "https://commons.wikimedia.org/wiki/File:NZ7_6931_(51844641169).jpg",

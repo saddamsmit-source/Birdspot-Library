@@ -96,6 +96,7 @@ const counts={
  ninthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R09'),
  tenthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R10'),
  eleventhBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R11'),
+ twelfthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R12'),
  contentInspected:sum(x=>x.F3.reviewedThisRound===true),
  contentComplete:sum(x=>x.F3.contentStatus==='CONTENT COMPLETE')
 };
@@ -113,6 +114,7 @@ const eighth=rows.filter(x=>x.F3.recheckBatch==='F3-R08');
 const ninth=rows.filter(x=>x.F3.recheckBatch==='F3-R09');
 const tenth=rows.filter(x=>x.F3.recheckBatch==='F3-R10');
 const eleventh=rows.filter(x=>x.F3.recheckBatch==='F3-R11');
+const twelfth=rows.filter(x=>x.F3.recheckBatch==='F3-R12');
 assert.ok(req.includes('lookalikePhotoAndText'),'New owner lookalike rule must be checked for every F3 bird');
 assert.deepEqual(ninth.map(x=>x.id),['sp034','sp035','sp036'],'R09 exactly three species in fixed sequence');
 assert.deepEqual(ninth.map(x=>x.F3.photoFilesInspected),[2,5,4],'All eleven existing local images need individual inspection');
@@ -177,6 +179,22 @@ for(const item of eleventh){
   assert.equal(review.photoBlobSHAs[i],blobSha,item.id+' image file has changed since F3-R11 visual review');
  }
  assert.ok(review.sourceReferences.includes('docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json'));
+}
+
+assert.deepEqual(twelfth.map(x=>x.id),['sp043','sp044','sp045'],'R12 exactly Huismus, Ringmus and Merel');
+assert.deepEqual(twelfth.map(x=>x.F3.photoFilesInspected),[5,4,6],'Fifteen shown images incl. new Ringmus flight photo');
+assert.deepEqual(twelfth.map(x=>x.currentAssets.existingAudioCount),[1,0,2]);
+for(const item of twelfth){
+ const {F3:review,currentAssets}=item;
+ assert.equal(review.fullPass,false); assert.equal(review.status,'IN CONTENT REVIEW / OPEN POINTS');
+ assert.ok(review.checks.photoOriginalIdentity.startsWith('VERIFIED'),'R12 compared every shown photo with its source image');
+ assert.ok(review.sourceReferences.includes('docs/media-intake/2026-11-16/origcheck-r12/origcheck.json'));
+ assert.ok(review.checks.independentSecondReview.startsWith('NOT TESTED'),'Own re-inspection is not independent');
+ assert.ok(!review.checks.audioRecordingsAuthenticity.startsWith('VERIFIED'),'Triangulated audio is not human-listened: never full VERIFIED');
+ for(let i=0;i<currentAssets.imageSlots.length;i++){
+  const bytes=readFileSync(new URL('..'+currentAssets.imageSlots[i].path,import.meta.url));
+  assert.equal(review.photoBlobSHAs[i],createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex'),item.id+' image changed since F3-R12 review');
+ }
 }
 
 assert.deepEqual(eighth.map(x=>x.id), ['sp031','sp032','sp033'],'F3-R08 is exactly three existing tits');

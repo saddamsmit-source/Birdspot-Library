@@ -3911,11 +3911,11 @@
     },
     {
      "image": "/assets/species/plumage/sp044-flight.webp",
-     "role": "In vlucht",
-     "content": "Twee Ringmussen in vrije vlucht. Wangvlek en kastanjebruine kruin zijn zichtbaar.",
+     "role": "Overige herkenningsfoto's (luchtgevecht; niet echte vrije vlucht)",
+     "content": "Twee Ringmussen in een luchtgevecht met poten naar voren; kruin en wangvlek zichtbaar.",
      "sexAge": "Geslacht en leeftijd niet gelabeld.",
-     "quality": "Goed herkenbare koptekening en vleugels; twee vogels in beeld.",
-     "verdict": "goedgekeurd",
+     "quality": "Scherp genoeg voor kopkenmerken; geen bruikbaar vrij vluchtsilhouet.",
+     "verdict": "uit-rol",
      "rights": {
       "status": "VERIFIED",
       "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Galina Jacyna",
@@ -3927,21 +3927,64 @@
       "nameNL": "Ringmus",
       "registry": "GUIDE_POSES[0]",
       "sexLabel": null,
+      "class": "landen",
+      "quality": "goed",
+      "decision": "uit-rol",
+      "target": "overig",
+      "newLabel": "Twee Ringmussen in een luchtgevecht",
+      "newNote": "Kruin en wangvlek van beide vogels zichtbaar; geen vluchtbeeld.",
+      "reason": "Twee Ringmussen in een luchtgevecht met poten naar voren; geen vrij vliegende vogel met bruikbaar vluchtsilhouet. Uit de vluchtrol (F3-R12, strikte vrije-vluchtregel §3.3).",
+      "airborne": true,
+      "rights": "VERIFIED",
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0",
+      "history": [
+       {
+        "class": "vlucht",
+        "quality": "goed",
+        "decision": "goedgekeurd",
+        "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+        "date": "2026-11-10",
+        "round": "vóór F3-R12"
+       }
+      ]
+     }
+    },
+    {
+     "image": "/assets/species/plumage/sp044-flight-free.webp",
+     "role": "In vlucht",
+     "content": "Ringmus vrij in de lucht van achteren, vleugels en staart gespreid; kastanjebruine kruin en zwarte wangvlek.",
+     "sexAge": "Geslachten gelijk; leeftijd niet vastgesteld.",
+     "quality": "Scherp, egale achtergrond, geen poten of ondergrond zichtbaar.",
+     "verdict": "goedgekeurd",
+     "addedIn": "F3-R12-media",
+     "rights": {
+      "status": "VERIFIED",
+      "note": "bronaudit 16-11-2026: zelfde opname (Commons-origineel met vastgepinde SHA-1 in de intake-workflow geconverteerd met geregistreerde uitsnede; lokale WebP vergeleken met de 1600 px-voorvertoning in dezelfde uitsnede (Pearson r = 1.000).), CC BY-SA 4.0 · Mildeep",
+      "annotations": []
+     },
+     "flight": {
+      "n": 154,
+      "id": "sp044",
+      "nameNL": "Ringmus",
+      "registry": "GUIDE_POSES[1]",
+      "sexLabel": null,
       "class": "vlucht",
       "quality": "goed",
       "decision": "goedgekeurd",
       "target": null,
       "newLabel": null,
       "newNote": null,
-      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "reason": "Vrij in de lucht tegen egale achtergrond, vleugels en staart gespreid, geen poten of ondergrond zichtbaar; scherp, kruin en wangvlek herkenbaar.",
       "airborne": true,
       "rights": "VERIFIED",
-      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0"
+      "rightsNote": "Commons-metadata 16-11-2026 via intake-workflow: Mildeep, CC BY-SA 4.0, bron-SHA-1 d50be2c4 gepind; uitsnede geregistreerd",
+      "reviewed": "2026-11-16"
      }
     }
    ],
    "corrections": [
-    "Juvenielenfoto en kennisprofiel toegevoegd. De kleed- en vluchtvergelijking met Huismus gecontroleerd."
+    "Juvenielenfoto en kennisprofiel toegevoegd. De kleed- en vluchtvergelijking met Huismus gecontroleerd.",
+    "F3-R12 (2026-11-16): luchtgevecht-foto uit de vluchtrol naar Overige; echte vrije-vluchtfoto (Mildeep, CC BY-SA 4.0) via de Commons-intake toegevoegd. Alle getoonde foto's tegen het bronbeeld gecontroleerd (origcheck)."
    ],
    "missing": [],
    "wishes": [

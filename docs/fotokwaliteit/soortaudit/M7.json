@@ -79,15 +79,24 @@
           "verdict": "goedgekeurd"
         },
         "/assets/species/plumage/sp044-flight.webp": {
-          "role": "In vlucht",
-          "content": "Twee Ringmussen in vrije vlucht. Wangvlek en kastanjebruine kruin zijn zichtbaar.",
+          "role": "Overige herkenningsfoto's (luchtgevecht; niet echte vrije vlucht)",
+          "content": "Twee Ringmussen in een luchtgevecht met poten naar voren; kruin en wangvlek zichtbaar.",
           "sexAge": "Geslacht en leeftijd niet gelabeld.",
-          "quality": "Goed herkenbare koptekening en vleugels; twee vogels in beeld.",
-          "verdict": "goedgekeurd"
+          "quality": "Scherp genoeg voor kopkenmerken; geen bruikbaar vrij vluchtsilhouet.",
+          "verdict": "uit-rol"
+        },
+        "/assets/species/plumage/sp044-flight-free.webp": {
+          "role": "In vlucht",
+          "content": "Ringmus vrij in de lucht van achteren, vleugels en staart gespreid; kastanjebruine kruin en zwarte wangvlek.",
+          "sexAge": "Geslachten gelijk; leeftijd niet vastgesteld.",
+          "quality": "Scherp, egale achtergrond, geen poten of ondergrond zichtbaar.",
+          "verdict": "goedgekeurd",
+          "addedIn": "F3-R12-media"
         }
       },
       "corrections": [
-        "Juvenielenfoto en kennisprofiel toegevoegd. De kleed- en vluchtvergelijking met Huismus gecontroleerd."
+        "Juvenielenfoto en kennisprofiel toegevoegd. De kleed- en vluchtvergelijking met Huismus gecontroleerd.",
+        "F3-R12 (2026-11-16): luchtgevecht-foto uit de vluchtrol naar Overige; echte vrije-vluchtfoto (Mildeep, CC BY-SA 4.0) via de Commons-intake toegevoegd. Alle getoonde foto's tegen het bronbeeld gecontroleerd (origcheck)."
       ],
       "missing": [],
       "wishes": [

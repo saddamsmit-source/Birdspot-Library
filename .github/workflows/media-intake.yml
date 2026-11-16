@@ -46,12 +46,14 @@ jobs:
           MODE=$(python -c "import json;print(json.load(open('tools/media/requests/current.json'))['mode'])")
           MANIFEST=$(python -c "import json;print(json.load(open('tools/media/requests/current.json'))['manifest'])")
           OUT=$(python -c "import json;print(json.load(open('tools/media/requests/current.json')).get('out','docs/media-intake/2026-11-16'))")
-          case "$MODE" in discover|import|audiocheck) ;; *) echo "Onbekende modus"; exit 1;; esac
+          case "$MODE" in discover|import|audiocheck|origcheck) ;; *) echo "Onbekende modus"; exit 1;; esac
           echo "MODE=$MODE" >> "$GITHUB_ENV"; echo "MANIFEST=$MANIFEST" >> "$GITHUB_ENV"
           if [ "$MODE" = discover ]; then
             python tools/media/commons_intake.py discover "$MANIFEST" --out "$OUT"
           elif [ "$MODE" = audiocheck ]; then
             python tools/media/audio_check.py "$MANIFEST" --out "$OUT"
+          elif [ "$MODE" = origcheck ]; then
+            python tools/media/orig_check.py "$MANIFEST" --out "$OUT"
           else
             python tools/media/commons_intake.py import "$MANIFEST"
           fi

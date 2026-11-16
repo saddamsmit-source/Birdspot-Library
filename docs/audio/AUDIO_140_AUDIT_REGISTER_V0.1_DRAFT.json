@@ -17,12 +17,12 @@
   "evidenceBoundary": "REGISTERED_UNVERIFIED is not a provenance, individual-species, role or commercial-license PASS. Existing Chromium audio test only checks file decode/offline, not source identity.",
   "counts": {
     "photoSpecies": 140,
-    "withRegisteredAudio": 64,
-    "withoutRegisteredAudio": 76,
-    "registeredClips": 128,
+    "withRegisteredAudio": 65,
+    "withoutRegisteredAudio": 75,
+    "registeredClips": 129,
     "f2PhotoVisited": 84,
-    "f2WithAudio": 45,
-    "f2WithoutAudio": 39,
+    "f2WithAudio": 46,
+    "f2WithoutAudio": 38,
     "independentlyApprovedAudio": 0
   },
   "species": [
@@ -1177,12 +1177,26 @@
       "id": "sp043",
       "nameNL": "Huismus",
       "f2PhotoVisited": true,
-      "mediaCount": 0,
+      "mediaCount": 1,
       "pilot": false,
-      "status": "MISSING",
-      "clips": [],
-      "reviewEvidence": [],
-      "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
+      "status": "PARTIALLY TESTED",
+      "clips": [
+        {
+          "file": "/assets/species/audio/sp043-call.mp3",
+          "label": "Roep",
+          "reference": "https://commons.wikimedia.org/wiki/File:Joseph_Sardin_-_Passer_domesticus_tschilp_call.oga",
+          "externalRights": "VERIFIED",
+          "sourceSpecies": "VERIFIED",
+          "roleAudition": "PARTIALLY TESTED",
+          "independentReview": "NOT TESTED",
+          "method": "Audiocheck-triangulatie 16-11-2026 (bronlabel, referentievergelijking, spectrogram); niet door mens beluisterd",
+          "evidence": "docs/media-intake/2026-11-16/audiocheck-r12/audiocheck.json#sp043_call_cand_1"
+        }
+      ],
+      "reviewEvidence": [
+        "docs/media-intake/2026-11-16/audiocheck-r12/audiocheck.json"
+      ],
+      "next": "Zang (getjilp-reeks) zoeken; Ringmus-zangreferenties ontbreken op Commons; tweede onafhankelijke review open",
       "sourceChecks": {
         "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
         "anwbSpeciesPassage": "NOT TESTED",
@@ -1231,28 +1245,34 @@
       "f2PhotoVisited": true,
       "mediaCount": 2,
       "pilot": true,
-      "status": "REGISTERED_UNVERIFIED",
+      "status": "PARTIALLY TESTED",
       "clips": [
         {
           "file": "/assets/species/audio/sp045-song.mp3",
           "label": "Zang",
           "reference": "https://commons.wikimedia.org/wiki/File:Turdus_merula_-_Common_Blackbird_XC26605.mp3",
-          "externalRights": "NOT TESTED",
-          "sourceSpecies": "NOT TESTED",
-          "roleAudition": "NOT TESTED",
-          "independentReview": "NOT TESTED"
+          "externalRights": "VERIFIED",
+          "sourceSpecies": "VERIFIED",
+          "roleAudition": "PARTIALLY TESTED",
+          "independentReview": "NOT TESTED",
+          "method": "Audiocheck-triangulatie 16-11-2026; niet door mens beluisterd",
+          "evidence": "docs/media-intake/2026-11-16/audiocheck-r12/audiocheck.json#sp045_song_live"
         },
         {
           "file": "/assets/species/audio/sp045-call.mp3",
           "label": "Alarmroep",
           "reference": "https://commons.wikimedia.org/wiki/File:Blackbird_(Turdus_merula)_alarm_calls_-_Oslo,_Norway_2020-11-13.mp3",
-          "externalRights": "NOT TESTED",
-          "sourceSpecies": "NOT TESTED",
+          "externalRights": "VERIFIED",
+          "sourceSpecies": "PARTIALLY TESTED",
           "roleAudition": "NOT TESTED",
-          "independentReview": "NOT TESTED"
+          "independentReview": "NOT TESTED",
+          "method": "Audiocheck 16-11-2026: bronlabel ok, referentievergelijking niet onderscheidend (marge -0,03)",
+          "evidence": "docs/media-intake/2026-11-16/audiocheck-r12/audiocheck.json#sp045_call_live"
         }
       ],
-      "reviewEvidence": [],
+      "reviewEvidence": [
+        "docs/media-intake/2026-11-16/audiocheck-r12/audiocheck.json"
+      ],
       "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
       "sourceChecks": {
         "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",

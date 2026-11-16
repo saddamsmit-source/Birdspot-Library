@@ -14,7 +14,10 @@
     "sp039",
     "sp040",
     "sp041",
-    "sp042"
+    "sp042",
+    "sp043",
+    "sp044",
+    "sp045"
   ],
   "policy": {
     "pairRequiredWhenSimilar": true,
@@ -712,6 +715,130 @@
         "https://www.rspb.org.uk/birds-and-wildlife/wildlife-guides/bird-a-z/common-rosefinch/",
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/roodmus"
       ]
+    },
+    {
+      "id": "LK-016",
+      "focus": [
+        "sp043",
+        "sp044"
+      ],
+      "birds": [
+        "sp043",
+        "sp044"
+      ],
+      "risk": "female and juvenile",
+      "matchingPlumages": [
+        "juv",
+        "juv"
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "All shown photos matched to source images in F3-R12 origcheck; independent second review of sex/age still open"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Kruin",
+          "values": [
+            "Huismus mannetje grijze kruin, vrouwtje effen bruin",
+            "Ringmus kastanjebruine kruin in alle kleden"
+          ]
+        },
+        {
+          "label": "Wang",
+          "values": [
+            "Huismus witte of grijze wang zonder losse vlek",
+            "Ringmus witte wang met zwarte wangvlek en halsring"
+          ]
+        }
+      ],
+      "caution": "Bij de Ringmus zijn de geslachten gelijk; een bruine kruin is dus geen vrouwtjeskenmerk. Jonge Ringmussen hebben een vagere wangvlek.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/huismus",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/ringmus"
+      ]
+    },
+    {
+      "id": "LK-017",
+      "focus": [
+        "sp045"
+      ],
+      "birds": [
+        "sp045",
+        "sp046"
+      ],
+      "risk": "female and juvenile",
+      "matchingPlumages": [
+        "juv",
+        "juv"
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Merel photos matched to source images in F3-R12; Zanglijster originals checked in its own round"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Onderzijde",
+          "values": [
+            "Jonge Merel diffuus gevlekt, donkerbruin",
+            "Zanglijster scherpe donkere druppelvlekken op lichte borst"
+          ]
+        },
+        {
+          "label": "Bouw en staart",
+          "values": [
+            "Merel langere staart en donkerder geheel",
+            "Zanglijster kortere staart, lichtere bruine rug"
+          ]
+        }
+      ],
+      "caution": "Juveniele Merels kunnen gevlekt zijn; let op de algemene donkere tint en de lange staart.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/merel",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zanglijster"
+      ]
+    },
+    {
+      "id": "LK-018",
+      "focus": [
+        "sp045"
+      ],
+      "birds": [
+        "sp045",
+        "sp112"
+      ],
+      "risk": "adult at distance",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Spreeuw originals checked in its own round"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Staart en bouw",
+          "values": [
+            "Merel lange staart, ronde bouw",
+            "Spreeuw korte staart, puntige vleugels"
+          ]
+        },
+        {
+          "label": "Kleed",
+          "values": [
+            "Merel mannetje egaal zwart met oranje snavel en oogring",
+            "Spreeuw glanzend met lichte stippen, zonder oogring"
+          ]
+        }
+      ],
+      "caution": "Op afstand zijn beide donker; staartlengte en silhouet helpen meer dan kleur alleen.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/merel",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/spreeuw"
+      ]
     }
   ],
   "withinSpeciesVariation": [
@@ -734,7 +861,8 @@
     "visualReview": "docs/fotokwaliteit/F3_R09_STAARTMEES_VINK_GROENLING_2026-11-16_DRAFT.md",
     "dataPreservation": "No new image bytes / no removal of existing species",
     "visualReviewR10": "docs/fotokwaliteit/F3_R10_PUTTER_SIJS_KNEU_2026-11-16_DRAFT.md",
-    "visualReviewR11": "docs/fotokwaliteit/F3_R11_GOUDVINK_APPELVINK_ROODMUS_2026-11-16_DRAFT.md"
+    "visualReviewR11": "docs/fotokwaliteit/F3_R11_GOUDVINK_APPELVINK_ROODMUS_2026-11-16_DRAFT.md",
+    "visualReviewR12": "docs/fotokwaliteit/F3_R12_HUISMUS_RINGMUS_MEREL_2026-11-16_DRAFT.md"
   },
   "gate": "A pair can be labelled COMPLETE only with individual original image/right/sex/age proof, correct side-by-side render both directions and independent second review; structural CI PASS alone is insufficient"
 }

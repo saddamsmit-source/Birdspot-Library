@@ -1482,16 +1482,26 @@
    "nameNL": "Ringmus",
    "registry": "GUIDE_POSES[0]",
    "sexLabel": null,
-   "class": "vlucht",
+   "class": "landen",
    "quality": "goed",
-   "decision": "goedgekeurd",
-   "target": null,
-   "newLabel": null,
-   "newNote": null,
-   "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+   "decision": "uit-rol",
+   "target": "overig",
+   "newLabel": "Twee Ringmussen in een luchtgevecht",
+   "newNote": "Kruin en wangvlek van beide vogels zichtbaar; geen vluchtbeeld.",
+   "reason": "Twee Ringmussen in een luchtgevecht met poten naar voren; geen vrij vliegende vogel met bruikbaar vluchtsilhouet. Uit de vluchtrol (F3-R12, strikte vrije-vluchtregel §3.3).",
    "airborne": true,
    "rights": "VERIFIED",
-   "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0"
+   "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0",
+   "history": [
+    {
+     "class": "vlucht",
+     "quality": "goed",
+     "decision": "goedgekeurd",
+     "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+     "date": "2026-11-10",
+     "round": "vóór F3-R12"
+    }
+   ]
   },
   "/assets/species/sp170.webp": {
    "n": 80,
@@ -2850,6 +2860,24 @@
    "rights": "VERIFIED",
    "rightsNote": "Commons-metadata 16-11-2026 via intake-workflow: auteur Holger Uwe Schmitt, CC BY-SA 4.0, bron-SHA-1 1c5eb195f1df8481b38c986f20fe55b87a01f887 gepind",
    "replacement": "gewenst",
+   "reviewed": "2026-11-16"
+  },
+  "/assets/species/plumage/sp044-flight-free.webp": {
+   "n": 154,
+   "id": "sp044",
+   "nameNL": "Ringmus",
+   "registry": "GUIDE_POSES[1]",
+   "sexLabel": null,
+   "class": "vlucht",
+   "quality": "goed",
+   "decision": "goedgekeurd",
+   "target": null,
+   "newLabel": null,
+   "newNote": null,
+   "reason": "Vrij in de lucht tegen egale achtergrond, vleugels en staart gespreid, geen poten of ondergrond zichtbaar; scherp, kruin en wangvlek herkenbaar.",
+   "airborne": true,
+   "rights": "VERIFIED",
+   "rightsNote": "Commons-metadata 16-11-2026 via intake-workflow: Mildeep, CC BY-SA 4.0, bron-SHA-1 d50be2c4 gepind; uitsnede geregistreerd",
    "reviewed": "2026-11-16"
   }
  }

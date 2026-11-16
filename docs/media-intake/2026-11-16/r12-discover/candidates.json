@@ -1,0 +1,303 @@
+{
+  "generated": "2026-11-16T15:36:23Z",
+  "userAgent": "BirdspotLibrary-media-intake/1.0 (https://github.com/saddamsmit-source/Birdspot-Library; build-time license-checked import)",
+  "licensePolicy": "CC0 / publiek domein / CC BY / CC BY-SA; NC en ND uitgesloten",
+  "status": "CANDIDATES ONLY - niet goedgekeurd, niet in de app",
+  "queries": [
+    {
+      "id": "sp044_flight",
+      "speciesId": "sp044",
+      "role": "flight",
+      "kind": "image",
+      "search": "Passer montanus in flight filetype:bitmap",
+      "candidates": [
+        {
+          "title": "File:J-Birds1.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:J-Birds1.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/J-Birds1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/J-Birds1.jpg/500px-J-Birds1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "e3b078fcc8acf524bb875d13acb59126e62e66c1",
+          "size": 510350,
+          "width": 1168,
+          "height": 1628,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "author": "Jürgen from Sandesneben, Germany",
+          "credit": "Flickr",
+          "description": "There is a bird family living in a hole in the wall. In the mornings, they are in a feeding frenzy. :) Air Show",
+          "date": "2005-07-10 09:44:30",
+          "categories": [
+            "Passer in flight",
+            "Passer montanus montanus",
+            "Passer montanus nests"
+          ],
+          "preview": "sp044_flight_01.jpg"
+        },
+        {
+          "title": "File:Feldsperling im Regen.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Feldsperling_im_Regen.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Feldsperling_im_Regen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Feldsperling_im_Regen.jpg/500px-Feldsperling_im_Regen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "4913a6630a07f78abc48bab0fa2cbfc1f1b94b63",
+          "size": 852326,
+          "width": 1062,
+          "height": 854,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Arquus",
+          "credit": "Own work",
+          "description": "Ein Feldsperling (Passer montanus) verharrt in der Luft um an einen freiwerdenden Futterplatz zu kommen! Floridsdorf, Wien, Österreich",
+          "date": "2020-06-21 10:15:17",
+          "categories": [
+            "Passer montanus in Austria",
+            "Passer montanus in flight"
+          ],
+          "preview": "sp044_flight_02.jpg"
+        },
+        {
+          "title": "File:Eurasian-Tree-Sparrow.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Eurasian-Tree-Sparrow.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Eurasian-Tree-Sparrow.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Eurasian-Tree-Sparrow.jpg/500px-Eurasian-Tree-Sparrow.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "d50be2c413fd35c0ff4d29ce93d1ee48a4f16d68",
+          "size": 13758879,
+          "width": 6585,
+          "height": 4390,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Mildeep",
+          "credit": "Own work",
+          "description": "Eurasian Tree Sparrow in flight.",
+          "date": "2023-07-08 14:56:08",
+          "categories": [
+            "Passer montanus in flight",
+            "Passeridae of Nepal"
+          ],
+          "preview": "sp044_flight_03.jpg"
+        },
+        {
+          "title": "File:Vrabec polný.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Vrabec_poln%C3%BD.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Vrabec_poln%C3%BD.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Vrabec_poln%C3%BD.jpg/500px-Vrabec_poln%C3%BD.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "66d0bf08d1526801f8624ad3f42a6d3362154937",
+          "size": 531622,
+          "width": 1641,
+          "height": 1060,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Pavadk",
+          "credit": "Own work",
+          "description": "Pri krmitku",
+          "date": "2016-02-26",
+          "categories": [
+            "Passer montanus in flight"
+          ],
+          "preview": "sp044_flight_04.jpg"
+        },
+        {
+          "title": "File:Signal and sparrow - Flickr - over.hilowsee.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Signal_and_sparrow_-_Flickr_-_over.hilowsee.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Signal_and_sparrow_-_Flickr_-_over.hilowsee.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Signal_and_sparrow_-_Flickr_-_over.hilowsee.jpg/500px-Signal_and_sparrow_-_Flickr_-_over.hilowsee.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "3b3e03ea23100884d03a5d03ede7bac7c03da546",
+          "size": 302219,
+          "width": 1280,
+          "height": 960,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "author": "over hilowsee from Akita, Japan",
+          "credit": "Signal and sparrow",
+          "description": "秋田県大仙市 雀は信号をまもらない模様（cosmogang のリクエスト） [地図を表示]",
+          "date": "Taken on 17 August 2005, 18:43",
+          "categories": [
+            "Birds of Akita prefecture",
+            "Daisen, Akita",
+            "Flocks of birds in flight at sunset",
+            "Passer montanus (flocks)",
+            "Passer montanus in Japan",
+            "Passer montanus in flight",
+            "Sunsets of Akita prefecture",
+            "Traffic lights at green state in Japan"
+          ],
+          "preview": "sp044_flight_05.jpg"
+        },
+        {
+          "title": "File:Waltz (31982909).jpeg",
+          "page": "https://commons.wikimedia.org/wiki/File:Waltz_(31982909).jpeg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Waltz_%2831982909%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Waltz_%2831982909%29.jpeg/500px-Waltz_%2831982909%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "a67cc1355d06cc580f01c11216ffe6956ce0d62d",
+          "size": 583660,
+          "width": 2048,
+          "height": 1406,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "author": "Galina Jacyna",
+          "credit": "Imported from 500px ( archived version ) by the Archive Team . ( detail page )",
+          "description": "Waltz",
+          "date": "Taken on 22 February 2013, 12:41 (accord",
+          "categories": [
+            "2013 in Kazan",
+            "Animals of Kazan",
+            "Birds of Tatarstan",
+            "Fights between birds",
+            "Passer montanus in Russia",
+            "Passer montanus in flight"
+          ],
+          "preview": "sp044_flight_06.jpg"
+        },
+        {
+          "title": "File:Watanabe Seitei - Sparrows Flying.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Watanabe_Seitei_-_Sparrows_Flying.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Watanabe_Seitei_-_Sparrows_Flying.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Watanabe_Seitei_-_Sparrows_Flying.jpg/500px-Watanabe_Seitei_-_Sparrows_Flying.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "0e128bc07bd02a60a9b024eb4eb0a05e0114c8de",
+          "size": 3600507,
+          "width": 2931,
+          "height": 3806,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "Public domain",
+          "licenseUrl": "",
+          "author": "Watanabe Shōtei",
+          "credit": "[1]",
+          "description": "",
+          "date": "19 th century date QS:P571,+1850-00-00T0",
+          "categories": [
+            "Passer in flight",
+            "Passer montanus in art",
+            "Watanabe Shōtei"
+          ],
+          "preview": "sp044_flight_07.jpg"
+        }
+      ],
+      "rejectedForLicense": [
+        {
+          "title": "File:How to sex cage birds (British and foreign) (1907) (14565703960).jpg",
+          "license": "No restrictions"
+        }
+      ]
+    },
+    {
+      "id": "sp044_flight_b",
+      "speciesId": "sp044",
+      "role": "flight",
+      "kind": "image",
+      "search": "Eurasian tree sparrow flying filetype:bitmap",
+      "candidates": [
+        {
+          "title": "File:Eurasian Tree Sparrow at Wards Lake.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Eurasian_Tree_Sparrow_at_Wards_Lake.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Eurasian_Tree_Sparrow_at_Wards_Lake.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Eurasian_Tree_Sparrow_at_Wards_Lake.jpg/500px-Eurasian_Tree_Sparrow_at_Wards_Lake.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "f151dee88cc91c601a4c04d089a3f92b67b0f3f5",
+          "size": 3051335,
+          "width": 3771,
+          "height": 2347,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Singhania sanjeev",
+          "credit": "Own work",
+          "description": "The bird was seen sitting on a tree branch at Wards Lake, Shillong, Meghalaya, India. The background is the reflection of a passing-by boat on the lake. A second sparrow was caught in the camera frame, flying behind.",
+          "date": "2015-03-06 22:55:08",
+          "categories": [
+            "Passer montanus",
+            "Passeridae of India"
+          ],
+          "preview": "sp044_flight_b_01.jpg"
+        },
+        {
+          "title": "File:Eurasian Tree Sparrow - juveniles and adults - documentation photo series (poor quality) (9469378248).jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Eurasian_Tree_Sparrow_-_juveniles_and_adults_-_documentation_photo_series_(poor_quality)_(9469378248).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Eurasian_Tree_Sparrow_-_juveniles_and_adults_-_documentation_photo_series_%28poor_quality%29_%289469378248%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Eurasian_Tree_Sparrow_-_juveniles_and_adults_-_documentation_photo_series_%28poor_quality%29_%289469378248%29.jpg/500px-Eurasian_Tree_Sparrow_-_juveniles_and_adults_-_documentation_photo_series_%28poor_quality%29_%289469378248%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "d43e87b6c244c08db57733302a929aa4fdc91ebb",
+          "size": 259728,
+          "width": 1920,
+          "height": 1080,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "author": "Andy Reago & Chrissy McClarren",
+          "credit": "Eurasian Tree Sparrow - juveniles and adults - documentation photo series (poor quality)",
+          "description": "Carondelet Park St. Louis City on 8/8/13 (CM) - Wow, there were so many juveniles mixed in with the adults. I knew I better get photos to document these birds and their numbers. They are escaping in this photo from loud machines being moved past them. The birds were constantly relocating as these machines (bulldozers and levelers, etc.) were used to work on the Riverfront Trail. The birds had obvi",
+          "date": "2013-08-08 16:09",
+          "categories": [
+            "Passer montanus in the United States",
+            "Passeridae of Carondelet Park"
+          ],
+          "preview": "sp044_flight_b_02.jpg"
+        },
+        {
+          "title": "File:Gönye Hochplateau, Spielplatz, 2021 Balatonföldvár.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:G%C3%B6nye_Hochplateau,_Spielplatz,_2021_Balatonf%C3%B6ldv%C3%A1r.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/G%C3%B6nye_Hochplateau%2C_Spielplatz%2C_2021_Balatonf%C3%B6ldv%C3%A1r.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/G%C3%B6nye_Hochplateau%2C_Spielplatz%2C_2021_Balatonf%C3%B6ldv%C3%A1r.jpg/500px-G%C3%B6nye_Hochplateau%2C_Spielplatz%2C_2021_Balatonf%C3%B6ldv%C3%A1r.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "c5769665c2d5c1107a682642fdb11ec06571ac89",
+          "size": 1039804,
+          "width": 2272,
+          "height": 1440,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "author": "Globetrotter19",
+          "credit": "Own work",
+          "description": "Playground at a meadow. Here is the 9th station of the 'Celt(ic) Tour' educational trail. In the early 1870s, the loess plateau was covered with Austrian oak forest. In the 2010s a couple Austrian pines as a grove remnants, tree group can be found. The meadow is home to arthropods, Longhorn beetles, grasshoppers, Tettigonioidea, painted lady butterflies (Vanessa cardui), sand lizard (Lacerta agile",
+          "date": "2021-07",
+          "categories": [
+            "2021 in Balatonföldvár",
+            "July 2021 Hungary photographs",
+            "Meadows in Hungary",
+            "Nature of Balatonföldvár",
+            "Playgrounds in Somogy County"
+          ],
+          "preview": "sp044_flight_b_03.jpg"
+        },
+        {
+          "title": "File:Gönye Hochplateau, Wiese, 2021 Balatonföldvár.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:G%C3%B6nye_Hochplateau,_Wiese,_2021_Balatonf%C3%B6ldv%C3%A1r.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/G%C3%B6nye_Hochplateau%2C_Wiese%2C_2021_Balatonf%C3%B6ldv%C3%A1r.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/G%C3%B6nye_Hochplateau%2C_Wiese%2C_2021_Balatonf%C3%B6ldv%C3%A1r.jpg/500px-G%C3%B6nye_Hochplateau%2C_Wiese%2C_2021_Balatonf%C3%B6ldv%C3%A1r.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "a734d9ebab52a3c0fa85006ecd59ab8299e4a77e",
+          "size": 1051451,
+          "width": 2272,
+          "height": 1704,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "author": "Globetrotter19",
+          "credit": "Own work",
+          "description": "Meadow, view. Here is the 9th station of the 'Celt(ic) Tour' educational trail. In the early 1870s, the loess plateau was covered with Austrian oak forest. In the 2010s a couple Austrian pines as a grove remnants, tree group can be found. The meadow is home to arthropods, Longhorn beetles, grasshoppers, Tettigonioidea, painted lady butterflies (Vanessa cardui), sand lizard (Lacerta agile) AND bird",
+          "date": "2021-07",
+          "categories": [
+            "2021 in Balatonföldvár",
+            "July 2021 Hungary photographs",
+            "Meadows in Hungary",
+            "Nature of Balatonföldvár",
+            "Views of Balatonföldvár"
+          ],
+          "preview": "sp044_flight_b_04.jpg"
+        }
+      ],
+      "rejectedForLicense": []
+    }
+  ]
+}
