@@ -13646,12 +13646,14 @@ const DATA = {
     }
    ],
    "caution": {
-    "text": "Let bij vrouwtje of juveniel Vink op de twee lichte vleugelstrepen én de rug: vrouwtje Huismus heeft een duidelijkere wenkbrauw en een gestreepte rug. In gemengde wintergroepen lijkt vooral een vrouwelijke Keep erop: de Keep heeft vaak warm oranje op borst/schouders en een opvallend witte stuit in vlucht. Eén kleur of vleugelband beslist niet.",
+    "text": "Let bij vrouwtje of juveniel Vink op de twee lichte vleugelstrepen én de rug: vrouwtje Huismus heeft een duidelijkere wenkbrauw en een gestreepte rug. In gemengde wintergroepen lijkt vooral een vrouwelijke Keep erop: de Keep heeft vaak warm oranje op borst/schouders en een opvallend witte stuit in vlucht. Eén kleur of vleugelband beslist niet. Vrouwtje Groenling heeft meestal een gele vleugelrand en een stevigere snavel; vergelijk niet op bruine of groene kleur alleen.",
     "sources": [
      "VB_VINK",
      "VB_HMUS",
      "VB_KEEP",
-     "BZH_VINK"
+     "BZH_VINK",
+     "VB_GROENLING",
+     "BZH_GROENLING"
     ]
    },
    "critical": [
@@ -13707,6 +13709,16 @@ const DATA = {
      "sources": [
       "VB_VINK",
       "VB_KEEP"
+     ]
+    },
+    {
+     "id": "sp036",
+     "why": "Vrouwtje Groenling draagt geel langs de vleugelrand en heeft een zwaardere kegelsnavel dan het vrouwtje Vink met twee witte vleugelstrepen.",
+     "sources": [
+      "VB_VINK",
+      "VB_GROENLING",
+      "BZH_VINK",
+      "BZH_GROENLING"
      ]
     }
    ],
@@ -13842,11 +13854,13 @@ const DATA = {
     }
    ],
    "caution": {
-    "text": "Vrouwtjes Groenling en Sijs delen groengeel op de vleugel. De Groenling heeft een veel steviger kegelvormige snavel en oogt forser; de Sijs is fijner en heeft vaak duidelijk gestreepte flanken. Jonge Groenlingen kunnen ook sterk gestreept zijn: combineer leeftijd, snavel, flank en vleugel en beslis niet op geel alleen.",
+    "text": "Vrouwtjes Groenling en Sijs delen groengeel op de vleugel. De Groenling heeft een veel steviger kegelvormige snavel en oogt forser; de Sijs is fijner en heeft vaak duidelijk gestreepte flanken. Jonge Groenlingen kunnen ook sterk gestreept zijn: combineer leeftijd, snavel, flank en vleugel en beslis niet op geel alleen. Vrouwtje Vink heeft twee lichte, meestal witte vleugelstrepen en een minder zware snavel; bekijk vleugelpatroon en snavel samen.",
     "sources": [
      "VB_GROENLING",
      "VB_SIJS",
-     "BZH_GROENLING"
+     "BZH_GROENLING",
+     "VB_VINK",
+     "BZH_VINK"
     ]
    },
    "critical": [
@@ -13876,6 +13890,16 @@ const DATA = {
      "sources": [
       "VB_GROENLING",
       "VB_SIJS"
+     ]
+    },
+    {
+     "id": "sp035",
+     "why": "Vrouwtje Vink heeft twee witte vleugelstrepen en een lichtere snavelbouw; Groenling heeft geel aan de vleugelrand en een bredere snavel.",
+     "sources": [
+      "VB_VINK",
+      "VB_GROENLING",
+      "BZH_VINK",
+      "BZH_GROENLING"
      ]
     }
    ],
