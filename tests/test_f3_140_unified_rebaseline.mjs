@@ -97,6 +97,7 @@ const counts={
  tenthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R10'),
  eleventhBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R11'),
  twelfthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R12'),
+ thirteenthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R13'),
  contentInspected:sum(x=>x.F3.reviewedThisRound===true),
  contentComplete:sum(x=>x.F3.contentStatus==='CONTENT COMPLETE')
 };
@@ -115,6 +116,7 @@ const ninth=rows.filter(x=>x.F3.recheckBatch==='F3-R09');
 const tenth=rows.filter(x=>x.F3.recheckBatch==='F3-R10');
 const eleventh=rows.filter(x=>x.F3.recheckBatch==='F3-R11');
 const twelfth=rows.filter(x=>x.F3.recheckBatch==='F3-R12');
+const thirteenth=rows.filter(x=>x.F3.recheckBatch==='F3-R13');
 assert.ok(req.includes('lookalikePhotoAndText'),'New owner lookalike rule must be checked for every F3 bird');
 assert.deepEqual(ninth.map(x=>x.id),['sp034','sp035','sp036'],'R09 exactly three species in fixed sequence');
 assert.deepEqual(ninth.map(x=>x.F3.photoFilesInspected),[2,5,4],'All eleven existing local images need individual inspection');
@@ -194,6 +196,19 @@ for(const item of twelfth){
  for(let i=0;i<currentAssets.imageSlots.length;i++){
   const bytes=readFileSync(new URL('..'+currentAssets.imageSlots[i].path,import.meta.url));
   assert.equal(review.photoBlobSHAs[i],createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex'),item.id+' image changed since F3-R12 review');
+ }
+}
+
+assert.deepEqual(thirteenth.map(x=>x.id),['sp046','sp047','sp048'],'R13 exactly Zanglijster, Kramsvogel and Koperwiek');
+assert.deepEqual(thirteenth.map(x=>x.F3.photoFilesInspected),[3,3,3]);
+for(const item of thirteenth){
+ const {F3:review,currentAssets}=item;
+ assert.equal(review.fullPass,false); assert.ok(review.checks.photoOriginalIdentity.startsWith('VERIFIED'));
+ assert.ok(review.checks.audioRecordingsAuthenticity.startsWith('BLOCKED'),'No audio route: stays open');
+ assert.ok(review.checks.independentSecondReview.startsWith('NOT TESTED'));
+ for(let i=0;i<currentAssets.imageSlots.length;i++){
+  const bytes=readFileSync(new URL('..'+currentAssets.imageSlots[i].path,import.meta.url));
+  assert.equal(review.photoBlobSHAs[i],createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex'),item.id+' image changed since F3-R13 review');
  }
 }
 

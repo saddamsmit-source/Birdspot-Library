@@ -17,7 +17,10 @@
     "sp042",
     "sp043",
     "sp044",
-    "sp045"
+    "sp045",
+    "sp046",
+    "sp047",
+    "sp048"
   ],
   "policy": {
     "pairRequiredWhenSimilar": true,
@@ -839,6 +842,201 @@
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/merel",
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/spreeuw"
       ]
+    },
+    {
+      "id": "LK-019",
+      "focus": [
+        "sp046"
+      ],
+      "birds": [
+        "sp046",
+        "sp049"
+      ],
+      "risk": "adult and juvenile",
+      "matchingPlumages": [
+        "juv",
+        "juv"
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "F3-R13 origcheck: shown photos of sp046-sp048 matched to source images; partner species originals checked in their own round"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Bovendelen",
+          "values": [
+            "Warmbruine rug met lichte vlekjes",
+            "Lichter getekend op rug en vleugeldekveren"
+          ]
+        },
+        {
+          "label": "Borst",
+          "values": [
+            "Donkere vlekken, vaak pijlpuntiger",
+            "Donkere vlekken op relatief bleke grond"
+          ]
+        },
+        {
+          "label": "Bouw",
+          "values": [
+            "Doorgaans compacter",
+            "Doorgaans groter en forser"
+          ]
+        }
+      ],
+      "caution": "Een enkele vlek is bij jonge lijsters niet beslissend. Vergelijk de complete vogel en wees voorzichtig met leeftijds- en soortlabels als de kenmerken niet goed zichtbaar zijn.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zanglijster",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-lijster"
+      ]
+    },
+    {
+      "id": "LK-020",
+      "focus": [
+        "sp046",
+        "sp048"
+      ],
+      "birds": [
+        "sp048",
+        "sp046"
+      ],
+      "risk": "adult and juvenile",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "F3-R13 origcheck: shown photos of sp046-sp048 matched to source images; partner species originals checked in their own round"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Kop",
+          "values": [
+            "Brede roomwitte wenkbrauw- en lichte mondstreep",
+            "Geen opvallend lichte oog- en mondstrepen"
+          ]
+        },
+        {
+          "label": "Flanken",
+          "values": [
+            "Koperrood, ook in rust vaak zichtbaar",
+            "Geen koperrode flankvlek"
+          ]
+        },
+        {
+          "label": "Borst",
+          "values": [
+            "Witachtig met sterke donkere streping",
+            "Lichte onderzijde met pijlpuntige vlekken"
+          ]
+        }
+      ],
+      "caution": "Gebruik een scherpe zijfoto van kop én flank; de koperrode ondervleugel is geen vereiste voor determinatie in rust.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/koperwiek",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zanglijster"
+      ]
+    },
+    {
+      "id": "LK-021",
+      "focus": [
+        "sp047",
+        "sp048"
+      ],
+      "birds": [
+        "sp047",
+        "sp048"
+      ],
+      "risk": "adult and juvenile",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "F3-R13 origcheck: shown photos of sp046-sp048 matched to source images; partner species originals checked in their own round"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Kop",
+          "values": [
+            "Overwegend grijs bij volwassen vogels",
+            "Duidelijke lichte wenkbrauwstreep"
+          ]
+        },
+        {
+          "label": "Borstgrondkleur",
+          "values": [
+            "Oranjegele tint met donkere vlekken",
+            "Witachtige grondkleur met donkere streping"
+          ]
+        },
+        {
+          "label": "Flank",
+          "values": [
+            "Geen opvallend koperrode flank",
+            "Duidelijke koperrode flank"
+          ]
+        }
+      ],
+      "caution": "Controleer kop, borstgrondkleur en flank op de rustfoto. Jonge Kramsvogels zijn minder contrastrijk; ondervleugel is hier geen verplicht zichtbaar kenmerk.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kramsvogel",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/koperwiek"
+      ]
+    },
+    {
+      "id": "LK-022",
+      "focus": [
+        "sp046",
+        "sp047"
+      ],
+      "birds": [
+        "sp046",
+        "sp047"
+      ],
+      "risk": "adult and juvenile",
+      "matchingPlumages": [
+        "juv",
+        "juv"
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "F3-R13 origcheck: shown photos of sp046-sp048 matched to source images; partner species originals checked in their own round"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Kop",
+          "values": [
+            "Vrij egaal warmbruin",
+            "Grijsbruin, minder uitgesproken dan adult"
+          ]
+        },
+        {
+          "label": "Bovendelen",
+          "values": [
+            "Lichte vlekjes op bruine veren",
+            "Valere tint en minder contrasterende kop/rug"
+          ]
+        },
+        {
+          "label": "Gehele bouw",
+          "values": [
+            "Doorgaans kleiner en compacter",
+            "Doorgaans groter en forser"
+          ]
+        }
+      ],
+      "caution": "Een jeugdkleed kan soorten meer op elkaar laten lijken. Combineer kop, bouw, borst en context; de twee oorspronkelijke opnamen zijn door hun fotografen als juveniel beschreven.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zanglijster",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kramsvogel"
+      ]
     }
   ],
   "withinSpeciesVariation": [
@@ -862,7 +1060,8 @@
     "dataPreservation": "No new image bytes / no removal of existing species",
     "visualReviewR10": "docs/fotokwaliteit/F3_R10_PUTTER_SIJS_KNEU_2026-11-16_DRAFT.md",
     "visualReviewR11": "docs/fotokwaliteit/F3_R11_GOUDVINK_APPELVINK_ROODMUS_2026-11-16_DRAFT.md",
-    "visualReviewR12": "docs/fotokwaliteit/F3_R12_HUISMUS_RINGMUS_MEREL_2026-11-16_DRAFT.md"
+    "visualReviewR12": "docs/fotokwaliteit/F3_R12_HUISMUS_RINGMUS_MEREL_2026-11-16_DRAFT.md",
+    "visualReviewR13": "docs/fotokwaliteit/F3_R13_ZANGLIJSTER_KRAMSVOGEL_KOPERWIEK_2026-11-16_DRAFT.md"
   },
   "gate": "A pair can be labelled COMPLETE only with individual original image/right/sex/age proof, correct side-by-side render both directions and independent second review; structural CI PASS alone is insufficient"
 }
