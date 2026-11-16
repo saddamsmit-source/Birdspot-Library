@@ -477,3 +477,31 @@ console.log('Kuifeend/Topper: species IDs, adult plumage pairs, non-diagnostic c
 assert.match(KNOWLEDGE.sp092.caution.text, /topper/i, 'Kuifeend knowledge panel must show the topper confusion caution');
 assert.ok(!KNOWLEDGE.sp133, 'KB-01 forbids knowledge profiles for unphotographed species');
 assert.match(recognitionPanel(greaterScaup), /lichtgrijze rug/i, 'Topper must remain recognizable via the public species summary');
+
+
+// F3-R09: female Chaffinch vs female Greenfinch is a required close-look pair.
+const femaleFinches = GUIDE_COMPARISONS.filter(entry =>
+  entry.birds.length === 2 &&
+  ['sp035', 'sp036'].every(id => entry.birds.some(bird => bird.id === id)));
+assert.equal(femaleFinches.length, 1, 'Exactly one female Vink/Groenling comparison');
+const finchPair = femaleFinches[0];
+assert.deepEqual(finchPair.birds.map(bird => bird.plumage), ['adult_f','adult_f']);
+assert.equal(finchPair.rows.length, 3);
+assert.ok(finchPair.tip.includes('Jonge vogels'));
+const finchA = GUIDE_PLUMAGE.sp035.adult_f, finchB = GUIDE_PLUMAGE.sp036.adult_f;
+for (const photo of [finchA, finchB]) {
+  assert.ok(photo.image && photo.author && photo.license && photo.source && photo.licenseUrl,
+    'Photo pair must not be published without individual source and rights metadata');
+  assert.ok(!photo.flight, 'Female pair needs actual resting photos');
+}
+for (const [id, partnerId] of [['sp035','sp036'],['sp036','sp035']]) {
+  const html = recognitionPanel(species.get(id));
+  const panels = html.split('data-cmp-panel').slice(1);
+  assert.ok(panels.some(panel =>
+    panel.includes(finchA.image) && panel.includes(finchB.image) &&
+    panel.includes(`data-compare-species="${partnerId}"`)),
+  'Each female finch guide must show both exact matched photos and allow reversing the comparison');
+}
+assert.match(recognitionPanel(species.get('sp035')), /Twee lichte.*vleugelstrepen|twee.*vleugelstrepen/i);
+assert.match(recognitionPanel(species.get('sp036')), /gele.*vleugel|geel.*vleugel/i);
+console.log('F3-R09: Vink/Groenling adult-female photo pair, 3 traits, rights metadata and both guide directions');
