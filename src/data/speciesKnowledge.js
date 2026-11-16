@@ -13646,9 +13646,11 @@ const DATA = {
     }
    ],
    "caution": {
-    "text": "Een jonge Vink lijkt op een vrouwtje. Een bruin kleed alleen geeft geen zekere leeftijd of sekse.",
+    "text": "Een jonge Vink lijkt op een vrouwtje. Een bruin kleed alleen geeft geen zekere leeftijd of sekse. Een vrouwtje Groenling heeft doorgaans geel aan de vleugel en een zwaardere snavel; vergelijk bij een onbekende bruine vogel beide kenmerken, niet alleen de kleur.",
     "sources": [
-     "BZH_VINK"
+     "BZH_VINK",
+     "VB_GROENLING",
+     "BZH_GROENLING"
     ]
    },
    "critical": [
@@ -13688,6 +13690,16 @@ const DATA = {
      "sources": [
       "VB_VINK",
       "VB_KEEP"
+     ]
+    },
+    {
+     "id": "sp036",
+     "why": "Vrouwtje Groenling: gele vleugelrand en zware kegelsnavel tegenover twee witte vleugelstrepen bij vrouwtje Vink. Kijk naar beide kenmerken.",
+     "sources": [
+      "VB_VINK",
+      "VB_GROENLING",
+      "BZH_VINK",
+      "BZH_GROENLING"
      ]
     }
    ],
@@ -13821,10 +13833,12 @@ const DATA = {
     }
    ],
    "caution": {
-    "text": "De hoeveelheid geel hangt ook af van hoe de vleugel ligt. Kijk bij twijfel tegelijk naar snavel en bouw.",
+    "text": "De hoeveelheid geel hangt ook af van hoe de vleugel ligt. Kijk bij twijfel tegelijk naar snavel en bouw. Een vrouwtje Vink toont twee lichte, meestal witte vleugelstrepen; bij vrouwtjes van beide soorten helpt het vleugelpatroon samen met de snavelvorm.",
     "sources": [
      "VB_GROENLING",
-     "BZH_GROENLING"
+     "BZH_GROENLING",
+     "VB_VINK",
+     "BZH_VINK"
     ]
    },
    "critical": [
@@ -13854,6 +13868,16 @@ const DATA = {
      "sources": [
       "VB_GROENLING",
       "VB_SIJS"
+     ]
+    },
+    {
+     "id": "sp035",
+     "why": "Vrouwtje Vink: twee witte vleugelstrepen en een minder zware snavel; Groenling heeft een gele vleugelrand en stevigere snavel.",
+     "sources": [
+      "VB_VINK",
+      "VB_GROENLING",
+      "BZH_VINK",
+      "BZH_GROENLING"
      ]
     }
    ],
