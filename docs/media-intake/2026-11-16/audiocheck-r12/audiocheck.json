@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-16T15:44:12Z",
+  "generated": "2026-11-16T15:47:21Z",
   "protocol": "Birdspot audio-check (F3-R11b, 16-11-2026): akoestische controle zonder menselijk luisteren.",
   "rule": {
     "margin": 0.05,
@@ -13,6 +13,10 @@
       "role": "candidate",
       "soundType": "song",
       "title": "File:Turdus merula - Common Blackbird XC26605.mp3",
+      "confusers": [
+        "sp046",
+        "sp112"
+      ],
       "page": "https://commons.wikimedia.org/wiki/File:Turdus_merula_-_Common_Blackbird_XC26605.mp3",
       "sha1": "2e672e7af928bdd6e2775f7d0596664b1cf01569",
       "license": "CC BY-SA 4.0",
@@ -44,6 +48,10 @@
       "role": "candidate",
       "soundType": "call",
       "title": "File:Blackbird (Turdus merula) alarm calls - Oslo, Norway 2020-11-13.mp3",
+      "confusers": [
+        "sp046",
+        "sp112"
+      ],
       "page": "https://commons.wikimedia.org/wiki/File:Blackbird_(Turdus_merula)_alarm_calls_-_Oslo,_Norway_2020-11-13.mp3",
       "sha1": "6b15ec057decf0a31090be0e90bc829720a3710b",
       "license": "CC BY-SA 4.0",
@@ -75,6 +83,9 @@
       "role": "candidate",
       "soundType": "song",
       "title": "File:Passer domesticus - House Sparrow XC543237.mp3",
+      "confusers": [
+        "sp044"
+      ],
       "page": "https://commons.wikimedia.org/wiki/File:Passer_domesticus_-_House_Sparrow_XC543237.mp3",
       "sha1": "9c1e1bd404eb41e5e06b9429b23dde36f51a51d6",
       "license": "CC BY-SA 4.0",
@@ -106,6 +117,9 @@
       "role": "candidate",
       "soundType": "call",
       "title": "File:Joseph Sardin - Passer domesticus tschilp call.oga",
+      "confusers": [
+        "sp044"
+      ],
       "page": "https://commons.wikimedia.org/wiki/File:Joseph_Sardin_-_Passer_domesticus_tschilp_call.oga",
       "sha1": "46ee39de7b769fb79f6b09532dfba088e6a299eb",
       "license": "CC0",
@@ -137,6 +151,9 @@
       "role": "candidate",
       "soundType": "call",
       "title": "File:Passer montanus - Eurasian Tree Sparrow XC347806.mp3",
+      "confusers": [
+        "sp043"
+      ],
       "page": "https://commons.wikimedia.org/wiki/File:Passer_montanus_-_Eurasian_Tree_Sparrow_XC347806.mp3",
       "sha1": "b65c0698a8b131db11c0a8d70cd8ce3e079d61f4",
       "license": "CC BY-SA 4.0",
@@ -168,6 +185,7 @@
       "role": "reference",
       "soundType": "song",
       "title": "File:Passer domesticus - House Sparrow XC543237.mp3",
+      "confusers": null,
       "page": "https://commons.wikimedia.org/wiki/File:Passer_domesticus_-_House_Sparrow_XC543237.mp3",
       "sha1": "9c1e1bd404eb41e5e06b9429b23dde36f51a51d6",
       "license": "CC BY-SA 4.0",
@@ -199,6 +217,7 @@
       "role": "reference",
       "soundType": "song",
       "title": "File:Passer domesticus - House Sparrow XC508461.mp3",
+      "confusers": null,
       "page": "https://commons.wikimedia.org/wiki/File:Passer_domesticus_-_House_Sparrow_XC508461.mp3",
       "sha1": "281123f83a4c7437dd97ce0ca79b32579b25f16e",
       "license": "CC BY-SA 4.0",
@@ -230,6 +249,7 @@
       "role": "reference",
       "soundType": "song",
       "title": "File:Passer domesticus - House Sparrow XC108385.mp3",
+      "confusers": null,
       "page": "https://commons.wikimedia.org/wiki/File:Passer_domesticus_-_House_Sparrow_XC108385.mp3",
       "sha1": "de6c37a88536f36cbdff409b5cabd2edadfe107d",
       "license": "CC BY-SA 4.0",
@@ -261,6 +281,7 @@
       "role": "reference",
       "soundType": "song",
       "title": "File:Passer domesticus - House Sparrow XC152772.mp3",
+      "confusers": null,
       "page": "https://commons.wikimedia.org/wiki/File:Passer_domesticus_-_House_Sparrow_XC152772.mp3",
       "sha1": "bfe67deaeaa2627d5dedd745b9d01c6485e6732e",
       "license": "CC BY-SA 3.0",
@@ -292,6 +313,7 @@
       "role": "reference",
       "soundType": "call",
       "title": "File:Joseph Sardin - Passer domesticus tschilp call.oga",
+      "confusers": null,
       "page": "https://commons.wikimedia.org/wiki/File:Joseph_Sardin_-_Passer_domesticus_tschilp_call.oga",
       "sha1": "46ee39de7b769fb79f6b09532dfba088e6a299eb",
       "license": "CC0",
@@ -323,6 +345,7 @@
       "role": "reference",
       "soundType": "call",
       "title": "File:House Sparrow (Passer domesticus) call.wav",
+      "confusers": null,
       "page": "https://commons.wikimedia.org/wiki/File:House_Sparrow_(Passer_domesticus)_call.wav",
       "sha1": "817a4f4b377904472eed807c5743a3bb07bdd8e6",
       "license": "CC BY-SA 4.0",
@@ -354,6 +377,7 @@
       "role": "reference",
       "soundType": "call",
       "title": "File:Passer domesticus - House Sparrow XC433158.mp3",
+      "confusers": null,
       "page": "https://commons.wikimedia.org/wiki/File:Passer_domesticus_-_House_Sparrow_XC433158.mp3",
       "sha1": "334611d913618250ffb2c1a8460368bcd2deb4e2",
       "license": "CC BY-SA 4.0",
@@ -385,6 +409,7 @@
       "role": "reference",
       "soundType": "call",
       "title": "File:Passer domesticus - House Sparrow XC86749.mp3",
+      "confusers": null,
       "page": "https://commons.wikimedia.org/wiki/File:Passer_domesticus_-_House_Sparrow_XC86749.mp3",
       "sha1": "869a197d735d98d9b01be58b1d19f19ca737e24a",
       "license": "CC BY-SA 3.0",
@@ -416,6 +441,7 @@
       "role": "reference",
       "soundType": "call",
       "title": "File:Passer montanus - Eurasian Tree Sparrow XC347806.mp3",
+      "confusers": null,
       "page": "https://commons.wikimedia.org/wiki/File:Passer_montanus_-_Eurasian_Tree_Sparrow_XC347806.mp3",
       "sha1": "b65c0698a8b131db11c0a8d70cd8ce3e079d61f4",
       "license": "CC BY-SA 4.0",
@@ -447,6 +473,7 @@
       "role": "reference",
       "soundType": "call",
       "title": "File:Passer montanus.ogg",
+      "confusers": null,
       "page": "https://commons.wikimedia.org/wiki/File:Passer_montanus.ogg",
       "sha1": "567d1d15730a6f75c9ed6cf2d6031780e88ca28f",
       "license": "CC BY-SA 3.0",
@@ -478,6 +505,7 @@
       "role": "reference",
       "soundType": "song",
       "title": "File:Common Blackbird song (Turdus merula).ogg",
+      "confusers": null,
       "page": "https://commons.wikimedia.org/wiki/File:Common_Blackbird_song_(Turdus_merula).ogg",
       "sha1": "e83f2fb93aa68d922ac2f0cab79b79a14b9cf1a6",
       "license": "CC BY 4.0",
@@ -509,6 +537,7 @@
       "role": "reference",
       "soundType": "song",
       "title": "File:Male Blackbird song 01.ogg",
+      "confusers": null,
       "page": "https://commons.wikimedia.org/wiki/File:Male_Blackbird_song_01.ogg",
       "sha1": "af40a7a34cc4754e9c48d783ca6c225b2f21b426",
       "license": "CC BY-SA 3.0",
@@ -540,6 +569,7 @@
       "role": "reference",
       "soundType": "song",
       "title": "File:Turdus merula male song at dawn(20s).ogg",
+      "confusers": null,
       "page": "https://commons.wikimedia.org/wiki/File:Turdus_merula_male_song_at_dawn(20s).ogg",
       "sha1": "5f63fde24336a9fe837a5285a4e06f243d257a1b",
       "license": "CC BY-SA 3.0",
@@ -571,6 +601,7 @@
       "role": "reference",
       "soundType": "song",
       "title": "File:Turdus merula - Common Blackbird XC86887.mp3",
+      "confusers": null,
       "page": "https://commons.wikimedia.org/wiki/File:Turdus_merula_-_Common_Blackbird_XC86887.mp3",
       "sha1": "407b882e4ba55ef28c02211a22376973fe55b7ca",
       "license": "CC BY-SA 4.0",
@@ -602,6 +633,7 @@
       "role": "reference",
       "soundType": "call",
       "title": "File:Blackbird (Turdus merula) alarm calls - Oslo, Norway 2020-11-13.mp3",
+      "confusers": null,
       "page": "https://commons.wikimedia.org/wiki/File:Blackbird_(Turdus_merula)_alarm_calls_-_Oslo,_Norway_2020-11-13.mp3",
       "sha1": "6b15ec057decf0a31090be0e90bc829720a3710b",
       "license": "CC BY-SA 4.0",
@@ -633,6 +665,7 @@
       "role": "reference",
       "soundType": "call",
       "title": "File:Turdus merula - Common Blackbird XC573899.mp3",
+      "confusers": null,
       "page": "https://commons.wikimedia.org/wiki/File:Turdus_merula_-_Common_Blackbird_XC573899.mp3",
       "sha1": "9e5e6d10f524c70e49f41ee8bf97ad16b13bb8ed",
       "license": "CC BY-SA 4.0",
@@ -664,6 +697,7 @@
       "role": "reference",
       "soundType": "call",
       "title": "File:Turdus merula - Common Blackbird XC442745.mp3",
+      "confusers": null,
       "page": "https://commons.wikimedia.org/wiki/File:Turdus_merula_-_Common_Blackbird_XC442745.mp3",
       "sha1": "07ca461bbd691de88301efce067c67eff55aca7c",
       "license": "CC BY-SA 4.0",
@@ -695,6 +729,7 @@
       "role": "reference",
       "soundType": "call",
       "title": "File:Turdus merula - Common Blackbird XC310893.mp3",
+      "confusers": null,
       "page": "https://commons.wikimedia.org/wiki/File:Turdus_merula_-_Common_Blackbird_XC310893.mp3",
       "sha1": "b915090c6316281584bd4af679cfdf6c67aecf11",
       "license": "CC BY-SA 4.0",
@@ -726,6 +761,7 @@
       "role": "reference",
       "soundType": "song",
       "title": "File:Turdus philomelos - Song Thrush XC321571.mp3",
+      "confusers": null,
       "page": "https://commons.wikimedia.org/wiki/File:Turdus_philomelos_-_Song_Thrush_XC321571.mp3",
       "sha1": "534e5c15e4a4754f149425e496319d142652ce29",
       "license": "CC BY-SA 4.0",
@@ -756,45 +792,15 @@
       "speciesId": "sp046",
       "role": "reference",
       "soundType": "song",
-      "title": "File:Turdus philomelos - Song Thrush XC107864.mp3",
-      "page": "https://commons.wikimedia.org/wiki/File:Turdus_philomelos_-_Song_Thrush_XC107864.mp3",
-      "sha1": "9dcad1a84095040298bd5cad40625715db2b0916",
-      "license": "CC BY-SA 4.0",
-      "author": "Alexander Kurthy",
-      "description": ":very rich and melodic song Common name: Song Thrush Type: song Genus: Turdus Species: philomelos Location: Volovec - Belavý chodník Country: Slovakia Elevation: 1200 m",
-      "duration": 75.900275,
-      "spectrogram": "sp046_song_ref_2.png",
-      "features": {
-        "usable": true,
-        "seconds": 60.0,
-        "activeFraction": 0.823,
-        "snrDb": 23.5,
-        "domHz": [
-          1828,
-          3057,
-          7019
-        ],
-        "elementsPerSecond": 4.57,
-        "bestFragment": {
-          "start": 1.3,
-          "seconds": 10.0,
-          "active": 0.93
-        }
-      }
-    },
-    {
-      "id": "sp046_song_ref_3",
-      "speciesId": "sp046",
-      "role": "reference",
-      "soundType": "song",
       "title": "File:Turdus philomelos - Song Thrush XC464493.mp3",
+      "confusers": null,
       "page": "https://commons.wikimedia.org/wiki/File:Turdus_philomelos_-_Song_Thrush_XC464493.mp3",
       "sha1": "7b89674e16e2c89271aa092c7806ebe8f55bdab7",
       "license": "CC BY-SA 4.0",
       "author": "Marie-Lan Taÿ Pamart",
       "description": ":bird-seen:yes playback-used:no Common name: Song Thrush Type: song Genus: Turdus Species: philomelos Location: Champ-de-Mars, Paris, Île-de-France Country: France Elevation: 40 m",
       "duration": 68.4709285592796,
-      "spectrogram": "sp046_song_ref_3.png",
+      "spectrogram": "sp046_song_ref_2.png",
       "features": {
         "usable": true,
         "seconds": 60.0,
@@ -814,33 +820,66 @@
       }
     },
     {
+      "id": "sp046_song_ref_3",
+      "speciesId": "sp046",
+      "role": "reference",
+      "soundType": "song",
+      "title": "File:Turdus philomelos - Song Thrush XC541754.mp3",
+      "confusers": null,
+      "page": "https://commons.wikimedia.org/wiki/File:Turdus_philomelos_-_Song_Thrush_XC541754.mp3",
+      "sha1": "2e97aaf9d64f684da483c9a73f182e195b160a47",
+      "license": "CC BY-SA 4.0",
+      "author": "Benoît Van Hecke",
+      "description": ":DIY parabolic mic (2 x mics EM 172) + Zoom F1 Common name: Song Thrush Type: adult, male, song Genus: Turdus Species: philomelos Location: Fontaine-le-Comte, Vienne, Nouvelle-Aquitaine Country: France Elevation: 140 m",
+      "duration": 53.325679503864016,
+      "spectrogram": "sp046_song_ref_3.png",
+      "features": {
+        "usable": true,
+        "seconds": 53.3,
+        "activeFraction": 0.974,
+        "snrDb": 28.9,
+        "domHz": [
+          2799,
+          4780,
+          7105
+        ],
+        "elementsPerSecond": 1.09,
+        "bestFragment": {
+          "start": 17.9,
+          "seconds": 10.0,
+          "active": 1.0
+        }
+      }
+    },
+    {
       "id": "sp046_song_ref_4",
       "speciesId": "sp046",
       "role": "reference",
       "soundType": "song",
-      "title": "File:Turdus philomelos - Song Thrush XC537554.mp3",
-      "page": "https://commons.wikimedia.org/wiki/File:Turdus_philomelos_-_Song_Thrush_XC537554.mp3",
-      "sha1": "7ed7330bfc913733d5d81d3d114567d5e4ca0a67",
+      "title": "File:Turdus philomelos - Song Thrush XC541198.mp3",
+      "confusers": null,
+      "page": "https://commons.wikimedia.org/wiki/File:Turdus_philomelos_-_Song_Thrush_XC541198.mp3",
+      "sha1": "bddd45019ed091d0152d81920828ca661229137f",
       "license": "CC BY-SA 4.0",
-      "author": "Mats Havskogen",
-      "description": ":Svedala på kvällen Common name: Song Thrush Type: song Genus: Turdus Species: philomelos Location: Svedala Municipality, Skåne län Country: Sweden Elevation: 80 m",
-      "duration": 52.27449804552771,
+      "author": "Benoît Van Hecke",
+      "description": ":Zoom SGH-6 + Zoom F1 bird-seen:yes Common name: Song Thrush Type: adult, male, song Genus: Turdus Species: philomelos Location: Quinçay, Vienne, Poitou-Charentes Country: France Elevation: 130 m",
+      "duration": 103.84307201992328,
       "spectrogram": "sp046_song_ref_4.png",
       "features": {
         "usable": true,
-        "seconds": 52.1,
-        "activeFraction": 0.858,
-        "snrDb": 17.7,
+        "seconds": 60.0,
+        "activeFraction": 0.856,
+        "snrDb": 23.4,
         "domHz": [
-          1012,
-          1076,
-          3552
+          2454,
+          3380,
+          6373
         ],
-        "elementsPerSecond": 4.86,
+        "elementsPerSecond": 3.23,
         "bestFragment": {
-          "start": 38.2,
+          "start": 0.0,
           "seconds": 10.0,
-          "active": 1.0
+          "active": 0.96
         }
       }
     },
@@ -850,6 +889,7 @@
       "role": "reference",
       "soundType": "call",
       "title": "File:Turdus philomelos - Song Thrush XC432917.mp3",
+      "confusers": null,
       "page": "https://commons.wikimedia.org/wiki/File:Turdus_philomelos_-_Song_Thrush_XC432917.mp3",
       "sha1": "0c88b73ccfe33de04b63beef485e4c519b3d8b62",
       "license": "CC BY-SA 4.0",
@@ -881,6 +921,7 @@
       "role": "reference",
       "soundType": "call",
       "title": "File:Turdus philomelos - Song Thrush XC434600.mp3",
+      "confusers": null,
       "page": "https://commons.wikimedia.org/wiki/File:Turdus_philomelos_-_Song_Thrush_XC434600.mp3",
       "sha1": "af2f00e1dd15c90d343448d61576764ec60bd6fa",
       "license": "CC BY-SA 4.0",
@@ -911,14 +952,47 @@
       "speciesId": "sp046",
       "role": "reference",
       "soundType": "call",
+      "title": "File:Turdus philomelos - Song Thrush XC436363.mp3",
+      "confusers": null,
+      "page": "https://commons.wikimedia.org/wiki/File:Turdus_philomelos_-_Song_Thrush_XC436363.mp3",
+      "sha1": "2c2e40e662171046f08939fa1300f28df6a8aaf0",
+      "license": "CC BY-SA 4.0",
+      "author": "Joost van Bruggen",
+      "description": ":bird-seen:no playback-used:no Common name: Song Thrush Type: flight call Genus: Turdus Species: philomelos Location: Arnhem, Arnhem, Gelderland Country: Netherlands Elevation: 10 m",
+      "duration": 39.7823,
+      "spectrogram": "sp046_call_ref_3.png",
+      "features": {
+        "usable": true,
+        "seconds": 39.7,
+        "activeFraction": 0.584,
+        "snrDb": 11.6,
+        "domHz": [
+          1367,
+          6093,
+          8419
+        ],
+        "elementsPerSecond": 12.5,
+        "bestFragment": {
+          "start": 3.8,
+          "seconds": 10.0,
+          "active": 0.81
+        }
+      }
+    },
+    {
+      "id": "sp046_call_ref_4",
+      "speciesId": "sp046",
+      "role": "reference",
+      "soundType": "call",
       "title": "File:Turdus philomelos - Song Thrush XC432625.mp3",
+      "confusers": null,
       "page": "https://commons.wikimedia.org/wiki/File:Turdus_philomelos_-_Song_Thrush_XC432625.mp3",
       "sha1": "b720f3f0f3aab6ad6b5beb65b69c7a97f009bc6c",
       "license": "CC BY-SA 4.0",
       "author": "Joost van Bruggen",
       "description": ":first of the fall 2018 bird-seen:no playback-used:no Common name: Song Thrush Type: flight call Genus: Turdus Species: philomelos Location: Arnhem, Arnhem, Gelderland Country: Netherlands Elevation: 10 m",
       "duration": 3.158675,
-      "spectrogram": "sp046_call_ref_3.png",
+      "spectrogram": "sp046_call_ref_4.png",
       "features": {
         "usable": true,
         "seconds": 3.1,
@@ -938,33 +1012,290 @@
       }
     },
     {
-      "id": "sp046_call_ref_4",
-      "speciesId": "sp046",
+      "id": "sp112_song_ref_1",
+      "speciesId": "sp112",
       "role": "reference",
-      "soundType": "call",
-      "title": "File:Turdus philomelos - Song Thrush XC436363.mp3",
-      "page": "https://commons.wikimedia.org/wiki/File:Turdus_philomelos_-_Song_Thrush_XC436363.mp3",
-      "sha1": "2c2e40e662171046f08939fa1300f28df6a8aaf0",
+      "soundType": "song",
+      "title": "File:Sturnus vulgaris - Common Starling XC516954.mp3",
+      "confusers": null,
+      "page": "https://commons.wikimedia.org/wiki/File:Sturnus_vulgaris_-_Common_Starling_XC516954.mp3",
+      "sha1": "e8374cafa55ba33167771c26bdbc70817d1f02a1",
       "license": "CC BY-SA 4.0",
-      "author": "Joost van Bruggen",
-      "description": ":bird-seen:no playback-used:no Common name: Song Thrush Type: flight call Genus: Turdus Species: philomelos Location: Arnhem, Arnhem, Gelderland Country: Netherlands Elevation: 10 m",
-      "duration": 39.7823,
-      "spectrogram": "sp046_call_ref_4.png",
+      "author": "Marie-Lan Taÿ Pamart",
+      "description": ":One bird chatting from the top of a tree. Background: road traffic Equipment: Dodotronic HiSound -Stéréo (AOM5024L) parabola + Olympus LS-12 Edits: -6dB high-pass filter at 2000Hz bird-seen:yes playback-used:no Common name: Common Starling Type: adult, sex uncertain, song Genus: Sturnus Species: vulgaris Location: Jardin des Plantes (near Paris), Arrondissement de Paris, Île-de-France Country: Fr",
+      "duration": 13.526625,
+      "spectrogram": "sp112_song_ref_1.png",
       "features": {
         "usable": true,
-        "seconds": 39.7,
-        "activeFraction": 0.584,
-        "snrDb": 11.6,
+        "seconds": 13.5,
+        "activeFraction": 0.864,
+        "snrDb": 22.5,
         "domHz": [
-          1367,
-          6093,
-          8419
+          1313,
+          5340,
+          9000
         ],
-        "elementsPerSecond": 12.5,
+        "elementsPerSecond": 4.67,
         "bestFragment": {
-          "start": 3.8,
+          "start": 2.8,
           "seconds": 10.0,
-          "active": 0.81
+          "active": 0.93
+        }
+      }
+    },
+    {
+      "id": "sp112_song_ref_2",
+      "speciesId": "sp112",
+      "role": "reference",
+      "soundType": "song",
+      "title": "File:Sturnus vulgaris - Common Starling XC474427.mp3",
+      "confusers": null,
+      "page": "https://commons.wikimedia.org/wiki/File:Sturnus_vulgaris_-_Common_Starling_XC474427.mp3",
+      "sha1": "02475e9ca7992b6c8895cac0a7056f69c6b2ce40",
+      "license": "CC BY-SA 4.0",
+      "author": "Marie-Lan Taÿ Pamart",
+      "description": ":Bird singing softly from a tree in front of its nest, while opening and closing its wings rhythmically. Sunny day, fresh breeze. Distance: ~5m Edits: -12dB high-pass filter at 1700Hz, +5dB amplification Equipment: Sennheiser ME66/K6, Rycote Windjammer, Tascam DR-05 bird-seen:yes playback-used:no Common name: Common Starling Type: song, wing flaps Genus: Sturnus Species: vulgaris Location: Paslièr",
+      "duration": 28.89198743066493,
+      "spectrogram": "sp112_song_ref_2.png",
+      "features": {
+        "usable": true,
+        "seconds": 28.8,
+        "activeFraction": 0.75,
+        "snrDb": 14.9,
+        "domHz": [
+          1335,
+          2411,
+          6055
+        ],
+        "elementsPerSecond": 4.72,
+        "bestFragment": {
+          "start": 0.0,
+          "seconds": 10.0,
+          "active": 0.99
+        }
+      }
+    },
+    {
+      "id": "sp112_song_ref_3",
+      "speciesId": "sp112",
+      "role": "reference",
+      "soundType": "song",
+      "title": "File:Sturnus vulgaris - Common Starling XC522371.mp3",
+      "confusers": null,
+      "page": "https://commons.wikimedia.org/wiki/File:Sturnus_vulgaris_-_Common_Starling_XC522371.mp3",
+      "sha1": "bff933ce5d7c21285f3dd7112b5143619f18176e",
+      "license": "CC BY-SA 4.0",
+      "author": "James Ray",
+      "description": ":High in a Ficus macrocarpa var hilli, along with a noisy miner, red wattlebird, and a magpie on ground. Only the latter vocalized. bird-seen:no playback-used:no Common name: Common Starling Type: adult, sex uncertain, song Genus: Sturnus Species: vulgaris Location: Alexandria, Council of the City of Sydney, New South Wales Country: Australia Elevation: 10 m",
+      "duration": 147.95840025948752,
+      "spectrogram": "sp112_song_ref_3.png",
+      "features": {
+        "usable": true,
+        "seconds": 60.0,
+        "activeFraction": 0.784,
+        "snrDb": 19.2,
+        "domHz": [
+          1033,
+          1227,
+          3488
+        ],
+        "elementsPerSecond": 2.52,
+        "bestFragment": {
+          "start": 4.4,
+          "seconds": 10.0,
+          "active": 1.0
+        }
+      }
+    },
+    {
+      "id": "sp112_song_ref_4",
+      "speciesId": "sp112",
+      "role": "reference",
+      "soundType": "song",
+      "title": "File:Sturnus vulgaris - Common Starling XC493403.mp3",
+      "confusers": null,
+      "page": "https://commons.wikimedia.org/wiki/File:Sturnus_vulgaris_-_Common_Starling_XC493403.mp3",
+      "sha1": "4a1f689ffd85a3cdc798cf8d438935a3678bb36a",
+      "license": "CC BY-SA 4.0",
+      "author": "Marie-Lan Taÿ Pamart",
+      "description": ":Bird singing from the top of a tall tree (Sequoiadendron giganteum) in a private park, overlooking known starling nests. Background noises: dogs from the neighbourhood, ~30 barn swallows zipping around Distance: ~30m Equipment: Tascam DR-100mkIII + Sennheiser ME66/K6 + Rycote Super Softie Edits: -12dB high-pass filter at 1200Hz for the dog barks and distant traffic, +5dB amplification bird-seen:y",
+      "duration": 86.23445,
+      "spectrogram": "sp112_song_ref_4.png",
+      "features": {
+        "usable": true,
+        "seconds": 60.0,
+        "activeFraction": 0.602,
+        "snrDb": 13.7,
+        "domHz": [
+          1119,
+          2519,
+          6632
+        ],
+        "elementsPerSecond": 10.05,
+        "bestFragment": {
+          "start": 0.0,
+          "seconds": 10.0,
+          "active": 0.78
+        }
+      }
+    },
+    {
+      "id": "sp112_call_ref_1",
+      "speciesId": "sp112",
+      "role": "reference",
+      "soundType": "call",
+      "title": "File:European Starling (Sturnus vulgaris) Call - Muro, Spain 2022-04-18.mp3",
+      "confusers": null,
+      "page": "https://commons.wikimedia.org/wiki/File:European_Starling_(Sturnus_vulgaris)_Call_-_Muro,_Spain_2022-04-18.mp3",
+      "sha1": "4f9a533d67148358aed34a2ffa8069b7c0e3b22a",
+      "license": "CC BY-SA 4.0",
+      "author": "Ryan Hodnett",
+      "description": "European Starling ( Sturnus vulgaris ) in Muro, Spain.",
+      "duration": 6.599925,
+      "spectrogram": "sp112_call_ref_1.png",
+      "features": {
+        "usable": true,
+        "seconds": 6.6,
+        "activeFraction": 0.56,
+        "snrDb": 13.2,
+        "domHz": [
+          1033,
+          2777,
+          3372
+        ],
+        "elementsPerSecond": 11.1,
+        "bestFragment": {
+          "start": 0.0,
+          "seconds": 6.6,
+          "active": 0.56
+        }
+      }
+    },
+    {
+      "id": "sp112_call_ref_2",
+      "speciesId": "sp112",
+      "role": "reference",
+      "soundType": "call",
+      "title": "File:Sturnus vulgaris - Common Starling XC483803.mp3",
+      "confusers": null,
+      "page": "https://commons.wikimedia.org/wiki/File:Sturnus_vulgaris_-_Common_Starling_XC483803.mp3",
+      "sha1": "7cc29ce0bdc1769e49fe8ebffc450170dd617ea4",
+      "license": "CC BY-SA 4.0",
+      "author": "Marie-Lan Taÿ Pamart",
+      "description": ":A small group of sterlings, including begging fledgelings, calling from a brush. Distance: Equipment: Tascam DR-100mkIII + Sennheiser ME66/K6 + Rycote Super Softie Edits: -6dB high-pass filter at 1500Hz Common name: Common Starling Type: begging call, call, juvenile Genus: Sturnus Species: vulgaris Location: Roseraie, Jardin des plantes, Paris, Île-de-France Country: France Elevation: 40 m",
+      "duration": 35.3486,
+      "spectrogram": "sp112_call_ref_2.png",
+      "features": {
+        "usable": true,
+        "seconds": 35.3,
+        "activeFraction": 0.816,
+        "snrDb": 25.9,
+        "domHz": [
+          2540,
+          3832,
+          5490
+        ],
+        "elementsPerSecond": 3.31,
+        "bestFragment": {
+          "start": 6.7,
+          "seconds": 10.0,
+          "active": 0.94
+        }
+      }
+    },
+    {
+      "id": "sp112_call_ref_3",
+      "speciesId": "sp112",
+      "role": "reference",
+      "soundType": "call",
+      "title": "File:Sturnus vulgaris - Common Starling XC503745.mp3",
+      "confusers": null,
+      "page": "https://commons.wikimedia.org/wiki/File:Sturnus_vulgaris_-_Common_Starling_XC503745.mp3",
+      "sha1": "8de9ad48cce3860b32958f4e17038ae9f69c9a49",
+      "license": "CC BY-SA 4.0",
+      "author": "Jochem verweij",
+      "description": ":a pair of calls stuck together bird-seen:yes Common name: Common Starling Type: call Genus: Sturnus Species: vulgaris Location: Bergschenhoek, Lansingerland, Zuid-Holland Country: Netherlands Elevation: 0 m",
+      "duration": 9.624059553349875,
+      "spectrogram": "sp112_call_ref_3.png",
+      "features": {
+        "usable": true,
+        "seconds": 9.6,
+        "activeFraction": 0.796,
+        "snrDb": 25.5,
+        "domHz": [
+          1012,
+          1184,
+          2590
+        ],
+        "elementsPerSecond": 2.49,
+        "bestFragment": {
+          "start": 0.0,
+          "seconds": 9.6,
+          "active": 0.8
+        }
+      }
+    },
+    {
+      "id": "sp112_call_ref_4",
+      "speciesId": "sp112",
+      "role": "reference",
+      "soundType": "call",
+      "title": "File:Sturnus vulgaris - Common Starling XC473248.mp3",
+      "confusers": null,
+      "page": "https://commons.wikimedia.org/wiki/File:Sturnus_vulgaris_-_Common_Starling_XC473248.mp3",
+      "sha1": "3152bf743354a2b56c7aefe7ce25ab372ea3d9ed",
+      "license": "CC BY-SA 4.0",
+      "author": "Marie-Lan Taÿ Pamart",
+      "description": ":Bird calling from a tree while bringing food to its young. Distance: ~5m Edits: -24dB high-pass filter at 800Hz Equipment: Sennheiser ME66/K6, Rycote Windjammer, Tascam DR-05 bird-seen:yes playback-used:no Common name: Common Starling Type: call Genus: Sturnus Species: vulgaris Location: Rochegude, Drôme, Auvergne-Rhône-Alpes Country: France Elevation: 140 m",
+      "duration": 72.74761946751131,
+      "spectrogram": "sp112_call_ref_4.png",
+      "features": {
+        "usable": true,
+        "seconds": 60.0,
+        "activeFraction": 0.703,
+        "snrDb": 14.9,
+        "domHz": [
+          1055,
+          1313,
+          5254
+        ],
+        "elementsPerSecond": 5.4,
+        "bestFragment": {
+          "start": 19.9,
+          "seconds": 10.0,
+          "active": 0.99
+        }
+      }
+    },
+    {
+      "id": "sp044_call_refb_1",
+      "speciesId": "sp044",
+      "role": "reference",
+      "soundType": "call",
+      "title": "File:Passer montanus - Eurasian Tree Sparrow XC347806.mp3",
+      "confusers": null,
+      "page": "https://commons.wikimedia.org/wiki/File:Passer_montanus_-_Eurasian_Tree_Sparrow_XC347806.mp3",
+      "sha1": "b65c0698a8b131db11c0a8d70cd8ce3e079d61f4",
+      "license": "CC BY-SA 4.0",
+      "author": "Derek Paulo",
+      "description": ":bird-seen:no playback-used:no Common name: Eurasian Tree Sparrow Type: call Genus: Passer Species: montanus Location: CPAC, Murcia, Negros Occidental, Western Visayas Country: Philippines Elevation: 220 m",
+      "duration": 16.1265,
+      "spectrogram": "sp044_call_refb_1.png",
+      "features": {
+        "usable": true,
+        "seconds": 16.1,
+        "activeFraction": 0.944,
+        "snrDb": 24.6,
+        "domHz": [
+          1098,
+          2971,
+          5404
+        ],
+        "elementsPerSecond": 0.75,
+        "bestFragment": {
+          "start": 0.7,
+          "seconds": 10.0,
+          "active": 1.0
         }
       }
     }
@@ -974,65 +1305,76 @@
       "id": "sp045_song_live",
       "speciesId": "sp045",
       "soundType": "song",
-      "consistent": false,
-      "reason": "verwarringssoort onvoldoende referenties: sp044",
+      "confusers": [
+        "sp046",
+        "sp112"
+      ],
+      "consistent": true,
       "means": {
-        "sp043": 0.2926,
         "sp045": 0.7125,
-        "sp046": 0.4055
-      }
+        "sp046": 0.3259,
+        "sp112": 0.3632
+      },
+      "margin": 0.3493,
+      "reason": "ok"
     },
     {
       "id": "sp045_call_live",
       "speciesId": "sp045",
       "soundType": "call",
+      "confusers": [
+        "sp046",
+        "sp112"
+      ],
       "consistent": false,
       "means": {
-        "sp044": 0.4113,
-        "sp043": 0.2984,
         "sp045": 0.2228,
-        "sp046": -0.0429
+        "sp046": -0.0429,
+        "sp112": 0.2574
       },
-      "margin": -0.1885,
-      "reason": "marge -0.1885 < 0.05"
+      "margin": -0.0346,
+      "reason": "marge -0.0346 < 0.05"
     },
     {
       "id": "sp043_song_cand_1",
       "speciesId": "sp043",
       "soundType": "song",
+      "confusers": [
+        "sp044"
+      ],
       "consistent": false,
       "reason": "verwarringssoort onvoldoende referenties: sp044",
       "means": {
-        "sp043": 0.5925,
-        "sp045": 0.4874,
-        "sp046": 0.6152
+        "sp043": 0.5925
       }
     },
     {
       "id": "sp043_call_cand_1",
       "speciesId": "sp043",
       "soundType": "call",
-      "consistent": false,
+      "confusers": [
+        "sp044"
+      ],
+      "consistent": true,
       "means": {
-        "sp044": 0.2345,
         "sp043": 0.3682,
-        "sp045": 0.3246,
-        "sp046": -0.0586
+        "sp044": 0.2345
       },
-      "margin": 0.0436,
-      "reason": "marge 0.0436 < 0.05"
+      "margin": 0.1337,
+      "reason": "ok"
     },
     {
       "id": "sp044_call_cand_1",
       "speciesId": "sp044",
       "soundType": "call",
+      "confusers": [
+        "sp043"
+      ],
       "consistent": false,
       "reason": "minder dan 2 referenties van de eigen soort",
       "means": {
         "sp044": 0.466,
-        "sp043": 0.3676,
-        "sp045": 0.332,
-        "sp046": -0.0085
+        "sp043": 0.3676
       }
     }
   ]
