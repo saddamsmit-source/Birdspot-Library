@@ -1,6 +1,7 @@
 {
-  "mode": "import",
-  "manifest": "tools/media/intake_selection_2026-11-16_r10b.json",
-  "requestedBy": "Claude (writerclaim PR #268)",
-  "nonce": 3
+  "mode": "audiocheck",
+  "manifest": "tools/media/audiocheck_2026-11-16_r10.json",
+  "out": "docs/media-intake/2026-11-16/audiocheck",
+  "requestedBy": "Claude (writerclaim F3-R11b)",
+  "nonce": 8
 }

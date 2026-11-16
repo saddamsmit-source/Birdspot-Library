@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "status": "CANDIDATES — NIET GEPUBLICEERD. Alleen importeren na menselijke luistercontrole (soort, geluidsoort, kwaliteit); de intake weigert audio zonder 'listened'-blok.",
+  "status": "CANDIDATES — NIET GEPUBLICEERD. Audiocontrole volgens docs/media-intake/AUDIOCHECK_PROTOCOL.md uitgevoerd op 16-11-2026: 0 van 5 publiceerbaar.",
   "source": "docs/media-intake/2026-11-16/candidates.json",
   "candidates": [
     {
@@ -14,7 +14,14 @@
       "durationSeconds": 42.9,
       "metadataSays": ":High-pass filtered. bird-seen:yes playback-used:no Common name: European Goldfinch Type: song Genus: Carduelis Species: carduelis Location: Pornaistenniemi, Va",
       "listened": null,
-      "status": "CANDIDATE_UNHEARD"
+      "status": "NOT TESTED",
+      "audiocheck": {
+        "sourceLabel": "klopt (soort en, waar vermeld, type in bronmetadata)",
+        "acoustic": "NOT TESTED — verwarringssoort onvoldoende referenties: sp038, sp039",
+        "visual": "Spectrogram: gestapelde, snel herhaalde elementen 4-8 kHz, passend bij Putter-referenties.",
+        "result": "NOT TESTED — niet publiceren",
+        "file": "docs/media-intake/2026-11-16/audiocheck/audiocheck.json"
+      }
     },
     {
       "speciesId": "sp037",
@@ -27,7 +34,14 @@
       "durationSeconds": 8.0,
       "metadataSays": ":several small calls stuck together bird-seen:yes Common name: European Goldfinch Type: life stage uncertain, song Genus: Carduelis Species: carduelis Location:",
       "listened": null,
-      "status": "CANDIDATE_UNHEARD"
+      "status": "NOT TESTED",
+      "audiocheck": {
+        "sourceLabel": "klopt (soort en, waar vermeld, type in bronmetadata)",
+        "acoustic": "NOT TESTED — verwarringssoort onvoldoende referenties: sp038, sp039",
+        "visual": "Spectrogram: meerdere roeptypes achter elkaar, veel laagfrequent stoorgeluid (<1 kHz).",
+        "result": "NOT TESTED — niet publiceren",
+        "file": "docs/media-intake/2026-11-16/audiocheck/audiocheck.json"
+      }
     },
     {
       "speciesId": "sp038",
@@ -40,7 +54,14 @@
       "durationSeconds": 10,
       "metadataSays": "Song of Eurasian Siskin, Bryansk region, Russia",
       "listened": null,
-      "status": "CANDIDATE_UNHEARD"
+      "status": "NOT TESTED",
+      "audiocheck": {
+        "sourceLabel": "klopt (soort en, waar vermeld, type in bronmetadata)",
+        "acoustic": "NOT TESTED — geen referentie van de eigen soort",
+        "visual": "Spectrogram: doorlopend getjilp 3-7 kHz met gerekte schorre toon (~8 s), passend bij Sijs-zang.",
+        "result": "NOT TESTED — niet publiceren",
+        "file": "docs/media-intake/2026-11-16/audiocheck/audiocheck.json"
+      }
     },
     {
       "speciesId": "sp038",
@@ -53,7 +74,14 @@
       "durationSeconds": 15.8,
       "metadataSays": ":Zoom SGH-6 + Zoom F1 Common name: Eurasian Siskin Type: call Genus: Spinus Species: spinus Location: Béruges, Vienne, Nouvelle-Aquitaine Country: France Elevat",
       "listened": null,
-      "status": "CANDIDATE_UNHEARD"
+      "status": "NOT TESTED",
+      "audiocheck": {
+        "sourceLabel": "klopt (soort en, waar vermeld, type in bronmetadata)",
+        "acoustic": "NOT TESTED — geen referentie van de eigen soort",
+        "visual": "Spectrogram: dalende/stijgende fluittonen 3-9 kHz, passend bij Sijs-roep; SNR 13,9 dB onder drempel.",
+        "result": "NOT TESTED — niet publiceren",
+        "file": "docs/media-intake/2026-11-16/audiocheck/audiocheck.json"
+      }
     },
     {
       "speciesId": "sp039",
@@ -66,7 +94,14 @@
       "durationSeconds": 8.5,
       "metadataSays": "Carduelis cannabina singing",
       "listened": null,
-      "status": "CANDIDATE_UNHEARD"
+      "status": "NOT TESTED",
+      "audiocheck": {
+        "sourceLabel": "klopt (soort en, waar vermeld, type in bronmetadata)",
+        "acoustic": "NOT TESTED — geen referentie van de eigen soort",
+        "visual": "Spectrogram: korte trillers en kwetterelementen 1-6 kHz; geen Kneu-referentie om tegen te toetsen.",
+        "result": "NOT TESTED — niet publiceren",
+        "file": "docs/media-intake/2026-11-16/audiocheck/audiocheck.json"
+      }
     }
   ],
   "missing": [
@@ -75,5 +110,6 @@
       "type": "call",
       "reason": "Geen Commons-kandidaat met vrije licentie gevonden op 16-11-2026"
     }
-  ]
+  ],
+  "audiocheckFinding": "Commons bevat onder de exacte soortnaam te weinig onafhankelijk gelabelde referenties voor Sijs en Kneu (verwante Zuid-Amerikaanse sijzen, een gemengde koor-opname en een onbepaalde opname uitgesloten). Volgende stap: referenties via Commons-categorieën of andere vrij gelicentieerde, soortgelabelde bronnen."
 }
