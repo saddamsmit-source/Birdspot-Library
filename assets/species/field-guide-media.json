@@ -1877,6 +1877,25 @@
         "audio": "/assets/species/audio/sp029-call-app.mp3",
         "recordingSource": "https://www.inaturalist.org/observations/79293569"
       }
+    ],
+    "sp043": [
+      {
+        "label": "Roep",
+        "note": "Het bekende 'tsjilp' van de Huismus.",
+        "verification": "VERIFIED (triangulatie 16-11-2026: bronlabel, akoestische referentievergelijking, visuele spectrogramcontrole; niet door mens beluisterd)",
+        "verificationReport": "docs/media-intake/2026-11-16/audiocheck-r12/audiocheck.json#sp043_call_cand_1",
+        "file": "Joseph Sardin - Passer domesticus tschilp call.oga",
+        "author": "Joseph Sardin",
+        "license": "CC0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "source": "https://commons.wikimedia.org/wiki/File:Joseph_Sardin_-_Passer_domesticus_tschilp_call.oga",
+        "showSourceLink": true,
+        "sourceSha1": "46ee39de7b769fb79f6b09532dfba088e6a299eb",
+        "reviewed": "2026-11-16",
+        "intake": "tools/media/commons_intake.py (GitHub Actions)",
+        "audio": "/assets/species/audio/sp043-call.mp3",
+        "modifications": "Fragment 0–6.2 s, omgezet naar MP3 (mono, 96 kbit/s), metadata verwijderd"
+      }
     ]
   },
   "plumage": {
