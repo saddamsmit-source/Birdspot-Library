@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-16T15:17:18Z",
+  "generated": "2026-11-16T15:19:32Z",
   "protocol": "Birdspot audio-check (F3-R11b, 16-11-2026): akoestische controle zonder menselijk luisteren.",
   "rule": {
     "margin": 0.05,
@@ -386,23 +386,21 @@
       "speciesId": "sp037",
       "soundType": "song",
       "consistent": false,
+      "reason": "verwarringssoort onvoldoende referenties: sp038, sp039",
       "means": {
         "sp037": 0.5258
-      },
-      "margin": null,
-      "reason": "geen verwarringssoort om tegen te toetsen"
+      }
     },
     {
       "id": "sp037_call_cand",
       "speciesId": "sp037",
       "soundType": "call",
-      "consistent": true,
+      "consistent": false,
+      "reason": "verwarringssoort onvoldoende referenties: sp038, sp039",
       "means": {
-        "sp037": 0.4439,
-        "sp039": 0.2839
-      },
-      "margin": 0.16,
-      "reason": "ok"
+        "sp039": 0.2839,
+        "sp037": 0.4439
+      }
     },
     {
       "id": "sp038_song_cand",
@@ -421,8 +419,8 @@
       "consistent": false,
       "reason": "geen referentie van de eigen soort",
       "means": {
-        "sp037": 0.4925,
-        "sp039": 0.4649
+        "sp039": 0.4649,
+        "sp037": 0.4925
       }
     },
     {
