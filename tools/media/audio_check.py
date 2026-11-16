@@ -111,6 +111,25 @@ def judge(cand: dict, refs: dict[str, list[dict]], own: str) -> dict:
     return {"consistent": not reasons, "means": means, "margin": margin, "reason": "; ".join(reasons) or "ok"}
 
 
+def reference_ok(info: dict, sci_names: list[str], sound_type: str) -> bool:
+    """Referentie alleen bij exacte wetenschappelijke naam in titel of categorie (geen verwante soorten zoals
+    Andean Siskin) en, als de bron een type noemt (xeno-canto: 'Type: song'), het juiste geluidstype."""
+    hay = " ".join([info.get("title", "")] + info.get("categories", [])).casefold()
+    if not sci_names or not any(n.casefold() in hay for n in sci_names):
+        return False
+    desc = (info.get("description") or "").casefold()
+    m = __import__("re").search(r"type:\s*([a-z ,/-]+)", desc)
+    if m:
+        kinds = m.group(1)
+        if sound_type == "song" and "song" not in kinds:
+            return False
+        if sound_type == "call" and "call" not in kinds:
+            return False
+        if "song" in kinds and "call" in kinds:
+            return False  # gemengd type: niet als referentie voor één geluidsoort
+    return True
+
+
 def plot(x: np.ndarray, path: Path, title: str) -> None:
     import matplotlib
     matplotlib.use("Agg")
@@ -140,7 +159,8 @@ def run(manifest: Path, out: Path) -> None:
             excl = {ci.norm_name(a) for a in e.get("excludeAuthors", [])}
             excl_t = set(e.get("excludeTitles", []))
             picked = [i for t in titles if (i := infos.get(t)) and ci.license_ok(i["license"])
-                      and ci.norm_name(i["author"]) not in excl and t not in excl_t][: e.get("pick", 2)]
+                      and ci.norm_name(i["author"]) not in excl and t not in excl_t
+                      and reference_ok(i, e.get("sciNames", []), e.get("soundType", ""))][: e.get("pick", 2)]
             for n, info in enumerate(picked):
                 items.append({**{k: v for k, v in e.items() if k not in ("search", "pick")},
                               "id": f"{e['id']}_{n + 1}", "title": info["title"], "info": info})

@@ -47,8 +47,8 @@
       "speciesId": "sp037",
       "role": "reference",
       "soundType": "song",
-      "search": "Carduelis carduelis song",
-      "pick": 2,
+      "search": "\"Carduelis carduelis\" song",
+      "pick": 3,
       "excludeAuthors": [
         "Hannu Varkki",
         "Jochem verweij"
@@ -59,6 +59,9 @@
         "File:Carduelis spinus.ogg",
         "File:Spinus spinus - Eurasian Siskin XC539301.mp3",
         "File:Carduelis cannabina singing.flac"
+      ],
+      "sciNames": [
+        "Carduelis carduelis"
       ]
     },
     {
@@ -66,8 +69,8 @@
       "speciesId": "sp037",
       "role": "reference",
       "soundType": "call",
-      "search": "Carduelis carduelis call",
-      "pick": 2,
+      "search": "\"Carduelis carduelis\" call",
+      "pick": 3,
       "excludeAuthors": [
         "Hannu Varkki",
         "Jochem verweij"
@@ -78,6 +81,9 @@
         "File:Carduelis spinus.ogg",
         "File:Spinus spinus - Eurasian Siskin XC539301.mp3",
         "File:Carduelis cannabina singing.flac"
+      ],
+      "sciNames": [
+        "Carduelis carduelis"
       ]
     },
     {
@@ -85,8 +91,8 @@
       "speciesId": "sp038",
       "role": "reference",
       "soundType": "song",
-      "search": "Spinus spinus song",
-      "pick": 2,
+      "search": "\"Spinus spinus\" song",
+      "pick": 3,
       "excludeAuthors": [
         "Vladimir Yu. Arkhipov, Arkhivov",
         "Benoît Van Hecke"
@@ -97,6 +103,10 @@
         "File:Carduelis spinus.ogg",
         "File:Spinus spinus - Eurasian Siskin XC539301.mp3",
         "File:Carduelis cannabina singing.flac"
+      ],
+      "sciNames": [
+        "Spinus spinus",
+        "Carduelis spinus"
       ]
     },
     {
@@ -104,8 +114,8 @@
       "speciesId": "sp038",
       "role": "reference",
       "soundType": "call",
-      "search": "Spinus spinus call",
-      "pick": 2,
+      "search": "\"Spinus spinus\" call",
+      "pick": 3,
       "excludeAuthors": [
         "Vladimir Yu. Arkhipov, Arkhivov",
         "Benoît Van Hecke"
@@ -116,6 +126,10 @@
         "File:Carduelis spinus.ogg",
         "File:Spinus spinus - Eurasian Siskin XC539301.mp3",
         "File:Carduelis cannabina singing.flac"
+      ],
+      "sciNames": [
+        "Spinus spinus",
+        "Carduelis spinus"
       ]
     },
     {
@@ -123,25 +137,7 @@
       "speciesId": "sp039",
       "role": "reference",
       "soundType": "song",
-      "search": "Linaria cannabina song",
-      "pick": 2,
-      "excludeAuthors": [
-        "Nefronus"
-      ],
-      "excludeTitles": [
-        "File:Carduelis carduelis - European Goldfinch XC489911.mp3",
-        "File:Carduelis carduelis - European Goldfinch XC503634.mp3",
-        "File:Carduelis spinus.ogg",
-        "File:Spinus spinus - Eurasian Siskin XC539301.mp3",
-        "File:Carduelis cannabina singing.flac"
-      ]
-    },
-    {
-      "id": "sp039_call_ref",
-      "speciesId": "sp039",
-      "role": "reference",
-      "soundType": "call",
-      "search": "Linaria cannabina call",
+      "search": "\"Linaria cannabina\" song",
       "pick": 3,
       "excludeAuthors": [
         "Nefronus"
@@ -152,6 +148,34 @@
         "File:Carduelis spinus.ogg",
         "File:Spinus spinus - Eurasian Siskin XC539301.mp3",
         "File:Carduelis cannabina singing.flac"
+      ],
+      "sciNames": [
+        "Linaria cannabina",
+        "Carduelis cannabina",
+        "Acanthis cannabina"
+      ]
+    },
+    {
+      "id": "sp039_call_ref",
+      "speciesId": "sp039",
+      "role": "reference",
+      "soundType": "call",
+      "search": "\"Linaria cannabina\" call",
+      "pick": 3,
+      "excludeAuthors": [
+        "Nefronus"
+      ],
+      "excludeTitles": [
+        "File:Carduelis carduelis - European Goldfinch XC489911.mp3",
+        "File:Carduelis carduelis - European Goldfinch XC503634.mp3",
+        "File:Carduelis spinus.ogg",
+        "File:Spinus spinus - Eurasian Siskin XC539301.mp3",
+        "File:Carduelis cannabina singing.flac"
+      ],
+      "sciNames": [
+        "Linaria cannabina",
+        "Carduelis cannabina",
+        "Acanthis cannabina"
       ]
     }
   ]

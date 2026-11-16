@@ -25,3 +25,13 @@ silent = ac.judge(ac.features(0.001 * rng.standard_normal(ac.SR * 10).astype(np.
 noref = ac.judge(A(9), {"spB": refs["spB"]}, "spA"); assert not noref["consistent"] and "eigen soort" in noref["reason"]
 alone = ac.judge(A(9), {"spA": refs["spA"]}, "spA"); assert not alone["consistent"] and "verwarringssoort" in alone["reason"]
 print("AUDIO CHECK PASS: own species accepted; wrong species, noisy, silent, missing reference and missing confuser refused")
+
+# Reference selection: exact species and sound type only
+ok_ref = {"title": "File:Spinus spinus - Eurasian Siskin XC1.mp3", "categories": [], "description": "Common name: Eurasian Siskin Type: song"}
+assert ac.reference_ok(ok_ref, ["Spinus spinus", "Carduelis spinus"], "song")
+assert not ac.reference_ok({**ok_ref, "title": "File:Spinus spinescens - Andean Siskin XC2.mp3"}, ["Spinus spinus"], "song")
+assert not ac.reference_ok({**ok_ref, "title": "File:Bird Call - Muro, Spain.mp3"}, ["Linaria cannabina"], "call")
+assert not ac.reference_ok(ok_ref, ["Spinus spinus"], "call"), "song file must not serve as call reference"
+assert not ac.reference_ok({**ok_ref, "description": "Type: call, song"}, ["Spinus spinus"], "song"), "mixed type refused"
+assert ac.reference_ok({**ok_ref, "title": "File:Carduelis spinus.ogg", "description": "Song of Eurasian Siskin"}, ["Spinus spinus", "Carduelis spinus"], "song")
+print("AUDIO REFERENCE SELECTION PASS: related species, unidentified file, wrong and mixed sound type refused")
