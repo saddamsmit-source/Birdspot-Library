@@ -1,0 +1,64 @@
+{
+  "queries": [
+    {
+      "id": "sp056_flight",
+      "speciesId": "sp056",
+      "role": "flight",
+      "kind": "image",
+      "search": "Phylloscopus collybita flight",
+      "limit": 20,
+      "keep": 6,
+      "thumb": 800
+    },
+    {
+      "id": "sp056_juv",
+      "speciesId": "sp056",
+      "role": "juv",
+      "kind": "image",
+      "search": "Phylloscopus collybita juvenile",
+      "limit": 20,
+      "keep": 6,
+      "thumb": 800
+    },
+    {
+      "id": "sp057_flight",
+      "speciesId": "sp057",
+      "role": "flight",
+      "kind": "image",
+      "search": "Phylloscopus trochilus flight",
+      "limit": 20,
+      "keep": 6,
+      "thumb": 800
+    },
+    {
+      "id": "sp057_juv",
+      "speciesId": "sp057",
+      "role": "juv",
+      "kind": "image",
+      "search": "Phylloscopus trochilus juvenile",
+      "limit": 20,
+      "keep": 6,
+      "thumb": 800
+    },
+    {
+      "id": "sp058_flight",
+      "speciesId": "sp058",
+      "role": "flight",
+      "kind": "image",
+      "search": "Phylloscopus sibilatrix flight",
+      "limit": 20,
+      "keep": 6,
+      "thumb": 800
+    },
+    {
+      "id": "sp058_juv",
+      "speciesId": "sp058",
+      "role": "juv",
+      "kind": "image",
+      "search": "Phylloscopus sibilatrix juvenile",
+      "limit": 20,
+      "keep": 6,
+      "thumb": 800
+    }
+  ]
+}

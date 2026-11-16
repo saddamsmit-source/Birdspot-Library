@@ -65,6 +65,21 @@ def compare(src_img, local_img) -> dict:
     return {"mode": "crop", "r": round(-best[0], 3), "scale": best[1], "offset": [round(best[2], 3), round(best[3], 3)]}
 
 
+def audio_record(e: dict, info: dict | None, norm) -> dict:
+    """F3-R16: alleen herkomst en rechten van een gepubliceerde opname (bronlabel). Geen soort- of
+    geluidstypebewijs: audioprotocol v0.2 laat dit hoogstens 'alleen bronlabel' zijn; nooit sameShot/VERIFIED."""
+    rec = {k: e.get(k) for k in ("speciesId", "audio", "title", "author", "license")}
+    rec["kind"] = "audio"
+    if not info:
+        rec["error"] = "niet gevonden op Commons"
+        return rec
+    rec["commons"] = {k: info.get(k) for k in ("page", "sha1", "license", "author", "duration", "mime")}
+    rec["rightsMatch"] = (norm(info.get("author", "")) == norm(e.get("author", ""))
+                          and norm(info.get("license", "")) == norm(e.get("license", "")))
+    rec["evidenceCeiling"] = "bronlabel en rechten; geen soortverificatie"
+    return rec
+
+
 def run(manifest: Path, out: Path) -> None:
     sys.path.insert(0, str(Path(__file__).parent))
     import commons_intake as ci
@@ -77,6 +92,9 @@ def run(manifest: Path, out: Path) -> None:
         infos.update(ci.imageinfo(titles[k:k + 20], thumb=800))
     report = {"generated": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "rule": {"sameMinR": SAME_MIN_R}, "items": []}
     for e in spec["items"]:
+        if e.get("kind") == "audio":
+            report["items"].append(audio_record(e, infos.get(e["title"]), ci.norm_name))
+            continue
         rec = {k: e.get(k) for k in ("speciesId", "image", "title", "author", "license")}
         local = Image.open(ROOT / e["image"].lstrip("/"))
         rec["localSize"] = list(local.size)
