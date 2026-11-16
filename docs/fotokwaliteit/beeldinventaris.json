@@ -898,11 +898,11 @@
     "sp044 GUIDE_POSES[0]"
    ],
    "sha1": "d7acdd5d10aabbc4bbd4dd98cf9dc104bd9395a0",
-   "class": "vlucht",
-   "airborne": true,
+   "class": "landen",
+   "airborne": false,
    "source": "vluchtcontrole",
-   "decision": "goedgekeurd",
-   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+   "decision": "uit-rol",
+   "note": "Twee Ringmussen in een luchtgevecht met poten naar voren; geen vrij vliegende vogel met bruikbaar vluchtsilhouet. Uit de vluchtrol (F3-R12, strikte vrije-vluchtregel §3.3)."
   },
   "/assets/species/plumage/sp045-adult_f.webp": {
    "refs": [
@@ -5121,6 +5121,17 @@
    "source": "vluchtcontrole",
    "decision": "voorwaardelijk",
    "note": "Vrij in de lucht, poten omlaag; sterke HDR-kleurzweem. Voorlopig."
+  },
+  "/assets/species/plumage/sp044-flight-free.webp": {
+   "refs": [
+    "sp044 GUIDE_POSES[1]"
+   ],
+   "sha1": "b79d29833930cca4821984435643c1c1d24e06cb",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, geen poten of ondergrond zichtbaar."
   }
  }
 }

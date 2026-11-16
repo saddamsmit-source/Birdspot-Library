@@ -7768,9 +7768,9 @@ export const GUIDE_POSES = Object.freeze({
   ],
   "sp044": [
     {
-      "label": "In vlucht",
-      "flight": true,
-      "note": "Let op de roodbruine kruin en de afzonderlijke donkere wangvlek.",
+      "label": "Twee Ringmussen in een luchtgevecht",
+      "flight": false,
+      "note": "Kruin en wangvlek van beide vogels zichtbaar; geen vluchtbeeld.",
       "file": "Waltz (31982909).jpeg",
       "nl": "Ringmus",
       "latin": "Passer montanus",
@@ -7787,7 +7787,7 @@ export const GUIDE_POSES = Object.freeze({
       "width": 1400,
       "height": 961,
       "image": "/assets/species/plumage/sp044-flight.webp",
-      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+      "flightReview": "uit-rol 2026-11-16: Twee Ringmussen in een luchtgevecht met poten naar voren; geen vrij vliegende vogel met bruikbaar vluchtsilhouet. Uit de vluchtrol (F3-R12, strikte vrije-vluchtregel §3.3). (eerder: goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.)"
     },
     {
       "nl": "Ringmus",
@@ -7811,7 +7811,8 @@ export const GUIDE_POSES = Object.freeze({
       "image": "/assets/species/plumage/sp044-flight-free.webp",
       "width": 1400,
       "height": 1314,
-      "modifications": "Uitsnede rond de vogel (fracties 0.36, 0.12, 0.90, 0.88), verkleind tot max. 1400 px en omgezet naar WebP zonder EXIF/GPS/XMP"
+      "modifications": "Uitsnede rond de vogel (fracties 0.36, 0.12, 0.90, 0.88), verkleind tot max. 1400 px en omgezet naar WebP zonder EXIF/GPS/XMP",
+      "flightReview": "goedgekeurd 2026-11-16: vrij in de lucht, geen poten of ondergrond zichtbaar; kruin en wangvlek herkenbaar (F3-R12)."
     }
   ],
   "sp045": [
@@ -7822,7 +7823,7 @@ export const GUIDE_POSES = Object.freeze({
       "file": "NZ7 6931 (51844641169).jpg",
       "nl": "Merel",
       "latin": "Turdus merula",
-      "author": "Bengt Nyman",
+      "author": "Bengt Nyman from Vaxholm, Sweden",
       "license": "CC BY-SA 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
       "source": "https://commons.wikimedia.org/wiki/File:NZ7_6931_(51844641169).jpg",

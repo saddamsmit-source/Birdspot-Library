@@ -14,8 +14,8 @@ Beoordeeld volgens `docs/BIRDSPOT_KWALITEITSNORM.md` (biometrie §1, herkenning 
 | 4a | Visueel VERIFIED (beeld per foto) | 98 van 101 |
 | 4b | Inhoud (kennisprofiel) VERIFIED | 68 van 101 — alle profielen hebben nog open punten |
 | 4c | Onafhankelijk beoordeeld (ChatGPT) | 0 — NOT TESTED |
-| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 162; plus collectiebrede vluchtcontrole: 17 uit de vluchtrol, 11 gearchiveerd |
-| 6 | Afgekeurde vluchtfoto's | 28 (tabel hieronder) |
+| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 163; plus collectiebrede vluchtcontrole: 18 uit de vluchtrol, 11 gearchiveerd |
+| 6 | Afgekeurde vluchtfoto's | 29 (tabel hieronder) |
 | 7 | Ontbrekende foto-/kennisonderdelen | 61 fotoposities in gecontroleerde soorten; 39 fotosoorten zonder kennisprofiel |
 | 8 | Kritische kenmerken niet doorslaggevend onderbouwd | 135 (tabel hieronder) |
 | 9 | Open bron-/licentieproblemen | 4 in gecontroleerde soorten; collectiebreed blijft het eerder gemelde punt '22 afbeeldingen buiten de bronaudit' open |
@@ -1218,9 +1218,10 @@ Batch M7 · 2026-11-12 · SHA `38e3b3c42662dc49be8b769fd9f82a8dde65cad7` · tech
 |---|---|---|---|---|---|---|---|
 | `sp044.webp` | Hoofdfoto (Volwassen) | Ringmus in zijaanzicht met bruine kruin, donkere wangvlek en lichte nekrand. | Volwassen veldkleed. Geslacht onbekend. | Scherp zijaanzicht met de volledige vogel. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Jakub Hałun |
 | `sp044-juv.webp` | Verenkleed (Juveniel) | Jonge Ringmus op een hek met een minder contrastrijke koptekening. | Fotograaf en waarnemingsannotatie bevestigen juveniel. Geslacht onbekend. | Kop en vleugeltekening zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Uitsnede rond de volledige vogel. Omgezet naar WebP zonder EXIF, GPS of XMP), CC BY 4.0 · Codrin Bucur |
-| `sp044-flight.webp` | In vlucht | Twee Ringmussen in vrije vlucht. Wangvlek en kastanjebruine kruin zijn zichtbaar. | Geslacht en leeftijd niet gelabeld. | Goed herkenbare koptekening en vleugels; twee vogels in beeld. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Galina Jacyna |
+| `sp044-flight.webp` | Overige herkenningsfoto's (luchtgevecht; niet echte vrije vlucht) | Twee Ringmussen in een luchtgevecht met poten naar voren; kruin en wangvlek zichtbaar. | Geslacht en leeftijd niet gelabeld. | Scherp genoeg voor kopkenmerken; geen bruikbaar vrij vluchtsilhouet. | uit-rol | landen · uit-rol | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Galina Jacyna |
+| `sp044-flight-free.webp` | In vlucht | Ringmus vrij in de lucht van achteren, vleugels en staart gespreid; kastanjebruine kruin en zwarte wangvlek. | Geslachten gelijk; leeftijd niet vastgesteld. | Scherp, egale achtergrond, geen poten of ondergrond zichtbaar. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 16-11-2026: zelfde opname (Commons-origineel met vastgepinde SHA-1 in de intake-workflow geconverteerd met geregistreerde uitsnede; lokale WebP vergeleken met de 1600 px-voorvertoning in dezelfde uitsnede (Pearson r = 1.000).), CC BY-SA 4.0 · Mildeep |
 
-- **Correcties:** Juvenielenfoto en kennisprofiel toegevoegd. De kleed- en vluchtvergelijking met Huismus gecontroleerd.
+- **Correcties:** Juvenielenfoto en kennisprofiel toegevoegd. De kleed- en vluchtvergelijking met Huismus gecontroleerd.; F3-R12 (2026-11-16): luchtgevecht-foto uit de vluchtrol naar Overige; echte vrije-vluchtfoto (Mildeep, CC BY-SA 4.0) via de Commons-intake toegevoegd. Alle getoonde foto's tegen het bronbeeld gecontroleerd (origcheck).
 - **Ontbreekt:** niets
 - **Verbeterwensen (eigenaar beoordeelt later):** Een scherpe vrije-vluchtfoto met één Ringmus in beeld heeft de voorkeur.
 - **Geslacht:** Mannetje en vrouwtje hebben gelijk veldkleed. Leeftijd is alleen gelabeld als die wordt ondersteund door de bron.
@@ -2041,6 +2042,7 @@ Batch M6 · 2026-11-12 · SHA `38e3b3c42662dc49be8b769fd9f82a8dde65cad7` · tech
 | sp034 Staartmees | `sp034-flight.webp` | archief | opvliegen | Duikt van een tak weg; onscherp en ongebruikelijke houding. |
 | sp038 Sijs | `sp038-flight.webp` | uit-rol | landen | Fotograaf beschrijft 'comes in to land'; beeld toont geheven vleugels en naar voren gestrekte poten met gespreide tenen: neerstrijken, geen vrije vlucht. |
 | sp042 Roodmus | `sp042-flight.webp` | archief | opvliegen | Sterk onscherp bij een tak; vermoedelijk afzetten. |
+| sp044 Ringmus | `sp044-flight.webp` | uit-rol | landen | Twee Ringmussen in een luchtgevecht met poten naar voren; geen vrij vliegende vogel met bruikbaar vluchtsilhouet. Uit de vluchtrol (F3-R12, strikte vrije-vluchtregel §3.3). |
 | sp045 Merel | `sp045-flight.webp` | uit-rol | landen | Poten naar voren gestrekt: landingshouding. |
 | sp048 Koperwiek | `sp048-flight.webp` | uit-rol | opvliegen | Tussen planten met half geopende vleugels; niet vrij in de lucht. |
 | sp049 Grote Lijster | `sp049-flight.webp` | archief | vlucht | FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): in vlucht ja, maar sterk bewegingsonscherp: vleugeltekening niet bruikbaar voor determinatie. Duidelijk ongeschikt als gidsbeeld; uit de kaart, herkomst en bestand bewaard. Vluchtpositie ontbreekt. |
