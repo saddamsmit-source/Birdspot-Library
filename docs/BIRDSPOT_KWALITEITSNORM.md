@@ -190,6 +190,25 @@ Deze regel breidt de bestaande foto's en herkomstverplichtingen uit; zij vervang
 
 ---
 
+### 3.5 Fotoprioriteit per vogelgroep — DRAFT v1.8 (eigenaarbesluit 16-11-2026; QA en vrijgave open)
+
+> **Status:** DRAFT. Tot vrijgave geldt v1.7. Deze paragraaf verduidelijkt §3.3 en vervangt geen enkele bestaande regel; §§2, 3.1–3.4 en 4 blijven volledig van kracht.
+
+**Kleine zangvogels en andere kleine soorten — volgorde van inzet:**
+1. Eén uitstekende, scherpe, herkenbare en individueel geverifieerde hoofdfoto.
+2. Rust-/kleedfoto's van mannetje en vrouwtje waar het geslacht visueel én bronmatig betrouwbaar vast te stellen is. Bij nauwelijks zichtbaar dimorfisme geen geforceerde sekselabels: één neutrale foto "Volwassen" plus uitleg welke kenmerken wél betrouwbaar zijn.
+3. Symmetrische fotovergelijkingen met gelijkende soorten; waar betrouwbaar mannetje naast mannetje en vrouwtje naast vrouwtje, zelfde houding en liefst zelfde hoek. Alleen complete, individueel geverifieerde paren (§3.1, §3.4); tekst blijft bij een ontbrekend paar.
+4. Echte vrije-vluchtfoto alleen als die aantoonbaar bruikbaar en beschikbaar is. Uitdrukkelijk **geen hoofdprioriteit** en geen uitgebreide zoektocht. Landen, opstijgen en vleugelstrekken tellen nooit als vrije vlucht. Een ontbrekende vluchtfoto blijft open of uitgesteld en is geen batch-HOLD.
+5. Juvenielenfoto **uitsluitend** als soort én jeugdige leeftijd overtuigend en individueel geverifieerd zijn. Een fotograaflabel of bestandsnaam alleen is onvoldoende. Anders weglaten, zonder batch-HOLD.
+
+**Grotere vogels:** 1) goede hoofdfoto; 2) mannetje/vrouwtje waar betrouwbaar onderscheidbaar; 3) duidelijke echte vrije-vluchtfoto met zichtbare diagnostische kenmerken waar bruikbaar; 4) passende vergelijkingen, ook in vlucht waar waardevol; 5) juveniel alleen bij voldoende onafhankelijk bewijs. Ontbrekende vlucht- en juvenielbeelden zijn ook hier geen automatische batch-HOLD; registreer het open punt en de relevantie.
+
+**Ongewijzigd voor alle vogels:** de zes controles van §3.2 per geplaatste foto; originelen tegen appmedia; geen duplicaten in de eigen hoofdrollen en geen onnodige vervanging van bewezen goede foto's; de juvenielenuitzondering van §3.3 blijft beperkt tot niet-diagnostische poten/tenen; dubbelgangers volgens §3.4; biometrie volgens §1; audio volgens het audioprotocol (automatisch hooguit PARTIALLY TESTED); open posities tellen nooit stil als gecontroleerd; "content reviewed" ≠ F3 FULL PASS ≠ release-PASS; geen onnodige zichtbare bronlijsten (§2.2).
+
+**Registratie per soort:** welke herkenningsposities aanwezig zijn, wat bronmatig klopt en wat later nog gewenst is (bestaand F3-register en openpuntenregister; geen nieuw register).
+
+---
+
 ## 4. Statussen en presentatie
 
 - Gebruik alleen de statussen VERIFIED, PARTIALLY TESTED, NOT TESTED en BLOCKED. Gebruik nooit een PASS die niet echt gehaald is.
@@ -218,3 +237,4 @@ Deze regel breidt de bestaande foto's en herkomstverplichtingen uit; zij vervang
 | 1.5 | 14-11-2026 | Eigenaar bepaalt dat niet-verplichte bronvermeldingen verdwijnen uit de gebruikersweergave, zonder achterliggende broncontroles te verwijderen. Verplichte foto-, audio- en data-attributies blijven intact en toegankelijk. |
 | 1.6 | 15-11-2026 | Eigenaar laat onvolledige fotoparen en lege "Nog geen passende foto"-vakken **bij alle soorten** uit "Lijkt op" verdwijnen. Alleen complete twee-fotopanelen tonen; brondata, openpunten, eerdere vlucht-/leeftijdsafkeuringen en werkende fotovergelijkingen behouden. |
 | 1.7 | 16-11-2026 | Eigenaar stelt voor alle lookalike-soorten bewijsbare foto- **én** tekstverschillen verplicht; sekse-/leeftijdsspecifiek, in beide richtingen, onvolledige fotoparen verborgen maar herkenningstekst zichtbaar. Register + geautomatiseerde QA en bron-/rechten- en fysieke bewijsgrens toegevoegd (§3.4). |
+| 1.8 DRAFT | 16-11-2026 | Eigenaarbesluit fotoprioriteit per vogelgroep (§3.5): kleine soorten eerst hoofdfoto, sekse-/kleedfoto's en vergelijkingen; vrije vlucht en juveniel alleen bij bewezen bruikbaarheid, zonder batch-HOLD. Additief; alle eerdere regels ongewijzigd. **Nog niet vrijgegeven; v1.7 geldt.** |
