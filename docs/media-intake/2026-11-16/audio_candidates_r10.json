@@ -1,0 +1,79 @@
+{
+  "date": "2026-11-16",
+  "status": "CANDIDATES — NIET GEPUBLICEERD. Alleen importeren na menselijke luistercontrole (soort, geluidsoort, kwaliteit); de intake weigert audio zonder 'listened'-blok.",
+  "source": "docs/media-intake/2026-11-16/candidates.json",
+  "candidates": [
+    {
+      "speciesId": "sp037",
+      "intendedType": "song",
+      "title": "File:Carduelis carduelis - European Goldfinch XC489911.mp3",
+      "page": "https://commons.wikimedia.org/wiki/File%3ACarduelis_carduelis_-_European_Goldfinch_XC489911.mp3",
+      "sha1": "a5d7a9692724e39f81d410556e71f69a30e814e7",
+      "license": "CC BY-SA 4.0",
+      "author": "Hannu Varkki",
+      "durationSeconds": 42.9,
+      "metadataSays": ":High-pass filtered. bird-seen:yes playback-used:no Common name: European Goldfinch Type: song Genus: Carduelis Species: carduelis Location: Pornaistenniemi, Va",
+      "listened": null,
+      "status": "CANDIDATE_UNHEARD"
+    },
+    {
+      "speciesId": "sp037",
+      "intendedType": "call",
+      "title": "File:Carduelis carduelis - European Goldfinch XC503634.mp3",
+      "page": "https://commons.wikimedia.org/wiki/File%3ACarduelis_carduelis_-_European_Goldfinch_XC503634.mp3",
+      "sha1": "0abe21cddde7faa5df935627c494e35536dbcb49",
+      "license": "CC BY-SA 4.0",
+      "author": "Jochem verweij",
+      "durationSeconds": 8.0,
+      "metadataSays": ":several small calls stuck together bird-seen:yes Common name: European Goldfinch Type: life stage uncertain, song Genus: Carduelis Species: carduelis Location:",
+      "listened": null,
+      "status": "CANDIDATE_UNHEARD"
+    },
+    {
+      "speciesId": "sp038",
+      "intendedType": "song",
+      "title": "File:Carduelis spinus.ogg",
+      "page": "https://commons.wikimedia.org/wiki/File%3ACarduelis_spinus.ogg",
+      "sha1": "9bb8761532bd75bf0e4a680ea206ec87f37388cd",
+      "license": "CC BY-SA 3.0",
+      "author": "Vladimir Yu. Arkhipov, Arkhivov",
+      "durationSeconds": 10,
+      "metadataSays": "Song of Eurasian Siskin, Bryansk region, Russia",
+      "listened": null,
+      "status": "CANDIDATE_UNHEARD"
+    },
+    {
+      "speciesId": "sp038",
+      "intendedType": "call",
+      "title": "File:Spinus spinus - Eurasian Siskin XC539301.mp3",
+      "page": "https://commons.wikimedia.org/wiki/File%3ASpinus_spinus_-_Eurasian_Siskin_XC539301.mp3",
+      "sha1": "c5c3c98691c0f46a74c75ad006a335659ea8062d",
+      "license": "CC BY-SA 4.0",
+      "author": "Benoît Van Hecke",
+      "durationSeconds": 15.8,
+      "metadataSays": ":Zoom SGH-6 + Zoom F1 Common name: Eurasian Siskin Type: call Genus: Spinus Species: spinus Location: Béruges, Vienne, Nouvelle-Aquitaine Country: France Elevat",
+      "listened": null,
+      "status": "CANDIDATE_UNHEARD"
+    },
+    {
+      "speciesId": "sp039",
+      "intendedType": "song",
+      "title": "File:Carduelis cannabina singing.flac",
+      "page": "https://commons.wikimedia.org/wiki/File%3ACarduelis_cannabina_singing.flac",
+      "sha1": "d18834c4c563aae949c71daa6036a4e9932d86a7",
+      "license": "CC BY-SA 4.0",
+      "author": "Nefronus",
+      "durationSeconds": 8.5,
+      "metadataSays": "Carduelis cannabina singing",
+      "listened": null,
+      "status": "CANDIDATE_UNHEARD"
+    }
+  ],
+  "missing": [
+    {
+      "speciesId": "sp039",
+      "type": "call",
+      "reason": "Geen Commons-kandidaat met vrije licentie gevonden op 16-11-2026"
+    }
+  ]
+}
