@@ -1,7 +1,7 @@
 {
-  "mode": "audiocheck",
-  "manifest": "tools/media/audiocheck_2026-11-16_r12b.json",
-  "out": "docs/media-intake/2026-11-16/audiocheck-r12b",
-  "requestedBy": "Claude (writerclaim PR #273)",
-  "nonce": 16
+  "mode": "origcheck",
+  "manifest": "tools/media/origcheck_2026-11-16_r13.json",
+  "out": "docs/media-intake/2026-11-16/origcheck-r13",
+  "requestedBy": "Claude (writerclaim F3-R13)",
+  "nonce": 17
 }
