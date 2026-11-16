@@ -7570,6 +7570,30 @@ export const GUIDE_POSES = Object.freeze({
       "height": 800,
       "image": "/assets/species/plumage/sp037-flight.webp",
       "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+    },
+    {
+      "nl": "Putter",
+      "latin": "Carduelis carduelis",
+      "label": "In vlucht",
+      "flight": true,
+      "alt": "Volwassen Putter in vrije vlucht van opzij: rood gezicht, zwart-witte kop en brede gele vleugelband.",
+      "note": "Vrije vlucht: let op de brede gele band op de zwarte vleugel en het rode gezicht.",
+      "visualCheck": "Putter los in de lucht met uitgeslagen vleugels en ingetrokken poten tegen een egale achtergrond; rood gezicht, zwart-witte kop en brede gele vleugelband zichtbaar.",
+      "verification": "Commons-titel en -beschrijving noemen een Putter (Distelfink); zichtbare kenmerken passen. Geen geslachtslabel: rood masker overlapt tussen geslachten.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/putter",
+      "file": "Ist es der Niedernhaller Distelfink der mir da vor die Kamera geflogen ist ??? 01.jpg",
+      "author": "Holger Uwe Schmitt",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ist_es_der_Niedernhaller_Distelfink_der_mir_da_vor_die_Kamera_geflogen_ist_%3F%3F%3F_01.jpg",
+      "showSourceLink": true,
+      "sourceSha1": "1c5eb195f1df8481b38c986f20fe55b87a01f887",
+      "reviewed": "2026-11-16",
+      "intake": "tools/media/commons_intake.py (GitHub Actions)",
+      "image": "/assets/species/plumage/sp037-flight-free.webp",
+      "width": 1400,
+      "height": 1077,
+      "modifications": "Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP"
     }
   ],
   "sp038": [
