@@ -504,4 +504,11 @@ for (const [id, partnerId] of [['sp035','sp036'],['sp036','sp035']]) {
 }
 assert.match(recognitionPanel(species.get('sp035')), /Twee lichte.*vleugelstrepen|twee.*vleugelstrepen/i);
 assert.match(recognitionPanel(species.get('sp036')), /gele.*vleugel|geel.*vleugel/i);
+assert.match(KNOWLEDGE.sp035.caution.text, /Groenling.*vleugel/i,
+  'Female Vink knowledge panel must name the actual confusing species and distinguishing wing');
+assert.match(KNOWLEDGE.sp036.caution.text, /Vink.*vleugel/i,
+  'Female Groenling knowledge panel must name the confusing species');
+assert.ok(KNOWLEDGE.sp035.similar.some(x=>x.id==='sp036') &&
+          KNOWLEDGE.sp036.similar.some(x=>x.id==='sp035'),
+  'Bi-directional confusability must persist in the canonical knowledge profiles');
 console.log('F3-R09: Vink/Groenling adult-female photo pair, 3 traits, rights metadata and both guide directions');
