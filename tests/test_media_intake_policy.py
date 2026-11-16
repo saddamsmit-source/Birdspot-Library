@@ -65,3 +65,7 @@ assert intake.crop_box((1000, 800), None) is None
 for bad in ([0.5, 0.1, 0.4, 0.9], [0, 0, 0.1, 1], [-0.1, 0, 1, 1], [0, 0, 1, 1.2]):
     expect_fail(lambda b=bad: intake.crop_box((1000, 800), b), "Ongeldige uitsnede")
 print("MEDIA INTAKE CROP PASS: valid crop fractions applied; inverted, tiny and out-of-image crops refused")
+assert intake.https_license_url("http://creativecommons.org/publicdomain/zero/1.0/deed.en") == "https://creativecommons.org/publicdomain/zero/1.0/deed.en"
+assert intake.https_license_url("https://creativecommons.org/licenses/by/4.0") == "https://creativecommons.org/licenses/by/4.0"
+assert intake.https_license_url("http://example.org/x") == "http://example.org/x", "only creativecommons.org is rewritten"
+print("MEDIA INTAKE LICENSE-URL PASS: creativecommons http normalised to https")

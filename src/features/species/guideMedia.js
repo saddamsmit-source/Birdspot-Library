@@ -58,7 +58,9 @@ export const GUIDE_AUDIO = Object.freeze({
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Turdus_merula_-_Common_Blackbird_XC26605.mp3",
-      "modifications": "Fragment, omgezet naar MP3 (mono)"
+      "modifications": "Fragment, omgezet naar MP3 (mono)",
+      "verification": "VERIFIED (triangulatie 16-11-2026: bronlabel XC 'Type: song', akoestische referentievergelijking marge 0,35 tegen Zanglijster/Spreeuw, visuele spectrogramcontrole; niet door mens beluisterd)",
+      "verificationReport": "docs/media-intake/2026-11-16/audiocheck-r12/audiocheck.json#sp045_song_live"
     },
     {
       "file": "Blackbird (Turdus merula) alarm calls - Oslo, Norway 2020-11-13.mp3",
@@ -69,7 +71,9 @@ export const GUIDE_AUDIO = Object.freeze({
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Blackbird_(Turdus_merula)_alarm_calls_-_Oslo,_Norway_2020-11-13.mp3",
-      "modifications": "Omgezet naar MP3 (mono)"
+      "modifications": "Omgezet naar MP3 (mono)",
+      "verification": "NOT TESTED (audiocheck 16-11-2026: marge -0,03 tegen Spreeuw; referenties van Merel-roepen te gevarieerd). Bestaande opname behouden, niet als geverifieerd gemarkeerd.",
+      "verificationReport": "docs/media-intake/2026-11-16/audiocheck-r12/audiocheck.json#sp045_call_live"
     }
   ],
   "sp035": [
@@ -1887,7 +1891,7 @@ export const GUIDE_AUDIO = Object.freeze({
       "file": "Joseph Sardin - Passer domesticus tschilp call.oga",
       "author": "Joseph Sardin",
       "license": "CC0",
-      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
       "source": "https://commons.wikimedia.org/wiki/File:Joseph_Sardin_-_Passer_domesticus_tschilp_call.oga",
       "showSourceLink": true,
       "sourceSha1": "46ee39de7b769fb79f6b09532dfba088e6a299eb",

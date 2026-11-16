@@ -135,6 +135,11 @@ def clean(value: str | None, limit: int = 400) -> str:
     return re.sub(r"\s+", " ", text).strip()[:limit]
 
 
+def https_license_url(url: str) -> str:
+    """Commons levert soms http://creativecommons.org/...; het register eist https (zelfde document)."""
+    return re.sub(r"^http://(creativecommons\.org/)", r"https://\1", (url or "").strip())
+
+
 def license_ok(short: str) -> bool:
     short = (short or "").strip()
     return bool(ALLOWED.match(short)) and not FORBIDDEN.search(short)
@@ -159,7 +164,7 @@ def imageinfo(titles: list[str], thumb: int | None = None) -> dict:
             "url": ii["url"], "thumb": ii.get("thumburl"), "sha1": ii["sha1"], "size": ii["size"],
             "width": ii.get("width"), "height": ii.get("height"), "mime": ii["mime"],
             "duration": ii.get("duration"),
-            "license": clean(m("LicenseShortName"), 60), "licenseUrl": clean(m("LicenseUrl"), 200),
+            "license": clean(m("LicenseShortName"), 60), "licenseUrl": https_license_url(clean(m("LicenseUrl"), 200)),
             "author": clean(m("Artist"), 160), "credit": clean(m("Credit"), 200),
             "description": clean(m("ImageDescription")), "date": clean(m("DateTimeOriginal"), 40),
             "categories": [c["title"].removeprefix("Category:") for c in page.get("categories", [])][:15],
