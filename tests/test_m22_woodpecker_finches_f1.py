@@ -55,7 +55,9 @@ def load(path):
 
 def validate_f1_policy():
     norm = (ROOT / "docs/BIRDSPOT_KWALITEITSNORM.md").read_text(encoding="utf-8")
-    assert "| Versie | 1.6 · 15-11-2026 |" in norm
+    assert "| Versie | 1.7 · 16-11-2026 |" in norm, "Latest lookalike rule must remain current"
+    assert "| 1.6 | 15-11-2026 |" in norm, "Historical v1.6 must be preserved"
+    assert "### 3.4 Kritieke dubbelgangers" in norm, "Photo-and-text rule must remain present"
     assert "| 1.5 | 14-11-2026 |" in norm, "The previous 1.5 decision must remain in history"
     assert "Eigenaarbesluit 15-11-2026 — alleen complete vergelijkingsfotoparen tonen" in norm, (
         "Owner global no-empty-comparison policy must be present")
