@@ -41,5 +41,6 @@ expect_fail(lambda: intake.safe_dest("/assets/species/sp037.webp", "pose"), "bui
 expect_fail(lambda: intake.safe_dest("/assets/species/plumage/new.png", "pose"), "extensie")
 expect_fail(lambda: intake.safe_dest("/assets/species/audio/new.webp", "audio"), "extensie")
 expect_fail(lambda: intake.safe_dest("/assets/species/plumage/sp039-juv.webp", "plumage"), "overschrijven")
-assert intake.safe_dest("/assets/species/plumage/sp037-flight-free.webp", "pose").name == "sp037-flight-free.webp"
+assert intake.safe_dest("/assets/species/plumage/sp999-test-not-present.webp", "pose").name == "sp999-test-not-present.webp"
+assert intake.safe_dest("/assets/species/audio/sp999-test-not-present.mp3", "audio").suffix == ".mp3"
 print("MEDIA INTAKE NEGATIVE PASS: wrong author/licence/SHA-1, missing file, unheard audio, traversal, outside dir, wrong extension, overwrite all refused")

@@ -1355,7 +1355,7 @@ export const GUIDE_COMPARISONS = [
     flight: true,
     birds: [
       {id: 'sp036', source: 'groenling', marks: 'Stevige snavel en forsere bouw. Het geel valt op langs de buitenste vleugelpennen.'},
-      {id: 'sp038', source: 'sijs', marks: 'Kleinere, fijnere snavel en een gele vleugelband. Het mannetje op de foto heeft een zwarte kruin.'},
+      {id: 'sp038', source: 'sijs', photoMissing: 'vluchtcontrole 2026-11-16: landingsfoto uit de vluchtrol (F3-R10b), geen vrije-vluchtfoto', marks: 'Kleinere, fijnere snavel en een gele vleugelband. Het mannetje op de foto heeft een zwarte kruin.'},
     ],
     tip: 'Vergelijk snavelvorm en vleugeltekening. De opnamen zijn op verschillende afstanden gemaakt.',
   },
@@ -1390,7 +1390,7 @@ export const GUIDE_COMPARISONS = [
     flight: true,
     birds: [
       {id: 'sp037', source: 'putter', marks: 'Brede gele vleugelband. Bij volwassen vogels valt ook het rode gezicht op.'},
-      {id: 'sp038', source: 'sijs', marks: 'Gele vleugelband en fijnere bouw. Het mannetje op de foto heeft een zwarte kruin.'},
+      {id: 'sp038', source: 'sijs', photoMissing: 'vluchtcontrole 2026-11-16: landingsfoto uit de vluchtrol (F3-R10b), geen vrije-vluchtfoto', marks: 'Gele vleugelband en fijnere bouw. Het mannetje op de foto heeft een zwarte kruin.'},
     ],
     tip: 'Bekijk de vleugel samen met kop en staart. Bij een juveniele Putter is het rode masker nog afwezig.',
   },

@@ -14,13 +14,13 @@ Beoordeeld volgens `docs/BIRDSPOT_KWALITEITSNORM.md` (biometrie §1, herkenning 
 | 4a | Visueel VERIFIED (beeld per foto) | 98 van 101 |
 | 4b | Inhoud (kennisprofiel) VERIFIED | 68 van 101 — alle profielen hebben nog open punten |
 | 4c | Onafhankelijk beoordeeld (ChatGPT) | 0 — NOT TESTED |
-| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 160; plus collectiebrede vluchtcontrole: 16 uit de vluchtrol, 11 gearchiveerd |
-| 6 | Afgekeurde vluchtfoto's | 27 (tabel hieronder) |
-| 7 | Ontbrekende foto-/kennisonderdelen | 60 fotoposities in gecontroleerde soorten; 39 fotosoorten zonder kennisprofiel |
+| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 162; plus collectiebrede vluchtcontrole: 17 uit de vluchtrol, 11 gearchiveerd |
+| 6 | Afgekeurde vluchtfoto's | 28 (tabel hieronder) |
+| 7 | Ontbrekende foto-/kennisonderdelen | 61 fotoposities in gecontroleerde soorten; 39 fotosoorten zonder kennisprofiel |
 | 8 | Kritische kenmerken niet doorslaggevend onderbouwd | 135 (tabel hieronder) |
 | 9 | Open bron-/licentieproblemen | 4 in gecontroleerde soorten; collectiebreed blijft het eerder gemelde punt '22 afbeeldingen buiten de bronaudit' open |
 
-Eindoordeel per gecontroleerde soort: PARTIALLY TESTED 86, VERIFIED 15.
+Eindoordeel per gecontroleerde soort: PARTIALLY TESTED 87, VERIFIED 14.
 
 ## Gecontroleerde soorten
 
@@ -1727,7 +1727,7 @@ Batch M5 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · tech
 - **Onzeker:** —
 - **Volgende actie:** Onafhankelijke review (ChatGPT)
 
-### sp037 Putter — VERIFIED
+### sp037 Putter — PARTIALLY TESTED
 
 Batch M5 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
 
@@ -1737,16 +1737,17 @@ Batch M5 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · tech
 | `sp037-adult_f.webp` | Verenkleed (Vrouwtje) | Volwassen Putter op een draad met relatief beperkt rood masker en gele vleugelband. | De oorspronkelijke bestandsnaam van de fotograaf vermeldt femmina (vrouwtje). | Het kopaanzicht is schuin van voren. Fijne geslachtskenmerken zijn minder duidelijk. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY-SA 3.0 · Francesco Canu |
 | `sp037-juv.webp` | Verenkleed (Juveniel) | Jonge Putter met grijsbruine kop, gele vleugelband en donkere borsttekening. | Fotograaf benoemt juveniel. Geslacht onbekend. | Borst en gevouwen vleugel zijn zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY 2.0 · caroline legg |
 | `sp037-flight.webp` | In vlucht | Putter vrij in de lucht met open vleugel en brede gele vleugelband. | Geslacht niet vastgesteld. | Vlieghouding en vleugeltekening duidelijk. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · Bengt Nyman from Vaxholm, Sweden |
+| `sp037-flight-free.webp` | In vlucht | Putter vrij in de lucht van opzij met half geheven vleugels, rood gezicht, zwart-witte kop en brede gele vleugelband; poten hangen omlaag. | Geslacht niet vastgesteld; rood masker overlapt tussen de geslachten. | Scherp genoeg voor vleugelband en kop, maar sterke HDR-bewerking met oranje kleurzweem. Voorlopig; vervanging met natuurlijke kleuren gewenst. | voorwaardelijk | vlucht · voorwaardelijk | VERIFIED: bronaudit 16-11-2026: zelfde opname (Commons-origineel met vastgepinde SHA-1 in de intake-workflow geconverteerd (auteur en licentie tegen Commons-metadata gecontroleerd); lokale WebP visueel en per pixel vergeleken met de Commons-miniatuur (gemiddeld verschil 0,9 tegen 62,8 voor een andere opname).), CC BY-SA 4.0 · Holger Uwe Schmitt |
 | `sp037.webp` | Overige herkenningsfoto's | Volwassen Putter op een tak met brede gele vleugelband en rood gezicht. | Volwassen kleed. Geslacht onbekend. | Aanvullend zijportret met lichte snavel. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Francis C. Franklin |
 
-- **Correcties:** Mannetje, vrouwtje en juveniel met bronvermelding toegevoegd. Vrije vlucht behouden. Vluchtvergelijking met Sijs toegevoegd.
+- **Correcties:** Mannetje, vrouwtje en juveniel met bronvermelding toegevoegd. Vrije vlucht behouden. Vluchtvergelijking met Sijs toegevoegd.; F3-R10b (2026-11-16): extra vrije-vluchtfoto (Holger Uwe Schmitt, CC BY-SA 4.0) toegevoegd via de Commons-intake; voorwaardelijk wegens sterke kleurbewerking. Bestaande vluchtfoto blijft.
 - **Ontbreekt:** niets
 - **Verbeterwensen (eigenaar beoordeelt later):** Een vrouwtjesfoto in zuiver zijaanzicht voor een directere vergelijking van kop en vleugel.
 - **Geslacht:** Geslachtslabels volgen de fotobron. Maskeromvang overlapt en is op zichzelf geen zekere bepaling.
 - **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Vleugelband en koptekening; open: —; resterende dataverschillen: 0
 - **Browser:** 390x844 Chromium 145 (Playwright) · Foto decode, exacte auditset, fotovolgorde, geen duplicaten, vluchtrol, zoom, doorklik en geslachts- en leeftijdslabels
 - **Onzeker:** —
-- **Volgende actie:** Onafhankelijke review (ChatGPT)
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
 
 ### sp038 Sijs — PARTIALLY TESTED
 
@@ -1757,16 +1758,16 @@ Batch M7 · 2026-11-12 · SHA `b86b1269b01e1de41831290a1ecd8e0113e3a3b0` · tech
 | `sp038.webp` | Hoofdfoto (Mannetje) | Mannetje Sijs met zwarte kruin en geel in vleugel en staart. | Volwassen mannetje volgens de bestaande bron. | Veldkenmerken en silhouet duidelijk zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp |
 | `sp038-adult_f.webp` | Verenkleed (Vrouwtje) | Vrouwtje Sijs op een tak, met een fijne snavel, donkere flankstrepen en geel op de gevouwen vleugel. | Volwassen vrouwtje volgens fotobron en kleed. | Scherp zijaanzicht en leesbare veldkenmerken. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.), CC BY-SA 4.0 · Charles J. Sharp |
 | `sp038-juv.webp` | Verenkleed (Juveniel) | Jonge Sijs bij water, met gestreepte kop en onderzijde en gele accenten op de vleugel. | Bron bevestigt juveniel. Geslacht onbekend. | Kop, snavel en relevante verenkleedkenmerken zijn zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.), CC BY 2.0 · Luiz Lapa |
-| `sp038-flight.webp` | In vlucht (Mannetje) | Mannetje in vlucht met zwarte kruin en gele vleugelband. | Mannetje, volgens de bestaande vluchtbron en het veldkleed. | Vrije vlucht. De vleugel is licht bewegingsonscherp. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · john.purvis |
+| `sp038-flight.webp` | Verenkleed (Mannetje; neerstrijkend, niet echte vrije vlucht) | Mannetje Sijs vlak voor de landing: vleugels geheven, poten naar voren gestrekt met gespreide tenen; zwarte kruin en gele vleugelband zichtbaar. | Mannetje, volgens de bestaande vluchtbron en het veldkleed. | Kop en vleugeltekening bruikbaar; landingshouding, dus ongeschikt als vrije-vluchtfoto. Fotograaf beschrijft 'comes in to land'. | uit-rol | landen · uit-rol | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · john.purvis |
 
-- **Correcties:** Vrouwtjes- en juvenielenfoto toegevoegd. Kennisprofiel en beeldvergelijking bijgewerkt. De bestaande vluchtfoto is herbeoordeeld.
-- **Ontbreekt:** niets
+- **Correcties:** Vrouwtjes- en juvenielenfoto toegevoegd. Kennisprofiel en beeldvergelijking bijgewerkt. De bestaande vluchtfoto is herbeoordeeld.; F3-R10b (2026-11-16): bestaande vluchtfoto hercontroleerd tegen de vrije-vluchtregel: landing (fotograafbeschrijving en naar voren gestrekte poten). Uit de vluchtrol naar Verenkleed (Mannetje); bestand en herkomst behouden. Vluchtvergelijkingen met Putter en Groenling als ontbrekend gemarkeerd.
+- **Ontbreekt:** Echte vrije-vluchtfoto (bij voorkeur mannetje, zijaanzicht): vervanging open, in F3-R10b bewust niet gekozen; niet verzonnen.
 - **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** De geslachtslabels van volwassen vogels volgen bron en zichtbaar verenkleed. Bij juvenielen is het geslacht onbekend.
 - **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Snavel, flank en vleugel; open: —; resterende dataverschillen: 0
 - **Browser:** NOT TESTED
 - **Onzeker:** —
-- **Volgende actie:** Onafhankelijke review (ChatGPT)
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
 
 ### sp035 Vink — VERIFIED
 
@@ -2038,6 +2039,7 @@ Batch M6 · 2026-11-12 · SHA `38e3b3c42662dc49be8b769fd9f82a8dde65cad7` · tech
 | sp032 Glanskop | `sp032-flight.webp` | archief | opvliegen | Zet af van een tak; onscherp, alleen silhouet. Geen bruikbare vervangende rol. |
 | sp033 Kuifmees | `sp033-flight.webp` | uit-rol | grond | Staat met de poten op de sneeuw met geheven vleugels. |
 | sp034 Staartmees | `sp034-flight.webp` | archief | opvliegen | Duikt van een tak weg; onscherp en ongebruikelijke houding. |
+| sp038 Sijs | `sp038-flight.webp` | uit-rol | landen | Fotograaf beschrijft 'comes in to land'; beeld toont geheven vleugels en naar voren gestrekte poten met gespreide tenen: neerstrijken, geen vrije vlucht. |
 | sp042 Roodmus | `sp042-flight.webp` | archief | opvliegen | Sterk onscherp bij een tak; vermoedelijk afzetten. |
 | sp045 Merel | `sp045-flight.webp` | uit-rol | landen | Poten naar voren gestrekt: landingshouding. |
 | sp048 Koperwiek | `sp048-flight.webp` | uit-rol | opvliegen | Tussen planten met half geopende vleugels; niet vrij in de lucht. |

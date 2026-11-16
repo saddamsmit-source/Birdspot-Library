@@ -360,17 +360,20 @@
           "verdict": "goedgekeurd"
         },
         "/assets/species/plumage/sp038-flight.webp": {
-          "role": "In vlucht (Mannetje)",
-          "content": "Mannetje in vlucht met zwarte kruin en gele vleugelband.",
+          "role": "Verenkleed (Mannetje; neerstrijkend, niet echte vrije vlucht)",
+          "content": "Mannetje Sijs vlak voor de landing: vleugels geheven, poten naar voren gestrekt met gespreide tenen; zwarte kruin en gele vleugelband zichtbaar.",
           "sexAge": "Mannetje, volgens de bestaande vluchtbron en het veldkleed.",
-          "quality": "Vrije vlucht. De vleugel is licht bewegingsonscherp.",
-          "verdict": "goedgekeurd"
+          "quality": "Kop en vleugeltekening bruikbaar; landingshouding, dus ongeschikt als vrije-vluchtfoto. Fotograaf beschrijft 'comes in to land'.",
+          "verdict": "uit-rol"
         }
       },
       "corrections": [
-        "Vrouwtjes- en juvenielenfoto toegevoegd. Kennisprofiel en beeldvergelijking bijgewerkt. De bestaande vluchtfoto is herbeoordeeld."
+        "Vrouwtjes- en juvenielenfoto toegevoegd. Kennisprofiel en beeldvergelijking bijgewerkt. De bestaande vluchtfoto is herbeoordeeld.",
+        "F3-R10b (2026-11-16): bestaande vluchtfoto hercontroleerd tegen de vrije-vluchtregel: landing (fotograafbeschrijving en naar voren gestrekte poten). Uit de vluchtrol naar Verenkleed (Mannetje); bestand en herkomst behouden. Vluchtvergelijkingen met Putter en Groenling als ontbrekend gemarkeerd."
       ],
-      "missing": [],
+      "missing": [
+        "Echte vrije-vluchtfoto (bij voorkeur mannetje, zijaanzicht): vervanging open, in F3-R10b bewust niet gekozen; niet verzonnen."
+      ],
       "wishes": [],
       "sexPolicy": "De geslachtslabels van volwassen vogels volgen bron en zichtbaar verenkleed. Bij juvenielen is het geslacht onbekend.",
       "uncertain": [],

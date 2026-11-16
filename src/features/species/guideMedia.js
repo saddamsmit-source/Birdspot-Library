@@ -7576,9 +7576,9 @@ export const GUIDE_POSES = Object.freeze({
       "latin": "Carduelis carduelis",
       "label": "In vlucht",
       "flight": true,
-      "alt": "Volwassen Putter in vrije vlucht van opzij: rood gezicht, zwart-witte kop en brede gele vleugelband.",
-      "note": "Vrije vlucht: let op de brede gele band op de zwarte vleugel en het rode gezicht.",
-      "visualCheck": "Putter los in de lucht met uitgeslagen vleugels en ingetrokken poten tegen een egale achtergrond; rood gezicht, zwart-witte kop en brede gele vleugelband zichtbaar.",
+      "alt": "Putter in vrije vlucht van opzij tegen een lichte lucht: rood gezicht, zwart-witte kop, brede gele vleugelband; poten hangen omlaag.",
+      "note": "Voorlopige foto: sterk bewerkte kleuren. Vrije vlucht van opzij: let op de brede gele band op de zwarte vleugel en het rode gezicht.",
+      "visualCheck": "Putter los in de lucht tegen egale lucht met half geheven vleugels; poten hangen omlaag, geen ondergrond in beeld. Rood gezicht, zwart-witte kop en gele vleugelband zichtbaar; sterke HDR-kleurzweem.",
       "verification": "Commons-titel en -beschrijving noemen een Putter (Distelfink); zichtbare kenmerken passen. Geen geslachtslabel: rood masker overlapt tussen geslachten.",
       "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/putter",
       "file": "Ist es der Niedernhaller Distelfink der mir da vor die Kamera geflogen ist ??? 01.jpg",
@@ -7593,14 +7593,15 @@ export const GUIDE_POSES = Object.freeze({
       "image": "/assets/species/plumage/sp037-flight-free.webp",
       "width": 1400,
       "height": 1077,
-      "modifications": "Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP"
+      "modifications": "Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+      "flightReview": "voorwaardelijk 2026-11-16: Hercontrole origineel 16-11-2026: Putter vrij in de lucht tegen egale lucht, geen tak of ondergrond in beeld; vleugels half geheven, poten hangen omlaag. Soort zeker (rood masker, zwart-witte kop, gele vleugelband). Sterke HDR-bewerking geeft een oranje kleurzweem over de witte en bruine delen; niet definitief. Vervanging gewenst: scherpe Putter in vrije vlucht met natuurlijke kleuren."
     }
   ],
   "sp038": [
     {
-      "label": "Mannetje in vlucht",
-      "flight": true,
-      "note": "Let op de zwarte kruin en de gele vleugelband. De vleugel is iets onscherp door beweging.",
+      "label": "Mannetje bij het neerstrijken",
+      "flight": false,
+      "note": "Poten naar voren gestrekt bij het landen; toont gele vleugelband, zwart kapje en geelgroene borst.",
       "file": "Runway Three - Flickr - john.purvis.jpg",
       "nl": "Sijs",
       "latin": "Spinus spinus",
@@ -7609,7 +7610,7 @@ export const GUIDE_POSES = Object.freeze({
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
       "source": "https://commons.wikimedia.org/wiki/File:Runway_Three_-_Flickr_-_john.purvis.jpg",
       "showSourceLink": true,
-      "alt": "Mannetje Sijs in vlucht met een zwarte kruin en een gele band op de opgeheven vleugel.",
+      "alt": "Sijs-mannetje vlak voor de landing met geheven vleugels en naar voren gestrekte poten; gele vleugelband en zwart kapje zichtbaar.",
       "modifications": "Uitgesneden rond de vliegende Sijs, verkleind en omgezet naar WebP",
       "reviewed": "2026-11-07",
       "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/sijs",
@@ -7618,7 +7619,7 @@ export const GUIDE_POSES = Object.freeze({
       "height": 1400,
       "image": "/assets/species/plumage/sp038-flight.webp",
       "sex": "male",
-      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+      "flightReview": "uit-rol 2026-11-16: Fotograaf beschrijft 'comes in to land'; beeld toont geheven vleugels en naar voren gestrekte poten met gespreide tenen: neerstrijken, geen vrije vlucht. (eerder: goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.)"
     }
   ],
   "sp039": [
