@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-16",
+  "purpose": "F3-R10 media-gaten Putter (sp037), Sijs (sp038) en Kneu (sp039): Kneu-vrouwtje en juveniel, vluchtfoto's, zang en roep",
+  "queries": [
+    {"id": "sp039_adult_f", "speciesId": "sp039", "role": "adult_f", "kind": "plumage", "search": "\"Linaria cannabina\" female", "limit": 15, "keep": 6},
+    {"id": "sp039_juv", "speciesId": "sp039", "role": "juv", "kind": "plumage", "search": "\"Linaria cannabina\" juvenile", "limit": 15, "keep": 6},
+    {"id": "sp039_flight", "speciesId": "sp039", "role": "flight", "kind": "pose", "search": "\"Linaria cannabina\" flight", "limit": 15, "keep": 5},
+    {"id": "sp037_flight", "speciesId": "sp037", "role": "flight", "kind": "pose", "search": "\"Carduelis carduelis\" flight", "limit": 15, "keep": 5},
+    {"id": "sp038_flight", "speciesId": "sp038", "role": "flight", "kind": "pose", "search": "\"Spinus spinus\" flight", "limit": 15, "keep": 5},
+    {"id": "sp037_audio", "speciesId": "sp037", "role": "song/call", "kind": "audio", "search": "\"Carduelis carduelis\"", "limit": 20, "keep": 8},
+    {"id": "sp038_audio", "speciesId": "sp038", "role": "song/call", "kind": "audio", "search": "\"Spinus spinus\"", "limit": 20, "keep": 8},
+    {"id": "sp039_audio", "speciesId": "sp039", "role": "song/call", "kind": "audio", "search": "\"Linaria cannabina\"", "limit": 20, "keep": 8}
+  ]
+}
