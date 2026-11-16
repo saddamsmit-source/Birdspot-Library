@@ -1,0 +1,508 @@
+{
+  "generated": "2026-11-16T15:11:48Z",
+  "protocol": "Birdspot audio-check (F3-R11b, 16-11-2026): akoestische controle zonder menselijk luisteren.",
+  "rule": {
+    "margin": 0.05,
+    "minSnrDb": 15.0,
+    "minActive": 0.25
+  },
+  "recordings": [
+    {
+      "id": "sp037_song_cand",
+      "speciesId": "sp037",
+      "role": "candidate",
+      "soundType": "song",
+      "title": "File:Carduelis carduelis - European Goldfinch XC489911.mp3",
+      "page": "https://commons.wikimedia.org/wiki/File:Carduelis_carduelis_-_European_Goldfinch_XC489911.mp3",
+      "sha1": "a5d7a9692724e39f81d410556e71f69a30e814e7",
+      "license": "CC BY-SA 4.0",
+      "author": "Hannu Varkki",
+      "description": ":High-pass filtered. bird-seen:yes playback-used:no Common name: European Goldfinch Type: song Genus: Carduelis Species: carduelis Location: Pornaistenniemi, Vanhankaupunginlahti, Helsinki, Uusimaa Country: Finland Elevation: 0 m",
+      "duration": 42.89745851487217,
+      "spectrogram": "sp037_song_cand.png",
+      "features": {
+        "usable": true,
+        "seconds": 42.9,
+        "activeFraction": 0.91,
+        "snrDb": 17.1,
+        "domHz": [
+          1528,
+          4112,
+          6653
+        ],
+        "elementsPerSecond": 2.59,
+        "bestFragment": {
+          "start": 12.5,
+          "seconds": 10.0,
+          "active": 0.97
+        }
+      }
+    },
+    {
+      "id": "sp037_call_cand",
+      "speciesId": "sp037",
+      "role": "candidate",
+      "soundType": "call",
+      "title": "File:Carduelis carduelis - European Goldfinch XC503634.mp3",
+      "page": "https://commons.wikimedia.org/wiki/File:Carduelis_carduelis_-_European_Goldfinch_XC503634.mp3",
+      "sha1": "0abe21cddde7faa5df935627c494e35536dbcb49",
+      "license": "CC BY-SA 4.0",
+      "author": "Jochem verweij",
+      "description": ":several small calls stuck together bird-seen:yes Common name: European Goldfinch Type: life stage uncertain, song Genus: Carduelis Species: carduelis Location: Oud Gastel, Halderberge, Noord-Brabant Country: Netherlands Elevation: 0 m",
+      "duration": 7.969708333333333,
+      "spectrogram": "sp037_call_cand.png",
+      "features": {
+        "usable": true,
+        "seconds": 7.9,
+        "activeFraction": 0.718,
+        "snrDb": 18.6,
+        "domHz": [
+          1055,
+          4091,
+          5964
+        ],
+        "elementsPerSecond": 3.52,
+        "bestFragment": {
+          "start": 0.0,
+          "seconds": 7.9,
+          "active": 0.72
+        }
+      }
+    },
+    {
+      "id": "sp038_song_cand",
+      "speciesId": "sp038",
+      "role": "candidate",
+      "soundType": "song",
+      "title": "File:Carduelis spinus.ogg",
+      "page": "https://commons.wikimedia.org/wiki/File:Carduelis_spinus.ogg",
+      "sha1": "9bb8761532bd75bf0e4a680ea206ec87f37388cd",
+      "license": "CC BY-SA 3.0",
+      "author": "Vladimir Yu. Arkhipov, Arkhivov",
+      "description": "Song of Eurasian Siskin, Bryansk region, Russia",
+      "duration": 10,
+      "spectrogram": "sp038_song_cand.png",
+      "features": {
+        "usable": true,
+        "seconds": 10.0,
+        "activeFraction": 0.934,
+        "snrDb": 38.7,
+        "domHz": [
+          3466,
+          4500,
+          5275
+        ],
+        "elementsPerSecond": 1.4,
+        "bestFragment": {
+          "start": 0.0,
+          "seconds": 10.0,
+          "active": 0.93
+        }
+      }
+    },
+    {
+      "id": "sp038_call_cand",
+      "speciesId": "sp038",
+      "role": "candidate",
+      "soundType": "call",
+      "title": "File:Spinus spinus - Eurasian Siskin XC539301.mp3",
+      "page": "https://commons.wikimedia.org/wiki/File:Spinus_spinus_-_Eurasian_Siskin_XC539301.mp3",
+      "sha1": "c5c3c98691c0f46a74c75ad006a335659ea8062d",
+      "license": "CC BY-SA 4.0",
+      "author": "Benoît Van Hecke",
+      "description": ":Zoom SGH-6 + Zoom F1 Common name: Eurasian Siskin Type: call Genus: Spinus Species: spinus Location: Béruges, Vienne, Nouvelle-Aquitaine Country: France Elevation: 140 m",
+      "duration": 15.759732762312636,
+      "spectrogram": "sp038_call_cand.png",
+      "features": {
+        "usable": true,
+        "seconds": 15.7,
+        "activeFraction": 0.59,
+        "snrDb": 13.9,
+        "domHz": [
+          3415,
+          4177,
+          5736
+        ],
+        "elementsPerSecond": 9.99,
+        "bestFragment": {
+          "start": 1.0,
+          "seconds": 10.0,
+          "active": 0.65
+        }
+      }
+    },
+    {
+      "id": "sp039_song_cand",
+      "speciesId": "sp039",
+      "role": "candidate",
+      "soundType": "song",
+      "title": "File:Carduelis cannabina singing.flac",
+      "page": "https://commons.wikimedia.org/wiki/File:Carduelis_cannabina_singing.flac",
+      "sha1": "d18834c4c563aae949c71daa6036a4e9932d86a7",
+      "license": "CC BY-SA 4.0",
+      "author": "Nefronus",
+      "description": "Carduelis cannabina singing",
+      "duration": 8.531451247165533,
+      "spectrogram": "sp039_song_cand.png",
+      "features": {
+        "usable": true,
+        "seconds": 8.5,
+        "activeFraction": 0.862,
+        "snrDb": 24.4,
+        "domHz": [
+          1098,
+          2906,
+          4694
+        ],
+        "elementsPerSecond": 3.4,
+        "bestFragment": {
+          "start": 0.0,
+          "seconds": 8.5,
+          "active": 0.86
+        }
+      }
+    },
+    {
+      "id": "sp037_song_ref_1",
+      "speciesId": "sp037",
+      "role": "reference",
+      "soundType": "song",
+      "title": "File:Carduelis carduelis - European Goldfinch XC473287.mp3",
+      "page": "https://commons.wikimedia.org/wiki/File:Carduelis_carduelis_-_European_Goldfinch_XC473287.mp3",
+      "sha1": "89fc36809e41fa33285ab8924c04b0b265c5947c",
+      "license": "CC BY-SA 4.0",
+      "author": "Marie-Lan Taÿ Pamart",
+      "description": ":One from a group of birds singing from within a tree in the village. Distance: ~3m Edits: -12dB high-pass filter at 1400Hz Equipment: Sennheiser ME66/K6, Rycote Windjammer, Tascam DR-05 bird-seen:yes playback-used:no Common name: European Goldfinch Type: song Genus: Carduelis Species: carduelis Location: Rochegude, Drôme, Auvergne-Rhône-Alpes Country: France Elevation: 140 m",
+      "duration": 18.334184231359817,
+      "spectrogram": "sp037_song_ref_1.png",
+      "features": {
+        "usable": true,
+        "seconds": 18.3,
+        "activeFraction": 0.924,
+        "snrDb": 23.3,
+        "domHz": [
+          2282,
+          3488,
+          5292
+        ],
+        "elementsPerSecond": 2.46,
+        "bestFragment": {
+          "start": 0.0,
+          "seconds": 10.0,
+          "active": 0.96
+        }
+      }
+    },
+    {
+      "id": "sp037_song_ref_2",
+      "speciesId": "sp037",
+      "role": "reference",
+      "soundType": "song",
+      "title": "File:Carduelis carduelis - European Goldfinch XC101464.mp3",
+      "page": "https://commons.wikimedia.org/wiki/File:Carduelis_carduelis_-_European_Goldfinch_XC101464.mp3",
+      "sha1": "1b486983d703157816bfb302d0f1fe85cbb377a9",
+      "license": "CC BY-SA 4.0",
+      "author": "Sander Pieterse",
+      "description": ":Resident pair in tree. Common name: European Goldfinch Type: song Genus: Carduelis Species: carduelis Location: Hanenburglaan, Den Haag, Zuid-Holland Country: Netherlands Elevation: 0 m",
+      "duration": 41.729,
+      "spectrogram": "sp037_song_ref_2.png",
+      "features": {
+        "usable": true,
+        "seconds": 41.7,
+        "activeFraction": 0.841,
+        "snrDb": 17.0,
+        "domHz": [
+          1141,
+          1399,
+          4616
+        ],
+        "elementsPerSecond": 4.75,
+        "bestFragment": {
+          "start": 6.6,
+          "seconds": 10.0,
+          "active": 1.0
+        }
+      }
+    },
+    {
+      "id": "sp037_call_ref_1",
+      "speciesId": "sp037",
+      "role": "reference",
+      "soundType": "call",
+      "title": "File:Carduelis carduelis - Spring call.oga",
+      "page": "https://commons.wikimedia.org/wiki/File:Carduelis_carduelis_-_Spring_call.oga",
+      "sha1": "1dbc86b1753add1b98a4d6263e586fde54c1f4a3",
+      "license": "CC BY 4.0",
+      "author": "Ewithu",
+      "description": "European Goldfinch (Carduelis carduelis) - Spring call, Southern Hungary, various other birds calls in the background",
+      "duration": 77.4996875,
+      "spectrogram": "sp037_call_ref_1.png",
+      "features": {
+        "usable": true,
+        "seconds": 60.0,
+        "activeFraction": 0.939,
+        "snrDb": 29.6,
+        "domHz": [
+          1959,
+          3789,
+          6072
+        ],
+        "elementsPerSecond": 1.87,
+        "bestFragment": {
+          "start": 44.3,
+          "seconds": 10.0,
+          "active": 1.0
+        }
+      }
+    },
+    {
+      "id": "sp037_call_ref_2",
+      "speciesId": "sp037",
+      "role": "reference",
+      "soundType": "call",
+      "title": "File:Goldfinch (Carduelis carduelis) call - Oslo, Norway 2021-03-25.mp3",
+      "page": "https://commons.wikimedia.org/wiki/File:Goldfinch_(Carduelis_carduelis)_call_-_Oslo,_Norway_2021-03-25.mp3",
+      "sha1": "84a1dbcb4e11faedfef25354784143c5a1ead0d4",
+      "license": "CC BY-SA 4.0",
+      "author": "Ryan Hodnett",
+      "description": "Goldfinch Carduelis carduelis call in Oslo, Norway.",
+      "duration": 20.351975,
+      "spectrogram": "sp037_call_ref_2.png",
+      "features": {
+        "usable": true,
+        "seconds": 20.3,
+        "activeFraction": 0.498,
+        "snrDb": 17.7,
+        "domHz": [
+          1033,
+          2906,
+          4974
+        ],
+        "elementsPerSecond": 10.23,
+        "bestFragment": {
+          "start": 6.5,
+          "seconds": 10.0,
+          "active": 0.58
+        }
+      }
+    },
+    {
+      "id": "sp038_song_ref_1",
+      "speciesId": "sp038",
+      "role": "reference",
+      "soundType": "song",
+      "title": "File:Spinus spinescens - Andean Siskin XC243104.mp3",
+      "page": "https://commons.wikimedia.org/wiki/File:Spinus_spinescens_-_Andean_Siskin_XC243104.mp3",
+      "sha1": "85de3b980dda6ad3904e51eb7d200273bfa87ab1",
+      "license": "CC BY-SA 4.0",
+      "author": "Niels Krabbe",
+      "description": ":Same as Carspi01. Espeletia páramo. Reference: XIB 336-355 (Carspi2). Krabbe & Nilsson (2003) ( ISBN 90-75838-06-9 ). Filtered version on Moore et al. (2013) ( http://johnvmoorenaturerecordings.com/pubs/ECUAD/main.htm ). bird-seen:yes playback-used:no Common name: Andean Siskin Type: song Genus: Spinus Species: spinescens Location: Carchi: eastern Páramo El Angel Country: Ecuador Elevation: 3400 ",
+      "duration": 91.7656875,
+      "spectrogram": "sp038_song_ref_1.png",
+      "features": {
+        "usable": true,
+        "seconds": 60.0,
+        "activeFraction": 0.62,
+        "snrDb": 18.0,
+        "domHz": [
+          1055,
+          1464,
+          4435
+        ],
+        "elementsPerSecond": 9.65,
+        "bestFragment": {
+          "start": 49.4,
+          "seconds": 10.0,
+          "active": 0.81
+        }
+      }
+    },
+    {
+      "id": "sp038_song_ref_2",
+      "speciesId": "sp038",
+      "role": "reference",
+      "soundType": "song",
+      "title": "File:Spinus siemiradzkii - Saffron Siskin XC243100.mp3",
+      "page": "https://commons.wikimedia.org/wiki/File:Spinus_siemiradzkii_-_Saffron_Siskin_XC243100.mp3",
+      "sha1": "04b327b0506ea06628b99c8d8f537895284098b4",
+      "license": "CC BY-SA 4.0",
+      "author": "Niels Krabbe",
+      "description": ":Flock. Riparian dry forest. Reference: XVIA 398-402, 406-415 (Carsie1). Krabbe & Nilsson (2003) ( ISBN 90-75838-06-9 ). bird-seen:yes playback-used:no Common name: Saffron Siskin Type: song Genus: Spinus Species: siemiradzkii Location: Manabí: Río Ayampe Country: Ecuador Elevation: 25 m",
+      "duration": 34.4199375,
+      "spectrogram": "sp038_song_ref_2.png",
+      "features": {
+        "usable": true,
+        "seconds": 34.4,
+        "activeFraction": 0.751,
+        "snrDb": 15.1,
+        "domHz": [
+          1356,
+          3316,
+          4909
+        ],
+        "elementsPerSecond": 7.3,
+        "bestFragment": {
+          "start": 1.9,
+          "seconds": 10.0,
+          "active": 0.86
+        }
+      }
+    },
+    {
+      "id": "sp038_call_ref_1",
+      "speciesId": "sp038",
+      "role": "reference",
+      "soundType": "call",
+      "title": "File:Spinus spinescens - Andean Siskin XC243103.mp3",
+      "page": "https://commons.wikimedia.org/wiki/File:Spinus_spinescens_-_Andean_Siskin_XC243103.mp3",
+      "sha1": "0e43e84bae4d0aa65b91e5ff5b62d64d7d2752bc",
+      "license": "CC BY-SA 4.0",
+      "author": "Niels Krabbe",
+      "description": ":2 call types. Espeletia páramo. Reference: XIB 331-333, -335 (Carspi1). Krabbe & Nilsson (2003) ( ISBN 90-75838-06-9 ). Filtered version on Moore et al. (2013) ( https://johnvmoorenaturerecordings.com/pubs/ECUAD/main.htm ). bird-seen:yes playback-used:no Common name: Andean Siskin Type: flight calls Genus: Spinus Species: spinescens Location: Carchi: eastern Páramo El Angel Country: Ecuador Eleva",
+      "duration": 15.8021875,
+      "spectrogram": "sp038_call_ref_1.png",
+      "features": {
+        "usable": true,
+        "seconds": 15.8,
+        "activeFraction": 0.541,
+        "snrDb": 17.3,
+        "domHz": [
+          1033,
+          1162,
+          1806
+        ],
+        "elementsPerSecond": 6.6,
+        "bestFragment": {
+          "start": 0.0,
+          "seconds": 10.0,
+          "active": 0.63
+        }
+      }
+    },
+    {
+      "id": "sp038_call_ref_2",
+      "speciesId": "sp038",
+      "role": "reference",
+      "soundType": "call",
+      "title": "File:Spinus siemiradzkii - Saffron Siskin XC243102.mp3",
+      "page": "https://commons.wikimedia.org/wiki/File:Spinus_siemiradzkii_-_Saffron_Siskin_XC243102.mp3",
+      "sha1": "558a82409a22cc08e93eaec8c333700ae5b4f273",
+      "license": "CC BY-SA 4.0",
+      "author": "Niels Krabbe",
+      "description": ":Riparian dry forest. Reference: XLIIA 203 (Carsie3). Krabbe & Nilsson (2003) ( ISBN 90-75838-06-9 ). bird-seen:yes playback-used:no Common name: Saffron Siskin Type: flight call Genus: Spinus Species: siemiradzkii Location: Manabí: Río Ayampe Country: Ecuador Elevation: 50 m",
+      "duration": 1.0346875,
+      "spectrogram": "sp038_call_ref_2.png",
+      "features": {
+        "usable": true,
+        "seconds": 1.0,
+        "activeFraction": 0.902,
+        "snrDb": 19.8,
+        "domHz": [
+          3888,
+          4478,
+          6087
+        ],
+        "elementsPerSecond": 4.03,
+        "bestFragment": {
+          "start": 0.0,
+          "seconds": 1.0,
+          "active": 0.9
+        }
+      }
+    },
+    {
+      "id": "sp039_call_ref_1",
+      "speciesId": "sp039",
+      "role": "reference",
+      "soundType": "call",
+      "title": "File:Bird Call - Muro, Spain 2022-04-18 (03).mp3",
+      "page": "https://commons.wikimedia.org/wiki/File:Bird_Call_-_Muro,_Spain_2022-04-18_(03).mp3",
+      "sha1": "1c978f15e8c457c1954d48def34246292918852d",
+      "license": "CC BY-SA 4.0",
+      "author": "Ryan Hodnett",
+      "description": "Bird Call in Muro, Spain.",
+      "duration": 9.09595,
+      "spectrogram": "sp039_call_ref_1.png",
+      "features": {
+        "usable": true,
+        "seconds": 9.1,
+        "activeFraction": 0.695,
+        "snrDb": 19.8,
+        "domHz": [
+          1184,
+          2691,
+          3703
+        ],
+        "elementsPerSecond": 8.49,
+        "bestFragment": {
+          "start": 0.0,
+          "seconds": 9.1,
+          "active": 0.7
+        }
+      }
+    }
+  ],
+  "judgements": [
+    {
+      "id": "sp037_song_cand",
+      "speciesId": "sp037",
+      "soundType": "song",
+      "consistent": false,
+      "means": {
+        "sp037": 0.5372,
+        "sp038": 0.6143
+      },
+      "margin": -0.0771,
+      "reason": "marge -0.0771 < 0.05"
+    },
+    {
+      "id": "sp037_call_cand",
+      "speciesId": "sp037",
+      "soundType": "call",
+      "consistent": false,
+      "means": {
+        "sp037": 0.3019,
+        "sp038": 0.597,
+        "sp039": 0.2839
+      },
+      "margin": -0.2951,
+      "reason": "marge -0.2951 < 0.05"
+    },
+    {
+      "id": "sp038_song_cand",
+      "speciesId": "sp038",
+      "soundType": "song",
+      "consistent": false,
+      "means": {
+        "sp037": 0.4708,
+        "sp038": 0.499
+      },
+      "margin": 0.0282,
+      "reason": "marge 0.0282 < 0.05"
+    },
+    {
+      "id": "sp038_call_cand",
+      "speciesId": "sp038",
+      "soundType": "call",
+      "consistent": false,
+      "means": {
+        "sp037": 0.4698,
+        "sp038": 0.3711,
+        "sp039": 0.4649
+      },
+      "margin": -0.0987,
+      "reason": "marge -0.0987 < 0.05; SNR 13.9 dB < 15.0"
+    },
+    {
+      "id": "sp039_song_cand",
+      "speciesId": "sp039",
+      "soundType": "song",
+      "consistent": false,
+      "reason": "geen referentie van de eigen soort",
+      "means": {
+        "sp037": 0.5141,
+        "sp038": 0.4923
+      }
+    }
+  ]
+}
