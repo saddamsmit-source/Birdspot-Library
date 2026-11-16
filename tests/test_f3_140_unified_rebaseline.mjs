@@ -98,6 +98,7 @@ const counts={
  eleventhBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R11'),
  twelfthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R12'),
  thirteenthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R13'),
+ fourteenthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R14'),
  contentInspected:sum(x=>x.F3.reviewedThisRound===true),
  contentComplete:sum(x=>x.F3.contentStatus==='CONTENT COMPLETE')
 };
@@ -117,6 +118,7 @@ const tenth=rows.filter(x=>x.F3.recheckBatch==='F3-R10');
 const eleventh=rows.filter(x=>x.F3.recheckBatch==='F3-R11');
 const twelfth=rows.filter(x=>x.F3.recheckBatch==='F3-R12');
 const thirteenth=rows.filter(x=>x.F3.recheckBatch==='F3-R13');
+const fourteenth=rows.filter(x=>x.F3.recheckBatch==='F3-R14');
 assert.ok(req.includes('lookalikePhotoAndText'),'New owner lookalike rule must be checked for every F3 bird');
 assert.deepEqual(ninth.map(x=>x.id),['sp034','sp035','sp036'],'R09 exactly three species in fixed sequence');
 assert.deepEqual(ninth.map(x=>x.F3.photoFilesInspected),[2,5,4],'All eleven existing local images need individual inspection');
@@ -209,6 +211,20 @@ for(const item of thirteenth){
  for(let i=0;i<currentAssets.imageSlots.length;i++){
   const bytes=readFileSync(new URL('..'+currentAssets.imageSlots[i].path,import.meta.url));
   assert.equal(review.photoBlobSHAs[i],createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex'),item.id+' image changed since F3-R13 review');
+ }
+}
+
+assert.deepEqual(fourteenth.map(x=>x.id),['sp049','sp050','sp051'],'R14 exactly Grote Lijster, Roodborst and Zwarte Roodstaart');
+assert.deepEqual(fourteenth.map(x=>x.F3.photoFilesInspected),[2,3,3]);
+for(const item of fourteenth){
+ const {F3:review,currentAssets}=item;
+ assert.equal(review.fullPass,false); assert.ok(review.checks.photoOriginalIdentity.startsWith('VERIFIED'));
+ assert.ok(review.checks.plumageAndTrueFlight.startsWith('PARTIALLY TESTED'),'missing flight photo stays open');
+ assert.ok(review.checks.audioRecordingsAuthenticity.startsWith('BLOCKED'));
+ assert.ok(review.checks.ebirdDistributionAndBias.startsWith('NOT TESTED'),'eBird not consulted: stays open');
+ for(let i=0;i<currentAssets.imageSlots.length;i++){
+  const bytes=readFileSync(new URL('..'+currentAssets.imageSlots[i].path,import.meta.url));
+  assert.equal(review.photoBlobSHAs[i],createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex'),item.id+' image changed since F3-R14 review');
  }
 }
 

@@ -53,9 +53,9 @@
     "audioMissing": 75,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 101,
+    "nextNotStarted": 98,
     "secondBatchStarted": 3,
-    "contentInspected": 39,
+    "contentInspected": 42,
     "contentComplete": 0,
     "thirdBatchStarted": 3,
     "fourthBatchStarted": 3,
@@ -67,7 +67,8 @@
     "tenthBatchStarted": 3,
     "eleventhBatchStarted": 3,
     "twelfthBatchStarted": 3,
-    "thirteenthBatchStarted": 3
+    "thirteenthBatchStarted": 3,
+    "fourteenthBatchStarted": 3
   },
   "records": [
     {
@@ -4572,38 +4573,58 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R14",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "VERIFIED (origcheck 16-11-2026: all shown photos same shot as source, Pearson r >= 0.999; see docs/media-intake/2026-11-16/origcheck-r14/origcheck.json)",
+          "photoIndividualRights": "VERIFIED (current Commons author and licence; three author notations aligned with Commons)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (adult/sex/juvenile roles match; no free-flight photo; Commons search 16-11 found no usable candidate)",
+          "photoPairComparisons": "PARTIALLY TESTED (Zanglijster pairs adult and juvenile)",
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium 320/360/390 px via tests/test_lookalike_r14_browser.py; no physical device)",
+          "creditsAndCleanAudioUI": "NOT TESTED (no audio)",
+          "audioRecordingsAuthenticity": "BLOCKED (no recording; no reliable automatic species-verification method, see AUDIOCHECK_PROTOCOL v0.2)",
+          "audioLicenseAndAttribution": "BLOCKED (no recording)",
+          "soundRolesSongCall": "PARTIALLY TESTED (text only)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (no audio file)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (existing Vogelbescherming-sourced profile; ANWB book NOT available, NOT TESTED)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (existing sourced profile; biometrics not verified with two publishers)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon report 'Broedvogels in Nederland 2025' lists Grote Lijster among species with lowest index in 2025; species page not opened)",
+          "ebirdDistributionAndBias": "NOT TESTED (eBird not consulted in F3-R14)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "endToEndGuideUI": "PARTIALLY TESTED (Chromium species card and lookalike panels; no device or offline run)",
+          "independentSecondReview": "NOT TESTED (own re-inspection is not independent)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-019 Zanglijster-Grote Lijster)"
         },
         "findings": [
-          "Scherpe foto van één Grote Lijster in vrije vlucht met bevestigde hergebruikrechten.",
-          "Geen lokaal geregistreerde zang of roep"
+          "Twee lokale foto's tegen het bronbeeld: beide dezelfde opname (r = 1,00).",
+          "Rollen kloppen: volwassen met ronde borstvlekken, juveniel met lichte vlekjes op de vleugeldekveren.",
+          "Juveniel-auteur stond als Flickr-naam 'treehouse1977'; gelijkgetrokken met Commons ('Jim Champion from Southampton, UK').",
+          "Vrije-vluchtfoto ontbreekt; Commons-zoektocht 'Turdus viscivorus flight' leverde geen kandidaat op.",
+          "Sovon (rapport 2025): Grote Lijster bij de soorten met de laagste index in 2025."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-lijster",
+          "docs/media-intake/2026-11-16/origcheck-r14/origcheck.json",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R14_GROTELIJSTER_ROODBORST_ZWARTEROODSTAART_2026-11-16_DRAFT.md",
+          "https://pub.sovon.nl/static/publicaties/2026-41_Broedvogels-in-Nederland-2025_LR.pdf"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on physical device; local source/photo review and Chromium only",
+        "independence": "PARTIAL / origcheck by Claude; no independent reviewer",
+        "fullPass": false,
+        "photoFilesInspected": 2,
+        "photoBlobSHAs": [
+          "34bb0a34308f8356bd71632f013d1b6095354afe",
+          "b2124e3f05025f471f9d6862c2b4facaa3a548da"
+        ],
+        "photoSourceMatches": [],
+        "priorPhotoMatches": [],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [],
+        "contentStatus": "PARTIALLY REVIEWED (all shown photos checked against source images; no flight photo; no audio; no FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R14 node/browser tests run separately."
       }
     },
     {
@@ -4640,38 +4661,57 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R14",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "VERIFIED (origcheck 16-11-2026: all shown photos same shot as source, Pearson r >= 0.999; see docs/media-intake/2026-11-16/origcheck-r14/origcheck.json)",
+          "photoIndividualRights": "VERIFIED (current Commons author and licence; three author notations aligned with Commons)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (adult/sex/juvenile roles match; no free-flight photo; Commons search 16-11 found no usable candidate)",
+          "photoPairComparisons": "PARTIALLY TESTED (Roodborsttapuit and Heggenmus pairs)",
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium 320/360/390 px via tests/test_lookalike_r14_browser.py; no physical device)",
+          "creditsAndCleanAudioUI": "NOT TESTED (no audio)",
+          "audioRecordingsAuthenticity": "BLOCKED (no recording; no reliable automatic species-verification method, see AUDIOCHECK_PROTOCOL v0.2)",
+          "audioLicenseAndAttribution": "BLOCKED (no recording)",
+          "soundRolesSongCall": "PARTIALLY TESTED (text only)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (no audio file)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (existing Vogelbescherming-sourced profile; ANWB book NOT available, NOT TESTED)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (existing sourced profile; biometrics not verified with two publishers)",
+          "sovonNetherlandsStatus": "NOT TESTED (Sovon species page not reached in F3-R14 search)",
+          "ebirdDistributionAndBias": "NOT TESTED (eBird not consulted in F3-R14)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "endToEndGuideUI": "PARTIALLY TESTED (Chromium species card and lookalike panels; no device or offline run)",
+          "independentSecondReview": "NOT TESTED (own re-inspection is not independent)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-023 Roodborst-Roodborsttapuit)"
         },
         "findings": [
-          "Voldoende scherpe en gelicentieerde foto in vrije vlucht.",
-          "Geen lokaal geregistreerde zang of roep"
+          "Drie lokale foto's tegen het bronbeeld: alle drie dezelfde opname (r ≥ 0,999).",
+          "Rollen kloppen: volwassen, juveniel (gespikkeld, zonder oranje borst); opvliegfoto blijft buiten de vluchtrol.",
+          "Opvliegfoto-auteur gelijkgetrokken met Commons ('Joe Dyer from Buckhurst Hill, England').",
+          "Vrije-vluchtfoto ontbreekt: kandidaten waren een opvliegende vogel met poten op een paal en een gevecht."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/roodborst",
+          "docs/media-intake/2026-11-16/origcheck-r14/origcheck.json",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R14_GROTELIJSTER_ROODBORST_ZWARTEROODSTAART_2026-11-16_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on physical device; local source/photo review and Chromium only",
+        "independence": "PARTIAL / origcheck by Claude; no independent reviewer",
+        "fullPass": false,
+        "photoFilesInspected": 3,
+        "photoBlobSHAs": [
+          "389132501341e3d22434b5fbc857cda16a1128e6",
+          "81dc84a9aad710b1743a91de944c69a8ad20adfd",
+          "306c0fee27ec929d143282e72386a1076e880532"
+        ],
+        "photoSourceMatches": [],
+        "priorPhotoMatches": [],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [],
+        "contentStatus": "PARTIALLY REVIEWED (all shown photos checked against source images; no flight photo; no audio; no FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R14 node/browser tests run separately."
       }
     },
     {
@@ -4708,38 +4748,59 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R14",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "VERIFIED (origcheck 16-11-2026: all shown photos same shot as source, Pearson r >= 0.999; see docs/media-intake/2026-11-16/origcheck-r14/origcheck.json)",
+          "photoIndividualRights": "VERIFIED (current Commons author and licence; three author notations aligned with Commons)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (adult/sex/juvenile roles match; no free-flight photo; Commons search 16-11 found no usable candidate)",
+          "photoPairComparisons": "PARTIALLY TESTED (Gekraagde Roodstaart male and female pairs)",
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium 320/360/390 px via tests/test_lookalike_r14_browser.py; no physical device)",
+          "creditsAndCleanAudioUI": "NOT TESTED (no audio)",
+          "audioRecordingsAuthenticity": "BLOCKED (no recording; no reliable automatic species-verification method, see AUDIOCHECK_PROTOCOL v0.2)",
+          "audioLicenseAndAttribution": "BLOCKED (no recording)",
+          "soundRolesSongCall": "PARTIALLY TESTED (text only)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (no audio file)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (existing Vogelbescherming-sourced profile; ANWB book NOT available, NOT TESTED)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (existing sourced profile; biometrics not verified with two publishers)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon species page: breeding population 14,000-22,000 (2018-2020), no significant change since 1990, wintering increasing)",
+          "ebirdDistributionAndBias": "NOT TESTED (eBird not consulted in F3-R14)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "endToEndGuideUI": "PARTIALLY TESTED (Chromium species card and lookalike panels; no device or offline run)",
+          "independentSecondReview": "NOT TESTED (own re-inspection is not independent)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-024 Zwarte-Gekraagde Roodstaart)"
         },
         "findings": [
-          "Scherpe, herleidbare foto in vrije vlucht, bij voorkeur van een mannetje.",
-          "Geen lokaal geregistreerde zang of roep"
+          "Drie lokale foto's tegen het bronbeeld: alle drie dezelfde opname (r = 1,00).",
+          "Rollen kloppen: mannetje zwart met witte vleugelvlek, vrouwtje grijsbruin, juveniel.",
+          "Mannetje-auteur gelijkgetrokken met Commons ('Luiz Lapa from Oeiras, Portugal').",
+          "Vrije-vluchtfoto ontbreekt: enige vluchtkandidaat 291 px en onscherp, overige zittend.",
+          "Sovon: 14.000-22.000 broedparen (2018-2020), sinds 1990 geen significante verandering."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwarte-roodstaart",
+          "docs/media-intake/2026-11-16/origcheck-r14/origcheck.json",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R14_GROTELIJSTER_ROODBORST_ZWARTEROODSTAART_2026-11-16_DRAFT.md",
+          "https://stats.sovon.nl/zwarte-roodstaart"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on physical device; local source/photo review and Chromium only",
+        "independence": "PARTIAL / origcheck by Claude; no independent reviewer",
+        "fullPass": false,
+        "photoFilesInspected": 3,
+        "photoBlobSHAs": [
+          "e0e6e2adfe389a9f24722d88c79219c02c636906",
+          "c2103ba41620ceb0d4098de230714d3f660a097e",
+          "06d099e6bd6ddebe0329ad0aba2d8cb163618e8f"
+        ],
+        "photoSourceMatches": [],
+        "priorPhotoMatches": [],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [],
+        "contentStatus": "PARTIALLY REVIEWED (all shown photos checked against source images; no flight photo; no audio; no FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R14 node/browser tests run separately."
       }
     },
     {
