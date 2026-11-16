@@ -100,6 +100,7 @@ const counts={
  thirteenthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R13'),
  fourteenthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R14'),
  fifteenthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R15'),
+ sixteenthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R16'),
  contentInspected:sum(x=>x.F3.reviewedThisRound===true),
  contentComplete:sum(x=>x.F3.contentStatus==='CONTENT COMPLETE')
 };
@@ -121,6 +122,7 @@ const twelfth=rows.filter(x=>x.F3.recheckBatch==='F3-R12');
 const thirteenth=rows.filter(x=>x.F3.recheckBatch==='F3-R13');
 const fourteenth=rows.filter(x=>x.F3.recheckBatch==='F3-R14');
 const fifteenth=rows.filter(x=>x.F3.recheckBatch==='F3-R15');
+const sixteenth=rows.filter(x=>x.F3.recheckBatch==='F3-R16');
 assert.ok(req.includes('lookalikePhotoAndText'),'New owner lookalike rule must be checked for every F3 bird');
 assert.deepEqual(ninth.map(x=>x.id),['sp034','sp035','sp036'],'R09 exactly three species in fixed sequence');
 assert.deepEqual(ninth.map(x=>x.F3.photoFilesInspected),[2,5,4],'All eleven existing local images need individual inspection');
@@ -244,6 +246,23 @@ for(const item of fifteenth){
  for(let i=0;i<currentAssets.imageSlots.length;i++){
   const bytes=readFileSync(new URL('..'+currentAssets.imageSlots[i].path,import.meta.url));
   assert.equal(review.photoBlobSHAs[i],createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex'),item.id+' image changed since F3-R15 review');
+ }
+}
+
+assert.deepEqual(sixteenth.map(x=>x.id),['sp056','sp057','sp058'],'R16 exactly Tjiftjaf, Fitis and Fluiter');
+assert.deepEqual(sixteenth.map(x=>x.F3.photoFilesInspected),[2,1,2]);
+for(const item of sixteenth){
+ const {F3:review,currentAssets}=item;
+ assert.equal(review.fullPass,false); assert.ok(review.checks.photoOriginalIdentity.startsWith('VERIFIED'));
+ assert.ok(review.checks.plumageAndTrueFlight.startsWith('PARTIALLY TESTED'),'missing flight photo stays open');
+ assert.ok(!review.checks.audioRecordingsAuthenticity.startsWith('VERIFIED'),'audio never verified by automatic means');
+ assert.ok(review.checks.ebirdDistributionAndBias.startsWith('BLOCKED'));
+ assert.ok(review.checks.biometryAndKnowledge.startsWith('PARTIALLY TESTED'),'one publisher: biometry open');
+ assert.match(review.checks.vogelbeschermingAndANWB,/ANWB-vogelgids NOT TESTED/);
+ assert.equal(review.photoBlobSHAs.length,currentAssets.imageSlots.length);
+ for(let i=0;i<currentAssets.imageSlots.length;i++){
+  const bytes=readFileSync(new URL('..'+currentAssets.imageSlots[i].path,import.meta.url));
+  assert.equal(review.photoBlobSHAs[i],createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex'),item.id+' image changed since F3-R16 review');
  }
 }
 

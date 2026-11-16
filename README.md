@@ -349,6 +349,8 @@ De **praktische, brede functionele tests** (echte Android/iOS, microfoon/Merlin/
 **F3-R13b/R14 (16 november 2026):** audioprotocol v0.2 (automatische check nooit VERIFIED) en padcontrole van de media-import op directorygrenzen. Grote Lijster, Roodborst en Zwarte Roodstaart: alle 8 foto's tegen het bronbeeld gecontroleerd, 3 auteursnotaties gecorrigeerd; vrije-vluchtfoto's gezocht maar niet gevonden (open). [F3-R14-bevindingen](docs/fotokwaliteit/F3_R14_GROTELIJSTER_ROODBORST_ZWARTEROODSTAART_2026-11-16_DRAFT.md). Stand: **42/140 inhoudelijk bekeken, 98 te starten, 0 volledig afgetekend.**
 
 **F3-R15 (16 november 2026):** Roodborsttapuit, Heggenmus, Winterkoning. Alle 7 foto's tegen het bronbeeld gecontroleerd; juvenielenfoto Heggenmus toegevoegd; Heggenmus-lengte gecorrigeerd naar ca. 13–15 cm (twee uitgevers); vergelijking Heggenmus–Ringmus toegevoegd; drie bronverschillen (status/trend) vastgelegd; eBird BLOCKED (botcontrole). [F3-R15-bevindingen](docs/fotokwaliteit/F3_R15_ROODBORSTTAPUIT_HEGGENMUS_WINTERKONING_2026-11-16_DRAFT.md). Stand: **45/140 inhoudelijk bekeken, 95 te starten, 0 volledig afgetekend.**
+
+**F3-R16 (16 november 2026):** Tjiftjaf, Fitis, Fluiter. 5 foto's tegen het bronbeeld en 4 opnamen op rechten gecontroleerd (geluid blijft alleen bronlabel); nieuw kennisprofiel Fluiter met drie open bronverschillen; geen vlucht- of juvenielenfoto die aan de norm voldoet. [F3-R16-bevindingen](docs/fotokwaliteit/F3_R16_TJIFTJAF_FITIS_FLUITER_2026-11-16_DRAFT.md). Stand: **48/140 inhoudelijk bekeken, 92 te starten, 0 volledig afgetekend.**
  Deze documentatie-only inhoudsronde is **geen extra appdeployment**; de werkende 1.27.21-hotspotpreview hoort bij PR #261 op de oudere app-SHA.
 
 

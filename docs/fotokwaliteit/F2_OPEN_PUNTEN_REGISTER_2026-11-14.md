@@ -175,3 +175,14 @@ De tekst in de kolom 'Open uit bronronde' is overgenomen uit de laatste F2-voort
 | sp098 Scholekster | F2-31 | Hoofdfoto, juveniel en vlucht visueel herbeoordeeld. Originele pagina's van juveniel en vlucht waren onbereikbaar. |
 
 [Brondossier F2-31](F2_31_BRON_EN_LIMIETEN.json).
+
+### F3-R15-QA en F3-R16 · bronverschillen en open beeldposities (16-11-2026)
+
+| Soort | Batch | Open punt |
+|---|---|---|
+| sp053 Roodborsttapuit | F3-R15-QA | **Statusclassificatie.** Canonieke lijst: hoofdstatus Standvogel, extra Zomergast. Vogelbescherming: "wegtrekkend", deel overwintert in zachte winters. Sovon: 18.000–22.000 paren (2018–2020) tegenover max. 200–1000 overwinteraars (2012/13–2014/15). De lijst geeft vergelijkbare soorten (Zwarte Roodstaart, Tjiftjaf) hoofdstatus Zomergast. Oordeel: classificatie-inconsistentie, geen bewuste bredere definitie. **Voorstel (niet toegepast, wacht op review):** in `docs/data/vogellijst-nederland.json` status → "Zomergast", extra → "Standvogel" (patroon Witte Kwikstaart), daarna `python tools/species/apply_status.py`; maanden blijven jan-dec. Effect: categoriefilter Standvogel −1, Zomergast +1. |
+| sp054 Heggenmus | F3-R15-QA | **Trend.** Sovon broedtrend (Meetnet, vanaf 1990 en laatste 12 jaar): significante afname < 5%/jaar; wintertrend (PTT vanaf 1980) idem. Eindjaar niet vermeld. Vogelbescherming: "populatie nu stabiel", ongedateerd. Zelfde grootheid (broedpopulatie), andere conclusie; de afname is klein (klasse < 5%/jaar). Waarschijnlijk verschil in publicatiemoment, niet aantoonbaar. Sovon blijft leidend; app toont de Sovon-trend. |
+| sp055 Winterkoning | F3-R15-QA | **Trend.** Sovon: broedtrend vanaf 1990 significante toename, laatste 12 jaar significante afname (beide < 5%/jaar); wintertrend idem. Vogelbescherming: "sinds 1990 geen significante verandering", ongedateerd. Zelfde startjaar en grootheid, dus een echte inhoudelijke afwijking; oorzaak (oudere reeks of andere toets) UNKNOWN. Sovon leidend. |
+| sp056 Tjiftjaf | F3-R16 | Vrije-vluchtfoto ontbreekt (kandidaten zittend of neerstrijkend); juvenielenfoto ontbreekt. |
+| sp057 Fitis | F3-R16 | Juveniele kandidaat (Commons, Stephan Sprinz, CC BY-SA 4.0, Spiekeroog) niet geplaatst: soortbewijs rust op fotograaflabel en pootkleur. Onafhankelijke review gevraagd. Vrije vlucht ontbreekt. |
+| sp058 Fluiter | F3-R16 | Lengte 11–13 cm tegen Vogelbescherming 12 cm (tweede uitgever ontbreekt); maanden apr–aug tegen vertrek rond half september; "afnemend" tegen Sovon laatste 12 jaar stabiel. Juveniel en vrije vlucht ontbreken; Spotvogel nog niet uitgewerkt. |

@@ -26,7 +26,10 @@
     "sp051",
     "sp053",
     "sp054",
-    "sp055"
+    "sp055",
+    "sp056",
+    "sp057",
+    "sp058"
   ],
   "policy": {
     "pairRequiredWhenSimilar": true,
@@ -1347,6 +1350,138 @@
       "sources": [
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/winterkoning",
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/boomkruiper"
+      ]
+    },
+    {
+      "id": "LK-030",
+      "focus": [
+        "sp056",
+        "sp057"
+      ],
+      "birds": [
+        "sp057",
+        "sp056"
+      ],
+      "risk": "adult",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Both hero photos source-matched in F3-R16; juvenile Fitis candidate held for independent review"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Zang",
+          "values": [
+            "Fitis melodieus en duidelijk aflopend riedeltje",
+            "Tjiftjaf steeds herhaald tjif-tjaf"
+          ]
+        },
+        {
+          "label": "Vleugelpunt",
+          "values": [
+            "Fitis doorgaans langere vleugelpunt",
+            "Tjiftjaf doorgaans kortere vleugelpunt"
+          ]
+        },
+        {
+          "label": "Gedrag",
+          "values": [
+            "Fitis wipt de staart nooit (Vogelbescherming)",
+            "Tjiftjaf wipt langzaam met de staart"
+          ]
+        }
+      ],
+      "caution": "Pootkleur alleen is onvoldoende; zang is het betrouwbaarste verschil.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/fitis",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/tjiftjaf"
+      ]
+    },
+    {
+      "id": "LK-031",
+      "focus": [
+        "sp057",
+        "sp058"
+      ],
+      "birds": [
+        "sp057",
+        "sp058"
+      ],
+      "risk": "adult",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Both photos source-matched in F3-R16; independent second review open"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Onderzijde",
+          "values": [
+            "Fitis geelwit zonder sterk contrast",
+            "Fluiter citroengele borst tegen helderwitte buik"
+          ]
+        },
+        {
+          "label": "Zang",
+          "values": [
+            "Fitis melodieus dalend riedeltje",
+            "Fluiter versnellende ratel en losse fluittonen"
+          ]
+        }
+      ],
+      "caution": "Belichting kan groentinten vertekenen; kijk naar het contrast tussen borst en buik.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/fitis",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/fluiter"
+      ]
+    },
+    {
+      "id": "LK-032",
+      "focus": [
+        "sp058"
+      ],
+      "birds": [
+        "sp056",
+        "sp058"
+      ],
+      "risk": "adult",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Both photos source-matched in F3-R16; independent second review open"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Borst en buik",
+          "values": [
+            "Tjiftjaf vaal met geleidelijke overgang",
+            "Fluiter citroengele bovenborst naast witte buik"
+          ]
+        },
+        {
+          "label": "Zang",
+          "values": [
+            "Tjiftjaf gelijkmatig herhaald tjif-tjaf",
+            "Fluiter versnellende ratel en fluittonen"
+          ]
+        }
+      ],
+      "caution": "Een stille vogel in tegenlicht blijft lastig; zang geeft het meeste houvast.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/tjiftjaf",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/fluiter"
       ]
     }
   ],

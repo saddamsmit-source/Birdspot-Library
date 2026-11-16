@@ -142,7 +142,9 @@ def check_assets():
     for bird_id, info in SPECIES.items():
         record = next(x for x in official["species"] if x["id"] == bird_id)
         assert record["audited"] is False and record["verdict"] == "NOT TESTED"
-        assert bird_id not in knowledge, "Full knowledge F2 remains separate"
+        # F3-R16 (16-11-2026): a knowledge profile may now exist, but only once the F3 recheck has picked up this bird.
+        f3 = next(x for x in load("docs/fotokwaliteit/F3_140_HERCONTROLE_V0.1_DRAFT.json")["records"] if x["id"] == bird_id)
+        assert bird_id not in knowledge or f3["F3"]["reviewedThisRound"] is True, "Full knowledge stays separate until F3 review"
         hero = credits[bird_id]
         assert hero["nl"] == info["name"] and hero["latin"] == info["latin"]
         assert hero["image"] == info["hero"]
