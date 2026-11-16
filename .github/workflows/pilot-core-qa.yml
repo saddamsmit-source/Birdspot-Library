@@ -14,7 +14,7 @@ permissions:
 jobs:
   offline-new-sighting:
     name: Real offline new sighting, PNG, close and reopen
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
@@ -40,7 +40,7 @@ jobs:
 
   zip-and-navigation:
     name: Existing ZIP restore and navigation regressions
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
@@ -71,7 +71,7 @@ jobs:
 
   upgrade:
     name: Upgrade baseline ${{ matrix.baseline.name }} without user-data loss
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 25
     strategy:
       fail-fast: false
