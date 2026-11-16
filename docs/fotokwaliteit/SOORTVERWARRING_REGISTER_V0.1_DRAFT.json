@@ -4,11 +4,14 @@
   "date": "2026-11-16",
   "status": "INCREMENTAL / PARTIALLY TESTED, NOT A COMPLETE LOOKALIKE CENSUS",
   "ownerRule": "docs/BIRDSPOT_KWALITEITSNORM.md §3.4 (owner decision 16-11-2026)",
-  "scope": "Critical lookalike sample from F3-R09 with earlier cases retained as reference; expand as each F3 batch is inspected, do not claim all 597 species assessed",
+  "scope": "Critical lookalike sample from F3-R09 and F3-R10 with earlier cases retained as reference; expand as each F3 batch is inspected, do not claim all 597 species assessed",
   "focusSpecies": [
     "sp034",
     "sp035",
-    "sp036"
+    "sp036",
+    "sp037",
+    "sp038",
+    "sp039"
   ],
   "policy": {
     "pairRequiredWhenSimilar": true,
@@ -353,6 +356,227 @@
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/groenling",
         "https://www.rspb.org.uk/birds-and-wildlife/identifying-birds/small-brown-birds-you-might-see-in-your-garden"
       ]
+    },
+    {
+      "id": "LK-008",
+      "focus": [
+        "sp037",
+        "sp038"
+      ],
+      "birds": [
+        "sp037",
+        "sp038"
+      ],
+      "risk": "juvenile; adult male",
+      "matchingPlumages": [
+        "juv",
+        "juv"
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Juvenile and male rest pairs exist; compare both source originals and confirm juvenile ages independently"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Kop",
+          "values": [
+            "Jonge Putter grijsbruin zonder rood masker",
+            "Jonge Sijs bruinig en duidelijk gestreept"
+          ]
+        },
+        {
+          "label": "Vleugel",
+          "values": [
+            "Putter brede gele band op zwarte vleugel",
+            "Sijs smallere gele streep met donkere tekening"
+          ]
+        },
+        {
+          "label": "Snavel",
+          "values": [
+            "Putter spitse, iets langere zaadsnavel",
+            "Sijs fijnere, kortere puntige snavel"
+          ]
+        }
+      ],
+      "caution": "Kleur alleen is bij jonge vogels onvoldoende; combineer kop, vleugel en snavel. Volwassen Putter met rood masker is zelden verwarrend.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/putter",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/sijs"
+      ]
+    },
+    {
+      "id": "LK-009",
+      "focus": [
+        "sp039"
+      ],
+      "birds": [
+        "sp039",
+        "sp295"
+      ],
+      "risk": "female, juvenile and winter",
+      "matchingPlumages": [
+        "adult_f",
+        "adult_f"
+      ],
+      "photoState": "MISSING_VERIFIED_PAIR",
+      "mediaOpen": [
+        "sp039 has no registered female photo; sp295 Frater has no registered guide photo"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Snavel",
+          "values": [
+            "Kneu het hele jaar een grijze kegelsnavel",
+            "Frater in de winter een gele snavel, in de zomer grijs"
+          ]
+        },
+        {
+          "label": "Keel en streping",
+          "values": [
+            "Kneu vrouwtje lichte, zwakke streping",
+            "Frater effen okerkleurige keel en zwaardere streping"
+          ]
+        },
+        {
+          "label": "Vleugel en stuit",
+          "values": [
+            "Kneu kleine witte vleugelvlek",
+            "Frater lichte vleugelstreep, mannetje met roze stuit"
+          ]
+        }
+      ],
+      "caution": "Vrouwtjes, jongen en wintervogels lijken sterk op elkaar; in de zomer helpt snavelkleur niet. Geen fotopaar tot beide foto's zijn gecontroleerd.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kneu",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/frater",
+        "https://birdwatchireland.ie/birds/twite/"
+      ]
+    },
+    {
+      "id": "LK-010",
+      "focus": [
+        "sp038"
+      ],
+      "birds": [
+        "sp038",
+        "sp300"
+      ],
+      "risk": "female and juvenile",
+      "matchingPlumages": [
+        "adult_f",
+        "adult_f"
+      ],
+      "photoState": "MISSING_VERIFIED_PAIR",
+      "mediaOpen": [
+        "sp300 Europese kanarie has no registered guide photo"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Snavel",
+          "values": [
+            "Sijs fijne, puntige snavel",
+            "Europese kanarie korte, dikke grijze snavel"
+          ]
+        },
+        {
+          "label": "Vleugel en stuit",
+          "values": [
+            "Sijs gele vleugelband en geel bij de staartbasis",
+            "Europese kanarie gele stuit, geen gele vleugelband"
+          ]
+        }
+      ],
+      "caution": "Beide zijn klein, geel en gestreept; jonge Europese kanaries missen geel. Europese kanarie is in Nederland een zeldzame broedvogel.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/sijs",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/europese-kanarie"
+      ]
+    },
+    {
+      "id": "LK-011",
+      "focus": [
+        "sp039"
+      ],
+      "birds": [
+        "sp039",
+        "sp296"
+      ],
+      "risk": "female, juvenile and winter",
+      "matchingPlumages": [
+        "adult_f",
+        "adult_f"
+      ],
+      "photoState": "MISSING_VERIFIED_PAIR",
+      "mediaOpen": [
+        "sp039 has no registered female photo; sp296 Grote barmsijs has no registered guide photo (sp297 Kleine barmsijs idem)"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Kin en kop",
+          "values": [
+            "Kneu geen zwarte kin; mannetje rood op voorhoofd en borst",
+            "Barmsijs rood voorhoofdje en zwarte kin of bef"
+          ]
+        },
+        {
+          "label": "Flank",
+          "values": [
+            "Kneu vrouwtje zwak gestreept",
+            "Barmsijs duidelijk gestreepte flanken"
+          ]
+        }
+      ],
+      "caution": "Vrouwtjes en jongen van barmsijzen missen rood op de borst; de zwarte kin is dan het beste kijkpunt. Geen fotopaar zonder gecontroleerde foto's.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kneu",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-barmsijs"
+      ]
+    },
+    {
+      "id": "LK-012",
+      "focus": [
+        "sp039"
+      ],
+      "birds": [
+        "sp039",
+        "sp042"
+      ],
+      "risk": "adult male",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Existing male rest pair; compare both source originals and Roodmus sex/age independently"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Roodverdeling",
+          "values": [
+            "Kneu rood op voorhoofd en borst, grijze kop",
+            "Roodmus rood op kop, borst en stuit"
+          ]
+        },
+        {
+          "label": "Snavel",
+          "values": [
+            "Kneu kleine grijze kegelsnavel",
+            "Roodmus korte, dikke en zware snavel"
+          ]
+        }
+      ],
+      "caution": "Alleen volwassen mannetjes zijn rood; vrouwtjes en jongen van beide soorten vragen andere kenmerken en geluid.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kneu",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/roodmus"
+      ]
     }
   ],
   "withinSpeciesVariation": [
@@ -373,7 +597,8 @@
     "comparisonCode": "src/features/species/guideComparisons.js",
     "knowledgeSource": "tools/kennisbaseline/knowledge.json",
     "visualReview": "docs/fotokwaliteit/F3_R09_STAARTMEES_VINK_GROENLING_2026-11-16_DRAFT.md",
-    "dataPreservation": "No new image bytes / no removal of existing species"
+    "dataPreservation": "No new image bytes / no removal of existing species",
+    "visualReviewR10": "docs/fotokwaliteit/F3_R10_PUTTER_SIJS_KNEU_2026-11-16_DRAFT.md"
   },
   "gate": "A pair can be labelled COMPLETE only with individual original image/right/sex/age proof, correct side-by-side render both directions and independent second review; structural CI PASS alone is insufficient"
 }
