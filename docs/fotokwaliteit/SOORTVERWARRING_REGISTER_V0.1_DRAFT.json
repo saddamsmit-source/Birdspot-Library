@@ -23,7 +23,10 @@
     "sp048",
     "sp049",
     "sp050",
-    "sp051"
+    "sp051",
+    "sp053",
+    "sp054",
+    "sp055"
   ],
   "policy": {
     "pairRequiredWhenSimilar": true,
@@ -1045,7 +1048,8 @@
     {
       "id": "LK-023",
       "focus": [
-        "sp050"
+        "sp050",
+        "sp053"
       ],
       "birds": [
         "sp050",
@@ -1058,7 +1062,7 @@
       ],
       "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
       "mediaOpen": [
-        "Roodborst photos matched to sources in F3-R14; Roodborsttapuit originals in its own round"
+        "Both sides matched to source images (Roodborst F3-R14, Roodborsttapuit F3-R15); independent second review of age/sex open"
       ],
       "textState": "PARTIALLY TESTED",
       "criticalMarks": [
@@ -1122,6 +1126,227 @@
       "sources": [
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwarte-roodstaart",
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/gekraagde-roodstaart"
+      ]
+    },
+    {
+      "id": "LK-025",
+      "focus": [
+        "sp053"
+      ],
+      "birds": [
+        "sp053",
+        "sp286"
+      ],
+      "risk": "female and juvenile",
+      "matchingPlumages": [
+        "adult_f",
+        "adult_f"
+      ],
+      "photoState": "MISSING_VERIFIED_PAIR",
+      "mediaOpen": [
+        "Paapje (sp286) has no guide photo and is outside the F3-140 scope; photo panel stays hidden, caution text stays on the Roodborsttapuit card"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Staartbasis",
+          "values": [
+            "Roodborsttapuit zonder wit aan de staartbasis",
+            "Paapje wit aan de staartbasis, vooral in vlucht zichtbaar"
+          ]
+        },
+        {
+          "label": "Wenkbrauw",
+          "values": [
+            "Vrouwtje Roodborsttapuit zonder duidelijke lichte wenkbrauwstreep",
+            "Paapje-vrouwtje beigewitte wenkbrauwstreep"
+          ]
+        }
+      ],
+      "caution": "De staartbasis is in rust vaak bedekt; jonge vogels zijn lastiger.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/roodborsttapuit",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/paapje",
+        "https://www.blascozumeta.com/specie_files/11393_ENG_Saxicola_rubicola_aranzadi.pdf"
+      ]
+    },
+    {
+      "id": "LK-026",
+      "focus": [
+        "sp054"
+      ],
+      "birds": [
+        "sp054",
+        "sp043"
+      ],
+      "risk": "adult vs female",
+      "matchingPlumages": [
+        null,
+        "adult_f"
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Both sides matched to source images (Huismus F3-R12, Heggenmus F3-R15); independent second review open"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Snavel",
+          "values": [
+            "Heggenmus fijn en spits",
+            "Huismus stevige, korte kegelsnavel"
+          ]
+        },
+        {
+          "label": "Kop",
+          "values": [
+            "Heggenmus blauwgrijs bij volwassen vogels",
+            "Huismus-vrouwtje lichtbruin met lichte wenkbrauwstreep"
+          ]
+        }
+      ],
+      "caution": "De gestreepte rug lijkt op elkaar en is geen onderscheid.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/heggenmus",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/huismus",
+        "https://www.rspb.org.uk/birds-and-wildlife/dunnock"
+      ]
+    },
+    {
+      "id": "LK-027",
+      "focus": [
+        "sp054"
+      ],
+      "birds": [
+        "sp054",
+        "sp044"
+      ],
+      "risk": "adult",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Both sides matched to source images (Ringmus F3-R12, Heggenmus F3-R15); independent second review open"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Kop",
+          "values": [
+            "Heggenmus blauwgrijs, zonder wangvlek",
+            "Ringmus roodbruine kruin, lichte wang met donkere vlek"
+          ]
+        },
+        {
+          "label": "Keel",
+          "values": [
+            "Heggenmus grijs",
+            "Ringmus klein zwart befje"
+          ]
+        }
+      ],
+      "caution": "Bij de Ringmus zijn man en vrouw gelijk.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/heggenmus",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/ringmus"
+      ]
+    },
+    {
+      "id": "LK-028",
+      "focus": [
+        "sp055"
+      ],
+      "birds": [
+        "sp055",
+        "sp054"
+      ],
+      "risk": "adult",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Both sides matched to source images in F3-R15; independent second review open"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Staart",
+          "values": [
+            "Winterkoning kort, vaak opgericht",
+            "Heggenmus langer, meestal niet omhoog"
+          ]
+        },
+        {
+          "label": "Kop en borst",
+          "values": [
+            "Winterkoning warmbruin met lichte wenkbrauw",
+            "Heggenmus grijzige kop en borst"
+          ]
+        },
+        {
+          "label": "Bouw",
+          "values": [
+            "Winterkoning rond en zeer compact (ca. 9–10 cm)",
+            "Heggenmus slanker en groter (ca. 13–15 cm)"
+          ]
+        }
+      ],
+      "caution": "Foto-uitsneden zijn geen maatvergelijking.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/heggenmus",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/winterkoning"
+      ]
+    },
+    {
+      "id": "LK-029",
+      "focus": [
+        "sp055"
+      ],
+      "birds": [
+        "sp055",
+        "sp066"
+      ],
+      "risk": "adult",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Winterkoning matched to source in F3-R15; Boomkruiper originals in its own round"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Snavel",
+          "values": [
+            "Winterkoning kort, recht en spits",
+            "Boomkruiper spits en omlaaggebogen"
+          ]
+        },
+        {
+          "label": "Staart",
+          "values": [
+            "Winterkoning kort, vaak opgewipt",
+            "Boomkruiper stijve steunstaart"
+          ]
+        },
+        {
+          "label": "Gedrag",
+          "values": [
+            "Winterkoning laag van struik naar struik",
+            "Boomkruiper klimt spiraalsgewijs langs een stam"
+          ]
+        }
+      ],
+      "caution": "Een Winterkoning houdt de staart soms omlaag; kijk dan naar snavel en gedrag.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/winterkoning",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/boomkruiper"
       ]
     }
   ],

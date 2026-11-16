@@ -139,7 +139,7 @@ for (const [label, ids] of [
 for (const [label, ids, images] of [
   ['Roodborsttapuit en Roodborst · vrouwtje en volwassen vogel in rust',
     ['sp053', 'sp050'], ['sp053-female-review.webp', 'sp050.webp']],
-  ['Heggenmus en Huismus · vrouwtje Huismus in rust',
+  ['Heggenmus en Huismus · volwassen in rust',
     ['sp054', 'sp043'], ['sp054.webp', 'sp043.webp']],
   ['Winterkoning en Heggenmus · in rust',
     ['sp055', 'sp054'], ['sp055.webp', 'sp054.webp']],

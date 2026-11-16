@@ -5132,6 +5132,16 @@
    "source": "vluchtcontrole",
    "decision": "goedgekeurd",
    "note": "Vrij in de lucht, geen poten of ondergrond zichtbaar."
+  },
+  "/assets/species/plumage/sp054-juv.webp": {
+   "refs": [
+    "sp054 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "68ba15baf5d1605400485b92ae49577a9d3c41c4",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Beeldinspectie 16-11-2026 (F3-R15)",
+   "note": "Juveniel op schors, hele vogel in beeld; uitgesneden rond de vogel."
   }
  }
 }

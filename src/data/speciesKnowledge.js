@@ -572,7 +572,7 @@ const DATA = {
    "edition": "Online geraadpleegd 11-11-2026",
    "scope": "Nederland",
    "confirms": "kleed, snavel, zang, lengte, broeden, leefgebied en trek",
-   "checked": "2026-11-11",
+   "checked": "2026-11-16",
    "certainty": "hoog",
    "publisher": "Vogelbescherming Nederland"
   },
@@ -627,7 +627,7 @@ const DATA = {
    "edition": "Online geraadpleegd 11-11-2026",
    "scope": "Groot-Brittannië, soortkenmerken",
    "confirms": "spitse snavel, grijze delen, overeenkomst tussen de geslachten en minder grijs bij juvenielen",
-   "checked": "2026-11-11",
+   "checked": "2026-11-16",
    "certainty": "hoog",
    "publisher": "RSPB"
   },
@@ -1749,7 +1749,7 @@ const DATA = {
    "edition": "Online bron",
    "scope": "Nederland",
    "confirms": "Bouw, staart, zang, lengte, Nederlands voorkomen en habitat",
-   "checked": "2026-11-12",
+   "checked": "2026-11-16",
    "certainty": "hoog",
    "publisher": "Vogelbescherming Nederland"
   },
@@ -1782,7 +1782,7 @@ const DATA = {
    "edition": "Online bron",
    "scope": "Nederland",
    "confirms": "Snavel, klimhouding en kleed",
-   "checked": "2026-11-12",
+   "checked": "2026-11-16",
    "certainty": "hoog",
    "publisher": "Vogelbescherming Nederland"
   },
@@ -1815,7 +1815,7 @@ const DATA = {
    "edition": "Online bron",
    "scope": "Iberisch referentiemateriaal",
    "confirms": "Lengte, juveniele vleugeltekening en gelijkend kleed van beide geslachten",
-   "checked": "2026-11-12",
+   "checked": "2026-11-16",
    "certainty": "hoog",
    "publisher": "Blasco-Zumeta & Heinze"
   },
@@ -2783,7 +2783,7 @@ const DATA = {
    "edition": "Online bron",
    "scope": "Nederland",
    "confirms": "Herkenning, geluid, leefgebied en leefwijze",
-   "checked": "2026-11-12",
+   "checked": "2026-11-16",
    "certainty": "hoog",
    "publisher": "Vogelbescherming Nederland"
   },
@@ -3179,7 +3179,7 @@ const DATA = {
    "edition": "Online bron",
    "scope": "Nederland",
    "confirms": "Herkenning voor de vergelijking",
-   "checked": "2026-11-12",
+   "checked": "2026-11-16",
    "certainty": "hoog",
    "publisher": "Vogelbescherming Nederland"
   },
@@ -3212,7 +3212,7 @@ const DATA = {
    "edition": "Online bron",
    "scope": "Nederland",
    "confirms": "Herkenning, geluid, leefgebied en leefwijze",
-   "checked": "2026-11-12",
+   "checked": "2026-11-16",
    "certainty": "hoog",
    "publisher": "Vogelbescherming Nederland"
   },
@@ -3223,7 +3223,7 @@ const DATA = {
    "edition": "Online bron",
    "scope": "Europa",
    "confirms": "Lengte, leeftijdskleden en onderscheid met Paapje",
-   "checked": "2026-11-12",
+   "checked": "2026-11-16",
    "certainty": "hoog",
    "publisher": "Blasco-Zumeta & Heinze"
   },
@@ -3234,7 +3234,7 @@ const DATA = {
    "edition": "Online bron",
    "scope": "Nederland",
    "confirms": "Verspreiding en seizoensvoorkomen",
-   "checked": "2026-11-12",
+   "checked": "2026-11-16",
    "certainty": "hoog",
    "publisher": "Sovon Vogelonderzoek Nederland"
   },
@@ -4700,6 +4700,39 @@ const DATA = {
    "checked": "2026-11-16",
    "certainty": "hoog",
    "publisher": "Royal Society for the Protection of Birds"
+  },
+  "BZH_HEGM": {
+   "register": "EU07",
+   "label": "Blasco-Zumeta & Heinze — Heggenmus",
+   "url": "https://www.blascozumeta.com/specie_files/10840_ENG_Prunella_modularis_aranzadi.pdf",
+   "edition": "Online bron",
+   "scope": "Europa",
+   "confirms": "Lengte en gestreepte kop en borst bij juvenielen",
+   "checked": "2026-11-16",
+   "certainty": "hoog",
+   "publisher": "Blasco-Zumeta & Heinze"
+  },
+  "SOV_HEGM": {
+   "register": "NL01",
+   "label": "Sovon — Heggenmus",
+   "url": "https://stats.sovon.nl/stats/soort/10840",
+   "edition": "Online geraadpleegd 16-11-2026",
+   "scope": "Nederland",
+   "confirms": "Broedpopulatie, trend en wintervoorkomen",
+   "checked": "2026-11-16",
+   "certainty": "hoog",
+   "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "SOV_WINTERKONING": {
+   "register": "NL01",
+   "label": "Sovon — Winterkoning",
+   "url": "https://stats.sovon.nl/stats/soort/10660",
+   "edition": "Online geraadpleegd 16-11-2026",
+   "scope": "Nederland",
+   "confirms": "Broedpopulatie, trend en wintervoorkomen",
+   "checked": "2026-11-16",
+   "certainty": "hoog",
+   "publisher": "Sovon Vogelonderzoek Nederland"
   }
  },
  "profiles": {
@@ -10469,13 +10502,30 @@ const DATA = {
       "VB_HEGM",
       "VB_HMUS"
      ]
+    },
+    {
+     "id": "sp044",
+     "why": "Ook een kleine bruine vogel van struiken en tuinen. Kop en keel geven het verschil.",
+     "sources": [
+      "VB_HEGM",
+      "VB_RINGMUS"
+     ]
+    },
+    {
+     "id": "sp055",
+     "why": "Klein en bruin in dezelfde lage begroeiing. Let op staart, bouw en de grijze kop.",
+     "sources": [
+      "VB_HEGM",
+      "VB_WINTERKONING"
+     ]
     }
    ],
    "detail": [
     {
-     "text": "Juvenielen hebben minder grijs dan volwassen vogels.",
+     "text": "Juvenielen zijn minder grijs dan volwassen vogels en hebben een gestreepte kop en borst.",
      "sources": [
-      "RSPB_HEGM"
+      "RSPB_HEGM",
+      "BZH_HEGM"
      ],
      "topic": "leeftijd"
     },
@@ -10497,12 +10547,26 @@ const DATA = {
     }
    ],
    "basis": {
-    "size": {
-     "text": "Vogelbescherming noemt 13–14,5 cm lengte.",
-     "sources": [
-      "VB_HEGM"
-     ]
-    }
+    "biometrics": [
+     {
+      "field": "length",
+      "unit": "cm",
+      "display": "ca. 13–15 cm",
+      "values": [
+       {
+        "source": "VB_HEGM",
+        "min": 13,
+        "max": 14.5
+       },
+       {
+        "source": "BZH_HEGM",
+        "min": 13,
+        "max": 15
+       }
+      ],
+      "note": "Gemiddelde ondergrens 13, gemiddelde bovengrens 14,75; afgerond op 1 cm."
+     }
+    ]
    },
    "habitat": [
     {
@@ -10518,6 +10582,13 @@ const DATA = {
      "text": "Jaarrond aanwezig. Een deel van de noordelijke vogels overwintert in Nederland of trekt door.",
      "sources": [
       "VB_HEGM"
+     ],
+     "kind": "voorkomen"
+    },
+    {
+     "text": "Zeer talrijke broedvogel met 175.000–225.000 paren (2018–2020). Sinds 1990 neemt het aantal broedparen licht maar significant af.",
+     "sources": [
+      "SOV_HEGM"
      ],
      "kind": "voorkomen"
     }
@@ -10540,16 +10611,17 @@ const DATA = {
    ],
    "discrepancies": [
     {
-     "field": "lengte",
-     "app": "13–14 cm",
-     "source": "13–14,5 cm. Het genoemde verschil is klein. De bestaande band blijft staan tot een tweede vergelijkbare band is vastgesteld.",
+     "field": "trend",
+     "app": "Toont de Sovon-trend",
+     "source": "Vogelbescherming noemt de populatie stabiel; Sovon meldt sinds 1990 en in de laatste twaalf jaar een significante afname van minder dan 5% per jaar. Sovon is leidend voor Nederlandse trends.",
      "sources": [
-      "VB_HEGM"
+      "VB_HEGM",
+      "SOV_HEGM"
      ]
     }
    ],
    "open": [
-    "Een afzonderlijke juvenielenfoto, een vrije-vluchtfoto en een eigen geluidsopname voor de gids ontbreken."
+    "Een vrije-vluchtfoto en een eigen geluidsopname voor de gids ontbreken."
    ]
   },
   "sp063": {
@@ -14505,6 +14577,14 @@ const DATA = {
       "VB_WINTERKONING",
       "VB_BOOMKRUIPER"
      ]
+    },
+    {
+     "id": "sp054",
+     "why": "Beide klein en bruin in lage begroeiing. De Heggenmus is groter, met grijze kop en borst en een langere staart.",
+     "sources": [
+      "VB_HEGM",
+      "VB_WINTERKONING"
+     ]
     }
    ],
    "detail": [
@@ -14570,6 +14650,13 @@ const DATA = {
       "VB_WINTERKONING"
      ],
      "kind": "voorkomen"
+    },
+    {
+     "text": "Uiterst talrijke broedvogel met 410.000–630.000 paren (2018–2020). Sinds 1990 is het aantal toegenomen, in de laatste twaalf jaar licht afgenomen.",
+     "sources": [
+      "SOV_WINTERKONING"
+     ],
+     "kind": "voorkomen"
     }
    ],
    "life": [
@@ -14581,7 +14668,17 @@ const DATA = {
      "kind": "voedsel"
     }
    ],
-   "discrepancies": [],
+   "discrepancies": [
+    {
+     "field": "trend",
+     "app": "Toont de Sovon-trend",
+     "source": "Vogelbescherming meldt sinds 1990 geen significante verandering; Sovon meldt sinds 1990 een toename en in de laatste twaalf jaar een afname. Sovon is leidend voor Nederlandse trends.",
+     "sources": [
+      "VB_WINTERKONING",
+      "SOV_WINTERKONING"
+     ]
+    }
+   ],
    "open": []
   },
   "sp098": {
@@ -20217,7 +20314,17 @@ const DATA = {
      "kind": "trek"
     }
    ],
-   "discrepancies": [],
+   "discrepancies": [
+    {
+     "field": "status",
+     "app": "Standvogel, ook zomergast (uit de canonieke vogellijst)",
+     "source": "Vogelbescherming noemt de soort wegtrekkend; Sovon geeft 18.000–22.000 broedparen (2018–2020) tegenover hooguit 200–1000 overwinteraars. Het merendeel trekt dus weg. De categorie blijft tot een besluit over de canonieke lijst ongewijzigd.",
+     "sources": [
+      "VB_ROODBORSTTAPUIT",
+      "SOV_ROODBORSTTAPUIT"
+     ]
+    }
+   ],
    "open": []
   },
   "sp177": {

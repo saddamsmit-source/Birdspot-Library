@@ -53,9 +53,9 @@
     "audioMissing": 75,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 98,
+    "nextNotStarted": 95,
     "secondBatchStarted": 3,
-    "contentInspected": 42,
+    "contentInspected": 45,
     "contentComplete": 0,
     "thirdBatchStarted": 3,
     "fourthBatchStarted": 3,
@@ -68,7 +68,8 @@
     "eleventhBatchStarted": 3,
     "twelfthBatchStarted": 3,
     "thirteenthBatchStarted": 3,
-    "fourteenthBatchStarted": 3
+    "fourteenthBatchStarted": 3,
+    "fifteenthBatchStarted": 3
   },
   "records": [
     {
@@ -4851,38 +4852,63 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R15",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "creditsAndCleanAudioUI": "NOT TESTED (no audio)",
+          "audioRecordingsAuthenticity": "BLOCKED (no recording; no reliable automatic species-verification method, see AUDIOCHECK_PROTOCOL v0.2)",
+          "audioLicenseAndAttribution": "BLOCKED (no recording)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (no audio file)",
+          "ebirdDistributionAndBias": "BLOCKED (eBird species page and printable list return an Anubis bot-check, 16-11-2026; source parked, not bypassed)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium 320/360/390 px via tests/test_lookalike_r15_browser.py; no physical device)",
+          "endToEndGuideUI": "PARTIALLY TESTED (Chromium species card and lookalike panels; no device or offline run)",
+          "independentSecondReview": "NOT TESTED (own re-inspection is not independent)",
+          "photoOriginalIdentity": "VERIFIED (origcheck 16-11-2026: all 4 shown photos same shot as source, Pearson r >= 0.999; see docs/media-intake/2026-11-16/origcheck-r15/origcheck.json)",
+          "photoIndividualRights": "VERIFIED (current Commons author and licence match the register for all 4)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (two different adult males, female and juvenile match Vogelbescherming plumage descriptions; no free-flight photo: one Commons candidate perched on wire, rejected; old video still stays retired since 10-11)",
+          "photoPairComparisons": "PARTIALLY TESTED (three Roodborst panels; Paapje pair text-only because Paapje has no guide photo)",
+          "soundRolesSongCall": "PARTIALLY TESTED (text only; call description matches Vogelbescherming)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming species page read 16-11-2026: plumages, Paapje/Roodborst as lookalikes, call, habitat; ANWB-vogelgids NOT TESTED: no accessible edition in this environment, no other publisher presented as ANWB)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (length ca. 12–14 cm VERIFIED with two publishers: Vogelbescherming 11.5–13, Blasco-Zumeta & Heinze 13–15; wingspan and weight have no second publisher)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon 16-11-2026: 18,000–22,000 pairs 2018–2020, strong increase since 1990, max. 200–1000 wintering; app category 'Standvogel' conflicts with mainly migratory status, recorded as discrepancy, canonical list not changed)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-023 Roodborst both sides source-matched; LK-025 Paapje text only, panel hidden)"
         },
         "findings": [
-          "Scherpe, herleidbare foto in vrije vlucht, bij voorkeur van een mannetje.",
-          "Geen lokaal geregistreerde zang of roep"
+          "Vier lokale foto's tegen het bronbeeld: alle vier dezelfde opname (r ≥ 0,999); rechten gelijk aan Commons.",
+          "Rollen kloppen met Vogelbescherming: twee verschillende mannetjes, vrouwtje (bruine kop, oranje borst) en gespikkelde juveniel.",
+          "Vrije-vluchtfoto ontbreekt: enige Commons-kandidaat zit op prikkeldraad; de oude videostill blijft gearchiveerd.",
+          "Lengte ca. 12–14 cm met twee uitgevers bevestigd.",
+          "Status: Vogelbescherming 'wegtrekkend', Sovon max. 200–1000 overwinteraars tegenover 18.000–22.000 paren; app-categorie 'Standvogel' als bronverschil vastgelegd.",
+          "eBird BLOCKED (botcontrole); ANWB-gids NOT TESTED."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/roodborsttapuit",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/paapje",
+          "https://www.blascozumeta.com/specie_files/11393_ENG_Saxicola_rubicola_aranzadi.pdf",
+          "https://stats.sovon.nl/stats/soort/11390",
+          "docs/media-intake/2026-11-16/origcheck-r15/origcheck.json",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R15_ROODBORSTTAPUIT_HEGGENMUS_WINTERKONING_2026-11-16_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on physical device; local source/photo review and Chromium only",
+        "independence": "PARTIAL / origcheck by Claude; no independent reviewer",
+        "fullPass": false,
+        "photoFilesInspected": 4,
+        "photoBlobSHAs": [
+          "0e06bab10f3fea8fb75cc08a324bc32caf36afdf",
+          "c4fd6768b4f71ae5e6bcdeaeb67b097b7d6a23ed",
+          "f0dda40f131c844612cf958de4cd6ab8eaa356ab",
+          "f68b2ab8e007a8b8db22b9369b09e089d34e2f48"
+        ],
+        "photoSourceMatches": [],
+        "priorPhotoMatches": [],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [],
+        "contentStatus": "PARTIALLY REVIEWED (all shown photos checked against source images; no flight photo; no audio; no FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R15 node/browser tests run separately."
       }
     },
     {
@@ -4903,45 +4929,76 @@
             "role": "Hoofdfoto",
             "path": "/assets/species/sp054.webp",
             "oldRights": "VERIFIED"
+          },
+          {
+            "role": "Verenkleed (Juveniel)",
+            "path": "/assets/species/plumage/sp054-juv.webp",
+            "oldRights": "NEW (Commons, caroline legg, CC BY 2.0; SHA-1 origineel b04f9c42; uitsnede)",
+            "addedIn": "F3-R15-media"
           }
         ],
         "existingAudioCount": 0,
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R15",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "creditsAndCleanAudioUI": "NOT TESTED (no audio)",
+          "audioRecordingsAuthenticity": "BLOCKED (no recording; no reliable automatic species-verification method, see AUDIOCHECK_PROTOCOL v0.2)",
+          "audioLicenseAndAttribution": "BLOCKED (no recording)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (no audio file)",
+          "ebirdDistributionAndBias": "BLOCKED (eBird species page and printable list return an Anubis bot-check, 16-11-2026; source parked, not bypassed)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium 320/360/390 px via tests/test_lookalike_r15_browser.py; no physical device)",
+          "endToEndGuideUI": "PARTIALLY TESTED (Chromium species card and lookalike panels; no device or offline run)",
+          "independentSecondReview": "NOT TESTED (own re-inspection is not independent)",
+          "photoOriginalIdentity": "VERIFIED (origcheck 16-11-2026: main photo same shot, r = 1.00; new juvenile imported from SHA-1-pinned Commons original)",
+          "photoIndividualRights": "VERIFIED (main CC0 Hobbyfotowiki matches Commons apart from a location suffix in the author field; juvenile CC BY 2.0 caroline legg)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (adult and new juvenile match sources; no free-flight photo: Commons search returned no candidate)",
+          "photoPairComparisons": "PARTIALLY TESTED (Huismus female, Ringmus, Winterkoning and Roodborst panels)",
+          "soundRolesSongCall": "PARTIALLY TESTED (text only; song description matches Vogelbescherming)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming species page read 16-11-2026: grey head and breast, pointed bill, lookalikes Huismus/Ringmus/Winterkoning; ANWB-vogelgids NOT TESTED: no accessible edition in this environment, no other publisher presented as ANWB)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (length corrected to ca. 13–15 cm with two publishers: Vogelbescherming 13–14.5, Blasco-Zumeta & Heinze 13–15; wingspan and weight have no second publisher)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon 16-11-2026: 175,000–225,000 pairs 2018–2020, significant decline <5%/yr since 1990 and last 12 years; Vogelbescherming 'stabiel' recorded as discrepancy)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-026 Huismus, LK-027 Ringmus, LK-028 Winterkoning: all photos source-matched; independent review open)"
         },
         "findings": [
-          "Afzonderlijke juvenielenfoto",
-          "Vrije-vluchtfoto",
-          "Geen lokaal geregistreerde zang of roep"
+          "Hoofdfoto tegen het bronbeeld: dezelfde opname (r = 1,00).",
+          "Nieuwe juvenielenfoto (caroline legg, CC BY 2.0): gestreepte kop en borst, gele mondhoek; rol was open.",
+          "Lengte gecorrigeerd van 13–14 cm naar ca. 13–15 cm (twee uitgevers); familielabel 'Heggenmussen'.",
+          "Nieuwe vergelijking Heggenmus–Ringmus (kop en keel).",
+          "Sovon: significante afname sinds 1990; Vogelbescherming noemt de soort stabiel (bronverschil vastgelegd).",
+          "Vrije-vluchtfoto ontbreekt; eBird BLOCKED; ANWB-gids NOT TESTED."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/heggenmus",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/huismus",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/ringmus",
+          "https://www.rspb.org.uk/birds-and-wildlife/dunnock",
+          "https://www.blascozumeta.com/specie_files/10840_ENG_Prunella_modularis_aranzadi.pdf",
+          "https://stats.sovon.nl/stats/soort/10840",
+          "docs/media-intake/2026-11-16/origcheck-r15/origcheck.json",
+          "tools/media/intake_selection_2026-11-16_r15.json",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R15_ROODBORSTTAPUIT_HEGGENMUS_WINTERKONING_2026-11-16_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on physical device; local source/photo review and Chromium only",
+        "independence": "PARTIAL / origcheck by Claude; no independent reviewer",
+        "fullPass": false,
+        "photoFilesInspected": 2,
+        "photoBlobSHAs": [
+          "e049ac4fadb7058c0675a96e8240dc05c9542ba8",
+          "e86aca22581fd19edf2c800cb2ee8dc489ffc1de"
+        ],
+        "photoSourceMatches": [],
+        "priorPhotoMatches": [],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [],
+        "contentStatus": "PARTIALLY REVIEWED (all shown photos checked against source images; no flight photo; no audio; no FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R15 node/browser tests run separately."
       }
     },
     {
@@ -4973,38 +5030,61 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R15",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "creditsAndCleanAudioUI": "NOT TESTED (no audio)",
+          "audioRecordingsAuthenticity": "BLOCKED (no recording; no reliable automatic species-verification method, see AUDIOCHECK_PROTOCOL v0.2)",
+          "audioLicenseAndAttribution": "BLOCKED (no recording)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (no audio file)",
+          "ebirdDistributionAndBias": "BLOCKED (eBird species page and printable list return an Anubis bot-check, 16-11-2026; source parked, not bypassed)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium 320/360/390 px via tests/test_lookalike_r15_browser.py; no physical device)",
+          "endToEndGuideUI": "PARTIALLY TESTED (Chromium species card and lookalike panels; no device or offline run)",
+          "independentSecondReview": "NOT TESTED (own re-inspection is not independent)",
+          "photoOriginalIdentity": "VERIFIED (origcheck 16-11-2026: main photo r = 1.00; juvenile crop r = 0.848 below the automatic threshold, visually the same shot in the side-by-side; register SHA-1 is the local file hash and matches)",
+          "photoIndividualRights": "VERIFIED (current Commons author and licence match for both photos)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (adult and juvenile; juvenile age supported by yellow gape and photographer label; no free-flight photo: Commons search returned only unrelated files)",
+          "photoPairComparisons": "PARTIALLY TESTED (Heggenmus pair; Boomkruiper pair pending Boomkruiper's own F3 round)",
+          "soundRolesSongCall": "PARTIALLY TESTED (text only; song description matches Vogelbescherming)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming species page read 16-11-2026: size, raised tail, eyebrow, loud song; Vogelbescherming uses Nannus troglodytes; ANWB-vogelgids NOT TESTED: no accessible edition in this environment, no other publisher presented as ANWB)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (length ca. 9–10 cm VERIFIED with two publishers: Vogelbescherming 9–10.5, Blasco-Zumeta & Heinze 9–10; wingspan and weight have no second publisher)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon 16-11-2026: 410,000–630,000 pairs 2018–2020, increase since 1990, decline last 12 years; Vogelbescherming 'geen significante verandering' recorded as discrepancy)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-028 Heggenmus source-matched; LK-029 Boomkruiper rows added, partner photo pending)"
         },
         "findings": [
-          "Voldoende scherpe en gelicentieerde foto in vrije vlucht.",
-          "Geen lokaal geregistreerde zang of roep"
+          "Twee lokale foto's tegen het bronbeeld: hoofdfoto r = 1,00; juveniel visueel dezelfde opname (uitsnede, r = 0,848).",
+          "Juveniel: register-SHA-1 is die van het lokale bestand en klopt; het Commons-origineel heeft SHA-1 0bc81c72 (origcheck).",
+          "Lengte ca. 9–10 cm met twee uitgevers bevestigd.",
+          "Vergelijking Boomkruiper kreeg drie brongedragen kenmerkregels (snavel, staart, gedrag).",
+          "Sovon-trend afwijkend van Vogelbescherming (bronverschil vastgelegd).",
+          "Vrije-vluchtfoto ontbreekt; eBird BLOCKED; ANWB-gids NOT TESTED."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/winterkoning",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/boomkruiper",
+          "https://www.blascozumeta.com/specie_files/10660_ENG_Troglodytes_troglodytes_aranzadi.pdf",
+          "https://stats.sovon.nl/stats/soort/10660",
+          "docs/media-intake/2026-11-16/origcheck-r15/origcheck.json",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R15_ROODBORSTTAPUIT_HEGGENMUS_WINTERKONING_2026-11-16_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on physical device; local source/photo review and Chromium only",
+        "independence": "PARTIAL / origcheck by Claude; no independent reviewer",
+        "fullPass": false,
+        "photoFilesInspected": 2,
+        "photoBlobSHAs": [
+          "b1dbc2ec84401f12d5af77d6bce816f55404cb10",
+          "561ac4e94a912c41d3e58b912f9106e8ee3c2e04"
+        ],
+        "photoSourceMatches": [],
+        "priorPhotoMatches": [],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [],
+        "contentStatus": "PARTIALLY REVIEWED (all shown photos checked against source images; no flight photo; no audio; no FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R15 node/browser tests run separately."
       }
     },
     {
