@@ -7788,6 +7788,30 @@ export const GUIDE_POSES = Object.freeze({
       "height": 961,
       "image": "/assets/species/plumage/sp044-flight.webp",
       "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+    },
+    {
+      "nl": "Ringmus",
+      "latin": "Passer montanus",
+      "label": "In vlucht",
+      "flight": true,
+      "alt": "Ringmus in vrije vlucht van achteren gezien, vleugels en staart gespreid; kastanjebruine kruin en zwarte wangvlek zichtbaar.",
+      "note": "Vrije vlucht: let op de kastanjebruine kruin en de zwarte wangvlek op de witte wang.",
+      "visualCheck": "Ringmus vrij in de lucht tegen egale groene achtergrond, vleugels en staart gespreid, geen poten of ondergrond zichtbaar; kruin en wangvlek herkenbaar.",
+      "verification": "Commons-titel en categorie noemen Eurasian tree sparrow; kastanjebruine kruin en zwarte wangvlek bevestigen de soort. Geslachten gelijk.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/ringmus",
+      "file": "Eurasian-Tree-Sparrow.jpg",
+      "author": "Mildeep",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Eurasian-Tree-Sparrow.jpg",
+      "showSourceLink": true,
+      "sourceSha1": "d50be2c413fd35c0ff4d29ce93d1ee48a4f16d68",
+      "reviewed": "2026-11-16",
+      "intake": "tools/media/commons_intake.py (GitHub Actions)",
+      "image": "/assets/species/plumage/sp044-flight-free.webp",
+      "width": 1400,
+      "height": 1314,
+      "modifications": "Uitsnede rond de vogel (fracties 0.36, 0.12, 0.90, 0.88), verkleind tot max. 1400 px en omgezet naar WebP zonder EXIF/GPS/XMP"
     }
   ],
   "sp045": [
