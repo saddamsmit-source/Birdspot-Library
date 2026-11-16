@@ -5090,6 +5090,26 @@
    "source": "F3-R07",
    "decision": "goedgekeurd",
    "note": "Jonge Gaai van dichtbij, met een bruine kruin, zacht ogend kleed en blauw gebandeerde vleugeldekveren."
+  },
+  "/assets/species/plumage/sp039-adult_f.webp": {
+   "refs": [
+    "sp039 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "c5302c39e091299ba7a1415ddc759c49847284c2",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle F3-R10-media (2026-11-16, Claude; geen onafhankelijke certificering)",
+   "note": "Vrouwtje Kneu op een takje: bruingrijs, licht gestreept, grijze snavel, geen rood."
+  },
+  "/assets/species/plumage/sp039-juv.webp": {
+   "refs": [
+    "sp039 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "d402798b3afcbc0b33bd40b9d6d3fa05bd58ee4a",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle F3-R10-media (2026-11-16, Claude; geen onafhankelijke certificering)",
+   "note": "Jonge Kneu op een tak tussen bladeren: gestreept, geen rood, grijze snavel."
   }
  }
 }

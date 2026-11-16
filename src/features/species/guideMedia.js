@@ -6237,6 +6237,57 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "note": "Het blauw gebandeerde vleugelveld is al zichtbaar.",
       "age": "juvenile"
     }
+  },
+  "sp039": {
+    "adult_f": {
+      "nl": "Kneu",
+      "latin": "Linaria cannabina",
+      "age": "adult",
+      "sex": "female",
+      "alt": "Vrouwtje Kneu op een tak: bruingrijs, licht gestreepte borst en kruin, grijze kegelsnavel, geen rood.",
+      "note": "Vrouwtje Kneu in rust. Let op de grijze snavel, de zwak gestreepte borst en het ontbreken van rood.",
+      "visualCheck": "Kleine vink op een takje, zijaanzicht. Bruingrijs met lichte streping, grijze kegelsnavel, geen rood op voorhoofd of borst; past bij een vrouwtje Kneu.",
+      "verification": "De fotograaf benoemt een vrouwtje Kneu (Otmoor RSPB Reserve, Oxfordshire). Zichtbare kenmerken passen; geslacht volgt het fotograaflabel.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kneu",
+      "file": "Linnet (Linaria cannabina) female.jpg",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Linnet_%28Linaria_cannabina%29_female.jpg",
+      "showSourceLink": true,
+      "sourceSha1": "2622240c3938ae3534a05f178bbfd5b6919030f2",
+      "reviewed": "2026-11-16",
+      "intake": "tools/media/commons_intake.py (GitHub Actions)",
+      "image": "/assets/species/plumage/sp039-adult_f.webp",
+      "width": 1400,
+      "height": 1400,
+      "modifications": "Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+      "sha1": "c5302c39e091299ba7a1415ddc759c49847284c2"
+    },
+    "juv": {
+      "nl": "Kneu",
+      "latin": "Linaria cannabina",
+      "age": "juvenile",
+      "alt": "Jonge Kneu op een tak tussen bladeren: bruingrijs en gestreept, zonder rood.",
+      "note": "Jonge Kneu. Lijkt op het vrouwtje: geen rood en lichte streping op kruin en borst.",
+      "visualCheck": "Jonge vink op een tak, zijaanzicht. Gestreepte borst en kop, geen rood, grijze snavel; past bij een juveniele Kneu.",
+      "verification": "De fotograaf benoemt een juveniele Kneu (Prees Heath, Shropshire). Leeftijd volgt het fotograaflabel en het verse, gestreepte kleed.",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kneu",
+      "file": "Linnet Linaria cannabina, juvenile, Prees Heath, Shropshire 1.jpg",
+      "author": "gailhampshire from Cradley, Malvern, U.K",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Linnet_Linaria_cannabina%2C_juvenile%2C_Prees_Heath%2C_Shropshire_1.jpg",
+      "showSourceLink": true,
+      "sourceSha1": "2bd252402b2675fe932786877e6e4d14198cd6b5",
+      "reviewed": "2026-11-16",
+      "intake": "tools/media/commons_intake.py (GitHub Actions)",
+      "image": "/assets/species/plumage/sp039-juv.webp",
+      "width": 1400,
+      "height": 1184,
+      "modifications": "Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+      "sha1": "d402798b3afcbc0b33bd40b9d6d3fa05bd58ee4a"
+    }
   }
 });
 export const GUIDE_HEROES = Object.freeze({

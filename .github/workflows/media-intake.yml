@@ -1,0 +1,64 @@
+name: Birdspot Media Intake (Commons)
+
+# Handmatig gestart. Haalt media alleen op GitHub-runners op (de agentruntime heeft geen
+# toegang tot mediahosts). Schrijft uitsluitend naar de gekozen F3-mediabranch, nooit naar
+# main of preview. Elke import is vastgepind op SHA-1 en licentie in een manifest in Git.
+on:
+  # Start door een verzoekbestand te pushen (workflow_dispatch vereist dat de workflow op de
+  # standaardbranch staat; die wordt niet gewijzigd). Commits van deze workflow (GITHUB_TOKEN)
+  # starten geen nieuwe run, dus er ontstaat geen lus.
+  push:
+    branches:
+      - 'qa/birdspot-f3-*-media-*'
+    paths:
+      - 'tools/media/requests/current.json'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: media-intake-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  intake:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Weiger beschermde branches
+        run: |
+          case "${GITHUB_REF_NAME}" in
+            main|preview/*|release/*) echo "Niet toegestaan op ${GITHUB_REF_NAME}"; exit 1;;
+            qa/birdspot-f3-*-media-*) ;;
+            *) echo "Alleen F3-mediabranches"; exit 1;;
+          esac
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Afhankelijkheden
+        run: |
+          python -m pip install pillow==11.0.0
+          ffmpeg -version | head -1
+      - name: Intake
+        run: |
+          MODE=$(python -c "import json;print(json.load(open('tools/media/requests/current.json'))['mode'])")
+          MANIFEST=$(python -c "import json;print(json.load(open('tools/media/requests/current.json'))['manifest'])")
+          OUT=$(python -c "import json;print(json.load(open('tools/media/requests/current.json')).get('out','docs/media-intake/2026-11-16'))")
+          case "$MODE" in discover|import) ;; *) echo "Onbekende modus"; exit 1;; esac
+          echo "MODE=$MODE" >> "$GITHUB_ENV"; echo "MANIFEST=$MANIFEST" >> "$GITHUB_ENV"
+          if [ "$MODE" = discover ]; then
+            python tools/media/commons_intake.py discover "$MANIFEST" --out "$OUT"
+          else
+            python tools/media/commons_intake.py import "$MANIFEST"
+          fi
+      - name: Commit resultaat naar dezelfde branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A assets docs/media-intake tools/media src/features/species
+          if git diff --cached --quiet; then echo "Geen wijzigingen"; exit 0; fi
+          git commit -m "Birdspot media-intake ($MODE): $MANIFEST
+
+          Gestart door de geclaimde schrijver van deze branch via een verzoekbestand; run ${{ github.run_id }}."
+          git push origin HEAD:${GITHUB_REF_NAME}
