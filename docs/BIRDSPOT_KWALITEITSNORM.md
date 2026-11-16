@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| Versie | 1.6 · 15-11-2026 |
+| Versie | 1.7 · 16-11-2026 |
 | Status | Vastgesteld eigenaarbesluit (Kevin Smit, Project Owner). Onafhankelijke documentreview: open |
 | Herkomst | Eigenaaropdracht "Nieuwe eigenaarbesluiten, livegang en batch M3" (10-11-2026) en het vastgelegde besluit op PR #127 ([comment 6779875047](https://github.com/saddamsmit-source/Birdspot-Library/pull/127#issuecomment-6779875047)) |
 | Geldt voor | Alle soortkaarten van Birdspot Library: soortdata (`src/data/species.js`), kennisprofielen (`tools/kennisbaseline/knowledge.json`), gidsfoto's en soortaudit |
@@ -175,6 +175,18 @@ De uitkomst per foto staat in `docs/fotokwaliteit/soortaudit/M*.json` en `SOORTA
 
 ---
 
+### 3.4 Verplichte determinatie van sterk gelijkende soorten (eigenaarbesluit 16-11-2026)
+
+**Voor alle 597 soorten en elke volgende F3-batch:** identificeer expliciet potentiële verwarringssoorten. Dit is een kwaliteitsregel binnen de bestaande Birdspot-bron- en fotonorm, geen los normboek.
+
+1. **Inventariseer** verwarringsparen op soort, geslacht, leeftijd en seizoen. Benoem precies de moeilijke situatie (bv. vrouwtje Vink ↔ vrouwtje Groenling; Kuifeend ↔ Topper; Matkop ↔ Glanskop). Leg per soort de geselecteerde partner-ID en verwarringscontext in de bestaande bron-/F3-audit vast. Geen onbewezen dubbelganger toevoegen.
+2. **Fotobewijs:** per te tonen vergelijking twee afzonderlijk geverifieerde, duidelijk zichtbare opnamen met **hetzelfde veren-/leeftijdskleed en vergelijkbare houding**. Controleer in beide foto's de werkelijk onderscheidende onderdelen (snavel, kop, vleugel, staart, rug/onderzijde) en leg per asset originele bestandspagina, maker, licentie, individuele soort-/kleedidentiteit en beeldkwaliteit vast. Als de cruciale kenmerken niet zichtbaar zijn, kies andere bronfoto's of houd het fotopaar verborgen. Hergebruik geen AI-illustratie als foto van een echte vogel.
+3. **Verklarende tekst:** toon twee tot drie concrete, brononderbouwde kenmerken **per kant** in een vergelijking, in eenvoudige taal. Markeer overlap, leeftijds-/seizoensvariatie, beperkt zicht, fotohoek of licht en een mogelijk doorslaggevender geluid. Geen kleur, snavelbasis, kuif, vleugelbaan of formaat als zelfstandig soortbewijs presenteren als dat kenmerk bij beide voorkomt.
+4. **Gebruiker en twijfel:** laat bij onvoldoende bewijs de soort onbepaald of onzeker; een automatische akoestische suggestie wordt nooit zelfstandig als zekere soort opgeslagen. Controleer de tekst zowel in de soortkaart als in het werkelijke zichtbare kennisprofiel en de twee navigatierichtingen. Beide foto's naast elkaar op 320/360/390 px, met zoom en toegankelijke verplichte ⓘ-credits.
+5. **Releasegate:** foto's en tekst moeten **samen** onderscheid helpen maken. Eén complete bronfoto of goede tekst compenseert geen ontbrekend tweede fotobestand. Bestaande UI-regel §3.1 verbergt onvolledige vergelijkingspanelen. Onvolledige rollen en ontbrekende audio blijven expliciet open in F3. Onafhankelijke ornithologische determinatie-, mediarechten-, functionele en fysieke checks voor FULL PASS blijven intact.
+
+**Toepassing direct bij F3-R09:** Vink `sp035` ↔ Groenling `sp036` bij vrouwtjes; Staartmees `sp034` met witte-kopvariatie versus witkopstaartmees en het algemenere verwarringsrisico bij kleine mezen. Andere koppelingen volgen na gerichte bronaudit. Oude vergelijking met Sijs/Glanskop/Topper blijft behouden. Geen andere soort zonder expliciet bewijs wijzigen.
+
 ## 4. Statussen en presentatie
 
 - Gebruik alleen de statussen VERIFIED, PARTIALLY TESTED, NOT TESTED en BLOCKED. Gebruik nooit een PASS die niet echt gehaald is.
@@ -202,3 +214,4 @@ De uitkomst per foto staat in `docs/fotokwaliteit/soortaudit/M*.json` en `SOORTA
 | 1.4 | 14-11-2026 | Eigenaar verduidelijkt bronvoorrang: soortinformatie van Vogelbescherming Nederland en daadwerkelijk ingeziene ANWB-vogelgids als eerste referentie om **zelf gevonden** foto's, kleden en verklarende tekst te controleren. Niet verplicht bronfoto's te gebruiken. ANWB-productpagina is geen soortbewijs; bestand-, rechten- en zespuntscontrole blijven apart. |
 | 1.5 | 14-11-2026 | Eigenaar bepaalt dat niet-verplichte bronvermeldingen verdwijnen uit de gebruikersweergave, zonder achterliggende broncontroles te verwijderen. Verplichte foto-, audio- en data-attributies blijven intact en toegankelijk. |
 | 1.6 | 15-11-2026 | Eigenaar laat onvolledige fotoparen en lege "Nog geen passende foto"-vakken **bij alle soorten** uit "Lijkt op" verdwijnen. Alleen complete twee-fotopanelen tonen; brondata, openpunten, eerdere vlucht-/leeftijdsafkeuringen en werkende fotovergelijkingen behouden. |
+| 1.7 | 16-11-2026 | Eigenaarregel voor sterk gelijkende soorten: kleedspecifieke vergelijkingsfoto's én tekst moeten samen onderscheid mogelijk maken; overlappingen, twijfels, originele bronnen, twee richtingen en onvolledige foto-gate verplicht (§3.4). |
