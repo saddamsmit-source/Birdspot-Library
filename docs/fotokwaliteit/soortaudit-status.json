@@ -6514,7 +6514,10 @@
       "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours",
       "annotations": []
      },
-     "flight": null
+     "flight": null,
+     "retiredIn": "F3-R21-QA",
+     "retiredOn": "2026-11-17",
+     "retiredReason": "Niet-vrijgegeven leeftijdsrol (F3-R21 preflight 17-11-2026): Commons-bestandsomschrijving noemt female, categorieën bevatten zowel female als juvenile; zonder onafhankelijke leeftijdsbepaling niet als juveniel tonen. Bestand, rechten en audit blijven behouden."
     },
     {
      "image": "/assets/species/plumage/sp075-flight.webp",

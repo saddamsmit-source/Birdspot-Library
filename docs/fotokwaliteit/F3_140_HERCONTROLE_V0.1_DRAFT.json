@@ -6509,11 +6509,6 @@
             "oldRights": "VERIFIED"
           },
           {
-            "role": "Verenkleed (Juveniel)",
-            "path": "/assets/species/plumage/sp075-juv-review.webp",
-            "oldRights": "VERIFIED"
-          },
-          {
             "role": "In vlucht",
             "path": "/assets/species/plumage/sp075-flight.webp",
             "oldRights": "VERIFIED"
@@ -6553,9 +6548,12 @@
         },
         "findings": [
           "Vogelbescherming noemt 17–19,5 cm, Blasco-Zumeta & Heinze 15–17 cm. De getoonde ca. 16–18 cm volgt de vastgelegde methode met beide bronwaarden.",
-          "Geen lokaal geregistreerde zang of roep"
+          "Geen lokaal geregistreerde zang of roep",
+          "F3-R21-QA preflight 17-11-2026: sp075-juv-review.webp uit zichtbare juvenielenrol gehaald (Commons-file noemt female; categorieën female én juvenile; leeftijd niet onafhankelijk bewezen). Originele foto, rechten en historie behouden als retired.sp075. F3-inhoudsronde nog NIET STARTED."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://commons.wikimedia.org/wiki/File:Common_Kingfisher_2025_08_30_01.jpg"
+        ],
         "reviewedOriginalAudio": 0,
         "showcasePreview": "NOT TESTED ON F3",
         "independence": "NOT VERIFIED",

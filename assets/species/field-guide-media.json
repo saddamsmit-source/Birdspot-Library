@@ -1897,7 +1897,7 @@
         "reviewed": "2026-11-15",
         "taxon": "Parus major",
         "verification": "Soort en type volgens de individuele bron. Het appbestand is volledig gedecodeerd en met het auteursbestand vergeleken.",
-        "duration": 4.0,
+        "duration": 4,
         "originalURL": "https://upload.wikimedia.org/wikipedia/commons/1/15/Great_Tit_%28Parus_major%29_territorial_calls_-_B%C3%A6rum%2C_Norway_2021-03-15.mp3",
         "sourceNote": "De maker noemt dit territoriale roepen. Opgenomen in Bærum, Noorwegen.",
         "date": "2021-03-15",
@@ -8309,27 +8309,6 @@
         "image": "/assets/species/plumage/sp075-female-review.webp"
       },
       {
-        "label": "Juveniel",
-        "flight": false,
-        "age": "juvenile",
-        "note": "Jonge IJsvogel met een donkere zoom op de borstveren, rustend op een tak.",
-        "file": "Common Kingfisher 2025 08 30 01.jpg",
-        "nl": "IJsvogel",
-        "latin": "Alcedo atthis",
-        "author": "Alexis Lours",
-        "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-        "source": "https://commons.wikimedia.org/wiki/File:Common_Kingfisher_2025_08_30_01.jpg",
-        "alt": "Jonge IJsvogel met een donkere zoom op de borstveren, rustend op een tak.",
-        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
-        "reviewed": "2026-11-08",
-        "verificationSource": "https://www.blascozumeta.com/specie_files/08310_Aldedo_atthis_E.pdf",
-        "visualCheck": "Jonge IJsvogel met een donkere zoom op de borstveren, rustend op een tak.",
-        "width": 1400,
-        "height": 933,
-        "image": "/assets/species/plumage/sp075-juv-review.webp"
-      },
-      {
         "label": "Mannetje in rust",
         "flight": false,
         "sex": "male",
@@ -11060,6 +11039,32 @@
         "retiredOn": "2026-11-17",
         "retiredFrom": "plumage.sp069.juv",
         "retiredReason": "Niet-vrijgegeven kandidaat (F3-R20): onscherpe foto; leeftijd plausibel (donkere baardstreep, lichte wenkbrauw), maar soort niet overtuigend — jonge Citroenkwikstaart en Witte Kwikstaart zijn op dit beeld niet uitgesloten; zelfde iNaturalist-maker als de eerder niet vrijgegeven Vuurgoudhaan-juveniel; rechten alleen registermatig. Bestand, bron en licentie bewaard; terugplaatsen alleen na onafhankelijke determinatie."
+      }
+    ],
+    "sp075": [
+      {
+        "label": "Juveniel",
+        "flight": false,
+        "age": "juvenile",
+        "note": "Jonge IJsvogel met een donkere zoom op de borstveren, rustend op een tak.",
+        "file": "Common Kingfisher 2025 08 30 01.jpg",
+        "nl": "IJsvogel",
+        "latin": "Alcedo atthis",
+        "author": "Alexis Lours",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Common_Kingfisher_2025_08_30_01.jpg",
+        "alt": "Jonge IJsvogel met een donkere zoom op de borstveren, rustend op een tak.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-08",
+        "verificationSource": "https://www.blascozumeta.com/specie_files/08310_Aldedo_atthis_E.pdf",
+        "visualCheck": "Jonge IJsvogel met een donkere zoom op de borstveren, rustend op een tak.",
+        "width": 1400,
+        "height": 933,
+        "image": "/assets/species/plumage/sp075-juv-review.webp",
+        "retiredOn": "2026-11-17",
+        "retiredFrom": "poses.sp075.Juveniel",
+        "retiredReason": "Niet-vrijgegeven leeftijdsrol (ChatGPT QA 2026-11-17): de primaire Commons-bestandspagina File:Common Kingfisher 2025 08 30 01.jpg beschrijft de vogel als 'female' terwijl zowel female- als juvenile-categorieën zijn gekoppeld. De lokale foto maakt de leeftijd niet ondubbelzinnig; geen onafhankelijke determinatie aangetoond. Foto, auteur, CC BY 4.0 en bron bewaard. Herplaatsen als juveniel pas na onafhankelijk leeftijdsbewijs."
       }
     ]
   }
