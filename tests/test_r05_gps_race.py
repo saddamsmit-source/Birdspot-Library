@@ -207,7 +207,7 @@ def main():
         def g8(page):
             # Opslagrace (#293 QA): Opslaan zonder pin, changePhotos blijft open, dán antwoordt auto-GPS.
             page.evaluate('window.__gpsOnDemand = true')
-            places_before = page.evaluate("JSON.parse(localStorage.getItem('birdspot-places') || '[]').length")
+            places_before = page.evaluate("(JSON.parse(localStorage.getItem('birdspot-places') || 'null')?.places || []).map(p => p.id)")
             n = len(rows(page))
             open_sheet(page)
             page.wait_for_function('window.__releaseGps !== null', timeout=5000)
@@ -225,9 +225,15 @@ def main():
             new = rows(page)[n:]
             assert len(new) == 1 and new[0].get('lat') is None and new[0].get('placeId') is None, new
             assert len(new[0].get('photoIds') or []) == 1, 'foto niet meegeschreven: race niet echt getest'
-            places_after = page.evaluate("JSON.parse(localStorage.getItem('birdspot-places') || '[]').length")
-            assert places_after == places_before, (places_before, places_after)
-            return 'GPS tijdens opslaan genegeerd: geen coördinaten, geen nieuwe plek'
+            places_after = page.evaluate("(JSON.parse(localStorage.getItem('birdspot-places') || 'null')?.places || []).map(p => p.id)")
+            assert places_after == places_before, ('nieuwe/verweesde plek', places_before, places_after)
+            # Positieve falsificatie (#293 QA): de teller moet een extra geschreven plek wél zien.
+            page.evaluate("""() => { const raw = JSON.parse(localStorage.getItem('birdspot-places') || 'null') || { schemaVersion: 1, places: [] };
+              raw.places = [...(raw.places || []), { id: 'pl_falsificatie', name: 'x', lat: 1, lon: 1 }];
+              localStorage.setItem('birdspot-places', JSON.stringify(raw)); }""")
+            probe = page.evaluate("(JSON.parse(localStorage.getItem('birdspot-places') || 'null')?.places || []).map(p => p.id)")
+            assert probe == places_before + ['pl_falsificatie'], ('teller ziet extra plek niet', probe)
+            return f'GPS tijdens opslaan genegeerd: geen coördinaten; plek-IDs ongewijzigd ({len(places_before)}), extra plek wél gedetecteerd'
         scenario('G8 opslagrace', 'granted', 0, 100, g8)
 
         browser.close()
