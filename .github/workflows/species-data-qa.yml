@@ -13,6 +13,9 @@ on:
       - "src/data/seasons.js"
       - "src/features/map/**"
       - "tests/test_species_detail.py"
+      - "tests/test_personal_guide.py"
+      - "tests/test_photo_feedback.mjs"
+      - "api/photo-feedback.mjs"
       - "styles/species.css"
       - "tests/fixtures/species_ids_*.json"
       - "src/features/profile/stats.js"
@@ -48,6 +51,15 @@ jobs:
           git diff --exit-code src/data/speciesLife.js
       - name: Species detail tabs QA
         run: python tests/test_species_detail.py
+      - name: Personal guide mobile QA
+        run: python tests/test_personal_guide.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Private photo feedback API QA
+        run: |
+          npm ci --no-audit --no-fund
+          node --test tests/test_photo_feedback.mjs
       - name: Soortgroepen A-Z QA (Soorten-pagina + soortkiezer bij loggen)
         run: python tests/test_species_groups_az.py
       - name: Showcase build is idempotent (showcaseData.js matches photos)

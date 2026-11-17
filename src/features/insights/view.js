@@ -2,6 +2,7 @@
  * Birdspot Signature — Insights, Phase 3
  * Calculations run locally against canonical sightings; read-only, no API.
  */
+import { appIcon } from '../../utils/icons.js';
 import { getSightings } from '../../data/sightings.js';
 import { escHtml } from '../../utils/html.js';
 import { calculateInsights } from './analytics.js';
@@ -70,12 +71,12 @@ function topSpeciesMarkup(stats) {
 
 function milestones(stats) {
   const cards=[];
-  if(stats.first) cards.push({icon:'✦',title:'Eerste waarneming',text:fmtDay(stats.first.date)});
-  if(stats.topMonth) cards.push({icon:'◒',title:'Actiefste maand',text:stats.topMonth.name+' · '+stats.topMonth.count+' waarnemingen'});
-  if(stats.mostActiveDay) cards.push({icon:'⌖',title:'Bijzondere dag',text:fmtDay(stats.mostActiveDay.date)+' · '+stats.mostActiveDay.count+' waarnemingen'});
+  if(stats.first) cards.push({icon:'first',title:'Eerste waarneming',text:fmtDay(stats.first.date)});
+  if(stats.topMonth) cards.push({icon:'calendar',title:'Actiefste maand',text:stats.topMonth.name+' · '+stats.topMonth.count+' waarnemingen'});
+  if(stats.mostActiveDay) cards.push({icon:'calendar',title:'Bijzondere dag',text:fmtDay(stats.mostActiveDay.date)+' · '+stats.mostActiveDay.count+' waarnemingen'});
   if(!cards.length) return '<div class="phase3-empty-small">Leg je eerste vogelwaarneming vast om persoonlijke mijlpalen te ontdekken.</div>';
   return '<div class="phase3-achievement-grid">'+cards.map(c=>
-    '<article class="phase3-achievement"><span aria-hidden="true">'+c.icon+'</span><div><strong>'+safe(c.title)+
+    '<article class="phase3-achievement"><span aria-hidden="true">'+appIcon(c.icon)+'</span><div><strong>'+safe(c.title)+
     '</strong><small>'+safe(c.text)+'</small></div></article>').join('')+'</div>';
 }
 
@@ -109,12 +110,12 @@ export function renderInsights(el) {
     }
     body.innerHTML=
       '<div class="phase3-kpi-grid">'+[
-        ['✦',stats.speciesCount,'Vogelsoorten'],
-        ['⌖',stats.total,'Waarnemingen'],
-        ['◈',stats.locationsCount,'Locaties'],
-        ['▣',stats.photographed,'Met media'],
+        ['bird',stats.speciesCount,'Vogelsoorten'],
+        ['observations',stats.total,'Waarnemingen'],
+        ['pin',stats.locationsCount,'Locaties'],
+        ['media',stats.photographed,'Met media'],
       ].map(([icon,count,name])=>
-        '<article class="phase3-kpi"><span aria-hidden="true">'+icon+'</span><strong>'+count+'</strong>'+
+        '<article class="phase3-kpi"><span aria-hidden="true">'+appIcon(icon)+'</span><strong>'+count+'</strong>'+
         '<small>'+safe(name)+'</small></article>').join('')+'</div>'+
       '<section class="phase3-panel phase3-month-panel">'+
         '<div class="phase3-panel-head"><div><span class="signature-eyebrow">THE YEAR IN FLIGHT</span>'+

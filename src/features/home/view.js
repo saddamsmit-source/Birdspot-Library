@@ -9,8 +9,12 @@
  *   - Open-Meteo REST API (geen key)
  */
 
+import { appIcon } from '../../utils/icons.js';
 import { getDB }                          from '../../data/db.js';
 import { getSightings }                   from '../../data/sightings.js';
+import { groupHotspots } from './hotspots.js';
+import { ensureLeaflet } from '../map/view.js';
+import { LAYERS } from '../map/centerPin.js';
 import { escHtml } from '../../utils/html.js';
 import { getPhotoUrl, revokePhotoUrl }    from '../../utils/photoUrl.js';
 import { initFeaturedCarousel } from './featuredCarousel.js';
@@ -35,10 +39,15 @@ export function renderHome(el, { onSearchSelect } = {}) {
   el.innerHTML = buildSkeleton();
   // New signature shortcuts use existing router; no parallel navigation state.
   const onSignatureClick = e => {
-    const button = e.target.closest('[data-signature-route], [data-home-sighting], [data-featured-species]');
+    const button = e.target.closest('[data-signature-route], [data-home-sighting], [data-home-hotspot-sighting], [data-featured-species]');
     if (!button) return;
     if (button.hasAttribute('data-featured-species')) {
       onSearchSelect?.({ route: 'species', speciesId: button.dataset.featuredSpecies || undefined });
+      return;
+    }
+    const hotspotId = button.dataset.homeHotspotSighting;
+    if (hotspotId) {
+      onSearchSelect?.({ route: 'map', sightingId: hotspotId });
       return;
     }
     const sightingId = button.dataset.homeSighting;
@@ -57,7 +66,7 @@ export function renderHome(el, { onSearchSelect } = {}) {
   loadWeather(el, ctx);
   loadRecentSightings(el, ctx);
   loadMonthlyChart(el, ctx);
-  loadHotspotsMap(el, ctx);
+  loadHotspotsMap(el, ctx, onSearchSelect);
 
   return function cleanup() {
     ctx.destroyed = true;
@@ -65,6 +74,11 @@ export function renderHome(el, { onSearchSelect } = {}) {
     disposeSearch();
     disposeFeatured();
     disposeHabitat();
+    ctx.hotspotObserver?.disconnect();
+    clearTimeout(ctx.hotspotTimer);
+    clearTimeout(ctx.hotspotResize);
+    ctx.hotspotMap?.remove();
+    ctx.hotspotMap = null;
     // Geef alle openstaande blob-URL's vrij (recent-thumbnails)
     _revokeRecentThumbUrls();
   };
@@ -111,16 +125,20 @@ function buildSkeleton() {
       </button>
       <div id="featuredBirdCredit" class="featured-photo-info"></div>
       <div class="featured-birds__caption">
-        <p class="field-eyebrow">Vandaag in beeld</p>
-        <span class="featured-birds__group" id="featuredBirdGroup"></span>
-        <h2 id="featuredBirdName"></h2>
-        <em id="featuredBirdLatin"></em>
+        <div class="featured-birds__identification">
+          <p class="field-eyebrow">Vandaag in beeld</p>
+          <span class="featured-birds__group" id="featuredBirdGroup"></span>
+          <h2 id="featuredBirdName"></h2>
+          <em id="featuredBirdLatin"></em>
+        </div>
         <div class="field-featured-actions">
           <button type="button" class="field-action" data-featured-species><span data-featured-label>Bekijk soortkaart</span> <span aria-hidden="true">›</span></button>
           <details class="field-featured-notes">
             <summary>Veldkenmerken</summary>
-            <p id="featuredBirdWhere"></p>
-            <p class="featured-birds__presence" id="featuredBirdPresence"></p>
+            <div class="field-featured-notes__body">
+              <p id="featuredBirdWhere"></p>
+              <p class="featured-birds__presence" id="featuredBirdPresence"></p>
+            </div>
           </details>
         </div>
       </div>
@@ -128,10 +146,10 @@ function buildSkeleton() {
 
     <!-- Stat tiles — 4 kolommen -->
     <div class="stats-row" id="statsRow">
-      ${statTile('stat-species', '—', 'Soorten',     iconBird())}
-      ${statTile('stat-total',   '—', 'Waarnemingen', iconEye())}
-      ${statTile('stat-photos',  '—', "Media",        iconPhoto())}
-      ${statTile('stat-hotspot', '—', 'Hotspots',    iconMap())}
+      ${statTile('stat-species', '—', 'Soorten',     appIcon('bird'))}
+      ${statTile('stat-total',   '—', 'Waarnemingen', appIcon('observations'))}
+      ${statTile('stat-photos',  '—', "Media",        appIcon('media'))}
+      ${statTile('stat-hotspot', '—', 'Hotspots',    appIcon('pin'))}
     </div>
 
     <!-- Recente waarnemingen -->
@@ -160,10 +178,10 @@ function buildSkeleton() {
         <span class="signature-quick-access__chevron" aria-hidden="true">⌄</span>
       </summary>
       <div class="signature-home-links signature-quick-access__links">
-        <button data-signature-route="journal" class="signature-home-link" type="button">✦ &nbsp; Birding Journal <span aria-hidden="true">↗</span></button>
-        <button data-signature-route="insights" class="signature-home-link" type="button">▥ &nbsp; Mijn Inzichten <span aria-hidden="true">↗</span></button>
-        <button data-signature-route="film" class="signature-home-link signature-home-link--film" type="button">✦ &nbsp; Wildlife Film Studio <span aria-hidden="true">↗</span></button>
-        <button data-signature-route="map" class="signature-home-link" type="button">⌖ &nbsp; Explorer Map <span aria-hidden="true">↗</span></button>
+        <button data-signature-route="journal" class="signature-home-link" type="button">${appIcon('book')} Birding Journal <span aria-hidden="true">↗</span></button>
+        <button data-signature-route="insights" class="signature-home-link" type="button">${appIcon('freq')} Mijn Inzichten <span aria-hidden="true">↗</span></button>
+        <button data-signature-route="film" class="signature-home-link signature-home-link--film" type="button">${appIcon('film')} Wildlife Film Studio <span aria-hidden="true">↗</span></button>
+        <button data-signature-route="map" class="signature-home-link" type="button">${appIcon('map')} Explorer Map <span aria-hidden="true">↗</span></button>
       </div>
     </details>
 
@@ -403,7 +421,7 @@ async function loadWeather(el, ctx) {
             <span>💧 ${c.relative_humidity_2m}%</span>
           </div>
           <div class="weather-tip">
-            <strong><span aria-hidden="true">${iconBird()}</span>${summary}</strong>
+            <strong><span aria-hidden="true">${appIcon('bird')}</span>${summary}</strong>
             ${tips.length ? `<ul>${tips.map(tip => `<li>${tip}</li>`).join('')}</ul>` : ''}
           </div>
         </div>
@@ -682,96 +700,128 @@ async function loadMonthlyChart(el, ctx) {
 // ══════════════════════════════════════════════════════════
 // HOTSPOTS MINIMAP  (native SVG, alleen werkelijke GPS-data)
 // ══════════════════════════════════════════════════════════
-async function loadHotspotsMap(el, ctx) {
+async function loadHotspotsMap(el, ctx, onSearchSelect) {
   const section = el.querySelector('#hotspotsSection');
   if (!section) return;
   const loader = section.querySelector('.dash-section__loading');
 
   try {
     const sightings = (await getSightings()).filter(Boolean);
-    if (ctx.destroyed) return;
-
-    // Alleen waarnemingen met werkelijke GPS-coördinaten
-    const withGps = sightings.filter(s =>
-      typeof s.lat === 'number' && typeof s.lon === 'number' &&
-      !isNaN(s.lat) && !isNaN(s.lon)
-    );
-
-    if (withGps.length === 0) {
-      if (loader) loader.outerHTML = `
-        <div class="hotspot-empty">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" style="width:32px;height:32px;opacity:.35">
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-            <circle cx="12" cy="10" r="3"/>
-          </svg>
-          <p>Nog geen GPS-locaties — voeg coördinaten toe aan waarnemingen</p>
-        </div>
-      `;
+    if (ctx.destroyed || !section.isConnected) return;
+    // A named placeId is the true pin identity. Nearby, distinct pins are never merged.
+    const points = groupHotspots(sightings);
+    if (!points.length) {
+      loader?.remove();
+      section.insertAdjacentHTML('beforeend', `<div class="hotspot-empty">
+        <p>Nog geen waarnemingen met GPS. Je kunt een plek toevoegen via Waarnemen.</p>
+        <button type="button" class="hotspot-open" data-signature-route="map">Open mijn kaart</button>
+      </div>`);
       return;
     }
 
-    // Groepeer op locatie (afronden op 3 decimalen ≈ ~100m)
-    const clusters = {};
-    for (const s of withGps) {
-      const key = `${s.lat.toFixed(3)},${s.lon.toFixed(3)}`;
-      if (!clusters[key]) clusters[key] = { lat: s.lat, lon: s.lon, count: 0, species: new Set() };
-      clusters[key].count++;
-      if (s.speciesId) clusters[key].species.add(s.speciesId);
-    }
-    const points = Object.values(clusters);
-
-    // Bounding box
-    const lats = points.map(p => p.lat);
-    const lons = points.map(p => p.lon);
-    let minLat = Math.min(...lats), maxLat = Math.max(...lats);
-    let minLon = Math.min(...lons), maxLon = Math.max(...lons);
-
-    // Voeg padding toe aan bounding box (5%)
-    const latPad = Math.max((maxLat - minLat) * 0.2, 0.005);
-    const lonPad = Math.max((maxLon - minLon) * 0.2, 0.005);
-    minLat -= latPad; maxLat += latPad;
-    minLon -= lonPad; maxLon += lonPad;
-
-    const W = 320, H = 180;
-    const maxCount = Math.max(...points.map(p => p.count));
-
-    // Project lat/lon → SVG-coördinaten (Mercator-benadering)
-    const project = (lat, lon) => {
-      const x = ((lon - minLon) / (maxLon - minLon)) * (W - 20) + 10;
-      // Latituderichting omgekeerd (noord = boven)
-      const y = ((maxLat - lat) / (maxLat - minLat)) * (H - 20) + 10;
-      return { x, y };
-    };
-
-    const dotsSvg = points.map(p => {
-      const { x, y } = project(p.lat, p.lon);
-      const r     = Math.max(5, Math.min(14, 5 + (p.count / maxCount) * 9));
-      const label = p.count > 1 ? p.count : '';
-      return `
-        <circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r.toFixed(1)}"
-                class="hotspot-dot" style="--r:${r.toFixed(1)}px"/>
-        ${label ? `<text x="${x.toFixed(1)}" y="${(y + 4.5).toFixed(1)}" class="hotspot-label">${label}</text>` : ''}
-      `;
+    const locations = points.length, observations = points.reduce((count, point) => count + point.count, 0);
+    const displayed = points.slice(0, 3);
+    const listing = displayed.map(p => {
+      const species = p.speciesNames.slice(0, 2).join(' · ') || 'Vogelwaarneming';
+      return `<button type="button" class="hotspot-place" data-home-hotspot-sighting="${escHtml(p.sightingId || '')}"
+        aria-label="Open ${escHtml(p.name)} op de kaart, ${p.count} waarnemingen">
+        <span class="hotspot-place__pin" aria-hidden="true">⌖</span>
+        <span class="hotspot-place__details"><strong>${escHtml(p.name)}</strong>
+          <small>${escHtml(species)}</small></span>
+        <span class="hotspot-place__count">${p.count}</span>
+      </button>`;
     }).join('');
 
-    const totalLocations = points.length;
-    const totalSightings = withGps.length;
+    loader?.remove();
+    section.insertAdjacentHTML('beforeend', `
+      <div class="hotspot-wrap" data-hotspot-count="${locations}">
+        <div id="homeHotspotMap" class="hotspot-map hotspot-map--live"
+          role="region" aria-label="Overzichtskaart met ${locations} privé-waarnemingslocaties">
+          <p class="hotspot-map-status" id="hotspotMapStatus" role="status">Kaart laden…</p>
+        </div>
+        <div class="hotspot-meta">${locations} locatie${locations === 1 ? '' : 's'} ·
+          ${observations} waarneming${observations === 1 ? '' : 'en'} met GPS</div>
+        <div class="hotspot-location-list" aria-label="Mijn opgeslagen hotspots">${listing}</div>
+        ${points.length > displayed.length ? `<p class="hotspot-more">En nog ${points.length - displayed.length} locaties op de kaart.</p>` : ''}
+        <button type="button" class="hotspot-open" data-signature-route="map">Bekijk volledige kaart</button>
+      </div>
+    `);
 
-    const svg = `
-      <svg class="hotspot-map" viewBox="0 0 ${W} ${H}"
-           role="img" aria-label="Kaart van waarnemingslocaties">
-        <rect width="${W}" height="${H}" class="hotspot-bg"/>
-        ${dotsSvg}
-      </svg>
-      <div class="hotspot-meta">${totalLocations} locatie${totalLocations !== 1 ? 's' : ''} · ${totalSightings} waarneming${totalSightings !== 1 ? 'en' : ''} met GPS</div>
-    `;
-
-    if (ctx.destroyed) return;
-    if (loader) loader.outerHTML = `<div class="hotspot-wrap">${svg}</div>`;
-
+    // The section is below Home's first screen; only fetch tiles once it is on screen.
+    const preview = section.querySelector('#homeHotspotMap');
+    const status = section.querySelector('#hotspotMapStatus');
+    const showMap = async () => {
+      ctx.hotspotObserver?.disconnect();
+      if (ctx.destroyed || !preview?.isConnected) return;
+      if (navigator.onLine === false) {
+        status.textContent = 'Offline: je opgeslagen locaties staan hieronder. Kaarttegels vereisen internet.';
+        return;
+      }
+      try {
+        await Promise.race([
+          ensureLeaflet(),
+          new Promise((_, reject) => setTimeout(() => reject(new Error('CDN timeout')), 6500)),
+        ]);
+        if (ctx.destroyed || !preview.isConnected) return;
+        const L = window.L;
+        const map = L.map(preview, {
+          zoomControl: false, attributionControl: true,
+          dragging: false, scrollWheelZoom: false, doubleClickZoom: false,
+          boxZoom: false, touchZoom: false, keyboard: false, tap: false,
+        });
+        ctx.hotspotMap = map;
+        const tiles = L.tileLayer(LAYERS.kaart.url, { ...LAYERS.kaart.options, maxZoom: 18 }).addTo(map);
+        const hideNotice = () => {
+          clearTimeout(ctx.hotspotTimer);
+          if (!ctx.destroyed) status.hidden = true;
+        };
+        tiles.on('load', hideNotice);
+        tiles.on('tileerror', () => {
+          if (!ctx.destroyed && !status.hidden) {
+            status.textContent = 'Kaarttegels niet bereikbaar; je locaties staan hieronder.';
+          }
+        });
+        ctx.hotspotTimer = setTimeout(() => {
+          if (!ctx.destroyed && !status.hidden) {
+            status.textContent = 'Kaarttegels niet bereikbaar; je locaties staan hieronder.';
+          }
+        }, 7000);
+        for (const point of points) {
+          const marker = L.circleMarker([point.lat, point.lon], {
+            radius: Math.min(16, 7 + Math.sqrt(point.count) * 2),
+            color: '#ffffff', weight: 2, fillColor: '#078866', fillOpacity: 1,
+          }).addTo(map);
+          marker.bindTooltip(escHtml(point.name + ' · ' + point.count + ' waarneming' +
+            (point.count === 1 ? '' : 'en')), { direction: 'top' });
+          marker.on('click', () => {
+            if (!ctx.destroyed && point.sightingId) {
+              onSearchSelect?.({ route: 'map', sightingId: point.sightingId });
+            }
+          });
+        }
+        if (points.length === 1) map.setView([points[0].lat, points[0].lon], 15);
+        else map.fitBounds(points.map(point => [point.lat, point.lon]), { padding: [26, 26], maxZoom: 15 });
+        ctx.hotspotResize = setTimeout(() => {
+          if (!ctx.destroyed && preview.isConnected) map.invalidateSize();
+        }, 100);
+      } catch (_) {
+        if (ctx.destroyed) return;
+        ctx.hotspotMap?.remove();
+        ctx.hotspotMap = null;
+        status.textContent = 'De kaart kan nu niet laden; je opgeslagen locaties staan hieronder.';
+      }
+    };
+    if ('IntersectionObserver' in window) {
+      ctx.hotspotObserver = new IntersectionObserver(entries => {
+        if (entries.some(entry => entry.isIntersecting)) showMap();
+      }, { rootMargin: '250px' });
+      ctx.hotspotObserver.observe(preview);
+    } else showMap();
   } catch (_) {
     if (ctx.destroyed) return;
-    if (loader) loader.outerHTML = `<div class="dash-section__error">Kaart niet beschikbaar</div>`;
+    if (loader) loader.outerHTML = `<div class="dash-section__error">
+      Je hotspots konden niet worden geladen. Je waarnemingen blijven opgeslagen.
+    </div>`;
   }
 }
 
@@ -810,20 +860,6 @@ function txGet(store, key) {
 }
 
 // ── SVG icon helpers ───────────────────────────────────────
-function iconBird() {
-  return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12 Q6 6 12 8 Q16 5 21 3 Q19 11 13 12 Q9 13 7 18Z"/></svg>`;
-}
-function iconEye() {
-  return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>`;
-}
-function iconPhoto() {
-  return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>`;
-}
-function iconMap() {
-  return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>`;
-}
-
-// ── HTML helper ────────────────────────────────────────────
 function statTile(id, value, label, iconSvg) {
   const route = { 'stat-species':'species','stat-total':'sightings',
     'stat-photos':'media','stat-hotspot':'map' }[id] || 'home';

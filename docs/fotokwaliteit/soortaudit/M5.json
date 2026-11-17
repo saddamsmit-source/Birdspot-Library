@@ -137,6 +137,14 @@
           "quality": "Vlieghouding en vleugeltekening duidelijk.",
           "verdict": "goedgekeurd"
         },
+        "/assets/species/plumage/sp037-flight-free.webp": {
+          "role": "In vlucht",
+          "content": "Putter vrij in de lucht van opzij met half geheven vleugels, rood gezicht, zwart-witte kop en brede gele vleugelband; poten hangen omlaag.",
+          "sexAge": "Geslacht niet vastgesteld; rood masker overlapt tussen de geslachten.",
+          "quality": "Scherp genoeg voor vleugelband en kop, maar sterke HDR-bewerking met oranje kleurzweem. Voorlopig; vervanging met natuurlijke kleuren gewenst.",
+          "verdict": "voorwaardelijk",
+          "addedIn": "F3-R10b-media"
+        },
         "/assets/species/sp037.webp": {
           "role": "Overige herkenningsfoto's",
           "content": "Volwassen Putter op een tak met brede gele vleugelband en rood gezicht.",
@@ -146,7 +154,8 @@
         }
       },
       "corrections": [
-        "Mannetje, vrouwtje en juveniel met bronvermelding toegevoegd. Vrije vlucht behouden. Vluchtvergelijking met Sijs toegevoegd."
+        "Mannetje, vrouwtje en juveniel met bronvermelding toegevoegd. Vrije vlucht behouden. Vluchtvergelijking met Sijs toegevoegd.",
+        "F3-R10b (2026-11-16): extra vrije-vluchtfoto (Holger Uwe Schmitt, CC BY-SA 4.0) toegevoegd via de Commons-intake; voorwaardelijk wegens sterke kleurbewerking. Bestaande vluchtfoto blijft."
       ],
       "missing": [],
       "wishes": [

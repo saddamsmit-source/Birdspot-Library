@@ -1,0 +1,32 @@
+name: Birdspot F3-R21 IJsvogel Juvenile QA
+
+on:
+  push:
+    branches:
+      - qa/birdspot-f3-r21-ijsvogel-juvenile-qa-20261117
+  pull_request:
+    branches:
+      - qa/birdspot-f3-r20-media-witte-gele-kwikstaart-veldleeuwerik-20261117
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-role-retirement:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Check real UI and non-destructive retirement
+        run: |
+          node tests/test_f3_r21_ijsvogel_juvenile_hold.mjs
+          node tests/test_f3_140_unified_rebaseline.mjs
+          node tests/test_soortaudit.mjs
+      - name: Generated files remain source-exact
+        run: |
+          python3 tools/species/build.py
+          git diff --exit-code src/features/species/guideMedia.js src/features/species/guidePhotos.js

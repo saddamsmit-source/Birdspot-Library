@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-16",
+  "purpose": "F3-R12: Huismus-roep na volledige audiocheck (bronlabel + referentievergelijking marge 0,13 tegen Ringmus + visuele spectrogramcontrole). Niet door mens beluisterd.",
+  "items": [
+    {
+      "speciesId": "sp043",
+      "kind": "audio",
+      "role": "call",
+      "title": "File:Joseph Sardin - Passer domesticus tschilp call.oga",
+      "sha1": "46ee39de7b769fb79f6b09532dfba088e6a299eb",
+      "license": "CC0",
+      "author": "Joseph Sardin",
+      "asset": "/assets/species/audio/sp043-call.mp3",
+      "start": 0,
+      "seconds": 6.2,
+      "audiocheck": {
+        "report": "docs/media-intake/2026-11-16/audiocheck-r12/audiocheck.json",
+        "judgement": "sp043_call_cand_1",
+        "soundType": "call",
+        "visual": "Regelmatige breedbandige tsjilp-elementen rond 3-4 kHz met harmonischen, ±0,4 s interval; Ringmus-referenties hoger (4-5 kHz). Geen storende andere soort zichtbaar."
+      },
+      "register": {
+        "label": "Roep",
+        "note": "Het bekende 'tsjilp' van de Huismus.",
+        "verification": "VERIFIED (triangulatie 16-11-2026: bronlabel, akoestische referentievergelijking, visuele spectrogramcontrole; niet door mens beluisterd)",
+        "verificationReport": "docs/media-intake/2026-11-16/audiocheck-r12/audiocheck.json#sp043_call_cand_1"
+      }
+    }
+  ]
+}

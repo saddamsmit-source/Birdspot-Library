@@ -1,0 +1,9 @@
+{
+  "name": "birdspot-library",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@vercel/blob": "2.9.0",
+    "sharp": "0.34.5"
+  }
+}

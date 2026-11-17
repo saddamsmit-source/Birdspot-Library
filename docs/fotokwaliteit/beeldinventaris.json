@@ -126,16 +126,26 @@
    "source": "contactsheet 10-11-2026",
    "note": ""
   },
-  "/assets/species/plumage/sp002-flight.webp": {
+  "/assets/species/plumage/sp002-flight-wingband.webp": {
    "refs": [
     "sp002 GUIDE_POSES[0]"
    ],
-   "sha1": "165934d868ed883470b2433e11a8edc1cd96180d",
+   "sha1": "ce463789abd25e6b12fe60e8b9919cd3ac40f642",
    "class": "vlucht",
    "airborne": true,
    "source": "vluchtcontrole",
    "decision": "goedgekeurd",
-   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+   "note": "Vrij in de lucht. Witte band over de dichtstbijzijnde bovenvleugel, witte halsvlek en het volledige silhouet zichtbaar."
+  },
+  "/assets/species/plumage/sp002-juv.webp": {
+   "refs": [
+    "sp002 GUIDE_POSES[1]"
+   ],
+   "sha1": "85db39b670ed5abeac3ee1c8569f5fc3f405f4d5",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "F2 ronde 1 · directe beeldinspectie 14-11-2026",
+   "note": "Juveniele Houtduif staat op de grond."
   },
   "/assets/species/plumage/sp003-flight.webp": {
    "refs": [
@@ -145,8 +155,18 @@
    "class": "opvliegen",
    "airborne": false,
    "source": "vluchtcontrole",
-   "decision": "uit-rol",
-   "note": "Poten raken nog de grond; vogel zet af. Ook laag opgelost (485 px)."
+   "decision": "archief",
+   "note": "Onscherpe afzetfoto van 485 px met weinig herkenningsdetail. Het bronarchief bewaart de opname; een goede vrije vluchtfoto blijft open."
+  },
+  "/assets/species/plumage/sp003-juv.webp": {
+   "refs": [
+    "sp003 GUIDE_POSES[0]"
+   ],
+   "sha1": "c90e0aebad77bfaace67989854b0e5f6718935ab",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "F2 ronde 1 · directe beeldinspectie 14-11-2026",
+   "note": "Juveniele Holenduif zit op een tak."
   },
   "/assets/species/plumage/sp004-flight.webp": {
    "refs": [
@@ -158,6 +178,16 @@
    "source": "vluchtcontrole",
    "decision": "goedgekeurd",
    "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+  },
+  "/assets/species/plumage/sp004-juv.webp": {
+   "refs": [
+    "sp004 GUIDE_POSES[1]"
+   ],
+   "sha1": "d3bc629dae398080e91c89926f96f0dfcad76fc1",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "F2 ronde 1 · directe beeldinspectie 14-11-2026",
+   "note": "Juveniele Turkse Tortel staat op een railing."
   },
   "/assets/species/plumage/sp005-adult_m.webp": {
    "refs": [
@@ -192,16 +222,16 @@
    "decision": "goedgekeurd",
    "note": "FQA-01 beeldinventaris 10-11-2026: stond niet als vlucht geregistreerd maar toont echte vrije vlucht. Juveniel (bron: iNaturalist Life Stage: Juvenile); zweeft "
   },
-  "/assets/species/plumage/sp005-male-flight.webp": {
+  "/assets/species/plumage/sp005-flight-dark.webp": {
    "refs": [
     "sp005 GUIDE_POSES[1]"
    ],
-   "sha1": "f7460be6bc3f1bd6168a9cebf4306110e88e9385",
+   "sha1": "b99e563f018cf9b426f2023b7eabecf0c94063e9",
    "class": "vlucht",
    "airborne": true,
    "source": "vluchtcontrole",
-   "decision": "voorwaardelijk",
-   "note": "FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): in vlucht ja; licht onscherp, vogel klei"
+   "decision": "goedgekeurd",
+   "note": "Vrij vliegende Buizerd van onderen. Donker kleed, brede vleugels en korte gebandeerde staart zichtbaar. Leeftijd en geslacht onbevestigd."
   },
   "/assets/species/plumage/sp005-male-rest.webp": {
    "refs": [
@@ -369,6 +399,17 @@
    "source": "contactsheet 10-11-2026",
    "note": ""
   },
+  "/assets/species/plumage/sp009-juv-flight.webp": {
+   "refs": [
+    "sp009 GUIDE_POSES[3]"
+   ],
+   "sha1": "8f68f4977d11f556df66186c52cf03a0159c9144",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht in zijaanzicht. Lengtestrepen en donkere baardstreep zichtbaar. Herkenbaar als juveniel."
+  },
   "/assets/species/plumage/sp009-male-flight.webp": {
    "refs": [
     "sp009 GUIDE_POSES[3]"
@@ -466,11 +507,11 @@
    "refs": [
     "sp018 GUIDE_PLUMAGE.adult_f"
    ],
-   "sha1": "a849dabfcc5c1d8441abfd6a8455ab8abe8d25de",
+   "sha1": "0f1cc4cad2bec33ba482ae592feb521eb63fd2d4",
    "class": "stilstaand",
    "airborne": false,
-   "source": "contactsheet 10-11-2026",
-   "note": ""
+   "source": "F3-R05, visuele vergelijking met dezelfde originele opname, 15-11-2026",
+   "note": "Stilstaand vrouwtje op stam, schuin van achteren. Rode achterkruin zichtbaar."
   },
   "/assets/species/plumage/sp018-flight.webp": {
    "refs": [
@@ -772,11 +813,11 @@
     "sp038 GUIDE_POSES[0]"
    ],
    "sha1": "47fb95453bae3932add8204dd9b137da5ebe1145",
-   "class": "vlucht",
-   "airborne": true,
+   "class": "landen",
+   "airborne": false,
    "source": "vluchtcontrole",
-   "decision": "goedgekeurd",
-   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+   "decision": "uit-rol",
+   "note": "Fotograaf beschrijft 'comes in to land'; beeld toont geheven vleugels en naar voren gestrekte poten met gespreide tenen: neerstrijken, geen vrije vlucht."
   },
   "/assets/species/plumage/sp039-flight.webp": {
    "refs": [
@@ -857,11 +898,11 @@
     "sp044 GUIDE_POSES[0]"
    ],
    "sha1": "d7acdd5d10aabbc4bbd4dd98cf9dc104bd9395a0",
-   "class": "vlucht",
-   "airborne": true,
+   "class": "landen",
+   "airborne": false,
    "source": "vluchtcontrole",
-   "decision": "goedgekeurd",
-   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+   "decision": "uit-rol",
+   "note": "Twee Ringmussen in een luchtgevecht met poten naar voren; geen vrij vliegende vogel met bruikbaar vluchtsilhouet. Uit de vluchtrol (F3-R12, strikte vrije-vluchtregel §3.3)."
   },
   "/assets/species/plumage/sp045-adult_f.webp": {
    "refs": [
@@ -1031,9 +1072,19 @@
    "source": "contactsheet 10-11-2026",
    "note": ""
   },
-  "/assets/species/plumage/sp065-flight.webp": {
+  "/assets/species/plumage/sp065-head-down.webp": {
    "refs": [
     "sp065 GUIDE_POSES[0]"
+   ],
+   "sha1": "5ef1051033df006279ea410419329a02d39df77d",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "origineel en WebP 14-11-2026",
+   "note": "Vogel op stam, kop omlaag. Poten steunen op de schors."
+  },
+  "/assets/species/plumage/sp065-flight.webp": {
+   "refs": [
+    "sp065 GUIDE_POSES[1]"
    ],
    "sha1": "28cece48915c5dd8e500e32ce876fa65a0dc2bc6",
    "class": "vlucht",
@@ -2714,7 +2765,8 @@
    "class": "stilstaand",
    "airborne": false,
    "source": "contactsheet 10-11-2026",
-   "note": ""
+   "note": "Twee bijna identieke foto’s van hetzelfde mannetje met elf seconden verschil volgens de bronbestanden. Vervangen door een scherper portret van een andere opname.",
+   "decision": "archief"
   },
   "/assets/species/plumage/sp251-juv.webp": {
    "refs": [
@@ -2735,7 +2787,8 @@
    "class": "stilstaand",
    "airborne": false,
    "source": "contactsheet 10-11-2026",
-   "note": ""
+   "note": "Twee bijna identieke foto’s van hetzelfde mannetje met elf seconden verschil volgens de bronbestanden. Vervangen door een scherper portret van een andere opname.",
+   "decision": "archief"
   },
   "/assets/species/plumage/sp253-juv.webp": {
    "refs": [
@@ -2822,15 +2875,15 @@
    "source": "contactsheet 10-11-2026",
    "note": ""
   },
-  "/assets/species/sp004.webp": {
+  "/assets/species/plumage/sp004-adult-crop.webp": {
    "refs": [
     "sp004 GUIDE_PHOTOS"
    ],
-   "sha1": "6d26b8bf93d8c7843a3437a2d4716f481e57ffae",
+   "sha1": "ca88a629319c9fe04ecd0a3dfa5cae3cb05fdf26",
    "class": "stilstaand",
    "airborne": false,
-   "source": "contactsheet 10-11-2026",
-   "note": ""
+   "source": "F2 hercontrole · directe beeldinspectie 14-11-2026",
+   "note": "Zittende volwassen Turkse Tortel. Uitsnede van de bronopname, volledige vogel."
   },
   "/assets/species/sp005.webp": {
    "refs": [
@@ -4850,6 +4903,245 @@
    "airborne": false,
    "source": "Visuele controle K07 fase 1 (2026-11-12)",
    "note": "Jonge Bonte Vliegenvanger met een lichte vleugeltekening en gevlekte kop en bovendelen, volledig in zijaanzicht."
+  },
+  "/assets/species/plumage/sp082-portrait.webp": {
+   "refs": [
+    "sp082 GUIDE_PLUMAGE.adult_m",
+    "sp082 GUIDE_HEROES"
+   ],
+   "sha1": "07ddbb1334a87c58ffc50faf484fb3df7b2da23b",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K07 fase 2 (2026-11-12)",
+   "note": "Volwassen Kleine Zilverreiger loopt van opzij langs open water, met een donkere snavel, donkere poten en geelgroene tenen."
+  },
+  "/assets/species/plumage/sp084-juv-europa.webp": {
+   "refs": [
+    "sp084 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "7c740dec520be5a9c57a4e51ecf709bce20f0bb8",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K07 fase 2 (2026-11-12)",
+   "note": "Jonge Purperreiger in zijaanzicht tussen rietstengels, met geelbruine veren en een lange, smalle hals."
+  },
+  "/assets/species/plumage/sp090-juv.webp": {
+   "refs": [
+    "sp090 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "a590c76cc7b4c31e054221d3816e840f6cc73046",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K07 fase 3 (2026-11-12)",
+   "note": "Jonge Slobeend in zijaanzicht, met bruingevlekt lichaam en lange, brede snavel op groen water."
+  },
+  "/assets/species/plumage/sp092-juv.webp": {
+   "refs": [
+    "sp092 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "ac7663f9870fbc13d001121943e727b22841cd8f",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K07 fase 3 (2026-11-12)",
+   "note": "Jonge Kuifeend in volledig bruin kleed op open water, met korte kuif en een dofgeel oog."
+  },
+  "/assets/species/plumage/sp132-juv.webp": {
+   "refs": [
+    "sp132 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "47aad9c03f31d11bbdf0d4b4816a1253df2589c0",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K07 fase 3 (2026-11-12)",
+   "note": "Jonge Tafeleend linksachter een grotere Tafeleend op helder water. Het jonge dier heeft een bruingevlekte rug en lichte wang."
+  },
+  "/assets/species/plumage/sp129-juv-europa.webp": {
+   "refs": [
+    "sp129 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "5d482e9406869fdf4ef2c3ba1def736627c9d64e",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K07 fase 4 (2026-11-12)",
+   "note": "Jonge Krakeend in zijaanzicht met oranje langs de snavel en bruin getekende veren."
+  },
+  "/assets/species/plumage/sp130-juv.webp": {
+   "refs": [
+    "sp130 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "10a6016ca0d5fa3d8606f7e3ba37d2a7b041d33d",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K07 fase 4 (2026-11-12)",
+   "note": "Jonge Smient op het water met ronde kop, korte blauwgrijze snavel en rossigbruin verenkleed."
+  },
+  "/assets/species/plumage/sp251-portrait.webp": {
+   "refs": [
+    "sp251 GUIDE_POSES[0]"
+   ],
+   "sha1": "ecc1b5fb81a137b9104c024bb689763a7da501c9",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle K08 fase 1 (2026-11-12)",
+   "note": "Mannetje Grauwe Kiekendief in droog gras. Grijze veren en gele ogen zijn scherp zichtbaar."
+  },
+  "/assets/species/plumage/sp003-flight-open-sky.webp": {
+   "refs": [
+    "sp003 GUIDE_POSES[1]"
+   ],
+   "sha1": "ba57156780432b3f93fcacc703a6994a506644fa",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "F2 · directe beeldinspectie 14-11-2026",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht tegen open hemel. Het zijaanzicht toont vleugel, kop en staart voldoende scherp voor vergelijking."
+  },
+  "/assets/species/plumage/sp066-wing.webp": {
+   "refs": [
+    "sp066 GUIDE_POSES[0]"
+   ],
+   "sha1": "2cb5d6d9df1b16f3b4993a416e0e1a27ed01a240",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "origineel en WebP 14-11-2026",
+   "note": "Fotograaf beschrijft Certhia brachydactyla brachydactyla. Zijaanzicht met vrije gevouwen vleugel. Leeftijd en geslacht open."
+  },
+  "/assets/species/plumage/sp067-wing.webp": {
+   "refs": [
+    "sp067 GUIDE_POSES[0]"
+   ],
+   "sha1": "387807d9d7ccac2ae6f5f3cae7658d87d6402b5f",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "origineel en WebP 14-11-2026",
+   "note": "Fotograaf benoemt Certhia familiaris. De gevouwen vleugel en witte onderzijde zijn zichtbaar. Ondersoort, leeftijd en geslacht open."
+  },
+  "/assets/species/plumage/sp066-juv-fed.webp": {
+   "refs": [
+    "sp066 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "6036e472f4c9c4267c59f9b9c027b9df4155a59f",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "origineel en WebP 14-11-2026",
+   "note": "De bron identificeert Certhia brachydactyla en benoemt de jonge vogel links en de ouder rechts. Beide vogels staan los van het nest op de stam."
+  },
+  "/assets/species/plumage/sp063-adult-f.webp": {
+   "refs": [
+    "sp063 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "7a2007fc03d7284823d315659da356e6753cc542",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "origineel en WebP 14-11-2026",
+   "note": "De fotograaf benoemt een vrouwtje Regulus regulus. Het kleed toont een ontwikkelde gele kruinstreep."
+  },
+  "/assets/species/plumage/sp021-juv-review.webp": {
+   "refs": [
+    "sp021 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "fdf83d678b7bae3c284329071376d4f20ce5a9f6",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "F3-R06",
+   "decision": "goedgekeurd",
+   "note": "Jonge Ekster op de grond, met roze mondhoeken, een korte staart en lichte huid rond het oog."
+  },
+  "/assets/species/plumage/sp022-juv-review.webp": {
+   "refs": [
+    "sp022 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "58693dde2ff03b8d14d9bbf55b1b5fab14c05719",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "F3-R06",
+   "decision": "goedgekeurd",
+   "note": "Jonge Zwarte Kraai bedelt met geopende snavel en afhangende vleugels. De mond is roze."
+  },
+  "/assets/species/plumage/sp025-flight-free.webp": {
+   "refs": [
+    "sp025 GUIDE_POSES[1]"
+   ],
+   "sha1": "e85405c52b8e822c24e10a5ea2899b1a103ac060",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "F3-R06",
+   "decision": "goedgekeurd",
+   "note": "Kauw in vrije vlucht, met gespreide vleugels en een korte snavel tegen open lucht."
+  },
+  "/assets/species/plumage/sp025-juv-review.webp": {
+   "refs": [
+    "sp025 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "64619af48b0bb0c8236a398d837f966b3c209e33",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "F3-R06",
+   "decision": "goedgekeurd",
+   "note": "Jonge Kauw van opzij op stenen, met dof kleed en een donker oog."
+  },
+  "/assets/species/plumage/sp026-juv-review.webp": {
+   "refs": [
+    "sp026 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "3c4e8a8b1ab15031b4f0372a185f4cf69e93c203",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "F3-R07",
+   "decision": "goedgekeurd",
+   "note": "Jonge Gaai van dichtbij, met een bruine kruin, zacht ogend kleed en blauw gebandeerde vleugeldekveren."
+  },
+  "/assets/species/plumage/sp039-adult_f.webp": {
+   "refs": [
+    "sp039 GUIDE_PLUMAGE.adult_f"
+   ],
+   "sha1": "c5302c39e091299ba7a1415ddc759c49847284c2",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle F3-R10-media (2026-11-16, Claude; geen onafhankelijke certificering)",
+   "note": "Vrouwtje Kneu op een takje: bruingrijs, licht gestreept, grijze snavel, geen rood."
+  },
+  "/assets/species/plumage/sp039-juv.webp": {
+   "refs": [
+    "sp039 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "d402798b3afcbc0b33bd40b9d6d3fa05bd58ee4a",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Visuele controle F3-R10-media (2026-11-16, Claude; geen onafhankelijke certificering)",
+   "note": "Jonge Kneu op een tak tussen bladeren: gestreept, geen rood, grijze snavel."
+  },
+  "/assets/species/plumage/sp037-flight-free.webp": {
+   "refs": [
+    "sp037 GUIDE_POSES[1]"
+   ],
+   "sha1": "52998516016abc36c0909f5cabe4e807ecbf7c10",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "voorwaardelijk",
+   "note": "Vrij in de lucht, poten omlaag; sterke HDR-kleurzweem. Voorlopig."
+  },
+  "/assets/species/plumage/sp044-flight-free.webp": {
+   "refs": [
+    "sp044 GUIDE_POSES[1]"
+   ],
+   "sha1": "b79d29833930cca4821984435643c1c1d24e06cb",
+   "class": "vlucht",
+   "airborne": true,
+   "source": "vluchtcontrole",
+   "decision": "goedgekeurd",
+   "note": "Vrij in de lucht, geen poten of ondergrond zichtbaar."
+  },
+  "/assets/species/plumage/sp054-juv.webp": {
+   "refs": [
+    "sp054 GUIDE_PLUMAGE.juv"
+   ],
+   "sha1": "68ba15baf5d1605400485b92ae49577a9d3c41c4",
+   "class": "stilstaand",
+   "airborne": false,
+   "source": "Beeldinspectie 16-11-2026 (F3-R15)",
+   "note": "Juveniel op schors, hele vogel in beeld; uitgesneden rond de vogel."
   }
  }
 }

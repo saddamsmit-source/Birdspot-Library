@@ -4,7 +4,7 @@ import { SPECIES } from '../../src/data/species.js';
 import { GUIDE_PHOTOS } from '../../src/features/species/guidePhotos.js';
 import { GUIDE_AUDIO, GUIDE_HEROES, GUIDE_PLUMAGE, GUIDE_POSES } from '../../src/features/species/guideMedia.js';
 import { GUIDE_COMPARISONS } from '../../src/features/species/guideComparisons.js';
-import { guideHeroPhoto, guidePlumageGroups } from '../../src/features/species/detailSections.js';
+import { comparisonPhoto, guideHeroPhoto, guidePlumageGroups } from '../../src/features/species/detailSections.js';
 
 const species = new Map(SPECIES.map(bird => [bird.id, bird]));
 
@@ -53,21 +53,27 @@ for (const {birds, tip, flight} of GUIDE_COMPARISONS) {
     const {id, plumage} = bird;
     assert.ok(bird.source && bird.marks && species.has(id), `Ongeldige vergelijking: ${id}`);
     if (flight) {
-      const photo = GUIDE_POSES[id]?.find(pose => pose.flight);
       // Vluchtcontrole 10-11-2026: een afgekeurde vluchtfoto wordt niet door een ongeschikte vervangen.
       // De vergelijking blijft (tekst), de positie staat expliciet als ontbrekend geregistreerd.
       if (bird.photoMissing) {
-        assert.ok(!photo, `photoMissing maar er is wel een vluchtfoto: ${id}`);
+        assert.ok(!comparisonPhoto({...bird, photoMissing: false}, true), `photoMissing maar er is wel een passende vluchtfoto: ${id}`);
         assert.ok(String(bird.photoMissing).startsWith('vluchtcontrole'), `photoMissing zonder controleverwijzing: ${id}`);
         continue;
       }
-      checkPhoto(id, photo);
-      assert.notEqual(photo.image, GUIDE_PHOTOS[id]?.image, `Vluchtfoto is hoofdfoto: ${id}`);
+      checkPhoto(id, comparisonPhoto(bird, true));
       continue;
     }
-    if (bird.textOnly === true) continue;
+    if (bird.textOnly === true || bird.photoMissing) continue;
+    if (bird.photo) {
+      checkPhoto(id, comparisonPhoto(bird, false));
+      continue;
+    }
     const photo = GUIDE_PLUMAGE[id]?.[plumage];
-    checkPhoto(id, !plumage || photo?.reuseGuidePhoto ? GUIDE_PHOTOS[id] : photo);
+    // Some real, source-registered age photos are held under GUIDE_POSES, not
+    // GUIDE_PLUMAGE (sp035 juvenile). Resolve the actual image used by the UI
+    // and apply the same strict local-file, author, licence and source checks.
+    const resolvedPose = plumage && !photo ? comparisonPhoto(bird, false) : null;
+    checkPhoto(id, !plumage || photo?.reuseGuidePhoto ? GUIDE_PHOTOS[id] : (photo || resolvedPose));
   }
 }
 

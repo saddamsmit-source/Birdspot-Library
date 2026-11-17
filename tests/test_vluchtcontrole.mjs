@@ -10,7 +10,8 @@
  *   VC-04  Uit de rol gehaalde foto's blijven zichtbaar op de juiste plek (kleed of overige) met het
  *          nieuwe label; gearchiveerde foto's staan niet op de kaart maar herkomst + bestand blijven.
  *   VC-05  Offline: gearchiveerde foto's vallen buiten de precache-lijst; getoonde foto's niet.
- *   VC-06  Vluchtvergelijkingen met een ontbrekende foto tonen "Nog geen foto" en behouden hun tekst.
+ *   VC-06  Vergelijkingen met ontbrekende vluchtfoto blijven in het bronregister, maar niet als
+ *          leeg of misleidend fotopaneel in "Lijkt op" (eigenaarbesluit norm v1.6).
  *   VC-07  FQA-01: álle gidsfoto's (ook zonder vluchtlabel) hebben een visuele beeldbeoordeling voor precies dít bestand
  *          (SHA-1); vrij vliegend ⇔ flight:true. Negatief: Buizerd-juveniel en Bruine Kiekendief-vrouwtje zonder
  *          vluchtlabel, een zittende Sperwer met gespreide vleugels mét vluchtlabel, een gewijzigd beeldbestand.
@@ -46,8 +47,8 @@ console.log(`VC-01 OK — ${live.length} vluchtfoto's, alle met vastgelegde visu
 // VC-02 negatieve gevallen
 {
   const bad = clone(registers);
-  const p = bad.poses.sp003.find(x => x.image.endsWith('sp003-flight.webp'));
-  p.flight = true;
+  const archivedTakeoff = media.retired.sp003.find(x => x.image.endsWith('sp003-flight.webp'));
+  bad.poses.sp003.push({ ...archivedTakeoff, flight: true });
   const e = checkFlight(bad, review, media.retired);
   assert.ok(e.some(x => x.includes('sp003') && x.includes('opvliegen')), 'VC-02 opvliegende Holenduif niet geweigerd: ' + e.join(' | '));
 
@@ -110,14 +111,23 @@ for (const a of live) if (a.from !== 'GUIDE_PHOTOS') assert.ok(cached.has(a.imag
 assert.ok(readFileSync(new URL('../sw.js', import.meta.url), 'utf8').includes('Object.values(data.poses || {}).flat()'), 'VC-05 sw.js-precachebron gewijzigd');
 console.log('VC-05 OK — archief buiten precache, alle getoonde vluchtfoto\'s erin');
 
-// VC-06 vergelijkingen
+// VC-06 — eigenaar UX v1.6: incomplete vluchtvergelijking niet als lege kaart presenteren.
+let skippedMissingFlightPhoto = 0;
 for (const e of GUIDE_COMPARISONS.filter(x => x.flight)) for (const b of e.birds.filter(x => x.photoMissing)) {
-  assert.ok(b.marks, `VC-06 ${b.id} vergelijkingstekst verdwenen`);
+  assert.ok(b.marks, `VC-06 ${b.id}: vergelijkingskenmerken moeten intern bewaard blijven`);
   const other = e.birds.find(x => x.id !== b.id);
+  assert.ok(other && byId.has(other.id), `VC-06 ${b.id}: bronvergelijkingspartner blijft terugvindbaar`);
   const html = recognitionPanel(byId.get(other.id));
-  assert.ok(html.includes(`Nog geen foto van ${byId.get(b.id).nameNL}`), `VC-06 ${other.id}: ontbrekende foto van ${b.id} niet als zodanig getoond`);
+  const panels = html.split('<div class="sd-cmp-panel"').slice(1).filter(part => part.startsWith(' data-cmp-panel data-cmp-flight'));
+  const name = byId.get(b.id).nameNL;
+  assert.ok(!panels.some(part => part.includes(`<strong>${name}</strong>`)),
+    `VC-06 ${other.id}: incompleet vluchtpaar met ${b.id} nog als fotovergelijking getoond`);
+  assert.ok(!html.includes('Nog geen passende vluchtfoto') && !html.includes('Nog geen passende foto'),
+    `VC-06 ${other.id}: oude lege fotomelding nog zichtbaar`);
+  skippedMissingFlightPhoto++;
 }
-console.log('VC-06 OK — vergelijkingen met ontbrekende vluchtfoto behouden hun tekst en melden "Nog geen foto"');
+assert.ok(skippedMissingFlightPhoto >= 1, 'VC-06 bevat ten minste één negatief vluchtvergelijkingsgeval');
+console.log(`VC-06 OK — ${skippedMissingFlightPhoto} incomplete vluchtparingen niet getoond, bronkenmerken behouden`);
 // VC-07 — beeldinhoud ⇔ vluchtlabel over álle gidsfoto's (FQA-01)
 {
   const inventory = read('../docs/fotokwaliteit/beeldinventaris.json');
@@ -147,8 +157,8 @@ console.log('VC-06 OK — vergelijkingen met ontbrekende vluchtfoto behouden hun
   neg(r => { delete r.plumage.sp005.juv.flight; }, 'zonder flight:true', 'Buizerd-juveniel zonder vluchtlabel');
   neg(r => { delete r.plumage.sp173.adult_f.flight; }, 'zonder flight:true', 'Bruine Kiekendief-vrouwtje zonder vluchtlabel');
   neg(r => { r.plumage.sp006.adult_f.flight = true; }, 'toont vleugels-strekken', 'zittende Sperwer met gespreide vleugels als vlucht');
-  neg(r => { r.poses.sp003 = [{ ...(r.poses.sp003?.[0] || {}), image: '/assets/species/plumage/sp003-flight.webp', flight: true }]; }, 'toont opvliegen', 'opvliegende Holenduif terug als vlucht');
-  neg((r, inv) => { inv.images['/assets/species/plumage/sp002-flight.webp'].sha1 = '0'.repeat(40); }, 'SHA-1 wijkt af', 'gewijzigd beeldbestand');
+  neg(r => { r.poses.sp003.push({ image: '/assets/species/plumage/sp003-flight.webp', flight: true }); }, 'toont opvliegen', 'opvliegende Holenduif terug als vlucht');
+  neg((r, inv) => { inv.images['/assets/species/plumage/sp002-flight-wingband.webp'].sha1 = '0'.repeat(40); }, 'SHA-1 wijkt af', 'gewijzigd beeldbestand');
   neg((r, inv) => { delete inv.images['/assets/species/sp066.webp']; }, 'geen visuele beeldbeoordeling', 'foto zonder beoordeling');
   console.log(`VC-07 OK — ${n} gidsfoto's met beeldbeoordeling op SHA-1; vrij vliegend ⇔ flight:true; 6 negatieve gevallen geweigerd`);
 }

@@ -170,9 +170,25 @@ def main():
             assert p.locator('.species-row[data-id="sp045"] .species-row__rarity').inner_text() == "Ook wintergast"
             p.locator("#speciesSearch").fill("")
 
-            # Habitat tags describe the site itself, so a polder alone does not imply water.
             status_toggle.click()
             p.locator('#speciesFilters [data-cat="alle"]').click()
+            for name, scientific_name, species_id in (
+                ("Dwerggans", "Anser erythropus", "sp182"),
+                ("Groene Reiger", "Butorides virescens", "sp459"),
+            ):
+                for query in (name, scientific_name):
+                    p.locator("#speciesSearch").fill(query)
+                    rows = p.locator("#speciesList .species-row")
+                    assert rows.count() == 1
+                    assert rows.first.get_attribute("data-id") == species_id
+                rows.first.locator(".species-row__body").click()
+                p.get_by_role("dialog", name=name, exact=True).wait_for()
+                p.locator(".signature-species-detail-close").click()
+                p.locator(".signature-species-detail-overlay").wait_for(state="detached")
+            p.locator("#speciesSearch").fill("")
+            print("F2-29 OK — Dwerggans en Groene Reiger vindbaar op Nederlandse en wetenschappelijke naam")
+
+            # Habitat tags describe the site itself, so a polder alone does not imply water.
             for area, include, exclude in (("heide", "sp253", "sp034"), ("duinen", "sp110", "sp050"), ("water", "sp097", "sp005")):
                 p.locator("#gebiedFiltersToggle").click()
                 p.locator(f'#gebiedFilters [data-region="{area}"]').click()

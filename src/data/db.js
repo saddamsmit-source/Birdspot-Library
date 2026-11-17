@@ -13,6 +13,12 @@ const DB_VERSION = 1;
 
 let _db = null;
 
+/** Persoonlijke gidsbeelden delen de back-upopslag met waarnemingsmedia. */
+export function isPersonalGuidePhoto(photo) {
+  return !photo.sightingId && !photo.placeId &&
+    typeof photo.speciesId === 'string' && String(photo.id).startsWith(`guide-${photo.speciesId}-`);
+}
+
 export function getDB() {
   if (_db) return Promise.resolve(_db);
 
@@ -127,6 +133,10 @@ export async function getMediaMetadata() {
       const cursor = request.result;
       if (!cursor) {
         resolve(results);
+        return;
+      }
+      if (isPersonalGuidePhoto(cursor.value)) {
+        cursor.continue();
         return;
       }
       const { id, filename, speciesId, sightingId, placeId, addedAt, blob, type } = cursor.value;

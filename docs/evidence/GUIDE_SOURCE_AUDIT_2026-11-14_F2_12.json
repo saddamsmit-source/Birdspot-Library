@@ -1,0 +1,170 @@
+[
+ {
+  "image": "/assets/species/sp030.webp",
+  "species": "sp030",
+  "source": "https://commons.wikimedia.org/wiki/File:Eurasian_Blue_Tit_2025_04_07.jpg",
+  "sourceTitle": "File:Eurasian Blue Tit 2025 04 07.jpg - Wikimedia Commons",
+  "sourceAuthor": "Alexis Lours",
+  "sourceLicense": "CC BY 4.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "2ddd82cc41bee8226a87c3fe6e95faff16469f0a",
+  "sourceImageSha1": "2161ee0ecc4e39056d10053eb0ab38036dbdac34",
+  "sourceImageSize": [
+   6250,
+   4167
+  ],
+  "visualRoleCheck": "Neutraal portret van volwassen kleed met blauwe kruin, lichte wang en donkere oogstreep."
+ },
+ {
+  "image": "/assets/species/plumage/sp030-flight.webp",
+  "species": "sp030",
+  "source": "https://commons.wikimedia.org/wiki/File:Blue_Tit_in_flight_(8360763555).jpg",
+  "sourceTitle": "File:Blue Tit in flight (8360763555).jpg - Wikimedia Commons",
+  "sourceAuthor": "Joe Dyer",
+  "sourceLicense": "CC BY 2.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "c26338f09ae57c068b51f5497c182546d2a8b860",
+  "sourceImageSha1": "381f73a78d315430b062c5a8d3df45754d300042",
+  "sourceImageSize": [
+   1417,
+   1063
+  ],
+  "visualRoleCheck": "Afzonderlijke opname in vrije vlucht. Fotograaf noemt vlucht. Bovenzijde, vleugel en staart zichtbaar."
+ },
+ {
+  "image": "/assets/species/plumage/sp030-juv2.webp",
+  "species": "sp030",
+  "source": "https://commons.wikimedia.org/wiki/File:Blue_tit_-_Juvenile_-_Cyanistes_caeruleus_%2853079786093%29.jpg",
+  "sourceTitle": "File:Blue tit - Juvenile - Cyanistes caeruleus (53079786093).jpg - Wikimedia Commons",
+  "sourceAuthor": "caroline legg",
+  "sourceLicense": "CC BY 2.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "a66e965bd24513412e351d51606a5d1e70bfd429",
+  "sourceImageSha1": "ddc3d6ca897088ac9614c68cf0320b4daa532ec4",
+  "sourceImageSize": [
+   1811,
+   2558
+  ],
+  "visualRoleCheck": "Fotograaf en bestandsnaam bevestigen juveniel. Gelig wangveld en doffere kruin zichtbaar, geslacht onbekend."
+ },
+ {
+  "image": "/assets/species/sp031.webp",
+  "species": "sp031",
+  "source": "https://commons.wikimedia.org/wiki/File:Willow_Tit_Lancashire.jpg",
+  "sourceTitle": "File:Willow Tit Lancashire.jpg - Wikimedia Commons",
+  "sourceAuthor": "Francis C. Franklin",
+  "sourceLicense": "CC BY-SA 3.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "7325534870ae35dd56545160897687e113bc3bb1",
+  "sourceImageSha1": "4530478344674f028fce98d1f169cdd9c40007ce",
+  "sourceImageSize": [
+   3040,
+   2027
+  ],
+  "visualRoleCheck": "Volwassen veldkleed op tak, donkere kap en lichte randen van de gevouwen vleugel. Geslacht niet bepaald.",
+  "rightsOpen": "Commons vermeldt © Francis C. Franklin / CC-BY-SA-3.0. De zichtbare creditcorrectie staat in PR #210 op 4f46f98."
+ },
+ {
+  "image": "/assets/species/plumage/sp031-flight.webp",
+  "species": "sp031",
+  "source": "https://commons.wikimedia.org/wiki/File:Poecile_Montanus_Kittila_20120306.JPG",
+  "sourceTitle": "File:Poecile Montanus Kittila 20120306.JPG - Wikimedia Commons",
+  "sourceAuthor": "Estormiz",
+  "sourceLicense": "CC0 1.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "02c8e4699d58a0bdc587f17362efa99fe21cd8ef",
+  "sourceImageSha1": "d168f2462a66f8ee411bf9aa54503743cc7d531c",
+  "sourceImageSize": [
+   2601,
+   1825
+  ],
+  "visualRoleCheck": "Vogel vlak boven sneeuw met poten uitgestoken. De bron gebruikt vlucht in algemene zin. Birdspot behoudt de eerdere indeling als opvliegende houding."
+ },
+ {
+  "image": "/assets/species/plumage/sp031-juv.webp",
+  "species": "sp031",
+  "source": "https://commons.wikimedia.org/wiki/File:Poecile_montanus%2C_Willow_Tit%2C_Weidenmeise.JPG",
+  "sourceTitle": "File:Poecile montanus, Willow Tit, Weidenmeise.JPG - Wikimedia Commons",
+  "sourceAuthor": "Wald1siedel",
+  "sourceLicense": "CC BY-SA 4.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "1e07367acd6f5eaf574815e1984bf254643a17c2",
+  "sourceImageSha1": "de996317b954a54cb596185efd5175b0314ea31e",
+  "sourceImageSize": [
+   4309,
+   2659
+  ],
+  "visualRoleCheck": "Fotograaf bevestigt juveniel buiten het nesthol. Gele snavelhoeken en doffe kap zichtbaar."
+ },
+ {
+  "image": "/assets/species/sp032.webp",
+  "species": "sp032",
+  "source": "https://commons.wikimedia.org/wiki/File:Sumpfmeise_13ib.jpg",
+  "sourceTitle": "File:Sumpfmeise 13ib.jpg - Wikimedia Commons",
+  "sourceAuthor": "PeterRohrbeck",
+  "sourceLicense": "CC BY-SA 4.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "6154b407d2528754f2b263ef49a269a02216b8b8",
+  "sourceImageSha1": "d066d8981a3a432b82af8a8ddfe4cd9cd1b26b03",
+  "sourceImageSize": [
+   1000,
+   667
+  ],
+  "visualRoleCheck": "Volwassen veldkleed. Rustend, scherpe kopzijde en betrekkelijk egaal ogende gevouwen vleugel; geslacht onbekend."
+ },
+ {
+  "image": "/assets/species/plumage/sp032-view.webp",
+  "species": "sp032",
+  "source": "https://commons.wikimedia.org/wiki/File:Poecile_palustris_1_Luc_Viatour.jpg",
+  "sourceTitle": "File:Poecile palustris 1 Luc Viatour.jpg - Wikimedia Commons",
+  "sourceAuthor": "Luc Viatour / https://Lucnix.be",
+  "sourceLicense": "CC BY-SA 3.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "9ffaf0e3ba1d8a851216db081e61d2df8d900217",
+  "sourceImageSha1": "bc76ddabe6c817e039531664543651dd4a70b4ed",
+  "sourceImageSize": [
+   1400,
+   1050
+  ],
+  "visualRoleCheck": "Vogel frontaal met gedraaide kop. Geschikt voor borst en bef; bron en beeld onderbouwen geen individuele claim over de snavelvlek.",
+  "rightsOpen": "Luc Viatour vraagt om zijn naam en website naast de afbeelding. De zichtbare creditcorrectie staat in PR #210 op 4f46f98."
+ },
+ {
+  "image": "/assets/species/plumage/sp032-juv.webp",
+  "species": "sp032",
+  "source": "https://www.inaturalist.org/photos/18594803",
+  "sourceTitle": "Photo 18594803, (c) Dr. Nasser Halaweh, some rights reserved (CC BY), uploaded by Dr. Nasser Halaweh · iNaturalist",
+  "sourceAuthor": "Dr. Nasser Halaweh",
+  "sourceLicense": "CC BY 4.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast origineel vergeleken. Oorspronkelijke SHA-256 gelijk aan de M7-import.",
+  "auditDate": "14-11-2026",
+  "assetSha1": "7cfa17b50496f8de5fc8ff242a8f848c2db478f8",
+  "sourceImageSha1": "df5016f241a04b2a5f857689cf3f1d4d5e32dfbe",
+  "sourceImageSize": [
+   2048,
+   1536
+  ],
+  "visualRoleCheck": "Waarneming van Poecile palustris met juvenielenannotatie en exact hetzelfde fotonummer. Uitsnede en helderheidscorrectie herkenbaar. Geslacht onbekend.",
+  "observation": "https://www.inaturalist.org/observations/12820201",
+  "annotations": [
+   "Life Stage: Juvenile (iNaturalist attribute 1, value 8)."
+  ]
+ }
+]

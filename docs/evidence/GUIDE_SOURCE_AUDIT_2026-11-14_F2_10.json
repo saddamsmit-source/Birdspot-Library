@@ -1,0 +1,146 @@
+[
+ {
+  "image": "/assets/species/sp020.webp",
+  "species": "sp020",
+  "source": "https://commons.wikimedia.org/wiki/File:Middle-spotted_woodpecker_(Dendrocopos_medius),_Parc_du_Rouge-Clo%C3%AEtre,_Brussels_(49179578882)_(cropped).jpg",
+  "sourceTitle": "File:Middle-spotted woodpecker (Dendrocopos medius), Parc du Rouge-Cloître, Brussels (49179578882) (cropped).jpg - Wikimedia Commons",
+  "sourceAuthor": "Frank Vassen from Brussels, Belgium",
+  "sourceLicense": "CC BY 2.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "a1702055da6fe3292aa8a3efc2610de6f3dd7b03",
+  "sourceImageSha1": "6acceb41c178626702be2f3afba4b05de4dc2f1f",
+  "sourceImageSize": [
+   2782,
+   2808
+  ],
+  "visualRoleCheck": "Zijaanzicht op stronk, rode kruin, wit gezicht en gestreepte flanken. Geslacht en leeftijd open."
+ },
+ {
+  "image": "/assets/species/plumage/sp020-male.webp",
+  "species": "sp020",
+  "source": "https://commons.wikimedia.org/wiki/File:Middle_spotted_woodpecker_(Dendrocoptes_medius_medius)_male.jpg",
+  "sourceTitle": "File:Middle spotted woodpecker (Dendrocoptes medius medius) male.jpg - Wikimedia Commons",
+  "sourceAuthor": "Charles J. Sharp",
+  "sourceLicense": "CC BY-SA 4.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "030bbe6981f12a9c84fb90f20e3b71830cee398b",
+  "sourceImageSha1": "fd8845f994f2b0acd1777dba001feb715aa7dadd",
+  "sourceImageSize": [
+   1438,
+   2157
+  ],
+  "visualRoleCheck": "Hoofdfoto van een volwassen vogel op een stam. Fotograaf noemt een mannetje; het gidslabel is neutraal."
+ },
+ {
+  "image": "/assets/species/plumage/sp020-pose.webp",
+  "species": "sp020",
+  "source": "https://commons.wikimedia.org/wiki/File:Mittelspecht_bei_der_Nahrungssuche.jpg",
+  "sourceTitle": "File:Mittelspecht bei der Nahrungssuche.jpg - Wikimedia Commons",
+  "sourceAuthor": "Mikes Makro",
+  "sourceLicense": "CC BY-SA 4.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "0bbde9d98582b161f46326bf3285f77dcdff3038",
+  "sourceImageSha1": "92db5f376d0e49c5370809ca4d21de764118278b",
+  "sourceImageSize": [
+   3445,
+   3736
+  ],
+  "visualRoleCheck": "Vogel tegen de stam met lichte kop, flankstrepen en roze onderstaart. Leeftijd en geslacht open."
+ },
+ {
+  "image": "/assets/species/plumage/sp020-flight.webp",
+  "species": "sp020",
+  "source": "https://commons.wikimedia.org/wiki/File:Middelste-bonte-specht-1_(28031708853).jpg",
+  "sourceTitle": "File:Middelste-bonte-specht-1 (28031708853).jpg - Wikimedia Commons",
+  "sourceAuthor": "Yves Hoebeke",
+  "sourceLicense": "CC BY-SA 2.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "6b0447203a19243e31d4cfa69e07f64a1e64b3b0",
+  "sourceImageSha1": "750efa9ebef51a4d2f4410e6967d9218072095ae",
+  "sourceImageSize": [
+   725,
+   483
+  ],
+  "visualRoleCheck": "Vrij vliegend met gespreide gebandeerde vleugels, zichtbare flankstrepen en roze onderstaart. Leeftijd en geslacht open."
+ },
+ {
+  "image": "/assets/species/sp021.webp",
+  "species": "sp021",
+  "source": "https://commons.wikimedia.org/wiki/File:Eurasian_magpie_2022_05_03.jpg",
+  "sourceTitle": "File:Eurasian magpie 2022 05 03.jpg - Wikimedia Commons",
+  "sourceAuthor": "Alexis Lours",
+  "sourceLicense": "CC BY 4.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "eaa8f283d97a36212e7b92c35df8a82eb59c5452",
+  "sourceImageSha1": "b31b18a604fe8e14ccd9a4ebf67261ef999aa93b",
+  "sourceImageSize": [
+   5078,
+   3385
+  ],
+  "visualRoleCheck": "Zittende Ekster met lange glanzende staart en duidelijke witte schouders. Geslacht en leeftijd niet gelabeld."
+ },
+ {
+  "image": "/assets/species/plumage/sp021-flight.webp",
+  "species": "sp021",
+  "source": "https://commons.wikimedia.org/wiki/File:Eurasian_Magpie_2023-10-16_01.jpg",
+  "sourceTitle": "File:Eurasian Magpie 2023-10-16 01.jpg - Wikimedia Commons",
+  "sourceAuthor": "Alexis Lours",
+  "sourceLicense": "CC BY 4.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "7d5b3ac21495bb81848b0f91a7e41691d22bf584",
+  "sourceImageSha1": "55b5f9ec8924c94bef9ad58ea751882fe492b71a",
+  "sourceImageSize": [
+   5453,
+   3635
+  ],
+  "visualRoleCheck": "Volledige vogel boven water, vrij van de rots. De bron vermeldt vertrek vanaf de rots zonder te dateren hoe ver de afzetfase is gevorderd. De poten raken de steen niet en de volledige handvleugels en staart zijn zichtbaar."
+ },
+ {
+  "image": "/assets/species/sp022.webp",
+  "species": "sp022",
+  "source": "https://commons.wikimedia.org/wiki/File:Carrion_crow_perched_on_a_branch_01.jpg",
+  "sourceTitle": "File:Carrion crow perched on a branch 01.jpg - Wikimedia Commons",
+  "sourceAuthor": "Alexis Lours",
+  "sourceLicense": "CC BY 4.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "272425fb618986b39140ae7bd171237d04e562b9",
+  "sourceImageSha1": "d0c3345107b6db8214b03a7849df912f6f00a672",
+  "sourceImageSize": [
+   5071,
+   3294
+  ],
+  "visualRoleCheck": "Zwarte Kraai op een tak, stevige zwarte snavel en zwarte bevederde snavelbasis. Leeftijd en geslacht open."
+ },
+ {
+  "image": "/assets/species/plumage/sp022-flight.webp",
+  "species": "sp022",
+  "source": "https://commons.wikimedia.org/wiki/File:Corvus_corone_in_flight_JdP_20191213_t160752.jpg",
+  "sourceTitle": "File:Corvus corone in flight JdP 20191213 t160752.jpg - Wikimedia Commons",
+  "sourceAuthor": "Marie-Lan Taÿ Pamart",
+  "sourceLicense": "CC BY 4.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "3dfd2a74f140b91c8b706604f2a25a08574bd1d5",
+  "sourceImageSha1": "32621aa194eaf55b749b016049429a5fb29f9ea2",
+  "sourceImageSize": [
+   4500,
+   3000
+  ],
+  "visualRoleCheck": "Vrije vlucht, donkere vogel van onderen met gespreide handpennen. De fotograaf bevestigt de soort en vlucht; leeftijd en geslacht open."
+ }
+]

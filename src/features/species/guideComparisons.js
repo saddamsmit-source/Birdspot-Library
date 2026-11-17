@@ -3,11 +3,43 @@ const vogelgids = 'https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vog
 
 export const GUIDE_COMPARISONS = [
   {
+    label: 'Fitis en Tjiftjaf · rustbeeld en zang',
     birds: [
-      {id: 'sp057', source: 'fitis', marks: 'Aflopend zangriedeltje. Vaak lichtbruine poten en relatief lange vleugels.'},
-      {id: 'sp056', source: 'tjiftjaf', marks: 'Herhaalt “tjif-tjaf”. Vaak donkere poten en kortere vleugels.'},
+      {id: 'sp057', source: 'fitis', marks: 'Fitis met melodieus aflopend zangriedeltje, doorgaans langere vleugelpunt en vaak lichtbruine poten.'},
+      {id: 'sp056', source: 'tjiftjaf', marks: 'Tjiftjaf met herhaald tjif-tjaf, doorgaans kortere vleugelpunt en vaak donkere poten.'},
     ],
-    tip: 'Luister eerst naar de zang. Gebruik pootkleur alleen als extra aanwijzing.',
+    rows: [
+      {label: 'Zang', values: ['Melodieus en duidelijk aflopend riedeltje', 'Steeds herhaald tjif-tjaf']},
+      {label: 'Vleugelpunt', values: ['Doorgaans langer voorbij de gevouwen vleugelveren', 'Doorgaans korter; verschil vraagt goed zijaanzicht']},
+      {label: 'Poten', values: ['Vaak bruinroze of licht', 'Vaak donker; geen sluitend kenmerk']},
+    ],
+    tip: 'Deze rustfoto’s zijn voor herkennen, niet voor het vergelijken van lichaamsgrootte. Zang is hier veel betrouwbaarder dan pootkleur of één stilstaande foto.',
+  },
+  {
+    label: 'Fitis en Fluiter · in rust',
+    birds: [
+      {id: 'sp057', source: 'fitis', marks: 'Fitis: lichtbruine tot olijfgroene vogel met geelwitte keel en borst, een zachte aflopende zang.'},
+      {id: 'sp058', source: 'fluiter', marks: 'Fluiter: duidelijke citroengele keel, bovenborst en wenkbrauw boven een contrasterend helderwitte buik.'},
+    ],
+    rows: [
+      {label: 'Onderzijde', values: ['Geelwit tot bleek zonder sterk contrast', 'Citroengele keel en bovenborst, helderwitte buik']},
+      {label: 'Kop', values: ['Lichte wenkbrauw en bruinige wangen', 'Opvallend citroengeel gezicht en wenkbrauw']},
+      {label: 'Zang', values: ['Melodieus dalend riedeltje', 'Versnellend geratel als een rollend muntje, ook fluittonen']},
+    ],
+    tip: 'Gebruik vooral kleurverdeling én zang. De achtergrond, foto-uitsnede en belichting verschillen; concludeer niet alleen op basis van hoe groen één foto oogt.',
+  },
+  {
+    label: 'Tjiftjaf en Fluiter · in rust',
+    birds: [
+      {id: 'sp056', source: 'tjiftjaf', marks: 'Tjiftjaf: overwegend grijsgroen, relatief weinig kleurcontrast en herhaald tjif-tjaf.'},
+      {id: 'sp058', source: 'fluiter', marks: 'Fluiter: gele keel en bovenborst, opvallend witte buik en ratelende zang.'},
+    ],
+    rows: [
+      {label: 'Zang', values: ['Gelijkmatig herhaald tjif-tjaf', 'Versnellende ratel en afzonderlijke fluittonen']},
+      {label: 'Borst en buik', values: ['Vaalgrijzig tot geelachtig, subtiele overgang', 'Citroengele bovenborst naast helderwitte buik']},
+      {label: 'Kop en bouw', values: ['Minder uitgesproken wenkbrauw en relatief korte vleugelpunt', 'Gele wenkbrauw en gemiddeld langgerektere bouw']},
+    ],
+    tip: 'Een zingende vogel biedt het meeste houvast. Bij een stille vogel helpen kleurverdeling en vleugelprojectie alleen samen met het volledige beeld.',
   },
   {
     "birds": [
@@ -27,7 +59,19 @@ export const GUIDE_COMPARISONS = [
       {label: 'Gevouwen vleugel', values: ['Vaak een licht vleugelveld', 'Meestal vrij egaal']},
       {label: 'Contactroep', values: ['Nasaal en langgerekt', 'Kort, explosief en dalend']},
     ],
-    "tip": "Luister naar de roep en bekijk de bovensnavelbasis bij egaal licht. Bij pas uitgevlogen vogels kunnen snavel- en kopkenmerken minder duidelijk zijn."
+    "tip": "Luister eerst naar een duidelijke roepreeks. Bekijk daarna de bovensnavelbasis van opzij bij egaal licht. Gebruik het vleugelveld als extra aanwijzing."
+  },
+  {
+    label: 'Matkop en Glanskop · jonge vogels',
+    birds: [
+      {id: 'sp031', source: 'matkop', plumage: 'juv', marks: 'Op deze foto een doffe kap en lichte snavelhoeken.'},
+      {id: 'sp032', source: 'glanskop', plumage: 'juv', marks: 'Op deze foto een doffe kap, lichte wang en lichte snavelhoeken.'},
+    ],
+    rows: [
+      {label: 'Kap', values: ['Dof bij jonge vogels.', 'Ook dof bij jonge vogels.']},
+      {label: 'Snavelhoeken', values: ['De lichte hoeken vallen op in dit beeld.', 'De lichte hoek is subtieler zichtbaar door de schaduw.']},
+    ],
+    tip: 'De doffe kap en lichte snavelhoeken kunnen bij beide soorten voorkomen. Luister bij twijfel naar de roep of laat de soort open.',
   },
   {
     label: 'Zwarte Mees en Koolmees · nek en vleugel',
@@ -67,11 +111,17 @@ export const GUIDE_COMPARISONS = [
     tip: 'Kijk bij een jonge Ringmus ook naar kruin en nekrand. De wangvlek kan dan veel minder opvallen.',
   },
   {
+    label: 'Vink en Huismus · vrouwtjes in rust',
     birds: [
-      {id: 'sp035', source: 'vink', plumage: 'adult_f', marks: 'Twee witte vleugelstrepen vallen op, ook bij een vrouwtje.'},
-      {id: 'sp043', source: 'huismus', plumage: 'adult_f', marks: 'Lichte wenkbrauw en bruin gestreepte rug.'},
+      {id: 'sp035', source: 'vink', plumage: 'adult_f', marks: 'Grijsbruin met twee witte vleugelstrepen en witte buitenste staartveren.'},
+      {id: 'sp043', source: 'huismus', plumage: 'adult_f', marks: 'Bruin, opvallende lichte wenkbrauw en bruin gestreepte rug.'},
     ],
-    tip: 'Vergelijk de vrouwtjes. Bekijk bij twijfel de gevouwen vleugel.',
+    rows: [
+      {label: 'Gevouwen vleugel', values: ['Twee lichte vleugelstrepen', 'Geen vergelijkbare twee witte banden']},
+      {label: 'Kop', values: ['Meestal egaler grijsbruin', 'Vaak duidelijker lichte wenkbrauw']},
+      {label: 'Rug en staart', values: ['Meestal egalere rug; witte buitenstaartveren', 'Bruiner en gestreept op de rug']},
+    ],
+    tip: 'Bekijk beide vrouwtjes van opzij: vleugelstrepen én rugtekening samen. Jonge Vinken kunnen op vrouwtjes lijken; zicht en licht bepalen wat bruikbaar is.',
   },
   {
     "label": "Grote of middelste bonte specht?",
@@ -93,18 +143,42 @@ export const GUIDE_COMPARISONS = [
   {
     label: 'Kleine en Grote Zilverreiger · buiten broedkleed',
     birds: [
-      {id: 'sp082', source: 'kleine-zilverreiger', plumage: 'winter', marks: 'Slank en klein met een donkere snavel. Bij volwassen vogels vallen de gele tenen op.'},
-      {id: 'sp083', source: 'grote-zilverreiger', plumage: 'winter', marks: 'Veel groter, met een langere hals, een lange gele snavel en donkere tenen.'},
+      {id: 'sp082', source: 'kleine-zilverreiger', plumage: 'winter', photo: '/assets/species/plumage/sp082-winter.webp', marks: 'Kleine, slanke reiger met fijne donkere snavel en gele tenen.'},
+      {id: 'sp083', source: 'grote-zilverreiger', plumage: 'winter', photo: '/assets/species/sp083.webp', marks: 'Veel groter, met een langere hals en meestal een gele snavel buiten de broedtijd.'},
     ],
-    tip: 'Kijk naar de tenen als die zichtbaar zijn. Beoordeel ook de verhouding tussen hals en lichaam.',
+    rows: [
+      {label: 'Snavel', values: ['Fijn en donker.', 'Lang en op deze foto geel.']},
+      {label: 'Tenen', values: ['Geel aan donkere poten.', 'Op deze foto niet zichtbaar in het water.']},
+      {label: 'Bouw', values: ['Kleiner met een relatief korte hals.', 'Groter met een langere hals.']},
+    ],
+    tip: 'Kijk naar de tenen als ze zichtbaar zijn. Gebruik daarnaast de verhouding van hals tot lichaam. De foto’s zijn niet op dezelfde schaal.',
   },
   {
     label: 'Kleine en Grote Zilverreiger · broedkleed',
     birds: [
-      {id: 'sp082', source: 'kleine-zilverreiger', plumage: 'breeding', marks: 'Twee lange sierveren in de nek, kleinere bouw en meestal gele tenen.'},
-      {id: 'sp083', source: 'grote-zilverreiger', plumage: 'breeding', marks: 'Zeer lange hals en sierveren op de rug. De snavel kan tijdelijk grotendeels zwart worden.'},
+      {id: 'sp082', source: 'kleine-zilverreiger', plumage: 'breeding', photo: '/assets/species/plumage/sp082-breeding.webp', marks: 'Twee lange sierveren achter de kop, met een slanke donkere snavel.'},
+      {id: 'sp083', source: 'grote-zilverreiger', plumage: 'breeding', photo: '/assets/species/plumage/sp083-breeding.webp', marks: 'Lange hals en rugsierveren. De snavel kan tijdelijk donker worden.'},
     ],
-    tip: 'Een donkere snavel komt in dit kleed bij beide voor. Let ook op formaat, halslengte en nekveren.',
+    rows: [
+      {label: 'Kop', values: ['Lange, smalle sierveren achter de kop.', 'Zonder de twee lange nekveren van de Kleine Zilverreiger.']},
+      {label: 'Snavel', values: ['Smalle, donkere snavel.', 'Langer. Kan in de broedtijd tijdelijk donker worden.']},
+      {label: 'Hals', values: ['Relatief kort.', 'Lang en slank.']},
+    ],
+    tip: 'Een donkere snavel komt in dit kleed bij beide voor. Let ook op de nekveren en halslengte.',
+  },
+  {
+    label: 'Kleine en Grote Zilverreiger · in vlucht',
+    flight: true,
+    birds: [
+      {id: 'sp082', source: 'kleine-zilverreiger', photo: '/assets/species/sp082.webp', marks: 'Gele tenen steken af tegen de donkere poten. Fijne donkere snavel.'},
+      {id: 'sp083', source: 'grote-zilverreiger', photo: '/assets/species/plumage/sp083-flight.webp', marks: 'Langere, op deze foto gele snavel, met lange poten achter het lichaam.'},
+    ],
+    rows: [
+      {label: 'Voeten', values: ['Gele tenen steken duidelijk af.', 'Op deze foto geen opvallend gele tenen.']},
+      {label: 'Snavel', values: ['Fijn en donker.', 'Lang en op deze foto geel.']},
+      {label: 'Bouw', values: ['Kleinere witte reiger.', 'Grotere witte reiger met lang uitstekende poten.']},
+    ],
+    tip: 'Begin bij de tenen en controleer daarna de snavel. Gebruik formaat alleen als je een betrouwbare vergelijking hebt.',
   },
   {
     label: 'Kleine Zilverreiger en Koereiger · buiten broedkleed',
@@ -135,6 +209,11 @@ export const GUIDE_COMPARISONS = [
     birds: [
       {id: 'sp097', source: 'kokmeeuw', plumage: 'breeding', marks: 'Volwassen vogel heeft in broedkleed een chocoladebruine kap. In vlucht is de voorrand van de vleugel wit.'},
       {id: 'sp225', source: 'zwartkopmeeuw', plumage: 'breeding', marks: 'Volwassen vogel heeft een zwarte broedkap, een dikkere rode snavel en witte slagpennen.'},
+    ],
+    rows: [
+      {label: 'Kap', values: ['Chocoladebruin', 'Zwart, ook op het achterhoofd']},
+      {label: 'Snavel', values: ['Relatief fijn', 'Dikker en korter van indruk']},
+      {label: 'Vleugelpunten in rust', values: ['Donkere punten zichtbaar', 'Bij volwassen vogels overwegend wit']},
     ],
     tip: 'Vergelijk volwassen vogels. Jonge Zwartkopmeeuwen kunnen donkere vleugelpunten hebben.',
   },
@@ -190,29 +269,65 @@ export const GUIDE_COMPARISONS = [
       {id: 'sp249', source: 'blauwe-kiekendief', plumage: 'adult_f', marks: 'Forsere vleugels. Bij goed gespreide vleugelpunten zijn doorgaans vijf vingertoppen zichtbaar.'},
       {id: 'sp251', source: 'grauwe-kiekendief', plumage: 'adult_f', marks: 'Slanker, met smallere vleugels. Doorgaans vier zichtbare vingertoppen bij goed gespreide vleugels.'},
     ],
+    rows: [
+      {label: 'Vleugelvorm', values: ['Relatief breed.', 'Slanker en puntiger.']},
+      {label: 'Vingertoppen', values: ['Meestal vijf bij een goed gespreide vleugelpunt.', 'Meestal vier bij een goed gespreide vleugelpunt.']},
+    ],
     tip: 'Gebruik vleugelvorm én vlucht. Het aantal zichtbare vingers kan wisselen door houding, rui en kijkhoek.',
   },
   {
     label: 'Blauwe en Steppe · volwassen mannetjes',
+    flight: true,
     birds: [
       {id: 'sp249', source: 'blauwe-kiekendief', plumage: 'adult_m', marks: 'Bredere vleugel, met een relatief groot zwart uiteinde en een donkere achterrand van de bovenvleugel.'},
       {id: 'sp250', source: 'steppekiekendief', plumage: 'adult_m', marks: 'Bleker met smallere vleugels en een kleinere, wigvormige zwarte tekening op de handpennen.'},
     ],
+    rows: [
+      {label: 'Vleugelpunt', values: ['Breder zwart veld.', 'Smalle zwarte wig.']},
+      {label: 'Bovenvleugel', values: ['Relatief breed met donkere achterrand.', 'Slank en opvallend bleek.']},
+    ],
     tip: 'Vergelijk de vorm van het zwart aan de vleugelpunt en de breedte van de vleugel samen.',
   },
   {
+    label: 'Blauwe en Steppe · volwassen vrouwtjes',
+    flight: true,
+    birds: [
+      {id: 'sp249', source: 'blauwe-kiekendief', plumage: 'adult_f', marks: 'Relatief brede vleugels, met een gebandeerde ondervleugel en staart.'},
+      {id: 'sp250', source: 'steppekiekendief', plumage: 'adult_f', marks: 'Slankere vleugels. Let op de lichte halsring, donkere oorstreek en tekening van de ondervleugel.'},
+    ],
+    tip: 'Bekijk de combinatie van vleugelvorm, koptekening en ondervleugel. Een witte stuit komt bij beide voor.',
+  },
+  {
+    label: 'Blauwe en Steppe · jonge vogels',
+    flight: true,
+    birds: [
+      {id: 'sp249', source: 'blauwe-kiekendief', plumage: 'juv', marks: 'Bruin met lengtestrepen op de onderzijde en banden op staart en ondervleugels.'},
+      {id: 'sp250', source: 'steppekiekendief', plumage: 'juv', marks: 'Vaak egaal roestoranje onder. Let op de lichte halsring en de donkere vlek ernaast.'},
+    ],
+    tip: 'Combineer borsttekening met kop en ondervleugel. Laat de soort open als de foto te weinig details toont.',
+  },
+  {
     label: 'Grauwe en Steppe · volwassen mannetjes',
+    flight: true,
     birds: [
       {id: 'sp251', source: 'grauwe-kiekendief', plumage: 'adult_m', marks: 'Donkerder grijs, met zwarte vleugelpunten en donkere banden over de armvleugel.'},
       {id: 'sp250', source: 'steppekiekendief', plumage: 'adult_m', marks: 'Bleker lijf en een smalle zwarte wig aan het uiteinde van de vleugel.'},
     ],
-    tip: 'Kijk naar de armvleugel, het deel tussen het lijf en de handpennen. Bij de Grauwe vallen daar donkere banden op.',
+    rows: [
+      {label: 'Armvleugel', values: ['Donkere band over de bovenvleugel.', 'Geen vergelijkbare donkere band bij het volwassen mannetje.']},
+      {label: 'Vleugelpunt', values: ['Zwart aan de top.', 'Smalle zwarte wig aan de top.']},
+    ],
+    tip: 'Bekijk bij de Grauwe de donkere band over de armvleugel en bij de Steppe het kleinere zwarte veld aan de punt. De foto’s tonen verschillende kijkhoeken.',
   },
   {
     label: 'Grauwe en Steppe · volwassen vrouwtjes',
     birds: [
       {id: 'sp251', source: 'grauwe-kiekendief', plumage: 'adult_f', marks: 'Meestal een grotere lichte zone rond het oog en duidelijkere lichte banden op de onderzijde van de armvleugel.'},
       {id: 'sp250', source: 'steppekiekendief', plumage: 'adult_f', marks: 'Let op de lichte halsring, donkere oorstreek en smalle, vaak minder scherp begrensde banden op de ondervleugel.'},
+    ],
+    rows: [
+      {label: 'Kop', values: ['Vaak grotere lichte zone rond het oog.', 'Vaak lichte halsring en donkere oorstreek.']},
+      {label: 'Ondervleugel', values: ['De banden over de armvleugel zijn vaak duidelijker.', 'De armvleugel oogt vaak donkerder en de lichte banden smaller.']},
     ],
     tip: 'Dit is een lastige vergelijking. Combineer koptekening en ondervleugel, liefst op meerdere scherpe vluchtfoto’s.',
   },
@@ -250,6 +365,7 @@ export const GUIDE_COMPARISONS = [
   },
   {
     label: 'Buizerd en Ruigpootbuizerd · volwassen in vlucht',
+    flight: true,
     birds: [
       {id: 'sp005', source: 'buizerd', plumage: 'adult_m', marks: 'De relatief korte, bruingrijze staart heeft doorgaans meerdere smalle dwarsbanden. Ook lichte Buizerds kunnen donkere polsvlekken hebben.'},
       {id: 'sp253', source: 'Ruigpootbuizerd', plumage: 'adult_f', marks: 'Een brede witte staartbasis met donkere bandering, samen met grote donkere polsvlekken. Dit vrouwtje heeft ook een donker buikschild.'},
@@ -258,6 +374,7 @@ export const GUIDE_COMPARISONS = [
   },
   {
     label: 'Buizerd en Ruigpootbuizerd · jonge vogels',
+    flight: true,
     birds: [
       {id: 'sp005', source: 'buizerd', plumage: 'juv', marks: 'Een lichte Buizerd kan een vrijwel witte buik en donkere polsvlekken tonen. Bekijk ook de fijne bandering over de staart.'},
       {id: 'sp253', source: 'Ruigpootbuizerd', plumage: 'juv', marks: 'Vaak een lichte borst met een donker buikschild en opvallende polsvlekken. De witte staartbasis kan bij tegenlicht lastig te zien zijn.'},
@@ -266,6 +383,7 @@ export const GUIDE_COMPARISONS = [
   },
   {
     label: 'Buizerd en Wespendief · volwassen in vlucht',
+    flight: true,
     birds: [
       {id: 'sp005', source: 'buizerd', plumage: 'adult_m', marks: 'Brede vleugels, kleine afstand van kop tot vleugelvoorrand en een relatief korte staart met meerdere fijne banden.'},
       {id: 'sp248', source: 'wespendief', plumage: 'adult_m', marks: 'Verder uitstekende kop en langere staart. Bij dit mannetje zijn de brede donkere eindband en banden dichter bij het lijf te zien.'},
@@ -273,7 +391,18 @@ export const GUIDE_COMPARISONS = [
     tip: 'Begin met de verhouding tussen staart, vleugelbreedte en kop. Gebruik daarna de staartbanden om je indruk te toetsen.',
   },
   {
+    label: 'Buizerd en Wespendief · vrouwtje Wespendief in vlucht',
+    flight: true,
+    tabLabel: 'In vlucht · Wespendief-vrouwtje',
+    birds: [
+      {id: 'sp005', source: 'buizerd', plumage: 'adult_m', marks: 'Brede vleugels met een vrij korte staart. Let op de fijne dwarsbanden over de staart.'},
+      {id: 'sp248', source: 'wespendief', plumage: 'adult_f', marks: 'Verder uitstekende kop, langere staart en donkere banden op de ondervleugel.'},
+    ],
+    tip: 'Vergelijk eerst kop en staart. Gebruik de vleugelbanden als extra aanwijzing wanneer de onderzijde goed zichtbaar is.',
+  },
+  {
     label: 'Buizerd en Wespendief · jonge vogels',
+    flight: true,
     birds: [
       {id: 'sp005', source: 'buizerd', plumage: 'juv', marks: 'Relatief korte staart met veel fijne banden. Jonge vogels hebben vaak een lichte iris en een gestreepte borst.'},
       {id: 'sp248', source: 'wespendief', plumage: 'juv', marks: 'Langere staart en een verder uitstekende kop. Op een scherpe foto van de kop kunnen de donkere iris en gele snavelbasis opvallen.'},
@@ -286,6 +415,11 @@ export const GUIDE_COMPARISONS = [
       {id: 'sp091', source: 'wintertaling', plumage: 'adult_m', marks: 'Kastanjebruine kop met breed groen oogveld. Horizontale witte flankstreep en gele vlek naast de staart.'},
       {id: 'sp188', source: 'zomertaling', plumage: 'adult_m', marks: 'Brede witte oogboog die doorloopt naar het achterhoofd. Bruine borst en lange, afhangende schouderveren.'},
     ],
+    rows: [
+      {label: 'Kop', values: ['Breed groen oogveld op kastanjebruine kop', 'Brede witte oogboog tot aan het achterhoofd']},
+      {label: 'Flank en schouder', values: ['Horizontale witte flankstreep', 'Lange, afhangende zwart-witte schouderveren']},
+      {label: 'Staartzijde', values: ['Gele vlek met zwarte rand', 'Bruin en fijn getekend']},
+    ],
     tip: 'Begin met de kop. De droge ratel van het mannetje Zomertaling klinkt anders dan het hoge fluitje van Wintertaling.',
   },
   {
@@ -294,13 +428,22 @@ export const GUIDE_COMPARISONS = [
       {id: 'sp091', source: 'wintertaling', plumage: 'adult_f', marks: 'Vaak minder contrast rond het oog, met een lichte vlek aan de staartzijde. Bij een geopende vleugel kan de groene spiegel oplichten.'},
       {id: 'sp188', source: 'zomertaling', plumage: 'adult_f', marks: 'Donkere oogstreep, lichte wenkbrauw en lichte keel. Vaak ook een licht vlekje aan de snavelbasis.'},
     ],
-    tip: 'Vergelijk oogstreep, keel en staartzijde samen. Een glanzende spiegel kan door de kijkhoek donker lijken.',
+    rows: [
+      {label: 'Oogstreep', values: ['Op deze foto weinig contrast rond het oog', 'Donkere oogstreep tussen lichte kopstrepen']},
+      {label: 'Keel', values: ['Lichtbruin en fijn getekend op deze foto', 'Lichte keel die afsteekt tegen de kopstrepen']},
+      {label: 'Staartzijde', values: ['Vaak een lichte vlek bij de staart', 'Zonder kenmerkende lichte vlek bij de staart']},
+    ],
+    tip: 'Begin met het contrast op de kop. Kijk bij een goed zijaanzicht ook naar de staartzijde. De vleugelspiegel is op deze rustfoto’s maar beperkt te zien.',
   },
   {
     label: 'Wintertaling en Zomertaling · jonge vogels',
     birds: [
       {id: 'sp091', source: 'wintertaling', plumage: 'juv', marks: 'Bruine vogel die sterk op een vrouwtje lijkt. Bij deze vogel is de groene vleugelspiegel zichtbaar.'},
       {id: 'sp188', source: 'zomertaling', plumage: 'juv', marks: 'Lijkt ook sterk op het eigen vrouwtje. Let op het contrast tussen de donkere oogstreep en de lichte keel en wenkbrauw.'},
+    ],
+    rows: [
+      {label: 'Oogstreep', values: ['Subtiel op deze donkere kop', 'Donker met een lichte wenkbrauw en wang']},
+      {label: 'Gevouwen vleugel', values: ['Een stukje groene spiegel is zichtbaar', 'Spiegel ligt weggevouwen']},
     ],
     tip: 'Kop- en vleugeltekening helpen om de soort te bepalen. Laat de leeftijd open als de details ontbreken.',
   },
@@ -465,12 +608,14 @@ export const GUIDE_COMPARISONS = [
     tip: 'Bekijk de kop, borstzijde en pootlengte samen. Let bij een foeragerende vogel ook op de houding en beweging.',
   },
   {
-    label: 'Torenvalk en Slechtvalk · volwassen',
+    label: 'Torenvalk en Slechtvalk · volwassen in vlucht',
+    flight: true,
+    tabLabel: 'In vlucht · Volwassen',
     birds: [
-      {id: 'sp008', source: 'torenvalk', plumage: 'adult_m', marks: 'Lange staart en roestbruine rug. Dit mannetje heeft een grijze kop en bovenstaart.'},
-      {id: 'sp009', source: 'slechtvalk', plumage: 'adult_m', marks: 'Zware borst, brede donkere baardstreep en relatief korte staart. Blauwgrijze bovenzijde.'},
+      {id: 'sp008', source: 'torenvalk', plumage: 'adult_m', marks: 'Lange staart met donkere eindband. Slanker gebouwd, met spitse vleugels.'},
+      {id: 'sp009', source: 'slechtvalk', photo: '/assets/species/plumage/sp009-male-flight.webp', marks: 'Zware borst, brede donkere baardstreep en relatief korte staart. De spitse vleugels hebben een brede basis.'},
     ],
-    tip: 'Vergelijk de verhoudingen van kop, vleugels en staart. Gebruik kleur bij goed licht; de foto’s zijn niet op dezelfde schaal.',
+    tip: 'Vergelijk de lengte van de staart ten opzichte van de vleugelbasis. De foto’s zijn niet op dezelfde schaal.',
   },
   {
     label: 'Torenvalk en Slechtvalk · juveniel',
@@ -545,6 +690,7 @@ export const GUIDE_COMPARISONS = [
     "tip": "Beide kunnen lachen. Combineer geluid met kleur en vlucht."
   },
   {
+    "tabLabel": "Volwassen",
     "birds": [
       {
         "id": "sp030",
@@ -557,7 +703,16 @@ export const GUIDE_COMPARISONS = [
         "marks": "Grotere mees met zwarte kop, witte wang en een zwarte lengtestreep midden over de gele buik."
       }
     ],
-    "tip": "Kijk naar de hele koptekening. Een blauwe kruin met smalle oogstreep wijst op Pimpelmees; Koolmees heeft een veel groter zwart kopvlak."
+    "tip": "Kijk naar de hele koptekening en de buikstreep. Bij jonge vogels van beide soorten kan de wang gelig zijn."
+  },
+  {
+    label: 'Koolmees en Pimpelmees · juveniel',
+    tabLabel: 'Juveniel',
+    birds: [
+      {id: 'sp029', source: 'koolmees', plumage: 'juv', marks: 'Donkere kap en keel rond de lichtgele wang. Op de buik kan een donkere lengtestreep zichtbaar zijn.'},
+      {id: 'sp030', source: 'pimpelmees', plumage: 'juv', marks: 'Doffe kruin en een donkere lijn door het oog. De wangen zijn vaak lichtgeel.'},
+    ],
+    tip: 'De wangen kunnen bij beide geel zijn. Kijk naar de kap, de keel en de lijn door het oog.',
   },
   {
     label: 'Kuifmees en Matkop · koptekening',
@@ -585,7 +740,23 @@ export const GUIDE_COMPARISONS = [
         "marks": "Brede witte wenkbrauw boven een zwarte oogstreep; duidelijk contrastrijker gezicht."
       }
     ],
-    "tip": "Begin bij het gezicht, niet bij de kleur van de kruin. Beide soorten kunnen geel én oranje op de kruin tonen."
+    rows: [
+      {label: 'Wenkbrauw', values: ['Geen brede witte wenkbrauw.', 'Brede witte wenkbrauw.']},
+      {label: 'Oogstreek', values: ['Donker oog in een vrij egaal gezicht.', 'Donkere oogstreep met meer contrast rond het oog.']},
+    ],
+    "tip": "Begin bij de wenkbrauw en oogstreek. Bij beide soorten kan de kruin geel of oranje tonen."
+  },
+  {
+    label: 'Goudhaantje en Vuurgoudhaan · juvenielen',
+    birds: [
+      {id: 'sp063', source: 'goudhaan', plumage: 'juv', photoMissing: true, marks: 'Jong Goudhaantje zonder de volwassen gekleurde kruinstreep en zonder lichte wenkbrauw.'},
+      {id: 'sp064', source: 'vuurgoudhaan', plumage: 'juv', photoMissing: true, marks: 'Jonge Vuurgoudhaan zonder de volwassen gekleurde kruinstreep, maar met een lichte wenkbrauw.'},
+    ],
+    rows: [
+      {label: 'Wenkbrauw', values: ['Lichte wenkbrauw ontbreekt.', 'Lichte wenkbrauw aanwezig.']},
+      {label: 'Kruin', values: ['Nog zonder opvallende gekleurde kruinstreep.', 'Nog zonder opvallende gekleurde kruinstreep.']},
+    ],
+    tip: 'Er is nog géén gecontroleerd juvenielen-fotopaar; de volwassen foto’s mogen niet als juvenielen worden getoond. Bij beide jonge soorten ontbreekt de volwassen kruinstreep aanvankelijk. Vergelijk vooral een scherp zijaanzicht van de wenkbrauw; bij onvoldoende zicht blijft de determinatie onzeker.',
   },
   {
     "label": "Boomklever en Boomkruiper · bouw en beweging",
@@ -593,6 +764,7 @@ export const GUIDE_COMPARISONS = [
       {
         "id": "sp065",
         "source": "boomklever",
+        "photo": "/assets/species/plumage/sp065-head-down.webp",
         "marks": "Blauwgrijze rug, zwarte oogstreep, rechte snavel en korte staart. Beweegt ook kop omlaag langs de stam."
       },
       {
@@ -601,23 +773,35 @@ export const GUIDE_COMPARISONS = [
         "marks": "Bruin-licht gevlekte rug, dunne kromme snavel en lange stijve staart. Zoekt meestal omhoog klimmend naar voedsel."
       }
     ],
-    "tip": "Combineer kleur en bouw met de richting van klimmen. Een stilzittende vogel is ook zonder gedrag aan deze kenmerken te vergelijken."
+    rows: [
+      {label: 'Snavel', values: ['Vrij recht en spits.', 'Slank en naar beneden gebogen.']},
+      {label: 'Staart', values: ['Kort en vrij van de stam op deze foto.', 'Lang en stijf. Dient als steun tegen de stam.']},
+      {label: 'Houding', values: ['Kan ook met de kop omlaag bewegen.', 'Zoekt meestal omhoog klimmend naar voedsel.']},
+    ],
+    "tip": "Vergelijk eerst snavel en staart. Let bij een bewegende vogel ook op de klimrichting."
   },
   {
-    "label": "Boomkruiper en Taigaboomkruiper · combineer beeld en geluid",
+    "label": "Boomkruiper en Taigaboomkruiper · op een stam",
     "birds": [
       {
         "id": "sp066",
         "source": "boomkruiper",
+        "photo": "/assets/species/plumage/sp066-wing.webp",
         "marks": "Vaak warmere flanken, minder opvallende wenkbrauw en een gelijkmatiger verloop van de lichte vleugelband."
       },
       {
         "id": "sp067",
         "source": "taigaboomkruiper",
+        "photo": "/assets/species/plumage/sp067-wing.webp",
         "marks": "Vaak witter onderaan en achter het oog. Het precieze patroon van de lichte vleugelband helpt, maar vraagt een scherp zijaanzicht."
       }
     ],
-    "tip": "Luister naar volledige zangstrofen en vergelijk meerdere beelden. Kleur, snavellengte of één witte streep alleen is onvoldoende; ondersoorten en kijkhoek beïnvloeden het beeld."
+    rows: [
+      {label: 'Vleugelband', values: ['Lichte punten met een geleidelijk verloop.', 'Lichte baan met een inkeping en een steilere sprong.']},
+      {label: 'Flank', values: ['Vaak warmer bruin.', 'Op deze foto lichter. De tint verschilt per ondersoort.']},
+      {label: 'Geluid', values: ['Typische zang stijgt. De roep is vaak doordringend.', 'Typische zang begint hoog en daalt. De roep is vaak dunner.']},
+    ],
+    "tip": "Luister via Geluid op beide kaarten naar een hele zangstrofe. Vergelijk daarna de gevouwen vleugel op een scherp zijaanzicht. Mengzang komt voor."
   },
   {
     "label": "Meerkoet en Waterhoen · volwassen",
@@ -625,67 +809,127 @@ export const GUIDE_COMPARISONS = [
       {
         "id": "sp078",
         "source": "meerkoet",
-        "marks": "Witte snavel en witte voorhoofdsplaat; vrijwel geheel donker lichaam."
+        "photo": "/assets/species/sp078.webp",
+        "marks": "Witte snavel en bles, donker lichaam en zwarte kop."
       },
       {
         "id": "sp079",
         "source": "waterhoen",
-        "marks": "Rode snavel met gele punt, rood voorhoofd en een witte streep op de flank."
+        "photo": "/assets/species/sp079.webp",
+        "marks": "Rode snavel met gele punt en rode bles. Duidelijke witte flankstreep."
       }
     ],
-    "tip": "Bekijk vooral snavel en voorhoofd. Jonge vogels hebben deze volwassen kleuren nog niet."
+    rows: [
+      {label: 'Snavel', values: ['Wit.', 'Rood met een gele punt.']},
+      {label: 'Bles', values: ['Groot wit schild op het voorhoofd.', 'Rood schild boven de snavel.']},
+      {label: 'Flank', values: ['Donkergrijs zonder witte lengtestreep.', 'Witte lengtestreep langs de zij.']},
+    ],
+    "tip": "Begin bij de snavel en bles. Gebruik de flankstreep als extra kenmerk."
   },
   {
-    "label": "Blauwe Reiger en Purperreiger · volwassen",
+    "label": "Meerkoet en Waterhoen · jonge vogels",
     "birds": [
       {
-        "id": "sp081",
-        "source": "blauwe-reiger",
-        "marks": "Robuuster met grijze rug, lichte hals en een relatief zware dolksnavel."
+        "id": "sp078",
+        "source": "meerkoet",
+        "plumage": "juv",
+        "photo": "/assets/species/plumage/sp078-juv-grown.webp",
+        "marks": "Op deze foto lichtgrijze wangen en keel. Een groot wit voorhoofdsschild ontbreekt nog."
       },
       {
-        "id": "sp084",
-        "source": "purperreiger",
-        "marks": "Slanker met een dunne hals, kastanjebruine tinten en donkere halsstrepen."
+        "id": "sp079",
+        "source": "waterhoen",
+        "plumage": "juv",
+        "photo": "/assets/species/plumage/sp079-juv.webp",
+        "marks": "Bruine bovenzijde, lichte keel en witte flankstreep. Het voorhoofd heeft nog geen opvallende rode bles."
       }
     ],
-    "tip": "Vergelijk bouw en hals naast kleur. Houd rekening met licht en houding; de foto’s zijn niet op dezelfde schaal."
+    rows: [
+      {label: 'Kop', values: ['Op deze foto zijn wang en keel lichtgrijs.', 'Op deze foto is de kop donkerder, met een lichtere keel.']},
+      {label: 'Bovenzijde', values: ['Op deze foto grijsbruin.', 'Op deze foto warmer bruin.']},
+      {label: 'Flank', values: ['Geen witte lengtestreep.', 'Witte lengtestreep zichtbaar.']},
+    ],
+    "tip": "Gebruik de flankstreep samen met de koptekening. Jonge vogels missen de opvallende bles van volwassen vogels."
   },
   {
-    "label": "Blauwe Reiger en Purperreiger · jonge vogels",
-    "birds": [
-      {
-        "id": "sp081",
-        "source": "blauwe-reiger",
-        "marks": "Grijzer en robuuster, met donkere kruin en een stevige snavel.",
-        "plumage": "juv"
-      },
-      {
-        "id": "sp084",
-        "source": "purperreiger",
-        "marks": "Warmer bruin, fijner gebouwd en met een relatief dunne hals en snavel.",
-        "plumage": "juv"
-      }
+    label: 'Blauwe Reiger en Purperreiger · volwassen',
+    birds: [
+      {id: 'sp081', source: 'blauwe-reiger', photo: '/assets/species/plumage/sp081-portrait.webp', marks: 'Grijze mantel, lichte hals en een stevige dolksnavel.'},
+      {id: 'sp084', source: 'purperreiger', photo: '/assets/showcase/sp084.webp', marks: 'Slanker, met een bruinoranje hals en donkere halsstrepen.'},
     ],
-    "tip": "Bij beide ontbreekt de volledige volwassen koptekening. De Purperreigerfoto is uit India; tinten kunnen geografisch verschillen."
+    rows: [
+      {label: 'Halskleur', values: ['Licht, met donkere streping op de voorhals.', 'Bruinoranje met donkere lengtestrepen.']},
+      {label: 'Snavel', values: ['Stevige dolksnavel.', 'Slankere, puntige snavel.']},
+      {label: 'Bouw', values: ['Forser.', 'Fijner gebouwd met een dunne hals.']},
+    ],
+    tip: 'Kijk eerst naar de kleur en tekening van de hals. De foto’s zijn niet op dezelfde schaal.',
   },
   {
-    "label": "Kwak en Blauwe Reiger · jonge vogels",
-    "birds": [
-      {
-        "id": "sp085",
-        "source": "kwak",
-        "marks": "Compact met opvallende lichte druppelvlekken op de bruine vleugels en lengtestrepen op de borst.",
-        "plumage": "juv"
-      },
-      {
-        "id": "sp081",
-        "source": "blauwe-reiger",
-        "marks": "Langer en grijzer, met een lange hals en zonder de duidelijke lichte druppelvlekken op de vleugels.",
-        "plumage": "juv"
-      }
+    label: 'Blauwe Reiger en Purperreiger · jonge vogels',
+    birds: [
+      {id: 'sp081', source: 'blauwe-reiger', plumage: 'juv', photo: '/assets/species/plumage/sp081-juv.webp', marks: 'Grijze kruin, grijzere rug en bovensnavel donkerder dan bij een volwassene.'},
+      {id: 'sp084', source: 'purperreiger', plumage: 'juv', photo: '/assets/species/plumage/sp084-juv-europa.webp', marks: 'Warmbruin kleed met licht gerande vleugeldekveren en een slanke hals.'},
     ],
-    "tip": "Een ingetrokken hals maakt ook een Blauwe Reiger compact. Controleer daarom vooral het patroon op rug en vleugels."
+    rows: [
+      {label: 'Kruin', values: ['Grijs.', 'Warmbruin.']},
+      {label: 'Vleugel', values: ['Overwegend grijs.', 'Bruin met lichte veerranden.']},
+      {label: 'Snavel', values: ['Stevig, met een donkere bovensnavel.', 'Fijn en spits.']},
+    ],
+    tip: 'Vergelijk kruin en vleugel samen. De ingetrokken hals op de foto van de Blauwe Reiger maakt halslengte hier lastig te vergelijken.',
+  },
+  {
+    label: 'Blauwe Reiger en Purperreiger · in vlucht',
+    flight: true,
+    birds: [
+      {id: 'sp081', source: 'blauwe-reiger', photo: '/assets/species/sp081.webp', marks: 'Brede vleugels, lichte kop en hals en een stevige snavel.'},
+      {id: 'sp084', source: 'purperreiger', photo: '/assets/species/plumage/sp084-flight.webp', marks: 'Warmere halstint, hoekige keelzak en ver uitstekende tenen.'},
+    ],
+    rows: [
+      {label: 'Hals', values: ['Lichte, ingetrokken hals.', 'Warmere hals met een hoekiger knik.']},
+      {label: 'Vleugel', values: ['Brede vleugels met lichtere dekveren.', 'Donkerder vleugelbeeld.']},
+      {label: 'Poten en tenen', values: ['Poten steken achter het lichaam uit.', 'Lange tenen steken opvallend ver uit.']},
+    ],
+    tip: 'Vergelijk de halsknik en tenen samen. De precieze vleugelstand wisselt per vleugelslag.',
+  },
+  {
+    label: 'Kwak en Blauwe Reiger · jonge vogels',
+    birds: [
+      {id: 'sp085', source: 'kwak', plumage: 'juv', photo: '/assets/species/plumage/sp085-juv.webp', marks: 'Compact met lichte druppelvlekken op de bruine vleugel en donkere lengtestrepen op de borst.'},
+      {id: 'sp081', source: 'blauwe-reiger', plumage: 'juv', photo: '/assets/species/plumage/sp081-juv.webp', marks: 'Grijze kruin en overwegend grijze vleugels zonder lichte druppelvlekken.'},
+    ],
+    rows: [
+      {label: 'Vleugel', values: ['Bruin, met losse lichte druppelvlekken.', 'Overwegend grijs, zonder die losse druppelvlekken.']},
+      {label: 'Kruin', values: ['Bruin, met lichte streepjes.', 'Overwegend grijs.']},
+      {label: 'Bouw', values: ['Compact.', 'Langere hals, op deze foto ingetrokken.']},
+    ],
+    tip: 'Een ingetrokken hals maakt ook een Blauwe Reiger compact. Kijk daarom eerst naar het vleugelpatroon.',
+  },
+  {
+    label: 'Kwak en Blauwe Reiger · in vlucht',
+    flight: true,
+    birds: [
+      {id: 'sp085', source: 'kwak', photo: '/assets/species/plumage/sp085-flight.webp', marks: 'Compact silhouet, donkere snavel en korte hals.'},
+      {id: 'sp081', source: 'blauwe-reiger', photo: '/assets/species/sp081.webp', marks: 'Forse reiger met een lichte halsbocht, gele dolksnavel en ver uitstekende poten.'},
+    ],
+    rows: [
+      {label: 'Hals', values: ['Korte hals dicht tegen het lichaam.', 'Langere, lichte hals die ook in vlucht ingetrokken is.']},
+      {label: 'Snavel', values: ['Op deze foto donker.', 'Op deze foto lang en geeloranje.']},
+      {label: 'Poten', values: ['Steken op deze foto kort uit achter de staart.', 'Steken duidelijk achter het lichaam uit.']},
+    ],
+    tip: 'Vergelijk het silhouet en de uitstekende poten. De foto’s zijn niet op dezelfde schaal.',
+  },
+  {
+    label: 'Kwak en Purperreiger · jonge vogels',
+    birds: [
+      {id: 'sp085', source: 'kwak', plumage: 'juv', photo: '/assets/species/plumage/sp085-juv.webp', marks: 'Gedrongen met losse lichte druppelvlekken op de bruine vleugel.'},
+      {id: 'sp084', source: 'purperreiger', plumage: 'juv', photo: '/assets/species/plumage/sp084-juv-europa.webp', marks: 'Slanker, met lichte randen rond bruine vleugeldekveren.'},
+    ],
+    rows: [
+      {label: 'Vleugel', values: ['Losse lichte druppelvlekken.', 'Lichte randen rondom de afzonderlijke veren.']},
+      {label: 'Hals', values: ['Kort en op deze foto ingetrokken.', 'Lang en slank.']},
+      {label: 'Snavel', values: ['Relatief kort en stevig.', 'Lang en fijn gepunt.']},
+    ],
+    tip: 'Beide jonge vogels zijn bruin. Begin bij het verschil tussen druppelvlekken en lichte veerranden.',
   },
   {
     "label": "Wilde Eend en Slobeend · vrouwtjes",
@@ -694,16 +938,62 @@ export const GUIDE_COMPARISONS = [
         "id": "sp089",
         "source": "wilde-eend",
         "marks": "Bruine eend met een gewone, relatief smalle eendensnavel en blauw-paarse spiegel.",
+        "photo": "/assets/species/plumage/sp089-adult_f.webp",
         "plumage": "adult_f"
       },
       {
         "id": "sp090",
         "source": "slobeend",
         "marks": "Eveneens bruin, maar met een opvallend lange snavel die naar het uiteinde breed uitloopt.",
+        "photo": "/assets/species/plumage/sp090-adult_f.webp",
         "plumage": "adult_f"
       }
     ],
+    "rows": [
+      {"label": "Snavelvorm", "values": ["Relatief smal en minder breed uitlopend", "Lang, breed en lepelvormig"]},
+      {"label": "Vleugelspiegel", "values": ["Blauwpaars met witte randen als de vleugel opengaat", "Groen zonder brede witte achterrand als de vleugel opengaat"]}
+    ],
     "tip": "Begin met de snavelvorm. De spiegel kan onder de gevouwen vleugel verborgen zijn."
+  },
+  {
+    label: 'Wilde Eend en Slobeend · mannetjes in vrije vlucht',
+    flight: true,
+    birds: [
+      {id: 'sp089', source: 'wilde-eend', plumage: 'adult_m', photo: '/assets/species/plumage/sp089-free-flight.webp', marks: 'Gele snavel, smalle witte halsring, donkere borst en grijs lichaam.'},
+      {id: 'sp090', source: 'slobeend', plumage: 'adult_m', photo: '/assets/species/plumage/sp090-flight.webp', marks: 'Lange donkere lepelvormige snavel, witte borst, kastanjebruine flank en lichtblauwe voorvleugel.'},
+    ],
+    rows: [
+      {label: 'Snavel', values: ['Geel en gelijkmatiger van breedte', 'Donker, lang en aan de punt lepelvormig']},
+      {label: 'Borst', values: ['Donkere borst onder een smalle witte halsring', 'Opvallend witte borst']},
+      {label: 'Flank', values: ['Lichtgrijs', 'Kastanjebruin']},
+    ],
+    tip: 'Beide mannetjes hebben een groene kop. Begin met de snavel en borst. Bij Slobeend zie je op deze foto ook de lichtblauwe voorvleugel.',
+  },
+  {
+    label: 'Kuifeend en Topper · mannetjes in rust',
+    birds: [
+      {id: 'sp092', source: 'kuifeend', plumage: 'adult_m', marks: 'Zwarte rug, witte flanken en vaak een afhangende kuif.'},
+      {id: 'sp133', source: 'topper', plumage: 'adult_m', photoMissing: true, marks: 'Fijngetekende lichtgrijze rug en ronde kop zonder afhangende kuif.'},
+    ],
+    rows: [
+      {label: 'Rug', values: ['Zwart', 'Lichtgrijs, fijn donker getekend']},
+      {label: 'Kop', values: ['Vaak met afhangende kuif', 'Ronder; zonder afhangende kuif']},
+      {label: 'Kopglans', values: ['Kan paarsachtig of groenig lijken', 'Kan groenig lijken; licht beïnvloedt beide']},
+    ],
+    tip: 'Vergelijk de rugtekening en het kopprofiel bij hetzelfde kleed en vergelijkbare houding. Kopglans en alleen een onzichtbare kuif zijn niet voldoende.',
+  },
+  {
+    label: 'Kuifeend en Topper · vrouwtjes in rust',
+    birds: [
+      {id: 'sp092', source: 'kuifeend', plumage: 'adult_f', marks: 'Bruin; vaak een korte kuif en soms wit rond de snavelbasis.'},
+      {id: 'sp133', source: 'topper', plumage: 'adult_f', photoMissing: true, marks: 'Bruin; vaak een bredere witte snavelbasis en een rond kopprofiel.'},
+    ],
+    rows: [
+      {label: 'Kopprofiel', values: ['Soms een korte kuif', 'Rond, zonder duidelijke kuif']},
+      {label: 'Snavelbasis', values: ['Wit kan voorkomen', 'Vaak uitgebreider wit, maar variabel']},
+      {label: 'Rug', values: ['Doorgaans donkerder en egaler', 'Vaak lichter, met fijnere tekening']},
+    ],
+    tip: 'Bij vrouwtjes en jonge vogels overlappen meerdere kenmerken. De witte snavelbasis alléén bepaalt de soort niet; bij twijfel geen zekere determinatie. Sluit ook Kleine Topper niet op één kenmerk uit.',
   },
   {
     "label": "Kuifeend en Tafeleend · mannetjes in prachtkleed",
@@ -720,6 +1010,11 @@ export const GUIDE_COMPARISONS = [
         "marks": "Roodbruine kop, zwarte borst, grijze flanken en rood oog; geen kuif.",
         "plumage": "adult_m"
       }
+    ],
+    "rows": [
+      {"label": "Kop", "values": ["Zwart met afhangende kuif", "Roodbruin zonder kuif"]},
+      {"label": "Oog", "values": ["Geel", "Rood"]},
+      {"label": "Flanken", "values": ["Wit", "Lichtgrijs"]}
     ],
     "tip": "Vergelijk kopkleur, flankkleur en oog samen. Mannetjes zien er in eclipskleed minder contrastrijk uit."
   },
@@ -739,28 +1034,59 @@ export const GUIDE_COMPARISONS = [
         "plumage": "adult_f"
       }
     ],
+    "rows": [
+      {"label": "Kopprofiel", "values": ["Ronde kop, vaak met korte kuif", "Aflopend voorhoofd, zonder kuif"]},
+      {"label": "Oog", "values": ["Meestal geel", "Doorgaans donker"]},
+      {"label": "Lichte tekening", "values": ["Soms bij de snavelbasis", "Vaak op wang en keel"]}
+    ],
     "tip": "Een kleine kuif kan platliggen of slecht zichtbaar zijn. Gebruik ook oogkleur, kopvorm en wangtekening."
+  },
+  {
+    label: 'Kuifeend en Tafeleend · mannetjes in vrije vlucht',
+    flight: true,
+    birds: [
+      {id: 'sp092', source: 'kuifeend', plumage: 'adult_m', photo: '/assets/species/plumage/sp092-flight.webp', marks: 'Donkere kop en borst, witte flank en een witte baan over de slagpennen.'},
+      {id: 'sp132', source: 'tafeleend', plumage: 'adult_m', photo: '/assets/species/plumage/sp132-flight.webp', marks: 'Roodbruine kop, donker voorlichaam en een lichtgrijze baan over de vleugel.'},
+    ],
+    rows: [
+      {label: 'Kop', values: ['Donker', 'Roodbruin']},
+      {label: 'Vleugelbaan', values: ['Wit en scherp afgetekend', 'Lichtgrijs en minder contrastrijk']},
+    ],
+    tip: 'Gebruik kopkleur en vleugelbaan samen. De vlieghouding bepaalt hoeveel je van de kuif en de vleugel ziet.',
   },
   {
     label: 'Zilvermeeuw en Kleine Mantelmeeuw · volwassen',
     birds: [
-      {id: 'sp094', source: 'zilvermeeuw', marks: 'Lichtgrijze mantel en roze poten. De gele snavel heeft een rode vlek.'},
-      {id: 'sp095', source: 'kleine-mantelmeeuw', marks: 'Donkergrijze mantel en gele poten. Oogt doorgaans slanker.'},
+      {id: 'sp094', source: 'zilvermeeuw', photo: '/assets/species/sp094.webp', marks: 'Lichtgrijze mantel en roze poten. De gele snavel heeft een rode vlek.'},
+      {id: 'sp095', source: 'kleine-mantelmeeuw', photo: '/assets/species/sp095.webp', marks: 'Donkergrijze mantel en gele poten. Oogt doorgaans slanker.'},
     ],
     rows: [
       {label: 'Mantel', values: ['Lichtgrijs', 'Donkergrijs']},
       {label: 'Poten', values: ['Roze', 'Geel']},
-      {label: 'Snavel / bouw', values: ['Gele snavel, rode vlek', 'Slanker']},
+      {label: 'Bouw', values: ['Oogt doorgaans forser', 'Oogt doorgaans slanker']},
     ],
     tip: 'Combineer mantelkleur en pootkleur. Licht en schaduw kunnen de mantel donkerder of lichter doen lijken.',
   },
   {
     label: 'Zilvermeeuw en Kleine Mantelmeeuw · eerste winter',
     birds: [
-      {id: 'sp094', source: 'zilvermeeuw', marks: 'De lichte randen van de tertials zijn vaak duidelijk gekarteld.'},
-      {id: 'sp095', source: 'kleine-mantelmeeuw', marks: 'De tertials ogen meestal egaler. In vlucht valt de donkere ondervleugel op.'},
+      {id: 'sp094', source: 'zilvermeeuw', photoMissing: true, marks: 'De lichte randen van de tertials zijn vaak duidelijk gekarteld.'},
+      {id: 'sp095', source: 'kleine-mantelmeeuw', photoMissing: true, marks: 'De tertials ogen meestal egaler. In vlucht valt de donkere ondervleugel op.'},
     ],
     tip: 'Bekijk de binnenste armpennen op een scherp zijaanzicht en controleer zo mogelijk de ondervleugel in vlucht.',
+  },
+  {
+    label: 'Zilvermeeuw en Kleine Mantelmeeuw · volwassen in vrije vlucht',
+    flight: true,
+    birds: [
+      {id: 'sp094', source: 'zilvermeeuw', photo: '/assets/species/plumage/sp094-flight.webp', marks: 'Lichtgrijs vleugelveld met een duidelijk afstekende zwarte vleugeltop.'},
+      {id: 'sp095', source: 'kleine-mantelmeeuw', photo: '/assets/species/plumage/sp095-flight.webp', marks: 'Donkergrijze bovenvleugel, met een geleidelijker overgang naar de zwarte top.'},
+    ],
+    rows: [
+      {label: 'Vleugelveld', values: ['Lichtgrijs', 'Donkergrijs']},
+      {label: 'Vleugeltop', values: ['Zwart steekt duidelijk af', 'Zwart sluit aan op de donkere vleugel']},
+    ],
+    tip: 'Vergelijk vooral het grijs op de bovenzijde. Tegenlicht en een andere vleugelhoek veranderen het zichtbare contrast.',
   },
   {
     label: 'Boerenzwaluw en Huiszwaluw',
@@ -773,10 +1099,28 @@ export const GUIDE_COMPARISONS = [
   {
     label: 'Witte en Gele Kwikstaart · jonge vogels',
     birds: [
-      {id: 'sp068', source: 'witte-kwikstaart', marks: 'Valer dan een volwassen vogel, met veel wit op de kop en een smalle donkere borstband.'},
-      {id: 'sp069', source: 'gele-kwikstaart', marks: 'Kan bleek ogen en weinig geel tonen. Bekijk ook de wenkbrauwstreep en luister naar de roep als de vogel opvliegt.'},
+      {id: 'sp068', source: 'witte-kwikstaart', photoMissing: true, marks: 'Jonge Witte Kwikstaart: valer grijs kleed, relatief lichte kop en doorgaans een smallere borstband.'},
+      {id: 'sp069', source: 'gele-kwikstaart', photoMissing: true, marks: 'Jonge Gele Kwikstaart: vaak weinig geel, lichte vleugelstrepen en onregelmatige donkere bovenborsttekening.'},
     ],
-    tip: 'Gebruik de kleur alleen als aanwijzing. Combineer koptekening, borstpatroon en roep. Laat de soort open als de kenmerken elkaar tegenspreken.',
+    rows: [
+      {label: 'Borst', values: ['Smalle donkere borstband boven een lichte buik', 'Bleek met vaak wat donkere bovenborststreping']},
+      {label: 'Kop', values: ['Grijs, relatief veel wit', 'Overwegend bleek met lichte wenkbrauw']},
+      {label: 'Zekerheid', values: ['Gebruik borstband én staartvorm', 'Gebruik vleugelstrepen én roep; ontbrekend geel sluit niet uit']},
+    ],
+    tip: 'Er is nog géén gecontroleerd juvenielen-fotopaar. De volwassen foto’s van deze soorten mogen daarom niet als juvenielen worden getoond.',
+  },
+  {
+    label: 'Witte en Gele Kwikstaart · volwassen in rust',
+    birds: [
+      {id: 'sp068', source: 'witte-kwikstaart', marks: 'Volwassen Witte Kwikstaart in prachtkleed: zwart-witte kop en keel met grijze rug en witte buik.'},
+      {id: 'sp069', source: 'gele-kwikstaart', plumage: 'adult_m', marks: 'Mannetje Gele Kwikstaart van de nominaatvorm: blauwgrijze kop, witte wenkbrauw en felgele onderzijde.'},
+    ],
+    rows: [
+      {label: 'Borst en buik', values: ['Wit en grijs met zwarte keel/bef', 'Grotendeels felgeel in broedkleed']},
+      {label: 'Kop', values: ['Zwart-witte tekening', 'Blauwgrijs met lichte wenkbrauw (nominaatvorm)']},
+      {label: 'Bovenzijde', values: ['Grijze rug', 'Doorgaans olijfgroene rug']},
+    ],
+    tip: 'Beide foto’s tonen rustende vogels. Jonge Gele Kwikstaarten kunnen vrijwel geen geel tonen: gebruik dan de aparte jonge-vogels-kenmerken en blijf bij twijfel voorzichtig.',
   },
   {
     label: 'Stormmeeuw en Zilvermeeuw · volwassen',
@@ -784,21 +1128,35 @@ export const GUIDE_COMPARISONS = [
       {id: 'sp096', source: 'stormmeeuw', marks: 'Kleiner, met een fijnere snavel, donker oog en geelgroene poten.'},
       {id: 'sp094', source: 'zilvermeeuw', marks: 'Groter, met een stevige gele snavel, licht oog en roze poten.'},
     ],
+    rows: [
+      {label: 'Oog', values: ['Donker', 'Licht']},
+      {label: 'Poten', values: ['Geelgroen', 'Roze']},
+      {label: 'Snavel', values: ['Fijn', 'Stevig met rode vlek op de ondersnavel']},
+    ],
     tip: 'Kijk naar oog, poten en snavel samen. Formaat helpt vooral als beide vogels even ver weg staan.',
   },
   {
     label: 'Smient en Krakeend · vrouwtjes',
     birds: [
       {id: 'sp130', source: 'smient', plumage: 'adult_f', marks: 'Korte blauwgrijze snavel en variabel rossig of grijsbruin verenkleed.'},
-      {id: 'sp129', source: 'krakeend', marks: 'Oranje langs de zijkant van de snavel en een witte spiegel die in vlucht goed opvalt.'},
+      {id: 'sp129', source: 'krakeend', plumage: 'adult_f', marks: 'Oranje langs de zijkant van de snavel en een witte spiegel die in vlucht goed opvalt.'},
+    ],
+    rows: [
+      {label: 'Snavel', values: ['Kort, blauwgrijs met donkere punt.', 'Langer, donker van boven met oranje zijkanten.']},
+      {label: 'Kop en bouw', values: ['Rondere kop en compacte bouw.', 'Minder ronde kop en langgerekter profiel.']},
     ],
     tip: 'Bekijk eerst de snavelkleur en wacht zo nodig op een beter zij- of vleugelaanzicht.',
   },
   {
     label: 'Grote en Kleine Mantelmeeuw · volwassen',
     birds: [
-      {id: 'sp164', source: 'grote-mantelmeeuw', plumage: 'adult_m', marks: 'Zwaar gebouwd, met roze poten, een forse snavel en een bijna zwarte mantel.'},
-      {id: 'sp095', source: 'kleine-mantelmeeuw', plumage: 'adult_m', textOnly: true, marks: 'Slanker, met gele poten, een fijnere snavel en een donkergrijze mantel.'},
+      {id: 'sp164', source: 'grote-mantelmeeuw', photo: '/assets/species/plumage/sp164-adult.webp', marks: 'Zwaar gebouwd, met roze poten, een forse snavel en een bijna zwarte mantel.'},
+      {id: 'sp095', source: 'kleine-mantelmeeuw', photo: '/assets/species/sp095.webp', marks: 'Slanker, met gele poten, een fijnere snavel en een donkergrijze mantel.'},
+    ],
+    rows: [
+      {label: 'Poten', values: ['Roze', 'Geel']},
+      {label: 'Bouw en snavel', values: ['Zwaar gebouwd met een forse snavel', 'Slanker met een fijnere snavel']},
+      {label: 'Mantel', values: ['Bijna zwart', 'Donkergrijs']},
     ],
     tip: 'Combineer pootkleur met bouw en snavel. Mantelkleur alleen kan door het licht misleiden.',
   },
@@ -903,7 +1261,7 @@ export const GUIDE_COMPARISONS = [
     flight: true,
     birds: [
       {id: 'sp002', source: 'houtduif', marks: 'Brede witte vleugelbanden. Volwassen vogels hebben ook een witte halsvlek.'},
-      {id: 'sp003', source: 'holenduif', photoMissing: 'vluchtcontrole 2026-11-10: geen geschikte vluchtfoto', marks: 'Grijze vleugels met donkere randen. Een brede witte vleugelband ontbreekt.'},
+      {id: 'sp003', source: 'holenduif', marks: 'Grijze vleugels met donkere randen. Een brede witte vleugelband ontbreekt.'},
       {id: 'sp004', source: 'turkse-tortel', marks: 'Lichte vleugelvelden en een lange staart met lichte buitenste staartpennen.'},
     ],
     tip: 'Vergelijk de vleugeltekening en de staart. De foto’s tonen verschillende hoeken en afstanden.',
@@ -922,17 +1280,25 @@ export const GUIDE_COMPARISONS = [
     label: 'Groene en Zwarte Specht · in vlucht',
     flight: true,
     birds: [
-      {id: 'sp019', source: 'groene-specht', marks: 'Groene bovendelen, lichte geelgroene stuit en een diep golvende vlucht.'},
-      {id: 'sp018', source: 'zwarte-specht', marks: 'Vrijwel geheel zwart met een rode kruin en lichte snavel. De vlucht is doorgaans rechter.'},
+      {id: 'sp019', source: 'groene-specht', marks: 'Groene bovendelen en een geelgroene stuit. In doorvlucht maakt de soort duidelijke golven.'},
+      {id: 'sp018', source: 'zwarte-specht', marks: 'Vrijwel geheel zwart met rood op de kop en een lichte snavel. De slagvlucht is rechter.'},
     ],
-    tip: 'Let op de stuitkleur en kijk, als je de vogel langer ziet, naar het verloop van de vlucht.',
+    tip: 'Vergelijk op de foto’s het zijaanzicht en de stuitkleur. Beoordeel een rechte of golvende vlucht pas als je de vogel langer ziet vliegen.',
+  },
+  {
+    label: 'Zwarte Kraai en Kauw · in rust',
+    birds: [
+      {id: 'sp022', source: 'zwarte-kraai', marks: 'Geheel zwarte kop met een stevige, langere snavel.'},
+      {id: 'sp025', source: 'kauw', marks: 'Kortere snavel en grijs achterhoofd. Bij volwassen vogels valt het lichte oog vaak op.'},
+    ],
+    tip: 'Vergelijk het zijaanzicht van de kop. Bij jonge Kauwen is de iris doorgaans donkerder.',
   },
   {
     label: 'Zwarte Kraai en Kauw · in vlucht',
     flight: true,
     birds: [
       {id: 'sp022', source: 'zwarte-kraai', marks: 'Geheel zwart, met een stevige snavel en brede vleugels met gespreide punten.'},
-      {id: 'sp025', source: 'kauw', photoMissing: 'vluchtcontrole 2026-11-10: geen geschikte vluchtfoto', marks: 'Compactere bouw, kortere snavel en grijze nek. Van dichtbij valt het lichte oog op.'},
+      {id: 'sp025', source: 'kauw', marks: 'Compactere bouw, kortere snavel en grijze nek. Van dichtbij valt het lichte oog op.'},
     ],
     tip: 'Vergelijk kop en snavel. Tegen fel tegenlicht kan de grijze nek van de Kauw donker lijken.',
   },
@@ -943,6 +1309,10 @@ export const GUIDE_COMPARISONS = [
       {id: 'sp026', source: 'gaai', marks: 'Rozegrijs lichaam en blauw-zwart gebandeerd vleugelveld. Van achteren valt de witte stuit op.'},
       {id: 'sp021', source: 'ekster', marks: 'Zwart-wit met brede witte vleugelvelden en een lange, smalle staart.'},
     ],
+    rows: [
+      {label: 'Vleugel', values: ['Klein blauw veld met donkere dwarsbandjes.', 'Breed wit veld in de handvleugel.']},
+      {label: 'Silhouet', values: ['Kortere zwarte staart en witte stuit.', 'Lange, smalle staart die ver achter het lichaam uitsteekt.']},
+    ],
     tip: 'Kijk eerst naar staartlengte en vleugeltekening. De witte stuit van de Gaai is het best van achteren te zien.',
   },
   {
@@ -951,6 +1321,10 @@ export const GUIDE_COMPARISONS = [
     birds: [
       {id: 'sp029', source: 'koolmees', marks: 'Zwarte kop met witte wangen. Op de gele onderzijde loopt een donkere middenstreep.'},
       {id: 'sp030', source: 'pimpelmees', marks: 'Blauwe kruin en een donkere oogstreep door het witte gezicht.'},
+    ],
+    rows: [
+      {label: 'Kop', values: ['Zwarte kop met één groot wit wangveld.', 'Blauwe kruin en donkere oogstreep door het witte gezicht.']},
+      {label: 'Buik', values: ['Gele buik met een donkere middenstreep.', 'Gele buik, doorgaans zonder doorlopende donkere middenstreep.']},
     ],
     tip: 'Beide hebben een gele buik. Kijk naar de koptekening als de vogel dicht genoeg langs vliegt.',
   },
@@ -964,22 +1338,87 @@ export const GUIDE_COMPARISONS = [
     tip: 'Van beide soorten is nog geen geschikte vluchtfoto. Luister bij twijfel naar de roep en bekijk de kop en gevouwen vleugel bij goed licht.',
   },
   {
+    label: 'Groenling en Sijs · volwassen mannetjes in rust',
+    birds: [
+      {id: 'sp036', source: 'groenling', plumage: 'adult_m', marks: 'Forse geelgroene vink met stevige brede snavel, geen zwarte pet en geel langs de buitenste handpennen.'},
+      {id: 'sp038', source: 'sijs', plumage: 'adult_m', marks: 'Kleinere fijnsnavelige vogel met zwarte kruin/keel en een contrasterende gele vleugelstreep.'},
+    ],
+    rows: [
+      {label: 'Snavel', values: ['Breed en krachtig', 'Dunner en puntiger']},
+      {label: 'Kop', values: ['Geelgroen zonder zwarte kruin', 'Zwarte kruin en kin bij volwassen mannetje']},
+      {label: 'Geel in vleugel', values: ['Langs buitenste vleugelpennen', 'Duidelijke dwarsband']},
+    ],
+    tip: 'Gebruik bij volwassen mannetjes kop, snavel en vleugel samen; op afstand lijkt geelgroen bij beide soorten aanwezig. Voor vrouwtjes open de aparte rustvergelijking.',
+  },
+  {
     label: 'Groenling en Sijs · in vlucht',
     flight: true,
     birds: [
       {id: 'sp036', source: 'groenling', marks: 'Stevige snavel en forsere bouw. Het geel valt op langs de buitenste vleugelpennen.'},
-      {id: 'sp038', source: 'sijs', marks: 'Kleinere, fijnere snavel en een gele vleugelband. Het mannetje op de foto heeft een zwarte kruin.'},
+      {id: 'sp038', source: 'sijs', photoMissing: 'vluchtcontrole 2026-11-16: landingsfoto uit de vluchtrol (F3-R10b), geen vrije-vluchtfoto', marks: 'Kleinere, fijnere snavel en een gele vleugelband. Het mannetje op de foto heeft een zwarte kruin.'},
     ],
     tip: 'Vergelijk snavelvorm en vleugeltekening. De opnamen zijn op verschillende afstanden gemaakt.',
+  },
+  {
+    label: 'Putter en Sijs · mannetjes in rust',
+    birds: [
+      {id: 'sp037', source: 'putter', plumage: 'adult_m', marks: 'Zwart-witte kop met rood masker, en een brede gele vleugelbaan op de gevouwen vleugel.'},
+      {id: 'sp038', source: 'sijs', plumage: 'adult_m', marks: 'Zwarte kruin en kin, groen-gele borst en een scherp afgetekende gele vleugelstreep.'},
+    ],
+    rows: [
+      {label: 'Kop', values: ['Rood masker met zwart-wit', 'Zwarte kruin en kin bij dit mannetje']},
+      {label: 'Vleugel', values: ['Brede gele band op zwarte vleugel', 'Gele vleugelstreep op zwarte vleugel']},
+      {label: 'Bouw', values: ['Stevigere, spits-driehoekige snavel', 'Kleinere, fijnere snavel']},
+    ],
+    tip: 'Begin bij kop en snavel op de rustfoto’s. Het rode masker van Putter ontbreekt bij jonge vogels.',
+  },
+  {
+    label: 'Putter en Sijs · juvenielen in rust',
+    birds: [
+      {id: 'sp037', source: 'putter', plumage: 'juv', marks: 'Jonge Putter met grijsbruine kop zonder volwassen rode masker, maar al een brede gele vleugelband.'},
+      {id: 'sp038', source: 'sijs', plumage: 'juv', marks: 'Jonge Sijs met gestreepte kop en onderzijde, gele vleugeltekening en fijnere snavel.'},
+    ],
+    rows: [
+      {label: 'Kop', values: ['Grijsbruin, zonder rode masker', 'Bruinig en duidelijk gestreept']},
+      {label: 'Vleugel', values: ['Brede gele band op donkere vleugel', 'Gele streep met donkere tekening']},
+      {label: 'Snavel', values: ['Spitse zaadsnavel', 'Fijner en smaller']},
+    ],
+    tip: 'Bij jonge vogels is kleur alleen niet voldoende. Gebruik een duidelijk zijaanzicht van snavel, vleugel én flank, en luister indien mogelijk.',
   },
   {
     label: 'Putter en Sijs · in vlucht',
     flight: true,
     birds: [
       {id: 'sp037', source: 'putter', marks: 'Brede gele vleugelband. Bij volwassen vogels valt ook het rode gezicht op.'},
-      {id: 'sp038', source: 'sijs', marks: 'Gele vleugelband en fijnere bouw. Het mannetje op de foto heeft een zwarte kruin.'},
+      {id: 'sp038', source: 'sijs', photoMissing: 'vluchtcontrole 2026-11-16: landingsfoto uit de vluchtrol (F3-R10b), geen vrije-vluchtfoto', marks: 'Gele vleugelband en fijnere bouw. Het mannetje op de foto heeft een zwarte kruin.'},
     ],
     tip: 'Bekijk de vleugel samen met kop en staart. Bij een juveniele Putter is het rode masker nog afwezig.',
+  },
+  {
+    label: 'Huismusvrouwtje en Ringmus · in rust',
+    birds: [
+      {id: 'sp043', source: 'huismus', plumage: 'adult_f', marks: 'Vrouwtje Huismus met vrijwel effen bruine kop, lichte wenkbrauwstreep en zonder afzonderlijke zwarte wangvlek.'},
+      {id: 'sp044', source: 'ringmus', marks: 'Ringmus met kastanjebruine kruin, opvallende zwarte wangvlek en lichte nekring. Mannetje en vrouwtje hebben hetzelfde kleed.'},
+    ],
+    rows: [
+      {label: 'Wang', values: ['Geen afzonderlijke zwarte wangvlek', 'Zwarte wangvlek op lichte wang']},
+      {label: 'Kruin', values: ['Licht- tot grijzerbruin', 'Duidelijk kastanjebruin']},
+      {label: 'Nek', values: ['Geen gesloten witte nekring', 'Lichte nekring']},
+    ],
+    tip: 'De Ringmus op de foto is niet op uiterlijk als mannetje of vrouwtje te bepalen. Vergelijk de zwarte wangvlek en het kopprofiel.',
+  },
+  {
+    label: 'Huismus en Ringmus · juvenielen in rust',
+    birds: [
+      {id: 'sp043', source: 'huismus', plumage: 'juv', marks: 'Jonge Huismus overwegend bruin, lichte snavelbasis en geen losse donkere wangvlek.'},
+      {id: 'sp044', source: 'ringmus', plumage: 'juv', marks: 'Jonge Ringmus bruine kruin en zachtere, vaak minder contrastrijke donkere wangvlek.'},
+    ],
+    rows: [
+      {label: 'Wang', values: ['Geen kenmerkende losse zwarte wangvlek', 'Kan minder opvallend zijn dan bij adult']},
+      {label: 'Kruin', values: ['Overwegend lichtbruin', 'Bruin; koptekening ontwikkelt zich']},
+      {label: 'Ondersteuning', values: ['Let ook op snavelbasis en oudervogels', 'Let ook op nekring en contactroep']},
+    ],
+    tip: 'Een juveniel met weinig contrast is niet uitsluitend op de wangvlek vast te stellen. Dit paar is een hulpmiddel, geen zelfstandig zekere determinatie.',
   },
   {
     label: 'Huismus en Ringmus · in vlucht',
@@ -989,6 +1428,19 @@ export const GUIDE_COMPARISONS = [
       {id: 'sp044', source: 'ringmus', marks: 'Roodbruine kruin en een zwarte vlek op de lichte wang.'},
     ],
     tip: 'Kijk bij een goed zicht op de kop eerst naar de kruin en de wang. Bij de Huismus op de foto ontbreekt een losse wangvlek.',
+  },
+  {
+    label: 'Merel en Zanglijster · juvenielen in rust',
+    birds: [
+      {id: 'sp045', source: 'merel', plumage: 'juv', marks: 'Jonge Merel met bruin verenkleed, bruinig gevlekte borst, langere staart en relatief forse bouw.'},
+      {id: 'sp046', source: 'zanglijster', plumage: 'juv', marks: 'Jonge Zanglijster met lichtere onderzijde, donkerdere pijlpuntige borsttekening en kortere staart.'},
+    ],
+    rows: [
+      {label: 'Grondkleur borst', values: ['Overwegend bruin', 'Veel lichter/crème met contrasterende vlekken']},
+      {label: 'Borsttekening', values: ['Minder regelmatige vlekking op bruine grond', 'Vaak donkere, pijlpuntige vlekken']},
+      {label: 'Bouw', values: ['Relatief groot, langere staart', 'Compacter, kortere staart']},
+    ],
+    tip: 'Bij verse juvenielen kunnen patronen overlappen. Kijk naar volledige vogel, grondkleur en staart, niet naar één enkel vlekje.',
   },
   {
     label: 'Merel en Zanglijster · volwassen',
@@ -1001,6 +1453,19 @@ export const GUIDE_COMPARISONS = [
       {label: 'Staart', values: ['Relatief lang', 'Relatief kort']},
     ],
     tip: 'Kijk bij een bruine vogel naar de grondkleur onder de vlekken. Ook een jonge Merel kan sterk gevlekt zijn.',
+  },
+  {
+    label: 'Zanglijster en Grote Lijster · juvenielen in rust',
+    birds: [
+      {id: 'sp046', source: 'zanglijster', plumage: 'juv', marks: 'Jonge Zanglijster met warmbruine rug en opvallend lichte vlekjes op de bovendelen, donkere borstvlekken en relatief compacte bouw.'},
+      {id: 'sp049', source: 'grote-lijster', plumage: 'juv', marks: 'Jonge Grote Lijster met lichte vlekken op de rug, smalle lichte lengtestreepjes op de vleugeldekveren en doorgaans forsere bouw.'},
+    ],
+    rows: [
+      {label: 'Bovendelen', values: ['Warmbruine rug met lichte vlekjes', 'Lichter getekend op rug en vleugeldekveren']},
+      {label: 'Borst', values: ['Donkere vlekken, vaak pijlpuntiger', 'Donkere vlekken op relatief bleke grond']},
+      {label: 'Bouw', values: ['Doorgaans compacter', 'Doorgaans groter en forser']},
+    ],
+    tip: 'Een enkele vlek is bij jonge lijsters niet beslissend. Vergelijk de complete vogel en wees voorzichtig met leeftijds- en soortlabels als de kenmerken niet goed zichtbaar zijn.',
   },
   {
     label: 'Zanglijster en Grote Lijster · volwassen',
@@ -1023,9 +1488,10 @@ export const GUIDE_COMPARISONS = [
     ],
     rows: [
       {label: 'Kop', values: ['Overwegend grijs bij volwassen vogels', 'Duidelijke lichte wenkbrauwstreep']},
-      {label: 'Flank en ondervleugel', values: ['Lichte ondervleugeldekveren', 'Roestrode flanken en ondervleugeldekveren']},
+      {label: 'Borstgrondkleur', values: ['Oranjegele tint met donkere vlekken', 'Witachtige grondkleur met donkere streping']},
+      {label: 'Flank', values: ['Geen opvallend koperrode flank', 'Duidelijke koperrode flank']},
     ],
-    tip: 'Controleer kop en flank samen. Bij een jonge Kramsvogel is de kop minder duidelijk grijs.',
+    tip: 'Controleer kop, borstgrondkleur en flank op de rustfoto. Jonge Kramsvogels zijn minder contrastrijk; ondervleugel is hier geen verplicht zichtbaar kenmerk.',
   },
   {
     label: 'Koperwiek en Zanglijster · volwassen',
@@ -1034,10 +1500,11 @@ export const GUIDE_COMPARISONS = [
       {id: 'sp046', source: 'zanglijster', marks: 'Minder opvallende wenkbrauw en donkere vlekken op de lichte onderzijde.'},
     ],
     rows: [
-      {label: 'Boven het oog', values: ['Brede lichte wenkbrauwstreep', 'Geen brede, opvallende lichte wenkbrauwstreep']},
-      {label: 'Flanken', values: ['Roestrode veerpartij', 'Licht met donkere vlekken']},
+      {label: 'Kop', values: ['Brede roomwitte wenkbrauw- en lichte mondstreep', 'Geen opvallend lichte oog- en mondstrepen']},
+      {label: 'Flanken', values: ['Koperrood, ook in rust vaak zichtbaar', 'Geen koperrode flankvlek']},
+      {label: 'Borst', values: ['Witachtig met sterke donkere streping', 'Lichte onderzijde met pijlpuntige vlekken']},
     ],
-    tip: 'Bekijk kop en flank samen. Bij een foto met tegenlicht kan de flankkleur moeilijk zichtbaar zijn.',
+    tip: 'Gebruik een scherpe zijfoto van kop én flank; de koperrode ondervleugel is geen vereiste voor determinatie in rust.',
   },
   {
     label: 'Kievit en Zilverplevier · volwassen',
@@ -1052,6 +1519,33 @@ export const GUIDE_COMPARISONS = [
     tip: 'Kijk naar kop en rug samen. Een jonge Kievit heeft een korte kuif en een doffer, bruiner kleed.',
   },
   {
+    label: 'Veldleeuwerik en Graspieper · in rust',
+    birds: [
+      {id: 'sp070', source: 'veldleeuwerik', marks: 'Robuuste bruingestreepte leeuwerik met korte soms opgerichte kuif, relatief stevige snavel en duidelijk gestreepte bovenborst.'},
+      {id: 'sp072', source: 'graspieper', marks: 'Slankere bruingestreepte pieper met fijne snavel, duidelijke lichte oogring en zware streping langs de flanken.'},
+    ],
+    rows: [
+      {label: 'Kop en snavel', values: ['Soms korte, stompe kuif en relatief forse snavel', 'Geen kuif, fijne snavel en lichte oogring']},
+      {label: 'Borst en flanken', values: ['Bruine borststrepen boven een overwegend lichte buik', 'Donkere strepen lopen nadrukkelijk door over de flanken']},
+      {label: 'Geluid', values: ['Zeer gevarieerde, lang aangehouden zangvlucht', 'Korter, hoog aflopend zangriedeltje en hoge psiep-roep']},
+    ],
+    tip: 'Twee echte rustfoto’s. Vergelijk oogring, kuif en flankstreping; foto-uitsnedes zijn geen betrouwbare maatvergelijking.',
+  },
+  {
+    label: 'Veldleeuwerik en Graspieper · in vlucht',
+    flight: true,
+    birds: [
+      {id: 'sp070', source: 'veldleeuwerik', marks: 'Lang volgehouden hoge zangvlucht. In goed licht lichte achterrand van de vleugel en witte staartzijden.'},
+      {id: 'sp072', source: 'graspieper', marks: 'Kleinere gestreepte pieper met stijgende of dalende zangvlucht en hoge herhaalde roep.'},
+    ],
+    rows: [
+      {label: 'Zangvlucht', values: ['Langdurig, hoog en zeer gevarieerd', 'Kortere zangvlucht met een reeks hoge, aflopende tonen']},
+      {label: 'Vleugel', values: ['Relatief brede vleugel en smalle lichte vleugelachterrand', 'Slanker vliegbeeld met zichtbare vleugelstrepen']},
+      {label: 'Staart', values: ['Witte buitenste staartpennen bij goed zicht', 'Ook witte buitenste staartpennen; dus niet op dit kenmerk alleen determineren']},
+    ],
+    tip: 'Beide beelden tonen bewezen vrije vlucht. Bepaal de soort vooral via vluchtpatroon, geluid en meerdere kenmerken; niet via de schijnbare grootte van de foto’s.',
+  },
+  {
     label: 'Graspieper en Boompieper · veldkenmerken',
     birds: [
       {id: 'sp072', source: 'graspieper', marks: 'Fijne snavel. De borst- en flankstrepen zijn ongeveer even breed.'},
@@ -1064,6 +1558,32 @@ export const GUIDE_COMPARISONS = [
     tip: 'Begin bij de flankstreping. Een scherpe zijfoto kan de nagel tonen. Bij twijfel helpt een duidelijke roep of zang.',
   },
   {
+    label: 'Zanglijster en Kramsvogel · volwassen in rust',
+    birds: [
+      {id: 'sp046', source: 'zanglijster', marks: 'Warmbruin van boven met een vrij egaal bruine kop, lichte borst en donkere, vaak pijlpuntige vlekken.'},
+      {id: 'sp047', source: 'kramsvogel', marks: 'Overwegend grijze kop en stuit, kastanjebruine mantel en oranjegele, gevlekte borst.'},
+    ],
+    rows: [
+      {label: 'Kop', values: ['Bruin zonder lichtgrijze kap', 'Grijs, contrasterend met de rug']},
+      {label: 'Borst', values: ['Licht met donkere pijlpuntige vlekken', 'Oranjegeel getint met donkere vlekken']},
+      {label: 'Rug en stuit', values: ['Egaal bruin', 'Bruine mantel en grijze stuit']},
+    ],
+    tip: 'Beoordeel de volledige vogel van opzij. Bij juvenielen zijn de kopkleuren minder uitgesproken; gebruik dan een apart jeugdvergelijkingspaar.',
+  },
+  {
+    label: 'Zanglijster en Kramsvogel · juvenielen in rust',
+    birds: [
+      {id: 'sp046', source: 'zanglijster', plumage: 'juv', marks: 'Jonge Zanglijster met warme bruine kop, lichte vlekken op rug en vleugeldekveren en gevlekte onderzijde.'},
+      {id: 'sp047', source: 'kramsvogel', plumage: 'juv', marks: 'Jonge Kramsvogel op tak met minder contrasterende grijsbruine kop, vale mantel en gevlekte borst.'},
+    ],
+    rows: [
+      {label: 'Kop', values: ['Vrij egaal warmbruin', 'Grijsbruin, minder uitgesproken dan adult']},
+      {label: 'Bovendelen', values: ['Lichte vlekjes op bruine veren', 'Valere tint en minder contrasterende kop/rug']},
+      {label: 'Gehele bouw', values: ['Doorgaans kleiner en compacter', 'Doorgaans groter en forser']},
+    ],
+    tip: 'Een jeugdkleed kan soorten meer op elkaar laten lijken. Combineer kop, bouw, borst en context; de twee oorspronkelijke opnamen zijn door hun fotografen als juveniel beschreven.',
+  },
+  {
     label: 'Zanglijster en Kramsvogel · in vlucht',
     flight: true,
     birds: [
@@ -1071,6 +1591,31 @@ export const GUIDE_COMPARISONS = [
       {id: 'sp047', source: 'kramsvogel', marks: 'Lichte ondervleugeldekveren, gevlekte borst en een lange staart met een donker uiteinde.'},
     ],
     tip: 'Vergelijk de kleur van de ondervleugels en kijk ook naar de staart. Tegenlicht kan lichte veren donkerder laten lijken.',
+  },
+  {
+    label: 'Roodborst en Roodborsttapuit · juvenielen in rust',
+    birds: [
+      {id: 'sp050', source: 'roodborst', plumage: 'juv', marks: 'Jonge Roodborst is bruin en lichtgevlekt zonder de oranjerode borst van een volwassen vogel.'},
+      {id: 'sp053', source: 'roodborsttapuit', plumage: 'juv', marks: 'Jonge Roodborsttapuit is lichtbruin en gespikkeld, vaak met meer contrast aan de vleugeldekveren en een andere lichaamsbouw.'},
+    ],
+    rows: [
+      {label: 'Rode borst', values: ['Ontbreekt bij jonge vogels', 'Ook hier geen volwassen oranje borst verwachten']},
+      {label: 'Vleugels', values: ['Bruin met lichte spikkels', 'Lichte vlekjes en meer contrasterende dekveren']},
+      {label: 'Context', values: ['Vaak beschut bij bos of tuin', 'Vaak op een zichtbare uitkijkpost in open terrein']},
+    ],
+    tip: 'Twee gespikkelde jonge vogels zijn niet altijd met één foto zeker te onderscheiden. Gebruik snavel, vleugel, hele bouw en eventueel oudervogels of geluid; leefgebied alleen is onvoldoende.',
+  },
+  {
+    label: 'Roodborsttapuit en Roodborst · vrouwtje en volwassen vogel in rust',
+    birds: [
+      {id: 'sp053', source: 'roodborsttapuit', plumage: 'adult_f', marks: 'Vrouwtje Roodborsttapuit met bruine kop, oranje borst en een lichte vleugeltekening.'},
+      {id: 'sp050', source: 'roodborst', marks: 'Volwassen Roodborst met oranjerood gezicht én borst; man en vrouw hebben hetzelfde kleed.'},
+    ],
+    rows: [
+      {label: 'Oranje', values: ['Vooral op de borst, bruin gezicht', 'Ook op het hele gezicht en de keel']},
+      {label: 'Vleugel', values: ['Witte vleugelvlekjes bij het vrouwtje', 'Effen bruine vleugel zonder dezelfde opvallende vlekjes']},
+    ],
+    tip: 'De oranje borst alleen is onvoldoende. Kijk naar het gezicht en de gevouwen vleugel; deze vergelijking gebruikt bestaande rustfoto’s.',
   },
   {
     label: 'Roodborst en Heggenmus · volwassen',
@@ -1081,12 +1626,55 @@ export const GUIDE_COMPARISONS = [
     tip: 'Bekijk borst en rug samen. Een juveniele Roodborst heeft nog geen oranjerode borst.',
   },
   {
+    label: 'Heggenmus en Huismus · volwassen in rust',
+    birds: [
+      {id: 'sp054', source: 'heggenmus', marks: 'Fijne, spitse snavel en blauwgrijze kop en borst. De gestreepte bruine rug is geen onderscheid op zichzelf.'},
+      {id: 'sp043', source: 'huismus', plumage: 'adult_f', marks: 'Vrouwtje met forse kegelsnavel, lichtbruine kop en zichtbare lichte wenkbrauwstreep.'},
+    ],
+    rows: [
+      {label: 'Snavel', values: ['Smalle, puntige insecteneterssnavel', 'Stevige, korte kegelvormige zaadeterssnavel']},
+      {label: 'Kop', values: ['Blauwgrijs bij volwassen vogels', 'Lichtbruin met lichte wenkbrauwstreep']},
+      {label: 'Rug', values: ['Bruin gestreept', 'Ook bruin gestreept: niet doorslaggevend']},
+    ],
+    tip: 'Vergelijk vooral de snavel van opzij. De twee rustfoto’s mogen niet op afbeeldingsschaal worden vergeleken.',
+  },
+  {
+    label: 'Winterkoning en Heggenmus · in rust',
+    birds: [
+      {id: 'sp055', source: 'winterkoning', marks: 'Zeer compact, warmbruin en met een korte, vaak opgeheven staart en lichte wenkbrauw.'},
+      {id: 'sp054', source: 'heggenmus', marks: 'Slanker met blauwgrijze kop en borst, bruin gestreepte rug en langer ogende staart.'},
+    ],
+    rows: [
+      {label: 'Staart', values: ['Kort, vaak opvallend opgericht', 'Relatief langer, meestal niet recht omhoog']},
+      {label: 'Kop en borst', values: ['Warmbruin, lichte wenkbrauw', 'Overwegend grijzige kop en borst']},
+      {label: 'Bouw', values: ['Rond en zeer compact', 'Slanker en groter']},
+    ],
+    tip: 'Beoordeel een vogel aan houding, kop en staart; foto-uitsnedes zijn geen betrouwbare maatvergelijking.',
+  },
+  {
     label: 'Winterkoning en Boomkruiper · veldkenmerken',
     birds: [
       {id: 'sp055', source: 'winterkoning', marks: 'Zeer klein en compact met een korte, vaak opgewipte staart.'},
-      {id: 'sp066', source: 'boomkruiper', marks: 'Langere staart, gebogen snavel en witte onderzijde. Klimt langs de stam omhoog.'},
+      {id: 'sp066', source: 'boomkruiper', marks: 'Langere, stijve staart, omlaaggebogen snavel en roomwitte onderzijde. Klimt langs de stam omhoog.'},
+    ],
+    rows: [
+      {label: 'Snavel', values: ['Kort, recht en spits', 'Spits en duidelijk omlaaggebogen']},
+      {label: 'Staart', values: ['Kort, vaak opgewipt', 'Stijve staartveren als steun tegen de stam']},
+      {label: 'Gedrag', values: ['Laag van struik naar struik', 'Klimt spiraalsgewijs langs een stam omhoog']},
     ],
     tip: 'Kijk naar snavel en houding. Beide vogels hebben bruine bovendelen.',
+  },
+  {
+    label: 'Heggenmus en Ringmus · volwassen in rust',
+    birds: [
+      {id: 'sp054', source: 'heggenmus', marks: 'Blauwgrijze kop en borst met een fijne, spitse snavel.'},
+      {id: 'sp044', source: 'ringmus', marks: 'Roodbruine kruin, lichte wang met donkere wangvlek en een klein zwart befje.'},
+    ],
+    rows: [
+      {label: 'Kop', values: ['Blauwgrijs, zonder wangvlek', 'Roodbruine kruin, lichte wang met donkere vlek']},
+      {label: 'Keel', values: ['Grijs, zonder zwarte vlek', 'Klein zwart befje']},
+    ],
+    tip: 'Een bruine rug hebben beide. Kijk naar kop en keel; bij de Ringmus zijn man en vrouw gelijk.',
   },
   {
     label: 'Grauwe en Bonte Vliegenvanger · vleugel en borst',
@@ -1101,16 +1689,45 @@ export const GUIDE_COMPARISONS = [
     tip: 'Bekijk de vleugel ook bij een bruine Bonte Vliegenvanger. Beide soorten jagen vanuit een zitpost.',
   },
   {
+    label: 'Zwarte en Gekraagde Roodstaart · mannetjes in rust',
+    birds: [
+      {id: 'sp051', source: 'zwarte-roodstaart', plumage: 'adult_m', marks: 'Volwassen mannetje met antracietgrijze tot zwarte borst, lichte vleugelvlek en roestrode staart.'},
+      {id: 'sp178', source: 'gekraagde-roodstaart', plumage: 'adult_m', marks: 'Volwassen mannetje met oranjerode borst en buik, grijze kruin, witte voorhoofdsvlek, zwarte keel en roestrode staart.'},
+    ],
+    rows: [
+      {label: 'Borst', values: ['Donkergrijs tot zwart', 'Oranjerood']},
+      {label: 'Kop', values: ['Donker, geen helder wit voorhoofd', 'Wit voorhoofd boven zwart gezicht']},
+      {label: 'Vleugel', values: ['Vaak een lichte vleugelvlek', 'Geen vergelijkbare witte vleugelvlek']},
+    ],
+    tip: 'Beoordeel beide volwassen mannetjes op een duidelijke rustfoto. In overgangskleed of bij jonge vogels werkt dit kleurverschil niet altijd; laat dan leeftijd en geslacht open.',
+  },
+  {
     label: 'Gekraagde en Zwarte Roodstaart · vrouwtje',
     birds: [
       {id: 'sp178', source: 'gekraagde-roodstaart', plumage: 'adult_f', marks: 'Grijsbruine rug en doorgaans warmere beige onderzijde.'},
       {id: 'sp051', source: 'zwarte-roodstaart', plumage: 'adult_f', marks: 'Koeler grijsbruin kleed, doorgaans met minder warme onderzijde.'},
     ],
     rows: [
-      {label: 'Onderzijde', values: ['Vaak warmer beige', 'Meestal koeler grijsbruin']},
-      {label: 'Staart', values: ['Roestrood', 'Ook roestrood']},
+      {label: 'Onderzijde', values: ['Vaak warm lichtbeige', 'Doorgaans koeler en meer egaal grijsbruin']},
+      {label: 'Bovendelen', values: ['Warm grijsbruin met licht gezicht', 'Vrij egaal koel grijsbruin']},
+      {label: 'Staart', values: ['Roestrood; op zichzelf niet diagnostisch', 'Ook roestrood; op zichzelf niet diagnostisch']},
     ],
-    tip: 'Vergelijk de onderzijde bij egaal daglicht. Luister bij twijfel ook naar de zang.',
+    tip: 'Vrouwtjes kunnen sterk op elkaar lijken. Vergelijk warme of koele onderzijde in egaal licht en controleer ook roep en omgeving; de staartkleur alleen beslist niet.',
+  },
+  {
+    label: 'Vink en Groenling · vrouwtjes in rust',
+    birds: [
+      {id: 'sp035', source: 'vink', plumage: 'adult_f',
+        marks: 'Vrouwtje Vink met twee witte vleugelstrepen, een overwegend grijsbruine kop en een compactere kegelsnavel.'},
+      {id: 'sp036', source: 'groenling', plumage: 'adult_f',
+        marks: 'Vrouwtje Groenling met gele vleugelrand en buitenstaartpennen, groengrijze tint en zwaardere kegelsnavel.'},
+    ],
+    rows: [
+      {label: 'Vleugel', values: ['Twee lichte, meestal witte vleugelstrepen', 'Gele rand langs de slagpennen; geen twee witte vinkstrepen']},
+      {label: 'Snavel', values: ['Kegelvormig en doorgaans minder fors', 'Dikker en breder aan de basis']},
+      {label: 'Kleed', values: ['Overwegend grijsbruin', 'Vaak groengrijs; geel ook bij doffe vogels']},
+    ],
+    tip: 'Vergelijk hetzelfde vrouwtjeskleed en zicht op vleugel én snavel. Verschillen in belichting en seizoen veranderen hoe bruin of groen een vogel lijkt. Jonge vogels kunnen subtieler zijn; één kleur is niet voldoende.',
   },
   {
     label: 'Sijs en Groenling · vrouwtje',
@@ -1125,6 +1742,19 @@ export const GUIDE_COMPARISONS = [
     tip: 'Bekijk de snavel en flank samen. Een jonge Groenling kan ook gestreept zijn.',
   },
   {
+    label: 'Goudvink en Vink · vrouwtjes in rust',
+    birds: [
+      {id: 'sp040', source: 'goudvink', plumage: 'adult_f', marks: 'Zwarte kopkap, korte dikke zwarte snavel, beigegrijze onderzijde en witte vleugelband.'},
+      {id: 'sp035', source: 'vink', plumage: 'adult_f', marks: 'Grijsbruine kop zonder zwarte kap, kleinere kegelsnavel en twee lichte vleugelstrepen.'},
+    ],
+    rows: [
+      {label: 'Kop', values: ['Zwarte kap', 'Geen zwarte kap']},
+      {label: 'Snavel', values: ['Kort en fors', 'Kleiner, kegelvormig']},
+      {label: 'Vleugel', values: ['Eén lichte band', 'Twee lichte strepen']},
+    ],
+    tip: 'Vergelijk de vleugel en snavel in hetzelfde rustaanzicht. Kleurtinten kunnen bij slecht licht misleiden.',
+  },
+  {
     label: 'Goudvink en Vink · mannetje',
     birds: [
       {id: 'sp040', source: 'goudvink', plumage: 'adult_m', marks: 'Zwarte kap, korte zwarte snavel en roze-rode onderzijde.'},
@@ -1137,6 +1767,19 @@ export const GUIDE_COMPARISONS = [
     tip: 'Beide mannetjes hebben een warme borst. Vergelijk ook kruin, snavel en vleugeltekening.',
   },
   {
+    label: 'Kneu en Roodmus · mannetjes in rust',
+    birds: [
+      {id: 'sp039', source: 'kneu', marks: 'Mannetje met grijze nek, bruinige rug en karmijnrood op voorhoofd en borst; kleinere grijze snavel.'},
+      {id: 'sp042', source: 'roodmus', marks: 'Volwassen mannetje met rood op kop, borst en stuit en een korte, duidelijk forse grijze snavel.'},
+    ],
+    rows: [
+      {label: 'Roodverdeling', values: ['Voorhoofd en borst, grijze nek zichtbaar', 'Kop, borst en stuit nadrukkelijk rood']},
+      {label: 'Snavel', values: ['Kleine grijze kegelsnavel', 'Kort, dik en opvallend zwaar']},
+      {label: 'Rug en bouw', values: ['Warmbruin en kleiner', 'Steviger postuur en bruinige vleugels']},
+    ],
+    tip: 'De rode tekening helpt vooral bij volwassen mannetjes in passend seizoen. Vrouwtjes en onvolwassen Roodmussen zijn niet rood; combineer snavel, houding en geluid.',
+  },
+  {
     label: 'Appelvink en Vink · mannetje',
     birds: [
       {id: 'sp041', source: 'appelvink', plumage: 'adult_m', marks: 'Zware driehoekige snavel, grote kop en brede lichte vleugelband.'},
@@ -1147,6 +1790,32 @@ export const GUIDE_COMPARISONS = [
       {label: 'Vleugel', values: ['Brede lichte band', 'Twee lichte strepen']},
     ],
     tip: 'De kleur van de Appelvinksnavel kan per seizoen verschillen. Vergelijk de vorm in zijaanzicht.',
+  },
+  {
+    label: 'Appelvink en Vink · vrouwtjes in rust',
+    birds: [
+      {id: 'sp041', source: 'appelvink', plumage: 'adult_f', marks: 'Vrouwtje met forse snavel, dikke kop en nek, grijs vleugelveld en lichte vleugelband.'},
+      {id: 'sp035', source: 'vink', plumage: 'adult_f', marks: 'Vrouwtje met kleinere kegelsnavel en twee duidelijke lichte vleugelstrepen.'},
+    ],
+    rows: [
+      {label: 'Snavel', values: ['Zeer zwaar en driehoekig', 'Duidelijk kleiner en fijner']},
+      {label: 'Kop', values: ['Groot, met stevige nek', 'Slanker, minder massief']},
+      {label: 'Vleugel', values: ['Breed licht veld', 'Twee lichte strepen']},
+    ],
+    tip: 'Bekijk het profiel en de snavelvorm in dezelfde rusthouding. Kleurverschillen door seizoen en licht mogen de snavel niet overrulen.',
+  },
+  {
+    label: 'Appelvink en Vink · juvenielen in rust',
+    birds: [
+      {id: 'sp041', source: 'appelvink', plumage: 'juv', marks: 'Jonge Appelvink met zware snavel, gelige keel en donkere vlekjes op de onderzijde.'},
+      {id: 'sp035', source: 'vink', plumage: 'juv', marks: 'Jonge Vink met kleinere kegelsnavel en twee lichte vleugelstrepen.'},
+    ],
+    rows: [
+      {label: 'Snavel', values: ['Uitzonderlijk fors voor een vink', 'Veel kleiner en subtieler']},
+      {label: 'Onderzijde', values: ['Gelige keel en gevlekte borst', 'Bruiniger zonder typische Appelvink-jeugdvlekken']},
+      {label: 'Vleugel', values: ['Brede lichte band', 'Twee lichte vleugelstrepen']},
+    ],
+    tip: 'Jonge vinken lijken soms op elkaar. Combineer snavelvorm en leeftijdskenmerken; een bronbenoemd juveniel is nog geen onafhankelijke foto-PASS.',
   },
   {
     label: 'Roodborsttapuit en Roodborst · volwassen',
@@ -1165,6 +1834,11 @@ export const GUIDE_COMPARISONS = [
     birds: [
       {id: 'sp098', source: 'scholekster', marks: 'Lange, rechte oranjerode snavel. Zwarte kop en borst, roze poten.'},
       {id: 'sp143', source: 'kluut', marks: 'Dunne, omhooggebogen donkere snavel. Overwegend wit met zwarte tekening en lange poten.'},
+    ],
+    rows: [
+      {label: 'Snavel', values: ['Lang, recht en oranjerood', 'Dun, donker en omhooggebogen']},
+      {label: 'Borst', values: ['Zwart', 'Wit']},
+      {label: 'Poten', values: ['Roze', 'Lang en grijsblauw']},
     ],
     tip: 'Vergelijk de snavelvorm en pootlengte. De kleuren zijn lastiger bij tegenlicht.',
   },
@@ -1203,26 +1877,80 @@ export const GUIDE_COMPARISONS = [
   {
     label: 'Zwartkop en Tuinfluiter · kop en zang',
     birds: [
-      {id: 'sp059', source: 'zwartkop', marks: 'Afgetekend zwart of bruin petje. De zang eindigt vaak met enkele heldere, luide fluittonen.'},
-      {id: 'sp060', source: 'tuinfluiter', marks: 'Egaler hoofd zonder petje. De zang gaat doorgaans vloeiender door.'},
+      {id: 'sp059', source: 'zwartkop', marks: 'Volwassen mannetje met zwarte kruin en grijze kopzijden. De zang eindigt vaak met heldere, hoge fluittonen.'},
+      {id: 'sp060', source: 'tuinfluiter', marks: 'Effen bruingrijze kruin zonder afgetekend petje. De snelle, vloeiende zang mist meestal de heldere eindfluitjes.'},
     ],
-    tip: 'Bekijk de hele kruin in goed licht en luister naar een volledige strofe.',
+    rows: [
+      {label: 'Kruin', values: ['Mannetje: duidelijk zwart petje', 'Egaal bruingrijs zonder afgetekend petje']},
+      {label: 'Zang', values: ['Vaak duidelijke heldere, luide eindfluitjes', 'Vloeiend, zonder dezelfde uitgesproken heldere afsluiting']},
+      {label: 'Kop', values: ['Grijzig met een scherp afgebakend kruinveld', 'Onopvallend bruingrijs met lichte oogring en grijzige halszijde']},
+    ],
+    tip: 'Luister naar een volledige strofe. Bruine-kruinvogels vragen extra aandacht: vrouwtjes en jonge Zwartkoppen kunnen een bruin petje hebben.',
+  },
+  {
+    label: 'Zwartkop en Tuinfluiter · vrouwtje in rust',
+    birds: [
+      {id: 'sp059', source: 'zwartkop', plumage: 'adult_f', marks: 'Vrouwtje Zwartkop: duidelijk kastanjebruine kruin boven de grijsbruine kopzijden.'},
+      {id: 'sp060', source: 'tuinfluiter', marks: 'Egaal bruingrijs zonder scherp afgetekend bruin petje; ook man en vrouw lijken op elkaar.'},
+    ],
+    rows: [
+      {label: 'Kruin', values: ['Afgetekende roodbruine kruin', 'Egaal bruingrijs zonder duidelijke begrenzing']},
+      {label: 'Zijkop', values: ['Grijzig onder het bruine petje', 'Subtiele grijzige halszijde, geen petje']},
+      {label: 'Zang', values: ['Heldere fluittonen in de afsluiting zijn een aanwijzing', 'Meer doorlopende, gelijkmatige zang zonder zulke eindfluitjes']},
+    ],
+    tip: 'De vrouwtjesfoto is een eerder geregistreerde opname. Een jong Zwartkopmannetje kan ook een bruine kruin hebben: bepaal het geslacht niet uitsluitend op petkleur.',
+  },
+  {
+    label: 'Grasmus en Tuinfluiter · rustbeeld',
+    birds: [
+      {id: 'sp061', source: 'grasmus', photo: '/assets/species/sp061.webp', marks: 'Grasmus met duidelijk lichte keel, vaak warme roestbruine vleugelranden en een langere staart.'},
+      {id: 'sp060', source: 'tuinfluiter', marks: 'Effen grijsbruin en grijswit met weinig contrast aan kop en vleugels.'},
+    ],
+    rows: [
+      {label: 'Keel', values: ['Opvallend wit, contrasteert met zijkop', 'Grijswit, vaak minder contrastrijk']},
+      {label: 'Vleugel', values: ['Warme roestbruine veerranden', 'Overwegend egaal bruingrijs']},
+      {label: 'Zang', values: ['Krasachtig, variabel riedeltje', 'Rijk en doorlopend als een snelle Merel']},
+    ],
+    tip: 'Op deze twee rustfoto’s staat de vogel anders in beeld. Vergelijk dus de vleugelranden, keel en kop, niet de afmeting op de foto.',
+  },
+  {
+    label: 'Braamsluiper en Tuinfluiter · kop en zang in rust',
+    birds: [
+      {id: 'sp062', source: 'braamsluiper', marks: 'Braamsluiper met grijze kap en donkergrijze oorstreek die scherp afsteekt tegen de witte keel.'},
+      {id: 'sp060', source: 'tuinfluiter', marks: 'Tuinfluiter is egaler bruingrijs, zonder duidelijk donker oorveld; de zang is vloeiend en rijk.'},
+    ],
+    rows: [
+      {label: 'Oorstreek', values: ['Donkergrijze oorzone tegen witte keel', 'Geen vergelijkbaar donker oorveld']},
+      {label: 'Kop en rug', values: ['Grijze kopkap, grijsbruine rug', 'Vrij egaal bruingrijs, weinig kleurcontrast']},
+      {label: 'Zang', values: ['Klepperende ratel, soms na een brabbelend begin', 'Snelle, melodieuze, doorlopende strofe']},
+    ],
+    tip: 'Bekijk de kop in zijaanzicht en beluister bij twijfel de volledige zang. Geslacht is op deze foto’s niet betrouwbaar aan het verenkleed af te lezen.',
   },
   {
     label: 'Grasmus en Braamsluiper · vleugel en zang',
     birds: [
-      {id: 'sp061', source: 'grasmus', plumage: 'adult_m', marks: 'Warme roestbruine randen aan de vleugelveren. Vaak een wisselend, krassend zangriedeltje.'},
-      {id: 'sp062', source: 'braamsluiper', marks: 'Doorgaans grijzere vleugels en een donkerder wang. De zang eindigt vaak in een ratel.'},
+      {id: 'sp061', source: 'grasmus', plumage: 'adult_m', marks: 'Volwassen mannetje Grasmus: warme roestbruine vleugelranden, lichtere grijze kruin en vaak zachtroze borst.'},
+      {id: 'sp062', source: 'braamsluiper', marks: 'Braamsluiper met grijze kop en donkerdere oorstreek; vleugels minder roestkleurig.'},
     ],
-    tip: 'Beide soorten hebben een lichte keel. Vergelijk de gevouwen vleugel en luister naar meerdere strofen.',
+    rows: [
+      {label: 'Vleugel', values: ['Warme roestbruine veerranden', 'Gelijkmatiger grijsbruin, zonder vergelijkbaar roest']},
+      {label: 'Kop en keel', values: ['Lichtere grijze kruin en witte keel; bij man vaak roze borst', 'Donkerdere grijze oorstreek met witte keel']},
+      {label: 'Zang', values: ['Variabel en wat krassend', 'Korte snelle klepperende ratel']},
+    ],
+    tip: 'Beide soorten hebben een lichte keel, dus kijk vooral naar de vleugelranden. Hier staat een eerder geregistreerd Grasmus-mannetje naast een sekseneutrale Braamsluiperfoto.',
   },
   {
     label: 'IJsvogel en Bijeneter · keel en snavel',
     birds: [
-      {id: 'sp075', source: 'ijsvogel', marks: 'Witte keel, roestoranje onderzijde, rechte snavel en korte staart.'},
-      {id: 'sp257', source: 'bijeneter', marks: 'Gele keel, blauwgroene onderzijde, licht gebogen snavel en langere staart.'},
+      {id: 'sp075', source: 'ijsvogel', photo: '/assets/showcase/sp075.webp', marks: 'Compacte IJsvogel met witte keel en zijhals, roestoranje onderzijde, rechte puntige snavel en korte staart.'},
+      {id: 'sp257', source: 'bijeneter', marks: 'Langgerekte Bijeneter met gele keel, blauwgroene onderzijde, zwarte oogstreep, licht gebogen snavel en lange staart.'},
     ],
-    tip: 'Bekijk de keelkleur en snavelvorm. In tegenlicht helpt vooral de verhouding tussen staart en lichaam.',
+    rows: [
+      {label: 'Keel', values: ['Wit met een witte zijhalsvlek', 'Felgeel en omrand door een donkere oog-/keeltekening']},
+      {label: 'Snavel', values: ['Lang, smal en recht', 'Langer ogend en licht neerwaarts gebogen']},
+      {label: 'Lichaam en staart', values: ['Compact met korte staart en oranje buik', 'Langgerekter met langere staart en blauwgroene onderzijde']},
+    ],
+    tip: 'De twee bestaande rustfoto’s tonen de herkenbare verschillen. Kijk naar keel, snavel en staart in plaats van alleen naar de blauwe kleur.',
   },
   {
     label: 'Geelgors en Rietgors · kop en stuit',

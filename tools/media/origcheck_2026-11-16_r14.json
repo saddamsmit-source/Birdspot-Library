@@ -1,0 +1,62 @@
+{
+  "date": "2026-11-16",
+  "purpose": "F3-R14: getoonde foto's Grote Lijster, Roodborst, Zwarte Roodstaart tegen bronbeeld en Commons-rechten.",
+  "items": [
+    {
+      "speciesId": "sp049",
+      "image": "/assets/species/sp049.webp",
+      "author": "jo-h from UK",
+      "license": "CC BY 2.0",
+      "title": "File:Turdus viscivorus -England-8.jpg"
+    },
+    {
+      "speciesId": "sp049",
+      "image": "/assets/species/plumage/sp049-juv.webp",
+      "author": "treehouse1977",
+      "license": "CC BY-SA 2.0",
+      "title": "File:Fledgling mistle thrush.jpg"
+    },
+    {
+      "speciesId": "sp050",
+      "image": "/assets/species/sp050.webp",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "title": "File:European robin Créteil 2.jpg"
+    },
+    {
+      "speciesId": "sp050",
+      "image": "/assets/species/plumage/sp050-juv-review.webp",
+      "author": "Caroline Legg",
+      "license": "CC BY 2.0",
+      "title": "File:European Robin - Erithacus rubecula - Juvenile.jpg"
+    },
+    {
+      "speciesId": "sp050",
+      "image": "/assets/species/plumage/sp050-flight.webp",
+      "author": "Joe Dyer",
+      "license": "CC BY 2.0",
+      "title": "File:Robin in Flight (8398860133).jpg"
+    },
+    {
+      "speciesId": "sp051",
+      "image": "/assets/species/plumage/sp051-hero-male.webp",
+      "author": "Luiz Lapa",
+      "license": "CC BY 2.0",
+      "title": "File:Rabiruivo-preto, macho, Black Redstart, male (51131070116).jpg"
+    },
+    {
+      "speciesId": "sp051",
+      "image": "/assets/species/sp051.webp",
+      "author": "El Golli Mohamed",
+      "license": "CC BY-SA 4.0",
+      "title": "File:Rougequeue noir Douga006.jpg"
+    },
+    {
+      "speciesId": "sp051",
+      "image": "/assets/species/plumage/sp051-juv.webp",
+      "author": "Marie-Lan Taÿ Pamart",
+      "license": "CC BY 4.0",
+      "title": "File:Phoenicurus ochruros juvenile Chastel 20190512 t130014.jpg"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+ "date": "2026-11-17",
+ "purpose": "R19-QA: page parameters of the British Library treecreeper call (recordist / copyright holder evidence)",
+ "items": [
+  {
+   "speciesId": "sp067",
+   "kind": "audio",
+   "audio": "/assets/species/audio/sp067-call.mp3",
+   "author": "Aubrey John Williams / The British Library Board",
+   "license": "CC BY-SA 4.0",
+   "title": "File:Eurasian Treecreeper (Certhia familiaris) (W1CDR0001463 BD5).ogg",
+   "source": "https://commons.wikimedia.org/wiki/File:Eurasian_Treecreeper_%28Certhia_familiaris%29_%28W1CDR0001463_BD5%29.ogg",
+   "recheck": "R19-QA author rule"
+  }
+ ]
+}

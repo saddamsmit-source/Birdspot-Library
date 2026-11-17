@@ -29,17 +29,26 @@
           "sexAge": "Leeftijd en geslacht zijn niet bevestigd door de fotobron.",
           "quality": "Bruikbaar voor silhouet en vleugelvorm.",
           "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp022-juv-review.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Zwarte Kraai bedelt met geopende snavel en afhangende vleugels. De mond is roze.",
+          "sexAge": "Juveniel volgens de fotograaf. De roze snavelbinnenkant ondersteunt de leeftijd.",
+          "quality": "Hele vogel met zichtbaar bedelgedrag en lichte snavelbinnenkant.",
+          "verdict": "goedgekeurd",
+          "addedIn": "F3-R06"
         }
       },
       "corrections": [
         "Bronprofiel met vergelijking met Roek en Kauw. De snavelbasis is bij jonge Roeken geen betrouwbaar enkelvoudig onderscheid.",
-        "Lengte en spanwijdte als indicatieve band berekend met Vogelbescherming en RSPB."
+        "Lengte en spanwijdte als indicatieve band berekend met Vogelbescherming en RSPB.",
+        "Hoofdfoto en vluchtfoto naast de oorspronkelijke bronbestanden bekeken. Neutrale labels behouden.",
+        "F3-R06: Gedocumenteerd jeugdkleed toegevoegd."
       ],
-      "missing": [
-        "Afzonderlijke juvenielenfoto"
-      ],
+      "missing": [],
       "sexPolicy": "Geslachten zijn uiterlijk gelijkend. De kaart houdt deze foto’s neutraal.",
-      "uncertain": []
+      "uncertain": [],
+      "date": "2026-11-15"
     },
     "sp025": {
       "assets": {
@@ -56,19 +65,36 @@
           "sexAge": "Leeftijd en geslacht zijn niet bevestigd door de fotobron.",
           "quality": "Bruikbaar als aanvullende herkenningsfoto.",
           "verdict": "uit-rol"
+        },
+        "/assets/species/plumage/sp025-juv-review.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Kauw van opzij op stenen, met dof kleed en een donker oog.",
+          "sexAge": "Juveniel volgens het individuele bijschrift. Donker oog en dof kleed zichtbaar.",
+          "quality": "Volledige vogel op 640 × 589 px. Het bronformaat beperkt de vergroting.",
+          "verdict": "goedgekeurd",
+          "addedIn": "F3-R06"
+        },
+        "/assets/species/plumage/sp025-flight-free.webp": {
+          "role": "In vlucht",
+          "content": "Kauw in vrije vlucht, met gespreide vleugels en een korte snavel tegen open lucht.",
+          "sexAge": "Herkenbaar als Kauw op bronvermelding en vorm. Leeftijd en geslacht open.",
+          "quality": "Hele vogel in open lucht. Silhouet goed bruikbaar, met weinig detail in de donkere veren.",
+          "verdict": "goedgekeurd",
+          "addedIn": "F3-R06"
         }
       },
       "corrections": [
-        "De bestaande landingsfoto blijft buiten In vlucht. Het kennisprofiel maakt het leeftijdsvoorbehoud bij oogkleur expliciet."
+        "De bestaande landingsfoto blijft buiten In vlucht. Het kennisprofiel maakt het leeftijdsvoorbehoud bij oogkleur expliciet.",
+        "Twee originele foto’s gematcht. De landingsnadering blijft bij de overige foto’s. Maten naast Kent Wildlife Trust gelegd.",
+        "F3-R06: Gedocumenteerd jeugdkleed toegevoegd.",
+        "F3-R06: Vrije-vluchtfoto toegevoegd. De landingsfoto blijft aanvullend."
       ],
-      "missing": [
-        "Afzonderlijke juvenielenfoto",
-        "Vrije-vluchtfoto"
-      ],
+      "missing": [],
       "sexPolicy": "Geslachten zijn uiterlijk gelijkend. De kaart houdt beide foto’s neutraal.",
       "uncertain": [
         "De fotobron noemt het beeld in algemene zin “in flight”. De zichtbare poten en houding ondersteunen de specifiekere Birdspot-indeling als landingshouding."
-      ]
+      ],
+      "date": "2026-11-15"
     },
     "sp054": {
       "assets": {
@@ -78,13 +104,20 @@
           "sexAge": "Fotobron bevestigt de soort. Leeftijd en geslacht zijn niet expliciet geannoteerd.",
           "quality": "Scherp beeld met vrij zicht op de kop en snavel.",
           "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp054-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Heggenmus in zijaanzicht op schors: dichte bruine streping op kop, borst en flanken, weinig grijs, gele mondhoek, fijne spitse snavel.",
+          "sexAge": "Juveniel: gestreepte kop en borst (Blasco-Zumeta & Heinze), minder grijs (RSPB), gele mondhoek; Commons-categorie 'Prunella modularis (juvenile)'. Geslacht onbekend.",
+          "quality": "Scherp, hele vogel in beeld tegen egale achtergrond.",
+          "verdict": "goedgekeurd",
+          "addedIn": "F3-R15-media"
         }
       },
       "corrections": [
         "Bronprofiel met het snavelverschil ten opzichte van Huismus en het leeftijdsvoorbehoud bij de grijze kop en borst."
       ],
       "missing": [
-        "Afzonderlijke juvenielenfoto",
         "Vrije-vluchtfoto"
       ],
       "sexPolicy": "Geslachten zijn uiterlijk gelijkend. De kaart houdt de hoofdfoto neutraal.",
@@ -112,21 +145,30 @@
           "sexAge": "Geen geslacht of exacte leeftijd bevestigd door de fotobron.",
           "quality": "Bewegingsonscherpte beperkt de herkenningsdetails.",
           "verdict": "voorwaardelijk"
+        },
+        "/assets/species/plumage/sp063-adult-f.webp": {
+          "role": "Overige herkenningsfoto (Volwassen)",
+          "content": "Zijaanzicht met gele kruinstreep op een tak.",
+          "sexAge": "Volwassen. De fotograaf noemt een vrouwtje (bronclaim, niet onafhankelijk bevestigd): op dit gesloten zijaanzicht is een verborgen oranje middenkruin niet uit te sluiten.",
+          "quality": "Volledige vogel, herkenbare kop en vleugelstrepen.",
+          "verdict": "goedgekeurd"
         }
       },
       "corrections": [
         "Vluchtfoto blijft in de vluchtsectie met de aanduiding Voorlopige foto. De ondersoort staat zichtbaar in het bijschrift.",
-        "Kennisprofiel vergelijkt het gezicht met Vuurgoudhaan en vermeldt de beperking van een gele kruin voor geslachtsbepaling."
+        "Kennisprofiel vergelijkt het gezicht met Vuurgoudhaan en vermeldt de beperking van een gele kruin voor geslachtsbepaling.",
+        "Drie foto’s naast de originelen gelegd. Een vierde foto toont een door de fotograaf bevestigd vrouwtje. De opgave van de fotograaf blijft bepalend voor dat label.",
+        "F3-R18 QA 17-11-2026: label Vrouwtje vervangen door neutraal Volwassen; geslachtsclaim van de fotograaf bewaard als sourceSexClaim/sexNote."
       ],
       "missing": [
         "Afzonderlijke mannetjesfoto",
-        "Afzonderlijke vrouwtjesfoto",
         "Scherpe Europese vluchtfoto"
       ],
       "sexPolicy": "Oranje kan bij mannetjes verborgen zijn. De hoofdfoto en de vluchtfoto krijgen zonder bronbewijs een neutraal label.",
       "uncertain": [
         "De fotograaf van de hoofdfoto noemt geen geslacht. De zichtbare gele kruin is onvoldoende voor het label Vrouwtje."
-      ]
+      ],
+      "date": "2026-11-14"
     },
     "sp068": {
       "assets": {

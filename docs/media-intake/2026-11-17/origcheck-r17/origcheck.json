@@ -1,0 +1,214 @@
+{
+  "generated": "2026-11-17T07:30:29Z",
+  "rule": {
+    "sameMinR": 0.9
+  },
+  "items": [
+    {
+      "speciesId": "sp059",
+      "image": "/assets/species/sp059.webp",
+      "title": "File:Eurasian Blackcap 2025 04 05.jpg",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1600,
+        1067
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Eurasian_Blackcap_2025_04_05.jpg",
+        "sha1": "0c1a147a51b0896c597bfebcfdacb090eb0fc468",
+        "license": "CC BY 4.0",
+        "author": "Alexis Lours",
+        "width": 3961,
+        "height": 2641
+      },
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp059_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp059",
+      "image": "/assets/species/plumage/sp059-adult_f.webp",
+      "title": "File:Female Blackcap - Sylvia atricapilla (49979484338).jpg",
+      "author": "caroline legg",
+      "license": "CC BY 2.0",
+      "localSize": [
+        1400,
+        1000
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Female_Blackcap_-_Sylvia_atricapilla_(49979484338).jpg",
+        "sha1": "f233f45951d23ec7e0f63a33b3fe6e9bf7f7a3ac",
+        "license": "CC BY 2.0",
+        "author": "caroline legg",
+        "width": 2616,
+        "height": 1869
+      },
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        686
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp059-adult_f_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp059",
+      "image": "/assets/species/plumage/sp059-juv.webp",
+      "title": "File:Svarthätta (Sylvia atricapilla) juvenil i hägg i Väsmestorp 2023-06-17 (4302).jpg",
+      "author": "Gunnar Creutz",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1112,
+        1400
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Svarth%C3%A4tta_(Sylvia_atricapilla)_juvenil_i_h%C3%A4gg_i_V%C3%A4smestorp_2023-06-17_(4302).jpg",
+        "sha1": "b848fa729344637b95677d49457b595d402e0d8e",
+        "license": "CC BY-SA 4.0",
+        "author": "Gunnar Creutz",
+        "width": 1572,
+        "height": 1980
+      },
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        1209
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp059-juv_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp060",
+      "image": "/assets/species/sp060.webp",
+      "title": "File:Garden warbler (Sylvia borin) at the UNESCO Biosphere Reserve Swabian Alb.jpg",
+      "author": "Victor Scharnhorst",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1600,
+        1067
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Garden_warbler_(Sylvia_borin)_at_the_UNESCO_Biosphere_Reserve_Swabian_Alb.jpg",
+        "sha1": "47a67b166644558a47ac13af4fc9428d3c34c5c7",
+        "license": "CC BY-SA 4.0",
+        "author": "Victor Scharnhorst",
+        "width": 3056,
+        "height": 2037
+      },
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp060_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp061",
+      "image": "/assets/species/sp061.webp",
+      "title": "File:Common whitethroat 2025 05 25.jpg",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1600,
+        1067
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Common_whitethroat_2025_05_25.jpg",
+        "sha1": "c8b45ae12fa2cbd288d421e8479d7dcfc7a40118",
+        "license": "CC BY 4.0",
+        "author": "Alexis Lours",
+        "width": 4263,
+        "height": 2842
+      },
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp061_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp061",
+      "image": "/assets/species/plumage/sp061-hero-male.webp",
+      "title": null,
+      "author": "Donald Davesne",
+      "license": "CC BY 4.0",
+      "localSize": [
+        680,
+        1024
+      ],
+      "sourceUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/128098779/original.jpg",
+      "rightsMatch": null,
+      "sourceSize": [
+        845,
+        1272
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp061-hero-male_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp061",
+      "image": "/assets/species/plumage/sp061-adult_f.webp",
+      "title": null,
+      "author": "Roy Lowry",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1024,
+        683
+      ],
+      "urlErrors": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/295574541/original.jpg: HTTP Error 404: Not Found"
+      ],
+      "sourceUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/295574541/original.jpeg",
+      "rightsMatch": null,
+      "sourceSize": [
+        1284,
+        856
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp061-adult_f_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp061",
+      "image": "/assets/species/plumage/sp061-juv.webp",
+      "title": null,
+      "author": "John Ashburner",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1024,
+        683
+      ],
+      "sourceUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/517714670/original.jpg",
+      "rightsMatch": null,
+      "sourceSize": [
+        2048,
+        1365
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp061-juv_vs_source.jpg"
+    }
+  ]
+}

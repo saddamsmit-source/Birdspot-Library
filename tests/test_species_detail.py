@@ -17,11 +17,7 @@ Birdspot Library — H2–H4: soortdetail met tabbladen
   H3-04  kalender neemt ook de broedtekst over (Pimpelmees); lijn onder de juiste maanden in beide thema's
   H4-01  soortvergelijking en lokale opnamen, inclusief openen foto en wisselen naar verwante soort
   H4-02  vergelijking toont het juiste kleed en Verenkleed heeft lokale winter-, broed- en ruifoto's
-  H4-03  kiekendieven vergelijken Mannetje en Vrouwtje; incidentele Nederlandse broedgevallen krijgen
-         geen vast maandbereik. Sinds Opdracht 3 (10-11-2026, "eerst alfabetische vogels en
-         definitieve fotovolgorde") toont de kaart GEEN Juveniel-tegen-Juveniel-vergelijking meer
-         (maakt de kaart te druk) — de bijbehorende foto's blijven wel zichtbaar, nu in de nieuwe,
-         altijd aparte sectie "In vlucht" op de eigen soortkaart.
+  H4-03  kiekendieven vergelijken bevestigde vluchtkleden; incidenteel broeden houdt eigen status
   H4-04  jonge Sperwer en Havik tonen juiste borsttekening, kleedfoto en benoemde roepen
   H4-05  Buizerd vergelijkt jonge en volwassen vogels zonder volwassen Buizerd een geslacht toe te kennen
   H4-06  witte reigers vergelijken het juiste kleed, met eigen broedmaanden en veldopnamen
@@ -31,13 +27,7 @@ Birdspot Library — H2–H4: soortdetail met tabbladen
   H4-10  Witgat en Bosruiter vergelijken drie kleden; doortrek en incidenteel broeden blijven onderscheiden
   H4-11  Vijf steltlopers tonen acht vergelijkingen, fotografeertips en Nederlandse broedmaanden
 
-Opdracht 3 (10-11-2026, "eerst alfabetische vogels en definitieve fotovolgorde"): van de 19
-bestaande Juveniel-tegen-Juveniel-vergelijkingen die deze soortparen (H4-03/04/05/06/07/08/09/10/11)
-raken, toont de kaart die ene paring niet meer — maakt de kaart te druk. De overige, niet-juveniele
-paren per soortpaar blijven gewoon bestaan (met tabbalk zodra er >1 paar overblijft, anders direct
-één paneel zonder tabs). Elke betrokken soort toont zijn eigen juveniele foto nog steeds op de eigen
-kaart (in Verenkleed, of — als het een vluchtfoto is — in de nieuwe aparte sectie "In vlucht");
-alleen het gebruik van de PARTNERsoort haar foto als vergelijkingsvoorbeeld in dat ene paar vervalt.
+Fotohergebruik is toegestaan onder Lijkt op. Hoofdfoto, verenkleed en vluchtsectie worden op unieke opnamen getest.
 
 Starten (vanuit repo-root):  python tests/test_species_detail.py
 """
@@ -244,7 +234,7 @@ def main():
 
             open_species("Roodborst", "sp050")
             assert p.locator('#sdPanel-herkenning .sd-badge').filter(has_text="Man en vrouw lijken op elkaar").count() == 1
-            assert p.locator('#sdPanel-herkenning .sd-source a').get_attribute("href").endswith("/roodborst")
+            assert p.locator("#sdPanel-herkenning .sd-source, #sdPanel-herkenning .kb-src").count() == 0
             assert p.locator('#sdPanel-herkenning .sd-tile').count() == 1
             close_detail()
 
@@ -301,8 +291,8 @@ def main():
             expect(voice).to_have_count(len(expected_voice))
             for i, entry in enumerate(expected_voice):
                 expect(voice.nth(i)).to_contain_text(entry["text"])
-                labels = [KNOWLEDGE_SRC["_sources"][key]["label"].split(" — ")[0] for key in entry["sources"]]
-                expect(voice.nth(i).locator('.kb-src')).to_have_text("Bron: " + " · ".join(dict.fromkeys(labels)))
+                assert entry["sources"], "H3-02 bronbewijs moet wel in kennisdata blijven"
+                expect(voice.nth(i).locator(".kb-src")).to_have_count(0)
             expect(p.locator('#sdPanel-herkenning .sd-voice')).to_have_count(0)
             tab("status")
             vals = p.eval_on_selector_all('#sdPanel-status .sd-breed .sd-tile__value', 'els => els.map(e => e.innerText)')
@@ -388,22 +378,22 @@ def main():
             print("H3-03 OK — zonder leefwijze:", ex["nameNL"], "· niet-broedvogel Rotgans zonder broedblok")
 
             def assert_photo_once(path):
-                # data-guide-image bevat sinds de subpad-fix een opgeloste absolute URL
-                # (assetUrl.js), geen ruw root-relatief pad meer — dus matchen op het
-                # einde van de attribuutwaarde ($=), niet op een exacte string.
                 photo = p.locator(f'.signature-species-detail-sheet [data-guide-image$="{path}"] img')
-                assert 1 <= photo.count() <= 2
-                if photo.count() == 2:
-                    expect(p.locator(f'.sd-hero-photo[data-guide-image$="{path}"] img')).to_have_count(1)
-                    expect(p.locator(f'#sdPanel-herkenning [data-guide-image$="{path}"] img')).to_have_count(1)
-                photo.first.scroll_into_view_if_needed()
-                photo.first.evaluate("img => img.decode()")
+                own = p.locator(f'.signature-species-detail-sheet [data-guide-image$="{path}"]:not(.sd-similar *) img')
+                if own.count():
+                    expect(own).to_have_count(1)
+                else:
+                    assert photo.count(), f"Foto ontbreekt: {path}"
+                target = own.first if own.count() else photo.first
+                target.scroll_into_view_if_needed()
+                target.evaluate("img => img.decode()")
 
             def check_comparison_photo(photo, thorough=False):
+                photo = photo.first
                 photo.scroll_into_view_if_needed()
                 image = photo.locator('img')
                 image.evaluate("img => img.decode()")
-                assert image.bounding_box()["height"] > 160
+                assert image.bounding_box()["height"] > 92
                 frame = photo.locator('..')
                 info = frame.get_by_label("Foto-informatie")
                 info_box = info.bounding_box()
@@ -465,18 +455,40 @@ def main():
                 return card
 
             def cmp_tab(card, label):
-                card.locator('.sd-cmp-tab', has_text=re.compile(rf'^{re.escape(label)}$')).click()
+                match = card.locator('.sd-cmp-tab', has_text=re.compile(rf'^{re.escape(label)}$'))
+                if match.count():
+                    match.click()
+                else:
+                    # UX v1.6: a single surviving complete pair has no tabbar.
+                    assert card.locator('.sd-cmp-tab').count() == 0, (label, "tab missing")
+                    assert card.locator('.sd-cmp-panel').count() == 1, (label, "not a single valid panel")
                 panel = card.locator('.sd-cmp-panel:visible')
                 panel.wait_for(state="visible", timeout=4000)
                 return panel
 
+            def assert_photo_pair(panel, files, in_flight=False):
+                pictures = panel.locator('.sd-cmp-head .sd-field-photo')
+                expect(pictures).to_have_count(2)
+                boxes = []
+                for picture, file in zip(pictures.all(), files):
+                    expect(picture).to_have_attribute("data-guide-image", re.compile(re.escape("/" + file) + "$"))
+                    picture.scroll_into_view_if_needed()
+                    picture.locator('img').evaluate("image => image.decode()")
+                    boxes.append(picture.bounding_box())
+                    expect(picture.locator('..').get_by_label("Foto-informatie")).to_have_count(1)
+                left, right = boxes
+                assert left["x"] + left["width"] <= right["x"], boxes
+                assert abs(left["width"] - right["width"]) < 2, boxes
+                assert abs(left["y"] - right["y"]) < 2, boxes
+                assert left["x"] >= 0 and right["x"] + right["width"] <= p.viewport_size["width"], boxes
+                assert (panel.get_attribute("data-cmp-flight") is not None) == in_flight
+
             open_species("Houtduif", "sp002")
             stock_dove_card = cmp_card("Holenduif", flight=True)
-            # Vluchtcontrole 10-11-2026 (eigenaarsbesluit): de Holenduif-'vluchtfoto' toonde een opvliegende vogel
-            # en is uit de vluchtrol gehaald. De vergelijking blijft (tekst + navigatie) maar toont eerlijk dat de foto
-            # ontbreekt; een andere foto mag die plek niet vullen.
-            expect(stock_dove_card.locator('.sd-cmp-panel:visible .sd-field-photo')).to_have_count(0)
-            expect(stock_dove_card.locator('.sd-cmp-panel:visible .sd-cmp-ref', has_text="Nog geen foto")).to_have_count(1)
+            stock_dove_panel = stock_dove_card.locator('.sd-cmp-panel:visible')
+            assert_photo_pair(stock_dove_panel, ["sp002-flight-wingband.webp", "sp003-flight-open-sky.webp"], in_flight=True)
+            check_comparison_photo(stock_dove_panel.locator('.sd-field-photo').last)
+            expect(stock_dove_panel.get_by_text("Nog geen foto", exact=True)).to_have_count(0)
             expect(stock_dove_card.locator('.sd-cmp-panel:visible .sd-compare-open')).to_have_text(re.compile(r"Open Holenduif"))
             expect(p.locator('#sdPanel-herkenning section.sd-similar .sd-cmp-more > summary'))\
                 .to_have_text("Nog 1 soort: Turkse Tortel")
@@ -488,9 +500,9 @@ def main():
             card = cmp_card("Tjiftjaf")
             whos = card.locator('.sd-cmp-panel:visible .sd-cmp-who')
             assert whos.locator('strong').all_text_contents() == ["Fitis", "Tjiftjaf"]
-            assert card.get_by_role("link", name="Vogelbescherming").count() == 1
-            assert whos.first.locator("img").count() == 0
-            assert whos.last.locator("img").count() == 1
+            assert card.get_by_role("link", name="Vogelbescherming").count() == 0
+            expect(card.locator(".sd-cmp-foot .sd-compare-open")).to_have_count(1)
+            assert_photo_pair(card.locator(".sd-cmp-panel:visible"), ["sp057.webp", "sp056.webp"])
             photo = p.get_by_role("button", name="Vergroot hoofdfoto")
             photo.scroll_into_view_if_needed()
             photo.locator('img').evaluate("img => img.decode()")
@@ -546,17 +558,16 @@ def main():
             open_species("Bruine Kiekendief", "sp173")
             harrier_card = cmp_card("Blauwe Kiekendief")
             for label, blue_path, brown_path in (
-                ("Mannetje", "/assets/species/sp249.webp", "/assets/species/sp173.webp"),
+                ("Mannetje", "/assets/species/sp249.webp", "/assets/species/plumage/sp173-male-2.webp"),
                 ("Vrouwtje", "/assets/species/plumage/sp249-adult_f.webp", "/assets/species/plumage/sp173-adult_f.webp"),
             ):
-                panel = cmp_tab(harrier_card, label)
-                assert panel.locator('.sd-cmp-who small').all_text_contents() == [label, label]
+                panel = cmp_tab(harrier_card, f"In vlucht · {label}")
+                assert panel.locator('.sd-cmp-who small').all_text_contents() == [f"{label} in vlucht"] * 2
+                assert_photo_pair(panel, [brown_path.rsplit("/", 1)[-1], blue_path.rsplit("/", 1)[-1]], in_flight=True)
                 assert_photo_once(blue_path)
                 assert_photo_once(brown_path)
                 check_comparison_photo(panel.locator('.sd-field-photo'), thorough=(label == "Mannetje"))
-            # Opdracht 3 (10-11-2026): geen Juveniel-tegen-Juveniel meer — deze kaart was er een van
-            # 19 bestaande gevallen. Hun eigen juveniele vluchtfoto's blijven zichtbaar, nu op de
-            # eigen soortkaart in de nieuwe, aparte "In vlucht"-sectie (niet stilzwijgend verwijderd).
+            # Een landende Bruine Kiekendief vormt geen paar met een vrij vliegende Blauwe.
             expect(harrier_card.locator('.sd-cmp-tab', has_text=re.compile(r'^Juveniel$'))).to_have_count(0)
             flight_section = p.locator('#sdPanel-herkenning section[aria-label="In vlucht"]')
             expect(flight_section).to_have_count(1)
@@ -571,6 +582,22 @@ def main():
             assert p.get_by_label("Roep van Bruine Kiekendief").count() == 1
             close_detail()
             open_species("Steppekiekendief", "sp250")
+            blue_card = cmp_card("Blauwe Kiekendief", flight=True)
+            for label, steppe, blue in (
+                ("Mannetje", "sp250.webp", "sp249.webp"),
+                ("Vrouwtje", "sp250-adult_f.webp", "sp249-adult_f.webp"),
+                ("Juveniel", "sp250-juv.webp", "sp249-juv.webp"),
+            ):
+                panel = cmp_tab(blue_card, f"In vlucht · {label}")
+                assert panel.locator('.sd-cmp-who small').all_text_contents() == [f"{label} in vlucht"] * 2
+                assert_photo_pair(panel, [steppe, blue], in_flight=True)
+            grauwe_card = cmp_card("Grauwe Kiekendief", flight=True)
+            grauwe_panel = cmp_tab(grauwe_card, "In vlucht · Mannetje")
+            assert_photo_pair(grauwe_panel, ["sp250.webp", "sp251.webp"], in_flight=True)
+            # De Grauwe Kiekendief-vrouw vliegt hier niet vrij: geen leeg tabblad tonen.
+            expect(grauwe_card.locator('.sd-cmp-tab', has_text="In vlucht · Vrouwtje")).to_have_count(0)
+            assert "Nog geen passende vluchtfoto" not in grauwe_card.inner_text()
+            expect(grauwe_card.locator('[data-guide-image$="sp251-adult_f.webp"]')).to_have_count(0)
             tab("status")
             assert p.get_by_text("Incidentele broedgevallen in Nederland.", exact=True).is_visible()
             p.get_by_text("Incidentele broedgevallen in Nederland, onder meer in 2017 en 2019", exact=True).wait_for()
@@ -578,13 +605,38 @@ def main():
             close_detail()
             print("H4-03 OK — Bruine/Blauwe Kiekendief per kleed (tabs, met foto-rotatie en -pan); Steppekiekendief zonder vaste broedmaanden")
 
+            open_species("Slechtvalk", "sp009")
+            kestrel_card = cmp_card("Torenvalk")
+            young_falcons = cmp_tab(kestrel_card, "Juveniel")
+            assert_photo_pair(young_falcons, ["sp009-juv.webp", "sp008-juv.webp"])
+            flying_falcons = cmp_tab(kestrel_card, "In vlucht · Volwassen")
+            assert_photo_pair(flying_falcons, ["sp009-male-flight.webp", "sp008-male-flight.webp"], in_flight=True)
+            assert_photo_once("/assets/showcase/sp009.webp")
+            adult_flights = p.locator('.sd-flight [data-plumage="adult"] .sd-plumage-photo')
+            expect(adult_flights).to_have_count(2)
+            left, right = (photo.bounding_box() for photo in adult_flights.all())
+            assert abs(left['y'] - right['y']) < 2 and left['x'] + left['width'] <= right['x'] + 1
+            young_flight = p.locator('.sd-flight [data-plumage="juv"] [data-guide-image$="sp009-juv-flight.webp"]')
+            expect(young_flight).to_have_count(1)
+            assert_photo_once("/assets/species/plumage/sp009-juv-flight.webp")
+            young_flight.locator("img").evaluate("img => img.decode()")
+            flight_credit = young_flight.locator("..").get_by_label("Foto-informatie")
+            flight_credit.focus()
+            p.keyboard.press("Enter")
+            credit_panel = young_flight.locator("..").locator(".photo-info__panel")
+            expect(credit_panel.get_by_text("Maker: Josh Boe", exact=True)).to_be_visible()
+            expect(credit_panel.get_by_role("link", name="CC BY 4.0")).to_be_visible()
+            expect(credit_panel.locator('a[href="https://www.inaturalist.org/photos/251479995"]')).to_be_visible()
+            p.keyboard.press("Enter")
+            close_detail()
+
             open_species("Sperwer", "sp006")
             hawk_card = cmp_card("Havik")
-            # Opdracht 3 (10-11-2026): sp006 vs sp007 is één van de 19 bestaande Juveniel-tegen-
-            # Juveniel-vergelijkingen — die tab is nu verborgen; Mannetje/Vrouwtje blijven bestaan.
-            # Sperwers eigen juveniele foto (niet-vlucht) blijft gewoon in Verenkleed staan; Haviks
-            # juveniele foto verschijnt alleen nog op Haviks eigen kaart, niet langer als voorbeeld hier.
-            expect(hawk_card.locator('.sd-cmp-tab', has_text=re.compile(r'^Juveniel$'))).to_have_count(0)
+            young_hawks = cmp_tab(hawk_card, "Juveniel")
+            assert_photo_pair(young_hawks, ["sp006-juv.webp", "sp007-juv.webp"])
+            # Zonder twee foto’s van vrouwtjes is de tab niet zichtbaar.
+            expect(hawk_card.locator('.sd-cmp-tab', has_text=re.compile(r'^Vrouwtje$'))).to_have_count(0)
+            assert "Nog geen passende foto" not in hawk_card.inner_text()
             assert_photo_once("/assets/species/plumage/sp006-juv.webp")
             flight_section = p.locator('#sdPanel-herkenning section.sd-similar')
             assert flight_section.evaluate(
@@ -596,52 +648,71 @@ def main():
             assert flight_falcon_panel.locator('.sd-cmp-who strong').all_text_contents() == ["Sperwer", "Torenvalk"]
             for sid in ("sp006", "sp007", "sp008"):
                 assert_photo_once(f"/assets/species/plumage/{sid}-flight.webp")
+            sparrow_in_flight = p.locator('#sdPanel-herkenning section[aria-label="In vlucht"]')
+            expect(sparrow_in_flight.get_by_text("Mannetje in vlucht", exact=True)).to_have_count(1)
             assert p.get_by_label("Roep vrouwtje van Sperwer").count() == 1
-            hawk_card.get_by_role("button", name="Open Havik").click()
+            flight_hawk_panel.get_by_role("button", name="Open Havik").click()
             assert p.get_by_role("dialog", name="Havik", exact=True).count() == 1
             assert p.get_by_label("Alarmroep vrouwtje van Havik").count() == 1
             assert p.get_by_label("Bedelroep jong van Havik").count() == 1
             close_detail()
             print("H4-04 OK — jonge Sperwer/Havik (tab Juveniel, juiste borsttekening), vluchtvergelijking met Havik en Torenvalk")
 
+            open_species("Torenvalk", "sp008")
+            text_comparisons = p.locator('#sdPanel-herkenning .kb-similar')
+            expect(text_comparisons.get_by_text("Boomvalk: lange spitse vleugels", exact=False)).to_be_visible()
+            expect(text_comparisons.get_by_text("Smelleken: brede vleugelbasis", exact=False)).to_be_visible()
+            expect(text_comparisons.locator('img')).to_have_count(0)
+            text_comparisons.get_by_role("button", name="Open Boomvalk").click()
+            expect(p.get_by_role("dialog", name="Boomvalk", exact=True)).to_be_visible()
+            close_detail()
+
             open_species("Buizerd", "sp005")
+            dark = p.locator('.sd-flight [data-guide-image$="sp005-flight-dark.webp"] img')
+            expect(dark).to_have_count(1)
+            dark.scroll_into_view_if_needed()
+            dark.evaluate("img => img.decode()")
+            expect(p.locator('[data-guide-image$="sp005-male-flight.webp"]')).to_have_count(0)
             regular_cards = p.locator('#sdPanel-herkenning section.sd-similar .sd-cmp-card')
             assert regular_cards.count() == 2
             rough_card = cmp_card("Ruigpootbuizerd")
-            # Opdracht 3 (10-11-2026): sp005 vs sp253 had twee kledenparen (Volwassen/Vrouwtje en
-            # Juveniel/Juveniel); het laatste is nu verborgen, dus blijft nog maar één paar over.
-            # Bij precies één paar toont de kaart geen tabbladen meer (comparisonCard: tabs =
-            # pairings.length > 1) — het ene paneel staat dan direct zichtbaar, zonder tab-klik.
-            expect(rough_card.locator('.sd-cmp-tab')).to_have_count(0)
-            adult_panel = rough_card.locator('.sd-cmp-panel:visible')
-            assert adult_panel.locator('.sd-cmp-who small').all_text_contents() == ["Volwassen", "Vrouwtje"]
-            check_comparison_photo(adult_panel.locator('.sd-field-photo'))
-            for path in ("/assets/species/plumage/sp005-adult_m.webp", "/assets/species/sp253.webp"):
-                assert_photo_once(path)
-            honey_card = cmp_card("Wespendief")
-            # Opdracht 3 (10-11-2026): sp005 vs sp248 (Wespendief) is ook een van de 19 bestaande
-            # Juveniel-tegen-Juveniel-gevallen, nu verborgen. Wespendiefs eigen juveniele foto is
-            # bovendien een vluchtfoto en staat sindsdien alleen nog op zijn eigen kaart, in de
-            # nieuwe aparte sectie "In vlucht" — niet meer hier als vergelijkingsvoorbeeld.
-            expect(honey_card.locator('.sd-cmp-tab', has_text=re.compile(r'^Juveniel$'))).to_have_count(0)
+            for width in (360, 390, 430):
+                p.set_viewport_size({"width": width, "height": 844})
+                adult_panel = cmp_tab(rough_card, "In vlucht · Volwassen")
+                assert adult_panel.locator('.sd-cmp-who small').all_text_contents() == ["Volwassen in vlucht", "Vrouwtje in vlucht"]
+                assert_photo_pair(adult_panel, ["sp005-adult_m.webp", "sp253.webp"], in_flight=True)
+                if width == 390:
+                    adult_panel.screenshot(path=str(SHOTS / "species_i_buizerd_ruigpoot_volwassen_390.png"))
+                young_panel = cmp_tab(rough_card, "In vlucht · Juveniel")
+                assert_photo_pair(young_panel, ["sp005-juv.webp", "sp253-juv.webp"], in_flight=True)
+                if width == 390:
+                    young_panel.screenshot(path=str(SHOTS / "species_i_buizerd_ruigpoot_juveniel_390.png"))
+            p.set_viewport_size({"width": 390, "height": 844})
+            check_comparison_photo(young_panel.locator('.sd-field-photo').last)
+            assert_photo_once("/assets/species/plumage/sp005-adult_m.webp")
             assert_photo_once("/assets/species/plumage/sp005-juv.webp")
+            honey_card = cmp_card("Wespendief")
+            female_honey = cmp_tab(honey_card, "In vlucht · Wespendief-vrouwtje")
+            assert_photo_pair(female_honey, ["sp005-adult_m.webp", "sp248-adult_f.webp"], in_flight=True)
+            young_honey = cmp_tab(honey_card, "In vlucht · Juveniel")
+            assert_photo_pair(young_honey, ["sp005-juv.webp", "sp248-juv.webp"], in_flight=True)
             assert p.get_by_label("Alarmroep van Buizerd").count() == 1
-            honey_card.get_by_role("button", name="Open Wespendief").click()
+            young_honey.get_by_role("button", name="Open Wespendief").click()
             assert p.get_by_role("dialog", name="Wespendief", exact=True).count() == 1
             assert p.get_by_label("Vluchtroep van Wespendief").count() == 1
             close_detail()
-            print("H4-05 OK — Buizerd vs Ruigpootbuizerd (tab Volwassen) en Wespendief (tab Juveniel), met bronfoto's")
+            print("H4-05 OK — Buizerd, Ruigpootbuizerd en Wespendief, vluchtparen naast elkaar op 360/390/430 px")
 
             open_species("Kleine Zilverreiger", "sp082")
             heron_card = cmp_card("Grote Zilverreiger")
+            assert_photo_pair(cmp_tab(heron_card, "Winterkleed"), ["sp082-winter.webp", "sp083.webp"])
+            assert_photo_pair(cmp_tab(heron_card, "In vlucht"), ["sp082.webp", "sp083-flight.webp"], in_flight=True)
             breeding_panel = cmp_tab(heron_card, "Broedkleed")
             assert breeding_panel.locator('.sd-cmp-who small').all_text_contents() == ["Broedkleed", "Broedkleed"]
             for path in ("/assets/species/plumage/sp082-breeding.webp", "/assets/species/plumage/sp083-breeding.webp"):
                 assert_photo_once(path)
             cattle_card = cmp_card("Koereiger")
-            # Opdracht 3 (10-11-2026): sp082 vs sp245 (Koereiger) is ook een van de 19 bestaande
-            # Juveniel-tegen-Juveniel-gevallen, nu verborgen; Broedkleed (hierboven) blijft bestaan.
-            expect(cattle_card.locator('.sd-cmp-tab', has_text=re.compile(r'^Juveniel$'))).to_have_count(0)
+            assert_photo_pair(cmp_tab(cattle_card, "Juveniel"), ["sp082-juv.webp", "sp245-juv.webp"])
             assert p.get_by_label("Vluchtroep van Kleine Zilverreiger").count() == 1
             p.get_by_role('tab', name='Leefwijze', exact=True).click()
             assert p.locator('.sd-month-breeding .is-breeding').count() == 2
@@ -655,20 +726,79 @@ def main():
             close_detail()
             print("H4-06 OK — witte reigers per kleed (tabs), bronfoto's, roepen en broedmaanden")
 
+            open_species("Blauwe Reiger", "sp081")
+            purple_heron_card = cmp_card("Purperreiger")
+            assert_photo_pair(cmp_tab(purple_heron_card, "Volwassen"), ["sp081-portrait.webp", "sp084.webp"])
+            assert_photo_pair(cmp_tab(purple_heron_card, "Juveniel"), ["sp081-juv.webp", "sp084-juv-europa.webp"])
+            assert_photo_pair(cmp_tab(purple_heron_card, "In vlucht"), ["sp081.webp", "sp084-flight.webp"], in_flight=True)
+            close_detail()
+            print("F2-27 OK — complete volwassen, juveniele en vluchtparen van Blauwe Reiger en Purperreiger")
+
+            open_species("Kwak", "sp085")
+            grey_heron_card = cmp_card("Blauwe Reiger")
+            assert_photo_pair(cmp_tab(grey_heron_card, "Juveniel"), ["sp085-juv.webp", "sp081-juv.webp"])
+            assert_photo_pair(
+                cmp_tab(grey_heron_card, "In vlucht"), ["sp085-flight.webp", "sp081.webp"], in_flight=True,
+            )
+            purple_heron_card = cmp_card("Purperreiger")
+            assert_photo_pair(cmp_tab(purple_heron_card, "Juveniel"), ["sp085-juv.webp", "sp084-juv-europa.webp"])
+            close_detail()
+            print("F2-28 OK — Kwak tegenover Blauwe Reiger in rust en vlucht en tegenover jonge Purperreiger")
+
+            open_species("Wilde Eend", "sp089")
+            shoveler_card = cmp_card("Slobeend")
+            assert_photo_pair(cmp_tab(shoveler_card, "Vrouwtje"), ["sp089-adult_f.webp", "sp090-adult_f.webp"])
+            flight_panel = cmp_tab(shoveler_card, "In vlucht · Mannetje")
+            assert_photo_pair(flight_panel, ["sp089-free-flight.webp", "sp090-flight.webp"], in_flight=True)
+            expect(flight_panel.get_by_text("Snavel", exact=True)).to_be_visible()
+            flight_panel.get_by_role("button", name="Open Slobeend").click()
+            expect(p.get_by_role("dialog", name="Slobeend", exact=True)).to_be_visible()
+            mallard_card = cmp_card("Wilde Eend")
+            assert_photo_pair(
+                cmp_tab(mallard_card, "In vlucht · Mannetje"), ["sp090-flight.webp", "sp089-free-flight.webp"], in_flight=True,
+            )
+            close_detail()
+            print("F2-29 OK — Wilde Eend en Slobeend in rust en in vrije vlucht, wederzijds")
+
+            open_species("Kuifeend", "sp092")
+            pochard_card = cmp_card("Tafeleend")
+            assert_photo_pair(cmp_tab(pochard_card, "Mannetje"), ["sp092.webp", "sp132.webp"])
+            assert_photo_pair(cmp_tab(pochard_card, "Vrouwtje"), ["sp092-adult_f.webp", "sp132-adult_f.webp"])
+            assert_photo_pair(
+                cmp_tab(pochard_card, "In vlucht · Mannetje"), ["sp092-flight.webp", "sp132-flight.webp"], in_flight=True,
+            )
+            close_detail()
+
+            open_species("Zilvermeeuw", "sp094")
+            lesser_gull_card = cmp_card("Kleine Mantelmeeuw")
+            assert lesser_gull_card.locator(".sd-cmp-tab").all_text_contents() == ["Volwassen", "In vlucht"]
+            assert_photo_pair(cmp_tab(lesser_gull_card, "Volwassen"), ["sp094.webp", "sp095.webp"])
+            gull_flight = cmp_tab(lesser_gull_card, "In vlucht")
+            assert_photo_pair(gull_flight, ["sp094-flight.webp", "sp095-flight.webp"], in_flight=True)
+            gull_flight.get_by_role("button", name="Open Kleine Mantelmeeuw").click()
+            expect(p.get_by_role("dialog", name="Kleine Mantelmeeuw", exact=True)).to_be_visible()
+            herring_gull_card = cmp_card("Zilvermeeuw")
+            assert herring_gull_card.locator(".sd-cmp-tab").all_text_contents() == ["Volwassen", "In vlucht"]
+            assert_photo_pair(
+                cmp_tab(herring_gull_card, "In vlucht"), ["sp095-flight.webp", "sp094-flight.webp"], in_flight=True,
+            )
+            assert_photo_pair(cmp_tab(cmp_card("Grote Mantelmeeuw"), "Volwassen"), ["sp095.webp", "sp164-adult.webp"])
+            close_detail()
+            print("F2-30 OK — volwassen rust- en vluchtparen, zonder verkeerde foto’s onder Eerste winter")
+
             open_species("Wintertaling", "sp091")
             teal_card = cmp_card("Zomertaling")
-            # Opdracht 3 (10-11-2026): sp091 vs sp188 is ook een van de 19 bestaande Juveniel-tegen-
-            # Juveniel-gevallen, nu verborgen; Mannetje/Vrouwtje/Eclipskleed blijven bestaan (3 van de
-            # oorspronkelijk 4 paren, dus de tabbalk blijft gewoon staan). Beide eigen juveniele
-            # foto's (niet-vlucht) blijven op hun eigen soortkaart in Verenkleed staan.
-            expect(teal_card.locator('.sd-cmp-tab', has_text=re.compile(r'^Juveniel$'))).to_have_count(0)
+            assert_photo_pair(cmp_tab(teal_card, "Juveniel"), ["sp091-juv.webp", "sp188-juv.webp"])
             assert_photo_once("/assets/species/plumage/sp091-juv.webp")
-            for label, plumage in [('Mannetje', 'adult_m'), ('Vrouwtje', 'adult_f'), ('Eclipskleed', 'eclipse')]:
+            for label, plumage in [('Mannetje', 'adult_m'), ('Vrouwtje', 'adult_f')]:
                 teal_panel = cmp_tab(teal_card, label)
                 assert teal_panel.locator('.sd-cmp-who small').all_text_contents() == [label, label]
                 expected_garganey = '/assets/species/sp188.webp' if plumage == 'adult_m' else f'/assets/species/plumage/sp188-{plumage}.webp'
-                for path in (f'/assets/species/plumage/sp091-{plumage}.webp', expected_garganey):
-                    assert_photo_once(path)
+                assert_photo_once(f'/assets/species/plumage/sp091-{plumage}.webp')
+                assert_photo_once(expected_garganey)
+            # Geen leeftijdszuiver eclips-fotopaar: de lege vergelijking is verborgen.
+            expect(teal_card.locator('.sd-cmp-tab', has_text=re.compile(r'^Eclipskleed$'))).to_have_count(0)
+            assert "Nog geen passende foto" not in teal_card.inner_text()
             assert p.get_by_label('Vluchtroep bij Rotterdam van Wintertaling').count() == 1
             p.get_by_role('tab', name='Leefwijze', exact=True).click()
             months = p.get_by_text('Gebruikelijke broedperiode · april, mei, juni, juli', exact=True)
@@ -685,22 +815,15 @@ def main():
             open_species("Bontbekplevier", "sp146")
             expect(p.get_by_label("Nachtelijke vluchtroep van Bontbekplevier")).to_have_count(1)
             little_plover_card = cmp_card("Kleine Plevier")
-            # Opdracht 3 (10-11-2026): sp146 vs sp147 is ook een van de 19 bestaande Juveniel-tegen-
-            # Juveniel-gevallen, nu verborgen; Broedkleed (verderop) blijft bestaan. Bontbekplevier's
-            # eigen juveniele foto (niet-vlucht) blijft in Verenkleed; Kleine Plevier's foto staat
-            # alleen nog op zijn eigen kaart.
-            expect(little_plover_card.locator('.sd-cmp-tab', has_text=re.compile(r'^Juveniel$'))).to_have_count(0)
+            assert_photo_pair(cmp_tab(little_plover_card, "Juveniel"), ["sp146-juv.webp", "sp147-juv.webp"])
             assert_photo_once("/assets/species/plumage/sp146-juv.webp")
             kentish_plover_card = cmp_card("Strandplevier")
-            # Opdracht 3 (10-11-2026): sp146 vs sp206 had ook maar twee paren (Winterkleed/Winterkleed
-            # en Juveniel/Juveniel); met de laatste verborgen blijft nog maar één paar over, en toont
-            # de kaart (net als bij sp005/sp253) geen tabbalk meer — het ene paneel staat direct open.
-            expect(kentish_plover_card.locator('.sd-cmp-tab')).to_have_count(0)
-            winter_panel = kentish_plover_card.locator('.sd-cmp-panel:visible')
+            assert_photo_pair(cmp_tab(kentish_plover_card, "Juveniel"), ["sp146-juv.webp", "sp206-juv.webp"])
+            winter_panel = cmp_tab(kentish_plover_card, 'Winterkleed')
             assert winter_panel.locator('.sd-cmp-who small').all_text_contents() == ["Winterkleed", "Winterkleed"]
             for path in ("/assets/species/plumage/sp146-winter.webp", "/assets/species/plumage/sp206-winter.webp"):
                 assert_photo_once(path)
-            little_plover_card.get_by_role("button", name="Open Kleine Plevier").click()
+            little_plover_card.locator(".sd-cmp-panel:visible").get_by_role("button", name="Open Kleine Plevier").click()
             expect(p.get_by_label("Zang en vluchtroep van Kleine Plevier")).to_have_count(1)
             breeding_panel2 = cmp_card("Strandplevier").locator('.sd-cmp-panel:visible')
             assert breeding_panel2.locator('.sd-cmp-who small').all_text_contents() == ["Broedkleed", "Mannetje"]
@@ -716,10 +839,7 @@ def main():
 
             open_species("Goudplevier", "sp145")
             plover_card = cmp_card("Zilverplevier")
-            # Opdracht 3 (10-11-2026): sp145 vs sp144 is ook een van de 19 Juveniel-tegen-Juveniel-
-            # gevallen, nu verborgen; Broedkleed/Winterkleed blijven bestaan (2 van de oorspronkelijk
-            # 3 paren, tabbalk blijft staan). Eigen juveniele foto blijft in Verenkleed staan.
-            expect(plover_card.locator('.sd-cmp-tab', has_text=re.compile(r'^Juveniel$'))).to_have_count(0)
+            assert_photo_pair(cmp_tab(plover_card, "Juveniel"), ["sp145-juv.webp", "sp144-juv.webp"])
             assert_photo_once("/assets/species/plumage/sp145-juv.webp")
             plover_panel = None
             for label, suffix in [("Broedkleed", ""), ("Winterkleed", "-winter")]:
@@ -744,9 +864,7 @@ def main():
 
             open_species("Witgat", "sp156")
             sandpiper_card = cmp_card("Bosruiter")
-            # Opdracht 3 (10-11-2026): sp156 vs sp159 is ook een van de 19 Juveniel-tegen-Juveniel-
-            # gevallen, nu verborgen; Broedkleed/Winterkleed blijven bestaan (tabbalk blijft staan).
-            expect(sandpiper_card.locator('.sd-cmp-tab', has_text=re.compile(r'^Juveniel$'))).to_have_count(0)
+            assert_photo_pair(cmp_tab(sandpiper_card, "Juveniel"), ["sp156-juv.webp", "sp159-juv.webp"])
             assert_photo_once("/assets/species/plumage/sp156-juv.webp")
             sandpiper_panel = None
             for label, suffix in [("Broedkleed", ""), ("Winterkleed", "-winter")]:
@@ -786,31 +904,16 @@ def main():
                 assert_photo_once(f"/assets/species/plumage/{sid}-juv.webp")
                 if partner:
                     wader_card = cmp_card(partner)
-                    # Opdracht 3 (10-11-2026): sp102/sp157 en sp158/sp217 staan ook op de lijst van 19
-                    # bestaande Juveniel-tegen-Juveniel-gevallen, nu verborgen; Broedkleed/Winterkleed
-                    # blijven bestaan.
-                    expect(wader_card.locator('.sd-cmp-tab', has_text=re.compile(r'^Juveniel$'))).to_have_count(0)
+                    partner_id = {"sp102": "sp157", "sp157": "sp102", "sp158": "sp217", "sp217": "sp158"}[sid]
+                    assert_photo_pair(cmp_tab(wader_card, "Juveniel"), [f"{sid}-juv.webp", f"{partner_id}-juv.webp"])
                     for label in ("Broedkleed", "Winterkleed"):
                         wader_panel = cmp_tab(wader_card, label)
                         for picture in wader_panel.locator("img").all():
                             picture.scroll_into_view_if_needed()
                             picture.evaluate("img => img.decode()")
-                    if sid == "sp158":
-                        # sp217 (Poelruiter) had zijn eigen foto hier alleen via de nu verborgen
-                        # Juveniel-tab; die blijft bestaan, maar alleen nog op Poelruiters eigen kaart.
-                        assert_photo_once("/assets/species/plumage/sp158-juv.webp")
                 else:
-                    # Oeverloper (sp155) vergeleek met Bosruiter (sp159) uitsluitend in juveniel
-                    # kleed — dat was de ENIGE paring tussen deze twee soorten. Met die paring
-                    # verborgen (Opdracht 3) bestaat de vergelijkingskaart met Bosruiter hier niet
-                    # meer; Witgat (winterkleed) blijft een normale, bestaande vergelijking.
-                    wader_panel = cmp_card("Witgat").locator('.sd-cmp-panel:visible')
-                    for picture in wader_panel.locator("img").all():
-                        picture.scroll_into_view_if_needed()
-                        picture.evaluate("img => img.decode()")
-                    expect(p.locator(
-                        '#sdPanel-herkenning .sd-cmp-card').filter(has=p.get_by_text("Bosruiter", exact=True))
-                    ).to_have_count(0)
+                    assert_photo_pair(cmp_card("Witgat").locator('.sd-cmp-panel:visible'), ["sp155-winter.webp", "sp156-winter.webp"])
+                    assert_photo_pair(cmp_card("Bosruiter").locator('.sd-cmp-panel:visible'), ["sp155-juv.webp", "sp159-juv.webp"])
                 tab("waar")
                 expect(p.locator(".sd-photo-tip")).to_be_visible()
                 tab("status")

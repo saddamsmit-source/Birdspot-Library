@@ -3,6 +3,7 @@
  * Uses existing Phase 2 film selection; exports a silent movie locally where
  * the browser implements Canvas.captureStream + MediaRecorder.
  */
+import { appIcon } from '../../utils/icons.js';
 import { getCollectionIds,saveFilmOrder,setCollectionItem } from '../../storage/collections.js';
 import { getSightings } from '../../data/sightings.js';
 import { getPhoto } from '../../data/db.js';
@@ -82,7 +83,7 @@ export function renderFilmStudio(el) {
           '<div class="film-studio-panel-heading"><div><span class="signature-eyebrow">04 / CREATE</span>' +
             '<h3>Maak jouw film</h3></div></div>' +
           '<p class="film-studio-export-copy">Een filmische intro, jouw eigen foto’s en video’s in de gekozen volgorde, en een afsluitende Birdspot-titelkaart.</p>' +
-          '<button type="button" id="filmExport" class="film-studio-primary">✦ Film maken op dit apparaat</button>' +
+          '<button type="button" id="filmExport" class="film-studio-primary">'+appIcon('film')+' <span id="filmExportLabel">Film maken op dit apparaat</span></button>' +
           '<button type="button" id="filmCancel" class="film-studio-cancel" hidden>Stop filmexport</button>' +
           '<div class="film-studio-progress" id="filmProgress" hidden role="status" aria-live="polite">' +
             '<div class="film-studio-progress-top"><span id="filmProgressLabel">Voorbereiden…</span>' +
@@ -102,6 +103,7 @@ export function renderFilmStudio(el) {
   const byId=x=>el.querySelector('#'+x);
   const timeline=byId('filmTimeline'),editor=byId('filmEditor');
   const exportBtn=byId('filmExport');
+  const exportLabel=byId('filmExportLabel');
   const download=byId('filmDownload');
   const message=byId('filmMessage');
   const notice=byId('filmMissing');
@@ -186,7 +188,7 @@ export function renderFilmStudio(el) {
     if(missing)notice.textContent=missing+(missing===1?' eerder geselecteerd bestand bestaat niet meer.':' eerder geselecteerde bestanden bestaan niet meer.')+
       ' Je originele filmselectie is niet automatisch aangepast.';
     exportBtn.disabled=busy||!items.length||items.length>FILM_LIMIT||!fmt;
-    exportBtn.textContent=busy?'Film wordt gemaakt…':'✦ Film maken op dit apparaat';
+    exportLabel.textContent=busy?'Film wordt gemaakt…':'Film maken op dit apparaat';
     if(items.length>FILM_LIMIT)inform('Kies maximaal '+FILM_LIMIT+' beelden om een film te maken.');
     if(!fmt)inform('Je browser ondersteunt geen export via canvas en MediaRecorder. De filmselectie blijft bewaard.');
   }
@@ -250,7 +252,7 @@ export function renderFilmStudio(el) {
     busy=true;abort=new AbortController();
     byId('filmProgress').hidden=false;
     byId('filmCancel').hidden=false;
-    exportBtn.disabled=true;exportBtn.textContent='Film wordt gemaakt…';
+    exportBtn.disabled=true;exportLabel.textContent='Film wordt gemaakt…';
     const clips=items.map(({id,name,where})=>({id,name,where}));
     const options={...state,title:shorten(byId('filmTitle').value,65)||'My Birding Story'};
     const progress=({done,total,label})=>{

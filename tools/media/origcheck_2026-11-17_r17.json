@@ -1,0 +1,77 @@
+{
+  "date": "2026-11-17",
+  "purpose": "F3-R17: getoonde foto's Zwartkop, Tuinfluiter, Grasmus tegen bronbeeld; Commons-rechten actueel, iNaturalist-rechten uit register.",
+  "items": [
+    {
+      "speciesId": "sp059",
+      "image": "/assets/species/sp059.webp",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "title": "File:Eurasian Blackcap 2025 04 05.jpg"
+    },
+    {
+      "speciesId": "sp059",
+      "image": "/assets/species/plumage/sp059-adult_f.webp",
+      "author": "caroline legg",
+      "license": "CC BY 2.0",
+      "title": "File:Female Blackcap - Sylvia atricapilla (49979484338).jpg"
+    },
+    {
+      "speciesId": "sp059",
+      "image": "/assets/species/plumage/sp059-juv.webp",
+      "author": "Gunnar Creutz",
+      "license": "CC BY-SA 4.0",
+      "title": "File:Svarthätta (Sylvia atricapilla) juvenil i hägg i Väsmestorp 2023-06-17 (4302).jpg"
+    },
+    {
+      "speciesId": "sp060",
+      "image": "/assets/species/sp060.webp",
+      "author": "Victor Scharnhorst",
+      "license": "CC BY-SA 4.0",
+      "title": "File:Garden warbler (Sylvia borin) at the UNESCO Biosphere Reserve Swabian Alb.jpg"
+    },
+    {
+      "speciesId": "sp061",
+      "image": "/assets/species/sp061.webp",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "title": "File:Common whitethroat 2025 05 25.jpg"
+    },
+    {
+      "speciesId": "sp061",
+      "image": "/assets/species/plumage/sp061-hero-male.webp",
+      "author": "Donald Davesne",
+      "license": "CC BY 4.0",
+      "urls": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/128098779/original.jpg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/128098779/original.jpeg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/128098779/original.JPG",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/128098779/original.png"
+      ]
+    },
+    {
+      "speciesId": "sp061",
+      "image": "/assets/species/plumage/sp061-adult_f.webp",
+      "author": "Roy Lowry",
+      "license": "CC BY 4.0",
+      "urls": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/295574541/original.jpg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/295574541/original.jpeg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/295574541/original.JPG",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/295574541/original.png"
+      ]
+    },
+    {
+      "speciesId": "sp061",
+      "image": "/assets/species/plumage/sp061-juv.webp",
+      "author": "John Ashburner",
+      "license": "CC BY 4.0",
+      "urls": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/517714670/original.jpg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/517714670/original.jpeg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/517714670/original.JPG",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/517714670/original.png"
+      ]
+    }
+  ]
+}

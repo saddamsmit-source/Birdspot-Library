@@ -12,7 +12,7 @@
  *   birdspot-media           — foto's/IDB-exports (permanent)
  */
 
-const APP_VERSION = '1.27.6';
+const APP_VERSION = '1.27.31';
 const APP_CACHE   = `birdspot-app-v${APP_VERSION}`;
 const MEDIA_CACHE = 'birdspot-media';
 
@@ -32,6 +32,9 @@ const PRECACHE_PATHS = [
   '',
   'index.html',
   'manifest.webmanifest',
+  'icons/icon-192.png',
+  'icons/icon-512.png',
+  'icons/icon-512-maskable.png',
   'assets/species/field-guide-media.json',
   'assets/species/credits.json',
   'assets/showcase/credits.json',
@@ -65,6 +68,7 @@ const PRECACHE_PATHS = [
 
   // JS — features
   'src/features/home/view.js',
+  'src/features/home/hotspots.js',
   'src/features/search/index.js',
   'src/features/home/featuredCarousel.js',
   'src/features/home/ambientBackdrop.js',
@@ -74,10 +78,19 @@ const PRECACHE_PATHS = [
   'src/features/species/guidePhotos.js',
   'src/features/species/guideComparisons.js',
   'src/features/species/guideMedia.js',
+  'src/features/species/personalGuide.js',
   'src/features/species/detailSections.js',
   'src/features/species/knowledgeSections.js',
   'src/features/sightings/view.js',
   'src/features/sightings/addSheet.js',
+  'src/features/sightings/quickAdd.js',
+  'src/features/sightings/soundSession.js',
+  'src/features/sightings/soundDraft.js',
+  'src/features/sightings/soundTimeline.js',
+  'src/features/sightings/soundPcmWorklet.js',
+  'src/features/sightings/soundRecognition.js',
+  'src/features/sightings/soundRecognitionWorker.js',
+  'src/features/sightings/soundLabelIndex.js',
   'src/features/sightings/speciesPicker.js',
   'src/features/sightings/evidence.js',
   'src/features/sightings/pinPicker.js',
@@ -117,6 +130,7 @@ const PRECACHE_PATHS = [
 
   // JS — utils (voeg toe als ze bestaan)
   'src/utils/html.js',
+  'src/utils/icons.js',
   'src/utils/photoInfo.js',
   'src/utils/photoViewer.js',
   'src/utils/photoUrl.js',
@@ -238,6 +252,7 @@ self.addEventListener('fetch', event => {
   // Sla niet-GET en externe verzoeken over (bijv. Leaflet CDN, OpenStreetMap tiles)
   if (request.method !== 'GET') return;
   if (url.origin !== self.location.origin) return;
+  if (url.pathname.startsWith(atScope('api/'))) return;
 
   if (url.pathname.startsWith(atScope('assets/species/audio/'))) {
     event.respondWith(guideAudioResponse(request));

@@ -1,0 +1,22 @@
+{
+  "queries": [
+    {
+      "id": "sp044_flight",
+      "speciesId": "sp044",
+      "role": "flight",
+      "kind": "image",
+      "search": "Passer montanus in flight",
+      "limit": 20,
+      "keep": 8
+    },
+    {
+      "id": "sp044_flight_b",
+      "speciesId": "sp044",
+      "role": "flight",
+      "kind": "image",
+      "search": "Eurasian tree sparrow flying",
+      "limit": 20,
+      "keep": 6
+    }
+  ]
+}

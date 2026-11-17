@@ -1,0 +1,10 @@
+[
+  {
+    "asset": "/assets/species/audio/sp043-call.mp3",
+    "bytes": 75277,
+    "sha256": "b546f2fef3e759c69e5967451d178cb5c795776d48271b1395366934e947c268",
+    "sourceSha1": "46ee39de7b769fb79f6b09532dfba088e6a299eb",
+    "license": "CC0",
+    "author": "Joseph Sardin"
+  }
+]

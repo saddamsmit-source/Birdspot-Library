@@ -51,6 +51,7 @@ export function checkSpecies(row, entry, flightReview) {
 
 function rightsFor(img, evidence, heroes) {
   const e = evidence.get(img);
+  if (e?.rightsOpen) return { status: 'PARTIALLY TESTED', note: e.rightsOpen, annotations: e.annotations || [] };
   if (e?.sameShot) return { status: 'VERIFIED', note: `bronaudit ${e.auditDate || '09-11'}: zelfde opname (${e.method}), ${e.sourceLicense} · ${e.sourceAuthor}`, annotations: e.annotations || [] };
   const h = heroes.get(img);
   if (h?.sha1) return { status: 'VERIFIED', note: `geverifieerde import 09-11 (SHA-1 ${h.sha1.slice(0, 10)}…), ${h.license} · ${h.author}`, annotations: [] };

@@ -105,13 +105,6 @@
           "quality": "Vrij zicht op kruin, wenkbrauw en lichaam.",
           "verdict": "goedgekeurd"
         },
-        "/assets/species/plumage/sp064-juv.webp": {
-          "role": "Verenkleed (Juveniel)",
-          "content": "Jonge Vuurgoudhaan in zijaanzicht, met lichte vleugelstreep en zonder felle kruinstreep.",
-          "sexAge": "De research-grade waarneming heeft de annotatie Juvenile. De vogel is volledig in beeld en mist de opvallende volwassen kruinstreep. Geslacht onbekend.",
-          "quality": "Hele vogel in zijaanzicht.",
-          "verdict": "goedgekeurd"
-        },
         "/assets/species/sp064.webp": {
           "role": "Overige herkenningsfoto",
           "content": "Vuurgoudhaan op een tak met brede witte wenkbrauw boven donkere oogstreep.",
@@ -121,16 +114,19 @@
         }
       },
       "corrections": [
-        "Bronbenoemd mannetje als hoofdfoto. Juvenielenfoto en kennisprofiel toegevoegd. Bestaande beeldvergelijking met Goudhaantje herbeoordeeld."
+        "Bronbenoemd mannetje als hoofdfoto. Juvenielenfoto en kennisprofiel toegevoegd. Bestaande beeldvergelijking met Goudhaantje herbeoordeeld.",
+        "F3-R18 QA 17-11-2026: juvenielenfoto sp064-juv.webp (iNaturalist 298756944) niet langer vrijgegeven — soortidentiteit visueel niet overtuigend; bestand en herkomst bewaard onder retired.sp064 in field-guide-media.json."
       ],
       "missing": [
         "Vrouwtjesfoto met betrouwbare geslachtsaanduiding.",
-        "Scherpe foto van één Vuurgoudhaan in vrije vlucht met bevestigde licentie."
+        "Scherpe foto van één Vuurgoudhaan in vrije vlucht met bevestigde licentie.",
+        "Juveniele Vuurgoudhaan met onafhankelijk bevestigde soort, leeftijd en individuele rechten."
       ],
       "wishes": [],
       "sexPolicy": "De hoofdfoto heeft een bronbenoemd mannetje. Gele delen van een deels zichtbare kruin zijn onvoldoende voor een vrouwtjeslabel.",
       "uncertain": [
-        "Een als vrouwtje geannoteerde kandidaat toont oranje in de kruinstreep. Die foto is niet als vrouwtje opgenomen."
+        "Een als vrouwtje geannoteerde kandidaat toont oranje in de kruinstreep. Die foto is niet als vrouwtje opgenomen.",
+        "REVIEW REQUIRED: niet-vrijgegeven juvenielenkandidaat iNaturalist 298756944 (grijsachtig, langstaartig, geen duidelijke zwarte oogstreep)."
       ],
       "date": "2026-11-12"
     },
@@ -150,13 +146,6 @@
           "quality": "De kop, gevouwen vleugel en onderzijde zijn zichtbaar.",
           "verdict": "goedgekeurd"
         },
-        "/assets/species/plumage/sp069-juv.webp": {
-          "role": "Verenkleed (Juveniel)",
-          "content": "Jonge Gele Kwikstaart in zijaanzicht op een steen, met bleke onderzijde, lichte vleugelstrepen en lange staart.",
-          "sexAge": "De fotograaf annoteert de research-grade waarneming als Juvenile. De bleke onderzijde en lichte vleugelstrepen zijn zichtbaar. Geslacht onbekend.",
-          "quality": "De hele vogel staat in beeld. Lichte vleugelstrepen en staartverhouding zijn zichtbaar.",
-          "verdict": "goedgekeurd"
-        },
         "/assets/species/plumage/sp069-flight.webp": {
           "role": "Overige herkenningsfoto",
           "content": "Gele Kwikstaart bij het landen naast een paal, met de poten naar voren en de gele onderzijde zichtbaar.",
@@ -166,14 +155,18 @@
         }
       },
       "corrections": [
-        "Mannetjeslabel onderbouwd. Vrouwtje, juveniel en kennisprofiel toegevoegd. Vergelijking met Grote Gele Kwikstaart toont beide vogels."
+        "Mannetjeslabel onderbouwd. Vrouwtje, juveniel en kennisprofiel toegevoegd. Vergelijking met Grote Gele Kwikstaart toont beide vogels.",
+        "F3-R20 17-11-2026: juvenielenfoto sp069-juv.webp niet langer vrijgegeven (onscherp, soort niet overtuigend); bestand en herkomst onder retired.sp069."
       ],
       "missing": [
-        "Scherpe foto van één Gele Kwikstaart in vrije vlucht met bevestigde rechten."
+        "Scherpe foto van één Gele Kwikstaart in vrije vlucht met bevestigde rechten.",
+        "Scherpe juveniele Gele Kwikstaart met onafhankelijk bevestigde soort en individuele rechten."
       ],
       "wishes": [],
       "sexPolicy": "Koptekening en felheid variëren tussen ondersoorten. Het vrouwtje heeft een bronannotatie op de waarneming.",
-      "uncertain": [],
+      "uncertain": [
+        "REVIEW REQUIRED: niet-vrijgegeven juvenielenkandidaat iNaturalist 219611553."
+      ],
       "date": "2026-11-12"
     },
     "sp075": {
@@ -199,13 +192,6 @@
           "quality": "Snavelbasis en borst zichtbaar.",
           "verdict": "goedgekeurd"
         },
-        "/assets/species/plumage/sp075-juv-review.webp": {
-          "role": "Verenkleed (Juveniel)",
-          "content": "Jonge IJsvogel op een lichte tak met donker gerande borstveren.",
-          "sexAge": "Borsttekening ondersteunt juveniel. Geslacht onbekend.",
-          "quality": "Borst, poten en snavel zichtbaar.",
-          "verdict": "goedgekeurd"
-        },
         "/assets/species/plumage/sp075-flight.webp": {
           "role": "In vlucht",
           "content": "IJsvogel in vrije vlucht met een prooi in de snavel.",
@@ -222,13 +208,17 @@
         }
       },
       "corrections": [
-        "Bestaande zes afzonderlijke foto-opnamen en rollen gecontroleerd. Kennisprofiel en beeldvergelijking met Bijeneter toegevoegd."
+        "Bestaande zes afzonderlijke foto-opnamen en rollen gecontroleerd. Kennisprofiel en beeldvergelijking met Bijeneter toegevoegd.",
+        "F3-R21-QA 17-11-2026: onzekere juvenielenrol verwijderd uit de zichtbare gids. Commons-bestandsomschrijving noemt female, broncategorieën zowel female als juvenile; leeftijd niet onafhankelijk vastgesteld. Origineel behouden onder retired.sp075."
       ],
-      "missing": [],
+      "missing": [
+        "Nieuwe onafhankelijke juvenielenfoto IJsvogel met bevestigd leeftijdsbewijs, juiste rechten en duidelijke zichtbare kenmerken."
+      ],
       "wishes": [],
       "sexPolicy": "Gebruik de ondersnavel voor geslachtsbepaling pas wanneer het volwassen kleed duidelijk is.",
       "uncertain": [
-        "Vogelbescherming noemt 17–19,5 cm, Blasco-Zumeta & Heinze 15–17 cm. De getoonde ca. 16–18 cm volgt de vastgelegde methode met beide bronwaarden."
+        "Vogelbescherming noemt 17–19,5 cm, Blasco-Zumeta & Heinze 15–17 cm. De getoonde ca. 16–18 cm volgt de vastgelegde methode met beide bronwaarden.",
+        "REVIEW REQUIRED: Common Kingfisher 2025 08 30 01.jpg (Alexis Lours), teruggetrokken juvenielenlabel. Externe bron geeft tegenstrijdige female/juvenile-metadata."
       ],
       "date": "2026-11-12"
     },

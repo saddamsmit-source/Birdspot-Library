@@ -53,11 +53,13 @@
         }
       },
       "corrections": [
-        "Brongeverifieerd mannetje als hoofdfoto, met verwijzing vanuit Mannetje. Vrouwtje en juveniel toegevoegd. Oud hoofdbeeld blijft als aanvullend portret."
+        "Brongeverifieerd mannetje als hoofdfoto, met verwijzing vanuit Mannetje. Vrouwtje en juveniel toegevoegd. Oud hoofdbeeld blijft als aanvullend portret.",
+        "Alle vijf beelden naast de originelen gelegd. Leeftijd en geslacht van de kleedfoto’s met de bron gecontroleerd. Lengte en spanwijdte via RSPB getoetst."
       ],
       "missing": [],
       "sexPolicy": "Volwassen geslachtslabels alleen als bron en zichtbaar buikpatroon overeenstemmen. Vluchtfoto en juveniel zonder geslachtslabel.",
-      "uncertain": []
+      "uncertain": [],
+      "date": "2026-11-14"
     },
     "sp030": {
       "assets": {
@@ -84,11 +86,13 @@
         }
       },
       "corrections": [
-        "Jeugdfoto voorzien van zichtbare aanwijzing bij wang en kruin. De bestaande neutrale foto-indeling blijft bruikbaar."
+        "Jeugdfoto voorzien van zichtbare aanwijzing bij wang en kruin. De bestaande neutrale foto-indeling blijft bruikbaar.",
+        "Drie originele foto’s gematcht. Jeugd- en vluchtlabel bevestigd. Lengte naast The Wildlife Trusts gelegd."
       ],
       "missing": [],
       "sexPolicy": "De kenmerken voor beide geslachten overlappen. Op deze beelden is het geslacht niet op kleed vastgesteld.",
-      "uncertain": []
+      "uncertain": [],
+      "date": "2026-11-14"
     },
     "sp043": {
       "assets": {

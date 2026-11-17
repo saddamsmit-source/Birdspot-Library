@@ -30,7 +30,7 @@ Profielsleutel = bestaand Birdspot-ID (`spNNN`). Elke bewering is `{text, source
 | | `detail[]` | `topic`: bouw, kleed, gedrag, variatie, geslacht, leeftijd, vlucht | nee |
 | C Kritisch | `critical[]` | `feature, where, this, other, vs[], reliability, conditions, exceptions, supporting, sources` | ≥1 |
 | D Vergelijken | `similar[]` | `{id, why, sources}`; lege `sources` = bestaande Birdspot-vergelijking, zo getoond | nee |
-| E Geluid | `voice[]` | `kind`: zang, roep, alarm, vlucht | nee |
+| E Geluid | `voice[]` | `kind`: zang, roep, alarm, vlucht, roffel | nee |
 | F Leefgebied | `habitat[]` | `kind`: voorkeur, nederland, jacht | nee |
 | G Leefwijze | `life[]` | `kind`: voedsel, broeden, nest, trek | nee |
 | H Status | `status[]` | `kind`: voorkomen, aantal, trend, rodelijst, bescherming | nee |
@@ -52,7 +52,7 @@ Regels: eigen tekst, geen brontekst kopiëren; ontbrekend = weglaten of in `open
 ## 3. Weergave
 
 - **Niveau 1 "Snel herkennen"** (tab Herkenning, onder de maten, vóór Verenkleed): samenvatting → kritisch kenmerk (met vergelijkingssoort en betrouwbaarheid) → 3–5 veldkenmerken → gelijkende soorten (chips, navigeren naar partner) → let op.
-- **Niveau 2** als ingeklapte `<details>`: Herkenning "Determinatie in detail" (alle kritische kenmerken, uitgebreide herkenning, man/vrouw/juveniel, vlucht, zang en roep, vergelijkbare soorten) · Leefwijze "Kennisprofiel" (status, leefwijze, bronnen en controle met verschillen en open punten) · Waar "Leefgebied in detail".
+- **Niveau 2** als ingeklapte `<details>`: Herkenning "Determinatie in detail" (kritische kenmerken, man/vrouw/juveniel, vlucht, zang en roep en vergelijkbare soorten) · Leefwijze "Kennisprofiel" (status en leefwijze, zonder optionele bronlijst) · Waar "Leefgebied in detail". Bronregister, maatberekeningen, verschillen en openstaande onderzoeksfeiten blijven intern in de brondataset en QA-dossiers (§2.2 van de fotokwaliteitsnorm).
 - Fotovolgorde blijft Hoofdfoto → Mannetje → Vrouwtje → Juveniel → In vlucht → Vergelijkingen.
 - Soorten zonder profiel: kaart ongewijzigd (getest over alle 589).
 
@@ -70,7 +70,7 @@ Regels: eigen tekst, geen brontekst kopiëren; ontbrekend = weglaten of in `open
 |---|---|
 | `tests/test_kennisbaseline.mjs` | KB-01..11 (KB-10 doorslaggevend-review, KB-11 circa-banden); oorspronkelijk KB-01..09: ID's, bron per bewering (171), geldige vergelijkings-ID's, 12 anti-verwisselfixtures + 4 paren, Niveau 1 vóór foto's, Niveau 2 ingeklapt, bronnen gelinkt, 589 soorten zonder kb-markup, 597 renderen, negatieve scenario's, precache |
 | `tests/test_kennisbaseline_validator.py` | KV-01..14 (KV-11/12 doorslaggevend, KV-13/14 biometrie); oorspronkelijk KV-01..10: validator weigert 13 ongeldige varianten; `--check` vangt handwijziging |
-| `tests/test_kennisbaseline_browser.py` | KBB-01..08: 390 px + 1280 px, kritisch kenmerk binnen eerste scherm, accordion klik/Enter, chipnavigatie heen/terug, bronlinks, zoom/audio/tabs/sluiten, soort zonder profiel, geen horizontale scroll, geen paginafouten |
+| `tests/test_kennisbaseline_browser.py` | KBB-01..08: 390 px + 1280 px, kritisch kenmerk binnen eerste scherm, accordion klik/Enter, chipnavigatie heen/terug, geen optionele bronlinks, zoom/audio/tabs/sluiten, soort zonder profiel, geen horizontale scroll, geen paginafouten |
 | `.github/workflows/kennisbaseline-qa.yml` | alle bovenstaande + bestaande foto/volgorde-contracten |
 
 ## 6. Capabilityregistratie (delta, voor de catalogus)
@@ -97,6 +97,10 @@ De app-README bestaat alleen in open PR #117 en niet op deze base. Toe te voegen
 - De drie blijvende Birdspot-regels (biometrie, betrouwbaarheid van herkenningsinformatie, foto's) staan in `docs/BIRDSPOT_KWALITEITSNORM.md`. Bij strijdigheid gaat dat document voor op §2–§8 hierboven.
 - **Biometrie:** maatverschillen tussen bronnen zijn geen `discrepancies` meer zodra twee uitgevers een circa-band onderbouwen. De band staat in `basis.biometrics` en in `species.js` (KV-13/14, KB-11). Eerst toegepast op Kleine Mantelmeeuw (lengte, spanwijdte), Stormmeeuw (lengte; Vogelbescherming 40–60 cm uitgesloten als uitschieter) en Houtduif (lengte).
 - Een maatverschil met één bron of één uitgever blijft een `discrepancy`; de bestaande waarde blijft staan.
-- Weergave: Kennisprofiel → Bronnen en controle → "Maten: berekening", met bronwaarden, uitsluitingen en methode.
+- Weergave sinds bronbeleid v1.5: alleen de afgeronde maatband op de soortkaart; originele bronwaarden, uitgesloten waarden en methode blijven in `basis.biometrics` en de validator, niet als zichtbare bronlijst.
 - Capabilitydelta: CAP-BIRD-012 Soortkaart: maattegels kunnen een circa-band tonen, met de berekening in het profiel. Tooling: biometrievalidator (KV-13/14).
 - Learning (kandidaat, scope U): **variabele meetwaarden niet laten blokkeren.** Toon bij natuurlijke variatie een afgeronde band uit meerdere uitgevers en bewaar de ruwe waarden en de methode als bewijs, met een validator die de band herberekent. Behandel één afwijkende bron als uitschieter met reden, niet als blokkade. Koppelt aan L-018/L-019 (niets verzinnen) en Handbook §6A.
+
+**UI-leerregel (14-11-2026).** Maak bronverificatie verplicht in de data, maar toon die niet als bronlijst in de publieksinterface. Een soortclaim moet auditbaar blijven, ook als de app geen bronlinks toont. Verplichte media- of kaartattributie is een afzonderlijke juridische weergave-eis. [Norm §2.2](../BIRDSPOT_KWALITEITSNORM.md).
+
+**QA-learning (14-11-2026, KB-05).** Een kennisprofiel dat uitsluitend intern bronbewijs bevat, heeft na het verwijderen van de optionele publieke bronnenlijst mogelijk geen status- of leefwijzerijen. In dat geval wordt het **lege paneel bewust niet gerenderd**. Test daarom bij wél aanwezige status/leefwijze op behoud van inhoud en bij ontbreken daarvan op geen lege broncontainer. Behoud alle bronverificatie- en kwaliteitscontroles in de data, niet in de UI.

@@ -1,6 +1,6 @@
 """Browser integration: local guide images, uncropped layout, failure and offline cache."""
 import json,threading
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import expect, sync_playwright
 from test_cinematic_wetland import Server,Quiet,ROOT
 
 def main():
@@ -41,6 +41,18 @@ def main():
      credit=p.locator(f'#detailThumb-{sid} .photo-info')
      assert credit.locator('summary').is_visible()
      assert not credit.locator('.photo-info__panel').is_visible()
+     if sid == 'sp063':
+      # F3-R18 QA: geslacht alleen bronclaim -> neutrale "Volwassen"-kaart, nooit in de Vrouwtje-galerij.
+      assert p.locator('#sdPanel-herkenning [data-plumage="adult_f"] img[src$="sp063-adult-f.webp"]').count()==0
+      frame=p.locator('#sdPanel-herkenning .sd-poses .photo-info-frame').filter(
+          has=p.locator('img[src$="sp063-adult-f.webp"]'))
+      expected_credit='© Francis C. Franklin / CC-BY-SA-3.0'
+      expect(frame.locator('.photo-visible-credit')).to_have_text(expected_credit)
+      assert frame.locator('.photo-visible-credit').is_visible()
+      frame.locator('[data-guide-image]').click()
+      viewer=p.get_by_role('dialog',name='Vogelfoto bekijken',exact=True)
+      expect(viewer.locator('.photo-visible-credit')).to_have_text(expected_credit)
+      viewer.get_by_role('button',name='Sluit foto',exact=True).click()
      if sid == 'sp045':
       credit.locator('summary').click()
       shown=by_path.get(hero_paths.get(sid), photo)  # sinds de bronaudit van 9-11 heeft sp045 een aparte hoofdfoto

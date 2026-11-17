@@ -1,0 +1,179 @@
+{
+  "schema": "birdspot-f2-24-source-photo-and-limitations-v1",
+  "date": "2026-11-15",
+  "basePR": 225,
+  "baseSha": "624547f5f490a123577d9d8813765c1aa3323681",
+  "scope": [
+    "sp062 Braamsluiper",
+    "sp068 Witte Kwikstaart",
+    "sp069 Gele Kwikstaart"
+  ],
+  "status": "PARTIALLY TESTED",
+  "sourcePolicy": "Vogelbescherming Nederland per species and genuinely accessible ANWB passages (ANWB NOT TESTED); original media file pages distinguish attribution and publication permissions; no borrowed source art.",
+  "readFacts": [
+    {
+      "id": "sp062",
+      "species": "Braamsluiper",
+      "source": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/braamsluiper",
+      "read": true,
+      "facts": "Grey cap, darker ear patch, white throat; no notable male/female visual difference; clattering rattling song"
+    },
+    {
+      "id": "sp068",
+      "species": "Witte Kwikstaart",
+      "source": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/witte-kwikstaart",
+      "read": true,
+      "facts": "Adult white and black head, dark throat in breeding dress, grey back and white wing bars; juveniles duller; long wagging tail"
+    },
+    {
+      "id": "sp069",
+      "species": "Gele Kwikstaart",
+      "source": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/gele-kwikstaart",
+      "read": true,
+      "facts": "Nominate breeding male has blue-grey head with white eyebrow, yellow chest/belly and olive upperparts; juvenile and females can be duller; flight call high single tswie"
+    },
+    {
+      "id": "partner",
+      "species": "Tuinfluiter",
+      "source": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/tuinfluiter",
+      "readPreviously": true,
+      "facts": "Plain grey-brown and continuous melodious song, contrasting with Lesser Whitethroat cap and rattling song"
+    }
+  ],
+  "originalSourcePages": [
+    {
+      "id": "sp062",
+      "path": "/assets/species/sp062.webp",
+      "author": "Sighmanb",
+      "registeredLicense": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Lesser_Whitethroat_by_Sighmanb.jpg",
+      "directPageRead": false,
+      "reason": "Wikimedia page fetch returned cache miss this session; earlier repository metadata retained, original exact license recheck NOT TESTED"
+    },
+    {
+      "id": "sp068",
+      "path": "/assets/species/sp068.webp",
+      "author": "Stephan Sprinz",
+      "registeredLicense": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bachstelze_(motacilla_alba)_auf_Singwarte_-_Spiekeroog,_Nationalpark_nieders%C3%A4chsisches_Wattenmeer.jpg",
+      "directPageRead": true,
+      "licenseProof": "Author own work and CC BY-SA 4.0 on original Wikimedia page; proper attribution/share-alike rules apply"
+    },
+    {
+      "id": "sp069",
+      "path": "/assets/species/sp069.webp",
+      "author": "Stephan Sprinz",
+      "registeredLicense": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Wiesenschafstelze_(Motacilla_flava_flava)_im_LSG_Bergstra%C3%9Fe-Nord_08.jpg",
+      "directPageRead": false,
+      "reason": "Original Commons page not fetched on this round; author and stated license taken from stored repository registration, not independently reverified"
+    }
+  ],
+  "localWebPInspection": {
+    "method": "Connected GitHub fetch_file with encoding=base64, manually viewed actual decoded WebPs",
+    "status": "VISUALLY INSPECTED; original-JPEG-to-WebP pixel/byte equality NOT TESTED",
+    "images": [
+      {
+        "id": "sp062",
+        "role": "neutral head",
+        "path": "/assets/species/sp062.webp",
+        "blob": "6c3657811303492cf1a35df8c33a8f6b09015771",
+        "observed": "Grey crown with dark ear area and light throat, whole visible bird on wooden fence, enough facial detail; gender/age not claimed."
+      },
+      {
+        "id": "sp068",
+        "role": "neutral head",
+        "path": "/assets/species/sp068.webp",
+        "blob": "7a64e6b828948bab6d75646875ae067e5e7fb7e1",
+        "observed": "Clear adult-type white/black face, black bib, grey back, extended tail; body entirely visible. No source sex verification."
+      },
+      {
+        "id": "sp069",
+        "role": "male nominate head",
+        "path": "/assets/species/sp069.webp",
+        "blob": "5f8c3a2bcc81a282c92dd89afca1d4c7ae46b1d4",
+        "observed": "Sharp Yellow Wagtail with bright yellow body and grey-blue head/white eyebrow; source says nominate male, sex/subspecies not independently confirmed."
+      },
+      {
+        "id": "sp068",
+        "role": "flight",
+        "path": "/assets/species/plumage/sp068-flight.webp",
+        "blob": "491244682e303239aabb5c545386123789791adc",
+        "observed": "Wings expanded, clear airborne silhouette and tail against blue sky. Prior approved in-flight role supported visually."
+      },
+      {
+        "id": "sp069",
+        "role": "landing excluded from flight",
+        "path": "/assets/species/plumage/sp069-flight.webp",
+        "blob": "42d5f34df4fb16e7b219a87b6034cfcf27029415",
+        "observed": "Bird appears to approach a wooden post, legs stretched; cannot certify unencumbered stable free-flight role. Keep previously excluded."
+      },
+      {
+        "id": "sp069",
+        "role": "registered female",
+        "path": "/assets/species/plumage/sp069-adult_f.webp",
+        "blob": "54563378371c6a5baafca76302f18ed2dfb8787d",
+        "observed": "Small bird in warm backlight, lighter yellow belly, brown-olive back, pale eyebrow, gender requires original observation annotation recheck."
+      },
+      {
+        "id": "sp069",
+        "role": "registered juvenile",
+        "path": "/assets/species/plumage/sp069-juv.webp",
+        "blob": "f302e693a5619fa304be28d74c8e9c6f73c0731f",
+        "observed": "Muted white/grey with light wing bars, whole bird but low detail; juvenile role only source-registered; original annotation/republication rights still open."
+      }
+    ]
+  },
+  "newAndCorrectedComparisons": [
+    {
+      "label": "Braamsluiper en Tuinfluiter · kop en zang in rust",
+      "ids": [
+        "sp062",
+        "sp060"
+      ],
+      "photos": [
+        "sp062.webp",
+        "sp060.webp"
+      ],
+      "role": "two neutral resting photos"
+    },
+    {
+      "label": "Witte en Gele Kwikstaart · volwassen in rust",
+      "ids": [
+        "sp068",
+        "sp069"
+      ],
+      "photos": [
+        "sp068.webp",
+        "sp069.webp"
+      ],
+      "role": "adult/general resting vs nominate male"
+    },
+    {
+      "label": "Witte en Gele Kwikstaart · jonge vogels",
+      "ids": [
+        "sp068",
+        "sp069"
+      ],
+      "photos": [],
+      "role": "text-only juvenile comparison; explicit absence of verified White+Yellow juvenile photo pair, NEVER use adult main photos as juveniles"
+    }
+  ],
+  "changedText": "sp062 fieldmarks for sex-neutral adult and evidenced song; unverifiable general juvenile 'Bruiner' removed (null)",
+  "mediaChanged": false,
+  "creditsChanged": false,
+  "flightChanged": false,
+  "audioChanged": false,
+  "offlineAndCacheChanged": false,
+  "userDataChanged": false,
+  "anwb": "NOT TESTED — no exact accessible ANWB species passages with edition, page and directly read text",
+  "open": [
+    "Two original Wikimedia asset pages (Braamsluiper & Gele Kwikstaart) did not directly open in this round; stored copyright metadata not independently reverified; CC obligations assessed before reuse.",
+    "Exact source JPEG-to-local WebP pixel, crop, EXIF/metadata/hashes and all rendered photo author/source/licence attributions NOT TESTED.",
+    "No registered White Wagtail juvenile counterpart suitable for paired young-bird photos. Prior juvenile comparison now text-only and marked missing photo. Gele Kwikstaart juvenile image less clear; independent age and species-original recheck required.",
+    "Gele Kwikstaart female and juvenile original iNaturalist photo/observation annotations/rights were not opened; no new female/juvenile final PASS.",
+    "ANWB per-species passages not checked; no forced replacement flight images; licensing for later social promotion and share-alike must be separately assessed.",
+    "Preview deployment must be exact HEAD, access-protected if Vercel SSO; public GitHub Pages review points to 1.27.6 baseline and does NOT include this F2 branch.",
+    "Real Android offline input, ZIP export/restore second phone, integrated release regression and rollback untested; public release blocked."
+  ]
+}

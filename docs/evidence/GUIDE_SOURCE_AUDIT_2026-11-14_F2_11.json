@@ -1,0 +1,165 @@
+[
+ {
+  "image": "/assets/species/sp025.webp",
+  "species": "sp025",
+  "source": "https://commons.wikimedia.org/wiki/File:Western_Jackdaw_2025_05_23_03.jpg",
+  "sourceTitle": "File:Western Jackdaw 2025 05 23 03.jpg - Wikimedia Commons",
+  "sourceAuthor": "Alexis Lours",
+  "sourceLicense": "CC BY 4.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "1b3eb7342fa5c8cf5a12d0cf8be47fc05fa5c21c",
+  "sourceImageSha1": "f900e6386211dcb6b9e4718c546a972ab46f5e7a",
+  "sourceImageSize": [
+   5492,
+   3661
+  ],
+  "visualRoleCheck": "Zittend op tak. Grijs achterhoofd, lichte iris en korte donkere snavel. Leeftijd en geslacht open."
+ },
+ {
+  "image": "/assets/species/plumage/sp025-flight.webp",
+  "species": "sp025",
+  "source": "https://commons.wikimedia.org/wiki/File:Jackdaw_(48142024622).jpg",
+  "sourceTitle": "File:Jackdaw (48142024622).jpg - Wikimedia Commons",
+  "sourceAuthor": "hedera.baltica",
+  "sourceLicense": "CC BY-SA 2.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "c0ec6a161928a0130a2fc23fcad0e0ef39de477b",
+  "sourceImageSha1": "b09866162bf84dd40ae936a4745ee566f5511c67",
+  "sourceImageSize": [
+   2700,
+   1802
+  ],
+  "visualRoleCheck": "Frontale nadering. Naar voren gehouden poten en gespreide staart passen bij landen. De fotograaf gebruikt het algemene label in vlucht. In Birdspot blijft dit een andere houding."
+ },
+ {
+  "image": "/assets/species/sp026.webp",
+  "species": "sp026",
+  "source": "https://commons.wikimedia.org/wiki/File:Eichelh%C3%A4her_mit_Eichel_im_Schnabel_im_Geo-Naturpark_Bergstra%C3%9Fe-Odenwald.jpg",
+  "sourceTitle": "File:Eichelhäher mit Eichel im Schnabel im Geo-Naturpark Bergstraße-Odenwald.jpg - Wikimedia Commons",
+  "sourceAuthor": "Hwbund",
+  "sourceLicense": "CC BY-SA 4.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "387642b09f1fdd17a1f0a14b39e0c2506def9216",
+  "sourceImageSha1": "0e2bd64321dc15a007fb22c97e1ec41d27b90f78",
+  "sourceImageSize": [
+   5400,
+   3600
+  ],
+  "visualRoleCheck": "Zijaanzicht met eikel, gestreept blauw vleugelveld en zwarte baardstreep. Leeftijd en geslacht open."
+ },
+ {
+  "image": "/assets/species/plumage/sp026-flight.webp",
+  "species": "sp026",
+  "source": "https://commons.wikimedia.org/wiki/File:075_Wild_Eurasian_jay_in_flight_at_the_Parc_naturel_r%C3%A9gional_Jura_vaudois_Photo_by_Giles_Laurent.jpg",
+  "sourceTitle": "File:075 Wild Eurasian jay in flight at the Parc naturel régional Jura vaudois Photo by Giles Laurent.jpg - Wikimedia Commons",
+  "sourceAuthor": "Giles Laurent (gileslaurent.com)",
+  "sourceLicense": "CC BY-SA 4.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "9a0a57f5e793e8f7f1aa582c5e03e51dffdc2ce6",
+  "sourceImageSha1": "192cfec163630f42a74ee75f363924b175105dfb",
+  "sourceImageSize": [
+   2525,
+   1683
+  ],
+  "visualRoleCheck": "Vrij in de lucht over de bloemen. Schuine zijhoek met vooral de dichtstbijzijnde vleugel. Leeftijd en geslacht open.",
+  "attributionCheck": "Bron specificeert Giles Laurent, gileslaurent.com en CC BY-SA. De fotoinformatie vermeldt de maker met website, bron, licentielink en bewerking."
+ },
+ {
+  "image": "/assets/species/sp029.webp",
+  "species": "sp029",
+  "source": "https://commons.wikimedia.org/wiki/File:Great_tit_on_Djurgarden_(52306).jpg",
+  "sourceTitle": "File:Great tit on Djurgarden (52306).jpg - Wikimedia Commons",
+  "sourceAuthor": "Rhododendrites",
+  "sourceLicense": "CC BY-SA 4.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "4f36ce8d6bab5620aef99439be40847961db3442",
+  "sourceImageSha1": "e640954b05fa0055bea16dfe1af3b4a02f50407b",
+  "sourceImageSize": [
+   2276,
+   1912
+  ],
+  "visualRoleCheck": "Neutraal gelabeld zijaanzicht met gele onderzijde en zwarte kop met witte wang. Geslacht en leeftijd open."
+ },
+ {
+  "image": "/assets/species/plumage/sp029-flight.webp",
+  "species": "sp029",
+  "source": "https://commons.wikimedia.org/wiki/File:13_bis_15_Zentimeter_wird_eine_Kohlmeise_lang._01.jpg",
+  "sourceTitle": "File:13 bis 15 Zentimeter wird eine Kohlmeise lang. 01.jpg - Wikimedia Commons",
+  "sourceAuthor": "Holger Uwe Schmitt",
+  "sourceLicense": "CC BY-SA 4.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "ec27e2c30ee4a27be850cf9309f707d2fa9f7f1a",
+  "sourceImageSha1": "d18d4fe5a63ecac51e610c638e92a2c055eb05a7",
+  "sourceImageSize": [
+   3071,
+   2362
+  ],
+  "visualRoleCheck": "Vogel vrij in de lucht met gespreide vleugel en zichtbare onderzijde. Geslacht en leeftijd open."
+ },
+ {
+  "image": "/assets/species/plumage/sp029-adult_m.webp",
+  "species": "sp029",
+  "source": "https://commons.wikimedia.org/wiki/File:Great_tit_%28Parus_major%29_male.jpg",
+  "sourceTitle": "File:Great tit (Parus major) male.jpg - Wikimedia Commons",
+  "sourceAuthor": "Charles J. Sharp",
+  "sourceLicense": "CC BY-SA 4.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "fdd5f978ff7b1af1d16c13dbc5e3217f3fd36b3e",
+  "sourceImageSha1": "b603440554bab414f37fb67fe854c18cf309b92d",
+  "sourceImageSize": [
+   3282,
+   2188
+  ],
+  "visualRoleCheck": "Fotograaf noemt mannetje. De donkere lengtestreep is breed. Volwassen mannetje op tak."
+ },
+ {
+  "image": "/assets/species/plumage/sp029-adult_f.webp",
+  "species": "sp029",
+  "source": "https://commons.wikimedia.org/wiki/File:Female_Great_tit.jpg",
+  "sourceTitle": "File:Female Great tit.jpg - Wikimedia Commons",
+  "sourceAuthor": "Evas-naturfotografie",
+  "sourceLicense": "CC BY-SA 4.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "50108909b3b49c08582855b3e2372cfc58914c97",
+  "sourceImageSha1": "f4667362593c83edde0ff5af3a1f737537685709",
+  "sourceImageSize": [
+   4000,
+   3000
+  ],
+  "visualRoleCheck": "Fotograaf noemt vrouwtje. De buikstreep is smaller dan bij de getoonde man. Volwassen vrouwtje."
+ },
+ {
+  "image": "/assets/species/plumage/sp029-juv.webp",
+  "species": "sp029",
+  "source": "https://commons.wikimedia.org/wiki/File:Great_tit_-_Juvenile_-_Parus_major_%2853034153829%29.jpg",
+  "sourceTitle": "File:Great tit - Juvenile - Parus major (53034153829).jpg - Wikimedia Commons",
+  "sourceAuthor": "caroline legg",
+  "sourceLicense": "CC BY 2.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "ef2814e8f25fee6a21c0ac9dda43ac4e86c09f52",
+  "sourceImageSha1": "34e8776d18391a6e8d38d8f46820ce2b8c075a99",
+  "sourceImageSize": [
+   2859,
+   2042
+  ],
+  "visualRoleCheck": "Bronbestandsnaam en Commons-categorie noemen juveniel. Gelig wangveld en doffe kap zijn zichtbaar. Vogel staat zelfstandig op een tak."
+ }
+]

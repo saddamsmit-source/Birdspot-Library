@@ -1,0 +1,263 @@
+{
+  "generated": "2026-11-16T16:36:51Z",
+  "rule": {
+    "sameMinR": 0.9
+  },
+  "items": [
+    {
+      "speciesId": "sp046",
+      "image": "/assets/species/sp046.webp",
+      "title": "File:Song Thrush Turdus philomelos.jpg",
+      "author": "Andreas Trepte",
+      "license": "CC BY-SA 2.5",
+      "localSize": [
+        1600,
+        1067
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Song_Thrush_Turdus_philomelos.jpg",
+        "sha1": "106cb1d99dce73eb277fe57e74cc4e8f4d84c5ea",
+        "license": "CC BY-SA 2.5",
+        "author": "Andreas Trepte",
+        "width": 3000,
+        "height": 2000
+      },
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp046_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp046",
+      "image": "/assets/species/plumage/sp046-juv.webp",
+      "title": "File:Juvenile Song Thrush (Turdus philomelos), Puszcza Knyszyńska, Polska (4664107073).jpg",
+      "author": "Frank Vassen",
+      "license": "CC BY 2.0",
+      "localSize": [
+        1400,
+        1050
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Juvenile_Song_Thrush_(Turdus_philomelos),_Puszcza_Knyszy%C5%84ska,_Polska_(4664107073).jpg",
+        "sha1": "e14eaede94d9ec3421121d2244e7e20165d2f00e",
+        "license": "CC BY 2.0",
+        "author": "Frank Vassen from Brussels, Belgium",
+        "width": 4224,
+        "height": 3168
+      },
+      "rightsMatch": false,
+      "sourceSize": [
+        960,
+        720
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp046-juv_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp046",
+      "image": "/assets/species/plumage/sp046-flight.webp",
+      "title": "File:Song Thrush (Turdus philomelos) in flight.jpg",
+      "author": "Mark Kilner",
+      "license": "CC BY-SA 2.0",
+      "localSize": [
+        666,
+        839
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Song_Thrush_(Turdus_philomelos)_in_flight.jpg",
+        "sha1": "53e6b2ba38a1b2eef958e9fb54c9c73a3c2d697c",
+        "license": "CC BY-SA 2.0",
+        "author": "Mark Kilner",
+        "width": 666,
+        "height": 839
+      },
+      "rightsMatch": true,
+      "sourceSize": [
+        666,
+        839
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp046-flight_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp047",
+      "image": "/assets/species/sp047.webp",
+      "title": "File:Björktrast (Turdus pilaris)-4.jpg",
+      "author": "Frankie Fouganthin",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1600,
+        1385
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Bj%C3%B6rktrast_(Turdus_pilaris)-4.jpg",
+        "sha1": "c616f7d91106a4d970b894e935f8114dd0d8e090",
+        "license": "CC BY-SA 4.0",
+        "author": "Frankie Fouganthin",
+        "width": 2077,
+        "height": 1798
+      },
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        831
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp047_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp047",
+      "image": "/assets/species/plumage/sp047-juv.webp",
+      "title": "File:Fieldfare (41635078500).jpg",
+      "author": "hedera.baltica",
+      "license": "CC BY-SA 2.0",
+      "localSize": [
+        1400,
+        1135
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Fieldfare_(41635078500).jpg",
+        "sha1": "6348e839706a95a51a6d60220ba9ef361ca3f4d8",
+        "license": "CC BY-SA 2.0",
+        "author": "hedera.baltica from Wrocław, Poland",
+        "width": 2100,
+        "height": 1702
+      },
+      "rightsMatch": false,
+      "sourceSize": [
+        960,
+        778
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp047-juv_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp047",
+      "image": "/assets/species/plumage/sp047-flight.webp",
+      "title": "File:Turdus pilaris, winter, flying.jpg",
+      "author": "Hangsna",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        845,
+        1065
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Turdus_pilaris,_winter,_flying.jpg",
+        "sha1": "cc8349509b51441e20029b11c0606d10a89f2a90",
+        "license": "CC BY-SA 4.0",
+        "author": "Hangsna",
+        "width": 1658,
+        "height": 1103
+      },
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        639
+      ],
+      "mode": "crop",
+      "r": 0.492,
+      "scale": 0.9,
+      "offset": [
+        0.423,
+        0.052
+      ],
+      "sameShot": false,
+      "sideBySide": "sp047-flight_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp048",
+      "image": "/assets/species/sp048.webp",
+      "title": "File:Redwing Turdus iliacus.jpg",
+      "author": "Andreas Trepte",
+      "license": "CC BY-SA 2.5",
+      "localSize": [
+        1600,
+        1067
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Redwing_Turdus_iliacus.jpg",
+        "sha1": "89f88a79f566437dbf7df4ab3aaa5334f873d489",
+        "license": "CC BY-SA 2.5",
+        "author": "Andreas Trepte",
+        "width": 4028,
+        "height": 2685
+      },
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 0.999,
+      "sameShot": true,
+      "sideBySide": "sp048_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp048",
+      "image": "/assets/species/plumage/sp048-juv.webp",
+      "title": null,
+      "author": "Pyry Liedes",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1400,
+        1119
+      ],
+      "sourceUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/703836505/original.jpg",
+      "rightsMatch": null,
+      "sourceSize": [
+        1865,
+        1491
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp048-juv_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp048",
+      "image": "/assets/species/plumage/sp048-flight.webp",
+      "title": "File:Redwing in flight.jpg",
+      "author": "Lucas Golden",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1400,
+        1149
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Redwing_in_flight.jpg",
+        "sha1": "ee8654a36d16815c4abe28f3d7f84a29b6a6cd4f",
+        "license": "CC BY 4.0",
+        "author": "Lucas Golden",
+        "width": 4260,
+        "height": 2840
+      },
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "crop",
+      "r": 0.716,
+      "scale": 0.5,
+      "offset": [
+        0.228,
+        0.228
+      ],
+      "sameShot": false,
+      "sideBySide": "sp048-flight_vs_source.jpg"
+    }
+  ]
+}

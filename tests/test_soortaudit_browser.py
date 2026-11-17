@@ -7,7 +7,7 @@ Voor iedere soort in docs/fotokwaliteit/soortaudit/M*.json, op 390 px (Chromium)
   SAB-03  Geen eigen foto twee keer op de kaart.
   SAB-04  Volgorde: Hoofdfoto boven Verenkleed boven In vlucht boven Overige; secties visueel in die volgorde.
   SAB-05  In "In vlucht" staan alleen foto's met een goedgekeurde/voorwaardelijke vluchtbeoordeling;
-          uit-rol-foto's staan er niet in. Negatief: Holenduif sp003 en Tjiftjaf sp056 hebben géén "In vlucht".
+          uit-rol-foto's staan er niet in. Holenduif sp003 heeft één gevalideerde vluchtfoto. Tjiftjaf sp056 heeft géén "In vlucht".
   SAB-06  Kaartlabels tonen geen geslacht bij soorten waarvan de audit zegt dat geslacht niet op kleed te zien is.
   SAB-07  Zoomviewer opent en sluit op de hoofdfoto.
   SAB-08  Volledige kaart als screenshot; uitslag per soort in docs/fotokwaliteit/soortaudit/browser.json.
@@ -132,7 +132,10 @@ def main():
                 for s in fl:
                     assert FLIGHT.get(s, {}).get("decision") in ("goedgekeurd", "voorwaardelijk"), f"SAB-05 {sid}: {s} in In vlucht zonder goedkeuring"
                     assert entry["assets"][s]["verdict"] != "uit-rol", f"SAB-05 {sid}: uit-rol-foto in In vlucht"
-                if sid in ("sp003", "sp056"):
+                if sid == "sp003":
+                    assert fl == ["/assets/species/plumage/sp003-flight-open-sky.webp"]
+                    assert "/assets/species/plumage/sp003-flight.webp" not in srcs
+                if sid == "sp056":
                     assert not fl, f"SAB-05 {sid}: mag geen In vlucht-foto meer hebben"
                 # SAB-06
                 if "niet op kleed" in entry.get("sexPolicy", "") or "gelijk" in entry.get("sexPolicy", ""):
@@ -173,18 +176,65 @@ def main():
                     flight_tab.evaluate("el => { const d = el.closest('details'); if (d) d.open = true; }")
                     flight_tab.click()
                     if sid == "sp038":
+                        # F2-16 adds a Putter/Sijs juvenile and adult comparison; those have
+                        # their own tabs. The older Groenling comparison may be inside
+                        # the expandable "other species" group. Keep testing both partners.
                         expect(sec.locator('[data-cmp-flight]:visible').first).to_be_visible()
-                        female_tab = sec.get_by_role("button", name="Vrouwtje", exact=True)
+                        putter_card = sec.locator('.sd-cmp-card').filter(
+                            has=page.locator('.sd-cmp-who strong', has_text="Putter")).first
+                        expect(putter_card).to_have_count(1)
+                        # Added comparable species may place Putter in the accessible "Nog soorten" group.
+                        putter_card.evaluate("el => { const detail = el.closest('details.sd-cmp-more'); if (detail) detail.open = true; }")
+                        expect(putter_card).to_be_visible()
+                        young_tab = putter_card.get_by_role("button", name="Juveniel", exact=True)
+                        young_tab.click()
+                        expect(young_tab).to_have_attribute("aria-selected", "true")
+                        expect(putter_card.locator('.sd-cmp-panel:visible img[src*="sp037-juv.webp"]')).to_be_visible()
+                        expect(putter_card.locator('.sd-cmp-panel:visible img[src*="sp038-juv.webp"]')).to_be_visible()
+
+                        green_card = sec.locator('.sd-cmp-card').filter(
+                            has=page.locator('.sd-cmp-who strong', has_text="Groenling")).first
+                        expect(green_card).to_have_count(1)
+                        green_card.evaluate("el => { const d = el.closest('details.sd-cmp-more'); if (d) d.open = true; }")
+                        green_flight = green_card.locator('.sd-cmp-tab', has_text=re.compile(r'^In vlucht')).first
+                        green_flight.click()
+                        expect(green_card.locator('[data-cmp-flight]:visible')).to_be_visible()
+                        female_tab = green_card.get_by_role("button", name="Vrouwtje", exact=True)
                         female_tab.click()
                         expect(female_tab).to_have_attribute("aria-selected", "true")
-                        expect(sec.locator('.sd-cmp-panel:visible img[src*="sp036-adult_f.webp"]')).to_be_visible()
+                        expect(green_card.locator('.sd-cmp-panel:visible img[src*="sp036-adult_f.webp"]')).to_be_visible()
+                if sid in ("sp031", "sp032"):
+                    juvenile_tab = sec.get_by_role("button", name="Juveniel", exact=True)
+                    juvenile_tab.click()
+                    expect(juvenile_tab).to_have_attribute("aria-selected", "true")
+                    juveniles = sec.locator('.sd-cmp-panel:visible').filter(
+                        has=page.locator('img[src$="sp031-juv.webp"]'))
+                    expect(juveniles.locator('img')).to_have_count(2)
+                    expect(juveniles.locator('img[src$="sp032-juv.webp"]')).to_be_visible()
+                if sid == "sp065":
+                    trunk_comparison = sec.locator('.sd-cmp-panel:visible').filter(
+                        has=page.locator('img[src$="sp065-head-down.webp"]'))
+                    expect(trunk_comparison.locator('img')).to_have_count(2)
+                    expect(trunk_comparison.locator('img[src$="sp066.webp"]')).to_be_visible()
+                    trunk_comparison.get_by_role("button", name=re.compile(r"Vergroot foto: Boomklever")).click()
+                    viewer = page.get_by_role("dialog", name="Vogelfoto bekijken")
+                    expect(viewer.locator('img')).to_have_attribute("src", re.compile(r"sp065-head-down\.webp$"))
+                    page.keyboard.press("Escape")
+                    expect(viewer).to_have_count(0)
                 for d in sec.locator('details.sd-cmp-more').all():
                     d.evaluate("el => el.open = true")
+                if sid in ("sp066", "sp067"):
+                    wing_pair = sec.locator('.sd-cmp-panel:visible').filter(
+                        has=page.locator('img[src$="sp066-wing.webp"]'))
+                    expect(wing_pair.locator('img')).to_have_count(2)
+                    expect(wing_pair.locator('img[src$="sp067-wing.webp"]')).to_be_visible()
+                    expect(wing_pair.locator('.sd-cmp-row b')).to_have_text(["Vleugelband", "Flank", "Geluid"])
                 loaded = sec.locator('img').evaluate_all("""async els => { const out = []; for (const e of els) { e.loading = 'eager';
                   try { await e.decode(); } catch (x) {} out.push([e.getAttribute('src'), e.naturalWidth > 0]); } return out; }""")
                 assert all(ok for _, ok in loaded), f"SAB-09 {sid}: vergelijkingsfoto laadt niet: {[s for s, ok in loaded if not ok]}"
-                srcs = [s for s, _ in loaded]
-                assert len(srcs) == len(set(srcs)), f"SAB-09 {sid}: dubbele foto in Lijkt op"
+                for panel in sec.locator('[data-cmp-panel]').all():
+                    photos = panel.locator('img').evaluate_all("images => images.map(img => img.getAttribute('src'))")
+                    assert len(photos) <= 2 and len(photos) == len(set(photos)), f"SAB-09 {sid}: dubbele foto binnen één paar"
                 # Vaste hoogte van de sheet tijdelijk opheffen (zoals SAB-08), anders knipt de scrollcontainer de sectie af.
                 page.evaluate("""() => { for (const sel of ['.signature-species-detail-overlay', '.signature-species-detail-sheet']) {
                   const el = document.querySelector(sel); if (!el) continue;
@@ -205,15 +255,20 @@ def main():
                 page.locator('.sd-tabs').wait_for(timeout=8000)
 
             for name, sid in [("Holenduif", "sp003"), ("Sperwer", "sp006"), ("Buizerd", "sp005"), ("Zilvermeeuw", "sp094"),
-                              ("Havik", "sp007"), ("Wespendief", "sp248"), ("Taigaboomkruiper", "sp067"), ("Ruigpootbuizerd", "sp253"),
+                              ("Havik", "sp007"), ("Wespendief", "sp248"), ("Boomkruiper", "sp066"),
+                              ("Taigaboomkruiper", "sp067"), ("Ruigpootbuizerd", "sp253"),
                               ("Gele Kwikstaart", "sp069"), ("IJsvogel", "sp075"), ("Patrijs", "sp106"),
                               ("Boerenzwaluw", "sp114"), ("Huiszwaluw", "sp115"), ("Geelgors", "sp117"),
                               ("Rietgors", "sp118"), ("Knobbelzwaan", "sp126"), ("Kluut", "sp143"),
                               ("Kuifmees", "sp033"), ("Ringmus", "sp044"), ("Grote Lijster", "sp049"),
                               ("Zwarte Mees", "sp174"), ("Staartmees", "sp034"), ("Glanskop", "sp032"),
-                              ("Matkop", "sp031"), ("Grauwe Vliegenvanger", "sp176"), ("Gekraagde Roodstaart", "sp178"),
+                              ("Matkop", "sp031"), ("Boomklever", "sp065"), ("Grauwe Vliegenvanger", "sp176"), ("Gekraagde Roodstaart", "sp178"),
                               ("Sijs", "sp038"), ("Goudvink", "sp040"), ("Appelvink", "sp041"),
-                              ("Zwarte Roodstaart", "sp051"), ("Roodborsttapuit", "sp053"), ("Bonte Vliegenvanger", "sp177")]:
+                              ("Zwarte Roodstaart", "sp051"), ("Roodborsttapuit", "sp053"), ("Bonte Vliegenvanger", "sp177"),
+                              ("Kleine Zilverreiger", "sp082"), ("Grote Zilverreiger", "sp083"), ("Purperreiger", "sp084"),
+                              ("Slobeend", "sp090"), ("Kuifeend", "sp092"), ("Tafeleend", "sp132"),
+                              ("Krakeend", "sp129"), ("Smient", "sp130"), ("Zomertaling", "sp188"),
+                              ("Blauwe Kiekendief", "sp249"), ("Grauwe Kiekendief", "sp251"), ("Steppekiekendief", "sp250")]:
                 similar_section(p, name, sid, "390")
                 open_card(p, name, sid)
                 sec = p.locator('#sdPanel-herkenning section.sd-similar')

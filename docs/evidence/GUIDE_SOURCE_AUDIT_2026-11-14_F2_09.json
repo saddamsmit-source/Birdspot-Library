@@ -1,0 +1,263 @@
+[
+ {
+  "image": "/assets/species/sp017.webp",
+  "species": "sp017",
+  "source": "https://commons.wikimedia.org/wiki/File:Picchio_rosso_minore_con_mora_di_gelso.jpg",
+  "sourceTitle": "File:Picchio rosso minore con mora di gelso.jpg - Wikimedia Commons",
+  "sourceAuthor": "Maurizio Carlini",
+  "sourceLicense": "CC BY-SA 4.0",
+  "taxonInSource": "Soortnaam op de fotopagina",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Appfoto visueel vergeleken met oorspronkelijk bronbeeld",
+  "auditDate": "14-11-2026",
+  "assetSha1": "62075b2f600e032386cc88f887871e67932f3703",
+  "sourceImageSha1": "7147b8e3e86e857922b2185f0bac56d43b1706c4",
+  "sourceImageSize": [
+   3155,
+   4733
+  ],
+  "visualRoleCheck": "Mannetje bij boomstam, rode kruin. De bron benoemt het geslacht."
+ },
+ {
+  "image": "/assets/species/plumage/sp017-female.webp",
+  "species": "sp017",
+  "source": "https://commons.wikimedia.org/wiki/File:Lesser-spotted_woodpecker_(Dryobates_minor_hortorum)_female.jpg",
+  "sourceTitle": "File:Lesser-spotted woodpecker (Dryobates minor hortorum) female.jpg - Wikimedia Commons",
+  "sourceAuthor": "Charles J. Sharp",
+  "sourceLicense": "CC BY-SA 4.0",
+  "taxonInSource": "Soortnaam op de fotopagina",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Appfoto visueel vergeleken met oorspronkelijk bronbeeld",
+  "auditDate": "14-11-2026",
+  "assetSha1": "4fd6f80e956a512fdf9c3cfe47c528e2141a1be7",
+  "sourceImageSha1": "6ab4ca0f4600d3943d1b01965c0c12bf80d6767a",
+  "sourceImageSize": [
+   1101,
+   1101
+  ],
+  "visualRoleCheck": "Vrouwtje op tak, rode kruin ontbreekt en rug toont lichte dwarsbanden."
+ },
+ {
+  "image": "/assets/species/plumage/sp017-flight.webp",
+  "species": "sp017",
+  "source": "https://commons.wikimedia.org/wiki/File:Lesser_spotted_woodpecker_(f),_Dryobates_minor,_Mindre_hackspett.jpg",
+  "sourceTitle": "File:Lesser spotted woodpecker (f), Dryobates minor, Mindre hackspett.jpg - Wikimedia Commons",
+  "sourceAuthor": "blondinrikard",
+  "sourceLicense": "CC BY 2.0",
+  "taxonInSource": "Soortnaam op de fotopagina",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Appfoto visueel vergeleken met oorspronkelijk bronbeeld",
+  "auditDate": "14-11-2026",
+  "assetSha1": "e3512dd596ae4b7cfaeead1b212d94c9d2d24b1f",
+  "sourceImageSha1": "f0c24e03b8ce97a34da3eb81d598570630a107dc",
+  "sourceImageSize": [
+   1783,
+   1783
+  ],
+  "visualRoleCheck": "Vrouwtje direct bij nestholte. Poten of staart zijn nabij de stam. Behoud onder Vrouwtje als kleedbeeld."
+ },
+ {
+  "image": "/assets/showcase/sp018.webp",
+  "species": "sp018",
+  "source": "https://commons.wikimedia.org/wiki/File:Dryocopus_martius,_Perersberg,_Brasov,_Romania_0_(cropped).jpg",
+  "sourceTitle": "File:Dryocopus martius, Perersberg, Brasov, Romania 0 (cropped).jpg - Wikimedia Commons",
+  "sourceAuthor": "xulescu_g",
+  "sourceLicense": "CC BY-SA 2.0",
+  "taxonInSource": "Soortnaam op de fotopagina",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Appfoto visueel vergeleken met oorspronkelijk bronbeeld",
+  "auditDate": "14-11-2026",
+  "assetSha1": "2ec9c72532079816420d3b31ccf69fab8b7376dc",
+  "sourceImageSha1": "545977136e3d32c1f1fc04bd200126a9e039f657",
+  "sourceImageSize": [
+   1817,
+   2400
+  ],
+  "visualRoleCheck": "Mannetje aan boomstam, brede rode kruin. Eigen opname."
+ },
+ {
+  "image": "/assets/species/plumage/sp018-female-single.webp",
+  "species": "sp018",
+  "source": "https://commons.wikimedia.org/wiki/File:2016.08.27.-15-Viernheimer_Heide-Viernheim--Schwarzspecht-Weibchen.jpg",
+  "sourceTitle": "File:2016.08.27.-15-Viernheimer Heide-Viernheim--Schwarzspecht-Weibchen.jpg - Wikimedia Commons",
+  "sourceAuthor": "Andreas Eichler",
+  "sourceLicense": "CC BY-SA 4.0",
+  "taxonInSource": "Soortnaam op de fotopagina",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Appfoto visueel vergeleken met oorspronkelijk bronbeeld",
+  "auditDate": "14-11-2026",
+  "assetSha1": "a849dabfcc5c1d8441abfd6a8455ab8abe8d25de",
+  "sourceImageSha1": "26a9ab628423781a7b6d9ee99f1c134d748665fc",
+  "sourceImageSize": [
+   2196,
+   2901
+  ],
+  "visualRoleCheck": "Vrouwtje op stam, rood beperkt tot achterkruin. WebP-zoom is begrensd door 500 pixels breed."
+ },
+ {
+  "image": "/assets/species/plumage/sp018-flight.webp",
+  "species": "sp018",
+  "source": "https://commons.wikimedia.org/wiki/File:Schwarzspecht_(Dryocopus_martius).jpg",
+  "sourceTitle": "File:Schwarzspecht (Dryocopus martius).jpg - Wikimedia Commons",
+  "sourceAuthor": "Janus Mosbacher",
+  "sourceLicense": "CC BY-SA 4.0",
+  "taxonInSource": "Soortnaam op de fotopagina",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Appfoto visueel vergeleken met oorspronkelijk bronbeeld",
+  "auditDate": "14-11-2026",
+  "assetSha1": "ca273b450d4b9f033857cc0c92171552e5cff358",
+  "sourceImageSha1": "ac02cc59cc0cf08c9cc12f6ac9d4ae0c69d0905d",
+  "sourceImageSize": [
+   4928,
+   3264
+  ],
+  "visualRoleCheck": "Vrije vlucht met lichte snavel en zichtbare slagpennen. Uitsnede, onderzijde dichtbij beeldrand. Geslacht open."
+ },
+ {
+  "image": "/assets/species/plumage/sp018-juv-review.webp",
+  "species": "sp018",
+  "source": "https://commons.wikimedia.org/wiki/File:Dryocopus_martius_03.jpg",
+  "sourceTitle": "File:Dryocopus martius 03.jpg - Wikimedia Commons",
+  "sourceAuthor": "Philippe Kurlapski",
+  "sourceLicense": "CC BY 1.0",
+  "taxonInSource": "Soortnaam op de fotopagina",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Appfoto visueel vergeleken met oorspronkelijk bronbeeld",
+  "auditDate": "14-11-2026",
+  "assetSha1": "6b9c783e343b827e7f0962068559cb0065be2ad9",
+  "sourceImageSha1": "d0d3ff3ba4e7905e88b00a44dae51cc259bdedca",
+  "sourceImageSize": [
+   1000,
+   550
+  ],
+  "visualRoleCheck": "Afzonderlijk kopdetail, leeftijd volgens bron. Licentiehistorie blijft open.",
+  "rightsOpen": "De huidige bestandspagina vermeldt CC BY 1.0. Oudere licentieverwijzing blijft een afzonderlijk te toetsen punt volgens M10."
+ },
+ {
+  "image": "/assets/species/plumage/sp018-hero-male.webp",
+  "species": "sp018",
+  "source": "https://commons.wikimedia.org/wiki/File%3ABlack_Woodpecker_%28Dryocopus_martius%29%2C_Parc_de_Woluw%C3%A9%2C_Brussels_1.jpg",
+  "sourceTitle": "File:Black Woodpecker (Dryocopus martius), Parc de Woluwé, Brussels 1.jpg - Wikimedia Commons",
+  "sourceAuthor": "Frank Vassen from Brussels, Belgium",
+  "sourceLicense": "CC BY 2.0",
+  "taxonInSource": "Soortnaam op de fotopagina",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Appfoto visueel vergeleken met oorspronkelijk bronbeeld",
+  "auditDate": "14-11-2026",
+  "assetSha1": "9e2e56b0e74ed0b5ecf814580bf674dd4ae4ac9a",
+  "sourceImageSha1": "305a08246ecd575f7e8546ccfd240ecca70581bd",
+  "sourceImageSize": [
+   2624,
+   1714
+  ],
+  "visualRoleCheck": "Mannetje op de grond, naast een liggende boom. Andere opname dan hoofdfoto."
+ },
+ {
+  "image": "/assets/species/sp019.webp",
+  "species": "sp019",
+  "source": "https://commons.wikimedia.org/wiki/File:Green_woodpecker_Franconville_2022_01_21_2.jpg",
+  "sourceTitle": "File:Green woodpecker Franconville 2022 01 21 2.jpg - Wikimedia Commons",
+  "sourceAuthor": "Alexis Lours",
+  "sourceLicense": "CC BY 4.0",
+  "taxonInSource": "Soortnaam op de fotopagina",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Appfoto visueel vergeleken met oorspronkelijk bronbeeld",
+  "auditDate": "14-11-2026",
+  "assetSha1": "d3dfc0a70995a498b5c1b5c3630e72a5d627109a",
+  "sourceImageSha1": "1a771718ad137c381726e3d1c25b10672c69f711",
+  "sourceImageSize": [
+   4225,
+   2817
+  ],
+  "visualRoleCheck": "Groene Specht aan berk. Rode snorstreep ondersteunt het mannetjeslabel."
+ },
+ {
+  "image": "/assets/species/plumage/sp019-female-ground.webp",
+  "species": "sp019",
+  "source": "https://commons.wikimedia.org/wiki/File:European_green_woodpecker_eating.jpg",
+  "sourceTitle": "File:European green woodpecker eating.jpg - Wikimedia Commons",
+  "sourceAuthor": "Remyymer",
+  "sourceLicense": "CC BY-SA 4.0",
+  "taxonInSource": "Soortnaam op de fotopagina",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Appfoto visueel vergeleken met oorspronkelijk bronbeeld",
+  "auditDate": "14-11-2026",
+  "assetSha1": "db3913fd05d3e93882e751e7cf00857636b23e12",
+  "sourceImageSha1": "53be9981138c5b7e9adbf1a89713916596bdc430",
+  "sourceImageSize": [
+   2967,
+   2966
+  ],
+  "visualRoleCheck": "Vrouwtje op de grond met volledig donkere snorstreep."
+ },
+ {
+  "image": "/assets/species/plumage/sp019-juv.webp",
+  "species": "sp019",
+  "source": "https://commons.wikimedia.org/wiki/File:Picus_viridis_(juvenile).jpg",
+  "sourceTitle": "File:Picus viridis (juvenile).jpg - Wikimedia Commons",
+  "sourceAuthor": "Hans Hillewaert",
+  "sourceLicense": "CC BY-SA 3.0",
+  "taxonInSource": "Soortnaam op de fotopagina",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Appfoto visueel vergeleken met oorspronkelijk bronbeeld",
+  "auditDate": "14-11-2026",
+  "assetSha1": "7f6759cfdedb63e7274c19d0ce0a209fd12da689",
+  "sourceImageSha1": "7fbbe5f99b57b5931f9a661ac0ed9fa780716d93",
+  "sourceImageSize": [
+   2732,
+   2049
+  ],
+  "visualRoleCheck": "Jonge vogel op de grond, duidelijk gevlekt. Bron benoemt juveniel, geslacht blijft open."
+ },
+ {
+  "image": "/assets/species/plumage/sp019-flight.webp",
+  "species": "sp019",
+  "source": "https://commons.wikimedia.org/wiki/File:Female_green_woodpecker_in_flight.jpg",
+  "sourceTitle": "File:Female green woodpecker in flight.jpg - Wikimedia Commons",
+  "sourceAuthor": "Alexis Lours",
+  "sourceLicense": "CC BY 4.0",
+  "taxonInSource": "Soortnaam op de fotopagina",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Appfoto visueel vergeleken met oorspronkelijk bronbeeld",
+  "auditDate": "14-11-2026",
+  "assetSha1": "9467c115539856a36c87bce4f969a4af1ffe7796",
+  "sourceImageSha1": "5fd7e438f21842fd8d3468f24fcc8c57c5e4e5dd",
+  "sourceImageSize": [
+   3697,
+   2465
+  ],
+  "visualRoleCheck": "Vrouwtje in vrije vlucht, gele stuit en donkere snorstreep. Fotograaf benoemt het geslacht."
+ },
+ {
+  "image": "/assets/species/plumage/sp019-hero-male.webp",
+  "species": "sp019",
+  "source": "https://commons.wikimedia.org/wiki/File%3AEuropean_green_woodpecker_%28Picus_viridis%29_male.JPG",
+  "sourceTitle": "File:European green woodpecker (Picus viridis) male.JPG - Wikimedia Commons",
+  "sourceAuthor": "Charles J. Sharp",
+  "sourceLicense": "CC BY-SA 4.0",
+  "taxonInSource": "Soortnaam op de fotopagina",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Appfoto visueel vergeleken met oorspronkelijk bronbeeld",
+  "auditDate": "14-11-2026",
+  "assetSha1": "76881fbefbdc3f946d8240e46d9088d4bcdca559",
+  "sourceImageSha1": "dcca199304f4e8bd1c68ee2bab9a84be93aef3fd",
+  "sourceImageSize": [
+   3461,
+   2308
+  ],
+  "visualRoleCheck": "Mannetje op gras met rode snorstreep. Andere opname dan het mannetje aan de berk."
+ }
+]

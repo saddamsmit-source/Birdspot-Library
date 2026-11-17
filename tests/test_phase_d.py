@@ -122,7 +122,7 @@ def _go_home(page):
     page.wait_for_timeout(500)
 
 def _open_fab(page):
-    page.locator('#fab').click(force=True)
+    page.locator('#fab').click(force=True);page.locator('[data-quick-action="seen"]').click()
     page.wait_for_timeout(600)
 
 def _sheet_click(sheet_locator, selector):
@@ -733,7 +733,7 @@ with sync_playwright() as pw:
             sp.screenshot(path=str(SHOTS / f"phase_d_sightings_{width}px.png"))
 
             # Screenshot: add-form open
-            sp.locator('#fab').click(force=True)
+            sp.locator('#fab').click(force=True);sp.locator('[data-quick-action="seen"]').click()
             sp.wait_for_timeout(600)
             sp.screenshot(path=str(SHOTS / f"phase_d_addform_{width}px.png"))
 

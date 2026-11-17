@@ -16,11 +16,8 @@
  *          sex/age-registratie krijgt nooit het label "Mannetje"/"Vrouwtje"/"Juveniel" en staat
  *          nooit met data-plumage="adult_m|adult_f|juv" (bewezen op sp008 Torenvalk: een bevestigd
  *          mannetje-in-vlucht naast een neutrale "In vlucht"-kaart zonder geslachtslabel).
- *   FV-05  Geen enkele foto komt dubbel voor binnen één kaart (ook niet na het verplaatsen van
- *          vluchtfoto's naar de nieuwe sectie).
- *   FV-06  Geen juveniel-tegen-juvenielvergelijking komt nog ergens voor (0 van de 19 bestaande
- *          gevallen in GUIDE_COMPARISONS), en de onderliggende data van die 19 gevallen is
- *          onaangeroerd (niet gewist) — alleen het tonen is verborgen.
+ *   FV-05  Hoofdfoto, Verenkleed en In vlucht bevatten samen unieke foto's.
+ *   FV-06  In Lijkt op is hergebruik toegestaan en mogen passende juvenielparen terugkomen.
  *   FV-07  Representatieve soorten (opzettelijk gekozen voor man/vrouw-verschil, meerdere
  *          vluchtfoto's, incomplete fotodekking en relevante vergelijkingen): sp173 Bruine
  *          Kiekendief, sp249 Blauwe Kiekendief, sp253 Ruigpootbuizerd, sp059 Zwartkop (geen
@@ -36,9 +33,19 @@
 import assert from 'node:assert/strict';
 import { SPECIES } from '../src/data/species.js';
 import { GUIDE_COMPARISONS } from '../src/features/species/guideComparisons.js';
-import { recognitionPanel } from '../src/features/species/detailSections.js';
+import { guideHeroPhoto, recognitionPanel } from '../src/features/species/detailSections.js';
+import { GUIDE_PLUMAGE, GUIDE_POSES } from '../src/features/species/guideMedia.js';
+import { GUIDE_PHOTOS } from '../src/features/species/guidePhotos.js';
 
 const byId = new Map(SPECIES.map(s => [s.id, s]));
+const media = new Map();
+for (const photo of [
+  ...Object.values(GUIDE_PHOTOS),
+  ...Object.values(GUIDE_PLUMAGE).flatMap(group => Object.values(group)),
+  ...Object.values(GUIDE_POSES).flat(),
+]) {
+  if (photo.image) media.set(photo.image, Boolean(photo.flight) || media.get(photo.image) || false);
+}
 
 // ── FV-01 / FV-02 / FV-05 / FV-06 : over de volledige dataset ──────────────
 let checked = 0;
@@ -68,29 +75,307 @@ for (const s of SPECIES) {
     assert.ok(html.indexOf('aria-label="Overige herkenningsfoto') !== vlucht, `FV-02 ${s.id}`);
   }
 
-  // FV-05: geen enkele foto dubbel binnen de hele Herkenning-kaart.
-  const images = [...html.matchAll(/data-guide-image="([^"]+)"/g)].map(m => m[1]);
-  assert.equal(images.length, new Set(images).size, `FV-05 dubbele foto binnen één kaart: ${s.id}`);
+  const [own, comparisons = ''] = html.split('<section class="sd-similar"');
+  const hero = guideHeroPhoto(s.id)?.image;
+  const images = [...own.matchAll(/data-guide-image="([^"]+)"/g)].map(m => m[1]);
+  if (hero) images.push(hero);
+  assert.equal(images.length, new Set(images).size, `FV-05 dubbele gidsfoto: ${s.id}`);
 
-  // FV-06: geen enkele vergelijkingskaart toont nog Juveniel tegenover Juveniel.
-  if (lijktOp >= 0) {
-    const section = html.slice(lijktOp);
-    const panels = [...section.matchAll(/<div class="sd-cmp-panel"[^>]*>([\s\S]*?)<\/div>\s*(?:<p class="sd-cmp-tip")?/g)];
-    for (const panel of panels) {
-      const smalls = [...panel[1].matchAll(/<small>([^<]*)</g)].map(m => m[1]);
-      assert.ok(!(smalls.length === 2 && smalls[0] === 'Juveniel' && smalls[1] === 'Juveniel'),
-        `FV-06 Juveniel-tegen-Juveniel nog zichtbaar: ${s.id}`);
+  // Eigenaarregel: nooit lege fotovakken, vluchttekorten of tekst-only vergelijkingstabbladen tonen.
+  assert.ok(!html.includes('Nog geen passende foto') && !html.includes('Nog geen passende vluchtfoto'),
+    `FV-06 verwarrende lege vergelijkingsfoto: ${s.id}`);
+  // Onvolledige fotovergelijkingen blijven uitsluitend in de bronaudit beschikbaar.
+  for (const panel of comparisons.split('<div class="sd-cmp-panel"').slice(1)) {
+    const head = panel.split('<div class="sd-cmp-rows"')[0].split('<div class="sd-cmp-foot"')[0];
+    const photos = [...head.matchAll(/data-guide-image="([^"]+)"/g)].map(m => m[1]);
+    assert.equal(photos.length, 2, `FV-06 elke zichtbare vergelijking vereist twee foto’s: ${s.id}`);
+    assert.equal(photos.length, new Set(photos).size, `FV-06 dubbel in hetzelfde paar: ${s.id}`);
+    const inFlight = panel.startsWith(' data-cmp-panel data-cmp-flight');
+    for (const path of photos) {
+      assert.ok(media.has(path), `FV-06 ongeregistreerde foto: ${path}`);
+      assert.equal(media.get(path), inFlight, `FV-06 verkeerde houding: ${s.id} ${path}`);
     }
   }
 }
-assert.ok(checked >= 590, `te weinig soorten gecontroleerd: ${checked}`);
-assert.ok(flightSections >= 10, `te weinig soorten met een "In vlucht"-sectie om FV-02/03 te bewijzen: ${flightSections}`);
-console.log(`FV-01/02/05/06 OK — ${checked} soorten, ${flightSections} met een eigen "In vlucht"-sectie, geen enkele dubbele foto of Juveniel-tegen-Juveniel`);
+assert.ok(checked >= 590 && flightSections >= 10);
+const verifiedJuvenileComparisonEntries = GUIDE_COMPARISONS.filter(e => e.birds.filter(b => b.plumage === 'juv').length >= 2);
+assert.equal(verifiedJuvenileComparisonEntries.length, 32, 'FV-06: expected 32 juvenile comparisons including Koolmees and Pimpelmees');
+assert.ok(verifiedJuvenileComparisonEntries.some(entry => entry.label === 'Koolmees en Pimpelmees · juveniel' &&
+  ['sp029', 'sp030'].every(id => entry.birds.some(bird => bird.id === id && bird.plumage === 'juv'))),
+  'FV-06: F3-R07 requires both registered juvenile tit photos');
+assert.ok(verifiedJuvenileComparisonEntries.some(entry => entry.label === 'Goudhaantje en Vuurgoudhaan · juvenielen' &&
+  entry.birds.some(b => b.id === 'sp063' && b.plumage === 'juv') &&
+  entry.birds.some(b => b.id === 'sp064' && b.plumage === 'juv')),
+  'FV-06: F2-15 juvenielenpaar ontbreekt in de actuele telling');
+assert.ok(verifiedJuvenileComparisonEntries.some(entry => entry.label === 'Putter en Sijs · juvenielen in rust' &&
+  entry.birds.some(b => b.id === 'sp037' && b.plumage === 'juv') &&
+  entry.birds.some(b => b.id === 'sp038' && b.plumage === 'juv')),
+  'FV-06: F2-16 perched juvenile Putter/Sijs pair missing');
+assert.ok(verifiedJuvenileComparisonEntries.some(entry => entry.label === 'Appelvink en Vink · juvenielen in rust' &&
+  entry.birds.some(b => b.id === 'sp041' && b.plumage === 'juv') &&
+  entry.birds.some(b => b.id === 'sp035' && b.plumage === 'juv')),
+  'FV-06: F2-17 juveniele Appelvink/Vink vergelijking ontbreekt');
+for (const [label, ids] of [
+  ['Huismus en Ringmus · juvenielen in rust', ['sp043', 'sp044']],
+  ['Merel en Zanglijster · juvenielen in rust', ['sp045', 'sp046']],
+]) {
+  assert.ok(verifiedJuvenileComparisonEntries.some(entry => entry.label === label &&
+    ids.every(id => entry.birds.some(b => b.id === id && b.plumage === 'juv'))),
+    'FV-06: F2-18 requires both registered juvenile photos for ' + label);
+}
+assert.ok(verifiedJuvenileComparisonEntries.some(entry => entry.label === 'Zanglijster en Kramsvogel · juvenielen in rust' &&
+  ['sp046','sp047'].every(id => entry.birds.some(b => b.id === id && b.plumage === 'juv'))),
+  'FV-06: F2-19 requires two registered juvenile Song Thrush/Fieldfare photos');
+for (const [label, ids] of [
+  ['Zanglijster en Grote Lijster · juvenielen in rust', ['sp046', 'sp049']],
+  ['Roodborst en Roodborsttapuit · juvenielen in rust', ['sp050', 'sp053']],
+]) {
+  assert.ok(verifiedJuvenileComparisonEntries.some(entry =>
+    entry.label === label && ids.every(id => entry.birds.some(b => b.id === id && b.plumage === 'juv'))),
+    'FV-06: F2-20 must contain real registered paired juvenile photographs: ' + label);
+}
+// F2-21: matching, source-registered resting portraits are visible on BOTH species cards.
+// The contract checks photo roles/paths, not the biological identity of WebP pixels.
+for (const [label, ids, images] of [
+  ['Roodborsttapuit en Roodborst · vrouwtje en volwassen vogel in rust',
+    ['sp053', 'sp050'], ['sp053-female-review.webp', 'sp050.webp']],
+  ['Heggenmus en Huismus · volwassen in rust',
+    ['sp054', 'sp043'], ['sp054.webp', 'sp043.webp']],
+  ['Winterkoning en Heggenmus · in rust',
+    ['sp055', 'sp054'], ['sp055.webp', 'sp054.webp']],
+]) {
+  const entry = GUIDE_COMPARISONS.find(pair => pair.label === label);
+  assert.ok(entry, `F2-21 pair missing: ${label}`);
+  assert.deepEqual(entry.birds.map(bird => bird.id), ids, `F2-21 wrong partner/order: ${label}`);
+  for (const id of ids) {
+    const html = recognitionPanel(byId.get(id));
+    const panels = html.split('<div class="sd-cmp-panel"').slice(1);
+    assert.ok(panels.some(panel =>
+      !panel.startsWith(' data-cmp-panel data-cmp-flight') &&
+      images.every(image => panel.includes(image))),
+    `F2-21: both resting images must render together on ${id} for ${label}`);
+  }
+}
 
-// FV-06 vervolg: de 19 bestaande gevallen bestaan nog gewoon in de brondata (niet gewist).
-const juvPairs = GUIDE_COMPARISONS.filter(e => e.birds.filter(b => b.plumage === 'juv').length >= 2);
-assert.equal(juvPairs.length, 19, `FV-06 onderliggende data gewijzigd — verwacht nog 19 Juveniel-paren, nu ${juvPairs.length}`);
-console.log('FV-06 OK — alle 19 onderliggende Juveniel-paren staan nog intact in GUIDE_COMPARISONS (alleen verborgen, niet gewist)');
+// F2-22: exactly three paired, source-registered resting photos of the three Phylloscopus
+// species are used in reciprocal comparisons; flight positions stay unclaimed.
+for (const [label, ids, paths] of [
+  ['Fitis en Tjiftjaf · rustbeeld en zang', ['sp057', 'sp056'], ['sp057.webp', 'sp056.webp']],
+  ['Fitis en Fluiter · in rust', ['sp057', 'sp058'], ['sp057.webp', 'sp058.webp']],
+  ['Tjiftjaf en Fluiter · in rust', ['sp056', 'sp058'], ['sp056.webp', 'sp058.webp']],
+]) {
+  const matches = GUIDE_COMPARISONS.filter(pair => pair.label === label);
+  assert.equal(matches.length, 1, `F2-22 missing/duplicated comparison ${label}`);
+  assert.deepEqual(matches[0].birds.map(bird => bird.id), ids,
+    `F2-22 incorrect pair of species for ${label}`);
+  assert.equal(Boolean(matches[0].flight), false, `F2-22 may not promote an uncertain flight photo: ${label}`);
+  for (const id of ids) {
+    const html = recognitionPanel(byId.get(id));
+    const panels = html.split('<div class="sd-cmp-panel"').slice(1);
+    assert.ok(panels.some(panel => !panel.startsWith(' data-cmp-panel data-cmp-flight') &&
+      paths.every(path => panel.includes(path))),
+      `F2-22 expected both distinct resting photographs in ${id} for ${label}`);
+  }
+}
+assert.ok(byId.get('sp058').fieldmarks.includes('helderwitte buik'));
+assert.equal(byId.get('sp058').plumage.juv, null,
+  'F2-22: unverified Wood Warbler juvenile plumage must remain unknown');
+
+// F2-23: adult male/female Blackcap + Garden Warbler, Whitethroat/Braamsluiper.
+// Assert registered resting images appear on BOTH species cards; no flight fallback.
+for (const [label, ids, images] of [
+  ['Zwartkop en Tuinfluiter · kop en zang', ['sp059', 'sp060'], ['sp059.webp', 'sp060.webp']],
+  ['Zwartkop en Tuinfluiter · vrouwtje in rust', ['sp059', 'sp060'], ['sp059-adult_f.webp', 'sp060.webp']],
+  ['Grasmus en Tuinfluiter · rustbeeld', ['sp061', 'sp060'], ['sp061.webp', 'sp060.webp']],
+  ['Grasmus en Braamsluiper · vleugel en zang', ['sp061', 'sp062'], ['sp061-hero-male.webp', 'sp062.webp']],
+]) {
+  const entries = GUIDE_COMPARISONS.filter(pair => pair.label === label);
+  assert.equal(entries.length, 1, `F2-23 missing/duplicated comparison: ${label}`);
+  const [entry] = entries;
+  assert.deepEqual(entry.birds.map(bird => bird.id), ids, `F2-23 wrong partner order: ${label}`);
+  assert.equal(Boolean(entry.flight), false, `F2-23 must not invent flight image: ${label}`);
+  assert.equal(entry.rows?.length, 3, `F2-23 requires three grounded fieldmarks: ${label}`);
+  for (const id of ids) {
+    const html = recognitionPanel(byId.get(id));
+    const panels = html.split('<div class="sd-cmp-panel"').slice(1);
+    assert.ok(panels.some(panel => !panel.startsWith(' data-cmp-panel data-cmp-flight') &&
+      images.every(image => panel.includes(image))),
+    `F2-23 two distinct resting photos required from ${id}: ${label}`);
+  }
+}
+const blackcapFemale = GUIDE_COMPARISONS.find(entry =>
+  entry.label === 'Zwartkop en Tuinfluiter · vrouwtje in rust');
+assert.equal(blackcapFemale.birds[0].plumage, 'adult_f',
+  'F2-23 female Blackcap pair must use source-registered female, not juvenile');
+assert.equal(byId.get('sp060').plumage.juv, null,
+  'F2-23 Garden Warbler juvenile age not independently proven');
+assert.ok(byId.get('sp060').fieldmarks.includes('zonder afgetekend petje'),
+  'F2-23 Garden Warbler lacks strongly marked cap');
+
+// F2-24: compare only actual resting images in two-way panels, not adult photos passed off as juveniles.
+for (const [label, ids, images] of [
+  ['Braamsluiper en Tuinfluiter · kop en zang in rust', ['sp062', 'sp060'], ['sp062.webp', 'sp060.webp']],
+  ['Witte en Gele Kwikstaart · volwassen in rust', ['sp068', 'sp069'], ['sp068.webp', 'sp069.webp']],
+]) {
+  const entries = GUIDE_COMPARISONS.filter(e => e.label === label);
+  assert.equal(entries.length, 1, `F2-24 missing/duplicated pair: ${label}`);
+  assert.deepEqual(entries[0].birds.map(bird => bird.id), ids, `F2-24 wrong partner IDs: ${label}`);
+  assert.equal(entries[0].rows?.length, 3, `F2-24 three useful distinction rows required: ${label}`);
+  for (const id of ids) {
+    const html = recognitionPanel(byId.get(id));
+    const panels = html.split('<div class="sd-cmp-panel"').slice(1);
+    assert.ok(panels.some(panel =>
+      !panel.startsWith(' data-cmp-panel data-cmp-flight') &&
+      images.every(image => panel.includes(image))),
+      `F2-24 two registered resting photos required from ${id}: ${label}`);
+  }
+}
+const youngWagtails = GUIDE_COMPARISONS.find(e => e.label === 'Witte en Gele Kwikstaart · jonge vogels');
+assert.ok(youngWagtails?.birds.every(bird => bird.photoMissing),
+  'F2-24 no source-verified White/Yellow Wagtail juveniles pair: do not show adult photos as young');
+for (const id of ['sp068', 'sp069']) {
+  const html = recognitionPanel(byId.get(id));
+  assert.ok(!html.includes('Nog geen passende foto'),
+    `Owner UX: avoid missing-image placeholder on Wagtail species ${id}`);
+  assert.ok(html.includes('sp068.webp') && html.includes('sp069.webp'),
+    `Owner UX: preserve adult paired photos for Wagtails ${id}`);
+  assert.ok(!html.includes('Witte en Gele Kwikstaart · jonge vogels'),
+    `Owner UX: no empty juvenile comparison tab for ${id}`);
+}
+assert.equal(byId.get('sp062').plumage.juv, null,
+  'F2-24 no independently verified Lesser Whitethroat juvenile detail');
+assert.ok((GUIDE_POSES.sp068 || []).some(photo => photo.flight),
+  'F2-24 previously verified White Wagtail flight must remain');
+assert.ok(!(GUIDE_POSES.sp069 || []).some(photo => photo.flight),
+  'F2-24 Yellow Wagtail landing photo cannot enter true-flight role');
+
+// F2-25: correct photographic pairs on BOTH cards, including true flight as a separate tab.
+for (const [label, ids, images, flight] of [
+  ['Veldleeuwerik en Graspieper · in rust', ['sp070', 'sp072'], ['sp070.webp', 'sp072.webp'], false],
+  ['Veldleeuwerik en Graspieper · in vlucht', ['sp070', 'sp072'], ['sp070-flight.webp', 'sp072-flight.webp'], true],
+  ['IJsvogel en Bijeneter · keel en snavel', ['sp075', 'sp257'], ['sp075.webp', 'sp257.webp'], false],
+]) {
+  const pairs = GUIDE_COMPARISONS.filter(entry => entry.label === label);
+  assert.equal(pairs.length, 1, `F2-25 absent or duplicated comparison: ${label}`);
+  const pair = pairs[0];
+  assert.deepEqual(pair.birds.map(b => b.id), ids, `F2-25 unexpected species order: ${label}`);
+  assert.equal(Boolean(pair.flight), flight, `F2-25 photo pose mismatch: ${label}`);
+  assert.equal(pair.rows?.length, 3, `F2-25 requires 3 evidence-based field mark rows: ${label}`);
+  for (const id of ids) {
+    const html = recognitionPanel(byId.get(id));
+    const panels = html.split('<div class="sd-cmp-panel"').slice(1);
+    assert.ok(panels.some(panel =>
+      panel.startsWith(' data-cmp-panel' + (flight ? ' data-cmp-flight' : '')) &&
+      (flight || !panel.startsWith(' data-cmp-panel data-cmp-flight')) &&
+      images.every(path => panel.includes(path))),
+      `F2-25 must show two registered ${flight ? 'flight' : 'rest'} images on ${id}: ${label}`);
+  }
+}
+for (const id of ['sp070', 'sp072', 'sp075']) {
+  assert.ok((GUIDE_POSES[id] || []).some(photo => photo.flight === true),
+    `F2-25 previously registered real flight photo must be preserved for ${id}`);
+}
+assert.equal(byId.get('sp070').plumage.juv, null,
+  'F2-25: do not present unsourced generic Skylark juvenile as individually established');
+
+// F2-26: compare matching age groups, with the older juvenile rather than the coot chick.
+for (const [label, images, plumage] of [
+  ['Meerkoet en Waterhoen · volwassen', ['sp078.webp', 'sp079.webp'], undefined],
+  ['Meerkoet en Waterhoen · jonge vogels', ['sp078-juv-grown.webp', 'sp079-juv.webp'], 'juv'],
+]) {
+  const pair = GUIDE_COMPARISONS.find(entry => entry.label === label);
+  assert.deepEqual(pair.birds.map(bird => [bird.id, bird.plumage]), [
+    ['sp078', plumage], ['sp079', plumage],
+  ]);
+  assert.equal(pair.rows.length, 3);
+  for (const id of ['sp078', 'sp079']) {
+    const panels = recognitionPanel(byId.get(id)).split('<div class="sd-cmp-panel"').slice(1);
+    assert.ok(panels.some(panel => !panel.startsWith(' data-cmp-panel data-cmp-flight') &&
+      images.every(image => panel.includes(image))), `F2-26 missing age-matched pair: ${id} ${label}`);
+  }
+}
+for (const id of ['sp078', 'sp079']) {
+  const html = recognitionPanel(byId.get(id));
+  assert.ok(html.includes('aria-label="In vlucht"'), `F2-26 existing separate flight photo missing: ${id}`);
+  assert.ok(!html.includes('data-cmp-panel data-cmp-flight'), `F2-26 must not pair differently aged flight photos: ${id}`);
+}
+const greatCrestedGrebe = recognitionPanel(byId.get('sp077'));
+assert.ok(greatCrestedGrebe.includes('sp077-juv.webp'));
+assert.ok(!greatCrestedGrebe.includes('data-cmp-panel') && !greatCrestedGrebe.includes('aria-label="In vlucht"'));
+
+// F2-27: one registered, reciprocal photo pair per season, age or posture.
+for (const [label, ids, photos, flight] of [
+  ['Kleine en Grote Zilverreiger · buiten broedkleed', ['sp082', 'sp083'],
+    ['/assets/species/plumage/sp082-winter.webp', '/assets/species/sp083.webp'], false],
+  ['Kleine en Grote Zilverreiger · broedkleed', ['sp082', 'sp083'],
+    ['/assets/species/plumage/sp082-breeding.webp', '/assets/species/plumage/sp083-breeding.webp'], false],
+  ['Kleine en Grote Zilverreiger · in vlucht', ['sp082', 'sp083'],
+    ['/assets/species/sp082.webp', '/assets/species/plumage/sp083-flight.webp'], true],
+  ['Blauwe Reiger en Purperreiger · volwassen', ['sp081', 'sp084'],
+    ['/assets/species/plumage/sp081-portrait.webp', '/assets/showcase/sp084.webp'], false],
+  ['Blauwe Reiger en Purperreiger · jonge vogels', ['sp081', 'sp084'],
+    ['/assets/species/plumage/sp081-juv.webp', '/assets/species/plumage/sp084-juv-europa.webp'], false],
+  ['Blauwe Reiger en Purperreiger · in vlucht', ['sp081', 'sp084'],
+    ['/assets/species/sp081.webp', '/assets/species/plumage/sp084-flight.webp'], true],
+]) {
+  const entries = GUIDE_COMPARISONS.filter(entry => entry.label === label);
+  assert.equal(entries.length, 1, `F2-27 absent or duplicated pair: ${label}`);
+  const [entry] = entries;
+  assert.deepEqual(entry.birds.map(({id, photo}) => [id, photo]), ids.map((id, i) => [id, photos[i]]));
+  assert.equal(Boolean(entry.flight), flight);
+  assert.equal(entry.rows.length, 3);
+  for (const id of ids) {
+    const panels = recognitionPanel(byId.get(id)).split('<div class="sd-cmp-panel"').slice(1);
+    const matches = panels.filter(panel =>
+      panel.startsWith(' data-cmp-panel data-cmp-flight') === flight &&
+      photos.every(photo => panel.includes(`data-guide-image="${photo}"`)));
+    assert.equal(matches.length, 1, `F2-27 wrong rendered pair: ${id} ${label}`);
+    assert.ok(panels.every(panel => !panel.includes('sp083-juv.webp')),
+      `F2-27 nest-stage image must remain outside comparison: ${id}`);
+  }
+}
+
+// F2-28: match posture and age, with no fabricated goose comparison.
+for (const [label, ids, photos, flight] of [
+  ['Kwak en Blauwe Reiger · jonge vogels', ['sp085', 'sp081'],
+    ['/assets/species/plumage/sp085-juv.webp', '/assets/species/plumage/sp081-juv.webp'], false],
+  ['Kwak en Blauwe Reiger · in vlucht', ['sp085', 'sp081'],
+    ['/assets/species/plumage/sp085-flight.webp', '/assets/species/sp081.webp'], true],
+  ['Kwak en Purperreiger · jonge vogels', ['sp085', 'sp084'],
+    ['/assets/species/plumage/sp085-juv.webp', '/assets/species/plumage/sp084-juv-europa.webp'], false],
+]) {
+  const pair = GUIDE_COMPARISONS.find(entry => entry.label === label);
+  assert.ok(pair, `F2-28 missing comparison: ${label}`);
+  assert.equal(Boolean(pair.flight), flight);
+  assert.equal(pair.rows.length, 3);
+  assert.deepEqual(pair.birds.map(({id, photo, plumage}) => [id, photo, plumage]),
+    ids.map((id, i) => [id, photos[i], flight ? undefined : 'juv']));
+  for (const id of ids) {
+    const panels = recognitionPanel(byId.get(id)).split('<div class="sd-cmp-panel"').slice(1);
+    assert.ok(panels.some(panel =>
+      panel.startsWith(' data-cmp-panel data-cmp-flight') === flight &&
+      photos.every(photo => panel.includes(`data-guide-image="${photo}"`))), `F2-28 missing pair: ${id} ${label}`);
+  }
+}
+const greylagGoose = recognitionPanel(byId.get('sp086'));
+assert.ok(greylagGoose.includes('beige topjes') && greylagGoose.includes('>Donsjong<'));
+assert.ok(!greylagGoose.includes('data-cmp-panel'));
+assert.equal(GUIDE_POSES.sp086.find(photo => photo.image.endsWith('sp086-juv.webp'))?.age, 'chick');
+
+const youngTits = GUIDE_COMPARISONS.find(entry => entry.label === 'Matkop en Glanskop · jonge vogels');
+assert.deepEqual(youngTits.birds.map(({id, plumage}) => [id, plumage]), [['sp031', 'juv'], ['sp032', 'juv']]);
+for (const id of ['sp031', 'sp032']) {
+  const html = recognitionPanel(byId.get(id));
+  const panel = html.split('<div class="sd-cmp-panel"').slice(1)
+    .find(part => !part.startsWith(' data-cmp-panel data-cmp-flight') &&
+      part.includes('sp031-juv.webp') && part.includes('sp032-juv.webp'));
+  assert.ok(panel, `FV-06 jong Matkop/Glanskop-paar ontbreekt: ${id}`);
+}
+assert.equal(GUIDE_POSES.sp009.some(photo => photo.source === GUIDE_PHOTOS.sp009.source), false);
+const buzzard = recognitionPanel(byId.get('sp005')).split('<section class="sd-similar"')[1];
+assert.ok(buzzard.includes('In vlucht · Juveniel') && buzzard.includes('sp005-juv.webp') && buzzard.includes('sp253-juv.webp'));
+assert.ok(buzzard.includes('In vlucht · Volwassen') && buzzard.includes('sp005-adult_m.webp') && buzzard.includes('sp253.webp'));
+console.log(`FV-01/02/05/06 OK — ${checked} soorten, gidsfoto's uniek en vergelijkingsfoto's per houding gecontroleerd`);
 
 // ── FV-07: representatieve soorten, exact bewijs per gekozen situatie ──────
 function flightTitlesAndImages(html) {
@@ -136,7 +421,7 @@ function flightTitlesAndImages(html) {
 }
 
 // sp253 Ruigpootbuizerd — relevante soortvergelijking (met sp005 Buizerd) blijft bestaan,
-// alleen de juveniele kant daarvan is verborgen; eigen Mannetje+Vrouwtje in vlucht.
+// twee verschillende juveniele vluchtfoto’s staan ook onder Lijkt op.
 {
   const html = recognitionPanel(byId.get('sp253'));
   const flight = flightTitlesAndImages(html);

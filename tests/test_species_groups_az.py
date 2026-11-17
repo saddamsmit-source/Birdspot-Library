@@ -189,7 +189,7 @@ def main():
             # ── SG-02: soortkiezer bij waarneming loggen ────────────────
             page.locator('.nav-item[data-route="home"]').click()
             page.locator("#screen-home").wait_for(timeout=10000)
-            page.locator("#fab").click()
+            page.locator("#fab").click();page.locator('[data-quick-action="seen"]').click()
             page.locator("#speciesPickerBtn").wait_for(timeout=8000)
             page.locator("#speciesPickerBtn").click()
             page.locator("#spPickerList .species-group").first.wait_for(timeout=8000)

@@ -1,0 +1,253 @@
+{
+  "schema": "birdspot-f2-19-proof-and-limitations-v1",
+  "date": "2026-11-14",
+  "baseSha": "c1befa8aaba15634f79e3b401942a0e82ffc8ecd",
+  "status": "PARTIALLY TESTED",
+  "species": [
+    "sp046 Zanglijster",
+    "sp047 Kramsvogel",
+    "sp048 Koperwiek"
+  ],
+  "ownerDecision": "Prefer verifiable perched, female/male and juvenile photos; only show a flight role where true free-flight and useful identification can be independently proved. Leave missing roles blank; do not invent substitutes.",
+  "sourcesRead": [
+    {
+      "publisher": "Vogelbescherming Nederland",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zanglijster",
+      "species": "sp046",
+      "verified": "Uniform brown upperparts, pale breast with arrowhead spots, repeated song phrases",
+      "status": "READ"
+    },
+    {
+      "publisher": "Vogelbescherming Nederland",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kramsvogel",
+      "species": "sp047",
+      "verified": "Gray head/rump, chestnut mantle, orange-yellow ground breast with spots, length 22–27 cm, very rare Dutch breeding",
+      "status": "READ"
+    },
+    {
+      "publisher": "Vogelbescherming Nederland",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/koperwiek",
+      "species": "sp048",
+      "verified": "Pale eyebrow and moustachial stripe, red flanks, white-ish heavily streaked breast, seasonal NL presence September-May, no Dutch breeding",
+      "status": "READ"
+    },
+    {
+      "publisher": "Vogelbescherming Nederland",
+      "url": "https://www.vogelbescherming.nl/actueel/bericht/winterse-lijsters-koperwiek-en-kramsvogel",
+      "species": "sp047;sp048",
+      "verified": "Compare gray-headed Fieldfare against bold-eyebrowed Redwing, contrasting orange vs whitish breast",
+      "status": "READ, same publisher, not independent second publisher"
+    },
+    {
+      "publisher": "ANWB bird guide",
+      "status": "NOT TESTED",
+      "explanation": "No accessible individual sp046/sp047/sp048 ANWB species passage read. Retain as preferred reference without inventing proof."
+    },
+    {
+      "publisher": "Wikimedia Commons original",
+      "url": "https://commons.wikimedia.org/wiki/File:Juvenile_Song_Thrush_(Turdus_philomelos),_Puszcza_Knyszy%C5%84ska,_Polska_(4664107073).jpg",
+      "species": "sp046",
+      "verified": "Original uploaded juvenile Song Thrush, Frank Vassen, CC BY 2.0, 23 May 2010, Flickr reviewed; no local WebP pixel validation",
+      "status": "ORIGINAL METADATA VERIFIED"
+    },
+    {
+      "publisher": "Wikimedia Commons original",
+      "url": "https://commons.wikimedia.org/wiki/File:Fieldfare_(41635078500).jpg",
+      "species": "sp047",
+      "verified": "Juvenile Fieldfare perched, hedera.baltica, CC BY-SA 2.0, Flickr reviewed, 14 July 2018; no local WebP pixel validation",
+      "status": "ORIGINAL METADATA VERIFIED"
+    },
+    {
+      "publisher": "iNaturalist original",
+      "url": "https://www.inaturalist.org/observations/384496263",
+      "species": "sp048",
+      "status": "NOT TESTED",
+      "explanation": "Observation page was inaccessible; previous metadata juvenile annotation remains historical only, not freshly confirmed."
+    }
+  ],
+  "registeredImages": {
+    "sp046": [
+      {
+        "path": "/assets/species/sp046.webp",
+        "source": "https://commons.wikimedia.org/wiki/File:Song_Thrush_Turdus_philomelos.jpg",
+        "author": "Andreas Trepte",
+        "declaredLicense": "CC BY-SA 2.5",
+        "sex": null,
+        "age": null,
+        "isFlight": false,
+        "previousFlightReview": null,
+        "originalSourceIndividuallyRechecked": false,
+        "localWebPBinaryMatch": "NOT TESTED",
+        "individualVisualAgeSexMatch": "NOT TESTED"
+      },
+      {
+        "path": "/assets/species/plumage/sp046-juv.webp",
+        "source": "https://commons.wikimedia.org/wiki/File:Juvenile_Song_Thrush_%28Turdus_philomelos%29%2C_Puszcza_Knyszy%C5%84ska%2C_Polska_%284664107073%29.jpg",
+        "author": "Frank Vassen",
+        "declaredLicense": "CC BY 2.0",
+        "sex": null,
+        "age": "juvenile",
+        "isFlight": false,
+        "previousFlightReview": null,
+        "originalSourceIndividuallyRechecked": true,
+        "localWebPBinaryMatch": "NOT TESTED",
+        "individualVisualAgeSexMatch": "NOT TESTED"
+      },
+      {
+        "path": "/assets/species/plumage/sp046-flight.webp",
+        "source": "https://commons.wikimedia.org/wiki/File:Song_Thrush_(Turdus_philomelos)_in_flight.jpg",
+        "author": "Mark Kilner",
+        "declaredLicense": "CC BY-SA 2.0",
+        "sex": null,
+        "age": null,
+        "isFlight": true,
+        "previousFlightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+        "originalSourceIndividuallyRechecked": false,
+        "localWebPBinaryMatch": "NOT TESTED",
+        "individualVisualAgeSexMatch": "NOT TESTED"
+      }
+    ],
+    "sp047": [
+      {
+        "path": "/assets/species/sp047.webp",
+        "source": "https://commons.wikimedia.org/wiki/File:Bj%C3%B6rktrast_(Turdus_pilaris)-4.jpg",
+        "author": "Frankie Fouganthin",
+        "declaredLicense": "CC BY-SA 4.0",
+        "sex": null,
+        "age": null,
+        "isFlight": false,
+        "previousFlightReview": null,
+        "originalSourceIndividuallyRechecked": false,
+        "localWebPBinaryMatch": "NOT TESTED",
+        "individualVisualAgeSexMatch": "NOT TESTED"
+      },
+      {
+        "path": "/assets/species/plumage/sp047-juv.webp",
+        "source": "https://commons.wikimedia.org/wiki/File:Fieldfare_%2841635078500%29.jpg",
+        "author": "hedera.baltica",
+        "declaredLicense": "CC BY-SA 2.0",
+        "sex": null,
+        "age": "juvenile",
+        "isFlight": false,
+        "previousFlightReview": null,
+        "originalSourceIndividuallyRechecked": true,
+        "localWebPBinaryMatch": "NOT TESTED",
+        "individualVisualAgeSexMatch": "NOT TESTED"
+      },
+      {
+        "path": "/assets/species/plumage/sp047-flight.webp",
+        "source": "https://commons.wikimedia.org/wiki/File:Turdus_pilaris,_winter,_flying.jpg",
+        "author": "Hangsna",
+        "declaredLicense": "CC BY-SA 4.0",
+        "sex": null,
+        "age": null,
+        "isFlight": true,
+        "previousFlightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+        "originalSourceIndividuallyRechecked": false,
+        "localWebPBinaryMatch": "NOT TESTED",
+        "individualVisualAgeSexMatch": "NOT TESTED"
+      }
+    ],
+    "sp048": [
+      {
+        "path": "/assets/species/sp048.webp",
+        "source": "https://commons.wikimedia.org/wiki/File:Redwing_Turdus_iliacus.jpg",
+        "author": "Andreas Trepte",
+        "declaredLicense": "CC BY-SA 2.5",
+        "sex": null,
+        "age": null,
+        "isFlight": false,
+        "previousFlightReview": null,
+        "originalSourceIndividuallyRechecked": false,
+        "localWebPBinaryMatch": "NOT TESTED",
+        "individualVisualAgeSexMatch": "NOT TESTED"
+      },
+      {
+        "path": "/assets/species/plumage/sp048-juv.webp",
+        "source": "https://www.inaturalist.org/photos/703836505",
+        "author": "Pyry Liedes",
+        "declaredLicense": "CC BY 4.0",
+        "sex": null,
+        "age": "juvenile",
+        "isFlight": false,
+        "previousFlightReview": null,
+        "originalSourceIndividuallyRechecked": false,
+        "localWebPBinaryMatch": "NOT TESTED",
+        "individualVisualAgeSexMatch": "NOT TESTED"
+      },
+      {
+        "path": "/assets/species/plumage/sp048-flight.webp",
+        "source": "https://commons.wikimedia.org/wiki/File:Redwing_in_flight.jpg",
+        "author": "Lucas Golden",
+        "declaredLicense": "CC BY 4.0",
+        "sex": null,
+        "age": null,
+        "isFlight": false,
+        "previousFlightReview": "uit-rol 2026-11-10: Tussen planten met half geopende vleugels; niet vrij in de lucht.",
+        "originalSourceIndividuallyRechecked": false,
+        "localWebPBinaryMatch": "NOT TESTED",
+        "individualVisualAgeSexMatch": "NOT TESTED"
+      }
+    ]
+  },
+  "changes": [
+    "Two new side-by-side perched comparisons Zanglijster versus Kramsvogel: adult neutral and juvenile, sourced from existing media.",
+    "Two existing adult perched comparisons refined: Kramsvogel versus Koperwiek includes chest ground colour, Koperwiek versus Zanglijster includes mouthstripe and rust-red flanks.",
+    "No new flight photo. Zanglijster and Kramsvogel existing approved flights remain unmodified, Koperwiek takeoff photo remains not flight.",
+    "Field marks and species distributions corrected from current primary source; Redwing presence September-May, Fieldfare length 22–27 cm."
+  ],
+  "limits": [
+    "GitHub fetch_file/fetch_blob only returns UTF-8; attempting to read local WebP returned UnicodeDecodeError. No original-to-WebP image comparison or photo pixel quality review in this round.",
+    "Some original Commons file pages can be found via search result, but no rendered local bird photo accessible. Do not equate original age caption with independent local pixel verification.",
+    "Unverified iNaturalist juvenile Koperwiek left out of new juvenile pairings; no false certainty about its exact age/sex/identity in local WebP.",
+    "ANWB sp046–sp048 species descriptions not individually read. Vogelbescherming and Commons are differently purposed sources, not two independent confirmations of diagnostic markers.",
+    "Physical Android field pilot, offline/update, ZIP restoration on second device, integrated release SHA and production license/credit gates NOT TESTED."
+  ],
+  "flightDecisions": [
+    {
+      "id": "sp046",
+      "registered": "/assets/species/plumage/sp046-flight.webp",
+      "previous": "goedgekeurd 2026-11-10",
+      "current": "KEEP historical decision, no new flight proof, photo unchanged"
+    },
+    {
+      "id": "sp047",
+      "registered": "/assets/species/plumage/sp047-flight.webp",
+      "previous": "goedgekeurd 2026-11-10",
+      "current": "KEEP historical decision, no new flight proof, photo unchanged"
+    },
+    {
+      "id": "sp048",
+      "registered": "/assets/species/plumage/sp048-flight.webp",
+      "previous": "uit-rol / opvliegen 2026-11-10",
+      "current": "NOT A FLIGHT. Do not move into In vlucht; no alternate found, leave empty."
+    }
+  ],
+  "counts": {
+    "F2SpeciesReviewed": 48,
+    "totalWithGuidePhoto": 140,
+    "remainingF2": 92,
+    "newPhotoPASS": 0
+  },
+  "restore": "Close F2-19 draft PR; verified F2-18 parent c1befa8a stays immutable. No main/preview/product changes.",
+  "nextBatch": "To determine by read-only F2 tracker vs source photo registry after current CI.",
+  "ciLearning": {
+    "initialSha": "8b28fbd9ce542ca9ab31d598f52303fa7085eac2",
+    "issue": "An unescaped apostrophe in a single-quoted guideComparisons.js tip contained 'foto's', causing JavaScript SyntaxError: Unexpected identifier 's' before test suites could run.",
+    "evidence": "GitHub Actions Plumage Comparison UX QA run 43644472555, job 132599043280, line 1276 SyntaxError (14 November 2026).",
+    "fix": "Replace only the problematic narrative wording with 'de twee oorspronkelijke opnamen zijn door hun fotografen als juveniel beschreven', preserving source claims and tests.",
+    "prevent": "Check generated/inserted JavaScript string literals for quotation and run a parse/syntax gate before costly browser suites.",
+    "status": "RETEST_REQUIRED",
+    "photoPassUnchanged": true,
+    "statusSourceIssue": {
+      "initialF2Head": "6da65955f9a978aa8ab1656174b2edaa1c3e2e1e",
+      "workflowRun": 43644599693,
+      "jobId": 132599442248,
+      "failedStep": "Status-script is idempotent (species.js matches source)",
+      "rootCause": "F2-19 corrected sp048 species status/months to September-May, but the canonical docs/data/vogellijst-nederland.json still had okt-apr. Running tools/species/apply_status.py rewrote the card to the old source and the CI idempotency check failed.",
+      "fix": "Change only Koperwiek (Turdus iliacus) in canonical JSON to sep-mei and preserve its breeding/source historical note, now additionally annotating the 2026-11-14 Vogelbescherming date; current species.js matches source.",
+      "prevention": "When changing any generated field (category/statusExtra/months/frequency/breeding/redList/status), update its authoritative source before editing src/data/species.js; require apply_status.py idempotency in CI.",
+      "status": "RETEST_REQUIRED"
+    }
+  }
+}

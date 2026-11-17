@@ -22,6 +22,7 @@ import { renderJournal }    from './features/journal/view.js';
 import { renderInsights }   from './features/insights/view.js';
 import { renderFilmStudio } from './features/film/view.js';
 import { openAddSheet }     from './features/sightings/addSheet.js';
+import { openQuickAdd }      from './features/sightings/quickAdd.js';
 
 // ── Routes ────────────────────────────────────────────────
 const ROUTES = {
@@ -114,7 +115,8 @@ function focusSection(screen, id) {
 
 function selectSearchResult({ route, ...target }) {
   if (route === 'add') {
-    document.getElementById('fab').click();
+    // Dedicated shortcuts open the existing form directly; only the central + offers a choice.
+    openObservationForm();
     return;
   }
   navigate(route, { force: Object.keys(target).some(key => target[key] !== undefined), target });
@@ -127,17 +129,25 @@ document.getElementById('app-nav').addEventListener('click', e => {
   navigate(btn.dataset.route);
 });
 
-// ── FAB-klik → waarneming toevoegen ───────────────────────
-document.getElementById('fab').addEventListener('click', () => {
+// ── Centrale formule: een opslagroute, ongeacht gekozen ingang ─────
+function openObservationForm(initial = {}) {
   openAddSheet({
+    initial,
     onSaved: () => {
-      // Als we op home staan: herlaad home zodat recentSightings bijgewerkt is.
-      // Als we op sightings staan (of ergens anders): navigeer naar sightings.
-      if (currentRoute === 'home') {
-        navigate('home', { force: true });
-      } else {
-        navigate('sightings', { force: true });
-      }
+      if (currentRoute === 'home') navigate('home', { force: true });
+      else navigate('sightings', { force: true });
+    },
+  });
+}
+
+// ── De centrale + biedt de twee herkenbare keuzes ──────────
+document.getElementById('fab').addEventListener('click', () => {
+  openQuickAdd({
+    onChoose: openObservationForm,
+    onSoundSaved: sightings => {
+      navigate('map', { force: true, target: { sightingId: sightings[0].id } });
+      const count = sightings.length;
+      showToast(count === 1 ? 'Waarneming gepind' : `${count} waarnemingen gepind`);
     },
   });
 });

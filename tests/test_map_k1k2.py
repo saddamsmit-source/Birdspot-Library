@@ -149,7 +149,7 @@ def main():
             assert p.locator("#addSightingSheet").count() == 0
             print("K2-04 OK — annuleren; gewone tik maakt geen waarneming")
 
-            p.locator("#fab").click()
+            p.locator("#fab").click();p.locator('[data-quick-action="seen"]').click()
             p.locator("#addSightingSheet").wait_for(timeout=8000)
             p.locator("#sightPinBtn").click()
             p.locator("#pinCenterPin").wait_for(state="visible", timeout=8000)

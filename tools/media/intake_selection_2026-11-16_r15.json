@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-16",
+  "purpose": "F3-R15: juvenielenfoto Heggenmus (rol was open). Visueel beoordeeld op 960 px-voorvertoning: gestreepte kop en borst, minder grijs dan adult, gele mondhoek, fijne spitse snavel; scherp, hele vogel in beeld.",
+  "items": [
+    {
+      "speciesId": "sp054",
+      "kind": "plumage",
+      "role": "juv",
+      "title": "File:Dunnock - Prunella modularis (Juvenile) (52080230098).jpg",
+      "sha1": "b04f9c421f7ca93c86c585f36a565a914571d73d",
+      "license": "CC BY 2.0",
+      "author": "caroline legg",
+      "asset": "/assets/species/plumage/sp054-juv.webp",
+      "crop": [
+        0.2,
+        0.1,
+        0.95,
+        0.9
+      ],
+      "register": {
+        "nl": "Heggenmus",
+        "latin": "Prunella modularis",
+        "label": "Juveniel",
+        "age": "juvenile",
+        "alt": "Jonge Heggenmus op een tak, met gestreepte kop en borst, een fijne spitse snavel en roze poten.",
+        "note": "Jonge vogel: kop en borst gestreept in plaats van grijs, gele mondhoek nog zichtbaar.",
+        "visualCheck": "Jonge Heggenmus in zijaanzicht op schors: dichte bruine streping op kop, borst en flanken, weinig grijs, gele mondhoek, fijne spitse snavel, roze poten; scherp.",
+        "verification": "Commons-titel en categorie 'Prunella modularis (juvenile)'. Gestreepte kop en borst (Blasco-Zumeta & Heinze), minder grijs dan adult (RSPB) en gele mondhoek ondersteunen de leeftijd; fijne snavel past bij Heggenmus, niet bij Huismus.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/heggenmus"
+      }
+    }
+  ]
+}

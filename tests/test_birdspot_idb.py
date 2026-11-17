@@ -177,7 +177,10 @@ with sync_playwright() as pw:
     page.add_init_script("window.__errs = []; window.onerror = (m,s,l,c,e) => window.__errs.push(m);")
 
     # Initiële lading — zorg dat DB-schema bestaat
-    page.goto(BASE_URL, wait_until="networkidle")
+    # Home contains streaming/background network requests; networkidle is not a reliable readiness contract.
+    # Wait for the actual route and retain the strict decode/Blob assertions below.
+    page.goto(BASE_URL, wait_until="domcontentloaded")
+    page.locator("#screen-home").wait_for(state="attached", timeout=15000)
     page.wait_for_timeout(1000)
     print("App geladen. Start IDB-injectietests.\n")
 
@@ -296,7 +299,11 @@ with sync_playwright() as pw:
     page_neg.add_init_script("window.__errs = []; window.onerror = (m,s,l,c,e) => window.__errs.push(m);")
     page_neg.route("**/assets/showcase/**", lambda route: route.abort())
     try:
-        page_neg.goto(BASE_URL, wait_until="networkidle")
+        # Zelfde gereedheidscontract als de hoofdcontext: networkidle wacht ook op de service-worker-precache, die bij
+        # elke APP_VERSION-ophoging groeit en op CI de 30 s overschreed (PR #268/#269). De strikte fallback-, crash- en
+        # decode-asserties hieronder blijven ongewijzigd; de abort-route blokkeert de showcasefoto nog steeds.
+        page_neg.goto(BASE_URL, wait_until="domcontentloaded")
+        page_neg.locator("#screen-home").wait_for(state="attached", timeout=15000)
         page_neg.wait_for_selector('#featuredBirdName', timeout=5000)
         page_neg.wait_for_function(
             "() => { const s = document.querySelector('#slideshow'); return s && s.classList.contains('has-no-photo'); }",

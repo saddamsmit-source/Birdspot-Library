@@ -51,7 +51,8 @@
         }
       },
       "corrections": [
-        "Juvenielenfoto en kennisprofiel toegevoegd. De vergelijking met Matkop en het bijschrift van de sneeuwfoto gecontroleerd."
+        "Juvenielenfoto en kennisprofiel toegevoegd. De vergelijking met Matkop en het bijschrift van de sneeuwfoto gecontroleerd.",
+        "Vier originele foto’s gematcht. Waarneming en juvenielenannotatie herbevestigd. De sneeuwfoto blijft bij de overige foto’s. De zichtbare makercredit staat in PR #212."
       ],
       "missing": [
         "Scherpe foto van één Kuifmees in vrije vlucht met bevestigde hergebruikrechten."
@@ -59,7 +60,7 @@
       "wishes": [],
       "sexPolicy": "Mannetje en vrouwtje hebben gelijk veldkleed. Leeftijd is alleen gelabeld als die wordt ondersteund door de bron.",
       "uncertain": [],
-      "date": "2026-11-12"
+      "date": "2026-11-14"
     },
     "sp044": {
       "assets": {
@@ -78,15 +79,24 @@
           "verdict": "goedgekeurd"
         },
         "/assets/species/plumage/sp044-flight.webp": {
-          "role": "In vlucht",
-          "content": "Twee Ringmussen in vrije vlucht. Wangvlek en kastanjebruine kruin zijn zichtbaar.",
+          "role": "Overige herkenningsfoto's (luchtgevecht; niet echte vrije vlucht)",
+          "content": "Twee Ringmussen in een luchtgevecht met poten naar voren; kruin en wangvlek zichtbaar.",
           "sexAge": "Geslacht en leeftijd niet gelabeld.",
-          "quality": "Goed herkenbare koptekening en vleugels; twee vogels in beeld.",
-          "verdict": "goedgekeurd"
+          "quality": "Scherp genoeg voor kopkenmerken; geen bruikbaar vrij vluchtsilhouet.",
+          "verdict": "uit-rol"
+        },
+        "/assets/species/plumage/sp044-flight-free.webp": {
+          "role": "In vlucht",
+          "content": "Ringmus vrij in de lucht van achteren, vleugels en staart gespreid; kastanjebruine kruin en zwarte wangvlek.",
+          "sexAge": "Geslachten gelijk; leeftijd niet vastgesteld.",
+          "quality": "Scherp, egale achtergrond, geen poten of ondergrond zichtbaar.",
+          "verdict": "goedgekeurd",
+          "addedIn": "F3-R12-media"
         }
       },
       "corrections": [
-        "Juvenielenfoto en kennisprofiel toegevoegd. De kleed- en vluchtvergelijking met Huismus gecontroleerd."
+        "Juvenielenfoto en kennisprofiel toegevoegd. De kleed- en vluchtvergelijking met Huismus gecontroleerd.",
+        "F3-R12 (2026-11-16): luchtgevecht-foto uit de vluchtrol naar Overige; echte vrije-vluchtfoto (Mildeep, CC BY-SA 4.0) via de Commons-intake toegevoegd. Alle getoonde foto's tegen het bronbeeld gecontroleerd (origcheck)."
       ],
       "missing": [],
       "wishes": [
@@ -177,7 +187,8 @@
         }
       },
       "corrections": [
-        "Bestaande juvenielenfoto herbeoordeeld. Kennisprofiel en beeldvergelijking met Zwarte Mees toegevoegd."
+        "Bestaande juvenielenfoto herbeoordeeld. Kennisprofiel en beeldvergelijking met Zwarte Mees toegevoegd.",
+        "Twee originele gidsfoto’s gematcht. De fotograaf bevestigt juveniel. De extra vluchtkandidaat toont de lange staart maar heeft bewogen vleugels en zichtbare takjes."
       ],
       "missing": [
         "Scherpe foto in vrije vlucht van een voor West-Europa representatieve Staartmees met bevestigde hergebruikrechten."
@@ -185,7 +196,7 @@
       "wishes": [],
       "sexPolicy": "De geslachten lijken sterk op elkaar. Het geslacht is niet op kleed bepaald; juveniel volgt de fotobron.",
       "uncertain": [],
-      "date": "2026-11-12"
+      "date": "2026-11-14"
     },
     "sp032": {
       "assets": {
@@ -212,7 +223,8 @@
         }
       },
       "corrections": [
-        "Juvenielenfoto en kennisprofiel toegevoegd. Vergelijking met Matkop aangescherpt op roep, snavelbasis en vleugel."
+        "Juvenielenfoto en kennisprofiel toegevoegd. Vergelijking met Matkop aangescherpt op roep, snavelbasis en vleugel.",
+        "Drie originele foto’s gematcht. Waarneming en juvenielenannotatie herbevestigd. Uitgeschreven makercredit bij vooraanzicht voorbereid in PR #210."
       ],
       "missing": [
         "Scherpe foto van één Glanskop in vrije vlucht met bevestigde hergebruikrechten."
@@ -220,7 +232,7 @@
       "wishes": [],
       "sexPolicy": "De geslachten lijken sterk op elkaar. Het geslacht is niet op kleed bepaald; juveniel volgt de fotobron.",
       "uncertain": [],
-      "date": "2026-11-12"
+      "date": "2026-11-14"
     },
     "sp031": {
       "assets": {
@@ -247,7 +259,8 @@
         }
       },
       "corrections": [
-        "Bronbevestigde juvenielenfoto en kennisprofiel toegevoegd. Vergelijking met Glanskop gecontroleerd."
+        "Bronbevestigde juvenielenfoto en kennisprofiel toegevoegd. Vergelijking met Glanskop gecontroleerd.",
+        "Drie originele foto’s gematcht. Bron noemt het jong expliciet. De vergelijking toont het naast een jonge Glanskop. Uitgeschreven makercredit voorbereid in PR #210."
       ],
       "missing": [
         "Scherpe vrije-vluchtfoto met bevestigde hergebruikrechten."
@@ -255,7 +268,7 @@
       "wishes": [],
       "sexPolicy": "De geslachten lijken op elkaar in het veld. Het geslacht is niet op kleed bepaald; juveniel volgt de fotobron.",
       "uncertain": [],
-      "date": "2026-11-12"
+      "date": "2026-11-14"
     },
     "sp176": {
       "assets": {
@@ -356,17 +369,20 @@
           "verdict": "goedgekeurd"
         },
         "/assets/species/plumage/sp038-flight.webp": {
-          "role": "In vlucht (Mannetje)",
-          "content": "Mannetje in vlucht met zwarte kruin en gele vleugelband.",
+          "role": "Verenkleed (Mannetje; neerstrijkend, niet echte vrije vlucht)",
+          "content": "Mannetje Sijs vlak voor de landing: vleugels geheven, poten naar voren gestrekt met gespreide tenen; zwarte kruin en gele vleugelband zichtbaar.",
           "sexAge": "Mannetje, volgens de bestaande vluchtbron en het veldkleed.",
-          "quality": "Vrije vlucht. De vleugel is licht bewegingsonscherp.",
-          "verdict": "goedgekeurd"
+          "quality": "Kop en vleugeltekening bruikbaar; landingshouding, dus ongeschikt als vrije-vluchtfoto. Fotograaf beschrijft 'comes in to land'.",
+          "verdict": "uit-rol"
         }
       },
       "corrections": [
-        "Vrouwtjes- en juvenielenfoto toegevoegd. Kennisprofiel en beeldvergelijking bijgewerkt. De bestaande vluchtfoto is herbeoordeeld."
+        "Vrouwtjes- en juvenielenfoto toegevoegd. Kennisprofiel en beeldvergelijking bijgewerkt. De bestaande vluchtfoto is herbeoordeeld.",
+        "F3-R10b (2026-11-16): bestaande vluchtfoto hercontroleerd tegen de vrije-vluchtregel: landing (fotograafbeschrijving en naar voren gestrekte poten). Uit de vluchtrol naar Verenkleed (Mannetje); bestand en herkomst behouden. Vluchtvergelijkingen met Putter en Groenling als ontbrekend gemarkeerd."
       ],
-      "missing": [],
+      "missing": [
+        "Echte vrije-vluchtfoto (bij voorkeur mannetje, zijaanzicht): vervanging open, in F3-R10b bewust niet gekozen; niet verzonnen."
+      ],
       "wishes": [],
       "sexPolicy": "De geslachtslabels van volwassen vogels volgen bron en zichtbaar verenkleed. Bij juvenielen is het geslacht onbekend.",
       "uncertain": [],
