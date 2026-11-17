@@ -35,7 +35,10 @@
     "sp061",
     "sp062",
     "sp063",
-    "sp064"
+    "sp064",
+    "sp065",
+    "sp066",
+    "sp067"
   ],
   "policy": {
     "pairRequiredWhenSimilar": true,
@@ -1788,6 +1791,99 @@
       "sources": [
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/goudhaan",
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/vuurgoudhaan"
+      ]
+    },
+    {
+      "id": "LK-040",
+      "focus": [
+        "sp066",
+        "sp067"
+      ],
+      "birds": [
+        "sp066",
+        "sp067"
+      ],
+      "risk": "adult",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Both wing-pattern photos source-matched in F3-R19 (origcheck r = 1.00); Taigaboomkruiper photos from Sweden and UK (Boomkruiper absent there); independent second review open"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Flank",
+          "values": [
+            "Boomkruiper doorgaans bruin getinte achterflanken",
+            "Taigaboomkruiper witter van onderen, zonder roodbruine flanken"
+          ]
+        },
+        {
+          "label": "Wenkbrauw",
+          "values": [
+            "Boomkruiper kortere, minder contrastrijke wenkbrauw",
+            "Taigaboomkruiper witte wenkbrauw, vooral breed achter het oog"
+          ]
+        },
+        {
+          "label": "Geluid",
+          "values": [
+            "Boomkruiper zang stijgt, roep doordringend",
+            "Taigaboomkruiper zang daalt, roep dun en ijl"
+          ]
+        }
+      ],
+      "caution": "Op kleed alleen is onderscheid vaak onzeker; gebruik meerdere kenmerken en liefst geluid. Snavel- en nagellengte zijn in het veld niet betrouwbaar.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/boomkruiper",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/taigaboomkruiper",
+        "https://birds-europe.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/nsr_taxon.php?id=130962",
+        "https://birds-europe.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/nsr_taxon.php?id=130961"
+      ]
+    },
+    {
+      "id": "LK-041",
+      "focus": [
+        "sp065",
+        "sp066"
+      ],
+      "birds": [
+        "sp065",
+        "sp066"
+      ],
+      "risk": "adult",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Both photos source-matched in F3-R19; independent second review open"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Kleur",
+          "values": [
+            "Boomklever blauwgrijze bovendelen met zwarte oogstreep",
+            "Boomkruiper bruin met lichte vlekjes, roomwitte onderzijde"
+          ]
+        },
+        {
+          "label": "Beweging",
+          "values": [
+            "Boomklever beweegt ook met de kop omlaag langs de stam",
+            "Boomkruiper klimt omhoog langs de stam"
+          ]
+        }
+      ],
+      "caution": "Bij tegenlicht kan kleur wegvallen; let dan op snavelvorm en klimrichting.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/boomklever",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/boomkruiper"
       ]
     }
   ],

@@ -4317,10 +4317,10 @@
       "register": "NL07",
       "label": "Sovon — Boomkruiper",
       "url": "https://stats.sovon.nl/stats/soort/14870",
-      "edition": "Online geraadpleegd 14-11-2026",
+      "edition": "Online geraadpleegd 17-11-2026",
       "scope": "Nederland",
-      "confirms": "broedpopulatie 2018–2020, jaarrond",
-      "checked": "2026-11-14",
+      "confirms": "broedpopulatie 2018–2020, trend sinds 1990 en laatste twaalf jaar, winteraantallen",
+      "checked": "2026-11-17",
       "certainty": "hoog",
       "publisher": "Sovon Vogelonderzoek Nederland"
     },
@@ -4804,6 +4804,28 @@
       "edition": "Online geraadpleegd 17-11-2026",
       "scope": "Nederland",
       "confirms": "Broedpopulatie, trend en winteraantallen",
+      "checked": "2026-11-17",
+      "certainty": "hoog",
+      "publisher": "Sovon Vogelonderzoek Nederland"
+    },
+    "SOV_KLEVER": {
+      "register": "NL07",
+      "label": "Sovon — Boomklever",
+      "url": "https://stats.sovon.nl/stats/soort/14790",
+      "edition": "Online geraadpleegd 17-11-2026",
+      "scope": "Nederland",
+      "confirms": "Broedpopulatie, trend en winteraantallen",
+      "checked": "2026-11-17",
+      "certainty": "hoog",
+      "publisher": "Sovon Vogelonderzoek Nederland"
+    },
+    "SOV_TAIGA": {
+      "register": "NL07",
+      "label": "Sovon — Taigaboomkruiper",
+      "url": "https://stats.sovon.nl/stats/soort/14860",
+      "edition": "Online geraadpleegd 17-11-2026",
+      "scope": "Nederland",
+      "confirms": "Geen landelijke aantallen of trend (onvoldoende gegevens); broedt sinds 1993 in het uiterste zuidoosten",
       "checked": "2026-11-17",
       "certainty": "hoog",
       "publisher": "Sovon Vogelonderzoek Nederland"
@@ -5774,6 +5796,13 @@
         "text": "Nederlandse standvogel. Sovon schat 135.000–180.000 broedparen voor 2018–2020.",
         "sources": [
           "VB_BOOMKRUIPER",
+          "SOV_STT"
+        ]
+      },
+      {
+        "kind": "trend",
+        "text": "Sinds 1990 en in de laatste twaalf jaar een significante toename (minder dan 5% per jaar). In de winter maximaal 300.000–500.000 vogels.",
+        "sources": [
           "SOV_STT"
         ]
       }
@@ -8666,6 +8695,13 @@
         "sources": [
           "VB_KLEVER"
         ]
+      },
+      {
+        "kind": "trend",
+        "text": "Sovon: sinds 1990 en in de laatste twaalf jaar een significante toename (minder dan 5% per jaar). In de winter maximaal 90.000–110.000 vogels.",
+        "sources": [
+          "SOV_KLEVER"
+        ]
       }
     ],
     "life": [
@@ -8876,6 +8912,13 @@
         "text": "Aantallen schommelen; de kortsnavelvorm lijkt sinds 2011 stabiel.",
         "sources": [
           "VB_TAIGA"
+        ]
+      },
+      {
+        "kind": "voorkomen",
+        "text": "Sovon geeft geen landelijke aantallen of trend (onvoldoende gegevens). De soort broedt sinds 1993 in het uiterste zuidoosten en wordt door de onopvallende zang mogelijk ondergeteld.",
+        "sources": [
+          "SOV_TAIGA"
         ]
       }
     ],

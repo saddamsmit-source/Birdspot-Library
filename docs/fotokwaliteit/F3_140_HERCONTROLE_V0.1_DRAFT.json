@@ -53,9 +53,9 @@
     "audioMissing": 75,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 86,
+    "nextNotStarted": 83,
     "secondBatchStarted": 3,
-    "contentInspected": 54,
+    "contentInspected": 57,
     "contentComplete": 0,
     "thirdBatchStarted": 3,
     "fourthBatchStarted": 3,
@@ -72,7 +72,8 @@
     "fifteenthBatchStarted": 3,
     "sixteenthBatchStarted": 3,
     "seventeenthBatchStarted": 3,
-    "eighteenthBatchStarted": 3
+    "eighteenthBatchStarted": 3,
+    "nineteenthBatchStarted": 3
   },
   "records": [
     {
@@ -5908,37 +5909,63 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R19",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium 320/360/390 px via tests/test_lookalike_r19_browser.py; no physical device)",
+          "endToEndGuideUI": "PARTIALLY TESTED (Chromium species card and lookalike panels; no device or offline run)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "independentSecondReview": "NOT TESTED (own re-inspection is not independent)",
+          "ebirdDistributionAndBias": "BLOCKED (eBird Anubis bot-check since F3-R15; not retried; parked)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (credits in registry and player HTML; no visual attribution audit)",
+          "audioRecordingsAuthenticity": "NOT TESTED (source label only under AUDIOCHECK_PROTOCOL v0.2; not listened to)",
+          "soundRolesSongCall": "NOT TESTED (source labels only)",
+          "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (local files present; offline playback not tested on device)",
+          "photoOriginalIdentity": "VERIFIED (origcheck 17-11-2026: 3/3 same shot, r = 1.00)",
+          "photoIndividualRights": "VERIFIED (current Commons licence matches 3/3; author strings differ only by Commons suffix 'from Wrocław, Poland' / '( Hyla meridionalis )')",
+          "plumageAndTrueFlight": "VERIFIED (hero: blue-grey upperparts, black eye-stripe, white throat, warm underparts — ssp. caesia; head-down pose shows typical behaviour; flight photo is true free flight, wings spread and sharp; no sex label shown; juvenile not sought per photo priority — exemption)",
+          "photoPairComparisons": "PARTIALLY TESTED (Boomkruiper LK-041 both directions)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming read 17-11-2026: colours, bill, behaviour head-down vs Boomkruiper, voice, numbers, resident; ANWB-vogelgids NOT TESTED: no accessible edition)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (length 12–14.5 cm Vogelbescherming; Naturalis Birds of Europe (birds-europe.linnaeus.naturalis.nl, search snippet 17-11) gives single value 14 cm — within range, no range change)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon 17-11-2026: 34,000–42,000 pairs 2018–2020; significant increase since 1990 and last 12 years; winter max. 90,000–110,000)",
+          "audioLicenseAndAttribution": "VERIFIED (2 recordings: current Commons licence matches; authors match)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-041 Boomklever–Boomkruiper new)"
         },
         "findings": [
-          "Juveniel"
+          "3/3 foto's dezelfde opname; Commons-licenties actueel.",
+          "Hoofdfoto, kop-omlaag en echte vrije vlucht kloppen; geen geslachtslabel.",
+          "Sovon-trend toegevoegd (toename)."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/boomklever",
+          "https://stats.sovon.nl/stats/soort/14790",
+          "https://birds-europe.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/nsr_taxon.php?id=130955",
+          "docs/media-intake/2026-11-17/origcheck-r19/origcheck.json",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R19_BOOMKLEVER_BOOMKRUIPER_TAIGABOOMKRUIPER_2026-11-17_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on physical device; local source/photo review and Chromium only",
+        "independence": "PARTIAL / origcheck by Claude; no independent reviewer",
+        "fullPass": false,
+        "photoFilesInspected": 3,
+        "photoBlobSHAs": [
+          "916eda7cb338b6a5313cfbe7b0b6cc8f441ca8de",
+          "4733c218535b0623eacdb1df0289262419973ba9",
+          "8d0c4998e8c35aaaefc69a85222fe7d81efc6fdf"
+        ],
+        "photoSourceMatches": [],
+        "priorPhotoMatches": [],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [],
+        "contentStatus": "PARTIALLY REVIEWED (all shown photos checked against source images; no FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R19 node/browser tests run separately.",
+        "exemptions": {
+          "plumageAndTrueFlight": {
+            "reason": "Geen juveniele foto gezocht: juveniel is nooit een vulpositie (eigenaarbesluit 16/17-11); positie open, niet VERIFIED."
+          }
+        }
       }
     },
     {
@@ -5964,11 +5991,6 @@
             "role": "Overige herkenningsfoto's",
             "path": "/assets/species/plumage/sp066-wing.webp",
             "oldRights": "VERIFIED"
-          },
-          {
-            "role": "Verenkleed (Juveniel)",
-            "path": "/assets/species/plumage/sp066-juv-fed.webp",
-            "oldRights": "VERIFIED"
           }
         ],
         "existingAudioCount": 2,
@@ -5978,38 +6000,63 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R19",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium 320/360/390 px via tests/test_lookalike_r19_browser.py; no physical device)",
+          "endToEndGuideUI": "PARTIALLY TESTED (Chromium species card and lookalike panels; no device or offline run)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "independentSecondReview": "NOT TESTED (own re-inspection is not independent)",
+          "ebirdDistributionAndBias": "BLOCKED (eBird Anubis bot-check since F3-R15; not retried; parked)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (credits in registry and player HTML; no visual attribution audit)",
+          "audioRecordingsAuthenticity": "NOT TESTED (source label only under AUDIOCHECK_PROTOCOL v0.2; not listened to)",
+          "soundRolesSongCall": "NOT TESTED (source labels only)",
+          "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (local files present; offline playback not tested on device)",
+          "photoOriginalIdentity": "VERIFIED (origcheck 17-11-2026: 3/3 same shot, r = 1.00)",
+          "photoIndividualRights": "VERIFIED (shown photos: current Commons licence and author match; withheld juvenile: licence match, author string with location suffix)",
+          "plumageAndTrueFlight": "VERIFIED (shown roles only: hero dull buffy underparts with brownish rear flanks, short weak supercilium, long bill; wing photo ssp. brachydactyla with brownish flanks and weak supercilium — consistent with Naturalis/eBird marks; plumage-only ID remains difficult per sources. Juvenile 'Feed me!' NOT RELEASED: age convincing, species not provable (Wrocław, both Certhia; strong colour cast) — moved to retired; flight not sought — exemption)",
+          "photoPairComparisons": "PARTIALLY TESTED (Taigaboomkruiper LK-040 and Boomklever LK-041 both directions; Winterkoning LK-029 existing)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming read 17-11-2026: plumage, bill, tail, Taiga differences (supercilium, whiter below, song), voice, numbers; ANWB-vogelgids NOT TESTED: no accessible edition)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (length 12–13.5 cm Vogelbescherming; Naturalis Birds of Europe (birds-europe.linnaeus.naturalis.nl, search snippet 17-11) 12.5 cm — within range, no change)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon 17-11-2026: 135,000–180,000 pairs; significant increase since 1990 and last 12 years; winter max. 300,000–500,000)",
+          "audioLicenseAndAttribution": "VERIFIED (2 recordings: current Commons licence and author match)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-040 and LK-041 new; texts match VBN + Naturalis; no bill/claw length used as decisive)"
         },
         "findings": [
-          "Een bronbevestigde vrije-vluchtfoto.",
-          "Het oorspronkelijke portret houdt de bronbepaling 'Gartenbaumläufer'. Gebruik het nieuwe vleugelbeeld en geluid voor het onderscheid."
+          "3/3 foto's dezelfde opname; rechten actueel.",
+          "Hoofdfoto en vleugelfoto passen bij Boomkruiper (bruine achterflanken, zwakke wenkbrauw).",
+          "Juveniel niet vrijgegeven: soort niet bewijsbaar (Wrocław, beide soorten; kleurzweem). Bestand en herkomst bewaard in retired.sp066."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/boomkruiper",
+          "https://stats.sovon.nl/stats/soort/14870",
+          "https://birds-europe.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/nsr_taxon.php?id=130962",
+          "https://ebird.org/species/shttre1",
+          "docs/media-intake/2026-11-17/origcheck-r19/origcheck.json",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R19_BOOMKLEVER_BOOMKRUIPER_TAIGABOOMKRUIPER_2026-11-17_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on physical device; local source/photo review and Chromium only",
+        "independence": "PARTIAL / origcheck by Claude; no independent reviewer",
+        "fullPass": false,
+        "photoFilesInspected": 3,
+        "photoBlobSHAs": [
+          "ab1f4cd30e157f350bad18426c877cde1062c966",
+          "4c26b9f6341675337c4ab3a1c154509eae0e9931"
+        ],
+        "photoSourceMatches": [],
+        "priorPhotoMatches": [],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [],
+        "contentStatus": "PARTIALLY REVIEWED (all shown photos checked against source images; no FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R19 node/browser tests run separately.",
+        "exemptions": {
+          "plumageAndTrueFlight": {
+            "reason": "Geslachten gelijk; juveniel niet vrijgegeven wegens onbewezen soort en vrije vlucht niet gezocht (eigenaarbesluit 16/17-11); posities open, niet VERIFIED."
+          }
+        }
       }
     },
     {
@@ -6044,39 +6091,62 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R19",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium 320/360/390 px via tests/test_lookalike_r19_browser.py; no physical device)",
+          "endToEndGuideUI": "PARTIALLY TESTED (Chromium species card and lookalike panels; no device or offline run)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "independentSecondReview": "NOT TESTED (own re-inspection is not independent)",
+          "ebirdDistributionAndBias": "BLOCKED (eBird Anubis bot-check since F3-R15; not retried; parked)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (credits in registry and player HTML; no visual attribution audit)",
+          "audioRecordingsAuthenticity": "NOT TESTED (source label only under AUDIOCHECK_PROTOCOL v0.2; not listened to)",
+          "soundRolesSongCall": "NOT TESTED (source labels only)",
+          "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (local files present; offline playback not tested on device)",
+          "photoOriginalIdentity": "VERIFIED (origcheck 17-11-2026: 2/2 same shot, r = 1.00)",
+          "photoIndividualRights": "VERIFIED (current Commons licence and author match 2/2)",
+          "plumageAndTrueFlight": "VERIFIED (shown roles only: hero Vaxholm, Sweden and wing photo UK — both outside Boomkruiper range; white underparts without rufous flanks, broad white supercilium behind eye — matches VBN + Naturalis; subspecies familiaris/britannica by location, not by plumage; juvenile and flight not sought — exemption)",
+          "photoPairComparisons": "PARTIALLY TESTED (Boomkruiper LK-040 both directions)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming read 17-11-2026: wing 'bakje', white supercilium, whiter below (nominate), short bill of macrodactyla, voice, status; ANWB-vogelgids NOT TESTED: no accessible edition)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (length ca. 12.5 cm Vogelbescherming; Naturalis Birds of Europe (birds-europe.linnaeus.naturalis.nl, search snippet 17-11) 12.5 cm — agree)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon 17-11-2026: no national estimate or trend — insufficient data; breeds in far south-east since 1993, possibly under-recorded)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (song: licence and author match; call (British Library): licence matches, Commons author field empty — author not machine-confirmed)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-040 new)"
         },
         "findings": [
-          "In vlucht",
-          "Juveniel",
-          "De fotograaf benoemt Certhia familiaris. De hoofdfoto biedt beperkt zicht op de vleugelband. Beide foto's houden de ondersoort open."
+          "2/2 foto's dezelfde opname; rechten actueel.",
+          "Beide foto's buiten het areaal van de Boomkruiper (Zweden, VK) en passend: witte onderzijde, brede witte wenkbrauw.",
+          "Sovon: geen landelijke aantallen of trend; roepopname: auteur op Commons leeg."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/taigaboomkruiper",
+          "https://stats.sovon.nl/stats/soort/14860",
+          "https://birds-europe.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/nsr_taxon.php?id=130961",
+          "docs/media-intake/2026-11-17/origcheck-r19/origcheck.json",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R19_BOOMKLEVER_BOOMKRUIPER_TAIGABOOMKRUIPER_2026-11-17_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on physical device; local source/photo review and Chromium only",
+        "independence": "PARTIAL / origcheck by Claude; no independent reviewer",
+        "fullPass": false,
+        "photoFilesInspected": 2,
+        "photoBlobSHAs": [
+          "bd0b9ac24e8e58b98f4c138eb1aab0ad10f0d7c6",
+          "e92f404dd6dd35af35900454277871eccb72a78b"
+        ],
+        "photoSourceMatches": [],
+        "priorPhotoMatches": [],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [],
+        "contentStatus": "PARTIALLY REVIEWED (all shown photos checked against source images; no FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R19 node/browser tests run separately.",
+        "exemptions": {
+          "plumageAndTrueFlight": {
+            "reason": "Geslachten gelijk; juveniel en vrije vlucht niet gezocht (eigenaarbesluit 16/17-11); posities open, niet VERIFIED."
+          }
+        }
       }
     },
     {

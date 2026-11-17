@@ -202,3 +202,11 @@ De tekst in de kolom 'Open uit bronronde' is overgenomen uit de laatste F2-voort
 | sp062 Braamsluiper | F3-R18 | Lengte één uitgever (VBN 12–13 cm). Trend: VBN "stabiel sinds ±2000" vs Sovon laatste 12 jaar significante toename. Vlucht/juveniel niet gezocht (fotoprioriteit). |
 | sp063 Goudhaantje | F3-R18 | QA-fix 17-11: foto `sp063-adult-f.webp` neutraal gelabeld "Volwassen" (Overige herkenningsfoto's). Vrouwtje alleen als bronclaim fotograaf (`sourceSexClaim`); gesloten zijaanzicht sluit verborgen oranje niet uit (Ringers' DigiGuide Ottenby). Bronclaim op Commons door Claude deze sessie niet zelf herlezen (WebFetch faalde) — bevestigd door QA ChatGPT. Trend: VBN "stabiel" vs Sovon laatste 12 jaar sterke afname. Vluchtfoto ssp. japonensis (bestaand). |
 | sp064 Vuurgoudhaan | F3-R18 | QA-fix 17-11: juveniel (iNaturalist 298756944) **niet vrijgegeven** — verplaatst naar `retired.sp064` met bestand, bron, licentieclaim en reden; soort/leeftijd/rechten niet VERIFIED. Terugplaatsen alleen na onafhankelijke determinatie en individuele rechtencontrole. Juvenielenfotopaneel LK-039 verborgen (MISSING_VERIFIED_PAIR); volwassen paar LK-038 behouden. |
+
+### F3-R19 (17-11-2026)
+
+| Soort | Batch | Open punt |
+|---|---|---|
+| sp065 Boomklever | F3-R19 | Lengte: Naturalis één waarde (14 cm) binnen VBN 12–14,5 cm; geen tweede bereik. Juveniel niet gezocht. |
+| sp066 Boomkruiper | F3-R19 | Juveniel `sp066-juv-fed.webp` (Commons "Feed me!", hedera.baltica, Wrocław) **niet vrijgegeven**: leeftijd overtuigend, soort niet bewijsbaar (beide Certhia-soorten daar; kleurzweem). Bestand en herkomst in `retired.sp066`. Vrije vlucht ontbreekt. |
+| sp067 Taigaboomkruiper | F3-R19 | Roepopname (British Library): Commons-auteurveld leeg → rechten PARTIALLY TESTED. Ondersoort alleen via locatie (Zweden: familiaris; VK: britannica). Sovon: geen landelijke aantallen of trend. |

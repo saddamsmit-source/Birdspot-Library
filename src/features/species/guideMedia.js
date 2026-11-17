@@ -3904,26 +3904,6 @@ export const GUIDE_PLUMAGE = Object.freeze({
   "sp066": {
     "adult_m": {
       "reuseGuidePhoto": true
-    },
-    "juv": {
-      "file": "Feed me! (20741323391).jpg",
-      "nl": "Boomkruiper",
-      "latin": "Certhia brachydactyla",
-      "author": "hedera.baltica",
-      "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
-      "source": "https://commons.wikimedia.org/wiki/File:Feed_me!_(20741323391).jpg",
-      "alt": "Twee Boomkruipers op dezelfde stam. Het jong links neemt voedsel aan van de ouder rechts.",
-      "modifications": "Omgezet naar WebP zonder uitsnede",
-      "reviewed": "2026-11-14",
-      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/boomkruiper",
-      "width": 1000,
-      "height": 779,
-      "image": "/assets/species/plumage/sp066-juv-fed.webp",
-      "verification": "De bron identificeert Certhia brachydactyla en benoemt de jonge vogel links en de ouder rechts. Beide vogels staan los van het nest op de stam.",
-      "label": "Jong links, ouder rechts",
-      "note": "Het jong links krijgt voedsel. De gele snavelhoeken zijn zichtbaar.",
-      "age": "juvenile"
     }
   },
   "sp067": {
