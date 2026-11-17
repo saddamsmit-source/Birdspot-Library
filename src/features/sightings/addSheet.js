@@ -34,7 +34,7 @@ import { SPECIES } from '../../data/species.js';
 import { openPinPicker } from './pinPicker.js';
 import { normalizeEvidence, validPin, OBSERVATION_METHODS, BREEDING_BEHAVIORS } from './evidence.js';
 import { addSighting, updateSighting } from '../../data/sightings.js';
-import { loadPlaces, addPlace, savePlaces } from '../../data/places.js';
+import { loadPlaces, addPlace, savePlaces, nearestPlace } from '../../data/places.js';
 import { askPlaceReuse } from '../map/placePrompt.js';
 import { changePhotos, getPhoto } from '../../data/db.js';
 import { openMediaPreview } from '../../utils/validateMedia.js';
@@ -426,8 +426,11 @@ function _coordsHintText() {
   if (!validPin(_state.lat,_state.lon)) return 'Nog geen pin gekozen. Alleen een plaatsnaam opslaan mag ook.';
   const acc = Number.isFinite(_state.pinAccuracyM) ? ` · ±${_state.pinAccuracyM} m` : '';
   const place = _state.placeId ? loadPlaces().find(p => p.id === _state.placeId) : null;
+  const near = _state.nearSuggestion;
+  const offer = !place && near && near.lat === _state.lat && near.lon === _state.lon
+    ? ` <button type="button" class="link-btn" id="sightUseNearPlace">Bekende plek gebruiken: ${escHtml(near.name)} (±${near.distanceM} m)</button>` : '';
   return `📍 ${Number(_state.lat).toFixed(5)}, ${Number(_state.lon).toFixed(5)}${acc}` +
-    (place ? ` · Plek: ${escHtml(place.name)}` : ' · Nieuwe plek');
+    (place ? ` · Plek: ${escHtml(place.name)}` : ' · Nieuwe plek') + offer;
 }
 
 /** K4: na een nieuwe pin vragen of een bestaande plek binnen 50 m gebruikt wordt. */
@@ -548,6 +551,18 @@ function _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx })
   });
   // GPS
   el.querySelector('#sightGpsBtn')?.addEventListener('click', () => _requestGPS(ov,ctx));
+  // R05 (eigenaarbesluit 17-11): nieuwe waarneming vult GPS automatisch in als locatietoestemming al gegeven is.
+  // Geen toestemmingsvraag, geen blokkade; een gekozen pin of 'wis' wint (locationRevision).
+  if (!isEdit && !ctx.autoGpsStarted && _state.lat == null) { ctx.autoGpsStarted = true; _autoGPS(ov, ctx); }
+  el.querySelector('#sightUseNearPlace')?.addEventListener('click', () => {
+    const near = _state.nearSuggestion;
+    const place = near && loadPlaces().find(p => p.id === near.id);
+    if (!place) return;
+    _state.placeId = place.id;
+    if (!_state.locationName) _state.locationName = place.name;
+    _state.nearSuggestion = null;
+    refresh();
+  });
 
   // Aantal
   el.querySelector('#sightCount')?.addEventListener('input', e => {
@@ -817,8 +832,16 @@ function _resetGPSButton(ov) {
   return button;
 }
 
-function _requestGPS(ov,ctx) {
-  if (!navigator.geolocation) { showToast('GPS niet beschikbaar'); return; }
+async function _autoGPS(ov, ctx) {
+  try {
+    const status = await navigator.permissions?.query?.({ name: 'geolocation' });
+    if (status?.state !== 'granted' || ctx.destroyed || _state.lat != null) return;
+    _requestGPS(ov, ctx, { silent: true });
+  } catch (_) { /* geen Permissions API: handmatige GPS-knop blijft werken */ }
+}
+
+function _requestGPS(ov,ctx,{ silent = false } = {}) {
+  if (!navigator.geolocation) { if (!silent) showToast('GPS niet beschikbaar'); return; }
   const btn  = ov.querySelector('#sightGpsBtn');
   if (!btn) return;
   const revision = ++ctx.locationRevision;
@@ -833,14 +856,23 @@ function _requestGPS(ov,ctx) {
       _state.pinAccuracyM = Number.isFinite(pos.coords.accuracy) ? Math.round(pos.coords.accuracy) : null;
       _state.placeId = null;
       _resetGPSButton(ov)?.classList.add('gps-btn--active');
+      // R05: automatische GPS vraagt niets in een venster; een bekende plek binnen 50 m wordt inline aangeboden.
+      const near = silent ? nearestPlace(loadPlaces(), _state.lat, _state.lon) : null;
+      _state.nearSuggestion = near ? { id: near.place.id, name: near.place.name, distanceM: near.distanceM, lat: _state.lat, lon: _state.lon } : null;
       const hint = ov.querySelector('#coordsHint');
       if (hint) hint.innerHTML = _coordsHintText();
-      _offerPlace(ov, ctx);
+      if (near) ov.querySelector('#sightUseNearPlace')?.addEventListener('click', () => {
+        _state.placeId = near.place.id;
+        if (!_state.locationName) { _state.locationName = near.place.name; const inp = ov.querySelector('#sightLocation'); if (inp) inp.value = near.place.name; }
+        _state.nearSuggestion = null;
+        hint.innerHTML = _coordsHintText();
+      });
+      if (!silent) _offerPlace(ov, ctx);
     },
     () => {
       if (ctx.destroyed || revision !== ctx.locationRevision) return;
       _resetGPSButton(ov);
-      showToast('GPS niet beschikbaar — vul locatie handmatig in');
+      if (!silent) showToast('GPS niet beschikbaar — vul locatie handmatig in');
     },
     { timeout: 10000, maximumAge: 60000 }
   );

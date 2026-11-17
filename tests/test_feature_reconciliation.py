@@ -113,15 +113,15 @@ def main():
 
         def version():
             sw = page.evaluate("fetch('sw.js',{cache:'no-store'}).then(r=>r.text()).then(t=>(t.match(/APP_VERSION = '([^']+)'/)||[])[1])")
-            shown = page.locator('#appVersion').inner_text() if page.locator('#appVersion').count() else ''
-            if not shown.strip():
-                page.locator('[data-route="profile"]').click()
-                time.sleep(1)
-                shown = 'profiel: ' + (page.locator('#appVersion').inner_text() if page.locator('#appVersion').count() else 'geen #appVersion')
-                page.locator('[data-route="home"]').click()
-            assert sw, 'APP_VERSION not found'
-            return f'sw.js APP_VERSION {sw}; zichtbaar versielabel: {shown!r}'
-        run('F01', 'Versie zichtbaar en gelijk aan sw.js', version)
+            assert sw, 'APP_VERSION not found in sw.js'
+            page.locator('[data-route="profile"]').click()
+            label = page.locator('#appVersion')
+            expect(label).to_contain_text(f'Versie {sw}', timeout=8000)  # R18: zichtbaar, ook zonder SW-controller
+            shown = label.inner_text()
+            controlled = page.evaluate('!!navigator.serviceWorker?.controller')
+            page.locator('[data-route="home"]').click()
+            return f'profiel toont {shown!r} (sw.js {sw}; SW-controller bij meting: {controlled})'
+        run('F01', 'Zichtbare versie in profiel = sw.js (ook eerste bezoek)', version)
 
         def plus_choices():
             page.locator('#fab').click()
@@ -144,9 +144,9 @@ def main():
             page.locator('#spPickerList .species-row[data-id="sp001"]').click()
             page.locator('#speciesPickerBtn .species-picker-btn__name').wait_for(timeout=8000)
             page.locator('#sightLocation').fill('Reconciliatietest (fictief)')
-            auto = page.locator('#coordsHint').inner_text().strip()
-            page.locator('#sightGpsBtn').click()
+            # R05: met gegeven locatietoestemming vult GPS zich zelf in; niet op de GPS-knop drukken.
             page.wait_for_function("document.querySelector('#coordsHint')?.textContent.includes('51.9')", timeout=15000)
+            auto = page.locator('#coordsHint').inner_text().strip()
             page.locator('#addSheetSubmit').click()
             page.locator('#addSightingSheet').wait_for(state='detached', timeout=15000)
             new = [r for r in rows(page)][before:]
@@ -154,17 +154,20 @@ def main():
             r = new[0]
             assert r.get('date') or r.get('datetime') or r.get('createdAt'), r
             assert r.get('lat') and r.get('lon'), r
-            return f"1 record: soort {r.get('speciesId')}, datum automatisch {date!r}, GPS pas na knop 'GPS' (vooraf: {auto[:60]!r}), lat/lon {r.get('lat')}/{r.get('lon')}, methode {r.get('observationMethod')}"
+            return f"1 record: soort {r.get('speciesId')}, datum automatisch {date!r}, GPS automatisch zonder knop ({auto[:60]!r}), lat/lon {r.get('lat')}/{r.get('lon')}, methode {r.get('observationMethod')}"
         run('F03', 'Waarneming toevoegen (soort, datum, GPS, opslaan)', seen_route)
 
         def cancel_route():
             n = len(rows(page))
             page.locator('#fab').click()
             page.get_by_role('dialog').get_by_role('button', name='Waarneming toevoegen').click()
+            page.wait_for_function("document.querySelector('#coordsHint')?.textContent.includes('51.9')", timeout=15000)
+            offer = page.locator('#sightUseNearPlace')
+            offered = offer.inner_text() if offer.count() else 'geen'
             page.locator('#addSheetCancel').click()
             expect(page.locator('#addSightingSheet')).to_have_count(0)
             assert len(rows(page)) == n
-            return 'Annuleren sluit formulier zonder record'
+            return f'Auto-GPS zonder blokkerend venster; inline plekvoorstel: {offered!r}; annuleren sluit zonder record'
         run('F04', 'Annuleren zonder opslaan', cancel_route)
 
         def sound_route():
@@ -221,12 +224,25 @@ def main():
         run('F06', 'Automatische BirdNET-suggesties beschikbaar', recognizer)
 
         def hotspots():
-            page.locator('.nav-item[data-route="home"]').click()
+            page.locator('[data-route="home"]').click()
             sec = page.locator('#hotspotsSection')
             expect(sec).to_be_visible(timeout=15000)
-            page.screenshot(path=str(OUT / 'F07_hotspots.png'), full_page=False)
-            return 'Hotspotsectie zichtbaar: ' + sec.inner_text()[:160].replace('\n', ' · ')
-        run('F07', 'Hotspots op startscherm', hotspots)
+            mapbox = sec.locator('#homeHotspotMap')
+            mapbox.scroll_into_view_if_needed()
+            expect(mapbox).to_be_in_viewport()
+            page.wait_for_function("document.querySelectorAll('#homeHotspotMap .leaflet-tile-loaded').length > 0 || /hieronder/.test(document.querySelector('#hotspotMapStatus')?.textContent || '')", timeout=25000)
+            tiles = mapbox.locator('.leaflet-tile-loaded').count()
+            pins = mapbox.locator('.leaflet-marker-icon, path.leaflet-interactive').count()
+            mapbox.screenshot(path=str(OUT / 'F07_hotspotkaart.png'))
+            assert tiles > 0 and pins > 0, f'kaart niet geladen of geen pin (tegels {tiles}, pins {pins}, status {sec.locator("#hotspotMapStatus").inner_text()!r})'
+            places = sec.locator('.hotspot-place').count()
+            sec.locator('.hotspot-place').first.click()
+            expect(page.locator('#screen-map')).to_be_visible(timeout=15000)
+            page.go_back()
+            page.locator('[data-route="home"]').click()
+            expect(page.locator('#hotspotsSection .hotspot-place')).to_have_count(places)
+            return f'Hotspotkaart in beeld: {tiles} kaarttegels, {pins} pin(s); {places} plek(ken) in lijst; plek → kaartscherm → terug'
+        run('F07', 'Hotspotkaart: tegels, pin, plek openen, terug', hotspots)
 
         def guide_photo_zoom_back():
             open_species(page, 'Merel', 'sp045')
@@ -244,12 +260,12 @@ def main():
             return f'Gidsfoto gedecodeerd ({src}); zoomvenster open/dicht; soortkaart gesloten'
         run('F08', 'Soortkaart, gidsfoto, zoom en terug', guide_photo_zoom_back)
 
-        def compare():
-            open_species(page, 'Boomkruiper', 'sp066')
+        def compare_dir(sid, partner, name):
+            open_species(page, name, sid)
             for d in page.locator('details.sd-cmp-more').all():
-                if d.locator('[data-compare-species="sp067"]').count() and not d.get_attribute('open'):
+                if d.locator(f'[data-compare-species="{partner}"]').count() and not d.get_attribute('open'):
                     d.locator('xpath=./summary').click()
-            target = page.locator('#sdPanel-herkenning .sd-cmp-panel:has([data-compare-species="sp067"])').first
+            target = page.locator(f'#sdPanel-herkenning .sd-cmp-panel:has([data-compare-species="{partner}"])').first
             if target.get_attribute('hidden') is not None:
                 card = target.locator('xpath=ancestor::div[contains(@class,"sd-cmp-card")]').first
                 idx = target.evaluate("e=>[...e.parentElement.children].filter(x=>x.classList.contains('sd-cmp-panel')).indexOf(e)")
@@ -257,11 +273,20 @@ def main():
             expect(target).to_be_visible()
             imgs = target.locator('.sd-cmp-who .sd-field-photo img')
             expect(imgs).to_have_count(2)
-            page.screenshot(path=str(OUT / 'F09_compare.png'))
+            for i in imgs.all():
+                i.scroll_into_view_if_needed()
+                assert i.evaluate('x => x.decode().then(() => x.naturalWidth > 0).catch(() => false)'), 'vergelijkingsfoto niet gedecodeerd'
+            rows_n = target.locator('.sd-cmp-row').count()
+            target.screenshot(path=str(OUT / f'F09_{sid}_{partner}.png'))
             page.locator('.signature-species-detail-close').click()
             page.locator('.signature-species-detail-overlay').wait_for(state='detached', timeout=12000)
-            return 'Boomkruiper ↔ Taigaboomkruiper: 2 foto’s + kenmerkrijen zichtbaar'
-        run('F09', 'Vergelijken van dubbelgangers', compare)
+            return rows_n
+
+        def compare():
+            a = compare_dir('sp066', 'sp067', 'Boomkruiper')
+            b = compare_dir('sp067', 'sp066', 'Taigaboomkruiper')
+            return f'Boomkruiper → Taigaboomkruiper ({a} kenmerkrijen) en Taigaboomkruiper → Boomkruiper ({b}); telkens 2 gedecodeerde foto’s'
+        run('F09', 'Vergelijken in beide richtingen', compare)
 
         def search():
             page.locator('[data-route="home"]').click()
@@ -288,12 +313,13 @@ def main():
             try:
                 page.reload(wait_until='domcontentloaded', timeout=30000)
                 boot(page, page.url)
+                hs = page.locator('#hotspotsSection .hotspot-place').count()
                 open_species(page, 'Merel', 'sp045')
-                ok = page.locator('.sd-tabs').is_visible()
+                ok = page.locator('.sd-tabs').is_visible() and hs > 0
             finally:
                 ctx.set_offline(False)
             assert ok
-            return f'Offline herladen en soortkaart openen werkt ({ready})'
+            return f'Offline herladen: hotspotlijst {hs} plek(ken), soortkaart opent ({ready})'
         run('F12', 'Offline heropenen', offline)
 
         record('F99', 'Geen paginafouten', not errors, errors or 'geen')
