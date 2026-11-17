@@ -53,9 +53,9 @@
     "audioMissing": 75,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 89,
+    "nextNotStarted": 86,
     "secondBatchStarted": 3,
-    "contentInspected": 51,
+    "contentInspected": 54,
     "contentComplete": 0,
     "thirdBatchStarted": 3,
     "fourthBatchStarted": 3,
@@ -71,7 +71,8 @@
     "fourteenthBatchStarted": 3,
     "fifteenthBatchStarted": 3,
     "sixteenthBatchStarted": 3,
-    "seventeenthBatchStarted": 3
+    "seventeenthBatchStarted": 3,
+    "eighteenthBatchStarted": 3
   },
   "records": [
     {
@@ -5619,43 +5620,72 @@
         "oldClaimsKeptNotReapproved": true
       },
       "currentAssets": {
-        "imageSlots": [],
+        "imageSlots": [
+          {
+            "role": "Hoofdfoto (Volwassen)",
+            "path": "/assets/species/sp062.webp",
+            "oldRights": "VERIFIED (origcheck F3-R18: Commons, Sighmanb, CC BY 2.0)",
+            "addedIn": "F3-R18-review"
+          }
+        ],
         "existingAudioCount": 0,
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R18",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium 320/360/390 px via tests/test_lookalike_r18_browser.py; no physical device)",
+          "endToEndGuideUI": "PARTIALLY TESTED (Chromium species card and lookalike panels; no device or offline run)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "independentSecondReview": "NOT TESTED (own re-inspection is not independent)",
+          "ebirdDistributionAndBias": "BLOCKED (eBird Anubis bot-check since F3-R15; not retried; parked)",
+          "creditsAndCleanAudioUI": "NOT TESTED (no audio)",
+          "audioRecordingsAuthenticity": "BLOCKED (no recording; see AUDIOCHECK_PROTOCOL v0.2)",
+          "audioLicenseAndAttribution": "BLOCKED (no recording)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (no audio file)",
+          "soundRolesSongCall": "PARTIALLY TESTED (text only; matches Vogelbescherming)",
+          "photoOriginalIdentity": "VERIFIED (origcheck 17-11-2026: hero same shot, r = 1.00)",
+          "photoIndividualRights": "VERIFIED (current Commons author and licence match)",
+          "plumageAndTrueFlight": "VERIFIED (shown role only: neutral adult — grey crown, darker ear coverts, white throat, grey legs, matches Vogelbescherming; sexes alike; missing optional roles in exemptions)",
+          "photoPairComparisons": "PARTIALLY TESTED (Grasmus LK-036 and Tuinfluiter LK-037 panels, both sides source-matched)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming read 17-11-2026: head, throat, sexes alike, lookalikes, song, call, habitat, numbers, migration; ANWB-vogelgids NOT TESTED: no accessible edition)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (new knowledge profile; length one publisher 12–13 cm)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon 17-11-2026: 20,000–25,000 pairs 2018–2020; no significant change since 1990, significant increase last 12 years; VBN 'stable since ±2000' recorded)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-036 re-checked: both sides source-matched; LK-037)"
         },
         "findings": [
-          "Geen lokaal geregistreerde zang of roep",
-          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
+          "Hoofdfoto dezelfde opname als het bronbeeld; rechten gelijk aan Commons.",
+          "Neutrale volwassen foto klopt met Vogelbescherming; geslachten gelijk.",
+          "Nieuw kennisprofiel; LK-036 Grasmus nu aan beide kanten bronbeeld-gecontroleerd."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/braamsluiper",
+          "https://stats.sovon.nl/stats/soort/12740",
+          "docs/media-intake/2026-11-17/origcheck-r18/origcheck.json",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R18_BRAAMSLUIPER_GOUDHAANTJE_VUURGOUDHAAN_2026-11-17_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on physical device; local source/photo review and Chromium only",
+        "independence": "PARTIAL / origcheck by Claude; no independent reviewer",
+        "fullPass": false,
+        "photoFilesInspected": 1,
+        "photoBlobSHAs": [
+          "6c3657811303492cf1a35df8c33a8f6b09015771"
+        ],
+        "photoSourceMatches": [],
+        "priorPhotoMatches": [],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [],
+        "contentStatus": "PARTIALLY REVIEWED (all shown photos checked against source images; no FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R18 node/browser tests run separately.",
+        "exemptions": {
+          "plumageAndTrueFlight": {
+            "reason": "Kleine zangvogel, geslachten gelijk: alleen neutrale volwassen foto; vrije vlucht en juveniel niet gezocht (eigenaarbesluit 16/17-11); posities open, niet VERIFIED."
+          }
+        }
       }
     },
     {
@@ -5699,39 +5729,59 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R18",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium 320/360/390 px via tests/test_lookalike_r18_browser.py; no physical device)",
+          "endToEndGuideUI": "PARTIALLY TESTED (Chromium species card and lookalike panels; no device or offline run)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "independentSecondReview": "NOT TESTED (own re-inspection is not independent)",
+          "ebirdDistributionAndBias": "BLOCKED (eBird Anubis bot-check since F3-R15; not retried; parked)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (credits in registry and player HTML; no visual attribution audit)",
+          "audioRecordingsAuthenticity": "NOT TESTED (source label only under AUDIOCHECK_PROTOCOL v0.2; not listened to)",
+          "audioLicenseAndAttribution": "VERIFIED (current Commons author and licence match register; origcheck-r18 audio metadata)",
+          "soundRolesSongCall": "NOT TESTED (source labels only)",
+          "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (local files present; offline playback not tested on device)",
+          "photoOriginalIdentity": "VERIFIED (origcheck 17-11-2026: 4/4 same shot, r = 1.00)",
+          "photoIndividualRights": "VERIFIED (current Commons author and licence match for 4/4)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (hero OK; juvenile convincing: no crown stripe, yellow begging gape, Regulus wing pattern; 'Vrouwtje' label NOT proven: only yellow visible in a narrow crown from the side, male orange can be hidden, source names no sex -> proposal neutral label, independent review; flight photo is ssp. japonensis, kept as provisional per existing open point)",
+          "photoPairComparisons": "PARTIALLY TESTED (Vuurgoudhaan adult LK-038; juvenile pair LK-039 depends on a doubtful Vuurgoudhaan juvenile)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming read 17-11-2026: crown stripe, male orange streak, face, lookalikes, song, numbers; ANWB-vogelgids NOT TESTED: no accessible edition)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (existing size text: Vogelbescherming 8.5–9.5 cm and The Wildlife Trusts 9 cm; not re-read beyond VBN)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon 17-11-2026: 44,000–74,000 pairs; no significant change since 1990 but strong decline >5%/yr last 12 years; VBN 'stable' recorded as discrepancy)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-038 adult head pattern; LK-039 juvenile pair REVIEW REQUIRED)"
         },
         "findings": [
-          "Afzonderlijke mannetjesfoto",
-          "Scherpe Europese vluchtfoto",
-          "De fotograaf van de hoofdfoto noemt geen geslacht. De zichtbare gele kruin is onvoldoende voor het label Vrouwtje."
+          "4/4 foto's dezelfde opname; rechten gelijk aan Commons.",
+          "Juveniel overtuigend (geen kruinstreep, bedelende gele mondhoek, Regulus-vleugelpatroon).",
+          "Label 'Vrouwtje' niet bewezen: voorstel neutraal label na review.",
+          "Sovon: sterke afname laatste 12 jaar; Vogelbescherming 'stabiel' (bronverschil)."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/goudhaan",
+          "https://stats.sovon.nl/stats/soort/13140",
+          "docs/media-intake/2026-11-17/origcheck-r18/origcheck.json",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R18_BRAAMSLUIPER_GOUDHAANTJE_VUURGOUDHAAN_2026-11-17_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on physical device; local source/photo review and Chromium only",
+        "independence": "PARTIAL / origcheck by Claude; no independent reviewer",
+        "fullPass": false,
+        "photoFilesInspected": 4,
+        "photoBlobSHAs": [
+          "e066420ab306bc4f8cd1e5c66192f30929691a07",
+          "ee27786d91087eefefac1665521505484656e6ba",
+          "0c3fa38cd8be7cceb2438aaa50b6247d75faf72a",
+          "90a3701b1dbe65c494fbfa6d89c112ca517d734c"
+        ],
+        "photoSourceMatches": [],
+        "priorPhotoMatches": [],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [],
+        "contentStatus": "PARTIALLY REVIEWED (all shown photos checked against source images; no FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R18 node/browser tests run separately."
       }
     },
     {
@@ -5771,39 +5821,57 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R18",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium 320/360/390 px via tests/test_lookalike_r18_browser.py; no physical device)",
+          "endToEndGuideUI": "PARTIALLY TESTED (Chromium species card and lookalike panels; no device or offline run)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "independentSecondReview": "NOT TESTED (own re-inspection is not independent)",
+          "ebirdDistributionAndBias": "BLOCKED (eBird Anubis bot-check since F3-R15; not retried; parked)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (credits in registry and player HTML; no visual attribution audit)",
+          "audioRecordingsAuthenticity": "NOT TESTED (source label only under AUDIOCHECK_PROTOCOL v0.2; not listened to)",
+          "audioLicenseAndAttribution": "VERIFIED (current Commons author and licence match register; origcheck-r18 audio metadata)",
+          "soundRolesSongCall": "NOT TESTED (source labels only)",
+          "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (local files present; offline playback not tested on device)",
+          "photoOriginalIdentity": "VERIFIED (origcheck 17-11-2026: 3/3 same shot, r = 1.00; iNaturalist open-data original reached)",
+          "photoIndividualRights": "PARTIALLY TESTED (2 Commons photos match; iNaturalist juvenile 298756944 rights register-only, pages BLOCKED)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (male: orange central crown, white eyebrow, black eye-stripe — matches Vogelbescherming; juvenile REVIEW REQUIRED: species identity doubtful on visual inspection — no clear black eye-stripe, rather long-tailed build; not removed without review/decision)",
+          "photoPairComparisons": "PARTIALLY TESTED (Goudhaan adult LK-038 OK; juvenile pair LK-039 REVIEW REQUIRED)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming read 17-11-2026: white eyebrow, black eye-stripe, male dark-orange crown, lookalikes, song, numbers; ANWB-vogelgids NOT TESTED: no accessible edition)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (length ca. 9–10 cm: Vogelbescherming 9–10 re-read 17-11, Blasco-Zumeta & Heinze from earlier register, not re-read)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon 17-11-2026: 6,500–8,500 pairs; significant increase since 1990 and last 12 years; winter max. 2,500–5,000)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-038 adult OK; LK-039 juvenile REVIEW REQUIRED)"
         },
         "findings": [
-          "Vrouwtjesfoto met betrouwbare geslachtsaanduiding.",
-          "Scherpe foto van één Vuurgoudhaan in vrije vlucht met bevestigde licentie.",
-          "Een als vrouwtje geannoteerde kandidaat toont oranje in de kruinstreep. Die foto is niet als vrouwtje opgenomen."
+          "3/3 foto's dezelfde opname; Commons-rechten actueel, iNaturalist alleen register.",
+          "Mannetje klopt met Vogelbescherming (oranje middenkruin).",
+          "Juveniel (iNaturalist) soortidentiteit twijfelachtig: geen duidelijke zwarte oogstreep, langstaartig postuur — onafhankelijke review; daarvan hangt ook juvenielenpaar LK-039 af."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/vuurgoudhaan",
+          "https://stats.sovon.nl/stats/soort/13150",
+          "docs/media-intake/2026-11-17/origcheck-r18/origcheck.json",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R18_BRAAMSLUIPER_GOUDHAANTJE_VUURGOUDHAAN_2026-11-17_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on physical device; local source/photo review and Chromium only",
+        "independence": "PARTIAL / origcheck by Claude; no independent reviewer",
+        "fullPass": false,
+        "photoFilesInspected": 3,
+        "photoBlobSHAs": [
+          "bbdcce0fa62f5a0031706db19618a36e7eeeda19",
+          "6f42687e2b499fb78d984d512e6f4df17f89eb00",
+          "232308e0847f5d53348524996245544e1b8a7fda"
+        ],
+        "photoSourceMatches": [],
+        "priorPhotoMatches": [],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [],
+        "contentStatus": "PARTIALLY REVIEWED (all shown photos checked against source images; no FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R18 node/browser tests run separately."
       }
     },
     {

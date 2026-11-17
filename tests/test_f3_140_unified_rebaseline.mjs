@@ -103,6 +103,7 @@ const counts={
  fifteenthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R15'),
  sixteenthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R16'),
  seventeenthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R17'),
+ eighteenthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R18'),
  contentInspected:sum(x=>x.F3.reviewedThisRound===true),
  contentComplete:sum(x=>x.F3.contentStatus==='CONTENT COMPLETE')
 };
@@ -126,6 +127,7 @@ const fourteenth=rows.filter(x=>x.F3.recheckBatch==='F3-R14');
 const fifteenth=rows.filter(x=>x.F3.recheckBatch==='F3-R15');
 const sixteenth=rows.filter(x=>x.F3.recheckBatch==='F3-R16');
 const seventeenth=rows.filter(x=>x.F3.recheckBatch==='F3-R17');
+const eighteenth=rows.filter(x=>x.F3.recheckBatch==='F3-R18');
 assert.ok(req.includes('lookalikePhotoAndText'),'New owner lookalike rule must be checked for every F3 bird');
 assert.deepEqual(ninth.map(x=>x.id),['sp034','sp035','sp036'],'R09 exactly three species in fixed sequence');
 assert.deepEqual(ninth.map(x=>x.F3.photoFilesInspected),[2,5,4],'All eleven existing local images need individual inspection');
@@ -284,6 +286,21 @@ for(const item of seventeenth){
   assert.equal(review.photoBlobSHAs[i],createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex'),item.id+' image changed since F3-R17 review');
  }
 }
+
+assert.deepEqual(eighteenth.map(x=>x.id),['sp062','sp063','sp064'],'R18 exactly Braamsluiper, Goudhaantje and Vuurgoudhaan');
+assert.deepEqual(eighteenth.map(x=>x.F3.photoFilesInspected),[1,4,3]);
+for(const item of eighteenth){
+ const {F3:review,currentAssets}=item;
+ assert.equal(review.fullPass,false); assert.ok(review.checks.photoOriginalIdentity.startsWith('VERIFIED'));
+ assert.ok(!review.checks.audioRecordingsAuthenticity.startsWith('VERIFIED'),'audio never verified automatically');
+ assert.deepEqual(plumageRoleProblems(item),[],item.id+' plumage/flight role rule');
+ assert.equal(review.photoBlobSHAs.length,currentAssets.imageSlots.length);
+ for(let i=0;i<currentAssets.imageSlots.length;i++){
+  const bytes=readFileSync(new URL('..'+currentAssets.imageSlots[i].path,import.meta.url));
+  assert.equal(review.photoBlobSHAs[i],createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex'),item.id+' image changed since F3-R18 review');
+ }
+}
+assert.match(eighteenth[2].F3.checks.plumageAndTrueFlight,/juvenile REVIEW REQUIRED/,'doubtful Vuurgoudhaan juvenile stays visible as open review');
 
 assert.deepEqual(eighth.map(x=>x.id), ['sp031','sp032','sp033'],'F3-R08 is exactly three existing tits');
 assert.deepEqual(eighth.map(x=>x.F3.photoFilesInspected),[3,3,4]);

@@ -2233,7 +2233,7 @@ const DATA = {
    "edition": "Online bron",
    "scope": "Nederland",
    "confirms": "Herkenning, habitat, leefwijze en voorkomen",
-   "checked": "2026-11-12",
+   "checked": "2026-11-17",
    "certainty": "hoog",
    "publisher": "Vogelbescherming Nederland"
   },
@@ -2244,7 +2244,7 @@ const DATA = {
    "edition": "Online bron",
    "scope": "Nederland",
    "confirms": "Herkenning, habitat, leefwijze en voorkomen",
-   "checked": "2026-11-12",
+   "checked": "2026-11-17",
    "certainty": "hoog",
    "publisher": "Vogelbescherming Nederland"
   },
@@ -2255,7 +2255,7 @@ const DATA = {
    "edition": "Online bron",
    "scope": "Nederland",
    "confirms": "Herkenning, habitat, leefwijze en voorkomen",
-   "checked": "2026-11-12",
+   "checked": "2026-11-17",
    "certainty": "hoog",
    "publisher": "Vogelbescherming Nederland"
   },
@@ -2288,7 +2288,7 @@ const DATA = {
    "edition": "Online bron",
    "scope": "Nederland",
    "confirms": "Nederlandse verspreiding en broedvogelmonitoring",
-   "checked": "2026-11-12",
+   "checked": "2026-11-17",
    "certainty": "hoog",
    "publisher": "Sovon Vogelonderzoek Nederland"
   },
@@ -4785,6 +4785,28 @@ const DATA = {
    "edition": "Online geraadpleegd 17-11-2026",
    "scope": "Nederland",
    "confirms": "Broedpopulatie, trend en verspreiding",
+   "checked": "2026-11-17",
+   "certainty": "hoog",
+   "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "SOV_BRAAMSLUIPER": {
+   "register": "NL01",
+   "label": "Sovon — Braamsluiper",
+   "url": "https://stats.sovon.nl/stats/soort/12740",
+   "edition": "Online geraadpleegd 17-11-2026",
+   "scope": "Nederland",
+   "confirms": "Broedpopulatie, trend en verspreiding",
+   "checked": "2026-11-17",
+   "certainty": "hoog",
+   "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "SOV_GOUDHAAN": {
+   "register": "NL01",
+   "label": "Sovon — Goudhaan",
+   "url": "https://stats.sovon.nl/stats/soort/13140",
+   "edition": "Online geraadpleegd 17-11-2026",
+   "scope": "Nederland",
+   "confirms": "Broedpopulatie, trend en winteraantallen",
    "checked": "2026-11-17",
    "certainty": "hoog",
    "publisher": "Sovon Vogelonderzoek Nederland"
@@ -10815,6 +10837,13 @@ const DATA = {
       "VB_GH"
      ],
      "kind": "voorkomen"
+    },
+    {
+     "text": "Talrijke broedvogel met 44.000–74.000 paren (2018–2020). Sinds 1990 geen significante verandering, maar in de laatste twaalf jaar een sterke afname van meer dan 5% per jaar.",
+     "sources": [
+      "SOV_GOUDHAAN"
+     ],
+     "kind": "voorkomen"
     }
    ],
    "life": [
@@ -10826,7 +10855,17 @@ const DATA = {
      "kind": "broeden"
     }
    ],
-   "discrepancies": [],
+   "discrepancies": [
+    {
+     "field": "trend",
+     "app": "Toont de Sovon-trend",
+     "source": "Vogelbescherming noemt de populatie stabiel; Sovon meldt over de laatste twaalf jaar een significante afname van meer dan 5% per jaar (minimaal halvering in 15 jaar). Sovon leidend.",
+     "sources": [
+      "VB_GOUDHAAN",
+      "SOV_GOUDHAAN"
+     ]
+    }
+   ],
    "open": [
     "Een bronbevestigde mannetjesfoto en een scherpe Europese vluchtfoto ontbreken. De aanwezige Japanse vluchtfoto is voorlopig."
    ]
@@ -16392,6 +16431,14 @@ const DATA = {
    "status": [
     {
      "text": "Nederlandse broedvogel, doortrekker en wintergast. Broedt vooral in het oosten van het land.",
+     "sources": [
+      "VB_VUURGOUDHAAN",
+      "SOV_VUURGOUDHAAN"
+     ],
+     "kind": "voorkomen"
+    },
+    {
+     "text": "Vrij schaarse broedvogel met 6500–8500 paren (2018–2020); sinds 1990 en in de laatste twaalf jaar significante toename.",
      "sources": [
       "VB_VUURGOUDHAAN",
       "SOV_VUURGOUDHAAN"
@@ -24117,6 +24164,167 @@ const DATA = {
      ],
      "topic": "gedrag"
     }
+   ]
+  },
+  "sp062": {
+   "summary": {
+    "text": "Kleine grasmus met grijze kruin, iets donkerder oorstreek en een heel witte keel boven een vuilwitte onderzijde.",
+    "sources": [
+     "VB_BRAAMSLUIPER"
+    ]
+   },
+   "keyMarks": [
+    {
+     "text": "Grijze kruin met vaak iets donkerder grijze oorstreek.",
+     "sources": [
+      "VB_BRAAMSLUIPER"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Heel witte keel die afsteekt tegen de vuilwitte onderzijde.",
+     "sources": [
+      "VB_BRAAMSLUIPER"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Bovendelen lichtbruin, zonder roestkleurige vleugelranden.",
+     "sources": [
+      "VB_BRAAMSLUIPER",
+      "VB_GRASMUS"
+     ],
+     "reliability": "ondersteunend"
+    }
+   ],
+   "caution": {
+    "text": "De Grasmus heeft ook een witte keel. Let op vleugel en poten.",
+    "sources": [
+     "VB_BRAAMSLUIPER",
+     "VB_GRASMUS"
+    ]
+   },
+   "critical": [
+    {
+     "feature": "Vleugel en poten",
+     "where": "Zijaanzicht",
+     "this": "Geen roestoranje vleugelranden; grijze poten.",
+     "other": "Grasmus: roestoranje vleugel en oranje poten.",
+     "vs": [
+      "sp061"
+     ],
+     "reliability": "ondersteunend",
+     "conditions": "Goed licht op vleugel en poten.",
+     "exceptions": "Bij slecht licht of een gesloten, verborgen vleugel blijft het verschil onzeker.",
+     "supporting": "De zang (ratel na brabbelend begin) helpt.",
+     "sources": [
+      "VB_GRASMUS",
+      "VB_BRAAMSLUIPER"
+     ]
+    }
+   ],
+   "similar": [
+    {
+     "id": "sp061",
+     "why": "Beide hebben een witte keel; de Grasmus heeft een roestoranje vleugel en oranje poten.",
+     "sources": [
+      "VB_BRAAMSLUIPER",
+      "VB_GRASMUS"
+     ]
+    },
+    {
+     "id": "sp060",
+     "why": "Tuinfluiter is egaler bruingrijs zonder grijze kap en donkere oorstreek.",
+     "sources": [
+      "VB_BRAAMSLUIPER",
+      "VB_TUINFLUITER"
+     ]
+    }
+   ],
+   "detail": [
+    {
+     "text": "Mannetje en vrouwtje zien er hetzelfde uit.",
+     "sources": [
+      "VB_BRAAMSLUIPER"
+     ],
+     "topic": "geslacht"
+    },
+    {
+     "text": "Zingt alleen vanaf een zitplaats, zonder zangvlucht.",
+     "sources": [
+      "VB_BRAAMSLUIPER"
+     ],
+     "topic": "gedrag"
+    }
+   ],
+   "voice": [
+    {
+     "text": "Snelle ratel, vaak na een snel, brabbelend begin.",
+     "sources": [
+      "VB_BRAAMSLUIPER"
+     ],
+     "kind": "zang"
+    },
+    {
+     "text": "Kort 'tik', als twee tikkende kiezels.",
+     "sources": [
+      "VB_BRAAMSLUIPER"
+     ],
+     "kind": "roep"
+    }
+   ],
+   "basis": {
+    "size": {
+     "text": "Vogelbescherming noemt 12–13 cm.",
+     "sources": [
+      "VB_BRAAMSLUIPER"
+     ]
+    }
+   },
+   "habitat": [
+    {
+     "text": "Duinen met doornstruweel en kleinschalig boerenland met veel heggen op klei; mijdt grote bossen.",
+     "sources": [
+      "VB_BRAAMSLUIPER",
+      "SOV_BRAAMSLUIPER"
+     ],
+     "kind": "nederland"
+    }
+   ],
+   "status": [
+    {
+     "text": "Vrij talrijke broedvogel met 20.000–25.000 paren (2018–2020). Sinds 1990 geen significante verandering; in de laatste twaalf jaar significante toename.",
+     "sources": [
+      "VB_BRAAMSLUIPER",
+      "SOV_BRAAMSLUIPER"
+     ],
+     "kind": "voorkomen"
+    }
+   ],
+   "life": [
+    {
+     "text": "Lange-afstandstrekker via de Balkan naar Oost-Afrika; aankomst vooral half april tot half mei.",
+     "sources": [
+      "VB_BRAAMSLUIPER"
+     ],
+     "kind": "trek"
+    }
+   ],
+   "discrepancies": [
+    {
+     "field": "trend",
+     "app": "Toont de Sovon-trend",
+     "source": "Vogelbescherming: stabiel sinds ±2000; Sovon: laatste twaalf jaar significante toename. Sovon leidend.",
+     "sources": [
+      "VB_BRAAMSLUIPER",
+      "SOV_BRAAMSLUIPER"
+     ]
+    }
+   ],
+   "open": [
+    "Geslachten gelijk: alleen een neutrale volwassen foto.",
+    "Geen eigen geluidsopname.",
+    "Lengte, spanwijdte en gewicht zonder tweede uitgever."
    ]
   }
  }

@@ -194,3 +194,11 @@ De tekst in de kolom 'Open uit bronronde' is overgenomen uit de laatste F2-voort
 | sp059 Zwartkop | F3-R17 | Juveniel (Gunnar Creutz) behouden; leeftijd steunt op los donzig kleed, dof petje, label en datum — onafhankelijke beoordeling. Vogelbescherming noemt 370.000–620.000 én 270.000–320.000 paren; Sovon 370.000–620.000 leidend. Matkop/Glanskop (VBN-verwarringssoorten) nog niet uitgewerkt. |
 | sp060 Tuinfluiter | F3-R17 | Lengte één uitgever (VBN 14 cm, app 13–15 cm). Trend: VBN "lichte afname sinds ±2000" vs Sovon laatste 12 jaar significante toename. Vlucht/juveniel niet gezocht (fotoprioriteit). |
 | sp061 Grasmus | F3-R17 | iNaturalist-licenties (3 foto's) alleen uit register. Juveniel voor onafhankelijke beoordeling. VBN gebruikt Sylvia communis, Sovon/app Curruca communis. |
+
+### F3-R18 (17-11-2026)
+
+| Soort | Batch | Open punt |
+|---|---|---|
+| sp062 Braamsluiper | F3-R18 | Lengte één uitgever (VBN 12–13 cm). Trend: VBN "stabiel sinds ±2000" vs Sovon laatste 12 jaar significante toename. Vlucht/juveniel niet gezocht (fotoprioriteit). |
+| sp063 Goudhaantje | F3-R18 | Label "Vrouwtje" niet bewezen (alleen gele smalle kruin van opzij; oranje van man kan verborgen zijn; bron noemt geen geslacht) — voorstel neutraal label, besluit eigenaar/QA. Trend: VBN "stabiel" vs Sovon laatste 12 jaar sterke afname (>5%/jr). Vluchtfoto is ssp. japonensis (bestaand open punt). |
+| sp064 Vuurgoudhaan | F3-R18 | Juveniel (iNaturalist 298756944, euqirneto) soortidentiteit twijfelachtig: geen duidelijke zwarte oogstreep, langstaartig postuur. Niet verwijderd; advies verbergen tot onafhankelijke review. Rechten alleen register. Juvenielenpaar LK-039 hangt hiervan af. |
