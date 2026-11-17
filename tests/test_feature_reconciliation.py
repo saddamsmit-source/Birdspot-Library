@@ -32,11 +32,25 @@ def record(fid, name, ok, detail):
     print(f"{fid} {'PASS' if ok else 'FAIL'} — {name}: {str(detail)[:200]}", flush=True)
 
 
+PAGE = {}
+
+
 def run(fid, name, fn):
     try:
         record(fid, name, True, fn())
     except Exception as exc:  # keep going: the matrix must show every route
         record(fid, name, False, f'{type(exc).__name__}: {exc}')
+        page = PAGE.get('p')
+        if page:  # isolate the next route from a sheet left open by this failure
+            try:
+                page.screenshot(path=str(OUT / f'{fid}_fail.png'))
+                for _ in range(3):
+                    page.keyboard.press('Escape')
+                for sel in ('.signature-species-detail-close', '#addSheetCancel'):
+                    if page.locator(sel).count() and page.locator(sel).first.is_visible():
+                        page.locator(sel).first.click()
+            except Exception:
+                pass
 
 
 def boot(page, url):
@@ -82,6 +96,7 @@ def main():
         ctx = browser.new_context(viewport={'width': 390, 'height': 844}, timezone_id='Europe/Amsterdam', reduced_motion='reduce',
                                   geolocation=GPS, permissions=['microphone', 'geolocation'])
         page = ctx.new_page()
+        PAGE['p'] = page
         errors = []
         page.on('pageerror', lambda e: errors.append(str(e)))
         try:
@@ -172,8 +187,14 @@ def main():
             state = sheet.locator('#soundRecognitionState').inner_text().strip()
             RECOG.update(state=state, match=match)
             for name in ('Merel', 'Koolmees'):
-                sheet.get_by_role('searchbox').fill(name)
-                sheet.get_by_role('button', name=name, exact=True).click()
+                box = sheet.get_by_role('checkbox', name=name, exact=True)
+                if box.count():  # already suggested by the recognizer: confirm it explicitly
+                    box.check()
+                else:
+                    sheet.get_by_role('searchbox').fill(name)
+                    sheet.get_by_role('button', name=name, exact=True).click()
+                expect(sheet.get_by_role('checkbox', name=name, exact=True)).to_be_checked()
+            sheet.get_by_role('searchbox').fill('')
             page.screenshot(path=str(OUT / 'F05_sound.png'))
             sheet.locator('#soundSave').click()
             expect(sheet).to_have_count(0, timeout=15000)
