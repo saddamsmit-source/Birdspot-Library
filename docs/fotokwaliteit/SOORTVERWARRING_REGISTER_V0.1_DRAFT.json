@@ -32,7 +32,10 @@
     "sp058",
     "sp059",
     "sp060",
-    "sp061"
+    "sp061",
+    "sp062",
+    "sp063",
+    "sp064"
   ],
   "policy": {
     "pairRequiredWhenSimilar": true,
@@ -1616,7 +1619,8 @@
     {
       "id": "LK-036",
       "focus": [
-        "sp061"
+        "sp061",
+        "sp062"
       ],
       "birds": [
         "sp061",
@@ -1629,7 +1633,7 @@
       ],
       "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
       "mediaOpen": [
-        "Grasmus source-matched in F3-R17; Braamsluiper originals in its own round (F3-R18)"
+        "Both sides source-matched (Grasmus F3-R17, Braamsluiper F3-R18); independent second review open"
       ],
       "textState": "PARTIALLY TESTED",
       "criticalMarks": [
@@ -1659,6 +1663,131 @@
       "sources": [
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grasmus",
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/braamsluiper"
+      ]
+    },
+    {
+      "id": "LK-037",
+      "focus": [
+        "sp062"
+      ],
+      "birds": [
+        "sp062",
+        "sp060"
+      ],
+      "risk": "adult",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Both photos source-matched (F3-R17/R18); independent second review open"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Oorstreek",
+          "values": [
+            "Braamsluiper iets donkerder grijze oorstreek",
+            "Tuinfluiter geen donker oorveld"
+          ]
+        },
+        {
+          "label": "Kop en rug",
+          "values": [
+            "Braamsluiper grijze kruin",
+            "Tuinfluiter egaal bruingrijs"
+          ]
+        }
+      ],
+      "caution": "Bekijk de kop in zijaanzicht.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/braamsluiper",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/tuinfluiter"
+      ]
+    },
+    {
+      "id": "LK-038",
+      "focus": [
+        "sp063",
+        "sp064"
+      ],
+      "birds": [
+        "sp063",
+        "sp064"
+      ],
+      "risk": "adult",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Both adult photos source-matched in F3-R18; independent second review open"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Wenkbrauw",
+          "values": [
+            "Goudhaan geen brede witte wenkbrauw",
+            "Vuurgoudhaan spierwitte wenkbrauw"
+          ]
+        },
+        {
+          "label": "Oogstreek",
+          "values": [
+            "Goudhaan zwart oog in egaal lichtgrijs gezicht",
+            "Vuurgoudhaan zwarte oogstreep met witte veeg eronder"
+          ]
+        }
+      ],
+      "caution": "Kruinkleur alleen is niet genoeg: bij beide soorten kan geel of oranje te zien zijn.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/goudhaan",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/vuurgoudhaan"
+      ]
+    },
+    {
+      "id": "LK-039",
+      "focus": [
+        "sp063",
+        "sp064"
+      ],
+      "birds": [
+        "sp063",
+        "sp064"
+      ],
+      "risk": "juvenile",
+      "matchingPlumages": [
+        "juv",
+        "juv"
+      ],
+      "photoState": "MISSING_VERIFIED_PAIR",
+      "mediaOpen": [
+        "Photo panel hidden in guide (F3-R18 QA 17-11-2026): Vuurgoudhaan juvenile (iNaturalist 298756944) moved to retired as non-released candidate (species identity doubtful, rights register-only); Goudhaantje juvenile convincing but pair needs two individually verified juveniles"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Wenkbrauw",
+          "values": [
+            "Jonge Goudhaan zonder lichte wenkbrauw",
+            "Jonge Vuurgoudhaan met lichte wenkbrauw"
+          ]
+        },
+        {
+          "label": "Oogstreep",
+          "values": [
+            "Gezicht vrijwel ongetekend; donker oog valt op",
+            "Donkere oogstreep onder de lichte wenkbrauw"
+          ]
+        }
+      ],
+      "caution": "Bij onvoldoende zicht op de kop blijft de determinatie onzeker.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/goudhaan",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/vuurgoudhaan"
       ]
     }
   ],

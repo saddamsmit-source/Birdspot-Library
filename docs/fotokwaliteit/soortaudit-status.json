@@ -5569,9 +5569,9 @@
     },
     {
      "image": "/assets/species/plumage/sp063-adult-f.webp",
-     "role": "Verenkleed (Vrouwtje)",
+     "role": "Overige herkenningsfoto (Volwassen)",
      "content": "Zijaanzicht met gele kruinstreep op een tak.",
-     "sexAge": "Vrouwtje volgens de fotograaf.",
+     "sexAge": "Volwassen. Vrouwtje alleen als bronclaim van de fotograaf; verborgen oranje middenkruin op dit zijaanzicht niet uit te sluiten.",
      "quality": "Volledige vogel, herkenbare kop en vleugelstrepen.",
      "verdict": "goedgekeurd",
      "rights": {
@@ -5579,7 +5579,9 @@
       "note": "bronaudit 14-11-2026: zelfde opname (Verkleind tot maximaal 1600 px en omgezet naar WebP zonder uitsnede. Metadata verwijderd.), CC BY-SA 3.0 · Francis C. Franklin",
       "annotations": []
      },
-     "flight": null
+     "flight": null,
+     "relabeledIn": "F3-R18-qa",
+     "previousRole": "Verenkleed (Vrouwtje)"
     }
    ],
    "corrections": [
@@ -5662,7 +5664,10 @@
        "De research-grade waarneming heeft de annotatie Juvenile. De vogel is volledig in beeld en mist de opvallende volwassen kruinstreep. Geslacht onbekend."
       ]
      },
-     "flight": null
+     "flight": null,
+     "retiredIn": "F3-R18-qa",
+     "retiredOn": "2026-11-17",
+     "retiredReason": "Niet-vrijgegeven kandidaat: soortidentiteit visueel niet overtuigend; iNaturalist-annotatie bewijst soort en leeftijd niet; rechten alleen register. Bestand en herkomst bewaard onder retired.sp064."
     },
     {
      "image": "/assets/species/sp064.webp",

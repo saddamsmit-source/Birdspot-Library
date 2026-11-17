@@ -44,7 +44,7 @@ for(const pair of registry.pairs) {
   assert.equal(pair.textState,'PARTIALLY TESTED'); // don't promote structural checks into ornithological PASS
   assert.ok(pair.mediaOpen.length>0);
   const matching = GUIDE_COMPARISONS.filter(c=>
-    c.birds.length===2 && pair.birds.every(id=>c.birds.some(b=>b.id===id)) &&
+    c.birds.length===2 && !c.birds.some(b=>b.photoMissing||b.textOnly) && pair.birds.every(id=>c.birds.some(b=>b.id===id)) &&
     pair.matchingPlumages.every((plumage,i)=>
       !plumage || c.birds.find(b=>b.id===pair.birds[i])?.plumage===plumage));
   if(pair.photoState==='REGISTERED_PAIR_PENDING_F3_ORIGINAL') {
@@ -62,7 +62,10 @@ for(const pair of registry.pairs) {
       assert.ok(html.includes('data-compare-species="'+partner+'"'),pair.id+' comparison absent from '+id);
     }
   } else if(pair.photoState==='MISSING_VERIFIED_PAIR') {
-    assert.ok(pair.birds.some(id=>!mediaRegistered(id)),pair.id+' claims missing while both have media');
+    const hiddenPanel=GUIDE_COMPARISONS.some(c=>c.birds.length===2 && pair.birds.every(id=>c.birds.some(b=>b.id===id)) &&
+      pair.matchingPlumages.every((plumage,i)=>!plumage || c.birds.find(b=>b.id===pair.birds[i])?.plumage===plumage) &&
+      c.birds.every(b=>b.photoMissing));
+    assert.ok(hiddenPanel || pair.birds.some(id=>!mediaRegistered(id)),pair.id+' claims missing while both have media');
     assert.ok(pair.mediaOpen.some(x=>/photo|foto|sp\d{3}/i.test(x)));
     assert.ok(pair.birds.some(id=>KNOWLEDGE[id]?.caution?.text),pair.id+' needs a visible caution');
     const active=matching.some(c=>c.birds.every(b=>comparisonPhoto(b,Boolean(c.flight))));

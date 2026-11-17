@@ -42,7 +42,9 @@ def main():
      assert credit.locator('summary').is_visible()
      assert not credit.locator('.photo-info__panel').is_visible()
      if sid == 'sp063':
-      frame=p.locator('#sdPanel-herkenning [data-plumage="adult_f"] .photo-info-frame').filter(
+      # F3-R18 QA: geslacht alleen bronclaim -> neutrale "Volwassen"-kaart, nooit in de Vrouwtje-galerij.
+      assert p.locator('#sdPanel-herkenning [data-plumage="adult_f"] img[src$="sp063-adult-f.webp"]').count()==0
+      frame=p.locator('#sdPanel-herkenning .sd-poses .photo-info-frame').filter(
           has=p.locator('img[src$="sp063-adult-f.webp"]'))
       expected_credit='© Francis C. Franklin / CC-BY-SA-3.0'
       expect(frame.locator('.photo-visible-credit')).to_have_text(expected_credit)

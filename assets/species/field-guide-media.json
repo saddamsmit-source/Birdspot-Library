@@ -3899,28 +3899,6 @@
         "verification": "Fotograaf beschrijft expliciet een juveniel; ontbrekende gekleurde kruinstreep en licht gezicht visueel gecontroleerd.",
         "originalURL": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Juvenile_goldcrest.jpg",
         "image": "/assets/species/plumage/sp063-juv.webp"
-      },
-      "adult_f": {
-        "file": "Goldcrest 1.jpg",
-        "nl": "Goudhaantje",
-        "latin": "Regulus regulus",
-        "author": "Francis C. Franklin",
-        "license": "CC BY-SA 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-        "source": "https://commons.wikimedia.org/wiki/File:Goldcrest_1.jpg",
-        "alt": "Vrouwtje Goudhaantje in zijaanzicht op een tak, met gele kruinstreep en een vrij egaal gezicht.",
-        "modifications": "Verkleind tot maximaal 1600 px en omgezet naar WebP zonder uitsnede",
-        "reviewed": "2026-11-14",
-        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/goudhaan",
-        "width": 1600,
-        "height": 1200,
-        "image": "/assets/species/plumage/sp063-adult-f.webp",
-        "verification": "De fotograaf benoemt een vrouwtje Regulus regulus. Het kleed toont een ontwikkelde gele kruinstreep.",
-        "label": "Vrouwtje",
-        "note": "De fotograaf noemt een vrouwtje. Op deze foto is de kruinstreep geel.",
-        "age": "adult",
-        "sex": "female",
-        "visibleCredit": "© Francis C. Franklin / CC-BY-SA-3.0"
       }
     },
     "sp066": {
@@ -5326,29 +5304,6 @@
         "sex": "male",
         "age": "adult",
         "label": "Mannetje"
-      },
-      "juv": {
-        "file": "iNaturalist photo 298756944",
-        "nl": "Vuurgoudhaan",
-        "latin": "Regulus ignicapilla",
-        "author": "euqirneto",
-        "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-        "source": "https://www.inaturalist.org/photos/298756944",
-        "showSourceLink": true,
-        "alt": "Jonge Vuurgoudhaan in zijaanzicht, met lichte vleugelstreep en zonder felle kruinstreep.",
-        "modifications": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
-        "reviewed": "2026-11-12",
-        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/vuurgoudhaan",
-        "visualCheck": "Jonge Vuurgoudhaan in zijaanzicht, met lichte vleugelstreep en zonder felle kruinstreep.",
-        "verification": "De research-grade waarneming heeft de annotatie Juvenile. De vogel is volledig in beeld en mist de opvallende volwassen kruinstreep. Geslacht onbekend.",
-        "width": 1024,
-        "height": 1024,
-        "image": "/assets/species/plumage/sp064-juv.webp",
-        "sha1": "730279615ce74e33d2e500ffc7e541b13908fde0",
-        "sourceAudit": "2026-11-12",
-        "observation": "https://www.inaturalist.org/observations/172122243",
-        "age": "juvenile"
       }
     },
     "sp069": {
@@ -8167,6 +8122,29 @@
       }
     ],
     "sp063": [
+      {
+        "file": "Goldcrest 1.jpg",
+        "nl": "Goudhaantje",
+        "latin": "Regulus regulus",
+        "author": "Francis C. Franklin",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Goldcrest_1.jpg",
+        "alt": "Volwassen Goudhaantje in zijaanzicht op een tak, met gele kruinstreep en een vrij egaal gezicht.",
+        "modifications": "Verkleind tot maximaal 1600 px en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-14",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/goudhaan",
+        "width": 1600,
+        "height": 1200,
+        "image": "/assets/species/plumage/sp063-adult-f.webp",
+        "verification": "Soort en volwassen leeftijd zichtbaar (gele kruinstreep met zwarte zijranden, egaal gezicht). Geslachtsclaim van de fotograaf (vrouwtje) niet onafhankelijk bevestigd; F3-R18 QA 17-11-2026.",
+        "note": "Volwassen Goudhaantje met zichtbaar gele kruinstreep. Geslacht niet vastgesteld: bij het mannetje kan het oranje onder gele veertoppen verborgen blijven.",
+        "age": "adult",
+        "visibleCredit": "© Francis C. Franklin / CC-BY-SA-3.0",
+        "label": "Volwassen",
+        "sourceSexClaim": "female",
+        "sexNote": "De fotograaf noemt een vrouwtje (Commons File:Goldcrest_1.jpg; bronclaim, niet onafhankelijk bevestigd). Op dit gesloten zijaanzicht is een verborgen oranje middenkruin van een mannetje niet uit te sluiten (Ringers' DigiGuide, Ottenby: oranje vaak bedekt door geel, veren moeten gescheiden worden); daarom zonder geslachtslabel."
+      },
       {
         "label": "In vlucht",
         "flight": true,
@@ -11044,6 +11022,34 @@
         "retiredOn": "2026-11-14",
         "retiredReason": "Vervangen door een scherpere opname van een donkere Buizerd in vrije vlucht. De eerdere opname en bronvermelding blijven in het archief.",
         "retiredFrom": "poses.sp005.1"
+      }
+    ],
+    "sp064": [
+      {
+        "file": "iNaturalist photo 298756944",
+        "nl": "Vuurgoudhaan",
+        "latin": "Regulus ignicapilla",
+        "author": "euqirneto",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://www.inaturalist.org/photos/298756944",
+        "showSourceLink": true,
+        "alt": "Jonge Vuurgoudhaan in zijaanzicht, met lichte vleugelstreep en zonder felle kruinstreep.",
+        "modifications": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+        "reviewed": "2026-11-12",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/vuurgoudhaan",
+        "visualCheck": "Jonge Vuurgoudhaan in zijaanzicht, met lichte vleugelstreep en zonder felle kruinstreep.",
+        "verification": "De research-grade waarneming heeft de annotatie Juvenile. De vogel is volledig in beeld en mist de opvallende volwassen kruinstreep. Geslacht onbekend.",
+        "width": 1024,
+        "height": 1024,
+        "image": "/assets/species/plumage/sp064-juv.webp",
+        "sha1": "730279615ce74e33d2e500ffc7e541b13908fde0",
+        "sourceAudit": "2026-11-12",
+        "observation": "https://www.inaturalist.org/observations/172122243",
+        "age": "juvenile",
+        "retiredOn": "2026-11-17",
+        "retiredFrom": "plumage.sp064.juv",
+        "retiredReason": "Niet-vrijgegeven kandidaat (F3-R18 QA): soortidentiteit als Vuurgoudhaan visueel niet overtuigend (grijsachtig, relatief langstaartig, geen duidelijke zwarte oogstreep); iNaturalist-annotatie bewijst soort en leeftijd niet; herpublicatierechten alleen registermatig. Bestand, bron en licentieclaim bewaard voor audit; terugplaatsen alleen na onafhankelijke determinatie."
       }
     ]
   }

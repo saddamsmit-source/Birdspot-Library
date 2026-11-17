@@ -1,0 +1,91 @@
+{
+  "date": "2026-11-17",
+  "purpose": "F3-R18: getoonde foto's Braamsluiper, Goudhaantje, Vuurgoudhaan tegen bronbeeld; Commons-rechten actueel; iNaturalist alleen register; opnamen alleen herkomst/rechten.",
+  "items": [
+    {
+      "speciesId": "sp062",
+      "image": "/assets/species/sp062.webp",
+      "author": "Sighmanb",
+      "license": "CC BY 2.0",
+      "title": "File:Lesser Whitethroat by Sighmanb.jpg"
+    },
+    {
+      "speciesId": "sp063",
+      "image": "/assets/species/sp063.webp",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "title": "File:Goldcrest 2025 11 21 05.jpg"
+    },
+    {
+      "speciesId": "sp063",
+      "image": "/assets/species/plumage/sp063-juv.webp",
+      "author": "Silmethule",
+      "license": "CC BY 4.0",
+      "title": "File:Juvenile goldcrest.jpg"
+    },
+    {
+      "speciesId": "sp063",
+      "image": "/assets/species/plumage/sp063-adult-f.webp",
+      "author": "Francis C. Franklin",
+      "license": "CC BY-SA 3.0",
+      "title": "File:Goldcrest 1.jpg"
+    },
+    {
+      "speciesId": "sp063",
+      "image": "/assets/species/plumage/sp063-flight.webp",
+      "author": "Alpsdake",
+      "license": "CC BY-SA 3.0",
+      "title": "File:Regulus regulus japonensis in flight.JPG"
+    },
+    {
+      "speciesId": "sp064",
+      "image": "/assets/species/sp064.webp",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "title": "File:Common firecrest Franconville 03.jpg"
+    },
+    {
+      "speciesId": "sp064",
+      "image": "/assets/species/plumage/sp064-hero-male.webp",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "title": "File:Firecrest 2024 01 28 01.jpg"
+    },
+    {
+      "speciesId": "sp064",
+      "image": "/assets/species/plumage/sp064-juv.webp",
+      "author": "euqirneto",
+      "license": "CC BY 4.0",
+      "urls": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/298756944/original.jpg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/298756944/original.jpeg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/298756944/original.JPG",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/298756944/original.png"
+      ]
+    },
+    {
+      "speciesId": "sp063",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp063-call.mp3",
+      "author": "Hannu Varkki",
+      "license": "CC BY-SA 4.0",
+      "title": "File:Regulus regulus - Goldcrest XC501794.mp3"
+    },
+    {
+      "speciesId": "sp064",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp064-song.mp3",
+      "author": "Benoît Van Hecke",
+      "license": "CC BY-SA 4.0",
+      "title": "File:Regulus ignicapilla - Common Firecrest XC545837.mp3"
+    },
+    {
+      "speciesId": "sp064",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp064-call.mp3",
+      "author": "Benoît Van Hecke",
+      "license": "CC BY-SA 4.0",
+      "title": "File:Regulus ignicapilla - Common Firecrest XC531032.mp3"
+    }
+  ]
+}
