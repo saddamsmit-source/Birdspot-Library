@@ -21,7 +21,7 @@ from playwright.sync_api import expect, sync_playwright
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from test_pilot_offline_new_sighting import ROOT, Quiet, Server  # noqa: E402
 
-OUT = ROOT / 'tests' / 'screenshots' / 'feature_reconciliation'
+OUT = ROOT / 'tests' / 'screenshots' / 'feature_reconciliation' / os.environ.get('BIRDSPOT_RESULTS_TAG', 'local')
 GPS = {'latitude': 51.9244, 'longitude': 4.4777, 'accuracy': 8}
 RESULTS = []
 RECOG = {}

@@ -536,6 +536,7 @@ function _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx })
     ctx.cancelPinPicker?.();
     ctx.cancelPinPicker=openPinPicker({
       lat:_state.lat,lon:_state.lon,
+      onClose:()=>{ ctx.cancelPinPicker=null; }, // Escape/sluiten/bevestigen: verwijzing altijd opgeruimd
       onConfirm:coords=>{
         if(ctx.destroyed)return;
         ctx.locationRevision++; // handmatige pin wint van elke nog lopende GPS-callback
@@ -745,6 +746,10 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
   btn.textContent = 'Opslaan…';
 
   ctx.saving = true;
+  // Opslagrace (#293 QA): de locatie ligt vast op het moment van Opslaan; een GPS-antwoord dat
+  // tijdens het wegschrijven binnenkomt (revisie verhoogd) kan het record niet meer wijzigen.
+  ctx.locationRevision++;
+  const loc = { lat: _state.lat, lon: _state.lon, acc: _state.pinAccuracyM, placeId: _state.placeId, name: _state.locationName };
   const content = ov.querySelector('#addSheetContent');
   const cancel = ov.querySelector('#addSheetCancel');
   content.inert = true;
@@ -768,9 +773,9 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
     await changePhotos({ put: newPhotos });
     mediaWritten = true;
     const allPhotoIds = [..._state.existingPhotoIds, ...newPhotos.map(photo => photo.id)];
-    let placeId = validPin(_state.lat, _state.lon) ? _state.placeId : null;
-    if (validPin(_state.lat, _state.lon) && (!placeId || !loadPlaces().some(place => place.id === placeId))) {
-      newPlace = addPlace({ name: _state.locationName, lat: _state.lat, lon: _state.lon });
+    let placeId = validPin(loc.lat, loc.lon) ? loc.placeId : null;
+    if (validPin(loc.lat, loc.lon) && (!placeId || !loadPlaces().some(place => place.id === placeId))) {
+      newPlace = addPlace({ name: loc.name, lat: loc.lat, lon: loc.lon });
       placeId = newPlace.id;
     }
 
@@ -781,11 +786,11 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
       time:         _state.time   || null,
       count:        _state.count  ?? 1,
       certainty:    _state.certainty || 'certain',
-      lat:          _state.lat,
-      lon:          _state.lon,
-      pinAccuracyM: validPin(_state.lat,_state.lon) && Number.isFinite(_state.pinAccuracyM) ? _state.pinAccuracyM : null,
+      lat:          loc.lat,
+      lon:          loc.lon,
+      pinAccuracyM: validPin(loc.lat,loc.lon) && Number.isFinite(loc.acc) ? loc.acc : null,
       placeId,
-      locationName: _state.locationName || null,
+      locationName: loc.name || null,
       habitat:      _state.habitat      || null,
       behavior:     _state.behavior     || null,
       weather:      _state.weather      || null,
@@ -856,7 +861,7 @@ function _requestGPS(ov,ctx,{ silent = false, intent = null } = {}) {
 
   navigator.geolocation.getCurrentPosition(
     pos => {
-      if (ctx.destroyed || revision !== ctx.locationRevision) return;
+      if (ctx.destroyed || ctx.saving || revision !== ctx.locationRevision) return;
       if (silent && (ctx.cancelPinPicker || _state.lat != null)) { _resetGPSButton(ov); return; }
       _state.lat = pos.coords.latitude;
       _state.lon = pos.coords.longitude;

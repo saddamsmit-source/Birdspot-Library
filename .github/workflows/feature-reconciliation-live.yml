@@ -1,10 +1,10 @@
 name: Birdspot feature reconciliation (live URL)
 on:
   push:
-    branches: [docs/birdspot-feature-reconciliatie-20261117, feat/birdspot-r05-r18-gps-versie-20261117, fix/birdspot-r1-gps-race-ci-20261117]
-    paths: [.github/workflows/feature-reconciliation-live.yml, 'tests/test_feature_reconciliation.py', 'tests/test_r05_gps_race.py', 'src/**', sw.js, index.html]
+    branches: [docs/birdspot-feature-reconciliatie-20261117, feat/birdspot-r05-r18-gps-versie-20261117, fix/birdspot-r1-gps-race-ci-20261117, 'feat/birdspot-r[2-4]-*']
+    paths: ['.github/workflows/feature-reconciliation-live.yml', 'tests/test_feature_reconciliation.py', 'tests/test_r05_gps_race.py', 'tests/test_sighting_merlin_pins.py', 'tests/test_pilot_offline_new_sighting.py', 'src/**', 'sw.js', 'index.html', 'styles/**', 'assets/species/field-guide-media.json']
   pull_request:
-    paths: ['src/features/sightings/**', 'src/features/profile/**', 'tests/test_r05_gps_race.py', 'tests/test_feature_reconciliation.py']
+    paths: ['.github/workflows/feature-reconciliation-live.yml', 'tests/test_feature_reconciliation.py', 'tests/test_r05_gps_race.py', 'tests/test_sighting_merlin_pins.py', 'tests/test_pilot_offline_new_sighting.py', 'src/**', 'sw.js', 'index.html', 'styles/**', 'assets/species/field-guide-media.json']
 permissions:
   contents: read
 jobs:
@@ -24,20 +24,28 @@ jobs:
         env:
           BIRDSPOT_FAKE_AUDIO: /tmp/merel.wav
           BIRDSPOT_RECORD_SECONDS: '40'
+          BIRDSPOT_RESULTS_TAG: candidate
         run: |
           set -o pipefail
           python tests/test_r05_gps_race.py
           python tests/test_feature_reconciliation.py | tee /tmp/candidate.txt
       - name: Live URL (published 1.27.31)
+        if: always()
         env:
           BIRDSPOT_BASE_URL: https://saddamsmit-source.github.io/Birdspot-Library/
           # Bekende defecten van de gepubliceerde 1.27.31 (R18 versie, R05 GPS, F11 volgfout); elke andere FAIL = rood.
           BIRDSPOT_EXPECTED_FAIL: F01,F03,F04,F11
+          BIRDSPOT_RESULTS_TAG: live
           BIRDSPOT_FAKE_AUDIO: /tmp/merel.wav
           BIRDSPOT_RECORD_SECONDS: '40'
         run: python tests/test_feature_reconciliation.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
+          name: feature-reconciliation-candidate
+          path: tests/screenshots/feature_reconciliation/candidate/
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
           name: feature-reconciliation-live
-          path: tests/screenshots/feature_reconciliation/
+          path: tests/screenshots/feature_reconciliation/live/

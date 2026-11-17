@@ -9,6 +9,7 @@ Vertraagde Permissions API en geolocation via init-script; Chromium 390 px. Scen
   G5 picker open en geannuleerd terwijl GPS binnenkomt → geen stille overschrijving achter de picker
   G6 geweigerd: 'denied' → geen GPS, geen prompt, opslaan met alleen plaatsnaam werkt
   G7 annuleren terwijl GPS loopt → geen record, geen paginafout
+  G8 opslagrace: Opslaan zonder pin, changePhotos open, dan GPS-antwoord → record zonder lat/lon en geen nieuwe plek
 """
 import sys
 import threading
@@ -32,10 +33,28 @@ def init_script(permission, perm_delay, gps_delay):
   if (navigator.permissions) navigator.permissions.query = (d) => d && d.name === 'geolocation'
     ? new Promise(r => setTimeout(() => r({{ state: '{permission}' }}), {perm_delay})) : q(d);
   window.__gpsCalls = 0;
+  const origTx = IDBDatabase.prototype.transaction;
+  IDBDatabase.prototype.transaction = function (...args) {{
+    const tx = origTx.apply(this, args);
+    const stores = [].concat(args[0]);
+    if (window.__holdPhotosMs && stores.includes('photos') && args[1] === 'readwrite') {{
+      let handler = null;
+      Object.defineProperty(tx, 'oncomplete', {{
+        configurable: true,
+        get: () => handler,
+        set: fn => {{ handler = fn; tx.addEventListener('complete', e => setTimeout(() => fn && fn.call(tx, e), window.__holdPhotosMs)); }},
+      }});
+    }}
+    return tx;
+  }};
+  window.__releaseGps = null;
+  window.__gpsOnDemand = false;
   navigator.geolocation.getCurrentPosition = (ok, err) => {{
     window.__gpsCalls++;
     if ('{permission}' === 'denied') {{ setTimeout(() => err && err({{ code: 1 }}), 50); return; }}
-    setTimeout(() => ok({{ coords: {{ latitude: {AUTO[0]}, longitude: {AUTO[1]}, accuracy: 9 }} }}), {gps_delay});
+    const answer = () => ok({{ coords: {{ latitude: {AUTO[0]}, longitude: {AUTO[1]}, accuracy: 9 }} }});
+    if (window.__gpsOnDemand) {{ window.__releaseGps = answer; return; }}
+    setTimeout(answer, {gps_delay});
   }};
 }})();"""
 
@@ -144,16 +163,22 @@ def main():
         scenario('G4 wissen', 'granted', 0, 2500, g4)
 
         def g5(page):
+            page.evaluate('window.__gpsOnDemand = true')
             open_sheet(page)
-            page.wait_for_function('window.__gpsCalls > 0', timeout=5000)
+            page.wait_for_function('window.__releaseGps !== null', timeout=5000)  # auto-GPS wacht op antwoord
             page.locator('#sightPinBtn').click()
             page.locator('#pinLat').wait_for(timeout=9000)
-            page.wait_for_timeout(3500)  # GPS-antwoord komt binnen terwijl de picker open is
             page.keyboard.press('Escape')
             page.locator('#pinLocationMap').wait_for(state='detached', timeout=9000)
+            page.evaluate('window.__releaseGps()')  # GPS-antwoord komt ná Escape
+            page.wait_for_timeout(1000)
             hint = page.locator('#coordsHint').inner_text()
             assert '52.10' not in hint, hint
-            return f'geen stille overschrijving achter de picker ({hint[:40]!r})'
+            pick_species(page)
+            page.locator('#sightLocation').fill('Na Escape')
+            r = save(page)
+            assert r.get('lat') is None and r.get('placeId') is None, r
+            return 'GPS-antwoord ná Escape genegeerd; record zonder coördinaten of plek'
         scenario('G5 picker open/annuleren', 'granted', 0, 2500, g5)
 
         def g6(page):
@@ -179,9 +204,35 @@ def main():
             return 'annuleren tijdens GPS: geen record, geen fout'
         scenario('G7 annuleren', 'granted', 0, 2000, g7)
 
+        def g8(page):
+            # Opslagrace (#293 QA): Opslaan zonder pin, changePhotos blijft open, dán antwoordt auto-GPS.
+            page.evaluate('window.__gpsOnDemand = true')
+            places_before = page.evaluate("JSON.parse(localStorage.getItem('birdspot-places') || '[]').length")
+            n = len(rows(page))
+            open_sheet(page)
+            page.wait_for_function('window.__releaseGps !== null', timeout=5000)
+            pick_species(page)
+            page.locator('#sightLocation').fill('Zonder pin opgeslagen')
+            # Echte foto, zodat changePhotos werkelijk een IndexedDB-transactie opent die we openhouden.
+            page.locator('#sightingMediaInput').set_input_files(str(Path(__file__).resolve().parent.parent / 'assets' / 'species' / 'sp045.webp'))
+            page.wait_for_function("document.querySelectorAll('#addSightingSheet img, #addSightingSheet .media-thumb').length > 0 || !document.querySelector('#addSheetSubmit')?.disabled", timeout=10000)
+            page.wait_for_timeout(800)
+            page.evaluate('window.__holdPhotosMs = 2500')
+            page.locator('#addSheetSubmit').click()
+            page.wait_for_timeout(300)
+            page.evaluate('window.__releaseGps()')  # GPS-antwoord tijdens het wegschrijven
+            page.locator('#addSightingSheet').wait_for(state='detached', timeout=15000)
+            new = rows(page)[n:]
+            assert len(new) == 1 and new[0].get('lat') is None and new[0].get('placeId') is None, new
+            assert len(new[0].get('photoIds') or []) == 1, 'foto niet meegeschreven: race niet echt getest'
+            places_after = page.evaluate("JSON.parse(localStorage.getItem('birdspot-places') || '[]').length")
+            assert places_after == places_before, (places_before, places_after)
+            return 'GPS tijdens opslaan genegeerd: geen coördinaten, geen nieuwe plek'
+        scenario('G8 opslagrace', 'granted', 0, 100, g8)
+
         browser.close()
     server.shutdown()
-    print('R05 GPS-RACE PASS: G1–G7 incl. G3b')
+    print('R05 GPS-RACE PASS: G1–G8 incl. G3b')
 
 
 if __name__ == '__main__':
