@@ -1,4 +1,5 @@
 /** F3: protect the original 140 cohort, prior evidence, and the new no-false-PASS gate. */
+import { plumageRoleProblems } from './f3_plumage_rule.mjs';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync, statSync } from 'node:fs';
 import { createHash } from 'node:crypto';
@@ -276,7 +277,7 @@ for(const item of seventeenth){
  assert.ok(review.checks.audioRecordingsAuthenticity.startsWith('BLOCKED'));
  assert.ok(review.checks.ebirdDistributionAndBias.startsWith('BLOCKED'));
  assert.match(review.checks.vogelbeschermingAndANWB,/ANWB-vogelgids NOT TESTED/);
- if(review.checks.plumageAndTrueFlight.startsWith('VERIFIED'))assert.ok(review.exemptions?.plumageAndTrueFlight?.reason?.length>20,'VERIFIED shown roles need documented missing optional roles');
+ assert.deepEqual(plumageRoleProblems(item),[],item.id+' plumage/flight role rule');
  assert.equal(review.photoBlobSHAs.length,currentAssets.imageSlots.length);
  for(let i=0;i<currentAssets.imageSlots.length;i++){
   const bytes=readFileSync(new URL('..'+currentAssets.imageSlots[i].path,import.meta.url));
