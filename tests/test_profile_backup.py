@@ -4,7 +4,7 @@ Birdspot Library — B: profiel en back-up
   B-02  overzicht: waarnemingen, soorten, plekken en foto's kloppen met de opgeslagen waarnemingen
   B-03  nog geen back-up + waarnemingen → herinnering; na 'Bewaren' status 'Laatste back-up' en geen herinnering
   B-04  nieuwe waarneming na de back-up → '1 nieuwe waarneming sinds de laatste back-up'
-  B-05  versie komt uit sw.js (APP_VERSION); zonder service worker 'Versie onbekend'
+  B-05  versie komt uit sw.js (APP_VERSION); ook zonder SW-controller zichtbaar, offline-status apart (R18)
   B-06  geen paginafouten; screenshot 390 px
 
 Starten (vanuit repo-root):  python tests/test_profile_backup.py
@@ -101,7 +101,10 @@ def main():
             print("B-04 OK — nieuwe waarneming na back-up gemeld")
 
             p.wait_for_function("() => !document.querySelector('#appVersion').textContent.includes('ophalen')")
-            assert p.locator("#appVersion").inner_text().startswith("Versie onbekend")
+            app_version = re.search(r"APP_VERSION = '([^']+)'", (ROOT / 'sw.js').read_text(encoding='utf-8')).group(1)
+            label = p.locator("#appVersion").inner_text()
+            assert label.startswith(f"Versie {app_version} · "), label  # R18: nooit meer 'Versie onbekend'
+            assert "onbekend" not in label.lower(), label
             assert not errors, f"B-06 paginafouten: {errors}"
             ctx.close()
 

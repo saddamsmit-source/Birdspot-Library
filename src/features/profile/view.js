@@ -175,14 +175,24 @@ export async function renderProfile(el) {
 
   // Versie ophalen bij de service worker (enige versiebron, L-027)
   const versionEl = el.querySelector('#appVersion');
-  const info = await askVersion();
-  if (!info) {
-    versionEl.textContent = 'Versie onbekend · offline-modus nog niet actief';
-    return;
-  }
-  const offlineStatus = info.offlineReady === true ? 'basis offline beschikbaar'
-    : info.offlineReady === false ? 'offlinebasis onvolledig' : 'offlinebasis onbevestigd';
-  versionEl.textContent = `Versie ${info.version} · ${offlineStatus}`;
+  const show = info => {
+    if (!info) {
+      versionEl.textContent = 'Versie niet te bepalen · controleer de verbinding';
+      return;
+    }
+    // R18: versie en offlinebeschikbaarheid zijn twee aparte feiten.
+    const offlineStatus = info.offlineReady === true ? 'basis offline beschikbaar'
+      : info.offlineReady === false ? 'offlinebasis onvolledig'
+      : 'offline-modus wordt nog ingesteld';
+    versionEl.textContent = `Versie ${info.version} · ${offlineStatus}`;
+    versionEl.dataset.version = info.version;
+    versionEl.dataset.offline = String(info.offlineReady ?? 'pending');
+  };
+  show(await askVersion());
+  // Eerste bezoek: zodra de service worker de pagina overneemt, de offline-status opnieuw bevragen.
+  navigator.serviceWorker?.addEventListener?.('controllerchange', async () => {
+    if (versionEl.isConnected) show(await askVersion());
+  }, { once: true });
 }
 
 // ── Event handlers ─────────────────────────────────────────────────────────
@@ -373,6 +383,17 @@ function showConfirm(el, html) {
 
 // ── Versie via MessageChannel; null als er (nog) geen service worker is ──────
 async function askVersion() {
+  const fromController = await askController();
+  if (fromController) return fromController;
+  // R18: zonder controller (eerste bezoek) dezelfde bron lezen: het versienummer in sw.js.
+  try {
+    const res = await fetch('sw.js', { cache: 'no-store' });
+    const version = res.ok ? ((await res.text()).match(/APP_VERSION\s*=\s*'([^']+)'/) || [])[1] : null;
+    return version ? { version, offlineReady: null } : null;
+  } catch (_) { return null; }
+}
+
+async function askController() {
   try {
     const sw = navigator.serviceWorker?.controller;
     if (!sw) return null;

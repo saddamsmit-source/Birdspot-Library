@@ -1,8 +1,8 @@
 name: Birdspot feature reconciliation (live URL)
 on:
   push:
-    branches: [docs/birdspot-feature-reconciliatie-20261117]
-    paths: [.github/workflows/feature-reconciliation-live.yml, tests/test_feature_reconciliation.py]
+    branches: [docs/birdspot-feature-reconciliatie-20261117, feat/birdspot-r05-r18-gps-versie-20261117]
+    paths: [.github/workflows/feature-reconciliation-live.yml, tests/test_feature_reconciliation.py, 'src/**', sw.js, index.html]
 permissions:
   contents: read
 jobs:
@@ -18,6 +18,11 @@ jobs:
           python -m playwright install --with-deps chromium
           sudo apt-get install -y ffmpeg >/dev/null
           ffmpeg -loglevel error -y -i assets/species/audio/sp045-song.mp3 -ac 1 -ar 48000 /tmp/merel.wav
+      - name: Candidate code of this commit (served on the runner, with internet)
+        env:
+          BIRDSPOT_FAKE_AUDIO: /tmp/merel.wav
+          BIRDSPOT_RECORD_SECONDS: '40'
+        run: python tests/test_feature_reconciliation.py | tee /tmp/candidate.txt
       - name: Live URL (published 1.27.31)
         env:
           BIRDSPOT_BASE_URL: https://saddamsmit-source.github.io/Birdspot-Library/
