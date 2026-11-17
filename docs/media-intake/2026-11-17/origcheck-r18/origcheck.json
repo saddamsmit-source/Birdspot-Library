@@ -1,0 +1,279 @@
+{
+  "generated": "2026-11-17T08:58:04Z",
+  "rule": {
+    "sameMinR": 0.9
+  },
+  "items": [
+    {
+      "speciesId": "sp062",
+      "image": "/assets/species/sp062.webp",
+      "title": "File:Lesser Whitethroat by Sighmanb.jpg",
+      "author": "Sighmanb",
+      "license": "CC BY 2.0",
+      "localSize": [
+        1400,
+        998
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Lesser_Whitethroat_by_Sighmanb.jpg",
+        "sha1": "a04928d7a1a5fe9141b36729be214baced9a32d5",
+        "license": "CC BY 2.0",
+        "author": "Sighmanb",
+        "width": 2895,
+        "height": 2063
+      },
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        684
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp062_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp063",
+      "image": "/assets/species/sp063.webp",
+      "title": "File:Goldcrest 2025 11 21 05.jpg",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1600,
+        1067
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Goldcrest_2025_11_21_05.jpg",
+        "sha1": "e18e008fb8e988fe0a16876297348c434e49828c",
+        "license": "CC BY 4.0",
+        "author": "Alexis Lours",
+        "width": 4710,
+        "height": 3140
+      },
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp063_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp063",
+      "image": "/assets/species/plumage/sp063-juv.webp",
+      "title": "File:Juvenile goldcrest.jpg",
+      "author": "Silmethule",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1600,
+        1194
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Juvenile_goldcrest.jpg",
+        "sha1": "11cbc3fb8e63bf716b3a6350857e1232c9457c74",
+        "license": "CC BY 4.0",
+        "author": "Silmethule",
+        "width": 2932,
+        "height": 2188
+      },
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        716
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp063-juv_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp063",
+      "image": "/assets/species/plumage/sp063-adult-f.webp",
+      "title": "File:Goldcrest 1.jpg",
+      "author": "Francis C. Franklin",
+      "license": "CC BY-SA 3.0",
+      "localSize": [
+        1600,
+        1200
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Goldcrest_1.jpg",
+        "sha1": "d7a1c510a632b34fd134d0bcf36a84c1a57e7db0",
+        "license": "CC BY-SA 3.0",
+        "author": "Francis C. Franklin",
+        "width": 2803,
+        "height": 2102
+      },
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        720
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp063-adult-f_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp063",
+      "image": "/assets/species/plumage/sp063-flight.webp",
+      "title": "File:Regulus regulus japonensis in flight.JPG",
+      "author": "Alpsdake",
+      "license": "CC BY-SA 3.0",
+      "localSize": [
+        1312,
+        1400
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Regulus_regulus_japonensis_in_flight.JPG",
+        "sha1": "b09efc0a9e482b19713d22afa8dcfd0a0dbf7769",
+        "license": "CC BY-SA 3.0",
+        "author": "Alpsdake",
+        "width": 1920,
+        "height": 2048
+      },
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        1024
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp063-flight_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp064",
+      "image": "/assets/species/sp064.webp",
+      "title": "File:Common firecrest Franconville 03.jpg",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1600,
+        1067
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Common_firecrest_Franconville_03.jpg",
+        "sha1": "860554058c771325b0656af91e13ab58a5534731",
+        "license": "CC BY 4.0",
+        "author": "Alexis Lours",
+        "width": 3570,
+        "height": 2380
+      },
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp064_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp064",
+      "image": "/assets/species/plumage/sp064-hero-male.webp",
+      "title": "File:Firecrest 2024 01 28 01.jpg",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1400,
+        933
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Firecrest_2024_01_28_01.jpg",
+        "sha1": "22e047d8ce3ea4a1ab80d69d9a760ca81a8404e1",
+        "license": "CC BY 4.0",
+        "author": "Alexis Lours",
+        "width": 3935,
+        "height": 2623
+      },
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp064-hero-male_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp064",
+      "image": "/assets/species/plumage/sp064-juv.webp",
+      "title": null,
+      "author": "euqirneto",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1024,
+        1024
+      ],
+      "sourceUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/298756944/original.jpg",
+      "rightsMatch": null,
+      "sourceSize": [
+        2048,
+        2048
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp064-juv_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp063",
+      "audio": "/assets/species/audio/sp063-call.mp3",
+      "title": "File:Regulus regulus - Goldcrest XC501794.mp3",
+      "author": "Hannu Varkki",
+      "license": "CC BY-SA 4.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Regulus_regulus_-_Goldcrest_XC501794.mp3",
+        "sha1": "300bcea2d95cd320fd65452aecc0e54e3a623509",
+        "license": "CC BY-SA 4.0",
+        "author": "Hannu Varkki",
+        "duration": 17.502520133283607,
+        "mime": "audio/mpeg"
+      },
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    },
+    {
+      "speciesId": "sp064",
+      "audio": "/assets/species/audio/sp064-song.mp3",
+      "title": "File:Regulus ignicapilla - Common Firecrest XC545837.mp3",
+      "author": "Benoît Van Hecke",
+      "license": "CC BY-SA 4.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Regulus_ignicapilla_-_Common_Firecrest_XC545837.mp3",
+        "sha1": "045925ad1248faf7dd9b75d8b7364faf4f0f82c0",
+        "license": "CC BY-SA 4.0",
+        "author": "Benoît Van Hecke",
+        "duration": 6.0964138804457955,
+        "mime": "audio/mpeg"
+      },
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    },
+    {
+      "speciesId": "sp064",
+      "audio": "/assets/species/audio/sp064-call.mp3",
+      "title": "File:Regulus ignicapilla - Common Firecrest XC531032.mp3",
+      "author": "Benoît Van Hecke",
+      "license": "CC BY-SA 4.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Regulus_ignicapilla_-_Common_Firecrest_XC531032.mp3",
+        "sha1": "25e89e05f86dcf2c5543734efd6a6b17b332cdf0",
+        "license": "CC BY-SA 4.0",
+        "author": "Benoît Van Hecke",
+        "duration": 18.592859467050282,
+        "mime": "audio/mpeg"
+      },
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    }
+  ]
+}
