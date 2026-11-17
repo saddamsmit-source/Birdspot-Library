@@ -141,9 +141,16 @@ def main():
             page.locator("#journalSort").select_option("oldest")
             assert page.locator(".phase3-journal-entry").first.get_attribute("data-journal-id")=="p3-invalid"
             page.locator("#journalSort").select_option("newest")
-            page.locator("[data-journal-id='p3-c']").first.click()
-            page.locator("#detailSightingSheet").wait_for(timeout=9000)
-            # Do not leave an overlay open when switching screens.
+            page.locator("[data-journal-id='p3-a']").first.click()
+            detail = page.locator("#detailSightingSheet")
+            detail.wait_for(timeout=9000)
+            detail.get_by_role("button", name="Vergroot foto").click()
+            zoom = page.get_by_role("dialog", name="Vogelfoto bekijken")
+            zoom.get_by_role("button", name="Inzoomen").click()
+            assert zoom.get_by_role("button", name="Zoom herstellen").inner_text() == "2×"
+            page.keyboard.press("Escape")
+            zoom.wait_for(state="detached")
+            assert detail.is_visible()
             page.locator("#detailClose").click()
 
             # Viewports: no hidden controls and no new JS exceptions.

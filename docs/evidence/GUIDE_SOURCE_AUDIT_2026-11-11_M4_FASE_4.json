@@ -1,0 +1,76 @@
+[
+ {
+  "image": "/assets/species/plumage/sp081-portrait.webp",
+  "species": "sp081",
+  "source": "https://commons.wikimedia.org/wiki/File:Grey_heron_(Ardea_cinerea).jpg",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Grey_heron_%28Ardea_cinerea%29.jpg",
+  "sourceTitle": "File:Grey heron (Ardea cinerea).jpg",
+  "sourceAuthor": "Charles J. Sharp",
+  "sourceLicense": "CC BY-SA 3.0",
+  "sameShot": true,
+  "method": "directe WebP-conversie van originele Commons-JPEG",
+  "sourceSha256": "6235901ce1891a5ff45bcf6d8824d430462c4632bf0f54ccb3c0cc103f1e566f",
+  "sha1": "ddefc7d3dd31e7ab49fcffd68f27b69fb2055400",
+  "taxonInSource": "Ardea cinerea",
+  "annotations": [
+   "Bron bevestigt Ardea cinerea. De volwassen koptekening en stevige snavel zijn zichtbaar. Geslacht onbekend."
+  ],
+  "auditDate": "2026-11-11"
+ },
+ {
+  "image": "/assets/species/plumage/sp099-adult_m.webp",
+  "species": "sp099",
+  "source": "https://commons.wikimedia.org/wiki/File:Northern-Lapwing-Vanellus-vanellus.jpg",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Northern-Lapwing-Vanellus-vanellus.jpg",
+  "sourceTitle": "File:Northern-Lapwing-Vanellus-vanellus.jpg",
+  "sourceAuthor": "Andreas Trepte",
+  "sourceLicense": "CC BY-SA 2.5",
+  "sameShot": true,
+  "method": "directe WebP-conversie van originele Commons-JPEG",
+  "sourceSha256": "a3ff44bc1b2a7afb37e2a6de27a27ae90590d511afe161d8f2725415cb82b0d3",
+  "sha1": "28531cfdd01870144d7474f951cee3a1aee1f108",
+  "taxonInSource": "Vanellus vanellus",
+  "annotations": [
+   "Audubon benoemt dezelfde opname als volwassen mannetje in broedkleed. De lange kuif en donkere keel zijn zichtbaar.",
+   "Identieke opname als in Audubon. Gemiddeld absoluut RGB-kanaalverschil na schalen: 2.72, 2.40, 3.32 op 255."
+  ],
+  "auditDate": "2026-11-11",
+  "corroboratingSource": "https://www.audubon.org/field-guide/bird/northern-lapwing"
+ },
+ {
+  "image": "/assets/species/plumage/sp099-adult_f.webp",
+  "species": "sp099",
+  "source": "https://commons.wikimedia.org/wiki/File:Northern_lapwing_(Vanellus_vanellus)_female_display_Marken.jpg",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/90/Northern_lapwing_%28Vanellus_vanellus%29_female_display_Marken.jpg",
+  "sourceTitle": "File:Northern lapwing (Vanellus vanellus) female display Marken.jpg",
+  "sourceAuthor": "Charles J. Sharp",
+  "sourceLicense": "CC BY-SA 4.0",
+  "sameShot": true,
+  "method": "directe WebP-conversie van originele Commons-JPEG",
+  "sourceSha256": "fc1eb9ddbe1183387e8699db71b11d5a291fbcba3d742df160f24286a7c2f845",
+  "sha1": "e49a32d38cb5e3a920c7dc2ea4305b207019e8d7",
+  "taxonInSource": "Vanellus vanellus",
+  "annotations": [
+   "De fotograaf benoemt een baltsend vrouwtje bij Marken. Het beeld toont een volwassen vogel in baltspositie."
+  ],
+  "auditDate": "2026-11-11"
+ },
+ {
+  "image": "/assets/species/plumage/sp099-juv.webp",
+  "species": "sp099",
+  "source": "https://commons.wikimedia.org/wiki/File:Northern_lapwing_(Vanellus_vanellus)_Standlake.jpg",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/43/Northern_lapwing_%28Vanellus_vanellus%29_Standlake.jpg",
+  "sourceTitle": "File:Northern lapwing (Vanellus vanellus) Standlake.jpg",
+  "sourceAuthor": "Charles J. Sharp",
+  "sourceLicense": "CC BY-SA 4.0",
+  "sameShot": true,
+  "method": "directe WebP-conversie van originele Commons-JPEG",
+  "sourceSha256": "1ee6581b606dd9b311ff4db4d8681c08412b24325d5db85335e47eb41bdb64a5",
+  "sha1": "e44b49a0b447a025da6b5cd27fc55543a256c2b5",
+  "taxonInSource": "Vanellus vanellus",
+  "annotations": [
+   "Commons categoriseert de opname als juveniel. Korte kuif, bruin kleed en brede lichte veerranden ondersteunen het label. Geslacht onbekend."
+  ],
+  "auditDate": "2026-11-11"
+ }
+]

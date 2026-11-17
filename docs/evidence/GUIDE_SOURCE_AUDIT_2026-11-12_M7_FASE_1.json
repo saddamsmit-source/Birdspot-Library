@@ -1,0 +1,58 @@
+[
+  {
+    "image": "/assets/species/plumage/sp033-juv.webp",
+    "species": "sp033",
+    "source": "https://www.inaturalist.org/photos/384784000",
+    "originalUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/384784000/original.jpeg",
+    "sourceTitle": "iNaturalist photo 384784000",
+    "sourceAuthor": "Micha Baum",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sameShot": true,
+    "method": "Verkleind tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP",
+    "sourceSha256": "3a247efd7e52f20bf4d070c63effc1c243fda9fba8c5ba97828312c23a1e8070",
+    "sha1": "26da657ef80d5914ed2459a5a4a3928a620429e8",
+    "taxonInSource": "Lophophanes cristatus",
+    "annotations": [
+      "De fotograaf beschrijft de aanwezige jongen die worden gevoerd. De waarneming is geannoteerd als Juvenile. Korte kuif en gele snavelhoeken zichtbaar."
+    ],
+    "auditDate": "2026-11-12",
+    "observation": "https://www.inaturalist.org/observations/217501912"
+  },
+  {
+    "image": "/assets/species/plumage/sp044-juv.webp",
+    "species": "sp044",
+    "source": "https://www.inaturalist.org/photos/213361930",
+    "originalUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/213361930/original.jpeg",
+    "sourceTitle": "iNaturalist photo 213361930",
+    "sourceAuthor": "Codrin Bucur",
+    "sourceLicense": "CC BY 4.0",
+    "sameShot": true,
+    "method": "Uitsnede rond de volledige vogel. Omgezet naar WebP zonder EXIF, GPS of XMP",
+    "sourceSha256": "bf77c6f3820aa132215fc081e79a6910eb5ae880d362ad94380b9f205e674782",
+    "sha1": "a2d0ab1c044047ce9d51f419dc3efb9d642c506a",
+    "taxonInSource": "Passer montanus",
+    "annotations": [
+      "De fotograaf benoemt een juveniele Ringmus en de waarneming draagt de annotatie Juvenile. Het kopkleed is minder contrastrijk dan bij de volwassen hoofdfoto."
+    ],
+    "auditDate": "2026-11-12",
+    "observation": "https://www.inaturalist.org/observations/125793048"
+  },
+  {
+    "image": "/assets/species/plumage/sp049-juv.webp",
+    "species": "sp049",
+    "source": "https://commons.wikimedia.org/wiki/File:Fledgling_mistle_thrush.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/21/Fledgling_mistle_thrush.jpg",
+    "sourceTitle": "Fledgling mistle thrush.jpg",
+    "sourceAuthor": "treehouse1977",
+    "sourceLicense": "CC BY-SA 2.0",
+    "sameShot": true,
+    "method": "Verkleind tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP",
+    "sourceSha256": "7e3011c75ef4a266ed92e3378634c2c40b17d329b25a46b5179d2e87411f729a",
+    "sha1": "4e960ebc68db7630bd96eaeee3be4a4aec63990d",
+    "taxonInSource": "Turdus viscivorus",
+    "annotations": [
+      "De bestandspagina benoemt een uitgevlogen Grote Lijster. Lichte vlekken op de rug en smalle lichte lengtestrepen op de vleugeldekveren zijn zichtbaar."
+    ],
+    "auditDate": "2026-11-12"
+  }
+]

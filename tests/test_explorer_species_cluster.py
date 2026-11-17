@@ -83,6 +83,8 @@ LEAFLET_STUB=r"""(() => {
     },
     marker:(coords,options)=>({coords,options,events:{},on(type,cb){this.events[type]=cb;return this},addTo(){return this},remove(){return this}}),
     divIcon:options=>options,
+    layerGroup:()=>{const g={items:[],addTo(){runtime.cloudLayer=g;return g},clearLayers(){g.items=[];runtime.clouds=[];return g}};runtime.clouds=[];return g},
+    circleMarker:(ll,opts)=>({ll,opts,addTo(g){g.items.push(this);(runtime.clouds=runtime.clouds||[]).push({ll,...opts});return this}}),
     markerClusterGroup:options=>({
       options,markers:[],_map:null,
       clearLayers(){this.markers=[];redraw(this);return this},

@@ -1,0 +1,251 @@
+{
+  "schema": "birdspot-f2-16-proof-and-limitations-v1",
+  "date": "2026-11-14",
+  "baseSha": "bccd09599a2b9fd7fb23771b3f6c262542b4c08a",
+  "batch": [
+    "sp037",
+    "sp038",
+    "sp040"
+  ],
+  "proofStatus": "PARTIALLY TESTED",
+  "reviewMethod": "Source text and current repository photo metadata; no independent original-to-WebP pixel comparison this turn.",
+  "ownerDecision": "Perched photo and comparable sex/age plumage take priority over weak flight for small birds. No forced flight. Defer unverified/unsuitable flight search.",
+  "existingPhotoRegistration": {
+    "sp037": [
+      {
+        "path": "/assets/species/sp037.webp",
+        "role": "hoofdfoto",
+        "originalSource": "https://commons.wikimedia.org/wiki/File:Carduelis_carduelis_close_up.jpg",
+        "declaredCreator": "Francis C. Franklin",
+        "declaredLicense": "CC BY-SA 3.0",
+        "priorReview": "2026-11-06",
+        "imageOriginalBinaryRecheck": "NOT TESTED",
+        "rightsRechecked": "NOT TESTED",
+        "distinctAgeSexIndependentlyRechecked": "NOT TESTED"
+      },
+      {
+        "path": "/assets/species/plumage/sp037-adult_m.webp",
+        "role": "mannetje",
+        "originalSource": "https://commons.wikimedia.org/wiki/File:European_goldfinch_(Carduelis_carduelis)_male.jpg",
+        "declaredCreator": "Charles J. Sharp",
+        "declaredLicense": "CC BY-SA 3.0",
+        "priorReview": "2026-11-11",
+        "imageOriginalBinaryRecheck": "NOT TESTED",
+        "rightsRechecked": "NOT TESTED",
+        "distinctAgeSexIndependentlyRechecked": "NOT TESTED"
+      },
+      {
+        "path": "/assets/species/plumage/sp037-adult_f.webp",
+        "role": "vrouwtje",
+        "originalSource": "https://commons.wikimedia.org/wiki/File:Cardelius_Cardelius_femmina.JPG",
+        "declaredCreator": "Francesco Canu",
+        "declaredLicense": "CC BY-SA 3.0",
+        "priorReview": "2026-11-11",
+        "imageOriginalBinaryRecheck": "NOT TESTED",
+        "rightsRechecked": "NOT TESTED",
+        "distinctAgeSexIndependentlyRechecked": "NOT TESTED"
+      },
+      {
+        "path": "/assets/species/plumage/sp037-juv.webp",
+        "role": "juveniel",
+        "originalSource": "https://commons.wikimedia.org/wiki/File:Goldfinch_-_Carduelis_carduelis_-_Juvenile.jpg",
+        "declaredCreator": "caroline legg",
+        "declaredLicense": "CC BY 2.0",
+        "priorReview": "2026-11-11",
+        "imageOriginalBinaryRecheck": "NOT TESTED",
+        "rightsRechecked": "NOT TESTED",
+        "distinctAgeSexIndependentlyRechecked": "NOT TESTED"
+      },
+      {
+        "path": "/assets/species/plumage/sp037-flight.webp",
+        "role": "vlucht",
+        "originalSource": "https://commons.wikimedia.org/wiki/File:NZ7_6264_(51833186500).jpg",
+        "declaredCreator": "Bengt Nyman",
+        "declaredLicense": "CC BY-SA 2.0",
+        "priorReview": "2026-11-07",
+        "imageOriginalBinaryRecheck": "NOT TESTED",
+        "rightsRechecked": "NOT TESTED",
+        "distinctAgeSexIndependentlyRechecked": "NOT TESTED"
+      }
+    ],
+    "sp038": [
+      {
+        "path": "/assets/species/sp038.webp",
+        "role": "mannetje",
+        "originalSource": "https://commons.wikimedia.org/wiki/File:Eurasian_siskin_(Spinus_spinus)_male_Biebrzanski.jpg",
+        "declaredCreator": "Charles J. Sharp",
+        "declaredLicense": "CC BY-SA 4.0",
+        "priorReview": "2026-11-06",
+        "imageOriginalBinaryRecheck": "NOT TESTED",
+        "rightsRechecked": "NOT TESTED",
+        "distinctAgeSexIndependentlyRechecked": "NOT TESTED"
+      },
+      {
+        "path": "/assets/species/plumage/sp038-adult_f.webp",
+        "role": "vrouwtje",
+        "originalSource": "https://commons.wikimedia.org/wiki/File:Eurasian_siskin_%28Spinus_spinus%29_female_Biebrzanski.jpg",
+        "declaredCreator": "Charles J. Sharp",
+        "declaredLicense": "CC BY-SA 4.0",
+        "priorReview": "2026-11-12",
+        "imageOriginalBinaryRecheck": "NOT TESTED",
+        "rightsRechecked": "NOT TESTED",
+        "distinctAgeSexIndependentlyRechecked": "NOT TESTED"
+      },
+      {
+        "path": "/assets/species/plumage/sp038-juv.webp",
+        "role": "juveniel",
+        "originalSource": "https://commons.wikimedia.org/wiki/File:Lugre%2C_%28Pintassilgo-verde%29%2C_juvenil%2C_Eurasian_Siskin%2C_juvenile_%2852676736906%29.jpg",
+        "declaredCreator": "Luiz Lapa",
+        "declaredLicense": "CC BY 2.0",
+        "priorReview": "2026-11-12",
+        "imageOriginalBinaryRecheck": "NOT TESTED",
+        "rightsRechecked": "NOT TESTED",
+        "distinctAgeSexIndependentlyRechecked": "NOT TESTED"
+      },
+      {
+        "path": "/assets/species/plumage/sp038-flight.webp",
+        "role": "vlucht",
+        "originalSource": "https://commons.wikimedia.org/wiki/File:Runway_Three_-_Flickr_-_john.purvis.jpg",
+        "declaredCreator": "john.purvis",
+        "declaredLicense": "CC BY 2.0",
+        "priorReview": "2026-11-07",
+        "imageOriginalBinaryRecheck": "NOT TESTED",
+        "rightsRechecked": "NOT TESTED",
+        "distinctAgeSexIndependentlyRechecked": "NOT TESTED"
+      }
+    ],
+    "sp040": [
+      {
+        "path": "/assets/species/sp040.webp",
+        "role": "mannetje",
+        "originalSource": "https://commons.wikimedia.org/wiki/File:Bullfinch_male.jpg",
+        "declaredCreator": "Francis Franklin",
+        "declaredLicense": "CC BY-SA 3.0",
+        "priorReview": "2026-11-06",
+        "imageOriginalBinaryRecheck": "NOT TESTED",
+        "rightsRechecked": "NOT TESTED",
+        "distinctAgeSexIndependentlyRechecked": "NOT TESTED"
+      },
+      {
+        "path": "/assets/species/plumage/sp040-adult_f.webp",
+        "role": "vrouwtje",
+        "originalSource": "https://commons.wikimedia.org/wiki/File:Pyrrhula_pyrrhula_female_1.jpg",
+        "declaredCreator": "Francis C. Franklin",
+        "declaredLicense": "CC BY-SA 3.0",
+        "priorReview": "2026-11-12",
+        "imageOriginalBinaryRecheck": "NOT TESTED",
+        "rightsRechecked": "NOT TESTED",
+        "distinctAgeSexIndependentlyRechecked": "NOT TESTED"
+      },
+      {
+        "path": "/assets/species/plumage/sp040-juv.webp",
+        "role": "juveniel",
+        "originalSource": "https://www.inaturalist.org/photos/706514268",
+        "declaredCreator": "Andrei Orekhov",
+        "declaredLicense": "CC BY 4.0",
+        "priorReview": "2026-11-12",
+        "imageOriginalBinaryRecheck": "NOT TESTED",
+        "rightsRechecked": "NOT TESTED",
+        "distinctAgeSexIndependentlyRechecked": "NOT TESTED"
+      },
+      {
+        "path": "/assets/species/plumage/sp040-flight.webp",
+        "role": "vlucht",
+        "originalSource": "https://commons.wikimedia.org/wiki/File:26_Gramm_Fluggewicht_erreicht_ein_Dompfaff._01.jpg",
+        "declaredCreator": "Holger Uwe Schmitt",
+        "declaredLicense": "CC BY-SA 4.0",
+        "priorReview": "2026-11-07",
+        "imageOriginalBinaryRecheck": "NOT TESTED",
+        "rightsRechecked": "NOT TESTED",
+        "distinctAgeSexIndependentlyRechecked": "NOT TESTED"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "VBN_PUTTER",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/putter",
+      "read": "2026-11-14",
+      "confirms": "adult kop, gele vleugelband, juveniel zonder volwassen rood gezicht; niet de originele foto-identiteit"
+    },
+    {
+      "id": "VBN_SIJS",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/sijs",
+      "read": "2026-11-14",
+      "confirms": "mannetje zwarte kruin en keel, geel op vleugel, slanke snavel en gestreept vrouwkleed"
+    },
+    {
+      "id": "VBN_GOUDVINK",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/goudvink",
+      "read": "2026-11-14",
+      "confirms": "vrouw zwart kapje, beigegrijze onderzijde, zware zwarte snavel, witte stuit, jong zonder kap"
+    },
+    {
+      "id": "VBN_VINK",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/vink",
+      "read": "2026-11-14",
+      "confirms": "vrouwtje grijsbruin, geen zwarte kap, kleinere kegelvormige snavel en twee witte vleugelstrepen"
+    },
+    {
+      "id": "ANWB_BOEK_KANDIDAAT",
+      "url": "https://www.anwb.nl/webwinkel/p/94525/anwb-basis-natuurgids-vogels",
+      "read": "2026-11-14",
+      "confirms": "Alleen productbestaan en type. Soortinhoud/paginanummer en onafhankelijke soortcontrole NOT TESTED."
+    }
+  ],
+  "changes": [
+    "New matching perched adult male Putter/Sijs comparison using already registered sources.",
+    "New matching perched juvenile Putter/Sijs comparison using already registered sources.",
+    "New matching perched female Goudvink/Vink comparison using already registered sources.",
+    "Existing flight photos remain unchanged pending direct inspection; do not remove already-accepted image without evidence.",
+    "ANWB literature reference is not counted as read species-specific evidence."
+  ],
+  "limitations": [
+    "No fresh direct visual inspection of all original binary images against locally committed WebP; no new photo-PASS.",
+    "Individual photographed sex and age roles retain their previous source status, not freshly VERIFIED in F2-16.",
+    "Putter female record was previously supported primarily by source filename 'femmina'; independent sex determination pending.",
+    "Sijs flight has known mild motion blur; any change/removal needs direct visual review under owner rule; not an obligatory new flight search.",
+    "Goudvink juvenile iNaturalist observation annotation not independently re-opened in F2-16.",
+    "Physical Android, ZIP restore on second device, production licensing and actual live UI are not proven.",
+    "No new media was downloaded, imported, edited or published."
+  ],
+  "restore": "Keep F2-15 base unchanged. Revert or close this draft PR on its isolated branch without touching main or preview.",
+  "nextBatch": [
+    "sp039 Kneu",
+    "sp041 Appelvink",
+    "sp042 Roodmus"
+  ],
+  "proposedNextBatchNote": "Verify these are next still-unreviewed photographed species against the current F2 register before starting.",
+  "ciLearning": {
+    "issue": "Four pre-F2-16 regression tests encoded the old v1.2 string as the only allowed norm version, although the Project Owner authorized additive v1.3.",
+    "evidence": "First F2-16 head 5d0872ff: GitHub Actions M20 run 43632556898, M21 run 43632556826, M22 run 43632557026, M23 run 43632556877 all failed on exact old-version assertion; original six photo checks remained intact.",
+    "fix": "Update those four tests to require v1.3 plus the preserved v1.2 history, new small-bird rule and all six original photo verifications. Do not loosen any existing role/flight/file assertions.",
+    "status": "RETEST_REQUIRED",
+    "prevention": "Version assertions should explicitly check current norm and retained historical rules, instead of pinning one irreversible version.",
+    "additionalBrowserFailure": {
+      "firstObservedOnHead": "29d2b9fda6f621d3387224fb4978edc71763e8c0",
+      "workflowRun": 43632843890,
+      "jobId": 132563038713,
+      "assertion": "SAB-09 sp038 timed out clicking global Vrouwtje tab because Groenling comparison moved into collapsed details when Putter gained more pairings.",
+      "fix": "Sijs browser test now scopes juvenile Putter and female/flight Groenling to their respective partner cards, expands the details before interaction and proves both images actually display.",
+      "status": "RETEST_REQUIRED",
+      "notAProductRegressionClaim": "Existing UI card behavior was not altered. This is a selector/interaction-path update after the new comparison group changed sort order."
+    }
+  },
+  "nextBatchCorrection": {
+    "date": "2026-11-14",
+    "old": [
+      "sp039 Keep",
+      "sp041 Appelvink",
+      "sp042 Kneu"
+    ],
+    "new": [
+      "sp039 Kneu",
+      "sp041 Appelvink",
+      "sp042 Roodmus"
+    ],
+    "evidence": "assets/species/credits.json, sp039/sp041/sp042",
+    "status": "CORRECTED",
+    "note": "Keep historic mislabel as provenance; no changed species IDs or photos."
+  }
+}

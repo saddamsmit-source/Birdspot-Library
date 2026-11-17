@@ -10,7 +10,8 @@
  * altijd bewaard (nauwkeurige data, later bruikbaar voor bv. waarneming.nl).
  *
  * Regels:
- *  - De app voegt nooit zelf plekken samen binnen 50 m; dat beslist de gebruiker (§1.1).
+ *  - Bestaande plekken worden nooit samengevoegd. Een geluidsessie mag volgens de eigenaar
+ *    automatisch nieuwe waarnemingen koppelen aan één ondubbelzinnige bestaande plek.
  *  - Migratie maakt alleen plekken voor waarnemingen met exact dezelfde coördinaten (6 decimalen)
  *    en is additief en idempotent: bestaande placeId's en velden worden nooit gewijzigd.
  */
@@ -43,6 +44,23 @@ const validCoord = (a, b) => Number.isFinite(Number(a)) && Number.isFinite(Numbe
   a !== null && b !== null && Math.abs(a) <= 90 && Math.abs(b) <= 180;
 const coordKey = (lat, lon) => `${Number(lat).toFixed(6)},${Number(lon).toFixed(6)}`;
 const newId = () => 'pl_' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+
+/** Hergebruik alleen een zekere match. Laat mogelijke alternatieven aan de gebruiker. */
+export function matchSoundPlace(places, { lat, lon, pinAccuracyM }, fromGps) {
+  const uncertainty = Number.isFinite(pinAccuracyM) ? Math.max(0, pinAccuracyM) : fromGps ? REUSE_RADIUS_M : 0;
+  const candidates = places.filter(place => validCoord(place.lat, place.lon) && place.id)
+    .map(place => ({ place, distance: distanceM(lat, lon, place.lat, place.lon) }))
+    .filter(({ distance }) => distance <= REUSE_RADIUS_M + Math.min(uncertainty, REUSE_RADIUS_M))
+    .sort((a, b) => a.distance - b.distance);
+  const exact = candidates.filter(({ place }) => coordKey(lat, lon) === coordKey(place.lat, place.lon));
+  if (!fromGps && exact.length === 1) return { place: exact[0].place, alternatives: [], needsChoice: false };
+  const single = candidates.length === 1 && candidates[0].distance + uncertainty <= REUSE_RADIUS_M;
+  return {
+    place: single ? candidates[0].place : null,
+    alternatives: single ? [] : candidates.slice(0, 5),
+    needsChoice: !single && (candidates.length > 0 || (fromGps && uncertainty > REUSE_RADIUS_M)),
+  };
+}
 
 export function loadPlaces(storage = globalThis.localStorage) {
   try {

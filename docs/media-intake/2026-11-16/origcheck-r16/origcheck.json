@@ -1,0 +1,230 @@
+{
+  "generated": "2026-11-16T21:10:25Z",
+  "rule": {
+    "sameMinR": 0.9
+  },
+  "items": [
+    {
+      "speciesId": "sp056",
+      "image": "/assets/species/sp056.webp",
+      "title": "File:Common Chiffchaff 2025 04 04 01.jpg",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1600,
+        1067
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Common_Chiffchaff_2025_04_04_01.jpg",
+        "sha1": "e95d10b09d3c5a7dc43ea9832873eb737938dcd0",
+        "license": "CC BY 4.0",
+        "author": "Alexis Lours",
+        "width": 5285,
+        "height": 3523
+      },
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp056_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp056",
+      "image": "/assets/species/plumage/sp056-flight.webp",
+      "title": "File:Flight design.jpg",
+      "author": "Falco2022",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1400,
+        1149
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Flight_design.jpg",
+        "sha1": "f8c63362544c79ad2128e46f0971364712955109",
+        "license": "CC BY-SA 4.0",
+        "author": "Falco2022",
+        "width": 2466,
+        "height": 1638
+      },
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        638
+      ],
+      "mode": "crop",
+      "r": 0.952,
+      "scale": 0.8,
+      "offset": [
+        0.161,
+        0.111
+      ],
+      "sameShot": true,
+      "sideBySide": "sp056-flight_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp057",
+      "image": "/assets/species/sp057.webp",
+      "title": "File:Willow Warbler Phylloscopus trochilus.jpg",
+      "author": "Andreas Trepte",
+      "license": "CC BY-SA 2.5",
+      "localSize": [
+        1600,
+        1600
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Willow_Warbler_Phylloscopus_trochilus.jpg",
+        "sha1": "2a3de3e6a26a56dbfd573de249046fa834f5781b",
+        "license": "CC BY-SA 2.5",
+        "author": "Andreas Trepte",
+        "width": 2151,
+        "height": 2151
+      },
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        960
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp057_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp058",
+      "image": "/assets/species/sp058.webp",
+      "title": "File:Phylloscopus sibilatrix Wood Warbler WOWA Waldlaubsänger MD284.jpg",
+      "author": "Mike Duchstein",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1600,
+        900
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Phylloscopus_sibilatrix_Wood_Warbler_WOWA_Waldlaubs%C3%A4nger_MD284.jpg",
+        "sha1": "e87af8734c7571e75b7436e558c3660e55dcc17e",
+        "license": "CC BY-SA 4.0",
+        "author": "Mike Duchstein",
+        "width": 2650,
+        "height": 1491
+      },
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        540
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp058_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp058",
+      "image": "/assets/species/plumage/sp058-flight.webp",
+      "title": "File:Wood warbler (49979490848).jpg",
+      "author": "Andrey Gulivanov",
+      "license": "CC BY 2.0",
+      "localSize": [
+        1329,
+        1400
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Wood_warbler_(49979490848).jpg",
+        "sha1": "fef817b456e50aee45e8061a04de88a17e1d77ca",
+        "license": "CC BY 2.0",
+        "author": "Andrey Gulivanov",
+        "width": 5336,
+        "height": 3557
+      },
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "crop",
+      "r": 0.777,
+      "scale": 0.5,
+      "offset": [
+        0.37,
+        0.198
+      ],
+      "sameShot": false,
+      "sideBySide": "sp058-flight_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp056",
+      "audio": "/assets/species/audio/sp056-song.mp3",
+      "title": "File:Phylloscopus collybita 7029.ogg",
+      "author": "T.Voekler",
+      "license": "CC BY-SA 3.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Phylloscopus_collybita_7029.ogg",
+        "sha1": "5a7e947f051cdf17c88f84077e4c1474175f1d8f",
+        "license": "CC BY-SA 3.0",
+        "author": "T.Voekler",
+        "duration": 37.84705215419501,
+        "mime": "application/ogg"
+      },
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    },
+    {
+      "speciesId": "sp056",
+      "audio": "/assets/species/audio/sp056-call.mp3",
+      "title": "File:Phylloscopus collybita - Common Chiffchaff XC538928.mp3",
+      "author": "Benoît Van Hecke",
+      "license": "CC BY-SA 4.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Phylloscopus_collybita_-_Common_Chiffchaff_XC538928.mp3",
+        "sha1": "dd2537e22373389896cfb5b11ddcf87a9f800551",
+        "license": "CC BY-SA 4.0",
+        "author": "Benoît Van Hecke",
+        "duration": 24.95061228664579,
+        "mime": "audio/mpeg"
+      },
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    },
+    {
+      "speciesId": "sp057",
+      "audio": "/assets/species/audio/sp057-song.mp3",
+      "title": "File:Phylloscopus rochilus.ogg",
+      "author": "Oona Räisänen ( Mysid )",
+      "license": "Public domain",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Phylloscopus_rochilus.ogg",
+        "sha1": "39d7d41838891c9748d15d95e8dcbfe3f40f415f",
+        "license": "Public domain",
+        "author": "Oona Räisänen ( Mysid )",
+        "duration": 5.259297052154195,
+        "mime": "application/ogg"
+      },
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    },
+    {
+      "speciesId": "sp057",
+      "audio": "/assets/species/audio/sp057-call.mp3",
+      "title": "File:OsloPhylloscopus.ogg",
+      "author": "L. Shyamal",
+      "license": "CC BY 3.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:OsloPhylloscopus.ogg",
+        "sha1": "226593abc7b4bbd6e75ee470ea0096f29dc24457",
+        "license": "CC BY 3.0",
+        "author": "L. Shyamal",
+        "duration": 8.714125,
+        "mime": "application/ogg"
+      },
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    }
+  ]
+}

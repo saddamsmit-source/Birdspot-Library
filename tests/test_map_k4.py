@@ -189,6 +189,14 @@ def main():
             p.locator("#placeMedia audio").wait_for(timeout=8000)
             assert p.locator("#placeMedia img.place-media__thumb").count() == 1
             assert "roerdomp-merlin.wav" in p.locator(".place-media__audio figcaption").inner_text()
+            place_photo = p.get_by_role("button", name="Vergroot foto: kijkhut.png")
+            place_photo.click()
+            zoom = p.get_by_role("dialog", name="Vogelfoto bekijken")
+            zoom.get_by_role("button", name="Inzoomen").click()
+            assert zoom.get_by_role("button", name="Zoom herstellen").inner_text() == "2×"
+            p.keyboard.press("Escape")
+            zoom.wait_for(state="detached")
+            assert place_photo.evaluate("el => document.activeElement === el")
             p.screenshot(path=str(SHOTS / "map_k4_media_390.png"))
             p.locator("#mapSheetClose").click()
             print("K4-07 OK — foto en geluid bij de plek")

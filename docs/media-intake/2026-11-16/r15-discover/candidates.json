@@ -1,0 +1,360 @@
+{
+  "generated": "2026-11-16T20:26:16Z",
+  "userAgent": "BirdspotLibrary-media-intake/1.0 (https://github.com/saddamsmit-source/Birdspot-Library; build-time license-checked import)",
+  "licensePolicy": "CC0 / publiek domein / CC BY / CC BY-SA; NC en ND uitgesloten",
+  "status": "CANDIDATES ONLY - niet goedgekeurd, niet in de app",
+  "queries": [
+    {
+      "id": "sp053_flight",
+      "speciesId": "sp053",
+      "role": "flight",
+      "kind": "image",
+      "search": "Saxicola rubicola flight filetype:bitmap",
+      "candidates": [
+        {
+          "title": "File:Whens the next plane coming...DSCN3657 - Flickr - ianpreston.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Whens_the_next_plane_coming...DSCN3657_-_Flickr_-_ianpreston.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Whens_the_next_plane_coming...DSCN3657_-_Flickr_-_ianpreston.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Whens_the_next_plane_coming...DSCN3657_-_Flickr_-_ianpreston.jpg/960px-Whens_the_next_plane_coming...DSCN3657_-_Flickr_-_ianpreston.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "59c1a916d70f637e81c0f0edcae064035a78a87c",
+          "size": 7375235,
+          "width": 4608,
+          "height": 3456,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+          "author": "ianpreston from England, UK",
+          "credit": "Whens the next plane coming...DSCN3657",
+          "description": "I went to get the Hawk trainer but none of my shots of It in flight were good enough to post so I will try again another day perhaps. Many thanks to you ALL for the views, faves and comments you make on my shots it is very appreciated.",
+          "date": "Taken on 14 March 2026, 15:30",
+          "categories": [
+            "Birds on barbed wire",
+            "Saxicola rubicola in England"
+          ],
+          "preview": "sp053_flight_01.jpg"
+        }
+      ],
+      "rejectedForLicense": []
+    },
+    {
+      "id": "sp054_flight",
+      "speciesId": "sp054",
+      "role": "flight",
+      "kind": "image",
+      "search": "Prunella modularis flight filetype:bitmap",
+      "candidates": [],
+      "rejectedForLicense": []
+    },
+    {
+      "id": "sp054_juv",
+      "speciesId": "sp054",
+      "role": "juv",
+      "kind": "image",
+      "search": "Prunella modularis juvenile filetype:bitmap",
+      "candidates": [
+        {
+          "title": "File:Dunnock - Prunella modularis (Juvenile) (52080230098).jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Dunnock_-_Prunella_modularis_(Juvenile)_(52080230098).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Dunnock_-_Prunella_modularis_%28Juvenile%29_%2852080230098%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Dunnock_-_Prunella_modularis_%28Juvenile%29_%2852080230098%29.jpg/960px-Dunnock_-_Prunella_modularis_%28Juvenile%29_%2852080230098%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "b04f9c421f7ca93c86c585f36a565a914571d73d",
+          "size": 4050404,
+          "width": 3346,
+          "height": 2390,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "author": "caroline legg",
+          "credit": "Dunnock - Prunella modularis (Juvenile)",
+          "description": "Dunnock - Blairgowrie - Scotland",
+          "date": "Taken on 6 May 2022, 11:21",
+          "categories": [
+            "Birds of Perth and Kinross",
+            "Blairgowrie, Perth and Kinross",
+            "May 2022 in Perth and Kinross",
+            "Prunella modularis (juvenile)",
+            "Prunella modularis in Scotland"
+          ],
+          "preview": "sp054_juv_01.jpg"
+        },
+        {
+          "title": "File:Dunnock (Prunella modularis) juveniles full shot.JPG",
+          "page": "https://commons.wikimedia.org/wiki/File:Dunnock_(Prunella_modularis)_juveniles_full_shot.JPG",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Dunnock_%28Prunella_modularis%29_juveniles_full_shot.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Dunnock_%28Prunella_modularis%29_juveniles_full_shot.JPG/960px-Dunnock_%28Prunella_modularis%29_juveniles_full_shot.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "e78a560c0921d0c22677b82f02c285a282db774e",
+          "size": 4237592,
+          "width": 3941,
+          "height": 2963,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "author": "Walcoford",
+          "credit": "Own work",
+          "description": "Juveniles of Dunnock (Prunella modularis) in nest",
+          "date": "2014-05-01 17:50",
+          "categories": [
+            "Prunella modularis nests"
+          ],
+          "preview": "sp054_juv_02.jpg"
+        },
+        {
+          "title": "File:Dunnock (Prunella modularis) juveniles close.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Dunnock_(Prunella_modularis)_juveniles_close.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/13/Dunnock_%28Prunella_modularis%29_juveniles_close.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Dunnock_%28Prunella_modularis%29_juveniles_close.jpg/960px-Dunnock_%28Prunella_modularis%29_juveniles_close.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "8035bbdafec1d7c5a5749eb3318c9315acda2f9e",
+          "size": 2208953,
+          "width": 2725,
+          "height": 2175,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "author": "Walcoford",
+          "credit": "Own work",
+          "description": "Juveniles of Dunnock (Prunella modularis) in nest",
+          "date": "2014-05-01 17:50",
+          "categories": [
+            "Prunella modularis nests"
+          ],
+          "preview": "sp054_juv_03.jpg"
+        },
+        {
+          "title": "File:Naturalis Biodiversity Center - RMNH.AVES.61147 2 - Prunella modularis modularis (Linnaeus, 1758) - Prunellidae - bird skin specimen.jpeg",
+          "page": "https://commons.wikimedia.org/wiki/File:Naturalis_Biodiversity_Center_-_RMNH.AVES.61147_2_-_Prunella_modularis_modularis_(Linnaeus,_1758)_-_Prunellidae_-_bird_skin_specimen.jpeg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Naturalis_Biodiversity_Center_-_RMNH.AVES.61147_2_-_Prunella_modularis_modularis_%28Linnaeus%2C_1758%29_-_Prunellidae_-_bird_skin_specimen.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Naturalis_Biodiversity_Center_-_RMNH.AVES.61147_2_-_Prunella_modularis_modularis_%28Linnaeus%2C_1758%29_-_Prunellidae_-_bird_skin_specimen.jpeg/960px-Naturalis_Biodiversity_Center_-_RMNH.AVES.61147_2_-_Prunella_modularis_modularis_%28Linnaeus%2C_1758%29_-_Prunellidae_-_bird_skin_specimen.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "87b6e1a2e1b3fdaa9a3efb5848c93046d467e865",
+          "size": 327909,
+          "width": 1920,
+          "height": 1277,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC0",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "author": "Linnaeus, 1758",
+          "credit": "Naturalis Biodiversity Center",
+          "description": "Prunella modularis modularis (Linnaeus, 1758)",
+          "date": "",
+          "categories": [
+            "Prunella modularis modularis (museum specimens)",
+            "Songbird specimens at Naturalis Biodiversity Center"
+          ],
+          "preview": "sp054_juv_04.jpg"
+        },
+        {
+          "title": "File:Naturalis Biodiversity Center - RMNH.AVES.82091 1 - Prunella modularis modularis (Linnaeus, 1758) - Prunellidae - bird skin specimen.jpeg",
+          "page": "https://commons.wikimedia.org/wiki/File:Naturalis_Biodiversity_Center_-_RMNH.AVES.82091_1_-_Prunella_modularis_modularis_(Linnaeus,_1758)_-_Prunellidae_-_bird_skin_specimen.jpeg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Naturalis_Biodiversity_Center_-_RMNH.AVES.82091_1_-_Prunella_modularis_modularis_%28Linnaeus%2C_1758%29_-_Prunellidae_-_bird_skin_specimen.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Naturalis_Biodiversity_Center_-_RMNH.AVES.82091_1_-_Prunella_modularis_modularis_%28Linnaeus%2C_1758%29_-_Prunellidae_-_bird_skin_specimen.jpeg/960px-Naturalis_Biodiversity_Center_-_RMNH.AVES.82091_1_-_Prunella_modularis_modularis_%28Linnaeus%2C_1758%29_-_Prunellidae_-_bird_skin_specimen.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "6ac3d58ffaa1828877ec8e133d721a427afc0edc",
+          "size": 298586,
+          "width": 1920,
+          "height": 1277,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC0",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "author": "Linnaeus, 1758",
+          "credit": "Naturalis Biodiversity Center",
+          "description": "Prunella modularis modularis (Linnaeus, 1758)",
+          "date": "",
+          "categories": [
+            "Prunella modularis modularis (museum specimens)",
+            "Songbird specimens at Naturalis Biodiversity Center"
+          ],
+          "preview": "sp054_juv_05.jpg"
+        },
+        {
+          "title": "File:Naturalis Biodiversity Center - RMNH.AVES.61147 1 - Prunella modularis modularis (Linnaeus, 1758) - Prunellidae - bird skin specimen.jpeg",
+          "page": "https://commons.wikimedia.org/wiki/File:Naturalis_Biodiversity_Center_-_RMNH.AVES.61147_1_-_Prunella_modularis_modularis_(Linnaeus,_1758)_-_Prunellidae_-_bird_skin_specimen.jpeg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Naturalis_Biodiversity_Center_-_RMNH.AVES.61147_1_-_Prunella_modularis_modularis_%28Linnaeus%2C_1758%29_-_Prunellidae_-_bird_skin_specimen.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Naturalis_Biodiversity_Center_-_RMNH.AVES.61147_1_-_Prunella_modularis_modularis_%28Linnaeus%2C_1758%29_-_Prunellidae_-_bird_skin_specimen.jpeg/960px-Naturalis_Biodiversity_Center_-_RMNH.AVES.61147_1_-_Prunella_modularis_modularis_%28Linnaeus%2C_1758%29_-_Prunellidae_-_bird_skin_specimen.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "ec4a8a0e05e5b06ce4dd46e6c9504b986e94905e",
+          "size": 316979,
+          "width": 1920,
+          "height": 1277,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC0",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "author": "Linnaeus, 1758",
+          "credit": "Naturalis Biodiversity Center",
+          "description": "Prunella modularis modularis (Linnaeus, 1758)",
+          "date": "",
+          "categories": [
+            "Prunella modularis modularis (museum specimens)",
+            "Songbird specimens at Naturalis Biodiversity Center"
+          ],
+          "preview": "sp054_juv_06.jpg"
+        }
+      ],
+      "rejectedForLicense": [
+        {
+          "title": "File:Baby birds at home (1912) (14728439156).jpg",
+          "license": "No restrictions"
+        }
+      ]
+    },
+    {
+      "id": "sp055_flight",
+      "speciesId": "sp055",
+      "role": "flight",
+      "kind": "image",
+      "search": "Troglodytes troglodytes flight filetype:bitmap",
+      "candidates": [
+        {
+          "title": "File:Stamp of Abkhazia - 2000 - Colnect 1004759 - Pan troglodytes.jpeg",
+          "page": "https://commons.wikimedia.org/wiki/File:Stamp_of_Abkhazia_-_2000_-_Colnect_1004759_-_Pan_troglodytes.jpeg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Stamp_of_Abkhazia_-_2000_-_Colnect_1004759_-_Pan_troglodytes.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Stamp_of_Abkhazia_-_2000_-_Colnect_1004759_-_Pan_troglodytes.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "sha1": "d4f2a9f6768a16ced605c54bd5a3f4781b9e3573",
+          "size": 33067,
+          "width": 233,
+          "height": 301,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "Public domain",
+          "licenseUrl": "",
+          "author": "Post of Abkhazia",
+          "credit": "https://colnect.com/en/stamps/stamp/1004759-Pan_troglodytes-Monkeys-Abkhazia",
+          "description": "stamp from se-tenant strip of four",
+          "date": "2000",
+          "categories": [
+            "2000 postage stamps of Abkhazia",
+            "5 Russian rubles stamps",
+            "Pan troglodytes on stamps"
+          ],
+          "preview": "sp055_flight_01.jpg"
+        },
+        {
+          "title": "File:Chimpanzee Ham with flight equipment KSC-61C-0109.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Chimpanzee_Ham_with_flight_equipment_KSC-61C-0109.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Chimpanzee_Ham_with_flight_equipment_KSC-61C-0109.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Chimpanzee_Ham_with_flight_equipment_KSC-61C-0109.jpg/960px-Chimpanzee_Ham_with_flight_equipment_KSC-61C-0109.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "5fc118692db418a0c738a09bf457a1e721029ed4",
+          "size": 1085154,
+          "width": 3000,
+          "height": 2357,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "Public domain",
+          "licenseUrl": "",
+          "author": "NASA",
+          "credit": "Kennedy Media Gallery: description , image file",
+          "description": "The chimp Ham (primate #65) and a technician go over the equipment in Hangar S that is going to be used for Ham's suborbital flight. Ham was launched aboard Mercury-Redstone 2 from Launch Pad 5 on January 31, 1961.",
+          "date": "1961-01-23",
+          "categories": [
+            "Ham (Pan troglodytes)",
+            "People with apes"
+          ],
+          "preview": "sp055_flight_02.jpg"
+        },
+        {
+          "title": "File:Chimpanzee Ham in Biopack Couch for MR-2 flight MSFC-6100114.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Chimpanzee_Ham_in_Biopack_Couch_for_MR-2_flight_MSFC-6100114.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Chimpanzee_Ham_in_Biopack_Couch_for_MR-2_flight_MSFC-6100114.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Chimpanzee_Ham_in_Biopack_Couch_for_MR-2_flight_MSFC-6100114.jpg/960px-Chimpanzee_Ham_in_Biopack_Couch_for_MR-2_flight_MSFC-6100114.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "ac0e81cd137d25df66f517553d167251627fa488",
+          "size": 8411795,
+          "width": 3000,
+          "height": 2287,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "Public domain",
+          "licenseUrl": "",
+          "author": "NASA",
+          "credit": "Marshall Space Flight Center 's Marshall Image Exchange: description , image file",
+          "description": "A three-year-old chimpanzee , named Ham , in the biopack couch for the MR-2 suborbital test flight. On January 31, 1961, a Mercury-Redstone launch from Cape Canaveral carried the chimpanzee \"Ham\" over 640 kilometers (400 mi) down range in an arching trajectory that reached a peak of 254 kilometers (158 mi) above the Earth. The mission was successful and Ham performed his lever-pulling task well in",
+          "date": "1961",
+          "categories": [
+            "Ham (Pan troglodytes)",
+            "Hangar S",
+            "People with apes"
+          ],
+          "preview": "sp055_flight_03.jpg"
+        },
+        {
+          "title": "File:Chimpanzee Ham in Biopack Couch for MR-2 flight MSFC-6100114 (cropped).jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Chimpanzee_Ham_in_Biopack_Couch_for_MR-2_flight_MSFC-6100114_(cropped).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Chimpanzee_Ham_in_Biopack_Couch_for_MR-2_flight_MSFC-6100114_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Chimpanzee_Ham_in_Biopack_Couch_for_MR-2_flight_MSFC-6100114_%28cropped%29.jpg/960px-Chimpanzee_Ham_in_Biopack_Couch_for_MR-2_flight_MSFC-6100114_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "6f5a14a7bd2e4926c2ebf4dc8163f745f3c879f6",
+          "size": 2064089,
+          "width": 1101,
+          "height": 1380,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "Public domain",
+          "licenseUrl": "",
+          "author": "NASA",
+          "credit": "Marshall Space Flight Center 's Marshall Image Exchange: description , image file",
+          "description": "A three-year-old chimpanzee , named Ham , in the biopack couch for the MR-2 suborbital test flight. On January 31, 1961, a Mercury-Redstone launch from Cape Canaveral carried the chimpanzee \"Ham\" over 640 kilometers (400 mi) down range in an arching trajectory that reached a peak of 254 kilometers (158 mi) above the Earth. The mission was successful and Ham performed his lever-pulling task well in",
+          "date": "1961",
+          "categories": [
+            "Ham (Pan troglodytes)",
+            "Hangar S",
+            "People with apes"
+          ],
+          "preview": "sp055_flight_04.jpg"
+        },
+        {
+          "title": "File:Chimpanzee Enos before the flight of Mercury-Atlas 5 (cropped).jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Chimpanzee_Enos_before_the_flight_of_Mercury-Atlas_5_(cropped).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Chimpanzee_Enos_before_the_flight_of_Mercury-Atlas_5_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Chimpanzee_Enos_before_the_flight_of_Mercury-Atlas_5_%28cropped%29.jpg/960px-Chimpanzee_Enos_before_the_flight_of_Mercury-Atlas_5_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "4df6b0076f63e19aec6046a0cf236c6f9811dfe1",
+          "size": 864436,
+          "width": 3312,
+          "height": 2590,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "Public domain",
+          "licenseUrl": "",
+          "author": "NASA",
+          "credit": "http://spaceflight.nasa.gov/gallery/images/mercury/mercury_ov/html/s61-04398.html",
+          "description": "Chimpanzee Enos pictured wearing a space suit and lying in his flight couch as a handler holds his hands. He is being prepared for insertion into the Mercury-Atlas 5 capsule.",
+          "date": "1961-12-18",
+          "categories": [
+            "Enos (Pan troglodytes)",
+            "People with apes"
+          ],
+          "preview": "sp055_flight_05.jpg"
+        },
+        {
+          "title": "File:Chimpanzee \"Ham\" during preflight activity prior to Mercury-Redstone 2 flight (g61-00337).jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Chimpanzee_%22Ham%22_during_preflight_activity_prior_to_Mercury-Redstone_2_flight_(g61-00337).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Chimpanzee_%22Ham%22_during_preflight_activity_prior_to_Mercury-Redstone_2_flight_%28g61-00337%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Chimpanzee_%22Ham%22_during_preflight_activity_prior_to_Mercury-Redstone_2_flight_%28g61-00337%29.jpg/960px-Chimpanzee_%22Ham%22_during_preflight_activity_prior_to_Mercury-Redstone_2_flight_%28g61-00337%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "4514cd3bac686757a7296dc49fa9a3ff139130a5",
+          "size": 1813535,
+          "width": 3432,
+          "height": 4438,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "Public domain",
+          "licenseUrl": "",
+          "author": "NASA Johnson Space Center",
+          "credit": "This image or video was catalogued by Lyndon B. Johnson Space Center of the United States National Aeronautics and Space Administration (NASA) under Photo ID: g61-00337 .",
+          "description": "G61-00337 (31 Jan. 1961) --- Chimpanzee \"Ham\" during preflight activity with one of his handlers prior to the Mercury-Redstone 2 (MR-2) test flight which was conducted on Jan. 31, 1961. Photo credit: NASA",
+          "date": "Taken on 12 January 1961",
+          "categories": [
+            "1961 black and white photographs",
+            "Ham (Pan troglodytes)"
+          ],
+          "preview": "sp055_flight_06.jpg"
+        }
+      ],
+      "rejectedForLicense": [
+        {
+          "title": "File:Meet Chimpanzee Enos - Flickr - NASA on The Commons.jpg",
+          "license": "No restrictions"
+        }
+      ]
+    }
+  ]
+}

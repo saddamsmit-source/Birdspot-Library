@@ -30,6 +30,7 @@ def main():
             birds.append({"id": sid, "group": key, "groupLabel": label, "nl": nl, "latin": latin, "pose": pose,
                           "image": f"/assets/showcase/{sid}.webp", "width": c["width"], "height": c["height"],
                           "author": c["author"], "license": c["license"], "source": c["source"],
+                          "file": c["file"], "modifications": c.get("modifications", "Verkleind waar nodig en omgezet naar WebP"),
                           **({"info": m["info"]} if m.get("info") else {})})
     OUT.write_text(
         "/**\n * GEGENEREERD door tools/showcase/build.py — niet met de hand wijzigen.\n"

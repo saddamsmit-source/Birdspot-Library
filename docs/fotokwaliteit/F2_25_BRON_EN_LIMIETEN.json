@@ -1,0 +1,252 @@
+{
+  "schema": "birdspot-f2-25-proof-and-limitations-v1",
+  "date": "2026-11-15",
+  "basePR": 227,
+  "baseSha": "bba81858ad7d22c378477b42c1fcca9f710ab47a",
+  "scope": [
+    "sp070 Veldleeuwerik",
+    "sp072 Graspieper",
+    "sp075 IJsvogel"
+  ],
+  "status": "PARTIALLY TESTED",
+  "sourceFacts": [
+    {
+      "id": "sp070",
+      "species": "Veldleeuwerik",
+      "publisher": "Vogelbescherming Nederland",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/veldleeuwerik",
+      "read": true,
+      "claims": "Bruingestreepte rug en borst, soms korte kuif, witte staartzijden, smalle lichte vleugelachterrand; langdurige variabele hoge zangvlucht"
+    },
+    {
+      "id": "sp072",
+      "species": "Graspieper",
+      "publisher": "Vogelbescherming Nederland",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/graspieper",
+      "read": true,
+      "claims": "Fijne snavel, zware flankstrepen, lichte oogring, witte buitenste staartpennen; hoge aflopende zang en psiep-roep"
+    },
+    {
+      "id": "sp075",
+      "species": "IJsvogel",
+      "publisher": "Vogelbescherming Nederland",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/IJsvogel",
+      "read": true,
+      "claims": "Blauw-oranje vogel, witte keel, lange rechte snavel; volwassen vrouwtje vaak oranjerode basis ondersnavel en mannetje donker. Bij juveniel alleen snavelkleur onvoldoende"
+    },
+    {
+      "id": "sp257",
+      "species": "Bijeneter (vergelijkingspartner, niet als nieuwe F2-soort geteld)",
+      "publisher": "Vogelbescherming Nederland",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bijeneter",
+      "read": true,
+      "claims": "Gele keel, turquoise/blauwgroene onderdelen, zwarte oogstreep, licht omlaag gebogen snavel, lange staart"
+    }
+  ],
+  "originals": [
+    {
+      "id": "sp070",
+      "role": "neutral main",
+      "source": "https://commons.wikimedia.org/wiki/File:Skylark_2,_Lake_District,_England_-_June_2009.jpg",
+      "author": "Diliff",
+      "licenseRegistered": "CC BY-SA 3.0",
+      "originalPageRead": true,
+      "notes": "Original source says sex unknown; stored photo registration already has author/license; original-file scene has not been pixel-matched with local WebP"
+    },
+    {
+      "id": "sp072",
+      "role": "neutral main",
+      "source": "https://commons.wikimedia.org/wiki/File:Meadow_pipit_(Anthus_pratensis_pratensis)_Marken.jpg",
+      "author": "Charles J. Sharp",
+      "licenseRegistered": "CC BY-SA 4.0",
+      "originalPageRead": false,
+      "notes": "Exact Commons URL returned inaccessible error in this session. Similar nonmatching Meadow Pipit page is not substitute proof."
+    },
+    {
+      "id": "sp075",
+      "role": "neutral main",
+      "source": "https://commons.wikimedia.org/wiki/File:Common_Kingfisher_Alcedo_atthis.jpg",
+      "author": "Andreas Trepte",
+      "licenseRegistered": "CC BY-SA 2.5",
+      "originalPageRead": true,
+      "notes": "Source page states photographer requests credit Andreas Trepte/www.avi-fauna.info, expects email with usage details, and flags social network terms. Treat as promotional-use compliance review item; CC license obligations still apply."
+    },
+    {
+      "id": "sp072",
+      "role": "juv photo",
+      "source": "https://commons.wikimedia.org/wiki/File:Juvenile_Meadow_Pipit_(50181136792).jpg",
+      "author": "Caroline Legg",
+      "licenseRegistered": "CC BY 2.0",
+      "originalPageRead": false,
+      "notes": "Original Commons file page unavailable in this round; prior source filename/record claims juvenile but independent age confirmation NOT TESTED"
+    },
+    {
+      "id": "sp257",
+      "role": "neutral comparator",
+      "source": "https://commons.wikimedia.org/wiki/File:European_bee-eater_(Merops_apiaster).jpg",
+      "author": "Charles J. Sharp",
+      "licenseRegistered": "CC BY-SA 4.0",
+      "originalPageRead": false,
+      "notes": "Exact source page not retrievable this round; repository record carried forward, not an independent license check"
+    },
+    {
+      "id": "sp075",
+      "role": "separate male hero",
+      "source": "https://commons.wikimedia.org/wiki/File%3AGuarda-rios-comum%2C_macho%2C_Common_Kingfisher%2C_male_%2854530531861%29.jpg",
+      "author": "Luiz Lapa from Oeiras, Portugal",
+      "licenseRegistered": "CC BY 2.0",
+      "originalPageRead": false,
+      "notes": "Existing source registration and male caption; source original was not opened; visual local WebP looked suitable but independent sex/provenance/rights remain open"
+    }
+  ],
+  "inspectedLocalWebPs": {
+    "method": "GitHub connector fetch_file encoding=base64 -> direct visual inspection, using exact parent GitHub SHA; no media files changed",
+    "status": "VISUALLY INSPECTED (local WebPs only); original-to-local pixel/metadata/licensing parity untested",
+    "assets": [
+      {
+        "id": "sp070",
+        "role": "neutral main",
+        "path": "/assets/species/sp070.webp",
+        "blob": "adb39ff7a93a153b9b828003b431c61a4395a82d",
+        "observed": "Whole perched skylark, crisp fine breast/rug pattern and slender legs, short crest not strongly erect; image appropriate as neutral rest"
+      },
+      {
+        "id": "sp070",
+        "role": "flight",
+        "path": "/assets/species/plumage/sp070-flight.webp",
+        "blob": "3fe69c446c4416bee6642a231ee3742c550da35f",
+        "observed": "Free airborne bird with raised wings, identifiable flight silhouette; previously registered as flight"
+      },
+      {
+        "id": "sp072",
+        "role": "neutral main",
+        "path": "/assets/species/sp072.webp",
+        "blob": "e75bda5b44955c9fc4fc9cec6b0141eab86b5fb0",
+        "observed": "Perched meadow pipit with white eye ring, slim bill, clear breast/flank streaks and light feet"
+      },
+      {
+        "id": "sp072",
+        "role": "flight",
+        "path": "/assets/species/plumage/sp072-flight.webp",
+        "blob": "c3262f6c7fb5159bb04482f8ffe7c8df16f294b0",
+        "observed": "Body fully airborne above vegetation with wings spread and clear shape; previously registered as flight"
+      },
+      {
+        "id": "sp072",
+        "role": "source-named juvenile",
+        "path": "/assets/species/plumage/sp072-juv.webp",
+        "blob": "31eab573f23a013168ebbda75e1ce1cdce687f40",
+        "observed": "Perched younger-looking pipit with pale feather edges, streaking and visible legs; original photographer label/independent age evidence not reread"
+      },
+      {
+        "id": "sp075",
+        "role": "neutral main",
+        "path": "/assets/showcase/sp075.webp",
+        "blob": "7ac3ac2f38a359f5a2e281a36ab494fec9ffc9a2",
+        "observed": "Very sharp perched blue and orange kingfisher with straight bill and visible orange under-mandible base; sex not assigned by this neutral guide photo"
+      },
+      {
+        "id": "sp075",
+        "role": "flight",
+        "path": "/assets/species/plumage/sp075-flight.webp",
+        "blob": "6aa0d9550f368f197fddaf6bf2f5ea2f1aa06800",
+        "observed": "Clear free-flight kingfisher with fish in bill against gray backdrop; prior flight role retained"
+      },
+      {
+        "id": "sp075",
+        "role": "previously registered female",
+        "path": "/assets/species/plumage/sp075-female-review.webp",
+        "blob": "16d36845cced2e97d21782e55e23382dfd9c0c82",
+        "observed": "Female-like lower bill orange base visible in perched photo; original individual sex and reuse rights still independent open"
+      },
+      {
+        "id": "sp075",
+        "role": "previously registered juvenile",
+        "path": "/assets/species/plumage/sp075-juv-review.webp",
+        "blob": "e0290be88122f22983627da8beead46abcbd6039",
+        "observed": "Perched kingfisher with visible breast pattern; individual age NOT independently certified by photograph alone"
+      },
+      {
+        "id": "sp075",
+        "role": "previously registered male",
+        "path": "/assets/species/plumage/sp075-male-review.webp",
+        "blob": "ec806f53cb8b1fefd8b04f81cb1a89f3538a7f37",
+        "observed": "Perched kingfisher showing nearly dark lower bill and blue/orange plumage, previous original male label not independently rechecked"
+      },
+      {
+        "id": "sp257",
+        "role": "neutral partner",
+        "path": "/assets/species/sp257.webp",
+        "blob": "15ae7f392f35fdcf95105535771645997d8657b0",
+        "observed": "Full multicolored bee-eater with yellow throat, curved bill, longer tail, on branches; appropriate rested comparison with kingfisher"
+      },
+      {
+        "id": "sp075",
+        "role": "registered male hero (not neutral photo chosen for paired comparison)",
+        "path": "/assets/species/plumage/sp075-hero-male.webp",
+        "blob": "b10006ea164891ab5ac0b8597ecf410e51404ccd",
+        "observed": "Visible Kingfisher in rest with dark lower mandible on branch; source registers male. Selected as app hero by GUIDE_HEROES but the explicit neutral comparison photo now uses existing showcase/sp075.webp; individual sex rights not independently certified"
+      }
+    ]
+  },
+  "comparisonChanges": [
+    {
+      "label": "Veldleeuwerik en Graspieper · in rust",
+      "ids": [
+        "sp070",
+        "sp072"
+      ],
+      "images": [
+        "sp070.webp",
+        "sp072.webp"
+      ],
+      "status": "New reciprocal rest pair; 3 fieldmark rows"
+    },
+    {
+      "label": "Veldleeuwerik en Graspieper · in vlucht",
+      "ids": [
+        "sp070",
+        "sp072"
+      ],
+      "images": [
+        "sp070-flight.webp",
+        "sp072-flight.webp"
+      ],
+      "status": "New reciprocal true-flight pair; 3 rows; no size assumptions from display crop"
+    },
+    {
+      "label": "IJsvogel en Bijeneter · keel en snavel",
+      "ids": [
+        "sp075",
+        "sp257"
+      ],
+      "images": [
+        "sp075.webp",
+        "sp257.webp"
+      ],
+      "status": "Existing valid reciprocal rest pair enriched with 3 explicit rows. App's guideHeroPhoto would otherwise pick a distinct registered male hero. The comparison explicitly pins the sex-neutral showcase sp075.webp; both linked images still carry their original registered source/credit."
+    }
+  ],
+  "speciesDataChange": "sp070 unsupported generic juvenile plumage 'Geschubd bruin' replaced with null; adult note applies equally to males/females, without guessing individual sexes.",
+  "noBinaryChanges": true,
+  "noAudioChanges": true,
+  "noFlightRoleChanges": true,
+  "noAttributionChanges": true,
+  "noStorageOrSWChanges": true,
+  "anwb": "NOT TESTED — no exact ANWB species-page edition/page actually inspected",
+  "risks": [
+    "All five cited original Commons source pages and portrait originals are not independently visually compared against the local derived WebPs. Original-to-WebP pixel identity/changes, credits visible in rendered phone and CC share-alike correctness remain open.",
+    "The exact Meadow Pipit Marken and juvenile Commons pages and Bee-eater original were inaccessible; registered source metadata remains a prior claim not independent new source rights-PASS.",
+    "The Kingfisher main photographer Andreas Trepte's requested attribution, web credit and contact/social-platform notice must be assessed before additional public/social promotional use; a CC license does not automatically vanish.",
+    "IJsvogel sex-specific photos and young Kingfisher / juvenile Graspieper labels remain individual source-age/sex verification items, not independent ornithology PASS.",
+    "No direct ANWB species guide pages inspected in this batch.",
+    "Physical Android view/open/save/close/reopen/offline, second phone ZIP restore, integrated stacked PR release SHA and rollback NOT TESTED; public production remains BLOCKED.",
+    "The originally uninspected separate Kingfisher male hero photo was read during render-debug; its original source and individual sex rights were not independently checked."
+  ],
+  "renderSelection": {
+    "status": "FIXED IN CODE / CI RECHECK PENDING",
+    "finding": "F2-25 first CI on 04cea0ef failed pairing test because GUIDE_HEROES.sp075 selects the separate male hero sp075-hero-male.webp by default, not /assets/showcase/sp075.webp; this was a legitimate selected photo but not the neutral image specified in the comparison proof",
+    "fix": "The IJsvogel comparison bird now explicitly sets photo:/assets/showcase/sp075.webp (existing GUIDE_PHOTOS record). Keeps sex-neutral photo in comparison without changing media or hero display; test continues to require exact paired photographs",
+    "regressionGate": "CI on the new final head required, 04cea0ef failure is not a PASS"
+  }
+}

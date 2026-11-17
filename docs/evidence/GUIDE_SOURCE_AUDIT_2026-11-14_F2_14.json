@@ -1,0 +1,165 @@
+[
+ {
+  "image": "/assets/species/plumage/sp066-wing.webp",
+  "species": "sp066",
+  "source": "https://commons.wikimedia.org/wiki/File:Short-toed_treecreeper_(Certhia_brachydactyla_brachydactyla).jpg",
+  "sourceTitle": "Short-toed treecreeper (Certhia brachydactyla brachydactyla).jpg",
+  "sourceAuthor": "Charles J. Sharp",
+  "sourceLicense": "CC BY-SA 4.0",
+  "sameShot": true,
+  "method": "Verkleind tot maximaal 1600 px en omgezet naar WebP zonder uitsnede. Metadata verwijderd.",
+  "auditDate": "14-11-2026",
+  "assetSha1": "2cb5d6d9df1b16f3b4993a416e0e1a27ed01a240",
+  "sourceImageSha1": "125e67a30196128fb0645141357141c133950d21",
+  "sourceImageSize": [
+   1455,
+   2184
+  ],
+  "visualRoleCheck": "Fotograaf beschrijft Certhia brachydactyla brachydactyla. Zijaanzicht met vrije gevouwen vleugel. Leeftijd en geslacht open."
+ },
+ {
+  "image": "/assets/species/plumage/sp067-wing.webp",
+  "species": "sp067",
+  "source": "https://commons.wikimedia.org/wiki/File:Eurasian_Treecreeper_-_Certhia_familiaris_(54192274817).jpg",
+  "sourceTitle": "Eurasian Treecreeper - Certhia familiaris (54192274817).jpg",
+  "sourceAuthor": "caroline legg",
+  "sourceLicense": "CC BY 2.0",
+  "sameShot": true,
+  "method": "Verkleind tot maximaal 1600 px en omgezet naar WebP zonder uitsnede. Metadata verwijderd.",
+  "auditDate": "14-11-2026",
+  "assetSha1": "387807d9d7ccac2ae6f5f3cae7658d87d6402b5f",
+  "sourceImageSha1": "9d8ebd2d9becf05cba1b98e6305749030f62e93c",
+  "sourceImageSize": [
+   2386,
+   3341
+  ],
+  "visualRoleCheck": "Fotograaf benoemt Certhia familiaris. De gevouwen vleugel en witte onderzijde zijn zichtbaar. Ondersoort, leeftijd en geslacht open."
+ },
+ {
+  "image": "/assets/species/plumage/sp066-juv-fed.webp",
+  "species": "sp066",
+  "source": "https://commons.wikimedia.org/wiki/File:Feed_me!_(20741323391).jpg",
+  "sourceTitle": "Feed me! (20741323391).jpg",
+  "sourceAuthor": "hedera.baltica",
+  "sourceLicense": "CC BY-SA 2.0",
+  "sameShot": true,
+  "method": "Omgezet naar WebP zonder uitsnede. Metadata verwijderd.",
+  "auditDate": "14-11-2026",
+  "assetSha1": "6036e472f4c9c4267c59f9b9c027b9df4155a59f",
+  "sourceImageSha1": "a50a9065ff2e2dad9f9718f743a455241ca73b47",
+  "sourceImageSize": [
+   1000,
+   779
+  ],
+  "visualRoleCheck": "De bron identificeert Certhia brachydactyla en benoemt de jonge vogel links en de ouder rechts. Beide vogels staan los van het nest op de stam."
+ },
+ {
+  "image": "/assets/species/plumage/sp063-adult-f.webp",
+  "species": "sp063",
+  "source": "https://commons.wikimedia.org/wiki/File:Goldcrest_1.jpg",
+  "sourceTitle": "Goldcrest 1.jpg",
+  "sourceAuthor": "Francis C. Franklin",
+  "sourceLicense": "CC BY-SA 3.0",
+  "sameShot": true,
+  "method": "Verkleind tot maximaal 1600 px en omgezet naar WebP zonder uitsnede. Metadata verwijderd.",
+  "auditDate": "14-11-2026",
+  "assetSha1": "7a2007fc03d7284823d315659da356e6753cc542",
+  "sourceImageSha1": "d7a1c510a632b34fd134d0bcf36a84c1a57e7db0",
+  "sourceImageSize": [
+   2803,
+   2102
+  ],
+  "visualRoleCheck": "De fotograaf benoemt een vrouwtje Regulus regulus. Het kleed toont een ontwikkelde gele kruinstreep.",
+  "attributionCheck": "De naamsvermelding uit Commons staat zichtbaar bij de foto en in de viewer. Fotoinformatie linkt de bron en CC BY-SA 3.0."
+ },
+ {
+  "image": "/assets/species/sp066.webp",
+  "species": "sp066",
+  "source": "https://commons.wikimedia.org/wiki/File:Gartenbauml%C3%A4uferchen.jpg",
+  "sourceTitle": "File:Gartenbaumläuferchen.jpg - Wikimedia Commons",
+  "sourceAuthor": "Jan Matthies",
+  "sourceLicense": "CC BY-SA 4.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "5b3ab89c4ac88864d1ecf12efae120c6e88313ca",
+  "sourceImageSha1": "8cb7326f3fb4a57348c088316c6c4b437a088bbd",
+  "sourceImageSize": [
+   2384,
+   3342
+  ],
+  "visualRoleCheck": "Bron benoemt Boomkruiper. Verhoudingen en houding zijn zichtbaar; voor het onderscheid op vleugelband gebruikt de vergelijking een scherper zijaanzicht."
+ },
+ {
+  "image": "/assets/species/sp067.webp",
+  "species": "sp067",
+  "source": "https://commons.wikimedia.org/wiki/File:Certhia_familiaris_EM1B0410_(48689577163).jpg",
+  "sourceTitle": "File:Certhia familiaris EM1B0410 (48689577163).jpg - Wikimedia Commons",
+  "sourceAuthor": "Bengt Nyman from Vaxholm, Sweden",
+  "sourceLicense": "CC BY 2.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "136c08e7b7a04dde3993bf2d5f4644a19cd637ed",
+  "sourceImageSha1": "78bd6cb90d3d9064b4001d5905ac4e7f35ed1e7d",
+  "sourceImageSize": [
+   2236,
+   2236
+  ],
+  "visualRoleCheck": "Bron benoemt Certhia familiaris. Witte flank en gebogen snavel passen. Uit de foto volgen geen zekere ondersoort, leeftijd of geslacht."
+ },
+ {
+  "image": "/assets/species/sp063.webp",
+  "species": "sp063",
+  "source": "https://commons.wikimedia.org/wiki/File:Goldcrest_2025_11_21_05.jpg",
+  "sourceTitle": "File:Goldcrest 2025 11 21 05.jpg - Wikimedia Commons",
+  "sourceAuthor": "Alexis Lours",
+  "sourceLicense": "CC BY 4.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "7515103091025269f8b0aa8fca4bb39d393086ee",
+  "sourceImageSha1": "e18e008fb8e988fe0a16876297348c434e49828c",
+  "sourceImageSize": [
+   4710,
+   3140
+  ],
+  "visualRoleCheck": "Volledige rustfoto met gele kruin, vrij egaal gezicht en lichte vleugelstrepen. Geslacht blijft open."
+ },
+ {
+  "image": "/assets/species/plumage/sp063-flight.webp",
+  "species": "sp063",
+  "source": "https://commons.wikimedia.org/wiki/File:Regulus_regulus_japonensis_in_flight.JPG",
+  "sourceTitle": "File:Regulus regulus japonensis in flight.JPG - Wikimedia Commons",
+  "sourceAuthor": "Alpsdake",
+  "sourceLicense": "CC BY-SA 3.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "d879198133c3fc5aca33e5ce1adb964bc2615006",
+  "sourceImageSha1": "b09efc0a9e482b19713d22afa8dcfd0a0dbf7769",
+  "sourceImageSize": [
+   1920,
+   2048
+  ],
+  "visualRoleCheck": "Bron bevestigt vrije vlucht en de Oost-Aziatische ondersoort japonensis. Bewegingsonscherpte en herkomst maken dit een voorlopige foto."
+ },
+ {
+  "image": "/assets/species/plumage/sp063-juv.webp",
+  "species": "sp063",
+  "source": "https://commons.wikimedia.org/wiki/File:Juvenile_goldcrest.jpg",
+  "sourceTitle": "File:Juvenile goldcrest.jpg - Wikimedia Commons",
+  "sourceAuthor": "Silmethule",
+  "sourceLicense": "CC BY 4.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "5da7fbfc4fbb2fd395e24b7bd319ebe7e5c73e3c",
+  "sourceImageSha1": "11cbc3fb8e63bf716b3a6350857e1232c9457c74",
+  "sourceImageSize": [
+   2932,
+   2188
+  ],
+  "visualRoleCheck": "Fotograaf bevestigt juveniel. De opvallende gekleurde kruinstreep ontbreekt."
+ }
+]

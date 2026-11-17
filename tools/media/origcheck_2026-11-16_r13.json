@@ -1,0 +1,73 @@
+{
+  "date": "2026-11-16",
+  "purpose": "F3-R13: getoonde foto's Zanglijster, Kramsvogel, Koperwiek tegen bronbeeld en Commons-rechten.",
+  "items": [
+    {
+      "speciesId": "sp046",
+      "image": "/assets/species/sp046.webp",
+      "author": "Andreas Trepte",
+      "license": "CC BY-SA 2.5",
+      "title": "File:Song Thrush Turdus philomelos.jpg"
+    },
+    {
+      "speciesId": "sp046",
+      "image": "/assets/species/plumage/sp046-juv.webp",
+      "author": "Frank Vassen",
+      "license": "CC BY 2.0",
+      "title": "File:Juvenile Song Thrush (Turdus philomelos), Puszcza Knyszyńska, Polska (4664107073).jpg"
+    },
+    {
+      "speciesId": "sp046",
+      "image": "/assets/species/plumage/sp046-flight.webp",
+      "author": "Mark Kilner",
+      "license": "CC BY-SA 2.0",
+      "title": "File:Song Thrush (Turdus philomelos) in flight.jpg"
+    },
+    {
+      "speciesId": "sp047",
+      "image": "/assets/species/sp047.webp",
+      "author": "Frankie Fouganthin",
+      "license": "CC BY-SA 4.0",
+      "title": "File:Björktrast (Turdus pilaris)-4.jpg"
+    },
+    {
+      "speciesId": "sp047",
+      "image": "/assets/species/plumage/sp047-juv.webp",
+      "author": "hedera.baltica",
+      "license": "CC BY-SA 2.0",
+      "title": "File:Fieldfare (41635078500).jpg"
+    },
+    {
+      "speciesId": "sp047",
+      "image": "/assets/species/plumage/sp047-flight.webp",
+      "author": "Hangsna",
+      "license": "CC BY-SA 4.0",
+      "title": "File:Turdus pilaris, winter, flying.jpg"
+    },
+    {
+      "speciesId": "sp048",
+      "image": "/assets/species/sp048.webp",
+      "author": "Andreas Trepte",
+      "license": "CC BY-SA 2.5",
+      "title": "File:Redwing Turdus iliacus.jpg"
+    },
+    {
+      "speciesId": "sp048",
+      "image": "/assets/species/plumage/sp048-juv.webp",
+      "author": "Pyry Liedes",
+      "license": "CC BY 4.0",
+      "urls": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/703836505/original.jpg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/703836505/original.jpeg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/703836505/original.JPG"
+      ]
+    },
+    {
+      "speciesId": "sp048",
+      "image": "/assets/species/plumage/sp048-flight.webp",
+      "author": "Lucas Golden",
+      "license": "CC BY 4.0",
+      "title": "File:Redwing in flight.jpg"
+    }
+  ]
+}

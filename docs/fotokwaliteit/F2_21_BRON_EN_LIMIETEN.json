@@ -1,0 +1,166 @@
+{
+  "schema": "birdspot-f2-21-proof-and-limitations-v1",
+  "date": "2026-11-14",
+  "baseSha": "f55f702237616dc346eb314a2503aa157bad501b",
+  "scope": [
+    "sp053 Roodborsttapuit",
+    "sp054 Heggenmus",
+    "sp055 Winterkoning"
+  ],
+  "status": "PARTIALLY TESTED",
+  "sourcePriority": "Vogelbescherming Nederland and genuinely accessible ANWB species passages; direct image source pages for media rights; preserve uncertain fields",
+  "confirmedFacts": [
+    {
+      "kind": "species",
+      "id": "sp053",
+      "name": "Roodborsttapuit",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/roodborsttapuit",
+      "checked": "yes",
+      "facts": "Mannetje zwarte kop, witte zijhals en oranje borst; vrouwtje minder contrastrijk met oranje borst en zichtbare witte vleugelvlekjes"
+    },
+    {
+      "kind": "species",
+      "id": "sp054",
+      "name": "Heggenmus",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/heggenmus",
+      "checked": "yes",
+      "facts": "Fijne puntige snavel, grijsblauwe kop/borst en bruin gestreepte rug; onderscheid snavel ten opzichte van Huismus"
+    },
+    {
+      "kind": "species",
+      "id": "sp055",
+      "name": "Winterkoning",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/winterkoning",
+      "checked": "yes",
+      "facts": "Zeer kleine compacte bruine vogel met korte vaak opgerichte staart en lichte wenkbrauw; stem opvallend luid"
+    },
+    {
+      "kind": "comparison",
+      "name": "Huismus vrouwtje",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/huismus",
+      "checked": "yes",
+      "facts": "Bruin vrouwtje met stevige korte kegelsnavel, lichte wenkbrauw en bruine rug"
+    },
+    {
+      "kind": "comparison",
+      "name": "Roodborst volwassen",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/roodborst",
+      "checked": "yes",
+      "facts": "Oranjerood gezicht, keel en borst; man en vrouw gelijk"
+    }
+  ],
+  "originalPages": [
+    {
+      "species": "sp053",
+      "role": "adult_f",
+      "image": "/assets/species/plumage/sp053-female-review.webp",
+      "url": "https://commons.wikimedia.org/wiki/File:Stonechat_-_Saxicola_rubicola,_Female.jpg",
+      "author": "Caroline Legg",
+      "license": "CC BY 2.0",
+      "checked": "source page metadata; local WebP pixels NOT TESTED"
+    },
+    {
+      "species": "sp053",
+      "role": "juv",
+      "image": "/assets/species/plumage/sp053-juv-review.webp",
+      "url": "https://commons.wikimedia.org/wiki/File:Saxicola_rubicola_juvenile.jpg",
+      "author": "Vcebollada",
+      "license": "CC BY-SA 4.0",
+      "checked": "source page metadata; local WebP pixels NOT TESTED"
+    },
+    {
+      "species": "sp054",
+      "role": "neutral hero",
+      "image": "/assets/species/sp054.webp",
+      "url": "https://commons.wikimedia.org/wiki/File:The_dunnock_(Prunella_modularis).jpg",
+      "author": "Hobbyfotowiki",
+      "license": "CC0 1.0",
+      "checked": "source page metadata; local WebP pixels NOT TESTED"
+    },
+    {
+      "species": "sp055",
+      "role": "neutral hero",
+      "image": "/assets/species/sp055.webp",
+      "url": "https://commons.wikimedia.org/wiki/File:Eurasian_wren_(Troglodytes_troglodytes).jpg",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "checked": "source page metadata; local WebP pixels NOT TESTED"
+    },
+    {
+      "species": "sp055",
+      "role": "juv",
+      "image": "/assets/species/plumage/sp055-juv.webp",
+      "url": "https://commons.wikimedia.org/wiki/File:Wren_-_Troglodytes_troglodytes_-_Juvenile1.jpg",
+      "author": "Caroline Legg",
+      "license": "CC BY 4.0",
+      "checked": "source page metadata; photographer-supplied age label; independent age & local WebP pixels NOT TESTED"
+    }
+  ],
+  "existingOtherMedia": [
+    {
+      "species": "sp053",
+      "role": "adult_m main",
+      "image": "/assets/species/sp053.webp",
+      "author": "Fernando Losada Rodríguez",
+      "license": "CC BY-SA 4.0",
+      "checked": "repository record only; original source page and local WebP NOT TESTED in F2-21"
+    },
+    {
+      "species": "sp043",
+      "role": "adult_f comparison",
+      "image": "/assets/species/sp043.webp",
+      "author": "Ermell",
+      "license": "CC BY-SA 4.0",
+      "checked": "previously registered main guide photo; independently rechecked original/WebP NOT TESTED"
+    }
+  ],
+  "anwb": "NOT TESTED — no directly readable relevant per-species ANWB book passages; no source or photo-PASS inferred",
+  "newComparisons": [
+    {
+      "label": "Roodborsttapuit en Roodborst · vrouwtje en volwassen vogel in rust",
+      "birds": [
+        "sp053",
+        "sp050"
+      ],
+      "photos": [
+        "sp053-female-review.webp",
+        "sp050.webp"
+      ],
+      "flight": false
+    },
+    {
+      "label": "Heggenmus en Huismus · vrouwtje Huismus in rust",
+      "birds": [
+        "sp054",
+        "sp043"
+      ],
+      "photos": [
+        "sp054.webp",
+        "sp043.webp"
+      ],
+      "flight": false
+    },
+    {
+      "label": "Winterkoning en Heggenmus · in rust",
+      "birds": [
+        "sp055",
+        "sp054"
+      ],
+      "photos": [
+        "sp055.webp",
+        "sp054.webp"
+      ],
+      "flight": false
+    }
+  ],
+  "mediaChange": "None: no guide photo, audio, metadata, license, cache, flight role, service worker, or user storage changed",
+  "open": [
+    "GitHub text connector cannot inspect the binary WebP image pixels or verify that local processed images match the original Wikimedia source; NOT TESTED",
+    "Species identity, individual age/sex and aesthetic recognition quality on actual in-app photos are not independently certified by metadata or CI; NOT TESTED",
+    "Stonechat male original source page, all other individual media sources, precise license conditions for downstream distribution, and mandatory displayed attribution remain to be independently audited",
+    "No ANWB edition/species-page passages were actually inspected",
+    "Physical Android input/save/reopen/offline, ZIP restore on another device, release integration, preview and rollback remain NOT TESTED / BLOCKED"
+  ],
+  "testBoundary": "Automated CI checks photo presence/roles/paired markup and image paths, not biological identification, original-to-WebP pixels or lawful publication.",
+  "remediation": "Use original-source media/rights review and physical mobile QA before publication; do not force a flight asset or invent missing plumage/sex details"
+}

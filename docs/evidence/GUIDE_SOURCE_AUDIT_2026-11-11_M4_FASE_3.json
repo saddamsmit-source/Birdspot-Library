@@ -1,0 +1,60 @@
+[
+ {
+  "image": "/assets/species/plumage/sp048-juv.webp",
+  "species": "sp048",
+  "source": "https://www.inaturalist.org/photos/703836505",
+  "originalUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/703836505/original.jpg",
+  "sourceTitle": "Koperwiek · iNaturalist-foto 703836505",
+  "sourceAuthor": "Pyry Liedes",
+  "sourceLicense": "CC BY 4.0",
+  "sameShot": true,
+  "method": "directe WebP-conversie van originele JPEG zonder uitsnede",
+  "sourceSha256": "9bc4bb986b0e459d02311ee746cd0230b5ca041c9c42883fd0fa1f36099d1b72",
+  "sha1": "070d035c1a3b20a8779dde602da55aee260fd7a7",
+  "taxonInSource": "Turdus iliacus",
+  "annotations": [
+   "iNaturalist-waarneming van onderzoekskwaliteit, taxon Turdus iliacus, leeftijdsannotatie Juvenile. Geslacht onbekend.",
+   "Fotopagina bevestigt Pyry Liedes en linkt naar CC BY 4.0. Waarneming in Finland op 24 juli 2026, met de leeftijdsannotatie (1, 8)."
+  ],
+  "auditDate": "2026-11-11",
+  "observation": "https://www.inaturalist.org/observations/384496263",
+  "observationApi": "https://api.inaturalist.org/v1/observations/384496263"
+ },
+ {
+  "image": "/assets/species/plumage/sp072-juv.webp",
+  "species": "sp072",
+  "source": "https://commons.wikimedia.org/wiki/File:Juvenile_Meadow_Pipit_(50181136792).jpg",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/24/Juvenile_Meadow_Pipit_%2850181136792%29.jpg",
+  "sourceTitle": "Juvenile Meadow Pipit (50181136792).jpg",
+  "sourceAuthor": "caroline legg",
+  "sourceLicense": "CC BY 2.0",
+  "sameShot": true,
+  "method": "directe WebP-conversie van originele JPEG zonder uitsnede",
+  "sourceSha256": "58fca6dde6ecb7497cb61128061cb05fe6337e90a7f11a4133c5b7c1d621364a",
+  "sha1": "e26ec91749dca6e45d73d8053cbdbbb8d74c0026",
+  "taxonInSource": "Anthus pratensis",
+  "annotations": [
+   "De fotograaf vermeldt een juveniel. Lichte veerranden en borststreping zichtbaar. Geslacht onbekend."
+  ],
+  "auditDate": "2026-11-11"
+ },
+ {
+  "image": "/assets/species/plumage/sp078-juv-grown.webp",
+  "species": "sp078",
+  "source": "https://commons.wikimedia.org/wiki/File:Eurasian_coot_2025_06_18.jpg",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Eurasian_coot_2025_06_18.jpg",
+  "sourceTitle": "File:Eurasian coot 2025 06 18.jpg",
+  "sourceAuthor": "Alexis Lours",
+  "sourceLicense": "CC BY 4.0",
+  "sameShot": true,
+  "method": "directe pixelvergelijking na schalen van originele Commons-JPEG naar de WebP-afmetingen",
+  "sourceSha256": "178d087342136243adf79f87d7ac3fa56806631612dae278cac2d220ae844be4",
+  "sha1": "44726ff2d91feb161f75d62df1aea3bb7c136800",
+  "taxonInSource": "Fulica atra",
+  "annotations": [
+   "De fotograaf benoemt een juveniel en vermeldt CC BY 4.0. Lichte keel en wangen en klein voorhoofdsschild zijn zichtbaar.",
+   "Gemiddeld absoluut RGB-kanaalverschil na LANCZOS-schaal 1,71 / 1,46 / 2,17 op 255."
+  ],
+  "auditDate": "2026-11-11"
+ }
+]

@@ -1,0 +1,2210 @@
+# Birdspot — soortaudit van de collectie met foto's
+
+Gegenereerd door `tools/fotokwaliteit/build_soortaudit_tracker.py` · status voor commit `2e20f1d5f44fa27f1a84b7ced9f04fba533255fa` · 2026-11-12.
+Statussen: VERIFIED / PARTIALLY TESTED / NOT TESTED / BLOCKED. Een geautomatiseerde rendercontrole telt **niet** als visuele of inhoudelijke controle.
+Beoordeeld volgens `docs/BIRDSPOT_KWALITEITSNORM.md` (biometrie §1, herkenning §2, foto §3). Verbeterwensen zijn voor de latere beoordeling door de eigenaar en blokkeren de batch niet.
+
+## Overzicht (eindeisen 1–9)
+
+| # | Meting | Stand |
+|---|---|---|
+| 1 | Soorten met bestaande gidsfoto's | 140 |
+| 2 | Afzonderlijk (aangescherpt) gecontroleerd | 101 (M1, M10, M2, M3, M4, M5, M6, M7, M8, M9) |
+| 3 | Technisch correct (laden, volgorde, offline-bron, beoordeling = kaart) | 101 van 101 |
+| 4a | Visueel VERIFIED (beeld per foto) | 98 van 101 |
+| 4b | Inhoud (kennisprofiel) VERIFIED | 68 van 101 — alle profielen hebben nog open punten |
+| 4c | Onafhankelijk beoordeeld (ChatGPT) | 0 — NOT TESTED |
+| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 163; plus collectiebrede vluchtcontrole: 18 uit de vluchtrol, 11 gearchiveerd |
+| 6 | Afgekeurde vluchtfoto's | 29 (tabel hieronder) |
+| 7 | Ontbrekende foto-/kennisonderdelen | 60 fotoposities in gecontroleerde soorten; 39 fotosoorten zonder kennisprofiel |
+| 8 | Kritische kenmerken niet doorslaggevend onderbouwd | 135 (tabel hieronder) |
+| 9 | Open bron-/licentieproblemen | 4 in gecontroleerde soorten; collectiebreed blijft het eerder gemelde punt '22 afbeeldingen buiten de bronaudit' open |
+
+Eindoordeel per gecontroleerde soort: PARTIALLY TESTED 87, VERIFIED 14.
+
+## Gecontroleerde soorten
+
+### sp104 Aalscholver — PARTIALLY TESTED
+
+Batch M2 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp104.webp` | Hoofdfoto | Volwassen Aalscholver op kade; geschubd kleed, witte wang, kuifveren. | volwassen (bron: adult) | goed | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · MPF |
+| `sp104-jaarling.webp` | Jaarling | Onvolwassen vogel met lichte onderzijde, staat met gespreide vleugels te drogen. | onvolwassen (bron: 'immature') | goed | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.5 · Andreas Trepte |
+| `sp104-flight.webp` | In vlucht | Vrij in de lucht van opzij; lange hals gestrekt. | niet vastgesteld | goed | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Charles J. Sharp |
+
+- **Correcties:** geen
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Geslachten gelijk.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Broedkleed; open: Juveniel/onvolwassen kleed niet uit een bron beschreven; de jaarlingfoto steunt op de Commons-bron ('immature').; Onderscheid met Kuifaalscholver uit een bron uitwerken.; resterende dataverschillen: 0
+- **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp065 Boomklever — PARTIALLY TESTED
+
+Batch M2 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp065.webp` | Hoofdfoto | Boomklever op rots; blauwgrijze rug, zwarte oogstreep, warme onderzijde. | niet vast te stellen | goed | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Chme82 |
+| `sp065-head-down.webp` | Overige herkenningsfoto's | Boomklever met de kop omlaag op een stam. Poten op de schors en korte staart vrij. | Geslacht en leeftijd staan open. | Vogel en snavel herkenbaar, voldoende ruimte voor de houding. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Origineel JPEG verkleind zonder uitsnede tot 1400 × 1271. WebP zonder EXIF, GPS of XMP.), CC BY-SA 2.0 · hedera.baltica |
+| `sp065-flight.webp` | In vlucht | Vrij in de lucht met volledig gespreide vleugels en staart; poten tegen de buik (vergroot gecontroleerd, geen landingshouding). | niet vastgesteld | goed (640 px) | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 3.0 · C. Robiller / naturlichter.de |
+
+- **Correcties:** Beide gidsfoto’s naast de originelen gelegd. Een bronbevestigde stamfoto toegevoegd en naast Boomkruiper gezet. Lengte, spanwijdte en Britse broedgegevens onderbouwd.
+- **Ontbreekt:** Juveniel
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Geslachtsverschil klein; geen geslachtsvakken.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Snavel, staart en klimrichting; open: Een bronbevestigde gidsfoto van een juveniel ontbreekt.; resterende dataverschillen: 0
+- **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp066 Boomkruiper — PARTIALLY TESTED
+
+Batch M1 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp066.webp` | Hoofdfoto | Boomkruiper tegen stam; gestreepte bruine rug, gebogen snavel, steunstaart. | niet vast te stellen | Herkenbare houding, snavel en steunstaart. De scherpere tweede foto toont de vleugelband beter. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Jan Matthies |
+| `sp066-wing.webp` | Overige herkenningsfoto's | Zittend op stam met gevouwen vleugel en lichte, puntige veerranden. | Leeftijd en geslacht open. | Scherpe vleugelband in passend zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Verkleind tot maximaal 1600 px en omgezet naar WebP zonder uitsnede. Metadata verwijderd.), CC BY-SA 4.0 · Charles J. Sharp |
+| `sp066-juv-fed.webp` | Verenkleed (Juveniel) | Jong links neemt voedsel aan van ouder rechts. | De fotograaf vermeldt welke vogel juveniel is. Geslacht open. | Beide vogels en voerhandeling zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Omgezet naar WebP zonder uitsnede. Metadata verwijderd.), CC BY-SA 2.0 · hedera.baltica |
+
+- **Correcties:** Originele hoofdfoto gecontroleerd. Twee bronfoto’s toegevoegd, één voor de vleugelband en één van een gevoerd jong. Nederlandse populatie en geluidsvergelijking onderbouwd.
+- **Ontbreekt:** Een bronbevestigde vrije-vluchtfoto.
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Geslachten gelijk.
+- **Kennisprofiel:** 6 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Roep, Zang, Vleugelbandpatroon, Alula, Flanken en wenkbrauw, Snavel en achternagel; open: Een bronbevestigde vrije-vluchtfoto ontbreekt. De soortkaart gebruikt een aanvullend scherp vleugelbeeld in Lijkt op.; De volledige tekst van de aangehaalde British Birds-studie is nog niet beoordeeld.; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** Het oorspronkelijke portret houdt de bronbepaling 'Gartenbaumläufer'. Gebruik het nieuwe vleugelbeeld en geluid voor het onderscheid.
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp067 Taigaboomkruiper — PARTIALLY TESTED
+
+Batch M2 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp067.webp` | Hoofdfoto | Boomkruiper tegen dennenstam; witte onderdelen en flanken, duidelijke witte wenkbrauw. | niet vast te stellen | goed; voor de vleugelband wordt het afzonderlijke zijaanzicht gebruikt | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 2.0 · Bengt Nyman from Vaxholm, Sweden |
+| `sp067-wing.webp` | Overige herkenningsfoto's | Taigaboomkruiper met de kop omhoog op een bemoste stam, zichtbare lichte flank en gevouwen vleugel. | Bron bevestigt de soort. Leeftijd, ondersoort en geslacht staan open. | Scherp vergelijkbaar zijaanzicht met zichtbare vleugelband. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Verkleind tot maximaal 1600 px en omgezet naar WebP zonder uitsnede. Metadata verwijderd.), CC BY 2.0 · caroline legg |
+
+- **Correcties:** Originele hoofdfoto naast het appbestand gelegd. Scherp vleugelbeeld toegevoegd voor de vergelijking op een stam. Afmetingen naast MME gelegd.
+- **Ontbreekt:** In vlucht; Juveniel
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Geslachten gelijk.
+- **Kennisprofiel:** 3 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Vleugelbandpatroon, Zang en roep, Flanken en wenkbrauw; open: De hoofdfoto en het aanvullende zijaanzicht hebben een bronbevestigde soortnaam. Welke ondersoort zij tonen staat open.; Afzonderlijke bronbevestigde foto’s van een juveniel en een vogel in vrije vlucht ontbreken.; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** De fotograaf benoemt Certhia familiaris. De hoofdfoto biedt beperkt zicht op de vleugelband. Beide foto's houden de ondersoort open.
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp057 Fitis — PARTIALLY TESTED
+
+Batch M1 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp057.webp` | Hoofdfoto | Zingende Fitis op tak; lichte poten, geelwitte onderzijde, lange handpenprojectie. | zingend, dus waarschijnlijk mannetje; niet als zodanig gelabeld | goed | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.5 · Andreas Trepte |
+
+- **Correcties:** FQA-04: zang alleen doorslaggevend bij een typisch, volledig lied; gemengde zang als open punt.
+- **Ontbreekt:** In vlucht; Juveniel (gelere najaarsvogel)
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Geslachten gelijk.
+- **Kennisprofiel:** 5 kritische kenmerken (1 doorslaggevend); niet doorslaggevend: Handpenprojectie, Kop, Poten, Seizoen; open: Spanwijdte en gewicht niet opnieuw gecontroleerd.; Verschil met Iberische Tjiftjaf alleen als waarschuwing opgenomen.; Gemengde zang (vogels die elementen van beide soorten zingen) is in de geraadpleegde bronnen niet uitgewerkt; zang blijft doorslaggevend alleen bij een typisch, volledig lied.; resterende dataverschillen: 0
+- **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp056 Tjiftjaf — PARTIALLY TESTED
+
+Batch M1 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp056.webp` | Hoofdfoto | Tjiftjaf op dunne tak; donkere poten, korte handpenprojectie. | niet vast te stellen | goed | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours |
+| `sp056-flight.webp` | Overige herkenningsfoto's (was: In vlucht) | Fladderend tussen rietstengels met gespreide vleugels; contact met stengels niet uit te sluiten. | niet vastgesteld | goed | uit-rol | opvliegen · uit-rol | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Falco2022 |
+
+- **Correcties:** Uit 'In vlucht' gehaald: valt onder de klasse opvliegen/tussen planten (mijlpaal 1).; FQA-04: zang alleen doorslaggevend bij een typisch, volledig lied; gemengde zang als open punt.
+- **Ontbreekt:** In vlucht; Juveniel/najaarsvogel
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Geslachten gelijk.
+- **Kennisprofiel:** 5 kritische kenmerken (1 doorslaggevend); niet doorslaggevend: Handpenprojectie, Staartbeweging, Poten, Seizoen; open: Spanwijdte en gewicht niet opnieuw gecontroleerd.; Iberische Tjiftjaf heeft nog geen eigen vergelijking.; Gemengde zang (vogels die elementen van beide soorten zingen) is in de geraadpleegde bronnen niet uitgewerkt; zang blijft doorslaggevend alleen bij een typisch, volledig lied.; resterende dataverschillen: 0
+- **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
+- **Onzeker:** —
+- **Eerdere uitslag:** Fotobaseline batch 01 gaf VERIFIED met deze foto als vluchtfoto; vervallen.
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp003 Holenduif — PARTIALLY TESTED
+
+Batch M1 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp003.webp` | Hoofdfoto | Holenduif in gras, zijaanzicht; groen glanzende halsvlek, korte zwarte vleugelstrepen, donker oog. | volwassen-ogend; geslacht niet op kleed | goed | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Chris Cant from Cumbria, UK |
+| `sp003-juv.webp` | Juveniel | Jonge Holenduif op een tak, met een donker oog en korte donkere tekeningen op de gevouwen vleugel. | Juveniel volgens individuele foto of waarneming en zichtbare kleedkenmerken. | Bruikbaar zijaanzicht · 1100 × 804 px. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (rechtstreekse conversie van de gecontroleerde bronopname), CC BY 4.0 · Paul Lewis |
+| `sp003-flight-open-sky.webp` | In vlucht | Holenduif vrij in de lucht tegen blauwe lucht. Grijze vleugels zonder brede witte dwarsband, donker oog en donkere staartpunt. | Geen leeftijds- of geslachtslabel | Goed binnen herkenningsdoel. Volledige vogel, 680 × 595 px. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (uitsnede rechtstreeks uit gecontroleerd origineel (145,160)-(825,755)), CC BY 4.0 · andygpos |
+
+- **Correcties:** Opvliegende foto uit 'In vlucht' (eigenaarsmelding) — label 'Opvliegend vanaf de grond' (vluchtcontrole ronde 1).; Veldkenmerken en kleedtekst: "zwarte vleugelpunten" → geen wit in hals/vleugel, twee korte zwarte vleugelstrepen, brede zwarte staartband (VB_HOLEN, RSPB_SD).; Zang: "oe-oe-oe steeds sneller" → eentonige reeks tweelettergrepige roepen (VB_HVH).; Lengte 30–33 → 28–32 cm; broedduur 16–18 → 16–17 dagen; nestjongen 27–28 → ca. 24 dagen (VB_HOLEN).; F2: afzonderlijke brongeverifieerde juvenielenfoto toegevoegd.; F2-hercontrole: bij Volwassen is zichtbaar dat man en vrouw op elkaar lijken.; F2-hercontrole: zachte afzetfoto uit de kaart gehaald en met herkomst gearchiveerd.; F2: foto van Holenduif in vrije vlucht toegevoegd en aangesloten op de bestaande vluchtvergelijkingen.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Mannetje en vrouwtje lijken sterk op elkaar. Het geslacht volgt bij deze opnamen niet op kleed. Bron: Blasco-Zumeta en Heinze.
+- **Kennisprofiel:** 2 kritische kenmerken (1 doorslaggevend); niet doorslaggevend: Stuit; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Eerdere uitslag:** Fotobaseline batch 01 gaf VERIFIED inclusief de opvliegende vluchtfoto; die uitslag is vervallen.
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp002 Houtduif — PARTIALLY TESTED
+
+Batch M1 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp002.webp` | Hoofdfoto | Volwassen Houtduif zittend op paal, zijaanzicht; witte halsvlek, lichte iris, roze borst. | volwassen (halsvlek, lichte iris); geslacht niet op kleed | goed: scherp, vogel groot in beeld | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Stephan Sprinz |
+| `sp002-flight-wingband.webp` | In vlucht | Vrij in de lucht. Witte band over de dichtstbijzijnde bovenvleugel, witte halsvlek en het volledige silhouet zichtbaar. | Geslacht niet vastgesteld; de witte halsvlek past bij volwassen kleed. | Goed binnen herkenningsdoel. Volledige vogel, 901 × 731 px. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Rechtstreeks omgezet uit het oorspronkelijke bronbestand van 901 × 731 px, zonder uitsnede; één bovenvleugel duidelijk zichtbaar, schuin zijaanzicht.), CC BY-SA 2.0 · Pierre-Marie Epiney |
+| `sp002-juv.webp` | Juveniel | Jonge Houtduif op de grond, met witte vleugeltekening en een hals zonder witte vlek. | Juveniel volgens individuele foto of waarneming en zichtbare kleedkenmerken. | Bruikbaar zijaanzicht · 1100 × 841 px. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (rechtstreekse conversie van de gecontroleerde bronopname), CC BY-SA 4.0 · Roland Gromes |
+
+- **Correcties:** FQA-04: kritisch kenmerk 'Halsvlek en iris' gesplitst; 'Witte halsvlek' (alleen volwassen) blijft doorslaggevend, iris alleen ondersteunend.; F2: afzonderlijke brongeverifieerde juvenielenfoto toegevoegd.; F2-hercontrole: bij Volwassen is zichtbaar dat man en vrouw op elkaar lijken.; F2: nieuw vluchtbeeld met duidelijke band op één bovenvleugel; vorige frontale foto gearchiveerd.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Mannetje en vrouwtje lijken sterk op elkaar. Het geslacht volgt bij deze opnamen niet op kleed. Bron: Blasco-Zumeta en Heinze.
+- **Kennisprofiel:** 2 kritische kenmerken (2 doorslaggevend); niet doorslaggevend: —; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp004 Turkse Tortel — PARTIALLY TESTED
+
+Batch M1 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp004-adult-crop.webp` | Hoofdfoto | Volwassen Turkse Tortel op een sparrentop, met rood oog, zwarte halsband en lange staart. | Volwassen volgens halsband, rood oog en kleed. | Goed: volledige vogel groter in beeld · 1100 × 969 px. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (uitsnede rechtstreeks uit de gecontroleerde bronopname (640,140)-(1980,1320)), CC BY 4.0 · Jakub Hałun |
+| `sp004-flight.webp` | In vlucht | Vrij in de lucht, zijaanzicht van onderen; staartpatroon (donkere basis, witte eindrand) zichtbaar. | niet vastgesteld | goed | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Florian Pépellin |
+| `sp004-juv.webp` | Juveniel | Jonge Turkse Tortel in zijaanzicht, met lange staart, smalle donkere snavel en zonder zwarte halsband. | Juveniel volgens individuele foto of waarneming en zichtbare kleedkenmerken. | Bruikbaar zijaanzicht · 1100 × 825 px. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (rechtstreekse conversie van de gecontroleerde bronopname), CC BY-SA 3.0 · Kreuzschnabel/Wikimedia Commons |
+
+- **Correcties:** Broedsels per jaar 3–5 → 2–5 (VB_TT).; FQA-04: tweede onafhankelijke bron voor de Zomertortel-kant (eBird, birdspot.co.uk) en uitzondering voor juvenielen zonder halstekening.; sp004.webp: voorwaardelijk → goedgekeurd na kwaliteitsnorm §3.3 (klein in beeld is geen afkeurgrond); F2: afzonderlijke brongeverifieerde juvenielenfoto toegevoegd.; F2-hercontrole: bij Volwassen is zichtbaar dat man en vrouw op elkaar lijken.; F2-hercontrole: meer beeldruimte voor de hele vogel door een uitsnede uit het bronbestand.; F2: spanwijdte ca. 45–55 cm en gewicht ca. 150–220 g, afgeronde veldgidsbanden uit twee verschillende uitgevers.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Mannetje en vrouwtje lijken sterk op elkaar. Het geslacht volgt bij deze opnamen niet op kleed. Bron: Blasco-Zumeta en Heinze.
+- **Kennisprofiel:** 3 kritische kenmerken (1 doorslaggevend); niet doorslaggevend: Staart in vlucht, Roep en vleugeltoppen; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp129 Krakeend — PARTIALLY TESTED
+
+Batch M8 · 2026-11-12 · SHA `2eb0a4a143bef53c48530ad88355e4752c3dd7cb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp129-hero-male.webp` | Hoofdfoto (Mannetje) | Grijs mannetje op blauw water, met donkere snavel en zwart achterlijf. | Volwassen mannetje volgens bron en kleed. | Volledig zijprofiel en fijne borsttekening. | goedgekeurd | — | VERIFIED: geverifieerde import 09-11 (SHA-1 c0a14edeee…), CC BY-SA 4.0 · Rhododendrites |
+| `sp129.webp` | Verenkleed (Mannetje) | Tweede opname met de vogel langs een rietrand. | Volwassen mannetje volgens bron en kleed. | Volledige vogel met zicht op het achterlijf. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Luiz Lapa from Oeiras, Portugal |
+| `sp129-adult_f.webp` | Verenkleed (Vrouwtje) | Bruine eend bij riet, met oranje zijkanten aan de snavel. | Vrouwtje volgens bron en kleed. | Zijaanzicht met scherpe snavel en mantel. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Andrey Gulivanov |
+| `sp129-juv-europa.webp` | Verenkleed (Juveniel) | Jonge Krakeend in bruin getekend kleed, zwemmend in Wales. | Onderzoekswaarneming met annotatie Juvenile. | Volledige vogel in zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind tot maximaal 1400 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.), CC BY 4.0 · Phil James |
+| `sp129-flight.webp` | In vlucht (Mannetje) | Geheven vleugel met witte spiegel naast kastanjebruin veld. Zwart achterlijf. | Volwassen mannetje volgens bron en kleed. | Volledig lichaam en herkenbare vleugeltekening. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Luiz Lapa from Oeiras, Portugal |
+
+- **Correcties:** De ringfoto maakt op de kaart plaats voor een vrij zwemmende juveniel. Vergelijking van vrouwtjes met Smient gebruikt nu de vrouwtjesfoto van Krakeend en twee kenmerkenrijen.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Volwassen labels volgen bron en kleed. Juvenielen blijven neutraal gelabeld.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Snavel en vleugelspiegel; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp092 Kuifeend — PARTIALLY TESTED
+
+Batch M8 · 2026-11-12 · SHA `ba87378fea76b9fa9aead8592afe6aa83f211645` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp092-hero-male.webp` | Hoofdfoto (Mannetje) | Mannetje met afhangende kuif, wit flankveld en geel oog. | Volwassen mannetje volgens bron en kleed. | Scherpe kop en herkenbare houding. | goedgekeurd | — | VERIFIED: geverifieerde import 09-11 (SHA-1 01c902a7dc…), CC BY 4.0 · Alexis Lours |
+| `sp092.webp` | Verenkleed (Mannetje) | Tweede opname van zwemmend mannetje met lange kuif, gele iris en witte flanken. | Volwassen mannetje volgens bron en kleed. | Volledig profiel uit een andere opname. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Dr. Raju Kasambe |
+| `sp092-adult_f.webp` | Verenkleed (Vrouwtje) | Donkerbruin vrouwtje met lichtere flanken en korte kuif. | Vrouwtje volgens bron en kleed. | Kopprofiel, snavel en flank zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Hans Hillewaert |
+| `sp092-juv.webp` | Verenkleed (Juveniel) | Jonge Kuifeend met bruin verenkleed en korte kuif. | Onderzoekswaarneming met annotatie Juvenile. | Volledig zijaanzicht, duidelijke kop en snavel. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind tot maximaal 1400 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.), CC BY 4.0 · SkippingShoe |
+| `sp092-juv-review.webp` | Verenkleed (Juveniel, jonger stadium) | Bruine jonge Kuifeend met nog deels donzig kleed. | Juveniel volgens bestaande bronbeoordeling. | Eerder verenkleedstadium, herkenbaar naast de nieuwe opname. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Tsyganov Sergey |
+| `sp092-flight.webp` | In vlucht (Mannetje) | Mannetje met gele iris en lichte vleugelbaan. | Volwassen mannetje volgens bron en kleed. | Vrije vlucht boven water, vleugelbaan goed zichtbaar. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · Birds of Gilgit-Baltistan from Aliabad, Hunza, Pakistan |
+
+- **Correcties:** Een volledig bevederde juveniel toegevoegd naast de bestaande opname van een jonger stadium. Vergelijking met Tafeleend op kop, oog en flanken uitgewerkt.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Volwassen labels volgen bron en kleed. Juvenielen blijven neutraal gelabeld.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Kuif, oog en kopprofiel; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp090 Slobeend — PARTIALLY TESTED
+
+Batch M8 · 2026-11-12 · SHA `ba87378fea76b9fa9aead8592afe6aa83f211645` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp090.webp` | Hoofdfoto (Mannetje) | Mannetje in ondiep water, met groene kop, lichte borst en brede snavel. | Volwassen mannetje volgens bron en kleed. | Volledig zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours |
+| `sp090-adult_f.webp` | Verenkleed (Vrouwtje) | Bruin vrouwtje met brede lepelvormige snavel. | Vrouwtje volgens bron en kleed. | De vorm van de snavel is goed zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.5 · Andreas Trepte |
+| `sp090-juv.webp` | Verenkleed (Juveniel) | Jonge Slobeend in bruin kleed met brede snavel, zwemmend in de Verenigde Staten. | Onderzoekswaarneming met annotatie Juvenile. | Kop, snavel en lichaam goed zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind tot maximaal 1400 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.), CC BY-SA 4.0 · Hal |
+| `sp090-flight.webp` | In vlucht (Mannetje) | Mannetje met brede snavel, lichtblauwe voorvleugel en groene spiegel. | Volwassen mannetje volgens bron en kleed. | Herkenbare volledige vogel in vrije vlucht. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Frank Schulenburg |
+
+- **Correcties:** Bronbevestigde juvenielenfoto toegevoegd. Kennisprofiel en vergelijking met Wilde Eend op snavel en vleugeltekening uitgewerkt.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Volwassen labels volgen bron en kleed. Juvenielen blijven neutraal gelabeld.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Snavelvorm; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp130 Smient — PARTIALLY TESTED
+
+Batch M8 · 2026-11-12 · SHA `2eb0a4a143bef53c48530ad88355e4752c3dd7cb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp130.webp` | Hoofdfoto (Mannetje) | Mannetje op gras met kastanjebruine kop, lichte bles en grijs lichaam. | Volwassen mannetje volgens bron en kleed. | Volledig zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.5 · Andreas Trepte |
+| `sp130-adult-f.webp` | Verenkleed (Vrouwtje) | Rossig vrouwtje op een steen, met korte blauwgrijze snavel. | Vrouwtje volgens bron en kleed. | Volledige vogel met zichtbare snavel. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Daniel106 |
+| `sp130-juv.webp` | Verenkleed (Juveniel) | Jonge Smient met rossigbruin kleed, ronde kop en korte blauwgrijze snavel. | Onderzoekswaarneming met annotatie Juvenile. | Enkele vogel, scherp beeld van kop, snavel en borst. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind tot maximaal 1400 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.), CC BY 4.0 · Наталья Усова |
+| `sp130-flight.webp` | In vlucht (Mannetje) | Mannetje met lichte bles, groot wit vleugelveld en groene spiegel. | Volwassen mannetje volgens bron en kleed. | Volledige vogel in vrije vlucht. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · Imran Shah from Islamabad, Pakistan |
+
+- **Correcties:** Juvenielenfoto toegevoegd. De vergelijking met Krakeend toont beide vrouwtjes naast elkaar met aandacht voor snavel en bouw.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Volwassen labels volgen bron en kleed. Juvenielen blijven neutraal gelabeld.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Snavelvorm en snavelkleur; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp132 Tafeleend — PARTIALLY TESTED
+
+Batch M8 · 2026-11-12 · SHA `ba87378fea76b9fa9aead8592afe6aa83f211645` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp132.webp` | Hoofdfoto (Mannetje) | Roodbruine kop, rood oog, donkere borst en grijze romp. | Volwassen mannetje volgens bron en kleed. | Helder zijaanzicht en zichtbare iris. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours |
+| `sp132-adult_f.webp` | Verenkleed (Vrouwtje) | Bruine kop met lichte wangtekening en grijsbruine flanken. | Vrouwtje volgens bron en kleed. | Kopprofiel, wang en flank duidelijk zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Klamul |
+| `sp132-juv.webp` | Verenkleed (Juveniel) | Jonge Tafeleend linksachter een grotere soortgenoot. | De fotograaf benoemt een begeleidende juveniel. | Beide vogels zijn zichtbaar en de juveniel is aangeduid in de fototekst. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind tot maximaal 1400 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.), CC BY 4.0 · James Heal |
+| `sp132-flight.webp` | In vlucht (Mannetje) | Roodbruine kop, donkere borst en lichtgrijze vleugelbaan. | Volwassen mannetje volgens bron en kleed. | Volledig silhouet in vrije vlucht. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp |
+
+- **Correcties:** Juvenielenfoto toegevoegd met uitleg welke vogel de juveniel is. Vergelijking met Kuifeend voor beide geslachten uitgewerkt.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Volwassen labels volgen bron en kleed. Juvenielen blijven neutraal gelabeld.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Kopprofiel, oog en flanken; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp089 Wilde Eend — PARTIALLY TESTED
+
+Batch M3 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel PARTIALLY TESTED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp089.webp` | Hoofdfoto | Wilde-Eend-paar op de oever. De groene kop van het mannetje en het bruine kleed van het vrouwtje zijn zichtbaar. | Commons identificeert het beeld als een paar. Herkenbare geslachtskenmerken zichtbaar. | Twee vogels duidelijk zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.5 · This picture was realized by Richard Bartz by using a Canon EF 70-300mm f/4-5.6 IS USM Lens |
+| `sp089-adult_f.webp` | Verenkleed (Vrouwtje) | Zwemmend vrouwtje met bruin getekend kleed en oranje met donkere snavel. | Fotograaf noemt een vrouwtje. | Geschikt voor vrouwtjeskleed en snavel. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Roshan Kumar Ban |
+| `sp089-juv-review.webp` | Verenkleed (Juvenielen) | Twee jonge Wilde Eenden met bruin getekend kleed. | Bron bevestigt twee jonge vogels. De Engelse en Franse tekst verschillen over geslacht. | Geschikt om jeugdkleed te tonen. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.5 · Marie-Lan Nguyen |
+| `sp089-eclipse.webp` | Verenkleed (Eclipskleed, voorlopig) | Bruin verenkleed met een gele snavel. Dat past bij een woerd in eclipskleed. | De Engelse en Sloveense bronbijschriften spreken elkaar tegen over het geslacht. | Scherp beeld, kleedlabel voorlopig. | review | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Mihael Grmek |
+| `sp089-flight.webp` | Verenkleed (Mannetje) | Woerd met geheven vleugels en poten omlaag. Dat past bij een landingshouding. | Groene kop en geelachtige snavel bevestigen een mannetje in prachtkleed. | Goed bruikbaar voor prachtkleed. | uit-rol | landen · uit-rol | VERIFIED: bronaudit 2026-11-11: zelfde opname (originele JPEG opnieuw gedownload en vergeleken na verkleinen; licentie uit de bronaudit van 09-11), CC BY-SA 4.0 · VJAnderson |
+| `sp089-free-flight.webp` | In vlucht (Mannetje) | Vrij in de lucht, met voorwaarts gestrekte hals en ingetrokken poten. | Fotobron noemt een woerd. Groene kop, gele snavel en witte halsring zijn zichtbaar. | Duidelijk silhouet en herkenningsdetails. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van de originele Commons-JPEG), CC BY-SA 4.0 · Bert de Tilly |
+
+- **Correcties:** De eerdere vluchtfoto is bij Mannetje geplaatst vanwege de neerhangende poten. Een aparte, brongeverifieerde vrije-vluchtfoto is toegevoegd.; Eclipsfoto zichtbaar gemarkeerd als voorlopig. Het juvenielenlabel noemt alleen de leeftijd.; Vergelijking met Krakeend legt uit wanneer de vleugelspiegel zichtbaar en bruikbaar is.
+- **Ontbreekt:** Eenduidig bevestigde eclipsfoto
+- **Verbeterwensen (eigenaar beoordeelt later):** Individueel rustportret van een mannetje in prachtkleed als extra hoofdbeeldkandidaat.
+- **Geslacht:** Geslacht alleen vermeld waar bron en beeld dit dragen. De twee juvenielen worden zonder geslacht aangeduid.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Vleugelspiegel bij bruine vogels; open: De Commons-beschrijvingen spreken elkaar tegen over het geslacht op de vermoedelijke eclipsfoto. Het beeld staat daarom als voorlopig vermeld.; Bij de juvenielenfoto bevestigen de bronbeschrijvingen jonge vogels, maar verschillen ze over het geslacht. Het fotolabel vermeldt alleen de leeftijd.; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** REVIEW REQUIRED: de Engelse en Sloveense bijschriften bij het vermoedelijke eclipskleed geven een verschillend geslacht.
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp091 Wintertaling — PARTIALLY TESTED
+
+Batch M3 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp091-hero-male.webp` | Hoofdfoto | Zwemmende woerd met kastanjebruine kop, groen oogveld en gele staartzijde. | Bron noemt een mannetje. Zichtbaar prachtkleed. | Duidelijk zijaanzicht. | goedgekeurd | — | VERIFIED: geverifieerde import 09-11 (SHA-1 ed2eefdff8…), CC BY-SA 4.0 · Charles J. Sharp |
+| `sp091-adult_m.webp` | Verenkleed (Mannetje) | Een andere woerd in prachtkleed met goed zichtbare flankstreep. | Bron noemt een mannetje. Kop en flank ondersteunen het label. | De flankstreep is duidelijker dan op de hoofdfoto. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Koshy Koshy from Faridabad, Haryana, India |
+| `sp091-adult_f.webp` | Verenkleed (Vrouwtje) | Bruin gevlekt kleed, relatief egale kop en lichte staartzijde. | Fotograaf benoemt een vrouwtje. | Duidelijke soort- en kleedkenmerken. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Frank Vassen from Brussels, Belgium |
+| `sp091-juv.webp` | Verenkleed (Juveniel) | Bruine jonge vogel met groene vleugelspiegel. | iNaturalist-annotatie Juvenile in de bronaudit van 9 november. Geen geslachtslabel. | Kleine uitsnede. Kop en vleugeltekening zijn zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Se Lena, some rights reserved (CC BY) |
+| `sp091-eclipse.webp` | Verenkleed (Overgang naar eclipskleed) | Bruin getekende vogel met resterende groene kopveren. | Fotobeschrijving vermeldt een ruiend mannetje. Beeld ondersteunt overgangskleed. | Herkenbaar voorbeeld van de overgang. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Roy Lowry, some rights reserved (CC BY) |
+| `sp091-flight.webp` | In vlucht (Mannetje) | Vrije vlucht met open vleugels, groene spiegel en groen oogveld. | Kop en vleugeltekening bevestigen een woerd in prachtkleed. | Helder beeld van spiegel en silhouet. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · Ferran Pestaña from Barcelona, España |
+| `sp091.webp` | Overige herkenningsfoto's | Mannetje in prachtkleed en bruine Wintertaling op ondiep water. | Mannetje herkenbaar. Bruine vogel vermeld zonder afzonderlijk leeftijdslabel. | Bruikbaar zij-aan-zijbeeld. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · gailhampshire from Cradley, Malvern, U.K |
+
+- **Correcties:** De ruifoto vermeldt overgang naar eclipskleed. Het juveniel staat zonder geslachtslabel.; De vergelijking met Zomertaling legt de combinatie van kop, staartzijde en vleugel uit.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** Vervang de kleine juvenielenfoto als een scherper bronbeeld met bevestigde leeftijd beschikbaar komt.
+- **Geslacht:** De kaart vermeldt geslacht waar bron en verenkleed dat ondersteunen. Het juveniel blijft zonder geslachtslabel.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Kop, staartzijde en bovenvleugel bij bruine vogels; open: De iNaturalist-waarnemingen bij jeugdkleed en rui konden op 11 november niet opnieuw worden geopend. De foto-identiteit en annotaties uit de bronaudit van 9 november zijn hergebruikt. De jeugdfoto krijgt geen geslachtslabel.; resterende dataverschillen: 1
+- **Browser:** 390x844 Chromium 145 (Playwright) · Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik
+- **Onzeker:** De twee iNaturalist-pagina’s waren op 11 november niet opnieuw bereikbaar. Eerder vastgelegd bronbewijs is gebruikt.
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp188 Zomertaling — PARTIALLY TESTED
+
+Batch M8 · 2026-11-12 · SHA `2eb0a4a143bef53c48530ad88355e4752c3dd7cb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp188-hero-male.webp` | Hoofdfoto (Mannetje) | Zwemmend mannetje met brede witte oogboog en afhangende schouderveren. | Volwassen mannetje volgens bron en kleed. | Volledige vogel met duidelijke koptekening. | goedgekeurd | — | VERIFIED: geverifieerde import 09-11 (SHA-1 bf5b3e3dc2…), CC BY 4.0 · YedidyaPopper |
+| `sp188.webp` | Verenkleed (Mannetje) | Mannetje met oogboog, bruine borst en grijze flanken. | Volwassen mannetje volgens bron en kleed. | Tweede beeld met helder zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp |
+| `sp188-adult_f.webp` | Verenkleed (Vrouwtje) | Vrouwtje op ondiep water met donkere oogstreep en lichte keel. | Vrouwtje volgens bron en kleed. | Volledig zijaanzicht met herkenbare koptekening. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · michael clarke stuff |
+| `sp188-juv.webp` | Verenkleed (Juveniel) | Jonge Zomertaling op groen water met contrastrijke lichte kopstrepen. | Juveniel volgens bestaande bronbeoordeling. | Volledige vogel, kop en snavel zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Stefan Berndtsson |
+| `sp188-eclipse.webp` | In vlucht (Mannetje in eclipskleed) | Mannetje in vrije vlucht met bruin eclipskleed en licht blauwgrijze voorvleugel. | Mannetje in eclipskleed volgens Commons-bron en bestaande vluchtcontrole. | Volledige vogel met duidelijk zicht op voorvleugel en kop. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · Frankie Chu from Hong Kong香港 |
+
+- **Correcties:** Kennisprofiel en vergelijking met Wintertaling nagekeken. Bron bevestigt het eclipskleed van het mannetje op de vluchtfoto.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** Een scherpe vluchtfoto van een mannetje in prachtkleed voor vergelijking met het eclipskleed.
+- **Geslacht:** Volwassen labels volgen bron en kleed. Juvenielen blijven neutraal gelabeld.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Wenkbrauw, oogstreep en keel; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp105 Fazant — VERIFIED
+
+Batch M3 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp105.webp` | Hoofdfoto | Haan met rode huid rond het oog, glanzende kop, witte halsring en lange staart. | Kenmerken bevestigen een mannetje. | Hele vogel zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC0 · Romzig |
+| `sp105-adult_f.webp` | Verenkleed (Vrouwtje) | Vrouwtje Fazant op Texel, met donkere vlekken op het bruine kleed en een lange gebandeerde staart. | Fotograaf benoemt een vrouwtje. Bruin kleed en lange staart ondersteunen het label. | Scherp genoeg om tekening en staartvorm te zien. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van de originele Commons-JPEG), CC0 1.0 · Bj.schoenmakers |
+| `sp105-juv.webp` | Verenkleed (Juveniel) | Jonge Fazant in Finland, met een bruin gevlekt kleed en een nog korte staart. | Fotograaf benoemt een jonge Fazant. Geslacht onbekend. | Korte staart en tekening goed zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van de originele Commons-JPEG), CC0 1.0 · Estormiz |
+| `sp105-flight.webp` | In vlucht (Mannetje) | Vrije vlucht met gespreide, afgeronde vleugels en lange staart. | Rode huid rond het oog, halsring en kleed bevestigen het mannetje. | Zijaanzicht van de vogel uit South Dakota. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), Public domain · U.S. Fish and Wildlife Service Headquarters |
+
+- **Correcties:** Vrouwtjesfoto van Texel en juvenielenfoto uit Finland toegevoegd. Vergelijking met Patrijs gebruikt staart en lichaamsbouw.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Haan en hen waar bron en kenmerken overeenstemmen. Juveniel zonder geslachtslabel.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Staartlengte en bouw bij bruine vogels; open: —; resterende dataverschillen: 0
+- **Browser:** 390x844 Chromium 145 (Playwright) · Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp106 Patrijs — PARTIALLY TESTED
+
+Batch M6 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp106-hero-male.webp` | Hoofdfoto (Mannetje) | Mannetje Patrijs met oranjebruin gezicht, grijze borst en gebandeerde flanken in een grasrand. | De fotograaf benoemt een mannetje op de Commons-bestandspagina. Het oranjebruine gezicht, de grijze borst en lichte lengtestrepen op de schouderveren zijn zichtbaar. | Scherp portret met kop en schouderveren. De oude sneeuwfoto toont de volledige staart. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY 4.0 · TRinaud |
+| `sp106-adult_f.webp` | Verenkleed (Vrouwtje) | Vrouwtje Patrijs in zijaanzicht tussen gras, met gebandeerde flank en lichte lengte- en dwarstekening op de schouderveren. | De fotograaf annoteert de opname als Adult en Female. De schoudertekening ondersteunt het label. Het bronbestand is onder CC0 vrijgegeven. | Snavel, kop, flank en deel van de schouder zichtbaar. Gras bedekt een deel van de onderzijde. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC0 1.0 · maxverheij |
+| `sp106-juv.webp` | Verenkleed (Juveniel) | Twee jonge Patrijzen op een stenig pad, met bruin gestreepte veren en een gestreepte kop zonder egaal oranjebruin gezicht. | De research-grade waarneming is geannoteerd als Juvenile en de fotograaf beschrijft een groep met twaalf jongen en twee volwassenen. De afgebeelde vogels tonen beide juveniele kop- en rugtekening. Geslacht onbekend. | Kop en gestreepte bovendelen van twee jonge vogels zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Uitgesneden rond de vogel en omgezet naar WebP zonder EXIF/GPS/XMP), CC BY 4.0 · Aurelijus Narbutas |
+| `sp106-flight.webp` | In vlucht (voorlopig) | Patrijs vliegt vrij boven een veld met een vleugel omlaag. | Geslacht onbekend. | Silhouet bruikbaar. De zachte foto van 450 px beperkt het veerdetail. | voorwaardelijk | vlucht · voorwaardelijk | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Safina Rezeda, some rights reserved (CC BY) |
+| `sp106.webp` | Overige herkenningsfoto | Patrijs in sneeuw, met grijze borst, oranjebruin gezicht en een korte staart. | Volwassen kleed. Geslacht onbekend. | Hele vogel in zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · K.Pitk |
+
+- **Correcties:** Bronbenoemd mannetje als hoofdfoto. Vrouwtjesfoto, juvenielenfoto en kennisprofiel toegevoegd. Vergelijking met Fazantenhen herbeoordeeld.
+- **Ontbreekt:** Scherpere foto van één Patrijs in vrije vlucht met bevestigde rechten.
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** De buikvlek komt ook bij vrouwtjes voor. Gebruik bij volwassen vogels de schouderveren en de onderbouwing op de bronwaarneming.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Staart en lichaamsbouw; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp077 Fuut — PARTIALLY TESTED
+
+Batch M3 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp077.webp` | Hoofdfoto | Zwemmende Fuut in prachtkleed. De lange hals, spitse snavel en roodbruine kraag zijn zichtbaar. | Geslacht niet benoemd door de bron. | Helder zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours |
+| `sp077-juv.webp` | Verenkleed (Juveniel) | Zwemmende jonge Fuut met zwart-wit gestreepte kop en hals. | Fotograaf noemt het dier juveniel. Geslacht onbekend. | Heldere leeftijdskenmerken. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp |
+
+- **Correcties:** Wintervergelijking met Roodhalsfuut toegevoegd met aandacht voor halsdikte en snavelbasis.
+- **Ontbreekt:** Geverifieerde vrije-vluchtfoto
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Mannetje en vrouwtje hebben gelijkend kleed. De hoofdfoto behoudt een neutraal label.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Snavel en hals in winterkleed; open: Een geverifieerde vluchtfoto ontbreekt. De volwassen hoofdfoto heeft een neutraal geslachtslabel.; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp086 Grauwe Gans — PARTIALLY TESTED
+
+Batch M3 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp086.webp` | Hoofdfoto | Grauwe Gans op gras. Stevige oranje snavel, roze poten en grijsbruine veren zichtbaar. | Geslacht niet benoemd door de bron. | Gehele vogel en herkenningsdetails goed zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Diliff |
+| `sp086-flight.webp` | In vlucht | Grauwe Gans vrij in de lucht, met gestrekte hals en achterwaarts gehouden poten. | Geslacht niet benoemd door de bron. | Heldere vleugelvorm en snavel. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp |
+| `sp086-juv.webp` | Overige herkenningsfoto’s (Donsjong) | Jonge Grauwe Gans met duidelijk dons en beginnende veerontwikkeling. | Bron noemt jong dier. Beeld toont donskleed. Geslacht onbekend. | Geschikt als voorbeeld van donskleed. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Tuxyso |
+
+- **Correcties:** Vergelijking met Kolgans behandelt het ontbreken van kol en buikstrepen bij jonge Kolganzen.
+- **Ontbreekt:** Afzonderlijke foto van een ouder juveniel
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** De bestaande beelden behouden neutrale labels. Het donsjong heeft een afzonderlijk leeftijdslabel.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Snavel, kol en buik; open: De jonge vogel op de kaart is een donsjong. Een afzonderlijke foto van een ouder juveniel ontbreekt.; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp141 Gierzwaluw — VERIFIED
+
+Batch M3 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp141-adult.webp` | Hoofdfoto | Vrije vlucht van onderaf met donker silhouet en lange sikkelvleugels. | Fotograaf benoemt de soort. Geslacht en exacte leeftijd onbekend. | Goed overzicht van het typische silhouet. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours |
+| `sp141-juv.webp` | Verenkleed (Juveniel) | Juveniele Gierzwaluw tijdens opvang na redding, met lichte veerranden op kop en vleugels. | Fotograaf benoemt een juveniel. Lichte veerranden zichtbaar. Geslacht onbekend. | Detailfoto uit opvang. De context staat bij de foto. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van de originele Commons-JPEG), CC BY 4.0 · Marie-Lan Taÿ Pamart |
+| `sp141-flight.webp` | In vlucht | Gierzwaluw in vrije vlucht, met lange, smalle vleugels en een gespreide gevorkte staart. | De bron bevestigt soort en vlucht. Leeftijd en geslacht onbekend. | Andere opname en kijkhoek dan de hoofdfoto. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van de originele Commons-JPEG), CC BY 4.0 · Alexis Lours |
+
+- **Correcties:** Een juvenielenfoto met expliciete opvangcontext en een afzonderlijke vrije-vluchtfoto toegevoegd. De kaart benoemt overeenkomend verenkleed bij mannetje en vrouwtje.; Herkenningsprofiel vergelijkt Gierzwaluw met Boerenzwaluw en Huiszwaluw.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** Een duidelijk juveniel in een natuurlijke situatie als aanvullende foto, zodra leeftijd, bron en licentie bevestigd zijn.
+- **Geslacht:** Neutrale labels. De geslachten hebben hetzelfde verenkleed.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Vleugelvorm, onderzijde en staart in vlucht; open: —; resterende dataverschillen: 0
+- **Browser:** 390x844 Chromium 145 (Playwright) · Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik
+- **Onzeker:** De fotograaf vermeldt bij beide vluchtfoto’s geen exacte leeftijd.
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp117 Geelgors — PARTIALLY TESTED
+
+Batch M6 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp117.webp` | Hoofdfoto (Mannetje) | Geelgors op een uitkijkpost, met een gele kop en gele onderzijde. | De fotograaf noemt een mannetje en de koptekening ondersteunt dit. | Volledig profiel met duidelijke kop en borst. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp |
+| `sp117-adult_f.webp` | Verenkleed (Vrouwtje) | Vrouwtje Geelgors met zaad in de snavel, een geelbruine kop met donkere streping en een gestreepte borst. | De fotograaf benoemt een vrouwtje op de research-grade waarneming. De donkere koptekening en streping zijn zichtbaar. Geel kan ook bij vrouwtjes duidelijk aanwezig zijn. | Koptekening, gestreepte borst en stevige snavel goed zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY 4.0 · Dave |
+| `sp117-juv.webp` | Verenkleed (Juveniel) | Jonge Geelgors van opzij in de hand, met bruine streping op kop en rug en lichte randen aan de vleugelveren. | De research-grade waarneming heeft de annotatie Juvenile. De doffe gestreepte kop en het verse kleed zijn zichtbaar. Geslacht onbekend. | Veerranden en streping goed zichtbaar. Foto toont een vogel in de hand. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY 4.0 · Scott Shanks |
+| `sp117-flight.webp` | In vlucht | Geelgors met geheven vleugels en lange staart in vrije vlucht. | Geslacht onbekend. | Silhouet en vleugelvorm zijn voldoende duidelijk. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) William Harland, some rights reserved (CC BY) |
+
+- **Correcties:** Vrouwtje, juveniel, kennisprofiel en beeldvergelijking met Rietgors toegevoegd. Mannetjeshoofdfoto en bestaande vluchtfoto gecontroleerd.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** Een jong in natuurlijke rusthouding zou de opname in de hand aanvullen.
+- **Geslacht:** Hoeveelheid geel is op zichzelf onvoldoende voor een geslachtslabel. De vogel op de vrouwtjesfoto is benoemd door de fotograaf.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Stuit, kop en omgeving; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp118 Rietgors — PARTIALLY TESTED
+
+Batch M6 · 2026-11-12 · SHA `38e3b3c42662dc49be8b769fd9f82a8dde65cad7` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp118.webp` | Hoofdfoto (Mannetje) | Mannetje Rietgors op een tak met een zwarte kop en witte halsband. | De bron benoemt een mannetje. Zwarte kop en lichte halsband ondersteunen het label. | De hele vogel en de koptekening zijn zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Charles J. Sharp |
+| `sp118-adult_f.webp` | Verenkleed (Vrouwtje) | Vrouwtje Rietgors op een tak, met bruine kruin, lichte wenkbrauw en donkere borststrepen. | De fotograaf benoemt een vrouwtje op de bestandspagina. De opname in maart laat de bruine kruin en lichte wenkbrauw zien. | Scherp zijaanzicht met goede zichtbaarheid van de wenkbrauw en borst. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY-SA 3.0 · Charles J. Sharp |
+| `sp118-juv.webp` | Verenkleed (Juveniel) | Zeer jonge Rietgors tussen gras met een open snavel en verse bruine en lichte veertjes. | De bron benoemt een juveniele Rietgors. Opname in juni. Open bedelsnavel en deels donsachtige veren zijn zichtbaar. Geslacht onbekend. | Bedelende, zeer jonge vogel. Latere veldkenmerken zijn minder goed zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY-SA 2.0 · nottsexminer |
+| `sp118-juv-later.webp` | Verenkleed (Juveniel) | Jonge Rietgors op een rietstengel, met bruine bovendelen en een gestreepte flank. | De research-grade waarneming heeft de annotatie Juvenile. De bron gebruikt Schoeniclus schoeniclus voor dezelfde soort. | Vogel in natuurlijke houding met zichtbare soortkenmerken. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY 4.0 · Eva Uzdilova |
+
+- **Correcties:** Vrouwtje, zeer jong juveniel en kennisprofiel toegevoegd. Vergelijking met Geelgors gecontroleerd.; Verder uitgegroeid juveniel in riet toegevoegd als tweede leeftijdsvoorbeeld.
+- **Ontbreekt:** Scherpe foto van één Rietgors in vrije vlucht met bevestigde rechten.
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Een bruine kruin komt ook voor bij mannetjes buiten de broedtijd en bij jonge vogels.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Kop en stuit; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp063 Goudhaantje — PARTIALLY TESTED
+
+Batch M3 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp063.webp` | Hoofdfoto | Scherp zijaanzicht op een tak. Het donkere oog, de lichte vleugelstrepen en de gele kruinstreep zijn zichtbaar. | Geen geslacht of exacte leeftijd bevestigd door de fotobron. | Gezicht en vleugeltekening zijn goed leesbaar. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Alexis Lours |
+| `sp063-juv.webp` | Verenkleed (Juveniel) | Jonge vogel op een naaldboomtak. De opvallende gekleurde kruinstreep ontbreekt. | Bron noemt de vogel juveniel. Geslacht niet vermeld. | Goed bruikbaar voor vergelijking met het volwassen kleed. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Silmethule |
+| `sp063-flight.webp` | In vlucht | Vrij in de lucht tussen takken. De bron vermeldt de Oost-Aziatische ondersoort japonensis. | Geen geslacht of exacte leeftijd bevestigd door de fotobron. | Bewegingsonscherpte beperkt de herkenningsdetails. | voorwaardelijk | vlucht · voorwaardelijk | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 3.0 · Alpsdake |
+| `sp063-adult-f.webp` | Overige herkenningsfoto (Volwassen) | Zijaanzicht met gele kruinstreep op een tak. | Volwassen. Vrouwtje alleen als bronclaim van de fotograaf; verborgen oranje middenkruin op dit zijaanzicht niet uit te sluiten. | Volledige vogel, herkenbare kop en vleugelstrepen. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Verkleind tot maximaal 1600 px en omgezet naar WebP zonder uitsnede. Metadata verwijderd.), CC BY-SA 3.0 · Francis C. Franklin |
+
+- **Correcties:** Vluchtfoto blijft in de vluchtsectie met de aanduiding Voorlopige foto. De ondersoort staat zichtbaar in het bijschrift.; Kennisprofiel vergelijkt het gezicht met Vuurgoudhaan en vermeldt de beperking van een gele kruin voor geslachtsbepaling.; Drie foto’s naast de originelen gelegd. Een vierde foto toont een door de fotograaf bevestigd vrouwtje. De opgave van de fotograaf blijft bepalend voor dat label.
+- **Ontbreekt:** Afzonderlijke mannetjesfoto; Scherpe Europese vluchtfoto
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Oranje kan bij mannetjes verborgen zijn. De hoofdfoto en de vluchtfoto krijgen zonder bronbewijs een neutraal label.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Wenkbrauw en oogstreep; open: Een bronbevestigde mannetjesfoto en een scherpe Europese vluchtfoto ontbreken. De aanwezige Japanse vluchtfoto is voorlopig.; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** De fotograaf van de hoofdfoto noemt geen geslacht. De zichtbare gele kruin is onvoldoende voor het label Vrouwtje.
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp064 Vuurgoudhaan — PARTIALLY TESTED
+
+Batch M6 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp064-hero-male.webp` | Hoofdfoto (Mannetje) | Mannetje Vuurgoudhaan met opvallend witte wenkbrauw, donkere oogstreep en een gekleurde kruin. | De fotograaf benoemt dit zingende individu als mannetje. Het gekleurde kruinveld en de contrastrijke koptekening zijn zichtbaar. | Vrij zicht op kruin, wenkbrauw en lichaam. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY 4.0 · Alexis Lours |
+| `sp064-juv.webp` | Verenkleed (Juveniel) | Jonge Vuurgoudhaan in zijaanzicht, met lichte vleugelstreep en zonder felle kruinstreep. | De research-grade waarneming heeft de annotatie Juvenile. De vogel is volledig in beeld en mist de opvallende volwassen kruinstreep. Geslacht onbekend. | Hele vogel in zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY 4.0 · euqirneto |
+| `sp064.webp` | Overige herkenningsfoto | Vuurgoudhaan op een tak met brede witte wenkbrauw boven donkere oogstreep. | Geslacht onbekend. | Volledig zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours |
+
+- **Correcties:** Bronbenoemd mannetje als hoofdfoto. Juvenielenfoto en kennisprofiel toegevoegd. Bestaande beeldvergelijking met Goudhaantje herbeoordeeld.
+- **Ontbreekt:** Vrouwtjesfoto met betrouwbare geslachtsaanduiding.; Scherpe foto van één Vuurgoudhaan in vrije vlucht met bevestigde licentie.
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** De hoofdfoto heeft een bronbenoemd mannetje. Gele delen van een deels zichtbare kruin zijn onvoldoende voor een vrouwtjeslabel.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Wenkbrauw en oogstreep; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** Een als vrouwtje geannoteerde kandidaat toont oranje in de kruinstreep. Die foto is niet als vrouwtje opgenomen.
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp249 Blauwe Kiekendief — PARTIALLY TESTED
+
+Batch M9 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp249-hero-male.webp` | Hoofdfoto (Mannetje) | Blauwgrijs mannetje in frontale vlucht boven gras, met gespreide zwarte vleugelpunten. | Volwassen mannetje volgens bron en kleed. | Vogel volledig in beeld met herkenbare kop, vleugels en houding. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Maurice.dekens |
+| `sp249-male-rest.webp` | Verenkleed (Mannetje) | Mannetje op de grond met grijze kop en lichte grijze bovendelen. | Volwassen mannetje volgens bron en kleed. | Zijaanzicht in gras. De lichte grijze delen zijn zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Sofia Voynovskaya |
+| `sp249.webp` | In vlucht (Mannetje) | Mannetje in vrije vlucht met witte stuit en donkere vleugelpunten. | Volwassen mannetje volgens bron en kleed. | Volledige vogel, andere hoek dan de hoofdfoto. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY 2.0 · caroline legg |
+| `sp249-adult_f.webp` | In vlucht (Vrouwtje) | Bruin vrouwtje in een draai met gebandeerde vleugels en gespreide staart. | Vrouwtje volgens bron en kleed. | Volledige vogel en donkere banden goed zichtbaar. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Maurice.dekens |
+| `sp249-juv.webp` | In vlucht (Juveniel) | Jonge Blauwe Kiekendief boven gras, met donkere vleugelbanden en witte stuit. | Juveniel volgens bron en zichtbaar kleed. | Hele vogel met beide vleugels zichtbaar. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY 2.0 · Rob Zweers |
+
+- **Correcties:** Vleugelbreedte, stuit en bandering uitgewerkt voor vergelijking met Grauwe en Steppekiekendief.; Vijf gidsbeelden naast het oorspronkelijke bronbestand gecontroleerd. De vergelijking Blauwe–Steppe toont drie vluchtparen per kleed.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** Vrouwtje en juveniel ook afzonderlijk in rust. Beide kleden zijn al zichtbaar in vlucht.
+- **Geslacht:** Volwassen labels volgen bron en zichtbaar kleed. Juvenielen blijven neutraal gelabeld.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Vleugelsilhouet en armpatroon; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp173 Bruine Kiekendief — PARTIALLY TESTED
+
+Batch M2 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp173-hero-male.webp` | Hoofdfoto | Mannetje in vlucht van onderen; lichte ondervleugel met zwarte punten, roestbruine buik. | volwassen mannetje (bron: 'Männliche Rohrweihe') | goed | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast de beschikbare bronminiatuur vergeleken), CC BY 4.0 · Stephan Sprinz |
+| `sp173-female-rest.webp` | Vrouwtje | Vrouwtje op tak in wilg; donkerbruin met roomwitte kop, gele poten. | vrouwtje (bron: Weibchen; kleed bevestigt) | goed | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Andreas Eichler |
+| `sp173-juv.webp` | Juveniel (landend, niet in vlucht) | Jonge vogel strijkt met hangende poten neer in riet. | juveniel (iNaturalist: Life Stage Juvenile) | voldoende | goedgekeurd | landen · uit-rol | VERIFIED: bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Codrin Bucur |
+| `sp173-male-2.webp` | In vlucht (Mannetje) | Vrij in de lucht; grijze armpennen, zwarte punten, roestbruine buik. | mannetje (kleed: grijze vleugels en staart) | goed | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Charles J. Sharp |
+| `sp173-adult_f.webp` | In vlucht (Vrouwtje) | Vrouwtje vliegt vrij; donkerbruin met roomwitte kop. | vrouwtje (bron: 'female'; kleed bevestigt) | goed | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC0 · Matti Virtala |
+| `sp173.webp` | In vlucht | Vrij in de lucht van opzij; bruine vogel. | bron noemt 'adult male', maar grijze vleugelvelden ontbreken op het beeld: terecht zonder geslachtslabel (bronaudit 09-11) | goed; watermerk maker | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY 2.0 · Hari K Patibanda |
+
+- **Correcties:** FQA-01 (eerder in deze PR): vrouwtje in vlucht naar In vlucht met label Vrouwtje.
+- **Ontbreekt:** Mannetje zittend; Juveniel in vrije vlucht
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Geslachten verschillen duidelijk (VB_BRK); labels door beeld en bron bevestigd.
+- **Kennisprofiel:** 2 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Silhouet en vleugelhouding, Geslacht en leeftijd; open: Hoofdfoto is een vluchtfoto (eigenaarsbesluit 'hoofdfoto als enige vluchtfoto' open).; Geen zittende foto van een mannetje.; Een juveniel in vrije vlucht ontbreekt. De huidige juvenielenfoto toont neerstrijken.; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** Hoofdfoto is een vluchtfoto (open eigenaarsbesluit over hoofdfoto's die vluchtfoto zijn).
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp005 Buizerd — PARTIALLY TESTED
+
+Batch M1 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp005-male-rest.webp` | Overige herkenningsfoto's | Lichte Buizerd op kabel, frontaal; donkere iris, gestreepte borst. Watermerk van de maker in beeld. | volwassen (donkere iris; bron: Life Stage Adult). Bron noemt 'Male', maar geslacht niet op kleed te zien: terecht zonder geslachtslabel. | goed | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY-SA 4.0 · (c) Gianluca Congi🪶🦆🌲, some rights reserved (CC BY-SA) |
+| `sp005.webp` | Hoofdfoto | Donker gekleurde Buizerd op tak; laat de kleedvariatie zien. | niet vastgesteld | goed | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY 4.0 · Alexis Lours |
+| `sp005-juv.webp` | In vlucht (Juveniel) | Jonge Buizerd zweeft vrij met volledig gespreide vleugels, van onderen; lichte iris, gelijkmatig gebandeerde staart. | juveniel (bron: iNaturalist Life Stage Juvenile; lichte iris consistent); label Juveniel blijft in de vluchtsectie | goed | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY 4.0 · (c) rober025, some rights reserved (CC BY) |
+| `sp005-adult_m.webp` | In vlucht (Volwassen) | Vrij in de lucht van onderen; brede vleugels, gebandeerde staart met donkerder eindband. | volwassen (bron: Life Stage Adult); kaart toont geen geslacht ondanks registersleutel adult_m | goed | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY 4.0 · (c) Roy Lowry, some rights reserved (CC BY) |
+| `sp005-flight-dark.webp` | In vlucht | Vrij vliegende Buizerd van onderen. Donker kleed, brede vleugels en korte gebandeerde staart zichtbaar. Leeftijd en geslacht onbevestigd. | Geen leeftijds- of geslachtslabel. | Goed. Volledige vogel en fijne staarttekening, 1150 × 1150 px. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Rechtstreeks afgeleid van de fotograafupload op Commons. Oorspronkelijk beeld en WebP vergeleken.), CC BY-SA 4.0 · Charles J. Sharp |
+| `sp005-female-flight.webp` | In vlucht | Lichte Buizerd vrij in de lucht van onderen; brede donkere achterrand van de vleugel. | volwassen (bron: Life Stage Adult; donkere achterrand consistent) | voldoende | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY-SA 4.0 · (c) Simone Bocca, some rights reserved (CC BY-SA) |
+
+- **Correcties:** FQA-01: juveniele foto toont echte vlucht maar stond zonder vluchtlabel onder Juveniel. Nu flight:true, één keer onder In vlucht met label Juveniel; de Juveniel-kaart verwijst ernaar.; F2: donkere vluchtfoto vervangen, bronbeelden opnieuw naast de appbeelden gecontroleerd. Leefgebied, maten en verschillen met de Ruigpootbuizerd onderbouwd.; F3-R02 15-11-2026: betere natuurlijke CC BY 4.0 Buizerd-foto van Alexis Lours is nu de hoofdfoto; kabelbeeld van Gianluca Congi blijft aanvullend volwassen rustbeeld; originele rechten en F2-historie behouden.
+- **Ontbreekt:** Afzonderlijke juveniele foto in rust; juveniel is al geverifieerd in vrije vlucht.
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Geslacht niet op kleed te zien; alle foto's zonder geslachtslabel (bronaudit 09-11).
+- **Kennisprofiel:** 7 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Staartbasis en bandering, Kop, Vleugelhouding en -slag, Staart, Iris, Kleur, Geluid; open: —; resterende dataverschillen: 1
+- **Browser:** NOT TESTED
+- **Onzeker:** De lichte buizerd op de vroegere hoofdfoto en de gearchiveerde donkere vluchtfoto zijn bij iNaturalist als mannetje geannoteerd. Individueel geslacht volgt niet betrouwbaar uit dit verenkleed. De app gebruikt het gedeelde volwassen label.
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp251 Grauwe Kiekendief — PARTIALLY TESTED
+
+Batch M9 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp251-portrait.webp` | Hoofdfoto (Mannetje) | Volwassen mannetje in droog gras, met grijs verenkleed en gele ogen. | Volwassen mannetje volgens bron en kleed. | Scherp portret met de vogel groot in beeld en zichtbaar vleugelprofiel. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast de beschikbare bronminiatuur vergeleken), CC BY 2.0 · Hari K Patibanda |
+| `sp251-adult_f.webp` | Verenkleed (Vrouwtje) | Bruin gestreept vrouwtje met neerhangende poten en gebandeerde vleugel. | Vrouwtje volgens bron en kleed. | Veren en staart herkenbaar. Fotograaf bevestigt dat de vogel opvliegt. | goedgekeurd | opvliegen · uit-rol | VERIFIED: bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY 2.0 · Hari K Patibanda |
+| `sp251-juv.webp` | Verenkleed (Juveniel) | Jonge vogel boven droog gras met roestbruine onderzijde en gebandeerde slagpennen. | Juveniel volgens bron en zichtbaar kleed. | Kleed en slagpennen herkenbaar tijdens het landen. | goedgekeurd | landen · uit-rol | VERIFIED: bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast de beschikbare bronminiatuur vergeleken), CC BY 2.0 · Rodrigo de Almeida from Marco de Canaveses, Portugal |
+| `sp251.webp` | In vlucht (Mannetje) | Mannetje in vrije vlucht met grijze kop en donkere armvleugelband. | Volwassen mannetje volgens bron en kleed. | Hele vogel zichtbaar in vrije vlucht, scherpe vleugeltekening. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast de beschikbare bronminiatuur vergeleken), CC BY 2.0 · Hari K Patibanda |
+
+- **Correcties:** Hoofdfoto vervangen door een scherp mannetjesportret. Twee bijna identieke oude foto’s met herkomst gearchiveerd. De aparte mannetjesvluchtfoto blijft beschikbaar.; Vergelijking met Steppekiekendief uitgewerkt op armvleugelband en ondervleugelpatroon.; Vrouwtje is volgens de fotograaf opvliegend. Kleedfoto behouden. De volwassen mannetjes van Grauwe en Steppe staan naast elkaar in vrije vlucht.
+- **Ontbreekt:** Vrouwtje in vrije vlucht; Juveniel in vrije vlucht
+- **Verbeterwensen (eigenaar beoordeelt later):** Afzonderlijke opname van een vrouwtje of juveniel in vrije vlucht voor vergelijking van de ondervleugel.
+- **Geslacht:** Volwassen labels volgen bron en zichtbaar kleed. Juvenielen blijven neutraal gelabeld.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Armvleugel en ondervleugel; open: Vrouwtje en juveniel in vrije vlucht ontbreken. Opvliegen en landen worden bij het kleed getoond.; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp007 Havik — PARTIALLY TESTED
+
+Batch M2 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel PARTIALLY TESTED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp007-hero-male.webp` | Hoofdfoto | Volwassen Havik in naaldboom; donkergrijze rug, fijn gebandeerde borst, oranjerood oog, lichte wenkbrauw. | volwassen (bron: 'Male northern goshawk'); geslacht niet als label getoond op de hoofdfoto | goed | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.), CC BY 2.0 · Andrey Gulivanov |
+| `sp007.webp` | Mannetje | Volwassen Havik op tak tegen lichte lucht; grijs, fijn dwars gebandeerd. | mannetje (bron: 'Male northern goshawk'; kleed past bij volwassen vogel) | goed | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.), CC BY 2.0 · Andrey Gulivanov |
+| `sp007-juv.webp` | Juveniel | Jonge Havik op tak; bruin van boven, onderzijde in de lengte gestreept. | juveniel (bron: 'Juvenile northern goshawk'; lengtestrepen bevestigen) | goed | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.), CC BY 2.0 · Andrey Gulivanov |
+| `sp007-male-flight.webp` | In vlucht (Mannetje) | Vrij in de lucht van opzij-onder; grijs gebandeerd, witte onderstaartdekveren. | mannetje (iNaturalist: Sex Male) | goed | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.), CC BY 4.0 · (c) Вячеслав Юсупов, some rights reserved (CC BY) |
+| `sp007-adult_f.webp` | In vlucht (Vrouwtje) | Vrij in de lucht van onderen; brede vleugels, gebandeerde onderzijde, afgeronde staart. | volwassen vrouwtje (iNaturalist: Life Stage Adult, Sex Female) | goed | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.), CC BY 4.0 · (c) WATANABE Hitoshi 渡辺仁, some rights reserved (CC BY) |
+| `sp007-flight.webp` | In vlucht | Vrij in de lucht van opzij; brede vleugel en gebandeerde staart. Onderzijde ongeschikt om de leeftijd zeker toe te kennen. | leeftijd en geslacht onbeslist; label blijft neutraal | voldoende: vogel klein in beeld | review | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.), CC BY-SA 3.0 · Ken Billington |
+
+- **Correcties:** F2: Alle zes actieve bronbeelden en rechten herbevestigd. ITIS bevestigt Astur gentilis en Accipiter gentilis als namen voor dezelfde soort. Geslachtsverschillen, leeftijd en maten gecontroleerd.
+- **Ontbreekt:** Vrouwtje in rust. Er is al een brongeverifieerd volwassen vrouwtje in vrije vlucht.
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Geslachten verschillen vooral in grootte; labels Mannetje/Vrouwtje steunen op de foto-bron.
+- **Kennisprofiel:** 3 kritische kenmerken (1 doorslaggevend); niet doorslaggevend: Kop en staart in vlucht, Grootte; open: Leeftijd en geslacht van de algemene vluchtfoto zijn niet beschreven bij de bron. De kaart toont deze foto met een neutraal label.; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** Algemene vluchtfoto zonder onderbouwde leeftijd of bevestigd geslacht.
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp253 Ruigpootbuizerd — PARTIALLY TESTED
+
+Batch M2 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp253-male-rest.webp` | Hoofdfoto | Ruigpootbuizerd op paal in sneeuwlandschap; lichte kop, donkere flanken/buik. | iNaturalist: Male; geen label op de hoofdfoto | goed | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY 4.0 · (c) Spencer Hurt, some rights reserved (CC BY) |
+| `sp253-male-flight.webp` | In vlucht (Mannetje) | Vrij in de lucht met zicht op donkere borst en gevlekte vleugels. De staart is gedeeltelijk zichtbaar. | Mannetje volgens de vastgelegde iNaturalist-annotatie. Houding en uitsnede beperken de zelfstandige controle van de volledige staartbandering. | voldoende: licht zacht | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY-SA 4.0 · (c) psweet, some rights reserved (CC BY-SA) |
+| `sp253.webp` | In vlucht (Vrouwtje) | Vrij in de lucht van onderen; lichte kop, donker buikschild, witte staartbasis met één brede eindband. | vrouwtje (bron: 'female'; buikschild en één eindband passen bij VB_BVR) | goed | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY 2.0 · dfaulder |
+| `sp253-juv.webp` | In vlucht (Juveniel) | Jonge vogel vrij in de lucht; gespreide vleugels en staart. | juveniel (iNaturalist: Life Stage Juvenile) | goed; watermerk maker | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY 4.0 · (c) Radek Ošlejšek, some rights reserved (CC BY) |
+
+- **Correcties:** FQA-01 (eerder in deze PR): juveniel in vlucht naar In vlucht met label Juveniel.; 11-11-2026: vier eigen foto’s onafhankelijk visueel herbekeken. Verschil tussen lichte vrouwtjes en juvenielen in het kennisprofiel als ondersteunend beschreven met Europese en Noord-Amerikaanse bronnen.; F2: alle vier originele opnamen en rechten herbevestigd, inclusief drie iNaturalist-fotopagina’s en hun waarnemingen. Verschillen met Buizerd en de maten gecontroleerd.
+- **Ontbreekt:** Afzonderlijke rustfoto van vrouwtje; Afzonderlijke rustfoto van juveniel
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** De kleden kunnen in de buik- en staarttekening verschillen en deels overlappen. Foto-annotaties en waarneembare kenmerken worden samen gelezen.
+- **Kennisprofiel:** 2 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Staartcontrast, Geslacht en leeftijd; open: Er is nog geen gelicentieerd referentiegeluid aan deze kaart gekoppeld.; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp006 Sperwer — PARTIALLY TESTED
+
+Batch M1 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp006-hero-male.webp` | Hoofdfoto | Volwassen mannetje op stronk met geheven vleugels; blauwgrijze bovendelen, oranje wangen en flanken. | volwassen mannetje (bron: 'Male'; kleed bevestigt) | goed; vleugels bedekken deel van de rug | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.), CC BY 2.0 · caroline legg |
+| `sp006.webp` | Mannetje | Volwassen mannetje zittend, zijaanzicht; blauwgrijze rug, roestkleurige onderzijde. | volwassen mannetje (bron: 'Male Sparrowhawk'; kleed bevestigt) | goed | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.), CC BY 2.0 · caroline legg |
+| `sp006-adult_f.webp` | Vrouwtje | Vrouwtje met gespreide vleugels op stronk; grijsbruine bovendelen, fijn gebandeerde borst, witte wenkbrauw. | volwassen vrouwtje (bron: 'Female Sparrowhawk'; kleed bevestigt) | goed | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.), CC BY 2.0 · caroline legg |
+| `sp006-juv.webp` | Juveniel | Jonge Sperwer op gras; bruine bovendelen, grove bruine dwarsbandering. | juveniel (bron: 'Female Juvenile Sparrowhawk') | goed | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.), CC BY 2.0 · caroline legg |
+| `sp006-flight.webp` | In vlucht | Vrij in de lucht van onderen; korte brede vleugels, gebandeerde staart met rechte hoeken, roestige onderzijde. | mannetje bevestigd in de beschrijving van de fotograaf | goed | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.), CC BY 4.0 · Alexis Lours |
+
+- **Correcties:** F2: Alle vijf actieve bronbeelden en rechten herbevestigd. Bronvermelding van mannetje in vrije vlucht, leeftijdspatroon onderzijde en maten gecontroleerd.
+- **Ontbreekt:** Vrouwtje in vrije vlucht (wenselijk). Voor het vrouwtje in rust blijft de foto op een zitplaats beschikbaar.
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Geslachten verschillen duidelijk (VB_SPERWER_MV); mannetje en vrouwtje getoond met bronbevestiging.
+- **Kennisprofiel:** 6 kritische kenmerken (1 doorslaggevend); niet doorslaggevend: Staartpunt, Kop en vleugels in vlucht, Vliegstijl, Roep, Grootte; open: —; resterende dataverschillen: 1
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp250 Steppekiekendief — PARTIALLY TESTED
+
+Batch M9 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp250-hero-male.webp` | Hoofdfoto (Mannetje) | Bleekgrijs mannetje op een paal, met lichte kop en borst en een lange staart. | Volwassen mannetje volgens bron en kleed. | Volledige vogel, rustige achtergrond. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY 2.0 · Luiz Lapa from Oeiras, Portugal |
+| `sp250-male-rest.webp` | Verenkleed (Mannetje) | Mannetje in droog gras met lichte bovendelen en donkere vleugelpunt. | Volwassen mannetje volgens bron en kleed. | Andere houding en kijkhoek dan de hoofdfoto. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Jan Ebr & Ivana Ebrová |
+| `sp250.webp` | In vlucht (Mannetje) | Mannetje met bleke onderzijde en zwarte wig aan de vleugelpunt. | Volwassen mannetje volgens bron en kleed. | Volledig silhouet tegen rustige achtergrond. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY 2.0 · Hari K Patibanda |
+| `sp250-adult_f.webp` | In vlucht (Vrouwtje) | Vrouwtje in vrije vlucht met gestreepte onderzijde en gebandeerde vleugels. | Vrouwtje volgens bron en kleed. | Volledige vogel, beide ondervleugels zichtbaar. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Tejas M |
+| `sp250-juv.webp` | In vlucht (Juveniel) | Jonge vogel met warme onderzijde, lichte halsring en donkere halsvlek. | Juveniel volgens bron en zichtbaar kleed. | Volledige vogel. Zijaanzicht met zicht op kop en ondervleugel. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Bogomaz Mykhailo |
+
+- **Correcties:** Herkenning van vrouwtjes en juvenielen gecontroleerd tegen Forsman. Afwijkende bronwaarden voor spanwijdte opgenomen bij de bronverantwoording.; Vijf gidsbeelden naast het oorspronkelijke bronbestand gecontroleerd. De vergelijking Blauwe–Steppe toont drie vluchtparen per kleed.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** Vrouwtje en juveniel ook afzonderlijk in rust. Beide kleden zijn al zichtbaar in vlucht.
+- **Geslacht:** Volwassen labels volgen bron en zichtbaar kleed. Juvenielen blijven neutraal gelabeld.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Koptekening en handpennen; open: —; resterende dataverschillen: 1
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp248 Wespendief — PARTIALLY TESTED
+
+Batch M2 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp248.webp` | Hoofdfoto | Wespendief in vlucht van onderen; smalle kop, staart met brede banden, gebandeerde ondervleugel. | volwassen mannetje volgens iNaturalist (Adult, Male); geen label op de hoofdfoto | goed; watermerk maker | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY-SA 4.0 · (c) Gianluca Congi🪶🦆🌲, some rights reserved (CC BY-SA) |
+| `sp248-male-rest.webp` | Mannetje | Wespendief zittend in boom; grijsbruine kop, geel-oranje oog. | volwassen mannetje (iNaturalist: Adult, Male) | goed | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY 4.0 · (c) Павел Кунгуров, some rights reserved (CC BY) |
+| `sp248-adult_f.webp` | In vlucht (Vrouwtje) | Vrij in de lucht van onderen; bruin gebandeerd, staartbanden zichtbaar. | volwassen vrouwtje (iNaturalist: Adult, Female) | goed: vogel kleiner in beeld; smalle kop, staartbanden en gebandeerde ondervleugel goed zichtbaar | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY 4.0 · (c) Donald Davesne, some rights reserved (CC BY) |
+| `sp248-juv.webp` | In vlucht (Juveniel) | Jonge Wespendief vrij in de lucht van onderen; bruine onderzijde. | juveniel (bron: 'Juvenile honey buzzard') | goed | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Bronbestand en lokaal beeld handmatig naast elkaar bekeken. Metadata en licentie rechtstreeks bevestigd.), CC BY 2.0 · Andrey Gulivanov |
+
+- **Correcties:** sp248-adult_f.webp: voorwaardelijk → goedgekeurd na kwaliteitsnorm §3.3 (klein in beeld is geen afkeurgrond); F2: oorspronkelijke beelden en rechten herbevestigd. Geslacht, leeftijd, seizoentekst en maten nader onderbouwd, vrouwelijke vluchtfoto als extra vergelijking opgenomen.
+- **Ontbreekt:** Vrouwtje zittend
+- **Verbeterwensen (eigenaar beoordeelt later):** Scherpere/grotere vrouwtje-vluchtfoto (geen gebrek; voor latere beoordeling door de eigenaar)
+- **Geslacht:** Geslachten verschillen; labels steunen op iNaturalist-annotaties.
+- **Kennisprofiel:** 3 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Kop en staart, Vleugelhouding, Oog en snavelbasis; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp054 Heggenmus — PARTIALLY TESTED
+
+Batch M3 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp054.webp` | Hoofdfoto | Heggenmus in zijaanzicht op een tak. De fijne spitse snavel en bruin gestreepte rug zijn zichtbaar. | Fotobron bevestigt de soort. Leeftijd en geslacht zijn niet expliciet geannoteerd. | Scherp beeld met vrij zicht op de kop en snavel. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC0 · Hobbyfotowiki Camera location 51° 10′ 43.32″ N, 7° 00′ 23.65″ E View this and other nearby images on: OpenStreetMap 51.178700; 7.006570 |
+| `sp054-juv.webp` | Verenkleed (Juveniel) | Jonge Heggenmus in zijaanzicht op schors: dichte bruine streping op kop, borst en flanken, weinig grijs, gele mondhoek, fijne spitse snavel. | Juveniel: gestreepte kop en borst (Blasco-Zumeta & Heinze), minder grijs (RSPB), gele mondhoek; Commons-categorie 'Prunella modularis (juvenile)'. Geslacht onbekend. | Scherp, hele vogel in beeld tegen egale achtergrond. | goedgekeurd | — | VERIFIED: bronaudit 16-11-2026: Commons-origineel met vastgepinde SHA-1 b04f9c42 in de intake-workflow geconverteerd met geregistreerde uitsnede, CC BY 2.0 · caroline legg |
+
+- **Correcties:** Bronprofiel met het snavelverschil ten opzichte van Huismus en het leeftijdsvoorbehoud bij de grijze kop en borst.
+- **Ontbreekt:** Vrije-vluchtfoto
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Geslachten zijn uiterlijk gelijkend. De kaart houdt de hoofdfoto neutraal.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Snavel en kop; open: Een vrije-vluchtfoto en een eigen geluidsopname voor de gids ontbreken.; resterende dataverschillen: 1
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp075 IJsvogel — PARTIALLY TESTED
+
+Batch M6 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp075-hero-male.webp` | Hoofdfoto (Mannetje) | IJsvogel op een schuine tak, met donkere ondersnavel. | Fotograaf benoemt een mannetje. | Rustige achtergrond en goed zicht op snavel en lichaam. | goedgekeurd | — | VERIFIED: geverifieerde import 09-11 (SHA-1 673f306001…), CC BY 2.0 · Luiz Lapa from Oeiras, Portugal |
+| `sp075-male-review.webp` | Verenkleed (Mannetje) | IJsvogel met donkere ondersnavel op een horizontale tak. | De bestandstitel benoemt een mannetje. | De snavel is in zijaanzicht goed zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Andy Morffew from Itchen Abbas, Hampshire, UK |
+| `sp075-female-review.webp` | Verenkleed (Vrouwtje) | IJsvogel in zijaanzicht op een stronk, met oranje aan de basis van de ondersnavel. | Oranjerode snavelbasis bij een volwassen vogel ondersteunt het vrouwtjeslabel. | Snavelbasis en borst zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Roland Riedel |
+| `sp075-juv-review.webp` | Verenkleed (Juveniel) | Jonge IJsvogel op een lichte tak met donker gerande borstveren. | Borsttekening ondersteunt juveniel. Geslacht onbekend. | Borst, poten en snavel zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours |
+| `sp075-flight.webp` | In vlucht | IJsvogel in vrije vlucht met een prooi in de snavel. | Geslacht onbekend. | Lichaam, vleugels en snavel in profiel. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp |
+| `sp075.webp` | Overige herkenningsfoto | IJsvogel op een tak met helderblauwe bovenzijde en oranje onderdelen. | Geslacht onbekend. | Het portret laat kleurverdeling en vorm zien. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.5 · Andreas Trepte |
+
+- **Correcties:** Bestaande zes afzonderlijke foto-opnamen en rollen gecontroleerd. Kennisprofiel en beeldvergelijking met Bijeneter toegevoegd.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Gebruik de ondersnavel voor geslachtsbepaling pas wanneer het volwassen kleed duidelijk is.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Keel, snavel en silhouet; open: —; resterende dataverschillen: 1
+- **Browser:** NOT TESTED
+- **Onzeker:** Vogelbescherming noemt 17–19,5 cm, Blasco-Zumeta & Heinze 15–17 cm. De getoonde ca. 16–18 cm volgt de vastgelegde methode met beide bronwaarden.
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp143 Kluut — PARTIALLY TESTED
+
+Batch M6 · 2026-11-12 · SHA `dfa3dfd5976579121089e69552da8919920d99e4` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp143-hero-review.webp` | Hoofdfoto (Volwassen) | Volwassen Kluut in zijaanzicht, met een vrij zichtbare, omhooggebogen snavel, zwart-wit verenkleed en lange poten in ondiep water. | Volwassen veldkleed. Geslacht onbekend. | Scherp zijaanzicht met een vrije snavel, complete vleugeltekening en lange poten. Rustige waterachtergrond. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind tot 1600 px zonder uitsnede en omgezet naar WebP zonder EXIF, GPS of XMP.), CC BY-SA 3.0 · Charles J. Sharp |
+| `sp143-hero-male.webp` | Verenkleed (Mannetje) | Mannetje Kluut op slik in zijaanzicht, met een lange opgewipte snavel, zwart-witte tekening en kleurringen. | De fotograaf benoemt het gemarkeerde individu H60 als mannetje en annoteert de waarneming als Adult en Male. | Bronfoto met kleurringen. Bruikbaar om het geslachtslabel te onderbouwen, minder geschikt voor het eerste soortbeeld. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY-SA 4.0 · Zinogre |
+| `sp143.webp` | Overige herkenningsfoto | Volwassen Kluut in profiel aan water met zwarte vleugelband en opgebogen snavel. | Geslacht onbekend. | De hele vogel, snavel en lange poten zijn zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · El Golli Mohamed |
+| `sp143-juv.webp` | Verenkleed (Juveniel) | Jonge Kluut langs ondiep water, met bruinere rug- en vleugelbanden, lange poten en een omhooggebogen snavel. | De research-grade waarneming is geannoteerd als Juvenile. Bruinere veerdelen en lichte randen ondersteunen dit. Geslacht onbekend. | Scherpe, volledige vogel van opzij. Bruinere banden en lichtere randen zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY 4.0 · Mark |
+| `sp143-flight.webp` | In vlucht | Kluut in vrije vlucht met opgebogen snavel, gespreide vleugels en gestrekte poten. | Geslacht onbekend. | De volledige vogel is zichtbaar en de poten steken uit achter de staart. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · yves hoebeke |
+| `sp143-adult_f.webp` | Verenkleed (Vrouwtje) | Vrouwtje Kluut op slik, met zwart-witte tekening, lange poten en een omhooggebogen snavel. | De fotograaf benoemt dit individu als het vrouwtje dat bij de gemarkeerde vogel H60 hoort. De waarneming heeft de annotaties Adult en Female. | Vogel in natuurlijke houding met zichtbare soortkenmerken. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Uitsnede rond de vogel en omzetting naar WebP zonder EXIF/GPS/XMP), CC BY-SA 4.0 · Zinogre |
+
+- **Correcties:** Juvenielenfoto en kennisprofiel toegevoegd. Bestaande vluchtfoto en vergelijking met Scholekster gecontroleerd.; Hoofdfoto van het bronbenoemde mannetje H60 en afzonderlijke vrouwtjesfoto toegevoegd. De eerdere volwassen foto blijft beschikbaar onder overige herkenningsfoto’s.; Na eigenaarfeedback de hoofdfoto vervangen door een scherp, vrij zijaanzicht in ondiep water. H60 staat bij Mannetje.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** Een scherper zijaanzicht van een vrouwtje in rust met de snavel vrij in beeld.
+- **Geslacht:** Hoofdfoto zonder geslachtslabel. Mannetje H60 en het afzonderlijke vrouwtje hebben brononderbouwde geslachtslabels. Het geslacht van de vluchtvogel is onbekend.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Snavelvorm en pootkleur; open: —; resterende dataverschillen: 1
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp021 Ekster — PARTIALLY TESTED
+
+Batch M1 · 2026-11-15 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp021.webp` | Hoofdfoto | Ekster op tak; zwart-wit kleed, glanzende staart en blauwe vleugelglans. | volwassen-ogend; geslachten gelijk | goed | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Alexis Lours |
+| `sp021-flight.webp` | In vlucht | Vrij in de lucht boven water; gespreide zwart-witte vleugels met witte handvleugel, lange staart. Geen contact met de steen rechtsonder. | niet vastgesteld | goed | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Alexis Lours |
+| `sp021-juv-review.webp` | Verenkleed (Juveniel) | Jonge Ekster op de grond, met roze mondhoeken, een korte staart en lichte huid rond het oog. | Juveniel volgens het bijschrift van de fotograaf. Lichte huid rond het oog en korte staart zichtbaar. | De hele vogel blijft in de uitsnede. De mondhoeken en de staart zijn zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 15-11-2026: zelfde opname (Originele JPEG visueel vergeleken. Het WebP is rechtstreeks van dit bestand afgeleid.), CC BY-SA 4.0 · Lystopad |
+
+- **Correcties:** Lengte 44–46 → 46–50 cm; broedduur 17–18 → 17–24 dagen; nestjongen 24–30 → 22–30 dagen (VB_EKSTER).; Hoofdfoto en vluchtfoto naast de oorspronkelijke bronbestanden bekeken. Neutrale labels behouden.; Lengte en spanwijdte met een tweede uitgever berekend, en vergelijking met Gaai onderbouwd.; F3-R06: Gedocumenteerd jeugdkleed toegevoegd.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Geslachten gelijk; geen geslachtsvakken.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Kleedpatroon en staart; open: Gewicht en een afzonderlijk voorbeeld van de zachte zang blijven open.; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp026 Gaai — PARTIALLY TESTED
+
+Batch M2 · 2026-11-15 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp026.webp` | Hoofdfoto | Gaai op tak met eikel; blauw vleugelveld en baardstreep. | niet vast te stellen | goed | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Hwbund |
+| `sp026-flight.webp` | In vlucht | Vrij in de lucht laag boven grasland; blauw-zwart gebandeerde vleugels, witte stuit; poten ingetrokken. | niet vastgesteld | goed | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Giles Laurent (gileslaurent.com) |
+| `sp026-juv-review.webp` | Verenkleed (Juveniel) | Jonge Gaai van dichtbij, met een bruine kruin, zacht ogend kleed en blauw gebandeerde vleugeldekveren. | Levensstadium juveniel geannoteerd in de bronwaarneming. Ook de minder getekende kruin en het zachte kleed zijn zichtbaar. Geslacht open. | Goed voor herkenning van kop en kleed. De linker rand snijdt een deel van de staart af. | goedgekeurd | — | VERIFIED: bronaudit 15-11-2026: zelfde opname (Individuele foto en originele JPEG bekeken. Het lokale WebP is uit dezelfde opname afgeleid.), CC BY 4.0 · Tim |
+
+- **Correcties:** Maten en broedgegevens naar de bron: lengte 32–36 cm, spanwijdte 50–60 cm, 5–7 eieren, broedduur 16–21 dagen, nestjongen 19–21 dagen (VB_GAAI).; Twee originele foto’s gematcht. Maten en de vergelijking met Ekster onderbouwd. De bestaande fotoinformatie vermeldt de door de maker gevraagde website en linkt de licentie.; F3-R07: juveniele Gaai met bronannotatie en zichtbaar jeugdkleed toegevoegd.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Geslachten gelijk; geen geslachtsvakken.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Kleedpatroon; open: Een afzonderlijk opnamevoorbeeld van de zachte zang met imitaties staat open.; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp025 Kauw — PARTIALLY TESTED
+
+Batch M3 · 2026-11-15 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp025.webp` | Hoofdfoto | Kauw in zijaanzicht op een tak. Lichte iris, grijze nek en de korte donkere snavel zijn zichtbaar. | Fotobron bevestigt de soort. Leeftijd en geslacht zijn niet expliciet geannoteerd. | Scherpe, goed leesbare kop. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Alexis Lours |
+| `sp025-flight.webp` | Overige herkenningsfoto’s (landingshouding) | Frontaal beeld met uitgespreide staart en vooruitgestoken poten tussen takken. | Leeftijd en geslacht zijn niet bevestigd door de fotobron. | Bruikbaar als aanvullende herkenningsfoto. | uit-rol | landen · uit-rol | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 2.0 · hedera.baltica |
+| `sp025-juv-review.webp` | Verenkleed (Juveniel) | Jonge Kauw van opzij op stenen, met dof kleed en een donker oog. | Juveniel volgens het individuele bijschrift. Donker oog en dof kleed zichtbaar. | Volledige vogel op 640 × 589 px. Het bronformaat beperkt de vergroting. | goedgekeurd | — | VERIFIED: bronaudit 15-11-2026: zelfde opname (Originele JPEG visueel vergeleken. Het WebP is rechtstreeks van dit bestand afgeleid.), CC BY-SA 2.0 · Anne Burgess |
+| `sp025-flight-free.webp` | In vlucht | Kauw in vrije vlucht, met gespreide vleugels en een korte snavel tegen open lucht. | Herkenbaar als Kauw op bronvermelding en vorm. Leeftijd en geslacht open. | Hele vogel in open lucht. Silhouet goed bruikbaar, met weinig detail in de donkere veren. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 15-11-2026: zelfde opname (Originele JPEG visueel vergeleken. Het WebP is rechtstreeks van dit bestand afgeleid.), CC BY-SA 3.0 · J. Patrick Fischer |
+
+- **Correcties:** De bestaande landingsfoto blijft buiten In vlucht. Het kennisprofiel maakt het leeftijdsvoorbehoud bij oogkleur expliciet.; Twee originele foto’s gematcht. De landingsnadering blijft bij de overige foto’s. Maten naast Kent Wildlife Trust gelegd.; F3-R06: Gedocumenteerd jeugdkleed toegevoegd.; F3-R06: Vrije-vluchtfoto toegevoegd. De landingsfoto blijft aanvullend.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Geslachten zijn uiterlijk gelijkend. De kaart houdt beide foto’s neutraal.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Iris en achterhoofd; open: Een close-up met meer detail van de jonge vogel en een afzonderlijke alarmroep kunnen de kaart verder aanvullen.; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** De fotobron noemt het beeld in algemene zin “in flight”. De zichtbare poten en houding ondersteunen de specifiekere Birdspot-indeling als landingshouding.
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp022 Zwarte Kraai — PARTIALLY TESTED
+
+Batch M3 · 2026-11-15 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp022.webp` | Hoofdfoto | Zwarte kraai in zijaanzicht op een tak. De krachtige snavel, kop en het zwarte kleed zijn zichtbaar. | Leeftijd en geslacht zijn niet bevestigd door de fotobron. | Scherp zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Alexis Lours |
+| `sp022-flight.webp` | In vlucht | Vogel vrij in de lucht met gespreide vleugels. De foto en bronbeschrijving tonen dezelfde vluchtrol. | Leeftijd en geslacht zijn niet bevestigd door de fotobron. | Bruikbaar voor silhouet en vleugelvorm. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Marie-Lan Taÿ Pamart |
+| `sp022-juv-review.webp` | Verenkleed (Juveniel) | Jonge Zwarte Kraai bedelt met geopende snavel en afhangende vleugels. De mond is roze. | Juveniel volgens de fotograaf. De roze snavelbinnenkant ondersteunt de leeftijd. | Hele vogel met zichtbaar bedelgedrag en lichte snavelbinnenkant. | goedgekeurd | — | VERIFIED: bronaudit 15-11-2026: zelfde opname (Originele JPEG visueel vergeleken. Het WebP is rechtstreeks van dit bestand afgeleid.), CC BY 4.0 · Marie-Lan Taÿ Pamart |
+
+- **Correcties:** Bronprofiel met vergelijking met Roek en Kauw. De snavelbasis is bij jonge Roeken geen betrouwbaar enkelvoudig onderscheid.; Lengte en spanwijdte als indicatieve band berekend met Vogelbescherming en RSPB.; Hoofdfoto en vluchtfoto naast de oorspronkelijke bronbestanden bekeken. Neutrale labels behouden.; F3-R06: Gedocumenteerd jeugdkleed toegevoegd.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Geslachten zijn uiterlijk gelijkend. De kaart houdt deze foto’s neutraal.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Snavelbasis; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp069 Gele Kwikstaart — PARTIALLY TESTED
+
+Batch M6 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp069.webp` | Hoofdfoto (Mannetje) | Gele Kwikstaart met blauwgrijze kop, lichte wenkbrauw en felgele onderzijde. | Nominaatvorm volgens de bron. De koptekening en gele onderzijde ondersteunen volwassen mannetje in broedkleed. | Hele vogel in zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Stephan Sprinz |
+| `sp069-adult_f.webp` | Verenkleed (Vrouwtje) | Vrouwtje Gele Kwikstaart op een lage verhoging. De bleke wenkbrauw, olijfbruine rug en gele onderzijde zijn zichtbaar. | De fotograaf annoteert de voorjaarswaarneming als Female. Olijfbruine bovendelen, gele onderzijde en bleke wenkbrauw zijn zichtbaar. Geen ondersoort toegekend. | De kop, gevouwen vleugel en onderzijde zijn zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY 4.0 · Donald Davesne |
+| `sp069-juv.webp` | Verenkleed (Juveniel) | Jonge Gele Kwikstaart in zijaanzicht op een steen, met bleke onderzijde, lichte vleugelstrepen en lange staart. | De fotograaf annoteert de research-grade waarneming als Juvenile. De bleke onderzijde en lichte vleugelstrepen zijn zichtbaar. Geslacht onbekend. | De hele vogel staat in beeld. Lichte vleugelstrepen en staartverhouding zijn zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY 4.0 · euqirneto |
+| `sp069-flight.webp` | Overige herkenningsfoto | Gele Kwikstaart bij het landen naast een paal, met de poten naar voren en de gele onderzijde zichtbaar. | Geslacht onbekend. | Poten naar voren bij de paal. Landingshouding zichtbaar. | goedgekeurd | landen · uit-rol | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Ralf Hüsges |
+
+- **Correcties:** Mannetjeslabel onderbouwd. Vrouwtje, juveniel en kennisprofiel toegevoegd. Vergelijking met Grote Gele Kwikstaart toont beide vogels.
+- **Ontbreekt:** Scherpe foto van één Gele Kwikstaart in vrije vlucht met bevestigde rechten.
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Koptekening en felheid variëren tussen ondersoorten. Het vrouwtje heeft een bronannotatie op de waarneming.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Mantel, poten en staart; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp068 Witte Kwikstaart — PARTIALLY TESTED
+
+Batch M3 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp068.webp` | Hoofdfoto | Vogel op een tak met zwart-witte kop, donkere keel en lange staart. | Geen geslacht of exacte leeftijd bevestigd door de fotobron. | Scherp portret met herkenbare kop en staart. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Stephan Sprinz |
+| `sp068-flight.webp` | In vlucht | Vrij in de lucht. Gespreide vleugels en lichte buitenste staartveren zijn zichtbaar. | Geen geslacht of exacte leeftijd bevestigd door de fotobron. | Bruikbaar voor het vluchtbeeld. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Tranceliner |
+
+- **Correcties:** De vergelijking met Rouwkwikstaart let op rug, stuit en flanken samen en benoemt variatie naar leeftijd, geslacht en seizoen.; Prachtkleed van het vrouwtje omschreven via de begrenzing van de koptekening.
+- **Ontbreekt:** Afzonderlijke mannetjesfoto; Afzonderlijke vrouwtjesfoto; Afzonderlijke juvenielenfoto
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** De koptekening kan verschillen per kleed. De twee foto’s behouden neutrale labels.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Rug, stuit en flanken; open: Afzonderlijke mannetjes-, vrouwtjes- en juvenielenfoto’s en lokale gidsaudio ontbreken. De bestaande foto’s krijgen geen nieuw leeftijds- of geslachtslabel.; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** De vluchtfoto bevestigt de soort en de vluchtrol. De ondersoort is bij deze opname niet geverifieerd.
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp070 Veldleeuwerik — PARTIALLY TESTED
+
+Batch M3 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp070.webp` | Hoofdfoto | Zijaanzicht op gras met voedsel in de snavel. Streping van borst en rug is zichtbaar. | Geen geslacht of exacte leeftijd bevestigd door de fotobron. | Bruikbaar voor bouw en kleed. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · User:Diliff |
+| `sp070-flight.webp` | In vlucht | Vrije vlucht van opzij met geheven vleugels en duidelijk silhouet. | Geen geslacht of exacte leeftijd bevestigd door de fotobron. | Bruikbaar voor het vluchtbeeld. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp |
+
+- **Correcties:** Kennisprofiel vergelijkt staart en vleugelvorm met Boomleeuwerik.; Broedduur en nestjongenperiode volgen Sovon. De oude kaart toonde dagen tot vliegvlug onder Jongen in nest.
+- **Ontbreekt:** Afzonderlijke juvenielenfoto
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** De bestaande foto’s blijven neutraal bij gebrek aan bevestigde geslachtslabels.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Staart en vleugels in vlucht; open: Een afzonderlijke juvenielenfoto en lokale gidsaudio ontbreken. De bestaande foto’s bevestigen geen geslacht.; resterende dataverschillen: 1
+- **Browser:** NOT TESTED
+- **Onzeker:** Sovon noemt 11 dagen in het nest. Vogelbescherming noemt circa 8 dagen. De bronafwijking staat in het kennisprofiel.
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp049 Grote Lijster — PARTIALLY TESTED
+
+Batch M7 · 2026-11-12 · SHA `38e3b3c42662dc49be8b769fd9f82a8dde65cad7` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp049.webp` | Hoofdfoto (Volwassen) | Grote Lijster in zijaanzicht bij bessen, met ronde donkere vlekken en een lange staart. | Volwassen veldkleed. Geslacht onbekend. | Houding en vlektekening zichtbaar tussen dunne takken. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · jo-h from UK |
+| `sp049-juv.webp` | Verenkleed (Juveniel) | Uitgevlogen jong in gras met lichte rugvlekken en vleugelstrepen. | De fotobron benoemt een uitgevlogen jong. Geslacht onbekend. | Rug, vleugeldekveren en wang goed zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP), CC BY-SA 2.0 · treehouse1977 |
+
+- **Correcties:** Juvenielenfoto en kennisprofiel toegevoegd. De vergelijking met Zanglijster gecontroleerd.
+- **Ontbreekt:** Scherpe foto van één Grote Lijster in vrije vlucht met bevestigde hergebruikrechten.
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Mannetje en vrouwtje hebben gelijk veldkleed. Leeftijd is alleen gelabeld als die wordt ondersteund door de bron.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Vlekken en ondervleugel; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp048 Koperwiek — PARTIALLY TESTED
+
+Batch M4 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp048.webp` | Hoofdfoto | Koperwiek met lichte wenkbrauw, gestreepte borst en roestrode flank. | Geslacht onbekend. | Herkenbaar zijaanzicht van kop en flank. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.5 · Andreas Trepte |
+| `sp048-juv.webp` | Verenkleed (Juveniel) | Jonge Koperwiek met lichte wenkbrauwstreep, gevlekte borst en lichte veerpunten. | iNaturalist Research Grade met annotatie Juvenile. Geslacht onbekend. | Kop, borst en vleugeldekveren zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele JPEG zonder uitsnede), CC BY 4.0 · Pyry Liedes |
+| `sp048-flight.webp` | Overige herkenningsfoto's (Opvliegend tussen planten) | Vogel tussen de vegetatie met uitgestrekte vleugels en neerhangende poten. | Geslacht en exacte leeftijd onbekend. | Bruikbaar voor houding en ondervleugel. Vrije vlucht onvoldoende overtuigend door de opstijghouding en de vegetatie. | uit-rol | opvliegen · uit-rol | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Lucas Golden |
+
+- **Correcties:** Juvenielenfoto en vergelijking met Zanglijster toegevoegd. De Nederlandse broedstatus is gecorrigeerd. Het kennisprofiel legt de grens van het Sovon-territoriumbewijs vast.
+- **Ontbreekt:** Geverifieerde, goed herkenbare foto in vrije vlucht.
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Verenkleed van beide geslachten gelijk. Neutrale fotolabels.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Wenkbrauw en kleur onder de vleugel; open: —; resterende dataverschillen: 2
+- **Browser:** 390x844 Chromium 145 (Playwright) · Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik, broedstatus en afwezigheid van een Nederlandse broedkalender
+- **Onzeker:** De bestaande opname toont opvliegen tussen planten. Ze blijft in de aanvullende sectie.
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp047 Kramsvogel — VERIFIED
+
+Batch M4 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp047.webp` | Hoofdfoto | Kramsvogel op de grond, met grijze kop, warmbruine mantel en gevlekte borst. | Geslacht onbekend. | Goed zijaanzicht van kop, mantel en borst. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Frankie Fouganthin |
+| `sp047-juv.webp` | Verenkleed (Juveniel) | Juveniele Kramsvogel met gevlekte borst, bruingrijze kop en minder sterk contrast tussen kop en rug. | De fotograaf benoemt een juveniel. Geslacht onbekend. | Voldoende detail op kop en borst. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY-SA 2.0 · hedera.baltica |
+| `sp047-flight.webp` | In vlucht | Vogel los van ondergrond en takken, met gespreide vleugels en lichte ondervleugeldekveren. | Geslacht en exacte leeftijd onbekend. | Vleugels zichtbaar. Takken maken de achtergrond druk. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Hangsna |
+
+- **Correcties:** Brongeverifieerd juveniel toegevoegd. Vergelijking met Koperwiek toont kop en flank. De vluchtvergelijking met Zanglijster gebruikt ondervleugeldekveren.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Geen geslacht vastgesteld. Veldfoto’s tonen de fijne veerdetails onvoldoende.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Kop, stuit en ondervleugel; open: —; resterende dataverschillen: 1
+- **Browser:** 390x844 Chromium 145 (Playwright) · Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp045 Merel — PARTIALLY TESTED
+
+Batch M4 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp045-hero-male.webp` | Hoofdfoto | Merel op de grond met zwart kleed en geel-oranje snavel. | Fotograaf benoemt een mannetje. Snavel en kleed ondersteunen dat. | Scherp zijaanzicht. | goedgekeurd | — | VERIFIED: geverifieerde import 09-11 (SHA-1 461e691ba6…), CC BY 2.0 · Luiz Lapa from Oeiras, Portugal |
+| `sp045.webp` | Verenkleed (Mannetje) | Mannetje op gras, met zichtbare oogring, snavel en staart. | Kleed, snavel en oogring bevestigen het mannetje. | Duidelijke kop en staart. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.5 · Andreas Trepte |
+| `sp045-flight.webp` | Verenkleed (Mannetje, landend) | Mannetje met open vleugels en vooruit gestrekte poten. | Zwart kleed, geelachtige snavel en oogring. | Bruikbaar voor kleed en landingshouding. | uit-rol | landen · uit-rol | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · Bengt Nyman from Vaxholm, Sweden |
+| `sp045-adult_f.webp` | Verenkleed (Vrouwtje) | Vrouwtje op een tak met donkerbruin kleed en lichter getekende borst. | Fotograaf benoemt een vrouwtje. Bruin kleed ondersteunt dit. | Borsttekening goed zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Rupdeb |
+| `sp045-juv.webp` | Verenkleed (Juveniel) | Bruin jong met lichte en roestkleurige spikkels op het verenkleed. | Brondossier 9 november vermeldt juveniel. Geslacht onbekend. | Kleed op kop, borst en rug herkenbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · hedera.baltica from Wrocław, Poland |
+| `sp045-free-flight.webp` | In vlucht (Mannetje, voorlopig) | Merel in vrije vlucht met de vleugels omlaag. Uitsnede van de bovenste vogel. | Commons categoriseert het beeld als mannetje. Kleed en snavel ondersteunen dat. | De staart is deels afgedekt. Bewegingsonscherpte beperkt het vleugeldetail. | voorwaardelijk | vlucht · voorwaardelijk | VERIFIED: bronaudit 2026-11-11: zelfde opname (uitsnede uit originele Commons-JPEG, daarna WebP), CC0 1.0 · Alf Beard |
+
+- **Correcties:** Aparte voorlopige vrije-vluchtfoto toegevoegd. De landingsopname blijft in de kleedgroep. De bruine Merel wordt met Zanglijster vergeleken.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** Scherpe vrije-vluchtfoto met de staart en vleugels volledig zichtbaar.
+- **Geslacht:** Mannetje en vrouwtje waar bron en beeld dat dragen. Het juveniel blijft zonder geslachtslabel.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Borstgrondkleur en staart bij bruine vogels; open: De vluchtopname is echt, maar de staart is deels afgedekt en de vleugels zijn niet overal scherp. De foto staat als voorlopig.; resterende dataverschillen: 0
+- **Browser:** 390x844 Chromium 145 (Playwright) · Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik
+- **Onzeker:** De nieuwe vluchtfoto is bruikbaar als voorlopig voorbeeld, met beperkte zichtbaarheid van de staart en bewegingsonscherpte.
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp046 Zanglijster — VERIFIED
+
+Batch M4 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp046.webp` | Hoofdfoto | Lijster op een tak met bruine bovendelen en donkere vlekken op een lichte onderzijde. | Geslacht onbekend. | Borsttekening en vleugel goed zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.5 · Andreas Trepte |
+| `sp046-juv.webp` | Verenkleed (Juveniel) | Juveniele Zanglijster met lichte tekening op de bovenzijde en een gevlekte borst. | De fotograaf benoemt een juveniel. Geslacht onbekend. | Voldoende detail in rug en vleugeldekveren. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY 2.0 · Frank Vassen |
+| `sp046-flight.webp` | In vlucht | Zanglijster vrij in de lucht met uitgespreide vleugels en warm gekleurde ondervleugeldekveren. | Geslacht en exacte leeftijd onbekend. | Herkenbare borsttekening en ondervleugelkleur. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · Mark Kilner |
+
+- **Correcties:** Brongeverifieerd juveniel toegevoegd. De vergelijkingen tonen verschillen met Grote Lijster, Merel en Kramsvogel.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** De geslachten hebben gelijk verenkleed. Neutrale fotolabels.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Borstvlekken en ondervleugeldekveren; open: —; resterende dataverschillen: 0
+- **Browser:** 390x844 Chromium 145 (Playwright) · Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp095 Kleine Mantelmeeuw — PARTIALLY TESTED
+
+Batch M2 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp095.webp` | Hoofdfoto | Volwassen Kleine Mantelmeeuw op strand; donkergrijze mantel, gele poten. | volwassen | goed | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Stephan Sprinz |
+| `sp095-flight.webp` | In vlucht | Volwassen vogel vrij in de lucht; donkere bovenvleugel, zwarte vleugelpunten. | volwassen; geslacht niet vastgesteld | goed | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp |
+
+- **Correcties:** geen
+- **Ontbreekt:** Juveniel / onvolwassen kleden
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Geslachten gelijk.
+- **Kennisprofiel:** 2 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Mantel en poten (volwassen), Tertials eerstejaars; open: Spanwijdte in de bron lijkt onvolledig; tweede bron nodig voordat de Birdspot-waarde wordt aangepast.; Geen foto's van onvolwassen kleden.; resterende dataverschillen: 0
+- **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp096 Stormmeeuw — PARTIALLY TESTED
+
+Batch M2 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp096.webp` | Hoofdfoto | Volwassen Stormmeeuw op steen; donker oog, gele dunne snavel, geelgroene poten. | volwassen (bron: adult breeding) | goed | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp |
+| `sp096-flight.webp` | In vlucht | Volwassen vogel vrij in de lucht van onderen; zwarte vleugelpunten. | volwassen (bron: adult breeding) | goed | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp |
+
+- **Correcties:** geen
+- **Ontbreekt:** Juveniel / onvolwassen kleden
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Geslachten gelijk.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Snavel, oog en poten; open: Lengte-bovengrens in de bron lijkt een fout; tweede bron nodig.; Geen foto's van onvolwassen kleden.; resterende dataverschillen: 0
+- **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp094 Zilvermeeuw — PARTIALLY TESTED
+
+Batch M1 · 2026-11-10 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser VERIFIED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp094.webp` | Hoofdfoto | Volwassen Zilvermeeuw op ijs; grijze mantel, witte kop, roze poten, zwarte vleugelpunten. | volwassen (adult kleed) | goed: scherp; vogel kleiner in beeld, mantel, vleugelpunt, snavel en poten goed zichtbaar | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Stephan Sprinz |
+| `sp094-flight.webp` | In vlucht | Volwassen vogel vrij in de lucht boven zee; lichtgrijze bovenvleugel, zwarte vleugelpunten met witte vlekken. | volwassen; geslacht niet vastgesteld | goed | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.5 · Andreas Trepte |
+
+- **Correcties:** Lengte 54–60 → 55–67 cm; spanwijdte 123–148 → 125–155 cm (VB_ZILV).; sp094.webp: voorwaardelijk → goedgekeurd na kwaliteitsnorm §3.3 (klein in beeld is geen afkeurgrond)
+- **Ontbreekt:** Juveniel / eerste kalenderjaar; Onvolwassen kleden (leeftijdsreeks)
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Geslachten gelijk.
+- **Kennisprofiel:** 3 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Pootkleur, Tertials eerstejaars, Leeftijd; open: Snavel- en oogkleur per leeftijd uit een bron beschrijven.; Onderscheid met Pontische Meeuw uitwerken.; Kopstreping in winterkleed is in de bron alleen als foto te zien.; resterende dataverschillen: 0
+- **Browser:** 390x844 Chromium (Playwright) · SAB-01..07
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp032 Glanskop — PARTIALLY TESTED
+
+Batch M7 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten PARTIALLY TESTED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp032.webp` | Hoofdfoto (Volwassen) | Glanskop met donkere kap, lichte wang en vrij egale vleugel. | Volwassen veldkleed. Geslacht onbekend. | Volledige vogel met duidelijk zijprofiel. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · PeterRohrbeck |
+| `sp032-juv.webp` | Verenkleed (Juveniel) | Jonge Glanskop in schaduw tussen bladeren. De doffe kap, lichte wang en snavelhoeken zijn zichtbaar. | Waarneming geannoteerd als juveniel. Geslacht onbekend. | Kop en volledige vogel zichtbaar na lichte helderheidscorrectie. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast origineel vergeleken. Oorspronkelijke SHA-256 gelijk aan de M7-import.), CC BY 4.0 · Dr. Nasser Halaweh |
+| `sp032-view.webp` | Overige herkenningsfoto's | Glanskop van voren met zwarte kap, lichte wangen en een kleine bef. | Geslacht en leeftijd niet gelabeld. | Een tweede hoek voor vergelijking van wang en bef. | goedgekeurd | — | PARTIALLY TESTED: Luc Viatour vraagt om zijn naam en website naast de afbeelding. De zichtbare creditcorrectie staat in PR #210 op 4f46f98. |
+
+- **Correcties:** Juvenielenfoto en kennisprofiel toegevoegd. Vergelijking met Matkop aangescherpt op roep, snavelbasis en vleugel.; Drie originele foto’s gematcht. Waarneming en juvenielenannotatie herbevestigd. Uitgeschreven makercredit bij vooraanzicht voorbereid in PR #210.
+- **Ontbreekt:** Scherpe foto van één Glanskop in vrije vlucht met bevestigde hergebruikrechten.
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** De geslachten lijken sterk op elkaar. Het geslacht is niet op kleed bepaald; juveniel volgt de fotobron.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Snavelbasis en roep; open: Een scherpe, bronbevestigde foto in vrije vlucht ontbreekt.; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp029 Koolmees — VERIFIED
+
+Batch M4 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp029-adult_m.webp` | Hoofdfoto (Mannetje) | Mannetje Koolmees met zwarte kop, witte wang en brede donkere buikstreep. | Fotograaf vermeldt een mannetje. Brede buikstreep zichtbaar. | Herkenbare kop en onderzijde. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Charles J. Sharp |
+| `sp029-adult_f.webp` | Verenkleed (Vrouwtje) | Vrouwtje Koolmees met witte wangen en een smalle, onderbroken donkere buikstreep. | Fotograaf vermeldt een vrouwtje. Smalle, onderbroken buikstreep zichtbaar. | Vooraanzicht toont de streep goed. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Evas-naturfotografie |
+| `sp029-juv.webp` | Verenkleed (Juveniel) | Juveniele Koolmees met doffe kap, lichte wang en lichte mondhoek. | Fotograaf vermeldt een juveniel. Geslacht onbekend. | Scherpe kop en mondhoek. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 2.0 · caroline legg |
+| `sp029-flight.webp` | In vlucht | Vrij in de lucht met uitgespreide vleugel. Zwarte kop, lichte wang en gele onderzijde zichtbaar. | Geen betrouwbaar geslachts- of leeftijdslabel bij deze kijkhoek. | Goed voor herkenning van vleugel en lichaam. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Holger Uwe Schmitt |
+| `sp029.webp` | Overige herkenningsfoto's | Koolmees zijwaarts op een tak, met gele buik, witte wang en lichte vleugelstreep. | Geslacht niet vastgesteld op deze foto. | Aanvullend zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Rhododendrites |
+
+- **Correcties:** Brongeverifieerd mannetje als hoofdfoto, met verwijzing vanuit Mannetje. Vrouwtje en juveniel toegevoegd. Oud hoofdbeeld blijft als aanvullend portret.; Alle vijf beelden naast de originelen gelegd. Leeftijd en geslacht van de kleedfoto’s met de bron gecontroleerd. Lengte en spanwijdte via RSPB getoetst.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Volwassen geslachtslabels alleen als bron en zichtbaar buikpatroon overeenstemmen. Vluchtfoto en juveniel zonder geslachtslabel.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Kap, oogstreek en middenstreep; open: —; resterende dataverschillen: 0
+- **Browser:** 390x844 Chromium 145 (Playwright) · Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp033 Kuifmees — PARTIALLY TESTED
+
+Batch M7 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten PARTIALLY TESTED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp033.webp` | Hoofdfoto (Volwassen) | Kuifmees in zijaanzicht tussen dennennaalden. | Volwassen veldkleed met spitse kuif. Geslacht onbekend. | Hele vogel in beeld met duidelijk kopprofiel. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Alexis Lours |
+| `sp033-juv.webp` | Verenkleed (Juveniel) | Jonge Kuifmees op een tak, met korte kuif en gele snavelhoeken. | Fotograaf en waarnemingsannotatie bevestigen juveniel. Geslacht onbekend. | Kop en wangboog duidelijk zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto naast origineel. SHA-256 gelijk aan het eerder ingevoerde oorspronkelijke bestand.), CC BY-SA 4.0 · Micha Baum |
+| `sp033-view.webp` | Overige herkenningsfoto's | Kuif en donkere wangboog op schuine tak. | Geslacht en leeftijd niet gelabeld. | Scherp kopprofiel vanuit een tweede hoek. | goedgekeurd | — | PARTIALLY TESTED: De maker vraagt zichtbare naamsvermelding en website bij het beeld. Aanpassing in PR #212 op e296f8d. |
+| `sp033-flight.webp` | Overige herkenningsfoto's | Kuifmees met geheven vleugels op de sneeuw. | Geslacht en leeftijd niet gelabeld. | Kop en vleugelpennen zichtbaar. Volgens vluchtcontrole staat de vogel op de sneeuw. | uit-rol | grond · uit-rol | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 3.0 · Sgbeer |
+
+- **Correcties:** Juvenielenfoto en kennisprofiel toegevoegd. De vergelijking met Matkop en het bijschrift van de sneeuwfoto gecontroleerd.; Vier originele foto’s gematcht. Waarneming en juvenielenannotatie herbevestigd. De sneeuwfoto blijft bij de overige foto’s. De zichtbare makercredit staat in PR #212.
+- **Ontbreekt:** Scherpe foto van één Kuifmees in vrije vlucht met bevestigde hergebruikrechten.
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Mannetje en vrouwtje hebben gelijk veldkleed. Leeftijd is alleen gelabeld als die wordt ondersteund door de bron.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Kuif en wangboog; open: Een scherpe foto in vrije vlucht met bevestigde herkomst ontbreekt.; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp031 Matkop — PARTIALLY TESTED
+
+Batch M7 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten PARTIALLY TESTED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp031.webp` | Hoofdfoto (Volwassen) | Matkop met zwarte kap, lichte wang en licht vleugelveld. | Volwassen veldkleed. Geslacht onbekend. | Volledig zijaanzicht met een goed zichtbare gevouwen vleugel. | goedgekeurd | — | PARTIALLY TESTED: Commons vermeldt © Francis C. Franklin / CC-BY-SA-3.0. De zichtbare creditcorrectie staat in PR #210 op 4f46f98. |
+| `sp031-juv.webp` | Verenkleed (Juveniel) | Jonge Matkop tussen bladeren. Lichte snavelhoeken en donkere kap. | Fotograaf benoemt een juveniel. Geslacht onbekend. | Kop en snavelhoeken scherp in beeld. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Wald1siedel |
+| `sp031-flight.webp` | Overige herkenningsfoto's | Matkop vlak boven de sneeuw, met geopende vleugels. | Geslacht en leeftijd niet gelabeld. | Opvliegbeeld. Alleen als aanvullend beeld bruikbaar. | uit-rol | opvliegen · uit-rol | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC0 1.0 · Estormiz |
+
+- **Correcties:** Bronbevestigde juvenielenfoto en kennisprofiel toegevoegd. Vergelijking met Glanskop gecontroleerd.; Drie originele foto’s gematcht. Bron noemt het jong expliciet. De vergelijking toont het naast een jonge Glanskop. Uitgeschreven makercredit voorbereid in PR #210.
+- **Ontbreekt:** Scherpe vrije-vluchtfoto met bevestigde hergebruikrechten.
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** De geslachten lijken op elkaar in het veld. Het geslacht is niet op kleed bepaald; juveniel volgt de fotobron.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Roep, vleugelveld en snavelbasis; open: Een scherpe, bronbevestigde foto in vrije vlucht ontbreekt.; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp030 Pimpelmees — VERIFIED
+
+Batch M4 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp030.webp` | Hoofdfoto | Pimpelmees op een twijg, met blauwe kruin, witte wangen en donkere oogstreep. | Volwassen kleed als herkenningsvoorbeeld. Geslacht onbekend. | Helder zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Alexis Lours |
+| `sp030-juv2.webp` | Verenkleed (Juveniel) | Jonge Pimpelmees met bleekgele wang en doffe blauwgrijze kruin. | Fotograaf noemt een juveniel. Geslacht onbekend. | Kop goed zichtbaar, kleine vogel in staand beeld. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 2.0 · caroline legg |
+| `sp030-flight.webp` | In vlucht | Vrij in de lucht met gespreide staart en vleugels. Blauwe bovenzijde en oogstreep zichtbaar. | Geslacht onbekend. | Vleugels en staart zichtbaar van bovenaf. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 2.0 · Joe Dyer |
+
+- **Correcties:** Jeugdfoto voorzien van zichtbare aanwijzing bij wang en kruin. De bestaande neutrale foto-indeling blijft bruikbaar.; Drie originele foto’s gematcht. Jeugd- en vluchtlabel bevestigd. Lengte naast The Wildlife Trusts gelegd.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** De kenmerken voor beide geslachten overlappen. Op deze beelden is het geslacht niet op kleed vastgesteld.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Koptekening en onderzijde; open: —; resterende dataverschillen: 0
+- **Browser:** 390x844 Chromium 145 (Playwright) · Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp174 Zwarte Mees — PARTIALLY TESTED
+
+Batch M7 · 2026-11-12 · SHA `dfa3dfd5976579121089e69552da8919920d99e4` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp174.webp` | Hoofdfoto (Volwassen) | Volwassen vogel met zwarte kop, lichte wang en twee vleugelbandjes. | Volwassen veldkleed. Geslacht onbekend. | Hele vogel op een tak. Vleugelbandjes zijn zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours |
+| `sp174-juv.webp` | Verenkleed (Juveniel) | Jonge vogel op een tak. Gele wang, lichte nekvlek en twee lichte vleugelbandjes. | Waarneming geannoteerd als juveniel. Geslacht onbekend. | Rustige achtergrond en goede weergave van het jeugdkleed. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Volledig kader behouden. Omgezet naar WebP zonder EXIF, GPS of XMP.), CC BY 4.0 · euqirneto |
+| `sp174-flight.webp` | In vlucht | Zwarte Mees in vlucht tussen dennentakken. | Geslacht en leeftijd onbekend. | Witte wang en lichte nekvlek zichtbaar. De vleugels zijn bewogen. | voorwaardelijk | vlucht · voorwaardelijk | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) euqirneto, some rights reserved (CC BY) |
+
+- **Correcties:** Juvenielenfoto en kennisprofiel toegevoegd. Een beeldvergelijking met Koolmees en Staartmees toegevoegd.
+- **Ontbreekt:** Definitieve scherpe foto van één Zwarte Mees in vrije vlucht met bevestigde hergebruikrechten.
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** De geslachten lijken sterk op elkaar. Het geslacht is niet op kleed bepaald; juveniel volgt de fotobron.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Nekvlek en vleugelbandjes; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp043 Huismus — VERIFIED
+
+Batch M4 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp043-hero-male.webp` | Hoofdfoto (Mannetje) | Rustend mannetje met grijze kruin, kastanjebruine zijkant van de kop en zwarte bef. | De bron benoemt een mannetje. Kruin en bef ondersteunen dat. | Kop, bef en bouw zichtbaar. | goedgekeurd | — | VERIFIED: geverifieerde import 09-11 (SHA-1 95f79228d7…), CC BY-SA 4.0 · Charles J. Sharp |
+| `sp043-adult_m.webp` | Verenkleed (Mannetje) | Mannetje op een bloesemtak, met zwarte bef en bruin getekende vleugel. | Koptekening en donkere bef passen bij een mannetje. | Duidelijke vleugeltekening vanuit een andere kijkhoek. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours |
+| `sp043.webp` | Verenkleed (Vrouwtje) | Bruine Huismus op een tak met lichte wenkbrauwstreep en kegelvormige snavel. | De fotograaf benoemt een vrouwtje. Bruin kleed en wenkbrauw ondersteunen het label. | Bruikbaar kopaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Ermell |
+| `sp043-juv-review.webp` | Verenkleed (Juveniel) | Scherpe voorgrondvogel in jeugdkleed. Een tweede mus staat onscherp op de achtergrond. | Fotograaf benoemt een juveniel. Het geslacht van de voorgrondvogel is onbekend. | Kleed van de voorgrondvogel is goed zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp |
+| `sp043-flight.webp` | In vlucht (Mannetje) | Huismus in vrije vlucht, met open vleugels, gespreide staart en donkere bef. | Grijze kruin en zwarte bef bevestigen een mannetje. | Vlucht en borsttekening duidelijk zichtbaar. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Mildeep |
+
+- **Correcties:** Jeugdfoto benoemt nu de voorgrondvogel. Herkenningsprofiel onderbouwt de vergelijking met Ringmus en Vink.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Mannetje en vrouwtje waar bron en beeld dat dragen. Juveniel zonder geslachtslabel.
+- **Kennisprofiel:** 2 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Kruin en afzonderlijke wangvlek, Vleugelstrepen bij bruine vogels; open: —; resterende dataverschillen: 0
+- **Browser:** 390x844 Chromium 145 (Playwright) · Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp044 Ringmus — PARTIALLY TESTED
+
+Batch M7 · 2026-11-12 · SHA `38e3b3c42662dc49be8b769fd9f82a8dde65cad7` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp044.webp` | Hoofdfoto (Volwassen) | Ringmus in zijaanzicht met bruine kruin, donkere wangvlek en lichte nekrand. | Volwassen veldkleed. Geslacht onbekend. | Scherp zijaanzicht met de volledige vogel. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Jakub Hałun |
+| `sp044-juv.webp` | Verenkleed (Juveniel) | Jonge Ringmus op een hek met een minder contrastrijke koptekening. | Fotograaf en waarnemingsannotatie bevestigen juveniel. Geslacht onbekend. | Kop en vleugeltekening zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Uitsnede rond de volledige vogel. Omgezet naar WebP zonder EXIF, GPS of XMP), CC BY 4.0 · Codrin Bucur |
+| `sp044-flight.webp` | Overige herkenningsfoto's (luchtgevecht; niet echte vrije vlucht) | Twee Ringmussen in een luchtgevecht met poten naar voren; kruin en wangvlek zichtbaar. | Geslacht en leeftijd niet gelabeld. | Scherp genoeg voor kopkenmerken; geen bruikbaar vrij vluchtsilhouet. | uit-rol | landen · uit-rol | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Galina Jacyna |
+| `sp044-flight-free.webp` | In vlucht | Ringmus vrij in de lucht van achteren, vleugels en staart gespreid; kastanjebruine kruin en zwarte wangvlek. | Geslachten gelijk; leeftijd niet vastgesteld. | Scherp, egale achtergrond, geen poten of ondergrond zichtbaar. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 16-11-2026: zelfde opname (Commons-origineel met vastgepinde SHA-1 in de intake-workflow geconverteerd met geregistreerde uitsnede; lokale WebP vergeleken met de 1600 px-voorvertoning in dezelfde uitsnede (Pearson r = 1.000).), CC BY-SA 4.0 · Mildeep |
+
+- **Correcties:** Juvenielenfoto en kennisprofiel toegevoegd. De kleed- en vluchtvergelijking met Huismus gecontroleerd.; F3-R12 (2026-11-16): luchtgevecht-foto uit de vluchtrol naar Overige; echte vrije-vluchtfoto (Mildeep, CC BY-SA 4.0) via de Commons-intake toegevoegd. Alle getoonde foto's tegen het bronbeeld gecontroleerd (origcheck).
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** Een scherpe vrije-vluchtfoto met één Ringmus in beeld heeft de voorkeur.
+- **Geslacht:** Mannetje en vrouwtje hebben gelijk veldkleed. Leeftijd is alleen gelabeld als die wordt ondersteund door de bron.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Kruin en wangvlek; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp072 Graspieper — VERIFIED
+
+Batch M4 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp072.webp` | Hoofdfoto | Graspieper in zit met lichte oogring, slanke snavel en duidelijke streping. | Geslacht onbekend. | Goed zicht op de kop en het kleed. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp |
+| `sp072-juv.webp` | Verenkleed (Juveniel) | Jonge Graspieper met lichte veerranden en gestreepte borst. | Fotograaf benoemt juveniel. Geslacht onbekend. | Scherp beeld van kop, borst en vleugeldekveren. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele JPEG zonder uitsnede), CC BY 2.0 · caroline legg |
+| `sp072-flight.webp` | In vlucht | Graspieper in vrije vlucht boven heide met uitgespreide vleugels. | Geslacht en exacte leeftijd onbekend. | Genoeg ruimte rond de vogel en zicht op de vluchthouding. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · caroline legg |
+
+- **Correcties:** Juvenielenfoto toegevoegd. Vergelijking met Boompieper legt flankstreping, achternagel en geluid uit. De partner heeft nog geen foto in de gids.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** Geverifieerde Boompieperfoto bij de vergelijking.
+- **Geslacht:** Verenkleed van beide geslachten gelijk. Neutrale fotolabels.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Flankstrepen, snavel en achternagel; open: —; resterende dataverschillen: 0
+- **Browser:** 390x844 Chromium 145 (Playwright) · Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp099 Kievit — VERIFIED
+
+Batch M4 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp099-adult_m.webp` | Hoofdfoto (Mannetje) | Kievit in broedkleed met lange kuif, donkere keel en groen-paarse rugglans. | Audubon benoemt dezelfde opname als volwassen mannetje in broedkleed. | Hele vogel scherp in rustig zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY-SA 2.5 · Andreas Trepte |
+| `sp099-adult_f.webp` | Verenkleed (Vrouwtje) | Baltsend Kievitvrouwtje in voorovergebogen houding bij Marken. | De fotograaf benoemt een vrouwtje. | Het volledige lijf, de kuif en de baltspositie zijn zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY-SA 4.0 · Charles J. Sharp |
+| `sp099-juv.webp` | Verenkleed (Juveniel) | Jonge Kievit met korte kuif en lichte randen aan rug- en vleugelveren. | Commons categoriseert de opname als juveniel. Geslacht onbekend. | Scherp zijaanzicht met kop, rug en veerranden. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY-SA 4.0 · Charles J. Sharp |
+| `sp099-flight.webp` | In vlucht | Twee Kieviten vrij in de lucht, met brede afgeronde vleugels en zichtbaar zwart-wit contrast. | Geslacht per vogel niet vastgesteld. | Vrije vlucht duidelijk, rug- en buikzijde afzonderlijk zichtbaar. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp |
+| `sp099.webp` | Overige herkenningsfoto's | Kievit in laag gras met lange kuif, witte buik en groene rugglans. | Geslacht onbekend. | Aanvullend zijaanzicht met lange kuif. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · El Golli Mohamed |
+
+- **Correcties:** Mannetje als hoofdfoto. Vrouwtje en juveniel toegevoegd. Vergelijking met Zilverplevier toegevoegd. Spanwijdte gecorrigeerd volgens twee bronnen.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Geslachtslabels alleen bij het mannetje en vrouwtje met bronbewijs. Vluchtbeeld zonder geslachtslabel.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Kuif en rugtekening; open: —; resterende dataverschillen: 1
+- **Browser:** 390x844 Chromium 145 (Playwright) · Foto decode, exacte auditset, fotovolgorde, geen duplicaten, vluchtrol, zoom, doorklik en toepasselijke maten/labels
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp078 Meerkoet — VERIFIED
+
+Batch M4 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp078.webp` | Hoofdfoto | Volwassen Meerkoet met donker kleed, witte snavel en wit voorhoofdsschild. | Volwassen kleed. Geslacht onbekend. | Snavel, schild en rode iris zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours |
+| `sp078-juv-grown.webp` | Verenkleed (Juveniel) | Grijsbruine Meerkoet met lichte keel en wangen en een klein voorhoofdsschild. | Fotograaf benoemt juveniel. Geslacht onbekend. | Kop en lichte veerpartijen goed zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-11: zelfde opname (directe pixelvergelijking na schalen van originele Commons-JPEG naar de WebP-afmetingen), CC BY 4.0 · Alexis Lours |
+| `sp078-flight.webp` | In vlucht | Meerkoet vrij in de lucht boven het water, met de poten naar achteren. | Geslacht onbekend. | Vluchthouding en donkere lichaamsbouw zichtbaar. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Luiz Lapa from Oeiras, Portugal |
+| `sp078-juv.webp` | Overige herkenningsfoto's (Donsjong) | Donsjong met rood-oranje kop en donker dons. | Kleed van een donsjong. Geslacht onbekend. | Kopkleuren en dons goed zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp |
+
+- **Correcties:** Tekst van de juvenielenkaart verwijst naar het afgebeelde oudere jong. Het donsjong heeft een eigen label en verwijst naar het latere kleed.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Verenkleed gelijk. De grootte van het voorhoofdsschild overlapt tussen de geslachten.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Snavel en voorhoofdsschild; open: —; resterende dataverschillen: 1
+- **Browser:** 390x844 Chromium 145 (Playwright) · Foto decode, exacte auditset, fotovolgorde, geen duplicaten, juiste vluchtrol, zoomen/sluiten, vergelijkingskaart en doorklik
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp079 Waterhoen — VERIFIED
+
+Batch M4 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp079.webp` | Hoofdfoto | Volwassen Waterhoen aan de oever met rood schild, gele snavelpunt en witte flanktekening. | Volwassen kleed. Geslacht onbekend. | Hele vogel goed zichtbaar, inclusief tenen en onderstaart. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours |
+| `sp079-juv.webp` | Verenkleed (Juveniel) | Bruin jong Waterhoen zwemmend, met lichte keel en witte flanktekening. | Bron benoemt juveniel. Geslacht onbekend. | Kop en flank voldoende zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Charles J. Sharp |
+| `sp079-flight.webp` | In vlucht | Jong Waterhoen vrij boven water, met vleugels uitgespreid en poten naar achteren. | Bruinig jeugdkleed volgens eerder bronbewijs. Geslacht onbekend. | Vlieghouding en flank zichtbaar, vogel relatief klein in beeld. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · Imran Shah from Islamabad, Pakistan |
+
+- **Correcties:** Bronprofiel en vergelijking op snavel- en flanktekening aangevuld. Bestaande drie foto’s beoordeeld.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Verenkleed van beide geslachten gelijk. Neutrale fotolabels.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Snavel en witte tekening; open: —; resterende dataverschillen: 0
+- **Browser:** 390x844 Chromium 145 (Playwright) · Foto decode, exacte auditset, fotovolgorde, geen duplicaten, vluchtrol, zoom, doorklik en toepasselijke maten/labels
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp081 Blauwe Reiger — VERIFIED
+
+Batch M4 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp081-portrait.webp` | Hoofdfoto | Volwassen Blauwe Reiger staand in ondiep water, met dolksnavel, lange poten en lichte hals. | Volwassen kleed. Geslacht onbekend. | Hele vogel in zijaanzicht met duidelijk profiel. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY-SA 3.0 · Charles J. Sharp |
+| `sp081-juv.webp` | Verenkleed (Juveniel) | Jonge Blauwe Reiger met donkere kruin en grijzere kop zonder lange sierveren. | Jeugdkleed in eerder bronbewijs. Geslacht onbekend. | Kop en snavel zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Ralf Hüsges |
+| `sp081.webp` | In vlucht | Blauwe Reiger vrij in de lucht boven water met uitgespreide vleugels en de poten naar achteren. | Geslacht onbekend. | Hele vogel zichtbaar. De relatief gestrekte hals is op de kaart toegelicht. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC0 · Dinkum |
+
+- **Correcties:** Staande hoofdfoto toegevoegd. De bestaande vrije-vluchtfoto staat nu één keer in In vlucht. Vergelijking met Purperreiger gebruikt nu het zijportret.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Verenkleed van beide geslachten gelijk. Neutrale fotolabels.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Bouw en halskleur; open: —; resterende dataverschillen: 0
+- **Browser:** 390x844 Chromium 145 (Playwright) · Foto decode, exacte auditset, fotovolgorde, geen duplicaten, vluchtrol, zoom, doorklik en toepasselijke maten/labels
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp083 Grote Zilverreiger — PARTIALLY TESTED
+
+Batch M8 · 2026-11-12 · SHA `a692d987fba980b275b4f6d07f936bfd3260b762` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp083.webp` | Hoofdfoto (Volwassen) | Witte reiger met lange hals en gele snavel tussen riet. | Volwassen veldkleed. Geslacht onbekend. | Herkenbaar zijaanzicht met natuurlijke houding. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · Bernard DUPONT from FRANCE |
+| `sp083-juv.webp` | Verenkleed (Juveniel) | Jonge Grote Zilverreigers in het nest in Californië. | Nestjongen volgens de bronbeoordeling. | Bruikbaar als voorbeeld van nestjongen. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Annette Herz, some rights reserved (CC BY) |
+| `sp083-breeding.webp` | Verenkleed (Broedkleed) | Vogel met donkere snavel, groene teugel en lange rugsierveren in Frankrijk. | Volwassen veldkleed. Geslacht onbekend. | Sierveren en snavelkleur duidelijk zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Olivier Morel, some rights reserved (CC BY) |
+| `sp083-flight.webp` | In vlucht | Vrij vliegende reiger met ingetrokken hals en witte vleugels. | Leeftijd en geslacht onbekend. | Herkenbaar silhouet en vleugelstand. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp |
+
+- **Correcties:** Kennisprofiel en broedkleedvergelijking gecontroleerd. Herkomst van de bestaande nestfoto expliciet vermeld.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** Afzonderlijk Europees juveniel buiten het nest als aanvullend veldreferentiebeeld.
+- **Geslacht:** De geslachten lijken op elkaar in het veld. Volwassen en vliegende vogels krijgen een neutraal label.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Hals, bouw en tenen; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp082 Kleine Zilverreiger — PARTIALLY TESTED
+
+Batch M8 · 2026-11-12 · SHA `a692d987fba980b275b4f6d07f936bfd3260b762` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp082-portrait.webp` | Hoofdfoto (Volwassen) | Witte reiger in zijaanzicht aan open water, met fijne donkere snavel en licht afstekende tenen. | Volwassen veldkleed. Geslacht onbekend. | De volledige vogel is scherp en staat vrij van storende begroeiing. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind tot maximaal 1600 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.), CC BY-SA 4.0 · Charles J. Sharp |
+| `sp082-juv.webp` | Verenkleed (Juveniel) | Jonge Kleine Zilverreiger in ondiep water, zonder lange sierveren. | Juveniel volgens de bestaande bronbeoordeling. | Hele vogel, kop en snavel goed herkenbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY SA · (c) Paulo Martins, some rights reserved (CC BY-SA) |
+| `sp082-breeding.webp` | Verenkleed (Broedkleed) | Witte reiger met twee lange kopveren. | Volwassen veldkleed. Geslacht onbekend. | Kopveren zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Donald Davesne, some rights reserved (CC BY) |
+| `sp082-winter.webp` | Verenkleed (Winterkleed) | Witte vogel op een oever met felgele tenen aan donkere poten. | Volwassen veldkleed. Geslacht onbekend. | Tenen, snavel en hele vogel zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Florin Feneru, some rights reserved (CC BY) |
+| `sp082.webp` | In vlucht | Vrije vlucht boven riet. Wit verenkleed, donkere snavel en gele tenen. | Leeftijd en geslacht onbekend. | Volledige vogel met herkenbaar vluchtbeeld. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC0 · Hobbyfotowiki |
+
+- **Correcties:** Nieuw staand portret als hoofdfoto. De eerdere hoofdfoto staat nu één keer onder In vlucht. Kennisprofiel en kleedvergelijkingen gecontroleerd.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** De geslachten lijken op elkaar in het veld. Volwassen en vliegende vogels krijgen een neutraal label.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Tenen, hals en snavel; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp084 Purperreiger — PARTIALLY TESTED
+
+Batch M8 · 2026-11-12 · SHA `a692d987fba980b275b4f6d07f936bfd3260b762` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp084.webp` | Hoofdfoto (Volwassen) | Slanke vogel met lange bruinoranje hals en donkere halsstrepen in oevervegetatie. | Volwassen veldkleed. Geslacht onbekend. | Hele vogel in zijaanzicht met herkenbare bouw. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Bernard Gagnon |
+| `sp084-juv-europa.webp` | Verenkleed (Juveniel) | Jonge vogel in Europees rietland met warmbruin kleed en slanke hals. | Juveniel volgens fotograaf. Geslacht onbekend. | Kop, hals en romp scherp in beeld. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind tot maximaal 1400 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.), CC BY 2.0 · Luiz Lapa |
+| `sp084-flight.webp` | In vlucht | Vrije vlucht, met een hoekige ingetrokken hals en ver uitstekende poten. | Leeftijd en geslacht onbekend. | Herkenbare zijaanzichtfoto met geheven vleugels. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours |
+
+- **Correcties:** Juvenielenfoto uit Portugal toegevoegd als Europees veldvoorbeeld. Eerdere opname uit India blijft met bronbewijs in de repo. Kennisprofiel en vergelijking met Blauwe Reiger gecontroleerd.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** De geslachten lijken op elkaar in het veld. Volwassen en vliegende vogels krijgen een neutraal label.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Hals, snavel en vliegbeeld; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp098 Scholekster — PARTIALLY TESTED
+
+Batch M5 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp098.webp` | Hoofdfoto | Volwassen Scholekster aan de waterkant met lange rode snavel en roze poten. | Volwassen kleed. Geslacht niet vastgesteld. | Duidelijk zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC0 · Hobbyfotowiki |
+| `sp098-juv.webp` | Verenkleed (Juveniel) | Jonge Scholekster in zijaanzicht. Donkerbruine bovendelen, witte buik en oranjerode snavel met donkere punt. | De fotograaf benoemt een juveniel. De bruine bovendelen, bleke veerranden en donkere snavelpunt zijn zichtbaar. Geslacht onbekend. | Volledige vogel in zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY 2.0 · Andrey Gulivanov |
+| `sp098-flight.webp` | In vlucht | Scholekster vrij boven water met gespreide vleugels. | Geslacht niet vastgesteld. | Snavel, vleugels en witte buik goed zichtbaar. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp |
+
+- **Correcties:** Juvenielenfoto, kennisprofiel en vergelijking met Kluut toegevoegd. Bestaand vluchtbeeld herbeoordeeld.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Neutrale labels bij veldfoto’s. Onderzoek gebruikt onder meer gemeten snavelkenmerken.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Snavelvorm en poten; open: —; resterende dataverschillen: 1
+- **Browser:** NOT TESTED
+- **Onzeker:** Spanwijdte verschilt tussen de eerdere gidswaarde en de Nederlandse soortgids. Zie kennisprofiel.
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp152 Drieteenstrandloper — PARTIALLY TESTED
+
+Batch M5 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp152.webp` | Hoofdfoto | Lichtgekleurde Drieteenstrandloper op strand met korte zwarte snavel. | Licht kleed, geslacht onbekend. | Helder zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Stephan Sprinz |
+| `sp152-juv.webp` | Verenkleed (Juveniel) | Jonge Drieteenstrandloper op kiezels met donkere bovenveren, lichte veerranden en een korte zwarte snavel. | De research-grade waarneming heeft de annotatie Juvenile. De contrastrijke bovenveren zijn zichtbaar. Geslacht onbekend. | Vogel in zijaanzicht, veerranden en snavel goed zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY 4.0 · carnifex |
+| `sp152-flight.webp` | In vlucht | Meerdere Drieteenstrandlopers boven water met brede witte vleugelstrepen. | De fotograaf benoemt onvolwassen vogels. Geslachten onbekend. | Vrije vlucht. De foto toont een groep, met enkele overlappende vogels. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · Dominic Sherony |
+
+- **Correcties:** Juvenielenfoto, kennisprofiel en beeldvergelijking met Bonte Strandloper toegevoegd.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** Gelicentieerde vluchtfoto van één volledig zichtbare Drieteenstrandloper.
+- **Geslacht:** Geslacht van de afgebeelde individuen is onbekend. De foto’s hebben neutrale labels.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Snavelvorm en winterkleed; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp101 Grutto — PARTIALLY TESTED
+
+Batch M5 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp101-hero-male.webp` | Hoofdfoto (Mannetje) | Grutto in zijaanzicht met lange vrijwel rechte snavel. Mannetje in broedkleed volgens de fotograaf. | De fotograaf duidt dit individuele exemplaar aan als mannetje in broedkleed. Opname in mei. De foto toont de snavel, lichaamsbouw en het kleed. | Volledig, rustig zijaanzicht met zicht op snavel en kleed. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY-SA 4.0 · Charles J. Sharp |
+| `sp101.webp` | Overige herkenningsfoto | Grutto in gras met lange vrijwel rechte snavel en warme hals. | Volwassen type. Geslacht onbekend. | Volledige vogel in een rustig zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Hans Hillewaert |
+| `sp101-juv.webp` | Verenkleed (Juveniel) | Jonge Grutto in ondiep water. Warme halskleur en lichte randen aan de donkere bovenveren. | Research-grade waarneming met annotatie Juvenile. Kenmerken in het bestand visueel getoetst. Geslacht onbekend. | Snavel, veerranden en poten vrij zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY 4.0 · Phil James |
+| `sp101-flight.webp` | In vlucht | Grutto vrij in de lucht met brede witte vleugelstrepen en zwarte staartband. | Geslacht onbekend. | Diagnostische vleugel- en staartkenmerken zichtbaar. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Hans Hillewaert |
+
+- **Correcties:** Kennisprofiel, juvenielenfoto en vergelijking met Rosse Grutto toegevoegd. Spanwijdte uit twee bronbereiken berekend.; Volwassen mannetje volgens de oorspronkelijke fotograaf als hoofdfoto. Het vorige portret staat bij Overige.
+- **Ontbreekt:** Foto van een met bronbewijs bevestigd volwassen vrouwtje.
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** De hoofdfoto heeft een geslachtsaanduiding van de fotograaf. Andere foto’s houden een neutraal label.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Vleugelstreep en staart; open: —; resterende dataverschillen: 1
+- **Browser:** NOT TESTED
+- **Onzeker:** Voor de lengte is één vergelijkbare bronband opgenomen. Het eerdere bereik is behouden en het verschil staat in het profiel.; Bekeken vrouwtjeskandidaten hebben onvoldoende bewijs voor het geslacht van het afgebeelde individu.
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp102 Tureluur — PARTIALLY TESTED
+
+Batch M5 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp102.webp` | Hoofdfoto | Tureluur in ondiep water met roodoranje poten en rode snavelbasis. | Volwassen winterkleed. Geslacht onbekend. | Rustig zijaanzicht met zicht op de poten. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Zeynel Cebeci |
+| `sp102-breeding.webp` | Verenkleed (Broedkleed) | Tureluur op paal met bruin getekende rug en roodoranje poten. | Broedkleed. Geslacht onbekend. | Vogel zichtbaar in zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Clare Edwards, some rights reserved (CC BY) |
+| `sp102-juv.webp` | Verenkleed (Juveniel) | Jonge Tureluur met lichtere veerranden en gelig oranje poten. | iNaturalist-waarneming heeft de annotatie Juvenile. Geslacht onbekend. | Potenkleur is goed zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Stefan Haag, some rights reserved (CC BY) |
+| `sp102-flight.webp` | In vlucht | IJslandse Tureluur vrij in de lucht met zichtbare witte vleugelachterrand en roodoranje poten. | Ondersoort robusta volgens fotobron. Geslacht onbekend. | Volledige vogel tegen rustige blauwe lucht. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp |
+
+- **Correcties:** Kennisprofiel en vergelijkingskenmerken toegevoegd. Eerdere vergelijkingstabbladen en vier beelden gecontroleerd.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Mannetje en vrouwtje lijken sterk op elkaar. Gebruik neutrale labels.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Witte vleugelachterrand; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp100 Wulp — PARTIALLY TESTED
+
+Batch M5 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp100.webp` | Hoofdfoto | Wulp in ondiep water met lange gebogen snavel en gestreept kleed. | Volwassen type. Geslacht onbekend. | Volledig zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Ken Billington |
+| `sp100-juv.webp` | Verenkleed (Juveniel) | Jonge Wulp in gras, met gestreepte bovendelen en een korte snavel. | Research-grade waarneming met annotatie Juvenile. Kenmerken in het bestand visueel getoetst. Geslacht onbekend. | Jonge vogel met korte snavel. De kop is minder scherp dan de rug. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY 4.0 · Jo Roberts |
+| `sp100-flight.webp` | In vlucht | Wulp vrij boven water, met opgeheven vleugels en neerwaarts gebogen snavel. | Geslacht onbekend. | Snavel, zijprofiel en getekende vleugel zichtbaar. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp |
+
+- **Correcties:** Kennisprofiel, juvenielenfoto en vergelijking met Regenwulp toegevoegd. Spanwijdte uit twee bronbereiken berekend.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** Scherper juveniel zijaanzicht met zicht op alle poten.
+- **Geslacht:** Gebruik neutrale fotolabels. Vrouwtjes hebben gemiddeld langere snavels, met overlap.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Koptekening en snavel; open: —; resterende dataverschillen: 1
+- **Browser:** NOT TESTED
+- **Onzeker:** Lengtebereiken van Vogelbescherming en Naturalis verschillen. Het eerdere Nederlandse bereik is behouden.
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp016 Grote Bonte Specht — PARTIALLY TESTED
+
+Batch M2 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp016-hero-male.webp` | Hoofdfoto | Mannetje op tak; rode nekvlek, witte schoudervlekken, rode onderstaart. | volwassen mannetje (rode nekvlek) | goed | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY 2.0 · caroline legg |
+| `sp016-male.webp` | Mannetje | Mannetje op stronk; rode nekvlek zichtbaar. | mannetje (rode nekvlek; bron noemt male) | goed | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Charles J. Sharp |
+| `sp016.webp` | Vrouwtje | Specht tegen stam met prooi; zwarte nek zonder rood. | vrouwtje (geen rood op de kop; bron 'Weibchen') | goed | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast de beschikbare bronminiatuur vergeleken), CC BY-SA 4.0 · Andreas Eichler |
+| `sp016-juv.webp` | Juveniel | Jonge specht tegen berk; volledig rode kruin. | juveniel (rood petje; bron juvenile) | goed | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast de beschikbare bronminiatuur vergeleken), CC BY 2.0 · Andrey Gulivanov |
+| `sp016-flight.webp` | In vlucht | Vliegend met voedsel in de snavel; witte schoudervlekken zichtbaar. | niet vastgesteld | voldoende: licht bewogen vleugels | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY 2.0 · caroline legg |
+
+- **Correcties:** Vijf beelden en individuele bronrechten opnieuw gecontroleerd. Lengte en spanwijdte opnieuw onderbouwd.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Geslachten verschillen (rode nekvlek man); labels door beeld bevestigd.
+- **Kennisprofiel:** 2 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Koppatroon, Grootte en rug; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp017 Kleine Bonte Specht — PARTIALLY TESTED
+
+Batch M10 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp017.webp` | Hoofdfoto (Mannetje) | Mannetje van Kleine Bonte Specht aan stam, rode kruin, zwart-witte tekening en bes in snavel. | Mannetje volgens bron en zichtbare rode kruin; leeftijd niet apart afgeleid. | Goed en scherp; rugbandering niet vanuit deze hoek volledig te zien. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel vergeleken met oorspronkelijk bronbeeld), CC BY-SA 4.0 · Maurizio Carlini |
+| `sp017-female.webp` | Verenkleed (Vrouwtje) | Vrouwtje op tak, lichte kruin zonder rood, zwart-wit dwarsgestreepte rug. | Vrouwtje volgens Commons-bron en zichtbare kruintekening. | Goed; de kop en rugbandering zijn zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel vergeleken met oorspronkelijk bronbeeld), CC BY-SA 4.0 · Charles J. Sharp |
+| `sp017-flight.webp` | Verenkleed (Vrouwtje; niet echte vrije vlucht) | Vogel naast nestholte met geopende vleugels tijdens wegvliegen; staart tegen de stam of zeer dicht erbij. | Vrouwtje volgens bron; precieze leeftijd niet vastgesteld. | Bruikbaar als context, deels bewegingsonscherp; ongeschikt voor betrouwbare vrije vluchtvergelijking. | uit-rol | opvliegen · uit-rol | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel vergeleken met oorspronkelijk bronbeeld), CC BY 2.0 · blondinrikard |
+
+- **Correcties:** Alle drie bestaande gidsfoto's visueel gecontroleerd tegen hun rol; bron, maker en originele pixels behouden.; Nestholtefoto blijft in Vrouwtje, niet in In vlucht. Geen fictieve flight-claim.; Alle eigen foto’s naast de oorspronkelijke bronbeelden bekeken. Lengte en spanwijdte zijn vergeleken met een tweede uitgever.
+- **Ontbreekt:** Juvenielenfoto met controleerbare leeftijd.; Scherpe foto van de gehele vogel in aantoonbare vrije vlucht.
+- **Verbeterwensen (eigenaar beoordeelt later):** Optionele hoofdfoto waarop de dwarsbandering op de rug nog duidelijker zichtbaar is.
+- **Geslacht:** Volwassen mannetje met rode kruin, vrouwtje zonder rode kruin; juveniel niet op kopkleur alleen toeschrijven.
+- **Kennisprofiel:** 2 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Rugbandering versus witte schoudervlekken, Formaat en onderstaart tegenover Middelste Bonte Specht; open: Een overtuigende foto van een zelfstandig herkenbaar juveniel ontbreekt in de gids.; De bestaande foto bij de nestholte is geen voldoende scherpe vrijevluchtvergelijking; geen foto kunstmatig als vrije vlucht labelen.; Gewicht vraagt nog een eigen vergelijking van twee passende bronnen.; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** Onafhankelijke ornithologische second opinion op individuele foto's ontbreekt.
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp020 Middelste Bonte Specht — PARTIALLY TESTED
+
+Batch M2 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp020-male.webp` | Hoofdfoto | Volwassen vogel tegen stam met lichte kop en roze onderstaart. | Fotograaf noemt een mannetje. Neutraal weergegeven vanwege overlap in verenkleed. | Bruikbaar, bronminiatuur van 500 px beperkt zoom. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Charles J. Sharp |
+| `sp020.webp` | Overige herkenningsfoto's | Zijaanzicht op stronk met rode kruin, wit gezicht en gestreepte flanken. | Leeftijd en geslacht open. | Goede uitsnede van volledige vogel. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 2.0 · Frank Vassen from Brussels, Belgium |
+| `sp020-pose.webp` | Overige herkenningsfoto's | Foerageert op een stam. Flankstrepen en roze onderstaart zichtbaar. | Leeftijd en geslacht open. | Scherpe andere kijkhoek. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Mikes Makro |
+| `sp020-flight.webp` | In vlucht | Vrij in de lucht. Gebandeerde slagpennen, flankstrepen en roze onderstaart zichtbaar. | Leeftijd en geslacht open. | Bruikbaar voor de onderzijde en vleugeltekening, bronbestand 725 × 483 px. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 2.0 · Yves Hoebeke |
+
+- **Correcties:** Vier foto’s naast de oorspronkelijke bestanden bekeken en de bronvermelding gecontroleerd. Lengte, spanwijdte en kennisprofiel onderbouwd.
+- **Ontbreekt:** Juvenielenfoto met door bron en beeld ondersteunde leeftijd.
+- **Verbeterwensen (eigenaar beoordeelt later):** Scherper portret uit origineel en ruimer vluchtbeeld.
+- **Geslacht:** Kleedkenmerken overlappen. De hoofd-, overige en vluchtfoto krijgen neutrale labels.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Kop- en halstekening; open: Een verifieerbare juvenielenfoto ontbreekt. Scherper vluchtbeeld en hoofdfoto met meer bronpixels zijn verbeterwensen.; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp018 Zwarte Specht — PARTIALLY TESTED
+
+Batch M10 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel PARTIALLY TESTED · rechten PARTIALLY TESTED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp018.webp` | Hoofdfoto (Mannetje) | Zwarte Specht groot in beeld langs stam, volledige rode kruin en lichte lange snavel. | Mannetje volgens Commons-beschrijving en rode kruin; exacte leeftijd niet onafhankelijk beoordeeld. | Goed, scherp en duidelijk voor herkenning. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel vergeleken met oorspronkelijk bronbeeld), CC BY-SA 2.0 · xulescu_g |
+| `sp018-hero-male.webp` | Verenkleed (Mannetje; eerdere hoofdfoto) | Zwarte Specht met rode kruin in bos bij omgevallen boom; andere opname en fotograaf. | Mannetje volgens geverifieerde oorspronkelijke import. | Goed voor aanvullend beeld; vogel kleiner in beeld dan huidige hoofdfoto. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel vergeleken met oorspronkelijk bronbeeld), CC BY 2.0 · Frank Vassen from Brussels, Belgium |
+| `sp018-female-single.webp` | Verenkleed (Vrouwtje) | Vrouwtje schuin van achteren met rode achterkruin op donkere kop. | Vrouwtje volgens originele Wikimedia-bron van Andreas Eichler. | Voorwaardelijk: lokale uitsnede slechts 500×661 px; zoomkwaliteit onvoldoende voor gedetailleerd profiel. | voorwaardelijk | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel vergeleken met oorspronkelijk bronbeeld), CC BY-SA 4.0 · Andreas Eichler |
+| `sp018-juv-review.webp` | Verenkleed (Juveniel; uitsluitend kopdetail) | Kopdetail met lichte snavel, donkere veren en rood kruindeel; lichaam en vleugel ontbreken. | Originele Commons-bron zegt juveniel; geslacht onbekend; volledig jeugdkleed niet verifieerbaar. | Scherp kopdetail, maar niet bruikbaar als volledig juvenielportret. | voorwaardelijk | — | PARTIALLY TESTED: De huidige bestandspagina vermeldt CC BY 1.0. Oudere licentieverwijzing blijft een afzonderlijk te toetsen punt volgens M10. |
+| `sp018-flight.webp` | In vlucht (geslacht onbekend) | Zwarte Specht vrij vliegend met geheven vleugel, lichte snavel en rode kruin; onderzijde aan rand beeld. | Geslacht niet vastgesteld en niet afgeleid. | Echte vlucht; benedenrand snijdt delen van het lijf of de staart af; betere kadervullende vluchtfoto wenselijk. | voorwaardelijk | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel vergeleken met oorspronkelijk bronbeeld), CC BY-SA 4.0 · Janus Mosbacher |
+
+- **Correcties:** De scherpere, reeds aanwezige mannetjesfoto wordt als hoofdfoto gebruikt; eerdere geïmporteerde hoofdfoto blijft één keer onder Mannetje.; Vijf eigen bestanden per rol gecontroleerd. Geslacht van vlucht en juveniel wordt niet verzonnen.; Alle eigen foto’s naast de oorspronkelijke bronbeelden bekeken. Lengte en spanwijdte zijn vergeleken met een tweede uitgever.
+- **Ontbreekt:** Volledige juvenielenfoto met controleerbare leeftijd.; Hogeresolutie-versie van bestaande vrouwtjesfoto, pas na originele bronimport met bewezen rechten.
+- **Verbeterwensen (eigenaar beoordeelt later):** Compleet gekadreerde vluchtfoto met hele vogel.; Fysieke mobiele visuele eindcontrole.
+- **Geslacht:** Mannetje geheel rode kruin; vrouwtje achterkruin rood. Geen automatisch geslachtslabel voor vlucht of juveniel.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Zwarte vogel tegenover Groene Specht; open: Het juveniele gidsbeeld toont uitsluitend de kop; een afzonderlijk volledig jeugdkleedportret ontbreekt.; De lokale vrouwtjesfoto is een 500-pixel-voorbeeld; de originele bron heeft een veel hogere resolutie. Een verbeterd bestand vereist afzonderlijke gecontroleerde import.; Gewicht vraagt nog een eigen vergelijking van twee passende bronnen.; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** REVIEW REQUIRED: de juveniel-leeftijd steunt op Commons-beschrijving, niet op een volledig getoond jeugdkleed.; Commons toont voor het juveniel kopdetail nu CC BY 1.0; de oorspronkelijke upload bevat een ouder CC BY-SA-sjabloon. Bij herpublicatie licentiehistorie opnieuw controleren.
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp112 Spreeuw — PARTIALLY TESTED
+
+Batch M5 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp112-hero-male.webp` | Hoofdfoto (Mannetje) | Mannetje Spreeuw in broedkleed in zijaanzicht, met een korte staart, gele snavel en metaalglans. | De fotograaf benoemt dit individu als mannetje in broedkleed. De snavel en donkere iris zijn zichtbaar. | Volledig zijaanzicht in natuurlijk licht. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY-SA 4.0 · Charles J. Sharp |
+| `sp112-adult_f.webp` | Verenkleed (Vrouwtje) | Vrouwtje Spreeuw op een boomwortel, met lichte spikkels en gele snavel. | De fotograaf benoemt dit individu als vrouwtje. De lichte snavelbasis is zichtbaar. Het aantal stippen op zichzelf bepaalt het geslacht niet. | Volledig zijaanzicht met zicht op snavel en poten. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY-SA 2.0 · hedera.baltica |
+| `sp112-juv.webp` | Verenkleed (Juveniel) | Jonge Spreeuw met grijsbruine kop, donkere snavel en een weinig contrastrijk kleed. | De fotograaf benoemt een juveniel. De bruine kop en donkere snavel ondersteunen het leeftijdslabel. Geslacht onbekend. | Kop en snavel duidelijk in beeld. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY-SA 4.0 · Charles J. Sharp |
+| `sp112-flight.webp` | In vlucht | Eén Spreeuw met gespreide spitse vleugels en korte staart. | Geslacht onbekend. | Vrije vlucht tegen een blauwe lucht. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Ralf Hüsges |
+| `sp112.webp` | Overige herkenningsfoto | Volwassen Spreeuw op tak met gele snavel en glanzend kleed. | Volwassen type, geslacht niet vastgesteld. | Ouder portret met zicht op borst en keel. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Rhododendrites |
+
+- **Correcties:** Hoofdfoto van een mannetje, foto van vrouwtje, juvenielenfoto, kennisprofiel en vergelijking met Merel toegevoegd.; De snavelkleur van een juveniel gecorrigeerd.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Geslachtslabels voor twee bronbenoemde individuen. De bestaande vluchtfoto heeft een neutraal label.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Staart en kleed; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp034 Staartmees — PARTIALLY TESTED
+
+Batch M7 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp034.webp` | Hoofdfoto (Volwassen) | Staartmees in zijaanzicht met lange staart, lichte kop en donkere zijkruinstreep. | Volwassen veldkleed. Geslacht onbekend. | Volledige staart en kop goed zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Alexis Lours |
+| `sp034-juv.webp` | Verenkleed (Juveniel) | Jonge vogel met donker gezicht en bruinere bovendelen op een dunne tak. | De bestandspagina bevestigt juveniel. Geslacht onbekend. | Donkere wang en volledige staart zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Charles J. Sharp |
+
+- **Correcties:** Bestaande juvenielenfoto herbeoordeeld. Kennisprofiel en beeldvergelijking met Zwarte Mees toegevoegd.; Twee originele gidsfoto’s gematcht. De fotograaf bevestigt juveniel. De extra vluchtkandidaat toont de lange staart maar heeft bewogen vleugels en zichtbare takjes.
+- **Ontbreekt:** Scherpe foto in vrije vlucht van een voor West-Europa representatieve Staartmees met bevestigde hergebruikrechten.
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** De geslachten lijken sterk op elkaar. Het geslacht is niet op kleed bepaald; juveniel volgt de fotobron.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Staartlengte en kop; open: Een scherpe foto in vrije vlucht van een voor West-Europa representatieve Staartmees ontbreekt.; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp165 Visdief — PARTIALLY TESTED
+
+Batch M5 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp165-adult.webp` | Hoofdfoto | Volwassen Visdief in broedkleed met oranjerode snavel en zwarte punt. | Broedkleed. Geslacht onbekend. | Volledig zijaanzicht met goed zicht op de poten. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp |
+| `sp165-juv.webp` | Verenkleed (Juveniel) | Jonge Visdief op een paal met licht voorhoofd, donkere achterkap en bruin getekende bovendelen. | De fotograaf benoemt een juveniel en de research-grade waarneming heeft de annotatie Juvenile. De veerranden en koptekening ondersteunen dit. Geslacht onbekend. | Uitsnede toont snavel, kop, rug, poten en staart. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Uitgesneden rond de vogel en omgezet naar WebP zonder EXIF/GPS/XMP), CC BY 4.0 · Dave |
+| `sp165-flight.webp` | In vlucht | Eén Visdief in vrije vlucht met zwarte kap, gevorkte staart en donkerdere handpennen. | Volwassen type, geslacht onbekend. | Snavel, staart en vleugels vrij zichtbaar. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp |
+
+- **Correcties:** Juvenielenfoto en kennisprofiel toegevoegd. Vergelijking met Noordse Stern uitgebreid met vliegkenmerken.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Mannetje en vrouwtje hebben gelijkend kleed. Gebruik neutrale labels.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Snavel, poten en vleugels; open: —; resterende dataverschillen: 1
+- **Browser:** NOT TESTED
+- **Onzeker:** Vogelbescherming en WWT geven verschillende maten. De Nederlandse waarden blijven staan en de afwijking is vermeld.
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp009 Slechtvalk — PARTIALLY TESTED
+
+Batch M2 · 2026-11-15 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp009-male-rest.webp` | Hoofdfoto | Volwassen Slechtvalk staand op de grond; kopkap, baardstreep, gebandeerde flanken. | volwassen; bron noemt 'male' maar geslachten alleen in grootte verschillend — geen geslachtslabel | goed | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Sumeet Moghe |
+| `sp009-juv.webp` | Juveniel | Jonge Slechtvalk op rots; bruin, gestreept van onderen. | juveniel (bron: Commons-categorie juvenile; kleed bevestigt) | goed | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY 2.0 · Teddy Llovet |
+| `sp009.webp` | In vlucht (Volwassen) | Vrij in de lucht van opzij; spitse vleugels, gebandeerde onderzijde. | volwassen-ogend; geslacht niet vastgesteld | goed; watermerk maker in beeld | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY 2.0 · john581 |
+| `sp009-male-flight.webp` | In vlucht (Volwassen) | Vrij in de lucht van onderen; vleugels gespreid. | volwassen (iNaturalist: Adult, Male); terecht zonder geslachtslabel | goed | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Jonathan Tollin |
+| `sp009-perched.webp` | Overige herkenningsfoto's (Volwassen in rust) | Volwassen frontaal op rots; witte borst, baardstreep, gebandeerde flanken. | volwassen (bron: 'female adult'); geen geslachtslabel | goed | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Dhairya dixit |
+| `sp009-juv-flight.webp` | In vlucht (Juveniel) | Jonge Slechtvalk in vrije vlucht van opzij, met lengtestrepen op de borst, donkere baardstreep en spitse vleugels. | Juveniel op basis van bronwaarneming en lengtestrepen op de lichte onderzijde. Geslacht open. | goed: het silhouet, de onderzijde en baardstreep zijn zichtbaar | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 15-11-2026: zelfde opname (Originele JPEG visueel getoetst; het lokale WebP komt direct en zonder andere uitsnede uit die JPEG.), CC BY 4.0 · Josh Boe |
+
+- **Correcties:** Vijf gidsbeelden opnieuw naast het bronbestand gelegd. Dubbele fotoregistratie samengevoegd. Vluchtvergelijking met Torenvalk gebruikt beelden van beide volwassen vogels van onderen.; F3-R04: originele foto van een juveniele Slechtvalk in vrije vlucht toegevoegd. Bestaande rust- en vluchtbeelden behouden.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Geslachten verschillen in grootte (Vogelbescherming). Geen geslachtslabels op het verenkleed.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Bouw en kopkap; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp008 Torenvalk — PARTIALLY TESTED
+
+Batch M1 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis PARTIALLY TESTED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp008-hero-male.webp` | Hoofdfoto | Mannetje op boogvormige paal, schuin frontaal; grijze kop, roodbruine gevlekte rug. | volwassen mannetje (bron: 'Male Common Kestrel'; kleed bevestigt) | voldoende: scherp, vogel middelgroot in beeld | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.), CC BY 4.0 · Marie-Lan Taÿ Pamart |
+| `sp008.webp` | Mannetje | Mannetje op boomstam, zijaanzicht; grijze kop en staart, roestbruine rug met vlekken. | mannetje (kleed: grijze kop en staart) | goed | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.), CC BY 4.0 · Jakub Hałun |
+| `sp008-adult_f.webp` | Vrouwtje | Vrouwtje op tak; bruine kop, gevlekte borst, gebandeerde staart. | vrouwtje (bron: 'female'; kleed bevestigt) | goed | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.), CC BY 4.0 · Alexis Lours |
+| `sp008-juv.webp` | Juveniel | Jonge Torenvalk op tak; bruine kop en rug, gestreepte borst. | juveniel volgens bron ('Juvenile'); visueel lastig van vrouwtje te scheiden | goed | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.), CC BY 4.0 · caroline legg |
+| `sp008-male-flight.webp` | In vlucht (Mannetje) | Vrij in de lucht van onderen; spitse vleugels, grijze ongebandeerde staart met brede zwarte eindband. | mannetje volgens de fotograaf, met grijze staart zonder regelmatige dwarsbanden en brede donkere eindband | goed | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Lokaal beeld visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Zeynel Cebeci |
+| `sp008-flight.webp` | In vlucht (biddend) | Biddend, frontaal van onderen; gespreide vleugels en waaierstaart. | niet vastgesteld (neutraal label) | goed | goedgekeurd | bidden · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.), CC BY 2.0 · Rolf Dietrich Brecher from Germany |
+
+- **Correcties:** F2: Alle zes actieve bronbeelden en rechten herbevestigd. Fotograaf beschrijft het mannetje in vlucht expliciet. Op de foto zijn de grijze staart zonder regelmatige dwarsbanden en de brede donkere eindband zichtbaar. Leeftijdstekst, maten en herkenning naast Boomvalk en Smelleken aangescherpt.
+- **Ontbreekt:** Vergelijkingsfoto’s voor Boomvalk en Smelleken ontbreken in de gids.
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Geslachten verschillen (VB_TOREN, EB_KES); mannetje en vrouwtje getoond.
+- **Kennisprofiel:** 2 kritische kenmerken (1 doorslaggevend); niet doorslaggevend: Silhouet en jachtgedrag; open: Voor Boomvalk en Smelleken is er nu een tekstvergelijking. Fotovergelijking wacht op passende gidsbeelden van deze soorten.; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** Algemene bidfoto bevat geen bevestigd geslacht en heeft een neutraal label.
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp041 Appelvink — PARTIALLY TESTED
+
+Batch M7 · 2026-11-12 · SHA `b86b1269b01e1de41831290a1ecd8e0113e3a3b0` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp041.webp` | Hoofdfoto (Mannetje) | Mannetje Appelvink met grote kop, donkere keelvlek en zware snavel. | Volwassen mannetje volgens de bestaande bron. | Veldkenmerken en silhouet duidelijk zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp |
+| `sp041-adult_f.webp` | Verenkleed (Vrouwtje) | Vrouwtje Appelvink in zijaanzicht op hout, met een forse snavel, grijze nek en een grijs vleugelveld. | Volwassen vrouwtje volgens fotobron en kleed. | Scherp zijaanzicht en leesbare veldkenmerken. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.), CC BY 2.0 · Andy Morffew |
+| `sp041-juv.webp` | Verenkleed (Juveniel) | Jonge Appelvink met een gelige keel, gevlekte onderzijde en zware snavel. | Bron bevestigt juveniel. Geslacht onbekend. | Kop, snavel en relevante verenkleedkenmerken zijn zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.), CC BY-SA 4.0 · Charles J. Sharp |
+| `sp041-flight.webp` | In vlucht | Vliegende Appelvink van opzij met een brede lichte vleugelband. | Geslacht en leeftijd onbekend. | Vrije vlucht. De bestaande uitsnede van 330 px is voorlopig bruikbaar. | voorwaardelijk | vlucht · voorwaardelijk | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Codrin Bucur, some rights reserved (CC BY) |
+
+- **Correcties:** Vrouwtjes- en juvenielenfoto toegevoegd. Kennisprofiel en beeldvergelijking bijgewerkt. De bestaande vluchtfoto is herbeoordeeld.
+- **Ontbreekt:** Scherpe grotere foto in vrije vlucht, bij voorkeur een bronbevestigd mannetje.
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** De geslachtslabels van volwassen vogels volgen bron en zichtbaar verenkleed. Bij juvenielen is het geslacht onbekend.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Snavel en kopverhouding; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp040 Goudvink — PARTIALLY TESTED
+
+Batch M7 · 2026-11-12 · SHA `b86b1269b01e1de41831290a1ecd8e0113e3a3b0` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp040.webp` | Hoofdfoto (Mannetje) | Mannetje Goudvink met zwarte kap, rode wangen en borst. | Volwassen mannetje volgens de bestaande bron. | Veldkenmerken en silhouet duidelijk zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Francis Franklin |
+| `sp040-adult_f.webp` | Verenkleed (Vrouwtje) | Vrouwtje Goudvink op een tak, met een zwarte kap, korte zwarte snavel, beigegrijze onderzijde en witte stuit. | Volwassen vrouwtje volgens fotobron en kleed. | Scherp zijaanzicht en leesbare veldkenmerken. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.), CC BY-SA 3.0 · Francis C. Franklin |
+| `sp040-juv.webp` | Verenkleed (Juveniel) | Jonge Goudvink op een tak, met een bruingrijze kop zonder zwarte kap en een lichte vleugelstreep. | Bron bevestigt juveniel. Geslacht onbekend. | Kop, snavel en relevante verenkleedkenmerken zijn zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.), CC BY 4.0 · Andrei Orekhov |
+| `sp040-flight.webp` | In vlucht (Mannetje) | Mannetje in vrije vlucht, met rode borst, donkere kop en witte stuit. | Mannetje, herkenbaar aan de rode onderzijde en zwarte kap. | Volledig zijaanzicht in de lucht, inclusief de staart. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Holger Uwe Schmitt |
+
+- **Correcties:** Vrouwtjes- en juvenielenfoto toegevoegd. Kennisprofiel en beeldvergelijking bijgewerkt. De bestaande vluchtfoto is herbeoordeeld.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** De geslachtslabels van volwassen vogels volgen bron en zichtbaar verenkleed. Bij juvenielen is het geslacht onbekend.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Kap, snavel en vleugelstrepen; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp036 Groenling — VERIFIED
+
+Batch M5 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp036.webp` | Hoofdfoto (Mannetje) | Groenling op een tak, met geelgroen kleed en stevige, lichte snavel. | Fotograaf benoemt een mannetje. Kleed ondersteunt het label. | Gehele vogel goed zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Martin Kunz |
+| `sp036-adult_f.webp` | Verenkleed (Vrouwtje) | Grijsgroene Groenling met dikke snavel en gedempte gele vleugelrand. | Fotograaf benoemt een vrouwtje. | Scherp zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY-SA 3.0 · Francis C. Franklin |
+| `sp036-juv.webp` | Verenkleed (Juveniel) | Jonge Groenling met duidelijke streping op borst en buik, gele vleugelrand en stevige snavel. | Fotograaf benoemt een juveniel. Geslacht onbekend. | Kop, snavel en borst in beeld. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY 2.0 · Luiz Lapa from Oeiras, Portugal |
+| `sp036-flight.webp` | In vlucht | Groenling vrij in de lucht, met gele randen aan de buitenste vleugelpennen. | Geslacht en precieze leeftijd niet vastgesteld. | Vleugel, staart en snavel goed zichtbaar. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · Bengt Nyman from Vaxholm, Sweden |
+
+- **Correcties:** Mannetje op bestaande hoofdfoto bevestigd. Vrouwtje en juveniel toegevoegd. Vergelijking met Sijs aangevuld.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Geslachtslabels bij foto’s met bronbewijs. De vluchtfoto blijft neutraal.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Snavel, bouw en plaats van het geel; open: —; resterende dataverschillen: 0
+- **Browser:** 390x844 Chromium 145 (Playwright) · Foto decode, exacte auditset, fotovolgorde, geen duplicaten, vluchtrol, zoom, doorklik en geslachts- en leeftijdslabels
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp037 Putter — PARTIALLY TESTED
+
+Batch M5 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp037-adult_m.webp` | Hoofdfoto (Mannetje) | Putter met rood masker, brede gele vleugelband en zwart-witte kop. | Fotograaf benoemt mannetje. Rood reikt achter het oog. | Goed beeld van kop en gevouwen vleugel. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY-SA 3.0 · Charles J. Sharp |
+| `sp037-adult_f.webp` | Verenkleed (Vrouwtje) | Volwassen Putter op een draad met relatief beperkt rood masker en gele vleugelband. | De oorspronkelijke bestandsnaam van de fotograaf vermeldt femmina (vrouwtje). | Het kopaanzicht is schuin van voren. Fijne geslachtskenmerken zijn minder duidelijk. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY-SA 3.0 · Francesco Canu |
+| `sp037-juv.webp` | Verenkleed (Juveniel) | Jonge Putter met grijsbruine kop, gele vleugelband en donkere borsttekening. | Fotograaf benoemt juveniel. Geslacht onbekend. | Borst en gevouwen vleugel zijn zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-11: zelfde opname (directe WebP-conversie van originele Commons-JPEG), CC BY 2.0 · caroline legg |
+| `sp037-flight.webp` | In vlucht | Putter vrij in de lucht met open vleugel en brede gele vleugelband. | Geslacht niet vastgesteld. | Vlieghouding en vleugeltekening duidelijk. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 2.0 · Bengt Nyman from Vaxholm, Sweden |
+| `sp037-flight-free.webp` | In vlucht | Putter vrij in de lucht van opzij met half geheven vleugels, rood gezicht, zwart-witte kop en brede gele vleugelband; poten hangen omlaag. | Geslacht niet vastgesteld; rood masker overlapt tussen de geslachten. | Scherp genoeg voor vleugelband en kop, maar sterke HDR-bewerking met oranje kleurzweem. Voorlopig; vervanging met natuurlijke kleuren gewenst. | voorwaardelijk | vlucht · voorwaardelijk | VERIFIED: bronaudit 16-11-2026: zelfde opname (Commons-origineel met vastgepinde SHA-1 in de intake-workflow geconverteerd (auteur en licentie tegen Commons-metadata gecontroleerd); lokale WebP visueel en per pixel vergeleken met de Commons-miniatuur (gemiddeld verschil 0,9 tegen 62,8 voor een andere opname).), CC BY-SA 4.0 · Holger Uwe Schmitt |
+| `sp037.webp` | Overige herkenningsfoto's | Volwassen Putter op een tak met brede gele vleugelband en rood gezicht. | Volwassen kleed. Geslacht onbekend. | Aanvullend zijportret met lichte snavel. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Francis C. Franklin |
+
+- **Correcties:** Mannetje, vrouwtje en juveniel met bronvermelding toegevoegd. Vrije vlucht behouden. Vluchtvergelijking met Sijs toegevoegd.; F3-R10b (2026-11-16): extra vrije-vluchtfoto (Holger Uwe Schmitt, CC BY-SA 4.0) toegevoegd via de Commons-intake; voorwaardelijk wegens sterke kleurbewerking. Bestaande vluchtfoto blijft.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** Een vrouwtjesfoto in zuiver zijaanzicht voor een directere vergelijking van kop en vleugel.
+- **Geslacht:** Geslachtslabels volgen de fotobron. Maskeromvang overlapt en is op zichzelf geen zekere bepaling.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Vleugelband en koptekening; open: —; resterende dataverschillen: 0
+- **Browser:** 390x844 Chromium 145 (Playwright) · Foto decode, exacte auditset, fotovolgorde, geen duplicaten, vluchtrol, zoom, doorklik en geslachts- en leeftijdslabels
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp038 Sijs — PARTIALLY TESTED
+
+Batch M7 · 2026-11-12 · SHA `b86b1269b01e1de41831290a1ecd8e0113e3a3b0` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp038.webp` | Hoofdfoto (Mannetje) | Mannetje Sijs met zwarte kruin en geel in vleugel en staart. | Volwassen mannetje volgens de bestaande bron. | Veldkenmerken en silhouet duidelijk zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp |
+| `sp038-adult_f.webp` | Verenkleed (Vrouwtje) | Vrouwtje Sijs op een tak, met een fijne snavel, donkere flankstrepen en geel op de gevouwen vleugel. | Volwassen vrouwtje volgens fotobron en kleed. | Scherp zijaanzicht en leesbare veldkenmerken. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.), CC BY-SA 4.0 · Charles J. Sharp |
+| `sp038-juv.webp` | Verenkleed (Juveniel) | Jonge Sijs bij water, met gestreepte kop en onderzijde en gele accenten op de vleugel. | Bron bevestigt juveniel. Geslacht onbekend. | Kop, snavel en relevante verenkleedkenmerken zijn zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.), CC BY 2.0 · Luiz Lapa |
+| `sp038-flight.webp` | Verenkleed (Mannetje; neerstrijkend, niet echte vrije vlucht) | Mannetje Sijs vlak voor de landing: vleugels geheven, poten naar voren gestrekt met gespreide tenen; zwarte kruin en gele vleugelband zichtbaar. | Mannetje, volgens de bestaande vluchtbron en het veldkleed. | Kop en vleugeltekening bruikbaar; landingshouding, dus ongeschikt als vrije-vluchtfoto. Fotograaf beschrijft 'comes in to land'. | uit-rol | landen · uit-rol | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · john.purvis |
+
+- **Correcties:** Vrouwtjes- en juvenielenfoto toegevoegd. Kennisprofiel en beeldvergelijking bijgewerkt. De bestaande vluchtfoto is herbeoordeeld.; F3-R10b (2026-11-16): bestaande vluchtfoto hercontroleerd tegen de vrije-vluchtregel: landing (fotograafbeschrijving en naar voren gestrekte poten). Uit de vluchtrol naar Verenkleed (Mannetje); bestand en herkomst behouden. Vluchtvergelijkingen met Putter en Groenling als ontbrekend gemarkeerd.
+- **Ontbreekt:** Echte vrije-vluchtfoto (bij voorkeur mannetje, zijaanzicht): vervanging open, in F3-R10b bewust niet gekozen; niet verzonnen.
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** De geslachtslabels van volwassen vogels volgen bron en zichtbaar verenkleed. Bij juvenielen is het geslacht onbekend.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Snavel, flank en vleugel; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp035 Vink — VERIFIED
+
+Batch M5 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp035-hero-male.webp` | Hoofdfoto (Mannetje) | Mannetje op een tak, met blauwgrijze kop, rozige borst en lichte vleugelstreep. | Fotobron benoemt mannetje. Kop en borst ondersteunen het label. | Rustig zijaanzicht. | goedgekeurd | — | VERIFIED: geverifieerde import 09-11 (SHA-1 04c9fd7979…), CC BY-SA 4.0 · Charles J. Sharp |
+| `sp035.webp` | Verenkleed (Mannetje) | Tweede opname van een mannetje op een tak met rozerode borst en blauwgrijze kruin. | Mannetje volgens eerder bron- en beeldbewijs. | Onderscheidende opname met meer zicht op de rug en staart. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 3.0 · Martin Kunz |
+| `sp035-adult_f.webp` | Verenkleed (Vrouwtje) | Grijsbruine Vink met witte vleugelstrepen en witte buitenste staartveren. | Fotograaf benoemt een vrouwtje in Drenthe. | Kop en flank in zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp |
+| `sp035-juv-review.webp` | Verenkleed (Juveniel) | Bruine juveniele Vink met lichte vleugelstrepen en lichte mondhoek. | Fotograaf benoemt een juveniel. Geslacht onbekend. | Goed zichtbaar op korte vegetatie. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Marie-Lan Taÿ Pamart |
+| `sp035-flight.webp` | In vlucht (Mannetje) | Mannetje in vrije vlucht. Blauwe kruin, rozerode borst en lichte vleugeltekening zichtbaar. | Roze borst en blauwgrijze kop ondersteunen het mannelijke kleed. | Volledige vogel vrij in de lucht. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Mark Medcalf |
+
+- **Correcties:** Fotoverdeling bevestigd. Herkenning, maatbanden en vergelijking met Huismus en Keep onderbouwd.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** Geverifieerde gidsfoto van Keep bij de vergelijking.
+- **Geslacht:** Volwassen man en vrouw zijn verschillend van kleed. Geslacht van het jong blijft onbekend.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Vleugelstrepen en borsttekening; open: —; resterende dataverschillen: 0
+- **Browser:** 390x844 Chromium 145 (Playwright) · Foto decode, exacte auditset, fotovolgorde, geen duplicaten, vluchtrol, zoom, doorklik en geslachts- en leeftijdslabels
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp177 Bonte Vliegenvanger — PARTIALLY TESTED
+
+Batch M8 · 2026-11-12 · SHA `f9017aedc1b8bf254600a2707dc13c64b254aa53` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp177.webp` | Hoofdfoto (Mannetje) | Donker mannetje met lichte onderzijde, lichte voorhoofdsvlek en groot wit vleugelveld. | Volwassen mannetje volgens bron en kleed. | Volledige vogel in beeld. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Ron Knight from Seaford, East Sussex, United Kingdom |
+| `sp177-adult_f.webp` | Verenkleed (Vrouwtje) | Bruin vrouwtje met licht vleugelveld en bleke onderzijde. | Bronbevestigd vrouwtje. | Kop en vleugelveld zichtbaar in zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Zo nodig verkleind tot maximaal 1400 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.), CC BY-SA 4.0 · Jernej Polajnar |
+| `sp177-juv.webp` | Verenkleed (Juveniel) | Gevlekte jonge vogel met lichte tekening op de vleugel. | Onderzoekswaarneming met annotatie juveniel. Geslacht onbekend. | Kop, vleugel en staart leesbaar in zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Zo nodig verkleind tot maximaal 1400 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.), CC BY 4.0 · Andrei Orekhov |
+| `sp177-flight.webp` | In vlucht | Vrij vliegende vogel, frontaal, met lichte onderzijde en neerwaarts gespreide vleugels. | Geslacht en leeftijd onbekend. | Bestaande foto toont vrije vlucht met de vogel goed herkenbaar. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) carabus123, some rights reserved (CC BY) |
+
+- **Correcties:** Vrouwtjes- en juvenielenfoto toegevoegd. Kennisprofiel beschrijft de variatie bij mannetjes. Bestaande vluchtfoto en vergelijking met Grauwe Vliegenvanger gecontroleerd.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** De volwassen labels volgen de fotobron en het zichtbare kleed. Geslacht van juvenielen is onbekend.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Licht vleugelveld en streping; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp178 Gekraagde Roodstaart — PARTIALLY TESTED
+
+Batch M7 · 2026-11-12 · SHA `e024af25a0f03e387b5adae8fa159947de55d79b` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp178.webp` | Hoofdfoto (Mannetje) | Mannetje met wit voorhoofd, zwart gezicht, oranje borst en roestrode staart. | Volwassen mannetje, herkenbaar aan het broedkleed. | Volledige vogel op plant met duidelijk kopprofiel. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Jerzy Strzelecki |
+| `sp178-adult_f.webp` | Verenkleed (Vrouwtje) | Vrouwtje op hek met beige onderzijde en roestrode staart. | Waarneming geannoteerd als Adult en Female. | Scherp zijaanzicht met rustige achtergrond. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.), CC BY 4.0 · Сергей Неклюдов |
+| `sp178-juv.webp` | Verenkleed (Juveniel) | Jonge Gekraagde Roodstaart op een draad, met gespikkeld kleed en rode staart. | Afzonderlijke waarneming met annotatie Juvenile. Geslacht onbekend. | Scherp zijaanzicht van rug en borst. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.), CC BY 4.0 · Сергей Неклюдов |
+| `sp178-flight.webp` | Overige herkenningsfoto's | Gekraagde Roodstaart met geopende vleugels vlak bij takken. | Geslacht en leeftijd niet vastgesteld. | De rode staart is zichtbaar. Beeld blijft buiten de vluchtsectie. | uit-rol | opvliegen · uit-rol | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY · (c) Paolo Zucca, some rights reserved (CC BY) |
+
+- **Correcties:** Vrouwtjesfoto, juvenielenfoto, kennisprofiel en vergelijking met Zwarte Roodstaart toegevoegd. Alternatieve tekst van het opvliegbeeld afgestemd op de eerdere vluchtbeoordeling.
+- **Ontbreekt:** Scherpe vrije-vluchtfoto met bevestigde hergebruikrechten.
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Mannetje volgt het bronportret en herkenbaar broedkleed. Vrouwtje en juveniel volgen afzonderlijke bronwaarnemingen.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Voorhoofd en onderzijde; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp176 Grauwe Vliegenvanger — PARTIALLY TESTED
+
+Batch M7 · 2026-11-12 · SHA `e024af25a0f03e387b5adae8fa159947de55d79b` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp176.webp` | Hoofdfoto (Volwassen) | Grauwe Vliegenvanger in zijaanzicht, met grijsbruine bovendelen en fijne borststreping. | Volwassen veldkleed. Geslacht onbekend. | Volledige vogel in beeld. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Бусел В.А. |
+| `sp176-juv.webp` | Verenkleed (Juveniel) | Jonge vogel op een dennentak met lichte vlekken op rug en vleugeldekveren. | De waarneming is geannoteerd als juveniel. Geslacht onbekend. | Herkenbaar kleed en volledige vogel tussen enkele dennennaalden. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot maximaal 1400 px zonder uitsnede. Omgezet naar WebP zonder EXIF, GPS of XMP.), CC BY 4.0 · Andrejus Gaidamavičius |
+| `sp176-flight.webp` | In vlucht | Vrij vliegende vogel tegen blauwe lucht. Lange staart en slanke snavel zichtbaar. | Geslacht en leeftijd niet gelabeld. | Bruikbaar zijaanzicht in vrije vlucht. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Zeynel Cebeci |
+
+- **Correcties:** Juvenielenfoto en kennisprofiel toegevoegd. Vergelijking met Bonte Vliegenvanger toegevoegd en de vluchtfoto herbeoordeeld.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** De geslachten lijken op elkaar in het veld. Het geslacht is niet op kleed bepaald; juveniel volgt de fotobron.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Kruin, borst en vleugel; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp050 Roodborst — PARTIALLY TESTED
+
+Batch M5 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp050.webp` | Hoofdfoto | Volwassen Roodborst op een tak, met oranje gezicht en borst. | Volwassen kleed, geslacht onbekend. | Vogel volledig in beeld. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours |
+| `sp050-juv-review.webp` | Verenkleed (Juveniel) | Jonge Roodborst met licht gespikkeld bruin kleed, op het gras. | Originele fototitel vermeldt juveniel. | Volledig zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · caroline legg |
+| `sp050-flight.webp` | Overige herkenningsfoto | Opvliegende Roodborst tussen besneeuwde takken. | Volwassen kleed, geslacht onbekend. | Gespreide vleugel zichtbaar. Takken beperken het zicht op de vlieghouding. | uit-rol | opvliegen · uit-rol | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Joe Dyer from Buckhurst Hill, England |
+
+- **Correcties:** Kennisprofiel en vergelijking met Heggenmus toegevoegd. Bestaande opvliegfoto blijft bij Overige.
+- **Ontbreekt:** Voldoende scherpe en gelicentieerde foto in vrije vlucht.
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Mannetje en vrouwtje hebben hetzelfde zichtbare kleed. Gebruik een neutraal label.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Borst en rug; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp053 Roodborsttapuit — PARTIALLY TESTED
+
+Batch M8 · 2026-11-12 · SHA `f9017aedc1b8bf254600a2707dc13c64b254aa53` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp053-hero-male.webp` | Hoofdfoto (Mannetje) | Mannetje met zwarte kop, witte zijhals en oranje borst. | Bronbevestigd mannetje. | Veldkenmerken scherp zichtbaar. | goedgekeurd | — | VERIFIED: geverifieerde import 09-11 (SHA-1 d955fc880b…), CC BY-SA 4.0 · Charles J. Sharp |
+| `sp053.webp` | Verenkleed (Mannetje) | Een tweede mannetje op een lage uitkijkpost, met zwarte kop en oranje borst. | Volwassen mannetje. | Andere opname met volledig silhouet. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Fernando Losada Rodríguez |
+| `sp053-female-review.webp` | Verenkleed (Vrouwtje) | Bruin getekende kop, oranjebruine borst en rechte houding op een uitkijkpost. | Vrouwtje volgens de fotobron. | Scherpe kop en borst. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · caroline legg |
+| `sp053-juv-review.webp` | Verenkleed (Juveniel) | Jonge vogel met lichte spikkels op kop en borst. | Bron noemt juveniel. Geslacht onbekend. | Kop en zijaanzicht duidelijk zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Vcebollada |
+
+- **Correcties:** Bestaande kleedfoto’s herbeoordeeld. Kennisprofiel, beeldvergelijking met Roodborst en determinatieverschillen met Paapje toegevoegd.
+- **Ontbreekt:** Scherpe, herleidbare foto in vrije vlucht, bij voorkeur van een mannetje.
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** De volwassen labels volgen de fotobron en het zichtbare kleed. Geslacht van juvenielen is onbekend.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Wenkbrauw en staartbasis; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp051 Zwarte Roodstaart — PARTIALLY TESTED
+
+Batch M8 · 2026-11-12 · SHA `f9017aedc1b8bf254600a2707dc13c64b254aa53` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp051-hero-male.webp` | Hoofdfoto (Mannetje) | Donker mannetje op een stenen rand. Lichte vleugelvlek en roestrode staart. | Volwassen mannetje volgens bron en zichtbaar kleed. | Scherpe, volledige vogel van opzij. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Zo nodig verkleind tot maximaal 1600 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.), CC BY 2.0 · Luiz Lapa |
+| `sp051.webp` | Verenkleed (Vrouwtje) | Koel grijsbruin vrouwtje op steen met roestrode staart. | Brongecontroleerd vrouwtje. | Volledig zijaanzicht met kop, lichaam en staart zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · El Golli Mohamed |
+| `sp051-juv.webp` | Verenkleed (Juveniel) | Jonge vogel op een stenen rand, met roestrode staart. | Bron noemt juveniel. Geslacht onbekend. | De volledige vogel is scherp tegen een rustige achtergrond. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Zo nodig verkleind tot maximaal 1400 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.), CC BY 4.0 · Marie-Lan Taÿ Pamart |
+
+- **Correcties:** Mannetjesfoto bovenaan gezet en bestaand vrouwtje in Verenkleed behouden. Juveniel, kennisprofiel en herkenningsverschillen met Gekraagde Roodstaart toegevoegd.
+- **Ontbreekt:** Scherpe, herleidbare foto in vrije vlucht, bij voorkeur van een mannetje.
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** De volwassen labels volgen de fotobron en het zichtbare kleed. Geslacht van juvenielen is onbekend.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Voorhoofd en onderzijde; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp055 Winterkoning — PARTIALLY TESTED
+
+Batch M5 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp055.webp` | Hoofdfoto | Bruine Winterkoning op hout, met korte opgerichte staart en lichte wenkbrauw. | Volwassen type, geslacht onbekend. | Duidelijk zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours |
+| `sp055-juv.webp` | Verenkleed (Juveniel) | Jonge Winterkoning in een boomholte, met een compacte bruine bouw en lichte wenkbrauw. | De fotograaf benoemt een juveniel in de originele bestandsnaam. Het kleed alleen geeft bij deze soort beperkte zekerheid over de leeftijd. | Uitsnede vergroot de vogel. Licht en kijkhoek beperken zicht op de dekveren. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Uitgesneden rond de vogel, verkleind tot max. 1400 px en omgezet naar WebP zonder EXIF/GPS/XMP), CC BY 4.0 · caroline legg |
+
+- **Correcties:** Geverifieerde juvenielenfoto, kennisprofiel en vergelijking met Boomkruiper toegevoegd.
+- **Ontbreekt:** Voldoende scherpe en gelicentieerde foto in vrije vlucht.
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Mannetje en vrouwtje hebben hetzelfde zichtbare kleed. Gebruik een neutraal label.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Staart en houding; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp061 Grasmus — PARTIALLY TESTED
+
+Batch M6 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp061-hero-male.webp` | Hoofdfoto (Mannetje) | Mannetje Grasmus in zijaanzicht, met grijze kop, witte keel, warme vleugelranden en volledige staart. | De voorjaarswaarneming heeft de annotatie Male. De grijze kop, witte keel en lichte, bruinige iris zijn zichtbaar. | Hele vogel en vleugelpatroon zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY 4.0 · Donald Davesne |
+| `sp061-adult_f.webp` | Verenkleed (Vrouwtje) | Vrouwtje Grasmus in ruige begroeiing, met bruine kop, lichte keel en warme vleugelranden. | De fotograaf benoemt een vrouwtje. De research-grade waarneming heeft Adult en Female als annotatie. Het geslacht is bij deze soort op kleed alleen vaak moeilijk te bepalen. | Zijaanzicht tussen stengels; kop en vleugel zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY 4.0 · Roy Lowry |
+| `sp061-juv.webp` | Verenkleed (Juveniel) | Jonge Grasmus op een stengel, met bruine kop, donkere iris en warme roestbruine vleugelranden. | De research-grade waarneming heeft de annotatie Juvenile. De bruine kop en verse veerranden zijn zichtbaar. Geslacht onbekend. | Rustig zijaanzicht met verse veerranden. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY 4.0 · John Ashburner |
+| `sp061.webp` | Overige herkenningsfoto | Grasmus met insect in de snavel, witte keel en warme vleugelranden. | Geslacht onbekend. | Volledige vogel tegen een rustige achtergrond. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours |
+
+- **Correcties:** Bronbenoemd mannetje als hoofdfoto. Vrouwtje, juveniel, kennisprofiel en vergelijking met Braamsluiper toegevoegd.
+- **Ontbreekt:** Scherpe foto van één Grasmus in vrije vlucht met bevestigde licentie.
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Voorjaarsfoto met mannetjesannotatie en afzonderlijk door de fotograaf benoemd vrouwtje. Geen geslachtslabel bij het juveniel.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Vleugelranden en gezicht; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp059 Zwartkop — PARTIALLY TESTED
+
+Batch M6 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp059.webp` | Hoofdfoto (Mannetje) | Zwartkop met zwarte kruin op een stengel. | Het mannetjeskleed is herkenbaar aan de zwarte kruin boven het oog. | Volledig zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Alexis Lours |
+| `sp059-adult_f.webp` | Verenkleed (Vrouwtje) | Vrouwtje Zwartkop met roodbruine kruin en grijsbruine bovendelen, volledig in zijaanzicht. | De fotograaf benoemt het individu als vrouwtje. De roodbruine kruin is duidelijk zichtbaar. | Kruin, snavel en zijprofiel goed zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY 2.0 · caroline legg |
+| `sp059-juv.webp` | Verenkleed (Juveniel) | Jonge Zwartkop op een tak met bruine kruin en lichtgrijze onderzijde. | De fotograaf benoemt een juveniel. De bruine kruin is zichtbaar. Geslacht onbekend. | Scherpe kop met zicht op de bruine kruin. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY-SA 4.0 · Gunnar Creutz |
+
+- **Correcties:** Mannetjeslabel onderbouwd. Vrouwtje, juveniel, kennisprofiel en vergelijking met Tuinfluiter toegevoegd.
+- **Ontbreekt:** Scherpe foto van één Zwartkop in vrije vlucht met bevestigde licentie.
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** Het bruine petje alleen is onvoldoende voor een vrouwtjeslabel. De fotobron maakt het onderscheid met het juveniel.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Kruin en zang; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
+
+### sp114 Boerenzwaluw — PARTIALLY TESTED
+
+Batch M6 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp114-hero-male.webp` | Hoofdfoto (Mannetje) | Mannetje Boerenzwaluw op een draad met roestrode keel en voorhoofd, donkere borstband en lichte onderzijde. | De fotograaf benoemt een mannetje en annoteert de voorjaarswaarneming als Male. Het volwassen kleed is zichtbaar. | Scherpe kop, borstband en kleuren. De oude herkenningsfoto geeft vrij zicht op de diepe staartvork. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY 4.0 · SteveM4560 |
+| `sp114-adult_f.webp` | Verenkleed (Vrouwtje) | Vrouwtje Boerenzwaluw in zijaanzicht in de hand, met roestrode keel, donkere borstband en blauwzwarte bovendelen. | De fotograaf benoemt een vrouwtje en annoteert de waarneming als Female. Het volwassen kleed is zichtbaar; de kortere staartpennen zijn ondersteunend. | Kop, keel, borstband en vleugel duidelijk zichtbaar. Foto toont een vogel in de hand. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY 4.0 · SteveM4560 |
+| `sp114-juv.webp` | Verenkleed (Juveniel) | Jonge Boerenzwaluw op een tak op Schiermonnikoog, met een blekere keel en donkere borstband. | De fotograaf noemt de soort en het juveniele kleed op de bestandspagina. De opname toont de doffere kop en bleke keel. Geslacht onbekend. | Doffe kop en keel goed zichtbaar in driekwartaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY 2.0 · Frank Vassen |
+| `sp114-flight.webp` | In vlucht | Een Boerenzwaluw in vrije vlucht met donkere borstband en lange staartpennen. | Geslacht onbekend. | Volledige vogel met zicht op de staartvork en de vleugels. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Rudolphous |
+| `sp114.webp` | Overige herkenningsfoto | Boerenzwaluw met roestrode keel en lange staartpennen op een tak. | Volwassen kleed. Geslacht onbekend. | Helder zijaanzicht van het volledige silhouet. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Andy Morffew from Itchen Abbas, Hampshire, UK |
+
+- **Correcties:** Hoofdfoto met bronbenoemd mannetje, afzonderlijke vrouwtjesfoto, juvenielenfoto en kennisprofiel toegevoegd. Vergelijking met Huiszwaluw en bestaande vluchtvergelijkingen gecontroleerd.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** Een vrouwtje in natuurlijke rusthouding zou de opname in de hand aanvullen.
+- **Geslacht:** De veldkleden overlappen. Gebruik voor fotolabels de expliciete bronvermelding in combinatie met zichtbare kenmerken.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Keel, stuit en staart; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp115 Huiszwaluw — PARTIALLY TESTED
+
+Batch M6 · 2026-11-12 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp115-hero-adult.webp` | Hoofdfoto (Volwassen) | Volwassen Huiszwaluw op een draad in zijaanzicht, met witte keel en buik en een korte gevorkte staart. | De research-grade waarneming is geannoteerd als Adult. De rechter vogel staat afzonderlijk in deze uitsnede. Geslacht onbekend. | Eén vogel, met hele staart, witte keel en buik. De witte stuit is het duidelijkst in de vluchtfoto. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Uitgesneden rond de vogel en omgezet naar WebP zonder EXIF/GPS/XMP), CC BY 4.0 · SteveM4560 |
+| `sp115-juv.webp` | Verenkleed (Juveniel) | Jonge Huiszwaluw op een draad tegen blauwe lucht, met doffe bruine kop en lichte buik. | De fotograaf benoemt een juveniel en annoteert de waarneming als Juvenile. Doffe kop en bovendelen ondersteunen het leeftijdslabel. Geslacht onbekend. | Hele vogel tegen een rustige lucht. Doffe kop en veren duidelijk zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY 4.0 · SteveM4560 |
+| `sp115-flight.webp` | In vlucht | Huiszwaluw in vrije vlucht met witte stuit, witte onderzijde en geheven vleugels. | Geslacht onbekend. | Vogel in zijaanzicht. Witte stuit en korte staart duidelijk. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Billy Lindblom |
+| `sp115.webp` | Overige herkenningsfoto | Twee Huiszwaluwen verzamelen modder op een oever. | Volwassen kleed. Geslacht onbekend. | Bruikbare opname van gedrag en lichte onderzijde. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC0 · Estormiz |
+
+- **Correcties:** Hoofdfoto van één volwassen vogel, juvenielenfoto en kennisprofiel toegevoegd. De bestaande modderfoto toont gedrag. Beeldvergelijking met Boerenzwaluw behouden.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** De kleden van beide geslachten zijn sterk gelijk in het veld. Gebruik Volwassen als gedeelde aanduiding.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Stuit, keel en staart; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+### sp126 Knobbelzwaan — PARTIALLY TESTED
+
+Batch M6 · 2026-11-12 · SHA `38e3b3c42662dc49be8b769fd9f82a8dde65cad7` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
+
+| Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
+|---|---|---|---|---|---|---|---|
+| `sp126-hero-male.webp` | Hoofdfoto (Mannetje) | Mannetje Knobbelzwaan in zijaanzicht op rustig water, met witte veren, oranjerode snavel en zwarte knobbel. | De fotograaf annoteert de voorjaarswaarneming als Adult en Male. Het oorspronkelijke bijschrift duidt het dier als M. Snavel en knobbel zijn zichtbaar. | Hele vogel in zijaanzicht. Snavelknobbel duidelijk zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY 4.0 · Dave |
+| `sp126-adult_f.webp` | Verenkleed (Vrouwtje) | Vrouwtje Knobbelzwaan tussen lage bloemen en grassen, met witte hals, oranjerode snavel en zwarte snavelbasis. | De fotograaf annoteert de waarneming als Adult en Female. De vogel is van opzij te zien. De veldkenmerken alleen zijn onvoldoende voor het geslachtslabel. | Hele hals en snavel in profiel. Lage begroeiing bedekt de onderkant. | goedgekeurd | — | VERIFIED: bronaudit 2026-11-12: zelfde opname (Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP), CC BY 4.0 · Dave |
+| `sp126-juv.webp` | Verenkleed (Juveniel) | Jonge Knobbelzwaan met grijsbruin kleed en donkere snavel op water. | De fotograaf benoemt een juveniel. Geslacht onbekend. | Gehele vogel scherp, kop en rug zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Thermos |
+| `sp126-flight.webp` | In vlucht | Knobbelzwaan in vrije vlucht, met gestrekte hals en twee gespreide witte vleugels. | Geslacht onbekend. | Volledige vogel tegen blauwe lucht. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0 · Pjt56 |
+| `sp126.webp` | Overige herkenningsfoto | Volwassen Knobbelzwaan op water, met gebogen hals en oranjerode snavel. | Geslacht onbekend. | Volledige vogel met goed zicht op de hals. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Geni |
+
+- **Correcties:** Mannetje en vrouwtje met bronannotatie, kennisprofiel en beeldvergelijking met Wilde Zwaan toegevoegd. Juveniel- en vluchtfoto opnieuw gecontroleerd.
+- **Ontbreekt:** niets
+- **Verbeterwensen (eigenaar beoordeelt later):** —
+- **Geslacht:** De labels steunen op afzonderlijke bronannotaties. Grootte en snavelknobbel zijn ondersteunend en variëren.
+- **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Snavel en houding; open: —; resterende dataverschillen: 0
+- **Browser:** NOT TESTED
+- **Onzeker:** —
+- **Volgende actie:** Onafhankelijke review (ChatGPT)
+
+## Afgekeurde vluchtfoto's (collectiebreed)
+
+| Soort | Bestand | Uitslag | Klasse | Reden |
+|---|---|---|---|---|
+| sp002 Houtduif | `sp002-flight.webp` | archief | vlucht | Vervangen door een zijaanzicht waarop de witte band op de bovenvleugel duidelijker is. De frontale vluchtfoto blijft in het bronarchief. |
+| sp003 Holenduif | `sp003-flight.webp` | archief | opvliegen | Onscherpe afzetfoto van 485 px met weinig herkenningsdetail. Het bronarchief bewaart de opname; een goede vrije vluchtfoto blijft open. |
+| sp005 Buizerd | `sp005-male-flight.webp` | archief | vlucht | Vervangen door een scherpere opname van een donkere Buizerd in vrije vlucht. De eerdere opname en bronvermelding blijven in het archief. |
+| sp017 Kleine Bonte Specht | `sp017-flight.webp` | uit-rol | opvliegen | Zet af van de stam bij de nestholte; staart nog tegen de bast. |
+| sp025 Kauw | `sp025-flight.webp` | uit-rol | landen | Frontale landingsnadering met poten naar voren en gespreide staart. |
+| sp031 Matkop | `sp031-flight.webp` | uit-rol | opvliegen | Poten naar beneden vlak boven de sneeuw: afzetten of neerstrijken. |
+| sp032 Glanskop | `sp032-flight.webp` | archief | opvliegen | Zet af van een tak; onscherp, alleen silhouet. Geen bruikbare vervangende rol. |
+| sp033 Kuifmees | `sp033-flight.webp` | uit-rol | grond | Staat met de poten op de sneeuw met geheven vleugels. |
+| sp034 Staartmees | `sp034-flight.webp` | archief | opvliegen | Duikt van een tak weg; onscherp en ongebruikelijke houding. |
+| sp038 Sijs | `sp038-flight.webp` | uit-rol | landen | Fotograaf beschrijft 'comes in to land'; beeld toont geheven vleugels en naar voren gestrekte poten met gespreide tenen: neerstrijken, geen vrije vlucht. |
+| sp042 Roodmus | `sp042-flight.webp` | archief | opvliegen | Sterk onscherp bij een tak; vermoedelijk afzetten. |
+| sp044 Ringmus | `sp044-flight.webp` | uit-rol | landen | Twee Ringmussen in een luchtgevecht met poten naar voren; geen vrij vliegende vogel met bruikbaar vluchtsilhouet. Uit de vluchtrol (F3-R12, strikte vrije-vluchtregel §3.3). |
+| sp045 Merel | `sp045-flight.webp` | uit-rol | landen | Poten naar voren gestrekt: landingshouding. |
+| sp048 Koperwiek | `sp048-flight.webp` | uit-rol | opvliegen | Tussen planten met half geopende vleugels; niet vrij in de lucht. |
+| sp049 Grote Lijster | `sp049-flight.webp` | archief | vlucht | FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): in vlucht ja, maar sterk bewegingsonscherp: vleugeltekening niet bruikbaar voor determinatie. Duidelijk ongeschikt als gidsbeeld; uit de kaart, herkomst en bestand bewaard. Vluchtpositie ontbreekt. |
+| sp050 Roodborst | `sp050-flight.webp` | uit-rol | opvliegen | Tussen besneeuwde takken; niet vrij in de lucht. |
+| sp051 Zwarte Roodstaart | `sp051-flight.webp` | archief | vlucht | 291x177 px en onscherp; kenmerken niet bruikbaar. |
+| sp053 Roodborsttapuit | `sp053-flight.webp` | archief | vlucht | Zeer onscherp; soort niet uit het beeld zelf te bevestigen. |
+| sp056 Tjiftjaf | `sp056-flight.webp` | uit-rol | opvliegen | Mijlpaal 1 (aangescherpt): fladderend tussen rietstengels valt onder de eigen klasse "opvliegen / tussen planten"; contact met de stengels niet uit te sluiten. Uit "In vlucht"; vluchtpositie geregistreerd als ontbrekend. |
+| sp058 Fluiter | `sp058-flight.webp` | uit-rol | landen | Fladdert met uitgestrekte poten vlak bij blad: neerstrijken, geen vrije vlucht. |
+| sp061 Grasmus | `sp061-flight.webp` | archief | vlucht | Vlek zonder bruikbare kenmerken; soort niet uit het beeld te bevestigen. |
+| sp069 Gele Kwikstaart | `sp069-flight.webp` | uit-rol | landen | Poten uitgestrekt naar de paal; neerstrijken. |
+| sp089 Wilde Eend | `sp089-flight.webp` | uit-rol | landen | Luchtgedragen met uitgestrekte poten omlaag, passend bij landingshouding. Vrije vlucht is niet bevestigd voor dit beeld. |
+| sp110 Rietzanger | `sp110-flight.webp` | uit-rol | opvliegen | Tussen takken van een struik met bewogen vleugels; niet vrij in de lucht. |
+| sp118 Rietgors | `sp118-flight.webp` | archief | vlucht | Luchtgedragen, maar bewegingsonscherp; kenmerken niet bruikbaar. |
+| sp173 Bruine Kiekendief | `sp173-juv.webp` | uit-rol | landen | Strijkt met hangende poten neer in het riet; geen vrije vlucht. |
+| sp178 Gekraagde Roodstaart | `sp178-flight.webp` | uit-rol | opvliegen | FQA-02 hercontrole 10-11-2026 (drie vragen: in vlucht? / scherp en groot genoeg? / geschikt als definitieve gidsfoto?): luchtgedragen, maar poten hangen en takken vlakbij: vermoedelijk kort na het afzetten; korrelig. Vluchtstatus niet uit dit ene frame te bewijzen (REVIEW REQUIRED); daarom niet in de definitieve vluchtrol. Vluchtpositie ontbreekt. |
+| sp251 Grauwe Kiekendief | `sp251-adult_f.webp` | uit-rol | opvliegen | Fotograaf beschrijft vertrek vanaf een paal. Afzethouding met hangende poten. Foto blijft bij verenkleed. |
+| sp251 Grauwe Kiekendief | `sp251-juv.webp` | uit-rol | landen | Landt boven gras met uitgestrekte poten. |
+
+## Kritische kenmerken die (nog) niet doorslaggevend zijn
+
+| Soort | Kenmerk |
+|---|---|
+| sp003 Holenduif | Stuit |
+| sp004 Turkse Tortel | Staart in vlucht |
+| sp004 Turkse Tortel | Roep en vleugeltoppen |
+| sp005 Buizerd | Staartbasis en bandering |
+| sp005 Buizerd | Kop |
+| sp005 Buizerd | Vleugelhouding en -slag |
+| sp005 Buizerd | Staart |
+| sp005 Buizerd | Iris |
+| sp005 Buizerd | Kleur |
+| sp005 Buizerd | Geluid |
+| sp006 Sperwer | Staartpunt |
+| sp006 Sperwer | Kop en vleugels in vlucht |
+| sp006 Sperwer | Vliegstijl |
+| sp006 Sperwer | Roep |
+| sp006 Sperwer | Grootte |
+| sp007 Havik | Kop en staart in vlucht |
+| sp007 Havik | Grootte |
+| sp008 Torenvalk | Silhouet en jachtgedrag |
+| sp009 Slechtvalk | Bouw en kopkap |
+| sp016 Grote Bonte Specht | Koppatroon |
+| sp016 Grote Bonte Specht | Grootte en rug |
+| sp017 Kleine Bonte Specht | Rugbandering versus witte schoudervlekken |
+| sp017 Kleine Bonte Specht | Formaat en onderstaart tegenover Middelste Bonte Specht |
+| sp018 Zwarte Specht | Zwarte vogel tegenover Groene Specht |
+| sp020 Middelste Bonte Specht | Kop- en halstekening |
+| sp021 Ekster | Kleedpatroon en staart |
+| sp022 Zwarte Kraai | Snavelbasis |
+| sp025 Kauw | Iris en achterhoofd |
+| sp026 Gaai | Kleedpatroon |
+| sp029 Koolmees | Kap, oogstreek en middenstreep |
+| sp030 Pimpelmees | Koptekening en onderzijde |
+| sp031 Matkop | Roep, vleugelveld en snavelbasis |
+| sp032 Glanskop | Snavelbasis en roep |
+| sp033 Kuifmees | Kuif en wangboog |
+| sp034 Staartmees | Staartlengte en kop |
+| sp035 Vink | Vleugelstrepen en borsttekening |
+| sp036 Groenling | Snavel, bouw en plaats van het geel |
+| sp037 Putter | Vleugelband en koptekening |
+| sp038 Sijs | Snavel, flank en vleugel |
+| sp040 Goudvink | Kap, snavel en vleugelstrepen |
+| sp041 Appelvink | Snavel en kopverhouding |
+| sp043 Huismus | Kruin en afzonderlijke wangvlek |
+| sp043 Huismus | Vleugelstrepen bij bruine vogels |
+| sp044 Ringmus | Kruin en wangvlek |
+| sp045 Merel | Borstgrondkleur en staart bij bruine vogels |
+| sp046 Zanglijster | Borstvlekken en ondervleugeldekveren |
+| sp047 Kramsvogel | Kop, stuit en ondervleugel |
+| sp048 Koperwiek | Wenkbrauw en kleur onder de vleugel |
+| sp049 Grote Lijster | Vlekken en ondervleugel |
+| sp050 Roodborst | Borst en rug |
+| sp051 Zwarte Roodstaart | Voorhoofd en onderzijde |
+| sp053 Roodborsttapuit | Wenkbrauw en staartbasis |
+| sp054 Heggenmus | Snavel en kop |
+| sp055 Winterkoning | Staart en houding |
+| sp056 Tjiftjaf | Handpenprojectie |
+| sp056 Tjiftjaf | Staartbeweging |
+| sp056 Tjiftjaf | Poten |
+| sp056 Tjiftjaf | Seizoen |
+| sp057 Fitis | Handpenprojectie |
+| sp057 Fitis | Kop |
+| sp057 Fitis | Poten |
+| sp057 Fitis | Seizoen |
+| sp059 Zwartkop | Kruin en zang |
+| sp061 Grasmus | Vleugelranden en gezicht |
+| sp063 Goudhaantje | Wenkbrauw en oogstreep |
+| sp064 Vuurgoudhaan | Wenkbrauw en oogstreep |
+| sp065 Boomklever | Snavel, staart en klimrichting |
+| sp066 Boomkruiper | Roep |
+| sp066 Boomkruiper | Zang |
+| sp066 Boomkruiper | Vleugelbandpatroon |
+| sp066 Boomkruiper | Alula |
+| sp066 Boomkruiper | Flanken en wenkbrauw |
+| sp066 Boomkruiper | Snavel en achternagel |
+| sp067 Taigaboomkruiper | Vleugelbandpatroon |
+| sp067 Taigaboomkruiper | Zang en roep |
+| sp067 Taigaboomkruiper | Flanken en wenkbrauw |
+| sp068 Witte Kwikstaart | Rug, stuit en flanken |
+| sp069 Gele Kwikstaart | Mantel, poten en staart |
+| sp070 Veldleeuwerik | Staart en vleugels in vlucht |
+| sp072 Graspieper | Flankstrepen, snavel en achternagel |
+| sp075 IJsvogel | Keel, snavel en silhouet |
+| sp077 Fuut | Snavel en hals in winterkleed |
+| sp078 Meerkoet | Snavel en voorhoofdsschild |
+| sp079 Waterhoen | Snavel en witte tekening |
+| sp081 Blauwe Reiger | Bouw en halskleur |
+| sp082 Kleine Zilverreiger | Tenen, hals en snavel |
+| sp083 Grote Zilverreiger | Hals, bouw en tenen |
+| sp084 Purperreiger | Hals, snavel en vliegbeeld |
+| sp086 Grauwe Gans | Snavel, kol en buik |
+| sp089 Wilde Eend | Vleugelspiegel bij bruine vogels |
+| sp090 Slobeend | Snavelvorm |
+| sp091 Wintertaling | Kop, staartzijde en bovenvleugel bij bruine vogels |
+| sp092 Kuifeend | Kuif, oog en kopprofiel |
+| sp094 Zilvermeeuw | Pootkleur |
+| sp094 Zilvermeeuw | Tertials eerstejaars |
+| sp094 Zilvermeeuw | Leeftijd |
+| sp095 Kleine Mantelmeeuw | Mantel en poten (volwassen) |
+| sp095 Kleine Mantelmeeuw | Tertials eerstejaars |
+| sp096 Stormmeeuw | Snavel, oog en poten |
+| sp098 Scholekster | Snavelvorm en poten |
+| sp099 Kievit | Kuif en rugtekening |
+| sp100 Wulp | Koptekening en snavel |
+| sp101 Grutto | Vleugelstreep en staart |
+| sp102 Tureluur | Witte vleugelachterrand |
+| sp104 Aalscholver | Broedkleed |
+| sp105 Fazant | Staartlengte en bouw bij bruine vogels |
+| sp106 Patrijs | Staart en lichaamsbouw |
+| sp112 Spreeuw | Staart en kleed |
+| sp114 Boerenzwaluw | Keel, stuit en staart |
+| sp115 Huiszwaluw | Stuit, keel en staart |
+| sp117 Geelgors | Stuit, kop en omgeving |
+| sp118 Rietgors | Kop en stuit |
+| sp126 Knobbelzwaan | Snavel en houding |
+| sp129 Krakeend | Snavel en vleugelspiegel |
+| sp130 Smient | Snavelvorm en snavelkleur |
+| sp132 Tafeleend | Kopprofiel, oog en flanken |
+| sp141 Gierzwaluw | Vleugelvorm, onderzijde en staart in vlucht |
+| sp143 Kluut | Snavelvorm en pootkleur |
+| sp152 Drieteenstrandloper | Snavelvorm en winterkleed |
+| sp165 Visdief | Snavel, poten en vleugels |
+| sp173 Bruine Kiekendief | Silhouet en vleugelhouding |
+| sp173 Bruine Kiekendief | Geslacht en leeftijd |
+| sp174 Zwarte Mees | Nekvlek en vleugelbandjes |
+| sp176 Grauwe Vliegenvanger | Kruin, borst en vleugel |
+| sp177 Bonte Vliegenvanger | Licht vleugelveld en streping |
+| sp178 Gekraagde Roodstaart | Voorhoofd en onderzijde |
+| sp188 Zomertaling | Wenkbrauw, oogstreep en keel |
+| sp248 Wespendief | Kop en staart |
+| sp248 Wespendief | Vleugelhouding |
+| sp248 Wespendief | Oog en snavelbasis |
+| sp249 Blauwe Kiekendief | Vleugelsilhouet en armpatroon |
+| sp250 Steppekiekendief | Koptekening en handpennen |
+| sp251 Grauwe Kiekendief | Armvleugel en ondervleugel |
+| sp253 Ruigpootbuizerd | Staartcontrast |
+| sp253 Ruigpootbuizerd | Geslacht en leeftijd |
+
+## Nog niet aangescherpt gecontroleerd
+
+Deze soorten renderen technisch, maar zijn **niet** foto voor foto opnieuw beoordeeld. Eerdere uitslagen (fotobaseline batch 01) gelden niet automatisch.
+
+sp257 Bijeneter, sp058 Fluiter, sp128 Bergeend, sp262 Grauwe Klauwier, sp288 Grote Gele Kwikstaart, sp164 Grote Mantelmeeuw, sp097 Kokmeeuw, sp225 Zwartkopmeeuw, sp170 Ooievaar, sp146 Bontbekplevier, sp145 Goudplevier, sp147 Kleine Plevier, sp206 Strandplevier, sp144 Zilverplevier, sp245 Koereiger, sp085 Kwak, sp108 Grote Karekiet, sp110 Rietzanger, sp153 Bonte Strandloper, sp159 Bosruiter, sp158 Groenpootruiter, sp155 Oeverloper, sp217 Poelruiter, sp148 Regenwulp, sp149 Rosse Grutto, sp150 Steenloper, sp156 Witgat, sp157 Zwarte Ruiter, sp019 Groene Specht, sp282 Roze Spreeuw, sp167 Grote Stern, sp166 Noordse Stern, sp039 Kneu, sp042 Roodmus, sp113 Wielewaal, sp062 Braamsluiper, sp060 Tuinfluiter, sp116 Oeverzwaluw, sp187 Wilde Zwaan
+

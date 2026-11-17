@@ -1,0 +1,265 @@
+{
+  "schema": "birdspot-f2-20-proof-and-limitations-v1",
+  "date": "2026-11-14",
+  "baseSha": "fa05d08d203f656c5c7bce328c6deec6d3961632",
+  "scope": [
+    "sp049 Grote Lijster",
+    "sp050 Roodborst",
+    "sp051 Zwarte Roodstaart"
+  ],
+  "status": "PARTIALLY TESTED",
+  "confirmedFacts": [
+    {
+      "kind": "species",
+      "name": "Grote Lijster",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-lijster",
+      "checked": "yes",
+      "facts": "Large and pale, rounder breast spots, erect posture, white tail-tip corners"
+    },
+    {
+      "kind": "species",
+      "name": "Roodborst",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/roodborst",
+      "checked": "yes",
+      "facts": "Adult male and female similar, orange face/breast, juvenile brown-spotted lacking red"
+    },
+    {
+      "kind": "species",
+      "name": "Zwarte Roodstaart",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwarte-roodstaart",
+      "checked": "yes",
+      "facts": "Black/dark male with pale wing, cold-grey female, rust-red tail"
+    },
+    {
+      "kind": "compare",
+      "name": "Zwarte vs Gekraagde Roodstaart",
+      "url": "https://www.vogelbescherming.nl/actueel/bericht/vogels-herkennen-zwarte-roodstaart-vs-gekraagde-roodstaart",
+      "checked": "yes",
+      "facts": "Male dark versus orange breast/white forehead; females cold-grey versus warm buff"
+    },
+    {
+      "kind": "original",
+      "name": "juveniel Grote Lijster",
+      "url": "https://commons.wikimedia.org/wiki/File:Fledgling_mistle_thrush.jpg",
+      "checked": "metadata",
+      "author": "treehouse1977",
+      "license": "CC BY-SA 2.0"
+    },
+    {
+      "kind": "original",
+      "name": "juveniel Roodborst",
+      "url": "https://commons.wikimedia.org/wiki/File:European_Robin_-_Erithacus_rubecula_-_Juvenile.jpg",
+      "checked": "metadata",
+      "author": "Caroline Legg",
+      "license": "CC BY 2.0"
+    },
+    {
+      "kind": "original",
+      "name": "juveniel Roodborsttapuit",
+      "url": "https://commons.wikimedia.org/wiki/File:Saxicola_rubicola_juvenile.jpg",
+      "checked": "metadata",
+      "author": "Vcebollada",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "kind": "original",
+      "name": "mannetje Zwarte Roodstaart",
+      "url": "https://commons.wikimedia.org/wiki/File:Rabiruivo-preto,_macho,_Black_Redstart,_male_(51131070116).jpg",
+      "checked": "metadata",
+      "author": "Luiz Lapa",
+      "license": "CC BY 2.0"
+    },
+    {
+      "kind": "original",
+      "name": "juveniel Zwarte Roodstaart",
+      "url": "https://commons.wikimedia.org/wiki/File:Phoenicurus_ochruros_juvenile_Chastel_20190512_t130014.jpg",
+      "checked": "metadata",
+      "author": "Marie-Lan Taÿ Pamart",
+      "license": "CC BY 4.0"
+    }
+  ],
+  "anwb": "NOT TESTED — book-specific passages not consulted, despite reference preference",
+  "registeredPhotos": {
+    "sp049": [
+      {
+        "path": "/assets/species/sp049.webp",
+        "source": "https://commons.wikimedia.org/wiki/File:Turdus_viscivorus_-England-8.jpg",
+        "author": "jo-h from UK",
+        "declaredLicense": "CC BY 2.0",
+        "age": null,
+        "sex": null,
+        "flight": false,
+        "oldFlightReview": null,
+        "originalMetadataPageRechecked": false,
+        "localWebPToOriginal": "NOT TESTED",
+        "independentPixelAgeSex": "NOT TESTED"
+      },
+      {
+        "path": "/assets/species/plumage/sp049-juv.webp",
+        "source": "https://commons.wikimedia.org/wiki/File:Fledgling_mistle_thrush.jpg",
+        "author": "treehouse1977",
+        "declaredLicense": "CC BY-SA 2.0",
+        "age": "juvenile",
+        "sex": null,
+        "flight": false,
+        "oldFlightReview": null,
+        "originalMetadataPageRechecked": true,
+        "localWebPToOriginal": "NOT TESTED",
+        "independentPixelAgeSex": "NOT TESTED"
+      }
+    ],
+    "sp050": [
+      {
+        "path": "/assets/species/sp050.webp",
+        "source": "https://commons.wikimedia.org/wiki/File:European_robin_Cr%C3%A9teil_2.jpg",
+        "author": "Alexis Lours",
+        "declaredLicense": "CC BY 4.0",
+        "age": null,
+        "sex": null,
+        "flight": false,
+        "oldFlightReview": null,
+        "originalMetadataPageRechecked": false,
+        "localWebPToOriginal": "NOT TESTED",
+        "independentPixelAgeSex": "NOT TESTED"
+      },
+      {
+        "path": "/assets/species/plumage/sp050-flight.webp",
+        "source": "https://commons.wikimedia.org/wiki/File:Robin_in_Flight_(8398860133).jpg",
+        "author": "Joe Dyer",
+        "declaredLicense": "CC BY 2.0",
+        "age": null,
+        "sex": null,
+        "flight": false,
+        "oldFlightReview": "uit-rol 2026-11-10: Tussen besneeuwde takken; niet vrij in de lucht.",
+        "originalMetadataPageRechecked": false,
+        "localWebPToOriginal": "NOT TESTED",
+        "independentPixelAgeSex": "NOT TESTED"
+      },
+      {
+        "path": "/assets/species/plumage/sp050-juv-review.webp",
+        "source": "https://commons.wikimedia.org/wiki/File:European_Robin_-_Erithacus_rubecula_-_Juvenile.jpg",
+        "author": "Caroline Legg",
+        "declaredLicense": "CC BY 2.0",
+        "age": "juvenile",
+        "sex": null,
+        "flight": false,
+        "oldFlightReview": null,
+        "originalMetadataPageRechecked": true,
+        "localWebPToOriginal": "NOT TESTED",
+        "independentPixelAgeSex": "NOT TESTED"
+      }
+    ],
+    "sp051": [
+      {
+        "path": "/assets/species/sp051.webp",
+        "source": "https://commons.wikimedia.org/wiki/File:Rougequeue_noir_Douga006.jpg",
+        "author": "El Golli Mohamed",
+        "declaredLicense": "CC BY-SA 4.0",
+        "age": null,
+        "sex": "female",
+        "flight": false,
+        "oldFlightReview": null,
+        "originalMetadataPageRechecked": false,
+        "localWebPToOriginal": "NOT TESTED",
+        "independentPixelAgeSex": "NOT TESTED"
+      },
+      {
+        "path": "/assets/species/plumage/sp051-hero-male.webp",
+        "source": "https://commons.wikimedia.org/wiki/File:Rabiruivo-preto%2C_macho%2C_Black_Redstart%2C_male_%2851131070116%29.jpg",
+        "author": "Luiz Lapa",
+        "declaredLicense": "CC BY 2.0",
+        "age": "adult",
+        "sex": "male",
+        "flight": false,
+        "oldFlightReview": null,
+        "originalMetadataPageRechecked": true,
+        "localWebPToOriginal": "NOT TESTED",
+        "independentPixelAgeSex": "NOT TESTED"
+      },
+      {
+        "path": "/assets/species/plumage/sp051-juv.webp",
+        "source": "https://commons.wikimedia.org/wiki/File:Phoenicurus_ochruros_juvenile_Chastel_20190512_t130014.jpg",
+        "author": "Marie-Lan Taÿ Pamart",
+        "declaredLicense": "CC BY 4.0",
+        "age": "juvenile",
+        "sex": null,
+        "flight": false,
+        "oldFlightReview": null,
+        "originalMetadataPageRechecked": true,
+        "localWebPToOriginal": "NOT TESTED",
+        "independentPixelAgeSex": "NOT TESTED"
+      }
+    ]
+  },
+  "newComparisons": [
+    {
+      "label": "Zanglijster en Grote Lijster · juvenielen in rust",
+      "species": [
+        "sp046",
+        "sp049"
+      ],
+      "roles": [
+        "juv",
+        "juv"
+      ],
+      "existingPhotos": [
+        "sp046-juv.webp",
+        "sp049-juv.webp"
+      ]
+    },
+    {
+      "label": "Roodborst en Roodborsttapuit · juvenielen in rust",
+      "species": [
+        "sp050",
+        "sp053"
+      ],
+      "roles": [
+        "juv",
+        "juv"
+      ],
+      "existingPhotos": [
+        "sp050-juv-review.webp",
+        "sp053-juv-review.webp"
+      ]
+    },
+    {
+      "label": "Zwarte en Gekraagde Roodstaart · mannetjes in rust",
+      "species": [
+        "sp051",
+        "sp178"
+      ],
+      "roles": [
+        "adult_m",
+        "adult_m"
+      ],
+      "existingPhotos": [
+        "sp051-hero-male.webp",
+        "sp178.webp"
+      ]
+    }
+  ],
+  "open": [
+    "GitHub text connector cannot decode repository WebP binaries; neither original-to-WebP identity nor pixels/quality newly verified.",
+    "Original photo page descriptions of juvenile roles are not in themselves proof that the actual local crop clearly shows the diagnostic age.",
+    "Historical sp049 strongly blurred flight is archived; sp050 takeoff among branches not proper free flight; sp051 blurred 291x177 flight archived. No forced flight photos.",
+    "Comparison partners sp046/sp053/sp178 source photos reused from prior records; these species are not independently F2-reviewed in this batch.",
+    "Gekraagde juvenile comparison deferred until exact additional source and pixel identity checked.",
+    "Native Android record/save/reopen/offline and ZIP restore on second device, rollout and rollback, production and full photography licensing remain NOT TESTED."
+  ],
+  "proofBoundary": {
+    "counts": {
+      "reviewed": 51,
+      "total": 140,
+      "remaining": 89
+    },
+    "newOriginalBinaryPasses": 0,
+    "codeCI": "PENDING on new F2-20 head",
+    "release": "BLOCKED; no merge/live"
+  },
+  "learning": {
+    "issue": "Initial F2-20 documentation preflight compared sp-prefixed progress IDs to prefix-stripped ledger IDs; no files written before aborted validation.",
+    "resolution": "Normalize both list extractors to strings like sp049 before equality; recheck 51 unique IDs and rollback conditions.",
+    "prevent": "Canonical IDs always include sp prefix in cross-document checks."
+  },
+  "restore": "Close draft F2-20 PR; PR #221 fa05d08 remains stable and unmerged."
+}

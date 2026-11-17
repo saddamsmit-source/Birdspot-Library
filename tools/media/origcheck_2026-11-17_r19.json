@@ -1,0 +1,116 @@
+{
+ "date": "2026-11-17",
+ "purpose": "F3-R19 origcheck: Boomklever, Boomkruiper, Taigaboomkruiper — same shot vs source original, current rights; audio metadata/rights only (geen soortverificatie)",
+ "items": [
+  {
+   "speciesId": "sp065",
+   "image": "/assets/species/sp065.webp",
+   "author": "Chme82",
+   "license": "CC BY-SA 4.0",
+   "title": "File:Kleiber (Sitta europaea caesia) Val Roseg.jpg"
+  },
+  {
+   "speciesId": "sp065",
+   "image": "/assets/species/plumage/sp065-head-down.webp",
+   "author": "hedera.baltica",
+   "license": "CC BY-SA 2.0",
+   "title": "File:Eurasian nuthatch (50430565526).jpg"
+  },
+  {
+   "speciesId": "sp065",
+   "image": "/assets/species/plumage/sp065-flight.webp",
+   "author": "C. Robiller / naturlichter.de",
+   "license": "CC BY-SA 3.0",
+   "title": "File:Kleiber Flug.jpg"
+  },
+  {
+   "speciesId": "sp065",
+   "kind": "audio",
+   "audio": "/assets/species/audio/sp065-song.mp3",
+   "author": "Joost van Bruggen",
+   "license": "CC BY-SA 4.0",
+   "title": "File:Sitta europaea - Eurasian Nuthatch XC433160.mp3",
+   "source": "https://commons.wikimedia.org/wiki/File:Sitta_europaea_-_Eurasian_Nuthatch_XC433160.mp3"
+  },
+  {
+   "speciesId": "sp065",
+   "kind": "audio",
+   "audio": "/assets/species/audio/sp065-call.mp3",
+   "author": "Sander Pieterse",
+   "license": "CC BY-SA 3.0",
+   "title": "File:XC164989-Eurasian Nuthatch call Oostermaet NL 2014.ogg",
+   "source": "https://commons.wikimedia.org/wiki/File:XC164989-Eurasian_Nuthatch_call_Oostermaet_NL_2014.ogg"
+  },
+  {
+   "speciesId": "sp066",
+   "image": "/assets/species/sp066.webp",
+   "author": "Jan Matthies",
+   "license": "CC BY-SA 4.0",
+   "title": "File:Gartenbaumläuferchen.jpg"
+  },
+  {
+   "speciesId": "sp066",
+   "image": "/assets/species/plumage/sp066-juv-fed.webp",
+   "author": "hedera.baltica",
+   "license": "CC BY-SA 2.0",
+   "title": "File:Feed me! (20741323391).jpg"
+  },
+  {
+   "speciesId": "sp066",
+   "image": "/assets/species/plumage/sp066-wing.webp",
+   "author": "Charles J. Sharp",
+   "license": "CC BY-SA 4.0",
+   "title": "File:Short-toed treecreeper (Certhia brachydactyla brachydactyla).jpg"
+  },
+  {
+   "speciesId": "sp066",
+   "kind": "audio",
+   "audio": "/assets/species/audio/sp066-song.mp3",
+   "author": "Benoît Van Hecke",
+   "license": "CC BY-SA 4.0",
+   "title": "File:Certhia brachydactyla - Short-toed Treecreeper XC543231.mp3",
+   "source": "https://commons.wikimedia.org/wiki/File:Certhia_brachydactyla_-_Short-toed_Treecreeper_XC543231.mp3"
+  },
+  {
+   "speciesId": "sp066",
+   "kind": "audio",
+   "audio": "/assets/species/audio/sp066-call.mp3",
+   "author": "Marie-Lan Taÿ Pamart",
+   "license": "CC BY-SA 4.0",
+   "title": "File:Certhia brachydactyla - Short-toed Treecreeper XC474508.mp3",
+   "source": "https://commons.wikimedia.org/wiki/File:Certhia_brachydactyla_-_Short-toed_Treecreeper_XC474508.mp3"
+  },
+  {
+   "speciesId": "sp067",
+   "image": "/assets/species/sp067.webp",
+   "author": "Bengt Nyman from Vaxholm, Sweden",
+   "license": "CC BY 2.0",
+   "title": "File:Certhia familiaris EM1B0410 (48689577163).jpg"
+  },
+  {
+   "speciesId": "sp067",
+   "image": "/assets/species/plumage/sp067-wing.webp",
+   "author": "caroline legg",
+   "license": "CC BY 2.0",
+   "title": "File:Eurasian Treecreeper - Certhia familiaris (54192274817).jpg"
+  },
+  {
+   "speciesId": "sp067",
+   "kind": "audio",
+   "audio": "/assets/species/audio/sp067-song.mp3",
+   "author": "Alexander Kürthy",
+   "license": "CC BY-SA 4.0",
+   "title": "File:Certhia familiaris song.ogg",
+   "source": "https://commons.wikimedia.org/wiki/File:Certhia_familiaris_song.ogg"
+  },
+  {
+   "speciesId": "sp067",
+   "kind": "audio",
+   "audio": "/assets/species/audio/sp067-call.mp3",
+   "author": "Aubrey John Williams / The British Library Board",
+   "license": "CC BY-SA 4.0",
+   "title": "File:Eurasian Treecreeper (Certhia familiaris) (W1CDR0001463 BD5).ogg",
+   "source": "https://commons.wikimedia.org/wiki/File:Eurasian_Treecreeper_%28Certhia_familiaris%29_%28W1CDR0001463_BD5%29.ogg"
+  }
+ ]
+}

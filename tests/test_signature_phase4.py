@@ -86,6 +86,12 @@ def main():
             assert p.locator(".film-studio-shot").count()==2
             assert p.locator("#filmSelectedCount").inner_text()=="2"
             assert p.locator("#filmPreview img").count()==1
+            p.locator("#filmPreview .film-studio-photo").click()
+            zoom = p.get_by_role("dialog", name="Vogelfoto bekijken")
+            zoom.get_by_role("button", name="Inzoomen").click()
+            assert zoom.get_by_role("button", name="Zoom herstellen").inner_text() == "2×"
+            p.keyboard.press("Escape")
+            zoom.wait_for(state="detached")
             assert p.locator("#filmExport").is_enabled()
             capture(p,"phase4_storyboard_390.png")
             p.locator('[data-film-move="0"][data-direction="1"]').click()

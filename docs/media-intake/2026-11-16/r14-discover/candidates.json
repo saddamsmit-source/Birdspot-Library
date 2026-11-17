@@ -1,0 +1,307 @@
+{
+  "generated": "2026-11-16T19:06:27Z",
+  "userAgent": "BirdspotLibrary-media-intake/1.0 (https://github.com/saddamsmit-source/Birdspot-Library; build-time license-checked import)",
+  "licensePolicy": "CC0 / publiek domein / CC BY / CC BY-SA; NC en ND uitgesloten",
+  "status": "CANDIDATES ONLY - niet goedgekeurd, niet in de app",
+  "queries": [
+    {
+      "id": "sp049_flight",
+      "speciesId": "sp049",
+      "role": "flight",
+      "kind": "image",
+      "search": "Turdus viscivorus flight filetype:bitmap",
+      "candidates": [],
+      "rejectedForLicense": [
+        {
+          "title": "File:Birds of Britain (1907) (14752209441).jpg",
+          "license": "No restrictions"
+        }
+      ]
+    },
+    {
+      "id": "sp050_flight",
+      "speciesId": "sp050",
+      "role": "flight",
+      "kind": "image",
+      "search": "Erithacus rubecula in flight filetype:bitmap",
+      "candidates": [
+        {
+          "title": "File:Erithacus rubecula -RHS Garden Harlow Carr-8c.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Erithacus_rubecula_-RHS_Garden_Harlow_Carr-8c.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Erithacus_rubecula_-RHS_Garden_Harlow_Carr-8c.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Erithacus_rubecula_-RHS_Garden_Harlow_Carr-8c.jpg/960px-Erithacus_rubecula_-RHS_Garden_Harlow_Carr-8c.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "8e114e6d9198160296b6f40756a20919b16fbab1",
+          "size": 758509,
+          "width": 2025,
+          "height": 2025,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "author": "Paul Tomlin",
+          "credit": "originally posted to Flickr as Lift-off!",
+          "description": "European Robin at RHS Garden Harlow Carr, Harrogate, North Yorkshire, England.",
+          "date": "2009-09-27 13:07:53",
+          "categories": [
+            "Birds in RHS Garden Harlow Carr",
+            "Birds of North Yorkshire",
+            "Birds with motion blur",
+            "Erithacus rubecula in England",
+            "Passieriformes in flight"
+          ],
+          "preview": "sp050_flight_01.jpg"
+        },
+        {
+          "title": "File:Robin in Flight (8398860133).jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Robin_in_Flight_(8398860133).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Robin_in_Flight_%288398860133%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Robin_in_Flight_%288398860133%29.jpg/960px-Robin_in_Flight_%288398860133%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "e5d9383b067a2d5d3df097f8b6d9cbd5f3b73737",
+          "size": 6829213,
+          "width": 4362,
+          "height": 3271,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "author": "Joe Dyer from Buckhurst Hill, England",
+          "credit": "Robin in Flight",
+          "description": "Robin in flight snow covered garden 3 Quantuum Flashes @ 1/10000 Timing PhotoTrigger Light Sensor",
+          "date": "2013-01-18 15:21",
+          "categories": [
+            "Birds of Essex",
+            "Birds of the United Kingdom in snow",
+            "Buckhurst Hill",
+            "Erithacus rubecula in England",
+            "Erithacus rubecula in snow",
+            "Muscicapidae in flight",
+            "Snow in Essex"
+          ],
+          "preview": "sp050_flight_02.jpg"
+        },
+        {
+          "title": "File:Robin - April 2009 (3448589264).jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Robin_-_April_2009_(3448589264).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Robin_-_April_2009_%283448589264%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Robin_-_April_2009_%283448589264%29.jpg/960px-Robin_-_April_2009_%283448589264%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "f61cf27c8de1b00b8b0891ddea7f400cdc3e21e5",
+          "size": 117500,
+          "width": 1024,
+          "height": 683,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "author": "Tim Felce (Airwolfhound)",
+          "credit": "Robin - April 2009",
+          "description": "Contemplation time for this Robin........food or flight ?",
+          "date": "2009-04-11 11:01",
+          "categories": [
+            "Erithacus rubecula"
+          ],
+          "preview": "sp050_flight_03.jpg"
+        },
+        {
+          "title": "File:First strike. - Flickr - Free the Image.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:First_strike._-_Flickr_-_Free_the_Image.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/First_strike._-_Flickr_-_Free_the_Image.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/First_strike._-_Flickr_-_Free_the_Image.jpg/960px-First_strike._-_Flickr_-_Free_the_Image.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "13a2978f828d99d94286fe6189bbc61526ceabdb",
+          "size": 1292417,
+          "width": 4498,
+          "height": 3374,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "author": "Mark Freeth from Stafford., England.",
+          "credit": "First strike.",
+          "description": "Robin vs Greenfinch.",
+          "date": "Taken on 16 February 2020, 23:15",
+          "categories": [
+            "Chloris chloris (illustrations)",
+            "Erithacus rubecula (illustrations)"
+          ],
+          "preview": "sp050_flight_04.jpg"
+        },
+        {
+          "title": "File:Tetrapodoak - kladograma.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Tetrapodoak_-_kladograma.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Tetrapodoak_-_kladograma.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Tetrapodoak_-_kladograma.jpg/960px-Tetrapodoak_-_kladograma.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "7cc33529d1ff88b3ee9820f03eb548ab517592ad",
+          "size": 10986711,
+          "width": 7016,
+          "height": 9933,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Theklan",
+          "credit": "Own work Erabilitako irudiak: This file was derived from: Camelus bactrianus in western Mongolia 06.jpg : by Alexandr Frolov This file was derived from: A kestrel prepares to swoop down on its next me",
+          "description": "Gure Arbasoak sailaren bigarren denboraldiaren laburpen posterra. Denborarekin QR kodeak jartzen joango naiz.",
+          "date": "2025-07-21",
+          "categories": [
+            "Basque-language posters",
+            "Cladograms of Tetrapoda",
+            "Ikusgela posters",
+            "Our ancestors videos by Ikusgela"
+          ],
+          "preview": "sp050_flight_05.jpg"
+        }
+      ],
+      "rejectedForLicense": [
+        {
+          "title": "File:Bird notes (1903) (14727049996).jpg",
+          "license": "No restrictions"
+        }
+      ]
+    },
+    {
+      "id": "sp051_flight",
+      "speciesId": "sp051",
+      "role": "flight",
+      "kind": "image",
+      "search": "Phoenicurus ochruros flight filetype:bitmap",
+      "candidates": [
+        {
+          "title": "File:Phoenicurus.ochruros.in.flight.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Phoenicurus.ochruros.in.flight.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Phoenicurus.ochruros.in.flight.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Phoenicurus.ochruros.in.flight.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "sha1": "22e839e857a7898a3cc29ab8c2c6f2f113bce761",
+          "size": 30824,
+          "width": 291,
+          "height": 177,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "author": "Sarefo",
+          "credit": "Own work",
+          "description": "female or immature Phoenicurus ochruros in flight, at a train station, probably in the Eifel region, Germany.",
+          "date": "2004-07-13",
+          "categories": [
+            "Muscicapidae in flight",
+            "Phoenicurus ochruros gibraltariensis",
+            "Phoenicurus ochruros in Germany"
+          ],
+          "preview": "sp051_flight_01.jpg"
+        },
+        {
+          "title": "File:Black Redstart in Children's playground on Olhao river front. (11902820993).jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Black_Redstart_in_Children%27s_playground_on_Olhao_river_front._(11902820993).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Black_Redstart_in_Children%27s_playground_on_Olhao_river_front._%2811902820993%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Black_Redstart_in_Children%27s_playground_on_Olhao_river_front._%2811902820993%29.jpg/960px-Black_Redstart_in_Children%27s_playground_on_Olhao_river_front._%2811902820993%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "f0a863e3f2caf2d660c92c74c1c319d0e0df1e3c",
+          "size": 2967749,
+          "width": 3335,
+          "height": 1872,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "author": "Peter Broster",
+          "credit": "Black Redstart in Children's playground on Olhao river front.",
+          "description": "This drab little bird was seen in Olhao, Portugal. It behaved exactly like a european robin in the way it flies and it's lack of fear of people. In flight there s a lot of red in the tail feathers mostly hidden at rest. but you can just make it out in the photo.",
+          "date": "2014-01-04 17:04",
+          "categories": [
+            "Birds of Algarve",
+            "Nature of Olhão",
+            "Phoenicurus ochruros in Portugal"
+          ],
+          "preview": "sp051_flight_02.jpg"
+        },
+        {
+          "title": "File:Black Redstart Facts 02.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Black_Redstart_Facts_02.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Black_Redstart_Facts_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Black_Redstart_Facts_02.jpg/960px-Black_Redstart_Facts_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "26cce07586ab1fd687bb84e00da4e08ebcb231db",
+          "size": 17439746,
+          "width": 6000,
+          "height": 4000,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC0",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "author": "Shiv's fotografia",
+          "credit": "Own work",
+          "description": "The black redstart, belonging to the genus Phoenicurus, is a small passerine bird that was historically categorized within the thrush family but is now recognized as an Old World flycatcher. Formerly referred to by obsolete names such as Tithys redstart, blackstart, and black redtail, this species exhibits a distinctive orange tail, particularly noticeable when flashed open or during flight. The a",
+          "date": "2024-03-02 01:21:22",
+          "categories": [
+            "Phoenicurus ochruros phoenicuroides"
+          ],
+          "preview": "sp051_flight_03.jpg"
+        },
+        {
+          "title": "File:Black Redstart Facts 06.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Black_Redstart_Facts_06.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Black_Redstart_Facts_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Black_Redstart_Facts_06.jpg/960px-Black_Redstart_Facts_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "9d890789638844db5c67ba3cadeddc0f1ae12f64",
+          "size": 18386110,
+          "width": 6000,
+          "height": 4000,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC0",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "author": "Shiv's fotografia",
+          "credit": "Own work",
+          "description": "The black redstart, belonging to the genus Phoenicurus, is a small passerine bird that was historically categorized within the thrush family but is now recognized as an Old World flycatcher. Formerly referred to by obsolete names such as Tithys redstart, blackstart, and black redtail, this species exhibits a distinctive orange tail, particularly noticeable when flashed open or during flight. The a",
+          "date": "2024-03-02 01:21:17",
+          "categories": [
+            "Phoenicurus ochruros phoenicuroides"
+          ],
+          "preview": "sp051_flight_04.jpg"
+        },
+        {
+          "title": "File:Black Redstart Facts 05.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Black_Redstart_Facts_05.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Black_Redstart_Facts_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Black_Redstart_Facts_05.jpg/960px-Black_Redstart_Facts_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "99bb3f06c42e9fce79497e9cf981431cbc34968a",
+          "size": 16561047,
+          "width": 6000,
+          "height": 4000,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC0",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "author": "Shiv's fotografia",
+          "credit": "Own work",
+          "description": "The black redstart, belonging to the genus Phoenicurus, is a small passerine bird that was historically categorized within the thrush family but is now recognized as an Old World flycatcher. Formerly referred to by obsolete names such as Tithys redstart, blackstart, and black redtail, this species exhibits a distinctive orange tail, particularly noticeable when flashed open or during flight. The a",
+          "date": "2024-03-02 01:20:31",
+          "categories": [
+            "Phoenicurus ochruros phoenicuroides"
+          ],
+          "preview": "sp051_flight_05.jpg"
+        },
+        {
+          "title": "File:Black Redstart Facts 03.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Black_Redstart_Facts_03.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Black_Redstart_Facts_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Black_Redstart_Facts_03.jpg/960px-Black_Redstart_Facts_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "3de4fabce34875d05f8581edef4a5ce2d15c1d76",
+          "size": 17086829,
+          "width": 6000,
+          "height": 4000,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC0",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "author": "Shiv's fotografia",
+          "credit": "Own work",
+          "description": "The black redstart, belonging to the genus Phoenicurus, is a small passerine bird that was historically categorized within the thrush family but is now recognized as an Old World flycatcher. Formerly referred to by obsolete names such as Tithys redstart, blackstart, and black redtail, this species exhibits a distinctive orange tail, particularly noticeable when flashed open or during flight. The a",
+          "date": "2024-03-02 01:19:40",
+          "categories": [
+            "Phoenicurus ochruros phoenicuroides"
+          ],
+          "preview": "sp051_flight_06.jpg"
+        }
+      ],
+      "rejectedForLicense": []
+    }
+  ]
+}

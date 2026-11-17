@@ -3,12 +3,19 @@
  *
  * Runs before the app's module graph. The home route initializes underneath
  * and emits "birdspot:ready". Intro closes at five seconds, never before the
- * app is ready. No storage writes, location access, analytics or network calls.
+ * app is ready. Alleen de lokale introvoorkeur wordt bewaard.
  */
 (() => {
   'use strict';
   const splash=document.getElementById('birdspotSplash');
   if(!splash)return;
+  const key = 'birdspot-welcome-seen';
+  try {
+    if (localStorage.getItem(key) === '1') {
+      splash.remove();
+      return;
+    }
+  } catch (_) { /* Privéprofiel zonder opslag blijft bruikbaar. */ }
   const skip=splash.querySelector('#birdspotSplashSkip');
   const image=splash.querySelector('.birdspot-splash__art');
   const DURATION_MS=5000;
@@ -19,6 +26,7 @@
   function finish(){
     if(removed)return;
     removed=true;
+    try { localStorage.setItem(key, '1'); } catch (_) {}
     splash.remove();
     window.dispatchEvent(new CustomEvent('birdspot:splash-hidden',{
       detail:{elapsedMs:Math.round(performance.now()-startedAt)}
@@ -30,7 +38,8 @@
     splash.classList.add('is-exiting');
     splash.setAttribute('aria-hidden','true');
     skip?.setAttribute('disabled','');
-    dismissTimeout=setTimeout(finish,550);
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) finish();
+    else dismissTimeout=setTimeout(finish,550);
   }
   window.addEventListener('birdspot:ready',()=>{
     ready=true;

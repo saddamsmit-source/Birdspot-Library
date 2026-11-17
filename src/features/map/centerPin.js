@@ -58,7 +58,7 @@ export const LAYERS = Object.freeze({
 export function savedLayer() {
   try { const v = localStorage.getItem(LAYER_KEY); return LAYERS[v] ? v : 'kaart'; } catch (_) { return 'kaart'; }
 }
-function saveLayer(key) {
+export function saveLayer(key) {
   try { localStorage.setItem(LAYER_KEY, key); } catch (_) { /* privé-modus: alleen deze sessie */ }
 }
 

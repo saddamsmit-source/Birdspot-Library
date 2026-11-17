@@ -1,0 +1,40 @@
+[
+  {
+    "image": "/assets/species/plumage/sp174-juv.webp",
+    "species": "sp174",
+    "source": "https://www.inaturalist.org/photos/690152866",
+    "originalUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/690152866/original.jpg",
+    "sourceTitle": "iNaturalist photo 690152866",
+    "sourceAuthor": "euqirneto",
+    "sourceLicense": "CC BY 4.0",
+    "sameShot": true,
+    "method": "Volledig kader behouden. Omgezet naar WebP zonder EXIF, GPS of XMP.",
+    "sourceSha256": "bd0e4c29e06e109aa6c1e33132437b179a990978d415d815c7e4d2945ba76661",
+    "sha1": "9223991044e2f2a7159a20e635085a0cdaaae2f3",
+    "taxonInSource": "Periparus ater",
+    "annotations": [
+      "Onderzoekswaarneming van Periparus ater in Spanje, geannoteerd als Juvenile. Gele wang en doffe kop zijn goed zichtbaar."
+    ],
+    "auditDate": "2026-11-12",
+    "observation": "https://www.inaturalist.org/observations/377407055"
+  },
+  {
+    "image": "/assets/species/plumage/sp032-juv.webp",
+    "species": "sp032",
+    "source": "https://www.inaturalist.org/photos/18594803",
+    "originalUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/18594803/original.jpg",
+    "sourceTitle": "iNaturalist photo 18594803",
+    "sourceAuthor": "Dr. Nasser Halaweh",
+    "sourceLicense": "CC BY 4.0",
+    "sameShot": true,
+    "method": "Uitsnede rond de volledige vogel en lichte correctie van de helderheid. Omgezet naar WebP zonder EXIF, GPS of XMP.",
+    "sourceSha256": "655edbb03afe6ef0a6bba8c83224b75b360e4794382aa54f7846c7ceae4ee814",
+    "sha1": "7cfa17b50496f8de5fc8ff242a8f848c2db478f8",
+    "taxonInSource": "Poecile palustris",
+    "annotations": [
+      "Onderzoekswaarneming van Poecile palustris in Duitsland, geannoteerd als Juvenile. De foto toont een jonge vogel met doffe kap en zichtbare snavelhoeken."
+    ],
+    "auditDate": "2026-11-12",
+    "observation": "https://www.inaturalist.org/observations/12820201"
+  }
+]

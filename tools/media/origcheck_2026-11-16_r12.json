@@ -1,0 +1,108 @@
+{
+  "date": "2026-11-16",
+  "purpose": "F3-R12: alle 14 getoonde foto's van Huismus, Ringmus en Merel tegen het oorspronkelijke bronbeeld en de actuele Commons-rechten.",
+  "items": [
+    {
+      "speciesId": "sp043",
+      "image": "/assets/species/plumage/sp043-hero-male.webp",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "title": "File:House sparrow (Passer domesticus) breeding male Heligan.jpg"
+    },
+    {
+      "speciesId": "sp043",
+      "image": "/assets/species/plumage/sp043-adult_m.webp",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "title": "File:House sparrow 2022 04 22.jpg"
+    },
+    {
+      "speciesId": "sp043",
+      "image": "/assets/species/sp043.webp",
+      "author": "Ermell",
+      "license": "CC BY-SA 4.0",
+      "title": "File:Sperling Weibchen-20201025-RM-163340.jpg"
+    },
+    {
+      "speciesId": "sp043",
+      "image": "/assets/species/plumage/sp043-juv-review.webp",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "title": "File:House sparrow (Passer domesticus) juvenile.jpg"
+    },
+    {
+      "speciesId": "sp043",
+      "image": "/assets/species/plumage/sp043-flight.webp",
+      "author": "Mildeep",
+      "license": "CC BY-SA 4.0",
+      "title": "File:House Sparrow1.jpg"
+    },
+    {
+      "speciesId": "sp044",
+      "image": "/assets/species/sp044.webp",
+      "author": "Jakub Hałun",
+      "license": "CC BY 4.0",
+      "title": "File:Eurasian tree sparrow, Rżuchów, Świętokrzyskie Voivodeship, 20250421 1151 4165.jpg"
+    },
+    {
+      "speciesId": "sp044",
+      "image": "/assets/species/plumage/sp044-juv.webp",
+      "author": "Codrin Bucur",
+      "license": "CC BY 4.0",
+      "urls": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/213361930/original.jpg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/213361930/original.jpeg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/213361930/original.JPG"
+      ]
+    },
+    {
+      "speciesId": "sp044",
+      "image": "/assets/species/plumage/sp044-flight.webp",
+      "author": "Galina Jacyna",
+      "license": "CC BY-SA 3.0",
+      "title": "File:Waltz (31982909).jpeg"
+    },
+    {
+      "speciesId": "sp045",
+      "image": "/assets/species/plumage/sp045-hero-male.webp",
+      "author": "Luiz Lapa from Oeiras, Portugal",
+      "license": "CC BY 2.0",
+      "title": "File:Melro-preto, macho, Common Blackbird, male (52790386033).jpg"
+    },
+    {
+      "speciesId": "sp045",
+      "image": "/assets/species/sp045.webp",
+      "author": "Andreas Trepte",
+      "license": "CC BY-SA 2.5",
+      "title": "File:Common Blackbird.jpg"
+    },
+    {
+      "speciesId": "sp045",
+      "image": "/assets/species/plumage/sp045-flight.webp",
+      "author": "Bengt Nyman",
+      "license": "CC BY-SA 2.0",
+      "title": "File:NZ7 6931 (51844641169).jpg"
+    },
+    {
+      "speciesId": "sp045",
+      "image": "/assets/species/plumage/sp045-adult_f.webp",
+      "author": "Rupdeb",
+      "license": "CC BY-SA 4.0",
+      "title": "File:A female blackbird.jpg"
+    },
+    {
+      "speciesId": "sp045",
+      "image": "/assets/species/plumage/sp045-juv.webp",
+      "author": "hedera.baltica from Wrocław, Poland",
+      "license": "CC BY-SA 2.0",
+      "title": "File:Blackbird (36889364072).jpg"
+    },
+    {
+      "speciesId": "sp045",
+      "image": "/assets/species/plumage/sp045-free-flight.webp",
+      "author": "Alf Beard",
+      "license": "CC0 1.0",
+      "title": "File:Blackbirds.JPG"
+    }
+  ]
+}

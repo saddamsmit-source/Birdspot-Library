@@ -238,3 +238,60 @@
   text-align: center;
   line-height: 1.6;
 }
+
+.map-sheet-overlay {
+  position: absolute;
+  inset:    0;
+  z-index:  490;
+  background: rgba(0,0,0,.35);
+  opacity:  0;
+  pointer-events: none;
+  transition: opacity .25s;
+}
+.map-sheet-overlay.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.map-sheet-controls {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.map-sheet-handle,
+.map-sheet-dismiss {
+  min-height: 44px;
+  border-radius: var(--r-sm);
+  cursor: pointer;
+}
+
+.map-sheet-handle {
+  width: 72px;
+  display: grid;
+  place-items: center;
+}
+
+.map-sheet-handle::before {
+  content: '';
+  width: 40px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--muted);
+}
+
+.map-sheet-dismiss {
+  position: absolute;
+  inset-inline-end: var(--space-12);
+  top: 0;
+  min-width: 44px;
+  font-size: 26px;
+  line-height: 1;
+  color: var(--ink);
+}
+
+.map-sheet-controls button:focus-visible {
+  outline: 2px solid var(--brand-mid);
+  outline-offset: -2px;
+}

@@ -8,6 +8,7 @@
  * - Thumbnail uit IndexedDB (eerste foto/video van de waarneming)
  */
 
+import { appIcon, observationIcon } from '../../utils/icons.js';
 import { getSightings }     from '../../data/sightings.js';
 import { SPECIES }          from '../../data/species.js';
 import { getPhoto }         from '../../data/db.js';
@@ -17,7 +18,7 @@ import { methodLabel, sourceLabel } from './evidence.js';
 import { escHtml }          from '../../utils/html.js';
 
 // ── Entry point ────────────────────────────────────────────
-export async function renderSightings(el) {
+export async function renderSightings(el, { sightingId } = {}) {
   const sightings = await getSightings();
 
   el.innerHTML = `
@@ -28,6 +29,8 @@ export async function renderSightings(el) {
     <div id="sightingsList"></div>`;
 
   await renderList(el, sightings);
+  const selected = sightings.find(sighting => sighting?.id === sightingId);
+  if (selected && el.isConnected) await openSighting(el, selected);
 }
 
 // ── Lijst renderen ─────────────────────────────────────────
@@ -53,7 +56,7 @@ async function renderList(screenEl, sightings) {
   }
 
   // Sorted: nieuwste eerst (op datum, dan createdAt)
-  const sorted = [...sightings].sort((a, b) => {
+  const sorted = sightings.filter(sighting => sighting?.id).sort((a, b) => {
     const d = (b.date || '').localeCompare(a.date || '');
     return d !== 0 ? d : (b.createdAt || '').localeCompare(a.createdAt || '');
   });
@@ -76,18 +79,13 @@ async function renderList(screenEl, sightings) {
     if (!card) return;
     const s = sorted.find(x => x.id === card.dataset.id);
     if (!s) return;
-    await openDetailSheet(s, {
-      onDeleted: async () => {
-        const updated = await getSightings();
-        await renderList(screenEl, updated);
-      },
-      onUpdated: async () => {
-        // Herlaad de lijst na een edit (nieuwste data, vernieuwde kaartjes)
-        const updated = await getSightings();
-        await renderList(screenEl, updated);
-      },
-    });
+    await openSighting(screenEl, s);
   });
+}
+
+function openSighting(screenEl, sighting) {
+  const refresh = async () => renderList(screenEl, await getSightings());
+  return openDetailSheet(sighting, { onDeleted: refresh, onUpdated: refresh, isActive: () => screenEl.isConnected });
 }
 
 // ── Kaart bouwen ───────────────────────────────────────────
@@ -114,8 +112,8 @@ function buildCard(s, thumbUrl) {
         ${s.locationName
           ? `<span class="sight-card__sep">·</span>${svgPin()} ${escHtml(s.locationName)}`
           : ''}
-        ${method ? `<span class="sighting-observed-pill ${s.observationMethod === 'heard' ? 'is-heard' : ''}">${s.observationMethod === 'heard' ? '♪' : '◈'} ${escHtml(method)}</span>` : ''}
-        ${merlin ? `<span class="sighting-merlin-pill">♪ Merlin${s.merlinVerification !== 'checked' ? ' · suggestie' : ''}</span>` : ''}
+        ${method ? `<span class="sighting-observed-pill ${s.observationMethod === 'heard' ? 'is-heard' : ''}">${observationIcon(s.observationMethod)} ${escHtml(method)}</span>` : ''}
+        ${merlin ? `<span class="sighting-merlin-pill">${appIcon('soundwave')} Merlin${s.merlinVerification !== 'checked' ? ' · suggestie' : ''}</span>` : ''}
         ${hasMedia
           ? `<span class="sight-card__sep">·</span>
              ${svgPhoto()}

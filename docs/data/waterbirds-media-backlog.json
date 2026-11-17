@@ -1,0 +1,13 @@
+{
+  "reviewDate": "2026-11-07",
+  "candidates": [
+    {
+      "speciesId": "sp128",
+      "file": "Common Shelduck (Tadorna tadorna) juvenile, Slimbridge.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Common_Shelduck_%28Tadorna_tadorna%29_juvenile%2C_Slimbridge.jpg",
+      "status": "NOT INCLUDED",
+      "reason": "Bron noemt juvenile, maar beeld toont donkere kop, rode snavel en gedeeltelijke borstband; geen passend voorbeeld voor het beschreven vroege jeugdkleed. Geen exacte leeftijd geraden."
+    }
+  ],
+  "resolved": "Donsjongenfoto Bergeend, Kuifeendroep en tweede Bergeendopname alsnog opgehaald na Retry-After; opgenomen na controle."
+}

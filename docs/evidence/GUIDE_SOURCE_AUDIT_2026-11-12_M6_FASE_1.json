@@ -1,0 +1,146 @@
+[
+  {
+    "image": "/assets/species/plumage/sp059-adult_f.webp",
+    "species": "sp059",
+    "source": "https://commons.wikimedia.org/wiki/File:Female_Blackcap_-_Sylvia_atricapilla_%2849979484338%29.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Female_Blackcap_-_Sylvia_atricapilla_%2849979484338%29.jpg",
+    "sourceTitle": "Female Blackcap - Sylvia atricapilla (49979484338).jpg",
+    "sourceAuthor": "caroline legg",
+    "sourceLicense": "CC BY 2.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "53cc4baa8ad9a59a12157c8ee6d69354789171e3fc4bc5c49c3bb86a83af5a52",
+    "sha1": "5a778b5f20e86e875d1734d8546c8e34f946195a",
+    "taxonInSource": "Sylvia atricapilla",
+    "annotations": [
+      "De fotograaf benoemt het individu als vrouwtje. De roodbruine kruin is duidelijk zichtbaar."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp059-juv.webp",
+    "species": "sp059",
+    "source": "https://commons.wikimedia.org/wiki/File:Svarth%C3%A4tta_%28Sylvia_atricapilla%29_juvenil_i_h%C3%A4gg_i_V%C3%A4smestorp_2023-06-17_%284302%29.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Svarth%C3%A4tta_%28Sylvia_atricapilla%29_juvenil_i_h%C3%A4gg_i_V%C3%A4smestorp_2023-06-17_%284302%29.jpg",
+    "sourceTitle": "Svarthätta (Sylvia atricapilla) juvenil i hägg i Väsmestorp 2023-06-17 (4302).jpg",
+    "sourceAuthor": "Gunnar Creutz",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "8111415a1f55b4ce43ea4398c8fe29dd120d07fb7da307e1ea75bcc8e6e417d5",
+    "sha1": "1614708cb771f2f10326427bb25eeff20ff33b62",
+    "taxonInSource": "Sylvia atricapilla",
+    "annotations": [
+      "De fotograaf benoemt een juveniel. De bruine kruin is zichtbaar. Geslacht onbekend."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp061-hero-male.webp",
+    "species": "sp061",
+    "source": "https://www.inaturalist.org/photos/128098779",
+    "originalUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/128098779/large.jpg",
+    "sourceTitle": "iNaturalist photo 128098779",
+    "sourceAuthor": "Donald Davesne",
+    "sourceLicense": "CC BY 4.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "892bbfa289a98caf319da0a698b71f4473c97d91fd6f624e4c96f5f74e35a70e",
+    "sha1": "436d67f3e03365141d5e181284b98d1b2b972d99",
+    "taxonInSource": "Curruca communis",
+    "annotations": [
+      "De voorjaarswaarneming heeft de annotatie Male. De grijze kop, witte keel en lichte, bruinige iris zijn zichtbaar."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp061-adult_f.webp",
+    "species": "sp061",
+    "source": "https://www.inaturalist.org/photos/295574541",
+    "originalUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/295574541/large.jpeg",
+    "sourceTitle": "iNaturalist photo 295574541",
+    "sourceAuthor": "Roy Lowry",
+    "sourceLicense": "CC BY 4.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "f37928b92368441f923f6a90351bd84e31439786d19863aebcb41813419430b5",
+    "sha1": "80acc70dcff797b32f4e4975c097e43f0dce38df",
+    "taxonInSource": "Curruca communis",
+    "annotations": [
+      "De fotograaf benoemt een vrouwtje. De research-grade waarneming heeft Adult en Female als annotatie. Het geslacht is bij deze soort op kleed alleen vaak moeilijk te bepalen."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp061-juv.webp",
+    "species": "sp061",
+    "source": "https://www.inaturalist.org/photos/517714670",
+    "originalUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/517714670/large.jpg",
+    "sourceTitle": "iNaturalist photo 517714670",
+    "sourceAuthor": "John Ashburner",
+    "sourceLicense": "CC BY 4.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "5407cce3aa483697935b431cbe38027c85373a8d4b376ed342dfd1c7f3d4b922",
+    "sha1": "a866e9915ea40206d3c4934c44cdb40207c6eea5",
+    "taxonInSource": "Curruca communis",
+    "annotations": [
+      "De research-grade waarneming heeft de annotatie Juvenile. De bruine kop en verse veerranden zijn zichtbaar. Geslacht onbekend."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp064-hero-male.webp",
+    "species": "sp064",
+    "source": "https://commons.wikimedia.org/wiki/File:Firecrest_2024_01_28_01.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Firecrest_2024_01_28_01.jpg",
+    "sourceTitle": "Firecrest 2024 01 28 01.jpg",
+    "sourceAuthor": "Alexis Lours",
+    "sourceLicense": "CC BY 4.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "b57bb1023d61dcd7ea4e8a99ac4687661e68be9e00f3c1f89b5473a3049d44d4",
+    "sha1": "6eb8f9113b0c7153f81dde9965d510da70d69dd6",
+    "taxonInSource": "Regulus ignicapilla",
+    "annotations": [
+      "De fotograaf benoemt dit zingende individu als mannetje. Het gekleurde kruinveld en de contrastrijke koptekening zijn zichtbaar."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp064-juv.webp",
+    "species": "sp064",
+    "source": "https://www.inaturalist.org/photos/298756944",
+    "originalUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/298756944/large.jpg",
+    "sourceTitle": "iNaturalist photo 298756944",
+    "sourceAuthor": "euqirneto",
+    "sourceLicense": "CC BY 4.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "4b4ab82400d0692e0130b6068ba21c254cedb04295a7db0aec5a20fa57093e9c",
+    "sha1": "730279615ce74e33d2e500ffc7e541b13908fde0",
+    "taxonInSource": "Regulus ignicapilla",
+    "annotations": [
+      "De research-grade waarneming heeft de annotatie Juvenile. De vogel is volledig in beeld en mist de opvallende volwassen kruinstreep. Geslacht onbekend."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/sp062.webp",
+    "species": "sp062",
+    "source": "https://commons.wikimedia.org/wiki/File:Lesser_Whitethroat_by_Sighmanb.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/78/Lesser_Whitethroat_by_Sighmanb.jpg",
+    "sourceTitle": "Lesser Whitethroat by Sighmanb.jpg",
+    "sourceAuthor": "Sighmanb",
+    "sourceLicense": "CC BY 2.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "5645b9e6369c74576981751a4214e216d66bc1a8a9f81f96bacab1d712e3c6c6",
+    "sha1": "879f1042fcde0fc4eabbeb8ea5abc41a02005d72",
+    "taxonInSource": "Curruca curruca",
+    "annotations": [
+      "De bestandspagina benoemt de soort onder de vroegere wetenschappelijke naam Sylvia curruca. Koptekening en lichte keel zijn zichtbaar. Geslacht onbekend."
+    ],
+    "auditDate": "2026-11-12"
+  }
+]

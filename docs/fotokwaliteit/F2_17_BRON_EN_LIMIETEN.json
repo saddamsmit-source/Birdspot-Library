@@ -1,0 +1,214 @@
+{
+  "schema": "birdspot-f2-17-proof-and-limitations-v1",
+  "date": "2026-11-14",
+  "baseSha": "67fcdf921427e8c8e80da06c10714fadb797ba3c",
+  "headSha": "PENDING",
+  "status": "PARTIALLY TESTED",
+  "batch": [
+    {
+      "id": "sp039",
+      "name": "Kneu",
+      "latin": "Linaria cannabina"
+    },
+    {
+      "id": "sp041",
+      "name": "Appelvink",
+      "latin": "Coccothraustes coccothraustes"
+    },
+    {
+      "id": "sp042",
+      "name": "Roodmus",
+      "latin": "Carpodacus erythrinus"
+    }
+  ],
+  "scope": "3 species, 42/140 touched in F2, 3 new side-by-side perched comparisons; no new images or license changes.",
+  "priorityRule": "Vogelbescherming and the actually consulted ANWB bird guide species pages first for independent identification of candidate images and written claims, without copying their images. Per-image original/license/attribution and actual binary matching remain independent proof requirements. Smaller birds have optional flight photo.",
+  "sources": [
+    {
+      "publisher": "Vogelbescherming Nederland",
+      "id": "sp039",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kneu",
+      "read": "YES",
+      "claims": "Red breeding forehead/chest adult male; no red female and juveniles; fine grey bill."
+    },
+    {
+      "publisher": "Vogelbescherming Nederland",
+      "id": "sp041",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/appelvink",
+      "read": "YES",
+      "claims": "Very heavy bill, large head/neck, broad white wing markings, white tail tip."
+    },
+    {
+      "publisher": "Vogelbescherming Nederland",
+      "id": "sp042",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/roodmus",
+      "read": "YES",
+      "claims": "Adult red head/chest/rump, juvenile beige wingbars, female and immature olive brown without red, coastal NL distribution."
+    },
+    {
+      "publisher": "Vogelbescherming Nederland",
+      "id": "sp035",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/vink",
+      "read": "YES",
+      "claims": "Smaller conical beak, female two light wingbars."
+    },
+    {
+      "publisher": "ANWB Vogelgids van Europa",
+      "url": "https://play.google.com/store/apps/details?hl=nl&id=com.natureguides.birdguide",
+      "read": "NOT TESTED",
+      "claims": "No actual Kneu, Appelvink or Roodmus species passage consulted. ANWB book/app listing is no identification proof."
+    },
+    {
+      "publisher": "Wikimedia Commons exact original photo",
+      "id": "sp039",
+      "url": "https://commons.wikimedia.org/wiki/File:Carduelis_cannabina_-England_-male-8.jpg",
+      "read": "YES metadata",
+      "claims": "Male Common Linnet Lincolnshire, photographer Joe Pell, CC BY 2.0 with link and attribution required. Local WebP not viewed."
+    },
+    {
+      "publisher": "Wikimedia Commons hawfinch file category",
+      "id": "sp041",
+      "url": "https://commons.wikimedia.org/wiki/Category:Coccothraustes_coccothraustes",
+      "read": "YES list",
+      "claims": "Filename matches original register; page-level author/license not independently checked."
+    },
+    {
+      "publisher": "Wikimedia Commons rosefinch file category",
+      "id": "sp042",
+      "url": "https://commons.wikimedia.org/wiki/Category:Carpodacus_erythrinus",
+      "read": "YES list",
+      "claims": "Filename matches original register; page-level author/license not independently checked."
+    }
+  ],
+  "registeredPhotoSnapshot": [
+    {
+      "id": "sp039",
+      "role": "adult male hero",
+      "path": "/assets/species/sp039.webp",
+      "original": "https://commons.wikimedia.org/wiki/File:Carduelis_cannabina_-England_-male-8.jpg",
+      "author": "Joe Pell",
+      "license": "CC BY 2.0",
+      "originalMetadataChecked": true,
+      "WebPMatch": "NOT TESTED"
+    },
+    {
+      "id": "sp039",
+      "role": "conditional flight",
+      "path": "/assets/species/plumage/sp039-flight.webp",
+      "original": "https://www.inaturalist.org/photos/617561306",
+      "author": "Codrin Bucur",
+      "license": "CC BY 4.0",
+      "open": "FQA-02 conditional: two very small birds, wing details poor; flight optional, defer viewer decision"
+    },
+    {
+      "id": "sp041",
+      "role": "adult male hero",
+      "path": "/assets/species/sp041.webp",
+      "original": "https://commons.wikimedia.org/wiki/File:Hawfinch_(Coccothraustes_coccothraustes)_male_Drenthe_2.jpg",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "licenseRecheck": "NOT TESTED"
+    },
+    {
+      "id": "sp041",
+      "role": "adult female",
+      "path": "/assets/species/plumage/sp041-adult_f.webp",
+      "original": "https://commons.wikimedia.org/wiki/File:Hawfinch_%28Female%29_%2848163370781%29.jpg",
+      "author": "Andy Morffew",
+      "license": "CC BY 2.0",
+      "sexRecheck": "NOT TESTED"
+    },
+    {
+      "id": "sp041",
+      "role": "juvenile",
+      "path": "/assets/species/plumage/sp041-juv.webp",
+      "original": "https://commons.wikimedia.org/wiki/File:Hawfinch_%28Coccothraustes_coccothraustes%29_juvenile_2.jpg",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "ageRecheck": "NOT TESTED"
+    },
+    {
+      "id": "sp041",
+      "role": "conditional flight",
+      "path": "/assets/species/plumage/sp041-flight.webp",
+      "original": "https://www.inaturalist.org/photos/576075793",
+      "author": "Codrin Bucur",
+      "license": "CC BY 4.0",
+      "open": "330x275 px, historically conditional; optional photo search, no independent look now"
+    },
+    {
+      "id": "sp042",
+      "role": "adult male hero",
+      "path": "/assets/showcase/sp042.webp",
+      "original": "https://commons.wikimedia.org/wiki/File:Carpodacus_erythrinus_303190528.jpg",
+      "author": "Поляков Александр",
+      "license": "CC BY 4.0",
+      "licenseRecheck": "NOT TESTED"
+    }
+  ],
+  "comparisonChanges": [
+    {
+      "label": "Kneu en Roodmus · mannetjes in rust",
+      "birds": [
+        "sp039",
+        "sp042"
+      ],
+      "role": "already registered adult-male hero portraits",
+      "limitation": "Not valid for immature/female birds lacking red"
+    },
+    {
+      "label": "Appelvink en Vink · vrouwtjes in rust",
+      "birds": [
+        "sp041",
+        "sp035"
+      ],
+      "role": "registered adult_f pair"
+    },
+    {
+      "label": "Appelvink en Vink · juvenielen in rust",
+      "birds": [
+        "sp041",
+        "sp035"
+      ],
+      "role": "registered juvenile pair"
+    }
+  ],
+  "openPoints": [
+    "No newly downloaded or edited media; original-to-local-WebP binary inspection NOT TESTED for 7 registered batch images.",
+    "Independent checks of most original individual licences and the exact photo age/sex roles remain NOT TESTED.",
+    "Kneu missing distinct female and juvenile portraits; Roodmus missing female, juvenile and flight portraits.",
+    "Kneu flight and Appelvink flight historically conditional; don't force new flight image. Verify present display quality before deciding to remove or retain.",
+    "ANWB bird-guide species passages for three species not accessible/read, so NOT TESTED rather than fabricated independent source.",
+    "Actual browser mobile check (CI pending), physical Android, ZIP restore, production deploy, integrated release QA NOT TESTED.",
+    "The Vink juvenile comparison uses the already registered photo /assets/species/plumage/sp035-juv-review.webp under GUIDE_POSES; its original-to-WebP pixel match remains NOT TESTED."
+  ],
+  "correction": {
+    "file": "F2_16_BRON_EN_LIMIETEN.json",
+    "wrong": [
+      "sp039 Keep",
+      "sp041 Appelvink",
+      "sp042 Kneu"
+    ],
+    "correct": [
+      "sp039 Kneu",
+      "sp041 Appelvink",
+      "sp042 Roodmus"
+    ],
+    "why": "checked live registered NL species IDs, not guesswork"
+  },
+  "nextBatch": "UNKNOWN until current F2 register and credited photo species are checked",
+  "rollback": "Close draft PR or revert own two F2-17 commits; PR217 unchanged.",
+  "qaOnNewSha": "PENDING",
+  "ciLearning": {
+    "issue": "F2-17 sp035 juvenile image exists under GUIDE_POSES, not GUIDE_PLUMAGE; old guide_coverage validator assumed all age-matched comparison images were GUIDE_PLUMAGE entries, generating undefined.",
+    "firstObservedHead": "5537a19c7edec6354287248945f5ec1ee6f73267",
+    "failedWorkflows": [
+      43639298283,
+      43639298281,
+      43639298109
+    ],
+    "fix": "Use comparisonPhoto for a named role without a GUIDE_PLUMAGE entry to check the actual registered pose and its original author, license, source and file; preserve strict checkPhoto. Correct targeted regression from imagined sp035-juv.webp to real sp035-juv-review.webp.",
+    "status": "RETEST_REQUIRED",
+    "prevention": "Use the same source-resolver in actual UI and independent code coverage when a role can be provided by a pose image."
+  }
+}

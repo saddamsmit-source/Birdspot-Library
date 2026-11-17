@@ -1,0 +1,20 @@
+name: Birdspot source info i UX QA
+on:
+  pull_request:
+    paths:
+      - 'src/features/species/detailSections.js'
+      - 'styles/species.css'
+      - 'tests/test_source_info_i.mjs'
+      - '.github/workflows/source-info-i-ux-qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-i:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: node --check src/features/species/detailSections.js
+      - run: node tests/test_source_info_i.mjs
+      - run: node tests/test_guide_poses.mjs

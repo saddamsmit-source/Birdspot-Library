@@ -1,0 +1,41 @@
+{
+  "generated": "2026-11-17T10:54:29Z",
+  "rule": {
+    "sameMinR": 0.9
+  },
+  "items": [
+    {
+      "speciesId": "sp067",
+      "audio": "/assets/species/audio/sp067-call.mp3",
+      "title": "File:Eurasian Treecreeper (Certhia familiaris) (W1CDR0001463 BD5).ogg",
+      "author": "Aubrey John Williams / The British Library Board",
+      "license": "CC BY-SA 4.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Eurasian_Treecreeper_(Certhia_familiaris)_(W1CDR0001463_BD5).ogg",
+        "sha1": "1397d7e24bd7f3f6b408d4df6cfe57bb86a2e937",
+        "license": "CC BY-SA 4.0",
+        "author": "",
+        "duration": 51.50147392290249,
+        "mime": "application/ogg",
+        "creditFields": {
+          "copyrightHolder": "The British Library Board",
+          "recordist": "Aubrey John Williams"
+        },
+        "pageParams": {
+          "performance_date": "",
+          "performer": "| permission ={{PermissionTicket|id=2015111010010706}}{{cc-by-sa-4.0}}"
+        },
+        "creditLines": [
+          "| other_fields = {{Information field|name=British Library Shelfmark|value=W1CDR0001463 BD5}}{{Information field|name=Copyright Holder|value=The British Library ",
+          "<!-- <metadata_mapped_json>{\"composer\":null,\"composition_date\":null,\"description\":\"The calls of a Eurasian Treecreeper, recorded at Frensham Great Pond, Surrey,",
+          "&lt;OtherFields2&gt;{{Information field|name=Copyright Holder|value=The British Library Board}}&lt;/OtherFields2&gt;",
+          "&lt;OtherFields3&gt;{{Information field|name=Recordist|value=Aubrey John Williams}}&lt;/OtherFields3&gt;"
+        ]
+      },
+      "authorRule": "recordist+copyright-holder",
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    }
+  ]
+}

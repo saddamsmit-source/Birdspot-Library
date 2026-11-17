@@ -1,0 +1,74 @@
+[
+ {
+  "image": "/assets/species/plumage/sp105-adult_f.webp",
+  "species": "sp105",
+  "source": "https://commons.wikimedia.org/wiki/File:Phasianus_colchicus_%28Common_pheasant%29_female%2C_Texel%2C_the_Netherlands.jpg",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Phasianus_colchicus_%28Common_pheasant%29_female%2C_Texel%2C_the_Netherlands.jpg",
+  "sourceTitle": "File:Phasianus colchicus (Common pheasant) female, Texel, the Netherlands.jpg",
+  "sourceAuthor": "Bj.schoenmakers",
+  "sourceLicense": "CC0 1.0",
+  "sameShot": true,
+  "method": "directe WebP-conversie van de originele Commons-JPEG",
+  "sourceSha256": "c8d66d9c640749d5ec9c8effb411d48186fe30e29416aec232da91b33283a637",
+  "sha1": "85071d1d286688aba5b9db55323c0a54c166f3a7",
+  "taxonInSource": "Phasianus colchicus",
+  "annotations": [
+   "Fotograaf benoemt een vrouwtje. Het verenkleed en de staart ondersteunen het label."
+  ],
+  "auditDate": "2026-11-11"
+ },
+ {
+  "image": "/assets/species/plumage/sp105-juv.webp",
+  "species": "sp105",
+  "source": "https://commons.wikimedia.org/wiki/File:Phasianus_colchicus_Oulu_20170723_04.jpg",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/54/Phasianus_colchicus_Oulu_20170723_04.jpg",
+  "sourceTitle": "File:Phasianus colchicus Oulu 20170723 04.jpg",
+  "sourceAuthor": "Estormiz",
+  "sourceLicense": "CC0 1.0",
+  "sameShot": true,
+  "method": "directe WebP-conversie van de originele Commons-JPEG",
+  "sourceSha256": "689f5093c3d3a018c0c1e730f846f86fb29fa82ab31e20cb390c3bba8c3d7944",
+  "sha1": "617a552d2e813c7223e8d7231b7ab64f04fce796",
+  "taxonInSource": "Phasianus colchicus",
+  "annotations": [
+   "Fotograaf benoemt een jonge Fazant. Het geslacht blijft onbekend."
+  ],
+  "auditDate": "2026-11-11"
+ },
+ {
+  "image": "/assets/species/plumage/sp141-juv.webp",
+  "species": "sp141",
+  "source": "https://commons.wikimedia.org/wiki/File:Apus_apus_juvenile_rescue_Paris_20260627.jpg",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Apus_apus_juvenile_rescue_Paris_20260627.jpg",
+  "sourceTitle": "File:Apus apus juvenile rescue Paris 20260627.jpg",
+  "sourceAuthor": "Marie-Lan Taÿ Pamart",
+  "sourceLicense": "CC BY 4.0",
+  "sameShot": true,
+  "method": "directe WebP-conversie van de originele Commons-JPEG",
+  "sourceSha256": "9ebd96ad7fe8ddd79248020f8adf1577e8e3981ee2dcc641816fc5b1fadc08a4",
+  "sha1": "329bd54779414abb93c31cebd7d3d1b2169e9a30",
+  "taxonInSource": "Apus apus",
+  "annotations": [
+   "Fotograaf benoemt een juveniel dat na redding werd opgevangen. De lichte veerranden ondersteunen het label."
+  ],
+  "auditDate": "2026-11-11"
+ },
+ {
+  "image": "/assets/species/plumage/sp141-flight.webp",
+  "species": "sp141",
+  "source": "https://commons.wikimedia.org/wiki/File:Common_Swift_2025_07_18_01.jpg",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/92/Common_Swift_2025_07_18_01.jpg",
+  "sourceTitle": "File:Common Swift 2025 07 18 01.jpg",
+  "sourceAuthor": "Alexis Lours",
+  "sourceLicense": "CC BY 4.0",
+  "sameShot": true,
+  "method": "directe WebP-conversie van de originele Commons-JPEG",
+  "sourceSha256": "646e16484c2cfe5d1dfe3b10aabf9e4e064d22900232b27f553e6ef88fa21ce6",
+  "sha1": "c70b8bd9869dd7cedbe5fee70a6be78693830596",
+  "taxonInSource": "Apus apus",
+  "annotations": [
+   "Fotograaf benoemt een Gierzwaluw in vlucht. Leeftijd en geslacht zijn niet vastgesteld."
+  ],
+  "auditDate": "2026-11-11"
+ }
+]

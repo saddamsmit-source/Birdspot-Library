@@ -1,0 +1,19 @@
+[
+ {
+  "image": "/assets/species/plumage/sp003-flight-open-sky.webp",
+  "species": "sp003",
+  "source": "https://www.inaturalist.org/photos/757637556",
+  "sourceTitle": "iNaturalist-foto 757637556",
+  "sourceAuthor": "andygpos",
+  "sourceLicense": "CC BY 4.0",
+  "sourceSha1": "296f271105d94432c6b647221d3c55afa9a91f48",
+  "taxonInSource": "Columba oenas",
+  "qualityGrade": "research",
+  "annotations": [],
+  "sameShot": true,
+  "method": "uitsnede rechtstreeks uit gecontroleerd origineel (145,160)-(825,755)",
+  "auditDate": "14-11-2026",
+  "sourceAgeWords": [],
+  "observation": "https://www.inaturalist.org/observations/411812206"
+ }
+]

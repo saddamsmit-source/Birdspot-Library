@@ -143,45 +143,146 @@ body::before {
   color: rgba(255,255,255,.7);
 }
 
-/* Zoekbalk in header */
-.app-header__search {
-  flex: 1;
-  position: relative;
-  max-width: 100%;
-}
+/* De zoekbalk staat op een eigen regel onder de appkop. */
+.app-header { flex-wrap: wrap; }
 
-.app-header__search-input {
+.app-search-trigger {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   width: 100%;
   height: 38px;
-  padding: 0 var(--space-12) 0 38px;
+  padding: 0 12px;
   background: rgba(255,255,255,.12);
-  border: 1.5px solid rgba(255,255,255,.18);
+  border: 1.5px solid rgba(255,255,255,.38);
   border-radius: var(--r-pill);
-  font-family: var(--font-body);
   font-size: var(--fs-meta);
   color: var(--on-brand);
-  outline: none;
-  transition: background .15s, border-color .15s;
+  text-align: left;
 }
 
-.app-header__search-input::placeholder {
-  color: rgba(255,255,255,.55);
+.app-search-trigger svg, .app-search-form svg {
+  flex: none;
+  width: 18px;
+  height: 18px;
 }
 
-.app-header__search-input:focus {
-  background: rgba(255,255,255,.2);
-  border-color: rgba(255,255,255,.4);
+.app-search-dialog {
+  position: fixed;
+  inset: var(--search-top, 0px) 0 auto;
+  width: 100%;
+  height: var(--search-height, 100%);
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  border: 0;
+  background: var(--bg);
+  color: var(--ink);
 }
 
-.app-header__search-icon {
-  position: absolute;
-  left: 11px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 15px;
-  height: 15px;
-  color: rgba(255,255,255,.6);
-  pointer-events: none;
+.app-search-dialog[open] {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-search-head {
+  flex: none;
+  background: var(--brand);
+  color: var(--on-brand);
+  padding: calc(8px + env(safe-area-inset-top, 0px))
+    max(16px, env(safe-area-inset-right, 0px)) 12px
+    max(16px, env(safe-area-inset-left, 0px));
+}
+
+.app-search-heading, .app-search-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.app-search-heading h1 {
+  font-family: var(--font-display);
+  font-size: 21px;
+}
+
+.app-search-close, .app-search-form button {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 44px;
+  min-height: 44px;
+  color: inherit;
+}
+
+.app-search-close { font-size: 26px; }
+
+.app-search-form {
+  height: 38px;
+  padding-left: 12px;
+  border: 1.5px solid rgba(255,255,255,.5);
+  border-radius: var(--r-pill);
+  background: rgba(255,255,255,.12);
+}
+
+.app-search-form input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: var(--r-pill);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 16px;
+  color-scheme: dark;
+}
+
+.app-search-form input::placeholder { color: rgba(255,255,255,.82); }
+.app-search-form button { min-height: 38px; border-radius: var(--r-pill); }
+
+.app-search-trigger:focus-visible,
+.app-search-head button:focus-visible,
+.app-search-form:focus-within {
+  outline: 2px solid var(--on-brand);
+  outline-offset: 2px;
+}
+
+.app-search-form input:focus { outline: none; }
+
+.app-search-content {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 16px max(16px, env(safe-area-inset-right, 0px))
+    calc(16px + env(safe-area-inset-bottom, 0px))
+    max(16px, env(safe-area-inset-left, 0px));
+}
+
+.app-search-results section { margin-top: 18px; }
+.app-search-results h2 { font-size: 1rem; margin-bottom: 6px; }
+.app-search-status, .app-search-result span { color: var(--ink-2, var(--ink)); }
+
+.app-search-result, .app-search-more {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  padding: 8px 12px;
+  background: var(--surface);
+  color: var(--ink);
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.app-search-result strong, .app-search-result span { display: block; }
+.app-search-result span { font-size: .85rem; }
+.app-search-more { text-decoration: underline; }
+.app-search-result:focus-visible, .app-search-more:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: -2px;
 }
 
 /* ── Navigatie onderaan ───────────────────────────────── */
@@ -503,3 +604,9 @@ body::before {
     transition-duration: .01ms !important;
   }
 }
+
+/* Avoid mobile focus zoom; map zoom remains handled by Leaflet. */
+@media (pointer:coarse) { input,select,textarea {font-size:max(16px,1em);} }
+.route-recovery {padding:28px 20px;}
+.route-recovery p {margin:16px 0;}
+.route-recovery button {padding:14px 20px;background:var(--brand);color:white;border-radius:12px;}

@@ -1,0 +1,18 @@
+[
+  {
+    "asset": "/assets/species/plumage/sp039-adult_f.webp",
+    "bytes": 129714,
+    "sha256": "db49ad6fb9a5b1c940a8f146ee11f617b21d75123708a28db92849788b8e1265",
+    "sourceSha1": "2622240c3938ae3534a05f178bbfd5b6919030f2",
+    "license": "CC BY-SA 4.0",
+    "author": "Charles J. Sharp"
+  },
+  {
+    "asset": "/assets/species/plumage/sp039-juv.webp",
+    "bytes": 176292,
+    "sha256": "aa45165d672774825d88c49a40cec42c43175434751ec66c692500cced055d56",
+    "sourceSha1": "2bd252402b2675fe932786877e6e4d14198cd6b5",
+    "license": "CC BY 2.0",
+    "author": "gailhampshire from Cradley, Malvern, U.K"
+  }
+]

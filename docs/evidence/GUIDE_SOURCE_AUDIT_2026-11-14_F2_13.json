@@ -1,0 +1,169 @@
+[
+ {
+  "image": "/assets/species/sp033.webp",
+  "species": "sp033",
+  "source": "https://commons.wikimedia.org/wiki/File:Crested_tit_2026_01_04_01.jpg",
+  "sourceTitle": "File:Crested tit 2026 01 04 01.jpg - Wikimedia Commons",
+  "sourceAuthor": "Alexis Lours",
+  "sourceLicense": "CC BY 4.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "6e6a2c783485bca9595cdabbae3c23e360348eb9",
+  "sourceImageSha1": "5849ef79b0239388ec01c80378b6f8612c623b0e",
+  "sourceImageSize": [
+   3946,
+   2631
+  ],
+  "visualRoleCheck": "Volwassen veldkleed in zijaanzicht, spitse kuif en donkere wangboog. Geslacht onbekend."
+ },
+ {
+  "image": "/assets/species/plumage/sp033-view.webp",
+  "species": "sp033",
+  "source": "https://commons.wikimedia.org/wiki/File:Lophophanes_cristatus_Luc_Viatour_1.jpg",
+  "sourceTitle": "File:Lophophanes cristatus Luc Viatour 1.jpg - Wikimedia Commons",
+  "sourceAuthor": "Luc Viatour / https://Lucnix.be",
+  "sourceLicense": "CC BY-SA 3.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "7d3beb978d5616da9ca99583bbab63d83f94afba",
+  "sourceImageSha1": "ac255937d2508bce5496913a650b4189ed9a31eb",
+  "sourceImageSize": [
+   1400,
+   1400
+  ],
+  "visualRoleCheck": "Andere hoek op de kuif en wangboog. Leeftijd en geslacht open. De bron noemt het historische synoniem Parus cristatus.",
+  "rightsOpen": "De maker vraagt zichtbare naamsvermelding en website bij het beeld. Aanpassing in PR #212 op e296f8d."
+ },
+ {
+  "image": "/assets/species/plumage/sp033-flight.webp",
+  "species": "sp033",
+  "source": "https://commons.wikimedia.org/wiki/File:Haubenmeise_Abflug.JPG",
+  "sourceTitle": "File:Haubenmeise Abflug.JPG - Wikimedia Commons",
+  "sourceAuthor": "Sgbeer",
+  "sourceLicense": "CC BY-SA 3.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "edc08a3e3792fe39d1c9b77424a3277e16d1d38e",
+  "sourceImageSha1": "d0797726f5df96962f00b23b45a21e77d7f69ae7",
+  "sourceImageSize": [
+   960,
+   720
+  ],
+  "visualRoleCheck": "Geheven vleugels bij de afzet op sneeuw. De fotograaf beschrijft vertrek met voedsel. In de gids blijft het beeld bij overige herkenningsfoto’s."
+ },
+ {
+  "image": "/assets/species/plumage/sp033-juv.webp",
+  "species": "sp033",
+  "source": "https://www.inaturalist.org/photos/384784000",
+  "sourceTitle": "Photo 384784000, (c) Micha Baum, some rights reserved (CC BY-SA), uploaded by Micha Baum · iNaturalist",
+  "sourceAuthor": "Micha Baum",
+  "sourceLicense": "CC BY-SA 4.0",
+  "sameShot": true,
+  "method": "Appfoto naast origineel. SHA-256 gelijk aan het eerder ingevoerde oorspronkelijke bestand.",
+  "auditDate": "14-11-2026",
+  "assetSha1": "26da657ef80d5914ed2459a5a4a3928a620429e8",
+  "sourceImageSha1": "f141c9cbcf893d769744b6e3db37743cc4903923",
+  "sourceImageSize": [
+   1800,
+   1685
+  ],
+  "visualRoleCheck": "Juveniel bevestigd door fotograaf en waarnemingsannotatie. Korte kuif en lichte snavelhoeken zichtbaar, geslacht onbekend.",
+  "observation": "https://www.inaturalist.org/observations/217501912",
+  "annotations": [
+   "De fotograaf beschrijft drie jongen en een ouder die voert. Life Stage: Juvenile (iNaturalist attribute 1, value 8)."
+  ]
+ },
+ {
+  "image": "/assets/species/sp034.webp",
+  "species": "sp034",
+  "source": "https://commons.wikimedia.org/wiki/File:Long-tailed_Tit_2025_03_20_02.jpg",
+  "sourceTitle": "File:Long-tailed Tit 2025 03 20 02.jpg - Wikimedia Commons",
+  "sourceAuthor": "Alexis Lours",
+  "sourceLicense": "CC BY 4.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "0f6198891c44432d251e10d95e824433b8c622f3",
+  "sourceImageSha1": "42dc42280574e63029d5452386c9215c937d5377",
+  "sourceImageSize": [
+   4896,
+   3264
+  ],
+  "visualRoleCheck": "Volwassen veldkleed. Lichte kop met donkere kruinstreep. Volledige staart is zichtbaar. Exacte ondersoort en geslacht onbekend."
+ },
+ {
+  "image": "/assets/species/plumage/sp034-juv.webp",
+  "species": "sp034",
+  "source": "https://commons.wikimedia.org/wiki/File:Long-tailed_tit_%28Aegithalos_caudatus%29_juvenile_2.jpg",
+  "sourceTitle": "File:Long-tailed tit (Aegithalos caudatus) juvenile 2.jpg - Wikimedia Commons",
+  "sourceAuthor": "Charles J. Sharp",
+  "sourceLicense": "CC BY-SA 4.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "33d0b76926fda6ab0c4ed9b8736ebce0f4c9875b",
+  "sourceImageSha1": "6b86b73b22a569f221a6423e3c3652c76f142755",
+  "sourceImageSize": [
+   2267,
+   1511
+  ],
+  "visualRoleCheck": "Fotograaf bevestigt juveniel. Donkere kopzijden en bruinere rug. Leeftijdsrol behouden, geslacht en ondersoort onbekend."
+ },
+ {
+  "image": "/assets/species/sp065.webp",
+  "species": "sp065",
+  "source": "https://commons.wikimedia.org/wiki/File:Kleiber_(Sitta_europaea_caesia)_Val_Roseg.jpg",
+  "sourceTitle": "File:Kleiber (Sitta europaea caesia) Val Roseg.jpg - Wikimedia Commons",
+  "sourceAuthor": "Chme82",
+  "sourceLicense": "CC BY-SA 4.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "60b7b3b75338e2980d8a79c472168f9a5d6ea6a4",
+  "sourceImageSha1": "86b6db9c2e39276c9df2263cdbb0dbf71888b951",
+  "sourceImageSize": [
+   4864,
+   3243
+  ],
+  "visualRoleCheck": "Neutraal hoofdbeeld op een rots. Zwarte oogstreep, blauwgrijze rug en warme onderdelen. Bron noemt Sitta europaea caesia."
+ },
+ {
+  "image": "/assets/species/plumage/sp065-flight.webp",
+  "species": "sp065",
+  "source": "https://commons.wikimedia.org/wiki/File:Kleiber_Flug.jpg",
+  "sourceTitle": "File:Kleiber Flug.jpg - Wikimedia Commons",
+  "sourceAuthor": "C. Robiller / naturlichter.de",
+  "sourceLicense": "CC BY-SA 3.0",
+  "sameShot": true,
+  "method": "Appfoto visueel naast oorspronkelijk bronbestand vergeleken",
+  "auditDate": "14-11-2026",
+  "assetSha1": "28cece48915c5dd8e500e32ce876fa65a0dc2bc6",
+  "sourceImageSha1": "b27ff649d9282ed3092d32152d3dda66f59c938c",
+  "sourceImageSize": [
+   640,
+   640
+  ],
+  "visualRoleCheck": "Bron en beeld bevestigen vrije vlucht met gespreide vleugels en staart. Leeftijd en geslacht open."
+ },
+ {
+  "image": "/assets/species/plumage/sp065-head-down.webp",
+  "species": "sp065",
+  "source": "https://commons.wikimedia.org/wiki/File:Eurasian_nuthatch_(50430565526).jpg",
+  "sourceTitle": "Eurasian nuthatch (50430565526).jpg",
+  "sourceAuthor": "hedera.baltica",
+  "sourceLicense": "CC BY-SA 2.0",
+  "sameShot": true,
+  "method": "Origineel JPEG verkleind zonder uitsnede tot 1400 × 1271. WebP zonder EXIF, GPS of XMP.",
+  "auditDate": "14-11-2026",
+  "assetSha1": "5ef1051033df006279ea410419329a02d39df77d",
+  "sourceImageSha1": "2cc74109221aa19bbcd857399af557c924d0bff9",
+  "sourceImageSize": [
+   1600,
+   1453
+  ],
+  "visualRoleCheck": "Fotograaf noemt caesia en foerageren met de kop omlaag. Poten geven houvast op de stam, korte staart steunt niet. Leeftijd en geslacht open."
+ }
+]

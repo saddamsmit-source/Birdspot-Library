@@ -1,0 +1,394 @@
+{
+  "schema": "birdspot-f2-29-proof-and-limitations-v1",
+  "date": "2026-11-15",
+  "basePR": 232,
+  "baseSha": "ab1a35835be5b28dc96de40605616fcff2e7a700",
+  "status": "PARTIALLY TESTED",
+  "scope": [
+    "sp089 Wilde Eend",
+    "sp090 Slobeend",
+    "sp091 Wintertaling"
+  ],
+  "comparisonPartner": "sp188 Zomertaling, vier relevante vergelijkingsfoto’s herbeoordeeld.",
+  "sourceFacts": [
+    {
+      "species": "sp089",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wilde-eend",
+      "claims": "Mannetje met groene kop, gele snavel en witte halsring. Bij vrouwtje blauw-paarse spiegel met witte randen."
+    },
+    {
+      "species": "sp090",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/slobeend",
+      "claims": "Brede lepelvormige snavel. Mannetje met groene kop, witte borst, kastanjebruine flank en lichtblauwe voorvleugel."
+    },
+    {
+      "species": "sp091",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wintertaling",
+      "claims": "Mannetje met kastanjebruine kop, groen oogveld, witte flankstreep en gele staartvlek. Bruine vogels met groene spiegel."
+    },
+    {
+      "species": "sp188",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zomertaling",
+      "claims": "Mannetje met brede witte oogboog. Bruine vogels met contrastrijke kopstrepen en zonder kenmerkende lichte vlek bij de staart."
+    }
+  ],
+  "images": [
+    {
+      "species": "sp089",
+      "image": "/assets/species/sp089.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Anas_platyrhynchos_male_female.jpg",
+      "registeredAuthor": "Richard Bartz",
+      "registeredLicense": "CC BY-SA 2.5",
+      "originalPageRead": true,
+      "sha256": "c4a3431e8a2f9e9aefe550112c5737e56405336aa15d50d7d5aacd6ca1ff47a8",
+      "visualReview": "Paar op de oever. Gele snavel, groene kop en witte halsring bij het mannetje. Het vrouwtje is bruin gevlekt.",
+      "dimensions": [
+        1600,
+        981
+      ]
+    },
+    {
+      "species": "sp089",
+      "image": "/assets/species/plumage/sp089-adult_f.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Female_Mallard_Swimming.jpg",
+      "registeredAuthor": "Roshan Kumar Ban",
+      "registeredLicense": "CC BY-SA 4.0",
+      "originalPageRead": true,
+      "sha256": "9816f30f46c5411cc745891639e8c7d424a7b91f636c803a8cb31f7c373edba9",
+      "visualReview": "Bruin vrouwtje op het water, met relatief smalle snavel. De gevouwen vleugel toont de spiegel onvoldoende.",
+      "dimensions": [
+        1280,
+        853
+      ]
+    },
+    {
+      "species": "sp089",
+      "image": "/assets/species/plumage/sp089-eclipse.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Male_eclipse_Mallard_on_Lake_Bled.jpg",
+      "registeredAuthor": "Mihael Grmek",
+      "registeredLicense": "CC BY-SA 3.0",
+      "originalPageRead": true,
+      "sha256": "27a0882f70250ce6ea280153d2197cb9528e1a50d91341dd002728a15f41ef7f",
+      "visualReview": "Bruin kleed, gele snavel en donkere spiegel. Engelse brontekst zegt mannetje in eclips, de Sloveense tekst noemt een vrouwtje. Verschil opgeslagen.",
+      "dimensions": [
+        1280,
+        1036
+      ]
+    },
+    {
+      "species": "sp089",
+      "image": "/assets/species/plumage/sp089-flight.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Mallard_male_in_flight.jpg",
+      "registeredAuthor": "VJAnderson",
+      "registeredLicense": "CC BY-SA 4.0",
+      "originalPageRead": false,
+      "sha256": "de9d366da22aea530ce4d0ac4aabb7a07da17ce2abb8a41a303e0963a51ae874",
+      "visualReview": "Luchtgedragen, poten uitgestrekt en in landingshouding. Buiten de vrijevluchtrol gehouden.",
+      "dimensions": [
+        1400,
+        958
+      ],
+      "earlierEvidence": {
+        "file": "../evidence/GUIDE_SOURCE_AUDIT_2026-11-09.json",
+        "sameShot": true,
+        "method": "ORB+RANSAC tegen bronbeeld",
+        "inliers": 2302,
+        "sourceLicense": "CC BY-SA 4.0",
+        "annotations": []
+      }
+    },
+    {
+      "species": "sp089",
+      "image": "/assets/species/plumage/sp089-juv-review.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Anas_platyrhynchos_juvenile_JdP_2013-06-14_n01.jpg",
+      "registeredAuthor": "Marie-Lan Nguyen / Wikimedia Commons",
+      "registeredLicense": "CC BY 2.5",
+      "originalPageRead": false,
+      "sha256": "cc288556a7bd861469bc0e8a52e2b27bb40577bb1bc365483f43398bd29a9311",
+      "visualReview": "Twee jonge vogels aan de waterkant, beide bruin en met verschillende snavelkleur. Geen individueel geslachtslabel.",
+      "dimensions": [
+        1400,
+        935
+      ],
+      "earlierEvidence": {
+        "file": "../evidence/GUIDE_SOURCE_AUDIT_2026-11-09.json",
+        "sameShot": true,
+        "method": "ORB+RANSAC tegen bronbeeld",
+        "inliers": 2189,
+        "sourceLicense": "CC BY 2.5",
+        "annotations": []
+      }
+    },
+    {
+      "species": "sp089",
+      "image": "/assets/species/plumage/sp089-free-flight.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Mallard_duck_in_flight.jpg",
+      "registeredAuthor": "Bert de Tilly",
+      "registeredLicense": "CC BY-SA 4.0",
+      "originalPageRead": true,
+      "sha256": "67cd363413184379d820b9ace8950ab5e75261f5987e5166b25057ead0997105",
+      "visualReview": "Mannetje in vrije vlucht. Gele snavel, witte halsring en grijze flank leesbaar.",
+      "dimensions": [
+        1440,
+        960
+      ]
+    },
+    {
+      "species": "sp090",
+      "image": "/assets/species/sp090.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Northern_shoveler_2024_02_03.jpg",
+      "registeredAuthor": "Alexis Lours",
+      "registeredLicense": "CC BY 4.0",
+      "originalPageRead": false,
+      "sha256": "95189ab40383b20eba80d2c5b204112536a6a08f7e25335bd90273090acffb2c",
+      "visualReview": "Groene kop, kastanjeflank, gespikkelde lichtere borst en brede donkere snavel. Geen preciezere ruifase uit één beeld afgeleid.",
+      "dimensions": [
+        1600,
+        1067
+      ],
+      "earlierEvidence": {
+        "file": "../evidence/GUIDE_SOURCE_AUDIT_2026-11-09.json",
+        "sameShot": true,
+        "method": "ORB+RANSAC tegen bronbeeld",
+        "inliers": 2238,
+        "sourceLicense": "CC BY 4.0",
+        "annotations": []
+      }
+    },
+    {
+      "species": "sp090",
+      "image": "/assets/species/plumage/sp090-adult_f.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Northern_Shoveler-Anas_clypeata_female.jpg",
+      "registeredAuthor": "Andreas Trepte, www.avi-fauna.info",
+      "registeredLicense": "CC BY-SA 2.5",
+      "originalPageRead": true,
+      "sha256": "12bfe797d657f0d681170eb53b3e8186743d9f62666744643657441997a85448",
+      "visualReview": "Bruin vrouwtje in zijaanzicht. Zichtbare snavel is lang en breed aan de punt, de spiegel zit weggevouwen.",
+      "dimensions": [
+        1600,
+        1067
+      ]
+    },
+    {
+      "species": "sp090",
+      "image": "/assets/species/plumage/sp090-juv.webp",
+      "source": "https://www.inaturalist.org/photos/760982120",
+      "registeredAuthor": "Hal",
+      "registeredLicense": "CC BY-SA 4.0",
+      "originalPageRead": false,
+      "sha256": "567c8f5cf234e5f36b68b177ac5240be0df352b89d86c24f40d0ac629eefa6f2",
+      "visualReview": "Bruine vogel op groen water. De snavelvorm past bij Slobeend. Het jeugdkleed berust op de eerdere bronannotatie.",
+      "dimensions": [
+        1400,
+        933
+      ],
+      "earlierEvidence": {
+        "file": "SOORTAUDIT_TRACKER.md",
+        "description": "Audit van 12 november vermeldt dezelfde opname, CC BY-SA 4.0 en iNaturalist-annotatie Juvenile."
+      }
+    },
+    {
+      "species": "sp090",
+      "image": "/assets/species/plumage/sp090-flight.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Male_northern_shoveler_in_flight-0208.jpg",
+      "registeredAuthor": "Frank Schulenburg",
+      "registeredLicense": "CC BY-SA 4.0",
+      "originalPageRead": true,
+      "sha256": "0a809fa9e9241cfe84a4ca6ac28820bf58690221328e3ff523395cde2a274178",
+      "visualReview": "Mannetje in vrije vlucht. Witte borst, kastanjeflank, lange donkere snavel en lichtblauwe voorvleugel.",
+      "dimensions": [
+        1400,
+        934
+      ]
+    },
+    {
+      "species": "sp091",
+      "image": "/assets/species/plumage/sp091-hero-male.webp",
+      "source": "https://commons.wikimedia.org/wiki/File%3AEurasian_teal_%28Anas_crecca_crecca%29_male_Qingshui.jpg",
+      "registeredAuthor": "Charles J. Sharp",
+      "registeredLicense": "CC BY-SA 4.0",
+      "originalPageRead": true,
+      "sha256": "e8f3ca5f0bcc126ecd35dab030088728f0106f2c6df8ec202db8fa2c5d265342",
+      "visualReview": "Prachtkleed. Groene oogband, smalle lichte lijn langs de oogband en gele vlek bij de staart.",
+      "dimensions": [
+        1600,
+        1067
+      ]
+    },
+    {
+      "species": "sp091",
+      "image": "/assets/species/sp091.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Eurasian_Teal_Anas_crecca,_RSPB_Titchwell,_Norfolk_(33675784246).jpg",
+      "registeredAuthor": "gailhampshire from Cradley, Malvern, U.K",
+      "registeredLicense": "CC BY 2.0",
+      "originalPageRead": true,
+      "sha256": "173dda8989dc34478dc88eca5eacbb5759b442510dd43b6ca4c4933a5f83fa78",
+      "visualReview": "Prachtkleed achter een bruine soortgenoot. Leeftijd of geslacht van de bruine vogel blijft open.",
+      "dimensions": [
+        1600,
+        1173
+      ]
+    },
+    {
+      "species": "sp091",
+      "image": "/assets/species/plumage/sp091-adult_m.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Common_Teal_Male_(8602525826).jpg",
+      "registeredAuthor": "Koshy Koshy from Faridabad, Haryana, India",
+      "registeredLicense": "CC BY 2.0",
+      "originalPageRead": true,
+      "sha256": "c812b5a917a0bebde5ee54faa488dd78af51c7cd7b932eba421702974673c0b1",
+      "visualReview": "Prachtkleed. Breed groen oogveld, lichte horizontale flankstreep en gele staartvlek.",
+      "dimensions": [
+        1024,
+        650
+      ]
+    },
+    {
+      "species": "sp091",
+      "image": "/assets/species/plumage/sp091-adult_f.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Female_Eurasian_Teal_(Anas_crecca),_Parc_du_Rouge_Clo%C3%AEtre,_Brussels_(13353864095).jpg",
+      "registeredAuthor": "Frank Vassen from Brussels, Belgium",
+      "registeredLicense": "CC BY 2.0",
+      "originalPageRead": true,
+      "sha256": "c205f483064a63493edec2e34d289dcaf7393cf5e5348e2aac1fda91057340e1",
+      "visualReview": "Bruine rustvogel, fijn getekende keel en weinig contrast rond het oog bij deze hoek.",
+      "dimensions": [
+        1280,
+        905
+      ]
+    },
+    {
+      "species": "sp091",
+      "image": "/assets/species/plumage/sp091-juv.webp",
+      "source": "https://www.inaturalist.org/photos/169592753",
+      "registeredAuthor": "Se Lena",
+      "registeredLicense": "CC BY 4.0",
+      "originalPageRead": false,
+      "sha256": "4503558543e265c4958ee9a54bdcbfc5cd75833e877e9af1bd2e1e0f9fefe406",
+      "visualReview": "Bruine jonge vogel met een klein zichtbaar deel van de groene vleugelspiegel. Jeugdkleed gestaafd door de eerdere bronannotatie.",
+      "dimensions": [
+        500,
+        335
+      ],
+      "earlierEvidence": {
+        "file": "../evidence/GUIDE_SOURCE_AUDIT_2026-11-09.json",
+        "sameShot": true,
+        "method": "ORB+RANSAC tegen bronbeeld",
+        "inliers": 1321,
+        "sourceLicense": "CC BY",
+        "annotations": [
+          "Life Stage: Juvenile",
+          "Sex: Male",
+          "Alive or Dead: Alive",
+          "Evidence of Presence: Organism"
+        ]
+      }
+    },
+    {
+      "species": "sp091",
+      "image": "/assets/species/plumage/sp091-eclipse.webp",
+      "source": "https://www.inaturalist.org/photos/76374524",
+      "registeredAuthor": "Roy Lowry",
+      "registeredLicense": "CC BY 4.0",
+      "originalPageRead": false,
+      "sha256": "ee35b64e2a4dde6d69484b71ad04e5ae6ed5b689d62d6c8064ee51ae06d89869",
+      "visualReview": "Ruiend mannetje op het water. Nog groen op de kop. Zomertaling in eclips is alleen in vlucht geregistreerd.",
+      "dimensions": [
+        1024,
+        683
+      ],
+      "earlierEvidence": {
+        "file": "../evidence/GUIDE_SOURCE_AUDIT_2026-11-09.json",
+        "sameShot": true,
+        "method": "ORB+RANSAC tegen bronbeeld",
+        "inliers": 2795,
+        "sourceLicense": "CC BY",
+        "annotations": []
+      }
+    },
+    {
+      "species": "sp091",
+      "image": "/assets/species/plumage/sp091-flight.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Cerceta_com%C3%BAn_-_Flickr_-_ferran_pesta%C3%B1a.jpg",
+      "registeredAuthor": "Ferran Pestaña",
+      "registeredLicense": "CC BY-SA 2.0",
+      "originalPageRead": true,
+      "sha256": "6444b2f289d1030a6bcd86abb8ce18aaa0514dea4cc3645ba82184f313c2c76c",
+      "visualReview": "Mannetje in vrije vlucht met groen oogveld, groene vleugelspiegel en gele staartvlek. Geen passende Zomertaling-vluchtfoto in hetzelfde kleed.",
+      "dimensions": [
+        1400,
+        978
+      ]
+    },
+    {
+      "species": "sp188",
+      "image": "/assets/species/sp188.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Garganey_(Spatula_querquedula)_male.jpg",
+      "registeredAuthor": "Charles J. Sharp",
+      "registeredLicense": "CC BY-SA 4.0",
+      "originalPageRead": true,
+      "sha256": "0640ae57b12f5fa7df616690849e0ae969312932ac6d7a43f2323c2e13f49102",
+      "visualReview": "Mannetje in prachtkleed met witte oogboog, bruine borst en lange getekende schouderveren.",
+      "dimensions": [
+        1280,
+        853
+      ]
+    },
+    {
+      "species": "sp188",
+      "image": "/assets/species/plumage/sp188-adult_f.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Garganey_04f_(3225295980).jpg",
+      "registeredAuthor": "michael clarke stuff",
+      "registeredLicense": "CC BY-SA 2.0",
+      "originalPageRead": false,
+      "sha256": "85a463b4ee0bc400dd4a735337d797b0dad88eb89610871ef742ca3bba69272d",
+      "visualReview": "Bruine rustvogel waarop de donkere oogstreep en lichte keel zichtbaar zijn. Detail van de vleugelspiegel is niet afleesbaar.",
+      "dimensions": [
+        1063,
+        640
+      ],
+      "earlierEvidence": {
+        "file": "../evidence/GUIDE_SOURCE_AUDIT_2026-11-09.json",
+        "sameShot": true,
+        "method": "ORB+RANSAC tegen bronbeeld",
+        "inliers": 2768,
+        "sourceLicense": "CC BY-SA 2.0",
+        "annotations": []
+      }
+    },
+    {
+      "species": "sp188",
+      "image": "/assets/species/plumage/sp188-juv.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Anas_querquedula,_Slottsskogen,_G%C3%B6teborg,_Sweden_1.jpg",
+      "registeredAuthor": "Stefan Berndtsson",
+      "registeredLicense": "CC BY 2.0",
+      "originalPageRead": true,
+      "sha256": "512077ead8565d11ef5db25a3a4918911606eac268d254e6d440ea53c087a067",
+      "visualReview": "Jonge vogel met donkere oogstreep en lichte wenkbrauw en wang. Brontekst benoemt juveniel.",
+      "dimensions": [
+        1200,
+        741
+      ]
+    },
+    {
+      "species": "sp188",
+      "image": "/assets/species/plumage/sp188-eclipse.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Anas_querquedula,_Hong_Kong_1.jpg",
+      "registeredAuthor": "Frankie Chu from Hong Kong香港",
+      "registeredLicense": "CC BY-SA 2.0",
+      "originalPageRead": true,
+      "sha256": "338b34994ead2697b50473913808fbeace815fe55c5c0758bbae042b77f5fd14",
+      "visualReview": "Eclipsmannetje in vlucht boven riet. Lichtblauwe voorvleugel en lichte kopstrepen. Geen combinatie met Wintertaling in rust.",
+      "dimensions": [
+        1024,
+        768
+      ]
+    }
+  ],
+  "open": [
+    "Zeven exacte bronpagina’s waren via de webcontrole onbereikbaar. Broncaptions en licentievarianten zijn voor deze opnames niet opnieuw vastgesteld.",
+    "Wilde Eend: originele pagina spreekt zichzelf tegen over het eclipsmannetje. De foto toont een gele snavel. Bronconflict blijft zichtbaar in deze audit.",
+    "Wintertaling en Zomertaling: geen volledig fotopaar in dezelfde houding voor eclipskleed.",
+    "ANWB-soortpassages, nieuwe beeldmatch met de bronbestanden en fysieke Android-test blijven open."
+  ]
+}

@@ -1,0 +1,41 @@
+[
+  {
+    "image": "/assets/species/plumage/sp129-juv-europa.webp",
+    "species": "sp129",
+    "source": "https://www.inaturalist.org/photos/548529333",
+    "originalUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/548529333/original.jpg",
+    "sourceTitle": "iNaturalist photo 548529333",
+    "sourceAuthor": "Phil James",
+    "sourceLicense": "CC BY 4.0",
+    "sameShot": true,
+    "method": "Verkleind tot maximaal 1400 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.",
+    "sourceSha256": "f5ed0fba716210102e4c7f9d01c0f0f157df5a82b04cce447c420e2db8cc17ed",
+    "sha1": "5d482e9406869fdf4ef2c3ba1def736627c9d64e",
+    "taxonInSource": "Mareca strepera",
+    "annotations": [
+      "iNaturalist-onderzoekswaarneming uit Wales met de leeftijdsannotatie Juvenile. De opname toont één vogel."
+    ],
+    "auditDate": "2026-11-12",
+    "observation": "https://www.inaturalist.org/observations/304288567",
+    "replaces": "/assets/species/plumage/sp129-juv.webp"
+  },
+  {
+    "image": "/assets/species/plumage/sp130-juv.webp",
+    "species": "sp130",
+    "source": "https://www.inaturalist.org/photos/322366665",
+    "originalUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/322366665/original.jpeg",
+    "sourceTitle": "iNaturalist photo 322366665",
+    "sourceAuthor": "Наталья Усова",
+    "sourceLicense": "CC BY 4.0",
+    "sameShot": true,
+    "method": "Verkleind tot maximaal 1400 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.",
+    "sourceSha256": "0331cb0e5c8167a9f3907251a3b47c52901b11612dbe12cb64ec7f1e21416bf0",
+    "sha1": "10a6016ca0d5fa3d8606f7e3ba37d2a7b041d33d",
+    "taxonInSource": "Mareca penelope",
+    "annotations": [
+      "iNaturalist-onderzoekswaarneming uit de regio Jaroslavl met de leeftijdsannotatie Juvenile. De opname toont één vogel."
+    ],
+    "auditDate": "2026-11-12",
+    "observation": "https://www.inaturalist.org/observations/184654589"
+  }
+]

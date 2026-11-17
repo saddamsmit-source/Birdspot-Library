@@ -1,0 +1,73 @@
+{
+  "date": "2026-11-16",
+  "purpose": "F3-R16: getoonde foto's Tjiftjaf, Fitis, Fluiter tegen bronbeeld en Commons-rechten; opnamen alleen herkomst en rechten (audioprotocol v0.2).",
+  "items": [
+    {
+      "speciesId": "sp056",
+      "image": "/assets/species/sp056.webp",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "title": "File:Common Chiffchaff 2025 04 04 01.jpg"
+    },
+    {
+      "speciesId": "sp056",
+      "image": "/assets/species/plumage/sp056-flight.webp",
+      "author": "Falco2022",
+      "license": "CC BY-SA 4.0",
+      "title": "File:Flight design.jpg"
+    },
+    {
+      "speciesId": "sp057",
+      "image": "/assets/species/sp057.webp",
+      "author": "Andreas Trepte",
+      "license": "CC BY-SA 2.5",
+      "title": "File:Willow Warbler Phylloscopus trochilus.jpg"
+    },
+    {
+      "speciesId": "sp058",
+      "image": "/assets/species/sp058.webp",
+      "author": "Mike Duchstein",
+      "license": "CC BY-SA 4.0",
+      "title": "File:Phylloscopus sibilatrix Wood Warbler WOWA Waldlaubsänger MD284.jpg"
+    },
+    {
+      "speciesId": "sp058",
+      "image": "/assets/species/plumage/sp058-flight.webp",
+      "author": "Andrey Gulivanov",
+      "license": "CC BY 2.0",
+      "title": "File:Wood warbler (49979490848).jpg"
+    },
+    {
+      "speciesId": "sp056",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp056-song.mp3",
+      "author": "T.Voekler",
+      "license": "CC BY-SA 3.0",
+      "title": "File:Phylloscopus collybita 7029.ogg"
+    },
+    {
+      "speciesId": "sp056",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp056-call.mp3",
+      "author": "Benoît Van Hecke",
+      "license": "CC BY-SA 4.0",
+      "title": "File:Phylloscopus collybita - Common Chiffchaff XC538928.mp3"
+    },
+    {
+      "speciesId": "sp057",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp057-song.mp3",
+      "author": "Oona Räisänen ( Mysid )",
+      "license": "Public domain",
+      "title": "File:Phylloscopus rochilus.ogg"
+    },
+    {
+      "speciesId": "sp057",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp057-call.mp3",
+      "author": "L. Shyamal",
+      "license": "CC BY 3.0",
+      "title": "File:OsloPhylloscopus.ogg"
+    }
+  ]
+}

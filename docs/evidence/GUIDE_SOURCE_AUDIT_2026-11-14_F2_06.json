@@ -1,0 +1,480 @@
+[
+ {
+  "image": "/assets/species/plumage/sp006-adult_f.webp",
+  "species": "sp006",
+  "source": "https://commons.wikimedia.org/wiki/File:Female_Sparrowhawk_(45968114392).jpg",
+  "sourceTitle": "File:Female Sparrowhawk (45968114392).jpg",
+  "sourceAuthor": "caroline legg",
+  "sourceLicense": "CC BY 2.0",
+  "taxonInSource": "naam in titel/categorie",
+  "qualityGrade": null,
+  "annotations": [],
+  "sameShot": true,
+  "method": "Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.",
+  "sourceSexWords": [
+   "female"
+  ],
+  "sourceAgeWords": [],
+  "auditDate": "14-11-2026",
+  "assetSha1": "a24d4b12be56fd881a07e528c468cd97f6f12a4b",
+  "sourceImageSha1": "6b7753b86a43fc0bdfad4c6cd3bf1efe57ca2f03",
+  "sourceImageSize": [
+   5568,
+   3712
+  ],
+  "visualRoleCheck": "Vrouwtje staat met de poten op de zitplaats. Gespreide vleugels maken het nog geen vluchtfoto.",
+  "earlierMatch": {
+   "inliers": 2816,
+   "method": "ORB+RANSAC, bronaudit 09-11-2026"
+  }
+ },
+ {
+  "image": "/assets/species/plumage/sp006-flight.webp",
+  "species": "sp006",
+  "source": "https://commons.wikimedia.org/wiki/File:Eurasian_sparrowhawk_2023_12_31_01.jpg",
+  "sourceTitle": "File:Eurasian sparrowhawk 2023 12 31 01.jpg",
+  "sourceAuthor": "Alexis Lours",
+  "sourceLicense": "CC BY 4.0",
+  "taxonInSource": "naam in titel/categorie",
+  "qualityGrade": null,
+  "annotations": [],
+  "sameShot": true,
+  "method": "Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.",
+  "sourceSexWords": [
+   "male"
+  ],
+  "sourceAgeWords": [],
+  "auditDate": "14-11-2026",
+  "assetSha1": "88e317963e107eb7cffb3f11413740e0fa8a6741",
+  "sourceImageSha1": "93bac3ce05a7ba659b3badf9d89ee14ea600f937",
+  "sourceImageSize": [
+   3386,
+   2257
+  ],
+  "visualRoleCheck": "De fotograaf vermeldt een mannetje. Donkere banden en roesttint passen bij deze rol.",
+  "earlierMatch": {
+   "inliers": 2036,
+   "method": "ORB+RANSAC, bronaudit 09-11-2026"
+  }
+ },
+ {
+  "image": "/assets/species/plumage/sp006-juv.webp",
+  "species": "sp006",
+  "source": "https://commons.wikimedia.org/wiki/File:Female_Juvenile_Sparrowhawk_(36519885205).jpg",
+  "sourceTitle": "File:Female Juvenile Sparrowhawk (36519885205).jpg",
+  "sourceAuthor": "caroline legg",
+  "sourceLicense": "CC BY 2.0",
+  "taxonInSource": "naam in titel/categorie",
+  "qualityGrade": null,
+  "annotations": [],
+  "sameShot": true,
+  "method": "Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.",
+  "sourceSexWords": [
+   "female"
+  ],
+  "sourceAgeWords": [
+   "juvenile"
+  ],
+  "auditDate": "14-11-2026",
+  "assetSha1": "295858c5c215089e7ec9d4a19eb4ef81cdadb705",
+  "sourceImageSha1": "0ac28a6cbebf0785ce11785c0f2779c913450d13",
+  "sourceImageSize": [
+   5568,
+   3712
+  ],
+  "earlierMatch": {
+   "inliers": 2809,
+   "method": "ORB+RANSAC, bronaudit 09-11-2026"
+  }
+ },
+ {
+  "image": "/assets/species/plumage/sp007-adult_f.webp",
+  "species": "sp007",
+  "source": "https://www.inaturalist.org/photos/478065886",
+  "sourceTitle": "iNaturalist 266098077",
+  "sourceAuthor": "(c) WATANABE Hitoshi 渡辺仁, some rights reserved (CC BY)",
+  "sourceLicense": "CC BY 4.0",
+  "taxonInSource": "Astur gentilis",
+  "qualityGrade": "research",
+  "annotations": [
+   "Life Stage: Adult",
+   "Sex: Female"
+  ],
+  "sameShot": true,
+  "method": "Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.",
+  "sourceSexWords": [
+   "female"
+  ],
+  "sourceAgeWords": [
+   "adult"
+  ],
+  "observation": "https://www.inaturalist.org/observations/266098077",
+  "auditDate": "14-11-2026",
+  "assetSha1": "a826eaf401b5200d95d2e778d18bd29941179cfb",
+  "sourceImageSha1": "aa11c528a713fae3f6d0f175b1edd8141fbdfe92",
+  "sourceImageSize": [
+   683,
+   1024
+  ],
+  "visualRoleCheck": "Onderzijde van een vrij vliegende Havik. Waarneming geannoteerd als volwassen vrouwtje, ondersoort niet nodig voor het soortlabel.",
+  "earlierMatch": {
+   "inliers": 2618,
+   "method": "ORB+RANSAC, bronaudit 09-11-2026"
+  },
+  "taxonReference": "https://itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=1253651"
+ },
+ {
+  "image": "/assets/species/plumage/sp007-flight.webp",
+  "species": "sp007",
+  "source": "https://commons.wikimedia.org/wiki/File:Northern_Goshawk_(Accipiter_gentilis)_(1).JPG",
+  "sourceTitle": "File:Northern Goshawk (Accipiter gentilis) (1).JPG",
+  "sourceAuthor": "Ken Billington",
+  "sourceLicense": "CC BY-SA 3.0",
+  "taxonInSource": "naam in titel/categorie",
+  "qualityGrade": null,
+  "annotations": [],
+  "sameShot": true,
+  "method": "Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.",
+  "sourceSexWords": [],
+  "sourceAgeWords": [],
+  "auditDate": "14-11-2026",
+  "assetSha1": "2d5d38d77f0c26cff29c44d01040855fd29794b5",
+  "sourceImageSha1": "195142d2ac6ea6502f28ad3970a24be0aae1127b",
+  "sourceImageSize": [
+   800,
+   450
+  ],
+  "visualRoleCheck": "Vrije vlucht. Bron geeft geen leeftijd of geslacht. Gebruik een neutraal label.",
+  "earlierMatch": {
+   "inliers": 1887,
+   "method": "ORB+RANSAC, bronaudit 09-11-2026"
+  }
+ },
+ {
+  "image": "/assets/species/plumage/sp007-juv.webp",
+  "species": "sp007",
+  "source": "https://commons.wikimedia.org/wiki/File:Juvenile_northern_goshawk_(52310658114).jpg",
+  "sourceTitle": "File:Juvenile northern goshawk (52310658114).jpg",
+  "sourceAuthor": "Andrey Gulivanov",
+  "sourceLicense": "CC BY 2.0",
+  "taxonInSource": "via beschrijving/locatie",
+  "qualityGrade": null,
+  "annotations": [],
+  "sameShot": true,
+  "method": "Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.",
+  "sourceSexWords": [],
+  "sourceAgeWords": [
+   "juvenile"
+  ],
+  "auditDate": "14-11-2026",
+  "assetSha1": "893aae119caf96a320c61c81c25e9a34038add79",
+  "sourceImageSha1": "aafdd25ebbf77e850bc6b63a62b21e6931c4c696",
+  "sourceImageSize": [
+   3900,
+   2600
+  ],
+  "earlierMatch": {
+   "inliers": 2821,
+   "method": "ORB+RANSAC, bronaudit 09-11-2026"
+  }
+ },
+ {
+  "image": "/assets/species/plumage/sp007-male-flight.webp",
+  "species": "sp007",
+  "source": "https://www.inaturalist.org/photos/29451692",
+  "sourceTitle": "iNaturalist 19176694",
+  "sourceAuthor": "(c) Вячеслав Юсупов, some rights reserved (CC BY)",
+  "sourceLicense": "CC BY 4.0",
+  "taxonInSource": "Astur gentilis",
+  "qualityGrade": "research",
+  "annotations": [
+   "Sex: Male"
+  ],
+  "sameShot": true,
+  "method": "Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.",
+  "sourceSexWords": [
+   "male"
+  ],
+  "sourceAgeWords": [],
+  "observation": "https://www.inaturalist.org/observations/19176694",
+  "auditDate": "14-11-2026",
+  "assetSha1": "7441b89ead3a40302fca2eb53e04ca4c13032b6b",
+  "sourceImageSha1": "1d3d90161f03ada71f49cf5b76fe905a90369be0",
+  "sourceImageSize": [
+   1024,
+   683
+  ],
+  "visualRoleCheck": "Vluchtbeeld uit zijhoek. Waarneming geannoteerd als mannetje; geen leeftijdsclaim.",
+  "earlierMatch": {
+   "inliers": 714,
+   "method": "ORB+RANSAC, bronaudit 09-11-2026"
+  },
+  "taxonReference": "https://itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=1253651"
+ },
+ {
+  "image": "/assets/species/plumage/sp008-adult_f.webp",
+  "species": "sp008",
+  "source": "https://commons.wikimedia.org/wiki/File:Common_kestrel_female_France.jpg",
+  "sourceTitle": "File:Common kestrel female France.jpg",
+  "sourceAuthor": "Alexis Lours",
+  "sourceLicense": "CC BY 4.0",
+  "taxonInSource": "naam in titel/categorie",
+  "qualityGrade": null,
+  "annotations": [],
+  "sameShot": true,
+  "method": "Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.",
+  "sourceSexWords": [
+   "female"
+  ],
+  "sourceAgeWords": [],
+  "auditDate": "14-11-2026",
+  "assetSha1": "bdf7d2ba78dac9493ed4188037b85e65cb296183",
+  "sourceImageSha1": "e493594dc9c77ae4278ed251891c5fb16461361f",
+  "sourceImageSize": [
+   4239,
+   2826
+  ],
+  "earlierMatch": {
+   "inliers": 2286,
+   "method": "ORB+RANSAC, bronaudit 09-11-2026"
+  }
+ },
+ {
+  "image": "/assets/species/plumage/sp008-flight.webp",
+  "species": "sp008",
+  "source": "https://commons.wikimedia.org/wiki/File:Falco_tinnunculus_in_flight_(45067938032).jpg",
+  "sourceTitle": "File:Falco tinnunculus in flight (45067938032).jpg",
+  "sourceAuthor": "Rolf Dietrich Brecher from Germany",
+  "sourceLicense": "CC BY 2.0",
+  "taxonInSource": "naam in titel/categorie",
+  "qualityGrade": null,
+  "annotations": [],
+  "sameShot": true,
+  "method": "Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.",
+  "sourceSexWords": [],
+  "sourceAgeWords": [],
+  "auditDate": "14-11-2026",
+  "assetSha1": "b56bf15f79d3b78afcbabc89f83924e3492e2fe4",
+  "sourceImageSha1": "3658708d402f22a16afe729b4e05da9d997b7962",
+  "sourceImageSize": [
+   3167,
+   1987
+  ],
+  "visualRoleCheck": "Biddend, gefotografeerd van voren en onderen. Bron geeft geen geslacht.",
+  "earlierMatch": {
+   "inliers": 1973,
+   "method": "ORB+RANSAC, bronaudit 09-11-2026"
+  }
+ },
+ {
+  "image": "/assets/species/plumage/sp008-juv.webp",
+  "species": "sp008",
+  "source": "https://commons.wikimedia.org/wiki/File:Kestrel_-_Falco_tinnunculus_-_Juvenile.jpg",
+  "sourceTitle": "File:Kestrel - Falco tinnunculus - Juvenile.jpg",
+  "sourceAuthor": "caroline legg",
+  "sourceLicense": "CC BY 4.0",
+  "taxonInSource": "naam in titel/categorie",
+  "qualityGrade": null,
+  "annotations": [],
+  "sameShot": true,
+  "method": "Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.",
+  "sourceSexWords": [],
+  "sourceAgeWords": [
+   "juvenile"
+  ],
+  "auditDate": "14-11-2026",
+  "assetSha1": "823457eef16cde27966c6593b48943ce5e9e4bfd",
+  "sourceImageSha1": "15f8a1be3c28e4b0b56afce74f192e9b260128c3",
+  "sourceImageSize": [
+   2869,
+   4017
+  ],
+  "earlierMatch": {
+   "inliers": 2232,
+   "method": "ORB+RANSAC, bronaudit 09-11-2026"
+  }
+ },
+ {
+  "image": "/assets/species/plumage/sp008-male-flight.webp",
+  "species": "sp008",
+  "source": "https://commons.wikimedia.org/wiki/File:Falco_tinnunculus_-_Common_kestrel_20.jpg",
+  "sourceTitle": "File:Falco tinnunculus - Common kestrel 20.jpg",
+  "sourceAuthor": "Zeynel Cebeci",
+  "sourceLicense": "CC BY-SA 4.0",
+  "taxonInSource": "naam in titel/categorie",
+  "qualityGrade": null,
+  "annotations": [],
+  "sameShot": true,
+  "method": "Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.",
+  "sourceSexWords": [
+   "male"
+  ],
+  "sourceAgeWords": [],
+  "auditDate": "14-11-2026",
+  "assetSha1": "89d3c8371d57bad49772ee6fe4b7c6b3bece8e16",
+  "sourceImageSha1": "0801e85f403acc625b2819c147b84cdeb1856d43",
+  "sourceImageSize": [
+   2050,
+   1537
+  ],
+  "visualRoleCheck": "De fotograaf vermeldt mannetje. De grijze staart zonder regelmatige dwarsbanden en met brede donkere eindband ondersteunt dat label.",
+  "earlierMatch": {
+   "inliers": 1708,
+   "method": "ORB+RANSAC, bronaudit 09-11-2026"
+  }
+ },
+ {
+  "image": "/assets/species/sp006.webp",
+  "species": "sp006",
+  "source": "https://commons.wikimedia.org/wiki/File:Male_Sparrowhawk_(46103963061).jpg",
+  "sourceTitle": "File:Male Sparrowhawk (46103963061).jpg",
+  "sourceAuthor": "caroline legg",
+  "sourceLicense": "CC BY 2.0",
+  "taxonInSource": "naam in titel/categorie",
+  "qualityGrade": null,
+  "annotations": [],
+  "sameShot": true,
+  "method": "Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.",
+  "sourceSexWords": [
+   "male"
+  ],
+  "sourceAgeWords": [],
+  "auditDate": "14-11-2026",
+  "assetSha1": "b43fbb27df96b2f66c47df3024e3f8da936633a0",
+  "sourceImageSha1": "c72f1276283f87639b534617644732b64462f1ae",
+  "sourceImageSize": [
+   4721,
+   3147
+  ],
+  "earlierMatch": {
+   "inliers": 2629,
+   "method": "ORB+RANSAC, bronaudit 09-11-2026"
+  }
+ },
+ {
+  "image": "/assets/species/sp007.webp",
+  "species": "sp007",
+  "source": "https://commons.wikimedia.org/wiki/File:Male_northern_goshawk_(49434582392).jpg",
+  "sourceTitle": "File:Male northern goshawk (49434582392).jpg",
+  "sourceAuthor": "Andrey Gulivanov",
+  "sourceLicense": "CC BY 2.0",
+  "taxonInSource": "naam in titel/categorie",
+  "qualityGrade": null,
+  "annotations": [],
+  "sameShot": true,
+  "method": "Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.",
+  "sourceSexWords": [
+   "male"
+  ],
+  "sourceAgeWords": [],
+  "auditDate": "14-11-2026",
+  "assetSha1": "979241b8d100104e3fc18f132e78b4eed8c906e9",
+  "sourceImageSha1": "8e5e7d5e404f518afd7015882ca9cb5e8b370924",
+  "sourceImageSize": [
+   3000,
+   2250
+  ],
+  "earlierMatch": {
+   "inliers": 2790,
+   "method": "ORB+RANSAC, bronaudit 09-11-2026"
+  }
+ },
+ {
+  "image": "/assets/species/sp008.webp",
+  "species": "sp008",
+  "source": "https://commons.wikimedia.org/wiki/File:Common_kestrel_on_a_tree_in_Krak%C3%B3w,_20250412_1052_3641.jpg",
+  "sourceTitle": "File:Common kestrel on a tree in Kraków, 20250412 1052 3641.jpg",
+  "sourceAuthor": "Jakub Hałun",
+  "sourceLicense": "CC BY 4.0",
+  "taxonInSource": "naam in titel/categorie",
+  "qualityGrade": null,
+  "annotations": [],
+  "sameShot": true,
+  "method": "Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.",
+  "sourceSexWords": [
+   "male"
+  ],
+  "sourceAgeWords": [],
+  "auditDate": "14-11-2026",
+  "assetSha1": "03a99916018e25b13b9d467ad8ea1179ecbe11a9",
+  "sourceImageSha1": "4f2c9f73afec173517ccb75e87874c2920534b82",
+  "sourceImageSize": [
+   1785,
+   2682
+  ],
+  "earlierMatch": {
+   "inliers": 2303,
+   "method": "ORB+RANSAC, bronaudit 09-11-2026"
+  }
+ },
+ {
+  "image": "/assets/species/plumage/sp006-hero-male.webp",
+  "species": "sp006",
+  "source": "https://commons.wikimedia.org/wiki/File%3ASparrowhawk_-_Accipiter_nisus_-_Male_%2852253225702%29.jpg",
+  "sourceTitle": "File:Sparrowhawk - Accipiter nisus - Male (52253225702).jpg",
+  "sourceAuthor": "caroline legg",
+  "sourceLicense": "CC BY 2.0",
+  "taxonInSource": "Accipiter nisus",
+  "sourceSexWords": [
+   "male"
+  ],
+  "sourceAgeWords": [],
+  "earlierOriginalSha1": "c6bec5e043429e9eff72ddddb8acb135547d1aa1",
+  "sameShot": true,
+  "auditDate": "14-11-2026",
+  "assetSha1": "0f194fa4f429c0709f81800f114c7bb2d0e441ae",
+  "sourceImageSha1": "c6bec5e043429e9eff72ddddb8acb135547d1aa1",
+  "sourceImageSize": [
+   4488,
+   3206
+  ],
+  "method": "Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn."
+ },
+ {
+  "image": "/assets/species/plumage/sp007-hero-male.webp",
+  "species": "sp007",
+  "source": "https://commons.wikimedia.org/wiki/File%3AMale_northern_goshawk_%2852294386465%29.jpg",
+  "sourceTitle": "File:Male northern goshawk (52294386465).jpg",
+  "sourceAuthor": "Andrey Gulivanov",
+  "sourceLicense": "CC BY 2.0",
+  "taxonInSource": "Astur gentilis",
+  "sourceSexWords": [
+   "male"
+  ],
+  "sourceAgeWords": [],
+  "earlierOriginalSha1": "7d6ecbe1e4d126293b12272763b62e9c6c07da4e",
+  "sameShot": true,
+  "auditDate": "14-11-2026",
+  "assetSha1": "44651592f140033e4acf10b1ff34c4e6fd0aca74",
+  "sourceImageSha1": "7d6ecbe1e4d126293b12272763b62e9c6c07da4e",
+  "sourceImageSize": [
+   3600,
+   2400
+  ],
+  "method": "Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn.",
+  "taxonReference": "https://itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=1253651"
+ },
+ {
+  "image": "/assets/species/plumage/sp008-hero-male.webp",
+  "species": "sp008",
+  "source": "https://commons.wikimedia.org/wiki/File%3AFalco_tinnunculus_WE_Faucons_LPO_20260621_n06.jpg",
+  "sourceTitle": "File:Falco tinnunculus WE Faucons LPO 20260621 n06.jpg",
+  "sourceAuthor": "Marie-Lan Taÿ Pamart",
+  "sourceLicense": "CC BY 4.0",
+  "taxonInSource": "Falco tinnunculus",
+  "sourceSexWords": [
+   "male"
+  ],
+  "sourceAgeWords": [],
+  "earlierOriginalSha1": "9041286b8d585208dbab30655cacb41c59babd1a",
+  "sameShot": true,
+  "auditDate": "14-11-2026",
+  "assetSha1": "290c5a3ea0ed281ad336c98258483c84daaa8d6c",
+  "sourceImageSha1": "e76d7ba6bf5c87c0911e90baf7514d0675c8b959",
+  "sourceImageSize": [
+   960,
+   640
+  ],
+  "method": "Appbestand naast een kopie van het beeld op de bronpagina bekeken. Fotocredit en licentie gecontroleerd op de pagina. De beeldkopie kan een bronminiatuur zijn."
+ }
+]

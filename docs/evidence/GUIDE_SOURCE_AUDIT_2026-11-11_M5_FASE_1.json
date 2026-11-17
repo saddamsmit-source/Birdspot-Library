@@ -1,0 +1,92 @@
+[
+ {
+  "image": "/assets/species/plumage/sp036-adult_f.webp",
+  "species": "sp036",
+  "source": "https://commons.wikimedia.org/wiki/File:Chloris_chloris_female.jpg",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/48/Chloris_chloris_female.jpg",
+  "sourceTitle": "File:Chloris chloris female.jpg",
+  "sourceAuthor": "Francis C. Franklin",
+  "sourceLicense": "CC BY-SA 3.0",
+  "sameShot": true,
+  "method": "directe WebP-conversie van originele Commons-JPEG",
+  "sourceSha256": "85d9e523d7ba5c99f0c980c3c93755a7a14e061e0d8487964901751d435d2721",
+  "sha1": "eb489f1cf65881d186d598620ce52630385802a2",
+  "taxonInSource": "Chloris chloris",
+  "annotations": [
+   "De fotograaf benoemt een vrouwtje. Het grijsgroene kleed en de gele vleugelrand zijn zichtbaar."
+  ],
+  "auditDate": "2026-11-11"
+ },
+ {
+  "image": "/assets/species/plumage/sp036-juv.webp",
+  "species": "sp036",
+  "source": "https://commons.wikimedia.org/wiki/File:Verdilh%C3%A3o%2C_juvenil%2C_European_Greenfinch%2C_juvenile_(50375120742).jpg",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Verdilh%C3%A3o%2C_juvenil%2C_European_Greenfinch%2C_juvenile_%2850375120742%29.jpg",
+  "sourceTitle": "File:Verdilhão, juvenil, European Greenfinch, juvenile (50375120742).jpg",
+  "sourceAuthor": "Luiz Lapa from Oeiras, Portugal",
+  "sourceLicense": "CC BY 2.0",
+  "sameShot": true,
+  "method": "directe WebP-conversie van originele Commons-JPEG",
+  "sourceSha256": "ec66a7c44db116ffd2707f540d22971656c81c568b34ba0023ef89e8f7fd82e1",
+  "sha1": "5e733dd05a2e542b6c32ba045e68bb4e9ef3f1a7",
+  "taxonInSource": "Chloris chloris",
+  "annotations": [
+   "De fotograaf benoemt een juveniel. Stevige snavel en donkere streping zichtbaar. Geslacht onbekend."
+  ],
+  "auditDate": "2026-11-11"
+ },
+ {
+  "image": "/assets/species/plumage/sp037-adult_m.webp",
+  "species": "sp037",
+  "source": "https://commons.wikimedia.org/wiki/File:European_goldfinch_(Carduelis_carduelis)_male.jpg",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/European_goldfinch_%28Carduelis_carduelis%29_male.jpg",
+  "sourceTitle": "File:European goldfinch (Carduelis carduelis) male.jpg",
+  "sourceAuthor": "Charles J. Sharp",
+  "sourceLicense": "CC BY-SA 3.0",
+  "sameShot": true,
+  "method": "directe WebP-conversie van originele Commons-JPEG",
+  "sourceSha256": "b11b9dca270b59d9f5714d14cce28af85b8282ec0803333c4e40ec8551ef7cb1",
+  "sha1": "e77aa4956ce5eaa2dc32b10079d2dedc3b79e7a5",
+  "taxonInSource": "Carduelis carduelis",
+  "annotations": [
+   "De fotograaf benoemt een mannetje. Het rode masker reikt achter het oog."
+  ],
+  "auditDate": "2026-11-11"
+ },
+ {
+  "image": "/assets/species/plumage/sp037-adult_f.webp",
+  "species": "sp037",
+  "source": "https://commons.wikimedia.org/wiki/File:Cardelius_Cardelius_femmina.JPG",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Cardelius_Cardelius_femmina.JPG",
+  "sourceTitle": "File:Cardelius Cardelius femmina.JPG",
+  "sourceAuthor": "Francesco Canu",
+  "sourceLicense": "CC BY-SA 3.0",
+  "sameShot": true,
+  "method": "directe WebP-conversie van originele Commons-JPEG",
+  "sourceSha256": "bac8c05eee7f54035d601144f81dc71f6a7b6cef4ab86aaf8ddab1eb900754e1",
+  "sha1": "d7723bfae4910c2e619ec30de489ab01b09b2505",
+  "taxonInSource": "Carduelis carduelis",
+  "annotations": [
+   "De oorspronkelijke bestandsnaam van fotograaf Francesco Canu noemt femmina (vrouwtje). Het zichtbare masker is relatief beperkt. Maskergrootte alleen geeft geen zekere geslachtsbepaling."
+  ],
+  "auditDate": "2026-11-11"
+ },
+ {
+  "image": "/assets/species/plumage/sp037-juv.webp",
+  "species": "sp037",
+  "source": "https://commons.wikimedia.org/wiki/File:Goldfinch_-_Carduelis_carduelis_-_Juvenile.jpg",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Goldfinch_-_Carduelis_carduelis_-_Juvenile.jpg",
+  "sourceTitle": "File:Goldfinch - Carduelis carduelis - Juvenile.jpg",
+  "sourceAuthor": "caroline legg",
+  "sourceLicense": "CC BY 2.0",
+  "sameShot": true,
+  "method": "directe WebP-conversie van originele Commons-JPEG",
+  "sourceSha256": "7f082bfa891eec0e1ed48d69dddf878750a57fc910acdcc208c6bca27288a45b",
+  "sha1": "fab2ba3414543ae8865db0190be163ca04cc1419",
+  "taxonInSource": "Carduelis carduelis",
+  "annotations": [
+   "De fotograaf benoemt een juveniel. Bruine kop en gele vleugelband zijn zichtbaar. Geslacht onbekend."
+  ],
+  "auditDate": "2026-11-11"
+ }
+]

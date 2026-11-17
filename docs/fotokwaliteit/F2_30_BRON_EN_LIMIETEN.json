@@ -1,0 +1,333 @@
+{
+  "schema": "birdspot-f2-30-proof-and-limitations-v1",
+  "date": "2026-11-15",
+  "basePR": 233,
+  "baseSha": "5226a043c98d49251830371d34c4f980fedb64f0",
+  "status": "PARTIALLY TESTED",
+  "scope": [
+    "sp092 Kuifeend",
+    "sp094 Zilvermeeuw",
+    "sp095 Kleine Mantelmeeuw"
+  ],
+  "comparisonPartners": [
+    "sp132 Tafeleend, drie gebruikte foto’s.",
+    "sp164 Grote Mantelmeeuw, één gebruikt rustbeeld."
+  ],
+  "sourceFacts": [
+    {
+      "species": "sp092",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kuifeend",
+      "claims": "Mannetje grotendeels donker met witte flanken, langere kuif en witte baan over de slagpennen in vlucht."
+    },
+    {
+      "species": "sp094",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zilvermeeuw",
+      "claims": "Volwassen vogel met lichtgrijze mantel en meestal roze poten. Jonge vogels krijgen geleidelijk het volwassen kleed."
+    },
+    {
+      "species": "sp095",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kleine-mantelmeeuw",
+      "claims": "Volwassen met donkergrijze mantel en gele poten. Juvenielen zijn bruin."
+    },
+    {
+      "species": "sp132",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/tafeleend",
+      "claims": "Mannetje met roodbruine kop, zwarte borst en lichtgrijze rug en flanken."
+    },
+    {
+      "species": "sp164",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-mantelmeeuw",
+      "claims": "Forse meeuw met zwarte mantel en roze poten."
+    }
+  ],
+  "reproducedDefect": "Zilvermeeuw en Kleine Mantelmeeuw toonden hetzelfde paar volwassen foto’s zowel onder Volwassen als onder Eerste winter.",
+  "fix": "Beide eerste-winterrollen expliciet als ontbrekend markeren, met aparte leeftijdsneutrale vluchtvergelijking voor de gecontroleerde volwassen opnamen.",
+  "images": [
+    {
+      "species": "sp092",
+      "image": "/assets/species/sp092.webp",
+      "roles": [
+        "guide"
+      ],
+      "source": "https://commons.wikimedia.org/wiki/File:Tufted_Duck_Aythya_fuligula_Male_by_Dr._Raju_Kasambe_DSCN9795_(17).jpg",
+      "registeredAuthor": "Dr. Raju Kasambe",
+      "registeredLicense": "CC BY-SA 4.0",
+      "originalPageRead": true,
+      "sha256": "83d66aa1ff3d39e32f2a9c1a1936795d712f00a97dbad47c20cb5bd9b3d62bd6",
+      "dimensions": [
+        1600,
+        1014
+      ],
+      "visualReview": "Mannetje op water. Lange kuif, gele iris, zwarte kop en borst, witte flank. Gemaakt in India."
+    },
+    {
+      "species": "sp092",
+      "image": "/assets/species/plumage/sp092-adult_f.webp",
+      "roles": [
+        "adult_f"
+      ],
+      "source": "https://commons.wikimedia.org/wiki/File:Aythya_fuligula_%28female%29.jpg",
+      "registeredAuthor": "Hans Hillewaert",
+      "registeredLicense": "CC BY-SA 3.0",
+      "originalPageRead": true,
+      "sha256": "28aa998b9bf26ebb38d0c7aa576d477f1094c013cf694c71eed9e321c0d7646e",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "visualReview": "Vrouwtje op water met korte kuif, bruine flanken en gele iris. Bron benoemt vrouwtje. Uitkerkse Polders."
+    },
+    {
+      "species": "sp092",
+      "image": "/assets/species/plumage/sp092-juv.webp",
+      "roles": [
+        "juv"
+      ],
+      "source": "https://www.inaturalist.org/photos/736323053",
+      "registeredAuthor": "SkippingShoe",
+      "registeredLicense": "CC BY 4.0",
+      "originalPageRead": false,
+      "sha256": "9451e8f26303844404ea468e7e26f878c469842f6eb27c75849e3da80f2b99cc",
+      "dimensions": [
+        1400,
+        933
+      ],
+      "visualReview": "Bruine rustvogel met dofgele iris. Historische iNaturalist-annotatie bevestigt juveniel in het Verenigd Koninkrijk.",
+      "earlierEvidence": {
+        "file": "../evidence/GUIDE_SOURCE_AUDIT_2026-11-12_M8_FASE_3.json",
+        "sameShot": true,
+        "method": "Verkleind tot maximaal 1400 px. Omgezet naar WebP zonder uitsnede, EXIF, GPS of XMP.",
+        "sourceLicense": "CC BY 4.0",
+        "annotations": [
+          "iNaturalist-onderzoekswaarneming van Kuifeend uit het Verenigd Koninkrijk met de leeftijdsannotatie Juvenile."
+        ]
+      }
+    },
+    {
+      "species": "sp092",
+      "image": "/assets/species/plumage/sp092-flight.webp",
+      "roles": [
+        "pose"
+      ],
+      "source": "https://commons.wikimedia.org/wiki/File:Tufted_Duck_(Aythya_fuligula)_-_Flickr_-_gilgit2.jpg",
+      "registeredAuthor": "Imran Shah / Birds of Gilgit-Baltistan",
+      "registeredLicense": "CC BY-SA 2.0",
+      "originalPageRead": false,
+      "sha256": "04fd8a0f2f92336d19f6ee758dec38940226dafae08b8318e560423fe6718537",
+      "dimensions": [
+        1400,
+        1050
+      ],
+      "visualReview": "Mannetje in vrije vlucht. Donkere kop, lichte flank en witte vleugelbaan. De naam van de fotograaf staat ook in de opname.",
+      "earlierEvidence": {
+        "file": "../evidence/GUIDE_SOURCE_AUDIT_2026-11-09.json",
+        "sameShot": true,
+        "inliers": 2103,
+        "method": "ORB+RANSAC tegen bronbeeld",
+        "sourceLicense": "CC BY-SA 2.0",
+        "annotations": []
+      }
+    },
+    {
+      "species": "sp092",
+      "image": "/assets/species/plumage/sp092-juv-review.webp",
+      "roles": [
+        "pose"
+      ],
+      "source": "https://commons.wikimedia.org/wiki/File:Aythya_fuligula_%D0%A7%D0%B5%D1%80%D0%BD%D0%B5%D1%82%D1%8C_%D1%85%D0%BE%D1%85%D0%BB%D0%B0%D1%82%D0%B0%D1%8F_%D0%9F%D1%82%D0%B5%D0%BD%D0%B5%D1%86_%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D1%81.jpg",
+      "registeredAuthor": "Tsyganov Sergey",
+      "registeredLicense": "CC BY-SA 4.0",
+      "originalPageRead": false,
+      "sha256": "49b7ed9d457f6903d70af1250d1ae3ca15a8873728057bbeb9b66c9471135cfb",
+      "dimensions": [
+        1400,
+        875
+      ],
+      "visualReview": "Jonge vogel in zijaanzicht met deels donzig kleed. Afzonderlijk voorbeeld van een vroeger stadium dan het oudere juveniel.",
+      "earlierEvidence": {
+        "file": "../evidence/GUIDE_SOURCE_AUDIT_2026-11-09.json",
+        "sameShot": true,
+        "inliers": 2261,
+        "method": "ORB+RANSAC tegen bronbeeld",
+        "sourceLicense": "CC BY-SA 4.0",
+        "annotations": []
+      }
+    },
+    {
+      "species": "sp092",
+      "image": "/assets/species/plumage/sp092-hero-male.webp",
+      "roles": [
+        "pose"
+      ],
+      "source": "https://commons.wikimedia.org/wiki/File%3AAythya_fuligula_%28male%29_2022_03_20.jpg",
+      "registeredAuthor": "Alexis Lours",
+      "registeredLicense": "CC BY 4.0",
+      "originalPageRead": true,
+      "sha256": "176a082893b5ec7d2c8ef58a17c2e29e0adbbfae144d4680ae3733b5392c3c2a",
+      "dimensions": [
+        1600,
+        1067
+      ],
+      "visualReview": "Volwassen mannetje op water met gele iris en duidelijk afhangende kuif. Bron noemt mannetje en Frankrijk."
+    },
+    {
+      "species": "sp094",
+      "image": "/assets/species/sp094.webp",
+      "roles": [
+        "guide"
+      ],
+      "source": "https://commons.wikimedia.org/wiki/File:Silberm%C3%B6we_auf_Eis_-_Spiekeroog,_Nationalpark_nieders%C3%A4chsisches_Wattenmeer.jpg",
+      "registeredAuthor": "Stephan Sprinz",
+      "registeredLicense": "CC BY-SA 4.0",
+      "originalPageRead": true,
+      "sha256": "4d1485c8e69026fa185b2cbe3a0eeb9bf7f4bf42eaa775e44736793f43e6aa3d",
+      "dimensions": [
+        1600,
+        1067
+      ],
+      "visualReview": "Volwassen vogel in rust op ijs bij Spiekeroog. Lichtgrijze mantel, roze poten en gele snavel."
+    },
+    {
+      "species": "sp094",
+      "image": "/assets/species/plumage/sp094-flight.webp",
+      "roles": [
+        "pose"
+      ],
+      "source": "https://commons.wikimedia.org/wiki/File:Larus_argentatus_in_flight.jpg",
+      "registeredAuthor": "Andreas Trepte",
+      "registeredLicense": "CC BY-SA 2.5",
+      "originalPageRead": true,
+      "sha256": "372a92aaad591b29255cd6db15e5cc69942c7963f0a96a8f5315dab8a6fc350e",
+      "dimensions": [
+        1400,
+        933
+      ],
+      "visualReview": "Volwassen vogel boven zee bij Helgoland. Lichtgrijs vleugelveld en duidelijk afstekende zwarte vleugeltop.",
+      "sourceNote": "De Commons-pagina noemt CC BY-SA 2.5 en vermeldt afzonderlijk een verzoek van de fotograaf om hem over hergebruik te informeren. Bron, maker en licentie staan bij de foto. Melding niet uitgevoerd in deze ronde."
+    },
+    {
+      "species": "sp095",
+      "image": "/assets/species/sp095.webp",
+      "roles": [
+        "guide"
+      ],
+      "source": "https://commons.wikimedia.org/wiki/File:Heringsm%C3%B6we_auf_Spiekeroog_04.jpg",
+      "registeredAuthor": "Stephan Sprinz",
+      "registeredLicense": "CC BY 4.0",
+      "originalPageRead": true,
+      "sha256": "f7f84b0f61f9d4c578df09f10506d936291d0a6da7cdbe9c3245140b4427f3aa",
+      "dimensions": [
+        1600,
+        1067
+      ],
+      "visualReview": "Volwassen vogel in rust bij Spiekeroog. Donkergrijze mantel en gele poten."
+    },
+    {
+      "species": "sp095",
+      "image": "/assets/species/plumage/sp095-flight.webp",
+      "roles": [
+        "pose"
+      ],
+      "source": "https://commons.wikimedia.org/wiki/File:Lesser_black-backed_gull_(Larus_fuscus)_2.jpg",
+      "registeredAuthor": "Charles J. Sharp",
+      "registeredLicense": "CC BY-SA 4.0",
+      "originalPageRead": true,
+      "sha256": "7c62a3312d2ff274ce90034375fb97e5fd1d74c6b2036581979ee5c7c3d3d94b",
+      "dimensions": [
+        1400,
+        933
+      ],
+      "visualReview": "Volwassen vogel in vrije vlucht in Zweden. Donkere geheven vleugel met zwarte buitenste pennen en witte onderzijde van het lichaam."
+    },
+    {
+      "species": "sp132",
+      "image": "/assets/species/sp132.webp",
+      "roles": [
+        "guide"
+      ],
+      "source": "https://commons.wikimedia.org/wiki/File:Common_Pochard_2025_11_11_08.jpg",
+      "registeredAuthor": "Alexis Lours",
+      "registeredLicense": "CC BY 4.0",
+      "originalPageRead": false,
+      "sha256": "d94c34ff99a24fa636d38d94c3cd88ba314099c3e3c4baa033aef0d1bc72164e",
+      "dimensions": [
+        1600,
+        1067
+      ],
+      "visualReview": "Mannetje op water met roodbruine kop en lichte flanken. Dit is het bestaande mannetjespaar met Kuifeend.",
+      "earlierEvidence": {
+        "file": "../evidence/GUIDE_SOURCE_AUDIT_2026-11-09.json",
+        "sameShot": true,
+        "inliers": 1529,
+        "method": "ORB+RANSAC tegen bronbeeld",
+        "sourceLicense": "CC BY 4.0",
+        "annotations": []
+      }
+    },
+    {
+      "species": "sp132",
+      "image": "/assets/species/plumage/sp132-adult_f.webp",
+      "roles": [
+        "adult_f"
+      ],
+      "source": "https://commons.wikimedia.org/wiki/File:Aythya_ferina_%28female%29%2C_Krasnodar%2C_Russia.jpg",
+      "registeredAuthor": "Klamul",
+      "registeredLicense": "CC BY-SA 4.0",
+      "originalPageRead": true,
+      "sha256": "a01e743f455f59b16df2c8ad28797471c911bd9f274f41c03fa900b31018dfba",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "visualReview": "Grijsbruin vrouwtje op een boomstam. Lichte wang en aflopend voorhoofd. Bron bevestigt vrouwtje."
+    },
+    {
+      "species": "sp132",
+      "image": "/assets/species/plumage/sp132-flight.webp",
+      "roles": [
+        "pose"
+      ],
+      "source": "https://commons.wikimedia.org/wiki/File:Common_pochard_(Aythaya_ferina)_in_flight_Denmark.jpg",
+      "registeredAuthor": "Charles J. Sharp",
+      "registeredLicense": "CC BY-SA 4.0",
+      "originalPageRead": false,
+      "sha256": "1407fa98895c9b8517ddc5f64acc23e945270b5bf580f2165315a3d6e64f2b28",
+      "dimensions": [
+        850,
+        535
+      ],
+      "visualReview": "Mannetje in vrije vlucht. Roodbruine kop en lichtgrijze vleugelbaan.",
+      "earlierEvidence": {
+        "file": "../evidence/GUIDE_SOURCE_AUDIT_2026-11-09.json",
+        "sameShot": true,
+        "inliers": 1192,
+        "method": "ORB+RANSAC tegen bronbeeld",
+        "sourceLicense": "CC BY-SA 4.0",
+        "annotations": []
+      }
+    },
+    {
+      "species": "sp164",
+      "image": "/assets/species/plumage/sp164-adult.webp",
+      "roles": [
+        "adult_m"
+      ],
+      "source": "https://commons.wikimedia.org/wiki/File:Great_black-backed_gull_(Larus_marinus)_2026_02.jpg",
+      "registeredAuthor": "TRinaud",
+      "registeredLicense": "CC BY 4.0",
+      "originalPageRead": true,
+      "sha256": "3a78caa0dd09b78a9077a638e2ee155d22b14bff64da2ac306a733c259f4f803",
+      "dimensions": [
+        1250,
+        833
+      ],
+      "visualReview": "Volwassen vogel aan de kust van Bretagne. Roze poten, brede borst, bijna zwarte mantel en forse snavel. Geen geslachtslabel in het nieuwe paar."
+    }
+  ],
+  "open": [
+    "Vijf exacte bronpagina’s konden niet opnieuw worden geopend. Eerdere bronbewijzen per beeld zijn bewaard.",
+    "Een geschikt fotografisch eerste-winterpaar voor Zilvermeeuw en Kleine Mantelmeeuw blijft open.",
+    "Verzoek om hergebruik te melden bij de Zilvermeeuw-vluchtfoto vastgelegd voor releasebeoordeling.",
+    "ANWB-soortpassages, nieuwe origineel-WebP-vergelijking en fysieke Android-test zijn nog open."
+  ]
+}

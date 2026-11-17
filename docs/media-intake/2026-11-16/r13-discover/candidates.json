@@ -1,0 +1,192 @@
+{
+  "generated": "2026-11-16T16:38:39Z",
+  "userAgent": "BirdspotLibrary-media-intake/1.0 (https://github.com/saddamsmit-source/Birdspot-Library; build-time license-checked import)",
+  "licensePolicy": "CC0 / publiek domein / CC BY / CC BY-SA; NC en ND uitgesloten",
+  "status": "CANDIDATES ONLY - niet goedgekeurd, niet in de app",
+  "queries": [
+    {
+      "id": "sp048_flight",
+      "speciesId": "sp048",
+      "role": "flight",
+      "kind": "image",
+      "search": "Turdus iliacus flight filetype:bitmap",
+      "candidates": [
+        {
+          "title": "File:Redwing in flight.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Redwing_in_flight.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Redwing_in_flight.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Redwing_in_flight.jpg/960px-Redwing_in_flight.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "ee8654a36d16815c4abe28f3d7f84a29b6a6cd4f",
+          "size": 6684073,
+          "width": 4260,
+          "height": 2840,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+          "author": "Lucas Golden",
+          "credit": "Own work",
+          "description": "",
+          "date": "2022-07-15 19:53:27",
+          "categories": [
+            "Passeriformes of Iceland",
+            "Turdus iliacus coburni"
+          ],
+          "preview": "sp048_flight_01.jpg"
+        }
+      ],
+      "rejectedForLicense": []
+    },
+    {
+      "id": "sp048_flight_b",
+      "speciesId": "sp048",
+      "role": "flight",
+      "kind": "image",
+      "search": "Redwing flying filetype:bitmap",
+      "candidates": [
+        {
+          "title": "File:Steamer Redwing on the side of a river, next to people in horse-drawn carts. - DPLA - 2667768ce6027d9c0a06e610d75fa6d9.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Steamer_Redwing_on_the_side_of_a_river,_next_to_people_in_horse-drawn_carts._-_DPLA_-_2667768ce6027d9c0a06e610d75fa6d9.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Steamer_Redwing_on_the_side_of_a_river%2C_next_to_people_in_horse-drawn_carts._-_DPLA_-_2667768ce6027d9c0a06e610d75fa6d9.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Steamer_Redwing_on_the_side_of_a_river%2C_next_to_people_in_horse-drawn_carts._-_DPLA_-_2667768ce6027d9c0a06e610d75fa6d9.jpg/960px-Steamer_Redwing_on_the_side_of_a_river%2C_next_to_people_in_horse-drawn_carts._-_DPLA_-_2667768ce6027d9c0a06e610d75fa6d9.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "aaf7b174d7df8c410c22e6eb10815bcc668ae657",
+          "size": 8269845,
+          "width": 7025,
+          "height": 5363,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "Public domain",
+          "licenseUrl": "",
+          "author": "",
+          "credit": "This file was contributed to Wikimedia Commons by Missouri Historical Society as part of a cooperation project. The donation was facilitated by the Digital Public Library of America , via its partner ",
+          "description": "Horizontal black and white photograph shows the steamboat Redwing on the side of a river, with people standing on the decks. Some people on the second level are standing outside of the rail around the deck. The four flags flying on the back of the steamboat. One has several stars, one is a United States flag, one has \"St. Louis and Redwing,\" and one has \"St. Louis and St. Paul.\" The flags look lik",
+          "date": "",
+          "categories": [],
+          "preview": "sp048_flight_b_01.jpg"
+        },
+        {
+          "title": "File:RA-64014 Tupolev Tu-204 Rossiya Moscow Bykovo 22.6.06 (54299563682).jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:RA-64014_Tupolev_Tu-204_Rossiya_Moscow_Bykovo_22.6.06_(54299563682).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/27/RA-64014_Tupolev_Tu-204_Rossiya_Moscow_Bykovo_22.6.06_%2854299563682%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/RA-64014_Tupolev_Tu-204_Rossiya_Moscow_Bykovo_22.6.06_%2854299563682%29.jpg/960px-RA-64014_Tupolev_Tu-204_Rossiya_Moscow_Bykovo_22.6.06_%2854299563682%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "4a64b46bf84e3e7b14333b72ecc5a0af1375c1a9",
+          "size": 788510,
+          "width": 2606,
+          "height": 1737,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "author": "Colin Cooke Photo",
+          "credit": "RA-64014 Tupolev Tu-204 Rossiya Moscow Bykovo 22.6.06",
+          "description": "After 2017 this frame took to the air again for Rusjet before finally flying for Redwings and could still be flying.",
+          "date": "2025-02-01 17:53",
+          "categories": [],
+          "preview": "sp048_flight_b_02.jpg"
+        },
+        {
+          "title": "File:Ivy, Vernditch - geograph.org.uk - 1708382.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Ivy,_Vernditch_-_geograph.org.uk_-_1708382.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Ivy%2C_Vernditch_-_geograph.org.uk_-_1708382.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Ivy%2C_Vernditch_-_geograph.org.uk_-_1708382.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "sha1": "fdf32973858b7184bd81540e87e7bb543a904717",
+          "size": 227783,
+          "width": 640,
+          "height": 480,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "author": "Trish Steel",
+          "credit": "From geograph.org.uk",
+          "description": "Ivy, Vernditch Ivy is an excellent winter food source for birds. The ivy blooms near the end of the year, usually around November. Although its flowers are small and inconspicuous, they attract many late-flying insects. These provide tasty nibbles for birds such as the wren, dunnock, robin and blue-tit. Later on, when the ivy berries turn black, they ill be gobbled up the blackbirds and wood-pigeo",
+          "date": "2010-02-13",
+          "categories": [
+            "Flora of Hampshire"
+          ],
+          "preview": "sp048_flight_b_03.jpg"
+        },
+        {
+          "title": "File:Ivy covered wall, Sidlesham - geograph.org.uk - 1748337.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Ivy_covered_wall,_Sidlesham_-_geograph.org.uk_-_1748337.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Ivy_covered_wall%2C_Sidlesham_-_geograph.org.uk_-_1748337.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Ivy_covered_wall%2C_Sidlesham_-_geograph.org.uk_-_1748337.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "sha1": "4cc0f494a74b5cc12ade615c189ad15bfa999cff",
+          "size": 213488,
+          "width": 640,
+          "height": 480,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "author": "Trish Steel",
+          "credit": "From geograph.org.uk",
+          "description": "Ivy covered wall, Sidlesham The wall is covered with ivy. Ivy is an excellent winter food source for birds. The ivy blooms near the end of the year, usually around November. Although its flowers are small and inconspicuous, they attract many late-flying insects. These provide tasty nibbles for birds such as the wren, dunnock, robin and blue-tit. Later on, when the ivy berries turn black, they will",
+          "date": "2010-02-15",
+          "categories": [
+            "Sidlesham"
+          ],
+          "preview": "sp048_flight_b_04.jpg"
+        },
+        {
+          "title": "File:Footpath, Coombe Bissett - geograph.org.uk - 1715819.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Footpath,_Coombe_Bissett_-_geograph.org.uk_-_1715819.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Footpath%2C_Coombe_Bissett_-_geograph.org.uk_-_1715819.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Footpath%2C_Coombe_Bissett_-_geograph.org.uk_-_1715819.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "sha1": "407c48cb4fd749ee8f641dd49f3e52c6bd7eed1e",
+          "size": 202842,
+          "width": 640,
+          "height": 480,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "author": "Trish Steel",
+          "credit": "From geograph.org.uk",
+          "description": "Footpath, Coombe Bissett The footpath takes walkers from the village shop to the A354. The wall is covered with ivy. Ivy is an excellent winter food source for birds. The ivy blooms near the end of the year, usually around November. Although its flowers are small and inconspicuous, they attract many late-flying insects. These provide tasty nibbles for birds such as the wren, dunnock, robin and blu",
+          "date": "2010-02-19",
+          "categories": [
+            "Coombe Bissett"
+          ],
+          "preview": "sp048_flight_b_05.jpg"
+        },
+        {
+          "title": "File:Ivy, St Michael and All Angels Church, Stour Provost - geograph.org.uk - 348601.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Ivy,_St_Michael_and_All_Angels_Church,_Stour_Provost_-_geograph.org.uk_-_348601.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Ivy%2C_St_Michael_and_All_Angels_Church%2C_Stour_Provost_-_geograph.org.uk_-_348601.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Ivy%2C_St_Michael_and_All_Angels_Church%2C_Stour_Provost_-_geograph.org.uk_-_348601.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "sha1": "e373923f7efef0fcd5ee2283b6d035f2f939d9c0",
+          "size": 174725,
+          "width": 640,
+          "height": 480,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "author": "Trish Steel",
+          "credit": "From geograph.org.uk",
+          "description": "Ivy, St Michael and All Angels Church, Stour Provost Ivy is an excellent winter food source for birds. The ivy blooms near the end of the year, usually around November. Although its flowers are small and inconspicuous, they attract many late-flying insects. These provide tasty nibbles for birds such as the wren, dunnock, robin and blue-tit. Later on, when the ivy berries turn black, they will be g",
+          "date": "2007-02-26",
+          "categories": [
+            "St Michael & All Angels church, Stour Provost"
+          ],
+          "preview": "sp048_flight_b_06.jpg"
+        }
+      ],
+      "rejectedForLicense": [
+        {
+          "title": "File:Baby birds at home (1912) (14564781958).jpg",
+          "license": "No restrictions"
+        },
+        {
+          "title": "File:Two bird-lovers in Mexico (1905) (14564652700).jpg",
+          "license": "No restrictions"
+        },
+        {
+          "title": "File:A natural history of birds - illustrated with a hundred and one copper plates, curiously engraven from the life (1731) (14749754474).jpg",
+          "license": "No restrictions"
+        }
+      ]
+    }
+  ]
+}

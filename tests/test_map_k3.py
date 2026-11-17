@@ -85,9 +85,9 @@ def main():
             p.screenshot(path=str(SHOTS / "map_k3_cluster_390.png"))
             print("K3-03 OK — groepje met ring 50/25/25 %")
 
-            legend = p.locator(".map-legend").inner_text().split()
+            legend = p.locator(".map-legend").first.inner_text().split()
             assert legend == ["Gezien", "Gehoord", "Beide"], legend
-            dots = p.eval_on_selector_all(".map-legend__dot", "els => els.map(e => getComputedStyle(e).backgroundColor)")
+            dots = p.eval_on_selector_all(".map-meta .map-legend__dot", "els => els.map(e => getComputedStyle(e).backgroundColor)")
             assert dots == [COLORS["seen"], COLORS["heard"], COLORS["both"]], dots
             assert not errors, errors
             print("K3-04 OK — legenda, geen paginafouten")

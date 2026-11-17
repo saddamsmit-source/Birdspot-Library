@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-16",
+  "purpose": "F3-R12: echte vrije-vluchtfoto Ringmus ter vervanging van de luchtgevecht-foto (uit vluchtrol). Visueel beoordeeld op 1600 px-voorvertoning: vrij in de lucht, geen poten of ondergrond zichtbaar.",
+  "items": [
+    {
+      "speciesId": "sp044",
+      "kind": "pose",
+      "role": "flight",
+      "title": "File:Eurasian-Tree-Sparrow.jpg",
+      "sha1": "d50be2c413fd35c0ff4d29ce93d1ee48a4f16d68",
+      "license": "CC BY-SA 4.0",
+      "author": "Mildeep",
+      "asset": "/assets/species/plumage/sp044-flight-free.webp",
+      "crop": [
+        0.36,
+        0.12,
+        0.9,
+        0.88
+      ],
+      "register": {
+        "nl": "Ringmus",
+        "latin": "Passer montanus",
+        "label": "In vlucht",
+        "flight": true,
+        "alt": "Ringmus in vrije vlucht van achteren gezien, vleugels en staart gespreid; kastanjebruine kruin en zwarte wangvlek zichtbaar.",
+        "note": "Vrije vlucht: let op de kastanjebruine kruin en de zwarte wangvlek op de witte wang.",
+        "visualCheck": "Ringmus vrij in de lucht tegen egale groene achtergrond, vleugels en staart gespreid, geen poten of ondergrond zichtbaar; kruin en wangvlek herkenbaar.",
+        "verification": "Commons-titel en categorie noemen Eurasian tree sparrow; kastanjebruine kruin en zwarte wangvlek bevestigen de soort. Geslachten gelijk.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/ringmus"
+      }
+    }
+  ]
+}

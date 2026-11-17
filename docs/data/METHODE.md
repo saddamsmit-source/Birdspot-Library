@@ -47,6 +47,10 @@ Bron: veldgidskennis; waarden zijn gangbare bandbreedtes, geen metingen in Neder
 (standvogels, zomergasten, wintergasten, trekvogels en schaarse gasten: 301). Het broedblok staat alleen bij soorten
 die in Nederland (soms) broeden; exoten, ontsnapte vogels en compacte dwaalgasten volgen nog. Soorten zonder leefwijze tonen de melding dat deze nog volgt; er worden geen waarden ingevuld.
 
+De kalender gebruikt een expliciete reeks uit `months` waar die is vastgelegd. Anders zet de generator een eenduidig
+bereik zoals `mrt–jul` uit `period` om naar dezelfde maandnotatie. De negen expliciete reeksen en 201 omgezette
+bereiken leveren 210 indicatieve broedperiodes. De app laat het weten als een broedvogel nog geen kalendermaanden heeft.
+
 ## Diashow startpagina (F)
 
 `tools/showcase/species.json` bepaalt de diashow: 50 bijzondere Nederlandse soorten in 15 groepen (schaars, zeldzaam,

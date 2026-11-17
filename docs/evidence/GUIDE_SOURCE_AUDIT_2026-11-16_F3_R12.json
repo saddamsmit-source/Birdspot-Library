@@ -1,0 +1,28 @@
+[
+ {
+  "image": "/assets/species/plumage/sp044-flight-free.webp",
+  "species": "sp044",
+  "source": "https://commons.wikimedia.org/wiki/File:Eurasian-Tree-Sparrow.jpg",
+  "sourceTitle": "File:Eurasian-Tree-Sparrow.jpg",
+  "sourceAuthor": "Mildeep",
+  "sourceLicense": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "taxonInSource": "Eurasian tree sparrow (Passer montanus)",
+  "annotations": [],
+  "sameShot": true,
+  "method": "Commons-origineel met vastgepinde SHA-1 in de intake-workflow geconverteerd met geregistreerde uitsnede; lokale WebP vergeleken met de 1600 px-voorvertoning in dezelfde uitsnede (Pearson r = 1.000).",
+  "auditDate": "16-11-2026",
+  "assetSha1": "b79d29833930cca4821984435643c1c1d24e06cb",
+  "sourceImageSha1": "d50be2c413fd35c0ff4d29ce93d1ee48a4f16d68",
+  "sourceImageSize": [
+   6585,
+   4390
+  ],
+  "localSize": [
+   1400,
+   1314
+  ],
+  "originalURL": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Eurasian-Tree-Sparrow.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "visualRoleCheck": "Ringmus vrij in de lucht; vrije-vluchtregel voldaan."
+ }
+]

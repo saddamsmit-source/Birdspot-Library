@@ -1,0 +1,110 @@
+[
+  {
+    "image": "/assets/species/plumage/sp069-adult_f.webp",
+    "species": "sp069",
+    "source": "https://www.inaturalist.org/photos/122430547",
+    "originalUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/122430547/original.jpg",
+    "sourceTitle": "iNaturalist photo 122430547",
+    "sourceAuthor": "Donald Davesne",
+    "sourceLicense": "CC BY 4.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "4d65d205979a458b03db78243f45162f280d638343e320e8d6e3c4c56819a225",
+    "sha1": "5fc7ffbd04905de233c9d5aeb6f2772c0476dcaf",
+    "taxonInSource": "Motacilla flava",
+    "annotations": [
+      "De fotograaf annoteert de voorjaarswaarneming als Female. Olijfbruine bovendelen, gele onderzijde en bleke wenkbrauw zijn zichtbaar. Geen ondersoort toegekend."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp069-juv.webp",
+    "species": "sp069",
+    "source": "https://www.inaturalist.org/photos/219611553",
+    "originalUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/219611553/original.jpg",
+    "sourceTitle": "iNaturalist photo 219611553",
+    "sourceAuthor": "euqirneto",
+    "sourceLicense": "CC BY 4.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "6df3a6e9e9d5e3a71b1187f1972c662ddc30e7c4be11e62b2e04d75f38fcc0da",
+    "sha1": "df2d78107a7d61acab25c4665212e0dbedf0df24",
+    "taxonInSource": "Motacilla flava",
+    "annotations": [
+      "De fotograaf annoteert de research-grade waarneming als Juvenile. De bleke onderzijde en lichte vleugelstrepen zijn zichtbaar. Geslacht onbekend."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp106-hero-male.webp",
+    "species": "sp106",
+    "source": "https://commons.wikimedia.org/wiki/File:Grey_partridge_%28Perdix_perdix%29_2020.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Grey_partridge_%28Perdix_perdix%29_2020.jpg",
+    "sourceTitle": "Grey partridge (Perdix perdix) 2020.jpg",
+    "sourceAuthor": "TRinaud",
+    "sourceLicense": "CC BY 4.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "e37289dc1683fff840a2ff4a8118b19fbda83d10e5cbede4b3473c68dd2b005b",
+    "sha1": "10b975366cb28d031f4d566ddc0da9a71500f9f8",
+    "taxonInSource": "Perdix perdix",
+    "annotations": [
+      "De fotograaf benoemt een mannetje op de Commons-bestandspagina. Het oranjebruine gezicht, de grijze borst en lichte lengtestrepen op de schouderveren zijn zichtbaar."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp106-adult_f.webp",
+    "species": "sp106",
+    "source": "https://www.inaturalist.org/photos/181172196",
+    "originalUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/181172196/original.jpeg",
+    "sourceTitle": "iNaturalist photo 181172196",
+    "sourceAuthor": "maxverheij",
+    "sourceLicense": "CC0 1.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "9a1ad70d341217fc7c9f857f0daa139639a8a9368d8428c15a395a0630bfd20c",
+    "sha1": "869c49048bfa1ed4f5282667852990edd070b4c7",
+    "taxonInSource": "Perdix perdix",
+    "annotations": [
+      "De fotograaf annoteert de opname als Adult en Female. De schoudertekening ondersteunt het label. Het bronbestand is onder CC0 vrijgegeven."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/plumage/sp106-juv.webp",
+    "species": "sp106",
+    "source": "https://www.inaturalist.org/photos/695012777",
+    "originalUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/695012777/original.jpg",
+    "sourceTitle": "iNaturalist photo 695012777",
+    "sourceAuthor": "Aurelijus Narbutas",
+    "sourceLicense": "CC BY 4.0",
+    "sameShot": true,
+    "method": "Uitgesneden rond de vogel en omgezet naar WebP zonder EXIF/GPS/XMP",
+    "sourceSha256": "611395cdc11c527e6ba275388b97e62792613d79e7f0d877f3b1395f5b11829e",
+    "sha1": "a9feb5b1bcd4996024a10f2ba0d48476411cb2eb",
+    "taxonInSource": "Perdix perdix",
+    "annotations": [
+      "De research-grade waarneming is geannoteerd als Juvenile en de fotograaf beschrijft een groep met twaalf jongen en twee volwassenen. De afgebeelde vogels tonen beide juveniele kop- en rugtekening. Geslacht onbekend."
+    ],
+    "auditDate": "2026-11-12"
+  },
+  {
+    "image": "/assets/species/sp257.webp",
+    "species": "sp257",
+    "source": "https://commons.wikimedia.org/wiki/File:European_bee-eater_%28Merops_apiaster%29.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4f/European_bee-eater_%28Merops_apiaster%29.jpg",
+    "sourceTitle": "European bee-eater (Merops apiaster).jpg",
+    "sourceAuthor": "Charles J. Sharp",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sameShot": true,
+    "method": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
+    "sourceSha256": "452b9e5cdb5409a563aa5e324118e0f9b45b3ec68f83be0e4e9b2c5d46a54134",
+    "sha1": "85b3029d8d93627c4c8cb4b463f61c4bc59ed631",
+    "taxonInSource": "Merops apiaster",
+    "annotations": [
+      "De fotograaf benoemt Merops apiaster. Keelkleur, snavelvorm en onderzijde zijn zichtbaar. Geslacht onbekend."
+    ],
+    "auditDate": "2026-11-12"
+  }
+]

@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-16",
+  "purpose": "F3-R15: getoonde foto's Roodborsttapuit, Heggenmus, Winterkoning tegen bronbeeld en Commons-rechten.",
+  "items": [
+    {
+      "speciesId": "sp053",
+      "image": "/assets/species/plumage/sp053-hero-male.webp",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "title": "File:Stonechat (Saxicola rubicola) male, Beaulieu, Hampshire.jpg"
+    },
+    {
+      "speciesId": "sp053",
+      "image": "/assets/species/sp053.webp",
+      "author": "Fernando Losada Rodríguez",
+      "license": "CC BY-SA 4.0",
+      "title": "File:Saxicola rubicola.006 - A Coruña.jpg"
+    },
+    {
+      "speciesId": "sp053",
+      "image": "/assets/species/plumage/sp053-female-review.webp",
+      "author": "Caroline Legg",
+      "license": "CC BY 2.0",
+      "title": "File:Stonechat - Saxicola rubicola, Female.jpg"
+    },
+    {
+      "speciesId": "sp053",
+      "image": "/assets/species/plumage/sp053-juv-review.webp",
+      "author": "Vcebollada",
+      "license": "CC BY-SA 4.0",
+      "title": "File:Saxicola rubicola juvenile.jpg"
+    },
+    {
+      "speciesId": "sp054",
+      "image": "/assets/species/sp054.webp",
+      "author": "Hobbyfotowiki",
+      "license": "CC0",
+      "title": "File:The dunnock (Prunella modularis).jpg"
+    },
+    {
+      "speciesId": "sp055",
+      "image": "/assets/species/sp055.webp",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "title": "File:Eurasian wren (Troglodytes troglodytes).jpg"
+    },
+    {
+      "speciesId": "sp055",
+      "image": "/assets/species/plumage/sp055-juv.webp",
+      "author": "caroline legg",
+      "license": "CC BY 4.0",
+      "title": "File:Wren - Troglodytes troglodytes - Juvenile1.jpg"
+    }
+  ]
+}

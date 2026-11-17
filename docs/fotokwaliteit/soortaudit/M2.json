@@ -1,0 +1,279 @@
+{
+  "_meta": {
+    "batch": "M2",
+    "title": "Batch M2 — vergelijkingspartners met foto (K01): 12 soorten foto voor foto",
+    "date": "2026-11-10",
+    "reviewer": "Claude (Opus 5.5). Beeldinspectie per foto op contactsheet (560 px) met vergroting bij twijfel; bronannotaties uit de bronaudit van 09-11 en de geverifieerde hoofdfoto-import. Geen onafhankelijke ornithologische certificering.",
+    "independent": "NOT TESTED — ChatGPT-review op de PR-SHA staat open",
+    "norm": "Gelijk aan M1 (eigenaarseis 10-11-2026) plus FQA-01..04: beeldinventaris met SHA-1, strenge vluchtregel, geslacht/leeftijd alleen met bewijs, één sectie Lijkt op, doorslaggevend alleen na beoordeling.",
+    "verdicts": {
+      "goedgekeurd": "rol, inhoud, kwaliteit en herkomst in orde",
+      "voorwaardelijk": "rol klopt, maar kwaliteit of uitsnede matig; vervanging gewenst",
+      "uit-rol": "niet geschikt voor de getoonde rol; elders getoond met eerlijk label",
+      "review": "REVIEW REQUIRED: bewijs onvoldoende om te bevestigen of te wijzigen"
+    }
+  },
+  "species": {
+    "sp007": {
+      "assets": {
+        "/assets/species/plumage/sp007-hero-male.webp": {
+          "role": "Hoofdfoto",
+          "content": "Volwassen Havik in naaldboom; donkergrijze rug, fijn gebandeerde borst, oranjerood oog, lichte wenkbrauw.",
+          "sexAge": "volwassen (bron: 'Male northern goshawk'); geslacht niet als label getoond op de hoofdfoto",
+          "quality": "goed",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/sp007.webp": {
+          "role": "Mannetje",
+          "content": "Volwassen Havik op tak tegen lichte lucht; grijs, fijn dwars gebandeerd.",
+          "sexAge": "mannetje (bron: 'Male northern goshawk'; kleed past bij volwassen vogel)",
+          "quality": "goed",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp007-juv.webp": {
+          "role": "Juveniel",
+          "content": "Jonge Havik op tak; bruin van boven, onderzijde in de lengte gestreept.",
+          "sexAge": "juveniel (bron: 'Juvenile northern goshawk'; lengtestrepen bevestigen)",
+          "quality": "goed",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp007-male-flight.webp": {
+          "role": "In vlucht (Mannetje)",
+          "content": "Vrij in de lucht van opzij-onder; grijs gebandeerd, witte onderstaartdekveren.",
+          "sexAge": "mannetje (iNaturalist: Sex Male)",
+          "quality": "goed",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp007-adult_f.webp": {
+          "role": "In vlucht (Vrouwtje)",
+          "content": "Vrij in de lucht van onderen; brede vleugels, gebandeerde onderzijde, afgeronde staart.",
+          "sexAge": "volwassen vrouwtje (iNaturalist: Life Stage Adult, Sex Female)",
+          "quality": "goed",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp007-flight.webp": {
+          "role": "In vlucht",
+          "content": "Vrij in de lucht van opzij; brede vleugel en gebandeerde staart. Onderzijde ongeschikt om de leeftijd zeker toe te kennen.",
+          "sexAge": "leeftijd en geslacht onbeslist; label blijft neutraal",
+          "quality": "voldoende: vogel klein in beeld",
+          "verdict": "review"
+        }
+      },
+      "corrections": [
+        "F2: Alle zes actieve bronbeelden en rechten herbevestigd. ITIS bevestigt Astur gentilis en Accipiter gentilis als namen voor dezelfde soort. Geslachtsverschillen, leeftijd en maten gecontroleerd."
+      ],
+      "missing": [
+        "Vrouwtje in rust. Er is al een brongeverifieerd volwassen vrouwtje in vrije vlucht."
+      ],
+      "sexPolicy": "Geslachten verschillen vooral in grootte; labels Mannetje/Vrouwtje steunen op de foto-bron.",
+      "uncertain": [
+        "Algemene vluchtfoto zonder onderbouwde leeftijd of bevestigd geslacht."
+      ],
+      "date": "2026-11-14"
+    },
+    "sp009": {
+      "assets": {
+        "/assets/species/plumage/sp009-male-rest.webp": {"role": "Hoofdfoto", "content": "Volwassen Slechtvalk staand op de grond; kopkap, baardstreep, gebandeerde flanken.", "sexAge": "volwassen; bron noemt 'male' maar geslachten alleen in grootte verschillend — geen geslachtslabel", "quality": "goed", "verdict": "goedgekeurd"},
+        "/assets/species/plumage/sp009-juv.webp": {"role": "Juveniel", "content": "Jonge Slechtvalk op rots; bruin, gestreept van onderen.", "sexAge": "juveniel (bron: Commons-categorie juvenile; kleed bevestigt)", "quality": "goed", "verdict": "goedgekeurd"},
+        "/assets/showcase/sp009.webp": {"role": "In vlucht (Volwassen)", "content": "Vrij in de lucht van opzij; spitse vleugels, gebandeerde onderzijde.", "sexAge": "volwassen-ogend; geslacht niet vastgesteld", "quality": "goed; watermerk maker in beeld", "verdict": "goedgekeurd"},
+        "/assets/species/plumage/sp009-male-flight.webp": {"role": "In vlucht (Volwassen)", "content": "Vrij in de lucht van onderen; vleugels gespreid.", "sexAge": "volwassen (iNaturalist: Adult, Male); terecht zonder geslachtslabel", "quality": "goed", "verdict": "goedgekeurd"},
+        "/assets/species/plumage/sp009-perched.webp": {"role": "Overige herkenningsfoto's (Volwassen in rust)", "content": "Volwassen frontaal op rots; witte borst, baardstreep, gebandeerde flanken.", "sexAge": "volwassen (bron: 'female adult'); geen geslachtslabel", "quality": "goed", "verdict": "goedgekeurd"},
+        "/assets/species/plumage/sp009-juv-flight.webp": {"role": "In vlucht (Juveniel)", "content": "Jonge Slechtvalk in vrije vlucht van opzij, met lengtestrepen op de borst, donkere baardstreep en spitse vleugels.", "sexAge": "Juveniel op basis van bronwaarneming en lengtestrepen op de lichte onderzijde. Geslacht open.", "quality": "goed: het silhouet, de onderzijde en baardstreep zijn zichtbaar", "verdict": "goedgekeurd", "addedIn": "F3-R04"}
+      },
+      "corrections": ["Vijf gidsbeelden opnieuw naast het bronbestand gelegd. Dubbele fotoregistratie samengevoegd. Vluchtvergelijking met Torenvalk gebruikt beelden van beide volwassen vogels van onderen.", "F3-R04: originele foto van een juveniele Slechtvalk in vrije vlucht toegevoegd. Bestaande rust- en vluchtbeelden behouden."],
+      "missing": [],
+      "sexPolicy": "Geslachten verschillen in grootte (Vogelbescherming). Geen geslachtslabels op het verenkleed.",
+      "uncertain": [],
+      "date": "2026-11-15"
+    },
+    "sp016": {
+      "assets": {
+        "/assets/species/plumage/sp016-hero-male.webp": {"role": "Hoofdfoto", "content": "Mannetje op tak; rode nekvlek, witte schoudervlekken, rode onderstaart.", "sexAge": "volwassen mannetje (rode nekvlek)", "quality": "goed", "verdict": "goedgekeurd"},
+        "/assets/species/plumage/sp016-male.webp": {"role": "Mannetje", "content": "Mannetje op stronk; rode nekvlek zichtbaar.", "sexAge": "mannetje (rode nekvlek; bron noemt male)", "quality": "goed", "verdict": "goedgekeurd"},
+        "/assets/species/sp016.webp": {"role": "Vrouwtje", "content": "Specht tegen stam met prooi; zwarte nek zonder rood.", "sexAge": "vrouwtje (geen rood op de kop; bron 'Weibchen')", "quality": "goed", "verdict": "goedgekeurd"},
+        "/assets/species/plumage/sp016-juv.webp": {"role": "Juveniel", "content": "Jonge specht tegen berk; volledig rode kruin.", "sexAge": "juveniel (rood petje; bron juvenile)", "quality": "goed", "verdict": "goedgekeurd"},
+        "/assets/species/plumage/sp016-flight.webp": {"role": "In vlucht", "content": "Vliegend met voedsel in de snavel; witte schoudervlekken zichtbaar.", "sexAge": "niet vastgesteld", "quality": "voldoende: licht bewogen vleugels", "verdict": "goedgekeurd"}
+      },
+      "corrections": ["Vijf beelden en individuele bronrechten opnieuw gecontroleerd. Lengte en spanwijdte opnieuw onderbouwd."],
+      "date": "2026-11-14",
+      "missing": [],
+      "sexPolicy": "Geslachten verschillen (rode nekvlek man); labels door beeld bevestigd.",
+      "uncertain": []
+    },
+    "sp020": {
+      "assets": {
+        "/assets/species/plumage/sp020-male.webp": {
+          "role": "Hoofdfoto",
+          "content": "Volwassen vogel tegen stam met lichte kop en roze onderstaart.",
+          "sexAge": "Fotograaf noemt een mannetje. Neutraal weergegeven vanwege overlap in verenkleed.",
+          "quality": "Bruikbaar, bronminiatuur van 500 px beperkt zoom.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/sp020.webp": {
+          "role": "Overige herkenningsfoto's",
+          "content": "Zijaanzicht op stronk met rode kruin, wit gezicht en gestreepte flanken.",
+          "sexAge": "Leeftijd en geslacht open.",
+          "quality": "Goede uitsnede van volledige vogel.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp020-pose.webp": {
+          "role": "Overige herkenningsfoto's",
+          "content": "Foerageert op een stam. Flankstrepen en roze onderstaart zichtbaar.",
+          "sexAge": "Leeftijd en geslacht open.",
+          "quality": "Scherpe andere kijkhoek.",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp020-flight.webp": {
+          "role": "In vlucht",
+          "content": "Vrij in de lucht. Gebandeerde slagpennen, flankstrepen en roze onderstaart zichtbaar.",
+          "sexAge": "Leeftijd en geslacht open.",
+          "quality": "Bruikbaar voor de onderzijde en vleugeltekening, bronbestand 725 × 483 px.",
+          "verdict": "goedgekeurd"
+        }
+      },
+      "corrections": [
+        "Vier foto’s naast de oorspronkelijke bestanden bekeken en de bronvermelding gecontroleerd. Lengte, spanwijdte en kennisprofiel onderbouwd."
+      ],
+      "missing": [
+        "Juvenielenfoto met door bron en beeld ondersteunde leeftijd."
+      ],
+      "wishes": [
+        "Scherper portret uit origineel en ruimer vluchtbeeld."
+      ],
+      "uncertain": [],
+      "sexPolicy": "Kleedkenmerken overlappen. De hoofd-, overige en vluchtfoto krijgen neutrale labels.",
+      "date": "2026-11-14"
+    },
+    "sp026": {
+      "assets": {
+        "/assets/species/sp026.webp": {
+          "role": "Hoofdfoto",
+          "content": "Gaai op tak met eikel; blauw vleugelveld en baardstreep.",
+          "sexAge": "niet vast te stellen",
+          "quality": "goed",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp026-flight.webp": {
+          "role": "In vlucht",
+          "content": "Vrij in de lucht laag boven grasland; blauw-zwart gebandeerde vleugels, witte stuit; poten ingetrokken.",
+          "sexAge": "niet vastgesteld",
+          "quality": "goed",
+          "verdict": "goedgekeurd"
+        },
+        "/assets/species/plumage/sp026-juv-review.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Gaai van dichtbij, met een bruine kruin, zacht ogend kleed en blauw gebandeerde vleugeldekveren.",
+          "sexAge": "Levensstadium juveniel geannoteerd in de bronwaarneming. Ook de minder getekende kruin en het zachte kleed zijn zichtbaar. Geslacht open.",
+          "quality": "Goed voor herkenning van kop en kleed. De linker rand snijdt een deel van de staart af.",
+          "verdict": "goedgekeurd",
+          "addedIn": "F3-R07"
+        }
+      },
+      "corrections": [
+        "Maten en broedgegevens naar de bron: lengte 32–36 cm, spanwijdte 50–60 cm, 5–7 eieren, broedduur 16–21 dagen, nestjongen 19–21 dagen (VB_GAAI).",
+        "Twee originele foto’s gematcht. Maten en de vergelijking met Ekster onderbouwd. De bestaande fotoinformatie vermeldt de door de maker gevraagde website en linkt de licentie.",
+        "F3-R07: juveniele Gaai met bronannotatie en zichtbaar jeugdkleed toegevoegd."
+      ],
+      "missing": [],
+      "sexPolicy": "Geslachten gelijk; geen geslachtsvakken.",
+      "uncertain": [],
+      "date": "2026-11-15"
+    },
+    "sp065": {
+      "assets": {
+        "/assets/species/sp065.webp": {"role": "Hoofdfoto", "content": "Boomklever op rots; blauwgrijze rug, zwarte oogstreep, warme onderzijde.", "sexAge": "niet vast te stellen", "quality": "goed", "verdict": "goedgekeurd"},
+        "/assets/species/plumage/sp065-head-down.webp": {"role": "Overige herkenningsfoto's", "content": "Boomklever met de kop omlaag op een stam. Poten op de schors en korte staart vrij.", "sexAge": "Geslacht en leeftijd staan open.", "quality": "Vogel en snavel herkenbaar, voldoende ruimte voor de houding.", "verdict": "goedgekeurd"},
+        "/assets/species/plumage/sp065-flight.webp": {"role": "In vlucht", "content": "Vrij in de lucht met volledig gespreide vleugels en staart; poten tegen de buik (vergroot gecontroleerd, geen landingshouding).", "sexAge": "niet vastgesteld", "quality": "goed (640 px)", "verdict": "goedgekeurd"}
+      },
+      "corrections": ["Beide gidsfoto’s naast de originelen gelegd. Een bronbevestigde stamfoto toegevoegd en naast Boomkruiper gezet. Lengte, spanwijdte en Britse broedgegevens onderbouwd."],
+      "missing": ["Juveniel"],
+      "sexPolicy": "Geslachtsverschil klein; geen geslachtsvakken.",
+      "uncertain": [],
+      "date": "2026-11-14"
+    },
+    "sp067": {
+      "assets": {
+        "/assets/species/sp067.webp": {"role": "Hoofdfoto", "content": "Boomkruiper tegen dennenstam; witte onderdelen en flanken, duidelijke witte wenkbrauw.", "sexAge": "niet vast te stellen", "quality": "goed; voor de vleugelband wordt het afzonderlijke zijaanzicht gebruikt", "verdict": "goedgekeurd"},
+        "/assets/species/plumage/sp067-wing.webp": {"role": "Overige herkenningsfoto's", "content": "Taigaboomkruiper met de kop omhoog op een bemoste stam, zichtbare lichte flank en gevouwen vleugel.", "sexAge": "Bron bevestigt de soort. Leeftijd, ondersoort en geslacht staan open.", "quality": "Scherp vergelijkbaar zijaanzicht met zichtbare vleugelband.", "verdict": "goedgekeurd"}
+      },
+      "corrections": ["Originele hoofdfoto naast het appbestand gelegd. Scherp vleugelbeeld toegevoegd voor de vergelijking op een stam. Afmetingen naast MME gelegd."],
+      "missing": ["In vlucht", "Juveniel"],
+      "sexPolicy": "Geslachten gelijk.",
+      "uncertain": ["De fotograaf benoemt Certhia familiaris. De hoofdfoto biedt beperkt zicht op de vleugelband. Beide foto's houden de ondersoort open."],
+      "date": "2026-11-14"
+    },
+    "sp095": {
+      "assets": {
+        "/assets/species/sp095.webp": {"role": "Hoofdfoto", "content": "Volwassen Kleine Mantelmeeuw op strand; donkergrijze mantel, gele poten.", "sexAge": "volwassen", "quality": "goed", "verdict": "goedgekeurd"},
+        "/assets/species/plumage/sp095-flight.webp": {"role": "In vlucht", "content": "Volwassen vogel vrij in de lucht; donkere bovenvleugel, zwarte vleugelpunten.", "sexAge": "volwassen; geslacht niet vastgesteld", "quality": "goed", "verdict": "goedgekeurd"}
+      },
+      "corrections": [],
+      "missing": ["Juveniel / onvolwassen kleden"],
+      "sexPolicy": "Geslachten gelijk.",
+      "uncertain": []
+    },
+    "sp096": {
+      "assets": {
+        "/assets/species/sp096.webp": {"role": "Hoofdfoto", "content": "Volwassen Stormmeeuw op steen; donker oog, gele dunne snavel, geelgroene poten.", "sexAge": "volwassen (bron: adult breeding)", "quality": "goed", "verdict": "goedgekeurd"},
+        "/assets/species/plumage/sp096-flight.webp": {"role": "In vlucht", "content": "Volwassen vogel vrij in de lucht van onderen; zwarte vleugelpunten.", "sexAge": "volwassen (bron: adult breeding)", "quality": "goed", "verdict": "goedgekeurd"}
+      },
+      "corrections": [],
+      "missing": ["Juveniel / onvolwassen kleden"],
+      "sexPolicy": "Geslachten gelijk.",
+      "uncertain": []
+    },
+    "sp104": {
+      "assets": {
+        "/assets/species/sp104.webp": {"role": "Hoofdfoto", "content": "Volwassen Aalscholver op kade; geschubd kleed, witte wang, kuifveren.", "sexAge": "volwassen (bron: adult)", "quality": "goed", "verdict": "goedgekeurd"},
+        "/assets/species/plumage/sp104-jaarling.webp": {"role": "Jaarling", "content": "Onvolwassen vogel met lichte onderzijde, staat met gespreide vleugels te drogen.", "sexAge": "onvolwassen (bron: 'immature')", "quality": "goed", "verdict": "goedgekeurd"},
+        "/assets/species/plumage/sp104-flight.webp": {"role": "In vlucht", "content": "Vrij in de lucht van opzij; lange hals gestrekt.", "sexAge": "niet vastgesteld", "quality": "goed", "verdict": "goedgekeurd"}
+      },
+      "corrections": [],
+      "missing": [],
+      "sexPolicy": "Geslachten gelijk.",
+      "uncertain": []
+    },
+    "sp173": {
+      "assets": {
+        "/assets/species/plumage/sp173-hero-male.webp": {"role": "Hoofdfoto", "content": "Mannetje in vlucht van onderen; lichte ondervleugel met zwarte punten, roestbruine buik.", "sexAge": "volwassen mannetje (bron: 'Männliche Rohrweihe')", "quality": "goed", "verdict": "goedgekeurd"},
+        "/assets/species/plumage/sp173-female-rest.webp": {"role": "Vrouwtje", "content": "Vrouwtje op tak in wilg; donkerbruin met roomwitte kop, gele poten.", "sexAge": "vrouwtje (bron: Weibchen; kleed bevestigt)", "quality": "goed", "verdict": "goedgekeurd"},
+        "/assets/species/plumage/sp173-juv.webp": {"role": "Juveniel (landend, niet in vlucht)", "content": "Jonge vogel strijkt met hangende poten neer in riet.", "sexAge": "juveniel (iNaturalist: Life Stage Juvenile)", "quality": "voldoende", "verdict": "goedgekeurd"},
+        "/assets/species/plumage/sp173-male-2.webp": {"role": "In vlucht (Mannetje)", "content": "Vrij in de lucht; grijze armpennen, zwarte punten, roestbruine buik.", "sexAge": "mannetje (kleed: grijze vleugels en staart)", "quality": "goed", "verdict": "goedgekeurd"},
+        "/assets/species/plumage/sp173-adult_f.webp": {"role": "In vlucht (Vrouwtje)", "content": "Vrouwtje vliegt vrij; donkerbruin met roomwitte kop.", "sexAge": "vrouwtje (bron: 'female'; kleed bevestigt)", "quality": "goed", "verdict": "goedgekeurd"},
+        "/assets/species/sp173.webp": {"role": "In vlucht", "content": "Vrij in de lucht van opzij; bruine vogel.", "sexAge": "bron noemt 'adult male', maar grijze vleugelvelden ontbreken op het beeld: terecht zonder geslachtslabel (bronaudit 09-11)", "quality": "goed; watermerk maker", "verdict": "goedgekeurd"}
+      },
+      "corrections": ["FQA-01 (eerder in deze PR): vrouwtje in vlucht naar In vlucht met label Vrouwtje."],
+      "missing": ["Mannetje zittend", "Juveniel in vrije vlucht"],
+      "date": "2026-11-14",
+      "sexPolicy": "Geslachten verschillen duidelijk (VB_BRK); labels door beeld en bron bevestigd.",
+      "uncertain": ["Hoofdfoto is een vluchtfoto (open eigenaarsbesluit over hoofdfoto's die vluchtfoto zijn)."]
+    },
+    "sp248": {
+      "assets": {
+        "/assets/species/sp248.webp": {"role": "Hoofdfoto", "content": "Wespendief in vlucht van onderen; smalle kop, staart met brede banden, gebandeerde ondervleugel.", "sexAge": "volwassen mannetje volgens iNaturalist (Adult, Male); geen label op de hoofdfoto", "quality": "goed; watermerk maker", "verdict": "goedgekeurd"},
+        "/assets/species/plumage/sp248-male-rest.webp": {"role": "Mannetje", "content": "Wespendief zittend in boom; grijsbruine kop, geel-oranje oog.", "sexAge": "volwassen mannetje (iNaturalist: Adult, Male)", "quality": "goed", "verdict": "goedgekeurd"},
+        "/assets/species/plumage/sp248-adult_f.webp": {"role": "In vlucht (Vrouwtje)", "content": "Vrij in de lucht van onderen; bruin gebandeerd, staartbanden zichtbaar.", "sexAge": "volwassen vrouwtje (iNaturalist: Adult, Female)", "quality": "goed: vogel kleiner in beeld; smalle kop, staartbanden en gebandeerde ondervleugel goed zichtbaar", "verdict": "goedgekeurd", "reassessed": "Herbeoordeeld 10-11-2026 volgens kwaliteitsnorm §3.3 (klein in beeld mag als de vogel goed zichtbaar en herkenbaar is); was voorwaardelijk."},
+        "/assets/species/plumage/sp248-juv.webp": {"role": "In vlucht (Juveniel)", "content": "Jonge Wespendief vrij in de lucht van onderen; bruine onderzijde.", "sexAge": "juveniel (bron: 'Juvenile honey buzzard')", "quality": "goed", "verdict": "goedgekeurd"}
+      },
+      "corrections": ["sp248-adult_f.webp: voorwaardelijk → goedgekeurd na kwaliteitsnorm §3.3 (klein in beeld is geen afkeurgrond)", "F2: oorspronkelijke beelden en rechten herbevestigd. Geslacht, leeftijd, seizoentekst en maten nader onderbouwd, vrouwelijke vluchtfoto als extra vergelijking opgenomen."],
+      "missing": ["Vrouwtje zittend"],
+      "wishes": ["Scherpere/grotere vrouwtje-vluchtfoto (geen gebrek; voor latere beoordeling door de eigenaar)"],
+      "sexPolicy": "Geslachten verschillen; labels steunen op iNaturalist-annotaties.",
+      "uncertain": [],
+      "date": "2026-11-14"
+    },
+    "sp253": {
+      "assets": {
+        "/assets/species/plumage/sp253-male-rest.webp": {"role": "Hoofdfoto", "content": "Ruigpootbuizerd op paal in sneeuwlandschap; lichte kop, donkere flanken/buik.", "sexAge": "iNaturalist: Male; geen label op de hoofdfoto", "quality": "goed", "verdict": "goedgekeurd"},
+        "/assets/species/plumage/sp253-male-flight.webp": {"role": "In vlucht (Mannetje)", "content": "Vrij in de lucht met zicht op donkere borst en gevlekte vleugels. De staart is gedeeltelijk zichtbaar.", "sexAge": "Mannetje volgens de vastgelegde iNaturalist-annotatie. Houding en uitsnede beperken de zelfstandige controle van de volledige staartbandering.", "quality": "voldoende: licht zacht", "verdict": "goedgekeurd"},
+        "/assets/species/sp253.webp": {"role": "In vlucht (Vrouwtje)", "content": "Vrij in de lucht van onderen; lichte kop, donker buikschild, witte staartbasis met één brede eindband.", "sexAge": "vrouwtje (bron: 'female'; buikschild en één eindband passen bij VB_BVR)", "quality": "goed", "verdict": "goedgekeurd"},
+        "/assets/species/plumage/sp253-juv.webp": {"role": "In vlucht (Juveniel)", "content": "Jonge vogel vrij in de lucht; gespreide vleugels en staart.", "sexAge": "juveniel (iNaturalist: Life Stage Juvenile)", "quality": "goed; watermerk maker", "verdict": "goedgekeurd"}
+      },
+      "corrections": ["FQA-01 (eerder in deze PR): juveniel in vlucht naar In vlucht met label Juveniel.", "11-11-2026: vier eigen foto’s onafhankelijk visueel herbekeken. Verschil tussen lichte vrouwtjes en juvenielen in het kennisprofiel als ondersteunend beschreven met Europese en Noord-Amerikaanse bronnen.", "F2: alle vier originele opnamen en rechten herbevestigd, inclusief drie iNaturalist-fotopagina’s en hun waarnemingen. Verschillen met Buizerd en de maten gecontroleerd."],
+      "missing": ["Afzonderlijke rustfoto van vrouwtje", "Afzonderlijke rustfoto van juveniel"],
+      "sexPolicy": "De kleden kunnen in de buik- en staarttekening verschillen en deels overlappen. Foto-annotaties en waarneembare kenmerken worden samen gelezen.",
+      "uncertain": [],
+      "date": "2026-11-14"
+    }
+  }
+}

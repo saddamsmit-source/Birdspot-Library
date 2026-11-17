@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-16",
+  "purpose": "F3-R10b: extra echte vrije-vluchtfoto Putter (eigenaarbesluit 16-11-2026 15:20). Bestaande vluchtfoto blijft; visueel gekozen uit candidates.json, origineel opnieuw te controleren na import.",
+  "items": [
+    {
+      "speciesId": "sp037",
+      "kind": "pose",
+      "role": "flight",
+      "title": "File:Ist es der Niedernhaller Distelfink der mir da vor die Kamera geflogen ist ??? 01.jpg",
+      "sha1": "1c5eb195f1df8481b38c986f20fe55b87a01f887",
+      "license": "CC BY-SA 4.0",
+      "author": "Holger Uwe Schmitt",
+      "asset": "/assets/species/plumage/sp037-flight-free.webp",
+      "register": {
+        "nl": "Putter",
+        "latin": "Carduelis carduelis",
+        "label": "In vlucht",
+        "flight": true,
+        "alt": "Volwassen Putter in vrije vlucht van opzij: rood gezicht, zwart-witte kop en brede gele vleugelband.",
+        "note": "Vrije vlucht: let op de brede gele band op de zwarte vleugel en het rode gezicht.",
+        "visualCheck": "Putter los in de lucht met uitgeslagen vleugels en ingetrokken poten tegen een egale achtergrond; rood gezicht, zwart-witte kop en brede gele vleugelband zichtbaar.",
+        "verification": "Commons-titel en -beschrijving noemen een Putter (Distelfink); zichtbare kenmerken passen. Geen geslachtslabel: rood masker overlapt tussen geslachten.",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/putter"
+      }
+    }
+  ]
+}

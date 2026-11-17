@@ -33,14 +33,14 @@
 .ambient-wetland.is-video-ready .ambient-wetland__illustration {opacity:0;}
 .ambient-wetland__video {
   opacity:0;transition:opacity 1.6s ease;
-  filter:saturate(.77) brightness(.76) contrast(1.03);
+  filter:none;
 }
 .ambient-wetland.is-video-ready .ambient-wetland__video {opacity:.95;}
 .ambient-wetland__darken {
   position:absolute;inset:0;z-index:1;pointer-events:none;
   background:linear-gradient(180deg,
-    rgba(5,27,21,.47) 0%,rgba(7,28,24,.38) 20%,
-    rgba(5,24,22,.55) 55%,rgba(5,19,18,.83) 100%);
+    rgba(5,27,21,.18) 0%,rgba(7,28,24,.10) 20%,
+    rgba(5,24,22,.18) 55%,rgba(5,19,18,.32) 100%);
 }
 .ambient-wetland__content {
   position:relative;z-index:2;
@@ -231,24 +231,6 @@
 }
 #slideshow.featured-birds::before,
 #slideshow.featured-birds::after{display:none!important;content:none!important;}
-#slideshow.featured-birds .featured-birds__shade {
-  background:linear-gradient(180deg,rgba(4,21,17,.02) 0%,
-    rgba(5,22,18,.04) 34%,rgba(4,20,15,.4) 55%,
-    rgba(4,19,15,.87) 82%,rgba(3,17,14,.97) 100%)!important;
-}
-/* F: de vogel moet helemaal in beeld: hele foto bovenin (contain), vervaagde kopie als achtergrond */
-#slideshow.featured-birds .featured-birds__media {overflow:hidden;}
-#slideshow.featured-birds .featured-birds__media::before {
-  content:"";position:absolute;inset:-40px;z-index:0;
-  background:var(--bird-bg, none) center/cover no-repeat;
-  filter:blur(28px) saturate(.9) brightness(.55);transform:scale(1.1);
-}
-#slideshow.featured-birds .featured-birds__photo {
-  position:absolute;z-index:1;left:0;right:0;top:0;width:100%;height:68%;
-  object-fit:contain;object-position:50% 50%;animation:none;transform:none;
-  -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 7%,#000 93%,transparent 100%);
-  mask-image:linear-gradient(180deg,transparent 0,#000 7%,#000 93%,transparent 100%);
-}
 #slideshow.featured-birds.has-photo .featured-birds__fallback {opacity:0;}
 #slideshow.featured-birds .featured-birds__caption {
   left:21px;right:20px;bottom:19px;
@@ -278,12 +260,6 @@
 #slideshow.featured-birds .featured-birds__group:empty{display:none;}
 #slideshow.featured-birds .featured-birds__caption p.featured-birds__presence {
   margin:-4px 0 12px;font-size:12px;color:#efe4d2;font-weight:600;
-}
-#slideshow.featured-birds .featured-birds__credit {
-  max-width:95%;font-size:11px;color:#f5cd88;
-}
-#slideshow.featured-birds .featured-birds__credit:not([href]) {
-  text-decoration:none;opacity:.8;
 }
 .signature-quick-access {
   background:linear-gradient(120deg,#10352c,#103a32);
