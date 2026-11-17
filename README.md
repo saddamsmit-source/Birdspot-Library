@@ -351,6 +351,8 @@ De **praktische, brede functionele tests** (echte Android/iOS, microfoon/Merlin/
 **F3-R15 (16 november 2026):** Roodborsttapuit, Heggenmus, Winterkoning. Alle 7 foto's tegen het bronbeeld gecontroleerd; juvenielenfoto Heggenmus toegevoegd; Heggenmus-lengte gecorrigeerd naar ca. 13–15 cm (twee uitgevers); vergelijking Heggenmus–Ringmus toegevoegd; drie bronverschillen (status/trend) vastgelegd; eBird BLOCKED (botcontrole). [F3-R15-bevindingen](docs/fotokwaliteit/F3_R15_ROODBORSTTAPUIT_HEGGENMUS_WINTERKONING_2026-11-16_DRAFT.md). Stand: **45/140 inhoudelijk bekeken, 95 te starten, 0 volledig afgetekend.**
 
 **F3-R16 (16 november 2026):** Tjiftjaf, Fitis, Fluiter. 5 foto's tegen het bronbeeld en 4 opnamen op rechten gecontroleerd (geluid blijft alleen bronlabel); nieuw kennisprofiel Fluiter met drie open bronverschillen; geen vlucht- of juvenielenfoto die aan de norm voldoet. [F3-R16-bevindingen](docs/fotokwaliteit/F3_R16_TJIFTJAF_FITIS_FLUITER_2026-11-16_DRAFT.md). Stand: **48/140 inhoudelijk bekeken, 92 te starten, 0 volledig afgetekend.**
+
+**F3-R17 (17 november 2026):** Zwartkop, Tuinfluiter, Grasmus volgens de fotoprioriteit voor kleine zangvogels. 8 foto's tegen het bronbeeld; nieuw kennisprofiel Tuinfluiter met neutrale volwassen foto; twee juvenielen voor onafhankelijke beoordeling. [F3-R17-bevindingen](docs/fotokwaliteit/F3_R17_ZWARTKOP_TUINFLUITER_GRASMUS_2026-11-17_DRAFT.md). Stand: **51/140 inhoudelijk bekeken, 89 te starten, 0 volledig afgetekend.**
  Deze documentatie-only inhoudsronde is **geen extra appdeployment**; de werkende 1.27.21-hotspotpreview hoort bij PR #261 op de oudere app-SHA.
 
 
