@@ -53,8 +53,15 @@ assert.equal(photosFor('sp043', 'adult_m')[0], '/assets/species/plumage/sp043-ad
 assert.equal(guideHeroPhoto('sp141').image, '/assets/species/plumage/sp141-adult.webp');
 assert.ok(recognitionPanel(species.get('sp009')).includes('Man en vrouw lijken op elkaar'));
 // sp128: donsjongen staan sinds de bronaudit van 9-11 niet meer onder Juveniel; het mannetje is de hoofdfoto.
+// F3-R21 QA: the IJsvogel juvenile photo was withheld (ambiguous age metadata, provenance kept in retired.sp075);
+// its juv role must stay empty until a source-verified juvenile exists. All other roles remain required.
+const withheldRoles = new Set(['sp075:juv']);
 for (const id of ['sp035', 'sp043', 'sp053', 'sp075', 'sp089', 'sp092']) {
   for (const role of ['adult_m', 'adult_f', 'juv']) {
+    if (withheldRoles.has(`${id}:${role}`)) {
+      assert.deepEqual(photosFor(id, role), [], `Withheld role ${id}:${role} must not show a photo`);
+      continue;
+    }
     assert.ok(photosFor(id, role).length, `Missing photo for ${id}: ${role}`);
   }
 }

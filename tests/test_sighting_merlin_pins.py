@@ -135,7 +135,8 @@ def main():
             seen=next(x for x in all_records if x["id"]!=heard["id"])
             assert seen["observationMethod"]=="seen" and seen["identificationSource"]=="self"
             assert seen["lat"]!=heard["lat"] and seen["lon"]!=heard["lon"]
-            assert seen["locationName"]=="Limburg testbos" and seen["photoIds"]==[]
+            assert seen["locationName"]=="Limburg testbos", ("locationName", seen.get("locationName"))
+            assert seen["photoIds"]==[], ("photoIds", seen.get("photoIds"))
             assert seen["behavior"] == "nestmateriaal dragen"
             assert page.evaluate("""() => JSON.parse(localStorage.getItem('birdspot-sightings')).sightings.some(s=>s.speciesId==='sp001' && ['seen','both'].includes(s.observationMethod))""")
 
