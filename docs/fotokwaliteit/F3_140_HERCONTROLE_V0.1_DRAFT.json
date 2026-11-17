@@ -53,9 +53,9 @@
     "audioMissing": 75,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 83,
+    "nextNotStarted": 80,
     "secondBatchStarted": 3,
-    "contentInspected": 57,
+    "contentInspected": 60,
     "contentComplete": 0,
     "thirdBatchStarted": 3,
     "fourthBatchStarted": 3,
@@ -73,7 +73,8 @@
     "sixteenthBatchStarted": 3,
     "seventeenthBatchStarted": 3,
     "eighteenthBatchStarted": 3,
-    "nineteenthBatchStarted": 3
+    "nineteenthBatchStarted": 3,
+    "twentiethBatchStarted": 3
   },
   "records": [
     {
@@ -5923,7 +5924,7 @@
           "soundRolesSongCall": "NOT TESTED (source labels only)",
           "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (local files present; offline playback not tested on device)",
           "photoOriginalIdentity": "VERIFIED (origcheck 17-11-2026: 3/3 same shot, r = 1.00)",
-          "photoIndividualRights": "VERIFIED (current Commons licence matches 3/3; author strings differ only by Commons suffix 'from Wrocław, Poland' / '( Hyla meridionalis )')",
+          "photoIndividualRights": "VERIFIED (current Commons licence matches 3/3; R19-QA author rule: 'hedera.baltica from Wrocław, Poland' = Flickr location suffix, 'C. Robiller / naturlichter.de (Hyla meridionalis)' = account suffix — origcheck-r20)",
           "plumageAndTrueFlight": "VERIFIED (hero: blue-grey upperparts, black eye-stripe, white throat, warm underparts — ssp. caesia; head-down pose shows typical behaviour; flight photo is true free flight, wings spread and sharp; no sex label shown; juvenile not sought per photo priority — exemption)",
           "photoPairComparisons": "PARTIALLY TESTED (Boomkruiper LK-041 both directions)",
           "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming read 17-11-2026: colours, bill, behaviour head-down vs Boomkruiper, voice, numbers, resident; ANWB-vogelgids NOT TESTED: no accessible edition)",
@@ -6111,13 +6112,13 @@
           "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming read 17-11-2026: wing 'bakje', white supercilium, whiter below (nominate), short bill of macrodactyla, voice, status; ANWB-vogelgids NOT TESTED: no accessible edition)",
           "biometryAndKnowledge": "PARTIALLY TESTED (length ca. 12.5 cm Vogelbescherming; Naturalis Birds of Europe (birds-europe.linnaeus.naturalis.nl, search snippet 17-11) 12.5 cm — agree)",
           "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon 17-11-2026: no national estimate or trend — insufficient data; breeds in far south-east since 1993, possibly under-recorded)",
-          "audioLicenseAndAttribution": "PARTIALLY TESTED (song: licence and author match; call (British Library): licence matches, Commons author field empty — author not machine-confirmed)",
+          "audioLicenseAndAttribution": "VERIFIED (R19-QA 17-11-2026, origcheck-r20c: song licence and author match; call (British Library, Frensham Great Pond, Surrey): Commons Artist empty, but page fields Recordist 'Aubrey John Williams' and Copyright Holder 'The British Library Board' match the register, CC BY-SA 4.0, VRT ticket 2015111010010706 — media rights only, species and call type not verified)",
           "lookalikePhotoAndText": "PARTIALLY TESTED (LK-040 new)"
         },
         "findings": [
           "2/2 foto's dezelfde opname; rechten actueel.",
           "Beide foto's buiten het areaal van de Boomkruiper (Zweden, VK) en passend: witte onderzijde, brede witte wenkbrauw.",
-          "Sovon: geen landelijke aantallen of trend; roepopname: auteur op Commons leeg."
+          "Sovon: geen landelijke aantallen of trend. Roepopname: rechten na R19-QA bevestigd via aparte Recordist/Copyright Holder-velden (Artist-veld leeg)."
         ],
         "sourceReferences": [
           "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/taigaboomkruiper",
@@ -6178,41 +6179,62 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R20",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium 320/360/390 px via tests/test_lookalike_r20_browser.py; no physical device)",
+          "endToEndGuideUI": "PARTIALLY TESTED (Chromium species card and lookalike panels; no device or offline run)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "independentSecondReview": "NOT TESTED (own re-inspection is not independent)",
+          "ebirdDistributionAndBias": "BLOCKED (eBird Anubis bot-check since F3-R15; not retried; parked)",
+          "creditsAndCleanAudioUI": "NOT TESTED (no audio)",
+          "audioRecordingsAuthenticity": "BLOCKED (no recording; see AUDIOCHECK_PROTOCOL v0.2)",
+          "audioLicenseAndAttribution": "BLOCKED (no recording)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (no audio file)",
+          "soundRolesSongCall": "PARTIALLY TESTED (text only; matches Vogelbescherming)",
+          "photoOriginalIdentity": "VERIFIED (origcheck 17-11-2026: 2/2 same shot, r = 1.00)",
+          "photoIndividualRights": "VERIFIED (current Commons licence and author match 2/2, rule exact)",
+          "plumageAndTrueFlight": "VERIFIED (hero Spiekeroog: black throat/bib, black crown, grey back — breeding-plumage nominate alba, not yarrellii (grey back, Naturalis); no sex label; flight Malta: true free flight; juvenile not sought — exemption)",
+          "photoPairComparisons": "PARTIALLY TESTED (Gele Kwikstaart LK-042 both directions; juvenile pair text-only)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming read 17-11-2026: plumage male/female/juvenile, Rouwkwikstaart differences, voice, numbers, migration; ANWB-vogelgids NOT TESTED: no accessible edition)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (length 16.5–19 cm Vogelbescherming; Naturalis Birds of Europe (search snippet 17-11) 18 cm — within range, no change)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon 10201 read 17-11-2026: significant decline since 1990, large regional differences; small winter numbers; last-12-year value not unambiguous on page)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-042 new; Rouwkwikstaart text from VBN + Naturalis)"
         },
         "findings": [
-          "Afzonderlijke mannetjesfoto",
-          "Afzonderlijke vrouwtjesfoto",
-          "Afzonderlijke juvenielenfoto",
-          "De vluchtfoto bevestigt de soort en de vluchtrol. De ondersoort is bij deze opname niet geverifieerd.",
-          "Geen lokaal geregistreerde zang of roep"
+          "2/2 foto's dezelfde opname; rechten actueel.",
+          "Hoofdfoto nominaat alba (grijze rug) in broedkleed; echte vrije vlucht.",
+          "Sovon-trend en VBN-aantallen toegevoegd."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/witte-kwikstaart",
+          "https://stats.sovon.nl/stats/soort/10201",
+          "https://birds-europe.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/nsr_taxon.php?id=130829",
+          "docs/media-intake/2026-11-17/origcheck-r20/origcheck.json",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R20_WITTE_GELE_KWIKSTAART_VELDLEEUWERIK_2026-11-17_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on physical device; local source/photo review and Chromium only",
+        "independence": "PARTIAL / origcheck by Claude; no independent reviewer",
+        "fullPass": false,
+        "photoFilesInspected": 2,
+        "photoBlobSHAs": [
+          "7a64e6b828948bab6d75646875ae067e5e7fb7e1",
+          "491244682e303239aabb5c545386123789791adc"
+        ],
+        "photoSourceMatches": [],
+        "priorPhotoMatches": [],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [],
+        "contentStatus": "PARTIALLY REVIEWED (all shown photos checked against source images; no FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R20 node/browser tests run separately.",
+        "exemptions": {
+          "plumageAndTrueFlight": {
+            "reason": "Geen juveniele foto gezocht: juveniel is nooit een vulpositie (eigenaarbesluit 16/17-11); positie open, niet VERIFIED."
+          }
+        }
       }
     },
     {
@@ -6240,11 +6262,6 @@
             "oldRights": "VERIFIED"
           },
           {
-            "role": "Verenkleed (Juveniel)",
-            "path": "/assets/species/plumage/sp069-juv.webp",
-            "oldRights": "VERIFIED"
-          },
-          {
             "role": "Overige herkenningsfoto",
             "path": "/assets/species/plumage/sp069-flight.webp",
             "oldRights": "VERIFIED"
@@ -6254,38 +6271,58 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R20",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium 320/360/390 px via tests/test_lookalike_r20_browser.py; no physical device)",
+          "endToEndGuideUI": "PARTIALLY TESTED (Chromium species card and lookalike panels; no device or offline run)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "independentSecondReview": "NOT TESTED (own re-inspection is not independent)",
+          "ebirdDistributionAndBias": "BLOCKED (eBird Anubis bot-check since F3-R15; not retried; parked)",
+          "creditsAndCleanAudioUI": "NOT TESTED (no audio)",
+          "audioRecordingsAuthenticity": "BLOCKED (no recording; see AUDIOCHECK_PROTOCOL v0.2)",
+          "audioLicenseAndAttribution": "BLOCKED (no recording)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (no audio file)",
+          "soundRolesSongCall": "PARTIALLY TESTED (text only; matches Vogelbescherming)",
+          "photoOriginalIdentity": "VERIFIED (origcheck 17-11-2026: 4/4 same shot, r ≥ 0.999; iNaturalist open-data originals reached)",
+          "photoIndividualRights": "PARTIALLY TESTED (2 Commons photos match exactly; iNaturalist female rights register-only, pages BLOCKED)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (hero male nominate flava: blue-grey head, white supercilium, yellow throat — matches VBN + Naturalis; female (iNaturalist, spring): greenish-brown head, narrower pale supercilium, less yellow on throat — matches Naturalis description, rights partial; landing photo kept as 'Landend', not as free flight; juvenile NOT RELEASED — soft image, Citrine/White Wagtail juvenile not excluded)",
+          "photoPairComparisons": "PARTIALLY TESTED (Witte Kwikstaart LK-042 both directions; Grote Gele Kwikstaart existing)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming read 17-11-2026: male plumage, voice, habitat, numbers, migration; female/juvenile and subspecies not described there; ANWB-vogelgids NOT TESTED: no accessible edition)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (existing ca. 16–17 cm from VBN + Blasco-Zumeta & Heinze; Naturalis 16.5 cm agrees)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon 10171 read 17-11-2026: 42,000–74,000 pairs; significant increase since 1990 and last 12 years; Red List gevoelig; VBN long-term decline since 1960s recorded as different period)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-042 new)"
         },
         "findings": [
-          "Scherpe foto van één Gele Kwikstaart in vrije vlucht met bevestigde rechten.",
-          "Geen lokaal geregistreerde zang of roep"
+          "4 foto's bekeken: allemaal dezelfde opname; iNaturalist-rechten alleen register.",
+          "Mannetje nominaat flava en vrouwtje passen bij Naturalis; ondersoort vrouwtje niet bepaald.",
+          "Juveniel niet vrijgegeven (onscherp, soort niet overtuigend)."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/gele-kwikstaart",
+          "https://stats.sovon.nl/stats/soort/10171",
+          "https://birds-europe.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/nsr_taxon.php?id=130826",
+          "docs/media-intake/2026-11-17/origcheck-r20/origcheck.json",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R20_WITTE_GELE_KWIKSTAART_VELDLEEUWERIK_2026-11-17_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on physical device; local source/photo review and Chromium only",
+        "independence": "PARTIAL / origcheck by Claude; no independent reviewer",
+        "fullPass": false,
+        "photoFilesInspected": 4,
+        "photoBlobSHAs": [
+          "5f8c3a2bcc81a282c92dd89afca1d4c7ae46b1d4",
+          "54563378371c6a5baafca76302f18ed2dfb8787d",
+          "42d5f34df4fb16e7b219a87b6034cfcf27029415"
+        ],
+        "photoSourceMatches": [],
+        "priorPhotoMatches": [],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [],
+        "contentStatus": "PARTIALLY REVIEWED (all shown photos checked against source images; no FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R20 node/browser tests run separately."
       }
     },
     {
@@ -6317,39 +6354,62 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R20",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "responsiveLayoutAndZoom": "PARTIALLY TESTED (Chromium 320/360/390 px via tests/test_lookalike_r20_browser.py; no physical device)",
+          "endToEndGuideUI": "PARTIALLY TESTED (Chromium species card and lookalike panels; no device or offline run)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "independentSecondReview": "NOT TESTED (own re-inspection is not independent)",
+          "ebirdDistributionAndBias": "BLOCKED (eBird Anubis bot-check since F3-R15; not retried; parked)",
+          "creditsAndCleanAudioUI": "NOT TESTED (no audio)",
+          "audioRecordingsAuthenticity": "BLOCKED (no recording; see AUDIOCHECK_PROTOCOL v0.2)",
+          "audioLicenseAndAttribution": "BLOCKED (no recording)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (no audio file)",
+          "soundRolesSongCall": "PARTIALLY TESTED (text only; matches Vogelbescherming)",
+          "photoOriginalIdentity": "VERIFIED (origcheck 17-11-2026: 2/2 same shot, r = 1.00)",
+          "photoIndividualRights": "VERIFIED (current Commons licence and author match 2/2)",
+          "plumageAndTrueFlight": "VERIFIED (hero Lake District: streaked breast, short crest, rather strong bill — matches VBN + Naturalis; flight photo true free flight with pale trailing edge; sexes alike, no label; juvenile not sought — exemption)",
+          "photoPairComparisons": "PARTIALLY TESTED (Graspieper LK-043 rest and flight both directions)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming read 17-11-2026: crest, breast, wing/tail in flight, song flight, confusion species, numbers; ANWB-vogelgids NOT TESTED: no accessible edition)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (length 16–18 cm Vogelbescherming; Naturalis Birds of Europe (search snippet 17-11) 18 cm — within range, no change)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon 9760 read 17-11-2026: 34,000–44,000 pairs; significant decline since 1990, no significant change last 12 years; Red List gevoelig)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-043 new; Kuif-/Boomleeuwerik not worked out)"
         },
         "findings": [
-          "Afzonderlijke juvenielenfoto",
-          "Sovon noemt 11 dagen in het nest. Vogelbescherming noemt circa 8 dagen. De bronafwijking staat in het kennisprofiel.",
-          "Geen lokaal geregistreerde zang of roep"
+          "2/2 foto's dezelfde opname; rechten actueel.",
+          "Hoofdfoto en echte zangvluchtfoto kloppen met VBN en Naturalis.",
+          "Sovon-trend toegevoegd; Kuif- en Boomleeuwerik nog niet uitgewerkt."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/veldleeuwerik",
+          "https://stats.sovon.nl/stats/soort/9760",
+          "https://birds-europe.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/nsr_taxon.php?id=130803",
+          "docs/media-intake/2026-11-17/origcheck-r20/origcheck.json",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R20_WITTE_GELE_KWIKSTAART_VELDLEEUWERIK_2026-11-17_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on physical device; local source/photo review and Chromium only",
+        "independence": "PARTIAL / origcheck by Claude; no independent reviewer",
+        "fullPass": false,
+        "photoFilesInspected": 2,
+        "photoBlobSHAs": [
+          "adb39ff7a93a153b9b828003b431c61a4395a82d",
+          "3fe69c446c4416bee6642a231ee3742c550da35f"
+        ],
+        "photoSourceMatches": [],
+        "priorPhotoMatches": [],
+        "audioSourceMatches": [],
+        "unmatchedAudio": [],
+        "contentStatus": "PARTIALLY REVIEWED (all shown photos checked against source images; no FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R20 node/browser tests run separately.",
+        "exemptions": {
+          "plumageAndTrueFlight": {
+            "reason": "Geslachten gelijk; juveniel niet gezocht (eigenaarbesluit 16/17-11); positie open, niet VERIFIED."
+          }
+        }
       }
     },
     {

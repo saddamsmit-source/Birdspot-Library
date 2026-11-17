@@ -357,6 +357,8 @@ De **praktische, brede functionele tests** (echte Android/iOS, microfoon/Merlin/
 **F3-R18 (17 november 2026):** Braamsluiper, Goudhaantje, Vuurgoudhaan. 8 foto's tegen het bronbeeld; nieuw kennisprofiel Braamsluiper; Goudhaantje-label "Vrouwtje" en Vuurgoudhaan-juveniel voor onafhankelijke beoordeling; getoetste uitzonderingsregel voor ontbrekende optionele foto's. [F3-R18-bevindingen](docs/fotokwaliteit/F3_R18_BRAAMSLUIPER_GOUDHAANTJE_VUURGOUDHAAN_2026-11-17_DRAFT.md). Stand: **54/140 inhoudelijk bekeken, 86 te starten, 0 volledig afgetekend.**
 
 **F3-R19 (17 november 2026):** Boomklever, Boomkruiper, Taigaboomkruiper. 8 foto's tegen het bronbeeld; Boomkruiper-juveniel niet vrijgegeven (soort niet bewijsbaar); nieuwe dubbelgangers Boomkruiper–Taigaboomkruiper en Boomklever–Boomkruiper. Eerder: QA-fix F3-R18 (Vuurgoudhaan-juveniel en juvenielenpaar verborgen, Goudhaantje neutraal gelabeld). [F3-R19-bevindingen](docs/fotokwaliteit/F3_R19_BOOMKLEVER_BOOMKRUIPER_TAIGABOOMKRUIPER_2026-11-17_DRAFT.md). Stand: **57/140 inhoudelijk bekeken, 83 te starten, 0 volledig afgetekend.**
+
+**F3-R20 (17 november 2026):** Witte Kwikstaart, Gele Kwikstaart, Veldleeuwerik. 8 foto's tegen het bronbeeld; Gele Kwikstaart-juveniel niet vrijgegeven; dubbelgangers Witte–Gele Kwikstaart en Veldleeuwerik–Graspieper. Media-audit: Commons-auteurs alleen bij herleidbare vormen gelijk (Flickr-/accountachtervoegsel, recordist + copyright holder). [F3-R20-bevindingen](docs/fotokwaliteit/F3_R20_WITTE_GELE_KWIKSTAART_VELDLEEUWERIK_2026-11-17_DRAFT.md). Stand: **60/140 inhoudelijk bekeken, 80 te starten, 0 volledig afgetekend.**
  Deze documentatie-only inhoudsronde is **geen extra appdeployment**; de werkende 1.27.21-hotspotpreview hoort bij PR #261 op de oudere app-SHA.
 
 

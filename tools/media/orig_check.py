@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import io
 import json
+import re
 import sys
 import time
 from pathlib import Path
@@ -65,6 +66,33 @@ def compare(src_img, local_img) -> dict:
     return {"mode": "crop", "r": round(-best[0], 3), "scale": best[1], "offset": [round(best[2], 3), round(best[3], 3)]}
 
 
+def author_match(info: dict, register: str, norm) -> tuple[bool, str]:
+    """R19-QA: auteur van Commons tegen het register. Alleen herleidbare, vaste vormen tellen als gelijk:
+    exact; Flickr-import 'naam from Plaats'; accountachtervoegsel 'naam (…)'; of — bij een leeg Artist-veld —
+    expliciete recordist (+ copyright holder) uit de bestandspagina. Leeg of afwijkend blijft False."""
+    reg = norm(register or "")
+    if not reg:
+        return False, "register-empty"
+    art = norm(info.get("author") or "")
+    if art:
+        if art == reg:
+            return True, "exact"
+        m = re.fullmatch(r"(.+?) from [^()/]+", art)
+        if m and norm(m.group(1)) == reg:
+            return True, "flickr-location-suffix"
+        m = re.fullmatch(r"(.+?)\s*\([^()]+\)", art)
+        if m and norm(m.group(1)) == reg:
+            return True, "account-suffix"
+        return False, "different"
+    cf = info.get("creditFields") or {}
+    rec, holder = norm(cf.get("recordist") or cf.get("author") or ""), norm(cf.get("copyrightHolder") or "")
+    if rec and holder and reg == f"{rec} / {holder}":
+        return True, "recordist+copyright-holder"
+    if rec and not holder and reg == rec:
+        return True, "recordist"
+    return False, "commons-author-empty"
+
+
 def audio_record(e: dict, info: dict | None, norm) -> dict:
     """F3-R16: alleen herkomst en rechten van een gepubliceerde opname (bronlabel). Geen soort- of
     geluidstypebewijs: audioprotocol v0.2 laat dit hoogstens 'alleen bronlabel' zijn; nooit sameShot/VERIFIED."""
@@ -73,9 +101,10 @@ def audio_record(e: dict, info: dict | None, norm) -> dict:
     if not info:
         rec["error"] = "niet gevonden op Commons"
         return rec
-    rec["commons"] = {k: info.get(k) for k in ("page", "sha1", "license", "author", "duration", "mime")}
-    rec["rightsMatch"] = (norm(info.get("author", "")) == norm(e.get("author", ""))
-                          and norm(info.get("license", "")) == norm(e.get("license", "")))
+    rec["commons"] = {k: info.get(k) for k in ("page", "sha1", "license", "author", "duration", "mime", "creditFields", "pageParams", "creditLines")}
+    ok, rule = author_match(info, e.get("author", ""), norm)
+    rec["authorRule"] = rule
+    rec["rightsMatch"] = ok and norm(info.get("license", "")) == norm(e.get("license", ""))
     rec["evidenceCeiling"] = "bronlabel en rechten; geen soortverificatie"
     return rec
 
@@ -103,9 +132,10 @@ def run(manifest: Path, out: Path) -> None:
                 info = infos.get(e["title"])
                 if not info:
                     rec["error"] = "niet gevonden op Commons"; report["items"].append(rec); continue
-                rec["commons"] = {k: info[k] for k in ("page", "sha1", "license", "author", "width", "height")}
-                rec["rightsMatch"] = (ci.norm_name(info["author"]) == ci.norm_name(e.get("author", ""))
-                                      and ci.norm_name(info["license"]) == ci.norm_name(e.get("license", "")))
+                rec["commons"] = {k: info.get(k) for k in ("page", "sha1", "license", "author", "width", "height", "creditFields")}
+                ok, rule = author_match(info, e.get("author", ""), ci.norm_name)
+                rec["authorRule"] = rule
+                rec["rightsMatch"] = ok and ci.norm_name(info["license"]) == ci.norm_name(e.get("license", ""))
                 data = ci.get(info["thumb"], binary=True)
             else:
                 data = None

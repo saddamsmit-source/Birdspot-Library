@@ -800,10 +800,10 @@ const DATA = {
    "register": "nieuwe soortreferentie",
    "label": "Sovon Vogelonderzoek Nederland — Veldleeuwerik",
    "url": "https://stats.sovon.nl/stats/soort/9760",
-   "edition": "Online geraadpleegd 11-11-2026",
+   "edition": "Online geraadpleegd 17-11-2026",
    "scope": "Nederland, nestonderzoek",
    "confirms": "eileg, broedduur, nestjongenperiode en broedsels",
-   "checked": "2026-11-11",
+   "checked": "2026-11-17",
    "certainty": "hoog",
    "publisher": "Sovon Vogelonderzoek Nederland"
   },
@@ -2395,10 +2395,10 @@ const DATA = {
    "register": "nieuw",
    "label": "Sovon — Gele Kwikstaart",
    "url": "https://stats.sovon.nl/stats/soort/10171/",
-   "edition": "Online bron",
+   "edition": "Online geraadpleegd 17-11-2026",
    "scope": "Nederland",
-   "confirms": "Nederlandse verspreiding en broedvogelmonitoring",
-   "checked": "2026-11-12",
+   "confirms": "Broedpopulatie 2018–2020, trend sinds 1990 en laatste twaalf jaar, Rode Lijst",
+   "checked": "2026-11-17",
    "certainty": "hoog",
    "publisher": "Sovon Vogelonderzoek Nederland"
   },
@@ -4831,6 +4831,17 @@ const DATA = {
    "confirms": "Geen landelijke aantallen of trend (onvoldoende gegevens); broedt sinds 1993 in het uiterste zuidoosten",
    "checked": "2026-11-17",
    "certainty": "hoog",
+   "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "SOV_WKW": {
+   "register": "NL07",
+   "label": "Sovon — Witte Kwikstaart",
+   "url": "https://stats.sovon.nl/stats/soort/10201",
+   "edition": "Online geraadpleegd 17-11-2026",
+   "scope": "Nederland",
+   "confirms": "Trend broedvogel sinds 1990 en winteraanwezigheid",
+   "checked": "2026-11-17",
+   "certainty": "middel",
    "publisher": "Sovon Vogelonderzoek Nederland"
   }
  },
@@ -11037,6 +11048,14 @@ const DATA = {
       "VB_WKW_RKW"
      ],
      "kind": "voorkomen"
+    },
+    {
+     "kind": "trend",
+     "text": "Vogelbescherming: 70.000–110.000 broedparen (2018–2020). Sovon: sinds 1990 een significante afname met grote regionale verschillen; in de winter kleine aantallen, vooral in zachte winters.",
+     "sources": [
+      "VB_WKW",
+      "SOV_WKW"
+     ]
     }
    ],
    "life": [
@@ -11163,6 +11182,14 @@ const DATA = {
       "VB_VLL"
      ],
      "kind": "voorkomen"
+    },
+    {
+     "kind": "trend",
+     "text": "Sovon: 34.000–44.000 broedparen (2018–2020); sinds 1990 een significante afname, in de laatste twaalf jaar geen significante verandering; Rode Lijst: gevoelig. Vogelbescherming: ongeveer 95% afname sinds de jaren zeventig.",
+     "sources": [
+      "SV_VLL",
+      "VB_VLL"
+     ]
     }
    ],
    "life": [
@@ -16655,6 +16682,14 @@ const DATA = {
       "SOV_GELE_KWIKSTAART"
      ],
      "kind": "voorkomen"
+    },
+    {
+     "kind": "trend",
+     "text": "Sovon: 42.000–74.000 broedparen (2018–2020), sinds 1990 en in de laatste twaalf jaar een significante toename; Rode Lijst: gevoelig. Vogelbescherming noemt een afname van 50–75% sinds de jaren zestig.",
+     "sources": [
+      "SOV_GELE_KWIKSTAART",
+      "VB_GELE_KWIKSTAART"
+     ]
     }
    ],
    "life": [
@@ -16680,7 +16715,17 @@ const DATA = {
      "kind": "trek"
     }
    ],
-   "discrepancies": [],
+   "discrepancies": [
+    {
+     "field": "trend",
+     "app": "Toont beide perioden",
+     "source": "Vogelbescherming beschrijft de lange afname sinds de jaren zestig; Sovon meldt sinds 1990 en in de laatste twaalf jaar een significante toename. Verschillende perioden, geen tegenspraak.",
+     "sources": [
+      "VB_GELE_KWIKSTAART",
+      "SOV_GELE_KWIKSTAART"
+     ]
+    }
+   ],
    "open": []
   },
   "sp075": {

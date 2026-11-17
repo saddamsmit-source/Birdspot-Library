@@ -19,4 +19,30 @@ assert ok["rightsMatch"] is True and "sameShot" not in ok and "VERIFIED" not in 
 bad = oc.audio_record(e, {"page": "p", "sha1": "s", "author": "Other", "license": "CC BY 3.0"}, norm)
 assert bad["rightsMatch"] is False, bad
 assert "error" in oc.audio_record(e, None, norm)
+# R19-QA author rule: only traceable forms count as equal; empty or different authors never pass.
+import commons_intake as ci
+am = lambda art, reg, cf=None: oc.author_match({"author": art, "creditFields": cf or {}}, reg, ci.norm_name)
+assert am("hedera.baltica from Wrocław, Poland", "hedera.baltica") == (True, "flickr-location-suffix")
+assert am("C. Robiller / naturlichter.de ( Hyla meridionalis )", "C. Robiller / naturlichter.de") == (True, "account-suffix")
+assert am("Sighmanb", "Sighmanb") == (True, "exact")
+assert am("hedera.baltica from Wrocław, Poland", "someone else")[0] is False
+assert am("Jan Jansen from Utrecht", "Jansen")[0] is False, "partial name never equal"
+assert am("Other Person (account)", "C. Robiller")[0] is False
+assert am("hedera.baltica", "hedera.baltica from Wrocław, Poland")[0] is False, "register longer than Commons is not equal"
+bl = {"recordist": "Aubrey John Williams", "copyrightHolder": "The British Library Board"}
+assert am("", "Aubrey John Williams / The British Library Board", bl) == (True, "recordist+copyright-holder")
+assert am("", "Aubrey John Williams", {"recordist": "Aubrey John Williams"}) == (True, "recordist")
+assert am("", "Aubrey John Williams / The British Library Board", {"copyrightHolder": "The British Library Board"}) == (False, "commons-author-empty")
+assert am("", "Aubrey John Williams / The British Library Board") == (False, "commons-author-empty"), "truly empty author never passes"
+assert am("", "Someone Else / The British Library Board", bl)[0] is False
+assert am("Sighmanb", "")[0] is False
+wt = "{{Information\n|description = x\n}}\n{{Sound\n| recordist = [[w:Aubrey John Williams|Aubrey John Williams]]\n| copyright holder = The British Library Board\n|date=1979-05-20\n}}"
+assert ci.credit_fields(wt) == bl, ci.credit_fields(wt)
+assert ci.credit_fields("|description = only text") == {}
+inf = "{{Information\n|description=x\n|other fields={{Information field|name=Recordist|value=Aubrey John Williams}}{{Information field|name=Copyright holder|value=[[w:British Library|The British Library Board]]}}\n}}"
+assert ci.credit_fields(inf) == bl, ci.credit_fields(inf)
+assert ci.credit_fields("|performer =\n| permission ={{PermissionTicket|id=1}}") == {}, "empty field must not swallow the next line"
+au = oc.audio_record({**e, "author": "Aubrey John Williams / The British Library Board", "license": "CC BY-SA 4.0"},
+                     {"page": "p", "sha1": "s", "author": "", "license": "CC BY-SA 4.0", "creditFields": bl}, ci.norm_name)
+assert au["rightsMatch"] is True and au["authorRule"] == "recordist+copyright-holder" and "VERIFIED" not in str(au)
 print("ORIGCHECK PASS: same shot (full and crop) accepted; other and mirrored image clearly worse", full, crop, diff)

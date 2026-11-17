@@ -1,0 +1,108 @@
+{
+ "date": "2026-11-17",
+ "purpose": "F3-R20 origcheck (Witte Kwikstaart, Gele Kwikstaart, Veldleeuwerik) + R19-QA recheck of author rule (Flickr/account suffix, recordist/copyright holder); audio metadata/rights only",
+ "items": [
+  {
+   "speciesId": "sp068",
+   "image": "/assets/species/sp068.webp",
+   "author": "Stephan Sprinz",
+   "license": "CC BY-SA 4.0",
+   "title": "File:Bachstelze (motacilla alba) auf Singwarte - Spiekeroog, Nationalpark niedersächsisches Wattenmeer.jpg"
+  },
+  {
+   "speciesId": "sp068",
+   "image": "/assets/species/plumage/sp068-flight.webp",
+   "author": "Tranceliner",
+   "license": "CC BY-SA 4.0",
+   "title": "File:Motacilla alba, Kalkara, (2026) (01).jpg"
+  },
+  {
+   "speciesId": "sp069",
+   "image": "/assets/species/sp069.webp",
+   "author": "Stephan Sprinz",
+   "license": "CC BY-SA 4.0",
+   "title": "File:Wiesenschafstelze (Motacilla flava flava) im LSG Bergstraße-Nord 08.jpg"
+  },
+  {
+   "speciesId": "sp069",
+   "image": "/assets/species/plumage/sp069-adult_f.webp",
+   "author": "Donald Davesne",
+   "license": "CC BY 4.0",
+   "source": "https://www.inaturalist.org/photos/122430547",
+   "urls": [
+    "https://inaturalist-open-data.s3.amazonaws.com/photos/122430547/original.jpg",
+    "https://inaturalist-open-data.s3.amazonaws.com/photos/122430547/original.jpeg",
+    "https://inaturalist-open-data.s3.amazonaws.com/photos/122430547/original.JPG",
+    "https://inaturalist-open-data.s3.amazonaws.com/photos/122430547/original.png"
+   ]
+  },
+  {
+   "speciesId": "sp069",
+   "image": "/assets/species/plumage/sp069-juv.webp",
+   "author": "euqirneto",
+   "license": "CC BY 4.0",
+   "source": "https://www.inaturalist.org/photos/219611553",
+   "urls": [
+    "https://inaturalist-open-data.s3.amazonaws.com/photos/219611553/original.jpg",
+    "https://inaturalist-open-data.s3.amazonaws.com/photos/219611553/original.jpeg",
+    "https://inaturalist-open-data.s3.amazonaws.com/photos/219611553/original.JPG",
+    "https://inaturalist-open-data.s3.amazonaws.com/photos/219611553/original.png"
+   ]
+  },
+  {
+   "speciesId": "sp069",
+   "image": "/assets/species/plumage/sp069-flight.webp",
+   "author": "Ralf Hüsges",
+   "license": "CC BY 4.0",
+   "title": "File:Schafstelze - Motacilla flava.jpg"
+  },
+  {
+   "speciesId": "sp070",
+   "image": "/assets/species/sp070.webp",
+   "author": "User:Diliff",
+   "license": "CC BY-SA 3.0",
+   "title": "File:Skylark 2, Lake District, England - June 2009.jpg"
+  },
+  {
+   "speciesId": "sp070",
+   "image": "/assets/species/plumage/sp070-flight.webp",
+   "author": "Charles J. Sharp",
+   "license": "CC BY-SA 4.0",
+   "title": "File:Skylark (Alauda arvensis) in flight.jpg"
+  },
+  {
+   "speciesId": "sp065",
+   "image": "/assets/species/plumage/sp065-head-down.webp",
+   "author": "hedera.baltica",
+   "license": "CC BY-SA 2.0",
+   "title": "File:Eurasian nuthatch (50430565526).jpg",
+   "recheck": "R19-QA author rule"
+  },
+  {
+   "speciesId": "sp065",
+   "image": "/assets/species/plumage/sp065-flight.webp",
+   "author": "C. Robiller / naturlichter.de",
+   "license": "CC BY-SA 3.0",
+   "title": "File:Kleiber Flug.jpg",
+   "recheck": "R19-QA author rule"
+  },
+  {
+   "speciesId": "sp067",
+   "kind": "audio",
+   "audio": "/assets/species/audio/sp067-call.mp3",
+   "author": "Aubrey John Williams / The British Library Board",
+   "license": "CC BY-SA 4.0",
+   "title": "File:Eurasian Treecreeper (Certhia familiaris) (W1CDR0001463 BD5).ogg",
+   "source": "https://commons.wikimedia.org/wiki/File:Eurasian_Treecreeper_%28Certhia_familiaris%29_%28W1CDR0001463_BD5%29.ogg",
+   "recheck": "R19-QA author rule"
+  },
+  {
+   "speciesId": "sp066",
+   "image": "/assets/species/plumage/sp066-juv-fed.webp",
+   "author": "hedera.baltica",
+   "license": "CC BY-SA 2.0",
+   "title": "File:Feed me! (20741323391).jpg",
+   "recheck": "R19-QA author rule (withheld)"
+  }
+ ]
+}
