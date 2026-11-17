@@ -192,13 +192,6 @@
           "quality": "Snavelbasis en borst zichtbaar.",
           "verdict": "goedgekeurd"
         },
-        "/assets/species/plumage/sp075-juv-review.webp": {
-          "role": "Verenkleed (Juveniel)",
-          "content": "Jonge IJsvogel op een lichte tak met donker gerande borstveren.",
-          "sexAge": "Borsttekening ondersteunt juveniel. Geslacht onbekend.",
-          "quality": "Borst, poten en snavel zichtbaar.",
-          "verdict": "goedgekeurd"
-        },
         "/assets/species/plumage/sp075-flight.webp": {
           "role": "In vlucht",
           "content": "IJsvogel in vrije vlucht met een prooi in de snavel.",
@@ -215,13 +208,17 @@
         }
       },
       "corrections": [
-        "Bestaande zes afzonderlijke foto-opnamen en rollen gecontroleerd. Kennisprofiel en beeldvergelijking met Bijeneter toegevoegd."
+        "Bestaande zes afzonderlijke foto-opnamen en rollen gecontroleerd. Kennisprofiel en beeldvergelijking met Bijeneter toegevoegd.",
+        "F3-R21-QA 17-11-2026: onzekere juvenielenrol verwijderd uit de zichtbare gids. Commons-bestandsomschrijving noemt female, broncategorieën zowel female als juvenile; leeftijd niet onafhankelijk vastgesteld. Origineel behouden onder retired.sp075."
       ],
-      "missing": [],
+      "missing": [
+        "Nieuwe onafhankelijke juvenielenfoto IJsvogel met bevestigd leeftijdsbewijs, juiste rechten en duidelijke zichtbare kenmerken."
+      ],
       "wishes": [],
       "sexPolicy": "Gebruik de ondersnavel voor geslachtsbepaling pas wanneer het volwassen kleed duidelijk is.",
       "uncertain": [
-        "Vogelbescherming noemt 17–19,5 cm, Blasco-Zumeta & Heinze 15–17 cm. De getoonde ca. 16–18 cm volgt de vastgelegde methode met beide bronwaarden."
+        "Vogelbescherming noemt 17–19,5 cm, Blasco-Zumeta & Heinze 15–17 cm. De getoonde ca. 16–18 cm volgt de vastgelegde methode met beide bronwaarden.",
+        "REVIEW REQUIRED: Common Kingfisher 2025 08 30 01.jpg (Alexis Lours), teruggetrokken juvenielenlabel. Externe bron geeft tegenstrijdige female/juvenile-metadata."
       ],
       "date": "2026-11-12"
     },
