@@ -146,13 +146,6 @@
           "quality": "De kop, gevouwen vleugel en onderzijde zijn zichtbaar.",
           "verdict": "goedgekeurd"
         },
-        "/assets/species/plumage/sp069-juv.webp": {
-          "role": "Verenkleed (Juveniel)",
-          "content": "Jonge Gele Kwikstaart in zijaanzicht op een steen, met bleke onderzijde, lichte vleugelstrepen en lange staart.",
-          "sexAge": "De fotograaf annoteert de research-grade waarneming als Juvenile. De bleke onderzijde en lichte vleugelstrepen zijn zichtbaar. Geslacht onbekend.",
-          "quality": "De hele vogel staat in beeld. Lichte vleugelstrepen en staartverhouding zijn zichtbaar.",
-          "verdict": "goedgekeurd"
-        },
         "/assets/species/plumage/sp069-flight.webp": {
           "role": "Overige herkenningsfoto",
           "content": "Gele Kwikstaart bij het landen naast een paal, met de poten naar voren en de gele onderzijde zichtbaar.",
@@ -162,14 +155,18 @@
         }
       },
       "corrections": [
-        "Mannetjeslabel onderbouwd. Vrouwtje, juveniel en kennisprofiel toegevoegd. Vergelijking met Grote Gele Kwikstaart toont beide vogels."
+        "Mannetjeslabel onderbouwd. Vrouwtje, juveniel en kennisprofiel toegevoegd. Vergelijking met Grote Gele Kwikstaart toont beide vogels.",
+        "F3-R20 17-11-2026: juvenielenfoto sp069-juv.webp niet langer vrijgegeven (onscherp, soort niet overtuigend); bestand en herkomst onder retired.sp069."
       ],
       "missing": [
-        "Scherpe foto van één Gele Kwikstaart in vrije vlucht met bevestigde rechten."
+        "Scherpe foto van één Gele Kwikstaart in vrije vlucht met bevestigde rechten.",
+        "Scherpe juveniele Gele Kwikstaart met onafhankelijk bevestigde soort en individuele rechten."
       ],
       "wishes": [],
       "sexPolicy": "Koptekening en felheid variëren tussen ondersoorten. Het vrouwtje heeft een bronannotatie op de waarneming.",
-      "uncertain": [],
+      "uncertain": [
+        "REVIEW REQUIRED: niet-vrijgegeven juvenielenkandidaat iNaturalist 219611553."
+      ],
       "date": "2026-11-12"
     },
     "sp075": {

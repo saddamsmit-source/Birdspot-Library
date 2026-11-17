@@ -107,6 +107,7 @@ const counts={
  seventeenthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R17'),
  eighteenthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R18'),
  nineteenthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R19'),
+ twentiethBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R20'),
  contentInspected:sum(x=>x.F3.reviewedThisRound===true),
  contentComplete:sum(x=>x.F3.contentStatus==='CONTENT COMPLETE')
 };
@@ -132,6 +133,7 @@ const sixteenth=rows.filter(x=>x.F3.recheckBatch==='F3-R16');
 const seventeenth=rows.filter(x=>x.F3.recheckBatch==='F3-R17');
 const eighteenth=rows.filter(x=>x.F3.recheckBatch==='F3-R18');
 const nineteenth=rows.filter(x=>x.F3.recheckBatch==='F3-R19');
+const twentieth=rows.filter(x=>x.F3.recheckBatch==='F3-R20');
 assert.ok(req.includes('lookalikePhotoAndText'),'New owner lookalike rule must be checked for every F3 bird');
 assert.deepEqual(ninth.map(x=>x.id),['sp034','sp035','sp036'],'R09 exactly three species in fixed sequence');
 assert.deepEqual(ninth.map(x=>x.F3.photoFilesInspected),[2,5,4],'All eleven existing local images need individual inspection');
@@ -320,7 +322,24 @@ for(const item of nineteenth){
  }
 }
 assert.ok(!nineteenth[1].currentAssets.imageSlots.some(s=>s.path.endsWith('sp066-juv-fed.webp')),'unproven Boomkruiper juvenile not a live slot');
-assert.ok(nineteenth[2].F3.checks.audioLicenseAndAttribution.startsWith('PARTIALLY TESTED'),'empty Commons author keeps audio rights partial');
+assert.match(nineteenth[2].F3.checks.audioLicenseAndAttribution,/Recordist 'Aubrey John Williams' and Copyright Holder/,'call rights only via explicit page fields (R19-QA)');
+assert.match(nineteenth[2].F3.checks.audioLicenseAndAttribution,/species and call type not verified/);
+
+assert.deepEqual(twentieth.map(x=>x.id),['sp068','sp069','sp070'],'R20 exactly Witte Kwikstaart, Gele Kwikstaart and Veldleeuwerik');
+assert.deepEqual(twentieth.map(x=>x.F3.photoFilesInspected),[2,4,2]);
+for(const item of twentieth){
+ const {F3:review,currentAssets}=item;
+ assert.equal(review.fullPass,false); assert.ok(review.checks.photoOriginalIdentity.startsWith('VERIFIED'));
+ assert.ok(!review.checks.audioRecordingsAuthenticity.startsWith('VERIFIED'));
+ assert.deepEqual(plumageRoleProblems(item),[],item.id+' plumage/flight role rule');
+ assert.equal(review.photoBlobSHAs.length,currentAssets.imageSlots.length);
+ for(let i=0;i<currentAssets.imageSlots.length;i++){
+  const bytes=readFileSync(new URL('..'+currentAssets.imageSlots[i].path,import.meta.url));
+  assert.equal(review.photoBlobSHAs[i],createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex'),item.id+' image changed since F3-R20 review');
+ }
+}
+assert.ok(!twentieth[1].currentAssets.imageSlots.some(s=>s.path.endsWith('sp069-juv.webp')),'unproven Gele Kwikstaart juvenile not a live slot');
+assert.ok(twentieth[1].F3.checks.photoIndividualRights.startsWith('PARTIALLY TESTED'),'iNaturalist female rights stay partial');
 
 assert.deepEqual(eighth.map(x=>x.id), ['sp031','sp032','sp033'],'F3-R08 is exactly three existing tits');
 assert.deepEqual(eighth.map(x=>x.F3.photoFilesInspected),[3,3,4]);

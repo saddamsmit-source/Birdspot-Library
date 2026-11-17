@@ -5311,29 +5311,6 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "sex": "female",
       "age": "adult"
     },
-    "juv": {
-      "file": "iNaturalist photo 219611553",
-      "nl": "Gele Kwikstaart",
-      "latin": "Motacilla flava",
-      "author": "euqirneto",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-      "source": "https://www.inaturalist.org/photos/219611553",
-      "showSourceLink": true,
-      "alt": "Jonge Gele Kwikstaart in zijaanzicht op een steen, met bleke onderzijde, lichte vleugelstrepen en lange staart.",
-      "modifications": "Verkleind indien nodig tot max. 1400 px en omgezet naar WebP zonder uitsnede of EXIF/GPS/XMP",
-      "reviewed": "2026-11-12",
-      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/gele-kwikstaart",
-      "visualCheck": "Jonge Gele Kwikstaart in zijaanzicht op een steen, met bleke onderzijde, lichte vleugelstrepen en lange staart.",
-      "verification": "De fotograaf annoteert de research-grade waarneming als Juvenile. De bleke onderzijde en lichte vleugelstrepen zijn zichtbaar. Geslacht onbekend.",
-      "width": 1025,
-      "height": 1025,
-      "image": "/assets/species/plumage/sp069-juv.webp",
-      "sha1": "df2d78107a7d61acab25c4665212e0dbedf0df24",
-      "sourceAudit": "2026-11-12",
-      "observation": "https://www.inaturalist.org/observations/129242267",
-      "age": "juvenile"
-    },
     "adult_m": {
       "reuseGuidePhoto": true
     }

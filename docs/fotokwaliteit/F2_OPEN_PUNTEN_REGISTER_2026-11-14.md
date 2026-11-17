@@ -209,4 +209,12 @@ De tekst in de kolom 'Open uit bronronde' is overgenomen uit de laatste F2-voort
 |---|---|---|
 | sp065 Boomklever | F3-R19 | Lengte: Naturalis één waarde (14 cm) binnen VBN 12–14,5 cm; geen tweede bereik. Juveniel niet gezocht. |
 | sp066 Boomkruiper | F3-R19 | Juveniel `sp066-juv-fed.webp` (Commons "Feed me!", hedera.baltica, Wrocław) **niet vrijgegeven**: leeftijd overtuigend, soort niet bewijsbaar (beide Certhia-soorten daar; kleurzweem). Bestand en herkomst in `retired.sp066`. Vrije vlucht ontbreekt. |
-| sp067 Taigaboomkruiper | F3-R19 | Roepopname (British Library): Commons-auteurveld leeg → rechten PARTIALLY TESTED. Ondersoort alleen via locatie (Zweden: familiaris; VK: britannica). Sovon: geen landelijke aantallen of trend. |
+| sp067 Taigaboomkruiper | F3-R19 | Roepopname (British Library): rechten na R19-QA bevestigd via aparte velden Recordist/Copyright Holder (origcheck-r20c); soort/geluidstype niet VERIFIED. Ondersoort alleen via locatie. Sovon: geen landelijke aantallen of trend. |
+
+### F3-R20 (17-11-2026)
+
+| Soort | Batch | Open punt |
+|---|---|---|
+| sp068 Witte Kwikstaart | F3-R20 | Sovon-trend laatste 12 jaar op pagina niet eenduidig gelezen. Juveniel niet gezocht; juvenielenpaar met Gele Kwikstaart blijft tekst-only. |
+| sp069 Gele Kwikstaart | F3-R20 | Juveniel `sp069-juv.webp` (iNaturalist 219611553, euqirneto) **niet vrijgegeven**: onscherp, jonge Citroen-/Witte Kwikstaart niet uitgesloten. Vrouwtje (iNaturalist 122430547): rechten alleen register, ondersoort niet bepaald. |
+| sp070 Veldleeuwerik | F3-R20 | Kuifleeuwerik en Boomleeuwerik (VBN-verwarringssoorten) nog niet als vergelijking uitgewerkt. |

@@ -38,7 +38,10 @@
     "sp064",
     "sp065",
     "sp066",
-    "sp067"
+    "sp067",
+    "sp068",
+    "sp069",
+    "sp070"
   ],
   "policy": {
     "pairRequiredWhenSimilar": true,
@@ -1884,6 +1887,92 @@
       "sources": [
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/boomklever",
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/boomkruiper"
+      ]
+    },
+    {
+      "id": "LK-042",
+      "focus": [
+        "sp068",
+        "sp069"
+      ],
+      "birds": [
+        "sp068",
+        "sp069"
+      ],
+      "risk": "adult",
+      "matchingPlumages": [
+        null,
+        "adult_m"
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Both photos source-matched in F3-R20 (origcheck r = 1.00); juvenile pair stays text-only (no verified juveniles); independent second review open"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Onderzijde",
+          "values": [
+            "Witte Kwikstaart wit met zwarte keel of bef",
+            "Gele Kwikstaart grotendeels geel in broedkleed"
+          ]
+        },
+        {
+          "label": "Rug",
+          "values": [
+            "Witte Kwikstaart grijze rug (nominaat alba)",
+            "Gele Kwikstaart doorgaans olijfgroene rug"
+          ]
+        }
+      ],
+      "caution": "Jonge Gele Kwikstaarten kunnen vrijwel geen geel tonen; kopkenmerken van mannetjes verschillen per ondersoort.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/witte-kwikstaart",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/gele-kwikstaart",
+        "https://birds-europe.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/nsr_taxon.php?id=130826"
+      ]
+    },
+    {
+      "id": "LK-043",
+      "focus": [
+        "sp070",
+        "sp072"
+      ],
+      "birds": [
+        "sp070",
+        "sp072"
+      ],
+      "risk": "adult",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Veldleeuwerik photos source-matched in F3-R20; Graspieper side from F2-25, not re-checked this round; independent second review open"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Kop en snavel",
+          "values": [
+            "Veldleeuwerik korte kuif en vrij forse snavel",
+            "Graspieper geen kuif, fijne snavel en lichte oogring"
+          ]
+        },
+        {
+          "label": "Vlucht",
+          "values": [
+            "Veldleeuwerik smalle witte vleugelachterrand, lange zangvlucht",
+            "Graspieper slanker, korte zangvlucht met aflopende tonen"
+          ]
+        }
+      ],
+      "caution": "Witte buitenste staartpennen hebben beide soorten; niet op dat kenmerk alleen determineren.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/veldleeuwerik",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/graspieper",
+        "https://birds-europe.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/nsr_taxon.php?id=130803"
       ]
     }
   ],
