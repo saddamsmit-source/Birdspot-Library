@@ -29,7 +29,10 @@
     "sp055",
     "sp056",
     "sp057",
-    "sp058"
+    "sp058",
+    "sp059",
+    "sp060",
+    "sp061"
   ],
   "policy": {
     "pairRequiredWhenSimilar": true,
@@ -1482,6 +1485,180 @@
       "sources": [
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/tjiftjaf",
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/fluiter"
+      ]
+    },
+    {
+      "id": "LK-033",
+      "focus": [
+        "sp059",
+        "sp060"
+      ],
+      "birds": [
+        "sp059",
+        "sp060"
+      ],
+      "risk": "adult",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Both photos source-matched in F3-R17; independent second review open"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Kruin",
+          "values": [
+            "Zwartkop-man zwart petje",
+            "Tuinfluiter egaal bruingrijs"
+          ]
+        },
+        {
+          "label": "Zang",
+          "values": [
+            "Zwartkop heldere, luide eindtonen",
+            "Tuinfluiter doorlopend, zonder heldere eindtonen"
+          ]
+        }
+      ],
+      "caution": "Vrouwtjes en jonge Zwartkoppen hebben een bruin petje.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwartkop",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/tuinfluiter"
+      ]
+    },
+    {
+      "id": "LK-034",
+      "focus": [
+        "sp059",
+        "sp060"
+      ],
+      "birds": [
+        "sp059",
+        "sp060"
+      ],
+      "risk": "female",
+      "matchingPlumages": [
+        "adult_f",
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Both photos source-matched in F3-R17; independent second review open"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Kruin",
+          "values": [
+            "Zwartkop-vrouwtje afgetekend roestbruin petje",
+            "Tuinfluiter egaal bruingrijs"
+          ]
+        },
+        {
+          "label": "Zijkop",
+          "values": [
+            "Grijzig onder het petje",
+            "Grijze halszijvlek, geen petje"
+          ]
+        }
+      ],
+      "caution": "Bepaal het geslacht van een Zwartkop niet alleen op petkleur.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwartkop",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/tuinfluiter"
+      ]
+    },
+    {
+      "id": "LK-035",
+      "focus": [
+        "sp061",
+        "sp060"
+      ],
+      "birds": [
+        "sp061",
+        "sp060"
+      ],
+      "risk": "adult",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Both photos source-matched in F3-R17; independent second review open"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Keel",
+          "values": [
+            "Grasmus opvallend wit",
+            "Tuinfluiter grijswit"
+          ]
+        },
+        {
+          "label": "Vleugel",
+          "values": [
+            "Grasmus roestoranje veerranden",
+            "Tuinfluiter egaal bruingrijs"
+          ]
+        }
+      ],
+      "caution": "Vergelijk kenmerken, niet de afmeting op de foto.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grasmus",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/tuinfluiter"
+      ]
+    },
+    {
+      "id": "LK-036",
+      "focus": [
+        "sp061"
+      ],
+      "birds": [
+        "sp061",
+        "sp062"
+      ],
+      "risk": "adult",
+      "matchingPlumages": [
+        "adult_m",
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Grasmus source-matched in F3-R17; Braamsluiper originals in its own round (F3-R18)"
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Vleugel",
+          "values": [
+            "Grasmus roestoranje",
+            "Braamsluiper zonder roest"
+          ]
+        },
+        {
+          "label": "Poten",
+          "values": [
+            "Grasmus oranje",
+            "Braamsluiper grijs"
+          ]
+        },
+        {
+          "label": "Kopkap",
+          "values": [
+            "Grasmus iets lichter grijs",
+            "Braamsluiper donkerder oorstreek"
+          ]
+        }
+      ],
+      "caution": "Beide hebben een witte keel; kijk naar vleugel en poten.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grasmus",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/braamsluiper"
       ]
     }
   ],

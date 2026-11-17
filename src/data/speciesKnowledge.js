@@ -2200,7 +2200,7 @@ const DATA = {
    "edition": "Online bron",
    "scope": "Nederland",
    "confirms": "Herkenning, habitat, leefwijze en voorkomen",
-   "checked": "2026-11-12",
+   "checked": "2026-11-17",
    "certainty": "hoog",
    "publisher": "Vogelbescherming Nederland"
   },
@@ -2211,7 +2211,7 @@ const DATA = {
    "edition": "Online bron",
    "scope": "Nederland",
    "confirms": "Herkenning, habitat, leefwijze en voorkomen",
-   "checked": "2026-11-12",
+   "checked": "2026-11-17",
    "certainty": "hoog",
    "publisher": "Vogelbescherming Nederland"
   },
@@ -2222,7 +2222,7 @@ const DATA = {
    "edition": "Online bron",
    "scope": "Nederland",
    "confirms": "Herkenning, habitat, leefwijze en voorkomen",
-   "checked": "2026-11-12",
+   "checked": "2026-11-17",
    "certainty": "hoog",
    "publisher": "Vogelbescherming Nederland"
   },
@@ -2266,7 +2266,7 @@ const DATA = {
    "edition": "Online bron",
    "scope": "Nederland",
    "confirms": "Nederlandse verspreiding en broedvogelmonitoring",
-   "checked": "2026-11-12",
+   "checked": "2026-11-17",
    "certainty": "hoog",
    "publisher": "Sovon Vogelonderzoek Nederland"
   },
@@ -2277,7 +2277,7 @@ const DATA = {
    "edition": "Online bron",
    "scope": "Nederland",
    "confirms": "Nederlandse verspreiding en broedvogelmonitoring",
-   "checked": "2026-11-12",
+   "checked": "2026-11-17",
    "certainty": "hoog",
    "publisher": "Sovon Vogelonderzoek Nederland"
   },
@@ -4775,6 +4775,17 @@ const DATA = {
    "scope": "Nederland",
    "confirms": "Broedpopulatie en trend",
    "checked": "2026-11-16",
+   "certainty": "hoog",
+   "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "SOV_TUINFLUITER": {
+   "register": "NL01",
+   "label": "Sovon — Tuinfluiter",
+   "url": "https://stats.sovon.nl/stats/soort/12760",
+   "edition": "Online geraadpleegd 17-11-2026",
+   "scope": "Nederland",
+   "confirms": "Broedpopulatie, trend en verspreiding",
+   "checked": "2026-11-17",
    "certainty": "hoog",
    "publisher": "Sovon Vogelonderzoek Nederland"
   }
@@ -23937,6 +23948,174 @@ const DATA = {
       "VB_FLUITER",
       "VB_FITIS"
      ]
+    }
+   ]
+  },
+  "sp060": {
+   "summary": {
+    "text": "Onopvallende, effen bruingrijze zanger met grijswitte onderzijde en een korte, stompe snavel. Vaak eerder gehoord dan gezien.",
+    "sources": [
+     "VB_TUINFLUITER"
+    ]
+   },
+   "keyMarks": [
+    {
+     "text": "Effen bruingrijze bovendelen en grijswitte onderzijde, zonder opvallende tekening.",
+     "sources": [
+      "VB_TUINFLUITER"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Korte, stompe snavel.",
+     "sources": [
+      "VB_TUINFLUITER"
+     ],
+     "reliability": "ondersteunend"
+    },
+    {
+     "text": "Grijze vlek op de halszijde; grijze poten.",
+     "sources": [
+      "VB_TUINFLUITER"
+     ],
+     "reliability": "ondersteunend"
+    }
+   ],
+   "caution": {
+    "text": "Juist het ontbreken van kenmerken is typerend. Een vrouwtje of jonge Zwartkop heeft wél een afgetekend bruin petje.",
+    "sources": [
+     "VB_TUINFLUITER",
+     "VB_ZWARTKOP"
+    ]
+   },
+   "critical": [
+    {
+     "feature": "Kruin",
+     "where": "Kop van opzij",
+     "this": "Egaal bruingrijs, zonder afgetekend petje.",
+     "other": "Zwartkop: zwart petje (man) of roestbruin petje (vrouw).",
+     "vs": [
+      "sp059"
+     ],
+     "reliability": "ondersteunend",
+     "conditions": "Vrij zicht op de kruin.",
+     "exceptions": "In schaduw of tegenlicht kan een bruin petje minder opvallen.",
+     "supporting": "De zang van de Tuinfluiter mist de heldere, luide eindtonen van de Zwartkop.",
+     "sources": [
+      "VB_TUINFLUITER",
+      "VB_ZWARTKOP"
+     ]
+    }
+   ],
+   "similar": [
+    {
+     "id": "sp059",
+     "why": "Zang lijkt op elkaar; de Zwartkop heeft een afgetekend petje en heldere eindtonen.",
+     "sources": [
+      "VB_TUINFLUITER",
+      "VB_ZWARTKOP"
+     ]
+    },
+    {
+     "id": "sp061",
+     "why": "Grasmus heeft een witte keel en roestbruine vleugelranden; de Tuinfluiter is egaal.",
+     "sources": [
+      "VB_GRASMUS",
+      "VB_TUINFLUITER"
+     ]
+    }
+   ],
+   "voice": [
+    {
+     "text": "Zachte, snelle en doorlopende zang, vaak vergeleken met een versnelde Merel, zonder de heldere fluittonen van de Zwartkop.",
+     "sources": [
+      "VB_TUINFLUITER"
+     ],
+     "kind": "zang"
+    }
+   ],
+   "basis": {
+    "size": {
+     "text": "Vogelbescherming noemt een lengte van 14 cm.",
+     "sources": [
+      "VB_TUINFLUITER"
+     ]
+    }
+   },
+   "habitat": [
+    {
+     "text": "Struiklaag van bossen, bosranden en houtwallen, vaak bij open plekken; in de stad in parken en tuinen met dichte ondergroei.",
+     "sources": [
+      "VB_TUINFLUITER",
+      "SOV_TUINFLUITER"
+     ],
+     "kind": "nederland"
+    }
+   ],
+   "status": [
+    {
+     "text": "Zeer talrijke broedvogel met 80.000–140.000 paren (2018–2020).",
+     "sources": [
+      "VB_TUINFLUITER",
+      "SOV_TUINFLUITER"
+     ],
+     "kind": "voorkomen"
+    },
+    {
+     "text": "Sinds 1990 significante afname; in de laatste twaalf jaar significante toename.",
+     "sources": [
+      "SOV_TUINFLUITER"
+     ],
+     "kind": "voorkomen"
+    }
+   ],
+   "life": [
+    {
+     "text": "Trekt van juli tot oktober naar Afrika ten zuiden van de Sahara en keert eind april terug.",
+     "sources": [
+      "VB_TUINFLUITER"
+     ],
+     "kind": "trek"
+    }
+   ],
+   "discrepancies": [
+    {
+     "field": "lengte",
+     "app": "13–15 cm",
+     "source": "Vogelbescherming noemt 14 cm. Een tweede uitgever met een bereik ontbreekt nog; de bestaande band blijft staan.",
+     "sources": [
+      "VB_TUINFLUITER"
+     ]
+    },
+    {
+     "field": "trend",
+     "app": "Toont de Sovon-trend",
+     "source": "Vogelbescherming: sinds ongeveer 2000 lichte afname; Sovon: sinds 1990 afname, laatste twaalf jaar toename. Ongedateerde tekst tegenover een recentere reeks; Sovon leidend.",
+     "sources": [
+      "VB_TUINFLUITER",
+      "SOV_TUINFLUITER"
+     ]
+    }
+   ],
+   "open": [
+    "Geslachten zijn niet betrouwbaar te onderscheiden: alleen een neutrale foto 'Volwassen'.",
+    "Geen eigen geluidsopname.",
+    "Lengte, spanwijdte en gewicht zonder tweede uitgever."
+   ],
+   "detail": [
+    {
+     "text": "Grijze poten en een grijze vlek op de halszijde zijn bij goed zicht te zien; verder ontbreekt opvallende tekening.",
+     "sources": [
+      "VB_TUINFLUITER"
+     ],
+     "topic": "kleed"
+    },
+    {
+     "text": "Vaak eerder gehoord dan gezien: hij zit verscholen in de struiklaag.",
+     "sources": [
+      "VB_TUINFLUITER"
+     ],
+     "topic": "gedrag"
     }
    ]
   }

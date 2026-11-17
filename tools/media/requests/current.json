@@ -1,7 +1,7 @@
 {
-  "mode": "discover",
-  "manifest": "tools/media/intake_queries_2026-11-16_r16.json",
-  "out": "docs/media-intake/2026-11-16/r16-discover",
-  "requestedBy": "Claude (writerclaim PR #280)",
-  "nonce": 25
+  "mode": "origcheck",
+  "manifest": "tools/media/origcheck_2026-11-17_r17.json",
+  "out": "docs/media-intake/2026-11-17/origcheck-r17",
+  "requestedBy": "Claude (writerclaim PR #'+str(0)+')",
+  "nonce": 26
 }

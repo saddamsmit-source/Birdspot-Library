@@ -186,3 +186,11 @@ De tekst in de kolom 'Open uit bronronde' is overgenomen uit de laatste F2-voort
 | sp056 Tjiftjaf | F3-R16 | Vrije-vluchtfoto ontbreekt (kandidaten zittend of neerstrijkend); juvenielenfoto ontbreekt. |
 | sp057 Fitis | F3-R16 | Juveniele kandidaat (Commons, Stephan Sprinz, CC BY-SA 4.0, Spiekeroog) niet geplaatst: soortbewijs rust op fotograaflabel en pootkleur. Onafhankelijke review gevraagd. Vrije vlucht ontbreekt. |
 | sp058 Fluiter | F3-R16 | Lengte 11–13 cm tegen Vogelbescherming 12 cm (tweede uitgever ontbreekt); maanden apr–aug tegen vertrek rond half september; "afnemend" tegen Sovon laatste 12 jaar stabiel. Juveniel en vrije vlucht ontbreken; Spotvogel nog niet uitgewerkt. |
+
+### F3-R17 (17-11-2026)
+
+| Soort | Batch | Open punt |
+|---|---|---|
+| sp059 Zwartkop | F3-R17 | Juveniel (Gunnar Creutz) behouden; leeftijd steunt op los donzig kleed, dof petje, label en datum — onafhankelijke beoordeling. Vogelbescherming noemt 370.000–620.000 én 270.000–320.000 paren; Sovon 370.000–620.000 leidend. Matkop/Glanskop (VBN-verwarringssoorten) nog niet uitgewerkt. |
+| sp060 Tuinfluiter | F3-R17 | Lengte één uitgever (VBN 14 cm, app 13–15 cm). Trend: VBN "lichte afname sinds ±2000" vs Sovon laatste 12 jaar significante toename. Vlucht/juveniel niet gezocht (fotoprioriteit). |
+| sp061 Grasmus | F3-R17 | iNaturalist-licenties (3 foto's) alleen uit register. Juveniel voor onafhankelijke beoordeling. VBN gebruikt Sylvia communis, Sovon/app Curruca communis. |

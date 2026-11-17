@@ -101,6 +101,7 @@ const counts={
  fourteenthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R14'),
  fifteenthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R15'),
  sixteenthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R16'),
+ seventeenthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R17'),
  contentInspected:sum(x=>x.F3.reviewedThisRound===true),
  contentComplete:sum(x=>x.F3.contentStatus==='CONTENT COMPLETE')
 };
@@ -123,6 +124,7 @@ const thirteenth=rows.filter(x=>x.F3.recheckBatch==='F3-R13');
 const fourteenth=rows.filter(x=>x.F3.recheckBatch==='F3-R14');
 const fifteenth=rows.filter(x=>x.F3.recheckBatch==='F3-R15');
 const sixteenth=rows.filter(x=>x.F3.recheckBatch==='F3-R16');
+const seventeenth=rows.filter(x=>x.F3.recheckBatch==='F3-R17');
 assert.ok(req.includes('lookalikePhotoAndText'),'New owner lookalike rule must be checked for every F3 bird');
 assert.deepEqual(ninth.map(x=>x.id),['sp034','sp035','sp036'],'R09 exactly three species in fixed sequence');
 assert.deepEqual(ninth.map(x=>x.F3.photoFilesInspected),[2,5,4],'All eleven existing local images need individual inspection');
@@ -263,6 +265,22 @@ for(const item of sixteenth){
  for(let i=0;i<currentAssets.imageSlots.length;i++){
   const bytes=readFileSync(new URL('..'+currentAssets.imageSlots[i].path,import.meta.url));
   assert.equal(review.photoBlobSHAs[i],createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex'),item.id+' image changed since F3-R16 review');
+ }
+}
+
+assert.deepEqual(seventeenth.map(x=>x.id),['sp059','sp060','sp061'],'R17 exactly Zwartkop, Tuinfluiter and Grasmus');
+assert.deepEqual(seventeenth.map(x=>x.F3.photoFilesInspected),[3,1,4]);
+for(const item of seventeenth){
+ const {F3:review,currentAssets}=item;
+ assert.equal(review.fullPass,false); assert.ok(review.checks.photoOriginalIdentity.startsWith('VERIFIED'));
+ assert.ok(review.checks.audioRecordingsAuthenticity.startsWith('BLOCKED'));
+ assert.ok(review.checks.ebirdDistributionAndBias.startsWith('BLOCKED'));
+ assert.match(review.checks.vogelbeschermingAndANWB,/ANWB-vogelgids NOT TESTED/);
+ if(review.checks.plumageAndTrueFlight.startsWith('VERIFIED'))assert.ok(review.exemptions?.plumageAndTrueFlight?.reason?.length>20,'VERIFIED shown roles need documented missing optional roles');
+ assert.equal(review.photoBlobSHAs.length,currentAssets.imageSlots.length);
+ for(let i=0;i<currentAssets.imageSlots.length;i++){
+  const bytes=readFileSync(new URL('..'+currentAssets.imageSlots[i].path,import.meta.url));
+  assert.equal(review.photoBlobSHAs[i],createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex'),item.id+' image changed since F3-R17 review');
  }
 }
 
