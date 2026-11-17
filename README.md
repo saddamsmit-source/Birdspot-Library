@@ -133,6 +133,7 @@ als naslagwerk erbij.
   wordt gepubliceerd vanaf `preview/birdspot-review`. De appversie komt uit
   `APP_VERSION` in `sw.js`. Vercel Git-deploys zijn uitgeschakeld. Zie de
   [releasenotities voor 1.27.31](docs/release/RELEASE_1.27.31.md) (vorige: [1.27.6](docs/release/RELEASE_1.27.6.md)).
+  **Feature-reconciliatie** (afspraak ↔ gebouwd ↔ gepubliceerd ↔ getest ↔ geaccepteerd): [§ Feature-reconciliatie 1.27.31](docs/release/RELEASE_1.27.31.md#feature-reconciliatie-1-27-31-17-11-2026).
 - **Geen accounts, geen betaalde diensten, geen eigen backend.**
 - Fotobronnen voor de gids: diverse, per foto vastgelegd met auteur, licentie
   en bron-SHA-1 (zie de bronaudit-commits in de git-historie).
