@@ -70,6 +70,7 @@ def credit_fields(wikitext: str) -> dict:
         if not key or key in out:
             continue
         val = re.sub(r"\[\[(?:[^|\]]*\|)?([^\]]*)\]\]", r"\1", m.group(2))   # [[link|naam]] -> naam
+        val = re.sub(r"\[https?://\S+ ([^\]]+)\]", r"\1", val)               # [url naam] -> naam
         val = re.sub(r"\{\{[^{}]*\}\}|<[^>]+>|'{2,}", "", val)
         val = re.sub(r"\s+", " ", val).strip(" .;,")
         if val:
@@ -201,6 +202,10 @@ def imageinfo(titles: list[str], thumb: int | None = None) -> dict:
         rev = (page.get("revisions") or [{}])[0]
         wikitext = ((rev.get("slots") or {}).get("main") or {}).get("*") or rev.get("*") or ""
         out[page["title"]]["creditFields"] = credit_fields(wikitext)
+        # Bewijs: welke maker-/rechtenparameters de pagina werkelijk noemt (alleen namen + korte waarde).
+        out[page["title"]]["pageParams"] = {k.strip(): v.strip()[:100] for k, v in re.findall(
+            r"^\s*\|\s*([A-Za-z_ ]{2,30}?)\s*=\s*(.*?)\s*$", wikitext, re.M)
+            if re.search(r"author|recordist|copyright|holder|artist|credit|performer|creator|permission|licen|date", k, re.I)}
     return out
 
 

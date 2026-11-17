@@ -101,7 +101,7 @@ def audio_record(e: dict, info: dict | None, norm) -> dict:
     if not info:
         rec["error"] = "niet gevonden op Commons"
         return rec
-    rec["commons"] = {k: info.get(k) for k in ("page", "sha1", "license", "author", "duration", "mime", "creditFields")}
+    rec["commons"] = {k: info.get(k) for k in ("page", "sha1", "license", "author", "duration", "mime", "creditFields", "pageParams")}
     ok, rule = author_match(info, e.get("author", ""), norm)
     rec["authorRule"] = rule
     rec["rightsMatch"] = ok and norm(info.get("license", "")) == norm(e.get("license", ""))
