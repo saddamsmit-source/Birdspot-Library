@@ -423,24 +423,20 @@
           "sexAge": "Leeftijd en geslacht open.",
           "quality": "Scherpe vleugelband in passend zijaanzicht.",
           "verdict": "goedgekeurd"
-        },
-        "/assets/species/plumage/sp066-juv-fed.webp": {
-          "role": "Verenkleed (Juveniel)",
-          "content": "Jong links neemt voedsel aan van ouder rechts.",
-          "sexAge": "De fotograaf vermeldt welke vogel juveniel is. Geslacht open.",
-          "quality": "Beide vogels en voerhandeling zichtbaar.",
-          "verdict": "goedgekeurd"
         }
       },
       "corrections": [
-        "Originele hoofdfoto gecontroleerd. Twee bronfoto’s toegevoegd, één voor de vleugelband en één van een gevoerd jong. Nederlandse populatie en geluidsvergelijking onderbouwd."
+        "Originele hoofdfoto gecontroleerd. Twee bronfoto’s toegevoegd, één voor de vleugelband en één van een gevoerd jong. Nederlandse populatie en geluidsvergelijking onderbouwd.",
+        "F3-R19 17-11-2026: juvenielenfoto sp066-juv-fed.webp niet langer vrijgegeven (soort niet zelfstandig bewezen); bestand en herkomst onder retired.sp066."
       ],
       "missing": [
-        "Een bronbevestigde vrije-vluchtfoto."
+        "Een bronbevestigde vrije-vluchtfoto.",
+        "Juveniele Boomkruiper met onafhankelijk bevestigde soort."
       ],
       "sexPolicy": "Geslachten gelijk.",
       "uncertain": [
-        "Het oorspronkelijke portret houdt de bronbepaling 'Gartenbaumläufer'. Gebruik het nieuwe vleugelbeeld en geluid voor het onderscheid."
+        "Het oorspronkelijke portret houdt de bronbepaling 'Gartenbaumläufer'. Gebruik het nieuwe vleugelbeeld en geluid voor het onderscheid.",
+        "REVIEW REQUIRED: niet-vrijgegeven juvenielenkandidaat Commons 'Feed me! (20741323391).jpg' (Wrocław; beide Certhia-soorten mogelijk)."
       ],
       "date": "2026-11-14"
     },
