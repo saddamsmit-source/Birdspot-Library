@@ -65,11 +65,15 @@ def credit_fields(wikitext: str) -> dict:
     """R19-QA: losse makervelden uit de bestandspagina (bv. geluidssjablonen met recordist en copyright holder
     naast een leeg Artist-veld). Alleen expliciet benoemde parameters; niets afleiden of samenvoegen."""
     out = {}
-    for m in re.finditer(r"^\s*\|\s*([A-Za-z_ ]+?)\s*=\s*(.*?)\s*$", wikitext or "", re.M):
-        key = _CREDIT_KEYS.get(m.group(1).strip().casefold())
+    pairs = [(m.group(1), m.group(2)) for m in re.finditer(r"^[ \t]*\|[ \t]*([A-Za-z_ ]+?)[ \t]*=[ \t]*(.*?)[ \t]*$", wikitext or "", re.M)]
+    # {{Information field|name=Recordist|value=…}} (aparte informatievelden op geluidspagina's)
+    pairs += [(m.group(1), m.group(2)) for m in re.finditer(
+        r"\{\{\s*Information field\s*\|\s*name\s*=\s*([^|}]+?)\s*\|\s*value\s*=\s*((?:[^{}]|\{\{[^{}]*\}\})*?)\s*\}\}", wikitext or "", re.I)]
+    for raw_key, raw_val in pairs:
+        key = _CREDIT_KEYS.get(raw_key.strip().casefold())
         if not key or key in out:
             continue
-        val = re.sub(r"\[\[(?:[^|\]]*\|)?([^\]]*)\]\]", r"\1", m.group(2))   # [[link|naam]] -> naam
+        val = re.sub(r"\[\[(?:[^|\]]*\|)?([^\]]*)\]\]", r"\1", raw_val)   # [[link|naam]] -> naam
         val = re.sub(r"\[https?://\S+ ([^\]]+)\]", r"\1", val)               # [url naam] -> naam
         val = re.sub(r"\{\{[^{}]*\}\}|<[^>]+>|'{2,}", "", val)
         val = re.sub(r"\s+", " ", val).strip(" .;,")
@@ -204,8 +208,10 @@ def imageinfo(titles: list[str], thumb: int | None = None) -> dict:
         out[page["title"]]["creditFields"] = credit_fields(wikitext)
         # Bewijs: welke maker-/rechtenparameters de pagina werkelijk noemt (alleen namen + korte waarde).
         out[page["title"]]["pageParams"] = {k.strip(): v.strip()[:100] for k, v in re.findall(
-            r"^\s*\|\s*([A-Za-z_ ]{2,30}?)\s*=\s*(.*?)\s*$", wikitext, re.M)
+            r"^[ \t]*\|[ \t]*([A-Za-z_ ]{2,30}?)[ \t]*=[ \t]*(.*?)[ \t]*$", wikitext, re.M)
             if re.search(r"author|recordist|copyright|holder|artist|credit|performer|creator|permission|licen|date", k, re.I)}
+        out[page["title"]]["creditLines"] = [ln.strip()[:160] for ln in wikitext.splitlines()
+                                             if re.search(r"recordist|copyright holder|author|artist", ln, re.I)][:6]
     return out
 
 

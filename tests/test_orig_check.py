@@ -39,6 +39,9 @@ assert am("Sighmanb", "")[0] is False
 wt = "{{Information\n|description = x\n}}\n{{Sound\n| recordist = [[w:Aubrey John Williams|Aubrey John Williams]]\n| copyright holder = The British Library Board\n|date=1979-05-20\n}}"
 assert ci.credit_fields(wt) == bl, ci.credit_fields(wt)
 assert ci.credit_fields("|description = only text") == {}
+inf = "{{Information\n|description=x\n|other fields={{Information field|name=Recordist|value=Aubrey John Williams}}{{Information field|name=Copyright holder|value=[[w:British Library|The British Library Board]]}}\n}}"
+assert ci.credit_fields(inf) == bl, ci.credit_fields(inf)
+assert ci.credit_fields("|performer =\n| permission ={{PermissionTicket|id=1}}") == {}, "empty field must not swallow the next line"
 au = oc.audio_record({**e, "author": "Aubrey John Williams / The British Library Board", "license": "CC BY-SA 4.0"},
                      {"page": "p", "sha1": "s", "author": "", "license": "CC BY-SA 4.0", "creditFields": bl}, ci.norm_name)
 assert au["rightsMatch"] is True and au["authorRule"] == "recordist+copyright-holder" and "VERIFIED" not in str(au)
