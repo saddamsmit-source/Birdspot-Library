@@ -5,6 +5,7 @@ on:
     paths:
       - 'tools/pilot/Start-BirdspotAndroidPilot.ps1'
       - 'docs/pilot/ANDROID_WINDOWS_S1_STARTKAART_2026-11-13_DRAFT.md'
+      - 'docs/pilot/SAMSUNG_PWA_STARTKAART_2026-11-16_DRAFT.md'
       - '.github/workflows/windows-pilot-launcher-qa.yml'
   workflow_dispatch:
 
@@ -84,3 +85,31 @@ jobs:
           $sw = Get-Content (Join-Path $site 'sw.js') -Raw
           if (!$sw.Contains("const APP_VERSION = '1.27.7';")) { throw 'Wrong serviceworker version.' }
           Write-Output 'PASS exact pinned Windows source and separate clean 1.27.7 snapshot; server/device NOT STARTED.'
+
+  windows-preparation-candidate-1-27-31:
+    name: Actual Windows staging of Samsung candidate 1.27.31 (no server, no Android)
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepare-only on exact candidate c8a12af1 (PowerShell 5.1)
+        shell: powershell
+        run: |
+          .\tools\pilot\Start-BirdspotAndroidPilot.ps1 -PrepareOnly -CandidateBranch 'fix/birdspot-pwa-integratie-r16-20261116' -ExpectedSha 'c8a12af1aa6391cb9fe804e900fc48d755c107d0' -ExpectedVersion '1.27.31'
+      - name: Check staged snapshot is 1.27.31 with fixed icons and no Git metadata
+        shell: powershell
+        run: |
+          $root = Join-Path ([Environment]::GetFolderPath('LocalApplicationData')) 'Birdspot-Pilot'
+          $head = (& git -C (Join-Path $root 'source-c8a12af1aa63') rev-parse HEAD).Trim()
+          if ($head -ne 'c8a12af1aa6391cb9fe804e900fc48d755c107d0') { throw 'Wrong source commit.' }
+          $sites = @(Get-ChildItem -LiteralPath $root -Directory | Where-Object { $_.Name -like 'site-*' })
+          if ($sites.Count -ne 1) { throw 'Expected exactly one clean staging snapshot.' }
+          $site = $sites[0].FullName
+          if (Test-Path (Join-Path $site '.git')) { throw 'Git metadata exposed by server root.' }
+          $sw = Get-Content (Join-Path $site 'sw.js') -Raw
+          if (!$sw.Contains("const APP_VERSION = '1.27.31';")) { throw 'Wrong serviceworker version.' }
+          foreach ($icon in @('icon-192.png','icon-512.png','icon-512-maskable.png')) {
+            $bytes = [IO.File]::ReadAllBytes((Join-Path $site "icons\$icon"))
+            if ($bytes[25] -ne 6) { throw "$icon is not RGBA colour type 6." }
+          }
+          Write-Output 'PASS exact 1.27.31 candidate staged on Windows; icons RGBA; server/device NOT STARTED.'
