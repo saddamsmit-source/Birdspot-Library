@@ -249,7 +249,8 @@ def main():
             img = page.locator('#sdPanel-herkenning .sd-field-photo img').first
             expect(img).to_be_visible()
             src = img.get_attribute('src')
-            assert img.evaluate('i => i.complete && i.naturalWidth > 0'), 'gidsfoto niet gedecodeerd'
+            img.scroll_into_view_if_needed()
+            assert img.evaluate('i => i.decode().then(() => i.naturalWidth > 0).catch(() => false)'), 'gidsfoto niet gedecodeerd'
             page.locator('#sdPanel-herkenning .sd-field-photo').first.click()
             viewer = page.get_by_role('dialog', name='Vogelfoto bekijken')
             expect(viewer).to_be_visible()
