@@ -193,14 +193,17 @@ def main():
             state = sheet.locator('#soundRecognitionState').inner_text().strip()
             RECOG.update(state=state, match=match)
             STEP['s'] = 'soorten kiezen'
-            for name in ('Merel', 'Koolmees'):
-                box = sheet.get_by_role('checkbox', name=name, exact=True)
+            labels = []
+            for name, sid in (('Merel', 'sp045'), ('Koolmees', 'sp029')):
+                box = sheet.locator(f'input[type="checkbox"][value="{sid}"]')
                 if box.count():  # already suggested by the recognizer: confirm it explicitly
+                    labels.append(box.locator('xpath=ancestor::label').inner_text().replace('\n', ' '))
                     box.check()
                 else:
                     sheet.get_by_role('searchbox').fill(name)
                     sheet.get_by_role('button', name=name, exact=True).click()
-                expect(sheet.get_by_role('checkbox', name=name, exact=True)).to_be_checked()
+                expect(sheet.locator(f'input[type="checkbox"][value="{sid}"]')).to_be_checked()
+            RECOG['labels'] = labels
             sheet.get_by_role('searchbox').fill('')
             page.screenshot(path=str(OUT / 'F05_sound.png'))
             STEP['s'] = 'opslaan'
@@ -209,7 +212,7 @@ def main():
             new = rows(page)[n:]
             assert len(new) == 2 and all(r.get('observationMethod') == 'heard' for r in new), new
             return (f'Opname {elapsed}, tijdbalk data-has-sound={has}, positie {pos!r}; herkenner: {state!r}; '
-                    f'suggestie: {match!r}; 2 Gehoord-records ({", ".join(str(r.get("speciesId")) for r in new)}) met lat/lon {new[0].get("lat")}/{new[0].get("lon")}')
+                    f'suggestie: {match!r} {RECOG.get("labels")}; 2 Gehoord-records ({", ".join(str(r.get("speciesId")) for r in new)}) met lat/lon {new[0].get("lat")}/{new[0].get("lon")}')
         run('F05', 'Geluid herkennen: opnemen, tijdlijn, meerdere soorten opslaan', sound_route)
 
         def recognizer():
