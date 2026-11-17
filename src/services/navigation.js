@@ -11,19 +11,19 @@ function closeTopLayer() {
   const search = document.querySelector('#appSearchDialog[open]');
   if (search) { search.querySelector('.app-search-close').click(); return true; }
   // Reverse DOM order breaks equal-z-index ties in the same way as painting.
-  const selectors = '.sheet-overlay.open,.signature-lightbox,.lightbox,.confirm-overlay,.manual-pin-dialog,.place-prompt,#mapDetailSheet.open,#mapPinPanel';
+  const selectors = '.sheet-overlay.open,.signature-lightbox,.lightbox,.confirm-overlay,.manual-pin-dialog,#mapDetailSheet.open,#mapPinPanel';
   const layers = [...document.querySelectorAll(selectors)].filter(visible)
     .map((el,index)=>({el,index,z:Number(getComputedStyle(el).zIndex)||0}))
     .sort((a,b)=>b.z-a.z||b.index-a.index);
   for (const {el} of layers) {
     if (closePhotoInfo(el)) return true;
+    // Ronde 2B: een open omgevingsfoto in het plekkaartje gaat eerst terug naar de plek.
+    const envBack = el.querySelector('.place-env-detail:not([hidden]) .place-env-back');
+    if (envBack && visible(envBack)) { envBack.click(); return true; }
     const button = el.querySelector('#confirmCancel,.confirm-cancel,.signature-lightbox-close,.lightbox__close,#spPickerClose,#pinCancel,#addSheetCancel,#detailClose,.signature-species-detail-close,#mapSheetClose,#mapPinCancel');
     if (button && visible(button)) {
       if (!el.querySelector('#addSheetSubmit:disabled')) button.click();
       return true;
-    }
-    if (el.matches('.place-prompt')) {
-      document.dispatchEvent(new KeyboardEvent('keydown',{key:'Escape',bubbles:true})); return true;
     }
   }
   const home = document.querySelector('#screen-home');

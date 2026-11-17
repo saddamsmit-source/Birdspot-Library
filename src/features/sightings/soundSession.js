@@ -1,6 +1,6 @@
 import { SPECIES } from '../../data/species.js';
 import { addSightings } from '../../data/sightings.js';
-import { addPlace, ensurePlaces, loadPlaces, matchSoundPlace, savePlaces } from '../../data/places.js';
+import { addPlace, ensurePlaces, loadPlaces, matchSoundPlace, reuseRadiusM, savePlaces } from '../../data/places.js';
 import { escHtml } from '../../utils/html.js';
 import { validPin } from './evidence.js';
 import { openPinPicker } from './pinPicker.js';
@@ -207,7 +207,7 @@ export function mountSoundSession(root, onSaved) {
     if (placeChoice?.id && !chosen) placeChoice = null;
     const match = chosen || placeChoice?.newPin
       ? { place: chosen, alternatives: [], needsChoice: false }
-      : matchSoundPlace(places, coordinates, positionOrigin === 'GPS');
+      : matchSoundPlace(places, coordinates, positionOrigin === 'GPS', reuseRadiusM());
     matchedPlace = match.place;
     needsPlaceChoice = match.needsChoice;
     find('soundPlaceNameField').hidden = Boolean(matchedPlace);

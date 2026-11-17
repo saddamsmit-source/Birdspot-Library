@@ -22,6 +22,7 @@ import { openPhotoViewer } from '../../utils/photoViewer.js';
 import { ensurePlaces, loadPlaces, placeStats, renamePlace } from '../../data/places.js';
 import { changePhotos, savePhoto, getMediaByPlace } from '../../data/db.js';
 import { openMediaPreview } from '../../utils/validateMedia.js';
+import { addEnvPhotos, getEnvPhotos, updateEnvCaption, deleteEnvPhoto, ensureEnvThumb, ENV_CAPTION_MAX } from '../../data/placeEnv.js';
 import { showToast } from '../../app.js';
 import { SEASON_COLORS, SEASON_ORDER, seasonCounts, monthHistogram, bestMonths, monthLabel, isNotable, cloudRadiusPx, applyLegendFilters } from './insights.js';
 import { centerPinMarkup, attachBaseLayers, pinAccuracyM, accuracyLabel, coordLabel, MAX_PIN_ACCURACY_M, LAYERS } from './centerPin.js';
@@ -610,6 +611,9 @@ function openPlaceSheet(screenEl, place, visibleRecords, map, mediaId, trigger =
   let closed = false;
   let closePhoto;
   const urls=[];
+  const envUrls=[];
+  let envDraw=0;
+  let envItems=[];
   const reload=()=>import('../../app.js').then(({navigate})=>navigate('map',{force:true}));
 
   getSightings().then(sightings=>{
@@ -650,7 +654,15 @@ function openPlaceSheet(screenEl, place, visibleRecords, map, mediaId, trigger =
           '<span><b>'+escHtml(s.speciesName||'Onbekend')+'</b><small>'+escHtml([fmtDate(s.date),methodLabel(s)].filter(Boolean).join(' · '))+'</small></span>'+
           '<em aria-hidden="true">›</em></button></li>';
       }).join('')+'</ul>'+
-      (place.loose?'':'<h4 class="place-h">Media bij deze plek</h4><div class="place-media" id="placeMedia"><p class="place-empty">Nog geen foto\'s, video\'s of geluid.</p></div>');
+      (place.loose?'':'<h4 class="place-h" id="placeEnvHeading">Omgevingsfoto\'s <small class="place-h__note">privé · alleen op dit toestel</small></h4>'+
+        '<div class="place-env" id="placeEnv" role="group" aria-labelledby="placeEnvHeading">'+
+          '<div class="place-env__grid" id="placeEnvGrid"><p class="place-empty">Nog geen omgevingsfoto\'s van deze plek.</p></div>'+
+          '<button type="button" class="place-action" id="placeEnvAdd">+ Omgevingsfoto</button>'+
+          '<input type="file" id="placeEnvInput" accept="image/jpeg,image/png,image/webp,image/gif" multiple hidden>'+
+          '<p class="place-env__status" id="placeEnvStatus" role="status" aria-live="polite"></p>'+
+          '<div class="place-env-detail" id="placeEnvDetail" hidden></div>'+
+        '</div>'+
+        '<h4 class="place-h">Media bij deze plek</h4><div class="place-media" id="placeMedia"><p class="place-empty">Nog geen foto\'s, video\'s of geluid.</p></div>');
 
     body.querySelectorAll('[data-species]').forEach(btn=>btn.addEventListener('click',()=>{
       if(!btn.dataset.species)return;
@@ -713,7 +725,125 @@ function openPlaceSheet(screenEl, place, visibleRecords, map, mediaId, trigger =
       }
     });
     drawMedia();
+    bindEnv();
+    drawEnv();
   });
+
+  // ── Ronde 2B: privé-omgevingsfoto's (los van vogelfoto's en K4-plekmedia) ──
+  const envStatus=text=>{const el=body.querySelector('#placeEnvStatus');if(el)el.textContent=text||'';};
+  function bindEnv(){
+    const input=body.querySelector('#placeEnvInput');
+    const add=body.querySelector('#placeEnvAdd');
+    add.addEventListener('click',()=>input.click());
+    input.addEventListener('change',async()=>{
+      const files=[...input.files];
+      input.value='';
+      if(!files.length)return; // annuleren in de bestandskiezer: niets veranderd
+      add.disabled=true;
+      envStatus('Omgevingsfoto opslaan…');
+      try{
+        const {added,rejected}=await addEnvPhotos(place.id,files);
+        if(rejected.length)envStatus('Geen bruikbare foto: '+rejected.join(', '));
+        else envStatus(added.length===1?'Omgevingsfoto opgeslagen op dit toestel.':added.length+' omgevingsfoto\'s opgeslagen op dit toestel.');
+      }catch(_){
+        envStatus('Opslaan mislukt — er is niets gewijzigd.');
+        showToast('Omgevingsfoto opslaan mislukt');
+      }finally{
+        add.disabled=false;
+        if(!closed)drawEnv();
+      }
+    });
+  }
+
+  async function drawEnv(){
+    const grid=body.querySelector('#placeEnvGrid');
+    if(!grid)return;
+    const token=++envDraw;
+    let items=[];
+    try{items=await getEnvPhotos(place.id);}catch(_){ if(token===envDraw)envStatus('Omgevingsfoto\'s laden mislukt.'); return; }
+    if(token!==envDraw||closed||!grid.isConnected)return; // alleen de laatste tekening telt
+    envItems=items;
+    envUrls.splice(0).forEach(u=>URL.revokeObjectURL(u));
+    if(!items.length){grid.innerHTML='<p class="place-empty">Nog geen omgevingsfoto\'s van deze plek.</p>';return;}
+    grid.innerHTML=items.map(m=>{
+      const src=m.thumb instanceof Blob?m.thumb:m.blob;
+      const url=src instanceof Blob?URL.createObjectURL(src):'';
+      if(url)envUrls.push(url);
+      const cap=String(m.caption||'');
+      return '<button type="button" class="place-env__item" data-env-id="'+escHtml(m.id)+'" aria-label="Omgevingsfoto openen'+(cap?': '+escHtml(cap):'')+'">'+
+        '<img src="'+url+'" alt="">'+(cap?'<span class="place-env__cap">'+escHtml(cap)+'</span>':'')+'</button>';
+    }).join('');
+    grid.querySelectorAll('[data-env-id]').forEach(btn=>btn.addEventListener('click',()=>openEnvDetail(btn.dataset.envId)));
+    for(const m of items) if(!(m.thumb instanceof Blob)) ensureEnvThumb(m).catch(()=>{});
+  }
+
+  function envDetailOpen(){const d=body.querySelector('#placeEnvDetail');return !!d&&!d.hidden;}
+  function closeEnvDetail(focusId){
+    const d=body.querySelector('#placeEnvDetail');
+    if(!d)return;
+    closePhoto?.(false);
+    d.hidden=true;d.innerHTML='';
+    body.querySelector('#placeEnvGrid').hidden=false;
+    body.querySelector('#placeEnvAdd').hidden=false;
+    const back=focusId&&body.querySelector('[data-env-id="'+CSS.escape(focusId)+'"]');
+    (back||body.querySelector('#placeEnvAdd'))?.focus({preventScroll:true});
+  }
+  function openEnvDetail(id){
+    const m=envItems.find(x=>x.id===id);
+    const d=body.querySelector('#placeEnvDetail');
+    if(!m||!d)return;
+    const url=m.blob instanceof Blob?URL.createObjectURL(m.blob):'';
+    if(url)envUrls.push(url);
+    d.innerHTML=
+      '<button type="button" class="place-env-back" id="placeEnvBack">← Terug naar plek</button>'+
+      '<button type="button" class="place-env-detail__photo" id="placeEnvZoom" aria-label="Vergroot omgevingsfoto"><img src="'+url+'" alt="Omgevingsfoto van '+escHtml(place.name)+'"></button>'+
+      '<label class="place-env-detail__label" for="placeEnvCaption">Toelichting</label>'+
+      '<textarea id="placeEnvCaption" rows="3" maxlength="'+ENV_CAPTION_MAX+'" placeholder="Bijv. rietkraag links van het bankje">'+escHtml(m.caption||'')+'</textarea>'+
+      '<div class="place-env-detail__actions">'+
+        '<button type="button" class="place-action place-action--primary" id="placeEnvCaptionSave">Bewaar toelichting</button>'+
+        '<button type="button" class="place-action place-action--danger" id="placeEnvDelete">Verwijderen</button>'+
+      '</div>'+
+      '<div class="place-env-confirm" id="placeEnvConfirm" role="group" aria-label="Verwijderen bevestigen" hidden>'+
+        '<p>Deze omgevingsfoto verwijderen? Dit kan niet ongedaan worden gemaakt.</p>'+
+        '<button type="button" class="place-action" id="placeEnvDeleteCancel">Annuleren</button>'+
+        '<button type="button" class="place-action place-action--danger" id="placeEnvDeleteYes">Ja, verwijderen</button>'+
+      '</div>';
+    body.querySelector('#placeEnvGrid').hidden=true;
+    body.querySelector('#placeEnvAdd').hidden=true;
+    d.hidden=false;
+    d.querySelector('#placeEnvBack').addEventListener('click',()=>closeEnvDetail(id));
+    const zoom=d.querySelector('#placeEnvZoom');
+    zoom.addEventListener('click',()=>{
+      closePhoto?.(false);
+      closePhoto=openPhotoViewer({url,alt:'Omgevingsfoto van '+place.name,trigger:zoom,label:'Omgevingsfoto bekijken',closeLabel:'Sluit omgevingsfoto',
+        onClose:()=>{closePhoto=undefined;}});
+    });
+    d.querySelector('#placeEnvCaptionSave').addEventListener('click',async e=>{
+      const btn=e.currentTarget;btn.disabled=true;
+      try{
+        const saved=await updateEnvCaption(id,d.querySelector('#placeEnvCaption').value);
+        envStatus(saved?'Toelichting bewaard.':'Deze omgevingsfoto bestaat niet meer.');
+        if(saved){const it=envItems.find(x=>x.id===id);if(it)it.caption=saved.caption;}
+      }catch(_){envStatus('Toelichting opslaan mislukt — er is niets gewijzigd.');}
+      finally{btn.disabled=false;}
+    });
+    const confirm=d.querySelector('#placeEnvConfirm');
+    d.querySelector('#placeEnvDelete').addEventListener('click',()=>{confirm.hidden=false;d.querySelector('#placeEnvDeleteCancel').focus();});
+    d.querySelector('#placeEnvDeleteCancel').addEventListener('click',()=>{confirm.hidden=true;d.querySelector('#placeEnvDelete').focus();});
+    d.querySelector('#placeEnvDeleteYes').addEventListener('click',async e=>{
+      e.currentTarget.disabled=true;
+      try{
+        await deleteEnvPhoto(id);
+        envStatus('Omgevingsfoto verwijderd.');
+        closeEnvDetail();
+        drawEnv();
+      }catch(_){
+        e.currentTarget.disabled=false;
+        envStatus('Verwijderen mislukt — de foto staat er nog.');
+      }
+    });
+    d.querySelector('#placeEnvBack').focus({preventScroll:true});
+  }
 
   async function drawMedia(){
     const box=body.querySelector('#placeMedia');
@@ -763,6 +893,8 @@ function openPlaceSheet(screenEl, place, visibleRecords, map, mediaId, trigger =
   function onKey(event) {
     if (event.key === 'Escape') {
       event.preventDefault();
+      if (closePhoto) return; // de fotoviewer sluit zichzelf eerst
+      if (envDetailOpen()) { closeEnvDetail(); return; }
       closeSheet();
     }
     if (event.key !== 'Tab') return;
@@ -786,6 +918,7 @@ function openPlaceSheet(screenEl, place, visibleRecords, map, mediaId, trigger =
     sheet.classList.remove('open');
     overlay.classList.remove('visible');
     urls.splice(0).forEach(u=>URL.revokeObjectURL(u));
+    envUrls.splice(0).forEach(u=>URL.revokeObjectURL(u));
     if (trigger?.isConnected && trigger !== document.body) trigger.focus({ preventScroll: true });
   }
   dismiss.onclick = closeSheet;
