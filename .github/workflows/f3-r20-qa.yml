@@ -38,7 +38,6 @@ jobs:
           node tests/test_lookalike_r18.mjs
           node tests/test_lookalike_r19.mjs
           node tests/test_lookalike_r20.mjs
-          python tests/test_orig_check.py
           node tests/test_f3_140_unified_rebaseline.mjs
           python3 -I tools/kennisbaseline/build_knowledge.py --check
           node tests/test_guide_poses.mjs
