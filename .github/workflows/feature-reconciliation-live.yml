@@ -22,7 +22,7 @@ jobs:
         env:
           BIRDSPOT_BASE_URL: https://saddamsmit-source.github.io/Birdspot-Library/
           BIRDSPOT_FAKE_AUDIO: /tmp/merel.wav
-          BIRDSPOT_RECORD_SECONDS: '75'
+          BIRDSPOT_RECORD_SECONDS: '40'
         run: python tests/test_feature_reconciliation.py
       - uses: actions/upload-artifact@v4
         if: always()

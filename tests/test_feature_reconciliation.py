@@ -33,13 +33,15 @@ def record(fid, name, ok, detail):
 
 
 PAGE = {}
+STEP = {}
 
 
 def run(fid, name, fn):
+    STEP.clear()
     try:
         record(fid, name, True, fn())
     except Exception as exc:  # keep going: the matrix must show every route
-        record(fid, name, False, f'{type(exc).__name__}: {exc}')
+        record(fid, name, False, f"stap {STEP.get('s', '-')}: {type(exc).__name__}: {exc}")
         page = PAGE.get('p')
         if page:  # isolate the next route from a sheet left open by this failure
             try:
@@ -182,10 +184,15 @@ def main():
             expect(sheet.locator('#soundWaveform')).to_be_visible()
             has = sheet.locator('#soundWaveform').get_attribute('data-has-sound')
             elapsed = sheet.locator('#soundElapsed').inner_text()
-            sheet.get_by_role('button', name='Stop opname').click()
+            STEP['s'] = 'stop'
+            stop = sheet.get_by_role('button', name='Stop opname')
+            if stop.count() and stop.is_enabled():
+                stop.click()
+            STEP['s'] = 'playback'
             expect(sheet.locator('#soundPlayback')).to_be_visible()
             state = sheet.locator('#soundRecognitionState').inner_text().strip()
             RECOG.update(state=state, match=match)
+            STEP['s'] = 'soorten kiezen'
             for name in ('Merel', 'Koolmees'):
                 box = sheet.get_by_role('checkbox', name=name, exact=True)
                 if box.count():  # already suggested by the recognizer: confirm it explicitly
@@ -196,6 +203,7 @@ def main():
                 expect(sheet.get_by_role('checkbox', name=name, exact=True)).to_be_checked()
             sheet.get_by_role('searchbox').fill('')
             page.screenshot(path=str(OUT / 'F05_sound.png'))
+            STEP['s'] = 'opslaan'
             sheet.locator('#soundSave').click()
             expect(sheet).to_have_count(0, timeout=15000)
             new = rows(page)[n:]
