@@ -13,11 +13,14 @@
  *   - "Terugzetten" naar de stand vóór de laatste import
  *   - Ongeldig bestand verandert niets
  *   - Format: ZIP met datum in de naam (birdspot-YYYY-MM-DD.zip)
+ *   - Ronde 2B (backupVersion 2): plekken + privé-omgevingsfoto's (kind 'place-env', placeId,
+ *     toelichting) gaan mee. Oude ZIP's (zonder backupVersion/kind) blijven werken.
+ *     Alles wordt gevalideerd vóór er iets wordt geschreven; een ongeldige ZIP wijzigt niets.
  */
 
 import { STORAGE_KEY, SCHEMA_VERSION, migrateSighting } from '../data/sightings.js';
 import { SEEN_KEY } from '../data/species.js';
-import { getDB }                            from '../data/db.js';
+import { getDB, PLACE_ENV_KIND }            from '../data/db.js';
 import { COLLECTION_KEYS, normalizeIds } from './collections.js';
 import { PLACES_KEY, PLACES_SCHEMA } from '../data/places.js';
 
@@ -315,6 +318,7 @@ export async function exportBackup() {
   // gegevens.json
   const gegevens = {
     format:        'birdspot-backup',
+    backupVersion: BACKUP_VERSION,
     schemaVersion: SCHEMA_VERSION,
     exportedAt:    new Date().toISOString(),
     sightings,
@@ -322,7 +326,10 @@ export async function exportBackup() {
     photoIds: photos.map(p => p.id),
     // Metadata per bestand: plek-media (K4) houdt zo zijn plek en exacte type
     mediaMeta: photos.map(p => ({ id: p.id, type: p.type || p.blob?.type || null, filename: p.filename || null,
-      speciesId: p.speciesId || null, sightingId: p.sightingId || null, placeId: p.placeId || null })),
+      speciesId: p.speciesId || null, sightingId: p.sightingId || null, placeId: p.placeId || null,
+      // Ronde 2B: omgevingsfoto's houden soort, plek, toelichting en datum (thumb wordt opnieuw gemaakt)
+      ...(p.kind === PLACE_ENV_KIND ? { kind: PLACE_ENV_KIND, caption: String(p.caption || ''),
+        addedAt: p.addedAt || null, updatedAt: p.updatedAt || null } : {}) })),
     collections: Object.fromEntries(Object.entries(COLLECTION_KEYS).map(([kind, key]) =>
       [kind, normalizeIds(readList(storage[key]))])),
     seenSpecies: normalizeIds(readList(storage[SEEN_KEY])),
@@ -377,11 +384,19 @@ export async function exportBackup() {
 export async function validateBackupFile(file) {
   try {
     const { data, files } = await readBackup(file);
-    return { valid: true, sightingCount: data.sightings.length, photoCount: files.size };
+    assertEnvRelations(data, readList(localStorage.getItem(PLACES_KEY), 'places'));
+    const envPhotoCount = (data.mediaMeta || []).filter(meta => meta.kind === PLACE_ENV_KIND).length;
+    return { valid: true, sightingCount: data.sightings.length, photoCount: files.size,
+      placeCount: Array.isArray(data.places) ? data.places.length : 0, envPhotoCount };
   } catch (error) {
     return { valid: false, error: error.message };
   }
 }
+
+const BACKUP_VERSION = 2;
+const ENV_CAPTION_LIMIT = 500;
+const validCoordPair = (lat, lon) => lat != null && lon != null && lat !== '' && lon !== '' &&
+  Number.isFinite(Number(lat)) && Math.abs(Number(lat)) <= 90 && Number.isFinite(Number(lon)) && Math.abs(Number(lon)) <= 180;
 
 async function readBackup(file) {
   if (!file?.name.toLowerCase().endsWith('.zip')) throw new Error('Bestand is geen ZIP-bestand.');
@@ -401,6 +416,28 @@ async function readBackup(file) {
   if (data.photoIds != null && (!Array.isArray(data.photoIds) || !data.photoIds.every(validId))) {
     throw new Error('De back-up bevat een ongeldige medialijst.');
   }
+  if (data.backupVersion != null && (!Number.isInteger(data.backupVersion) || data.backupVersion < 1)) {
+    throw new Error('Onbekende back-upversie.');
+  }
+  if (Number.isInteger(data.backupVersion) && data.backupVersion > BACKUP_VERSION) {
+    throw new Error('Deze back-up komt uit een nieuwere Birdspot-versie. Werk de app eerst bij.');
+  }
+  if (data.places != null && (!Array.isArray(data.places) ||
+    data.places.some(place => !validId(place?.id) || !validCoordPair(place.lat, place.lon) ||
+      (place.name != null && typeof place.name !== 'string')))) {
+    throw new Error('De back-up bevat een ongeldige plek.');
+  }
+  if (data.mediaMeta != null && (!Array.isArray(data.mediaMeta) || data.mediaMeta.some(meta => !validId(meta?.id)))) {
+    throw new Error('De back-up bevat ongeldige mediagegevens.');
+  }
+  for (const meta of data.mediaMeta || []) {
+    if (meta.kind == null) continue;
+    if (meta.kind !== PLACE_ENV_KIND || !validId(meta.placeId) || meta.sightingId || meta.speciesId ||
+      !/^image\//.test(String(meta.type || '')) ||
+      (meta.caption != null && (typeof meta.caption !== 'string' || meta.caption.length > ENV_CAPTION_LIMIT))) {
+      throw new Error('De back-up bevat een ongeldige omgevingsfoto: ' + meta.id);
+    }
+  }
   const files = new Map();
   for (const [path, bytes] of entries) {
     const match = /^photos\/([^/]+)\.([^.]+)$/.exec(path);
@@ -409,7 +446,21 @@ async function readBackup(file) {
     if (files.has(id)) throw new Error('De back-up bevat meerdere bestanden met dezelfde media-ID.');
     files.set(id, { bytes, ext });
   }
+  // Elk genoemd mediabestand moet in de ZIP zitten; anders vóór de bevestiging weigeren.
+  const declared = [...(data.photoIds || []), ...(data.mediaMeta || []).map(meta => meta.id),
+    ...data.sightings.flatMap(s => s.photoIds || [])];
+  const missing = declared.find(id => !files.has(id));
+  if (missing) throw new Error('Mediabestand ontbreekt in de back-up: ' + missing);
   return { data, files };
+}
+
+function assertEnvRelations(data, localPlaces) {
+  const known = new Set([...(data.places || []), ...localPlaces].map(place => place?.id));
+  for (const meta of data.mediaMeta || []) {
+    if (meta.kind === PLACE_ENV_KIND && !known.has(meta.placeId)) {
+      throw new Error('Omgevingsfoto verwijst naar een onbekende plek. Er is niets hersteld.');
+    }
+  }
 }
 
 function mergeRecord(local, incoming) {
@@ -457,6 +508,8 @@ export function importBackup(file) {
     const existingPhotos = new Set((await getAllPhotos()).map(p => p.id));
     const metadata = new Map((Array.isArray(data.mediaMeta) ? data.mediaMeta : []).filter(Boolean).map(m => [m.id, m]));
     const mediaIds = new Set([...(data.photoIds || files.keys()), ...data.sightings.flatMap(s => s.photoIds || [])]);
+    // Relatiecontrole vóór schrijven: een omgevingsfoto hoort bij een plek uit de back-up of van dit toestel.
+    assertEnvRelations(data, readList(before[PLACES_KEY], 'places'));
     const newPhotos = [];
     for (const id of mediaIds) {
       if (existingPhotos.has(id) || (skippedAttachments.has(id) && !photoOwners.has(id))) continue;
@@ -465,6 +518,17 @@ export function importBackup(file) {
       const meta = metadata.get(id);
       const owner = photoOwners.get(id);
       const type = meta?.type || MEDIA_EXT_MIME[file.ext];
+      if (meta?.kind === PLACE_ENV_KIND) {
+        if (owner) throw new Error('Omgevingsfoto is ook aan een waarneming gekoppeld: ' + id);
+        const stamp = new Date().toISOString();
+        newPhotos.push({
+          id, kind: PLACE_ENV_KIND, blob: new Blob([file.bytes], { type }), type,
+          filename: meta.filename || id + '.' + file.ext, placeId: meta.placeId,
+          caption: String(meta.caption || '').slice(0, ENV_CAPTION_LIMIT), speciesId: null, sightingId: null,
+          addedAt: meta.addedAt || stamp, updatedAt: meta.updatedAt || meta.addedAt || stamp,
+        });
+        continue;
+      }
       newPhotos.push({
         id, blob: new Blob([file.bytes], { type }), type,
         filename: meta?.filename || id + '.' + file.ext,
@@ -547,6 +611,14 @@ export function restoreFromSafetyCopy() {
       throw new Error('Geen veiligheidskopie beschikbaar.');
     }
     changes.set(SAFETY_KEY, null);
+    // Ronde 2B: nooit een omgevingsfoto (na de import toegevoegd) loskoppelen van zijn plek.
+    const imported = new Set(normalizeIds(copy.importedMediaIds));
+    const restoredPlaces = new Set(readList(changes.get(PLACES_KEY) ?? null, 'places').map(place => place.id));
+    const orphaned = (await getAllPhotos()).filter(photo => photo.kind === PLACE_ENV_KIND &&
+      !imported.has(photo.id) && !restoredPlaces.has(photo.placeId));
+    if (orphaned.length) {
+      throw new Error('Terugzetten kan niet: er zijn intussen omgevingsfoto\'s toegevoegd aan een herstelde plek. Er is niets gewijzigd.');
+    }
     await commitRestore(before, changes, normalizeIds(copy.importedMediaIds), true);
   });
 }

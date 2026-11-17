@@ -21,7 +21,7 @@ import {
 import { getSightings } from '../../data/sightings.js';
 import { SPECIES } from '../../data/species.js';
 import { loadPlaces } from '../../data/places.js';
-import { loadSettings, saveSetting, BACKUP_REMINDER_OPTIONS } from '../../data/settings.js';
+import { loadSettings, saveSetting, BACKUP_REMINDER_OPTIONS, PLACE_RADIUS_OPTIONS } from '../../data/settings.js';
 import { LAYERS, savedLayer, saveLayer } from '../map/centerPin.js';
 import { profileLists, groupSpeciesByFamily } from './stats.js';
 import { downloadCsv } from './exportCsv.js';
@@ -143,6 +143,13 @@ export async function renderProfile(el) {
             ${BACKUP_REMINDER_OPTIONS.map(d => `<button type="button" role="radio" data-reminder="${d}" aria-checked="${settings.backupReminderDays === d}">${d ? `Na ${d} dagen` : 'Uit'}</button>`).join('')}
           </div>
         </div>
+        <div class="profile-setting">
+          <div class="profile-card__label" id="placeRadiusLabel">Bekende vogelspot binnen</div>
+          <div class="profile-segment" role="radiogroup" aria-labelledby="placeRadiusLabel">
+            ${PLACE_RADIUS_OPTIONS.map(m => `<button type="button" role="radio" data-place-radius="${m}" aria-checked="${settings.placeRadiusM === m}">${m} m</button>`).join('')}
+          </div>
+          <p class="profile-card__desc">Een nieuwe waarneming binnen deze afstand krijgt dezelfde kaartpin. De eigen positie van elke waarneming blijft bewaard.</p>
+        </div>
       </section>
 
       <!-- App-info -->
@@ -235,6 +242,12 @@ function attachEvents(el, sightings = [], places = [], lists = null) {
     updateStatus(el, getBackupStatus(), sightings.length);
   }));
 
+  el.querySelectorAll('[data-place-radius]').forEach(btn => btn.addEventListener('click', () => {
+    saveSetting('placeRadiusM', Number(btn.dataset.placeRadius));
+    el.querySelectorAll('[data-place-radius]').forEach(b => b.setAttribute('aria-checked', String(b === btn)));
+    showToast(`Bekende vogelspot: binnen ${btn.dataset.placeRadius} m`);
+  }));
+
   el.querySelector('[data-insights]')?.addEventListener('click', () =>
     import('../../app.js').then(({ navigate }) => navigate('insights')));
 
@@ -299,7 +312,7 @@ async function handleImport(el, file) {
 
     // Vraag bevestiging
     const confirmed = await showConfirm(el,
-      `<strong>${check.sightingCount}</strong> waarnemingen${check.photoCount ? ` en <strong>${check.photoCount}</strong> foto's` : ''} worden samengevoegd met je huidige data.<br><br>
+      `<strong>${check.sightingCount}</strong> waarnemingen${check.photoCount ? ` en <strong>${check.photoCount}</strong> bestanden` : ''}${check.placeCount ? `, <strong>${check.placeCount}</strong> plekken` : ''}${check.envPhotoCount ? ` (waarvan <strong>${check.envPhotoCount}</strong> omgevingsfoto's)` : ''} worden samengevoegd met je huidige data.<br><br>
       Bestaande waarnemingen worden bijgewerkt waar de back-up nieuwer is. Je huidige data blijft bewaard.`
     );
     if (!confirmed) return;

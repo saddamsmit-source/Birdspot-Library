@@ -5,13 +5,16 @@
 export const SETTINGS_KEY = 'birdspot-settings';
 export const SETTINGS_SCHEMA = 1;
 export const BACKUP_REMINDER_OPTIONS = Object.freeze([7, 30, 0]); // 0 = uit
-const DEFAULTS = Object.freeze({ backupReminderDays: 30 });
+// Ronde 2B: straal voor een bekende vogelspot (meter); zelfde opties als places.js.
+export const PLACE_RADIUS_OPTIONS = Object.freeze([100, 250, 500]);
+const DEFAULTS = Object.freeze({ backupReminderDays: 30, placeRadiusM: 250 });
 
 export function loadSettings(storage = globalThis.localStorage) {
   let raw = {};
   try { raw = JSON.parse(storage.getItem(SETTINGS_KEY) || '{}') || {}; } catch (_) { raw = {}; }
   const out = { ...raw, schemaVersion: SETTINGS_SCHEMA };
   if (!BACKUP_REMINDER_OPTIONS.includes(out.backupReminderDays)) out.backupReminderDays = DEFAULTS.backupReminderDays;
+  if (!PLACE_RADIUS_OPTIONS.includes(out.placeRadiusM)) out.placeRadiusM = DEFAULTS.placeRadiusM;
   return out;
 }
 

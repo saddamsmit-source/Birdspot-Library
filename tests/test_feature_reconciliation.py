@@ -162,8 +162,9 @@ def main():
             page.locator('#fab').click()
             page.get_by_role('dialog').get_by_role('button', name='Waarneming toevoegen').click()
             page.wait_for_function("document.querySelector('#coordsHint')?.textContent.includes('51.9')", timeout=15000)
-            offer = page.locator('#sightUseNearPlace')
-            offered = offer.inner_text() if offer.count() else 'geen'
+            # Ronde 2B: plekstatus staat inline in de hint (oude live-versie: #sightUseNearPlace).
+            offer = page.locator('#coordsHint [data-place-state], #sightUseNearPlace')
+            offered = offer.first.inner_text() if offer.count() else 'geen'
             page.locator('#addSheetCancel').click()
             expect(page.locator('#addSightingSheet')).to_have_count(0)
             assert len(rows(page)) == n

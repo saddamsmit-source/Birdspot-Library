@@ -788,3 +788,9 @@
 #soundSaveState:empty { display: none; }
 #soundSave { width: 100%; margin-block-start: 10px; }
 @media (max-width:360px) { .quick-add-options{padding:14px 12px 18px} .quick-add-option{gap:10px;padding:12px} }
+
+/* ── Ronde 2B: bekende vogelspot inline (geen venster) ── */
+.place-offer { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.place-offer__title { flex: 1 1 100%; margin: 0; font-size: 13px; color: var(--ink-2, var(--muted)); }
+.place-offer__choice { min-height: 44px; padding: 0 12px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); font-weight: 700; font-size: 13px; }
+.place-offer__choice--separate { color: var(--muted); }

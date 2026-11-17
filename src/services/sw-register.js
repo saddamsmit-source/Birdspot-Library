@@ -2,7 +2,7 @@
 
 function hasActiveInput() {
   return Boolean(document.querySelector(
-    '#addSightingSheet, .manual-pin-dialog, .place-prompt, ' +
+    '#addSightingSheet, .manual-pin-dialog, ' +
     '#mapPinPanel:not([hidden]), #mapDetailSheet.open, #confirmOverlay:not([hidden]), ' +
     '#btnImport:disabled, #btnExport:disabled, #filmEditor:not([hidden])'
   ));

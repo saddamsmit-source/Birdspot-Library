@@ -34,8 +34,7 @@ import { SPECIES } from '../../data/species.js';
 import { openPinPicker } from './pinPicker.js';
 import { normalizeEvidence, validPin, OBSERVATION_METHODS, BREEDING_BEHAVIORS } from './evidence.js';
 import { addSighting, updateSighting } from '../../data/sightings.js';
-import { loadPlaces, addPlace, savePlaces, nearestPlace } from '../../data/places.js';
-import { askPlaceReuse } from '../map/placePrompt.js';
+import { loadPlaces, addPlace, savePlaces, placeDecision, reuseRadiusM } from '../../data/places.js';
 import { changePhotos, getPhoto } from '../../data/db.js';
 import { openMediaPreview } from '../../utils/validateMedia.js';
 import { openSpeciesPicker }     from './speciesPicker.js';
@@ -218,7 +217,7 @@ function _openSightingForm(mode, initialState, { onSaved, editId } = {}) {
   ov.querySelector('#addSheetCancel').addEventListener('click', close);
 
   _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx });
-  if (!isEdit) _offerPlace(ov, ctx);
+  if (!isEdit) _decidePlace(ov);
 }
 
 // ── Form body HTML ─────────────────────────────────────────
@@ -425,27 +424,96 @@ function _renderNewThumb(m) {
 function _coordsHintText() {
   if (!validPin(_state.lat,_state.lon)) return 'Nog geen pin gekozen. Alleen een plaatsnaam opslaan mag ook.';
   const acc = Number.isFinite(_state.pinAccuracyM) ? ` · ±${_state.pinAccuracyM} m` : '';
+  const coords = `📍 ${Number(_state.lat).toFixed(5)}, ${Number(_state.lon).toFixed(5)}${acc}`;
   const place = _state.placeId ? loadPlaces().find(p => p.id === _state.placeId) : null;
-  const near = _state.nearSuggestion;
-  const offer = !place && near && near.lat === _state.lat && near.lon === _state.lon
-    ? ` <button type="button" class="link-btn" id="sightUseNearPlace">Bekende plek gebruiken: ${escHtml(near.name)} (±${near.distanceM} m)</button>` : '';
-  return `📍 ${Number(_state.lat).toFixed(5)}, ${Number(_state.lon).toFixed(5)}${acc}` +
-    (place ? ` · Plek: ${escHtml(place.name)}` : ' · Nieuwe plek') + offer;
+  const offer = _currentOffer();
+  const dist = id => { const c = offer?.candidates.find(x => x.id === id); return c ? ` (${c.distanceM} m)` : ''; };
+  if (place) {
+    const undo = offer && offer.mode !== 'new'
+      ? ` <button type="button" class="link-btn" data-place-separate>Aparte spot</button>` +
+        (offer.mode === 'choose' ? ` <button type="button" class="link-btn" data-place-change>Andere plek</button>` : '')
+      : '';
+    return `${coords} · <span data-place-state="linked">Bekende plek: ${escHtml(place.name)}${dist(place.id)}</span>${undo}`;
+  }
+  if (!offer || offer.mode === 'new') return `${coords} · <span data-place-state="new">Nieuwe plek</span>`;
+  if (offer.separate) {
+    return `${coords} · <span data-place-state="separate">Aparte spot (nieuwe plek)</span>` +
+      ` <button type="button" class="link-btn" data-place-change>Toch bekende plek kiezen</button>`;
+  }
+  const why = offer.accurate ? '' : (Number.isFinite(_state.pinAccuracyM)
+    ? ` Niet automatisch gekoppeld: positie ±${_state.pinAccuracyM} m.`
+    : ' Niet automatisch gekoppeld: nauwkeurigheid onbekend.');
+  const title = offer.mode === 'single'
+    ? `Bekende plek binnen ${offer.radiusM} m.${why}`
+    : `${offer.candidates.length} bekende plekken binnen ${offer.radiusM} m. Kies er één of een aparte spot.`;
+  return `${coords} · <span data-place-state="offer">Nieuwe plek</span>` +
+    `<div class="place-offer" role="group" aria-label="Bekende plekken in de buurt"><p class="place-offer__title">${escHtml(title)}</p>` +
+    offer.candidates.map(c => `<button type="button" class="place-offer__choice" data-place-choice="${escHtml(c.id)}">${escHtml(c.name)} · ${c.distanceM} m</button>`).join('') +
+    `<button type="button" class="place-offer__choice place-offer__choice--separate" data-place-separate>Aparte spot</button></div>`;
 }
 
-/** K4: na een nieuwe pin vragen of een bestaande plek binnen 50 m gebruikt wordt. */
-async function _offerPlace(ov, ctx) {
-  if (ctx.destroyed || !validPin(_state.lat,_state.lon) || _state.placeId) return;
-  const revision = ctx.locationRevision;
-  const res = await askPlaceReuse(_state.lat, _state.lon);
-  if (ctx.destroyed || revision !== ctx.locationRevision || !res) return;
-  _state.placeId = res.placeId || null;
-  if (_state.placeId && !_state.locationName) {
-    const place = loadPlaces().find(p => p.id === _state.placeId);
-    if (place) { _state.locationName = place.name; const inp = ov.querySelector('#sightLocation'); if (inp) inp.value = place.name; }
+/** Het aanbod hoort alleen bij exact de huidige pin; een oud aanbod wordt nooit toegepast. */
+function _currentOffer() {
+  const o = _state.placeOffer;
+  return o && o.lat === _state.lat && o.lon === _state.lon ? o : null;
+}
+
+/**
+ * Ronde 2B: beslis inline (geen venster) over een bekende vogelspot binnen de ingestelde straal.
+ * Eén kandidaat + nauwkeurige positie → vooraf gekozen (afmeldbaar). Anders alleen een aanbod.
+ */
+function _decidePlace(ov) {
+  _state.placeOffer = null;
+  if (!validPin(_state.lat, _state.lon) || _state.placeId) { _renderHint(ov); return; }
+  const d = placeDecision({ places: loadPlaces(), lat: _state.lat, lon: _state.lon,
+    accuracyM: _state.pinAccuracyM, radiusM: reuseRadiusM() });
+  _state.placeOffer = { lat: _state.lat, lon: _state.lon, mode: d.mode, auto: d.auto, accurate: d.accurate,
+    radiusM: d.radiusM, separate: false,
+    candidates: d.candidates.slice(0, 5).map(c => ({ id: c.place.id, name: c.place.name, distanceM: Math.round(c.distanceM) })) };
+  if (d.auto) _linkPlace(ov, d.candidates[0].place.id);
+  else _renderHint(ov);
+}
+
+function _linkPlace(ov, id) {
+  const offer = _currentOffer();
+  const place = loadPlaces().find(p => p.id === id);
+  if (!offer || !place || !offer.candidates.some(c => c.id === id)) { _renderHint(ov); return; }
+  _state.placeId = place.id;
+  offer.separate = false;
+  if (!String(_state.locationName || '').trim()) {
+    _state.locationName = place.name;
+    const inp = ov.querySelector('#sightLocation');
+    if (inp) inp.value = place.name;
   }
+  _renderHint(ov);
+}
+
+function _renderHint(ov) {
   const hint = ov.querySelector('#coordsHint');
   if (hint) hint.innerHTML = _coordsHintText();
+}
+
+function _bindPlaceHint(ov) {
+  const hint = ov.querySelector('#coordsHint');
+  if (!hint) return;
+  hint.addEventListener('click', event => {
+    const btn = event.target.closest('button');
+    if (!btn || !hint.contains(btn)) return;
+    const offer = _currentOffer();
+    if (!offer) { _renderHint(ov); return; }
+    if (btn.hasAttribute('data-place-choice')) _linkPlace(ov, btn.dataset.placeChoice);
+    else if (btn.hasAttribute('data-place-separate')) {
+      const linked = loadPlaces().find(p => p.id === _state.placeId);
+      if (linked && _state.locationName === linked.name) {
+        _state.locationName = '';
+        const inp = ov.querySelector('#sightLocation');
+        if (inp) inp.value = '';
+      }
+      _state.placeId = null; offer.separate = true; _renderHint(ov);
+    } else if (btn.hasAttribute('data-place-change')) {
+      _state.placeId = null; offer.separate = false; _renderHint(ov);
+    }
+  });
 }
 
 // ── Events ─────────────────────────────────────────────────
@@ -540,32 +608,23 @@ function _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx })
       onConfirm:coords=>{
         if(ctx.destroyed)return;
         ctx.locationRevision++; // handmatige pin wint van elke nog lopende GPS-callback
-        _state.nearSuggestion=null;
         _state.lat=coords.lat;_state.lon=coords.lon;
         _state.pinAccuracyM=Number.isFinite(coords.accuracyM)?coords.accuracyM:null;
         _state.placeId=null;
-        ctx.cancelPinPicker=null;refresh();_offerPlace(ov,ctx);
+        ctx.cancelPinPicker=null;refresh();_decidePlace(ov);
       },
     });
   });
   el.querySelector('#sightClearPin')?.addEventListener('click',()=>{
     ctx.locationRevision++;
-    _state.lat=null;_state.lon=null;_state.pinAccuracyM=null;_state.placeId=null;refresh();
+    _state.lat=null;_state.lon=null;_state.pinAccuracyM=null;_state.placeId=null;_state.placeOffer=null;refresh();
   });
   // GPS
   el.querySelector('#sightGpsBtn')?.addEventListener('click', () => _requestGPS(ov,ctx));
   // R05 (eigenaarbesluit 17-11): nieuwe waarneming vult GPS automatisch in als locatietoestemming al gegeven is.
   // Geen toestemmingsvraag, geen blokkade; een gekozen pin of 'wis' wint (locationRevision).
   if (!isEdit && !ctx.autoGpsStarted && _state.lat == null) { ctx.autoGpsStarted = true; _autoGPS(ov, ctx); }
-  el.querySelector('#sightUseNearPlace')?.addEventListener('click', () => {
-    const near = _state.nearSuggestion;
-    const place = near && loadPlaces().find(p => p.id === near.id);
-    if (!place) return;
-    _state.placeId = place.id;
-    if (!_state.locationName) _state.locationName = place.name;
-    _state.nearSuggestion = null;
-    refresh();
-  });
+  _bindPlaceHint(ov);
 
   // Aantal
   el.querySelector('#sightCount')?.addEventListener('input', e => {
@@ -868,18 +927,8 @@ function _requestGPS(ov,ctx,{ silent = false, intent = null } = {}) {
       _state.pinAccuracyM = Number.isFinite(pos.coords.accuracy) ? Math.round(pos.coords.accuracy) : null;
       _state.placeId = null;
       _resetGPSButton(ov)?.classList.add('gps-btn--active');
-      // R05: automatische GPS vraagt niets in een venster; een bekende plek binnen 50 m wordt inline aangeboden.
-      const near = silent ? nearestPlace(loadPlaces(), _state.lat, _state.lon) : null;
-      _state.nearSuggestion = near ? { id: near.place.id, name: near.place.name, distanceM: near.distanceM, lat: _state.lat, lon: _state.lon } : null;
-      const hint = ov.querySelector('#coordsHint');
-      if (hint) hint.innerHTML = _coordsHintText();
-      if (near) ov.querySelector('#sightUseNearPlace')?.addEventListener('click', () => {
-        _state.placeId = near.place.id;
-        if (!_state.locationName) { _state.locationName = near.place.name; const inp = ov.querySelector('#sightLocation'); if (inp) inp.value = near.place.name; }
-        _state.nearSuggestion = null;
-        hint.innerHTML = _coordsHintText();
-      });
-      if (!silent) _offerPlace(ov, ctx);
+      // R05 + ronde 2B: nooit een venster; een bekende plek binnen de straal wordt inline aangeboden.
+      _decidePlace(ov);
     },
     () => {
       if (ctx.destroyed || revision !== ctx.locationRevision) return;

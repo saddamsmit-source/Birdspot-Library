@@ -5,6 +5,8 @@
  * Stores:
  *   photos     { id, blob (Blob), type, filename, speciesId, sightingId, placeId?, addedAt }
  *              (K4: placeId = media bij een plek: foto, video of geluidsopname)
+ *              Ronde 2B: kind 'place-env' = privé-omgevingsfoto bij een plek, met caption en
+ *              EXIF-loze thumb (Blob). Gescheiden van vogelfoto's en van de K4-plekmedia.
  *   (sightings zitten in localStorage via sightings.js)
  */
 
@@ -17,6 +19,12 @@ let _db = null;
 export function isPersonalGuidePhoto(photo) {
   return !photo.sightingId && !photo.placeId &&
     typeof photo.speciesId === 'string' && String(photo.id).startsWith(`guide-${photo.speciesId}-`);
+}
+
+/** Ronde 2B: privé-omgevingsfoto van een plek (nooit een vogelfoto). */
+export const PLACE_ENV_KIND = 'place-env';
+export function isPlaceEnvPhoto(photo) {
+  return photo?.kind === PLACE_ENV_KIND;
 }
 
 export function getDB() {
@@ -113,7 +121,7 @@ export async function getMediaByPlace(placeId) {
   const db = await getDB();
   return new Promise((resolve, reject) => {
     const req = db.transaction('photos', 'readonly').objectStore('photos').getAll();
-    req.onsuccess = () => resolve((req.result || []).filter(p => p.placeId === placeId));
+    req.onsuccess = () => resolve((req.result || []).filter(p => p.placeId === placeId && !isPlaceEnvPhoto(p)));
     req.onerror   = () => reject(req.error);
   });
 }
@@ -135,7 +143,7 @@ export async function getMediaMetadata() {
         resolve(results);
         return;
       }
-      if (isPersonalGuidePhoto(cursor.value)) {
+      if (isPersonalGuidePhoto(cursor.value) || isPlaceEnvPhoto(cursor.value)) {
         cursor.continue();
         return;
       }

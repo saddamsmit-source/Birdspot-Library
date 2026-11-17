@@ -9,16 +9,35 @@
  * Waarneming: optioneel veld placeId. De eigen coördinaten van elke waarneming blijven
  * altijd bewaard (nauwkeurige data, later bruikbaar voor bv. waarneming.nl).
  *
- * Regels:
- *  - Bestaande plekken worden nooit samengevoegd. Een geluidsessie mag volgens de eigenaar
- *    automatisch nieuwe waarnemingen koppelen aan één ondubbelzinnige bestaande plek.
+ * Regels (ronde 2B, eigenaarbesluiten #292/#293):
+ *  - Bekende vogelspot: een nieuwe waarneming binnen de straal (standaard 250 m, instelbaar)
+ *    krijgt dezelfde placeId/kaartpin. Eén kandidaat + nauwkeurige positie (≤ 50 m) → inline
+ *    voorgesteld en vooraf gekozen (afmeldbaar). Meerdere kandidaten → compacte keuze of bewust
+ *    een aparte spot. Onnauwkeurige of onbekende nauwkeurigheid → nooit automatisch, alleen aanbod.
+ *  - Elke waarneming houdt altijd zijn eigen lat/lon, datum en tijd.
+ *  - Bestaande plekken worden nooit samengevoegd.
  *  - Migratie maakt alleen plekken voor waarnemingen met exact dezelfde coördinaten (6 decimalen)
  *    en is additief en idempotent: bestaande placeId's en velden worden nooit gewijzigd.
  */
 
 export const PLACES_KEY = 'birdspot-places';
 export const PLACES_SCHEMA = 1;
-export const REUSE_RADIUS_M = 50;
+/** Standaardstraal voor een bekende vogelspot (eigenaarbesluit: 250 m, configureerbaar). */
+export const PLACE_REUSE_RADIUS_M = 250;
+export const PLACE_RADIUS_OPTIONS = Object.freeze([100, 250, 500]);
+/** Boven deze GPS-/pinonzekerheid (of onbekend) nooit automatisch koppelen. */
+export const MAX_AUTO_ACCURACY_M = 50;
+/** @deprecated K4-naam; gelijk aan de standaardstraal. */
+export const REUSE_RADIUS_M = PLACE_REUSE_RADIUS_M;
+const SETTINGS_KEY = 'birdspot-settings';
+
+/** Ingestelde straal uit de gebruikersinstellingen; ongeldig → standaard. */
+export function reuseRadiusM(storage = globalThis.localStorage) {
+  try {
+    const value = Number(JSON.parse(storage?.getItem(SETTINGS_KEY) || '{}')?.placeRadiusM);
+    return PLACE_RADIUS_OPTIONS.includes(value) ? value : PLACE_REUSE_RADIUS_M;
+  } catch (_) { return PLACE_REUSE_RADIUS_M; }
+}
 
 const R = 6371008.8;
 const rad = d => (Number(d) * Math.PI) / 180;
@@ -31,7 +50,7 @@ export function distanceM(lat1, lon1, lat2, lon2) {
 }
 
 /** Dichtstbijzijnde plek binnen `maxM` meter, of null. Pure functie. */
-export function nearestPlace(places, lat, lon, maxM = REUSE_RADIUS_M) {
+export function nearestPlace(places, lat, lon, maxM = PLACE_REUSE_RADIUS_M) {
   let best = null;
   for (const p of places || []) {
     const d = distanceM(lat, lon, p.lat, p.lon);
@@ -45,20 +64,49 @@ const validCoord = (a, b) => Number.isFinite(Number(a)) && Number.isFinite(Numbe
 const coordKey = (lat, lon) => `${Number(lat).toFixed(6)},${Number(lon).toFixed(6)}`;
 const newId = () => 'pl_' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
 
-/** Hergebruik alleen een zekere match. Laat mogelijke alternatieven aan de gebruiker. */
-export function matchSoundPlace(places, { lat, lon, pinAccuracyM }, fromGps) {
-  const uncertainty = Number.isFinite(pinAccuracyM) ? Math.max(0, pinAccuracyM) : fromGps ? REUSE_RADIUS_M : 0;
-  const candidates = places.filter(place => validCoord(place.lat, place.lon) && place.id)
-    .map(place => ({ place, distance: distanceM(lat, lon, place.lat, place.lon) }))
-    .filter(({ distance }) => distance <= REUSE_RADIUS_M + Math.min(uncertainty, REUSE_RADIUS_M))
-    .sort((a, b) => a.distance - b.distance);
-  const exact = candidates.filter(({ place }) => coordKey(lat, lon) === coordKey(place.lat, place.lon));
-  if (!fromGps && exact.length === 1) return { place: exact[0].place, alternatives: [], needsChoice: false };
-  const single = candidates.length === 1 && candidates[0].distance + uncertainty <= REUSE_RADIUS_M;
+/** Alle geldige plekken binnen `radiusM` (grens inclusief), dichtstbij eerst. Pure functie. */
+export function candidatePlaces(places, lat, lon, radiusM = PLACE_REUSE_RADIUS_M) {
+  if (!validCoord(lat, lon)) return [];
+  return (places || []).filter(place => place && place.id && validCoord(place.lat, place.lon))
+    .map(place => ({ place, distanceM: distanceM(lat, lon, place.lat, place.lon) }))
+    .filter(({ distanceM: d }) => d <= radiusM)
+    .sort((a, b) => a.distanceM - b.distanceM || String(a.place.id).localeCompare(String(b.place.id)));
+}
+
+/** Is de positie nauwkeurig genoeg om automatisch te koppelen? Onbekend = nee. */
+export function accurateEnough(accuracyM) {
+  return accuracyM !== null && accuracyM !== undefined && accuracyM !== '' &&
+    Number.isFinite(Number(accuracyM)) && Number(accuracyM) >= 0 && Number(accuracyM) <= MAX_AUTO_ACCURACY_M;
+}
+
+/**
+ * Besluit voor een nieuwe positie (pure functie):
+ *  - mode 'new'    : geen bekende plek binnen de straal
+ *  - mode 'single' : precies één kandidaat; `auto` alleen bij nauwkeurige positie (≤ 50 m)
+ *  - mode 'choose' : meerdere kandidaten; nooit automatisch
+ */
+export function placeDecision({ places, lat, lon, accuracyM, radiusM = PLACE_REUSE_RADIUS_M }) {
+  const candidates = candidatePlaces(places, lat, lon, radiusM);
+  const accurate = accurateEnough(accuracyM);
+  if (!candidates.length) return { mode: 'new', candidates, auto: false, accurate, radiusM };
+  if (candidates.length === 1) return { mode: 'single', candidates, auto: accurate, accurate, radiusM };
+  return { mode: 'choose', candidates, auto: false, accurate, radiusM };
+}
+
+/** Geluidsessie: dezelfde regels als handmatig toevoegen. Exact dezelfde coördinaten van een
+ *  bewaarde (niet-GPS) plek blijven een zekere match. */
+export function matchSoundPlace(places, { lat, lon, pinAccuracyM }, fromGps, radiusM = PLACE_REUSE_RADIUS_M) {
+  const valid = (places || []).filter(place => validCoord(place.lat, place.lon) && place.id);
+  const exact = valid.filter(place => coordKey(lat, lon) === coordKey(place.lat, place.lon));
+  if (!fromGps && exact.length === 1) return { place: exact[0], alternatives: [], needsChoice: false };
+  const decision = placeDecision({ places: valid, lat, lon, accuracyM: pinAccuracyM, radiusM });
+  const alternatives = decision.candidates.slice(0, 5).map(({ place, distanceM: distance }) => ({ place, distance }));
+  if (decision.auto) return { place: decision.candidates[0].place, alternatives: [], needsChoice: false };
   return {
-    place: single ? candidates[0].place : null,
-    alternatives: single ? [] : candidates.slice(0, 5),
-    needsChoice: !single && (candidates.length > 0 || (fromGps && uncertainty > REUSE_RADIUS_M)),
+    place: null,
+    alternatives,
+    needsChoice: alternatives.length > 0 ||
+      (fromGps && Number.isFinite(Number(pinAccuracyM)) && pinAccuracyM !== null && Number(pinAccuracyM) > MAX_AUTO_ACCURACY_M),
   };
 }
 
