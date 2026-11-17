@@ -538,6 +538,8 @@ function _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx })
       lat:_state.lat,lon:_state.lon,
       onConfirm:coords=>{
         if(ctx.destroyed)return;
+        ctx.locationRevision++; // handmatige pin wint van elke nog lopende GPS-callback
+        _state.nearSuggestion=null;
         _state.lat=coords.lat;_state.lon=coords.lon;
         _state.pinAccuracyM=Number.isFinite(coords.accuracyM)?coords.accuracyM:null;
         _state.placeId=null;
@@ -833,24 +835,29 @@ function _resetGPSButton(ov) {
 }
 
 async function _autoGPS(ov, ctx) {
+  // Intent-token: elke handmatige locatiehandeling (pin-picker openen/bevestigen, wissen, GPS-knop)
+  // verhoogt locationRevision; een automatische meting die daarna binnenkomt wordt genegeerd.
+  const intent = ctx.locationRevision;
   try {
     const status = await navigator.permissions?.query?.({ name: 'geolocation' });
-    if (status?.state !== 'granted' || ctx.destroyed || _state.lat != null) return;
-    _requestGPS(ov, ctx, { silent: true });
+    if (status?.state !== 'granted' || ctx.destroyed || ctx.cancelPinPicker || _state.lat != null || ctx.locationRevision !== intent) return;
+    _requestGPS(ov, ctx, { silent: true, intent });
   } catch (_) { /* geen Permissions API: handmatige GPS-knop blijft werken */ }
 }
 
-function _requestGPS(ov,ctx,{ silent = false } = {}) {
+function _requestGPS(ov,ctx,{ silent = false, intent = null } = {}) {
   if (!navigator.geolocation) { if (!silent) showToast('GPS niet beschikbaar'); return; }
   const btn  = ov.querySelector('#sightGpsBtn');
   if (!btn) return;
-  const revision = ++ctx.locationRevision;
+  // Automatisch: blijf op het intent-token (verhoog niet), zodat iedere handmatige handeling wint.
+  const revision = silent ? intent : ++ctx.locationRevision;
   btn.classList.add('gps-btn--loading');
   btn.innerHTML = _svgSpinner() + ' GPS';
 
   navigator.geolocation.getCurrentPosition(
     pos => {
       if (ctx.destroyed || revision !== ctx.locationRevision) return;
+      if (silent && (ctx.cancelPinPicker || _state.lat != null)) { _resetGPSButton(ov); return; }
       _state.lat = pos.coords.latitude;
       _state.lon = pos.coords.longitude;
       _state.pinAccuracyM = Number.isFinite(pos.coords.accuracy) ? Math.round(pos.coords.accuracy) : null;

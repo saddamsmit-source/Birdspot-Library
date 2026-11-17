@@ -331,6 +331,15 @@ def main():
     (OUT / 'results.json').write_text(json.dumps({'target': target, 'results': RESULTS}, ensure_ascii=False, indent=1), encoding='utf-8')
     fails = [r['id'] for r in RESULTS if r['result'] == 'FAIL']
     print(f"RECONCILIATION {target}: {len(RESULTS) - len(fails)} PASS, {len(fails)} FAIL {fails}")
+    # CI-faalhardheid (#292): elke FAIL buiten de expliciet toegestane lijst maakt de run rood.
+    expected = {x.strip() for x in os.environ.get('BIRDSPOT_EXPECTED_FAIL', '').split(',') if x.strip()}
+    unexpected = [f for f in fails if f not in expected]
+    healed = sorted(expected - set(fails))
+    if healed:
+        print(f'NOTE: verwachte FAIL nu PASS: {healed}')
+    if unexpected:
+        print(f'UNEXPECTED FAIL: {unexpected}')
+        sys.exit(1)
 
 
 if __name__ == '__main__':
