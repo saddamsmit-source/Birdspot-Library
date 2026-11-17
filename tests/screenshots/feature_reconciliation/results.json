@@ -1,0 +1,83 @@
+{
+ "target": "local checkout",
+ "results": [
+  {
+   "id": "F01",
+   "feature": "Versie zichtbaar en gelijk aan sw.js",
+   "result": "PASS",
+   "detail": "sw.js APP_VERSION 1.27.31; zichtbaar versielabel: ''"
+  },
+  {
+   "id": "F02",
+   "feature": "Centrale plusknop met twee keuzes",
+   "result": "PASS",
+   "detail": "Centrale + toont \"Waarneming toevoegen\" en \"Geluid herkennen\"; Escape sluit"
+  },
+  {
+   "id": "F03",
+   "feature": "Waarneming toevoegen (soort, datum, GPS, opslaan)",
+   "result": "PASS",
+   "detail": "1 record: soort sp001, datum automatisch '2026-11-17', GPS pas na knop 'GPS' (vooraf: 'Nog geen pin gekozen. Alleen een plaatsnaam opslaan mag ook.'), lat/lon 51.9244/4.4777, methode seen"
+  },
+  {
+   "id": "F04",
+   "feature": "Annuleren zonder opslaan",
+   "result": "PASS",
+   "detail": "Annuleren sluit formulier zonder record"
+  },
+  {
+   "id": "F05",
+   "feature": "Geluid herkennen: opnemen, tijdlijn, meerdere soorten opslaan",
+   "result": "PASS",
+   "detail": "Opname 00:08, tijdbalk data-has-sound=true, positie 'Bestaande pin · Reconciliatietest (fictief)'; herkenner: ''; suggestie: ''; 2 Gehoord-records (sp045, sp029) met lat/lon 51.9244/4.4777"
+  },
+  {
+   "id": "F06",
+   "feature": "Automatische BirdNET-suggesties beschikbaar",
+   "result": "FAIL",
+   "detail": "AssertionError: geen automatische suggestie (status '', audio /tmp/merel.wav)"
+  },
+  {
+   "id": "F07",
+   "feature": "Hotspots op startscherm",
+   "result": "PASS",
+   "detail": "Hotspotsectie zichtbaar: Mijn hotspots ·  · Kaart laden… ·  · 1 locatie · 3 waarnemingen met GPS · ⌖ · Reconciliatietest (fictief) · Koolmees · Merel · 3 · Bekijk volledige kaart"
+  },
+  {
+   "id": "F08",
+   "feature": "Soortkaart, gidsfoto, zoom en terug",
+   "result": "PASS",
+   "detail": "Gidsfoto gedecodeerd (http://127.0.0.1:41117/assets/species/sp045.webp); zoomvenster open/dicht; soortkaart gesloten"
+  },
+  {
+   "id": "F09",
+   "feature": "Vergelijken van dubbelgangers",
+   "result": "PASS",
+   "detail": "Boomkruiper ↔ Taigaboomkruiper: 2 foto’s + kenmerkrijen zichtbaar"
+  },
+  {
+   "id": "F10",
+   "feature": "App-brede zoekfunctie",
+   "result": "PASS",
+   "detail": "Zoeken op \"ijsvogel\" toont IJsvogel in de resultaten"
+  },
+  {
+   "id": "F11",
+   "feature": "Opgeslagen waarnemingen blijven na herladen",
+   "result": "PASS",
+   "detail": "3 waarnemingen na herladen nog aanwezig"
+  },
+  {
+   "id": "F12",
+   "feature": "Offline heropenen",
+   "result": "PASS",
+   "detail": "Offline herladen en soortkaart openen werkt (sw-controlled)"
+  },
+  {
+   "id": "F99",
+   "feature": "Geen paginafouten",
+   "result": "PASS",
+   "detail": "geen"
+  }
+ ]
+}

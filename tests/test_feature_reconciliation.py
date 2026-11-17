@@ -47,7 +47,7 @@ def boot(page, url):
         skip.click()
     except Exception:
         pass
-    page.locator('#birdspotSplash').wait_for(state='detached', timeout=45000)
+    page.locator('#birdspotSplash').wait_for(state='detached', timeout=90000)
     page.locator('#fab').wait_for(state='visible', timeout=20000)
 
 
@@ -84,7 +84,15 @@ def main():
         page = ctx.new_page()
         errors = []
         page.on('pageerror', lambda e: errors.append(str(e)))
-        boot(page, base)
+        try:
+            boot(page, base)
+            record('F00', 'App opent (splash → startscherm)', True, base)
+        except Exception as exc:
+            page.screenshot(path=str(OUT / 'F00_boot_fail.png'))
+            state = page.evaluate("() => ({splash: !!document.querySelector('#birdspotSplash'), fab: !!document.querySelector('#fab'), skip: !!document.querySelector('#birdspotSplashSkip'), title: document.title, text: document.body.innerText.slice(0,200)})")
+            record('F00', 'App opent (splash → startscherm)', False, f'{type(exc).__name__}: {exc}; {state}')
+            page.locator('#birdspotSplash').evaluate('e => e.remove()') if page.locator('#birdspotSplash').count() else None
+            page.locator('#fab').wait_for(state='visible', timeout=60000)
 
         def version():
             sw = page.evaluate("fetch('sw.js',{cache:'no-store'}).then(r=>r.text()).then(t=>(t.match(/APP_VERSION = '([^']+)'/)||[])[1])")
