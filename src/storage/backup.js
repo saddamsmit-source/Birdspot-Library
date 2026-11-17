@@ -384,7 +384,10 @@ export async function exportBackup() {
 export async function validateBackupFile(file) {
   try {
     const { data, files } = await readBackup(file);
-    return { valid: true, sightingCount: data.sightings.length, photoCount: files.size };
+    assertEnvRelations(data, readList(localStorage.getItem(PLACES_KEY), 'places'));
+    const envPhotoCount = (data.mediaMeta || []).filter(meta => meta.kind === PLACE_ENV_KIND).length;
+    return { valid: true, sightingCount: data.sightings.length, photoCount: files.size,
+      placeCount: Array.isArray(data.places) ? data.places.length : 0, envPhotoCount };
   } catch (error) {
     return { valid: false, error: error.message };
   }
@@ -427,7 +430,6 @@ async function readBackup(file) {
   if (data.mediaMeta != null && (!Array.isArray(data.mediaMeta) || data.mediaMeta.some(meta => !validId(meta?.id)))) {
     throw new Error('De back-up bevat ongeldige mediagegevens.');
   }
-  const backupPlaceIds = new Set((data.places || []).map(place => place.id));
   for (const meta of data.mediaMeta || []) {
     if (meta.kind == null) continue;
     if (meta.kind !== PLACE_ENV_KIND || !validId(meta.placeId) || meta.sightingId || meta.speciesId ||
@@ -435,7 +437,6 @@ async function readBackup(file) {
       (meta.caption != null && (typeof meta.caption !== 'string' || meta.caption.length > ENV_CAPTION_LIMIT))) {
       throw new Error('De back-up bevat een ongeldige omgevingsfoto: ' + meta.id);
     }
-    meta.placeKnownInBackup = backupPlaceIds.has(meta.placeId);
   }
   const files = new Map();
   for (const [path, bytes] of entries) {
@@ -445,7 +446,21 @@ async function readBackup(file) {
     if (files.has(id)) throw new Error('De back-up bevat meerdere bestanden met dezelfde media-ID.');
     files.set(id, { bytes, ext });
   }
+  // Elk genoemd mediabestand moet in de ZIP zitten; anders vóór de bevestiging weigeren.
+  const declared = [...(data.photoIds || []), ...(data.mediaMeta || []).map(meta => meta.id),
+    ...data.sightings.flatMap(s => s.photoIds || [])];
+  const missing = declared.find(id => !files.has(id));
+  if (missing) throw new Error('Mediabestand ontbreekt in de back-up: ' + missing);
   return { data, files };
+}
+
+function assertEnvRelations(data, localPlaces) {
+  const known = new Set([...(data.places || []), ...localPlaces].map(place => place?.id));
+  for (const meta of data.mediaMeta || []) {
+    if (meta.kind === PLACE_ENV_KIND && !known.has(meta.placeId)) {
+      throw new Error('Omgevingsfoto verwijst naar een onbekende plek. Er is niets hersteld.');
+    }
+  }
 }
 
 function mergeRecord(local, incoming) {
@@ -494,12 +509,7 @@ export function importBackup(file) {
     const metadata = new Map((Array.isArray(data.mediaMeta) ? data.mediaMeta : []).filter(Boolean).map(m => [m.id, m]));
     const mediaIds = new Set([...(data.photoIds || files.keys()), ...data.sightings.flatMap(s => s.photoIds || [])]);
     // Relatiecontrole vóór schrijven: een omgevingsfoto hoort bij een plek uit de back-up of van dit toestel.
-    const localPlaceIds = new Set(readList(before[PLACES_KEY], 'places').map(place => place.id));
-    for (const meta of metadata.values()) {
-      if (meta.kind === PLACE_ENV_KIND && !meta.placeKnownInBackup && !localPlaceIds.has(meta.placeId)) {
-        throw new Error('Omgevingsfoto verwijst naar een onbekende plek. Er is niets hersteld.');
-      }
-    }
+    assertEnvRelations(data, readList(before[PLACES_KEY], 'places'));
     const newPhotos = [];
     for (const id of mediaIds) {
       if (existingPhotos.has(id) || (skippedAttachments.has(id) && !photoOwners.has(id))) continue;

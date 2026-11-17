@@ -312,7 +312,7 @@ async function handleImport(el, file) {
 
     // Vraag bevestiging
     const confirmed = await showConfirm(el,
-      `<strong>${check.sightingCount}</strong> waarnemingen${check.photoCount ? ` en <strong>${check.photoCount}</strong> foto's` : ''} worden samengevoegd met je huidige data.<br><br>
+      `<strong>${check.sightingCount}</strong> waarnemingen${check.photoCount ? ` en <strong>${check.photoCount}</strong> bestanden` : ''}${check.placeCount ? `, <strong>${check.placeCount}</strong> plekken` : ''}${check.envPhotoCount ? ` (waarvan <strong>${check.envPhotoCount}</strong> omgevingsfoto's)` : ''} worden samengevoegd met je huidige data.<br><br>
       Bestaande waarnemingen worden bijgewerkt waar de back-up nieuwer is. Je huidige data blijft bewaard.`
     );
     if (!confirmed) return;
