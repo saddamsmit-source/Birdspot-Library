@@ -4,8 +4,8 @@ Birdspot Library — Kaart K4: vaste plekken
          bestaande placeId blijft; idempotent (tweede keer geen nieuwe plekken)
   K4-02  kaart: één pin per plek; plek met gezien + gehoord = oranje met teller 2
   K4-03  plekkaartje: naam, 2 soorten / 2 bezoeken / 2 waarnemingen, lijst; tik opent de waarneming
-  K4-04  pin binnen 50 m → vraag 'Je bent bij …'; 'Deze plek gebruiken' koppelt de plek, eigen pin blijft bewaard
-  K4-05  'Nieuwe plek' → bij opslaan een nieuwe plek; pin verder dan 50 m → geen vraag
+  K4-04  (ronde 2B) nauwkeurige kaartpin binnen 250 m → inline 'Bekende plek: …', geen venster; eigen pin blijft bewaard
+  K4-05  (ronde 2B) 'Aparte spot' → bij opslaan een nieuwe plek; pin ver weg → geen aanbod
   K4-06  '+ Waarneming hier' vult plek in zonder vraag; naam wijzigen blijft bewaard
   K4-07  foto en geluid (WAV) toevoegen aan een plek; zichtbaar als afbeelding en speler
   K4-08  back-up bevat plekken, plek-media en geluid; herstellen in een lege app zet alles terug
@@ -122,12 +122,10 @@ def main():
             p.locator("#mapAddPinBtn").click()
             p.evaluate(f"() => window.__birdspotMapTest.map.setView([{HUT[0] + 0.0002}, {HUT[1]}], 18)")
             p.locator("#mapPinConfirm").click()
-            prompt = p.locator(".place-prompt")
-            prompt.wait_for(timeout=5000)
-            assert "Kijkhut Lauwersmeer" in prompt.inner_text() and "22 m" in prompt.inner_text(), prompt.inner_text()
+            p.locator("#addSightingSheet").wait_for(timeout=5000)
+            p.wait_for_function("() => document.querySelector('#coordsHint')?.innerText.includes('Bekende plek: Kijkhut Lauwersmeer (22 m)')", timeout=5000)
+            assert p.locator(".place-prompt").count() == 0
             p.screenshot(path=str(SHOTS / "map_k4_prompt_390.png"))
-            p.locator("#placePromptUse").click()
-            assert "Plek: Kijkhut Lauwersmeer" in p.locator("#coordsHint").inner_text()
             assert p.locator("#sightLocation").input_value() == "Kijkhut Lauwersmeer"
             p.locator("#speciesPickerBtn").click()
             p.locator('#spPickerList .species-row[data-id="sp252"]').click()
@@ -136,15 +134,15 @@ def main():
             new = stored()[-1]
             assert new["placeId"] == hut["id"] and abs(new["lat"] - (HUT[0] + 0.0002)) < 1e-9, new
             assert len(places()) == 2
-            print("K4-04 OK — bestaande plek hergebruikt; eigen pin bewaard")
+            print("K4-04 OK — bestaande plek inline hergebruikt (geen venster); eigen pin bewaard")
 
             # K4-05: weer binnen 50 m, maar 'Nieuwe plek'; en een pin ver weg zonder vraag
             open_map()
             p.locator("#mapAddPinBtn").click()
             p.evaluate(f"() => window.__birdspotMapTest.map.setView([{HUT[0] - 0.0003}, {HUT[1]}], 18)")
             p.locator("#mapPinConfirm").click()
-            p.locator("#placePromptNew").click()
-            assert "Nieuwe plek" in p.locator("#coordsHint").inner_text()
+            p.locator("#coordsHint [data-place-separate]").click()
+            assert "Aparte spot (nieuwe plek)" in p.locator("#coordsHint").inner_text()
             p.locator("#speciesPickerBtn").click()
             p.locator('#spPickerList .species-row[data-id="sp009"]').click()
             p.locator("#addSheetSubmit").click()
@@ -157,9 +155,10 @@ def main():
             p.locator("#addSightingSheet").wait_for(timeout=5000)
             p.wait_for_timeout(300)
             assert p.locator(".place-prompt").count() == 0
+            assert p.locator("#coordsHint [data-place-choice], #coordsHint [data-place-state='linked']").count() == 0
             p.locator("#addSheetCancel").click()
             p.locator("#addSightingSheet").wait_for(state="detached", timeout=5000)
-            print("K4-05 OK — nieuwe plek op verzoek; ver weg geen vraag")
+            print("K4-05 OK — aparte spot op verzoek; ver weg geen aanbod")
 
             # K4-06
             open_map()
@@ -174,7 +173,7 @@ def main():
             p.locator("#addSightingSheet").wait_for(timeout=5000)
             p.wait_for_timeout(300)
             assert p.locator(".place-prompt").count() == 0
-            assert "Plek: Kijkhut Ezumakeeg" in p.locator("#coordsHint").inner_text()
+            assert "Bekende plek: Kijkhut Ezumakeeg" in p.locator("#coordsHint").inner_text()
             p.locator("#addSheetCancel").click()
             p.locator("#addSightingSheet").wait_for(state="detached", timeout=5000)
             print("K4-06 OK — waarneming hier zonder vraag; naam gewijzigd")
