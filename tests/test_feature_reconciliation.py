@@ -21,7 +21,7 @@ from playwright.sync_api import expect, sync_playwright
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from test_pilot_offline_new_sighting import ROOT, Quiet, Server  # noqa: E402
 
-OUT = ROOT / 'tests' / 'screenshots' / 'feature_reconciliation'
+OUT = ROOT / 'tests' / 'screenshots' / 'feature_reconciliation' / os.environ.get('BIRDSPOT_RESULTS_TAG', 'local')
 GPS = {'latitude': 51.9244, 'longitude': 4.4777, 'accuracy': 8}
 RESULTS = []
 RECOG = {}
@@ -249,7 +249,8 @@ def main():
             img = page.locator('#sdPanel-herkenning .sd-field-photo img').first
             expect(img).to_be_visible()
             src = img.get_attribute('src')
-            assert img.evaluate('i => i.complete && i.naturalWidth > 0'), 'gidsfoto niet gedecodeerd'
+            img.scroll_into_view_if_needed()
+            assert img.evaluate('i => i.decode().then(() => i.naturalWidth > 0).catch(() => false)'), 'gidsfoto niet gedecodeerd'
             page.locator('#sdPanel-herkenning .sd-field-photo').first.click()
             viewer = page.get_by_role('dialog', name='Vogelfoto bekijken')
             expect(viewer).to_be_visible()
@@ -331,6 +332,15 @@ def main():
     (OUT / 'results.json').write_text(json.dumps({'target': target, 'results': RESULTS}, ensure_ascii=False, indent=1), encoding='utf-8')
     fails = [r['id'] for r in RESULTS if r['result'] == 'FAIL']
     print(f"RECONCILIATION {target}: {len(RESULTS) - len(fails)} PASS, {len(fails)} FAIL {fails}")
+    # CI-faalhardheid (#292): elke FAIL buiten de expliciet toegestane lijst maakt de run rood.
+    expected = {x.strip() for x in os.environ.get('BIRDSPOT_EXPECTED_FAIL', '').split(',') if x.strip()}
+    unexpected = [f for f in fails if f not in expected]
+    healed = sorted(expected - set(fails))
+    if healed:
+        print(f'NOTE: verwachte FAIL nu PASS: {healed}')
+    if unexpected:
+        print(f'UNEXPECTED FAIL: {unexpected}')
+        sys.exit(1)
 
 
 if __name__ == '__main__':

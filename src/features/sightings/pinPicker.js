@@ -7,7 +7,7 @@ import { ensureLeaflet } from '../map/view.js';
 import { centerPinMarkup, attachBaseLayers, pinAccuracyM, accuracyLabel, MAX_PIN_ACCURACY_M, LAYERS } from '../map/centerPin.js';
 
 const valid=(a,b)=>Number.isFinite(a)&&a>=-90&&a<=90&&Number.isFinite(b)&&b>=-180&&b<=180;
-export function openPinPicker({lat=null,lon=null,onConfirm=()=>{}}={}) {
+export function openPinPicker({lat=null,lon=null,onConfirm=()=>{},onClose=()=>{}}={}) {
   let destroyed=false,map=null,accuracyM=null,typed=false;
   let chosenLat=lat===null?null:Number(lat),chosenLon=lon===null?null:Number(lon);
   const previousFocus=document.activeElement;
@@ -70,6 +70,7 @@ export function openPinPicker({lat=null,lon=null,onConfirm=()=>{}}={}) {
   function close(){
     if(destroyed)return;
     destroyed=true;
+    try{onClose();}catch(_){} // eigenaar ruimt zijn verwijzing op bij elke sluitroute
     document.removeEventListener('keydown',onKey);
     try{map?.remove();}catch(_){}
     map=null;host.remove();previousFocus?.focus?.();
