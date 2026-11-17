@@ -15,6 +15,7 @@ R  race           R1 toelichting-opslaan tegelijk met verwijderen: foto blijft w
 Z  ZIP            Z1 export (backupVersion 2, env-metadata, geen thumbs)  Z2 herstel op schoon profiel + relaties
                   Z3 ongeldige ZIP's laten bestaande data intact  Z4 oude ZIP (fb59085) blijft werken
                   Z5 offline heropenen na herstel + offline omgevingsfoto toevoegen  Z6 herimport zonder dubbelen
+                  Z7 'Terugzetten' koppelt geen later toegevoegde omgevingsfoto los
 
 Starten (vanuit repo-root):  python tests/test_r2b_places_env_zip.py
 """
@@ -510,6 +511,24 @@ def rezip(src_bytes, mutate_json=None, drop=None, corrupt=None):
     return bytes(b)
 
 
+UNDO_JS = """async () => {
+  const env = await import('/src/data/placeEnv.js');
+  const backup = await import('/src/storage/backup.js');
+  const c = document.createElement('canvas'); c.width = 8; c.height = 8; c.getContext('2d').fillRect(0, 0, 8, 8);
+  const file = new File([await new Promise(r => c.toBlob(r, 'image/jpeg'))], 'na-import.jpg', { type: 'image/jpeg' });
+  const { added } = await env.addEnvPhotos('pl_b', [file]);
+  const snap = () => JSON.stringify([localStorage.getItem('birdspot-places'), localStorage.getItem('birdspot-sightings')]);
+  const before = snap();
+  let refused = '';
+  try { await backup.restoreFromSafetyCopy(); } catch (e) { refused = e.message; }
+  const unchanged = before === snap() && (await env.getEnvPhotos('pl_b')).length === 2;
+  await env.deleteEnvPhoto(added[0].id);
+  await backup.restoreFromSafetyCopy();
+  const left = (await env.getEnvPhotos('pl_a')).length + (await env.getEnvPhotos('pl_b')).length;
+  return { refused, unchanged, left, places: localStorage.getItem('birdspot-places') };
+}"""
+
+
 def zip_suite(browser, url, tmp):
     src_ctx = browser.new_context(viewport={"width": 390, "height": 844}, service_workers="block", accept_downloads=True)
     src = src_ctx.new_page(); errors = []
@@ -622,6 +641,15 @@ def zip_suite(browser, url, tmp):
     snap2 = dst.evaluate(SNAPSHOT_JS)
     check('Z6', 'herimport van dezelfde ZIP: geen dubbelen', snap1 == snap2 and len(snap2['media']) == 6,
           f"media={len(snap2['media'])}")
+    # Z7: 'Terugzetten' mag een later toegevoegde omgevingsfoto nooit van zijn plek loskoppelen
+    u_ctx = browser.new_context(viewport={"width": 390, "height": 844}, service_workers="block")
+    u = u_ctx.new_page(); u.on('pageerror', lambda e: errors.append('undo: ' + str(e)))
+    boot(u, url); profile(u)
+    try_import(u, str(zpath))
+    res = u.evaluate(UNDO_JS)
+    u_ctx.close()
+    check('Z7', "Terugzetten weigert zolang een later toegevoegde omgevingsfoto zou loskomen; daarna normaal",
+          'Terugzetten kan niet' in res['refused'] and res['unchanged'] and res['left'] == 0 and res['places'] is None, str(res))
     src_ctx.close(); dst_ctx.close()
     if errors:
         raise AssertionError(f"paginafouten: {errors}")

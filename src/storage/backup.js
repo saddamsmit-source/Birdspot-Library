@@ -611,6 +611,14 @@ export function restoreFromSafetyCopy() {
       throw new Error('Geen veiligheidskopie beschikbaar.');
     }
     changes.set(SAFETY_KEY, null);
+    // Ronde 2B: nooit een omgevingsfoto (na de import toegevoegd) loskoppelen van zijn plek.
+    const imported = new Set(normalizeIds(copy.importedMediaIds));
+    const restoredPlaces = new Set(readList(changes.get(PLACES_KEY) ?? null, 'places').map(place => place.id));
+    const orphaned = (await getAllPhotos()).filter(photo => photo.kind === PLACE_ENV_KIND &&
+      !imported.has(photo.id) && !restoredPlaces.has(photo.placeId));
+    if (orphaned.length) {
+      throw new Error('Terugzetten kan niet: er zijn intussen omgevingsfoto\'s toegevoegd aan een herstelde plek. Er is niets gewijzigd.');
+    }
     await commitRestore(before, changes, normalizeIds(copy.importedMediaIds), true);
   });
 }
