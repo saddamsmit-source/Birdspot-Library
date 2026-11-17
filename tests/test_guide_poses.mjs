@@ -212,21 +212,24 @@ assert.ok(reviewedSpechtenFiles >= 8, 'Expected baseline of 8 individually revie
 
 const f215Juveniles = GUIDE_COMPARISONS.find(entry => entry.label === 'Goudhaantje en Vuurgoudhaan · juvenielen');
 assert.ok(f215Juveniles, 'F2-15: juvenielenvergelijking ontbreekt');
-assert.deepEqual(f215Juveniles.birds.map(bird => [bird.id, bird.plumage]), [
-  ['sp063', 'juv'], ['sp064', 'juv'],
-]);
+assert.deepEqual(f215Juveniles.birds.map(bird => [bird.id, bird.plumage, bird.photoMissing]), [
+  ['sp063', 'juv', true], ['sp064', 'juv', true],
+], 'F3-R18 QA: LK-039 juvenile photo panel stays hidden until two individually verified juveniles exist');
 for (const id of ['sp063', 'sp064']) {
   const f215Markup = recognitionPanel(species.get(id));
-  assert.ok(f215Markup.includes('sp063-juv.webp'), `F2-15: Goudhaantje-juveniel niet zichtbaar vanaf ${id}`);
-  assert.ok(f215Markup.includes('sp064-juv.webp'), `F2-15: Vuurgoudhaan-juveniel niet zichtbaar vanaf ${id}`);
-  assert.ok(!f215Markup.includes('data-cmp-tab aria-selected="true">In vlucht · Juveniel'),
-    `F2-15: juvenielvergelijking onterecht als vlucht geclassificeerd bij ${id}`);
+  // Negative regression (F3-R18 QA): the doubtful Vuurgoudhaan juvenile and the juvenile photo pair never render.
+  assert.ok(!f215Markup.includes('sp064-juv.webp'), `LK-039: niet-vrijgegeven Vuurgoudhaan-juveniel zichtbaar vanaf ${id}`);
+  assert.ok(f215Markup.includes(`data-compare-species="${id === 'sp063' ? 'sp064' : 'sp063'}"`), `LK-038: volwassen fotopaar ontbreekt vanaf ${id}`);
 }
+// Textual juvenile warnings stay available through the knowledge profiles.
+assert.match(recognitionPanel(species.get('sp063')), /Een jong Goudhaantje mist aanvankelijk de opvallende gekleurde kruinstreep/);
+assert.match(recognitionPanel(species.get('sp064')), /Bij juvenielen kan de tekening minder opvallend zijn/);
+assert.ok(!recognitionPanel(species.get('sp064')).includes('sp063-juv.webp'), 'LK-039: juvenielenfoto toch als vergelijkingspaar getoond vanaf sp064');
 assert.match(species.get('sp035').fieldmarks, /Twee lichte vleugelstrepen/);
 assert.match(species.get('sp035').fieldmarks, /vrouwtje en jong/);
 assert.match(species.get('sp036').fieldmarks, /Stevige kegelvormige snavel/);
 assert.match(species.get('sp036').fieldmarks, /juveniel grijzer/);
-console.log('F2-15: juveniele vergelijking beide richtingen, portretten en kleedneutrale kenmerken structureel gecontroleerd; visuele bronverificatie blijft apart');
+console.log('F2-15/F3-R18 QA: juvenielenfotopaar LK-039 verborgen in beide richtingen, tekst behouden, portretten en kleedneutrale kenmerken structureel gecontroleerd; visuele bronverificatie blijft apart');
 
 
 const expectedF216 = [

@@ -105,13 +105,6 @@
           "quality": "Vrij zicht op kruin, wenkbrauw en lichaam.",
           "verdict": "goedgekeurd"
         },
-        "/assets/species/plumage/sp064-juv.webp": {
-          "role": "Verenkleed (Juveniel)",
-          "content": "Jonge Vuurgoudhaan in zijaanzicht, met lichte vleugelstreep en zonder felle kruinstreep.",
-          "sexAge": "De research-grade waarneming heeft de annotatie Juvenile. De vogel is volledig in beeld en mist de opvallende volwassen kruinstreep. Geslacht onbekend.",
-          "quality": "Hele vogel in zijaanzicht.",
-          "verdict": "goedgekeurd"
-        },
         "/assets/species/sp064.webp": {
           "role": "Overige herkenningsfoto",
           "content": "Vuurgoudhaan op een tak met brede witte wenkbrauw boven donkere oogstreep.",
@@ -121,16 +114,19 @@
         }
       },
       "corrections": [
-        "Bronbenoemd mannetje als hoofdfoto. Juvenielenfoto en kennisprofiel toegevoegd. Bestaande beeldvergelijking met Goudhaantje herbeoordeeld."
+        "Bronbenoemd mannetje als hoofdfoto. Juvenielenfoto en kennisprofiel toegevoegd. Bestaande beeldvergelijking met Goudhaantje herbeoordeeld.",
+        "F3-R18 QA 17-11-2026: juvenielenfoto sp064-juv.webp (iNaturalist 298756944) niet langer vrijgegeven — soortidentiteit visueel niet overtuigend; bestand en herkomst bewaard onder retired.sp064 in field-guide-media.json."
       ],
       "missing": [
         "Vrouwtjesfoto met betrouwbare geslachtsaanduiding.",
-        "Scherpe foto van één Vuurgoudhaan in vrije vlucht met bevestigde licentie."
+        "Scherpe foto van één Vuurgoudhaan in vrije vlucht met bevestigde licentie.",
+        "Juveniele Vuurgoudhaan met onafhankelijk bevestigde soort, leeftijd en individuele rechten."
       ],
       "wishes": [],
       "sexPolicy": "De hoofdfoto heeft een bronbenoemd mannetje. Gele delen van een deels zichtbare kruin zijn onvoldoende voor een vrouwtjeslabel.",
       "uncertain": [
-        "Een als vrouwtje geannoteerde kandidaat toont oranje in de kruinstreep. Die foto is niet als vrouwtje opgenomen."
+        "Een als vrouwtje geannoteerde kandidaat toont oranje in de kruinstreep. Die foto is niet als vrouwtje opgenomen.",
+        "REVIEW REQUIRED: niet-vrijgegeven juvenielenkandidaat iNaturalist 298756944 (grijsachtig, langstaartig, geen duidelijke zwarte oogstreep)."
       ],
       "date": "2026-11-12"
     },

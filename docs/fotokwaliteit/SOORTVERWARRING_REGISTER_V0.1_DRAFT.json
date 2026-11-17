@@ -1763,9 +1763,9 @@
         "juv",
         "juv"
       ],
-      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "photoState": "MISSING_VERIFIED_PAIR",
       "mediaOpen": [
-        "REVIEW REQUIRED: Vuurgoudhaan juvenile (iNaturalist 298756944) species identity doubtful on visual inspection F3-R18 (no clear black eye-stripe, long-tailed build); rights register-only"
+        "Photo panel hidden in guide (F3-R18 QA 17-11-2026): Vuurgoudhaan juvenile (iNaturalist 298756944) moved to retired as non-released candidate (species identity doubtful, rights register-only); Goudhaantje juvenile convincing but pair needs two individually verified juveniles"
       ],
       "textState": "PARTIALLY TESTED",
       "criticalMarks": [

@@ -147,9 +147,9 @@
           "verdict": "voorwaardelijk"
         },
         "/assets/species/plumage/sp063-adult-f.webp": {
-          "role": "Verenkleed (Vrouwtje)",
+          "role": "Overige herkenningsfoto (Volwassen)",
           "content": "Zijaanzicht met gele kruinstreep op een tak.",
-          "sexAge": "Vrouwtje volgens de fotograaf.",
+          "sexAge": "Volwassen. De fotograaf noemt een vrouwtje (bronclaim, niet onafhankelijk bevestigd): op dit gesloten zijaanzicht is een verborgen oranje middenkruin niet uit te sluiten.",
           "quality": "Volledige vogel, herkenbare kop en vleugelstrepen.",
           "verdict": "goedgekeurd"
         }
@@ -157,7 +157,8 @@
       "corrections": [
         "Vluchtfoto blijft in de vluchtsectie met de aanduiding Voorlopige foto. De ondersoort staat zichtbaar in het bijschrift.",
         "Kennisprofiel vergelijkt het gezicht met Vuurgoudhaan en vermeldt de beperking van een gele kruin voor geslachtsbepaling.",
-        "Drie foto’s naast de originelen gelegd. Een vierde foto toont een door de fotograaf bevestigd vrouwtje. De opgave van de fotograaf blijft bepalend voor dat label."
+        "Drie foto’s naast de originelen gelegd. Een vierde foto toont een door de fotograaf bevestigd vrouwtje. De opgave van de fotograaf blijft bepalend voor dat label.",
+        "F3-R18 QA 17-11-2026: label Vrouwtje vervangen door neutraal Volwassen; geslachtsclaim van de fotograaf bewaard als sourceSexClaim/sexNote."
       ],
       "missing": [
         "Afzonderlijke mannetjesfoto",

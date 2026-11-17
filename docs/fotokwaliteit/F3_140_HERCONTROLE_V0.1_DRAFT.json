@@ -5718,9 +5718,10 @@
             "oldRights": "VERIFIED"
           },
           {
-            "role": "Verenkleed (Vrouwtje)",
+            "role": "Overige herkenningsfoto (Volwassen)",
             "path": "/assets/species/plumage/sp063-adult-f.webp",
-            "oldRights": "VERIFIED"
+            "oldRights": "VERIFIED",
+            "qaChange": "F3-R18 QA 17-11-2026: label Vrouwtje → neutraal Volwassen; geslacht alleen bronclaim fotograaf"
           }
         ],
         "existingAudioCount": 1,
@@ -5745,7 +5746,7 @@
           "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (local files present; offline playback not tested on device)",
           "photoOriginalIdentity": "VERIFIED (origcheck 17-11-2026: 4/4 same shot, r = 1.00)",
           "photoIndividualRights": "VERIFIED (current Commons author and licence match for 4/4)",
-          "plumageAndTrueFlight": "PARTIALLY TESTED (hero OK; juvenile convincing: no crown stripe, yellow begging gape, Regulus wing pattern; 'Vrouwtje' label NOT proven: only yellow visible in a narrow crown from the side, male orange can be hidden, source names no sex -> proposal neutral label, independent review; flight photo is ssp. japonensis, kept as provisional per existing open point)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (hero OK; juvenile convincing: no crown stripe, yellow begging gape, Regulus wing pattern; F3-R18 QA: photographer's female claim (Commons Goldcrest_1.jpg) kept as unconfirmed source claim, guide label now neutral 'Volwassen' — closed side view cannot exclude concealed orange (Ringers' DigiGuide Ottenby); flight photo ssp. japonensis provisional per existing open point)",
           "photoPairComparisons": "PARTIALLY TESTED (Vuurgoudhaan adult LK-038; juvenile pair LK-039 depends on a doubtful Vuurgoudhaan juvenile)",
           "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming read 17-11-2026: crown stripe, male orange streak, face, lookalikes, song, numbers; ANWB-vogelgids NOT TESTED: no accessible edition)",
           "biometryAndKnowledge": "PARTIALLY TESTED (existing size text: Vogelbescherming 8.5–9.5 cm and The Wildlife Trusts 9 cm; not re-read beyond VBN)",
@@ -5756,7 +5757,8 @@
           "4/4 foto's dezelfde opname; rechten gelijk aan Commons.",
           "Juveniel overtuigend (geen kruinstreep, bedelende gele mondhoek, Regulus-vleugelpatroon).",
           "Label 'Vrouwtje' niet bewezen: voorstel neutraal label na review.",
-          "Sovon: sterke afname laatste 12 jaar; Vogelbescherming 'stabiel' (bronverschil)."
+          "Sovon: sterke afname laatste 12 jaar; Vogelbescherming 'stabiel' (bronverschil).",
+          "QA-fix 17-11: label 'Vrouwtje' → neutraal 'Volwassen' (Overige herkenningsfoto's); bronclaim vrouwtje bewaard als sourceSexClaim/sexNote."
         ],
         "sourceReferences": [
           "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/goudhaan",
@@ -5804,11 +5806,6 @@
             "oldRights": "VERIFIED"
           },
           {
-            "role": "Verenkleed (Juveniel)",
-            "path": "/assets/species/plumage/sp064-juv.webp",
-            "oldRights": "VERIFIED"
-          },
-          {
             "role": "Overige herkenningsfoto",
             "path": "/assets/species/sp064.webp",
             "oldRights": "VERIFIED"
@@ -5836,18 +5833,19 @@
           "soundRolesSongCall": "NOT TESTED (source labels only)",
           "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (local files present; offline playback not tested on device)",
           "photoOriginalIdentity": "VERIFIED (origcheck 17-11-2026: 3/3 same shot, r = 1.00; iNaturalist open-data original reached)",
-          "photoIndividualRights": "PARTIALLY TESTED (2 Commons photos match; iNaturalist juvenile 298756944 rights register-only, pages BLOCKED)",
-          "plumageAndTrueFlight": "PARTIALLY TESTED (male: orange central crown, white eyebrow, black eye-stripe — matches Vogelbescherming; juvenile REVIEW REQUIRED: species identity doubtful on visual inspection — no clear black eye-stripe, rather long-tailed build; not removed without review/decision)",
-          "photoPairComparisons": "PARTIALLY TESTED (Goudhaan adult LK-038 OK; juvenile pair LK-039 REVIEW REQUIRED)",
+          "photoIndividualRights": "PARTIALLY TESTED (shown photos: Commons match; withheld iNaturalist juvenile rights register-only, pages BLOCKED)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (male: orange central crown, white eyebrow, black eye-stripe — matches Vogelbescherming; F3-R18 QA: juvenile iNaturalist 298756944 NOT RELEASED — species identity not convincing, moved to retired with provenance; no verified juvenile shown)",
+          "photoPairComparisons": "PARTIALLY TESTED (Goudhaan adult LK-038 OK; juvenile pair LK-039 hidden)",
           "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming read 17-11-2026: white eyebrow, black eye-stripe, male dark-orange crown, lookalikes, song, numbers; ANWB-vogelgids NOT TESTED: no accessible edition)",
           "biometryAndKnowledge": "PARTIALLY TESTED (length ca. 9–10 cm: Vogelbescherming 9–10 re-read 17-11, Blasco-Zumeta & Heinze from earlier register, not re-read)",
           "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon 17-11-2026: 6,500–8,500 pairs; significant increase since 1990 and last 12 years; winter max. 2,500–5,000)",
-          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-038 adult OK; LK-039 juvenile REVIEW REQUIRED)"
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-038 adult photo pair OK both directions; LK-039 juvenile photo panel hidden — MISSING_VERIFIED_PAIR)"
         },
         "findings": [
           "3/3 foto's dezelfde opname; Commons-rechten actueel, iNaturalist alleen register.",
           "Mannetje klopt met Vogelbescherming (oranje middenkruin).",
-          "Juveniel (iNaturalist) soortidentiteit twijfelachtig: geen duidelijke zwarte oogstreep, langstaartig postuur — onafhankelijke review; daarvan hangt ook juvenielenpaar LK-039 af."
+          "Juveniel (iNaturalist) soortidentiteit twijfelachtig: geen duidelijke zwarte oogstreep, langstaartig postuur — onafhankelijke review; daarvan hangt ook juvenielenpaar LK-039 af.",
+          "QA-fix 17-11: juveniel niet vrijgegeven (retired.sp064, bestand en herkomst bewaard); LK-039-fotopaneel verborgen."
         ],
         "sourceReferences": [
           "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/vuurgoudhaan",
@@ -5863,7 +5861,6 @@
         "photoFilesInspected": 3,
         "photoBlobSHAs": [
           "bbdcce0fa62f5a0031706db19618a36e7eeeda19",
-          "6f42687e2b499fb78d984d512e6f4df17f89eb00",
           "232308e0847f5d53348524996245544e1b8a7fda"
         ],
         "photoSourceMatches": [],

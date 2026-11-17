@@ -36,8 +36,10 @@ for(let i=0;i<rows.length;i++){
  assert.deepEqual(x.currentAssets.existingAudioPaths,registered.map(y=>y.audio));
  const paths=x.currentAssets.imageSlots.map(y=>y.path);
  if (o.audited || !x.F3.reviewedThisRound) {
-  assert.deepEqual(paths,(o.assets||[]).map(y=>y.image));
-  assert.deepEqual(x.currentAssets.imageSlots.map(y=>y.addedIn),(o.assets||[]).map(y=>y.addedIn));
+  // Assets withheld after QA (retiredIn) stay in the historic record but are no longer live slots.
+  const live=(o.assets||[]).filter(y=>!y.retiredIn);
+  assert.deepEqual(paths,live.map(y=>y.image));
+  assert.deepEqual(x.currentAssets.imageSlots.map(y=>y.addedIn),live.map(y=>y.addedIn));
  } else {
   // An F3 review can register live photos that were absent from the historic audit.
   const ownGallery=recognitionPanel(s).split('<section class="sd-similar"')[0];
@@ -300,7 +302,7 @@ for(const item of eighteenth){
   assert.equal(review.photoBlobSHAs[i],createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex'),item.id+' image changed since F3-R18 review');
  }
 }
-assert.match(eighteenth[2].F3.checks.plumageAndTrueFlight,/juvenile REVIEW REQUIRED/,'doubtful Vuurgoudhaan juvenile stays visible as open review');
+assert.match(eighteenth[2].F3.checks.plumageAndTrueFlight,/NOT RELEASED/,'withheld Vuurgoudhaan juvenile stays documented as open point');
 
 assert.deepEqual(eighth.map(x=>x.id), ['sp031','sp032','sp033'],'F3-R08 is exactly three existing tits');
 assert.deepEqual(eighth.map(x=>x.F3.photoFilesInspected),[3,3,4]);
