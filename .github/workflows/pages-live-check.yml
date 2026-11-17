@@ -1,0 +1,27 @@
+name: Birdspot Pages live check
+on:
+  push:
+    branches: [qa/birdspot-pages-live-check-20261117]
+    paths: [.github/workflows/pages-live-check.yml]
+permissions:
+  contents: read
+jobs:
+  live:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch live Pages URL (no cache) and compare with expected release
+        run: |
+          set -e
+          BASE=https://saddamsmit-source.github.io/Birdspot-Library
+          for i in 1 2 3 4 5 6; do
+            V=$(curl -fsS -H 'Cache-Control: no-cache' "$BASE/sw.js?ts=$(date +%s)" | grep -o "APP_VERSION = '[^']*'" | head -1)
+            echo "try $i: $V"; [ "$V" = "APP_VERSION = '1.27.31'" ] && break; sleep 30
+          done
+          [ "$V" = "APP_VERSION = '1.27.31'" ]
+          curl -fsS "$BASE/docs/release/RELEASE_1.27.31.md?ts=$(date +%s)" | head -1
+          for f in index.html manifest.webmanifest sw.js src/services/sw-register.js assets/species/field-guide-media.json; do
+            L=$(curl -fsS "$BASE/$f?ts=$(date +%s)" | sha1sum | cut -c1-40)
+            G=$(curl -fsS "https://raw.githubusercontent.com/saddamsmit-source/Birdspot-Library/0f9f631a73500b84219ade48e965c8d458496bb3/$f" | sha1sum | cut -c1-40)
+            echo "$f live=$L git@0f9f631=$G"; [ "$L" = "$G" ]
+          done
+          curl -fsS -o /dev/null -w "index HTTP %{http_code}\n" "$BASE/"
