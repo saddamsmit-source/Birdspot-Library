@@ -57,6 +57,26 @@ def norm_name(value: str) -> str:
     return re.sub(r"\s+", " ", (value or "")).strip().casefold()
 
 
+_CREDIT_KEYS = {"author": "author", "recordist": "recordist", "copyright holder": "copyrightHolder",
+                "copyright_holder": "copyrightHolder", "copyrightholder": "copyrightHolder"}
+
+
+def credit_fields(wikitext: str) -> dict:
+    """R19-QA: losse makervelden uit de bestandspagina (bv. geluidssjablonen met recordist en copyright holder
+    naast een leeg Artist-veld). Alleen expliciet benoemde parameters; niets afleiden of samenvoegen."""
+    out = {}
+    for m in re.finditer(r"^\s*\|\s*([A-Za-z_ ]+?)\s*=\s*(.*?)\s*$", wikitext or "", re.M):
+        key = _CREDIT_KEYS.get(m.group(1).strip().casefold())
+        if not key or key in out:
+            continue
+        val = re.sub(r"\[\[(?:[^|\]]*\|)?([^\]]*)\]\]", r"\1", m.group(2))   # [[link|naam]] -> naam
+        val = re.sub(r"\{\{[^{}]*\}\}|<[^>]+>|'{2,}", "", val)
+        val = re.sub(r"\s+", " ", val).strip(" .;,")
+        if val:
+            out[key] = val[:160]
+    return out
+
+
 def safe_dest(asset: str, kind: str) -> Path:
     """Uitvoerpad moet binnen de toegestane mediamap blijven, juiste extensie hebben en nog niet bestaan."""
     media = "audio" if kind == "audio" else "image"
@@ -154,8 +174,9 @@ def license_ok(short: str) -> bool:
 
 
 def imageinfo(titles: list[str], thumb: int | None = None) -> dict:
-    params = {"action": "query", "titles": "|".join(titles), "prop": "imageinfo|categories",
-              "iiprop": "url|sha1|size|mime|extmetadata", "cllimit": "max", "clshow": "!hidden"}
+    params = {"action": "query", "titles": "|".join(titles), "prop": "imageinfo|categories|revisions",
+              "iiprop": "url|sha1|size|mime|extmetadata", "cllimit": "max", "clshow": "!hidden",
+              "rvprop": "content", "rvslots": "main"}
     if thumb:
         params["iiurlwidth"] = str(thumb)
     pages = get(API, params)["query"]["pages"].values()
@@ -177,6 +198,9 @@ def imageinfo(titles: list[str], thumb: int | None = None) -> dict:
             "description": clean(m("ImageDescription")), "date": clean(m("DateTimeOriginal"), 40),
             "categories": [c["title"].removeprefix("Category:") for c in page.get("categories", [])][:15],
         }
+        rev = (page.get("revisions") or [{}])[0]
+        wikitext = ((rev.get("slots") or {}).get("main") or {}).get("*") or rev.get("*") or ""
+        out[page["title"]]["creditFields"] = credit_fields(wikitext)
     return out
 
 
