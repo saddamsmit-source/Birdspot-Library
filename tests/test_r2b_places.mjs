@@ -84,4 +84,10 @@ ok('U13 ongeldige plekken/coördinaten worden genegeerd', () => {
   assert.deepEqual(candidatePlaces([{ id: 'x', lat: null, lon: 5 }, { lat: BASE.lat, lon: BASE.lon }], BASE.lat, BASE.lon), []);
   assert.deepEqual(candidatePlaces([place('a', 1)], null, null), []);
 });
-console.log(`R2B-UNIT PASS: ${n}/13`);
+ok('U14 herstel P3: 50,0 m automatisch, 50,4 m niet (geen afronding vóór de beslissing)', () => {
+  assert.equal(placeDecision({ places: [place('a', 120)], ...BASE, accuracyM: 50.0 }).auto, true);
+  assert.equal(placeDecision({ places: [place('a', 120)], ...BASE, accuracyM: 50.4 }).auto, false);
+  assert.equal(matchSoundPlace([place('a', 100)], { ...north(0), pinAccuracyM: 50.4 }, true).place, null);
+  assert.equal(matchSoundPlace([place('a', 100)], { ...north(0), pinAccuracyM: 50.0 }, true).place.id, 'a');
+});
+console.log(`R2B-UNIT PASS: ${n}/14`);

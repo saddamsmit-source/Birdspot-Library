@@ -1,7 +1,7 @@
 name: Birdspot ronde 2B — plekken, omgevingsfoto's, ZIP
 on:
   push:
-    branches: ['feat/birdspot-r2b-*']
+    branches: ['feat/birdspot-r2b-*', 'fix/birdspot-r2b-*']
     paths: ['.github/workflows/r2b-places-env-zip-qa.yml', 'src/**', 'sw.js', 'index.html', 'styles/**', 'tests/test_r2b_*', 'tests/test_map_k4.py', 'tests/fixtures/backup_pre_r2b_*.zip']
   pull_request:
     paths: ['.github/workflows/r2b-places-env-zip-qa.yml', 'src/**', 'sw.js', 'index.html', 'styles/**', 'tests/test_r2b_*', 'tests/test_map_k4.py', 'tests/fixtures/backup_pre_r2b_*.zip']
@@ -26,6 +26,23 @@ jobs:
         run: |
           set -o pipefail
           python tests/test_r2b_places_env_zip.py 2>&1 | tee r2b.log
+      - name: Herstel 2B (QA P1–P4) op deze commit
+        run: |
+          set -o pipefail
+          git log -1 --format='Uitgecheckt: %H' | tee qa-herstel.log
+          python tests/test_r2b_qa_herstel.py 2>&1 | tee -a qa-herstel.log
+      - name: Zelfde QA-tests op c2b63a0 moeten de gemelde fouten raken
+        run: |
+          git fetch --depth=1 origin c2b63a003839327a7f2bde0a3af0a7888553b1be
+          git worktree add /tmp/wt-c2b63a0 c2b63a003839327a7f2bde0a3af0a7888553b1be
+          set +e
+          BIRDSPOT_APP_ROOT=/tmp/wt-c2b63a0 python tests/test_r2b_qa_herstel.py > qa-oud.log 2>&1
+          rc=$?
+          set -e
+          cat qa-oud.log
+          test "$rc" -ne 0
+          for code in H1 H3 H4 H5 H6 H7; do grep -q "^$code .* FAIL" qa-oud.log || { echo "$code faalde NIET op c2b63a0"; exit 1; }; done
+          echo "BEWEZEN: H1 H3 H4 H5 H6 H7 falen op c2b63a0"
       - name: Bestaande suites (plekken, GPS-race, back-up, offline)
         if: always()
         run: |
@@ -42,4 +59,6 @@ jobs:
           path: |
             r2b.log
             regress.log
+            qa-herstel.log
+            qa-oud.log
             tests/screenshots/r2b/

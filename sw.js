@@ -100,6 +100,7 @@ const PRECACHE_PATHS = [
   'src/features/map/insights.js',
   'src/data/places.js',
   'src/data/placeEnv.js',
+  'src/data/dataLock.js',
   'src/features/map/visualization.js',
   'src/features/profile/view.js',
   'src/features/profile/stats.js',
