@@ -8,6 +8,13 @@
  * Geen upload: alles blijft op het toestel; alleen een eigen ZIP-back-up neemt ze mee.
  */
 import { getDB, changePhotos, PLACE_ENV_KIND, isPlaceEnvPhoto } from './db.js';
+import { withDataLock } from './dataLock.js';
+import { loadPlaces } from './places.js';
+
+/** De plek bestaat niet (meer), bijvoorbeeld na 'Terugzetten' in dit of een ander tabblad. */
+export class PlaceGoneError extends Error {
+  constructor() { super('Deze plek bestaat niet meer (bijvoorbeeld teruggezet). De foto is niet opgeslagen.'); this.name = 'PlaceGoneError'; }
+}
 
 export const ENV_MAX_BYTES = 30 * 1024 * 1024;
 export const ENV_CAPTION_MAX = 500;
@@ -56,7 +63,13 @@ export async function addEnvPhotos(placeId, files, now = new Date().toISOString(
       rejected.push(file?.name || 'bestand');
     }
   }
-  if (records.length) await changePhotos({ put: records });
+  if (records.length) {
+    // Definitieve opslag: binnen dezelfde lock als import/Terugzetten de plek opnieuw controleren.
+    await withDataLock(async () => {
+      if (!loadPlaces().some(place => place.id === placeId)) throw new PlaceGoneError();
+      await changePhotos({ put: records });
+    });
+  }
   return { added: records, rejected };
 }
 

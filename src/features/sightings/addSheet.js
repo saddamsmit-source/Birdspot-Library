@@ -71,6 +71,8 @@ function freshState(override = {}) {
     lon:          null,
     placeId:      null,   // K4: vaste plek; null = bij opslaan nieuwe plek als er een pin is
     pinAccuracyM: null,   // K2: nauwkeurigheid van de pin in meters (kaartzoom of GPS); null = onbekend
+    pinAccuracyExactM: null, // herstel 2B (P3): ongeronde waarde, alleen voor de plekbeslissing
+    autoLocationName: null,  // herstel 2B (P4): naam die automatisch uit een gekozen plek kwam
     habitat:      null,
     behavior:     null,
     weather:      null,
@@ -440,8 +442,8 @@ function _coordsHintText() {
     return `${coords} · <span data-place-state="separate">Aparte spot (nieuwe plek)</span>` +
       ` <button type="button" class="link-btn" data-place-change>Toch bekende plek kiezen</button>`;
   }
-  const why = offer.accurate ? '' : (Number.isFinite(_state.pinAccuracyM)
-    ? ` Niet automatisch gekoppeld: positie ±${_state.pinAccuracyM} m.`
+  const why = offer.accurate ? '' : (Number.isFinite(_exactAccuracy())
+    ? ` Niet automatisch gekoppeld: positie ±${_exactAccuracy().toLocaleString('nl-NL', { maximumFractionDigits: 1 })} m (grens 50 m).`
     : ' Niet automatisch gekoppeld: nauwkeurigheid onbekend.');
   const title = offer.mode === 'single'
     ? `Bekende plek binnen ${offer.radiusM} m.${why}`
@@ -462,11 +464,33 @@ function _currentOffer() {
  * Ronde 2B: beslis inline (geen venster) over een bekende vogelspot binnen de ingestelde straal.
  * Eén kandidaat + nauwkeurige positie → vooraf gekozen (afmeldbaar). Anders alleen een aanbod.
  */
+function _exactAccuracy() {
+  return Number.isFinite(_state.pinAccuracyExactM) ? _state.pinAccuracyExactM : _state.pinAccuracyM;
+}
+
+/** Een automatisch ingevulde plaatsnaam volgt de plek; een zelf getypte naam blijft altijd staan. */
+function _setAutoName(ov, name) {
+  if (String(_state.locationName || '').trim() && _state.locationName !== _state.autoLocationName) return;
+  _state.locationName = name;
+  _state.autoLocationName = name;
+  const inp = ov.querySelector('#sightLocation');
+  if (inp) inp.value = name;
+}
+function _clearAutoName(ov) {
+  if (_state.autoLocationName && _state.locationName === _state.autoLocationName) {
+    _state.locationName = '';
+    const inp = ov.querySelector('#sightLocation');
+    if (inp) inp.value = '';
+  }
+  _state.autoLocationName = null;
+}
+
 function _decidePlace(ov) {
   _state.placeOffer = null;
+  if (!_state.placeId) _clearAutoName(ov); // nieuwe pin: oude automatische naam hoort er niet meer bij
   if (!validPin(_state.lat, _state.lon) || _state.placeId) { _renderHint(ov); return; }
   const d = placeDecision({ places: loadPlaces(), lat: _state.lat, lon: _state.lon,
-    accuracyM: _state.pinAccuracyM, radiusM: reuseRadiusM() });
+    accuracyM: _exactAccuracy(), radiusM: reuseRadiusM() });
   _state.placeOffer = { lat: _state.lat, lon: _state.lon, mode: d.mode, auto: d.auto, accurate: d.accurate,
     radiusM: d.radiusM, separate: false,
     candidates: d.candidates.slice(0, 5).map(c => ({ id: c.place.id, name: c.place.name, distanceM: Math.round(c.distanceM) })) };
@@ -480,11 +504,7 @@ function _linkPlace(ov, id) {
   if (!offer || !place || !offer.candidates.some(c => c.id === id)) { _renderHint(ov); return; }
   _state.placeId = place.id;
   offer.separate = false;
-  if (!String(_state.locationName || '').trim()) {
-    _state.locationName = place.name;
-    const inp = ov.querySelector('#sightLocation');
-    if (inp) inp.value = place.name;
-  }
+  _setAutoName(ov, place.name);
   _renderHint(ov);
 }
 
@@ -503,14 +523,10 @@ function _bindPlaceHint(ov) {
     if (!offer) { _renderHint(ov); return; }
     if (btn.hasAttribute('data-place-choice')) _linkPlace(ov, btn.dataset.placeChoice);
     else if (btn.hasAttribute('data-place-separate')) {
-      const linked = loadPlaces().find(p => p.id === _state.placeId);
-      if (linked && _state.locationName === linked.name) {
-        _state.locationName = '';
-        const inp = ov.querySelector('#sightLocation');
-        if (inp) inp.value = '';
-      }
+      _clearAutoName(ov);
       _state.placeId = null; offer.separate = true; _renderHint(ov);
     } else if (btn.hasAttribute('data-place-change')) {
+      _clearAutoName(ov);
       _state.placeId = null; offer.separate = false; _renderHint(ov);
     }
   });
@@ -595,6 +611,7 @@ function _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx })
   // Locatie tekst
   el.querySelector('#sightLocation')?.addEventListener('input', e => {
     _state.locationName = e.target.value;
+    if (_state.locationName !== _state.autoLocationName) _state.autoLocationName = null; // zelf getypt
   });
 
   // Pin on map, or enter coordinates offline in the map picker.
@@ -610,6 +627,7 @@ function _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx })
         ctx.locationRevision++; // handmatige pin wint van elke nog lopende GPS-callback
         _state.lat=coords.lat;_state.lon=coords.lon;
         _state.pinAccuracyM=Number.isFinite(coords.accuracyM)?coords.accuracyM:null;
+        _state.pinAccuracyExactM=_state.pinAccuracyM;
         _state.placeId=null;
         ctx.cancelPinPicker=null;refresh();_decidePlace(ov);
       },
@@ -617,7 +635,8 @@ function _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx })
   });
   el.querySelector('#sightClearPin')?.addEventListener('click',()=>{
     ctx.locationRevision++;
-    _state.lat=null;_state.lon=null;_state.pinAccuracyM=null;_state.placeId=null;_state.placeOffer=null;refresh();
+    _state.lat=null;_state.lon=null;_state.pinAccuracyM=null;_state.pinAccuracyExactM=null;_state.placeId=null;_state.placeOffer=null;
+    _clearAutoName(ov);refresh();
   });
   // GPS
   el.querySelector('#sightGpsBtn')?.addEventListener('click', () => _requestGPS(ov,ctx));
@@ -925,6 +944,7 @@ function _requestGPS(ov,ctx,{ silent = false, intent = null } = {}) {
       _state.lat = pos.coords.latitude;
       _state.lon = pos.coords.longitude;
       _state.pinAccuracyM = Number.isFinite(pos.coords.accuracy) ? Math.round(pos.coords.accuracy) : null;
+      _state.pinAccuracyExactM = Number.isFinite(pos.coords.accuracy) ? pos.coords.accuracy : null;
       _state.placeId = null;
       _resetGPSButton(ov)?.classList.add('gps-btn--active');
       // R05 + ronde 2B: nooit een venster; een bekende plek binnen de straal wordt inline aangeboden.

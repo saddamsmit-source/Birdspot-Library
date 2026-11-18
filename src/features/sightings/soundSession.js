@@ -207,7 +207,8 @@ export function mountSoundSession(root, onSaved) {
     if (placeChoice?.id && !chosen) placeChoice = null;
     const match = chosen || placeChoice?.newPin
       ? { place: chosen, alternatives: [], needsChoice: false }
-      : matchSoundPlace(places, coordinates, positionOrigin === 'GPS', reuseRadiusM());
+      : matchSoundPlace(places, { lat: coordinates.lat, lon: coordinates.lon,
+          pinAccuracyM: coordinates.accuracyExactM ?? coordinates.pinAccuracyM }, positionOrigin === 'GPS', reuseRadiusM());
     matchedPlace = match.place;
     needsPlaceChoice = match.needsChoice;
     find('soundPlaceNameField').hidden = Boolean(matchedPlace);
@@ -227,7 +228,9 @@ export function mountSoundSession(root, onSaved) {
 
   function setPosition(lat, lon, accuracyM, origin, remember = true) {
     if (!validPin(lat, lon)) return false;
-    coordinates = { lat, lon, pinAccuracyM: Number.isFinite(accuracyM) ? Math.round(accuracyM) : null };
+    // Herstel 2B (P3): afgerond voor weergave/opslag, ongerond voor de plekbeslissing.
+    coordinates = { lat, lon, pinAccuracyM: Number.isFinite(accuracyM) ? Math.round(accuracyM) : null,
+      accuracyExactM: Number.isFinite(accuracyM) ? accuracyM : null };
     positionOrigin = origin;
     if (remember) placeChoice = null;
     showPlace();
@@ -425,7 +428,7 @@ export function mountSoundSession(root, onSaved) {
     const ids = [...candidates].filter(([, entry]) => entry.checked).map(([id]) => id);
     const now = new Date().toISOString();
     const shared = {
-      ...coordinates,
+      lat: coordinates.lat, lon: coordinates.lon, pinAccuracyM: coordinates.pinAccuracyM,
       placeId: matchedPlace?.id ?? null,
       date: date.value, time: time.value,
       locationName: matchedPlace?.name || locationName.value.trim() || null,
@@ -529,7 +532,7 @@ export function mountSoundSession(root, onSaved) {
     levels.push(...draft.levels);
     for (const [id, entry] of draft.candidates) addCandidate(id, entry.match, entry.checked);
     placeChoice = draft.placeChoice;
-    if (draft.coordinates) setPosition(draft.coordinates.lat, draft.coordinates.lon, draft.coordinates.pinAccuracyM, draft.positionOrigin ?? 'Bewaarde plek', false);
+    if (draft.coordinates) setPosition(draft.coordinates.lat, draft.coordinates.lon, draft.coordinates.accuracyExactM ?? draft.coordinates.pinAccuracyM, draft.positionOrigin ?? 'Bewaarde plek', false);
     else pinStatus.textContent = 'Deze sessie heeft nog geen plek. Kies er een via Details aanpassen.';
     if (clip) {
       setPlayback(clip);

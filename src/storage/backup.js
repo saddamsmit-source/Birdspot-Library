@@ -21,6 +21,7 @@
 import { STORAGE_KEY, SCHEMA_VERSION, migrateSighting } from '../data/sightings.js';
 import { SEEN_KEY } from '../data/species.js';
 import { getDB, PLACE_ENV_KIND }            from '../data/db.js';
+import { withDataLock }                     from '../data/dataLock.js';
 import { COLLECTION_KEYS, normalizeIds } from './collections.js';
 import { PLACES_KEY, PLACES_SCHEMA } from '../data/places.js';
 
@@ -383,10 +384,12 @@ export async function exportBackup() {
  */
 export async function validateBackupFile(file) {
   try {
-    const { data, files } = await readBackup(file);
+    const checked = await readBackup(file);
+    const { data, files } = checked;
     assertEnvRelations(data, readList(localStorage.getItem(PLACES_KEY), 'places'));
     const envPhotoCount = (data.mediaMeta || []).filter(meta => meta.kind === PLACE_ENV_KIND).length;
-    return { valid: true, sightingCount: data.sightings.length, photoCount: files.size,
+    const { mediaIds } = checked;
+    return { valid: true, sightingCount: data.sightings.length, photoCount: mediaIds.size,
       placeCount: Array.isArray(data.places) ? data.places.length : 0, envPhotoCount };
   } catch (error) {
     return { valid: false, error: error.message };
@@ -446,12 +449,25 @@ async function readBackup(file) {
     if (files.has(id)) throw new Error('De back-up bevat meerdere bestanden met dezelfde media-ID.');
     files.set(id, { bytes, ext });
   }
-  // Elk genoemd mediabestand moet in de ZIP zitten; anders vóór de bevestiging weigeren.
-  const declared = [...(data.photoIds || []), ...(data.mediaMeta || []).map(meta => meta.id),
-    ...data.sightings.flatMap(s => s.photoIds || [])];
-  const missing = declared.find(id => !files.has(id));
+  // Herstel 2B (P2): voorcontrole en import gebruiken exact dezelfde medialijst.
+  const mediaIds = backupMediaIds(data, files);
+  const missing = [...mediaIds].find(id => !files.has(id));
   if (missing) throw new Error('Mediabestand ontbreekt in de back-up: ' + missing);
-  return { data, files };
+  return { data, files, mediaIds };
+}
+
+/**
+ * De ene medialijst van een back-up. Met photoIds (alle exports sinds K-fasen) is die lijst
+ * leidend en moet hij sluitend zijn: elke mediaMeta-ID, elke foto van een waarneming en elk
+ * mediabestand in de ZIP staat erin. Zonder photoIds (zeer oude ZIP): alle bestanden + waarnemingsfoto's.
+ */
+function backupMediaIds(data, files) {
+  const sightingIds = data.sightings.flatMap(s => s.photoIds || []);
+  if (data.photoIds == null) return new Set([...files.keys(), ...sightingIds]);
+  const listed = new Set(data.photoIds);
+  const stray = [...(data.mediaMeta || []).map(meta => meta.id), ...sightingIds, ...files.keys()].find(id => !listed.has(id));
+  if (stray) throw new Error('De medialijst van de back-up is niet sluitend (' + stray + '). Er is niets hersteld.');
+  return listed;
 }
 
 function assertEnvRelations(data, localPlaces) {
@@ -475,8 +491,8 @@ async function runRestore(operation) {
   if (restoring) throw new Error('Er wordt al een back-up hersteld.');
   restoring = true;
   try {
-    if (navigator.locks) return await navigator.locks.request(SAFETY_KEY, operation);
-    return await operation();
+    // Herstel 2B (P1): zelfde lock als de opslag van omgevingsfoto's, ook over tabbladen.
+    return await withDataLock(operation);
   } finally {
     restoring = false;
   }
@@ -484,7 +500,7 @@ async function runRestore(operation) {
 
 export function importBackup(file) {
   return runRestore(async () => {
-    const { data, files } = await readBackup(file);
+    const { data, files, mediaIds } = await readBackup(file);
     const before = readStorage();
     const current = readList(before[STORAGE_KEY], 'sightings');
     const byId = new Map(current.map(s => [s.id, s]));
@@ -507,7 +523,7 @@ export function importBackup(file) {
     const photoOwners = new Map(sightings.flatMap(s => s.photoIds?.map(id => [id, s]) || []));
     const existingPhotos = new Set((await getAllPhotos()).map(p => p.id));
     const metadata = new Map((Array.isArray(data.mediaMeta) ? data.mediaMeta : []).filter(Boolean).map(m => [m.id, m]));
-    const mediaIds = new Set([...(data.photoIds || files.keys()), ...data.sightings.flatMap(s => s.photoIds || [])]);
+    // mediaIds komt uit readBackup: dezelfde lijst als de voorcontrole (P2).
     // Relatiecontrole vóór schrijven: een omgevingsfoto hoort bij een plek uit de back-up of van dit toestel.
     assertEnvRelations(data, readList(before[PLACES_KEY], 'places'));
     const newPhotos = [];
