@@ -132,6 +132,7 @@ jobs:
         if: always()
         run: |
           set -o pipefail
+          git fetch --depth=1 origin 5bf67043e830e977749f0ee593cf9f41f0e2822b   # basis voor test_release_upgrade.py (git archive 5bf6704)
           for t in test_map_k4.py test_map_k5.py test_map_k6.py test_r05_gps_race.py test_profile_backup.py test_release_backup_roundtrip.py test_pilot_cross_profile_zip.py test_sighting_merlin_pins.py test_pilot_offline_new_sighting.py test_profile_k7.py test_signature.py test_release_upgrade.py test_quick_add_merlin.py; do
             echo "::group::$t"
             (cd tests && python "$t") 2>&1 | tee -a regress.log
