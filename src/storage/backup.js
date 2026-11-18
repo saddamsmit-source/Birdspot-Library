@@ -21,7 +21,7 @@
 import { STORAGE_KEY, SCHEMA_VERSION, migrateSighting } from '../data/sightings.js';
 import { SEEN_KEY } from '../data/species.js';
 import { getDB, PLACE_ENV_KIND }            from '../data/db.js';
-import { withDataLock, assertRestoreSupported, markPlacesRemoved, clearPlaceTombstones, listTombstones } from '../data/dataLock.js';
+import { withDataLock, assertRestoreSupported, markPlacesRemoved, clearPlaceTombstones, listTombstones, assertImportSafe } from '../data/dataLock.js';
 import { COLLECTION_KEYS, normalizeIds } from './collections.js';
 import { PLACES_KEY, PLACES_SCHEMA } from '../data/places.js';
 
@@ -409,6 +409,7 @@ export async function validateBackupFile(file) {
   try {
     const checked = await readBackup(file);
     const { data, files } = checked;
+    await assertImportSafe(); // vóór de bevestiging: geen ander tabblad open
     assertEnvRelations(data, readList(localStorage.getItem(PLACES_KEY), 'places'));
     assertNoMediaForRemovedPlace(data, await listTombstones());
     const envPhotoCount = (data.mediaMeta || []).filter(meta => meta.kind === PLACE_ENV_KIND).length;
@@ -544,6 +545,7 @@ async function runRestore(operation) {
 
 export function importBackup(file) {
   return runRestore(async () => {
+    await assertImportSafe();
     const { data, files, mediaIds } = await readBackup(file);
     const before = readStorage();
     const current = readList(before[STORAGE_KEY], 'sightings');
@@ -647,6 +649,8 @@ export function importBackup(file) {
     if (!dataChanges.size && !newPhotos.length) {
       return { imported: data.sightings.length, merged: sightings.length };
     }
+    // Laatste controle vlak vóór de eerste wijziging: intussen geen ander tabblad geopend.
+    await assertImportSafe();
     if (onlyRevive) {
       // Ongewijzigde herimport die alleen bestaande plekken bevestigt: plekken zelf vastleggen,
       // veiligheidskopie en media ongemoeid, daarna uitsluitend die grafstenen opheffen.
