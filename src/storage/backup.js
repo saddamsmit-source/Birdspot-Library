@@ -21,7 +21,7 @@
 import { STORAGE_KEY, SCHEMA_VERSION, migrateSighting } from '../data/sightings.js';
 import { SEEN_KEY } from '../data/species.js';
 import { getDB, PLACE_ENV_KIND }            from '../data/db.js';
-import { withDataLock, assertRestoreSupported, markPlacesRemoved, clearPlaceTombstones } from '../data/dataLock.js';
+import { withDataLock, assertRestoreSupported, markPlacesRemoved, clearPlaceTombstones, listTombstones } from '../data/dataLock.js';
 import { COLLECTION_KEYS, normalizeIds } from './collections.js';
 import { PLACES_KEY, PLACES_SCHEMA } from '../data/places.js';
 
@@ -198,7 +198,7 @@ function verifyStorage(snapshot) {
   }
 }
 
-function applyStorageChanges(before, changes) {
+function applyStorageChanges(before, changes, force = new Set()) {
   verifyStorage(before);
   const written = [];
   const rollback = () => {
@@ -208,7 +208,8 @@ function applyStorageChanges(before, changes) {
   };
   try {
     for (const [key, value] of changes) {
-      if (value === before[key]) continue;
+      // force: deze import moet de waarde zelf vastleggen (grafsteenherstel), ook als die gelijk lijkt.
+      if (value === before[key] && !force.has(key)) continue;
       writeStorage(key, value);
       written.push([key, value]);
     }
@@ -228,9 +229,9 @@ function applyStorageChanges(before, changes) {
  * na elkaar, dus geen omgevingsfoto kan tussen controle en schrijven worden toegevoegd —
  * ook zonder Web Locks. Gooit `guard`, dan wordt niets gewijzigd.
  */
-async function commitRestore(before, changes, media, remove = false, guard = null) {
+async function commitRestore(before, changes, media, remove = false, guard = null, force = new Set()) {
   if (!media.length && !guard) {
-    applyStorageChanges(before, changes);
+    applyStorageChanges(before, changes, force);
     return;
   }
   const db = await getDB();
@@ -252,7 +253,7 @@ async function commitRestore(before, changes, media, remove = false, guard = nul
     const fail = error => { storageError = error; tx.abort(); };
     const applyStorage = () => {
       try {
-        rollback = applyStorageChanges(before, changes);
+        rollback = applyStorageChanges(before, changes, force);
       } catch (error) {
         fail(error);
       }
@@ -409,6 +410,7 @@ export async function validateBackupFile(file) {
     const checked = await readBackup(file);
     const { data, files } = checked;
     assertEnvRelations(data, readList(localStorage.getItem(PLACES_KEY), 'places'));
+    assertNoMediaForRemovedPlace(data, await listTombstones());
     const envPhotoCount = (data.mediaMeta || []).filter(meta => meta.kind === PLACE_ENV_KIND).length;
     const { mediaIds } = checked;
     return { valid: true, sightingCount: data.sightings.length, photoCount: mediaIds.size,
@@ -499,6 +501,19 @@ function backupMediaIds(data, files) {
   return listed;
 }
 
+/** Een oude localStorage-stand is geen bewijs dat een plek met grafsteen bestaat: alleen de ZIP zelf kan hem herstellen. */
+function assertNoMediaForRemovedPlace(data, tombstones) {
+  const incoming = new Set((Array.isArray(data.places) ? data.places : []).filter(validPlace).map(place => place.id));
+  const blocked = (data.mediaMeta || []).find(meta => meta.placeId && tombstones.has(meta.placeId) && !incoming.has(meta.placeId));
+  if (blocked) throw new Error('De back-up bevat media bij een plek die is teruggezet (' + blocked.placeId + '). Er is niets hersteld.');
+}
+
+function validPlace(place) {
+  return !!place && typeof place.id === 'string' && !!place.id.trim() && place.lat != null && place.lon != null &&
+    Number.isFinite(Number(place.lat)) && Math.abs(place.lat) <= 90 &&
+    Number.isFinite(Number(place.lon)) && Math.abs(place.lon) <= 180;
+}
+
 function assertEnvRelations(data, localPlaces) {
   const known = new Set([...(data.places || []), ...localPlaces].map(place => place?.id));
   for (const meta of data.mediaMeta || []) {
@@ -555,6 +570,10 @@ export function importBackup(file) {
     // mediaIds komt uit readBackup: dezelfde lijst als de voorcontrole (P2).
     // Relatiecontrole vóór schrijven: een omgevingsfoto hoort bij een plek uit de back-up of van dit toestel.
     assertEnvRelations(data, readList(before[PLACES_KEY], 'places'));
+    // Grafsteen-herstel: alleen plekken die DEZE ZIP zelf bevat, worden door deze import hersteld.
+    const tombstones = await listTombstones();
+    const incomingPlaceIds = new Set((Array.isArray(data.places) ? data.places : []).filter(validPlace).map(place => place.id));
+    const revive = [...tombstones].filter(id => incomingPlaceIds.has(id));
     const newPhotos = [];
     for (const id of mediaIds) {
       if (existingPhotos.has(id) || (skippedAttachments.has(id) && !photoOwners.has(id))) continue;
@@ -584,7 +603,11 @@ export function importBackup(file) {
       });
     }
 
+    // Media naar een teruggezette (verwijderde) plek die deze ZIP niet herstelt: weigeren vóór schrijven.
+    assertNoMediaForRemovedPlace(data, tombstones);
+
     const dataChanges = new Map();
+    let placesChanged = false;
     if (JSON.stringify(sightings) !== JSON.stringify(current)) {
       dataChanges.set(STORAGE_KEY, JSON.stringify({
         ...JSON.parse(before[STORAGE_KEY]),
@@ -595,13 +618,10 @@ export function importBackup(file) {
       const currentPlaces = readList(before[PLACES_KEY], 'places');
       const places = new Map(currentPlaces.map(place => [place.id, place]));
       for (const place of data.places) {
-        if (place && typeof place.id === 'string' && place.id.trim() && place.lat != null && place.lon != null
-          && Number.isFinite(Number(place.lat)) && Math.abs(place.lat) <= 90
-          && Number.isFinite(Number(place.lon)) && Math.abs(place.lon) <= 180) {
-          places.set(place.id, mergeRecord(places.get(place.id), place));
-        }
+        if (validPlace(place)) places.set(place.id, mergeRecord(places.get(place.id), place));
       }
-      if (JSON.stringify([...places.values()]) !== JSON.stringify(currentPlaces)) {
+      placesChanged = JSON.stringify([...places.values()]) !== JSON.stringify(currentPlaces);
+      if (revive.length || placesChanged) {
         dataChanges.set(PLACES_KEY, JSON.stringify({
           ...JSON.parse(before[PLACES_KEY]), schemaVersion: PLACES_SCHEMA, places: [...places.values()],
         }));
@@ -620,8 +640,18 @@ export function importBackup(file) {
       if (JSON.stringify(merged) !== JSON.stringify(local)) dataChanges.set(SEEN_KEY, JSON.stringify(merged));
     }
 
+    const force = new Set(revive.length ? [PLACES_KEY] : []);
+    const onlyRevive = revive.length > 0 && !placesChanged && !newPhotos.length &&
+      [...dataChanges.keys()].every(key => key === PLACES_KEY);
     // Laat een eerdere veiligheidskopie intact bij een herhaalde, ongewijzigde import.
     if (!dataChanges.size && !newPhotos.length) {
+      return { imported: data.sightings.length, merged: sightings.length };
+    }
+    if (onlyRevive) {
+      // Ongewijzigde herimport die alleen bestaande plekken bevestigt: plekken zelf vastleggen,
+      // veiligheidskopie en media ongemoeid, daarna uitsluitend die grafstenen opheffen.
+      await commitRestore(before, dataChanges, [], false, null, force);
+      await clearPlaceTombstones(revive);
       return { imported: data.sightings.length, merged: sightings.length };
     }
 
@@ -629,9 +659,9 @@ export function importBackup(file) {
       storage: Object.fromEntries(DATA_KEYS.map(key => [key, before[key]])),
       importedMediaIds: newPhotos.map(photo => photo.id),
     };
-    await commitRestore(before, [[SAFETY_KEY, JSON.stringify(safety)], ...dataChanges], newPhotos);
-    // Slot P1: plekken die (weer) bestaan krijgen geen grafsteen meer (binnen dezelfde lock).
-    await clearPlaceTombstones(readList(localStorage.getItem(PLACES_KEY), 'places').map(place => place.id)).catch(() => {});
+    await commitRestore(before, [[SAFETY_KEY, JSON.stringify(safety)], ...dataChanges], newPhotos, false, null, force);
+    // Alleen grafstenen opheffen van plekken die deze import aantoonbaar zelf heeft weggeschreven.
+    await clearPlaceTombstones(revive);
     setBackupStatus({ ...getBackupStatus(), lastRestore: new Date().toISOString(), restoreCount: data.sightings.length });
     return { imported: data.sightings.length, merged: sightings.length };
   });
@@ -668,9 +698,10 @@ export function restoreFromSafetyCopy() {
     // Herstel P1-rest: gecontroleerd binnen de schrijftransactie zelf (ook zonder Web Locks).
     const imported = new Set(normalizeIds(copy.importedMediaIds));
     const restoredPlaces = new Set(readList(changes.get(PLACES_KEY) ?? null, 'places').map(place => place.id));
-    // Slot P1: grafstenen vóór de wijziging (binnen de lock). Mislukt Terugzetten, dan weer weg.
+    // Slot P1: grafstenen vóór de wijziging (binnen de lock). Mislukt Terugzetten, dan alleen de
+    // grafstenen van DEZE poging weer weg; een grafsteen van een eerdere actie blijft staan.
     const removedPlaces = readList(before[PLACES_KEY], 'places').map(place => place.id).filter(id => !restoredPlaces.has(id));
-    await markPlacesRemoved(removedPlaces);
+    const createdTombstones = await markPlacesRemoved(removedPlaces);
     try {
       await commitRestore(before, changes, normalizeIds(copy.importedMediaIds), true, photos => {
         const orphaned = photos.filter(photo => photo.kind === PLACE_ENV_KIND &&
@@ -680,7 +711,7 @@ export function restoreFromSafetyCopy() {
         }
       });
     } catch (error) {
-      await clearPlaceTombstones(removedPlaces).catch(() => {});
+      await clearPlaceTombstones(createdTombstones).catch(() => {});
       throw error;
     }
   });

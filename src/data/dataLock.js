@@ -63,13 +63,38 @@ async function guardTx(mode, work) {
   });
 }
 
-/** Grafstenen voor plekken die door Terugzetten verdwijnen (vóór de wijziging, binnen de lock). */
-export function markPlacesRemoved(ids, at = new Date().toISOString()) {
-  if (!ids.length) return Promise.resolve();
-  return guardTx('readwrite', store => { for (const id of ids) store.put({ id, removedAt: at }); });
+/**
+ * Grafstenen voor plekken die door Terugzetten verdwijnen (vóór de wijziging, binnen de lock).
+ * Geeft alleen de ID's terug die DEZE poging nieuw heeft aangemaakt; een bestaande grafsteen van
+ * een eerdere actie wordt niet overschreven en mag bij mislukking ook niet worden opgeruimd.
+ */
+export async function markPlacesRemoved(ids, at = new Date().toISOString()) {
+  const created = [];
+  if (!ids.length) return created;
+  await guardTx('readwrite', store => {
+    for (const id of ids) {
+      const req = store.get(id);
+      req.onsuccess = () => {
+        if (req.result) return;
+        store.put({ id, removedAt: at });
+        created.push(id);
+      };
+    }
+  });
+  return created;
 }
 
-/** Een plek bestaat weer (import of mislukt Terugzetten): grafsteen weg. */
+/** Alle plek-ID's met een grafsteen (IDB: strikt consistent tussen tabbladen). */
+export async function listTombstones() {
+  const box = { ids: [] };
+  await guardTx('readonly', store => {
+    const req = store.getAllKeys();
+    req.onsuccess = () => { box.ids = req.result || []; };
+  });
+  return new Set(box.ids);
+}
+
+/** Alleen aanroepen voor een plek waarvan het bestaan aantoonbaar is hersteld, of voor grafstenen van de eigen mislukte poging. */
 export function clearPlaceTombstones(ids) {
   if (!ids.length) return Promise.resolve();
   return guardTx('readwrite', store => { for (const id of ids) store.delete(id); });
