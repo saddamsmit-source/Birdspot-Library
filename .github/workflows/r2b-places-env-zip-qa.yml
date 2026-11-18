@@ -60,6 +60,23 @@ jobs:
           test "$rc" -ne 0
           for code in L1 L3 K1 K2; do grep -q "^$code .* FAIL" p1-rest-oud.log || { echo "$code faalde NIET op d92d803"; exit 1; }; done
           echo "BEWEZEN: L1 L3 K1 K2 falen op d92d803"
+      - name: Slot P1 (twee tabbladen, vertraagde/ontbrekende berichten, oude localStorage) op deze commit
+        run: |
+          set -o pipefail
+          git log -1 --format='Uitgecheckt: %H' | tee p1-slot.log
+          python tests/test_r2b_p1_slot.py 2>&1 | tee -a p1-slot.log
+      - name: Zelfde slot-tests op 4e1931d moeten de gemelde fouten raken
+        run: |
+          git fetch --depth=1 origin 4e1931d1b2d80aa21d425d1adb35ca9dfd33c92d
+          git worktree add /tmp/wt-4e1931d 4e1931d1b2d80aa21d425d1adb35ca9dfd33c92d
+          set +e
+          BIRDSPOT_APP_ROOT=/tmp/wt-4e1931d python tests/test_r2b_p1_slot.py > p1-slot-oud.log 2>&1
+          rc=$?
+          set -e
+          cat p1-slot-oud.log
+          test "$rc" -ne 0
+          for code in S1 S3 S5; do grep -q "^$code .* FAIL" p1-slot-oud.log || { echo "$code faalde NIET op 4e1931d"; exit 1; }; done
+          echo "BEWEZEN: S1 S3 S5 falen op 4e1931d"
       - name: Bestaande suites (plekken, GPS-race, back-up, offline)
         if: always()
         run: |
@@ -80,4 +97,6 @@ jobs:
             qa-oud.log
             p1-rest.log
             p1-rest-oud.log
+            p1-slot.log
+            p1-slot-oud.log
             tests/screenshots/r2b/
