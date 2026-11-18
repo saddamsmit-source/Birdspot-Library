@@ -34,7 +34,7 @@ import { SPECIES } from '../../data/species.js';
 import { openPinPicker } from './pinPicker.js';
 import { normalizeEvidence, validPin, OBSERVATION_METHODS, BREEDING_BEHAVIORS } from './evidence.js';
 import { addSighting, updateSighting } from '../../data/sightings.js';
-import { loadPlaces, addPlace, savePlaces, placeDecision, reuseRadiusM } from '../../data/places.js';
+import { loadPlaces, placeDecision, reuseRadiusM, resolvePlaceForSave, removeCreatedPlace } from '../../data/places.js';
 import { changePhotos, getPhoto } from '../../data/db.js';
 import { openMediaPreview } from '../../utils/validateMedia.js';
 import { openSpeciesPicker }     from './speciesPicker.js';
@@ -852,9 +852,11 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
     mediaWritten = true;
     const allPhotoIds = [..._state.existingPhotoIds, ...newPhotos.map(photo => photo.id)];
     let placeId = validPin(loc.lat, loc.lon) ? loc.placeId : null;
-    if (validPin(loc.lat, loc.lon) && (!placeId || !loadPlaces().some(place => place.id === placeId))) {
-      newPlace = addPlace({ name: loc.name, lat: loc.lat, lon: loc.lon });
-      placeId = newPlace.id;
+    if (validPin(loc.lat, loc.lon)) {
+      // IndexedDB leidend: bestaande plek alleen als die nu nog bestaat, anders een nieuwe (één transactie).
+      const resolved = await resolvePlaceForSave({ placeId, name: loc.name, lat: loc.lat, lon: loc.lon });
+      placeId = resolved.place.id;
+      if (resolved.created) newPlace = resolved.place;
     }
 
     const sightingData = {
@@ -886,7 +888,7 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
       catch (cleanupError) { console.error('[sightingForm] media rollback', cleanupError); }
     }
     if (newPlace) {
-      try { savePlaces(loadPlaces().filter(place => place.id !== newPlace.id)); }
+      try { await removeCreatedPlace(newPlace.id); }
       catch (cleanupError) { console.error('[sightingForm] place rollback', cleanupError); }
     }
     console.error('[sightingForm] save error', error);

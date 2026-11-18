@@ -116,7 +116,7 @@ def main():
             wait_ready(p)
             p.evaluate("""async (seed) => {
                 for (const [k, v] of Object.entries(seed)) localStorage.setItem(k, typeof v === 'string' ? v : JSON.stringify(v));
-                const db = await new Promise((res, rej) => { const r = indexedDB.open('birdspot-library', 1);
+                const db = await new Promise((res, rej) => { const r = indexedDB.open('birdspot-library');
                   r.onupgradeneeded = () => { const d = r.result; if (!d.objectStoreNames.contains('photos')) { const s = d.createObjectStore('photos', { keyPath: 'id' }); s.createIndex('by_species','speciesId'); s.createIndex('by_sighting','sightingId'); } };
                   r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error); });
                 await new Promise((res, rej) => { const tx = db.transaction('photos', 'readwrite');

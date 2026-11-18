@@ -167,6 +167,8 @@ def main():
             p.locator("#placeRename").click()
             p.locator("#placeRenameInput").fill("Kijkhut Ezumakeeg")
             p.locator("#placeRenameSave").click()
+            # 2B-afronding: hernoemen schrijft eerst in IndexedDB (asynchroon), daarna pas de kop.
+            p.wait_for_function("() => document.querySelector('#mapSheetName')?.textContent === 'Kijkhut Ezumakeeg'", timeout=5000)
             assert p.locator("#mapSheetName").inner_text() == "Kijkhut Ezumakeeg"
             assert next(x for x in places() if x["id"] == hut["id"])["name"] == "Kijkhut Ezumakeeg"
             p.locator("#placeAddSighting").click()

@@ -111,11 +111,28 @@ jobs:
           test "$rc" -ne 0
           for code in T1 T2 T3; do grep -q "^$code .* FAIL" import-tabstand-oud.log || { echo "$code faalde NIET op 20019e1"; exit 1; }; done
           echo "BEWEZEN: T1 T2 T3 falen op 20019e1"
+      - name: Plekkenopslag IndexedDB leidend (I1–I5, M1–M5) op deze commit
+        run: |
+          set -o pipefail
+          git fetch --depth=1 origin 03bf663c2a315db03307b135e829e8fb6d470975
+          git worktree add /tmp/wt-03bf663 03bf663c2a315db03307b135e829e8fb6d470975
+          git log -1 --format='Uitgecheckt: %H' | tee plekken-idb.log
+          BIRDSPOT_OLD_ROOT=/tmp/wt-03bf663 python -u tests/test_r2b_plekken_idb.py 2>&1 | tee -a plekken-idb.log
+      - name: Zelfde plekkentests op 03bf663 moeten Q verliezen
+        run: |
+          set +e
+          BIRDSPOT_APP_ROOT=/tmp/wt-03bf663 python -u tests/test_r2b_plekken_idb.py > plekken-idb-oud.log 2>&1
+          rc=$?
+          set -e
+          cat plekken-idb-oud.log
+          test "$rc" -ne 0
+          for code in I1 I2 I3 I4; do grep -q "^$code .* FAIL" plekken-idb-oud.log || { echo "$code faalde NIET op 03bf663"; exit 1; }; done
+          echo "BEWEZEN: I1 I2 I3 I4 verliezen Q op 03bf663"
       - name: Bestaande suites (plekken, GPS-race, back-up, offline)
         if: always()
         run: |
           set -o pipefail
-          for t in test_map_k4.py test_r05_gps_race.py test_profile_backup.py test_release_backup_roundtrip.py test_pilot_cross_profile_zip.py test_sighting_merlin_pins.py test_pilot_offline_new_sighting.py test_profile_k7.py; do
+          for t in test_map_k4.py test_map_k5.py test_map_k6.py test_r05_gps_race.py test_profile_backup.py test_release_backup_roundtrip.py test_pilot_cross_profile_zip.py test_sighting_merlin_pins.py test_pilot_offline_new_sighting.py test_profile_k7.py test_signature.py test_release_upgrade.py test_quick_add_merlin.py; do
             echo "::group::$t"
             (cd tests && python "$t") 2>&1 | tee -a regress.log
             echo "::endgroup::"
@@ -137,4 +154,6 @@ jobs:
             grafsteen-oud.log
             import-tabstand.log
             import-tabstand-oud.log
+            plekken-idb.log
+            plekken-idb-oud.log
             tests/screenshots/r2b/

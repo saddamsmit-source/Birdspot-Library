@@ -71,7 +71,7 @@ def main():
             # IndexedDB media test: one real Blob linked to canonical sighting.
             page.evaluate("""async () => {
               const db = await new Promise((resolve,reject) => {
-                const req = indexedDB.open('birdspot-library',1);
+                const req = indexedDB.open('birdspot-library');
                 req.onsuccess = () => resolve(req.result);
                 req.onerror = () => reject(req.error);
               });

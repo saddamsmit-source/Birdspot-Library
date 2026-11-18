@@ -683,9 +683,9 @@ function openPlaceSheet(screenEl, place, visibleRecords, map, mediaId, trigger =
     });
     const renameRow=body.querySelector('#placeRenameRow');
     body.querySelector('#placeRename').addEventListener('click',()=>{renameRow.hidden=!renameRow.hidden;if(!renameRow.hidden)body.querySelector('#placeRenameInput').focus();});
-    body.querySelector('#placeRenameSave').addEventListener('click',()=>{
+    body.querySelector('#placeRenameSave').addEventListener('click',async()=>{
       try{
-        const p=renamePlace(place.id,body.querySelector('#placeRenameInput').value);
+        const p=await renamePlace(place.id,body.querySelector('#placeRenameInput').value);
         if(p){place.name=p.name;screenEl.querySelector('#mapSheetName').textContent=p.name;renameRow.hidden=true;}
       }catch(_){window.__birdspot?.toast?.('Naam opslaan mislukt','error');}
     });
