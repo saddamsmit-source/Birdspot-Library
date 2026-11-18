@@ -8,6 +8,7 @@
  * Regio-tags: stedelijk | agrarisch | bos | heide | duinen | kust | wad |
  *             polder | rivierengebied | water | moeras | rietland | zee | struweel
  */
+import { assertNoPendingRecovery } from './recoveryGate.js';
 
 export const SPECIES = [
   // ── DUIVEN ─────────────────────────────────────────────────
@@ -3357,6 +3358,7 @@ export function getSeenIds() {
 }
 
 export function toggleSeen(speciesId) {
+  assertNoPendingRecovery();   // correctieronde 2B: niet schrijven op een halve herstelstand
   const seen = getSeenIds();
   if (seen.has(speciesId)) seen.delete(speciesId);
   else seen.add(speciesId);

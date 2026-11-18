@@ -198,7 +198,9 @@ export async function withPlacesTx(change, extraStores = [], { readPhotos = fals
     };
     Promise.all([req(placesStore.getAll()), req(tx.objectStore('placeTombstones').getAllKeys()),
       readPhotos ? req(tx.objectStore('photos').getAll()) : Promise.resolve(null),
-      readMeta ? req(tx.objectStore('meta').get(readMeta)) : Promise.resolve(undefined)]).then(([stored, tombs, photos, meta]) => {
+      readMeta ? Promise.all([].concat(readMeta).map(key => req(tx.objectStore('meta').get(key))))
+        .then(rows => Object.fromEntries([].concat(readMeta).map((key, i) => [key, rows[i] || null])))
+        : Promise.resolve(undefined)]).then(([stored, tombs, photos, meta]) => {
       try {
         // Additieve migratie binnen dezelfde transactie: plek-ID's die alleen in localStorage staan
         // (oude versie, oude spiegel) toevoegen — nooit met grafsteen, nooit overschrijven of wissen.
@@ -281,24 +283,73 @@ async function readGuardTombstones() {
   }
 }
 
+/**
+ * Correctieronde 2B (P2): conflictronde, eenmalig in dezelfde transactie. Een plek die zowel bestaat
+ * als een grafsteen heeft (verouderde localStorage-plek bij de upgrade; ook in v2-databases van #301):
+ *  - zonder koppelingen (geen omgevingsfoto, geen waarneming met deze plek) → plek weg, grafsteen blijft;
+ *  - met koppelingen → plek blijft bereikbaar en alleen DIE grafsteen vervalt (foto's nooit wees).
+ * Andere grafstenen blijven ongemoeid.
+ */
+const CONFLICT_META = 'tombstoneConflicts';
+export const PLACE_MIGRATIONS = Object.freeze([GUARD_META, CONFLICT_META]);
+
+export class PlaceMigrationPendingError extends Error {
+  constructor() {
+    super('Plekken worden nog bijgewerkt. De foto is niet opgeslagen; probeer het zo opnieuw.');
+    this.name = 'PlaceMigrationPendingError';
+  }
+}
+
+function sightingPlaceIds() {
+  try {
+    const raw = JSON.parse(globalThis.localStorage?.getItem('birdspot-sightings') || 'null');
+    return new Set((raw?.sightings || []).map(s => s?.placeId).filter(Boolean));
+  } catch (_) {
+    return null;   // onleesbaar: koppelingen onzeker → niets verwijderen
+  }
+}
+
 async function migrateGuardTombstones() {
   const { getDB } = await import('./db.js');
   const db = await getDB();
-  const known = await req(db.transaction('meta').objectStore('meta').get(GUARD_META));
-  if (known) return;                       // eenmalig gedaan: 'birdspot-guard' niet meer lezen
-  const old = (await readGuardTombstones()).filter(row => row && typeof row.id === 'string' && row.id);
-  await withPlacesTx(({ places, tombstones, meta, tx }) => {
-    if (meta) return {};                    // intussen door een ander tabblad gedaan
-    const store = tx.objectStore('placeTombstones');
+  const store = db.transaction('meta').objectStore('meta');
+  const [guardDone, conflictsDone] = await Promise.all(PLACE_MIGRATIONS.map(key => req(store.get(key))));
+  if (guardDone && conflictsDone) return;   // eenmalig gedaan: 'birdspot-guard' niet meer lezen
+  const old = guardDone ? [] : (await readGuardTombstones()).filter(row => row && typeof row.id === 'string' && row.id);
+  const linkedBySighting = sightingPlaceIds();
+  await withPlacesTx(({ places, tombstones, photos, meta, tx }) => {
+    const now = new Date().toISOString();
+    const metaStore = tx.objectStore('meta');
+    const tombStore = tx.objectStore('placeTombstones');
     const next = new Set(tombstones);
-    for (const row of old) {
-      if (!next.has(row.id)) { store.put({ id: row.id, removedAt: row.removedAt || new Date().toISOString() }); next.add(row.id); }
+    if (!meta[GUARD_META]) {
+      for (const row of old) {
+        if (!next.has(row.id)) { tombStore.put({ id: row.id, removedAt: row.removedAt || now }); next.add(row.id); }
+      }
+      metaStore.put({ key: GUARD_META, at: now, count: old.length });
     }
-    tx.objectStore('meta').put({ key: GUARD_META, at: new Date().toISOString(), count: old.length });
-    const oldIds = new Set(old.map(row => row.id));
-    // Oude grafsteen gaat vóór een verouderde localStorage-plek (alleen uit migratie afkomstig).
-    return { remove: places.filter(place => oldIds.has(place.id)).map(place => place.id), tombstones: next };
-  }, ['meta'], { readMeta: GUARD_META });
+    const remove = [];
+    if (!meta[CONFLICT_META]) {
+      if (!linkedBySighting) throw new Error('Waarnemingen onleesbaar: plekconflicten niet veilig op te lossen');
+      const kept = [];
+      for (const place of places) {
+        if (!next.has(place.id)) continue;
+        const linked = linkedBySighting.has(place.id) || photos.some(photo => photo.placeId === place.id);
+        if (linked) { tombStore.delete(place.id); next.delete(place.id); kept.push(place.id); }
+        else remove.push(place.id);
+      }
+      metaStore.put({ key: CONFLICT_META, at: now, removed: remove, kept });
+    }
+    return { remove, tombstones: next };
+  }, ['meta', 'photos'], { readPhotos: true, readMeta: PLACE_MIGRATIONS });
+}
+
+/** Zekerheid vóór een koppeling aan een bestaande plek: migratie (opnieuw) proberen. */
+export async function ensurePlaceMigrations() {
+  try { await migrateGuardTombstones(); } catch (error) { console.error('[places] migratie', error); }
+}
+function migrationsDone(meta) {
+  return PLACE_MIGRATIONS.every(key => meta?.[key]);
 }
 
 /** Bij het starten van de app: migratie (v2-upgrade + grafstenen + additief) en cache laden. */
@@ -404,13 +455,16 @@ export async function renamePlace(id, name) {
  * heeft), anders een nieuwe plek. Alles binnen één transactie op de actuele plekken.
  * Geeft { place, created }.
  */
-export function resolvePlaceForSave({ placeId, name, lat, lon }) {
-  return withPlacesTx(({ places, tombstones }) => {
+export async function resolvePlaceForSave({ placeId, name, lat, lon }) {
+  if (placeId) await ensurePlaceMigrations();
+  return withPlacesTx(({ places, tombstones, meta }) => {
+    // Correctieronde 2B (P2): geen koppeling aan een bestaande plek zolang de migratie onzeker is.
+    if (placeId && !migrationsDone(meta)) throw new PlaceMigrationPendingError();
     const existing = placeId && !tombstones.has(placeId) ? places.find(place => place.id === placeId) : null;
     if (existing) return { result: { place: existing, created: false } };
     const place = makePlace({ name: defaultPlaceName(places, name), lat, lon });
     return { put: [place], result: { place, created: true } };
-  });
+  }, ['meta'], { readMeta: PLACE_MIGRATIONS });
 }
 
 export async function addPlace({ name, lat, lon }) {

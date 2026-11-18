@@ -17,8 +17,10 @@
  * van een ander tabblad blijft staan. Herhaalbaar: een tweede keer verandert niets.
  */
 import { getDB } from './db.js';
+import { withDataLock } from './dataLock.js';
+import { OP_PENDING_KEY } from './recoveryGate.js';
 
-export const OP_PENDING_KEY = 'birdspot-op-pending';
+export { OP_PENDING_KEY };
 const STORE = 'opJournal';
 
 function req(request) {
@@ -79,6 +81,59 @@ export function hasPendingMarker() {
   try { return localStorage.getItem(OP_PENDING_KEY) !== null; } catch (_) { return false; }
 }
 
+/**
+ * Driewegsamenvoeging (correctieronde 2B, P1) voor een sleutel die intussen door een ander tabblad
+ * of een oudere versie is gewijzigd. 'from' is de stand waarop de ander voortbouwde, 'to' de stand
+ * die deze bewerking moet opleveren. Wat de ander veranderde blijft; wat deze bewerking
+ * veranderde wordt (terug)gezet. Waarnemingen per ID, lijsten als verzameling.
+ * Geeft null als de waarde niet te ontleden is (dan blijft het journaal staan).
+ */
+function parse(raw) {
+  if (raw === null || raw === undefined) return { kind: 'empty' };
+  try {
+    const value = JSON.parse(raw);
+    if (Array.isArray(value)) return { kind: 'ids', value };
+    if (value && typeof value === 'object' && Array.isArray(value.sightings)) return { kind: 'sightings', value };
+  } catch (_) { /* onleesbaar */ }
+  return null;
+}
+function rebase(fromRaw, toRaw, currentRaw) {
+  const from = parse(fromRaw), to = parse(toRaw), cur = parse(currentRaw);
+  if (!from || !to || !cur) return null;
+  const kind = [from, to, cur].find(x => x.kind !== 'empty')?.kind;
+  if (!kind) return null;
+  if ([from, to, cur].some(x => x.kind !== 'empty' && x.kind !== kind)) return null;
+  if (kind === 'ids') {
+    const list = x => (x.kind === 'empty' ? [] : x.value);
+    const f = new Set(list(from)), t = new Set(list(to));
+    const added = list(to).filter(id => !f.has(id));
+    const removed = new Set(list(from).filter(id => !t.has(id)));
+    const out = list(cur).filter(id => !removed.has(id));
+    for (const id of added) if (!out.includes(id)) out.push(id);
+    return JSON.stringify(out);
+  }
+  const rows = x => (x.kind === 'empty' ? [] : x.value.sightings);
+  const byId = x => new Map(rows(x).map(row => [row?.id, row]));
+  const f = byId(from), t = byId(to);
+  const same = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+  const out = [];
+  const seen = new Set();
+  for (const row of rows(cur)) {
+    const id = row?.id;
+    seen.add(id);
+    if (!f.has(id) && !t.has(id)) { out.push(row); continue; }          // nieuw van de ander
+    if (same(row, f.get(id))) { if (t.has(id)) out.push(t.get(id)); continue; }  // ongewijzigd door de ander
+    out.push(row);                                                       // door de ander gewijzigd: blijft
+  }
+  for (const [id, row] of t) {
+    if (seen.has(id)) continue;
+    // Niet (meer) in de huidige stand: alleen toevoegen als de ander hem niet zelf verwijderde.
+    if (!f.has(id) || !same(row, f.get(id))) out.push(row);
+  }
+  const base = cur.kind === 'sightings' ? cur.value : (to.kind === 'sightings' ? to.value : from.value);
+  return JSON.stringify({ ...base, sightings: out });
+}
+
 function settle(record) {
   for (const [key, entry] of Object.entries(record.keys || {})) {
     const current = localStorage.getItem(key);
@@ -86,13 +141,38 @@ function settle(record) {
     if (record.state === 'committed') {
       const after = entry.after ?? null;
       if (current === after) continue;
-      if (current === before) writeLS(key, after);        // vastgelegd, maar localStorage nog oud
-      // anders: intussen door een ander tabblad gewijzigd → nieuwere waarde laten staan
+      if (current === before) { writeLS(key, after); continue; }   // vastgelegd, localStorage nog oud
+      if (key.endsWith('safety-copy')) continue;                    // nieuwere veiligheidskopie blijft
+      const merged = rebase(before, after, current);                // ander tabblad bouwde op vóór
+      if (merged === null) throw new Error('Herstel: ' + key + ' niet samen te voegen');
+      writeLS(key, merged);
     } else {
-      const ours = 'after' in entry ? current === (entry.after ?? null) : (entry.tag && tagOf(current) === entry.tag);
-      if (ours && current !== before) writeLS(key, before); // niet vastgelegd → terug naar vóór
+      if ('after' in entry) {
+        const after = entry.after ?? null;
+        if (current === before) continue;
+        if (current === after) { writeLS(key, before); continue; }  // niet vastgelegd → terug
+        // Een ander tabblad (of oudere versie) bouwde voort op de HALVE stand: zijn wijziging
+        // behouden, die van deze niet-vastgelegde bewerking terugdraaien.
+        const merged = rebase(after, before, current);
+        if (merged === null) throw new Error('Herstel: ' + key + ' niet samen te voegen');
+        writeLS(key, merged);
+      } else if (entry.tag && tagOf(current) === entry.tag && current !== before) {
+        writeLS(key, before);
+      }
     }
   }
+}
+
+/**
+ * Normale schrijfroutes voor journaalgegevens (waarnemingen): onder de datalock, en pas lezen en
+ * wijzigen nadat een openstaand journaal is afgehandeld. Een lopende import of Terugzetten in een
+ * ander tabblad laat deze schrijver dus wachten; na een weggevallen tabblad rondt hij eerst af.
+ */
+export function withDataWrite(change) {
+  return withDataLock(async () => {
+    await recoverOperations();
+    return change();
+  });
 }
 
 /** Bij het starten, onder de datalock. Geeft het aantal afgehandelde bewerkingen. */
@@ -101,6 +181,8 @@ export async function recoverOperations() {
   const records = await req(db.transaction(STORE).objectStore(STORE).getAll());
   records.sort((a, b) => String(a.at).localeCompare(String(b.at)));
   for (const record of records) {
+    // Lukt afhandelen niet (opslag vol, onleesbare waarde), dan gooit settle: record en markering
+    // blijven staan, schrijvers blijven geblokkeerd en de volgende poging kan het opnieuw doen.
     settle(record);
     await finishOperation(record.id);
   }

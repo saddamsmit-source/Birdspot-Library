@@ -9,7 +9,7 @@
  */
 import { getDB, changePhotos, PLACE_ENV_KIND, isPlaceEnvPhoto } from './db.js';
 import { withDataLock } from './dataLock.js';
-import { withPlacesTx } from './places.js';
+import { withPlacesTx, ensurePlaceMigrations, PLACE_MIGRATIONS, PlaceMigrationPendingError } from './places.js';
 
 /** De plek bestaat niet (meer), bijvoorbeeld na 'Terugzetten' in dit of een ander tabblad. */
 export class PlaceGoneError extends Error {
@@ -77,12 +77,15 @@ export async function addEnvPhotos(placeId, files, now = new Date().toISOString(
  * tabblad) loopt strikt ervoor of erna; nooit een foto bij een plek die niet (meer) bestaat.
  */
 async function putIfPlaceExists(placeId, records) {
-  await withPlacesTx(({ places, tombstones, tx }) => {
+  await ensurePlaceMigrations();
+  await withPlacesTx(({ places, tombstones, meta, tx }) => {
+    // Correctieronde 2B (P2): zolang de plekmigratie onzeker is, geen nieuwe foto (geen wees later).
+    if (PLACE_MIGRATIONS.some(key => !meta[key])) throw new PlaceMigrationPendingError();
     if (tombstones.has(placeId) || !places.some(place => place.id === placeId)) throw new PlaceGoneError();
     const photos = tx.objectStore('photos');
     for (const record of records) photos.put(record);
     return {};
-  }, ['photos']);
+  }, ['photos', 'meta'], { readMeta: PLACE_MIGRATIONS });
 }
 
 export async function getEnvPhotos(placeId) {
