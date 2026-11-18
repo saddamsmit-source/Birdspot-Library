@@ -10,7 +10,7 @@ permissions:
 jobs:
   r2b:
     runs-on: ubuntu-latest
-    timeout-minutes: 50
+    timeout-minutes: 75
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -128,6 +128,23 @@ jobs:
           test "$rc" -ne 0
           for code in I1 I2 I3 I4; do grep -q "^$code .* FAIL" plekken-idb-oud.log || { echo "$code faalde NIET op 03bf663"; exit 1; }; done
           echo "BEWEZEN: I1 I2 I3 I4 verliezen Q op 03bf663"
+      - name: Crashherstel import/Terugzetten + eenmalige grafstenen (A1–A3, B1–B3, G4–G7) op deze commit
+        run: |
+          set -o pipefail
+          git log -1 --format='Uitgecheckt: %H' | tee crashherstel.log
+          BIRDSPOT_OLD_ROOT=/tmp/wt-03bf663 python -u tests/test_r2b_crashherstel.py 2>&1 | tee -a crashherstel.log
+      - name: Zelfde crashtests op 66673393 moeten de gemelde fouten raken
+        run: |
+          git fetch --depth=1 origin 66673393e232a6352a3aa08cdea74317ba786989
+          git worktree add /tmp/wt-6667339 66673393e232a6352a3aa08cdea74317ba786989
+          set +e
+          BIRDSPOT_APP_ROOT=/tmp/wt-6667339 BIRDSPOT_OLD_ROOT=/tmp/wt-03bf663 python -u tests/test_r2b_crashherstel.py > crashherstel-oud.log 2>&1
+          rc=$?
+          set -e
+          cat crashherstel-oud.log
+          test "$rc" -ne 0
+          for code in A1 B1 G4 G5; do grep -q "^$code .* FAIL" crashherstel-oud.log || { echo "$code faalde NIET op 66673393"; exit 1; }; done
+          echo "BEWEZEN: A1 B1 G4 G5 falen op 66673393"
       - name: Bestaande suites (plekken, GPS-race, back-up, offline)
         if: always()
         run: |
@@ -157,4 +174,6 @@ jobs:
             import-tabstand-oud.log
             plekken-idb.log
             plekken-idb-oud.log
+            crashherstel.log
+            crashherstel-oud.log
             tests/screenshots/r2b/
