@@ -427,7 +427,7 @@ def run_migration(browser, url):
     m1 = p.evaluate(MIG_STATE)
     rows = {pl['id']: pl for pl in m1['places']}
     check('M1', 'upgrade van bestaande lokale gegevens → zelfde plek-ID\'s en records, fotokoppeling, grafsteen, geen dubbelen',
-          seeded['version'] == 1 and m1['version'] == 2 and sorted(rows) == ['pl_a', 'pl_b'] and len(m1['places']) == 2 and
+          seeded['version'] == 1 and m1['version'] == 3 and sorted(rows) == ['pl_a', 'pl_b'] and len(m1['places']) == 2 and
           rows == first and m1['media'] == old['media'] and ['pl_a'] == [m[2] for m in m1['media'] if m[1] == 'place-env'] and
           [t['id'] for t in m1['tombs']] == ['pl_x'] and links(m1['sightings']) == links(old['sightings']) == [('mig_s1', 'pl_a')] and
           sorted(pl['id'] for pl in json.loads(m1['mirror'])['places']) == ['pl_a', 'pl_b'],
@@ -469,7 +469,7 @@ def run_migration(browser, url):
     check('M3', 'onderbroken migratie → niets gewijzigd (v1), app start; volgende start voltooit zonder dubbelen',
           broken['version'] == 1 and 'places' not in broken['stores'] and broken['mirror'] == old['mirror'] and
           broken['media'] == old['media'] and links(broken['sightings']) == links(old['sightings']) and started and
-          resumed['version'] == 2 and {pl['id']: pl for pl in resumed['places']} == first and len(resumed['places']) == 2 and
+          resumed['version'] == 3 and {pl['id']: pl for pl in resumed['places']} == first and len(resumed['places']) == 2 and
           [t['id'] for t in resumed['tombs']] == ['pl_x'] and resumed['media'] == old['media'],
           f"na_afbreken versie={broken['version']} stores={broken['stores']} spiegel_gelijk={broken['mirror'] == old['mirror']} media_gelijk={broken['media'] == old['media']} app_gestart={started} "
           f"hervat versie={resumed['version']} plekken={[pl['id'] for pl in resumed['places']]}")

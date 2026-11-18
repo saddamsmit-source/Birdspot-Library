@@ -181,7 +181,7 @@ function req(request) {
  * `change({ places, tombstones, tx })` geeft { put?, remove?, result? } terug, of gooit (dan wijzigt niets).
  * Extra stores (bijv. 'photos') kunnen in dezelfde transactie worden meegenomen.
  */
-export async function withPlacesTx(change, extraStores = [], { readPhotos = false, onAbort = null } = {}) {
+export async function withPlacesTx(change, extraStores = [], { readPhotos = false, readMeta = null, onAbort = null } = {}) {
   const { getDB } = await import('./db.js');
   const db = await getDB();
   const stores = ['places', 'placeTombstones', ...extraStores];
@@ -197,7 +197,8 @@ export async function withPlacesTx(change, extraStores = [], { readPhotos = fals
       reject(failure || tx.error || new Error('Plek opslaan afgebroken'));
     };
     Promise.all([req(placesStore.getAll()), req(tx.objectStore('placeTombstones').getAllKeys()),
-      readPhotos ? req(tx.objectStore('photos').getAll()) : Promise.resolve(null)]).then(([stored, tombs, photos]) => {
+      readPhotos ? req(tx.objectStore('photos').getAll()) : Promise.resolve(null),
+      readMeta ? req(tx.objectStore('meta').get(readMeta)) : Promise.resolve(undefined)]).then(([stored, tombs, photos, meta]) => {
       try {
         // Additieve migratie binnen dezelfde transactie: plek-ID's die alleen in localStorage staan
         // (oude versie, oude spiegel) toevoegen — nooit met grafsteen, nooit overschrijven of wissen.
@@ -209,7 +210,7 @@ export async function withPlacesTx(change, extraStores = [], { readPhotos = fals
         }
         for (const place of legacy) placesStore.put(place);
         const places = [...stored, ...legacy];
-        const res = change({ places, tombstones: new Set(tombs), photos, tx }) || {};
+        const res = change({ places, tombstones: new Set(tombs), photos, meta, tx }) || {};
         for (const place of res.put || []) placesStore.put(place);
         for (const id of res.remove || []) placesStore.delete(id);
         const byId = new Map(places.map(place => [place.id, place]));
@@ -252,36 +253,52 @@ export function unionLegacy() {
 }
 
 /**
- * Grafstenen uit de losse 'birdspot-guard'-database (tussenversies van ronde 2B) eenmalig
- * overnemen, vóór de additieve migratie, zodat een verwijderde plek nooit terugkomt.
- * Maakt die database nooit aan als hij niet bestaat; laat hem verder ongemoeid.
+ * Grafstenen uit de losse 'birdspot-guard'-database (tussenversies van ronde 2B) DUURZAAM EENMALIG
+ * overnemen (P2): de markering 'guardTombstones' in de store 'meta' wordt in dezelfde transactie
+ * gezet als de grafstenen. Onderbroken → niets vastgelegd, volgende start probeert opnieuw; twee
+ * tabbladen tegelijk → de tweede transactie ziet de markering en doet niets. Een oude grafsteen gaat
+ * vóór een verouderde localStorage-plek met hetzelfde ID (die plek wordt niet overgenomen). Na de
+ * markering wordt 'birdspot-guard' nooit meer gelezen, dus een later geldig herstelde plek blijft
+ * bruikbaar. Maakt 'birdspot-guard' nooit aan als die niet bestaat; laat hem verder ongemoeid.
  */
-async function migrateGuardTombstones() {
-  if (typeof indexedDB === 'undefined') return;
-  const guard = await new Promise(resolve => {
+const GUARD_META = 'guardTombstones';
+async function readGuardTombstones() {
+  if (typeof indexedDB === 'undefined') return [];
+  const guard = await new Promise((resolve, reject) => {
     let fresh = false;
     const request = indexedDB.open('birdspot-guard');
     request.onupgradeneeded = () => { fresh = true; request.transaction.abort(); };
     request.onsuccess = () => resolve(fresh ? null : request.result);
-    request.onerror = () => resolve(null);
-    request.onblocked = () => resolve(null);
+    request.onerror = () => (fresh ? resolve(null) : reject(request.error));
+    request.onblocked = () => reject(new Error('birdspot-guard geblokkeerd'));
   });
-  if (!guard) return;
+  if (!guard) return [];
   try {
-    if (!guard.objectStoreNames.contains('removedPlaces')) return;
-    const old = await req(guard.transaction('removedPlaces').objectStore('removedPlaces').getAll());
-    if (!old.length) return;
-    await withPlacesTx(({ tombstones, tx }) => {
-      const store = tx.objectStore('placeTombstones');
-      const next = new Set(tombstones);
-      for (const row of old) {
-        if (row && typeof row.id === 'string' && !next.has(row.id)) { store.put({ id: row.id, removedAt: row.removedAt || new Date().toISOString() }); next.add(row.id); }
-      }
-      return { tombstones: next };
-    });
+    if (!guard.objectStoreNames.contains('removedPlaces')) return [];
+    return await req(guard.transaction('removedPlaces').objectStore('removedPlaces').getAll());
   } finally {
     guard.close();
   }
+}
+
+async function migrateGuardTombstones() {
+  const { getDB } = await import('./db.js');
+  const db = await getDB();
+  const known = await req(db.transaction('meta').objectStore('meta').get(GUARD_META));
+  if (known) return;                       // eenmalig gedaan: 'birdspot-guard' niet meer lezen
+  const old = (await readGuardTombstones()).filter(row => row && typeof row.id === 'string' && row.id);
+  await withPlacesTx(({ places, tombstones, meta, tx }) => {
+    if (meta) return {};                    // intussen door een ander tabblad gedaan
+    const store = tx.objectStore('placeTombstones');
+    const next = new Set(tombstones);
+    for (const row of old) {
+      if (!next.has(row.id)) { store.put({ id: row.id, removedAt: row.removedAt || new Date().toISOString() }); next.add(row.id); }
+    }
+    tx.objectStore('meta').put({ key: GUARD_META, at: new Date().toISOString(), count: old.length });
+    const oldIds = new Set(old.map(row => row.id));
+    // Oude grafsteen gaat vóór een verouderde localStorage-plek (alleen uit migratie afkomstig).
+    return { remove: places.filter(place => oldIds.has(place.id)).map(place => place.id), tombstones: next };
+  }, ['meta'], { readMeta: GUARD_META });
 }
 
 /** Bij het starten van de app: migratie (v2-upgrade + grafstenen + additief) en cache laden. */

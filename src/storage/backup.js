@@ -24,6 +24,7 @@ import { getDB, PLACE_ENV_KIND }            from '../data/db.js';
 import { withDataLock, assertRestoreSupported, listTombstones, assertImportSafe } from '../data/dataLock.js';
 import { COLLECTION_KEYS, normalizeIds } from './collections.js';
 import { PLACES_KEY, withPlacesTx, refreshPlaces } from '../data/places.js';
+import { prepareOperation, markCommitted, dropInTx, finishOperation } from '../data/opJournal.js';
 
 // ── ZIP-helpers (geen CDN-dependency; pure JS) ─────────────────────────────
 
@@ -559,10 +560,16 @@ export function importBackup(file) {
 
     // Laatste controle vlak vóór de eerste wijziging: intussen geen ander tabblad geopend.
     await assertImportSafe();
+    // Herstelronde 2B (P1): journaal vóór de eerste wijziging, zodat ook een weggevallen tabblad bij
+    // de volgende start op 'helemaal vóór' of 'helemaal na' uitkomt (zie opJournal.js).
+    const journalKeys = Object.fromEntries([...dataChanges].map(([key, value]) => [key, { before: before[key], after: value }]));
+    const opId = await prepareOperation('import', id => ({ ...journalKeys, [SAFETY_KEY]: { before: before[SAFETY_KEY], tag: id } }));
     // Eén transactie over plekken, grafstenen en foto's: samenvoegen met de ACTUELE plekken uit
     // IndexedDB (nooit een oude localStorage-lijst), relaties controleren, alles schrijven of niets.
     let rollback = null;
-    const outcome = await withPlacesTx(({ places, tombstones, tx }) => {
+    let outcome;
+    try {
+    outcome = await withPlacesTx(({ places, tombstones, tx }) => {
       assertNoMediaForRemovedPlace(data, tombstones);
       assertEnvRelations(data, places);
       const byId = new Map(places.map(place => [place.id, place]));
@@ -579,19 +586,28 @@ export function importBackup(file) {
       if (!dataChanges.size && !newPhotos.length && !put.length) {
         // Ongewijzigde (her)import: veiligheidskopie, waarnemingen, plekken en foto's ongemoeid.
         for (const id of revive) tombStore.delete(id);
+        dropInTx(tx, opId);
         return { result: revive.length ? 'revived' : 'unchanged', tombstones: nextTombs };
       }
       const safety = {
+        opId,                                     // herkenning bij herstel na wegvallen (P1)
         storage: Object.fromEntries(DATA_KEYS.map(key => [key, before[key]])),
         places,                                   // werkelijke plekken van vóór de import (IndexedDB)
         importedMediaIds: newPhotos.map(photo => photo.id),
       };
-      rollback = applyStorageChanges(before, [[SAFETY_KEY, JSON.stringify(safety)], ...dataChanges]);
+      const safetyRaw = JSON.stringify(safety);
+      rollback = applyStorageChanges(before, [[SAFETY_KEY, safetyRaw], ...dataChanges]);
       const photoStore = tx.objectStore('photos');
       for (const photo of newPhotos) photoStore.add(photo);
       for (const id of revive) tombStore.delete(id);
+      markCommitted(tx, opId, 'import', { ...journalKeys, [SAFETY_KEY]: { before: before[SAFETY_KEY], after: safetyRaw } });
       return { put, result: 'imported', tombstones: nextTombs };
-    }, ['photos'], { onAbort: () => rollback?.() });
+    }, ['photos', 'opJournal'], { onAbort: () => rollback?.() });
+    } catch (error) {
+      await finishOperation(opId).catch(() => {});   // localStorage is al teruggezet (onAbort)
+      throw error;
+    }
+    await finishOperation(opId).catch(error => console.error('[backup] journaal opruimen', error));
     if (outcome === 'imported') {
       setBackupStatus({ ...getBackupStatus(), lastRestore: new Date().toISOString(), restoreCount: data.sightings.length });
     }
@@ -630,9 +646,13 @@ export function restoreFromSafetyCopy() {
     changes.set(SAFETY_KEY, null);
     const imported = new Set(normalizeIds(copy.importedMediaIds));
     const restoredIds = new Set(restoredPlaces.map(place => place.id));
+    // Herstelronde 2B (P1): journaal vóór de eerste wijziging (zie opJournal.js).
+    const journalKeys = Object.fromEntries([...changes].map(([key, value]) => [key, { before: before[key] ?? null, after: value ?? null }]));
+    const opId = await prepareOperation('restore', journalKeys);
     // Eén transactie: wees-controle op de actuele foto's, grafstenen, plekken, media en localStorage.
     // Gooit er iets of breekt de transactie af, dan is er niets gewijzigd (ook geen grafsteen).
     let rollback = null;
+    try {
     await withPlacesTx(({ places, tombstones, photos, tx }) => {
       const orphaned = photos.filter(photo => photo.kind === PLACE_ENV_KIND &&
         !imported.has(photo.id) && !restoredIds.has(photo.placeId));
@@ -647,8 +667,14 @@ export function restoreFromSafetyCopy() {
       rollback = applyStorageChanges(before, changes);
       const photoStore = tx.objectStore('photos');
       for (const id of imported) photoStore.delete(id);
+      markCommitted(tx, opId, 'restore', journalKeys);
       return { put: restoredPlaces, remove: removed, tombstones: nextTombs };
-    }, ['photos'], { readPhotos: true, onAbort: () => rollback?.() });
+    }, ['photos', 'opJournal'], { readPhotos: true, onAbort: () => rollback?.() });
+    } catch (error) {
+      await finishOperation(opId).catch(() => {});
+      throw error;
+    }
+    await finishOperation(opId).catch(error => console.error('[backup] journaal opruimen', error));
   });
 }
 

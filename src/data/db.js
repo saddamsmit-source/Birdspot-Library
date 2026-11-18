@@ -12,7 +12,8 @@
 
 const DB_NAME    = 'birdspot-library';
 // v2 (ronde 2B-afronding): stores 'places' en 'placeTombstones'; IndexedDB is leidend voor plekken.
-const DB_VERSION = 2;
+// v3 (herstelronde 2B): 'opJournal' (import/Terugzetten crashbestendig) en 'meta' (eenmalige migraties).
+const DB_VERSION = 3;
 const LEGACY_PLACES_KEY = 'birdspot-places';
 
 let _db = null;
@@ -47,6 +48,13 @@ export function getDB() {
       // v2: plekken en grafstenen. Migratie uit localStorage binnen de (atomaire) upgrade-transactie:
       // mislukt of onderbreekt die, dan blijft de database v1 en herhaalt de volgende start alles.
       if (!db.objectStoreNames.contains('placeTombstones')) db.createObjectStore('placeTombstones', { keyPath: 'id' });
+      if (!db.objectStoreNames.contains('opJournal')) db.createObjectStore('opJournal', { keyPath: 'id' });
+      if (!db.objectStoreNames.contains('meta')) {
+        const meta = db.createObjectStore('meta', { keyPath: 'key' });
+        // Vanaf v2 nam elke start de grafstenen uit 'birdspot-guard' al over; opnieuw overnemen zou
+        // een sindsdien geldig herstelde plek weer blokkeren (P2). Dus als gedaan markeren.
+        if (event.oldVersion === 2) meta.put({ key: 'guardTombstones', at: new Date().toISOString(), via: 'v2' });
+      }
       if (!db.objectStoreNames.contains('places')) {
         const store = db.createObjectStore('places', { keyPath: 'id' });
         let legacy = [];

@@ -23,7 +23,8 @@ import { renderInsights }   from './features/insights/view.js';
 import { renderFilmStudio } from './features/film/view.js';
 import { openAddSheet }     from './features/sightings/addSheet.js';
 import { openQuickAdd }      from './features/sightings/quickAdd.js';
-import { holdTabPresence }   from './data/dataLock.js';
+import { holdTabPresence, withDataLock } from './data/dataLock.js';
+import { recoverOperations, hasPendingMarker } from './data/opJournal.js';
 import { initPlaces }        from './data/places.js';
 
 // Herstel 2B (import met oude tabbladstand): elk open Birdspot-tabblad meldt zich aan.
@@ -179,8 +180,17 @@ const initialRoute = installNavigation({navigate,current:()=>currentRoute,curren
 // Ronde 2B-afronding: plekken uit IndexedDB laden (en migreren) vóór de eerste weergave.
 // Hangt de database (bijv. een oudere versie in een ander tabblad blokkeert de upgrade), dan na
 // 1,5 s toch starten; schrijven wacht dan op IndexedDB en verliest niets.
-await Promise.race([initPlaces().catch(error => console.error('[places] init', error)), new Promise(resolve => setTimeout(resolve, 1500))]);
 addEventListener('birdspot-db-blocked', () => showToast('Sluit andere Birdspot-tabbladen om de update af te ronden', 6000));
+// Herstelronde 2B (P1): een import of Terugzetten die door een weggevallen tabblad niet afkwam, eerst
+// afronden (terug- of doorrollen) onder de datalock — dus na een lopende bewerking in een ander tabblad.
+// Staat de markering, dan wacht de app daar volledig op vóór hij gegevens gebruikt of wijzigt.
+const recovery = withDataLock(() => recoverOperations()).catch(error => {
+  console.error('[journaal] herstel', error);
+  showToast('Een onderbroken herstelactie kon niet worden afgerond. Herlaad Birdspot.', 8000);
+});
+if (hasPendingMarker()) await recovery;
+else await Promise.race([recovery, new Promise(resolve => setTimeout(resolve, 1500))]);
+await Promise.race([initPlaces().catch(error => console.error('[places] init', error)), new Promise(resolve => setTimeout(resolve, 1500))]);
 navigate(ROUTES[initialRoute] ? initialRoute : 'home',{history:false});
 // Splash waits until the application home route is actually initialized.
 window.dispatchEvent(new Event('birdspot:ready'));
