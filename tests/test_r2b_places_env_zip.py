@@ -526,7 +526,11 @@ UNDO_JS = """async () => {
   await env.deleteEnvPhoto(added[0].id);
   await backup.restoreFromSafetyCopy();
   const left = (await env.getEnvPhotos('pl_a')).length + (await env.getEnvPhotos('pl_b')).length;
-  return { refused, unchanged, left, places: localStorage.getItem('birdspot-places') };
+  const db = await (await import('/src/data/db.js')).getDB();
+  const idbPlaces = await new Promise((res, rej) => { const r = db.transaction('places').objectStore('places').count(); r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error); });
+  const mirror = JSON.parse(localStorage.getItem('birdspot-places') || 'null');
+  // 2B-afronding: IndexedDB is leidend; de spiegel is leeg (of ontbreekt) na terugzetten naar een leeg profiel.
+  return { refused, unchanged, left, places: idbPlaces === 0 && (mirror === null || (mirror.places || []).length === 0) ? null : { idbPlaces, mirror } };
 }"""
 
 

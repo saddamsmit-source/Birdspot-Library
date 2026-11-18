@@ -110,17 +110,196 @@ export function matchSoundPlace(places, { lat, lon, pinAccuracyM }, fromGps, rad
   };
 }
 
-export function loadPlaces(storage = globalThis.localStorage) {
+// ── Opslag: IndexedDB is leidend (ronde 2B-afronding) ─────────────────────
+// Lezen: synchrone cache, bij de start geladen uit IndexedDB en na elke wijziging (ook vanuit andere
+// tabbladen) ververst. Schrijven: altijd binnen een IndexedDB-transactie die de actuele plekken leest.
+// localStorage is alleen nog een spiegel (terugval oudere versie, bestaande lezers) en een
+// additieve bron: plek-ID's die daar wel en in IndexedDB niet staan, worden toegevoegd — nooit een
+// plek met grafsteen, nooit overschrijven of verwijderen. Daardoor kan geen oude stand iets wissen.
+let cache = null;              // Array van plekken uit IndexedDB, of null vóór initPlaces()
+let tombCache = new Set();     // plek-ID's met grafsteen
+let lastMirrorRaw = null;      // laatst door deze module geschreven/gelezen spiegel
+let unionBusy = null;
+let channel = null;           // pas in initPlaces() (browser) aangemaakt
+
+function legacyPlaces(storage = globalThis.localStorage) {
   try {
-    const raw = JSON.parse(storage.getItem(PLACES_KEY) || 'null');
+    const raw = JSON.parse(storage?.getItem(PLACES_KEY) || 'null');
     return Array.isArray(raw?.places) ? raw.places : [];
   } catch (_) { return []; }
 }
+const validStored = place => !!place && typeof place.id === 'string' && !!place.id && validCoord(place.lat, place.lon);
 
-/** @throws bij opslagfout — caller toont de melding. */
+/** Plekken (synchroon, voor weergave en beslissingen vóór opslaan). */
+export function loadPlaces(storage = globalThis.localStorage) {
+  if (cache === null || storage !== globalThis.localStorage) return legacyPlaces(storage);
+  let raw = null;
+  try { raw = storage.getItem(PLACES_KEY); } catch (_) {}
+  if (raw !== lastMirrorRaw) {
+    lastMirrorRaw = raw;
+    const known = new Set(cache.map(place => place.id));
+    const extra = legacyPlaces(storage).filter(place => validStored(place) && !known.has(place.id) && !tombCache.has(place.id));
+    if (extra.length) {
+      cache = [...cache, ...extra];
+      unionBusy = unionLegacy().catch(() => {});
+    }
+  }
+  return cache;
+}
+
+/** @deprecated Schrijft alleen de spiegel; gebruik de transactiefuncties hieronder. */
 export function savePlaces(places, storage = globalThis.localStorage) {
   storage.setItem(PLACES_KEY, JSON.stringify({ schemaVersion: PLACES_SCHEMA, places }));
 }
+
+function writeMirror(places) {
+  const raw = JSON.stringify({ schemaVersion: PLACES_SCHEMA, places });
+  try {
+    // Een waarde in een onbekend formaat (bijv. uit een heel oude versie) nooit overschrijven:
+    // die blijft byte-gelijk staan; de plekken zelf staan in IndexedDB.
+    const current = localStorage.getItem(PLACES_KEY);
+    if (current !== null && current !== raw) {
+      let shape = null;
+      try { shape = JSON.parse(current); } catch (_) { shape = undefined; }
+      if (!shape || typeof shape !== 'object' || Array.isArray(shape) || !Array.isArray(shape.places)) return raw;
+    }
+    localStorage.setItem(PLACES_KEY, raw);
+    lastMirrorRaw = raw;
+  } catch (_) { /* spiegel is niet leidend */ }
+  return raw;
+}
+export function placesMirrorValue(places) {
+  return JSON.stringify({ schemaVersion: PLACES_SCHEMA, places });
+}
+
+function req(request) {
+  return new Promise((resolve, reject) => { request.onsuccess = () => resolve(request.result); request.onerror = () => reject(request.error); });
+}
+
+/**
+ * Lees-wijzig-schrijf op de actuele plekken in één readwrite-transactie.
+ * `change({ places, tombstones, tx })` geeft { put?, remove?, result? } terug, of gooit (dan wijzigt niets).
+ * Extra stores (bijv. 'photos') kunnen in dezelfde transactie worden meegenomen.
+ */
+export async function withPlacesTx(change, extraStores = [], { readPhotos = false, onAbort = null } = {}) {
+  const { getDB } = await import('./db.js');
+  const db = await getDB();
+  const stores = ['places', 'placeTombstones', ...extraStores];
+  let after = null;
+  const result = await new Promise((resolve, reject) => {
+    const tx = db.transaction(stores, 'readwrite');
+    const placesStore = tx.objectStore('places');
+    let out;
+    let failure = null;
+    tx.oncomplete = () => resolve(out);
+    tx.onabort = () => {
+      try { onAbort?.(); } catch (error) { failure = failure || error; }
+      reject(failure || tx.error || new Error('Plek opslaan afgebroken'));
+    };
+    Promise.all([req(placesStore.getAll()), req(tx.objectStore('placeTombstones').getAllKeys()),
+      readPhotos ? req(tx.objectStore('photos').getAll()) : Promise.resolve(null)]).then(([stored, tombs, photos]) => {
+      try {
+        // Additieve migratie binnen dezelfde transactie: plek-ID's die alleen in localStorage staan
+        // (oude versie, oude spiegel) toevoegen — nooit met grafsteen, nooit overschrijven of wissen.
+        const known = new Set(stored.map(place => place.id));
+        const tombSet = new Set(tombs);
+        const legacy = [];
+        for (const place of legacyPlaces()) {
+          if (validStored(place) && !known.has(place.id) && !tombSet.has(place.id)) { known.add(place.id); legacy.push(place); }
+        }
+        for (const place of legacy) placesStore.put(place);
+        const places = [...stored, ...legacy];
+        const res = change({ places, tombstones: new Set(tombs), photos, tx }) || {};
+        for (const place of res.put || []) placesStore.put(place);
+        for (const id of res.remove || []) placesStore.delete(id);
+        const byId = new Map(places.map(place => [place.id, place]));
+        for (const id of res.remove || []) byId.delete(id);
+        for (const place of res.put || []) byId.set(place.id, place);
+        after = { places: [...byId.values()], tombstones: res.tombstones ?? new Set(tombs) };
+        out = res.result;
+      } catch (error) {
+        failure = error;
+        try { tx.abort(); } catch (_) {}
+      }
+    }, error => { failure = error; try { tx.abort(); } catch (_) {} });
+  });
+  if (after) publish(after.places, after.tombstones);
+  return result;
+}
+
+function publish(places, tombstones) {
+  cache = places;
+  if (tombstones) tombCache = new Set(tombstones);
+  writeMirror(places);
+  try { channel?.postMessage('changed'); } catch (_) {}
+}
+
+/** Cache verversen uit IndexedDB (start, ander tabblad gewijzigd). */
+export async function refreshPlaces() {
+  const { getDB } = await import('./db.js');
+  const db = await getDB();
+  const tx = db.transaction(['places', 'placeTombstones'], 'readonly');
+  const [places, tombs] = await Promise.all([req(tx.objectStore('places').getAll()), req(tx.objectStore('placeTombstones').getAllKeys())]);
+  cache = places;
+  tombCache = new Set(tombs);
+  try { lastMirrorRaw = localStorage.getItem(PLACES_KEY); } catch (_) {}
+  return places;
+}
+
+/** Additieve migratie uit localStorage: alleen ontbrekende ID's, nooit met grafsteen. Idempotent. */
+export function unionLegacy() {
+  return withPlacesTx(() => ({}));   // de transactie zelf voegt ontbrekende localStorage-plekken toe
+}
+
+/**
+ * Grafstenen uit de losse 'birdspot-guard'-database (tussenversies van ronde 2B) eenmalig
+ * overnemen, vóór de additieve migratie, zodat een verwijderde plek nooit terugkomt.
+ * Maakt die database nooit aan als hij niet bestaat; laat hem verder ongemoeid.
+ */
+async function migrateGuardTombstones() {
+  if (typeof indexedDB === 'undefined') return;
+  const guard = await new Promise(resolve => {
+    let fresh = false;
+    const request = indexedDB.open('birdspot-guard');
+    request.onupgradeneeded = () => { fresh = true; request.transaction.abort(); };
+    request.onsuccess = () => resolve(fresh ? null : request.result);
+    request.onerror = () => resolve(null);
+    request.onblocked = () => resolve(null);
+  });
+  if (!guard) return;
+  try {
+    if (!guard.objectStoreNames.contains('removedPlaces')) return;
+    const old = await req(guard.transaction('removedPlaces').objectStore('removedPlaces').getAll());
+    if (!old.length) return;
+    await withPlacesTx(({ tombstones, tx }) => {
+      const store = tx.objectStore('placeTombstones');
+      const next = new Set(tombstones);
+      for (const row of old) {
+        if (row && typeof row.id === 'string' && !next.has(row.id)) { store.put({ id: row.id, removedAt: row.removedAt || new Date().toISOString() }); next.add(row.id); }
+      }
+      return { tombstones: next };
+    });
+  } finally {
+    guard.close();
+  }
+}
+
+/** Bij het starten van de app: migratie (v2-upgrade + grafstenen + additief) en cache laden. */
+export async function initPlaces() {
+  await migrateGuardTombstones().catch(error => console.error('[places] grafstenen overnemen', error));
+  await unionLegacy();
+  await refreshPlaces();
+  writeMirror(cache);
+  if (!channel && typeof BroadcastChannel === 'function') {
+    channel = new BroadcastChannel('birdspot-places');
+    channel.onmessage = () => { refreshPlaces().catch(() => {}); };
+  }
+  try { addEventListener('storage', event => { if (event.key === PLACES_KEY) loadPlaces(); }); } catch (_) {}
+  return cache;
+}
+
+/** Wacht op een eventueel lopende additieve migratie (tests, opslaan). */
+export function placesSettled() { return unionBusy || Promise.resolve(); }
 
 export function makePlace({ name, lat, lon }, now = new Date().toISOString()) {
   return { id: newId(), name: String(name || '').trim() || 'Naamloze plek', lat: Number(lat), lon: Number(lon), createdAt: now, updatedAt: now };
@@ -178,33 +357,54 @@ export function placeStats(place, sightings) {
 
 /**
  * Zorgt dat alle waarnemingen met een pin aan een plek hangen (eenmalig per nieuwe waarneming).
- * Idempotent. Geeft de actuele plekkenlijst terug.
+ * Idempotent; plannen en schrijven binnen één IndexedDB-transactie. Geeft de actuele plekkenlijst.
  */
 export async function ensurePlaces() {
   const { getSightings, assignPlaceIds } = await import('./sightings.js');
   const sightings = await getSightings();
-  const current = loadPlaces();
-  const { places, assign } = planMigration(sightings, current);
-  if (places.length !== current.length) savePlaces(places);
+  const assign = await withPlacesTx(({ places }) => {
+    const plan = planMigration(sightings, places);
+    const known = new Set(places.map(place => place.id));
+    return { put: plan.places.filter(place => !known.has(place.id)), result: plan.assign };
+  });
   if (assign.size) await assignPlaceIds(assign);
-  return places;
+  return loadPlaces();
 }
 
-export function renamePlace(id, name) {
-  const places = loadPlaces();
-  const p = places.find(x => x.id === id);
+export async function renamePlace(id, name) {
   const clean = String(name || '').trim();
-  if (!p || !clean) return null;
-  p.name = clean.slice(0, 80);
-  p.updatedAt = new Date().toISOString();
-  savePlaces(places);
-  return p;
+  if (!clean) return null;
+  return withPlacesTx(({ places }) => {
+    const place = places.find(x => x.id === id);
+    if (!place) return { result: null };
+    const next = { ...place, name: clean.slice(0, 80), updatedAt: new Date().toISOString() };
+    return { put: [next], result: next };
+  });
 }
 
-export function addPlace({ name, lat, lon }) {
-  const places = loadPlaces();
-  const place = makePlace({ name: defaultPlaceName(places, name), lat, lon });
-  places.push(place);
-  savePlaces(places);
-  return place;
+/**
+ * Plek voor een nieuwe waarneming: de gekozen bestaande plek als die nog bestaat (en geen grafsteen
+ * heeft), anders een nieuwe plek. Alles binnen één transactie op de actuele plekken.
+ * Geeft { place, created }.
+ */
+export function resolvePlaceForSave({ placeId, name, lat, lon }) {
+  return withPlacesTx(({ places, tombstones }) => {
+    const existing = placeId && !tombstones.has(placeId) ? places.find(place => place.id === placeId) : null;
+    if (existing) return { result: { place: existing, created: false } };
+    const place = makePlace({ name: defaultPlaceName(places, name), lat, lon });
+    return { put: [place], result: { place, created: true } };
+  });
+}
+
+export async function addPlace({ name, lat, lon }) {
+  return (await resolvePlaceForSave({ placeId: null, name, lat, lon })).place;
+}
+
+/** Terugdraaien van een zojuist gemaakte plek (opslaan van de waarneming mislukte). */
+export function removeCreatedPlace(id) {
+  // Met grafsteen: een oude spiegel in een ander tabblad kan deze plek dan nooit terugzetten.
+  return withPlacesTx(({ places, tombstones, tx }) => {
+    if (!tombstones.has(id)) tx.objectStore('placeTombstones').put({ id, removedAt: new Date().toISOString() });
+    return { remove: places.some(place => place.id === id) ? [id] : [], tombstones: new Set([...tombstones, id]) };
+  });
 }

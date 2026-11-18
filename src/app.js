@@ -24,6 +24,7 @@ import { renderFilmStudio } from './features/film/view.js';
 import { openAddSheet }     from './features/sightings/addSheet.js';
 import { openQuickAdd }      from './features/sightings/quickAdd.js';
 import { holdTabPresence }   from './data/dataLock.js';
+import { initPlaces }        from './data/places.js';
 
 // Herstel 2B (import met oude tabbladstand): elk open Birdspot-tabblad meldt zich aan.
 holdTabPresence();
@@ -175,6 +176,11 @@ export function showToast(msg, duration = 2800) {
 
 // ── Start ─────────────────────────────────────────────────
 const initialRoute = installNavigation({navigate,current:()=>currentRoute,currentEntry:()=>currentEntry,toast:showToast});
+// Ronde 2B-afronding: plekken uit IndexedDB laden (en migreren) vóór de eerste weergave.
+// Hangt de database (bijv. een oudere versie in een ander tabblad blokkeert de upgrade), dan na
+// 1,5 s toch starten; schrijven wacht dan op IndexedDB en verliest niets.
+await Promise.race([initPlaces().catch(error => console.error('[places] init', error)), new Promise(resolve => setTimeout(resolve, 1500))]);
+addEventListener('birdspot-db-blocked', () => showToast('Sluit andere Birdspot-tabbladen om de update af te ronden', 6000));
 navigate(ROUTES[initialRoute] ? initialRoute : 'home',{history:false});
 // Splash waits until the application home route is actually initialized.
 window.dispatchEvent(new Event('birdspot:ready'));

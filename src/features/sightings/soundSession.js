@@ -1,6 +1,6 @@
 import { SPECIES } from '../../data/species.js';
 import { addSightings } from '../../data/sightings.js';
-import { addPlace, ensurePlaces, loadPlaces, matchSoundPlace, reuseRadiusM, savePlaces } from '../../data/places.js';
+import { ensurePlaces, loadPlaces, matchSoundPlace, reuseRadiusM, resolvePlaceForSave, removeCreatedPlace } from '../../data/places.js';
 import { escHtml } from '../../utils/html.js';
 import { validPin } from './evidence.js';
 import { openPinPicker } from './pinPicker.js';
@@ -439,10 +439,11 @@ export function mountSoundSession(root, onSaved) {
     };
     let sightings, newPlace;
     try {
-      if (!matchedPlace && placeChoice?.newPin) {
-        newPlace = addPlace({ lat: shared.lat, lon: shared.lon, name: shared.locationName });
-        shared.placeId = newPlace.id;
-        shared.locationName = newPlace.name;
+      if (matchedPlace || placeChoice?.newPin) {
+        // IndexedDB leidend: gekozen plek alleen als die nog bestaat, anders een nieuwe (één transactie).
+        const resolved = await resolvePlaceForSave({ placeId: matchedPlace?.id ?? null, name: shared.locationName, lat: shared.lat, lon: shared.lon });
+        shared.placeId = resolved.place.id;
+        if (resolved.created) { newPlace = resolved.place; shared.locationName = newPlace.name; }
       }
       sightings = ids.map(id => ({
         ...shared, id: `${sessionId}-${id}`, speciesId: id, speciesName: speciesById.get(id).nameNL,
@@ -451,7 +452,7 @@ export function mountSoundSession(root, onSaved) {
       await addSightings(sightings);
     } catch (_) {
       if (newPlace) {
-        try { savePlaces(loadPlaces().filter(place => place.id !== newPlace.id)); }
+        try { await removeCreatedPlace(newPlace.id); }
         catch (_) { /* Waarnemingen zijn nog niet gepind. */ }
       }
       find('soundSaveState').textContent = 'Opslaan mislukt. Je selectie staat nog klaar.';

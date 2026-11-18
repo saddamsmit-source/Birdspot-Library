@@ -233,6 +233,9 @@ def check_existing_pins(page):
     expect(sheet.locator('#soundSaveState')).to_contain_text('Opslaan mislukt')
     assert page.evaluate("JSON.parse(localStorage.getItem('birdspot-places')).places.length") == 2
     sheet.locator('#soundSave').click()
+    # Opslaan is sinds de 2B-afronding asynchroon (IndexedDB): wacht tot de sessie echt dicht is, anders
+    # telt de test nog het plekkaartje van de vorige opslag (Overkant, ook 1 waarneming).
+    expect(sheet).to_have_count(0, timeout=15000)
     expect(page.locator('.place-sightings button')).to_have_count(1, timeout=15000)
     assert page.evaluate("JSON.parse(localStorage.getItem('birdspot-places')).places.length") == 3
     print('PASS: automatic moment + GPS, shifted GPS at a legacy pin, explicit pin choice and new-pin rollback', flush=True)
@@ -267,7 +270,9 @@ def main():
                 page.goto(url, wait_until='domcontentloaded')
                 check(page, width)
                 if width == 390:
-                    page.evaluate("localStorage.clear()")
+                    # Leeg profiel: sinds de 2B-afronding staan plekken in IndexedDB, dus die ook wissen.
+                    page.evaluate("""() => { localStorage.clear(); return new Promise((ok, no) => {
+                      const r = indexedDB.deleteDatabase('birdspot-library'); r.onsuccess = () => ok(); r.onerror = () => no(r.error); }); }""")
                     page.reload(wait_until='domcontentloaded')
                     check_existing_pins(page)
                 assert not errors, errors

@@ -11,7 +11,9 @@
  */
 
 const DB_NAME    = 'birdspot-library';
-const DB_VERSION = 1;
+// v2 (ronde 2B-afronding): stores 'places' en 'placeTombstones'; IndexedDB is leidend voor plekken.
+const DB_VERSION = 2;
+const LEGACY_PLACES_KEY = 'birdspot-places';
 
 let _db = null;
 
@@ -42,11 +44,33 @@ export function getDB() {
         photos.createIndex('by_species',  'speciesId',  { unique: false });
         photos.createIndex('by_sighting', 'sightingId', { unique: false });
       }
+      // v2: plekken en grafstenen. Migratie uit localStorage binnen de (atomaire) upgrade-transactie:
+      // mislukt of onderbreekt die, dan blijft de database v1 en herhaalt de volgende start alles.
+      if (!db.objectStoreNames.contains('placeTombstones')) db.createObjectStore('placeTombstones', { keyPath: 'id' });
+      if (!db.objectStoreNames.contains('places')) {
+        const store = db.createObjectStore('places', { keyPath: 'id' });
+        let legacy = [];
+        try { legacy = JSON.parse(localStorage.getItem(LEGACY_PLACES_KEY) || 'null')?.places || []; } catch (_) { legacy = []; }
+        const seen = new Set();
+        for (const place of Array.isArray(legacy) ? legacy : []) {
+          if (!place || typeof place.id !== 'string' || !place.id || seen.has(place.id)) continue;
+          seen.add(place.id);
+          store.put(place);
+        }
+      }
+    };
+
+    // Een oudere versie in een ander tabblad houdt v1 open: melden, en wachten tot die sluit.
+    req.onblocked = () => {
+      try { window.dispatchEvent(new CustomEvent('birdspot-db-blocked')); } catch (_) {}
     };
 
     req.onsuccess = event => {
-      _db = event.target.result;
-      resolve(_db);
+      const db = event.target.result;
+      // Een nieuwere versie wil upgraden: deze verbinding vrijgeven.
+      db.onversionchange = () => { try { db.close(); } catch (_) {} if (_db === db) _db = null; };
+      _db = db;
+      resolve(db);
     };
 
     req.onerror = event => {

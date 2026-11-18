@@ -21,9 +21,9 @@
 import { STORAGE_KEY, SCHEMA_VERSION, migrateSighting } from '../data/sightings.js';
 import { SEEN_KEY } from '../data/species.js';
 import { getDB, PLACE_ENV_KIND }            from '../data/db.js';
-import { withDataLock, assertRestoreSupported, markPlacesRemoved, clearPlaceTombstones, listTombstones, assertImportSafe } from '../data/dataLock.js';
+import { withDataLock, assertRestoreSupported, listTombstones, assertImportSafe } from '../data/dataLock.js';
 import { COLLECTION_KEYS, normalizeIds } from './collections.js';
-import { PLACES_KEY, PLACES_SCHEMA } from '../data/places.js';
+import { PLACES_KEY, withPlacesTx, refreshPlaces } from '../data/places.js';
 
 // ── ZIP-helpers (geen CDN-dependency; pure JS) ─────────────────────────────
 
@@ -173,7 +173,9 @@ function setBackupStatus(info) {
 
 const SAFETY_KEY = 'birdspot-safety-copy';
 
-const DATA_KEYS = [STORAGE_KEY, PLACES_KEY, SEEN_KEY, ...Object.values(COLLECTION_KEYS)];
+// Plekken staan sinds de 2B-afronding leidend in IndexedDB; 'birdspot-places' is alleen een spiegel en
+// hoort daarom niet bij de localStorage-sleutels die import/Terugzetten controleren en vastleggen.
+const DATA_KEYS = [STORAGE_KEY, SEEN_KEY, ...Object.values(COLLECTION_KEYS)];
 
 function readStorage() {
   return Object.fromEntries([...DATA_KEYS, SAFETY_KEY].map(key => [key, localStorage.getItem(key)]));
@@ -218,72 +220,6 @@ function applyStorageChanges(before, changes, force = new Set()) {
     throw error;
   }
   return rollback;
-}
-
-// Houd de mediawijzigingen onzichtbaar tot de overige opslag is bijgewerkt.
-// Een fout in localStorage breekt de IndexedDB-transactie af.
-/**
- * Schrijft media en localStorage samen binnen één readwrite-transactie op 'photos'.
- * Herstel 2B (P1-rest): met `guard` wordt de foto-opslag eerst in dezelfde transactie gelezen
- * en gecontroleerd. Readwrite-transacties op dezelfde store lopen ook tussen tabbladen strikt
- * na elkaar, dus geen omgevingsfoto kan tussen controle en schrijven worden toegevoegd —
- * ook zonder Web Locks. Gooit `guard`, dan wordt niets gewijzigd.
- */
-async function commitRestore(before, changes, media, remove = false, guard = null, force = new Set()) {
-  if (!media.length && !guard) {
-    applyStorageChanges(before, changes, force);
-    return;
-  }
-  const db = await getDB();
-  await new Promise((resolve, reject) => {
-    const tx = db.transaction('photos', 'readwrite');
-    const store = tx.objectStore('photos');
-    let storageError;
-    let rollback;
-    tx.oncomplete = () => resolve();
-    tx.onabort = () => {
-      try {
-        rollback?.();
-      } catch (error) {
-        reject(new Error('Opslag terugzetten mislukt: ' + error.message));
-        return;
-      }
-      reject(storageError || tx.error || new Error('Media opslaan is afgebroken.'));
-    };
-    const fail = error => { storageError = error; tx.abort(); };
-    const applyStorage = () => {
-      try {
-        rollback = applyStorageChanges(before, changes, force);
-      } catch (error) {
-        fail(error);
-      }
-    };
-    const writeMedia = () => {
-      if (!media.length) { applyStorage(); return; }
-      let remaining = media.length;
-      for (const item of media) {
-        const request = remove ? store.delete(item) : store.add(item);
-        request.onsuccess = () => {
-          if (--remaining) return;
-          applyStorage();
-        };
-      }
-    };
-    try {
-      if (!guard) { writeMedia(); return; }
-      const read = store.getAll();
-      read.onsuccess = () => {
-        try {
-          guard(read.result || []);
-          writeMedia();
-        } catch (error) {
-          fail(error);
-        }
-      };
-    } catch (error) {
-      fail(error);
-    }
-  });
 }
 
 export function getSafetyCopy() {
@@ -346,7 +282,7 @@ export async function exportBackup() {
     schemaVersion: SCHEMA_VERSION,
     exportedAt:    new Date().toISOString(),
     sightings,
-    places: readList(storage[PLACES_KEY], 'places'),
+    places: await refreshPlaces(),
     photoIds: photos.map(p => p.id),
     // Metadata per bestand: plek-media (K4) houdt zo zijn plek en exacte type
     mediaMeta: photos.map(p => ({ id: p.id, type: p.type || p.blob?.type || null, filename: p.filename || null,
@@ -410,8 +346,8 @@ export async function validateBackupFile(file) {
     const checked = await readBackup(file);
     const { data, files } = checked;
     await assertImportSafe(); // vóór de bevestiging: geen ander tabblad open
-    assertEnvRelations(data, readList(localStorage.getItem(PLACES_KEY), 'places'));
-    assertNoMediaForRemovedPlace(data, await listTombstones());
+    assertNoMediaForRemovedPlace(data, await listTombstones());   // specifiekste melding eerst
+    assertEnvRelations(data, await refreshPlaces());              // IndexedDB is leidend
     const envPhotoCount = (data.mediaMeta || []).filter(meta => meta.kind === PLACE_ENV_KIND).length;
     const { mediaIds } = checked;
     return { valid: true, sightingCount: data.sightings.length, photoCount: mediaIds.size,
@@ -570,12 +506,8 @@ export function importBackup(file) {
     const existingPhotos = new Set((await getAllPhotos()).map(p => p.id));
     const metadata = new Map((Array.isArray(data.mediaMeta) ? data.mediaMeta : []).filter(Boolean).map(m => [m.id, m]));
     // mediaIds komt uit readBackup: dezelfde lijst als de voorcontrole (P2).
-    // Relatiecontrole vóór schrijven: een omgevingsfoto hoort bij een plek uit de back-up of van dit toestel.
-    assertEnvRelations(data, readList(before[PLACES_KEY], 'places'));
-    // Grafsteen-herstel: alleen plekken die DEZE ZIP zelf bevat, worden door deze import hersteld.
-    const tombstones = await listTombstones();
-    const incomingPlaceIds = new Set((Array.isArray(data.places) ? data.places : []).filter(validPlace).map(place => place.id));
-    const revive = [...tombstones].filter(id => incomingPlaceIds.has(id));
+    const incomingPlaces = (Array.isArray(data.places) ? data.places : []).filter(validPlace);
+    const incomingPlaceIds = new Set(incomingPlaces.map(place => place.id));
     const newPhotos = [];
     for (const id of mediaIds) {
       if (existingPhotos.has(id) || (skippedAttachments.has(id) && !photoOwners.has(id))) continue;
@@ -605,29 +537,12 @@ export function importBackup(file) {
       });
     }
 
-    // Media naar een teruggezette (verwijderde) plek die deze ZIP niet herstelt: weigeren vóór schrijven.
-    assertNoMediaForRemovedPlace(data, tombstones);
-
     const dataChanges = new Map();
-    let placesChanged = false;
     if (JSON.stringify(sightings) !== JSON.stringify(current)) {
       dataChanges.set(STORAGE_KEY, JSON.stringify({
         ...JSON.parse(before[STORAGE_KEY]),
         schemaVersion: SCHEMA_VERSION, exportedAt: new Date().toISOString(), sightings,
       }));
-    }
-    if (Array.isArray(data.places) && data.places.length) {
-      const currentPlaces = readList(before[PLACES_KEY], 'places');
-      const places = new Map(currentPlaces.map(place => [place.id, place]));
-      for (const place of data.places) {
-        if (validPlace(place)) places.set(place.id, mergeRecord(places.get(place.id), place));
-      }
-      placesChanged = JSON.stringify([...places.values()]) !== JSON.stringify(currentPlaces);
-      if (revive.length || placesChanged) {
-        dataChanges.set(PLACES_KEY, JSON.stringify({
-          ...JSON.parse(before[PLACES_KEY]), schemaVersion: PLACES_SCHEMA, places: [...places.values()],
-        }));
-      }
     }
     for (const [kind, key] of Object.entries(COLLECTION_KEYS)) {
       if (Array.isArray(data.collections?.[kind])) {
@@ -642,31 +557,44 @@ export function importBackup(file) {
       if (JSON.stringify(merged) !== JSON.stringify(local)) dataChanges.set(SEEN_KEY, JSON.stringify(merged));
     }
 
-    const force = new Set(revive.length ? [PLACES_KEY] : []);
-    const onlyRevive = revive.length > 0 && !placesChanged && !newPhotos.length &&
-      [...dataChanges.keys()].every(key => key === PLACES_KEY);
-    // Laat een eerdere veiligheidskopie intact bij een herhaalde, ongewijzigde import.
-    if (!dataChanges.size && !newPhotos.length) {
-      return { imported: data.sightings.length, merged: sightings.length };
-    }
     // Laatste controle vlak vóór de eerste wijziging: intussen geen ander tabblad geopend.
     await assertImportSafe();
-    if (onlyRevive) {
-      // Ongewijzigde herimport die alleen bestaande plekken bevestigt: plekken zelf vastleggen,
-      // veiligheidskopie en media ongemoeid, daarna uitsluitend die grafstenen opheffen.
-      await commitRestore(before, dataChanges, [], false, null, force);
-      await clearPlaceTombstones(revive);
-      return { imported: data.sightings.length, merged: sightings.length };
+    // Eén transactie over plekken, grafstenen en foto's: samenvoegen met de ACTUELE plekken uit
+    // IndexedDB (nooit een oude localStorage-lijst), relaties controleren, alles schrijven of niets.
+    let rollback = null;
+    const outcome = await withPlacesTx(({ places, tombstones, tx }) => {
+      assertNoMediaForRemovedPlace(data, tombstones);
+      assertEnvRelations(data, places);
+      const byId = new Map(places.map(place => [place.id, place]));
+      const put = [];
+      for (const place of incomingPlaces) {
+        const local = byId.get(place.id);
+        const merged = mergeRecord(local, place);
+        if (merged !== local) { put.push(merged); byId.set(place.id, merged); }
+      }
+      // Grafsteen alleen opheffen voor een plek die deze ZIP bevat en die na deze transactie bestaat.
+      const revive = [...tombstones].filter(id => incomingPlaceIds.has(id) && byId.has(id));
+      const nextTombs = new Set([...tombstones].filter(id => !revive.includes(id)));
+      const tombStore = tx.objectStore('placeTombstones');
+      if (!dataChanges.size && !newPhotos.length && !put.length) {
+        // Ongewijzigde (her)import: veiligheidskopie, waarnemingen, plekken en foto's ongemoeid.
+        for (const id of revive) tombStore.delete(id);
+        return { result: revive.length ? 'revived' : 'unchanged', tombstones: nextTombs };
+      }
+      const safety = {
+        storage: Object.fromEntries(DATA_KEYS.map(key => [key, before[key]])),
+        places,                                   // werkelijke plekken van vóór de import (IndexedDB)
+        importedMediaIds: newPhotos.map(photo => photo.id),
+      };
+      rollback = applyStorageChanges(before, [[SAFETY_KEY, JSON.stringify(safety)], ...dataChanges]);
+      const photoStore = tx.objectStore('photos');
+      for (const photo of newPhotos) photoStore.add(photo);
+      for (const id of revive) tombStore.delete(id);
+      return { put, result: 'imported', tombstones: nextTombs };
+    }, ['photos'], { onAbort: () => rollback?.() });
+    if (outcome === 'imported') {
+      setBackupStatus({ ...getBackupStatus(), lastRestore: new Date().toISOString(), restoreCount: data.sightings.length });
     }
-
-    const safety = {
-      storage: Object.fromEntries(DATA_KEYS.map(key => [key, before[key]])),
-      importedMediaIds: newPhotos.map(photo => photo.id),
-    };
-    await commitRestore(before, [[SAFETY_KEY, JSON.stringify(safety)], ...dataChanges], newPhotos, false, null, force);
-    // Alleen grafstenen opheffen van plekken die deze import aantoonbaar zelf heeft weggeschreven.
-    await clearPlaceTombstones(revive);
-    setBackupStatus({ ...getBackupStatus(), lastRestore: new Date().toISOString(), restoreCount: data.sightings.length });
     return { imported: data.sightings.length, merged: sightings.length };
   });
 }
@@ -682,15 +610,17 @@ export function restoreFromSafetyCopy() {
     const before = readStorage();
     const copy = JSON.parse(before[SAFETY_KEY]);
     const changes = new Map();
-    if (copy?.storage && DATA_KEYS.every(key => copy.storage[key] === null || typeof copy.storage[key] === 'string')) {
-      for (const key of DATA_KEYS) changes.set(key, copy.storage[key]);
+    let restoredPlaces;
+    if (copy?.storage && DATA_KEYS.every(key => copy.storage[key] == null || typeof copy.storage[key] === 'string')) {
+      for (const key of DATA_KEYS) changes.set(key, copy.storage[key] ?? null);
+      // Nieuwe kopieën: plekken uit IndexedDB. Kopieën van vóór de 2B-afronding: localStorage-snapshot.
+      restoredPlaces = Array.isArray(copy.places) ? copy.places : readList(copy.storage[PLACES_KEY] ?? null, 'places');
     } else if (Array.isArray(copy?.sightings)) {
       // Veiligheidskopieën van eerdere versies hadden geen ruwe opslagsnapshot.
       changes.set(STORAGE_KEY, JSON.stringify({
         schemaVersion: SCHEMA_VERSION, exportedAt: copy.savedAt, sightings: copy.sightings,
       }));
-      changes.set(PLACES_KEY, Array.isArray(copy.places)
-        ? JSON.stringify({ schemaVersion: PLACES_SCHEMA, places: copy.places }) : null);
+      restoredPlaces = Array.isArray(copy.places) ? copy.places : [];
       for (const [kind, key] of Object.entries(COLLECTION_KEYS)) {
         if (Array.isArray(copy.collections?.[kind])) changes.set(key, JSON.stringify(normalizeIds(copy.collections[kind])));
       }
@@ -698,26 +628,27 @@ export function restoreFromSafetyCopy() {
       throw new Error('Geen veiligheidskopie beschikbaar.');
     }
     changes.set(SAFETY_KEY, null);
-    // Ronde 2B: nooit een omgevingsfoto (na de import toegevoegd) loskoppelen van zijn plek.
-    // Herstel P1-rest: gecontroleerd binnen de schrijftransactie zelf (ook zonder Web Locks).
     const imported = new Set(normalizeIds(copy.importedMediaIds));
-    const restoredPlaces = new Set(readList(changes.get(PLACES_KEY) ?? null, 'places').map(place => place.id));
-    // Slot P1: grafstenen vóór de wijziging (binnen de lock). Mislukt Terugzetten, dan alleen de
-    // grafstenen van DEZE poging weer weg; een grafsteen van een eerdere actie blijft staan.
-    const removedPlaces = readList(before[PLACES_KEY], 'places').map(place => place.id).filter(id => !restoredPlaces.has(id));
-    const createdTombstones = await markPlacesRemoved(removedPlaces);
-    try {
-      await commitRestore(before, changes, normalizeIds(copy.importedMediaIds), true, photos => {
-        const orphaned = photos.filter(photo => photo.kind === PLACE_ENV_KIND &&
-          !imported.has(photo.id) && !restoredPlaces.has(photo.placeId));
-        if (orphaned.length) {
-          throw new Error('Terugzetten kan niet: er zijn intussen omgevingsfoto\'s toegevoegd aan een herstelde plek. Er is niets gewijzigd.');
-        }
-      });
-    } catch (error) {
-      await clearPlaceTombstones(createdTombstones).catch(() => {});
-      throw error;
-    }
+    const restoredIds = new Set(restoredPlaces.map(place => place.id));
+    // Eén transactie: wees-controle op de actuele foto's, grafstenen, plekken, media en localStorage.
+    // Gooit er iets of breekt de transactie af, dan is er niets gewijzigd (ook geen grafsteen).
+    let rollback = null;
+    await withPlacesTx(({ places, tombstones, photos, tx }) => {
+      const orphaned = photos.filter(photo => photo.kind === PLACE_ENV_KIND &&
+        !imported.has(photo.id) && !restoredIds.has(photo.placeId));
+      if (orphaned.length) {
+        throw new Error('Terugzetten kan niet: er zijn intussen omgevingsfoto\'s toegevoegd aan een herstelde plek. Er is niets gewijzigd.');
+      }
+      const removed = places.map(place => place.id).filter(id => !restoredIds.has(id));
+      const tombStore = tx.objectStore('placeTombstones');
+      const nextTombs = new Set(tombstones);
+      for (const id of removed) if (!nextTombs.has(id)) { tombStore.put({ id, removedAt: new Date().toISOString() }); nextTombs.add(id); }
+      for (const id of restoredIds) if (nextTombs.delete(id)) tombStore.delete(id);
+      rollback = applyStorageChanges(before, changes);
+      const photoStore = tx.objectStore('photos');
+      for (const id of imported) photoStore.delete(id);
+      return { put: restoredPlaces, remove: removed, tombstones: nextTombs };
+    }, ['photos'], { readPhotos: true, onAbort: () => rollback?.() });
   });
 }
 

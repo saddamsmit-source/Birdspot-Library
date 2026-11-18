@@ -204,7 +204,9 @@ def run(browser, url, zpath):
     profile(a)
     ok_import = try_import(a, payload('r.zip', z_r))
     after = state(a)
-    safety_places = sorted(p['id'] for p in (json.loads(json.loads(after['safety'])['storage']['birdspot-places'])['places']))
+    safety = json.loads(after['safety'])
+    # 2B-afronding: de veiligheidskopie bewaart de plekken uit IndexedDB (leidend) in 'places'.
+    safety_places = sorted(p['id'] for p in safety.get('places') or json.loads(safety['storage']['birdspot-places'])['places'])
     toast = restore_via_ui(a)
     restored = state(a)
     check('T5', 'import met actuele stand: veiligheidskopie bevat Q; Terugzetten → toestand vóór import incl. Q + foto',

@@ -94,10 +94,19 @@ def zip_payload(name, data):
 
 
 def env_add_from_stale_tab(a):
-    open_place(a, 'pl_b')
-    status = add_env(a, [{"name": "p.jpg", "mimeType": "image/jpeg", "buffer": jpeg_with_exif()}])
-    close_place(a)
-    return status
+    # Toont tab A plek P nog (cache van vóór Terugzetten), dan via de kaart; toont A P terecht niet
+    # meer (IndexedDB leidend, grafsteen), dan rechtstreeks via de opslaglaag: die moet weigeren.
+    if a.evaluate("async () => (await import('/src/data/places.js')).loadPlaces().some(p => p.id === 'pl_b')"):
+        open_place(a, 'pl_b')
+        status = add_env(a, [{"name": "p.jpg", "mimeType": "image/jpeg", "buffer": jpeg_with_exif()}])
+        close_place(a)
+        return 'ui: ' + status
+    return 'api: ' + a.evaluate("""async () => {
+      const env = await import('/src/data/placeEnv.js');
+      const c = document.createElement('canvas'); c.width = 8; c.height = 8; c.getContext('2d').fillRect(0, 0, 8, 8);
+      try { await env.addEnvPhotos('pl_b', [new File([await new Promise(r => c.toBlob(r, 'image/jpeg'))], 'p.jpg', { type: 'image/jpeg' })]); return 'Omgevingsfoto opgeslagen op dit toestel.'; }
+      catch (e) { return e.name + ': ' + e.message; }
+    }""")
 
 
 def orphans(state):

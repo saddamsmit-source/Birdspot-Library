@@ -8,8 +8,8 @@
  * Geen upload: alles blijft op het toestel; alleen een eigen ZIP-back-up neemt ze mee.
  */
 import { getDB, changePhotos, PLACE_ENV_KIND, isPlaceEnvPhoto } from './db.js';
-import { withDataLock, isPlaceRemoved } from './dataLock.js';
-import { loadPlaces } from './places.js';
+import { withDataLock } from './dataLock.js';
+import { withPlacesTx } from './places.js';
 
 /** De plek bestaat niet (meer), bijvoorbeeld na 'Terugzetten' in dit of een ander tabblad. */
 export class PlaceGoneError extends Error {
@@ -65,40 +65,24 @@ export async function addEnvPhotos(placeId, files, now = new Date().toISOString(
   }
   if (records.length) {
     // Definitieve opslag: binnen dezelfde lock als import/Terugzetten de plek opnieuw controleren.
-    await withDataLock(async () => {
-      // Slot P1: een grafsteen (IDB, strikt consistent) wint altijd van een mogelijk verouderde localStorage.
-      if (await isPlaceRemoved(placeId)) throw new PlaceGoneError();
-      await putIfPlaceExists(placeId, records);
-    });
+    // Plek (IndexedDB, leidend) en grafsteen controleren en de foto's opslaan: één transactie.
+    await withDataLock(() => putIfPlaceExists(placeId, records));
   }
   return { added: records, rejected };
 }
 
 /**
- * Herstel 2B (P1-rest): plekcontrole en opslag in één readwrite-transactie op 'photos'.
- * Pas in de callback van het eerste verzoek is deze transactie aan de beurt; een eerdere
- * Terugzetten-transactie (zelfde store, ook in een ander tabblad) is dan al afgerond.
- * Werkt dus ook zonder Web Locks.
+ * Plekcontrole (IndexedDB 'places' + 'placeTombstones') en opslag in één readwrite-transactie
+ * samen met 'photos'. Een gelijktijdig Terugzetten of import (zelfde stores, ook in een ander
+ * tabblad) loopt strikt ervoor of erna; nooit een foto bij een plek die niet (meer) bestaat.
  */
 async function putIfPlaceExists(placeId, records) {
-  const db = await getDB();
-  await new Promise((resolve, reject) => {
-    const tx = db.transaction('photos', 'readwrite');
-    const store = tx.objectStore('photos');
-    let failure = null;
-    tx.oncomplete = () => resolve();
-    tx.onabort = () => reject(failure || tx.error || new Error('Opslaan afgebroken'));
-    const turn = store.count();
-    turn.onsuccess = () => {
-      try {
-        if (!loadPlaces().some(place => place.id === placeId)) throw new PlaceGoneError();
-        for (const record of records) store.put(record);
-      } catch (error) {
-        failure = error;
-        tx.abort();
-      }
-    };
-  });
+  await withPlacesTx(({ places, tombstones, tx }) => {
+    if (tombstones.has(placeId) || !places.some(place => place.id === placeId)) throw new PlaceGoneError();
+    const photos = tx.objectStore('photos');
+    for (const record of records) photos.put(record);
+    return {};
+  }, ['photos']);
 }
 
 export async function getEnvPhotos(placeId) {
