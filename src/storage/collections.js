@@ -3,6 +3,7 @@
  * Values are string IDs, stored additively without modifying sightings or photos.
  * Every write can fail (QuotaExceededError); callers show feedback.
  */
+import { assertNoPendingRecovery } from '../data/recoveryGate.js';
 export const COLLECTION_KEYS = Object.freeze({
   species: 'birdspot-favorite-species',
   media: 'birdspot-favorite-media',
@@ -29,6 +30,7 @@ export function hasCollectionItem(kind, id) {
 }
 export function setCollectionItem(kind, id, selected) {
   if (typeof id !== 'string' || !id.trim()) throw new TypeError('Ongeldige item-ID');
+  assertNoPendingRecovery();   // halve stand van een onderbroken import/Terugzetten: niets wijzigen
   const ids = getCollectionIds(kind);
   if (selected) ids.add(id); else ids.delete(id);
   localStorage.setItem(keyFor(kind), JSON.stringify([...ids]));
@@ -42,6 +44,7 @@ export function setCollectionItem(kind, id, selected) {
 export function saveFilmOrder(ids) {
   if (!Array.isArray(ids) || ids.some(x => typeof x !== 'string'))
     throw new TypeError('Filmvolgorde ongeldig');
+  assertNoPendingRecovery();
   const existing = getCollectionIds('film');
   const incoming = new Set(ids);
   if (incoming.size !== ids.length || incoming.size !== existing.size ||

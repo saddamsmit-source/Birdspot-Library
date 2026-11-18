@@ -10,7 +10,7 @@ permissions:
 jobs:
   r2b:
     runs-on: ubuntu-latest
-    timeout-minutes: 75
+    timeout-minutes: 95
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -145,6 +145,23 @@ jobs:
           test "$rc" -ne 0
           for code in A1 B1 G4 G5; do grep -q "^$code .* FAIL" crashherstel-oud.log || { echo "$code faalde NIET op 66673393"; exit 1; }; done
           echo "BEWEZEN: A1 B1 G4 G5 falen op 66673393"
+      - name: Herstelslot andere tabbladen + onzekere plekken (C1–C4, D1–D3) op deze commit
+        run: |
+          set -o pipefail
+          git log -1 --format='Uitgecheckt: %H' | tee herstelslot.log
+          BIRDSPOT_OLD_ROOT=/tmp/wt-03bf663 BIRDSPOT_V2_ROOT=/tmp/wt-6667339 python -u tests/test_r2b_herstelslot.py 2>&1 | tee -a herstelslot.log
+      - name: Zelfde herstelslottests op ac5bb10 moeten de gemelde fouten raken
+        run: |
+          git fetch --depth=1 origin ac5bb1046eda550768fd7781ae6b7cbc9e894b90
+          git worktree add /tmp/wt-ac5bb10 ac5bb1046eda550768fd7781ae6b7cbc9e894b90
+          set +e
+          BIRDSPOT_APP_ROOT=/tmp/wt-ac5bb10 BIRDSPOT_OLD_ROOT=/tmp/wt-03bf663 BIRDSPOT_V2_ROOT=/tmp/wt-6667339 python -u tests/test_r2b_herstelslot.py > herstelslot-oud.log 2>&1
+          rc=$?
+          set -e
+          cat herstelslot-oud.log
+          test "$rc" -ne 0
+          for code in C1 C2 D1 D2; do grep -q "^$code .* FAIL" herstelslot-oud.log || { echo "$code faalde NIET op ac5bb10"; exit 1; }; done
+          echo "BEWEZEN: C1 C2 D1 D2 falen op ac5bb10"
       - name: Bestaande suites (plekken, GPS-race, back-up, offline)
         if: always()
         run: |
@@ -176,4 +193,6 @@ jobs:
             plekken-idb-oud.log
             crashherstel.log
             crashherstel-oud.log
+            herstelslot.log
+            herstelslot-oud.log
             tests/screenshots/r2b/

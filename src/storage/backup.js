@@ -24,7 +24,7 @@ import { getDB, PLACE_ENV_KIND }            from '../data/db.js';
 import { withDataLock, assertRestoreSupported, listTombstones, assertImportSafe } from '../data/dataLock.js';
 import { COLLECTION_KEYS, normalizeIds } from './collections.js';
 import { PLACES_KEY, withPlacesTx, refreshPlaces } from '../data/places.js';
-import { prepareOperation, markCommitted, dropInTx, finishOperation } from '../data/opJournal.js';
+import { prepareOperation, markCommitted, dropInTx, finishOperation, recoverOperations } from '../data/opJournal.js';
 
 // ── ZIP-helpers (geen CDN-dependency; pure JS) ─────────────────────────────
 
@@ -474,7 +474,8 @@ async function runRestore(operation) {
   restoring = true;
   try {
     // Herstel 2B (P1): zelfde lock als de opslag van omgevingsfoto's, ook over tabbladen.
-    return await withDataLock(operation);
+    // Correctieronde 2B: eerst een openstaand journaal afhandelen, dán pas de uitgangsstand lezen.
+    return await withDataLock(async () => { await recoverOperations(); return operation(); });
   } finally {
     restoring = false;
   }

@@ -188,6 +188,12 @@ const recovery = withDataLock(() => recoverOperations()).catch(error => {
   console.error('[journaal] herstel', error);
   showToast('Een onderbroken herstelactie kon niet worden afgerond. Herlaad Birdspot.', 8000);
 });
+// Een schrijver die op een halve herstelstand stuitte (favorieten e.d.): melden en het herstel afronden.
+let recoveryNotice = null;
+addEventListener('birdspot-recovery-pending', () => {
+  showToast('Een onderbroken herstelactie wordt eerst afgerond. Er is niets gewijzigd; probeer het zo opnieuw.', 6000);
+  recoveryNotice ??= withDataLock(() => recoverOperations()).catch(error => console.error('[journaal] herstel', error)).finally(() => { recoveryNotice = null; });
+});
 if (hasPendingMarker()) await recovery;
 else await Promise.race([recovery, new Promise(resolve => setTimeout(resolve, 1500))]);
 await Promise.race([initPlaces().catch(error => console.error('[places] init', error)), new Promise(resolve => setTimeout(resolve, 1500))]);

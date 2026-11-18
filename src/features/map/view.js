@@ -747,8 +747,9 @@ function openPlaceSheet(screenEl, place, visibleRecords, map, mediaId, trigger =
         else envStatus(added.length===1?'Omgevingsfoto opgeslagen op dit toestel.':added.length+' omgevingsfoto\'s opgeslagen op dit toestel.');
       }catch(error){
         const gone=error?.name==='PlaceGoneError';
-        envStatus(gone?error.message:'Opslaan mislukt — er is niets gewijzigd.');
-        showToast(gone?'Plek bestaat niet meer — foto niet opgeslagen':'Omgevingsfoto opslaan mislukt');
+        const pending=error?.name==='PlaceMigrationPendingError';
+        envStatus(gone||pending?error.message:'Opslaan mislukt — er is niets gewijzigd.');
+        showToast(gone?'Plek bestaat niet meer — foto niet opgeslagen':pending?'Plekken worden nog bijgewerkt — foto niet opgeslagen':'Omgevingsfoto opslaan mislukt');
       }finally{
         add.disabled=false;
         if(!closed)drawEnv();

@@ -83,6 +83,8 @@ export function getSightingsSnapshot() {
     const version = store.schemaVersion ?? 1;
     if (version < SCHEMA_VERSION) {
       const migrated = store.sightings.map(migrateSighting);
+      // Niet terugschrijven zolang een onderbroken import/Terugzetten nog hersteld moet worden.
+      if (pendingRecovery()) return migrated;
       // Direct opslaan met nieuwe versie (transparant voor callers)
       try {
         localStorage.setItem(STORAGE_KEY, JSON.stringify({
@@ -101,6 +103,18 @@ export function getSightingsSnapshot() {
 }
 
 export function getSightings() { return Promise.resolve(getSightingsSnapshot()); }
+
+// ── Herstelslot (correctieronde 2B, P1) ───────────────────
+// Schrijvers lezen pas na afgerond herstel van een onderbroken import/Terugzetten, onder de
+// datalock (dus nooit tijdens zo'n bewerking in een ander tabblad). Dynamisch geladen: deze module
+// blijft zonder browseropslag importeerbaar.
+async function dataWrite(change) {
+  const { withDataWrite } = await import('./opJournal.js');
+  return withDataWrite(change);
+}
+function pendingRecovery() {
+  try { return localStorage.getItem('birdspot-op-pending') !== null; } catch (_) { return false; }
+}
 
 // ── Sla alle waarnemingen op ───────────────────────────────
 /**
@@ -127,13 +141,15 @@ function saveSightings(sightings) {
  */
 export async function assignPlaceIds(assign) {
   if (!assign?.size) return 0;
-  const all = await getSightings();
-  let n = 0;
-  for (const s of all) {
-    if (!s.placeId && assign.has(s.id)) { s.placeId = assign.get(s.id); n++; }
-  }
-  if (n) saveSightings(all);
-  return n;
+  return dataWrite(() => {
+    const all = getSightingsSnapshot();
+    let n = 0;
+    for (const s of all) {
+      if (!s.placeId && assign.has(s.id)) { s.placeId = assign.get(s.id); n++; }
+    }
+    if (n) saveSightings(all);
+    return n;
+  });
 }
 
 // ── Voeg toe ───────────────────────────────────────────────
@@ -147,10 +163,12 @@ export async function addSighting(sighting) {
 
 /** Append a complete group with one storage write. The caller retains its draft on failure. */
 export async function addSightings(sightings) {
-  const stored = getSightingsSnapshot();
-  const existingIds = new Set(stored.map(sighting => sighting.id));
-  const additions = sightings.filter(sighting => !existingIds.has(sighting.id));
-  if (additions.length) saveSightings([...stored, ...additions]);
+  return dataWrite(() => {
+    const stored = getSightingsSnapshot();
+    const existingIds = new Set(stored.map(sighting => sighting.id));
+    const additions = sightings.filter(sighting => !existingIds.has(sighting.id));
+    if (additions.length) saveSightings([...stored, ...additions]);
+  });
 }
 
 // ── Update ─────────────────────────────────────────────────
@@ -159,12 +177,14 @@ export async function addSightings(sightings) {
  * @throws {DOMException|Error} bij opslagfout (caller toont foutmelding)
  */
 export async function updateSighting(id, patch) {
-  const all = await getSightings();
-  const idx = all.findIndex(s => s.id === id);
-  if (idx === -1) throw new Error(`Sighting ${id} not found`);
-  all[idx] = { ...all[idx], ...patch, updatedAt: new Date().toISOString() };
-  saveSightings(all);   // gooit bij fout — addSheet.js vangt dit op
-  return all[idx];
+  return dataWrite(() => {
+    const all = getSightingsSnapshot();
+    const idx = all.findIndex(s => s.id === id);
+    if (idx === -1) throw new Error(`Sighting ${id} not found`);
+    all[idx] = { ...all[idx], ...patch, updatedAt: new Date().toISOString() };
+    saveSightings(all);   // gooit bij fout — addSheet.js vangt dit op
+    return all[idx];
+  });
 }
 
 // ── Verwijder ──────────────────────────────────────────────
@@ -172,8 +192,10 @@ export async function updateSighting(id, patch) {
  * @throws {DOMException|Error} bij opslagfout (caller toont foutmelding)
  */
 export async function deleteSighting(id) {
-  const all = await getSightings();
-  saveSightings(all.filter(s => s.id !== id));   // gooit bij fout
+  return dataWrite(() => {
+    const all = getSightingsSnapshot();
+    saveSightings(all.filter(s => s.id !== id));   // gooit bij fout
+  });
 }
 
 // ── Export (JSON) ──────────────────────────────────────────
@@ -193,6 +215,6 @@ export async function importData(jsonString) {
     throw new Error('Ongeldig exportbestand');
   }
   // Migreer geïmporteerde data ook naar huidig schema
-  saveSightings(parsed.sightings.map(migrateSighting));
+  await dataWrite(() => saveSightings(parsed.sightings.map(migrateSighting)));
   return parsed.sightings.length;
 }

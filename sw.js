@@ -102,6 +102,7 @@ const PRECACHE_PATHS = [
   'src/data/placeEnv.js',
   'src/data/dataLock.js',
   'src/data/opJournal.js',
+  'src/data/recoveryGate.js',
   'src/features/map/visualization.js',
   'src/features/profile/view.js',
   'src/features/profile/stats.js',
