@@ -77,6 +77,23 @@ jobs:
           test "$rc" -ne 0
           for code in S1 S3 S5; do grep -q "^$code .* FAIL" p1-slot-oud.log || { echo "$code faalde NIET op 4e1931d"; exit 1; }; done
           echo "BEWEZEN: S1 S3 S5 falen op 4e1931d"
+      - name: Grafsteen-levenscyclus (twee tabbladen, oude plekstand) op deze commit
+        run: |
+          set -o pipefail
+          git log -1 --format='Uitgecheckt: %H' | tee grafsteen.log
+          python tests/test_r2b_grafsteen.py 2>&1 | tee -a grafsteen.log
+      - name: Zelfde grafsteen-tests op 8400e24 moeten de gemelde fouten raken
+        run: |
+          git fetch --depth=1 origin 8400e24fa3665e5d0ecb5ac4bf5326e808818e3d
+          git worktree add /tmp/wt-8400e24 8400e24fa3665e5d0ecb5ac4bf5326e808818e3d
+          set +e
+          BIRDSPOT_APP_ROOT=/tmp/wt-8400e24 python tests/test_r2b_grafsteen.py > grafsteen-oud.log 2>&1
+          rc=$?
+          set -e
+          cat grafsteen-oud.log
+          test "$rc" -ne 0
+          for code in G1 G1b G2 G3; do grep -q "^$code .* FAIL" grafsteen-oud.log || { echo "$code faalde NIET op 8400e24"; exit 1; }; done
+          echo "BEWEZEN: G1 G1b G2 G3 falen op 8400e24"
       - name: Bestaande suites (plekken, GPS-race, back-up, offline)
         if: always()
         run: |
@@ -99,4 +116,6 @@ jobs:
             p1-rest-oud.log
             p1-slot.log
             p1-slot-oud.log
+            grafsteen.log
+            grafsteen-oud.log
             tests/screenshots/r2b/
