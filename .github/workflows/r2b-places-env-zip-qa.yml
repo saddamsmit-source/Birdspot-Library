@@ -43,6 +43,23 @@ jobs:
           test "$rc" -ne 0
           for code in H1 H3 H4 H5 H6 H7; do grep -q "^$code .* FAIL" qa-oud.log || { echo "$code faalde NIET op c2b63a0"; exit 1; }; done
           echo "BEWEZEN: H1 H3 H4 H5 H6 H7 falen op c2b63a0"
+      - name: Herstel P1-rest (zonder Web Locks, ZIP-medialijst) op deze commit
+        run: |
+          set -o pipefail
+          git log -1 --format='Uitgecheckt: %H' | tee p1-rest.log
+          python tests/test_r2b_p1_rest.py 2>&1 | tee -a p1-rest.log
+      - name: Zelfde P1-rest-tests op d92d803 moeten de gemelde fouten raken
+        run: |
+          git fetch --depth=1 origin d92d80393c59c4a6bdda9f4c653b527bbb9850f1
+          git worktree add /tmp/wt-d92d803 d92d80393c59c4a6bdda9f4c653b527bbb9850f1
+          set +e
+          BIRDSPOT_APP_ROOT=/tmp/wt-d92d803 python tests/test_r2b_p1_rest.py > p1-rest-oud.log 2>&1
+          rc=$?
+          set -e
+          cat p1-rest-oud.log
+          test "$rc" -ne 0
+          for code in L1 L3 K1 K2; do grep -q "^$code .* FAIL" p1-rest-oud.log || { echo "$code faalde NIET op d92d803"; exit 1; }; done
+          echo "BEWEZEN: L1 L3 K1 K2 falen op d92d803"
       - name: Bestaande suites (plekken, GPS-race, back-up, offline)
         if: always()
         run: |
@@ -61,4 +78,6 @@ jobs:
             regress.log
             qa-herstel.log
             qa-oud.log
+            p1-rest.log
+            p1-rest-oud.log
             tests/screenshots/r2b/

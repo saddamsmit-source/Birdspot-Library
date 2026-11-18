@@ -8,7 +8,7 @@
  * Geen upload: alles blijft op het toestel; alleen een eigen ZIP-back-up neemt ze mee.
  */
 import { getDB, changePhotos, PLACE_ENV_KIND, isPlaceEnvPhoto } from './db.js';
-import { withDataLock } from './dataLock.js';
+import { withDataLock, trackEnvSave, assertNoRemoteRestore } from './dataLock.js';
 import { loadPlaces } from './places.js';
 
 /** De plek bestaat niet (meer), bijvoorbeeld na 'Terugzetten' in dit of een ander tabblad. */
@@ -45,7 +45,11 @@ const cleanCaption = value => String(value ?? '').replace(/\s+/g, ' ').trim().sl
  * Voeg omgevingsfoto's toe in één transactie: alles of niets.
  * Ongeldige bestanden worden overgeslagen en gemeld; een opslagfout gooit (er is dan niets gewijzigd).
  */
-export async function addEnvPhotos(placeId, files, now = new Date().toISOString()) {
+export function addEnvPhotos(placeId, files, now = new Date().toISOString()) {
+  return trackEnvSave(() => addEnvPhotosNow(placeId, files, now));
+}
+
+async function addEnvPhotosNow(placeId, files, now) {
   if (typeof placeId !== 'string' || !placeId) throw new Error('Geen plek gekozen.');
   const records = [];
   const rejected = [];
@@ -65,12 +69,37 @@ export async function addEnvPhotos(placeId, files, now = new Date().toISOString(
   }
   if (records.length) {
     // Definitieve opslag: binnen dezelfde lock als import/Terugzetten de plek opnieuw controleren.
-    await withDataLock(async () => {
-      if (!loadPlaces().some(place => place.id === placeId)) throw new PlaceGoneError();
-      await changePhotos({ put: records });
-    });
+    await withDataLock(() => { assertNoRemoteRestore(); return putIfPlaceExists(placeId, records); });
   }
   return { added: records, rejected };
+}
+
+/**
+ * Herstel 2B (P1-rest): plekcontrole en opslag in één readwrite-transactie op 'photos'.
+ * Pas in de callback van het eerste verzoek is deze transactie aan de beurt; een eerdere
+ * Terugzetten-transactie (zelfde store, ook in een ander tabblad) is dan al afgerond.
+ * Werkt dus ook zonder Web Locks.
+ */
+async function putIfPlaceExists(placeId, records) {
+  const db = await getDB();
+  await new Promise((resolve, reject) => {
+    const tx = db.transaction('photos', 'readwrite');
+    const store = tx.objectStore('photos');
+    let failure = null;
+    tx.oncomplete = () => resolve();
+    tx.onabort = () => reject(failure || tx.error || new Error('Opslaan afgebroken'));
+    const turn = store.count();
+    turn.onsuccess = () => {
+      try {
+        assertNoRemoteRestore();
+        if (!loadPlaces().some(place => place.id === placeId)) throw new PlaceGoneError();
+        for (const record of records) store.put(record);
+      } catch (error) {
+        failure = error;
+        tx.abort();
+      }
+    };
+  });
 }
 
 export async function getEnvPhotos(placeId) {

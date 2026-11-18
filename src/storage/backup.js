@@ -21,7 +21,7 @@
 import { STORAGE_KEY, SCHEMA_VERSION, migrateSighting } from '../data/sightings.js';
 import { SEEN_KEY } from '../data/species.js';
 import { getDB, PLACE_ENV_KIND }            from '../data/db.js';
-import { withDataLock }                     from '../data/dataLock.js';
+import { withDataLock, announceRestore }    from '../data/dataLock.js';
 import { COLLECTION_KEYS, normalizeIds } from './collections.js';
 import { PLACES_KEY, PLACES_SCHEMA } from '../data/places.js';
 
@@ -221,8 +221,15 @@ function applyStorageChanges(before, changes) {
 
 // Houd de mediawijzigingen onzichtbaar tot de overige opslag is bijgewerkt.
 // Een fout in localStorage breekt de IndexedDB-transactie af.
-async function commitRestore(before, changes, media, remove = false) {
-  if (!media.length) {
+/**
+ * Schrijft media en localStorage samen binnen één readwrite-transactie op 'photos'.
+ * Herstel 2B (P1-rest): met `guard` wordt de foto-opslag eerst in dezelfde transactie gelezen
+ * en gecontroleerd. Readwrite-transacties op dezelfde store lopen ook tussen tabbladen strikt
+ * na elkaar, dus geen omgevingsfoto kan tussen controle en schrijven worden toegevoegd —
+ * ook zonder Web Locks. Gooit `guard`, dan wordt niets gewijzigd.
+ */
+async function commitRestore(before, changes, media, remove = false, guard = null) {
+  if (!media.length && !guard) {
     applyStorageChanges(before, changes);
     return;
   }
@@ -230,7 +237,6 @@ async function commitRestore(before, changes, media, remove = false) {
   await new Promise((resolve, reject) => {
     const tx = db.transaction('photos', 'readwrite');
     const store = tx.objectStore('photos');
-    let remaining = media.length;
     let storageError;
     let rollback;
     tx.oncomplete = () => resolve();
@@ -243,22 +249,38 @@ async function commitRestore(before, changes, media, remove = false) {
       }
       reject(storageError || tx.error || new Error('Media opslaan is afgebroken.'));
     };
-    try {
+    const fail = error => { storageError = error; tx.abort(); };
+    const applyStorage = () => {
+      try {
+        rollback = applyStorageChanges(before, changes);
+      } catch (error) {
+        fail(error);
+      }
+    };
+    const writeMedia = () => {
+      if (!media.length) { applyStorage(); return; }
+      let remaining = media.length;
       for (const item of media) {
         const request = remove ? store.delete(item) : store.add(item);
         request.onsuccess = () => {
           if (--remaining) return;
-          try {
-            rollback = applyStorageChanges(before, changes);
-          } catch (error) {
-            storageError = error;
-            tx.abort();
-          }
+          applyStorage();
         };
       }
+    };
+    try {
+      if (!guard) { writeMedia(); return; }
+      const read = store.getAll();
+      read.onsuccess = () => {
+        try {
+          guard(read.result || []);
+          writeMedia();
+        } catch (error) {
+          fail(error);
+        }
+      };
     } catch (error) {
-      storageError = error;
-      tx.abort();
+      fail(error);
     }
   });
 }
@@ -463,9 +485,16 @@ async function readBackup(file) {
  */
 function backupMediaIds(data, files) {
   const sightingIds = data.sightings.flatMap(s => s.photoIds || []);
-  if (data.photoIds == null) return new Set([...files.keys(), ...sightingIds]);
+  const metaIds = (data.mediaMeta || []).map(meta => meta.id);
+  if (data.photoIds == null) {
+    // Herstel P1-rest: v2 vereist photoIds; oudere ZIP's controleren ook elke mediaMeta-verwijzing.
+    if (Number.isInteger(data.backupVersion) && data.backupVersion >= 2) {
+      throw new Error('De medialijst (photoIds) ontbreekt in deze back-up. Er is niets hersteld.');
+    }
+    return new Set([...files.keys(), ...sightingIds, ...metaIds]);
+  }
   const listed = new Set(data.photoIds);
-  const stray = [...(data.mediaMeta || []).map(meta => meta.id), ...sightingIds, ...files.keys()].find(id => !listed.has(id));
+  const stray = [...metaIds, ...sightingIds, ...files.keys()].find(id => !listed.has(id));
   if (stray) throw new Error('De medialijst van de back-up is niet sluitend (' + stray + '). Er is niets hersteld.');
   return listed;
 }
@@ -628,14 +657,22 @@ export function restoreFromSafetyCopy() {
     }
     changes.set(SAFETY_KEY, null);
     // Ronde 2B: nooit een omgevingsfoto (na de import toegevoegd) loskoppelen van zijn plek.
+    // Herstel P1-rest: gecontroleerd binnen de schrijftransactie zelf (ook zonder Web Locks).
     const imported = new Set(normalizeIds(copy.importedMediaIds));
     const restoredPlaces = new Set(readList(changes.get(PLACES_KEY) ?? null, 'places').map(place => place.id));
-    const orphaned = (await getAllPhotos()).filter(photo => photo.kind === PLACE_ENV_KIND &&
-      !imported.has(photo.id) && !restoredPlaces.has(photo.placeId));
-    if (orphaned.length) {
-      throw new Error('Terugzetten kan niet: er zijn intussen omgevingsfoto\'s toegevoegd aan een herstelde plek. Er is niets gewijzigd.');
+    // Zonder Web Locks: andere tabbladen eerst waarschuwen; stopt vóór wijziging als er een foto wordt opgeslagen.
+    const announced = await announceRestore();
+    try {
+      await commitRestore(before, changes, normalizeIds(copy.importedMediaIds), true, photos => {
+        const orphaned = photos.filter(photo => photo.kind === PLACE_ENV_KIND &&
+          !imported.has(photo.id) && !restoredPlaces.has(photo.placeId));
+        if (orphaned.length) {
+          throw new Error('Terugzetten kan niet: er zijn intussen omgevingsfoto\'s toegevoegd aan een herstelde plek. Er is niets gewijzigd.');
+        }
+      });
+    } finally {
+      announced();
     }
-    await commitRestore(before, changes, normalizeIds(copy.importedMediaIds), true);
   });
 }
 
