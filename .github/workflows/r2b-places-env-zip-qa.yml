@@ -94,6 +94,23 @@ jobs:
           test "$rc" -ne 0
           for code in G1 G1b G2 G3; do grep -q "^$code .* FAIL" grafsteen-oud.log || { echo "$code faalde NIET op 8400e24"; exit 1; }; done
           echo "BEWEZEN: G1 G1b G2 G3 falen op 8400e24"
+      - name: Import met oude tabbladstand op deze commit
+        run: |
+          set -o pipefail
+          git log -1 --format='Uitgecheckt: %H' | tee import-tabstand.log
+          python tests/test_r2b_import_tabstand.py 2>&1 | tee -a import-tabstand.log
+      - name: Zelfde tabstand-tests op 20019e1 moeten Q verliezen
+        run: |
+          git fetch --depth=1 origin 20019e1c5704b8cf34dfb9ccacdcaa22875a153b
+          git worktree add /tmp/wt-20019e1 20019e1c5704b8cf34dfb9ccacdcaa22875a153b
+          set +e
+          BIRDSPOT_APP_ROOT=/tmp/wt-20019e1 python tests/test_r2b_import_tabstand.py > import-tabstand-oud.log 2>&1
+          rc=$?
+          set -e
+          cat import-tabstand-oud.log
+          test "$rc" -ne 0
+          for code in T1 T2 T3; do grep -q "^$code .* FAIL" import-tabstand-oud.log || { echo "$code faalde NIET op 20019e1"; exit 1; }; done
+          echo "BEWEZEN: T1 T2 T3 falen op 20019e1"
       - name: Bestaande suites (plekken, GPS-race, back-up, offline)
         if: always()
         run: |
@@ -118,4 +135,6 @@ jobs:
             p1-slot-oud.log
             grafsteen.log
             grafsteen-oud.log
+            import-tabstand.log
+            import-tabstand-oud.log
             tests/screenshots/r2b/

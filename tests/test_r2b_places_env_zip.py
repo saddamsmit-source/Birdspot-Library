@@ -219,9 +219,10 @@ def consolidation(page, url):
     typed_pin(page, 51.0, 4.0)
     wait_hint(page, 'Nieuwe plek')
     stale = page.locator('#coordsHint [data-place-choice], #coordsHint [data-place-state="linked"]').count()
+    hint = page.locator('#coordsHint').inner_text().replace('\n', ' ')
     r = save(page)
     check('C7', 'oude koppeling vervalt bij nieuwe pin (ver weg)', stale == 0 and r['placeId'] != 'pl_a' and r['lat'] == 51.0,
-          f"placeId={r['placeId']}")
+          f"placeId={r['placeId']} stale={stale} lat/lon={r['lat']},{r['lon']} hint='{hint}'")
 
     reset_profile(page, url, [PLACE_A], {"lat": lat, "lon": lon, "acc": 9})
     page.evaluate("() => localStorage.setItem('birdspot-settings', JSON.stringify({ placeRadiusM: 100 }))")

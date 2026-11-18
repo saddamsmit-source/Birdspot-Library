@@ -38,7 +38,19 @@ from test_r2b_qa_herstel import HOLD, restore_via_ui  # noqa: E402
 
 APP_ROOT = Path(os.environ.get('BIRDSPOT_APP_ROOT') or Path(__file__).resolve().parent.parent)
 RESULTS = []
-NO_LOCKS = "Object.defineProperty(Navigator.prototype, 'locks', { configurable: true, get: () => undefined });"
+# Web Locks uit; alleen de testopzet mag ze tijdelijk aanzetten (window.__locksForSetup) om via een import een
+# veiligheidskopie te maken — die staat voor een kopie van vóór deze browsersituatie.
+NO_LOCKS = """(() => {
+  const real = Object.getOwnPropertyDescriptor(Navigator.prototype, 'locks').get;
+  Object.defineProperty(Navigator.prototype, 'locks', { configurable: true, get() { return window.__locksForSetup ? real.call(this) : undefined; } });
+})();"""
+
+
+def import_with_setup_locks(page, path):
+    page.evaluate("() => { window.__locksForSetup = true; }")
+    ok = try_import(page, path)
+    page.evaluate("() => { window.__locksForSetup = false; }")
+    return ok
 HOOKS = """(() => {
   // Signaal zodra de foto-opslag wordt gelezen (getAll) of een omgevingsfoto wordt geschreven (put).
   const bc = new BroadcastChannel('r2b-p1-rest');
@@ -134,8 +146,8 @@ SINGLE_TAB = """async order => {
 
 def single_tab(browser, url, zpath, locks, order):
     ctx = ctx_for(browser, locks); p = ctx.new_page(); boot(p, url)
+    profile(p); assert import_with_setup_locks(p, str(zpath))
     assert p.evaluate("() => !!navigator.locks") == locks
-    profile(p); assert try_import(p, str(zpath))
     before = p.evaluate(SNAPSHOT_JS)
     res = p.evaluate(SINGLE_TAB, order)
     after = p.evaluate(SNAPSHOT_JS)
@@ -156,7 +168,7 @@ def p1(browser, url, zpath):
     for code, order in (('L3', 'restore-first'), ('L4', 'add-first')):
         ctx = ctx_for(browser, False)
         a, b = ctx.new_page(), ctx.new_page()
-        boot(b, url); profile(b); assert try_import(b, str(zpath))
+        boot(b, url); profile(b); assert import_with_setup_locks(b, str(zpath))
         boot(a, url)
         assert not a.evaluate("() => !!navigator.locks")
         open_place(a, 'pl_b')
@@ -189,7 +201,7 @@ def p1(browser, url, zpath):
     # L6: direct na geslaagd Terugzetten in tab B voegt tab A toe (localStorage-propagatievenster) → nooit wees
     ctx = ctx_for(browser, False)
     a, b = ctx.new_page(), ctx.new_page()
-    boot(b, url); profile(b); assert try_import(b, str(zpath))
+    boot(b, url); profile(b); assert import_with_setup_locks(b, str(zpath))
     boot(a, url); open_place(a, 'pl_b')
     toast = restore_via_ui(b)
     status = add_env(a, [{"name": "direct.jpg", "mimeType": "image/jpeg", "buffer": jpeg_with_exif()}])

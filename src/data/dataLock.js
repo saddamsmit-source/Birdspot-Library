@@ -26,6 +26,55 @@ export function withDataLock(operation) {
   return operation();
 }
 
+/**
+ * Aanwezigheid (herstel 2B, import met oude tabbladstand): elk open tabblad houdt een gedeelde lock
+ * zolang het bestaat. navigator.locks.query() ziet die over alle tabbladen van deze origin. Alleen als
+ * dit tabblad de enige houder is, kan geen ander tabblad plekken schrijven en is de eigen
+ * localStorage-stand de actuele. Een lock of opnieuw lezen alleen is geen bewijs.
+ */
+const PRESENCE_LOCK = 'birdspot-tab-presence';
+let presenceHeld = false;
+let presenceReady = null;
+export function holdTabPresence() {
+  if (!hasWebLocks()) return Promise.resolve(false);
+  presenceReady ??= new Promise(resolve => {
+    navigator.locks.request(PRESENCE_LOCK, { mode: 'shared' }, () => {
+      presenceHeld = true;
+      resolve(true);
+      return new Promise(() => {}); // vasthouden tot het tabblad sluit
+    }).catch(() => { presenceHeld = false; presenceReady = null; resolve(false); });
+  });
+  return presenceReady;
+}
+
+export class ImportUnsafeError extends Error {
+  constructor(message) { super(message); this.name = 'ImportUnsafeError'; }
+}
+
+/**
+ * Importeren schrijft de volledige plekkenlijst. Dat mag alleen met een aantoonbaar actuele stand:
+ * Web Locks aanwezig, dit tabblad aangemeld en geen enkel ander Birdspot-tabblad of -venster open.
+ * Anders stopt de import vóór de eerste wijziging.
+ */
+export async function assertImportSafe() {
+  if (!hasWebLocks()) {
+    throw new ImportUnsafeError('Importeren kan in deze browser niet veilig (Web Locks ontbreken): ' +
+      'de plekken uit een ander tabblad kunnen worden overschreven. Er is niets gewijzigd.');
+  }
+  await Promise.race([holdTabPresence(), new Promise(resolve => setTimeout(resolve, 1000))]);
+  let holders = 0;
+  try {
+    const { held = [] } = await navigator.locks.query();
+    holders = held.filter(lock => lock.name === PRESENCE_LOCK).length;
+  } catch (_) {
+    holders = Infinity;
+  }
+  if (!presenceHeld || holders !== 1) {
+    throw new ImportUnsafeError('Sluit eerst andere Birdspot-tabbladen of -vensters en probeer het opnieuw. ' +
+      'Importeren terwijl Birdspot elders open is, kan plekken van dat tabblad overschrijven. Er is niets gewijzigd.');
+  }
+}
+
 export class RestoreUnsupportedError extends Error {
   constructor() {
     super('Terugzetten wordt in deze browser niet veilig ondersteund (Web Locks ontbreken). ' +

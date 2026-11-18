@@ -6,6 +6,7 @@ plekken, foto's, grafstenen en veiligheidskopie gecontroleerd.
 
 G1  import van alleen geziene soorten in tab A (oude stand met P) wist de grafsteen van P niet; foto voor P geweigerd
 G1b import in tab A met een omgevingsfoto naar P (zonder P zelf) → geweigerd vóór schrijven, data identiek
+G1c idem met alleen tab A open (oude stand met P) → geweigerd door de grafsteencontrole zelf
 G2  P eerder geslaagd verwijderd; tab A (oude stand) zet een ándere import terug die terecht wordt geweigerd
     → grafsteen van P blijft, foto voor P geweigerd
 G3  onderbreking na opslaan grafsteen en vóór verwijderen plek; herimport van dezelfde ZIP herstelt de plek:
@@ -80,7 +81,7 @@ def tabs(browser, url):
     for script in (INIT, HOLD, STALE):
         ctx.add_init_script(script)
     a, b = ctx.new_page(), ctx.new_page()
-    boot(b, url); boot(a, url)
+    boot(b, url)            # A opent pas na de import in B (importeren kan alleen als enig tabblad)
     return ctx, a, b
 
 
@@ -127,19 +128,20 @@ def run(browser, url, zpath):
 def g1(browser, url, zpath, z_seen, z_env_p):
     ctx, a, b = tabs(browser, url)
     profile(b); assert try_import(b, str(zpath))
-    a.reload(wait_until='domcontentloaded'); boot(a, url)
+    boot(a, url)
     freeze(a)                                   # tab A blijft P (pl_b) zien
     toast = restore_via_ui(b)
     s1 = b.evaluate(STATE_JS)
     profile(a)
+    # Sinds de tabbladcontrole stopt deze import (B is open); de grafsteen-eis blijft dezelfde.
     imported_seen = try_import(a, zip_payload('alleen-soorten.zip', z_seen))
     s2 = b.evaluate(STATE_JS)
     status = env_add_from_stale_tab(a)
     s3 = b.evaluate(STATE_JS)
     check('G1', 'import van alleen geziene soorten (tab A, oude stand) wist grafsteen van P niet; foto voor P geweigerd',
-          'Teruggezet' in toast and 'pl_b' in s1['tombs'] and imported_seen and 'pl_b' in s2['tombs'] and
+          'Teruggezet' in toast and 'pl_b' in s1['tombs'] and 'pl_b' in s2['tombs'] and
           'pl_b' not in s3['places'] and 'opgeslagen op dit toestel' not in status and not orphans(s3),
-          f"grafstenen na terugzetten={s1['tombs']} na import={s2['tombs']} status='{status}' wees={orphans(s3)}")
+          f"import_doorgegaan={imported_seen} grafstenen na terugzetten={s1['tombs']} na import={s2['tombs']} status='{status}' wees={orphans(s3)}")
     before = b.evaluate(STATE_JS)
     a.wait_for_timeout(1800)  # profiel herrendert 1,5 s na de vorige import
     a.evaluate("() => import('/src/app.js').then(m => m.navigate('profile', { force: true }))")
@@ -150,14 +152,26 @@ def g1(browser, url, zpath, z_seen, z_env_p):
     check('G1b', 'import met omgevingsfoto naar P (zonder P) in tab A → geweigerd vóór schrijven, data identiek',
           not confirmed and after == before and not orphans(after) and 'pl_b' in after['tombs'],
           f"bevestigd={confirmed} wees={orphans(after)} gelijk={after == before}")
+    # G1c: alleen tab A open (tabbladcontrole slaagt) en A ziet P nog in zijn oude stand (relatiecontrole slaagt)
+    # → de grafsteencontrole moet zelf weigeren
+    b.close()
+    before = a.evaluate(STATE_JS)
+    a.wait_for_timeout(1800)
+    a.evaluate("() => import('/src/app.js').then(m => m.navigate('profile', { force: true }))")
+    a.locator('#btnImport').wait_for(state='visible', timeout=10000)
+    confirmed = try_import(a, zip_payload('foto-naar-p.zip', z_env_p))
+    after = a.evaluate(STATE_JS)
+    melding = a.evaluate("() => (window.__toasts || []).join(' | ')")
+    check('G1c', 'alleen tab A open, oude stand met P: omgevingsfoto naar teruggezette P → geweigerd door grafsteencontrole, data identiek',
+          not confirmed and after == before and 'is teruggezet' in melding and not orphans(after),
+          f"bevestigd={confirmed} melding='{melding[-400:]}'")
     ctx.close()
 
 
 def g2(browser, url, zpath, z_q):
     ctx, a, b = tabs(browser, url)
     profile(b); assert try_import(b, str(zpath))
-    a.reload(wait_until='domcontentloaded'); boot(a, url)
-    freeze(a)                                   # tab A blijft pl_a/pl_b zien
+    old_view = b.evaluate("() => localStorage.getItem('birdspot-places')")   # pl_a/pl_b: de oude stand van tab A
     assert 'Teruggezet' in restore_via_ui(b)    # P eerder geslaagd verwijderd → grafsteen
     s1 = b.evaluate(STATE_JS)
     profile(b); assert try_import(b, zip_payload('q.zip', z_q))   # nieuwe veiligheidskopie (zonder P)
@@ -167,7 +181,9 @@ def g2(browser, url, zpath, z_q):
       await env.addEnvPhotos('pl_q', [new File([await new Promise(r => c.toBlob(r, 'image/jpeg'))], 'q.jpg', { type: 'image/jpeg' })]);
     }""")
     s2 = b.evaluate(STATE_JS)
-    toast = restore_via_ui(a)                   # tab A (oude stand met P) → terecht geweigerd
+    boot(a, url)
+    a.evaluate("v => { window.__stalePlaces = v; }", old_view)   # tab A ziet nog de oude stand met P
+    toast = restore_via_ui(a)                   # → terecht geweigerd
     s3 = b.evaluate(STATE_JS)
     status = env_add_from_stale_tab(a)
     s4 = b.evaluate(STATE_JS)
@@ -181,16 +197,17 @@ def g2(browser, url, zpath, z_q):
 def g3(browser, url, zpath):
     ctx, a, b = tabs(browser, url)
     profile(b); assert try_import(b, str(zpath))
-    a.reload(wait_until='domcontentloaded'); boot(a, url)
+    boot(a, url)
     freeze(a)
     # Onderbreking: Terugzetten heeft de grafsteen opgeslagen, maar is gestopt vóór het verwijderen.
     b.evaluate("() => import('/src/data/dataLock.js').then(g => g.markPlacesRemoved(['pl_b']))")
     s1 = b.evaluate(STATE_JS)
+    b.close()                                   # importeren kan alleen als enig tabblad
     profile(a)
     try_import(a, str(zpath))                   # herimport dezelfde ZIP
-    s2 = b.evaluate(STATE_JS)
+    s2 = a.evaluate(STATE_JS)
     status = env_add_from_stale_tab(a)
-    s3 = b.evaluate(STATE_JS)
+    s3 = a.evaluate(STATE_JS)
     added = [m for m in s3['media'] if m not in s2['media']]
     check('G3', 'herimport na onderbreking herstelt P: grafsteen weg, veiligheidskopie gelijk, geen dubbelen, foto weer mogelijk',
           s1['tombs'] == ['pl_b'] and 'pl_b' in s1['places'] and s2['tombs'] == [] and s2['safety'] == s1['safety'] and
@@ -214,7 +231,7 @@ def main():
             browser.close()
         server.shutdown()
     passed = sum(1 for _, ok in RESULTS if ok)
-    total = max(len(RESULTS), 4)
+    total = max(len(RESULTS), 5)
     print(f"R2B-GRAFSTEEN {'PASS' if passed == total else 'FAIL'}: {passed}/{total}")
     sys.exit(0 if passed == total else 1)
 

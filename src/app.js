@@ -23,6 +23,10 @@ import { renderInsights }   from './features/insights/view.js';
 import { renderFilmStudio } from './features/film/view.js';
 import { openAddSheet }     from './features/sightings/addSheet.js';
 import { openQuickAdd }      from './features/sightings/quickAdd.js';
+import { holdTabPresence }   from './data/dataLock.js';
+
+// Herstel 2B (import met oude tabbladstand): elk open Birdspot-tabblad meldt zich aan.
+holdTabPresence();
 
 // ── Routes ────────────────────────────────────────────────
 const ROUTES = {

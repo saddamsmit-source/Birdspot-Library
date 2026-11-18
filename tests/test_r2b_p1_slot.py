@@ -29,7 +29,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from test_feature_reconciliation import boot  # noqa: E402
 from test_r2b_places_env_zip import INIT, open_place, jpeg_with_exif, profile, try_import  # noqa: E402
 from test_r2b_qa_herstel import HOLD, restore_via_ui  # noqa: E402
-from test_r2b_p1_rest import NO_LOCKS, export_zip  # noqa: E402
+from test_r2b_p1_rest import NO_LOCKS, export_zip, import_with_setup_locks  # noqa: E402
 
 APP_ROOT = Path(os.environ.get('BIRDSPOT_APP_ROOT') or Path(__file__).resolve().parent.parent)
 RESULTS = []
@@ -90,7 +90,7 @@ def scenario(browser, url, zpath, code, name, locks, bc, order):
     if bc == 'delayed':
         a.add_init_script(DELAY_BC)
     boot(b, url); profile(b)
-    assert try_import(b, str(zpath))
+    assert import_with_setup_locks(b, str(zpath))
     boot(a, url)
     assert a.evaluate("() => !!navigator.locks") == locks
     open_place(a, 'pl_b')
