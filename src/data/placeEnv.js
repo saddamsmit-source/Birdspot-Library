@@ -8,7 +8,7 @@
  * Geen upload: alles blijft op het toestel; alleen een eigen ZIP-back-up neemt ze mee.
  */
 import { getDB, changePhotos, PLACE_ENV_KIND, isPlaceEnvPhoto } from './db.js';
-import { withDataLock, trackEnvSave, assertNoRemoteRestore } from './dataLock.js';
+import { withDataLock, isPlaceRemoved } from './dataLock.js';
 import { loadPlaces } from './places.js';
 
 /** De plek bestaat niet (meer), bijvoorbeeld na 'Terugzetten' in dit of een ander tabblad. */
@@ -45,11 +45,7 @@ const cleanCaption = value => String(value ?? '').replace(/\s+/g, ' ').trim().sl
  * Voeg omgevingsfoto's toe in één transactie: alles of niets.
  * Ongeldige bestanden worden overgeslagen en gemeld; een opslagfout gooit (er is dan niets gewijzigd).
  */
-export function addEnvPhotos(placeId, files, now = new Date().toISOString()) {
-  return trackEnvSave(() => addEnvPhotosNow(placeId, files, now));
-}
-
-async function addEnvPhotosNow(placeId, files, now) {
+export async function addEnvPhotos(placeId, files, now = new Date().toISOString()) {
   if (typeof placeId !== 'string' || !placeId) throw new Error('Geen plek gekozen.');
   const records = [];
   const rejected = [];
@@ -69,7 +65,11 @@ async function addEnvPhotosNow(placeId, files, now) {
   }
   if (records.length) {
     // Definitieve opslag: binnen dezelfde lock als import/Terugzetten de plek opnieuw controleren.
-    await withDataLock(() => { assertNoRemoteRestore(); return putIfPlaceExists(placeId, records); });
+    await withDataLock(async () => {
+      // Slot P1: een grafsteen (IDB, strikt consistent) wint altijd van een mogelijk verouderde localStorage.
+      if (await isPlaceRemoved(placeId)) throw new PlaceGoneError();
+      await putIfPlaceExists(placeId, records);
+    });
   }
   return { added: records, rejected };
 }
@@ -91,7 +91,6 @@ async function putIfPlaceExists(placeId, records) {
     const turn = store.count();
     turn.onsuccess = () => {
       try {
-        assertNoRemoteRestore();
         if (!loadPlaces().some(place => place.id === placeId)) throw new PlaceGoneError();
         for (const record of records) store.put(record);
       } catch (error) {

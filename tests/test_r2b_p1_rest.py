@@ -1,14 +1,13 @@
 """Herstel 2B — twee open P1-paden na hertest van #296 (d92d803).
 
 P1 omgevingsfoto zonder Web Locks (navigator.locks uitgeschakeld)
-  L1  één tabblad, Terugzetten wint: thumbnail (laatste stap) gaat pas door zodra Terugzetten de foto-opslag leest
-      → toevoegen eindigt met PlaceGoneError, 0 foto's zonder plek
-  L2  één tabblad, toevoegen wint: Terugzetten start op het moment dat de foto wordt geschreven
-      → Terugzetten weigert, data identiek
-  L3  twee tabbladen (UI), overlap: Terugzetten stopt zichtbaar vóór wijziging (of toevoegen faalt), 0 wees
-  L4  twee tabbladen (UI), toevoegen wint → Terugzetten weigert, data identiek
+  (slot P1, 18-11: zonder Web Locks stopt Terugzetten altijd vóór de eerste wijziging)
+  L1  één tabblad, Terugzetten tijdens toevoegen → Terugzetten stopt veilig, foto bij plek, data intact
+  L2  één tabblad, Terugzetten op het moment van schrijven → idem
+  L3  twee tabbladen (UI), overlap → Terugzetten stopt zichtbaar, 0 wees
+  L4  twee tabbladen (UI), toevoegen eerst → Terugzetten stopt, data identiek
   L5  met Web Locks: zelfde volgorde als L1 blijft veilig (bestaande route)
-  L6  twee tabbladen: toevoegen direct na geslaagd Terugzetten → zichtbare weigering, 0 wees
+  L6  twee tabbladen: Terugzetten stopt veilig; toevoegen daarna gewoon, 0 wees
 P2 ZIP-medialijst
   K1  v2 zonder photoIds én zonder fotobestand → geweigerd vóór bevestiging, bestaande data intact
   K2  oudere ZIP zonder photoIds met mediaMeta-verwijzing zonder bestand → geweigerd, data intact
@@ -119,6 +118,7 @@ SINGLE_TAB = """async order => {
     while (!window.__blobHeld) await new Promise(r => setTimeout(r, 5));
     window.__restoreReading = true; // vanaf hier: de eerstvolgende lezing van de foto-opslag is die van Terugzetten
     restore = backup.restoreFromSafetyCopy().then(() => 'teruggezet', e => 'geweigerd: ' + e.message);
+    restore.finally(() => { window.__holdBlob = false; window.__releaseBlob?.(); }); // veilige stop leest de opslag niet
   }
   const addOutcome = await adding;
   while (!restore) await new Promise(r => setTimeout(r, 5));
@@ -144,13 +144,14 @@ def single_tab(browser, url, zpath, locks, order):
 
 
 def p1(browser, url, zpath):
-    res, _, _ = single_tab(browser, url, zpath, False, 'restore-first')
-    check('L1', 'zonder Web Locks, één tabblad, Terugzetten wint → fout, 0 wees',
-          res['restoreOutcome'] == 'teruggezet' and res['addOutcome'].startswith('PlaceGoneError') and res['orphans'] == 0, str(res))
-    res, _, _ = single_tab(browser, url, zpath, False, 'add-first')
-    check('L2', 'zonder Web Locks, één tabblad, toevoegen wint → Terugzetten weigert, plek + foto blijven',
-          res['addOutcome'] == 'opgeslagen' and res['restoreOutcome'].startswith('geweigerd: Terugzetten kan niet') and
-          'pl_b' in res['places'] and res['orphans'] == 0, str(res))
+    # Slot P1 (18-11): zonder Web Locks stopt Terugzetten altijd vóór de eerste wijziging.
+    unsupported = 'geweigerd: Terugzetten wordt in deze browser niet veilig ondersteund'
+    for code, order in (('L1', 'restore-first'), ('L2', 'add-first')):
+        res, before, after = single_tab(browser, url, zpath, False, order)
+        kept = after['ls'] == {**before['ls']} and set(m[0] for m in before['media']) <= set(m[0] for m in after['media'])
+        check(code, f'zonder Web Locks, één tabblad, {order}: Terugzetten stopt veilig, foto bij plek, data intact, 0 wees',
+              res['restoreOutcome'].startswith(unsupported) and res['addOutcome'] == 'opgeslagen' and
+              'pl_b' in res['places'] and res['orphans'] == 0 and kept, str(res))
 
     for code, order in (('L3', 'restore-first'), ('L4', 'add-first')):
         ctx = ctx_for(browser, False)
@@ -172,7 +173,7 @@ def p1(browser, url, zpath):
             places = [p['id'] for p in stored(a)['places']]
             b_places = [p['id'] for p in stored(b)['places']]
             orphans = [r['id'] for r in env_records(a) if r['placeId'] not in places or r['placeId'] not in b_places]
-            safe_stop = 'ander Birdspot-tabblad' in toast and 'opgeslagen' in status and 'pl_b' in places and 'pl_b' in b_places
+            safe_stop = 'niet veilig ondersteund' in toast and 'opgeslagen op dit toestel' in status and 'pl_b' in places and 'pl_b' in b_places
             add_fails = 'Teruggezet' in toast and ('bestaat niet meer' in status or 'ander Birdspot-tabblad' in status)
             check(code, 'zonder Web Locks, twee tabbladen, overlap → Terugzetten stopt zichtbaar vóór wijziging (of toevoegen faalt), 0 wees',
                   (safe_stop or add_fails) and not orphans, f"toast='{toast}' status='{status}' wees={orphans}")
@@ -181,8 +182,8 @@ def p1(browser, url, zpath):
             before = b.evaluate(SNAPSHOT_JS)
             toast = restore_via_ui(b)
             after = b.evaluate(SNAPSHOT_JS)
-            check(code, 'zonder Web Locks, twee tabbladen, toevoegen wint → Terugzetten weigert, data identiek',
-                  'opgeslagen' in msg and 'Terugzetten kan niet' in toast and before == after, f"status='{msg}' toast='{toast}'")
+            check(code, 'zonder Web Locks, twee tabbladen, toevoegen wint → Terugzetten stopt veilig, data identiek',
+                  'opgeslagen' in msg and 'niet veilig ondersteund' in toast and before == after, f"status='{msg}' toast='{toast}'")
         ctx.close()
 
     # L6: direct na geslaagd Terugzetten in tab B voegt tab A toe (localStorage-propagatievenster) → nooit wees
@@ -195,8 +196,8 @@ def p1(browser, url, zpath):
     a.wait_for_timeout(500)
     places = [p['id'] for p in stored(b)['places']]
     orphans = [r['id'] for r in env_records(b) if r['placeId'] not in places]
-    check('L6', 'zonder Web Locks, twee tabbladen, toevoegen direct na Terugzetten → zichtbare weigering, 0 wees',
-          'Teruggezet' in toast and ('ander Birdspot-tabblad' in status or 'bestaat niet meer' in status) and not orphans,
+    check('L6', 'zonder Web Locks, twee tabbladen: Terugzetten stopt veilig, daarna toevoegen gewoon, 0 wees',
+          'niet veilig ondersteund' in toast and 'opgeslagen op dit toestel' in status and 'pl_b' in places and not orphans,
           f"toast='{toast}' status='{status}' wees={orphans}")
     ctx.close()
 

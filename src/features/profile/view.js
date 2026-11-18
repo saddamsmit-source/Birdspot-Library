@@ -25,6 +25,7 @@ import { loadSettings, saveSetting, BACKUP_REMINDER_OPTIONS, PLACE_RADIUS_OPTION
 import { LAYERS, savedLayer, saveLayer } from '../map/centerPin.js';
 import { profileLists, groupSpeciesByFamily } from './stats.js';
 import { downloadCsv } from './exportCsv.js';
+import { hasWebLocks } from '../../data/dataLock.js';
 
 const SPECIES_BY_ID = new Map(SPECIES.map(s => [s.id, s]));
 const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -105,6 +106,7 @@ export async function renderProfile(el) {
           <div class="profile-card__info">
             <div class="profile-card__label">Terugzetten</div>
             <div class="profile-card__desc">Herstel de toestand van vóór de laatste import</div>
+            ${hasWebLocks() ? '' : '<div class="profile-card__desc" id="restoreUnsupported">Deze browser ondersteunt veilig terugzetten niet (Web Locks ontbreken). Je gegevens en veiligheidskopie blijven bewaard.</div>'}
           </div>
           <button class="btn btn--danger" id="btnRestore" aria-label="Terug naar vorige toestand">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">

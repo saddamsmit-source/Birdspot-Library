@@ -21,7 +21,7 @@
 import { STORAGE_KEY, SCHEMA_VERSION, migrateSighting } from '../data/sightings.js';
 import { SEEN_KEY } from '../data/species.js';
 import { getDB, PLACE_ENV_KIND }            from '../data/db.js';
-import { withDataLock, announceRestore }    from '../data/dataLock.js';
+import { withDataLock, assertRestoreSupported, markPlacesRemoved, clearPlaceTombstones } from '../data/dataLock.js';
 import { COLLECTION_KEYS, normalizeIds } from './collections.js';
 import { PLACES_KEY, PLACES_SCHEMA } from '../data/places.js';
 
@@ -630,12 +630,20 @@ export function importBackup(file) {
       importedMediaIds: newPhotos.map(photo => photo.id),
     };
     await commitRestore(before, [[SAFETY_KEY, JSON.stringify(safety)], ...dataChanges], newPhotos);
+    // Slot P1: plekken die (weer) bestaan krijgen geen grafsteen meer (binnen dezelfde lock).
+    await clearPlaceTombstones(readList(localStorage.getItem(PLACES_KEY), 'places').map(place => place.id)).catch(() => {});
     setBackupStatus({ ...getBackupStatus(), lastRestore: new Date().toISOString(), restoreCount: data.sightings.length });
     return { imported: data.sightings.length, merged: sightings.length };
   });
 }
 
 export function restoreFromSafetyCopy() {
+  // Slot P1: zonder Web Locks geen veilige volgorde tussen tabbladen → stoppen vóór de eerste wijziging.
+  try {
+    assertRestoreSupported();
+  } catch (error) {
+    return Promise.reject(error);
+  }
   return runRestore(async () => {
     const before = readStorage();
     const copy = JSON.parse(before[SAFETY_KEY]);
@@ -660,8 +668,9 @@ export function restoreFromSafetyCopy() {
     // Herstel P1-rest: gecontroleerd binnen de schrijftransactie zelf (ook zonder Web Locks).
     const imported = new Set(normalizeIds(copy.importedMediaIds));
     const restoredPlaces = new Set(readList(changes.get(PLACES_KEY) ?? null, 'places').map(place => place.id));
-    // Zonder Web Locks: andere tabbladen eerst waarschuwen; stopt vóór wijziging als er een foto wordt opgeslagen.
-    const announced = await announceRestore();
+    // Slot P1: grafstenen vóór de wijziging (binnen de lock). Mislukt Terugzetten, dan weer weg.
+    const removedPlaces = readList(before[PLACES_KEY], 'places').map(place => place.id).filter(id => !restoredPlaces.has(id));
+    await markPlacesRemoved(removedPlaces);
     try {
       await commitRestore(before, changes, normalizeIds(copy.importedMediaIds), true, photos => {
         const orphaned = photos.filter(photo => photo.kind === PLACE_ENV_KIND &&
@@ -670,8 +679,9 @@ export function restoreFromSafetyCopy() {
           throw new Error('Terugzetten kan niet: er zijn intussen omgevingsfoto\'s toegevoegd aan een herstelde plek. Er is niets gewijzigd.');
         }
       });
-    } finally {
-      announced();
+    } catch (error) {
+      await clearPlaceTombstones(removedPlaces).catch(() => {});
+      throw error;
     }
   });
 }
