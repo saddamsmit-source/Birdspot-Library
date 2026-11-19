@@ -10,7 +10,7 @@ permissions:
 jobs:
   r3:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -25,6 +25,23 @@ jobs:
           set -o pipefail
           git log -1 --format='Uitgecheckt: %H' | tee r3-audio.log
           R3_REQUIRE_MP3=1 python -u tests/test_r3_audio.py 2>&1 | tee -a r3-audio.log
+      - name: Correctie R08 — audio in ZIP en Terugzetten (Z1–Z6) op deze commit
+        run: |
+          set -o pipefail
+          git log -1 --format='Uitgecheckt: %H' | tee r3-zip.log
+          python -u tests/test_r3_zip_herstel.py 2>&1 | tee -a r3-zip.log
+      - name: Zelfde correctietests op 92a00f6 moeten de gemelde fouten raken
+        run: |
+          git fetch --depth=1 origin 92a00f6f6b25eb354ce76cffee5d5315fe6f06e0
+          git worktree add /tmp/wt-92a00f6 92a00f6f6b25eb354ce76cffee5d5315fe6f06e0
+          set +e
+          BIRDSPOT_APP_ROOT=/tmp/wt-92a00f6 python -u tests/test_r3_zip_herstel.py > r3-zip-oud.log 2>&1
+          rc=$?
+          set -e
+          cat r3-zip-oud.log
+          test "$rc" -ne 0
+          for code in Z1 Z2 Z4 Z5; do grep -q "^$code .* FAIL" r3-zip-oud.log || { echo "$code faalde NIET op 92a00f6"; exit 1; }; done
+          echo "BEWEZEN: Z1 Z2 Z4 Z5 falen op 92a00f6"
       - name: Regressies foto, video, plekmedia, ZIP, oude ZIP, herstel en offline
         run: |
           set -o pipefail
@@ -39,4 +56,6 @@ jobs:
           name: r3-audio-logs
           path: |
             r3-audio.log
+            r3-zip.log
+            r3-zip-oud.log
             r3-regressies.log

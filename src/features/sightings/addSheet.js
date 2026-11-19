@@ -37,6 +37,7 @@ import { addSighting, updateSighting } from '../../data/sightings.js';
 import { loadPlaces, placeDecision, reuseRadiusM, resolvePlaceForSave, removeCreatedPlace } from '../../data/places.js';
 import { changePhotos, getPhoto, SIGHTING_AUDIO_KIND, sightingAudioType } from '../../data/db.js';
 import { openMediaPreview } from '../../utils/validateMedia.js';
+import { audioBytesProblem, releaseSightingAudio } from '../../data/sightingAudio.js';
 import { openSpeciesPicker }     from './speciesPicker.js';
 import { escHtml }               from '../../utils/html.js';
 import { showToast }             from '../../app.js';
@@ -847,6 +848,9 @@ function _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx })
       try {
         const type = sightingAudioType(file);
         if (!type) throw new Error('Geen ondersteund geluidsformaat');
+        // Zelfde inhoudscontrole als de ZIP-voorcontrole en import (correctie R08, P2).
+        const problem = audioBytesProblem(new Uint8Array(await file.slice(0, 1 << 20).arrayBuffer()), type);
+        if (problem) throw new Error(problem);
         // Originele bytes ongewijzigd; alleen het type wordt vastgelegd als de kiezer het niet gaf.
         const blob = file.type === type ? file : new Blob([file], { type });
         const objectUrl = await openMediaPreview(blob, 'audio');   // moet hier echt afspeelbaar zijn
@@ -1039,8 +1043,12 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
   }
 
   // Bestaande media worden pas verwijderd na bevestigde opslag van de waarneming.
-  try { await changePhotos({ remove: [..._state.deletedPhotoIds, ..._state.deletedAudioIds] }); }
+  try { await changePhotos({ remove: _state.deletedPhotoIds }); }
   catch (error) { console.error('[sightingForm] detached media cleanup', error); }
+  // Correctie R08 (P2): een losgekoppelde opname blijft bewaard zolang de veiligheidskopie haar
+  // nodig heeft voor Terugzetten; pas daarna wordt ze echt verwijderd.
+  try { await releaseSightingAudio(_state.deletedAudioIds); }
+  catch (error) { console.error('[sightingForm] detached audio cleanup', error); }
   ctx.saving = false;
   close();
   showToast(isEdit ? 'Waarneming bijgewerkt' : `${savedSighting.speciesName} opgeslagen`);

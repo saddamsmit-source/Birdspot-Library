@@ -20,7 +20,8 @@
 
 import { STORAGE_KEY, SCHEMA_VERSION, migrateSighting } from '../data/sightings.js';
 import { SEEN_KEY } from '../data/species.js';
-import { getDB, PLACE_ENV_KIND, SIGHTING_AUDIO_KIND } from '../data/db.js';
+import { getDB, PLACE_ENV_KIND, SIGHTING_AUDIO_KIND, SIGHTING_AUDIO_TYPES, isSightingAudio } from '../data/db.js';
+import { audioBytesProblem, audioRefsFromSightingsRaw, audioRefsFromSafetyRaw } from '../data/sightingAudio.js';
 import { withDataLock, assertRestoreSupported, listTombstones, assertImportSafe } from '../data/dataLock.js';
 import { COLLECTION_KEYS, normalizeIds } from './collections.js';
 import { PLACES_KEY, withPlacesTx, refreshPlaces } from '../data/places.js';
@@ -268,10 +269,18 @@ function zipMediaExtension(photo) {
 export async function exportBackup() {
   const storage = readStorage();
   const sightings = readList(storage[STORAGE_KEY], 'sightings').map(migrateSighting);
-  const photos = await getAllPhotos();
+  // Correctie R08 (P1): alleen opnamen die een actuele waarneming noemt. Een verdrongen of via
+  // Bewerken losgekoppelde opname blijft lokaal bewaard voor Terugzetten, maar hoort niet in de ZIP.
+  const linkedAudio = new Set(sightings.flatMap(s => (Array.isArray(s.audioIds) ? s.audioIds : [])));
+  const photos = (await getAllPhotos()).filter(photo => !isSightingAudio(photo) || linkedAudio.has(photo.id));
   const photoIds = new Set(photos.filter(photo => photo.blob).map(photo => photo.id));
   if (photos.length !== photoIds.size || sightings.some(s => s.photoIds.some(id => !photoIds.has(id)))) {
     throw new Error('Een of meer mediabestanden ontbreken. Er is geen onvolledige back-up gemaakt.');
+  }
+  const audioIds = new Set(photos.filter(isSightingAudio).map(photo => photo.id));
+  const missingAudio = [...linkedAudio].find(id => !audioIds.has(id) || !photoIds.has(id));
+  if (missingAudio) {
+    throw new Error('Een geluidsopname ontbreekt op dit toestel. Verwijder die koppeling via Bewerken; er is geen onvolledige back-up gemaakt.');
   }
 
   const encoder = new TextEncoder();
@@ -397,24 +406,9 @@ async function readBackup(file) {
   if (data.mediaMeta != null && (!Array.isArray(data.mediaMeta) || data.mediaMeta.some(meta => !validId(meta?.id)))) {
     throw new Error('De back-up bevat ongeldige mediagegevens.');
   }
-  // Ronde 3: eigen geluidsopnamen — alleen aan de waarneming die ze in audioIds noemt, altijd audio/*.
-  const audioOwner = new Map();
-  for (const sighting of data.sightings) {
-    if (sighting.audioIds == null) continue;
-    if (!Array.isArray(sighting.audioIds) || sighting.audioIds.some(id => !validId(id) || audioOwner.has(id) ||
-      (sighting.photoIds || []).includes(id))) {
-      throw new Error('De back-up bevat een ongeldige koppeling van een geluidsopname.');
-    }
-    for (const id of sighting.audioIds) audioOwner.set(id, sighting.id);
-  }
   for (const meta of data.mediaMeta || []) {
     if (meta.kind == null) continue;
-    if (meta.kind === SIGHTING_AUDIO_KIND) {
-      if (audioOwner.get(meta.id) !== meta.sightingId || meta.placeId || meta.speciesId || !/^audio\//.test(String(meta.type || ''))) {
-        throw new Error('De back-up bevat een ongeldige geluidsopname: ' + meta.id);
-      }
-      continue;
-    }
+    if (meta.kind === SIGHTING_AUDIO_KIND) continue;   // volledig gecontroleerd in assertSightingAudio
     if (meta.kind !== PLACE_ENV_KIND || !validId(meta.placeId) || meta.sightingId || meta.speciesId ||
       !/^image\//.test(String(meta.type || '')) ||
       (meta.caption != null && (typeof meta.caption !== 'string' || meta.caption.length > ENV_CAPTION_LIMIT))) {
@@ -433,7 +427,48 @@ async function readBackup(file) {
   const mediaIds = backupMediaIds(data, files);
   const missing = [...mediaIds].find(id => !files.has(id));
   if (missing) throw new Error('Mediabestand ontbreekt in de back-up: ' + missing);
+  // Correctie R08 (P2): één audiocontrole voor voorcontrole én import (readBackup is beide).
+  assertSightingAudio(data, files, validId);
   return { data, files, mediaIds };
+}
+
+/**
+ * Eigen geluidsopnamen in een back-up: elke opname hoort bij precies de waarneming die haar in
+ * audioIds noemt, heeft metadata met kind 'sighting-audio' en hetzelfde sightingId, een ondersteund
+ * geluidstype dat bij de bestandsextensie past, en echte geluidsbytes. Nooit tegelijk foto/video of
+ * plekmedia. Oudere ZIP's (zonder audioIds en zonder dit kind) vallen hier buiten.
+ */
+function assertSightingAudio(data, files, validId) {
+  const fail = reason => { throw new Error('De back-up bevat een ongeldige geluidsopname (' + reason + '). Er is niets hersteld.'); };
+  const photoUse = new Set(data.sightings.flatMap(s => s.photoIds || []));
+  const owner = new Map();
+  for (const sighting of data.sightings) {
+    if (sighting.audioIds == null) continue;
+    if (!Array.isArray(sighting.audioIds)) fail('koppeling is geen lijst');
+    for (const id of sighting.audioIds) {
+      if (!validId(id)) fail('ongeldige ID');
+      if (owner.has(id)) fail(id + ' hoort bij meer dan één waarneming');
+      if (photoUse.has(id)) fail(id + ' is ook als foto of video gekoppeld');
+      owner.set(id, sighting.id);
+    }
+  }
+  const metaById = new Map((data.mediaMeta || []).filter(Boolean).map(meta => [meta.id, meta]));
+  for (const meta of metaById.values()) {
+    if (meta.kind === SIGHTING_AUDIO_KIND && owner.get(meta.id) !== meta.sightingId) fail(meta.id + ' heeft geen geldige waarneming');
+  }
+  const allowed = new Set(Object.values(SIGHTING_AUDIO_TYPES));
+  for (const [id, sightingId] of owner) {
+    const meta = metaById.get(id);
+    if (!meta || meta.kind !== SIGHTING_AUDIO_KIND) fail(id + ' mist geluidsgegevens');
+    if (meta.sightingId !== sightingId || meta.placeId || meta.speciesId) fail(id + ' heeft een tegenstrijdige koppeling');
+    if (!allowed.has(meta.type)) fail(id + ' heeft een niet-ondersteund formaat');
+    const file = files.get(id);
+    if (!file) fail(id + ' ontbreekt');
+    const extType = MEDIA_EXT_MIME[file.ext] === 'audio/ogg' || file.ext === 'ogg' ? 'audio/ogg' : MEDIA_EXT_MIME[file.ext];
+    if (extType !== meta.type) fail(id + ' heeft een extensie die niet bij het formaat past');
+    const problem = audioBytesProblem(file.bytes, meta.type);
+    if (problem) fail(id + ': ' + problem);
+  }
 }
 
 /**
@@ -603,7 +638,15 @@ export function importBackup(file) {
     let rollback = null;
     let outcome;
     try {
-    outcome = await withPlacesTx(({ places, tombstones, tx }) => {
+    // Correctie R08 (P1): opnamen die alleen de OUDE veiligheidskopie nog nodig had, vervallen zodra
+    // deze import die kopie vervangt (niet meer terugzetbaar). Alles wat de actuele of nieuwe
+    // waarnemingen of de nieuwe kopie (= stand vóór import) noemt, blijft.
+    const oldSafetyAudio = audioRefsFromSafetyRaw(before[SAFETY_KEY]);
+    const beforeAudio = audioRefsFromSightingsRaw(before[STORAGE_KEY]);
+    const afterAudio = audioRefsFromSightingsRaw(dataChanges.get(STORAGE_KEY) ?? before[STORAGE_KEY]);
+    const supersededAudio = oldSafetyAudio && beforeAudio && afterAudio
+      ? [...oldSafetyAudio].filter(id => !beforeAudio.has(id) && !afterAudio.has(id)) : [];
+    outcome = await withPlacesTx(({ places, tombstones, photos, tx }) => {
       assertNoMediaForRemovedPlace(data, tombstones);
       assertEnvRelations(data, places);
       const byId = new Map(places.map(place => [place.id, place]));
@@ -634,9 +677,11 @@ export function importBackup(file) {
       const photoStore = tx.objectStore('photos');
       for (const photo of newPhotos) photoStore.add(photo);
       for (const id of revive) tombStore.delete(id);
+      const stored = new Map(photos.map(photo => [photo.id, photo]));
+      for (const id of supersededAudio) if (isSightingAudio(stored.get(id))) photoStore.delete(id);
       markCommitted(tx, opId, 'import', { ...journalKeys, [SAFETY_KEY]: { before: before[SAFETY_KEY], after: safetyRaw } });
       return { put, result: 'imported', tombstones: nextTombs };
-    }, ['photos', 'opJournal'], { onAbort: () => rollback?.() });
+    }, ['photos', 'opJournal'], { readPhotos: true, onAbort: () => rollback?.() });
     } catch (error) {
       await finishOperation(opId).catch(() => {});   // localStorage is al teruggezet (onAbort)
       throw error;
@@ -692,6 +737,15 @@ export function restoreFromSafetyCopy() {
         !imported.has(photo.id) && !restoredIds.has(photo.placeId));
       if (orphaned.length) {
         throw new Error('Terugzetten kan niet: er zijn intussen omgevingsfoto\'s toegevoegd aan een herstelde plek. Er is niets gewijzigd.');
+      }
+      // Correctie R08 (P2): nooit een koppeling herstellen naar een opname die er niet (meer) is.
+      // Incomplete veiligheidskopie → stoppen vóór de eerste wijziging; alles blijft beschikbaar.
+      const restoredAudio = audioRefsFromSightingsRaw(changes.get(STORAGE_KEY) ?? null);
+      const byId = new Map(photos.map(photo => [photo.id, photo]));
+      const lostAudio = restoredAudio === null ? ['?'] : [...restoredAudio].filter(id =>
+        imported.has(id) || !isSightingAudio(byId.get(id)) || !(byId.get(id).blob instanceof Blob));
+      if (lostAudio.length) {
+        throw new Error('Terugzetten kan niet: een geluidsopname uit de veiligheidskopie ontbreekt op dit toestel. Er is niets gewijzigd; je huidige waarnemingen, media en veiligheidskopie blijven bewaard.');
       }
       const removed = places.map(place => place.id).filter(id => !restoredIds.has(id));
       const tombStore = tx.objectStore('placeTombstones');
