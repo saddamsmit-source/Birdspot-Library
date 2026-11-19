@@ -9,7 +9,7 @@
  */
 
 import { deleteSighting }                   from '../../data/sightings.js';
-import { getPhotosBySighting, getPhoto, deletePhoto } from '../../data/db.js';
+import { getPhotosBySighting, getPhoto, deletePhoto, isSightingAudio } from '../../data/db.js';
 import { methodLabel, sourceLabel } from './evidence.js';
 import { escHtml }                          from '../../utils/html.js';
 import { openPhotoViewer } from '../../utils/photoViewer.js';
@@ -24,7 +24,11 @@ const CERTAINTY_NL = {
 
 export async function openDetailSheet(sighting, { onDeleted, onUpdated, isActive = () => true } = {}) {
   // Laad media uit IndexedDB
-  const photos = await getPhotosBySighting(sighting.id).catch(() => []);
+  // Ronde 3: eigen geluidsopnamen apart houden (nooit in de foto-/videogalerij).
+  const photos = (await getPhotosBySighting(sighting.id).catch(() => [])).filter(p => !isSightingAudio(p));
+  const audioIds = Array.isArray(sighting.audioIds) ? sighting.audioIds : [];
+  const audio = [];
+  for (const id of audioIds) audio.push({ id, record: await getPhoto(id).catch(() => null) });
   // Fallback for legacy photos linked through sighting.photoIds only.
   const ids = new Set(photos.map(p=>p.id));
   for (const id of (sighting.photoIds || [])) {
@@ -52,7 +56,7 @@ export async function openDetailSheet(sighting, { onDeleted, onUpdated, isActive
         </div>
       </div>
       <div class="sheet__content" id="detailSheetContent">
-        ${_renderDetailBody(sighting, photos)}
+        ${_renderDetailBody(sighting, photos, audio)}
       </div>
       <div class="sheet__footer detail-footer">
         <button class="btn-danger" id="detailDelete" type="button">
@@ -111,8 +115,8 @@ export async function openDetailSheet(sighting, { onDeleted, onUpdated, isActive
       showToast('Verwijderen mislukt. De waarneming en foto’s zijn behouden.');
       return;
     }
-    // Pas na succesvolle recordopslag verwijderbare media opruimen.
-    for (const id of (sighting.photoIds || [])) {
+    // Pas na succesvolle recordopslag verwijderbare media opruimen (foto's, video's en eigen opnamen).
+    for (const id of [...(sighting.photoIds || []), ...audioIds]) {
       await deletePhoto(id).catch(() => {});
     }
     close();
@@ -137,7 +141,7 @@ export async function openDetailSheet(sighting, { onDeleted, onUpdated, isActive
 }
 
 // ── Detail body HTML ───────────────────────────────────────
-function _renderDetailBody(s, photos) {
+function _renderDetailBody(s, photos, audio = []) {
   const dateStr = fmtDate(s.date) + (s.time ? ` · ${s.time}` : '');
 
   return `
@@ -225,6 +229,18 @@ function _renderDetailBody(s, photos) {
             : `<img src="${escHtml(url)}" class="detail-media__img"
                  alt="${escHtml(p.filename || '')}">`}
         </button>`;
+      }).join('')}
+    </div>` : ''}
+    ${audio.length ? `
+    <div class="detail-field__label" style="margin-top:var(--space-16)">Geluidsopnamen (${audio.length})</div>
+    <div class="detail-audio-list">
+      ${audio.map(({ id, record }) => {
+        const url = record && isSightingAudio(record) ? _blobToUrl(record) : null;
+        return `<div class="detail-audio" data-audioid="${escHtml(id)}">
+          <div class="detail-audio__name">${escHtml(record?.filename || 'Opname')}</div>
+          ${url ? `<audio class="detail-audio__player" controls preload="metadata" src="${escHtml(url)}"></audio>`
+                : '<p class="detail-field__hint">Opname ontbreekt op dit toestel.</p>'}
+        </div>`;
       }).join('')}
     </div>` : ''}`;
 }

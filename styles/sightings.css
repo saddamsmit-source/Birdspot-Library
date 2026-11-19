@@ -794,3 +794,69 @@
 .place-offer__title { flex: 1 1 100%; margin: 0; font-size: 13px; color: var(--ink-2, var(--muted)); }
 .place-offer__choice { min-height: 44px; padding: 0 12px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); font-weight: 700; font-size: 13px; }
 .place-offer__choice--separate { color: var(--muted); }
+
+/* ── Ronde 3 (R08): eigen geluidsopnamen bij een waarneming ── */
+.sighting-audio-list {
+  display:        flex;
+  flex-direction: column;
+  gap:            var(--space-8);
+  margin-top:     var(--space-8);
+}
+.sighting-audio-item {
+  display:        grid;
+  grid-template-columns: 1fr 44px;
+  align-items:    center;
+  gap:            var(--space-4) var(--space-8);
+  padding:        var(--space-8);
+  border-radius:  var(--r-sm);
+  background:     var(--surface-2);
+}
+.sighting-audio-item__name {
+  grid-column: 1;
+  min-width:   0;
+  overflow:    hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size:   .875rem;
+}
+.sighting-audio-item__player,
+.detail-audio__player {
+  grid-column: 1 / -1;
+  width:       100%;
+  height:      40px;
+}
+.sighting-audio-item__del {
+  grid-column: 2;
+  grid-row:    1;
+  width:       44px;
+  height:      44px;
+  border-radius: 50%;
+  display:     flex;
+  align-items: center;
+  justify-content: center;
+  color:       var(--muted);
+}
+.sighting-audio-add.media-add-btn {
+  width:       100%;
+  height:      48px;
+  gap:         var(--space-8);
+  font-weight: 600;
+}
+.detail-audio-list {
+  display:        flex;
+  flex-direction: column;
+  gap:            var(--space-8);
+  margin-top:     var(--space-8);
+}
+.detail-audio {
+  padding:       var(--space-8);
+  border-radius: var(--r-sm);
+  background:    var(--surface-2);
+}
+.detail-audio__name {
+  font-size:     .875rem;
+  margin-bottom: var(--space-4);
+  overflow:      hidden;
+  text-overflow: ellipsis;
+  white-space:   nowrap;
+}

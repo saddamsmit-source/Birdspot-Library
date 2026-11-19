@@ -24,6 +24,34 @@ export function isPersonalGuidePhoto(photo) {
     typeof photo.speciesId === 'string' && String(photo.id).startsWith(`guide-${photo.speciesId}-`);
 }
 
+/**
+ * Ronde 3 (R08): eigen geluidsopname bij een waarneming (bv. geëxporteerde Merlin-WAV).
+ * Record: { id, kind: 'sighting-audio', blob (originele bytes), type, filename, size, sightingId, addedAt }.
+ * Bewust zonder speciesId/placeId: nooit in soortkaarten, mediabibliotheek, zoekindex, plekmedia,
+ * gidsaudio of BirdNET. Gekoppeld via sighting.audioIds (los van photoIds).
+ */
+export const SIGHTING_AUDIO_KIND = 'sighting-audio';
+export function isSightingAudio(record) {
+  return record?.kind === SIGHTING_AUDIO_KIND;
+}
+/** Formaten die afspelen én de ZIP-roundtrip (verliesloos) ondersteunen. */
+export const SIGHTING_AUDIO_TYPES = Object.freeze({
+  wav: 'audio/wav', mp3: 'audio/mpeg', m4a: 'audio/mp4', aac: 'audio/aac', oga: 'audio/ogg', ogg: 'audio/ogg',
+});
+const AUDIO_MIME_ALIASES = Object.freeze({
+  'audio/wav': 'audio/wav', 'audio/x-wav': 'audio/wav', 'audio/wave': 'audio/wav', 'audio/vnd.wave': 'audio/wav',
+  'audio/mpeg': 'audio/mpeg', 'audio/mp3': 'audio/mpeg', 'audio/mp4': 'audio/mp4', 'audio/x-m4a': 'audio/mp4',
+  'audio/aac': 'audio/aac', 'audio/ogg': 'audio/ogg',
+});
+/** Bepaal het opslagtype van een gekozen geluidsbestand (MIME, anders extensie); null = niet ondersteund. */
+export function sightingAudioType(file) {
+  const mime = String(file?.type || '').toLowerCase().split(';')[0].trim();
+  if (AUDIO_MIME_ALIASES[mime]) return AUDIO_MIME_ALIASES[mime];
+  if (mime && mime !== 'application/octet-stream') return null;   // ander, niet-ondersteund type
+  const ext = String(file?.name || '').split('.').pop().toLowerCase();
+  return SIGHTING_AUDIO_TYPES[ext] || null;
+}
+
 /** Ronde 2B: privé-omgevingsfoto van een plek (nooit een vogelfoto). */
 export const PLACE_ENV_KIND = 'place-env';
 export function isPlaceEnvPhoto(photo) {
@@ -175,7 +203,7 @@ export async function getMediaMetadata() {
         resolve(results);
         return;
       }
-      if (isPersonalGuidePhoto(cursor.value) || isPlaceEnvPhoto(cursor.value)) {
+      if (isPersonalGuidePhoto(cursor.value) || isPlaceEnvPhoto(cursor.value) || isSightingAudio(cursor.value)) {
         cursor.continue();
         return;
       }

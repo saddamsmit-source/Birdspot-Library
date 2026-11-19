@@ -1,0 +1,41 @@
+name: Birdspot ronde 3 — eigen geluidsopname per waarneming (R08)
+on:
+  push:
+    branches: ['feat/birdspot-r3-*', 'fix/birdspot-r3-*']
+    paths: ['.github/workflows/r3-audio-qa.yml', 'src/**', 'sw.js', 'index.html', 'styles/**', 'tests/test_r3_*', 'tests/fixtures/backup_pre_r2b_*.zip']
+  pull_request:
+    paths: ['.github/workflows/r3-audio-qa.yml', 'src/**', 'sw.js', 'index.html', 'styles/**', 'tests/test_r3_*', 'tests/fixtures/backup_pre_r2b_*.zip']
+permissions:
+  contents: read
+jobs:
+  r3:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: |
+          python -m pip install -r tests/requirements.txt
+          python -m playwright install --with-deps chromium
+          ffmpeg -version | head -1 || (sudo apt-get update && sudo apt-get install -y ffmpeg)
+      - name: R08 mobiel Chromium (R3-01..R3-12) op deze commit
+        run: |
+          set -o pipefail
+          git log -1 --format='Uitgecheckt: %H' | tee r3-audio.log
+          python -u tests/test_r3_audio.py 2>&1 | tee -a r3-audio.log
+      - name: Regressies foto, video, plekmedia, ZIP, oude ZIP, herstel en offline
+        run: |
+          set -o pipefail
+          python tests/test_r2b_places_env_zip.py 2>&1 | tee r3-regressies.log
+          python tests/test_r2b_crashherstel.py 2>&1 | tee -a r3-regressies.log
+          for t in test_map_k4.py test_sighting_merlin_pins.py test_profile_backup.py test_release_backup_roundtrip.py test_pilot_cross_profile_zip.py test_pilot_offline_new_sighting.py test_quick_add_merlin.py; do
+            echo "== $t"; (cd tests && python "$t") 2>&1 | tee -a r3-regressies.log
+          done
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: r3-audio-logs
+          path: |
+            r3-audio.log
+            r3-regressies.log
