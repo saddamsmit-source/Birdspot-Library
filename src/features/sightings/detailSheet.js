@@ -15,6 +15,7 @@ import { escHtml }                          from '../../utils/html.js';
 import { openPhotoViewer } from '../../utils/photoViewer.js';
 import { showToast }                        from '../../app.js';
 import { openEditSheet }                    from './addSheet.js';
+import { releaseSightingAudio }             from '../../data/sightingAudio.js';
 
 const CERTAINTY_NL = {
   certain:  'Zeker',
@@ -116,9 +117,11 @@ export async function openDetailSheet(sighting, { onDeleted, onUpdated, isActive
       return;
     }
     // Pas na succesvolle recordopslag verwijderbare media opruimen (foto's, video's en eigen opnamen).
-    for (const id of [...(sighting.photoIds || []), ...audioIds]) {
+    for (const id of (sighting.photoIds || [])) {
       await deletePhoto(id).catch(() => {});
     }
+    // Opnamen alleen echt weg als de veiligheidskopie ze niet meer nodig heeft (Terugzetten).
+    await releaseSightingAudio(audioIds).catch(() => {});
     close();
     showToast('Waarneming verwijderd');
     onDeleted?.(sighting);
