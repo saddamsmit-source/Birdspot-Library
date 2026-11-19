@@ -5,6 +5,19 @@ Handbook. Kickoff-baseline per App Kickoff Gate (Handbook §1.3); vastgelegd
 retroactief, na reeds afgeronde en nog openstaande featurewerk, zodat de
 baseline alsnog klopt met de werkelijke stand van de app.
 
+## Werkstand Birdspot — kandidaat na vier rondes
+
+**Peildatum** 19 november 2026. De kandidaat staat op `ed810ae8de34bccc26e6f759a3e815323f893a95`. GitHub Pages toont de openbare reviewversie **1.27.31** op `0f9f631`. De kandidaat heeft hetzelfde versienummer. [Kandidaatbewijs en open toestelproeven](docs/release/RELEASE_1.27.31.md#kandidaat-na-vier-rondes)
+
+- **Waarneming toevoegen.** Het formulier haalt GPS automatisch op als locatietoestemming al is verleend. Een handmatige pin of het wissen van de locatie heeft voorrang op een laat GPS-antwoord.
+- **Vaste plekken.** De zoekstraal staat standaard op 250 m en kan op 100, 250 of 500 m. Eén kandidaat en een bekende nauwkeurigheid van maximaal 50 m geven een voorselectie met de optie **Aparte spot**. Bij meerdere kandidaten of onzekerheid kiest de gebruiker zelf. Elke waarneming bewaart haar eigen datum, tijd en coördinaten.
+- **Omgevingsfoto’s en ZIP.** Privé-omgevingsfoto’s horen bij een plek en gaan mee in een eigen ZIP-export. IndexedDB is leidend voor plekken. ZIP-import vereist Web Locks en één open Birdspot-venster. **Terugzetten** vereist Web Locks. De kaart wacht op herstel en stelt automatische plektoewijzing uit zolang de plekmigratie onzeker is.
+- **Opname bij een waarneming.** Via **+ Geluidsopname** voeg je een bestand toe, bijvoorbeeld een Merlin-WAV. De eigen opname is afspeelbaar in het waarnemingsdetail. Een ZIP-back-up bewaart het oorspronkelijke bestand en de koppeling.
+- **Geluid herkennen.** Via **+ → Geluid herkennen** open je de BirdNET-route. Het blok **Controleer met Merlin** biedt delen op een geschikte browser en uitleg voor handmatig openen. Birdspot bewaart eerst het bijgewerkte concept en geeft alleen de WAV door aan het systeemdeelmenu. Je legt per gekozen soort vast wat Merlin voorstelde, wat je zelf controleerde en of je de vogel ook zag. [Bediening en bewijsgrenzen](docs/roadmap/BIRDSPOT_PLUS_MERLIN_SNELWAARNEMEN_V0.1_DRAFT.md#huidige-kandidaat)
+- **Versie.** Het profiel toont de appversie en de offline-status afzonderlijk.
+
+**Vervolg volgens eigenaarbesluit.** F3 hervat vanaf **60/140 inhoudelijk bekeken, 0 volledig afgetekend**. De volgende batch is Graspieper, IJsvogel en Fuut. Daarna volgen de brede praktijktests, inclusief Samsung/PWA en Merlin. Gidsfoto’s aanvullen volgt na geslaagde praktijktests. Release blijft **HOLD**. [Voorbereiding F3-R21](docs/fotokwaliteit/F3_R21_GRASPIEPER_IJSVOGEL_FUUT_2026-11-17_DRAFT.md)
+
 ## Identiteit
 
 - **App**: Birdspot Library (App 002)
@@ -50,7 +63,7 @@ als naslagwerk erbij.
   waarnemingen).
 - Profiel met lijsten, statistieken en CSV-export van eigen waarnemingen.
 - Eigen geluidsopnamen (bijvoorbeeld via Merlin geëxporteerd) toevoegen per
-  soort.
+  waarneming.
 
 **MAY**
 

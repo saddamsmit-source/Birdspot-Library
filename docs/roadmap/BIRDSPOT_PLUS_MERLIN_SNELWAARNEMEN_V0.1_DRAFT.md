@@ -1,5 +1,18 @@
 # Birdspot — Snel waarnemen via + en Merlin Sound ID
 
+## Huidige kandidaat
+
+**v0.2 DRAFT · 19 november 2026.** Op kandidaat `ed810ae8de34bccc26e6f759a3e815323f893a95` opent **Waarneming toevoegen** het formulier. **Geluid herkennen** opent de BirdNET-route met het ingeklapte blok **Controleer met Merlin**.
+
+1. Neem geluid op in Birdspot. Open **Controleer met Merlin**. Op een geschikte browser verschijnt **Deel opname met Merlin**. Birdspot bewaart eerst het bijgewerkte concept, inclusief datum, tijd en plek. Alleen de WAV gaat naar het systeemdeelmenu.
+2. Open Merlin handmatig als de deelroute ontbreekt of geannuleerd is. Via **+ → Geluid herkennen** hervat je bij terugkeer hetzelfde lokale concept.
+3. Vink aan dat je Merlin hebt gebruikt. Markeer per soort **Merlin gaf deze soort**, **Zelf gecontroleerd** en zo nodig **Ook gezien**. Een Merlin-suggestie krijgt **Mogelijk**, een zelf gecontroleerde soort **Zeker**. Soorten zonder het vinkje **Merlin gaf deze soort** worden als eigen herkenning opgeslagen.
+4. Pin de waarneming. De sessie kan de opname bij één gekozen soort als bijlage opslaan. Via **Bewerken** en **+ Geluidsopname** kun je bij een waarneming een eigen geluidsbestand kiezen, bijvoorbeeld een geëxporteerde Merlin-WAV. Afspelen werkt lokaal. De ZIP-back-up bewaart het oorspronkelijke bestand.
+
+De gebruiker voert de soortuitkomst zelf in Birdspot in. Mobiel Chromium doorliep **12/12** scenario’s met een gesimuleerde deelroute. Op Samsung staan het echte deelmenu, terugkeer naar hetzelfde concept, een echte Merlin-WAV en offline heropenen nog open. [Chromium-tests](https://github.com/saddamsmit-source/Birdspot-Library/actions/runs/44599118525) · [Kandidaatbewijs](../release/RELEASE_1.27.31.md#kandidaat-na-vier-rondes)
+
+## Historische ontwerpbrief
+
 | Veld | Waarde |
 |---|---|
 | Document | v0.1 DRAFT — 15 november 2026 |

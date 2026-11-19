@@ -71,3 +71,21 @@ Legenda: ✔ = ja, met bewijs · ✘ = nee · ◐ = gedeeltelijk · — = niet v
 **Eigenaarakkoord:** van geen enkele werkende functie in 1.27.31 is een expliciet eigenaarakkoord vastgelegd. Ontwerpakkoorden van 10-11 (fotovolgorde en kaart) en de gekozen diashowfoto's zijn akkoorden op het ontwerp, niet op de werkende functie.
 
 **Onafhankelijke review:** ChatGPT beoordeelt dezelfde SHA `0f9f631` read-only, met deze tabel en run 44111958995 als startpunt.
+
+## Kandidaat na vier rondes
+
+**Peildatum** 19 november 2026. De tabel hierboven registreert de openbare reviewversie op `0f9f631`. Deze aanvulling registreert de ontwikkelkandidaat `ed810ae8de34bccc26e6f759a3e815323f893a95`. Publicatie staat op **HOLD**.
+
+| Afspraak | Werking in de kandidaat | Testbewijs |
+|---|---|---|
+| R01 · Centrale + met twee keuzes | **Waarneming toevoegen** en **Geluid herkennen**. Het optionele Merlin-blok zit binnen de geluidsroute. | Mobiel Chromium, M1 |
+| R05 · GPS bij handmatig toevoegen | Automatisch met verleende locatietoestemming. Een handmatige pin of wisactie heeft voorrang op een laat GPS-antwoord. | Chromium, GPS G1–G8 |
+| R06 · Bestaande plek hergebruiken | Straal 100/250/500 m, standaard 250 m. Voorselectie vereist één kandidaat en een bekende nauwkeurigheid van hoogstens 50 m. De gebruiker kan een aparte plek kiezen. | 2B-unit 14/14 en Chromium |
+| R07 · Optionele Merlin-dubbelcheck | Birdspot deelt alleen de WAV na opslag van het actuele concept. Handmatig openen kan ook. De gebruiker bevestigt per soort en slaat op via de bestaande pinroute. | Mobiel Chromium 12/12 met gesimuleerd systeemdeelmenu |
+| R08 · Eigen geluidsopname per waarneming | Toevoegen en verwijderen via het formulier. Verwijderen gebeurt na opslaan. Offline afspelen in het detail. ZIP bewaart de originele bytes en de koppeling. | R08-suites voor opslag, verwijderen, annuleren, leesfout, ZIP en Terugzetten |
+| R16 · ZIP en Terugzetten | Plekken en privé-omgevingsfoto’s in ZIP v2. De kaart wacht op herstel en op voltooide plekmigratie. Oudere ZIP’s werken in de geteste routes. | 2B, inclusief C5, C6 en D4 voor kaartkoppeling en herstel |
+| R18 · Versie direct zichtbaar | Het profiel toont versie en offline-status afzonderlijk. | Functionele reconciliatie kandidaat, 14/14 |
+
+Bij samenvoegen tijdens herstel blijft een notitie uit een oudere appversie bewaard. Plek- en mediaverwijzingen uit de onderbroken bewerking worden gecontroleerd tegen IndexedDB. Een verwijzing naar een ontbrekend bestand wordt losgekoppeld. Bij dezelfde ID voor een omgevingsfoto houdt de huidige import de lokale foto en toelichting. Het eigenaarbesluit over de toelichting staat open.
+
+**Toestelproeven** staan op **NOT TESTED**. De brede praktijktest volgt na F3 en omvat Samsung/PWA, echte appwisseling en WAV-acceptatie in Merlin, een geëxporteerde Merlin-WAV in de Android-bestandskiezer, upgrade, offline, quotum en ZIP-herstel op een tweede toestel. [2B-run](https://github.com/saddamsmit-source/Birdspot-Library/actions/runs/44599079608) · [R08-run](https://github.com/saddamsmit-source/Birdspot-Library/actions/runs/44599118326) · [Merlin-run](https://github.com/saddamsmit-source/Birdspot-Library/actions/runs/44599118525) · [Functionele controle](https://github.com/saddamsmit-source/Birdspot-Library/actions/runs/44599118544)
