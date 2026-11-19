@@ -6,6 +6,10 @@ on:
       - docs/birdspot-rondes-1-4-20261119
   workflow_dispatch:
 
+concurrency:
+  group: birdspot-f3-r21-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: read
 
@@ -20,6 +24,7 @@ jobs:
           node-version: '24'
       - name: Species, evidence boundaries and source consistency
         run: |
+          node tests/test_kennisbaseline.mjs
           node tests/test_lookalike_r09.mjs
           node tests/test_lookalike_r21.mjs
           node tests/test_lookalike_r20.mjs

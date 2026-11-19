@@ -1547,6 +1547,7 @@ export const GUIDE_COMPARISONS = [
   },
   {
     label: 'Graspieper en Boompieper · veldkenmerken',
+    reciprocalText: true,
     birds: [
       {id: 'sp072', source: 'graspieper', photoMissing: true, marks: 'Fijne snavel. De borst- en flankstrepen zijn ongeveer even breed.'},
       {id: 'sp073', source: 'boompieper', textOnly: true, photoMissing: true, marks: 'Iets forsere snavel en dunnere flankstreepjes dan borststrepen.'},
@@ -1941,6 +1942,7 @@ export const GUIDE_COMPARISONS = [
   },
   {
     label: 'Fuut en Roodhalsfuut · winterkleed',
+    reciprocalText: true,
     birds: [
       {id: 'sp077', source: 'fuut', photoMissing: true, marks: 'Slanke hals en smalle spitse snavel.'},
       {id: 'sp195', source: 'roodhalsfuut', photoMissing: true, marks: 'Dikkere hals en forsere donkere snavel met gele basis.'},

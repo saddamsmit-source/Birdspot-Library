@@ -33,6 +33,14 @@ def main():
                         ('Fuut','sp077',['roodhalsfuut','snavel'],['sp195']),
                         ('Roodhalsfuut','sp195',['fuut','snavel'],['sp077'])]:
                         text_only(p,name,sid,needles,hidden)
+                        open_species(p,name,sid)
+                        partner=hidden[0]
+                        other_name={'sp072':'Graspieper','sp073':'Boompieper','sp077':'Fuut','sp195':'Roodhalsfuut'}[partner]
+                        p.locator(f'#sdPanel-herkenning [data-compare-species="{partner}"]').first.click()
+                        expect(p.locator('.signature-species-detail-sheet h2')).to_have_text(other_name)
+                        p.locator(f'#sdPanel-herkenning [data-compare-species="{sid}"]').first.click()
+                        expect(p.locator('.signature-species-detail-sheet h2')).to_have_text(name)
+                        close(p)
                     for name,sid in [('Graspieper','sp072'),('IJsvogel','sp075'),('Fuut','sp077')]:
                         open_species(p,name,sid)
                         panel=p.locator('#sdPanel-herkenning')

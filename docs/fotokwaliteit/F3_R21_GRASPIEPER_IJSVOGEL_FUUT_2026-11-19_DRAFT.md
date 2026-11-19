@@ -6,7 +6,7 @@ Basis: vrijgegeven documentcheckpoint PR #312, `d830afe50f726ec7b3702ead33db6640
 
 ## Stand en wijzigingen
 
-**63/140 inhoudelijk opnieuw bekeken; 77 nog te starten; 0 FULL PASS.** Deze ronde telt uitsluitend sp072, sp075 en sp077. De beperkte vergelijkingsprofielen van Boompieper en Roodhalsfuut voegen geen soorten toe aan de vaste 140-cohort en vormen geen volledige audit van die partners.
+**63/140 inhoudelijk opnieuw bekeken; 77 nog te starten; 0 FULL PASS.** Deze ronde telt uitsluitend sp072, sp075 en sp077. De wederkerige vergelijkingsverwijzingen bij Boompieper en Roodhalsfuut voegen geen kennisprofielen of soorten toe aan de vaste 140-cohort en vormen geen volledige audit van die partners.
 
 - Graspieper: bestaande foto’s en kennis tegen bronbeeld, Vogelbescherming en de gelezen Blasco-Zumeta & Heinze-PDF gehouden. Sovon-trend toegevoegd met onderscheid tussen de periode vanaf 1990 en de laatste twaalf jaar. Herkenningsverschillen met Boompieper nu vanuit beide kaarten bereikbaar; fotopaar blijft verborgen.
 - IJsvogel: vijf zichtbare foto’s gecontroleerd, waaronder echte vrije vlucht. Bestaande maatberekening en ruwe bronwaarden behouden. De eerder ingetrokken juvenielenrol blijft ingetrokken; originele bytes, metadata en historie blijven aanwezig. Vergelijking met Bijeneter blijft wederkerig.
@@ -44,6 +44,8 @@ Er is deze ronde **geen onafhankelijke auditieve determinatie** uitgevoerd en ge
 eBird blijft geparkeerd na de eerder vastgelegde Anubis-blokkade; geen nieuwe poging in deze ronde.
 
 ## Tests en bewijsgrenzen
+
+De brede kennisbaseline-controle wees op het bestaande eigenaarbesluit: volledige kennisprofielen eerst voor soorten mét gidsfoto’s. Twee aanvankelijk toegevoegde partnerprofielen zijn daarom verwijderd; uitsluitend expliciet gemarkeerde, brononderbouwde vergelijkingstekst wordt wederkerig weergegeven. De oorspronkelijke gate is ongewijzigd.
 
 Lokaal: R21/R20-gegevens- en rendercontroles, vaste F3-cohort/tellers, ingetrokken IJsvogelrol, audiobewijsgrens, fotogenerator en bronconsistentie gecontroleerd. De lokale Playwright-browser kon niet starten; systeem-Chromium startte evenmin. Daarom levert de aparte workflow `f3-r21-content-qa.yml` browserbewijs op GitHub Actions, gekoppeld aan de geteste SHA in PR #313.
 

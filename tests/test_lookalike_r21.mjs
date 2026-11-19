@@ -38,13 +38,16 @@ for (const [a,b] of [['sp072','sp073'], ['sp077','sp195']]) {
     assert.ok(html.includes('data-compare-species="' + other + '"'), own + ': missing reverse recognition link');
     const pairs = GUIDE_COMPARISONS.filter(c => c.birds.some(b => b.id === own) && c.birds.some(b => b.id === other));
     assert.ok(!pairs.some(c => c.birds.every(b => comparisonPhoto(b, Boolean(c.flight)))), own + ': incomplete photo pair');
-    assert.ok(KNOWLEDGE[own].critical.some(x => x.vs.includes(other)));
+    if (KNOWLEDGE[own]) assert.ok(KNOWLEDGE[own].critical.some(x => x.vs.includes(other)));
+    else assert.ok(html.includes('data-text-similar'), own + ': reciprocal text without full knowledge profile');
   }
 }
 for (const [a,b] of [['sp072','sp070'], ['sp075','sp257']]) {
   assert.ok(panel(a).includes('data-compare-species="' + b + '"'));
   assert.ok(panel(b).includes('data-compare-species="' + a + '"'));
 }
+assert.equal(KNOWLEDGE.sp073, undefined, 'respect photo-first scope for knowledge profiles');
+assert.equal(KNOWLEDGE.sp195, undefined, 'a reverse text link does not create a full profile');
 assert.ok(!panel('sp075').includes('sp075-juv-review.webp'));
 assert.ok(!GUIDE_POSES.sp077?.some(p => p.flight));
 const fuut = f3.records.find(r => r.id === 'sp077');
