@@ -75,6 +75,23 @@ jobs:
           test "$rc" -ne 0
           for code in W1 W3 W3f; do grep -q "^$code .* FAIL" r3-restpunten-oud.log || { echo "$code faalde NIET op eb084c8"; exit 1; }; done
           echo "BEWEZEN: W1 W3 W3f falen op eb084c8"
+      - name: P1 R08 — mislukt leesverzoek bij twee opnamen (L1–L2) op deze commit
+        run: |
+          git log -1 --format='Uitgecheckt: %H' | tee r3-leesfout.log
+          python -u tests/test_r3_leesfout.py 2>&1 | tee -a r3-leesfout.log
+      - name: Zelfde leesfouttest op a5e0918 moet de gemelde fout raken
+        run: |
+          git fetch --depth=1 origin a5e0918a5d7dd8e24e0b6927ef9b74565e532084
+          git worktree add /tmp/wt-a5e0918 a5e0918a5d7dd8e24e0b6927ef9b74565e532084
+          set +e
+          BIRDSPOT_APP_ROOT=/tmp/wt-a5e0918 python -u tests/test_r3_leesfout.py > r3-leesfout-oud.log 2>&1
+          rc=$?
+          set -e
+          cat r3-leesfout-oud.log
+          test "$rc" -ne 0
+          grep -q "^L1 .* FAIL" r3-leesfout-oud.log || { echo "L1 faalde NIET op a5e0918"; exit 1; }
+          grep -q "^L2 .* PASS" r3-leesfout-oud.log || { echo "L2 (bevestigd ontbrekend) hoort op a5e0918 te slagen"; exit 1; }
+          echo "BEWEZEN: L1 faalt op a5e0918; L2 slaagt op beide"
       - name: Regressies foto, video, plekmedia, ZIP, oude ZIP, herstel en offline
         run: |
           set -o pipefail
@@ -95,4 +112,6 @@ jobs:
             r3-vervolg-oud.log
             r3-restpunten.log
             r3-restpunten-oud.log
+            r3-leesfout.log
+            r3-leesfout-oud.log
             r3-regressies.log

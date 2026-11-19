@@ -147,14 +147,17 @@ export async function readAudioRecords(ids) {
     let tx;
     try { tx = db.transaction('photos', 'readonly'); } catch (error) { reject(new AudioReadError(error)); return; }
     const out = new Array(ids.length);
-    tx.oncomplete = () => resolve(out);
-    tx.onabort = () => reject(new AudioReadError(tx.error));
-    tx.onerror = event => { event.preventDefault(); };   // afhandeling via onabort
+    let failed = null;
+    // QA #307: geen preventDefault() — een mislukt leesverzoek moet de transactie afbreken.
+    // Mocht iets anders de afbreking toch verhinderen, dan blijft 'failed' de lezing ongeldig maken.
+    tx.oncomplete = () => (failed ? reject(new AudioReadError(failed)) : resolve(out));
+    tx.onabort = () => reject(new AudioReadError(tx.error || failed));
     try {
       const store = tx.objectStore('photos');
       ids.forEach((id, i) => {
         const request = store.get(id);
         request.onsuccess = () => { out[i] = request.result || null; };
+        request.onerror = () => { failed = failed || request.error || new Error('leesverzoek mislukt'); };
       });
     } catch (error) {
       try { tx.abort(); } catch (_) { /* al afgebroken */ }
