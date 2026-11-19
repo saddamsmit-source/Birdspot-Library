@@ -10,7 +10,7 @@ permissions:
 jobs:
   r3:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 80
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -42,6 +42,23 @@ jobs:
           test "$rc" -ne 0
           for code in Z1 Z2 Z4 Z5; do grep -q "^$code .* FAIL" r3-zip-oud.log || { echo "$code faalde NIET op 92a00f6"; exit 1; }; done
           echo "BEWEZEN: Z1 Z2 Z4 Z5 falen op 92a00f6"
+      - name: Vervolgcorrectie R08 — open formulier en afgebroken WAV (V1–V6) op deze commit
+        run: |
+          set -o pipefail
+          git log -1 --format='Uitgecheckt: %H' | tee r3-vervolg.log
+          python -u tests/test_r3_vervolg.py 2>&1 | tee -a r3-vervolg.log
+      - name: Zelfde vervolgtests op 08197dc moeten de gemelde fouten raken
+        run: |
+          git fetch --depth=1 origin 08197dcb9964ea93bfc45b7bb89cf33609b1957e
+          git worktree add /tmp/wt-08197dc 08197dcb9964ea93bfc45b7bb89cf33609b1957e
+          set +e
+          BIRDSPOT_APP_ROOT=/tmp/wt-08197dc python -u tests/test_r3_vervolg.py > r3-vervolg-oud.log 2>&1
+          rc=$?
+          set -e
+          cat r3-vervolg-oud.log
+          test "$rc" -ne 0
+          for code in V1 V2 V3 V4; do grep -q "^$code .* FAIL" r3-vervolg-oud.log || { echo "$code faalde NIET op 08197dc"; exit 1; }; done
+          echo "BEWEZEN: V1 V2 V3 V4 falen op 08197dc"
       - name: Regressies foto, video, plekmedia, ZIP, oude ZIP, herstel en offline
         run: |
           set -o pipefail
@@ -58,4 +75,6 @@ jobs:
             r3-audio.log
             r3-zip.log
             r3-zip-oud.log
+            r3-vervolg.log
+            r3-vervolg-oud.log
             r3-regressies.log

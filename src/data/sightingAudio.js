@@ -18,27 +18,46 @@ const ascii = (bytes, at, text) => [...text].every((ch, i) => bytes[at + i] === 
 const u32 = (bytes, at) => (bytes[at] | (bytes[at + 1] << 8) | (bytes[at + 2] << 16)) + bytes[at + 3] * 2 ** 24;
 const u16 = (bytes, at) => bytes[at] | (bytes[at + 1] << 8);
 
-function wavProblem(b) {
-  if (b.length < 44 || !ascii(b, 0, 'RIFF') || !ascii(b, 8, 'WAVE')) return 'geen WAV (RIFF/WAVE ontbreekt)';
-  let at = 12, fmt = null, data = false;
-  while (at + 8 <= b.length && at < 1 << 20) {
+/**
+ * WAV: loop de RIFF-blokken langs (oneven blokken hebben één opvulbyte). Er moet een geldig
+ * fmt-blok zijn en een data-blok dat VOLLEDIG binnen het bestand valt en minstens één hele
+ * audioframe bevat. Extra blokken (LIST, fact, cue, …) vóór of na data zijn toegestaan.
+ * totalLength: werkelijke bestandsgrootte als `b` alleen het begin is (formulier leest 1 MB).
+ */
+function wavProblem(b, totalLength = b.length) {
+  if (b.length < 12 || !ascii(b, 0, 'RIFF') || !ascii(b, 8, 'WAVE')) return 'geen WAV (RIFF/WAVE ontbreekt)';
+  let at = 12, fmt = null, data = null;
+  while (at + 8 <= b.length) {
     const size = u32(b, at + 4);
-    if (ascii(b, at, 'fmt ')) fmt = { format: u16(b, at + 8), channels: u16(b, at + 10), rate: u32(b, at + 12), bits: u16(b, at + 22) };
-    if (ascii(b, at, 'data')) { data = size > 0; break; }
-    at += 8 + size + (size & 1);
+    const end = at + 8 + size;
+    if (ascii(b, at, 'fmt ')) {
+      if (size < 16 || end > b.length) return 'WAV met afgebroken fmt-blok';
+      fmt = { format: u16(b, at + 8), channels: u16(b, at + 10), rate: u32(b, at + 12), align: u16(b, at + 20), bits: u16(b, at + 22) };
+    } else if (ascii(b, at, 'data')) {
+      data = { size, end };
+      break;
+    }
+    if (end > totalLength) return 'WAV met afgebroken blok';
+    at = end + (size & 1);
   }
   if (!fmt) return 'WAV zonder fmt-blok';
-  if (![1, 3, 0xfffe].includes(fmt.format) || !fmt.channels || !fmt.rate || !fmt.bits) return 'WAV met onbekend of leeg formaat';
+  if (![1, 3, 0xfffe].includes(fmt.format) || !fmt.channels || !fmt.rate || !fmt.bits || !fmt.align) return 'WAV met onbekend of leeg formaat';
   if (!data) return 'WAV zonder geluidsgegevens';
+  if (data.end > totalLength) return 'WAV is afgebroken: de geluidsgegevens ontbreken (deels)';
+  if (data.size < fmt.align) return 'WAV zonder bruikbare geluidsgegevens';
   return null;
 }
 
-/** Inhoudscontrole van een geluidsbestand; null = in orde, anders een korte reden. */
-export function audioBytesProblem(bytes, type) {
+/**
+ * Inhoudscontrole van een geluidsbestand; null = in orde, anders een korte reden.
+ * Zelfde functie voor bestandsselectie (alleen het begin + totalLength), ZIP-voorcontrole en import.
+ */
+export function audioBytesProblem(bytes, type, { totalLength } = {}) {
   const b = bytes instanceof Uint8Array ? bytes : new Uint8Array(bytes || []);
   if (!b.length) return 'leeg bestand';
+  const total = Number.isFinite(totalLength) && totalLength >= b.length ? totalLength : b.length;
   switch (type) {
-    case 'audio/wav': return wavProblem(b);
+    case 'audio/wav': return wavProblem(b, total);
     case 'audio/mpeg': return (ascii(b, 0, 'ID3') || (b[0] === 0xff && (b[1] & 0xe0) === 0xe0)) && b.length > 128 ? null : 'geen MP3';
     case 'audio/mp4': return b.length > 32 && ascii(b, 4, 'ftyp') ? null : 'geen M4A/MP4';
     case 'audio/aac': return b.length > 16 && ((b[0] === 0xff && (b[1] & 0xf6) === 0xf0) || ascii(b, 0, 'ADIF')) ? null : 'geen AAC';
@@ -100,4 +119,42 @@ export function releaseSightingAudio(ids) {
     await changePhotos({ remove });
     return remove;
   });
+}
+
+/** De opnamen van een waarneming zijn gewijzigd sinds het formulier opende (bijv. Terugzetten). */
+export class AudioChangedError extends Error {
+  constructor(currentIds) {
+    super('De opnamen van deze waarneming zijn intussen gewijzigd (bijvoorbeeld door Terugzetten). Controleer de lijst en kies opnieuw Opslaan; je invoer staat nog klaar.');
+    this.name = 'AudioChangedError';
+    this.currentIds = currentIds;
+  }
+}
+
+const sameSet = (a, b) => a.length === b.length && a.every(id => b.includes(id));
+
+/**
+ * Vervolgcorrectie R08 (P1): de audiokoppelingen die een bewerking opslaat, volgen uit de ACTUELE
+ * waarneming plus de expliciete wijzigingen in het formulier (verwijderd/toegevoegd) — nooit uit
+ * een verouderde momentopname. Aanroepen binnen updateSighting(…, { resolve }) = onder het herstelslot.
+ *  - alleen andere velden gewijzigd → actuele koppelingen blijven staan;
+ *  - expliciete audiowijziging terwijl de waarneming intussen andere opnamen kreeg → AudioChangedError;
+ *  - elke koppeling moet naar een bestaand audiobestand van DEZE waarneming wijzen; een koppeling
+ *    naar een ontbrekend bestand wordt niet opnieuw opgeslagen (dropped).
+ */
+export async function resolveSightingAudio(current, { loaded = [], removed = [], added = [] } = {}) {
+  const currentIds = Array.isArray(current.audioIds) ? [...current.audioIds] : [];
+  const explicit = removed.length > 0 || added.length > 0;
+  if (explicit && !sameSet(currentIds, loaded)) throw new AudioChangedError(currentIds);
+  const wanted = [...new Set([...currentIds.filter(id => !removed.includes(id)), ...added])];
+  const db = await getDB();
+  const records = await Promise.all(wanted.map(id => new Promise(resolve => {
+    const request = db.transaction('photos').objectStore('photos').get(id);
+    request.onsuccess = () => resolve(request.result || null);
+    request.onerror = () => resolve(null);
+  })));
+  const valid = rec => rec && isSightingAudio(rec) && rec.blob instanceof Blob && rec.sightingId === current.id;
+  const audioIds = [], dropped = [];
+  wanted.forEach((id, i) => (valid(records[i]) ? audioIds : dropped).push(id));
+  if (dropped.some(id => added.includes(id))) throw new AudioChangedError(currentIds);   // nieuw bestand weg: niet opslaan
+  return { audioIds, dropped };
 }

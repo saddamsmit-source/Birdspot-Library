@@ -37,7 +37,7 @@ import { addSighting, updateSighting } from '../../data/sightings.js';
 import { loadPlaces, placeDecision, reuseRadiusM, resolvePlaceForSave, removeCreatedPlace } from '../../data/places.js';
 import { changePhotos, getPhoto, SIGHTING_AUDIO_KIND, sightingAudioType } from '../../data/db.js';
 import { openMediaPreview } from '../../utils/validateMedia.js';
-import { audioBytesProblem, releaseSightingAudio } from '../../data/sightingAudio.js';
+import { audioBytesProblem, releaseSightingAudio, resolveSightingAudio } from '../../data/sightingAudio.js';
 import { openSpeciesPicker }     from './speciesPicker.js';
 import { escHtml }               from '../../utils/html.js';
 import { showToast }             from '../../app.js';
@@ -208,7 +208,9 @@ function _openSightingForm(mode, initialState, { onSaved, editId } = {}) {
   document.body.appendChild(ov);
   requestAnimationFrame(() => { if (ov.isConnected) ov.classList.add('open'); });
 
-  const ctx = { destroyed: false, cancelPinPicker: null, locationRevision: 0, mediaChecking: false, detailsOpen: isEdit };
+  const ctx = { destroyed: false, cancelPinPicker: null, locationRevision: 0, mediaChecking: false, detailsOpen: isEdit,
+    // Vervolgcorrectie R08: de opnamen zoals ze waren toen het formulier opende (conflictdetectie).
+    loadedAudioIds: [...(initialState.existingAudioIds || [])] };
   const submit = ov.querySelector('#addSheetSubmit');
   ov.querySelector('#addSightingTitle').focus({ preventScroll: true });
 
@@ -849,15 +851,17 @@ function _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx })
         const type = sightingAudioType(file);
         if (!type) throw new Error('Geen ondersteund geluidsformaat');
         // Zelfde inhoudscontrole als de ZIP-voorcontrole en import (correctie R08, P2).
-        const problem = audioBytesProblem(new Uint8Array(await file.slice(0, 1 << 20).arrayBuffer()), type);
+        const problem = audioBytesProblem(new Uint8Array(await file.slice(0, 1 << 20).arrayBuffer()), type, { totalLength: file.size });
         if (problem) throw new Error(problem);
         // Originele bytes ongewijzigd; alleen het type wordt vastgelegd als de kiezer het niet gaf.
         const blob = file.type === type ? file : new Blob([file], { type });
         const objectUrl = await openMediaPreview(blob, 'audio');   // moet hier echt afspeelbaar zijn
         if (ctx.destroyed) { URL.revokeObjectURL(objectUrl); return; }
         _state.audioFiles.push({ tempId: 'au_' + _uid(), file, blob, type, objectUrl });
-      } catch (_) {
-        rejected.push(file.name || 'bestand');
+      } catch (error) {
+        // Inhoudsreden (bijv. 'WAV is afgebroken…') tonen; anders de algemene uitleg.
+        const reason = /WAV|MP3|M4A|AAC|OGG|leeg/.test(error?.message || '') ? ` (${error.message})` : '';
+        rejected.push((file.name || 'bestand') + reason);
       }
       if (ctx.destroyed) return;
     }
@@ -1021,7 +1025,16 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
     };
 
     savedSighting = isEdit
-      ? await updateSighting(sightingId, sightingData)
+      ? await updateSighting(sightingId, sightingData, {
+        // Audiokoppelingen pas onder het herstelslot bepalen, uit de actuele waarneming (P1).
+        resolve: async current => {
+          const { audioIds, dropped } = await resolveSightingAudio(current, {
+            loaded: ctx.loadedAudioIds, removed: _state.deletedAudioIds, added: newAudio.map(audio => audio.id),
+          });
+          if (dropped.length) console.warn('[sightingForm] koppeling naar ontbrekende opname niet opnieuw opgeslagen', dropped);
+          return { audioIds };
+        },
+      })
       : await addSighting({ id: sightingId, ...sightingData, createdAt: now, updatedAt: now });
   } catch (error) {
     if (mediaWritten) {
@@ -1038,6 +1051,24 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
     cancel.disabled = false;
     btn.disabled = false;
     btn.textContent = 'Opslaan';
+    if (error?.name === 'AudioChangedError') {
+      // Formulier bijwerken naar de actuele opnamen; nieuwe opnamen en andere invoer blijven staan.
+      const currentIds = error.currentIds || [];
+      _state.deletedAudioIds = _state.deletedAudioIds.filter(id => currentIds.includes(id));
+      _state.existingAudioIds = currentIds.filter(id => !_state.deletedAudioIds.includes(id));
+      ctx.loadedAudioIds = [...currentIds];
+      ctx.audioMessage = error.message;
+      const list = ov.querySelector('#audioAttachList');
+      if (list) {
+        releaseExistingPreviews(list);
+        list.innerHTML = _renderAudioItems();
+        _loadExistingAudio(list);
+      }
+      const status = ov.querySelector('#sightingAudioStatus');
+      if (status) status.textContent = error.message;
+      showToast('Opnamen intussen gewijzigd — controleer en sla opnieuw op');
+      return;
+    }
     showToast('Opslaan mislukt — je invoer staat nog klaar');
     return;
   }
