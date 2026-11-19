@@ -20,7 +20,7 @@
 
 import { STORAGE_KEY, SCHEMA_VERSION, migrateSighting } from '../data/sightings.js';
 import { SEEN_KEY } from '../data/species.js';
-import { getDB, PLACE_ENV_KIND }            from '../data/db.js';
+import { getDB, PLACE_ENV_KIND, SIGHTING_AUDIO_KIND } from '../data/db.js';
 import { withDataLock, assertRestoreSupported, listTombstones, assertImportSafe } from '../data/dataLock.js';
 import { COLLECTION_KEYS, normalizeIds } from './collections.js';
 import { PLACES_KEY, withPlacesTx, refreshPlaces } from '../data/places.js';
@@ -290,7 +290,9 @@ export async function exportBackup() {
       speciesId: p.speciesId || null, sightingId: p.sightingId || null, placeId: p.placeId || null,
       // Ronde 2B: omgevingsfoto's houden soort, plek, toelichting en datum (thumb wordt opnieuw gemaakt)
       ...(p.kind === PLACE_ENV_KIND ? { kind: PLACE_ENV_KIND, caption: String(p.caption || ''),
-        addedAt: p.addedAt || null, updatedAt: p.updatedAt || null } : {}) })),
+        addedAt: p.addedAt || null, updatedAt: p.updatedAt || null } : {}),
+      // Ronde 3: eigen geluidsopname bij een waarneming (originele bytes in photos/<id>.<ext>)
+      ...(p.kind === SIGHTING_AUDIO_KIND ? { kind: SIGHTING_AUDIO_KIND, addedAt: p.addedAt || null } : {}) })),
     collections: Object.fromEntries(Object.entries(COLLECTION_KEYS).map(([kind, key]) =>
       [kind, normalizeIds(readList(storage[key]))])),
     seenSpecies: normalizeIds(readList(storage[SEEN_KEY])),
@@ -395,8 +397,24 @@ async function readBackup(file) {
   if (data.mediaMeta != null && (!Array.isArray(data.mediaMeta) || data.mediaMeta.some(meta => !validId(meta?.id)))) {
     throw new Error('De back-up bevat ongeldige mediagegevens.');
   }
+  // Ronde 3: eigen geluidsopnamen — alleen aan de waarneming die ze in audioIds noemt, altijd audio/*.
+  const audioOwner = new Map();
+  for (const sighting of data.sightings) {
+    if (sighting.audioIds == null) continue;
+    if (!Array.isArray(sighting.audioIds) || sighting.audioIds.some(id => !validId(id) || audioOwner.has(id) ||
+      (sighting.photoIds || []).includes(id))) {
+      throw new Error('De back-up bevat een ongeldige koppeling van een geluidsopname.');
+    }
+    for (const id of sighting.audioIds) audioOwner.set(id, sighting.id);
+  }
   for (const meta of data.mediaMeta || []) {
     if (meta.kind == null) continue;
+    if (meta.kind === SIGHTING_AUDIO_KIND) {
+      if (audioOwner.get(meta.id) !== meta.sightingId || meta.placeId || meta.speciesId || !/^audio\//.test(String(meta.type || ''))) {
+        throw new Error('De back-up bevat een ongeldige geluidsopname: ' + meta.id);
+      }
+      continue;
+    }
     if (meta.kind !== PLACE_ENV_KIND || !validId(meta.placeId) || meta.sightingId || meta.speciesId ||
       !/^image\//.test(String(meta.type || '')) ||
       (meta.caption != null && (typeof meta.caption !== 'string' || meta.caption.length > ENV_CAPTION_LIMIT))) {
@@ -424,7 +442,7 @@ async function readBackup(file) {
  * mediabestand in de ZIP staat erin. Zonder photoIds (zeer oude ZIP): alle bestanden + waarnemingsfoto's.
  */
 function backupMediaIds(data, files) {
-  const sightingIds = data.sightings.flatMap(s => s.photoIds || []);
+  const sightingIds = data.sightings.flatMap(s => [...(s.photoIds || []), ...(Array.isArray(s.audioIds) ? s.audioIds : [])]);
   const metaIds = (data.mediaMeta || []).map(meta => meta.id);
   if (data.photoIds == null) {
     // Herstel P1-rest: v2 vereist photoIds; oudere ZIP's controleren ook elke mediaMeta-verwijzing.
@@ -495,6 +513,7 @@ export function importBackup(file) {
       const merged = mergeRecord(local, incoming);
       if (merged === local) {
         for (const id of incoming.photoIds || []) skippedAttachments.add(id);
+        for (const id of Array.isArray(incoming.audioIds) ? incoming.audioIds : []) skippedAttachments.add(id);
       }
       const certainty = (certaintyRank[local?.certainty] ?? -1) > (certaintyRank[incoming.certainty] ?? -1)
         ? local.certainty : incoming.certainty;
@@ -505,6 +524,8 @@ export function importBackup(file) {
 
     const sightings = [...byId.values()];
     const photoOwners = new Map(sightings.flatMap(s => s.photoIds?.map(id => [id, s]) || []));
+    // Ronde 3: eigenaar van een geluidsopname (sighting.audioIds), los van de foto's.
+    const audioOwners = new Map(sightings.flatMap(s => (Array.isArray(s.audioIds) ? s.audioIds : []).map(id => [id, s])));
     const existingPhotos = new Set((await getAllPhotos()).map(p => p.id));
     const metadata = new Map((Array.isArray(data.mediaMeta) ? data.mediaMeta : []).filter(Boolean).map(m => [m.id, m]));
     // mediaIds komt uit readBackup: dezelfde lijst als de voorcontrole (P2).
@@ -512,12 +533,24 @@ export function importBackup(file) {
     const incomingPlaceIds = new Set(incomingPlaces.map(place => place.id));
     const newPhotos = [];
     for (const id of mediaIds) {
-      if (existingPhotos.has(id) || (skippedAttachments.has(id) && !photoOwners.has(id))) continue;
+      if (existingPhotos.has(id) || (skippedAttachments.has(id) && !photoOwners.has(id) && !audioOwners.has(id))) continue;
       const file = files.get(id);
       if (!file) throw new Error('Mediabestand ontbreekt in de back-up: ' + id);
       const meta = metadata.get(id);
       const owner = photoOwners.get(id);
       const type = meta?.type || MEDIA_EXT_MIME[file.ext];
+      if (meta?.kind === SIGHTING_AUDIO_KIND || audioOwners.has(id)) {
+        const audioOwner = audioOwners.get(id);
+        if (owner) throw new Error('Geluidsopname is ook als foto gekoppeld: ' + id);
+        if (!String(type || '').startsWith('audio/')) throw new Error('Geluidsopname heeft geen geluidsformaat: ' + id);
+        newPhotos.push({
+          id, kind: SIGHTING_AUDIO_KIND, blob: new Blob([file.bytes], { type }), type,
+          filename: meta?.filename || id + '.' + file.ext, size: file.bytes.byteLength,
+          sightingId: audioOwner?.id ?? meta?.sightingId ?? null, speciesId: null, placeId: null,
+          addedAt: meta?.addedAt || new Date().toISOString(),
+        });
+        continue;
+      }
       if (meta?.kind === PLACE_ENV_KIND) {
         if (owner) throw new Error('Omgevingsfoto is ook aan een waarneming gekoppeld: ' + id);
         const stamp = new Date().toISOString();

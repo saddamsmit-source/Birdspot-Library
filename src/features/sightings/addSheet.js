@@ -35,7 +35,7 @@ import { openPinPicker } from './pinPicker.js';
 import { normalizeEvidence, validPin, OBSERVATION_METHODS, BREEDING_BEHAVIORS } from './evidence.js';
 import { addSighting, updateSighting } from '../../data/sightings.js';
 import { loadPlaces, placeDecision, reuseRadiusM, resolvePlaceForSave, removeCreatedPlace } from '../../data/places.js';
-import { changePhotos, getPhoto } from '../../data/db.js';
+import { changePhotos, getPhoto, SIGHTING_AUDIO_KIND, sightingAudioType } from '../../data/db.js';
 import { openMediaPreview } from '../../utils/validateMedia.js';
 import { openSpeciesPicker }     from './speciesPicker.js';
 import { escHtml }               from '../../utils/html.js';
@@ -83,9 +83,15 @@ function freshState(override = {}) {
     existingPhotoIds: [],
     // deletedPhotoIds: IDs te verwijderen uit IDB bij save
     deletedPhotoIds: [],
+    // Ronde 3 (R08): eigen geluidsopnamen, los van foto's/video's
+    audioFiles:       [],   // { tempId, file, type, objectUrl }
+    existingAudioIds: [],
+    deletedAudioIds:  [],
     ...override,
   };
 }
+
+const ctx_audioInputs = new WeakMap();   // fileInput → audioInput (ronde 3)
 
 // ── Publieke API ───────────────────────────────────────────
 /**
@@ -139,6 +145,7 @@ export function openEditSheet(sighting, { onSaved } = {}) {
     weather:          sighting.weather      || null,
     notes:            sighting.notes        || '',
     existingPhotoIds: Array.isArray(sighting.photoIds) ? [...sighting.photoIds] : [],
+    existingAudioIds: Array.isArray(sighting.audioIds) ? [...sighting.audioIds] : [],
   }), { onSaved, editId: sighting.id });
 }
 
@@ -151,6 +158,7 @@ function _openSightingForm(mode, initialState, { onSaved, editId } = {}) {
     if (!previous.inert) return;
     previous.remove();
     document.getElementById('sightingMediaInput')?.remove();
+    document.getElementById('sightingAudioInput')?.remove();
   }
   const trigger = document.activeElement;
   _state = initialState;
@@ -186,6 +194,15 @@ function _openSightingForm(mode, initialState, { onSaved, editId } = {}) {
   fileInput.multiple = true;
   fileInput.hidden = true;
   document.body.appendChild(fileInput);
+  // Ronde 3: aparte kiezer voor geluidsbestanden (bv. geëxporteerde Merlin-WAV)
+  const audioInput = document.createElement('input');
+  audioInput.type = 'file';
+  audioInput.id = 'sightingAudioInput';
+  audioInput.accept = 'audio/*,.wav,.mp3,.m4a,.aac,.ogg,.oga';
+  audioInput.multiple = true;
+  audioInput.hidden = true;
+  document.body.appendChild(audioInput);
+  ctx_audioInputs.set(fileInput, audioInput);
 
   document.body.appendChild(ov);
   requestAnimationFrame(() => { if (ov.isConnected) ov.classList.add('open'); });
@@ -202,7 +219,7 @@ function _openSightingForm(mode, initialState, { onSaved, editId } = {}) {
     ov.inert = true;
     if (trigger?.isConnected) trigger.focus({ preventScroll: true });
     document.removeEventListener('keydown', onEscape);
-    setTimeout(() => { ov.remove(); fileInput.remove(); }, 300);
+    setTimeout(() => { ov.remove(); fileInput.remove(); audioInput.remove(); }, 300);
     _releaseObjectUrls();
     releaseExistingPreviews(ov);
   };
@@ -298,6 +315,15 @@ function _renderFormBody() {
         ${_renderMediaItems()}
       </div>
       <p class="form-hint" id="sightingMediaStatus" role="status"></p>
+    </div>
+
+    <!-- Ronde 3: eigen geluidsopnamen (privé op dit toestel) -->
+    <div class="form-field sighting-audio-field">
+      <label class="form-label">Geluidsopnamen</label>
+      <div class="sighting-audio-list" id="audioAttachList">
+        ${_renderAudioItems()}
+      </div>
+      <p class="form-hint" id="sightingAudioStatus" role="status"></p>
     </div>
     <details class="sighting-more" id="sightingMore">
       <summary>Meer details</summary>
@@ -396,6 +422,46 @@ function _renderMediaItems() {
           ${_svgPlus()} <span>Bestand toevoegen</span>
         </button>
   `;
+}
+
+function _renderAudioItems() {
+  return `
+        ${_state.existingAudioIds.map(id => `
+          <div class="sighting-audio-item" data-audioid="${escHtml(id)}">
+            <span class="sighting-audio-item__name" data-lazy-audio="${escHtml(id)}">Opname laden…</span>
+            <button class="sighting-audio-item__del" type="button" data-audioid="${escHtml(id)}" aria-label="Verwijder opname">${_svgClose()}</button>
+          </div>`).join('')}
+        ${_state.audioFiles.map(a => `
+          <div class="sighting-audio-item" data-audiotemp="${escHtml(a.tempId)}">
+            <span class="sighting-audio-item__name">${escHtml(a.file.name || 'Opname')}</span>
+            <audio class="sighting-audio-item__player" controls preload="metadata" src="${escHtml(a.objectUrl)}"></audio>
+            <button class="sighting-audio-item__del" type="button" data-audiotemp="${escHtml(a.tempId)}" aria-label="Verwijder opname">${_svgClose()}</button>
+          </div>`).join('')}
+        <button class="media-add-btn sighting-audio-add" id="audioAddBtn" type="button" aria-label="Geluidsopname toevoegen">
+          ${_svgPlus()} <span>Geluidsopname</span>
+        </button>
+  `;
+}
+
+async function _loadExistingAudio(containerEl) {
+  for (const label of containerEl.querySelectorAll('[data-lazy-audio]')) {
+    try {
+      const record = await getPhoto(label.dataset.lazyAudio);
+      if (!label.isConnected) continue;
+      if (!(record?.blob instanceof Blob)) { label.textContent = 'Opname ontbreekt op dit toestel'; continue; }
+      label.textContent = record.filename || 'Opname';
+      const player = document.createElement('audio');
+      player.className = 'sighting-audio-item__player';
+      player.controls = true;
+      player.preload = 'metadata';
+      const url = URL.createObjectURL(record.blob);
+      player.dataset.previewUrl = url;
+      player.src = url;
+      label.after(player);
+    } catch (_) {
+      label.textContent = 'Opname kan niet worden geladen';
+    }
+  }
 }
 
 function _renderExistingThumb(photoId) {
@@ -763,6 +829,69 @@ function _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx })
     }
   });
 
+  // ── Ronde 3 (R08): eigen geluidsopnamen ──────────────────
+  const audioInput = ctx_audioInputs.get(fileInput);
+  const audioList = el.querySelector('#audioAttachList');
+  el.querySelector('#sightingAudioStatus').textContent = ctx.audioMessage || '';
+  _loadExistingAudio(audioList);
+  const onAudioChange = async () => {
+    if (ctx.destroyed || ctx.saving || ctx.mediaChecking || !audioInput.files.length) return;
+    const files = [...audioInput.files];
+    ctx.mediaChecking = true;
+    ctx.audioMessage = 'Geluidsbestand controleren…';
+    content().querySelector('#sightingAudioStatus').textContent = ctx.audioMessage;
+    const submit = ov.querySelector('#addSheetSubmit');
+    submit.disabled = true;
+    const rejected = [];
+    for (const file of files) {
+      try {
+        const type = sightingAudioType(file);
+        if (!type) throw new Error('Geen ondersteund geluidsformaat');
+        // Originele bytes ongewijzigd; alleen het type wordt vastgelegd als de kiezer het niet gaf.
+        const blob = file.type === type ? file : new Blob([file], { type });
+        const objectUrl = await openMediaPreview(blob, 'audio');   // moet hier echt afspeelbaar zijn
+        if (ctx.destroyed) { URL.revokeObjectURL(objectUrl); return; }
+        _state.audioFiles.push({ tempId: 'au_' + _uid(), file, blob, type, objectUrl });
+      } catch (_) {
+        rejected.push(file.name || 'bestand');
+      }
+      if (ctx.destroyed) return;
+    }
+    ctx.mediaChecking = false;
+    submit.disabled = false;
+    ctx.audioMessage = rejected.length
+      ? 'Niet toegevoegd (geen afspeelbaar WAV-, MP3-, M4A-, AAC- of OGG-bestand): ' + rejected.join(', ')
+      : '';
+    const current = content();
+    const list = current.querySelector('#audioAttachList');
+    releaseExistingPreviews(list);
+    list.innerHTML = _renderAudioItems();
+    current.querySelector('#sightingAudioStatus').textContent = ctx.audioMessage;
+    _loadExistingAudio(list);
+  };
+  if (!ctx.audioInputBound) {
+    ctx.audioInputBound = true;
+    audioInput.addEventListener('change', onAudioChange);
+  }
+  audioList?.addEventListener('click', e => {
+    if (e.target.closest('#audioAddBtn')) {
+      if (!ctx.mediaChecking && !ctx.saving) { audioInput.value = ''; audioInput.click(); }
+      return;
+    }
+    const del = e.target.closest('.sighting-audio-item__del');
+    if (!del || ctx.saving || ctx.mediaChecking) return;
+    if (del.dataset.audiotemp) {
+      const item = _state.audioFiles.find(a => a.tempId === del.dataset.audiotemp);
+      if (item) URL.revokeObjectURL(item.objectUrl);
+      _state.audioFiles = _state.audioFiles.filter(a => a.tempId !== del.dataset.audiotemp);
+    } else if (del.dataset.audioid) {
+      // Bestaande opname: pas na bevestigde opslag verwijderen (Annuleren laat alles intact).
+      _state.existingAudioIds = _state.existingAudioIds.filter(id => id !== del.dataset.audioid);
+      _state.deletedAudioIds.push(del.dataset.audioid);
+    }
+    refresh();
+  });
+
 
 }
 
@@ -844,13 +973,20 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
     sightingId,
     addedAt: now,
   }));
+  // Ronde 3: originele geluidsbestanden; zelfde transactie als de foto's, dus samen wel of niet.
+  const newAudio = _state.audioFiles.map(({ tempId, file, blob, type }) => ({
+    id: tempId, kind: SIGHTING_AUDIO_KIND, blob, type,
+    filename: file.name || tempId + '.' + (type.split('/')[1] || 'audio'), size: file.size,
+    sightingId, addedAt: now,
+  }));
   let mediaWritten = false;
   let newPlace = null;
   let savedSighting;
   try {
-    await changePhotos({ put: newPhotos });
+    await changePhotos({ put: [...newPhotos, ...newAudio] });
     mediaWritten = true;
     const allPhotoIds = [..._state.existingPhotoIds, ...newPhotos.map(photo => photo.id)];
+    const allAudioIds = [..._state.existingAudioIds, ...newAudio.map(audio => audio.id)];
     let placeId = validPin(loc.lat, loc.lon) ? loc.placeId : null;
     if (validPin(loc.lat, loc.lon)) {
       // IndexedDB leidend: bestaande plek alleen als die nu nog bestaat, anders een nieuwe (één transactie).
@@ -876,6 +1012,7 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
       weather:      _state.weather      || null,
       notes:        _state.notes        || null,
       photoIds:     allPhotoIds,
+      audioIds:     allAudioIds,
       ...evidence,
     };
 
@@ -884,7 +1021,7 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
       : await addSighting({ id: sightingId, ...sightingData, createdAt: now, updatedAt: now });
   } catch (error) {
     if (mediaWritten) {
-      try { await changePhotos({ remove: newPhotos.map(photo => photo.id) }); }
+      try { await changePhotos({ remove: [...newPhotos, ...newAudio].map(item => item.id) }); }
       catch (cleanupError) { console.error('[sightingForm] media rollback', cleanupError); }
     }
     if (newPlace) {
@@ -902,7 +1039,7 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
   }
 
   // Bestaande media worden pas verwijderd na bevestigde opslag van de waarneming.
-  try { await changePhotos({ remove: _state.deletedPhotoIds }); }
+  try { await changePhotos({ remove: [..._state.deletedPhotoIds, ..._state.deletedAudioIds] }); }
   catch (error) { console.error('[sightingForm] detached media cleanup', error); }
   ctx.saving = false;
   close();
@@ -963,7 +1100,7 @@ function _requestGPS(ov,ctx,{ silent = false, intent = null } = {}) {
 
 // ── Cleanup ────────────────────────────────────────────────
 function _releaseObjectUrls() {
-  _state?.mediaFiles.forEach(m => {
+  [...(_state?.mediaFiles || []), ...(_state?.audioFiles || [])].forEach(m => {
     try { URL.revokeObjectURL(m.objectUrl); } catch (_) {}
   });
 }
