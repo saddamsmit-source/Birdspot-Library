@@ -1548,8 +1548,8 @@ export const GUIDE_COMPARISONS = [
   {
     label: 'Graspieper en Boompieper · veldkenmerken',
     birds: [
-      {id: 'sp072', source: 'graspieper', marks: 'Fijne snavel. De borst- en flankstrepen zijn ongeveer even breed.'},
-      {id: 'sp073', source: 'boompieper', textOnly: true, marks: 'Iets forsere snavel en dunnere flankstreepjes dan borststrepen.'},
+      {id: 'sp072', source: 'graspieper', photoMissing: true, marks: 'Fijne snavel. De borst- en flankstrepen zijn ongeveer even breed.'},
+      {id: 'sp073', source: 'boompieper', textOnly: true, photoMissing: true, marks: 'Iets forsere snavel en dunnere flankstreepjes dan borststrepen.'},
     ],
     rows: [
       {label: 'Flanken', values: ['Strepen ongeveer even breed als op de borst', 'Strepen duidelijk fijner dan op de borst']},
@@ -1938,6 +1938,18 @@ export const GUIDE_COMPARISONS = [
       {label: 'Zang', values: ['Variabel en wat krassend', 'Korte snelle klepperende ratel']},
     ],
     tip: 'Beide soorten hebben een lichte keel, dus kijk vooral naar de vleugelranden. Hier staat een eerder geregistreerd Grasmus-mannetje naast een sekseneutrale Braamsluiperfoto.',
+  },
+  {
+    label: 'Fuut en Roodhalsfuut · winterkleed',
+    birds: [
+      {id: 'sp077', source: 'fuut', photoMissing: true, marks: 'Slanke hals en smalle spitse snavel.'},
+      {id: 'sp195', source: 'roodhalsfuut', photoMissing: true, marks: 'Dikkere hals en forsere donkere snavel met gele basis.'},
+    ],
+    rows: [
+      {label: 'Hals', values: ['Slank en langer ogend', 'Dikker en gedrongener']},
+      {label: 'Snavel', values: ['Smal en spits', 'Forser, donker met gele basis']},
+    ],
+    tip: 'Vergelijk meerdere winterkenmerken bij goed licht. Het ontbrekende winterfotopaar blijft verborgen; herkenningstekst staat bij beide soorten.',
   },
   {
     label: 'IJsvogel en Bijeneter · keel en snavel',

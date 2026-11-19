@@ -53,9 +53,9 @@
     "audioMissing": 75,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 80,
+    "nextNotStarted": 77,
     "secondBatchStarted": 3,
-    "contentInspected": 60,
+    "contentInspected": 63,
     "contentComplete": 0,
     "thirdBatchStarted": 3,
     "fourthBatchStarted": 3,
@@ -74,7 +74,8 @@
     "seventeenthBatchStarted": 3,
     "eighteenthBatchStarted": 3,
     "nineteenthBatchStarted": 3,
-    "twentiethBatchStarted": 3
+    "twentiethBatchStarted": 3,
+    "twentyFirstBatchStarted": 3
   },
   "records": [
     {
@@ -6446,37 +6447,81 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R21",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (2/3 automatic sameShot; flight crop r=0.785 stays below 0.90; separate visual review supports same source shot)",
+          "photoIndividualRights": "VERIFIED (current Commons author/licence metadata for all live photos matches; visual/biological review remains separate)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (true free flight; juvenile source title/category and fresh plumage consistent, independent age determination still open)",
+          "photoPairComparisons": "PARTIALLY TESTED (existing Veldleeuwerik photo pair; Graspieper/Boompieper reciprocal recognition text, incomplete photo pair hidden)",
+          "responsiveLayoutAndZoom": "NOT TESTED (R21 browser workflow queued; physical device deferred)",
+          "creditsAndCleanAudioUI": "NOT TESTED (no registered audio)",
+          "audioRecordingsAuthenticity": "BLOCKED (no registered recording)",
+          "audioLicenseAndAttribution": "BLOCKED (no recording)",
+          "soundRolesSongCall": "PARTIALLY TESTED (voice text compared with VBN; no independent audio type verification)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (no audio file)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming read 19-11-2026; ANWB edition unavailable, NOT TESTED; Visdief used as bibliographic pointer only)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (VBN 14–15 cm and BZH 14–15 cm read; old BZH URL unavailable, accessible publisher PDF preserved as replacement)",
+          "sovonNetherlandsStatus": "VERIFIED (Sovon 10110 read 19-11: breeding trend decline last 12 years, no significant change since 1990; Red List gevoelig)",
+          "ebirdDistributionAndBias": "BLOCKED (eBird Anubis bot-check since R15; parked, not retried)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "endToEndGuideUI": "NOT TESTED (R21 browser workflow queued; full practice route deferred)",
+          "independentSecondReview": "NOT TESTED (own re-inspection is not independent)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (source-backed reciprocal recognition; photo gaps retained)"
         },
         "findings": [
+          "Geen lokaal geregistreerde zang of roep.",
+          "2/3 automatische bronbeeldmatches; vluchtfoto visueel dezelfde opname, automatische uitsnedecontrole blijft niet geverifieerd.",
+          "Juvenielenrol consistent met bron en zichtbaar vers verenkleed; onafhankelijke leeftijdscontrole blijft open.",
+          "Vergelijking met Boompieper nu ook vanuit Boompieper bereikbaar; fotopaar blijft verborgen."
+        ],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/graspieper",
+          "https://stats.sovon.nl/stats/soort/10110",
+          "docs/media-intake/2026-11-19/origcheck-r21/origcheck.json",
+          "docs/media-intake/2026-11-19/origcheck-r21/visual-review.json",
+          "docs/bronnen/VISDIEF_VOGELGIDSEN_BRONNOTITIE_2026-11-19.md",
+          "docs/fotokwaliteit/F3_R21_GRASPIEPER_IJSVOGEL_FUUT_2026-11-19_DRAFT.md"
+        ],
+        "reviewedOriginalAudio": 0,
+        "showcasePreview": "NOT TESTED on physical device; browser evidence recorded separately in PR #313",
+        "independence": "PARTIAL / own source and photo re-inspection; no second independent reviewer",
+        "fullPass": false,
+        "photoFilesInspected": 3,
+        "contentStatus": "PARTIALLY REVIEWED (shown photos, sources and comparison text; no FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R21 node/browser workflow recorded in PR #313.",
+        "priorFindings": [
           "Geen lokaal geregistreerde zang of roep"
         ],
-        "sourceReferences": [],
-        "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "photoBlobSHAs": [
+          "e75bda5b44955c9fc4fc9cec6b0141eab86b5fb0",
+          "31eab573f23a013168ebbda75e1ce1cdce687f40",
+          "c3262f6c7fb5159bb04482f8ffe7c8df16f294b0"
+        ],
+        "photoSourceMatches": [
+          {
+            "path": "/assets/species/sp072.webp",
+            "localSha256": "2c4b802f3ff7dd402c53607de18d029eb821025ff73d4fb9e575a22cecaccc3c",
+            "sourceSHA1": "470b3b11aa905c9c9f294222819b0b7453f91aae",
+            "automatedSameShot": true,
+            "reference": "docs/media-intake/2026-11-19/origcheck-r21/visual-review.json"
+          },
+          {
+            "path": "/assets/species/plumage/sp072-juv.webp",
+            "localSha256": "770d444f0ecad3d75dea88d9518c3d19ed021b78273701483e54d21b4ededc3a",
+            "sourceSHA1": "2f2ec663a16a33ee200751dfd3843bf3d236043f",
+            "automatedSameShot": true,
+            "reference": "docs/media-intake/2026-11-19/origcheck-r21/visual-review.json"
+          },
+          {
+            "path": "/assets/species/plumage/sp072-flight.webp",
+            "localSha256": "1fffa7e3021295a53ca9626d889bbd286b101ce546ddf12b8ec61f68380a875b",
+            "sourceSHA1": "1c3616ffda003e434dca34a52141c5a5c2dc6296",
+            "automatedSameShot": false,
+            "reference": "docs/media-intake/2026-11-19/origcheck-r21/visual-review.json"
+          }
+        ]
       }
     },
     {
@@ -6523,41 +6568,99 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R21",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "VERIFIED (5/5 live images automatic sameShot plus source/local visual review; retired photo checked separately)",
+          "photoIndividualRights": "VERIFIED (current Commons author/licence metadata for all live photos matches; visual/biological review remains separate)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (true flight; current sex roles compared with source and BZH bill/breast criteria; ambiguous juvenile remains withheld)",
+          "photoPairComparisons": "PARTIALLY TESTED (IJsvogel/Bijeneter existing rest images and text both directions)",
+          "responsiveLayoutAndZoom": "NOT TESTED (R21 browser workflow queued; physical device deferred)",
+          "creditsAndCleanAudioUI": "NOT TESTED (no registered audio)",
+          "audioRecordingsAuthenticity": "BLOCKED (no registered recording)",
+          "audioLicenseAndAttribution": "BLOCKED (no recording)",
+          "soundRolesSongCall": "PARTIALLY TESTED (voice text compared with VBN; no independent audio type verification)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (no audio file)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming read 19-11-2026; ANWB edition unavailable, NOT TESTED; Visdief used as bibliographic pointer only)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (VBN 17–19.5 cm and BZH 15–17 cm read; existing rounded display ca. 16–18 cm retained with raw values)",
+          "sovonNetherlandsStatus": "VERIFIED (Sovon 8310 read 19-11: breeding increase since 1990, no significant change last 12 years; winter trend kept separate)",
+          "ebirdDistributionAndBias": "BLOCKED (eBird Anubis bot-check since R15; parked, not retried)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "endToEndGuideUI": "NOT TESTED (R21 browser workflow queued; full practice route deferred)",
+          "independentSecondReview": "NOT TESTED (own re-inspection is not independent)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (source-backed reciprocal recognition; photo gaps retained)"
         },
         "findings": [
+          "Geen lokaal geregistreerde zang of roep.",
+          "5/5 huidige foto’s matchen bronbeeld en actuele metadata.",
+          "Retired sp075-juv-review.webp blijft behouden en verborgen: Commons female/juvenile is geen eenduidig leeftijdsbewijs."
+        ],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/ijsvogel",
+          "https://stats.sovon.nl/stats/soort/8310",
+          "docs/media-intake/2026-11-19/origcheck-r21/origcheck.json",
+          "docs/media-intake/2026-11-19/origcheck-r21/visual-review.json",
+          "docs/bronnen/VISDIEF_VOGELGIDSEN_BRONNOTITIE_2026-11-19.md",
+          "docs/fotokwaliteit/F3_R21_GRASPIEPER_IJSVOGEL_FUUT_2026-11-19_DRAFT.md",
+          "https://commons.wikimedia.org/wiki/File:Common_Kingfisher_2025_08_30_01.jpg"
+        ],
+        "reviewedOriginalAudio": 0,
+        "showcasePreview": "NOT TESTED on physical device; browser evidence recorded separately in PR #313",
+        "independence": "PARTIAL / own source and photo re-inspection; no second independent reviewer",
+        "fullPass": false,
+        "photoFilesInspected": 5,
+        "contentStatus": "PARTIALLY REVIEWED (shown photos, sources and comparison text; no FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R21 node/browser workflow recorded in PR #313.",
+        "priorFindings": [
           "Vogelbescherming noemt 17–19,5 cm, Blasco-Zumeta & Heinze 15–17 cm. De getoonde ca. 16–18 cm volgt de vastgelegde methode met beide bronwaarden.",
           "Geen lokaal geregistreerde zang of roep",
           "F3-R21-QA preflight 17-11-2026: sp075-juv-review.webp uit zichtbare juvenielenrol gehaald (Commons-file noemt female; categorieën female én juvenile; leeftijd niet onafhankelijk bewezen). Originele foto, rechten en historie behouden als retired.sp075. F3-inhoudsronde nog NIET STARTED."
         ],
-        "sourceReferences": [
-          "https://commons.wikimedia.org/wiki/File:Common_Kingfisher_2025_08_30_01.jpg"
+        "photoBlobSHAs": [
+          "b10006ea164891ab5ac0b8597ecf410e51404ccd",
+          "ec806f53cb8b1fefd8b04f81cb1a89f3538a7f37",
+          "16d36845cced2e97d21782e55e23382dfd9c0c82",
+          "6aa0d9550f368f197fddaf6bf2f5ea2f1aa06800",
+          "7ac3ac2f38a359f5a2e281a36ab494fec9ffc9a2"
         ],
-        "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "photoSourceMatches": [
+          {
+            "path": "/assets/species/plumage/sp075-hero-male.webp",
+            "localSha256": "8749d87fc2041cff5f02052ecaa7911ba894b2c3abc85f094af229233b393a38",
+            "sourceSHA1": "673f3060010093786a66ea4db6c0073517d62267",
+            "automatedSameShot": true,
+            "reference": "docs/media-intake/2026-11-19/origcheck-r21/visual-review.json"
+          },
+          {
+            "path": "/assets/species/plumage/sp075-male-review.webp",
+            "localSha256": "f9b966c7940609df4404086513eddbdfd67bc42c6a83f8462572449ba6ee0cf6",
+            "sourceSHA1": "fed1638c5204f9b5011ea8c3d3eac5698407b34c",
+            "automatedSameShot": true,
+            "reference": "docs/media-intake/2026-11-19/origcheck-r21/visual-review.json"
+          },
+          {
+            "path": "/assets/species/plumage/sp075-female-review.webp",
+            "localSha256": "345a0dc6906d5b1297b41ac773fc5fa4514b7d99d5645b4bd3b303904fdc26d3",
+            "sourceSHA1": "768e480029baddc1bb03cb52a564f1ce78037251",
+            "automatedSameShot": true,
+            "reference": "docs/media-intake/2026-11-19/origcheck-r21/visual-review.json"
+          },
+          {
+            "path": "/assets/species/plumage/sp075-flight.webp",
+            "localSha256": "c43e80095f7bb80fb1b63ec329425c2727b98e09b61689988368ccada3b4fe5c",
+            "sourceSHA1": "cab2482071020db08b3b8b738a81d6efd04ceebe",
+            "automatedSameShot": true,
+            "reference": "docs/media-intake/2026-11-19/origcheck-r21/visual-review.json"
+          },
+          {
+            "path": "/assets/showcase/sp075.webp",
+            "localSha256": "166507eb541bd5109db3d97f0fc6774e7ffbc08fdc7ecfe4d7b8dccd97e79ed4",
+            "sourceSHA1": "b72cae08ddb2c4a4d06d91d052cf0b78ed1ab74c",
+            "automatedSameShot": true,
+            "reference": "docs/media-intake/2026-11-19/origcheck-r21/visual-review.json"
+          }
+        ]
       }
     },
     {
@@ -6591,37 +6694,73 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R21",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "VERIFIED (2/2 automatic sameShot and visual source comparison)",
+          "photoIndividualRights": "VERIFIED (current Commons author/licence metadata for all live photos matches; visual/biological review remains separate)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (adult breeding and striped juvenile on water; no flight photo; neutral sex labels)",
+          "photoPairComparisons": "PARTIALLY TESTED (Fuut/Roodhalsfuut reciprocal recognition text; no comparable winter photo pair shown)",
+          "responsiveLayoutAndZoom": "NOT TESTED (R21 browser workflow queued; physical device deferred)",
+          "creditsAndCleanAudioUI": "NOT TESTED (R21 browser workflow queued)",
+          "audioRecordingsAuthenticity": "BLOCKED (source label only; no independent auditory determination)",
+          "audioLicenseAndAttribution": "VERIFIED (metadata only: explicit recordist Aubrey John Williams, copyright holder The British Library Board, CC BY-SA 4.0; © annotation resolved separately)",
+          "soundRolesSongCall": "PARTIALLY TESTED (voice text compared with VBN; no independent audio type verification)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (deferred by owner)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming read 19-11-2026; ANWB edition unavailable, NOT TESTED; Visdief used as bibliographic pointer only)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (VBN 46–51 cm and Naturalis 48 cm read; existing source-attributed size text retained, no newly averaged measure)",
+          "sovonNetherlandsStatus": "VERIFIED (correct Sovon ID 90 read 19-11: breeding decline since 1990, no significant change last 12 years; winter counts and breeding periods separate)",
+          "ebirdDistributionAndBias": "BLOCKED (eBird Anubis bot-check since R15; parked, not retried)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (deferred by owner)",
+          "endToEndGuideUI": "NOT TESTED (R21 browser workflow queued; full practice route deferred)",
+          "independentSecondReview": "NOT TESTED (own re-inspection is not independent)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (source-backed reciprocal recognition; photo gaps retained)"
         },
         "findings": [
+          "Een geverifieerde vluchtfoto ontbreekt; de twee huidige beelden tonen een vogel op water.",
+          "Historische foutclaim Geverifieerde vrije-vluchtfoto ingetrokken; bron- en correctiehistorie bewaard in R21-rapport.",
+          "Eén bestaande opname: bronlabel en attributie gecontroleerd; niet onafhankelijk op soort of geluidstype beluisterd.",
+          "Herkenningstekst Fuut/Roodhalsfuut nu wederkerig; ontbrekend winterfotopaar blijft verborgen."
+        ],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/fuut",
+          "https://stats.sovon.nl/stats/soort/90",
+          "docs/media-intake/2026-11-19/origcheck-r21/origcheck.json",
+          "docs/media-intake/2026-11-19/origcheck-r21/visual-review.json",
+          "docs/bronnen/VISDIEF_VOGELGIDSEN_BRONNOTITIE_2026-11-19.md",
+          "docs/fotokwaliteit/F3_R21_GRASPIEPER_IJSVOGEL_FUUT_2026-11-19_DRAFT.md"
+        ],
+        "reviewedOriginalAudio": 0,
+        "showcasePreview": "NOT TESTED on physical device; browser evidence recorded separately in PR #313",
+        "independence": "PARTIAL / own source and photo re-inspection; no second independent reviewer",
+        "fullPass": false,
+        "photoFilesInspected": 2,
+        "contentStatus": "PARTIALLY REVIEWED (shown photos, sources and comparison text; no FULL PASS)",
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R21 node/browser workflow recorded in PR #313.",
+        "priorFindings": [
           "Geverifieerde vrije-vluchtfoto"
         ],
-        "sourceReferences": [],
-        "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "photoBlobSHAs": [
+          "1c58203cdcef7f46c54e25d2d23e725568d0848d",
+          "05a9a0997b64db97b5e7cc592510657f78f6a802"
+        ],
+        "photoSourceMatches": [
+          {
+            "path": "/assets/species/sp077.webp",
+            "localSha256": "37ce905165a9a43927be5de5c6f272545c1d17c2b85cd56b7a8dc147a321d9c7",
+            "sourceSHA1": "3d9e9f79070543d1c55534cf0550686b06b09ff0",
+            "automatedSameShot": true,
+            "reference": "docs/media-intake/2026-11-19/origcheck-r21/visual-review.json"
+          },
+          {
+            "path": "/assets/species/plumage/sp077-juv.webp",
+            "localSha256": "1c52e308f3d2935ee604bbf6d5aac893043afdc0cd356601cb46a110c9ff8b9e",
+            "sourceSHA1": "dc80427d88ef63895d944187c85d1b36650630e6",
+            "automatedSameShot": true,
+            "reference": "docs/media-intake/2026-11-19/origcheck-r21/visual-review.json"
+          }
+        ]
       }
     },
     {

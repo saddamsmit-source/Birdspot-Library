@@ -1,0 +1,153 @@
+{
+  "date": "2026-11-19",
+  "reviewer": "ChatGPT Work / Codex; geen tweede onafhankelijke deskundige",
+  "rule": "Automatische sameShot/rightsMatch-uitkomsten in origcheck.json blijven ongewijzigd. Visuele beoordeling en attributietoelichting zijn apart bewijs.",
+  "photos": [
+    {
+      "path": "/assets/species/sp072.webp",
+      "localSha256": "2c4b802f3ff7dd402c53607de18d029eb821025ff73d4fb9e575a22cecaccc3c",
+      "sourceSHA1": "470b3b11aa905c9c9f294222819b0b7453f91aae",
+      "sideBySide": "sp072_vs_source.jpg",
+      "automatedSameShot": true,
+      "visuallySameShot": true,
+      "rightsMetadataMatch": true,
+      "ageSexVerdict": "PARTIALLY TESTED; rol tegen primaire bron en veldkenmerken bekeken, geen onafhankelijke determinatie"
+    },
+    {
+      "path": "/assets/species/plumage/sp072-juv.webp",
+      "localSha256": "770d444f0ecad3d75dea88d9518c3d19ed021b78273701483e54d21b4ededc3a",
+      "sourceSHA1": "2f2ec663a16a33ee200751dfd3843bf3d236043f",
+      "sideBySide": "sp072-juv_vs_source.jpg",
+      "automatedSameShot": true,
+      "visuallySameShot": true,
+      "rightsMetadataMatch": true,
+      "ageSexVerdict": "PARTIALLY TESTED; rol tegen primaire bron en veldkenmerken bekeken, geen onafhankelijke determinatie"
+    },
+    {
+      "path": "/assets/species/plumage/sp072-flight.webp",
+      "localSha256": "1fffa7e3021295a53ca9626d889bbd286b101ce546ddf12b8ec61f68380a875b",
+      "sourceSHA1": "1c3616ffda003e434dca34a52141c5a5c2dc6296",
+      "sideBySide": "sp072-flight_vs_source.jpg",
+      "automatedSameShot": false,
+      "visuallySameShot": true,
+      "rightsMetadataMatch": true,
+      "ageSexVerdict": "PARTIALLY TESTED; rol tegen primaire bron en veldkenmerken bekeken, geen onafhankelijke determinatie",
+      "note": "Automatisch r=0.785 (<0.90), ongewijzigd. Visueel dezelfde vleugelstand, veren, heidetakjes en achtergrond; lokaal krapper uitgesneden. Automatische cropmatch blijft NOT VERIFIED."
+    },
+    {
+      "path": "/assets/showcase/sp075.webp",
+      "localSha256": "166507eb541bd5109db3d97f0fc6774e7ffbc08fdc7ecfe4d7b8dccd97e79ed4",
+      "sourceSHA1": "b72cae08ddb2c4a4d06d91d052cf0b78ed1ab74c",
+      "sideBySide": "sp075_vs_source.jpg",
+      "automatedSameShot": true,
+      "visuallySameShot": true,
+      "rightsMetadataMatch": true,
+      "ageSexVerdict": "PARTIALLY TESTED; rol tegen primaire bron en veldkenmerken bekeken, geen onafhankelijke determinatie"
+    },
+    {
+      "path": "/assets/species/plumage/sp075-flight.webp",
+      "localSha256": "c43e80095f7bb80fb1b63ec329425c2727b98e09b61689988368ccada3b4fe5c",
+      "sourceSHA1": "cab2482071020db08b3b8b738a81d6efd04ceebe",
+      "sideBySide": "sp075-flight_vs_source.jpg",
+      "automatedSameShot": true,
+      "visuallySameShot": true,
+      "rightsMetadataMatch": true,
+      "ageSexVerdict": "PARTIALLY TESTED; rol tegen primaire bron en veldkenmerken bekeken, geen onafhankelijke determinatie"
+    },
+    {
+      "path": "/assets/species/plumage/sp075-female-review.webp",
+      "localSha256": "345a0dc6906d5b1297b41ac773fc5fa4514b7d99d5645b4bd3b303904fdc26d3",
+      "sourceSHA1": "768e480029baddc1bb03cb52a564f1ce78037251",
+      "sideBySide": "sp075-female-review_vs_source.jpg",
+      "automatedSameShot": true,
+      "visuallySameShot": true,
+      "rightsMetadataMatch": true,
+      "ageSexVerdict": "PARTIALLY TESTED; rol tegen primaire bron en veldkenmerken bekeken, geen onafhankelijke determinatie"
+    },
+    {
+      "path": "/assets/species/plumage/sp075-male-review.webp",
+      "localSha256": "f9b966c7940609df4404086513eddbdfd67bc42c6a83f8462572449ba6ee0cf6",
+      "sourceSHA1": "fed1638c5204f9b5011ea8c3d3eac5698407b34c",
+      "sideBySide": "sp075-male-review_vs_source.jpg",
+      "automatedSameShot": true,
+      "visuallySameShot": true,
+      "rightsMetadataMatch": true,
+      "ageSexVerdict": "PARTIALLY TESTED; rol tegen primaire bron en veldkenmerken bekeken, geen onafhankelijke determinatie"
+    },
+    {
+      "path": "/assets/species/plumage/sp075-hero-male.webp",
+      "localSha256": "8749d87fc2041cff5f02052ecaa7911ba894b2c3abc85f094af229233b393a38",
+      "sourceSHA1": "673f3060010093786a66ea4db6c0073517d62267",
+      "sideBySide": "sp075-hero-male_vs_source.jpg",
+      "automatedSameShot": true,
+      "visuallySameShot": true,
+      "rightsMetadataMatch": true,
+      "ageSexVerdict": "PARTIALLY TESTED; rol tegen primaire bron en veldkenmerken bekeken, geen onafhankelijke determinatie"
+    },
+    {
+      "path": "/assets/species/plumage/sp075-juv-review.webp",
+      "localSha256": "62aed7cbb5bd4f6dbbc5deefcf43a0c38463e4d3b03aa552d61e796ab1ad3d1e",
+      "sourceSHA1": "98e61ab7db3b6dafdd067f71a4caa46b343f4286",
+      "sideBySide": "sp075-juv-review_vs_source.jpg",
+      "automatedSameShot": true,
+      "visuallySameShot": true,
+      "rightsMetadataMatch": true,
+      "ageSexVerdict": "BLOCKED: leeftijdsrol blijft niet vrijgegeven; Commons female + juvenile is tegenstrijdig."
+    },
+    {
+      "path": "/assets/species/sp077.webp",
+      "localSha256": "37ce905165a9a43927be5de5c6f272545c1d17c2b85cd56b7a8dc147a321d9c7",
+      "sourceSHA1": "3d9e9f79070543d1c55534cf0550686b06b09ff0",
+      "sideBySide": "sp077_vs_source.jpg",
+      "automatedSameShot": true,
+      "visuallySameShot": true,
+      "rightsMetadataMatch": true,
+      "ageSexVerdict": "PARTIALLY TESTED; rol tegen primaire bron en veldkenmerken bekeken, geen onafhankelijke determinatie"
+    },
+    {
+      "path": "/assets/species/plumage/sp077-juv.webp",
+      "localSha256": "1c52e308f3d2935ee604bbf6d5aac893043afdc0cd356601cb46a110c9ff8b9e",
+      "sourceSHA1": "dc80427d88ef63895d944187c85d1b36650630e6",
+      "sideBySide": "sp077-juv_vs_source.jpg",
+      "automatedSameShot": true,
+      "visuallySameShot": true,
+      "rightsMetadataMatch": true,
+      "ageSexVerdict": "PARTIALLY TESTED; rol tegen primaire bron en veldkenmerken bekeken, geen onafhankelijke determinatie"
+    }
+  ],
+  "audioAttributionReview": {
+    "speciesId": "sp077",
+    "audio": "/assets/species/audio/sp077-a1.mp3",
+    "title": "File:Great Crested Grebe (Podiceps cristatus) (W1CDR0001488 BD4).ogg",
+    "author": "Aubrey John Williams / The British Library Board",
+    "license": "CC BY-SA 4.0",
+    "kind": "audio",
+    "commons": {
+      "page": "https://commons.wikimedia.org/wiki/File:Great_Crested_Grebe_(Podiceps_cristatus)_(W1CDR0001488_BD4).ogg",
+      "sha1": "f1a9251539bee55700f2121235f11445bd977cee",
+      "license": "CC BY-SA 4.0",
+      "author": "",
+      "duration": 54.55780045351474,
+      "mime": "application/ogg",
+      "creditFields": {
+        "copyrightHolder": "The British Library Board",
+        "recordist": "Aubrey John Williams"
+      },
+      "pageParams": {
+        "performance_date": "",
+        "performer": "| permission ={{PermissionTicket|id=2015111010010706}}{{cc-by-sa-4.0}}"
+      },
+      "creditLines": [
+        "| other_fields = {{Information field|name=British Library Shelfmark|value=W1CDR0001488 BD4}}{{Information field|name=Copyright Holder|value=The British Library ",
+        "<!-- <metadata_mapped_json>{\"composer\":null,\"composition_date\":null,\"description\":\"Calls of a Great Crested Grebe recorded at Frensham Great Pond, Surrey, Engla",
+        "&lt;OtherFields2&gt;{{Information field|name=Copyright Holder|value=The British Library Board}}&lt;/OtherFields2&gt;",
+        "&lt;OtherFields3&gt;{{Information field|name=Recordist|value=Aubrey John Williams}}&lt;/OtherFields3&gt;"
+      ]
+    },
+    "authorRule": "recordist+copyright-holder",
+    "rightsMatch": true,
+    "evidenceCeiling": "bronlabel en rechten; geen soortverificatie",
+    "registerAuthor": "Aubrey John Williams / © The British Library Board",
+    "difference": "Het register toont © vóór de expliciet genoemde copyright-houder. Naam van recordist en houder zijn gelijk; geen wijziging aan de gepubliceerde credit."
+  }
+}
