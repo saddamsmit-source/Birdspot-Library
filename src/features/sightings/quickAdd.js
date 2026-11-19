@@ -7,7 +7,7 @@ export function openQuickAdd({onChoose,onSoundSaved}={}) {
  overlay.id='quickAddSheet';overlay.className='sheet-overlay open';
  const start=()=>[
   '<button type="button" class="quick-add-option" data-quick-action="seen"><span class="quick-add-icon">',binoculars,'</span><span><strong>Waarneming toevoegen</strong><small>Kies een soort en plaats een pin</small></span></button>',
-  '<button type="button" class="quick-add-option" data-quick-action="sound"><span class="quick-add-icon">',sound,'</span><span><strong>Geluid herkennen</strong><small>Neem op en vink meerdere vogels aan</small></span></button>'
+  '<button type="button" class="quick-add-option" data-quick-action="sound"><span class="quick-add-icon">',sound,'</span><span><strong>Geluid herkennen</strong><small>Neem op, BirdNET stelt voor, optioneel Merlin</small></span></button>'
  ].join('');
  overlay.innerHTML=[
   '<div class="sheet quick-add-sheet" role="dialog" aria-modal="true" aria-labelledby="quickAddTitle">',
