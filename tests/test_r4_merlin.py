@@ -152,6 +152,10 @@ def tick(page, label):
 def pin(page):
     page.locator('#soundSave').click()
     page.locator('#quickAddSheet').wait_for(state='detached', timeout=15000)
+    # Opslaan navigeert naar de kaart en opent het plekkaartje; sluit dat, anders vangt het volgende klikken af.
+    page.locator('#mapSheetName').wait_for(timeout=15000)
+    page.locator('#mapSheetClose').click()
+    page.locator('#mapOverlay.visible').wait_for(state='detached', timeout=10000)
 
 
 def rows(page):
@@ -343,8 +347,6 @@ def run(browser, url, tmp):
     tick(p, 'Merel: Merlin gaf deze soort')
     pin(p)
     r = rows(p)
-    p.locator('#mapSheetName').wait_for(timeout=15000)          # opslaan opent het plekkaartje op de kaart
-    p.locator('#mapSheetClose').click()
     text = detail_text(p, r[0]['id']) if r else ''             # heropenen in de app, nog steeds offline
     ctx.set_offline(False)
     p.reload(wait_until='domcontentloaded'); boot(p, url)
