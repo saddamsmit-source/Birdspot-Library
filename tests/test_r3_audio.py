@@ -157,6 +157,8 @@ def run(browser, url, tmp):
     wav = make_wav()
     wav2 = make_wav(seconds=1.0, freq=1800)
     mp3 = make_mp3(wav2, tmp)
+    if os.environ.get('R3_REQUIRE_MP3') and not mp3:
+        raise RuntimeError('MP3-test vereist maar ffmpeg ontbreekt')
     ctx = browser.new_context(viewport={"width": 390, "height": 844}, is_mobile=True, has_touch=True,
                               reduced_motion='reduce', service_workers='allow', accept_downloads=True)
     for s in (INIT, HOLD):

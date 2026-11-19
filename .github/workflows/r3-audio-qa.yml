@@ -18,12 +18,13 @@ jobs:
       - run: |
           python -m pip install -r tests/requirements.txt
           python -m playwright install --with-deps chromium
-          ffmpeg -version | head -1 || (sudo apt-get update && sudo apt-get install -y ffmpeg)
+          command -v ffmpeg || (sudo apt-get update && sudo apt-get install -y ffmpeg)
+          ffmpeg -version | head -1
       - name: R08 mobiel Chromium (R3-01..R3-12) op deze commit
         run: |
           set -o pipefail
           git log -1 --format='Uitgecheckt: %H' | tee r3-audio.log
-          python -u tests/test_r3_audio.py 2>&1 | tee -a r3-audio.log
+          R3_REQUIRE_MP3=1 python -u tests/test_r3_audio.py 2>&1 | tee -a r3-audio.log
       - name: Regressies foto, video, plekmedia, ZIP, oude ZIP, herstel en offline
         run: |
           set -o pipefail
