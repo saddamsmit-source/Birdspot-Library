@@ -1,0 +1,102 @@
+{
+  "date": "2026-11-19",
+  "purpose": "F3-R21: 10 visible photos + 1 withheld IJsvogel age-role; audio provenance/rights only, no auditory verification",
+  "items": [
+    {
+      "speciesId": "sp072",
+      "image": "/assets/species/sp072.webp",
+      "title": "File:Meadow pipit (Anthus pratensis pratensis) Marken.jpg",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "role": "hero"
+    },
+    {
+      "speciesId": "sp072",
+      "image": "/assets/species/plumage/sp072-juv.webp",
+      "title": "File:Juvenile Meadow Pipit (50181136792).jpg",
+      "author": "caroline legg",
+      "license": "CC BY 2.0",
+      "role": "juv"
+    },
+    {
+      "speciesId": "sp072",
+      "image": "/assets/species/plumage/sp072-flight.webp",
+      "title": "File:Meadow Pipit in flight (51113279347).jpg",
+      "author": "caroline legg",
+      "license": "CC BY 2.0",
+      "role": "pose"
+    },
+    {
+      "speciesId": "sp075",
+      "image": "/assets/showcase/sp075.webp",
+      "title": "File:Common Kingfisher Alcedo atthis.jpg",
+      "author": "Andreas Trepte",
+      "license": "CC BY-SA 2.5",
+      "role": "hero"
+    },
+    {
+      "speciesId": "sp075",
+      "image": "/assets/species/plumage/sp075-flight.webp",
+      "title": "File:Common kingfisher (Alcedo atthis ispida) in flight.jpg",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "role": "pose"
+    },
+    {
+      "speciesId": "sp075",
+      "image": "/assets/species/plumage/sp075-female-review.webp",
+      "title": "File:Common Kingfisher perching (Alcedo atthis).jpg",
+      "author": "Roland Riedel",
+      "license": "CC BY 4.0",
+      "role": "pose"
+    },
+    {
+      "speciesId": "sp075",
+      "image": "/assets/species/plumage/sp075-male-review.webp",
+      "title": "File:Male Alcedo atthis ispida looking to the left (19636115768).jpg",
+      "author": "Andy Morffew",
+      "license": "CC BY 2.0",
+      "role": "pose"
+    },
+    {
+      "speciesId": "sp075",
+      "image": "/assets/species/plumage/sp075-hero-male.webp",
+      "title": "File:Guarda-rios-comum, macho, Common Kingfisher, male (54530531861).jpg",
+      "author": "Luiz Lapa from Oeiras, Portugal",
+      "license": "CC BY 2.0",
+      "role": "pose"
+    },
+    {
+      "speciesId": "sp075",
+      "image": "/assets/species/plumage/sp075-juv-review.webp",
+      "title": "File:Common Kingfisher 2025 08 30 01.jpg",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "role": "retired"
+    },
+    {
+      "speciesId": "sp077",
+      "image": "/assets/species/sp077.webp",
+      "title": "File:Great crested grebe swimming 2022-02-27.jpg",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "role": "hero"
+    },
+    {
+      "speciesId": "sp077",
+      "image": "/assets/species/plumage/sp077-juv.webp",
+      "title": "File:Great crested grebe (Podiceps cristatus) juvenile France.jpg",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "role": "juv"
+    },
+    {
+      "speciesId": "sp077",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp077-a1.mp3",
+      "title": "File:Great Crested Grebe (Podiceps cristatus) (W1CDR0001488 BD4).ogg",
+      "author": "Aubrey John Williams / © The British Library Board",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

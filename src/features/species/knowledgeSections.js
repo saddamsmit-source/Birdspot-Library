@@ -35,11 +35,15 @@ function name(id) {
  * vergelijkingskaart of vluchtvergelijking hebben worden hier overgeslagen; die kaart heeft zelf de
  * knop "Open …". Zelfde knopstijl als de bestaande vergelijkingskaarten.
  */
-export function similarExtra(s, covered = new Set()) {
-  const k = knowledgeFor(s.id);
-  const list = (k?.similar || []).filter(x => !covered.has(x.id));
+export function similarExtra(s, covered = new Set(), fallback = []) {
+  const profile = knowledgeFor(s.id);
+  const own = profile?.similar || [];
+  const list = [...own, ...fallback.filter(x => !own.some(y => y.id === x.id))]
+    .filter(x => !covered.has(x.id));
   if (!list.length) return '';
-  return `<div class="kb-similar" data-kb-similar>${list.map(x => `<div class="kb-similar__item">
+  const cls = profile ? 'kb-similar' : 'sd-similar-links';
+  const marker = profile ? 'data-kb-similar' : 'data-text-similar';
+  return `<div class="${cls}" ${marker}>${list.map(x => `<div class="${cls}__item">
       <div><strong>${esc(name(x.id))}</strong><p>${esc(x.why)}</p></div>
       <button type="button" class="sd-compare-open" data-compare-species="${esc(x.id)}">Open ${esc(name(x.id))}<span aria-hidden="true"> →</span></button>
     </div>`).join('')}</div>`;

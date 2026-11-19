@@ -825,7 +825,7 @@ const DATA = {
    "edition": "Online geraadpleegd 11-11-2026",
    "scope": "Nederland",
    "confirms": "kleed, geslachtsgelijkenis, maten, roep, broeden en voorkomen",
-   "checked": "2026-11-11",
+   "checked": "2026-11-19",
    "certainty": "hoog",
    "publisher": "Vogelbescherming Nederland"
   },
@@ -880,7 +880,7 @@ const DATA = {
    "edition": "Online geraadpleegd 11-11-2026",
    "scope": "Europa",
    "confirms": "kop, snavel, winterkleed en juveniel",
-   "checked": "2026-11-11",
+   "checked": "2026-11-19",
    "certainty": "hoog",
    "publisher": "Naturalis Biodiversity Center"
   },
@@ -891,7 +891,7 @@ const DATA = {
    "edition": "Online geraadpleegd 11-11-2026",
    "scope": "West-Europa",
    "confirms": "snavel en hals in winterkleed",
-   "checked": "2026-11-11",
+   "checked": "2026-11-19",
    "certainty": "hoog",
    "publisher": "RSPB"
   },
@@ -1408,7 +1408,7 @@ const DATA = {
    "edition": "Online geraadpleegd 11-11-2026",
    "scope": "Nederland",
    "confirms": "herkenning, vluchtroep, lengte, leefgebied en trek",
-   "checked": "2026-11-11",
+   "checked": "2026-11-19",
    "certainty": "hoog",
    "publisher": "Vogelbescherming Nederland"
   },
@@ -1419,20 +1419,21 @@ const DATA = {
    "edition": "Online geraadpleegd 11-11-2026",
    "scope": "Nederland",
    "confirms": "vergelijking met Graspieper op geluid, snavel, flankstreping en achternagel",
-   "checked": "2026-11-11",
+   "checked": "2026-11-19",
    "certainty": "hoog",
    "publisher": "Vogelbescherming Nederland"
   },
   "BZH_GRAS": {
    "register": "nieuwe soortreferentie",
    "label": "Blasco-Zumeta & Heinze — Meadow Pipit",
-   "url": "https://blascozumeta.wimbitek.com/specie_files/10110_ENG_Anthus_pratensis_aranzadi.pdf",
-   "edition": "Online geraadpleegd 11-11-2026",
+   "url": "https://www.blascozumeta.com/specie_files/10110_Anthus_pratensis_E.pdf",
+   "edition": "Online PDF, 4 pagina’s; R21 hercontrole 19-11-2026",
    "scope": "Europa",
    "confirms": "geslacht, lengte, leeftijddetails en vergelijking met Boompieper",
-   "checked": "2026-11-11",
+   "checked": "2026-11-19",
    "certainty": "hoog",
-   "publisher": "Javier Blasco-Zumeta & Gerd-Michael Heinze"
+   "publisher": "Javier Blasco-Zumeta & Gerd-Michael Heinze",
+   "previousURL": "https://blascozumeta.wimbitek.com/specie_files/10110_ENG_Anthus_pratensis_aranzadi.pdf"
   },
   "SOV_GRAS": {
    "register": "nieuwe soortreferentie",
@@ -1441,7 +1442,7 @@ const DATA = {
    "edition": "Online geraadpleegd 11-11-2026",
    "scope": "Nederland",
    "confirms": "broedvogel, wintergast, doortrekker en Rode Lijst",
-   "checked": "2026-11-11",
+   "checked": "2026-11-19",
    "certainty": "hoog",
    "publisher": "Sovon Vogelonderzoek Nederland"
   },
@@ -2365,7 +2366,7 @@ const DATA = {
    "edition": "Online bron",
    "scope": "Nederland",
    "confirms": "Herkenning, habitat, leefwijze en voorkomen",
-   "checked": "2026-11-12",
+   "checked": "2026-11-19",
    "certainty": "hoog",
    "publisher": "Vogelbescherming Nederland"
   },
@@ -2376,7 +2377,7 @@ const DATA = {
    "edition": "Online bron",
    "scope": "Nederland",
    "confirms": "Herkenning, habitat, leefwijze en voorkomen",
-   "checked": "2026-11-12",
+   "checked": "2026-11-19",
    "certainty": "hoog",
    "publisher": "Vogelbescherming Nederland"
   },
@@ -2409,7 +2410,7 @@ const DATA = {
    "edition": "Online bron",
    "scope": "Nederland",
    "confirms": "Nederlandse verspreiding en broedvogelmonitoring",
-   "checked": "2026-11-12",
+   "checked": "2026-11-19",
    "certainty": "hoog",
    "publisher": "Sovon Vogelonderzoek Nederland"
   },
@@ -2442,7 +2443,7 @@ const DATA = {
    "edition": "Online bron",
    "scope": "Iberisch referentiemateriaal",
    "confirms": "Lengte, veldkenmerken, leeftijd en geslacht",
-   "checked": "2026-11-12",
+   "checked": "2026-11-19",
    "certainty": "hoog",
    "publisher": "Blasco-Zumeta & Heinze"
   },
@@ -4842,6 +4843,17 @@ const DATA = {
    "confirms": "Trend broedvogel sinds 1990 en winteraanwezigheid",
    "checked": "2026-11-17",
    "certainty": "middel",
+   "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "SOV_FUUT": {
+   "register": "F3-R21",
+   "label": "Sovon — Fuut",
+   "url": "https://stats.sovon.nl/stats/soort/90",
+   "edition": "Online geraadpleegd 19-11-2026",
+   "scope": "Nederland",
+   "confirms": "Broedvogel- en watervogeltrend, verspreiding en aantallen met afzonderlijke meetperioden",
+   "checked": "2026-11-19",
+   "certainty": "hoog",
    "publisher": "Sovon Vogelonderzoek Nederland"
   }
  },
@@ -11334,9 +11346,17 @@ const DATA = {
     {
      "text": "Broedvogel en jaarrond aanwezig. De verspreiding verandert buiten de broedtijd.",
      "sources": [
-      "VB_FUUT"
+      "VB_FUUT",
+      "SOV_FUUT"
      ],
      "kind": "voorkomen"
+    },
+    {
+     "text": "De Nederlandse broedpopulatie nam sinds 1990 af. Voor de laatste twaalf jaar meldt Sovon geen significante verandering, zowel bij broedvogels als bij getelde watervogels.",
+     "sources": [
+      "SOV_FUUT"
+     ],
+     "kind": "trend"
     }
    ],
    "life": [
@@ -11358,7 +11378,15 @@ const DATA = {
    "discrepancies": [],
    "open": [
     "Een geverifieerde vluchtfoto ontbreekt. De volwassen hoofdfoto heeft een neutraal geslachtslabel."
-   ]
+   ],
+   "caution": {
+    "text": "Vergelijk wintervogels met Roodhalsfuut op halsdikte en snavelvorm samen. Een foto in prachtkleed is geen voorbeeld van het winterkleed.",
+    "sources": [
+     "VB_FUUT",
+     "NAT_FUUT",
+     "RSPB_RHFUUT"
+    ]
+   }
   },
   "sp086": {
    "summary": {
@@ -13316,6 +13344,13 @@ const DATA = {
       "VB_GRAS"
      ],
      "kind": "voorkomen"
+    },
+    {
+     "text": "De Nederlandse broedpopulatie nam in de laatste twaalf jaar volgens Sovon af. Over de periode vanaf 1990 is geen significante verandering vastgesteld.",
+     "sources": [
+      "SOV_GRAS"
+     ],
+     "kind": "trend"
     }
    ],
    "life": [
@@ -16865,6 +16900,13 @@ const DATA = {
       "SOV_IJSVOGEL"
      ],
      "kind": "voorkomen"
+    },
+    {
+     "text": "De Nederlandse broedpopulatie groeide sinds 1990; over de laatste twaalf jaar is geen significante verandering vastgesteld. Dit zegt niets over de afzonderlijke wintertrend.",
+     "sources": [
+      "SOV_IJSVOGEL"
+     ],
+     "kind": "trend"
     }
    ],
    "life": [

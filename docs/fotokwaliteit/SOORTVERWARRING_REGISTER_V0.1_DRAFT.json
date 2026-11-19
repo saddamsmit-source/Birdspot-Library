@@ -1,7 +1,7 @@
 {
   "schemaVersion": "0.1",
   "documentVersion": "0.1 DRAFT",
-  "date": "2026-11-16",
+  "date": "2026-11-19",
   "status": "INCREMENTAL / PARTIALLY TESTED, NOT A COMPLETE LOOKALIKE CENSUS",
   "ownerRule": "docs/BIRDSPOT_KWALITEITSNORM.md §3.4 (owner decision 16-11-2026)",
   "scope": "Critical lookalike sample from F3-R09 and F3-R10 with earlier cases retained as reference; expand as each F3 batch is inspected, do not claim all 597 species assessed",
@@ -41,7 +41,10 @@
     "sp067",
     "sp068",
     "sp069",
-    "sp070"
+    "sp070",
+    "sp072",
+    "sp075",
+    "sp077"
   ],
   "policy": {
     "pairRequiredWhenSimilar": true,
@@ -1949,7 +1952,8 @@
       ],
       "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
       "mediaOpen": [
-        "Veldleeuwerik photos source-matched in F3-R20; Graspieper side from F2-25, not re-checked this round; independent second review open"
+        "Veldleeuwerik photos source-matched in F3-R20; Graspieper side from F2-25, not re-checked this round; independent second review open",
+        "R21: Graspieper source images inspected; flight crop automatic match remains false r=0.785, visual same-shot observation separate. Independent review remains open."
       ],
       "textState": "PARTIALLY TESTED",
       "criticalMarks": [
@@ -1973,6 +1977,130 @@
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/veldleeuwerik",
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/graspieper",
         "https://birds-europe.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/nsr_taxon.php?id=130803"
+      ]
+    },
+    {
+      "id": "LK-044",
+      "focus": [
+        "sp072"
+      ],
+      "birds": [
+        "sp072",
+        "sp073"
+      ],
+      "risk": "adult",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "MISSING_VERIFIED_PAIR",
+      "mediaOpen": [
+        "No comparable F3-verified Graspieper/Boompieper photo pair; reciprocal text retained."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Flanken",
+          "values": [
+            "Borst- en flankstrepen ongeveer even breed",
+            "Flankstreepjes duidelijk fijner dan de borststrepen"
+          ]
+        },
+        {
+          "label": "Snavel",
+          "values": [
+            "Doorgaans een fijne, slanke snavel",
+            "Gemiddeld een iets forsere snavel"
+          ]
+        }
+      ],
+      "caution": "Combineer meerdere kenmerken en geluid; één streep of een deels verborgen achternagel beslist de soort niet.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/graspieper",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/boompieper",
+        "https://www.blascozumeta.com/specie_files/10110_Anthus_pratensis_E.pdf"
+      ]
+    },
+    {
+      "id": "LK-045",
+      "focus": [
+        "sp075"
+      ],
+      "birds": [
+        "sp075",
+        "sp257"
+      ],
+      "risk": "adult",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "IJsvogel source image rechecked in R21; Bijeneter photo provenance inherited, no new original identity or independent second review claimed."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Keel",
+          "values": [
+            "Witte keel en witte zijhalsvlek",
+            "Gele keel met donkere tekening"
+          ]
+        },
+        {
+          "label": "Snavel en staart",
+          "values": [
+            "Rechte snavel, compacte bouw en korte staart",
+            "Licht gebogen snavel en langere staart"
+          ]
+        }
+      ],
+      "caution": "Vergelijk keel, snavel en silhouet samen. Alleen een blauwe kleur is geen soortbepaling.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/ijsvogel",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bijeneter"
+      ]
+    },
+    {
+      "id": "LK-046",
+      "focus": [
+        "sp077"
+      ],
+      "birds": [
+        "sp077",
+        "sp195"
+      ],
+      "risk": "winter",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "MISSING_VERIFIED_PAIR",
+      "mediaOpen": [
+        "No verified comparable winter-plumage photo pair; breeding-plumage Fuut portrait is not a winter substitute."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Hals",
+          "values": [
+            "Slankere en doorgaans langer ogende hals",
+            "Dikkere en gedrongener hals"
+          ]
+        },
+        {
+          "label": "Snavel",
+          "values": [
+            "Smalle en spitse snavel zonder brede gele basis",
+            "Forsere donkere snavel met gele basis"
+          ]
+        }
+      ],
+      "caution": "Gebruik bij wintervogels snavelvorm, zicht op de snavelbasis en hals samen; afstand kan kleur maskeren.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/fuut",
+        "https://www.rspb.org.uk/birds-and-wildlife/red-necked-grebe"
       ]
     }
   ],

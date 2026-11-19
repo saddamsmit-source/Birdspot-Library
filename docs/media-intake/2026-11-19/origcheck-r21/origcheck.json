@@ -1,0 +1,397 @@
+{
+  "generated": "2026-11-19T21:53:07Z",
+  "rule": {
+    "sameMinR": 0.9
+  },
+  "items": [
+    {
+      "speciesId": "sp072",
+      "image": "/assets/species/sp072.webp",
+      "title": "File:Meadow pipit (Anthus pratensis pratensis) Marken.jpg",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1600,
+        1067
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Meadow_pipit_(Anthus_pratensis_pratensis)_Marken.jpg",
+        "sha1": "470b3b11aa905c9c9f294222819b0b7453f91aae",
+        "license": "CC BY-SA 4.0",
+        "author": "Charles J. Sharp",
+        "width": 4209,
+        "height": 2806,
+        "creditFields": {}
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp072_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp072",
+      "image": "/assets/species/plumage/sp072-juv.webp",
+      "title": "File:Juvenile Meadow Pipit (50181136792).jpg",
+      "author": "caroline legg",
+      "license": "CC BY 2.0",
+      "localSize": [
+        1400,
+        933
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Juvenile_Meadow_Pipit_(50181136792).jpg",
+        "sha1": "2f2ec663a16a33ee200751dfd3843bf3d236043f",
+        "license": "CC BY 2.0",
+        "author": "caroline legg",
+        "width": 3400,
+        "height": 2266,
+        "creditFields": {
+          "author": "caroline legg"
+        }
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp072-juv_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp072",
+      "image": "/assets/species/plumage/sp072-flight.webp",
+      "title": "File:Meadow Pipit in flight (51113279347).jpg",
+      "author": "caroline legg",
+      "license": "CC BY 2.0",
+      "localSize": [
+        1400,
+        1077
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Meadow_Pipit_in_flight_(51113279347).jpg",
+        "sha1": "1c3616ffda003e434dca34a52141c5a5c2dc6296",
+        "license": "CC BY 2.0",
+        "author": "caroline legg",
+        "width": 3663,
+        "height": 2442,
+        "creditFields": {
+          "author": "caroline legg"
+        }
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "crop",
+      "r": 0.785,
+      "scale": 0.7,
+      "offset": [
+        0.289,
+        0.113
+      ],
+      "sameShot": false,
+      "sideBySide": "sp072-flight_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp075",
+      "image": "/assets/showcase/sp075.webp",
+      "title": "File:Common Kingfisher Alcedo atthis.jpg",
+      "author": "Andreas Trepte",
+      "license": "CC BY-SA 2.5",
+      "localSize": [
+        1600,
+        1600
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Common_Kingfisher_Alcedo_atthis.jpg",
+        "sha1": "b72cae08ddb2c4a4d06d91d052cf0b78ed1ab74c",
+        "license": "CC BY-SA 2.5",
+        "author": "Andreas Trepte",
+        "width": 2000,
+        "height": 2000,
+        "creditFields": {
+          "author": "Andreas Trepte"
+        }
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        960
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp075_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp075",
+      "image": "/assets/species/plumage/sp075-flight.webp",
+      "title": "File:Common kingfisher (Alcedo atthis ispida) in flight.jpg",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1400,
+        858
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Common_kingfisher_(Alcedo_atthis_ispida)_in_flight.jpg",
+        "sha1": "cab2482071020db08b3b8b738a81d6efd04ceebe",
+        "license": "CC BY-SA 4.0",
+        "author": "Charles J. Sharp",
+        "width": 2168,
+        "height": 1445,
+        "creditFields": {}
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "crop",
+      "r": 0.933,
+      "scale": 0.7,
+      "offset": [
+        0.102,
+        0.176
+      ],
+      "sameShot": true,
+      "sideBySide": "sp075-flight_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp075",
+      "image": "/assets/species/plumage/sp075-female-review.webp",
+      "title": "File:Common Kingfisher perching (Alcedo atthis).jpg",
+      "author": "Roland Riedel",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1400,
+        933
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Common_Kingfisher_perching_(Alcedo_atthis).jpg",
+        "sha1": "768e480029baddc1bb03cb52a564f1ce78037251",
+        "license": "CC BY 4.0",
+        "author": "Roland Riedel",
+        "width": 4746,
+        "height": 3164,
+        "creditFields": {
+          "author": "Roland Riedel"
+        }
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp075-female-review_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp075",
+      "image": "/assets/species/plumage/sp075-male-review.webp",
+      "title": "File:Male Alcedo atthis ispida looking to the left (19636115768).jpg",
+      "author": "Andy Morffew",
+      "license": "CC BY 2.0",
+      "localSize": [
+        1400,
+        1120
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Male_Alcedo_atthis_ispida_looking_to_the_left_(19636115768).jpg",
+        "sha1": "fed1638c5204f9b5011ea8c3d3eac5698407b34c",
+        "license": "CC BY 2.0",
+        "author": "Andy Morffew from Itchen Abbas, Hampshire, UK",
+        "width": 4075,
+        "height": 3260,
+        "creditFields": {
+          "author": "Andy Morffew from Itchen Abbas, Hampshire, UK"
+        }
+      },
+      "authorRule": "flickr-location-suffix",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        768
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp075-male-review_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp075",
+      "image": "/assets/species/plumage/sp075-hero-male.webp",
+      "title": "File:Guarda-rios-comum, macho, Common Kingfisher, male (54530531861).jpg",
+      "author": "Luiz Lapa from Oeiras, Portugal",
+      "license": "CC BY 2.0",
+      "localSize": [
+        1600,
+        914
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Guarda-rios-comum,_macho,_Common_Kingfisher,_male_(54530531861).jpg",
+        "sha1": "673f3060010093786a66ea4db6c0073517d62267",
+        "license": "CC BY 2.0",
+        "author": "Luiz Lapa from Oeiras, Portugal",
+        "width": 7166,
+        "height": 4096,
+        "creditFields": {
+          "author": "Luiz Lapa from Oeiras, Portugal"
+        }
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        549
+      ],
+      "mode": "full",
+      "r": 0.999,
+      "sameShot": true,
+      "sideBySide": "sp075-hero-male_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp075",
+      "image": "/assets/species/plumage/sp075-juv-review.webp",
+      "title": "File:Common Kingfisher 2025 08 30 01.jpg",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1400,
+        933
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Common_Kingfisher_2025_08_30_01.jpg",
+        "sha1": "98e61ab7db3b6dafdd067f71a4caa46b343f4286",
+        "license": "CC BY 4.0",
+        "author": "Alexis Lours",
+        "width": 4759,
+        "height": 3173,
+        "creditFields": {
+          "author": "Alexis Lours"
+        }
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp075-juv-review_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp077",
+      "image": "/assets/species/sp077.webp",
+      "title": "File:Great crested grebe swimming 2022-02-27.jpg",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1600,
+        1067
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Great_crested_grebe_swimming_2022-02-27.jpg",
+        "sha1": "3d9e9f79070543d1c55534cf0550686b06b09ff0",
+        "license": "CC BY 4.0",
+        "author": "Alexis Lours",
+        "width": 5141,
+        "height": 3427,
+        "creditFields": {
+          "author": "Alexis Lours"
+        }
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp077_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp077",
+      "image": "/assets/species/plumage/sp077-juv.webp",
+      "title": "File:Great crested grebe (Podiceps cristatus) juvenile France.jpg",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1600,
+        1067
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Great_crested_grebe_(Podiceps_cristatus)_juvenile_France.jpg",
+        "sha1": "dc80427d88ef63895d944187c85d1b36650630e6",
+        "license": "CC BY-SA 4.0",
+        "author": "Charles J. Sharp",
+        "width": 4809,
+        "height": 3206,
+        "creditFields": {}
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp077-juv_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp077",
+      "audio": "/assets/species/audio/sp077-a1.mp3",
+      "title": "File:Great Crested Grebe (Podiceps cristatus) (W1CDR0001488 BD4).ogg",
+      "author": "Aubrey John Williams / © The British Library Board",
+      "license": "CC BY-SA 4.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Great_Crested_Grebe_(Podiceps_cristatus)_(W1CDR0001488_BD4).ogg",
+        "sha1": "f1a9251539bee55700f2121235f11445bd977cee",
+        "license": "CC BY-SA 4.0",
+        "author": "",
+        "duration": 54.55780045351474,
+        "mime": "application/ogg",
+        "creditFields": {
+          "copyrightHolder": "The British Library Board",
+          "recordist": "Aubrey John Williams"
+        },
+        "pageParams": {
+          "performance_date": "",
+          "performer": "| permission ={{PermissionTicket|id=2015111010010706}}{{cc-by-sa-4.0}}"
+        },
+        "creditLines": [
+          "| other_fields = {{Information field|name=British Library Shelfmark|value=W1CDR0001488 BD4}}{{Information field|name=Copyright Holder|value=The British Library ",
+          "<!-- <metadata_mapped_json>{\"composer\":null,\"composition_date\":null,\"description\":\"Calls of a Great Crested Grebe recorded at Frensham Great Pond, Surrey, Engla",
+          "&lt;OtherFields2&gt;{{Information field|name=Copyright Holder|value=The British Library Board}}&lt;/OtherFields2&gt;",
+          "&lt;OtherFields3&gt;{{Information field|name=Recordist|value=Aubrey John Williams}}&lt;/OtherFields3&gt;"
+        ]
+      },
+      "authorRule": "commons-author-empty",
+      "rightsMatch": false,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    }
+  ]
+}

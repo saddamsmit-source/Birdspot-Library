@@ -440,7 +440,17 @@ export function recognitionPanel(s, life = null, personal = false) {
   // van dezelfde soort staan als tabbladen in die ene kaart. De vergelijking mag gidsfoto's hergebruiken.
   const cardsHtml = comparisonsSection(s.id, comparisonGroups);
   const covered = new Set(comparisonGroups.map(group => group.partnerId));
-  const extra = similarExtra(s, covered);
+  // R21: an explicitly source-reviewed text pair also works from a partner without
+  // guide photos. It does not create a knowledge profile or an incomplete photo card.
+  const fallback = GUIDE_COMPARISONS.filter(entry => entry.reciprocalText && entry.birds.some(b => b.id === s.id))
+    .flatMap(entry => {
+      const focal = entry.birds.find(b => b.id === s.id);
+      return entry.birds.filter(b => b.id !== s.id).map(partner => ({
+        id: partner.id,
+        why: `${s.nameNL}: ${focal.marks} ${speciesById.get(partner.id).nameNL}: ${partner.marks}`,
+      }));
+    });
+  const extra = similarExtra(s, covered, fallback);
   const critical = criticalDetails(s);
   if (cardsHtml || extra || critical) {
     out.push(`<section class="sd-similar" aria-label="Lijkt op"><h3 class="sd-h">Lijkt op</h3>${cardsHtml}${extra}${critical}</section>`);

@@ -218,3 +218,14 @@ De tekst in de kolom 'Open uit bronronde' is overgenomen uit de laatste F2-voort
 | sp068 Witte Kwikstaart | F3-R20 | Sovon-trend laatste 12 jaar op pagina niet eenduidig gelezen. Juveniel niet gezocht; juvenielenpaar met Gele Kwikstaart blijft tekst-only. |
 | sp069 Gele Kwikstaart | F3-R20 | Juveniel `sp069-juv.webp` (iNaturalist 219611553, euqirneto) **niet vrijgegeven**: onscherp, jonge Citroen-/Witte Kwikstaart niet uitgesloten. Vrouwtje (iNaturalist 122430547): rechten alleen register, ondersoort niet bepaald. |
 | sp070 Veldleeuwerik | F3-R20 | Kuifleeuwerik en Boomleeuwerik (VBN-verwarringssoorten) nog niet als vergelijking uitgewerkt. |
+
+
+### F3-R21 (19-11-2026)
+
+| Soort | Ronde | Open punt |
+|---|---|---|
+| sp072 Graspieper | F3-R21 | Vluchtfoto: automatische cropmatch r=0.785 blijft NOT VERIFIED, visuele overeenkomst apart vastgelegd. Onafhankelijke leeftijdscontrole juveniel open. Geen audio; Boompieper-fotopaar ontbreekt. |
+| sp075 IJsvogel | F3-R21 | Eerder ingetrokken juvenielenrol blijft verborgen. Geen audio; onafhankelijke rolcontrole open. |
+| sp077 Fuut | F3-R21 | Vluchtfoto ontbreekt; historische foutclaim ingetrokken. Roodhalsfuut-winterfotopaar ontbreekt. Bestaande opname alleen bronlabel/rechten; geen onafhankelijke auditieve determinatie. |
+
+Visdief opgenomen als aanvullende bron voor naslagwerkselectie; geen toegang tot volledige ANWB-editie geclaimd. Actuele stand 63/140 inhoudelijk bekeken, 0 FULL PASS. Brede praktijkroute en fotoaanvulling volgen volgens eigenaarbesluit later.
