@@ -42,9 +42,14 @@ function wavProblem(b, totalLength = b.length) {
   }
   if (!fmt) return 'WAV zonder fmt-blok';
   if (![1, 3, 0xfffe].includes(fmt.format) || !fmt.channels || !fmt.rate || !fmt.bits || !fmt.align) return 'WAV met onbekend of leeg formaat';
+  // Restcorrectie R08 (P2): de framegrootte (blockAlign) moet passen bij kanalen × bytes per sample.
+  const allowedBits = fmt.format === 3 ? [32, 64] : [8, 16, 24, 32];
+  if (!allowedBits.includes(fmt.bits)) return 'WAV met niet-ondersteunde bitdiepte';
+  if (fmt.align !== fmt.channels * (fmt.bits / 8)) return 'WAV met onjuiste framegrootte';
   if (!data) return 'WAV zonder geluidsgegevens';
   if (data.end > totalLength) return 'WAV is afgebroken: de geluidsgegevens ontbreken (deels)';
-  if (data.size < fmt.align) return 'WAV zonder bruikbare geluidsgegevens';
+  // Gedeclareerde blokgrootte (zonder RIFF-opvulbyte) moet minstens één volledig frame zijn.
+  if (data.size < fmt.align) return 'WAV zonder volledig audioframe';
   return null;
 }
 
@@ -121,6 +126,43 @@ export function releaseSightingAudio(ids) {
   });
 }
 
+/** Een leesactie op de opnamen mislukte of werd afgebroken: niets weten = niets loskoppelen. */
+export class AudioReadError extends Error {
+  constructor(cause) {
+    super('De opnamen konden niet worden gelezen. Er is niets opgeslagen; je invoer staat nog klaar. Kies opnieuw Opslaan.');
+    this.name = 'AudioReadError';
+    this.cause = cause;
+  }
+}
+
+/**
+ * Restcorrectie R08 (P1): lees opnamen in één transactie. Alleen een GESLAAGDE lezing mag
+ * "ontbreekt" (null) opleveren; een fout of afgebroken transactie wordt AudioReadError.
+ */
+export async function readAudioRecords(ids) {
+  if (!ids.length) return [];
+  let db;
+  try { db = await getDB(); } catch (error) { throw new AudioReadError(error); }
+  return new Promise((resolve, reject) => {
+    let tx;
+    try { tx = db.transaction('photos', 'readonly'); } catch (error) { reject(new AudioReadError(error)); return; }
+    const out = new Array(ids.length);
+    tx.oncomplete = () => resolve(out);
+    tx.onabort = () => reject(new AudioReadError(tx.error));
+    tx.onerror = event => { event.preventDefault(); };   // afhandeling via onabort
+    try {
+      const store = tx.objectStore('photos');
+      ids.forEach((id, i) => {
+        const request = store.get(id);
+        request.onsuccess = () => { out[i] = request.result || null; };
+      });
+    } catch (error) {
+      try { tx.abort(); } catch (_) { /* al afgebroken */ }
+      reject(new AudioReadError(error));
+    }
+  });
+}
+
 /** De opnamen van een waarneming zijn gewijzigd sinds het formulier opende (bijv. Terugzetten). */
 export class AudioChangedError extends Error {
   constructor(currentIds) {
@@ -146,12 +188,7 @@ export async function resolveSightingAudio(current, { loaded = [], removed = [],
   const explicit = removed.length > 0 || added.length > 0;
   if (explicit && !sameSet(currentIds, loaded)) throw new AudioChangedError(currentIds);
   const wanted = [...new Set([...currentIds.filter(id => !removed.includes(id)), ...added])];
-  const db = await getDB();
-  const records = await Promise.all(wanted.map(id => new Promise(resolve => {
-    const request = db.transaction('photos').objectStore('photos').get(id);
-    request.onsuccess = () => resolve(request.result || null);
-    request.onerror = () => resolve(null);
-  })));
+  const records = await readAudioRecords(wanted);   // leesfout → AudioReadError (nooit 'ontbreekt')
   const valid = rec => rec && isSightingAudio(rec) && rec.blob instanceof Blob && rec.sightingId === current.id;
   const audioIds = [], dropped = [];
   wanted.forEach((id, i) => (valid(records[i]) ? audioIds : dropped).push(id));

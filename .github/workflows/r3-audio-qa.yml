@@ -59,6 +59,22 @@ jobs:
           test "$rc" -ne 0
           for code in V1 V2 V3 V4; do grep -q "^$code .* FAIL" r3-vervolg-oud.log || { echo "$code faalde NIET op 08197dc"; exit 1; }; done
           echo "BEWEZEN: V1 V2 V3 V4 falen op 08197dc"
+      - name: Restcorrecties R08 — leesfout en WAV-framegrootte (W1–W7) op deze commit
+        run: |
+          git log -1 --format='Uitgecheckt: %H' | tee r3-restpunten.log
+          python -u tests/test_r3_restpunten.py 2>&1 | tee -a r3-restpunten.log
+      - name: Zelfde restpunttests op eb084c8 moeten de gemelde fouten raken
+        run: |
+          git fetch --depth=1 origin eb084c8042623561c51aee8602f124cb24934c2f
+          git worktree add /tmp/wt-eb084c8 eb084c8042623561c51aee8602f124cb24934c2f
+          set +e
+          BIRDSPOT_APP_ROOT=/tmp/wt-eb084c8 python -u tests/test_r3_restpunten.py > r3-restpunten-oud.log 2>&1
+          rc=$?
+          set -e
+          cat r3-restpunten-oud.log
+          test "$rc" -ne 0
+          for code in W1 W3 W3f; do grep -q "^$code .* FAIL" r3-restpunten-oud.log || { echo "$code faalde NIET op eb084c8"; exit 1; }; done
+          echo "BEWEZEN: W1 W3 W3f falen op eb084c8"
       - name: Regressies foto, video, plekmedia, ZIP, oude ZIP, herstel en offline
         run: |
           set -o pipefail
@@ -77,4 +93,6 @@ jobs:
             r3-zip-oud.log
             r3-vervolg.log
             r3-vervolg-oud.log
+            r3-restpunten.log
+            r3-restpunten-oud.log
             r3-regressies.log

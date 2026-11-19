@@ -1069,6 +1069,14 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
       showToast('Opnamen intussen gewijzigd — controleer en sla opnieuw op');
       return;
     }
+    if (error?.name === 'AudioReadError') {
+      // Restcorrectie R08 (P1): leesfout — niets opgeslagen, alleen media van deze poging opgeruimd.
+      ctx.audioMessage = error.message;
+      const status = ov.querySelector('#sightingAudioStatus');
+      if (status) status.textContent = error.message;
+      showToast('Opnamen konden niet worden gelezen — niets opgeslagen, probeer opnieuw');
+      return;
+    }
     showToast('Opslaan mislukt — je invoer staat nog klaar');
     return;
   }
