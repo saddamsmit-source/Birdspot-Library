@@ -860,3 +860,25 @@
   text-overflow: ellipsis;
   white-space:   nowrap;
 }
+
+/* Ronde 4 — Merlin-dubbelcheck binnen Geluid herkennen */
+.sound-merlin { min-width: 0; padding: 12px; border: 1px solid var(--line); border-radius: var(--r-card); background: var(--surface-2); }
+#soundMerlin > summary { min-height: 44px; align-content: center; font-weight: 720; cursor: pointer; }
+#soundMerlin > summary small { color: var(--ink-2); font-weight: 500; }
+#soundMerlin[open] { display: grid; gap: 10px; }
+#soundMerlin[open] > * + * { margin-block-start: 8px; }
+.sound-merlin__manual > summary { min-height: 44px; align-content: center; cursor: pointer; }
+.sound-merlin__manual ol { margin: 6px 0; padding-inline-start: 20px; display: grid; gap: 4px; color: var(--ink-2); font-size: .875rem; }
+#soundMerlinShare {
+  min-height: 44px; padding: 8px 12px; border: 1px solid var(--line); border-radius: var(--r-sm);
+  color: var(--ink); background: var(--surface); font: inherit; font-weight: 700; cursor: pointer; justify-self: start;
+}
+.sound-merlin__used { display: flex; align-items: flex-start; gap: 8px; min-height: 44px; padding-block: 10px; cursor: pointer; }
+.sound-merlin__used input, .sound-extra input { flex: none; width: 18px; height: 18px; margin-block-start: 1px; accent-color: var(--brand-mid); }
+.sound-merlin__hint, .sound-merlin p { color: var(--ink-2); font-size: .8125rem; line-height: 1.4; overflow-wrap: anywhere; }
+:is(#soundMerlinShareNote, #soundMerlinCompare, #soundMerlinState):empty { display: none; }
+#soundMerlinCompare { color: var(--ink); font-weight: 650; }
+#soundSelection .sound-extra { display: flex; flex-wrap: wrap; gap: 4px 16px; padding: 0 0 8px 26px; }
+#soundSelection .sound-extra label { width: auto; min-height: 36px; border-top: 0; font-size: .875rem; color: var(--ink-2); }
+#soundSelection li:not(:has(.sound-pick input:checked)) .sound-extra,
+#soundSelection.sound-merlin-off .sound-extra__merlin { display: none; }

@@ -86,6 +86,7 @@ const PRECACHE_PATHS = [
   'src/features/sightings/quickAdd.js',
   'src/features/sightings/soundSession.js',
   'src/features/sightings/soundDraft.js',
+  'src/features/sightings/soundShare.js',
   'src/features/sightings/soundTimeline.js',
   'src/features/sightings/soundPcmWorklet.js',
   'src/features/sightings/soundRecognition.js',

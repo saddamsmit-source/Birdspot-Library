@@ -15,7 +15,8 @@ def open_sound(page):
     page.locator('[data-quick-action="sound"]').click()
     sheet = page.get_by_role('dialog', name='Geluid herkennen')
     expect(sheet).to_be_visible()
-    assert 'merlin' not in sheet.inner_text().lower()
+    # Ronde 4: de optionele Merlin-dubbelcheck staat ingeklapt in het geluidsblad (R07); geen links naar buiten.
+    assert not sheet.locator('#soundMerlin').evaluate('details => details.open')
     assert sheet.locator('a[href]').count() == 0
     return sheet
 
@@ -151,7 +152,7 @@ def check(page, width):
     expect(sheet.locator('#soundCaptureState')).to_contain_text('geen toestemming')
     add_species(sheet, ['Buizerd', 'Roodborst'])
     if width == 320:
-        sheet.get_by_role('checkbox', name='Roodborst').uncheck()
+        sheet.get_by_role('checkbox', name='Roodborst', exact=True).uncheck()
     sheet.get_by_text('Details aanpassen', exact=True).click()
     sheet.get_by_role('button', name='Gebruik mijn locatie').click()
     expect(sheet.locator('#soundPosition')).to_contain_text('GPS is niet beschikbaar')
