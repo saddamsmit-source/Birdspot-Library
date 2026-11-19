@@ -176,12 +176,20 @@ export async function addSightings(sightings) {
  * @throws {Error} als sighting niet gevonden
  * @throws {DOMException|Error} bij opslagfout (caller toont foutmelding)
  */
-export async function updateSighting(id, patch) {
-  return dataWrite(() => {
+export async function updateSighting(id, patch, { resolve = null } = {}) {
+  return dataWrite(async () => {
+    // Vervolgcorrectie R08 (P1): velden die van de ACTUELE waarneming afhangen (audiokoppelingen)
+    // worden onder hetzelfde herstelslot bepaald, direct vóór het schrijven.
+    let resolved = {};
+    if (resolve) {
+      const current = getSightingsSnapshot().find(s => s.id === id);
+      if (!current) throw new Error(`Sighting ${id} not found`);
+      resolved = (await resolve(current)) || {};
+    }
     const all = getSightingsSnapshot();
     const idx = all.findIndex(s => s.id === id);
     if (idx === -1) throw new Error(`Sighting ${id} not found`);
-    all[idx] = { ...all[idx], ...patch, updatedAt: new Date().toISOString() };
+    all[idx] = { ...all[idx], ...patch, ...resolved, updatedAt: new Date().toISOString() };
     saveSightings(all);   // gooit bij fout — addSheet.js vangt dit op
     return all[idx];
   });
