@@ -16,7 +16,7 @@
  * de huidige waarde nog aantoonbaar van deze bewerking is (compare-and-set); een nieuwere waarde
  * van een ander tabblad blijft staan. Herhaalbaar: een tweede keer verandert niets.
  */
-import { getDB } from './db.js';
+import { getDB, isPlaceEnvPhoto, isSightingAudio } from './db.js';
 import { withDataLock } from './dataLock.js';
 import { OP_PENDING_KEY } from './recoveryGate.js';
 
@@ -97,7 +97,65 @@ function parse(raw) {
   } catch (_) { /* onleesbaar */ }
   return null;
 }
-function rebase(fromRaw, toRaw, currentRaw) {
+const same = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+const list = value => Array.isArray(value) ? value : [];
+const MEDIA_LINKS = ['photoIds', 'audioIds'];
+
+function rebaseSighting(from, to, current) {
+  const row = { ...current };
+  if (!to) return row;
+  if (row.placeId === from?.placeId) {
+    if (Object.hasOwn(to, 'placeId')) row.placeId = to.placeId;
+    else delete row.placeId;
+  }
+  for (const field of MEDIA_LINKS) {
+    if (same(row[field], from?.[field])) {
+      if (Object.hasOwn(to, field)) row[field] = to[field];
+      else delete row[field];
+      continue;
+    }
+    // Pas de toegevoegde/verwijderde koppelingen van de andere schrijver toe op de doelstand.
+    const previous = new Set(list(from?.[field]));
+    const currentIds = new Set(list(row[field]));
+    row[field] = [...new Set([
+      ...list(to[field]).filter(id => !previous.has(id) || currentIds.has(id)),
+      ...[...currentIds].filter(id => !previous.has(id)),
+    ])];
+  }
+  return row;
+}
+
+async function verifyRebasedLinks(db, rebased) {
+  if (!rebased.length) return;
+  const tx = db.transaction(['photos', 'places', 'placeTombstones'], 'readonly');
+  const photos = tx.objectStore('photos');
+  const places = tx.objectStore('places');
+  const tombstones = tx.objectStore('placeTombstones');
+  await Promise.all([done(tx), ...rebased.map(async ({ row, target }) => {
+    const media = MEDIA_LINKS.map(async field => {
+      if (!Array.isArray(row[field])) return;
+      const known = new Set(list(target?.[field]));
+      const valid = await Promise.all(row[field].map(async id => {
+        if (known.has(id)) return true;
+        if (typeof id !== 'string' || !id) return false;
+        const record = await req(photos.get(id));
+        if (!(record?.blob instanceof Blob)) return false;
+        if (field === 'audioIds') return isSightingAudio(record) && record.sightingId === row.id;
+        return !isSightingAudio(record) && !isPlaceEnvPhoto(record) &&
+          (!record.sightingId || record.sightingId === row.id);
+      }));
+      row[field] = row[field].filter((_, i) => valid[i]);
+    });
+    const place = row.placeId;
+    if (typeof place === 'string' && place && place !== target?.placeId) {
+      const [stored, removed] = await Promise.all([req(places.getKey(place)), req(tombstones.getKey(place))]);
+      if (!stored || removed) delete row.placeId;  // eigen coördinaten blijven behouden
+    }
+    await Promise.all(media);
+  })]);
+}
+
+async function rebase(fromRaw, toRaw, currentRaw, db) {
   const from = parse(fromRaw), to = parse(toRaw), cur = parse(currentRaw);
   if (!from || !to || !cur) return null;
   const kind = [from, to, cur].find(x => x.kind !== 'empty')?.kind;
@@ -115,26 +173,37 @@ function rebase(fromRaw, toRaw, currentRaw) {
   const rows = x => (x.kind === 'empty' ? [] : x.value.sightings);
   const byId = x => new Map(rows(x).map(row => [row?.id, row]));
   const f = byId(from), t = byId(to);
-  const same = (a, b) => JSON.stringify(a) === JSON.stringify(b);
   const out = [];
+  const rebased = [];
   const seen = new Set();
-  for (const row of rows(cur)) {
-    const id = row?.id;
+  for (const current of rows(cur)) {
+    const id = current?.id;
     seen.add(id);
-    if (!f.has(id) && !t.has(id)) { out.push(row); continue; }          // nieuw van de ander
-    if (same(row, f.get(id))) { if (t.has(id)) out.push(t.get(id)); continue; }  // ongewijzigd door de ander
-    out.push(row);                                                       // door de ander gewijzigd: blijft
+    const target = t.get(id);
+    if (same(current, f.get(id))) { if (t.has(id)) out.push(target); continue; }
+    const row = rebaseSighting(f.get(id), target, current);
+    out.push(row);
+    rebased.push({ row, target });
   }
   for (const [id, row] of t) {
     if (seen.has(id)) continue;
     // Niet (meer) in de huidige stand: alleen toevoegen als de ander hem niet zelf verwijderde.
     if (!f.has(id) || !same(row, f.get(id))) out.push(row);
   }
+  // Een oudere schrijver kan iets hebben bewerkt op de voorlopige stand. Bewaar die invoer,
+  // maar koppel alleen media en plekken die de feitelijk vastgelegde transactie heeft overleefd.
+  await verifyRebasedLinks(db, rebased);
   const base = cur.kind === 'sightings' ? cur.value : (to.kind === 'sightings' ? to.value : from.value);
   return JSON.stringify({ ...base, sightings: out });
 }
 
-function settle(record) {
+async function writeRebased(key, from, to, current, db) {
+  const merged = await rebase(from, to, current, db);
+  if (merged === null || localStorage.getItem(key) !== current) throw new Error('Herstel: ' + key + ' niet samen te voegen');
+  if (merged !== current) writeLS(key, merged);
+}
+
+async function settle(record, db) {
   for (const [key, entry] of Object.entries(record.keys || {})) {
     const current = localStorage.getItem(key);
     const before = entry.before ?? null;
@@ -143,9 +212,7 @@ function settle(record) {
       if (current === after) continue;
       if (current === before) { writeLS(key, after); continue; }   // vastgelegd, localStorage nog oud
       if (key.endsWith('safety-copy')) continue;                    // nieuwere veiligheidskopie blijft
-      const merged = rebase(before, after, current);                // ander tabblad bouwde op vóór
-      if (merged === null) throw new Error('Herstel: ' + key + ' niet samen te voegen');
-      writeLS(key, merged);
+      await writeRebased(key, before, after, current, db);          // ander tabblad bouwde op vóór
     } else {
       if ('after' in entry) {
         const after = entry.after ?? null;
@@ -153,9 +220,7 @@ function settle(record) {
         if (current === after) { writeLS(key, before); continue; }  // niet vastgelegd → terug
         // Een ander tabblad (of oudere versie) bouwde voort op de HALVE stand: zijn wijziging
         // behouden, die van deze niet-vastgelegde bewerking terugdraaien.
-        const merged = rebase(after, before, current);
-        if (merged === null) throw new Error('Herstel: ' + key + ' niet samen te voegen');
-        writeLS(key, merged);
+        await writeRebased(key, after, before, current, db);
       } else if (entry.tag && tagOf(current) === entry.tag && current !== before) {
         writeLS(key, before);
       }
@@ -183,7 +248,7 @@ export async function recoverOperations() {
   for (const record of records) {
     // Lukt afhandelen niet (opslag vol, onleesbare waarde), dan gooit settle: record en markering
     // blijven staan, schrijvers blijven geblokkeerd en de volgende poging kan het opnieuw doen.
-    settle(record);
+    await settle(record, db);
     await finishOperation(record.id);
   }
   try { localStorage.removeItem(OP_PENDING_KEY); } catch (_) {}

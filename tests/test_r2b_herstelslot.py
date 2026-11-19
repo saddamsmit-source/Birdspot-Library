@@ -8,6 +8,8 @@ C2  Terugzetten; B was al open; zelfde → toestand vóór Terugzetten + B, veil
 C3  favoriet aanpassen in B op de halve stand → geweigerd met melding, niets gewijzigd; na herstel lukt het
 C4  een schrijver zonder herstelslot (oudere versie) bouwde op de halve stand → herstel voegt samen:
     zijn waarneming blijft, de onderbroken import is weg, geen ontbrekende foto's
+C5  B opent de kaart tijdens een import die vóór de commit crasht → geen plek uit de afgebroken import
+C6  oudere schrijver bewerkt een waarneming uit de afgebroken import → notitie blijft, ontbrekende foto vervalt
 P2:
 D1  grafsteenovername afgebroken; echte foto-opslag (kaart) bij verouderde plek X → geweigerd met melding;
     na heropenen: migratie voltooid, X weg, geen foto zonder plek, andere grafsteen actief
@@ -15,11 +17,13 @@ D2  echte v2-database (#301 @ 66673393) met conflict: X (geen koppeling) en Y (m
     een grafsteen → na upgrade X weg, Y bereikbaar met foto, grafsteen P blijft actief
 D3  v2-database waarin P eerder geldig via ZIP is hersteld → na upgrade en herstart blijft P bruikbaar
     (foto lukt), grafsteen X blijft actief
+D4  kaartkoppeling tijdens afgebroken overname → wachten op migratie, dan geldige nieuwe plek
 
 Omgeving: BIRDSPOT_APP_ROOT (te testen commit, standaard deze checkout), BIRDSPOT_OLD_ROOT (03bf663:
 maakt birdspot-guard-gegevens), BIRDSPOT_V2_ROOT (66673393: maakt een echte v2-database).
 """
 import http.server
+import io
 import json
 import os
 import signal
@@ -27,6 +31,7 @@ import sys
 import tempfile
 import threading
 import time
+import zipfile
 from pathlib import Path
 
 from playwright.sync_api import sync_playwright
@@ -240,6 +245,70 @@ def run_p1(browser, url, zpath):
     ctx.close()
 
 
+def run_map_and_note_recovery(browser, url, zpath):
+    # Laat de eerste ZIP-waarneming zonder vaste plek binnenkomen. De kaart zou die zelf aanmaken.
+    source = io.BytesIO(ch.remap_zip(zpath.read_bytes(), '_r2b'))
+    rewritten = io.BytesIO()
+    with zipfile.ZipFile(source) as incoming, zipfile.ZipFile(rewritten, 'w', zipfile.ZIP_STORED) as outgoing:
+        data = json.loads(incoming.read('gegevens.json'))
+        data['sightings'][0].pop('placeId', None)
+        outgoing.writestr('gegevens.json', json.dumps(data))
+        for name in incoming.namelist():
+            if name != 'gegevens.json':
+                outgoing.writestr(name, incoming.read(name))
+    payload = ch.payload('r2b.zip', rewritten.getvalue())
+
+    ctx, a = ch.baseline(browser, url, zpath)
+    before = ch.probe(ctx, url)
+    a.evaluate("() => { window.__gate.armed = 3; window.__gate.calls = 0; window.__gate.hit = false; window.__holdBeforeCommit = true; }")
+    a.locator('#importFile').set_input_files(payload)
+    a.locator('#confirmOverlay').wait_for(state='visible', timeout=15000)
+    a.locator('#confirmOk').click()
+    a.wait_for_function("() => window.__gate.hit", timeout=20000)
+    b, b_pids = open_tab(ctx, url)
+    a.evaluate("() => { window.__gate.armed = 0; window.__gate.open(); }")
+    a.wait_for_function("() => window.__held === 'voor-commit'", timeout=20000)
+    b.wait_for_function("() => localStorage.getItem('birdspot-sightings').includes('z_s1_r2b')", timeout=10000)
+    b.evaluate("""async () => {
+      const { ensurePlaces } = await import('/src/data/places.js');
+      window.__bMap = ensurePlaces().then(() => 'ok', e => e.name);
+    }""")
+    waited = b.evaluate("() => Promise.race([window.__bMap, new Promise(r => setTimeout(() => r('wacht'), 300))])")
+    crash_only(a, b_pids)
+    visited = b.evaluate("() => window.__bMap")
+    b.close()
+    states = reopen_twice(ctx, url)
+    check('C5', 'kaart in tweede tabblad wacht op afgebroken import, geen lege plek na heropenen',
+          waited == 'wacht' and visited == 'ok' and states[0] == states[1]
+          and ch.core(states[-1]) == ch.core(before) and not states[-1]['pending'] and states[-1]['journal'] == 0,
+          f"tijdens={waited} kaart={visited} plekken_vóór={ch.place_ids(before)} plekken_na={ch.place_ids(states[-1])}")
+    ctx.close()
+
+    ctx, a = ch.baseline(browser, url, zpath)
+    before = ch.probe(ctx, url)
+    held = ch.start_import_held(a, payload, '__holdBeforeCommit')
+    ch.crash(ctx, a)
+    older = ctx.new_page()
+    older.goto(url + '__probe__')
+    older.evaluate("""() => {
+      const raw = JSON.parse(localStorage.getItem('birdspot-sightings'));
+      const row = raw.sightings.find(s => s.id === 'z_s1_r2b');
+      row.notes = 'Notitie toegevoegd in oudere versie';
+      localStorage.setItem('birdspot-sightings', JSON.stringify(raw));
+    }""")
+    older.close()
+    states = reopen_twice(ctx, url)
+    after = states[-1]
+    rows = json.loads(after['ls']['birdspot-sightings'])['sightings']
+    edited = next((row for row in rows if row['id'] == 'z_s1_r2b'), {})
+    check('C6', 'bewerking op afgebroken import blijft behouden met bereikbare media',
+          held == 'voor-commit' and edited.get('notes') == 'Notitie toegevoegd in oudere versie'
+          and edited.get('photoIds') == [] and without(after, 'z_s1_r2b') == norm(before)
+          and states[0] == states[1] and ch.ok_consistent(after) and not after['pending'] and after['journal'] == 0,
+          f"notitie_bewaard={bool(edited.get('notes'))} fotoIds={edited.get('photoIds')} {ch.consistent(after)}")
+    ctx.close()
+
+
 OLD_SEED = """async () => {
   const places = [
     { id: 'pl_a', name: 'Oostvaardersplassen', lat: 52.45, lon: 5.36, createdAt: '2026-05-01T08:00:00.000Z', updatedAt: '2026-05-01T08:00:00.000Z' },
@@ -268,6 +337,36 @@ def seeded(browser, url):
 
 def env_photos(s, place):
     return [p[0] for p in s['photos'] if p[1] == 'place-env' and p[2] == place]
+
+
+def run_map_migration(browser, url):
+    ctx = seeded(browser, url)
+    a = ctx.new_page()
+    a.goto(url + '__probe__')
+    a.evaluate("() => localStorage.setItem('__abortGuardMig', '1')")
+    boot(a, url)
+    a.evaluate("""async () => {
+      const { addSighting } = await import('/src/data/sightings.js');
+      await addSighting({ id: 'map_d4', speciesId: 'sp045', date: '2026-11-18', lat: 52, lon: 5, photoIds: [] });
+    }""")
+    assign = """async () => {
+      const { ensurePlaces } = await import('/src/data/places.js');
+      const { getSightings } = await import('/src/data/sightings.js');
+      let outcome = 'ok';
+      try { await ensurePlaces(); } catch (error) { outcome = error.name; }
+      return [outcome, (await getSightings()).find(s => s.id === 'map_d4')?.placeId || null];
+    }"""
+    waiting = a.evaluate(assign)
+    a.evaluate("() => localStorage.removeItem('__abortGuardMig')")
+    a.reload(wait_until='domcontentloaded')
+    boot(a, url)
+    linked = a.evaluate(assign)
+    after = ch.probe(ctx, url)
+    check('D4', 'kaart weigert koppeling bij onzekere plek; na migratie geldig gekoppeld',
+          waiting == ['PlaceMigrationPendingError', None] and linked[0] == 'ok'
+          and linked[1] in ch.place_ids(after) and 'pl_x' not in ch.place_ids(after) and 'pl_x' in after['tombs'],
+          f"tijdens={waiting} na={linked} grafstenen={after['tombs']}")
+    ctx.close()
 
 
 def run_p2(browser, url):
@@ -349,9 +448,12 @@ def main():
             ch.new_ctx = new_ctx            # zelfde haken (incl. GATE) voor de hergebruikte hulpfuncties
             steps = []
             if only != 'p2':
-                steps.append(lambda: run_p1(browser, url, export_zip(browser, url, tmp)))
+                zpath = export_zip(browser, url, tmp)
+                steps.append(lambda: run_p1(browser, url, zpath))
+                steps.append(lambda: run_map_and_note_recovery(browser, url, zpath))
             if OLD_ROOT and only != 'p1':
                 steps.append(lambda: run_p2(browser, url))
+                steps.append(lambda: run_map_migration(browser, url))
             for step in steps:
                 try:
                     step()
@@ -364,7 +466,7 @@ def main():
                     SERVE['root'] = APP_ROOT
             browser.close()
         server.shutdown()
-    expected = (0 if only == 'p2' else 4) + ((1 + (2 if V2_ROOT else 0)) if OLD_ROOT and only != 'p1' else 0)
+    expected = (0 if only == 'p2' else 6) + ((2 + (2 if V2_ROOT else 0)) if OLD_ROOT and only != 'p1' else 0)
     passed = sum(1 for _, ok in RESULTS if ok)
     total = max(len(RESULTS), expected)
     print(f"R2B-HERSTELSLOT {'PASS' if passed == total else 'FAIL'}: {passed}/{total}")

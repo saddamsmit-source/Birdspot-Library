@@ -354,7 +354,8 @@ function migrationsDone(meta) {
 
 /** Bij het starten van de app: migratie (v2-upgrade + grafstenen + additief) en cache laden. */
 export async function initPlaces() {
-  await migrateGuardTombstones().catch(error => console.error('[places] grafstenen overnemen', error));
+  const { withDataWrite } = await import('./opJournal.js');
+  await withDataWrite(migrateGuardTombstones).catch(error => console.error('[places] grafstenen overnemen', error));
   await unionLegacy();
   await refreshPlaces();
   writeMirror(cache);
@@ -428,15 +429,21 @@ export function placeStats(place, sightings) {
  * Idempotent; plannen en schrijven binnen één IndexedDB-transactie. Geeft de actuele plekkenlijst.
  */
 export async function ensurePlaces() {
-  const { getSightings, assignPlaceIds } = await import('./sightings.js');
-  const sightings = await getSightings();
-  const assign = await withPlacesTx(({ places }) => {
-    const plan = planMigration(sightings, places);
-    const known = new Set(places.map(place => place.id));
-    return { put: plan.places.filter(place => !known.has(place.id)), result: plan.assign };
+  const { withDataWrite } = await import('./opJournal.js');
+  const { getSightingsSnapshot, assignPlaceIdsUnderLock } = await import('./sightings.js');
+  return withDataWrite(async () => {
+    const sightings = getSightingsSnapshot().filter(sighting => !sighting.placeId && validCoord(sighting.lat, sighting.lon));
+    if (!sightings.length) return loadPlaces();
+    await ensurePlaceMigrations();
+    const assign = await withPlacesTx(({ places, tombstones, meta }) => {
+      if (!migrationsDone(meta)) throw new PlaceMigrationPendingError();
+      const available = places.filter(place => !tombstones.has(place.id));
+      const plan = planMigration(sightings, available);
+      return { put: plan.places.slice(available.length), result: plan.assign };
+    }, ['meta'], { readMeta: PLACE_MIGRATIONS });
+    assignPlaceIdsUnderLock(assign);
+    return loadPlaces();
   });
-  if (assign.size) await assignPlaceIds(assign);
-  return loadPlaces();
 }
 
 export async function renamePlace(id, name) {
