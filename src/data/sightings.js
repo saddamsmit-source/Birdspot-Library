@@ -134,22 +134,17 @@ function saveSightings(sightings) {
 
 // ── Plekken koppelen (K4) ──────────────────────────────────
 /**
- * Zet placeId op waarnemingen die er nog geen hebben (additief; overschrijft nooit).
- * @param {Map<string,string>} assign  sightingId → placeId
- * @returns {Promise<number>} aantal gewijzigde waarnemingen
- * @throws bij opslagfout
+ * Koppel bestaande waarnemingen. De aanroeper plant en bewaart de plekken onder de datalock.
  */
-export async function assignPlaceIds(assign) {
+export function assignPlaceIdsUnderLock(assign) {
   if (!assign?.size) return 0;
-  return dataWrite(() => {
-    const all = getSightingsSnapshot();
-    let n = 0;
-    for (const s of all) {
-      if (!s.placeId && assign.has(s.id)) { s.placeId = assign.get(s.id); n++; }
-    }
-    if (n) saveSightings(all);
-    return n;
-  });
+  const all = getSightingsSnapshot();
+  let n = 0;
+  for (const s of all) {
+    if (!s.placeId && assign.has(s.id)) { s.placeId = assign.get(s.id); n++; }
+  }
+  if (n) saveSightings(all);
+  return n;
 }
 
 // ── Voeg toe ───────────────────────────────────────────────
