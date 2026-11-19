@@ -1,5 +1,5 @@
 import { SPECIES } from '../../data/species.js';
-import { addSightings, getSightingsSnapshot } from '../../data/sightings.js';
+import { addSightings } from '../../data/sightings.js';
 import { changePhotos, SIGHTING_AUDIO_KIND } from '../../data/db.js';
 import { audioBytesProblem } from '../../data/sightingAudio.js';
 import { ensurePlaces, loadPlaces, matchSoundPlace, reuseRadiusM, resolvePlaceForSave, removeCreatedPlace } from '../../data/places.js';
@@ -67,8 +67,7 @@ export function mountSoundSession(root, onSaved) {
         <div id="soundMerlinResult" hidden>
           <p>Vink bij elke gekozen soort aan of Merlin die ook gaf. Een andere soort van Merlin? Zoek en voeg die hierboven toe.</p>
           <p id="soundMerlinCompare" role="status"></p>
-          <label class="sound-merlin__used"><input type="checkbox" id="soundMerlinVerified"> Ik heb de Merlin-suggestie zelf gecontroleerd (geluid of voorbeelden vergeleken)</label>
-          <p class="sound-merlin__hint">Niet gecontroleerd = opgeslagen als Merlin-suggestie met zekerheid Mogelijk.</p>
+          <p class="sound-merlin__hint">Vink ‘Zelf gecontroleerd’ alleen aan bij soorten waarvan je het geluid of voorbeelden hebt vergeleken. Andere Merlin-suggesties krijgen zekerheid Mogelijk.</p>
         </div>
         <p id="soundMerlinState" role="status"></p>
       </details>
@@ -120,9 +119,9 @@ export function mountSoundSession(root, onSaved) {
   let dateEdited = false, timeEdited = false;
   // Ronde 4: Merlin-dubbelcheck (alles lokaal; Birdspot ontvangt niets van Merlin).
   const merlinShare = find('soundMerlinShare'), merlinNote = find('soundMerlinShareNote');
-  const merlinUsedBox = find('soundMerlinUsed'), merlinVerifiedBox = find('soundMerlinVerified');
+  const merlinUsedBox = find('soundMerlinUsed');
   const merlinStatus = find('soundMerlinState'), attachBox = find('soundAttach');
-  let merlinUsed = false, merlinVerified = false, merlinShared = false, attachClip = false;
+  let merlinUsed = false, merlinShared = false, attachClip = false;
   let wavFile = null, wavState = 'none', wavRequest = 0;
 
   function setMoment(now = new Date()) {
@@ -192,9 +191,10 @@ export function mountSoundSession(root, onSaved) {
     stopMonitoring();
   }
 
-  function addCandidate(id, match = null, checked = !match, { merlin = false, seen = false } = {}) {
+  function addCandidate(id, match = null, checked = !match, { merlin = false, seen = false, verified = false } = {}) {
     if (candidates.has(id) || !speciesById.has(id)) return false;
-    candidates.set(id, { checked, match, merlin: Boolean(merlin), seen: Boolean(seen) });
+    const entry = { checked, match, merlin: Boolean(merlin), seen: Boolean(seen), verified: Boolean(merlin && verified) };
+    candidates.set(id, entry);
     const name = escHtml(speciesById.get(id).nameNL);
     const suggestion = match ? `<small>BirdNET-suggestie · ${elapsedLabel(match.second)}</small>` : '';
     selection.insertAdjacentHTML('beforeend', `<li><label class="sound-pick"><input type="checkbox" value="${id}" ${checked ? 'checked' : ''}>
@@ -202,6 +202,7 @@ export function mountSoundSession(root, onSaved) {
       <div class="sound-extra">
         <label><input type="checkbox" data-sound-seen="${id}" aria-label="${name}: ook gezien" ${seen ? 'checked' : ''}> Ook gezien</label>
         <label class="sound-extra__merlin"><input type="checkbox" data-sound-merlin="${id}" aria-label="${name}: Merlin gaf deze soort" ${merlin ? 'checked' : ''}> Merlin gaf deze soort</label>
+        <label class="sound-extra__merlin sound-extra__merlin-verified"><input type="checkbox" data-sound-merlin-verified="${id}" aria-label="${name}: Merlin-suggestie zelf gecontroleerd" ${entry.verified ? 'checked' : ''}> Zelf gecontroleerd</label>
       </div></li>`);
     selection.hidden = false;
     return true;
@@ -281,20 +282,23 @@ export function mountSoundSession(root, onSaved) {
   }
 
   function persistDraft() {
-    if (recorder?.state === 'recording' || finishing || (!clip && !candidates.size)) return Promise.resolve();
+    if (recorder?.state === 'recording' || finishing || (!clip && !candidates.size)) return Promise.resolve(false);
     const revision = ++draftRevision;
     draftStatus.textContent = 'Sessie wordt bewaard…';
     persistWork = saveSoundDraft({
-      id: sessionId, clip, seconds, levels: [...levels], candidates: [...candidates], coordinates, positionOrigin, placeChoice,
+      id: sessionId, clip, seconds, levels: [...levels], candidates: [...candidates].map(([id, entry]) => [id, { ...entry }]),
+      coordinates, positionOrigin, placeChoice,
       date: date.value, time: time.value, name: locationName.value, notes: find('soundNotes').value,
-      merlin: { used: merlinUsed, verified: merlinVerified, shared: merlinShared, attach: attachClip },
+      merlin: { used: merlinUsed, shared: merlinShared, attach: attachClip },
     }).then(() => {
       draftStored = true;
       if (revision === draftRevision) draftStatus.textContent = 'Sessie bewaard op dit toestel.';
+      return true;
     }, () => {
       if (revision === draftRevision) {
         draftStatus.textContent = 'Sessie opslaan lukt niet. Houd dit scherm open om je bevindingen te bewaren.';
       }
+      return false;
     });
     return persistWork;
   }
@@ -492,7 +496,15 @@ export function mountSoundSession(root, onSaved) {
   selection.addEventListener('change', event => {
     const target = event.target;
     if (target.dataset.soundSeen) candidates.get(target.dataset.soundSeen).seen = target.checked;
-    else if (target.dataset.soundMerlin) candidates.get(target.dataset.soundMerlin).merlin = target.checked;
+    else if (target.dataset.soundMerlinVerified) candidates.get(target.dataset.soundMerlinVerified).verified = target.checked;
+    else if (target.dataset.soundMerlin) {
+      const entry = candidates.get(target.dataset.soundMerlin);
+      entry.merlin = target.checked;
+      if (!entry.merlin) {
+        entry.verified = false;
+        target.closest('li').querySelector('[data-sound-merlin-verified]').checked = false;
+      }
+    }
     else candidates.get(target.value).checked = target.checked;
     updateSelection();
     persistDraft();
@@ -503,21 +515,24 @@ export function mountSoundSession(root, onSaved) {
     updateSelection();
     persistDraft();
   });
-  merlinVerifiedBox.addEventListener('change', () => { merlinVerified = merlinVerifiedBox.checked; persistDraft(); });
   attachBox.addEventListener('change', () => { attachClip = attachBox.checked; persistDraft(); });
   merlinShare.addEventListener('click', async () => {
     if (!wavFile || merlinShare.disabled) return;
+    const file = wavFile;
     merlinShare.disabled = true;
     try {
       // Eerst het concept (opname, datum, tijd, plek) lokaal vastleggen; pas daarna de appwisseling.
       merlinStatus.textContent = 'Sessie wordt bewaard…';
-      await persistDraft();
-      if (!draftStored) {
+      const saving = persistDraft(), revision = draftRevision;
+      const saved = await saving;
+      if (closed || root.inert || wavFile !== file) return;
+      if (!saved || revision !== draftRevision) {
         merlinStatus.textContent = 'De sessie kon niet worden bewaard. Delen is gestopt; houd dit scherm open of open Merlin zelf.';
         return;
       }
       merlinStatus.textContent = 'Kies Merlin in het deelmenu.';
-      await navigator.share({ files: [wavFile] });
+      await navigator.share({ files: [file] });
+      if (closed || root.inert || wavFile !== file) return;
       merlinShared = true;
       merlinStatus.textContent = 'Opname gedeeld. Kom na Merlin terug naar Birdspot en vink hieronder aan wat Merlin gaf.';
       persistDraft();
@@ -575,7 +590,7 @@ export function mountSoundSession(root, onSaved) {
       certainty: 'certain', count: 1, photoIds: [], soundSessionId: sessionId,
       createdAt: now, updatedAt: now,
     };
-    let sightings, newPlace, audioRecord;
+    let sightings, newPlace;
     try {
       if (matchedPlace || placeChoice?.newPin) {
         // IndexedDB leidend: gekozen plek alleen als die nog bestaat, anders een nieuwe (één transactie).
@@ -590,29 +605,28 @@ export function mountSoundSession(root, onSaved) {
         const evidence = normalizeEvidence({
           observationMethod: entry.seen ? 'both' : 'heard',
           identificationSource: viaMerlin ? 'merlin' : 'self',
-          merlinVerification: viaMerlin && merlinVerified ? 'checked' : 'suggested',
+          merlinVerification: viaMerlin && entry.verified ? 'checked' : 'suggested',
         });
         return {
-          ...shared, ...evidence, certainty: viaMerlin && !merlinVerified ? 'possible' : 'certain',
+          ...shared, ...evidence, certainty: viaMerlin && !entry.verified ? 'possible' : 'certain',
           id: `${sessionId}-${id}`, speciesId: id, speciesName: speciesById.get(id).nameNL,
           ...(entry.match ? { soundSuggestion: { model: 'BirdNET+ V3.0', ...entry.match } } : {}),
         };
       });
-      // Optionele bijlage via het R08-model: één opname bij één waarneming, vaste id (opnieuw proberen = geen kopie).
-      if (attachClip && wavFile && sightings.length === 1 && !getSightingsSnapshot().some(s => s.id === sightings[0].id)) {
-        audioRecord = {
-          id: `au_${sessionId}`, kind: SIGHTING_AUDIO_KIND, blob: wavFile, type: 'audio/wav',
-          filename: MERLIN_WAV_NAME, size: wavFile.size, sightingId: sightings[0].id, addedAt: now,
-        };
-        await changePhotos({ put: [audioRecord] });
-        sightings[0].audioIds = [audioRecord.id];
-      }
-      await addSightings(sightings);
+      const attachment = attachClip && sightings.length === 1 ? wavFile : null;
+      await addSightings(sightings, {
+        prepareMedia: attachment && (async ([sighting]) => {
+          // Een al opgeslagen waarneming wordt overgeslagen onder het herstelslot.
+          const audioRecord = {
+            id: `au_${crypto.randomUUID()}`, kind: SIGHTING_AUDIO_KIND, blob: attachment, type: 'audio/wav',
+            filename: MERLIN_WAV_NAME, size: attachment.size, sightingId: sighting.id, addedAt: now,
+          };
+          await changePhotos({ put: [audioRecord] });
+          sighting.audioIds = [audioRecord.id];
+          return () => changePhotos({ remove: [audioRecord.id] });
+        }),
+      });
     } catch (_) {
-      if (audioRecord) {
-        try { await changePhotos({ remove: [audioRecord.id] }); }
-        catch (_) { /* Waarneming is niet opgeslagen; de losse opname wordt nergens getoond. */ }
-      }
       if (newPlace) {
         try { await removeCreatedPlace(newPlace.id); }
         catch (_) { /* Waarnemingen zijn nog niet gepind. */ }
@@ -654,8 +668,8 @@ export function mountSoundSession(root, onSaved) {
       clip = coordinates = null;
       seconds = levels.length = 0;
       candidates.clear();
-      merlinUsed = merlinVerified = merlinShared = attachClip = false;
-      merlinUsedBox.checked = merlinVerifiedBox.checked = attachBox.checked = false;
+      merlinUsed = merlinShared = attachClip = false;
+      merlinUsedBox.checked = attachBox.checked = false;
       merlinStatus.textContent = '';
       prepareWav();
       dateEdited = timeEdited = false;
@@ -698,9 +712,8 @@ export function mountSoundSession(root, onSaved) {
     seconds = draft.seconds;
     levels.push(...draft.levels);
     for (const [id, entry] of draft.candidates) addCandidate(id, entry.match, entry.checked, entry);
-    ({ used: merlinUsed = false, verified: merlinVerified = false, shared: merlinShared = false, attach: attachClip = false } = draft.merlin || {});
+    ({ used: merlinUsed = false, shared: merlinShared = false, attach: attachClip = false } = draft.merlin || {});
     merlinUsedBox.checked = merlinUsed;
-    merlinVerifiedBox.checked = merlinVerified;
     attachBox.checked = attachClip;
     if (merlinUsed || merlinShared) find('soundMerlin').open = true;
     placeChoice = draft.placeChoice;

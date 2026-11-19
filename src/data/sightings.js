@@ -161,13 +161,23 @@ export async function addSighting(sighting) {
   return sighting;
 }
 
-/** Append a complete group with one storage write. The caller retains its draft on failure. */
-export async function addSightings(sightings) {
-  return dataWrite(() => {
+/** Append a group. Optional media preparation runs for new sightings only and can return a rollback. */
+export async function addSightings(sightings, { prepareMedia = null } = {}) {
+  return dataWrite(async () => {
     const stored = getSightingsSnapshot();
     const existingIds = new Set(stored.map(sighting => sighting.id));
     const additions = sightings.filter(sighting => !existingIds.has(sighting.id));
-    if (additions.length) saveSightings([...stored, ...additions]);
+    if (!additions.length) return;
+    const rollbackMedia = prepareMedia && await prepareMedia(additions);
+    try {
+      saveSightings([...stored, ...additions]);
+    } catch (error) {
+      if (rollbackMedia) {
+        try { await rollbackMedia(); }
+        catch (_) { /* The failed write has no reference to the new media. */ }
+      }
+      throw error;
+    }
   });
 }
 

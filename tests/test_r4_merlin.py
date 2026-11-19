@@ -21,6 +21,11 @@ M7  Offline: opnemen, delen, opslaan en heropenen in de app werken zonder netwer
 M8  Microfoon en GPS geweigerd → geen opname/deelknop; handmatige Merlin-route + kaartpin → opgeslagen.
 M9  Opnieuw proberen na een opslagfout: geen losse opname na de fout; daarna precies 1 waarneming, 1 pin en 1 opname.
     Bijlage bij meerdere soorten is uitgeschakeld met uitleg.
+M10 Concept al bewaard, wijziging van tijd kan niet worden opgeslagen: delen stopt. Na herstel deelt de app pas
+    nadat de gewijzigde tijd bewaard is.
+M11 Dezelfde sessie in meerdere tabbladen: een mislukte opslag laat de eerste opname intact. Verschillende
+    soorten krijgen elk hun eigen koppeling en een herhaalde opslag van dezelfde soort maakt geen kopie.
+M12 Zelf gecontroleerd geldt per soort en blijft behouden na heropenen. Een later toegevoegde soort is Mogelijk.
 """
 import hashlib
 import http.server
@@ -90,6 +95,17 @@ FAIL_ONCE = """() => { const original = Storage.prototype.setItem;
   Storage.prototype.setItem = function (key, value) {
     if (key === 'birdspot-sightings') { Storage.prototype.setItem = original; throw new DOMException('Testopslag vol', 'QuotaExceededError'); }
     return original.call(this, key, value); }; }"""
+DRAFT_SAVE_FAIL = """fail => {
+  if (!fail) { IDBObjectStore.prototype.put = window.__draftPut; return; }
+  window.__draftPut = IDBObjectStore.prototype.put;
+  IDBObjectStore.prototype.put = function (value, ...args) {
+    if (this.transaction.db.name === 'birdspot-sound-drafts' && value.time === '17:52') {
+      this.transaction.abort();
+      return;
+    }
+    return window.__draftPut.call(this, value, ...args);
+  };
+}"""
 
 
 def check(code, name, ok, detail=''):
@@ -238,7 +254,7 @@ def run(browser, url, tmp):
     add_species(p, 'Roodborst')
     tick(p, 'Roodborst: Merlin gaf deze soort')
     tick(p, 'Roodborst: ook gezien')
-    tick(p, 'Ik heb de Merlin-suggestie zelf gecontroleerd (geluid of voorbeelden vergeleken)')
+    tick(p, 'Roodborst: Merlin-suggestie zelf gecontroleerd')
     tick(p, 'Bewaar de opname bij de waarneming')
     pin(p)
     s = rows(p)[0]
@@ -402,6 +418,88 @@ def run(browser, url, tmp):
           and r[0].get('audioIds') == [recs[0]['id']] and places == 1 and fresh == '' and not errors,
           f"meerdere_soorten={multi[0]} na_fout={after_fail} rijen={len(r)} opnamen={len(recs)} plekken={places} concept='{fresh}'")
 
+    # M10: een eerder bewaard concept mag een mislukte nieuwe opslag niet maskeren.
+    ctx, p, errors = context(browser, url)
+    p.evaluate(SEED_DRAFT, {'wav': list(r3.make_wav(seconds=1)), 'candidates': []})
+    open_sound(p); open_merlin(p); wav_ready(p)
+    p.evaluate(DRAFT_SAVE_FAIL, True)
+    p.locator('.sound-details > summary').click()
+    p.locator('#soundTime').fill('17:52')
+    p.locator('#soundMerlinShare').click()
+    p.wait_for_function("() => !document.querySelector('#soundMerlinShare').disabled")
+    blocked = p.locator('#soundMerlinState').inner_text()
+    before = p.evaluate("() => window.__share.calls.length")
+    old_time = p.evaluate("() => import('/src/features/sightings/soundDraft.js').then(async m => (await m.loadSoundDraft()).time)")
+    p.evaluate(DRAFT_SAVE_FAIL, False)
+    p.locator('#soundMerlinShare').click()
+    p.wait_for_function("() => /Opname gedeeld/.test(document.querySelector('#soundMerlinState').textContent)")
+    calls = p.evaluate("() => window.__share.calls")
+    check('M10', 'gewijzigd concept niet bewaard → niet delen; opnieuw → eerst nieuw tijdstip bewaard',
+          before == 0 and old_time == '14:42' and 'Delen is gestopt' in blocked
+          and len(calls) == 1 and calls[0]['draft']['time'] == '17:52' and not errors,
+          f"delen_na_fout={before} oud_tijdstip={old_time} delen_na_retry={len(calls)}")
+    ctx.close()
+
+    # M11: alle tabbladen openen het concept voordat het eerste de waarneming pint.
+    ctx, a, errors = context(browser, url)
+    a.evaluate(SEED_DRAFT, {'wav': list(r3.make_wav(seconds=1)), 'candidates': []})
+    b, c = ctx.new_page(), ctx.new_page()
+    boot(b, url); boot(c, url)
+    for page in (a, b, c):
+        open_sound(page); wav_ready(page)
+    for page, name in ((a, 'Merel'), (b, 'Zanglijster'), (c, 'Merel')):
+        add_species(page, name)
+        tick(page, 'Bewaar de opname bij de waarneming')
+    pin(a)
+    first = rows(a)[0]
+    first_ids, first_audio = rz.audio_of(a, first['id'])
+    b.evaluate(FAIL_ONCE)
+    b.locator('#soundSave').click()
+    b.wait_for_function("() => /Opslaan mislukt/.test(document.querySelector('#soundSaveState').textContent)")
+    first_intact = rz.audio_of(a, first['id']) == (first_ids, first_audio)
+    pin(b)
+    pin(c)
+    observations = rows(c)
+    audio = r3.audio_records(c.evaluate(r3.RECORDS))
+    owners = {record['id']: record['sightingId'] for record in audio}
+    link_ok = len(observations) == len(audio) == 2 and all(
+        len(row.get('audioIds', [])) == 1 and owners.get(row['audioIds'][0]) == row['id'] for row in observations)
+    zp = rz.export(c, Path(tmp) / 'm11.zip') if link_ok else None
+    if zp:
+        clean, p = rz.new_profile(browser, url)
+        restored = rz.import_zip(p, zp)
+        clean_owners = {record['id']: (record['sightingId'], record['sha']) for record in r3.audio_records(p.evaluate(r3.RECORDS))}
+        clean_ok = restored and clean_owners == {record['id']: (record['sightingId'], record['sha']) for record in audio}
+        clean.close()
+    else:
+        clean_ok = False
+    check('M11', 'zelfde concept in meerdere tabbladen → eigen audiobestand per soort, herhaling zonder extra opname, ZIP schoon',
+          len(first_ids) == 1 and first_intact and link_ok and rz.audio_of(c, first['id']) == (first_ids, first_audio)
+          and clean_ok and not errors,
+          f"eerste_na_fout_gelijk={first_intact} rijen={len(observations)} opnamen={len(audio)} zip={clean_ok}")
+    ctx.close()
+
+    # M12: re-openen mag de keuze van één soort niet op de andere toepassen.
+    ctx, p, errors = context(browser, url)
+    open_sound(p); open_merlin(p)
+    tick(p, 'Ik heb Merlin gebruikt voor deze vogels')
+    add_species(p, 'Merel')
+    tick(p, 'Merel: Merlin gaf deze soort')
+    tick(p, 'Merel: Merlin-suggestie zelf gecontroleerd')
+    add_species(p, 'Zanglijster')
+    tick(p, 'Zanglijster: Merlin gaf deze soort')
+    p.wait_for_function("() => document.querySelector('#soundDraftState').textContent.includes('bewaard op dit toestel')")
+    p.reload(wait_until='domcontentloaded'); boot(p, url)
+    open_sound(p)
+    first_checked = p.get_by_role('checkbox', name='Merel: Merlin-suggestie zelf gecontroleerd').is_checked()
+    second_checked = p.get_by_role('checkbox', name='Zanglijster: Merlin-suggestie zelf gecontroleerd').is_checked()
+    pin(p)
+    certainty = {row['speciesName']: (row['merlinVerification'], row['certainty']) for row in rows(p)}
+    check('M12', 'bevestiging per soort blijft na heropenen en geldt alleen voor de aangevinkte soort',
+          first_checked and not second_checked and certainty == {'Merel': ('checked', 'certain'), 'Zanglijster': ('suggested', 'possible')}
+          and not errors, str(certainty))
+    ctx.close()
+
 
 def main():
     with tempfile.TemporaryDirectory(prefix='birdspot-r4-') as tmp:
@@ -421,7 +519,7 @@ def main():
             browser.close()
         server.shutdown()
     passed = sum(1 for _, ok in RESULTS if ok)
-    total = max(len(RESULTS), 9)
+    total = max(len(RESULTS), 12)
     print(f"R4-MERLIN {'PASS' if passed == total else 'FAIL'}: {passed}/{total}  (handoff gesimuleerd; echte appwisseling NOT TESTED)")
     sys.exit(0 if passed == total else 1)
 
