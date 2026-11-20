@@ -250,3 +250,13 @@ R22: 66/140 inhoudelijk bekeken, 0 FULL PASS. Brede R4/R3-06-testfout uit #313 e
 | sp084 Purperreiger | Hoofdfoto Zimbabwe: geen Europese opname of ondersoortbewijs. Roerdomp-fotopaar ontbreekt, tekst wederkerig. Twee Commons-audiorechten gecontroleerd, geen onafhankelijke akoestische determinatie. |
 
 R23: 69/140 inhoudelijk bekeken, 71 te starten, 0 FULL PASS. R22-brede CI nu 30/30 teruggegeven runs success, inclusief R4; eerdere R3-06-uitkomst uit #313 blijft onverklaard bewaard, geen herstelclaim. Fysieke praktijkproeven en releasegates blijven open. Afzonderlijke Visdief-concept-PR #315 is niet geïntegreerd of als norm geactiveerd.
+
+### F3-R24 (20-11-2026)
+
+| Soort | Open punt |
+|---|---|
+| sp085 Kwak | Actuele fotoinventaris van nul naar drie bestaande beelden hersteld; historische nul behouden. Roerdomp/Ralreiger-paren nog niet uitgewerkt. Nederlands voorkomen vaak collectieherkomst: geen wilde herkomst uit waarneming afleiden. |
+| sp086 Grauwe Gans | Donsjong blijft apart, ouder juveniel ontbreekt. Kolgans heeft geen gidsfoto; wederkerige tekst zonder leeg fotopaar. Automatische auteursverschillen David Iliff/Diliff en Tuxyso/platform blijven false, handmatige creditinterpretatie apart. |
+| sp089 Wilde Eend | Historisch eclipsbijschriftconflict en voorlopige rol behouden. Juvenielen zonder nieuwe sekseclaim. Slobeend-vluchtpartner met neerwaartse poten behoudt oud bewijs, maar onafhankelijke posegoedkeuring open; meenemen in R25. Gesloten vleugels tonen spiegel niet volledig. |
+
+R24: 72/140 inhoudelijk bekeken, 68 te starten, 0 FULL PASS. Vijftien bestaande foto's en zes Commons-audiometadata gecontroleerd, zonder nieuwe media. Bronmaten en afgeronde lengtebanden bewaard; geen onafhankelijke geluidsdeterminatie. Toestel-/offline-/releasegates blijven open.

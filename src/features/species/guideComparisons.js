@@ -237,7 +237,11 @@ export const GUIDE_COMPARISONS = [
       {id: 'sp089', source: 'wilde-eend', plumage: 'adult_f', marks: 'Bruin vrouwtje met blauw-paarse vleugelspiegel met lichte randen.'},
       {id: 'sp129', source: 'krakeend', plumage: 'adult_f', marks: 'Bruin vrouwtje met een witte vleugelspiegel en een donkere snavel met oranje zijkanten.'},
     ],
-    tip: 'Vergelijk de vrouwtjes. De spiegel is het duidelijkst in vlucht of bij een gestrekte vleugel.',
+    rows: [
+      {label: 'Snavelpatroon', values: ['Oranjeachtig met donkere vlekken.', 'Donker middendeel met oranje zijkanten.']},
+      {label: 'Spiegel bij geopende vleugel', values: ['Blauwviolet met lichte randen.', 'Wit.']},
+    ],
+    tip: 'Vergelijk de vrouwtjes en het snavelpatroon. Op deze gesloten vleugels is het spiegelvlak niet volledig zichtbaar; controleer het bij vleugelstrekken of in vlucht.',
   },
   {
     label: 'Bruine en Blauwe · volwassen mannetjes',
@@ -2043,6 +2047,19 @@ export const GUIDE_COMPARISONS = [
       {label: 'Vleugel', values: ['Jonge vogels hebben lichte randen aan bruine dekveren.', 'Geelbruine vleugels met donkere patronen.']},
     ],
     tip: 'Een bruine kleur of lange tenen alleen beslist dit niet. Bekijk bij goed zicht de bouw, halsdikte en het vleugelpatroon samen.',
+  },
+  {
+    label: 'Grauwe Gans en Kolgans · herkenning',
+    reciprocalText: true,
+    birds: [
+      {id: 'sp086', source: 'grauwe-gans', photoMissing: true, marks: 'Forse gans met stevige oranje tot roze snavel en meestal roze poten. In vlucht een lichte voorvleugel.'},
+      {id: 'sp121', source: 'kolgans', photoMissing: true, marks: 'Volwassen vogel met witte kol rond de roze snavel en zwarte buikdwarsstrepen; jongen missen deze vaak nog grotendeels. Poten zijn oranje.'},
+    ],
+    rows: [
+      {label: 'Snavel en poten', values: ['Stevige oranje tot roze snavel en meestal roze poten.', 'Roze snavel, met witte kol bij adult; oranje poten.']},
+      {label: 'Buik', values: ['Kan kleine donkere buikstreepjes hebben.', 'Adult vaak opvallende zwarte dwarsstrepen; bij jongen ontbreken die.']},
+    ],
+    tip: 'Vergelijk leeftijden en meerdere kenmerken. Geen witte kol of buikstrepen is bij een jonge Kolgans geen uitsluitingskenmerk.',
   },
 ];
 

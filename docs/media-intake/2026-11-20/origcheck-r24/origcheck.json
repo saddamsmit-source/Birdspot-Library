@@ -1,0 +1,659 @@
+{
+  "generated": "2026-11-20T08:07:07Z",
+  "rule": {
+    "sameMinR": 0.9
+  },
+  "items": [
+    {
+      "speciesId": "sp085",
+      "image": "/assets/showcase/sp085.webp",
+      "title": "File:Nycticorax nycticorax 5.jpg",
+      "author": "Mike & Chris",
+      "license": "CC BY-SA 2.0",
+      "localSize": [
+        1600,
+        1598
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Nycticorax_nycticorax_5.jpg",
+        "sha1": "85b870e2e84bbe61ce3f2e3d391dd6fa9955fed4",
+        "license": "CC BY-SA 2.0",
+        "author": "Mike & Chris",
+        "width": 3254,
+        "height": 3250,
+        "creditFields": {
+          "author": "Mike & Chris"
+        }
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        959
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp085_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp085",
+      "image": "/assets/species/plumage/sp085-juv.webp",
+      "title": "File:Nycticorax nycticorax young.jpg",
+      "author": "Matteo Sorrentino",
+      "license": "CC BY-SA 3.0",
+      "localSize": [
+        482,
+        720
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Nycticorax_nycticorax_young.jpg",
+        "sha1": "b762043b6e05f7f8b4278dcec5345b5e19e84647",
+        "license": "CC BY-SA 3.0",
+        "author": "Matteo Sorrentino",
+        "width": 482,
+        "height": 720,
+        "creditFields": {
+          "author": "Matteo Sorrentino"
+        }
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        482,
+        720
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp085-juv_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp085",
+      "image": "/assets/species/plumage/sp085-flight.webp",
+      "title": "File:Black-crowned night heron (Nycticorax nycticorax) in flight.jpg",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1400,
+        1267
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Black-crowned_night_heron_(Nycticorax_nycticorax)_in_flight.jpg",
+        "sha1": "ab583fe83f5e0d451ee135836c086a2c66b4f7af",
+        "license": "CC BY-SA 4.0",
+        "author": "Charles J. Sharp",
+        "width": 3682,
+        "height": 2455,
+        "creditFields": {}
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "crop",
+      "r": 0.96,
+      "scale": 0.9,
+      "offset": [
+        0.26,
+        0.062
+      ],
+      "sameShot": true,
+      "sideBySide": "sp085-flight_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp085",
+      "audio": "/assets/species/audio/sp085-a1.mp3",
+      "title": "File:Nycticorax nycticorax - Black-crowned Night Heron XC383999.mp3",
+      "author": "Jan Cibulka",
+      "license": "CC BY-SA 3.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Nycticorax_nycticorax_-_Black-crowned_Night_Heron_XC383999.mp3",
+        "sha1": "bdd61d46b27abeb4fd5847dc0ed981019427129c",
+        "license": "CC BY-SA 3.0",
+        "author": "Jan Cibulka",
+        "duration": 54.11451960420729,
+        "mime": "audio/mpeg",
+        "creditFields": {
+          "author": "Jan Cibulka"
+        },
+        "pageParams": {
+          "date": "2017-08-23 20:30",
+          "author": "Jan Cibulka"
+        },
+        "creditLines": [
+          "|author=Jan Cibulka"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    },
+    {
+      "speciesId": "sp085",
+      "audio": "/assets/species/audio/sp085-a2.mp3",
+      "title": "File:Nycticorax nycticorax - Black-crowned Night Heron XC431999.mp3",
+      "author": "Joost van Bruggen",
+      "license": "CC BY-SA 4.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Nycticorax_nycticorax_-_Black-crowned_Night_Heron_XC431999.mp3",
+        "sha1": "9146a6cca232207fe5710e7ba67fea917dc23088",
+        "license": "CC BY-SA 4.0",
+        "author": "Joost van Bruggen",
+        "duration": 49.76785,
+        "mime": "audio/mpeg",
+        "creditFields": {
+          "author": "Joost van Bruggen"
+        },
+        "pageParams": {
+          "date": "2018-08-07 06:35",
+          "author": "Joost van Bruggen"
+        },
+        "creditLines": [
+          "|author=Joost van Bruggen"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    },
+    {
+      "speciesId": "sp086",
+      "image": "/assets/species/sp086.webp",
+      "title": "File:Greylag Goose - St James's Park, London - Nov 2006.jpg",
+      "author": "David Iliff (Diliff)",
+      "license": "CC BY-SA 3.0",
+      "localSize": [
+        1600,
+        1318
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Greylag_Goose_-_St_James%27s_Park,_London_-_Nov_2006.jpg",
+        "sha1": "70101fd500cf5a7f703a65250b2c17d0992cc558",
+        "license": "CC BY-SA 3.0",
+        "author": "Diliff",
+        "width": 1715,
+        "height": 1413,
+        "creditFields": {
+          "author": "Diliff"
+        }
+      },
+      "authorRule": "different",
+      "rightsMatch": false,
+      "sourceSize": [
+        960,
+        791
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp086_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp086",
+      "image": "/assets/species/plumage/sp086-flight.webp",
+      "title": "File:Greylag goose (Anser anser) in flight Marken.jpg",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1400,
+        933
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Greylag_goose_(Anser_anser)_in_flight_Marken.jpg",
+        "sha1": "24ccb9852d146c2864968f96a8d18f854a17bc20",
+        "license": "CC BY-SA 4.0",
+        "author": "Charles J. Sharp",
+        "width": 4726,
+        "height": 3150,
+        "creditFields": {}
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp086-flight_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp086",
+      "image": "/assets/species/plumage/sp086-juv.webp",
+      "title": "File:Graugans-Jungtier-Schwalm-Nette-2013-01.jpg",
+      "author": "Tuxyso / Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "localSize": [
+        1600,
+        1188
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Graugans-Jungtier-Schwalm-Nette-2013-01.jpg",
+        "sha1": "db3119e9962d1f0fa684d40e54d03fa285c06024",
+        "license": "CC BY-SA 3.0",
+        "author": "Tuxyso",
+        "width": 2320,
+        "height": 1723,
+        "creditFields": {
+          "author": "Tuxyso"
+        }
+      },
+      "authorRule": "different",
+      "rightsMatch": false,
+      "sourceSize": [
+        960,
+        713
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp086-juv_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp086",
+      "audio": "/assets/species/audio/sp086-a1.mp3",
+      "title": "File:Anser anser - Greylag Goose XC436358.mp3",
+      "author": "Joost van Bruggen",
+      "license": "CC BY-SA 4.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Anser_anser_-_Greylag_Goose_XC436358.mp3",
+        "sha1": "45dc904f436a23e34a8d39e355de0d501ae02a7c",
+        "license": "CC BY-SA 4.0",
+        "author": "Joost van Bruggen",
+        "duration": 40.479025,
+        "mime": "audio/mpeg",
+        "creditFields": {
+          "author": "Joost van Bruggen"
+        },
+        "pageParams": {
+          "date": "2018-09-26 01:15",
+          "author": "Joost van Bruggen"
+        },
+        "creditLines": [
+          "|author=Joost van Bruggen"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    },
+    {
+      "speciesId": "sp086",
+      "audio": "/assets/species/audio/sp086-a2.mp3",
+      "title": "File:Anser anser - Greylag Goose XC518305.mp3",
+      "author": "Jens Loose",
+      "license": "CC BY-SA 4.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Anser_anser_-_Greylag_Goose_XC518305.mp3",
+        "sha1": "b487708bb080d524da2292f581593ff2b7ff6a8d",
+        "license": "CC BY-SA 4.0",
+        "author": "Jens Loose",
+        "duration": 10.840472612078075,
+        "mime": "audio/mpeg",
+        "creditFields": {
+          "author": "Jens Loose"
+        },
+        "pageParams": {
+          "date": "2019-12-30 02:33",
+          "author": "Jens Loose"
+        },
+        "creditLines": [
+          "|author=Jens Loose"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    },
+    {
+      "speciesId": "sp089",
+      "image": "/assets/species/sp089.webp",
+      "title": "File:Anas platyrhynchos male female.jpg",
+      "author": "Richard Bartz",
+      "license": "CC BY-SA 2.5",
+      "localSize": [
+        1600,
+        981
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Anas_platyrhynchos_male_female.jpg",
+        "sha1": "1ac09a57e6912efd967430732a414362c4ae4243",
+        "license": "CC BY-SA 2.5",
+        "author": "This picture was realized by Richard Bartz by using a Canon EF 70-300mm f/4-5.6 IS USM Lens",
+        "width": 3888,
+        "height": 2384,
+        "creditFields": {}
+      },
+      "authorRule": "different",
+      "rightsMatch": false,
+      "sourceSize": [
+        960,
+        589
+      ],
+      "mode": "full",
+      "r": 0.999,
+      "sameShot": true,
+      "sideBySide": "sp089_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp089",
+      "image": "/assets/species/plumage/sp089-flight.webp",
+      "title": "File:Mallard male in flight.jpg",
+      "author": "VJAnderson",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1400,
+        958
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Mallard_male_in_flight.jpg",
+        "sha1": "68eeda47197c5e2d4f5ee22a16dd9af2f59cd155",
+        "license": "CC BY-SA 4.0",
+        "author": "VJAnderson",
+        "width": 4241,
+        "height": 2903,
+        "creditFields": {
+          "author": "VJAnderson"
+        }
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        657
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp089-flight_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp089",
+      "image": "/assets/species/plumage/sp089-adult_f.webp",
+      "title": "File:Female Mallard Swimming.jpg",
+      "author": "Roshan Kumar Ban",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1280,
+        853
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Female_Mallard_Swimming.jpg",
+        "sha1": "f66add2be77d1806547a80d670aac1f74ba717e3",
+        "license": "CC BY-SA 4.0",
+        "author": "Roshan Kumar Ban",
+        "width": 6000,
+        "height": 4000,
+        "creditFields": {
+          "author": "Roshan Kumar Ban"
+        }
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp089-adult_f_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp089",
+      "image": "/assets/species/plumage/sp089-juv-review.webp",
+      "title": "File:Anas platyrhynchos juvenile JdP 2013-06-14 n01.jpg",
+      "author": "Marie-Lan Nguyen / Wikimedia Commons",
+      "license": "CC BY 2.5",
+      "localSize": [
+        1400,
+        935
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Anas_platyrhynchos_juvenile_JdP_2013-06-14_n01.jpg",
+        "sha1": "42d453231bc5ea540e2921a9de99200c488e29b9",
+        "license": "CC BY 2.5",
+        "author": "Marie-Lan Nguyen",
+        "width": 6000,
+        "height": 4005,
+        "creditFields": {}
+      },
+      "authorRule": "different",
+      "rightsMatch": false,
+      "sourceSize": [
+        960,
+        641
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp089-juv-review_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp089",
+      "image": "/assets/species/plumage/sp089-eclipse.webp",
+      "title": "File:Male eclipse Mallard on Lake Bled.jpg",
+      "author": "Mihael Grmek",
+      "license": "CC BY-SA 3.0",
+      "localSize": [
+        1280,
+        1036
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Male_eclipse_Mallard_on_Lake_Bled.jpg",
+        "sha1": "f91d3f71976b35f1b3712b43a2b59db66641aba7",
+        "license": "CC BY-SA 3.0",
+        "author": "Mihael Grmek",
+        "width": 2670,
+        "height": 2161,
+        "creditFields": {
+          "author": "Mihael Grmek"
+        }
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        777
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp089-eclipse_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp089",
+      "image": "/assets/species/plumage/sp089-free-flight.webp",
+      "title": "File:Mallard duck in flight.jpg",
+      "author": "Bert de Tilly",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1440,
+        960
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Mallard_duck_in_flight.jpg",
+        "sha1": "b3fb3f13befc36cff4aad8e3acb0e99bd71102f0",
+        "license": "CC BY-SA 4.0",
+        "author": "Bert de Tilly",
+        "width": 2048,
+        "height": 1365,
+        "creditFields": {
+          "author": "Bert de Tilly"
+        }
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp089-free-flight_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp089",
+      "audio": "/assets/species/audio/sp089-a1.mp3",
+      "title": "File:Anas platyrhynchos - Mallard XC112828.mp3",
+      "author": "Jonathon Jongsma",
+      "license": "CC BY-SA 3.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Anas_platyrhynchos_-_Mallard_XC112828.mp3",
+        "sha1": "1558678e16c75b985507c11147c7c31d995adbd0",
+        "license": "CC BY-SA 3.0",
+        "author": "Jonathon Jongsma",
+        "duration": 16.861875,
+        "mime": "audio/mpeg",
+        "creditFields": {
+          "author": "Jonathon Jongsma"
+        },
+        "pageParams": {
+          "date": "2012-11-14 14:00",
+          "author": "Jonathon Jongsma"
+        },
+        "creditLines": [
+          "|author=Jonathon Jongsma"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    },
+    {
+      "speciesId": "sp089",
+      "audio": "/assets/species/audio/sp089-a2.mp3",
+      "title": "File:Anas platyrhynchos - Mallard XC62258.mp3",
+      "author": "Jonathon Jongsma",
+      "license": "CC BY-SA 3.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Anas_platyrhynchos_-_Mallard_XC62258.mp3",
+        "sha1": "4b439d21165000a8fe0d128e7ebad31c00995401",
+        "license": "CC BY-SA 3.0",
+        "author": "Jonathon Jongsma",
+        "duration": 3.5092469663064123,
+        "mime": "audio/mpeg",
+        "creditFields": {
+          "author": "Jonathon Jongsma"
+        },
+        "pageParams": {
+          "date": "2010-09-14 13:53",
+          "author": "Jonathon Jongsma"
+        },
+        "creditLines": [
+          "|author=Jonathon Jongsma"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    },
+    {
+      "speciesId": "sp129",
+      "image": "/assets/species/plumage/sp129-adult_f.webp",
+      "title": "File:Female gadwall (52294387865).jpg",
+      "author": "Andrey Gulivanov",
+      "license": "CC BY 2.0",
+      "localSize": [
+        1280,
+        853
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Female_gadwall_(52294387865).jpg",
+        "sha1": "95dc13eee1c34196e8de14d3a9669460575824c8",
+        "license": "CC BY 2.0",
+        "author": "Andrey Gulivanov",
+        "width": 6000,
+        "height": 4000,
+        "creditFields": {
+          "author": "Andrey Gulivanov"
+        }
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp129-adult_f_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp090",
+      "image": "/assets/species/plumage/sp090-adult_f.webp",
+      "title": "File:Northern Shoveler-Anas clypeata female.jpg",
+      "author": "Andreas Trepte, www.avi-fauna.info",
+      "license": "CC BY-SA 2.5",
+      "localSize": [
+        1600,
+        1067
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Northern_Shoveler-Anas_clypeata_female.jpg",
+        "sha1": "01ec99086fcc0b613b4e901d6f6d66c5e13a9a1e",
+        "license": "CC BY-SA 2.5",
+        "author": "Andreas Trepte",
+        "width": 3936,
+        "height": 2624,
+        "creditFields": {
+          "author": "Andreas Trepte"
+        }
+      },
+      "authorRule": "different",
+      "rightsMatch": false,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp090-adult_f_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp090",
+      "image": "/assets/species/plumage/sp090-flight.webp",
+      "title": "File:Male northern shoveler in flight-0208.jpg",
+      "author": "Frank Schulenburg",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1400,
+        934
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Male_northern_shoveler_in_flight-0208.jpg",
+        "sha1": "3ccee8e0f0e27478a6395d051426ebc01261db37",
+        "license": "CC BY-SA 4.0",
+        "author": "Frank Schulenburg",
+        "width": 3286,
+        "height": 2192,
+        "creditFields": {
+          "author": "Frank Schulenburg"
+        }
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp090-flight_vs_source.jpg"
+    }
+  ]
+}

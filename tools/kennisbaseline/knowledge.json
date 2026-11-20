@@ -833,7 +833,7 @@
       "edition": "Online geraadpleegd 11-11-2026",
       "scope": "Nederland",
       "confirms": "bouw, vlucht, snavel, poten, maten, geluid, voedsel en voorkomen",
-      "checked": "2026-11-11",
+      "checked": "2026-11-20",
       "certainty": "hoog",
       "publisher": "Vogelbescherming Nederland"
     },
@@ -844,7 +844,7 @@
       "edition": "Online geraadpleegd 11-11-2026",
       "scope": "Nederland",
       "confirms": "snavel, kol, buikstrepen en leeftijd",
-      "checked": "2026-11-11",
+      "checked": "2026-11-20",
       "certainty": "hoog",
       "publisher": "Vogelbescherming Nederland"
     },
@@ -855,7 +855,7 @@
       "edition": "Online geraadpleegd 11-11-2026",
       "scope": "Nederland",
       "confirms": "geslacht en kleed, vleugelspiegel, maten, geluid, voedsel en voorkomen",
-      "checked": "2026-11-11",
+      "checked": "2026-11-20",
       "certainty": "hoog",
       "publisher": "Vogelbescherming Nederland"
     },
@@ -866,7 +866,7 @@
       "edition": "Online geraadpleegd 11-11-2026",
       "scope": "Nederland",
       "confirms": "vleugelspiegel en herkenning vrouwtje",
-      "checked": "2026-11-11",
+      "checked": "2026-11-20",
       "certainty": "hoog",
       "publisher": "Vogelbescherming Nederland"
     },
@@ -4885,6 +4885,83 @@
       "checked": "2026-11-20",
       "certainty": "hoog",
       "publisher": "CSNA / Dutch Birding"
+    },
+    "VB_KWAK": {
+      "register": "F3-R24",
+      "label": "Vogelbescherming — Kwak",
+      "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kwak",
+      "publisher": "Vogelbescherming Nederland",
+      "edition": "Online gelezen 20-11-2026",
+      "scope": "Nederland / Europese herkenning",
+      "confirms": "Herkenning, leeftijd, geslacht, lengte, leefwijze en geluid",
+      "checked": "2026-11-20",
+      "certainty": "hoog"
+    },
+    "SOV_KWAK": {
+      "register": "F3-R24",
+      "label": "Sovon — kwak",
+      "url": "https://stats.sovon.nl/stats/soort/1040",
+      "publisher": "Sovon Vogelonderzoek Nederland",
+      "edition": "Online gelezen 20-11-2026",
+      "scope": "Nederland",
+      "confirms": "Nederlandse trends met teltype en meetperiode, verspreiding en herkomstcontext",
+      "checked": "2026-11-20",
+      "certainty": "hoog"
+    },
+    "SOV_GGANS": {
+      "register": "F3-R24",
+      "label": "Sovon — grauwe-gans",
+      "url": "https://stats.sovon.nl/stats/soort/1610",
+      "publisher": "Sovon Vogelonderzoek Nederland",
+      "edition": "Online gelezen 20-11-2026",
+      "scope": "Nederland",
+      "confirms": "Nederlandse trends met teltype en meetperiode, verspreiding en herkomstcontext",
+      "checked": "2026-11-20",
+      "certainty": "hoog"
+    },
+    "SOV_WEEND": {
+      "register": "F3-R24",
+      "label": "Sovon — wilde-eend",
+      "url": "https://stats.sovon.nl/stats/soort/1860",
+      "publisher": "Sovon Vogelonderzoek Nederland",
+      "edition": "Online gelezen 20-11-2026",
+      "scope": "Nederland",
+      "confirms": "Nederlandse trends met teltype en meetperiode, verspreiding en herkomstcontext",
+      "checked": "2026-11-20",
+      "certainty": "hoog"
+    },
+    "BZH_KWAK": {
+      "register": "F3-R24",
+      "label": "Blasco-Zumeta & Heinze — Kwak",
+      "url": "https://blascozumeta.com/specie_files/01040_ENG_Nycticorax_nycticorax_aranzadi.pdf",
+      "publisher": "Blasco-Zumeta & Heinze",
+      "edition": "Online gelezen 20-11-2026",
+      "scope": "Europa / herkenning; Nederlandse status apart",
+      "confirms": "Lengte, herkenning, leeftijd en geslacht; pp. 1–2 (Grauwe Gans volledige ene pagina)",
+      "checked": "2026-11-20",
+      "certainty": "hoog"
+    },
+    "BZH_GGANS": {
+      "register": "F3-R24",
+      "label": "Blasco-Zumeta & Heinze — Grauwe Gans",
+      "url": "https://blascozumeta.com/specie_files/01610_ENG_Anser_anser_aranzadi.pdf",
+      "publisher": "Blasco-Zumeta & Heinze",
+      "edition": "Online gelezen 20-11-2026",
+      "scope": "Europa / herkenning; Nederlandse status apart",
+      "confirms": "Lengte, herkenning, leeftijd en geslacht; pp. 1–2 (Grauwe Gans volledige ene pagina)",
+      "checked": "2026-11-20",
+      "certainty": "hoog"
+    },
+    "BZH_WEEND": {
+      "register": "F3-R24",
+      "label": "Blasco-Zumeta & Heinze — Wilde Eend",
+      "url": "https://blascozumeta.com/specie_files/01860_ENG_Anas_platyrhynchos_aranzadi.pdf",
+      "publisher": "Blasco-Zumeta & Heinze",
+      "edition": "Online gelezen 20-11-2026",
+      "scope": "Europa / herkenning; Nederlandse status apart",
+      "confirms": "Lengte, herkenning, leeftijd en geslacht; pp. 1–2 (Grauwe Gans volledige ene pagina)",
+      "checked": "2026-11-20",
+      "certainty": "hoog"
     }
   },
   "sp021": {
@@ -11488,6 +11565,13 @@
           "VB_GANZEN"
         ],
         "topic": "vlucht"
+      },
+      {
+        "text": "Bij oudere jonge vogels helpen smalle dekveren met beige toppen en het ontbreken van buikstreepjes samen; een donsjong is een ander kleed.",
+        "sources": [
+          "BZH_GGANS"
+        ],
+        "topic": "leeftijd"
       }
     ],
     "voice": [
@@ -11505,7 +11589,27 @@
         "sources": [
           "VB_GGANS"
         ]
-      }
+      },
+      "biometrics": [
+        {
+          "field": "length",
+          "unit": "cm",
+          "display": "ca. 75–90 cm",
+          "values": [
+            {
+              "source": "VB_GGANS",
+              "min": 76,
+              "max": 89
+            },
+            {
+              "source": "BZH_GGANS",
+              "min": 75,
+              "max": 90
+            }
+          ],
+          "note": "Gemiddelde onder- en bovengrens, daarna dichtstbijzijnde 5 cm; indicatieve circa-band, geen biologisch minimum/maximum."
+        }
+      ]
     },
     "habitat": [
       {
@@ -11523,6 +11627,13 @@
           "VB_GGANS"
         ],
         "kind": "voorkomen"
+      },
+      {
+        "text": "De broedpopulatie nam vanaf 1990 sterk toe en nam ook over de laatste twaalf jaar toe. De watervogeltellingen namen zowel vanaf 1980 als over de laatste twaalf jaar toe; dit is een andere telreeks.",
+        "sources": [
+          "SOV_GGANS"
+        ],
+        "kind": "trend"
       }
     ],
     "life": [
@@ -11534,10 +11645,28 @@
         "kind": "voedsel"
       }
     ],
-    "discrepancies": [],
+    "discrepancies": [
+      {
+        "field": "Lichaamslengte",
+        "app": "Historisch 76–89 cm; nu ca. 75–90 cm",
+        "source": "De werkelijk gelezen BZH-bron en VBN geven bovenstaande bronbereiken.",
+        "sources": [
+          "VB_GGANS",
+          "BZH_GGANS"
+        ],
+        "resolution": "Oorspronkelijke bronwaarden behouden; methode kwaliteitsnorm 1.7 §1.1."
+      }
+    ],
     "open": [
       "De jonge vogel op de kaart is een donsjong. Een afzonderlijke foto van een ouder juveniel ontbreekt."
-    ]
+    ],
+    "caution": {
+      "text": "Jonge Kolganzen missen vaak de witte kol en zwarte buikstrepen van volwassen vogels. Het ontbreken daarvan sluit Kolgans niet uit; combineer snavelvorm, poten en bouw.",
+      "sources": [
+        "VB_GGANS",
+        "VB_KGANS"
+      ]
+    }
   },
   "sp089": {
     "summary": {
@@ -11618,6 +11747,14 @@
           "NWF_WEEND"
         ],
         "topic": "kleed"
+      },
+      {
+        "text": "Buiten prachtkleed kunnen mannetjes en jonge mannetjes een groenige of gele snavel hebben. Vrouwtjes hebben donkere snavelvlekken; gebruik meer kenmerken, want het kleed varieert sterk.",
+        "sources": [
+          "BZH_WEEND",
+          "VB_WEEND"
+        ],
+        "topic": "geslacht"
       }
     ],
     "voice": [
@@ -11635,7 +11772,27 @@
         "sources": [
           "VB_WEEND"
         ]
-      }
+      },
+      "biometrics": [
+        {
+          "field": "length",
+          "unit": "cm",
+          "display": "ca. 50–65 cm",
+          "values": [
+            {
+              "source": "VB_WEEND",
+              "min": 50,
+              "max": 65
+            },
+            {
+              "source": "BZH_WEEND",
+              "min": 50,
+              "max": 65
+            }
+          ],
+          "note": "Gemiddelde onder- en bovengrens, daarna dichtstbijzijnde 5 cm; indicatieve circa-band, geen biologisch minimum/maximum."
+        }
+      ]
     },
     "habitat": [
       {
@@ -11653,6 +11810,13 @@
           "VB_WEEND"
         ],
         "kind": "voorkomen"
+      },
+      {
+        "text": "De broedindex nam zowel vanaf 1990 als over de laatste twaalf jaar af. Ook de watervogeltellingen namen vanaf 1980 en over de laatste twaalf jaar af; de twee reeksen blijven gescheiden.",
+        "sources": [
+          "SOV_WEEND"
+        ],
+        "kind": "trend"
       }
     ],
     "life": [
@@ -11664,7 +11828,18 @@
         "kind": "voedsel"
       }
     ],
-    "discrepancies": [],
+    "discrepancies": [
+      {
+        "field": "Lichaamslengte",
+        "app": "Historisch 50–65 cm; nu ca. 50–65 cm",
+        "source": "De werkelijk gelezen BZH-bron en VBN geven bovenstaande bronbereiken.",
+        "sources": [
+          "VB_WEEND",
+          "BZH_WEEND"
+        ],
+        "resolution": "Oorspronkelijke bronwaarden behouden; methode kwaliteitsnorm 1.7 §1.1."
+      }
+    ],
     "open": [
       "De Commons-beschrijvingen spreken elkaar tegen over het geslacht op de vermoedelijke eclipsfoto. Het beeld staat daarom als voorlopig vermeld.",
       "Bij de juvenielenfoto bevestigen de bronbeschrijvingen jonge vogels, maar verschillen ze over het geslacht. Het fotolabel vermeldt alleen de leeftijd."
@@ -24561,6 +24736,194 @@
       "Geslachten gelijk: alleen een neutrale volwassen foto.",
       "Geen eigen geluidsopname.",
       "Lengte, spanwijdte en gewicht zonder tweede uitgever."
+    ]
+  },
+  "sp085": {
+    "summary": {
+      "text": "Gedrongen reiger met een korte hals en stevige snavel. Volwassen vogels zijn grijs, zwart en wit; jonge vogels bruin met lichte druppelvlekken.",
+      "sources": [
+        "VB_KWAK",
+        "BZH_KWAK"
+      ]
+    },
+    "keyMarks": [
+      {
+        "text": "Volwassen vogel met zwarte kruin en rug, grijze vleugels en rood oog.",
+        "sources": [
+          "VB_KWAK",
+          "BZH_KWAK"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Jonge vogel met lichte druppelvlekken op bruine bovendelen en een donker gevlekte onderzijde.",
+        "sources": [
+          "VB_KWAK",
+          "BZH_KWAK"
+        ],
+        "reliability": "ondersteunend"
+      },
+      {
+        "text": "Compacte bouw en relatief korte, stevige snavel.",
+        "sources": [
+          "VB_KWAK",
+          "BZH_KWAK"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "caution": {
+      "text": "Jonge Kwakken verschillen sterk van volwassen vogels. Gebruik vleugelpatroon en lichaamsbouw samen; een bruine kleur alleen bepaalt de soort niet.",
+      "sources": [
+        "VB_KWAK",
+        "BZH_KWAK"
+      ]
+    },
+    "critical": [
+      {
+        "feature": "Jonge vleugel en bouw",
+        "where": "Bekijk rug en vleugel van opzij.",
+        "this": "Bruine vleugel met losse lichte druppelvlekken, compacte bouw.",
+        "other": "Jonge Blauwe Reiger is overwegend grijzer; jonge Purperreiger slanker met lichte veerranden.",
+        "vs": [
+          "sp081",
+          "sp084"
+        ],
+        "conditions": "Goed zicht op de dekveren; vergelijk vogels van een passende leeftijd.",
+        "exceptions": "Een ingetrokken hals kan ook een grotere reiger compact doen lijken.",
+        "supporting": "Gebruik snavelvorm en koptekening als extra kenmerken.",
+        "sources": [
+          "VB_KWAK",
+          "BZH_KWAK",
+          "VB_BLAUWE_REIGER",
+          "VB_PURPERREIGER"
+        ],
+        "reliability": "ondersteunend"
+      }
+    ],
+    "similar": [
+      {
+        "id": "sp081",
+        "why": "Jonge reigers kunnen op elkaar lijken; kijk naar vleugelpatroon en snavel.",
+        "sources": [
+          "VB_KWAK",
+          "VB_BLAUWE_REIGER"
+        ]
+      },
+      {
+        "id": "sp084",
+        "why": "Beide jonge vogels zijn bruin, maar de veren tekenen anders en Purperreiger is slanker.",
+        "sources": [
+          "BZH_KWAK",
+          "BZH_PURPERREIGER"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "text": "Mannetje en vrouwtje hebben een vergelijkbaar verenkleed; een veldfoto bewijst het geslacht niet.",
+        "sources": [
+          "VB_KWAK",
+          "BZH_KWAK"
+        ],
+        "topic": "geslacht"
+      },
+      {
+        "text": "Onvolwassen vogels kunnen na het juveniele kleed nog een valer, gedeeltelijk bruin patroon houden.",
+        "sources": [
+          "VB_KWAK",
+          "BZH_KWAK"
+        ],
+        "topic": "leeftijd"
+      }
+    ],
+    "voice": [
+      {
+        "text": "Een harde, krakende roep.",
+        "sources": [
+          "VB_KWAK"
+        ],
+        "kind": "roep"
+      }
+    ],
+    "basis": {
+      "biometrics": [
+        {
+          "field": "length",
+          "unit": "cm",
+          "display": "ca. 55–65 cm",
+          "values": [
+            {
+              "source": "VB_KWAK",
+              "min": 56,
+              "max": 65
+            },
+            {
+              "source": "BZH_KWAK",
+              "min": 58,
+              "max": 65
+            }
+          ],
+          "note": "Gemiddelde onder- en bovengrens, daarna dichtstbijzijnde 5 cm; indicatieve circa-band, geen biologisch minimum/maximum."
+        }
+      ]
+    },
+    "habitat": [
+      {
+        "text": "Begroeide oevers bij ondiepe plassen, rivieren en moerassen.",
+        "sources": [
+          "VB_KWAK"
+        ],
+        "kind": "nederland"
+      }
+    ],
+    "status": [
+      {
+        "text": "In Nederland spelen ontsnapte of losgelaten vogels en hun nakomelingen een grote rol in de broedpopulatie. Een waarneming bewijst geen wilde herkomst of lokaal broedgeval.",
+        "sources": [
+          "VB_KWAK",
+          "SOV_KWAK"
+        ],
+        "kind": "herkomst"
+      },
+      {
+        "text": "Sovon meldt een toename van de broedindex vanaf 1989 en over de laatste twaalf jaar; deze trend mag niet als groei van uitsluitend wilde vogels worden gelezen.",
+        "sources": [
+          "SOV_KWAK"
+        ],
+        "kind": "trend"
+      }
+    ],
+    "life": [
+      {
+        "text": "Zoekt veel voedsel in de schemering en nacht en eet uiteenlopende kleine waterdieren.",
+        "sources": [
+          "VB_KWAK"
+        ],
+        "kind": "voedsel"
+      },
+      {
+        "text": "Broedt vaak in gemengde kolonies in dichtbegroeide natte gebieden.",
+        "sources": [
+          "VB_KWAK"
+        ],
+        "kind": "broeden"
+      }
+    ],
+    "discrepancies": [
+      {
+        "field": "Lichaamslengte",
+        "app": "Historisch 56–65 cm; nu ca. 55–65 cm",
+        "source": "De werkelijk gelezen BZH-bron en VBN geven bovenstaande bronbereiken.",
+        "sources": [
+          "VB_KWAK",
+          "BZH_KWAK"
+        ],
+        "resolution": "Oorspronkelijke bronwaarden behouden; methode kwaliteitsnorm 1.7 §1.1."
+      }
+    ],
+    "open": [
+      "Roerdomp en Ralreiger zijn aanvullende VBN-verwarringssoorten; hun afzonderlijke fotoparen zijn nog niet uitgewerkt. Onafhankelijke foto-/audioreview blijft open."
     ]
   }
 }

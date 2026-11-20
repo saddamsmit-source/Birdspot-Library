@@ -35,5 +35,5 @@ for(const [a,b] of [['sp082','sp083'],['sp082','sp245'],['sp083','sp245'],['sp08
 }
 for(const id of ['sp245','sp243'])assert.equal(KNOWLEDGE[id],undefined,'No unrelated knowledge profiles added');
 assert.deepEqual(f3.records.filter(x=>x.F3.recheckBatch==='F3-R23').map(x=>x.id),['sp082','sp083','sp084']);
-assert.equal(f3.counts.contentInspected,69);assert.equal(f3.counts.F3FullPass,0);
+assert.equal(f3.counts.contentInspected,f3.records.filter(x=>x.F3.reviewedThisRound).length,'Progress must match reviewed records, including later batches');assert.equal(f3.counts.F3FullPass,0);
 console.log('F3-R23 PASS: California juvenile withheld with provenance/bytes preserved, 12 image hashes, fresh audio-source blocks honest, all seven comparisons reciprocal, fixed 140 cohort.');
