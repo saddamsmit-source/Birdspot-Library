@@ -13,6 +13,9 @@ const blocked=read('../docs/media-intake/2026-11-20/origcheck-r23/xeno-source-ac
 const birds=new Map(SPECIES.map(x=>[x.id,x]));
 const path='/assets/species/plumage/sp083-juv.webp';
 assert.equal(media.plumage.sp083.juv,undefined);
+const batch=read('../docs/fotokwaliteit/soortaudit/M8.json').species.sp083;
+assert.equal(batch.assets[path],undefined);
+assert.equal(batch.retiredAssets[path].retiredIn,'F3-R23');
 const old=media.retired.sp083.find(x=>x.image===path);
 assert.equal(old.author,'Annette Herz');assert.equal(old.retiredFrom,'plumage.sp083.juv');
 assert.match(old.retiredReason,/California.*CSNA/);assert.ok(existsSync(new URL('..'+path,import.meta.url)));

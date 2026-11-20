@@ -28,6 +28,7 @@ jobs:
           node tests/test_f3_140_unified_rebaseline.mjs
           node tests/test_audio_evidence_ceiling.mjs
           node tests/test_guide_poses.mjs
+          node tests/test_soortaudit.mjs
           python3 -I tools/kennisbaseline/build_knowledge.py --check
       - uses: actions/setup-python@v5
         with:

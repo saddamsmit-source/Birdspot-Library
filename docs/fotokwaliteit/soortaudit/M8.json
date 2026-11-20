@@ -192,13 +192,6 @@
           "quality": "Herkenbaar zijaanzicht met natuurlijke houding.",
           "verdict": "goedgekeurd"
         },
-        "/assets/species/plumage/sp083-juv.webp": {
-          "role": "Verenkleed (Juveniel)",
-          "content": "Jonge Grote Zilverreigers in het nest in Californië.",
-          "sexAge": "Nestjongen volgens de bronbeoordeling.",
-          "quality": "Bruikbaar als voorbeeld van nestjongen.",
-          "verdict": "goedgekeurd"
-        },
         "/assets/species/plumage/sp083-breeding.webp": {
           "role": "Verenkleed (Broedkleed)",
           "content": "Vogel met donkere snavel, groene teugel en lange rugsierveren in Frankrijk.",
@@ -223,7 +216,19 @@
       ],
       "uncertain": [],
       "date": "2026-11-12",
-      "sexPolicy": "De geslachten lijken op elkaar in het veld. Volwassen en vliegende vogels krijgen een neutraal label."
+      "sexPolicy": "De geslachten lijken op elkaar in het veld. Volwassen en vliegende vogels krijgen een neutraal label.",
+      "retiredAssets": {
+        "/assets/species/plumage/sp083-juv.webp": {
+          "role": "Verenkleed (Juveniel)",
+          "content": "Jonge Grote Zilverreigers in het nest in Californië.",
+          "sexAge": "Nestjongen volgens de bronbeoordeling.",
+          "quality": "Bruikbaar als voorbeeld van nestjongen.",
+          "verdict": "goedgekeurd",
+          "retiredIn": "F3-R23",
+          "retiredOn": "2026-11-20",
+          "retiredReason": "California nest photo withheld from western European juvenile role; source/bytes retained, CSNA 2026 distinguishes Ardea egretta."
+        }
+      }
     },
     "sp084": {
       "assets": {
