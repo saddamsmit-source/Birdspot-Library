@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-20",
+  "purpose": "F3-R22 comparison partners only; no F3 species counter increment",
+  "items": [
+    {
+      "speciesId": "sp084",
+      "image": "/assets/showcase/sp084.webp",
+      "title": "File:Purple heron in Zimbabwe.jpg",
+      "author": "Bernard Gagnon",
+      "license": "CC BY-SA 4.0",
+      "role": "comparison partner only; not a completed F3 species audit"
+    },
+    {
+      "speciesId": "sp084",
+      "image": "/assets/species/plumage/sp084-juv-europa.webp",
+      "title": "File:Garça-vermelha, juvenil, Purple Heron, juvenile (50904679921).jpg",
+      "author": "Luiz Lapa",
+      "license": "CC BY 2.0",
+      "role": "comparison partner only; not a completed F3 species audit"
+    },
+    {
+      "speciesId": "sp084",
+      "image": "/assets/species/plumage/sp084-flight.webp",
+      "title": "File:Purple heron in flight 01.jpg",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "role": "comparison partner only; not a completed F3 species audit"
+    },
+    {
+      "speciesId": "sp085",
+      "image": "/assets/species/plumage/sp085-juv.webp",
+      "title": "File:Nycticorax nycticorax young.jpg",
+      "author": "Matteo Sorrentino",
+      "license": "CC BY-SA 3.0",
+      "role": "comparison partner only; not a completed F3 species audit"
+    },
+    {
+      "speciesId": "sp085",
+      "image": "/assets/species/plumage/sp085-flight.webp",
+      "title": "File:Black-crowned night heron (Nycticorax nycticorax) in flight.jpg",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "role": "comparison partner only; not a completed F3 species audit"
+    }
+  ]
+}

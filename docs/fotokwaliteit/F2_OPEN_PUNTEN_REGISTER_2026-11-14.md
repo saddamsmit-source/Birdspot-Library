@@ -229,3 +229,14 @@ De tekst in de kolom 'Open uit bronronde' is overgenomen uit de laatste F2-voort
 | sp077 Fuut | F3-R21 | Vluchtfoto ontbreekt; historische foutclaim ingetrokken. Roodhalsfuut-winterfotopaar ontbreekt. Bestaande opname alleen bronlabel/rechten; geen onafhankelijke auditieve determinatie. |
 
 Visdief opgenomen als aanvullende bron voor naslagwerkselectie; geen toegang tot volledige ANWB-editie geclaimd. Actuele stand 63/140 inhoudelijk bekeken, 0 FULL PASS. Brede praktijkroute en fotoaanvulling volgen volgens eigenaarbesluit later.
+
+
+### F3-R22 (20-11-2026)
+
+| Soort | Open punt |
+|---|---|
+| sp078 Meerkoet | Vluchtcrop automatisch r=0.848 blijft NOT VERIFIED; visuele overeenkomst apart. Donsjong en ouder juveniel apart houden. Geen onafhankelijke audiobepaling. |
+| sp079 Waterhoen | Waterral-fotopaar ontbreekt, tekst wederkerig; Porseleinhoen nog niet uitgewerkt. Pakistan-vluchtfoto zonder nieuwe ondersoortclaim. Geen onafhankelijke audiobepaling. |
+| sp081 Blauwe Reiger | Vluchtfoto met gestrekte hals nu correct beschreven. Historische RSPB/MME-spanwijdtebronnen niet opnieuw inhoudelijk geverifieerd; MME onbereikbaar. Grote Zilverreiger nog niet uitgewerkt. |
+
+R22: 66/140 inhoudelijk bekeken, 0 FULL PASS. Brede R4/R3-06-testfout uit #313 en alle toestel-/releasegates blijven open.

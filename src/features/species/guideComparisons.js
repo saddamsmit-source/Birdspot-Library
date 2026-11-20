@@ -852,6 +852,19 @@ export const GUIDE_COMPARISONS = [
     "tip": "Gebruik de flankstreep samen met de koptekening. Jonge vogels missen de opvallende bles van volwassen vogels."
   },
   {
+    label: 'Waterhoen en Waterral · snavel en flank',
+    reciprocalText: true,
+    birds: [
+      {id: 'sp079', source: 'waterhoen', photoMissing: true, marks: 'Volwassen vogel met rode snavel en gele punt; witte lengtestreep op de flank.'},
+      {id: 'sp080', source: 'waterral', photoMissing: true, marks: 'Lange, slanke roodachtige snavel en dwarsgebandeerde flank; bruin gestreepte rug.'},
+    ],
+    rows: [
+      {label: 'Snavel', values: ['Korter, rood met gele punt', 'Langer, slanker en roodachtig']},
+      {label: 'Flank', values: ['Witte lengtestreep', 'Lichte en donkere dwarsbanden']},
+    ],
+    tip: 'Deze kleurenvergelijking betreft volwassen vogels. Gebruik bij jonge vogels ook snavelvorm en de flanktekening. Een passend fotopaar ontbreekt.',
+  },
+  {
     label: 'Blauwe Reiger en Purperreiger · volwassen',
     birds: [
       {id: 'sp081', source: 'blauwe-reiger', photo: '/assets/species/plumage/sp081-portrait.webp', marks: 'Grijze mantel, lichte hals en een stevige dolksnavel.'},
@@ -885,11 +898,11 @@ export const GUIDE_COMPARISONS = [
       {id: 'sp084', source: 'purperreiger', photo: '/assets/species/plumage/sp084-flight.webp', marks: 'Warmere halstint, hoekige keelzak en ver uitstekende tenen.'},
     ],
     rows: [
-      {label: 'Hals', values: ['Lichte, ingetrokken hals.', 'Warmere hals met een hoekiger knik.']},
+      {label: 'Hals', values: ['Lichte hals; op deze foto relatief gestrekt.', 'Warmere hals met een hoekiger knik.']},
       {label: 'Vleugel', values: ['Brede vleugels met lichtere dekveren.', 'Donkerder vleugelbeeld.']},
       {label: 'Poten en tenen', values: ['Poten steken achter het lichaam uit.', 'Lange tenen steken opvallend ver uit.']},
     ],
-    tip: 'Vergelijk de halsknik en tenen samen. De precieze vleugelstand wisselt per vleugelslag.',
+    tip: 'De Blauwe Reiger strekt op deze foto de hals relatief ver. Vergelijk daarom kleur, snavel en uitstekende poten samen; halsstand en vleugelstand wisselen.',
   },
   {
     label: 'Kwak en Blauwe Reiger · jonge vogels',
@@ -909,10 +922,10 @@ export const GUIDE_COMPARISONS = [
     flight: true,
     birds: [
       {id: 'sp085', source: 'kwak', photo: '/assets/species/plumage/sp085-flight.webp', marks: 'Compact silhouet, donkere snavel en korte hals.'},
-      {id: 'sp081', source: 'blauwe-reiger', photo: '/assets/species/sp081.webp', marks: 'Forse reiger met een lichte halsbocht, gele dolksnavel en ver uitstekende poten.'},
+      {id: 'sp081', source: 'blauwe-reiger', photo: '/assets/species/sp081.webp', marks: 'Forse reiger met een lichte hals, gele dolksnavel en ver uitstekende poten.'},
     ],
     rows: [
-      {label: 'Hals', values: ['Korte hals dicht tegen het lichaam.', 'Langere, lichte hals die ook in vlucht ingetrokken is.']},
+      {label: 'Hals', values: ['Korte hals dicht tegen het lichaam.', 'Langere, lichte hals; op deze foto relatief gestrekt.']},
       {label: 'Snavel', values: ['Op deze foto donker.', 'Op deze foto lang en geeloranje.']},
       {label: 'Poten', values: ['Steken op deze foto kort uit achter de staart.', 'Steken duidelijk achter het lichaam uit.']},
     ],

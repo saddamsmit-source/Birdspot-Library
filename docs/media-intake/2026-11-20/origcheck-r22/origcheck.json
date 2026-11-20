@@ -1,0 +1,501 @@
+{
+  "generated": "2026-11-20T06:28:45Z",
+  "rule": {
+    "sameMinR": 0.9
+  },
+  "items": [
+    {
+      "speciesId": "sp078",
+      "image": "/assets/species/sp078.webp",
+      "title": "File:Eurasian Coot 2025 11 30 03.jpg",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1600,
+        1067
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Eurasian_Coot_2025_11_30_03.jpg",
+        "sha1": "0653faac61fd1fd2689e5fd7991a3f11a44437d9",
+        "license": "CC BY 4.0",
+        "author": "Alexis Lours",
+        "width": 4781,
+        "height": 3187,
+        "creditFields": {
+          "author": "Alexis Lours"
+        }
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp078_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp078",
+      "image": "/assets/species/plumage/sp078-juv-grown.webp",
+      "title": "File:Eurasian coot 2025 06 18.jpg",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1600,
+        1067
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Eurasian_coot_2025_06_18.jpg",
+        "sha1": "f5522453133053691b4b821a106fe80c0bde1e10",
+        "license": "CC BY 4.0",
+        "author": "Alexis Lours",
+        "width": 6437,
+        "height": 4291,
+        "creditFields": {
+          "author": "Alexis Lours"
+        }
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp078-juv-grown_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp078",
+      "image": "/assets/species/plumage/sp078-flight.webp",
+      "title": "File:Galeirão, Coot (50501136202).jpg",
+      "author": "Luiz Lapa",
+      "license": "CC BY 2.0",
+      "localSize": [
+        930,
+        620
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Galeir%C3%A3o,_Coot_(50501136202).jpg",
+        "sha1": "e1d463f8b282365dce521c81878d21f064e5f637",
+        "license": "CC BY 2.0",
+        "author": "Luiz Lapa from Oeiras, Portugal",
+        "width": 3571,
+        "height": 2548,
+        "creditFields": {
+          "author": "Luiz Lapa from Oeiras, Portugal"
+        }
+      },
+      "authorRule": "flickr-location-suffix",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        685
+      ],
+      "mode": "crop",
+      "r": 0.848,
+      "scale": 0.7,
+      "offset": [
+        0.234,
+        0.122
+      ],
+      "sameShot": false,
+      "sideBySide": "sp078-flight_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp078",
+      "image": "/assets/species/plumage/sp078-juv.webp",
+      "title": "File:Eurasian coot (Fulica atra) juvenile.jpg",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1600,
+        1067
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Eurasian_coot_(Fulica_atra)_juvenile.jpg",
+        "sha1": "8d3e29317bd6f86570a72b2284e036f9bc9c0b4d",
+        "license": "CC BY-SA 4.0",
+        "author": "Charles J. Sharp",
+        "width": 3644,
+        "height": 2429,
+        "creditFields": {}
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp078-juv_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp078",
+      "audio": "/assets/species/audio/sp078-a1.mp3",
+      "title": "File:Fulica atra - Eurasian Coot XC432890.mp3",
+      "author": "Joost van Bruggen",
+      "license": "CC BY-SA 4.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Fulica_atra_-_Eurasian_Coot_XC432890.mp3",
+        "sha1": "a824a90016d41b9f4e621bbf8d3c996ff1c846e4",
+        "license": "CC BY-SA 4.0",
+        "author": "Joost van Bruggen",
+        "duration": 31.046775,
+        "mime": "audio/mpeg",
+        "creditFields": {
+          "author": "Joost van Bruggen"
+        },
+        "pageParams": {
+          "date": "2018-09-03 01:00",
+          "author": "Joost van Bruggen"
+        },
+        "creditLines": [
+          "|author=Joost van Bruggen"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    },
+    {
+      "speciesId": "sp078",
+      "audio": "/assets/species/audio/sp078-a2.mp3",
+      "title": "File:Fulica atra - Eurasian Coot XC467829.mp3",
+      "author": "Mikko Heikkinen",
+      "license": "CC BY-SA 4.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Fulica_atra_-_Eurasian_Coot_XC467829.mp3",
+        "sha1": "f315dad04e56988d5e31fe1f8d4cff98da0c720f",
+        "license": "CC BY-SA 4.0",
+        "author": "Mikko Heikkinen",
+        "duration": 12.051376583691328,
+        "mime": "audio/mpeg",
+        "creditFields": {
+          "author": "Mikko Heikkinen"
+        },
+        "pageParams": {
+          "date": "2019-04-06 22:29",
+          "author": "Mikko Heikkinen"
+        },
+        "creditLines": [
+          "|author=Mikko Heikkinen"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    },
+    {
+      "speciesId": "sp079",
+      "image": "/assets/species/sp079.webp",
+      "title": "File:Common moorhen (Gallinula chloropus) France.jpg",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1600,
+        1127
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Common_moorhen_(Gallinula_chloropus)_France.jpg",
+        "sha1": "02a76fd33b5e1414a0504f0b3f0aeb03a569b6f4",
+        "license": "CC BY 4.0",
+        "author": "Alexis Lours",
+        "width": 5182,
+        "height": 3648,
+        "creditFields": {
+          "author": "Alexis Lours"
+        }
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        676
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp079_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp079",
+      "image": "/assets/species/plumage/sp079-juv.webp",
+      "title": "File:Common Moorhen (Gallinula chloropus) juvenile.jpg",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 3.0",
+      "localSize": [
+        1600,
+        1067
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Common_Moorhen_(Gallinula_chloropus)_juvenile.jpg",
+        "sha1": "1a8bf9f45ff3a1a1005c43f2a5655a2700730ceb",
+        "license": "CC BY-SA 3.0",
+        "author": "Charles J. Sharp",
+        "width": 4721,
+        "height": 3147,
+        "creditFields": {}
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp079-juv_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp079",
+      "image": "/assets/species/plumage/sp079-flight.webp",
+      "title": "File:Common Moorhen (Gallinula chloropus) (49249725853).jpg",
+      "author": "Imran Shah",
+      "license": "CC BY-SA 2.0",
+      "localSize": [
+        1280,
+        960
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Common_Moorhen_(Gallinula_chloropus)_(49249725853).jpg",
+        "sha1": "4eeabc4dc2a888c1520bf057960b2b261e25c6bf",
+        "license": "CC BY-SA 2.0",
+        "author": "Imran Shah from Islamabad, Pakistan",
+        "width": 2000,
+        "height": 1500,
+        "creditFields": {
+          "author": "Imran Shah from Islamabad, Pakistan"
+        }
+      },
+      "authorRule": "flickr-location-suffix",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        720
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp079-flight_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp079",
+      "audio": "/assets/species/audio/sp079-a1.mp3",
+      "title": "File:Gallinula chloropus - Common Moorhen XC424197.mp3",
+      "author": "Borja",
+      "license": "CC BY-SA 4.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Gallinula_chloropus_-_Common_Moorhen_XC424197.mp3",
+        "sha1": "72a03885d520c90d140ea32cdd1a561f307ed730",
+        "license": "CC BY-SA 4.0",
+        "author": "Borja",
+        "duration": 54.88066666666667,
+        "mime": "audio/mpeg",
+        "creditFields": {
+          "author": "Borja"
+        },
+        "pageParams": {
+          "date": "2018-07-07 11:30",
+          "author": "Borja"
+        },
+        "creditLines": [
+          "|author=Borja"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    },
+    {
+      "speciesId": "sp079",
+      "audio": "/assets/species/audio/sp079-a2.mp3",
+      "title": "File:Gallinula chloropus - Common Moorhen XC432930.mp3",
+      "author": "Joost van Bruggen",
+      "license": "CC BY-SA 4.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Gallinula_chloropus_-_Common_Moorhen_XC432930.mp3",
+        "sha1": "2b03aa0850f80e9e2e8e56b8121f7701a658b174",
+        "license": "CC BY-SA 4.0",
+        "author": "Joost van Bruggen",
+        "duration": 10.33495,
+        "mime": "audio/mpeg",
+        "creditFields": {
+          "author": "Joost van Bruggen"
+        },
+        "pageParams": {
+          "date": "2018-06-15 00:33",
+          "author": "Joost van Bruggen"
+        },
+        "creditLines": [
+          "|author=Joost van Bruggen"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    },
+    {
+      "speciesId": "sp081",
+      "image": "/assets/species/plumage/sp081-portrait.webp",
+      "title": "File:Grey heron (Ardea cinerea).jpg",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 3.0",
+      "localSize": [
+        1400,
+        933
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Grey_heron_(Ardea_cinerea).jpg",
+        "sha1": "7aa807f1ec92b0b2ef1418b254274ec17dffccae",
+        "license": "CC BY-SA 3.0",
+        "author": "Charles J. Sharp",
+        "width": 4878,
+        "height": 3252,
+        "creditFields": {}
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp081-portrait_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp081",
+      "image": "/assets/species/plumage/sp081-juv.webp",
+      "title": "File:Ardea cinerea juvenile v2.jpg",
+      "author": "Ralf Hüsges",
+      "license": "CC BY 2.0",
+      "localSize": [
+        1600,
+        1376
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Ardea_cinerea_juvenile_v2.jpg",
+        "sha1": "b6bed02788376bda7cff49997f3ee7b211578618",
+        "license": "CC BY 2.0",
+        "author": "Ralf Hüsges",
+        "width": 3727,
+        "height": 3205,
+        "creditFields": {
+          "author": "Ralf Hüsges"
+        }
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        826
+      ],
+      "mode": "full",
+      "r": 0.998,
+      "sameShot": true,
+      "sideBySide": "sp081-juv_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp081",
+      "image": "/assets/species/sp081.webp",
+      "title": "File:Ardea cinerea in flight.jpg",
+      "author": "Dinkum",
+      "license": "CC0",
+      "localSize": [
+        1600,
+        862
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Ardea_cinerea_in_flight.jpg",
+        "sha1": "145a7e542f20e8e66e197a2c826c9f4575d4387c",
+        "license": "CC0",
+        "author": "Dinkum",
+        "width": 3977,
+        "height": 2142,
+        "creditFields": {
+          "author": "Dinkum"
+        }
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        517
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp081_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp081",
+      "audio": "/assets/species/audio/sp081-a1.mp3",
+      "title": "File:Ardea cinerea - Grey Heron XC432231.mp3",
+      "author": "Joost van Bruggen",
+      "license": "CC BY-SA 4.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Ardea_cinerea_-_Grey_Heron_XC432231.mp3",
+        "sha1": "276654a88f59eb25174dafaf670e871bb2cfe94d",
+        "license": "CC BY-SA 4.0",
+        "author": "Joost van Bruggen",
+        "duration": 13.52755,
+        "mime": "audio/mpeg",
+        "creditFields": {
+          "author": "Joost van Bruggen"
+        },
+        "pageParams": {
+          "date": "2018-08-04 02:08",
+          "author": "Joost van Bruggen"
+        },
+        "creditLines": [
+          "|author=Joost van Bruggen"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    },
+    {
+      "speciesId": "sp081",
+      "audio": "/assets/species/audio/sp081-a2.mp3",
+      "title": "File:Ardea cinerea - Grey Heron XC436360.mp3",
+      "author": "Joost van Bruggen",
+      "license": "CC BY-SA 4.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Ardea_cinerea_-_Grey_Heron_XC436360.mp3",
+        "sha1": "ef0e8b307c534ff6368a9e60b9c045fd564f46b7",
+        "license": "CC BY-SA 4.0",
+        "author": "Joost van Bruggen",
+        "duration": 23.847425,
+        "mime": "audio/mpeg",
+        "creditFields": {
+          "author": "Joost van Bruggen"
+        },
+        "pageParams": {
+          "date": "2018-09-26 05:08",
+          "author": "Joost van Bruggen"
+        },
+        "creditLines": [
+          "|author=Joost van Bruggen"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    }
+  ]
+}
