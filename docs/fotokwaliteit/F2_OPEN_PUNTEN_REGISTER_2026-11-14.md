@@ -240,3 +240,13 @@ Visdief opgenomen als aanvullende bron voor naslagwerkselectie; geen toegang tot
 | sp081 Blauwe Reiger | Vluchtfoto met gestrekte hals nu correct beschreven. Historische RSPB/MME-spanwijdtebronnen niet opnieuw inhoudelijk geverifieerd; MME onbereikbaar. Grote Zilverreiger nog niet uitgewerkt. |
 
 R22: 66/140 inhoudelijk bekeken, 0 FULL PASS. Brede R4/R3-06-testfout uit #313 en alle toestel-/releasegates blijven open.
+
+### F3-R23 (20-11-2026)
+
+| Soort | Open punt |
+|---|---|
+| sp082 Kleine Zilverreiger | Juvenielenbron heeft leeftijdsannotatie, maar afwezige sierveren alleen bewijzen de leeftijd niet; onafhankelijke leeftijdscontrole open. Koereiger-fotoparen behouden en bronbeelden nagekeken; onafhankelijke leeftijdsreview van beide juvenielen blijft open. Xeno-canto-bron voor bestaande opname geblokkeerd; geen verse rechten-PASS. |
+| sp083 Grote Zilverreiger | Californische nestfoto uit live juvenielenrol: CSNA onderscheidt Ardea egretta van westelijke Ardea alba alba. Bestand, eerdere claim en bron bewaard in retired. Europese juvenielenfoto ontbreekt. Bestaand Koereiger-fotopaar behouden; Lepelaar nog niet uitgewerkt. Twee Xeno-canto-bronnen geblokkeerd. |
+| sp084 Purperreiger | Hoofdfoto Zimbabwe: geen Europese opname of ondersoortbewijs. Roerdomp-fotopaar ontbreekt, tekst wederkerig. Twee Commons-audiorechten gecontroleerd, geen onafhankelijke akoestische determinatie. |
+
+R23: 69/140 inhoudelijk bekeken, 71 te starten, 0 FULL PASS. R22-brede CI nu 30/30 teruggegeven runs success, inclusief R4; eerdere R3-06-uitkomst uit #313 blijft onverklaard bewaard, geen herstelclaim. Fysieke praktijkproeven en releasegates blijven open. Afzonderlijke Visdief-concept-PR #315 is niet geïntegreerd of als norm geactiveerd.

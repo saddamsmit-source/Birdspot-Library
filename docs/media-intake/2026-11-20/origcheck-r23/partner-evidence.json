@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-20",
+  "baseline": "ee7523c4e6ba420f5fcec5abf69309b0baec5b04",
+  "reference": "docs/media-intake/2026-11-20/origcheck-r22/visual-review.json",
+  "photos": [
+    {
+      "path": "/assets/species/plumage/sp081-portrait.webp",
+      "localSha256": "1db62fa0e51831767d503373e473f80e509b12dd17ca8963b6fd62008d4782e8",
+      "sourceSHA1": "7aa807f1ec92b0b2ef1418b254274ec17dffccae",
+      "automatedSameShot": true,
+      "visuallySameShot": true,
+      "rightsMetadataMatch": true,
+      "sideBySide": "origcheck-r22/sp081-portrait_vs_source.jpg",
+      "scope": "focus species"
+    },
+    {
+      "path": "/assets/species/plumage/sp081-juv.webp",
+      "localSha256": "a534fadb84a7ce0a2c1798754370500e48aecf67523e6ff7ca92b806e31d6177",
+      "sourceSHA1": "b6bed02788376bda7cff49997f3ee7b211578618",
+      "automatedSameShot": true,
+      "visuallySameShot": true,
+      "rightsMetadataMatch": true,
+      "sideBySide": "origcheck-r22/sp081-juv_vs_source.jpg",
+      "scope": "focus species"
+    },
+    {
+      "path": "/assets/species/sp081.webp",
+      "localSha256": "37b731dfa5a617633c32d12314f665a1d2cde53442990dc8bcd2557af0ae679d",
+      "sourceSHA1": "145a7e542f20e8e66e197a2c826c9f4575d4387c",
+      "automatedSameShot": true,
+      "visuallySameShot": true,
+      "rightsMetadataMatch": true,
+      "sideBySide": "origcheck-r22/sp081_vs_source.jpg",
+      "scope": "focus species",
+      "note": "True free flight. This particular image shows a relatively extended neck; comparison text corrected. Typical species flight posture remains usually retracted."
+    },
+    {
+      "path": "/assets/species/plumage/sp085-juv.webp",
+      "localSha256": "bc66f27c73378394dc26aafe81d0a2c0f7d03d6985b27fcf0df58735e7d0ad20",
+      "sourceSHA1": "b762043b6e05f7f8b4278dcec5345b5e19e84647",
+      "automatedSameShot": true,
+      "visuallySameShot": true,
+      "rightsMetadataMatch": true,
+      "sideBySide": "origcheck-r22-partners/sp085-juv_vs_source.jpg",
+      "scope": "comparison partner only; no full F3 audit"
+    }
+  ]
+}

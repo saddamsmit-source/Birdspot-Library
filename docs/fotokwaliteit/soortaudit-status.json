@@ -7225,7 +7225,9 @@
        "Evidence of Presence: Construction"
       ]
      },
-     "flight": null
+     "flight": null,
+     "retiredIn": "F3-R23",
+     "retiredReason": "California nest photo: geographic/taxonomic scope is not the western European reference; CSNA January 2026 treats American Great Egret Ardea egretta separately. Community Ardea alba label is broader. Do not publish as a verified European juvenile."
     },
     {
      "image": "/assets/species/plumage/sp083-breeding.webp",

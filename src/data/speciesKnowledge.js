@@ -3290,7 +3290,7 @@ const DATA = {
    "edition": "Online bron",
    "scope": "Nederland",
    "confirms": "Vergelijking van grootte, snavelkleur en tenenkleur",
-   "checked": "2026-11-12",
+   "checked": "2026-11-20",
    "certainty": "hoog",
    "publisher": "Vogelbescherming Nederland"
   },
@@ -3301,7 +3301,7 @@ const DATA = {
    "edition": "Online bron",
    "scope": "Nederland",
    "confirms": "Herkenning, geluid en leefwijze",
-   "checked": "2026-11-12",
+   "checked": "2026-11-20",
    "certainty": "hoog",
    "publisher": "Vogelbescherming Nederland"
   },
@@ -3311,8 +3311,8 @@ const DATA = {
    "url": "https://birdlifecyprus.org/little-egret/",
    "edition": "Online bron",
    "scope": "Europa",
-   "confirms": "Lengte, slanke bouw en gele tenen",
-   "checked": "2026-11-12",
+   "confirms": "Lengte 55–65 cm, slanke bouw, lange kopveren van volwassen vogels in voorjaar; Cypriotisch voorkomen niet naar Nederland overgenomen",
+   "checked": "2026-11-20",
    "certainty": "hoog",
    "publisher": "BirdLife Cyprus"
   },
@@ -3322,8 +3322,8 @@ const DATA = {
    "url": "https://stats.sovon.nl/stats/soort/1190/",
    "edition": "Online bron",
    "scope": "Nederland",
-   "confirms": "Verspreiding en seizoensvoorkomen",
-   "checked": "2026-11-12",
+   "confirms": "Verspreiding, seizoensvoorkomen en Nederlandse broedtrend met afzonderlijke meetperiode",
+   "checked": "2026-11-20",
    "certainty": "hoog",
    "publisher": "Sovon Vogelonderzoek Nederland"
   },
@@ -3334,7 +3334,7 @@ const DATA = {
    "edition": "Online bron",
    "scope": "Nederland",
    "confirms": "Herkenning, geluid en leefwijze",
-   "checked": "2026-11-12",
+   "checked": "2026-11-20",
    "certainty": "hoog",
    "publisher": "Vogelbescherming Nederland"
   },
@@ -3345,7 +3345,7 @@ const DATA = {
    "edition": "Online bron",
    "scope": "Westelijke populatie",
    "confirms": "Lengte, verenkleed, seizoen en leeftijd",
-   "checked": "2026-11-12",
+   "checked": "2026-11-20",
    "certainty": "hoog",
    "publisher": "Blasco-Zumeta & Heinze"
   },
@@ -3355,8 +3355,8 @@ const DATA = {
    "url": "https://stats.sovon.nl/stats/soort/1210/",
    "edition": "Online bron",
    "scope": "Nederland",
-   "confirms": "Verspreiding en seizoensvoorkomen",
-   "checked": "2026-11-12",
+   "confirms": "Verspreiding, seizoensvoorkomen en Nederlandse broedtrend met afzonderlijke meetperiode",
+   "checked": "2026-11-20",
    "certainty": "hoog",
    "publisher": "Sovon Vogelonderzoek Nederland"
   },
@@ -3367,7 +3367,7 @@ const DATA = {
    "edition": "Online bron",
    "scope": "Nederland",
    "confirms": "Herkenning, geluid en leefwijze",
-   "checked": "2026-11-12",
+   "checked": "2026-11-20",
    "certainty": "hoog",
    "publisher": "Vogelbescherming Nederland"
   },
@@ -3378,7 +3378,7 @@ const DATA = {
    "edition": "Online bron",
    "scope": "Europa",
    "confirms": "Lengte, leeftijd en lichaamsbouw",
-   "checked": "2026-11-12",
+   "checked": "2026-11-20",
    "certainty": "hoog",
    "publisher": "Blasco-Zumeta & Heinze"
   },
@@ -3388,8 +3388,8 @@ const DATA = {
    "url": "https://stats.sovon.nl/stats/soort/1240/",
    "edition": "Online bron",
    "scope": "Nederland",
-   "confirms": "Verspreiding en seizoensvoorkomen",
-   "checked": "2026-11-12",
+   "confirms": "Verspreiding, seizoensvoorkomen en Nederlandse broedtrend met afzonderlijke meetperiode",
+   "checked": "2026-11-20",
    "certainty": "hoog",
    "publisher": "Sovon Vogelonderzoek Nederland"
   },
@@ -4866,6 +4866,28 @@ const DATA = {
    "checked": "2026-11-20",
    "certainty": "hoog",
    "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "BZH_KLEINE_ZILVERREIGER": {
+   "register": "EU07",
+   "label": "Blasco-Zumeta & Heinze — Kleine Zilverreiger",
+   "url": "https://www.blascozumeta.com/specie_files/01190_Egretta_garzetta_E.pdf",
+   "edition": "Online soort-PDF, pp. 1–2",
+   "scope": "Europese herkenning en kleden; geen Aragonese fenologie naar Nederland",
+   "confirms": "Lengte, gelijke geslachten, juveniele snavel/poten en volwassen sierveren",
+   "checked": "2026-11-20",
+   "certainty": "hoog",
+   "publisher": "Blasco-Zumeta & Heinze"
+  },
+  "CSNA_WP_2026": {
+   "register": "NL",
+   "label": "CSNA / Dutch Birding — WP-vogelnamen januari 2026",
+   "url": "https://www.dutchavifauna.nl/static/images/page/DBupdateWPchecklistintroArnoud20260121.pdf",
+   "edition": "Januari 2026, p. 14",
+   "scope": "Taxonomische afbakening; geen individuele fotodeterminatie",
+   "confirms": "Ardea alba alba en Ardea egretta afzonderlijk vermeld",
+   "checked": "2026-11-20",
+   "certainty": "hoog",
+   "publisher": "CSNA / Dutch Birding"
   }
  },
  "profiles": {
@@ -20870,7 +20892,7 @@ const DATA = {
      "text": "Jonge vogels hebben geen lange sierveren. Hun poten en tenen kunnen doffer of groener ogen.",
      "sources": [
       "VB_KLEINE_ZILVERREIGER",
-      "BLC_KLEINE_ZILVERREIGER"
+      "BZH_KLEINE_ZILVERREIGER"
      ],
      "topic": "leeftijd"
     },
@@ -20878,7 +20900,7 @@ const DATA = {
      "text": "In broedkleed kunnen twee smalle, lange kopveren en lossere sierveren zichtbaar zijn.",
      "sources": [
       "VB_KLEINE_ZILVERREIGER",
-      "BLC_KLEINE_ZILVERREIGER"
+      "BZH_KLEINE_ZILVERREIGER"
      ],
      "topic": "kleed"
     }
@@ -20926,12 +20948,19 @@ const DATA = {
    ],
    "status": [
     {
-     "text": "Schaarse Nederlandse broedvogel. Na de broedtijd lopen de aantallen op. In milde winters blijven enkele vogels.",
+     "text": "Schaarse Nederlandse broedvogel. De aantallen pieken tussen augustus en oktober. In milde winters blijven vogels in Nederland; langdurige vorst kan veel sterfte veroorzaken.",
      "sources": [
       "VB_KLEINE_ZILVERREIGER",
       "SOV_KLEINE_ZILVERREIGER"
      ],
      "kind": "voorkomen"
+    },
+    {
+     "text": "De broedpopulatie nam vanaf 1980 sterk toe en nam ook in de laatste twaalf jaar toe. Bij de watervogeltellingen is de trend over de laatste twaalf jaar niet eenduidig vast te stellen (~).",
+     "sources": [
+      "SOV_KLEINE_ZILVERREIGER"
+     ],
+     "kind": "trend"
     }
    ],
    "life": [
@@ -20958,7 +20987,9 @@ const DATA = {
     }
    ],
    "discrepancies": [],
-   "open": []
+   "open": [
+    "Juvenielenrol: iNaturalist vermeldt Juvenile, maar afwezige sierveren alleen onderscheiden geen volwassen wintervogel. Onafhankelijke leeftijdscontrole en goed zicht op snavel/poten blijven open."
+   ]
   },
   "sp083": {
    "summary": {
@@ -21099,6 +21130,13 @@ const DATA = {
       "SOV_GROTE_ZILVERREIGER"
      ],
      "kind": "voorkomen"
+    },
+    {
+     "text": "De broedpopulatie nam in de laatste twaalf jaar sterk toe; de langetermijntrend vanaf 1980 is niet eenduidig vast te stellen (~). Bij de watervogeltellingen namen de aantallen in de laatste twaalf jaar toe.",
+     "sources": [
+      "SOV_GROTE_ZILVERREIGER"
+     ],
+     "kind": "trend"
     }
    ],
    "life": [
@@ -21124,8 +21162,20 @@ const DATA = {
      "kind": "trek"
     }
    ],
-   "discrepancies": [],
-   "open": []
+   "discrepancies": [
+    {
+     "app": "Historische juvenielenfoto uit Californië met iNaturalist-label Ardea alba",
+     "sources": [
+      "CSNA_WP_2026"
+     ],
+     "field": "Geografische/taxonomische fotorol",
+     "source": "CSNA januari 2026 onderscheidt Amerikaanse Grote Zilverreiger Ardea egretta van de westelijke referentie Ardea alba alba.",
+     "resolution": "De Californische juvenielenfoto is ingetrokken wegens taxonomische/geografische scope; de oorspronkelijke registratie blijft bewaard."
+    }
+   ],
+   "open": [
+    "Europese juvenielenfoto ontbreekt: de eerdere nestfoto uit Californië is in F3-R23 ingetrokken wegens geografische/taxonomische scope. Bestand en brongegevens bewaard; geen onafhankelijke determinatie van de Amerikaanse vorm geclaimd."
+   ]
   },
   "sp084": {
    "summary": {
@@ -21266,6 +21316,13 @@ const DATA = {
       "SOV_PURPERREIGER"
      ],
      "kind": "voorkomen"
+    },
+    {
+     "text": "De Nederlandse broedpopulatie nam zowel vanaf 1980 als in de laatste twaalf jaar toe. Dit betreft broedterritoria, geen wintertelling.",
+     "sources": [
+      "SOV_PURPERREIGER"
+     ],
+     "kind": "trend"
     }
    ],
    "life": [

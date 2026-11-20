@@ -1,0 +1,173 @@
+{
+  "checked": "2026-11-20",
+  "source": "https://api.inaturalist.org/v1/observations/{id}",
+  "note": "Annotations and community taxon are source claims, not independent image determination. No precise coordinates retained.",
+  "items": [
+    {
+      "id": 57964762,
+      "taxon": "Egretta garzetta",
+      "date": "2020-08-28",
+      "place": "Sesimbra, Portugal",
+      "quality": "research",
+      "annotations": [
+        {
+          "attribute": 1,
+          "value": 8,
+          "label": "Juvenile",
+          "vote_score": 0
+        },
+        {
+          "attribute": 17,
+          "value": 18,
+          "label": "Alive",
+          "vote_score": 0
+        }
+      ],
+      "photos": [
+        {
+          "id": 92502660,
+          "license_code": "cc-by-sa",
+          "attribution": "(c) Paulo Martins, some rights reserved (CC BY-SA)",
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/92502660/square.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 206314322,
+      "taxon": "Egretta garzetta",
+      "date": "2024-04-05",
+      "place": "33470 Le Teich, France",
+      "quality": "research",
+      "annotations": [],
+      "photos": [
+        {
+          "id": 364893145,
+          "license_code": "cc-by",
+          "attribution": "(c) Donald Davesne, some rights reserved (CC BY)",
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/364893145/square.jpg"
+        },
+        {
+          "id": 364893294,
+          "license_code": "cc-by",
+          "attribution": "(c) Donald Davesne, some rights reserved (CC BY)",
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/364893294/square.jpg"
+        },
+        {
+          "id": 364893152,
+          "license_code": "cc-by",
+          "attribution": "(c) Donald Davesne, some rights reserved (CC BY)",
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/364893152/square.jpg"
+        },
+        {
+          "id": 364893246,
+          "license_code": "cc-by",
+          "attribution": "(c) Donald Davesne, some rights reserved (CC BY)",
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/364893246/square.jpg"
+        },
+        {
+          "id": 364893184,
+          "license_code": "cc-by",
+          "attribution": "(c) Donald Davesne, some rights reserved (CC BY)",
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/364893184/square.jpg"
+        }
+      ]
+    },
+    {
+      "id": 103063658,
+      "taxon": "Egretta garzetta",
+      "date": "2021-12-14",
+      "place": "Riverside Gardens, Orpington, England, GB",
+      "quality": "research",
+      "annotations": [],
+      "photos": [
+        {
+          "id": 172413835,
+          "license_code": "cc-by",
+          "attribution": "(c) Florin Feneru, some rights reserved (CC BY)",
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/172413835/square.jpg"
+        }
+      ]
+    },
+    {
+      "id": 141931939,
+      "taxon": "Ardea alba",
+      "date": "2022-04-25",
+      "place": "42600 Précieux, France",
+      "quality": "research",
+      "annotations": [],
+      "photos": [
+        {
+          "id": 243252269,
+          "license_code": "cc-by",
+          "attribution": "(c) Olivier Morel, some rights reserved (CC BY)",
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/243252269/square.jpeg"
+        },
+        {
+          "id": 243252285,
+          "license_code": "cc-by",
+          "attribution": "(c) Olivier Morel, some rights reserved (CC BY)",
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/243252285/square.jpeg"
+        },
+        {
+          "id": 243252309,
+          "license_code": "cc-by",
+          "attribution": "(c) Olivier Morel, some rights reserved (CC BY)",
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/243252309/square.jpeg"
+        },
+        {
+          "id": 243252332,
+          "license_code": "cc-by",
+          "attribution": "(c) Olivier Morel, some rights reserved (CC BY)",
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/243252332/square.jpeg"
+        },
+        {
+          "id": 243252367,
+          "license_code": "cc-by",
+          "attribution": "(c) Olivier Morel, some rights reserved (CC BY)",
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/243252367/square.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 219231388,
+      "taxon": "Ardea alba",
+      "date": "2024-05-29",
+      "place": "Mountain View, CA, USA",
+      "quality": "research",
+      "annotations": [
+        {
+          "attribute": 1,
+          "value": 8,
+          "label": "Juvenile",
+          "vote_score": 0
+        },
+        {
+          "attribute": 17,
+          "value": 18,
+          "label": "Alive",
+          "vote_score": 0
+        },
+        {
+          "attribute": 22,
+          "value": 24,
+          "label": "Organism",
+          "vote_score": 0
+        },
+        {
+          "attribute": 22,
+          "value": 35,
+          "label": "Construction",
+          "vote_score": 0
+        }
+      ],
+      "photos": [
+        {
+          "id": 388019872,
+          "license_code": "cc-by",
+          "attribution": "(c) Annette Herz, some rights reserved (CC BY)",
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/388019872/square.jpg"
+        }
+      ]
+    }
+  ]
+}

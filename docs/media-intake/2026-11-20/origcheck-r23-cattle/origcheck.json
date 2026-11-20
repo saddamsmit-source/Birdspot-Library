@@ -1,0 +1,50 @@
+{
+  "generated": "2026-11-20T07:57:20Z",
+  "rule": {
+    "sameMinR": 0.9
+  },
+  "items": [
+    {
+      "speciesId": "sp245",
+      "image": "/assets/species/plumage/sp245-winter.webp",
+      "title": null,
+      "author": "Andrea Mologni",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1024,
+        920
+      ],
+      "sourceUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/116157768/original.jpeg",
+      "rightsMatch": null,
+      "sourceSize": [
+        1114,
+        1001
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp245-winter_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp245",
+      "image": "/assets/species/plumage/sp245-juv.webp",
+      "title": null,
+      "author": "Zac Peterson",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1024,
+        1024
+      ],
+      "sourceUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/113155242/original.jpeg",
+      "rightsMatch": null,
+      "sourceSize": [
+        1024,
+        1024
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp245-juv_vs_source.jpg"
+    }
+  ]
+}

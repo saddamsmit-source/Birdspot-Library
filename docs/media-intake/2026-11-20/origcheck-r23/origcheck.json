@@ -1,0 +1,397 @@
+{
+  "generated": "2026-11-20T07:38:13Z",
+  "rule": {
+    "sameMinR": 0.9
+  },
+  "items": [
+    {
+      "speciesId": "sp082",
+      "image": "/assets/species/plumage/sp082-portrait.webp",
+      "title": "File:Little egret (Egretta garzetta) Cyprus.jpg",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1600,
+        1067
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Little_egret_(Egretta_garzetta)_Cyprus.jpg",
+        "sha1": "c422938876701b35df00418079852e896b1f9077",
+        "license": "CC BY-SA 4.0",
+        "author": "Charles J. Sharp",
+        "width": 4197,
+        "height": 2798,
+        "creditFields": {}
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 0.999,
+      "sameShot": true,
+      "sideBySide": "sp082-portrait_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp082",
+      "image": "/assets/species/plumage/sp082-juv.webp",
+      "title": null,
+      "author": "Paulo Martins",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1024,
+        609
+      ],
+      "urlErrors": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/92502660/original.jpg: HTTP Error 404: Not Found"
+      ],
+      "sourceUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/92502660/original.jpeg",
+      "rightsMatch": null,
+      "sourceSize": [
+        2048,
+        1218
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp082-juv_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp082",
+      "image": "/assets/species/plumage/sp082-breeding.webp",
+      "title": null,
+      "author": "Donald Davesne",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1024,
+        681
+      ],
+      "sourceUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/364893145/original.jpg",
+      "rightsMatch": null,
+      "sourceSize": [
+        2048,
+        1362
+      ],
+      "mode": "full",
+      "r": 0.998,
+      "sameShot": true,
+      "sideBySide": "sp082-breeding_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp082",
+      "image": "/assets/species/plumage/sp082-winter.webp",
+      "title": null,
+      "author": "Florin Feneru",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1024,
+        659
+      ],
+      "sourceUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/172413835/original.jpg",
+      "rightsMatch": null,
+      "sourceSize": [
+        1200,
+        772
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp082-winter_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp082",
+      "image": "/assets/species/sp082.webp",
+      "title": "File:Little egret (Egretta garzetta) in flight.jpg",
+      "author": "Hobbyfotowiki",
+      "license": "CC0",
+      "localSize": [
+        1600,
+        1064
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Little_egret_(Egretta_garzetta)_in_flight.jpg",
+        "sha1": "d62de9cb79ef89c92c565d99782d292932ce9dd4",
+        "license": "CC0",
+        "author": "Hobbyfotowiki",
+        "width": 3399,
+        "height": 2261,
+        "creditFields": {
+          "author": "Hobbyfotowiki"
+        }
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        639
+      ],
+      "mode": "full",
+      "r": 0.999,
+      "sameShot": true,
+      "sideBySide": "sp082_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp083",
+      "image": "/assets/species/sp083.webp",
+      "title": "File:Great Egret (Ardea alba) (25562005404).jpg",
+      "author": "Bernard DUPONT from FRANCE",
+      "license": "CC BY-SA 2.0",
+      "localSize": [
+        1600,
+        1067
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Great_Egret_(Ardea_alba)_(25562005404).jpg",
+        "sha1": "7b71f6e7fee9c0d58d91f2efea1ae532acf9ee5a",
+        "license": "CC BY-SA 2.0",
+        "author": "Bernard DUPONT from FRANCE",
+        "width": 5472,
+        "height": 3648,
+        "creditFields": {
+          "author": "Bernard DUPONT from FRANCE"
+        }
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp083_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp083",
+      "image": "/assets/species/plumage/sp083-juv.webp",
+      "title": null,
+      "author": "Annette Herz",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1024,
+        683
+      ],
+      "sourceUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/388019872/original.jpg",
+      "rightsMatch": null,
+      "sourceSize": [
+        2048,
+        1365
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp083-juv_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp083",
+      "image": "/assets/species/plumage/sp083-breeding.webp",
+      "title": null,
+      "author": "Olivier Morel",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1024,
+        768
+      ],
+      "urlErrors": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/243252269/original.jpg: HTTP Error 404: Not Found"
+      ],
+      "sourceUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/243252269/original.jpeg",
+      "rightsMatch": null,
+      "sourceSize": [
+        2048,
+        1536
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp083-breeding_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp083",
+      "image": "/assets/species/plumage/sp083-flight.webp",
+      "title": "File:Great egret (Ardea alba) in flight Danube delta.jpg",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1280,
+        853
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Great_egret_(Ardea_alba)_in_flight_Danube_delta.jpg",
+        "sha1": "9e0a0386206492ce4f3bc481519fcc75af91d1e2",
+        "license": "CC BY-SA 4.0",
+        "author": "Charles J. Sharp",
+        "width": 2967,
+        "height": 1978,
+        "creditFields": {}
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp083-flight_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp084",
+      "image": "/assets/showcase/sp084.webp",
+      "title": "File:Purple heron in Zimbabwe.jpg",
+      "author": "Bernard Gagnon",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1600,
+        1067
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Purple_heron_in_Zimbabwe.jpg",
+        "sha1": "f3dfbfb45846ead5567f28bac37c1de4ef58167e",
+        "license": "CC BY-SA 4.0",
+        "author": "Bernard Gagnon",
+        "width": 3914,
+        "height": 2609,
+        "creditFields": {
+          "author": "Bernard Gagnon"
+        }
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp084_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp084",
+      "image": "/assets/species/plumage/sp084-juv-europa.webp",
+      "title": "File:Garça-vermelha, juvenil, Purple Heron, juvenile (50904679921).jpg",
+      "author": "Luiz Lapa",
+      "license": "CC BY 2.0",
+      "localSize": [
+        1400,
+        1029
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Gar%C3%A7a-vermelha,_juvenil,_Purple_Heron,_juvenile_(50904679921).jpg",
+        "sha1": "03b76e82484672e02dcad1923682aee54c30468f",
+        "license": "CC BY 2.0",
+        "author": "Luiz Lapa from Oeiras, Portugal",
+        "width": 2455,
+        "height": 1804,
+        "creditFields": {
+          "author": "Luiz Lapa from Oeiras, Portugal"
+        }
+      },
+      "authorRule": "flickr-location-suffix",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        705
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp084-juv-europa_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp084",
+      "image": "/assets/species/plumage/sp084-flight.webp",
+      "title": "File:Purple heron in flight 01.jpg",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1400,
+        933
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Purple_heron_in_flight_01.jpg",
+        "sha1": "e786ffe7d315791560a4c9280d71716a59dd0756",
+        "license": "CC BY 4.0",
+        "author": "Alexis Lours",
+        "width": 3483,
+        "height": 2322,
+        "creditFields": {
+          "author": "Alexis Lours"
+        }
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp084-flight_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp084",
+      "audio": "/assets/species/audio/sp084-a1.mp3",
+      "title": "File:Ardea purpurea - Purple Heron XC432223.mp3",
+      "author": "Joost van Bruggen",
+      "license": "CC BY-SA 4.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Ardea_purpurea_-_Purple_Heron_XC432223.mp3",
+        "sha1": "8dbe2212f856cb27c837110dff5aaa70261b2a0a",
+        "license": "CC BY-SA 4.0",
+        "author": "Joost van Bruggen",
+        "duration": 10.9842,
+        "mime": "audio/mpeg",
+        "creditFields": {
+          "author": "Joost van Bruggen"
+        },
+        "pageParams": {
+          "date": "2018-08-07 07:23",
+          "author": "Joost van Bruggen"
+        },
+        "creditLines": [
+          "|author=Joost van Bruggen"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    },
+    {
+      "speciesId": "sp084",
+      "audio": "/assets/species/audio/sp084-a2.mp3",
+      "title": "File:Ardea purpurea - Purple Heron XC135429.ogg",
+      "author": "Sudipto Roy",
+      "license": "CC BY-SA 3.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Ardea_purpurea_-_Purple_Heron_XC135429.ogg",
+        "sha1": "12f0bcfca366637c811baa7c6a6d954c8831df92",
+        "license": "CC BY-SA 3.0",
+        "author": "Sudipto Roy",
+        "duration": 2.544979166666667,
+        "mime": "application/ogg",
+        "creditFields": {
+          "author": "Sudipto Roy"
+        },
+        "pageParams": {
+          "date": "2013-04-06 11:00",
+          "author": "Sudipto Roy"
+        },
+        "creditLines": [
+          "|author=Sudipto Roy"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    }
+  ]
+}
