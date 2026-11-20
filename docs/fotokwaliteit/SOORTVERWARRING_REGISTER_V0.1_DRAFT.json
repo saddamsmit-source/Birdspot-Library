@@ -50,7 +50,10 @@
     "sp081",
     "sp082",
     "sp083",
-    "sp084"
+    "sp084",
+    "sp085",
+    "sp086",
+    "sp089"
   ],
   "policy": {
     "pairRequiredWhenSimilar": true,
@@ -2236,7 +2239,8 @@
     {
       "id": "LK-050",
       "focus": [
-        "sp081"
+        "sp081",
+        "sp085"
       ],
       "birds": [
         "sp081",
@@ -2442,7 +2446,8 @@
     {
       "id": "LK-055",
       "focus": [
-        "sp084"
+        "sp084",
+        "sp085"
       ],
       "birds": [
         "sp084",
@@ -2520,6 +2525,129 @@
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/roerdomp"
       ],
       "caution": "Bruine kleur en lange tenen alleen zijn onvoldoende; goed zicht nodig. Geverifieerd fotopaar ontbreekt."
+    },
+    {
+      "id": "LK-057",
+      "focus": [
+        "sp086"
+      ],
+      "birds": [
+        "sp086",
+        "sp121"
+      ],
+      "risk": "adult, female and juvenile as explicitly described",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "MISSING_VERIFIED_PAIR",
+      "mediaOpen": [
+        "Kolgans photo missing; reciprocal text available."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Snavel",
+          "values": [
+            "Forse oranje tot roze snavel en roze poten",
+            "Roze snavel en oranje poten, witte kol alleen bij adult"
+          ]
+        },
+        {
+          "label": "Buik",
+          "values": [
+            "Kan kleine donkere buikstreepjes hebben",
+            "Adult zwarte dwarsstrepen, jongen missen die vaak"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grauwe-gans",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kolgans"
+      ],
+      "caution": "Jonge Kolganzen missen kol en buikstrepen vaak; vergelijk meerdere kenmerken. Kolgans heeft geen gidsfoto, dus geen volledig fotopaar."
+    },
+    {
+      "id": "LK-058",
+      "focus": [
+        "sp089"
+      ],
+      "birds": [
+        "sp089",
+        "sp129"
+      ],
+      "risk": "adult, female and juvenile as explicitly described",
+      "matchingPlumages": [
+        "adult_f",
+        "adult_f"
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Source matching complete; independent role/age review open."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Snavel",
+          "values": [
+            "Oranjeachtig met donkere vlekken",
+            "Donker middendeel met oranje zijkanten"
+          ]
+        },
+        {
+          "label": "Spiegel",
+          "values": [
+            "Blauwviolet met lichtere randen wanneer zichtbaar",
+            "Witte spiegel wanneer de vleugel zichtbaar is"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wilde-eend",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/krakeend"
+      ],
+      "caution": "De spiegel is op de gesloten vleugel niet volledig te zien; controleer bij vleugelstrekken. Geen foto-PASS uit alleen snavelkleur."
+    },
+    {
+      "id": "LK-059",
+      "focus": [
+        "sp089"
+      ],
+      "birds": [
+        "sp089",
+        "sp090"
+      ],
+      "risk": "adult, female and juvenile as explicitly described",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Source matching complete; independent role/age review open."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Snavel",
+          "values": [
+            "Minder breed uitlopende gewone eendensnavel",
+            "Lange aan de punt breed uitlopende lepelvormige snavel"
+          ]
+        },
+        {
+          "label": "Borst man",
+          "values": [
+            "Donkere borst onder een smalle witte halsring",
+            "Opvallend witte borst met kastanjebruine flanken"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wilde-eend",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/slobeend"
+      ],
+      "caution": "Vergelijk passend geslacht en kleed. Slobeend-vluchtpartner behoudt historische rol; geen nieuwe onafhankelijke vluchtgoedkeuring."
     }
   ],
   "withinSpeciesVariation": [

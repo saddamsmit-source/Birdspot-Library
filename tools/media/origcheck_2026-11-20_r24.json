@@ -1,0 +1,174 @@
+{
+  "date": "2026-11-20",
+  "purpose": "R24 read-only preparation: 12 focus photos, 3 existing partners and six audio source labels/rights; no independent acoustic determination",
+  "items": [
+    {
+      "speciesId": "sp085",
+      "image": "/assets/showcase/sp085.webp",
+      "title": "File:Nycticorax nycticorax 5.jpg",
+      "author": "Mike & Chris",
+      "license": "CC BY-SA 2.0",
+      "role": "Hoofdfoto hero"
+    },
+    {
+      "speciesId": "sp085",
+      "image": "/assets/species/plumage/sp085-juv.webp",
+      "title": "File:Nycticorax nycticorax young.jpg",
+      "author": "Matteo Sorrentino",
+      "license": "CC BY-SA 3.0",
+      "role": "Verenkleed juv"
+    },
+    {
+      "speciesId": "sp085",
+      "image": "/assets/species/plumage/sp085-flight.webp",
+      "title": "File:Black-crowned night heron (Nycticorax nycticorax) in flight.jpg",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "role": "In vlucht neutral"
+    },
+    {
+      "speciesId": "sp085",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp085-a1.mp3",
+      "title": "File:Nycticorax nycticorax - Black-crowned Night Heron XC383999.mp3",
+      "author": "Jan Cibulka",
+      "license": "CC BY-SA 3.0"
+    },
+    {
+      "speciesId": "sp085",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp085-a2.mp3",
+      "title": "File:Nycticorax nycticorax - Black-crowned Night Heron XC431999.mp3",
+      "author": "Joost van Bruggen",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "speciesId": "sp086",
+      "image": "/assets/species/sp086.webp",
+      "title": "File:Greylag Goose - St James's Park, London - Nov 2006.jpg",
+      "author": "David Iliff (Diliff)",
+      "license": "CC BY-SA 3.0",
+      "role": "Hoofdfoto hero"
+    },
+    {
+      "speciesId": "sp086",
+      "image": "/assets/species/plumage/sp086-flight.webp",
+      "title": "File:Greylag goose (Anser anser) in flight Marken.jpg",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "role": "In vlucht neutral"
+    },
+    {
+      "speciesId": "sp086",
+      "image": "/assets/species/plumage/sp086-juv.webp",
+      "title": "File:Graugans-Jungtier-Schwalm-Nette-2013-01.jpg",
+      "author": "Tuxyso / Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "role": "Overige herkenningsfoto's "
+    },
+    {
+      "speciesId": "sp086",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp086-a1.mp3",
+      "title": "File:Anser anser - Greylag Goose XC436358.mp3",
+      "author": "Joost van Bruggen",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "speciesId": "sp086",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp086-a2.mp3",
+      "title": "File:Anser anser - Greylag Goose XC518305.mp3",
+      "author": "Jens Loose",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "speciesId": "sp089",
+      "image": "/assets/species/sp089.webp",
+      "title": "File:Anas platyrhynchos male female.jpg",
+      "author": "Richard Bartz",
+      "license": "CC BY-SA 2.5",
+      "role": "Hoofdfoto hero"
+    },
+    {
+      "speciesId": "sp089",
+      "image": "/assets/species/plumage/sp089-flight.webp",
+      "title": "File:Mallard male in flight.jpg",
+      "author": "VJAnderson",
+      "license": "CC BY-SA 4.0",
+      "role": "Verenkleed adult_m"
+    },
+    {
+      "speciesId": "sp089",
+      "image": "/assets/species/plumage/sp089-adult_f.webp",
+      "title": "File:Female Mallard Swimming.jpg",
+      "author": "Roshan Kumar Ban",
+      "license": "CC BY-SA 4.0",
+      "role": "Verenkleed adult_f"
+    },
+    {
+      "speciesId": "sp089",
+      "image": "/assets/species/plumage/sp089-juv-review.webp",
+      "title": "File:Anas platyrhynchos juvenile JdP 2013-06-14 n01.jpg",
+      "author": "Marie-Lan Nguyen / Wikimedia Commons",
+      "license": "CC BY 2.5",
+      "role": "Verenkleed juv"
+    },
+    {
+      "speciesId": "sp089",
+      "image": "/assets/species/plumage/sp089-eclipse.webp",
+      "title": "File:Male eclipse Mallard on Lake Bled.jpg",
+      "author": "Mihael Grmek",
+      "license": "CC BY-SA 3.0",
+      "role": "Verenkleed eclipse"
+    },
+    {
+      "speciesId": "sp089",
+      "image": "/assets/species/plumage/sp089-free-flight.webp",
+      "title": "File:Mallard duck in flight.jpg",
+      "author": "Bert de Tilly",
+      "license": "CC BY-SA 4.0",
+      "role": "In vlucht adult_m"
+    },
+    {
+      "speciesId": "sp089",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp089-a1.mp3",
+      "title": "File:Anas platyrhynchos - Mallard XC112828.mp3",
+      "author": "Jonathon Jongsma",
+      "license": "CC BY-SA 3.0"
+    },
+    {
+      "speciesId": "sp089",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp089-a2.mp3",
+      "title": "File:Anas platyrhynchos - Mallard XC62258.mp3",
+      "author": "Jonathon Jongsma",
+      "license": "CC BY-SA 3.0"
+    },
+    {
+      "speciesId": "sp129",
+      "image": "/assets/species/plumage/sp129-adult_f.webp",
+      "title": "File:Female gadwall (52294387865).jpg",
+      "author": "Andrey Gulivanov",
+      "license": "CC BY 2.0",
+      "role": "comparison partner only"
+    },
+    {
+      "speciesId": "sp090",
+      "image": "/assets/species/plumage/sp090-adult_f.webp",
+      "title": "File:Northern Shoveler-Anas clypeata female.jpg",
+      "author": "Andreas Trepte, www.avi-fauna.info",
+      "license": "CC BY-SA 2.5",
+      "role": "comparison partner only"
+    },
+    {
+      "speciesId": "sp090",
+      "image": "/assets/species/plumage/sp090-flight.webp",
+      "title": "File:Male northern shoveler in flight-0208.jpg",
+      "author": "Frank Schulenburg",
+      "license": "CC BY-SA 4.0",
+      "role": "comparison partner only"
+    }
+  ]
+}
