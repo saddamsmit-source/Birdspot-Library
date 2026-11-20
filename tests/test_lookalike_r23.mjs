@@ -15,7 +15,7 @@ const comparisonPartners=read('../docs/media-intake/2026-11-20/origcheck-r23-cat
 assert.equal(comparisonPartners.photos.length,2);
 for(const p of comparisonPartners.photos) {assert.equal(p.automatedSameShot,true);assert.equal(p.rightsMatch,true);}
 const birds=new Map(SPECIES.map(x=>[x.id,x]));
-for(const c of GUIDE_COMPARISONS.filter(c=>c.birds.some(x=>x.id==='sp245')&&c.birds.some(x=>['sp082','sp083'].includes(x.id)))) {assert.ok(c.birds.every(x=>!x.photoMissing),'Existing complete cattle-egret pairs must survive');assert.ok(c.birds.every(x=>comparisonPhoto(x,false)?.image),'Both actual photos required');}
+for(const c of GUIDE_COMPARISONS.filter(c=>c.birds.some(x=>x.id==='sp245')&&c.birds.some(x=>['sp082','sp083'].includes(x.id)))) {assert.ok(c.birds.every(x=>!x.photoMissing),'Existing complete cattle-egret pairs must survive');assert.ok(c.rows?.length>=2,'Two explicit distinguishing rows must accompany cattle-egret photos');assert.ok(c.birds.every(x=>comparisonPhoto(x,false)?.image),'Both actual photos required');}
 const path='/assets/species/plumage/sp083-juv.webp';
 assert.equal(media.plumage.sp083.juv,undefined);
 const batch=read('../docs/fotokwaliteit/soortaudit/M8.json').species.sp083;

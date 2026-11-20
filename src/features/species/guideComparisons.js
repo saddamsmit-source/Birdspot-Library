@@ -187,6 +187,10 @@ export const GUIDE_COMPARISONS = [
       {id: 'sp082', source: 'kleine-zilverreiger', plumage: 'winter', marks: 'Langere, dunnere donkere snavel en langere poten. De tenen zijn meestal geel.'},
       {id: 'sp245', source: 'koereiger', plumage: 'winter', marks: 'Compact, met kortere poten en een korte, stevige gele snavel.'},
     ],
+    rows: [
+      {label: 'Snavel', values: ['Lang, fijn en op deze foto donker.', 'Korter, steviger en op deze foto geel.']},
+      {label: 'Bouw', values: ['Slanker met relatief langere poten.', 'Compact, met kortere hals en poten.']},
+    ],
     tip: 'Vergelijk de bouw en snavelvorm. Vee in de buurt kan een extra aanwijzing zijn voor Koereiger.',
   },
   {
@@ -196,6 +200,10 @@ export const GUIDE_COMPARISONS = [
       {id: 'sp082', source: 'kleine-zilverreiger', plumage: 'juv', marks: 'Slanker en langer gepoot, met een langere, dunnere snavel. Tenen kunnen dof geelgroen zijn.'},
       {id: 'sp245', source: 'koereiger', plumage: 'juv', marks: 'Compact, met korte poten en een kortere, dikkere snavel. De snavel is bij jonge vogels vaak donker.'},
     ],
+    rows: [
+      {label: 'Snavel', values: ['Relatief langer en fijner.', 'Relatief korter en steviger.']},
+      {label: 'Bouw', values: ['Slanker en relatief langer gepoot.', 'Gedrongener met kortere hals en poten.']},
+    ],
     tip: 'Vergelijk de verhoudingen van de hele vogel. De snavel van jonge vogels kan bij beide donker zijn.',
   },
   {
@@ -204,6 +212,10 @@ export const GUIDE_COMPARISONS = [
     birds: [
       {id: 'sp083', source: 'grote-zilverreiger', plumage: 'winter', marks: 'Groot met een lange, dunne hals, een lange dolkvormige snavel en lange poten.'},
       {id: 'sp245', source: 'koereiger', plumage: 'winter', marks: 'Veel kleiner, met een korte hals, korte poten en een korte, stevige snavel.'},
+    ],
+    rows: [
+      {label: 'Hals', values: ['Lang en dun.', 'Relatief kort aan een compact lichaam.']},
+      {label: 'Snavel', values: ['Lang en relatief slank.', 'Kort en relatief stevig.']},
     ],
     tip: 'Bij beide kan de snavel geel zijn. Vergelijk vooral de lengte van hals, snavel en poten.',
   },
