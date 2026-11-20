@@ -750,6 +750,23 @@
 .quick-add-options p { color: var(--ink-2); font-size: .875rem; line-height: 1.42; overflow-wrap: anywhere; }
 .sound-row { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
 .sound-row > button { flex: 1 1 auto; }
+/* Eén primaire Start/Stop-knop op dezelfde plek binnen duimbereik, ook bij scrollen. */
+.sound-record-dock {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  padding: 12px max(12px, env(safe-area-inset-right, 0px)) calc(12px + env(safe-area-inset-bottom, 0px)) max(12px, env(safe-area-inset-left, 0px));
+  margin-inline: -16px;
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+  box-shadow: 0 -6px 18px rgb(0 0 0 / .12);
+}
+.sound-record-dock #soundRecord { flex: 1; min-height: 52px; font-weight: 750; }
+.sound-record-dock #soundElapsed { flex: none; min-width: 48px; text-align: right; }
+.quick-add-options:has(.sound-record-dock) { padding-bottom: 0; }
 #soundElapsed { font-variant-numeric: tabular-nums; padding-inline: 4px; }
 #soundTimeline {
   padding: 7px 8px 4px; border: 1px solid var(--line); border-radius: var(--r-sm);

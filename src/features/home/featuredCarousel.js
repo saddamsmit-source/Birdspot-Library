@@ -12,6 +12,12 @@ import { openPhotoViewer } from '../../utils/photoViewer.js';
 import { assetUrl } from '../../utils/assetUrl.js';
 
 const byId = new Map(SPECIES.map(s => [s.id, s]));
+const HABITAT_LABELS = Object.freeze({
+  bos: 'Bos', stedelijk: 'Stad en dorp', agrarisch: 'Boerenland', polder: 'Polder',
+  heide: 'Heide', duinen: 'Duinen', kust: 'Kust', zee: 'Zee', wad: 'Wad',
+  water: 'Water en oevers', moeras: 'Moeras', rietland: 'Rietland',
+  rivierengebied: 'Rivieren', struweel: 'Struweel',
+});
 const SAVE_EVERY_MS = 5_000;
 let manuallyPaused = false;
 
@@ -19,12 +25,23 @@ let manuallyPaused = false;
 export function birdInfo(bird) {
   const s = byId.get(bird.id);
   // eigen tekst voor dwaalgasten waarvan de soortendatabase nog geen beschrijving heeft
-  const marks = bird.info || (!s?.compact && s?.fieldmarks) || 'Let op formaat, kleur en vluchtbeeld.';
+  const marks = bird.info || (!s?.compact && s?.fieldmarks) || '';
   const when = !s?.months || s.months === '-' ? 'onregelmatig'
     : s.months === 'jan-dec' ? 'het hele jaar' : s.months.replaceAll('-', '–').replaceAll(',', ', ');
   const badge = c => (c === 'schaarsegast' ? 'Schaarse gast' : CATEGORY_BADGES[c] || c);
   const status = s ? badge(s.category) + (s.statusExtra ? ', ook ' + badge(s.statusExtra).toLowerCase() : '') : '';
-  return { recognition: 'Herkenning: ' + marks, presence: 'In Nederland: ' + [status, when].filter(Boolean).join(' · ') };
+  const plumage = s?.plumage || {};
+  const sexes = plumage.adult_f && plumage.adult_m
+    ? 'Mannetje: ' + plumage.adult_m + ' · Vrouwtje: ' + plumage.adult_f
+    : s?.similarSexes === true ? 'Man en vrouw lijken op elkaar.' : '';
+  const habitat = (s?.regions || []).map(region => HABITAT_LABELS[region]).filter(Boolean).join(' · ');
+  return {
+    recognition: marks,
+    sexes,
+    habitat,
+    distribution: s?.distribution || '',
+    presence: [status, when].filter(Boolean).join(' · '),
+  };
 }
 
 export function initFeaturedCarousel(el, ctx) {
@@ -38,6 +55,13 @@ export function initFeaturedCarousel(el, ctx) {
   const latin = stage.querySelector('#featuredBirdLatin');
   const place = stage.querySelector('#featuredBirdWhere');
   const presence = stage.querySelector('#featuredBirdPresence');
+  const quickRows = [
+    ['featuredBirdWhere', 'recognition'],
+    ['featuredBirdSexes', 'sexes'],
+    ['featuredBirdHabitat', 'habitat'],
+    ['featuredBirdDistribution', 'distribution'],
+    ['featuredBirdPresence', 'presence'],
+  ].map(([id, key]) => [stage.querySelector('#' + id), key]);
   const credit = stage.querySelector('#featuredBirdCredit');
   const toggle = stage.querySelector('#featuredBirdMotion');
   const speciesButton = stage.querySelector('[data-featured-species]');
@@ -66,8 +90,12 @@ export function initFeaturedCarousel(el, ctx) {
     if (group) group.textContent = bird.groupLabel;
     name.textContent = bird.nl;
     latin.textContent = bird.latin;
-    place.textContent = info.recognition;
-    if (presence) presence.textContent = info.presence;
+    for (const [element, key] of quickRows) {
+      if (!element) continue;
+      const value = info[key];
+      element.textContent = value;
+      element.closest('.field-featured-fact').hidden = !value;
+    }
     credit.innerHTML = photoInfoMarkup(bird);
     // volgende foto alvast laden, zodat de wissel direct is
     const next = FEATURED_BIRDS[(pos.index + 1) % FEATURED_BIRDS.length];

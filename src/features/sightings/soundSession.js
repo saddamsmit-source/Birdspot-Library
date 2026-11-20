@@ -23,10 +23,6 @@ let pendingFinalization = Promise.resolve();
 export function mountSoundSession(root, onSaved) {
   root.innerHTML = `
     <div class="sound-capture">
-      <div class="sound-row">
-        <button type="button" id="soundRecord" class="btn-primary">Start opname</button>
-        <span id="soundElapsed" aria-label="Opnameduur">00:00</span>
-      </div>
       <p id="soundCaptureState" role="status">Je opname blijft op dit toestel.</p>
       <div id="soundTimeline" hidden>
         <canvas id="soundWaveform" width="640" height="84" role="img" aria-label="Geluidsniveau vanaf het begin van de opname"></canvas>
@@ -96,7 +92,11 @@ export function mountSoundSession(root, onSaved) {
       </fieldset>
       <p id="soundSaveState" role="status"></p>
       <button class="btn-primary" id="soundSave" type="submit">Pin je waarneming</button>
-    </form>`;
+    </form>
+    <div class="sound-record-dock" role="group" aria-label="Opnamebediening">
+      <button type="button" id="soundRecord" class="btn-primary">Start opname</button>
+      <span id="soundElapsed" aria-label="Opnameduur">00:00</span>
+    </div>`;
   const find = id => root.querySelector('#' + id);
   const record = find('soundRecord'), elapsed = find('soundElapsed');
   const captureStatus = find('soundCaptureState'), playback = find('soundPlayback');
