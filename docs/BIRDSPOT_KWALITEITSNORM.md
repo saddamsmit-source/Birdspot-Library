@@ -2,11 +2,11 @@
 
 | | |
 |---|---|
-| Versie | 1.7 · 16-11-2026 |
-| Status | Vastgesteld eigenaarbesluit (Kevin Smit, Project Owner). Onafhankelijke documentreview: open |
+| Versie | 1.9 · 20-11-2026 · concept op PR #315 |
+| Status | Kandidaat op vrijgegeven basis v1.7. De afzonderlijke kandidaat v1.8 staat op PR #282. |
 | Herkomst | Eigenaaropdracht "Nieuwe eigenaarbesluiten, livegang en batch M3" (10-11-2026) en het vastgelegde besluit op PR #127 ([comment 6779875047](https://github.com/saddamsmit-source/Birdspot-Library/pull/127#issuecomment-6779875047)) |
 | Geldt voor | Alle soortkaarten van Birdspot Library: soortdata (`src/data/species.js`), kennisprofielen (`tools/kennisbaseline/knowledge.json`), gidsfoto's en soortaudit |
-| Gezag | Dit document is de enige plek waar deze drie regels staan. Andere documenten verwijzen hiernaar en herhalen de regels niet |
+| Gezag | Dit document is de normhouder voor inhouds- en mediakwaliteit van Birdspot. Andere documenten verwijzen hiernaar. |
 
 De regels gelden alleen voor Birdspot. Het algemene App Development Handbook verandert hierdoor niet.
 
@@ -123,6 +123,13 @@ Verder geldt:
 
 **Bewijsgrens:** beide voorkeursbronnen zijn deskundige naslagwerken, maar niet onfeilbaar en niet altijd direct toegankelijk. Een 'bronvoorkeur' geldt alleen bij daadwerkelijk gelezen passende informatie en is nooit zelfstandig foto-PASS. De app beschrijft feiten in eigen woorden; originele ANWB-/Vogelbeschermingfoto's of beschermde tekst worden niet zonder geldige toestemming hergebruikt.
 
+**Bronroute voor inhoudsreview (20-11-2026).**
+
+- Gebruik [De Visdief en de gespecialiseerde naslagwerken](bronnen/VISDIEF_VOGELGIDSEN_BRONNOTITIE_2026-11-19.md) om gericht te zoeken naar een vergelijking, kleed, gedrag, roep of kijkgebied. Geef inhoudelijk bewijsgewicht aan de feitelijk geraadpleegde passage binnen haar toepassingsgebied. Een recensie, inhoudsopgave of boekcatalogus helpt de passage vinden. Leg bij een gelezen boek het werk, de auteur, editie, zo nodig het deel en de pagina vast. Een praktijkwaarneming ondersteunt de beschreven situatie. Onderbouw een algemene soortclaim met passend aanvullend bewijs.
+- Achterhaal bij kritieke kenmerken per bron op welk oorspronkelijk bewijs de bewering rust. Een overgenomen waarneming, foto, meetreeks of boekpassage telt per claim één keer, ook bij verschillende websites, edities, vertalingen of uitgevers. Bewaar die relatie en eventueel bronverschil in het bestaande brondossier. Laat een verschil in regio, periode, kleed of methode zichtbaar in de onderbouwing. Geef een kenmerk bij resterende twijfel de toepasselijke status volgens §2.
+- Leg in de bestaande soortaudit vast welke passage, kenmerken en omstandigheden zijn gecontroleerd. Benoem in de veldtekst waar je kijkt of naar luistert, welk verschil bruikbaar is en wanneer het ontbreekt. Habitat, één losse roep of een modeluitkomst geven op zichzelf onvoldoende houvast bij een onzeker soortpaar. Registreer de uitkomst in het bestaande openpunten- of vergelijkingsregister.
+- Gebruik Sovon en de betreffende landelijke of regionale bronhouder voor verspreiding, trend en formele status. Gebruik voor een openbare kijktip de gebiedsbeheerder voor toegang, openingstijden en afsluitingen. Leg land of regio, periode en de datum van controle vast. Volg voor kwetsbare locaties de bestaande Birdspot-privacyregels.
+
 ---
 
 ### 2.2 Bronvermeldingen in de gebruikersinterface (eigenaarbesluit 14-11-2026)
@@ -158,6 +165,8 @@ Elke getoonde foto staat bij de juiste soort, leeftijd, geslacht en rol, en is g
 6. voldoende kwaliteit voor het beoogde herkenningsdoel.
 
 De uitkomst per foto staat in `docs/fotokwaliteit/soortaudit/M*.json` en `SOORTAUDIT_TRACKER.md`.
+
+Leg bij ieder nieuw of herbeoordeeld bestand afzonderlijk vast wat zichtbaar of hoorbaar is, wat de oorspronkelijke bron vermeldt en welke publicatierechten voor deze versie gelden. Een bestandsnaam, categorie, platformlabel of herkende soort geeft aanleiding tot controle. Een foto met een onzekere leeftijd blijft voor die leeftijdsrol open. Leg bij geluid ook vast wie de soort en het geluidstype daadwerkelijk heeft beluisterd en beoordeeld. Volg hiervoor het [bestaande audioprotocol](audio/BIRDSPOT_EBIRD_SOVON_AUDIO_BRONPROTOCOL_V0.1_DRAFT.md). Noteer zo nodig gewijzigde uitsnede, credits en de rechten voor distributie en offline gebruik.
 
 ### 3.3 Beoordelingsregels
 
@@ -218,3 +227,4 @@ Deze regel breidt de bestaande foto's en herkomstverplichtingen uit; zij vervang
 | 1.5 | 14-11-2026 | Eigenaar bepaalt dat niet-verplichte bronvermeldingen verdwijnen uit de gebruikersweergave, zonder achterliggende broncontroles te verwijderen. Verplichte foto-, audio- en data-attributies blijven intact en toegankelijk. |
 | 1.6 | 15-11-2026 | Eigenaar laat onvolledige fotoparen en lege "Nog geen passende foto"-vakken **bij alle soorten** uit "Lijkt op" verdwijnen. Alleen complete twee-fotopanelen tonen; brondata, openpunten, eerdere vlucht-/leeftijdsafkeuringen en werkende fotovergelijkingen behouden. |
 | 1.7 | 16-11-2026 | Eigenaar stelt voor alle lookalike-soorten bewijsbare foto- **én** tekstverschillen verplicht; sekse-/leeftijdsspecifiek, in beide richtingen, onvolledige fotoparen verborgen maar herkenningstekst zichtbaar. Register + geautomatiseerde QA en bron-/rechten- en fysieke bewijsgrens toegevoegd (§3.4). |
+| 1.9 concept | 20-11-2026 | Visdief-onderzoek verwerkt in de bronroute (§2.1) en de controle van bewijs per mediabestand (§3.2). Praktijkvoorbeelden staan bij de bestaande bronnotitie en F3-R21. |
