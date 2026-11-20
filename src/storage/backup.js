@@ -15,6 +15,8 @@
  *   - Format: ZIP met datum in de naam (birdspot-YYYY-MM-DD.zip)
  *   - Ronde 2B (backupVersion 2): plekken + privé-omgevingsfoto's (kind 'place-env', placeId,
  *     toelichting) gaan mee. Oude ZIP's (zonder backupVersion/kind) blijven werken.
+ *   - Eigenaarreview (backupVersion 3): persoonlijke soortopnamen kunnen via
+ *     één Blob optioneel ook aan een waarneming gekoppeld zijn. Oude ZIP's blijven leesbaar.
  *     Alles wordt gevalideerd vóór er iets wordt geschreven; een ongeldige ZIP wijzigt niets.
  */
 
@@ -372,7 +374,7 @@ export async function validateBackupFile(file) {
   }
 }
 
-const BACKUP_VERSION = 2;
+const BACKUP_VERSION = 3;
 const ENV_CAPTION_LIMIT = 500;
 const validCoordPair = (lat, lon) => lat != null && lon != null && lat !== '' && lon !== '' &&
   Number.isFinite(Number(lat)) && Math.abs(Number(lat)) <= 90 && Number.isFinite(Number(lon)) && Math.abs(Number(lon)) <= 180;

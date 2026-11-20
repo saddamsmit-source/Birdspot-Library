@@ -30,16 +30,22 @@ export function birdInfo(bird) {
     : s.months === 'jan-dec' ? 'het hele jaar' : s.months.replaceAll('-', '–').replaceAll(',', ', ');
   const badge = c => (c === 'schaarsegast' ? 'Schaarse gast' : CATEGORY_BADGES[c] || c);
   const status = s ? badge(s.category) + (s.statusExtra ? ', ook ' + badge(s.statusExtra).toLowerCase() : '') : '';
+  // Home is een snelle veldcheck: alleen brontekst, afkorten op woordgrens.
+  const compact = (text, limit = 145) => {
+    const value = String(text || '').trim();
+    if (value.length <= limit) return value;
+    return value.slice(0, limit).replace(/\s+\S*$/, '').replace(/[\s,;.:]+$/, '') + '…';
+  };
   const plumage = s?.plumage || {};
   const sexes = plumage.adult_f && plumage.adult_m
-    ? 'Mannetje: ' + plumage.adult_m + ' · Vrouwtje: ' + plumage.adult_f
+    ? 'Mannetje: ' + compact(plumage.adult_m, 85) + ' · Vrouwtje: ' + compact(plumage.adult_f, 85)
     : s?.similarSexes === true ? 'Man en vrouw lijken op elkaar.' : '';
   const habitat = (s?.regions || []).map(region => HABITAT_LABELS[region]).filter(Boolean).join(' · ');
   return {
     recognition: marks ? 'Herkenning: ' + marks : '',
     sexes,
     habitat,
-    distribution: s?.distribution || '',
+    distribution: compact(s?.distribution, 170),
     presence: 'In Nederland: ' + [status, when].filter(Boolean).join(' · '),
   };
 }

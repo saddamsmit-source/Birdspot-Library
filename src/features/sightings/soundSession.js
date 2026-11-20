@@ -242,10 +242,11 @@ export function mountSoundSession(root, onSaved) {
     const requiresPosition = !speciesOnly;
     const invalidAudio = (attachClip || attachSpecies) &&
       (!wavFile || selected !== 1 || (attachSpecies && !verifyBox.checked));
-    save.disabled = !selected || !date.value || !time.value || invalidAudio ||
+    save.disabled = sessionCommitted || !selected || !date.value || !time.value || invalidAudio ||
       (requiresPosition && (!coordinates || locationPending || needsPlaceChoice)) ||
       starting || finishing || recorder?.state === 'recording';
-    save.textContent = speciesOnly ? 'Bewaar bij mijn soortgeluiden'
+    save.textContent = sessionCommitted ? 'Al opgeslagen'
+      : speciesOnly ? 'Bewaar bij mijn soortgeluiden'
       : attachClip && attachSpecies ? 'Bewaar bij waarneming én soort'
       : attachClip ? 'Bewaar opname bij waarneming'
       : selected > 1 ? `Pin ${selected} waarnemingen` : 'Pin je waarneming';
@@ -623,7 +624,7 @@ export function mountSoundSession(root, onSaved) {
 
   find('soundReview').addEventListener('submit', async event => {
     event.preventDefault();
-    if (save.disabled) return;
+    if (save.disabled || sessionCommitted) return;
     showPlace();
     if (save.disabled) return;
     save.disabled = true;
@@ -686,6 +687,9 @@ export function mountSoundSession(root, onSaved) {
           }),
         });
       }
+      // Een geldige datawrite is afgerond: een fout bij conceptopruiming mag
+      // de gebruiker NOOIT nogmaals dezelfde opname laten vastleggen.
+      sessionCommitted = true;
     } catch (_) {
       if (newPlace) {
         try { await removeCreatedPlace(newPlace.id); }
@@ -701,7 +705,7 @@ export function mountSoundSession(root, onSaved) {
     if (draftStored) {
       try { await deleteSoundDraft(sessionId); }
       catch (_) {
-        find('soundSaveState').textContent = 'De waarnemingen zijn gepind. Het concept kon niet worden opgeruimd.';
+        find('soundSaveState').textContent = 'Opgeslagen. Het oude concept kon niet worden verwijderd. Sluit dit scherm; dubbel opslaan is geblokkeerd.';
         root.inert = false;
         updateSelection();
         return;

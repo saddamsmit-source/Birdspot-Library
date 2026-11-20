@@ -7,6 +7,11 @@ on:
       - 'styles/field-experience.css'
       - 'styles/sightings.css'
       - 'tests/test_owner_quickcheck.mjs'
+      - 'src/storage/backup.js'
+      - 'src/data/sightingAudio.js'
+      - 'src/features/species/view.js'
+      - 'src/features/sightings/quickAdd.js'
+      - 'src/app.js'
       - '.github/workflows/owner-ux-quickcheck.yml'
   pull_request:
     paths:
@@ -15,11 +20,17 @@ on:
       - 'styles/field-experience.css'
       - 'styles/sightings.css'
       - 'tests/test_owner_quickcheck.mjs'
+      - 'src/storage/backup.js'
+      - 'src/data/sightingAudio.js'
+      - 'src/features/species/view.js'
+      - 'src/features/sightings/quickAdd.js'
+      - 'src/app.js'
       - '.github/workflows/owner-ux-quickcheck.yml'
 jobs:
   quickcheck:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
-      - run: node --check src/features/home/view.js && node --check src/features/home/featuredCarousel.js && node --check src/features/sightings/soundSession.js
+      - run: |
+          for f in src/features/home/view.js src/features/home/featuredCarousel.js src/features/sightings/soundSession.js src/features/sightings/quickAdd.js src/features/species/view.js src/storage/backup.js src/data/sightingAudio.js src/app.js; do node --check "$f"; done
       - run: node tests/test_owner_quickcheck.mjs
