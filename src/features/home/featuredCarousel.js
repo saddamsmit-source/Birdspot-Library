@@ -36,11 +36,11 @@ export function birdInfo(bird) {
     : s?.similarSexes === true ? 'Man en vrouw lijken op elkaar.' : '';
   const habitat = (s?.regions || []).map(region => HABITAT_LABELS[region]).filter(Boolean).join(' · ');
   return {
-    recognition: marks,
+    recognition: marks ? 'Herkenning: ' + marks : '',
     sexes,
     habitat,
     distribution: s?.distribution || '',
-    presence: [status, when].filter(Boolean).join(' · '),
+    presence: 'In Nederland: ' + [status, when].filter(Boolean).join(' · '),
   };
 }
 

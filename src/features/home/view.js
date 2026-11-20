@@ -138,7 +138,7 @@ function buildSkeleton() {
             <div class="field-featured-notes__body">
               <div class="field-featured-fact">
                 ${appIcon('eye', 'ui-icon field-featured-fact__icon')}
-                <div><strong>Herkenning</strong><p id="featuredBirdWhere"></p></div>
+                <div><p id="featuredBirdWhere"></p></div>
               </div>
               <div class="field-featured-fact" hidden>
                 ${appIcon('male', 'ui-icon field-featured-fact__icon')}
@@ -154,7 +154,7 @@ function buildSkeleton() {
               </div>
               <div class="field-featured-fact">
                 ${appIcon('calendar', 'ui-icon field-featured-fact__icon')}
-                <div><strong>Wanneer?</strong><p id="featuredBirdPresence"></p></div>
+                <div><p id="featuredBirdPresence"></p></div>
               </div>
             </div>
           </details>
